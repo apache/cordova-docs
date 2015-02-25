@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Firefox-OS-Plattform-Guide
 
@@ -58,48 +54,35 @@ Zu diesem Zeitpunkt sind Sie bereit zu gehen — ändern Sie den Code in der Tes
     cordova plugin add org.apache.cordova.vibration
     
 
-Außerdem müssen Sie eine benutzerdefinierte manifest.webapp-Datei in Ihrem Test-app/Www-Verzeichnis hinzufügen, die mindestens Folgendes enthalten sollte:
-
-    { 
-        "launch_path":"/index.html",
-        "installs_allowed_from":["*"],
-        "version":"0.0.1",
-        "name":"My app",
-        "pkgName":"io.cordova.hellocordova",
-        "icons": {
-            "128": "/img/logo.png"
-        }
-    }
-    
-
-Lesen Sie für weitere Informationen zu Firefox App Manifesten auf MDN [App zu manifestieren][4] .
-
- [4]: https://developer.mozilla.org/en-US/Apps/Developing/Manifest
-
 Wenn Ihre app-Code geschrieben ist, Bereitstellen von Änderungen an der Firefox-OS-app, die Sie hinzugefügt haben, Ihr Projekt mit
 
-    $ cordova prepare
+    $ cordova prepare firefoxos
     
 
-Beachten Sie, dass eine Build-Schritt (d.h. Cordova Bau) nicht erforderlich ist bei der Bereitstellung für die Firefox-OS-Plattform, wie Firefox OS apps HTML-basierte, und daher nicht kompiliert werden.
+Um eine verpackte app zu erstellen kann man das platforms/firefoxos/www-Verzeichnis zip. Sie können auch einfach mit bauen
+
+    $ cordova build firefoxos
+    
+
+Die Firefox-OS verpackte app werden in platforms/firefoxos/build/package.zip gebaut
 
 ## Testen und Debuggen
 
-Die app kann mit der Firefox-OS [App Manager][5] getestet werden.
+Die app kann mit der Firefox-OS [Web IDE][4] getestet werden.
 
- [5]: https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+ [4]: https://developer.mozilla.org/en-US/docs/Tools/WebIDE
 
-Wenn Sie den App-Manager Ihre Test-Gerät/Simulator angeschlossen haben, wählen Sie die Option "Verpackt App hinzufügen", dann stellen Sie sicher, Sie zeigen Sie auf die Test-app/Plattformen/Firefoxos/Www/-Verzeichnis die App in der Manager-Schnittstelle enthalten.
+Wenn Sie die Web-IDE an Ihre Test-Gerät/Simulator angeschlossen haben, wählen Sie die Option "Open verpackt App", dann stellen Sie sicher, Sie zeigen Sie auf die test-app/platforms/firefoxos/www/ -Verzeichnis die App in der Manager-Schnittstelle enthalten.
 
-Hier können Sie die app auf Ihr Test-Gerät/Simulator (mit dem Button "Aktualisieren") installieren. Verwenden das "Debug" Button dann die Anwendung debuggen und bearbeiten Sie ihre Code kann Leben.
+Hier können Sie die app auf Ihr Test-Gerät/Simulator (mit dem "Play"-Button) installieren. Verwenden die "Pause"-Taste, dann die Anwendung debuggen und bearbeiten Sie ihre Code kann Leben.
 
-Hinweis: Bevor Sie versuchen, Ihre app veröffentlichen sollten Sie es mit dem [App Validator][6] überprüfen.
+Hinweis: Bevor Sie versuchen, Ihre app veröffentlichen sollten Sie es mit dem [App Validator][5] überprüfen.
 
- [6]: https://marketplace.firefox.com/developers/validator
+ [5]: https://marketplace.firefox.com/developers/validator
 
 ## Veröffentlichen Sie Ihre app auf dem Firefox-Marktplatz
 
-Sie übermitteln Ihre app auf den Firefox-Markt, oder selbst zu veröffentlichen. Besuchen Sie die [Firefox-Marktplatz-Zone][7] über MDN, nähere Informationen dazu finden; [App-Veröffentlichungsoptionen][8] ist der beste Ort um zu starten.
+Sie übermitteln Ihre app auf den Firefox-Markt, oder selbst zu veröffentlichen. Besuchen Sie die [Firefox-Marktplatz-Zone][6] über MDN, nähere Informationen dazu finden; [App-Veröffentlichungsoptionen][7] ist der beste Ort um zu starten.
 
- [7]: https://developer.mozilla.org/en-US/Marketplace
- [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options
+ [6]: https://developer.mozilla.org/en-US/Marketplace
+ [7]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options

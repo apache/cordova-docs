@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 블랙베리 10 업그레이드
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이 드 블랙베리 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. 내용은 참조 하십시오 명령줄 인터페이스 CLI의 버전을 업데이트 하는 방법.
+
+## 4.0.0를 프로젝트 업그레이드 3.6.0
+
+-CLI가 아닌 프로젝트에 대 한 실행.
+
+        bin/update path/to/project
+    
+
+CLI 프로젝트:
+
+1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
+
+2.  기존 프로젝트에서 `cordova platform update blackberry` 실행 합니다.
 
 ## 3.2.0 3.1.0에서 업그레이드
 
@@ -27,11 +36,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
-2.  실행`cordova platform update blackberry`
+2.  `cordova platform update blackberry` 실행
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
-        빈/업데이트 < project_path >
+        bin/update <project_path>
     
 
 ## 3.1.0 3.0.0에서 업그레이드
@@ -82,7 +91,7 @@ platform add blackberry10`.
 
 4.  블랙베리 셸 도구 가이드에 설명 된 대로 새 프로젝트를 만듭니다. 이것은 업데이트 된 프로젝트의 가정 된다.
 
-5.  이전 프로젝트에서 프로젝트 소스를 복사 `/www` 를 새 프로젝트의 디렉터리 `/www` 디렉터리.
+5.  이전 프로젝트에서 프로젝트 소스를 복사 `/ www` 새로운 프로젝트의 디렉토리 `/ www` 디렉터리.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트는 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일)을 가리키도록 새 `cordova.js` 파일.
 
@@ -118,7 +127,7 @@ BlackBerryOS/각 본:
 
 4.  블랙베리 셸 도구 가이드에 설명 된 대로 새 프로젝트를 만듭니다. 이것은 업데이트 된 프로젝트의 가정 된다.
 
-5.  이전 프로젝트에서 프로젝트 소스를 복사 `/www` 를 새 프로젝트의 디렉터리 `/www` 디렉터리.
+5.  이전 프로젝트에서 프로젝트 소스를 복사 `/ www` 새로운 프로젝트의 디렉토리 `/ www` 디렉터리.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트는 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일)을 가리키도록 새 `cordova.js` 파일.
 
@@ -144,7 +153,7 @@ BlackBerryOS/각 본:
 
 ## 업그레이드 2.6.0 2.7.0에 프로젝트
 
-1.  다운로드 하 고 당신의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.7.0 소스 예를 들어 압축을 풉니다`~/Cordova-2.7.0`.
+1.  다운로드 및 코르도바 2.7.0 소스 `~/Cordova-2.7.0`를 예를 들어, 귀하의 하드 드라이브에 영구 디렉터리 위치를.
 
 2.  모든 실행 중인 SDK 도구 종료: 이클립스, Momentics와 같은.
 
@@ -381,12 +390,14 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 6.  업데이트 된 `www/plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
     
-        < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     받는 사람:
     
-        < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 샘플 디렉터리 (즉, 업데이트를 사용 하 여 개미 도구) 업데이트:
@@ -407,12 +418,14 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 8.  열기는 `www` 디렉터리 및 업데이트 된 `plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
     
-         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     받는 사람:
     
-         < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   1.8.0를 업그레이드 하려면 1.7.0에서 이동 하시기 바랍니다
@@ -435,12 +448,14 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 6.  업데이트 된 `www/plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
     
-        < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     받는 사람:
     
-        < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 샘플 디렉터리 (즉, 업데이트를 사용 하 여 개미 도구) 업데이트:
@@ -461,9 +476,11 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 8.  열기는 `www` 디렉터리 및 업데이트 된 `plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
     
-         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     받는 사람:
     
-         < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

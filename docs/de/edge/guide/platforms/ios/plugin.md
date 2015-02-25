@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Plugins
 
@@ -169,7 +165,7 @@ Plugin-Methoden werden normalerweise im selben Thread wie die wichtigste Schnitt
 
 ## Debuggen von iOS Plugins
 
-Zum Debuggen auf der Objective-C-Seite benötigen Sie Xcodes integrierten Debuggers. Für JavaScript auf iOS können 5,0 [Weinre, einem Apache-Cordova-Projekt][3] oder [iWebInspector, ein Drittanbieter - Dienstprogramm][4]Sie. Für iOS 6 können Sie die app, die in das iOS 6 Simulator ausgeführt Safari 6.0 zuordnen.
+Zum Debuggen auf der Objective-C-Seite benötigen Sie Xcodes integrierten Debuggers. Für JavaScript der auf iOS 5.0 oder höher können Sie [Weinre, ein Apache-Cordova-Projekt][3] oder [iWebInspector, ein Drittanbieter - Dienstprogramm][4] verwenden. Für iOS 8 können Sie die app, die in das iOS 8 Simulator ausgeführt Safari 8.0 zuordnen.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

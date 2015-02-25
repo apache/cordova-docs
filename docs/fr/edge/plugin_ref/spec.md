@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Spécification des plugins
 
@@ -370,16 +366,30 @@ Attributs pris en charge :
 
 *   `arch`: L'architecture pour laquelle le `.so` fichier a été généré, soit `device` ou`simulator`.
 
+Pour la plate-forme Windows, la `<lib-file>` élément permet l'inclusion d'un `<SDKReference>` dans les fenêtres générés les fichiers de projet.
+
+Attributs pris en charge :
+
+*   `src`(obligatoire): le nom du SDK d'inclure (qui sera utilisé comme valeur de la `Include` attribut de le généré `<SDKReference>` élément).
+
+*   `arch`: Indique que le `<SDKReference>` ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86` , `x64` ou`ARM`.
+
+*   `target`: Indique que le `<SDKReference>` ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou`all`.
+
+*   `versions`: Indique que le `<SDKReference>` ne devrait être inclus lorsque vous générez une version qui correspond à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
+
+Exemples :
+
+    < lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" arch = "x 86" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" versions = "> = 8,1" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" cible = "téléphone" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" cible = "gagner" les versions = arch "8.0" = "x 86" / >
+    
+
 ## *cadre* Élément
 
 Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend le plugin.
 
 Exemples :
 
-    <framework src="libsqlite3.dylib" />
-    <framework src="social.framework" weak="true" />
-    <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    < cadre src="libsqlite3.dylib" / >< cadre src="social.framework" faible = "true" / >< cadre src="relative/path/to/my.framework » personnalisé ="true"/ >< cadre src="path/to/project/LibProj.csproj » personnalisé = "true" type = "projectReference" / >
     
 
 Le `src` attribut identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
@@ -388,50 +398,57 @@ Le paramètre optionnel `weak` attribut est une valeur booléenne qui indique si
 
 Le paramètre optionnel `custom` attribut est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est `false` . ***Sur Android*** il indique comment traiter des **src**. Si `true` **src** est un chemin d'accès relatif du répertoire du projet de l'application, dans le cas contraire--depuis le répertoire du SDK Android.
 
-Le paramètre optionnel `type` attribut est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge uniquement sur Windows 8. À l'aide de `custom='true'` et `type='projectReference'` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
+Le paramètre optionnel `type` attribut est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge et uniquement pour Windows. À l'aide de `custom='true'` et `type='projectReference'` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
 
 Le paramètre optionnel `parent` attribut est actuellement pris en charge uniquement sur Android. Il définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.` , c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
 
     < cadre src = « FeedbackLib » custom = « true » / >< cadre src = « options/android/soutien/v7/appcompat » custom = « false » parent = « FeedbackLib » / >
     
 
+La plate-forme de Windows prend en charge trois attributs supplémentaires (facultatifs) pour préciser quand le cadre devrait être inclus :
+
+Le `arch` attribut indique que le cadre ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86` , `x64` ou`ARM`.
+
+Le `target` attribut indique que le cadre ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou`all`.
+
+Le `versions` attribut indique que le cadre ne devrait être inclus lorsque vous générez une version qui correspond à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
+
+Exemples d'utilisation de ces attributs spécifiques de Windows :
+
+    < src="src/windows/example.dll cadre" arch = « x 64 » / >< cadre src="src/windows/example.dll" versions = "> = 8.0" / >< cadre src="src/windows/example.vcxproj" type = "projectReference" target = "gagner" / >< cadre src="src/windows/example.vcxproj" type = "projectReference" target = "toutes les" versions = arch "8.1" = "x 86" / >
+    
+
 ## *info* Élément
 
 Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque vous avez besoin des étapes supplémentaires qui ne peuvent pas être facilement automatisées ou sont hors de portée de plugman. Exemples :
 
-    <info>
-    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
+    < Info > vous devez installer __Google Services__ jouer de la section « Android Extras » en utilisant le gestionnaire de SDK Android (exécuter « android »).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    Vous devez ajouter la ligne suivante à la « local.properties »: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
     
 
 ## Variables
 
 Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` requerrait une autorisation tels que :
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    < android:name="com.alunny.message.permission.C2D_MESSAGE"/ usages-autorisation >
     
 
 Dans ce cas où le contenu inséré de la `plugin.xml` fichier n'est pas connu avance, variables peuvent être indiquées par un signe dollar suivi d'une série de lettres capitales, des chiffres ou des traits de soulignement. Pour l'exemple ci-dessus, le `plugin.xml` fichier comprendrait cette balise :
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    < android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/ usages-autorisation >
     
 
 plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de référence de la variable peut être détectée (dans ce cas, de la `AndroidManifest.xml` fichier) ou spécifié par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
 
 plugman pouvez demander aux utilisateurs de spécifier les variables requises d'un plugin. Par exemple, les clés de l'API pour C2M et Google Maps peuvent être spécifiés comme un argument de ligne de commande :
 
-    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+    plugman--android plate-forme--projet/chemin/vers/plugin--name|git-url|path--API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734 variable du projet
     
 
 Pour rendre la variable obligatoire, la `<platform>` balise doit contenir un `<preference>` tag. Par exemple :
 
-    <preference name="API_KEY" />
+    < nom de l'option = « API_KEY » / >
     
 
 plugman vérifie que ces préférences requis sont passés. Si ce n'est pas le cas, il doit avertir l'utilisateur comment passer la variable dans et sortir avec un code différent de zéro.

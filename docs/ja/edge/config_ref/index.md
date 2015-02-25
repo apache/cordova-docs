@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Config.xml ファイル
 
@@ -107,13 +103,6 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`向きをロックし、インターフェイスから回転の向きの変更に応答しないようにすることができます。 可能な値は `default` 、 `landscape` 、または `portrait` 。 例:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **注**: `default` 値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。
-
 ## マルチプラット フォーム環境の設定
 
 次の設定を 1 つ以上のプラットフォームができないそれらのすべてが適用されます。
@@ -138,6 +127,22 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
         
     
     IOS とブラックベリーに適用されます。
+
+*   `orientation`(文字列、既定値を `既定値`): 方向をロックし、インターフェイスから回転の向きの変更に応答しないようにすることができます。 可能な値は、`default`、`landscape` または `portrait` です。 例:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    また、`< プラットフォーム >` 要素内で `< 優先順位 >` 要素を配置する場合は任意のプラットフォーム固有の方向の値を指定できます。
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    アンドロイド, iOS の, WP8、アマゾン火 OS や Firefox の OS に適用されます。
+    
+    **注**: `既定` 値は、コルドバはその既定の動作にフォールバックするプラットフォームをできるようにプラットフォームのマニフェスト/構成ファイルから向き設定エントリを削除します。
 
 ## *機能*要素
 

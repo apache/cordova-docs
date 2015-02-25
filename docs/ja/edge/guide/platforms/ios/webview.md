@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS の web 表示
 
@@ -23,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 コルドバ 1.4、始まる iOS web 表示のサポートを使用して、 `Cleaver` コンポーネント Xcode テンプレートを参照実装として提供しています。 コルドバ 2.0 およびそれ以降のバージョンのみサブプロジェクト ベース包丁実装をサポートします。
 
-これらの手順を少なくとも必要とコルドバ 2.3 と Xcode 4.5 と一緒に、 `config.xml` iOS の新しく作成されたプロジェクトからのファイル。 ことができます手順をコマンド ライン インターフェイスで、新しいプロジェクトを作成し、取得する、 `config.xml` 内で名前付きアプリケーションのサブディレクトリ内のファイルから`platforms/ios`.
+これらの手順を少なくとも必要とコルドバ 3.x と iOS の新しく作成されたプロジェクトから `config.xml` ファイルと共に、Xcode 6.0。 ことができます手順をコマンド ライン インターフェイスで、新しいプロジェクトを作成し、取得する、 `config.xml` 内で名前付きアプリケーションのサブディレクトリ内のファイルから`platforms/ios`.
 
 これらの指示に従って、最新コルドバ分布があることを確認します。[Cordova.apache.org][1]からダウンロードし、その iOS パッケージを解凍します。
 

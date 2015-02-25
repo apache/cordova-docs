@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Il File config. Xml
 
@@ -102,17 +98,10 @@ Se non viene specificata la versione alternativa, verranno utilizzati i seguenti
 
 Si applicano le seguenti preferenze globali per tutte le piattaforme:
 
-*   `Fullscreen`consente di nascondere la barra di stato nella parte superiore dello schermo. Il valore predefinito è `false` . Esempio:
+*   `Fullscreen` consente di nascondere la barra di stato nella parte superiore dello schermo. Il valore predefinito è `false` . Esempio:
     
         <preference name="Fullscreen" value="true" />
         
-
-*   `Orientation`consente di bloccare l'orientamento e impedire che l'interfaccia rotante in risposta ai cambiamenti nell'orientamento. I valori possibili sono `default` , `landscape` , o `portrait` . Esempio:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **Nota**: il `default` valore significa *sia* gli orientamenti orizzontale e verticale sono abilitati. Se si desidera utilizzare le impostazioni di default su ogni piattaforma (solitamente ritratto solo), lasciare questo tag della `config.xml` file.
 
 ## Preferenze di multi-piattaforma
 
@@ -138,6 +127,22 @@ Per più di una piattaforma, ma non a tutte le, si applicano le seguenti prefere
         
     
     Si applica a iOS e BlackBerry.
+
+*   `orientation` (stringhe, valori predefiniti per `default`): consente di bloccare l'orientamento ed evitare l'interfaccia ruoti in risposta ai cambiamenti nell'orientamento. I possibili valori sono `default`, `landscape` o `portrait`. Esempio:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    Inoltre, è possibile specificare qualsiasi valore di orientamento specifico della piattaforma, se si inserisce l'elemento `<preference>` all'interno di un elemento `<platform>`:
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    Vale per Android, iOS, WP8, Amazon fuoco OS e OS di Firefox.
+    
+    **Nota**: il valore `default` significa Cordova rimuoverà l'entrata di preferenza di orientamento da file di manifesto/configurazione della piattaforma che permette alla piattaforma di fallback per il comportamento predefinito.
 
 ## La *funzione di* elemento
 

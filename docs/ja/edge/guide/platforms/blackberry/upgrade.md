@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # ブラックベリーのアップグレード
 
@@ -334,12 +330,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  更新、 `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 （すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
@@ -360,12 +358,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   1.8.0 へのアップグレード、1.7.0 から行ってください。
@@ -388,12 +388,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  更新、 `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 （すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
@@ -414,9 +416,11 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 火狐瀏覽器作業系統平臺指南
 
@@ -58,48 +54,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     cordova plugin add org.apache.cordova.vibration
     
 
-您還需要將一個自訂的 manifest.webapp 檔添加到您的測試-app/www 目錄，應當至少包括以下內容：
+當編寫應用程式代碼時，將您的更改部署到您已經添加到您的專案與火狐瀏覽器操作系統應用程式
 
-    { 
-        "launch_path":"/index.html",
-        "installs_allowed_from":["*"],
-        "version":"0.0.1",
-        "name":"My app",
-        "pkgName":"io.cordova.hellocordova",
-        "icons": {
-            "128": "/img/logo.png"
-        }
-    }
+    $ cordova prepare firefoxos
     
 
-火狐瀏覽器的應用程式清單的更多資訊，請閱讀在 MDN 上的[應用程式清單][4]。
+若要創建一個打包的應用程式之一可以郵編平臺/firefoxos/www 目錄。簡單地也可以生成使用
 
- [4]: https://developer.mozilla.org/en-US/Apps/Developing/Manifest
-
-您的應用程式代碼寫入時，將更改部署到您已經添加到您的專案的火狐瀏覽器操作系統應用程式
-
-    $ cordova prepare
+    $ cordova build firefoxos
     
 
-請注意生成步驟 （即科爾多瓦構建） 時不需要將部署到火狐瀏覽器作業系統平臺，如火狐瀏覽器操作系統應用程式是基於 HTML 的並因此不編譯。
+火狐瀏覽器作業系統封裝的應用程式將在 platforms/firefoxos/build/package.zip 建成
 
 ## 測試和調試
 
-可以使用火狐瀏覽器作業系統[的應用程式管理器][5]測試應用程式.
+可以使用火狐瀏覽器作業系統 [Web IDE][4] 測試應用程式.
 
- [5]: https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+ [4]: https://developer.mozilla.org/en-US/docs/Tools/WebIDE
 
-當您已連接到您測試設備模擬器的應用程式管理器時，選擇"添加打包的應用程式"選項，然後確保您指向測試-app/平臺/firefoxos/www/目錄管理器介面中包括該應用程式。
+當您已連接到您的測試設備/模擬器 Web IDE 時，請選擇"打開打包應用程式"選項，然後確保您指向測試-app/platforms/firefoxos/www/目錄要在 Manager 介面中包含該應用程式。
 
-在這裡，您可以安裝 app 上您測試設備/模擬器 (與"更新"按鈕）。使用"調試"按鈕然後可以調試應用程式，並編輯它的代碼生活。
+在這裡你可以在你測試設備/模擬器 （與"播放"按鈕） 上安裝應用程式。使用"暫停"按鈕，然後可以調試應用程式並編輯它的代碼生活。
 
-注意： 要發佈您的應用程式在嘗試之前你應該考慮驗證它使用[應用程式驗證程式][6].
+注意： 要發佈您的應用程式在嘗試之前你應該考慮驗證它可以使用 [應用程式驗證程式][5].
 
- [6]: https://marketplace.firefox.com/developers/validator
+ [5]: https://marketplace.firefox.com/developers/validator
 
 ## 發佈您的應用程式對火狐瀏覽器市場
 
-您可以提交您的應用程式到火狐瀏覽器市場的需求，或發佈它自己。 上國語，瞭解更多有關如何執行此 ； 訪問[火狐瀏覽器市場區][7][應用程式發佈選項][8]是最好的地方開始。
+您可以提交您的應用程式到火狐瀏覽器市場的需求，或發佈它自己。 [火狐瀏覽器市場區][6] 拜訪 MDN 來瞭解更多有關如何做到這一點 ；[應用程式發佈選項][7] 是最佳的地方開始。
 
- [7]: https://developer.mozilla.org/en-US/Marketplace
- [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options
+ [6]: https://developer.mozilla.org/en-US/Marketplace
+ [7]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options

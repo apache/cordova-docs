@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Przewodnik platformy Android
 
@@ -124,15 +120,14 @@ Gdy otworzy się okno Eclipse, czerwony **X** mogą pojawiać się problemy nier
 
 ## Skompiluj projekt
 
-Jeśli używasz CLI w rozwoju, katalogu projektu na najwyższym poziomie `www` katalog zawiera pliki źródłowe. Uruchamiać dowolną z tych w katalogu projektu, aby odbudować aplikacji:
+Jeśli używasz CLI w rozwoju, katalogu projektu na najwyższym poziomie `www` katalog zawiera pliki źródłowe. Uruchomić wszelki od tych w katalogu projektu, aby odbudować aplikacji:
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ cordova budować # budować wszystkich platform, które zostały dodane $ cordova budować android # budować debugowania dla tylko Android $ cordova budowy systemu android debug # budować debugowania Android tylko $ cordova budować Android--wydaniu # budować wydania tylko Android
     
 
 Jeśli używasz Android specyficzne narzędzia powłoki w rozwoju, ma innego podejścia. Po wygenerowaniu projektu, domyślnie aplikacja źródła jest dostępnych w `assets/www` podkatalogu. Kolejne polecenia są dostępne w jego `cordova` podkatalogu.
 
-`build`Polecenie czyści pliki projektu i odbudowuje aplikacji. Oto składnia dla Mac i Windows. Pierwsze parę przykładów generowania informacji o debugowaniu, i drugi znaki aplikacje do wydania:
+`build`Polecenie czyści pliki projektu i odbudowuje aplikacji. Oto składnia dla Mac i Windows. Pierwsze parę przykładów generowania informacji o debugowaniu, a drugi buduje aplikacje do wydania:
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -140,6 +135,13 @@ Jeśli używasz Android specyficzne narzędzia powłoki w rozwoju, ma innego pod
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
     
+
+Podczas tworzenia wersji, jeśli można dodać następujące definicje do swojej `local.properties` pliku, a następnie twój APK otrzyma podpisane i dostosowane tak, że będzie gotowy do wysyłania do sklepu Google Play:
+
+        Key.Store=/users/me/Developer/mykeystore.JKS key.alias=mykeyalias
+    
+
+Jeśli kluczy lub aliasu klucz hasła, skrypt wyświetli monit o hasło. Nie trzeba zdefiniować hasła w pliku właściwości. Jeśli chcesz uniknąć polecenia, można określić je w `local.properties` jako `key.store.password` i `key.alias.password` . Jeśli tak, należy pamiętać, dotyczy bezpieczeństwa z tych haseł.
 
 ## Skonfigurować Emulator
 
@@ -187,17 +189,17 @@ Aby otworzyć ten emulator jako oddzielną aplikację, wybierz AVD i naciśnij *
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
-        $ cordova emulate android
+        $ cordova naśladować Androida
     
 
 W przeciwnym razie Użyj interfejs powłoki alternatywne:
 
-        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run - emulator
     
 
 Zamiast opierania się na cokolwiek emulatora jest obecnie włączona w zestawie SDK, można odwołać się do każdej nazwy, które należy dostarczyć:
 
-        $ /path/to/project/cordova/run --target=NAME
+        $ /path/to/project/cordova/run - cel = nazwa
     
 
 To wyprowadziło aplikacji na ekranie i uruchamia to:
@@ -208,7 +210,7 @@ To wyprowadziło aplikacji na ekranie i uruchamia to:
 
 Kiedy ty `run` aplikacji, można również `build` to. Można dodać dodatkowe `--debug` , `--release` , i `--nobuild` flagi, aby kontrolować, jak jest zbudowany, lub nawet niezbędne jest czy przebudowy:
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $ /path/to/project/cordova/run - emulator--nobuild
     
 
 Jeśli natomiast pracujesz w Eclipse, kliknij prawym przyciskiem myszy projekt i wybierz **Uruchom jako → Android aplikacji**. Użytkownik może zostać poproszony o określenie AVD, jeśli nie są już otwarte.
@@ -259,12 +261,12 @@ Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB j
 
 Za pomocą tego polecenia CLI push aplikacja do urządzenia:
 
-        $ cordova run android
+        $ cordova uruchomić Androida
     
 
 .. .albo używać ten interfejs powłoki skoncentrowanych na Android:
 
-        $ /path/to/project/cordova/run --device
+        $ /path/to/project/cordova/run--urządzenia
     
 
 Z nie flagi określone `run` polecenia wykrywa podłączone urządzenie, lub aktualnie uruchomionego emulatora, jeśli nie zostanie znaleziony, w przeciwnym razie prosi, aby określić emulator.
@@ -275,11 +277,9 @@ Aby uruchomić aplikację z w Eclipse, kliknij prawym przyciskiem myszy projekt 
 
 Następujące generuje szczegółowy dziennik aplikacji, jak to działa:
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log C:\path\to\project\cordova\log.bat
     
 
 Następujące czyści pliki projektu:
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat

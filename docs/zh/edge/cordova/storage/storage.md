@@ -1,27 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 存儲
 
 > 科爾多瓦的存儲選項的概述。
 
-幾個存儲 Api 是用於科爾多瓦的應用程式。請參閱[html5rocks][1]。為更全面地概述和示例。
+幾個存儲 Api 是對科爾多瓦應用程式可用。請參閱 [html5rocks][1]。有關更完整的概述和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -53,6 +49,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 以下平臺支援 IndexedDB：
 
 *   黑莓 10
+*   火狐瀏覽器作業系統
 *   Windows Phone 8
 *   Windows 8
 

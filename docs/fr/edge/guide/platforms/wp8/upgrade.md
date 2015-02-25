@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # La mise à niveau de Windows Phone 8
 
 Ce guide montre comment modifier des projets Windows Phone 8, mise à niveau d'anciennes versions de Cordova. Certaines de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI. La section suivante montre comment mettre à niveau de projets non-CLI.
+
+## Mise à jour 3.6.0 Projects to 4.0.0
+
+Pour les projets non-CLI, exécutez :
+
+        bin/mise à jour chemin/de/projet
+    
+
+Pour les projets de la CLI :
+
+1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+
+2.  Exécutez `cordova platform update wp8` dans vos projets existants.
 
 ## Mise à niveau vers 3.2.0 de 3.1.0
 

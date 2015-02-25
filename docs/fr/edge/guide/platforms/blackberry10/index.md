@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guide de la plate-forme blackBerry 10
 
@@ -54,7 +50,7 @@ L'installateur va ajouter des outils de ligne de commande à votre chemin. Selon
 
 Si vous avez besoin de compiler du code natif, par exemple lors du développement d'un plugin natif, vous aurez besoin d'installer le kit de développement natif de BlackBerry.
 
-Afin d'obtenir le kit de développement natif de BlackBerry, télécharger et installer l'IDE pour Blackberry disponible de [developer.blackberry.com][4], puis à l'aide de l'IDE, installez le kit de développement natif de Blackberry. Après installation, vous devez ajouter ses outils de ligne de commande à votre path système.
+Afin d'obtenir le kit de développement natif de BlackBerry, télécharger et installer l'IDE pour BlackBerry disponible de [developer.blackberry.com][4], puis à l'aide de l'IDE, installez le kit de développement natif de BlackBerry. Après installation, vous devez ajouter ses outils de ligne de commande à votre path système.
 
  [4]: http://developer.blackberry.com/native/download/
 

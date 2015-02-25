@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. NOTICE 파일 저작권 소유권에 관한 자세한 내용은이 작업 배포를 참조 하십시오. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. 라이센스의 복사본을 얻을 수 있습니다.
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.apache.org/licenses/LICENSE-2.0 적용 가능한 법률에 의해 요구 또는 서 면으로 동의 하지 않는 한 소프트웨어 라이선스 하에 배포에 배포 되는 "있는 그대로" 기준, 보증 또는 조건 어떤 종류의 없이, 명시적 또는 묵시적.  라이센스 권한 및 제한 적용 되는 특정 언어에 대 한 참조
+    
+
+## 라이센스.
 
 # 다음 단계
 
@@ -101,7 +91,7 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 코르도바를 사용 하 여 기존 프로젝트를 만든 경우 3.x, 다음을 실행 하 여 프로젝트를 업그레이드할 수 있습니다:
 
-    cordova platform update platform-name ios, android, etc.
+    코르 도우 바 플랫폼 업데이트 플랫폼 이름 ios, 안 드 로이드, 등등.
     
 
 기존 프로젝트 코르도바 이전 버전에서 만들어진 경우 3.x를, 아마 가장 좋은 것입니다 새로운 코르도바 3.x 프로젝트를 만들고 기존 프로젝트의 코드 및 자산 새 프로젝트를 복사 하려면. 전형적인 단계:
@@ -121,8 +111,7 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 코르 도우 바 3.4 월 단일 명령을 사용 하 여 변경 된 플러그인을 업그레이드 하기 위한 메커니즘이입니다. 대신 플러그인을 제거 하 고 프로젝트에 다시 추가 새 버전을 설치 합니다.
 
-    cordova plugin rm com.some.plugin
-    cordova plugin add com.some.plugin
+    코르 도우 바 플러그인 rm com.some.plugin 코르도바 플러그인 추가 com.some.plugin
     
 
 반드시 확인 업데이트 플러그인의 설명서 대로 새 버전에서 작동 하도록 코드를 조정 해야 할 수 있습니다. 또한, 코르도바의 프로젝트의 버전으로 작동 하는 플러그인의 새 버전 확인을 두 번.

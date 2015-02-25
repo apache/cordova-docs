@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.apache.org/licenses/License-2.0 se non richiesto dalla legge o concordato per iscritto, il software distribuito sotto la licenza è distribuito su un "AS IS" base, senza garanzie o condizioni di alcun tipo, esplicita o implicita.  Vedere la licenza per la lingua specifica che disciplina le autorizzazioni e limitazioni della licenza.
+    
+
+* * *
 
 # Supporto di piattaforma
 
@@ -246,7 +236,8 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * Windows Phone 8.1 solo
         </td>
         
         <td data-col="tizen"       class="y">
@@ -614,7 +605,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -756,6 +747,40 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Barra di stato</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="n">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="y">
+          Windows Phone 8.1 solo
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="cordova_storage_storage.md.html">Archiviazione</a>
         </th>
         
@@ -815,7 +840,8 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * Windows Phone 8.1 solo
         </td>
         
         <td data-col="tizen"       class="n">

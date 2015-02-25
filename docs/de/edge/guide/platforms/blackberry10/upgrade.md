@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Aktualisieren der BlackBerry 10
 
 Diese Anleitung zeigt wie zum Ändern von BlackBerry Projekten Upgrade von älteren Versionen von Cordova. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
+
+## Upgrade 3.6.0 Projekte 4.0.0
+
+Für nicht-CLI Projekte führen:
+
+        bin/update path/to/project
+    
+
+CLI-Projekte:
+
+1.  Update der `cordova` CLI-Version. Finden Sie die Befehlszeilenschnittstelle.
+
+2.  `cordova platform update blackberry` in Ihre bestehenden Projekte auszuführen.
 
 ## Upgrade von 3.1.0 auf 3.2.0
 
@@ -27,11 +36,11 @@ Für Projekte, die mit Cordova CLI erstellt wurden:
 
 1.  Update der `cordova` CLI-Version. Finden Sie die Befehlszeilenschnittstelle.
 
-2.  Ausführen`cordova platform update blackberry`
+2.  `cordova platform update blackberry` auszuführen
 
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
-        Aktualisieren Sie bin/< Project_path >
+        bin/update <project_path>
     
 
 ## Ein Upgrade auf 3.1.0 von 3.0.0
@@ -82,7 +91,7 @@ Für BlackBerry 10:
 
 4.  Erstellen Sie ein neues Projekt, wie in BlackBerry Shell Tool Guide beschrieben. Dies wird die Startseite des Projekts aktualisiert.
 
-5.  Kopieren Sie Ihre Projekte-Quelle aus des alten Projekts `/www` Verzeichnis in des neuen Projekts `/www` Verzeichnis.
+5.  Kopieren Sie Ihre Projekte-Quelle aus des alten Projekts `/ www` Verzeichnis in des neuen Projekts `/ www` Verzeichnis.
 
 6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
@@ -144,7 +153,7 @@ Für BlackBerryOS/Textbuch:
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.7.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.7.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Cordova-2.7.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
@@ -381,12 +390,14 @@ Aktualisierung nur das `www` Verzeichnis:
 
 6.  Update der `www/plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
-        < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     An:
     
-        < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
@@ -407,12 +418,14 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 8.  Öffnen der `www` Verzeichnis und Update der `plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
-         < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     An:
     
-         < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   Um auf 1.8.0 aktualisieren, gehen Sie bitte 1.7.0
@@ -435,12 +448,14 @@ Aktualisierung nur das `www` Verzeichnis:
 
 6.  Update der `www/plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
-        < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     An:
     
-        < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
@@ -461,9 +476,11 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 8.  Öffnen der `www` Verzeichnis und Update der `plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
-         < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     An:
     
-         < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Le fichier config.xml
 
@@ -107,13 +103,6 @@ Les préférences globales suivantes s'appliquent à toutes les plateformes :
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`permet de verrouiller l'orientation et d'empêcher toute rotation en réponse aux changements dans l'orientation de l'interface. Les valeurs possibles sont `default` , `landscape` , ou `portrait` . Exemple :
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **NOTE**: le `default` valeur signifie *aussi bien* des orientations portrait et paysage sont activées. Si vous souhaitez utiliser les paramètres par défaut de chaque plateforme (habituellement portrait uniquement), effacez cette balise du fichier `config.xml`.
-
 ## Préférences de multi-plateformes
 
 Les préférences suivantes s'appliquent à plus d'une plate-forme, mais pas tous d'entre eux :
@@ -138,6 +127,20 @@ Les préférences suivantes s'appliquent à plus d'une plate-forme, mais pas tou
         
     
     S'applique à iOS et BlackBerry.
+
+*   `Orientation`(string, la valeur par défaut `default` ): permet de verrouiller l'orientation et d'empêcher toute rotation en réponse aux changements dans l'orientation de l'interface. Les valeurs possibles sont `default` , `landscape` ou `portrait` . Exemple :
+    
+        < nom de l'option = « Orientation » value = « paysage » / >
+        
+    
+    En outre, vous pouvez spécifier n'importe quelle valeur d'orientation spécifique à la plateforme si vous placez le `<preference>` élément dans une `<platform>` élément :
+    
+        < nom de plate-forme = « android » >< nom de préférence = « Orientation » value = « sensorLandscape » / >< / plate-forme >
+        
+    
+    S'applique à Android, iOS, WP8, Amazon Fire OS et OS de Firefox.
+    
+    **NOTE**: le `default` valeur signifie Cordova supprimera l'entrée de préférence d'orientation du fichier de manifeste/configuration de la plate-forme, permettant à la plate-forme de secours pour son comportement par défaut.
 
 ## La *fonctionnalité* élément
 

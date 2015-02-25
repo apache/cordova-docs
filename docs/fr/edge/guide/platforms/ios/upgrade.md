@@ -1,27 +1,36 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Mise à jour d'iOS
 
 Ce guide montre comment modifier des projets iOS mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
-**NOTE**: Xcode 5 est requis. Actuellement, pour soumettre à l'Apple App Store, vous devez utiliser la dernière version embarquée de l'iOS SDK, qui est iOS 7 et c'est inclus uniquement avec Xcode 5.
+**NOTE**: Xcode 6 est requis. Actuellement, pour soumettre à l'Apple App Store, vous devez utiliser la dernière version embarquée de l'iOS SDK, qui est iOS 8 et c'est inclus uniquement avec Xcode 6.
+
+## Mise à jour 3.6.0 Projects to 4.0.0
+
+Pour les projets non-CLI, exécutez :
+
+        bin/mise à jour chemin/de/projet
+    
+
+Pour les projets de la CLI :
+
+1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+
+2.  Exécutez `cordova platform update ios` dans vos projets existants.
 
 ## 3.3.0 mise à niveau de projets à 3.4.0
 
@@ -156,16 +165,7 @@ platform add ios`.
 
 7.  Mettre à jour les `<plugin>` tags dans le `config.xml` fichier pour `<feature>` balises. Notez que celui qui existe `<plugin>` tags encore travailler, mais sont déconseillés. Vous pouvez copier ces informations dans le `config.xml` fichier pour un nouveau projet. Par exemple :
     
-        <plugins>
-            <plugin name="LocalStorage" value="CDVLocalStorage" />
-            <!-- other plugins -->
-        </plugins>
-        
-        <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
-        <feature name="LocalStorage">
-            <param name="ios-package" value="CDVLocalStorage" />
-        </feature>
-        <!-- other <feature> tags -->
+        < plugins >< plugin nom = valeur « LocalStorage » = « CDVLocalStorage » / ><!--autres plugins--> < / plugins ><!--changer à: (noter qu'une balise < élément > est au même niveau que < plugins >--> < nom de la fonction = "LocalStorage" >< param nom = valeur "ios-package" = "CDVLocalStorage" / >< / fiction ><!--autres balises < élément >-->
         
 
 8.  Supprimer le `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
@@ -321,7 +321,7 @@ platform add ios`.
 
 11. Ajouter le plugin de InAppBrowser à la `config.xml` , en ajoutant cette balise sous `<cordova><plugins>` :
     
-        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+        < nom du plugin = « InAppBrowser » value = « CDVInAppBrowser » / >
         
 
 12. Notez que les plugins de l'Objective-C sont *pas* dans la liste blanche plus. À la liste blanche vos connexions avec la liste blanche les app, vous devez définir la `User-Agent` en-tête de la connexion à l'agent utilisateur même comme le principal Cordova WebView. Vous pouvez obtenir cela en accédant à la `userAgent` propriété hors de la vue-contrôleur principal. La vue-contrôleur principal ( `CDVViewController` ) a aussi une `URLisAllowed` méthode vérifier si une URL passe la liste blanche.
@@ -358,7 +358,7 @@ platform add ios`.
     2.  Accédez à l'emplacement où vous avez installé Cordova (voir étape 1), dans le `bin` sous-répertoire
     3.  Exécutez le script ci-dessous où le premier paramètre est le chemin de votre projet `.xcodeproj` fichier :
         
-        `update_cordova_subproject path/to/your/project/xcodeproj`
+        `update_cordova_subproject chemin/de/votre/projet/xcodeproj`
 
 **NOTE**: en 2.2.0, le `bin/create` script copie dans la `CordovaLib` sous-projet dans votre projet. Pour avoir le même genre d'installation, il suffit de copier dans le droit `CordovaLib` dans votre répertoire de projet, mise à jour le `CordovaLib` sous-projet emplacement (relatives au projet) dans l'inspecteur de fichier Xcode.
 
@@ -397,7 +397,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
     2.  Accédez à l'emplacement où vous avez installé Cordova (voir étape 1), dans le `bin` sous-répertoire
     3.  Exécutez le script ci-dessous où le premier paramètre est le chemin de votre projet `.xcodeproj` fichier :
         
-        `update_cordova_subproject path/to/your/project/xcodeproj`
+        `update_cordova_subproject chemin/de/votre/projet/xcodeproj`
 
 ## 1.9.0 mise à niveau de projets à 2.0.0
 
@@ -475,7 +475,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 32. Recherche de **chemins de recherche de Header**. Pour ce paramètre, ajoutez ces trois valeurs, y compris les guillemets :
     
-        "$(TARGET_BUILD_DIR) / usr/local/lib/include" "$(OBJROOT) / UninstalledProducts/include" "$(BUILT_PRODUCTS_DIR)"
+        "$(TARGET_BUILD_DIR)/usr/local/lib/include" "$(OBJROOT)/UninstalledProducts/include" "$(BUILT_PRODUCTS_DIR)"
         
 
 33. Recherche **d'autres indicateurs de l'éditeur de liens**. Pour ce paramètre, ajoutez cette valeur :
@@ -543,11 +543,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 4.  Copier ces fichiers dans le nouveau projet dans votre répertoire de projet 1.5.0-based sur le disque, remplaçant les anciens fichiers (sauvegarde de vos fichiers tout d'abord de l'étape 2 ci-dessus) :
     
-        AppDelegate.h
-        AppDelegate.m
-        MainViewController.h
-        MainViewController.m
-        Cordova.plist
+        AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
 
 5.  Ajouter tous les nouveaux `MainViewController` et `AppDelegate` les fichiers dans votre projet Xcode.
@@ -608,7 +604,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 18. Dans le `AppDelegate.h` , `AppDelegate.m` , et `MainViewController.h` fichiers, remplacer l'ensemble `#ifdef PHONEGAP_FRAMEWORK` bloquer avec :
     
-        #import "CDVDeprecated.h"
+        #import « CDVDeprecated.h »
         
 
 19. Cliquez sur l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Paramètres de génération** .

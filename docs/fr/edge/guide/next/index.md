@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. Voir le fichier avis distribué avec ce travail d'information additionnelle concernant les droits d'auteur. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. Vous pouvez obtenir une copie de la licence à
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.Apache.org/licenses/License-2.0 sauf si requis par la loi applicable ou accord écrit, distribué sous la licence de logiciel est distribué sur un « Tel quel » fondement, sans garanties ou CONDITIONS d'aucune sorte, explicite ou implicite.  Voir la licence pour la langue spécifique régissant les autorisations et les limites
+    
+
+## aux termes de la licence.
 
 # Prochaines étapes
 
@@ -101,7 +91,7 @@ Notez que les événements en ligne et hors ligne, ainsi que l'API de connexion 
 
 Si votre projet existant a été créé à l'aide de Cordova 3.x, vous pouvez mettre à niveau le projet en émettant ce qui suit :
 
-    cordova platform update platform-name ios, android, etc.
+    Cordova plate-forme mise à jour-nom de la plate-forme ios, android, etc.
     
 
 Si votre projet existant a été créé sous une version antérieure à Cordova 3.x, il serait probablement préférable de créer un nouveau projet de 3.x de Cordova et copiez code et les actifs de votre projet existant vers le nouveau projet. Étapes typiques :
@@ -121,8 +111,7 @@ Remarque : certains plugins n'est peut-être pas compatibles avec la nouvelle ve
 
 À partir de Cordova 3.4, il n'y a aucun mécanisme pour la mise à niveau de plugins modifiées à l'aide d'une seule commande. Au lieu de cela, supprimez le plugin et ajouter de nouveau à votre projet, et la nouvelle version sera installée :
 
-    cordova plugin rm com.some.plugin
-    cordova plugin add com.some.plugin
+    Cordova plugin rm com.some.plugin cordova plugin ajouter com.some.plugin
     
 
 N'oubliez pas de vérifier la documentation de la mise à jour du plugin, que vous devrez peut-être modifier votre code pour utiliser la nouvelle version. Aussi, le double de vérifier que la nouvelle version du plugin fonctionne avec la version de votre projet de Cordova.
@@ -226,7 +215,7 @@ En lisant la documentation, chercher des sections qui décrivent les exigences s
 
 ## Chargement du contenu distant
 
-Appel de fonctions de Cordova JavaScript d'une page HTML de chargement à distance (une page HTML ne pas stockée localement sur l'appareil) est une configuration non prise en charge. C'est parce que Cordova n'a pas été conçu pour cela, et la communauté Apache Cordova ne fait aucun test de cette configuration. Même si elle peut fonctionner dans certaines circonstances, il n'est pas recommandé ni pris en charge. Il existe des défis avec la stratégie de même origine, gardant le JavaScript et portions natives de Cordova synchronisées à la même version (puisqu'ils sont couplés via API privé qui peut changer), la fiabilité du contenu distant en appelant les fonctions locales natives et potentiel rejet de magasin de $ $ etAPP.
+Appel de fonctions de Cordova JavaScript d'une page HTML de chargement à distance (une page HTML ne pas stockée localement sur l'appareil) est une configuration non prise en charge. C'est parce que Cordova n'a pas été conçu pour cela, et la communauté Apache Cordova ne fait aucun test de cette configuration. Même si elle peut fonctionner dans certaines circonstances, il n'est pas recommandé ni pris en charge. Il existe des défis avec la stratégie de même origine, gardant le JavaScript et portions natives de Cordova synchronisées à la même version (puisqu'ils sont couplés via API privé qui peut changer), la fiabilité du contenu distant en appelant les fonctions locales natives et potentiels app store rejet.
 
 L'affichage du chargement à distance HTML contenu dans une webview devrait être fait à l'aide de InAppBrowser de Cordova. Le InAppBrowser est conçu pour que JavaScript exécutant il n'a pas accès aux APIs JavaScript Cordova pour les raisons énumérées ci-dessus. Veuillez consulter le Guide de la sécurité.
 

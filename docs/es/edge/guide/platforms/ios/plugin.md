@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Plugins
 
@@ -169,7 +165,7 @@ Plugin métodos normalmente se ejecutan en el mismo subproceso como la interfaz 
 
 ## Depuración de iOS Plugins
 
-Para depurar en el lado de Objective-C, necesitas a depurador incorporado de Xcode. Para JavaScript, en iOS 5,0 puede utilizar [Weinre, un proyecto de Cordova Apache][3] o [iWebInspector, una utilidad de terceros][4]. Para iOS 6, puede adjuntar a la aplicación que se ejecuta dentro del iOS 6 simulador Safari 6.0.
+Para depurar en el lado de Objective-C, necesitas a depurador incorporado de Xcode. Para JavaScript, en iOS 5.0 o superior puede utilizar [Weinre, un proyecto de Cordova Apache][3] o [iWebInspector, una utilidad de terceros][4]. Para iOS 8, puede adjuntar a la aplicación ejecuta dentro del iOS Simulator 8 Safari 8.0.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Configurazione iOS
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. See [The config.xml File][1] for information on global configuration options.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. Per informazioni sulle opzioni di configurazione globale, vedere [il File config. xml][1].
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +82,8 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
 *   `UIWebViewDecelerationSpeed`(stringa, valore predefinito del `normal` ): i valori validi sono `normal` , `fast` . Questa proprietà controlla la velocità di decelerazione di slancio lo scorrimento. `normal`è la velocità predefinita per le applicazioni più nativi, e `fast` è l'impostazione predefinita per Safari Mobile.
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl` (stringa, non impostata di default): se impostato, visualizzerà la pagina di riferimento locale su di un errore nell'applicazione.
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>

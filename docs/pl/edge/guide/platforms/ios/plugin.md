@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS wtyczek
 
@@ -169,7 +165,7 @@ Plugin metody zwykle wykonać w tym samym wątku jako głównego interfejsu. Je�
 
 ## Debugowanie iOS wtyczek
 
-Do debugowania po stronie Objective-C, trzeba Xcode jest wbudowany debuger. Dla JavaScript na iOS 5.0 można użyć [Weinre, Apache Cordova Project][3] lub [iWebInspector, trzeci-strona umowy narzędzie][4]. Dla iOS 6 Safari w wersji 6.0 można dołączyć do aplikacji uruchomiony w iOS 6 symulator.
+Do debugowania po stronie Objective-C, trzeba Xcode jest wbudowany debuger. Dla JavaScript na iOS 5.0 lub nowszego można [Weinre, Apache Cordova Project][3] lub [iWebInspector, trzeci-strona umowy narzędzie][4]. Dla iOS 8 Safari 8.0 można dołączyć do aplikacji uruchomiony w iOS 8 symulator.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

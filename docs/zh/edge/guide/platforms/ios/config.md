@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 配置
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 See [The config.xml File][1] for information on global configuration options.
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 有關全域配置選項的資訊，請參閱 [config.xml 檔][1]。
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +82,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `UIWebViewDecelerationSpeed`（字串，預設值為 `normal` ）： 有效的值為 `normal` ， `fast` 。 此屬性控制減速勢頭滾動。 `normal`是大多數本機應用程式，預設的速度和 `fast` 的移動版 Safari 是預設的。
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl`（字串，預設情況下未設置）： 如果設置，將顯示在應用程式中出現錯誤時所引用的本地網頁。
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>

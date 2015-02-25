@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 파이어 폭스 OS 플랫폼 가이드
 
@@ -58,48 +54,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     cordova plugin add org.apache.cordova.vibration
     
 
-또한 사용자 지정 manifest.webapp 파일에 다음 적어도 포함 해야 테스트 애플 리 케이 션/www 디렉토리를 추가 해야:
-
-    { 
-        "launch_path":"/index.html",
-        "installs_allowed_from":["*"],
-        "version":"0.0.1",
-        "name":"My app",
-        "pkgName":"io.cordova.hellocordova",
-        "icons": {
-            "128": "/img/logo.png"
-        }
-    }
-    
-
-파이어 폭스 응용 프로그램 매니페스트에 대 한 자세한 내용은 MDN에 [응용 프로그램 매니페스트][4] 를 읽을.
-
- [4]: https://developer.mozilla.org/en-US/Apps/Developing/Manifest
-
 응용 프로그램 코드를 작성 하는 경우 변경 내용을 사용 하 여 프로젝트에 추가한 파이어 폭스 OS 애플 리 케이 션에 배포
 
-    $ cordova prepare
+    $ cordova prepare firefoxos
     
 
-참고 빌드 (예: 코르도바 빌드) 단계 필요 하지 않습니다 파이어 폭스 OS 플랫폼에 배포 하는 경우 파이어 폭스 OS 애플 리 케이 션은 HTML 기반 및 따라서 없는 컴파일된.
+패키지 된 응용 프로그램을 만들려면 하나의 platforms/firefoxos/www 디렉토리 우편 수 있습니다. 또한 간단 하 게 사용 하 여 구축할 수 있습니다.
+
+    $ cordova build firefoxos
+    
+
+파이어 폭스 OS 패키지 애플 리 케이 션 platforms/firefoxos/build/package.zip에서 건축 될 것 이다
 
 ## 테스트 및 디버깅
 
-파이어 폭스 OS [응용 프로그램 관리자][5] 를 사용 하 여 응용 프로그램을 테스트할 수 있습니다..
+파이어 폭스 OS [웹 IDE][4]를 사용 하 여 응용 프로그램을 테스트할 수 있습니다..
 
- [5]: https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+ [4]: https://developer.mozilla.org/en-US/docs/Tools/WebIDE
 
-응용 프로그램 관리자를 테스트 장치/시뮬레이터에 연결 하는 경우 "추가 패키지 애플 리 케이 션" 옵션을 선택한 다음 테스트-애플 리 케이 션/플랫폼/firefoxos/www를 가리킨 확인/디렉토리 관리자 인터페이스에서 응용 프로그램을 포함 하도록 합니다.
+웹 IDE를 테스트 장치/시뮬레이터에 연결 하는 경우 "열기 패키지 애플 리 케이 션" 옵션을 선택한 다음 테스트-애플 리 케이 션/플랫폼/firefoxos/www를 가리킨 확인/디렉토리 관리자 인터페이스에서 응용 프로그램을 포함 하도록 합니다.
 
-여기에 대 한 ("업데이트" 버튼)와 테스트 장치/시뮬레이터에서 응용 프로그램을 설치할 수 있습니다. 다음 응용 프로그램을 디버깅 하 고 해당 코드를 편집할 수 단추 라이브 "디버그"를 사용 하 여.
+여기에 대 한 ("재생" 버튼)와 테스트 장치/시뮬레이터에서 응용 프로그램을 설치할 수 있습니다. "일시 정지" 버튼 다음 응용 프로그램을 디버깅 하 고 해당 코드를 편집할 수 라이브를 사용 하 여.
 
-참고: 응용 프로그램을 게시 하기 전에 당신이 고려해 야 [응용 프로그램 유효성 검사기][6] 를 사용 하 여 유효성 검사.
+참고: 응용 프로그램을 게시 하기 전에 당신이 고려해 야 [응용 프로그램 유효성 검사기][5]를 사용 하 여 유효성 검사.
 
- [6]: https://marketplace.firefox.com/developers/validator
+ [5]: https://marketplace.firefox.com/developers/validator
 
 ## 파이어 폭스 시장에 귀하의 응용 프로그램 게시
 
-파이어 폭스 마켓 플레이스에 앱을 제출 하거나 직접 게시할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 MDN에 [파이어 폭스 시장 영역][7] 을 방문합니다 [응용 프로그램 게시 옵션][8] 시작 하기 가장 좋은 장소입니다.
+파이어 폭스 마켓 플레이스에 앱을 제출 하거나 직접 게시할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 MDN에 [파이어 폭스 시장 영역][6]을 방문합니다 [응용 프로그램 게시 옵션][7] 시작 하기 가장 좋은 장소입니다.
 
- [7]: https://developer.mozilla.org/en-US/Marketplace
- [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options
+ [6]: https://developer.mozilla.org/en-US/Marketplace
+ [7]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options

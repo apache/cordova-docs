@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Configuration d'Android
 
-Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'application ainsi qu'à chaque instance de la classe CordovaWebView. Cette section décrit en détail les préférences uniquement liées à la compilation pour Android. Voir Le fichier config.xml pour plus d'informations concernant les options de configuration globales.
+Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'application ainsi qu'à chaque instance de la classe CordovaWebView. Cette section décrit en détail les préférences uniquement liées à la compilation pour Android. Voir [le fichier config.xml File][1] pour plus d'informations sur les options de configuration globale.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `KeepRunning` (boolean, vaut par défaut `true`): Détermine si l'application doit continuer de s'exécuter en arrière-plan, même après le déclenchement d'un événement `pause`. Affectation de `false` ne tue pas l'appli après un `pause` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
     
@@ -76,3 +74,6 @@ Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'appl
 *   `AndroidLaunchMode`(string, la valeur par défaut `singleTop` ): définit l'activité `android:launchMode` attribut. Cela change de ce qui arrive lorsque l'application est lancée depuis l'icône de l'application ou l'intention et est déjà en cours d'exécution. Les valeurs valides sont `standard` , `singleTop` , `singleTask` ,`singleInstance`.
     
         <preference name="AndroidLaunchMode" value="singleTop"/>
+        
+
+*   `DefaultVolumeStream`(string, la valeur par défaut `default` , ajouté dans cordova-android 3.7.0): définit quel volume le volume de matériel boutons lien vers. Par défaut c'est « appeler » pour les téléphones et les « médias » pour les tablettes. Indiquez ce « médias » d'avoir des boutons de volume de votre application à tout moment modifier le volume du média. Notez que lorsque vous utilisez le plugin de médias de Cordova, les boutons de volume vont changer dynamiquement pour contrôler le volume de médias lorsque tous les objets multimédia sont actives.

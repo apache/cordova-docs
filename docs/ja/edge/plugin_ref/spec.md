@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # プラグイン仕様
 
@@ -370,6 +366,26 @@ Android の例:
 
 *   `arch`: 対象アーキテクチャ、 `.so` ファイルが作成されたら、どちらか `device` または`simulator`.
 
+Windows プラットフォーム用 `<lib-file>` 要素は、`< SDKReference >` 生成された Windows プロジェクト ファイルに含めることができます。
+
+サポートされている属性:
+
+*   `src`(必須): を含む SDK の名前 (が生成された `< SDKReference >` 要素の `Include` 属性の値として使用されます)。
+
+*   `arch`: を `< SDKReference >` のみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
+
+*   `target`: を `< SDKReference >` のみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+
+*   `versions`: を `< SDKReference >` のみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+
+例:
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+    
+
 ## *フレームワーク*要素
 
 プラグインが依存フレームワーク (通常 OS/プラットフォームの一部) を識別します。
@@ -382,17 +398,34 @@ Android の例:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src`属性を plugman 与えられたプラットフォームの正しいファッションでのコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
+`src` 属性は、どの plugman を与えられたプラットホームのための正しい方法のコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
 
-省略可能な `weak` 属性は、フレームワークが弱いリンクする必要があるかどうかを示すブール値。既定値は`false`.
+省略可能な `weak` 属性はフレームワークが弱いリンクする必要があるかどうかを示すブール値です。既定値は `false`.
 
-省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 既定値は `false` です。 ***Android の*** **src**を治療する方法を指定します。 場合 `true` **src**は、アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
+省略可能な `custom` 属性が、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってないシステム フレームワークです)。 既定値は `false` です。 ***Android の*** **src** を治療する方法を指定します。 場合 `true` **src** アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
 
-省略可能な `type` に追加するフレームワークの型を示す文字列属性です。 現在のところ `projectReference` であり、サポートされている Windows 8 上でのみ。 使用して `custom='true'` と `type='projectReference'` 、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
+オプションの `type` 属性に追加するフレームワークの型を示す文字列です。 現在のところ `projectReference` がサポートされていると Windows 用のみ。 使用して `custom='true'` と `type='projectReference'`、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
 
-省略可能な `parent` 属性は現在 Android 上でのみサポートされています。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は `.` 、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
+オプションの `parent` 属性は、現在 Android 上でのみサポートされます。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は `.`、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
 
-    < フレームワーク src ="FeedbackLib"カスタム ="true"/>< フレームワーク src ="エクストラ/アンドロイド/サポート/v7/appcompat"カスタム ="false"親 ="FeedbackLib"/>
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    
+
+Windows プラットフォームを絞り込むときに、フレームワークが含まれてする必要があります (すべて省略可能) の 3 つの追加属性をサポートします。
+
+`arch` 属性をフレームワークのみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
+
+`target` となる属性を吊り下げますのみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+
+`versions` 属性をフレームワークのみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+
+これらの Windows の特定の属性を使用しての例:
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *情報*要素
@@ -410,26 +443,26 @@ Android の例:
 
 ## 変数
 
-特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、C2DM Android アプリ パッケージ id が上に登録する `com.alunny.message` など、アクセス許可が必要になります。
+特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、Android 上 C2DM を登録するパッケージ id が `com.alunny.message` アプリは許可を要求するよう。
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-このような場合、コンテンツの挿入、 `plugin.xml` ファイルが前もって知られていない、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連によって示されることができます。 上記の例については、 `plugin.xml` ファイルには、このタグが含まれます。
+`plugin.xml` ファイルから挿入するコンテンツは前もって知られていないこのような場合、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連で示されますことができます。 上記の例では、`plugin.xml` ファイルにはこのタグが含まれます。
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 参照変数の値を検出可能性があります (からこの場合は、 `AndroidManifest.xml` ファイル） またはツール; のユーザーによって指定された正確なプロセスは、特定のツールに依存。
+plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 変数参照の値 (この場合から `与えます` ファイル) を検出したり、ツール; のユーザーによって指定されました。正確なプロセスは、特定のツールに依存します。
 
 plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google Maps API キーは、コマンドライン引数として指定できます。
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-変数を必須に、 `<platform>` タグが含まれてする必要があります、 `<preference>` タグ。たとえば。
+変数の必須に `<platform>` タグは `<preference>` タグが含まれている必要があります。たとえば。
 
     <preference name="API_KEY" />
     
@@ -440,4 +473,4 @@ plugman はこれらの必要な設定が渡されたことを確認します。
 
 ## $PACKAGE_NAME
 
-逆ドメイン スタイルに対応するパッケージの一意の識別子、 `CFBundleIdentifier` iOS 上または、 `package` 、最上位の属性 `manifest` 内の要素、 `AndroidManifest.xml` ファイル。
+逆ドメイン スタイル `CFBundleIdentifier` iOS または `与えます` ファイルの最上位の `マニフェストの` 要素の `パッケージ` 属性に対応するパッケージの一意の識別子。

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 平臺指南
 
@@ -31,9 +27,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 要求和支援
 
-蘋果公司 ® 生成僅在基於英特爾的 Mac OS X 作業系統上運行的 iOS 應用程式所需的工具。 僅在 OS X 10.7 (獅子) 版本上運行 Xcode ® 4.5 (要求的最低版本） 或更大，並包括 iOS 6 SDK （軟體發展工具組）。 要提交到蘋果 App Store℠ 的應用程式需要的蘋果工具的最新版本。
+蘋果公司 ® 生成僅在基於英特爾的 Mac OS X 作業系統上運行的 iOS 應用程式所需的工具。 僅在 OS X 版本 10.9 （小牛） 上運行 Xcode ® 6.0 （所需的最低版本） 或更高版本，並包含 iOS 8 SDK （軟體發展工具組）。 要提交到蘋果 App Store℠ 的應用程式需要的蘋果工具的最新版本。
 
-您可以測試的許多科爾多瓦功能使用 iOS 模擬器安裝 ios SDK 和 Xcode，但你需要使用實際的設備完全提交到 App Store 之前測試的所有應用程式的裝置功能。 該設備必須至少有 iOS 5.x 安裝、 科爾多瓦 2.3 支援的最低限度的 iOS 版本。配套設備包括所有 iPad ® 模型、 iPhone ® 3GS 及以上，和 iPod ® 觸摸第三代或更高版本。 要安裝到設備上的應用程式，您必須也是蘋果公司的[iOS 開發者計畫][1]，該費用每 99 年美元的成員。 本指南演示如何將應用程式部署到 iOS 模擬器，不必註冊開發者計畫。
+您可以測試的許多科爾多瓦功能使用 iOS 模擬器安裝 ios SDK 和 Xcode，但你需要使用實際的設備完全提交到 App Store 之前測試的所有應用程式的裝置功能。 該設備必須至少有 iOS 裝有 6.x、 到科爾多瓦 3.0 支援的最低的 iOS 版本。配套設備包括所有 iPad ® 模型、 iPhone ® 3GS 以上，和 iPod ® 觸摸第三代或更高版本。 要安裝到設備上的應用程式，您必須也是蘋果公司的[iOS 開發者計畫][1]，該費用每 99 年美元的成員。 本指南演示如何將應用程式部署到 iOS 模擬器，不必註冊開發者計畫。
 
  [1]: https://developer.apple.com/programs/ios/
 

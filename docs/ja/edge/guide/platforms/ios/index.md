@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS プラットフォーム ガイド
 
@@ -31,9 +27,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 要件、およびサポート
 
-Apple ® ツール インテル ベースの Mac OS X オペレーティング システム上でのみ実行 iOS アプリケーションを構築するために必要です。 OS X 10.7 (ライオン) のバージョンでのみ動作する Xcode ® 4.5 (最低限必要なバージョン) 以上に設定すると、iOS 6 にはが含まれています SDK （ソフトウェア開発キット）。 アップルのアプリ Store℠ にアプリを提出するには、アップル ツールの最新バージョンが必要です。
+Apple ® ツール インテル ベースの Mac OS X オペレーティング システム上でのみ実行 iOS アプリケーションを構築するために必要です。 OS X バージョン 10.9 (異端者) でのみ実行されます Xcode ® 6.0 (最低限必要なバージョン) 以上に設定すると、iOS 8 が含まれています SDK （ソフトウェア開発キット）。 アップルのアプリ Store℠ にアプリを提出するには、アップル ツールの最新バージョンが必要です。
 
-多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスは、少なくともが必要 iOS の 5.x がインストールされている、コルドバ 2.3 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 このガイド開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
+多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスを少なくともいる必要があります iOS 6.x がインストールされて、コルドバ 3.0 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 このガイド開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
 
  [1]: https://developer.apple.com/programs/ios/
 

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Config.xml 파일
 
@@ -107,13 +103,6 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`잠금 방향 및 회전 방향에서 변화에 대응에서 인터페이스를 방지 수 있습니다. 가능한 값은 `default` , `landscape` , 또는 `portrait` . 예를 들어:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **참고**: 있는 `default` 값은 *모두* 가로 및 세로 방향 사용 됩니다. 각 플랫폼의 기본 설정 (일반적으로 세로 전용)를 사용 하려는 경우이 태그를 두고는 `config.xml` 파일.
-
 ## 멀티 플랫폼 환경 설정
 
 다음과 같은 기본 설정 하나 이상의 플랫폼, 하지만 그들 모두 적용 됩니다.
@@ -138,6 +127,22 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
         
     
     IOS와 블랙베리에 적용 됩니다.
+
+*   `Orientation` (문자열, `디폴트` 기본값): 잠금 방향 및 회전 방향에서 변화에 대응에서 인터페이스를 방지 수 있습니다. 가능한 값은 `default`, `landscape` 또는 `portrait`. 예를 들어:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    또한, `< 플랫폼 >` 요소 내에서 `< 기본 설정 >` 요소를 배치 하는 경우 플랫폼 특정 방향 값을 지정할 수 있습니다.
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    안 드 로이드, iOS, WP8, 아마존 화재 OS와 Firefox 운영 체제에 적용 됩니다.
+    
+    **참고**: `default` 값은 코르도바 플랫폼의 매니페스트/구성 파일의 기본 동작을 대체 하는 플랫폼을 수 있도록에서 방향을 기본 설정 항목을 스트립 것입니다.
 
 ## *기능* 요소
 

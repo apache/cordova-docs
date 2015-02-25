@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Soporte de plataformas
 
@@ -246,7 +243,8 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * Windows Phone 8.1 sólo
         </td>
         
         <td data-col="tizen"       class="y">
@@ -614,7 +612,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -756,6 +754,40 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Barra de estado</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="n">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="y">
+          Windows Phone 8.1 sólo
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="cordova_storage_storage.md.html">Almacenamiento de información</a>
         </th>
         
@@ -815,7 +847,8 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * Windows Phone 8.1 sólo
         </td>
         
         <td data-col="tizen"       class="n">
