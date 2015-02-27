@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. Zobacz plik ogłoszenia rozpowszechniane z tej pracy, aby uzyskać dodatkowe informacje dotyczące własności praw autorskich. ASF licencje tego pliku do ci Apache License, w wersji 2.0 ("Licencja"); nie można używać tego pliku z wyjątkiem zgodnie z licencją. Możesz otrzymać kopię licencji na
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.Apache.org/licenses/License-2.0 chyba że wymagane przez prawo lub uzgodnione na piśmie, oprogramowanie rozpowszechniane na licencji jest rozpowszechniany na "AS IS" podstawę, bez gwarancji lub warunków gwarancji jakiegokolwiek rodzaju, wyraźnych ani dorozumianych.  Zobacz licencji dla określonego języka, regulujących uprawnienia i ograniczenia
+    
+
+## na licencji.
 
 # Kolejne kroki
 
@@ -101,7 +91,7 @@ Należy zauważyć, że zdarzenia online i offline, a także sieci połączenia 
 
 Jeśli twój istniejący projekt został utworzony za pomocą Cordova 3.x, można uaktualnić projektu wydając następujące:
 
-    cordova platform update platform-name ios, android, etc.
+    Cordova platformy aktualizacji platformy nazwa ios, android, itp.
     
 
 Jeśli twój istniejący projekt został utworzony w wersji przed Cordova 3.x, prawdopodobnie byłoby najlepiej, aby utworzyć nowy projekt 3.x Cordova, a następnie skopiuj istniejącego projektu kod i zasoby do nowego projektu. Typowe kroki:
@@ -121,8 +111,7 @@ Uwaga: niektóre wtyczki mogą nie być zgodne z nową wersją Cordova. Jeśli w
 
 3.4 Cordova tam jest mechanizm dla modernizacji zmieniona wtyczek za pomocą jednego polecenia. Zamiast tego usunąć wtyczkę i dodać go z powrotem do swojego projektu i zostanie zainstalowana nowa wersja:
 
-    cordova plugin rm com.some.plugin
-    cordova plugin add com.some.plugin
+    Cordova plugin rm com.some.plugin cordova plugin dodać com.some.plugin
     
 
 Należy sprawdzić, czy plugin Aktualizacja dokumentacji, jak może trzeba dostosować swój kod aby działał w nowej wersji. Ponadto dwukrotnie Sprawdź, czy nowa wersja pluginu działa z wersją projektu Cordova.

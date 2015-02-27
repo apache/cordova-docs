@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 플랫폼 가이드
 
@@ -31,9 +27,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 요구 사항 및 지원
 
-애플 ® 도구 인텔 기반 맥에 OS X 운영 체제 에서만 실행 iOS 응용 프로그램을 빌드하는 데 필요한. Xcode ® 4.5 (최소 필수 버전) 실행 OS X 10.7 (사자) 버전에만 이상, iOS 6 포함 SDK (소프트웨어 개발 키트). 제출 애플 리 케이 션 애플 애플 리 케이 션 Store℠ 최신 버전을의 Apple 도구를 필요 합니다.
+애플 ® 도구 인텔 기반 맥에 OS X 운영 체제 에서만 실행 iOS 응용 프로그램을 빌드하는 데 필요한. Xcode ® 6.0 (최소 필수 버전) 실행 OS X 버전 10.9 (댈러스 매버릭스)에 이상, iOS 8 포함 SDK (소프트웨어 개발 키트). 제출 애플 리 케이 션 애플 애플 리 케이 션 Store℠ 최신 버전을의 Apple 도구를 필요 합니다.
 
-설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 장치 기능을 테스트 하는 실제 장치를 해야 합니다. 장치 해야 합니다 iOS 5.x 설치, 코르도바 2.3 기준 지원 최소 iOS 버전. 지원 장치 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 가이드는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
+설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 장치 기능을 테스트 하는 실제 장치를 해야 합니다. 장치 해야 합니다 iOS 6.x 설치, 코르도바 3.0 현재 지원 되는 최소 iOS 버전. 지원 장치 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 가이드는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -121,12 +117,21 @@ Xcode의에 대 한 경고는 `invokeString` 메서드 사용자 지정 URL에�
 
 *   *Classes/MainViewController.m* 파일을 편집, 코드의 다음 블록을 둘러싸고 `/*` 및 `*/` 코멘트 아래와 같이 입력 합니다 **명령-s** 파일을 저장할:
     
-        (void) webViewDidFinishLoad:(UIWebView*) theWebView {/ / ___PROJECTNAME__-Info.plist 처리 하는 프로토콜을 지정 하는 경우에 유효 / * 경우 (self.invokeString) {/ /이 전달 deviceready 이벤트가 발생 하기 전에 deviceready NSLog를 받을 때 js에 액세스할 수 있습니다 (@"사용 되지 않음: window.invokeString-window.handleOpenURL(url) 함수를 사용, 항상 라는 응용 프로그램을 사용자 지정 스키마 url을 통해 시작할 때.");
-          NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
+        (void)webViewDidFinishLoad:(UIWebView*)theWebView
+        {
+        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+        /*
+        if (self.invokeString) {
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+          NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
-        } * / / / 기본 색상 블랙 배경 일치 네이티브 애플 리 케이 션 theWebView.backgroundColor = [UIColor blackColor];
+        }
+        */
+        // Black base color for background matches the native apps
+        theWebView.backgroundColor = [UIColor blackColor];
         
-        [슈퍼 webViewDidFinishLoad: theWebView] 반환;
+        return [super webViewDidFinishLoad:theWebView];
         }
         
 

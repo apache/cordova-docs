@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 外掛程式規範
 
@@ -370,9 +366,29 @@ Android 系統的示例：
 
 *   `arch`： 其中的體系結構 `.so` 檔已生成了，要麼 `device` 或`simulator`.
 
+對於 Windows 平臺上，`<lib-file>` 元素允許 `< SDKReference >` 生成 Windows 專案檔案中列入。
+
+支援的屬性：
+
+*   `src`（必需）： 包括了 SDK 的名稱 （這將用作生成的 `< SDKReference >` 元素 `Include` 屬性的值）。
+
+*   `arch`： 指示為指定的架構生成時只應包含 `< SDKReference >`。 受支援的值是 `x86`、`x64` 或 `ARM`.
+
+*   `目標`： 指示當生成指定的目標裝置類型只應包含 `< SDKReference >`。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+
+*   `versions`： 指示當生成指定的版本字串相匹配的版本只應包含 `< SDKReference >`。 值可以是任何有效的節點語義版本範圍的字串。
+
+例子：
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+    
+
 ## *框架*元素
 
-標識該外掛程式所依賴的一個框架 （通常的 OS 平臺的一部分）。
+標識該外掛程式所依賴的框架 （通常的作業系統/平臺的一部分）。
 
 例子：
 
@@ -382,22 +398,39 @@ Android 系統的示例：
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src`屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦專案中，給定平臺的正確方式。
+`src` 屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦的專案中，給定平臺的正確方式。
 
-可選的 `weak` 屬性是一個布林值，該值指示是否應弱連結框架。預設值是`false`.
+可選 `weak` 的屬性是一個布林值，該值指示是否應弱連結的框架。預設值為 `false`.
 
-可選的 `custom` 屬性是一個布林值，該值指示是否框架一種作為您的外掛程式檔的一部分包括 （因而它不是一個系統的框架）。 預設值是 `false` 。 ***關於 Android***它指定如何對待**src**。 如果 `true` **src**是從應用程式專案的目錄的相對路徑，否則 — — 從 Android SDK 目錄。
+可選的 `custom` 屬性是一個布林值，該值指示是否該框架一種作為您的外掛程式檔的一部分 （因此它不是一個系統的框架）。 預設值為 `false`。 ***關於 Android*** 它指定如何處理 **src**。 如果 `true` **src** 是從應用程式專案目錄的相對路徑否則 — — 從 Android SDK 目錄。
 
-可選的 `type` 屬性是一個字串，指示框架若要添加的類型。 目前只有 `projectReference` 是支援的和只能在 Windows 8 上。 使用 `custom='true'` 和 `type='projectReference'` 將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這實質上是唯一的途徑目前 '自訂' 框架可以針對多個體系結構，作為它們的顯式生成作為依賴項的科爾多瓦引用應用程式。
+可選 `type` 屬性是一個字串，指示框架添加的類型。 目前，只有 `projectReference` 支援並且僅用於 Windows。 使用 `custom='true'` 和 `type='projectReference'` 將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這基本上是目前 '自訂' 的框架可以針對多個體系結構，作為它們顯式引用科爾多瓦應用程式由修建作為一種依賴的唯一途徑。
 
-可選的 `parent` 屬性目前只能在安卓系統上支援。 它將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是 `.` ，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用：
+目前僅在 Android 支援可選 `parent` 屬性。 它將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是 `.`，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用：
 
-    < 框架 src ="FeedbackLib"自訂 ="true"/ >< 框架 src ="臨時演員/android/支援/v7/appcompat"自訂 ="false"父 ="FeedbackLib"/ >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    
+
+Windows 平臺支援三個附加屬性 （所有可選） 精煉時框架應包括：
+
+`arch` 屬性指示時為指定的架構建設只應包括框架。 受支援的值是 `x86`、`x64` 或 `ARM`.
+
+`target` 屬性指示當生成指定的目標裝置類型後，應該只能包括在內的框架。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+
+該 `versions` 屬性指示當生成指定的版本字串相匹配的版本後，應該只能包含框架。 值可以是任何有效的節點語義版本範圍的字串。
+
+使用這些視窗的特定屬性的示例：
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *資訊*元素
 
-向使用者提供的其他資訊。當您需要額外的步驟，不能很容易自動或超出了 plugman 的範圍時，這非常有用。例子：
+向使用者提供的額外資料。當您需要額外的步驟，不能輕易被自動化或超出了 plugman 的範圍時，這非常有用。示例：
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
@@ -410,34 +443,34 @@ Android 系統的示例：
 
 ## 變數
 
-在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要為 android 系統，其包 id 是 app C2DM 註冊 `com.alunny.message` 如需要的許可權：
+在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要註冊為 C2DM 在 Android 上，其包 id 是 `com.alunny.message` 應用程式還將如需要許可權：
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-在這種情況下，插入內容的位置，從 `plugin.xml` 檔事先並不知道，變數可以表明一個貨幣符號其次是一系列的大寫英文字母，數位或底線。 對於上面的示例中， `plugin.xml` 檔將包括此標記：
+在插入從 `plugin.xml` 檔的內容不事先知道這種情況下，變數可由其後一系列的大寫英文字母，數位或底線一個貨幣符號表示。 對於上面的示例中，`plugin.xml` 檔會包括此標記：
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 變數引用替換為指定的值或空字串，如果沒有找到。 可能檢測到的變數引用的值 （在這種情況下，從 `AndroidManifest.xml` 檔） 或指定的使用者的工具 ； 確切的過程是對某一特定工具的依賴。
+如果未找到，則 plugman 變數引用替換為指定的值或空字串。 可能檢測到 （在這種情況下，從 `AndroidManifest.xml` 檔） 或工具 ； 使用者指定的變數引用的值確切的過程是對某一特定工具的依賴。
 
-plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為一個命令列參數：
+plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為命令列參數：
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-以使變數強制性的 `<platform>` 標記需要包含 `<preference>` 標記。例如：
+為了使變數成為強制性，`<platform>` 標記需要包含 `<preference>` 標記。舉個例子：
 
     <preference name="API_KEY" />
     
 
-plugman 檢查中通過的這些所需的首選項。如果不是，它應該警告使用者如何傳遞中的變數和以非零代碼退出。
+plugman 檢查中通過的這些所需的首選項。如果不是的話，它應該警告使用者如何傳遞中的變數和與非零代碼退出。
 
 應保留某些變數的名稱，如下所示。
 
 ## $PACKAGE_NAME
 
-反向域風格的包，對應的唯一識別碼 `CFBundleIdentifier` 在 iOS 或 `package` 的頂級屬性 `manifest` 中的元素 `AndroidManifest.xml` 檔。
+反向域風格包，對應于 `CFBundleIdentifier` iOS 或 `package` 屬性，在 `AndroidManifest.xml` 檔中的頂級 `manifest` 元素的唯一識別碼。

@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.Apache.org/licenses/LICENSE-2.0 sofern gesetzlich erforderlich oder schriftlich vereinbart, ist die Software unter der Lizenz verteilt auf einer "AS IS" BASIS, ohne Gewährleistungen oder Bedingungen irgendwelcher Art, weder ausdrücklich noch stillschweigend.  Finden Sie die Lizenz für die jeweilige Sprache, EZB, Berechtigungen und Beschränkungen
+    
+
+## unter der Lizenz.
 
 # Die nächsten Schritte
 
@@ -101,7 +91,7 @@ Beachten Sie, dass die Online- und offline-Veranstaltungen sowie die Netzwerk-Ve
 
 Wenn das vorhandene Projekt erstellt wurde, mithilfe von Cordova 3.x, können Sie das Projekt aktualisieren, indem Folgendes ausgeben:
 
-    cordova platform update platform-name ios, android, etc.
+    Cordova Plattform Update Plattformnamen Ios, android, etc..
     
 
 Wenn das vorhandene Projekt, unter einer Version vor Cordova erstellt wurde 3.x, es wäre wohl am besten ein neues Cordova-3.x-Projekt erstellen und kopieren Sie dann des vorhandenen Projekts Code und Vermögenswerte in das neue Projekt. Typische Schritte:
@@ -121,8 +111,7 @@ Hinweis: einige Plugins kompatibel mit der neuen Version von Cordova möglicherw
 
 Ab Cordova 3.4 gibt es keinen Mechanismus für die Aktualisierung geänderte Plugins mithilfe eines einzelnen Befehls. Stattdessen entfernen Sie das Plugin zu, und fügen Sie sie zurück zu Ihrem Projekt und die neue Version installiert werden:
 
-    cordova plugin rm com.some.plugin
-    cordova plugin add com.some.plugin
+    Cordova Plugin Rm com.some.plugin Cordova Plugin hinzufügen com.some.plugin
     
 
 Achten Sie darauf, das aktualisierte Plugin Dokumentation, zu kontrollieren, Sie benötigen, um Ihren Code zum Arbeiten mit der neuen Version anzupassen. Auch, doppelt überprüfen, die die neue Version des Plugins mit Ihrem Projekt Version von Cordova.

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 外掛程式
 
@@ -27,7 +23,7 @@ IOS 外掛程式作為擴展目標 C 類實現 `CDVPlugin` 類。 對於 JavaScr
 
 一個外掛程式的 JavaScript 部分使用 `cordova.exec` 方法，如下所示：
 
-        exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
+        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 這封送一個請求從 `UIWebView` 到 iOS 本機一側，有效地調用 `action` 方法在 `service` 類，傳入的參數中的 `args` 陣列。
@@ -169,7 +165,7 @@ JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 iOS �
 
 ## 調試 iOS 外掛程式
 
-若要調試的目標 C 一邊，你需要 Xcode 的內置調試器。 對於 JavaScript，在 iOS 5.0 可以使用[Weinre、 Apache 科爾多瓦專案][3]或[iWebInspector、 一個協力廠商實用程式][4]。 Ios 6，可以將 Safari 6.0 附加到該應用程式運行在 iOS 6 模擬器。
+若要調試的目標 C 一邊，你需要 Xcode 的內置調試器。 對於 JavaScript，在 iOS 5.0 或更高版本上你可以使用 [Weinre、 Apache 科爾多瓦專案][3] 或 [iWebInspector、 一個協力廠商實用程式][4]。 Ios 8，您可以附加 Safari 8.0 8 模擬器在 iOS 中運行的應用程式。
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

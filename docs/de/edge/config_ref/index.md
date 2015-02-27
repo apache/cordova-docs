@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Die Datei config.xml
 
@@ -107,13 +103,6 @@ Die folgenden globalen Einstellungen gelten für alle Plattformen:
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`können Sie den lock Orientierung und verhindert, dass die Schnittstelle rotierend in Reaktion auf Änderungen in der Ausrichtung. Mögliche Werte sind `default` , `landscape` , oder `portrait` . Beispiel:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **Hinweis**: die `default` Wert bedeutet *sowohl* quer- und Hochformat Ausrichtungen sind aktiviert. Wenn Sie Standardeinstellungen für jede Plattform (in der Regel Porträt nur) verwenden möchten, lassen Sie dieses Tag von der `config.xml` Datei.
-
 ## Multi-Plattform-Einstellungen
 
 Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf alle von ihnen:
@@ -138,6 +127,22 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
         
     
     Gilt für iOS und BlackBerry.
+
+*   `Orientation` (string, der Standardwert ist `default`): erlaubt Ihnen lock Orientierung und verhindern, dass die Schnittstelle rotierend in Reaktion auf Änderungen in der Ausrichtung. Mögliche Werte sind `defaul`, `landscape` oder `portrait`. Beispiel:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    Darüber hinaus können Sie Plattform-spezifischen Ausrichtung Wert angeben, wenn Sie das `<preference>` Element innerhalb eines `<plattform>` Elements platzieren:
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    Gilt für Android, iOS, WP8, Amazon Fire OS und Firefox-OS.
+    
+    **Hinweis**: `der default` bedeutet Cordova entfernt den Orientierung-Präferenz-Eintrag aus der Plattform Manifest/Konfigurationsdatei ermöglicht die Plattform zum Ausweichen auf sein normales Verhalten.
 
 ## Das *Feature* Element
 

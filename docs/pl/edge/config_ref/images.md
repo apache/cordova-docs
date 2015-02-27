@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Ikony i ekrany powitalne w aplikacjach
 
@@ -65,7 +61,7 @@ Android
          </platform>
     
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
@@ -84,8 +80,34 @@ Firefox OS
 
 iOS
 
-         < nazwa platformy = "ios" ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < ikona src="res/ios/icon-60.png" szerokość = wysokość "60" = "60" / >< ikona src = szerokość "res, ios, icon-60@2x.png" = "120" wysokość = "120" / ><!--iPad--> < ikona src="res/ios/icon-76.png" szerokość = "76" wysokość = "76" / >< ikona src = szerokość "res, ios, icon-76@2x.png" = "152" wysokość = "152" / ><!--iOS 6.1--> <!--Spotlight ikona--> < ikona src="res/ios/icon-40.png" szerokość = wysokość "40" = "40" / >
-                  < ikona src = szerokość "res, ios, icon-40@2x.png" = "80" wysokość = "80" / ><!--iPhone / iPod Touch--> < ikona src="res/ios/icon.png" szerokość = wysokość "57" = "57" / >< ikona src = szerokość "res, ios, icon@2x.png" = "114" wysokość = "114" / ><!--iPad--> < ikona src="res/ios/icon-72.png" szerokość = wysokość "72" = "72" / >< ikona src = szerokość "res, ios, icon-72@2x.png" = "144" wysokość = "144" / ><!--iPhone Spotlight i ikonę ustawienia--> < ikona src="res/ios/icon-small.png" szerokość = "29" wysokość = "29" />< ikona src = szerokość "res, ios, icon-small@2x.png" = "58" wysokość = "58" / ><!--iPad Spotlight i ikonę ustawienia--> < src="res/ios/icon-50.png ikona" szerokość = wysokość "50" = "50" / >< ikona src = szerokość "res, ios, icon-50@2x.png" = "100" wysokość = "100" / >< / platformy >
+         <platform name="ios">
+                  <!-- iOS 8.0+ -->
+                  <!-- iPhone 6 Plus  -->
+                  <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
     
 
 Tizen
@@ -143,6 +165,9 @@ Proszę zauważyć, że wartość atrybutu "src" jest katalogiem projektu, a nie
         <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
         <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
         <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
     
     <platform name="wp8">

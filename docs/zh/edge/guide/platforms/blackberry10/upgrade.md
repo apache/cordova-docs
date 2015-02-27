@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 升級黑莓 10
 
 本指南演示如何修改黑莓手機的專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。
+
+## 4.0.0 3.6.0 版升級專案
+
+對於非 CLI 的專案，請運行：
+
+        bin/update path/to/project
+    
+
+CLI 的專案：
+
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+
+2.  在你現有的專案中運行 `cordova platform update blackberry`。
 
 ## 從 3.1.0 升級到 3.2.0
 
@@ -27,16 +36,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
-2.  運行`cordova platform update blackberry`
+2.  運行 `cordova platform update blackberry`
 
 對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
-        bin/更新 < project_path >
+        bin/update <project_path>
     
 
 ## 從 3.0.0 升級到 3.1.0
 
-1.  創建新的 Apache 科爾多瓦 3.1.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建一個新的 Apache 科爾多瓦 3.1.0 專案使用 CLI，科爾多瓦，所述的命令列介面。
 
 2.  添加您的平臺到科爾多瓦專案中，例如：`cordova
 platform add blackberry10`.
@@ -47,11 +56,11 @@ platform add blackberry10`.
 
 5.  複製 `config.xml` 檔到 `www` 目錄中，並刪除任何外掛程式定義。您需要修改設置，在這裡，而不是平臺目錄內。
 
-6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。 請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。 只有外掛程式標記 3.0.0 和上文與 CLI 相容。
+6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。 注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。 只有外掛程式標記 3.0.0 並且以上與 CLI 相容。
 
 7.  生成並測試。
 
-請注意，CLI 完全支援 BlackBerry10 平臺。PlayBook 和 BBOS，請參閱版本 2.9.0 科爾多瓦和下方。
+請注意，CLI 完全支援 BlackBerry10 平臺。劇本和 BBOS，請參閱科爾多瓦版本 2.9.0 及以下。
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
@@ -82,7 +91,7 @@ platform add blackberry10`.
 
 4.  創建一個新專案，黑莓手機殼工具指南中所述。這將成為您更新的專案的家中。
 
-5.  將您的專案源從舊專案複製 `/www` 到新的專案目錄 `/www` 目錄。
+5.  從舊專案複製您的專案源 `/ www` 目錄到新的專案 `/ www` 目錄。
 
 6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
@@ -118,7 +127,7 @@ platform add blackberry10`.
 
 4.  創建一個新專案，黑莓手機殼工具指南中所述。這將成為您更新的專案的家中。
 
-5.  將您的專案源從舊專案複製 `/www` 到新的專案目錄 `/www` 目錄。
+5.  從舊專案複製您的專案源 `/ www` 目錄到新的專案 `/ www` 目錄。
 
 6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
@@ -144,7 +153,7 @@ platform add blackberry10`.
 
 ## 升級 2.6.0 專案到 2.7.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.7.0 源，例如到`~/Cordova-2.7.0`.
+1.  下載並解壓縮到硬碟上，例如對 `~/Cordova-2.7.0` 的永久目錄位置的科爾多瓦 2.7.0 源.
 
 2.  退出任何正在運行的 SDK 工具： 日食、 Momentics 和類似。
 
@@ -381,12 +390,14 @@ platform add blackberry10`.
 
 6.  更新 `www/plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改為的捕獲和連絡人的外掛程式，從舊的條目：
     
-        < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     自：
     
-        < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 更新 （即，更新使用 ant 工具） 的示例目錄：
@@ -407,12 +418,14 @@ platform add blackberry10`.
 
 8.  打開 `www` 目錄和更新 `plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改為的捕獲和連絡人的外掛程式，從舊的條目：
     
-         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     自：
     
-         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   要升級到 1.8.0，請轉從 1.7.0
@@ -435,12 +448,14 @@ platform add blackberry10`.
 
 6.  更新 `www/plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改為的捕獲和連絡人的外掛程式，從舊的條目：
     
-        < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     自：
     
-        < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 更新 （即，更新使用 ant 工具） 的示例目錄：
@@ -461,9 +476,11 @@ platform add blackberry10`.
 
 8.  打開 `www` 目錄和更新 `plugins.xml` 檔。兩個外掛程式更改其命名空間/服務標籤。更改為的捕獲和連絡人的外掛程式，從舊的條目：
     
-         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     自：
     
-         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

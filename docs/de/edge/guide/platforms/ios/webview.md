@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Webansichten für
 
@@ -23,7 +19,7 @@ Diese Anleitung zeigt, wie eine Cordova-fähigen WebView Komponente innerhalb ei
 
 Unterstützung für iOS Webansichten für begann mit Cordova Version 1.4, mit einer `Cleaver` Komponente, für die die Xcode-Vorlage als Referenzimplementierung dient. Cordova 2.0 und höheren Versionen unterstützen nur die Teilprojekt-basierte Cleaver-Implementierung.
 
-Diese Anweisungen erfordern mindestens Cordova 2.3 und Xcode 4.5, zusammen mit einer `config.xml` Datei aus einem neu erstellten iOS-Projekt. Können Sie das Verfahren in der Befehlszeilenschnittstelle ein neues Projekt erstellen, dann erhalten Sie die `config.xml` -Datei im Unterverzeichnis innerhalb der benannten Anwendung`platforms/ios`.
+Diese Anweisungen erfordern mindestens Cordova 3.x und Xcode 6.0, zusammen mit einer Datei `"config.xml"` aus einem neu erstellten iOS-Projekt. Können Sie das Verfahren in der Befehlszeilenschnittstelle ein neues Projekt erstellen, dann erhalten Sie die `config.xml` -Datei im Unterverzeichnis innerhalb der benannten Anwendung`platforms/ios`.
 
 Um diese Anweisungen befolgen, stellen Sie sicher, dass Sie die neueste Cordova-Verteilung. Von [cordova.apache.org][1] herunterladen Sie und entpacken Sie das iOS-Paket.
 

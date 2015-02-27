@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Firefox OS Platform Guide
 
@@ -58,48 +54,35 @@ Cela crée une application Firefox OS dans le répertoire de plates-formes/firef
     cordova plugin add org.apache.cordova.vibration
     
 
-Vous devez également ajouter un fichier personnalisé manifest.webapp dans votre répertoire de test-app/www, qui doit comprendre au moins ce qui suit :
-
-    { 
-        "launch_path":"/index.html",
-        "installs_allowed_from":["*"],
-        "version":"0.0.1",
-        "name":"My app",
-        "pkgName":"io.cordova.hellocordova",
-        "icons": {
-            "128": "/img/logo.png"
-        }
-    }
-    
-
-Pour plus d'informations sur les manifestes de Firefox App, lire [App manifeste][4] sur le MDN.
-
- [4]: https://developer.mozilla.org/en-US/Apps/Developing/Manifest
-
 Lorsque le code de votre application est écrit, déployer les modifications apportées à l'application Firefox OS avec que vous avez ajouté à votre projet
 
-    $ cordova prepare
+    $ cordova préparer firefoxos
     
 
-Notez qu'une étape de génération (c'est-à-dire cordova build) n'est pas requise lors du déploiement de la plate-forme de Firefox OS, comme Firefox OS apps sont axées sur le HTML et donc pas compilé.
+Pour créer une app emballé un peut zip du répertoire de plates-formes/firefoxos/www. Vous pouvez aussi tout simplement construire à l'aide
+
+    $ cordova construire firefoxos
+    
+
+L'app emballé Firefox OS sera construit à platforms/firefoxos/build/package.zip
 
 ## Test et le débogage
 
-L'app peut être testée à l'aide du Firefox OS [App Manager][5].
+L'app peut être testée en utilisant l' OS Firefox [Web IDE][4].
 
- [5]: https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+ [4]: https://developer.mozilla.org/en-US/docs/Tools/WebIDE
 
-Lorsque vous avez connecté l'App Manager à votre périphérique/simulateur de test, sélectionnez l'option « Ajouter des App emballés », alors assurez-vous que vous pointez sur le test-app/plateformes/firefoxos/www/annuaire d'inclure l'application dans l'interface Manager.
+Lorsque vous avez connecté l'IDE Web à votre périphérique/simulateur de test, sélectionnez l'option « Open App emballés », alors assurez-vous que vous pointez sur le test-app/plateformes/firefoxos/www/annuaire d'inclure l'application dans l'interface Manager.
 
-Car ici, vous pouvez installer l'application sur votre appareil/simulateur de test (avec le bouton « Update »). En utilisant la bouton, vous pouvez déboguer l'application et modifier son code live « Debug ».
+Car ici, vous pouvez installer l'application sur votre appareil/simulateur de test (avec le bouton « Play »). À l'aide de la « Pause » bouton, vous pouvez déboguer l'application et modifier son code en direct.
 
-Remarque : Avant d'essayer de publier votre application, vous devez envisager la validation à l'aide du [validateur de l'App][6].
+Remarque : Avant d'essayer de publier votre application, vous devez envisager la validation à l'aide du [validateur de l'App][5].
 
- [6]: https://marketplace.firefox.com/developers/validator
+ [5]: https://marketplace.firefox.com/developers/validator
 
 ## Publier votre application sur le Marketplace de Firefox
 
-Vous pouvez soumettre votre application sur le marché de Firefox, ou publiez-le vous-même. Visitez la [Zone de marché de Firefox][7] le MDN pour obtenir des renseignements sur la façon de le faire ; [Options de publication App][8] est le meilleur endroit pour commencer.
+Vous pouvez soumettre votre application sur le marché de Firefox, ou publiez-le vous-même. Visitez la [Zone de marché de Firefox][6] le MDN pour obtenir des renseignements sur la façon de le faire ; [Options de publication App][7] est le meilleur endroit pour commencer.
 
- [7]: https://developer.mozilla.org/en-US/Marketplace
- [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options
+ [6]: https://developer.mozilla.org/en-US/Marketplace
+ [7]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options

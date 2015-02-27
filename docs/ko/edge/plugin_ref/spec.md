@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 플러그인 명세
 
@@ -370,6 +366,26 @@ XML에 대 한 예제:
 
 *   `arch`: 어떤 아키텍처는 `.so` 파일이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
 
+Windows 플랫폼 `<lib-file>` 요소는 `< SDKReference >` 생성 된 Windows 프로젝트 파일에 포함을 할 수 있습니다.
+
+지원된 특성:
+
+*   `src` (필수 사항): 포함 하려면 SDK의 이름 (이 생성 된 `< SDKReference >` 요소의 `Include` 특성의 값으로 사용 됩니다).
+
+*   `arch`: `< SDKReference >`만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
+
+*   `target`: `< SDKReference >`만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 때를 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
+
+*   `versions`: `< SDKReference >`만 포함 되어야 함을 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
+
+예:
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+    
+
 ## *프레임 워크* 요소
 
 에 따라 플러그인 프레임 워크 (일반적으로 운영 체제/플랫폼의 일부)를 식별 합니다.
@@ -382,17 +398,34 @@ XML에 대 한 예제:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
+`src` 특성 식별 프레임 워크는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 합니다.
 
-옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
+선택적 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은 `false`.
 
-옵션 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 값입니다 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false` . ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `true` **src** 는 응용 프로그램 프로젝트 디렉터리에서 상대 경로-안 드 로이드 SDK 디렉터리에서.
+옵션의 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false`입니다. ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `true` **src**-안 드 로이드 SDK 디렉터리에서 그렇지 않으면 응용 프로그램 프로젝트 디렉터리에서 상대 경로입니다.
 
-옵션 `type` 특성은 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 되는 윈도우 8에만. 사용 하 여 `custom='true'` 및 `type='projectReference'` 는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법은 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
+선택적 `type` 특성을 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 Windows 용만. 사용 하 여 `custom='true'` 및 `type='projectReference'`는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법은 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
 
-옵션 `parent` 속성은 현재 안 드 로이드에만 지원 됩니다. 참조를 추가 하는 하위 프로젝트가 포함 된 디렉터리에 상대적인 경로 설정 합니다. 기본값은 `.` , 즉 응용 프로그램 프로젝트. 그것은이 예제에서 같은 하위 프로젝트 간의 참조를 추가할 수 있습니다.
+옵션 `parent` 특성은 현재 안 드 로이드에만 지원 됩니다. 참조를 추가 하는 하위 프로젝트가 포함 된 디렉터리에 상대적인 경로 설정 합니다. 기본값은 `.`, 즉 응용 프로그램 프로젝트. 그것은이 예제에서 같은 하위 프로젝트 간의 참조를 추가할 수 있습니다.
 
-    < 프레임 워크 src = "FeedbackLib" 사용자 정의 = "true" / >< 프레임 워크 src = "엑스트라/안 드 로이드/지원/v7/appcompat" 사용자 정의 "false" 부모 = = "FeedbackLib" / >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    
+
+Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추가 특성을 (모두 선택)을 지원 합니다.
+
+`arch` 특성 프레임 워크만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
+
+`target` 특성은 framwork만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 빌드할 때 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
+
+`versions` 특성은 프레임 워크만 포함 되어야 함을 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
+
+이러한 Windows 특정 특성을 사용 하 여의 예:
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *정보* 요소
@@ -410,26 +443,26 @@ XML에 대 한 예제:
 
 ## 변수
 
-어떤 경우에는 플러그인 구성 변경 대상 응용 프로그램에 의존 해야 합니다. 예를 들어, 패키지 id가 애플 리 케이 션 안 드 로이드에서 C2DM 등록을 `com.alunny.message` 와 같은 권한 요구:
+어떤 경우에는 플러그인 구성 변경 대상 응용 프로그램에 의존 해야 합니다. 예를 들어, 안 드 로이드에서 C2DM 등록, 패키지 id가 `com.alunny.message` 애플 리 케이 션은 같은 허가 요구 것입니다.
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-내용에서 삽입 된 경우에는 `plugin.xml` 파일은 미리 알 수 없습니다, 변수는 달러 기호 뒤에 대문자, 숫자 또는 밑줄의 시리즈에 의해 나타날 수 있다. 위의 예제는 `plugin.xml` 파일이이 태그를 포함할 것입니다:
+`plugin.xml` 파일에서 삽입 하는 내용을 미리 알려져 있지 경우에서 변수는 달러 기호 뒤에 일련의 대문자, 숫자 또는 밑줄 표시 수 있습니다. 위의 예제 `plugin.xml` 파일이이 태그를 포함할 것입니다.
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 지정된 된 값 또는 빈 문자열에 변수 참조를 바꿉니다 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
+plugman 지정된 된 값 또는 빈 문자열에 변수 참조를 바꿉니다 경우 찾을 수 없습니다. 변수 참조의 값 (이 경우 `AndroidManifest.xml` 파일)에서 감지 되거나 도구; 사용자 지정 정확한 프로세스는 특정 도구에 의존 합니다.
 
 plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청할 수 있습니다. 예를 들어 명령줄 인수로 C2M 및 구글 맵 스 API 키를 지정할 수 있습니다.
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-필수, 변수를 확인 하는 `<platform>` 태그를 포함 해야 한 `<preference>` 태그. 예를 들어:
+변수 확인 필수, `<platform>` 태그 `<platform>` 태그를 포함 해야 합니다. 예를 들어:
 
     <preference name="API_KEY" />
     
@@ -440,4 +473,4 @@ plugman 확인이 필요한 환경 설정에서 전달 됩니다. 그렇지 않�
 
 ## $PACKAGE_NAME
 
-리버스 도메인 스타일에 해당 하는 패키지에 대 한 고유 식별자는 `CFBundleIdentifier` iOS에서 또는 `package` 특성은 최상위의 `manifest` 요소에는 `AndroidManifest.xml` 파일.
+IOS 또는 `AndroidManifest.xml` 파일에 최상위 `매니페스트` 요소의 `패키지` 특성에 `CFBundleIdentifier`을 해당 패키지에 대 한 리버스 도메인 스타일 고유 식별자입니다.

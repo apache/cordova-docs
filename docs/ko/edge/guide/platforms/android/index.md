@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 안 드 로이드 플랫폼 가이드
 
@@ -124,15 +120,14 @@ SDK와 함께에서 코르도바의 안 드 로이드 중심으로 셸 도구를
 
 ## 프로젝트 빌드
 
-프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리 소스 파일이 들어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.
+프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리 소스 파일이 들어 있습니다. 이러한 디렉터리 내에서 프로젝트 응용 프로그램을 다시 실행 합니다.
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ cordova만 안 드 로이드 안 드 로이드-안 드 로이드만 $ 코르도바 빌드 안 드 로이드-유일한 안 드 로이드 출시 # 빌드 릴리스 디버그 # 빌드 디버그 빌드에 대 한 $ 코르도바 빌드 # 추가 $ 코르도바 했다 모든 플랫폼 안 드 로이드 # 빌드 디버그 빌드
     
 
 개발에서 안 드 로이드 관련 셸 도구를 사용 하는 경우는 다른 접근이 이다.입니다. 일단 프로젝트를 생성 하면 기본 응용 프로그램의 소스는에 `assets/www` 하위 디렉터리. 후속 명령에서 사용할 수 있습니다 그것의 `cordova` 하위 디렉터리.
 
-`build`명령을 프로젝트 파일 및 응용 프로그램을 다시 작성 합니다. 여기에 맥과 윈도 즈에 대 한 구문이입니다. 예의 첫 번째 쌍 디버깅 정보를 생성 하 고 두 번째 릴리스에 대 한 애플 리 케이 션 서명:
+`build`명령을 프로젝트 파일 및 응용 프로그램을 다시 작성 합니다. 여기에 맥과 윈도 즈에 대 한 구문이입니다. 예의 첫 번째 쌍 디버깅 정보를 생성 하 고 두 번째 릴리스에 대 한 애플 리 케이 션을 빌드:
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -140,6 +135,13 @@ SDK와 함께에서 코르도바의 안 드 로이드 중심으로 셸 도구를
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
     
+
+릴리스에 대 한 다음 정의를 추가 하는 경우 빌드할 때 당신의 `local.properties` 파일, 다음 당신의 APK 서명 얻을 것 이다 및 정렬 등을 업로드 구글 플레이 스토어에 대 한 준비가 될 것입니다:
+
+        key.store=/Users/me/Developer/mykeystore.jks key.alias=mykeyalias
+    
+
+있다면 키 저장 및/또는 앨리어싱된 키 암호, 빌드 스크립트는 암호에 대 한 메시지가 표시 됩니다. 속성 파일에서 암호를 정의할 필요가 없습니다. 프롬프트를 방지 하려는 경우를 정의 하는에서 `local.properties` 으로 `key.store.password` 및 `key.alias.password` . 이렇게 할 경우 이러한 암호 보안 문제 알고 있어야 합니다.
 
 ## 에뮬레이터 구성
 
@@ -187,17 +189,17 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 이 시점에서 사용할 수 있는 `cordova` CLI 유틸리티는 명령줄에서 에뮬레이터에 응용 프로그램 배포를:
 
-        $ cordova emulate android
+        $ 코르도바 에뮬레이션 안 드 로이드
     
 
 그렇지 않으면 대체 셸 인터페이스를 사용 하 여:
 
-        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run-에뮬레이터
     
 
 어느 에뮬레이터 현재 SDK 내에서 사용할 수에 의존 하는 대신 각 제공 하는 이름으로 참조할 수 있습니다.
 
-        $ /path/to/project/cordova/run --target=NAME
+        $ /path/to/project/cordova/run-대상 이름 =
     
 
 이 홈 화면에 앱을 못 살게 굴지 그리고 그것을 시작:
@@ -208,7 +210,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 때 당신이 `run` 애플 리 케이 션, 당신은 또한 `build` 그것. 추가 추가 할 수 있습니다 `--debug` , `--release` , 및 `--nobuild` 어떻게 만들어집니다, 또는 심지어 여부 재건은 필요한 제어 하는 플래그:
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $ /path/to/project/cordova/run-에뮬레이터-nobuild
     
 
 대신 이클립스에서 작업 하는, 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **→ 안 드 로이드 응용 프로그램을 실행**을 선택 합니다. 이미 열려 있다면 아무도 AVD를 지정 하려면 요청 받을 수 있습니다.
@@ -259,12 +261,12 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 이 CLI 명령을 사용 하 여 장치에 응용 프로그램을 밀어 수 있습니다.
 
-        $ cordova run android
+        안 드 로이드 실행 $ 코르도바
     
 
 .. 아니면이 안 드 로이드 중심으로 셸 인터페이스를 사용 하 여:
 
-        $ /path/to/project/cordova/run --device
+        $ /path/to/project/cordova/run-장치
     
 
 지정 된, 없음 플래그는 `run` 명령 검색 연결 된 장치 또는 현재 실행 중인 에뮬레이터 없는 장치가 발견 되 면, 그렇지 않으면 그것은 에뮬레이터를 지정 하 라는 메시지가 표시 됩니다.
@@ -275,11 +277,9 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 다음 응용 프로그램의 자세한 로그 실행으로 생성:
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log C:\path\to\project\cordova\log.bat
     
 
 다음 프로젝트 파일 정리:
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat

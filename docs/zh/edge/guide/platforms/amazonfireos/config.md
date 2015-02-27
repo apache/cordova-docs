@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 亞馬遜火 OS 配置
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 此節詳細資訊首選項僅適用于亞馬遜火 OS 的基礎。 有關全域配置選項，請參閱 config.xml 檔的資訊。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 此節詳細資訊首選項僅適用于亞馬遜火 OS 的基礎。 有關全域配置選項的資訊，請參閱 [config.xml 檔][1]。
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     

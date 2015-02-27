@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guide de la liste blanche
 
@@ -61,6 +57,10 @@ Les exemples suivants illustrent la syntaxe de la liste blanche :
  [6]: http://docs.google.com
  [7]: http://developer.mozilla.org
 
+Sachez que certains sites Web peut rediriger automatiquement depuis leur page d'accueil à une autre url, par exemple en utilisant le protocole https ou à un domaine de chaque pays. Par exemple, http://www.google.com redirigera pour utiliser SSL/TLS à https://www.google.com et puis peut également rediriger vers une géographie comme https://www.google.co.uk. Ces scénarios peuvent nécessiter des entrées de liste blanche modifiées ou supplémentaires au-delà de votre condition initiale. Pensez ce que vous construisez votre liste blanche.
+
+Notez que la liste d'autorisation s'applique uniquement à la principale webview Cordova et ne s'applique pas à une webview InAppBrowser ou l'ouverture des liens dans le navigateur web de système.
+
 ## Amazon Fire OS liste blanche
 
 Règles spécifiques à la plateforme whitelisting se trouvent dans`res/xml/config.xml`.
@@ -79,31 +79,36 @@ Règles spécifiques à la plateforme whitelisting se trouvent dans`res/xml/conf
 
 ### Application externe Whitelist
 
-Cordova 3.6.0 introduit une deuxième liste blanche, pour restreindre qui URLs sont autorisés à lancer des applications externes. Dans les versions précédentes de Cordova, toutes les URLs non-http, tels que `mailto:` , `geo:` , `sms:` et `intent` , ont été implicitement autorisé à être la cible d'un un <a>balise.</a> En raison du potentiel pour une demande d'informations des fuites, si une vulnérabilité XSS permet à un attaquant de construire des liens arbitraires, ces URL doit être également, en liste blanche à partir de Cordova 3.6.0.
+Cordova 3.6.0 introduit une deuxième liste blanche, pour restreindre qui URLs sont autorisés à lancer des applications externes. Dans les versions précédentes de Cordova, toutes les URLs non-http, tels que `mailto:` , `geo:` , `sms:` et `intent` , ont été implicitement autorisé à être la cible d'une balise < a >. En raison du potentiel pour une demande d'informations des fuites, si une vulnérabilité XSS permet à un attaquant de construire des liens arbitraires, ces URL doit être également, en liste blanche à partir de Cordova 3.6.0.
 
-Pour permettre à un modèle d'URL lancer une application externe, utiliser un <access> tag dans votre `config.xml` fichier, avec la `launch-external` attribut défini.
+Pour permettre à un modèle d'URL lancer une application externe, utiliser une balise < accès > dans votre `config.xml` fichier, avec la `launch-external` attribut défini.
 
 Exemples :
 
 *   Pour autoriser les liens envoyer des messages SMS :
     
-    <access origin="sms:*" launch-external="yes" />
+        < accéder origine = "sms: *" lancement-externe = « yes » / >
+        
 
 *   Pour autoriser les liens pour ouvrir les cartes :
     
-    <access origin="geo:*" launch-external="yes" />
+        < accéder origine = "geo: *" lancement-externe = « yes » / >
+        
 
 *   Pour autoriser les liens vers example.com pour ouvrir dans un navigateur externe :
     
-    <access origin="http://example.com/*" launch-external="yes" />
+        < accéder origine = "http://example.com/ *" lancement-externe = « yes » / >
+        
 
 *   Pour permettre à tous les sites Web non-liste blanche ouvrir dans un navigateur externe: (c'est le même que le comportement précédent lorsque l'URL dans la liste non-blanche)
     
-    <access origin="http://*" launch-external="yes" /> <access origin="https://*" launch-external="yes" />
+        < accéder origine = « http://* » lancement-externe = « yes » / >< origine d'accès = « https://* » lancement-externe = « yes » / >
+        
 
 *   Pour permettre l'accès à toutes les URL, revenant sur la politique de Cordova 3.5.0 (non recommandée) :
     
-    <access origin="*" launch-external="yes" />
+        < accéder origine = "*" lancement-externe = « yes » / >
+        
 
 Lorsque vous naviguez vers une URL à partir de votre application, la whitelist interal est testé tout d'abord, et si l'URL n'est pas là en liste blanche, puis la liste d'autorisation externe est testé. Cela signifie que toute `http:` ou `https:` les URLs qui correspondent à ces deux listes blanches sera ouvert à l'intérieur de l'application de Cordova, plutôt que de lancer le navigateur externe.
 
@@ -149,6 +154,24 @@ Utilisation de quelques dizaines de blackBerry de caractères génériques se di
 
  [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
+## Firefox OS
+
+Dans Firefox OS il n'y a aucun concept de liste blanche un domaine spécifique. Au lieu de cela, il y a une autorisation spéciale appelée [SystemXHR][10]. Il est nécessaire d'ajouter cette autorisation à `config.xml` :
+
+ [10]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions
+
+    < nom de plate-forme = « firefoxos » >< nom de permission = privilégié « systemXHR » = « vraie » description = « charger les données du serveur » / >< / plate-forme >
+    
+
+Le `XMLHttpRequest` objet doit être instancié avec deux paramètres `mozAnon` et `mozSystem` :
+
+    demande de var = new XMLHttpRequest({
+        mozAnon: true,
+        mozSystem: true}) ;
+    
+
+Cette solution est transparente, donc il n'y a pas de différence pour d'autres plateformes.
+
 ## Changements d'iOS 3.1.0
 
 Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le régime de whilelisting de domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier le `config.xml` fichier pour continuer la liste blanche le même ensemble de ressources comme avant.
@@ -167,6 +190,6 @@ Les règles de liste blanche pour Windows Phone 8 se trouvent dans l'application
 
 ## Liste blanche paciarelli
 
-Règles de liste blanche se trouvent dans l'application de `config.xml` fichier. La plate-forme s'appuie sur les mêmes `subdomains` attribut comme la plateforme BlackBerry. (Pour plus d'informations sur la prise en charge, consultez documentation de paciarelli sur l' [élément access][10].)
+Règles de liste blanche se trouvent dans l'application de `config.xml` fichier. La plate-forme s'appuie sur les mêmes `subdomains` attribut comme la plateforme BlackBerry. (Pour plus d'informations sur la prise en charge, consultez documentation de paciarelli sur l' [élément access][11].)
 
- [10]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
+ [11]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

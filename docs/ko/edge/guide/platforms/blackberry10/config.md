@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 블랙베리 10 구성
 
-`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 블랙베리 10에만 적용이 섹션 세부 환경 설정을 작성 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 블랙베리 10에만 적용이 섹션 세부 환경 설정을 작성 합니다. 글로벌 구성 옵션에 대 한 내용은 [config.xml 파일을][1] 참조 하십시오.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `ChildBrowser`( `disable` 기본 `enable` ): 아이 브라우저 창을 사용 하지 않도록 설정 합니다. 기본적으로 애플 리 케이 션을 통해 액세스 하는 리소스를 표시 하려면 보조 브라우저 창을 시작 `window.open()` 또는 지정 하는 `_blank` 앵커 대상. 지정 `disable` 이 기본 동작을 재정의 합니다.
     
