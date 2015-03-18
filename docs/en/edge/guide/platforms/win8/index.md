@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Windows Platform Guide
 
 This guide shows how to set up your SDK development environment to build 
-and deploy Cordova apps for Windows 8, Windows 8.1 and Windows Phone 8.1.
-It shows how to use either shell tools to generate and build apps, or 
-the cross-platform Cordova CLI discussed in The Command-Line Interface.
-(See the Overview for a comparison of these development options.) This
-section also shows how to modify Cordova apps within Visual Studio.
-Regardless of which approach you take, you need to install the 
-Visual Studio SDK, as described below.
+and deploy Cordova apps for Windows 8, Windows 8.1, Windows Phone 8.1, and 
+Windows 10 Universal App Platform.  It shows how to use either shell tools 
+to generate and build apps, or the cross-platform Cordova CLI discussed in 
+The Command-Line Interface. (See the Overview for a comparison of these 
+development options.) This section also shows how to modify Cordova apps 
+within Visual Studio. Regardless of which approach you take, you need to 
+install the Visual Studio SDK, as described below.
 
 See Upgrading Windows 8 for information on how to upgrade existing
 Windows 8 Cordova projects.
@@ -49,21 +49,28 @@ installation disk or an _ISO_ disk image file.
 
 To develop apps for Windows 8.0 only:
 
-- Windows 8.0 or 8.1, 32 or 64-bit _Home_, _Pro_, or _Enterprise_
+- Windows 8.0, 8.1 or 10, 32 or 64-bit _Home_, _Pro_, or _Enterprise_
   editions, along with
-  [Visual Studio 2012 Express](http://www.visualstudio.com/downloads).
+  [Visual Studio 2012 Express](http://www.visualstudio.com/downloads) 
+  or Visual Studio 2013.  Visual Studio 2015 is not able to build Windows 8.0 apps.
 
-To develop apps for all platforms (Windows 8.0, Windows 8.1 and Windows Phone 8.1):
+To develop apps for Windows 8.0 and 8.1 (including Windows Phone 8.1):
 
-- Windows 8.1, 32 or 64-bit _Home_, _Pro_, or _Enterprise_ editions,
+- Windows 8.1 or Windows 10, 32 or 64-bit _Home_, _Pro_, or _Enterprise_ editions,
   along with 
   [Visual Studio 2013 Express](http://www.visualstudio.com/downloads)
   or higher. An evaluation version of Windows 8.1 Enterprise is
   available from the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
 
-Apps compiled under Windows 8.1 do _not_ run under Windows 8.0. Apps
-compiled under Windows 8.0 are forward-compatible with 8.1.
+To develop apps for Windows 10:
+
+- Windows 8.1 or Windows 10 Technical Preview 2, 32- or 64-bit, along with
+  [Visual Studio 2015 CTP6](http://www.visualstudio.com/preview) or higher.
+
+App compatibility is determined by the OS that the app targeted.  Apps are forwardly-compatible
+but not backwardly-compatible, so an app targeting Windows 8.1 cannot run on 8.0, but 
+an app built for 8.0 can run on 8.1.
 
   <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
 
@@ -81,9 +88,9 @@ Windows development environment on a Mac:
 
 - [VMWare Fusion](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
 
-- [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
+- [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424)
   
-- [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
+- [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423)
   
 ## Using Cordova Shell Tools
 
@@ -109,10 +116,15 @@ Plugins.
 
 ## Install the SDK
 
-Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
-[Visual Studio](http://www.visualstudio.com/downloads).
+Install any edition of
+[Visual Studio](http://www.visualstudio.com/downloads) matching the version
+requirements listed above.  
 
 ![](img/guide/platforms/win8/win8_installSDK.png)
+
+For Windows 10, you will additionally need to download the 
+[Visual Studio Tools for Windows 10](http://www.visualstudio.com/downloads)
+in order to successfully build Windows 10 apps.
 
 ## Create a New Project
 
@@ -166,6 +178,14 @@ added to configuration file (`config.xml`).
 
 Once you add this setting `build` command will start producing Windows 8.1 
 and Windows Phone 8.1 packages.
+
+### Considerations for target Windows version
+
+Windows 10 supports a new "Remote" mode for Cordova apps (and HTML apps in general). This mode enables
+apps much more freedom with respect to use of modern web frameworks and certain types of unsafe activity
+(such as DOM manipulation), but does so by reducing the set of capabilities your app may use when 
+submitted to the public Windows Store.  For more information about Windows 10 and Remote Mode, look at
+the [Cordova for Windows 10](win10-support.md.html) documentation.
 
 ## Deploy the app
 
