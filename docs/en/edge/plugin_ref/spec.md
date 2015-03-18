@@ -454,6 +454,26 @@ It supports the following attributes:
 
 * `after`: A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement)
 
+The Windows platform supports two additional attributes (both optional) when affecting the meta-name `package.appxmanifest`:
+
+The `device-target` attribute indicates that the  should only be included when building for the specified target device
+type. Supported values are `win`, `phone`, or `all`.
+
+The `versions` attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the
+specified version string. Value can be any valid node semantic version range string.
+
+Examples of using these Windows specific attributes:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+
+The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified. 
+
 ## _plugins-plist_ Element
 
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
@@ -517,7 +537,7 @@ Supported attributes:
 * `arch`: Indicates that the `<SDKReference>` should only be included when building for the specified architecture.
   Supported values are `x86`, `x64` or `ARM`.
 
-* `target`: Indicates that the `<SDKReference>` should only be included when building for the specified target device
+* `device-target`: Indicates that the `<SDKReference>` should only be included when building for the specified target device
   type. Supported values are `win` (or `windows`), `phone` or `all`.
 
 * `versions`: Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version
@@ -571,7 +591,7 @@ The Windows platform supports three additional attributes (all optional) to refi
 The `arch` attribute indicates that the framework should only be included when building for the specified architecture.
 Supported values are `x86`, `x64` or `ARM`.
 
-The `target` attribute indicates that the framwork should only be included when building for the specified target device
+The `device-target` attribute indicates that the framework should only be included when building for the specified target device
 type. Supported values are `win` (or `windows`), `phone` or `all`.
 
 The `versions` attribute indicates that the framework should only be included when building for versions that match the
