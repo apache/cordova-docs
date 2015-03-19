@@ -97,66 +97,17 @@ running emulator if no device is found.
 
         C:\>\path\to\project\cordova\clean.bat
 
-## Manual Use of Ant
+## Building with Gradle
 
-If you wish to call Ant directly from the command line such as
-`ant debug install`, you need to specify additional parameters to the ant
-command:
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-
-This is because the directories used by Cordova's Ant scripts are different
-than the default. This is done to avoid conflicts when Ant is run from the
-command line versus inside Eclipse/ADT.
-
-These additional parameters are automatically added for you when using
-the `cordova/build` and `cordova/run` scripts described above. For this
-reason it is recommended to use the `cordova/build` and `cordova/run` scripts
-instead of calling Ant directly from the command line.
-
-## Building with Gradle (Experimental!)
-
-Cordova for Android now supports building with
-[Gradle](http://www.gradle.org/). This is optional in Cordova 3.x, but will be
-enabled by default in the future, probably with Cordova 4.0. The build system
-is enabled by an environment variable, which can be set for the shell, or
-specified on the command line alongside the `cordova build` command.
-
-Please note that the Gradle build rules are still in development, and will
-likely be subject to large changes before Gradle becomes the default build
-system. Developers are encouraged to try it, and experiment with it, but if you
-base your own production build system on top of it, you will probably
-experience several breaking changes over the next few releases, before it
-stabilizes.
-
-### Relevant Environment Variables
-
-  * **ANDROID\_BUILD**
-
-  This variable controls which build system is used to build the project. In
-  can take either of the values `ant` or `gradle`.
-
-  If not set, it currently defaults to `ant`, but this is expected to change.
-
-### Other Environment Variables (you don't normally need to set these)
-
-  * **ANDROID\_HOME**
-
-  This should be set to the directory containing the Android SDK. Cordova looks
-  for this in the default install locations, as well as by looking at your PATH
-  variable, so it doesn't normally require setting.
-
-  * **JAVA\_HOME**
-
-  On some machines, this will need to be set so that Gradle can find the Java
-  compiler.
+As of cordova-android@4.0.0, project build using [Gradle](http://www.gradle.org/).
+For instructions on building with ANT, refer to older versions of documentation.
 
 ### Gradle Properties
 
 These [properties](http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html)
 can be set to customize the build:
 
-  * **cdvBuildMultipleApks**
+  * **cdvBuildMultipleApks** (default: false)
 
   If this is set, then multiple APK files will be generated: One per native
   platform supported by library projects (x86, ARM, etc). This can be important
@@ -169,7 +120,7 @@ can be set to customize the build:
 
   Overrides the versionCode set in `AndroidManifest.xml`
 
-  * **cdvReleaseSigningPropertiesFile**
+  * **cdvReleaseSigningPropertiesFile** (default: release-signing.properties)
 
   Path to a .properties file that contains signing information for release builds.
   The file should look like:
@@ -183,7 +134,7 @@ can be set to customize the build:
 
   `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
 
-  * **cdvDebugSigningPropertiesFile**
+  * **cdvDebugSigningPropertiesFile** (default: debug-signing.properties)
 
   Same as cdvReleaseSigningPropertiesFile, but for debug builds. Useful when you need
   to share a signing key with other developers.
@@ -216,9 +167,12 @@ a sibling file named `build-extras.gradle`. This file will be included by the ma
         android.buildTypes.debug.applicationIdSuffix = '.debug'
     }
 
+Note that plugins can also include `build-extras.gradle` files via:
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
+
 ### Example Build
 
-    export ANDROID_BUILD=gradle
     export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
     cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true
 
