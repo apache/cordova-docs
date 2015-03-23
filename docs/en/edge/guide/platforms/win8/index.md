@@ -66,7 +66,7 @@ To develop apps for Windows 8.0 and 8.1 (including Windows Phone 8.1):
 To develop apps for Windows 10:
 
 - Windows 8.1 or Windows 10 Technical Preview 2, 32- or 64-bit, along with
-  [Visual Studio 2015 CTP6](http://www.visualstudio.com/preview) or higher.
+  [Visual Studio 2015 RC](http://www.visualstudio.com/preview) or higher.
 
 App compatibility is determined by the OS that the app targeted.  Apps are forwardly-compatible
 but not backwardly-compatible, so an app targeting Windows 8.1 cannot run on 8.0, but 
@@ -143,6 +143,8 @@ Here's the corresponding lower-level shell-tool approach:
 
         C:\path\to\cordova-win\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
 
+This project targets Windows 8.1 as the default target OS.  You can choose to target 8.0 or 10.0 (see "Configure target Windows version" below) for all builds, or you target specific a particular version during each build.
+
 ## Build the Project
 
 If you are using the CLI in development, the project directory's
@@ -166,7 +168,7 @@ for release:
 The `clean` command helps flush out directories in preparation for the
 next `build`:
 
-        C:\path\to\project\cordova\clean.bat
+        C:\path\to\project\cordova\clean.bat 
 
 ## Configure target Windows version
 
@@ -174,18 +176,31 @@ By default `build` command produces two packages: Windows 8.0 and Windows Phone 
 To upgrade Windows package to version 8.1 the following configuration setting must be 
 added to configuration file (`config.xml`).
 
-        <preference name='windows-target-version' value='8.1' />
+        <preference name="windows-target-version" value="8.1" />
 
 Once you add this setting `build` command will start producing Windows 8.1 
 and Windows Phone 8.1 packages.
 
+### The --appx parameter
+
+You may decide that you want to build a particular version of your application targeting a particular OS (for example, you might have set that you want to target Windows 10, but you want to build for Windows Phone 8.1).  To do this, you can use the `--appx` parameter:
+
+        > cordova build windows -- --appx=8.1-phone
+
+The build system will ignore the preference set in config.xml for the target Windows version and strictly build a package for Windows Phone 8.1.
+
+Valid values for the `--appx` flag are `8.1-win`, `8.1-phone`, and `uap` (for Windows 10 Universal Apps).  These options also apply to the `cordova run` command.
+
 ### Considerations for target Windows version
 
 Windows 10 supports a new "Remote" mode for Cordova apps (and HTML apps in general). This mode enables
-apps much more freedom with respect to use of modern web frameworks and certain types of unsafe activity
-(such as DOM manipulation), but does so by reducing the set of capabilities your app may use when 
+apps much more freedom with respect to use of DOM manipulation and common web patterns such as the use 
+of inline script, but does so by reducing the set of capabilities your app may use when 
 submitted to the public Windows Store.  For more information about Windows 10 and Remote Mode, look at
 the [Cordova for Windows 10](win10-support.md.html) documentation.
+
+When using Remote Mode, developers are encouraged to apply a Content Security Policy (CSP) to their application 
+to prevent script injection attacks.
 
 ## Deploy the app
 
