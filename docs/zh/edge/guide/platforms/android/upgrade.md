@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         bin/update path/to/project
     
 
-CLI 的專案：
+CLI 專案：
 
 1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
@@ -38,7 +38,7 @@ CLI 的專案：
 
 ## 從 3.1.0 升級到 3.2.0
 
-為創建的科爾多瓦 CLI 的專案：
+為專案創建的科爾多瓦 CLI：
 
 1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
@@ -53,7 +53,7 @@ CLI 的專案：
 
 ## 從 3.0.0 升級到 3.1.0
 
-為創建的科爾多瓦 CLI 的專案：
+為專案創建的科爾多瓦 CLI：
 
 1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
@@ -102,7 +102,7 @@ CLI 的專案：
 
 2.  將 `科爾多瓦 2.8.0.jar` 添加到專案的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案和做清潔。
 
 <!-- SS Eclipse -->
 
@@ -114,7 +114,7 @@ CLI 的專案：
 
 4.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-5.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+5.  將檔從複製 `bin/templates/cordova` 到專案的 `cordova` 目錄。
 
 ## 從 2.6.0 升級到 2.7.0
 
@@ -144,7 +144,7 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.6.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
@@ -164,13 +164,13 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.5.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
 7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+8.  將檔從複製 `bin/templates/cordova` 到專案的 `cordova` 目錄。
 
 ## 從 2.3.0 升級到 2.4.0
 
@@ -182,7 +182,7 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.4.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
@@ -198,7 +198,7 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.3.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
@@ -214,7 +214,7 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.2.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
@@ -230,11 +230,11 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.1.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+7.  將檔從複製 `bin/templates/cordova` 到專案的 `cordova` 目錄。
 
 ## 從 1.9.0 升級到 2.0.0
 
@@ -246,9 +246,9 @@ CLI 的專案：
 
 4.  複製新 `cordova-2.0.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
 
-6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 相匹配`framework/res/xml/config.xml`.
 
 在 2.0.0 釋放，`config.xml` 檔相結合，並取代了 `cordova.xml` 和 `plugins.xml`。 舊的檔已被否決，和當他們仍然在 2.0.0，工作就會停止工作在將來的版本中。
 
@@ -296,19 +296,19 @@ CLI 的專案：
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 從 1.7.0 升級到 1.8.0
+## 從 1.7.0 以來升級到 1.8.0
 
 1.  刪除 `cordova-1.7.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.8.0.jar` 到專案中的 `libs` 目錄。
+2.  添加 `cordova-1.8.0.jar` 到專案的 `libs` 目錄。
 
 3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
 
-6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` 相匹配`framework/res/xml/plugins.xml`.
 
 ## 從 1.6.1 升級到 1.7.0 以來
 
@@ -332,7 +332,7 @@ CLI 的專案：
 
 4.  將新的 `科爾多瓦 1.6.1.js` 複製到您的專案。
 
-5.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
+5.  更新 `res/xml/plugins.xml` 相匹配`framework/res/xml/plugins.xml`.
 
 ## 從 1.5.0 版升級到 1.6.0
 
@@ -364,7 +364,7 @@ CLI 的專案：
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-7.  替換 `res/xml/phonegap.xml` 與 `res/xml/cordova.xml` 進行匹配`framework/res/xml/cordova.xml`.
+7.  替換 `res/xml/phonegap.xml` 與 `res/xml/cordova.xml` 相匹配`framework/res/xml/cordova.xml`.
 
 ## 從 1.3.0 升級到 1.4.0
 
@@ -408,11 +408,11 @@ CLI 的專案：
 
 4.  將新 `phonegap 1.2.0.js` 複製到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-7.  更新 `res/xml/phonegap.xml` 以匹配`framework/res/xml/phonegap.xml`.
+7.  更新 `res/xml/phonegap.xml` 相匹配`framework/res/xml/phonegap.xml`.
 
 ## 從 1.0.0 升級到 1.1.0
 
@@ -426,7 +426,7 @@ CLI 的專案：
 
 5.  更新你的 html 代碼，使用新的 `phonegap 1.1.0.js` 檔。
 
-6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` 相匹配`framework/res/xml/plugins.xml`.
 
 ## 從 0.9.6 升級到 1.0.0
 
@@ -434,7 +434,7 @@ CLI 的專案：
 
 2.  將 `phonegap 1.0.0.jar` 添加到專案的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案和做清潔。
 
 4.  將新 `phonegap 1.0.0.js` 複製到您的專案。
 

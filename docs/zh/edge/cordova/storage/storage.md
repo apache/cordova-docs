@@ -49,7 +49,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 以下平臺支援 IndexedDB：
 
 *   黑莓 10
-*   火狐瀏覽器作業系統
+*   火狐瀏覽器的作業系統
 *   Windows Phone 8
 *   Windows 8
 

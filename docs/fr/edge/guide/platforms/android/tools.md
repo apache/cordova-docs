@@ -1,6 +1,6 @@
 * * *
 
-licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -79,42 +79,11 @@ Assurez-vous que vous créez au moins un Android Virtual Device, autrement vous 
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Utilisation manuelle de fourmi
+## Bâtiment avec Gradle
 
-Si vous souhaitez appeler Ant directement à partir de la ligne de commande tels que `ant debug install` , vous devez spécifier des paramètres supplémentaires pour la commande de la fourmi :
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-C'est parce que les répertoires utilisés par les scripts Ant de Cordova diffèrent de celles par défaut. Ceci est fait pour éviter des conflits lorsque Ant est exécuté à partir de la ligne de commande par rapport à l'intérieur de l'Eclipse/ADT.
-
-Ces paramètres supplémentaires sont ajoutés automatiquement pour vous lorsque vous utilisez le `cordova/build` et `cordova/run` scripts décrits ci-dessus. C'est pourquoi il est recommandé d'utiliser le `cordova/build` et `cordova/run` scripts au lieu de Ant appel directement à partir de la ligne de commande.
-
-## Bâtiment avec Gradle (expérimental) !
-
-Cordova pour Android prend désormais en charge le bâtiment avec [Gradle][2]. Cette étape est facultative à Cordoue 3.x, mais sera activée par défaut dans le futur, sans doute avec Cordova 4.0. Le système de génération est activé par une variable d'environnement, qui peut être définie pour la coque, ou spécifiée sur la ligne de commande à côté de la `cordova build` commande.
+À partir de cordova-android@4.0.0, la génération de projet à l'aide de [Gradle][2]. Pour obtenir des instructions sur le bâtiment avec ANT, se référer aux anciennes versions de la documentation.
 
  [2]: http://www.gradle.org/
-
-Veuillez noter que les règles de génération de Gradle sont encore en développement et seront probablement soumis à grands changements avant Gradle devient le système de génération par défaut. Les développeurs sont encouragés à essayer et expérimenter avec elle, mais si vous basez votre propre système de génération de production au-dessus de celui-ci, vous connaîtra probablement plusieurs modifications avec rupture dans les prochaines versions de peu, avant de se stabiliser.
-
-### Variables d'environnement pertinents
-
-*   **ANDROID _ CONSTRUIRE**
-    
-    Cette variable contrôle quel système de build est utilisé pour générer le projet. En peut prendre une des valeurs `ant` ou`gradle`.
-    
-    Si non définie, elle actuellement par défaut est `ant` , mais cela devrait changer.
-
-### Autres Variables d'environnement (normalement inutile de définir ces)
-
-*   **ANDROID _ ACCUEIL**
-    
-    Cela doit être défini sur le répertoire contenant le SDK Android. Cordova cette recherche dans les emplacements d'installation par défaut, ainsi qu'en regardant votre variable de chemin d'accès, elle ne requiert normalement de réglage.
-
-*   **JAVA _ ACCUEIL**
-    
-    Sur certaines machines, cela devra être réglé afin que Gradle puisse trouver le compilateur Java.
 
 ### Propriétés Gradle
 
@@ -122,7 +91,7 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks** (par défaut : false)
     
     Si la valeur est, plusieurs fichiers APK seront générés : une par plate-forme native soutenue par des projets de bibliothèque (x 86, ARM, etc.). Cela peut être important si votre projet utilise des grandes bibliothèques natives, qui peuvent augmenter considérablement la taille de l'APK généré.
     
@@ -130,40 +99,56 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
 
 *   **cdvVersionCode**
     
-    Substitue le versionCode figurant`AndroidManifest.xml`
+    Substitue le versionCode situé dans `AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile** (par défaut : libération-signing.properties)
     
     Chemin vers un fichier .properties qui contient les informations de signature pour diffusion immédiate s'appuie. Le fichier devrait ressembler à :
     
-        storeFile=relative/path/to/keystore.p12 storePassword = SECRET1 magasins = pkcs12 keyAlias = keyPassword DebugSigningKey = SECRET2
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword`et `keyPassword` sont facultatifs et vous demandera si omise.
+    `storePassword` `keyPassword` sont optionnelle et sera demandé en cas d'omission.
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile** (par défaut : debug-signing.properties)
     
     Même cdvReleaseSigningPropertiesFile, mais pour le débogage s'appuie. Utile lorsque vous avez besoin de partager une clé de signature avec d'autres développeurs.
 
 *   **cdvMinSdkVersion**
     
-    Remplace la valeur de `minSdkVersion` dans `AndroidManifest.xml` . Utile lorsque vous créez plusieurs APKs s'inspire de la version SDK.
+    Remplace la valeur de `minSdkVersion` dans `AndroidManifest.xml`. Utile lorsque vous créez plusieurs APKs s'inspire de la version SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Substituer l'automatiquement détecté `android.buildToolsVersion` valeur.
+    Remplacer la valeur automatiquement détecté `android.buildToolsVersion`.
 
 *   **cdvCompileSdkVersion**
     
-    Substituer l'automatiquement détecté `android.compileSdkVersion` valeur.
+    Remplacer la valeur automatiquement détecté `android.compileSdkVersion`.
 
 ### Extension build.gradle
 
-Si vous devez personnaliser `build.gradle` , plutôt que de modifier directement, vous devez créer un fichier de frère nommé `build-extras.gradle` . Ce fichier sera inclus par la main `build.gradle` lorsqu'il est présent. Voici un exemple :
+Si vous devez personnaliser `build.gradle`, plutôt que de modifier directement, vous devez créer un fichier de frère nommé `build-extras.gradle`. Ce fichier sera inclus par le principal `build.gradle` lorsqu'il est présent. Voici un exemple :
 
-    # Exemple build-extras.gradle # ce fichier est inclus au début de « build.gradle » ext.cdvDebugSigningPropertiesFile = '.../../ android-debug-keys.properties' # dans le cas de l'ensemble, cette fonction permet au code d'exécuter à la fin de 'build.gradle' ext.postBuildExtras = {android.buildTypes.debug.applicationIdSuffix = '.debug'}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+    
+
+Remarquez que les plugins peut inclure également `construire-extras.gradle` fichiers via :
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
     
 
 ### Exemple de Build
 
-    Export ANDROID_BUILD = gradle export ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 cordova build android--gradleArg--=-PcdvBuildMultipleApks = true
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

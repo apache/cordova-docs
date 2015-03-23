@@ -92,11 +92,11 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
     
     **Uwaga**: wszystkie podstawowe API zostały usunięte i musi być zainstalowany jako wtyczki. Aby uzyskać szczegółowe informacje, zapoznaj się z za pomocą Plugman do zarządzania Plugins przewodnik.
 
-## Aktualizacja z wersji 2.8.0 do wersji 2.9.0
+## Uaktualnienie do 2.9.0 z 2.8.0
 
 1.  Uruchom `bin/update <project_path>`.
 
-## Aktualizacja z wersji 2.7.0 do wersji 2.8.0
+## Uaktualnić do 2.8.0 2.7.0
 
 1.  Usunąć `cordova-2.7.0.jar` z projektu w katalogu `libs`.
 
@@ -134,7 +134,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 8.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
+## Uaktualnienie do 2.6.0 z 2.5.0
 
 1.  Usunąć `cordova-2.5.0.jar` z projektu w katalogu `libs`.
 

@@ -57,7 +57,7 @@ Per i progetti creati con il cordova CLI:
 
 1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
-2.  Eseguire `cordova platform update android`
+2.  Eseguire`cordova platform update android`
 
 Per i progetti non creati con la CLI di cordova, eseguire:
 
