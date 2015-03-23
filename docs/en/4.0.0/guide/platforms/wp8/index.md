@@ -56,6 +56,8 @@ You need the following:
 
 - The [Windows Phone SDK](https://dev.windowsphone.com/en-us/downloadsdk).
 
+- In order to deploy via the command-line with the Windows Phone 8.0 SDK, the latest [Visual Studio 2012 Update](http://www.microsoft.com/en-us/download/details.aspx?id=39305) must be installed.
+
 To develop Cordova apps for Windows Phone devices, you may use a PC
 running Windows, but you may also develop on a Mac, either by running
 a virtual machine environment or by using Boot Camp to dual-boot a
