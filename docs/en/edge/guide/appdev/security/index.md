@@ -34,17 +34,7 @@ The following guide includes some security best practices that you should consid
 
 * Read and understand the Whitelist Guide
 
-* By default, the Whitelist on a newly created app will allow access to every domain through the `<access>` tag: 
-     `<access origin="*">`
-If you want network requests to be evaluated against the whitelist, then it is important to change this and only allow the domains to which you need access. This can be done by editing the application-level config file located at:
-     `{project}/config.xml` (recent projects) or `{project}/www/config.xml` (older projects)
-
-* Android's Whitelist on Cordova 2.9.x is considered secure, however, it was discovered that if foo.com is included in the whitelist, foo.com.evil.com would be able to pass the whitelist test. This was fixed in Cordova 3.x.  
-
 * Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins. 
-
-* On Android, as of Cordova 3.6.0, it is now necessary to whitelist URLs outside of your application, if your application generates links to those URLs. If you application generates `tel:`, `geo:`, `sms:`, `intent:` or similar URLs, or provides links to external content which you expect to open up in the user's browser, then you will need to update your whitelist. See the Whitelist Guide for details.
-
 
 ## Iframes and the Callback Id Mechanism
 
