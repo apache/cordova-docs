@@ -24,7 +24,58 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
-## Upgrading 3.6.0 Projects to 4.0.0
+## Upgrading to 4.0.0
+
+There are specific upgrade steps required to take advantage of the significant
+changes in 4.0.0.  First, the common upgrade steps are needed as below.
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update android` in your existing projects.
+
+### Upgrading the Whitelist
+All whitelist functionality is now implemented via plugin.  Without a plugin,
+your app is no longer protected by a whitelist after upgrading to 4.0.0.  Cordova
+has two whitelist plugins, which provide different levels of protection.
+
+1. The `cordova-plugin-whitelist` plugin *(RECOMMENDED)*
+  * This plugin is highly recommended, as it is more secure and configurable
+    than the whitelist in previous versions
+  * See [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist)
+    for details on the configuration changes required
+  * Run: `cordova plugin add cordova-plugin-crosswalk-webview`
+
+2. The `cordova-plugin-legacy-whitelist` plugin
+  * This plugin provides the same whitelist behaviour as previous versions. See
+    [cordova-plugin-legacy-whitelist](https://github.com/apache/cordova-plugin-legacy-whitelist)
+  * No configuration changes are required, but it provides less protection than
+    the recommended plugin
+  * Run: `cordova plugin add cordova-plugin-legacy-whitelist`
+
+### Using the Crosswalk WebView
+By default, your app will continue to use the system WebView provided by the
+device.  If you wish to use the Crosswalk WebView instead, simply add the
+Crosswalk plugin:
+
+    cordova plugin add cordova-plugin-crosswalk-webview
+
+Upon adding the plugin, your app will get the Crosswalk WebView installed and
+configured correctly.
+
+### Upgrading to the Splashscreen Plugin
+If your app makes use of a splash screen, that functionality has been moved to
+a plugin.  The configuration options for splash screens are unchanged.  The only
+upgrade step required is to add the plugin:
+
+    cordova plugin add cordova-plugin-splashscreen
+
+## Upgrading to 3.7.1 from 3.6.0
 
 For non-CLI projects, run:
 
