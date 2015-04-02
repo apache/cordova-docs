@@ -85,6 +85,43 @@ AVD is available as a target, you're prompted to select one. By
 default the `run` command detects a connected device, or a currently
 running emulator if no device is found.
 
+## Signing the App
+
+You can review Android app signing requirements here: http://developer.android.com/tools/publishing/app-signing.html
+
+To sign an app, you need the following parameters:
+  * Keystore (`--keystore`): Path to a binary file which can hold a set of keys.
+  * Keystore password (`--storePassword`): Password to the keystore
+  * Alias (`--alias`): The id specifying the private key used for singing.
+  * Password (`--password`): Password for the private key specified.
+  * Type of the keystore (`--keystoreType`): pkcs12, jks (Default: auto-detect based on file extension)
+These parameters can be specified using the command line arguments above to `build` or `run` scripts.
+
+Alternatively, you could specify them in a build configuration file (build.json) using (`--buildConfig`) argument. Here's a sample of a build configuration file:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+
+For release signing, passwords can be excluded and the build system will issue a prompt asking for the password.
+
+There is also support to mix and match command line arguments and parameters in build.json file. Values from the comamnd line arguments will get precedence. This can be useful for specifying passwords on the command line. 
+
 ## Logging
 
         $ /path/to/project/cordova/log
