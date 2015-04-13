@@ -54,6 +54,10 @@ which costs $99 per year. This guide shows how to deploy apps to the
 iOS emulator, for which you don't need to register with the developer
 program.
 
+The [ios-sim](https://www.npmjs.org/package/ios-sim) and 
+[ios-deploy](https://www.npmjs.org/package/ios-deploy) tools - allows you
+to launch iOS apps into the iOS Simulator and iOS Device from the command-line.
+
 ## Install the SDK
 
 There are two ways to download Xcode:
@@ -69,7 +73,14 @@ for Cordova to run. From the __Xcode__ menu, select __Preferences__,
 then the __Downloads__ tab. From the __Components__ panel, press the
 __Install__ button next to the __Command Line Tools__ listing.
 
-## Open a Project in the SDK
+## Install Deploy Tools
+
+Run from comman-line terminal:
+
+        $ npm install -g ios-sim
+        $ npm install -g ios-deploy
+
+## Create a New Project
 
 Use the `cordova` utility to set up a new project, as described in The
 Cordova The Command-Line Interface. For example, in a source-code directory:
@@ -79,9 +90,27 @@ Cordova The Command-Line Interface. For example, in a source-code directory:
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
 
-Once created, you can open it from within Xcode. Double-click to open
-the `hello/platforms/ios/hello.xcodeproj` file.  The screen should
-look like this:
+## Deploy the app
+
+To deploy the app on a connected iOS device:
+
+        $ cordova run ios --device
+To deploy the app on a default iOS emulator:
+
+        $ cordova emulate ios
+
+You can use __cordova run ios --list__ to see all available targets and 
+__cordova run ios --target=target_name__ to run application on a specific 
+device or emulator (for example,  `cordova run ios --target="iPhone-6"`).
+
+You can also use __cordova run --help__ to see additional build and run
+options.
+
+## Open a Project in the SDK
+
+Once ios platform is added to your project, you can open it from 
+within Xcode. Double-click to open the `hello/platforms/ios/hello.xcodeproj`
+file. The screen should look like this:
 
 ![](img/guide/platforms/ios/helloworld_project.png)
 
@@ -219,7 +248,7 @@ For further information, consult Apple's documentation:
 
 * [Tools Workflow Guide for iOS](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959)
 
-* [Xcode 4 User Guide](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
+* [Xcode User Guide](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
 
 * [Session Videos](https://developer.apple.com/videos/wwdc/2012/) from
   the Apple World Wide Developer Conference 2012 (WWDC2012)
