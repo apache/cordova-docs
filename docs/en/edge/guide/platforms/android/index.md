@@ -29,11 +29,12 @@ Overview.  For details on the CLI, see The Command-Line Interface.
 
 ## Requirements and Support
 
-Cordova for Android requires the Android SDK. See the Android SDK's
-[System Requirements](http://developer.android.com/sdk/index.html).
+Cordova for Android requires the Android SDK which could be installed
+on OS X, Linux or Windows operation system. See the Android SDK's
+[System Requirements](http://developer.android.com/sdk/index.html#Requirements).
 
 Cordova supports Android 2.3.x (Gingerbread, starting with Android API level 10)
-and 4.x.  As a general rule, Android versions become unsupported by Cordova as
+and higher.  As a general rule, Android versions become unsupported by Cordova as
 they dip below 5% on Google's
 [distribution dashboard](http://developer.android.com/about/dashboards/index.html).
 Android versions earlier than API level 10, and the 3.x versions (Honeycomb,
@@ -59,13 +60,23 @@ plugin features across all platforms, see Using Plugman to Manage
 Plugins. See Application Plugins for details on how to develop
 plugins.
 
-Install the Android SDK from
-[developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
-is distributed as an 'adt-bundle-&lt;os&gt;-&lt;arch&gt;-&lt;ver&gt;' file.
-On windows, the adt-bundle is packaged with an installer.
-On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
-[More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
+## Install the Java Development Kit (JDK)
 
+Install [Java Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+or later. 
+
+When installing on Windows you also need to set `JAVA_HOME` Environment Variable
+according to JDK installation path (for example, C:\Program Files\Java\jdk1.7.0_75).
+
+## Install the Android SDK
+
+Install the [Android Stand-alone SDK Tools](http://developer.android.com/sdk/installing/index.html?pkg=tools) or [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio). Procceed with `Android Studio` if you plan 
+developing new Cordova for Android plugins or using native tools to
+run and debug Android platform. Otherwise, `Android Stand-alone SDK Tools`
+are enough to build and deploy Android application.
+
+Detailed installation instructions are available as part of installation
+links above.
 
 For Cordova command-line tools to work, or the CLI that is based upon
 them, you need to include the SDK's `tools` and `platform-tools`
@@ -73,16 +84,15 @@ directories in your `PATH`.  On a Mac, you can use a text editor to
 create or modify the `~/.bash_profile` file, adding a line such as the
 following, depending on where the SDK installs:
 
-        export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
 
-Add the paths for `java` and `ant` if needed. This line in `~/.bash_profile`
-exposes these tools in newly opened terminal windows. If your terminal
-window is already open in OSX, or to avoid a logout/login on Linux, run
-this to make them available in the current terminal window:
+This line in `~/.bash_profile` exposes these tools in newly opened terminal
+windows. If your terminal window is already open in OSX, or to avoid a logout/login
+on Linux, run this to make them available in the current terminal window:
 
         $ source ~/.bash_profile
 
-To modify the `PATH` environment on Windows 7:
+To modify the `PATH` environment on Windows:
 
 1. Click on the __Start__ menu in the lower-left corner of the desktop,
    right-click on __Computer__, then select __Properties__.
@@ -96,125 +106,27 @@ To modify the `PATH` environment on Windows 7:
 1. Append the following to the `PATH` based on where you installed the
    SDK, for example:
 
-        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
 
 1. Save the value and close both dialog boxes.
 
-You may also need to enable Java and Ant. Open a command prompt and
-type `java`, and also type `ant`. Append to the `PATH` whichever of
-these fails to run:
+## Install SDK Packages
 
-        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
+Open Android SDK Manager (for example, via terminal: `android`) and install:
 
-## Open a New Project in the SDK
+1. Android 5.1.1 (API 22) platform SDK
+1. Android SDK Build-tools version 19.1.0 or higher
+1. Android Support Repository (Extras)
 
-At this point, to create a new project you can choose between the
-cross-platform CLI tool described in The Command-Line Interface, or
-the set of Android-specific shell tools. From within a source-code
-directory, here's the CLI approach:
-
-        $ cordova create hello com.example.hello HelloWorld
-        $ cd hello
-        $ cordova platform add android
-        $ cordova build
-
-Here's the corresponding lower-level shell-tool approach for both Unix
-and Windows:
-
-        $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
-        C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-
-Here's how to use the SDK to modify it:
-
-1. Launch the __Eclipse__ application.
-
-1. Select the __New Project__ menu item.
-
-1. Choose __Android Project from Existing Code__ from the resulting
-   dialog box, and press __Next__:
-
-  ![](img/guide/platforms/android/eclipse_new_project.png)
-
-1. If you're using the CLI, navigate to the `hello` directory you
-   created for the project, then to the `platforms/android`
-   subdirectory. Alternately, if you use the `create` shell utility,
-   simply navigate to the `hello` directory.
-
-1. Press __Finish__.
-
-Once the Eclipse window opens, a red __X__ may appear to indicate
-unresolved problems. If so, follow these additional steps:
-
-1. Right-click on the project directory.
-
-1. In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
-
-1. For the project build target, select the highest Android API level you have installed.
-
-1. Click __OK__.
-
-1. Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
-
-## Build the Project
-
-If you are using the CLI in development, the project directory's
-top-level `www` directory contains the source files. Run any of
-these within the project directory to rebuild the app:
-
-        $ cordova build                   # build all platforms that were added
-        $ cordova build android           # build debug for only Android
-        $ cordova build android --debug   # build debug for only Android
-        $ cordova build android --release # build release for only Android
-
-If you are using the Android-specific shell tools in development,
-there is a different approach.  Once you generate the project, the
-default app's source is available in the `assets/www` subdirectory.
-Subsequent commands are available in its `cordova` subdirectory.
-
-The `build` command cleans project files and rebuilds the app. Here is
-the syntax for both Mac and Windows. The first pair of examples
-generate debugging information, and the second builds the apps for
-release:
-
-        $ /path/to/project/cordova/build --debug
-        C:\path\to\project\cordova\build.bat --debug
-        
-        $ /path/to/project/cordova/build --release
-        C:\path\to\project\cordova\build.bat --release
-
-When building for release, if you add the following definitions to your
-`local.properties` file, then your APK will get signed and aligned such that
-it will be ready for upload to the Google Play store:
-
-        key.store=/Users/me/Developer/mykeystore.jks
-        key.alias=mykeyalias
-
-If the keystore and/or the aliased key have a password, the build script will
-prompt you for the password. You do not need to define the passwords in a
-properties file. If you do want to avoid the prompt, you can define them in 
-`local.properties` as `key.store.password` and `key.alias.password`. Be aware
-of security concerns with those passwords if you do so.
+See [Installing SDK Packages](http://developer.android.com/sdk/installing/adding-packages.html)
+for more details.
 
 ## Configure an Emulator
 
-You can use either the `cordova` CLI utility or Cordova's
-Android-centered shell tools to run an app in an emulator.  Either
-way, the SDK must first be configured to display at least one device.
-To do so, use the Android SDK Manager, a Java application that runs
-separately from Eclipse.  There are two ways to open it:
-
-1. Run `android` on the command line.
-
-1. From within Eclipse, press this toolbar icon:
-
-  ![](img/guide/platforms/android/eclipse_android_sdk_button.png)
-
-Once open, the Android SDK Manager displays various runtime libraries:
-
-![](img/guide/platforms/android/asdk_window.png)
-
-Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
-choose any item from __Device Definitions__ in the resulting dialog
+Android sdk doesn't provide any default emulator instance by default. You can 
+create a new one by running `android` on the command line.
+The press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
+then choose any item from __Device Definitions__ in the resulting dialog
 box:
 
 ![](img/guide/platforms/android/asdk_device.png)
@@ -234,35 +146,6 @@ additional controls available for hardware buttons:
 
 ![](img/guide/platforms/android/asdk_emulator.png)
 
-## Deploy to Emulator
-
-At this point you can use the `cordova` CLI utility to deploy the
-application to the emulator from the command line:
-
-        $ cordova emulate android
-
-Otherwise use the alternate shell interface:
-
-        $ /path/to/project/cordova/run --emulator
-
-Instead of relying on whichever emulator is currently enabled within
-the SDK, you can refer to each by the names you supply:
-
-        $ /path/to/project/cordova/run --target=NAME
-
-This pushes the app to the home screen and launches it:
-
-![](img/guide/platforms/android/emulator2x.png)
-
-When you `run` the app, you also `build` it. You can append additional
-`--debug`, `--release`, and `--nobuild` flags to control how it is
-built, or even whether a rebuild is necessary:
-
-        $ /path/to/project/cordova/run --emulator --nobuild
-
-If instead you are working within Eclipse, right-click the project and
-choose __Run As &rarr; Android Application__. You may be asked to
-specify an AVD if none are already open.
 
 For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
 the execution speed.
@@ -307,27 +190,80 @@ __Note__:`If you have any problems installing the package, you can find more inf
 1. When starting the emulator, ensure there are no error messages
    indicating a failure to load HAX modules.
 
-## Deploy to Device
+## Create a New Project
 
-To push an app directly to the device, make sure USB debugging is
-enabled on your device as described on the
-[Android Developer Site](http://developer.android.com/tools/device.html),
-and use a mini USB cable to plug it into your system.
+At this point, to create a new project you can choose between the
+cross-platform CLI tool described in The Command-Line Interface, or
+the set of Android-specific shell tools. From within a source-code
+directory, here's the CLI approach:
 
-You can use this CLI command to push the app to the device:
+        $ cordova create hello com.example.hello HelloWorld
+        $ cd hello
+        $ cordova platform add android
+        $ ccordova prepare              # or "cordova build"
 
-        $ cordova run android
+Here's the corresponding lower-level shell-tool approach for both Unix
+and Windows:
 
-...or use this Android-centered shell interface:
+        $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
+        C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
 
+## Build the Project
+
+If you are using the CLI in development, the project directory's
+top-level `www` directory contains the source files. Run any of
+these within the project directory to rebuild the app:
+
+        $ cordova build                   # build all platforms that were added
+        $ cordova build android           # build debug for only Android
+        $ cordova build android --debug   # build debug for only Android
+        $ cordova build android --release # build release for only Android
+
+If you are using the Android-specific shell tools in development,
+there is a different approach.  Once you generate the project, the
+default app's source is available in the `assets/www` subdirectory.
+Subsequent commands are available in its `cordova` subdirectory.
+
+The `build` command cleans project files and rebuilds the app. Here is
+the syntax for both Mac and Windows. The first pair of examples
+generate debugging information, and the second builds the apps for
+release:
+
+        $ /path/to/project/cordova/build --debug
+        C:\path\to\project\cordova\build.bat --debug
+        
+        $ /path/to/project/cordova/build --release
+        C:\path\to\project\cordova\build.bat --release
+
+## Deploy the app
+
+You can use the `cordova` CLI utility to deploy the
+application to the emulator or the device from the command line:
+
+        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova run android --device  #to deploy the app on a connected device
+
+Otherwise, use the alternate shell interface:
+
+        $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
 
-With no flags specified, the `run` command detects a connected
-device, or a currently running emulator if no device is found,
-otherwise it prompts to specify an emulator.
+You can use __cordova run android --list__ to see all available targets and 
+__cordova run android --target=target_name__ to run application on a specific 
+device or emulator (for example,  `cordova run android --target="Nexus4_emulator"`).
 
-To run the app from within Eclipse, right-click the project and choose
-__Run As &rarr; Android Application__.
+You can also use __cordova run --help__ to see additional build and run
+options.
+
+This pushes the app to the home screen and launches it:
+
+![](img/guide/platforms/android/emulator2x.png)
+
+When you `run` the app, you also `build` it. You can append additional
+`--debug`, `--release`, and `--nobuild` flags to control how it is
+built, or even whether a rebuild is necessary:
+
+        $ /path/to/project/cordova/run --emulator --nobuild
 
 ## Other Commands
 
@@ -340,4 +276,29 @@ The following cleans the project files:
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
+
+## Open a New Project in the SDK
+
+Once android platform is added to your project, you can open it from 
+within [Android Studio](http://developer.android.com/sdk/installing/index.html?pkg=studio):
+
+1. Launch the __Android Studio__ application.
+
+1. Select __Import Project (Eclipse ADT, Gradle, etc)__.
+
+  ![](img/guide/platforms/android/asdk_import_project.png)
+
+1. Select location where android platform is stored (`your/project/platforms/android`).
+  
+  ![](img/guide/platforms/android/asdk_import_select_location.png)
+
+1. For the `Gradle Sync` question you can simply answer __Yes__.
+
+You are all set now and can build and run the app directly from `Android Studio`.
+
+![](img/guide/platforms/android/asdk_import_done.png)
+
+See [Android Studio Overview](http://developer.android.com/tools/studio/index.html) and
+And [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html) for more details.
+
 
