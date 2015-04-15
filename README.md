@@ -80,6 +80,7 @@ Please see the `STYLESHEET.md` file for guidelines on language and usage.
 
 Right now documentation could be run using Node.js either on Windows, or on Linux box.
 
+    $ rm -r tmp public      # Clear out old docs
     $ ./bin/genjs           # compile all docs
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
