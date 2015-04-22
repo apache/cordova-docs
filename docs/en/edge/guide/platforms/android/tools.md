@@ -120,7 +120,7 @@ Alternatively, you could specify them in a build configuration file (build.json)
 
 For release signing, passwords can be excluded and the build system will issue a prompt asking for the password.
 
-There is also support to mix and match command line arguments and parameters in build.json file. Values from the comamnd line arguments will get precedence. This can be useful for specifying passwords on the command line. 
+There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence. This can be useful for specifying passwords on the command line. 
 
 ## Logging
 
