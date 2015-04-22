@@ -188,6 +188,18 @@ all of them:
   preference entry from the platform's manifest/configuration file
   allowing the platform to fallback to its default behavior.
 
+'default' allows both portrait & landscape mode - only after implementing the callback. I could perhaps re-word this as follows:
+
+For iOS, orientation can be programmatically controlled by defining a javascript callback on window:
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+
 ## The _feature_ Element
 
 If you use the CLI to build applications, you use the `plugin` command
