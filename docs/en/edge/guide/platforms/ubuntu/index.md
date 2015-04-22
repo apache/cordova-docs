@@ -95,7 +95,7 @@ Creates an app in a `hello` directory whose display name is
 
     $ cordova run ubuntu
 
-### Add the Battery Status Plugin
+### Add the Camera Plugin
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add org.apache.cordova.camera
 
