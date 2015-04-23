@@ -62,11 +62,37 @@ name.
 
         $ /path/to/my_new_project/cordova/run --device
 
-## Releasing
+## Signing the App
 
-        $ /path/to/my_new_project/cordova/build --release
-        
-(modify the `cordova/build-release.xcconfig` file for your Code Signing identity)
+You can learn more about signing, distributing iOS apps, creating a certificate and provisioning profile on the [iOS Developer Library](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html).
+
+To sign the app in Cordova you need the following:
+* Code signing identity (`--codeSignIdentity`): [Using XCode](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6) you can create a new iOS signing identity and add it to your keychain. The type of of the code signing identity - typically distribution or development, needs to be specified here.
+
+* Provisioning profile (`--provisioningProfile`):  [Using the Apple Member Center](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61) you can create a provisioning profile. Download the provisioning profile onto your machine and launch it in XCode to register it. It is copied here on your Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. Opening it in a text editor, you can find the UUID which needs to be specified here.
+
+* Code signing resource rules(`--codeSignResourceRules`) (Optional): Allows you to specify custom signing resource rules.
+
+These parameters can be specified using the command line arguments above to `build` or `run` scripts:
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
+
+Alternatively, you could specify them in a build configuration file (build.json) using (`--buildConfig`) argument. Here's a sample of a build configuration file:
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+
+There is also support to mix and match command line arguments and parameters in build.json file. Values from the command line arguments will get precedence. 
 
 ## Logging
 
