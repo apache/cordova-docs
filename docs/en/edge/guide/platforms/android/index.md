@@ -33,7 +33,7 @@ Cordova for Android requires the Android SDK which could be installed
 on OS X, Linux or Windows operation system. See the Android SDK's
 [System Requirements](http://developer.android.com/sdk/index.html#Requirements).
 
-Cordova supports Android 2.3.x (Gingerbread, starting with Android API level 10)
+Cordova supports Android 4.0.x (starting with Android API level 14)
 and higher.  As a general rule, Android versions become unsupported by Cordova as
 they dip below 5% on Google's
 [distribution dashboard](http://developer.android.com/about/dashboards/index.html).
