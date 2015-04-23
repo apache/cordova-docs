@@ -21,67 +21,73 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Cordova ships with a minimal set of APIs, and projects add what extra APIs they require through plugins.
 
-You can search through all existing plugins (including third-party plugins) using the [Plugin Registry](http://plugins.cordova.io/).
+You can search through all existing plugins (including third-party plugins) on [npm](https://www.npmjs.com/search?q=ecosystem%3Acordova).
 
 The traditional set of core Cordova plugins are as follows:
 
-- [Battery Status](http://plugins.cordova.io/#/package/org.apache.cordova.battery-status)
+- [Battery Status](https://www.npmjs.com/package/cordova-plugin-battery-status)
 > Monitor the status of the device's battery.
 
-- [Camera](http://plugins.cordova.io/#/package/org.apache.cordova.camera)
+- [Camera](https://www.npmjs.com/package/cordova-plugin-camera)
 > Capture a photo using the device's camera.
 
-- [Console](http://plugins.cordova.io/#/package/org.apache.cordova.console)
+- [Console](https://www.npmjs.com/package/cordova-plugin-console)
 > Add additional capability to console.log().
 
-- [Contacts](http://plugins.cordova.io/#/package/org.apache.cordova.contacts)
+- [Contacts](https://www.npmjs.com/package/cordova-plugin-contacts)
 > Work with the devices contact database.
 
-- [Device](http://plugins.cordova.io/#/package/org.apache.cordova.device)
+- [Device](https://www.npmjs.com/package/cordova-plugin-device)
 > Gather device specific information.
 
-- [Device Motion (Accelerometer)](http://plugins.cordova.io/#/package/org.apache.cordova.device-motion)
+- [Device Motion (Accelerometer)](https://www.npmjs.com/package/cordova-plugin-device-motion)
 > Tap into the device's motion sensor.
 
-- [Device Orientation (Compass)](http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation)
+- [Device Orientation (Compass)](https://www.npmjs.com/package/cordova-plugin-device-orientation)
 > Obtain the direction that the device is pointing.
 
-- [Dialogs](http://plugins.cordova.io/#/package/org.apache.cordova.dialogs)
+- [Dialogs](https://www.npmjs.com/package/cordova-plugin-dialogs)
 > Visual device notifications.
 
-- [FileSystem](http://plugins.cordova.io/#/package/org.apache.cordova.file)
+- [FileSystem](https://www.npmjs.com/package/cordova-plugin-file)
 > Hook into native file system through JavaScript.
 
-- [File Transfer](http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer)
+- [File Transfer](https://www.npmjs.com/package/cordova-plugin-file-transfer)
 > Hook into native file system through JavaScript.
 
-- [Geolocation](http://plugins.cordova.io/#/package/org.apache.cordova.geolocation)
+- [Geolocation](https://www.npmjs.com/package/cordova-plugin-geolocation)
 > Make your application location aware.
 
-- [Globalization](http://plugins.cordova.io/#/package/org.apache.cordova.globalization)
+- [Globalization](https://www.npmjs.com/package/cordova-plugin-globalization)
 > Enable representation of objects specific to a locale.
 
-- [InAppBrowser](http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser)
+- [InAppBrowser](https://www.npmjs.com/package/cordova-plugin-inappbrowser)
 > Launch URLs in another in-app browser instance.
 
-- [Media](http://plugins.cordova.io/#/package/org.apache.cordova.media)
+- [Media](https://www.npmjs.com/package/cordova-plugin-media)
 > Record and play back audio files.
 
-- [Media Capture](http://plugins.cordova.io/#/package/org.apache.cordova.media-capture)
+- [Media Capture](https://www.npmjs.com/package/cordova-plugin-media-capture)
 > Capture media files using device's media capture applications.
 
-- [Network Information (Connection)](http://plugins.cordova.io/#/package/org.apache.cordova.network-information)
+- [Network Information (Connection)](https://www.npmjs.com/package/cordova-plugin-network-information)
 > Quickly check the network state, and cellular network information.
 
-- [Splashscreen](http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen)
+- [Splashscreen](https://www.npmjs.com/package/cordova-plugin-splashscreen)
 > Show and hide the applications splash screen.
 
-- [Vibration](http://plugins.cordova.io/#/package/org.apache.cordova.vibration)
+- [Vibration](https://www.npmjs.com/package/cordova-plugin-vibration)
 > An API to vibrate the device.
 
-- [StatusBar](https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md)
+- [StatusBar](https://www.npmjs.com/package/cordova-plugin-statusbar)
 > An API for showing, hiding and configuring status bar background.
 
-Non-English translations of these plugin docs can be found by looking at older versions of the Cordova documentation.
-Use the drop-down menu at the very top-right of this site to switch versions.
+- [Whitelist](https://www.npmjs.com/package/cordova-plugin-whitelist)
+> A plugin to whitelist network requests. Must install to have any network requests in your applications.
 
+- [Legacy Whitelist](https://www.npmjs.com/package/cordova-plugin-legacy-whitelist)
+> A plugin to use the old style of whitelist before it was ripped out and changed in the whitelist plugin. 
+
+
+
+Non-English translations of these plugin docs can be found by going to the plugin github repos and looking in the docs folder

@@ -97,5 +97,5 @@ Creates an app in a `hello` directory whose display name is
 
 ### Add the Camera Plugin
 
-    $ cordova plugin add org.apache.cordova.camera
+    $ cordova plugin add cordova-plugin-camera
 

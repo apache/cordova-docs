@@ -34,13 +34,13 @@
 - volumedownbutton
 - volumeupbutton
 
-## Events added by [org.apache.cordova.battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md)
+## Events added by [cordova-plugin-battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md)
 
 - batterycritical
 - batterylow
 - batterystatus
 
-## Events added by [org.apache.cordova.network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md)
+## Events added by [cordova-plugin-network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/README.md)
 
 - online
 - offline
