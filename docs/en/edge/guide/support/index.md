@@ -92,7 +92,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accelerometer</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-device-motion">Accelerometer</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -105,7 +105,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-battery-status">BatteryStatus</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -118,7 +118,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Camera</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-camera">Camera</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -131,7 +131,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Capture</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">Capture</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -144,7 +144,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">Compass</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">Compass</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -157,7 +157,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">Connection</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-network-information">Connection</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -170,7 +170,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">Contacts</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-contacts">Contacts</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -183,7 +183,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">Device</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-device">Device</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -209,7 +209,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">File</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-file">File</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -222,7 +222,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">File Transfer</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">File Transfer</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y">* Do not support onprogress nor abort</td>
@@ -235,7 +235,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocation</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-geolocation">Geolocation</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -248,7 +248,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Globalization</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-globalization">Globalization</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -261,7 +261,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -274,7 +274,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Media</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-media">Media</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -287,7 +287,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Notification</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-dialogs">Notification</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -300,7 +300,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Splashscreen</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">Splashscreen</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -313,7 +313,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Status Bar</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-statusbar">Status Bar</a></th>
         <td data-col="amazon-fireos" class="n"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -339,7 +339,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibration</a></th>
+        <th><a href="https://www.npmjs.com/package/cordova-plugin-vibration">Vibration</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
