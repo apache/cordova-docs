@@ -240,7 +240,7 @@ release:
 You can use the `cordova` CLI utility to deploy the
 application to the emulator or the device from the command line:
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
 
 Otherwise, use the alternate shell interface:
