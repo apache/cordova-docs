@@ -572,16 +572,16 @@ On Android (as of cordova-android@4.0.0), _framework_ tags are used to include M
 
 Examples:
 
-        <!-- Depend on latest version of GCM from play services -->
-        <framework src="com.google.android.gms:play-services-gcm" />
-        <!-- Depend on v21 of appcompat-v7 support library -->
-        <framework src="com.android.support:appcompat-v7:21+" />
-        <!-- Depend on library project included in plugin -->
-        <framework src="relative/path/FeedbackLib" custom="true" />
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
 
 _framework_  can also be used to have custom .gradle files sub-included into the main project's .gradle file:
 
-        <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
 
 For pre-android@4.0.0 (ANT-based projects):
 
@@ -595,7 +595,7 @@ The optional `parent` sets the relative path to the directory containing the
 sub-project to which to add the reference. The default is `.`, i.e. the
 application project. It allows to add references between sub projects like in this example:
 
-        <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
 
 ### _framework_ for Windows
 
