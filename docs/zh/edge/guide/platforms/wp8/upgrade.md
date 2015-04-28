@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 升級 Windows Phone 8
 
-本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
+本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 下面一節演示如何從非 CLI 和 CLI 專案升級。
 
 ## 4.0.0 3.6.0 版升級專案
 

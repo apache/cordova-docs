@@ -19,11 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 要件、およびサポート
 
-人造人間のためのコルドバには Android SDK が必要です。Android の SDK の[システム要件][1]を参照してください。.
+人造人間のためのコルドバ OS X、Linux または Windows のオペレーション システムにインストールされている可能性がありますが人造人間 SDK が必要です。 Android の SDK の[システム要件][1]を参照してください。.
 
- [1]: http://developer.android.com/sdk/index.html
+ [1]: http://developer.android.com/sdk/index.html#Requirements
 
-コルドバ アンドロイド 2.3.x (ジンジャーブレッド, Android の API レベル 10 で始まる) および 4.x をサポートします。一般的な規則として Google の[分布のダッシュ ボード][2]上の 5% を下回ると Android のバージョンになるコルドバでサポートされていません。 アンドロイド バージョン API より早くレベル 10、および 3.x バージョン (ハニカム、API レベル 11-13) はその 5 ％ のしきい値を大きく下回ったことができます。
+コルドバ (Android の API レベル 14 で始まる) アンドロイド 4.0.x をサポートしているより高い。 一般的な規則として Google の[分布のダッシュ ボード][2]上の 5% を下回ると Android のバージョンになるコルドバでサポートされていません。 アンドロイド バージョン API より早くレベル 10、および 3.x バージョン (ハニカム、API レベル 11-13) はその 5 ％ のしきい値を大きく下回ったことができます。
 
  [2]: http://developer.android.com/about/dashboards/index.html
 
@@ -37,22 +37,34 @@ SDK と一緒にコルドバのアンドロイドを中心のシェル ・ ツ�
 
 これらのシェルのツールを作成、構築、および Android アプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。 プラグインを開発する方法の詳細については、アプリケーション ・ プラグインを参照してください。
 
-[Developer.android.com/sdk][4]から Android SDK をインストールします。 Android の sdk 'adt - バンドル - < os > < アーチ > - < バージョン >' ファイルとして配布されます。 Windows では、adt バンドルは、インストーラーにパッケージ化されます。 OSX と Linux 上に簡単に解凍 'adt バンドル' 開発ツールを格納する場所。 [Android の SDK のセットアップに関する詳細情報をここで発見ことができます。][5]
+## Java 開発キット (JDK) のインストールします。
 
- [4]: http://developer.android.com/sdk/
- [5]: http://developer.android.com/sdk/installing/bundle.html
+[Java 開発キット (JDK) 7][4]をインストールまたはそれ以降。
 
-コルドバを仕事、またはそれらに基づいている CLI コマンド ライン ツール、SDK を含める必要があります `tools` と `platform-tools` でディレクトリを `PATH` 。 Mac では、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK のインストールに応じて、次のような行を追加します。
+ [4]: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
 
-        エクスポート パス ${path} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール
+Windows をインストールするときも JDK インストール パス (たとえば、C:\Program Files\Java\jdk1.7.0_75) によると`JAVA_HOME`環境変数を設定する必要があります。
+
+## Android の SDK をインストールします。
+
+[Android のスタンドアロン SDK ツール][5]や[Android のスタジオ][6]をインストールします。 Procceed 対応`アンドロイド Studio`プラグインのアンドロイド新しいコルドバの開発またはネイティブ ツールを使用して実行および Android プラットフォームをデバッグする場合。 それ以外の場合は、 `Android のスタンドアロン SDK ツール`は Android アプリケーション ビルドおよび配置するのに十分です。
+
+ [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
+ [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
+
+詳細なインストール手順は利用可能な上記のリンクをインストールの一部として。
+
+コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac では、テキスト エディターを使用して、作成または SDK のインストールに応じて、次のような行を追加する`~/.bash_profile`ファイルを変更することができます。
+
+        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
 
-パスを追加します `java` と `ant` に必要な場合。 この行で `~/.bash_profile` 新たにオープンしたターミナル ウィンドウでこれらのツールを公開します。 ターミナル ・ ウィンドウをまだ開いて場合は osx 版、またはログアウト/ログイン Linux 上を避けるために、現在の端末ウィンドウで使用できるようにするこれを実行します。
+`~/.Bash_profile`内のこの行は、新しくオープンしたターミナル ウィンドウでこれらのツールを公開します。 ターミナル ・ ウィンドウをまだ開いて場合は osx 版、またはログアウト/ログイン Linux 上を避けるために、現在の端末ウィンドウで使用できるようにするこれを実行します。
 
-        $ ソース ~/.bash_profile
+        $ source ~/.bash_profile
     
 
-変更する、 `PATH` Windows 7 環境。
+Windows の`PATH`環境を変更: する
 
 1.  デスクトップの左下隅の [**スタート**] メニューをクリックして、**コンピューター**を右クリックして ［**プロパティ**］.
 
@@ -64,24 +76,95 @@ SDK と一緒にコルドバのアンドロイドを中心のシェル ・ ツ�
 
 5.  追加するのには、次の `PATH` 例えば、SDK をインストールしたに基づきます。
     
-        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
         
 
 6.  値を保存して両方のダイアログ ボックスを閉じます。
 
-また、コマンド ・ プロンプトとタイプ Java および Ant. オープンを有効にする必要があります `java` 、また入力と `ant` 。追加、 `PATH` これらのいずれかの実行に失敗します。
+## SDK パッケージをインストールします。
 
-        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+アンドロイド SDK マネージャーを開く (たとえば、端末を介して:`アンドロイド`) インストールと。
 
-## SDK で新しいプロジェクトを開く
+1.  アンドロイド 5.1.1 (API 22) プラットフォーム SDK
+2.  Android の SDK ビルド ツール バージョン 19.1.0 またはそれ以降
+3.  Android 対応リポジトリ (エクストラ)
+
+詳細については、 [SDK パッケージのインストール][7]を参照してください。
+
+ [7]: http://developer.android.com/sdk/installing/adding-packages.html
+
+## エミュレーターを構成します。
+
+人造人間 sdk は既定で任意の既定のエミュレーターのインスタンスを提供しません。 コマンド ・ ラインで`android`を実行して新しいものを作成できます。 プレス**ツール → 管理 Avd** (Android 仮想デバイス)、**デバイスの定義**されたダイアログ ボックスから任意の項目を選択します。
+
+![][8]
+
+ [8]: img/guide/platforms/android/asdk_device.png
+
+プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
+
+![][9]
+
+ [9]: img/guide/platforms/android/asdk_newAVD.png
+
+これで、AVD **Android 仮想デバイス**リストに表示されます。
+
+![][10]
+
+ [10]: img/guide/platforms/android/asdk_avds.png
+
+エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
+
+![][11]
+
+ [11]: img/guide/platforms/android/asdk_emulator.png
+
+高速な経験のため、実行速度を向上させる`仮想マシン加速`を使用できます。 多くの近代的な Cpu をより効率的に仮想マシンを実行する拡張機能を提供します。 加速度のこのタイプを使用する前にかどうか、現在の開発システムの CPU をサポートしています 1 つ次の仮想化テクノロジを決定する必要があります。
+
+*   **インテル バーチャライゼーション ・ テクノロジー**(VT-x、vmx) → [Intel VT-x 対応のプロセッサ一覧][12]
+*   **AMD の仮想化**AMD-V （SVM）、Linux のサポートだけ (2006 年 5 月以来すべての Cpu AMD を含める AMD-V Sempron を除く)。
+
+ [12]: http://ark.intel.com/products/virtualizationtechnology
+
+かどうか、インテル ・ プロセッサーの VT-x テクノロジをサポートする、`インテル プロセッサー識別ユーティリ ティー`を実行している、インテル[・ ダウンロード ・ センター][13]からダウンロードできます`windows`や`OS に依存しない`である[booteable ユーティリティ][14]を使用することができますを調べる別の方法.
+
+ [13]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
+ [14]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
+
+インストールし、`インテルのプロセッサー識別ユーティリ ティー`を実行後、Windows 上あなたの CPU 仮想化テクノロジをサポートしているかどうかを確認するために次のウィンドウを得るでしょう：
+
+![][15]
+
+ [15]: img/guide/platforms/android/intel_pid_util_620px.png
+
+エミュレーターをスピードアップするためにダウンロードし、1 つ以上の`Intel x86 原子`システム イメージとして`インテル ハードウェア加速実行マネージャー (HAXM)`をインストールする必要があります。.
+
+あなたアンドロイド SDK マネージャーを開き、テストするどちらかのバージョンの`Intel x86 原子`システム イメージを選択します。 `エクストラ`に行くと`Intel x86 エミュレーター アクセラレータ (HAXM)`を選択し、それらのパッケージをインストールします。
+
+![][16]
+
+ [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+
+ダウンロード後`エクストラ/インテル/Hardware_Accelerated_Execution_Manager`でアンドロイド SDK で提供されているインテル インストーラーを実行します。 **注**:`より多くの情報とステップ バイ ステップ ガイダンスこのチェックを見つけることができる場合は、パッケージのインストールに問題がある` [Intel の記事][17].
+
+ [17]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
+
+1.  1 つ以上の`Intel x86 原子`システム イメージとして、`インテル ハードウェア加速実行マネージャー`、**余分な物**の下で利用可能なインストールします。.
+
+2.  `エクストラ/インテル/Hardware_Accelerated_Execution_Manager`でアンドロイド SDK で提供されているインテルのインストーラーを実行します。.
+
+3.  インテル画像に設定されているターゲットで新しい AVD を作成します。
+
+4.  エミュレーターを起動するときはハックス モジュールのロードに失敗を示すエラー メッセージがない確認します。
+
+## 新しいプロジェクトを作成します。
 
 この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは人造人間固有のシェルのツールのセットで説明するクロス プラットフォーム CLI ツールの間に選択できます。 ソース コード ディレクトリ内からの場合、CLI アプローチここです：
 
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ cordova build
+        $ ccordova prepare              # or "cordova build"
     
 
 ここでは Unix および Windows の対応する低レベル シェル ツール アプローチ：
@@ -90,44 +173,19 @@ SDK と一緒にコルドバのアンドロイドを中心のシェル ・ ツ�
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
-ここでは、SDK を使用して変更する方法です。
-
-1.  **Eclipse**アプリケーションを起動します。
-
-2.  **新しいプロジェクト**のメニュー項目を選択します。
-
-3.  表示されたダイアログ ボックスから**既存のコードから Android プロジェクト**を選択し、**次**キーを押します。
-    
-    ![][6]
-
-4.  CLI を使用している場合に移動、 `hello` にし、プロジェクトの作成ディレクトリの `platforms/android` サブディレクトリ。 代わりに、使用している場合、 `create` シェル ユーティリティと、単に移動、 `hello` ディレクトリ。
-
-5.  **終了**キーを押します。.
-
- [6]: img/guide/platforms/android/eclipse_new_project.png
-
-Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
-
-1.  プロジェクト ディレクトリを右クリックします。
-
-2.  結果**のプロパティ**] ダイアログ [ **Android**ナビゲーション ウィンドウから。
-
-3.  プロジェクトのビルド ターゲットは、インストールされている最高の Android の API レベルを選択します。
-
-4.  **[Ok]**をクリックします.
-
-5.  **クリーン****をプロジェクト**メニューから選択します。これは、プロジェクト内のすべてのエラーを修正する必要があります。
-
 ## プロジェクトをビルドします
 
-開発で CLI を使用している場合は、プロジェクト ディレクトリの最上位 `www` ディレクトリにソース ファイルが含まれています。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
+開発で CLI を使用している場合、プロジェクトの最上位レベルの`www`ディレクトリにはソース ファイルが含まれます。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
 
-        $ コルドバ ビルド # 追加 $ コルドバをされたすべてのプラットフォームのビルド ビルド android ＃ ビルド デバッグの唯一のアンドロイド $ コルドバ ビルド android--デバッグ # ビルド デバッグのみ $ コルドバ ビルド アンドロイドアンドロイド--唯一のアンドロイドのための # ビルドのリリースのために
+        $ cordova build                   # build all platforms that were added
+        $ cordova build android           # build debug for only Android
+        $ cordova build android --debug   # build debug for only Android
+        $ cordova build android --release # build release for only Android
     
 
-開発で人造人間に固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリケーションのソースは、 `assets/www` サブディレクトリ。 後続のコマンドがその `cordova` サブディレクトリ。
+開発で人造人間に固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリのソースは`資産/www`サブディレクトリで利用可能です。 以降のコマンドはその`コルドバ`サブディレクトリで利用できます。
 
-`build`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。ここでは、Mac と Windows の両方の構文です。 例の最初のペアを生成するデバッグ情報と 2 番目のリリースのアプリを構築します。
+`ビルド`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。ここでは、Mac と Windows の両方の構文です。 例の最初のペアを生成するデバッグ情報と 2 番目のリリースのアプリを構築します。
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -136,150 +194,75 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
         C:\path\to\project\cordova\build.bat --release
     
 
-次の定義を追加する場合は、リリースのビルド時、 `local.properties` ファイルを APK は署名を取得し、Google Play ストアにアップロードする準備がされるように配置されます。
+## アプリを展開します。
 
-        key.store=/Users/me/Developer/mykeystore.jks key.alias=mykeyalias
+`コルドバ`CLI ユーティリティを使用して、コマンド ・ ラインから、エミュレーターまたはデバイスにアプリケーションを配置することができます。
+
+        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova run android --device  #to deploy the app on a connected device
     
 
-ビルド スクリプトがあれば、キーストアおよび別名キー、パスワード、パスワードの求められます。 プロパティ ファイルでパスワードを定義する必要はありません。 それらを定義できます、プロンプトを回避する場合は、 `local.properties` として `key.store.password` と `key.alias.password` 。 これを行う場合、これらのパスワードでセキュリティ上の懸念の注意します。
+それ以外の場合は、代替シェル インターフェイスを使用します。
 
-## エミュレーターを構成します。
-
-いずれかを使用することができます、 `cordova` 、エミュレーターでアプリケーションを実行する CLI ユーティリティまたはコルドバのアンドロイドを中心としたシェル ツールします。 いずれかの方法では、SDK には、少なくとも 1 つのデバイスを表示する最初構成する必要があります。 Eclipse から個別に実行される Java アプリケーション アンドロイド SDK マネージャー使用します。 それを開く 2 つの方法があります。
-
-1.  実行 `android` コマンド ・ ラインで。
-
-2.  Eclipse、内でこのツールバー アイコンを押します。
-    
-    ![][7]
-
- [7]: img/guide/platforms/android/eclipse_android_sdk_button.png
-
-一度開いて、アンドロイド SDK マネージャーはさまざまなランタイム ライブラリが表示されます。
-
-![][8]
-
- [8]: img/guide/platforms/android/asdk_window.png
-
-**ツール → 管理 Avd** (Android 仮想デバイス) を選択し、表示されたダイアログ ボックス内の**デバイス定義**から任意の項目を選択します。
-
-![][9]
-
- [9]: img/guide/platforms/android/asdk_device.png
-
-プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
-
-![][10]
-
- [10]: img/guide/platforms/android/asdk_newAVD.png
-
-これで、AVD **Android 仮想デバイス**リストに表示されます。
-
-![][11]
-
- [11]: img/guide/platforms/android/asdk_avds.png
-
-エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
-
-![][12]
-
- [12]: img/guide/platforms/android/asdk_emulator.png
-
-## エミュレーターへの展開します。
-
-この時点で使用することができます、 `cordova` CLI ユーティリティ コマンドラインからエミュレーターにアプリケーションを配置します。
-
-        $ コルドバ android をエミュレートします。
+        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run --device
     
 
-それ以外の場合、代替シェル インターフェイスを使用します。
+使用することができます**cordova run android --list**を見るすべての利用可能なターゲットと**cordova run android --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run android --target="Nexus4_emulator"`).
 
-        $/path/to/project/cordova/run - エミュレーター
-    
-
-エミュレーターは、現在、SDK 内有効に頼らずに指定する名前ごとに参照できます。
-
-        $/path/to/project/cordova/run - ターゲット名 =
-    
+**コルドバの実行 - ヘルプ**を使用して、追加のビルドを参照してください、オプションを実行することもできます。
 
 これは、ホーム画面にアプリをプッシュし、それを起動します。
 
-![][13]
-
- [13]: img/guide/platforms/android/emulator2x.png
-
-ときにあなた `run` 、アプリは、あなたも `build` それ。 追加を追加することができます `--debug` 、 `--release` 、および `--nobuild` 構築方法やも、再構築が必要かどうかを制御するフラグ。
-
-        $/path/to/project/cordova/run - エミュレーター - nobuild
-    
-
-代わりに Eclipse 内で作業している、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
-
-高速な体験を使用してできます、 `Virtual Machine Acceleration` の実行速度を向上させます。 多くの近代的な Cpu をより効率的に仮想マシンを実行する拡張機能を提供します。 加速度のこのタイプを使用する前にかどうか、現在の開発システムの CPU をサポートしています 1 つ次の仮想化テクノロジを決定する必要があります。
-
-*   **インテル バーチャライゼーション ・ テクノロジー**(VT-x、vmx) → [Intel VT-x 対応のプロセッサ一覧][14]
-*   **AMD の仮想化**AMD-V （SVM）、Linux のサポートだけ (2006 年 5 月以来すべての Cpu AMD を含める AMD-V Sempron を除く)。
-
- [14]: http://ark.intel.com/products/virtualizationtechnology
-
-別の方法を見つける場合、インテル ・ プロセッサーの VT-x 技術をサポートする、それは実行することによって、 `Intel Processor Identification Utility` の `Windows` 、インテル[・ ダウンロード ・ センター][15]からダウンロードすることができますまたは、 [booteable ユーティリティ][16]は、使用することができます`OS Independent`.
-
- [15]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
- [16]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
-
-後のインストールし、実行、 `Intel Processor Identification Utility` 、Windows 上あなたの CPU 仮想化テクノロジをサポートしているかどうかを確認するために次のウィンドウを得るでしょう。
-
-![][17]
-
- [17]: img/guide/platforms/android/intel_pid_util_620px.png
-
-エミュレーターをスピードアップするためにダウンロードし、1 つまたは複数をインストールする必要があります `Intel x86 Atom` システム イメージだけでなく、`Intel Hardware Accelerated Execution Manager (HAXM)`.
-
-あなたアンドロイド SDK マネージャーを開き、選択、 `Intel x86 Atom` どちらかのバージョンをテストするためのシステム イメージ。 移動し、 `Extras` を選択します `Intel x86 Emulator Accelerator (HAXM)` 、それらのパッケージをインストール。
-
 ![][18]
 
- [18]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [18]: img/guide/platforms/android/emulator2x.png
 
-ダウンロード後、Android SDK で利用可能です、インテル インストーラーを実行 `extras/intel/Hardware_Accelerated_Execution_Manager` 。 **注**: `If you have any problems installing the package, you can find more information and step by step guidance check this` [インテル記事][19] .
+ときにアプリを`実行`を`構築`することもそれ。 追加を追加することができます`--デバッグ`、 `-リリース`、および構築方法や、再構築が必要かどうかも制御する`--nobuild`フラグ。
 
- [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
-
-1.  1 つまたは複数インストール `Intel x86 Atom` システム イメージだけでなく、 `Intel Hardware Accelerated Execution Manager` 、**余分な物**の下で利用可能な.
-
-2.  内でアンドロイド SDK で提供されているインテルのインストーラーを実行します。`extras/intel/Hardware_Accelerated_Execution_Manager`.
-
-3.  インテル画像に設定されているターゲットで新しい AVD を作成します。
-
-4.  エミュレーターを起動するときはハックス モジュールのロードに失敗を示すエラー メッセージがない確認します。
-
-## デバイスへの配置します。
-
-デバイスに直接アプリをプッシュするには、 [Android 開発者向けサイト][20]で説明されているようにあなたのデバイスで USB デバッグを有効にかどうかを確認し、ミニ USB ケーブルを使用してあなたのシステムにプラグインします。
-
- [20]: http://developer.android.com/tools/device.html
-
-この CLI コマンドを使用してアプリをデバイスにプッシュすることができます。
-
-        android を実行 $ コルドバ
+        $ /path/to/project/cordova/run --emulator --nobuild
     
-
-.. またはこの人造人間中心のシェル インターフェイスを使用します。
-
-        $/path/to/project/cordova/run - デバイス
-    
-
-指定したフラグなしで、 `run` コマンドはデバイスが見つからない場合、接続先のデバイスまたは現在実行中のエミュレーターを検出し、それ以外の場合、エミュレーターを指定するよう求められます。
-
-Eclipse 内からアプリケーションを実行するには、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します.
 
 ## その他のコマンド
 
 実行時のアプリケーションの詳細なログを生成します。
 
-        $/path/to/project/cordova/log C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log
+        C:\path\to\project\cordova\log.bat
     
 
 次のプロジェクト ファイルが消去されます。
 
-        $/path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean
+        C:\path\to\project\cordova\clean.bat
+    
+
+## SDK で新しいプロジェクトを開く
+
+Android プラットフォームは、プロジェクトに追加されます、一度[Android Studio][6]内からそれを開くことができます。
+
+1.  **アンドロイド Studio**アプリケーションを起動します。
+
+2.  **インポート プロジェクト (Eclipse ADT、Gradle など)**を選択します.
+    
+    ![][19]
+
+3.  Android プラットフォームは、ストアド`あなた/プロジェクト/プラットフォーム/android`の場所を選択します。).
+    
+    ![][20]
+
+4.  `Gradle 同期`質問の単に答えが**はい**.
+
+ [19]: img/guide/platforms/android/asdk_import_project.png
+ [20]: img/guide/platforms/android/asdk_import_select_location.png
+
+あなたを構築し、 `Android のスタジオ`から直接アプリケーションを実行することができますすべての現在設定されて.
+
+![][21]
+
+ [21]: img/guide/platforms/android/asdk_import_done.png
+
+[Android のスタジオの概要][22]を参照してください、そして[建物と Android Studio から実行する][23]詳細については。
+
+ [22]: http://developer.android.com/tools/studio/index.html
+ [23]: http://developer.android.com/tools/building/building-studio.html

@@ -15,7 +15,7 @@ licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plu
 
 # Windows Phone 8 Plugins
 
-Cette section fournit des détails pour l'implémentation de code du plugin native sur la plate-forme Windows Phone. Avant de lire ceci, voir Application Plugins pour avoir un aperçu de la structure du plugin et son interface commune de JavaScript. Cette section continue de démontrer l'échantillon *écho* plugin qui communique de la webview Cordova à la plate-forme native et le dos.
+Cette section fournit des détails pour l'implémentation de code du plugin native sur la plate-forme Windows Phone. Avant de lire ceci, voir Guide de développement de Plugin pour avoir un aperçu de la structure du plugin et son interface commune de JavaScript. Cette section continue de démontrer l'échantillon *écho* plugin qui communique de la webview Cordova à la plate-forme native et le dos.
 
 Écriture d'un plugin pour Cordoue sur Windows Phone requiert une compréhension de base de l'architecture de Cordova. Cordova-WP8 se compose d'un `WebBrowser` qui héberge le code JavaScript de l'application et gère les appels d'API natives. Vous pouvez étendre un C# `BaseCommand` classe ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), qui est livré avec la plupart des fonctionnalités dont vous avez besoin :
 
@@ -25,20 +25,29 @@ Cette section fournit des détails pour l'implémentation de code du plugin nati
 
 3.  Inclure l'implémentation de classes de base :
     
-        à l'aide de WPCordovaClassLib.Cordova ;
-        à l'aide de WPCordovaClassLib.Cordova.Commands ;
-        à l'aide de WPCordovaClassLib.Cordova.JSON ;
+        using WPCordovaClassLib.Cordova;
+        using WPCordovaClassLib.Cordova.Commands;
+        using WPCordovaClassLib.Cordova.JSON;
         
 
 4.  Étendez votre classe de `BaseCommand` :
     
-        public class Echo : BaseCommand {/ /...}
+        public class Echo : BaseCommand
+        {
+            // ...
+        }
         
 
 5.  Ajouter une `echo` méthode qui peut être appelée à partir de JavaScript :
     
-        public class Echo : BaseCommand {public void écho (options de chaîne) {/ / toutes les méthodes de plugin callable JS doivent disposer de cette signature !
-                / / public, vide, 1 argument qui est une chaîne de retour}}
+        public class Echo : BaseCommand
+        {
+            public void echo(string options)
+            {
+                // all JS callable plugin methods MUST have this signature!
+                // public, returning void, 1 argument that is a string
+            }
+        }
         
 
 Consultez la classe [BaseCommand.cs][1] pour les méthodes disponibles pour le plugin à substituer. Par exemple, le plugin peut capturer des événements de « pause », « reprendre ».
@@ -68,19 +77,19 @@ Si vous souhaitez spécifier votre propre espace de noms, vous devez faire un ap
 
 Le code JavaScript aurait besoin d'appeler `exec` comme ceci :
 
-        Cordova.exec (win, échec, « com.mydomain.cordovaExtensions.Echo »,...) ;
+        cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
     
 
 ## Interprétation des Arguments en C
 
 Dans l'exemple abordé dans les Plugins de la demande, les données de que votre plugin reçoit sont une chaîne, mais ce qui si vous souhaitez passer un tableau de chaînes ? Supposons que le JavaScript `cordova.exec` appel est spécifiée comme suit :
 
-        Cordova.exec (win, échouer, « Echo », « echo », ["chaîne d'entrée"]) ;
+        cordova.exec(win, fail, "Echo", "echo", ["input string"]);
     
 
 La valeur de `options` chaîne passée à la `Echo.echo` méthode est JSON :
 
-        "[\"input string\ "]"
+        "[\"input string\"]"
     
 
 Tous les JavaScript `exec` arguments sont codées en JSON avant d'être passés en c# et si besoin à décoder :
@@ -99,7 +108,7 @@ Le `BaseCommand` classe fournit des méthodes pour transférer des données vers
 
 Pour passer des données rétrospectives, vous devez appeler `DispatchCommandResult` différemment :
 
-        DispatchCommandResult (new PluginResult (PluginResult.Status.OK, "tout se déroule comme prévu, il s'agit d'un résultat qui est passé au gestionnaire de succès.")) ;
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
     
 
 Utilisez une chaîne JSON codée pour passer des données de l'objet structuré vers JavaScript :
@@ -109,7 +118,7 @@ Utilisez une chaîne JSON codée pour passer des données de l'objet structuré 
 
 Pour signaler une erreur, appelez `DispatchCommandResult` avec un `PluginResult` objet dont le statut est `ERROR` :
 
-        DispatchCommandResult (new PluginResult (PluginResult.Status.ERROR, « Echo signalé une erreur »)) ;
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
     
 
 ## Gestion des erreurs de sérialisation
@@ -177,7 +186,7 @@ JavaScript est plus difficile pour le débogage sur Windows Phone. Vous devez ut
 
 *   Veillez à ne pas passer des arguments de JavaScript vers le côté natif qui sont difficiles à désérialiser en JSON. La plupart des plates-formes de périphérique s'attendre l'argument passé à `cordova.exec()` soit un tableau, comme les suivants :
     
-        Cordova.exec (win, fail, « ServiceName », « MethodName », [« il s'agit d'une chaîne », 54, {literal: « trouble »}]) ;
+        cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
         
     
     Ceci peut résulter en une valeur de chaîne trop complexe pour c# à décoder :

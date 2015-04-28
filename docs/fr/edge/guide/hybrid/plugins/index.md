@@ -38,7 +38,7 @@ Le référentiel plugin doit disposent d'un niveau supérieur `plugin.xml` fichi
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-                id="org.apache.cordova.device" version="0.2.3">
+                id="cordova-plugin-device" version="0.2.3">
             <name>Device</name>
             <description>Cordova Device Plugin</description>
             <license>Apache 2.0</license>

@@ -144,9 +144,22 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
     
     **注**: `既定` 値は、コルドバはその既定の動作にフォールバックするプラットフォームをできるようにプラットフォームのマニフェスト/構成ファイルから向き設定エントリを削除します。
 
+'default' は、コールバックの実装後にのみ肖像画 ＆ ランドス ケープ モード - ことができます。私は可能性がおそらく再ワードこのとおり：
+
+IOS の方向ウィンドウで javascript コールバックを定義することによってプログラムで制御できます。
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## *機能*要素
 
-使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 SDK およびプラットフォーム固有の使用で直接作業した場合 `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 プラットフォーム固有のカスタム値とともに表示されます多くの場合 `config.xml` ファイル。 たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
+CLI を使用してアプリケーションを構築する場合は`プラグイン`コマンドを使用するデバイス Api を有効にします。 これは、 `< 機能 >`要素をワークフローに適用されませんので、トップレベルの`config.xml`ファイルを変更しません。 SDK およびプラットフォーム固有の`config.xml`ファイルをソースとして使用で直接作業している場合は`< 機能 >`タグを使用するデバイス レベルの Api と外部プラグインを有効にします。 彼らはしばしばプラットフォーム固有の`config.xml`ファイルでカスタム値で表示されます。 たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -164,7 +177,7 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
 
 ## *プラットフォーム*要素
 
-CLI を使用して、アプリケーションを構築する、環境設定や、特定のプラットフォームに固有の他の要素を指定する必要があります。 使用の `<platform>` 構成を指定する必要がありますだけが表示される単一プラットフォーム固有の要素 `config.xml` ファイル。 たとえば、ここではその唯一のアンドロイドがフルスクリーンの好みを使用するを指定する方法です。
+CLI を使用して、アプリケーションを構築する、環境設定や、特定のプラットフォームに固有の他の要素を指定する必要があります。 `< プラットフォーム >`要素を使用して構成する必要があります 1 つのプラットフォーム固有の`config.xml`ファイルにのみ表示されますを指定します。 たとえば、ここではその唯一のアンドロイドがフルスクリーンの好みを使用するを指定する方法です。
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

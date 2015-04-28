@@ -65,6 +65,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
 
+## 簽署應用程式
+
+您可以查看簽名要求在這裡的安卓應用程式： HTTP://developer.android.com/tools/publishing/app-signing.html
+
+要簽名的應用程式，您需要以下參數： * 金鑰存儲庫 （`--keystore`）： 可容納一套鑰匙的二進位檔案的路徑。 * 金鑰庫口令 （`--storePassword`）： 金鑰存儲庫的密碼 * 別名 （`--alias`）： 指定私密金鑰用於唱歌的 id。 * 密碼 （`--password`）： 為指定的私密金鑰的密碼。 * 類型的金鑰存儲庫 （`--keystoreType`）： pkcs12 jks （預設： 自動檢測基於檔副檔名） 可以使用上面 `run` 或 `build` 腳本的命令列參數指定這些參數。
+
+或者，您可以指定它們在組建組態檔 （build.json） 中使用 （`--buildConfig`) 的論點。下面是組建組態檔的一個示例：
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+對於發佈簽名，可以排除密碼和生成系統會發出提示要求輸入密碼。
+
+此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。 從命令列參數的值將會得到優先。 這可用於在命令列上指定的密碼。
+
 ## 日誌記錄
 
         $ /path/to/project/cordova/log
@@ -132,7 +164,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### 擴展 build.gradle
 
-如果您需要自訂 `build.gradle`，而不是直接編輯，您應該創建一個名為 `生成 extras.gradle` 的同級檔。 此檔將包含由主要的 `build.gradle` 出現時。 下面是一個示例：
+如果您需要自訂 `build.gradle`，而不是直接編輯，您應該創建一個名為 `build-extras.gradle` 的同級檔。 此檔將包含由主要的 `build.gradle` 出現時。 下面是一個示例：
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -143,7 +175,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-請注意外掛程式還可以包括通過 `生成 extras.gradle` 檔：
+請注意外掛程式還可以包括通過 `build-extras.gradle` 檔：
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

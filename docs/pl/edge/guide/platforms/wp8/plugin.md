@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Windows Phone 8 wtyczki
 
-Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego plugin na platformie Windows Phone. Przed przeczytaniem, zobacz zastosowanie pluginów omówienie struktury wtyczki i jego wspólny interfejs JavaScript. W tej sekcji w dalszym ciągu wykazują wtyczce *echo* próbki, który komunikuje się z widoku sieci Web Cordova do macierzystego platformy i z powrotem.
+Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego plugin na platformie Windows Phone. Przed przeczytaniem, zobacz Plugin rozwoju Przewodnik omówienie struktury wtyczki i jego wspólny interfejs JavaScript. W tej sekcji w dalszym ciągu wykazują wtyczce *echo* próbki, który komunikuje się z widoku sieci Web Cordova do macierzystego platformy i z powrotem.
 
 Napisanie wtyczki do Cordova na Windows Phone wymaga zrozumienia podstawowych Cordova w architekturze. Cordova-WP8 składa się z `WebBrowser` że gospodarze aplikacji JavaScript kod i zarządza rodzimych wywołań API. Można rozszerzyć C# `BaseCommand` klasy ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), który pochodzi z większości funkcji należy:
 

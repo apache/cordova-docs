@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 簡歷
+# resume
 
 當應用程式從背景中檢索時，將觸發該事件。
 

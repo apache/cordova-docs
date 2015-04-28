@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Aktualizacja Windows Phone 8
 
-Ten poradnik pokazuje jak zmienić Windows Phone 8 projektów, do uaktualnienia ze starszych wersji Cordova. Niektóre z tych instrukcji dotyczą projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI. Poniższa sekcja pokazuje jak uaktualnić z projektów-CLI.
+Ten poradnik pokazuje jak zmienić Windows Phone 8 projektów, do uaktualnienia ze starszych wersji Cordova. Niektóre z tych instrukcji dotyczą projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI. Sekcji poniżej pokazuje jak uaktualnić od-CLI CLI projektów i.
 
 ## Projekty modernizacji 3.6.0 4.0.0
 

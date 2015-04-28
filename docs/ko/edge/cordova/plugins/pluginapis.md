@@ -11,9 +11,9 @@
 
 코르도바 api, 최소한의 세트와 함께 제공 하 고 프로젝트 추가 플러그인을 통해 필요한 어떤 추가 Api.
 
-[플러그인 레지스트리][1] 를 사용 하 여 모든 기존 플러그인 (포함 한 제 3 자 플러그인)을 통해 검색할 수 있습니다..
+[Npm][1] 에 (를 포함 하 여 제 3 자 플러그인) 모든 기존 플러그인을 통해 검색할 수 있습니다..
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 코어 코르 도우 바 플러그인의 전통적인 세트는 다음과 같습니다.
 
@@ -93,24 +93,34 @@
     
     > 표시, 숨기기 및 상태 표시줄 배경을 구성 하는 API.
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [허용 된 사이트 목록][21]
+    
+    > 플러그인 화이트 리스트 네트워크 요청을 합니다. 응용 프로그램에서 모든 네트워크 요청을 설치 해야 합니다.
 
-이러한 플러그인 워드 프로세서의 비 영어 번역 코르도바 설명서의 이전 버전을 보고 하 여 찾을 수 있습니다. 매우 상단 오른쪽에이 사이트의 드롭 다운 메뉴를 사용 하 여 버전을 전환할.
+*   [기존 화이트 리스트][22]
+    
+    > 찢 어 고 허용 된 사이트 목록은 플러그인에서 변경 하기 전에 화이트 리스트의 오래 된 스타일을 사용 하는 플러그인.
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+이러한 플러그인 워드 프로세서의 비 영어 번역 플러그인 github repos가 docs 폴더에 보고 하 여 찾을 수 있습니다.

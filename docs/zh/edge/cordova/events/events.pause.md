@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 暫停
+# pause
 
 當一個應用程式放入後臺，將觸發該事件。
 

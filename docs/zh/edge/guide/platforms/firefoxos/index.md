@@ -50,8 +50,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 此時你準備好去 — — 測試-app/www 裡面的代碼更改為任何你想要您的應用程式會。 你可以向應用程式，例如使用"科爾多瓦外掛程式添加"，添加[支援的外掛程式]()：
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 當編寫應用程式代碼時，將您的更改部署到您已經添加到您的專案與火狐瀏覽器操作系統應用程式

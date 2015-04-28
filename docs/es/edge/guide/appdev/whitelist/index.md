@@ -15,47 +15,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guía de lista blanca
 
-Listas blancas de dominio es un modelo de seguridad que controla el acceso a dominios externos sobre los cuales su aplicación no tiene ningún control. Directiva de seguridad predeterminada de Cordova permite acceder a cualquier sitio. Antes de su aplicación a la producción, debe formular una lista blanca y permitir el acceso a la red específica dominios y subdominios.
+Listas blancas de dominio es un modelo de seguridad que controla el acceso a dominios externos sobre los cuales su aplicación no tiene ningún control. Cordova ofrece una política de seguridad configurable para definir los sitios externos pueden accederse. De forma predeterminada, nuevas aplicaciones están configurados para permitir el acceso a cualquier sitio. Antes de su aplicación a la producción, debe formular una lista blanca y permitir el acceso a la red específica dominios y subdominios.
 
-Córdoba se adhiere a la especificación [W3C Widget de acceso][1] , que se basa en el `<access>` elemento dentro de la aplicación de `config.xml` archivo para permitir acceso a la red en dominios específicos. Para los proyectos que se basan en el flujo de trabajo de la CLI que se describe en la interfaz de línea de comandos, este archivo se encuentra en el directorio superior del proyecto. De lo contrario para caminos de desarrollo específico de plataforma, lugares figuran en las secciones a continuación. (Ver a las diversas guías de plataforma para obtener más información sobre cada plataforma).
+Para Android y iOS (a partir de sus 4,0 versiones), la política de seguridad de Cordova es extensible mediante una interfaz plugin. Su aplicación debe utilizar el [cordova-plugin-whitelist][1], que proporciona mayor seguridad y capacidad de configuración que las versiones anteriores de Cordova. Mientras que es posible implementar su propio plugin de lista blanca, no se recomienda a menos que su aplicación tiene necesidades muy específicas de seguridad política. Ver el [cordova-plugin-whitelist][1] para obtener más información sobre el uso y configuración.
 
- [1]: http://www.w3.org/TR/widgets-access/
+ [1]: https://github.com/apache/cordova-plugin-whitelist
 
-Los siguientes ejemplos demuestran sintaxis de lista blanca:
+Para otras plataformas, Cordova se adhiere a la especificación [W3C Widget de acceso][2] , que se basa en el elemento `< access >` dentro de archivo `config.xml` de la aplicación para habilitar el acceso a la red en dominios específicos. Para los proyectos que se basan en el flujo de trabajo de la CLI que se describe en la interfaz de línea de comandos, este archivo se encuentra en el directorio superior del proyecto. De lo contrario para caminos de desarrollo específico de plataforma, lugares figuran en las secciones a continuación. (Ver a las diversas guías de plataforma para obtener más información sobre cada plataforma).
 
-*   Acceso a [google.com][2]:
+ [2]: http://www.w3.org/TR/widgets-access/
+
+Los siguientes ejemplos demuestran sintaxis `< access >` lista blanca:
+
+*   Acceso a [google.com][3]:
     
         <access origin="http://google.com" />
         
 
-*   Acceso a la segura [google.com][3] (`https://`):
+*   Acceso a la segura [google.com][4] (`https://`):
     
         <access origin="https://google.com" />
         
 
-*   Acceso al subdominio [maps.google.com][4]:
+*   Acceso al subdominio [maps.google.com][5]:
     
         <access origin="http://maps.google.com" />
         
 
-*   Acceso a todos los subdominios de [google.com][2], por ejemplo, [mail.google.com][5] y [docs.google.com][6]:
+*   Acceso a todos los subdominios de [google.com][3], por ejemplo, [mail.google.com][6] y [docs.google.com][7]:
     
         <access origin="http://*.google.com" />
         
 
-*   Acceso a *todos* los dominios, por ejemplo, [google.com][2] y [developer.mozilla.org][7]:
+*   Acceso a *todos* los dominios, por ejemplo, [google.com][3] y [developer.mozilla.org][8]:
     
         <access origin="*" />
         
     
     Este es el valor predeterminado para nuevos proyectos CLI.
 
- [2]: http://google.com
- [3]: https://google.com
- [4]: http://maps.google.com
- [5]: http://mail.google.com
- [6]: http://docs.google.com
- [7]: http://developer.mozilla.org
+ [3]: http://google.com
+ [4]: https://google.com
+ [5]: http://maps.google.com
+ [6]: http://mail.google.com
+ [7]: http://docs.google.com
+ [8]: http://developer.mozilla.org
 
 Tenga en cuenta que algunos sitios web puede redirigir automáticamente desde su página de inicio a una url distinta, por ejemplo utilizando el protocolo https o a un dominio específico del país. Por ejemplo http://www.google.com redireccionará para utilizar SSL/TLS en https://www.google.com y entonces más lejos puede redirigir a una geografía como https://www.google.co.uk. Estas situaciones pueden requerir las entradas de lista blanca modificada o adicionales más allá de su requisito inicial. Por favor considere esto como que está construyendo su lista blanca.
 
@@ -67,86 +71,34 @@ Reglas específicas de la plataforma whitelisting se encuentran en`res/xml/confi
 
 ## Whitelisting Android
 
-Reglas específicas de la plataforma whitelisting se encuentran en`res/xml/config.xml`.
-
-**Nota**: en Android 2.3 y antes, dominio whitelisting sólo funciona para `href` hipervínculos, no hace referencia a los recursos como imágenes y secuencias de comandos. Tomar medidas para evitar secuencias de comandos de ser inyectado en la aplicación.
-
-**Nota**: para evitar direcciones URL externas tales como `mailto:` se abra en el webview de Córdoba a partir de Cordova 3.6.0, especificando `origin="*"` implícitamente agregará las reglas para los protocolos http y https. Si necesita acceso a protocolos personalizados adicionales, entonces debe también agregar los explícitamente a la lista blanca. Ver también "Whitelist aplicación externa" abajo para obtener más información sobre lanzamiento de aplicaciones externas de URL.
-
-**Nota**: algunas peticiones de red no pasan por el Cordova Whitelist. Esto incluye < video > y < audio > recursos, conexiones WebSocket (en Android 4.4 +) y posiblemente otras solicitudes no http. En Android 4.4 +, puede incluir un encabezado [CSP][8] en tus documentos HTML para restringir el acceso a esos recursos. En versiones anteriores de Android, no puede ser posible restringirlos.
-
- [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
-
-### Lista blanca de aplicaciones externas
-
-Cordova 3.6.0 introduce una segunda lista blanca, para restringir el acceso URL autorizada para lanzar aplicaciones externas. En versiones anteriores de Cordova, todas las URL no http, tales como `mailto:` , `geo:` , `sms:` y `intent` , implícitamente se permitió a ser objetivo de una etiqueta < a >. Debido a la posibilidad de una aplicación a la fuga de información, si una vulnerabilidad XSS permite que un atacante construir enlaces arbitrarias, estas URL deben ser lista blanca, a partir de Córdoba 3.6.0.
-
-Para permitir un patrón de URL para iniciar una aplicación externa, utilice una etiqueta < acceso > en tu `config.xml` archivo, con el `launch-external` conjunto de atributos.
-
-Ejemplos:
-
-*   Para permitir enlaces enviar mensajes SMS:
-    
-        < accede origen = "sms: *" lanzamiento-externo = "yes" / >
-        
-
-*   Para permitir enlaces a mapas abiertos:
-    
-        < accede origen = "geo: *" lanzamiento-externo = "yes" / >
-        
-
-*   Para permitir enlaces a ejemplo.com para abrir en un navegador externo:
-    
-        < accede origen = "http://example.com/ *" lanzamiento-externo = "yes" / >
-        
-
-*   Para permitir que todos los sitios web no-lista blanca abrir en un navegador externo: (esto es lo mismo que el comportamiento anterior para las URL no-lista blanca)
-    
-        < accede origen = "http://*" lanzamiento-externo = "yes" / >< acceso origen = "https://*" lanzamiento-externo = "yes" / >
-        
-
-*   Para acceder a todas las URLs, volviendo a la política de Cordova 3.5.0 (no recomendada):
-    
-        < accede origen = "*" lanzamiento-externo = "yes" / >
-        
-
-Cuando navega a una dirección URL de su aplicación, la lista blanca interal es probada primero, y si la URL no está en lista blanca allí, entonces la lista blanca externa está probada. Esto significa que cualquier `http:` o `https:` URLs que coinciden ambas listas blancas se abrirá dentro de la aplicación de Cordova, en lugar de lanzar el navegador externo.
+Como el anterior, ver [cordova-plugin-whitelist][1] para más detalles. Cordova-androide antes 4.0.0, consulte las versiones anteriores de esta documentación.
 
 ## iOS ListaBlanca
 
-Las reglas de listas blancas de la plataforma se encuentran en el directorio la aplicación llamado `config.xml` archivo.
-
-Orígenes especificados sin un protocolo, tales como `www.apache.org` en lugar de `http://www.apache.org` , por defecto a todos los `http` , `https` , `ftp` , y `ftps` esquemas.
-
-Los comodines en la plataforma iOS son más flexibles que en la especificación del [W3C Widget de acceso][1] . Por ejemplo, los siguientes accesos todos los subdominios y dominios de primer nivel tales como `.com` y `.net` :
-
-        <access origin="*.google.*" />
-    
-
-A diferencia de la plataforma Android mencionada, navegando por non-lista blanca dominios vía `href` hipervínculo en iOS evita que la página de apertura en todos.
+Como el anterior, ver [cordova-plugin-whitelist][1] para más detalles. Cordova-ios antes 4.0.0, consulte las versiones anteriores de esta documentación.
 
 ## BlackBerry 10 listas blancas
 
-Las reglas de las listas blancas se encuentran en`www/config.xml`.
+Las reglas de las listas blancas se encuentran en `www/config.xml`.
 
 Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maneras:
 
-*   Acceder a cualquier contenido `XMLHttpRequest` debe declararse explícitamente. Configuración de `origin="*"` no funciona en este caso. Alternativamente, se puede desactivar toda seguridad web utilizando la `WebSecurity` preferencia se describe en configuración de BlackBerry:
+*   Cualquier contenido utilizando `XMLHttpRequest` debe declararse explícitamente. Configuración de `origin="*"` no funciona en este caso. Alternativamente, puede deshabilitarse toda seguridad web usando la preferencia `WebSecurity` que se describe en configuración de BlackBerry:
     
         <preference name="websecurity" value="disable" />
         
 
-*   Como alternativa al ajuste `*.domain` , establecer un adicional `subdomains` atribuyen a `true` . Se deben ajustar para que `false` por defecto. Por ejemplo, el siguiente permite el acceso a `google.com` , `maps.google.com` , y `docs.google.com` :
+*   Como alternativa al ajuste `*.domain`, establece un atributo adicional `subdomains` en `true`. Se debe establecer en `false` de forma predeterminada. Por ejemplo, el siguiente permite acceder a `google.com`, `maps.google.com`y `docs.google.com`:
     
-        < accede origin="http://google.com" subdomains = "true" / >
+        <access origin="http://google.com" subdomains="true" />
         
     
-    Angosto del siguiente acceso a `google.com` :
+    El siguiente angosto acceso a `google.com`:
     
-        < accede origin="http://google.com" subdomains = "false" / >
+        <access origin="http://google.com" subdomains="false" />
         
     
-    Especifica el acceso a todos los ámbitos, incluyendo el local `file://` Protocolo:
+    Especifique el acceso a todos los ámbitos, incluido el protocolo local `file://` :
     
     <access origin="*" subdomains="true" />
 
@@ -156,40 +108,30 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
 
 ## Firefox OS
 
-En Firefox OS no hay ningún concepto de listas blancas un dominio específico. En su lugar hay un permiso especial llamado [SystemXHR][10]. Es necesario añadir este permiso para `config.xml` :
+En Firefox OS no hay ningún concepto de listas blancas un dominio específico. En su lugar hay un permiso especial llamado [SystemXHR][10]. Es necesario agregar este permiso al `archivo config.xml`:
 
  [10]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions
 
-    < nombre de plataforma = "firefoxos" >< nombre permiso = privilegiado "systemXHR" = "true" description = "cargar datos del servidor" / >< / plataforma >
+    <platform name="firefoxos">
+        <permission name="systemXHR" privileged="true" description="load data from server" />
+    </platform>
     
 
-El `XMLHttpRequest` objeto necesita ser instanciada con dos parámetros `mozAnon` y `mozSystem` :
+El objeto `XMLHttpRequest` debe ser instanciada con dos parámetros `mozAnon` y `mozSystem`:
 
-    solicitud var = new XMLHttpRequest({
+    var request = new XMLHttpRequest({
         mozAnon: true,
         mozSystem: true});
     
 
 Esta solución es transparente, así que no hay diferencias para otras plataformas.
 
-## iOS cambios en 3.1.0
-
-Antes de la versión 3.1.0, Cordova-iOS incluyó algunas extensiones no estándares para el dominio whilelisting esquema apoyado por otras plataformas de Córdoba. A partir de 3.1.0, la lista blanca de iOS ahora se ajusta a la sintaxis de lista blanca de recursos descrita en la parte superior de este documento. Si actualiza desde pre-3.1.0 y usaban estas extensiones, tienes que cambiar el `config.xml` archivo para continuar whitelisting el mismo conjunto de recursos como antes.
-
-Específicamente, estos patrones necesitan ser actualizados:
-
-*   " `apache.org` " (sin protocolo): anteriormente esto coincidiría con `http` , `https` , `ftp` , y `ftps` los protocolos. Cambiar a " `*://apache.org/*` " para incluir todos los protocolos, o incluir una línea para cada protocolo que necesitas ayuda.
-
-*   " `http://apache.*` " (wildcard en el final del dominio): anteriormente esto coincidiría con todos top-level-dominios, incluyendo toda posibles TLDs de dos letras (pero no útiles dominios como. co.uk). Incluir una línea para cada TLD que usted realmente controla y necesita a la lista blanca.
-
-*   " `h*t*://ap*he.o*g` " (comodines para letras faltantes al azar): estos ya no son soportados; cambio para incluir una línea para cada dominio y protocolo que en realidad necesita a la lista blanca.
-
 ## Lista blanca de Windows Phone
 
-Las reglas de listas blancas para Windows Phone 8 se encuentran en la aplicación de `config.xml` archivo.
+Las reglas de listas blancas para Windows Phone 8 se encuentran en el archivo `config.xml` de la aplicación.
 
 ## Las listas blancas Tizen
 
-Sus reglas se encuentran en la aplicación de `config.xml` archivo. La plataforma se basa en la misma `subdomains` atributo como la plataforma BlackBerry. (Para obtener más información sobre compatibilidad, consulte documentación de Tizen sobre el [elemento de acceso][11].)
+Sus reglas se encuentran en el archivo `config.xml` de la aplicación. La plataforma se basa en el mismo atributo `subdomains` como la plataforma BlackBerry. (Para obtener más información sobre compatibilidad, consulte documentación de Tizen sobre el [elemento de acceso][11].)
 
  [11]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

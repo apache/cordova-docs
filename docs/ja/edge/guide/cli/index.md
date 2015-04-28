@@ -206,71 +206,71 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 のみをお探しの `bar` 言葉の利回りと追加の結果。
 
-        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+        cordova-plugin-statusbar - Cordova StatusBar Plugin
     
 
 `cordova plugin add`コマンドは、プラグインのコードのリポジトリを指定する必要があります。CLI を使用アプリに機能を追加する方法の例を示します。
 
 *   基本的なデバイス情報 (デバイス API):
     
-        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-device
         
 
 *   ネットワーク接続とバッテリーのイベント:
     
-        $ cordova plugin add org.apache.cordova.network-information
-        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin add cordova-plugin-network-information
+        $ cordova plugin add cordova-plugin-battery-status
         
 
 *   加速度計、コンパス、および地理位置情報:
     
-        $ cordova plugin add org.apache.cordova.device-motion
-        $ cordova plugin add org.apache.cordova.device-orientation
-        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin add cordova-plugin-device-motion
+        $ cordova plugin add cordova-plugin-device-orientation
+        $ cordova plugin add cordova-plugin-geolocation
         
 
 *   カメラ、メディアの再生とキャプチャ：
     
-        $ cordova plugin add org.apache.cordova.camera
-        $ cordova plugin add org.apache.cordova.media-capture
-        $ cordova plugin add org.apache.cordova.media
+        $ cordova plugin add cordova-plugin-camera
+        $ cordova plugin add cordova-plugin-media-capture
+        $ cordova plugin add cordova-plugin-media
         
 
 *   デバイスまたはネットワーク (File API) 上のアクセス ファイル:
     
-        $ cordova plugin add org.apache.cordova.file
-        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin add cordova-plugin-file
+        $ cordova plugin add cordova-plugin-file-transfer
         
 
 *   ダイアログ ボックスまたは振動による通知:
     
-        $ cordova plugin add org.apache.cordova.dialogs
-        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin add cordova-plugin-dialogs
+        $ cordova plugin add cordova-plugin-vibration
         
 
 *   連絡先：
     
-        $ cordova plugin add org.apache.cordova.contacts
+        $ cordova plugin add cordova-plugin-contacts
         
 
 *   グローバル化:
     
-        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin add cordova-plugin-globalization
         
 
 *   スプラッシュ ・ スクリーン:
     
-        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin add cordova-plugin-splashscreen
         
 
 *   開いている新しいブラウザー ウィンドウ (InAppBrowser):
     
-        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin add cordova-plugin-inappbrowser
         
 
 *   デバッグ コンソール：
     
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
         
 
 **メモ**： CLI プラットフォームごとの適切なプラグインのコードを追加します。 低レベルのシェルのツールやプラットフォーム Sdk の概要で説明されているようで開発する場合は、個別に各プラットフォーム用のプラグインを追加する Plugman ユーティリティを実行する必要があります。 (詳細については、管理プラグインを使用して Plugman を参照してください)。
@@ -278,31 +278,31 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 使用 `plugin ls` (または `plugin list` 、または `plugin` 自体によって) 現在を表示するプラグインをインストールします。それぞれの識別子が表示されます。
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.console' ]
+        [ 'cordova-plugin-console' ]
     
 
 プラグインを削除するには、リストに表示される同じ識別子によってそれを参照してください。たとえば、ここではリリース バージョンからデバッグ コンソールのサポートを削除するだろう方法です。
 
-        $ cordova plugin rm org.apache.cordova.console
-        $ cordova plugin remove org.apache.cordova.console    # same
+        $ cordova plugin rm cordova-plugin-console
+        $ cordova plugin remove cordova-plugin-console    # same
     
 
 バッチ削除したり、各コマンドの 1 つ以上の引数を指定してプラグインを追加します。
 
-        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-console cordova-plugin-device
     
 
 ## 高度なプラグインのオプション
 
 プラグインを追加するときいくつかのオプション プラグインを取得する場所からを指定することができます。 上記の例をよく知られている使用して `registry.cordova.io` レジストリ、およびプラグインで指定の `id` :
 
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
     
 
 `id`の後に追加のプラグインのバージョン番号を含めることができます、 `@` 文字です。`latest`のバージョンは最新バージョンの別名です。たとえば。
 
-        $ cordova plugin add org.apache.cordova.console@latest
-        $ cordova plugin add org.apache.cordova.console@0.2.1
+        $ cordova plugin add cordova-plugin-console@latest
+        $ cordova plugin add cordova-plugin-console@0.2.1
     
 
 プラグインが登録されていない場合 `registry.cordova.io` が別の git リポジトリ内にある別の URL を指定することができます。

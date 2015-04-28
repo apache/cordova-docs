@@ -1,11 +1,17 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. 라이센스의 복사본을 얻을 수 있습니다.
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0 적용 가능한 법률에 의해 요구 또는 서 면으로 동의 하지 않는 한 소프트웨어 라이선스 하에 배포에 배포 되는 "있는 그대로" 기준, 보증 또는 조건 어떤 종류의 없이, 명시적 또는 묵시적.  라이센스 권한 및 제한 적용 되는 특정 언어에 대 한 참조
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## 라이센스.
+## under the License.
 
 # 보안 가이드
 
@@ -27,13 +33,7 @@
 
 *   읽기 및 이해 허용 안내
 
-*   기본적으로 새로 만든된 응용 프로그램에 허용 된 액세스를 통해 모든 도메인 수는 `<access>` 태그: `<access origin="*">` 는 허용 된 사이트 목록에 대 한 평가에 대 한 네트워크 요청을 원하는 경우이 변경만 액세스 해야 하는 도메인을 허용 하는 것이 중요 하다. 이것에 있는 응용 프로그램 수준 구성 파일을 편집 하 여 수행할 수 있습니다: `{project}/config.xml` (최근 프로젝트의 경우) 또는 `{project}/www/config.xml` (이전 프로젝트)
-
-*   그러나 안 드 로이드의 Whitelist 코르도바에 2.9.x 안전한 것으로 간주 됩니다,, foo.com는 허용 된 사이트 목록에 포함 되어, foo.com.evil.com 허용 시험을 통과할 수 있을 것 이라고 밝혀졌다. 이 고정 코르도바에 3.x를.
-
 *   안 드 로이드 API 10 및 아래에, 허용 된 도메인 작동 하지 않습니다 iframe에 대 한 WP8 및 XMLHttpRequest와. 즉, 공격자가 어떤 도메인 iframe에서 로드할 수 있습니다 코르도바 JavaScript 개체와 해당 하는 기본 Java 개체 모든 스크립트는 iframe 내에서 해당 페이지에 직접 액세스할 수 있습니다. 이러한 플랫폼에 대 한 응용 프로그램을 작성할 때 고려 이걸 받아 해야 합니다. 실제로 10 보다 더 높은 안 드 로이드 API를 대상 하 고는 가능 하면 사용 하지 않는 iframe 로드 외부 콘텐츠-inAppBrowser 플러그인 또는 다른 제 3 자 플러그인을 사용 다는 것을 확인 하는 것이 즉.
-
-*   코르 도우 바 3.6.0, 현재 안 드 로이드에 지금 필요는 허용 된 응용 프로그램의 외부 Url을 응용 프로그램에서 링크를 해당 Url 생성 하는 경우. 당신이 응용 프로그램을 생성 하는 경우 `tel:` , `geo:` , `sms:` , `intent:` 또는 유사한 Url 또는 외부 콘텐츠를 사용자의 브라우저에서 열어 기대 다음 업데이 트를 허용 해야 합니다에 대 한 링크를 제공 합니다. 자세한 내용은 화이트 리스트 가이드를 참조 하십시오.
 
 ## Iframe 및 콜백 Id 메커니즘
 

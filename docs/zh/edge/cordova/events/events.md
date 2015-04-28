@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 事件種類
 
 *   deviceready
-*   暫停
-*   簡歷
+*   pause
+*   resume
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## 由[org.apache.cordova.battery 狀態][1]添加事件
+## 添加的[科爾多瓦外掛程式電池狀態][1]的事件
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## 由[org.apache.cordova.network 資訊][2]添加事件
+## 事件由[科爾多瓦外掛程式網路資訊][2]添加
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

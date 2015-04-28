@@ -65,6 +65,38 @@ Mac の/Linux または Windows のリリース：
 
 少なくとも 1 つの Android 仮想デバイス、それ以外の場合でそうよう求められますを作成するかどうかを確認、 `android` コマンド。 AVD 1 つ以上のターゲットとして使用できる場合はいずれかを選択するよう求められます。 既定では、 `run` コマンド デバイスが見つからない場合に接続されているデバイス、または現在実行中のエミュレーターを検出します。
 
+## アプリケーションの署名
+
+署名の要件ここで Android アプリを確認することができます： http://developer.android.com/tools/publishing/app-signing.html
+
+アプリを署名する必要があります、次のパラメーター: * キーストア (`--キーストア`): キーのセットを保持できるバイナリ ファイルへのパス。 * キーストア パスワード (`--storePassword`): キーストア パスワード * エイリアス (`--別名`): 歌うことのために使用される秘密のキーを指定する id。 * パスワード (`--password`): 指定された秘密キーのパスワード。 * キーストア (`--keystoreType`) のタイプ: jks pkcs12 (デフォルト: 自動検出ファイル拡張子に基づいて)`ビルド`または`実行`スクリプトを上記のコマンドライン引数を使用してこれらのパラメーターを指定することができます。
+
+また、(`-buildConfig`) 引数を使用してビルド構成ファイル (build.json) で指定する可能性があります。ビルドの構成ファイルのサンプルを次に示します。
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+リリース署名用パスワードを除外することができ、ビルド システムは、パスワードを求めるプロンプトを発行します。
+
+ミックスし、一致するコマンドライン引数と build.json ファイル内のパラメーターへのサポートがあります。 コマンドライン引数の値は、優先順位を取得します。 これは、コマンドラインでパスワードを指定するために役立ちますすることができます。
+
 ## ログの記録
 
         $ /path/to/project/cordova/log
@@ -81,13 +113,13 @@ Mac の/Linux または Windows のリリース：
 
 ## Gradle の構築
 
-Cordova-android@4.0.0、現在プロジェクトは [Gradle][2] を使用してビルドされます。ANT の建物には古いバージョンのドキュメントを参照してください。
+Cordova-android@4.0.0、現在プロジェクトは[Gradle][2]を使用してビルドされます。 ANT の建物には古いバージョンのドキュメントを参照してください。
 
  [2]: http://www.gradle.org/
 
 ### Gradle プロパティ
 
-これらの [プロパティ][3] は、ビルドのカスタマイズを設定できます。
+これらの[プロパティ][3]は、ビルドのカスタマイズを設定できます。
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
@@ -132,7 +164,7 @@ Cordova-android@4.0.0、現在プロジェクトは [Gradle][2] を使用して�
 
 ### 拡張 build.gradle
 
-`build.gradle`、カスタマイズするのではなく、直接編集する必要がある場合 `ビルド extras.gradle` をという名前の兄弟ファイルを作成する必要があります。 このファイルは、メインの `build.gradle` が存在する場合にインクルードされます。 ここで例に示します。
+`Build.gradle`、カスタマイズするのではなく、直接編集する必要がある場合`ビルド extras.gradle`をという名前の兄弟ファイルを作成する必要があります。 このファイルは、メインの`build.gradle`が存在する場合にインクルードされます。 ここで例に示します。
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -143,7 +175,7 @@ Cordova-android@4.0.0、現在プロジェクトは [Gradle][2] を使用して�
     }
     
 
-プラグインは `ビルド extras.gradle` 経由でのファイルも含めることができます注意してください。
+プラグインは`ビルド extras.gradle`経由でのファイルも含めることができます注意してください。
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

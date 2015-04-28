@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## Événements ajoutés par [org.apache.cordova.battery-statut][1]
+## Événements ajoutés par [cordova-plugin-batterie-statut][1]
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## Événements ajoutés par [org.apache.cordova.network-informations][2]
+## Événements ajoutés par [cordova-plugin-réseau-informations][2]
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

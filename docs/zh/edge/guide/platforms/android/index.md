@@ -19,11 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 要求和支援
 
-科爾多瓦 android 系統要求 Android SDK。請參閱 Android SDK[的系統要求][1].
+科爾多瓦安卓系統要求可以在 OS X、 Linux 或 Windows 作業系統安裝 Android SDK。 請參閱 Android SDK[的系統要求][1].
 
- [1]: http://developer.android.com/sdk/index.html
+ [1]: http://developer.android.com/sdk/index.html#Requirements
 
-科爾多瓦支援 Android 2.3.x (姜餅，開始與 Android API 級別 10） 和 4.x 版。作為一般規則，Android 版本成為不受支援的科爾多瓦作為他們沾在谷歌的[分佈的儀表板][2]上的 5%以下。 Android 版本早于 API 級別 10，而 3.x 版本 (蜂窩，API 級別 11-13) 大大低於那 5%門檻。
+科爾多瓦支援 Android 4.0.x (入手 Android API 級別 14） 和更高。 作為一般規則，Android 版本成為受科爾多瓦作為他們低於 5%的谷歌的[分佈的儀表板][2]。 Android 版本早于 API 級別 10，和 3.x 版本 （蜂窩，API 級別 11 13） 顯著低於那 5%的門檻。
 
  [2]: http://developer.android.com/about/dashboards/index.html
 
@@ -37,22 +37,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 這些外殼工具允許您創建、 構建和運行 Android 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 有關如何開發外掛程式的詳細資訊，請參閱應用程式外掛程式。
 
-從[developer.android.com/sdk][4]安裝 Android SDK。 Android sdk 是作為 'adt-捆綁-< os > < 拱 >-< ver >' 檔分發。 在 windows 上，adt 捆綁打包用安裝程式安裝。 在 OSX 和 Linux，只需打開包裝 'adt 捆綁' 中的位置，您將存儲的開發工具。 [關於 Android SDK 安裝程式的詳細的資訊可以在這裡找到][5]
+## 安裝 JAVA 開發工具箱 （JDK）
 
- [4]: http://developer.android.com/sdk/
- [5]: http://developer.android.com/sdk/installing/bundle.html
+安裝[JAVA 開發工具箱 （JDK） 7][4]或更高版本。
 
-科爾多瓦正常工作，或者基於他們的 CLI 命令列工具，您需要包括 SDK 的 `tools` 和 `platform-tools` 中的目錄你 `PATH` 。 在 Mac 上可以使用一個文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
+ [4]: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
 
-        匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具
+在 Windows 上安裝時您還需要設置`JAVA_HOME`環境變數根據 JDK 安裝路徑 （例如，C:\Program Files\JAVA\jdk1.7.0_75）。
+
+## 安裝 Android SDK
+
+安裝[獨立的 Android SDK 工具][5]或[Android 的工作室][6]。 如果您計畫開發新科爾多瓦為 Android 外掛程式或使用本機工具來運行和調試 Android 平臺`Android 工作室`水墨畫之發展。 否則， `Android 獨立 SDK 工具`就足以構建和部署 Android 應用程式。
+
+ [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
+ [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
+
+詳細的安裝說明，請參見上面的安裝連結的一部分。
+
+科爾多瓦的命令列工具來工作，或者基於他們的 CLI，您需要在您的`路徑`中包括 SDK 的`工具`和`平臺工具`目錄。 在 Mac 上可以使用一個文字編輯器來創建或修改`~/.bash_profile`檔中，添加如下所示，根據 SDK 安裝的位置的行：
+
+        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
 
-添加的路徑為 `java` 和 `ant` 如果需要。 在這條線 `~/.bash_profile` 公開這些工具在新打開的終端視窗。 如果您的終端視窗已經打開在 OSX，或避免的登出登錄在 Linux 上，運行這個是為了讓他們在當前的終端視窗中可用：
+這條線在`~/.bash_profile`公開這些工具在新打開的終端視窗。 如果您的終端視窗已經打開在 OSX，或避免在 Linux 上的登出/登錄，運行此工具以使他們在當前的終端視窗中可用：
 
-        元源 ~/.bash_profile
+        $ source ~/.bash_profile
     
 
-若要修改 `PATH` 上 Windows 7 的環境：
+若要修改`PATH`在窗戶上的環境：
 
 1.  在桌面的左下角的**開始**功能表上按一下，在**電腦**上，按右鍵，然後選擇**屬性**.
 
@@ -64,70 +76,116 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 5.  追加到以下 `PATH` 基於在安裝 SDK，例如：
     
-        ;C:\Development\adt-bundle\sdk\platform-tools ；C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
         
 
 6.  將值保存並關閉這兩個對話方塊。
 
-您可能還需要啟用 JAVA 和螞蟻打開一個命令提示符並鍵入 `java` ，然後還鍵入 `ant` 。將追加到 `PATH` 為准的這些運行失敗：
+## 安裝 SDK 套裝程式
 
-        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+打開 Android SDK 管理器 （例如，通過終端： `android`） 並安裝：
 
-## 在 SDK 中打開一個新的專案
+1.  Android 5.1.1 （API 22） 平臺 SDK
+2.  Android SDK 生成工具版本 19.1.0 或更高版本
+3.  Android 支援存儲庫 （額外）
 
-此時，若要創建一個新的專案您可以選擇在命令列介面或一組特定于 android 作業系統 shell 工具中所述的跨平臺 CLI 工具之間。 在原始程式碼目錄中，這裡是從 CLI 的辦法：
+有關更多詳細資訊，請參閱[安裝 SDK 包][7]。
+
+ [7]: http://developer.android.com/sdk/installing/adding-packages.html
+
+## 配置模擬器
+
+預設情況下，android sdk 並不提供任何預設模擬程式實例。 您可以創建一個新的通過在命令列上運行`android` 。 新聞**工具 → 管理 AVDs** （Android 的虛擬裝置），然後從**裝置定義**在隨後出現的對話方塊中選擇任何項：
+
+![][8]
+
+ [8]: img/guide/platforms/android/asdk_device.png
+
+按**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
+
+![][9]
+
+ [9]: img/guide/platforms/android/asdk_newAVD.png
+
+AVD 然後出現在**虛擬的 Android 設備**清單中：
+
+![][10]
+
+ [10]: img/guide/platforms/android/asdk_avds.png
+
+若要打開模擬器作為單獨的應用程式，請選擇 AVD，然後按**開始**。它推出一樣在設備上，使用其他控制項可用的硬體按鈕:
+
+![][11]
+
+ [11]: img/guide/platforms/android/asdk_emulator.png
+
+為獲得更快的體驗，你可以使用`虛擬機器加速`以提高執行速度。 許多現代的 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前，您需要確定是否您當前的開發系統 CPU 支援一種以下的虛擬化技術：
+
+*   **英特爾虛擬化技術**(VT-x，vmx) →[英特爾 VT-x 支援的處理器清單][12]
+*   **AMD 虛擬化**（AMD-V，支援向量機），只支援 Linux （自 2006 年 5 月以來所有 Cpu AMD 都包括 AMD-V，閃龍除外）。
+
+ [12]: http://ark.intel.com/products/virtualizationtechnology
+
+另一種方法來找出是否您的英特爾處理器支援 VT x 技術、 它是由執行`英特爾處理器識別實用程式`、 `Windows`為您可以從英特爾[下載中心][13]，下載它或您可以使用[booteable 實用程式][14]，它是`獨立于作業系統`.
+
+ [13]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
+ [14]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
+
+後安裝和執行的`英特爾處理器識別實用程式`在 Windows 中，你會得到下面的視窗，以檢查是否您的 CPU 支援虛擬化技術：
+
+![][15]
+
+ [15]: img/guide/platforms/android/intel_pid_util_620px.png
+
+為了加快模擬程式，您需要下載並安裝一個或多個`Intel x86 原子`系統映射，以及`英特爾硬體加速執行經理 (HAXM)`.
+
+打開你的 Android SDK 經理，並選擇`Intel x86 原子`系統的形象，為任何一個你想要測試的版本。 然後轉到`臨時演員`和選擇`Intel x86 模擬器加速器 （HAXM）`，並安裝這些套裝軟體：
+
+![][16]
+
+ [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+
+下載後，運行英特爾安裝程式時，這是你 Android SDK 在`臨時演員/英特爾/Hardware_Accelerated_Execution_Manager`中可用。 **注意**：`如果您有任何問題，安裝套裝軟體，你可以找到更多的資訊和一步一步指導檢查這` [篇文章英特爾][17].
+
+ [17]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
+
+1.  安裝一個或多個`Intel x86 原子`系統映射，以及`英特爾硬體加速執行管理器`，可根據**臨時演員**.
+
+2.  運行英特爾安裝程式時，這是你 Android SDK 在`臨時演員/英特爾/Hardware_Accelerated_Execution_Manager`中可用.
+
+3.  目標設置為英特爾圖像創建新的 AVD。
+
+4.  當啟動模擬程式，確保有沒有錯誤訊息，指示載入 HAX 模組失敗。
+
+## 創建一個新專案
+
+在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的命令列介面或一組特定于 Android 的 shell 工具中所述。 從在原始程式碼目錄中，這裡是 CLI 的方法：
 
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ cordova build
+        $ ccordova prepare              # or "cordova build"
     
 
-這裡是 Unix 和 Windows 的相應較低級別外殼工具方法：
+這裡是 Unix 和 Windows 的相應較低級別 shell 工具方法：
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
-這裡是如何使用 SDK 來修改它：
-
-1.  啟動**Eclipse**應用程式。
-
-2.  選擇**新建專案**功能表項目。
-
-3.  從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**：
-    
-    ![][6]
-
-4.  如果您使用的 CLI，導航到 `hello` 您創建專案，然後到目錄 `platforms/android` 子目錄。 或者，如果您使用 `create` 殼實用程式，只需定位到 `hello` 目錄。
-
-5.  按**完成**.
-
- [6]: img/guide/platforms/android/eclipse_new_project.png
-
-一旦日食視窗將打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，執行這些額外的步驟：
-
-1.  按右鍵專案目錄。
-
-2.  在出現的**屬性**對話方塊中，選擇**Android**從功能窗格。
-
-3.  為專案生成目標，選擇您已安裝的最高的 Android API 級別。
-
-4.  按一下**確定**.
-
-5.  從**專案**功能表中選擇**清潔**。這應該更正該專案中的所有錯誤。
-
 ## 生成專案
 
-如果您在開發中使用 CLI，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任何這些專案目錄重新生成該應用程式中：
+如果您在開發中使用 CLI，專案目錄頂級`www`目錄中包含的原始程式碼檔。運行任何這些專案目錄重新生成該應用程式中：
 
-        $ 科爾多瓦 # 構建了添加的 $ 科爾多瓦的所有平臺都生成 android # 都生成調試只 Android $ 科爾多瓦建造安卓 — — 只有 Android $ 科爾多瓦都生成 android — — 唯一的 android 版本 # 都生成調試 # 都生成調試
+        $ cordova build                   # build all platforms that were added
+        $ cordova build android           # build debug for only Android
+        $ cordova build android --debug   # build debug for only Android
+        $ cordova build android --release # build release for only Android
     
 
-如果您使用特定于 android 作業系統外殼工具在發展中，有不同的方法。 一旦您生成該專案，預設應用程式的源是可用在 `assets/www` 子目錄。 隨後的命令都可用在其 `cordova` 子目錄。
+如果使用的特定于 Android 的 shell 工具在發展中，還有一個不同的方法。 一旦您生成專案時，預設的應用程式的來源是可用的`資產/www`子目錄中。 後續的命令，可在其`科爾多瓦`子目錄。
 
-`build`命令，清理專案檔案並重新生成應用程式。這裡是為 Mac 和 Windows 的語法。 第一次兩個示例生成調試資訊，和第二個構建版本的應用程式：
+`build`命令清理專案檔案並重新生成應用程式。這裡是 Mac 和 Windows 的語法。 第一次兩個示例生成調試資訊，和第二個構建版本的應用程式：
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -136,150 +194,75 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         C:\path\to\project\cordova\build.bat --release
     
 
-當生成版本中，如果您添加到下面的定義你 `local.properties` 檔，然後您的 APK 將得到簽署並對齊，它將會準備上傳到谷歌播放存儲：
+## 部署應用程式
 
-        key.store=/Users/me/Developer/mykeystore.jks key.alias=mykeyalias
+`科爾多瓦`CLI 實用程式可用於應用程式部署到模擬器或設備從命令列：
+
+        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova run android --device  #to deploy the app on a connected device
     
 
-如果金鑰存儲庫和/或使用別名的鍵有一個密碼，則生成腳本將提示您輸入密碼。 你不需要在屬性檔中定義的密碼。 如果你想要避免出現提示，您可以定義它們在 `local.properties` 為 `key.store.password` 和 `key.alias.password` 。 如果你這樣做，會意識到這些密碼的安全擔憂。
+否則，請使用備用殼介面：
 
-## 配置模擬器
-
-您可以使用 `cordova` CLI 實用程式或科爾多瓦的安卓系統中心殼的工具，以在模擬器中運行應用程式。 無論哪種方式，SDK 必須首先配置顯示至少一個設備。 要這樣做，請使用 Android SDK 管理器，從 Eclipse 獨立運行的 JAVA 應用程式。 有兩種方法，以將其打開：
-
-1.  運行 `android` 命令列上。
-
-2.  從內日食，按此工具列圖示：
-    
-    ![][7]
-
- [7]: img/guide/platforms/android/eclipse_android_sdk_button.png
-
-一旦打開，Android SDK 管理器將顯示不同的運行時庫：
-
-![][8]
-
- [8]: img/guide/platforms/android/asdk_window.png
-
-選擇**工具 → 管理 AVDs** （Android 的虛擬裝置），然後從**裝置定義**在隨後出現的對話方塊中選擇任何項：
-
-![][9]
-
- [9]: img/guide/platforms/android/asdk_device.png
-
-按**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
-
-![][10]
-
- [10]: img/guide/platforms/android/asdk_newAVD.png
-
-AVD 然後出現在**虛擬的 Android 設備**清單中：
-
-![][11]
-
- [11]: img/guide/platforms/android/asdk_avds.png
-
-若要打開模擬器作為單獨的應用程式，請選擇 AVD，然後按**開始**。它推出一樣在設備上，使用其他控制項可用的硬體按鈕:
-
-![][12]
-
- [12]: img/guide/platforms/android/asdk_emulator.png
-
-## 部署到模擬程式
-
-在這一點上，您可以使用 `cordova` CLI 實用程式部署到模擬器應用程式從命令列：
-
-        $ 科爾多瓦效仿安卓系統
+        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run --device
     
 
-否則使用備用殼介面：
+您可以使用**cordova run android --list**看到所有可用的目標和**cordova run android --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run android --target="Nexus4_emulator"`).
 
-        $ /path/to/project/cordova/run — — 模擬器
-    
-
-而不是依靠哪種模擬器當前啟用在 SDK 中，你可以引用每個由您提供的名稱：
-
-        $ /path/to/project/cordova/run — — 目標 = 名稱
-    
+您還可以使用**cordova run --help**查看附加的生成和運行選項。
 
 這將應用程式推送至主畫面，啟動它：
 
-![][13]
-
- [13]: img/guide/platforms/android/emulator2x.png
-
-當你 `run` 應用程式，您也 `build` 它。 您可以附加額外 `--debug` ， `--release` ，和 `--nobuild` 標誌來控制它如何構建的或甚至是否重建是必需的：
-
-        $ /path/to/project/cordova/run — — 模擬器 — — 不允許建造區域
-    
-
-如果相反你正在在 Eclipse 中，按右鍵該專案，並選擇**作為 → 運行 Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
-
-為獲得更快的體驗，您可以使用 `Virtual Machine Acceleration` 來提高執行速度。 許多現代的 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前，您需要確定是否您當前的開發系統 CPU 支援一種以下的虛擬化技術：
-
-*   **英特爾虛擬化技術**(VT-x，vmx) →[英特爾 VT-x 支援的處理器清單][14]
-*   **AMD 虛擬化**（AMD-V，支援向量機），只支援 Linux （自 2006 年 5 月以來所有 Cpu AMD 都包括 AMD-V，閃龍除外）。
-
- [14]: http://ark.intel.com/products/virtualizationtechnology
-
-另一種方法來找出如果您的英特爾處理器支援 VT x 技術，它是由執行 `Intel Processor Identification Utility` ，為 `Windows` 您可以從英特爾[下載中心][15]，下載它，或者你可以使用[booteable 實用程式][16]，這是`OS Independent`.
-
- [15]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
- [16]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
-
-後安裝和執行 `Intel Processor Identification Utility` 在 Windows 中，你會得到下面的視窗，以檢查是否您的 CPU 支援虛擬化技術：
-
-![][17]
-
- [17]: img/guide/platforms/android/intel_pid_util_620px.png
-
-為了加快模擬程式，您需要下載並安裝一個或多個 `Intel x86 Atom` 系統映射，以及`Intel Hardware Accelerated Execution Manager (HAXM)`.
-
-打開你的 Android SDK 經理，並選擇 `Intel x86 Atom` 為您想要測試哪種版本的系統映射。 然後轉到 `Extras` ，並選擇 `Intel x86 Emulator Accelerator (HAXM)` ，並安裝這些套裝軟體：
-
 ![][18]
 
- [18]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [18]: img/guide/platforms/android/emulator2x.png
 
-下載後，運行了英特爾的安裝程式，在 Android SDK 中有可用 `extras/intel/Hardware_Accelerated_Execution_Manager` 。 **注**： `If you have any problems installing the package, you can find more information and step by step guidance check this` [英特爾條][19] .
+當您`run`該應用程式，您還`build`它。 您可以附加額外`--debug`， `--release`，和`--nobuild`標誌來控制它如何構建的或甚至是否重建是必需的：
 
- [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
-
-1.  安裝一個或多個 `Intel x86 Atom` 的系統映射，以及 `Intel Hardware Accelerated Execution Manager` 下**的額外**的可用.
-
-2.  運行英特爾安裝程式時，這是在您 Android SDK 內可用`extras/intel/Hardware_Accelerated_Execution_Manager`.
-
-3.  設置為英特爾圖像的目標來創建新的 AVD。
-
-4.  當啟動模擬程式，確保沒有任何錯誤訊息，指示未能載入 HAX 模組。
-
-## 將部署到設備
-
-若要應用程式直接推向該設備，請確保在您的設備在[安卓開發者網站][20]上，所述啟用 USB 調試，然後使用一個迷你的 USB 電纜把它插到你的系統。
-
- [20]: http://developer.android.com/tools/device.html
-
-可以使用此 CLI 命令以將應用程式推送到設備：
-
-        運行 android 的 $ 科爾多瓦
+        $ /path/to/project/cordova/run --emulator --nobuild
     
-
-你要麼使用此以 Android 為中心的 shell 介面：
-
-        $ /path/to/project/cordova/run — — 設備
-    
-
-無標誌指定， `run` 命令檢測到已連接的設備或當前正在運行的模擬程式，如果沒有設備被發現，否則將提示您指定一個模擬器。
-
-若要運行該應用程式從在 Eclipse 中的，按右鍵該專案，並選擇**作為 → 運行 Android 應用程式**.
 
 ## 其他命令
 
 下列生成詳細的日誌，該應用程式的運行時：
 
-        $ C:\path\to\project\cordova\log.bat /path/to/project/cordova/log
+        $ /path/to/project/cordova/log
+        C:\path\to\project\cordova\log.bat
     
 
 以下清理的專案檔案：
 
-        $ C:\path\to\project\cordova\clean.bat /path/to/project/cordova/clean
+        $ /path/to/project/cordova/clean
+        C:\path\to\project\cordova\clean.bat
+    
+
+## 在 SDK 中打開一個新專案
+
+一旦 android 平臺添加到專案中，你可以打開它從[Android Studio][6]內：
+
+1.  推出**Android 工作室**中的應用。
+
+2.  選擇**導入專案 （Eclipse ADT，Gradle 等）**.
+    
+    ![][19]
+
+3.  選擇存儲 （`你/專案/platforms/android` android 平臺的位置).
+    
+    ![][20]
+
+4.  `Gradle Sync`問題你可以乾脆的回答**是**.
+
+ [19]: img/guide/platforms/android/asdk_import_project.png
+ [20]: img/guide/platforms/android/asdk_import_select_location.png
+
+你現在有所有的和可以從生成並運行該應用程式直接`Android 工作室`.
+
+![][21]
+
+ [21]: img/guide/platforms/android/asdk_import_done.png
+
+請參閱[Android 工作室概述][22][生成並運行從 Android 工作室][23]為更多的細節。
+
+ [22]: http://developer.android.com/tools/studio/index.html
+ [23]: http://developer.android.com/tools/building/building-studio.html

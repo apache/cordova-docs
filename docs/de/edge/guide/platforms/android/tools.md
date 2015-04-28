@@ -65,6 +65,38 @@ Der `run` Befehl akzeptiert die folgenden *optionalen* Parameter:
 
 Vergewissern Sie sich, erstellen Sie mindestens ein Android virtuelles Gerät, sonst Sie werden aufgefordert zu tun mit dem `android` Befehl. Wenn mehr als eine AVD als Ziel verfügbar ist, werden Sie aufgefordert, einen auswählen. In der Standardeinstellung der `run` Befehl erkennt ein angeschlossenes Gerät oder einen laufenden Emulator, wenn kein Gerät gefunden wird.
 
+## Unterzeichnung der App
+
+Sie können überprüfen, dass Android app Signaturanforderungen hier: http://developer.android.com/tools/publishing/app-signing.html
+
+Um eine app zu signieren, benötigen Sie die folgenden Parameter: * Keystore (`--keystore`): Pfad in eine binäre Datei, die eine Reihe von Schlüsseln aufnehmen können. * Schlüsselspeicher-Kennwort (`--storePassword`): Kennwort zum Schlüsselspeicher * Alias (`--alias`): die Id angeben des privaten Schlüssels für Gesang. * Passwort (`--password`): Kennwort für den privaten Schlüssel angegeben. -Typ des Schlüsselspeichers (`--keystoreType`): pkcs12, Jks (Default: Auto-detect nach der Dateierweiterung) diese Parameter können angegeben werden, unter Verwendung der Befehlszeilenargumente über Skripte `build` oder `run`.
+
+Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) angeben (`--buildConfig`) Argument. Hier ist ein Beispiel für eine Konfigurationsdatei erstellen:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Zum Signieren von Release wird Kennwörter ausgeschlossen werden können und das Buildsystem nach dem Passwort gefragt.
+
+Es gibt auch Unterstützung für die Kommandozeilen-Parameter und Parameter in build.json-Datei. Werte aus der Befehlszeilenargumente erhalten Vorrang. Dies ist nützlich für Kennwörter in der Befehlszeile angeben.
+
 ## Protokollierung
 
         $ /path/to/project/cordova/log
@@ -132,7 +164,7 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
 
 ### Verlängerung build.gradle
 
-Benötigen Sie `build.gradle` anpassen, anstatt direkt bearbeiten, sollten Sie eine Geschwister-Datei mit dem Namen `Build-extras.gradle` erstellen. Diese Datei wird von den wichtigsten `build.gradle` wenn vorhanden enthalten sein. Hier ist ein Beispiel:
+Benötigen Sie `build.gradle` anpassen, anstatt direkt bearbeiten, sollten Sie eine Geschwister-Datei mit dem Namen `build-extras.gradle` erstellen. Diese Datei wird von den wichtigsten `build.gradle` wenn vorhanden enthalten sein. Hier ist ein Beispiel:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`

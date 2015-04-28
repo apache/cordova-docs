@@ -77,7 +77,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   運行下面的命令將在當前會話中的更改應用：
     
-        元源 ~/.bash_profile
+        $ source ~/.bash_profile
         
 
 如果你有任何的環境問題，使用本機 SDK 從命令列，執行您的平臺，在安裝路徑內的適當檔：

@@ -65,6 +65,38 @@ Le `run` commande accepte les paramètres *optionnels* suivants :
 
 Assurez-vous que vous créez au moins un Android Virtual Device, autrement vous êtes invité à le faire avec la `android` commande. Si plusieurs AVD est disponible en tant que cible, vous êtes invité à sélectionner un. Par défaut la `run` commande détecte un appareil ou un émulateur en cours d'exécution si aucun périphérique n'est trouvé.
 
+## Signature de l'App
+
+Vous pouvez consulter Android app signature exigences ici : http://developer.android.com/tools/publishing/app-signing.html
+
+Pour signer une application, vous devez les paramètres suivants: * Keystore (`--keystore`): chemin d'accès à un fichier binaire qui peut contenir un jeu de clés. * Keystore password (`--storePassword`): mot de passe pour le fichier de clés * Alias (`--alias`): l'id en spécifiant la clé privée utilisée pour le chant. * Mot de passe (`--password`): mot de passe de clé privée spécifié. * Type du keystore (`--keystoreType`): pkcs12, jks (par défaut : détection automatique basée sur l'extension de fichier) ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `build` ou `run` des scripts.
+
+Alternativement, vous pouvez spécifier les dans un fichier (build.json) de configuration de build à l'aide (`--buildConfig`) argument. Voici un exemple de fichier de configuration de génération :
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Pour la version signature, mots de passe ne peuvent être exclus et le système de génération attribuera une invite vous demandant le mot de passe.
+
+Il y a aussi des soutien à mélanger et assortir les arguments de ligne de commande et les paramètres dans le fichier build.json. Les valeurs des ligne de commande arguments obtiendrez priorité. Cela peut être utile pour spécifier des mots de passe sur la ligne de commande.
+
 ## Exploitation forestière
 
         $ /path/to/project/cordova/log
@@ -143,7 +175,7 @@ Si vous devez personnaliser `build.gradle`, plutôt que de modifier directement,
     }
     
 
-Remarquez que les plugins peut inclure également `construire-extras.gradle` fichiers via :
+Remarquez que les plugins peut inclure également `build-extras.gradle` fichiers via :
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

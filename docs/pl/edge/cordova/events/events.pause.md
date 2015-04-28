@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# pauza
+# pause
 
 Zdarzenie fires, gdy aplikacja jest w tle.
 

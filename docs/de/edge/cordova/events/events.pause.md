@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Anhalten
+# pause
 
 Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird.
 

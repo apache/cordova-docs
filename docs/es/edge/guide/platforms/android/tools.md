@@ -65,7 +65,39 @@ El comando `run` acepta los siguientes parámetros *opcionales*:
 
 Asegúrese de que crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el comando `android`. Si más de una AVD está disponible como un objetivo, usted se pedirá para seleccionar uno. Por defecto el comando `run` detecta un dispositivo conectado, o ejecutando un emulador si no se encuentra ningún dispositivo.
 
-## Tala
+## Firmar la aplicación
+
+Usted puede revisar Android app firmando los requisitos aquí: http://developer.android.com/tools/publishing/app-signing.html
+
+Para firmar una aplicación, necesita los siguientes parámetros: * Keystore (`--keystore`): ruta a un archivo binario que puede contener un conjunto de claves. * Keystore password (`--storePassword`): contraseña al almacén de claves * Alias (`--alias`): especifica la clave privada utilizada para cantar el id. * Contraseña (`--password`): contraseña para la clave privada especificada. * Tipo del almacén de claves (`--keystoreType`): pkcs12, jks (por defecto: detección automática basada en la extensión del archivo) estos parámetros se pueden especificar utilizando los argumentos de línea de comandos por encima para `build` o `run` secuencias de comandos.
+
+Por otra parte, les puede especificar en un archivo de configuración de construcción (build.json) con un argumento (`--buildConfig`). Este es un ejemplo de un archivo de configuración de compilación:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Para la firma de liberación, las contraseñas pueden ser excluidas y el sistema emitirá un mensaje pidiendo la contraseña.
+
+También hay soporte para mezclar y combinar los argumentos de línea de comandos y los parámetros en el archivo build.json. Los valores de los argumentos de línea de comandos tendrán precedencia. Esto puede ser útil para especificar la contraseña en la línea de comandos.
+
+## Registro
 
         $ /path/to/project/cordova/log
     
@@ -87,7 +119,7 @@ A partir de cordova-android@4.0.0, proyecto construir usando [Gradle][2]. Para o
 
 ### Propiedades de Gradle
 
-Estas [propiedades][3] pueden establecerse para personalizar la construcción:
+Estas [Propiedades][3] pueden establecerse para personalizar la construcción:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 

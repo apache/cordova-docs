@@ -85,6 +85,6 @@ Erstellt eine Anwendung in ein `hello` Verzeichnis, dessen Display-Name ist `Hel
     $ cordova run ubuntu
     
 
-### Batterie-Status-Plugin hinzufügen
+### Das Kamera-Plugin hinzufügen
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

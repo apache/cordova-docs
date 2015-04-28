@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# curriculum
+# resume
 
 L'evento viene generato quando un'applicazione viene recuperata dallo sfondo.
 

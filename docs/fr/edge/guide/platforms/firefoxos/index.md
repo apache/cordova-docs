@@ -50,8 +50,8 @@ Cela crée une application Firefox OS dans le répertoire de plates-formes/firef
 
 À ce stade, vous êtes prêt à aller, modifiez le code à l'intérieur de test-app/www et ce que vous voulez que votre application d'être. Vous pouvez ajouter la [prise en charge de plugins]() pour l'application à l'aide de "Ajouter cordova plugin", par exemple :
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 Lorsque le code de votre application est écrit, déployer les modifications apportées à l'application Firefox OS avec que vous avez ajouté à votre projet

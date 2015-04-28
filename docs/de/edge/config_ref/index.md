@@ -144,9 +144,22 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
     
     **Hinweis**: `der default` bedeutet Cordova entfernt den Orientierung-Präferenz-Eintrag aus der Plattform Manifest/Konfigurationsdatei ermöglicht die Plattform zum Ausweichen auf sein normales Verhalten.
 
+'Default' ermöglicht Hochformat & Querformat Modus - erst nach Durchführung des Rückrufs. Ich könnte vielleicht diese wie folgt erneut Wort:
+
+Für iOS kann Orientierung programmgesteuert gesteuert werden, indem Sie einen Javascript-Rückruf für Fenster definieren:
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## Das *Feature* Element
 
-Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` Befehl Gerät APIs zu aktivieren. Dies ändert jedoch nicht die Top-Level- `config.xml` Datei, so dass die `<feature>` Element gilt nicht für Ihren Workflow. Wenn Sie direkt in ein SDK und verwenden die Plattform-spezifischen Arbeiten `config.xml` Datei als Quelle, Sie verwenden die `<feature>` Tag auf Device-Ebene APIs und externe Plugins aktivieren. Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `config.xml` Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:
+Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `Plugin` -Befehl Gerät APIs zu aktivieren. Dies ändert nicht die Datei auf der obersten Ebene `"config.xml"` , also das `< feature>` nicht für Ihren Workflow gilt. Wenn Sie direkt in ein SDK und mit der Plattform-spezifischen `Datei config.xml` -Datei als Quelle arbeiten, verwenden Sie das Tag `<feature>` Geräteebene APIs und externe Plugins aktivieren. Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `"config.xml"` -Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -164,7 +177,7 @@ Finden Sie die API-Referenz für Details zu einzelnen Funktionen angeben. Finden
 
 ## Die *Plattform* Element
 
-Wenn die CLI verwenden, um Anwendungen zu erstellen, ist es manchmal notwendig, Einstellungen oder andere Elemente, die auf eine spezifische Plattform anzugeben. Verwendung der `<platform>` Element angeben, Konfiguration, die nur angezeigt werden, sollten in einer einzigen Plattform-spezifischen `config.xml` Datei. Hier ist beispielsweise angeben, dass nur Android verwenden sollten, die Voreinstellung "Fullscreen":
+Wenn die CLI verwenden, um Anwendungen zu erstellen, ist es manchmal notwendig, Einstellungen oder andere Elemente, die auf eine spezifische Plattform anzugeben. Verwenden Sie das Element `<platform>` Konfiguration angeben, die nur in einer einzelnen Plattform-spezifischen `Datei config.xml` -Datei angezeigt werden soll. Hier ist beispielsweise angeben, dass nur Android verwenden sollten, die Voreinstellung "Fullscreen":
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

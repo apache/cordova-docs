@@ -206,71 +206,71 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 만 찾고 있는 `bar` 수확량 및 추가적인 결과:
 
-        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+        cordova-plugin-statusbar - Cordova StatusBar Plugin
     
 
 `cordova plugin add`명령 코드를 플러그인에 대 한 저장소를 지정 해야 합니다. 여기에 응용 프로그램에 기능을 추가 하는 CLI를 사용 하는 방법을 예입니다.
 
 *   기본 장치 정보 (장치 API):
     
-        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-device
         
 
 *   네트워크 연결 및 배터리 이벤트:
     
-        $ cordova plugin add org.apache.cordova.network-information
-        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin add cordova-plugin-network-information
+        $ cordova plugin add cordova-plugin-battery-status
         
 
 *   가 속도계, 나침반, 및 지리적 위치:
     
-        $ cordova plugin add org.apache.cordova.device-motion
-        $ cordova plugin add org.apache.cordova.device-orientation
-        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin add cordova-plugin-device-motion
+        $ cordova plugin add cordova-plugin-device-orientation
+        $ cordova plugin add cordova-plugin-geolocation
         
 
 *   카메라, 미디어 재생 및 캡처:
     
-        $ cordova plugin add org.apache.cordova.camera
-        $ cordova plugin add org.apache.cordova.media-capture
-        $ cordova plugin add org.apache.cordova.media
+        $ cordova plugin add cordova-plugin-camera
+        $ cordova plugin add cordova-plugin-media-capture
+        $ cordova plugin add cordova-plugin-media
         
 
 *   장치 또는 네트워크 (파일 API) 액세스 파일:
     
-        $ cordova plugin add org.apache.cordova.file
-        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin add cordova-plugin-file
+        $ cordova plugin add cordova-plugin-file-transfer
         
 
 *   대화 상자 또는 진동 알림:
     
-        $ cordova plugin add org.apache.cordova.dialogs
-        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin add cordova-plugin-dialogs
+        $ cordova plugin add cordova-plugin-vibration
         
 
 *   연락처:
     
-        $ cordova plugin add org.apache.cordova.contacts
+        $ cordova plugin add cordova-plugin-contacts
         
 
 *   세계화:
     
-        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin add cordova-plugin-globalization
         
 
 *   Splashscreen:
     
-        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin add cordova-plugin-splashscreen
         
 
 *   새로운 브라우저 윈도우 열기 (InAppBrowser):
     
-        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin add cordova-plugin-inappbrowser
         
 
 *   콘솔 디버깅:
     
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
         
 
 **참고**: 각 플랫폼에 대 한 적절 한 플러그인 코드를 추가 하는 CLI. 저수준 쉘 도구와 플랫폼 Sdk는 개요에 설명 된 대로 개발 각 플랫폼에 대해 별도로 플러그인을 추가 하는 Plugman 유틸리티를 실행 해야 합니다. (자세한 내용은 참조 관리 플러그인을 사용 하 여 Plugman.)
@@ -278,31 +278,31 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 사용 `plugin ls` (또는 `plugin list` , 또는 `plugin` 자체) 현재 보려면 플러그인을 설치 합니다. 각 식별자에 의해 표시 됩니다.
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.console' ]
+        [ 'cordova-plugin-console' ]
     
 
 플러그인을 제거 하려면 목록에서 나타나는 같은 식별자로 그것을 참조 하십시오. 예를 들어, 여기에 어떻게 릴리스 버전에서 디버그 콘솔에 대 한 지원을 제거할 것입니다.
 
-        $ cordova plugin rm org.apache.cordova.console
-        $ cordova plugin remove org.apache.cordova.console    # same
+        $ cordova plugin rm cordova-plugin-console
+        $ cordova plugin remove cordova-plugin-console    # same
     
 
 일괄 제거 하거나 추가할 수 있습니다 플러그인 각 명령에 대 한 하나 이상의 인수를 지정 하 여:
 
-        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-console cordova-plugin-device
     
 
 ## 고급 플러그인 옵션
 
 플러그인을 추가 하는 경우 몇 가지 옵션 사용 플러그인 가져오기 위하여 어디에서 지정할 수 있습니다. 위의 예제를 사용 하 여 잘 알려진 `registry.cordova.io` 레지스트리 및 플러그인에 의해 지정 된 `id` :
 
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
     
 
 `id`후 추가 하는 플러그인의 버전 번호를 포함할 수도 있습니다는 `@` 문자. `latest`버전은 최신 버전에 대 한 별칭. 예를 들어:
 
-        $ cordova plugin add org.apache.cordova.console@latest
-        $ cordova plugin add org.apache.cordova.console@0.2.1
+        $ cordova plugin add cordova-plugin-console@latest
+        $ cordova plugin add cordova-plugin-console@0.2.1
     
 
 플러그인에 등록 되지 않은 경우 `registry.cordova.io` 은 없지만 다른 git 저장소에 다른 URL을 지정할 수 있습니다:

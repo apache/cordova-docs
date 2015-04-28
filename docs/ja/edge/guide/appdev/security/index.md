@@ -1,11 +1,17 @@
 * * *
 
-免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 ライセンスのコピーを入手した可能性があります。
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0 ソフトウェア ライセンスの下で配布で配布されて適用される法律によって必要なまたは書面で合意した、しない限り、「そのまま」なし保証またはいかなる種類の保証、明示または黙示を問わず、基礎。  アクセス許可と制限を支配する特定の言語用のライセンスを参照してください。
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## ライセンス。
+## under the License.
 
 # セキュリティ ガイド
 
@@ -27,13 +33,7 @@
 
 *   読み取りし、ホワイト リスト ガイドを理解します。
 
-*   既定では、新しく作成されたアプリケーションのホワイト リストにより、を介してすべてのドメインへのアクセスを `<access>` タグ： `<access origin="*">` 、ホワイト リストに対して評価するネットワーク要求が必要な場合、この変更をのみアクセスする必要のあるドメインを許可することが重要です。 あるアプリケーション レベルの構成ファイルを編集することによってこれを： `{project}/config.xml` (最近プロジェクトの場合) または `{project}/www/config.xml` (古いプロジェクト)
-
-*   Android のホワイト リスト コルドバの 2.9.x は安全と見なされます、しかし、それは発見された foo.com がホワイト リストに含まれる場合、foo.com.evil.com ホワイト リストのテストに合格することができるでしょう。 これはコルドバで修正された 3.x。
-
 *   Android の API 10 と以下は、ホワイト リスト登録のドメインは動作しませんし、iframe の WP8 XMLHttpRequest。 つまり、攻撃者が iframe 内の任意のドメインに読み込むことができ、iframe 内のページのスクリプトも一切コルドバの JavaScript オブジェクトと対応するネイティブ Java オブジェクトに直接アクセスできます。 これらのプラットフォーム用のアプリケーションを構築する際、これを考慮に入れなければなりません。 実際にはつまり、ターゲット 10 より高い Android の API と、可能であればを使用しない iframe を読み込む外部コンテンツ - inAppBrowser プラグインや他のサードパーティ製プラグインを使用してください。
-
-*   コルドバ 3.6.0、現在 Android 上だ今ホワイト リストの Url、アプリケーションの外部に必要なアプリケーションは、これらの Url へのリンクを生成する場合。 アプリケーションを生成する場合 `tel:` 、 `geo:` 、 `sms:` 、 `intent:` または同じような Url をユーザーのブラウザーで開くことを期待し、あなたのホワイト リストを更新する必要があります外部コンテンツへのリンクを提供しますか。 詳細については、ホワイト リスト ガイドを参照してください。
 
 ## Iframe およびコールバック Id メカニズム
 

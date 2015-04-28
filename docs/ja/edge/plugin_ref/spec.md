@@ -320,9 +320,28 @@ XML の例：
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+Windows プラットフォーム (いずれも省略可能) 2 つの追加属性をサポートしているメタ名前`package.appxmanifest`に影響を与える場合：
+
+`device-target`属性を示す、のみが含まれている指定されたターゲット デバイスの種類を作成する場合。 サポートされる値は`win`、`phone`、または`all`.
+
+`versions`属性は、特定のバージョンの Windows 用のアプリ マニフェストは指定されたバージョン文字列と一致するバージョンのため変更する必要があることを示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+
+これらの Windows の特定の属性を使用しての例:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+上記の例では pre 8.1 プラットフォームを設定します (Windows 8 具体的）`ウェブカメラ`デバイス機能と、 `picturesLibrary`の一般的な機能が必要と`ウェブカメラ`デバイス機能を Windows Phone を構築する Windows 8.1 プロジェクトにのみ適用されます。 Windows デスクトップ 8.1 システムは変更されません。
+
 ## *プラグイン plist*要素
 
-これは*古い*コルドバ ios 2.2.0 へとの下にのみ適用されます。使用、 `<config-file>` コルドバの新しいバージョンのタグ。
+これは*古い*コルドバ ios 2.2.0 へとの下にのみ適用されます。コルドバの新しいバージョンの`< ファイル >`タグを使用します。
 
 例:
 
@@ -333,9 +352,9 @@ XML の例：
     </config-file>
     
 
-キーと、適切に追加する値を指定します `AppInfo.plist` iOS コルドバ プロジェクト内のファイル。たとえば。
+キーと iOS コルドバ プロジェクトで正しい`AppInfo.plist`ファイルに追加する値を指定します。たとえば。
 
-    < プラグイン plist キー文字列"Foo"= ="CDVFoo"/>
+    <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## *リソース ファイル*と*ヘッダー ファイル*の要素
@@ -349,12 +368,12 @@ XML の例：
 
 Android の例:
 
-    < リソース ファイル src="FooPluginStrings.xml"target="res/values/FooPluginStrings.xml"/>
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib ファイル*要素
 
-ブラックベリー 10 などのプラットフォームのために特別にしかし、ソース、リソース、およびヘッダー ファイルのようなユーザー生成ライブラリを使用します。例:
+ブラックベリー 10 などのプラットフォームのために特別にしかし、ソース、リソース、およびヘッダー ファイルのようなユーザー生成ライブラリを使用します。 例:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -374,7 +393,7 @@ Windows プラットフォーム用 `<lib-file>` 要素は、`< SDKReference >` 
 
 *   `arch`: を `< SDKReference >` のみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
 
-*   `target`: を `< SDKReference >` のみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+*   `device-target`: を `< SDKReference >` のみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
 
 *   `versions`: を `< SDKReference >` のみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
 
@@ -402,11 +421,11 @@ Windows プラットフォーム用 `<lib-file>` 要素は、`< SDKReference >` 
 
 省略可能な `weak` 属性はフレームワークが弱いリンクする必要があるかどうかを示すブール値です。既定値は `false`.
 
-省略可能な `custom` 属性が、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってないシステム フレームワークです)。 既定値は `false` です。 ***Android の*** **src** を治療する方法を指定します。 場合 `true` **src** アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
+省略可能な `custom` 属性が、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってないシステム フレームワークです)。 既定値は`false`です。 ***Android の*** **src**を治療する方法を指定します。 場合`true` **src**アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
 
-オプションの `type` 属性に追加するフレームワークの型を示す文字列です。 現在のところ `projectReference` がサポートされていると Windows 用のみ。 使用して `custom='true'` と `type='projectReference'`、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
+オプションの`型`属性に追加するフレームワークの型を示す文字列です。 現在のところ`projectReference`がサポートされていると Windows 用のみ。 使用して `custom='true'` と `type='projectReference'`、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
 
-オプションの `parent` 属性は、現在 Android 上でのみサポートされます。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は `.`、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
+オプションの `parent` 属性は、現在 Android 上でのみサポートされます。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は`.`、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
 
     <framework src="FeedbackLib" custom="true" />
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
@@ -416,7 +435,7 @@ Windows プラットフォームを絞り込むときに、フレームワーク
 
 `arch` 属性をフレームワークのみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
 
-`target` となる属性を吊り下げますのみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+`device-target`属性をフレームワークのみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
 
 `versions` 属性をフレームワークのみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
 
@@ -430,47 +449,44 @@ Windows プラットフォームを絞り込むときに、フレームワーク
 
 ## *情報*要素
 
-追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。例:
+追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。 例:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    'local.properties' に次の行を追加する必要があります： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib </情報 >
     
 
 ## 変数
 
-特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、Android 上 C2DM を登録するパッケージ id が `com.alunny.message` アプリは許可を要求するよう。
+特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、Android 上 C2DM を登録するパッケージ id が`com.alunny.message`アプリは許可を要求するよう。
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-`plugin.xml` ファイルから挿入するコンテンツは前もって知られていないこのような場合、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連で示されますことができます。 上記の例では、`plugin.xml` ファイルにはこのタグが含まれます。
+`plugin.xml`ファイルから挿入するコンテンツは前もって知られていないこのような場合、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連で示されますことができます。 上記の例では、 `plugin.xml`ファイルにはこのタグが含まれます。
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 変数参照の値 (この場合から `与えます` ファイル) を検出したり、ツール; のユーザーによって指定されました。正確なプロセスは、特定のツールに依存します。
+plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 変数参照の値 (この場合から`与えます`ファイル) を検出したり、ツール; のユーザーによって指定されました。正確なプロセスは、特定のツールに依存します。
 
 plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google Maps API キーは、コマンドライン引数として指定できます。
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-変数の必須に `<platform>` タグは `<preference>` タグが含まれている必要があります。たとえば。
+変数の必須に`< プラットフォーム >`タグは`< 優先順位 >`タグが含まれている必要があります。たとえば。
 
     <preference name="API_KEY" />
     
 
-plugman はこれらの必要な設定が渡されたことを確認します。それ以外の場合はそれに変数を渡すし、0 以外のコードで終了する方法をユーザーに警告する必要があります。
+plugman はこれらの必要な設定が渡されたことを確認します。 それ以外の場合はそれに変数を渡すし、0 以外のコードで終了する方法をユーザーに警告する必要があります。
 
 以下に示す特定の変数名を予約する必要があります。
 
 ## $PACKAGE_NAME
 
-逆ドメイン スタイル `CFBundleIdentifier` iOS または `与えます` ファイルの最上位の `マニフェストの` 要素の `パッケージ` 属性に対応するパッケージの一意の識別子。
+逆ドメイン スタイル`CFBundleIdentifier` iOS または`与えます`ファイルの最上位の`マニフェストの`要素の`パッケージ`属性に対応するパッケージの一意の識別子。

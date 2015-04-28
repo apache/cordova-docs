@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## イベントの種類
 
 *   deviceready
-*   一時停止します。
-*   再開
+*   pause
+*   resume
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## [Org.apache.cordova.battery ステータス][1]によって追加されるイベント
+## [コルドバ プラグイン バッテリ ステータス][1]によって追加されるイベント
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## [Org.apache.cordova.network 情報][2]によって追加されるイベント
+## [コルドバ プラグイン ネットワーク情報][2]によって追加されるイベント
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

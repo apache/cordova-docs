@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 이벤트 유형
 
 *   deviceready
-*   일시 중지
-*   이력서
+*   pause
+*   resume
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## [Org.apache.cordova.battery-상태][1] 에 의해 추가 이벤트
+## [cordova-plugin-battery-status][1] 에 의해 추가 이벤트
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## [Org.apache.cordova.network 정보][2] 에 의해 추가 이벤트
+## [cordova-plugin-network-information][2] 정보 추가 이벤트
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

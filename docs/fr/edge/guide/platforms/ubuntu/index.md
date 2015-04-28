@@ -85,6 +85,6 @@ Crée une application dans un `hello` répertoire dont le nom affichage est `Hel
     $ cordova run ubuntu
     
 
-### Ajouter le Plugin de statut de batterie
+### Ajouter le Plugin Camera
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

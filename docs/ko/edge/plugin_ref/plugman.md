@@ -88,7 +88,7 @@ Plugman 전역 도움말 명령 집착 하거나 문제가 발생 하는 경우 
 추가할 수 있습니다는 `--debug|-d` 플래그 방출 하 고 당신을 도울 수 있습니다 내부 디버깅 메시지를 표시 하는 자세한 정보 표시 모드에서 해당 명령을 실행 하는 모든 Plugman 명령에 누락 된 파일 같은 문제를 추적 합니다.
 
     # Adding Android battery-status plugin to "myProject":
-    plugman -d --platform android --project myProject --plugin org.apache.cordova.battery-status
+    plugman -d --platform android --project myProject --plugin cordova-plugin-battery-status
     
 
 마지막으로, 사용할 수 있습니다는 `--version|-v` 플래그를 사용 하는 Plugman의 버전을 참조 하십시오.
@@ -132,38 +132,38 @@ Plugman를 사용 하 여 플러그인 id 주어진된 공간 구분 된 키워�
 
 *   cordova-plugin-battery-status
     
-    plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.battery-status
+    plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-battery-status
 
-*   cordova-plugin-camera plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.camera
+*   cordova-plugin-camera plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-camera
 
-*   cordova-plugin-console plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.console
+*   cordova-plugin-console plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-console
 
-*   cordova-plugin-contacts plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.contacts
+*   cordova-plugin-contacts plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-contacts
 
-*   cordova-plugin-device plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.device
+*   cordova-plugin-device plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device
 
-*   cordova-plugin-device-motion (accelerometer) plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.device-motion
+*   cordova-plugin-device-motion (accelerometer) plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-motion
 
-*   cordova-plugin-device-orientation (compass) plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.device-orientation
+*   cordova-plugin-device-orientation (compass) plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-device-orientation
 
-*   cordova-plugin-dialogs plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.dialogs
+*   cordova-plugin-dialogs plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-dialogs
 
-*   cordova-plugin-file plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.file
+*   cordova-plugin-file plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file
 
-*   cordova-plugin-file-transfer plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.file-transfer
+*   cordova-plugin-file-transfer plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-file-transfer
 
-*   cordova-plugin-geolocation plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.geolocation
+*   cordova-plugin-geolocation plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-geolocation
 
-*   cordova-plugin-globalization plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.globalization
+*   cordova-plugin-globalization plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-globalization
 
-*   cordova-plugin-inappbrowser plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.inappbrowser
+*   cordova-plugin-inappbrowser plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-inappbrowser
 
-*   cordova-plugin-media plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.media
+*   cordova-plugin-media plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media
 
-*   cordova-plugin-media-capture plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.media-capture
+*   cordova-plugin-media-capture plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-media-capture
 
-*   cordova-plugin-network-information plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.network-information
+*   cordova-plugin-network-information plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-network-information
 
-*   cordova-plugin-splashscreen plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.splashscreen
+*   cordova-plugin-splashscreen plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-splashscreen
 
-*   cordova-plugin-vibration plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin org.apache.cordova.vibration
+*   cordova-plugin-vibration plugman --platform <ios|amazon-fireos|android|blackberry10|wp8> --project <directory> --plugin cordova-plugin-vibration

@@ -320,9 +320,28 @@ XML 的的示例：
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+Windows 平臺支援兩個附加屬性 （兩個可選） 時影響 `package.appxmanifest` 元名稱：
+
+該 `device-target` 屬性指示，只應包括，當生成指定的目標裝置類型。 受支援的值是 `win`、 `phone` 或 `all`.
+
+該 `versions` 屬性指示特定的 Windows 版本的應用程式清單只應會被更改為指定的版本字串相匹配的版本。 值可以是任何有效的節點語義版本範圍的字串。
+
+使用這些視窗的特定屬性的示例：
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+上面的示例中將設置預 8.1 平臺 （Windows 8，具體），需要 `webcam` 裝置功能和 `picturesLibrary` 的綜合性能，而且 `webcam` 裝置功能僅適用于 Windows 8.1 的專案生成為 Windows Phone。 Windows 桌面 8.1 系統是未被修改。
+
 ## *外掛程式-plist*元素
 
-這是*過時*，因為它僅適用于科爾多瓦-ios 2.2.0 和下面。使用 `<config-file>` 標記科爾多瓦的較新版本。
+這是 *過時* 的因為它只適用于科爾多瓦 ios 2.2.0 和下面。科爾多瓦的較新版本使用 `<config-file>` 標記。
 
 示例：
 
@@ -333,28 +352,28 @@ XML 的的示例：
     </config-file>
     
 
-指定鍵和值將追加到正確的 `AppInfo.plist` iOS 科爾多瓦專案中的檔。例如：
+指定的鍵和值追加到 iOS 科爾多瓦專案中的正確的 `AppInfo.plist` 檔。舉個例子：
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## *資源檔*和*標頭檔*元素
 
-原始程式碼檔一樣，但專門為 iOS 等平臺，區分原始程式碼檔、 標題和資源。iOS 的例子：
+像原始檔案，而是專門負責 iOS 平臺，區分原始檔案、 標頭檔和資源。iOS 的例子：
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
     
 
-Android 系統的示例：
+Android 的示例：
 
-    < 資源檔 src="FooPluginStrings.xml"target="res/values/FooPluginStrings.xml"/ >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib 檔*元素
 
-像源、 資源和標頭檔，但專門為黑莓 10 這樣的平臺，使用使用者生成的庫。例子：
+像源、 資源和標頭檔，而是專門負責平臺 （如黑莓 10 的使用使用者生成的庫。示例：
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -374,7 +393,7 @@ Android 系統的示例：
 
 *   `arch`： 指示為指定的架構生成時只應包含 `< SDKReference >`。 受支援的值是 `x86`、`x64` 或 `ARM`.
 
-*   `目標`： 指示當生成指定的目標裝置類型只應包含 `< SDKReference >`。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+*   `device-target`： 指示當生成指定的目標裝置類型只應包含 `< SDKReference >`。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
 
 *   `versions`： 指示當生成指定的版本字串相匹配的版本只應包含 `< SDKReference >`。 值可以是任何有效的節點語義版本範圍的字串。
 
@@ -416,7 +435,7 @@ Windows 平臺支援三個附加屬性 （所有可選） 精煉時框架應包�
 
 `arch` 屬性指示時為指定的架構建設只應包括框架。 受支援的值是 `x86`、`x64` 或 `ARM`.
 
-`target` 屬性指示當生成指定的目標裝置類型後，應該只能包括在內的框架。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+該 `device-target` 屬性指示當生成指定的目標裝置類型後，應該只能包含框架。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
 
 該 `versions` 屬性指示當生成指定的版本字串相匹配的版本後，應該只能包含框架。 值可以是任何有效的節點語義版本範圍的字串。
 
@@ -435,10 +454,7 @@ Windows 平臺支援三個附加屬性 （所有可選） 精煉時框架應包�
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    您需要將以下行添加到 'local.properties'： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < /info>
     
 
 ## 變數
@@ -473,4 +489,4 @@ plugman 檢查中通過的這些所需的首選項。如果不是的話，它應
 
 ## $PACKAGE_NAME
 
-反向域風格包，對應于 `CFBundleIdentifier` iOS 或 `package` 屬性，在 `AndroidManifest.xml` 檔中的頂級 `manifest` 元素的唯一識別碼。
+反向域風格包，對應于 `CFBundleIdentifier` iOS 或 `package` 屬性，在 `AndroidManifest.xml` 檔中的頂級 `表現` 元素的唯一識別碼。

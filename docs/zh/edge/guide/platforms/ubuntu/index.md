@@ -85,6 +85,6 @@ Ubuntu 是眾所周知的其桌面環境 （用於筆記本電腦、 Pc 和此�
     $ cordova run ubuntu
     
 
-### 添加電池狀態外掛程式
+### 添加觀景窗外掛程式
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

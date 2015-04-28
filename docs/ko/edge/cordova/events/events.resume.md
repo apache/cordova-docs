@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 이력서
+# resume
 
 이벤트는 응용 프로그램이 배경에서 검색 될 때 발생 합니다.
 

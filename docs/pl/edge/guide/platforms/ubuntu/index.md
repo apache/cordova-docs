@@ -85,6 +85,6 @@ Tworzy aplikację w `hello` katalogu, którego nazwa wyświetlana jest `HelloWor
     $ cordova run ubuntu
     
 
-### Dodać Plugin stan baterii
+### Dodaj wtyczkę Camera
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

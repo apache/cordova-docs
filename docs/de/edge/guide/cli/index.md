@@ -206,71 +206,71 @@ Eine Liste dieser Plugins, einschließlich zusätzliche Drittanbieter Plug-ins d
 
 Nur bei der Suche nach der `bar` Erträge und weiteres Ergebnis:
 
-        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+        cordova-plugin-statusbar - Cordova StatusBar Plugin
     
 
 Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code angeben. Hier sind Beispiele für die Verwendung der CLI die app Features hinzugefügt:
 
 *   Grundlegenden Geräteinformationen (Device-API):
     
-        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-device
         
 
 *   Netzwerkverbindung und Batterie-Veranstaltungen:
     
-        $ cordova plugin add org.apache.cordova.network-information
-        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin add cordova-plugin-network-information
+        $ cordova plugin add cordova-plugin-battery-status
         
 
 *   Beschleunigungssensor, Kompass und Geolocation:
     
-        $ cordova plugin add org.apache.cordova.device-motion
-        $ cordova plugin add org.apache.cordova.device-orientation
-        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin add cordova-plugin-device-motion
+        $ cordova plugin add cordova-plugin-device-orientation
+        $ cordova plugin add cordova-plugin-geolocation
         
 
 *   Kamera, Medien-Wiedergabe und Aufnahme:
     
-        $ cordova plugin add org.apache.cordova.camera
-        $ cordova plugin add org.apache.cordova.media-capture
-        $ cordova plugin add org.apache.cordova.media
+        $ cordova plugin add cordova-plugin-camera
+        $ cordova plugin add cordova-plugin-media-capture
+        $ cordova plugin add cordova-plugin-media
         
 
 *   Zugriff auf Dateien auf Gerät oder Netzwerk (File API):
     
-        $ cordova plugin add org.apache.cordova.file
-        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin add cordova-plugin-file
+        $ cordova plugin add cordova-plugin-file-transfer
         
 
 *   Benachrichtigung per Dialogfeld oder Vibration:
     
-        $ cordova plugin add org.apache.cordova.dialogs
-        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin add cordova-plugin-dialogs
+        $ cordova plugin add cordova-plugin-vibration
         
 
 *   Kontakte:
     
-        $ cordova plugin add org.apache.cordova.contacts
+        $ cordova plugin add cordova-plugin-contacts
         
 
 *   Globalisierung:
     
-        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin add cordova-plugin-globalization
         
 
 *   SplashScreen:
     
-        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin add cordova-plugin-splashscreen
         
 
 *   Neue Browserfenster öffnen (InAppBrowser):
     
-        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin add cordova-plugin-inappbrowser
         
 
 *   Debug-Konsole:
     
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
         
 
 **Hinweis**: die CLI fügt Plugin-Code entsprechend für jede Plattform. Wenn Sie mit Low-Level-Shell-Werkzeugen oder Platform SDKs wie in der Übersicht beschrieben entwickeln wollen, müssen Sie das Plugman-Dienstprogramm zum Hinzufügen von Plugins separat für jede Plattform ausführen. (Weitere Informationen finden Sie unter Using Plugman zu Plugins verwalten.)
@@ -278,31 +278,31 @@ Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code 
 Verwendung `plugin ls` (oder `plugin list` , oder `plugin` von selbst) derzeit anzeigen Plugins installiert. Jede zeigt durch seinen Bezeichner:
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.console' ]
+        [ 'cordova-plugin-console' ]
     
 
 Um ein Plugin zu entfernen, finden Sie es durch den gleichen Bezeichner, der in der Liste angezeigt wird. Zum Beispiel, ist hier, wie Sie Unterstützung für eine Debug-Konsole aus einer Release-Version entfernen würde:
 
-        $ cordova plugin rm org.apache.cordova.console
-        $ cordova plugin remove org.apache.cordova.console    # same
+        $ cordova plugin rm cordova-plugin-console
+        $ cordova plugin remove cordova-plugin-console    # same
     
 
 Sie können Batch-entfernen oder Hinzufügen von Plugins durch mehr als ein Argument für jeden Befehl angeben:
 
-        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-console cordova-plugin-device
     
 
 ## Erweiterte Plugin-Optionen
 
 Wenn Sie eine Plugin hinzufügen, können mehrere Optionen Sie angeben, wo Sie das Plugin zu holen. Die obigen Beispiele verwenden eine bekannte `registry.cordova.io` Registrierung und das Plugin wird angegeben durch die `id` :
 
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
     
 
 Die `id` kann auch die Plugin-Versionsnummer, angefügt nach enthalten einen `@` Charakter. Die `latest` Version ist ein Alias für die aktuellste Version. Zum Beispiel:
 
-        $ cordova plugin add org.apache.cordova.console@latest
-        $ cordova plugin add org.apache.cordova.console@0.2.1
+        $ cordova plugin add cordova-plugin-console@latest
+        $ cordova plugin add cordova-plugin-console@0.2.1
     
 
 Wenn das Plugin nicht registriert ist `registry.cordova.io` aber befindet sich in einem anderen Git Repository, Sie können eine Alternative URL angeben:

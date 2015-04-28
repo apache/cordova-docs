@@ -77,7 +77,7 @@ Auf Mac und Linux:
 
 *   Führen Sie folgendermaßen vor, um die Änderung in der aktuellen Sitzung zu übernehmen:
     
-        $ Quelle ~/.bash_profile
+        $ source ~/.bash_profile
         
 
 Wenn Sie ein Umweltproblem, haben mit dem nativen SDK von der Befehlszeile aus, führen Sie die entsprechende Datei für Ihre Plattform, gelegen innerhalb der Installationspfad:

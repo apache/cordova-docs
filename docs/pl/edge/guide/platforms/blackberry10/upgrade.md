@@ -103,7 +103,7 @@ Dla BlackBerryOS/Playbook:
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, zgodnie z opisem w iOS Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     ![][2]
     
-    Windows Phone 에뮬레이터 혼자 전체 vm 웨어에 대 한 최소 2 GB를 보유 해야 절반 메가 바이트의 메모리를 사용 합니다.
+    Windows Phone 에뮬레이터 혼자 전반적 vm 웨어에 대 한 최소 2 GB를 보유 해야 절반을 기가 바이트의 메모리를 사용 합니다.
 
 3.  **고급** 설정을 선택 합니다. 활성화는 **기본 가상화 엔진: EPT와 인텔 VT x** 옵션:
     

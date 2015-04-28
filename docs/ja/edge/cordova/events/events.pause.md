@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 一時停止します。
+# pause
 
 アプリケーションは、背景に置かれたときに発生します。
 

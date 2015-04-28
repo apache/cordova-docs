@@ -50,18 +50,18 @@ Esto crea una aplicación de Firefox OS en directorio de plataformas/firefoxos/w
 
 En este momento usted está listo para ir — cambiar el código dentro de prueba-app/www para lo que quieras tu app para ser. Puede agregar [plugins de apoyo]() a la aplicación usando "cordova plugin añade", por ejemplo:
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 Cuando se escribe el código de la aplicación, implementar los cambios en la aplicación de Firefox OS con que ha agregado a su proyecto
 
-    $ cordova preparar firefoxos
+    $ cordova prepare firefoxos
     
 
 Para crear una aplicación empaquetada uno puede postal el directorio plataformas/firefoxos/www. Usted puede también simplemente construir usando
 
-    $ cordova construir firefoxos
+    $ cordova build firefoxos
     
 
 La aplicación empaquetada Firefox OS será construida en platforms/firefoxos/build/package.zip

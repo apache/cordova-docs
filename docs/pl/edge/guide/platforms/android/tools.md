@@ -65,6 +65,38 @@ Komenda `run` akceptuje następujące *opcjonalne* parametry:
 
 Upewnij się, że można utworzyć co najmniej jeden Android urządzenia wirtualnego, inaczej zostanie wyświetlony monit, aby zrobić z `android` polecenia. Jeśli więcej niż jeden AVD jest dostępny jako cel, zostanie wyświetlony monit o wybranie jednej. Domyślnie `run` polecenia wykrywa podłączone urządzenie, lub aktualnie uruchomionego emulatora, jeśli urządzenie nie znajduje.
 
+## Podpisywanie aplikacji
+
+Można przejrzeć Android app podpisania wymagania tutaj: http://developer.android.com/tools/publishing/app-signing.html
+
+Aby zarejestrować aplikację, należy następujące parametry: * kluczy (`--keystore`): ścieżka do pliku binarnego, który może zawierać zestaw kluczy. * Keystore hasła (`-storePassword`): hasło do kluczy * Alias (`--alias`): identyfikator określający klucza prywatnego do śpiewania. * Hasło (`--password`): hasło do klucza prywatnego określonego. * Rodzaj kluczy (`-keystoreType`): pkcs12, jks (domyślnie: automatyczne wykrywanie oparty na rozszerzenie pliku) te parametry mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty.
+
+Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json) za pomocą argumentu (`-buildConfig`). Oto przykład pliku konfiguracyjnego budować:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Dla wersji podpisanie, hasła mogą być wyłączone i budować system wyda się monit z prośbą o hasło.
+
+Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości argumentów wiersza polecenia otrzyma pierwszeństwo. Może to być przydatne do określania haseł w wierszu polecenia.
+
 ## Rejestrowanie
 
         $ /path/to/project/cordova/log
@@ -132,7 +164,7 @@ Te [Właściwości][3] można ustawić aby dostosować ten budować:
 
 ### Rozszerzenie build.gradle
 
-Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, należy utworzyć plik rodzeństwo o nazwie `budować extras.gradle`. Ten plik będzie zawarte przez główne `build.gradle` obecny. Oto przykład:
+Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, należy utworzyć plik rodzeństwo o nazwie `build-extras.gradle`. Ten plik będzie zawarte przez główne `build.gradle` obecny. Oto przykład:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -143,7 +175,7 @@ Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, nale�
     }
     
 
-Należy zauważyć, że wtyczki można także `budować extras.gradle` plików za pośrednictwem:
+Należy zauważyć, że wtyczki można także `build-extras.gradle` plików za pośrednictwem:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

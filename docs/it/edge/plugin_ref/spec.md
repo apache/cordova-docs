@@ -320,9 +320,28 @@ Esso supporta i seguenti attributi:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+La piattaforma Windows supporta due attributi aggiuntivi (entrambi optional) quando colpisce il meta-nome `package.appxmanifest`:
+
+Il `device-target` attributo indica che il deve essere incluso solo quando la costruzione per il tipo di periferica di destinazione specificata. Valori supportati sono `win`, `phone`o `all`.
+
+L'attributo `versions` indica che manifesti di app per versioni specifiche di Windows dovrebbero essere modificati solo per le versioni che corrispondono alla stringa di versione specificato. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+
+Esempi di utilizzo di questi attributi specifici di Windows:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+L'esempio sopra imposterà pre-8.1 piattaforme (Windows 8, in particolare) richiedono la funzionalità del dispositivo di `webcam` e la capacità generale di `picturesLibrary` , e applicare la funzionalità del dispositivo `webcam` solo per progetti Windows 8.1 che costruiamo per Windows Phone. Windows desktop 8.1 sistemi sono non modificati.
+
 ## *plugin-plist* Elemento
 
-Questo è *superata* in quanto si applica solo a cordova-ios 2.2.0 e sotto. Uso il `<config-file>` tag per versioni più recenti di Cordova.
+Questo è *superata* in quanto si applica solo a cordova-ios 2.2.0 e sotto. Utilizzare il tag `< config-file >` versioni più recenti di Cordova.
 
 Esempio:
 
@@ -333,7 +352,7 @@ Esempio:
     </config-file>
     
 
-Specifica una chiave e un valore da aggiungere per la corretta `AppInfo.plist` file in un progetto di Cordova iOS. Ad esempio:
+Specifica una chiave e un valore da aggiungere al file `AppInfo.plist` corretto in un progetto di Cordova iOS. Per esempio:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ Come file di origine, ma in particolare per piattaforme come iOS che distinguere
 
 Esempio di Android:
 
-    < src="FooPluginStrings.xml file di risorse" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib-file* Elemento
@@ -366,7 +385,7 @@ Attributi supportati:
 
 *   `arch`: L'architettura per la quale il `.so` file è stato costruito, o `device` o`simulator`.
 
-Per la piattaforma Windows, elemento `<lib-file>` permette l'inserimento di un `<SDKReference>` nel file di progetto di Windows generati.
+Per la piattaforma Windows, elemento `< lib-file >` permette l'inserimento di un `< SDKReference >` nel file di progetto di Windows generati.
 
 Attributi supportati:
 
@@ -374,7 +393,7 @@ Attributi supportati:
 
 *   `arch`: indica che il `<SDKReference>` solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
 
-*   `target`: indica che il `<SDKReference>` solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+*   `device-target`: indica che il `< SDKReference >` solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
 
 *   `versions`: indica che il `<SDKReference>` solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificato. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
 
@@ -416,7 +435,7 @@ La piattaforma Windows supporta tre attributi aggiuntivi (facoltativi) per affin
 
 L'attributo `arch` indica che il quadro solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
 
-L'attributo `target` indica che il framwork solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+Il `device-target` attributo indica che il quadro solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
 
 L'attributo `versions` indica che il quadro solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
 
@@ -435,10 +454,7 @@ Informazioni supplementari fornite agli utenti. Questo è utile quando si richie
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    È necessario aggiungere la seguente riga alla 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
     
 
 ## Variabili
@@ -462,7 +478,7 @@ plugman possibile richiedere agli utenti di specificare le variabili necessarie 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Per rendere obbligatoria la variabile, il tag `<platform>` deve contenere un tag `<preference>`. Per esempio:
+Per rendere obbligatoria la variabile, il tag `<platform>` deve contenere un tag `<preference>` . Per esempio:
 
     <preference name="API_KEY" />
     
@@ -473,4 +489,4 @@ Alcuni nomi di variabile dovrebbero essere riservati, come elencato di seguito.
 
 ## $PACKAGE_NAME
 
-L'identificatore univoco di stile retro-dominio per il pacchetto, corrispondente per il `CFBundleIdentifier` su iOS o il `package` attributo dell'elemento di primo livello `manifest` in un file `AndroidManifest.xml`.
+L'identificatore univoco di stile retro-dominio per il pacchetto, corrispondente per il `CFBundleIdentifier` su iOS o il `pacchetto` attributo dell'elemento di primo livello `manifesto` in un file `AndroidManifest.xml`.

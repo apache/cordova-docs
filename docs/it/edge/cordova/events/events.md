@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Tipi di evento
 
 *   deviceready
-*   pausa
-*   curriculum
+*   pause
+*   resume
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## Eventi aggiunti da [org.apache.cordova.battery stato][1]
+## Eventi aggiunti da [cordova-plugin--lo stato della batteria][1]
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## Eventi aggiunti da [org.apache.cordova.network-informazioni][2]
+## Eventi aggiunti da [cordova-plugin-rete-informazioni][2]
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

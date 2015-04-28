@@ -65,6 +65,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 적어도 하나의 안 드 로이드 가상 장치, 그렇지 않으면으로 그렇게 하 라는 메시지가 만들 다는 것을 확인은 `android` 명령. 여러 개의 AVD를 대상으로 사용할 수 있는 경우 하나를 선택 하 라는 메시지가 표시. 기본적으로는 `run` 명령 검색 연결 된 장치 또는 현재 실행 중인 에뮬레이터 없는 장치가 발견 되 면.
 
+## 응용 프로그램 서명
+
+요구 사항을 여기에 서명 안 드 로이드 애플 리 케이 션을 검토할 수 있습니다: http://developer.android.com/tools/publishing/app-signing.html
+
+응용 프로그램에 서명 하기 위해 해야 다음 매개 변수: * 키 (`--keystore`): 키 집합을 저장할 수 있는 이진 파일의 경로를. * 키 암호 (`-storePassword`): 암호 키를 * 별칭 (`-별칭`): 노래에 사용 되는 개인 키를 지정 하는 id. * 비밀 번호 (`--keystoreType`): 지정 된 개인 키에 대 한 암호. * 키 (`-keystoreType`)의 유형: pkcs12, jks (기본값: 자동 검색 파일 확장명에 따라) 위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.
+
+양자 택일로, (`-buildConfig`) 인수를 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다. 빌드 구성 파일의 예제는 다음과 같습니다.
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+릴리스는 서명, 암호를 제외할 수 있습니다 및 빌드 시스템에서 암호를 묻는 프롬프트를 발행 합니다.
+
+혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다. 명령줄에 암호를 지정 하는 데 유용할 수 있습니다.
+
 ## 로깅
 
         $ /path/to/project/cordova/log
@@ -87,7 +119,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### Gradle 속성
 
-빌드를 사용자 지정 하려면이 [속성][3]을 설정할 수 있습니다.
+빌드를 사용자 지정 하려면이 [속성][3] 을 설정할 수 있습니다.
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
@@ -132,7 +164,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### Build.gradle 확장
 
-사용자 지정 `build.gradle`, 보다는 오히려 직접 편집 해야 할 경우 `빌드 extras.gradle` 라는 형제 파일을 만들어야 합니다. 이 파일은 주요 `build.gradle` 존재 하는 경우에 의해 포함 됩니다. 여기에 예가입니다.
+사용자 지정 `build.gradle`, 보다는 오히려 직접 편집 해야 할 경우 `build-extras.gradle`라는 형제 파일을 만들어야 합니다. 이 파일은 주요 `build.gradle` 존재 하는 경우에 의해 포함 됩니다. 여기에 예가입니다.
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -143,7 +175,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-Note 플러그인을 통해 `빌드 extras.gradle` 파일을 포함할 수도 있습니다.
+Note 플러그인을 통해 `build-extras.gradle` 파일을 포함할 수도 있습니다.
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

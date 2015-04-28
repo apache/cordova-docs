@@ -64,7 +64,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
 
-    元源 ~/.bash_profile
+    $ source ~/.bash_profile
     
 
 #### Windows 路徑

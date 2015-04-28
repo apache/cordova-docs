@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     ![][2]
     
-    Windows Phone 模擬程式單獨使用半一百萬位元組的記憶體，所以整體你應該針對 VMWare 預留至少 2 GB。
+    Windows Phone 模擬器單獨使用半位元組的記憶體，所以，總體來說，你應該為 VMWare 預留至少 2 GB。
 
 3.  選擇**高級**設置。啟用**首選虛擬化引擎： 英特爾 VT-x 與 EPT**選項：
     

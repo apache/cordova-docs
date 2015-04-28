@@ -19,11 +19,11 @@ Esta guía muestra cómo configurar su entorno SDK para desplegar aplicaciones C
 
 ## Requisitos y apoyo
 
-Cordova para Android requiere el SDK de Android. Consulte del SDK de Android [requisitos del sistema][1].
+Cordova para Android requiere el SDK de Android que puede ser instalado en sistema operativo OS X, Linux o Windows. Consulte del SDK de Android [requisitos del sistema][1].
 
- [1]: http://developer.android.com/sdk/index.html
+ [1]: http://developer.android.com/sdk/index.html#Requirements
 
-Cordova soporta Android 2.3 (Gingerbread, empezando por Android API nivel 10) y 4.x. Como regla general, las versiones de Android se convierten soportadas por Cordova como sumergen por debajo del 5% en del Google [tablero de distribución][2]. Las versiones de Android antes de las API de nivel 10, y las versiones 3.x (panal, los niveles API 11-13) caen significativamente por debajo de ese umbral de 5%.
+Cordova soporta Android 4.0 (empezando por Android API nivel 14) y superiores. Como regla general, las versiones de Android se convierten soportadas por Cordova como sumergen por debajo del 5% en del Google [tablero de distribución][2]. Las versiones de Android antes de las API de nivel 10, y las versiones 3.x (panal, los niveles API 11-13) caen significativamente por debajo de ese umbral de 5%.
 
  [2]: http://developer.android.com/about/dashboards/index.html
 
@@ -37,22 +37,34 @@ La descarga de Cordova contiene archivos separados para cada plataforma. Asegúr
 
 Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones Android. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Ver aplicación Plugins para obtener más información sobre cómo desarrollar plugins.
 
-Instalar el SDK de Android desde [developer.android.com/sdk][4]. El sdk de android es distribuido como un archivo 'adt - bundle - < os > - < arco > - < ver >'. En windows, el adt-paquete viene con un instalador. En OSX y Linux, simplemente descomprimir el 'adt-bundle' en el lugar se almacenan herramientas de desarrollo. [Aquí encontrará información más detallada sobre la configuración del SDK de Android][5]
+## Instale el Kit de desarrollo de Java (JDK)
 
- [4]: http://developer.android.com/sdk/
- [5]: http://developer.android.com/sdk/installing/bundle.html
+Instalar [Java Development Kit (JDK) 7][4] o posterior.
 
-Para Cordova Herramientas de línea de comandos para el trabajo o la CLI que se basa en ellos, es necesario incluir el SDK `tools` y `platform-tools` directorios en su `PATH` . En un Mac, puede utilizar un editor de texto para crear o modificar el `~/.bash_profile` archivo, añadir una línea como la siguiente, dependiendo de donde se instala el SDK:
+ [4]: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
 
-        export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+Cuando se instala en Windows también tienes que definir la Variable de entorno `JAVA_HOME` según la ruta de instalación de JDK (por ejemplo, C:\Program Files\Java\jdk1.7.0_75).
+
+## Instalar el SDK de Android
+
+Instalar las [herramientas de Android SDK independiente][5] o [Android Studio][6]. Proceder con el `Estudio de Android` si tiene previsto desarrollar nueva Córdoba para Android plugins o utilizando herramientas nativas para ejecutar y depurar la plataforma Android. De lo contrario, `Stand-alone Android SDK Tools` son suficientes para construir e implementar aplicaciones Android.
+
+ [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
+ [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
+
+Instrucciones de instalación detalladas están disponibles como parte de los enlaces de la instalación anteriores.
+
+Cordova Herramientas de línea de comandos para trabajar, o la CLI que se basa en ellos, necesita incluir directorios `Herramientas` y `herramientas de la plataforma` de la SDK en tu `camino`. En un Mac, puede utilizar un editor de texto para crear o modificar el archivo `~/.bash_profile` , añadir una línea como la siguiente, dependiendo de donde se instala el SDK:
+
+        export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
 
-Añada las rutas para `java` y `ant` si es necesario. Esta línea en `~/.bash_profile` expone estas herramientas en windows terminales recién inauguradas. Si tu ventana de terminal ya está abierto en OSX o para evitar un cierre de sesión/inicio de sesión en Linux, ejecute esto para que estén disponibles en la ventana de terminal actual:
+Esta línea en `~/.bash_profile` expone estas herramientas en windows terminales recién inauguradas. Si tu ventana de terminal ya está abierto en OSX o para evitar un cierre de sesión/inicio de sesión en Linux, ejecute esto para que estén disponibles en la ventana de terminal actual:
 
         $ source ~/.bash_profile
     
 
-Para modificar el `PATH` ambiente en Windows 7:
+Para modificar el entorno `PATH` en Windows:
 
 1.  Haga clic en el menú de **Inicio** en la esquina inferior izquierda del escritorio, haga clic derecho sobre **equipo**y seleccione **Propiedades**.
 
@@ -64,24 +76,95 @@ Para modificar el `PATH` ambiente en Windows 7:
 
 5.  Añadir lo siguiente a la `PATH` basada en donde se ha instalado el SDK, por ejemplo:
     
-        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
         
 
 6.  El valor de guardar y cerrar ambos cuadros de diálogo.
 
-También necesitará habilitar Java y Ant. abrir un símbolo del sistema y el tipo `java` y también de tipo `ant` . Añadir a la `PATH` cualquiera de éstos no se ejecuta:
+## Instalar paquetes SDK
 
-        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+Abrir el administrador de Android SDK (por ejemplo, a través de terminal: `android`) e instalar:
 
-## Abra un nuevo proyecto en el SDK
+1.  5.1.1 Android (API 22) platform SDK
+2.  Android SDK Build-tools versión 19.1.0 o superior
+3.  Repositorio de Android soporte (Extras)
+
+Ver [Instalar paquetes SDK][7] para obtener más detalles.
+
+ [7]: http://developer.android.com/sdk/installing/adding-packages.html
+
+## Configurar un emulador
+
+El sdk de Android no proporciona ninguna instancia de emulador predeterminada por defecto. Puede crear una nueva ejecutando `android` en la línea de comandos. La prensa **Herramientas → administrar AVDs** (Android dispositivos virtuales), luego elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
+
+![][8]
+
+ [8]: img/guide/platforms/android/asdk_device.png
+
+Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
+
+![][9]
+
+ [9]: img/guide/platforms/android/asdk_newAVD.png
+
+La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
+
+![][10]
+
+ [10]: img/guide/platforms/android/asdk_avds.png
+
+Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
+
+![][11]
+
+ [11]: img/guide/platforms/android/asdk_emulator.png
+
+Para una experiencia más rápida, puede utilizar la `Aceleración de la máquina Virtual` para mejorar la velocidad de ejecución. Muchas CPUs modernas ofrecen extensiones para ejecutar máquinas virtuales más eficientemente. Antes de usar este tipo de aceleración, es necesario determinar si CPU de su sistema actual de desarrollo, uno admite las siguientes tecnologías de virtualización:
+
+*   **Tecnología de virtualización Intel** (VT-x, vmx) → [Intel VT-x procesador lista soportada][12]
+*   **AMD Virtualization** (AMD-V, SVM), sólo se admite para Linux (desde mayo de 2006, todas las CPUs de AMD incluyen AMD-V, excepto Sempron).
+
+ [12]: http://ark.intel.com/products/virtualizationtechnology
+
+Otra forma de averiguar si su procesador Intel compatible con la tecnología VT-x, es mediante la ejecución de la `Utilidad de identificación de procesadores Intel`, para `Windows`puede descargarlo desde el [Centro de descarga][13]de Intel, o puede utilizar la [utilidad booteable][14], que es `Independiente del sistema operativo`.
+
+ [13]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
+ [14]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
+
+Después de instalar y ejecutar la `Utilidad de identificación de procesador Intel` sobre ventanas, obtendrá la ventana siguiente, con el fin de comprobar si su CPU es compatible con las tecnologías de virtualización:
+
+![][15]
+
+ [15]: img/guide/platforms/android/intel_pid_util_620px.png
+
+Para acelerar el emulador, tienes que descargar e instalar uno o más imágenes del sistema `x 86 de Intel Atom` , así como el `Intel Hardware acelerado ejecución Manager (HAXM)`.
+
+Abre tu Android SDK Manager y seleccione la imagen del sistema `x 86 de Intel Atom` , para cualquier versión que desea probar. Luego ir a `Extras` `Acelerador Intel x 86 de emulador (HAXM)`y seleccione instalar los paquetes:
+
+![][16]
+
+ [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+
+Después de la descarga, ejecute al instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager`. **Nota**:`si tienes algún problema al instalar el paquete, usted puede encontrar más información y orientación paso a paso revise este` [Artículo de Intel][17].
+
+ [17]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
+
+1.  Instalar una o más imágenes del sistema `x 86 de Intel Atom` , así como la `Acelerada ejecución administrador de Hardware de Intel`, disponible bajo **Extras**.
+
+2.  Ejecute al instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager`.
+
+3.  Crear un nuevo AVD con el objetivo fijado a una imagen de Intel.
+
+4.  Al iniciar el emulador, asegúrese que no hay error mensajes indicando la imposibilidad de cargar módulos HAX.
+
+## Crear un nuevo proyecto
 
 En este punto, para crear un nuevo proyecto puede elegir entre la herramienta de la cruz-plataforma CLI que se describe en la interfaz de línea de comandos, o el conjunto de herramientas de shell específicas para Android. Desde dentro de un directorio del código fuente, aquí es el enfoque CLI:
 
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
-        $ cordova build
+        $ ccordova prepare              # or "cordova build"
     
 
 Aquí es el enfoque de shell-herramienta de nivel inferior correspondiente para Unix y Windows:
@@ -90,44 +173,19 @@ Aquí es el enfoque de shell-herramienta de nivel inferior correspondiente para 
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
-Aquí es cómo utilizar el SDK para modificarlo:
-
-1.  Inicie la aplicación de **Eclipse**.
-
-2.  Seleccione el elemento de menú **Nuevo proyecto**.
-
-3.  Elija **Proyecto Android de código existente** en el cuadro de diálogo resultante y pulse **siguiente**:
-    
-    ![][6]
-
-4.  Si estás usando CLI, desplácese hasta la `hello` directorio creado para el proyecto, luego a la `platforms/android` subdirectorio. Alternativamente, si utilizas el `create` utilidad de shell, simplemente vaya a la `hello` Directorio.
-
-5.  Pulse **Finish**.
-
- [6]: img/guide/platforms/android/eclipse_new_project.png
-
-Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
-
-1.  Haga clic en el directorio del proyecto.
-
-2.  En el cuadro de diálogo **Properties** resultante, seleccione **Android** desde el panel de navegación.
-
-3.  Para el proyecto de construir el destino, seleccione el nivel más alto de la API de Android instalado.
-
-4.  Haga clic en **OK**.
-
-5.  Seleccione **Clean** en el menú **Project**. Esto debería corregir todos los errores en el proyecto.
-
 ## Construir el proyecto
 
-Si utilizas la CLI en el desarrollo, el directorio del proyecto es de alto nivel `www` directorio contiene los archivos de origen. Ejecutar cualquiera de éstos dentro del directorio del proyecto para la reconstrucción de la aplicación:
+Si utilizas la CLI en desarrollo, directorio de nivel superior `www` del directorio proyecto contiene los archivos de origen. Ejecutar cualquiera de éstos dentro del directorio del proyecto para la reconstrucción de la aplicación:
 
-        $ cordova build # construir construcción todas las plataformas que fueron agregados $ cordova # androide construir depuración para Android sólo $ cordova construir android--debug # construir depuración paraAndroid sólo Android $ cordova construir--versión # construir versión para Android sólo
+        $ cordova build                   # build all platforms that were added
+        $ cordova build android           # build debug for only Android
+        $ cordova build android --debug   # build debug for only Android
+        $ cordova build android --release # build release for only Android
     
 
-Si está utilizando las herramientas de shell específicas para Android en desarrollo, hay un enfoque diferente. Una vez que se genera el proyecto, fuente de la aplicación por defecto está disponible en el `assets/www` subdirectorio. Los comandos están disponibles en su `cordova` subdirectorio.
+Si está utilizando las herramientas de shell específicas para Android en desarrollo, hay un enfoque diferente. Una vez que se genera el proyecto, fuente de la aplicación por defecto está disponible en el subdirectorio de `activos/www` . Los comandos están disponibles en su subdirectorio `cordova` .
 
-El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aquí está la sintaxis para Mac y Windows. El primer par de ejemplos generará información de depuración, y la segunda crea las aplicaciones para el lanzamiento:
+El comando `build` limpia archivos de proyecto y reconstruye la aplicación. Aquí está la sintaxis para Mac y Windows. El primer par de ejemplos generará información de depuración, y la segunda crea las aplicaciones para el lanzamiento:
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -136,150 +194,75 @@ El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aqu
         C:\path\to\project\cordova\build.bat --release
     
 
-Al construir para el lanzamiento, si añades las siguientes definiciones a tu `local.properties` de archivos, entonces tu APK firmado y alineada que estará listo para subir a la tienda de Google Play:
+## Desplegar la aplicación
 
-        Key.Store=/users/me/Developer/mykeystore.jks key.alias=mykeyalias
+Puede utilizar la utilidad CLI `cordova` para desplegar la aplicación en el emulador o el dispositivo desde la línea de comandos:
+
+        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova run android --device  #to deploy the app on a connected device
     
 
-Si el almacén de claves o la clave con alias tiene una contraseña, el script le pedirá la contraseña. No necesitas definir las contraseñas en un archivo de propiedades. Si quieres evitar el símbolo del sistema, se pueden definir en `local.properties` como `key.store.password` y `key.alias.password` . Ser conscientes de las preocupaciones de seguridad con esas claves si lo hace.
+De lo contrario, utilice la interfaz de shell alterno:
 
-## Configurar un emulador
-
-Se puede utilizar ya sea la `cordova` CLI utilidad o cáscara de Android-centrado de Cordova Herramientas para ejecutar una aplicación en un emulador. De cualquier manera, el SDK primero debe configurarse para mostrar al menos un dispositivo. Para ello, utilice el Android SDK Manager, una aplicación Java que funciona por separado del Eclipse. Hay dos maneras para abrirlo:
-
-1.  Ejecutar `android` en la línea de comandos.
-
-2.  Desde dentro de Eclipse, presione este icono de la barra de herramientas:
-    
-    ![][7]
-
- [7]: img/guide/platforms/android/eclipse_android_sdk_button.png
-
-Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de ejecución:
-
-![][8]
-
- [8]: img/guide/platforms/android/asdk_window.png
-
-Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
-
-![][9]
-
- [9]: img/guide/platforms/android/asdk_device.png
-
-Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
-
-![][10]
-
- [10]: img/guide/platforms/android/asdk_newAVD.png
-
-La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
-
-![][11]
-
- [11]: img/guide/platforms/android/asdk_avds.png
-
-Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
-
-![][12]
-
- [12]: img/guide/platforms/android/asdk_emulator.png
-
-## Desplegar en emulador
-
-En este punto se puede utilizar la `cordova` utilidad CLI para desplegar la aplicación en el emulador desde la línea de comandos:
-
-        $ cordova emular android
+        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run --device
     
 
-De lo contrario utilice la interfaz de shell alterno:
+Puede utilizar **cordova run android --list** para ver todos los destinos disponibles y **cordova run android --target = target_name** para ejecutar la aplicación en un dispositivo específico o un emulador (por ejemplo, `cordova run android --target = "Nexus4_emulator"`).
 
-        $ /path/to/project/cordova/run--emulador
-    
-
-En lugar de depender de cualquier emulador está habilitado actualmente dentro del SDK, puede hacer referencia a cada uno de los nombres que usted suministra:
-
-        $ /path/to/project/cordova/run--target = nombre
-    
+También puede utilizar **cordova run --help** para ver opciones adicionales para construir y correr.
 
 Esto empuja la aplicación a la pantalla de inicio y lo lanza:
 
-![][13]
-
- [13]: img/guide/platforms/android/emulator2x.png
-
-Cuando te `run` la aplicación, también `build` lo. Se pueden añadir adicional `--debug` , `--release` , y `--nobuild` banderas para controlar cómo se construye, o incluso si es necesaria una reconstrucción:
-
-        $ /path/to/project/cordova/run--emulador--nobuild
-    
-
-Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **Ejecutar como → aplicación para Android**. Se le podría especificar una AVD si no aparece ninguna ya abierto.
-
-Para una experiencia más rápida, puede utilizar el `Virtual Machine Acceleration` para mejorar la velocidad de ejecución. Muchas CPUs modernas ofrecen extensiones para ejecutar máquinas virtuales más eficientemente. Antes de usar este tipo de aceleración, es necesario determinar si CPU de su sistema actual de desarrollo, uno admite las siguientes tecnologías de virtualización:
-
-*   **Tecnología de virtualización Intel** (VT-x, vmx) → [Intel VT-x procesador lista soportada][14]
-*   **AMD Virtualization** (AMD-V, SVM), sólo se admite para Linux (desde mayo de 2006, todas las CPUs de AMD incluyen AMD-V, excepto Sempron).
-
- [14]: http://ark.intel.com/products/virtualizationtechnology
-
-Otra forma de averiguar si su procesador Intel compatible con la tecnología VT-x, es mediante la ejecución de la `Intel Processor Identification Utility` , para `Windows` puede descargarlo desde el [Centro de descarga][15]de Intel, o puede utilizar la [utilidad booteable][16], que es`OS Independent`.
-
- [15]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
- [16]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
-
-Después de instalar y ejecutar el `Intel Processor Identification Utility` sobre ventanas, obtendrá la ventana siguiente, con el fin de comprobar si su CPU es compatible con las tecnologías de virtualización:
-
-![][17]
-
- [17]: img/guide/platforms/android/intel_pid_util_620px.png
-
-Para acelerar el emulador, tienes que descargar e instalar uno o más `Intel x86 Atom` imágenes del sistema, así como la`Intel Hardware Accelerated Execution Manager (HAXM)`.
-
-Abra su Android SDK Manager y seleccione la `Intel x86 Atom` imagen del sistema, para cualquier versión que desea probar. Luego ir a `Extras` y seleccione `Intel x86 Emulator Accelerator (HAXM)` e instalar los paquetes:
-
 ![][18]
 
- [18]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [18]: img/guide/platforms/android/emulator2x.png
 
-Después de la descarga, ejecute el instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager` . **Nota**: `If you have any problems installing the package, you can find more information and step by step guidance check this` [artículo de Intel][19] .
+Cuando se `ejecuta` la aplicación, también se `construye` . Puede anexar adicional `--debug`, `--release`y `--nobuild` banderas para controlar cómo se construye, o incluso si es necesaria una reconstrucción:
 
- [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
-
-1.  Instalar una o más imágenes del sistema `x 86 de Intel Atom`, así como la `Acelerada ejecución administrador de Hardware de Intel`, disponible bajo **Extras**.
-
-2.  Ejecute al instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager`.
-
-3.  Crear un nuevo AVD con el objetivo establecido de una imagen de Intel.
-
-4.  Al iniciar el emulador, asegurar que no hay mensajes de error que indica la imposibilidad de cargar módulos HAX.
-
-## Desplegar en el dispositivo
-
-Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][20]y utilice un cable mini-USB para conectarlo a su sistema.
-
- [20]: http://developer.android.com/tools/device.html
-
-Puede utilizar este comando CLI para empujar la aplicación para el dispositivo:
-
-        $ cordova corre android
+        $ /path/to/project/cordova/run --emulator --nobuild
     
-
-.. .o utilice esta interfaz Android centrado en la cáscara:
-
-        $ /path/to/project/cordova/run--dispositivo
-    
-
-Con sin banderas especificados, el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo, de lo contrario se solicita para especificar un emulador.
-
-Para ejecutar la aplicación desde dentro de Eclipse, haga clic derecho en el proyecto y elija **Ejecutar como → aplicación para Android**.
 
 ## Otros comandos
 
 Los siguientes genera un registro detallado de la aplicación que se ejecuta:
 
-        $ /path/to/project/cordova/log C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log
+        C:\path\to\project\cordova\log.bat
     
 
 A continuación limpia los archivos del proyecto:
 
-        $ /path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean
+        C:\path\to\project\cordova\clean.bat
+    
+
+## Abra un nuevo proyecto en el SDK
+
+Una vez que la plataforma android se agrega a su proyecto, puede abrir desde dentro de [Android Studio][6]:
+
+1.  Inicie la aplicación **Android Studio** .
+
+2.  Seleccione **Importar proyecto (Eclipse ADT, Gradle, etc.)**.
+    
+    ![][19]
+
+3.  Seleccione la ubicación donde la plataforma android es almacenado (`su/proyecto/platform/android`).
+    
+    ![][20]
+
+4.  Para la pregunta `Gradle Sync` puede responder simplemente **Sí**.
+
+ [19]: img/guide/platforms/android/asdk_import_project.png
+ [20]: img/guide/platforms/android/asdk_import_select_location.png
+
+Listo ahora y puede construir y ejecutar la aplicación directamente desde `Android Studio`.
+
+![][21]
+
+ [21]: img/guide/platforms/android/asdk_import_done.png
+
+Ver [Resumen estudio Android][22] y [construcción y huyendo de Android Studio][23] para más detalles.
+
+ [22]: http://developer.android.com/tools/studio/index.html
+ [23]: http://developer.android.com/tools/building/building-studio.html

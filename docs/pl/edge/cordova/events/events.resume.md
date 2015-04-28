@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# CV
+# resume
 
 Zdarzenie fires, gdy aplikacja jest źródło tła.
 

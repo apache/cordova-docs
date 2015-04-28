@@ -65,6 +65,38 @@ Il `run` comando accetta i seguenti parametri *facoltativi* :
 
 Assicurarsi di creare almeno un Android Virtual Device, altrimenti viene richiesto di farlo con il `android` comando. Se più di una AVD è disponibile come un bersaglio, viene richiesto di selezionare uno. Per impostazione predefinita il `run` comando rileva un dispositivo collegato o un emulatore attualmente in esecuzione, se non viene trovato nessun dispositivo.
 
+## Firma l'App
+
+È possibile rivedere Android app firma requisiti qui: http://developer.android.com/tools/publishing/app-signing.html
+
+Per firmare un'applicazione, è necessario che i seguenti parametri: * Keystore (`-keystore`): percorso di un file binario che può contenere un insieme di chiavi. * Password Keystore (`-storePassword`): Password per il keystore * Alias (`-alias`): l'id specificando la chiave privata utilizzata per il canto. * Password (`-password`): Password della chiave privata specificato. * Tipo del keystore (`..--keystoreType`): pkcs12, jks (Default: rilevamento automatico basato sull'estensione di file) questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra a `build` o `run` script.
+
+In alternativa, è possibile specificare in un file di configurazione di compilazione (build.json) utilizzando l'argomento (`-buildConfig`). Ecco un esempio di un file di configurazione di generazione:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Per rilascio firma, possono essere escluse le password e il sistema di compilazione rilascerà un prompt che richiede la password.
+
+C'è anche il supporto di mescolare e abbinare gli argomenti della riga di comando e i parametri nel file build.json. Valori dagli argomenti della riga di comando avranno la precedenza. Questo può essere utile per specificare la password sulla riga di comando.
+
 ## Registrazione
 
         $ /path/to/project/cordova/log
@@ -87,7 +119,7 @@ A partire da cordova-android@4.0.0, progetto costruire utilizzando [Gradle][2]. 
 
 ### Proprietà Gradle
 
-Queste [proprietà][3] possono essere impostate per personalizzare la compilazione:
+Queste [Proprietà][3] possono essere impostate per personalizzare la compilazione:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
@@ -143,7 +175,7 @@ Se avete bisogno di personalizzare `build.gradle`, piuttosto che modificare dire
     }
     
 
-Si noti che plugin può includere anche file di `build-extras.gradle` via:
+Si noti che plugin può includere anche file di `compilazione-extras.gradle` via:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

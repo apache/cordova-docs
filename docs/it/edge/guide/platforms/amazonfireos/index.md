@@ -64,7 +64,7 @@ Su Mac, Linux o altre piattaforme Unix-like, è possibile utilizzare un editor d
 
 Questo espone strumenti SDK in windows terminal inaugurato di recente. In caso contrario eseguire questo per renderli disponibili nella sessione corrente:
 
-    $ fonte ~/.bash_profile
+    $ source ~/.bash_profile
     
 
 #### Percorso di Windows

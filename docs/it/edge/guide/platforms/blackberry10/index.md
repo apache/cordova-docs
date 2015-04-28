@@ -77,7 +77,7 @@ Su Mac e Linux:
 
 *   Eseguire le operazioni seguenti per applicare la modifica nella sessione corrente:
     
-        $ fonte ~/.bash_profile
+        $ source ~/.bash_profile
         
 
 Se hai qualsiasi problema ambientale, utilizzando il SDK nativo dalla riga di comando, eseguire il file appropriato per la vostra piattaforma, situato all'interno del percorso di installazione:

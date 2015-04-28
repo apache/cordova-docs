@@ -17,9 +17,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Cordova naves con un mínimo conjunto de APIs, y proyectos añadir qué APIs adicionales que necesitan a través de plugins.
 
-Usted puede buscar a través de todos los plugins existentes (incluyendo plugins de terceros) usando el [Plugin Registry][1].
+Usted puede buscar a través de todos los plugins existentes (incluidos los plugins de terceros) en [npm][1].
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 El conjunto tradicional de núcleo Cordova plugins son como sigue:
 
@@ -99,24 +99,34 @@ El conjunto tradicional de núcleo Cordova plugins son como sigue:
     
     > Una API para mostrar, ocultando y configurar fondo de barra de estado.
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [Lista blanca][21]
+    
+    > Un plugin para peticiones de red blanca. Debe instalar para tener cualquier petición de red en sus aplicaciones.
 
-Las traducciones de Inglés de estos documentos plugin pueden encontrarse mirando las versiones más antiguas de la documentación de Córdoba. Utilice el menú desplegable en el muy superior derecha de esta página para cambiar las versiones.
+*   [Legado Whitelist][22]
+    
+    > Un plugin para usar el viejo estilo de lista blanca antes de que era arrancado y cambió en el complemento de la lista blanca.
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+Las traducciones de Inglés de estos documentos plugin pueden encontrarse visitando los repositorios github plugin y buscando en la carpeta docs

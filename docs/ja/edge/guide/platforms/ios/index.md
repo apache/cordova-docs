@@ -33,34 +33,62 @@ Apple ® ツール インテル ベースの Mac OS X オペレーティング �
 
  [1]: https://developer.apple.com/programs/ios/
 
+[Ios の sim][2]と[ios-deploy][3]ツール - iOS のシミュレータに iOS アプリと iOS デバイスをコマンドラインから起動することができます。
+
+ [2]: https://www.npmjs.org/package/ios-sim
+ [3]: https://www.npmjs.org/package/ios-deploy
+
 ## SDK をインストールします。
 
 Xcode をダウンロードする 2 つの方法があります。
 
-*   から[App Store][2]、 **App Store**のアプリケーションで「Xcode」を捜すことによって利用できます。
+*   から[App Store][4]、 **App Store**のアプリケーションで「Xcode」を捜すことによって利用できます。
 
-*   [Apple の開発者のダウンロード][3]アップルの開発者として登録する必要があります。
+*   [Apple の開発者のダウンロード][5]アップルの開発者として登録する必要があります。
 
- [2]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
- [3]: https://developer.apple.com/downloads/index.action
+ [4]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
+ [5]: https://developer.apple.com/downloads/index.action
 
 Xcode をインストールすると、いくつかのコマンド ライン ツールはコルドバを実行するを有効にする必要があります。 **Xcode**メニューから**環境設定**の [**ダウンロード**] タブを選択します。 [**コンポーネント**] パネルから**コマンド ライン ツール**の一覧の横にある [**インストール**] ボタンを押します。
 
-## SDK でプロジェクトを開く
+## インストール展開ツール
 
-使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+Comman ライン ・ ターミナルから実行します。
 
-        $ cordova create hello com.example.hello "HelloWorld"
-        $ cd hello
-        $ cordova platform add ios
-        $ cordova prepare              # or "cordova build"
+        $ npm install -g ios-sim
+        $ npm install -g ios-deploy
     
 
-作成後は、Xcode の内でからそれを開くことができます。ダブルクリックして開き、 `hello/platforms/ios/hello.xcodeproj` ファイル。このような画面になります。
+## 新しいプロジェクトを作成します。
 
-![][4]
+コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトをセットアップする`コルドバ`ユーティリティを使用します。たとえば、ソース コード ディレクトリ: で
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+        $ コルドバ作成こんにちは com.example.hello"HelloWorld"$ cd こんにちは $ コルドバ プラットフォームは、ios を追加 $ コルドバ準備 # または"構築コルドバ"
+    
+
+## アプリを展開します。
+
+接続されている iOS デバイス上のアプリを展開。
+
+        $ cordova run ios --device
+    
+
+デフォルト iOS エミュレーター上でアプリケーションを展開するには
+
+        $ cordova emulate ios
+    
+
+使用することができます**cordova run ios --list**を見るすべての利用可能なターゲットと**cordova run ios --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run ios --target="iPhone-6"`).
+
+**コルドバの実行 - ヘルプ**を使用して、追加のビルドを参照してください、オプションを実行することもできます。
+
+## SDK でプロジェクトを開く
+
+Ios プラットフォームをプロジェクトに追加すると、Xcode の内でからそれを開くことができます。`Hello/platforms/ios/hello.xcodeproj`ファイルを開くをダブルクリックします。このような画面になります。
+
+![][6]
+
+ [6]: img/guide/platforms/ios/helloworld_project.png
 
 ## エミュレーターへの展開します。
 
@@ -72,32 +100,32 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
 
 3.  ツールバーの**配色**メニューから目的のデバイスを選択します、iPhone などとして 6.0 シミュレータはここに強調：
     
-    ![][5]
+    ![][7]
 
 4.  **スキーム**の左側に同じツールバーに表示される**実行**ボタンを押します。 ビルド、配置、エミュレーターでアプリケーションを実行します。 独立したエミュレータ アプリケーションは、アプリを表示するが開きます。
     
-    ![][6]
+    ![][8]
     
     1 つだけのエミュレーターでは一度に実行可能性がありますので、別のエミュレーターでアプリケーションをテストする場合は、エミュレーターのアプリケーションを終了し、Xcode の内で別のターゲットを実行する必要があります。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode は、iPhone および iPad の最新バージョン用のエミュレーターが付属しています。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
 ## デバイスへの配置します。
 
-デバイスに展開するさまざまな要件の詳細については Apple の[iOS 用ツール ワークフロー ガイド][7]の*構成の開発と配布の資産*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
+デバイスに展開するさまざまな要件の詳細については Apple の[iOS 用ツール ワークフロー ガイド][9]の*構成の開発と配布の資産*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
 
- [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
 1.  アップルの iOS 開発者プログラムに参加します。
 
-2.  *プロビジョニング プロファイル* [iOS プロビジョニング ポータル][8]内を作成します。 その*開発のプロビジョニングのアシスタント*を使用して作成し、プロファイルをインストールすることができ、Xcode の証明書が必要です。
+2.  *プロビジョニング プロファイル* [iOS プロビジョニング ポータル][10]内を作成します。 その*開発のプロビジョニングのアシスタント*を使用して作成し、プロファイルをインストールすることができ、Xcode の証明書が必要です。
 
 3.  プロジェクトの設定内の [*コード署名*] セクションの*コード署名 Id*プロビジョニング プロファイル名に設定されていることを確認します。
 
- [8]: https://developer.apple.com/ios/manage/overview/index.action
+ [10]: https://developer.apple.com/ios/manage/overview/index.action
 
 デバイスに展開します。
 
@@ -113,11 +141,26 @@ Xcode は、iPhone および iPad の最新バージョン用のエミュレー�
 
 **警告**: アプリケーション プログラミング インターフェイス (API) を変更または別の API に置き換え、それとしてマークされますが*使用されなくなりました*。 API は、短期的に動作しますが、最終的に削除されます。 これらの非推奨インターフェイスは Apache コルドバに反映され、Xcode 問題それらについての警告をビルドしてアプリケーションを配置するとき。
 
-Xcode の警告について、 `invokeString` メソッドは、カスタム URL からアプリを起動する機能にかかわる。 カスタム URL から読み込むためのメカニズムが変更されており、このコードはまだ存在している後方コルドバの古いバージョンで作成されたアプリの機能を提供します。 これらの警告を無視することができますので、サンプル アプリはこの機能を使用しません。 これらの警告が表示されないように、非推奨となった invokeString API を参照するコードを削除します。
+Xcode の警告`invokeString`方法についてカスタム URL からアプリケーションを起動する機能にかかわる。 カスタム URL から読み込むためのメカニズムが変更されており、このコードはまだ存在している後方コルドバの古いバージョンで作成されたアプリの機能を提供します。 これらの警告を無視することができますので、サンプル アプリはこの機能を使用しません。 これらの警告が表示されないように、非推奨となった invokeString API を参照するコードを削除します。
 
 *   *Classes/MainViewController.m*ファイルを編集して、コードの次のブロックを囲む `/*` および `*/` 下図のように、そのタイプのコメント**コマンドの**ファイルを保存します。
     
-        (void) webViewDidFinishLoad:(UIWebView*) theWebView {//___PROJECTNAME__ Info.plist を処理するプロトコルを指定した場合にのみ有効/* 場合 (self.invokeString) {//deviceready NSLog を受信したときの js でアクセスすることができますので、deviceready イベントが発生する前に渡されます (@"非推奨： window.invokeString - 常によばれるカスタム スキームの url を使用してアプリを起動したとき、代わりに window.handleOpenURL(url) 関数を使用します");。NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"% @\「;」、self.invokeString];[theWebView stringByEvaluatingJavaScriptFromString:jsString];} *//黒の基本色/背景に一致するネイティブ アプリ theWebView.backgroundColor = [UIColor blackColor];[スーパー webViewDidFinishLoad: theWebView] を返します。}
+        (void)webViewDidFinishLoad:(UIWebView*)theWebView
+        {
+        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+        /*
+        if (self.invokeString) {
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+          NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+          [theWebView stringByEvaluatingJavaScriptFromString:jsString];
+        }
+        */
+        // Black base color for background matches the native apps
+        theWebView.backgroundColor = [UIColor blackColor];
+        
+        return [super webViewDidFinishLoad:theWebView];
+        }
         
 
 *   下図のように、2 つのスラッシュを挿入して次の行をコメント アウト、 *Classes/AppViewDelegate.m*ファイルを編集し、**コマンドの**ファイルを保存する入力します。
@@ -135,30 +178,30 @@ Xcode の警告について、 `invokeString` メソッドは、カスタム URL
 
 2.  **派生データ**] セクションで、**詳細設定**ボタンを押しますをここに示すように**ビルド場所**として**ユニークな**を選択します。
     
-    ![][9]
+    ![][11]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: img/guide/platforms/ios/xcode_build_location.png
 
 これは新しい Xcode のインストールの既定の設定が異なる Xcode の旧バージョンからのアップグレード、次を設定可能性があります。
 
 詳細は、Apple のドキュメントを参照してください。
 
-*   [開発開始 iOS アプリ今日][10]iOS アプリを開発するための手順の概要を提供します。
+*   [開発開始 iOS アプリ今日][12]iOS アプリを開発するための手順の概要を提供します。
 
-*   [メンバー センターのホーム ページ][11]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布ガイドおよびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
+*   [メンバー センターのホーム ページ][13]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布ガイドおよびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
 
-*   [IOS 用ツール ワークフロー ガイド][7]
+*   [IOS 用ツール ワークフロー ガイド][9]
 
-*   [Xcode 4 ユーザー ガイド][12]
+*   [Xcode ユーザー ガイド][14]
 
-*   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][13]
+*   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][15]
 
-*   [Xcode 選択コマンド][14]が複数ある場合、Xcode の正しいバージョンを指定することができますがインストールされています。
+*   [Xcode 選択コマンド][16]が複数ある場合、Xcode の正しいバージョンを指定することができますがインストールされています。
 
- [10]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
- [11]: https://developer.apple.com/membercenter/index.action
- [12]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [13]: https://developer.apple.com/videos/wwdc/2012/
- [14]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
+ [13]: https://developer.apple.com/membercenter/index.action
+ [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [15]: https://developer.apple.com/videos/wwdc/2012/
+ [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ® アップル ®、Xcode ® アプリ Store℠、iPad ®、iPhone ®、iPod ® ファインダー ® はアップル社の商標です）

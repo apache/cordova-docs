@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 일시 중지
+# pause
 
 이벤트는 응용 프로그램은 배경으로 끼워 넣을 때 발생 합니다.
 

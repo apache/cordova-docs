@@ -23,7 +23,7 @@ Ce guide montre comment modifier des projets iOS mise à niveau d'anciennes vers
 
 Pour les projets non-CLI, exécutez :
 
-        bin/mise à jour chemin/de/projet
+        bin/update path/to/project
     
 
 Pour les projets de la CLI :
@@ -36,7 +36,7 @@ Pour les projets de la CLI :
 
 Pour les projets non-CLI, exécutez :
 
-        bin/mise à jour chemin/de/projet
+        bin/update path/to/project
     
 
 Pour les projets de la CLI :
@@ -49,7 +49,7 @@ Pour les projets de la CLI :
 
 Pour les projets non-CLI, exécutez :
 
-        bin/mise à jour chemin/de/projet
+        bin/update path/to/project
     
 
 Pour les projets de la CLI :
@@ -62,7 +62,7 @@ Pour les projets de la CLI :
 
 Pour les projets non-CLI, exécutez :
 
-        bin/mise à jour chemin/de/projet
+        bin/update path/to/project
     
 
 Pour les projets de la CLI :

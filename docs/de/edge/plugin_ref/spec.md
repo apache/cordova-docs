@@ -320,9 +320,28 @@ Es unterstützt die folgenden Attribute:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+Die Windows-Plattform unterstützt zwei zusätzliche Attribute (beide optional) Wenn die meta name `package.appxmanifest`beeinflussen:
+
+Das `device-target` -Attribut angibt, der sollte nur aufgenommen werden, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind, `win`, `phone`oder `all`.
+
+Das `versions` -Attribut gibt an, dass die app Manifeste für bestimmte Windows-Versionen nur für Versionen geändert werden sollte, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
+
+Beispiele für die Verwendung dieser Windows-spezifische Attribute:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+Das obige Beispiel setzt Pre-8.1-Plattformen (Windows 8 speziell) erfordern die Gerätefunktion `Webcam` und die allgemeine `PicturesLibrary` -Fähigkeit und Anwenden der Gerätefunktion `Webcam` nur auf Windows-8.1-Projekte, die für Windows Phone erstellen. Windows Desktop 8.1-Systemen sind unverändert.
+
 ## *Plugins-plist* Element
 
-Dies ist *veraltet* , da es nur Cordova-Ios 2.2.0 und unterhalb gilt. Verwendung der `<config-file>` Tag für neuere Versionen von Cordova.
+Dies ist *veraltet* , da es nur Cordova-Ios 2.2.0 und unterhalb gilt. Verwenden Sie das `<config-file>` -Tag, neuere Versionen von Cordova.
 
 Beispiel:
 
@@ -333,7 +352,7 @@ Beispiel:
     </config-file>
     
 
-Gibt einen Schlüssel und Wert auf den richtigen anfügen `AppInfo.plist` Datei in einem iOS-Cordova-Projekt. Zum Beispiel:
+Gibt einen Schlüssel und Wert auf die richtige `AppInfo.plist` -Datei in einem iOS-Cordova-Projekt anfügen. Zum Beispiel:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ Wie Quelldateien, aber speziell für Plattformen wie iOS unterscheiden, die Quel
 
 Android-Beispiel:
 
-    < src="FooPluginStrings.xml Ressource-Datei" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *Lib-Datei* Element
@@ -366,7 +385,7 @@ Unterstützte Attribute:
 
 *   `arch`: Die Architektur, für die die `.so` Datei erstellt wurde, entweder `device` oder`simulator`.
 
-Für die Windows-Plattform erlaubt das Element `<lib-file >` die Einbeziehung von einem `< SDKReference >` in die generierten Windows-Projektdateien.
+Für die Windows-Plattform erlaubt das Element `<lib-file>` die Einbeziehung von einem `< SDKReference >` in die generierten Windows-Projektdateien.
 
 Unterstützte Attribute:
 
@@ -374,7 +393,7 @@ Unterstützte Attribute:
 
 *   `arch`: gibt an, dass der `< SDKReference >` nur eingeschlossen werden soll, wenn für die angegebene Architektur erstellen. Unterstützte Werte sind `x86`, `x64` oder `ARM`.
 
-*   `target`: gibt an, dass der `< SDKReference >` nur eingeschlossen werden sollen, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind `win` (oder `Windows`), `phone` oder `all`.
+*   `device-target`: gibt an, dass der `< SDKReference >` nur eingeschlossen werden sollen, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind zu `win` (oder `windows`), `phone` oder `all`.
 
 *   `versions`: gibt an, dass die `< SDKReference >` nur eingeschlossen werden soll, wenn für Versionen zu erstellen, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
 
@@ -398,13 +417,13 @@ Beispiele:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-Das `src`-Attribut identifiziert Rahmen, welche Plugman versucht die Cordova-Projekt in der richtigen Weise für eine bestimmte Plattform hinzu.
+Das `src` -Attribut identifiziert Rahmen, welche Plugman versucht die Cordova-Projekt in der richtigen Weise für eine bestimmte Plattform hinzu.
 
-Das optionale `weak`-Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist `false`.
+Das optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist `false`.
 
-Das optional `custom` Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist `false`. ***Auf Android*** gibt es wie **src** zu behandeln. Wenn man `wahre` **src** der relative Pfad von der Application Project-Verzeichnis, sonst--aus dem Android SDK-Verzeichnis.
+Das optional `custom` Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist `false`. ***Auf Android*** gibt es wie **src**zu behandeln. Wenn man `true` **src** der relative Pfad von der Application Project-Verzeichnis, sonst--aus dem Android SDK-Verzeichnis.
 
-Das optionale `type`-Attribut ist eine Zeichenfolge, die den Typ des Rahmens hinzu. Derzeit nur `projectReference` wird unterstützt und nur für Windows. Mit `custom='true'` und `type='projectReference'` wird, fügen einen Verweis auf das Projekt, das die Kompilierung gutgeschrieben + Schritte des Projektes Cordova zu verknüpfen. Dies ist im Grunde die einzige Möglichkeit derzeit ein 'custom' Rahmen mehrere Architekturen angesprochen werden kann, da sie explizit als eine Abhängigkeit von der verweisenden Cordova-Anwendung erstellt werden.
+Das optionale `type` -Attribut ist eine Zeichenfolge, die den Typ des Rahmens hinzu. Derzeit nur `projectReference` wird unterstützt und nur für Windows. Mit `custom='true'` und `type='projectReference'` wird, fügen einen Verweis auf das Projekt, das die Kompilierung gutgeschrieben + Schritte des Projektes Cordova zu verknüpfen. Dies ist im Grunde die einzige Möglichkeit derzeit ein 'custom' Rahmen mehrere Architekturen angesprochen werden kann, da sie explizit als eine Abhängigkeit von der verweisenden Cordova-Anwendung erstellt werden.
 
 Das optionale `parent` Attribut wird derzeit nur auf Android unterstützt. Er legt den relativen Pfad auf das Verzeichnis, in das Teilprojekt, der den Verweis hinzugefügt. Der Standardwert ist `.`, d. h. das Anwendungsprojekt. Es ermöglicht das Hinzufügen von Verweisen zwischen Teilprojekte wie in diesem Beispiel:
 
@@ -414,11 +433,11 @@ Das optionale `parent` Attribut wird derzeit nur auf Android unterstützt. Er le
 
 Die Windows-Plattform unterstützt drei zusätzliche Attribute (optional) zur Verfeinerung beim Rahmen eingeschlossen werden sollen:
 
-Das `arch`-Attribut gibt an, dass Rahmen nur eingeschlossen werden soll, wenn für die angegebene Architektur erstellen. Unterstützte Werte sind `x86`, `x64` oder `ARM`.
+Das `arch` -Attribut gibt an, dass Rahmen nur eingeschlossen werden soll, wenn für die angegebene Architektur erstellen. Unterstützte Werte sind `x86`, `x64` oder `ARM`.
 
-Das `target`-Attribut gibt an, dass die Framwork nur eingeschlossen werden sollen, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind `win` (oder `Windows`), `phone` oder `all`.
+Das `device-target` -Attribut gibt an, dass Rahmen nur eingeschlossen werden soll, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind zu `win` (oder `windows`), `phone` oder `all`.
 
-Das `versions`-Attribut gibt an, dass der Rahmen nur eingeschlossen werden soll, wenn für Versionen zu erstellen, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
+Das `versions` -Attribut gibt an, dass der Rahmen nur eingeschlossen werden soll, wenn für Versionen zu erstellen, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
 
 Beispiele für die Verwendung dieser Windows-spezifische Attribute:
 
@@ -435,10 +454,7 @@ Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätz
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    Sie müssen die 'local.properties' die folgende Zeile hinzu: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / Info >
     
 
 ## Variablen
@@ -455,14 +471,14 @@ In solchen Fällen, wo aus der Datei `plugin.xml` eingefügte Inhalt nicht vor d
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-Plugman Variablenreferenzen mit dem angegebenen Wert oder eine leere Zeichenfolge ersetzt, wenn keine gefunden. Der Wert der Variable Referenz kann erkannt (in diesem Fall aus der `AndroidManifest.xml`-Datei) oder vom Benutzer des Tools angegeben werden; der genaue Vorgang ist abhängig von der speziellen Werkzeug.
+Plugman Variablenreferenzen mit dem angegebenen Wert oder eine leere Zeichenfolge ersetzt, wenn keine gefunden. Der Wert der Variable Referenz kann erkannt (in diesem Fall aus der `AndroidManifest.xml` -Datei) oder vom Benutzer des Tools angegeben werden; der genaue Vorgang ist abhängig von der speziellen Werkzeug.
 
 Plugman kann Benutzer ein Plugin erforderlichen Variablen angeben anfordern. API-Schlüssel für C2M und Google Maps können beispielsweise als Befehlszeilenargument angegeben werden:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Um die Variable obligatorisch zu machen, muss das `<plattform>` Tag ein `<preference>`-Tag enthalten. Zum Beispiel:
+Um die Variable obligatorisch zu machen, muss das `< Plattform >` Tag ein `< Präferenz >` -Tag enthalten. Zum Beispiel:
 
     <preference name="API_KEY" />
     
@@ -473,4 +489,4 @@ Bestimmten Variablennamen sollte reserviert werden, wie unten aufgeführt.
 
 ## $PACKAGE_NAME
 
-Der Reverse-Domäne Stil eindeutige Bezeichner für das Paket, `CFBundleIdentifier` in iOS oder das `Paket`-Attribut des Elements auf der obersten Ebene `manifest` in einer Datei `AndroidManifest.xml` entspricht.
+Der Reverse-Domäne Stil eindeutige Bezeichner für das Paket, `CFBundleIdentifier` in iOS oder das `Paket` -Attribut des Elements auf der obersten Ebene `manifestieren` in einer Datei `AndroidManifest.xml` entspricht.
