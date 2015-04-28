@@ -554,24 +554,36 @@ Examples:
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
-Examples:
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your
+plugin files (thus it is not a system framework).
+
+### _framework_ for iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
-
-The `src` attribute identifies the framework, which plugman attempts
-to add to the Cordova project, in the correct fashion for a given
-platform.
 
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your
-plugin files (thus it is not a system framework). The default is `false`.  ***On Android*** it specifies how to treat
-**src**. If `true` **src** is a relative path from the application project's directory, otherwise -- from the Android
-SDK directory.
+### _framework_ for Android
+
+On Android (as of cordova-android@4.0.0), _framework_ tags are used to include Maven dependencies, or to include bundled library projects.
+
+Examples:
+
+        <!-- Depend on latest version of GCM from play services -->
+        <framework src="com.google.android.gms:play-services-gcm" />
+        <!-- Depend on v21 of appcompat-v7 support library -->
+        <framework src="com.android.support:appcompat-v7:21+" />
+        <!-- Depend on library project included in plugin -->
+	<framework src="relative/path/FeedbackLib" custom="true" />
+
+_framework_  can also be used to have custom .gradle files sub-included into the main project's .gradle file:
+
+	<framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+
+For pre-android@4.0.0 (ANT-based projects):
 
 The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is
 supported and only for Windows.  Using `custom='true'` and `type='projectReference'` will add a reference to the project
@@ -579,14 +591,17 @@ which will be added to the compile+link steps of the cordova project.  This esse
 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing
 cordova application.
 
-The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory
-containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to
-add references between sub projects like in this example:
+The optional `parent` sets the relative path to the directory containing the
+sub-project to which to add the reference. The default is `.`, i.e. the
+application project. It allows to add references between sub projects like in this example:
 
-	<framework src="FeedbackLib" custom="true" />
 	<framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
 
+### _framework_ for Windows
+
 The Windows platform supports three additional attributes (all optional) to refine when the framework should be included:
+
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
 
 The `arch` attribute indicates that the framework should only be included when building for the specified architecture.
 Supported values are `x86`, `x64` or `ARM`.
@@ -625,16 +640,14 @@ dependent on the target application. For example, to register for C2DM
 on Android, an app whose package id is `com.alunny.message` would
 require a permission such as:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
 
 In such cases where the content inserted from the `plugin.xml` file is
 not known ahead of time, variables can be indicated by a dollar-sign
 followed by a series of capital letters, digits, or underscores. For
 the above example, the `plugin.xml` file would include this tag:
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
 
 plugman replaces variable references with the specified value, or the
 empty string if not found. The value of the variable reference may be
