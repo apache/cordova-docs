@@ -54,7 +54,11 @@ You need the following:
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
   The Pro version is necessary to run the device emulator.
 
-- The [Windows Phone SDK](https://dev.windowsphone.com/en-us/downloadsdk).
+- The [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471).
+
+- In order to deploy via the command-line with the Windows Phone 8.0 SDK,
+[Visual Studio 2012 Update 2](https://support.microsoft.com/en-us/kb/2797912)
+must be installed.
 
 To develop Cordova apps for Windows Phone devices, you may use a PC
 running Windows, but you may also develop on a Mac, either by running
