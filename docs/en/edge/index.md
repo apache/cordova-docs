@@ -74,6 +74,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>An overview of native storage options.</span>
         </li>
         <li>
+            <h2>Hooks Guide</h2>
+            <span>Extend default Cordova functionality by adding custom scripts.</span>
+        </li>
+        <li>
             <h2>Next Steps</h2>
             <span>A look at topics that new Cordova developers will encounter.</span>
         </li>

@@ -236,3 +236,12 @@ Fullscreen preference:
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+
+## The _hook_ Element
+
+Represents your custom script which will be called by Cordova when
+certain action occurs (for example, after plugin is added or platform
+prepare logic is invoked). This is useful when you need to extend
+default Cordova functionality. See Hooks Guide for more information.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

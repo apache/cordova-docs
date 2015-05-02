@@ -633,6 +633,15 @@ plugman's scope.  Examples:
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>
 
+## _hook_ Element
+
+Represents your custom script which will be called by Cordova when
+certain action occurs (for example, after plugin is added or platform
+prepare logic is invoked). This is useful when you need to extend
+default Cordova functionality. See Hooks Guide for more information.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+
 ## Variables
 
 In certain cases, a plugin may need to make configuration changes
