@@ -88,6 +88,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Windows Platform Guide
 * Windows Plugins
+* Windows Packaging
 * Upgrading Windows 8
 
 ## Tizen
