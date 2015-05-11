@@ -246,7 +246,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * только Windows Phone 8.1
         </td>
         
         <td data-col="tizen"       class="y">
@@ -614,7 +615,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -756,6 +757,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Строка состояния</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="n">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="y">
+          только Windows Phone 8.1
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="cordova_storage_storage.md.html">Хранилище</a>
         </th>
         
@@ -778,11 +813,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage и indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage и indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="tizen"       class="y">
@@ -815,7 +850,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
+          * только Windows Phone 8.1
         </td>
         
         <td data-col="tizen"       class="n">

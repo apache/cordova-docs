@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows плагины
+# Плагины Windows
 
 Этот раздел содержит сведения о том, как реализовать плагин для использования в приложении Магазин Windows. Прежде чем читать это, увидеть приложения плагины обзор структуры плагина и его общий интерфейс JavaScript. Этот раздел продолжает демонстрировать образец *эхо* плагин, который общается с webview Кордова на родной платформе и обратно.
 
@@ -201,4 +201,4 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom"); Переезд это 
 
 > cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
-HTTPS://GitHub.com/purplecabbage/Cordova-runtimecomp-echoplug
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

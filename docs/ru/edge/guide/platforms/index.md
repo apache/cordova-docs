@@ -47,8 +47,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Руководство по инструментам командной строки BlackBerry 10
 *   Конфигурации BlackBerry 10
 *   Плагины для BlackBerry 10
-*   Средства командной строки для BlackBerry 10
-*   Обновление для BlackBerry 10
+*   Модернизация BlackBerry 10
 
 ## Firefox OS
 
@@ -57,7 +56,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ## iOS
 
 *   Руководство для платформы iOS
-*   iOS оболочки инструмент руководство
+*   Руководство по инструментам командной строки iOS
 *   Конфигурация iOS
 *   Плагины для iOS
 *   WebViews в iOS

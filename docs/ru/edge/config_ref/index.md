@@ -107,13 +107,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation` позволяет заблокировать поворот приложение при изменении положения устройства. Возможные значения `default`, `landscape`, или `portrait` . Пример:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **Примечание**: `default` значение означает что разрешены *обе* ориентации, альбомная и портретная. Если вы хотите использовать настройки по умолчанию для каждой платформы (обычно только для портретная ориентация), удалите этот элемент из файла `config.xml`.
-
 ## Много-платформенный настройки
 
 Следующие параметры применяются для более чем одной платформы, но не ко всем из них:
@@ -138,6 +131,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         
     
     Применяется к iOS и BlackBerry.
+
+*   `Orientation` (строка, по умолчанию `default`): позволяет вам заблокировать ориентацию и предотвратить интерфейс от вращения в ответ на изменения в ориентации. Возможные значения `default`, `landscape`, или `portrait`. Пример:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    Кроме того можно указать любое значение платформо-зависимое значение для ориентации, если вы разместите элемент `<preference>` внутри элемента `<platform>`:
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    Применяется к Android, iOS, WP8, Amazon Fire OS и Firefox OS.
+    
+    **Примечание**: Значение `default` означает что Cordova удалит предпочитаемое значение orientation из файла конфигурации/манифеста платформы позволяя платформе использовать свое поведение по умолчанию.
+
+Значение «default» позволяет портретный и альбомный режимы - только после реализации функции обратного вызова. Я мог бы возможно повторно перефразировать это следующим образом:
+
+Для iOS ориентация может программно контролироваться путем определения Javascript функции обратного вызова для window:
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
 
 ## Элемент *feature*
 

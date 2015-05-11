@@ -65,7 +65,7 @@ Android
          </platform>
     
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
@@ -84,8 +84,34 @@ Firefox OS
 
 iOS
 
-         < имя платформы = «ios» ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < значок src="res/ios/icon-60.png» ширина = «60» Высота = «60» / >< icon src = ширина «res/ios/icon-60@2x.png» = «120» Высота = «120» / ><!--iPad--> < значок src="res/ios/icon-76.png» ширина = "76" высота = "76" / >< icon src = ширина «res/ios/icon-76@2x.png» = «152» высота = «152» / ><!----> iOS 6.1 <!----> значок Spotlight < значок src="res/ios/icon-40.png» ширина = «40» высота = «40» / >
-                  < icon src = ширина «res/ios/icon-40@2x.png» = «80» высота = «80» / ><!--iPhone / iPod Touch--> < значок src="res/ios/icon.png» ширина = «57» высота = «57» / >< icon src = ширина «res/ios/icon@2x.png» = «114» высота = «114» / ><!--iPad--> < значок src="res/ios/icon-72.png» Ширина = «72» высота = «72» / >< icon src = ширина «res/ios/icon-72@2x.png» = «144» высота = «144» / ><!--iPhone Spotlight и значок "настройки"--> < значок src="res/ios/icon-small.png» ширина = высота «29» = «29» />< icon src = ширина «res/ios/icon-small@2x.png» = «58» высота = «58» / ><!--iPad Spotlight и значок "настройки"--> < значок src="res/ios/icon-50.png» ширина ="50"высота ="50"/ >< icon src = «res/ios/icon-50@2x.png» ширина ="100"высота ="100"/ >< / платформа >
+         <platform name="ios">
+                  <!-- iOS 8.0+ -->
+                  <!-- iPhone 6 Plus  -->
+                  <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
     
 
 Tizen
@@ -143,6 +169,9 @@ Windows8
         <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
         <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
         <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
     
     <platform name="wp8">

@@ -38,4 +38,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-После выполнения этих шагов, вы готовы к установке Windows Phone SDK. В руководстве Windows Phone 8 платформа для деталей.
+После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите Руководство для платформы Windows Phone 8 для подробностей.
