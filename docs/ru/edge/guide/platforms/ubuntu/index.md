@@ -89,6 +89,6 @@ Ubuntu является хорошо известна своей среды ра
     $ cordova run ubuntu
     
 
-### Добавить плагин статус батареи
+### Добавление плагина камеры
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

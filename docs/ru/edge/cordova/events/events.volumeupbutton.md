@@ -33,6 +33,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ## Поддерживаемые платформы
 
 *   BlackBerry 10
+*   Android
 
 ## Краткий пример
 

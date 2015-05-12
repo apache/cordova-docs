@@ -69,6 +69,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Убедитесь, что вы создали по крайней мере одно виртуальное устройство Android, в противном случае вам будет предложено сделать это с помощью команды `android`. Если несколько AVD доступны как цель, вам будет предложено выбрать одно из них. По умолчанию команда `run` определяет подключенное устройство, или в настоящее время работающий эмулятор, если устройство не найдено.
 
+## Подпись приложения
+
+Вы можете просмотреть требования для подписанния Android приложений: http://developer.android.com/tools/publishing/app-signing.html
+
+Чтобы подписать приложение, необходимо следующие параметры:  * Keystore (`--keystore`): путь к двоичному файлу, который может содержать набор ключей. * Keystore password (`--storePassword`): пароль для хранилища ключей * Alias (`--alias`): id определеяющий закрытый ключ, используемый для подписания. * Password (`--password`): пароль для указанного закрытого ключа. * Type of the keystore (`--keystoreType`): pkcs12, jks (по умолчанию: автоматическое определение на основе расширения файла) эти параметры могут быть заданы с помощью аргументов командной строки выше для скриптов `build` или `run`.
+
+Кроме того их можно указать в файле конфигурации сборки (build.json) с помощью аргумента (`--buildConfig`). Ниже приведен пример файла конфигурации построения:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Для подписи релизной версии, пароли могут быть исключены и система построения будет выдавать запрос на пароль.
+
+Существует также поддержка смешивать аргументы командной строки и параметры в файле build.json. Приоритет будут получать значения из аргументов командной строки. Это может быть полезно для задания паролей в командной строке.
+
 ## Ведение журнала
 
         $ /path/to/project/cordova/log
@@ -83,13 +115,76 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Ручное использование муравей
+## Сборка с Gradle
 
-Если вы хотите позвонить муравей непосредственно из командной строки, такие как `ant debug install` , вам нужно указать дополнительные параметры в команду ant:
+Начиная с cordova-android@4.0.0, сборка проекта использует [Gradle][2]. Для инструкций по построению с помощью ANT, используйте более старую версию документации.
 
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+ [2]: http://www.gradle.org/
+
+### Свойства Gradle
+
+Эти [свойства][3] могут быть установлены для настройки процесса сборки:
+
+ [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
+
+*   **cdvBuildMultipleApks** (по умолчанию: false)
+    
+    Если этот параметр установлен, то будут создаваться несколько APK файлов: один для каждой платформы, поддерживаемой библиотеками проектов (x86, ARM, и т.д.). Это может быть важно, если ваш проект использует большие бинарные библиотеки, которые могут резко увеличить размер создаваемого APK.
+    
+    Если не задано, то будет создаваться один APK, который может использоваться на всех устройствах.
+
+*   **cdvVersionCode**
+    
+    Переопределяет versionCode установленный в `AndroidManifest.xml`
+
+*   **cdvReleaseSigningPropertiesFile** (по умолчанию: release-signing.properties)
+    
+    Путь к файлу .properties, содержащую информацию о подписях для релизных сборок. Этот файл должен выглядеть:
+    
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
+        
+    
+    `storePassword` и `keyPassword` являются необязательными и будет запрашиваться, если пропущены.
+
+*   **cdvDebugSigningPropertiesFile** (по умолчанию: debug-signing.properties)
+    
+    Так же, как cdvReleaseSigningPropertiesFile, но для отладочного построения. Полезно, когда вам нужно использовать ключ подписи совместно с другими разработчиками.
+
+*   **cdvMinSdkVersion**
+    
+    Переопределяет значение `minSdkVersion` в `AndroidManifest.xml`. Полезно при создании нескольких APK на основе версии SDK.
+
+*   **cdvBuildToolsVersion**
+    
+    Переопределяет автоматически обнаруженное значение `android.buildToolsVersion` .
+
+*   **cdvCompileSdkVersion**
+    
+    Переопределяет автоматически обнаруженное значение `android.compileSdkVersion` .
+
+### Расширение build.gradle
+
+Если вам нужно настроить `build.gradle`, вместо того, чтобы редактировать его напрямую, следует создать одноуровневый файл с именем `build-extras.gradle`. Этот файл будет включен основным `build.gradle` если он существует. Вот пример:
+
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
     
 
-Это потому что каталоги, используемые в Cordova муравей скрипты отличается от по умолчанию. Это делается чтобы избежать конфликтов при запуске из командной строки против муравьев внутри Eclipse/ADT.
+Обратите внимание, что плагины могут также включать файлы `build-extras.gradle` через:
 
-Эти дополнительные параметры добавляются автоматически для вас при использовании `cordova/build` и `cordova/run` сценариев, описанных выше. По этой причине рекомендуется использовать `cordova/build` и `cordova/run` сценарии вместо вызова муравей непосредственно из командной строки.
+    <framework src="some.gradle" custom="true" type="gradleReference" />
+    
+
+### Пример сборки
+
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

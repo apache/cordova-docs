@@ -19,15 +19,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 8.0 WebViews
 
-В этом руководстве показано, как внедрить компонент Cordova с поддержкой WebView в большее приложение Windows Phone 8.0.
+В этом руководстве показано, как внедрить компонент Cordova с поддержкой WebView в другое, большее, приложение Windows Phone 8.0.
 
-Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней Кордова. Скачать его с [cordova.apache.org](http://cordova.apache.org) и разархивируйте его пакет Windows Phone 8.0 (cordova-wp8-*.zip).
+Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней версии Cordova. Скачать его с [cordova.apache.org](http://cordova.apache.org) и разархивируйте пакет для Windows Phone 8.0 (cordova-wp8-*.zip).
 
-  1. Перейдите к пакету `wp8/framework` каталог и построить `WPCordovaClassLib.sln` . Это создает`Bin\Debug[Release]\WPCordovaClassLib.dll`.
+  1. Перейдите к директории `wp8/framework` пакета и соберите решение `WPCordovaClassLib.sln` . Это создаст `Bin\Debug[Release]\WPCordovaClassLib.dll`.
 
-  2. Копия `WPCordovaClassLib.dll` файл в Windows Phone 8 проект `/libs` каталог и включают в себя `WPCordovaClassLib.dll` к вашему проекту через `Project->References->Add Reference` . Кроме того, можно напрямую ссылаться `wp8/framework/WPCordovaClassLib.csproj` файл.
+  2. Скопируйте файл `WPCordovaClassLib.dll` в каталог `/libs` проект Windows Phone 8 и подключите `WPCordovaClassLib.dll` к вашему проекту через `Project->References->Add Reference` . Кроме того, можно напрямую ссылаться на файл `wp8/framework/WPCordovaClassLib.csproj`.
 
-  3. Добавить `CordovaView` компонент на страницу (например,`MainPage.xaml`).
+  3. Добавьте компонент `CordovaView` на страницу (например,`MainPage.xaml`).
     
         xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib">
         ...
@@ -35,8 +35,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" />
         
 
-  4. Копия `common/www/cordova.js` вместе с HTML и JavaScript файлы приложения в Windows Phone 8 проект `html` каталог и включают в себя новые файлы в проект.
+  4. Скопируйте `common/www/cordova.js` и разметите его вместе с HTML и JavaScript файлами приложения в каталоге `html` проекта Windows Phone 8 и добавьте новые файлы в ваш проект.
 
-  5. Копия `wp8/template/config.xml` в корневой каталог проекта и
+  5. Скопируйте `wp8/template/config.xml` в корневой каталог проекта и
 
-Инструкции выше ссылка только компоненты ядра Cordova, см с помощью Plugman управление плагины для того, чтобы связать Cordova плагины.
+Инструкции выше подключат только основные компоненты Cordova, см Использование Plugman для управления расширениями для того, чтобы подключить плагины Cordova.

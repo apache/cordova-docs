@@ -21,9 +21,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Cordova поставляется с минимальным набором APIs, и проекты которым необходимы дополнительные API, добавляют их через плагины.
 
-Вы можете осуществить поиск по всем существующим плагинам (включая сторонние плагины) с использованием [Реестра плагинов][1].
+Вы можете искать по все существующим плагинам (в том числе сторонние плагины) на [npm][1].
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 Традиционный набор плагинов Cordova следующий:
 
@@ -99,28 +99,38 @@ Cordova поставляется с минимальным набором APIs, 
     
     > API для вибрации устройства.
 
-*   [StatusBar][20]
+*   [Строка состояния][20]
     
     > API-интерфейс для отображения, скрытия и настройке фона строки состояния.
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [Список разрешенных ресурсов][21]
+    
+    > Плагин для разрешение сетевых запросов. Должен быть установлен если вы хотите иметь возможность делать любые сетевые запросы в вашем приложении.
 
-Non-английский переводы этих документов плагин можно найти, глядя на старые версии документации, Кордова. Используйте раскрывающееся меню в очень верхней правой части этого сайта для переключения версий.
+*   [Устаревший список разрешенных ресурсов][22]
+    
+    > Плагин для использования старого стиля списка разрешенных ресурсов, прежде чем он был удален из платфор и изменил в виде текущего плагина списка разрешеных ресурсов.
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+Non-английский переводы документов этих плагинов можно найти, перейдя в репозитории github плагина и посмотрев в папке docs

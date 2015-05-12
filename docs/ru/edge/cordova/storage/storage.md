@@ -53,6 +53,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Следующие платформы поддерживают IndexedDB:
 
 *   BlackBerry 10
+*   Firefox OS
 *   Windows Phone 8
 *   Windows 8
 

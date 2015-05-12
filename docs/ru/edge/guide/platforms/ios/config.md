@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Конфигурация iOS
 
-Файл `config.xml` управляет основные параметрами приложения, которые применяются к каждому приложению и экземпляру CordovaWebView. Этот раздел описывает настройки, которые применяются только к платформе iOS. See [The config.xml File][1] for information on global configuration options.
+Файл `config.xml` управляет основные параметрами приложения, которые применяются к каждому приложению и экземпляру CordovaWebView. Этот раздел описывает настройки, которые применяются только к платформе iOS. Смотрите [Файл config.xml][1] для получения информации о глобальных параметрах конфигурации.
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +86,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `UIWebViewDecelerationSpeed` (строка, по умолчанию `normal` ): допустимые значения `normal`, `fast`. Это свойство контролирует скорость замедления импульса прокрутки. `normal` это скорость по умолчанию для большиства приложений платформы, и `fast` является значением по умолчанию для Mobile Safari.
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl` (строка, не установлено по умолчанию): Если установлено, будет отображать указанную локальную страницу, при ошибке в приложении.
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>
