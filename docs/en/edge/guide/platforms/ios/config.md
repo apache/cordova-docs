@@ -116,4 +116,18 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="ErrorUrl" value="myErrorPage.html"/>
 
+- `OverrideUserAgent` (string, not set by default):
+  If set, the value will replace the old UserAgent of webview.
+  It is helpful to identify the request from app/browser when requesting remote pages.
+  Use with caution, this may causes compitiable issue with web servers.
+  For most cases, use AppendUserAgent instead.
+
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+
+- `AppendUserAgent` (string, not set by default):
+  If set, the value will append to the end of old UserAgent of webview.
+  When using with OverrideUserAgent, this value will be ignored.
+
+        <preference name="OverrideUserAgent" value="My Browser" />
+
 
