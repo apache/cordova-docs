@@ -218,15 +218,15 @@ Run following commands (All commands here would be for NodeJS version of Crowdin
    
    This will give you list of files which has structural differences from the original docs.
    Below the example output:
-```
-     => Validating translation for version edge on language ru...
-    Comparing C:\Users\kant\Documents\GitHub\cordova-docs\public\en\edge
-    with C:\Users\kant\Documents\GitHub\cordova-docs\public\ru\edge
-    Path guide_platforms_blackberry10_upgrade.md.html is different.
-    Path guide_platforms_blackberry_upgrade.md.html is different.
-    Path guide_platforms_ios_tools.md.html is different.
-    Path guide_support_index.md.html is different.
-```
+   ```
+    => Validating translation for version edge on language ru...
+   Comparing C:\Users\kant\Documents\GitHub\cordova-docs\public\en\edge
+   with C:\Users\kant\Documents\GitHub\cordova-docs\public\ru\edge
+   Path guide_platforms_blackberry10_upgrade.md.html is different.
+   Path guide_platforms_blackberry_upgrade.md.html is different.
+   Path guide_platforms_ios_tools.md.html is different.
+   Path guide_support_index.md.html is different.
+   ```
 
 9. Now you could open pregenerated files and compare the English version with your translated versions.
     Open both versions and find out what's wrong.
