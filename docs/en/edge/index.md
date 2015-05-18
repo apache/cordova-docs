@@ -66,6 +66,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Information and tips for building a secure application.</span>
         </li>
         <li>
+            <h2>Platforms and Plugins Version Management</h2>
+            <span>Save and Restore your CLI projects to a known state without hassle.</span>
+        </li>
+        <li>
             <h2>Whitelist Guide</h2>
             <span>Grant an application access to external resources.</span>
         </li>
