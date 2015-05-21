@@ -33,13 +33,7 @@ La siguiente guía incluye algunas mejores prácticas de seguridad que debe cons
 
 *   Lea y entienda al manual lista blanca
 
-*   De forma predeterminada, la lista blanca en una aplicación recién creada permitirá acceder a todos los dominios a través de la `<access>` etiqueta: `<access origin="*">` si quieres peticiones de red debe ser evaluado contra la lista blanca, entonces es importante cambiar esto y permitir que sólo los dominios a los que tienes acceso. Esto puede hacerse editando el archivo de configuración de nivel de aplicación ubicado en: `{project}/config.xml` (últimos proyectos) o `{project}/www/config.xml` (proyectos mayores)
-
-*   Android está lista blanca en Cordova 2.9.x se considera seguro, sin embargo, se descubrió que si foo.com está incluido en la lista blanca, foo.com.evil.com sería capaz de aprobar el examen de la lista blanca. Esto fue fijada en Cordova 3.x.
-
 *   Dominio whitelisting no funciona en Android API 10 y a continuación y WP8 para iframes y XMLHttpRequest. Esto significa que un atacante puede cargar cualquier tipo de dominio en un iframe y cualquier script en esa página dentro del iframe puede acceder directamente a objetos Cordova JavaScript y los objetos de Java nativos correspondientes. Debe tomar esto en consideración cuando la creación de aplicaciones para estas plataformas. En la práctica esto significa asegurándose de que se meta una API Android superior a 10, y que si es posible no utilice un iframe para cargar contenido externo - utilizan el plugin inAppBrowser u otros plugins de terceros.
-
-*   En Android, a partir de Cordova 3.6.0, ahora es necesario URLs blanca fuera de su aplicación, si su aplicación genera enlaces a las direcciones URL. Si tu aplicación genera `tel:` , `geo:` , `sms:` , `intent:` o URLs similares, o proporciona enlaces a contenido externo que tiene previsto abrir en el navegador del usuario, entonces tendrá que actualizar su lista blanca. Consulte a la guía de la lista blanca para más detalles.
 
 ## Iframes y el mecanismo de identificación de llamada
 

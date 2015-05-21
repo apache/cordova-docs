@@ -65,6 +65,38 @@ Mac の/Linux または Windows のリリース：
 
 少なくとも 1 つの Android 仮想デバイス、それ以外の場合でそうよう求められますを作成するかどうかを確認、 `android` コマンド。 AVD 1 つ以上のターゲットとして使用できる場合はいずれかを選択するよう求められます。 既定では、 `run` コマンド デバイスが見つからない場合に接続されているデバイス、または現在実行中のエミュレーターを検出します。
 
+## アプリケーションの署名
+
+署名の要件ここで Android アプリを確認することができます： http://developer.android.com/tools/publishing/app-signing.html
+
+アプリを署名する必要があります、次のパラメーター: * キーストア (`--キーストア`): キーのセットを保持できるバイナリ ファイルへのパス。 * キーストア パスワード (`--storePassword`): キーストア パスワード * エイリアス (`--別名`): 歌うことのために使用される秘密のキーを指定する id。 * パスワード (`--password`): 指定された秘密キーのパスワード。 * キーストア (`--keystoreType`) のタイプ: jks pkcs12 (デフォルト: 自動検出ファイル拡張子に基づいて)`ビルド`または`実行`スクリプトを上記のコマンドライン引数を使用してこれらのパラメーターを指定することができます。
+
+また、(`-buildConfig`) 引数を使用してビルド構成ファイル (build.json) で指定する可能性があります。ビルドの構成ファイルのサンプルを次に示します。
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+リリース署名用パスワードを除外することができ、ビルド システムは、パスワードを求めるプロンプトを発行します。
+
+ミックスし、一致するコマンドライン引数と build.json ファイル内のパラメーターへのサポートがあります。 コマンドライン引数の値は、優先順位を取得します。 これは、コマンドラインでパスワードを指定するために役立ちますすることができます。
+
 ## ログの記録
 
         $ /path/to/project/cordova/log
@@ -79,42 +111,11 @@ Mac の/Linux または Windows のリリース：
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Ant のマニュアルを使用します。
+## Gradle の構築
 
-コマンド ・ ラインから直接よう Ant を呼び出すしたい場合 `ant debug install` 、ant コマンドに追加のパラメーターを指定する必要があります。
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-これは、コルドバの Ant スクリプトで使用されるディレクトリは、既定とは異なるためにです。これは、Ant をコマンドラインから実行時の競合を避けるために日食/ADT の内部。
-
-これらの追加のパラメーターが自動的に追加されますあなたのためを使用して、 `cordova/build` と `cordova/run` スクリプトは、上記します。 使用することをお勧めします。 このため、 `cordova/build` と `cordova/run` ではなく、コマンドラインから直接呼び出す Ant スクリプトです。
-
-## Gradle （！） 実験建物
-
-人造人間のためのコルドバ[Gradle][2]建物になりました。 これはコルドバに任意 3.x が既定で有効に将来的には、おそらくコルドバ 4.0 が。ビルド システムは、シェルの設定またはと一緒にコマンドラインで指定することができる環境変数で有効になって、 `cordova build` コマンド。
+Cordova-android@4.0.0、現在プロジェクトは[Gradle][2]を使用してビルドされます。 ANT の建物には古いバージョンのドキュメントを参照してください。
 
  [2]: http://www.gradle.org/
-
-Gradle ビルド規則は、まだ開発中, と Gradle 既定のビルド システムになる前に大規模な変更の対象となることに注意してください。 開発者は、それをしようと、それを試してみることをお勧めすることがそれの上にあなた自身の生産のビルド システムを作成する場合はおそらくいくつか重大な変更次のいくつかのリリースでそれが安定する前に。
-
-### 関連する環境変数
-
-*   **アンドロイド _ を構築**
-    
-    この変数は、どのビルド システムは、プロジェクトをビルドする使用を制御します。値のいずれかを取ることができる `ant` または`gradle`.
-    
-    設定しないと、現在既定の `ant` 、しかし、これを変更すると予想されます。
-
-### （あなたは通常これらを設定する必要はありません） その他の環境変数
-
-*   **アンドロイド _ ホーム**
-    
-    これは Android の SDK を含むディレクトリに設定する必要があります。 コルドバは検索これを通常の設定を必要としないので、PATH 変数を見てだけでなく、既定のインストール場所にします。
-
-*   **JAVA _ ホーム**
-    
-    いくつかのマシンでこの Gradle は、Java コンパイラを見つけることができるように設定する必要があります。
 
 ### Gradle プロパティ
 
@@ -122,7 +123,7 @@ Gradle ビルド規則は、まだ開発中, と Gradle 既定のビルド シ�
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks**(デフォルト: false)
     
     これが設定されている場合は複数の APK ファイルが生成されます: ライブラリ プロジェクトでサポートされているネイティブ プラットフォームごとに 1 つ (x 86、腕、等)。 これは、プロジェクトで生成された APK のサイズを大幅に増やすことができます大規模なのネイティブ ライブラリを使用する場合に重要なことができます。
     
@@ -130,40 +131,56 @@ Gradle ビルド規則は、まだ開発中, と Gradle 既定のビルド シ�
 
 *   **cdvVersionCode**
     
-    VersionCode 設定よりも優先されます。`AndroidManifest.xml`
+    VersionCode `AndroidManifest.xml` で設定よりも優先されます。
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile**(デフォルト: release-signing.properties)
     
     リリースの署名情報を含む .properties ファイルへのパスを構築します。ファイルはようになります。
     
-        storeFile=relative/path/to/keystore.p12 storePassword SECRET1 [storetype] を = = pkcs12 keyAlias DebugSigningKey keyPassword = SECRET2 =
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword``keyPassword`はオプションであり、入力を求められますを省略すると。
+    `storePassword` および `keyPassword` は省略可能、促されるを省略した場合。
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile**(デフォルト: debug-signing.properties)
     
     同じです cdvReleaseSigningPropertiesFile がデバッグをビルドします。署名キーを他の開発者と共有する必要がある場合に役立ちます。
 
 *   **cdvMinSdkVersion**
     
-    値をオーバーライドする `minSdkVersion` で設定 `AndroidManifest.xml` 。複数を作成するときに便利です APKs SDK バージョンをに基づいてください。
+    `MinSdkVersion` `与えます` で設定の値をオーバーライドします。複数を作成するときに便利です APKs SDK バージョンをに基づいてください。
 
 *   **cdvBuildToolsVersion**
     
-    自動検出をオーバーライド `android.buildToolsVersion` 値。
+    自動検出された `android.buildToolsVersion` 値をオーバーライドします。
 
 *   **cdvCompileSdkVersion**
     
-    自動検出をオーバーライド `android.compileSdkVersion` 値。
+    自動検出された `android.compileSdkVersion` 値をオーバーライドします。
 
 ### 拡張 build.gradle
 
-カスタマイズする必要がある場合 `build.gradle` 、むしろ直接編集よりはという兄弟ファイルを作成する必要があります `build-extras.gradle` 。 このファイルは、メインにインクルードされます `build.gradle` 場合します。 ここで例に示します。
+`Build.gradle`、カスタマイズするのではなく、直接編集する必要がある場合`ビルド extras.gradle`をという名前の兄弟ファイルを作成する必要があります。 このファイルは、メインの`build.gradle`が存在する場合にインクルードされます。 ここで例に示します。
 
-    ＃ 例ビルド extras.gradle # このファイルは 'build.gradle' ext.cdvDebugSigningPropertiesFile の先頭に = ' (プラモデル)/../アンドロイド-デバッグ-keys.properties' # この関数セットが 'build.gradle' ext.postBuildExtras の終わりに実行するコードを使用できるとき = {android.buildTypes.debug.applicationIdSuffix = '.debug'}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+    
+
+プラグインは`ビルド extras.gradle`経由でのファイルも含めることができます注意してください。
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
     
 
 ### 例のビルド
 
-    ANDROID_BUILD エクスポート エクスポート gradle ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 コルドバ ビルド android----gradleArg = PcdvBuildMultipleApks = = true
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

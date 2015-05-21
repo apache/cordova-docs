@@ -50,8 +50,8 @@ Dadurch entsteht eine Firefox-OS-app in Plattformen/Firefoxos/Www-Verzeichnis, d
 
 Zu diesem Zeitpunkt sind Sie bereit zu gehen — ändern Sie den Code in der Test-app/Www, was Sie, Ihre Anwendung wollen zu sein. Sie können die app mit "Cordova Plugin hinzufügen", zum Beispiel [unterstützt Plugins]() hinzufügen:
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 Wenn Ihre app-Code geschrieben ist, Bereitstellen von Änderungen an der Firefox-OS-app, die Sie hinzugefügt haben, Ihr Projekt mit

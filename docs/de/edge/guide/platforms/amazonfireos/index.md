@@ -64,7 +64,7 @@ Auf Mac, Linux oder andere Unix-ähnliche Plattformen, können Sie einen Text-Ed
 
 Dies macht die SDK-Tools im neu eröffneten terminal-Fenster verfügbar. Sonst laufen Sie hier, um sie in der aktuellen Sitzung zur Verfügung stellen:
 
-    $ Quelle ~/.bash_profile
+    $ source ~/.bash_profile
     
 
 #### Windows-Pfad

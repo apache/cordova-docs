@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -206,71 +206,71 @@ Puede encontrarse una lista de estos plugins, plugins de terceros adicionales pr
 
 Buscando solamente el `bar` término rendimientos y resultados adicionales:
 
-        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+        cordova-plugin-statusbar - Cordova StatusBar Plugin
     
 
 El `cordova plugin add` comando requiere especificar el repositorio para el código del plugin. Estos son ejemplos de cómo puede usar la CLI para agregar funciones a la aplicación:
 
 *   Información básica del dispositivo (dispositivo API):
     
-        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-device
         
 
 *   Conexión de red y eventos de batería:
     
-        $ cordova plugin add org.apache.cordova.network-information
-        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin add cordova-plugin-network-information
+        $ cordova plugin add cordova-plugin-battery-status
         
 
 *   Acelerómetro, brújula y geolocalización:
     
-        $ cordova plugin add org.apache.cordova.device-motion
-        $ cordova plugin add org.apache.cordova.device-orientation
-        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin add cordova-plugin-device-motion
+        $ cordova plugin add cordova-plugin-device-orientation
+        $ cordova plugin add cordova-plugin-geolocation
         
 
 *   Cámara, reproducción multimedia y captura:
     
-        $ cordova plugin add org.apache.cordova.camera
-        $ cordova plugin add org.apache.cordova.media-capture
-        $ cordova plugin add org.apache.cordova.media
+        $ cordova plugin add cordova-plugin-camera
+        $ cordova plugin add cordova-plugin-media-capture
+        $ cordova plugin add cordova-plugin-media
         
 
 *   Acceder a archivos en el dispositivo o red (archivo API):
     
-        $ cordova plugin add org.apache.cordova.file
-        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin add cordova-plugin-file
+        $ cordova plugin add cordova-plugin-file-transfer
         
 
 *   Notificación mediante vibración o cuadro de diálogo:
     
-        $ cordova plugin add org.apache.cordova.dialogs
-        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin add cordova-plugin-dialogs
+        $ cordova plugin add cordova-plugin-vibration
         
 
 *   Contactos:
     
-        $ cordova plugin add org.apache.cordova.contacts
+        $ cordova plugin add cordova-plugin-contacts
         
 
 *   Globalización:
     
-        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin add cordova-plugin-globalization
         
 
 *   SplashScreen:
     
-        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin add cordova-plugin-splashscreen
         
 
 *   Abrir nuevas ventanas del navegador (InAppBrowser):
     
-        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin add cordova-plugin-inappbrowser
         
 
 *   Consola de depuración:
     
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
         
 
 **Nota**: el CLI agrega plugin código según proceda para cada plataforma. Si usted quiere desarrollar con las herramientas de nivel inferior cáscara o plataforma SDK como se indica en el Resumen, tienes que ejecutar la utilidad Plugman para añadir plugins por separado para cada plataforma. (Para obtener más información, véase Plugman usando a gestionar Plugins).
@@ -278,31 +278,31 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.console' ]
+        [ 'cordova-plugin-console' ]
     
 
 Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo quitaría apoyo para una consola de depuración de una versión:
 
-        $ cordova plugin rm org.apache.cordova.console
-        $ cordova plugin remove org.apache.cordova.console    # same
+        $ cordova plugin rm cordova-plugin-console
+        $ cordova plugin remove cordova-plugin-console    # same
     
 
 Puede lote-quitar o agregar plugins por especificar más de un argumento para cada comando:
 
-        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+        $ cordova plugin add cordova-plugin-console cordova-plugin-device
     
 
 ## Opciones avanzadas Plugin
 
 Al agregar un plugin, varias opciones permiten especificar de dónde buscar el plugin. Los ejemplos anteriores utilizan una conocida `registry.cordova.io` del registro y el plugin es especificada por el `id` :
 
-        $ cordova plugin add org.apache.cordova.console
+        $ cordova plugin add cordova-plugin-console
     
 
 El `id` también puede incluir el número de versión del plugin, anexado después de un `@` personaje. El `latest` versión es un alias para la versión más reciente. Por ejemplo:
 
-        $ cordova plugin add org.apache.cordova.console@latest
-        $ cordova plugin add org.apache.cordova.console@0.2.1
+        $ cordova plugin add cordova-plugin-console@latest
+        $ cordova plugin add cordova-plugin-console@0.2.1
     
 
 Si el plugin no está registrado en `registry.cordova.io` , pero se encuentra en otro repositorio git, puede especificar una URL alternativa:

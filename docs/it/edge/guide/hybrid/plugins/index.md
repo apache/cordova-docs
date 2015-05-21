@@ -1,6 +1,6 @@
 * * *
 
-licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -38,7 +38,7 @@ Il repository dei plugin deve dispongono di un livello superiore `plugin.xml` fi
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-                id="org.apache.cordova.device" version="0.2.3">
+                id="cordova-plugin-device" version="0.2.3">
             <name>Device</name>
             <description>Cordova Device Plugin</description>
             <license>Apache 2.0</license>

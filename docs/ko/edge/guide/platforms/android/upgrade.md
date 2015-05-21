@@ -17,7 +17,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이 드 안 드 로이드 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. 내용은 참조 하십시오 명령줄 인터페이스 CLI의 버전을 업데이트 하는 방법.
 
-## 4.0.0를 프로젝트 업그레이드 3.6.0
+## 4.0.0를 업그레이드
+
+4.0.0에 상당한 변화를 활용 하는 데 필요한 특정 업그레이드 단계가 있습니다. 첫째, 일반적인 업그레이드 단계는 아래에 필요 합니다.
+
+-CLI가 아닌 프로젝트에 대 한 실행.
+
+        bin/update path/to/project
+    
+
+CLI 프로젝트:
+
+1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
+
+2.  기존 프로젝트에서 `cordova platform update android`를 실행 합니다.
+
+### 업그레이드는 허용 된 사이트 목록
+
+모든 화이트 리스트 기능 지금 플러그인을 통해 구현 됩니다. 플러그인 없이 앱 이상 4.0.0으로 업그레이드 한 후 목록에 의해 보호 됩니다. 코르 도우 바는 서로 다른 수준의 보호를 제공 하는 두 화이트 리스트 플러그인.
+
+1.  `코르 도우 바 플러그인 목록` 플러그인 *(권장)*
+    
+    *   이 플러그인이 좋습니다, 그것은 더 안전 하 고 보다 이전 버전에서는 화이트 리스트 구성
+    *   필요한 구성 변경에 [코르 도우 바 플러그인 허용 된 사이트 목록][1] 대 한 자세한 내용은 참조 하십시오
+    *   Run: `cordova plugin add cordova-plugin-crosswalk-webview`
+
+2.  `코르 도우 바 플러그 접속식 유산-화이트 리스트` 플러그인
+    
+    *   이 플러그인이 이전 버전으로 같은 허용 된 행동을 제공합니다. [코르 도우 바-플러그인-레거시-허용 된 사이트 목록][2] 참조
+    *   구성 변경 필요 합니다, 하지만 권장된 플러그인 보다 더 적은 보호 기능을 제공 하 고 있습니다.
+    *   Run: `cordova plugin add cordova-plugin-legacy-whitelist`
+
+ [1]: https://github.com/apache/cordova-plugin-whitelist
+ [2]: https://github.com/apache/cordova-plugin-legacy-whitelist
+
+### 횡단 보도 WebView를 사용 하 여
+
+기본적으로 앱은 WebView는 장치에서 제공 하는 시스템을 사용 하 여 계속 됩니다. 횡단 보도 WebView를 대신 사용 하려는 경우 단순히 횡단 보도 플러그인을 추가:
+
+    cordova plugin add cordova-plugin-crosswalk-webview
+    
+
+추가 플러그인, 앱 횡단 보도 WebView 설치 하 고 올바르게 구성 되어 얻을 것 이다.
+
+### Splashscreen 플러그인으로 업그레이드
+
+앱 만드는 경우 시작 화면 사용 기능을 플러그인으로 이동 되었습니다. 시작 화면에 대 한 구성 옵션이 변경 되지 않습니다. 만 업그레이드 단계 필요한 플러그인을 추가 하는:
+
+    cordova plugin add cordova-plugin-splashscreen
+    
+
+## 3.6.0에서 3.7.1로 업그레이드
 
 -CLI가 아닌 프로젝트에 대 한 실행.
 
@@ -32,7 +82,7 @@ CLI 프로젝트:
 
 ## 3.3.0를 3.2.0에서 업그레이드
 
-`3.2.0`에 관해서는 동일한 지침을 따르십시오.
+`3.2.0` 에 관해서는 동일한 지침을 따르십시오.
 
 3.3.0 부터는 코르도바 런타임은 이제 항아리 대신 안 드 로이드 라이브러리로 컴파일됩니다. 이 명령줄 사용에 대 한 영향을 주지 않습니다 있어야 하지만 IDE 사용자가 자신의 작업 영역에 새로 추가 된 `MyProject-CordovaLib` 프로젝트를 가져올 필요가 있을 것 이다.
 
@@ -42,7 +92,7 @@ CLI 프로젝트:
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
-2.  실행`cordova platform update android`
+2.  Run `cordova platform update android`
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
@@ -57,7 +107,7 @@ CLI 프로젝트:
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
-2.  실행`cordova platform update android`
+2.  Run `cordova platform update android`
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
@@ -72,7 +122,7 @@ CLI 프로젝트:
 
 3.  방금 만든 코르 도우 바 프로젝트의 루트에서 `www` 디렉토리를 프로젝트의 `www` 디렉토리의 내용을 복사 합니다.
 
-4.  `platforms/android`에서 해당 디렉터리에 이전 프로젝트에서 어떤 기본 자산을 복사:이 디렉토리는 네이티브 코르도바-안 드 로이드 프로젝트가 존재 하는 곳.
+4.  `플랫폼/안 드 로이드`에서 해당 디렉터리에 이전 프로젝트에서 어떤 기본 자산을 복사:이 디렉토리는 네이티브 코르도바-안 드 로이드 프로젝트가 존재 하는 곳.
 
 5.  코르 도우 바 CLI 도구를 사용 하 여 필요한 어떤 플러그인을 설치 하려면. 참고 CLI를 처리 하는 모든 핵심 Api 플러그인으로 추가 될 필요가 있습니다. 만 3.0.0 플러그인 CLI와 호환 됩니다.
 
@@ -82,19 +132,19 @@ CLI 프로젝트:
 
 2.  새로운 프로젝트에 `www` 디렉터리의 내용을 복사 합니다.
 
-3.  `res` 디렉토리의 모든 네이티브 안 드 로이드 자산 새 프로젝트에 복사.
+3.  `Res` 디렉토리의 모든 네이티브 안 드 로이드 자산 새 프로젝트에 복사.
 
 4.  새 프로젝트에 `src` 하위 디렉터리에서 설치 된 모든 플러그인을 복사 합니다.
 
-5.  업그레이드할 수 있는지 확인 하십시오 사용 새로운 `< 기능 >` 사양에 당신의 오래 된 `config.xml` 파일에서 `< 플러그인 >` 참조가 되지 않습니다.
+5.  업그레이드할 수 있는지 확인 하십시오 사용 새로운 `<plugin>` 사양에 당신의 오래 된 `config.xml` 파일에서 `<feature>` 참조가 되지 않습니다.
 
-6.  `org.apache.cordova` 될 `org.apache.cordova.api` 패키지에 대 한 참조를 업데이트.
+6.  `Org.apache.cordova` 될 `org.apache.cordova.api` 패키지에 대 한 참조를 업데이트.
     
     **참고**: 모든 핵심 Api 제거 되 고 플러그인으로 설치 해야 합니다. 자세한 내용은 관리 플러그인 가이드를 사용 하 여 Plugman를 참조 하십시오.
 
 ## 2.9.0 2.8.0에서 업그레이드
 
-1.  `bin/update <project_path>` 실행.
+1.  Run `bin/update <project_path>`.
 
 ## 2.7.0에서 2.8.0로 업그레이드
 
@@ -106,11 +156,11 @@ CLI 프로젝트:
 
 <!-- SS Eclipse -->
 
-1.  프로젝트에 새로운 `cordova.js`를 복사 합니다.
+1.  프로젝트에 새로운 `cordova.js` 를 복사 합니다.
 
 2.  새로운 `cordova.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
-3.  `framework/res/xml/config.xml`에 맞게 `res/xml/config.xml` 파일 복사.
+3.  `Framework/res/xml/config.xml` 에 맞게 `res/xml/config.xml` 파일 복사.
 
 4.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
 
@@ -152,7 +202,7 @@ CLI 프로젝트:
 
 8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
-코르 도우 바 소스 디렉토리에 나열 하는 프로젝트 경로를 `bin/update <project>`를 실행 합니다.
+코르 도우 바 소스 디렉토리에 나열 하는 프로젝트 경로를 `bin/update < 프로젝트 >` 를 실행 합니다.
 
 ## 2.4.0에서 2.5.0로 업그레이드
 
@@ -250,11 +300,11 @@ CLI 프로젝트:
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-2.0.0에서 릴리스 `config.xml` 파일 결합 및 `cordova.xml` 및 `plugins.xml` 대체. 오래 된 파일을 그리고 그들은 여전히 2.0.0에서 작동 하는 동안 향후 릴리스에서 작동 중지 됩니다.
+2.0.0에서 릴리스 `config.xml` 파일 결합 및 `cordova.xml` 및 `plugins.xml`대체. 오래 된 파일을 그리고 그들은 여전히 2.0.0에서 작동 하는 동안 향후 릴리스에서 작동 중지 됩니다.
 
 ## 1.9.0 1.8.1에서 업그레이드
 
-1.  제거 `cordova-1.8.0.jar` 프로젝트의 `libs` 디렉터리.
+1.  `코르 도우 바 1.8.0.jar` 프로젝트의 `라이브러리` 디렉터리에서 제거 합니다.
 
 2.  `코르 도우 바 1.9.0.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
 
@@ -266,11 +316,11 @@ CLI 프로젝트:
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
-1.9.0에 `CordovaWebView`의 도입으로 인해 출시, 제 3 자 플러그인 작동 하지 않을 수 있습니다. 이러한 플러그인은 `getContext()` 또는 `getActivity()`를 사용 하 여 `CordovaInterface`에서 컨텍스트를 얻이 필요가 있다. 숙련된 된 안 드 로이드 개발자가 아닌 경우에, 플러그인 관리자에 게 연락 하 고 그들의 버그 추적기에이 작업을 추가 하십시오.
+1.9.0에 `CordovaWebView` 의 도입으로 인해 출시, 제 3 자 플러그인 작동 하지 않을 수 있습니다. 이러한 플러그인은 `getContext()` 또는 `getActivity()`를 사용 하 여 `CordovaInterface` 에서 컨텍스트를 얻이 필요가 있다. 숙련된 된 안 드 로이드 개발자가 아닌 경우에, 플러그인 관리자에 게 연락 하 고 그들의 버그 추적기에이 작업을 추가 하십시오.
 
 ## 1.8.0 1.8.0에서 업그레이드
 
-1.  제거 `cordova-1.8.0.jar` 프로젝트의 `libs` 디렉터리.
+1.  `코르 도우 바 1.8.0.jar` 프로젝트의 `라이브러리` 디렉터리에서 제거 합니다.
 
 2.  `코르 도우 바 1.8.1.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
 
@@ -284,9 +334,9 @@ CLI 프로젝트:
 
 ## 1.8.0 1.7.0에서 업그레이드
 
-1.  제거 `cordova-1.7.0.jar` 프로젝트의 `libs` 디렉터리.
+1.  `코르 도우 바 1.7.0.jar` 프로젝트의 `라이브러리` 디렉터리에서 제거 합니다.
 
-2.  추가 `cordova-1.8.0.jar` 프로젝트의 `libs` 디렉터리.
+2.  `코르 도우 바 1.8.0.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
@@ -298,9 +348,9 @@ CLI 프로젝트:
 
 ## 1.8.0 1.7.0에서 업그레이드
 
-1.  제거 `cordova-1.7.0.jar` 프로젝트의 `libs` 디렉터리.
+1.  `코르 도우 바 1.7.0.jar` 프로젝트의 `라이브러리` 디렉터리에서 제거 합니다.
 
-2.  추가 `cordova-1.8.0.jar` 프로젝트의 `libs` 디렉터리.
+2.  `코르 도우 바 1.8.0.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
@@ -348,7 +398,7 @@ CLI 프로젝트:
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
-7.  대체 `res/xml/phonegap.xml` 와 `res/xml/cordova.xml` 에 맞게`framework/res/xml/cordova.xml`.
+7.  `Res/xml/phonegap.xml` `res/xml/cordova.xml` `framework/res/xml/cordova.xml` 에 맞게 교체.
 
 ## 1.4.0에서 1.5.0로 업그레이드
 
@@ -364,7 +414,7 @@ CLI 프로젝트:
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
-7.  대체 `res/xml/phonegap.xml` 와 `res/xml/cordova.xml` 에 맞게`framework/res/xml/cordova.xml`.
+7.  `Res/xml/phonegap.xml` `res/xml/cordova.xml` `framework/res/xml/cordova.xml` 에 맞게 교체.
 
 ## 1.3.0에서 1.4.0로 업그레이드
 
@@ -374,7 +424,7 @@ CLI 프로젝트:
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
-4.  프로젝트에 새로운 `phonegap 1.4.0.js`를 복사 합니다.
+4.  프로젝트에 새로운 `phonegap 1.4.0.js` 를 복사 합니다.
 
 5.  새로운 `phonegap 1.4.0.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
@@ -390,9 +440,9 @@ CLI 프로젝트:
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
-4.  프로젝트에 새로운 `phonegap 1.3.0.js`를 복사 합니다.
+4.  프로젝트에 새로운 `phonegap 1.3.0.js` 를 복사 합니다.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` 파일.
+5.  새로운 `phonegap 1.2.0.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -402,13 +452,13 @@ CLI 프로젝트:
 
 1.  `Phonegap 1.1.0.jar` 프로젝트의 `라이브러리` 디렉터리에서 제거 합니다.
 
-2.  `Phonegap 1.2.0.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
+2.  `Phonegap 1.3.0.jar` 프로젝트의 `라이브러리` 디렉터리에 추가 합니다.
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
-4.  프로젝트에 새로운 `phonegap 1.2.0.js`를 복사 합니다.
+4.  프로젝트에 새로운 `phonegap 1.2.0.js` 를 복사 합니다.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` 파일.
+5.  새로운 `phonegap 1.2.0.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -422,7 +472,7 @@ CLI 프로젝트:
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
-4.  프로젝트에 새로운 `phonegap 1.1.0.js`를 복사 합니다.
+4.  프로젝트에 새로운 `phonegap 1.1.0.js` 를 복사 합니다.
 
 5.  새로운 `phonegap 1.1.0.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
@@ -436,8 +486,8 @@ CLI 프로젝트:
 
 3.  이클립스를 사용 하면 이클립스 프로젝트를 새로 고침 하 고 깨끗 할 하십시오.
 
-4.  프로젝트에 새로운 `phonegap 1.0.0.js`를 복사 합니다.
+4.  프로젝트에 새로운 `phonegap 1.0.0.js` 를 복사 합니다.
 
 5.  새로운 `phonegap 1.0.0.js` 파일을 사용 하 여 HTML을 업데이트 합니다.
 
-6.  `res/xml/plugins.xml` `framework/res/xml/plugins.xml`를 일치 하도록 추가.
+6.  `Res/xml/plugins.xml` `framework/res/xml/plugins.xml` 를 일치 하도록 추가.

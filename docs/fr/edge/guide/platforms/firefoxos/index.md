@@ -1,6 +1,6 @@
 * * *
 
-licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -50,8 +50,8 @@ Cela crée une application Firefox OS dans le répertoire de plates-formes/firef
 
 À ce stade, vous êtes prêt à aller, modifiez le code à l'intérieur de test-app/www et ce que vous voulez que votre application d'être. Vous pouvez ajouter la [prise en charge de plugins]() pour l'application à l'aide de "Ajouter cordova plugin", par exemple :
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 Lorsque le code de votre application est écrit, déployer les modifications apportées à l'application Firefox OS avec que vous avez ajouté à votre projet

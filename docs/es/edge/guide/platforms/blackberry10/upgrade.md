@@ -40,7 +40,7 @@ Para los proyectos que se crearon con el cordova CLI:
 
 Para proyectos no creados con el cordova CLI, ejecute:
 
-        bin/actualizar < project_path >
+        bin/update <project_path>
     
 
 ## Actualizar a 3.1.0 desde 3.0.0
@@ -102,7 +102,7 @@ Para BlackBerryOS/Playbook:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova.js` archivo.
 

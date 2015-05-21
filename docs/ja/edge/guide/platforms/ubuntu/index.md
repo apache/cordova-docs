@@ -85,6 +85,6 @@ Ubuntu ランタイム プラットフォーム向け Cordova アプリ サポ�
     $ cordova run ubuntu
     
 
-### バッテリーの状況のプラグインを追加します。
+### カメラのプラグインを追加します。
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

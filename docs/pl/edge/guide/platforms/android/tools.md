@@ -65,6 +65,38 @@ Komenda `run` akceptuje następujące *opcjonalne* parametry:
 
 Upewnij się, że można utworzyć co najmniej jeden Android urządzenia wirtualnego, inaczej zostanie wyświetlony monit, aby zrobić z `android` polecenia. Jeśli więcej niż jeden AVD jest dostępny jako cel, zostanie wyświetlony monit o wybranie jednej. Domyślnie `run` polecenia wykrywa podłączone urządzenie, lub aktualnie uruchomionego emulatora, jeśli urządzenie nie znajduje.
 
+## Podpisywanie aplikacji
+
+Można przejrzeć Android app podpisania wymagania tutaj: http://developer.android.com/tools/publishing/app-signing.html
+
+Aby zarejestrować aplikację, należy następujące parametry: * kluczy (`--keystore`): ścieżka do pliku binarnego, który może zawierać zestaw kluczy. * Keystore hasła (`-storePassword`): hasło do kluczy * Alias (`--alias`): identyfikator określający klucza prywatnego do śpiewania. * Hasło (`--password`): hasło do klucza prywatnego określonego. * Rodzaj kluczy (`-keystoreType`): pkcs12, jks (domyślnie: automatyczne wykrywanie oparty na rozszerzenie pliku) te parametry mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty.
+
+Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json) za pomocą argumentu (`-buildConfig`). Oto przykład pliku konfiguracyjnego budować:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Dla wersji podpisanie, hasła mogą być wyłączone i budować system wyda się monit z prośbą o hasło.
+
+Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości argumentów wiersza polecenia otrzyma pierwszeństwo. Może to być przydatne do określania haseł w wierszu polecenia.
+
 ## Rejestrowanie
 
         $ /path/to/project/cordova/log
@@ -79,42 +111,11 @@ Upewnij się, że można utworzyć co najmniej jeden Android urządzenia wirtual
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Ręczne stosowanie Ant
+## Budynek z Gradle
 
-Jeśli chcesz zadzwonić Ant bezpośrednio z wiersza polecenia, takich jak `ant debug install` , należy określić dodatkowe parametry do polecenia mrówki:
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-To jest ponieważ katalogów używanych przez Cordova w Ant skrypty są innej niż domyślna. To zrobić, aby uniknąć konfliktów, gdy mrówka jest uruchamiany z linii poleceń, a wewnątrz Eclipse/ADT.
-
-Te dodatkowe parametry są dodawane automatycznie dla Ciebie podczas korzystania z `cordova/build` i `cordova/run` skrypty opisane powyżej. Z tego powodu, to jest polecany wobec używać `cordova/build` i `cordova/run` skrypty zamiast wywoływania Ant bezpośrednio z linii poleceń.
-
-## Budynek z Gradle (eksperymentalne)!
-
-Cordova, Android obsługuje teraz budynek z [Gradle][2]. To jest opcjonalne w Cordova 3.x, ale będzie być domyślnie włączona w przyszłości, prawdopodobnie z Cordova 4.0. Budowania systemu jest włączona przez zmienną środowiskową, które można ustawić dla powłoki lub określonego w wierszu polecenia wraz z `cordova build` polecenia.
+Od cordova-android@4.0.0, projekt budowy przy użyciu [Gradle][2]. Aby uzyskać instrukcje dotyczące budynku z ANT odnoszą się do starszych wersji dokumentacji.
 
  [2]: http://www.gradle.org/
-
-Należy pamiętać, że zasady budowania Gradle są jeszcze w fazie rozwoju i prawdopodobnie będzie dużych zmian przed Gradle staje się domyślny system budowania. Deweloperzy są zachęcani do spróbować i z tym eksperymentować, ale jeśli opierasz swój własny system produkcji budować na nim, prawdopodobnie będziesz doświadczenie kilku przełomowych zmianach w ciągu następnych kilku wersji, zanim stabilizuje.
-
-### Odpowiednie zmienne środowiskowe
-
-*   **ANDROID _ BUDOWAĆ**
-    
-    Ta zmienna określa, który budować system jest używany do tworzenia projektu. W może przybrać jedną z wartości `ant` lub`gradle`.
-    
-    Jeśli nie zestaw, obecnie domyślnie do `ant` , ale to ma się zmienić.
-
-### Innych zmiennych środowiskowych (normalnie musisz ustawic te)
-
-*   **ANDROID _ STRONA GŁÓWNA**
-    
-    To powinna być ustawiona w katalogu zawierającego Android SDK. Cordova wygląda na to, w domyślnej lokalizacji instalacji, a także patrząc na twój zmiennej PATH, więc zwykle nie wymaga ustawienia.
-
-*   **JAVA _ STRONA GŁÓWNA**
-    
-    Na niektórych komputerach to trzeba ustawić tak, aby Gradle można znaleźć kompilator języka Java.
 
 ### Gradle właściwości
 
@@ -122,7 +123,7 @@ Te [Właściwości][3] można ustawić aby dostosować ten budować:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks** (domyślnie: false)
     
     Jeśli ta opcja jest ustawiona, a następnie wiele plików APK zostanie wygenerowany: jeden na rodzimych platformy obsługiwane przez biblioteka projektów (x 86, ramię, itp). Może to być ważne, jeśli twój projekt używa dużych bibliotek rodzimych, które mogą znacznie zwiększyć rozmiar wygenerowanego APK.
     
@@ -130,40 +131,56 @@ Te [Właściwości][3] można ustawić aby dostosować ten budować:
 
 *   **cdvVersionCode**
     
-    Zastępuje versionCode, w`AndroidManifest.xml`
+    Zastępuje versionCode w `AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile** (domyślnie: release-signing.properties)
     
     Ścieżka do pliku *.Properties, zawierający podpisywanie informacji do wydania buduje. Plik powinien wyglądać tak:
     
-        storeFile=relative/path/to/keystore.p12 storePassword = SECRET1 storeType = pkcs12 keyAlias = DebugSigningKey keyPassword = SECRET2
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword`i `keyPassword` są opcjonalne, a zostaniesz poproszony o pominięcie.
+    `storePassword` i `keyPassword` są opcjonalne, a zostaniesz poproszony o pominięcie.
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile** (domyślnie: debug-signing.properties)
     
     Tak samo jak cdvReleaseSigningPropertiesFile, ale do debugowania buduje. Przydatne, gdy zachodzi potrzeba udostępnienia klucza podpisywania z innymi deweloperami.
 
 *   **cdvMinSdkVersion**
     
-    Zastępuje wartość `minSdkVersion` w `AndroidManifest.xml` . Przydatne podczas tworzenia wielu APKs oparte na wersja SDK.
+    Zastępuje wartość `minSdkVersion` w `AndroidManifest.xml`. Przydatne podczas tworzenia wielu APKs oparte na wersja SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Zastąpić automatycznie wykryć `android.buildToolsVersion` wartość.
+    Zastąp wartość automatycznie wykryte `android.buildToolsVersion`.
 
 *   **cdvCompileSdkVersion**
     
-    Zastąpić automatycznie wykryć `android.compileSdkVersion` wartość.
+    Zastąp wartość automatycznie wykryte `android.compileSdkVersion`.
 
 ### Rozszerzenie build.gradle
 
-Jeśli chcesz dostosować `build.gradle` , raczej niż edytować bezpośrednio, należy utworzyć element członkowski równorzędny plik o nazwie `build-extras.gradle` . Ten plik zostaną uwzględnione przez głównego `build.gradle` kiedy obecny. Oto przykład:
+Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, należy utworzyć plik rodzeństwo o nazwie `build-extras.gradle`. Ten plik będzie zawarte przez główne `build.gradle` obecny. Oto przykład:
 
-    # Przykład budować extras.gradle # plik ten znajduje się na początku 'build.gradle' ext.cdvDebugSigningPropertiesFile = '.../../ android-debugowania-keys.properties' # gdy zestaw, ta funkcja pozwala na kod do uruchomienia na koniec ext.postBuildExtras 'build.gradle' = {android.buildTypes.debug.applicationIdSuffix = ".debug"}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+    
+
+Należy zauważyć, że wtyczki można także `build-extras.gradle` plików za pośrednictwem:
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
     
 
 ### Przykład budowy
 
-    Eksport ANDROID_BUILD = eksport gradle ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 cordova budować android----gradleArg = PcdvBuildMultipleApks = true
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

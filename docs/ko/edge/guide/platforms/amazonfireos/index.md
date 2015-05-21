@@ -64,7 +64,7 @@
 
 이것 새롭게 문을 연 터미널 windows에서 SDK 도구를 제공합니다. 그렇지 않으면 현재 세션에서 사용할 수 있도록이 실행.
 
-    $ 소스 ~/.bash_profile
+    $ source ~/.bash_profile
     
 
 #### Windows 경로

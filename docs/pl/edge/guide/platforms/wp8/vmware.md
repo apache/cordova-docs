@@ -27,7 +27,7 @@ Ta sekcja pokazuje jak skonfigurować VMWare Fusion na Mac, więc, że Cordova m
     
     ![][2]
     
-    Emulator Windows Phone sam używa pół megabajta pamięci, więc ogólnie należy zarezerwować co najmniej 2GB dla VMWare.
+    Emulator Windows Phone sam używa pół gigabajt pamięci, więc ogólnie należy zarezerwować co najmniej 2GB dla VMWare.
 
 3.  Wybierz opcję ustawienia **Zaawansowane** . Włącz **preferowane virtualization silnik: Intel VT-x z EPT** opcji:
     

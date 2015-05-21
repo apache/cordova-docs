@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 升級 Windows Phone 8
 
-本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
+本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 下面一節演示如何從非 CLI 和 CLI 專案升級。
 
 ## 4.0.0 3.6.0 版升級專案
 
@@ -67,7 +67,7 @@ platform add wp8`.
 
 4.  複製或覆蓋任何本機的資產從原始專案 （`閃屏`、 `ApplicationIcon` 等），並確保向 `.csproj` 檔中添加任何新的檔。 Windows 手機 `platforms\wp8` 目錄內的專案生成。
 
-5.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
+5.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
 6.  生成並測試。
 

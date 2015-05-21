@@ -85,6 +85,6 @@ Crea una aplicación en un `hello` directorio cuyo nombre es `HelloWorld` :
     $ cordova run ubuntu
     
 
-### Añadir el Plugin de Status de batería
+### Añadir el Plugin de cámara
 
-    $ cordova plugin add org.apache.cordova.battery-status
+    $ cordova plugin add cordova-plugin-camera

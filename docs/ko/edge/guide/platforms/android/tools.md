@@ -1,6 +1,6 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -65,6 +65,38 @@
 
 적어도 하나의 안 드 로이드 가상 장치, 그렇지 않으면으로 그렇게 하 라는 메시지가 만들 다는 것을 확인은 `android` 명령. 여러 개의 AVD를 대상으로 사용할 수 있는 경우 하나를 선택 하 라는 메시지가 표시. 기본적으로는 `run` 명령 검색 연결 된 장치 또는 현재 실행 중인 에뮬레이터 없는 장치가 발견 되 면.
 
+## 응용 프로그램 서명
+
+요구 사항을 여기에 서명 안 드 로이드 애플 리 케이 션을 검토할 수 있습니다: http://developer.android.com/tools/publishing/app-signing.html
+
+응용 프로그램에 서명 하기 위해 해야 다음 매개 변수: * 키 (`--keystore`): 키 집합을 저장할 수 있는 이진 파일의 경로를. * 키 암호 (`-storePassword`): 암호 키를 * 별칭 (`-별칭`): 노래에 사용 되는 개인 키를 지정 하는 id. * 비밀 번호 (`--keystoreType`): 지정 된 개인 키에 대 한 암호. * 키 (`-keystoreType`)의 유형: pkcs12, jks (기본값: 자동 검색 파일 확장명에 따라) 위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.
+
+양자 택일로, (`-buildConfig`) 인수를 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다. 빌드 구성 파일의 예제는 다음과 같습니다.
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+릴리스는 서명, 암호를 제외할 수 있습니다 및 빌드 시스템에서 암호를 묻는 프롬프트를 발행 합니다.
+
+혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다. 명령줄에 암호를 지정 하는 데 유용할 수 있습니다.
+
 ## 로깅
 
         $ /path/to/project/cordova/log
@@ -79,42 +111,11 @@
         C:\>\path\to\project\cordova\clean.bat
     
 
-## 개미의 수동 사용
+## Gradle 건물
 
-와 같은 커맨드 라인에서 직접 개미를 호출 하려는 경우 `ant debug install` , 개미 명령에 추가 매개 변수를 지정 하려면:
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-코르도바의 Ant 스크립트에 의해 사용 되는 디렉터리 기본값과 다른 때문입니다. 개미가 대 커맨드 라인에서 실행 될 때 충돌을 방지 하려면 이렇게 Eclipse/ADT 내부.
-
-사용 하는 경우 이러한 추가 매개 변수가 자동으로 당신을 위해 추가 되는 `cordova/build` 및 `cordova/run` 스크립트는 위에서 설명한. 사용 하는 것이 좋습니다 이런 이유로 `cordova/build` 및 `cordova/run` 명령줄에서 직접 호출 개미 대신 스크립트.
-
-## Gradle (실험적인!) 있는 건물
-
-안 드 로이드에 대 한 코르도바 지금 [Gradle][2]건물을 지원합니다. 코르 도우 바에서 선택 사항 3.x를, 그러나 활성화 됩니다 기본적으로 미래에, 아마도 코르도바 4.0. 빌드 시스템 환경 변수는 쉘에 대 한 설정 또는 함께 명령줄에서 지정할 수 있는으로 활성화는 `cordova build` 명령.
+현재 cordova-android@4.0.0, [Gradle][2]를 사용 하 여 프로젝트 빌드. 개미와 건물에 대 한 지침, 이전 버전의 문서를 참조 하십시오.
 
  [2]: http://www.gradle.org/
-
-Gradle 빌드 규칙은 여전히 개발 하 고 있을 것 이다 큰 변화에 따라 하기 전에 Gradle는 기본 시스템을 구축 하십시오. 개발자는 그것을 시도 하 고, 그것으로 실험 하는 것이 좋습니다 하지만 자신의 생산 빌드 시스템 위에 기초 발생할 수 있습니다 아마 몇 가지 주요 변경 사항을 다음 몇 출시를 통해 안정화 하기 전에.
-
-### 관련 환경 변수
-
-*   **안 드 로이드 _ 구축**
-    
-    이 변수는 빌드 시스템을 사용 하는 프로젝트 빌드를 제어 합니다. 에 있는 값 중 하나 걸릴 수 있습니다 `ant` 또는`gradle`.
-    
-    경우 설정 하지, 그것은 현재 기본적으로 `ant` , 그러나이 변경 것으로 예상 된다.
-
-### 다른 환경 변수 (일반적으로 필요가 없습니다 설정)
-
-*   **안 드 로이드 _ 홈**
-    
-    이 안 드 로이드 SDK를 포함 하는 디렉터리를 설정 해야 합니다. 코르 도우 바가에 대 한 기본 설치 위치에 뿐만 아니라 그것은 정상적으로 설정이 필요 하지 않습니다 그래서 당신의 경로 변수에 보고 보인다.
-
-*   **JAVA _ 홈**
-    
-    일부 컴퓨터에서이 Gradle 자바 컴파일러를 찾을 수 있도록 설정 해야 합니다.
 
 ### Gradle 속성
 
@@ -122,7 +123,7 @@ Gradle 빌드 규칙은 여전히 개발 하 고 있을 것 이다 큰 변화에
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks** (기본값: false)
     
     이 설정 되어 있으면 여러 APK 파일이 생성 됩니다: 하나씩 라이브러리 프로젝트에서 지 원하는 네이티브 플랫폼 (x86, 팔, 등). 이 프로젝트는 크게 생성 된 APK의 크기를 증가 시킬 수 있는 큰 네이티브 라이브러리를 사용 하는 경우에 중요할 수 있습니다.
     
@@ -130,40 +131,56 @@ Gradle 빌드 규칙은 여전히 개발 하 고 있을 것 이다 큰 변화에
 
 *   **cdvVersionCode**
     
-    VersionCode 설정 재정의`AndroidManifest.xml`
+    VersionCode `AndroidManifest.xml`에 설정 재정의
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile** (기본: release-signing.properties)
     
     릴리스에 대 한 서명 정보를 포함 하는.properties 파일 경로를 작성 합니다. 파일은 다음과 같습니다.
     
-        storeFile=relative/path/to/keystore.p12 storePassword = SECRET1 storeType pkcs12 keyAlias = DebugSigningKey keyPassword = SECRET2 =
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword`그리고 `keyPassword` , 선택적인 및 생략 하는 경우에 대 한 메시지가 표시 됩니다.
+    `storePassword` 그리고 `keyPassword` 선택 사항 생략 하는 경우에 대 한 메시지가 표시 됩니다.
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile** (기본: debug-signing.properties)
     
     같지만 cdvReleaseSigningPropertiesFile, 디버그 빌드. 다른 개발자와 서명 키를 공유 해야 할 때 유용 합니다.
 
 *   **cdvMinSdkVersion**
     
-    값을 재정의 `minSdkVersion` 에 `AndroidManifest.xml` . 여러 만들 때 유용한 APKs SDK 버전에 따라.
+    `MinSdkVersion` `AndroidManifest.xml`에서 설정 값을 재정의 합니다. 여러 만들 때 유용한 APKs SDK 버전에 따라.
 
 *   **cdvBuildToolsVersion**
     
-    재정의 자동으로 검색 된 `android.buildToolsVersion` 값.
+    자동으로 검색 된 `android.buildToolsVersion` 값을 재정의 합니다.
 
 *   **cdvCompileSdkVersion**
     
-    재정의 자동으로 검색 된 `android.compileSdkVersion` 값.
+    자동으로 검색 된 `android.compileSdkVersion` 값을 재정의 합니다.
 
 ### Build.gradle 확장
 
-사용자 지정 하려는 경우 `build.gradle` , 오히려 보다 직접 편집 만들어야 합니다 라는 형제 파일 `build-extras.gradle` . 이 파일은 메인에 의해 포함 될 것입니다 `build.gradle` 때 제시 합니다. 여기에 예가입니다.
+사용자 지정 `build.gradle`, 보다는 오히려 직접 편집 해야 할 경우 `build-extras.gradle`라는 형제 파일을 만들어야 합니다. 이 파일은 주요 `build.gradle` 존재 하는 경우에 의해 포함 됩니다. 여기에 예가입니다.
 
-    # 예제 빌드 extras.gradle #이이 파일은 'build.gradle' ext.cdvDebugSigningPropertiesFile의 시작 부분에 포함 = '.../../ 안 드 로이드-디버그-keys.properties' # 설정,이 기능은 코드를 'build.gradle' ext.postBuildExtras의 끝에 실행 허용 = {android.buildTypes.debug.applicationIdSuffix = '.debug'}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+    
+
+Note 플러그인을 통해 `build-extras.gradle` 파일을 포함할 수도 있습니다.
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
     
 
 ### 예제 빌드
 
-    수출 ANDROID_BUILD gradle 수출 ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 코르도바 빌드 안 드 로이드--gradleArg = PcdvBuildMultipleApks = = true
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

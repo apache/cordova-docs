@@ -1,6 +1,6 @@
 * * *
 
-licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -320,9 +320,28 @@ Il prend en charge les attributs suivants :
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+La plate-forme de Windows prend en charge deux attributs supplémentaires (tous deux en option) en affectant le Meta-nom `package.appxmanifest` :
+
+L'attribut `device-target` indique que le ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win`, `phone` ou `all`.
+
+L'attribut `versions` indique que manifestes d'application pour des versions spécifiques de Windows devraient seulement être modifiés pour les versions qui correspondent à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
+
+Exemples d'utilisation de ces attributs spécifiques de Windows :
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+L'exemple ci-dessus va définir pré-8.1 plates-formes (Windows 8, plus précisément) d'exiger la fonctionnalité du périphérique `webcam` et la capacité générale de `picturesLibrary` et d'appliquer la fonctionnalité du périphérique `webcam` uniquement aux projets Windows 8.1 qui construisent pour Windows Phone. Windows desktop 8.1 systèmes sont non modifiés.
+
 ## *plugins-plist* Élément
 
-Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. Utiliser le `<config-file>` tag pour les versions plus récentes de Cordova.
+Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. Utilisez la balise `<file-config>` une version plus récente de Cordova.
 
 Exemple :
 
@@ -333,7 +352,7 @@ Exemple :
     </config-file>
     
 
-Spécifie une clé et une valeur à ajouter à la bonne `AppInfo.plist` fichier dans un projet de Cordova d'iOS. Par exemple :
+Spécifie une clé et une valeur à ajouter au fichier `AppInfo.plist` correct dans un projet de Cordova d'iOS. Par exemple :
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ Comme fichiers sources, mais spécialement pour les plateformes telles qu'iOS, q
 
 Exemple de Android :
 
-    < src="FooPluginStrings.xml ressource-fichier" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib-fichier* Élément
@@ -366,7 +385,7 @@ Attributs pris en charge :
 
 *   `arch`: L'architecture pour laquelle le `.so` fichier a été généré, soit `device` ou`simulator`.
 
-Pour la plate-forme Windows, la `<lib-file>` élément permet l'inclusion d'un `<SDKReference>` dans les fenêtres générés les fichiers de projet.
+Pour la plate-forme Windows, l'élément du `<lib-file>` permet l'inclusion d'un `< SDKReference >` dans les fichiers de projet générés Windows.
 
 Attributs pris en charge :
 
@@ -374,13 +393,16 @@ Attributs pris en charge :
 
 *   `arch`: Indique que le `<SDKReference>` ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86` , `x64` ou`ARM`.
 
-*   `target`: Indique que le `<SDKReference>` ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou`all`.
+*   `device-target` : indique que le `< SDKReference >` ne devraient être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou `all`.
 
 *   `versions`: Indique que le `<SDKReference>` ne devrait être inclus lorsque vous générez une version qui correspond à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
 
 Exemples :
 
-    < lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" arch = "x 86" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" versions = "> = 8,1" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" cible = "téléphone" / >< lib-fichier src="Microsoft.WinJS.2.0, Version = 1.0" cible = "gagner" les versions = arch "8.0" = "x 86" / >
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
     
 
 ## *cadre* Élément
@@ -389,66 +411,76 @@ Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend
 
 Exemples :
 
-    < cadre src="libsqlite3.dylib" / >< cadre src="social.framework" faible = "true" / >< cadre src="relative/path/to/my.framework » personnalisé ="true"/ >< cadre src="path/to/project/LibProj.csproj » personnalisé = "true" type = "projectReference" / >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-Le `src` attribut identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
+L'attribut `src` identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
 
-Le paramètre optionnel `weak` attribut est une valeur booléenne qui indique si le cadre devrait être faiblement lié. La valeur par défaut est`false`.
+L'attribut facultatif `weak` est une valeur booléenne indiquant si le cadre devrait être faiblement lié. La valeur par défaut est `false`.
 
-Le paramètre optionnel `custom` attribut est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est `false` . ***Sur Android*** il indique comment traiter des **src**. Si `true` **src** est un chemin d'accès relatif du répertoire du projet de l'application, dans le cas contraire--depuis le répertoire du SDK Android.
+L'attribut facultatif `custom` est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est `false`. ***Sur Android*** il indique comment traiter des **src**. Si `true` **src** est un chemin d'accès relatif du répertoire du projet de l'application, dans le cas contraire--depuis le répertoire du SDK Android.
 
-Le paramètre optionnel `type` attribut est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge et uniquement pour Windows. À l'aide de `custom='true'` et `type='projectReference'` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
+L'attribut optionnel `type` est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge et uniquement pour Windows. À l'aide de `custom="true"` et `type="projectReference"` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
 
-Le paramètre optionnel `parent` attribut est actuellement pris en charge uniquement sur Android. Il définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.` , c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
+L'attribut facultatif `parent` est actuellement pris en charge uniquement sur Android. Il définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.`, c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
 
-    < cadre src = « FeedbackLib » custom = « true » / >< cadre src = « options/android/soutien/v7/appcompat » custom = « false » parent = « FeedbackLib » / >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
 La plate-forme de Windows prend en charge trois attributs supplémentaires (facultatifs) pour préciser quand le cadre devrait être inclus :
 
-Le `arch` attribut indique que le cadre ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86` , `x64` ou`ARM`.
+L'attribut de `arch` indique que le cadre ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86`, `x64` ou `ARM`.
 
-Le `target` attribut indique que le cadre ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou`all`.
+L'attribut `device-target` indique que le cadre ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou `all`.
 
-Le `versions` attribut indique que le cadre ne devrait être inclus lorsque vous générez une version qui correspond à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
+L'attribut de `versions` indique que le cadre ne devrait être inclus lorsque vous générez une version qui correspond à la chaîne de version spécifiée. Valeur peut être n'importe quelle chaîne de gamme version sémantique nœud valide.
 
 Exemples d'utilisation de ces attributs spécifiques de Windows :
 
-    < src="src/windows/example.dll cadre" arch = « x 64 » / >< cadre src="src/windows/example.dll" versions = "> = 8.0" / >< cadre src="src/windows/example.vcxproj" type = "projectReference" target = "gagner" / >< cadre src="src/windows/example.vcxproj" type = "projectReference" target = "toutes les" versions = arch "8.1" = "x 86" / >
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *info* Élément
 
 Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque vous avez besoin des étapes supplémentaires qui ne peuvent pas être facilement automatisées ou sont hors de portée de plugman. Exemples :
 
-    < Info > vous devez installer __Google Services__ jouer de la section « Android Extras » en utilisant le gestionnaire de SDK Android (exécuter « android »).
+    <info>
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Vous devez ajouter la ligne suivante à la « local.properties »: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    Vous devez ajouter la ligne suivante à la "local.properties": android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < /info >
     
 
 ## Variables
 
-Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` requerrait une autorisation tels que :
+Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` nécessite une autorisation tels que :
 
-    < android:name="com.alunny.message.permission.C2D_MESSAGE"/ usages-autorisation >
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-Dans ce cas où le contenu inséré de la `plugin.xml` fichier n'est pas connu avance, variables peuvent être indiquées par un signe dollar suivi d'une série de lettres capitales, des chiffres ou des traits de soulignement. Pour l'exemple ci-dessus, le `plugin.xml` fichier comprendrait cette balise :
+Dans ce cas où le contenu inséré dans le fichier `plugin.xml` ne connaît pas avance, variables peuvent être indiquées par un signe dollar suivi d'une série de lettres capitales, des chiffres ou des traits de soulignement. Pour l'exemple ci-dessus, le fichier `plugin.xml` comprendrait cette balise :
 
-    < android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/ usages-autorisation >
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de référence de la variable peut être détectée (dans ce cas, de la `AndroidManifest.xml` fichier) ou spécifié par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
+plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de référence de la variable peut être détectée (dans ce cas, à partir du fichier `AndroidManifest.xml`) ou spécifiée par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
 
 plugman pouvez demander aux utilisateurs de spécifier les variables requises d'un plugin. Par exemple, les clés de l'API pour C2M et Google Maps peuvent être spécifiés comme un argument de ligne de commande :
 
-    plugman--android plate-forme--projet/chemin/vers/plugin--name|git-url|path--API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734 variable du projet
+    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Pour rendre la variable obligatoire, la `<platform>` balise doit contenir un `<preference>` tag. Par exemple :
+Pour rendre la variable obligatoire, la balise `< platform >` doit contenir une balise `< preférence >`. Par exemple :
 
-    < nom de l'option = « API_KEY » / >
+    <preference name="API_KEY" />
     
 
 plugman vérifie que ces préférences requis sont passés. Si ce n'est pas le cas, il doit avertir l'utilisateur comment passer la variable dans et sortir avec un code différent de zéro.
@@ -457,4 +489,4 @@ Certains noms de variables doivent être réservées, comme indiqué ci-dessous.
 
 ## $PACKAGE_NAME
 
-L'inverse-domaine de style un identificateur unique pour le package, correspondant à la `CFBundleIdentifier` sur iOS ou le `package` attribut de niveau supérieur `manifest` élément dans un `AndroidManifest.xml` fichier.
+L'identificateur unique de domaine inverse style pour le package, correspondant à la `CFBundleIdentifier` sur iOS ou l'attribut de l'élément de niveau supérieur `manifest` dans un fichier `AndroidManifest.xml` de `package`.

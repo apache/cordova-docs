@@ -65,7 +65,39 @@ El comando `run` acepta los siguientes parámetros *opcionales*:
 
 Asegúrese de que crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el comando `android`. Si más de una AVD está disponible como un objetivo, usted se pedirá para seleccionar uno. Por defecto el comando `run` detecta un dispositivo conectado, o ejecutando un emulador si no se encuentra ningún dispositivo.
 
-## Tala
+## Firmar la aplicación
+
+Usted puede revisar Android app firmando los requisitos aquí: http://developer.android.com/tools/publishing/app-signing.html
+
+Para firmar una aplicación, necesita los siguientes parámetros: * Keystore (`--keystore`): ruta a un archivo binario que puede contener un conjunto de claves. * Keystore password (`--storePassword`): contraseña al almacén de claves * Alias (`--alias`): especifica la clave privada utilizada para cantar el id. * Contraseña (`--password`): contraseña para la clave privada especificada. * Tipo del almacén de claves (`--keystoreType`): pkcs12, jks (por defecto: detección automática basada en la extensión del archivo) estos parámetros se pueden especificar utilizando los argumentos de línea de comandos por encima para `build` o `run` secuencias de comandos.
+
+Por otra parte, les puede especificar en un archivo de configuración de construcción (build.json) con un argumento (`--buildConfig`). Este es un ejemplo de un archivo de configuración de compilación:
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+Para la firma de liberación, las contraseñas pueden ser excluidas y el sistema emitirá un mensaje pidiendo la contraseña.
+
+También hay soporte para mezclar y combinar los argumentos de línea de comandos y los parámetros en el archivo build.json. Los valores de los argumentos de línea de comandos tendrán precedencia. Esto puede ser útil para especificar la contraseña en la línea de comandos.
+
+## Registro
 
         $ /path/to/project/cordova/log
     
@@ -79,91 +111,76 @@ Asegúrese de que crear al menos un Virtual dispositivo Android, caso contrario 
         C:\>\path\to\project\cordova\clean.bat
     
 
-## Uso manual de hormiga
+## Construcción con Gradle
 
-Si usted desea llamar hormiga directamente desde la línea de comandos como `ant debug install` , es necesario especificar parámetros adicionales para el comando de la hormiga:
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-Esto es porque los directorios utilizados por scripts de Ant de Cordova son diferentes a la predeterminada. Esto se hace para evitar conflictos cuando Ant se ejecuta desde la línea de comandos versus dentro de Eclipse/ADT.
-
-Estos parámetros adicionales se agregan automáticamente para usted cuando se utiliza el `cordova/build` y `cordova/run` secuencias de comandos describen anteriormente. Por esta razón se recomienda usar el `cordova/build` y `cordova/run` secuencias de comandos en lugar de hormiga llamada directamente desde la línea de comandos.
-
-## Edificio con Gradle (Experimental).
-
-Cordova para Android ahora soporta edificio con [Gradle][2]. Esto es opcional en Córdoba 3.x, pero se activará por defecto en el futuro, probablemente con Cordova 4.0. El sistema de compilación se activa mediante una variable de entorno, que puede ser fijada para la cáscara, o especificada en la línea de comandos junto con el `cordova build` comando.
+A partir de cordova-android@4.0.0, proyecto construir usando [Gradle][2]. Para obtener instrucciones sobre el edificio con ANT, consulte las versiones más antiguas de la documentación.
 
  [2]: http://www.gradle.org/
 
-Por favor, tenga en cuenta que las normas de construcción Gradle están todavía en desarrollo y probablemente será sometida a grandes cambios antes de Gradle se convierte en el sistema de compilación predeterminado. Animan a los desarrolladores para probar y experimentar con él, pero si basa su propio sistema de compilación de producción encima, usted probablemente experimentará varios cambios de última hora sobre los próximos lanzamientos pocos, antes de que se estabilice.
-
-### Variables de entorno pertinentes
-
-*   **ANDROID _ CONSTRUIR**
-    
-    Esta variable controla que construir el sistema es utilizado para construir el proyecto. En puede tomar cualquiera de los valores `ant` o`gradle`.
-    
-    Si no se establece, actualmente valor predeterminado es `ant` , pero se espera que cambie.
-
-### Otras Variables de entorno (normalmente no necesita establecer estos)
-
-*   **ANDROID _ INICIO**
-    
-    Esto debe establecerse en el directorio que contiene el SDK de Android. Cordova esto busca en los lugares de instalación por defecto, así como analizando la variable PATH, así que normalmente no requiere configuración.
-
-*   **JAVA _ INICIO**
-    
-    En algunas máquinas, esto tendrá que ser ajustado así que Gradle puede encontrar el compilador de Java.
-
-### Gradle propiedades
+### Propiedades de Gradle
 
 Estas [Propiedades][3] pueden establecerse para personalizar la construcción:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks** (por defecto: false)
     
-    Si está establecido, entonces se generará varios archivos APK: uno por nativo plataforma soportada por proyectos de bibliotecas (x 86, brazo, etc.). Esto puede ser importante si el proyecto utiliza grandes bibliotecas nativas, que pueden aumentar drásticamente el tamaño de los APK generado.
+    Si está establecido, entonces se generará varios archivos APK: uno por plataforma nativa soportada por proyectos de bibliotecas (x 86, ARM, etc.). Esto puede ser importante si el proyecto utiliza grandes bibliotecas nativas, que pueden aumentar drásticamente el tamaño de los APK generados.
     
     Si no se establece, se generará una sola APK que puede utilizarse en todos los dispositivos.
 
 *   **cdvVersionCode**
     
-    Reemplaza el versionCode en`AndroidManifest.xml`
+    Reemplaza el versionCode situado en `AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile** (por defecto: release-signing.properties)
     
-    Ruta a un archivo .properties que contiene información de la firma para liberación construye. El archivo debe verse como:
+    Ruta a un archivo .properties que contiene información de la firma para la construcción de liberación. El archivo debe verse como:
     
-        storeFile=relative/path/to/keystore.p12 storePassword = SECRET1 storeType = pkcs12 keyAlias = DebugSigningKey keyPassword = SECRET2
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword`y `keyPassword` son opcionales y se pedirá si se omite.
+    `storePassword` y `keyPassword` son opcionales y se pedirá si se omite.
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile** (por defecto: debug-signing.properties)
     
     Igual que cdvReleaseSigningPropertiesFile, pero para depuración construye. Útil cuando tienes que compartir una firma clave con otros desarrolladores.
 
 *   **cdvMinSdkVersion**
     
-    Reemplaza el valor de `minSdkVersion` en `AndroidManifest.xml` . Útil cuando se crean múltiples desde servidores basan en la versión de SDK.
+    Reemplaza el valor de `minSdkVersion` en `AndroidManifest.xml`. Útil cuando se crean múltiples desde servidores basan en la versión de SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Reemplazar el automáticamente detectado `android.buildToolsVersion` valor.
+    Reemplazar el valor automáticamente detectado `android.buildToolsVersion`.
 
 *   **cdvCompileSdkVersion**
     
-    Reemplazar el automáticamente detectado `android.compileSdkVersion` valor.
+    Reemplazar el valor automáticamente detectado `android.compileSdkVersion`.
 
-### Build.gradle extensible
+### Extendiendo build.gradle
 
-Si necesitas personalizar `build.gradle` , prefiero que editar directamente, debe crear un archivo hermano llamado `build-extras.gradle` . Este archivo se incluirán por la cañería `build.gradle` cuando están presentes. Aquí está un ejemplo:
+Si necesita personalizar `build.gradle`, en lugar de editar directamente, debe crear un archivo hermano llamado `build-extras.gradle`. Este archivo se incluirá por el principal `build.gradle` cuando están presentes. Aquí está un ejemplo:
 
-    # Ejemplo construir-extras.gradle # este archivo se incluye el principio de 'build.gradle' ext.cdvDebugSigningPropertiesFile = '.../../ android-depurar-keys.properties' # al conjunto, esta función permite al final de 'build.gradle' ext.postBuildExtras de código = {android.buildTypes.debug.applicationIdSuffix = '.debug'}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
     
 
-### Ejemplo Build
+Tenga en cuenta que plugins también puede incluir archivos `build-extras.gradle` a través de:
 
-    Export ANDROID_BUILD = gradle export ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 cordova construir android----gradleArg =-PcdvBuildMultipleApks = true
+    <framework src="some.gradle" custom="true" type="gradleReference" />
+    
+
+### Ejemplo de construcción
+
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

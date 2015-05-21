@@ -1,6 +1,6 @@
 * * *
 
-許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -65,6 +65,38 @@
 
 請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
 
+## 簽署應用程式
+
+您可以查看簽名要求在這裡的安卓應用程式： HTTP://developer.android.com/tools/publishing/app-signing.html
+
+要簽名的應用程式，您需要以下參數： * 金鑰存儲庫 （`--keystore`）： 可容納一套鑰匙的二進位檔案的路徑。 * 金鑰庫口令 （`--storePassword`）： 金鑰存儲庫的密碼 * 別名 （`--alias`）： 指定私密金鑰用於唱歌的 id。 * 密碼 （`--password`）： 為指定的私密金鑰的密碼。 * 類型的金鑰存儲庫 （`--keystoreType`）： pkcs12 jks （預設： 自動檢測基於檔副檔名） 可以使用上面 `run` 或 `build` 腳本的命令列參數指定這些參數。
+
+或者，您可以指定它們在組建組態檔 （build.json） 中使用 （`--buildConfig`) 的論點。下面是組建組態檔的一個示例：
+
+    {
+         "android": {
+             "debug": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "android",
+                 "alias": "mykey1",
+                 "password" : "password",
+                 "keystoreType": ""
+             },
+             "release": {
+                 "keystore": "..\android.keystore",
+                 "storePassword": "",
+                 "alias": "mykey2",
+                 "password" : "password",
+                 "keystoreType": ""
+             }
+         }
+     }
+    
+
+對於發佈簽名，可以排除密碼和生成系統會發出提示要求輸入密碼。
+
+此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。 從命令列參數的值將會得到優先。 這可用於在命令列上指定的密碼。
+
 ## 日誌記錄
 
         $ /path/to/project/cordova/log
@@ -79,50 +111,19 @@
         C:\>\path\to\project\cordova\clean.bat
     
 
-## 手動使用的螞蟻
+## Gradle 建築
 
-如果你想打電話要螞蟻直接從命令列如 `ant debug install` ，您需要指定的附加參數到 ant 命令：
-
-        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
-    
-
-這是因為是比預設值不同的科爾多瓦的 Ant 腳本所使用的目錄。這樣做是為了避免衝突，從與在命令列運行 Ant 時日食/ADT 裡面。
-
-這些附加參數，將自動為您添加時使用 `cordova/build` 和 `cordova/run` 腳本上文所述。 為此它建議使用 `cordova/build` 和 `cordova/run` 而不是直接從命令列調用 Ant 腳本。
-
-## 大廈與 Gradle （實驗） ！
-
-科爾多瓦安卓系統現在支援[Gradle][2]建築。 這是可選的科爾多瓦 3.x，但將被預設啟用，在將來，可能與科爾多瓦 4.0。生成系統由環境變數，這樣可以設置為殼，或與命令列上指定啟用 `cordova build` 命令。
+截至 cordova-android@4.0.0，專案生成使用 [Gradle][2]。關於建設與螞蟻的說明，請參閱文檔的舊版本。
 
  [2]: http://www.gradle.org/
 
-請注意 Gradle 建置規則仍在發展，可能會受到較大的改變之前 Gradle 成為預設生成系統。 開發人員鼓勵試一試，體驗它，但是如果你在它上面你自己生產生成系統，你將可能經歷幾個重大更改在接下來的幾個版本中之前它穩定。
-
-### 相關的環境變數
-
-*   **ANDROID _ 生成**
-    
-    此變數控制哪些生成系統用來生成專案。可以在任一值 `ant` 或`gradle`.
-    
-    如果未設置，則當前預設為 `ant` ，但這預計會發生變化。
-
-### （你通常不需要設置這些） 其他環境變數
-
-*   **ANDROID _ 回家**
-    
-    這應該設置為包含 Android SDK 的目錄。 科爾多瓦尋找這在預設安裝位置，以及看您的 PATH 變數，所以它通常並不需要的設置。
-
-*   **JAVA _ 回家**
-    
-    在一些機器上，這將需要進行設置，以使 Gradle 可以找到 JAVA 編譯器。
-
 ### Gradle 屬性
 
-可以設置這些[屬性][3]，以自訂生成：
+可以設置這些 [屬性][3]，以自訂生成：
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**
+*   **cdvBuildMultipleApks**（預設：false）
     
     如果設置此值，則將生成多個 APK 檔： 庫專案所支援的本機平臺每一個 (x 86，手臂，等等）。 這可能是重要的如果您的專案使用大型的本機庫，可能會大幅提高生成 apk 檔的大小。
     
@@ -130,40 +131,56 @@
 
 *   **cdvVersionCode**
     
-    重寫 versionCode 中設置`AndroidManifest.xml`
+    重寫 versionCode 在 `AndroidManifest.xml` 中設置
 
-*   **cdvReleaseSigningPropertiesFile**
+*   **cdvReleaseSigningPropertiesFile**（預設： release-signing.properties)
     
     包含簽名資訊釋放的.properties 檔路徑生成。該檔應該看起來像：
     
-        storeFile=relative/path/to/keystore.p12 storePassword = SECRET1 storeType = pkcs12 keyAlias = DebugSigningKey keyPassword = SECRET2
+        storeFile=relative/path/to/keystore.p12
+        storePassword=SECRET1
+        storeType=pkcs12
+        keyAlias=DebugSigningKey
+        keyPassword=SECRET2
         
     
-    `storePassword`和 `keyPassword` 是可選的並將提示輸入，如果省略。
+    `storePassword` 和 `keyPassword` 是可選的如果省略將提示輸入。
 
-*   **cdvDebugSigningPropertiesFile**
+*   **cdvDebugSigningPropertiesFile**（預設： debug-signing.properties)
     
     與相同 cdvReleaseSigningPropertiesFile，但用於調試生成。當您需要與其他開發者共用的簽名金鑰時很有用。
 
 *   **cdvMinSdkVersion**
     
-    重寫的值 `minSdkVersion` 中設置 `AndroidManifest.xml` 。有用時，創建多個 APKs 基於 SDK 版本。
+    重寫 `minSdkVersion` 在 `AndroidManifest.xml` 中設置的值。有用時，創建多個 APKs 基於 SDK 版本。
 
 *   **cdvBuildToolsVersion**
     
-    重寫自動檢測到 `android.buildToolsVersion` 的值。
+    覆蓋自動檢測到的 `android.buildToolsVersion` 的值。
 
 *   **cdvCompileSdkVersion**
     
-    重寫自動檢測到 `android.compileSdkVersion` 的值。
+    覆蓋自動檢測到的 `android.compileSdkVersion` 的值。
 
 ### 擴展 build.gradle
 
-如果您需要自訂 `build.gradle` ，寧願比直接編輯，您應該創建一個名為的同級檔 `build-extras.gradle` 。 此檔將包含主要由 `build.gradle` 當存在。 下面是一個示例：
+如果您需要自訂 `build.gradle`，而不是直接編輯，您應該創建一個名為 `build-extras.gradle` 的同級檔。 此檔將包含由主要的 `build.gradle` 出現時。 下面是一個示例：
 
-    # 示例生成 extras.gradle # 此檔是包含開頭的 'build.gradle' ext.cdvDebugSigningPropertiesFile = '。/../ android-調試-keys.properties 的 # 時設置，此功能允許代碼運行 'build.gradle' ext.postBuildExtras 月底 = {android.buildTypes.debug.applicationIdSuffix =.debug}
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
+    
+
+請注意外掛程式還可以包括通過 `build-extras.gradle` 檔：
+
+    <framework src="some.gradle" custom="true" type="gradleReference" />
     
 
 ### 示例生成
 
-    匯出 ANDROID_BUILD = gradle 出口 ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 科爾多瓦生成 android — — — — gradleArg = PcdvBuildMultipleApks = true
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true

@@ -320,9 +320,28 @@ Soporta los siguientes atributos:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+La plataforma de Windows soporta dos atributos adicionales (ambos opcional) cuando afectan la meta-nombre `package.appxmanifest`:
+
+El atributo de `device-target` indica que el sólo debe incluir al construir para el tipo de dispositivo de destino especificado. Los valores admitidos son `win`, `phone`o `all`.
+
+El atributo de `versions` indica que sólo se modificara manifiestos de aplicación para las versiones específicas de Windows para las versiones que coinciden con la cadena de versión especificada. Valor puede ser cualquier cadena de nodo válida versión semántica gama.
+
+Ejemplos del uso de estos atributos específicos de Windows:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+El ejemplo anterior establecerá pre-8.1 plataformas (Windows 8, específicamente) que requieren la capacidad de dispositivo `webcam` y la capacidad general de `picturesLibrary` y la capacidad de dispositivo `webcam` se aplican sólo a Windows 8.1 proyectos que construcción para Windows Phone. Windows desktop 8.1 sistemas son sin modificar.
+
 ## *plugins-plist* Elemento
 
-Es *anticuado* ya que sólo se aplica a cordova-ios 2.2.0 y por debajo. Uso el `<config-file>` tag para las nuevas versiones de Córdoba.
+Es *anticuado* ya que sólo se aplica a cordova-ios 2.2.0 y por debajo. Utilice la etiqueta `< archivo config - >` para las nuevas versiones de Córdoba.
 
 Ejemplo:
 
@@ -333,7 +352,7 @@ Ejemplo:
     </config-file>
     
 
-Especifica una clave y un valor para añadir a la correcta `AppInfo.plist` archivo en un proyecto de Cordova iOS. Por ejemplo:
+Especifica una clave y el valor para anexar el archivo correcto `AppInfo.plist` en un proyecto de Cordova iOS. Por ejemplo:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ Como archivos de código fuente, pero específicamente para plataformas como iOS
 
 Ejemplo de Android:
 
-    < archivo de recursos src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib-archivo* Elemento
@@ -366,7 +385,7 @@ Atributos soportados:
 
 *   `arch`: La arquitectura para la cual el `.so` archivo se ha construido, ya sea `device` o`simulator`.
 
-Para la plataforma Windows, el `<lib-file>` elemento permite la inclusión de un `<SDKReference>` en las ventanas generadas archivos de proyecto.
+Para la plataforma Windows, el elemento `< lib-file >` permite la inclusión de un `< SDKReference >` en los archivos de proyecto de Windows generados.
 
 Atributos soportados:
 
@@ -374,13 +393,16 @@ Atributos soportados:
 
 *   `arch`: Indica que el `<SDKReference>` sólo se debe incluir al edificio para la arquitectura especificada. Los valores admitidos son `x86` , `x64` o`ARM`.
 
-*   `target`: Indica que el `<SDKReference>` sólo se debe incluir al construir para el tipo de dispositivo de destino especificado. Los valores admitidos son `win` (o `windows` ), `phone` o`all`.
+*   `device-target`: indica que el `< SDKReference >` sólo debe ser incluido al construir para el tipo de dispositivo de destino especificado. Los valores admitidos son `win` (o `windows` ), `phone` o`all`.
 
 *   `versions`: Indica que el `<SDKReference>` sólo se debe incluir al construir versiones que coinciden con la cadena de versión especificada. Valor puede ser cualquier cadena de nodo válida versión semántica gama.
 
 Ejemplos:
 
-    < lib-file src="Microsoft.WinJS.2.0, versión = 1.0" arco = "x 86" / >< lib-file src="Microsoft.WinJS.2.0, versión = 1.0" versiones = "> = 8,1" / >< lib-file src="Microsoft.WinJS.2.0, versión = 1.0" objetivo = "teléfono" / >< lib-file src="Microsoft.WinJS.2.0, versión = 1.0" target = "ganar" las versiones = "8.0" arco = "x 86" / >
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
     
 
 ## *marco* Elemento
@@ -389,66 +411,79 @@ Identifica un marco (generalmente parte de la plataforma/OS) de la cual depende 
 
 Ejemplos:
 
-    < marco src="libsqlite3.dylib" / >< marco src="social.framework" débil = "true" / >< marco src="relative/path/to/my.framework" personalizado = "true" / >< marco src="path/to/project/LibProj.csproj" personalizado = "true" type = "projectReference" / >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
+El atributo `src` identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
 
-Opcional `weak` atributo es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es`false`.
+El atributo opcional `weak` es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es `false`.
 
-Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es `false` . ***En Android*** especifica cómo tratar **src**. Si `true` **src** es una ruta relativa desde el directorio del proyecto de la aplicación, de lo contrario, desde el directorio del SDK de Android.
+El atributo opcional `custom` es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es `false`. ***En Android*** especifica cómo tratar **src**. Si `true` **src** es una ruta relativa desde el directorio del proyecto de la aplicación, de lo contrario--desde el directorio del SDK de Android.
 
-Opcional `type` atributo es una cadena que indica el tipo de marco para agregar. Actualmente, sólo `projectReference` es compatible y sólo para Windows. Usando `custom='true'` y `type='projectReference'` se agregue una referencia al proyecto que se agregarán a la compilación + enlace pasos del proyecto cordova. Esencialmente es la única forma actualmente que un marco 'custom' puede hacer objetivo a múltiples arquitecturas como se construyen explícitamente como una dependencia por la aplicación de Córdoba hace referencia a.
+El atributo opcional `type` es una cadena que indica el tipo de marco para agregar. Actualmente, sólo `projectReference` es compatible y sólo para Windows. Usando `custom='true'` y `tipo = 'projectReference'` se agregue una referencia al proyecto que se agregarán a la compilación + enlace pasos del proyecto cordova. Esencialmente es la única forma actualmente que un marco 'custom' puede hacer objetivo a múltiples arquitecturas como se construyen explícitamente como una dependencia por la aplicación de Córdoba hace referencia a.
 
-Opcional `parent` atributo actualmente sólo es compatible con Android. Establece la ruta relativa al directorio que contiene el proyecto secundario al que se agregue la referencia. El valor predeterminado es `.` , es decir, el proyecto de aplicación. Permite para agregar referencias entre proyectos sub como en este ejemplo:
+El atributo opcional `parent` actualmente sólo es compatible con Android. Establece la ruta relativa al directorio que contiene el proyecto secundario al que se agregue la referencia. El valor predeterminado es `.`, es decir, el proyecto de aplicación. Permite para agregar referencias entre proyectos sub como en este ejemplo:
 
-    < marco src = "FeedbackLib" custom = "true" / >< marco src = "extras/android/soporte/v7/appcompat" custom = "false" padre = "FeedbackLib" / >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
 La plataforma de Windows soporta tres atributos adicionales (opcionales) para refinar cuando el marco debe incluir:
 
-El `arch` atributo indica que el marco sólo se incluyera al edificio para la arquitectura especificada. Los valores admitidos son `x86` , `x64` o`ARM`.
+El `arch` atributo indica que el marco sólo se incluyera al edificio para la arquitectura especificada. Los valores admitidos son `x86`, `x64` o `ARM`.
 
-El `target` atributo indica que el framwork sólo debe incluir al construir para el tipo de dispositivo de destino especificado. Los valores admitidos son `win` (o `windows` ), `phone` o`all`.
+El atributo de `device-target` indica que el sólo debe incluir al construir para el tipo de dispositivo de destino especificado. Los valores admitidos son `win` (o `windows` ), `phone` o`all`.
 
-El `versions` atributo indica que el marco sólo se incluyera al construir versiones que coinciden con la cadena de versión especificada. Valor puede ser cualquier cadena de nodo válida versión semántica gama.
+El atributo de `versions` indica que el marco sólo debe ser incluido al construir versiones que coinciden con la cadena de versión especificada. Valor puede ser cualquier cadena de nodo válida versión semántica gama.
 
 Ejemplos del uso de estos atributos específicos de Windows:
 
-    < marco src="src/windows/example.dll" arco "x 64" = / >< marco src="src/windows/example.dll" versiones = "> = 8.0" / >< marco src="src/windows/example.vcxproj" tipo = "projectReference" target = "ganar" / >< marco src="src/windows/example.vcxproj" tipo = "projectReference" target = "todas" las versiones = arco "8.1" = "x 86" / >
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *info* Elemento
 
 Información adicional proporcionada a los usuarios. Esto es útil cuando usted requiere pasos adicionales que no se pueden automatizar fácilmente o están fuera de alcance de plugman. Ejemplos:
 
-    < Info > necesitas instalar __Google jugar Services__ en la sección 'Extras Android' usando el administrador de Android SDK (ejecutar 'android').
+    <info>
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Tienes que añadir la siguiente línea a la 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Variables
 
-En ciertos casos, puede necesitar un plugin realizar cambios de configuración depende de la aplicación de destino. Por ejemplo, para registrarse en C2DM en Android, una aplicación cuyo identificador de paquete es `com.alunny.message` requeriría un permiso tales como:
+En ciertos casos, puede necesitar un plugin realizar cambios de configuración depende de la aplicación de destino. Por ejemplo, para registrar C2DM en Android, una aplicación cuyo identificador de paquete es `com.alunny.message` requeriría un permiso tales como:
 
-    < usos-permiso android:name="com.alunny.message.permission.C2D_MESSAGE"/ >
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-En estos casos donde se inserta el contenido de la `plugin.xml` archivo no es conocido antes de tiempo, variables pueden ser indicadas por un signo de dólar seguido por una serie de letras mayúsculas, dígitos o subrayados. Para el ejemplo anterior, el `plugin.xml` archivo incluiría esta etiqueta:
+En esos casos donde no se conoce el contenido insertado desde el archivo `plugin.xml` antes de tiempo, variables pueden indicarse por un signo de dólar seguido por una serie de letras mayúsculas, dígitos o subrayados. Para el ejemplo anterior, el archivo `plugin.xml` incluiría esta etiqueta:
 
-    < usos-permiso android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/ >
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman reemplaza a referencias a variables con el valor especificado, o la cadena vacía si no se encuentra. El valor de la variable referencia puede ser detectado (en este caso, de la `AndroidManifest.xml` archivo) o especificado por el usuario de la herramienta; el proceso exacto depende de la herramienta especial.
+plugman reemplaza a referencias a variables con el valor especificado, o la cadena vacía si no se encuentra. El valor de la variable referencia puede ser detectado (en este caso, desde el archivo `AndroidManifest.xml` ) o especificado por el usuario de la herramienta; el proceso exacto depende de la herramienta especial.
 
 plugman puede solicitar a los usuarios especificar variables requiere de un plugin. Por ejemplo, las llaves de la API para C2M y Google Maps pueden especificarse como un argumento de línea de comandos:
 
-    plugman--android plataforma--proyecto/ruta/a/proyecto name|git - plugin-url|path--API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734 variable
+    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Para hacer obligatorio, la variable de la `<platform>` etiqueta debe contener un `<preference>` etiqueta. Por ejemplo:
+Para hacer obligatoria la variable, la etiqueta `< platform >` debe contener una etiqueta `< preference >` . Por ejemplo:
 
-    < nombre de preferencia = "API_KEY" / >
+    <preference name="API_KEY" />
     
 
 plugman comprueba que estas preferencias requeridas son pasadas en. Si no, debe advertir al usuario cómo pasar la variable y la salida con un código distinto de cero.
@@ -457,4 +492,4 @@ Ciertos nombres de variable deben ser reservados, que figuran a continuación.
 
 ## $PACKAGE_NAME
 
-El dominio reverso estilo identificador único para el paquete, correspondiente a la `CFBundleIdentifier` en iOS o el `package` atributo del nivel superior `manifest` elemento en un `AndroidManifest.xml` archivo.
+El identificador único de estilo inversa de dominio para el paquete, correspondiente a la `CFBundleIdentifier` en iOS o el `paquete de` atributo del elemento de nivel superior `se manifiestan` en un archivo `AndroidManifest.xml` .

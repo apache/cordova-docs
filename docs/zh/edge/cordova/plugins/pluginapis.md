@@ -11,9 +11,9 @@
 
 科爾多瓦船與一組最小的 Api，和專案添加哪些額外的 Api，它們需要通過外掛程式。
 
-您可以通過使用[外掛程式註冊表][1]的所有現有外掛程式 （包括協力廠商外掛程式） 搜索.
+您可以搜索通過所有現有的外掛程式 （包括協力廠商外掛程式） 對[新公共管理][1].
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 傳統的核心科爾多瓦外掛程式集如下所示：
 
@@ -93,24 +93,34 @@
     
     > 顯示、 隱藏和配置狀況欄背景的 API。
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [白名單][21]
+    
+    > 白名單網路請求外掛程式。必須安裝在您的應用程式中有任何網路請求。
 
-這些外掛程式文檔非英語翻譯可以發現通過看的科爾多瓦文檔的舊版本。使用非常右上角的這個網站在下拉式功能表切換版本。
+*   [舊式的白名單][22]
+    
+    > 一個外掛程式來之前它被撕開了，並且改變白名單外掛程式中使用舊式的白名單。
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+通過去外掛程式 github 回購和尋找在 docs 資料夾中可以找到這些外掛程式文檔的非英語翻譯

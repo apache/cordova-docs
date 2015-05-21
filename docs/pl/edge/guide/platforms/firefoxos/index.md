@@ -50,8 +50,8 @@ Tworzy aplikację Firefox OS w platform/firefoxos/www katalog, który obecnie wy
 
 W tym momencie jesteś gotowy przejść — zmienic cokolwiek chcesz swojej aplikacji jest kod wewnątrz test-app/www. Do aplikacji przy "cordova plugin dodać", na przykład, można dodać [obsługiwanych wtyczek]() :
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 Po zapisaniu kodu aplikacji, wdrożyć zmian do aplikacji Firefox OS, które dodane do projektu z

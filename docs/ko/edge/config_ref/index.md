@@ -144,9 +144,22 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
     
     **참고**: `default` 값은 코르도바 플랫폼의 매니페스트/구성 파일의 기본 동작을 대체 하는 플랫폼을 수 있도록에서 방향을 기본 설정 항목을 스트립 것입니다.
 
+'기본'만 콜백을 구현 후 세로 및 가로 모드를-수 있습니다. 내가 수 아마도 다시 단어이 다음과 같이:
+
+IOS에 대 한 방향은 프로그래밍 방식으로 창에 자바 스크립트 콜백을 정의 하 여 제어할 수 있습니다.
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## *기능* 요소
 
-CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin` 장치 Api를 사용 하려면 명령. 이 최상위 수정 하지 않습니다 `config.xml` 파일, 그래서 `<feature>` 요소 작업 흐름에 적용 되지 않습니다. SDK 및 플랫폼 특정 사용 하 여에서 직접 작업 하는 경우 `config.xml` 파일 원본으로 사용 된 `<feature>` 장치 수준 Api와 외부 플러그인을 사용 하려면 태그. 그들은 종종 특정 플랫폼에에서 사용자 지정 값으로 나타납니다 `config.xml` 파일. 예를 들어, 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.
+CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 사용 하려면 `플러그인` 명령을 사용 합니다. 이 `< 기능 >` 요소 작업 흐름에 적용 되지 않습니다 그래서 최상위 `config.xml` 파일을 수정 하지 않습니다. SDK 및 플랫폼별 `config.xml` 파일을 사용 하 여 소스에서 직접 작업 하는 경우 장치 수준 Api와 외부 플러그인을 사용 하려면 `< 기능 >` 태그를 사용 합니다. 그들은 종종 플랫폼별 `config.xml` 파일에서 사용자 지정 값으로 나타납니다. 예를 들어, 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -164,7 +177,7 @@ CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin
 
 ## *플랫폼* 요소
 
-CLI를 사용 하 여 응용 프로그램 구축을 그것이 때로는 환경 설정 또는 특정 플랫폼 특정 다른 요소를 지정 하려면 필요 합니다. 사용은 `<platform>` 요소 단일 플랫폼 관련에만 표시 해야 하는 구성을 지정 하려면 `config.xml` 파일. 예를 들어, 여기에 그 유일한 안 드 로이드 전체 화면 기본 설정을 사용 하도록 지정 하는 방법이입니다.
+CLI를 사용 하 여 응용 프로그램 구축을 그것이 때로는 환경 설정 또는 특정 플랫폼 특정 다른 요소를 지정 하려면 필요 합니다. `< 플랫폼 >` 요소를 사용 하 여 단일 플랫폼 특정 `config.xml` 파일에만 표시 해야 하는 구성을 지정 합니다. 예를 들어, 여기에 그 유일한 안 드 로이드 전체 화면 기본 설정을 사용 하도록 지정 하는 방법이입니다.
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

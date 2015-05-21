@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 再開
+# resume
 
 アプリケーションがバック グラウンドから取得されるときに発生します。
 

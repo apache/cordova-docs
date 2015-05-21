@@ -17,9 +17,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Cordova statki rezygnować minimalny zestaw interfejsów API, i projekty dodać jakie dodatkowe API, wymagają one za pomocą wtyczek.
 
-Możesz przeszukiwać wszystkich istniejących wtyczek (włączając pluginy trzeciej) za pomocą [Rejestru Plugin][1].
+Możesz przeszukiwać wszystkie istniejące pluginy (w tym zewnętrznych wtyczek) w [npm][1].
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
 
@@ -99,24 +99,34 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
     
     > API dla Wyświetlono, ukrywanie i konfigurowania tła paska stanu.
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [Biała][21]
+    
+    > Plugin do białej listy sieci żądań. Należy zainstalować do każdego żądania sieciowe w aplikacji.
 
-Non-angielski tłumaczenie tych dokumentów plugin można znaleźć przez patrząc na starsze wersje dokumentacji Cordova. Użyj menu rozwijanego w bardzo prawym górnym rogu tej strony, aby przełączyć wersje.
+*   [Dziedzictwo biała][22]
+    
+    > Wtyczki do wykorzystania starego stylu Biała, zanim został wyrwane i zmienił w białej wtyczki.
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+Non-angielski tłumaczenie tych dokumentów plugin można znaleźć przechodząc do wtyczki github repo i patrząc w folderze docs

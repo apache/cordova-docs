@@ -50,8 +50,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 시점에서 당신이 갈 준비가-당신이 원하는 무엇이 든 될 귀하의 응용 프로그램을 테스트-애플 리 케이 션/www 안에 코드를 변경 합니다. 추가 사용 하 여 "코르도바 플러그인", 예를 들어 응용 프로그램에 [지원 되는 플러그인을]() 추가할 수 있습니다.
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 응용 프로그램 코드를 작성 하는 경우 변경 내용을 사용 하 여 프로젝트에 추가한 파이어 폭스 OS 애플 리 케이 션에 배포

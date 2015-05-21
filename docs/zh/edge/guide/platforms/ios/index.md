@@ -33,22 +33,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: https://developer.apple.com/programs/ios/
 
+[Ios sim 卡][2]和[ios-deploy][3]工具允許您啟動到 iOS 模擬器的 iOS 應用程式並從命令列的 iOS 設備。
+
+ [2]: https://www.npmjs.org/package/ios-sim
+ [3]: https://www.npmjs.org/package/ios-deploy
+
 ## 安裝 SDK
 
-有兩種方法可以下載 Xcode：
+有兩種方式下載 Xcode：
 
-*   從[應用程式商店][2]，可通過搜索"Xcode"在**App Store**中的應用。
+*   從[應用程式商店][4]，可通過搜索"Xcode"在**App Store**中的應用。
 
-*   從[蘋果開發者下載][3]，而作為蘋果開發者需要註冊。
+*   從[蘋果開發者下載][5]，而作為蘋果開發者需要註冊。
 
- [2]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
- [3]: https://developer.apple.com/downloads/index.action
+ [4]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
+ [5]: https://developer.apple.com/downloads/index.action
 
 一旦安裝了 Xcode，幾個命令列工具需要為科爾多瓦運行啟用。 從**Xcode**功能表中，選擇**首選項**，然後**下載**選項卡。 從**元件**面板中，按**命令列工具**清單旁邊的**安裝**按鈕。
 
-## 在 SDK 中打開的專案
+## 安裝部署工具
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
+從普通型線路終端上運行：
+
+        $ npm install -g ios-sim
+        $ npm install -g ios-deploy
+    
+
+## 創建一個新專案
+
+使用`科爾多瓦`實用程式設置了一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄：
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -56,15 +69,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova prepare              # or "cordova build"
     
 
-創建後，您可以在 Xcode 內打開它從。按兩下打開 `hello/platforms/ios/hello.xcodeproj` 檔。螢幕應該如下所示：
+## 部署應用程式
 
-![][4]
+要部署的應用程式連接的 iOS 設備上：
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+        $ cordova run ios --device
+    
+
+部署預設 iOS 模擬器上的應用程式：
+
+        $ cordova emulate ios
+    
+
+您可以使用**cordova run ios --list**看到所有可用的目標和**cordova run ios --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run ios --target="iPhone-6"`).
+
+您還可以使用**cordova run --help**查看附加的生成和運行選項。
+
+## 在 SDK 中打開的專案
+
+一旦 ios 平臺添加到專案中，您可以打開它從內 Xcode。按兩下以打開`hello/platforms/ios/hello.xcodeproj`檔。螢幕應該如下所示：
+
+![][6]
+
+ [6]: img/guide/platforms/ios/helloworld_project.png
 
 ## 部署到模擬程式
 
-若要預覽 iOS 模擬器中的應用程式：
+若要預覽在 iOS 模擬器中的應用程式：
 
 1.  請確保在左邊的面板中選擇*.xcodeproj*檔。
 
@@ -72,34 +103,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 3.  從工具列上的**計畫**功能表中選擇預定的設備、 iPhone 等作為 6.0 模擬器在這裡突出了：
     
-    ![][5]
+    ![][7]
 
 4.  按下**運行**按鈕出現在同一工具列左側的**計畫**中。 那生成、 部署並在模擬器中運行應用程式。 一個單獨的模擬器應用程式將打開，並顯示該應用程式：
     
-    ![][6]
+    ![][8]
     
     只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode 來捆綁在一起的最新版本的 iPhone 和 iPad 的模擬器。 較舊的版本中可能會提供**Xcode → 首選項 → 下載 → 元件**面板。
+Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許可以從**Xcode → 首選項 → 下載 → 元件**面板。
 
 ## 將部署到設備
 
-有關各項要求，部署到一個設備的詳細資訊，請參閱蘋果的[iOS 工具工作流指南][7]的*配置開發和分配資產*部分。 簡單地說，您需要部署之前執行以下操作：
+關於各項要求部署到一個設備的詳細資訊，請參閱蘋果的[iOS 的工具工作流指南][9]的*配置發展和分配資產*部分。 簡單地說，您需要部署之前執行以下操作：
 
- [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
 1.  加入蘋果 iOS 開發者計畫。
 
-2.  創建*資源調配設定檔*內[iOS 資源調配門戶][8]。 您可以使用其*發展資源調配助理*來創建和安裝設定檔和證書 Xcode 需要。
+2.  創建*資源調配設定檔*內[iOS 資源調配門戶][10]。 您可以使用其*發展資源調配助理*來創建和安裝設定檔和證書 Xcode 需要。
 
 3.  驗證*代碼簽名*部分*代碼簽名標識*內的專案設置設置為您設置的設定檔名稱。
 
- [8]: https://developer.apple.com/ios/manage/overview/index.action
+ [10]: https://developer.apple.com/ios/manage/overview/index.action
 
-若要部署到設備：
+要部署到設備：
 
 1.  使用 USB 電纜將設備插入到您的 mac。
 
@@ -111,54 +142,69 @@ Xcode 來捆綁在一起的最新版本的 iPhone 和 iPad 的模擬器。 較�
 
 ## 常見的問題
 
-**否決警告**： 當應用程式更改或替換為另一個 API 程式設計介面 (API) 時，它被標記為*已過時*。 API 仍可工作，短期內，但最終將被刪除。 這些過時的介面的一些反映在 Apache 科爾多瓦和 Xcode 問題對他們的警告您在生成和部署應用程式時。
+**否決警告**： 當應用程式更改或替換為另一個 API 程式設計介面 (API) 時，它被標記為*已棄用*。 該 API 仍可工作在短期內，但最終將被刪除。 一些這些過時的介面，反映在 Apache 科爾多瓦和 Xcode 問題關於他們的警告，當您生成和部署應用程式。
 
-Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自訂 URL 的功能。 雖然從自訂 URL 載入的機制發生了變化，此代碼目前仍在繼續為科爾多瓦的較早版本創建的應用程式提供向後的功能。 應用程式範例不使用這一功能，因此可以忽略這些警告。 若要防止出現這些警告，請刪除引用已棄用的 invokeString API 的代碼：
+`InvokeString`方法 Xcode 的警告有關啟動一個應用程式從一個自訂的 URL 的功能。 雖然從一個自訂的 URL 載入的機制發生了改變，此代碼是仍然存在，以便為科爾多瓦的較早版本創建的應用程式提供向後的功能。 應用程式範例不使用此功能，因此可以忽略這些警告。 若要防止出現這些警告，請移除引用已棄用的 invokeString API 的代碼：
 
 *   編輯*Classes/MainViewController.m*檔、 環繞的代碼與下面的塊 `/*` 和 `*/` 的評論如下所示，然後鍵入**命令-s**保存該檔：
     
-        （失效） webViewDidFinishLoad:(UIWebView*) theWebView {/ / 如果 ___PROJECTNAME__ Info.plist 指定協定來處理的唯一有效 / * 如果 (self.invokeString) {/ / 這傳遞之前觸發 deviceready 事件，以便您可以訪問它的 js 時您會收到 deviceready NSLog (@"已否決： window.invokeString-相反，使用 window.handleOpenURL(url) 函數，總是調用通過自訂方案 url 啟動應用程式時.") ；NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"%@\"；"self.invokeString] ；[theWebView stringByEvaluatingJavaScriptFromString:jsString] ；} * / / / 黑色底彩色背景匹配的本機應用程式 theWebView.backgroundColor = [UIColor blackColor] ；返回 [超級 webViewDidFinishLoad: theWebView] ；}
+        (void)webViewDidFinishLoad:(UIWebView*)theWebView
+        {
+        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+        /*
+        if (self.invokeString) {
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+          NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
+          [theWebView stringByEvaluatingJavaScriptFromString:jsString];
+        }
+        */
+        // Black base color for background matches the native apps
+        theWebView.backgroundColor = [UIColor blackColor];
+        
+        return [super webViewDidFinishLoad:theWebView];
+        }
         
 
 *   編輯*Classes/AppViewDelegate.m*檔，注釋掉下面的行插入雙斜杠，如下所示，然後鍵入**命令-s**保存該檔：
     
-        //self.viewController.invokeString = invokeString ；
+        //self.viewController.invokeString = invokeString;
         
 
 *   按**命令-b**重新生成專案並消除此警告。
 
 <!-- Does this fix only last until the next "cordova prepare"? -->
 
-**缺少標題**: 編譯錯誤有關的失蹤頭導致從生成位置的問題，可以通過 Xcode 偏好固定：
+**缺少標題**： 有關失蹤的標頭的編譯錯誤導致從生成位置的問題，可以通過 Xcode 偏好固定：
 
 1.  選擇**Xcode → 首選項 → 位置**.
 
 2.  在**派生的資料**部分中，按**高級**按鈕並選擇**唯一**作為**生成位置**如下所示：
     
-    ![][9]
+    ![][11]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: img/guide/platforms/ios/xcode_build_location.png
 
-這是預設設置為一個新的 Xcode 安裝，但也可以設置以不同的方式從較早版本的 Xcode 後升級。
+這是一個新的 Xcode 安裝的預設設置，但可以設置不同的升級之後從 Xcode 舊版本。
 
-進一步的資訊，請參考蘋果的文檔：
+進一步的資訊，請參閱蘋果的文檔：
 
-*   [開始開發 iOS 應用程式今天][10]快速概述的步驟開發 iOS 的應用程式。
+*   [開始開發 iOS 應用程式今天][12]快速概述的步驟開發 iOS 的應用程式。
 
-*   [會員中心主頁][11]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
+*   [會員中心主頁][13]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
 
-*   [IOS 工具工作流指南][7]
+*   [IOS 工具工作流指南][9]
 
-*   [Xcode 4 使用者指南][12]
+*   [Xcode 使用者指南][14]
 
-*   從蘋果世界廣泛開發人員會議 (WWDC2012) 2012年[屆會議視頻][13]
+*   從蘋果世界廣泛開發人員會議 (WWDC2012) 2012年[屆會議視頻][15]
 
-*   安裝[xcode 選擇命令][14]，它有助於指定正確版本的 Xcode，如果不止一個的話。
+*   安裝[xcode 選擇命令][16]，它有助於指定正確版本的 Xcode，如果不止一個的話。
 
- [10]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
- [11]: https://developer.apple.com/membercenter/index.action
- [12]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [13]: https://developer.apple.com/videos/wwdc/2012/
- [14]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
+ [13]: https://developer.apple.com/membercenter/index.action
+ [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [15]: https://developer.apple.com/videos/wwdc/2012/
+ [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
-(Mac ®，OS X ®，蘋果公司 ®，Xcode ® 應用程式 Store℠，iPad ®，iPhone ®，iPod ® 和 Finder ® 是蘋果公司商標)
+（Mac ® OS X ® Xcode ® 蘋果 ® 的應用程式進行，iPad ®，iPhone ®，iPod ® Finder ®，蘋果公司商標)

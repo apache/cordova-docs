@@ -1,6 +1,6 @@
 * * *
 
-許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 您可能會獲得在許可證的副本
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 您可能會獲得在許可證的副本
 
            HTTP://www.apache.org/licenses/LICENSE-2.0 除非適用的法律要求或書面同意，否則按照該許可證分發的軟體分發上"按原樣"的基礎，而不擔保或條件的任何種類的明示或暗示。  請參閱許可證規定的許可權和限制的特定語言
     
@@ -21,7 +21,7 @@
     
     ![][2]
     
-    Windows Phone 模擬程式單獨使用半一百萬位元組的記憶體，所以整體你應該針對 VMWare 預留至少 2 GB。
+    Windows Phone 模擬器單獨使用半位元組的記憶體，所以，總體來說，你應該為 VMWare 預留至少 2 GB。
 
 3.  選擇**高級**設置。啟用**首選虛擬化引擎： 英特爾 VT-x 與 EPT**選項：
     

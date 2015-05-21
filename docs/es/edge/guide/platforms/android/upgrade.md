@@ -17,11 +17,61 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta guía le muestra cómo modificar proyectos Android para actualizar desde versiones anteriores de Cordova. La mayoría de estas instrucciones se aplica a proyectos creados con un conjunto mayor de herramientas de línea de comandos que preceden a la utilidad de la CLI de `cordova`. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
-## Proyectos de modernización 3.6.0 a 4.0.0
+## Actualización a 4.0.0
+
+Hay pasos específicos la actualización necesarias para aprovechar los cambios significativos en 4.0.0. En primer lugar, los pasos de actualización común son necesarios como abajo.
 
 Para proyectos no-CLI, ejecute:
 
-        bin/ruta/a/proyecto de actualización
+        bin/update path/to/project
+    
+
+Para los proyectos de CLI:
+
+1.  Actualización de la `cordova` versión CLI. Vea la interfaz de línea de comandos.
+
+2.  Ejecute `cordova platform update android` en tus proyectos ya existentes.
+
+### Actualización de la lista blanca
+
+Todas las funcionalidades de lista blanca es implementada mediante plugin. Sin un plugin, su aplicación no está protegida por una lista blanca después de actualizar a 4.0.0. Córdoba tiene dos plugins de lista blanca, que proporcionan diferentes niveles de protección.
+
+1.  El plugin de `cordova-plugin-whitelist` *(recomendado)*
+    
+    *   Este plugin es muy recomendable, ya que es más seguro y configurable que la lista blanca en las versiones anteriores
+    *   Ver [cordova-plugin-whitelist][1] para obtener más información sobre los cambios de configuración necesarios
+    *   Run: `cordova plugin add cordova-plugin-crosswalk-webview`
+
+2.  El plugin `cordova-plugin-legacy-whitelist`
+    
+    *   Este plugin proporciona el mismo comportamiento de lista blanca como las versiones anteriores. Ver [cordova-plugin-legacy-whitelist][2]
+    *   No hay cambios en la configuración se requieren, pero ofrece menos protección que el plugin recomendado
+    *   Run: `cordova plugin add cordova-plugin-legacy-whitelist`
+
+ [1]: https://github.com/apache/cordova-plugin-whitelist
+ [2]: https://github.com/apache/cordova-plugin-legacy-whitelist
+
+### Utilizando el Crosswalk WebView
+
+De forma predeterminada, su aplicación continuará utilizando el sistema WebView proporcionado por el dispositivo. Si desea utilizar el paso de peatones WebView en lugar de eso, simplemente añada el plugin de cruce de peatones:
+
+    cordova plugin add cordova-plugin-crosswalk-webview
+    
+
+Al agregar el plugin, su aplicación tendrá el paso de peatones WebView instalado y configurado correctamente.
+
+### Actualización al Splashscreen Plugin
+
+Si su aplicación hace uso de una pantalla de bienvenida, que funcionalidad ha sido trasladado a un plugin. Las opciones de configuración para salpicadura pantallas son invariables. El actualización sólo paso necesario es añadir el plugin:
+
+    cordova plugin add cordova-plugin-splashscreen
+    
+
+## Actualización a 3.7.1 de 3.6.0
+
+Para proyectos no-CLI, ejecute:
+
+        bin/update path/to/project
     
 
 Para los proyectos de CLI:
@@ -32,9 +82,9 @@ Para los proyectos de CLI:
 
 ## Actualización a 3.3.0 de 3.2.0
 
-Siga las mismas instrucciones en cuanto a`3.2.0`.
+Siga las mismas instrucciones en cuanto a `3.2.0`.
 
-Comenzando con 3.3.0, el runtime Cordova ahora está compilado como una biblioteca de Android en vez de un frasco. Esto debería no tienen ningún efecto para el uso de línea de comandos, pero los usuarios IDE tendrá que importar el recién agregado `MyProject-CordovaLib` proyecto en su espacio de trabajo.
+Comenzando con 3.3.0, el runtime Cordova ahora está compilado como una biblioteca de Android en vez de un frasco. Esto debería no tienen ningún efecto para el uso de línea de comandos, pero IDE los usuarios tendrán que importar el proyecto `MyProject-CordovaLib` recién agregado a su lugar de trabajo.
 
 ## Actualización a 3.2.0 de 3.1.0
 
@@ -42,14 +92,14 @@ Para los proyectos que se crearon con el cordova CLI:
 
 1.  Actualización de la `cordova` versión CLI. Vea la interfaz de línea de comandos.
 
-2.  Ejecutar`cordova platform update android`
+2.  Run `cordova platform update android`
 
 Para proyectos no creados con el cordova CLI, ejecute:
 
-        bin/actualizar < project_path >
+        bin/update <project_path>
     
 
-**ADVERTENCIA:** En 4.4 Android - Android 4.4.3, creando un archivo de entrada elemento con tipo = "file" no abrirá el cuadro de diálogo selector de archivos. Esto es una regresión con cromo en Android y el problema puede ser reproducido en el navegador Chrome independiente en Android (véase http://code.google.com/p/android/issues/detail?id=62220) la solución sugerida es utilizar los plugins File Transfer y archivo para Android 4.4. Puedes escuchar para un evento onClick del tipo de entrada = "file" y luego aparecer un selector de archivos UI. Para atar los datos del formulario con la carga, puede utilizar JavaScript para fijar los valores del formulario a la solicitud POST multi-partes que hace File Transfer.
+**ADVERTENCIA:** En 4.4 Android - Android 4.4.3, creando un archivo de entrada elemento con type="file" no abrirá el cuadro de diálogo selector de archivos. Esto es una regresión con cromo en Android y el problema puede ser reproducido en el navegador Chrome independiente en Android (véase http://code.google.com/p/android/issues/detail?id=62220) la solución sugerida es utilizar los plugins File Transfer y archivo para Android 4.4. Puedes escuchar para un evento onClick del tipo de entrada = "file" y luego aparecer un selector de archivos UI. Para atar los datos del formulario con la carga, puede utilizar JavaScript para fijar los valores del formulario a la solicitud POST multi-partes que hace File Transfer.
 
 ## Actualización a 3.1.0 de 3.0.0
 
@@ -57,51 +107,50 @@ Para los proyectos que se crearon con el cordova CLI:
 
 1.  Actualización de la `cordova` versión CLI. Vea la interfaz de línea de comandos.
 
-2.  Ejecutar`cordova platform update android`
+2.  Run `cordova platform update android`
 
 Para proyectos no creados con el cordova CLI, ejecute:
 
-        bin/actualizar < project_path >
+        bin/update <project_path>
     
 
 ## Actualícese a la CLI (3.0.0) de 2.9.0 magnetohidrodinámica
 
 1.  Crear un nuevo proyecto de Apache Cordova 3.0.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
 
-2.  Sus plataformas de agregar el proyecto de Córdoba, por ejemplo:`cordova
-platform add android`.
+2.  Agregar tus plataformas el proyecto cordova, por ejemplo: `cordova platform add android`.
 
-3.  Copiar el contenido de su proyecto `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
+3.  Copiar el contenido del directorio `www` de su proyecto al directorio `www` en la raíz del proyecto cordova que acaba de crear.
 
-4.  Copie cualquier activo nativo de su viejo proyecto en los directorios apropiados bajo `platforms/android` : este directorio es donde existe su proyecto cordova-android nativo.
+4.  Copie cualquier activo nativo de su viejo proyecto en los directorios apropiados bajo `platforms/android`: este directorio es donde existe su proyecto cordova-android nativo.
 
-5.  Utilice la herramienta CLI cordova instalar algún plugin que necesitas. Tenga en cuenta que el CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser añadido. Sólo 3.0.0 plugins son compatibles con el CLI.
+5.  Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Sólo 3.0.0 plugins son compatibles con la CLI.
 
-## Actualizar a 3.0.0 desde 2.9.0 magnetohidrodinámica
+## Actualizar a 3.0.0 desde 2.9.0
 
 1.  Crear un nuevo proyecto Apache Cordova Android.
 
-2.  Copiar el contenido de la `www` directorio al nuevo proyecto.
+2.  Copie el contenido del directorio `www` al nuevo proyecto.
 
-3.  Copiar cualquier nativos Android activos de la `res` directorio al nuevo proyecto.
+3.  Copie cualquier nativos Android activos desde el directorio de `res` al nuevo proyecto.
 
-4.  Copia sobre algún plugin instaló desde el `src` subdirectorios en el nuevo proyecto.
+4.  Copiar algún plugin que instaló desde los subdirectorios `src` en el nuevo proyecto.
 
-5.  Asegúrese de actualizar cualquiera obsoleto `<plugin>` referencias de su vieja `config.xml` archivo a la nueva `<feature>` especificación.
+5.  Asegúrese de actualizar cualquiera obsoleto `< plugin >` referencias desde el antiguo archivo `config.xml` para la nueva especificación `de <feature>` .
 
-6.  Actualizar todas las referencias a la `org.apache.cordova.api` paquete para ser`org.apache.cordova`.
+6.  Actualice cualquier referencia al paquete `org.apache.cordova.api` para ser `org.apache.cordova`.
     
     **Nota**: todo núcleo APIs se han eliminado y deben instalarse como plugins. Para detalles, véase el Plugman usando para gestionar Plugins guía.
 
 ## Actualizar a 2.9.0 magnetohidrodinámica de 2.8.0
 
-1.  Ejecutar`bin/update <project_path>`.
+1.  Run `bin/update <project_path>`.
 
 ## Actualizar a 2.8.0 desde 2.7.0
 
-1.  Quitar `cordova-2.7.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.7.0.jar` del directorio de `bibliotecas` del proyecto.
 
-2.  Añadir `cordova-2.8.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.8.0.jar` al directorio de `bibliotecas` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
@@ -109,9 +158,9 @@ platform add android`.
 
 1.  Copie el nuevo `cordova.js` en su proyecto.
 
-2.  Actualizar el código HTML para usar el nuevo `cordova.js` archivo.
+2.  Actualizar el código HTML para usar el nuevo archivo `cordova.js` .
 
-3.  Copia el `res/xml/config.xml` archivo para que coincida con`framework/res/xml/config.xml`.
+3.  Copie el archivo `res/xml/config.xml` para que coincida con `framework/res/xml/config.xml`.
 
 4.  Actualización `framework/res/xml/config.xml` tener configuraciones similares como lo hizo anteriormente.
 
@@ -119,15 +168,15 @@ platform add android`.
 
 ## Actualizar a 2.7.0 desde 2.6.0
 
-1.  Quitar `cordova-2.6.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.6.0.jar` del directorio de `bibliotecas` del proyecto.
 
-2.  Añadir `cordova-2.7.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.7.0.jar` al directorio de `bibliotecas` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.7.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.7.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `cordova-2.7.0.js` .
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
@@ -137,15 +186,15 @@ platform add android`.
 
 ## Actualizar a 2.6.0 desde 2.5.0
 
-1.  Quitar `cordova-2.5.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.5.0.jar` del directorio de `bibliotecas` del proyecto.
 
-2.  Añadir `cordova-2.6.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.6.0.jar` al directorio de `bibliotecas` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.6.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.6.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.6.0.js`.
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
@@ -153,19 +202,19 @@ platform add android`.
 
 8.  Copiar los archivos de `bin/templates/cordova` para el proyecto `cordova` Directorio.
 
-Ejecutar `bin/update <project>` con la ruta del proyecto figuran en el directorio fuente Cordova.
+Ejecute `bin/update <project>` con la ruta del proyecto figuran en el directorio fuente Cordova.
 
 ## Actualizar a 2.5.0 desde 2.4.0
 
-1.  Quitar `cordova-2.4.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.4.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.5.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.5.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.5.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.5.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.5.0.js`.
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
@@ -175,15 +224,15 @@ Ejecutar `bin/update <project>` con la ruta del proyecto figuran en el directori
 
 ## Actualizar a 2.4.0 desde 2.3.0
 
-1.  Quitar `cordova-2.3.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.3.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.4.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.4.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.4.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.4.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.4.0.js`.
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
@@ -191,47 +240,47 @@ Ejecutar `bin/update <project>` con la ruta del proyecto figuran en el directori
 
 ## Actualizar a 2.3.0 desde 2.2.0
 
-1.  Quitar `cordova-2.2.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.2.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.3.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.3.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.3.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.3.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.3.0.js`.
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
 7.  Copiar los archivos de `bin/templates/cordova` para el proyecto `cordova` Directorio.
 
-## Actualizar a 2.2.0 desde 2.1.0
+## Actualizar a 2.2.0 de 2.1.0
 
-1.  Quitar `cordova-2.1.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.1.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.2.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.2.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.2.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.2.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.2.0.js`.
 
-6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
+6.  Copia el `res/xml/config.xml` para que coincida con`framework/res/xml/config.xml`.
 
 7.  Copiar los archivos de `bin/templates/cordova` para el proyecto `cordova` Directorio.
 
 ## Actualizar a 2.1.0 desde 2.0.0
 
-1.  Quitar `cordova-2.0.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-2.0.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.1.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.1.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.1.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.1.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.1.0.js`.
 
 6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
@@ -239,55 +288,55 @@ Ejecutar `bin/update <project>` con la ruta del proyecto figuran en el directori
 
 ## Actualizar a 2.0.0 desde 1.9.0
 
-1.  Quitar `cordova-1.9.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.9.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-2.0.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-2.0.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-2.0.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.0.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.0.0.js`.
 
-6.  Copia el `res/xml/config.xml` para que coincida con`framework/res/xml/config.xml`.
+6.  Copiar el `res/xml/config.xml` para que coincida con el `framework/res/xml/config.xml`.
 
-En la 2.0.0 versión, el `config.xml` archivo combina y reemplaza `cordova.xml` y `plugins.xml` . Los archivos son desaprobados y mientras que aún trabajan en 2.0.0, dejarán de funcionar en una futura versión.
+En la 2.0.0 versión, el archivo `config.xml` combina y reemplaza `cordova.xml` y `plugins.xml`. Los archivos son desaprobados y mientras que aún trabajan en 2.0.0, dejarán de funcionar en una futura versión.
 
 ## Actualizar a 1.9.0 desde 1.8.1
 
-1.  Quitar `cordova-1.8.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.8.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.9.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.9.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.9.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.9.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `cordova-1.9.0.js` .
 
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
+6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
-Debido a la introducción de la `CordovaWebView` en la 1.9.0 liberación, plugins de terceros pueden no funcionar. Estos plugins necesito un contexto de la `CordovaInterface` usando `getContext()` o `getActivity()` . Si no eres un experimentado Desarrollador Android, por favor póngase en contacto con el mantenedor del plugin y añadir esta tarea a su localizador de fallas.
+Debido a la introducción de la `CordovaWebView` en la 1.9.0 liberación, plugins de terceros pueden no funcionar. Estos plugins necesita para obtener un contexto de la `CordovaInterface` usando `getContext()` o `getActivity()`. Si no eres un experimentado Desarrollador Android, por favor póngase en contacto con el mantenedor del plugin y añadir esta tarea a su localizador de fallas.
 
 ## Actualizar a 1.8.0 desde 1.8.0
 
-1.  Quitar `cordova-1.8.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.8.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.8.1.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.8.1.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.8.1.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.8.1.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `cordova-1.8.1.js` .
 
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
+6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
 ## Actualizar a 1.8.0 de 1.7.0
 
-1.  Quitar `cordova-1.7.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.7.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.8.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.8.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
@@ -295,39 +344,39 @@ Debido a la introducción de la `CordovaWebView` en la 1.9.0 liberación, plugin
 
 5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-1.8.0.js`.
 
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
+6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
 ## Actualizar a 1.8.0 de 1.7.0
 
-1.  Quitar `cordova-1.7.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.7.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.8.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.8.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.8.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.8.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-1.8.0.js`.
 
 6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
 ## Actualizar a 1.7.0 desde 1.6.1
 
-1.  Quitar `cordova-1.6.1.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.6.1.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.7.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.7.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.7.0.js` en su proyecto.
 
-5.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
+5.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
 ## Actualizar a 1.6.1 desde 1.6.0
 
-1.  Quitar `cordova-1.6.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.6.0.jar` del directorio de `bibliotecas` del proyecto.
 
-2.  Añadir `cordova-1.6.1.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.6.1.jar` al directorio de `bibliotecas` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
@@ -337,108 +386,108 @@ Debido a la introducción de la `CordovaWebView` en la 1.9.0 liberación, plugin
 
 ## Actualizar a 1.6.0 desde 1.5.0
 
-1.  Quitar `cordova-1.5.0.jar` del proyecto de `libs` Directorio.
+1.  Quitar `cordova-1.5.0.jar` del directorio de `libs` del proyecto.
 
-2.  Añadir `cordova-1.6.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.6.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.6.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.6.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `cordova-1.6.0.js` .
 
 6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
 
-7.  Reemplazar `res/xml/phonegap.xml` con `res/xml/cordova.xml` hasta la `framework/res/xml/cordova.xml`.
+7.  Reemplazar `res/xml/phonegap.xml` por `res/xml/cordova.xml` hasta `framework/res/xml/cordova.xml`.
 
 ## Actualizar a 1.5.0 desde 1.4.0
 
-1.  Quitar `phonegap-1.4.0.jar` del proyecto de `libs` Directorio.
+1.  Retire `phonegap-1.4.0.jar` del directorio del proyecto `libs` .
 
-2.  Añadir `cordova-1.5.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `cordova-1.5.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `cordova-1.5.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.5.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `cordova-1.5.0.js` .
 
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
+6.  Actualización de `res/xml/plugins.xml` para que coincida con `framework/res/xml/plugins.xml`.
 
-7.  Reemplazar `res/xml/phonegap.xml` con `res/xml/cordova.xml` para que coincida con`framework/res/xml/cordova.xml`.
+7.  Reemplazar `res/xml/phonegap.xml` por `res/xml/cordova.xml` hasta `framework/res/xml/cordova.xml`.
 
 ## Actualizar a 1.4.0 de 1.3.0
 
-1.  Quitar `phonegap-1.3.0.jar` del proyecto de `libs` Directorio.
+1.  Retire `phonegap-1.3.0.jar` del directorio del proyecto `libs` .
 
-2.  Añadir `phonegap-1.4.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `phonegap-1.4.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `phonegap-1.4.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `phonegap-1.4.0.js` archivo.
-
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
-
-7.  Actualización de `res/xml/phonegap.xml` para que coincida con el `framework/res/xml/phonegap.xml`.
-
-## Actualizar a 1.3.0 desde 1.2.0
-
-1.  Quitar `phonegap-1.2.0.jar` del proyecto de `libs` Directorio.
-
-2.  Añadir `phonegap-1.3.0.jar` del proyecto `libs` Directorio.
-
-3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
-
-4.  Copie el nuevo `phonegap-1.3.0.js` en su proyecto.
-
-5.  Actualizar el código HTML para usar el nuevo `phonegap-1.2.0.js` archivo.
-
-6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
-
-7.  Actualización de `res/xml/phonegap.xml` para que coincida con el `framework/res/xml/phonegap.xml`.
-
-## Actualizar a 1.2.0 desde 1.1.0
-
-1.  Quitar `phonegap-1.1.0.jar` del proyecto de `libs` Directorio.
-
-2.  Añadir `phonegap-1.2.0.jar` del proyecto `libs` Directorio.
-
-3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
-
-4.  Copie el nuevo `phonegap-1.2.0.js` en su proyecto.
-
-5.  Actualizar el código HTML para usar el nuevo `phonegap-1.2.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `phonegap-1.4.0.js` .
 
 6.  Actualización de `res/xml/plugins.xml` para que coincida con el `framework/res/xml/plugins.xml`.
 
 7.  Actualización de `res/xml/phonegap.xml` para que coincida con`framework/res/xml/phonegap.xml`.
 
+## Actualizar a 1.3.0 desde 1.2.0
+
+1.  Retire `phonegap-1.2.0.jar` del directorio del proyecto `libs` .
+
+2.  Añadir `phonegap-1.3.0.jar` al directorio de `libs` del proyecto.
+
+3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
+
+4.  Copie el nuevo `phonegap-1.3.0.js` en su proyecto.
+
+5.  Actualizar el código HTML para usar el nuevo archivo `phonegap-1.2.0.js` .
+
+6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
+
+7.  Actualización de `res/xml/phonegap.xml` para que coincida con`framework/res/xml/phonegap.xml`.
+
+## Actualizar a 1.2.0 desde 1.1.0
+
+1.  Retire `phonegap-1.1.0.jar` del directorio del proyecto `libs` .
+
+2.  Añadir `phonegap-1.2.0.jar` al directorio de `libs` del proyecto.
+
+3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
+
+4.  Copie el nuevo `phonegap-1.2.0.js` en su proyecto.
+
+5.  Actualizar el código HTML para usar el nuevo archivo `phonegap-1.2.0.js` .
+
+6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
+
+7.  Actualización de `res/xml/phonegap.xml` para que coincida con`framework/res/xml/phonegap.xml`.
+
 ## Actualizar a 1.1.0 desde 1.0.0
 
-1.  Quitar `phonegap-1.0.0.jar` del proyecto de `libs` Directorio.
+1.  Retire `phonegap-1.0.0.jar` del directorio del proyecto `libs` .
 
-2.  Añadir `phonegap-1.1.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `phonegap-1.1.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `phonegap-1.1.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `phonegap-1.1.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `phonegap-1.1.0.js` .
 
 6.  Actualización de `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
 
 ## Actualizar a 1.0.0 desde 0.9.6
 
-1.  Quitar `phonegap-0.9.6.jar` del proyecto de `libs` Directorio.
+1.  Retire `phonegap-0.9.6.jar` del directorio del proyecto `libs` .
 
-2.  Añadir `phonegap-1.0.0.jar` del proyecto `libs` Directorio.
+2.  Añadir `phonegap-1.0.0.jar` al directorio de `libs` del proyecto.
 
 3.  Si usas Eclipse, por favor actualice su proyecto en Eclipse y hacer una limpia.
 
 4.  Copie el nuevo `phonegap-1.0.0.js` en su proyecto.
 
-5.  Actualizar el código HTML para usar el nuevo `phonegap-1.0.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo `phonegap-1.0.0.js` .
 
-6.  Agregar el `res/xml/plugins.xml` para que coincida con`framework/res/xml/plugins.xml`.
+6.  Agregar el `res/xml/plugins.xml` para que coincida con `framework/res/xml/plugins.xml`.

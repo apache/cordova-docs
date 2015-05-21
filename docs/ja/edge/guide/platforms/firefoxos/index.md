@@ -50,8 +50,8 @@ Firefox の OS アプリ www ディレクトリ内に Firefox のマニフェス
 
 この時点で、あなたは行く準備ができて-何でもしたいアプリになるをテスト-アプリ/www 内部コードを変更します。 たとえばを使用して"コルドバ プラグイン"を追加、アプリを[プラグインのサポート]()を追加できます。
 
-    cordova plugin add org.apache.cordova.device
-    cordova plugin add org.apache.cordova.vibration
+    cordova plugin add cordova-plugin-device
+    cordova plugin add cordova-plugin-vibration
     
 
 アプリのコードが書き込まれるとき、変更を使用してプロジェクトに追加した Firefox OS アプリに配置します。

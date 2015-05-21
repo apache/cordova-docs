@@ -1,11 +1,17 @@
 * * *
 
-licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/License-2.0 se non richiesto dalla legge o concordato per iscritto, il software distribuito sotto la licenza è distribuito su un "AS IS" base, senza garanzie o condizioni di alcun tipo, esplicita o implicita.  Vedere la licenza per la lingua specifica che disciplina le autorizzazioni e limitazioni
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## con la licenza.
+## under the License.
 
 # Guida alla sicurezza
 
@@ -27,13 +33,7 @@ La seguente guida include alcune procedure ottimali di protezione che è necessa
 
 *   Leggere e comprendere la guida di Whitelist
 
-*   Per impostazione predefinita, la Whitelist un'app appena creata consentirà l'accesso a ogni dominio attraverso il `<access>` Etichetta: `<access origin="*">` se si desidera che le richieste di rete venga valutata contro la whitelist, quindi è importante per questo cambiamento e consentire solo i domini a cui è necessario accedere. Questo può essere fatto modificando il file config a livello di applicazione si trova in: `{project}/config.xml` (progetti recenti) o `{project}/www/config.xml` (vecchi progetti)
-
-*   Android di Whitelist su Cordova 2.9. x è considerata sicura, tuttavia, si scoprì che se foo.com è incluso nella lista bianca, foo.com.evil.com sarebbe in grado di superare la prova di whitelist. Questo è stato fissato in Cordova 3. x.
-
 *   Dominio whitelisting non funziona su Android API 10 e qui di seguito e WP8 per iframes e XMLHttpRequest. Questo significa che un utente malintenzionato può caricare qualsiasi dominio in un iframe e qualsiasi script in quella pagina all'interno di iframe può accedere direttamente gli oggetti JavaScript di Cordova e i corrispondenti oggetti nativi di Java. Si dovrebbe prendere in considerazione durante la creazione di applicazioni per queste piattaforme. In pratica questo significa assicurandosi di destinazione un'API Android superiore a 10, e se possibile non utilizzare un iframe per caricare contenuto esterno - usare il plugin inAppBrowser o altri plugin di terze parti.
-
-*   Su Android, a partire da Cordova 3.6.0, è ora necessario whitelist URL di fuori della tua applicazione, se l'applicazione genera link a quegli URL. Se hai un'applicazione genera `tel:` , `geo:` , `sms:` , `intent:` o URL simile, o collegamenti a contenuto esterno che si prevede di aprire nel browser dell'utente, allora devi aggiornare la tua whitelist. Vedere la guida di Whitelist per dettagli.
 
 ## Iframes e il meccanismo di Callback Id
 

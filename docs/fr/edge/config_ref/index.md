@@ -1,6 +1,6 @@
 * * *
 
-licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -135,16 +135,31 @@ Les préférences suivantes s'appliquent à plus d'une plate-forme, mais pas tou
     
     En outre, vous pouvez spécifier n'importe quelle valeur d'orientation spécifique à la plateforme si vous placez le `<preference>` élément dans une `<platform>` élément :
     
-        < nom de plate-forme = « android » >< nom de préférence = « Orientation » value = « sensorLandscape » / >< / plate-forme >
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
         
     
     S'applique à Android, iOS, WP8, Amazon Fire OS et OS de Firefox.
     
     **NOTE**: le `default` valeur signifie Cordova supprimera l'entrée de préférence d'orientation du fichier de manifeste/configuration de la plate-forme, permettant à la plate-forme de secours pour son comportement par défaut.
 
+« par défaut » permet le mode portrait et de paysage - seulement après l'application du rappel. Je pourrais peut-être reformuler cela comme suit :
+
+Pour iOS, orientation peut être contrôlée par programme en définissant un rappel javascript sur fenêtre :
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## La *fonctionnalité* élément
 
-Si vous utilisez la CLI pour créer des applications, vous utilisez la `plugin` commande pour activer le périphérique API. Cela ne modifie pas le niveau supérieur `config.xml` fichier, donc le `<feature>` élément ne s'applique pas à votre flux de travail. Si vous travaillez directement dans un kit de développement logiciel et à l'aide de la plate-forme spécifique `config.xml` fichier source, vous utilisez le `<feature>` tag pour permettre aux API de niveau périphérique et des plugins externes. Elles apparaissent souvent avec des valeurs personnalisées dans spécifique à la plateforme `config.xml` fichiers. Par exemple, voici comment spécifier l'API Device pour les projets Android :
+Si vous utilisez la CLI pour créer des applications, vous utilisez la commande `plugin` pour activer le dispositif API. Cela ne modifie pas le niveau supérieur `config.xml` fichier, donc le `<feature>` élément ne s'applique pas à votre flux de travail. Si vous travaillez directement dans un kit de développement logiciel et à l'aide du fichier spécifique à la plateforme `config.xml` comme source, vous utilisez la balise `< feature >` pour activer l'API au niveau du périphérique et des plugins externes. Elles apparaissent souvent avec des valeurs personnalisées dans les fichiers spécifiques à une plateforme `config.xml` . Par exemple, voici comment spécifier l'API Device pour les projets Android :
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -158,11 +173,11 @@ Voici l'apparence de l'élément pour les projets d'iOS :
         </feature>
     
 
-Voir la référence de l'API pour plus d'informations sur la spécification de chaque fonctionnalité. Consultez le Guide de développement de Plugin pour plus d'informations sur les plugins.
+Voir la référence de l'API pour plus d'informations sur la spécification de chaque fonctionnalité. Consultez le Guide de développement de Plugin pour plus d'informations sur les plugins.Here is how the element appears for iO.
 
 ## La *plate-forme* élément
 
-Lorsque vous utilisez la CLI pour créer des applications, il est parfois nécessaire de spécifier les préférences ou autres éléments spécifiques à une plate-forme particulière. Utiliser le `<platform>` élément pour spécifier la configuration qui doit uniquement apparaître dans un unique spécifique à la plateforme `config.xml` fichier. Par exemple, voici comment spécifier que seul android devrait utiliser les préférences de plein écran :
+Lorsque vous utilisez la CLI pour créer des applications, il est parfois nécessaire de spécifier les préférences ou autres éléments spécifiques à une plate-forme particulière. Utilisez l'élément `<platform>` pour spécifier la configuration qui doit uniquement apparaître dans un fichier unique spécifique à la plateforme `config.xml` . Par exemple, voici comment spécifier que seul android devrait utiliser les préférences de plein écran :
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

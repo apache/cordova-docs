@@ -144,27 +144,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     **注意**： `default` 值意味著科爾多瓦將帶定位首選項條目從平臺的清單/設定檔允許回退到其預設行為的平臺。
 
+預設允許人像及風景模式-僅後執行回檔。我可以或許重新字這，如下所示：
+
+IOS，通過定義在視窗上的 javascript 回檔可以以程式設計方式控制方向：
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## *功能*元素
 
-如果你使用的 CLI 來構建應用程式，則使用 `plugin` 命令來啟用設備的 Api。 這並不會修改的頂級 `config.xml` 檔中，所以 `<feature>` 元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的工作 `config.xml` 檔作為源，您使用 `<feature>` 標記，以使設備級 Api 和外部外掛程式。 他們經常出現在特定平臺中的自訂值與 `config.xml` 的檔。 例如，在這裡是如何指定為 Android 專案設備 API：
+如果你使用的 CLI 來構建應用程式，您可以使用`外掛程式`命令以便啟用設備的 Api。 這不修改頂級`config.xml`檔中，所以`<feature>`元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的`config.xml`檔作為源工作，您使用`<feature>`標記，使設備級 API 和外部外掛程式。 他們經常出現以特定于平臺的`config.xml`檔中的自訂值。 例如，下面是如何指定設備 API 為 Android 的專案：
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-這裡是為 iOS 專案元素的顯示方式：
+這裡是 iOS 專案元素的顯示方式：
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
         </feature>
     
 
-有關如何指定每個功能，請參閱 API 參考的詳細資訊。在外掛程式上看到外掛程式開發指南的詳細資訊。
+有關如何指定每個功能，請參閱 API 參考的詳細資訊。看到外掛程式的外掛程式開發指南 》 瞭解更多資訊。
 
 ## *平臺*的元素
 
-當使用 CLI 來構建應用程式，它是有時必要指定首選項或其他特定于特定平臺的元素。 使用 `<platform>` 元素來指定配置應該只出現在單個特定于平臺的 `config.xml` 檔。 例如，在這裡是如何指定那唯一的 android 系統應使用全屏顯示首選項：
+使用 CLI 來構建應用程式時，有時必要指定首選項或其他特定于特定平臺的元素。 `<platform>`元素用於指定應該只出現在一個單一的特定于平臺的`config.xml`檔中的配置。 例如，下面是如何指定那唯一的 android 系統應該使用全屏顯示首選項：
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

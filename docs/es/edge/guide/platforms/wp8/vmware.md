@@ -27,7 +27,7 @@ La [Microsoft Developer Network][1] proporciona instrucciones generales sobre c�
     
     ![][2]
     
-    El emulador de Windows Phone solo utiliza medio megabyte de memoria, así que en general que se debe reservar por lo menos 2GB para VMWare.
+    El emulador de Windows Phone solo utiliza la mitad de un gigabyte de memoria, así que en general que se debe reservar por lo menos 2GB para VMWare.
 
 3.  Elija la configuración **avanzada** . Activar el **motor de virtualización preferido: Intel VT-x con EPT** opción:
     

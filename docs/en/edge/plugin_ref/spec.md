@@ -454,6 +454,26 @@ It supports the following attributes:
 
 * `after`: A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement)
 
+The Windows platform supports two additional attributes (both optional) when affecting the meta-name `package.appxmanifest`:
+
+The `device-target` attribute indicates that the  should only be included when building for the specified target device
+type. Supported values are `win`, `phone`, or `all`.
+
+The `versions` attribute indicates that app manifests for specific Windows versions should only be altered for versions that match the
+specified version string. Value can be any valid node semantic version range string.
+
+Examples of using these Windows specific attributes:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+
+The above example will set pre-8.1 platforms (Windows 8, specifically) to require the `webcam` device capability and the `picturesLibrary` general capability, and apply the `webcam` device capability only to Windows 8.1 projects that build for Windows Phone.  Windows desktop 8.1 systems are unmodified. 
+
 ## _plugins-plist_ Element
 
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
@@ -517,7 +537,7 @@ Supported attributes:
 * `arch`: Indicates that the `<SDKReference>` should only be included when building for the specified architecture.
   Supported values are `x86`, `x64` or `ARM`.
 
-* `target`: Indicates that the `<SDKReference>` should only be included when building for the specified target device
+* `device-target`: Indicates that the `<SDKReference>` should only be included when building for the specified target device
   type. Supported values are `win` (or `windows`), `phone` or `all`.
 
 * `versions`: Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version
@@ -534,24 +554,36 @@ Examples:
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
-Examples:
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your
+plugin files (thus it is not a system framework).
+
+### _framework_ for iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
-
-The `src` attribute identifies the framework, which plugman attempts
-to add to the Cordova project, in the correct fashion for a given
-platform.
 
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your
-plugin files (thus it is not a system framework). The default is `false`.  ***On Android*** it specifies how to treat
-**src**. If `true` **src** is a relative path from the application project's directory, otherwise -- from the Android
-SDK directory.
+### _framework_ for Android
+
+On Android (as of cordova-android@4.0.0), _framework_ tags are used to include Maven dependencies, or to include bundled library projects.
+
+Examples:
+
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+
+_framework_  can also be used to have custom .gradle files sub-included into the main project's .gradle file:
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+
+For pre-android@4.0.0 (ANT-based projects):
 
 The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is
 supported and only for Windows.  Using `custom='true'` and `type='projectReference'` will add a reference to the project
@@ -559,19 +591,22 @@ which will be added to the compile+link steps of the cordova project.  This esse
 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing
 cordova application.
 
-The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory
-containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to
-add references between sub projects like in this example:
+The optional `parent` sets the relative path to the directory containing the
+sub-project to which to add the reference. The default is `.`, i.e. the
+application project. It allows to add references between sub projects like in this example:
 
-	<framework src="FeedbackLib" custom="true" />
-	<framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+
+### _framework_ for Windows
 
 The Windows platform supports three additional attributes (all optional) to refine when the framework should be included:
+
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
 
 The `arch` attribute indicates that the framework should only be included when building for the specified architecture.
 Supported values are `x86`, `x64` or `ARM`.
 
-The `target` attribute indicates that the framwork should only be included when building for the specified target device
+The `device-target` attribute indicates that the framework should only be included when building for the specified target device
 type. Supported values are `win` (or `windows`), `phone` or `all`.
 
 The `versions` attribute indicates that the framework should only be included when building for versions that match the
@@ -598,6 +633,15 @@ plugman's scope.  Examples:
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>
 
+## _hook_ Element
+
+Represents your custom script which will be called by Cordova when
+certain action occurs (for example, after plugin is added or platform
+prepare logic is invoked). This is useful when you need to extend
+default Cordova functionality. See Hooks Guide for more information.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+
 ## Variables
 
 In certain cases, a plugin may need to make configuration changes
@@ -605,16 +649,14 @@ dependent on the target application. For example, to register for C2DM
 on Android, an app whose package id is `com.alunny.message` would
 require a permission such as:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
 
 In such cases where the content inserted from the `plugin.xml` file is
 not known ahead of time, variables can be indicated by a dollar-sign
 followed by a series of capital letters, digits, or underscores. For
 the above example, the `plugin.xml` file would include this tag:
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
 
 plugman replaces variable references with the specified value, or the
 empty string if not found. The value of the variable reference may be

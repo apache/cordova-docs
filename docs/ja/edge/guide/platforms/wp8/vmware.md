@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     ![][2]
     
-    Windows Phone エミュレーターだけで VMWare の少なくとも 2 GB を予約する必要がありますので、全体的なメモリの半分の 1 メガバイトを使用します。
+    Windows Phone エミュレーターだけで全体的な VMWare の少なくとも 2 GB を予約するメモリの 1 ギガバイトを使用します。
 
 3.  **高度な**設定を選択します。有効にすると、**優先仮想化エンジン: EPT で Intel VT-x**オプション。
     
@@ -29,7 +29,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 4.  *.Vmx*ファイルを追加または変更、次の設定を変更します。
     
-        hypervisor.cpuid.v0 ="FALSE"mce.enable ="TRUE"vhv.enable ="TRUE"
+        hypervisor.cpuid.v0 = "FALSE"
+        mce.enable = "TRUE"
+        vhv.enable = "TRUE"
         
 
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png

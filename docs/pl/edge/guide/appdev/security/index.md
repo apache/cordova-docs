@@ -33,13 +33,7 @@ Niniejszy Przewodnik obejmuje kilka zabezpieczeń najlepszych praktyk, które na
 
 *   Przeczytać i zrozumieć Przewodnik białej listy
 
-*   Domyślnie, biała na nowo utworzone aplikacja umożliwi dostęp do każdej domeny za pośrednictwem `<access>` tag: `<access origin="*">` Jeśli chcesz, aby żądania sieciowe oceniane przeciwko białej listy, a następnie ważne jest, aby to zmienić i Zezwalaj tylko na domeny, do których potrzebny jest dostęp do. Można to zrobić edytując plik konfiguracyjny poziomu aplikacji znajduje się na: `{project}/config.xml` (ostatnie projekty) lub `{project}/www/config.xml` (starszych projektów)
-
-*   Android w białej na Cordova 2.9.x jest uważany za bezpieczny, jednak okazało się, że jeśli foo.com jest zawarte w Białej listy, foo.com.evil.com będzie mógł przejść test białej listy. To był stały w Cordova 3.x.
-
 *   Białą domeny nie działa na Android API 10 i poniżej i WP8 dla ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
-
-*   Na Android, jak Cordova 3.6.0 to teraz niezbędne do białej listy adresów od aplikacji, jeśli aplikacja generuje linki do tych adresów URL. Jeśli użytkownik aplikacji generuje `tel:` , `geo:` , `sms:` , `intent:` lub podobne adresy URL, lub łącza do zawartości zewnętrznej, których można oczekiwać, aby otworzyć w przeglądarce użytkownika, a następnie trzeba będzie zaktualizować swoje Biała. Zobacz przewodnik Biała lista szczegóły.
 
 ## Ramek i mechanizmu zwrotnego Id
 

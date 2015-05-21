@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Aktualisieren von Windows Phone 8
 
-Diese Anleitung zeigt, wie Windows Phone 8 Projekte, um ein upgrade von älteren Versionen von Cordova zu ändern. Einige dieser Anweisungen beziehen sich auf Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren. Der folgende Abschnitt zeigt wie von nicht-CLI Projekte aktualisiert.
+Diese Anleitung zeigt, wie Windows Phone 8 Projekte, um ein upgrade von älteren Versionen von Cordova zu ändern. Einige dieser Anweisungen beziehen sich auf Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren. Der folgende Abschnitt zeigt wie von nicht-CLI und CLI Projekte aktualisiert.
 
 ## Upgrade 3.6.0 Projekte 4.0.0
 
@@ -40,7 +40,7 @@ Für Projekte, die mit Cordova CLI erstellt wurden:
 
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
-        Bin\update < Project_path >
+        bin\update <project_path>
     
 
 ## Ein Upgrade auf 3.1.0 von 3.0.0

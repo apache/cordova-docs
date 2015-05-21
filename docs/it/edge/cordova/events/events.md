@@ -1,6 +1,6 @@
 * * *
 
-licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -20,8 +20,8 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 ## Tipi di evento
 
 *   deviceready
-*   pausa
-*   curriculum
+*   pause
+*   resume
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -30,17 +30,17 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 *   volumedownbutton
 *   volumeupbutton
 
-## Eventi aggiunti da [org.apache.cordova.battery stato][1]
+## Eventi aggiunti da [cordova-plugin--lo stato della batteria][1]
 
- [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/README.md
 
 *   batterycritical
 *   batterylow
 *   batterystatus
 
-## Eventi aggiunti da [org.apache.cordova.network-informazioni][2]
+## Eventi aggiunti da [cordova-plugin-rete-informazioni][2]
 
- [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 *   online
 *   offline

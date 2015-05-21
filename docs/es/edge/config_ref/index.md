@@ -142,9 +142,22 @@ A más de una plataforma, pero no a todos ellos se aplican las siguientes prefer
     
     **Nota**: el `default` valor significa Cordova tira a la entrada de preferencia de orientación del archivo de manifiesto/configuración de la plataforma que permite la plataforma a la suplencia a su comportamiento por defecto.
 
+'default' permite tanto retrato y paisaje modo - sólo después de implementar la devolución de llamada. Yo podría tal vez vuelva a la palabra esto como sigue:
+
+Para iOS, la orientación se puede controlar mediante programación definiendo un callback de javascript en la ventana:
+
+    /** 
+    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
+    * @returns {Boolean} Indicating if rotation should be allowed.
+    */
+    function shouldRotateToOrientation(degrees) {
+         return true;
+    }
+    
+
 ## La *función de* elemento
 
-Si utilizas la CLI para construir aplicaciones, utilice el comando `plugin` para habilitar dispositivo APIs. Esto no modifica el archivo `config.xml` de primer nivel, así que el elemento `<feature>` no se aplica a su flujo de trabajo. Si usted trabaja directamente en un SDK y el uso específico del plataforma `config.xml` archivo como fuente, utiliza el `<feature>` etiqueta para permitir a nivel de dispositivo APIs y plugins externos. A menudo aparecen con valores personalizados en específica de la plataforma `config.xml` archivos. Por ejemplo, aquí es cómo especificar el dispositivo de API para proyectos Android:
+Si utilizas la CLI para construir aplicaciones, utilice el comando `plugin` para habilitar dispositivo APIs. Esto no modifica el archivo `config.xml` de primer nivel, así que el elemento `< feature>` no se aplica a su flujo de trabajo. Si usted trabaja directamente en un SDK y usando el archivo `config.xml` de específica de la plataforma como fuente, utilice la etiqueta `<feature>` para permitir a nivel de dispositivo APIs y plugins externos. A menudo aparecen con valores personalizados en archivos específicos a una plataforma `config.xml` . Por ejemplo, aquí es cómo especificar el dispositivo de API para proyectos Android:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -162,7 +175,7 @@ Consulte la referencia de la API para obtener más información sobre cómo espe
 
 ## La *plataforma de* elemento
 
-Cuando se usa la CLI para construir aplicaciones, a veces es necesario especificar preferencias u otros elementos específicos a una plataforma de concreto. Uso el `<platform>` elemento para especificar la configuración que sólo debe aparecer en una sola plataforma específica `config.xml` archivo. Por ejemplo, aquí es cómo especificar que android sólo debe emplear la opción de pantalla completa:
+Cuando se usa la CLI para construir aplicaciones, a veces es necesario especificar preferencias u otros elementos específicos a una plataforma de concreto. Utilice el elemento `<platform>` para especificar la configuración que debe aparecer sólo en un archivo específico de plataforma única `config.xml` . Por ejemplo, aquí es cómo especificar que android sólo debe emplear la opción de pantalla completa:
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

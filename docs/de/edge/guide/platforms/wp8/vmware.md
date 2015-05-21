@@ -21,7 +21,7 @@ Das [Microsoft Developer Network][1] bietet allgemeine Anweisungen zum Ausführe
     
     ![][2]
     
-    Der Windows Phone-Emulator allein verwendet die Hälfte ein Megabyte Speicher, also insgesamt reservieren Sie mindestens 2 GB für VMWare.
+    Der Windows Phone-Emulator allein verwendet die Hälfte eine Gigabyte Arbeitsspeicher, also insgesamt reservieren Sie mindestens 2 GB für VMWare.
 
 3.  Wählen Sie die **erweitert** . Aktivieren der **bevorzugte Virtualisierungs-Engine: Intel VT-X mit EPT** Option:
     

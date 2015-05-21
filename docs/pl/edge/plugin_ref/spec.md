@@ -320,9 +320,28 @@ Obsługuje następujące atrybuty:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+Na platformie Windows obsługuje dwa dodatkowe atrybuty (oba opcjonalne) gdy wpływających na meta-nazwa `package.appxmanifest`:
+
+`device-target` atrybut wskazuje, że powinny być włączone, podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win`, `phone` lub `all`.
+
+`versions` atrybut wskazuje, że manifesty aplikacji dla określonej wersji systemu Windows powinny zostać zmienione tylko dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
+
+Przykłady użycia tych Windows określonych atrybutów:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+Powyższy przykład ustawi pre-8.1 platform (Windows 8, konkretnie) wymaga możliwości urządzenia `webcam` i `picturesLibrary` Ogólna zdolność, i dotyczą możliwości urządzenia `webcam` tylko Windows 8.1 projektów, które budować dla Windows Phone. Niemodyfikowany Windows pulpit 8.1 systemów.
+
 ## *wtyczki plist* Elementu
 
-To jest *nieaktualne* , jak odnosi się jedynie do cordova-ios 2.2.0 i poniżej. Użycie `<config-file>` tag pewnym Cordova.
+To jest *nieaktualne* , jak odnosi się jedynie do cordova-ios 2.2.0 i poniżej. Użyj tagu `<config-file>` nowsze wersje Cordova.
 
 Przykład:
 
@@ -333,7 +352,7 @@ Przykład:
     </config-file>
     
 
-Określa klucz i wartość, aby dołączyć do właściwego `AppInfo.plist` plik w projekcie Cordova iOS. Na przykład:
+Określa klucz i wartość, aby dołączyć do `AppInfo.plist` plik w projekcie Cordova iOS. Na przykład:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ Jak pliki źródłowe, ale specjalnie dla platformy takie jak iOS, że odróżni
 
 Przykład Android:
 
-    < src="FooPluginStrings.xml zasobów plik" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *plik z lib* Elementu
@@ -374,7 +393,7 @@ Obsługiwanych atrybutów:
 
 *   `arch`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
 
-*   `target`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+*   `device-target`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
 
 *   `versions`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
 
@@ -398,11 +417,11 @@ Przykłady:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src` atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
+`Src` atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
 
 Atrybut opcjonalny `weak` jest wartością logiczną wskazującą, czy ramy powinny być słabo powiązane. Wartością domyślną jest `false`.
 
-Atrybut opcjonalny `custom` jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false`. ***Na Android*** to określa, jak leczyć **src**. Jeśli `true` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
+Atrybut opcjonalny `custom` jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false`. ***Na Android*** to określa, jak leczyć **src**. Jeśli `prawda` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
 
 Atrybut opcjonalny `type` jest ciągiem wskazującym typ struktury, aby dodać. Obsługiwane jest obecnie tylko `projectReference` i tylko dla Windows. Za pomocą `custom="true"` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilacji + link etapy projektu cordova. Zasadniczo jest to tylko sposób obecnie że ramy 'niestandardowe' można kierować wielu architektur, jak są one wyraźnie zbudowane jako zależność przez aplikację cordova odwołujący się.
 
@@ -416,7 +435,7 @@ Na platformie Windows obsługuje trzy dodatkowe atrybuty (wszystkie opcjonalne) 
 
 `arch` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
 
-Atrybut `target` wskazuje, że framwork tylko należy włączyć, gdy budynek dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+`device-target` atrybut wskazuje, że powinny być włączone, podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
 
 `versions` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
 
@@ -455,7 +474,7 @@ W takich przypadkach, w których zawartość z pliku `plugin.xml` nie jest znana
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman zastępuje zmienną odniesienia określonej wartości lub ciąg pusty, jeśli nie znaleziono. Wartość zmiennej odniesienia mogą być wykryte (w tym przypadku z pliku `AndroidManifest.xml`) lub określony przez użytkownika narzędzia; dokładny proces jest zależne od konkretnego narzędzia.
+plugman zastępuje zmienną odniesienia określonej wartości lub ciąg pusty, jeśli nie znaleziono. Wartość zmiennej odniesienia mogą być wykryte (w tym przypadku z pliku `AndroidManifest.xml` ) lub określony przez użytkownika narzędzia; dokładny proces jest zależne od konkretnego narzędzia.
 
 plugman na życzenie użytkowników, aby określić wtyczki wymagane zmienne. Na przykład klucze C2M i Google Maps API może być określony jako argument wiersza polecenia:
 
@@ -473,4 +492,4 @@ Niektóre nazwy zmiennych powinny być zastrzeżone, wymienionych poniżej.
 
 ## $PACKAGE_NAME
 
-Identyfikator unikatowy styl domeny odwrotnej pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `package` atrybut element najwyższego poziomu `manifest` pliku `AndroidManifest.xml`.
+Identyfikator unikatowy styl domeny odwrotnej pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `pakiet` atrybut element najwyższego poziomu `manifestu` pliku `AndroidManifest.xml` .

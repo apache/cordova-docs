@@ -78,7 +78,7 @@ CLI 的專案：
         bin/update path/to/project
     
 
-CLI 的專案：
+CLI 專案：
 
 1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
@@ -100,7 +100,7 @@ Xcode 5 的問題：
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建一個新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，所述的命令列介面。
 
 2.  添加您的平臺的科爾多瓦的專案，例如： `cordova platform add ios`.
 
@@ -110,7 +110,7 @@ Xcode 5 的問題：
 
 5.  複製 `config.xml` 到 `www` 目錄中，並移除任何外掛程式定義。修改而不是平臺目錄的設置。
 
-6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
+6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
 7.  生成並測試。
 
@@ -132,7 +132,7 @@ Xcode 5 的問題：
 
 **注**： 從科爾多瓦 3.0.0 開始，未預先安裝的外掛程式，和你需要使用 `plugman` 命令列實用程式來安裝它們自己。 請參閱使用 Plugman 管理外掛程式。
 
-## 升級 2.8.0 專案到 2.9.0
+## 升級 2.8.0 專案 2.9.0
 
 1.  下載並解壓縮到硬碟上，例如對 `~/Documents/Cordova-2.9.0` 的永久目錄位置的科爾多瓦 2.9.0 源.
 
@@ -142,11 +142,11 @@ Xcode 5 的問題：
 
 4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
+5.  複製 `www/cordova.js` （請注意它不再有版本尾碼，該版本位於檔本身在標題中） 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 
 6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
-7.  刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+7.  刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
 ## 升級 2.7.0 專案到 2.8.0
 
@@ -156,13 +156,13 @@ Xcode 5 的問題：
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，iOS 殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` （請注意它不再有版本尾碼，該版本位於檔本身在標題中） 到 `www` 目錄中，從新的專案檔案並刪除 `www/cordova-2.7.0.js` 檔。
 
-6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  科爾多瓦腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 使其指向新 `cordova.js` 檔。
 
-7.  更新的 `config.xml` 檔中的任何 `<plugin>` 標記為 `<feature>` 標記。 請注意現有 `<plugin>` 標籤仍然工作，但都被否決了。 您可以在一個新的專案的 `config.xml` 檔中複製此資訊。 例如：
+7.  更新的 `config.xml` 檔中的任何 `<plugin>` 標記為 `<feature>` 標記。 請注意現有 `<plugin>` 標籤仍然工作，但都被否決了。 您可以在一個新的專案的 `config.xml` 檔中複製此資訊。 舉個例子：
     
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />
@@ -176,7 +176,7 @@ Xcode 5 的問題：
         <!-- other <feature> tags -->
         
 
-8.  刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+8.  刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
 9.  這兩個框架添加到專案中：
     
@@ -190,7 +190,7 @@ Xcode 5 的問題：
 
  [2]: https://issues.apache.org/jira/browse/CB-3458
 
-## 升級 2.6.0 專案到 2.7.0
+## 升級 2.6.0 專案 2.7.0
 
 1.  下載並解壓縮到硬碟上，例如對 `~/Documents/Cordova-2.7.0` 的永久目錄位置的科爾多瓦 2.7.0 源.
 
@@ -202,13 +202,13 @@ Xcode 5 的問題：
 
 5.  複製 `www/cordova-2.7.0.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova-2.6.0.js` 檔。
 
-6.  科爾多瓦的腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
+6.  科爾多瓦腳本中的引用更新 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 使其指向新 `cordova-2.7.0.js` 檔。
 
 7.  更新 （或替換，如果你永遠不會更改檔） `AppDelegate.m` 檔根據從新一個專案 （見 [此比較][3]).
 
 8.  在 `config.xml` 檔中，[刪除這條線][4].
 
-9.  刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+9.  刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
  [3]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23
  [4]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc
@@ -268,7 +268,7 @@ Xcode 5 的問題：
 
 11. 刪除 `科爾多瓦` 目錄中，並從新專案中 `科爾多瓦` 目錄複寫到您的專案的根目錄。在 2.5.0，這已更新腳本。
 
-12. 刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+12. 刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
  [9]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09
  [10]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb
@@ -297,7 +297,7 @@ Xcode 5 的問題：
 
 10. 刪除 `科爾多瓦` 目錄中，並從新專案中 `科爾多瓦` 目錄複寫到您的專案的根目錄。在 2.4.0，這具有固定的腳本。
 
-11. 刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+11. 刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
 12. AssetsLibrary.framework 作為一種資源添加到專案中。 （請參閱 [蘋果的文檔][16] 說明如何做到這一點。）。
 
@@ -324,7 +324,7 @@ Xcode 5 的問題：
 
 8.  刪除 `科爾多瓦` 目錄中，並從新專案中 `科爾多瓦` 目錄複寫到您的專案的根目錄。這在 2.3.0，新的腳本。
 
-9.  刪除 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
+9.  刪除 `CordovaLib` 目錄和複製 `CordovaLib` 目錄從新專案到您的專案的根目錄。
 
 10. `Cordova.plist` 檔轉換 `config.xml`，通過在您的專案檔案上運行腳本 `bin/cordova\_plist\_to\_config\_xml`）。
 
@@ -379,9 +379,9 @@ Xcode 5 的問題：
 
 2.  如果它正在運行，請退出 Xcode。
 
-3.  使用終端程式，定位到你放在上面的下載的源的目錄。
+3.  使用終端程式，定位到的目錄，你把上面的下載的原始程式碼放在哪裡。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，iOS 殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  從新專案中的 `www/cordova-2.1.0.js` 檔案複製到 `www` 目錄中，並刪除 `www/cordova-2.0.0.js` 檔。
 
@@ -412,7 +412,7 @@ Xcode 5 的問題：
 
 1.  安裝 2.0.0 科爾多瓦。
 
-2.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+2.  創建一個新專案，iOS 殼工具指南中所述。你需要從這個新的專案資產。
 
 3.  從新專案中的 `www/cordova-2.0.0.js` 檔案複製到 `www` 目錄中，並刪除 `www/cordova-1.9.0.js` 檔。
 
@@ -522,7 +522,7 @@ Xcode 5 的問題：
 
 1.  安裝科爾多瓦 1.8.0。
 
-2.  創建一個新專案。您將需要的一些資產從這個新的專案。
+2.  創建一個新的專案。您將需要一些資產從這個新的專案。
 
 3.  從新專案中的 `www/cordova-1.8.0.js` 檔案複製到 `www` 目錄中，並刪除 `www/cordova-1.7.x.js` 檔。
 
@@ -540,7 +540,7 @@ Xcode 5 的問題：
 
 1.  安裝科爾多瓦 1.7.0 以來。
 
-2.  創建一個新專案。您將需要的一些資產從這個新的專案。
+2.  創建一個新的專案。您將需要一些資產從這個新的專案。
 
 3.  從新專案中的 `www/cordova-1.7.0.js` 檔案複製到 `www` 目錄中，並刪除 `www/cordova-1.6.0.js` 檔。
 
@@ -552,7 +552,7 @@ Xcode 5 的問題：
 
 2.  在您的專案製作一個備份的 `AppDelegate.m`、 `AppDelegate.h`、 `MainViewController.m`、 `MainViewController.h`、 `Cordova.plist`。
 
-3.  創建一個新專案。您將需要的一些資產從這個新的專案。
+3.  創建一個新的專案。您將需要一些資產從這個新的專案。
 
 4.  將這些檔從新專案複製到您在磁片上，取代任何舊的檔 （備份您的檔第一次從上述步驟 2） 的 1.5.0-based 專案目錄：
     
@@ -784,7 +784,7 @@ Xcode 5 的問題：
 
 2.  製作一個備份的 `AppDelegate.m` 和 `AppDelegate.h` 在您的專案中。
 
-3.  創建一個新專案。您將需要的一些資產從這個新的專案。
+3.  創建一個新的專案。您將需要一些資產從這個新的專案。
 
 4.  將這些檔從新專案複製到您在磁片上，取代任何舊的檔 （備份您的檔第一次從上述步驟 2） 的 0.9.6-based 專案目錄：
     
@@ -795,12 +795,12 @@ Xcode 5 的問題：
         MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  在添加了所有 `MainViewController` 檔到您的 Xcode 專案。
 
 6.  從新專案中的 `www/phonegap-1.0.0.js` 檔案複製到 `www` 目錄中，並刪除 `www/phonegap-0.9.6.js` 檔。
 
 7.  科爾多瓦腳本中 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 的引用更新為指向新的 `phonegap-1.0.0.js` 檔。
 
-8.  添加一個新條目下的 `Plugins` 的 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 的 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 的值`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  將您在您的備份任何特定于專案的代碼集成 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。

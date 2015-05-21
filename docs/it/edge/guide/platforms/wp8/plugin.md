@@ -1,6 +1,6 @@
 * * *
 
-licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -15,7 +15,7 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 # Windows Phone 8 plugin
 
-In questa sezione vengono fornite informazioni dettagliate per come implementare il codice plugin nativo sulla piattaforma Windows Phone. Prima di leggere questo, vedere applicazione plugin per una panoramica della struttura del plugin e la sua interfaccia JavaScript comune. Questa sezione continua a dimostrare il plugin di esempio *eco* che comunica da Cordova webview alla piattaforma nativa e ritorno.
+In questa sezione vengono fornite informazioni dettagliate per come implementare il codice plugin nativo sulla piattaforma Windows Phone. Prima di leggere questo, vedere la guida allo sviluppo di Plugin per una panoramica della struttura del plugin e la sua interfaccia JavaScript comune. Questa sezione continua a dimostrare il plugin di esempio *eco* che comunica da Cordova webview alla piattaforma nativa e ritorno.
 
 Scrivere un plugin per Cordova su Windows Phone richiede una conoscenza base dell'architettura di Cordova. Cordova-WP8 consiste di un `WebBrowser` che ospita il codice dell'applicazione JavaScript e gestisce le chiamate API native. È possibile estendere un C# `BaseCommand` classe ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), che viene fornito con la maggior parte delle funzionalità necessarie:
 
@@ -25,20 +25,29 @@ Scrivere un plugin per Cordova su Windows Phone richiede una conoscenza base del
 
 3.  Includono l'implementazione di classi di base:
     
-        usando WPCordovaClassLib.Cordova;
-        usando WPCordovaClassLib.Cordova.Commands;
-        usando WPCordovaClassLib.Cordova.JSON;
+        using WPCordovaClassLib.Cordova;
+        using WPCordovaClassLib.Cordova.Commands;
+        using WPCordovaClassLib.Cordova.JSON;
         
 
 4.  Estendere la classe da `BaseCommand` :
     
-        classe pubblica Echo: BaseCommand {/ /...}
+        public class Echo : BaseCommand
+        {
+            // ...
+        }
         
 
 5.  Aggiungere un `echo` Metodo chiamabile da JavaScript:
     
-        classe pubblica Echo: BaseCommand {public void eco (opzioni di stringa) {/ / tutti i metodi JS plugin richiamabile devono avere questa firma!
-                / / pubblico, tornando a vuoto, 1 argomento che è una stringa}}
+        public class Echo : BaseCommand
+        {
+            public void echo(string options)
+            {
+                // all JS callable plugin methods MUST have this signature!
+                // public, returning void, 1 argument that is a string
+            }
+        }
         
 
 Vedere la classe [BaseCommand.cs][1] per i metodi disponibili per il plugin eseguire l'override. Ad esempio, il plugin può acquisire eventi 'pausa' e 'riprendere'.
@@ -68,19 +77,19 @@ Se si desidera specificare il proprio spazio dei nomi, è necessario effettuare 
 
 Il JavaScript avrebbe bisogno di chiamare `exec` come questo:
 
-        Cordova.exec (vittoria, fail, "com.mydomain.cordovaExtensions.Echo",...);
+        cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
     
 
 ## Interpretare gli argomenti in C
 
 Nell'esempio discusso in applicazione plugin, i tuo plugin riceve dati sono una stringa, ma che cosa se volete passare un array di stringhe? Supponiamo che il JavaScript `cordova.exec` chiamata viene specificato come questo:
 
-        Cordova.exec (vincere, fallire, "Echo", "eco", ["stringa di input"]);
+        cordova.exec(win, fail, "Echo", "echo", ["input string"]);
     
 
 Il valore di `options` stringa passata al `Echo.echo` metodo è JSON:
 
-        "[\"input string\ "]"
+        "[\"input string\"]"
     
 
 Tutti i JavaScript `exec` argomenti sono JSON-codificati prima di essere passato in c# e quindi bisogno di essere decodificato:
@@ -99,7 +108,7 @@ La `BaseCommand` classe fornisce metodi per passare dati a gestori di callback J
 
 Per passare dati indietro, è necessario chiamare `DispatchCommandResult` in modo diverso:
 
-        DispatchCommandResult (nuovo PluginResult (PluginResult.Status.OK, "tutto è andato come previsto, questo è un risultato che viene passato al gestore successo."));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
     
 
 Utilizzare una stringa codificata JSON per passare dati oggetto strutturato a JavaScript:
@@ -109,7 +118,7 @@ Utilizzare una stringa codificata JSON per passare dati oggetto strutturato a Ja
 
 Per segnalare un errore, chiamare `DispatchCommandResult` con un `PluginResult` oggetto il cui status è `ERROR` :
 
-        DispatchCommandResult (nuovo PluginResult (PluginResult.Status.ERROR, "Echo segnalato un errore"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
     
 
 ## Gestione degli errori di serializzazione
@@ -177,7 +186,7 @@ JavaScript è più difficile eseguire il debug di Windows Phone. È necessario u
 
 *   Fare attenzione a non passare al lato nativo che sono difficili per la deserializzazione JSON argomenti da JavaScript. La maggior parte delle piattaforme per dispositivi aspettano l'argomento passato a `cordova.exec()` essere una matrice, ad esempio il seguente:
     
-        Cordova.exec (vittoria, fail, "Nomeservizio", "MethodName", ["questa è una stringa", 54, {literal: 'trouble'}]);
+        cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
         
     
     Questo può determinare un valore di stringa troppo complesse per c# decodificare:

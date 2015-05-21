@@ -162,7 +162,7 @@ Xcode 5 temi:
 
 6.  Aggiornare il riferimento allo script di Cordova nella `www/index.html` file (e qualsiasi altro file che contengono il riferimento allo script) per puntare al nuovo `cordova.js` file.
 
-7.  Aggiornare qualsiasi tag `<plugin>` nel file `config.xml` il tag `<feature>`. Si noti che tag `<plugin>` esistenti ancora lavorare, ma sono deprecati. È possibile copiare queste informazioni nel file `config. xml` per un nuovo progetto. Ad esempio:
+7.  Aggiornare qualsiasi tag `<plugin>` nel file `config.xml` il tag `<feature>`. Si noti che tag `<plugin>` esistenti ancora lavorare, ma sono deprecati. È possibile copiare queste informazioni nel file `config. xml` per un nuovo progetto. Per esempio:
     
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />

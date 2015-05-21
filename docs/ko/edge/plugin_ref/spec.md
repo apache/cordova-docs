@@ -320,9 +320,28 @@ XML에 대 한 예제:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
+Windows 플랫폼 지원 (모두 선택) 2 개의 추가적인 특성 메타 이름 `package.appxmanifest`에 영향을 미치는 때:
+
+`device-target` 특성을 나타냅니다는 지정 된 대상 장치 유형에 대 한 빌드할 때 포함 되어야만 합니다. 지원 되는 값은 `win`, `phone`또는 `all`.
+
+`versions` 특성은 특정 Windows 버전에 대 한 응용 프로그램 매니페스트에 지정 된 버전 문자열과 일치 하는 버전에 대 한 변경만 해야 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
+
+이러한 Windows 특정 특성을 사용 하 여의 예:
+
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions="<8.1.0">
+        <Capability Name="picturesLibrary" />
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    <config-file target="package.appxmanifest" parent="/Package/Capabilities" versions=">=8.1.0" device-target="phone">
+        <DeviceCapability Name="webcam" />
+    </config-file>
+    
+
+위의 예제에서는 pre-8.1 플랫폼 설정 합니다 (윈도우 8, 구체적으로) `웹캠` 장치 기능 및 `picturesLibrary` 일반적인 기능 요구 및 `웹캠` 장치 기능 Windows Phone 대 한 빌드 윈도우 8.1 프로젝트에만 적용. Windows 데스크톱 8.1 시스템 수정 되지 않습니다.
+
 ## *플러그인 plist* 요소
 
-이것은 *오래 된* 코르 도우 바-ios 2.2.0 아래만 적용 됩니다. 사용 된 `<config-file>` 코르 도우 바의 최신 버전에 대 한 태그.
+이것은 *오래 된* 코르 도우 바-ios 2.2.0 아래만 적용 됩니다. 코르 도우 바의 최신 버전에 대 한 `< config 파일 >` 태그를 사용 합니다.
 
 예를 들어:
 
@@ -333,7 +352,7 @@ XML에 대 한 예제:
     </config-file>
     
 
-키 및 올바른에 추가할 값을 지정 `AppInfo.plist` iOS 코르도바 프로젝트에서 파일. 예를 들어:
+키와 iOS 코르도바 프로젝트에 올바른 `AppInfo.plist` 파일에 추가할 값을 지정 합니다. 예를 들어:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -349,7 +368,7 @@ XML에 대 한 예제:
 
 안 드 로이드 예제:
 
-    < 리소스 파일 src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" / >
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
     
 
 ## *lib 파일* 요소
@@ -374,7 +393,7 @@ Windows 플랫폼 `<lib-file>` 요소는 `< SDKReference >` 생성 된 Windows �
 
 *   `arch`: `< SDKReference >`만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
 
-*   `target`: `< SDKReference >`만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 때를 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
+*   `device-target`: `< SDKReference >` 만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 때를 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
 
 *   `versions`: `< SDKReference >`만 포함 되어야 함을 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
 
@@ -398,11 +417,11 @@ Windows 플랫폼 `<lib-file>` 요소는 `< SDKReference >` 생성 된 Windows �
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src` 특성 식별 프레임 워크는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 합니다.
+`Src` 특성 식별 프레임 워크는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 합니다.
 
 선택적 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은 `false`.
 
-옵션의 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false`입니다. ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `true` **src**-안 드 로이드 SDK 디렉터리에서 그렇지 않으면 응용 프로그램 프로젝트 디렉터리에서 상대 경로입니다.
+옵션의 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false`입니다. ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `진정한` **src** -안 드 로이드 SDK 디렉터리에서 그렇지 않으면 응용 프로그램 프로젝트 디렉터리에서 상대 경로입니다.
 
 선택적 `type` 특성을 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 Windows 용만. 사용 하 여 `custom='true'` 및 `type='projectReference'`는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법은 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
 
@@ -416,7 +435,7 @@ Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추�
 
 `arch` 특성 프레임 워크만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
 
-`target` 특성은 framwork만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 빌드할 때 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
+`device-target` 특성을 나타냅니다는 지정 된 대상 장치 유형에 대 한 빌드할 때 포함 되어야만 합니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
 
 `versions` 특성은 프레임 워크만 포함 되어야 함을 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
 
@@ -449,7 +468,7 @@ Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추�
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-`plugin.xml` 파일에서 삽입 하는 내용을 미리 알려져 있지 경우에서 변수는 달러 기호 뒤에 일련의 대문자, 숫자 또는 밑줄 표시 수 있습니다. 위의 예제 `plugin.xml` 파일이이 태그를 포함할 것입니다.
+`Plugin.xml` 파일에서 삽입 하는 내용을 미리 알려져 있지 경우에서 변수는 달러 기호 뒤에 일련의 대문자, 숫자 또는 밑줄 표시 수 있습니다. 위의 예제 `plugin.xml` 파일이이 태그를 포함할 것입니다.
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
@@ -462,7 +481,7 @@ plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-변수 확인 필수, `<platform>` 태그 `<platform>` 태그를 포함 해야 합니다. 예를 들어:
+변수 확인 필수, `< 플랫폼 >` 태그 `< 기본 설정 >` 태그를 포함 해야 합니다. 예를 들어:
 
     <preference name="API_KEY" />
     
@@ -473,4 +492,4 @@ plugman 확인이 필요한 환경 설정에서 전달 됩니다. 그렇지 않�
 
 ## $PACKAGE_NAME
 
-IOS 또는 `AndroidManifest.xml` 파일에 최상위 `매니페스트` 요소의 `패키지` 특성에 `CFBundleIdentifier`을 해당 패키지에 대 한 리버스 도메인 스타일 고유 식별자입니다.
+IOS 또는 `AndroidManifest.xml` 파일에 최상위 `매니페스트` 요소의 `패키지` 특성에 `CFBundleIdentifier` 을 해당 패키지에 대 한 리버스 도메인 스타일 고유 식별자입니다.

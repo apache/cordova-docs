@@ -11,9 +11,9 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 Cordova mit einen minimalen Satz von APIs und Projekte hinzufügen, was zusätzliche APIs, die sie durch Plugins erfordern.
 
-Sie können alle vorhandenen Plugins (einschließlich Drittanbieter Plug-ins) mithilfe der [Plugin Registry][1] durchsuchen.
+Sie können alle vorhandenen Plugins (einschließlich Drittanbieter Plug-ins) auf [npm][1] durchsuchen.
 
- [1]: http://plugins.cordova.io/
+ [1]: https://www.npmjs.com/search?q=ecosystem%3Acordova
 
 Der traditionelle Kern Cordova Plugins sind wie folgt:
 
@@ -93,24 +93,34 @@ Der traditionelle Kern Cordova Plugins sind wie folgt:
     
     > Eine API zum Anzeigen, ausblenden und Konfigurieren der Status Bar Hintergrund.
 
- [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
- [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
- [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
- [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
- [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
- [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
- [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
- [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
- [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
- [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
- [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
- [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
- [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
- [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
- [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
- [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
- [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
- [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
+*   [Whitelist][21]
+    
+    > Ein Plugin zur Whitelist Netzwerkanforderungen. Müssen installieren, um alle Netzwerkanforderungen in Ihren Anwendungen haben.
 
-Nicht-englische Übersetzungen über diese Plugin-Docs finden Sie indem Sie sich ältere Versionen von Cordova-Dokumentation. Verwenden Sie das Drop-Down-Menü auf die ganz oben rechts auf dieser Seite, um Versionen wechseln.
+*   [Ältere Whitelist][22]
+    
+    > Ein Plugin, um den alten Stil der weißen Liste zu verwenden, bevor es war herausgerissen und in die Whitelist-Plugin geändert.
+
+ [2]: https://www.npmjs.com/package/cordova-plugin-battery-status
+ [3]: https://www.npmjs.com/package/cordova-plugin-camera
+ [4]: https://www.npmjs.com/package/cordova-plugin-console
+ [5]: https://www.npmjs.com/package/cordova-plugin-contacts
+ [6]: https://www.npmjs.com/package/cordova-plugin-device
+ [7]: https://www.npmjs.com/package/cordova-plugin-device-motion
+ [8]: https://www.npmjs.com/package/cordova-plugin-device-orientation
+ [9]: https://www.npmjs.com/package/cordova-plugin-dialogs
+ [10]: https://www.npmjs.com/package/cordova-plugin-file
+ [11]: https://www.npmjs.com/package/cordova-plugin-file-transfer
+ [12]: https://www.npmjs.com/package/cordova-plugin-geolocation
+ [13]: https://www.npmjs.com/package/cordova-plugin-globalization
+ [14]: https://www.npmjs.com/package/cordova-plugin-inappbrowser
+ [15]: https://www.npmjs.com/package/cordova-plugin-media
+ [16]: https://www.npmjs.com/package/cordova-plugin-media-capture
+ [17]: https://www.npmjs.com/package/cordova-plugin-network-information
+ [18]: https://www.npmjs.com/package/cordova-plugin-splashscreen
+ [19]: https://www.npmjs.com/package/cordova-plugin-vibration
+ [20]: https://www.npmjs.com/package/cordova-plugin-statusbar
+ [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
+ [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
+
+Nicht-englische Übersetzungen über diese Plugin-Docs können gefunden werden, indem Sie das Plugin Github Repos und suchen in den Ordner "Docs"

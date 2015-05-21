@@ -27,13 +27,7 @@ Le guide suivant contient quelques meilleures pratiques de sécurité que vous d
 
 *   Lire et comprendre le Guide liste blanche
 
-*   Par défaut, la liste blanche sur une application nouvellement créée permet d'accéder à tous les domaines à travers le `<access>` tag : `<access origin="*">` si vous souhaitez que les requêtes réseau évaluées en fonction de la liste blanche, il est important de changer cela et n'autorisent que les domaines auxquels vous devez accéder. Cela peut être fait en éditant le fichier de configuration de niveau application situé au : `{project}/config.xml` (projets récents) ou `{project}/www/config.xml` (anciens projets)
-
-*   Android de Whitelist sur Cordova 2.9.x est considéré comme sûr, cependant, on a découvert que si foo.com est inclus dans la liste blanche, foo.com.evil.com serait en mesure de passer le test de la liste blanche. Ce problème a été corrigé dans Cordova 3.x.
-
 *   Domaine liste blanche ne fonctionne pas sur Android API 10 et en dessous et WP8 pour iframes et XMLHttpRequest. Autrement dit, un attaquant peut charger n'importe quel domaine dans un iframe et tout script sur cette page au sein de l'iframe peut accéder directement à Cordova JavaScript objets et les objets de Java natives correspondantes. Prenez cela en considération lors de la génération d'applications pour ces plateformes. En pratique, cela signifie veiller à ce que vous ciblez un Android API supérieur à 10, et si possible ne pas utiliser un iframe pour charger le contenu externe - utilisent le plugin d'inAppBrowser ou d'autres plugins tiers.
-
-*   Sur Android, à partir de Cordova 3.6.0, il faut maintenant aux URL de la liste blanche à l'extérieur de votre application, si votre application génère des liens vers ces URL. Si votre application génère `tel:` , `geo:` , `sms:` , `intent:` ou URL similaire, ou fournit des liens vers du contenu externe qui vous attendez à ouvrir dans le navigateur de l'utilisateur, puis vous devez mettre à jour votre liste blanche. Consultez le Guide de la liste blanche pour plus de détails.
 
 ## Iframes et le mécanisme de rappel Id
 

@@ -103,7 +103,7 @@ platform add blackberry10`.
 
 3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，黑莓手機殼工具指南中所述。您需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 
@@ -299,11 +299,11 @@ platform add blackberry10`.
 
 5.  更新中的.js 檔 `cordova.2.2.0/javascript/` 目錄。
 
-6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.2.0/` 到目錄`cordova.2.3.0/`.
+6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.2.0/` 目錄到`cordova.2.3.0/`.
 
-7.  類型 `ant blackberry build` 或 `ant playbook build` 來更新 `www` 目錄與更新科爾多瓦。
+7.  類型 `ant blackberry build` 或 `ant playbook build` 來更新 `www` 目錄與更新的科爾多瓦。
 
-8.  打開 `www` 目錄和更新您的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
+8.  打開 `www` 目錄並更新你的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
 
 ## 從 2.1.0 升級到 2.2.0
 
@@ -317,10 +317,10 @@ platform add blackberry10`.
 
 4.  複製新 `cordova-2.2.0.js` 到您的專案。
     
-    *   如果行動手冊，然後更新.js 檔在 `playbook/` 目錄。
+    *   如果劇本，然後更新的.js 檔中 `playbook/` 目錄。
     *   如果黑莓 10，然後更新中的.js 檔 `qnx/` 目錄。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
+5.  更新你的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
 
 更新 （即，更新使用 ant 工具） 的示例目錄：
 

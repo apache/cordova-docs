@@ -17,7 +17,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ten poradnik pokazuje jak zmodyfikować Android projektów do uaktualnienia ze starszych wersji Cordova. Większość tych instrukcji ma zastosowanie do projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.
 
-## Projekty modernizacji 3.6.0 4.0.0
+## Uaktualnienie do 4.0.0
+
+Istnieją konkretne kroki uaktualnienia wymagane do skorzystania z istotnych zmian w 4.0.0. Po pierwsze wspólne kroki uaktualnienia są potrzebne jak poniżej.
+
+Projekty-CLI, uruchom:
+
+        bin/update path/to/project
+    
+
+Dla projektów CLI:
+
+1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+
+2.  Uruchom `cordova platform update android` w istniejących projektach.
+
+### Uaktualnianie biała
+
+Wszystkie funkcje Biała jest teraz realizowane za pośrednictwem wtyczki. Bez wtyczki Twoja aplikacja jest już chronione przez Biała po uaktualnieniu do 4.0.0. Cordova ma dwie wtyczki białej listy, które zapewniają różne poziomy ochrony.
+
+1.  Plugin `cordova-plugin-whitelist` *(zalecane)*
+    
+    *   Ten plugin jest wysoce zalecane, ponieważ jest bardziej bezpieczne i konfigurowalne niż biała w poprzednich wersjach
+    *   Zobacz [cordova-plugin-whitelist][1] szczegóły na zmiany konfiguracja wymagane
+    *   Run: `cordova plugin add cordova-plugin-crosswalk-webview`
+
+2.  Plugin `cordova-plugin-legacy-whitelist`
+    
+    *   Plugin daje takie samo zachowanie białej jak poprzednie wersje. Zobacz [cordova-plugin-legacy-whitelist][2]
+    *   Wymagane są żadne zmiany konfiguracji, ale zapewnia mniejszą ochronę niż zalecane plugin
+    *   Run: `cordova plugin add cordova-plugin-legacy-whitelist`
+
+ [1]: https://github.com/apache/cordova-plugin-whitelist
+ [2]: https://github.com/apache/cordova-plugin-legacy-whitelist
+
+### Za pomocą widoku sieci Web przejście dla pieszych
+
+Domyślnie aplikacja będzie nadal korzystać WebView oferowanego przez urządzenie. Czy chcesz zamiast tego użyj widoku sieci Web przejście dla pieszych, po prostu dodać plugin przejście dla pieszych:
+
+    cordova plugin add cordova-plugin-crosswalk-webview
+    
+
+Po dodaniu wtyczki, aplikacji dostanie WebView pieszych są zainstalowane i skonfigurowane poprawnie.
+
+### Aktualizacja wtyczki ekranu powitalnego
+
+Jeśli Twoja aplikacja sprawia, że korzystanie z ekranu powitalnego, że funkcjonalność została przeniesiona do pluginu. Opcje konfiguracja dla ekrany powitalne w aplikacjach są niezmienione. Krok tylko uaktualnienia, wymagane jest aby dodać plugin:
+
+    cordova plugin add cordova-plugin-splashscreen
+    
+
+## Uaktualnienie do 3.7.1 od 3.6.0
 
 Projekty-CLI, uruchom:
 
@@ -42,14 +92,14 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
-2.  Uruchom`cordova platform update android`
+2.  Run `cordova platform update android`
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
         bin/update <project_path>
     
 
-**OSTRZEŻENIE:** Na Android 4.4 - Android 4.4.3, tworząc plik wprowadzania elementu type="file" nie zostanie otwarte okno wyboru pliku. To jest regresja z chromu na Android i problem może być odtworzone w standalone Chrom przeglądarka na Androidzie (patrz http://code.google.com/p/android/issues/detail?id=62220) sugeruje workaround jest wobec używać FileTransfer i plik wtyczki dla Android 4.4. Można posłuchać na zdarzenie onClick, z typem danych type="file" a następnie pojawiają się wyboru plików interfejsu użytkownika. Aby powiązać z przesyłanie danych formularza, można użyć JavaScript aby dołączyć wartości formularza do wieloczęściowego żądanie POST, który sprawia, że FileTransfer.
+**Ostrzeżenie:** Na Android 4.4 - Android 4.4.3, tworząc plik wprowadzania elementu typu="file" nie zostanie otwarte okno wyboru pliku. To jest regresja z chromu na Android i problem może być odtworzone w standalone Chrom przeglądarka na Androidzie (patrz http://code.google.com/p/android/issues/detail?id=62220) sugeruje workaround jest wobec używać FileTransfer i plik wtyczki dla Android 4.4. Można posłuchać na zdarzenie onClick, z typem danych type = "file" a następnie pojawiają się wyboru plików interfejsu użytkownika. Aby powiązać z przesyłanie danych formularza, można użyć JavaScript aby dołączyć wartości formularza do wieloczęściowego żądanie POST, który sprawia, że FileTransfer.
 
 ## Uaktualnienie do 3.1.0 od 3.0.0
 
@@ -57,7 +107,7 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
-2.  Uruchom`cordova platform update android`
+2.  Run `cordova platform update android`
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
@@ -68,11 +118,11 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 1.  Tworzenie nowego projektu Apache Cordova 3.0.0 za pomocą CLI, cordova, zgodnie z opisem w interfejs wiersza poleceń.
 
-2.  Dodać platform cordova projektu, na przykład: `cordova platform add android`.
+2.  Dodać platform cordova projektu, na przykład: `dodać cordova platformy android`.
 
 3.  Skopiuj zawartość katalogu `www` projektu do katalogu `www` w katalogu głównym projektu cordova, który właśnie utworzyłeś.
 
-4.  Skopiuj rodzimych aktywów od starego projektu do odpowiednich katalogów na `platforms/android`: jest to katalog, gdzie istnieje projektu cordova-android rodzimych.
+4.  Skopiuj rodzimych aktywów od starego projektu do odpowiednich katalogów na `platformach lub android`: jest to katalog, gdzie istnieje projektu cordova-android rodzimych.
 
 5.  Narzędzia CLI cordova instalowac pluginy, czego potrzebujesz. Należy zauważyć, że CLI obsługuje wszystkie podstawowe API jako wtyczki, więc mogą one potrzebować do dodania. Tylko 3.0.0 wtyczki są kompatybilne z CLI.
 
@@ -86,7 +136,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 4.  Kopiujemy jakieś pluginy, instalowanego z podkatalogów `src` do nowego projektu.
 
-5.  Upewnij się, że wszelki uaktualnić przestarzałe odniesienia `<plugin>` z pliku `config.xml` starych nowych specyfikacji `<feature>`.
+5.  Upewnij się, że wszelki uaktualnić przestarzałe odniesienia `< plugin >` z pliku `config.xml` starych nowych specyfikacji `<feature>` .
 
 6.  Zaktualizować wszelkie odniesienia do pakietu `org.apache.cordova.api` do `org.apache.cordova`.
     
@@ -94,13 +144,13 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 ## Aktualizacja z wersji 2.8.0 do wersji 2.9.0
 
-1.  Uruchom `bin/update <project_path>`.
+1.  Run `bin/update <project_path>`.
 
 ## Aktualizacja z wersji 2.7.0 do wersji 2.8.0
 
-1.  Usunąć `cordova-2.7.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.7.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.8.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.8.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -108,7 +158,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 1.  Skopiuj nowe `cordova.js` do projektu.
 
-2.  Uaktualnić twój HTML używać nowy plik `cordova.js`.
+2.  Uaktualnić twój HTML używać nowy plik `cordova.js` .
 
 3.  Skopiuj plik `res/xml/config.xml` do `framework/res/xml/config.xml`.
 
@@ -118,15 +168,15 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 ## Uaktualnić do 2.7.0 2.6.0
 
-1.  Usunąć `cordova-2.6.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.6.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.7.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.7.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowe `cordova-2.7.0.js` do projektu.
 
-5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-2.7.0.js`.
+5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-2.7.0.js` .
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -136,9 +186,9 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 ## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
 
-1.  Usunąć `cordova-2.5.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.5.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.6.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.6.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -156,9 +206,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnić do 2.5.0 2.4.0
 
-1.  Usunąć `cordova-2.4.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.4.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.5.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.5.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -174,9 +224,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnić do 2.4.0 2.3.0
 
-1.  Usunąć `cordova-2.3.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.3.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.4.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.4.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -190,9 +240,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnić do 2.3.0 2.2.0
 
-1.  Usunąć `cordova-2.2.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.2.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.3.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.3.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -206,9 +256,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnienie do 2.2.0 z 2.1.0
 
-1.  Usunąć `cordova-2.1.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.1.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.2.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.2.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -222,9 +272,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnienie do 2.1.0 z 2.0.0
 
-1.  Usunąć `cordova-2.0.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-2.0.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.1.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.1.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -238,9 +288,9 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 ## Uaktualnić do 2.0.0 1.9.0
 
-1.  Usunąć `cordova-1.9.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-1.9.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-2.0.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-2.0.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -254,15 +304,15 @@ W 2.0.0 wersji pliku `config.xml` łączy i zastępuje `cordova.xml` i `plugins.
 
 ## Uaktualnić do 1.9.0 1.8.1
 
-1.  Usuń `cordova-1.8.0.jar` z projektu `libs` katalogu.
+1.  Usunąć `cordova-1.8.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.9.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.9.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowe `cordova-1.9.0.js` do projektu.
 
-5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.9.0.js`.
+5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.9.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
@@ -270,23 +320,23 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnienie do 1.8.0 z 1.8.0
 
-1.  Usunąć `cordova-1.8.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-1.8.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.8.1.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.8.1.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowe `cordova-1.8.1.js` do projektu.
 
-5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.8.1.js`.
+5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.8.1.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
 ## Uaktualnienie do 1.8.0 z 1.7.0
 
-1.  Usuń `cordova-1.7.0.jar` z projektu `libs` katalogu.
+1.  Usunąć `cordova-1.7.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodaj `cordova-1.8.0.jar` do projektu `libs` katalogu.
+2.  Dodać `cordova-1.8.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -298,9 +348,9 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnienie do 1.8.0 z 1.7.0
 
-1.  Usuń `cordova-1.7.0.jar` z projektu `libs` katalogu.
+1.  Usunąć `cordova-1.7.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodaj `cordova-1.8.0.jar` do projektu `libs` katalogu.
+2.  Dodać `cordova-1.8.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -312,9 +362,9 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnić do 1.7.0 1.6.1
 
-1.  Usunąć `cordova-1.6.1.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-1.6.1.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.7.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.7.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -324,9 +374,9 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnić do 1.6.1 1.6.0
 
-1.  Usunąć `cordova-1.6.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-1.6.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.6.1.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.6.1.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
@@ -336,47 +386,47 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnić do 1.6.0 1.5.0
 
-1.  Usunąć `cordova-1.5.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `cordova-1.5.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.6.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.6.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowe `cordova-1.6.0.js` do projektu.
 
-5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.6.0.js`.
+5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.6.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
-7.  Zastąpić `res/xml/phonegap.xml` z `res/xml/cordova.xml` na mecz`framework/res/xml/cordova.xml`.
+7.  Zastąpić `res/xml/phonegap.xml` z `res/xml/cordova.xml` do `framework/res/xml/cordova.xml`.
 
 ## Uaktualnienie do 1.5.0 od 1.4.0
 
-1.  Usunąć `phonegap-1.4.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `telefon 1.4.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `cordova-1.5.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `cordova-1.5.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowe `cordova-1.5.0.js` do projektu.
 
-5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.5.0.js`.
+5.  Uaktualnić twój HTML za pomocą nowego pliku `cordova-1.5.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
-7.  Zastąpić `res/xml/phonegap.xml` z `res/xml/cordova.xml` na mecz`framework/res/xml/cordova.xml`.
+7.  Zastąpić `res/xml/phonegap.xml` z `res/xml/cordova.xml` do `framework/res/xml/cordova.xml`.
 
 ## Uaktualnić do 1.4.0 1.3.0
 
-1.  Usunąć `phonegap-1.3.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `telefon 1.3.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `phonegap-1.4.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `phonegap-1.4.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowy `phonegap-1.4.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.4.0.js`.
+5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.4.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
@@ -384,15 +434,15 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnienie do wersji 1.3.0 z 1.2.0
 
-1.  Usunąć `phonegap-1.2.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `phonegap-1.2.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `phonegap-1.3.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `phonegap-1.3.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowy `phonegap-1.3.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `phonegap-1.2.0.js` pliku.
+5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.2.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
@@ -400,15 +450,15 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnienie do 1.2.0 z 1.1.0
 
-1.  Usunąć `phonegap-1.1.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `phonegap-1.1.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `phonegap-1.2.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `phonegap-1.2.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowy `phonegap-1.2.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `phonegap-1.2.0.js` pliku.
+5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.2.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
@@ -416,28 +466,28 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 ## Uaktualnić do 1.1.0 1.0.0
 
-1.  Usunąć `phonegap-1.0.0.jar` z projektu w katalogu `libs`.
+1.  Usunąć `phonegap-1.0.0.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `phonegap-1.1.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `phonegap-1.1.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowy `phonegap-1.1.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.1.0.js`.
+5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-.1.0.js` .
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
 ## Uaktualnić do 1.0.0 0.9.6
 
-1.  Usunąć `phonegap-0.9.6.jar` z projektu w katalogu `libs`.
+1.  Usunąć `phonegap-0.9.6.jar` z projektu w katalogu `libs` .
 
-2.  Dodać `phonegap-1.0.0.jar` do projektu w katalogu `libs`.
+2.  Dodać `phonegap-1.0.0.jar` do projektu w katalogu `libs` .
 
 3.  Jeśli możesz użyć Eclipse, proszę odświeżyć projektu Eclipse i czynić pewien czysty.
 
 4.  Skopiuj nowy `phonegap-1.0.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.0.0.js`.
+5.  Uaktualnić twój HTML, aby użyć pliku nowy `phonegap-1.0.0.js` .
 
 6.  Dodaj `res/xml/plugins.xml` do `framework/res/xml/plugins.xml`.

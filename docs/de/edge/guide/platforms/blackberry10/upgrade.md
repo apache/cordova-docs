@@ -103,7 +103,7 @@ Für BlackBerryOS/Textbuch:
 
 3.  Navigieren Sie zum Verzeichnis, in dem Sie die heruntergeladene Quelle oben, ein Unix wie Terminal setzen: Terminal.app, Bash, Cygwin.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in BlackBerry Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
