@@ -188,17 +188,27 @@ all of them:
   preference entry from the platform's manifest/configuration file
   allowing the platform to fallback to its default behavior.
 
-'default' allows both portrait & landscape mode - only after implementing the callback. I could perhaps re-word this as follows:
+  For iOS, to specify both portrait & landscape mode you would use the platform specific value `all`:
 
-For iOS, orientation can be programmatically controlled by defining a javascript callback on window:
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
 
+  For iOS, orientation can be programmatically controlled by defining a javascript callback on `window`:
+    <pre>
     /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
     function shouldRotateToOrientation(degrees) {
-         return true;
+      return true;
     }
+    </pre>
 
 ## The _feature_ Element
 
