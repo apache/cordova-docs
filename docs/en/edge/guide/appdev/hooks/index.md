@@ -36,6 +36,7 @@ The following hook types are supported:
 
     after_build
     after_compile
+    after_clean
     after_docs
     after_emulate
     after_platform_add
@@ -50,6 +51,7 @@ The following hook types are supported:
     after_run
     after_serve
     before_build
+    before_clean
     before_compile
     before_docs
     before_emulate
