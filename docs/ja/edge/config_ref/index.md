@@ -143,23 +143,33 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
     アンドロイド, iOS の, WP8、アマゾン火 OS や Firefox の OS に適用されます。
     
     **注**: `既定` 値は、コルドバはその既定の動作にフォールバックするプラットフォームをできるようにプラットフォームのマニフェスト/構成ファイルから向き設定エントリを削除します。
-
-'default' は、コールバックの実装後にのみ肖像画 ＆ ランドス ケープ モード - ことができます。私は可能性がおそらく再ワードこのとおり：
-
-IOS の方向ウィンドウで javascript コールバックを定義することによってプログラムで制御できます。
-
-    /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
-    function shouldRotateToOrientation(degrees) {
-         return true;
-    }
     
+    IOS 用, ランドス ケープ モード & 両方の肖像画を指定するを使用しますプラットフォーム特定の値`すべて`。
+    
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
+        
+    
+    IOS 用, 向きが`ウィンドウ`で javascript コールバックを定義することによってプログラムで制御できます。
+
+<pre>/** 
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
+    function shouldRotateToOrientation(degrees) {
+      return true;
+    }
+    </pre>
 
 ## *機能*要素
 
-CLI を使用してアプリケーションを構築する場合は`プラグイン`コマンドを使用するデバイス Api を有効にします。 これは、 `< 機能 >`要素をワークフローに適用されませんので、トップレベルの`config.xml`ファイルを変更しません。 SDK およびプラットフォーム固有の`config.xml`ファイルをソースとして使用で直接作業している場合は`< 機能 >`タグを使用するデバイス レベルの Api と外部プラグインを有効にします。 彼らはしばしばプラットフォーム固有の`config.xml`ファイルでカスタム値で表示されます。 たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
+CLI を使用してアプリケーションを構築する場合は、デバイス Api を有効にする`プラグイン`コマンドを使用します。 これは`< feature >`要素は、ワークフローに適用されないのでトップレベルの`config.xml`ファイルを変更されません。 直接で、SDK とソースとしてプラットフォーム固有の`config.xml`ファイルを使用して作業する場合は、デバイス レベルの Api と外部プラグインを有効にする`< 機能 >`タグを使用します。 彼らはしばしばプラットフォーム固有の`config.xml`ファイルにカスタム値で表示されます。 たとえば、ここでは Android プロジェクトのデバイス API を指定する方法です。
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -173,12 +183,19 @@ CLI を使用してアプリケーションを構築する場合は`プラグイ
         </feature>
     
 
-各機能を指定する方法の詳細については API リファレンスを参照してください。プラグインの詳細については、プラグイン開発ガイドを参照してください。
+各機能を指定する方法の詳細については、API リファレンスを参照してください。プラグインについてはプラグイン開発ガイドを参照してください。
 
 ## *プラットフォーム*要素
 
-CLI を使用して、アプリケーションを構築する、環境設定や、特定のプラットフォームに固有の他の要素を指定する必要があります。 `< プラットフォーム >`要素を使用して構成する必要があります 1 つのプラットフォーム固有の`config.xml`ファイルにのみ表示されますを指定します。 たとえば、ここではその唯一のアンドロイドがフルスクリーンの好みを使用するを指定する方法です。
+CLI を使用して、アプリケーションを構築するとき、好みや特定のプラットフォームに固有の他の要素を指定する必要が時々 です。 `< atform >`要素を使用すると、単一のプラットフォーム固有`config.xml`ファイルでのみ表示される構成を指定します。 たとえば、ここでは唯一 android はフルスクリーン設定を使用する必要がありますを指定する方法です。
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+    
+
+## *hook*の要素
+
+特定のアクションが発生したときにコルドバで呼び出されるカスタム スクリプトを表します (たとえば、プラグインを追加またはプラットフォーム準備ロジックが呼び出されます)。 これは、コルドバの既定の機能を拡張する必要が便利です。 詳細についてはフックのガイドを参照してください。
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

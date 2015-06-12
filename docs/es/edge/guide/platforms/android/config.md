@@ -77,3 +77,12 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         
 
 *   `DefaultVolumeStream`(string, el valor predeterminado de `default` , agregado en Córdoba-android 3.7.0): establece que volumen el volumen de hardware vinculan los botones. Por defecto es "llamar" por "medios" para tablets y teléfonos. Ajuste este parámetro a "medios" para los botones de volumen de su aplicación siempre cambiar el volumen de los medios de comunicación. Tenga en cuenta que al usar el plugin de los medios de comunicación de Cordova, los botones de volumen cambiará dinámicamente para controlar el volumen de los medios de comunicación cuando los objetos a los medios de comunicación están activos.
+
+*   `OverrideUserAgent` (string, no establece de forma predeterminada): si se establece, el valor reemplazará el viejo UserAgent de webview. Es útil identificar la petición del navegador de la aplicación cuando solicita páginas remotas. Uso con precaución, esto puede causa compitiable problema con servidores web. Para la mayoría de los casos, utilice AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (string, no establece de forma predeterminada): Si establece, el valor agregará al final del viejo UserAgent de webview. Cuando se utiliza con OverrideUserAgent, este valor se omitirá.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

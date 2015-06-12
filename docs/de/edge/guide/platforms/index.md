@@ -72,6 +72,7 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 *   Anleitung zur Windows Platform
 *   Windows Plugins
+*   Windows-Verpackungen
 *   Aktualisieren von Windows 8
 
 ## Tizen

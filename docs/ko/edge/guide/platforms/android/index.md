@@ -198,7 +198,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 `코르 도우 바` CLI 유틸리티를 사용 하 여 명령줄에서 에뮬레이터 또는 장치에 응용 프로그램을 배포할 수 있습니다.
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

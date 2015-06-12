@@ -179,7 +179,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accelerometro</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">Accelerometro</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -212,7 +212,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-battery-status">BatteryStatus</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -246,7 +246,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Fotocamera</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-camera">Fotocamera</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -279,7 +279,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Cattura</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">Cattura</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -312,7 +312,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">Bussola</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">Bussola</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -346,7 +346,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">Connessione</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-network-information">Connessione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -379,7 +379,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">Contatti</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-contacts">Contatti</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -413,7 +413,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">Dispositivo</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device">Dispositivo</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -479,7 +479,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">File</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file">File</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -512,7 +512,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Trasferimento di file</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">Trasferimento di file</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -548,7 +548,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocalizzazione</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-geolocation">Geolocalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -581,7 +581,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Globalizzazione</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-globalization">Globalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -614,7 +614,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -648,7 +648,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Media</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media">Media</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -681,7 +681,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Notifica</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-dialogs">Notifica</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -714,7 +714,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Splashscreen</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">Splashscreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -747,7 +747,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Barra di stato</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">Barra di stato</a>
         </th>
         
         <td data-col="amazon-fireos" class="n">
@@ -816,7 +816,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibrazione</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-vibration">Vibrazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

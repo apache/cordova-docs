@@ -198,7 +198,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 `科爾多瓦`CLI 實用程式可用於應用程式部署到模擬器或設備從命令列：
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

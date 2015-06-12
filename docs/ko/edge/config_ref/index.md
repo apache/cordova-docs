@@ -143,30 +143,40 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
     안 드 로이드, iOS, WP8, 아마존 화재 OS와 Firefox 운영 체제에 적용 됩니다.
     
     **참고**: `default` 값은 코르도바 플랫폼의 매니페스트/구성 파일의 기본 동작을 대체 하는 플랫폼을 수 있도록에서 방향을 기본 설정 항목을 스트립 것입니다.
-
-'기본'만 콜백을 구현 후 세로 및 가로 모드를-수 있습니다. 내가 수 아마도 다시 단어이 다음과 같이:
-
-IOS에 대 한 방향은 프로그래밍 방식으로 창에 자바 스크립트 콜백을 정의 하 여 제어할 수 있습니다.
-
-    /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
-    function shouldRotateToOrientation(degrees) {
-         return true;
-    }
     
+    IOS, 용 두 초상화를 지정 & 프리 모드 사용는 플랫폼 특정 값 `모든`.
+    
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
+        
+    
+    IOS에 대 한 방향은 프로그래밍 방식으로 `창`에 자바 스크립트 콜백을 정의 하 여 제어할 수 있습니다.
+
+<pre>/** 
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
+    function shouldRotateToOrientation(degrees) {
+      return true;
+    }
+    </pre>
 
 ## *기능* 요소
 
-CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 사용 하려면 `플러그인` 명령을 사용 합니다. 이 `< 기능 >` 요소 작업 흐름에 적용 되지 않습니다 그래서 최상위 `config.xml` 파일을 수정 하지 않습니다. SDK 및 플랫폼별 `config.xml` 파일을 사용 하 여 소스에서 직접 작업 하는 경우 장치 수준 Api와 외부 플러그인을 사용 하려면 `< 기능 >` 태그를 사용 합니다. 그들은 종종 플랫폼별 `config.xml` 파일에서 사용자 지정 값으로 나타납니다. 예를 들어, 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.
+CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 설정 하려면 `플러그인` 명령을 사용 합니다. 이 `< 기능 >` 요소 워크플로에 적용 되지 않습니다 그래서 최상위 `config.xml` 파일을 수정 하지 않습니다. SDK 및 플랫폼 특정 `config.xml` 파일을 사용 하 여 원본으로에서 직접 작업 하는 경우 장치 수준 Api와 외부 플러그인을 사용 하려면 `< 기능 >` 태그를 사용 합니다. 그들은 종종 플랫폼 특정 `config.xml` 파일에서 사용자 지정 값으로 나타납니다. 예를 들어 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-여기에 iOS 프로젝트에 대 한 요소가 표시 되는 방식을입니다.
+여기에 iOS 프로젝트는 요소가 표시 되는 방법입니다.
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
@@ -177,8 +187,15 @@ CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 사�
 
 ## *플랫폼* 요소
 
-CLI를 사용 하 여 응용 프로그램 구축을 그것이 때로는 환경 설정 또는 특정 플랫폼 특정 다른 요소를 지정 하려면 필요 합니다. `< 플랫폼 >` 요소를 사용 하 여 단일 플랫폼 특정 `config.xml` 파일에만 표시 해야 하는 구성을 지정 합니다. 예를 들어, 여기에 그 유일한 안 드 로이드 전체 화면 기본 설정을 사용 하도록 지정 하는 방법이입니다.
+CLI를 사용 하 여 응용 프로그램을 구축, 그것은 때로는 기본 설정 또는 다른 요소는 특정 플랫폼에 지정 하는 데 필요한입니다. `< 플랫폼 >` 요소를 사용 하 여 단일 플랫폼 특정 `config.xml` 파일에만 표시 해야 하는 구성을 지정 하려면. 예를 들어 여기에 유일한 안 드 로이드 전체 화면 기본 설정에 사용 하도록 지정 하는 방법이입니다.
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+    
+
+## *hook* 요소
+
+특정 동작이 발생 하면 코르도바에 의해 호출 됩니다 사용자 지정 스크립트를 나타냅니다 (예를 들어 후 플러그인 추가 또는 논리를 준비 하는 플랫폼 호출 됩니다). 코르도바의 기본 기능을 확장 해야 할 때 유용 합니다. 자세한 내용은 후크 가이드를 참조 하십시오.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

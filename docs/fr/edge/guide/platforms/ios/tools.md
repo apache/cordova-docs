@@ -45,12 +45,44 @@ Exécutez le `create` commande, en spécifiant le chemin d'accès existant au pr
         $ /path/to/my_new_project/cordova/run--dispositif
     
 
-## Libérant
+## Signature de l'App
 
-        $ /path/to/my_new_project/cordova/build--communiqué
+Vous pouvez apprendre plus sur la signature, distribuant des applications iOS, création d'un certificat et le provisionnement profil sur l' [iOS Developer Library][2].
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+Pour signer l'application à Cordoue, vous avez besoin de ce qui suit: * Code d'identité de signature (`--codeSignIdentity`): [à l'aide de XCode][3] , vous pouvez créer un nouveau iOS signant l'identité et l'ajouter à votre trousseau. Le type de l'identité - typiquement de distribution ou de développement, de la signature de code doit être spécifié ici.
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   Provisioning profil (`--provisioningProfile`): [l'utilisation du centre de membre Apple][4] vous pouvez créer un profil de configuration. Télécharger le profil de configuration sur votre ordinateur et lancez-le dans XCode pour l'enregistrer. Elle est copiée ici sur votre Mac : profils de ~/Library/MobileDevice/Provisioning\ /. Ouvrir dans un éditeur de texte, vous pouvez trouver l'UUID qui doit être spécifiées ici.
+
+*   Signature règles (`--codeSignResourceRules`) (en option) de la ressource de code : permet de spécifier des règles personnalisées de ressource signature.
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+Ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `buile` ou `run` des scripts :
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(modifier le `cordova/build-release.xcconfig` votre identité de signature de Code dans le fichier)
+Alternativement, vous pouvez spécifier les dans un fichier (build.json) de configuration de build à l'aide (`--buildConfig`) argument. Voici un exemple de fichier de configuration de génération :
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+Il y a aussi des soutien à mélanger et assortir les arguments de ligne de commande et les paramètres dans le fichier build.json. Les valeurs de la ligne de commande arguments obtiendrez priorité.
 
 ## Exploitation forestière
 

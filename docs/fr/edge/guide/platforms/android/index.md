@@ -198,7 +198,7 @@ La commande `build` nettoie les fichiers projet et régénère l'app. Voici la s
 
 Vous pouvez utiliser l'utilitaire CLI de `cordova` pour déployer l'application sur l'émulateur ou le dispositif de la ligne de commande :
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

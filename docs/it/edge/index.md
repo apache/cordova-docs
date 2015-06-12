@@ -98,31 +98,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Guida di whitelist
+        Piattaforme e gestione plugin versione
       </h2>
       
-      <span>Concedere un'accesso di applicazione a risorse esterne.</span>
+      <span>Salvare e ripristinare i progetti CLI uno stato noto senza fastidio.</span>
     </li>
     <li>
       <h2>
-        Archiviazione
+        Guida di whitelist
       </h2>
       
-      <span>Una panoramica delle opzioni di archiviazione nativo.</span>
+      <span>Concedere l'accesso dell'applicazione alle risorse esterne.</span>
+    </li>
+    <li>
+      <h2>
+        Deposito
+      </h2>
+      
+      <span>Una panoramica delle opzioni di archiviazione nativa.</span>
+    </li>
+    <li>
+      <h2>
+        Guida di ganci
+      </h2>
+      
+      <span>Estendere funzionalità Cordova predefinita aggiungendo script personalizzati.</span>
     </li>
     <li>
       <h2>
         Prossimi passi
       </h2>
       
-      <span>Uno sguardo ad argomenti che incontrano i nuovi sviluppatori di Cordova.</span>
+      <span>Un'occhiata a argomenti che incontreranno nuovi sviluppatori di Cordova.</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">Parola chiave indice</a>
+        <a href="_index.html">Indice delle parole chiave</a>
       </h2>
       
-      <span>Indice completo della documentazione.</span>
+      <span>Indice completo della documentazione di.</span>
     </li>
   </ul>
   

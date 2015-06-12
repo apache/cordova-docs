@@ -72,6 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Windows 平臺指南
 *   Windows 外掛程式
+*   Windows 包裝
 *   升級 Windows 8
 
 ## Tizen

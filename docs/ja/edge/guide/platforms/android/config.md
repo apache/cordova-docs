@@ -77,3 +77,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `DefaultVolumeStream`(文字列、既定値は `default` 、コルドバ アンドロイド 3.7.0 に追加)： ボリューム、ハードウェアのボリューム ボタンにリンクを設定します。 既定ではこれは「電話」携帯電話とタブレットのための「メディア」です。 常に音量を変更するメディア アプリの音量ボタンを「メディア」に設定します。 コルドバのメディア プラグインを使用して、ボリューム ボタンは任意のメディア オブジェクトがアクティブな場合にメディア ボリュームを制御する変更は動的に注意してください。
+
+*   `OverrideUserAgent`(文字列、既定では設定されていない): 設定すると、値は webview の古い UserAgent を交換します。 リモート ページを要求するときにアプリ ・ ブラウザーから要求を識別すると便利です。 注意して使用、これは web サーバーと compitiable 問題を原因します。 ほとんどの場合、AppendUserAgent を代わりに使用します。
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent`(文字列、既定では設定されていない): 設定、webview の古いユーザ エージェントの末尾に値が追加されます。 OverrideUserAgent を使用する場合は、この値が無視されます。
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

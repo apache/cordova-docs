@@ -36,17 +36,20 @@ Vous avez besoin de ce qui suit :
 
 *   Le [Windows Phone SDK][3].
 
+*   Afin de déployer via la ligne de commande avec le kit de développement Windows Phone 8.0, [Visual Studio 2012 mise à jour 2][4] doit être installé.
+
  [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
- [3]: https://dev.windowsphone.com/en-us/downloadsdk
+ [3]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
+ [4]: https://support.microsoft.com/en-us/kb/2797912
 
 Pour développer des applications de Cordova pour les appareils Windows Phone, vous pouvez utiliser un PC fonctionnant sous Windows, mais vous pouvez également développer sur un Mac, un environnement de machine virtuelle en cours d'exécution ou à l'aide de Camp d'entraînement à double amorçage une partition Windows. Consulter les ressources à mettre en place l'environnement de développement requis Windows sur un Mac :
 
-*   **VMWare Fusion**: pour installer la machine virtuelle de Windows 8, suivez les instructions fournies par le [Microsoft Developer Network][4], puis voir la configuration de VMWare Fusion pour plus d'informations sur la préparation de l'environnement virtuel pour exécuter l'émulateur fourni avec le SDK.
+*   **VMWare Fusion**: pour installer la machine virtuelle de Windows 8, suivez les instructions fournies par le [Microsoft Developer Network][5], puis voir la configuration de VMWare Fusion pour plus d'informations sur la préparation de l'environnement virtuel pour exécuter l'émulateur fourni avec le SDK.
 
-*   **Parallels Desktop**: pour installer la machine virtuelle de Windows 8, suivez les instructions fournies par le [Microsoft Developer Network][5], puis voir la configuration de Parallels Desktop pour plus d'informations sur la préparation de l'environnement virtuel pour exécuter l'émulateur fourni avec le SDK.
+*   **Parallels Desktop**: pour installer la machine virtuelle de Windows 8, suivez les instructions fournies par le [Microsoft Developer Network][6], puis voir la configuration de Parallels Desktop pour plus d'informations sur la préparation de l'environnement virtuel pour exécuter l'émulateur fourni avec le SDK.
 
- [4]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
- [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
 
 <!--
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
@@ -56,14 +59,14 @@ Pour développer des applications de Cordova pour les appareils Windows Phone, v
   2DO: virtualBox doesn't work yet; any extra config info?
 -->
 
-*   **Boot Camp**: pour configurer la partition de Windows 8, suivez les instructions d'installation fournies par le [Microsoft Developer Network][6].
+*   **Boot Camp**: pour configurer la partition de Windows 8, suivez les instructions d'installation fournies par le [Microsoft Developer Network][7].
 
- [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
+ [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-Si vous développez sur un PC, son processeur doit prendre en charge la virtualisation (*VT-x* sur Intel) et le [Deuxième niveau adresse traduction (lamelle)][7]. Consulter la [liste d'Intel de processeurs avec][8]. Virtualisation est généralement désactivée par défaut, vous devez l'activer dans les paramètres du BIOS. Le PC doit avoir au moins 6,5 Go d'espace libre sur le disque dur et 4 Go de RAM.
+Si vous développez sur un PC, son processeur doit prendre en charge la virtualisation (*VT-x* sur Intel) et le [Deuxième niveau adresse traduction (lamelle)][8]. Consulter la [liste d'Intel de processeurs avec][9]. Virtualisation est généralement désactivée par défaut, vous devez l'activer dans les paramètres du BIOS. Le PC doit avoir au moins 6,5 Go d'espace libre sur le disque dur et 4 Go de RAM.
 
- [7]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
- [8]: http://ark.intel.com/Products/VirtualizationTechnology
+ [8]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
+ [9]: http://ark.intel.com/Products/VirtualizationTechnology
 
 ## À l'aide d'outils de Cordova Shell
 
@@ -71,19 +74,21 @@ Si vous souhaitez utiliser les outils de shell Windows Phone-centrée de Cordova
 
 *   Y accéder localement à partir de code de projet généré par la CLI. Ils sont disponibles dans le `platforms/wp8/cordova` répertoire après avoir ajouté la `wp8` plateforme tel que décrit ci-dessous.
 
-*   Téléchargez-les sur une distribution séparée à [cordova.apache.org][9]. La distribution de Cordova contient des archives distincts pour chaque plate-forme. N'oubliez pas d'élargir l'archive appropriée, `cordova-wp8\wp8` dans ce cas, dans un répertoire vide. Les utilitaires lot pertinents sont disponibles dans le niveau supérieur `bin` répertoire. (Consultez le fichier **README** si nécessaire pour des directions plus détaillées).
+*   Téléchargez-les sur une distribution séparée à [cordova.apache.org][10]. La distribution de Cordova contient des archives distincts pour chaque plate-forme. N'oubliez pas d'élargir l'archive appropriée, `cordova-wp8\wp8` dans ce cas, dans un répertoire vide. Les utilitaires lot pertinents sont disponibles dans le niveau supérieur `bin` répertoire. (Consultez le fichier **README** si nécessaire pour des directions plus détaillées).
 
- [9]: http://cordova.apache.org
+ [10]: http://cordova.apache.org
 
 Ces outils de coquille permettent de créer, construire et exécuter des applications Windows Phone. Pour plus d'informations sur l'interface de ligne de commande supplémentaire qui active les fonctionnalités de plugin sur toutes les plateformes, voir Plugman à l'aide à gérer les Plugins. Voir Application Plugins pour des conseils sur la façon de développer des plugins et Windows Phone 7 Plugins pour plus d'informations spécifiques à la plate-forme Windows Phone.
 
 ## Installer le SDK
 
-Installez la dernière version du SDK Windows Phone de la zone de **téléchargements** de [dev.windowsphone.com][3]. Vous pouvez également installer les packages de mise à jour plus récentes émulateur.
+Installez la dernière version du SDK Windows Phone de la zone de **téléchargements** de [dev.windowsphone.com][11]. Vous pouvez également installer les packages de mise à jour plus récentes émulateur.
 
-![][10]
+ [11]: https://dev.windowsphone.com/en-us/downloadsdk
 
- [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
+![][12]
+
+ [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Créez un nouveau projet
 
@@ -141,27 +146,27 @@ Par défaut, le `run` script appelle le drapeau de l'émulateur et accepte des d
 
 L'émulateur lance un élément image avec l'application installée. Depuis l'écran d'accueil, accédez au panneau apps pour lancer l'application **HelloWorld** . Cela montre l'application lance avec son écran de démarrage, suivi par son interface principale :
 
-![][11]
+![][13]
 
- [11]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: img/guide/platforms/wp8/wp8_emulator.png
 
 Commandes de base de l'émulateur sur le haut à droite de l'écran de l'appareil permettent de passer d'une orientation portrait et paysage. Le bouton **>** s'ouvre plus de contrôles qui vous permettent de tester des orientations plus complexes et les gestes :
 
-![][12]
+![][14]
 
- [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Ces commandes avancées vous permettent également de modifier l'emplacement de l'appareil ou pour simuler des séquences de mouvements :
 
-![][13]
+![][15]
 
- [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Déployer sur le périphérique
 
-Avant de tester votre application sur un périphérique, le périphérique doit être enregistré. Pour plus de détails sur comment déployer et tester sur Windows Phone 8, consultez la [documentation de Microsoft][14] . En outre, assurez-vous que le téléphone est connecté à l'ordinateur et l'écran est déverrouillé.
+Avant de tester votre application sur un périphérique, le périphérique doit être enregistré. Pour plus de détails sur comment déployer et tester sur Windows Phone 8, consultez la [documentation de Microsoft][16] . En outre, assurez-vous que le téléphone est connecté à l'ordinateur et l'écran est déverrouillé.
 
- [14]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
+ [16]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
 
 Puis exécutez la commande CLI suivante pour exécuter l'application sur le périphérique :
 
@@ -179,8 +184,8 @@ Alternativement, si vous travaillez dans Visual Studio, sélectionnez **Périph�
 
 Une fois que vous générez une application Cordova comme décrit ci-dessus, vous pouvez l'ouvrir avec le SDK. Les différents `build` commandes génère un fichier de Visual Studio Solution (*.sln*). Ouvrez le fichier pour modifier le projet dans Visual Studio. Le code source sur le web est disponible au sein du projet `www` répertoire. Ainsi que d'autres outils le SDK fournit, le contrôle au-dessous du menu vous permet de lancer l'app dans un émulateur de Windows Phone :
 
-![][15]
+![][17]
 
- [15]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: img/guide/platforms/wp8/wp8_vs.png
 
 Consultez l'Aperçu pour obtenir des conseils sur la façon d'utiliser les outils de ligne de commande de Cordova ou le SDK dans votre flux de travail. La CLI Cordova s'appuie sur le code source de multi-plateforme qui remplace régulièrement les fichiers spécifiques à la plateforme utilisées par le SDK. Si vous souhaitez travailler dans le SDK, utilisez les outils de la coquille de niveau inférieur comme alternative à la CLI.

@@ -409,29 +409,51 @@ Windows 플랫폼 `<lib-file>` 요소는 `< SDKReference >` 생성 된 Windows �
 
 에 따라 플러그인 프레임 워크 (일반적으로 운영 체제/플랫폼의 일부)를 식별 합니다.
 
-예:
+옵션의 `사용자 지정` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 boolean (따라서 아니에요 시스템 프레임 워크).
+
+### iOS를 위한 *프레임 워크*
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`Src` 특성 식별 프레임 워크는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 합니다.
+옵션의 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은 `false`.
 
-선택적 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은 `false`.
+### 안 드 로이드 *프레임 워크*
 
-옵션의 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false`입니다. ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `진정한` **src** -안 드 로이드 SDK 디렉터리에서 그렇지 않으면 응용 프로그램 프로젝트 디렉터리에서 상대 경로입니다.
+(Cordova-android@4.0.0) 현재 안 드 로이드에 *프레임 워크* 태그 받는다는 종속성을 포함 하도록 또는 번들된 라이브러리 프로젝트를 포함 하도록 사용 된다.
 
-선택적 `type` 특성을 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 Windows 용만. 사용 하 여 `custom='true'` 및 `type='projectReference'`는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법은 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
+예:
 
-옵션 `parent` 특성은 현재 안 드 로이드에만 지원 됩니다. 참조를 추가 하는 하위 프로젝트가 포함 된 디렉터리에 상대적인 경로 설정 합니다. 기본값은 `.`, 즉 응용 프로그램 프로젝트. 그것은이 예제에서 같은 하위 프로젝트 간의 참조를 추가할 수 있습니다.
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framework* 는 또한 하위 주요 프로젝트의.gradle 파일에 포함 된 사용자 지정.gradle 파일을 사용할 수 있습니다.
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Pre-android@4.0.0 (개미 기반 프로젝트)에 대 한:
+
+선택적 `type` 특성을 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 Windows 용만. 사용 하 여 `custom='true'` 및 `type='projectReference'`는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법입니다 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
+
+선택적 `parent` 를 참조 추가할 하위 프로젝트를 포함 하는 디렉터리를 상대 경로 설정 합니다. 기본값은 `.`, 즉 응용 프로그램 프로젝트. 그것은이 예제에서 같은 하위 프로젝트 간의 참조를 추가할 수 있습니다.
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
+### Windows에 대 한 *프레임 워크*
+
 Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추가 특성을 (모두 선택)을 지원 합니다.
+
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
 
 `arch` 특성 프레임 워크만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
 
@@ -449,7 +471,7 @@ Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추�
 
 ## *정보* 요소
 
-사용자에 게 제공 하는 추가 정보. 이 쉽게 자동 수 없습니다 또는 plugman의 범위는 추가 단계를 요구 하는 경우에 유용 합니다. 예:
+사용자에 게 제공 하는 추가 정보입니다. 이 추가 단계를 쉽게 자동화 될 수 없는 또는 plugman의 범위는 필요한 경우에 유용 합니다. 예:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
@@ -460,35 +482,40 @@ Windows 플랫폼 프레임 워크를 포함 해야 하는 경우 수정 3 추�
     </info>
     
 
+## *hook* 요소
+
+특정 동작이 발생 하면 코르도바에 의해 호출 됩니다 사용자 지정 스크립트를 나타냅니다 (예를 들어 후 플러그인 추가 또는 논리를 준비 하는 플랫폼 호출 됩니다). 코르도바의 기본 기능을 확장 해야 할 때 유용 합니다. 자세한 내용은 후크 가이드를 참조 하십시오.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
+    
+
 ## 변수
 
-어떤 경우에는 플러그인 구성 변경 대상 응용 프로그램에 의존 해야 합니다. 예를 들어, 안 드 로이드에서 C2DM 등록, 패키지 id가 `com.alunny.message` 애플 리 케이 션은 같은 허가 요구 것입니다.
+어떤 경우에는 플러그인 구성 변경 대상 응용 프로그램에 의존 해야 합니다. 예를 들어 안 드 로이드에서 C2DM에 등록 하는 응용 프로그램 패키지 id가 `com.alunny.message` 필요로 사용 권한 같은:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-`Plugin.xml` 파일에서 삽입 하는 내용을 미리 알려져 있지 경우에서 변수는 달러 기호 뒤에 일련의 대문자, 숫자 또는 밑줄 표시 수 있습니다. 위의 예제 `plugin.xml` 파일이이 태그를 포함할 것입니다.
+`Plugin.xml` 파일에서 삽입 하는 내용을 미리 알려져 있지 경우에 변수는 달러 기호 뒤에 일련의 대문자, 숫자 또는 밑줄 표시 수 있습니다. 위의 예제에서는 `plugin.xml` 파일이이 태그를 포함할 것입니다.
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 지정된 된 값 또는 빈 문자열에 변수 참조를 바꿉니다 경우 찾을 수 없습니다. 변수 참조의 값 (이 경우 `AndroidManifest.xml` 파일)에서 감지 되거나 도구; 사용자 지정 정확한 프로세스는 특정 도구에 의존 합니다.
+plugman 지정된 된 값 또는 빈 문자열을 변수 참조를 대체 하는 경우 없는합니다. 변수 참조의 값 (이 경우에, `AndroidManifest.xml` 파일)에서 검색 하거나 도구;의 사용자 지정 수 수 있습니다. 정확한 프로세스는 특정 도구에 의존 합니다.
 
 plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청할 수 있습니다. 예를 들어 명령줄 인수로 C2M 및 구글 맵 스 API 키를 지정할 수 있습니다.
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-변수 확인 필수, `< 플랫폼 >` 태그 `< 기본 설정 >` 태그를 포함 해야 합니다. 예를 들어:
+변수를 필수 있도록, `< platform >` 태그를 `< preference >` 태그를 포함 해야 합니다. 예를 들면:
 
     <preference name="API_KEY" />
     
 
-plugman 확인이 필요한 환경 설정에서 전달 됩니다. 그렇지 않은 경우에 그것에 변수를 전달 하 고 0이 아닌 코드와 함께 종료 하는 방법 사용자를 경고 한다.
+plugman 확인이 필요한 환경에 전달 됩니다. 그렇지 않다면, 그것에 변수를 전달 하 고 0이 아닌 코드를 종료 하는 방법 사용자를 경고 한다.
 
-특정 변수 이름은 아래 예약 해야 합니다.
+특정 변수 이름은 아래 예약 한다.
 
 ## $PACKAGE_NAME
 

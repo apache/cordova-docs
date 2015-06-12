@@ -36,17 +36,20 @@ Windows Phone 8 プラットフォーム コルドバ WebView に依存してい
 
 *   [Windows Phone SDK][3].
 
+*   Windows Phone 8.0 SDK とコマンドライン経由で展開するために、 [Visual Studio 2012 更新プログラム 2][4]をインストールしなければなりません。
+
  [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
- [3]: https://dev.windowsphone.com/en-us/downloadsdk
+ [3]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
+ [4]: https://support.microsoft.com/en-us/kb/2797912
 
 Cordova アプリの Windows Phone デバイスを開発する Windows を実行して PC を使用することがありますが可能性がありますも開発する mac では、仮想マシン環境を実行することによって、またはデュアル ブートするブート キャンプを使用して Windows パーティション。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
 
-*   **VMWare Fusion**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][4]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備についての VMWare Fusion の設定を参照してください。
+*   **VMWare Fusion**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][5]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備についての VMWare Fusion の設定を参照してください。
 
-*   **平行線デスクトップ**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][5]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備について平行線デスクトップを構成するを参照してください。
+*   **平行線デスクトップ**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][6]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備について平行線デスクトップを構成するを参照してください。
 
- [4]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
- [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
 
 <!--
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
@@ -56,14 +59,14 @@ Cordova アプリの Windows Phone デバイスを開発する Windows を実行
   2DO: virtualBox doesn't work yet; any extra config info?
 -->
 
-*   **ブート キャンプ**: Windows 8 パーティションをセットアップする[マイクロソフトの開発者ネットワーク][6]によって提供されるインストール指示に従ってください。.
+*   **ブート キャンプ**: Windows 8 パーティションをセットアップする[マイクロソフトの開発者ネットワーク][7]によって提供されるインストール指示に従ってください。.
 
- [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
+ [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-PC 上で開発する場合、プロセッサは仮想化 (Intel の*VT-x* ) と[第 2 レベル アドレス変換 (SLAT)][7]をサポートしなければなりません。 [インテルのプロセッサをサポート リスト][8]を参照してください。 既定では、通常、BIOS 設定で有効にする必要がありますので、仮想化は無効です。 PC は、ハード ディスク空き容量の少なくとも 6.5 GB と 4 GB の RAM が必要です。
+PC 上で開発する場合、プロセッサは仮想化 (Intel の*VT-x* ) と[第 2 レベル アドレス変換 (SLAT)][8]をサポートしなければなりません。 [インテルのプロセッサをサポート リスト][9]を参照してください。 既定では、通常、BIOS 設定で有効にする必要がありますので、仮想化は無効です。 PC は、ハード ディスク空き容量の少なくとも 6.5 GB と 4 GB の RAM が必要です。
 
- [7]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
- [8]: http://ark.intel.com/Products/VirtualizationTechnology
+ [8]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
+ [9]: http://ark.intel.com/Products/VirtualizationTechnology
 
 ## コルドバのシェル ・ ツールを使用してください。
 
@@ -71,19 +74,21 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 *   CLI で生成されたプロジェクト コードからローカル アクセスします。利用できる、 `platforms/wp8/cordova` ディレクトリを追加した後、 `wp8` プラットフォームは以下のとおりです。
 
-*   [Cordova.apache.org][9]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `cordova-wp8\wp8` この場合、空のディレクトリ内。 関連するバッチ ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
+*   [Cordova.apache.org][10]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `cordova-wp8\wp8` この場合、空のディレクトリ内。 関連するバッチ ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
 
- [9]: http://cordova.apache.org
+ [10]: http://cordova.apache.org
 
 これらのシェルのツールを作成、構築、および Windows Phone アプリケーションを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。 詳細については、Windows Phone プラットフォームに固有のプラグイン、および Windows Phone 8 プラグインを開発する方法に関するガイダンスについては、アプリケーション ・ プラグインを参照してください。
 
 ## SDK をインストールします。
 
-[Dev.windowsphone.com][3]の**ダウンロード**エリアから Windows Phone SDK の最新バージョンをインストールします。 もっと最近エミュレーター更新プログラム パッケージをインストールすることも可能性があります。
+[Dev.windowsphone.com][11]の**ダウンロード**エリアから Windows Phone SDK の最新バージョンをインストールします。 もっと最近エミュレーター更新プログラム パッケージをインストールすることも可能性があります。
 
-![][10]
+ [11]: https://dev.windowsphone.com/en-us/downloadsdk
 
- [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
+![][12]
+
+ [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 新しいプロジェクトを作成します。
 
@@ -141,27 +146,27 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 エミュレーターはインストールされているアプリケーションとデバイス イメージを起動します。 ホーム画面から、 **HelloWorld**アプリケーションを起動するアプリのパネルに移動します。これはメイン インタ フェースに続いてそのスプラッシュ画面を起動するアプリを示しています。
 
-![][11]
+![][13]
 
- [11]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: img/guide/platforms/wp8/wp8_emulator.png
 
 デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 **>**ボタンより複雑な方向とジェスチャをテストすることができますより多くのコントロールが表示されます。
 
-![][12]
+![][14]
 
- [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
 これらの高度なコントロールを使用または動きのシーケンスをシミュレートするデバイスの場所を変更するしたりすることもできます。
 
-![][13]
+![][15]
 
- [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## デバイスへの配置します。
 
-デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][14]を参照してください。 また、携帯電話は、コンピューターに接続されているし、画面がロックされているかどうかを確認します。
+デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][16]を参照してください。 また、携帯電話は、コンピューターに接続されているし、画面がロックされているかどうかを確認します。
 
- [14]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
+ [16]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
 
 その後、デバイス上のアプリを実行するには、次の CLI コマンドを実行します。
 
@@ -179,8 +184,8 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 一度上記のように Cordova アプリを構築する SDK で開くことができます。 様々 な `build` コマンドは、Visual Studio のソリューション (*.sln*) ファイルを生成します。 Visual Studio 内のプロジェクトを変更するファイルを開きます。 Web ベースのソース コードは、プロジェクト内で利用可能な `www` ディレクトリ。 その他のツールと一緒に、SDK を提供します、メニューの下のコントロールは、Windows Phone エミュレーターでアプリケーションを起動することができます。
 
-![][15]
+![][17]
 
- [15]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: img/guide/platforms/wp8/wp8_vs.png
 
 コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスは、「概要」を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK 内で作業する場合、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。

@@ -409,33 +409,55 @@ Przykłady:
 
 Określa ramy (zwykle jest częścią platformy OS), na którym zależy od wtyczka.
 
-Przykłady:
+Atrybut opcjonalny `custom` jest wartością logiczną wskazującą, czy RAM jest jeden, który jest dołączone jako część plików plugin (tak, to nie jest ramy systemu).
+
+### *ramy* dla iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
-
-`Src` atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
 
 Atrybut opcjonalny `weak` jest wartością logiczną wskazującą, czy ramy powinny być słabo powiązane. Wartością domyślną jest `false`.
 
-Atrybut opcjonalny `custom` jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false`. ***Na Android*** to określa, jak leczyć **src**. Jeśli `prawda` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
+### *ramy* dla Androida
 
-Atrybut opcjonalny `type` jest ciągiem wskazującym typ struktury, aby dodać. Obsługiwane jest obecnie tylko `projectReference` i tylko dla Windows. Za pomocą `custom="true"` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilacji + link etapy projektu cordova. Zasadniczo jest to tylko sposób obecnie że ramy 'niestandardowe' można kierować wielu architektur, jak są one wyraźnie zbudowane jako zależność przez aplikację cordova odwołujący się.
+Na Androida (od cordova-android@4.0.0) *RAM* Tagi są używane do obejmują Maven zależności lub zawierać dołączoną bibliotekę projektów.
 
-Atrybut opcjonalny `parent` jest obecnie obsługiwany tylko na Android. Ustawia ścieżkę względną katalogu zawierające sub-projekt, do którego należy dodać odwołanie. Wartością domyślną jest `.`, czyli projektu aplikacji. Pozwala na dodawanie odwołania między projektami jak w tym przykładzie:
+Przykłady:
 
-    <framework src="FeedbackLib" custom="true" />
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
+
+*framework* można również mieć pliki niestandardowe .gradle sub-zawarte w projekcie głównym .gradle pliku:
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Dla pre-android@4.0.0 (ANT-oparty projektów):
+
+Atrybut opcjonalny `type` jest ciągiem wskazującym Typ ramy dodac. Obsługiwane obecnie tylko `projectReference` i tylko dla Windows. Za pomocą `custom='true'` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilowania + link kroki projektu cordova. Zasadniczo jest to tylko sposób obecnie 'niestandardowe' ramy można kierować wielu architektur jawnie montowana jako zależność przez odwołujących się do aplikacji cordova.
+
+Opcjonalne `parent` ustawia ścieżkę względną do katalogu zawierające sub-projekt, do którego należy dodać odwołanie. Wartością domyślną jest `.`, czyli projektu aplikacji. Pozwala na dodawanie odwołania między projektami jak w tym przykładzie:
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
-Na platformie Windows obsługuje trzy dodatkowe atrybuty (wszystkie opcjonalne) aby zawęzić przy ramach należy uwzględnić:
+### *RAM* dla Windows
 
-`arch` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
+Na platformie Windows obsługuje trzy dodatkowe atrybuty (wszystkie opcjonalne) aby zawęzić gdy ramy powinny być zawarte:
 
-`device-target` atrybut wskazuje, że powinny być włączone, podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
+
+`arch` atrybut wskazuje, ramach tylko należy włączyć, gdy budynek dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
+
+Atrybut `device-target` wskazuje, że framwork tylko należy włączyć, gdy budynek dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
 
 `versions` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
 
@@ -447,7 +469,7 @@ Przykłady użycia tych Windows określonych atrybutów:
     <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
-## *informacji* Elementu
+## *info* Elementu
 
 Dodatkowe informacje dla użytkowników. Jest to przydatne, gdy potrzebujesz dodatkowych kroków, które nie mogą być łatwo zautomatyzowane lub wykraczają poza zakres plugman w. Przykłady:
 
@@ -460,28 +482,33 @@ Dodatkowe informacje dla użytkowników. Jest to przydatne, gdy potrzebujesz dod
     </info>
     
 
-## Zmienne
+## *hook* Elementu
 
-W niektórych przypadkach plugin może być konieczne do zmiany konfiguracji zależy od aplikacji miejsce docelowe. Na przykład aby zarejestrować się do C2DM na Android, aplikacji o identyfikatorze pakietu jest `com.alunny.message` wymaga uprawnienia takie jak:
+Reprezentuje skrypt niestandardowy, który zostanie wywołany przez Cordova wystąpieniu pewnych działań (na przykład po plugin jest dodawany lub platformy przygotować logika jest wywoływana). Jest to przydatne, gdy trzeba rozszerzyć domyślne funkcje Cordova. Uzyskać więcej informacji, zobacz przewodnik haki.
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
-W takich przypadkach, w których zawartość z pliku `plugin.xml` nie jest znana przed czasem zmiennych może być wskazany przez dolara, a następnie przez szereg liter, cyfr lub podkreśleń. Dla powyższego przykładu plik `plugin.xml` obejmowałyby tego tagu:
+## Zmienne
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+W niektórych przypadkach plugin może być konieczne do zmiany konfiguracji zależy od aplikacji miejsce docelowe. Na przykład aby zarejestrować się do C2DM na Android, aplikacji o identyfikatorze pakietu jest `com.alunny.message` wymaga uprawnienia takich jak:
+
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    
+
+W takich przypadkach, gdzie zawartość z pliku `plugin.xml` nie jest znana przed czasem zmiennych może być wskazany przez znak dolara po serii z literami, cyframi lub podkreśleniami. Dla powyższego przykładu plik `plugin.xml` obejmowałyby tego tagu:
+
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
 plugman zastępuje zmienną odniesienia określonej wartości lub ciąg pusty, jeśli nie znaleziono. Wartość zmiennej odniesienia mogą być wykryte (w tym przypadku z pliku `AndroidManifest.xml` ) lub określony przez użytkownika narzędzia; dokładny proces jest zależne od konkretnego narzędzia.
 
-plugman na życzenie użytkowników, aby określić wtyczki wymagane zmienne. Na przykład klucze C2M i Google Maps API może być określony jako argument wiersza polecenia:
+plugman na życzenie użytkowników, aby określić wtyczki wymagane zmienne. Na przykład klucze API dla C2M i Google Maps może być określony jako argument wiersza polecenia:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Aby zmienna obowiązkowe, tagu `<platform>` musi zawierać tagu `<preference>`. Na przykład:
+Aby zmienna obowiązkowe, tagu `< platform >` musi zawierać tagu `< preference >` . Na przykład:
 
     <preference name="API_KEY" />
     
@@ -492,4 +519,4 @@ Niektóre nazwy zmiennych powinny być zastrzeżone, wymienionych poniżej.
 
 ## $PACKAGE_NAME
 
-Identyfikator unikatowy styl domeny odwrotnej pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `pakiet` atrybut element najwyższego poziomu `manifestu` pliku `AndroidManifest.xml` .
+Identyfikator unikatowy styl domeny odwrotnej pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `package` atrybut element najwyższego poziomu `manifestować` w pliku `AndroidManifest.xml` .

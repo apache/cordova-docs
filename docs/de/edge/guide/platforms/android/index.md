@@ -198,7 +198,7 @@ Der `build` -Befehl reinigt Projektdateien und Umbauten, die app. Hier ist die S
 
 `Cordova` -CLI-Dienstprogramm können Sie die Anwendung im Emulator oder das Gerät von der Befehlszeile aus bereitstellen:
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

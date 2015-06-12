@@ -198,7 +198,7 @@ El comando `build` limpia archivos de proyecto y reconstruye la aplicación. Aqu
 
 Puede utilizar la utilidad CLI `cordova` para desplegar la aplicación en el emulador o el dispositivo desde la línea de comandos:
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

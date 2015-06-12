@@ -72,6 +72,7 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Przewodnik platforma Windows
 *   Wtyczki Windows
+*   Opakowania systemu Windows
 *   Aktualizacja systemu Windows 8
 
 ## Tizen

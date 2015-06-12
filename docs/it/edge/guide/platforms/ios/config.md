@@ -87,3 +87,13 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
 *   `ErrorUrl` (stringa, non impostata di default): se impostato, visualizzerà la pagina di riferimento locale su di un errore nell'applicazione.
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `OverrideUserAgent` (stringa, non impostato per impostazione predefinita): se impostato, il valore sostituirà il vecchio UserAgent di webview. È utile identificare la richiesta dal browser e app quando si richiedono pagine remoti. Usare con cautela, questo maggio causa compitiable problema con server web. Per la maggior parte dei casi, utilizzare AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (stringa, non impostato per impostazione predefinita): se impostato, il valore verrà aggiunte alla fine del vecchio UserAgent di webview. Quando si utilizza con OverrideUserAgent, questo valore verrà ignorato.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

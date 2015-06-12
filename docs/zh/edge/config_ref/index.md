@@ -143,42 +143,59 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     適用于 Android、 iOS，WP8，亞馬遜火 OS 和火狐瀏覽器的作業系統。
     
     **注意**： `default` 值意味著科爾多瓦將帶定位首選項條目從平臺的清單/設定檔允許回退到其預設行為的平臺。
-
-預設允許人像及風景模式-僅後執行回檔。我可以或許重新字這，如下所示：
-
-IOS，通過定義在視窗上的 javascript 回檔可以以程式設計方式控制方向：
-
-    /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
-    function shouldRotateToOrientation(degrees) {
-         return true;
-    }
     
+    對於 iOS，指定縱向和橫向模式您將使用平臺特定的值`所有`:
+    
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
+        
+    
+    IOS，通過`視窗`上定義 javascript 回檔可以以程式設計方式控制方向:
+
+<pre>/** 
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
+    function shouldRotateToOrientation(degrees) {
+      return true;
+    }
+    </pre>
 
 ## *功能*元素
 
-如果你使用的 CLI 來構建應用程式，您可以使用`外掛程式`命令以便啟用設備的 Api。 這不修改頂級`config.xml`檔中，所以`<feature>`元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的`config.xml`檔作為源工作，您使用`<feature>`標記，使設備級 API 和外部外掛程式。 他們經常出現以特定于平臺的`config.xml`檔中的自訂值。 例如，下面是如何指定設備 API 為 Android 的專案：
+如果你使用的 CLI 來構建應用程式，您將使用`外掛程式`命令來啟用設備的 Api。 這不修改頂級`config.xml`檔中，所以`< 功能 >`元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的`config.xml`檔作為源工作，你使用`< 功能 >`標記啟用設備級 Api 和外部外掛程式。 他們經常出現以特定于平臺的`config.xml`檔中的自訂值。 例如，下面是如何指定設備 API 為 Android 專案:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-這裡是 iOS 專案元素的顯示方式：
+這裡是 iOS 專案元素的顯示方式:
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
         </feature>
     
 
-有關如何指定每個功能，請參閱 API 參考的詳細資訊。看到外掛程式的外掛程式開發指南 》 瞭解更多資訊。
+有關如何指定每個功能，請參閱 API 參考的詳細資訊。看到外掛程式的外掛程式開發指南的詳細資訊。
 
 ## *平臺*的元素
 
-使用 CLI 來構建應用程式時，有時必要指定首選項或其他特定于特定平臺的元素。 `<platform>`元素用於指定應該只出現在一個單一的特定于平臺的`config.xml`檔中的配置。 例如，下面是如何指定那唯一的 android 系統應該使用全屏顯示首選項：
+使用 CLI 來構建應用程式，時，有時需要指定首選項或其他特定于特定平臺的元素。 `<platform>`元素用於指定應該只出現在一個特定于平臺的`config.xml`檔中的配置。 例如，下面是如何指定那唯一的 android 應該使用全屏顯示首選項:
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+    
+
+## *hook*元
+
+表示您自訂的腳本，將調用由科爾多瓦發生某些操作時 (例如，添加外掛程式或平臺編寫邏輯之後調用)。 當您需要擴展預設科爾多瓦功能時，這很有用。 更多的資訊，請參閱掛鉤的指南。
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

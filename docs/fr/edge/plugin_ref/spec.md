@@ -409,31 +409,53 @@ Exemples :
 
 Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend le plugin.
 
-Exemples :
+L'attribut facultatif `custom` est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système).
+
+### *framework* pour iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-L'attribut `src` identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
+L'attribut facultatif `weak` est une valeur booléenne qui indique si le cadre devrait être faiblement lié. La valeur par défaut est `false`.
 
-L'attribut facultatif `weak` est une valeur booléenne indiquant si le cadre devrait être faiblement lié. La valeur par défaut est `false`.
+### *framework* pour Android
 
-L'attribut facultatif `custom` est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est `false`. ***Sur Android*** il indique comment traiter des **src**. Si `true` **src** est un chemin d'accès relatif du répertoire du projet de l'application, dans le cas contraire--depuis le répertoire du SDK Android.
+Sur Android (à partir de cordova-android@4.0.0), *cadre* tags servent à inclure les dépendances Maven, ou d'inclure les projets de bibliothèque groupés.
 
-L'attribut optionnel `type` est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge et uniquement pour Windows. À l'aide de `custom="true"` et `type="projectReference"` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
+Exemples :
 
-L'attribut facultatif `parent` est actuellement pris en charge uniquement sur Android. Il définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.`, c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framework* permet également d'avoir des fichiers personnalisés .gradle Sub inclus dans le fichier .gradle du projet principal :
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Pour pre-android@4.0.0 (projets axés sur les fourmis) :
+
+L'attribut optionnel `type` est une chaîne qui indique le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge et uniquement pour Windows. À l'aide de `custom=« true »` et `type = « projectReference »` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. C'est essentiellement le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
+
+L' option `parent` définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.`, c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
+### *framework* pour Windows
+
 La plate-forme de Windows prend en charge trois attributs supplémentaires (facultatifs) pour préciser quand le cadre devrait être inclus :
 
-L'attribut de `arch` indique que le cadre ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86`, `x64` ou `ARM`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
+
+L'attribut de `arch` indique que le cadre ne devrait être inclus lors de la construction de l'architecture spécifiée. Valeurs prises en charge sont `x86` , `x64` ou`ARM`.
 
 L'attribut `device-target` indique que le cadre ne devrait être inclus lors de la construction pour le type de périphérique cible spécifié. Valeurs prises en charge sont `win` (ou `windows` ), `phone` ou `all`.
 
@@ -454,31 +476,39 @@ Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Vous devez ajouter la ligne suivante à la "local.properties": android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < /info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
+    
+
+## *hook* Élément
+
+Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir Guide de crochets pour plus d'informations.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
 ## Variables
 
-Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` nécessite une autorisation tels que :
+Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` , il faudrait une autorisation tels que :
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
 Dans ce cas où le contenu inséré dans le fichier `plugin.xml` ne connaît pas avance, variables peuvent être indiquées par un signe dollar suivi d'une série de lettres capitales, des chiffres ou des traits de soulignement. Pour l'exemple ci-dessus, le fichier `plugin.xml` comprendrait cette balise :
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de référence de la variable peut être détectée (dans ce cas, à partir du fichier `AndroidManifest.xml`) ou spécifiée par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
+plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de la variable référence peut-être être détectée (dans ce cas, dans le fichier `AndroidManifest.xml` ) ou spécifiée par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
 
 plugman pouvez demander aux utilisateurs de spécifier les variables requises d'un plugin. Par exemple, les clés de l'API pour C2M et Google Maps peuvent être spécifiés comme un argument de ligne de commande :
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Pour rendre la variable obligatoire, la balise `< platform >` doit contenir une balise `< preférence >`. Par exemple :
+Pour rendre la variable obligatoire, la balise `< platform >` doit contenir une balise `< preference >` . Par exemple :
 
     <preference name="API_KEY" />
     
@@ -489,4 +519,4 @@ Certains noms de variables doivent être réservées, comme indiqué ci-dessous.
 
 ## $PACKAGE_NAME
 
-L'identificateur unique de domaine inverse style pour le package, correspondant à la `CFBundleIdentifier` sur iOS ou l'attribut de l'élément de niveau supérieur `manifest` dans un fichier `AndroidManifest.xml` de `package`.
+L'identificateur unique de domaine inverse style pour le package, correspondant à la `CFBundleIdentifier` sur iOS ou l'attribut de l'élément de niveau supérieur `manifeste` dans un fichier `AndroidManifest.xml` de `package` .

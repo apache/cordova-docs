@@ -87,3 +87,13 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
 *   `ErrorUrl`(chaîne, ne pas de valeur par défaut): si défini, affichera la page locale référencée sur une erreur dans l'application.
     
         < nom de l'option = value="myErrorPage.html"/ « ErrorUrl » >
+        
+
+*   `OverrideUserAgent` (chaîne, ne pas la valeur par défaut): si la valeur, la valeur remplacera l'ancienne UserAgent de webview. Il est utile d'identifier la demande d'app/navigateur lorsque vous demandez des pages éloignées. À utiliser avec prudence, ce qui peut entraîne des problème de compitiable avec des serveurs web. Pour la plupart des cas, utilisez plutôt AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (chaîne, ne pas la valeur par défaut): si la valeur, la valeur s'ajoute à la fin du vieux UserAgent de webview. Lors de l'utilisation avec OverrideUserAgent, cette valeur sera ignorée.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

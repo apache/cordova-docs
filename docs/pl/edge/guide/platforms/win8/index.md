@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Przewodnik platforma Windows
 
-Ten poradnik pokazuje jak skonfigurować SDK środowiska do tworzenia i wdrażania aplikacji Cordova dla Windows 8, Windows 8.1 i Windows Phone 8.1. Pokazuje, jak użyć albo powłoka narzędzia do generowania i budować aplikacje lub CLI Cordova przekreślać platforma omówione w interfejs wiersza poleceń. (Patrz Przegląd Porównanie tych możliwości rozwoju). Ta sekcja pokazuje również jak zmodyfikować Cordova aplikacji w Visual Studio. Niezależnie od tego, które możesz wziąć podejście musisz zainstalować Visual Studio SDK, jak opisano poniżej.
+Ten poradnik pokazuje jak skonfigurować SDK środowiska do tworzenia i wdrażania aplikacji Cordova dla Windows 8, Windows 8.1, Windows Phone 8.1 i 10 uniwersalnych aplikacji na platformie Windows. Pokazuje, jak użyć albo powłoka narzędzia do generowania i budować aplikacje lub CLI Cordova przekreślać platforma omówione w interfejs wiersza poleceń. (Patrz omówienie porównanie tych możliwości rozwoju). Ta sekcja pokazuje również jak zmodyfikować Cordova aplikacji w Visual Studio. Niezależnie od tego, które możesz wziąć podejście musisz zainstalować Visual Studio SDK, jak opisano poniżej.
 
 Zobacz Uaktualnianie systemu Windows 8 informacje dotyczące uaktualniania istniejące projekty Windows 8 Cordova.
 
@@ -31,55 +31,71 @@ Opracowanie aplikacji dla platformy Windows trzeba:
 
 *   Maszyny Windows 8.1, 32 lub 64-bitowy (*domu*, *Pro*lub *Enterprise* Edition) z minimum 4 GB pamięci RAM.
 
-*   Dla Windows Phone emulatorów, Profesjonalny wydanie Windows 8.1 (x 64) lub wyższa, a procesor, który obsługuje [klienta Hyper-V i drugi poziom adres tłumaczenia (deski)][2]. Wersja testowa systemu Windows Enterprise 8.1 jest dostępne w [Witrynie Microsoft Developer Network][3].
+*   Windows 8.0, 8.1 lub 10, 32 lub 64-bitowy *Strona główna*, *Pro*lub wersji *Enterprise* , razem z [Visual Studio 2012 Express][2] lub Visual Studio 2013. Visual Studio 2015 nie jest w stanie budować aplikacje Windows 8.0.
 
-*   [Visual Studio 2013 dla Windows][4] (Express lub wyższe).
+ [2]: http://www.visualstudio.com/downloads
 
- [2]: https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv
+Opracowanie aplikacji dla Windows 8.0 i 8.1 (w tym Windows Phone 8.1):
+
+*   Windows 8.1 lub Windows 10, 32 lub 64-bitowy *Strona główna*, *Pro*lub wersji *Enterprise* , razem z [Visual Studio 2013 Express][2] lub wyższym. Wersja testowa systemu Windows 8.1 Enterprise jest dostępne w [Witrynie Microsoft Developer Network][3].
+
+*   Dla Windows Phone emulatory, Profesjonalny wydanie Windows 8.1 (x 64) lub wyższa, a procesor, który obsługuje [klienta Hyper-V i drugi poziom adres tłumaczenia (deski)][4]. Wersja testowa systemu Windows 8.1 Enterprise jest dostępne w [Witrynie Microsoft Developer Network][3].
+
+*   [Visual Studio 2013 dla Windows][5] (Express lub wyższe).
+
  [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
- [4]: http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8
+ [4]: https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv
+ [5]: http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8
 
-Czy aplikacje opracowane pod Windows 8.1 *nie* uruchomić pod Windows 8.0. Aplikacje opracowane pod Windows 8.0 są kompatybilne do przodu z 8.1.
+Opracowanie aplikacji dla Windows 10:
 
-Postępuj zgodnie z instrukcjami w [windowsstore.com][5] do składania aplikacji do Windows Store.
+*   Windows 8.1 lub Windows 10 techniczny Podgląd 2, 32 - lub 64-bitowy, razem z [Visual Studio 2015 RC][6] lub wyższym.
 
- [5]: http://www.windowsstore.com/
+ [6]: http://www.visualstudio.com/preview
 
-Rozwijać Cordova aplikacje dla systemu Windows, może korzystać z komputera z systemem Windows, ale również mogą wystąpić na komputerze Mac, uruchamiając środowisku wirtualnej lub za pomocą Boot Camp podwójny zyski Windows 8.1 partycji. Konsultacje te zasoby, aby skonfigurować wymagane środowisko systemu Windows na komputerze Mac:
+Zgodność aplikacji jest określana przez OS, że aplikacja ukierunkowane. Aplikacje są siadały kompatybilny ale nie wstecznie zgodne, więc aplikacja kierowania Windows 8.1 nie można uruchomić na 8.0, ale aplikacja zbudowana dla 8.0 można uruchomić na 8.1.
 
-*   [VMWare Fusion][6]
+Postępuj zgodnie z instrukcjami w [windowsstore.com][7] do składania aplikacji do Windows Store.
 
-*   [Parallels Desktop][7],
+ [7]: http://www.windowsstore.com/
 
-*   [Boot Camp][8].
+Rozwijać Cordova aplikacje dla systemu Windows, może korzystać z komputera z systemem Windows, ale również mogą wystąpić na Mac, uruchamiając środowisku czynny maszyna albo za pomocą Boot Camp wobec podwójny zyski Windows 8.1 podział. Konsultacje te zasoby, aby skonfigurować wymagane środowisko systemu Windows na komputerze Mac:
 
- [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
- [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
- [8]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
+*   [VMWare Fusion][8]
 
-## Instalowanie SDK
+*   [Parallels Desktop][9]
 
-Zainstalować *Ultimate*, *Premium*lub *Professional* 2013 wersje programu [Visual Studio][4].
+*   [Boot Camp][10]
 
-![][9]
-
- [9]: img/guide/platforms/win8/win8_installSDK.png
+ [8]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [9]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [10]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
 ## Za pomocą narzędzia powłoki Cordova
 
 Jeśli chcesz użyć Cordova w środku Windows powłoka narzędzia w połączeniu z SDK, masz dwie podstawowe opcje:
 
-*   Dostęp do nich lokalnie z projektu kod generowany przez CLI. Są one dostępne w `platform/windows/` katalog po dodaniu platformy `windows` zgodnie z opisem poniżej.
+*   Dostęp do nich lokalnie z projektu kod generowany przez CLI. Są one dostępne w `platform/windows/` katalogu po dodaniu platformy `windows` zgodnie z opisem poniżej.
 
-*   Pobrać je z osobnym dystrybucji w [cordova.apache.org][10]. Dystrybucja Cordova zawiera osobne Archiwum dla każdej platformy. Pamiętaj rozwinąć odpowiednie archiwum, `cordova-windows` w tym przypadku w pusty katalog. Partia odpowiednie narzędzia są dostępne w `package/bin` katalog. (Konsultacje w pliku **README** , jeśli jest to konieczne dla bardziej szczegółowe wskazówki).
+*   Pobrać je z osobnym dystrybucji w [cordova.apache.org][11]. Dystrybucji Cordova zawiera osobne Archiwum dla każdej platformy. Pamiętaj rozwinąć odpowiednie archiwum, `cordova-windows` w tym przypadku w pusty katalog. Odpowiednich partii narzędzia są dostępne w `package/bin` katalog. (Konsultacje plik **README** , w razie potrzeby dla bardziej szczegółowe wskazówki).
 
- [10]: https://www.apache.org/dist/cordova/platforms/
+ [11]: https://www.apache.org/dist/cordova/platforms/
 
 Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji systemu Windows. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki.
 
+## Instalowanie SDK
+
+Zainstalować żadnej wersji [Visual Studio][2] dopasowania w wersji, którą wymogi wymienione powyżej.
+
+![][12]
+
+ [12]: img/guide/platforms/win8/win8_installSDK.png
+
+10 Windows Instalator programu Visual Studio ma możliwość zainstalowania narzędzia do tworzenia aplikacji Windows uniwersalne. Należy się upewnić, że opcja ta jest zaznaczona podczas instalacji wymagane zestawu SDK.
+
 ## Tworzenie nowego projektu
 
-W tym momencie aby utworzyć nowy projekt można wybrać narzędzia CLI przekreślać platforma opisanego w interfejs wiersza poleceń, lub zestawu narzędzi powłoki systemu Windows. Poniżej podejście CLI generuje aplikacji o nazwie *HelloWorld* w nowym katalogu projektu `hello` :
+W tym momencie aby utworzyć nowy projekt można wybrać narzędzia CLI przekreślać platforma opisanego w interfejs wiersza poleceń, lub zestaw narzędzi powłoki systemu Windows specyficznych. Podejście CLI poniżej generuje aplikacji o nazwie *HelloWorld* w nowym katalogu projektu `hello` :
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
@@ -90,6 +106,8 @@ Tutaj jest odpowiednie podejście shell narzędzie niższego poziomu:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
+
+Ten projekt skierowany jest do Windows 8.1 jako domyślnego adresu docelowego systemu operacyjnego. Można wybrać miejsce docelowe 8.0 lub 10.0 (zobacz "Konfigurowanie docelowej wersji Windows" poniżej) na wszystkie wersje, lub kierujesz dotyczące konkretnej wersji podczas każdej budowy.
 
 ## Skompiluj projekt
 
@@ -105,21 +123,44 @@ Tutaj jest odpowiednie podejście shell narzędzie niższego poziomu:
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
-        C:\path\to\project\cordova\clean.bat
+    
+
+`clean`Polecenia pomoże przepłukiwanie katalogów w ramach przygotowań do następnego `build` :
+
+        C:\path\to\project\cordova\clean.bat 
     
 
 ## Konfigurowanie docelowej wersji systemu Windows
 
 Przez domyślne `build` polecenia produkuje dwa pakiety: Windows 8.0 i Windows Phone 8.1. Aby uaktualnić pakiet systemu Windows do wersji 8.1 następujących ustawień konfiguracji należy dodać do pliku konfiguracyjnego (`plik config.xml`).
 
-        <preference name='windows-target-version' value='8.1' />
+        <preference name="windows-target-version" value="8.1" />
     
 
 Po dodaniu polecenie `build` to ustawienie będzie rozpocząć produkcję Windows 8.1 i Windows Phone 8.1 pakietów.
 
+### Parametr --appx
+
+Można podjąć decyzję, że chcesz zbudować konkretnej wersji aplikacji kierowania określonego systemu operacyjnego (na przykład, może ustawieniu że chcesz kierować Windows 10, ale chcesz budować dla Windows Phone 8.1). Aby to zrobić, można użyć parametru `--appx` :
+
+        > cordova build windows -- --appx=8.1-phone
+    
+
+System budowy będzie ignorować zestaw preferencji w pliku config.xml dla docelowego systemu Windows wersja i ściśle zbudować pakiet dla Windows Phone 8.1.
+
+Prawidłowe wartości dla flagę `--appx` są `8.1-win`, `8.1-phone`i `uap` (dla Windows 10 uniwersalnych aplikacji). Opcje te stosuje się także do polecenia `cordova run` .
+
+### Zagadnienia dotyczące docelowej wersji systemu Windows
+
+Windows 10 obsługuje nowy tryb "Zdalny" Cordova aplikacji (i aplikacje HTML w ogóle). Ten tryb umożliwia aplikacji znacznie więcej wolności w odniesieniu do manipulacji DOM i wspólne wzory internetowych takich jak korzystanie z wbudowanego skryptu, ale nie tak zmniejszając zestaw możliwości aplikacji mogą używać, gdy przekazywane do magazynu publicznego systemu Windows. Aby uzyskać więcej informacji o Windows 10 i trybie zdalnym spojrzeć do dokumentacji [Cordova dla Windows 10][13] .
+
+ [13]: win10-support.md.html
+
+Gdy w trybie zdalnym, deweloperzy są zachęcani do zastosowania treści polityki bezpieczeństwa (CSP) do ich stosowania do ochrony przed atakami iniekcji skryptu.
+
 ## Wdrażanie aplikacji
 
-Aby wdrożyć pakiet systemu Windows:
+Aby wdrożyć pakiet Windows:
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
@@ -137,50 +178,50 @@ Za pomocą **cordova run --help** Zobacz dodatkowe budować i uruchamiać opcji.
 
 ## Otwórz projekt SDK i wdrażanie aplikacji
 
-Gdy budujesz Cordova aplikacji, jak opisano powyżej, można go otworzyć z programu Visual Studio. Różne polecenia `build` wygenerować plik Visual Studio rozwiązanie (*.sln*). Otwórz plik w Eksploratorze plików, aby zmodyfikować projekt w ramach programu Visual Studio:
-
-![][11]
-
- [11]: img/guide/platforms/win8/win8_sdk_openSLN.png
-
-Zawiera składnik `CordovaApp` w roztworze, i jego katalogu `www` zawiera kod źródłowy opartych na sieci web, w tym Strona `index.html` :
-
-![][12]
-
- [12]: img/guide/platforms/win8/win8_sdk.png
-
-Sterowanie poniżej menu główne programu Visual Studio pozwala do testowania i wdrażania aplikacji:
-
-![][13]
-
- [13]: img/guide/platforms/win8/win8_sdk_deploy.png
-
-Z **Komputera lokalnego** wybrane Naciśnij zieloną strzałkę, aby zainstalować aplikację na tej samej maszynie, uruchamianie programu Visual Studio. Raz zrobisz tak, aplikacji pojawia się w Windows 8 app oferty:
+Gdy budujesz Cordova aplikacji, jak opisano powyżej, można go otworzyć z programu Visual Studio. Różnych poleceń `build` wygenerować plik Visual Studio rozwiązanie (*.sln*). Otwórz plik w Eksploratorze plików, aby zmodyfikować projekt w ramach programu Visual Studio:
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
 
-Za każdym razem można odbudować aplikacji, wersja dostępna w interfejsie jest odświeżany.
-
-Dostępne w aplikacji oferty, przytrzymując naciśnięty klawisz **CTRL** podczas zaznaczania aplikacji umożliwia przypnij go do ekranu głównego:
+Zawiera składnik `CordovaApp` w roztworze, i jego katalogu `www` zawiera kod źródłowy opartych na sieci web, w tym Strona `index.html` :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [15]: img/guide/platforms/win8/win8_sdk.png
 
-Należy pamiętać, że po otwarciu aplikacji w środowisku wirtualnej maszyny, możesz potrzebować wobec trzaskać w rogach lub wzdłuż boków od systemu windows do przełączania aplikacji lub uzyskać dostęp do dodatkowych funkcji:
+Sterowanie poniżej menu główne programu Visual Studio pozwala przetestować lub rozmieszczanie aplikacji:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_run.png
+ [16]: img/guide/platforms/win8/win8_sdk_deploy.png
 
-Na przemian wybierz opcję rozmieszczania **symulator** do wyświetlania aplikacji tak, jakby to były uruchomione na urządzenia typu tablet:
+Z **Komputera lokalnego** wybrane Naciśnij zieloną strzałkę, aby zainstalować aplikację na tej samej maszynie uruchamianie programu Visual Studio. Raz to zrobisz, aplikacji pojawia się w Windows 8 app oferty:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_sim.png
+ [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+
+Za każdym razem możesz przebudować aplikację, wersja dostępna w interfejsie jest odświeżany.
+
+Dostępne w aplikacji oferty, przytrzymując naciśnięty klawisz **CTRL** podczas zaznaczania aplikacji umożliwia przypnij go do ekranu głównego:
+
+![][18]
+
+ [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+
+Należy zauważyć, że po otwarciu aplikacji w środowisku wirtualnej maszyny, możesz potrzebować wobec trzaskać w rogach lub wzdłuż boków od systemu windows do przełączania aplikacji lub uzyskać dostęp do dodatkowych funkcji:
+
+![][19]
+
+ [19]: img/guide/platforms/win8/win8_sdk_run.png
+
+Na przemian wybierz opcję rozmieszczania **symulator** do wyświetlania aplikacji tak, jakby to były uruchomione na urządzenia typu tablet:
+
+![][20]
+
+ [20]: img/guide/platforms/win8/win8_sdk_sim.png
 
 W odróżnieniu od pulpit rozwinięcie ta opcja pozwala symulować orientację tabletu, lokalizacja i zmieniać jego ustawienia sieciowe.
 
-**Uwaga**: Skonsultuj się przegląd porady jak korzystać z narzędzi wiersza polecenia w Cordova lub zestawu SDK w pracy. W consoli Cordova opiera się na kod źródłowy przekreślać platforma, które rutynowo zastępuje pliki specyficzne dla platformy, używany przez SDK. Jeśli chcesz zmodyfikować projekt za pomocą zestawu SDK, należy użyć narzędzi niższego poziomu powłoki jako alternatywa do consoli.
+**Uwaga**: Skonsultuj się przegląd porady dotyczące używania Cordova zestawy narzędzi wiersza polecenia lub zestawu SDK w swojej pracy. W consoli Cordova opiera się na kod źródłowy przekreślać platforma, które rutynowo nadpisuje pliki specyficzne dla platformy używane przez SDK. Jeśli chcesz używać zestawu SDK do modyfikowania projektu, narzędzia niższe powłoki jako alternatywa do consoli.

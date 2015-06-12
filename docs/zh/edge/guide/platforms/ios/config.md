@@ -87,3 +87,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `ErrorUrl`（字串，預設情況下未設置）： 如果設置，將顯示在應用程式中出現錯誤時所引用的本地網頁。
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `OverrideUserAgent`(字串，預設情況下未設置): 如果設置，值將替換舊使用者代理的 web 視圖。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent`(字串，預設情況下未設置): 如果設置，值將附加到年底老使用者代理的 web 視圖。 當使用 OverrideUserAgent，此值將被忽略。
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

@@ -77,3 +77,12 @@ Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'appl
         
 
 *   `DefaultVolumeStream`(string, la valeur par défaut `default` , ajouté dans cordova-android 3.7.0): définit quel volume le volume de matériel boutons lien vers. Par défaut c'est « appeler » pour les téléphones et les « médias » pour les tablettes. Indiquez ce « médias » d'avoir des boutons de volume de votre application à tout moment modifier le volume du média. Notez que lorsque vous utilisez le plugin de médias de Cordova, les boutons de volume vont changer dynamiquement pour contrôler le volume de médias lorsque tous les objets multimédia sont actives.
+
+*   `OverrideUserAgent` (chaîne, ne pas la valeur par défaut): si la valeur, la valeur remplacera l'ancienne UserAgent de webview. Il est utile d'identifier la demande d'app/navigateur lorsque vous demandez des pages éloignées. À utiliser avec prudence, ce qui peut entraîne des problème de compitiable avec des serveurs web. Pour la plupart des cas, utilisez plutôt AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (chaîne, ne pas la valeur par défaut): si la valeur, la valeur s'ajoute à la fin du vieux UserAgent de webview. Lors de l'utilisation avec OverrideUserAgent, cette valeur sera ignorée.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

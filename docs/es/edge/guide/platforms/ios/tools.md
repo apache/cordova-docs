@@ -37,21 +37,53 @@ Ejecute el comando `crear`, especificando la ruta existente para el proyecto, el
 
 ## Ejecutar la aplicación en un emulador
 
-        $ /path/to/my_new_project/cordova/run--emulador
+        $ /path/to/my_new_project/cordova/run --emulator
     
 
 ## Ejecutar la aplicación en un dispositivo
 
-        $ /path/to/my_new_project/cordova/run--dispositivo
+        $ /path/to/my_new_project/cordova/run --device
     
 
-## Liberando
+## Firmar la aplicación
 
-        $ /path/to/my_new_project/cordova/build - liberación
+Usted puede aprender más sobre la firma, distribución de aplicaciones de iOS, creando un certificado y provisioning de perfil en el [iOS Developer biblioteca][2].
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+Para firmar la aplicación en Córdoba necesita lo siguiente: * código de identidad de firma (`--codeSignIdentity`): [Usando XCode][3] puede crear un nuevo iOS firma identidad y añadir a su llavero. El tipo de código firma identidad - típicamente distribución o desarrollo, debe ser especificado.
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   Provisioning de perfil (`--provisioningProfile`): [utilizando el centro de miembros de Apple][4] puede crear un perfil de aprovisionamiento. Descargar el perfil de aprovisionamiento en su máquina y lanzarlo en XCode para registrarlo. Se copia aquí en tu Mac: perfiles de ~/Library/MobileDevice/Provisioning\ /. Abriéndolo en un editor de texto, usted puede encontrar el UUID que necesita ser especificado.
+
+*   Código de firma normas de recurso (`--codeSignResourceRules`) (opcional): permite especificar reglas de recursos firma personalizadas.
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+Estos parámetros pueden especificarse usando los argumentos de línea de comandos sobre `build` o `run` secuencias de comandos:
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(modificar el `cordova/build-release.xcconfig` archivo para su identidad de firma de código)
+Por otra parte, les puede especificar en un archivo de configuración de construcción (build.json) con un argumento (`--buildConfig`). Este es un ejemplo de un archivo de configuración de compilación:
 
-## Tala
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+También hay soporte para mezclar y combinar los argumentos de línea de comandos y parámetros en el archivo build.json. Valores de los argumentos de línea de comandos tendrá prioridad.
+
+## Registro
 
         $ /path/to/my_new_project/cordova/log

@@ -98,7 +98,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Przewodnik białej listy
+        Platform i Zarządzanie wersjami pluginów
+      </h2>
+      
+      <span>Zapisać i przywrócić swoje projekty CLI w znanym stanie bez kłopotów.</span>
+    </li>
+    <li>
+      <h2>
+        Biała lista Przewodnik
       </h2>
       
       <span>Udzielić dostępu do zasobów zewnętrznych aplikacji.</span>
@@ -112,6 +119,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Haki Przewodnik
+      </h2>
+      
+      <span>Rozszerzenia domyślne Cordova funkcji przez dodanie niestandardowych skryptów.</span>
+    </li>
+    <li>
+      <h2>
         Kolejne kroki
       </h2>
       
@@ -122,7 +136,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <a href="_index.html">Indeks słów kluczowych</a>
       </h2>
       
-      <span>Pełny spis dokumentacji.</span>
+      <span>Pełny indeks dokumentacji.</span>
     </li>
   </ul>
   

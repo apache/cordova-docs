@@ -87,3 +87,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `ErrorUrl` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wyświetli stronę lokalnych odwołanie na błąd w aplikacji.
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `OverrideUserAgent` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wartość zastąpi stary UserAgent widoku sieci Web. To jest przydatne do identyfikowania wniosek z aplikacji/przeglądarki podczas żądania stron zdalnego. Należy zachować ostrożność, może to powoduje compitiable problem z serwerami sieci web. Dla większości przypadków Użyj AppendUserAgent zamiast.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wartość dołączy do końca starego UserAgent widoku sieci Web. Podczas korzystania z OverrideUserAgent, wartość ta zostanie zignorowana.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

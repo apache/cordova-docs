@@ -409,35 +409,57 @@ Beispiele:
 
 Bezeichnet einen Rahmen (in der Regel Teil der OS/Plattform), von denen das Plugin abhängig ist.
 
-Beispiele:
+Das optionale `custom` Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, der als Teil der Plugin-Dateien enthalten ist (so ist es kein System-Rahmen).
+
+### *framework* für iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-Das `src` -Attribut identifiziert Rahmen, welche Plugman versucht die Cordova-Projekt in der richtigen Weise für eine bestimmte Plattform hinzu.
+Das optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verknüpft werden soll. Der Standardwert ist `false`.
 
-Das optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist `false`.
+### *framework* für Android
 
-Das optional `custom` Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist `false`. ***Auf Android*** gibt es wie **src**zu behandeln. Wenn man `true` **src** der relative Pfad von der Application Project-Verzeichnis, sonst--aus dem Android SDK-Verzeichnis.
+Auf Android (ab cordova-android@4.0.0) sind *Rahmen* Tags Maven Abhängigkeiten oder interne Bibliothek Projekte verwendet.
 
-Das optionale `type` -Attribut ist eine Zeichenfolge, die den Typ des Rahmens hinzu. Derzeit nur `projectReference` wird unterstützt und nur für Windows. Mit `custom='true'` und `type='projectReference'` wird, fügen einen Verweis auf das Projekt, das die Kompilierung gutgeschrieben + Schritte des Projektes Cordova zu verknüpfen. Dies ist im Grunde die einzige Möglichkeit derzeit ein 'custom' Rahmen mehrere Architekturen angesprochen werden kann, da sie explizit als eine Abhängigkeit von der verweisenden Cordova-Anwendung erstellt werden.
+Beispiele:
 
-Das optionale `parent` Attribut wird derzeit nur auf Android unterstützt. Er legt den relativen Pfad auf das Verzeichnis, in das Teilprojekt, der den Verweis hinzugefügt. Der Standardwert ist `.`, d. h. das Anwendungsprojekt. Es ermöglicht das Hinzufügen von Verweisen zwischen Teilprojekte wie in diesem Beispiel:
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framework* können auch verwendet werden, benutzerdefinierte .gradle-Dateien, die in das Hauptprojekt .gradle Datei Sub enthalten haben:
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Für pre-android@4.0.0 (ANT-basierte Projekte):
+
+Das optionale `type` -Attribut ist eine Zeichenfolge, die den Typ des Rahmens hinzu. Derzeit nur `projectReference` wird unterstützt und nur für Windows. Mit `custom='true'` und `type='projectReference'` wird, fügen einen Verweis auf das Projekt, das die Kompilierung gutgeschrieben + link Schritte des Projektes Cordova. Im Wesentlichen ist dies die einzige Möglichkeit derzeit ein 'custom' Rahmen mehrere Architekturen angesprochen werden kann, da sie explizit als eine Abhängigkeit von der verweisenden Cordova-Anwendung erstellt werden.
+
+Das optionale `parent` legt den relativen Pfad zu dem Verzeichnis, das Teilprojekt, der den Verweis hinzugefügt. Der Standardwert ist `.`, d. h. das Anwendungsprojekt. Es ermöglicht das Hinzufügen von Verweisen zwischen Teilprojekte wie in diesem Beispiel:
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
+### *framework* für Windows
+
 Die Windows-Plattform unterstützt drei zusätzliche Attribute (optional) zur Verfeinerung beim Rahmen eingeschlossen werden sollen:
 
-Das `arch` -Attribut gibt an, dass Rahmen nur eingeschlossen werden soll, wenn für die angegebene Architektur erstellen. Unterstützte Werte sind `x86`, `x64` oder `ARM`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
 
-Das `device-target` -Attribut gibt an, dass Rahmen nur eingeschlossen werden soll, wenn für den angegebenen Zieltyp Gerät erstellen. Unterstützte Werte sind zu `win` (oder `windows`), `phone` oder `all`.
+Das `arch` -Attribut angibt, dass der Rahmen nur eingeschlossen werden soll, wenn für die angegebene Architektur erstellen. Unterstützte Werte sind `x86`, `x64` oder `ARM`.
 
-Das `versions` -Attribut gibt an, dass der Rahmen nur eingeschlossen werden soll, wenn für Versionen zu erstellen, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
+Das `device-target` -Attribut gibt an, dass die Rahmen nur eingeschlossen werden soll, wenn für das angegebene Ziel-Device-Typ erstellen. Unterstützte Werte sind zu `win` (oder `windows`), `phone` oder `all`.
+
+Das `versions` -Attribut gibt an, dass die Rahmen nur eingeschlossen werden soll, wenn für Versionen erstellen, die die angegebene Zeichenfolge entsprechen. Wert kann semantische Versionszeichenfolge des Bereichs gültigen Knoten sein.
 
 Beispiele für die Verwendung dieser Windows-spezifische Attribute:
 
@@ -454,21 +476,29 @@ Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätz
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Sie müssen die 'local.properties' die folgende Zeile hinzu: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / Info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
+    
+
+## *hook Sie* Element
+
+Stellt Ihr benutzerdefinierte Skript, das von Cordova aufgerufen wird, wenn bestimmte Aktion ausgeführt wird (z. B. nach Plugin hinzugefügt wird oder Plattform vorbereiten Logik wird aufgerufen). Dies ist nützlich, wenn Sie Cordova Standardfunktionalität verlängern müssen. Weitere Informationen finden Sie unter Haken Guide.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
 ## Variablen
 
-In bestimmten Fällen kann eine Plugin müssen Änderungen an der Konfiguration der Zielanwendung abhängig zu machen. Beispielsweise würde zur Anmeldung für C2DM auf Android eine app, die dessen Paket-Id `com.alunny.message` ist eine Berechtigung wie erforderlich:
+In bestimmten Fällen kann eine Plugin müssen Änderungen an der Konfiguration der Zielanwendung abhängig zu machen. Z. B. zur Anmeldung zu C2DM auf Android erfordert app dessen Paket-Id `com.alunny.message` ist eine Berechtigung wie:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-In solchen Fällen, wo aus der Datei `plugin.xml` eingefügte Inhalt nicht vor der Zeit bekannt ist, können durch ein Dollar-Zeichen, gefolgt von einer Reihe von Großbuchstaben, Ziffern und Unterstriche Variablen angegeben werden. Für das obige Beispiel würde die Datei `plugin.xml` diesem Tag gehören:
+In solchen Fällen, wo aus der Datei `plugin.xml` eingefügte Inhalt vorab nicht bekannt ist, können durch ein Dollar-Zeichen, gefolgt von einer Reihe von Großbuchstaben, Ziffern oder Unterstriche Variablen angegeben werden. Für das obige Beispiel würde die Datei `plugin.xml` diesem Tag gehören:
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
 Plugman Variablenreferenzen mit dem angegebenen Wert oder eine leere Zeichenfolge ersetzt, wenn keine gefunden. Der Wert der Variable Referenz kann erkannt (in diesem Fall aus der `AndroidManifest.xml` -Datei) oder vom Benutzer des Tools angegeben werden; der genaue Vorgang ist abhängig von der speziellen Werkzeug.
@@ -478,15 +508,15 @@ Plugman kann Benutzer ein Plugin erforderlichen Variablen angeben anfordern. API
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Um die Variable obligatorisch zu machen, muss das `< Plattform >` Tag ein `< Präferenz >` -Tag enthalten. Zum Beispiel:
+Um die Variable obligatorisch zu machen, muss das Tag `< platform >` ein Tag `<preference>` enthalten. Zum Beispiel:
 
     <preference name="API_KEY" />
     
 
-Plugman überprüft, ob diese erforderlichen Einstellungen in übergeben werden. Wenn dies nicht der Fall ist, sollte es den Benutzer warnen, übergeben Sie die Variable in und Ausfahrt mit einem NULL-Code veranschaulicht.
+Plugman überprüft, ob diese erforderlichen Einstellungen in übergeben werden. Wenn dies nicht der Fall ist, es sollte den Benutzer warnen, wie Sie in die Variable übergeben und beendet mit einem null-Kode.
 
 Bestimmten Variablennamen sollte reserviert werden, wie unten aufgeführt.
 
 ## $PACKAGE_NAME
 
-Der Reverse-Domäne Stil eindeutige Bezeichner für das Paket, `CFBundleIdentifier` in iOS oder das `Paket` -Attribut des Elements auf der obersten Ebene `manifestieren` in einer Datei `AndroidManifest.xml` entspricht.
+Der Rückwärtsgang-Domäne Stil eindeutige Bezeichner für das Paket, entspricht die `CFBundleIdentifier` in iOS oder das `Paket` -Attribut des Elements in eine Datei `AndroidManifest.xml` auf oberster Ebene `manifestieren` .

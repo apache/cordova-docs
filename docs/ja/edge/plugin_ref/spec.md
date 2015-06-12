@@ -409,35 +409,57 @@ Windows プラットフォーム用 `<lib-file>` 要素は、`< SDKReference >` 
 
 プラグインが依存フレームワーク (通常 OS/プラットフォームの一部) を識別します。
 
-例:
+省略可能な`custom`属性がフレームワークはプラグイン ファイルの一部として含まれているかどうかを示すブール値 (こうだはシステム フレームワークではない)。
+
+### iOS のための*framework*
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src` 属性は、どの plugman を与えられたプラットホームのための正しい方法のコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
+省略可能な`weak`属性はフレームワークが弱リンクする必要があるかどうかを示すブール値です。デフォルトは`false`.
 
-省略可能な `weak` 属性はフレームワークが弱いリンクする必要があるかどうかを示すブール値です。既定値は `false`.
+### 人造人間のための*framework*
 
-省略可能な `custom` 属性が、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってないシステム フレームワークです)。 既定値は`false`です。 ***Android の*** **src**を治療する方法を指定します。 場合`true` **src**アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
+(Cordova-android@4.0.0) 現在のアンドロイド、Maven 依存関係を含めるか、バンドルされているライブラリ プロジェクトを含める*framework*タグが使用されます。
 
-オプションの`型`属性に追加するフレームワークの型を示す文字列です。 現在のところ`projectReference`がサポートされていると Windows 用のみ。 使用して `custom='true'` と `type='projectReference'`、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
+例:
 
-オプションの `parent` 属性は、現在 Android 上でのみサポートされます。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は`.`、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framework*は、メイン プロジェクトの .gradle ファイルに含まれるサブ カスタム .gradle ファイルを持っている使用もできます。
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Pre-android@4.0.0 (ANT ベースのプロジェクト): のため
+
+追加するフレームワークの種類を示す文字列`type`はオプションの属性です。 現在は`projectReference`がサポートされていると Windows 用のみ。 使用して`custom='true'`と`type='projectReference'` 、コンパイルに追加されます + コルドバ プロジェクトの手順をリンクするプロジェクトへの参照を追加します。 これは本質的に参照するコルドバ アプリケーションである依存関係として構築されている明示的に 'custom' フレームワーク複数のアーキテクチャが対象にする唯一の方法は現在です。
+
+オプションの`parent`は、追加参照するサブプロジェクトを含むディレクトリへの相対パスを設定します。 既定値は`.`、すなわちアプリケーション プロジェクト。 この例でようなサブ プロジェクト間の参照を追加することができます。
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
-Windows プラットフォームを絞り込むときに、フレームワークが含まれてする必要があります (すべて省略可能) の 3 つの追加属性をサポートします。
+### Windows のための*framework*
 
-`arch` 属性をフレームワークのみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
+Windows プラットフォームは、絞り込むときにフレームワークが含まれてする必要があります (すべて省略可能) の 3 つの追加属性をサポートします。
 
-`device-target`属性をフレームワークのみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
 
-`versions` 属性をフレームワークのみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+`arch`の属性は、指定されたアーキテクチャを構築するときに、フレームワークを含めるだけあることを示します。 サポートされる値は `x 86`、`x64` または `ARM`.
+
+`device-target`属性は、指定されたターゲット デバイス タイプを作成するときに、フレームワークを含めるだけあることを示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+
+`versions`属性は、指定されたバージョン文字列と一致するバージョンを構築するときに、フレームワークを含めるだけあることを示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
 
 これらの Windows の特定の属性を使用しての例:
 
@@ -449,44 +471,52 @@ Windows プラットフォームを絞り込むときに、フレームワーク
 
 ## *情報*要素
 
-追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。 例:
+ユーザーに提供される追加情報。これは、簡単に自動化することはできませんまたは plugman の範囲を超えている追加の手順を必要とする場合に便利です。 例:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    'local.properties' に次の行を追加する必要があります： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib </情報 >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
+    
+
+## *hook*要素
+
+特定のアクションが発生したときにコルドバで呼び出されるカスタム スクリプトを表します (たとえば、プラグインを追加またはプラットフォーム準備ロジックが呼び出されます)。 これは、コルドバの既定の機能を拡張する必要が便利です。 詳細についてはフックのガイドを参照してください。
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
 ## 変数
 
-特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、Android 上 C2DM を登録するパッケージ id が`com.alunny.message`アプリは許可を要求するよう。
+特定の場合、プラグインは、構成の変更をターゲット アプリケーションに依存させる必要があります。 たとえば、Android 上 C2DM を登録するパッケージ id が`com.alunny.message`アプリが許可を要求するよう。
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-`plugin.xml`ファイルから挿入するコンテンツは前もって知られていないこのような場合、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連で示されますことができます。 上記の例では、 `plugin.xml`ファイルにはこのタグが含まれます。
+`Plugin.xml`ファイルから挿入されたコンテンツが事前に知られていないこのようなの場合、ドル記号の大文字、数字、またはアンダー スコアの後に変数を指定できます。 上記の例では、 `plugin.xml`ファイルはこのタグを含めます。
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 変数参照の値 (この場合から`与えます`ファイル) を検出したり、ツール; のユーザーによって指定されました。正確なプロセスは、特定のツールに依存します。
+検索されない場合は、plugman によって指定された値または空の文字列で変数の参照を置き換えます。 変数参照の値を (この場合、`与えます。`ファイル) から検出されたまたはツールのユーザーが指定した可能性があります。正確なプロセスは特定のツールに依存しています。
 
-plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google Maps API キーは、コマンドライン引数として指定できます。
+plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google マップの API キーは、コマンドライン引数として指定できます。
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-変数の必須に`< プラットフォーム >`タグは`< 優先順位 >`タグが含まれている必要があります。たとえば。
+変数を必須にするには、 `<platform>`タグは`<preference>`タグを含める必要があります。たとえば。
 
     <preference name="API_KEY" />
     
 
-plugman はこれらの必要な設定が渡されたことを確認します。 それ以外の場合はそれに変数を渡すし、0 以外のコードで終了する方法をユーザーに警告する必要があります。
+plugman は、これらの必要な設定が渡されたことを確認します。 されていない場合は、方法で変数を渡すし、0 以外のコードで終了ユーザーに警告する必要がありますそれ。
 
-以下に示す特定の変数名を予約する必要があります。
+下記のとおり、特定の変数名を予約する必要があります。
 
 ## $PACKAGE_NAME
 
-逆ドメイン スタイル`CFBundleIdentifier` iOS または`与えます`ファイルの最上位の`マニフェストの`要素の`パッケージ`属性に対応するパッケージの一意の識別子。
+逆ドメイン スタイル`CFBundleIdentifier` iOS または`与えます。`ファイルの`マニフェストの`トップレベルの要素の`パッケージ`属性に対応するパッケージの一意の識別子。

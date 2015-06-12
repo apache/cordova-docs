@@ -72,6 +72,7 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 *   Guide de la plate-forme Windows
 *   Plugins Windows
+*   Emballage de Windows
 *   La mise à niveau de Windows 8
 
 ## Paciarelli

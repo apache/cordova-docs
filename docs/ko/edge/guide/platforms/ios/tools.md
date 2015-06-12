@@ -45,12 +45,44 @@ IOS 위한 쉘 도구를 사용 하려면 [cordova.apache.org][1]에서 코르�
         $ /path/to/my_new_project/cordova/run --device
     
 
-## 공개
+## 응용 프로그램 서명
 
-        $ /path/to/my_new_project/cordova/build --release
+서명, iOS 애플 리 케이 션을 배포, 인증서 만들고 [iOS 개발자 라이브러리에서][2] 프로 파일을 프로 비전에 대 한 자세한 내용은.
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+코르도바에서 응용 프로그램을 서명 해야 다음: * 코드 서명 정체성 (`-codeSignIdentity`): [XCode를 사용 하 여][3] 정체성을 서명 하는 새로운 iOS를 만들 수 있으며 키체인에 추가. 서명 id-일반적으로 배포 또는 개발, 코드의 유형의 여기에 지정 해야 합니다.
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   프로비저닝 프로 파일 (`-provisioningProfile`): [애플 회원 센터를 사용 하 여][4] 프로비저닝 프로 파일을 만들 수 있습니다. 컴퓨터에 프로비저닝 프로 파일을 다운로드 하 고 그것을 등록 하는 XCode에서 그것을 실행. 여기 당신의 Mac에 복사: ~/Library/MobileDevice/Provisioning\ 프로필 /. 텍스트 편집기에서 열고, 여기에 지정 하는 UUID를 찾을 수 있습니다.
+
+*   코드 서명 리소스 규칙 (`-codeSignResourceRules`) (선택 사항): 사용자 지정 서명 리소스 규칙을 지정할 수 있습니다.
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(코드 서명 id `cordova/build-release.xcconfig` 파일 수정)
+양자 택일로, (`-buildConfig`) 인수를 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다. 빌드 구성 파일의 예제는 다음과 같습니다.
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+또한 혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에서 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다.
 
 ## 로깅
 

@@ -72,6 +72,7 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 
 *   Guida alla piattaforma Windows
 *   Plugin di Windows
+*   Imballaggio di Windows
 *   L'aggiornamento di Windows 8
 
 ## Tizen

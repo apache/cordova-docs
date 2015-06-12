@@ -45,12 +45,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ /path/to/my_new_project/cordova/run --device
     
 
-## 釋放
+## 簽署應用程式
 
-        $ /path/to/my_new_project/cordova/build --release
+你可以瞭解更多關於簽署、 分發 iOS 應用程式、 創建證書和資源調配上[iOS 開發人員庫][2]的設定檔.
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+要簽名的應用程式在科爾多瓦，您需要以下: * 代碼簽名標識 (`-codeSignIdentity`):[使用 XCode][3]可以創建新的 iOS 簽名標識並將其添加到您的鑰匙串。 類型的代碼簽名身份 — — 通常分佈或發展，需要在這裡指定。
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   資源調配 (`-provisioningProfile`) 的設定檔:[使用蘋果會員中心][4]你可以創建一個資源調配的設定檔。 下載到您的機器上設置的設定檔並啟動它在 XCode 來註冊它。 它在你的 Mac 上複製到此處: ~/Library/MobileDevice/Provisioning\ 設定檔 /。 在文字編輯器中打開它，你可以找到，需要在此處指定的 UUID。
+
+*   代碼簽名資源規則 (`-codeSignResourceRules`) (可選): 允許您指定自訂簽名資源規則。
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+可以使用`生成`或`運行`腳本上面的命令列參數指定這些參數:
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-（修改您的代碼簽名標識 `cordova/build-release.xcconfig` 檔）
+或者，您可以指定它們在組建組態檔 （build.json） 中使用 （`--buildConfig`) 的論點。下面是組建組態檔的一個示例：
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。從命令列參數的值將會得到優先。
 
 ## 日誌記錄
 

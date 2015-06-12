@@ -409,35 +409,57 @@ Esempi:
 
 Identifica un quadro (solitamente parte della piattaforma/OS) su cui il plugin dipende.
 
-Esempi:
+L'attributo facoltativo `custom` è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema).
+
+### *framework* per iOS
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-L'attributo `src` identifica il quadro, che plugman tenta di aggiungere al progetto di Cordova, nella maniera corretta per una determinata piattaforma.
+L'attributo facoltativo `weak` è un valore booleano che indica se il quadro dovrebbe essere debolmente collegato. Il valore predefinito è `false`.
 
-L'attributo facoltativo `weak` è un valore booleano che indica se il quadro dovrebbe essere debolmente legato. Il valore predefinito è `false`.
+### *framework* per Android
 
-L'attributo facoltativo `custom` è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è `false`. ***Su Android*** specifica come trattare **src**. Se `true` **src** è un percorso relativo dalla directory del progetto applicazione, altrimenti - dalla directory del SDK di Android.
+Su Android (al cordova-android@4.0.0), *framework* tag vengono utilizzati per includere le dipendenze Maven, o per includere progetti libreria in dotazione.
 
-L'attributo facoltativo `type` è una stringa che indica il tipo di framework per aggiungere. Attualmente solo `projectReference` è supportato solo per Windows. Utilizzando `custom='true'` e `tipo = 'projectReference'` aggiungere un riferimento al progetto che verrà aggiunto alla compilazione + collegamento passi del progetto cordova. Questo essenzialmente è l'unico modo attualmente che un quadro 'personalizzato' possibile destinazione più architetture come sono costruite in modo esplicito come dipendenza dall'applicazione posizionamento a cordova.
+Esempi:
 
-L'attributo facoltativo `parent` attualmente è supportato solo su Android. Imposta il percorso relativo alla directory contenente il sottoprogetto a cui aggiungere il riferimento. Il valore predefinito è `.`, cioè il progetto di applicazione. Consente di aggiungere riferimenti tra sottoprogetti come in questo esempio:
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framework* è utilizzabile anche per avere i file personalizzati .gradle sub-inclusi nel file .gradle del progetto principale:
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+Per pre-android@4.0.0 (progetti basati su ANT):
+
+Il `type` di attributo facoltativo è una stringa che indica il tipo di framework per aggiungere. È supportato attualmente solo `projectReference` e solo per Windows. Utilizzando `custom='true'` e `type='projectReference'` verrà aggiunto un riferimento al progetto che verrà aggiunto alla compilazione + link passi del progetto cordova. Questo essenzialmente è l'unico modo attualmente che un framework 'personalizzato' possono essere eseguite più architetture come sono costruiti in modo esplicito come una dipendenza di riferimento applicazione di cordova.
+
+Il opzionale `parent` imposta il percorso relativo alla directory contenente il sotto-progetto a cui aggiungere il riferimento. Il valore predefinito è `.`, cioè il progetto di applicazione. Permette di aggiungere riferimenti tra sub progetti come in questo esempio:
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
-La piattaforma Windows supporta tre attributi aggiuntivi (facoltativi) per affinare quando il quadro dovrebbe essere incluso:
+### *framework* per Windows
 
-L'attributo `arch` indica che il quadro solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
+La piattaforma Windows supporta tre attributi aggiuntivi (facoltativi) per perfezionare quando il quadro dovrebbe essere incluso:
 
-Il `device-target` attributo indica che il quadro solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
 
-L'attributo `versions` indica che il quadro solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+L'attributo di `arch` indica che il quadro deve essere incluso solo quando si costruisce per l'architettura specificata. Valori supportati sono `x86`, `x64` o `ARM`.
+
+L'attributo `device-target` indica che il quadro deve essere incluso solo durante la compilazione per il tipo di periferica di destinazione specificato. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+
+L'attributo di `versions` indica che il quadro deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
 
 Esempi di utilizzo di questi attributi specifici di Windows:
 
@@ -449,44 +471,52 @@ Esempi di utilizzo di questi attributi specifici di Windows:
 
 ## *info* Elemento
 
-Informazioni supplementari fornite agli utenti. Questo è utile quando si richiedono ulteriori passaggi che non possono essere facilmente automatizzati o sono oltre la portata di plugman. Esempi:
+Ulteriori informazioni fornite agli utenti. Ciò è utile quando si richiedono passaggi aggiuntivi che non possono essere facilmente automatizzati o ambito di plugman. Esempi:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    È necessario aggiungere la seguente riga alla 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
+    
+
+## *hook* Elemento
+
+Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la Guida di ganci.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
 ## Variabili
 
-In alcuni casi, un plugin potrebbe essere necessario apportare modifiche alla configurazione dipende l'applicazione di destinazione. Ad esempio, per registrare per C2DM su Android, un'app di cui id del pacchetto è `com.alunny.message` richiederebbe un'autorizzazione quali:
+In alcuni casi, potrebbe essere necessario apportare modifiche alla configurazione dipende l'applicazione di destinazione un plugin. Ad esempio, per iscriversi C2DM su Android, un'app di cui id di pacchetto è `com.alunny.message` richiederebbe un'autorizzazione quali:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-In tali casi dove il contenuto inserito dal file `plugin.xml` non è noto prima del tempo, le variabili possono essere indicate da un segno di dollaro, seguito da una serie di lettere, cifre o caratteri di sottolineatura. Per l'esempio precedente, il file di `plugin.xml` dovrebbe includere questo tag:
+In tali casi dove il contenuto inserito da `plugin` . xml file non è noto in anticipo, le variabili possono essere indicate da un segno di dollaro seguito da una serie di lettere maiuscole, cifre o caratteri di sottolineatura. Per l'esempio precedente, il file di `plugin.xml` includerebbe questo tag:
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman sostituisce i riferimenti a variabili con il valore specificato, o una stringa vuota se non trovato. Il valore del riferimento variabile può essere rilevato (in questo caso, dal file `AndroidManifest.xml`) o specificato dall'utente dello strumento; il processo esatto dipende dalla particolare strumento.
+Plugman sostituisce i riferimenti alle variabili con il valore specificato, o una stringa vuota se non viene trovato. Il valore del riferimento variabile può essere rilevato (in questo caso, dal file `AndroidManifest. XML` ) o specificato dall'utente dello strumento; il processo esatto dipende dal particolare strumento.
 
-plugman possibile richiedere agli utenti di specificare le variabili necessarie di un plugin. Ad esempio, i tasti per C2M e Google Maps API possono essere specificati come un argomento della riga di comando:
+Plugman possibile richiedere agli utenti di specificare le variabili necessarie di un plugin. Ad esempio, i tasti per C2M e Google Maps API possono essere specificati come un argomento della riga di comando:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Per rendere obbligatoria la variabile, il tag `<platform>` deve contenere un tag `<preference>` . Per esempio:
+Per rendere obbligatoria la variabile, il tag `< platform >` deve contenere un tag `< preference >` . Per esempio:
 
     <preference name="API_KEY" />
     
 
-plugman controlla che queste preferenze richieste vengono passate. Se così non fosse, dovrebbe avvertire l'utente come passare la variabile in e uscire con un codice diverso da zero.
+Plugman controlla che queste preferenze richieste vengono passate. Se così non fosse, si dovrebbe mettere in guardia l'utente come passare la variabile in e uscire con un codice diverso da zero.
 
 Alcuni nomi di variabile dovrebbero essere riservati, come elencato di seguito.
 
 ## $PACKAGE_NAME
 
-L'identificatore univoco di stile retro-dominio per il pacchetto, corrispondente per il `CFBundleIdentifier` su iOS o il `pacchetto` attributo dell'elemento di primo livello `manifesto` in un file `AndroidManifest.xml`.
+L'identificatore univoco di stile retro-dominio per il pacchetto, corrispondente a `CFBundleIdentifier` su iOS o l'attributo del `package` dell'elemento di primo livello `manifest` in un file `AndroidManifest. XML` .

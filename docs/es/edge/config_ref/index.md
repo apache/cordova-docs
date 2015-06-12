@@ -130,53 +130,72 @@ A más de una plataforma, pero no a todos ellos se aplican las siguientes prefer
 
 *   `Orientation`(string, el valor predeterminado de `default` ): le permite bloquear orientación y evitar que roten en respuesta a cambios en la orientación de la interfaz. Los valores posibles son `default` , `landscape` o `portrait` . Ejemplo:
     
-        < nombre de preferencia = "Orientación" value = "paisaje" / >
+        <preference name="Orientation" value="landscape" />
         
     
     Además, puede especificar cualquier valor de orientación específica de la plataforma si colocas el `<preference>` elemento dentro de un `<platform>` elemento:
     
-        < nombre de plataforma = "android" >< nombre de preferencia = "Orientación" value = "sensorLandscape" / >< / plataforma >
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
         
     
     Se aplica a Android, iOS, WP8, Amazon OS fuego y Firefox OS.
     
     **Nota**: el `default` valor significa Cordova tira a la entrada de preferencia de orientación del archivo de manifiesto/configuración de la plataforma que permite la plataforma a la suplencia a su comportamiento por defecto.
-
-'default' permite tanto retrato y paisaje modo - sólo después de implementar la devolución de llamada. Yo podría tal vez vuelva a la palabra esto como sigue:
-
-Para iOS, la orientación se puede controlar mediante programación definiendo un callback de javascript en la ventana:
-
-    /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
-    function shouldRotateToOrientation(degrees) {
-         return true;
-    }
     
+    Para iOS, para especificar tanto retrato y modo apaisado usted utilizaría la plataforma valor específico `all`:
+    
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
+        
+    
+    Para iOS, orientación se puede controlar mediante programación por definir un callback de javascript en la `window`:
+
+<pre>/** 
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
+    function shouldRotateToOrientation(degrees) {
+      return true;
+    }
+    </pre>
 
 ## La *función de* elemento
 
-Si utilizas la CLI para construir aplicaciones, utilice el comando `plugin` para habilitar dispositivo APIs. Esto no modifica el archivo `config.xml` de primer nivel, así que el elemento `< feature>` no se aplica a su flujo de trabajo. Si usted trabaja directamente en un SDK y usando el archivo `config.xml` de específica de la plataforma como fuente, utilice la etiqueta `<feature>` para permitir a nivel de dispositivo APIs y plugins externos. A menudo aparecen con valores personalizados en archivos específicos a una plataforma `config.xml` . Por ejemplo, aquí es cómo especificar el dispositivo de API para proyectos Android:
+Si utilizas el CLI para construir aplicaciones, usted utilice el comando `plugin` para habilitar dispositivo APIs. No se modifique el archivo `config.xml` de nivel superior, por lo que el elemento `< feature >` no se aplica a su flujo de trabajo. Si trabajas directamente en un SDK y usando el archivo `config.xml` de específicas de la plataforma como fuente, se utiliza la etiqueta `< feature >` para habilitar APIs de nivel de dispositivo y plugins externos. A menudo aparecen con valores personalizados en archivos específicos para cada plataforma `config.xml` . Por ejemplo, aquí es cómo especificar el dispositivo API para los proyectos de Android:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-Aquí es cómo aparece el elemento para proyectos de iOS:
+Aquí es cómo aparece el elemento de iOS proyectos:
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
         </feature>
     
 
-Consulte la referencia de la API para obtener más información sobre cómo especificar cada característica. Consulte a la guía de desarrollo de Plugin para obtener más información sobre plugins.
+Ver la referencia de la API para obtener más información sobre cómo especificar cada función. Consulte a la guía de desarrollo del Plugin para obtener más información sobre plugins.
 
-## La *plataforma de* elemento
+## El elemento *platform*
 
-Cuando se usa la CLI para construir aplicaciones, a veces es necesario especificar preferencias u otros elementos específicos a una plataforma de concreto. Utilice el elemento `<platform>` para especificar la configuración que debe aparecer sólo en un archivo específico de plataforma única `config.xml` . Por ejemplo, aquí es cómo especificar que android sólo debe emplear la opción de pantalla completa:
+Cuando utilice la CLI para construir aplicaciones, a veces es necesario especificar preferencias u otros elementos específicos para una determinada plataforma. Utilice el elemento `< platform >` para especificar la configuración que sólo debe aparecer en un archivo específico de plataforma única `config.xml` . Por ejemplo, aquí es cómo especificar que android sólo debe emplear la opción de pantalla completa:
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+    
+
+## El elemento *hook*
+
+Representa la secuencia de comandos personalizada que será llamado por Córdoba cuando se produce cierta acción (por ejemplo, después se agrega el plugin o plataforma preparar lógica se invoca). Esto es útil cuando se necesita extender la funcionalidad de Cordova por defecto. Para más información vea la guía de los ganchos.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

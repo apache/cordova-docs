@@ -186,7 +186,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">加速度計</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">加速度計</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -219,7 +219,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-battery-status">BatteryStatus</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -253,7 +253,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">相機</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-camera">相機</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -286,7 +286,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">捕獲</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">捕獲</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -319,7 +319,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">指南針</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">指南針</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -353,7 +353,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">連接</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-network-information">連接</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -386,7 +386,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">連絡人</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-contacts">連絡人</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -420,7 +420,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">設備</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device">設備</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -486,7 +486,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">檔</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file">檔</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -519,7 +519,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">檔案傳輸</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">檔案傳輸</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -555,7 +555,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">地理位置</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-geolocation">地理位置</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -588,7 +588,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">全球化</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-globalization">全球化</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -621,7 +621,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -655,7 +655,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">媒體</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media">媒體</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -688,7 +688,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">通知</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-dialogs">通知</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -721,7 +721,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">閃屏</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">閃屏</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -754,7 +754,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">狀態列</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">狀態列</a>
         </th>
         
         <td data-col="amazon-fireos" class="n">
@@ -823,7 +823,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">振動</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-vibration">振動</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

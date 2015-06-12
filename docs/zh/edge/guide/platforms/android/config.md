@@ -77,3 +77,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `DefaultVolumeStream`（字串，預設值為 `default` ，加在科爾多瓦 android 3.7.0): 設置的音量按鈕連結到的硬體音量。 預設情況下這是"叫"手機和平板電腦的"媒體"。 將此設置為"媒體"有您的應用程式卷按鈕總是改變媒體卷。 請注意，當使用科爾多瓦的媒體外掛程式時，音量按鈕將動態地更改為任何媒體物件處於活動狀態時，控制的媒體卷。
+
+*   `OverrideUserAgent`(字串，預設情況下未設置): 如果設置，值將替換舊使用者代理的 web 視圖。 它有利於從應用程式或瀏覽器請求時請求遠端頁面，識別。 使用持謹慎態度，這可能導致與 web 伺服器的 compitiable 問題。 對於大多數情況下，改用 AppendUserAgent。
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent`(字串，預設情況下未設置): 如果設置，值將附加到年底老使用者代理的 web 視圖。 當使用 OverrideUserAgent，此值將被忽略。
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

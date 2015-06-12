@@ -98,31 +98,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Whitelist-Guide
+        Plattformen und Plugins Versionsmanagement
       </h2>
       
-      <span>Gewähren Sie eine Anwendungszugriff auf externe Ressourcen.</span>
+      <span>Speichern und Wiederherstellen von Projekten für CLI in einen bekannten Zustand ohne Streit.</span>
     </li>
     <li>
       <h2>
-        Speicher
+        Whitelist-Guide
       </h2>
       
-      <span>Eine Übersicht über native Storage-Optionen.</span>
+      <span>Eine Anwendungszugriff auf externe Ressourcen gewähren.</span>
+    </li>
+    <li>
+      <h2>
+        Storage
+      </h2>
+      
+      <span>Eine Übersicht über native Speicheroptionen.</span>
+    </li>
+    <li>
+      <h2>
+        Haken-Guide
+      </h2>
+      
+      <span>Cordova Standardfunktionalität durch Hinzufügen von benutzerdefinierten Skripts erweitern.</span>
     </li>
     <li>
       <h2>
         Die nächsten Schritte
       </h2>
       
-      <span>Ein Blick auf Themen, die neue Cordova Entwickler stoßen.</span>
+      <span>Einen Blick auf Themen, die neue Cordova Entwickler stoßen werden.</span>
     </li>
     <li>
       <h2>
         <a href="_index.html">Stichwort-Index</a>
       </h2>
       
-      <span>Gesamtindex der Dokumentation.</span>
+      <span>Vollständiger Index der Dokumentation.</span>
     </li>
   </ul>
   

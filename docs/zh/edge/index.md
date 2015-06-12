@@ -98,6 +98,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        平臺和外掛程式版本管理
+      </h2>
+      
+      <span>保存和還原您的 CLI 專案到一個已知的狀態，沒有麻煩。</span>
+    </li>
+    <li>
+      <h2>
         白名單指南
       </h2>
       
@@ -108,11 +115,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         存儲
       </h2>
       
-      <span>本機存儲選項的概述。</span>
+      <span>本機存儲選項的概覽。</span>
     </li>
     <li>
       <h2>
-        下一步
+        掛鉤指南
+      </h2>
+      
+      <span>通過添加自訂腳本來擴展預設科爾多瓦功能。</span>
+    </li>
+    <li>
+      <h2>
+        接下來的步驟
       </h2>
       
       <span>看看新的科爾多瓦開發者會遇到的主題。</span>
@@ -122,7 +136,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <a href="_index.html">關鍵字索引</a>
       </h2>
       
-      <span>完整的檔的索引。</span>
+      <span>全文索引的文檔。</span>
     </li>
   </ul>
   

@@ -77,3 +77,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `DefaultVolumeStream`(문자열, 기본값은 `default` , 코르도바-안 드 로이드 3.7.0에에서 추가): 하드웨어 볼륨 버튼에 링크는 볼륨을 설정 합니다. 기본적으로 이것은 "전화" 전화 및 정제에 대 한 "미디어"에 대 한입니다. 이 응용 프로그램의 볼륨 버튼 항상 미디어 볼륨을 변경 해야 "미디어"에 설정 합니다. 코르도바의 미디어 플러그인을 사용 하는 경우, 볼륨 버튼 미디어 개체 활성화 되 면 미디어 볼륨을 제어 하려면 동적으로 변경 됩니다.
+
+*   `OverrideUserAgent` (기본적으로 설정 되지 않는 문자열): 설정, 값 대체 webview의 오래 된 UserAgent. 원격 페이지를 요청할 때 응용 프로그램 또는 브라우저에서 요청을 식별 하는 데 도움이 됩니다. 주의이 5 월 사용 웹 서버와 compitiable 문제를 발생합니다. 대부분의 경우, AppendUserAgent를 대신 사용 합니다.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (기본적으로 설정 되지 않는 문자열): 설정는 경우 값 webview의 오래 된 UserAgent의 끝에 추가 됩니다. OverrideUserAgent와 함께 사용 하는 경우이 값은 무시 됩니다.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

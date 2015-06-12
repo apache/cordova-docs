@@ -77,3 +77,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `DefaultVolumeStream`(ciąg, domyślnie `default` , dodane w cordova-android 3.7.0): ustawia wielkość sprzętowych przycisków link do wielkości. Domyślnie to, "nazywamy" telefony i "media" na tabletki. Ustawienie tego parametru na "media", aby mieć przyciski głośności Twojej aplikacji zawsze zmienić objętość nośnika. Należy pamiętać, że gdy za pomocą wtyczki Cordova w mediach, przyciski głośności dynamicznie zmieni się do sterowania głośnością mediów, gdy wszelkie obiekty multimedialne są aktywne.
+
+*   `OverrideUserAgent` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wartość zastąpi stary UserAgent widoku sieci Web. To jest przydatne do identyfikowania wniosek z aplikacji/przeglądarki podczas żądania stron zdalnego. Należy zachować ostrożność, może to powoduje compitiable problem z serwerami sieci web. Dla większości przypadków Użyj AppendUserAgent zamiast.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wartość dołączy do końca starego UserAgent widoku sieci Web. Podczas korzystania z OverrideUserAgent, wartość ta zostanie zignorowana.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

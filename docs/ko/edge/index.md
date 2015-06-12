@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -98,31 +98,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        플랫폼 및 플러그인 버전 관리
+      </h2>
+      
+      <span>저장 하 고 번거로움 없이 알려진 상태로 CLI 프로젝트 복원.</span>
+    </li>
+    <li>
+      <h2>
         화이트 리스트 가이드
       </h2>
       
-      <span>외부 리소스에 대 한 응용 프로그램 액세스를 부여 합니다.</span>
+      <span>외부 리소스는 응용 프로그램 액세스를 부여할.</span>
     </li>
     <li>
       <h2>
         스토리지
       </h2>
       
-      <span>기본 저장 옵션의 개요입니다.</span>
+      <span>기본 저장소 옵션에 대 한 개요.</span>
+    </li>
+    <li>
+      <h2>
+        후크 가이드
+      </h2>
+      
+      <span>사용자 지정 스크립트를 추가 하 여 기본 코르도바 기능을 확장.</span>
     </li>
     <li>
       <h2>
         다음 단계
       </h2>
       
-      <span>새로운 코르 도우 바 개발자가 발생 하는 항목에서 봐.</span>
+      <span>새로운 코르도바 개발자가 발생 하는 항목을 봐.</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">키워드 색인</a>
+        <a href="_index.html">키워드 인덱스</a>
       </h2>
       
-      <span>문서내 전체 색인 보기</span>
+      <span>설명서의 전체 인덱스.</span>
     </li>
   </ul>
   

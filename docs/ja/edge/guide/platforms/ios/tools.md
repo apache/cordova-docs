@@ -45,12 +45,44 @@ IOS 用シェル ・ ツールを有効にするには、コルドバ[cordova.ap
         $ /path/to/my_new_project/cordova/run --device
     
 
-## 解放します。
+## アプリケーションの署名
 
-        $ /path/to/my_new_project/cordova/build --release
+署名、iOS アプリの配布、証明書の作成および[iOS 開発者ライブラリ][2]上のプロファイルのプロビジョニングについて学べます.
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+コルドバのアプリに署名する必要があります次: * 調印のアイデンティティ (`-codeSignIdentity`) をコード: [XCode を使用して][3]アイデンティティを署名の新しい iOS を作成でき、あなたのキーチェーンに追加。 コード署名 id - 通常配布または開発の種類は、ここで指定する必要があります。
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   プロファイル (`--provisioningProfile`):[アップルのメンバー センターを使用して][4]プロビジョニング プロファイルを作成することができます。 あなたのマシンにプロビジョニング プロファイルをダウンロードし、それを登録する XCode でそれを起動します。 ここでお使いの Mac にコピーされます: ~/Library/MobileDevice/Provisioning\ プロファイル/。 テキスト エディターで開くと、ここで指定する必要がある UUID を検索できます。
+
+*   コード署名のリソースの規則 (`--codeSignResourceRules`) (省略可能): カスタム署名リソース ルールを指定することができます。
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+これらのパラメーターは、`buid`または`run`スクリプトを上記のコマンドライン引数を使用して指定できます。
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(お客様のコード署名 id `コルドバ/ビルド-release.xcconfig` ファイルを変更）
+また、(`-buildConfig`) 引数を使用してビルド構成ファイル (build.json) で指定する可能性があります。ビルドの構成ファイルのサンプルを次に示します。
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+サポートをミックスし、コマンド ・ ライン引数および build.json ファイルのパラメーターと一致しています。コマンドライン引数から値は優先順位を取得します。
 
 ## ログの記録
 

@@ -15,16 +15,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Die Datei config.xml
 
-Zahlreiche Aspekte des Verhaltens einer app gesteuert werden, mit einer globalen Konfigurationsdatei `config.xml` . Diese plattformunabhängig XML-Datei ist auf der W3C [Verpackt von Web-Anwendungen (Widgets)][1] Spezifikation und erweiterte Kern-Cordova-API-Funktionen, Plugins und Plattform-spezifischen Einstellungen angeben angeordnet.
+Zahlreiche Aspekte der Verhaltensweisen einer App können über die globale Konfigurationsdatei `config.xml` gesteuert werden. Diese plattformunabhängig XML-Datei ist auf der W3C [Gepackte Webanwendungen (Widgets)][1] Spezifikation. Außerdem können hierüber erweiterte Kern-Cordova-API-Funktionen, Plugins und Plattform spezifische Einstellungen angeben werden.
 
  [1]: http://www.w3.org/TR/widgets/
 
-Für Projekte, die mit dem Cordova-CLI (beschrieben in The Command-Line Interface) erstellt werden kann diese Datei im obersten Verzeichnis gefunden werden:
+Für Projekte, die mit der Cordova-CLI (beschrieben in The Command-Line Interface) erstellt werden, kann diese Datei im obersten Verzeichnis gefunden werden:
 
         app/config.xml
     
 
-Beachten Sie, dass Version 3.3.1-0.2.0, die Datei auf vorher `app/www/config.xml` , und dass es hier immer noch unterstützt wird.
+Beachten Sie, die Datei bei den Versionen 3.3.1-0.2.0 im Ordner `app/www/config.xml` zu finden ist, und das dies nach wie vor unterstützt wird.
 
 Wenn die CLI ein Projekt erstellen, werden in verschiedenen Versionen dieser Datei passiv kopiert `platforms/` Unterverzeichnisse, zum Beispiel:
 
@@ -143,23 +143,33 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
     Gilt für Android, iOS, WP8, Amazon Fire OS und Firefox-OS.
     
     **Hinweis**: `der default` bedeutet Cordova entfernt den Orientierung-Präferenz-Eintrag aus der Plattform Manifest/Konfigurationsdatei ermöglicht die Plattform zum Ausweichen auf sein normales Verhalten.
-
-'Default' ermöglicht Hochformat & Querformat Modus - erst nach Durchführung des Rückrufs. Ich könnte vielleicht diese wie folgt erneut Wort:
-
-Für iOS kann Orientierung programmgesteuert gesteuert werden, indem Sie einen Javascript-Rückruf für Fenster definieren:
-
-    /** 
-    * @param {Number} degree - UIInterfaceOrientationPortrait: 0, UIInterfaceOrientationLandscapeRight: 90, UIInterfaceOrientationLandscapeLeft: -90, UIInterfaceOrientationPortraitUpsideDown: 180
-    * @returns {Boolean} Indicating if rotation should be allowed.
-    */
-    function shouldRotateToOrientation(degrees) {
-         return true;
-    }
     
+    Für iOS um geben beide Porträt & Landschaft Modus verwenden der Plattform bestimmten Wert `all`Sie:
+    
+        <platform name="ios">
+            <preference name="Orientation" value="all" />
+        </platform>
+        
+    
+    Für iOS kann Orientierung programmgesteuert gesteuert werden, indem Sie einen Javascript-Rückruf für `window`definieren:
+
+<pre>/** 
+     * @param {Number} degree 
+     *     UIInterfaceOrientationPortrait: 0, 
+     *     UIInterfaceOrientationLandscapeRight: 90, 
+     *     UIInterfaceOrientationLandscapeLeft: -90, 
+     *     UIInterfaceOrientationPortraitUpsideDown: 180 
+     *
+     * @returns {Boolean} Indicating if rotation should be allowed.
+     */
+    function shouldRotateToOrientation(degrees) {
+      return true;
+    }
+    </pre>
 
 ## Das *Feature* Element
 
-Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `Plugin` -Befehl Gerät APIs zu aktivieren. Dies ändert nicht die Datei auf der obersten Ebene `"config.xml"` , also das `< feature>` nicht für Ihren Workflow gilt. Wenn Sie direkt in ein SDK und mit der Plattform-spezifischen `Datei config.xml` -Datei als Quelle arbeiten, verwenden Sie das Tag `<feature>` Geräteebene APIs und externe Plugins aktivieren. Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `"config.xml"` -Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:
+Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` -Befehl Gerät APIs zu aktivieren. Dies ändert nicht die Datei auf oberster Ebene `"config.xml"` , also das `<feature>` nicht für Ihren Workflow gilt. Wenn Sie direkt in ein SDK und mit der plattformspezifischen `config.xml` -Datei als Quelle arbeiten, verwenden Sie das Tag `<feature>` Geräteebene APIs und externe Plugins aktivieren. Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `"config.xml"` -Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -173,12 +183,19 @@ Hier ist, wie das Element für iOS-Projekte wird angezeigt:
         </feature>
     
 
-Finden Sie die API-Referenz für Details zu einzelnen Funktionen angeben. Finden Sie im Plugin-Entwicklung-Handbuch weitere Informationen auf Plugins.
+Finden Sie die API-Referenz für Details jedes Feature angeben. Sehen Sie auf Plugins im Plugin-Entwicklerhandbuch für weitere Informationen.
 
 ## Die *Plattform* Element
 
-Wenn die CLI verwenden, um Anwendungen zu erstellen, ist es manchmal notwendig, Einstellungen oder andere Elemente, die auf eine spezifische Plattform anzugeben. Verwenden Sie das Element `<platform>` Konfiguration angeben, die nur in einer einzelnen Plattform-spezifischen `Datei config.xml` -Datei angezeigt werden soll. Hier ist beispielsweise angeben, dass nur Android verwenden sollten, die Voreinstellung "Fullscreen":
+Wenn die CLI verwenden, um Anwendungen zu erstellen, ist es manchmal notwendig, Einstellungen oder anderen Elementen, die auf eine spezifische Plattform anzugeben. Verwenden Sie das Element `<paltform>` Konfiguration angeben, die nur in einer einzigen Plattform-spezifischen `Datei config.xml` -Datei angezeigt werden soll. Hier ist beispielsweise angeben, dass nur Android verwenden sollten, die Voreinstellung "Fullscreen":
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />
         </platform>
+    
+
+## Die *hook* Element
+
+Stellt Ihr benutzerdefinierte Skript, das von Cordova aufgerufen wird, wenn bestimmte Aktion ausgeführt wird (z. B. nach Plugin hinzugefügt wird oder Plattform vorbereiten Logik wird aufgerufen). Dies ist nützlich, wenn Sie Cordova Standardfunktionalität verlängern müssen. Weitere Informationen finden Sie unter Haken Guide.
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

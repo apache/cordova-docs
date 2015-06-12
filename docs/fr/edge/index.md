@@ -98,10 +98,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Plates-formes et gestion de Plugins Version
+      </h2>
+      
+      <span>Enregistrer et restaurer vos projets CLI à un état connu sans tracas.</span>
+    </li>
+    <li>
+      <h2>
         Guide de la liste blanche
       </h2>
       
-      <span>Accorder un accès aux applications à des ressources externes.</span>
+      <span>Accorder un accès de l'application vers des ressources externes.</span>
     </li>
     <li>
       <h2>
@@ -112,6 +119,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Guide de crochets
+      </h2>
+      
+      <span>Étendre les fonctionnalités de Cordoue par défaut en ajoutant des scripts personnalisés.</span>
+    </li>
+    <li>
+      <h2>
         Prochaines étapes
       </h2>
       
@@ -119,7 +133,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        <a href="_index.html">Index de mots-clés</a>
+        <a href="_index.html">Index des mots clés</a>
       </h2>
       
       <span>Index complet de la documentation.</span>

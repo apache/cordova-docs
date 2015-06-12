@@ -15,7 +15,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Windows プラットフォームのガイド
 
-このガイドは、SDK の開発環境構築および Windows 8、Windows 8.1 および Windows Phone 8.1 Cordova アプリを展開するを設定する方法を示します。ツールを使用してどちらかシェルを生成し、アプリケーションを構築する方法を示しています。 またはクロス プラットフォーム コルドバ CLI コマンド ライン インターフェイスでの議論。 （これらの開発オプション比較の概要」を参照）。また、Visual Studio 内で Cordova アプリを変更する方法についても説明します。 どちらの作成方法に関係なく下記のような Visual Studio SDK をインストールする必要はあります。
+このガイドでは、構築および Windows 10 普遍的なアプリケーション プラットフォーム、Windows Phone 8.1 Windows 8.1 Windows 8 の Cordova アプリを展開する SDK の開発環境を設定する方法を示しています。 シェル ツールを使用して生成し、アプリケーションを構築する方法を示します。 またはクロスプラット フォーム コルドバ CLI コマンド ライン インターフェイスでの議論。 (これら開発オプションの比較の概要」を参照してください)。このセクションでは、Visual Studio 内でコルドバのアプリを変更する方法も示します。 、採用するアプローチに関係なくあなたは、次のよう Visual Studio SDK をインストールする必要があります。
 
 既存の Windows 8 コルドバ プロジェクトをアップグレードする方法の詳細については、Windows 8 のアップグレードを参照してください。
 
@@ -31,55 +31,71 @@ Windows プラットフォーム用のアプリを開発するには、必要が
 
 *   最低 4 GB の RAM と Windows 8.1 では、32 ビットまたは 64 ビット マシン (*ホーム*、 *Pro*、または*エンタープライズ*エディション)。
 
-*   Windows Phone エミュレーターは、Windows の 8.1 （64） プロフェッショナル ・ エディションのためまたは[クライアント HYPER-V と第 2 レベル アドレス変換 (SLAT)][2]をサポートする、高いとプロセッサ。 Windows 8.1 エンタープライズの評価版は[マイクロソフトの開発者ネットワーク][3]から利用可能.
+*   Windows 8.0、8.1 または 10、32 または 64 ビット*ホーム*、 *Pro*、または[Visual Studio 2012 Express][2]または Visual Studio 2013 と共に、*エンタープライズ*版。 Visual Studio 2015 は Windows 8.0 アプリケーションを構築できません。
 
-*   [Windows 用の visual Studio 2013][4](エクスプレスまたはより高い)。
+ [2]: http://www.visualstudio.com/downloads
 
- [2]: https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv
+アプリの開発 Windows 8.0 および 8.1 (Windows Phone 8.1 を含む)。
+
+*   Windows 8.1 または Windows 10、32 または 64 ビット*ホーム*、 *Pro*、または[Visual Studio 2013 Express][2]と共に以上の*エンタープライズ*エディション。 Windows 8.1 エンタープライズの評価版は[マイクロソフト開発者ネットワーク][3]から利用可能です.
+
+*   Windows Phone エミュレーターは、Windows 8.1 (64) プロフェッショナル ・ エディションの[クライアント HYPER-V とセカンド レベル アドレス変換 (SLAT)][4]をサポートするプロセッサとより高い、または。 Windows 8.1 エンタープライズの評価版は[マイクロソフト開発者ネットワーク][3]から利用可能です.
+
+*   [Windows 用の visual Studio 2013][5](急行またはより高い)。
+
  [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
- [4]: http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8
+ [4]: https://msdn.microsoft.com/en-us/library/windows/apps/ff626524(v=vs.105).aspx#hyperv
+ [5]: http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8
 
-Windows 8.1 でコンパイルしたアプリケーションは*いない*Windows 8.0 の下で実行します。Windows 8.0 でコンパイルしたアプリケーションは転送-互換性のある 8.1 で。
+10 Windows 用アプリの開発。
 
-Windows ストアにアプリを提出する[windowsstore.com][5]に記載された手順に従ってください。
+*   Windows 8.1 または Windows 10 テクニカル プレビュー 2、32 ビットまたは 64 ビット、 [Visual Studio 2015 RC][6]と一緒に以上。
 
- [5]: http://www.windowsstore.com/
+ [6]: http://www.visualstudio.com/preview
 
-Windows の Cordova アプリを開発する Windows を実行して PC を使用する可能性がありますが、仮想マシン環境を実行して、またはを使用してブート キャンプをデュアル ブート Windows 8.1 パーティションも mac では、開発可能性があります。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
+アプリの互換性は、アプリケーションが対象とする OS によって決定されます。 アプリは、前方互換がない下位互換、8.0 で Windows 8.1 をターゲット アプリケーションは実行できませんが、8.1 8.0 用に構築されたアプリケーションを実行できます。
 
-*   [VMWare Fusion][6]
+Windows ストアにアプリを提出する[windowsstore.com][7]で指示に従います。
 
-*   [Parallels Desktop][7],
+ [7]: http://www.windowsstore.com/
 
-*   [Boot Camp][8].
+Windows の Cordova アプリの開発には、Windows を実行する PC を使用しますが、仮想マシン環境を実行することによって、またはデュアル ブート Windows 8.1 のパーティションにブート キャンプを使用しては、また mac で開発することがあります。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
 
- [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
- [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
- [8]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
+*   [VMWare Fusion][8]
 
-## SDK をインストールします。
+*   [Parallels Desktop][9]
 
-*究極*、*プレミアム*、または[Visual Studio][4]の*Professional* 2013 エディションをインストールします。.
+*   [Boot Camp][10]
 
-![][9]
-
- [9]: img/guide/platforms/win8/win8_installSDK.png
+ [8]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [9]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [10]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
 ## コルドバのシェル ・ ツールを使用してください。
 
 SDK と一緒にコルドバの Windows 中心のシェル ・ ツールを使用する場合は、2 つの基本的なオプションがあります。
 
-*   CLI で生成されたプロジェクト コードからローカル アクセスします。利用できる、`プラットフォーム/windows/`ディレクトリ以下に示すように、 `windows`プラットフォームを追加した後。
+*   CLI で生成されたプロジェクト コードからローカルでアクセスします。利用できる、`platforms/windows/`ディレクトリ以下の説明に従って、 `windows`プラットフォームを追加した後。
 
-*   [Cordova.apache.org][10]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 必ず、空のディレクトリ内でこの場合、適切なアーカイブ、`コルドバ windows`を展開してください。 関連するバッチ ユーティリティを`パッケージ/bin`ディレクトリで利用できます。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
+*   [cordova.apache.org][11]で別のディストリビューションからそれらをダウンロードします。 コルドバの配布には、プラットフォームごとに別々 のアーカイブが含まれています。 必ず空のディレクトリ内でこのような場合は、適切なアーカイブ、`コルドバ windows`を展開してください。 `package/bin`ディレクトリに関連するバッチ ユーティリティがあります。 (必要に応じてより詳細な指示について**README**ファイルを参照して)。
 
- [10]: https://www.apache.org/dist/cordova/platforms/
+ [11]: https://www.apache.org/dist/cordova/platforms/
 
 これらのシェルのツールを作成、構築、および Windows アプリケーションを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。
 
+## SDK をインストールします。
+
+[Visual Studio][2]の要件が上記のバージョンと一致するの任意のエディションをインストールします。
+
+![][12]
+
+ [12]: img/guide/platforms/win8/win8_installSDK.png
+
+Windows 10、Visual Studio インストーラーには普遍的な Windows アプリケーションを構築するためのツールをインストールするオプションがあります。 このオプションが必要な SDK をインストールするのをインストールするときに選択されているを確認する必要があります。
+
 ## 新しいプロジェクトを作成します。
 
-この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは特定の Windows シェル ツールのセットで説明するクロス プラットフォーム CLI ツールの間に選択できます。 以下の CLI アプローチ新しい`ハロー`プロジェクト ディレクトリ内に*HelloWorld*という名前をアプリケーションが生成されます。
+この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは一連の Windows 固有のシェル ツールで説明されているクロスプラット フォームの CLI ツール間できます。 以下の CLI 接近は、 *HelloWorld*をという名前の新しい`ハロー`プロジェクト ディレクトリ内にあるアプリを生成します。
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
@@ -90,6 +106,8 @@ SDK と一緒にコルドバの Windows 中心のシェル ・ ツールを使�
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
+
+このプロジェクトは、既定のターゲット OS として Windows 8.1 を対象します。 8.0 や 10.0 は、すべてのビルドの (以下「構成ターゲット Windows 版」を参照してください) をターゲットすることができます。 または、ビルドごとに特定特定バージョン対象とします。
 
 ## プロジェクトをビルドします
 
@@ -105,82 +123,105 @@ SDK と一緒にコルドバの Windows 中心のシェル ・ ツールを使�
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
-        C:\path\to\project\cordova\clean.bat
+    
+
+`clean`コマンドは準備として、次のディレクトリを洗い流すのに役立ちます `build` :
+
+        C:\path\to\project\cordova\clean.bat 
     
 
 ## 対象の Windows のバージョンを構成します。
 
-既定の`ビルド`によってコマンドは 2 つのパッケージが生成されます: Windows 8.0 と Windows Phone 8.1。 コンフィグレーション ファイル (`config.xml`に次の構成設定を追加する必要がありますバージョン 8.1 への Windows パッケージをアップグレードするには).
+既定の`build`によってコマンドは、2 つのパッケージを生成されます: Windows 8.0 と Windows Phone 8.1。 バージョン 8.1 コンフィグレーション ファイル (`config.xml`に次の構成設定を追加する必要がありますに Windows パッケージをアップグレードするには).
 
-        <preference name='windows-target-version' value='8.1' />
+        <preference name="windows-target-version" value="8.1" />
     
 
-追加するこの設定`ビルド`コマンドが Windows 8.1 および Windows Phone 8.1 のパッケージの生産を開始します。
+追加するこの設定`build`コマンド Windows 8.1 および Windows Phone 8.1 のパッケージを生産開始されます。
+
+### --appx パラメーター
+
+特定の OS をターゲット アプリケーションの特定のバージョンをビルドすることもできます (たとえば、設定した Windows 10 を対象とするが、Windows Phone 8.1 用に構築する場合)。 これを行うには、するには、 `--appx`パラメーターを使用します。
+
+        > cordova build windows -- --appx=8.1-phone
+    
+
+ビルド システムでは、設定は、ターゲットの Windows バージョン用の config.xml の設定を無視し、厳密に Windows Phone 8.1 のパッケージを構築します。
+
+`8.1-win`、 `8.1-phone`、 `uap` (Windows 10 ユニバーサルアプリ) のため、 `--appx`フラグの有効な値。 これらのオプションは、`cordova run`コマンドにも適用されます。
+
+### ターゲットの Windows バージョンの考慮事項
+
+Windows 10 コルドバ アプリ (と一般的に HTML アプリケーション) の新しい「リモート」モードをサポートしています。 このモードにより、アプリの DOM 操作とインライン スクリプトの使用などの一般的な web のパターンを使用する点ではるかに自由が公共の Windows ストアに提出するとき一連の機能を減らすことによってアプリを使用可能性があります。 Windows 10 とリモート モードの詳細については、 [Windows 10 コルドバ][13]のドキュメントを見てください。
+
+ [13]: win10-support.md.html
+
+リモート モードを使用している場合、開発者がスクリプト注入攻撃を防ぐために、アプリケーションにコンテンツ セキュリティ ポリシー (CSP) を適用することをお勧めします。
 
 ## アプリを展開します。
 
-パッケージを展開する Windows:
+Windows パッケージを展開。
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
     
 
-パッケージを展開する Windows Phone:
+Windows Phone のパッケージを展開するには。
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
     
 
-**cordova run windows --list**すべての利用可能なターゲットを使用と**cordova run windows --target=target_name \-- -|-phone**、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
+**cordova run windows --list**を使用して、すべての使用可能なターゲットすることができますと**cordova run windows --target=target_name \-- -|-phone**特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
-**コルドバの実行 - ヘルプ**を使用して、追加のビルドを参照してください、オプションを実行することもできます。
+**コルドバ実行 - ヘルプ**は、追加のビルドを表示し、オプションを実行するもできます。
 
 ## SDK でプロジェクトを開き、アプリを展開します。
 
-一度上記のように Cordova アプリをビルドする Visual Studio で開くことができます。 さまざまな`ビルド`のコマンドは、Visual Studio のソリューション (*.sln*) ファイルを生成します。 Visual Studio 内のプロジェクトを変更するファイル エクスプ ローラーでファイルを開きます。
-
-![][11]
-
- [11]: img/guide/platforms/win8/win8_sdk_openSLN.png
-
-`CordovaApp`コンポーネントは、ソリューション内で表示し、その`www`ディレクトリに`index.html`ホーム ページを含む web ベースのソース コードが含まれています。
-
-![][12]
-
- [12]: img/guide/platforms/win8/win8_sdk.png
-
-Visual Studio のメイン メニューの下のコントロールをテストしたり、アプリを展開することができます。
-
-![][13]
-
- [13]: img/guide/platforms/win8/win8_sdk_deploy.png
-
-**ローカル コンピューター**を選択、Visual Studio を実行している同じマシン上のアプリのインストールに緑色の矢印キーを押します。そうと、Windows 8 アプリ一覧にアプリが表示されます。
+前述のように Cordova アプリをビルドすると、Visual Studio で開くことが。 様々 な`構築`コマンドは、Visual Studio のソリューション (*.sln*) ファイルを生成します。 Visual Studio 内のプロジェクトを変更するのにはファイル エクスプ ローラーでファイルを開きます。
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
 
-アプリケーションをリビルドするたびに、インターフェイスのバージョンが更新されます。
-
-一度利用できるアプリの一覧で、メイン画面にピン留めすることができます**CTRL**キーを押したまま、アプリを選択します。
+`CordovaApp`コンポーネントは、ソリューション内で表示し、 `www`ディレクトリに`index.html`ホーム ページを含む web ベースのソース コードが含まれています。
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [15]: img/guide/platforms/win8/win8_sdk.png
 
-メモ仮想マシン環境内でアプリケーションを開いた場合、コーナーでまたはアプリを切り替えるか、追加機能にアクセスする windows の側面に沿ってをクリックする必要があります。
+Visual Studio のメイン メニューの下にあるコントロールでは、テストまたはアプリケーションを配置することができます。
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_run.png
+ [16]: img/guide/platforms/win8/win8_sdk_deploy.png
 
-代わりに、タブレット デバイスで実行されていたかのようにアプリケーションを表示する**シミュレータ**の展開オプションを選択します。
+**ローカル コンピューター**を選択、Visual Studio を実行している同じマシン上でアプリケーションをインストールするのには緑の矢印を押します。そうと、アプリが Windows 8 のアプリ一覧に表示されます。
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_sim.png
+ [17]: img/guide/platforms/win8/win8_sdk_runApp.png
 
-デスクトップの展開とは異なりこのオプションはタブレットの方向、場所をシミュレートし、そのネットワーク設定を変更することができます。
+アプリを再構築するたびに、インターフェイスのバージョンが更新されます。
 
-**注**: コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスの概要を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK を使用して、プロジェクトを変更する場合は、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。
+アプリ一覧に表示する、メイン画面にピン留めする**CTRL**キーを押しながらアプリケーションを選択できます。
+
+![][18]
+
+ [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+
+メモ仮想マシン環境内でアプリケーションを開いた場合は、コーナーでまたはアプリの切り替えや追加機能にアクセスする windows の側面に沿ってをクリックする必要があります。
+
+![][19]
+
+ [19]: img/guide/platforms/win8/win8_sdk_run.png
+
+また、タブレット デバイス上で実行されているかのようにアプリを表示するのには**シミュレータ**導入オプションを選択します。
+
+![][20]
+
+ [20]: img/guide/platforms/win8/win8_sdk_sim.png
+
+デスクトップの展開とは異なり、このオプションでは、タブレットの向き、場所をシミュレートし、そのネットワーク設定を変更することができます。
+
+**注**: あなたのワークフローでコルドバのコマンド ライン ツールまたは SDK を使用する方法についてのアドバイスの概要を参照してください。 コルドバの CLI は、日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK を使用して、プロジェクトを変更する場合は、CLI の代わりに低レベルのシェル ・ ツールを使用します。

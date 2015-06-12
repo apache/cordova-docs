@@ -77,3 +77,12 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         
 
 *   `DefaultVolumeStream`(string, der Standardwert ist `default` , hat in Cordova-Android 3.7.0): setzt die Lautstärke Tasten Verknüpfen mit Hardware-Band. Standardmäßig ist das "call" für Handys und "Medien" für Tabletten. Wählen Sie hier "Medien" haben Ihre app-Lautstärke-Tasten, die immer die Medien-Lautstärke ändern. Beachten Sie, dass bei der Verwendung von Cordova's Media Plugin die Lautstärketasten dynamisch ändert, wenn alle Medienobjekte aktiv sind Lautstärke einstellen Medien.
+
+*   `OverrideUserAgent` (String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert der alten UserAgent Webview ersetzen wird. Es ist hilfreich, um die Anforderung von app/Browser identifizieren, wenn entfernte Seiten anfordern. Verwendung mit Vorsicht, dies kann verursacht Compitiable Problem mit Webservern. Verwenden Sie für die meisten Fälle stattdessen AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert bis zum Ende des alten UserAgent der Webview angefügt wird. Wenn Sie mit OverrideUserAgent zu verwenden, wird dieser Wert ignoriert.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

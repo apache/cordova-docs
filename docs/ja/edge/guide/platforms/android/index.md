@@ -198,7 +198,7 @@ Windows の`PATH`環境を変更: する
 
 `コルドバ`CLI ユーティリティを使用して、コマンド ・ ラインから、エミュレーターまたはデバイスにアプリケーションを配置することができます。
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

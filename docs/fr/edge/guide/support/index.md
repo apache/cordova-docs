@@ -179,7 +179,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accéléromètre</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-motion">Accéléromètre</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -212,7 +212,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-battery-status">BatteryStatus</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -246,7 +246,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Appareil photo</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-camera">Appareil photo</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -279,7 +279,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Capture</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media-capture">Capture</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -312,7 +312,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">Boussole</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device-orientation">Boussole</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -346,7 +346,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">Connexion</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-network-information">Connexion</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -379,7 +379,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">Contacts</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-contacts">Contacts</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -413,7 +413,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">Dispositif</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-device">Dispositif</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -479,7 +479,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">Fichier</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file">Fichier</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -512,7 +512,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Transfert de fichiers</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">Transfert de fichiers</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -548,7 +548,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Géolocalisation</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-geolocation">Géolocalisation</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -581,7 +581,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Mondialisation</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-globalization">Mondialisation</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -614,7 +614,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -648,7 +648,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Media</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-media">Media</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -681,7 +681,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Notification</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-dialogs">Notification</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -714,7 +714,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">SplashScreen</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-splashscreen">SplashScreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -747,7 +747,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md">Barre d'État</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-statusbar">Barre d'État</a>
         </th>
         
         <td data-col="amazon-fireos" class="n">
@@ -816,7 +816,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibration</a>
+          <a href="https://www.npmjs.com/package/cordova-plugin-vibration">Vibration</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

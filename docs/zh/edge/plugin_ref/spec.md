@@ -409,35 +409,57 @@ Android 的示例：
 
 標識該外掛程式所依賴的框架 （通常的作業系統/平臺的一部分）。
 
-例子：
+可選的`custom`屬性是一個布林值，該值指示是否框架一種作為您的外掛程式檔的一部分 (因此它不是一個系統框架)。
+
+### iOS *framework*
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
-    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src` 屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦的專案中，給定平臺的正確方式。
+可選的`weak`屬性是一個布林值，該值指示是否應弱連結的框架。預設值為`false`.
 
-可選 `weak` 的屬性是一個布林值，該值指示是否應弱連結的框架。預設值為 `false`.
+### 安卓系統 *framework*
 
-可選的 `custom` 屬性是一個布林值，該值指示是否該框架一種作為您的外掛程式檔的一部分 （因此它不是一個系統的框架）。 預設值為 `false`。 ***關於 Android*** 它指定如何處理 **src**。 如果 `true` **src** 是從應用程式專案目錄的相對路徑否則 — — 從 Android SDK 目錄。
+在 android 系統 (如 cordova-android@4.0.0)，*框架*標籤用於包括 Maven 依賴關係，或包括捆綁的庫專案。
 
-可選 `type` 屬性是一個字串，指示框架添加的類型。 目前，只有 `projectReference` 支援並且僅用於 Windows。 使用 `custom='true'` 和 `type='projectReference'` 將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這基本上是目前 '自訂' 的框架可以針對多個體系結構，作為它們顯式引用科爾多瓦應用程式由修建作為一種依賴的唯一途徑。
+例子：
 
-目前僅在 Android 支援可選 `parent` 屬性。 它將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是 `.`，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用：
+    <!-- Depend on latest version of GCM from play services -->
+    <framework src="com.google.android.gms:play-services-gcm:+" />
+    <!-- Depend on v21 of appcompat-v7 support library -->
+    <framework src="com.android.support:appcompat-v7:21+" />
+    <!-- Depend on library project included in plugin -->
+    <framework src="relative/path/FeedbackLib" custom="true" />
+    
 
-    <framework src="FeedbackLib" custom="true" />
+*framewokr*也可以用於有分納入主要專案的.gradle 檔的自訂.gradle 檔:
+
+    <framework src="relative/path/rules.gradle" custom="true" type="gradleReference" />
+    
+
+為 pre-android@4.0.0 (基於 ANT 的專案):
+
+可選的`type`屬性是一個字串，指示框架添加的類型。 目前，只有`projectReference`支援並且僅用於 Windows。 使用`custom='true'`和`type='projectReference'`將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這基本上是目前唯一的方式，'custom' 的框架可以針對多個體系結構，因為他們作為一種依賴由顯式引用科爾多瓦應用程式。
+
+可選的`parent`將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是`.`，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用:
+
     <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
     
 
-Windows 平臺支援三個附加屬性 （所有可選） 精煉時框架應包括：
+### *framework*視窗
 
-`arch` 屬性指示時為指定的架構建設只應包括框架。 受支援的值是 `x86`、`x64` 或 `ARM`.
+Windows 平臺支援三個附加屬性 (所有可選) 精煉時框架應包括:
 
-該 `device-target` 屬性指示當生成指定的目標裝置類型後，應該只能包含框架。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
+    
 
-該 `versions` 屬性指示當生成指定的版本字串相匹配的版本後，應該只能包含框架。 值可以是任何有效的節點語義版本範圍的字串。
+該`arch`屬性指示時為指定的建築建設只應包括框架。 受支援的值是 `x86`、`x64` 或 `ARM`.
+
+該`device-target`屬性指示當生成指定的目標裝置類型後，應該只能包含框架。 受支援的值是 `win` （或 `windows`），`phone` 或 `all`.
+
+該`versions`屬性指示框架只應包括當生成指定的版本字串相匹配的版本。 值可以是任何有效的節點語義版本範圍的字串。
 
 使用這些視窗的特定屬性的示例：
 
@@ -449,44 +471,52 @@ Windows 平臺支援三個附加屬性 （所有可選） 精煉時框架應包�
 
 ## *資訊*元素
 
-向使用者提供的額外資料。當您需要額外的步驟，不能輕易被自動化或超出了 plugman 的範圍時，這非常有用。示例：
+向使用者提供的其他資料。當你需要額外的步驟，不能很容易自動或超出 plugman 的範圍時，這非常有用。 例子:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    您需要將以下行添加到 'local.properties'： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < /info>
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
+    
+
+## *hook*元素
+
+表示您自訂的腳本，將調用由科爾多瓦發生某些操作時 (例如，添加外掛程式或平臺編寫邏輯之後調用)。 當您需要擴展預設科爾多瓦功能時，這很有用。 更多的資訊，請參閱掛鉤的指南。
+
+    <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     
 
 ## 變數
 
-在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要註冊為 C2DM 在 Android 上，其包 id 是 `com.alunny.message` 應用程式還將如需要許可權：
+在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要註冊為 C2DM 在 Android 上，其包 id 是`com.alunny.message`的應用程式還將如需要許可權:
 
-    <uses-permission
-    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-在插入從 `plugin.xml` 檔的內容不事先知道這種情況下，變數可由其後一系列的大寫英文字母，數位或底線一個貨幣符號表示。 對於上面的示例中，`plugin.xml` 檔會包括此標記：
+在插入從`plugin.xml`檔的內容不事先知道這種情況下，可以由一個貨幣符號進行一系列的大寫英文字母，數位或底線表示變數。 對於上面的示例中， `plugin.xml`檔將包括此標記:
 
-    <uses-permission
-    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-如果未找到，則 plugman 變數引用替換為指定的值或空字串。 可能檢測到 （在這種情況下，從 `AndroidManifest.xml` 檔） 或工具 ； 使用者指定的變數引用的值確切的過程是對某一特定工具的依賴。
+plugman 變數引用替換為指定的值或空字串，如果沒有找到。 可能檢測到 (在這種情況下，從`AndroidManifest.xml`檔) 或工具; 使用者指定的變數引用的值確切的過程是依賴于特定的工具。
 
-plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為命令列參數：
+plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為一個命令列參數:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-為了使變數成為強制性，`<platform>` 標記需要包含 `<preference>` 標記。舉個例子：
+為了使變數成為強制性， `<platform>`標記需要包含`<preference>`標記。例如:
 
     <preference name="API_KEY" />
     
 
-plugman 檢查中通過的這些所需的首選項。如果不是的話，它應該警告使用者如何傳遞中的變數和與非零代碼退出。
+plugman 檢查中通過的這些所需的首選項。 如果不是，它應該警告使用者如何傳遞中的變數和以非零代碼退出。
 
 應保留某些變數的名稱，如下所示。
 
 ## $PACKAGE_NAME
 
-反向域風格包，對應于 `CFBundleIdentifier` iOS 或 `package` 屬性，在 `AndroidManifest.xml` 檔中的頂級 `表現` 元素的唯一識別碼。
+反向功能變數名稱風格包的對應于`CFBundleIdentifier`對 iOS 或`AndroidManifest.xml`檔中的頂級`表現`元素的`包`屬性的唯一識別碼。

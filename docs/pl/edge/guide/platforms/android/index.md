@@ -198,7 +198,7 @@ Polecenie `build` czyści pliki projektu i odbudowuje aplikacji. Oto składnia d
 
 Można użyć narzędzia CLI `cordova` do wdrożenia aplikacji do emulatora lub urządzenie z linii poleceń:
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

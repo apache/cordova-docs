@@ -45,12 +45,44 @@ Uruchom `create` polecenie, określając ścieżkę istniejącego projektu, iden
         $ /path/to/my_new_project/cordova/run --device
     
 
-## Zwolnienie
+## Podpisywanie aplikacji
 
-        $ /path/to/my_new_project/cordova/build --release
+Możesz dowiedzieć się więcej o podpisanie, dystrybuowanie aplikacji iOS, Tworzenie certyfikatu i zastrzegania profil na [iOS Developer biblioteki][2].
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+Aby zarejestrować aplikację w Cordova potrzebne są następujące: * kod podpisywanie tożsamości (`-codeSignIdentity`): [Za pomocą XCode][3] można utworzyć nowy iOS podpisania tożsamości i dodać go do keychain. Typ Kodeksu podpisywanie tożsamości - zazwyczaj dystrybucji lub rozwoju, musi być określone w tym miejscu.
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   Zastrzeganie profil (`-provisioningProfile`): [za pomocą centrum Państwa Apple][4] można utworzyć profil zastrzegania. Pobierz profil rezerw na Twoim komputerze i uruchomić go w XCode go zarejestrować. To jest kopiowany tutaj na komputerze Mac: ~/Library/MobileDevice/Provisioning\ profile /. Otwierając go w edytorze tekstu, można znaleźć UUID, który musi być określone w tym miejscu.
+
+*   Kod podpisywanie zasobu zasad (`-codeSignResourceRules`) (opcjonalnie): pozwala określić niestandardowe zasady podpisywania zasobów.
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+Parametry te mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty:
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(zmodyfikować plik `cordova/build-release.xcconfig` do podpisywania kodu tożsamości)
+Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json) za pomocą argumentu (`-buildConfig`). Oto przykład pliku konfiguracyjnego budować:
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości od argumentów wiersza polecenia otrzyma pierwszeństwo.
 
 ## Rejestrowanie
 

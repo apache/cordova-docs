@@ -87,3 +87,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `ErrorUrl` (기본적으로 설정 되지 않는 문자열): 만약 설정, 응용 프로그램에서 오류에 참조 된 로컬 페이지를 표시 합니다.
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `OverrideUserAgent` (기본적으로 설정 되지 않는 문자열): 설정, 값 대체 webview의 오래 된 UserAgent. 원격 페이지를 요청할 때 응용 프로그램 또는 브라우저에서 요청을 식별 하는 데 도움이 됩니다. 주의이 5 월 사용 웹 서버와 compitiable 문제를 발생합니다. 대부분의 경우, AppendUserAgent를 대신 사용 합니다.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (기본적으로 설정 되지 않는 문자열): 설정는 경우 값 webview의 오래 된 UserAgent의 끝에 추가 됩니다. OverrideUserAgent와 함께 사용 하는 경우이 값은 무시 됩니다.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />
