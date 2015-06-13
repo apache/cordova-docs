@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Упаковка приложений Windows
 
-Вы можете узнать больше о подписании и упаковке приложений для Магазина Windows на [MSDN](https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx).
+Вы можете узнать больше о подписании и упаковке приложений для Магазина Windows на [MSDN][1].
 
 Чтобы иметь возможность правильно упаковать и подписать Windows приложения несколько вещей требуется:
 
@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для распространения и установки приложений из Магазина Windows требуется подпись. Этот процесс обычно обрабатывается средой Visual Studio при развертывании пакета для выпуска. Сделать это без Visual Studio, нам нужно создать наши собственные сертификаты.
 
-Для создания сертификатов необходимо использовать [makecert.exe](https://msdn.microsoft.com/en-us/library/ff548309(v=vs.85).aspx) утилиту. Этот инструмент поставляется с Windows SDK и могут быть найдены в папке `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` или `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
+Для создания сертификатов необходимо использовать [makecert.exe][2] утилиту. Этот инструмент поставляется с Windows SDK и могут быть найдены в папке `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` или `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 Первое, что нам нужно сделать, это создать корневой ключ для подписи приложения.
 
@@ -85,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-После создания файлов pvk и cer, нам нужно создать файл pfx из этих сертификатов. Файл pfx (формат личного обмена) содержит целый ряд криптографической информации, такие как сертификаты, корневые сертификаты удостоверяющей организации, цепочки сертификатов и закрытые ключи. Чтобы упаковать сертификаты, мы будем использовать инструмент под названием [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Этот инструмент поставляется с Windows SDK и могут быть найдены в папке `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` или `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
+После создания файлов pvk и cer, нам нужно создать файл pfx из этих сертификатов. Файл pfx (формат личного обмена) содержит целый ряд криптографической информации, такие как сертификаты, корневые сертификаты удостоверяющей организации, цепочки сертификатов и закрытые ключи. Чтобы упаковать сертификаты, мы будем использовать инструмент под названием [pvk2pfx][3]. Этот инструмент поставляется с Windows SDK и могут быть найдены в папке `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` или `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 
@@ -97,7 +97,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
   * pfx: имя результирующего файла pfx
   * pо: пароль pfx; такой же, как pvk пароль, если не указан
 
-Если мы предоставляем этот файл pfx файл в build.json, мы получим следующую ошибку: "файл ключа может быть защищен паролем. Чтобы исправить эту проблему, попробуйте вручную импортировать сертификат в хранилище личных сертификатов текущего пользователя.". Для того, чтобы импортировать его мы должны использовать [certutil](https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx) в командной строке с правами администратора:
+Если мы предоставляем этот файл pfx файл в build.json, мы получим следующую ошибку: "файл ключа может быть защищен паролем. Чтобы исправить эту проблему, попробуйте вручную импортировать сертификат в хранилище личных сертификатов текущего пользователя.". Для того, чтобы импортировать его мы должны использовать [certutil][4] в командной строке с правами администратора:
 
 `certutil -user -p PASSWORD -importPFX FakeCorp.com.pfx`
 
@@ -112,3 +112,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 `powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"`
 
 После того, как эти окончательные значения предоставляются. Cordova должна успешно упаковать и подписать приложение.
+
+[1]: https://msdn.microsoft.com/en-us/library/hh446593(v=vs.85).aspx
+[2]: https://msdn.microsoft.com/en-us/library/ff548309(v=vs.85).aspx
+[3]: https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx
+[4]: https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx
