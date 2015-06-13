@@ -29,11 +29,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
   3. Добавьте компонент `CordovaView` на страницу (например,`MainPage.xaml`).
     
-        xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib">
-        ...
-        <my:CordovaView HorizontalAlignment="Stretch" Margin="0,0,0,0" 
-        StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" />
-        
+         xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib">
+         ...
+         <my:CordovaView HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+         StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" />
 
   4. Скопируйте `common/www/cordova.js` и разметите его вместе с HTML и JavaScript файлами приложения в каталоге `html` проекта Windows Phone 8 и добавьте новые файлы в ваш проект.
 

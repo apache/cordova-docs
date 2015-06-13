@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/обновить путь/к/проекта
+        bin/update путь/к/проекту
     
 
 Для проектов CLI:
@@ -62,7 +62,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## Обновление к CLI (3.0.0) с 2.9.0
 
-1.  Создайте новый проект Apache Cordova 3.0.0 используя cordova CLI, как описано в интерфейс командной строки.
+1.  Создайте новый проект Apache Cordova 3.0.0 используя Cordova CLI, как описано в разделе "Интерфейс командной строки".
 
 2.  Добавьте ваш платформ в Кордове проект, например:`cordova
 platform add wp8`.

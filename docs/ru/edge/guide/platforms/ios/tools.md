@@ -29,7 +29,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## Создание проекта
 
-Запустите `create` команду, указав существующий путь к проекту, реверс домен стиль пакет идентификатор и отображаемое имя приложения.
+Запустите команду `create`, указав существующий путь к проекту, идентификатор пакета в стиле обратного формата доменных имен и отображаемое имя приложения.
 
         $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
@@ -49,12 +49,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         $ /path/to/my_new_project/cordova/run --device
     
 
-## Релиз
+## Подпись приложения
 
-        $ /path/to/my_new_project/cordova/build --release
+Вы можете узнать больше о подписании, распространение приложений для iOS, создание сертификата и подготовке профиля на сайте [Библиотека разработчика iOS][2].
+
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+
+Чтобы подписать приложение в Cordova, вам необходимо следующее: * Подпись кода (`--codeSignIdentity`): [С помощью XCode][3] можно создать новую подпись iOS, и добавить ее в Вашу связку ключей. Тип подписи кода - как правило распространение или разработка, должны быть определены здесь.
+
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+
+*   Профиль подготовки (`--provisioningProfile`): [Используя Apple Member Center][4] вы можете создать профиль подготовки. Скачать профиль подготовки на компьютер и запустить его в XCode чтобы его зарегистрировать. Он копируется в это расположение на вашем Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. При его открытии в текстовом редакторе, вы можете найти идентификатор UUID, который должен быть указан здесь.
+
+*   Правила ресурсов для подписывания кода (`--codeSignResourceRules`) (необязательно): позволяет указать пользовательские правила подписания ресурсов.
+
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+
+Эти параметры могут быть заданы с помощью аргументов командной строки указанных выше для `построения` или `запуска` скриптов:
+
+        $ /path/to/my_new_project/cordova/build --codeSignIdentitiy="iPhone Distribtion" --provisioningProfile="926c2bd6-8de9-4c2f-8407-1016d2d12954" 
     
 
-(измените `cordova/build-release.xcconfig` файл для указания вашего сертификата подписи кода)
+Кроме того их можно указать в файле конфигурации сборки (build.json) с помощью аргумента (`--buildConfig`). Ниже приведен пример файла конфигурации построения:
+
+    {
+         "ios": {
+             "debug": {
+                 "codeSignIdentitiy": "iPhone Development",
+                 "provisioningProfile": "926c2bd6-8de9-4c2f-8407-1016d2d12954",
+             },
+             "release": {
+                 "codeSignIdentitiy": "iPhone Distribution"
+                 "provisioningProfile": "70f699ad-faf1-4adE-8fea-9d84738fb306",
+             }
+         }
+     }
+    
+
+Существует также поддержка смешивания и комбинирования аргументов командной строки и параметров в файле build.json. Значения из аргументов командной строки будет получить приоритет.
 
 ## Ведение журнала
 

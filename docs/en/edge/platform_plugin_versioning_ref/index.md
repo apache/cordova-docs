@@ -41,10 +41,11 @@ After running the above command, the resulting config.xml looks like :
         ...
         <engine name="android" spec="^4.0.0" />
         ...
-    </ xml>
+    </xml>
 
 
 Some examples :
+
   * **'cordova platform add android --save'** => retrieves the pinned version of the android platform, adds it to the project and then updates config.xml.
   * **'cordova platform add android@3.7.0 --save'** => retrieves the android platform, version 3.7.0 from npm, adds it to the project and then updates config.xml.
   * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => clones the specified cordova-android git repository, adds the android platform to the project, then updates config.xml and point its version to the specified git-url.
@@ -63,6 +64,7 @@ It is also possible to update/delete from config.xml during the commands 'cordov
     $ cordova platform update <platform[@<version>] | directory | git_url> --save
     $ cordova platform remove <platform> --save
 Some examples :
+
   * **'cordova platform update android --save'** => In addition to updating the android platform to the pinned version, update config.xml entry
   * **'cordova platform update android@3.8.0 --save'** => In addition to updating the android platform to version 3.8.0, update config.xml entry
   * **'cordova platform update /path/to/android/platform --save'** => In addition to updating the android platform to version in the folder, update config.xml entry
@@ -74,11 +76,12 @@ Some examples :
   * If you add a platform without specifying a version/folder/git_url, the version to install is taken from config.xml, **if found**.
     * Example:
       Suppose your config.xml file contains the following entry:
+
           <?xml version='1.0' encoding='utf-8'?>
               ...
               <engine name="android" spec="3.7.0" />
               ...
-          </ xml>
+          </xml>
       If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
 
 
@@ -99,10 +102,11 @@ After running the above command, the resulting config.xml looks like :
         ...
         <plugin name="cordova-plugin-console" spec="^1.0.0" />
         ...
-    </ xml>
+    </xml>
 
 
 Some examples :
+
   * **'cordova plugin add cordova-plugin-console --save'** => retrieves the pinned version of the console plugin, adds it to the project and then updates config.xml.
   * **'cordova plugin add cordova-plugin-console@0.2.13 --save'** => retrieves the android plugin, version 0.2.13 from npm, adds it to the project and then updates config.xml.
   * **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'** => clones the specified console plugin git repository, adds the console plugin to the project, then updates config.xml and point its version to the specified git-url.
@@ -121,6 +125,7 @@ It is also possible to update/delete from config.xml during the commands 'cordov
     $ cordova plugin update <plugin[@<version>] | directory | git_url> --save
     $ cordova plugin remove <plugin> --save
 Some examples :
+
   * **'cordova plugin update cordova-plugin-console --save'** => In addition to updating the console plugin to the pinned version, update config.xml entry
   * **'cordova plugin update cordova-plugin-console@0.2.13 --save'** => In addition to updating the android plugin to version 3.8.0, update config.xml entry
   * **'cordova plugin update /path/to/console/plugin --save'** => In addition to updating the console plugin to version in the folder, update config.xml entry

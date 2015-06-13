@@ -133,4 +133,4 @@ Cordova поставляется с минимальным набором APIs, 
  [21]: https://www.npmjs.com/package/cordova-plugin-whitelist
  [22]: https://www.npmjs.com/package/cordova-plugin-legacy-whitelist
 
-Non-английский переводы документов этих плагинов можно найти, перейдя в репозитории github плагина и посмотрев в папке docs
+Переводы с английского документации этих плагинов можно найти, перейдя в репозитории github плагина и посмотрев в папке docs

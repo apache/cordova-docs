@@ -76,6 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   Руководство по платформе Windows
 *   Windows плагины
+*   Упаковка приложений Windows
 *   Обновление для Windows 8
 
 ## Tizen

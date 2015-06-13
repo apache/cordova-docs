@@ -26,6 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 <!-- START HTML -->
 
 <table class="compat" width="100%">
+<thead>
   <tr>
     <th>
       </td> <th>
@@ -63,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
       <th>
         <tt>Tizen</tt>
       </th></tr> </thead> 
-      
+<tbody>
       <tr>
         <th>
           <a href="guide_cli_index.md.html">Cordova <br />CLI</a>
@@ -856,6 +857,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         
         <td data-col="tizen"       class="n">
         </td>
-      </tr></table> 
+      </tr>
+  </tbody>
+</table> 
       
-      <!-- END HTML -->
+<!-- END HTML -->

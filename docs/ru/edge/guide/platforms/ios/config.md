@@ -91,3 +91,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `ErrorUrl` (строка, не установлено по умолчанию): Если установлено, будет отображать указанную локальную страницу, при ошибке в приложении.
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `OverrideUserAgent` (строка, не определен по умолчанию): Если параметр установлен, значение заменит старое значение UserAgent для webview. Это полезно для идентификации запроса из приложения/браузера при запросе удаленных страниц. Используйте с осторожностью, в мае этого года вызывает проблемы совместимости с веб-серверами. В большинстве случаев вместо этого параметра используйте AppendUserAgent.
+    
+        <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
+        
+
+*   `AppendUserAgent` (строка, не задан по умолчанию): Если параметр установлен, значение будет добавляться в конец старого значения UserAgent для webview. При использовании с OverrideUserAgent, это значение будет игнорироваться.
+    
+        <preference name="OverrideUserAgent" value="My Browser" />

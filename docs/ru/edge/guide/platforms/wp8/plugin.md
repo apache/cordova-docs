@@ -33,7 +33,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         using WPCordovaClassLib.Cordova.Commands;
         using WPCordovaClassLib.Cordova.JSON;
         
-
 4.  Расширить свой класс от `BaseCommand` :
     
         public class Echo : BaseCommand
@@ -41,7 +40,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             // ...
         }
         
-
 5.  Добавить `echo` метод, который можно вызывать из JavaScript:
     
         public class Echo : BaseCommand
@@ -172,7 +170,6 @@ JavaScript необходимо будет вызвать `exec` , как это
             </feature>
         </config-file>
         
-    
     Этот пример добавляет возможность контактов `WMAppManifest.xml` файл:
     
         <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
@@ -192,16 +189,13 @@ JavaScript является более сложным для отладки на
     
         cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
         
-    
     Это может привести к чрезмерно сложным строковое значение для C# для декодирования:
     
         "[\"this is a string\", 54, { literal:'trouble' }]"
         
-    
     Вместо этого, рассмотреть вопрос о преобразовании *всех* параметров в строки перед вызовом `exec()` и декодирования каждой отдельно:
     
         cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"]);
         string[] optValues = JsonHelper.Deserialize<string[]>(options);
         
-
 *   Как правило, лучше проверить параметры в JavaScript перед вызовом `exec()` . Это позволяет повторно использовать код и вытащить ненужные функции из плагина различных встроенных реализаций.

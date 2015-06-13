@@ -202,7 +202,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 Чтобы развернуть приложение на эмуляторе или устройстве из командной строки можно использовать утилиту CLI `cordova` :
 
-        $ cordova emulate android       #to deploy the app on a default iOS emulator
+        $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
 

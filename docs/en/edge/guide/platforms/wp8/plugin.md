@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Windows Phone 8 Plugins
 
 This section provides details for how to implement native plugin code
-on the Windows Phone platform. Before reading this, see Plugin Development 
-Guide for an overview of the plugin's structure and its common
+on the Windows Phone platform. Before reading this, see Plugin Development Guide 
+for an overview of the plugin's structure and its common
 JavaScript interface. This section continues to demonstrate the sample
 _echo_ plugin that communicates from the Cordova webview to the native
 platform and back.

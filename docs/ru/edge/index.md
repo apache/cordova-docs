@@ -32,7 +32,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Руководство по поддерживаемым платформам
+        Поддерживаемые Платформы
       </h2>
       
       <span>Таблица совместимости для всех основных функций.</span>
@@ -46,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Руководство по платформам
+        Руководство по поддерживаемым платформам
       </h2>
       
       <span>Настройка SDK каждой платформы и обновление проектов.</span>
@@ -81,7 +81,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Руководство по разработке расширений
+        Руководство по разработке плагинов
       </h2>
       
       <span>Создайте свой первый плагин.</span>
@@ -102,6 +102,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
+        Управление версиями платформ и плагинов
+      </h2>
+      
+      <span>Сохраняйте и восстанавливайте ваши проекты CLI в предсказуемое состояние без нервотрепки.</span>
+    </li>
+    <li>
+      <h2>
         Инструкция по доступу к внешним ресурсам
       </h2>
       
@@ -113,6 +120,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
       </h2>
       
       <span>Обзор возможностей хранения данных, предоставляемых различными платформами.</span>
+    </li>
+    <li>
+      <h2>
+        Руководство по хукам
+      </h2>
+      
+      <span>Расширьте функционал по умолчанию Cordova путем добавления пользовательских скпритов.</span>
     </li>
     <li>
       <h2>
