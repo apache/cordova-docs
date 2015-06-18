@@ -199,6 +199,10 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom"); Переезд это 
 
 Вот это, теперь у вас есть распространяемый плагин, что вы можете поделиться со всем миром! Одна вещь к примечанию, лишь недавно была добавлена поддержка для добавления рамок в проект Windows Cordova, так что вам будет нужно убедиться, что ваше cordova инструментов текущем. Кордова cli и Кордова plugman поддерживает добавление, удаление собственных резервных плагины.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+\> cordova plugin add com.risingj.echoplugin 
+
+или 
+
+\> plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/cordova-runtimecomp-echoplug

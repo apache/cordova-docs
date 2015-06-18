@@ -209,7 +209,9 @@ That's it, you now have a distributable plugin that you can share with the world
 One thing to note, support for adding frameworks to Windows Cordova project was only recently added so you will need to make sure your cordova tooling current.  The cordova-cli and cordova-plugman both support adding removing native backed plugins.
 
 \> cordova plugin add com.risingj.echoplugin
+
 or
+
 \> plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/cordova-runtimecomp-echoplug
