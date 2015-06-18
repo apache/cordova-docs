@@ -198,7 +198,6 @@ yourself. See Using Plugman to Manage Plugins.
     	</feature>
     	<!-- other <feature> tags -->
         
-
 8. Delete the `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
 9. Add these two frameworks to your project:

@@ -55,9 +55,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Чтобы подписать приложение в Cordova, вам необходимо следующее: * Подпись кода (`--codeSignIdentity`): [С помощью XCode][3] можно создать новую подпись iOS, и добавить ее в Вашу связку ключей. Тип подписи кода - как правило распространение или разработка, должны быть определены здесь.
+Чтобы подписать приложение в Cordova, вам необходимо следующее: 
 
- [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+*   Подпись кода (`--codeSignIdentity`): [С помощью XCode](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6) можно создать новую подпись iOS, и добавить ее в Вашу связку ключей. Тип подписи кода - как правило распространение или разработка, должны быть определены здесь.
 
 *   Профиль подготовки (`--provisioningProfile`): [Используя Apple Member Center][4] вы можете создать профиль подготовки. Скачать профиль подготовки на компьютер и запустить его в XCode чтобы его зарегистрировать. Он копируется в это расположение на вашем Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. При его открытии в текстовом редакторе, вы можете найти идентификатор UUID, который должен быть указан здесь.
 

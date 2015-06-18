@@ -27,7 +27,7 @@ following for more detailed platform-specific information:
 * Upgrading iOS
 * iOS WebViews
 * iOS Plugins
-* iOS Command-line Tools
+* iOS Shell Tool Guide
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-Line Interface for information about the

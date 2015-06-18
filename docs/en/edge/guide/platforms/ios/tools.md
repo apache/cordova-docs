@@ -67,6 +67,7 @@ name.
 You can learn more about signing, distributing iOS apps, creating a certificate and provisioning profile on the [iOS Developer Library](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html).
 
 To sign the app in Cordova you need the following:
+
 * Code signing identity (`--codeSignIdentity`): [Using XCode](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6) you can create a new iOS signing identity and add it to your keychain. The type of of the code signing identity - typically distribution or development, needs to be specified here.
 
 * Provisioning profile (`--provisioningProfile`):  [Using the Apple Member Center](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61) you can create a provisioning profile. Download the provisioning profile onto your machine and launch it in XCode to register it. It is copied here on your Mac: ~/Library/MobileDevice/Provisioning\ Profiles/. Opening it in a text editor, you can find the UUID which needs to be specified here.
