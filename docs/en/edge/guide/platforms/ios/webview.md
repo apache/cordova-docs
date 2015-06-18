@@ -23,7 +23,7 @@ This guide shows how to embed a Cordova-enabled WebView component
 within a larger iOS application. For details on how these components
 can communicate with each other, see Application Plugins.
 
-Support for iOS WebViews started with Cordova version 1.4, using a
+Support for WebViews for iOS started with Cordova version 1.4, using a
 `Cleaver` component for which the Xcode template serves as a reference
 implementation.  Cordova 2.0 and later versions only support the
 subproject-based Cleaver implementation.
