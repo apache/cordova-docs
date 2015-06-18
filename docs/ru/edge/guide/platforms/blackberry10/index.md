@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Руководство для платформы BlackBerry 10
 
-В этом руководстве показано, как настроить среду SDK для развертывания приложений Cordova на устройствах BlackBerry 10. Для предыдущих версий BlackBerry вы должны использовать другую версию SDK и другой набор средств командной строки, описанные в руководстве платформы BlackBerry. Для BlackBerry 10 вам необходимо установить SDK независимо от того, хотите ли вы использовать кросс платформенное CLI Cordova для разработки или более узкий набор платформо-ориентированных средств командной строки. Для сравнения двух вариантов разработки см. Обзор. Подробную информацию о каждом способе смотрите в разделе "Руководство по инструментам командной строки BlackBerry 10".
+В этом руководстве показано, как настроить среду SDK для развертывания приложений Cordova на устройствах BlackBerry 10. Для предыдущих версий BlackBerry вы должны использовать другую версию SDK и другой набор средств командной строки, описанные в руководстве платформы BlackBerry. Для BlackBerry 10 вам необходимо установить SDK независимо от того, хотите ли вы использовать кросс платформенное CLI Cordova для разработки или более узкий набор платформо-ориентированных средств командной строки. Для сравнения двух вариантов разработки см. Введение. Подробную информацию о каждом способе смотрите в разделе "Интерфейс командной строки" и "Руководство по инструментам командной строки BlackBerry 10".
 
 ## Требования
 
@@ -73,12 +73,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
         
-    
     или для Native SDK 10.2:
     
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
         
-
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
     
         $ источника ~/.bash_profile
@@ -90,22 +88,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
         
-
 *   На Windows → оболочка bash git:
     
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
         
-
 *   На Linux → установлен в качестве пользователя root:
     
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
         
-
 *   На Linux → установлен как не root пользователя:
     
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
         
-
 *   На Mac:
     
         $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
@@ -165,7 +159,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
         
-
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
@@ -190,7 +183,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
         
-
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
@@ -213,7 +205,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
         
-
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
@@ -246,12 +237,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
         
-
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
         
-
 После того, как цель определена, вы можете передавать ее команде run с помощью `--target`:
 
     $ cordova run blackberry10 --target=emu

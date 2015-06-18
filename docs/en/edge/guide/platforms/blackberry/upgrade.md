@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to modify BlackBerry projects to upgrade from
 older versions of Cordova.  These instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See The Command-line Interface for information
+`cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
@@ -49,7 +49,7 @@ BlackBerry 10:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4. Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
@@ -88,7 +88,7 @@ BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4. Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 

@@ -337,7 +337,6 @@ BlackBerryOS/Playbook:
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -365,13 +364,11 @@ BlackBerryOS/Playbook:
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
-
 *   Чтобы обновить до 1.8.0, перейдите от 1.7.0
 
 ## Обновление до 1.8.0 от 1.7.0
@@ -395,7 +392,6 @@ BlackBerryOS/Playbook:
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -423,7 +419,6 @@ BlackBerryOS/Playbook:
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>

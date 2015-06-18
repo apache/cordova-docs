@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/обновить путь/к/проекта
+        bin/update путь/к/проекта
     
 
 Для проектов CLI:
@@ -397,7 +397,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -425,13 +424,11 @@ BlackBerry 10 использует новый инструмент CLI и упр
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
-
 *   Чтобы обновить до 1.8.0, перейдите от 1.7.0
 
 ## Обновление до 1.8.0 от 1.7.0
@@ -455,7 +452,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     На:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -482,8 +478,7 @@ BlackBerry 10 использует новый инструмент CLI и упр
     
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
-        
-    
+          
     На:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>

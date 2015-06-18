@@ -133,8 +133,8 @@ The final step is to generate a signing certificate:
 
 ## Create a Project
 
-Use the `cordova` utility to set up a new project, as described in The
-Command-line Interface. For example, in a source-code directory:
+Use the `cordova` utility to set up a new project, as described in 
+The Command-Line Interface. For example, in a source-code directory:
  
         $ cordova create hello com.example.hello
         $ cd hello
