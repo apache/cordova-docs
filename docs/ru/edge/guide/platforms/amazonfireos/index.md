@@ -93,7 +93,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
         
-
 *   Сохраните значение и закройте оба диалоговые окна.
 
 *   Вам также нужно будет включить Java. Откройте командную строку и введите `java` , если она не запущена, добавить местоположение двоичных файлов Java в ваш путь также. Убедитесь, что JAVA_HOME % указывает установленный каталог JDK. Возможно, вам придется добавить среды JAVA_HOME переменной отдельно.

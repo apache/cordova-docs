@@ -119,7 +119,7 @@ In order to create Cordova apps using the Amazon Fire OS platform target, you'll
 ## Create New Project for Amazon Fire OS
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

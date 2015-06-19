@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Начиная с 3.3.0, Cordova можно использовать в качестве компонента приложений Amazon Fire OS. Amazon Fire ОС ссылается на этот компонент как `CordovaWebView` . `CordovaWebView` расширяет Amazon WebView, который построен на открытом исходном коде проекта Chromium. Используя эту функцию, веб-приложений можно использовать последние веб-стандарты HTML5, работающие в современной веб среде.
 
-Если вы не знакомы с Amazon Fire ОС, необходимо сначала ознакомиться с руководством ОС платформы Amazon огонь и установили последнюю SDK, прежде чем пытаться более необычный вариант развития встраивания WebView.
+Если вы не знакомы с Amazon Fire ОС, необходимо сначала ознакомиться с разделом "Руководство для платформы Amazon Fire OS" и установить последнюю SDK, прежде чем пытаться использовать такой более необычный вариант как встраивания WebView.
 
 ## Необходимые условия
 
@@ -48,7 +48,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         
-
 6.  Измените вашу деятельность так, чтобы этот класс реализовал `CordovaInterface` . Вы должны реализовать описанные методы этого интерфейса. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java`, или реализовать их самостоятельно. Нижеуказанный фрагмент кода показывает простое приложение , которое использует интерфейс. Обратите внимание, что id упоминаемого окна соответствует `id` атрибут, указанный в XML-фрагменте показаном выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
