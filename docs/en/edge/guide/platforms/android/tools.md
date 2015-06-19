@@ -90,11 +90,17 @@ running emulator if no device is found.
 You can review Android app signing requirements here: http://developer.android.com/tools/publishing/app-signing.html
 
 To sign an app, you need the following parameters:
+
   * Keystore (`--keystore`): Path to a binary file which can hold a set of keys.
+  
   * Keystore password (`--storePassword`): Password to the keystore
+  
   * Alias (`--alias`): The id specifying the private key used for singing.
+  
   * Password (`--password`): Password for the private key specified.
+  
   * Type of the keystore (`--keystoreType`): pkcs12, jks (Default: auto-detect based on file extension)
+
 These parameters can be specified using the command line arguments above to `build` or `run` scripts.
 
 Alternatively, you could specify them in a build configuration file (build.json) using (`--buildConfig`) argument. Here's a sample of a build configuration file:

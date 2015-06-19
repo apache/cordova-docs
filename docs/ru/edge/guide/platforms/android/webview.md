@@ -36,7 +36,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         
-
 5.  Измените вашу деятельность так, чтобы этот класс реализовал `CordovaInterface`. Вы должны реализовать описанные методы этого интерфейса. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java`, или реализовать их самостоятельно. В следующем фрагменте кода показано простое приложение, которое опирается на интерфейс. Обратите внимание, что id упоминаемого окна соответствует `id` атрибут, указанный в XML-фрагменте показаном выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
@@ -51,7 +50,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
                 cwv.loadUrl(Config.getStartUrl());
             }
         
-
 6.  Если приложение должно использовать камеру, реализуйте следующее:
     
         @Override
@@ -97,7 +95,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             }
         }
         
-
 7.  Наконец, не забудьте добавить пул потоков, иначе у плагинов не будет потоков, на которых они будет выполняться:
     
         @Override
@@ -105,7 +102,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             return threadPool;
         }
         
-
 8.  Скопируйте файлы HTML и JavaScript приложения в каталог `/assets/www` проекта Android.
 
 9.  Скопируйте `config.xml` файл из `/framework/res/xml` в каталог `/res/xml` проекта.
