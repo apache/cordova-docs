@@ -263,7 +263,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
  [21]: img/guide/platforms/android/asdk_import_done.png
 
-Смотрите [Введение в Android Studio][22] и и [Построение и запуск из Android студии][23] для более подробной информации.
+Смотрите [Введение в Android Studio][22] и [Построение и запуск из Android студии][23] для более подробной информации.
 
  [22]: http://developer.android.com/tools/studio/index.html
  [23]: http://developer.android.com/tools/building/building-studio.html

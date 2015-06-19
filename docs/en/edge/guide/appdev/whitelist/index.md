@@ -122,7 +122,7 @@ ways:
   Specify access to all domains, including the local `file://`
   protocol:
 
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
 
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)

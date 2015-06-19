@@ -45,7 +45,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   Руководство для платформы BlackBerry 10
 *   Руководство по инструментам командной строки BlackBerry 10
-*   Конфигурации BlackBerry 10
+*   Конфигурация BlackBerry 10
 *   Плагины для BlackBerry 10
 *   Обновление для BlackBerry 10
 

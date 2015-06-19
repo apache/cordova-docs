@@ -123,7 +123,7 @@ task, they each offer advantages:
   for details on each platform's available shell utilities.
 
 When first starting out, it may be easiest to use the cross-platform
-workflow to create an app, as described in The Command-line Interface.
+workflow to create an app, as described in The Command-Line Interface.
 You then have the option to switch to a platform-centered workflow if
 you need the greater control the SDK provides.  Lower-level shell
 utilities are available at

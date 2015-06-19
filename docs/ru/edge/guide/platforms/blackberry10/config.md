@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Конфигурации BlackBerry 10
+# Конфигурация BlackBerry 10
 
 Файл `config.xml` управляет основные параметрами приложения, которые применяются к каждому приложению и экземпляру CordovaWebView. Этот раздел описывает настройки, которые применяются только к BlackBerry 10. Смотрите [Файл config.xml][1] для получения информации о глобальных параметрах конфигурации.
 

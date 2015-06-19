@@ -25,14 +25,14 @@ This guide contains the following topics:
 
 * Best Practices
 * Handling Upgrades
-* Testing
-* Debugging
+* Testing Cordova apps
+* Debugging Cordova apps
 * User Interface
 * Special Considerations
 * Keeping Up
 * Getting Help 
 
-# Best Practices
+# Best Practices Cordova app development
 
 ## 1) SPA Is Your Friend
 
@@ -69,7 +69,9 @@ One of the biggest mistakes a new Cordova developer can make is to assume that t
 
 * ["You half assed it"](http://sintaxi.com/you-half-assed-it)
 * ["Top Ten Performance Tips for PhoneGap and Hybrid Apps"](http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/)
-* "Fast Apps and Sites with JavaScript": http://channel9.msdn.com/Events/Build/2013/4-313
+* ["Fast Apps and Sites with JavaScript"][1]
+
+ [1]: https://channel9.msdn.com/Events/Build/2013/4-313
 
 ## 3) Recognize and Handle Offline Status
 
@@ -111,7 +113,7 @@ Always test your apps to ensure that installing the new plugin has not broken so
 
 If your project has a lot of plugins that you need updated, it might save time to create a shell or batch script that removes and adds the plugins with one command. 
 
-# Testing
+# Testing Cordova apps
 
 Testing your applications is super important. The Cordova team uses Jasmine but any web friendly unit testing solution will do. 
 
@@ -129,7 +131,7 @@ It is, of course, impossible to test on every possible device on the market. For
 
 Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. The Google Android factory images and instructions are located at: https://developers.google.com/android/nexus/images#instructions
 
-# Debugging
+# Debugging Cordova apps
 
 Debugging Cordova requires some setup. Unlike a desktop application, you can't simply open dev tools on your mobile device and start debugging, luckily there are some great alternatives.
 
@@ -171,6 +173,7 @@ Building a Cordova application that looks nice on mobile can be a challenge, esp
 * [ReactJS](http://facebook.github.io/react/)
 
 When building your user interface, it is important to think about all platforms that you are targeting and the differences between the user’s expectations. For example, an Android application that has an iOS-style UI will probably not go over well with users. This sometimes is even enforced by the various application stores. Because of this, it is important that you respect the conventions of each platform and therefore are familiar with the various Human Interface Guidelines: 
+
 * [iOS](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html)
 * [Android](https://developer.android.com/designWP8)
 * [Windows Phone](http://dev.windowsphone.com/en-us/design/library)

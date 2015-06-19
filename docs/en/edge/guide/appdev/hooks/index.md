@@ -24,6 +24,7 @@ plugin developers or even by your own build system  to customize cordova command
 Hook scripts could be defined by adding them to the special predefined folder 
 (`/hooks`) or via configuration files (`config.xml` and `plugin.xml`) and run
 serially in the following order:
+
 * Application hooks from `/hooks`;
 * Application hooks from `config.xml`;
 * Plugin hooks from `plugins/.../plugin.xml`.
