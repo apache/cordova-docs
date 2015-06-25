@@ -39,7 +39,7 @@ After running the above command, the resulting config.xml looks like :
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <engine name="android" spec="^4.0.0" />
+        <engine name="android" spec="~4.0.0" />
         ...
     </xml>
 
@@ -100,7 +100,7 @@ After running the above command, the resulting config.xml looks like :
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <plugin name="cordova-plugin-console" spec="^1.0.0" />
+        <plugin name="cordova-plugin-console" spec="~1.0.0" />
         ...
     </xml>
 
