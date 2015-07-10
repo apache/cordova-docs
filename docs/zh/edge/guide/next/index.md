@@ -1,11 +1,21 @@
-* * *
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 請參閱與本文的工作對於版權的擁有權有關的其他資訊一起分發的通知檔。 ASF 許可證此檔到你下 Apache 許可證，2.0 版 （"許可證"） ；您不可以使用此檔，除非根據本許可證。 你可以得到一份在許可證
+           http://www.apache.org/licenses/LICENSE-2.0
 
-           HTTP://www.apache.org/licenses/LICENSE-2.0 除非適用的法律要求或書面達成協議，按照該許可證分發的軟體分發上"按原樣"的基礎，沒有擔保或條件的任何種類的明示或暗示。  請參閱支配許可權和限制的特定語言許可證
-    
-
-## 根據許可證。
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
 
 # 下一步
 
