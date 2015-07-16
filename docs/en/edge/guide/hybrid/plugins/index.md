@@ -198,12 +198,14 @@ The Tizen platform does not support plugins.
 
 Once you develop your plugin, you may want to publish and share it
 with the community. You can publish your plugin to any `npmjs`-based
-registry, but the recommended one is [NPM registry](https://www.npmjs.com).
+registry, but the recommended one is the [NPM registry](https://www.npmjs.com). 
+Please read our [publishing plugins to npm guide](http://plugins.cordova.io/npm/developers.html).
+
 
 __NOTE__: [Cordova plugin registry](https://plugins.cordova.io) is
-moved to read-only state and no more available for publishing (`publish`/
-`unpublish` commands is also removed from `plugman`, so you'll need to
-use corresponding `npm` commands).
+moving to a read-only state. `publish`/
+`unpublish` commands have been removed from `plugman`, so you'll need to
+use corresponding `npm` commands.
 
 Other developers can install your plugin automatically using either `plugman`
  or the Cordova CLI.  (For details on each development path, see Using
