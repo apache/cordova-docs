@@ -428,7 +428,14 @@ The git example above fetches the plugin from the end of the master
 branch, but an alternate git-ref such as a tag or branch can be
 appended after a `#` character:
 
+Install from a tag:
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+
+or a branch:
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+
+or git-ref could also be a particular commit:
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
 
 If the plugin (and its `plugin.xml` file) is in a subdirectory within
 the git repo, you can specify it with a `:` character. Note that the
