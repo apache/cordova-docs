@@ -273,3 +273,17 @@ on cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to use the SDK to
 modify the project, use the lower-level shell tools as an alternative
 to the CLI.
+
+## Supporting Toasts
+
+Windows requires an app manifest capability declaration in order to support 
+toast notifications.  When using the `cordova-plugin-local-notifications` 
+plugin, or any other plugin that is attempting to use toast notifications,
+add the following preference to your config.xml to enable it to publish 
+toast notifications:
+
+    <preference name="WindowsToastCapable" value="true" />
+
+This preference sets the corresponding flag in your app manifest.  Plugins
+should do the work necessary to configure the appearance of the 
+displayed notifications.
