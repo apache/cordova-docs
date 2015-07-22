@@ -1,0 +1,41 @@
+exclude:
+    - static/css-src
+    - static/plugins
+    - docs/de
+    - docs/es
+    - docs/fr
+    - docs/it
+    - docs/ja
+    - docs/ko
+    - docs/pl
+    - docs/ru
+    - docs/sl
+    - docs/zh
+    - docs/en/1.5.0
+    - docs/en/1.6.0
+    - docs/en/1.6.1
+    - docs/en/1.7.0
+    - docs/en/1.8.0
+    - docs/en/1.8.1
+    - docs/en/1.9.0
+    - docs/en/2.0.0
+    - docs/en/2.1.0
+    - docs/en/2.2.0
+    - docs/en/2.3.0
+    - docs/en/2.4.0
+    - docs/en/2.5.0
+    - docs/en/2.6.0
+    - docs/en/2.7.0
+    - docs/en/2.8.0
+    - docs/en/2.9.0
+    - docs/en/3.0.0
+    - docs/en/3.1.0
+    - docs/en/3.2.0
+    - docs/en/3.3.0
+    - docs/en/3.4.0
+    - docs/en/3.5.0
+    - docs/en/3.6.0
+    - docs/en/4.0.0
+    - docs/en/5.0.0
+    # - docs/en/5.1.1
+    # - docs/en/edge

@@ -1,0 +1,185 @@
+@import 'lib/bootstrap';
+
+/* Customized Variables for Bootstrap */
+$gray-base:black;
+$gray-transparent:rgba($gray-base,.8);
+$brand-primary-darker: rgb(57, 146, 171);
+$brand-success: rgb(41, 177, 106);
+$brand-info: rgb(76, 194, 228);
+$brand-danger: rgb(241, 83, 68);
+$font-family-sans-serif: Segoe UI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$border-radius-large: 8px;
+$border-radius-small: 4px;
+$caret-width-base: 5px;
+$dropdown-bg: lighten($gray-base, 20%);
+$navbar-inverse-bg: rgba(0, 0, 0, .8);
+$label-color: rgb(255, 255, 255);
+$label-link-hover-color: rgb(255, 255, 255);
+$well-bg: lighten($gray-base, 90%);
+$well-border: transparent;
+$badge-color: rgb(255, 255, 255);
+$badge-link-hover-color: rgb(255, 255, 255);
+$badge-bg: $brand-danger;
+$badge-active-bg: rgb(255, 255, 255);
+$badge-line-height: 1.25;
+
+/* Other brand colors */
+$brand-gold: #F1B444;
+$brand-gold-darker: #B58733;
+$gray-90: lighten($gray-base, 10%);
+$gray-50: lighten($gray-base, 50%);
+$gray-40: lighten($gray-base, 60%);
+$gray-20: lighten($gray-base, 80%);
+$gray-10: lighten($gray-base, 90%);
+$gray-5: lighten($gray-base, 95%);
+$brand-primary: #4CC2E4;
+
+/* Grid size (mirrors Bootstraps) */
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1;
+$screen-md-min: 992px;
+$screen-sm-max: $screen-md-min - 1;
+$screen-lg-min: 1200px;
+$screen-lg: (min-width: $screen-lg-min);
+$screen-md-max: $screen-lg - 1;
+
+
+/* Mixin that prefixes any CSS rule */
+@mixin vendor-prefix($property, $argument) {
+  -webkit-#{$property}: #{$argument};
+  -ms-#{$property}: #{$argument};
+  -moz-#{$property}: #{$argument};
+  -o-#{$property}: #{$argument};
+  #{$property}: #{$argument};
+}
+
+/* footer */
+footer {
+    background-color: $gray-5;
+    position: relative;
+    strong { color:inherit; }
+    h1 {
+        font-size:2.5em;
+        color:$brand-primary-darker;
+    }
+    h2 {
+    text-transform: uppercase;
+    color:$gray-50;
+    font-size: 1em;
+    font-weight: bold;
+    }
+}
+footer ul.nav li > a {
+    font-size:1em;
+    margin-left: -15px;
+}
+footer ul.nav li > a:hover {
+    background-color: $gray-20;
+}
+footer .copyright_text {
+    margin-top: 25px;
+}
+
+/*
+ * position anchors of fragment links slightly above their targets
+ */
+.fragment-anchor {
+    display: block;
+    position: relative;
+    bottom: 50px;
+}
+
+/*
+********* Modifications to Bootstrap ***********
+*/
+button.btn, a.btn {
+    border-radius: 0;
+    background-color:$brand-primary;
+    color:black;
+    border:0;
+}
+button.btn:hover, a.btn {
+    color:black;
+}
+h1 {
+    color: $brand-gold-darker;
+    font-weight: normal;
+}
+h2 {
+    color: $gray-50;
+    font-size: 18px;
+}
+.badge {
+    font-size:12px;
+    margin-top:-14px;
+    padding: 1px 5px;
+}
+
+.contribute-content {
+    padding-top: 15px;
+}
+
+.blue-divider {
+    width:100%;
+    height:4px;
+    background-color: $brand-primary;
+}
+
+/* fixing prettyprint formatting */
+pre.prettyprint {
+    padding: 10px !important;
+    font-size: 13px !important;
+    border: 1px solid #cccccc !important;
+}
+code.prettyprint {
+    border: none !important;
+}
+
+/* survey banner */
+.survey-banner {
+    background-color: #FFCC00;
+    color: #1E1E1E;
+    font-size: 16px;
+    position: relative;
+}
+
+.survey-banner .container p {
+    margin: 10px 0;
+    padding-right: 42px;
+    text-align: center;
+}
+
+.survey-banner .dismiss-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 42px;
+    cursor: pointer;
+}
+
+.survey-banner .dismiss-btn {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.survey-banner .dismiss-btn:hover {
+    opacity: 1;
+}
+
+.survey-banner .dismiss-btn:after {
+    content: "\00d7";
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+@import 'home';
+@import 'blog';
+@import 'plugins';
+@import 'docs';
+@import 'contribute';
+@import 'contact';
+@import 'artwork';

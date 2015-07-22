@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row showcase_section_intro">
+        <div class="col-md-12 text-center">
+            <h1>Cordova Tools</h1>
+            <h2>A diverse ecosystem of command line tools, JavaScript frameworks, and cloud services exist that augment Cordova</h2>
+        </div>
+    </div>
+    <div class="row card_gallery">
+        {% for tool in site.data.tools %}
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
+            <div class="tool card_inner">
+                <div class="img_container">
+                    <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
+                </div>
+                <p class="card_title">
+                    {% if tool.url %}
+                        <a href="{{ tool.url }}">
+                            {{ tool.name }}
+                        </a>
+                    {% else %}
+                        {{ tool.name }}
+                    {% endif %}
+                </p>
+                <p class="text">
+                    {{ tool.description | strip_html | truncate:255 }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row"> <!-- Add yours or see more links -->
+        <div class="col-sm-12">
+            <div class="pull-right add_seemore_links">
+                <a target="_blank" href="https://github.com/apache/cordova-docs/tree/cordova-website#adding-a-tool-or-a-showcase-app">Add your tool</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row showcase_section_intro">
+        <div class="col-md-12 text-center">
+            <h1>Cordova App Showcase</h1>
+            <h2>See other apps that use Cordova</h2>
+        </div>
+    </div>
+    <div class="row card_gallery">
+        {% for app in site.data.showcase-apps %}
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
+            <div class="app card_inner">
+                <div class="showcase_app_thumb">
+                    <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
+                </div>
+                <p class="card_title">
+                    {% if app.url %}
+                        <a href="{{ app.url }}">
+                            {{ app.name }}
+                        </a>
+                    {% else %}
+                        {{ app.name }}
+                    {% endif %}
+                </p>
+                <p class="text">{{ app.description | strip_html | truncate:128 }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="pull-right add_seemore_links">
+                <a target="_blank" href="https://github.com/apache/cordova-docs/tree/cordova-website#adding-a-tool-or-a-showcase-app">Add your app</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            &nbsp;
+        </p>
+    </div>
+</div>

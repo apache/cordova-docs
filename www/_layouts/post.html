@@ -1,0 +1,71 @@
+---
+layout: blog
+---
+
+<h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="{{ site.baseurl }}/static/img/subscribe.png"><a href="{{ site.baseurl }}{{ site.rss_path }}">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">{{ page.title }}</div>
+        <div class="author">By:
+            {% if page.author.url %}
+              <a href="{{ page.author.url }}">{{ page.author.name }}</a>
+            {% else %}
+              {{ page.author.name }}
+            {% endif %}
+        </div>
+        <div class="date">{{ page.date | date_to_string }}</div>
+    </header>
+    <section>
+        <div>
+            {{ content }}
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                {% if page.previous %}
+                    <a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
+                    <div class="date"> {{ page.previous.date | date_to_string }} - By {{ page.previous.author.name }} </div>
+                    <p class="content">
+                        {{ page.previous.excerpt | strip_html | truncatewords:12 }}
+                    </p>
+                {% endif %}
+            </div>
+            <div class="col-sm-6">
+                {% if page.next %}
+                    <a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
+                    <div class="date"> {{ page.next.date | date_to_string }} - By {{ page.next.author.name}} </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        {{ page.next.excerpt | markdownify | strip_html | truncatewords:12 }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        {% include disqus.html %}
+    </div>
+</div>

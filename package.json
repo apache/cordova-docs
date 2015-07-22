@@ -1,40 +1,69 @@
 {
-  "name": "cordova-docs",
-  "version": "4.0.1-dev",
-  "description": "Documentation for the Apache Cordova",
-  "main": "index.js",
+  "name": "cordova-website",
+  "version": "0.0.1",
+  "description": "website for cordova.apache.org",
+  "main": "echo \"not specified\" && exit 1",
   "directories": {
-    "doc": "docs"
-  },
-  "dependencies": {
-    "cheerio": "^0.17.0",
-    "esrever": "^0.1.0",
-    "fs-extra": "^0.11.1",
-    "jodoc": "git://github.com/kant2002/jodoc-js",
-    "js-yaml": "^3.2.2",
-    "node-dir": "^0.1.6",
-    "shelljs": "^0.3.0",
-    "yargs": "^1.3.1"
-  },
-  "devDependencies": {
-    "colors": "^1.0.3",
-    "diff": "^1.2.0",
-    "jshint": "^2.5.8",
-    "mocha": "^1.21.4"
+    "doc": "doc"
   },
   "scripts": {
     "jshint": "node node_modules/jshint/bin/jshint lib spec",
     "test": "npm run jshint && npm run mocha",
     "mocha": "./node_modules/.bin/mocha --recursive ./spec"
   },
+  "author": "Apache Software Foundation",
+  "license": "Apache Version 2.0",
+  "dependencies": {
+    "baconjs": "^0.7.70",
+    "browser-sync": "^2.8.0",
+    "browserify": "^10.2.4",
+    "cheerio": "^0.17.0",
+    "classnames": "^2.1.2",
+    "envify": "^3.4.0",
+    "esrever": "^0.1.0",
+    "fs-extra": "^0.11.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-footer": "^1.0.5",
+    "gulp-header": "1.2.2",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-run": "^1.6.8",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "jodoc": "git://github.com/kant2002/jodoc-js",
+    "js-yaml": "^3.2.2",
+    "less": "^2.5.1",
+    "ncp": "^2.0.0",
+    "node-dir": "^0.1.6",
+    "optimist": "^0.6.1",
+    "q": "^1.4.1",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "semver": "^5.0.3",
+    "shelljs": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "walk": "^2.3.9",
+    "yargs": "^1.3.1"
+  },
+  "devDependencies": {
+    "colors": "^1.0.3",
+    "diff": "^1.2.0",
+    "jshint": "^2.5.8",
+    "mocha": "^1.21.4",
+    "gulp-htmllint": "^0.0.5",
+    "simplecrawler": "^0.5.2"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apache/cordova-docs.git"
+    "url": "https://github.com/apache/cordova-website.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/apache/cordova-docs/issues"
+    "url": "https://github.com/apache/cordova-website/issues"
   },
-  "homepage": "https://github.com/apache/cordova-docs"
+  "homepage": "https://cordova.apache.org"
 }
