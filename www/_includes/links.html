@@ -1,0 +1,53 @@
+<a class="scroll-point" name="links"></a>
+<hr/>
+
+<div class="wrap quick-links-pane">
+    <h2 class="icon icon-quick-links">Quick Links</h2>
+    <br/>
+    <ul class="quick-links-header">
+        <li>General</li>
+        <li>Development</li>
+        <li class="last">Apache Software Foundation</li>
+    </ul>
+    <div class="clear"></div>
+</div>
+
+<div class="grid">
+    <div class="wrap">
+        <div class="list-container">
+            <ul class="list quick-links">
+                <li class="corner"></li>
+                <li><a href="{{ site.baseurl }}{{ site.data.index-config.sitemap.about.url }}">{{ site.data.index-config.sitemap.about.title }}<span></span></a></li>
+
+                {% for links in site.data.index-config.sitemap.general %}
+                <li><a href="{{ links.url }}">{{ links.title }}<span></span></a></li>
+                {% endfor %}
+
+                <li><a href="{{ site.baseurl }}{{ site.data.index-config.sitemap.artwork.url }}">{{ site.data.index-config.sitemap.artwork.title }}<span></span></a></li>
+            </ul>
+
+            <ul class="list quick-links">
+                <li class="corner"></li>
+                <li><a href="{{ site.baseurl }}{{ site.data.index-config.sitemap.download.url }}">{{ site.data.index-config.sitemap.download.title }}<span></span></a></li>
+                <li><a href="{{ site.data.index-config.sitemap.docs.url }}">{{ site.data.index-config.sitemap.docs.title }}<span></span></a></li>
+
+                {% for links in site.data.index-config.sitemap.dev %}
+                <li><a href="{{ links.url }}">{{ links.title }}<span></span></a></li>
+                {% endfor %}
+
+                <li><a href="{{ site.baseurl }}{{ site.data.index-config.sitemap.mailing-list.url }}">{{ site.data.index-config.sitemap.mailing-list.title }}<span></span></a></li>
+
+                <li><a href="http://stackoverflow.com/tags/cordova">Support<span></span></a></li>
+            </ul>
+
+            <ul class="list quick-links last">
+                <li class="corner"></li>
+                {% for links in site.data.index-config.sitemap.asf %}
+                <li><a href="{{ links.url }}">{{ links.title }}<span></span></a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

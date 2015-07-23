@@ -1,0 +1,17 @@
+---
+layout: cordova
+title: Apache Cordova Blog
+---
+
+<div class="site">
+<h1>Blog Posts</h1><a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
+<ul class="posts">
+  {% for post in site.posts %}
+    <li>
+    <span>{{ post.date | date_to_string }}</span> &raquo;
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
+</div>

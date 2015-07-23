@@ -1,0 +1,49 @@
+---
+layout: cordova
+---
+
+Language
+<ul>
+    {% for language_entry in site.data.languages %}
+    {% assign language_id = language_entry[0] %}
+    {% assign language    = language_entry[1] %}
+    <li>
+        {% if language.versions contains page.version %}
+        <a href="{{ site.baseurl }}/docs/{{ language_id }}/{{ page.version }}">
+        {% else %}
+        <a class="grayed-out" href="{{ site.baseurl }}/docs/{{ language_id }}/edge">
+        {% endif %}
+            {{ language.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+Version
+<ul>
+    {% for version in site.data.languages.[page.language].versions %}
+    <li>
+        <a href="{{ site.baseurl }}/docs/{{ page.language }}/{{ version }}">{{ version }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if page.version != 'edge' %}
+    {{ page.not_latest_warning_text }}
+{% endif %}
+
+<h2>{{ page.toc_text }}</h2>
+<ul>
+    {% for entry in site.data.toc.[page.tocfile] %}
+    <li>
+        <a href="{{ entry.url | prepend: site.baseurl }}">{{ entry.name }}</a>
+        {% if page.url == entry.url %}
+        <div id="page-toc"></div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<div id="page-toc-source">
+    {{ content }}
+</div>

@@ -1,15 +1,7 @@
-.DS_Store
-tmp/
-node_modules/
-v8.log
-public/
-release/
-TAGS
-,*
-_*
-/joDoc/
-/markdown
-/Gemfile.lock
-*Screen Shot [0-9]*
-/.vagrant
-/npm-debug.log
+public
+*.pyc
+_defaults.yml
+www/_data/toc/*
+www/_data/languages.yml
+node_modules
+www/static/css/master.css

@@ -1,0 +1,42 @@
+# =======
+# Site settings
+# =======
+title:       Apache Cordova
+description: Apache Cordova is a set of device APIs that allow a web mobile app developer to access native device function from JavaScript.
+url:         "http://cordova.apache.org" # the base hostname & protocol
+baseurl:     "" # the subpath of the site, e.g. /blog/
+rss_path:    /feed.xml
+
+# NOTE: defaults are configured in _defaults.yml, which is a generated file
+
+# =======
+# Build settings
+# =======
+source:      www
+destination: public
+
+keep_files:  ['.git', '.svn', 'docs', 'wiki-images', 'static', 'images', 'downloads']
+
+lsi: false
+safe: true
+highlighter: pygments
+
+markdown: rdiscount
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+
+# exclude:
+#     - docs/de/
+#     - docs/en/
+#     - docs/es/
+#     - docs/fr/
+#     - docs/it/
+#     - docs/ja/
+#     - docs/ko/
+#     - docs/pl/
+#     - docs/ru/
+#     - docs/sl/
+#     - docs/zh/

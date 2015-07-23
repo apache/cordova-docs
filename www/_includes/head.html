@@ -1,0 +1,19 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <link rel="SHORTCUT ICON" href="{{ site.baseurl }}/favicon.ico"/>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/lib/bootstrap.min.css" | prepend: site.baseurl }}" />
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/master.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/docs.css" | prepend: site.baseurl }}">
+</head>

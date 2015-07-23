@@ -1,259 +1,194 @@
-Apache Cordova API Documentation
-================================
+Cordova Website
+===============
 
-The JavaScript API documentation for [Apache Cordova](http://cordova.io/).
+Get the source code
+-------------------
 
-The documentation is available at [docs.cordova.io](http://docs.cordova.io/).
+    $ svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
-Documentation Format
+Installing Dependencies
+----------------------------
+
+This is all handled for you now via a VM and Vagrant.
+Install Vagrant and VirtualBox if you haven't already done so, then:
+
+    $ cd cordova-website/
+    $ vagrant up
+    $ vagrant ssh
+    $ cd /vagrant
+
+Then you can continue with `rake build` as described below, and the output
+will be generated in the shared directory. You should do your
+svn commands outside of the VM, so that you aren't required to set up your
+svn credentials inside the VM. You can also do `rake serve` in the VM,
+and open "http://localhost:4000" in your bare-metal workstation browser,
+and it should work as port 4000 traffic is passed through from your workstation
+to the VM.
+
+When you are done using `rake build` and `rake serve`, you can exit from
+the `vagrant ssh` shell to return to your bare metal machine, then 
+run `vagrant halt` to gracefully shutdown the VM.
+
+How to compile the site
+-----------------------
+
+    # change to the cordova website directory.
+    $ cd /path/to/cordova-website
+
+    # compile the site. Note that if you change a blog entry (i.e., grunt updateBlog), you will need to re-run "rake build".
+    $ rake build
+
+    # the site is generated in `public/` with an index.html file that
+    # can be opened using:
+    $ rake serve
+    # and pointing your browser at localhost:4000
+
+
+Where to make changes
+----------------------
+The files that are served by cordova.apache.org live in public/.
+
+"rake build" uses lesscss & jekyll to compile some files from www/ into public/
+
+Some files live only in public/, and changes to them should be made directly. The
+list of these can be found in _config.yml.
+
+How to update the docs part of the website
+----------------------
+
+    # render the docs following the directions in the `cordova-docs` repository's README.md
+
+    # copy the rendered docs from `cordova-docs` to `cordova-website`
+    $ rsync -av --exclude='.svn*' public/ ../cordova-website/public/docs
+
+    # now move to the site directory
+    $ cd ../cordova-website
+
+    # if you are adding a new version of cordova docs, don't forget to:
+    $ svn add public/docs/my_lang/my_new_version
+
+    # update the "Documentation" URL on the site to point to the latest version of the docs
+    $ vi _config.yml
+        search for "Documentation"
+        change the version number in the URL to the latest (likely what you added above)
+
+    # compile the site per the instructions above, since the URL to the docs changed thus the page needs to be re-generated
+
+    # commit your changes to SVN
+    $ svn commit -m "Add docs version 2.5.0."
+
+
+Writing a Blog Post
 --------------------
 
-All of the [Apache Cordova](http://cordova.io/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document Cordova's core API and platform-specific APIs.
+Use the grunt scripts!
 
-File Structure
---------------
+    # Clone apache-blog-posts repo if you haven't already
+    $ grunt cloneBlog
 
-    docs/
-    docs/LANGUAGE
-    docs/LANGUAGE/VERSION
-    docs/LANGUAGE/VERSION/cordova/
-    docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
+    # Create your blog posts in the apache-blog-posts (or on github) directory, and share with other for review via `git commit`. If creating a new md file, use an earlier one as a template.
 
-Contributing to the Documentation
----------------------------------
+    # pull down the latest shared edits of apache-blog-posts
+    git pull
 
-### Report or Fix an Issue
+    # Edit your md file to remove undesired markdown links. If there is a phrase in square brackets that isn't a CB-xxxx reference, escape it with backslashes. Otherwise, heruko might error out and fail to build all the html.
+    [CB-1234] \[iOS\] \[Camera\] add a whizzbang to the snarfblat
 
-We use [Apache JIRA](https://issues.apache.org/jira/browse/CB)
+    # Set a marker where the summary on the home page should stop displaying. Add the following html comment line to your md file at the desired cutoff point:
+    <!--more-->
 
-By the way, you rock! Thanks for helping us improve the documentation!
+    # in the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (i.e., "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
+    date: 2014-09-22
+    categories: releases
 
-### Using Git
-
-Are you new to Git or contributing on GitHub?
-
-We have [written a few Git tutorials](http://wiki.apache.org/cordova/ContributorWorkflow)
-to help you get started with contributing to the documentation.
-
-### Sending Pull Requests
-
-Pull requests are welcome!
-
-We appreciate the use of topic branches.
-
-    git checkout -b issue_23
-
-    # code
-
-    git commit -m "Issue 23: Fix a bad bug."
-
-    git push origin issue_23
-
-    # send pull request from branch issue_23 to cordova:master
-
-### Adding a Language
-
-Do you want the Apache Cordova documentation in another language? We do too!
-With the support of [Crowdin](http://crowdin.net/project/cordova),
-a translation and localization management platform, translators can login to
-the easy-to-use tooling and provide as much or as little translation assistance as
-they would like. If you know another language please support Cordova and contribute.
-http://crowdin.net/project/cordova. For some best practices for using the
-Crowdin tool please see our wiki http://wiki.apache.org/cordova/CordovaTranslations.
-
-Cordova language administrators, don't forget these steps:
-
-__1. config.json__
-
-For each language and version, there is a `config.json` that defines the name of the language and
-how to merge the files.
-
-__2. Customizing HTML template__
-
-Each language can override the default template in `template/docs/LANGUAGE`.
-
-### Editorial Guidelines
-
-Please see the `STYLESHEET.md` file for guidelines on language and usage.
-
-## Generating Documentation with Node.js
-
-Right now documentation could be run using Node.js either on Windows, or on Linux box.
-
-    $ rm -r tmp public      # Clear out old docs
-    $ ./bin/genjs           # compile all docs
-    $ ./bin/genjs en edge   # compile English Edge docs
-    $ ./bin/genjs ru edge   # compile Russian Edge docs
-    $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
+    # git commit your changes to apache-blog-posts
     
-### Setting up Node.js
+    # copy blog www/_posts directory + linkify
+    $ grunt updateBlog
 
-1. Go to Node.JS [downloads page](http://nodejs.org/download/)
-2. Download and install package for your operation system.
-3. Checkout this repository using Git
+    # preview it locally
+    cd ..
+    rake build
+    rake serve
 
-        git clone https://github.com/apache/cordova-docs
+    # add the full text of your new generate blog entry to svn
+    svn add public/announcements/2014/09/08/cordova-361.html
+    svn commit
 
-4. Install dependencies. In the root of the cloned cordova-docs folder run
-   
-        npm install
-5. Now you able to build documentation locally.
+**Types of Posts**
 
-### Quick Preview
+_Announcements_ - releases, call for translators, etc
 
-When making minor edits, it is usually safe to simply render the edited from
-Markdown to HTML. Many code editors have plugins to render Markdown to HTML
-and there are a handful of [good](http://dillinger.io/) online editors.
+_Core Content_ - If the content has to do with cordova-core, or publishing guides, etc., we should publish the full text directly on the cordova Blog (by whichever author), as-if written by the organization.
 
-Currently, a Node.JS script and [joDoc-js](https://github.com/kant2002/jodoc-js) are
-used to generate the HTML documentation.
+_Linked Posts_ - If the content was written by a contributor and is worth curating for the whole community, but is not really core ie. non-core plugins, dev tips, research, opinion-pieces, statistics, etc., post a short description, perhaps adding a document-snippet, but then link to the externally hosted content, making it clearly not written by the organization.
 
-Generating a Version Release
----------------------------
+**How to add a Post**
 
-There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
+Blog posts live in `www/_posts`. To create a new post:
 
-    # generate version 4.1.0 for english.
-    .\bin\incrementversion en 4.1.0
+  1. Copy one of the existing posts into a new file (changing the name appropriately).
+  2. Run `rake serve` in the background.
+  3. Draft your post.
+  4. Get approval (see below)
+  5. Update the file name to reflect the commit date (if necessary)
+  6. Run `rake build`
+  7. Run `www/_posts/linkify-bugs.sh so that the CB-****` turn into links
+  8. Validate `public/rss.xml` with [http://validator.w3.org](http://validator.w3.org) 
+  9. svn commit
 
-QA for docs & translation
----------------------------
-In order to maintain quality of documentation and translation, following tools could be used.
+**Post guidelines:**
 
-1. `fixyaml` tool.
-2. `translationreport` tool.
-3. `validatejsdoc` tool.
+  * Use the post title as the first header.
+    * Including a header as well makes the snippet on the front page look bad.
+  * Use an appropriate category:
+    * One of: `howto`, `news`, `releases`, `announcements`, `blog` (the catch-all category)
+  * Use appropriate tags:
+    * `tools`, `plugins`, `android`, `ios`, `windowsphone`, `blackberry`, `plugin-$FOO`, `cli`, `performance`, `last-week`, `security` (add to this list as necessary)
+  * Use `rake serve` to preview your post, and refresh frequently.
+    * Jekyll does a poor job telling you where markdown errors exist.
+  * Use the <!--more--> tag to specify the cutoff point for displaying your post on the main page.
+  * Review your post yourself before asking for a review. This includes spell-check :).
+  * Ask for a review by pasting it into piratepad.net, and emailing the link to it to the ML.
 
-### FixYaml tool.
-The tool `fixyaml` created to automatically fix YAML headers in the translation files after
-exporting translated content from CrowdIn. Sometimes Crowdin messup with Apache license headers 
-and this tool created to fix that.
+***Creating "last week" Posts:***
 
-Usage:
+To get a summary of changes (and count the changes):
+    for l in cordova-*; do ( cd $l ; git log --format="$(printf %30s $l) %s" --no-merges --since='1 week ago' ) ; done | grep -iv version | grep -v CHANGELOG > all_logs.txt
+To get the number of authors:
+    for l in cordova-*; do ( cd $l ; git log --format="%an" --no-merges --since='1 week ago' ) ; done | sort | uniq | wc -l
 
-    bin\fixyaml             # Runs fixyaml across all docs.
-    bin\fixyaml ru          # Runs fixyaml across all Russian docs.
-    bin\fixyaml ru edge     # Runs fixyaml on the latest Russian docs.
-    bin\fixyaml ru 5.0.0    # Runs fixyaml on the version 5.0.0 of Russian docs.
+***Creating Release Announcement Posts***
 
-### Translation Report tool.
-The tool `translationreport` currently provide two QA checks for translation.
-1. It verifies that autolinking works after translation, and that translated text point to the same pages as 
-in the original documentation.
-2. It verifies that translated and original files create same DOM structure, since after exporting from 
-Crowdin, the markdown files could contain unnescessary lines, which lead to broken HTML, and could create 
-not needed code sections for example.
+Create a copy of a previous post and update it.
 
-### Validate JSDoc tool.
-The tool `validatejsdoc` allow verification of the current implementation of JSDoc with reference implementation.
-It was used during porting JSDoc to the Node version of JSDoc, and now currently not used in the workflow.
+To print the list of plugin versions tested:
+  1. Make sure all plugin repos are cloned, updated, and on master branch
+  2. Run:
+    for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
 
-Recommendations for the translators
+**Getting Approval:**
+
+Each blog post must be approved by at least one committer other than yourself, and must be available for all to see before going live. To request a review:
+
+  1. Run: `svn add www/_posts/your_post.md`
+  2. Run: `post-review` [download page](http://www.reviewboard.org/docs/rbtools/dev/)
+  3. Review it yourself, then click the `publish` button.
+  4. Wait for someone to approve it via the `Ship it` button.
+
+_Alternative steps (if post-review tool fails)_
+
+  1. From the root directory, run: `svn diff > new_post.diff`
+  2. Create a new request on http://reviews.apache.org.
+     a. Point it at your `new_post.diff` file
+     a. Set the directory to `/`
+     a. Add the group `cordova`
+     a. Click `publish`
+
+
+How to deploy the website
 -------------------------
-If you intend to create quality translation of the Cordova docs, please not only 
-work in Crowdin and translate documentation, but also please go extra mile and verify that
-generated documentation for your language is also produce quality results.
 
-For that you should have Crowdin CLI tool. You could
-1. take it from [here](https://crowdin.com/page/cli-tool) 
-2. or install alternate NodeJS client
-    
-    `npm -g install crowdin-cli`
+- the website is automatically updated on each commit.
+- the website should update within seconds.
 
-You will use that tool for the downloading translation from Crowdin. 
-To be able to download translated content from the Crowdin you should have API key for the project.
-Please ask for it on the mailing list.
-
-After you receive access to API key, create `crowdin.yaml` coniguration file, as described in the [CrowdIn cli tool page](https://crowdin.com/page/cli-tool).
-
-Now you ready to download content from CrowdIn.
-Run following commands (All commands here would be for NodeJS version of Crowdin CLI)
-
-1. Prepare translated content for downloading.
-
-   `crowdin-cli export`
-   
-   This command collect latest translations and made them available for downloading. Without that command, the translation which you would download would be stalled.
-   Be careful with this command, since Crowdin implement throttling and allow you export content not faster then 1 time in 30 minutes, or so.
-2. Download content for you language. I will use Russian as example.
-
-   `crowdin-cli download -l ru -o ru.zip`
-   
-   This command download all translations for Russian language to the `ru.zip` file.
-   
-3. Now unpack the download content to the temporary directory.
-
-   `unzip -x ru.zip -d tmp/ru`
-   
-4. Copy the unpacked content to the `docs` folder.
-
-   a) on Linux: 
-    `cp tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/`
- 
-   b) on Windows:
-    `xcopy tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/`
-    
-5. Remove temporary directory. In my case `tmp/ru`.
-
-   Now you have fresh translation and could generate content.
-   
-6. Fix Yaml headers by running.
-
-   `bin/fixyaml ru edge`
-
-7. Run generator. You should generate both English version and language which you tranlate.
-
-   ```
-   bin/genjs en edge
-   bin/genjs ru edge
-   ```
-   
-   The generated documentation contains in the `public/en/edge` and `public/ru/edge`
-   
-   You need both versions, to validate that translated docs would have same structure as original documentation.
-   
-8. Validate you translation.
-
-   `bin/translationreport ru edge`
-   
-   This will give you list of files which has structural differences from the original docs.
-   Below the example output:
-   ```
-    => Validating translation for version edge on language ru...
-   Comparing C:\Users\kant\Documents\GitHub\cordova-docs\public\en\edge
-   with C:\Users\kant\Documents\GitHub\cordova-docs\public\ru\edge
-   Path guide_platforms_blackberry10_upgrade.md.html is different.
-   Path guide_platforms_blackberry_upgrade.md.html is different.
-   Path guide_platforms_ios_tools.md.html is different.
-   Path guide_support_index.md.html is different.
-   ```
-
-9. Now you could open pregenerated files and compare the English version with your translated versions.
-    Open both versions and find out what's wrong.
-    
-    If on the first sight you could not find the differences, you could add switch `-v` which will increase verbosity of the tool.
-    For example: 
-    
-    `bin/translationreport ru edge -v`
-    
-10. Currently there two type of errors reported: 
-
-    a. Missing or additional links.
-    
-    b. The broken HTML structure.
-    
-11. Let's fix first type of errors - Missing/Additional links.
-    To fix these type of errors you have to make sure that text in your translation where you want to have link,
-    match exactly the header in the translated document, otherwise auto-linking would not work.
-    You have to rephrase the sentences to fix that.
-    
-12. Broken HTML DOM structure.
-
-    Most likely this type of errors caused by the additional lines created by Crowdin during export.
-    You have to manually spot these places and remove additional lines when needed and then commit your changes to Git.
-    Most likely these erorrs reappear after next exprot from CrowdIn, so don't hunt for these errors until release, or create 
-    tool which will fix these error after each export and use it.
-    
-13. Now you ready to create pull request with documentation to the main `crodova-docs` repository. 
-
-Enjoy translation!!!
