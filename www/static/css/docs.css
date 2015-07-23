@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.navbar-fixed-top {
+    margin-bottom: 0px;
+}
+
+.guide {
+    padding: 0px 30px 20px 30px;
+}
+
+.guide:nth-child(3n+1) {
+    clear: both;
+}
+
+.toc {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.toc {
+    position: fixed;
+    left: 0px;
+}
+
+.toc ul, .page-toc ul {
+    padding: 0px;
+}
+
+.toc ul li, .page-toc ul li {
+    list-style: none;
+}
+
+.toc > ul > li {
+    font-size: 1.5em;
+}
+
+.page-toc {
+    padding-left: 1em;
+}
+
+.page-toc ul > li {
+    font-size: 0.7em;
+}
+
+.page-toc ul li.h1,
+.page-toc ul li.h2,
+.page-toc ul li.h3,
+.page-toc ul li.h4,
+.page-toc ul li.h5,
+.page-toc ul li.h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.page-toc ul li.h2 {
+    padding-left: 1em;
+}
+
+.toc-active a {
+    color: red;
+}
+
+.main .page-toc-anchor {
+    display: block;
+    position: relative;
+    bottom: 50px;
+}
+
+.missing_version {
+    color: red !important;
+}
