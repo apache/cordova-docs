@@ -128,6 +128,6 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   If set, the value will append to the end of old UserAgent of webview.
   When using with OverrideUserAgent, this value will be ignored.
 
-        <preference name="OverrideUserAgent" value="My Browser" />
+        <preference name="AppendUserAgent" value="My Browser" />
 
 
