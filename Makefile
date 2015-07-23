@@ -36,7 +36,7 @@ help usage:
 	@echo make clean
 	@echo make nuke
 
-build serve: link-bugs $(GEN_CSS_FILES) $(DEFAULTS_FILE) $(LANGUAGES_FILE) toc
+build serve: $(GEN_CSS_FILES) $(DEFAULTS_FILE) $(LANGUAGES_FILE) toc
 
 build:
 	jekyll build $(JEKYLL_FLAGS)

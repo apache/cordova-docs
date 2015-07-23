@@ -1,7 +1,6 @@
 public
 *.pyc
 _defaults.yml
-www/_data/toc/*
 www/_data/languages.yml
 node_modules
 www/static/css/master.css
