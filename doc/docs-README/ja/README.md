@@ -15,7 +15,7 @@
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
-    
+
 
 ## ドキュメントに貢献
 
@@ -38,15 +38,15 @@
 トピック ブランチの使用お願い申し上げます。
 
     git checkout -b issue_23
-    
+
     # code
-    
+
     git commit -m "Issue 23: Fix a bad bug."
-    
+
     git push origin issue_23
-    
+
     # send pull request from branch issue_23 to cordova:master
-    
+
 
 ### 言語を追加します。
 
@@ -64,7 +64,7 @@
 
 ### 編集ガイドライン
 
-言語および使用に関するガイドラインの`STYLESHEET.md`ファイルを参照してください。
+言語および使用に関するガイドラインの`STYLEGUIDE.md`ファイルを参照してください。
 
 ## Node.js のドキュメントを生成します。
 
@@ -75,21 +75,21 @@
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
-    
+
 
 ### Node.js を設定
 
   1. Node.JS[のダウンロード ページ](http://nodejs.org/download/)へ
   2. ダウンロードして、あなたの操作システムにパッケージをインストールします。
   3. チェック アウトこのリポジトリは Git を使って
-    
+
         git clone https://github.com/apache/cordova-docs
-        
+
 
   4. 依存関係をインストールします。実行クローン コルドバ docs フォルダーのルートに
-    
+
         npm install
-        
+
 
   5. 今ローカルでドキュメントをビルドすることができます。
 

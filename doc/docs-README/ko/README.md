@@ -15,7 +15,7 @@
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
-    
+
 
 ## 설명서에 기여
 
@@ -38,15 +38,15 @@
 항목 지점의 사용 부탁 드립니다.
 
     git checkout -b issue_23
-    
+
     # code
-    
+
     git commit -m "Issue 23: Fix a bad bug."
-    
+
     git push origin issue_23
-    
+
     # send pull request from branch issue_23 to cordova:master
-    
+
 
 ### 언어 추가
 
@@ -64,7 +64,7 @@
 
 ### 광고문 안 가이드
 
-언어 및 사용에 대 한 `STYLESHEET.md` 파일을 참조 하십시오.
+언어 및 사용에 대 한 `STYLEGUIDE.md` 파일을 참조 하십시오.
 
 ## Node.js 함께 문서 생성
 
@@ -75,21 +75,21 @@
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
-    
+
 
 ### Node.js를 설정
 
   1. Node.JS [다운로드 페이지](http://nodejs.org/download/) 이동
   2. 다운로드 및 운영 체제에 대 한 패키지를 설치 합니다.
   3. 체크 아웃 Git를 사용 하 여이 저장소
-    
+
         git clone https://github.com/apache/cordova-docs
-        
+
 
   4. 종속성을 설치 합니다. 실행 복제 코르도바-오피스 폴더의 루트에
-    
+
         npm install
-        
+
 
   5. 지금 당신은 로컬로 문서를 만들 수입니다.
 
