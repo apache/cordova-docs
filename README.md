@@ -1,85 +1,93 @@
-Cordova Website
+<!--
+    https://svn.apache.org/repos/asf/cordova/site cordova-website
+-->
+
+Installing
+==========
+
+## Ruby
+
+On Mac OS X, install Homebrew from [this site][homebrew], and then run:
+
+    brew install ruby
+
+On Windows, follow these steps:
+
+1. Download this Ruby installer: [installer]
+1. Run the downloaded file
+    1. Use the default installation path (usually `C:\Ruby22`)
+    1. Make sure the 'add executable to path' option is checked
+1. Download this Ruby DevKit self-extracting archive: [archive]
+1. Run this downloaded file
+    1. Use the following extraction path: `C:\Ruby22DevKit`
+    1. Open `cmd.exe` and run these commands (following any instructions they give):
+
+        ruby dk.rb init
+        ruby dk.rb install
+
+    1. Close `cmd.exe`
+
+On Linux, run the commands from [this site][ruby_linux] that apply to your Linux distribution.
+
+***
+
+Verify the installation by running:
+
+    ruby --version
+
+## JavaScript
+
+On Windows and Mac OS X, go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to install NPM is enabled, if you see one.
+
+On Linux, follow the instructions on [this site][linux_node].
+
+***
+
+Verify the installation by running:
+
+    node --version
+    npm --version
+
+## Dependencies
+
+Once Ruby and JavaScript are installed, install all dependencies by running:
+
+    gem install bundle
+    bundle install
+    npm install
+
+On some systems, administrator privileges may be required for the above commands.
+
+Building
+========
+
+To build the whole website, run:
+
+    node_modules/.bin/gulp build
+
+Troubleshooting
 ===============
 
-Get the source code
--------------------
-
-    $ svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
-
-Installing Dependencies
-----------------------------
-
-This is all handled for you now via a VM and Vagrant.
-Install Vagrant and VirtualBox if you haven't already done so, then:
-
-    $ cd cordova-website/
-    $ vagrant up
-    $ vagrant ssh
-    $ cd /vagrant
-
-Then you can continue with `rake build` as described below, and the output
-will be generated in the shared directory. You should do your
-svn commands outside of the VM, so that you aren't required to set up your
-svn credentials inside the VM. You can also do `rake serve` in the VM,
-and open "http://localhost:4000" in your bare-metal workstation browser,
-and it should work as port 4000 traffic is passed through from your workstation
-to the VM.
-
-When you are done using `rake build` and `rake serve`, you can exit from
-the `vagrant ssh` shell to return to your bare metal machine, then 
-run `vagrant halt` to gracefully shutdown the VM.
-
-How to compile the site
------------------------
-
-    # change to the cordova website directory.
-    $ cd /path/to/cordova-website
-
-    # compile the site. Note that if you change a blog entry (i.e., grunt updateBlog), you will need to re-run "rake build".
-    $ rake build
-
-    # the site is generated in `public/` with an index.html file that
-    # can be opened using:
-    $ rake serve
-    # and pointing your browser at localhost:4000
+Ask for help on the IRC channel: #cordova on irc.freenode.net.
 
 
-Where to make changes
-----------------------
-The files that are served by cordova.apache.org live in public/.
 
-"rake build" uses lesscss & jekyll to compile some files from www/ into public/
 
-Some files live only in public/, and changes to them should be made directly. The
-list of these can be found in _config.yml.
 
-How to update the docs part of the website
-----------------------
 
-    # render the docs following the directions in the `cordova-docs` repository's README.md
 
-    # copy the rendered docs from `cordova-docs` to `cordova-website`
-    $ rsync -av --exclude='.svn*' public/ ../cordova-website/public/docs
 
-    # now move to the site directory
-    $ cd ../cordova-website
 
-    # if you are adding a new version of cordova docs, don't forget to:
-    $ svn add public/docs/my_lang/my_new_version
 
-    # update the "Documentation" URL on the site to point to the latest version of the docs
-    $ vi _config.yml
-        search for "Documentation"
-        change the version number in the URL to the latest (likely what you added above)
 
-    # compile the site per the instructions above, since the URL to the docs changed thus the page needs to be re-generated
 
-    # commit your changes to SVN
-    $ svn commit -m "Add docs version 2.5.0."
+
+
+
 
 
 Writing a Blog Post
---------------------
+===================
 
 Use the grunt scripts!
 
@@ -102,7 +110,7 @@ Use the grunt scripts!
     categories: releases
 
     # git commit your changes to apache-blog-posts
-    
+
     # copy blog www/_posts directory + linkify
     $ grunt updateBlog
 
@@ -127,29 +135,29 @@ _Linked Posts_ - If the content was written by a contributor and is worth curati
 
 Blog posts live in `www/_posts`. To create a new post:
 
-  1. Copy one of the existing posts into a new file (changing the name appropriately).
-  2. Run `rake serve` in the background.
-  3. Draft your post.
-  4. Get approval (see below)
-  5. Update the file name to reflect the commit date (if necessary)
-  6. Run `rake build`
-  7. Run `www/_posts/linkify-bugs.sh so that the CB-****` turn into links
-  8. Validate `public/rss.xml` with [http://validator.w3.org](http://validator.w3.org) 
-  9. svn commit
+1. Copy one of the existing posts into a new file (changing the name appropriately).
+2. Run `rake serve` in the background.
+3. Draft your post.
+4. Get approval (see below)
+5. Update the file name to reflect the commit date (if necessary)
+6. Run `rake build`
+7. Run `www/_posts/linkify-bugs.sh so that the CB-****` turn into links
+8. Validate `public/rss.xml` with [http://validator.w3.org](http://validator.w3.org)
+9. svn commit
 
 **Post guidelines:**
 
-  * Use the post title as the first header.
-    * Including a header as well makes the snippet on the front page look bad.
-  * Use an appropriate category:
-    * One of: `howto`, `news`, `releases`, `announcements`, `blog` (the catch-all category)
-  * Use appropriate tags:
-    * `tools`, `plugins`, `android`, `ios`, `windowsphone`, `blackberry`, `plugin-$FOO`, `cli`, `performance`, `last-week`, `security` (add to this list as necessary)
-  * Use `rake serve` to preview your post, and refresh frequently.
-    * Jekyll does a poor job telling you where markdown errors exist.
-  * Use the <!--more--> tag to specify the cutoff point for displaying your post on the main page.
-  * Review your post yourself before asking for a review. This includes spell-check :).
-  * Ask for a review by pasting it into piratepad.net, and emailing the link to it to the ML.
+* Use the post title as the first header.
+* Including a header as well makes the snippet on the front page look bad.
+* Use an appropriate category:
+* One of: `howto`, `news`, `releases`, `announcements`, `blog` (the catch-all category)
+* Use appropriate tags:
+* `tools`, `plugins`, `android`, `ios`, `windowsphone`, `blackberry`, `plugin-$FOO`, `cli`, `performance`, `last-week`, `security` (add to this list as necessary)
+* Use `rake serve` to preview your post, and refresh frequently.
+* Jekyll does a poor job telling you where markdown errors exist.
+* Use the <!--more--> tag to specify the cutoff point for displaying your post on the main page.
+* Review your post yourself before asking for a review. This includes spell-check :).
+* Ask for a review by pasting it into piratepad.net, and emailing the link to it to the ML.
 
 ***Creating "last week" Posts:***
 
@@ -163,27 +171,28 @@ To get the number of authors:
 Create a copy of a previous post and update it.
 
 To print the list of plugin versions tested:
-  1. Make sure all plugin repos are cloned, updated, and on master branch
-  2. Run:
-    for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
+
+1. Make sure all plugin repos are cloned, updated, and on master branch
+2. Run:
+        for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
 
 **Getting Approval:**
 
 Each blog post must be approved by at least one committer other than yourself, and must be available for all to see before going live. To request a review:
 
-  1. Run: `svn add www/_posts/your_post.md`
-  2. Run: `post-review` [download page](http://www.reviewboard.org/docs/rbtools/dev/)
-  3. Review it yourself, then click the `publish` button.
-  4. Wait for someone to approve it via the `Ship it` button.
+1. Run: `svn add www/_posts/your_post.md`
+2. Run: `post-review` [download page](http://www.reviewboard.org/docs/rbtools/dev/)
+3. Review it yourself, then click the `publish` button.
+4. Wait for someone to approve it via the `Ship it` button.
 
 _Alternative steps (if post-review tool fails)_
 
-  1. From the root directory, run: `svn diff > new_post.diff`
-  2. Create a new request on http://reviews.apache.org.
-     a. Point it at your `new_post.diff` file
-     a. Set the directory to `/`
-     a. Add the group `cordova`
-     a. Click `publish`
+1. From the root directory, run: `svn diff > new_post.diff`
+2. Create a new request on http://reviews.apache.org.
+    a. Point it at your `new_post.diff` file
+    a. Set the directory to `/`
+    a. Add the group `cordova`
+    a. Click `publish`
 
 
 How to deploy the website
@@ -192,3 +201,6 @@ How to deploy the website
 - the website is automatically updated on each commit.
 - the website should update within seconds.
 
+[ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
+[homebrew]: http://brew.sh/
+[linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12

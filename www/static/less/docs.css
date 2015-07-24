@@ -1,0 +1,13 @@
+.toc-active a {
+    color: red;
+}
+
+.page-toc-anchor {
+    display: block;
+    position: relative;
+    bottom: 50px;
+}
+
+.missing-version {
+    color: red !important;
+}

@@ -11,7 +11,7 @@ Language
         {% if language.versions contains page.version %}
         <a href="{{ site.baseurl }}/docs/{{ language_id }}/{{ page.version }}">
         {% else %}
-        <a class="grayed-out" href="{{ site.baseurl }}/docs/{{ language_id }}/edge">
+        <a class="missing-version" href="{{ site.baseurl }}/docs/{{ language_id }}/edge">
         {% endif %}
             {{ language.name }}
         </a>

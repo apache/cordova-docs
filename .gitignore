@@ -3,4 +3,5 @@ public
 _defaults.yml
 www/_data/languages.yml
 node_modules
-www/static/css/master.css
+www/static/css
+Gemfile.lock
