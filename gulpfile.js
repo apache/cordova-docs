@@ -20,7 +20,7 @@ var BIN_DIR     = path.join("tools", "bin");
 var DATA_DIR    = path.join(SOURCE_DIR, "_data");
 var DOCS_DIR    = path.join(SOURCE_DIR, "docs");
 var CSS_SRC_DIR = path.join(SOURCE_DIR, "static", "css-src");
-var CSS_DIR     = path.join(SOURCE_DIR, "static", "css");
+var CSS_OUT_DIR = path.join(SOURCE_DIR, "static", "css");
 var BUILD_DIR   = "public";
 
 // helpers
@@ -41,20 +41,10 @@ function bin(name) {
 }
 
 // tasks
-gulp.task("default", function () {
-    gulp.run("lr-server", "scripts", "styles", "html");
-
-    gulp.watch("app/src/**", function(event) {
-        gulp.run("scripts");
-    })
-
-    gulp.watch("app/css/**", function(event) {
+gulp.task("watch", function () {
+    gulp.watch(path.join(CSS_SRC_DIR, "**", "*"), function(event) {
         gulp.run("styles");
-    })
-
-    gulp.watch("app/**/*.html", function(event) {
-        gulp.run("html");
-    })
+    });
 });
 
 gulp.task("build", ["defaults", "languages", "toc", "styles"], function (done) {
@@ -83,14 +73,14 @@ gulp.task("styles", function() {
 
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.less"))
         .pipe(less())
-        .pipe(gulp.dest(CSS_DIR));
+        .pipe(gulp.dest(CSS_OUT_DIR));
 
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.css"))
-        .pipe(gulp.dest(CSS_DIR));
+        .pipe(gulp.dest(CSS_OUT_DIR));
 
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.scss"))
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest(CSS_DIR));
+        .pipe(gulp.dest(CSS_OUT_DIR));
 });
 
 // convenience tasks
@@ -102,6 +92,6 @@ gulp.task("clean", function () {
     fse.remove(BUILD_DIR);
     fse.remove(path.join(DATA_DIR, "toc", "*.yml"));
     fse.remove(path.join(DATA_DIR, "languages.yml"));
-    fse.remove(path.join(CSS_DIR));
+    fse.remove(path.join(CSS_OUT_DIR));
     fse.remove("_defaults.yml");
 });
