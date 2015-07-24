@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.3",
     "gulp-run": "^1.6.8",
+    "gulp-sass": "^2.0.4",
     "jodoc": "git://github.com/kant2002/jodoc-js",
     "js-yaml": "^3.2.2",
     "less": "^2.5.1",

@@ -7,6 +7,7 @@ var child_process = require("child_process");
 
 var gulp    = require("gulp");
 var less    = require("gulp-less");
+var sass    = require("gulp-sass");
 var vstream = require("vinyl-source-stream");
 var buffer  = require("vinyl-buffer");
 
@@ -14,13 +15,13 @@ var buffer  = require("vinyl-buffer");
 var CONFIG_FILES = ["_config.yml", "_defaults.yml"];
 var JEKYLL_FLAGS = ["--trace", "--config", CONFIG_FILES.join(",")];
 
-var SOURCE_DIR = "www";
-var BIN_DIR    = path.join("tools", "bin");
-var DATA_DIR   = path.join(SOURCE_DIR, "_data");
-var DOCS_DIR   = path.join(SOURCE_DIR, "docs");
-var LESS_DIR   = path.join(SOURCE_DIR, "static", "less");
-var CSS_DIR    = path.join(SOURCE_DIR, "static", "css");
-var BUILD_DIR  = "public";
+var SOURCE_DIR  = "www";
+var BIN_DIR     = path.join("tools", "bin");
+var DATA_DIR    = path.join(SOURCE_DIR, "_data");
+var DOCS_DIR    = path.join(SOURCE_DIR, "docs");
+var CSS_SRC_DIR = path.join(SOURCE_DIR, "static", "css-src");
+var CSS_DIR     = path.join(SOURCE_DIR, "static", "css");
+var BUILD_DIR   = "public";
 
 // helpers
 function execPiped(command, args, fileName) {
@@ -79,10 +80,16 @@ gulp.task("toc", function (done) {
 });
 
 gulp.task("styles", function() {
-    gulp.src(path.join(LESS_DIR, "**/*.less"))
+
+    gulp.src(path.join(CSS_SRC_DIR, "**", "*.less"))
         .pipe(less())
         .pipe(gulp.dest(CSS_DIR));
-    gulp.src(path.join(LESS_DIR, "**/*.css"))
+
+    gulp.src(path.join(CSS_SRC_DIR, "**", "*.css"))
+        .pipe(gulp.dest(CSS_DIR));
+
+    gulp.src(path.join(CSS_SRC_DIR, "**", "*.scss"))
+        .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(CSS_DIR));
 });
 
