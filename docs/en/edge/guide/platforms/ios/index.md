@@ -145,9 +145,9 @@ Preferences &rarr; Downloads &rarr; Components__ panel.
 ## Deploy to Device
 
 For details about various requirements to deploy to a device, refer
-to the _Configuring Development and Distribution Assets_ section of
+to the _Launch Your App On Devices_ section of
 Apple's
-[Tools Workflow Guide for iOS](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959).
+[About App Distribution Workflows](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
 Briefly, you need to do the following before deploying:
 
 1. Join the Apple iOS Developer Program.
