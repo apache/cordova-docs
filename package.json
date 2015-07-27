@@ -14,6 +14,7 @@
   "author": "Apache Software Foundation",
   "license": "Apache Version 2.0",
   "dependencies": {
+    "browser-sync": "^2.8.0",
     "cheerio": "^0.17.0",
     "esrever": "^0.1.0",
     "fs-extra": "^0.11.1",
