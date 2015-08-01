@@ -19,6 +19,7 @@ var JEKYLL_FLAGS = ["--trace", "--config", CONFIG_FILES.join(",")];
 var SOURCE_DIR = "www";
 var BUILD_DIR  = "public";
 
+var CONFIG_FILE    = "_config.yml";
 var DEFAULTS_FILE  = "_defaults.yml";
 var DATA_DIR       = path.join(SOURCE_DIR, "_data");
 var LANGUAGES_FILE = path.join(DATA_DIR, "languages.yml");
@@ -72,6 +73,12 @@ gulp.task("watch", function () {
             path.join(SOURCE_DIR, "**", "*.js"),
             path.join(SOURCE_DIR, "**", "*.yml"),
             path.join(CSS_OUT_DIR, "**", "*.css"),
+        ],
+        ["regenerate"]
+    );
+    gulp.watch(
+        [
+            CONFIG_FILE,
         ],
         ["regenerate"]
     );
