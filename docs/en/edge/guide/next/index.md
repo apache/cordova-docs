@@ -210,7 +210,7 @@ The following links are the best places to get help for Cordova:
 * StackOverflow: [http://stackoverflow.com/questions/tagged/cordova](http://stackoverflow.com/questions/tagged/cordova)
 By using the Cordova tag, you can view and browse all Cordova questions. Note that StackOverflow automatically converts the "Phonegap" tag to "Cordova", so this way you will be able to access historical questions as well
 * PhoneGap Google Group: [https://groups.google.com/forum/#!forum/phonegap](https://groups.google.com/forum/#!forum/phonegap)
-This Google Group was the old support forum for when Cordova was still called PhoneGap. While there are still a lot of Cordova users that frequent this group, the Cordova community has expressed an interest in focusing less on this group and instead using StackOverflow for support
+This Google Group was the old support forum when Cordova was still called PhoneGap. While there are still a lot of Cordova users that frequent this group, the Cordova community has expressed an interest in focusing less on this group and instead using StackOverflow for support
 * Meetup: [http://phonegap.meetup.com](http://phonegap.meetup.com) - 
 Consider finding a local Cordova/PhoneGap meetup group
 
