@@ -215,11 +215,12 @@ To publish a plugin to NPM registry you need to follow steps below:
 
   * create `package.json` file for your plugin:
 
-    $ plugman createpackagejson /path/to/your/plugin
+        $ plugman createpackagejson /path/to/your/plugin
 
   * publish it:
-    $ npm adduser # that is if you don't have an account yet
-    $ npm publish /path/to/your/plugin
+
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
 
 That is it!
 
