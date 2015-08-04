@@ -78,7 +78,7 @@ gulp.task("watch", function () {
 });
 
 gulp.task("generate", function (done) {
-    exec("jekyll", ["build"].concat(JEKYLL_FLAGS), done);
+    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(JEKYLL_FLAGS), done);
 });
 
 gulp.task("regenerate", ["generate"], function () {

@@ -5,3 +5,4 @@ www/_data/languages.yml
 node_modules
 www/static/css
 Gemfile.lock
+settings.json
