@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Aktualizacja
 
@@ -82,7 +78,7 @@ Dla projektów CLI:
 
 1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
-2.  Uruchom `cordova platform update android` w istniejących projektach.
+2.  Uruchomić `cordova platform update android` w istniejących projektach.
 
 ## Uaktualnienie do 3.3.0 od 3.2.0
 
@@ -90,7 +86,7 @@ Wykonaj te same instrukcje co `3.2.0`.
 
 Począwszy od 3.3.0, Cordova runtime jest teraz skompilowany jako bibliotekę Android w miejsce przepisów Jar. Będzie to miało żadnego wpływu na sposób użycia wiersza polecenia, ale IDE użytkownicy będą musieli importować nowo dodane projektu `MyProject-CordovaLib` do ich obszaru roboczego.
 
-## Uaktualnienie do 3.2.0 od 3.1.0
+## Ulepszanie wobec 3.2.0 od 3.1.0
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
@@ -118,7 +114,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
         bin/update <project_path>
     
 
-## Uaktualnienie do consoli (3.0.0) z 2.9.0
+## Uaktualnienia do consoli (3.0.0) z 2.9.0
 
 1.  Tworzenie nowego projektu Apache Cordova 3.0.0 za pomocą CLI, cordova, zgodnie z opisem w interfejs wiersza poleceń.
 
@@ -128,7 +124,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 4.  Skopiuj rodzimych aktywów od starego projektu do odpowiednich katalogów na `platformach lub android`: jest to katalog, gdzie istnieje projektu cordova-android rodzimych.
 
-5.  Narzędzia CLI cordova instalowac pluginy, czego potrzebujesz. Należy zauważyć, że CLI obsługuje wszystkie podstawowe API jako wtyczki, więc mogą one potrzebować do dodania. Tylko 3.0.0 wtyczki są kompatybilne z CLI.
+5.  Użyj narzędzia CLI cordova instalowac pluginy, czego potrzebujesz. Należy zauważyć, że CLI obsługuje wszystkie podstawowe API jako wtyczek, dzięki czemu mogą one potrzebować do dodania. Tylko 3.0.0 wtyczki są kompatybilne z CLI.
 
 ## Uaktualnienie do 3.0.0 z 2.9.0
 
@@ -146,11 +142,11 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
     
     **Uwaga**: wszystkie podstawowe API zostały usunięte i musi być zainstalowany jako wtyczki. Aby uzyskać szczegółowe informacje, zapoznaj się z za pomocą Plugman do zarządzania Plugins przewodnik.
 
-## Aktualizacja z wersji 2.8.0 do wersji 2.9.0
+## Upgrade do 2.9.0 od 2.8.0
 
 1.  Run `bin/update <project_path>`.
 
-## Aktualizacja z wersji 2.7.0 do wersji 2.8.0
+## Uaktualnienie do 2.8.0 od 2.7.0
 
 1.  Usunąć `cordova-2.7.0.jar` z projektu w katalogu `libs` .
 
@@ -188,7 +184,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 8.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
+## Uaktualnienie do 2.6.0 z 2.5.0
 
 1.  Usunąć `cordova-2.5.0.jar` z projektu w katalogu `libs` .
 
@@ -198,7 +194,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 4.  Skopiuj nowe `cordova-2.6.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.6.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.6.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -208,7 +204,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródłowym Cordova.
 
-## Uaktualnić do 2.5.0 2.4.0
+## Uaktualnienie do 2.5.0 od 2.4.0
 
 1.  Usunąć `cordova-2.4.0.jar` z projektu w katalogu `libs` .
 
@@ -218,7 +214,7 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.5.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.5.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.5.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -226,7 +222,7 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 8.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Uaktualnić do 2.4.0 2.3.0
+## Uaktualnienie do 2.4.0 od 2.3.0
 
 1.  Usunąć `cordova-2.3.0.jar` z projektu w katalogu `libs` .
 
@@ -236,13 +232,13 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.4.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.4.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.4.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
 7.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Uaktualnić do 2.3.0 2.2.0
+## Uaktualnienie do 2.3.0 od 2.2.0
 
 1.  Usunąć `cordova-2.2.0.jar` z projektu w katalogu `libs` .
 
@@ -252,7 +248,7 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.3.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.3.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.3.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -268,7 +264,7 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.2.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.2.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.2.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -284,13 +280,13 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.1.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.1.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.1.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
 7.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Uaktualnić do 2.0.0 1.9.0
+## Uaktualnienie do 2.0.0 od 1.9.0
 
 1.  Usunąć `cordova-1.9.0.jar` z projektu w katalogu `libs` .
 
@@ -300,7 +296,7 @@ Uruchom `bin/update <project>` ścieżka projektu wymienione w katalogu źródł
 
 4.  Skopiuj nowe `cordova-2.0.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.0.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.0.0.js` pliku.
 
 6.  Kopiowanie `res/xml/config.xml` do meczu`framework/res/xml/config.xml`.
 
@@ -346,7 +342,7 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 4.  Skopiuj nowe `cordova-1.8.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-1.8.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-1.8.0.js` pliku.
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 
@@ -360,7 +356,7 @@ Ze względu na wprowadzenie `CordovaWebView` w 1.9.0 wydania, wtyczki innych fir
 
 4.  Skopiuj nowe `cordova-1.8.0.js` do projektu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-1.8.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-1.8.0.js` pliku.
 
 6.  Aktualizacja `res/xml/plugins.xml` do meczu`framework/res/xml/plugins.xml`.
 

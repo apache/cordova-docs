@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. NOTICE 파일 저작권 소유권에 관한 자세한 내용은이 작업 배포를 참조 하십시오. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. 라이센스의 복사본을 얻을 수 있습니다.
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.apache.org/licenses/LICENSE-2.0 적용 가능한 법률에 의해 요구 또는 서 면으로 동의 하지 않는 한 소프트웨어 라이선스 하에 배포에 배포 되는 "있는 그대로" 기준, 보증 또는 조건 어떤 종류의 없이, 명시적 또는 묵시적.  라이센스 권한 및 제한 적용 되는 특정 언어에 대 한 참조
+    
+
+## 라이센스.
 
 # 다음 단계
 
@@ -27,14 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   모범 사례
 *   업그레이드 처리
-*   테스트
-*   디버깅
+*   코르도바 애플 리 케이 션을 테스트
+*   코르도바 애플 리 케이 션 디버깅
 *   사용자 인터페이스
 *   특별 한 고려 사항
 *   유지
 *   도움말 얻기 
 
-# 모범 사례
+# 베스트 사례 코르도바 애플 리 케이 션 개발
 
 ## 1) 스파는 친구
 
@@ -82,18 +72,19 @@ Click 이벤트를 사용 하는 **터치 대 클릭** -당신이 할 수 있는
 
 *   ["반 assed 당신이 그것"][11]
 *   ["최고 10 성능 팁 PhoneGap 및 하이브리드 애플 리 케이 션에 대 한"][12]
-*   "빠른 애플 리 케이 션 및 자바 스크립트 사이트": http://channel9.msdn.com/Events/Build/2013/4-313
+*   ["빠른 애플 리 케이 션 및 자바 스크립트 사이트"][13]
 
  [11]: http://sintaxi.com/you-half-assed-it
  [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [13]: https://channel9.msdn.com/Events/Build/2013/4-313
 
 ## 3) 인식 하 고 오프 라인 상태 처리
 
 네트워크에 대 한 이전 팁을 참조 하십시오. 뿐만 아니라 느린 네트워크에 있을 수 있습니다 그것은 완전히 오프 라인으로 응용 프로그램에 대 한 전적으로 가능 합니다. 응용 프로그램 지능형 방식으로이 처리 해야 합니다. 응용 프로그램이 없는 경우 응용 프로그램은 깨진 사람들이 생각 합니다. 얼마나 쉬운 그것 (모두 오프 라인 및 온라인 이벤트를 수신 대기 하는 코르 도우 바 지원)를 처리 하는, 주어진 잘 오프 라인 실행 될 때 응답 하지 응용 프로그램에 대 한 전혀 이유가 있다. (아래의 테스트 섹션 참조) 테스트 해야 응용 프로그램 한 상태에서 시작 하 고 다음 다른 전환 하는 경우 응용 프로그램에서 처리 하는 방법을 테스트 해야 합니다.
 
-Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API 완벽 하지 않습니다. XHR 요청을 사용 하 여 장치 인지 진정으로 오프 라인 또는 온라인에 의존 할 수 있습니다. 하루의 끝에, 확실히 사실 어떤 형태의 네트워크 문제-에 대 한 지원 추가, 애플 스토어 (및 아마 다른 매장) 오프 라인/온라인 상태를 제대로 처리 하지 않는 애플 리 케이 션을 거부 합니다. 이 주제에 더 많은 논의 참조 ["에이 것은?"][13]
+Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API 완벽 하지 않습니다. XHR 요청을 사용 하 여 장치 인지 진정으로 오프 라인 또는 온라인에 의존 할 수 있습니다. 하루의 끝에, 확실히 사실 어떤 형태의 네트워크 문제-에 대 한 지원 추가, 애플 스토어 (및 아마 다른 매장) 오프 라인/온라인 상태를 제대로 처리 하지 않는 애플 리 케이 션을 거부 합니다. 이 주제에 더 많은 논의 참조 ["에이 것은?"][14]
 
- [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [14]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # 업그레이드 처리
 
@@ -130,7 +121,7 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 프로젝트를 업데이트 해야 하는 플러그인을 많이 있다면, 그것은 셸 또는 일괄 처리 스크립트를 제거 하 고 하나의 명령으로 플러그인을 추가 만드는 시간을 저장할 수 있습니다.
 
-# 테스트
+# 코르도바 애플 리 케이 션을 테스트
 
 응용 프로그램을 테스트 하는 것은 슈퍼 중요 합니다. 코르 도우 바 팀 재 스민을 사용 하지만 어떤 웹 친화적인 단위 테스트 솔루션을 할 것입니다.
 
@@ -148,7 +139,7 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 팁: 쉽게 플래시 장치에 안 드 로이드의 다른 버전을 안 드 로이드 넥서스 장치에 가능 하다. 이 간단한 과정은 쉽게 응용 프로그램을 테스트할 단일 장치 안 드 로이드의 다른 수준에 보증이 무효화 하거나 장치 "탈 옥" 또는 "루트" 당신을 요구 하지 않고 있습니다. 구글 안 드 로이드 공장 이미지와 지시는에 있습니다: https://developers.google.com/android/nexus/images#instructions
 
-# 디버깅
+# 코르도바 애플 리 케이 션 디버깅
 
 코르 도우 바 디버깅 몇 가지 설정이 필요 합니다. 데스크톱 응용 프로그램과 달리 간단 하 게 오픈 dev 도구 귀하의 모바일 장치에 없고 디버깅 시작, 다행히 몇 가지 좋은 대안이 있다.
 
@@ -156,15 +147,15 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 ### Xcode
 
-Xcode와 코르도바 응용 프로그램의 네이티브 iOS 쪽을 디버깅할 수 있습니다. 디버그 영역 (디버그 영역-> 보기)을 보여주는 다는 것을 확인 하십시오. 응용 프로그램에 장치 (또는 시뮬레이터) 실행 되 면 디버그 영역에서 로그 출력을 볼 수 있습니다. 이것은 모든 오류 또는 경고가 인쇄 됩니다. 소스 파일 내에서 중단점을 설정할 수도 있습니다. 이렇게 하면 한 번에 코드 한 줄을 단계별로 고 그 당시 변수의 상태를 봅니다. 변수의 상태는 중단점이 적중 되 면 디버그 영역에 표시 됩니다. 일단 귀하의 응용 프로그램 실행 장치에, 가져올 수 사파리의 웹 관리자를 (아래에 설명된대로) webview와 js 쪽 응용 프로그램의 디버깅을. 자세한 내용 및 도움말, Xcode 가이드 참조: [Xcode 디버깅 가이드][14]
+Xcode와 코르도바 응용 프로그램의 네이티브 iOS 쪽을 디버깅할 수 있습니다. 디버그 영역 (디버그 영역-> 보기)을 보여주는 다는 것을 확인 하십시오. 응용 프로그램에 장치 (또는 시뮬레이터) 실행 되 면 디버그 영역에서 로그 출력을 볼 수 있습니다. 이것은 모든 오류 또는 경고가 인쇄 됩니다. 소스 파일 내에서 중단점을 설정할 수도 있습니다. 이렇게 하면 한 번에 코드 한 줄을 단계별로 고 그 당시 변수의 상태를 봅니다. 변수의 상태는 중단점이 적중 되 면 디버그 영역에 표시 됩니다. 일단 귀하의 응용 프로그램 실행 장치에, 가져올 수 사파리의 웹 관리자를 (아래에 설명된대로) webview와 js 쪽 응용 프로그램의 디버깅을. 자세한 내용 및 도움말, Xcode 가이드 참조: [Xcode 디버깅 가이드][15]
 
- [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+ [15]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
 
 ### 사파리 원격 웹 관리자를 사용 하 여 디버깅
 
-사파리의 웹 관리자와 코르도바 응용 프로그램에서 webview와 js 코드를 디버깅할 수 있습니다. OSX 에서만 그리고 iOS 6 (더 높은)와 작동합니다. 그것은 사파리를 사용 하 여 장치 (또는 시뮬레이터) 및 코르도바 응용 프로그램 브라우저의 개발 도구를 연결할 것 이다. 당신은 당신이 dev 도구-DOM 검사/조작, 자바 스크립트 디버거, 네트워크 검사, 콘솔, 등에서 무엇을 기대 얻을. Xcode, 같은 사파리의 웹 관리자와 함께 자바 스크립트 코드에 중단점을 설정 하 고 볼 수 변수 상태 그 당시. 오류, 경고 또는 메시지를 콘솔에 출력을 볼 수 있습니다. 응용 프로그램 실행 중인 자바 스크립트 명령 콘솔에서 직접 실행할 수도 있습니다. 그것을 설정 하는 방법에 할 수 있는 더 자세한이 훌륭한 블로그 게시물을 참조: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> 그리고이 가이드: [사파리 웹 관리자 가이드][15]
+사파리의 웹 관리자와 코르도바 응용 프로그램에서 webview와 js 코드를 디버깅할 수 있습니다. OSX 에서만 그리고 iOS 6 (더 높은)와 작동합니다. 그것은 사파리를 사용 하 여 장치 (또는 시뮬레이터) 및 코르도바 응용 프로그램 브라우저의 개발 도구를 연결할 것 이다. 당신은 당신이 dev 도구-DOM 검사/조작, 자바 스크립트 디버거, 네트워크 검사, 콘솔, 등에서 무엇을 기대 얻을. Xcode, 같은 사파리의 웹 관리자와 함께 자바 스크립트 코드에 중단점을 설정 하 고 볼 수 변수 상태 그 당시. 오류, 경고 또는 메시지를 콘솔에 출력을 볼 수 있습니다. 응용 프로그램 실행 중인 자바 스크립트 명령 콘솔에서 직접 실행할 수도 있습니다. 그것을 설정 하는 방법에 할 수 있는 더 자세한이 훌륭한 블로그 게시물을 참조: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> 그리고이 가이드: [사파리 웹 관리자 가이드][16]
 
- [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
+ [16]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## 크롬 원격 디버깅
 
@@ -182,34 +173,38 @@ Weinre 코르 도우 바 응용 프로그램에 대 한 원격 디버그 클라�
 
 ## 기타 옵션
 
-*   블랙베리 10 뿐만 아니라 디버깅을 지원 합니다: [문서][16]
-*   [이 블로그 게시물][17] 및이 [MDN 문서][18] 를 참조 하십시오 뿐만 아니라 파이어 폭스 응용 프로그램 관리자를 사용 하 여 디버깅할 수 있습니다..
+*   블랙베리 10 뿐만 아니라 디버깅을 지원 합니다: [문서][17]
+*   [이 블로그 게시물][18] 및이 [MDN 문서][19] 를 참조 하십시오 뿐만 아니라 파이어 폭스 응용 프로그램 관리자를 사용 하 여 디버깅할 수 있습니다..
 *   더 많은 예제 및 위의 디버깅 팁의 설명을 참조 하십시오: <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [17]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [18]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [19]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # 사용자 인터페이스
 
 코르 도우 바 응용 프로그램 구축에 좋은 보이는 모바일은 도전일 수 있다, 특히 개발자를 위한. 많은 사람들이 이것을 더 쉽게 만드는 UI 프레임 워크를 사용 하기로 결정 했습니다. 여기 당신이 고려해 야 할 옵션의 간단한 목록입니다.
 
 *   [모바일 jQuery][9] -jQuery 모바일 자동으로 모바일 최적화에 대 한 레이아웃을 향상 시킵니다. 그것은 또한 당신을 위해 자동으로 스파를 만들고 처리 합니다.
-*   [이오니아][19] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
-*   [래치 드][20] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
+*   [이오니아][20] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
+*   [래치 드][21] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
 *   [검도 UI][5] -오픈 소스 UI 및 Telerik에서 응용 프로그램 프레임 워크입니다.
-*   [외 투][21]
+*   [외 투][22]
 *   [ReactJS][7]
 
- [19]: http://ionicframework.com/
- [20]: http://goratchet.com/
- [21]: http://topcoat.io
+ [20]: http://ionicframework.com/
+ [21]: http://goratchet.com/
+ [22]: http://topcoat.io
 
-사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다: * [iOS][22] * [안 드 로이드][23] * [Windows Phone][24]
+사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다:
 
- [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [23]: https://developer.android.com/designWP8
- [24]: http://dev.windowsphone.com/en-us/design/library
+*   [iOS][23]
+*   [안 드 로이드][24]
+*   [Windows Phone][25]
+
+ [23]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [24]: https://developer.android.com/designWP8
+ [25]: http://dev.windowsphone.com/en-us/design/library
 
 ## 추가 UI 기사 및 자원
 
@@ -233,18 +228,18 @@ Weinre 코르 도우 바 응용 프로그램에 대 한 원격 디버그 클라�
 
 여기에 코르도바에 최신 이라고 유지 하는 몇 가지 방법이 있습니다.
 
-*   [코르 도우 바 블로그][25] 구독 하기.
-*   [개발자 목록][26]에 가입 하세요. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
+*   [코르 도우 바 블로그][26] 구독 하기.
+*   [개발자 목록][27]에 가입. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
 
- [25]: http://cordova.apache.org/#news
- [26]: http://cordova.apache.org/#mailing-list
+ [26]: http://cordova.apache.org/#news
+ [27]: http://cordova.apache.org/#mailing-list
 
 # 도움말 얻기
 
 다음 링크는 Cordova에 대 한 도움말을 얻을 좋은 장소:
 
-*   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> 코르도바 태그를 사용 하 여 볼 수 있고 코르도바의 모든 질문을 검색 합니다. Note는 StackOverflow 자동 변환 "Phonegap" 태그 "코르도바"를 이런 방식이으로 당신은 뿐만 아니라 역사적인 질문에 액세스할 수 있을 것 이다
-*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][27] 이 Google 그룹 때 코르 도우 바 아직도 불렀다 PhoneGap에 대 한 오래 된 지원 공개 토론 이었다. 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다 코르도바 사용자가이 그룹을 자주 많이 아직도 동안,
+*   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> 코르도바 태그를 사용 하 여 볼 수 있고 코르도바의 모든 질문을 검색. Note는 StackOverflow 자동 변환 "Phonegap" 태그 "코르도바"를이 이렇게 당신은 뿐만 아니라 역사적인 질문에 액세스할 수 있을 것 이다
+*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][28] 이 Google 그룹은 오래 된 지원 포럼 코르도바 여전히 PhoneGap을 호출 했을 때. 코르도바 사용자가 자주이 그룹의 많은 여전히 있지만, 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다
 *   Meetup: <http://phonegap.meetup.com> -로컬 코르도바/PhoneGap meetup 그룹을 찾는 것이 좋습니다
 
- [27]: https://groups.google.com/forum/#!forum/phonegap
+ [28]: https://groups.google.com/forum/#!forum/phonegap

@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows Phone 8 外掛程式
 
-此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱外掛程式開發者指南外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
+此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱外掛程式開發指南外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 
 在 Windows Phone 上的科爾多瓦編寫外掛程式需要科爾多瓦的體系結構的一個基本的瞭解。 科爾多瓦 WP8 組成的 `WebBrowser` ，承載應用程式的 JavaScript 代碼和管理本機 API 呼叫。 您可以擴展 C# `BaseCommand` 類 （ `WPCordovaClassLib.Cordova.Commands.BaseCommand` ），其中附帶了大部分的你需要的功能：
 

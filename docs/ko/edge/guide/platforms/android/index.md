@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 안 드 로이드 플랫폼 가이드
 
@@ -58,7 +54,7 @@ SDK와 함께에서 코르도바의 안 드 로이드 중심으로 셸 도구를
 
 자세한 설치 지침을 사용할 수 있습니다 위의 설치 링크의 일환으로.
 
-일, 코르도바 명령줄 도구 또는 그들 따라 CLI에 대 한 `경로`에 SDK의 `도구` 및 `플랫폼 도구` 디렉터리를 포함 해야 합니다. Mac에서 만들거나 SDK 설치에 따라 다음과 같은 줄을 추가 `~/.bash_profile` 파일을 수정 하려면 텍스트 편집기를 사용할 수 있습니다.
+일, 코르도바 명령줄 도구 또는 그들 따라 CLI에 대 한 `경로`에 SDK의 `도구` 및 `플랫폼 도구` 디렉터리를 포함 해야 합니다. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥 이나 리눅스에는 `~/.bash_profile` 파일, SDK 설치에 따라 다음 줄을 추가:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     

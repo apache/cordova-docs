@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 平臺指南
 
@@ -25,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   升級 iOS
 *   WebViews iOS
 *   iOS 外掛程式
-*   iOS 命令列工具
+*   iOS 殼工具指南
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 
@@ -63,7 +59,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         $ npm install -g ios-deploy
     
 
-## 創建一個新專案
+## 創建一個新的專案
 
 使用`科爾多瓦`實用程式設置了一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄：
 
@@ -87,9 +83,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 您可以使用**cordova run ios --list**看到所有可用的目標和**cordova run ios --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run ios --target="iPhone-6"`).
 
-您還可以使用**cordova run --help**查看附加的生成和運行選項。
+您還可以使用**科爾多瓦運行 — — 説明**查看附加的生成和運行選項。
 
-## 在 SDK 中打開的專案
+## 在 SDK 中打開專案
 
 一旦 ios 平臺添加到專案中，您可以打開它從內 Xcode。按兩下以打開`hello/platforms/ios/hello.xcodeproj`檔。螢幕應該如下所示：
 
@@ -122,9 +118,9 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
 
 ## 將部署到設備
 
-關於各項要求部署到一個設備的詳細資訊，請參閱蘋果的[iOS 的工具工作流指南][9]的*配置發展和分配資產*部分。 簡單地說，您需要部署之前執行以下操作：
+關於各項要求部署到一個設備的詳細資訊，請參閱蘋果公司[關於應用程式分配工作流][9]的*啟動您的應用程式對設備*部分。 簡單地說，您需要部署之前執行以下操作：
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  加入蘋果 iOS 開發者計畫。
 
@@ -197,18 +193,19 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
 
 *   [會員中心主頁][13]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
 
-*   [IOS 工具工作流指南][9]
+*   [IOS 工具工作流指南][14]
 
-*   [Xcode 使用者指南][14]
+*   [Xcode 使用者指南][15]
 
-*   從蘋果世界廣泛開發人員會議 (WWDC2012) 2012年[屆會議視頻][15]
+*   從蘋果世界廣泛開發人員會議 (WWDC2012) 2012年[屆會議視頻][16]
 
-*   安裝[xcode 選擇命令][16]，它有助於指定正確版本的 Xcode，如果不止一個的話。
+*   安裝[xcode 選擇命令][17]，它有助於指定正確版本的 Xcode，如果不止一個的話。
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 （Mac ® OS X ® Xcode ® 蘋果 ® 的應用程式進行，iPad ®，iPhone ®，iPod ® Finder ®，蘋果公司商標)

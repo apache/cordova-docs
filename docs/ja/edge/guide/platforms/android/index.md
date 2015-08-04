@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android プラットフォーム ガイド
 
@@ -58,7 +54,7 @@ Windows をインストールするときも JDK インストール パス (た�
 
 詳細なインストール手順は利用可能な上記のリンクをインストールの一部として。
 
-コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac では、テキスト エディターを使用して、作成または SDK のインストールに応じて、次のような行を追加する`~/.bash_profile`ファイルを変更することができます。
+コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac または Linux は、作成または変更するテキスト エディターを使用することができます、 `~/.bash_profile` ファイルは、SDK がインストールに応じて、次のような行を追加します。
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
@@ -177,7 +173,7 @@ Windows の`PATH`環境を変更: する
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
-## プロジェクトをビルドします
+## プロジェクトをビルドします。
 
 開発で CLI を使用している場合、プロジェクトの最上位レベルの`www`ディレクトリにはソース ファイルが含まれます。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
 

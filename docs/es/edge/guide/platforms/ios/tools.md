@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Guía de herramientas de Shell
 
@@ -55,14 +51,15 @@ Usted puede aprender más sobre la firma, distribución de aplicaciones de iOS, 
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Para firmar la aplicación en Córdoba necesita lo siguiente: * código de identidad de firma (`--codeSignIdentity`): [Usando XCode][3] puede crear un nuevo iOS firma identidad y añadir a su llavero. El tipo de código firma identidad - típicamente distribución o desarrollo, debe ser especificado.
+Para firmar la aplicación en Córdoba es necesario lo siguiente:
+
+*   Código de identidad de firma ( `--codeSignIdentity` ): [Utilizando XCode][3] puede crear un nuevo iOS firma identidad y añadir a su llavero. El tipo de código firma identidad - típicamente distribución o desarrollo, debe ser especificado.
+
+*   Perfil de aprovisionamiento ( `--provisioningProfile` ): [utilizando el centro de miembros de Apple][4] puede crear un perfil de aprovisionamiento. Descargar el perfil de aprovisionamiento en su máquina y lanzarlo en XCode para registrarlo. Se copia aquí en tu Mac: perfiles de ~/Library/MobileDevice/Provisioning\ /. Abriéndolo en un editor de texto, usted puede encontrar el UUID que necesita ser especificado.
+
+*   Código de firma normas de recursos ( `--codeSignResourceRules` ) (opcional): permite especificar reglas de recursos firma personalizadas.
 
  [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
-
-*   Provisioning de perfil (`--provisioningProfile`): [utilizando el centro de miembros de Apple][4] puede crear un perfil de aprovisionamiento. Descargar el perfil de aprovisionamiento en su máquina y lanzarlo en XCode para registrarlo. Se copia aquí en tu Mac: perfiles de ~/Library/MobileDevice/Provisioning\ /. Abriéndolo en un editor de texto, usted puede encontrar el UUID que necesita ser especificado.
-
-*   Código de firma normas de recurso (`--codeSignResourceRules`) (opcional): permite especificar reglas de recursos firma personalizadas.
-
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Estos parámetros pueden especificarse usando los argumentos de línea de comandos sobre `build` o `run` secuencias de comandos:

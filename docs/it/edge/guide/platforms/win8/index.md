@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guida alla piattaforma Windows
 
@@ -63,7 +59,7 @@ Seguire le istruzioni a [windowsstore.com][7] per inviare l'app a Windows Store.
 
  [7]: http://www.windowsstore.com/
 
-Per sviluppare applicazioni Cordova per Windows, è possibile utilizzare un PC con Windows, ma si può anche sviluppare su un Mac, tramite l'esecuzione di un ambiente di macchina virtuale o utilizzando Boot Camp per partizione di dual-boot un Windows 8.1. Consultare queste risorse per impostare l'ambiente di sviluppo richiesto Windows su un Mac:
+Per sviluppare applicazioni Cordova per Windows, è possibile utilizzare un PC con Windows, ma si può anche sviluppare su un Mac, tramite l'esecuzione di un ambiente di macchina virtuale o utilizzando Boot Camp per partizione di dual-boot un Windows 8.1. Consultare queste risorse per impostare l'ambiente di sviluppo Windows richiesto su un Mac:
 
 *   [VMWare Fusion][8]
 
@@ -75,7 +71,7 @@ Per sviluppare applicazioni Cordova per Windows, è possibile utilizzare un PC c
  [9]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
  [10]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-## Utilizzando strumenti di Cordova Shell
+## Utilizzando strumenti di Shell di Cordova
 
 Se si desidera utilizzare strumenti shell di Windows-centrata di Cordova in concomitanza con il SDK, hai due opzioni di base:
 
@@ -129,7 +125,7 @@ Qui è l'approccio di shell-strumento di basso livello corrispondente:
         C:\path\to\project\cordova\build.bat --release
     
 
-Il `clean` comando aiuta a scovare le directory in preparazione per la prossima `build` :
+Il `clean` comando aiuta a scovare le directory in preparazione per il prossimo `build` :
 
         C:\path\to\project\cordova\clean.bat 
     

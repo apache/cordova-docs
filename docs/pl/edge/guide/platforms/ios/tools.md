@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Shell narzędzia Przewodnik
 
@@ -55,14 +51,15 @@ Możesz dowiedzieć się więcej o podpisanie, dystrybuowanie aplikacji iOS, Two
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Aby zarejestrować aplikację w Cordova potrzebne są następujące: * kod podpisywanie tożsamości (`-codeSignIdentity`): [Za pomocą XCode][3] można utworzyć nowy iOS podpisania tożsamości i dodać go do keychain. Typ Kodeksu podpisywanie tożsamości - zazwyczaj dystrybucji lub rozwoju, musi być określone w tym miejscu.
+Aby zarejestrować aplikację w Cordova należy następujące:
+
+*   Kod podpisywanie tożsamości ( `--codeSignIdentity` ): [Za pomocą XCode][3] można utworzyć nowy iOS podpisania tożsamości i dodać go do keychain. Typ Kodeksu podpisywanie tożsamości - zazwyczaj dystrybucji lub rozwoju, musi być określone w tym miejscu.
+
+*   Inicjowanie obsługi administracyjnej elementu profilu ( `--provisioningProfile` ): [za pomocą centrum Państwa Apple][4] można utworzyć profil zastrzegania. Pobierz profil rezerw na Twoim komputerze i uruchomić go w XCode go zarejestrować. To jest kopiowany tutaj na komputerze Mac: ~/Library/MobileDevice/Provisioning\ profile /. Otwierając go w edytorze tekstu, można znaleźć UUID, który musi być określone w tym miejscu.
+
+*   Zasobu zasad podpisywania kodu ( `--codeSignResourceRules` ) (opcjonalnie): pozwala określić niestandardowe zasady podpisywania zasobów.
 
  [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
-
-*   Zastrzeganie profil (`-provisioningProfile`): [za pomocą centrum Państwa Apple][4] można utworzyć profil zastrzegania. Pobierz profil rezerw na Twoim komputerze i uruchomić go w XCode go zarejestrować. To jest kopiowany tutaj na komputerze Mac: ~/Library/MobileDevice/Provisioning\ profile /. Otwierając go w edytorze tekstu, można znaleźć UUID, który musi być określone w tym miejscu.
-
-*   Kod podpisywanie zasobu zasad (`-codeSignResourceRules`) (opcjonalnie): pozwala określić niestandardowe zasady podpisywania zasobów.
-
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Parametry te mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty:

@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Interfejs wiersza poleceń
 
@@ -315,7 +312,19 @@ Jeśli wtyczka nie jest zarejestrowany w `registry.cordova.io` , ale znajduje si
 
 W powyższym przykładzie git pobiera wtyczki od końca gałąź master, ale alternatywne git-ref tagu lub oddział można być dołączane po `#` znaków:
 
+Rata od znacznika:
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+lub oddziału:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+lub git-ref może być również szczególne zatwierdzanie:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
     
 
 Jeśli plugin (i jego `plugin.xml` pliku) jest w podkatalogu w git repo, można określić jej `:` charakter. Należy zauważyć, że `#` charakter jest nadal potrzebne:
@@ -335,9 +344,9 @@ Na przemian, określić lokalną ścieżkę do katalogu plugin, który zawiera `
 
 ## Za pomocą *łączy* do dostosować każdy platformy
 
-Podczas gdy Cordova umożliwia łatwe wdrażanie aplikacji na wielu różnych platformach, czasami trzeba dodać dostosowań. W takim przypadku, nie chcesz zmodyfikować pliki źródłowe w różnych `www` katalogów wewnątrz najwyższego poziomu `platforms` katalogu, bo one są regularnie wymieniane z najwyższego poziomu `www` Źródło przekreślać platforma katalogu.
+Podczas Cordova pozwala łatwo wdrożyć aplikację dla wielu różnych platformach, czasem trzeba dodać dostosowań. W takim przypadku, nie chcesz zmodyfikować pliki źródłowe w różnych `www` katalogów wewnątrz najwyższego poziomu `platforms` katalogu, bo one są regularnie wymieniane z najwyższego poziomu `www` katalogu przekreślać platforma źródła.
 
-Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy określić zasoby do wdrażania na platformy. Każdy podkatalog platformy w `merges` lustra w strukturze katalogów `www` drzewo źródeł, dzięki czemu można zmienić lub dodać pliki, w razie potrzeby. Na przykład, Oto jak można używa `merges` do zwiększenia domyślny rozmiar czcionki dla urządzenia Android i Amazon ognia systemu operacyjnego:
+Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy określić zasoby do wdrażania na konkretne platformy. Każdy podkatalog platformy w `merges` lustra w strukturze katalogów `www` drzewo źródeł, dzięki czemu można zmienić lub dodać pliki, w razie potrzeby. Na przykład, Oto jak Państwo może używa `merges` do zwiększenia domyślny rozmiar czcionki dla urządzenia Android i Amazon ognia systemu operacyjnego:
 
 *   Edytuj `www/index.html` pliku, dodanie linka do dodatkowego pliku CSS, `overrides.css` w tym przypadku:
     
@@ -351,9 +360,9 @@ Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy okr
         body { font-size:14px; }
         
 
-Podczas odbudować projekt, Android wersja posiada rozmiar czcionki niestandardowe, podczas gdy inne pozostają niezmienione.
+Podczas odbudować projekt, Android wersja posiada rozmiar czcionki niestandardowe, podczas gdy inne pozostają bez zmian.
 
-Można również użyć `merges` aby dodać pliki nieobecne w oryginale `www` katalogu. Na przykład, aplikacja wcielić grafiki *wstecz* do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , a Android w wersji można zamiast przechwytywania `backbutton` wydarzenia z przycisku odpowiedniego sprzętu.
+Można również użyć `merges` aby dodać pliki nie obecne w oryginalnym `www` katalogu. Na przykład, aplikacja wcielić *wstecz,* grafiki do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , podczas gdy Android w wersji można zamiast przechwytywania `backbutton` wydarzenia z przycisku odpowiedniego sprzętu.
 
 ## Pomocy poleceń
 
@@ -368,12 +377,12 @@ Dodatkowo można uzyskać bardziej szczegółową pomoc dotyczącą określonego
     $ cordova run --help
     
 
-`info`Polecenie tworzy listę potencjalnie przydatnych informacji, aktualnie zainstalowany platformy, pluginy, wersje SDK dla każdej platformy i wersji CLI i `node.js` :
+`info`Polecenie tworzy listę potencjalnie przydatne szczegóły, takie jak platformy aktualnie zainstalowany i wtyczek, wersje SDK dla każdej platformy i wersji CLI i `node.js` :
 
     $ cordova info
     
 
-Zarówno przedstawia informacje na ekranie i przechwytuje dane wyjściowe w lokalnym `info.txt` pliku.
+To zarówno prezentuje informacje na ekranie i przechwytuje dane wyjściowe w lokalnym `info.txt` pliku.
 
 **Uwaga**: obecnie tylko szczegóły na iOS i Android platform są dostępne.
 
@@ -390,12 +399,12 @@ Aby zainstalować określonej wersji, należy użyć następującej składni:
     
 
 Uruchom `cordova -v` Aby sprawdzić, która wersja jest aktualnie uruchomione. Uruchom `npm
-info` polecenie już aukcji, który zawiera wersję z innych numerów dostępna w wersji:
+info` polecenie już aukcji, który zawiera aktualną wersję z innych numerów dostępna wersja:
 
         $ npm info cordova
     
 
-Cordova 3.0 jest pierwsza wersja obsługująca interfejs wiersza polecenia opisanych w tej sekcji. Jeśli aktualizujesz z wersji przed 3.0, musisz utworzyć nowy projekt, jak opisano powyżej, a następnie skopiuj starszych aplikacji aktywów do najwyższego poziomu `www` katalogu. W stosownych przypadkach, dalsze szczegółowe informacje na temat uaktualniania do wersji 3.0 są dostępne w prowadnice platformy. Po uaktualnieniu do `cordova` interfejs wiersza polecenia i wykorzystanie `npm update` na bieżąco, bardziej czasochłonnych procedur opisanych tam już są istotne.
+Cordova 3.0 jest pierwsza wersja obsługująca interfejs wiersza polecenia opisanych w tej sekcji. Jeśli aktualizujesz z wersji przed 3.0, musisz utworzyć nowy projekt, jak opisano powyżej, a następnie skopiuj starszych aplikacji aktywów do najwyższego poziomu `www` katalogu. W stosownych przypadkach, dalsze szczegóły dotyczące uaktualniania do wersji 3.0 są dostępne w prowadnice platformy. Po uaktualnieniu do `cordova` interfejs wiersza polecenia i wykorzystanie `npm update` na bieżąco, bardziej czasochłonnych procedur opisanych tam już nie są istotne.
 
 Cordova 3.0 + nadal mogą wymagać różnych zmiany struktury katalogu projektu poziom i inne zależności. Po uruchomieniu `npm` polecenia powyżej do aktualizacji Cordova, sam, może trzeba zapewnić zasoby projektu są zgodne z wymogami najnowszej wersji. Uruchom polecenie, takie jak następujące informacje dla każdej platformy, że budujemy:
 

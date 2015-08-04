@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android 殼工具指南
 
@@ -73,9 +69,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 您可以查看簽名要求在這裡的安卓應用程式： HTTP://developer.android.com/tools/publishing/app-signing.html
 
-要簽名的應用程式，您需要以下參數： * 金鑰存儲庫 （`--keystore`）： 可容納一套鑰匙的二進位檔案的路徑。 * 金鑰庫口令 （`--storePassword`）： 金鑰存儲庫的密碼 * 別名 （`--alias`）： 指定私密金鑰用於唱歌的 id。 * 密碼 （`--password`）： 為指定的私密金鑰的密碼。 * 類型的金鑰存儲庫 （`--keystoreType`）： pkcs12 jks （預設： 自動檢測基於檔副檔名） 可以使用上面 `run` 或 `build` 腳本的命令列參數指定這些參數。
+要簽名的應用程式，您需要以下參數:
 
-或者，您可以指定它們在組建組態檔 （build.json） 中使用 （`--buildConfig`) 的論點。下面是組建組態檔的一個示例：
+*   金鑰庫 (`--keystore`): 可容納一套鑰匙的二進位檔案的路徑。
+
+*   金鑰庫口令 (`-storePassword`): 到金鑰庫的密碼
+
+*   別名 (`--alias`): 指定私密金鑰用於唱歌的 id。
+
+*   * 密碼 （`--password`）： 為指定的私密金鑰的密碼。
+
+*   金鑰庫 (`--keystoreType`) 類型: pkcs12 jks (預設: 自動檢測基於檔副檔名)
+
+可以使用`build`或`run`腳本上面的命令列參數指定這些參數。
+
+或者，您可以指定它們在組建組態檔 (build.json) 中使用 ( `--buildConfig` ) 參數。這裡是組建組態檔的一個示例:
 
     {
          "android": {
@@ -97,7 +105,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
      }
     
 
-對於發佈簽名，可以排除密碼和生成系統會發出提示要求輸入密碼。
+對於發佈簽名，可以排除密碼和構建系統會發出提示要求輸入密碼。
 
 此外，它還支援以混合和匹配的命令列參數和 build.json 檔中的參數。 從命令列參數的值將會得到優先。 這可用於在命令列上指定的密碼。
 
@@ -117,29 +125,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## Gradle 建築
 
-截至 cordova-android@4.0.0，專案生成使用 [Gradle][2]。關於建設與螞蟻的說明，請參閱文檔的舊版本。
+截至 cordova-android@4.0.0，專案生成使用[Gradle][2]。 關於建設與螞蟻的說明，請參閱文檔的舊版本。
 
  [2]: http://www.gradle.org/
 
 ### Gradle 屬性
 
-可以設置這些 [屬性][3]，以自訂生成：
+可以設置這些[屬性][3]以自訂生成:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**（預設：false）
+*   **cdvBuildMultipleApks**(預設: false)
     
-    如果設置此值，則將生成多個 APK 檔： 庫專案所支援的本機平臺每一個 (x 86，手臂，等等）。 這可能是重要的如果您的專案使用大型的本機庫，可能會大幅提高生成 apk 檔的大小。
+    如果設置此值，則將生成多個 APK 檔: 庫專案所支援的本機平臺每一個 (x 86，ARM，等)。 這可能是重要的如果您的專案使用大型的本機庫，可以大幅增加生成 apk 檔的大小。
     
-    如果未設置，然後將生成單個的 APK，可以在所有設備上都使用。
+    如果未設置，然後將生成單個 APK，可以在所有設備上使用。
 
 *   **cdvVersionCode**
     
-    重寫 versionCode 在 `AndroidManifest.xml` 中設置
+    VersionCode 在`AndroidManifest.xml`中設置將重寫
 
 *   **cdvReleaseSigningPropertiesFile**（預設： release-signing.properties)
     
-    包含簽名資訊釋放的.properties 檔路徑生成。該檔應該看起來像：
+    包含簽名發佈的資訊進行.properties 檔路徑生成。 該檔應該看起來像:
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -148,27 +156,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         keyPassword=SECRET2
         
     
-    `storePassword` 和 `keyPassword` 是可選的如果省略將提示輸入。
+    `storePassword`和`keyPassword`是可選的如果省略將提示輸入。
 
 *   **cdvDebugSigningPropertiesFile**（預設： debug-signing.properties)
     
-    與相同 cdvReleaseSigningPropertiesFile，但用於調試生成。當您需要與其他開發者共用的簽名金鑰時很有用。
+    同樣作為 cdvReleaseSigningPropertiesFile，但用於調試生成。當您需要與其他開發人員共用的簽名金鑰時有用。
 
 *   **cdvMinSdkVersion**
     
-    重寫 `minSdkVersion` 在 `AndroidManifest.xml` 中設置的值。有用時，創建多個 APKs 基於 SDK 版本。
+    重寫`minSdkVersion`在`AndroidManifest.xml`中設置的值。有用的當創建多個 APKs 基於 SDK 版本。
 
 *   **cdvBuildToolsVersion**
     
-    覆蓋自動檢測到的 `android.buildToolsVersion` 的值。
+    重寫自動檢測到的`android.buildToolsVersion`值。
 
 *   **cdvCompileSdkVersion**
     
-    覆蓋自動檢測到的 `android.compileSdkVersion` 的值。
+    重寫自動檢測到的`android.compileSdkVersion`值。
 
 ### 擴展 build.gradle
 
-如果您需要自訂 `build.gradle`，而不是直接編輯，您應該創建一個名為 `build-extras.gradle` 的同級檔。 此檔將包含由主要的 `build.gradle` 出現時。 下面是一個示例：
+如果您需要自訂`build.gradle`，而不是直接編輯，您應該創建一個名為`build-extras.gradle`的同級檔。 此檔將包含由主要的`build.gradle`時本。 下面是一個示例:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +187,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     }
     
 
-請注意外掛程式還可以包括通過 `build-extras.gradle` 檔：
+請注意，外掛程式也可以包括通過`build-extras.gradle`檔:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

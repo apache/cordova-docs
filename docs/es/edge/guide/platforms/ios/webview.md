@@ -1,27 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS WebViews
 
 Esta guía le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación iOS más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
 
-Soporte para iOS WebViews comenzó con Cordova versión 1.4, usando un `Cleaver` para que la plantilla de Xcode sirve como una implementación de referencia de componente. Cordova 2.0 y versiones posteriores sólo admiten la implementación basada en el subproyecto Cleaver.
+Apoyo WebViews iOS comenzó con Córdoba versión 1.4, usando un `Cleaver` para que sirve la plantilla de Xcode como una implementación de referencia del componente. Cordova 2.0 y versiones posteriores sólo admiten la implementación basada en el subproyecto Cleaver.
 
 Estas instrucciones requieren menos Cordova 3.x y Xcode 6.0, junto con un `config.xml` el archivo de un proyecto de iOS recién creado. Puede utilizar el procedimiento en la interfaz de línea de comandos para crear un nuevo proyecto, y luego obtener el `config.xml` archivo de dentro del subdirectorio dentro de la aplicación llamado`platforms/ios`.
 

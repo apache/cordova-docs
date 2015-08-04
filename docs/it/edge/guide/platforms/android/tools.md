@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Shell Android strumento guida
 
@@ -73,9 +69,21 @@ Assicurarsi di creare almeno un Android Virtual Device, altrimenti viene richies
 
 È possibile rivedere Android app firma requisiti qui: http://developer.android.com/tools/publishing/app-signing.html
 
-Per firmare un'applicazione, è necessario che i seguenti parametri: * Keystore (`-keystore`): percorso di un file binario che può contenere un insieme di chiavi. * Password Keystore (`-storePassword`): Password per il keystore * Alias (`-alias`): l'id specificando la chiave privata utilizzata per il canto. * Password (`-password`): Password della chiave privata specificato. * Tipo del keystore (`..--keystoreType`): pkcs12, jks (Default: rilevamento automatico basato sull'estensione di file) questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra a `build` o `run` script.
+Per firmare un'applicazione, è necessario i seguenti parametri:
 
-In alternativa, è possibile specificare in un file di configurazione di compilazione (build.json) utilizzando l'argomento (`-buildConfig`). Ecco un esempio di un file di configurazione di generazione:
+*   Keystore ( `--keystore` ): percorso di un file binario che può contenere un insieme di chiavi.
+
+*   Password del keystore ( `--storePassword` ): Password per l'archivio chiavi
+
+*   Alias ( `--alias` ): l'id che specifica la chiave privata utilizzata per il canto.
+
+*   Password ( `--password` ): Password per la chiave privata specificata.
+
+*   Tipo del keystore ( `--keystoreType` ): pkcs12, jks (Default: rilevamento automatico basato sull'estensione del file)
+
+Questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra a `build` o `run` script.
+
+In alternativa, è possibile specificare loro in un file (build.json) di configurazione compilazione utilizzando ( `--buildConfig` ) argomento. Ecco un esempio di un file di configurazione di compilazione:
 
     {
          "android": {
@@ -97,9 +105,9 @@ In alternativa, è possibile specificare in un file di configurazione di compila
      }
     
 
-Per rilascio firma, possono essere escluse le password e il sistema di compilazione rilascerà un prompt che richiede la password.
+Per la firma di rilascio, le password possono essere esclusi e il sistema di compilazione emetterà un avviso chiedendo la password.
 
-C'è anche il supporto di mescolare e abbinare gli argomenti della riga di comando e i parametri nel file build.json. Valori dagli argomenti della riga di comando avranno la precedenza. Questo può essere utile per specificare la password sulla riga di comando.
+C'è anche il supporto di mescolare e abbinare gli argomenti della riga di comando e i parametri nel file di build.json. Valori da argomenti della riga di comando avranno la precedenza. Questo può essere utile per specificare le password sulla riga di comando.
 
 ## Registrazione
 
@@ -117,7 +125,7 @@ C'è anche il supporto di mescolare e abbinare gli argomenti della riga di coman
 
 ## Compilazione con Gradle
 
-A partire da cordova-android@4.0.0, progetto costruire utilizzando [Gradle][2]. Per istruzioni sull'edificio con ANT, consultare le versioni precedenti della documentazione.
+A partire dal cordova-android@4.0.0, compilazione di progetto utilizzando [Gradle][2]. Per istruzioni sull'edificio con ANT, fare riferimento alle versioni precedenti della documentazione.
 
  [2]: http://www.gradle.org/
 
@@ -129,17 +137,17 @@ Queste [Proprietà][3] possono essere impostate per personalizzare la compilazio
 
 *   **cdvBuildMultipleApks** (impostazione predefinita: false)
     
-    Se questa proprietà è impostata, allora verranno generati il file APK multipli: uno per ogni piattaforma nativa supportato da progetti libreria (x86, ARM, ecc). Questo può essere importante se il progetto utilizza grandi librerie native, che possono aumentare drasticamente le dimensioni dell'APK generato.
+    Se questo è impostato, quindi verranno generati i file APK multipli: uno per ogni piattaforma nativa supportata da progetti libreria (x86, ARM, ecc). Questo può essere importante se il progetto utilizza grandi librerie native, che possono aumentare drasticamente le dimensioni dell'APK generato.
     
-    Se non impostato, allora verrà generato un singolo APK che può essere utilizzato su tutti i dispositivi.
+    Se non è impostata, quindi verrà generato un APK singola che può essere utilizzato su tutti i dispositivi.
 
 *   **cdvVersionCode**
     
-    Esegue l'override del versionCode nella `AndroidManifest`
+    Esegue l'override di versionCode impostata`AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile** (impostazione predefinita: release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile** (impostazione predefinita: rilascio-signing.properties)
     
-    Costruisce il percorso di un file di Properties contenente le informazioni di firma per rilascio. Il file dovrebbe essere simile:
+    Percorso di un file. Properties che contiene informazioni di firma per rilascio costruisce. Il file dovrebbe essere simile:
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -148,27 +156,27 @@ Queste [Proprietà][3] possono essere impostate per personalizzare la compilazio
         keyPassword=SECRET2
         
     
-    `storePassword` e `keyPassword` sono facoltativi e sarà richiesto se omesso.
+    `storePassword`e `keyPassword` sono facoltativi e verrà chiesto se omesso.
 
 *   **cdvDebugSigningPropertiesFile** (impostazione predefinita: debug-signing.properties)
     
-    Come cdvReleaseSigningPropertiesFile, ma per debug Build. Utile quando hai bisogno di condividere una chiave di firma con altri sviluppatori.
+    Come cdvReleaseSigningPropertiesFile, ma per il debug si basa. Utile quando è necessario condividere una chiave di firma con altri sviluppatori.
 
 *   **cdvMinSdkVersion**
     
-    Esegue l'override del valore di `minSdkVersion` nella `AndroidManifest`. Utile quando si creano più APKs basato sulla versione SDK.
+    Sostituisce il valore di `minSdkVersion` nella `AndroidManifest.xml` . Utile quando si creano più APKs basato sulla versione SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Eseguire l'override del valore rilevato automaticamente `android.buildToolsVersion`.
+    Eseguire l'override rilevato automaticamente `android.buildToolsVersion` valore.
 
 *   **cdvCompileSdkVersion**
     
-    Eseguire l'override del valore rilevato automaticamente `android.compileSdkVersion`.
+    Eseguire l'override rilevato automaticamente `android.compileSdkVersion` valore.
 
 ### Estensione build.gradle
 
-Se avete bisogno di personalizzare `build.gradle`, piuttosto che modificare direttamente, si dovrebbe creare un file di pari livello denominato `build-extras.gradle`. Questo file sarà inclusa dai principali `build.gradle` quando è presente. Ecco un esempio:
+Se avete bisogno di personalizzare `build.gradle` , piuttosto che modificare direttamente, è necessario creare un file di pari livello denominato `build-extras.gradle` . Questo file verrà incluso dai principali `build.gradle` quando è presente. Ecco un esempio:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +187,7 @@ Se avete bisogno di personalizzare `build.gradle`, piuttosto che modificare dire
     }
     
 
-Si noti che plugin può includere anche file di `compilazione-extras.gradle` via:
+Si noti che il plugin può anche includere `build-extras.gradle` file tramite:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

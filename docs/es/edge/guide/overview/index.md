@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Resumen
 
@@ -59,7 +56,7 @@ A partir de la versión 3.0, puede utilizar dos flujos de trabajo básicos para 
 
 *   **Flujo de trabajo centrado en plataforma**: Utilice este flujo de trabajo si desea concentrarse en construir una aplicación para una sola plataforma y necesitan poder modificarlo en un nivel inferior. Tienes que utilizar este enfoque, por ejemplo, si quieres tu aplicación para mezclar los componentes nativos personalizados con componentes Cordova basados en web, como se explica en WebViews incrustación. Como regla general, utilice este flujo de trabajo si necesitas modificar el proyecto dentro del SDK. Este flujo de trabajo se basa en un conjunto de scripts de shell de nivel inferior que se adaptan para cada plataforma soportada y una utilidad de Plugman separada que le permite aplicar plugins. Mientras este flujo de trabajo puede utilizar para crear aplicaciones multiplataforma, es generalmente más difícil porque la falta de una herramienta de alto nivel significa construir diferentes ciclos y modificaciones de plugin para cada plataforma. Aún así, este flujo de trabajo permite un mayor acceso a opciones de desarrollo proporcionadas por cada SDK y es esencial para aplicaciones complejas híbrido. Vea a las diversas guías de plataforma para obtener más información sobre utilidades de shell disponible de cada plataforma.
 
-Cuando primero empezando, puede ser más fácil utilizar el flujo de trabajo multiplataforma para crear una aplicación, tal como se describe en la interfaz de línea de comandos. Entonces tienes la opción de cambiar a un flujo de trabajo centrado en plataforma si necesitas el SDK proporciona un mayor control. Utilidades de shell de nivel inferior están disponibles en [cordova.apache.org][1] en una distribución independiente de la CLI. Para los proyectos generados inicialmente por la CLI, estas herramientas de shell también están disponibles en el proyecto de varios `platforms/*/cordova` directorios.
+Cuando primero comenzando, puede ser más fácil utilizar el flujo de trabajo multiplataforma para crear una aplicación, como se describe en la interfaz de línea de comandos. Entonces tienes la opción de cambiar a un flujo de trabajo centrado en plataforma si necesitas el SDK proporciona un mayor control. Utilidades de shell de nivel inferior están disponibles en [cordova.apache.org][1] en una distribución independiente de la CLI. Para los proyectos generados inicialmente por la CLI, estas herramientas de shell también están disponibles en el proyecto de varios `platforms/*/cordova` directorios.
 
 **Nota**: una vez que se cambia de los flujos de trabajo basados en CLI a uno centrado en la específica de la plataforma SDK y herramientas de shell, no puedes volver. La CLI mantiene un conjunto común de código fuente multiplataforma, que en cada uno a construir aplicaciones para escribir código fuente específica de la plataforma. Para conservar las modificaciones en los activos específicos a una plataforma, puede necesita cambiar las herramientas de plataforma centrada en la cáscara, que ignoran el código multiplataforma, y en cambio se basa en el código fuente específica de la plataforma.
 

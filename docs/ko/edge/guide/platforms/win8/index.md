@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows 플랫폼 가이드
 
@@ -63,7 +59,7 @@ Windows 플랫폼을 위한 애플 리 케이 션을 개발 하기 위해 다음
 
  [7]: http://www.windowsstore.com/
 
-Windows에 대 한 코르도바 애플 리 케이 션을 개발, 당신은 Windows를 실행 하는 PC를 사용할 수 있지만 가상 컴퓨터 환경 실행 하거나 듀얼-부팅 윈도우 8.1 파티션에 부트 캠프를 사용 하 여 당신은 또한 Mac에서 개발할 수 있습니다. Mac에서 필요한 Windows 개발 환경을 설정 하려면 이러한 리소스를 참조 하십시오.
+Windows에 대 한 코르도바 애플 리 케이 션을 개발, 당신은 Windows를 실행 하는 PC를 사용할 수 있지만 가상 컴퓨터 환경 실행 하거나 듀얼-부팅 윈도우 8.1 파티션에 부트 캠프를 사용 하 여 당신은 또한 Mac에서 개발할 수 있습니다. Mac에서 필요한 Windows 개발 환경을 설정 하는 이러한 리소스를 참조 하십시오.
 
 *   [VMWare Fusion][8]
 
@@ -106,7 +102,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
         > cordova platform add windows
     
 
-여기에 해당 하위 셸 도구 접근이 이다:
+여기에 해당 하위 셸 도구 접근은:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
@@ -115,7 +111,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 
 ## 프로젝트 빌드
 
-프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리 소스 파일이 들어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.
+프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리에 소스 파일 포함 되어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
@@ -123,7 +119,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
         > cordova build windows   --release  # signs the apps for release
     
 
-여기에 해당 하위 셸 도구 접근이 이다:
+여기에 해당 하위 셸 도구 접근은:
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
@@ -178,7 +174,7 @@ Windows Phone 패키지 배포:
 
 당신이 보고 사용할 수 있습니다 **코르도바 실행 창-목록** 모두 사용 가능한 대상 및 **코르도바 실행 창-대상 target_name-=-전화** 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 (예를 들어 `코르도바 실행 창-대상 = "에뮬레이터 8.1 720 P 4.7 인치"--전화`).
 
-참조 추가 빌드 및 실행 옵션에 **cordova run --help** 사용할 수 있습니다.
+또한 참조 추가 빌드 및 실행 옵션에 **코르도바 실행-도움말을** 사용할 수 있습니다.
 
 ## SDK에서 프로젝트를 열고 응용 프로그램 배포
 

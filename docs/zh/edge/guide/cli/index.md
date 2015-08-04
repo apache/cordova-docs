@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 命令列介面
 
@@ -315,29 +312,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 上面的 git 示例從主分支，末尾讀取外掛程式但備用的 git ref，如一個標記或分支可以追加後 `#` 字元：
 
+從標記安裝:
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
     
 
-如果外掛程式 （和其 `plugin.xml` 檔） 是在 git 存儲庫內的子目錄中，您可以指定它與 `:` 字元。 請注意， `#` 字元仍然需要：
+或一個分支:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+或 git ref 也可能是一個特定的提交:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+    
+
+如果外掛程式 (和其`plugin.xml`檔) 是在 git 存儲庫中的子目錄中，您可以指定它與`:`字元。 `#`字元仍然需要注意:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
     
 
-您還可以將合併 git ref 和該子目錄中：
+您還可以將合併 git-ref 和子目錄:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
     
 
-或者，指定包含的外掛程式目錄的本地路徑 `plugin.xml` 檔：
+或者，指定包含`plugin.xml`檔的外掛程式目錄的本地路徑:
 
         $ cordova plugin add ../my_plugin_dir
     
 
 ## 使用*合併*到自訂的每個平臺
 
-而科爾多瓦允許您輕鬆地部署應用程式的許多不同的平臺，有時你需要添加自訂項。 在這種情況下，你不想修改中各項的原始程式碼檔 `www` 內的頂級目錄 `platforms` 目錄，，因為他們經常在替換的頂級 `www` 目錄的跨平臺源。
+而科爾多瓦允許您輕鬆地部署應用程式的許多不同的平臺，有時你需要添加自訂項。 在這種情況下，你不想修改原始檔案中各種`www`目錄內的頂級`平臺`目錄，因為他們定期更換頂級`www`目錄跨平臺源。
 
-相反，頂級 `merges` 目錄提供了一個地方來指定資產在特定平臺上部署。 每個特定于平臺的子目錄內 `merges` 鏡像的目錄結構的 `www` 源樹中，從而允許您重寫或根據需要添加的檔。 例如，在這裡是如何，你可能會使用 `merges` 來提高安卓系統和亞馬遜火 OS 設備的預設字型大小：
+相反，頂級`merges`目錄提供了一個地方來指定資產在特定平臺上部署。 每個特定于平臺的子目錄內`merges`鏡像`www`源樹中，允許您重寫或根據需要添加的檔的目錄結構。 例如，這裡是你如何使用`合併`以提高安卓和亞馬遜火 OS 設備的預設字型大小:
 
 *   編輯 `www/index.html` 檔，添加一個連結到一個額外的 CSS 檔，該檔 `overrides.css` 在這種情況下：
     
@@ -353,51 +362,50 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 當你重新生成專案時，Android 版本特點的自訂字體大小，而其他人保持不變。
 
-您還可以使用 `merges` 添加的檔不存在的原始 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本相反可以捕獲 `backbutton` 從相應的硬體按鈕的事件。
+您也可以使用`merges`添加原始的`www`目錄中不存在的檔。 例如，一個應用程式可以將*後退按鈕*的圖形納入 iOS 介面，存儲在`merges/ios/img/back_button.png`，而 Android 版本相反可以捕獲從對應的硬體按鈕的`backbutton`事件。
 
 ## 説明命令
 
-科爾多瓦特點兩三個全域命令，可以説明你，如果你被卡住或遇到的問題。`help`命令可以顯示所有可用的科爾多瓦命令和它們的語法：
+科爾多瓦特點兩三個全域命令，可以説明你，如果你被卡住或遇到的問題。 `help`命令顯示所有可用的科爾多瓦命令和它們的語法:
 
     $ cordova help
     $ cordova        # same
     
 
-此外，你可以在一個特定的命令更詳細的説明。例如：
+此外，你可以在一個特定的命令更詳細的説明。 例如:
 
     $ cordova run --help
     
 
-`info`命令產生的潛在的有用的詳細資訊，如當前安裝的平臺和外掛程式，每個平臺，SDK 版本的 CLI 版本的清單和 `node.js` ：
+`Info`命令產生的潛在的有用的詳細資訊，如當前安裝的平臺和外掛程式，每個平臺 SDK 版本的 CLI 和`node.js`版本的清單:
 
     $ cordova info
     
 
-它既呈現到螢幕資訊，捕獲在本地輸出 `info.txt` 檔。
+它提出了對螢幕資訊和捕獲本地`info.txt`檔中的輸出。
 
-**注**： 目前，只有細節在 iOS 和 Android 平臺上的都可用。
+**注**: 目前，只有細節在 iOS 和 Android 平臺上的都可用。
 
 ## 更新科爾多瓦和您的專案
 
-安裝後 `cordova` 實用程式，您可以始終進行更新到最新版本通過運行以下命令：
+安裝後的`cordova`實用程式，您可以始終進行更新到最新版本通過運行以下命令:
 
         $ sudo npm update -g cordova
     
 
-使用此語法來安裝特定的版本：
+使用此語法來安裝特定的版本:
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
-運行 `cordova -v` 來查看當前運行的版本。 運行 `npm
-info` 命令為較長的清單，其中包括當前版本以及其他可用的版本號：
+運行`cordova -v`來查看當前正在運行哪個版本。 運行更長的清單，其中包括當前版本以及其他可用的版本編號為`npm info`命令:
 
         $ npm info cordova
     
 
-科爾多瓦 3.0 是支援這一節中描述的命令列介面的第一個版本。 如果您正在從 3.0 以前的版本更新，您需要創建一個新的專案，如上文所述，然後將舊應用程式的資源複製到頂級 `www` 目錄。 在適用的情況，進一步有關升級到 3.0 的詳細資訊是可用的平臺指南中。 一旦你升級到 `cordova` 的命令列介面和使用 `npm update` 要保持當前，那裡所描述的更加耗時過程不再相關。
+科爾多瓦 3.0 是支援這一節中描述的命令列介面的第一個版本。 如果你從 3.0 以前的版本更新，您需要創建一個新專案，如上文所述，然後將舊應用程式資產複製到頂級`www`目錄。 在適用的情況下，更多關於升級到 3.0 的詳情，可用平臺指南中。 一旦你升級到`科爾多瓦`命令列介面並使用`npm 更新`保持最新，更費時所述有程式不再相關。
 
-科爾多瓦 3.0 + 可能仍然需要對專案級別的目錄結構和其他依賴關係的各種變化。 在您運行 `npm` 命令上面更新科爾多瓦本身，您可能需要確保您的專案的資源符合最新的版本要求。 運行下面這樣的命令為每個平臺你建立：
+科爾多瓦 3.0 + 可能仍然需要對專案級別的目錄結構和其他依賴關係的各種變化。 你運行上面的`npm`命令，若要更新本身的科爾多瓦後，您可能需要確保您的專案資源符合最新的版本要求。 運行下面這樣的命令為每個平臺您正在構建:
 
         $ cordova platform update android
         $ cordova platform update ios

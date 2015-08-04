@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android Shell Tool Guide
 
@@ -73,9 +69,21 @@ Vergewissern Sie sich, erstellen Sie mindestens ein Android virtuelles Gerät, s
 
 Sie können überprüfen, dass Android app Signaturanforderungen hier: http://developer.android.com/tools/publishing/app-signing.html
 
-Um eine app zu signieren, benötigen Sie die folgenden Parameter: * Keystore (`--keystore`): Pfad in eine binäre Datei, die eine Reihe von Schlüsseln aufnehmen können. * Schlüsselspeicher-Kennwort (`--storePassword`): Kennwort zum Schlüsselspeicher * Alias (`--alias`): die Id angeben des privaten Schlüssels für Gesang. * Passwort (`--password`): Kennwort für den privaten Schlüssel angegeben. -Typ des Schlüsselspeichers (`--keystoreType`): pkcs12, Jks (Default: Auto-detect nach der Dateierweiterung) diese Parameter können angegeben werden, unter Verwendung der Befehlszeilenargumente über Skripte `build` oder `run`.
+Um eine app zu signieren, benötigen Sie die folgenden Parameter:
 
-Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) angeben (`--buildConfig`) Argument. Hier ist ein Beispiel für eine Konfigurationsdatei erstellen:
+*   Keystore (`--keystore`): Pfad in eine Binärdatei, die eine Reihe von Schlüsseln aufnehmen können.
+
+*   Schlüsselspeicher-Kennwort (`--storePassword`): Kennwort zum Schlüsselspeicher
+
+*   Alias (`--alias`): die Id angeben des privaten Schlüssels für Gesang.
+
+*   Passwort (`--password`): Kennwort für den privaten Schlüssel angegeben.
+
+*   Typ des Schlüsselspeichers (`--keystoreType`): pkcs12, Jks (Default: automatische Erkennung anhand der Dateierweiterung)
+
+Diese Parameter können mithilfe der Befehlszeilenargumente oben zu `build` oder `run` von Skripts angegeben werden.
+
+Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) mit angeben ( `--buildConfig` ) Argument. Hier ist ein Beispiel für eine Konfigurationsdatei erstellen:
 
     {
          "android": {
@@ -97,9 +105,9 @@ Alternativ könnten Sie sie in ein Build Startkonfigurationsdatei (build.json) a
      }
     
 
-Zum Signieren von Release wird Kennwörter ausgeschlossen werden können und das Buildsystem nach dem Passwort gefragt.
+Für eine Veröffentlichung Signierung wird Kennwörter ausgeschlossen werden können und das Buildsystem nach dem Passwort gefragt.
 
-Es gibt auch Unterstützung für die Kommandozeilen-Parameter und Parameter in build.json-Datei. Werte aus der Befehlszeilenargumente erhalten Vorrang. Dies ist nützlich für Kennwörter in der Befehlszeile angeben.
+Es gibt auch Unterstützung zu kombinieren, Kommandozeilen-Parameter und Parameter in der Datei build.json. Werte aus der Befehlszeilenargumente erhalten Vorrang. Dies ist hilfreich für Kennwörter in der Befehlszeile angeben.
 
 ## Protokollierung
 
@@ -117,7 +125,7 @@ Es gibt auch Unterstützung für die Kommandozeilen-Parameter und Parameter in b
 
 ## Gebäude mit Gradle
 
-Ab cordova-android@4.0.0 Projekterstellung mithilfe von [Gradle][2]. Anweisungen zum Gebäude mit ANT finden Sie zu älteren Versionen der Dokumentation.
+Stand: cordova-android@4.0.0, Projektbuilds mit [Gradle][2]. Finden Sie Anweisungen zum Gebäude mit ANT ältere Versionen der Dokumentation.
 
  [2]: http://www.gradle.org/
 
@@ -129,9 +137,9 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
 
 *   **cdvBuildMultipleApks** (Standard: false)
     
-    Wenn dies festgelegt ist, mehrere APK-Dateien erzeugt werden: eine pro native von Bibliotheksprojekten unterstützten Plattformen (X 86, ARM, etc.). Dies kann wichtig sein, wenn das Projekt große native Bibliotheken verwendet, die die generierten APK drastisch vergrößern können.
+    Wenn dies festgelegt ist, mehrere APK-Dateien erzeugt werden: eine pro native von Bibliotheksprojekten unterstützte Plattform (X 86, ARM, etc.). Dies kann wichtig sein, wenn das Projekt große native Bibliotheken verwendet, die die generierten APK drastisch vergrößern können.
     
-    Wenn nicht, dann einen einzigen APK generiert werden, die auf allen Geräten verwendet werden können.
+    Wenn nicht gesetzt, dann einen einzigen APK generiert wird, die auf allen Geräten verwendet werden können.
 
 *   **cdvVersionCode**
     
@@ -139,7 +147,7 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
 
 *   **cdvReleaseSigningPropertiesFile** (Standard: release-signing.properties)
     
-    Pfad zu einer .properties-Datei, die Signaturinformationen für Release enthält erstellt. Die Datei sollte wie aussehen:
+    Pfad zu einer .properties-Datei, die Signaturinformationen für Release enthält baut. Die Datei sollte wie aussehen:
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -148,15 +156,15 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
         keyPassword=SECRET2
         
     
-    `StorePassword` und `KeyPassword` sind optional und werden aufgefordert für fehlt.
+    `storePassword` und `keyPassword` sind optional und werden aufgefordert für fehlt.
 
 *   **cdvDebugSigningPropertiesFile** (Standard: debug-signing.properties)
     
-    Wie CdvReleaseSigningPropertiesFile, jedoch für Debug erstellt. Nützlich, wenn Sie mit anderen Entwicklern einen Signaturschlüssel freigeben müssen.
+    Wie CdvReleaseSigningPropertiesFile, jedoch für Debug baut. Nützlich, wenn Sie mit anderen Entwicklern einen Signaturschlüssel freigeben müssen.
 
 *   **cdvMinSdkVersion**
     
-    Setzt den Wert von `MinSdkVersion` in der `AndroidManifest.xml` festgelegt. Nützlich, wenn mehrere erstellen APKs Grundlage SDK Version.
+    Setzt den Wert von `minSdkVersion` in der `AndroidManifest.xml`festgelegt. Nützlich beim Erstellen mehrerer APKs Grundlage SDK Version.
 
 *   **cdvBuildToolsVersion**
     
@@ -168,7 +176,7 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
 
 ### Verlängerung build.gradle
 
-Benötigen Sie `build.gradle` anpassen, anstatt direkt bearbeiten, sollten Sie eine Geschwister-Datei mit dem Namen `build-extras.gradle` erstellen. Diese Datei wird von den wichtigsten `build.gradle` wenn vorhanden enthalten sein. Hier ist ein Beispiel:
+Wenn Sie `build.gradle`anpassen, anstatt direkt bearbeiten müssen, sollten Sie eine Geschwister-Datei mit dem Namen `Build-extras.gradle`erstellen. Diese Datei wird von den wichtigsten `build.gradle` wenn vorhanden enthalten sein. Hier ist ein Beispiel:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`

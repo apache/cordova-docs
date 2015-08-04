@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS guida piattaforma
 
@@ -25,7 +21,7 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 *   L'aggiornamento iOS
 *   iOS visualizzazioni Web
 *   iOS Plugins
-*   iOS Command-line Tools
+*   iOS Guida strumento Shell
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -73,7 +69,7 @@ Utilizzare l'utilità di `cordova` per impostare un nuovo progetto, come descrit
         $ cordova prepare              # or "cordova build"
     
 
-## Distribuire l'applicazione
+## Distribuire l'app
 
 Per distribuire l'applicazione su un dispositivo iOS connesso:
 
@@ -87,7 +83,7 @@ Per distribuire l'applicazione su un emulatore di default iOS:
 
 È possibile utilizzare **cordova run ios --list** per vedere tutte le destinazioni disponibili e **cordova run ios --target=target_name** per eseguire l'applicazione su un dispositivo specifico o l'emulatore (per esempio, `cordova run ios --target="iPhone-6"`).
 
-È possibile utilizzare anche **cordova run --help** vedere compilazione supplementari ed eseguire le opzioni.
+È anche possibile utilizzare **cordova eseguita..--aiuto** per vedere compilazione aggiuntive ed eseguire opzioni.
 
 ## Aprire un progetto in SDK
 
@@ -97,7 +93,7 @@ Una volta che la piattaforma ios è aggiunto al progetto, puoi aprirlo all'inter
 
  [6]: img/guide/platforms/ios/helloworld_project.png
 
-## Distribuire all'emulatore
+## Distribuire emulatore
 
 Per visualizzare in anteprima l'applicazione nell'emulatore di iOS:
 
@@ -122,9 +118,9 @@ Xcode viene fornito in bundle con gli emulatori per le ultime versioni di iPhone
 
 ## Distribuire al dispositivo
 
-Per dettagli sui vari requisiti per distribuire un dispositivo, consultare la sezione *configurazione di sviluppo e distribuzione di beni* di Apple [Guida di strumenti di Workflow per iOS][9]. In breve, è necessario effettuare le seguenti operazioni prima di distribuire:
+Per informazioni dettagliate sui vari requisiti per distribuire un dispositivo, fare riferimento alla sezione *Launch Your App su dispositivi* di Apple [Sulle App distribuzione dei flussi di lavoro][9]. In breve, è necessario effettuare le seguenti operazioni prima di distribuire:
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  Unire l'Apple iOS Developer Program.
 
@@ -197,18 +193,19 @@ Per ulteriori informazioni, consultare la documentazione di Apple:
 
 *   [Membri centro home page][13] fornisce collegamenti a diversi iOS risorse tecniche, comprese le risorse tecniche, il portale di provisioning, distribuzione guide e forum community.
 
-*   [Strumenti del flusso di lavoro guida per iOS][9]
+*   [Strumenti del flusso di lavoro guida per iOS][14]
 
-*   [Guida utente di Xcode][14]
+*   [Guida utente di Xcode][15]
 
-*   [Sessione video][15] dal mondo Apple Developer ampia conferenza 2012 (WWDC2012)
+*   [Sessione video][16] dal mondo Apple Developer ampia conferenza 2012 (WWDC2012)
 
-*   È installato [xcode-selezionare comando][16], che consente di specificare la corretta versione di Xcode, se più di uno.
+*   È installato [xcode-selezionare comando][17], che consente di specificare la corretta versione di Xcode, se più di uno.
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ®, Apple ®, Xcode ®, App Store℠, iPad ®, iPhone ®, iPod ® e Finder ® sono marchi di Apple Inc.)

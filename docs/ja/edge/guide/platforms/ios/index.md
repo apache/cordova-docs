@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS プラットフォーム ガイド
 
@@ -25,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   IOS のアップグレード
 *   iOS の web 表示
 *   iOS のプラグイン
-*   iOS コマンド ライン ツール
+*   iOS シェル ツール ガイド
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 
@@ -84,7 +80,7 @@ Comman ライン ・ ターミナルから実行します。
 
 使用することができます**cordova run ios --list**を見るすべての利用可能なターゲットと**cordova run ios --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run ios --target="iPhone-6"`).
 
-**コルドバの実行 - ヘルプ**を使用して、追加のビルドを参照してください、オプションを実行することもできます。
+**コルドバ実行 - ヘルプ**は、追加のビルドを表示し、オプションを実行するもできます。
 
 ## SDK でプロジェクトを開く
 
@@ -94,7 +90,7 @@ Ios プラットフォームをプロジェクトに追加すると、Xcode の�
 
  [6]: img/guide/platforms/ios/helloworld_project.png
 
-## エミュレーターへの展開します。
+## エミュレーターに展開します。
 
 : IOS のエミュレーターでアプリケーションをプレビューするには
 
@@ -119,9 +115,9 @@ Xcode は、iPhone および iPad の最新バージョン用のエミュレー�
 
 ## デバイスへの配置します。
 
-デバイスに展開するさまざまな要件の詳細については Apple の[iOS 用ツール ワークフロー ガイド][9]の*構成の開発と配布の資産*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
+デバイスに展開する様々 な要件の詳細については、Apple の[アプリ配布のワークフローについて][9]の*あなたのアプリをデバイスの起動*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  アップルの iOS 開発者プログラムに参加します。
 
@@ -194,18 +190,19 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
 
 *   [メンバー センターのホーム ページ][13]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布ガイドおよびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
 
-*   [IOS 用ツール ワークフロー ガイド][9]
+*   [IOS 用ツール ワークフロー ガイド][14]
 
-*   [Xcode ユーザー ガイド][14]
+*   [Xcode ユーザー ガイド][15]
 
-*   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][15]
+*   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][16]
 
-*   [Xcode 選択コマンド][16]が複数ある場合、Xcode の正しいバージョンを指定することができますがインストールされています。
+*   [Xcode 選択コマンド][17]が複数ある場合、Xcode の正しいバージョンを指定することができますがインストールされています。
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ® アップル ®、Xcode ® アプリ Store℠、iPad ®、iPhone ®、iPod ® ファインダー ® はアップル社の商標です）

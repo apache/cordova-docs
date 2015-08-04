@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Przewodnik platformy iOS
 
@@ -25,7 +21,7 @@ Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova apli
 *   Aktualizacja iOS
 *   iOS WebViews
 *   iOS wtyczek
-*   iOS narzędzia wiersza polecenia
+*   iOS Shell narzędzia Przewodnik
 
 Narzędzia wiersza polecenia powyżej odnosi się do wcześniejszych Cordova 3.0. Zobacz interfejs wiersza poleceń do informacji o bieżącym interfejs.
 
@@ -87,9 +83,9 @@ Aby wdrożyć aplikację na domyślny emulator iOS:
 
 Można użyć **cordova run ios --list** aby zobaczyć wszystkie dostępne cele i **cordova run ios --target=target_name** do uruchomienia aplikacji na urządzenia lub emulatora (na przykład `cordova run ios --target="iPhone-6"`).
 
-Za pomocą **cordova run --help** Zobacz dodatkowe budować i uruchamiać opcji.
+Umożliwia także **cordova uruchomić--Pomoc** Zobacz dodatkowe budować i uruchamiać opcji.
 
-## Otwieranie projektu w SDK
+## Otwórz projekt w SDK
 
 Po platformie ios jest dodawany do projektu, można otworzyć go w Xcode. Kliknij dwukrotnie, aby otworzyć plik `hello/platforms/ios/hello.xcodeproj` . Ekran powinien wyglądać tak:
 
@@ -97,7 +93,7 @@ Po platformie ios jest dodawany do projektu, można otworzyć go w Xcode. Klikni
 
  [6]: img/guide/platforms/ios/helloworld_project.png
 
-## Uruchamianie na emulatorze
+## Wdrażanie do emulatora
 
 Aby wyświetlić podgląd aplikacji w emulatorze iOS:
 
@@ -120,11 +116,11 @@ Aby wyświetlić podgląd aplikacji w emulatorze iOS:
 
 Xcode jest dostarczany z emulatorów dla najnowszej wersji iPhone i iPad. Starsze wersje mogą być dostępne z **Xcode → preferencje → pobieranie składników →** panelu.
 
-## Uruchamianie na urządzeniu
+## Wdrażanie do urządzenia
 
-Szczegółowe informacje na temat różnych wymagań, aby wdrożyć urządzenie odnoszą się do sekcji *konfiguracji rozwoju i dystrybucji majątku* firmy Apple [Narzędzia pracy poradnik dla iOS][9]. Krótko mówiąc trzeba wykonać następujące czynności przed wdrożeniem:
+Szczegółowe informacje na temat różnych wymagań aby wdrożyć urządzenie odnoszą się do sekcji *Uruchomić twój aplikacja na urządzenia* firmy Apple [O przepływy dystrybucji aplikacji][9]. Krótko mówiąc trzeba wykonać następujące czynności przed wdrożeniem:
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  Dołącz do Apple iOS Developer Program.
 
@@ -197,18 +193,19 @@ Aby uzyskać więcej informacji zajrzyj do dokumentacji firmy Apple:
 
 *   [Centrum Państwa Strona][13] zawiera linki do kilku iOS zasobów technicznych, w tym zasobów technicznych, obsługi portalu, dystrybucja przewodników i fora.
 
-*   [Narzędzia pracy poradnik dla iOS][9]
+*   [Narzędzia pracy poradnik dla iOS][14]
 
-*   [Podręcznik użytkownika Xcode][14]
+*   [Podręcznik użytkownika Xcode][15]
 
-*   [Sesja wideo][15] z konferencji dewelopera szerokim świecie Apple 2012 (WWDC2012)
+*   [Sesja wideo][16] z konferencji dewelopera szerokim świecie Apple 2012 (WWDC2012)
 
-*   [Xcode wybierz polecenie][16], które pomaga określić poprawną wersję Xcode, jeśli więcej niż jeden jest zainstalowany.
+*   [Xcode wybierz polecenie][17], które pomaga określić poprawną wersję Xcode, jeśli więcej niż jeden jest zainstalowany.
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ®, Xcode ®, Apple ® App Store℠, iPad ®, iPhone ®, iPoda ® i Finder ® są znakami towarowymi firmy Apple Inc)

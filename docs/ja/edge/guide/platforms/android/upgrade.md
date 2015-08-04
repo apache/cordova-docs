@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android のアップグレード
 
@@ -25,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 4.0.0 では重要な変更を活用するために必要な特定のアップグレード手順があります。 まず、以下の通り、共通のアップグレードの手順が必要です。
 
-CLI 以外のプロジェクトを実行します。
+非 CLI プロジェクトを実行します。
 
         bin/update path/to/project
     
@@ -73,7 +69,7 @@ CLI のプロジェクト。
 
 ## 3.6.0 から 3.7.1 にアップグレードします。
 
-CLI 以外のプロジェクトを実行します。
+非 CLI プロジェクトを実行します。
 
         bin/update path/to/project
     
@@ -82,7 +78,7 @@ CLI のプロジェクト。
 
 1.  更新、 `cordova` CLI バージョン。コマンド ライン インターフェイスを参照してください。
 
-2.  既存のプロジェクトで `cordova platform update android` を実行します。
+2.  実行 `cordova platform update android` 既存のプロジェクトで。
 
 ## 3.2.0 から 3.3.0 へのアップグレード
 
@@ -90,15 +86,15 @@ CLI のプロジェクト。
 
 3.3.0 にはじまって、コルドバ ランタイム今 jar ファイルの代わりにアンドロイドをライブラリとしてコンパイルされます。 これがコマンドラインの使用法の効果がない IDE ユーザーのワークスペースに新しく追加された`MyProject-CordovaLib`プロジェクトをインポートする必要があります。
 
-## 3.1.0 から 3.2.0 へのアップグレード
+## 3.1.0 から 3.2.0 にアップグレード
 
 コルドバ CLI で作成されたプロジェクト。
 
-1.  更新、 `cordova` CLI バージョン。コマンド ライン インターフェイスを参照してください。
+1.  更新、 `cordova` 、CLI バージョン。コマンド ライン インターフェイスを参照してください。
 
 2.  Run `cordova platform update android`
 
-コルドバ CLI で作成されていないプロジェクトの場合に実行します。
+コルドバ CLI で作成されていないプロジェクトでは、以下を実行します。
 
         bin/update <project_path>
     
@@ -109,18 +105,18 @@ CLI のプロジェクト。
 
 コルドバ CLI で作成されたプロジェクト。
 
-1.  更新、 `cordova` CLI バージョン。コマンド ライン インターフェイスを参照してください。
+1.  更新、 `cordova` 、CLI バージョン。コマンド ライン インターフェイスを参照してください。
 
 2.  Run `cordova platform update android`
 
-コルドバ CLI で作成されていないプロジェクトの場合に実行します。
+コルドバ CLI で作成されていないプロジェクトでは、以下を実行します。
 
         bin/update <project_path>
     
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード
 
-1.  コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
+1.  前述のコマンド ライン インターフェイスで、コルドバ CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
 
 2.  コルドバ プロジェクトたとえば、プラットフォームの追加:`cordova platform add android`.
 
@@ -128,7 +124,7 @@ CLI のプロジェクト。
 
 4.  `プラットフォーム/android`の下の適切なディレクトリに、古いプロジェクトから、ネイティブ アセットをコピー： このディレクトリには、ネイティブのコルドバ android プロジェクトが存在します。
 
-5.  コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI が処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。
+5.  コルドバ CLI ツールを使用する必要があります任意のプラグインをインストールします。CLI がすべてコア Api を処理するプラグインとして追加する必要がありますので注意してください。3.0.0 のみ、CLI と互換性のあるプラグインです。
 
 ## 2.9.0 から 3.0.0 にアップグレードします。
 
@@ -146,11 +142,11 @@ CLI のプロジェクト。
     
     **注**： すべてのコア Api が削除されているし、のプラグインとしてインストールする必要があります。詳細についてを使用して Plugman 管理プラグイン ガイドを参照してください。
 
-## 2.8.0 から 2.9.0 へのアップグレードします。
+## 2.8.0 から 2.9.0 にアップグレードします。
 
 1.  Run `bin/update <project_path>`.
 
-## 2.8.0 へ 2.7.0 からのアップグレードします。
+## 2.7.0 から 2.8.0 にアップグレードします。
 
 1.  `cordova-2.7.0.jar`プロジェクトの`libs`ディレクトリから削除します。
 
@@ -166,7 +162,7 @@ CLI のプロジェクト。
 
 3.  `Framework/res/xml/config.xml`を一致するように`res/xml/config.xml`ファイルをコピーします。.
 
-4.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
+4.  更新 `framework/res/xml/config.xml` 以前のように同様の設定を持っています。
 
 5.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
@@ -196,13 +192,13 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.6.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.6.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.6.0.js` ファイル。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
+7.  更新 `framework/res/xml/config.xml` 以前のように同様の設定を持っています。
 
 8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
@@ -216,13 +212,13 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.5.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.5.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.5.0.js` ファイル。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
+7.  更新 `framework/res/xml/config.xml` 以前のように同様の設定を持っています。
 
 8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
@@ -234,9 +230,9 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.4.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.4.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.4.0.js` ファイル。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
@@ -250,15 +246,15 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.3.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.3.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.3.0.js` ファイル。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
 7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
-## 2.1.0 から 2.2.0 にアップグレードします。
+## 2.1.0 から 2.2.0 へのアップグレードします。
 
 1.  `cordova-2.1.0.jar`プロジェクトの`libs`ディレクトリから削除します。
 
@@ -266,9 +262,9 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.2.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.2.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.2.0.js` ファイル。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
@@ -282,11 +278,11 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.1.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.1.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.1.0.js` ファイル。
 
-6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
+6.  コピー、 `res/xml/config.xml` に合わせて`framework/res/xml/config.xml`.
 
 7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
@@ -298,11 +294,11 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-2.0.0.js` プロジェクトに。
+4.  新しいコピー `cordova-2.0.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-2.0.0.js` ファイル。
 
-6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
+6.  コピー、 `res/xml/config.xml` に合わせて`framework/res/xml/config.xml`.
 
 2.0.0 のリリースでは、 `config.xml`ファイルを組み合わせた、 `cordova.xml`と`plugins.xml`に置き換えられます。 古いファイルは廃止され、彼らはまだ、2.0.0 で作業中、将来のリリースで動作しなくなります。
 
@@ -344,11 +340,11 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-1.8.0.js` プロジェクトに。
+4.  新しいコピー `cordova-1.8.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-1.8.0.js` ファイル。
 
-6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
 ## 1.7.0 から 1.8.0 へのアップグレードします。
 
@@ -358,11 +354,11 @@ CLI のプロジェクト。
 
 3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
 
-4.  コピー、新しい `cordova-1.8.0.js` プロジェクトに。
+4.  新しいコピー `cordova-1.8.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` ファイル。
+5.  新しいを使用する HTML を更新 `cordova-1.8.0.js` ファイル。
 
-6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
 ## 1.6.1 から 1.7.0 へのアップグレードします。
 
@@ -374,7 +370,7 @@ CLI のプロジェクト。
 
 4.  新しい`cordova-1.7.0.js`がプロジェクトにコピーします。
 
-5.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+5.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
 ## 1.6.0 から 1.6.1 へのアップグレードします。
 
@@ -386,7 +382,7 @@ CLI のプロジェクト。
 
 4.  新しい`cordova-1.6.1.js`がプロジェクトにコピーします。
 
-5.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+5.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
 ## 1.5.0 から 1.6.0 にアップグレードします。
 
@@ -450,7 +446,7 @@ CLI のプロジェクト。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
-7.  更新 `res/xml/phonegap.xml` 一致するように`framework/res/xml/phonegap.xml`.
+7.  更新 `res/xml/phonegap.xml` に合わせて`framework/res/xml/phonegap.xml`.
 
 ## 1.1.0 から 1.2.0 にアップグレードします。
 
@@ -464,9 +460,9 @@ CLI のプロジェクト。
 
 5.  新しい`phonegap-1.2.0.js`ファイルを使用してあなたの HTML を更新します。
 
-6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
-7.  更新 `res/xml/phonegap.xml` 一致するように`framework/res/xml/phonegap.xml`.
+7.  更新 `res/xml/phonegap.xml` に合わせて`framework/res/xml/phonegap.xml`.
 
 ## 1.0.0 1.1.0 にアップグレードします。
 
@@ -474,13 +470,13 @@ CLI のプロジェクト。
 
 2.  `phonegap-1.1.0.jar`プロジェクトの`lib`ディレクトリに追加します。
 
-3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
+3.  Eclipse を使用する場合は、Eclipse プロジェクトを更新し、クリーンを行うください。
 
 4.  新しい`phonegap-1.1.0.js`がプロジェクトにコピーします。
 
 5.  新しい`phonegap-1.1.0.js`ファイルを使用してあなたの HTML を更新します。
 
-6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
+6.  更新 `res/xml/plugins.xml` に合わせて`framework/res/xml/plugins.xml`.
 
 ## 0.9.6 から 1.0.0 へのアップグレードします。
 
@@ -488,7 +484,7 @@ CLI のプロジェクト。
 
 2.  `phonegap-1.0.0.jar`プロジェクトの`lib`ディレクトリに追加します。
 
-3.  Eclipse を使用すると、Eclipse プロジェクトを更新して、クリーンを行います。
+3.  Eclipse を使用する場合は、Eclipse プロジェクトを更新し、クリーンを行うください。
 
 4.  新しい`phonegap-1.0.0.js`がプロジェクトにコピーします。
 

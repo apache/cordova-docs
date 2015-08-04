@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS guida strumento Shell
 
@@ -55,14 +51,15 @@ Eseguire il `create` comando, specificando il percorso esistente per il progetto
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Per firmare l'app a Cordova è necessario quanto segue: * codice firma identità (`-codeSignIdentity`): [Usando XCode][3] è possibile creare un nuovo iOS firma identità e aggiungerlo al tuo portachiavi. Il tipo del codice firma identità - in genere di distribuzione o di sviluppo, deve essere specificata qui.
+Per firmare l'app a Cordova è necessario quanto segue:
+
+*   Identità di firma del codice ( `--codeSignIdentity` ): [Usando XCode][3] è possibile creare un nuovo iOS firma identità e aggiungerlo al tuo portachiavi. Il tipo del codice firma identità - in genere di distribuzione o di sviluppo, deve essere specificata qui.
+
+*   Profilo di provisioning ( `--provisioningProfile` ): [utilizzo del centro di membro di Apple][4] è possibile creare un profilo di provisioning. Scarica il profilo di provisioning sulla vostra macchina e lanciarlo in XCode per registrarlo. Qui viene copiato sul vostro Mac: profili ~/Library/MobileDevice/Provisioning\ /. Aprendolo in un editor di testo, è possibile trovare l'UUID che deve essere specificata qui.
+
+*   Codice firma regole delle risorse ( `--codeSignResourceRules` ) (opzionale): consente di specificare le regole di risorsa firma personalizzata.
 
  [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
-
-*   Profilo (`--provisioningProfile`) di provisioning: [utilizzo del centro di membro di Apple][4] è possibile creare un profilo di provisioning. Scarica il profilo di provisioning sulla vostra macchina e lanciarlo in XCode per registrarlo. Qui viene copiato sul vostro Mac: profili ~/Library/MobileDevice/Provisioning\ /. Aprendolo in un editor di testo, è possibile trovare l'UUID che deve essere specificata qui.
-
-*   Codice firma le regole della risorsa (`--codeSignResourceRules`) (opzionale): consente di specificare le regole di risorsa firma personalizzata.
-
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra per `compile` o `run` script:

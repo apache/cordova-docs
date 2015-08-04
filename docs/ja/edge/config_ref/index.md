@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Config.xml ファイル
 
@@ -130,7 +126,7 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    IOS とブラックベリーに適用されます。
+    ブラックベリーに適用されます。
 
 *   `orientation`(文字列、既定値を `既定値`): 方向をロックし、インターフェイスから回転の向きの変更に応答しないようにすることができます。 可能な値は、`default`、`landscape` または `portrait` です。 例:
     

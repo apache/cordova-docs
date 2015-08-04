@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guida piattaforma Android
 
@@ -58,7 +54,7 @@ Installare gli [strumenti di Android SDK autonomo][5] o [Studio Android][6]. Pro
 
 Istruzioni dettagliate sull'installazione sono disponibili come parte del link di installazione sopra.
 
-Per strumenti da riga di comando di Cordova a lavorare, o CLI che si basa su di loro, è necessario includere la directory di `strumenti` e `strumenti di piattaforma` di SDK nel tuo `percorso`. Su un Mac, è possibile utilizzare un editor di testo per creare o modificare il file `~/.bash_profile` , aggiungendo una riga come la seguente, a seconda di dove viene installato il SDK:
+Per strumenti da riga di comando di Cordova a lavorare, o CLI che si basa su di loro, è necessario includere la directory di `strumenti` e `strumenti di piattaforma` di SDK nel tuo `percorso`. Su un Mac o Linux, è possibile utilizzare un editor di testo per creare o modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove viene installato il SDK:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
@@ -177,7 +173,7 @@ Qui è l'approccio di shell-strumento di basso livello corrispondente per Unix e
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
-## Compilare il progetto
+## Generare il progetto
 
 Se si utilizza la CLI in sviluppo, directory di primo livello `www` della directory progetto contiene i file di origine. Eseguire una qualsiasi di queste all'interno della directory di progetto per ricostruire l'app:
 
@@ -198,7 +194,7 @@ Il comando di `costruire` pulisce i file di progetto e ricostruisce l'app. Ecco 
         C:\path\to\project\cordova\build.bat --release
     
 
-## Distribuire l'applicazione
+## Distribuire l'app
 
 È possibile utilizzare l'utilità di `cordova` CLI per distribuire l'applicazione nell'emulatore o il dispositivo da riga di comando:
 

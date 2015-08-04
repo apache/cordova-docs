@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Amazon fuego OS Platform Guide
 
@@ -115,7 +111,7 @@ Para crear aplicaciones de Córdoba con el objetivo de la plataforma de Amazon f
 
 ## Crear nuevo proyecto para el Amazonas fuego OS
 
-Utilice la utilidad de `cordova` para configurar un nuevo proyecto, tal como se describe en el Cordova la línea de comandos de interfaz. Por ejemplo, en un directorio del código fuente:
+Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en el Córdoba la comando-línea interfaz. Por ejemplo, en un directorio de código fuente:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

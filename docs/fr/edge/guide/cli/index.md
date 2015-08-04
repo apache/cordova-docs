@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # L'Interface en ligne de commande
 
@@ -315,10 +312,22 @@ Si le plugin n'est pas inscrite au `registry.cordova.io` mais se trouve dans un 
 
 L'exemple de git ci-dessus récupère le plugin depuis la fin de la branche master, mais un autre git-Réf tel une balise ou une branche peut être ajoutée après un `#` caractère :
 
+Installer à partir d'une balise :
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
     
 
-Si le plugin (et ses `plugin.xml` fichier) est dans un sous-répertoire dans le repo git, vous pouvez le spécifier avec une `:` caractère. Notez que le `#` caractère est toujours nécessaire :
+ou une succursale :
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+ou git-Réf pourrait également être une validation particulière :
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+    
+
+Si le plugin (et son fichier `plugin.xml` ) sont dans un sous-répertoire dans le repo git, vous pouvez le spécifier avec un caractère `:` . Notez que le caractère `#` est toujours nécessaire :
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
     
@@ -328,16 +337,16 @@ Vous pouvez également combiner le git-Réf tant le sous-répertoire :
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
     
 
-Vous pouvez également spécifier un chemin d'accès local vers le répertoire de plugin qui contient le `plugin.xml` fichier :
+Vous pouvez également spécifier un chemin d'accès local vers le répertoire de plugin qui contient le fichier `plugin.xml` :
 
         $ cordova plugin add ../my_plugin_dir
     
 
 ## À l'aide de *fusionne* pour personnaliser chaque plate-forme
 
-Alors que Cordoue vous permet de déployer facilement une application pour nombreuses plates-formes, parfois vous avez besoin d'ajouter des personnalisations. Dans ce cas, vous ne voulez pas modifier les fichiers source dans divers `www` répertoires à l'intérieur du premier niveau `platforms` répertoire, car ils sont remplacés régulièrement avec le niveau supérieur `www` source multi-plateforme de l'annuaire.
+Alors que Cordoue vous permet de déployer facilement une application pour de nombreuses plateformes différentes, parfois vous avez besoin d'ajouter des personnalisations. Dans ce cas, vous ne voulez pas modifier les fichiers source dans divers répertoires `www` dans le répertoire de niveau supérieur de `platforms` , parce qu'ils sont régulièrement remplacés par source multi-plateforme du répertoire niveau supérieur `www` .
 
-Au lieu de cela, le niveau supérieur `merges` répertoire offre un endroit pour spécifier des actifs de déployer sur des plates-formes spécifiques. Chaque sous-répertoire spécifique à la plateforme dans `merges` reflète la structure de répertoire de la `www` l'arbre source, ce qui vous permet de substituer ou ajouter des fichiers au besoin. Par exemple, voici comment vous pourriez utilise `merges` pour augmenter la taille de police par défaut pour les appareils Android et Amazon Fire OS :
+Au lieu de cela, le répertoire de niveau supérieur `merges` offre un endroit pour spécifier des actifs de déployer sur des plates-formes spécifiques. Chaque sous-répertoire `merges`, correspondant à une plate-forme donnée, reflète la structure du répertoire source `www`, ce qui vous permet de surcharger ou ajouter des fichiers au besoin. Par exemple, voici comment vous pourriez utilisations `merges` pour augmenter la taille de police par défaut pour les appareils Android et Amazon Fire OS :
 
 *   Modifier la `www/index.html` fichier, en ajoutant un lien vers un fichier CSS supplémentaire, `overrides.css` dans ce cas :
     
@@ -353,11 +362,11 @@ Au lieu de cela, le niveau supérieur `merges` répertoire offre un endroit pour
 
 Lorsque vous régénérez le projet, la version Android dispose de la taille de police personnalisée, tandis que d'autres restent inchangés.
 
-Vous pouvez également utiliser `merges` pour ajouter des fichiers non présents dans l'original `www` répertoire. Par exemple, une application peut intégrer un *bouton* graphique à l'interface d'iOS, stocké dans `merges/ios/img/back_button.png` , tandis que la version Android peut au lieu de capter `backbutton` événements de la touche correspondante de la quincaillerie.
+Vous pouvez également utiliser `merges` pour ajouter des fichiers non présents dans le répertoire original de `www` . Par exemple, une application peut intégrer un *bouton* graphique à l'interface d'iOS, stocké dans `merges/ios/img/back_button.png`, tandis que la version Android peut au lieu de capter `ButtonBack` événements depuis le bouton matériel correspondant.
 
 ## Aide commandes
 
-Cordova dispose d'un couple de commandes globales, qui peuvent vous aider si vous êtes coincé ou rencontrez un problème. Le `help` commande affiche toutes les commandes disponibles de Cordova et leur syntaxe :
+Cordoue possède quelques commandes globales, qui peuvent vous aider si vous êtes coincé ou rencontrez un problème. La commande `help` affiche toutes les commandes disponibles de Cordova et leur syntaxe :
 
     $ cordova help
     $ cordova        # same
@@ -368,18 +377,18 @@ En outre, vous pouvez obtenir une aide plus détaillée sur une commande spécif
     $ cordova run --help
     
 
-Le `info` commande produit une liste de détails potentiellement utiles, tels que les plates-formes actuellement installés et plugins, des versions pour chaque plate-forme SDK et versions de la CLI et `node.js` :
+La commande `infos` produit une liste des informations potentiellement utiles, tels que les plates-formes actuellement installés et plugins, des versions pour chaque plate-forme SDK et versions de la CLI et `node.js`:
 
     $ cordova info
     
 
-Il présente l'information à l'écran et capture la sortie dans un local `info.txt` fichier.
+Celle-ci présente l'information à l'écran et capture la sortie dans un fichier local `info.txt` .
 
 **NOTE**: actuellement, seuls les détails sur iOS et Android plates-formes sont disponibles.
 
 ## Mise à jour de Cordova et votre projet
 
-Après avoir installé la `cordova` utilitaire, vous pouvez toujours mettre à jour vers la dernière version en exécutant la commande suivante :
+Après l'installation de l'utilitaire de `cordova` , vous pouvez toujours mettre à jour vers la dernière version en exécutant la commande suivante :
 
         $ sudo npm update -g cordova
     
@@ -389,15 +398,14 @@ Utilisez cette syntaxe pour installer une version spécifique :
         $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
-Exécutez `cordova -v` pour voir quelle version est en cours d'exécution. Exécutez le `npm
-info` commande pour obtenir une liste plus longue qui inclut la version actuelle ainsi que d'autres numéros de version disponible :
+Exécutez `cordova -v` pour voir quelle version est en cours d'exécution. Exécutez la commande `npm info` pour obtenir une liste plus longue qui inclut la version actuelle ainsi que d'autres numéros de version disponible :
 
         $ npm info cordova
     
 
-Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le niveau supérieur `www` répertoire. Le cas échéant, plus amples détails sur la mise à niveau vers 3.0 sont disponibles dans les Guides de la plate-forme. Une fois que vous mettez à niveau vers le `cordova` Command-line interface et utilisation `npm update` pour rester à jour, les plus longues procédures décrits là ne sont plus pertinentes.
+Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le répertoire de niveau supérieur `www` . Le cas échéant, plus amples détails au sujet de la mise à niveau vers 3.0 sont disponibles dans les Guides de la plate-forme. Une fois que vous passer à l'interface de ligne de commande de `cordova` et utilisez `mise à jour de la NGP` se pour tenir au courant, les plus longues procédures décrits là ne sont plus pertinentes.
 
-Cordova 3.0 + peut-être encore exiger des divers changements à la structure de répertoire au niveau du projet et d'autres dépendances. Après avoir exécuté la `npm` commande ci-dessus à jour Cordoue elle-même, vous devrez peut-être les ressources de votre projet soient conformes aux exigences de la version la plus récente. Exécutez une commande semblable à la suivante pour chaque plate-forme que vous générez :
+Cordova 3.0 + peut-être encore exiger des divers changements à la structure de répertoire au niveau du projet et les autres dépendances. Après avoir exécuté la commande `NGP` ci-dessus pour mettre à jour de Cordoue elle-même, vous devrez peut-être s'assurer que les ressources de votre projet sont conformes aux exigences de la version la plus récente. Exécutez une commande semblable à la suivante pour chaque plate-forme que vous générez :
 
         $ cordova platform update android
         $ cordova platform update ios

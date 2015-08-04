@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Die Befehlszeilenschnittstelle
 
@@ -315,29 +312,41 @@ Wenn das Plugin nicht registriert ist `registry.cordova.io` aber befindet sich i
 
 Das Git-Beispiel oben holt das Plugin vom Ende des Zweiges master, aber eine Alternative Git-Ref z. B. einen Tag oder Zweig kann angehängt werden, nach einem `#` Charakter:
 
+Installieren von einem Tag:
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
     
 
-Wenn das Plugin (und seine `plugin.xml` Datei) ist in einem Unterverzeichnis innerhalb der Git Repo, können Sie angeben, dass es mit einem `:` Charakter. Beachten Sie, dass der `#` Charakter wird noch benötigt:
+oder einer Zweigniederlassung:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+oder Git-Ref wäre auch ein bestimmtes Commit:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+    
+
+Wenn das Plugin (und seine Datei `plugin.xml` ) in einem Unterverzeichnis innerhalb der Git Repo ist, können Sie es mit einem `:` -Zeichen angeben. Beachten Sie, dass das Zeichen `#` noch benötigt wird:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
     
 
-Sie können auch kombinieren, die Git-Ref und das Unterverzeichnis:
+Sie können auch die Git-Ref und das Unterverzeichnis kombinieren:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
     
 
-Alternativ geben Sie einen lokalen Pfad zu dem Pluginverzeichnis, enthält die `plugin.xml` Datei:
+Alternativ geben Sie einen lokalen Pfad in das Pluginverzeichnis die Datei `plugin.xml` enthaltenen:
 
         $ cordova plugin add ../my_plugin_dir
     
 
-## Verwendung *führt* , auf jeder Plattform anpassen
+## Verwendung von *merges* , auf jeder Plattform anpassen
 
-Während Cordova auf einfache Weise eine app für viele verschiedene Plattformen bereitstellen kann, müssen Sie manchmal Anpassungen hinzufügen. In diesem Fall wollen Sie die Quellcode-Dateien in verschiedenen ändern `www` Verzeichnisse innerhalb der obersten Ebene `platforms` Verzeichnis, da sie regelmäßig mit der obersten Ebene ersetzt sind `www` des Verzeichnisses Cross-Plattform-Quelle.
+Während Cordova auf einfache Weise eine app für viele verschiedene Plattformen bereitstellen kann, müssen Sie manchmal Anpassungen hinzufügen. In diesem Fall möchten nicht Sie die Quelldateien in verschiedenen `www` -Verzeichnisse in das Verzeichnis der obersten Ebene `platforms` ändern, weil sie regelmäßig mit der obersten Ebene `www` -Verzeichnis plattformübergreifende Quelle ersetzt sind.
 
-Stattdessen der obersten Ebene `merges` Verzeichnis bietet Ihnen einen Ort zu geben Vermögen auf bestimmten Plattformen bereitstellen. Jedes plattformspezifischen Unterverzeichnis innerhalb `merges` spiegelt die Verzeichnisstruktur des der `www` Source-Tree, sodass Sie überschreiben oder Dateien nach Bedarf hinzufügen. Zum Beispiel hier ist, wie Sie verwendet möglicherweise `merges` zur Erhöhung der Standardschriftgrad für Android und Amazon-Feuer-OS-Geräte:
+Stattdessen bietet das Verzeichnis der obersten Ebene `merges` einen Ort um Vermögenswerte auf bestimmten Plattformen bereitstellen anzugeben. Jedes plattformspezifischen Unterverzeichnis innerhalb `merges` spiegelt die Verzeichnisstruktur des `www` Source-Trees, sodass Sie überschreiben oder Dateien nach Bedarf hinzufügen. Hier ist beispielsweise, wie Sie verwendet `merges` zur Erhöhung der Standardschriftgrad für Android und Amazon Fire OS Geräte könnten:
 
 *   Bearbeiten Sie die `www/index.html` Datei, Hinzufügen eines Links zu einer weiteren CSS-Datei `overrides.css` in diesem Fall:
     
@@ -353,11 +362,11 @@ Stattdessen der obersten Ebene `merges` Verzeichnis bietet Ihnen einen Ort zu ge
 
 Wenn Sie das Projekt neu erstellen, verfügt die Android Version die benutzerdefinierte Schriftgröße, während andere unverändert bleiben.
 
-Sie können auch `merges` hinzufügen, Dateien nicht vorhanden, im Original `www` Verzeichnis. Beispielsweise eine app kann integrieren eine *Zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert `merges/ios/img/back_button.png` , während die Android Version stattdessen erfassen kann `backbutton` Ereignisse über die entsprechende Taste.
+Sie können `merges` auch zum Hinzufügen von Dateien in das ursprüngliche `Www` -Verzeichnis nicht vorhanden. Beispielsweise kann eine app integrieren eine *zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert in `merges/ios/img/back_button.png`, während die Android Version stattdessen `Backbutton` Ereignisse über die entsprechende Taste erfassen kann.
 
 ## Hilfebefehle
 
-Cordova verfügt über ein paar globale Befehle, die Ihnen helfen können, wenn Sie stecken bleiben oder ein Problem. Der `help` Befehl zeigt alle verfügbaren Cordova-Befehle und deren Syntax:
+Cordova verfügt über ein paar globale Befehle, die Ihnen helfen können, wenn Sie stecken bleiben oder ein Problem. Der Befehl `help` zeigt alle verfügbaren Cordova-Befehle und deren Syntax:
 
     $ cordova help
     $ cordova        # same
@@ -368,18 +377,18 @@ Darüber hinaus erhalten Sie weitere detaillierte Hilfe zu einem bestimmten Befe
     $ cordova run --help
     
 
-Der `info` Befehl erzeugt eine Liste von potentiell nützliche Details, wie derzeit installierten Plattformen und Plugins, SDK-Versionen für jede Plattform und die CLI-Versionen und `node.js` :
+Der `Info` -Befehl erzeugt eine Liste von potentiell nützliche Details, wie derzeit installierten Plattformen und Plugins, für jede Plattform SDK-Versionen und Versionen der CLI und `node.js`:
 
     $ cordova info
     
 
-Es stellt die Informationen zum Bildschirm sowohl erfasst die Ausgabe in einer lokalen `info.txt` Datei.
+Es stellt die Informationen zum Bildschirm und erfasst die Ausgabe in einer lokalen `info.txt` Datei.
 
-**Hinweis**: derzeit sind nur Details auf iOS und Android-Plattformen verfügbar.
+**Hinweis**: Derzeit sind nur Details auf iOS und Android-Plattformen verfügbar.
 
 ## Aktualisierung von Cordova und Ihr Projekt
 
-Nach der Installation der `cordova` Dienstprogramm, Sie können immer aktualisieren auf die neueste Version durch Ausführen des folgenden Befehls:
+Nach der Installation des Dienstprogramms `cordova` , können Sie immer auf die neueste Version aktualisieren, indem Sie Ausführen den folgenden Befehl verwenden:
 
         $ sudo npm update -g cordova
     
@@ -389,15 +398,14 @@ Verwenden Sie diese Syntax, um eine bestimmte Version zu installieren:
         $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
-Führen Sie `cordova -v` zu sehen, welche Version aktuell installiert ist. Führen Sie den `npm
-info` Befehl für eine längere Liste, die die aktuelle Version zusammen mit anderen Nummern für verfügbare Version enthält:
+`cordova -v` um zu sehen, welche Version aktuell ausgeführt wird ausgeführt. Führen Sie den Befehl `npm info` für eine längere Liste enthält, die die aktuelle Version und anderen verfügbaren Versionsnummern:
 
         $ npm info cordova
     
 
-Cordova 3.0 ist die erste Version, die in diesem Abschnitt beschriebenen Befehlszeilenschnittstelle zu unterstützen. Wenn Sie von einer Version vor 3.0 aktualisieren, müssen Sie ein neues Projekt erstellen, wie oben beschrieben, dann kopieren Sie die ältere Anwendung Vermögenswerte in der obersten Ebene `www` Verzeichnis. Gegebenenfalls stehen weitere Informationen zum Upgrade auf 3.0 in den Plattform-Führern. Nach der Aktualisierung auf die `cordova` Befehlszeilenschnittstelle und Nutzung `npm update` um dem Laufenden zu bleiben, die mehr Zeit in Anspruch, dort beschriebenen Verfahren sind nicht mehr relevant.
+Cordova 3.0 ist die erste Version, die in diesem Abschnitt beschriebenen Befehlszeilenschnittstelle unterstützt. Wenn Sie von einer Version vor 3.0 aktualisieren, müssen Sie ein neues Projekt erstellen, wie oben beschrieben, dann die ältere Anwendung Vermögenswerte in der obersten Ebene `Www` -Verzeichnis kopieren. Gegebenenfalls stehen weitere Informationen zum Upgrade auf 3.0 in den Plattform-Führern. Sobald Sie ein auf die Befehlszeilenschnittstelle `cordova upgrade` und `npm update` verwenden, auf um dem Laufenden zu bleiben, sind die dort beschriebenen zeitaufwändigen Verfahren nicht mehr relevant.
 
-Cordova 3.0 oder höher benötigen noch verschiedene Änderungen auf Projektebene Verzeichnisstrukturen und andere Abhängigkeiten. Nach dem Ausführen der `npm` Befehls über Cordova selbst aktualisieren, möglicherweise müssen Sie die Ressourcen des Projekts entsprechen den aktuellsten Anforderungen zu gewährleisten. Führen Sie einen Befehl wie den folgenden für jede Plattform, dass Sie erstellen:
+Cordova 3.0 oder höher benötigen noch verschiedene Änderungen auf Projektebene Verzeichnisstrukturen und andere Abhängigkeiten. Nach dem Ausführen des `npm` -Befehls oben Cordova selbst zu aktualisieren, müssen Sie sicherstellen, dass die Ressourcen des Projekts den aktuellsten Anforderungen entsprechen. Führen Sie einen Befehl wie den folgenden für jede Plattform, dass Sie Gebäude sind:
 
         $ cordova platform update android
         $ cordova platform update ios

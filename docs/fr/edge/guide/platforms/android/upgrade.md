@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Mise à jour Android
 
@@ -94,7 +90,7 @@ Suivez les mêmes instructions que pour `3.2.0`.
 
 Pour les projets qui ont été créés avec le cordova CLI :
 
-1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+1.  Mise à jour le `cordova` version CLI. Consultez l'Interface de ligne de commande.
 
 2.  Exécutez `cordova platform update android`
 
@@ -109,7 +105,7 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
 Pour les projets qui ont été créés avec le cordova CLI :
 
-1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+1.  Mise à jour le `cordova` version CLI. Consultez l'Interface de ligne de commande.
 
 2.  Exécutez `cordova platform update android`
 
@@ -120,7 +116,7 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
-1.  Créez un projet Apache Cordova 3.0.0 utilisant le cordova CLI, tel que décrit dans l'Interface de ligne de commande.
+1.  Créez un projet Apache Cordova 3.0.0 utilisant le cordova CLI, comme décrit dans l'Interface de ligne de commande.
 
 2.  Ajouter vos plates-formes le projet cordova, par exemple : `cordova platform add android`.
 
@@ -128,7 +124,7 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
 4.  Copiez tout actif natif de votre ancien projet dans les répertoires appropriés sous `platforms/android` : ce répertoire est où votre projet cordova-android natif existe.
 
-5.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme plugins, donc ils peuvent avoir besoin d'être ajouté. Seulement 3.0.0 plugins sont compatibles avec l'interface CLI.
+5.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme des plugins, donc ils peuvent avoir besoin d'être ajouté. Seulement 3.0.0 plugins sont compatibles avec l'interface CLI.
 
 ## Mise à niveau vers 3.0.0 de 2.9.0
 
@@ -198,7 +194,7 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
 4.  Copiez le nouveau `cordova-2.6.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.6.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.6.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -218,7 +214,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.5.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.5.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.5.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -236,7 +232,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.4.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.4.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.4.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -252,7 +248,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.3.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.3.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.3.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -268,7 +264,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.2.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.2.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.2.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -284,7 +280,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.1.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.1.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.1.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -300,7 +296,7 @@ Exécutez `bin/update < projet >` avec le chemin d'accès du projet figurant dan
 
 4.  Copiez le nouveau `cordova-2.0.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-2.0.0.js` fichier.
 
 6.  Copie le `res/xml/config.xml` faire correspondre`framework/res/xml/config.xml`.
 
@@ -346,7 +342,7 @@ En raison de l'introduction de la `CordovaWebView` dans le 1.9.0 version, plugin
 
 4.  Copiez le nouveau `cordova-1.8.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-1.8.0.js` fichier.
 
 6.  Mise à jour `res/xml/plugins.xml` pour correspondre`framework/res/xml/plugins.xml`.
 
@@ -360,7 +356,7 @@ En raison de l'introduction de la `CordovaWebView` dans le 1.9.0 version, plugin
 
 4.  Copiez le nouveau `cordova-1.8.0.js` dans votre projet.
 
-5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
+5.  Mettre à jour votre code HTML permettant d'utiliser la nouvelle `cordova-1.8.0.js` fichier.
 
 6.  Mise à jour `res/xml/plugins.xml` pour correspondre `framework/res/xml/plugins.xml`.
 

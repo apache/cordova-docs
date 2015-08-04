@@ -1,27 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # WebViews iOS
 
 本指南說明如何將嵌入在一個較大的 iOS 應用程式內的科爾多瓦啟用 web 視圖元件。這些元件可以如何與對方溝通的詳細資訊，請參閱應用程式外掛程式。
 
-支援的 iOS WebViews 開始與科爾多瓦版本 1.4，使用 `Cleaver` 的 Xcode 範本用作參考實現的元件。 科爾多瓦 2.0 及更高版本僅支援基於子專案的刀實施。
+WebViews 為 iOS 支援開始與科爾多瓦版本 1.4，用`切肉刀`元件為其 Xcode 範本可作為一個參考實現。 科爾多瓦 2.0 及更高版本僅支援基於子專案的刀實施。
 
 這些指示要求至少科爾多瓦 3.x 和 Xcode 6.0 中，以及從新創建的 iOS 專案的 `config.xml` 檔。 你可以使用程式的命令列介面來創建一個新專案，然後獲取 `config.xml` 從檔中的命名的應用程式子目錄內`platforms/ios`.
 

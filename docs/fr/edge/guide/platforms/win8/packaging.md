@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Emballage de Windows
 
@@ -85,7 +82,7 @@ Après l'exécution de makecert pour la première fois, entrez le mot de passe p
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Une fois le fichier pvk et cer est créé, nous devons créer un fichier pfx de ces certificats. Un fichier pfx (Format d'échange de personnel) contient une variété d'informations cryptographiques, tels que les certificats, les certificats d'autorité racine, les chaînes de certificats et les clés privées. Pour empaqueter les certs, nous allons utiliser l'outil appelé [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Cet outil est fourni avec le SDK Windows et se trouve sous `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64` ou `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86`.
+Une fois le fichier pvk et cer est créé, nous devons créer un fichier pfx de ces certificats. Un fichier pfx (Format d'échange de personnel) contient une variété d'informations cryptographiques, tels que les certificats, les certificats d'autorité racine, les chaînes de certificats et les clés privées. Pour empaqueter les certs, nous allons utiliser l'outil appelé [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Cet outil est fourni avec le SDK Windows et peut être trouvé sous `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` ou`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

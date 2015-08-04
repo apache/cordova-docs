@@ -1,25 +1,26 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 후크 가이드
 
-코르도바 후크 응용 프로그램 및 플러그인 개발자가 추가할 수 있는 또는 심지어 자신의 여 코르도바 명령을 사용자 지정 하는 시스템을 구축 하는 특별 한 스크립트를 나타냅니다. 후크 스크립트 구성 파일 (`config.xml` 및 `plugin.xml`) 또는 특별 한 미리 정의 된 폴더 (`/hooks`)에 추가 하 여 정의 되 고 다음 순서에 따라 순차적으로 실행 될 수: * 응용 프로그램 `/hooks`;에서 후크 * 응용 프로그램에서 `config.xml`; 후크 * `Plugins/.../plugin.xml` 에서 플러그인 후크.
+코르도바 후크 응용 프로그램 및 플러그인 개발자가 추가할 수 있는 또는 심지어 자신의 여 코르도바 명령을 사용자 지정 하는 시스템을 구축 하는 특별 한 스크립트를 나타냅니다. 후크 스크립트 특별 한 미리 정의 된 폴더에 추가 하 여 정의할 수 있는 ( `/hooks` ) 또는 구성 파일을 통해 ( `config.xml` 및 `plugin.xml` ) 다음 순서에 따라 순차적으로 실행 하 고:
+
+  * 응용 프로그램에서 후크 `/hooks` ;
+  * 응용 프로그램에서 후크 `config.xml` ;
+  * 플러그인 후크`plugins/.../plugin.xml`.
 
 **참고**: `/hooks` 디렉터리 config.xml에 plugin.xml 후크 요소에 찬성 하 여 사용 되지 않는 것으로 간주 됩니다.
 

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guide de développement de plugin
 
@@ -145,15 +141,29 @@ La plateforme de paciarelli ne supporte pas les plugins.
 
 ## Plugins édition
 
-Une fois que vous développez votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin dans le [Registre][1] de Cordova (basé sur [ `npmjs` ][4]) ou à tout autre `npmjs` -base de Registre. Autres développeurs puissent l'installer automatiquement à l'aide soit `plugman` ou la CLI de Cordova. (Pour plus de détails sur chaque voie de développement, voir Plugman à l'aide à gérer les Plugins et l'Interface de ligne de commande).
+Une fois que vous développez votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin sur n'importe quel `npmjs`-base de Registre, mais celle recommandée est le [Registre de la NGP][4]. S'il vous plaît lire notre [publication plugins au guide du Musée][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Pour publier un plugin, vous devez utiliser le `plugman` outil et passer par les étapes suivantes :
+**NOTE**: [Cordova plugin registre][6] évolue vers un État en lecture seule. `publish`/ `unpublish` des commandes ont été retirés de la `plugman`, donc vous aurez besoin d'utiliser les commandes correspondantes de `npm` .
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Autres développeurs puissent l'installer votre plugin automatiquement à l'aide soit de `plugman` ou de la CLI de Cordova. (Pour plus de détails sur chaque voie de développement, voir Plugman à l'aide à gérer les Plugins et l'Interface de ligne de commande).
+
+Pour publier un plugin sur le Registre du Musée, que vous devez suivre les étapes ci-dessous :
+
+*   Créez votre plugin dans le fichier `package.json` :
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   publier :
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 C'est tout !
 

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guía de herramientas de Shell Android
 
@@ -73,9 +69,21 @@ Asegúrese de que crear al menos un Virtual dispositivo Android, caso contrario 
 
 Usted puede revisar Android app firmando los requisitos aquí: http://developer.android.com/tools/publishing/app-signing.html
 
-Para firmar una aplicación, necesita los siguientes parámetros: * Keystore (`--keystore`): ruta a un archivo binario que puede contener un conjunto de claves. * Keystore password (`--storePassword`): contraseña al almacén de claves * Alias (`--alias`): especifica la clave privada utilizada para cantar el id. * Contraseña (`--password`): contraseña para la clave privada especificada. * Tipo del almacén de claves (`--keystoreType`): pkcs12, jks (por defecto: detección automática basada en la extensión del archivo) estos parámetros se pueden especificar utilizando los argumentos de línea de comandos por encima para `build` o `run` secuencias de comandos.
+Para firmar una aplicación, usted necesita los siguientes parámetros:
 
-Por otra parte, les puede especificar en un archivo de configuración de construcción (build.json) con un argumento (`--buildConfig`). Este es un ejemplo de un archivo de configuración de compilación:
+*   Almacén de claves ( `--keystore` ): ruta de acceso a un archivo binario que puede contener un conjunto de claves.
+
+*   Contraseña del almacén de claves ( `--storePassword` ): contraseña para el almacén de claves
+
+*   Alias ( `--alias` ): el identificador especifica la clave privada utilizada para cantar.
+
+*   Contraseña ( `--password` ): contraseña de la clave privada especificada.
+
+*   Tipo del almacén de claves ( `--keystoreType` ): pkcs12, jks (por defecto: auto-detect basado en la extensión del archivo)
+
+Estos parámetros pueden especificarse usando los argumentos de línea de comandos arriba a `build` o `run` secuencias de comandos.
+
+Alternativamente, usted puede especificar en un archivo (build.json) de configuración construir ( `--buildConfig` ) argumento. Este es un ejemplo de un archivo de configuración de build:
 
     {
          "android": {
@@ -97,9 +105,9 @@ Por otra parte, les puede especificar en un archivo de configuración de constru
      }
     
 
-Para la firma de liberación, las contraseñas pueden ser excluidas y el sistema emitirá un mensaje pidiendo la contraseña.
+Para la firma de la liberación, las contraseñas pueden ser excluidas y el sistema emitirá un mensaje solicitando la contraseña.
 
-También hay soporte para mezclar y combinar los argumentos de línea de comandos y los parámetros en el archivo build.json. Los valores de los argumentos de línea de comandos tendrán precedencia. Esto puede ser útil para especificar la contraseña en la línea de comandos.
+También hay soporte para mezclar y combinar los argumentos de línea de comandos y parámetros en el archivo build.json. Valores de los argumentos de línea de comandos tendrá prioridad. Esto puede ser útil para especificar contraseñas en la línea de comandos.
 
 ## Registro
 
@@ -117,29 +125,29 @@ También hay soporte para mezclar y combinar los argumentos de línea de comando
 
 ## Construcción con Gradle
 
-A partir de cordova-android@4.0.0, proyecto construir usando [Gradle][2]. Para obtener instrucciones sobre el edificio con ANT, consulte las versiones más antiguas de la documentación.
+A partir de cordova-android@4.0.0, proyecto construir usando [Gradle][2]. Para instrucciones sobre la construcción con ANT, consulte las versiones más antiguas de la documentación.
 
  [2]: http://www.gradle.org/
 
 ### Propiedades de Gradle
 
-Estas [Propiedades][3] pueden establecerse para personalizar la construcción:
+Estas [propiedades][3] se pueden establecer para personalizar el build:
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
 *   **cdvBuildMultipleApks** (por defecto: false)
     
-    Si está establecido, entonces se generará varios archivos APK: uno por plataforma nativa soportada por proyectos de bibliotecas (x 86, ARM, etc.). Esto puede ser importante si el proyecto utiliza grandes bibliotecas nativas, que pueden aumentar drásticamente el tamaño de los APK generados.
+    Si se establece, a continuación, se generará varios archivos APK: uno por cada plataforma nativa admite proyectos de biblioteca (x 86, ARM, etc.). Esto puede ser importante si su proyecto utiliza grandes bibliotecas nativas, que pueden aumentar drásticamente el tamaño del APK generado.
     
-    Si no se establece, se generará una sola APK que puede utilizarse en todos los dispositivos.
+    Si no, entonces se generará una sola APK que se pueden utilizar en todos los dispositivos.
 
 *   **cdvVersionCode**
     
-    Reemplaza el versionCode situado en `AndroidManifest.xml`
+    Reemplaza el versionCode en`AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile** (por defecto: release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile** (por defecto: liberación-signing.properties)
     
-    Ruta a un archivo .properties que contiene información de la firma para la construcción de liberación. El archivo debe verse como:
+    Construye la ruta a un archivo .properties que contiene información de firma para el lanzamiento. El archivo debe parecerse:
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -148,27 +156,27 @@ Estas [Propiedades][3] pueden establecerse para personalizar la construcción:
         keyPassword=SECRET2
         
     
-    `storePassword` y `keyPassword` son opcionales y se pedirá si se omite.
+    `storePassword`y `keyPassword` son opcionales y se solicitará si se omite.
 
 *   **cdvDebugSigningPropertiesFile** (por defecto: debug-signing.properties)
     
-    Igual que cdvReleaseSigningPropertiesFile, pero para depuración construye. Útil cuando tienes que compartir una firma clave con otros desarrolladores.
+    Se construye igual que cdvReleaseSigningPropertiesFile, pero para depuración. Útil cuando se necesita compartir una clave con otros desarrolladores.
 
 *   **cdvMinSdkVersion**
     
-    Reemplaza el valor de `minSdkVersion` en `AndroidManifest.xml`. Útil cuando se crean múltiples desde servidores basan en la versión de SDK.
+    Reemplaza el valor de `minSdkVersion` en `AndroidManifest.xml` . Útil cuando se crean múltiples fuente basado en versión de SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Reemplazar el valor automáticamente detectado `android.buildToolsVersion`.
+    Reemplazar automáticamente detectado `android.buildToolsVersion` valor.
 
 *   **cdvCompileSdkVersion**
     
-    Reemplazar el valor automáticamente detectado `android.compileSdkVersion`.
+    Reemplazar automáticamente detectado `android.compileSdkVersion` valor.
 
 ### Extendiendo build.gradle
 
-Si necesita personalizar `build.gradle`, en lugar de editar directamente, debe crear un archivo hermano llamado `build-extras.gradle`. Este archivo se incluirá por el principal `build.gradle` cuando están presentes. Aquí está un ejemplo:
+Si necesita personalizar `build.gradle` , algo que editar directamente, debe crear un archivo hermano llamado `build-extras.gradle` . Este archivo se incluirán por el principal `build.gradle` al presente. Aquí está un ejemplo:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +187,7 @@ Si necesita personalizar `build.gradle`, en lugar de editar directamente, debe c
     }
     
 
-Tenga en cuenta que plugins también puede incluir archivos `build-extras.gradle` a través de:
+Tenga en cuenta que también puede incluir plugins `build-extras.gradle` archivos a través de:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

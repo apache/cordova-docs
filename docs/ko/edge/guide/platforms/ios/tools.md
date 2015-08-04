@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 셸 도구 가이드
 
@@ -55,14 +51,15 @@ IOS 위한 쉘 도구를 사용 하려면 [cordova.apache.org][1]에서 코르�
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-코르도바에서 응용 프로그램을 서명 해야 다음: * 코드 서명 정체성 (`-codeSignIdentity`): [XCode를 사용 하 여][3] 정체성을 서명 하는 새로운 iOS를 만들 수 있으며 키체인에 추가. 서명 id-일반적으로 배포 또는 개발, 코드의 유형의 여기에 지정 해야 합니다.
+코르도바에서 응용 프로그램을 서명 해야 합니다 다음.
+
+*   코드 서명 정체성 ( `--codeSignIdentity` ): [XCode를 사용 하 여][3] 정체성을 서명 하는 새로운 iOS를 만들 수 있으며 키체인에 추가. 서명 id-일반적으로 배포 또는 개발, 코드의 유형의 여기에 지정 해야 합니다.
+
+*   프로비저닝 프로 파일 ( `--provisioningProfile` ): [애플 회원 센터를 사용 하 여][4] 프로비저닝 프로 파일을 만들 수 있습니다. 컴퓨터에 프로비저닝 프로 파일을 다운로드 하 고 그것을 등록 하는 XCode에서 그것을 실행. 여기 당신의 Mac에 복사: ~/Library/MobileDevice/Provisioning\ 프로필 /. 텍스트 편집기에서 열고, 여기에 지정 하는 UUID를 찾을 수 있습니다.
+
+*   코드 서명 리소스 규칙 ( `--codeSignResourceRules` ) (선택 사항): 사용자 지정 서명 리소스 규칙을 지정할 수 있습니다.
 
  [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
-
-*   프로비저닝 프로 파일 (`-provisioningProfile`): [애플 회원 센터를 사용 하 여][4] 프로비저닝 프로 파일을 만들 수 있습니다. 컴퓨터에 프로비저닝 프로 파일을 다운로드 하 고 그것을 등록 하는 XCode에서 그것을 실행. 여기 당신의 Mac에 복사: ~/Library/MobileDevice/Provisioning\ 프로필 /. 텍스트 편집기에서 열고, 여기에 지정 하는 UUID를 찾을 수 있습니다.
-
-*   코드 서명 리소스 규칙 (`-codeSignResourceRules`) (선택 사항): 사용자 지정 서명 리소스 규칙을 지정할 수 있습니다.
-
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.

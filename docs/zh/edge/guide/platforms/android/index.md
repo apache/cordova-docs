@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android 平臺指南
 
@@ -58,7 +54,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 詳細的安裝說明，請參見上面的安裝連結的一部分。
 
-科爾多瓦的命令列工具來工作，或者基於他們的 CLI，您需要在您的`路徑`中包括 SDK 的`工具`和`平臺工具`目錄。 在 Mac 上可以使用一個文字編輯器來創建或修改`~/.bash_profile`檔中，添加如下所示，根據 SDK 安裝的位置的行：
+科爾多瓦的命令列工具來工作，或者基於他們的 CLI，您需要在您的`路徑`中包括 SDK 的`工具`和`平臺工具`目錄。 在 Mac 或 Linux 上，你可以使用一個文字編輯器來創建或修改`~/.bash_profile`檔，添加行，如下，根據 SDK 安裝的位置:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     
@@ -161,7 +157,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 4.  當啟動模擬程式，確保有沒有錯誤訊息，指示載入 HAX 模組失敗。
 
-## 創建一個新專案
+## 創建一個新的專案
 
 在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的命令列介面或一組特定于 Android 的 shell 工具中所述。 從在原始程式碼目錄中，這裡是 CLI 的方法：
 

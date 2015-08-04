@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.Apache.org/licenses/LICENSE-2.0 sofern gesetzlich erforderlich oder schriftlich vereinbart, ist die Software unter der Lizenz verteilt auf einer "AS IS" BASIS, ohne Gewährleistungen oder Bedingungen irgendwelcher Art, weder ausdrücklich noch stillschweigend.  Finden Sie die Lizenz für die jeweilige Sprache, EZB, Berechtigungen und Beschränkungen
+    
+
+## unter der Lizenz.
 
 # Handbuch für die OS-Plattform von Amazon-Feuer
 
@@ -115,7 +105,7 @@ Um Cordova-Anwendungen mittels der Zielplattform Amazon Fire OS zu erstellen, m�
 
 ## Neues Projekt für Amazon Fire OS erstellen
 
-Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The Command-Line Interface beschrieben einrichten. Zum Beispiel in einem Quellcode-Verzeichnis:
+Verwendung der `cordova` Dienstprogramm zum Einrichten eines neuen Projekts, wie beschrieben in The Cordova The Command-Line Interface. Zum Beispiel in einem Quellcode-Verzeichnis:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

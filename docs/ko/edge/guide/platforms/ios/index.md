@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 플랫폼 가이드
 
@@ -25,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   IOS 업그레이드
 *   iOS WebViews
 *   iOS 플러그인
-*   iOS 명령줄 도구
+*   iOS 셸 도구 가이드
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
@@ -87,9 +83,9 @@ Comman 라인 터미널에서 실행:
 
 당신이 보고 사용할 수 있습니다 **cordova run ios --list** 모두 사용 가능한 대상 및 **cordova run ios --target=target_name** 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 (예를 들어 `cordova run ios --target="iPhone-6"`).
 
-참조 추가 빌드 및 실행 옵션에 **cordova run --help** 사용할 수 있습니다.
+또한 참조 추가 빌드 및 실행 옵션에 **코르도바 실행-도움말을** 사용할 수 있습니다.
 
-## Sdk에서는 프로젝트를 열려면
+## SDK에는 프로젝트를 열으십시오
 
 Ios 플랫폼 프로젝트에 추가 되 면 Xcode 내에서 그것을 열 수 있습니다. `Hello/platforms/ios/hello.xcodeproj` 파일을 두 번 클릭 합니다. 스크린은 다음과 같이 한다:
 
@@ -122,9 +118,9 @@ Xcode는 아이폰과 iPad의 최신 버전에 대 한 에뮬레이터와 함께
 
 ## 장치에 배포
 
-장치에 배포 하기 위해 다양 한 요구에 대 한 자세한 애플의 [iOS 용 도구 워크플로 가이드][9]의 *개발과 유통 자산 구성* 섹션을 참조 하십시오. 간단히, 배포 하기 전에 다음을 수행 해야 합니다.
+장치에 배포 하는 다양 한 요구 사항에 대 한 자세한 애플의 [응용 프로그램 배포 작업에 대 한][9] *장치에 당신의 애플 리 케이 션 실행* 섹션을 참조 하십시오. 간단히, 배포 하기 전에 다음을 수행 해야 합니다.
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  애플 iOS 개발자 프로그램에 가입 하세요.
 
@@ -188,18 +184,19 @@ Xcode의 경고 `invokeString` 방법에 대 한 사용자 지정 URL에서 응�
 
 *   [회원 센터 홈 페이지][13] 기술 리소스, 프로 비 저 닝 포털, 배포 가이드 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
 
-*   [IOS 용 도구 워크플로 가이드][9]
+*   [IOS 용 도구 워크플로 가이드][14]
 
-*   [Xcode 사용 설명서][14]
+*   [Xcode 사용 설명서][15]
 
-*   애플 월드 와이드 개발자 컨퍼런스 2012 (WWDC2012)에서 [세션 동영상][15]
+*   애플 월드 와이드 개발자 컨퍼런스 2012 (WWDC2012)에서 [세션 동영상][16]
 
-*   [Xcode 선택 명령][16]을 경우 하나 이상의 Xcode의 올바른 버전을 지정 하는 데 도움이 설치 되어.
+*   [Xcode 선택 명령][17]을 경우 하나 이상의 Xcode의 올바른 버전을 지정 하는 데 도움이 설치 되어.
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ® 애플 ®, Xcode ® 응용 프로그램 Store℠, iPad ®, iPhone ®, iPod ® 및 Finder ®는 애플 inc의 등록 상표)

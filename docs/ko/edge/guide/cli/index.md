@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 명령줄 인터페이스
 
@@ -315,29 +312,41 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 위의 git 예제 마스터 분기의 끝에서 플러그인을 인출 하지만 태그 또는 분기와 같은 대체 git ref 후 추가 될 수 있는 `#` 문자:
 
+태그에서 설치:
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
     
 
-경우 플러그인 (및 그것의 `plugin.xml` 파일)은 내 자식 repo 서브 디렉토리에서 그것을 지정할 수 있습니다 한 `:` 문자. 참고는 `#` 문자 여전히 필요:
+또는 분 지:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+또는 git ref 특정 커밋 수 있습니다:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+    
+
+경우 플러그인 (및 그것의 `plugin.xml` 파일)은 자식 repo 내에서 하위 디렉터리를 지정할 수 있습니다 그것을 한 `:` 문자. 참고는 `#` 문자 여전히 필요:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
     
 
-또한 git ref 및 하위 디렉터리를 결합할 수 있습니다.
+또한 git ref와 하위 디렉터리를 결합할 수 있습니다.
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
     
 
-또는 로컬 경로 포함 하는 플러그인 디렉토리를 지정할는 `plugin.xml` 파일:
+또는 로컬 경로 포함 하는 플러그인 디렉토리를 지정은 `plugin.xml` 파일:
 
         $ cordova plugin add ../my_plugin_dir
     
 
 ## 각 플랫폼 사용자 지정 *병합* 을 사용 하 여
 
-코르도바를 사용 하면 쉽게 많은 다른 플랫폼을 위한 애플 리 케이 션을 배포할 수 있습니다, 하는 동안 때로는 사용자를 추가 해야 합니다. 이 경우, 다양 한 소스 파일을 수정 하 고 싶지 `www` 최상위 디렉터리만 `platforms` 디렉토리, 그들은 정기적으로 최상위로 대체 야 하기 때문에 `www` 디렉토리의 크로스 플랫폼 소스.
+코르도바를 사용 하면 쉽게 많은 다른 플랫폼을 위한 애플 리 케이 션을 배포할 수 있습니다, 하는 동안 때로는 사용자 지정을 추가 해야 합니다. 이 경우, 다양 한 소스 파일을 수정 하 고 싶지 `www` 최상위 디렉터리만 `platforms` 디렉토리, 때문에 그들은 정기적으로 최상위로 대체 있어 `www` 디렉터리의 크로스-플랫폼 소스.
 
-대신, 최상위 `merges` 디렉터리 특정 플랫폼에 배포 하기 위해 자산을 지정 하는 장소를 제공 합니다. 각 플랫폼 관련 하위 디렉터리 내에서 `merges` 거울의 디렉토리 구조는 `www` 소스 트리를 무시 하거나 필요에 따라 파일을 추가할 수 있습니다. 예를 들어, 여기 어떻게 사용 하는 수도 `merges` 안 드 로이드와 아마존 화재 OS 장치에 대 한 기본 글꼴 크기를 밀어 주기 위하여:
+대신, 최상위 `merges` 디렉터리 특정 플랫폼에 배포 하는 자산을 지정 하는 장소를 제공 합니다. 각 플랫폼 관련 하위 디렉터리 내에서 `merges` 거울의 디렉토리 구조는 `www` 소스 트리를 무시 하거나 필요에 따라 파일을 추가할 수 있습니다. 예를 들어 여기 어떻게 사용 하는 수도 `merges` 안 드 로이드와 아마존 화재 OS 장치에 대 한 기본 글꼴 크기를 높일 수:
 
 *   편집은 `www/index.html` 추가 CSS 파일에 링크를 추가 하는 파일 `overrides.css` 이 경우:
     
@@ -351,19 +360,19 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         body { font-size:14px; }
         
 
-프로젝트를 다시 작성 하면 안 드 로이드 버전 다른 그대로 유지 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
+프로젝트를 다시 작성 하는 경우 안 드 로이드 버전 다른 그대로 유지 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
 
-또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어, 애플 리 케이 션에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `backbutton` 이벤트는 해당 하는 하드웨어 단추를.
+당신은 또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어 응용 프로그램에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `backbutton` 이벤트는 해당 하는 하드웨어 단추를.
 
 ## 도움말 명령
 
-코르 도우 바 갇 하거나 문제가 발생할 경우 도움이 될 수 있는 글로벌 명령 몇을 갖추고 있습니다. `help`명령은 표시 모든 사용 가능한 코르도바 명령 및 구문:
+코르도바 갇 또는 문제가 발생 하는 경우 도움이 될 수 있는 글로벌 명령의 몇 가지 기능. `help`명령은 표시 모든 사용 가능한 코르도바 명령 및 구문:
 
     $ cordova help
     $ cordova        # same
     
 
-또한, 특정 명령에 보다 자세한 도움을 받을 수 있습니다. 예를 들어:
+또한, 특정 명령에 더 자세한 도움말을 얻을 수 있습니다. 예를 들면:
 
     $ cordova run --help
     
@@ -373,7 +382,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
     $ cordova info
     
 
-그것은 모두 화면에 정보를 제공 및 로컬에서 출력을 캡처 `info.txt` 파일.
+그것은 모두 화면 정보를 캡처하고 로컬에서 출력 `info.txt` 파일.
 
 **참고**: 현재, iOS 및 안 드 로이드 플랫폼에만 내용을 사용할 수 있습니다.
 
@@ -389,15 +398,15 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
-실행 `cordova -v` 버전을 현재 실행 중인 볼 수 있습니다. 실행은 `npm
-info` 다른 사용 가능한 버전 번호와 함께 현재 버전을 포함 하 긴 목록에 대 한 명령:
+실행 `cordova -v` 버전은 현재 실행 중인 볼 수. 실행은 `npm
+info` 다른 사용 가능한 버전 번호와 함께 현재 버전을 포함 하는 더 긴 목록에 대 한 명령:
 
         $ npm info cordova
     
 
 코르 도우 바 3.0은이 섹션에서 설명 하는 명령줄 인터페이스를 지 원하는 최초의 버전. 위에서 설명한 대로 새 프로젝트를 만든 다음 자산 이전 응용 프로그램의 최상위에 복사를 해야 3.0 이전 버전에서 업데이트 하는 경우 `www` 디렉터리. 해당 되는 추가 3.0 업그레이드에 대 한 자세한 내용은 플랫폼 가이드에서 사용할 수 있습니다. 일단 업그레이드는 `cordova` 명령줄 인터페이스 및 사용 `npm update` 최신, 거기 설명 하는 더 많은 시간이 걸리는 절차는 더 이상 관련.
 
-코르 도우 바 3.0 + 여전히 프로젝트 수준 디렉터리 구조와 다른 종속성에 다양 한 변화를 요구할 수 있습니다. 실행 한 후에 `npm` 코르 도우 바 자체를 업데이트 하는 위의 명령, 프로젝트의 리소스 최신 버전 요구 사항에 부합 되도록 할 수 있습니다. 구축 각 플랫폼에 대해 다음 명령을 실행 합니다.
+코르 도우 바 3.0 + 여전히 프로젝트 수준 디렉터리 구조와 다른 종속성을 다양 한 변경 해야 합니다. 실행 한 후에 `npm` 코르도바 자체를 업데이트 하는 위의 명령, 프로젝트의 리소스는 최신 버전의 요구 사항에 부합 되도록 할 수 있습니다. 구축 하는 각 플랫폼에 대 한 다음과 같은 명령을 실행 합니다.
 
         $ cordova platform update android
         $ cordova platform update ios

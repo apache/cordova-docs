@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Przegląd
 
@@ -59,7 +56,7 @@ Począwszy od wersji 3.0 można użyć dwa podstawowe procesy tworzenia aplikacj
 
 *   **Zorientowane na platformę pracy**: Użyj tego przepływu pracy, jeśli chcesz, aby skupić się na tworzeniu aplikacji na jednej platformie i trzeba być w stanie zmienić to na niższym poziomie. Musisz użyć tej metody, na przykład, jeśli chcesz aplikacji mieszać niestandardowych składników macierzystego z opartych na sieci web składniki Cordova, omówionego w WebViews osadzanie. Jako zasada kciuka używać ten przepływ pracy, jeżeli zajdzie potrzeba modyfikacji projektu w zestawie SDK. Ten przepływ pracy opiera się na zestaw skryptów powłoki niższego poziom, które są dostosowane dla każdego z obsługiwanych platform i oddzielne narzędzie Plugman, które pozwala na zastosowanie pluginów. Podczas tej pracy można używać do tworzenia wieloplatformowych aplikacji, to zazwyczaj trudniejsze, ponieważ brak narzędzie wyższego poziomu oznacza budować oddzielnych cyklach i modyfikacje plugin dla każdej platformy. Jednak ten przepływ pracy umożliwia dostęp do opcji rozwoju przez każdego zestawu SDK i ma zasadnicze znaczenie dla mieszańców złożonych aplikacji. Zobacz różne Poradniki platformy szczegóły na każdej platformie narzędzia dostępne powłoki.
 
-Kiedy po raz pierwszy rozpoczynających działalność, może być najłatwiejszy w obsłudze przepływ przekreślać platforma do tworzenia aplikacji, jak opisano w interfejs wiersza poleceń. Masz wtedy możliwość przełączyć na środku platformy pracy jeśli potrzebujesz większej kontroli, którą SDK zawiera. Narzędzia niższego poziomu powłoki są dostępne w [cordova.apache.org][1] w osobnym dystrybucji niż CLI. Dla projektów początkowo generowane przez CLI, narzędzia powłoki te są również dostępne w projekcie w różnych `platforms/*/cordova` katalogów.
+Kiedy po raz pierwszy rozpoczynających działalność, może być najłatwiejszy w obsłudze przepływ pracy wieloplatformowy do tworzenia aplikacji, jak opisano w interfejs wiersza poleceń. Masz wtedy możliwość przełączyć na środku platformy pracy jeśli potrzebujesz większej kontroli, którą SDK zawiera. Narzędzia niższego poziomu powłoki są dostępne w [cordova.apache.org][1] w osobnym dystrybucji niż CLI. Dla projektów początkowo generowane przez CLI, narzędzia powłoki te są również dostępne w projekcie w różnych `platforms/*/cordova` katalogów.
 
 **Uwaga**: po przełączeniu się z pracy opartego na CLI do jednego wokół powłoka narzędzia i SDK platformy, nie można wrócić. CLI utrzymuje wspólny zestaw kodu źródłowego przekreślać platforma, która na każdym budować to używa do napisania kodu źródłowego platformy. Aby zachować wszelkie modyfikacje wprowadzone do zasobów platformy, trzeba przejść do narzędzi platformy centered powłoki, które zignorować kod źródłowy przekreślać platforma i zamiast opiera się na kod specyficzny dla platformy.
 

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android Shell narzędzia Przewodnik
 
@@ -73,9 +69,21 @@ Upewnij się, że można utworzyć co najmniej jeden Android urządzenia wirtual
 
 Można przejrzeć Android app podpisania wymagania tutaj: http://developer.android.com/tools/publishing/app-signing.html
 
-Aby zarejestrować aplikację, należy następujące parametry: * kluczy (`--keystore`): ścieżka do pliku binarnego, który może zawierać zestaw kluczy. * Keystore hasła (`-storePassword`): hasło do kluczy * Alias (`--alias`): identyfikator określający klucza prywatnego do śpiewania. * Hasło (`--password`): hasło do klucza prywatnego określonego. * Rodzaj kluczy (`-keystoreType`): pkcs12, jks (domyślnie: automatyczne wykrywanie oparty na rozszerzenie pliku) te parametry mogą być określone za pomocą argumentów wiersza polecenia powyżej do `budowy` lub `uruchomić` skrypty.
+Do podpisania aplikacji, musisz następujące parametry:
 
-Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json) za pomocą argumentu (`-buildConfig`). Oto przykład pliku konfiguracyjnego budować:
+*   Keystore ( `--keystore` ): ścieżka do pliku binarnego, który może zawierać zestaw kluczy.
+
+*   Keystore hasła ( `--storePassword` ): do keystore hasła
+
+*   Aliasu ( `--alias` ): identyfikator określenie klucza prywatnego do śpiewania.
+
+*   Hasło ( `--password` ): hasło do klucza prywatnego określonego.
+
+*   Rodzaju kluczy ( `--keystoreType` ): pkcs12, jks (domyślnie: automatyczne wykrywanie oparty na rozszerzenie pliku)
+
+Parametry te mogą być określone za pomocą argumentów wiersza polecenia powyżej do `build` lub `run` skrypty.
+
+Alternatywnie, można je określić w budować konfiguracji pliku (build.json) za pomocą ( `--buildConfig` ) argumentu. Oto przykład pliku konfiguracyjnego budować:
 
     {
          "android": {
@@ -97,9 +105,9 @@ Alternatywnie można je określić w pliku konfiguracyjnym budować (build.json)
      }
     
 
-Dla wersji podpisanie, hasła mogą być wyłączone i budować system wyda się monit z prośbą o hasło.
+Do wydania podpisu, hasła mogą być wyłączone i budować system wyda się monit z prośbą o hasło.
 
-Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości argumentów wiersza polecenia otrzyma pierwszeństwo. Może to być przydatne do określania haseł w wierszu polecenia.
+Dostępna jest również obsługa mieszać i łączyć argumentów wiersza polecenia i parametry w pliku build.json. Wartości od argumentów wiersza polecenia otrzyma pierwszeństwo. Może to być przydatne do określania haseł w wierszu polecenia.
 
 ## Rejestrowanie
 
@@ -129,15 +137,15 @@ Te [Właściwości][3] można ustawić aby dostosować ten budować:
 
 *   **cdvBuildMultipleApks** (domyślnie: false)
     
-    Jeśli ta opcja jest ustawiona, a następnie wiele plików APK zostanie wygenerowany: jeden na rodzimych platformy obsługiwane przez biblioteka projektów (x 86, ramię, itp). Może to być ważne, jeśli twój projekt używa dużych bibliotek rodzimych, które mogą znacznie zwiększyć rozmiar wygenerowanego APK.
+    Jeśli ta opcja jest ustawiona, a następnie wiele plików APK zostanie wygenerowany: jeden na rodzimych platformy obsługiwane przez biblioteka projektów (x 86, ramię, itp). Może to być ważne, jeśli twój projekt używa dużych bibliotek rodzimych, które drastycznie zwiększyć rozmiar wygenerowanego APK.
     
     Jeśli nie zestaw, a następnie jeden APK zostanie wygenerowany które mogą być używane na wszystkich urządzeniach.
 
 *   **cdvVersionCode**
     
-    Zastępuje versionCode w `AndroidManifest.xml`
+    Zastępuje versionCode, w`AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile** (domyślnie: release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile** (domyślnie: wydanie signing.properties)
     
     Ścieżka do pliku *.Properties, zawierający podpisywanie informacji do wydania buduje. Plik powinien wyglądać tak:
     
@@ -148,27 +156,27 @@ Te [Właściwości][3] można ustawić aby dostosować ten budować:
         keyPassword=SECRET2
         
     
-    `storePassword` i `keyPassword` są opcjonalne, a zostaniesz poproszony o pominięcie.
+    `storePassword`i `keyPassword` są opcjonalne, a zostaniesz poproszony o pominięcie.
 
-*   **cdvDebugSigningPropertiesFile** (domyślnie: debug-signing.properties)
+*   **cdvDebugSigningPropertiesFile** (domyślnie: debugowania signing.properties)
     
-    Tak samo jak cdvReleaseSigningPropertiesFile, ale do debugowania buduje. Przydatne, gdy zachodzi potrzeba udostępnienia klucza podpisywania z innymi deweloperami.
+    Tak samo jak cdvReleaseSigningPropertiesFile, ale dla debugowania buduje. Przydatne, gdy zachodzi potrzeba udostępnienia klucza podpisywania z innymi deweloperami.
 
 *   **cdvMinSdkVersion**
     
-    Zastępuje wartość `minSdkVersion` w `AndroidManifest.xml`. Przydatne podczas tworzenia wielu APKs oparte na wersja SDK.
+    Zastępuje wartość `minSdkVersion` w `AndroidManifest.xml` . Przydatne podczas tworzenia wielu APKs oparte na wersja SDK.
 
 *   **cdvBuildToolsVersion**
     
-    Zastąp wartość automatycznie wykryte `android.buildToolsVersion`.
+    Zastąpić automatycznie wykryć `android.buildToolsVersion` wartość.
 
 *   **cdvCompileSdkVersion**
     
-    Zastąp wartość automatycznie wykryte `android.compileSdkVersion`.
+    Zastąpić automatycznie wykryć `android.compileSdkVersion` wartość.
 
 ### Rozszerzenie build.gradle
 
-Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, należy utworzyć plik rodzeństwo o nazwie `build-extras.gradle`. Ten plik będzie zawarte przez główne `build.gradle` obecny. Oto przykład:
+Jeśli chcesz dostosować `build.gradle` , raczej niż edytować bezpośrednio, należy utworzyć element członkowski równorzędny plik o nazwie `build-extras.gradle` . Ten plik zostaną uwzględnione przez głównego `build.gradle` kiedy obecny. Oto przykład:
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +187,7 @@ Jeśli trzeba dostosować `build.gradle`, zamiast edytować bezpośrednio, nale�
     }
     
 
-Należy zauważyć, że wtyczki można także `build-extras.gradle` plików za pośrednictwem:
+Należy zauważyć, że wtyczki można również `build-extras.gradle` plików za pomocą:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 概述
 
@@ -59,7 +56,7 @@ Apache 科爾多瓦的應用程式都依賴于一個共同的 `config.xml` 檔�
 
 *   **平臺為中心的工作流**： 如果你想要注重建立一個單一的平臺的應用程式和需要，以便能夠在較低級別進行修改使用此工作流。 您需要使用這種方法，例如，如果您希望您的應用程式組合自訂本機組件與基於 web 的科爾多瓦元件，如嵌入 WebViews 中所討論。 作為一個經驗法則，使用此工作流，如果您需要修改 SDK 中的專案。 此工作流，依賴于一套專門針對每個受支援的平臺和單獨的 Plugman 實用程式，它允許您要應用的外掛程式的較低級別 shell 腳本。 雖然您可以使用此工作流構建跨平臺的應用程式，通常很難更因為缺乏的一種較高級別的工具意味著單獨的組建循環和外掛程式修改為每個平臺。 儘管如此，此工作流允許您提供的每個 SDK 的開發選項獲得更多和複雜混合應用程式至關重要。 有關每個平臺可用外殼實用程式，請參閱各種平臺指南的詳細資訊。
 
-當第一次開始的時候，它可能是最容易使用的跨平臺工作流創建一個應用程式，如所述的命令列介面。 然後，您可以選擇要切換到以平臺為中心的工作流，如果你需要 SDK 提供的更大控制。 較低級別外殼實用程式，可在[cordova.apache.org][1]在 CLI 比單獨的分發。 生成的專案最初由 CLI，這些外殼工具也是在中可用專案的各種 `platforms/*/cordova` 目錄。
+當第一次開始的時候，它可能是最簡單的方法使用跨平臺工作流來創建一個應用程式，如所述的命令列介面。 然後，您可以選擇要切換到以平臺為中心的工作流，如果你需要 SDK 提供的更大控制。 較低級別外殼實用程式，可在[cordova.apache.org][1]在 CLI 比單獨的分發。 生成的專案最初由 CLI，這些外殼工具也是在中可用專案的各種 `platforms/*/cordova` 目錄。
 
 **注意**： 一旦你從基於 CLI 的工作流切換到一個圍繞特定于平臺的 Sdk 和殼的工具，你不能回去。 CLI 維護一套共同的跨平臺原始程式碼，這對每個構建它使用它來寫入的特定于平臺的原始程式碼。 要保留的特定于平臺的資產做的任何修改，你需要要切換到的以平臺為中心的殼工具，忽視的跨平臺原始程式碼，並轉而依賴特定于平臺的原始程式碼。
 

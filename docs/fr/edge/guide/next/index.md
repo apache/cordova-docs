@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. Voir le fichier avis distribué avec ce travail d'information additionnelle concernant les droits d'auteur. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. Vous pouvez obtenir une copie de la licence à
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.Apache.org/licenses/License-2.0 sauf si requis par la loi applicable ou accord écrit, distribué sous la licence de logiciel est distribué sur un « Tel quel » fondement, sans garanties ou CONDITIONS d'aucune sorte, explicite ou implicite.  Voir la licence pour la langue spécifique régissant les autorisations et les limites
+    
+
+## aux termes de la licence.
 
 # Prochaines étapes
 
@@ -27,14 +17,14 @@ Ce guide contient les rubriques suivantes :
 
 *   Meilleures pratiques
 *   Gestion des mises à niveau
-*   Test
-*   Débogage
+*   Tester les applications de Cordova
+*   Débogage des applications de Cordova
 *   Interface utilisateur
 *   Considérations particulières
 *   Jonglant
 *   Obtention d'aide 
 
-# Meilleures pratiques
+# Développement d'application de meilleures pratiques Cordova
 
 ## 1) SPA est votre ami
 
@@ -82,18 +72,19 @@ Une des plus grandes erreurs qu'un nouveau développeur de Cordova peut faire es
 
 *   [« Vous la moitié cul il »][11]
 *   [« Top dix conseils de Performance pour PhoneGap et hybride Apps »][12]
-*   « Rapide des applications et des Sites avec JavaScript »: http://channel9.msdn.com/Events/Build/2013/4-313
+*   [« Des applications rapides et des Sites avec JavaScript »][13]
 
  [11]: http://sintaxi.com/you-half-assed-it
  [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [13]: https://channel9.msdn.com/Events/Build/2013/4-313
 
 ## 3) reconnaître et gérer l'état hors connexion
 
 Voir le Conseil précédent sur les réseaux. Non seulement vous pouvez être sur un réseau lent, il est tout à fait possible pour votre application d'être complètement déconnecté. Votre application doit gérer cela de manière intelligente. Si votre application ne fonctionne pas, les gens penseront que votre application est cassée. Vu comment il est facile à manipuler (supports de Cordova à l'écoute pour un événement à la fois en ligne et hors ligne), il n'y a absolument aucune raison pour que votre application ne répond ne pas bien quand exécuter en mode hors connexion. Veillez à tester (voir la section tests ci-dessous) votre demande et n'oubliez pas de tester comment votre application gère quand vous commencez dans un État et ensuite passez à l'autre.
 
-Notez que les événements en ligne et hors ligne, ainsi que l'API de connexion de réseau n'est pas parfait. Vous devrez compter sur via une requête XHR afin de déterminer si l'appareil est vraiment hors ligne ou en ligne. À la fin de la journée, être bien sûr ajouter une forme d'assistance pour les problèmes de réseau - en fait, l'Apple store (et probablement d'autres magasins) rejettera les applications qui ne gèrent correctement les États hors ligne/en ligne. Pour plus d'informations sur ce sujet, voir ["Is This Thing sur?"][13]
+Notez que les événements en ligne et hors ligne, ainsi que l'API de connexion de réseau n'est pas parfait. Vous devrez compter sur via une requête XHR afin de déterminer si l'appareil est vraiment hors ligne ou en ligne. À la fin de la journée, être bien sûr ajouter une forme d'assistance pour les problèmes de réseau - en fait, l'Apple store (et probablement d'autres magasins) rejettera les applications qui ne gèrent correctement les États hors ligne/en ligne. Pour plus d'informations sur ce sujet, voir ["Is This Thing sur?"][14]
 
- [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [14]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # Gestion des mises à niveau
 
@@ -130,7 +121,7 @@ Testez toujours vos applications pour faire en sorte qu'installer le nouveau plu
 
 Si votre projet comporte beaucoup de plugins dont vous avez besoin de mise à jour, il pourrait gagner du temps pour créer un script shell ou le lot qui supprime et ajoute les plugins avec une seule commande.
 
-# Test
+# Tester les applications de Cordova
 
 Il est super important de tester vos applications. L'équipe de Cordova utilise Jasmine mais toute solution de test web convivial unité va faire.
 
@@ -148,7 +139,7 @@ Il est, bien sûr, impossible de tester sur chaque dispositif possible sur le ma
 
 Astuce : Il est possible sur les appareils Android Nexus pour flasher facilement différentes versions d'Android sur le périphérique. Ce procédé simple vous permettra de facilement tester votre application sur différents niveaux d'Android avec un seul appareil, sans annulation de votre garantie ou vous obligeant à « jailbreak » ou « racine » de votre appareil. Les images de Google Android usine et les instructions situent trouve à: https://developers.google.com/android/nexus/images#instructions
 
-# Débogage
+# Débogage des applications de Cordova
 
 Débogage Cordova nécessite certaine configuration. Contrairement à une application de bureau, vous ne pouvez pas simplement ouvrir outils sur votre appareil mobile et démarrez le débogage, heureusement il y a des alternatives beaucoup.
 
@@ -156,15 +147,15 @@ Débogage Cordova nécessite certaine configuration. Contrairement à une applic
 
 ### Xcode
 
-Avec Xcode, vous pouvez déboguer le côté natif iOS de votre application de Cordova. Assurez-vous que la zone Debug est montrant (vue-> zone Debug). Une fois que votre application s'exécute sur l'appareil (ou simulateur), vous pouvez afficher la sortie du journal dans la zone de débogage. C'est où des erreurs ou des avertissements seront imprimera. Vous pouvez également définir des points d'arrêt dans les fichiers source. Cela vous permettra de parcourir le code une ligne à la fois et d'afficher l'état des variables à cette époque. L'état des variables apparaît dans la zone de débogage lorsqu'un point d'arrêt est atteint. Une fois que votre application est en cours d'exécution sur le périphérique, vous pouvez faire apparaître inspecteur web de Safari (comme décrit ci-dessous) pour déboguer le côté webview et js de votre application. Pour plus d'informations et d'aide, consultez le guide de Xcode : [Guide de débogage de Xcode][14]
+Avec Xcode, vous pouvez déboguer le côté natif iOS de votre application de Cordova. Assurez-vous que la zone Debug est montrant (vue-> zone Debug). Une fois que votre application s'exécute sur l'appareil (ou simulateur), vous pouvez afficher la sortie du journal dans la zone de débogage. C'est où des erreurs ou des avertissements seront imprimera. Vous pouvez également définir des points d'arrêt dans les fichiers source. Cela vous permettra de parcourir le code une ligne à la fois et d'afficher l'état des variables à cette époque. L'état des variables apparaît dans la zone de débogage lorsqu'un point d'arrêt est atteint. Une fois que votre application est en cours d'exécution sur le périphérique, vous pouvez faire apparaître inspecteur web de Safari (comme décrit ci-dessous) pour déboguer le côté webview et js de votre application. Pour plus d'informations et d'aide, consultez le guide de Xcode : [Guide de débogage de Xcode][15]
 
- [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+ [15]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
 
 ### Distance de Safari débogage avec Web Inspector
 
-Avec l'inspecteur web de Safari, vous pouvez déboguer le code webview et js dans votre application de Cordova. Cela fonctionne seulement sur OSX et qu'avec iOS 6 (et versions ultérieures). Il utilise Safari pour vous connecter à votre appareil (ou le simulateur) et reliera les outils du navigateur à la demande de Cordova. Vous obtenez ce que vous attendez d'outils / DOM inspection/manipulation, un débogueur JavaScript, inspection de réseau, la console et plus. Comme Xcode, avec l'inspecteur web de Safari, vous pouvez définir des points d'arrêt dans le code JavaScript et afficher l'état des variables à cette époque. Vous pouvez afficher les erreurs, des avertissements ou des messages qui sont affichés dans la console. Vous pouvez également exécuter des commandes JavaScript directement à partir de la console, que votre application s'exécute. Pour plus de détails sur la façon de mettre en place et ce que vous pouvez faire, voir cet excellent blog : <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> et ce guide : [Guide de Safari Web Inspector][15]
+Avec l'inspecteur web de Safari, vous pouvez déboguer le code webview et js dans votre application de Cordova. Cela fonctionne seulement sur OSX et qu'avec iOS 6 (et versions ultérieures). Il utilise Safari pour vous connecter à votre appareil (ou le simulateur) et reliera les outils du navigateur à la demande de Cordova. Vous obtenez ce que vous attendez d'outils / DOM inspection/manipulation, un débogueur JavaScript, inspection de réseau, la console et plus. Comme Xcode, avec l'inspecteur web de Safari, vous pouvez définir des points d'arrêt dans le code JavaScript et afficher l'état des variables à cette époque. Vous pouvez afficher les erreurs, des avertissements ou des messages qui sont affichés dans la console. Vous pouvez également exécuter des commandes JavaScript directement à partir de la console, que votre application s'exécute. Pour plus de détails sur la façon de mettre en place et ce que vous pouvez faire, voir cet excellent blog : <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> et ce guide : [Guide de Safari Web Inspector][16]
 
- [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
+ [16]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## Débogage distant chrome
 
@@ -182,34 +173,38 @@ Weinre crée un serveur local qui peut héberger un client de débogage distant 
 
 ## Autres Options
 
-*   BlackBerry 10 prend en charge le débogage ainsi : [Documentation][16]
-*   Vous pouvez déboguer à l'aide de Firefox App Manager aussi bien, voir [ce blog][17] et cet [article MDN][18].
+*   BlackBerry 10 prend en charge le débogage ainsi : [Documentation][17]
+*   Vous pouvez déboguer à l'aide de Firefox App Manager aussi bien, voir [ce blog][18] et cet [article MDN][19].
 *   Pour plus d'exemples et d'explication des conseils ci-dessus de débogage, consultez : <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [17]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [18]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [19]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # Interface utilisateur
 
 Création d'une application de Cordoue qui est très joli sur mobile peut être un défi, surtout pour les développeurs. Beaucoup de gens ont choisi d'utiliser une infrastructure d'interface utilisateur pour faciliter cette opération. Voici une courte liste des options, que vous voudrez peut-être.
 
 *   [jQuery Mobile][9] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
-*   [ionique][19] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
-*   [Ratchet][20] - présentée par les personnes qui ont créé le Bootstrap. 
+*   [ionique][20] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
+*   [Ratchet][21] - présentée par les personnes qui ont créé le Bootstrap. 
 *   [Kendo UI][5] - interface Open source et applicative de Telerik.
-*   [Couche de finition][21]
+*   [Couche de finition][22]
 *   [ReactJS][7]
 
- [19]: http://ionicframework.com/
- [20]: http://goratchet.com/
- [21]: http://topcoat.io
+ [20]: http://ionicframework.com/
+ [21]: http://goratchet.com/
+ [22]: http://topcoat.io
 
-Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine: * [iOS][22] * [Android][23] * [Windows Phone][24]
+Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine :
 
- [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [23]: https://developer.android.com/designWP8
- [24]: http://dev.windowsphone.com/en-us/design/library
+*   [iOS][23]
+*   [Androïde][24]
+*   [Windows Phone][25]
+
+ [23]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [24]: https://developer.android.com/designWP8
+ [25]: http://dev.windowsphone.com/en-us/design/library
 
 ## Ressources et Articles d'interface utilisateur supplémentaires
 
@@ -233,18 +228,18 @@ L'affichage du chargement à distance HTML contenu dans une webview devrait êtr
 
 Voici quelques façons de tenir à jour avec Cordova.
 
-*   S'abonner au [blog de Cordova][25].
-*   S'abonner à la [liste des développeurs][26]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
+*   S'abonner au [blog de Cordova][26].
+*   S'abonner à la [liste des développeurs][27]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
 
- [25]: http://cordova.apache.org/#news
- [26]: http://cordova.apache.org/#mailing-list
+ [26]: http://cordova.apache.org/#news
+ [27]: http://cordova.apache.org/#mailing-list
 
 # Obtention d'aide
 
 Les liens suivants sont les meilleurs endroits pour obtenir de l'aide pour Cordova :
 
-*   StackOverflow : <http://stackoverflow.com/questions/tagged/cordova> à l'aide de la balise de Cordova, vous pouvez afficher et parcourir toutes les questions de Cordova. Notez que les StackOverflow convertit automatiquement la balise « Phonegap » à « Cordova », sorte de cette façon, vous serez en mesure d'accéder aux questions historiques aussi bien
-*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][27] ce groupe de Google a été l'ancien forum de soutien pour quelle Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
+*   StackOverflow : <http://stackoverflow.com/questions/tagged/cordova> à l'aide de la balise de Cordova, vous pouvez afficher et parcourir toutes les questions de Cordova. Notez que StackOverflow convertit automatiquement le tag « Phonegap » à « Cordova », sorte de cette façon, vous serez en mesure d'accéder aux questions historiques aussi bien
+*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][28] ce groupe de Google a été l'ancien forum de soutien lorsque Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
 *   Meetup : <http://phonegap.meetup.com> - pensez à trouver un groupe local de meetup Cordova/PhoneGap
 
- [27]: https://groups.google.com/forum/#!forum/phonegap
+ [28]: https://groups.google.com/forum/#!forum/phonegap

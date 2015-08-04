@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Konfiguration
 
@@ -33,57 +29,62 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         < Meta Name = "Viewport" Content = "Breite = Gerät-breit, Initial-Scale = 1, Benutzer-skalierbare = No" / >
         
 
-*   `MediaPlaybackRequiresUserAction`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` zu verhindern, dass HTML5-Videos oder Audios automatisch das Spiel mit der `autoplay` Attribut oder per JavaScript.
+*   `MediaPlaybackAllowsAirPlay` (Boolean, standardmäßig auf `true festgelegt`): Air Play verhindern, in dieser Ansicht verwendet wird auf `false` festgelegt. Erhältlich in Standard UIWebView und WKWebView.
+    
+        <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
+        
+
+*   `MediaPlaybackRequiresUserAction` (Boolean, standardmäßig auf `false`): um zu verhindern, dass HTML5-Videos oder Audios automatisch wiedergegeben werden, mit dem Attribut `Autoplay` oder per JavaScript auf `true` festgelegt.
     
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` HTML5 Medienwiedergabe *Inline* innerhalb des Bildschirm-Layouts, mit Browser bereitgestellten Steuerelemente anstelle von native Steuerelemente angezeigt werden können. Damit dies funktioniert, fügen Sie das `webkit-playsinline` -Attribut auf eine `<video>` Elemente.
+*   `AllowInlineMediaPlayback` (Boolean, standardmäßig auf `false`): HTML5-Medienwiedergabe *Inline* innerhalb des Bildschirm-Layouts, mit Browser bereitgestellten Steuerelemente anstelle von native Steuerelemente angezeigt werden können auf `true` festgelegt. Damit dies funktioniert fügen Sie das `Webkit-Playsinline` -Attribut für alle `< video >` Elemente.
     
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(string, entweder `none` , `local` , oder den Standardwert `cloud` ): Legen Sie auf `cloud` Web-Speicherdaten-Backup über iCloud können. Legen Sie auf `local` um nur lokale Backups über iTunes Sync zu ermöglichen. Legen Sie auf `none` zu verhindern, dass Web-Speicher-Backup.
+*   `BackupWebStorage` (string, entweder `keine`, `lokalen`oder der Standard- `Wolke`): Legen Sie auf `Wolke` Web Speicherdaten-Backup über iCloud können. Legen Sie auf `lokalen` nur lokale Backups über iTunes Sync zu ermöglichen. Satz auf `none` zu verhindern, dass Web-Speicher-Sicherungen.
     
         <preference name="BackupWebStorage" value="local"/>
         
 
-*   `TopActivityIndicator`(string, der Standardwert ist `gray` ): steuert die Anzeige von das kleine rotierende-Symbol in der Statusleiste, der bedeutende Prozessoraktivitäten angibt. Gültige Werte sind `whiteLarge` , `white` , und`gray`.
+*   `TopActivityIndicator` (string, standardmäßig `gray`): steuert die Anzeige von das kleine rotierende-Symbol in der Statusleiste, die erhebliche Prozessoraktivitäten angibt. Gültige Werte sind `whiteLarge`, `white`und `gray`.
     
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `KeyboardDisplayRequiresUserAction`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` erlauben die Tastatur angezeigt werden, beim Aufrufen von `focus()` auf Formularfelder.
+*   `KeyboardDisplayRequiresUserAction` (Boolean, standardmäßig auf `true festgelegt`): auf `false` festgelegt, um die Tastatur angezeigt werden beim Aufrufen von `focus()` für Formularfelder zu ermöglichen.
     
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
         
 
-*   `SuppressesIncrementalRendering`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` zu warten, bis alle Inhalte eingegangen ist, bevor es auf dem Bildschirm gerendert wird.
+*   `SuppressesIncrementalRendering` (Boolean, standardmäßig auf `false`): warten, bis alle Inhalte eingegangen ist, bevor es auf dem Bildschirm gerendert wird auf `true` festgelegt.
     
         <preference name="SuppressesIncrementalRendering" value="true"/>
         
 
-*   `GapBetweenPages`(float, der Standardwert ist `` ): die Größe der Lücke, zwischen Seiten in Punkt.
+*   `GapBetweenPages` (float, hat den Standardwert ``): die Größe der Lücke, zwischen Seiten in Punkt.
     
         <preference name="GapBetweenPages" value="0"/>
         
 
-*   `PageLength`(float, der Standardwert ist `` ): die Größe jeder Seite in Punkt in die Richtung, die die Seiten fließen. Wenn PaginationMode rechts nach links oder von links nach rechts, diese Eigenschaft stellt die Breite auf jeder Seite. Diese Eigenschaft stellt beim PaginationMode TopToBottom oder BottomToTop ist, die Höhe der einzelnen Seiten dar. Der Standardwert ist 0, was, dass das Layout die Größe des Viewports wird verwendet bedeutet, um die Dimensionen der Seite zu bestimmen.
+*   `PageLength` (float, hat den Standardwert ``): die Größe jeder Seite in Punkt in die Richtung, die die Seiten fließen. Wenn PaginationMode rechts nach links oder von links nach rechts, diese Eigenschaft stellt die Breite auf jeder Seite. Diese Eigenschaft stellt beim PaginationMode TopToBottom oder BottomToTop ist, die Höhe der einzelnen Seiten dar. Der Standardwert ist 0, was, dass das Layout die Größe des Viewports wird verwendet bedeutet, um die Dimensionen der Seite bestimmen.
     
         <preference name="PageLength" value="0"/>
         
 
-*   `PaginationBreakingMode`(string, der Standardwert ist `page` ): gültige Werte sind `page` und `column` .Die Art und Weise, in der Spalte oder Seitenumbruch auftritt. Diese Eigenschaft legt fest, ob bestimmte CSS-Eigenschaften zur Spalte und Seitenumbruch berücksichtigt oder ignoriert werden. Wenn diese Eigenschaft auf festgelegt ist `column` , der Inhalt steht im Einklang mit der CSS-Eigenschaften, die im Zusammenhang mit Spalte aktuelle an Stelle der Seitenumbruch.
+*   `PaginationBreakingMode` (string, wird standardmäßig auf der `page`): gültige Werte sind `page` und `column`. Die Art und Weise, in der Spalte oder Seitenumbruch auftritt. Diese Eigenschaft bestimmt, ob bestimmte CSS-Eigenschaften zur Spalte und Seitenumbruch berücksichtigt oder ignoriert werden. Wenn diese Eigenschaft auf `column`festgelegt ist, respektiert die Inhalte mit Bezug zu Spalte aktuelle an Stelle der Seitenumbruch CSS-Eigenschaften.
     
         <preference name="PaginationBreakingMode" value="page"/>
         
 
-*   `PaginationMode`(string, der Standardwert ist `unpaginated` ): gültige Werte sind `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , und `rightToLeft` . Diese Eigenschaft bestimmt, ob Inhalte in der Webansicht aufgebrochen in Seiten, die die eine Ansicht zu einer Zeit zu füllen, oder als eine lange durchlaufende Ansicht angezeigt. Wenn der Satz zu einem paginierten Formular, diese Eigenschaft ein paginiertes Layouts zum Inhalt: verursacht die Webansicht zu verwenden, die Werte der SeitenLaenge und GapBetweenPages zu Relayout inhaltlich schaltet.
+*   `PaginationMode` (string, Standard ist `unpaginated`): gültige Werte sind `unpaginated`, `LeftToRight`, `TopToBottom`, `BottomToTop`und `RightToLeft`. Diese Eigenschaft bestimmt, ob Inhalte in der Webansicht aufgebrochen in Seiten, die den Ansicht einen Bildschirm in einer Zeit zu füllen, oder als eine lange durchlaufende Ansicht angezeigt. Wenn der Satz zu einem paginierten Formular, diese Eigenschaft ein paginiertes Layouts zum Inhalt verursacht die Webansicht zu verwenden, die Werte der SeitenLaenge und GapBetweenPages zu Relayout inhaltlich schaltet.
     
         <preference name="PaginationMode" value="unpaginated"/>
         
 
-*   `UIWebViewDecelerationSpeed`(string, der Standardwert ist `normal` ): gültige Werte sind `normal` , `fast` . Diese Eigenschaft steuert die Geschwindigkeit Abbremsen Schwung scrollen. `normal`ist die Standardgeschwindigkeit für die meisten systemeigenen apps, und `fast` ist der Standard für Mobile Safari.
+*   `UIWebViewDecelerationSpeed` (string, wird standardmäßig auf `normal`): gültige Werte sind `normal`, `fast`. Diese Eigenschaft steuert die Geschwindigkeit Abbremsen Schwung scrollen. `Normal` ist die Standardgeschwindigkeit für die meisten systemeigenen apps, und `fast` ist der Standard für Mobile Safari.
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
         
@@ -93,11 +94,11 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="ErrorUrl" value="myErrorPage.html"/>
         
 
-*   `OverrideUserAgent` (String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert der alten UserAgent Webview ersetzen wird. Es ist hilfreich, um die Anforderung von app/Browser identifizieren, wenn entfernte Seiten anfordern. Verwendung mit Vorsicht, dies kann verursacht Compitiable Problem mit Webservern. Verwenden Sie für die meisten Fälle stattdessen AppendUserAgent.
+*   `OverrideUserAgent`(String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert der alten UserAgent Webview ersetzen wird. Es ist hilfreich, um die Anforderung von app/Browser identifizieren, wenn entfernte Seiten anfordern. Verwendung mit Vorsicht, dies kann verursacht Compitiable Problem mit Webservern. Verwenden Sie für die meisten Fälle stattdessen AppendUserAgent.
     
         <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" />
         
 
-*   `AppendUserAgent` (String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert bis zum Ende des alten UserAgent der Webview angefügt wird. Wenn Sie mit OverrideUserAgent zu verwenden, wird dieser Wert ignoriert.
+*   `AppendUserAgent`(String, nicht standardmäßig festgelegt): Wenn gesetzt, der Wert bis zum Ende des alten UserAgent der Webview angefügt wird. Wenn Sie mit OverrideUserAgent zu verwenden, wird dieser Wert ignoriert.
     
         <preference name="OverrideUserAgent" value="My Browser" />

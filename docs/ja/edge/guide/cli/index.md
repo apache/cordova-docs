@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # コマンド ライン インターフェイス
 
@@ -315,29 +312,41 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 上記の git の例は、master ブランチの終わりからプラグインをフェッチが後、代替 git ref タグまたは分岐などを追加することができます、 `#` 文字。
 
+タグからインストールします。
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
     
 
-場合は、プラグイン （とその `plugin.xml` ファイル) は git のレポ内のサブディレクトリでそれを指定することができます、 `:` 文字。 注意してください、 `#` 文字が必要であります。
+または分岐:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+または git ref には、特定のコミット可能性があります。
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
+    
+
+場合プラグイン (その `plugin.xml` ファイル) は、git リポジトリ内のサブディレクトリでそれを指定できます、 `:` 文字。 注意してください、 `#` の文字が必要であります。
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
     
 
-また、git ref とサブディレクトリの両方を組み合わせることができます。
+Git ref とサブディレクトリの両方を組み合わせることもできます。
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
     
 
-またはを含むプラグイン ディレクトリへのローカル パスを指定する、 `plugin.xml` ファイル。
+代わりに、含まれているプラグイン ディレクトリへのローカル パスを指定します `plugin.xml` ファイル。
 
         $ cordova plugin add ../my_plugin_dir
     
 
 ## 各プラットフォームのカスタマイズを*マージ*を使用します。
 
-コルドバは、多くの異なるプラットフォーム用のアプリを簡単に展開することができます、間時々 カスタマイズを追加する必要があります。 この場合、様々 なソース ファイルを変更するたくない `www` 内の最上位レベルのディレクトリ `platforms` ディレクトリ、トップレベルで定期的に取り替えられるため `www` ディレクトリのクロスプラット フォームのソース。
+コルドバでは、さまざまなプラットフォームのためのアプリケーションを簡単に配置することができます、間時々 カスタマイズを追加する必要があります。 さまざまなソース ファイルを変更したくない場合は、 `www` 内で最上位レベルのディレクトリ `platforms` ディレクトリの最上位レベルで定期的に取り替えられるため `www` ディレクトリのクロスプラット フォームのソース。
 
-代わりに、最上位 `merges` ディレクトリの特定のプラットフォームに展開する資産を指定する場所を提供しています。 各プラットフォーム固有のサブディレクトリ内で `merges` のディレクトリ構造をミラー、 `www` ソース ツリーで、オーバーライドまたは必要に応じてファイルを追加することができます。 たとえば、使用する可能性がありますどのようにここでは `merges` Android とアマゾン火 OS デバイスの既定のフォント サイズを後押しします。
+代わりに、最上位レベルの `merges` ディレクトリは、特定のプラットフォームを展開する資産を指定する場所を提供しています。 各プラットフォーム固有のサブディレクトリ内にある `merges` のディレクトリ構造をミラー、 `www` ソース ツリー、オーバーライドまたは必要に応じてファイルを追加できます。 たとえば、ここでは使用する可能性がありますどのように `merges` アンドロイドとアマゾン火 OS デバイスのデフォルトのフォント サイズを後押しします。
 
 *   編集、 `www/index.html` 、追加の CSS ファイルへのリンクを追加して、ファイル `overrides.css` この場合。
     
@@ -351,53 +360,53 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
         body { font-size:14px; }
         
 
-プロジェクトをリビルドするとき他が変わらない間、Android のバージョン カスタム フォント サイズを備えています。
+プロジェクトをリビルドするとき Android のバージョンは他の変更されていないままにカスタム フォント サイズを備えています。
 
-また使用することができます `merges` 、元のファイルが存在しないを追加する `www` ディレクトリ。 たとえば、アプリ組み込むことができます*戻るボタン*グラフィック iOS インターフェイスに格納されている `merges/ios/img/back_button.png` 、Android のバージョンをキャプチャすることができます代わりに、 `backbutton` 、対応するハードウェア ボタンからのイベント。
+また使用することができます `merges` 元にはないファイルを追加する `www` ディレクトリ。 たとえば、アプリに組み込むことが*[戻る] ボタン*のグラフィック iOS のインターフェイスに格納されている `merges/ios/img/back_button.png` 、Android のバージョンをキャプチャすることができます代わりに `backbutton` 対応するハードウェア ボタンからのイベント。
 
 ## ヘルプ コマンド
 
-コルドバ動けなくなるまたは問題が発生する場合に役立つことがあります、グローバルのコマンドのカップルを備えています。`help`コマンドは、コルドバのすべての利用可能なコマンドとその構文が表示されます。
+コルドバは、動けなくなるか問題が発生する場合に役立つ可能性がありますグローバル コマンドのカップルを備えています。 `help`コルドバのすべての利用可能なコマンドとその構文のコマンドが表示されます。
 
     $ cordova help
     $ cordova        # same
     
 
-さらに、特定のコマンドに関するより詳細なヘルプを得ることができます。たとえば。
+さらに、特定のコマンドの詳細なヘルプを得ることができます。 たとえば。
 
     $ cordova run --help
     
 
-`info`コマンドは、現在インストールされているプラットフォームとプラグイン、各プラットフォーム用の SDK バージョン CLI のバージョンなどの潜在的有用な詳細情報の一覧を生成して `node.js` ：
+`info`コマンドは、CLI のバージョン、各プラットフォーム用の SDK バージョンやプラグイン現在インストールされているプラットフォームなどの潜在的に有用の詳細の一覧を生成し、 `node.js` :
 
     $ cordova info
     
 
-両方の画面に情報を提示し、地元の出力をキャプチャ `info.txt` ファイル。
+それが画面に情報を表示し、出力をローカルで `info.txt` ファイル。
 
 **注**: 現在、iOS および Android プラットフォームの詳細のみがあります。
 
 ## コルドバとあなたのプロジェクトの更新
 
-インストールした後、 `cordova` ユーティリティは、常に更新できますそれを最新バージョンに次のコマンドを実行します。
+インストールした後、 `cordova` ユーティリティは、常に更新する最新バージョンに次のコマンドを実行しています。
 
         $ sudo npm update -g cordova
     
 
-特定のバージョンをインストールするには、この構文を使用します。
+特定のバージョンをインストールするのにには、この構文を使用します。
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
-実行 `cordova -v` を現在実行されているどのバージョンを参照してください。 実行、 `npm
-info` をその他の利用可能なバージョン番号と共に現在のバージョンを含む長い一覧のコマンド。
+実行 `cordova -v` バージョンが現在実行されています。 実行、 `npm
+info` その他の利用可能なバージョン番号と共に現在のバージョンを含む長い一覧のコマンド。
 
         $ npm info cordova
     
 
-コルドバ 3.0 は、このセクションで説明されているコマンド ライン インターフェイスをサポートするために最初のバージョンです。 前述のように、新しいプロジェクトを作成し、古いアプリケーション資産の最上位レベルにコピーする必要があります 3.0 以前のバージョンから更新する場合は `www` ディレクトリ。 該当する場合は、3.0 へのアップグレードに関する詳細はプラットフォームのガイドで利用できます。 アップグレードした後、 `cordova` コマンド ライン インターフェイスおよび使用 `npm update` 現在滞在より時間のかかる手順には、もはや関連。
+コルドバ 3.0 は、このセクションで説明されているコマンド ライン インターフェイスをサポートする最初のバージョンです。 前述のように、新しいプロジェクトを作成し、最上位レベルに古いアプリケーションの資産をコピーする必要があります 3.0 以前のバージョンから更新する場合は `www` ディレクトリ。 該当する場合は、3.0 へのアップグレードに関する詳細は、プラットフォームのガイドで利用できます。 アップグレードした後、 `cordova` コマンド ライン インターフェイスおよび使用 `npm update` 現在のご滞在より時間のかかる手順が、もはや関連。
 
-コルドバ 3.0 + プロジェクト レベルのディレクトリ構造および他の依存関係に対するさまざまな変更必要があります。 実行した後、 `npm` コルドバ自体を更新する上記のコマンドで、最新バージョンの要件に準拠して、プロジェクトのリソースを確保する必要があります。 構築している各プラットフォームについては、次のようなコマンドを実行します。
+コルドバ 3.0 + プロジェクト レベルのディレクトリ構造およびその他の依存関係に対するさまざまな変更必要があります。 実行した後、 `npm` コルドバ自体を更新する上記のコマンドで、最新のバージョンの要件に準拠して、プロジェクトのリソースを確認する必要があります。 構築するプラットフォームごとに以下のようなコマンドを実行します。
 
         $ cordova platform update android
         $ cordova platform update ios

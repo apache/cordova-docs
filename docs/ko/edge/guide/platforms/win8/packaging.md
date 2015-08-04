@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 윈도우 포장
 
@@ -85,7 +82,7 @@ Windows 프로젝트에서 신원 정보는 package.appxmanifest 라는 파일�
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Pvk 파일과 cer 파일 생성 되 면, 우리가 이러한 인증서에서 pfx 파일을 만들 필요가. Pfx (개인 교환 형식) 파일에는 인증서, 루트 인증 기관 인증서, 인증서 체인 및 개인 키 암호화 정보를 다양 한을 포함 되어 있습니다. 패키지는 인증서, 사용 합니다는 도구 라는 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). 이 도구는 Windows SDK와 함께 제공 하 고 `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64` 또는 `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86에서` 찾을 수 있습니다..
+Pvk 파일과 cer 파일 생성 되 면, 우리가 이러한 인증서에서 pfx 파일을 만들 필요가. Pfx (개인 교환 형식) 파일에는 인증서, 루트 인증 기관 인증서, 인증서 체인 및 개인 키 암호화 정보를 다양 한을 포함 되어 있습니다. 패키지는 인증서, 사용 합니다는 도구 라는 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). 이 도구는 Windows SDK와 함께 제공 하 고에서 찾을 수 있습니다 `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` 또는`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Windows パッケージ
 
@@ -85,7 +82,7 @@ CLI を使用してビルド構成ファイル (build.json) を使用してこ�
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Pvk と cer ファイルが作成されると、これらの証明書から pfx ファイルを作成私たち必要があります。 Pfx (個人的な交換形式) ファイルには、各種証明書、ルート証明機関証明書、証明書チェーンおよび秘密キーなどの暗号化に関する情報が含まれています。 証明書をパッケージするには使用、ツールは、 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx)を呼ばれます。 このツールは、Windows SDK に付属し、 `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64`または`%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86`の下で見つけることができます。.
+Pvk と cer ファイルが作成されると、これらの証明書から pfx ファイルを作成私たち必要があります。 Pfx (個人的な交換形式) ファイルには、各種証明書、ルート証明機関証明書、証明書チェーンおよび秘密キーなどの暗号化に関する情報が含まれています。 証明書をパッケージするには使用、ツールは、 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx)を呼ばれます。 このツールは、Windows SDK に付属しの下で見つけることができます `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` または`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

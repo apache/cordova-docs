@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # プラグイン開発ガイド
 
@@ -145,16 +141,30 @@ Tizen プラットフォームのプラグインをサポートしていませ�
 
 ## 公開プラグイン
 
-一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 コルドバ[レジストリ][1]をあなたのプラグインを公開できます (に基づく[ `npmjs` ][4]) またはその他 `npmjs` -レジストリ ベースします。 他の開発者が自動的にいずれかの方法をインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細は、管理プラグインと、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
+一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 いずれかにあなたのプラグインを公開することができます `npmjs` -レジストリをベースが推奨される 1 つの[故宮レジストリ][4]。 私たちの[故宮博物院ガイドを公開プラグイン][5]をお読みください。.
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-使用する必要がありますプラグインを公開して、 `plugman` ツールし、次の手順を経る。
+**注**:[コルドバ プラグイン レジストリ][6]を読み取り専用の状態に移動します。 `publish`/ `unpublish` からコマンドが削除された `plugman` 対応するを使用する必要がありますので、 `npm` のコマンド。
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+他の開発者は、自動的にいずれかを使用してあなたのプラグインをインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細については、プラグインの管理と、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
+
+NPM レジストリにプラグインを公開するには、以下の手順に従ってくださいする必要があります。
+
+*   作成 `package.json` あなたのプラグイン用のファイル。
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
 
-だよ ！
+*   発行します。
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
-実行している `plugman --help` 他の使用可能なレジストリ ベースのコマンド一覧が表示されます。
+だよ!
+
+実行している `plugman --help` 他の使用可能なレジストリ ベースのコマンドが一覧表示されます。

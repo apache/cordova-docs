@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 升級黑莓手機
 
@@ -45,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 
@@ -83,7 +79,7 @@ BlackBerryOS/行動手冊：
 
 3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 

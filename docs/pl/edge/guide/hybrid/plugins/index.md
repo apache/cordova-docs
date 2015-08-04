@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Plugin rozwoju Przewodnik
 
@@ -145,15 +141,29 @@ Platforma Tizen nie obsługuje wtyczek.
 
 ## Wydawnictwo wtyczek
 
-Po rozwijać wtyczki, może chcesz opublikować i podzielić się ze społecznością. Można publikować swoje wtyczki do Cordova [rejestru][1] (na podstawie [ `npmjs` ][4]) lub do innych `npmjs` -oparty wpisywać do rejestru. Innych deweloperów można zainstalować go automatycznie za pomocą albo `plugman` lub w consoli Cordova. (Szczegóły na każdej ścieżki rozwoju, zobacz za pomocą Plugman do zarządzania wtyczki i interfejs wiersza poleceń).
+Po rozwijać wtyczki, może chcesz opublikować i podzielić się ze społecznością. Możesz opublikować swój plugin do dowolnego `npmjs` -oparty wpisywać do rejestru, ale zalecane jest [NPM rejestru][4]. Przeczytaj nasze [wydawnictwa wtyczek do npm Przewodnik][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Aby opublikować plugin musisz użyć `plugman` narzędzie i przejść przez następujące kroki:
+**Uwaga**: [Cordova plugin rejestru][6] jest przeprowadzka stanie tylko do odczytu. `publish`/ `unpublish` polecenia zostały usunięte z `plugman` , więc będziesz musiał użyć odpowiedniego `npm` polecenia.
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Inni deweloperzy można zainstalować wtyczki automatycznie przy użyciu `plugman` lub Cordova CLI. (Szczegóły na każdej ścieżki rozwoju, zobacz za pomocą Plugman do zarządzania wtyczki i interfejs wiersza poleceń).
+
+Do publikowania pluginu do rejestru NPM musisz wykonać poniższe czynności:
+
+*   Tworzenie `package.json` pliku do wtyczki:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   publikuje je:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 To jest to!
 

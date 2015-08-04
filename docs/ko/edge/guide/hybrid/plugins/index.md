@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 플러그인 개발 가이드
 
@@ -145,15 +141,29 @@ Tizen 플랫폼 플러그인을 지원 하지 않습니다.
 
 ## 게시 플러그인
 
-귀하의 플러그인을 개발 하는 일단 당신이 게시 하 고 커뮤니티와 함께 그것을 공유 할 수 있습니다. 코르 도우 바 [레지스트리][1] 를 귀하의 플러그인을 게시할 수 있습니다 (에 따라 [ `npmjs` ][4]) 또는 다른 `npmjs` -레지스트리를 기반으로. 다른 개발자가 사용 하 여 자동으로 설치할 수 있습니다 `plugman` 또는 코르도바 CLI. (대 한 자세한 내용은 각 개발 경로, 플러그인 관리 하는 명령줄 인터페이스를 사용 하 여 Plugman를 참조.)
+귀하의 플러그인을 개발 하는 일단 당신이 게시 하 고 커뮤니티와 함께 그것을 공유 할 수 있습니다. 어떤 플러그인을 게시할 수 있습니다 `npmjs` -기반 레지스트리, 하지만 권장은 [NPM 레지스트리][4]. 우리의 [고궁 가이드를 게시 플러그인][5] 을 참조 하시기 바랍니다.
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-사용 해야 하는 플러그인을 게시 하는 `plugman` 도구와 다음 단계를 통해 이동:
+**참고**: [코르도바 플러그인 레지스트리][6] 읽기 전용 상태로 이동 됩니다. `publish`/ `unpublish` 명령에서 제거 된 `plugman` 때문에 해당 사용 하는, `npm` 명령.
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+다른 개발자가 사용 하 여 자동으로 귀하의 플러그인을 설치할 수 있습니다 `plugman` 또는 코르도바 CLI. (자세한 내용은 각 개발 경로에, 플러그인 관리 하는 명령줄 인터페이스를 사용 하 여 Plugman를 참조.)
+
+NPM 레지스트리 플러그인을 게시 하려면 아래 단계를 수행 해야 합니다.
+
+*   만들기 `package.json` 귀하의 플러그인에 대 한 파일:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   게시:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 그 거 야!
 

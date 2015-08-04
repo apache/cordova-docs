@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Przewodnik platforma Windows
 
@@ -87,7 +83,7 @@ Jeśli chcesz użyć Cordova w środku Windows powłoka narzędzia w połączeni
 
 Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji systemu Windows. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki.
 
-## Instalowanie SDK
+## Instalowania zestawu SDK
 
 Zainstalować żadnej wersji [Visual Studio][2] dopasowania w wersji, którą wymogi wymienione powyżej.
 
@@ -115,7 +111,7 @@ Ten projekt skierowany jest do Windows 8.1 jako domyślnego adresu docelowego sy
 
 ## Skompiluj projekt
 
-Jeśli używasz CLI w rozwoju, katalogu projektu na najwyższym poziomie `www` katalog zawiera pliki źródłowe. Uruchamiać dowolną z tych w katalogu projektu, aby odbudować aplikacji:
+Jeśli używasz CLI w rozwoju, katalogu projektu na najwyższym poziomie `www` katalog zawiera pliki źródłowe. Uruchomienie tych w katalogu projektu odbudowy app:
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
@@ -178,7 +174,7 @@ Aby wdrożyć pakiet Windows Phone:
 
 Można użyć **cordova run windows --list** aby zobaczyć wszystkie dostępne cele i **cordova run windows --target=target_name \-- -|-phone** do uruchomienia aplikacji na urządzenia lub emulatora (na przykład `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
-Za pomocą **cordova run --help** Zobacz dodatkowe budować i uruchamiać opcji.
+Umożliwia także **cordova uruchomić--Pomoc** Zobacz dodatkowe budować i uruchamiać opcji.
 
 ## Otwórz projekt SDK i wdrażanie aplikacji
 

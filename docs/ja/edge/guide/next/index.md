@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 ライセンスのコピーを入手した可能性があります。
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.apache.org/licenses/LICENSE-2.0 ソフトウェア ライセンスの下で配布で配布されて適用される法律によって必要なまたは書面で合意した、しない限り、「そのまま」なし保証またはいかなる種類の保証、明示または黙示を問わず、基礎。  アクセス許可と制限を支配する特定の言語用のライセンスを参照してください。
+    
+
+## ライセンス。
 
 # 次のステップ
 
@@ -27,14 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   ベスト ・ プラクティス
 *   アップグレードの処理
-*   テスト
-*   デバッグ
+*   Cordova アプリのテスト
+*   Cordova アプリのデバッグ
 *   ユーザー インターフェイス
 *   特別な考慮事項
 *   維持します。
 *   ヘルプの取得 
 
-# ベスト ・ プラクティス
+# ベスト プラクティス Cordova アプリ開発
 
 ## 1） スパのお友達です。
 
@@ -82,18 +72,19 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 *   ["あなたは半分中途半端それ」][11]
 *   [「PhoneGap とハイブリッド アプリのトップ 10 のパフォーマンスのヒント」][12]
-*   「高速アプリケーションや java スクリプトの設定をサイト」： http://channel9.msdn.com/Events/Build/2013/4-313
+*   [「高速アプリ JavaScript のサイト」][13]
 
  [11]: http://sintaxi.com/you-half-assed-it
  [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [13]: https://channel9.msdn.com/Events/Build/2013/4-313
 
 ## 3） を認識し、オフライン ステータス処理
 
 ネットワークについて前のヒントを参照してください。 だけでなく、低速のネットワークにすることができます完全にオフラインにすることがアプリケーションにとっては可能です。 アプリケーションは、インテリジェントな方法でこれを処理します。 アプリケーションない場合は、人々 は、アプリケーションが壊れていると思います。 易いというコルドバ サポート、オフラインとオンラインの両方のイベントをリッスンして） を処理するために、与えられた理由は全くない、アプリケーションをオフラインで実行されたときにも応答しないため。 (後述のテストを参照してください） をテストしてください、アプリケーション 1 つの状態で起動し、別に切り替えると、アプリケーションを処理する方法をテストしてください。
 
-そのネットワーク接続 API だけでなく、オンライン イベントとオフライン イベント、完璧ではないに注意してください。 XHR 要求を使用して、デバイスが本当にオフラインまたはオンラインを参照してくださいするに依存する必要があります。 一日の終わりには必ず実際にネットワークの問題 - サポートのいくつかのフォームを追加、アップル ストア （とおそらく他の店） は、オンライン/オフライン状態を正しく処理しないアプリケーションを拒否します。 このトピックの詳細については、 [「この事ですか？」][13]を参照してください。
+そのネットワーク接続 API だけでなく、オンライン イベントとオフライン イベント、完璧ではないに注意してください。 XHR 要求を使用して、デバイスが本当にオフラインまたはオンラインを参照してくださいするに依存する必要があります。 一日の終わりには必ず実際にネットワークの問題 - サポートのいくつかのフォームを追加、アップル ストア （とおそらく他の店） は、オンライン/オフライン状態を正しく処理しないアプリケーションを拒否します。 このトピックの詳細については、 [「この事ですか？」][14]を参照してください。
 
- [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [14]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # アップグレードの処理
 
@@ -130,7 +121,7 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 プロジェクトに更新する必要があるプラグインの多く、それを削除し、1 つのコマンドでプラグインを追加シェルまたはバッチ スクリプトを作成する時間を節約可能性があります。
 
-# テスト
+# Cordova アプリのテスト
 
 アプリケーションをテストは超重要です。Cordova チームはジャスミンがすべて web フレンドリー ユニット テスト ソリューションを行います。
 
@@ -148,7 +139,7 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 ヒント: 簡単に Android のデバイス上の異なるバージョンをフラッシュするアンドロイドの Nexus デバイス上で可能です。 この単純なプロセスを簡単にお使いのデバイスを「脱獄」または「ルート」あなたを要求したりして保証排尿せず単一のデバイスに Android のさまざまなレベルでアプリケーションをテストすることができます。 Google の Android 工場イメージおよび指示は位置しています： https://developers.google.com/android/nexus/images#instructions
 
-# デバッグ
+# Cordova アプリのデバッグ
 
 コルドバのデバッグには、いくつかのセットアップが必要です。デスクトップ アプリケーションとは異なり単にオープン dev ツール、モバイル デバイス上にことはできませんし、デバッグを開始、幸いにもいくつかの素晴らしい選択肢です。
 
@@ -156,15 +147,15 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 ### Xcode
 
-Xcode Cordova アプリの iOS ネイティブ側をデバッグできます。 デバッグ領域は表示 (デバッグ領域->) を確認します。 アプリが実行されたらデバイス （またはシミュレータ） に、デバッグ領域でログ出力を表示できます。 これは、エラーや警告が印刷されます。 ソース ファイル内でブレークポイントを設定することもできます。 一度にコードの 1 行をステップし、その時点での変数の状態を表示することができます。 変数の状態はブレークポイントにヒットしたときにデバッグ領域に表示されます。 アプリが実行中で、デバイスで、一度を持ち出すことができます Safari の web インスペクター （後述） としてアプリケーションの webview および js 側をデバッグします。 詳細とヘルプは、Xcode ガイド参照してください： [Xcode デバッグ ガイド][14]
+Xcode Cordova アプリの iOS ネイティブ側をデバッグできます。 デバッグ領域は表示 (デバッグ領域->) を確認します。 アプリが実行されたらデバイス （またはシミュレータ） に、デバッグ領域でログ出力を表示できます。 これは、エラーや警告が印刷されます。 ソース ファイル内でブレークポイントを設定することもできます。 一度にコードの 1 行をステップし、その時点での変数の状態を表示することができます。 変数の状態はブレークポイントにヒットしたときにデバッグ領域に表示されます。 アプリが実行中で、デバイスで、一度を持ち出すことができます Safari の web インスペクター （後述） としてアプリケーションの webview および js 側をデバッグします。 詳細とヘルプは、Xcode ガイド参照してください： [Xcode デバッグ ガイド][15]
 
- [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+ [15]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
 
 ### サファリでのリモート デバッグ Web インスペクター
 
-Safari の web インスペクター コルドバ アプリケーションで webview および js のコードをデバッグできます。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 Xcode のようなサファリの web インスペクターの JavaScript コードにブレークポイントを設定し、できますその時点での変数の状態を表示します。 任意のエラー、警告、またはメッセージをコンソールに出力を表示できます。 アプリが実行されているコンソールから直接 JavaScript コマンドを実行することもできます。 何を行うことができますを設定する方法の詳細については、この優れたブログの記事を参照してください： <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>とこのガイド： [Web インスペクターのサファリのガイド][15]
+Safari の web インスペクター コルドバ アプリケーションで webview および js のコードをデバッグできます。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 Xcode のようなサファリの web インスペクターの JavaScript コードにブレークポイントを設定し、できますその時点での変数の状態を表示します。 任意のエラー、警告、またはメッセージをコンソールに出力を表示できます。 アプリが実行されているコンソールから直接 JavaScript コマンドを実行することもできます。 何を行うことができますを設定する方法の詳細については、この優れたブログの記事を参照してください： <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>とこのガイド： [Web インスペクターのサファリのガイド][16]
 
- [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
+ [16]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## Chrome リモート デバッグ
 
@@ -182,34 +173,38 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ## その他のオプション
 
-*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][16]
-*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][17]この[MDN の記事][18]を参照してくださいすることができます。.
+*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][17]
+*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][18]この[MDN の記事][19]を参照してくださいすることができます。.
 *   例と上記のデバッグのヒントの説明を参照してください： <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [17]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [18]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [19]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # ユーザー インターフェイス
 
 コルドバのアプリケーションを構築するは似合いますモバイルの挑戦、特に開発者のためすることができます。 多くの人々 は UI フレームワークを使用してこれを簡単にすることを選んだ。 ここでは考慮したい場合がありますオプションの短いリストです。
 
 *   [jQuery Mobile][9] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
-*   [イオン][19]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
-*   [ラチェット][20]- ブートス トラップを作成した人々 によってもたらされます。 
+*   [イオン][20]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
+*   [ラチェット][21]- ブートス トラップを作成した人々 によってもたらされます。 
 *   [剣道 UI][5] - オープン ソース UI と Telerik からアプリケーション フレームワークです。
-*   [トップコート][21]
+*   [トップコート][22]
 *   [ReactJS][7]
 
- [19]: http://ionicframework.com/
- [20]: http://goratchet.com/
- [21]: http://topcoat.io
+ [20]: http://ionicframework.com/
+ [21]: http://goratchet.com/
+ [22]: http://topcoat.io
 
-ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][22] * [Android][23] * [Windows Phone][24]
+ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、そのため様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です。
 
- [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [23]: https://developer.android.com/designWP8
- [24]: http://dev.windowsphone.com/en-us/design/library
+*   [iOS][23]
+*   [アンドロイド][24]
+*   [Windows Phone][25]
+
+ [23]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [24]: https://developer.android.com/designWP8
+ [25]: http://dev.windowsphone.com/en-us/design/library
 
 ## その他の UI の記事およびリソース
 
@@ -233,18 +228,18 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ここでは、コルドバで最新保つためにいくつかの方法です。
 
-*   [コルドバのブログ][25]を購読するには.
-*   [開発者メーリング リスト][26]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
+*   [コルドバのブログ][26]を購読します。.
+*   [開発者メーリング リスト][27]を購読します。注 - これはサポート グループではありません!むしろこれは、コルドバの開発について議論する場所です。
 
- [25]: http://cordova.apache.org/#news
- [26]: http://cordova.apache.org/#mailing-list
+ [26]: http://cordova.apache.org/#news
+ [27]: http://cordova.apache.org/#mailing-list
 
 # ヘルプの取得
 
 次のリンクは、コルドバの助けを得る最もよい場所です。
 
-*   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova>コルドバのタグを使用して、表示およびすべてのコルドバの質問を参照できます。 StackOverflow によってこのように同様に歴史的質問にアクセスすることができますように「コルドバ」を"Phonegap"タグが自動的に変換されます。
-*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][27]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
-*   ミート： <http://phonegap.meetup.com> - ローカル コルドバ/PhoneGap ミート グループを探すことを検討
+*   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova>コルドバのタグを使用して、表示およびすべてのコルドバの質問を参照できます。 StackOverflow によって、このようにことができます歴史的質問にアクセスするので「コルドバ」に「Phonegap」タグが自動的に変換されます
+*   PhoneGap Google グループ: [https://groups.google.com/forum/#! フォーラム/phonegap][28]コルドバはまだ PhoneGap を呼び出されたとき、この Google グループは古いサポート フォーラム。 コルドバ コミュニティが代わりにサポートの StackOverflow を使用してこのグループにあまり焦点を当て関心を表明しているこのグループを頻繁にコルドバのユーザーの多くがまだ
+*   ミート: <http://phonegap.meetup.com> - ローカル コルドバ/PhoneGap ミート グループを見つけることを検討
 
- [27]: https://groups.google.com/forum/#!forum/phonegap
+ [28]: https://groups.google.com/forum/#!forum/phonegap

@@ -1,25 +1,26 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # Ganchos de guía
 
-Cordova Hooks representan secuencias especiales que podrían agregarse por su aplicación y los desarrolladores del plugin o incluso por su propia construcción de sistema para personalizar comandos de Córdoba. Scripts gancho podrían ser definidos por agregarlos a la carpeta predefinida especial (`/hooks`) o mediante archivos de configuración (`config.xml` y `plugin.xml`) y ejecutar en serie en el siguiente orden: * aplicación ganchos de `/hooks`; * Aplicación ganchos de `config.xml`; * Plugin ganchos de `plugins/.../plugin.xml`.
+Cordova Hooks representan secuencias especiales que podrían agregarse por su aplicación y los desarrolladores del plugin o incluso por su propia construcción de sistema para personalizar comandos de Córdoba. Scripts gancho podrían definirse mediante la adición a la carpeta predefinida especial ( `/hooks` ) o a través de archivos de configuración ( `config.xml` y `plugin.xml` ) y en serie en el siguiente orden:
+
+  * Aplicación de ganchos de `/hooks` ;
+  * Aplicación de ganchos de `config.xml` ;
+  * Ganchos de plugin de`plugins/.../plugin.xml`.
 
 **Nota**: `/hooks` directorio se considera obsoleta en favor de los elementos de gancho en config.xml y plugin.xml.
 
@@ -192,7 +193,7 @@ Scripts de javascript no se ejecutan vía spawn child_process nodo del directori
   * CORDOVA_PLATFORMS - lista de plataformas que el comando se aplica a separaron por comas (por ejemplo: android, ios).
   * CORDOVA_PLUGINS - lista de plugin ID que el comando se aplica a separaron por comas (por ejemplo: org.apache.cordova.file, org.apache.cordova.file-transferencia)
   * CORDOVA_HOOK - camino al gancho que está siendo ejecutado.
-  * CORDOVA_CMDLINE - los argumentos de línea de comandos exactos pasados a Córdoba (p. ej.: cordova run ios --emulate)
+  * CORDOVA_CMDLINE - los argumentos de línea de comandos exactos pasados a Córdoba (p. ej.: cordova ejecutar ios--emular)
 
 Si una secuencia de comandos devuelve un código de salida distinto de cero, el comando de padre Córdova se interrumpirá.
 

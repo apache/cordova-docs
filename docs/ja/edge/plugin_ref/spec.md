@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # プラグイン仕様
 
@@ -76,8 +72,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </engines>
     
 
-ここでは、エンジンの既定の一覧を '<engine>'タグをサポートしています： * 'コルドバ' *' コルドバ-plugman' * 'コルドバ-アマゾン-fireos' *' コルドバ人造人間 '*' コルドバ ios' * 'コルドバ-blackberry10' *' コルドバ wp8' * ' コルドバ-windows8'  
-* 'android sdk'//インストール レベル最高の Android の api を返します *' アップル xcode'//xcode バージョンを返します。 * 'アップル ios'//インストールされて最高の iOS のバージョンを返します。 *' アップルの osx'//OSX のバージョンを返します。 * ' ブラックベリー ndk'//ネイティブなブラックベリー SDK のバージョンを返します。
+したエンジンの既定の一覧をここでは、 `<engine>` タグのサポート。
+
+*   `cordova`
+*   `cordova-plugman`
+*   `cordova-amazon-fireos`
+*   `cordova-android`
+*   `cordova-ios`
+*   `cordova-blackberry10`
+*   `cordova-wp8`
+*   `cordova-windows8`
+*   `android-sdk` // returns the highest Android api level installed
+*   `apple-xcode` // returns the xcode version 
+*   `apple-ios` // returns the highest iOS version installed
+*   `apple-osx` // returns the OSX version
+*   `blackberry-ndk` // returns the native blackberry SDK version
 
 カスタム Apache コルドバ ベース フレームワークはエンジン タグの下に表示する必要がありますを指定しましょう。
 
@@ -92,11 +101,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   `name`(必須): カスタム フレームワークの人間が判読できる名前。
 
-*   `version`（必須）： バージョンをインストールするために、フレームワークがあります。
+*   `version`(必須): バージョンをインストールするために、フレームワークが必要です。
 
-*   `scriptSrc`(必須): カスタム フレームワークのバージョンは plugman に指示するスクリプト ファイルです。理想的には、このファイルは、プラグイン ディレクトリの最上位レベル ディレクトリ内する必要があります。
+*   `scriptSrc`(必須): カスタム フレームワークのバージョンが plugman を指示するスクリプト ファイル。 理想的には、このファイルは、プラグイン ディレクトリの最上位レベルのディレクトリ内にする必要があります。
 
-*   `platform`(必須): あなたのフレームワークをサポートするプラットフォーム。 ワイルドカードを使用することがあります `*` すべてのプラットフォームのサポートされていることのようなパイプ文字で複数指定 `android|ios|blackberry10` またはちょうどのような単一のプラットフォーム`android`.
+*   `platform`(必須): あなたのフレームワークをサポートするプラットフォーム。 ワイルドカードを使用することができる `*` のようなパイプ文字と複数を指定すべてのプラットフォームでサポートされていることに、 `android|ios|blackberry10` またはのようなちょうど 1 つのプラットフォーム`android`.
 
 plugman は、そのターゲット プロジェクトがエンジンの制約を満たしていない任意のプラグインのためのゼロ以外のコードを中止します。
 
@@ -153,16 +162,16 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 すべて `<asset>` タグを両方必要とする `src` と `target` の属性。 Web だけのプラグインが含まれている主 `<asset>` の要素。 どんな `<asset>` 要素内にネストされた `<platform>` 要素プラットフォーム固有の web 資産を指定して、以下のとおりです。 属性は次のとおりです。
 
-*   `src`(必須): ファイルまたはディレクトリが含まれているプラグイン パッケージを基準に、 `plugin.xml` ドキュメント。 指定されたファイルが存在しない場合 `src` 、plugman 停止し、場所と、インストール プロセスを逆に、競合について通知を発行 0 以外のコードで終了します。
+*   `src`(必須): ファイルまたはディレクトリが含まれているプラグイン パッケージ相対的に、 `plugin.xml` ドキュメント。 指定したファイルが存在しない場合 `src` 場所、plugman 停止しインストール プロセスを取り消し、競合に関する通知を発行および 0 以外のコードで終了します。
 
-*   `target`(必須)。
+*   `target` (required):
     
-    ファイルまたはディレクトリ場所 Cordova アプリでは、相対的に、 `www` ディレクトリ。資産などのサブディレクトリを対象とすることができます。
+    ファイルまたはディレクトリの場所 Cordova アプリで相対的に、 `www` ディレクトリ。 資産は、たとえば、サブディレクトリを対象とすることができます。
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、しない限り、既に存在し、コピー、 `new-foo.js` ファイルし、名前が変更されます `foo.js` 。 ターゲットの場所にファイルが既に存在する場合 plugman 停止しインストール プロセスを逆に、競合について通知を発行し、ゼロ以外のコードで終了します。
+    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、場合を除き、既に存在する、その後、コピー、 `new-foo.js` ファイルおよびそれの名前を変更 `foo.js` 。 ターゲットの場所で、ファイルが既に存在する場合 plugman 停止インストール プロセスを取り消し、競合に関する通知を発行し、0 以外のコードで終了します。
 
 ## *js モジュール*要素
 
@@ -179,19 +188,19 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 詳細は `<js-module>` タグ。
 
-*   `src`を基準としてプラグイン ディレクトリ内のファイルを参照して、 `plugin.xml` ファイル。
+*   `src`基準にプラグイン ディレクトリ内のファイルを参照して、 `plugin.xml` ファイル。
 
-*   `name`モジュール名の最後の部分を提供します。 それは一般的にあなたが好きをすることができ、使用する場合にのみ問題 `cordova.require` の JavaScript コードであなたのプラグインの他の部分をインポートします。 モジュール名は `<js-module>` は、プラグインの `id` の値が続く `name` 。 上記の例のために、 `id` の `chrome.socket` 、モジュール名が`chrome.socket.Socket`.
+*   `name`モジュール名の最後の部分を提供します。 それは一般的にどのようにし、使用する場合にのみ問題 `cordova.require` 、プラグイン、JavaScript コードでの他の部分をインポートします。 モジュール名、 `<js-module>` は、あなたのプラグインの `id` の値が続く `name` 。 上記の例のために、 `id` の `chrome.socket` 、モジュール名が、`chrome.socket.Socket`.
 
 *   3 つのタグ内で許可される `<js-module>` :
     
-    *   `<clobbers target="some.value"/>`示す、 `module.exports` が挿入されます、 `window` オブジェクトとして `window.some.value` 。 多くとして持つことができます `<clobbers>` あなたのよう。 任意のオブジェクトでは使用できません `window` が作成されます。
+    *   `<clobbers target="some.value"/>`示す、 `module.exports` が挿入、 `window` オブジェクトと `window.some.value` 。 多く持つことができます `<clobbers>` あなたのよう。 任意のオブジェクトでは利用できません `window` が作成されます。
     
-    *   `<merges target="some.value"/>`モジュールで既存の値とマージされることを示します `window.some.value` 。 任意のキーが既に存在する場合、モジュールのバージョン、元より優先されます。 多くとして持つことができます `<merges>` あなたのよう。 任意のオブジェクトでは使用できません `window` が作成されます。
+    *   `<merges target="some.value"/>`モジュールで既存の値にマージすることを示します `window.some.value` 。 任意のキーが既に存在する場合、モジュールのバージョンは、オリジナルを上書きします。 多く持つことができます `<merges>` あなたのよう。 任意のオブジェクトでは利用できません `window` が作成されます。
     
-    *   `<runs/>`あなたのコードで指定する必要があることを意味します `cordova.require` にインストールされていないが、 `window` オブジェクト。 イベント ハンドラーをアタッチするモジュールを初期化する場合に便利ですまたはそれ以外の場合。 あなただけ 1 つまで持つことができます `<runs/>` タグ。 メモを含む、 `<runs/>` と `<clobbers/>` または `<merges/>` は冗長ですのでまた `cordova.require` あなたのモジュール。
+    *   `<runs/>`手段をコードで指定する必要があります `cordova.require` にインストールされていない、 `window` オブジェクト。 イベント ハンドラーのアタッチ、モジュールを初期化するとき、これは役に立つまたはそれ以外の場合。 のみ最大 1 つを持つことができます `<runs/>` タグ。 含む注意してください、 `<runs/>` 、 `<clobbers/>` または `<merges/>` は以来、彼らも冗長で `cordova.require` モジュール。
     
-    *   空の `<js-module>` まだロードし、他のモジュール経由でアクセスすることができます`cordova.require`.
+    *   空 `<js-module>` まだ読み込み、他モジュール経由でアクセスできます。`cordova.require`.
 
 場合 `src` plugman 停止インストールを逆に、問題の通知を発行し、0 以外のコードで終了します、既存のファイルに解決されません。
 
@@ -204,13 +213,13 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
-*   `id`： プラグインの ID を提供します。 グローバルにユニークで逆ドメイン スタイルで表現をする必要があります。 どちらもこれらの制限は、現在適用されている間彼らは将来的にあるかもしれないです。
+*   `id`: プラグインの ID を提供します。 それはグローバルにユニークで、逆ドメイン スタイルで表現をする必要があります。 これらの制限のどちらもが現在適用されている間、彼らは将来的にあります。
 
-*   `url`： プラグインの URL。これはクローンを作成しようとする plugman、git リポジトリを参照ください。
+*   `url`: プラグインの URL。これはどの plugman のクローンを作成しようとすると、git リポジトリを参照ください。
 
-*   `commit`: これは git の参照を理解して `git checkout` ： 分岐またはタグ名 (例えば、 `master` 、 `0.3.1` )、またはコミットのハッシュ (例えば、`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+*   `commit`: これは理解の git 参照 `git checkout` : 分岐またはタグ名 (例えば、 `master` 、 `0.3.1` )、またはコミット ハッシュ (例えば、`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`: 対象となるプラグインの依存関係が git リポジトリのサブディレクトリとして存在することを指定します。 いくつかの関連プラグインを格納するリポジトリができるため、これは便利です、それぞれ個別に指定します。
+*   `subdir`: Git リポジトリのサブディレクトリとして対象となるプラグイン依存関係が存在することを指定します。 いくつか関連のプラグインを含むリポジトリをことができますので、これは便利、それぞれは個別に指定されました。
 
 将来的には、バージョンの制約が導入され、プラグイン ・ リポジトリーは明示的な Url の代わりに名前でフェッチをサポートするために存在します。
 
@@ -262,15 +271,15 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 次の属性をサポートしています。
 
-*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合は、 `src` ファイルが見つからない、plugman 停止逆に、インストールの問題に関する通知を発行し、0 以外のコードで終了します。
+*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合は、 `src` ファイルが見つからないため、plugman 停止インストールを反転し問題について通知を発行し、0 以外のコードで終了します。
 
-*   `target-dir`: をファイルがコピー、コルドバ プロジェクトのルートからの相対ディレクトリです。 実習では、これでファイルの場所に Java ベースのプラットフォームのために最も重要なは、 `com.alunny.foo` パッケージ内に配置する必要があります、 `com/alunny/foo` ディレクトリ。 ソース ディレクトリが重要でないプラットフォームでは、この属性を省略してください。
+*   `target-dir`: ディレクトリをコルドバ プロジェクトのルートを基準にしてファイルをコピーする必要があります。 実際には、これはどこでファイル Java ベースのプラットフォームの最も重要な `com.alunny.foo` パッケージは内に配置する必要があります、 `com/alunny/foo` ディレクトリ。 ソース ディレクトリが重要ではないプラットフォームでこの属性を省略する必要があります。
     
-    同様に、資産場合、 `target` の `source-file` は既存のファイルを上書き、plugman 停止逆に、インストールの問題に関する通知を発行し、0 以外のコードで終了します。
+    資産と同様場合、 `target` の `source-file` 既存ファイルを上書きする、plugman 停止インストールを反転し問題について通知を発行し、0 以外のコードで終了します。
 
-*   `framework`(iOS の場合のみ): 場合に設定されている `true` 、またフレームワークとして、プロジェクト指定ファイルに追加されます。
+*   `framework`(iOS のみ): 場合に設定 `true` 、またフレームワークとして指定したファイルをプロジェクトに追加します。
 
-*   `compiler-flags`(iOS の場合のみ): 場合設定、特定のソース ファイルの指定したコンパイラ フラグを割り当てます。
+*   `compiler-flags`(iOS のみ): 場合は、特定のソース ファイルの指定したコンパイラ フラグを割り当てます。
 
 ## *設定ファイル*要素
 
@@ -306,21 +315,21 @@ XML の例：
 
 *   `target`:
     
-    変更されるファイルとコルドバ プロジェクトのルートからの相対パス。
+    変更するファイルとコルドバ プロジェクトのルートからの相対パスです。
     
-    ターゲットは、ワイルドカードを含めることができます ( `*` ) 要素。この場合、plugman を再帰的にプロジェクトのディレクトリ構造を検索し、最初の一致を使用します。
+    ターゲットは、ワイルドカードを含めることができます ( `*` ) 要素。この場合、再帰的に plugman プロジェクトのディレクトリ構造を検索し、最初に一致を使用します。
     
-    IOS、上のプロジェクト ディレクトリのルートを基準にして構成ファイルの場所は知られていない、だからのターゲットを指定する `config.xml` を解決します`cordova-ios-project/MyAppName/config.xml`.
+    IOS では、プロジェクトのルート ディレクトリを基準にして構成ファイルの場所が不明のターゲットを指定すること `config.xml` を解決します。`cordova-ios-project/MyAppName/config.xml`.
     
-    指定したファイルが存在しない場合、ツール、構成の変更は無視され、インストールが続行されます。
+    指定したファイルが存在しない場合、ツールは構成の変更は無視され、インストールが続行されます。
 
-*   `parent`構成ファイルに追加する要素の親を参照する: XPath セレクター。 絶対的なセレクターを使用する場合はワイルドカードを使用できます ( `*` ) 例えば、ルート要素を指定するには`/*/plugins`.
+*   `parent`構成ファイルに追加する要素の親を参照する XPath セレクター: に。 絶対セレクターを使用する場合は、ワイルドカードを使用できます ( `*` ) などのルート要素を指定するのには`/*/plugins`.
     
-    `plist`、ファイル、 `parent` どのような親キーの下で指定した XML を挿入するを決定します。
+    `plist`ファイル、 `parent` 指定した XML を挿入する親キーの下で決定します。
     
-    セレクターで指定したドキュメントの子を解決しない場合、ツールが停止した逆インストール プロセスにより警告が発行し、0 以外のコードで終了します。
+    セレクターが指定されたドキュメントの子を解決しない、ツールが停止し逆インストール プロセスは、警告し、0 以外のコードで終了します。
 
-*   `after`: XML スニペットを追加する後受け入れられた兄弟の優先順位一覧。 [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]のような XML 要素の厳密な順序付けが必要なファイルの変更を指定するために便利です。
+*   `after`: XML スニペットを追加する後受け入れられた兄弟の優先順位一覧。 [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement][1]のような XML 要素の厳密な順序を必要とするファイルの変更を指定するために役立ちます
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
@@ -385,21 +394,21 @@ Android の例:
 
 サポートされている属性:
 
-*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合 `src` が見つからない plugman 停止、インストール、問題、問題について警告を反転し、0 以外のコードで終了します。
+*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合 `src` が見つからない plugman 停止しインストール、その問題について警告を問題を反転し、0 以外のコードで終了します。
 
-*   `arch`: 対象アーキテクチャ、 `.so` ファイルが作成されたら、どちらか `device` または`simulator`.
+*   `arch`: 対象のアーキテクチャ、 `.so` ファイルが作成されて、どちらか `device` または`simulator`.
 
 Windows プラットフォーム用 `<lib-file>` 要素は、`< SDKReference >` 生成された Windows プロジェクト ファイルに含めることができます。
 
 サポートされている属性:
 
-*   `src`(必須): を含む SDK の名前 (が生成された `< SDKReference >` 要素の `Include` 属性の値として使用されます)。
+*   `src`(必須): を含むように SDK の名前 (の値として使用されますが、 `Include` 属性の生成された `<SDKReference>` 要素)。
 
-*   `arch`: を `< SDKReference >` のみ含めるように指定したアーキテクチャの構築を示します。 サポートされる値は `x 86`、`x64` または `ARM`.
+*   `arch`: 示す、 `<SDKReference>` 指定されたアーキテクチャを構築するときにだけ含まれるべき。 サポートされている値は、 `x86` 、 `x64` または`ARM`.
 
-*   `device-target`: を `< SDKReference >` のみ含めるように指定されたターゲット デバイスの種類を作成する場合を示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
+*   `device-target`: 示す、 `<SDKReference>` 指定されたターゲット デバイスの種類の構築時にのみ含まれるべき。 サポートされている値は、 `win` (または `windows` )、 `phone` または`all`.
 
-*   `versions`: を `< SDKReference >` のみ含めるように指定されたバージョン文字列と一致するバージョンを作成する場合を示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+*   `versions`: 示す、 `<SDKReference>` 指定されたバージョン文字列と一致するバージョンを構築するときにだけ含まれるべき。 値は、任意の有効なノード セマンティック バージョン範囲の文字列を指定できます。
 
 例:
 
@@ -463,9 +472,9 @@ Windows プラットフォームは、絞り込むときにフレームワーク
 
 `device-target`属性は、指定されたターゲット デバイス タイプを作成するときに、フレームワークを含めるだけあることを示します。 サポートされる値は `win` (または `windows`) `phone` または `all`.
 
-`versions`属性は、指定されたバージョン文字列と一致するバージョンを構築するときに、フレームワークを含めるだけあることを示します。 値は任意の有効なノードのセマンティック バージョン範囲の文字列にすることができます。
+`versions`属性は、指定されたバージョン文字列と一致するバージョンを構築するときに、フレームワークを含めるだけあることを示します。 値は、任意の有効なノード セマンティック バージョン範囲の文字列を指定できます。
 
-これらの Windows の特定の属性を使用しての例:
+これらの Windows 固有の属性の使用例:
 
     <framework src="src/windows/example.dll" arch="x64" />
     <framework src="src/windows/example.dll" versions=">=8.0" />

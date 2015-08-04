@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 안 드 로이드 쉘 도구 가이드
 
@@ -73,9 +69,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 요구 사항을 여기에 서명 안 드 로이드 애플 리 케이 션을 검토할 수 있습니다: http://developer.android.com/tools/publishing/app-signing.html
 
-응용 프로그램에 서명 하기 위해 해야 다음 매개 변수: * 키 (`--keystore`): 키 집합을 저장할 수 있는 이진 파일의 경로를. * 키 암호 (`-storePassword`): 암호 키를 * 별칭 (`-별칭`): 노래에 사용 되는 개인 키를 지정 하는 id. * 비밀 번호 (`--keystoreType`): 지정 된 개인 키에 대 한 암호. * 키 (`-keystoreType`)의 유형: pkcs12, jks (기본값: 자동 검색 파일 확장명에 따라) 위의 `빌드` 또는 `실행` 스크립트에 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다.
+응용 프로그램에 서명 하기 위해 다음 매개 변수가 필요 합니다.
 
-양자 택일로, (`-buildConfig`) 인수를 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다. 빌드 구성 파일의 예제는 다음과 같습니다.
+*   키 ( `--keystore` ): 키 집합을 저장할 수 있는 이진 파일의 경로를.
+
+*   키 저장 암호 ( `--storePassword` ): 암호 키를
+
+*   별칭 ( `--alias` ): 노래에 사용 되는 개인 키를 지정 하는 id.
+
+*   비밀 번호 ( `--password` ): 지정 된 개인 키에 대 한 암호.
+
+*   키의 형식 ( `--keystoreType` ): pkcs12, jks (기본값: 자동 검색 파일 확장명에 따라)
+
+위의 대 한 명령줄 인수를 사용 하 여 이러한 매개 변수를 지정할 수 있습니다 `build` 또는 `run` 스크립트.
+
+또는 사용 하 여 빌드 구성 파일 (build.json)에서 그들을 지정할 수 있습니다 ( `--buildConfig` ) 인수. 빌드 구성 파일의 예제는 다음과 같습니다.
 
     {
          "android": {
@@ -97,9 +105,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
      }
     
 
-릴리스는 서명, 암호를 제외할 수 있습니다 및 빌드 시스템에서 암호를 묻는 프롬프트를 발행 합니다.
+릴리스는 서명, 암호 제외 될 수 있습니다 및 빌드 시스템에서 암호를 묻는 프롬프트를 발행 합니다.
 
-혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다. 명령줄에 암호를 지정 하는 데 유용할 수 있습니다.
+또한 혼합 하 고 일치 명령줄 인수 및 매개 변수 build.json 파일에서 지원이 됩니다. 명령줄 인수에서 값 우선 순위를 얻을 것 이다. 이 명령줄에 암호를 지정 하는 데 유용할 수 있습니다.
 
 ## 로깅
 
@@ -117,7 +125,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## Gradle 건물
 
-현재 cordova-android@4.0.0, [Gradle][2]를 사용 하 여 프로젝트 빌드. 개미와 건물에 대 한 지침, 이전 버전의 문서를 참조 하십시오.
+현재 cordova-android@4.0.0, [Gradle][2]를 사용 하 여 프로젝트 빌드 에 대 한 지침은 개미와 건물, 이전 버전의 문서를 참조 하십시오.
 
  [2]: http://www.gradle.org/
 
@@ -129,15 +137,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   **cdvBuildMultipleApks** (기본값: false)
     
-    이 설정 되어 있으면 여러 APK 파일이 생성 됩니다: 하나씩 라이브러리 프로젝트에서 지 원하는 네이티브 플랫폼 (x86, 팔, 등). 이 프로젝트는 크게 생성 된 APK의 크기를 증가 시킬 수 있는 큰 네이티브 라이브러리를 사용 하는 경우에 중요할 수 있습니다.
+    이 설정 되어, 경우 여러 APK 파일 생성 됩니다: 하나씩 라이브러리 프로젝트에서 지 원하는 네이티브 플랫폼 (x86, 팔, 등). 이 프로젝트는 크게 생성 된 APK의 크기를 증가 시킬 수 있는 큰 네이티브 라이브러리를 사용 하는 경우에 중요할 수 있습니다.
     
-    설정 되지 않은 경우, 다음 모든 장치에서 사용할 수 있는 단일 APK 생성 될 것 이다.
+    그렇지 않으면 설정, 모든 장치에서 사용할 수 있는 단일 APK 생성 될 것 이다.
 
 *   **cdvVersionCode**
     
-    VersionCode `AndroidManifest.xml`에 설정 재정의
+    VersionCode 설정 재정의`AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile** (기본: release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile** (기본: 릴리스-signing.properties)
     
     릴리스에 대 한 서명 정보를 포함 하는.properties 파일 경로를 작성 합니다. 파일은 다음과 같습니다.
     
@@ -148,27 +156,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         keyPassword=SECRET2
         
     
-    `storePassword` 그리고 `keyPassword` 선택 사항 생략 하는 경우에 대 한 메시지가 표시 됩니다.
+    `storePassword`그리고 `keyPassword` , 선택적인 및 생략 하는 경우에 대 한 메시지가 표시 됩니다.
 
-*   **cdvDebugSigningPropertiesFile** (기본: debug-signing.properties)
+*   **cdvDebugSigningPropertiesFile** (기본: 디버그-signing.properties)
     
     같지만 cdvReleaseSigningPropertiesFile, 디버그 빌드. 다른 개발자와 서명 키를 공유 해야 할 때 유용 합니다.
 
 *   **cdvMinSdkVersion**
     
-    `MinSdkVersion` `AndroidManifest.xml`에서 설정 값을 재정의 합니다. 여러 만들 때 유용한 APKs SDK 버전에 따라.
+    값을 재정의 `minSdkVersion` 에 `AndroidManifest.xml` . 여러 만들 때 유용한 APKs SDK 버전에 따라.
 
 *   **cdvBuildToolsVersion**
     
-    자동으로 검색 된 `android.buildToolsVersion` 값을 재정의 합니다.
+    자동으로 검색 된 재정의 `android.buildToolsVersion` 값.
 
 *   **cdvCompileSdkVersion**
     
-    자동으로 검색 된 `android.compileSdkVersion` 값을 재정의 합니다.
+    자동으로 검색 된 재정의 `android.compileSdkVersion` 값.
 
 ### Build.gradle 확장
 
-사용자 지정 `build.gradle`, 보다는 오히려 직접 편집 해야 할 경우 `build-extras.gradle`라는 형제 파일을 만들어야 합니다. 이 파일은 주요 `build.gradle` 존재 하는 경우에 의해 포함 됩니다. 여기에 예가입니다.
+사용자 지정 하려는 경우 `build.gradle` , 오히려 직접 편집, 보다 만들어야 합니다 라는 형제 파일 `build-extras.gradle` . 이 파일은 주에 의해 포함 될 것입니다 `build.gradle` 때 제시. 여기에 예가입니다.
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +187,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     }
     
 
-Note 플러그인을 통해 `build-extras.gradle` 파일을 포함할 수도 있습니다.
+플러그인도 포함 수 `build-extras.gradle` 파일을 통해:
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

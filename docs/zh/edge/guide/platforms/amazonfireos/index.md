@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+許可證： 下一個或多個參與者授權合約許可向阿帕奇軟體基金會 (ASF)。 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 您可能會獲得在許可證的副本
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           HTTP://www.apache.org/licenses/LICENSE-2.0 除非適用的法律要求或書面同意，否則按照該許可證分發的軟體分發上"按原樣"的基礎，而不擔保或條件的任何種類的明示或暗示。  請參閱許可證規定的許可權和限制的特定語言
+    
+
+## 根據許可證。
 
 # 亞馬遜火 OS 平臺指南
 
@@ -115,7 +105,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 ## 為亞馬遜火 OS 創建新專案
 
-使用 `cordova` 實用程式來建立一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄：
+使用 `cordova` 實用程式來建立一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

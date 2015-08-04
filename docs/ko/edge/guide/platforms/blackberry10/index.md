@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 블랙베리 10 플랫폼 가이드
 
@@ -128,7 +124,7 @@ Mac 및 Linux:
 
 ## 프로젝트 만들기
 
-사용 된 `cordova` 명령줄 인터페이스에 설명 된 대로 새 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에:
+사용 된 `cordova` 명령줄 인터페이스에 설명 된 대로 새 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에서:
 
         $ cordova create hello com.example.hello
         $ cd hello

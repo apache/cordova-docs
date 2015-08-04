@@ -1,21 +1,18 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
----
+    
+
+* * *
 
 # 平臺和外掛程式版本管理
 
@@ -40,12 +37,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <engine name="android" spec="^4.0.0" />
+        <engine name="android" spec="~4.0.0" />
         ...
-    </ xml>
+    </xml>
     
 
-一些例子: * **'cordova platform add android --save'** => 檢索固定的版本的 android 平臺，將其添加到該專案，然後更新 config.xml。 **cordova platform add android@3.7.0 --save** => 檢索 android 平臺上，從新公共管理版本 3.7.0，將其添加到該專案，然後更新 config.xml。 **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的科爾多瓦 android git 倉庫，將 android 平臺添加到專案中，然後更新 config.xml 並指向指定的 git url 及其版本。 **cordova platform add C:/path/to/android/platform --save** => 從指定的目錄中檢索的 android 平臺，將其添加到專案中，然後更新 config.xml 和指向的目錄。
+一些例子:
+
+  * **'cordova platform add android --save'** => 檢索固定的版本的 android 平臺，將其添加到該專案，然後更新 config.xml。
+  * **'cordova platform add android@3.7.0 --save'** => 檢索 android 平臺上，從新公共管理，版本 3.7.0 將它添加到專案，然後更新 config.xml。
+  * **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'** => 克隆指定的科爾多瓦 android git 倉庫，將 android 平臺添加到專案中，然後更新 config.xml 並指向指定的 git url 及其版本。
+  * **cordova platform add C:/path/to/android/platform --save** => 從指定的目錄中檢索的 android 平臺，將其添加到專案中，然後更新 config.xml 和指向的目錄。
 
 ### 保存對現有專案的平臺的大眾
 
@@ -62,15 +64,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cordova platform remove <platform> --save
     
 
-一些例子: ***cordova platform update android --save**除了到固定的版本，更新 config.xml 條目更新 android 平臺 => * **'cordova platform update android@3.8.0 --save'** => 除了 android 平臺更新到版本 3.8.0，更新 config.xml 條目 * **'cordova platform update /path/to/android/platform --save'** => 除了 android 平臺更新到版本更新資料夾，更新 config.xml 條目中 * =>**cordova platform remove android --save**從專案中移除 android 平臺和 config.xml 上刪除其專案。
+一些例子:
+
+  * 除了到固定的版本，更新 config.xml 條目更新 android 平臺**'cordova platform update android --save'** =>
+  * 除了 android 平臺更新到版本 3.8.0，更新 config.xml 條目**'cordova platform update android@3.8.0 --save'** =>
+  * 除了 android 平臺更新到版本更新資料夾，更新 config.xml 條目中**'cordova platform update /path/to/android/platform --save'** =>
+  * =>**'cordova platform remove android --save'**從專案中移除的 android 平臺，從 config.xml 中刪除其專案。
 
 ### 恢復平臺
 
-  * **'cordova prepare'**命令運行時，將會從 config.xml 自動還原平臺。
-  * 如果沒有指定版本的資料夾/git_url 中添加一個平臺，要安裝的版本是取自 config.xml， **如果發現**. 
-      * 示例: 假設您的 config.xml 檔包含以下項: <? xml 版本 = '1.0' 編碼 ='utf-8'? >...... <0></0>... < / xml > 如果你運行命令
-        
-        **'cordova platform add android'** (沒有版本/資料夾/git_url 指定)，將安裝平臺 'android@3.7.0' (如從 config.xml 中檢索)。
+**'cordova prepare'**命令運行時，將會從 config.xml 自動還原平臺。
+
+如果沒有指定版本的資料夾/git_url 中添加一個平臺，要安裝的版本取自 config.xml，**如果發現**.
+
+示例:
+
+假設您的 config.xml 檔包含以下項:
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <engine name="android" spec="3.7.0" />
+        ...
+    </xml>
+    
+
+< / xml > 如果你運行命令**'cordova platform add android'** (沒有版本/資料夾/git_url 指定)，將安裝平臺 'android@3.7.0' (如從 config.xml 中檢索)。
 
 * * *
 
@@ -89,12 +107,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <plugin name="cordova-plugin-console" spec="^1.0.0" />
+        <plugin name="cordova-plugin-console" spec="~1.0.0" />
         ...
-    </ xml>
+    </xml>
     
 
-一些例子: * **'cordova plugin add cordova-plugin-console --save'** => 檢索固定的版本的主控台外掛程式，將其添加到該專案，然後更新 config.xml。 **cordova plugin add cordova-plugin-console@0.2.13 --save** => 檢索 android 外掛程式，版本 0.2.13 從新公共管理，將其添加到該專案，然後更新 config.xml。 => **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'**克隆指定的主控台外掛程式 git 倉庫、 將主控台外掛程式添加到該專案，然後更新 config.xml 和指向指定的 git url 及其版本。 **cordova plugin add C:/path/to/console/plugin --save**=> 從指定的目錄中檢索該主控台外掛程式，將其添加到專案中，然後更新 config.xml 和指向的目錄。
+一些例子:
+
+  * => **'cordova plugin add cordova-plugin-console --save'**檢索固定的版本的主控台外掛程式，將其添加到該專案，然後更新 config.xml。
+  * **cordova plugin add cordova-plugin-console@0.2.13 --save** => 檢索 android 外掛程式，版本 0.2.13 從新公共管理，將其添加到該專案，然後更新 config.xml。
+  * => **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'**克隆指定的主控台外掛程式 git 倉庫、 將主控台外掛程式添加到該專案，然後更新 config.xml 和指向指定的 git url 及其版本。
+  * **cordova plugin add C:/path/to/console/plugin --save**=> 從指定的目錄中檢索該主控台外掛程式，將其添加到專案中，然後更新 config.xml 和指向的目錄。
 
 ### 大眾在現有專案保存外掛程式
 
@@ -111,12 +134,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cordova plugin remove <plugin> --save
     
 
-一些例子: * **'cordova plugin update cordova-plugin-console --save'**除了到固定的版本，更新 config.xml 條目更新主控台外掛程式 => * **'cordova plugin update cordova-plugin-console@0.2.13 --save'** => 除了 android 外掛程式更新到版本 3.8.0，更新 config.xml 條目 * 除了主控台外掛程式更新到版本更新資料夾，更新 config.xml 條目中**'cordova plugin update /path/to/console/plugin --save'** => * =>**cordova plugin remove cordova-plugin-console --save**從專案中移除該主控台外掛程式和從 config.xml 中刪除其專案。
+一些例子:
+
+  * 除了到固定的版本，更新 config.xml 條目更新主控台外掛程式**'cordova plugin update cordova-plugin-console --save'** =>
+  * 除了 android 外掛程式更新到版本 3.8.0，更新 config.xml 條目**'cordova plugin update cordova-plugin-console@0.2.13 --save'** =>
+  * 除了更新到版本資料夾，更新 config.xml 條目中的主控台外掛程式**'cordova plugin update /path/to/console/plugin --save'** =>
+  * =>**'cordova plugin remove cordova-plugin-console --save'**從專案中移除該主控台外掛程式和從 config.xml 中刪除它的條目。
 
 ### 恢復外掛程式
 
-  * 從 config.xml 的外掛程式會自動復原， **'cordova prepare'**命令運行時。
-  * 如果沒有指定版本的資料夾/git_url 添加一個外掛程式，要安裝的版本是取自 config.xml， **如果發現**. 
-      * 示例: 假設您的 config.xml 檔包含以下項: <? xml 版本 = '1.0' 編碼 ='utf-8'? >...... <0></0>... < / xml > 如果你運行命令
-        
-        **'cordova plugin add cordova-plugin-console'** (沒veresion/folder/git_url 指定)，將安裝該外掛程式 'cordova-plugin-console@0.2.11' (如從 config.xml 中檢索)。
+從 config.xml 的外掛程式會自動復原， **'cordova prepare'**命令運行時。
+
+如果沒有指定版本的資料夾/git_url 添加一個外掛程式，要安裝的版本取自 config.xml，**如果發現**.
+
+示例:
+
+假設您的 config.xml 檔包含以下項:
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <plugin name="cordova-plugin-console" spec="0.2.11" />
+        ...
+    </ xml>
+    
+
+< / xml > 如果你運行命令**'cordova plugin add cordova-plugin-console'** (沒veresion/folder/git_url 指定)，將安裝該外掛程式 'cordova-plugin-console@0.2.11' (如從 config.xml 中檢索)。

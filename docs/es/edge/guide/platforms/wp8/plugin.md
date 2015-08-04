@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows Phone 8 Plugins
 
-Esta sección proporciona información sobre cómo implementar código plugin nativo en la plataforma de Windows Phone. Antes de leer esto, vea a guía de desarrollo de Plugin para tener una visión general de la estructura del plugin y su interfaz común de JavaScript. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
+Esta sección proporciona información sobre cómo implementar código plugin nativo en la plataforma de Windows Phone. Antes de leer esto, vea a Guía de desarrollo de Plugin para tener una visión general de la estructura del plugin y su interfaz de JavaScript comunes. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
 
 Escribir un plugin para Cordova de Windows Phone requiere una comprensión básica de la arquitectura de Cordova. Cordova-WP8 consta de un `WebBrowser` que acoge el código JavaScript de la aplicación y administra las llamadas API nativas. Se puede extender un C# `BaseCommand` clase ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), que viene con la mayoría de la funcionalidad que usted necesita:
 

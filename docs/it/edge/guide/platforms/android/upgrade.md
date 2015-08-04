@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # L'aggiornamento di Android
 
@@ -30,7 +26,7 @@ Per i progetti non-CLI, eseguire:
         bin/update percorso/per/progetto
     
 
-Per i progetti di CLI:
+Per i progetti CLI:
 
 1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
@@ -78,7 +74,7 @@ Per i progetti non-CLI, eseguire:
         bin/update percorso/per/progetto
     
 
-Per i progetti di CLI:
+Per i progetti CLI:
 
 1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
@@ -92,13 +88,13 @@ A partire da 3.3.0, il runtime di Cordova è ora compilato come una libreria di 
 
 ## L'aggiornamento a 3.2.0 da 3.1.0
 
-Per i progetti creati con il cordova CLI:
+Per i progetti che sono stati creati con la CLI, cordova:
 
-1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
+1.  Aggiornamento il `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
 2.  Eseguire `cordova platform update android`
 
-Per i progetti non creati con la CLI di cordova, eseguire:
+Per i progetti non creati con la CLI, cordova, eseguire:
 
         bin/update <project_path>
     
@@ -107,13 +103,13 @@ Per i progetti non creati con la CLI di cordova, eseguire:
 
 ## L'aggiornamento a 3.1.0 da 3.0.0
 
-Per i progetti creati con il cordova CLI:
+Per i progetti che sono stati creati con la CLI, cordova:
 
-1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
+1.  Aggiornamento il `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
 2.  Eseguire `cordova platform update android`
 
-Per i progetti non creati con la CLI di cordova, eseguire:
+Per i progetti non creati con la CLI, cordova, eseguire:
 
         bin/update <project_path>
     
@@ -128,7 +124,7 @@ Per i progetti non creati con la CLI di cordova, eseguire:
 
 4.  Copiare qualsiasi attività nativo dal tuo vecchio progetto nella directory appropriate sotto `piattaforme/android`: è la directory dove esiste il tuo progetto di cordova-android nativo.
 
-5.  Utilizzare lo strumento CLI di cordova per installare il plug-in che è necessario. Si noti che il CLI gestisce tutti i core API come plugin, così che può essere necessario aggiungere. Solo 3.0.0 plugin sono compatibili con il CLI.
+5.  Utilizzare lo strumento CLI cordova per installare alcun plugin che necessario. Si noti che il CLI gestisce tutti i core API come plugin, quindi potrebbero dover essere aggiunto. Solo 3.0.0 plugin sono compatibili con il CLI.
 
 ## Aggiornamento a 3.0.0 da 2.9.0
 
@@ -146,11 +142,11 @@ Per i progetti non creati con la CLI di cordova, eseguire:
     
     **Nota**: tutti i core API sono stati rimossi e devono essere installate come plugin. Per dettagli, vedere la Plugman usando per gestire guida Plugins.
 
-## Aggiornamento a 2.9.0 da 2.8.0
+## L'aggiornamento a 2.9.0 da 2.8.0
 
 1.  Run `bin/update <project_path>`.
 
-## Aggiornamento a 2.8.0 da 2.7.0
+## L'aggiornamento a 2.8.0 da 2.7.0
 
 1.  Rimuovere `cordova-2.7.0.jar` dalla directory `libs` del progetto.
 
@@ -188,7 +184,7 @@ Per i progetti non creati con la CLI di cordova, eseguire:
 
 8.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.6.0 da 2.5.0
+## L'aggiornamento a 2.6.0 da 2.5.0
 
 1.  Rimuovere `cordova-2.5.0.jar` dalla directory `libs` del progetto.
 
@@ -208,7 +204,7 @@ Per i progetti non creati con la CLI di cordova, eseguire:
 
 Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella directory dei sorgenti di Cordova.
 
-## Aggiornamento a 2.5.0 da 2.4.0
+## L'aggiornamento a 2.5.0 da 2.4.0
 
 1.  Rimuovere `cordova-2.4.0.jar` dalla directory `libs` del progetto.
 
@@ -226,7 +222,7 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 8.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.4.0 da 2.3.0
+## L'aggiornamento a 2.4.0 da 2.3.0
 
 1.  Rimuovere `cordova-2.3.0.jar` dalla directory `libs` del progetto.
 
@@ -242,7 +238,7 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 7.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.3.0 da 2.2.0
+## L'aggiornamento a 2.3.0 da 2.2.0
 
 1.  Rimuovere `cordova-2.2.0.jar` dalla directory `libs` del progetto.
 
@@ -258,7 +254,7 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 7.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.2.0 da 2.1.0
+## L'aggiornamento alla 2.2.0 da 2.1.0
 
 1.  Rimuovere `cordova-2.1.0.jar` dalla directory `libs` del progetto.
 
@@ -274,7 +270,7 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 7.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.1.0 da 2.0.0
+## L'aggiornamento a 2.1.0 da 2.0.0
 
 1.  Rimuovere `cordova-2.0.0.jar` dalla directory `libs` del progetto.
 
@@ -286,11 +282,11 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 5.  Aggiorna il tuo HTML per utilizzare il nuovo `cordova-2.1.0.js` file.
 
-6.  Copia il `res/xml/config.xml` corrispondere`framework/res/xml/config.xml`.
+6.  Copia il `res/xml/config.xml` da abbinare`framework/res/xml/config.xml`.
 
 7.  Copiare i file da `bin/templates/cordova` per il progetto `cordova` directory.
 
-## Aggiornamento a 2.0.0 da 1.9.0
+## L'aggiornamento a 2.0.0 da 1.9.0
 
 1.  Rimuovere `cordova-1.9.0.jar` dalla directory `libs` del progetto.
 
@@ -302,7 +298,7 @@ Eseguire `bin/update < progetto >` con il percorso del progetto elencato nella d
 
 5.  Aggiorna il tuo HTML per utilizzare il nuovo `cordova-2.0.0.js` file.
 
-6.  Copia il `res/xml/config.xml` corrispondere`framework/res/xml/config.xml`.
+6.  Copia il `res/xml/config.xml` da abbinare`framework/res/xml/config.xml`.
 
 Nella 2.0.0 release, il file `config. xml` unisce e sostituisce `cordova.xml` e `plugins`. I vecchi file sono obsolete e mentre lavorano ancora in 2.0.0, smetterà di funzionare in una versione futura.
 
@@ -474,7 +470,7 @@ A causa dell'introduzione della `CordovaWebView` nella 1.9.0, rilascio, plugin d
 
 2.  Aggiungi `phonegap-1.1.0.jar` directory `libs` del progetto.
 
-3.  Se si utilizza Eclipse, si prega di aggiornare il progetto Eclipse e fare una pulita.
+3.  Se si utilizza Eclipse, si prega di aggiornare il progetto di Eclipse e fare una pulizia.
 
 4.  Copiare il nuovo `phonegap-1.1.0.js` nel vostro progetto.
 
@@ -488,7 +484,7 @@ A causa dell'introduzione della `CordovaWebView` nella 1.9.0, rilascio, plugin d
 
 2.  Aggiungi `phonegap-1.0.0.jar` directory `libs` del progetto.
 
-3.  Se si utilizza Eclipse, si prega di aggiornare il progetto Eclipse e fare una pulita.
+3.  Se si utilizza Eclipse, si prega di aggiornare il progetto di Eclipse e fare una pulizia.
 
 4.  Copiare il nuovo `phonegap-1.0.0.js` nel vostro progetto.
 

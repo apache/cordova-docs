@@ -1,27 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS WebViews
 
 Ten poradnik pokazuje jak wobec sprzeniewierzyć Cordova włączony Widok sieci Web składnika w większych aplikacji na iOS. Szczegółowe informacje na temat jak te składniki mogą komunikować się ze sobą, zobacz wtyczki aplikacji.
 
-Wsparcie dla iOS WebViews rozpoczął Cordova wersja 1.4, za pomocą `Cleaver` element, dla którego szablon Xcode służy jako implementacji. Cordova 2.0 i nowsze wersje obsługują tylko realizacji podprojektu w oparciu tasak.
+Wsparcie dla WebViews dla iOS rozpoczął z Cordova wersja 1.4, za pomocą `Cleaver` element, dla którego szablon Xcode służy jako odniesienie realizacji. Cordova 2.0 i nowsze wersje obsługują tylko realizacji podprojektu w oparciu tasak.
 
 Instrukcje te wymagają co najmniej Cordova 3.x i Xcode 6.0, wraz z pliku `config.xml` z nowo utworzonego iOS projektu. Można użyć procedury na interfejs wiersza polecenia do tworzenia nowego projektu, a następnie uzyskać `config.xml` plik w aplikacji o nazwie podkatalogu w`platforms/ios`.
 

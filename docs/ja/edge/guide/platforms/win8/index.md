@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows プラットフォームのガイド
 
@@ -106,7 +102,7 @@ Windows 10、Visual Studio インストーラーには普遍的な Windows ア�
         > cordova platform add windows
     
 
-ここでは、対応する下位レベル シェル ツール アプローチ：
+ここでは、対応する下位シェル ツール アプローチです。
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
@@ -115,7 +111,7 @@ Windows 10、Visual Studio インストーラーには普遍的な Windows ア�
 
 ## プロジェクトをビルドします
 
-開発で CLI を使用している場合は、プロジェクト ディレクトリの最上位 `www` ディレクトリにソース ファイルが含まれています。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
+プロジェクト ディレクトリの最上位レベルで開発に CLI を使用する場合は `www` ディレクトリには、ソース ファイルが含まれています。アプリケーションを再構築するプロジェクト ディレクトリ内のこれらのいずれかを実行します。
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
@@ -123,13 +119,13 @@ Windows 10、Visual Studio インストーラーには普遍的な Windows ア�
         > cordova build windows   --release  # signs the apps for release
     
 
-ここでは、対応する下位レベル シェル ツール アプローチ：
+ここでは、対応する下位シェル ツール アプローチです。
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
     
 
-`clean`コマンドは準備として、次のディレクトリを洗い流すのに役立ちます `build` :
+`clean`コマンドは、次の準備のためにディレクトリを洗い流すのに役立ちます `build` :
 
         C:\path\to\project\cordova\clean.bat 
     

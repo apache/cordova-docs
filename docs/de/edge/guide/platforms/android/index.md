@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android-Plattform-Guide
 
@@ -58,7 +54,7 @@ Installieren Sie [Android eigenständige SDK Tools][5] oder das [Android-Studio]
 
 Detaillierte Installationsanweisungen finden Sie im Rahmen der Installationslinks oben.
 
-Für Cordova Befehlszeilen-Tools für die Arbeit oder die CLI, das darauf basiert, müssen Sie das SDK `Tools` und `Plattform` Verzeichnisse im `Pfad`enthalten. Auf einem Mac können Sie einen Text-Editor zum Erstellen oder Ändern der Datei `~/.bash_profile` eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
+Für Cordova Befehlszeilen-Tools für die Arbeit oder die CLI, das darauf basiert, müssen Sie das SDK `Tools` und `Plattform` Verzeichnisse im `Pfad`enthalten. Auf einem Mac oder Linux können Sie einen Text-Editor erstellen oder Ändern der Datei `~/.bash_profile` hinzufügen eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
     

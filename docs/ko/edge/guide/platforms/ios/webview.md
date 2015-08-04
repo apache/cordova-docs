@@ -1,27 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS WebViews
 
 이 가이드에서는 더 큰 iOS 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
 
-IOS WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사용 하는 `Cleaver` Xcode 템플릿 참조 구현으로 쓸모 있는 구성 요소. 코르 도우 바 2.0 및 이후 버전 에서만 하위 프로젝트 기반 칼 구현을 지원합니다.
+IOS에 대 한 WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사용 하 여는 `Cleaver` Xcode 템플릿을 참조 구현으로 쓸모 있는 구성 요소. 코르 도우 바 2.0 및 이후 버전 에서만 하위 프로젝트 기반 칼 구현을 지원합니다.
 
 이러한 지침을 적어도 필요로 코르도바 3.x 및 새로 만든된 iOS 프로젝트에서 `config.xml` 파일과 함께 Xcode 6.0. 절차 수 있습니다는 명령줄 인터페이스에서 새 프로젝트를 만든 다음 얻을 하는 `config.xml` 내에서 명명 된 응용 프로그램의 하위 디렉터리 내에서 파일`platforms/ios`.
 

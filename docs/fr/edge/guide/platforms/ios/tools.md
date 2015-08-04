@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Shell Tool Guide
 
@@ -55,14 +51,15 @@ Vous pouvez apprendre plus sur la signature, distribuant des applications iOS, c
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Pour signer l'application à Cordoue, vous avez besoin de ce qui suit: * Code d'identité de signature (`--codeSignIdentity`): [à l'aide de XCode][3] , vous pouvez créer un nouveau iOS signant l'identité et l'ajouter à votre trousseau. Le type de l'identité - typiquement de distribution ou de développement, de la signature de code doit être spécifié ici.
+Pour signer l'application à Cordoue, vous devez le texte suivant :
 
- [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+*   Identité (`--codeSignIdentity`) de signature de code : [à l'aide de XCode][3] , vous pouvez créer un nouveau iOS signant l'identité et l'ajouter à votre trousseau. Le type de l'identité - typiquement de distribution ou de développement, de la signature de code doit être spécifié ici.
 
 *   Provisioning profil (`--provisioningProfile`): [l'utilisation du centre de membre Apple][4] vous pouvez créer un profil de configuration. Télécharger le profil de configuration sur votre ordinateur et lancez-le dans XCode pour l'enregistrer. Elle est copiée ici sur votre Mac : profils de ~/Library/MobileDevice/Provisioning\ /. Ouvrir dans un éditeur de texte, vous pouvez trouver l'UUID qui doit être spécifiées ici.
 
 *   Signature règles (`--codeSignResourceRules`) (en option) de la ressource de code : permet de spécifier des règles personnalisées de ressource signature.
 
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `buile` ou `run` des scripts :

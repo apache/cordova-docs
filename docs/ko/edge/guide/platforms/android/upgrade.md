@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 안 드 로이드 업그레이드
 
@@ -82,7 +78,7 @@ CLI 프로젝트:
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
-2.  기존 프로젝트에서 `cordova platform update android`를 실행 합니다.
+2.  실행 `cordova platform update android` 기존 프로젝트에서.
 
 ## 3.3.0를 3.2.0에서 업그레이드
 
@@ -92,7 +88,7 @@ CLI 프로젝트:
 
 ## 3.2.0 3.1.0에서 업그레이드
 
-코르 도우 바 CLI로 만든 프로젝트의 경우:
+코르도바 CLI 사용 하 여 만든 된 프로젝트:
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
@@ -107,7 +103,7 @@ CLI 프로젝트:
 
 ## 3.1.0 3.0.0에서 업그레이드
 
-코르 도우 바 CLI로 만든 프로젝트의 경우:
+코르도바 CLI 사용 하 여 만든 된 프로젝트:
 
 1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
@@ -118,9 +114,9 @@ CLI 프로젝트:
         bin/update <project_path>
     
 
-## 2.9.0에서 CLI (3.0.0) 업그레이드
+## CLI (3.0.0)에 2.9.0에서 업그레이드
 
-1.  명령줄 인터페이스에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
+1.  명령줄 인터페이스에 설명 된 대로 코르도바를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
 
 2.  추가 당신의 플랫폼 코르도바 프로젝트 예: `코르도바 플랫폼 안 드 로이드 추가`.
 
@@ -128,7 +124,7 @@ CLI 프로젝트:
 
 4.  `플랫폼/안 드 로이드`에서 해당 디렉터리에 이전 프로젝트에서 어떤 기본 자산을 복사:이 디렉토리는 네이티브 코르도바-안 드 로이드 프로젝트가 존재 하는 곳.
 
-5.  코르 도우 바 CLI 도구를 사용 하 여 필요한 어떤 플러그인을 설치 하려면. 참고 CLI를 처리 하는 모든 핵심 Api 플러그인으로 추가 될 필요가 있습니다. 만 3.0.0 플러그인 CLI와 호환 됩니다.
+5.  코르도바 CLI 도구를 사용 하 여 필요한 모든 플러그인을 설치 하. 참고 CLI를 처리 하는 모든 핵심 Api 플러그인으로 추가 될 필요가 있습니다. 3.0.0만 플러그인 CLI와 호환 됩니다.
 
 ## 3.0.0 2.9.0에서 업그레이드
 
@@ -146,7 +142,7 @@ CLI 프로젝트:
     
     **참고**: 모든 핵심 Api 제거 되 고 플러그인으로 설치 해야 합니다. 자세한 내용은 관리 플러그인 가이드를 사용 하 여 Plugman를 참조 하십시오.
 
-## 2.9.0 2.8.0에서 업그레이드
+## 2.8.0에서 2.9.0로 업그레이드
 
 1.  Run `bin/update <project_path>`.
 
@@ -166,9 +162,9 @@ CLI 프로젝트:
 
 3.  `Framework/res/xml/config.xml` 에 맞게 `res/xml/config.xml` 파일 복사.
 
-4.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
+4.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을가지고.
 
-5.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+5.  파일을 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.6.0에서 2.7.0로 업그레이드
 
@@ -202,9 +198,9 @@ CLI 프로젝트:
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
+7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을가지고.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  파일을 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 코르 도우 바 소스 디렉토리에 나열 하는 프로젝트 경로를 `bin/update < 프로젝트 >` 를 실행 합니다.
 
@@ -222,9 +218,9 @@ CLI 프로젝트:
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
+7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을가지고.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  파일을 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.3.0에서 2.4.0로 업그레이드
 
@@ -272,7 +268,7 @@ CLI 프로젝트:
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  파일을 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.0.0에서 2.1.0으로 업그레이드
 
@@ -286,9 +282,9 @@ CLI 프로젝트:
 
 5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` 파일.
 
-6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
+6.  복사는 `res/xml/config.xml` 에 맞게`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  파일을 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 1.9.0에서 2.0.0로 업그레이드
 
@@ -302,7 +298,7 @@ CLI 프로젝트:
 
 5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` 파일.
 
-6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
+6.  복사는 `res/xml/config.xml` 에 맞게`framework/res/xml/config.xml`.
 
 2.0.0에서 릴리스 `config.xml` 파일 결합 및 `cordova.xml` 및 `plugins.xml`대체. 오래 된 파일을 그리고 그들은 여전히 2.0.0에서 작동 하는 동안 향후 릴리스에서 작동 중지 됩니다.
 

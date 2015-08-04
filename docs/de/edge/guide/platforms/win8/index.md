@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Anleitung zur Windows Platform
 
@@ -63,7 +59,7 @@ Folgen Sie den Anweisungen auf [windowsstore.com][7] , die app zu Windows Store 
 
  [7]: http://www.windowsstore.com/
 
-Entwicklung von Cordova apps für Windows können Sie einen PC mit Windows, aber Sie können auch auf einem Mac entwickeln, entweder durch eine VM-Umgebung ausführen oder mithilfe von Boot Camp Partition Dualboot Windows-8.1. Finden Sie diese Ressourcen die erforderlichen Windows-Entwicklungsumgebung auf einem Mac einrichten:
+Entwicklung von Cordova apps für Windows können Sie einen PC mit Windows, aber Sie können auch auf einem Mac entwickeln, entweder durch eine VM-Umgebung ausführen oder mithilfe von Boot Camp Partition Dualboot Windows-8.1. Konsultieren Sie diese Ressourcen, um die erforderlichen Windows-Entwicklungsumgebung auf einem Mac einzurichten:
 
 *   [VMWare Fusion][8]
 
@@ -75,7 +71,7 @@ Entwicklung von Cordova apps für Windows können Sie einen PC mit Windows, aber
  [9]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
  [10]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-## Mithilfe von Cordova Shell Tools
+## Verwendung von Cordova Shell Tools
 
 Wenn Sie Cordova's Windows-zentrierte Shell-Werkzeugen in Verbindung mit dem SDK verwenden möchten, müssen Sie zwei grundlegende Optionen:
 
@@ -106,7 +102,7 @@ Zu diesem Zeitpunkt zum Erstellen eines neuen Projekts können Sie zwischen das 
         > cordova platform add windows
     
 
-Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz:
+Hier ist der entsprechende Low-Level-Schale-Tool-Ansatz:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
@@ -115,7 +111,7 @@ Dieses Projekt richtet sich an Windows 8.1 als Standardziel OS. Du kannst deiner
 
 ## Erstellen Sie das Projekt
 
-Bei Verwendung von CLI in der Entwicklung ist das Projektverzeichnis der obersten Ebene `www` Verzeichnis enthält die Quellcode-Dateien. Führen Sie einen dieser dem Projektverzeichnis, die app neu zu erstellen:
+Bei Verwendung von CLI in der Entwicklung ist das Projektverzeichnis auf oberster Ebene `www` Verzeichnis enthält die Quellcode-Dateien. Führen Sie einen dieser dem Projektverzeichnis die app neu zu erstellen:
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
@@ -123,13 +119,13 @@ Bei Verwendung von CLI in der Entwicklung ist das Projektverzeichnis der oberste
         > cordova build windows   --release  # signs the apps for release
     
 
-Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz:
+Hier ist der entsprechende Low-Level-Schale-Tool-Ansatz:
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
     
 
-Der `clean` Befehl können Sie die Verzeichnisse in der Vorbereitung für die nächste auszuschwemmen `build` :
+Der `clean` Befehl hilft auszuschwemmen Verzeichnisse in Vorbereitung für die nächste `build` :
 
         C:\path\to\project\cordova\clean.bat 
     
@@ -178,7 +174,7 @@ Windows Phone-Paket bereitstellen:
 
 Können Sie **cordova run windows --list** finden alle verfügbaren Ziele und **cordova run windows --target=target_name \-- -|-phone** Anwendung auf ein bestimmtes Gerät oder einen Emulator ausführen (z. B. `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`Ausführen).
 
-Sie können auch **cordova run --help** finden Sie unter zusätzliche Build und Ausführungsoptionen.
+Sie können auch **Cordova ausführen--Hilfe** siehe zusätzliche erstellen und Ausführen von Optionen.
 
 ## Öffnen Sie das Projekt im SDK und Bereitstellen der Anwendung
 

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows Phone 8 Plugins
 
@@ -88,12 +84,12 @@ Das JavaScript aufrufen müssten `exec` wie folgt:
 
 Im Beispiel in Anwendung-Plugins ist die Daten, die Ihr Plugin empfängt eine Zeichenfolge, aber was, wenn Sie ein Array von Zeichenfolgen übergeben möchten? Nehmen wir an das JavaScript `cordova.exec` Aufruf wird wie folgt angegeben:
 
-        Cordova.exec (gewinnen, scheitern, "Echo", "Echo", ["Eingabezeichenfolge"]);
+        cordova.exec(win, fail, "Echo", "echo", ["input string"]);
     
 
 Der Wert des `options` Zeichenfolge übergeben die `Echo.echo` Methode ist JSON:
 
-        "[\"input string\ "]"
+        "[\"input string\"]"
     
 
 Alle JavaScript `exec` Argumente sind JSON-codierte, vor der Übergabe in c# und decodiert werden müssen:
@@ -112,7 +108,7 @@ Die `BaseCommand` -Klasse stellt Methoden zum Übergeben von Daten an JavaScript
 
 Um Daten wieder zu übergeben, müssen Sie anrufen `DispatchCommandResult` unterschiedlich:
 
-        DispatchCommandResult (neue PluginResult (PluginResult.Status.OK, "alles lief wie geplant, dies ist ein Ergebnis, das auf dem Erfolg-Handler übergeben wird."));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
     
 
 Verwenden Sie eine codierte JSON-Zeichenfolge, strukturierte Objektdaten zurück an JavaScript übergeben:
@@ -122,7 +118,7 @@ Verwenden Sie eine codierte JSON-Zeichenfolge, strukturierte Objektdaten zurück
 
 Um einen Fehler zu signalisieren, rufen Sie `DispatchCommandResult` mit einem `PluginResult` Objekt, dessen Status ist `ERROR` :
 
-        DispatchCommandResult (neue PluginResult (PluginResult.Status.ERROR, "Echo signalisiert einen Fehler"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
     
 
 ## Serialisierung Fehlerbehandlung

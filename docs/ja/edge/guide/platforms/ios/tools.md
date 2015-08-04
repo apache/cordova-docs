@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS シェル ツール ガイド
 
@@ -49,20 +45,21 @@ IOS 用シェル ・ ツールを有効にするには、コルドバ[cordova.ap
         $ /path/to/my_new_project/cordova/run --device
     
 
-## アプリケーションの署名
+## アプリの署名
 
 署名、iOS アプリの配布、証明書の作成および[iOS 開発者ライブラリ][2]上のプロファイルのプロビジョニングについて学べます.
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-コルドバのアプリに署名する必要があります次: * 調印のアイデンティティ (`-codeSignIdentity`) をコード: [XCode を使用して][3]アイデンティティを署名の新しい iOS を作成でき、あなたのキーチェーンに追加。 コード署名 id - 通常配布または開発の種類は、ここで指定する必要があります。
+コルドバのアプリに署名するには、次が必要です。
+
+*   コードの id を署名 ( `--codeSignIdentity` ): [XCode を使用して][3]アイデンティティを署名の新しい iOS を作成でき、あなたのキーチェーンを追加。 コード署名 id - 通常配布または開発の種類は、ここで指定する必要があります。
+
+*   プロファイルのプロビジョニング ( `--provisioningProfile` ):[アップルのメンバー センターを使用して][4]プロビジョニング プロファイルを作成することができます。 あなたのマシンにプロビジョニング プロファイルをダウンロードし、それを登録する XCode でそれを起動します。 ここでお使いの Mac にコピーされます: ~/Library/MobileDevice/Provisioning\ プロファイル/。 テキスト エディターで開くと、ここで指定する必要がある UUID を検索できます。
+
+*   コード署名のリソースの規則 ( `--codeSignResourceRules` ) (省略可能): カスタム署名リソース ルールを指定することができます。
 
  [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
-
-*   プロファイル (`--provisioningProfile`):[アップルのメンバー センターを使用して][4]プロビジョニング プロファイルを作成することができます。 あなたのマシンにプロビジョニング プロファイルをダウンロードし、それを登録する XCode でそれを起動します。 ここでお使いの Mac にコピーされます: ~/Library/MobileDevice/Provisioning\ プロファイル/。 テキスト エディターで開くと、ここで指定する必要がある UUID を検索できます。
-
-*   コード署名のリソースの規則 (`--codeSignResourceRules`) (省略可能): カスタム署名リソース ルールを指定することができます。
-
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 これらのパラメーターは、`buid`または`run`スクリプトを上記のコマンドライン引数を使用して指定できます。

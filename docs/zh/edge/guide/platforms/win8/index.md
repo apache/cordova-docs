@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Windows 平臺指南
 
@@ -63,7 +59,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
  [7]: http://www.windowsstore.com/
 
-為 Windows 開發科爾多瓦的應用程式，您可以使用 pc 機運行 Windows，但你也可能發展在 Mac 上運行的虛擬機器環境或到雙啟動 Windows 8.1 分區使用新兵訓練營。 請查閱這些資源以設置在 Mac 上所需的 Windows 開發環境：
+為 Windows 開發科爾多瓦的應用程式，您可以使用 pc 機運行 Windows，但你也可能發展在 Mac 上運行的虛擬機器環境或到雙啟動 Windows 8.1 分區使用新兵訓練營。 請查閱這些資源來設置在 Mac 上所需的 Windows 開發環境:
 
 *   [VMWare Fusion][8]
 
@@ -106,7 +102,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         > cordova platform add windows
     
 
-下面是相應的低級別 shell 工具方法：
+下面是相應的較低級別殼工具方法:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
@@ -115,7 +111,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 生成專案
 
-如果您在開發中使用 CLI，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任一內要重新生成應用程式的專案目錄：
+如果您使用 CLI 在發展中，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任一專案目錄重新生成該應用程式中:
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
@@ -123,13 +119,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         > cordova build windows   --release  # signs the apps for release
     
 
-下面是相應的低級別 shell 工具方法：
+下面是相應的較低級別殼工具方法:
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
     
 
-`clean`命令可以説明沖洗中準備的下一個目錄 `build` ：
+`clean`命令可以説明搜捕中準備的下一個目錄 `build` :
 
         C:\path\to\project\cordova\clean.bat 
     
@@ -178,7 +174,7 @@ Windows 10 科爾多瓦的應用程式 (和一般的 HTML 應用程式) 支援�
 
 可以使用**cordova run windows --list**來查看所有可用的目標和**cordova run windows --target=target_name \-- -|-phone**，在特定的設備或模擬器上運行的應用程式 （例如，`cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
-您還可以使用**cordova run --help**查看附加的生成和運行選項。
+您還可以使用**科爾多瓦運行 — — 説明**查看附加的生成和運行選項。
 
 ## 在 SDK 中打開的專案和部署應用程式
 
