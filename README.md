@@ -47,6 +47,13 @@ Verify the installation by running:
 
     node --version
     npm --version
+    
+    
+## Python and YAML
+Install Python from [Python's website](www.python.org).  Make sure you add Python to your PATH enviornment variables.  You may need to restart your computer after you do this for it to work.
+
+Then install pyyaml
+    pip install pyyaml
 
 ## Dependencies
 
