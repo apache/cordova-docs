@@ -37,4 +37,4 @@ exclude:
     - static/css-src
 
 # includes directories even if they're excluded
-include:
+include: []
