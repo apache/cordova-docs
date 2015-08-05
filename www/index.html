@@ -3,60 +3,86 @@ layout: cordova
 title: Apache Cordova
 ---
 
+<!-- REMOVE THIS LINK BEFORE PUBLISHING.  This is just for IntelliSense while coding -->
+<!-- <link rel="stylesheet" type="text/css" href="static/css/lib/bootstrap.css"/> -->
 
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div id="hero">
-      <div class="container">
-        <div id="hero_section">
+<div id="hero">
+    <div class="container vertical-center-parent">
+        <div id="hero_section" class="vertical-center-child">
             <div id="hero_section_left">
-                <img src="{{ site.baseurl }}/static/img/cordova_bot.png" style="width:100%"/>
+                <img src="{{ site.baseurl }}/static/img/cordova_bot.png" style="width:100%" />
             </div>
             <div id="hero_section_right">
-                <img id="hero_logo" src="{{ site.baseurl }}/static/img/logo_text.svg"/>
+                <img id="hero_logo" src="{{ site.baseurl }}/static/img/logo_text.svg" />
                 <p>Native mobile apps with HTML, CSS & JavaScript</p>
                 <p>Target multiple platforms with one code base</p>
                 <p>Free and open source</p>
+                <div>
+                    <img src="{{ site.baseurl }}/static/img/4-platforms.png" />
+                </div>
+                <div>
+                    <button type="button" class="btn btn-lg btn-primary">Get Started</button>
+                    <button type="button" class="btn btn-lg btn-primary">Documentation</button>
+                </div>
             </div>
         </div>
-
-      </div>
-      <div id="hero_bottom_strip">
-          <div class="container">
-              <div class="row">
-                  <div class="col-xs-4">100% shared code across platforms</div>
-                  <div class="col-xs-4">Support for offline scenarios</div>
-                  <div class="col-xs-4">Access native device APIs</div>
-              </div>
-          </div>
-      </div>
     </div>
-
+    <div id="hero_bottom_strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="row">
+                        <div class="col-sm-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
+                        <div class="col-sm-9"><div class="value_prop"><p>100% shared code across platforms</p></div></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="row">
+                        <div class="col-sm-3"><div class="sprite_img" id="sprite_offline"></div></div>
+                        <div class="col-sm-9"><div class="value_prop">Support for offline scenarios</div></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="row">
+                        <div class="col-sm-3"><div class="sprite_img" id="sprite_apis"></div></div>
+                        <div class="col-sm-9"><div class="value_prop">Access native Device APIs</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
+        <div class="col-md-12 text-center">
+          <h1>Get Started Fast</h1>
+          <p>Looks like you're using <span id="current_os">Windows</span> to develop your apps</p>
+          <p><a href="#" role="button">Use a different OS?</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+            <div class="number_circle">1</div>
+        </div>
+        <div class="col-md-7">
+          <h2>Lorem ipsum dolor sit amet</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <div class="well_code">
+            <div><button type="button" class="btn btn btn-primary pull-right">Copy</button></div>
+              $ sudo npm install -g cordova
+
+          </div>
        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
       </div>
 
       <hr>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
+     
     </div> <!-- /container -->
 
 
