@@ -22,13 +22,32 @@ $badge-active-bg: rgb(255, 255, 255);
 $badge-line-height: 1.25;
 
 
-#hero_section {
+#hero {
 	height:1020px;
 	background-color:$gray-transparent;
     background-image: url("/static/img/wisplight.jpg");
     background-size: cover;
 	position:relative;
 	color:white;
+	#hero_section {
+		width:660px;
+		margin:auto;
+		background-color:red;
+		font-size:18px;
+		#hero_section_left {
+			width:255px;
+			float:left;
+		}
+		#hero_section_right {
+			width:660px - 255px;
+			float:right;
+		}
+	}
+	#hero_logo {
+		width:350px;
+		padding-top:40px;
+		padding-bottom:20px;
+	}
 }
 #hero_bottom_strip {
     position: absolute;
@@ -40,7 +59,7 @@ $badge-line-height: 1.25;
     margin-top: -200px;
 	.container {
 		padding-top:60px;
-		font-size: 24px;
+		font-size: 18px;
 	}
 }
 
