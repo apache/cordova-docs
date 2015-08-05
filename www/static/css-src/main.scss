@@ -99,14 +99,19 @@ img#logo_top {
 	padding:5px;
 }
 
-.nav_bar_center {
-	text-align:center;
-	height:50px;
-}
-.nav_bar_center > ul {
-	display: inline-block;
-	float:none;
-}
+@media (min-width: 768px) { /* Center the navs when not collapsed */
+	.nav_bar_center {
+		text-align:center;
+		height:50px;
+	}
+	.nav_bar_center > ul {
+		display: inline-block;
+		float:none;
+	}
+  }
+  
+  
+
 
 .vertical-center-parent {
 	position: relative;
