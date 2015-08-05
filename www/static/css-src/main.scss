@@ -51,14 +51,16 @@ $badge-line-height: 1.25;
 		padding-bottom:20px;
 	}
 }
+
 #hero_bottom_strip {
     position: absolute;
     top: 100%;
-    height: 200px;
+    min-height: 200px;
     background-color: rgba(128,128,128,.15);
     width: 100%;
     margin: 0;
-    margin-top: -200px;
+    /* margin-top: -200px; */ /* Less responsive */
+    transform: translateY(-100%);
 	.container {
 		padding-top:60px;
 		font-size: 18px;
@@ -73,8 +75,10 @@ $badge-line-height: 1.25;
    		height: 85px;
 		background-repeat: no-repeat;
     	background-size: cover;
-		display:inline-block;
 	}
+}
+.value_prop {
+	
 }
 #sprite_shared_code {
     background: url("/static/img/value-prop-sprite.svg") 0 0;
