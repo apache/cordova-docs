@@ -30,17 +30,19 @@ $badge-line-height: 1.25;
 	position:relative;
 	color:white;
 	#hero_section {
-		width:660px;
-		margin:auto;
-		background-color:red;
+		width:730px;
 		font-size:18px;
+		margin-top:-100px;  /* vertically centers more accuaretly since bottom bar is absolutely positioned*/
 		#hero_section_left {
-			width:255px;
+			width:312px;
 			float:left;
 		}
 		#hero_section_right {
-			width:660px - 255px;
+			width:730px - 312px;
 			float:right;
+			div {
+				padding-bottom:20px;
+			}
 		}
 	}
 	#hero_logo {
@@ -79,4 +81,29 @@ img#logo_top {
 .nav_bar_center > ul {
 	display: inline-block;
 	float:none;
+}
+
+.vertical-center-parent {
+	position: relative;
+	width:100%;
+	height:100%;
+	.vertical-center-child {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+}
+
+
+/*
+********* Modifications to Bootstrap ***********
+*/
+button.btn {
+    border-radius: 0;
+	background-color:$brand-primary;
+	color:black;
+}
+button.btn:hover {
+	color:black;
 }
