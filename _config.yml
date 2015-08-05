@@ -32,16 +32,9 @@ rdiscount:
     - footnotes
     - smart
 
+# exclude directories from the build
 exclude:
     - static/css-src
-    # - docs/de/
-    # - docs/en/
-    # - docs/es/
-    # - docs/fr/
-    # - docs/it/
-    # - docs/ja/
-    # - docs/ko/
-    # - docs/pl/
-    # - docs/ru/
-    # - docs/sl/
-    # - docs/zh/
+
+# includes directories even if they're excluded
+include:

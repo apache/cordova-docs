@@ -84,6 +84,22 @@ To build the whole website, run:
 
     node_modules/.bin/gulp build
 
+Developing
+==========
+
+To work on the website and see changes live, run:
+
+    node_modules/.bin/gulp
+
+That command will start a server and watch the source files, regenerating the site and refreshing the browser whenever changes are made. To make the regeneration faster, the `includes` and `excludes` properties in the `_config.yml` file can be edited to only build certain files. For example, to only build the core website and the latest French docs, edit the properties to look like this:
+
+    exclude:
+        - static/css-src
+        - docs
+
+    include:
+        - docs/fr/edge
+
 Troubleshooting
 ===============
 
