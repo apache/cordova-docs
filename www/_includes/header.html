@@ -1,7 +1,7 @@
 <a class="scroll-point pt-top" name="top">
 </a>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -9,19 +9,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Apache Cordova</a>
+          <a class="navbar-brand" href="#"><img id="logo_top" src="{{ site.baseurl }}/static/img/logo_full_2.svg"/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ site.data.index-config.sitemap.docs.url }}">Documentation</a></li>
-                <li><a href="http://plugins.cordova.io/">Plugins</a></li>
-                <li><a href="{{ site.baseurl }}/#news">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/#contribute">Contribute</a></li>
-                <li><a href="#contact">Contact</a></li>
-          </ul>
+        <img class="pull-right" style="width:25px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
+            <div class="nav_bar_center">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ site.data.index-config.sitemap.docs.url }}">Documentation</a></li>
+                    <li><a href="http://plugins.cordova.io/">Plugins</a></li>
+                    <li><a href="{{ site.baseurl }}/#news">Blog</a></li>
+                    <li><a href="{{ site.baseurl }}/#contribute">Contribute</a></li>
+                    <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
+<div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
 
 
 
