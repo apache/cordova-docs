@@ -1,4 +1,5 @@
 import os
+import errno
 
 def strip_front_matter(text):
 
@@ -20,3 +21,12 @@ def listdirs(root_path):
         if not os.path.isdir(subdir_path):
             continue
         yield subdir_name
+
+def mkdirp(path):
+    try:
+        os.makedirs(path)
+    except OSError as e:
+        if e.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else:
+            raise

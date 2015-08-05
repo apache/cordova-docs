@@ -23,7 +23,6 @@ var CONFIG_FILE    = "_config.yml";
 var DEFAULTS_FILE  = "_defaults.yml";
 var DATA_DIR       = path.join(SOURCE_DIR, "_data");
 var LANGUAGES_FILE = path.join(DATA_DIR, "languages.yml");
-var TOC_DIR        = path.join(DATA_DIR, "toc");
 var DOCS_DIR       = path.join(SOURCE_DIR, "docs");
 var CSS_SRC_DIR    = path.join(SOURCE_DIR, "static", "css-src");
 var CSS_OUT_DIR    = path.join(SOURCE_DIR, "static", "css");
@@ -68,17 +67,11 @@ gulp.task("watch", function () {
     );
     gulp.watch(
         [
+            path.join("**", "*.yml"),
             path.join(SOURCE_DIR, "**", "*.html"),
             path.join(SOURCE_DIR, "**", "*.md"),
             path.join(SOURCE_DIR, "**", "*.js"),
-            path.join(SOURCE_DIR, "**", "*.yml"),
             path.join(CSS_OUT_DIR, "**", "*.css"),
-        ],
-        ["regenerate"]
-    );
-    gulp.watch(
-        [
-            CONFIG_FILE,
         ],
         ["regenerate"]
     );
@@ -110,7 +103,7 @@ gulp.task("configs", function (done) {
         .pipe(gulp.dest("."));
     execPiped("python", [bin("gen_languages.py"), DOCS_DIR], LANGUAGES_FILE)
         .pipe(gulp.dest("."));
-    exec("python", [bin("gen_toc.py"), SOURCE_DIR], done);
+    exec("python", [bin("all_toc.py"), DOCS_DIR, DATA_DIR], done);
 });
 
 gulp.task("styles", function() {
