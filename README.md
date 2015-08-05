@@ -100,6 +100,8 @@ That command will start a server and watch the source files, regenerating the si
     include:
         - docs/fr/edge
 
+**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications.*
+
 Troubleshooting
 ===============
 
