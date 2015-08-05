@@ -1,29 +1,31 @@
 <a class="scroll-point pt-top" name="top">
 </a>
-<div id="header">
-    <div class="wrap">
-        <a class="logo" href="{{ site.baseurl }}/#top"></a>
-        <div class="menu">
-            <a href="{{ site.baseurl }}/#about">About</a>
-            <a href="{{ site.baseurl }}/#news">News</a>
-            <a href="{{ site.data.index-config.sitemap.docs.url }}">Documentation</a>
-            <a href="http://plugins.cordova.io/">Plugins</a>
-            <a href="{{ site.baseurl }}/#links">Quick Links</a>
-            <a href="{{ site.baseurl }}/#contribute">Contribute</a>
-            <a href="{{ site.baseurl }}/#mailing-list">Mailing List</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img id="logo_top" src="{{ site.baseurl }}/static/img/logo_full_2.svg"/></a>
         </div>
-        <form class="menu-dropdown">
-            <select onchange="location = this.options[this.selectedIndex].value;">
-                <option value="{{ site.baseurl }}/#about">About</option>
-                <option value="{{ site.baseurl }}/#news">News</option>
-                <option value="{{ site.data.index-config.sitemap.docs.url }}">Documentation</option>
-                <option value="http://plugins.cordova.io/">Plugins</option>
-                <option value="{{ site.baseurl }}/#links">Quick Links</option>
-                <option value="{{ site.baseurl }}/#contribute">Contribute</option>
-                <option value="{{ site.baseurl }}/#mailing-list">Mailing List</option>
-            </select>
-        </form>
-    </div>
-    <div class="shadow"></div>
-</div> <!-- /header -->
-<div class="header-placeholder"></div>
+        <div id="navbar" class="navbar-collapse collapse">
+        <img class="pull-right" style="width:25px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
+            <div class="nav_bar_center">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ site.data.index-config.sitemap.docs.url }}">Documentation</a></li>
+                    <li><a href="http://plugins.cordova.io/">Plugins</a></li>
+                    <li><a href="{{ site.baseurl }}/#news">Blog</a></li>
+                    <li><a href="{{ site.baseurl }}/#contribute">Contribute</a></li>
+                    <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+<div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+
+
+
