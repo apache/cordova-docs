@@ -63,6 +63,21 @@ $badge-line-height: 1.25;
 		padding-top:60px;
 		font-size: 18px;
 	}
+	.sprite_img {
+		position:relative;
+	    left: 0px;
+	    margin: 0;
+	    padding: 0;
+		top:0;
+		width: 85px;
+   		height: 85px;
+		background-repeat: no-repeat;
+    	background-size: cover;
+		display:inline-block;
+	}
+}
+#sprite_shared_code {
+    background: url("/static/img/value-prop-sprite.svg") 0 0;
 }
 
 .navbar-brand {
@@ -94,6 +109,10 @@ img#logo_top {
 		transform:translate(-50%,-50%);
 	}
 }
+
+
+
+
 
 
 /*
