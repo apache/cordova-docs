@@ -62,7 +62,8 @@ $badge-line-height: 1.25;
     /* margin-top: -200px; */ /* Less responsive */
     transform: translateY(-100%);
 	.container {
-		padding-top:60px;
+		padding-top:55px;
+		padding-bottom:55px;
 		font-size: 18px;
 	}
 	.sprite_img {
@@ -80,9 +81,14 @@ $badge-line-height: 1.25;
 .value_prop {
 	
 }
-#sprite_shared_code {
-    background: url("/static/img/value-prop-sprite.svg") 0 0;
+
+@mixin sprite-img($a, $b) {
+	background: url("/static/img/value-prop-sprite.svg") $a $b;
 }
+
+#sprite_shared_code { @include sprite-img(0px, 0) }
+#sprite_offline { @include sprite-img(-84px, 0) }
+#sprite_apis { @include sprite-img(-84px*2, 0) }
 
 .navbar-brand {
 	padding:0;
