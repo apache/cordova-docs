@@ -1,7 +1,9 @@
+@import 'lib/bootstrap';
+
 /* Customized Variables for Bootstrap */
 $gray-base:black;
 $gray-transparent:rgba($gray-base,.8);
-$brand-primary: rgb(57, 146, 171);
+$brand-primary-darker: rgb(57, 146, 171);
 $brand-success: rgb(41, 177, 106);
 $brand-info: rgb(76, 194, 228);
 $brand-danger: rgb(241, 83, 68);
@@ -21,6 +23,14 @@ $badge-bg: $brand-danger;
 $badge-active-bg: rgb(255, 255, 255);
 $badge-line-height: 1.25;
 
+/* Other brand colors */
+$brand-gold: #F1B444;
+$brand-gold-darker: #B58733;
+$gray-50: lighten($gray-base, 50%);
+$gray-20: lighten($gray-base, 80%);
+$gray-10: lighten($gray-base, 90%);
+$brand-primary: #4CC2E4;
+
 
 #hero {
 	height:1020px;
@@ -30,17 +40,19 @@ $badge-line-height: 1.25;
 	position:relative;
 	color:white;
 	#hero_section {
-		width:660px;
-		margin:auto;
-		background-color:red;
+		width:730px;
 		font-size:18px;
+		margin-top:-100px;  /* vertically centers more accuaretly since bottom bar is absolutely positioned*/
 		#hero_section_left {
-			width:255px;
+			width:312px;
 			float:left;
 		}
 		#hero_section_right {
-			width:660px - 255px;
+			width:730px - 312px;
 			float:right;
+			div {
+				padding-bottom:20px;
+			}
 		}
 	}
 	#hero_logo {
@@ -49,19 +61,44 @@ $badge-line-height: 1.25;
 		padding-bottom:20px;
 	}
 }
+
 #hero_bottom_strip {
     position: absolute;
     top: 100%;
-    height: 200px;
+    min-height: 200px;
     background-color: rgba(128,128,128,.15);
     width: 100%;
     margin: 0;
-    margin-top: -200px;
+    /* margin-top: -200px; */ /* Less responsive */
+    transform: translateY(-100%);
 	.container {
-		padding-top:60px;
+		padding-top:55px;
+		padding-bottom:55px;
 		font-size: 18px;
 	}
+	.sprite_img {
+		position:relative;
+	    left: 0px;
+	    margin: 0;
+	    padding: 0;
+		top:0;
+		width: 85px;
+   		height: 85px;
+		background-repeat: no-repeat;
+    	background-size: cover;
+	}
 }
+.value_prop {
+	
+}
+
+@mixin sprite-img($a, $b) {
+	background: url("/static/img/value-prop-sprite.svg") $a $b;
+}
+
+#sprite_shared_code { @include sprite-img(0px, 0) }
+#sprite_offline { @include sprite-img(-84px, 0) }
+#sprite_apis { @include sprite-img(-84px*2, 0) }
 
 .navbar-brand {
 	padding:0;
@@ -72,11 +109,99 @@ img#logo_top {
 	padding:5px;
 }
 
-.nav_bar_center {
-	text-align:center;
-	height:50px;
+@media (min-width: 768px) { /* Center the navs when not collapsed */
+	.nav_bar_center {
+		text-align:center;
+		height:50px;
+	}
+	.nav_bar_center > ul {
+		display: inline-block;
+		float:none;
+	}
+  }
+  
+  
+
+
+.vertical-center-parent {
+	position: relative;
+	width:100%;
+	height:100%;
+	.vertical-center-child {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
 }
-.nav_bar_center > ul {
-	display: inline-block;
-	float:none;
+
+/*
+********* Getting Started ***********
+*/
+#current_os {
+	font-weight: bold;
+}
+.number_circle {
+    display: inline-block;
+    width: 50px;
+	height:50px;
+    padding: 8px;
+    font-size: 24px;
+    color: #ffffff;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: $brand-primary-darker;
+    border-radius: 50%;
+	margin-top: 20px;
+}
+
+.well_code {
+	@extend .well;
+	padding-bottom:19px + 50px;
+	position:relative;
+	background-color: $gray-10;
+	margin-top:46px;
+	div {
+		@extend .well_code;
+		position: absolute;
+	    top: 100%;
+	    transform: translateY(-100%);
+	    padding: 0;
+		margin:0;
+		background-color: $gray-20;
+		width: 100%;
+		margin-left:-19px;
+		button {
+			background-color: $brand-primary;
+			margin:5px;
+		}
+	}
+}
+
+
+/*
+********* Modifications to Bootstrap ***********
+*/
+button.btn {
+    border-radius: 0;
+	background-color:$brand-primary;
+	color:black;
+	border:0;
+}
+button.btn:hover {
+	color:black;
+}
+h1 {
+	color: $brand-gold-darker;
+	font-weight: normal;
+}
+h2 {
+	color: $gray-50;
+	font-size: 24px;
+}
+.badge {
+	font-size:12px;
+	margin-top:-14px;
+	padding: 1px 5px;
 }
