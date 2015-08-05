@@ -36,7 +36,14 @@ Version
 
 <h2>{{ page.toc_text }}</h2>
 <ul>
-    {% for entry in site.data.toc.[page.tocfile] %}
+    {% assign page_meta = site.data.[page.language].[page.version] %}
+    {% if page_meta.toc-manual %}
+    {% assign tocfile = page_meta.toc-manual %}
+    {% else %}
+    {% assign tocfile = page_meta.toc-manual %}
+    {% endif %}
+
+    {% for entry in tocfile %}
     <li>
         <a href="{{ entry.url | prepend: site.baseurl }}">{{ entry.name }}</a>
         {% if page.url == entry.url %}
