@@ -33,7 +33,6 @@ def main():
                 },
                 'values': {
                     'version': version_name,
-                    'tocfile': lang_name + '-' + version_name.replace('.', '-')
                 }
             })
 

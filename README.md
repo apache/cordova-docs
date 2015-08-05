@@ -13,19 +13,19 @@ On Mac OS X, install Homebrew from [this site][homebrew], and then run:
 
 On Windows, follow these steps:
 
-1. Download this Ruby installer: [installer]
-1. Run the downloaded file
-    1. Use the default installation path (usually `C:\Ruby22`)
-    1. Make sure the 'add executable to path' option is checked
-1. Download this Ruby DevKit self-extracting archive: [archive]
-1. Run this downloaded file
-    1. Use the following extraction path: `C:\Ruby22DevKit`
-    1. Open `cmd.exe` and run these commands (following any instructions they give):
+1. Download this [Ruby installer][install_ruby].
+1. Run the downloaded file.
+    1. Use the default installation path (usually `C:\Ruby22`).
+    1. Make sure the 'add executable to path' option is checked.
+1. Download the Ruby DevKit self-extracting archive from the [same website][install_ruby].
+1. Run this downloaded file.
+    1. Use the following extraction path: `C:\Ruby22DevKit`.
+1. Open `cmd.exe`
+    1. Run these commands (following any instructions they give):
 
-        ruby dk.rb init
-        ruby dk.rb install
-
-    1. Close `cmd.exe`
+            ruby dk.rb init
+            ruby dk.rb install
+    1. Close `cmd.exe`.
 
 On Linux, run the commands from [this site][ruby_linux] that apply to your Linux distribution.
 
@@ -48,15 +48,34 @@ Verify the installation by running:
     node --version
     npm --version
 
+## Python and YAML
+
+On Mac OS X and Linux, Python comes installed. To install the Python package manger, go to [its page][install_pip] and follow the instructions there.
+
+On Windows follow these steps:
+
+1. Go to [this website][python] and click the "Download Python 2.7.x" button.
+1. Run the downloaded file.
+    1. Use the default installation path (usually `C:\Python27`).
+    1. Make sure to check the options to install Pip, and to add Python to the system PATH environment variable (a restart of the machine may be required).
+
+***
+
+Verify the installation by running:
+
+    python --version
+    pip --version
+
 ## Dependencies
 
-Once Ruby and JavaScript are installed, install all dependencies by running:
+Once Ruby, Python, and JavaScript are installed, install all dependencies by running:
 
     gem install bundle
     bundle install
     npm install
+    pip install pyyaml
 
-On some systems, administrator privileges may be required for the above commands.
+On some systems, administrator privileges may be required for some of the above commands.
 
 Building
 ========
@@ -198,9 +217,12 @@ _Alternative steps (if post-review tool fails)_
 How to deploy the website
 -------------------------
 
-- the website is automatically updated on each commit.
-- the website should update within seconds.
+Take the `public` directory, copy it to SVN, and commit it.
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
+[install_ruby]: http://rubyinstaller.org/downloads/
+[nodejs]: https://nodejs.org/
+[install_pip]: https://pip.pypa.io/en/latest/installing.html
+[python]: https://www.python.org/downloads/
