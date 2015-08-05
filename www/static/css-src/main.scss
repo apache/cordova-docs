@@ -1,3 +1,5 @@
+@import 'lib/bootstrap.css';
+
 /* Customized Variables for Bootstrap */
 $gray-base:black;
 $gray-transparent:rgba($gray-base,.8);
@@ -20,6 +22,13 @@ $badge-link-hover-color: rgb(255, 255, 255);
 $badge-bg: $brand-danger;
 $badge-active-bg: rgb(255, 255, 255);
 $badge-line-height: 1.25;
+
+/* Other brand colors */
+$brand-gold: #F1B444;
+$brand-gold-darker: #B58733;
+$gray-50: lighten($gray-base, 50%);
+$gray-20: lighten($gray-base, 20%);
+$brand-primary-darker: #3992AB;
 
 
 #hero {
@@ -125,9 +134,31 @@ img#logo_top {
 	}
 }
 
+/*
+********* Getting Started ***********
+*/
+#current_os {
+	font-weight: bold;
+}
+.number_circle {
+    display: inline-block;
+    width: 50px;
+	height:50px;
+    padding: 8px;
+    font-size: 24px;
+    color: #ffffff;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: $brand-primary-darker;
+    border-radius: 50%;
+	margin-top: 20px;
+}
 
-
-
+.well_code {
+	@extend .well;
+	padding-bottom:19px + 50px;
+}
 
 
 /*
@@ -140,4 +171,17 @@ button.btn {
 }
 button.btn:hover {
 	color:black;
+}
+h1 {
+	color: $brand-gold-darker;
+	font-weight: normal;
+}
+h2 {
+	color: $gray-50;
+	font-size: 24px;
+}
+.badge {
+	font-size:12px;
+	margin-top:-14px;
+	padding: 1px 5px;
 }
