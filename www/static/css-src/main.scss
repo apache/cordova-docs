@@ -1,22 +1,23 @@
 /* Customized Variables for Bootstrap */
+$gray-base: gray;
+$brand-primary: rgb(57, 146, 171);
+$brand-success: rgb(41, 177, 106);
+$brand-info: rgb(76, 194, 228);
+$brand-danger: rgb(241, 83, 68);
+$font-family-sans-serif: Segoe UI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$border-radius-large: 8px;
+$border-radius-small: 4px;
+$caret-width-base: 5px;
+$dropdown-bg: lighten($gray-base, 20%);
+$navbar-inverse-bg: rgba(0, 0, 0, .8);
+$label-color: rgb(255, 255, 255);
+$label-link-hover-color: rgb(255, 255, 255);
+$well-bg: lighten($gray-base, 90%);
+$well-border: transparent;
+$badge-color: rgb(255, 255, 255);
+$badge-link-hover-color: rgb(255, 255, 255);
+$badge-bg: $brand-danger;
+$badge-active-bg: rgb(255, 255, 255);
+$badge-line-height: 1.25;
 
-@brand-primary: rgb(57, 146, 171);
-@brand-success: rgb(41, 177, 106);
-@brand-info: rgb(76, 194, 228);
-@brand-danger: rgb(241, 83, 68);
-@font-family-sans-serif: Segoe UI, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@border-radius-large: 8px;
-@border-radius-small: 4px;
-@caret-width-base: 5px;
-@dropdown-bg: lighten(@gray-base, 20%);
-@navbar-inverse-bg: rgba(0, 0, 0, .8);
-@label-color: rgb(255, 255, 255);
-@label-link-hover-color: rgb(255, 255, 255);
-@well-bg: lighten(@gray-base, 90%);
-@well-border: transparent;
-@badge-color: rgb(255, 255, 255);
-@badge-link-hover-color: rgb(255, 255, 255);
-@badge-bg: @brand-danger;
-@badge-active-bg: rgb(255, 255, 255);
-@badge-line-height: 1.25;
-
+@import 'blog';
