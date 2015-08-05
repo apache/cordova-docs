@@ -32,15 +32,16 @@ rdiscount:
     - footnotes
     - smart
 
-# exclude:
-#     - docs/de/
-#     - docs/en/
-#     - docs/es/
-#     - docs/fr/
-#     - docs/it/
-#     - docs/ja/
-#     - docs/ko/
-#     - docs/pl/
-#     - docs/ru/
-#     - docs/sl/
-#     - docs/zh/
+exclude:
+    - static/css-src
+    # - docs/de/
+    # - docs/en/
+    # - docs/es/
+    # - docs/fr/
+    # - docs/it/
+    # - docs/ja/
+    # - docs/ko/
+    # - docs/pl/
+    # - docs/ru/
+    # - docs/sl/
+    # - docs/zh/
