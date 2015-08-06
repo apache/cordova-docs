@@ -113,7 +113,7 @@ Generating a Version Release
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
 
-    # generate version 4.1.0 for english.
+    # generate version 4.1.0 for English.
     .\bin\incrementversion en 4.1.0
 
 QA for docs & translation
@@ -126,7 +126,7 @@ In order to maintain quality of documentation and translation, following tools c
 
 ### FixYaml tool.
 The tool `fixyaml` created to automatically fix YAML headers in the translation files after
-exporting translated content from CrowdIn. Sometimes Crowdin messup with Apache license headers 
+exporting translated content from CrowdIn. Sometimes Crowdin mess up with Apache license headers 
 and this tool created to fix that.
 
 Usage:
@@ -141,7 +141,7 @@ The tool `translationreport` currently provide two QA checks for translation.
 1. It verifies that autolinking works after translation, and that translated text point to the same pages as 
 in the original documentation.
 2. It verifies that translated and original files create same DOM structure, since after exporting from 
-Crowdin, the markdown files could contain unnescessary lines, which lead to broken HTML, and could create 
+Crowdin, the markdown files could contain unnecessary lines, which lead to broken HTML, and could create 
 not needed code sections for example.
 
 ### Validate JSDoc tool.
@@ -164,7 +164,7 @@ You will use that tool for the downloading translation from Crowdin.
 To be able to download translated content from the Crowdin you should have API key for the project.
 Please ask for it on the mailing list.
 
-After you receive access to API key, create `crowdin.yaml` coniguration file, as described in the [CrowdIn cli tool page](https://crowdin.com/page/cli-tool).
+After you receive access to API key, create `crowdin.yaml` configuration file, as described in the [CrowdIn cli tool page](https://crowdin.com/page/cli-tool).
 
 Now you ready to download content from CrowdIn.
 Run following commands (All commands here would be for NodeJS version of Crowdin CLI)
@@ -174,7 +174,7 @@ Run following commands (All commands here would be for NodeJS version of Crowdin
    `crowdin-cli export`
    
    This command collect latest translations and made them available for downloading. Without that command, the translation which you would download would be stalled.
-   Be careful with this command, since Crowdin implement throttling and allow you export content not faster then 1 time in 30 minutes, or so.
+   Be careful with this command, since Crowdin implement throttling and allow you export content not faster than 1 time in 30 minutes, or so.
 2. Download content for you language. I will use Russian as example.
 
    `crowdin-cli download -l ru -o ru.zip`
@@ -201,7 +201,7 @@ Run following commands (All commands here would be for NodeJS version of Crowdin
 
    `bin/fixyaml ru edge`
 
-7. Run generator. You should generate both English version and language which you tranlate.
+7. Run generator. You should generate both English version and language which you translate.
 
    ```
    bin/genjs en edge
@@ -251,9 +251,9 @@ Run following commands (All commands here would be for NodeJS version of Crowdin
 
     Most likely this type of errors caused by the additional lines created by Crowdin during export.
     You have to manually spot these places and remove additional lines when needed and then commit your changes to Git.
-    Most likely these erorrs reappear after next exprot from CrowdIn, so don't hunt for these errors until release, or create 
-    tool which will fix these error after each export and use it.
+    Most likely these errors reappear after next export from Crowdin, so don't hunt for these errors until release, or create 
+    tool which will fix these errors after each export and use it.
     
-13. Now you ready to create pull request with documentation to the main `crodova-docs` repository. 
+13. Now you ready to create pull request with documentation to the main `cordova-docs` repository. 
 
 Enjoy translation!!!
