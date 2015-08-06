@@ -192,7 +192,13 @@ img#logo_top {
 	h1 { color: $brand-gold; padding-bottom:0; }
 	h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
 	p, span { color: $gray-40; text-align: left; }
+}
 
+.supported_platforms {
+	background-color:gray;
+}
+.platform_logos {
+	list-style-type: none;
 }
 
 /*
