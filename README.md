@@ -18,6 +18,8 @@ File Structure
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
+    template/docs/default
+    template/docs/LANGUAGE
 
 Contributing to the Documentation
 ---------------------------------
