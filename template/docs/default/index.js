@@ -45,6 +45,7 @@ function changeLanguageOrVersion(language, version, missingVersion) {
     // Uncomment to also jump to the same page. However, the server should handle missing page
     // window.location.href = '../../' + language + '/' + version + currentFile;
     var sameFile = '../../' + language + '/' + version + currentFile;
+    ga('send', 'event', 'navigation', 'lang-ver-change', { 'page': currentFile, lang: language, version: version });
     var testForSameVersion = true;
     if (testForSameVersion && window.location.protocol !== "file:") {
         var xmlhttp = new XMLHttpRequest()
@@ -54,6 +55,7 @@ function changeLanguageOrVersion(language, version, missingVersion) {
         if(xmlhttp.status == 200) {
             window.location.href = sameFile;
         } else {
+            ga('send', 'event', 'navigation', 'lang-ver-fallback', { 'page': currentFile, lang: language, version: version });
             window.location.href = '../../' + language + '/' + version + '/index.html';
         }
     } else {
@@ -84,7 +86,7 @@ function setupLanguageSelect() {
 
 function setupVersionSelect() {
     var versionElement = document.getElementById('version');
-    var languageVersions = versions[settings.lang];
+    var languageVersions = versions[settings.lang] || [];
     languageVersions.reverse().forEach(function (version) {
         var optionElement = document.createElement("option");
         optionElement.value = version;
@@ -100,25 +102,6 @@ function setupVersionSelect() {
         changeLanguageOrVersion(language, version, false);
     }, false);
 }
-
-//
-// Version and Language <select>
-//
-(function() {
-    
-    window.addEventListener('load', function() {
-        document.getElementById('header').getElementsByTagName('select')[0].addEventListener('change', function(e) {
-            var $select     = this.options[this.selectedIndex];
-            var version     = $select.value;
-            var language    = $select.parentElement.getAttribute('value');
-            var currentFile = (window.location.href.match(/\/[^\/]*$/) || ['/index.html'])[0];
-
-            // Uncomment to also jump to the same page. However, the server should handle missing page
-            // window.location.href = '../../' + language + '/' + version + currentFile;
-            //window.location.href = '../../' + language + '/' + version + '/index.html';
-        }, false);
-    }, false);
-})();
 
 //
 // API <select>
