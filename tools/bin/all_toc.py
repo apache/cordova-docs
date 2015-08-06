@@ -14,12 +14,12 @@ def main():
     arg_parser.add_argument('data')
     args = arg_parser.parse_args()
 
-    docs = args.docs
-    data = args.data
+    docs_dir = args.docs
+    data_dir = args.data
 
     # go through all languages
-    for lang_name in listdirs(docs):
-        lang_path = os.path.join(docs, lang_name)
+    for lang_name in listdirs(docs_dir):
+        lang_path = os.path.join(docs_dir, lang_name)
 
         # go through all versions
         for version_name in listdirs(lang_path):
@@ -28,8 +28,9 @@ def main():
             prefix     = '/docs/{lang}/{vers}/'.format(lang=lang_name, vers=version_name)
             source_dir = version_path
 
-            dest_path = os.path.join(data, lang_name, version_name, 'toc-auto.yml')
-            dest_dir  = os.path.dirname(dest_path)
+            dest_name    = generated_tocfile_name(lang_name, version_name)
+            dest_path    = os.path.join(data_dir, 'toc', dest_name)
+            dest_dir     = os.path.dirname(dest_path)
 
             # make the output directory if it doesn't exist
             if not os.path.exists(dest_dir):

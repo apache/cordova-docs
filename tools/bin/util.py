@@ -30,3 +30,15 @@ def mkdirp(path):
             pass
         else:
             raise
+
+def tocfile_name(language, version, suffix):
+    version_slug = version.replace('.', '-')
+    if suffix:
+        suffix = '-' + suffix
+    return '{l}-{v}{s}.yml'.format(l=language, v=version_slug, s=suffix)
+
+def manual_tocfile_name(language, version):
+    return tocfile_name(language, version, 'manual')
+
+def generated_tocfile_name(language, version):
+    return tocfile_name(language, version, 'generated')

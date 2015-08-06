@@ -27,12 +27,18 @@ def main():
 
         # configure each version scope
         for version_name in listdirs(lang_path):
+
+            manual = manual_tocfile_name(lang_name, version_name)
+            generated = generated_tocfile_name(lang_name, version_name)
+
             config['defaults'].append({
                 'scope': {
                     'path': 'docs/' + lang_name + '/' + version_name
                 },
                 'values': {
-                    'version': version_name,
+                    'version':       version_name,
+                    'manual_toc':    manual.replace('.yml', ''),
+                    'generated_toc': generated.replace('.yml', ''),
                 }
             })
 
