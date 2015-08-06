@@ -192,7 +192,47 @@ img#logo_top {
 	h1 { color: $brand-gold; padding-bottom:0; }
 	h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
 	p, span { color: $gray-40; text-align: left; }
+    padding-top: 4px;
+ 	padding-bottom: 35px;
+}
 
+.supported_platforms {
+	background-color: darken(white, 85%);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.platform_logos {
+	list-style-type: none;
+	padding-left:0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.cordova_tools_gallery {
+	color:white;
+	.card {
+			padding:8px;		
+			.card_title {
+				color: $brand-primary;
+				font-weight: bold;
+			}
+			.card_inner {
+				background-color:darken(white, 85%);
+				padding: 32px 16px 32px 16px;
+			}
+			.sample_app_thumb {
+				background-color: #AD6E6E;
+                width: 100%;
+                height: 100px;
+			}
+			img {
+				height:50px;
+				padding-bottom:5px;
+			}
+		}
+}
+.add_seemore_links {
+	margin-top:10px;
+	a {	padding-left:30px; }
 }
 
 /*

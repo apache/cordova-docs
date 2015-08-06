@@ -19,7 +19,7 @@ repo:
 source:      www
 destination: public
 
-keep_files:  [".git", ".svn", "wiki-images", "images", "downloads"]
+keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 
 lsi: false
 safe: true
