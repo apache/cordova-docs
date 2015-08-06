@@ -18,8 +18,35 @@ File Structure
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
+    docs/LANGUAGE/versions.js
+    docs/commondata.js
+    
+That's file structure of docs how they appears on the server.
+When generated these content could be found in the `public` folder, inside the project.
+
+`versions.js` is file which contains array of all doc versions for specific language. That file would be loaded by website JS 
+and allow older docs to be aware more recent version of docs. That's limit need to publish whole docs as single piece.
+
+`commondata.js` is file which contains array of all languages supported by documentation now, also . That file would be loaded by website JS 
+and allow older docs to be aware more recent translation effort of the docs and more recent version of docs. That's limit need to publish whole docs as single piece.
+    
+Source files structure
+----------------------
+    docs/
+    docs/LANGUAGE
+    docs/LANGUAGE/VERSION
+    docs/LANGUAGE/VERSION/cordova/
+    docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
     template/docs/default
     template/docs/LANGUAGE
+    
+Docs consists from two parts - Source files for each language and HTML/CSS/JS templates for the docs.
+The docs for all languages except English translated using [Crowdin](http://crowdin.com/project/cordova/). Please don't edit these in this repository, 
+these changes would be overridden by export from Crowdin.
+
+Templates are set of HTML/CSS/JS files. By default used template within `template/docs/default`. When generating docs for any language
+to the temporary folder first copied content of the default template, then copied files from specific language. That's allow override some settings for the templates 
+without need to duplicate all assets in each template.
 
 Contributing to the Documentation
 ---------------------------------
@@ -43,15 +70,17 @@ Pull requests are welcome!
 
 We appreciate the use of topic branches.
 
-    git checkout -b issue_23
+    git checkout -b CB-9923
 
     # code
 
-    git commit -m "Issue 23: Fix a bad bug."
+    git commit -m "CB-9923: Fix a bad bug."
 
-    git push origin issue_23
+    git push origin CB-9923
 
-    # send pull request from branch issue_23 to cordova:master
+    # send pull request from branch CB-9923 to cordova:master
+    
+Please don't send pull requests for the languages other then English, use [Crowdin](http://crowdin.com/project/cordova/)
 
 ### Adding a Language
 
@@ -68,11 +97,13 @@ Cordova language administrators, don't forget these steps:
 __1. config.json__
 
 For each language and version, there is a `config.json` that defines the name of the language and
-how to merge the files.
+how to merge the files. Merge files a still implemented, but not used.
 
 __2. Customizing HTML template__
 
-Each language can override the default template in `template/docs/LANGUAGE`.
+Each language can override the default template in `template/docs/LANGUAGE`. 
+You don't need copy content of whole `template/docs/default` inside language specific template,
+you just override only these files which you need modify. Other files would be picked up from `template/docs/default`.
 
 ### Editorial Guidelines
 

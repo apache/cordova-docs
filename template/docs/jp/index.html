@@ -30,12 +30,18 @@
         <link rel="stylesheet" type="text/css" href="phone.css" media="only screen and (max-device-width: 414px)">
         <link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-device-width: 1024px)">
         <link rel="stylesheet" type="text/css" href="prettify/prettify.css" />
+        <script type="text/javascript" src="../../commondata.js"></script>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
         <div id="header">
             <h1><a href="index.html">Apache <strong>Cordova</strong> Documentation</a></h1>
             <small>
-                <select></select>
+                <select id="language"></select>
+                <select id="version"></select>
+                <script>
+                setupLanguageSelect(); setupVersionSelect();
+                </script>
             </small>
         </div>
         <div id="subheader">
@@ -54,7 +60,6 @@
         </div>
 
         <!-- Functionality and Syntax Highlighting -->
-        <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="prettify/prettify.js"></script>
     </body>
 </html>

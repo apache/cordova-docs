@@ -39,10 +39,73 @@ ga('send', 'pageview');
     }, false);
 })();
 
+function changeLanguageOrVersion(language, version, missingVersion) {
+    var currentFile = (window.location.href.match(/\/[^\/]*$/) || ['/index.html'])[0];
+
+    // Uncomment to also jump to the same page. However, the server should handle missing page
+    // window.location.href = '../../' + language + '/' + version + currentFile;
+    var sameFile = '../../' + language + '/' + version + currentFile;
+    var testForSameVersion = true;
+    if (testForSameVersion && window.location.protocol !== "file:") {
+        var xmlhttp = new XMLHttpRequest()
+        xmlhttp.open('GET', sameFile, false);
+        xmlhttp.send(null);
+        console.log(xmlhttp);
+        if(xmlhttp.status == 200) {
+            window.location.href = sameFile;
+        } else {
+            window.location.href = '../../' + language + '/' + version + '/index.html';
+        }
+    } else {
+        window.location.href = sameFile;
+    }
+}
+
+function setupLanguageSelect() {
+    var languageElement = document.getElementById('language');
+    languageElement.value = settings.lang;
+    languageElement.addEventListener('change', function(e) {
+        var language    = languageElement.value;
+        var languageVersions = versions[language];
+        var hasVersionInLanguage = languageVersions.filter(function (versionString) {
+            versionString === settings.version;
+        }).length > 0;
+        if (hasVersionInLanguage) {
+            var version = settings.version;
+            var missingVersion = false;
+        } else {
+            var version = "edge";
+            var missingVersion = true;
+        }
+
+        changeLanguageOrVersion(language, version, missingVersion);
+    }, false);
+}
+
+function setupVersionSelect() {
+    var versionElement = document.getElementById('version');
+    var languageVersions = versions[settings.lang];
+    languageVersions.reverse().forEach(function (version) {
+        var optionElement = document.createElement("option");
+        optionElement.value = version;
+        optionElement.innerHTML = version;
+        versionElement.appendChild(optionElement);
+    });
+    versionElement.value = settings.version;
+    versionElement.addEventListener('change', function(e) {
+        var languageElement = document.getElementById('language');
+        var language = languageElement.value;
+        var version = versionElement.value;
+
+        changeLanguageOrVersion(language, version, false);
+    }, false);
+}
+
 //
 // Version and Language <select>
 //
 (function() {
+    
     window.addEventListener('load', function() {
         document.getElementById('header').getElementsByTagName('select')[0].addEventListener('change', function(e) {
             var $select     = this.options[this.selectedIndex];
@@ -52,7 +115,7 @@ ga('send', 'pageview');
 
             // Uncomment to also jump to the same page. However, the server should handle missing page
             // window.location.href = '../../' + language + '/' + version + currentFile;
-            window.location.href = '../../' + language + '/' + version + '/index.html';
+            //window.location.href = '../../' + language + '/' + version + '/index.html';
         }, false);
     }, false);
 })();

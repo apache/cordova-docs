@@ -133,6 +133,10 @@ h1, ul, li {
   text-shadow:-1px 1px 1px #666666;
 }
 
+select#version {
+    width: 60px;
+}
+
 #sidebar .vertical_divider {
   background-color:#CCCCCC;
   bottom:0px;
