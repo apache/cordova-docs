@@ -72,7 +72,9 @@ gulp.task("watch", function () {
     );
     gulp.watch(
         [
-            path.join("**", "*.yml"),
+            CONFIG_FILE,
+            DEFAULTS_FILE,
+            path.join(DATA_DIR, "**", "*.yml"),
             path.join(SOURCE_DIR, "**", "*.html"),
             path.join(SOURCE_DIR, "**", "*.md"),
             path.join(SOURCE_DIR, "**", "*.js"),
@@ -133,7 +135,7 @@ gulp.task("link-bugs", function (done) {
 
 gulp.task("clean", function () {
     fse.remove(BUILD_DIR);
-    fse.remove(path.join(DATA_DIR, "toc", "*.yml"));
+    fse.remove(path.join(DATA_DIR, "toc", "*-generated.yml"));
     fse.remove(CSS_OUT_DIR);
     fse.remove(LANGUAGES_FILE);
     fse.remove(DEFAULTS_FILE);

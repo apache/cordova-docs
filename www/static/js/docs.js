@@ -34,7 +34,7 @@ $(document).ready(function () {
         },
         'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
             $('#' + prefix + i).addClass('page-toc-anchor');
-            return $heading[0].tagName.toLowerCase();
+            return '';
         }
     });
 });
