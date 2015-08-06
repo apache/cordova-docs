@@ -1,5 +1,5 @@
 {
-    "language": "German",
+    "language": "Deutsch",
     "merge": {
         "events.md": [
             "cordova/events/events.md",
