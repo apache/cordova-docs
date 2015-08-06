@@ -46,12 +46,20 @@ def generate(source_dir, prefix):
 
     toc = []
 
+    # normalize paths because they get used verbatim later
+    source_dir = os.path.normpath(source_dir)
+    prefix     = os.path.normpath(prefix)
+
     # walk the tree
     for dir_root, dir_names, page_names in os.walk(source_dir):
 
-        # get the URL prefix for pages in this directory
+        # get the directory name for this pages relative to the source_dir
         dir_prefix = dir_root.replace(source_dir, '')
-        url_prefix = prefix + dir_prefix
+        if dir_prefix.startswith('/'):
+            dir_prefix = dir_prefix[1:]
+
+        # compute the URL prefix for this page
+        url_prefix = os.path.join(prefix, dir_prefix)
 
         # process each file
         for page_name in page_names:
@@ -73,7 +81,7 @@ def generate(source_dir, prefix):
                 'url': page_url
             })
 
-    return yaml.dump(toc)
+    return yaml.dump(sorted(toc, key=lambda x: x["name"]))
 
 def main():
 

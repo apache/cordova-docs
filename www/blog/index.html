@@ -1,41 +1,41 @@
 ---
-layout: cordova
+layout: blog
 title: Apache Cordova Blog
 ---
 
 <div class="blog">
   <div id="content" class="container">
      <div class="row">
-    <div class="col-sm-8 blog-list">  
-      <div class="blogHeader">
-        <h1>Blog</h1>
-        <div>
-          <img src="{{ site.baseurl }}/static/img/subscribe.png">
-          <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
+        <div class="col-sm-8 blog-list">  
+          <div class="blogHeader">
+            <h1>Blog</h1>
+            <div>
+              <img src="{{ site.baseurl }}/static/img/subscribe.png">
+              <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
+            </div>
+          </div>
+          <ul class="posts">
+              {% for post in site.posts %}
+              <li>
+                <header>
+                  <div class="adorner"></div>
+                  <div>
+                    <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+                    <div><span class="date">{{ post.date | date_to_string }}</span><span> - by </span><span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span></div>
+                  </div>
+                </header>
+                <section class="post-excerpt">
+                  <p>{{ post.content | strip_html | truncatewords:80 }}</p>
+                  <div><a href="{{ site.baseurl }}{{ post.url }}">More...</a></div>
+                </section>
+              </li>
+              {% endfor %}
+          </ul>
+          <a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
+        </div>  
+        <div class="col-sm-4 social-container">    
+            {% include twitterFeed.html %}        
         </div>
-      </div>        
-      <ul class="posts">
-          {% for post in site.posts %}
-          <li>
-            <header>
-              <div class="adorner"></div>
-              <div> 
-                <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
-                <div><span class="date">{{ post.date | date_to_string }}</span><span> - by </span><span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span></div>
-              </div>
-            </header>
-            <section class="post-excerpt">
-              <p>{{ post.content | strip_html | truncatewords:80 }}</p>
-              <div><a href="{{ site.baseurl }}{{ post.url }}">More...</a></div>
-            </section>
-          </li>
-          {% endfor %}
-      </ul>
-      <a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
-    </div>  
-    <div class="col-sm-4 social-container">    
-        {% include twitterFeed.html %}        
-    </div>
-     </div>      
+     </div> 
   </div>
 </div>

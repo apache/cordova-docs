@@ -15,10 +15,12 @@ var header      = require("gulp-header");
 
 // constants
 var CONFIG_FILES = ["_config.yml", "_defaults.yml"];
-var JEKYLL_FLAGS = ["--trace", "--config", CONFIG_FILES.join(",")];
+var DEV_FLAGS    = ["--config", CONFIG_FILES.concat(["_dev.yml"]).join(","), "--trace"];
+var PROD_FLAGS   = ["--config", CONFIG_FILES.concat(["_prod.yml"]).join(",")];
 
 var SOURCE_DIR = "www";
 var BUILD_DIR  = "public";
+var DEPLOY_DIR = "deploy";
 
 var WATCH_INTERVAL = 1000; // in milliseconds
 
@@ -49,7 +51,7 @@ function bin(name) {
 }
 
 // tasks
-gulp.task("default", ["build"], function () {
+gulp.task("default", ["build-dev"], function () {
     gulp.run("serve");
     gulp.run("watch");
 });
@@ -60,7 +62,7 @@ gulp.task("watch", function () {
             path.join(CSS_SRC_DIR, "**", "*"),
         ],
         {interval: WATCH_INTERVAL},
-        ["styles", "regenerate"]
+        ["styles", "regen-dev"]
     );
     gulp.watch(
         [
@@ -68,32 +70,45 @@ gulp.task("watch", function () {
             path.join(DOCS_DIR, "**", "*.html"),
         ],
         {interval: WATCH_INTERVAL},
-        ["configs", "regenerate"]
+        ["configs", "regen-dev"]
     );
     gulp.watch(
         [
-            path.join("**", "*.yml"),
+            CONFIG_FILE,
+            DEFAULTS_FILE,
+            path.join(DATA_DIR, "**", "*.yml"),
             path.join(SOURCE_DIR, "**", "*.html"),
             path.join(SOURCE_DIR, "**", "*.md"),
             path.join(SOURCE_DIR, "**", "*.js"),
             path.join(CSS_OUT_DIR, "**", "*.css"),
         ],
         {interval: WATCH_INTERVAL},
-        ["regenerate"]
+        ["regen-dev"]
     );
 });
 
-gulp.task("generate", function (done) {
-    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(JEKYLL_FLAGS), done);
+gulp.task("gen-dev", function (done) {
+    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(DEV_FLAGS), done);
 });
 
-gulp.task("regenerate", ["generate"], function () {
+gulp.task("regen-dev", ["gen-dev"], function () {
     browsersync.reload();
 });
 
-gulp.task("build", ["styles", "configs"], function () {
-    gulp.run("generate");
+gulp.task("build-dev", ["configs", "styles"], function () {
+    gulp.run("gen-dev");
 });
+
+gulp.task("gen-prod", function (done) {
+    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(PROD_FLAGS), done);
+});
+
+gulp.task("build-prod", ["configs", "styles"], function (done) {
+    gulp.run("gen-prod");
+});
+
+gulp.task("build", ["build-dev"]);
+gulp.task("deploy", ["build-prod"]);
 
 gulp.task("serve", function (done) {
     browsersync({
@@ -133,7 +148,8 @@ gulp.task("link-bugs", function (done) {
 
 gulp.task("clean", function () {
     fse.remove(BUILD_DIR);
-    fse.remove(path.join(DATA_DIR, "toc", "*.yml"));
+    fse.remove(DEPLOY_DIR);
+    fse.remove(path.join(DATA_DIR, "toc", "*-generated.yml"));
     fse.remove(CSS_OUT_DIR);
     fse.remove(LANGUAGES_FILE);
     fse.remove(DEFAULTS_FILE);

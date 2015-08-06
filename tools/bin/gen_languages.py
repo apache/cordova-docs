@@ -1,8 +1,24 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
 import yaml
 
 from util import *
+
+LANGUAGE_MAP = {
+    'de': u'Deutsch',
+    'en': u'English',
+    'es': u'Español',
+    'fr': u'Français',
+    'it': u'Italiano',
+    'ja': u'日本語',
+    'ko': u'한국어',
+    'pl': u'Polski',
+    'ru': u'Русский',
+    'sl': u'Slovene',
+    'zh': u'汉语',
+}
 
 def main():
 
@@ -10,13 +26,13 @@ def main():
     config   = {}
 
     # extract configuration
-    for lang_name in listdirs(root_dir):
+    for lang_id in listdirs(root_dir):
 
-        lang_path     = os.path.join(root_dir, lang_name)
+        lang_path     = os.path.join(root_dir, lang_id)
         version_names = list(listdirs(lang_path))
 
-        config[lang_name] = {
-            'name':     lang_name,
+        config[lang_id] = {
+            'name':     LANGUAGE_MAP[lang_id],
             'versions': version_names
         }
 

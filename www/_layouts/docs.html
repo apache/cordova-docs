@@ -1,18 +1,14 @@
 ---
 layout: cordova
+docs_tab: true
 ---
 
 <div class="container">
 
-    {% if page.version != 'edge' %}
-    <div class="alert alert-danger">
-        {{ page.not_latest_warning_text }}
-    </div>
-    {% endif %}
-
-    <div class="col-xs-3">
-        <h2>{{ page.toc_text }}</h2>
-        <ul>
+    <!-- Table of Contents -->
+    <div class="col-xs-3 site-toc-container">
+        <h2 class="site-toc-title">{{ page.toc_text }}</h2>
+        <ul class="site-toc">
             {% assign toc_dir = site.data.toc %}
             {% if toc_dir.[page.manual_toc] %}
                 {% assign tocfile = toc_dir.[page.manual_toc] %}
@@ -22,18 +18,30 @@ layout: cordova
 
             {% for entry in tocfile %}
             <li>
-                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.name }}</a>
+                <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+                    {{ entry.name }}
+                </a>
                 {% if page.url == entry.url %}
-                <div id="page-toc"></div>
+                    <div id="page-toc" class="page-toc"></div>
+                {% else %}
+                <!-- DEBUG: {{ page.url }} != {{ entry.url }} -->
                 {% endif %}
             </li>
             {% endfor %}
         </ul>
     </div>
 
-    <div id="page-toc-source" class="col-xs-9">
-        <div class="row">
-            <a href="{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}">Edit</a>
+    <!-- Page content -->
+    <div id="page-toc-source" class="col-xs-8 col-xs-offset-4">
+        <div class="row content-header">
+            {% if page.version != 'edge' %}
+            <a class="btn btn-sm btn-warning" href="{{ site.baseurl }}{{ page.url|replace:page.version,'edge' }}">
+                {{ page.not_latest_warning_text }}
+            </a>
+            {% endif %}
+            <a class="edit" href="{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
+            </a>
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Language
@@ -45,7 +53,7 @@ layout: cordova
                     {% assign language    = language_entry[1] %}
                     <li>
                         {% if language.versions contains page.version %}
-                        <a href="{{ site.baseurl }}/docs/{{ language_id }}/{{ page.version }}">
+                        <a href="{{ site.baseurl }}{{ page.url | replace:page.language,language_id }}">
                         {% else %}
                         <a href="#" class="missing-version">
                         {% endif %}
@@ -63,7 +71,7 @@ layout: cordova
                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                     {% for version in site.data.languages.[page.language].versions %}
                     <li>
-                        <a href="{{ site.baseurl }}/docs/{{ page.language }}/{{ version }}">
+                        <a href="{{ site.baseurl }}{{ page.url | replace:page.version,version }}">
                             {{ version }}
                         </a>
                     </li>

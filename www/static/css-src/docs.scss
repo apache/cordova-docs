@@ -1,13 +1,77 @@
-.toc-active a {
-    color: red;
+@import 'main';
+
+.site-toc-container {
+    position: fixed;
+}
+.site-toc-title {
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
+/* outer ToC for the site */
+.site-toc {
+    padding: 0px;
+}
+.site-toc li {
+    list-style: none;
+}
+.site-toc > li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0.5em 0em;
+}
+.site-toc > li .this-page {
+    font-weight: bold;
+}
+
+/* inner ToC for the page */
+.page-toc ul {
+    padding: 14px 0px 0px 0px;
+}
+.page-toc ul > li {
+    padding: 0.5em 0em 0.5em 1em;
+    font-size: 14px;
+    border-left: 0.5em solid rgba($brand-primary, 0.5);
+}
+.page-toc ul > li.toc-active {
+    font-weight: bold;
+    border-left: 0.5em solid $brand-primary;
+}
+
+/* header above page content */
+.content-header {
+    text-align: right;
+    margin-top: 22px;
+}
+.content-header .dropdown {
+    display: inline-block;
+    margin-left: 0.3em;
+}
+.content-header .dropdown button.dropdown-toggle {
+    border-radius: 4px;
+    background-color: rgb(214, 214, 214);
+    &:hover {
+        background-color: rgb(191, 191, 191);
+    }
+}
+.content-header .edit {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+/*
+ * the id that gets assigned to each heading in a page,
+ * and which gets referred by the <a>s in the page ToC
+ */
 .page-toc-anchor {
     display: block;
     position: relative;
     bottom: 50px;
 }
 
+/* missing version highlight */
 .missing-version {
-    color: red !important;
+    color: gray !important;
 }

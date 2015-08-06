@@ -1,4 +1,5 @@
 public
+deploy
 *.pyc
 _defaults.yml
 www/_data/languages.yml
