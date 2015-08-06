@@ -1,5 +1,5 @@
 .blog{
-	padding-top: 50px;	
+	padding-top:20px;	
 	.blogHeader{	
 		position: relative;
 		padding-bottom:26px;
@@ -26,10 +26,11 @@
 			}	
 		}					
 	}
-		
+	//landing page
 	.blog-list{
-		width: 680px;
+		max-width: 700px;
 		padding-top: 30px;
+		padding-right: 30px;
 		
 		ul {
 			list-style-type: none;
@@ -88,8 +89,8 @@
 	}
 	
 	.social-container{
-		width: 330px;
-		padding-top: 124px;
+		max-width: 360px;
+		padding-top: 140px;
 		
 		.container{
 			background-color: #f2f2f2;
@@ -156,7 +157,7 @@
 						}
 						.content{
 							color: black;
-							padding-top: 2px;
+							padding-top: 4px;
 							padding-left: 1px;
 						}													
 					}
@@ -177,4 +178,49 @@
 	
 	}
 	
+	
+	//blog post page
+	.post{
+		padding:0 40px;
+		
+		header{
+
+			.title{
+				color: #3992ab;
+				font-size: 30pt;
+			}
+			.author, .date{
+				font-size: 14pt;
+				color: #999;
+				padding: 0 2px;			
+			}
+			.date{
+				float:right;
+				position: relative;
+				top:-20pt;		
+			}						
+		}		
+		section{
+			padding: 40px 0;
+			color: black;
+		}
+	}
+	
+	
 }
+           
+//         <div class="post">
+//             <header>
+//               <div class="title">{{ page.title }}</div>
+//               <div class="author">By: {{ page.author.name }}</div>
+//               <div class="date">{{ page.date | date_to_string }}</div>
+//             </header>
+//             <section>
+//               <div class="content">
+//                 {{ content }}
+//               </div>
+//             </section>          
+//         </div>           
+//      </div>      
+//   </div>
+// </div>
