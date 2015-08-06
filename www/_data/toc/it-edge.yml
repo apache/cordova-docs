@@ -1,0 +1,91 @@
+- {name: Guide, url: \docs\it\edge\index.html}
+- {name: Icone e Splash screen, url: \docs\it\edge\config_ref\images.html}
+- {name: Il File config. Xml, url: \docs\it\edge\config_ref\index.html}
+- {name: backbutton, url: \docs\it\edge\cordova\events\events.backbutton.html}
+- {name: deviceready, url: \docs\it\edge\cordova\events\events.deviceready.html}
+- {name: endcallbutton, url: \docs\it\edge\cordova\events\events.endcallbutton.html}
+- {name: Eventi, url: \docs\it\edge\cordova\events\events.html}
+- {name: menubutton, url: \docs\it\edge\cordova\events\events.menubutton.html}
+- {name: pause, url: \docs\it\edge\cordova\events\events.pause.html}
+- {name: resume, url: \docs\it\edge\cordova\events\events.resume.html}
+- {name: searchbutton, url: \docs\it\edge\cordova\events\events.searchbutton.html}
+- {name: startcallbutton, url: \docs\it\edge\cordova\events\events.startcallbutton.html}
+- {name: volumedownbutton, url: \docs\it\edge\cordova\events\events.volumedownbutton.html}
+- {name: volumeupbutton, url: \docs\it\edge\cordova\events\events.volumeupbutton.html}
+- {name: Plugin API, url: \docs\it\edge\cordova\plugins\pluginapis.html}
+- {name: Archiviazione, url: \docs\it\edge\cordova\storage\storage.html}
+- {name: openDatabase, url: \docs\it\edge\cordova\storage\storage.opendatabase.html}
+- {name: Database, url: \docs\it\edge\cordova\storage\database\database.html}
+- {name: localStorage, url: \docs\it\edge\cordova\storage\localstorage\localstorage.html}
+- {name: database_displayname, url: \docs\it\edge\cordova\storage\parameters\display_name.html}
+- {name: database_name, url: \docs\it\edge\cordova\storage\parameters\name.html}
+- {name: database_size, url: \docs\it\edge\cordova\storage\parameters\size.html}
+- {name: database_version, url: \docs\it\edge\cordova\storage\parameters\version.html}
+- {name: SQLError, url: \docs\it\edge\cordova\storage\sqlerror\sqlerror.html}
+- {name: SQLResultSet, url: \docs\it\edge\cordova\storage\sqlresultset\sqlresultset.html}
+- {name: SQLResultSetRowList, url: \docs\it\edge\cordova\storage\sqlresultsetrowlist\sqlresultsetrowlist.html}
+- {name: SQLTransaction, url: \docs\it\edge\cordova\storage\sqltransaction\sqltransaction.html}
+- {name: Guida di ganci, url: \docs\it\edge\guide\appdev\hooks\index.html}
+- {name: Guida sulla privacy, url: \docs\it\edge\guide\appdev\privacy\index.html}
+- {name: Guida alla sicurezza, url: \docs\it\edge\guide\appdev\security\index.html}
+- {name: Guida di whitelist, url: \docs\it\edge\guide\appdev\whitelist\index.html}
+- {name: L'interfaccia della riga di comando, url: \docs\it\edge\guide\cli\index.html}
+- {name: Guida allo sviluppo di plugin, url: \docs\it\edge\guide\hybrid\plugins\index.html}
+- {name: Incorporamento visualizzazioni Web, url: \docs\it\edge\guide\hybrid\webviews\index.html}
+- {name: Prossimi passi, url: \docs\it\edge\guide\next\index.html}
+- {name: Panoramica, url: \docs\it\edge\guide\overview\index.html}
+- {name: Piattaforma guide, url: \docs\it\edge\guide\platforms\index.html}
+- {name: Configurazione di fuoco OS Amazon, url: \docs\it\edge\guide\platforms\amazonfireos\config.html}
+- {name: Amazon fuoco piattaforma OS guida, url: \docs\it\edge\guide\platforms\amazonfireos\index.html}
+- {name: Amazon fuoco OS Plugins, url: \docs\it\edge\guide\platforms\amazonfireos\plugin.html}
+- {name: Amazon fuoco OS visualizzazioni Web, url: \docs\it\edge\guide\platforms\amazonfireos\webview.html}
+- {name: Configurazione Android, url: \docs\it\edge\guide\platforms\android\config.html}
+- {name: Guida piattaforma Android, url: \docs\it\edge\guide\platforms\android\index.html}
+- {name: Plugin Android, url: \docs\it\edge\guide\platforms\android\plugin.html}
+- {name: Shell Android strumento guida, url: \docs\it\edge\guide\platforms\android\tools.html}
+- {name: L'aggiornamento di Android, url: \docs\it\edge\guide\platforms\android\upgrade.html}
+- {name: L'aggiornamento di Android, url: \docs\it\edge\guide\platforms\android\upgrading.html}
+- {name: Visualizzazioni Web Android, url: \docs\it\edge\guide\platforms\android\webview.html}
+- {name: Configurazione di blackBerry, url: \docs\it\edge\guide\platforms\blackberry\config.html}
+- {name: Guida piattaforma blackBerry, url: \docs\it\edge\guide\platforms\blackberry\index.html}
+- {name: BlackBerry Plugins, url: \docs\it\edge\guide\platforms\blackberry\plugin.html}
+- {name: Strumenti della riga di comando di blackBerry, url: \docs\it\edge\guide\platforms\blackberry\tools.html}
+- {name: L'aggiornamento di BlackBerry, url: \docs\it\edge\guide\platforms\blackberry\upgrade.html}
+- {name: L'aggiornamento di BlackBerry, url: \docs\it\edge\guide\platforms\blackberry\upgrading.html}
+- {name: Configurazione di blackBerry 10, url: \docs\it\edge\guide\platforms\blackberry10\config.html}
+- {name: Guida piattaforma blackBerry 10, url: \docs\it\edge\guide\platforms\blackberry10\index.html}
+- {name: BlackBerry 10 plugin, url: \docs\it\edge\guide\platforms\blackberry10\plugin.html}
+- {name: BlackBerry 10 Shell strumento guida, url: \docs\it\edge\guide\platforms\blackberry10\tools.html}
+- {name: L'aggiornamento di BlackBerry 10, url: \docs\it\edge\guide\platforms\blackberry10\upgrade.html}
+- {name: L'aggiornamento di BlackBerry 10, url: \docs\it\edge\guide\platforms\blackberry10\upgrading.html}
+- {name: Configurazione FirefoxOS, url: \docs\it\edge\guide\platforms\firefoxos\config.html}
+- {name: Firefox guida piattaforma OS, url: \docs\it\edge\guide\platforms\firefoxos\index.html}
+- {name: Configurazione iOS, url: \docs\it\edge\guide\platforms\ios\config.html}
+- {name: iOS guida piattaforma, url: \docs\it\edge\guide\platforms\ios\index.html}
+- {name: iOS Plugins, url: \docs\it\edge\guide\platforms\ios\plugin.html}
+- {name: iOS guida strumento Shell, url: \docs\it\edge\guide\platforms\ios\tools.html}
+- {name: L'aggiornamento iOS, url: \docs\it\edge\guide\platforms\ios\upgrade.html}
+- {name: L'aggiornamento iOS, url: \docs\it\edge\guide\platforms\ios\upgrading.html}
+- {name: iOS visualizzazioni Web, url: \docs\it\edge\guide\platforms\ios\webview.html}
+- {name: Tizen piattaforma guida, url: \docs\it\edge\guide\platforms\tizen\index.html}
+- {name: Piattaforma ubuntu guida, url: \docs\it\edge\guide\platforms\ubuntu\index.html}
+- {name: Guida alla piattaforma Windows, url: \docs\it\edge\guide\platforms\win8\index.html}
+- {name: Imballaggio di Windows, url: \docs\it\edge\guide\platforms\win8\packaging.html}
+- {name: Plugin di Windows, url: \docs\it\edge\guide\platforms\win8\plugin.html}
+- {name: Strumenti della riga di comando di Windows 8, url: \docs\it\edge\guide\platforms\win8\tools.html}
+- {name: L'aggiornamento di Windows 8, url: \docs\it\edge\guide\platforms\win8\upgrade.html}
+- {name: L'aggiornamento di Windows 8, url: \docs\it\edge\guide\platforms\win8\upgrading.html}
+- {name: Guida introduttiva a Windows 10, url: \docs\it\edge\guide\platforms\win8\win10-support.html}
+- {name: Guida di piattaforma Windows Phone 7, url: \docs\it\edge\guide\platforms\wp7\index.html}
+- {name: Guida di Windows Phone 8 piattaforma, url: \docs\it\edge\guide\platforms\wp8\index.html}
+- {name: Configurazione di Parallels Desktop, url: \docs\it\edge\guide\platforms\wp8\parallels.html}
+- {name: Windows Phone 8 plugin, url: \docs\it\edge\guide\platforms\wp8\plugin.html}
+- {name: Windows Phone strumenti da riga di comando, url: \docs\it\edge\guide\platforms\wp8\tools.html}
+- {name: L'aggiornamento di Windows Phone 8, url: \docs\it\edge\guide\platforms\wp8\upgrade.html}
+- {name: L'aggiornamento di Windows Phone, url: \docs\it\edge\guide\platforms\wp8\upgrading.html}
+- {name: Configurazione di VMWare Fusion, url: \docs\it\edge\guide\platforms\wp8\vmware.html}
+- {name: 'Windows Phone visualizzazioni 8,0 Web', url: \docs\it\edge\guide\platforms\wp8\webview.html}
+- {name: Supporto di piattaforma, url: \docs\it\edge\guide\support\index.html}
+- {name: Piattaforme e gestione plugin versione, url: \docs\it\edge\platform_plugin_versioning_ref\index.html}
+- {name: L'utilizzo di Plugman per gestire i plugin, url: \docs\it\edge\plugin_ref\plugman.html}
+- {name: Plugin Specification, url: \docs\it\edge\plugin_ref\spec.html}

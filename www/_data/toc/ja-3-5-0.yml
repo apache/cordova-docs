@@ -1,0 +1,106 @@
+- {name: !!python/str "\u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\index.html}
+- {name: !!python/str "\u30A2\u30A4\u30B3\u30F3\u3068\u30B9\u30D7\u30E9\u30C3\u30B7\
+    \u30E5\u753B\u9762", url: \docs\ja\3.5.0\config_ref\images.html}
+- {name: !!python/str "Config.xml \u30D5\u30A1\u30A4\u30EB", url: \docs\ja\3.5.0\config_ref\index.html}
+- {name: backbutton, url: \docs\ja\3.5.0\cordova\events\events.backbutton.html}
+- {name: deviceready, url: \docs\ja\3.5.0\cordova\events\events.deviceready.html}
+- {name: endcallbutton, url: \docs\ja\3.5.0\cordova\events\events.endcallbutton.html}
+- {name: !!python/str "\u30A4\u30D9\u30F3\u30C8", url: \docs\ja\3.5.0\cordova\events\events.html}
+- {name: menubutton, url: \docs\ja\3.5.0\cordova\events\events.menubutton.html}
+- {name: !!python/str "\u4E00\u6642\u505C\u6B62\u3057\u307E\u3059\u3002", url: \docs\ja\3.5.0\cordova\events\events.pause.html}
+- {name: !!python/str "\u518D\u958B", url: \docs\ja\3.5.0\cordova\events\events.resume.html}
+- {name: searchbutton, url: \docs\ja\3.5.0\cordova\events\events.searchbutton.html}
+- {name: startcallbutton, url: \docs\ja\3.5.0\cordova\events\events.startcallbutton.html}
+- {name: volumedownbutton, url: \docs\ja\3.5.0\cordova\events\events.volumedownbutton.html}
+- {name: volumeupbutton, url: \docs\ja\3.5.0\cordova\events\events.volumeupbutton.html}
+- {name: !!python/str "\u30D7\u30E9\u30B0\u30A4\u30F3 Api", url: \docs\ja\3.5.0\cordova\plugins\pluginapis.html}
+- {name: !!python/str "\u30B9\u30C8\u30EC\u30FC\u30B8", url: \docs\ja\3.5.0\cordova\storage\storage.html}
+- {name: openDatabase, url: \docs\ja\3.5.0\cordova\storage\storage.opendatabase.html}
+- {name: !!python/str "\u30C7\u30FC\u30BF\u30D9\u30FC\u30B9", url: \docs\ja\3.5.0\cordova\storage\database\database.html}
+- {name: localStorage, url: \docs\ja\3.5.0\cordova\storage\localstorage\localstorage.html}
+- {name: database_displayname, url: \docs\ja\3.5.0\cordova\storage\parameters\display_name.html}
+- {name: database_name, url: \docs\ja\3.5.0\cordova\storage\parameters\name.html}
+- {name: database_size, url: \docs\ja\3.5.0\cordova\storage\parameters\size.html}
+- {name: database_version, url: \docs\ja\3.5.0\cordova\storage\parameters\version.html}
+- {name: SQLError, url: \docs\ja\3.5.0\cordova\storage\sqlerror\sqlerror.html}
+- {name: SQLResultSet, url: \docs\ja\3.5.0\cordova\storage\sqlresultset\sqlresultset.html}
+- {name: SQLResultSetRowList, url: \docs\ja\3.5.0\cordova\storage\sqlresultsetrowlist\sqlresultsetrowlist.html}
+- {name: SQLTransaction, url: \docs\ja\3.5.0\cordova\storage\sqltransaction\sqltransaction.html}
+- {name: !!python/str "\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\appdev\privacy\index.html}
+- {name: !!python/str "\u30DB\u30EF\u30A4\u30C8 \u30EA\u30B9\u30C8 \u30AC\u30A4\u30C9",
+  url: \docs\ja\3.5.0\guide\appdev\whitelist\index.html}
+- {name: !!python/str "\u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3 \u30A4\u30F3\u30BF\
+    \u30FC\u30D5\u30A7\u30A4\u30B9", url: \docs\ja\3.5.0\guide\cli\index.html}
+- {name: !!python/str "\u30D7\u30E9\u30B0\u30A4\u30F3\u958B\u767A\u30AC\u30A4\u30C9",
+  url: \docs\ja\3.5.0\guide\hybrid\plugins\index.html}
+- {name: !!python/str "\u57CB\u3081\u8FBC\u307F web \u8868\u793A", url: \docs\ja\3.5.0\guide\hybrid\webviews\index.html}
+- {name: !!python/str "\u6982\u8981", url: \docs\ja\3.5.0\guide\overview\index.html}
+- {name: !!python/str "\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u306E\u30AC\
+    \u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\index.html}
+- {name: !!python/str "\u30A2\u30DE\u30BE\u30F3\u706B OS \u69CB\u6210", url: \docs\ja\3.5.0\guide\platforms\amazonfireos\config.html}
+- {name: !!python/str "\u30A2\u30DE\u30BE\u30F3\u706B OS \u30D7\u30E9\u30C3\u30C8\u30D5\
+    \u30A9\u30FC\u30E0 \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\amazonfireos\index.html}
+- {name: !!python/str "\u30A2\u30DE\u30BE\u30F3\u706B OS \u30D7\u30E9\u30B0\u30A4\u30F3",
+  url: \docs\ja\3.5.0\guide\platforms\amazonfireos\plugin.html}
+- {name: !!python/str "\u30A2\u30DE\u30BE\u30F3\u706B OS web \u8868\u793A", url: \docs\ja\3.5.0\guide\platforms\amazonfireos\webview.html}
+- {name: !!python/str "Android \u306E\u69CB\u6210", url: \docs\ja\3.5.0\guide\platforms\android\config.html}
+- {name: !!python/str "Android \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0 \u30AC\
+    \u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\android\index.html}
+- {name: !!python/str "Android \u306E\u30D7\u30E9\u30B0\u30A4\u30F3", url: \docs\ja\3.5.0\guide\platforms\android\plugin.html}
+- {name: !!python/str "Android \u306E\u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3 \u30C4\
+    \u30FC\u30EB", url: \docs\ja\3.5.0\guide\platforms\android\tools.html}
+- {name: !!python/str "Android \u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9",
+  url: \docs\ja\3.5.0\guide\platforms\android\upgrading.html}
+- {name: !!python/str "Android \u306E web \u8868\u793A", url: \docs\ja\3.5.0\guide\platforms\android\webview.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC\u306E\u69CB\u6210",
+  url: \docs\ja\3.5.0\guide\platforms\blackberry\config.html}
+- {name: !!python/str "BlackBerry \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\
+    \ \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\blackberry\index.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC\u306E\u30D7\u30E9\
+    \u30B0\u30A4\u30F3", url: \docs\ja\3.5.0\guide\platforms\blackberry\plugin.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC\u306E\u30B3\u30DE\
+    \u30F3\u30C9 \u30E9\u30A4\u30F3 \u30C4\u30FC\u30EB", url: \docs\ja\3.5.0\guide\platforms\blackberry\tools.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC\u306E\u30A2\u30C3\
+    \u30D7\u30B0\u30EC\u30FC\u30C9", url: \docs\ja\3.5.0\guide\platforms\blackberry\upgrading.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC 10 \u69CB\u6210",
+  url: \docs\ja\3.5.0\guide\platforms\blackberry10\config.html}
+- {name: !!python/str "BlackBerry 10 \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\
+    \ \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\blackberry10\index.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC 10 \u30D7\u30E9\u30B0\
+    \u30A4\u30F3", url: \docs\ja\3.5.0\guide\platforms\blackberry10\plugin.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC 10 \u30B3\u30DE\u30F3\
+    \u30C9 \u30E9\u30A4\u30F3 \u30C4\u30FC\u30EB", url: \docs\ja\3.5.0\guide\platforms\blackberry10\tools.html}
+- {name: !!python/str "\u30D6\u30E9\u30C3\u30AF\u30D9\u30EA\u30FC 10 \u306E\u30A2\u30C3\
+    \u30D7\u30B0\u30EC\u30FC\u30C9", url: \docs\ja\3.5.0\guide\platforms\blackberry10\upgrading.html}
+- {name: !!python/str "FirefoxOS \u69CB\u6210", url: \docs\ja\3.5.0\guide\platforms\firefoxos\config.html}
+- {name: !!python/str "iOS \u69CB\u6210", url: \docs\ja\3.5.0\guide\platforms\ios\config.html}
+- {name: !!python/str "iOS \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0 \u30AC\
+    \u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\ios\index.html}
+- {name: !!python/str "iOS \u306E\u30D7\u30E9\u30B0\u30A4\u30F3", url: \docs\ja\3.5.0\guide\platforms\ios\plugin.html}
+- {name: !!python/str "iOS \u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3 \u30C4\u30FC\
+    \u30EB", url: \docs\ja\3.5.0\guide\platforms\ios\tools.html}
+- {name: !!python/str "IOS \u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9", url: \docs\ja\3.5.0\guide\platforms\ios\upgrading.html}
+- {name: !!python/str "iOS \u306E web \u8868\u793A", url: \docs\ja\3.5.0\guide\platforms\ios\webview.html}
+- {name: !!python/str "Tizen \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0 \u30AC\
+    \u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\tizen\index.html}
+- {name: !!python/str "Ubuntu \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0 \u30AC\
+    \u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\ubuntu\index.html}
+- {name: !!python/str "Windows 8 \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\
+    \ \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\win8\index.html}
+- {name: !!python/str "Windows 8 \u306E\u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3\
+    \ \u30C4\u30FC\u30EB", url: \docs\ja\3.5.0\guide\platforms\win8\tools.html}
+- {name: !!python/str "Windows 8 \u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9", url: \docs\ja\3.5.0\guide\platforms\win8\upgrading.html}
+- {name: !!python/str "Windows Phone 7 \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\
+    \ \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\wp7\index.html}
+- {name: !!python/str "Windows Phone 8 \u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\
+    \ \u30AC\u30A4\u30C9", url: \docs\ja\3.5.0\guide\platforms\wp8\index.html}
+- {name: !!python/str "Windows Phone \u306E\u30D7\u30E9\u30B0\u30A4\u30F3", url: \docs\ja\3.5.0\guide\platforms\wp8\plugin.html}
+- {name: !!python/str "Windows Phone \u306E\u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3\
+    \ \u30C4\u30FC\u30EB", url: \docs\ja\3.5.0\guide\platforms\wp8\tools.html}
+- {name: !!python/str "Windows Phone \u306E\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9",
+  url: \docs\ja\3.5.0\guide\platforms\wp8\upgrading.html}
+- {name: !!python/str "\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u306E\u30B5\
+    \u30DD\u30FC\u30C8", url: \docs\ja\3.5.0\guide\support\index.html}
+- {name: !!python/str "Plugman \u3092\u4F7F\u7528\u3057\u3066\u30D7\u30E9\u30B0\u30A4\
+    \u30F3\u3092\u7BA1\u7406\u3059\u308B\u306B\u306F", url: \docs\ja\3.5.0\plugin_ref\plugman.html}
+- {name: !!python/str "\u30D7\u30E9\u30B0\u30A4\u30F3\u4ED5\u69D8", url: \docs\ja\3.5.0\plugin_ref\spec.html}
