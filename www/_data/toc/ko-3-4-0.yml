@@ -1,0 +1,92 @@
+- {name: !!python/str "\uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\index.html}
+- {name: !!python/str "\uC544\uC774\uCF58 \uBC0F \uC2DC\uC791 \uD654\uBA74", url: \docs\ko\3.4.0\config_ref\images.html}
+- {name: !!python/str "Config.xml \uD30C\uC77C", url: \docs\ko\3.4.0\config_ref\index.html}
+- {name: backbutton, url: \docs\ko\3.4.0\cordova\events\events.backbutton.html}
+- {name: deviceready, url: \docs\ko\3.4.0\cordova\events\events.deviceready.html}
+- {name: endcallbutton, url: \docs\ko\3.4.0\cordova\events\events.endcallbutton.html}
+- {name: !!python/str "\uC774\uBCA4\uD2B8", url: \docs\ko\3.4.0\cordova\events\events.html}
+- {name: menubutton, url: \docs\ko\3.4.0\cordova\events\events.menubutton.html}
+- {name: !!python/str "\uC77C\uC2DC \uC911\uC9C0", url: \docs\ko\3.4.0\cordova\events\events.pause.html}
+- {name: !!python/str "\uC774\uB825\uC11C", url: \docs\ko\3.4.0\cordova\events\events.resume.html}
+- {name: searchbutton, url: \docs\ko\3.4.0\cordova\events\events.searchbutton.html}
+- {name: startcallbutton, url: \docs\ko\3.4.0\cordova\events\events.startcallbutton.html}
+- {name: volumedownbutton, url: \docs\ko\3.4.0\cordova\events\events.volumedownbutton.html}
+- {name: volumeupbutton, url: \docs\ko\3.4.0\cordova\events\events.volumeupbutton.html}
+- {name: !!python/str "\uD50C\uB7EC\uADF8\uC778 Api", url: \docs\ko\3.4.0\cordova\plugins\pluginapis.html}
+- {name: !!python/str "\uC2A4\uD1A0\uB9AC\uC9C0", url: \docs\ko\3.4.0\cordova\storage\storage.html}
+- {name: openDatabase, url: \docs\ko\3.4.0\cordova\storage\storage.opendatabase.html}
+- {name: !!python/str "\uB370\uC774\uD130\uBCA0\uC774\uC2A4", url: \docs\ko\3.4.0\cordova\storage\database\database.html}
+- {name: localStorage, url: \docs\ko\3.4.0\cordova\storage\localstorage\localstorage.html}
+- {name: database_displayname, url: \docs\ko\3.4.0\cordova\storage\parameters\display_name.html}
+- {name: database_name, url: \docs\ko\3.4.0\cordova\storage\parameters\name.html}
+- {name: database_size, url: \docs\ko\3.4.0\cordova\storage\parameters\size.html}
+- {name: database_version, url: \docs\ko\3.4.0\cordova\storage\parameters\version.html}
+- {name: SQLError, url: \docs\ko\3.4.0\cordova\storage\sqlerror\sqlerror.html}
+- {name: SQLResultSet, url: \docs\ko\3.4.0\cordova\storage\sqlresultset\sqlresultset.html}
+- {name: SQLResultSetRowList, url: \docs\ko\3.4.0\cordova\storage\sqlresultsetrowlist\sqlresultsetrowlist.html}
+- {name: SQLTransaction, url: \docs\ko\3.4.0\cordova\storage\sqltransaction\sqltransaction.html}
+- {name: !!python/str "\uAC1C\uC778 \uC815\uBCF4 \uBCF4\uD638 \uAC00\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\appdev\privacy\index.html}
+- {name: !!python/str "\uD654\uC774\uD2B8 \uB9AC\uC2A4\uD2B8 \uAC00\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\appdev\whitelist\index.html}
+- {name: !!python/str "\uBA85\uB839\uC904 \uC778\uD130\uD398\uC774\uC2A4", url: \docs\ko\3.4.0\guide\cli\index.html}
+- {name: !!python/str "\uD50C\uB7EC\uADF8\uC778 \uAC1C\uBC1C \uAC00\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\hybrid\plugins\index.html}
+- {name: !!python/str "WebViews \uD3EC\uD568", url: \docs\ko\3.4.0\guide\hybrid\webviews\index.html}
+- {name: !!python/str "\uAC1C\uC694", url: \docs\ko\3.4.0\guide\overview\index.html}
+- {name: !!python/str "\uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\index.html}
+- {name: !!python/str "\uC544\uB9C8\uC874 \uD654\uC7AC \uC6B4\uC601 \uCCB4\uC81C \uAD6C\
+    \uC131", url: \docs\ko\3.4.0\guide\platforms\amazonfireos\config.html}
+- {name: !!python/str "\uC544\uB9C8\uC874 \uD654\uC7AC OS \uD50C\uB7AB\uD3FC \uAC00\
+    \uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\amazonfireos\index.html}
+- {name: !!python/str "\uC544\uB9C8\uC874 \uD654\uC7AC OS \uD50C\uB7EC\uADF8\uC778",
+  url: \docs\ko\3.4.0\guide\platforms\amazonfireos\plugin.html}
+- {name: !!python/str "\uC544\uB9C8\uC874 \uD654\uC7AC OS WebViews", url: \docs\ko\3.4.0\guide\platforms\amazonfireos\webview.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC \uAD6C\uC131", url: \docs\ko\3.4.0\guide\platforms\android\config.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC \uD50C\uB7AB\uD3FC \uAC00\uC774\
+    \uB4DC", url: \docs\ko\3.4.0\guide\platforms\android\index.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC \uD50C\uB7EC\uADF8\uC778",
+  url: \docs\ko\3.4.0\guide\platforms\android\plugin.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC \uBA85\uB839\uC904 \uB3C4\uAD6C",
+  url: \docs\ko\3.4.0\guide\platforms\android\tools.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC \uC5C5\uADF8\uB808\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\platforms\android\upgrading.html}
+- {name: !!python/str "\uC548 \uB4DC \uB85C\uC774\uB4DC WebViews", url: \docs\ko\3.4.0\guide\platforms\android\webview.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC \uAD6C\uC131", url: \docs\ko\3.4.0\guide\platforms\blackberry\config.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\platforms\blackberry\index.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC \uD50C\uB7EC\uADF8\uC778", url: \docs\ko\3.4.0\guide\platforms\blackberry\plugin.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC \uBA85\uB839\uC904 \uB3C4\uAD6C",
+  url: \docs\ko\3.4.0\guide\platforms\blackberry\tools.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC \uC5C5\uADF8\uB808\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\blackberry\upgrading.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC 10 \uAD6C\uC131", url: \docs\ko\3.4.0\guide\platforms\blackberry10\config.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC 10 \uD50C\uB7AB\uD3FC \uAC00\uC774\
+    \uB4DC", url: \docs\ko\3.4.0\guide\platforms\blackberry10\index.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC 10 \uD50C\uB7EC\uADF8\uC778", url: \docs\ko\3.4.0\guide\platforms\blackberry10\plugin.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC 10 \uBA85\uB839\uC904 \uB3C4\uAD6C",
+  url: \docs\ko\3.4.0\guide\platforms\blackberry10\tools.html}
+- {name: !!python/str "\uBE14\uB799\uBCA0\uB9AC 10 \uC5C5\uADF8\uB808\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\platforms\blackberry10\upgrading.html}
+- {name: !!python/str "FirefoxOS \uAD6C\uC131", url: \docs\ko\3.4.0\guide\platforms\firefoxos\config.html}
+- {name: !!python/str "iOS \uAD6C\uC131", url: \docs\ko\3.4.0\guide\platforms\ios\config.html}
+- {name: !!python/str "iOS \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\ios\index.html}
+- {name: !!python/str "iOS \uD50C\uB7EC\uADF8\uC778", url: \docs\ko\3.4.0\guide\platforms\ios\plugin.html}
+- {name: !!python/str "iOS \uBA85\uB839\uC904 \uB3C4\uAD6C", url: \docs\ko\3.4.0\guide\platforms\ios\tools.html}
+- {name: !!python/str "IOS \uC5C5\uADF8\uB808\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\ios\upgrading.html}
+- {name: iOS WebViews, url: \docs\ko\3.4.0\guide\platforms\ios\webview.html}
+- {name: !!python/str "Tizen \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\tizen\index.html}
+- {name: !!python/str "\uC6B0\uBD84\uD22C \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\platforms\ubuntu\index.html}
+- {name: !!python/str "Windows 8 \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\win8\index.html}
+- {name: !!python/str "\uC708\uB3C4\uC6B0 8 \uBA85\uB839\uC904 \uB3C4\uAD6C", url: \docs\ko\3.4.0\guide\platforms\win8\tools.html}
+- {name: !!python/str "\uC708\uB3C4\uC6B0 8\uC744 \uC5C5\uADF8\uB808\uC774\uB4DC",
+  url: \docs\ko\3.4.0\guide\platforms\win8\upgrading.html}
+- {name: !!python/str "Windows Phone 7 \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\wp7\index.html}
+- {name: !!python/str "Windows Phone \uD50C\uB7AB\uD3FC \uAC00\uC774\uB4DC 8", url: \docs\ko\3.4.0\guide\platforms\wp8\index.html}
+- {name: !!python/str "Windows Phone \uD50C\uB7EC\uADF8\uC778", url: \docs\ko\3.4.0\guide\platforms\wp8\plugin.html}
+- {name: !!python/str "Windows Phone \uBA85\uB839\uC904 \uB3C4\uAD6C", url: \docs\ko\3.4.0\guide\platforms\wp8\tools.html}
+- {name: !!python/str "Windows Phone \uC5C5\uADF8\uB808\uC774\uB4DC", url: \docs\ko\3.4.0\guide\platforms\wp8\upgrading.html}
+- {name: !!python/str "\uD50C\uB7AB\uD3FC \uC9C0\uC6D0", url: \docs\ko\3.4.0\guide\support\index.html}
+- {name: !!python/str "Plugman\uB97C \uC0AC\uC6A9 \uD558 \uC5EC \uD50C\uB7EC\uADF8\
+    \uC778\uC744 \uAD00\uB9AC \uD558", url: \docs\ko\3.4.0\plugin_ref\plugman.html}
+- {name: !!python/str "\uD50C\uB7EC\uADF8\uC778 \uBA85\uC138", url: \docs\ko\3.4.0\plugin_ref\spec.html}

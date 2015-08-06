@@ -1,0 +1,77 @@
+- {name: Guides, url: \docs\fr\3.5.0\index.html}
+- {name: Icones et Splash Screen, url: \docs\fr\3.5.0\config_ref\images.html}
+- {name: Le fichier config.xml, url: \docs\fr\3.5.0\config_ref\index.html}
+- {name: backbutton, url: \docs\fr\3.5.0\cordova\events\events.backbutton.html}
+- {name: deviceready, url: \docs\fr\3.5.0\cordova\events\events.deviceready.html}
+- {name: endcallbutton, url: \docs\fr\3.5.0\cordova\events\events.endcallbutton.html}
+- {name: !!python/str "\xC9v\xE8nements", url: \docs\fr\3.5.0\cordova\events\events.html}
+- {name: menubutton, url: \docs\fr\3.5.0\cordova\events\events.menubutton.html}
+- {name: pause, url: \docs\fr\3.5.0\cordova\events\events.pause.html}
+- {name: resume, url: \docs\fr\3.5.0\cordova\events\events.resume.html}
+- {name: searchbutton, url: \docs\fr\3.5.0\cordova\events\events.searchbutton.html}
+- {name: startcallbutton, url: \docs\fr\3.5.0\cordova\events\events.startcallbutton.html}
+- {name: volumedownbutton, url: \docs\fr\3.5.0\cordova\events\events.volumedownbutton.html}
+- {name: volumeupbutton, url: \docs\fr\3.5.0\cordova\events\events.volumeupbutton.html}
+- {name: Plugin API, url: \docs\fr\3.5.0\cordova\plugins\pluginapis.html}
+- {name: Stockage, url: \docs\fr\3.5.0\cordova\storage\storage.html}
+- {name: openDatabase, url: \docs\fr\3.5.0\cordova\storage\storage.opendatabase.html}
+- {name: !!python/str "Base de donn\xE9es", url: \docs\fr\3.5.0\cordova\storage\database\database.html}
+- {name: localStorage, url: \docs\fr\3.5.0\cordova\storage\localstorage\localstorage.html}
+- {name: database_displayname, url: \docs\fr\3.5.0\cordova\storage\parameters\display_name.html}
+- {name: database_name, url: \docs\fr\3.5.0\cordova\storage\parameters\name.html}
+- {name: database_size, url: \docs\fr\3.5.0\cordova\storage\parameters\size.html}
+- {name: database_version, url: \docs\fr\3.5.0\cordova\storage\parameters\version.html}
+- {name: SQLError, url: \docs\fr\3.5.0\cordova\storage\sqlerror\sqlerror.html}
+- {name: SQLResultSet, url: \docs\fr\3.5.0\cordova\storage\sqlresultset\sqlresultset.html}
+- {name: SQLResultSetRowList, url: \docs\fr\3.5.0\cordova\storage\sqlresultsetrowlist\sqlresultsetrowlist.html}
+- {name: SQLTransaction, url: \docs\fr\3.5.0\cordova\storage\sqltransaction\sqltransaction.html}
+- {name: !!python/str "Guide de la vie priv\xE9e", url: \docs\fr\3.5.0\guide\appdev\privacy\index.html}
+- {name: Guide de la liste blanche, url: \docs\fr\3.5.0\guide\appdev\whitelist\index.html}
+- {name: L'Interface en ligne de commande, url: \docs\fr\3.5.0\guide\cli\index.html}
+- {name: !!python/str "Guide de d\xE9veloppement de plugin", url: \docs\fr\3.5.0\guide\hybrid\plugins\index.html}
+- {name: !!python/str "Int\xE9grer des WebViews", url: \docs\fr\3.5.0\guide\hybrid\webviews\index.html}
+- {name: !!python/str "Pr\xE9sentation", url: \docs\fr\3.5.0\guide\overview\index.html}
+- {name: Guides de la plate-forme, url: \docs\fr\3.5.0\guide\platforms\index.html}
+- {name: Amazon Fire OS Configuration, url: \docs\fr\3.5.0\guide\platforms\amazonfireos\config.html}
+- {name: Amazon Fire OS Platform Guide, url: \docs\fr\3.5.0\guide\platforms\amazonfireos\index.html}
+- {name: Amazon Fire OS Plugins, url: \docs\fr\3.5.0\guide\platforms\amazonfireos\plugin.html}
+- {name: Amazon Fire OS WebViews, url: \docs\fr\3.5.0\guide\platforms\amazonfireos\webview.html}
+- {name: Configuration d'Android, url: \docs\fr\3.5.0\guide\platforms\android\config.html}
+- {name: Guide pour la plate-forme Android, url: \docs\fr\3.5.0\guide\platforms\android\index.html}
+- {name: Plugins Android, url: \docs\fr\3.5.0\guide\platforms\android\plugin.html}
+- {name: Outils de ligne de commande Android, url: \docs\fr\3.5.0\guide\platforms\android\tools.html}
+- {name: !!python/str "Mise \xE0 jour Android", url: \docs\fr\3.5.0\guide\platforms\android\upgrading.html}
+- {name: Android WebViews, url: \docs\fr\3.5.0\guide\platforms\android\webview.html}
+- {name: Configuration de blackBerry, url: \docs\fr\3.5.0\guide\platforms\blackberry\config.html}
+- {name: Guide de la plate-forme blackBerry, url: \docs\fr\3.5.0\guide\platforms\blackberry\index.html}
+- {name: Plugins de blackBerry, url: \docs\fr\3.5.0\guide\platforms\blackberry\plugin.html}
+- {name: Outils de ligne de commande de blackBerry, url: \docs\fr\3.5.0\guide\platforms\blackberry\tools.html}
+- {name: !!python/str "Mise \xE0 jour de BlackBerry", url: \docs\fr\3.5.0\guide\platforms\blackberry\upgrading.html}
+- {name: Configuration de blackBerry 10, url: \docs\fr\3.5.0\guide\platforms\blackberry10\config.html}
+- {name: Guide de la plate-forme blackBerry 10, url: \docs\fr\3.5.0\guide\platforms\blackberry10\index.html}
+- {name: BlackBerry 10 Plugins, url: \docs\fr\3.5.0\guide\platforms\blackberry10\plugin.html}
+- {name: BlackBerry 10 outils de ligne de commande, url: \docs\fr\3.5.0\guide\platforms\blackberry10\tools.html}
+- {name: !!python/str "Mise \xE0 jour de BlackBerry 10", url: \docs\fr\3.5.0\guide\platforms\blackberry10\upgrading.html}
+- {name: Configuration de FirefoxOS, url: \docs\fr\3.5.0\guide\platforms\firefoxos\config.html}
+- {name: Firefox OS Platform Guide, url: \docs\fr\3.5.0\guide\platforms\firefoxos\index.html}
+- {name: iOS Configuration, url: \docs\fr\3.5.0\guide\platforms\ios\config.html}
+- {name: iOS Platform Guide, url: \docs\fr\3.5.0\guide\platforms\ios\index.html}
+- {name: iOS Plugins, url: \docs\fr\3.5.0\guide\platforms\ios\plugin.html}
+- {name: iOS Command-line Tools, url: \docs\fr\3.5.0\guide\platforms\ios\tools.html}
+- {name: !!python/str "Mise \xE0 jour d'iOS", url: \docs\fr\3.5.0\guide\platforms\ios\upgrading.html}
+- {name: iOS WebViews, url: \docs\fr\3.5.0\guide\platforms\ios\webview.html}
+- {name: Guide de la plate-forme paciarelli, url: \docs\fr\3.5.0\guide\platforms\tizen\index.html}
+- {name: Guide de la plate-forme Ubuntu, url: \docs\fr\3.5.0\guide\platforms\ubuntu\index.html}
+- {name: Windows 8 Platform Guide, url: \docs\fr\3.5.0\guide\platforms\win8\index.html}
+- {name: Outils de ligne de commande de Windows 8, url: \docs\fr\3.5.0\guide\platforms\win8\tools.html}
+- {name: !!python/str "La mise \xE0 niveau de Windows 8", url: \docs\fr\3.5.0\guide\platforms\win8\upgrading.html}
+- {name: Guide de plateforme Windows Phone 7, url: \docs\fr\3.5.0\guide\platforms\wp7\index.html}
+- {name: Guide de la plate-forme Windows Phone, url: \docs\fr\3.5.0\guide\platforms\wp8\index.html}
+- {name: Configuration de Parallels Desktop, url: \docs\fr\3.5.0\guide\platforms\wp8\parallels.html}
+- {name: Windows Phone Plugins, url: \docs\fr\3.5.0\guide\platforms\wp8\plugin.html}
+- {name: Windows Phone outils de ligne de commande, url: \docs\fr\3.5.0\guide\platforms\wp8\tools.html}
+- {name: !!python/str "La mise \xE0 niveau de Windows Phone", url: \docs\fr\3.5.0\guide\platforms\wp8\upgrading.html}
+- {name: Configuration de VMWare Fusion, url: \docs\fr\3.5.0\guide\platforms\wp8\vmware.html}
+- {name: Plateforme de Support, url: \docs\fr\3.5.0\guide\support\index.html}
+- {name: !!python/str "Aide de Plugman pour g\xE9rer les Plugins", url: \docs\fr\3.5.0\plugin_ref\plugman.html}
+- {name: !!python/str "Sp\xE9cification des plugins", url: \docs\fr\3.5.0\plugin_ref\spec.html}

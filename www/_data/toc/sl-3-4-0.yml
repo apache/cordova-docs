@@ -1,0 +1,57 @@
+- {name: Vodila, url: \docs\sl\3.4.0\index.html}
+- {name: Ikone in brizg zaslon, url: \docs\sl\3.4.0\config_ref\images.html}
+- {name: Config.xml datoteke, url: \docs\sl\3.4.0\config_ref\index.html}
+- {name: backbutton, url: \docs\sl\3.4.0\cordova\events\events.backbutton.html}
+- {name: deviceready, url: \docs\sl\3.4.0\cordova\events\events.deviceready.html}
+- {name: endcallbutton, url: \docs\sl\3.4.0\cordova\events\events.endcallbutton.html}
+- {name: Dogodki, url: \docs\sl\3.4.0\cordova\events\events.html}
+- {name: menubutton, url: \docs\sl\3.4.0\cordova\events\events.menubutton.html}
+- {name: pause, url: \docs\sl\3.4.0\cordova\events\events.pause.html}
+- {name: resume, url: \docs\sl\3.4.0\cordova\events\events.resume.html}
+- {name: searchbutton, url: \docs\sl\3.4.0\cordova\events\events.searchbutton.html}
+- {name: startcallbutton, url: \docs\sl\3.4.0\cordova\events\events.startcallbutton.html}
+- {name: volumedownbutton, url: \docs\sl\3.4.0\cordova\events\events.volumedownbutton.html}
+- {name: volumeupbutton, url: \docs\sl\3.4.0\cordova\events\events.volumeupbutton.html}
+- {name: Plugin API, url: \docs\sl\3.4.0\cordova\plugins\pluginapis.html}
+- {name: Shranjevanje, url: \docs\sl\3.4.0\cordova\storage\storage.html}
+- {name: Vodnik o zasebnosti, url: \docs\sl\3.4.0\guide\appdev\privacy\index.html}
+- {name: Seznam dovoljenih vodnik, url: \docs\sl\3.4.0\guide\appdev\whitelist\index.html}
+- {name: Vmesnik ukazne vrstice, url: \docs\sl\3.4.0\guide\cli\index.html}
+- {name: Plugin razvoj vodnik, url: \docs\sl\3.4.0\guide\hybrid\plugins\index.html}
+- {name: Vdelava spletni pogledi, url: \docs\sl\3.4.0\guide\hybrid\webviews\index.html}
+- {name: Pregled, url: \docs\sl\3.4.0\guide\overview\index.html}
+- {name: Platforma vodniki, url: \docs\sl\3.4.0\guide\platforms\index.html}
+- {name: Amazon ogenj OS konfiguracijo, url: \docs\sl\3.4.0\guide\platforms\amazonfireos\config.html}
+- {name: Amazon ogenj OS platformo vodnik, url: \docs\sl\3.4.0\guide\platforms\amazonfireos\index.html}
+- {name: Amazon ogenj OS Plugins, url: \docs\sl\3.4.0\guide\platforms\amazonfireos\plugin.html}
+- {name: Amazon ogenj OS spletni pogledi, url: \docs\sl\3.4.0\guide\platforms\amazonfireos\webview.html}
+- {name: Android konfiguracijo, url: \docs\sl\3.4.0\guide\platforms\android\config.html}
+- {name: Vodnik za platformo Android, url: \docs\sl\3.4.0\guide\platforms\android\index.html}
+- {name: Android Plugins, url: \docs\sl\3.4.0\guide\platforms\android\plugin.html}
+- {name: Android orodja ukazne vrstice, url: \docs\sl\3.4.0\guide\platforms\android\tools.html}
+- {name: Nadgradnji Android, url: \docs\sl\3.4.0\guide\platforms\android\upgrading.html}
+- {name: Spletni Android pogledi, url: \docs\sl\3.4.0\guide\platforms\android\webview.html}
+- {name: Konfiguracije blackBerry 10, url: \docs\sl\3.4.0\guide\platforms\blackberry10\config.html}
+- {name: BlackBerry 10 platformo vodnik, url: \docs\sl\3.4.0\guide\platforms\blackberry10\index.html}
+- {name: BlackBerry 10 Plugins, url: \docs\sl\3.4.0\guide\platforms\blackberry10\plugin.html}
+- {name: BlackBerry 10 orodij ukazne vrstice, url: \docs\sl\3.4.0\guide\platforms\blackberry10\tools.html}
+- {name: Nadgradnja BlackBerry 10, url: \docs\sl\3.4.0\guide\platforms\blackberry10\upgrading.html}
+- {name: iOS konfiguracijo, url: \docs\sl\3.4.0\guide\platforms\ios\config.html}
+- {name: iOS platformi vodnik, url: \docs\sl\3.4.0\guide\platforms\ios\index.html}
+- {name: iOS Plugins, url: \docs\sl\3.4.0\guide\platforms\ios\plugin.html}
+- {name: iOS orodja ukazne vrstice, url: \docs\sl\3.4.0\guide\platforms\ios\tools.html}
+- {name: Nadgradnja iOS, url: \docs\sl\3.4.0\guide\platforms\ios\upgrading.html}
+- {name: iOS spletni pogledi, url: \docs\sl\3.4.0\guide\platforms\ios\webview.html}
+- {name: Tizen platforma vodnik, url: \docs\sl\3.4.0\guide\platforms\tizen\index.html}
+- {name: Vodnik Ubuntu Platform, url: \docs\sl\3.4.0\guide\platforms\ubuntu\index.html}
+- {name: Windows 8 platformi vodnik, url: \docs\sl\3.4.0\guide\platforms\win8\index.html}
+- {name: Orodja ukazne vrstice Windows 8, url: \docs\sl\3.4.0\guide\platforms\win8\tools.html}
+- {name: Nadgradnjo operacijskega sistema Windows 8, url: \docs\sl\3.4.0\guide\platforms\win8\upgrading.html}
+- {name: Vodnik za platformo Windows Phone 7, url: \docs\sl\3.4.0\guide\platforms\wp7\index.html}
+- {name: Vodnik za platformo Windows Phone 8, url: \docs\sl\3.4.0\guide\platforms\wp8\index.html}
+- {name: Windows Phone Plugins, url: \docs\sl\3.4.0\guide\platforms\wp8\plugin.html}
+- {name: Windows Phone orodja ukazne vrstice, url: \docs\sl\3.4.0\guide\platforms\wp8\tools.html}
+- {name: Nadgradnja Windows Phone, url: \docs\sl\3.4.0\guide\platforms\wp8\upgrading.html}
+- {name: Platforma podporo, url: \docs\sl\3.4.0\guide\support\index.html}
+- {name: Uporaba Plugman za upravljanje Plugins, url: \docs\sl\3.4.0\plugin_ref\plugman.html}
+- {name: Plugin specifikacija, url: \docs\sl\3.4.0\plugin_ref\spec.html}
