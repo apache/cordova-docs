@@ -35,7 +35,7 @@ $brand-primary: #4CC2E4;
 #hero {
 	height:1020px;
 	background-color:$gray-transparent;
-    background-image: url("/static/img/wisplight.jpg");
+    background-image: url("{{ site.baseurl }}/static/img/wisplight.jpg");
     background-size: cover;
 	position:relative;
 	color:white;
@@ -89,11 +89,11 @@ $brand-primary: #4CC2E4;
 	}
 }
 .value_prop {
-	
+
 }
 
 @mixin sprite-img($a, $b) {
-	background: url("/static/img/value-prop-sprite.svg") $a $b;
+	background: url("{{ site.baseurl }}/static/img/value-prop-sprite.svg") $a $b;
 }
 
 #sprite_shared_code { @include sprite-img(0px, 0) }
@@ -119,8 +119,8 @@ img#logo_top {
 		float:none;
 	}
   }
-  
-  
+
+
 
 
 .vertical-center-parent {

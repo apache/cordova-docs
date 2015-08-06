@@ -11,6 +11,7 @@ var sass        = require("gulp-sass");
 var vstream     = require("vinyl-source-stream");
 var buffer      = require("vinyl-buffer");
 var browsersync = require("browser-sync");
+var header      = require("gulp-header");
 
 // constants
 var CONFIG_FILES = ["_config.yml", "_defaults.yml"];
@@ -18,6 +19,8 @@ var JEKYLL_FLAGS = ["--trace", "--config", CONFIG_FILES.join(",")];
 
 var SOURCE_DIR = "www";
 var BUILD_DIR  = "public";
+
+var WATCH_INTERVAL = 1000; // in milliseconds
 
 var CONFIG_FILE    = "_config.yml";
 var DEFAULTS_FILE  = "_defaults.yml";
@@ -56,6 +59,7 @@ gulp.task("watch", function () {
         [
             path.join(CSS_SRC_DIR, "**", "*"),
         ],
+        {interval: WATCH_INTERVAL},
         ["styles", "regenerate"]
     );
     gulp.watch(
@@ -63,6 +67,7 @@ gulp.task("watch", function () {
             path.join(DOCS_DIR, "**", "*.md"),
             path.join(DOCS_DIR, "**", "*.html"),
         ],
+        {interval: WATCH_INTERVAL},
         ["configs", "regenerate"]
     );
     gulp.watch(
@@ -73,6 +78,7 @@ gulp.task("watch", function () {
             path.join(SOURCE_DIR, "**", "*.js"),
             path.join(CSS_OUT_DIR, "**", "*.css"),
         ],
+        {interval: WATCH_INTERVAL},
         ["regenerate"]
     );
 });
@@ -109,11 +115,14 @@ gulp.task("configs", function (done) {
 gulp.task("styles", function() {
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.less"))
         .pipe(less())
+        .pipe(header("---\n---\n"))
         .pipe(gulp.dest(CSS_OUT_DIR));
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.css"))
+        .pipe(header("---\n---\n"))
         .pipe(gulp.dest(CSS_OUT_DIR));
     gulp.src(path.join(CSS_SRC_DIR, "**", "*.scss"))
         .pipe(sass().on("error", sass.logError))
+        .pipe(header("---\n---\n"))
         .pipe(gulp.dest(CSS_OUT_DIR));
 });
 

@@ -9,14 +9,14 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="SHORTCUT ICON" href="{{ site.baseurl }}/favicon.ico"/>
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="{{ "/static/css/lib/bootstrap.css" | prepend: site.baseurl }}" /> -->
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/main.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/master.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/docs.css" | prepend: site.baseurl }}">
-    
+    <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/lib/bootstrap.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/master.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/docs.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

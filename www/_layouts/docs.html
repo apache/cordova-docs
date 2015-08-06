@@ -2,57 +2,77 @@
 layout: cordova
 ---
 
-<a href="{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}">Edit this page on GitHub</a>.
+<div class="container">
 
-Language
-<ul>
-    {% for language_entry in site.data.languages %}
-    {% assign language_id = language_entry[0] %}
-    {% assign language    = language_entry[1] %}
-    <li>
-        {% if language.versions contains page.version %}
-        <a href="{{ site.baseurl }}/docs/{{ language_id }}/{{ page.version }}">
-        {% else %}
-        <a class="missing-version" href="{{ site.baseurl }}/docs/{{ language_id }}/edge">
-        {% endif %}
-            {{ language.name }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-
-Version
-<ul>
-    {% for version in site.data.languages.[page.language].versions %}
-    <li>
-        <a href="{{ site.baseurl }}/docs/{{ page.language }}/{{ version }}">{{ version }}</a>
-    </li>
-    {% endfor %}
-</ul>
-
-{% if page.version != 'edge' %}
-    {{ page.not_latest_warning_text }}
-{% endif %}
-
-<h2>{{ page.toc_text }}</h2>
-<ul>
-    {% assign page_meta = site.data.[page.language].[page.version] %}
-    {% if page_meta.toc-manual %}
-    {% assign tocfile = page_meta.toc-manual %}
-    {% else %}
-    {% assign tocfile = page_meta.toc-manual %}
+    {% if page.version != 'edge' %}
+    <div class="alert alert-danger">
+        {{ page.not_latest_warning_text }}
+    </div>
     {% endif %}
 
-    {% for entry in tocfile %}
-    <li>
-        <a href="{{ entry.url | prepend: site.baseurl }}">{{ entry.name }}</a>
-        {% if page.url == entry.url %}
-        <div id="page-toc"></div>
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
+    <div class="col-xs-3">
+        <h2>{{ page.toc_text }}</h2>
+        <ul>
+            {% assign toc_dir = site.data.toc %}
+            {% if toc_dir.[page.manual_toc] %}
+                {% assign tocfile = toc_dir.[page.manual_toc] %}
+            {% else %}
+                {% assign tocfile = toc_dir.[page.generated_toc] %}
+            {% endif %}
 
-<div id="page-toc-source">
-    {{ content }}
+            {% for entry in tocfile %}
+            <li>
+                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.name }}</a>
+                {% if page.url == entry.url %}
+                <div id="page-toc"></div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="page-toc-source" class="col-xs-9">
+        <div class="row">
+            <a href="{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}">Edit</a>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Language
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    {% for language_entry in site.data.languages %}
+                    {% assign language_id = language_entry[0] %}
+                    {% assign language    = language_entry[1] %}
+                    <li>
+                        {% if language.versions contains page.version %}
+                        <a href="{{ site.baseurl }}/docs/{{ language_id }}/{{ page.version }}">
+                        {% else %}
+                        <a href="#" class="missing-version">
+                        {% endif %}
+                            {{ language.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Version
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    {% for version in site.data.languages.[page.language].versions %}
+                    <li>
+                        <a href="{{ site.baseurl }}/docs/{{ page.language }}/{{ version }}">
+                            {{ version }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            {{ content }}
+        </div>
+    </div>
 </div>
