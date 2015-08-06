@@ -7,6 +7,10 @@ url:         "http://cordova.apache.org" # the base hostname & protocol
 baseurl:     "" # the subpath of the site, e.g. /blog/
 rss_path:    /feed.xml
 
+repo:
+    uri:    https://github.com/apache/cordova-docs/
+    branch: cordova-website
+
 # NOTE: defaults are configured in _defaults.yml, which is a generated file
 
 # =======
@@ -29,14 +33,15 @@ rdiscount:
     - smart
 
 exclude:
-      - docs/de/
-      - docs/en/
-      - docs/es/
-      - docs/fr/
-      - docs/it/
-      - docs/ja/
-      - docs/ko/
-      - docs/pl/ #keep this later
-      - docs/ru/
-      - docs/sl/
-      - docs/zh/
+    - static/css-src
+    # - docs/de/
+    # - docs/en/
+    # - docs/es/
+    # - docs/fr/
+    # - docs/it/
+    # - docs/ja/
+    # - docs/ko/
+    # - docs/pl/
+    # - docs/ru/
+    # - docs/sl/
+    # - docs/zh/

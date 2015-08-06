@@ -1,4 +1,5 @@
 @import 'lib/bootstrap';
+@import 'blog';
 
 /* Customized Variables for Bootstrap */
 $gray-base:black;
@@ -28,10 +29,10 @@ $brand-gold: #F1B444;
 $brand-gold-darker: #B58733;
 $gray-90: lighten($gray-base, 10%);
 $gray-50: lighten($gray-base, 50%);
+$gray-40: lighten($gray-base, 60%);
 $gray-20: lighten($gray-base, 80%);
 $gray-10: lighten($gray-base, 90%);
 $brand-primary: #4CC2E4;
-
 
 #hero {
 	height:1020px;
@@ -120,7 +121,13 @@ img#logo_top {
 		float:none;
 	}
   }
-  
+
+.badge {
+    padding: 1px 5px;
+    font-size: 12px;
+    margin-top: -13px;
+}
+
   
 
 
@@ -190,12 +197,13 @@ img#logo_top {
 .showcase_section_intro {
     margin: auto;
 	float:none;
-    max-width: 600px;
+    max-width: 700px;
 	h1 { color: $brand-gold; padding-bottom:0; }
-	h2 { color: white; font-size: 18px; padding:0; margin-top:0 }
-	p, span { color: white; text-align: left; }
+	h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
+	p, span { color: $gray-40; text-align: left; }
 	
 }
+.
 
 /*
 ********* Modifications to Bootstrap ***********
@@ -215,13 +223,5 @@ h1 {
 }
 h2 {
 	color: $gray-50;
-	font-size: 24px;
-}
-.badge {
-	font-size:12px;
-	margin-top:-14px;
-	padding: 1px 5px;
-}
-p {
-	line-height:30px;
+	font-size: 18px;
 }
