@@ -88,7 +88,7 @@ gulp.task("watch", function () {
 });
 
 gulp.task("gen-dev", function (done) {
-    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(DEV_FLAGS), done);
+    exec("C:\\Ruby193\\bin\\jekyll.bat", ["build"].concat(DEV_FLAGS), done);
 });
 
 gulp.task("regen-dev", ["gen-dev"], function () {
@@ -100,7 +100,7 @@ gulp.task("build-dev", ["configs", "styles"], function () {
 });
 
 gulp.task("gen-prod", function (done) {
-    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(PROD_FLAGS), done);
+    exec("C:\\Ruby193\\bin\\jekyll.bat", ["build"].concat(PROD_FLAGS), done);
 });
 
 gulp.task("build-prod", ["configs", "styles"], function (done) {

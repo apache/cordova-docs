@@ -3,27 +3,52 @@ layout: blog
 ---
 
 <div class="blog">
-    <div id="content" class="container">
-         <div class="row">
-            <div class="blogHeader">
-                <h1>Blog</h1>
-                <div>
-                    <img src="{{ site.baseurl }}/static/img/subscribe.png">
-                    <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
-                </div>
-            </div>
-            <div class="post">
-                <header>
-                    <div class="title">{{ page.title }}</div>
-                    <div class="author">By: {{ page.author.name }}</div>
-                    <div class="date">{{ page.date | date_to_string }}</div>
-                </header>
-                <section>
-                    <div>
-                        {{ content }}
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
+ <div id="content" class="container">
+     <div class="row">
+        <div class="blogHeader">
+          <h1>Blog</h1>
+          <div>
+            <img src="{{ site.baseurl }}/static/img/subscribe.png">
+            <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
+          </div>
+        </div>                 
+        <div class="post">
+            <header>
+              <div class="title">{{ page.title }}</div>
+              <div class="author">By: {{ page.author.name }}</div>
+              <div class="date">{{ page.date | date_to_string }}</div>
+            </header>
+            <section>
+              <div class="content">
+                {{ content }}
+              </div>
+            </section>                                            
+        </div>              
+     </div>
+     <div class="row">
+        <section class="nextprev-controls">               
+          <div class="prev">
+            <img src="{{ site.baseurl }}/static/img/post-prev.png">
+          </div>
+          <div class="next">
+            <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">Title next article</a></div>
+            <div><span class="date">3 days ago</span><span> - </span><span class="author">Author name</span></div>
+            <img src="{{ site.baseurl }}/static/img/post-next.png">
+          </div>
+        </section>            
+        <section class="nextprev-posts">                                         
+          <div class="prev col-sm-6">
+            <div class="header"><a href="{{ site.baseurl }}{{ post.url }}">Prev article</a></div>
+            <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">Title prev article</a></div>
+            <div><span class="date">3 days ago</span><span> - by </span><span class="author">Author name</span></div>
+            <div class="excerpt">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens wakame tomato...</div>
+          </div>
+          <div class="next col-sm-6">
+            <div class="header"><a href="{{ site.baseurl }}{{ post.url }}">Next article</a></div>
+            <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">Title next article</a></div>
+            <div><span class="date">2 days ago</span><span> - by </span><span class="author">Author name</span></div>
+            <div class="excerpt"> Dandelion cucumber earthnut pea peanut soko zucchini. Gumbo beet greens corn soko endive gumbo gourd... </div>
+          </div>                                                
+        </section>               
+     </div>       
+  </div>
