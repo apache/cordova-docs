@@ -53,11 +53,13 @@ Changes include:
 <!--more-->
 
 cordova-plugin-battery-status@1.1.0
+
 * added missing license headers
 * [CB-7953](https://issues.apache.org/jira/browse/CB-7953) Add `cordova-plugin-battery-status` support for **browser** platform
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-camera@1.2.0
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * Update docs. This closes #100
 * [CB-8883](https://issues.apache.org/jira/browse/CB-8883) fix picture rotation issue
@@ -69,31 +71,38 @@ cordova-plugin-camera@1.2.0
 * add missing license header
 
 cordova-plugin-console@1.0.1
+
 * move `logger.js` and `console-via-logger.js` to common modules, instead of the numerous repeats that were there.
 * clean up tests, info is below log level so it does not exist by default.
 * [CB-9191](https://issues.apache.org/jira/browse/CB-9191) Add basic tests
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-contacts@1.1.0
+
 * Add more install text for legacy versions of cordova tools. This closes #60
 * [CB-9056](https://issues.apache.org/jira/browse/CB-9056) Increased timeout of failing tests
 * [CB-8987](https://issues.apache.org/jira/browse/CB-8987): Support for save and remove for **Windows 10**
 * [CB-5278](https://issues.apache.org/jira/browse/CB-5278): We must close the cursor or we take down the whole app, and the debugger doesn't catch it.
 
 cordova-plugin-device@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-device-motion@1.1.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * [CB-8842](https://issues.apache.org/jira/browse/CB-8842) Return cached values on **Android** if there is no updates from sensor
 
 cordova-plugin-device-orientation@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-dialogs@1.1.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-file@2.1.0
+
 * added missing license header
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * [CB-8844](https://issues.apache.org/jira/browse/CB-8844) Increased timeout for asset tests
@@ -101,6 +110,7 @@ cordova-plugin-file@2.1.0
 * [CB-8792](https://issues.apache.org/jira/browse/CB-8792) Fixes reading of json files using `readAsText`
 
 cordova-plugin-file-transfer@1.2.0
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * [CB-6503](https://issues.apache.org/jira/browse/CB-6503): `Null` pointer check for headers in upload (This closes #27)
 * [CB-6503](https://issues.apache.org/jira/browse/CB-6503): Allow `payload` `content-types` other than `multipart/form-data` to be used for upload
@@ -116,40 +126,48 @@ cordova-plugin-file-transfer@1.2.0
 * Replace all slashes in **windows** path
 
 cordova-plugin-geolocation@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * [CB-8845](https://issues.apache.org/jira/browse/CB-8845) Updated comment why **Android** tests are currently pended
 * [CB-8845](https://issues.apache.org/jira/browse/CB-8845) Pended tests for **Android**
 * Add more install text for legacy versions of cordova tools. This closes #36
 
 cordova-plugin-globalization@1.0.1
+
 * added `moment.js` to `.ratignore`
 * added license headers
 * Adding `.ratignore` file.
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-inappbrowser@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-legacy-whitelist@1.1.0
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * Fix compile error introduces by `6a3d2cb3567`
 * [CB-8739](https://issues.apache.org/jira/browse/CB-8739) added missing license headers
 * Fix `XMl` parsing broken by `superclass` refactor (`XmlResourceParser`->`XmlPullParser`)
 
 cordova-plugin-media@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * [CB-9079](https://issues.apache.org/jira/browse/CB-9079) Increased timeout for playback tests
 * [CB-8888](https://issues.apache.org/jira/browse/CB-8888) Makes media status reporting on **windows** more precise
 * [CB-8793](https://issues.apache.org/jira/browse/CB-8793) Increased playback timeout in tests
 
 cordova-plugin-media-capture@1.0.1
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-network-information@1.0.1
+
 * Adding `.ratignore` file.
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-splashscreen@2.1.0
+
 * added missing license headers
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * Fixed **iOS** unit tests.
@@ -162,14 +180,17 @@ cordova-plugin-splashscreen@2.1.0
 * [CB-8758](https://issues.apache.org/jira/browse/CB-8758) **wp8**: `UnauthorizedAccessException` on `hide()`
 
 cordova-plugin-statusbar@1.0.1
+
 * add auto-tests for basic api
 * [CB-9180](https://issues.apache.org/jira/browse/CB-9180) Add correct supported check for **Windows 8.1** desktop
-* [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme 
+* [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 
 cordova-plugin-test-framework@1.0.1
+
 * added `ratignore` file
 
 cordova-plugin-vibration@1.2.0
+
 * Adding `.ratignore` file.
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * used min/max statics in vibrate with pattern. Use `callbackId` in callbacks, catch json format exceptions
@@ -181,6 +202,7 @@ cordova-plugin-vibration@1.2.0
 * **Android**: respect silent audio setting
 
 cordova-plugin-whitelist@1.1.0
+
 * [CB-9128](https://issues.apache.org/jira/browse/CB-9128) Updated translations for readme
 * Usage of `CDVURLRequestFilter` protocol.
 * [CB-9089](https://issues.apache.org/jira/browse/CB-9089) - **iOS** whitelist plugin does not compile
