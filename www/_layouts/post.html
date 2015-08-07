@@ -1,27 +1,29 @@
 ---
 layout: blog
 ---
+
 <div class="blog">
-  <div id="content" class="container">
-     <div class="row">         
-        <div class="blogHeader">
-          <h1>Blog</h1>
-          <div>
-            <img src="{{ site.baseurl }}/static/img/subscribe.png">
-            <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
-          </div>
-        </div>                 
-        <div class="post">
-            <header>
-              <div class="title">{{ page.title }}</div>
-              <div class="author">By: {{ page.author.name }}</div>
-              <div class="date">{{ page.date | date_to_string }}</div>
-            </header>
-            <section>
-              <div>
-                {{ content }}
-              </div>
-            </section>          
-        </div>           
-     </div>      
-  </div>
+    <div id="content" class="container">
+         <div class="row">
+            <div class="blogHeader">
+                <h1>Blog</h1>
+                <div>
+                    <img src="{{ site.baseurl }}/static/img/subscribe.png">
+                    <a href="{{ site.baseurl }}{{ site.rss_path }}">Subscribe</a>
+                </div>
+            </div>
+            <div class="post">
+                <header>
+                    <div class="title">{{ page.title }}</div>
+                    <div class="author">By: {{ page.author.name }}</div>
+                    <div class="date">{{ page.date | date_to_string }}</div>
+                </header>
+                <section>
+                    <div>
+                        {{ content }}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
