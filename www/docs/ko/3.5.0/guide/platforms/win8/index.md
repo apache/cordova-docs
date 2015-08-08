@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -52,33 +52,33 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
 *   비주얼 스튜디오 2012를 열고 **새 프로젝트** 선택.
 
 *   프로젝트 목록에서 나무, 그리고 다음 **빈 응용 프로그램** 에서 **설치 → 템플릿 → 기타 언어 → 자바 → Windows 저장소** 를 선택 합니다. 당신 처럼, 같은 어떤 프로젝트 이름을 입력 `CordovaWin8Foo` 이 예제와 같이:
-    
+
     ![][4]
 
 *   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . 그것은 이렇게, 적어도 당신이 아마에 최선을 다하고 다른 플랫폼에 맞게 하는 것이 좋습니다. 이 문제를 해결, **솔루션 탐색기** 의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` **시작 페이지** 값을 변경 하 고 `index.html` :
-    
+
         ![](img/guide/platforms/win8/wschangemanifest.png)
-        
+
 
 *   포함 하려면 `cordova.js` 마우스 오른쪽 단추로 프로젝트를 클릭에 `js` **→ 새 항목 추가**선택 하 고 **솔루션 탐색기** 에서 디렉토리. 위치는 `cordova.js` 파일에 `lib\windows-8` 디렉터리.
 
 *   편집에 대 한 코드 `index.html` . 에 대 한 참조를 추가할 `cordova.js` . 이렇게 하려면 수동으로, 또는 **솔루션 탐색기**에서 파일을 드래그 하 여. 다음 추가 애플 리 케이 션의 홈 페이지에 다른 종속성:
-    
+
             <!-- WinJS references -->
             <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
             <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
             <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-        
+
             <!-- Cordova -->
             <script src="/js/cordova.js"></script>
-        
+
             <!-- CordovaWin8Foo references -->
             <link href="/css/default.css" rel="stylesheet" />
             <script src="/js/default.js"></script>
-        
+
 
 *   추가 `deviceready` 코르도바를 보여 주기 위해 처리기 작업:
-    
+
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
@@ -88,15 +88,15 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
                 });
             </script>
         </body>
-        
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## 프로젝트 테스트
 
 Visual Studio에서 프로젝트를 실행 합니다. 표시 메시지 상자가 표시 됩니다.
 
         ![](img/guide/platforms/win8/wsalert.png)
-    
+
 
 바로 그 거 예요입니다. 지금 코르도바와 Windows 스토어 애플 리 케이 션을 구축할 준비가 되었습니다.

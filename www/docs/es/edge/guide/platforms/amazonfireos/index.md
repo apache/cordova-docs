@@ -70,12 +70,12 @@ Cordova Herramientas de línea de comandos trabajar, es necesario incluir el SDK
 En Mac, Linux u otras plataformas Unix-like, puede utilizar un editor de texto para crear o modificar el `~/.bash_profile` archivo, añadir una línea como la siguiente, dependiendo de donde están instalados los SDK y la hormiga:
 
     export PATH = ${PATH}: / / adt-bundle/sdk/plataforma-herramientas de desarrollo: / / adt-bundle/sdk/herramientas de desarrollo: / desarrollo/apache-ant/bin
-    
+
 
 Esto expone SDK tools en windows terminales recién inauguradas. De lo contrario corre para que estén disponibles en el actual período de sesiones:
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows Path
 
@@ -90,16 +90,16 @@ Para modificar el entorno PATH en Windows:
 *   Seleccione la variable **PATH** y pulse **Editar**.
 
 *   Agregue lo siguiente a la ruta basada en donde se ha instalado el SDK de la hormiga, por ejemplo:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   El valor de guardar y cerrar ambos cuadros de diálogo.
 
 *   Usted también necesitará habilitar Java. Abra un símbolo del sistema y el tipo `java` , si no funciona, anexar su camino así como la ubicación de los binarios de Java. Asegúrese de que JAVA_HOME % apunta al directorio JDK instalado. Tendrás que agregar separadamente variable de entorno JAVA_HOME.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -108,9 +108,9 @@ Para crear aplicaciones de Córdoba con el objetivo de la plataforma de Amazon f
 *   Descargue el SDK de WebView Amazonas del [Amazonas Developer Portal][1].
 
 *   Copia `awv_interface.jar` del SDK descargado al directorio de trabajo de Cordova. Crear carpeta commonlibs(shown below) si no existe:
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Crear nuevo proyecto para el Amazonas fuego OS
@@ -121,7 +121,7 @@ Utilice la utilidad de `cordova` para configurar un nuevo proyecto, tal como se 
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Nota:*** La primera vez que la plataforma amazon-fireos está instalada en su sistema, se descargará los archivos correspondientes en el directorio de trabajo de Córdoba, pero entonces fracasará como le faltan los archivos de soporte AWV SDK (véase arriba). Siga las instrucciones anteriores para instalar el `awv_interface.jar` , luego quitar y volver a agregar la plataforma amazon-fireos a su proyecto. Este paso sólo tendrá que hacerse para primer proyecto Amazonas fuego OS.
 
@@ -134,7 +134,7 @@ Para empujar una aplicación directamente al dispositivo, asegúrese de depuraci
 Usted puede empujar la aplicación para el dispositivo de la línea de comandos:
 
     $ cordova ejecutar Amazonas-fireos
-    
+
 
 Alternativamente dentro de Eclipse, haga clic derecho en el proyecto y elija **Run As → Android Application**.
 
@@ -147,14 +147,14 @@ Ejecutar el comando acepta parámetros opcionales como se especifica en el docum
 Para utilizar las herramientas para desarrolladores, escriba:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Esto permitirá a las herramientas en el cliente ejecutando. Entonces puede conectar al cliente por el reenvío de puertos mediante el Android Debug Bridge (adb) refiriéndose al nombre del paquete de la aplicación.
 
 Por ejemplo:
 
     ADB tcp:9222 delantero localabstract:com.example.helloworld.devtools
-    
+
 
 Puede utilizar el DevTools mediante un navegador basado en Chromium desplazándose a:`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para m
 
 *   Pulse **Finish**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
 

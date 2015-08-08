@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -59,7 +59,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 1.  推出 Tizen Eclipse IDE。
 
 2.  選擇**檔 → 導入 → Tizen Web 專案**：
-    
+
     ![][2]
 
 3.  按**下一步**.
@@ -69,22 +69,22 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 5.  請確保選中了**複製到工作區中的專案**。
 
 6.  按**流覽**並選擇科爾多瓦 Tizen `samples` 專案目錄 （如 `/cordova-basic` ）：
-    
+
     ![][3]
 
 7.  按**完成**。您的專案現在應該將其導入並出現在**專案資源管理器**視圖中：
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 重新生成專案，在**專案資源管理器**視圖中按右鍵並選擇**生成專案**：
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 如*hello.wgt*的小部件包檔應在專案的根目錄中生成。
 
@@ -94,19 +94,19 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## 將部署到設備
 
 *   請確保目標設備正常啟動、 連接和配置。必須正確設置其**日期和時間**設置。
 
 *   使用**連接資源管理器**視圖選擇的應用程式部署目標：**視窗顯示視圖 → 連接資源管理器**.
-    
+
     ![][7]
 
 *   用滑鼠右鍵按一下該專案，在**專案資源管理器**視圖，然後選擇 Run As **& rarr;Tizen Web 應用程式**：
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

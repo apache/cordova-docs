@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -42,12 +42,12 @@ Namestiti na `cordova` zapoved-črta orodje, sledite tem korakom:
 1.  Travnato gričevje ter napeljati [Node.js][1]. Po namestitvi lahko sklicevanje na `node` ali `npm` v ukazni vrstici.
 
 2.  Namestite v `cordova` korist. V Unix, prefixing dodatno `sudo` ukaz bo morda treba namestiti razvoj utilities sicer omejuje imenikov:
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     Dnevnik namestitve lahko povzroči napake za vsako uninstalled platform SDK. Po namestitvi lahko teči `cordova` v ukazni vrstici.
-    
+
     **Opomba**: na `-g` zastavo zgoraj pove npm namestiti cordova globalno. Morda boste morali dodati npm imenik v vaš STEZA za uveljavljanje globalno umestiti npm modulov. Na Windows, npm ponavadi najdete na `C:\Users\username\AppData\Roaming\npm` in na Unix v`/usr/local/share/npm`.
 
  [1]: http://nodejs.org/
@@ -57,7 +57,7 @@ Namestiti na `cordova` zapoved-črta orodje, sledite tem korakom:
 Pojdite v imenik, kjer želite ohraniti vaše izvorne kode, in zaženite ukaz in sicer:
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 To lahko traja nekaj časa za ukaz za dokončanje, zato bodite potrpežljivi. Tekmovanje v teku zapoved s je `-d` možnost prikaže informacije o napredku.
 
@@ -72,7 +72,7 @@ Tretji argument `HelloWorld` zagotavlja aplikacije zaslona naslov. Ta argument j
 Vse kasnejše zapoved potreba teči v okviru projekta imenik, ali vse podimenike v njeno področje uporabe:
 
         $ cd hello
-    
+
 
 Preden lahko zgraditi projekt, morate določiti nabor ciljne platforme. Vašo sposobnost za vožnjo teh ukazov odvisna od tega, ali računalnik podpira vsako SDK, in ali ste že namestili vsako SDK. Zaženete kateri koli od teh iz Mac:
 
@@ -81,7 +81,7 @@ Preden lahko zgraditi projekt, morate določiti nabor ciljne platforme. Vašo sp
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Zaženete kateri koli od teh s okno stroj, kjer *wp* se nanaša na različne različice operacijskega sistema Windows Phone:
 
@@ -92,12 +92,12 @@ Zaženete kateri koli od teh s okno stroj, kjer *wp* se nanaša na različne raz
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Teči to v ček vaš trenutni nabor platforme:
 
         $ cordova platforms ls
-    
+
 
 (Opomba za `platform` in `platforms` ukazi so sinonim.)
 
@@ -106,7 +106,7 @@ Zaženite enega od naslednjih sinonim ukazov umakniti platforma:
         $ cordova platform remove blackberry10
         $ cordova platform rm amazon-fireos
         $ cordova platform rm android
-    
+
 
 Izvaja ukaze za dodajanje ali odstranjevanje platforme vpliva na vsebino projekta *platforme* imenik, kjer se zdi vsako določeno platformo kot podimenik. *Www* Izvorni imenik je povzeto v podimeniku vsako platformo, ki se pojavljajo na primer v `platforms/ios/www` ali `platforms/android/assets/www` . Ker CLI nenehno kopira nad datoteke v *www* mapi vir, naj le urejate te datoteke in ne tisti, ki se nahaja pod *platform* podimenikov. Če vi raba prevod pregled software, vi should povečati to vir *www* mapo, skupaj z mapo *, ki se* v vaši različici sistema nadzora. (Več informacij o mapi *združuje* najdete v razdelku Prilagajanje vsako platformo spodaj.)
 
@@ -123,18 +123,18 @@ Privzeto je `cordova create` scenarij ustvari skeletnih spletni program, katereg
 Zaženite ukaz zgraditi iteratively projekta:
 
         $ cordova build
-    
+
 
 To ustvarja platformo-posebno kodo v okviru projekta `platforms` podimeniku. Po želji lahko omeji obseg vsake graditi na posebnih platformah:
 
         $ cordova build ios
-    
+
 
 Je `cordova build` ukaz je okrajšava za naslednje, kar je v tem primeru je tudi usmerjena v enotno platformo:
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 V tem primeru, ko zaženete `prepare` , uporabite Applov SDK Xcode kot alternativa za spreminjanje in pripraviti platformo-posebno kodo, ki Cordova ustvarja v `platforms/ios` . Uporabite lahko enak pristop z drugih platform SDK.
 
@@ -143,7 +143,7 @@ V tem primeru, ko zaženete `prepare` , uporabite Applov SDK Xcode kot alternati
 SDK za mobilne platforme, pogosto priti povesmo s emulators, ki izvaja naprava podoba, tako da lahko začetek app z za četnega zaslona in videli, kako komunicira z veliko funkcij platformo. Zaženite ukaz, in sicer za obnovo app in si ogledali na posebni platformi emulator:
 
         $ cordova emulate android
-    
+
 
 Nekatere mobilne platforme tekmovati z posebno napravo privzeto, kot so iPhone iOS projektov. Za druge platforme, boste morda morali najprej povežite napravo z emulator.
 
@@ -153,18 +153,18 @@ Opomba: Emulator podpore trenutno ni na voljo za Amazon ogenj OS
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Naslednji up s je `cordova emulate` ukaz Osveži prikaz zadnje prijave, ki je zdaj na voljo za zagon z za četnega zaslona emulator slike:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Izmenično, lahko slušalko priključite v računalnik in test app neposredno:
 
         $ cordova run android
-    
+
 
 Preden zaženete ta ukaz, morate nastaviti napravo za testiranje, po postopkih, ki se razlikujejo za vsako platformo. V napravah Android in Amazon ogenj OS, bi morali usposobiti **USB debugging** možnost na napravi, in morda dodali USB voznik glede na razvoj environmnent. Glej platformo vodniki za podrobnosti o zahtevah za vsako platformo.
 
@@ -177,135 +177,135 @@ Ko boste graditi in si ogledate nov projekt, ne naredi privzeti program, ki se p
  [4]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
-    
+
         com.phonegap.plugins.barcodescanner - Scans Barcodes
-    
+
 
 Iskanje samo v `bar` term donosov in dodatni rezultat:
 
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
-    
+
 
 Je `cordova plugin add` ukaz zahteva, da določite skladišča za plugin kodo. Prosimo, upoštevajte, da ko sledite spletni projekt Dev poteka dela in uporabo CLI, CLI bo poskrbel za dodajanje plugin kodo na primerno mesto za vsako platformo. (Če ste Native poteka dela projekta Dev, boste morali dodati plugins uporabljajo Plugman (vodnik link tukaj), večkrat za vsako platformo.)
 
 Tukaj so primeri, kako lahko uporabljate CLI funkcije dodati app:
 
 *   Osnovne naprave informacije o napravi:
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   Omrežno povezavo in baterija dogodkov:
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   Pospeška, kompas in Geolocation:
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   Fotoaparat, predvajanje medijev in zajema:
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-        
+
 
 *   Dostop do datotek v napravi ali omrežju (datoteka API):
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   Obveščanje preko pogovornega okna ali vibracij:
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   Stiki:
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   Globalizacija:
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   Splashscreen:
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   Plan nov obrv okno (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   Debug konzolo:
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 Uporaba `plugin ls` (ali `plugin list` , ali `plugin` sama) za ogled trenutno nameščen plugins. Vsak za prikaz svojih identifikator:
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 Če želite odstraniti plugin, sklicujejo nanj z istim identifikatorjem, ki se prikaže na seznamu. Na primer, tukaj je, kako bi odstrani podporo za konzolo debug s izpust prevod:
 
         $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 Lahko batch-odstrani ali dodati plugins določite več argumentov za vsak ukaz:
 
         $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
-    
+
 
 ## Plugin napredne možnosti
 
 Pri dodajanju plugin, več možnosti vam omogočajo, da določite, kje v puščati čep. Primeri zgoraj uporabljajo znane `registry.cordova.io` registra, in plugin je določil na `id` :
 
         $ cordova plugin add org.apache.cordova.console
-    
+
 
 Na `id` lahko vključujejo tudi v čep prevod števnik, dodan po je `@` značaja. Je `latest` različica je alias za najnovejšo različico. Na primer:
 
         $ cordova plugin add org.apache.cordova.console@latest
         $ cordova plugin add org.apache.cordova.console@0.2.1
-    
+
 
 Če plugin ni registrirana v `registry.cordova.io` ampak se nahaja v drugi kreten skladišče, lahko določite nadomestni URL:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
-    
+
 
 Kreten zgornjem puščati čep od konca glavni podružnici, ampak nadomestnega kreten-ref tag ali podružnice je treba dodati po a `#` znak:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
-    
+
 
 Če plugin (in njenih `plugin.xml` Datoteka) je v podimeniku v git repo, lahko določite z a `:` znak. Upoštevajte, da je `#` znak je še vedno potreben:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
-    
+
 
 Lahko tudi združite kreten-ref in podmapo:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
-    
+
 
 Izmenično, določite lokalna pot do imenika plugin, ki vsebuje v `plugin.xml` datoteke:
 
         $ cordova plugin add ../my_plugin_dir
-    
+
 
 ## Z uporabo *spajanja* prilagodite vsako platformo
 
@@ -314,16 +314,16 @@ Medtem ko Cordova omogoča preprosto uvajanje app za različne platforme, včasi
 Namesto tega, najvišje ravni `merges` imenik ponuja prostor za določanje sredstev za razporeditev na posebnih platformah. Vsake posamezne subdirectory v `merges` ogledala directory struktura je `www` vir drevo, ki vam omogoča, da preglasijo ali dodajanje datotek, kot je potrebno. Na primer, tukaj je, kako lahko uporab `merges` povečati privzeto velikost pisave za naprave Android in Amazon ogenj OS:
 
 *   Urejanje z `www/index.html` datoteko, dodal link za dodatne datoteke CSS, `overrides.css` v tem primeru:
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   Če želite ustvariti prazno `www/css/overrides.css` datoteko, ki bi veljala za vse gradi Android, preprečuje napako manjkajoče datoteke.
 
 *   Ustvarite a `css` subdirectory v `merges/android` , nato dodamo ustrezen `overrides.css` datoteke. Določite CSS, ki preglasi 12-point privzeto velikost pisave, ki je določena v `www/css/index.css` , na primer:
-    
+
         body { font-size:14px; }
-        
+
 
 Ko znova zgradite projekta, Android prevod značilnosti velikosti pisave po meri, medtem ko druge ostanejo nespremenjene.
 
@@ -335,12 +335,12 @@ Cordova ponuja nekaj globalni ukazi, ki vam lahko pomaga, če vi zaslužiti zalj
 
     $ cordova help
     $ cordova        # same
-    
+
 
 Je `info` ukaz Ustvari seznam potencialno koristnih podrobnosti, kot so trenutno nameščenih platforme in plugins, SDK različice za vsako platformo in različice CLI in `node.js` :
 
     $ cordova info
-    
+
 
 Tako predstavlja informacije na zaslonu in ujame izhod v lokalni `info.txt` datoteke.
 
@@ -351,18 +351,18 @@ Tako predstavlja informacije na zaslonu in ujame izhod v lokalni `info.txt` dato
 Po namestitvi v `cordova` korist, jo lahko vedno posodobite v najnovejšo različico z tekmovanje v teku sledeč zapoved:
 
         $ sudo npm update -g cordova
-    
+
 
 Za namestitev posebne različice, uporabite to sintakso:
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
-    
+
 
 Teči `cordova -v` videti, katera različica je trenutno nameščena. Teči na `npm
 info` ukaz za daljši seznam, ki vključuje trenutno različico skupaj z drugimi na voljo različica številke:
 
         $ npm info cordova
-    
+
 
 Cordova 3.0 je prva različica, ki podpira vmesnik ukazne vrstice, ki so opisane v tem razdelku. Če želite posodobiti iz različice pred 3,0, boste morali ustvariti nov projekt, kot je opisano zgoraj, torej ulitek starejši uporabe sredstev v najvišje ravni `www` imenik. Po potrebi nadaljnje podrobnosti o nadgradnji na 3.0 so na voljo v platformo vodniki. Ko nadgradite na `cordova` vmesnik ukazne vrstice in uporabo `npm update` ostati veljavna, bolj zamudno tam opisani postopki niso več ustrezni.
 

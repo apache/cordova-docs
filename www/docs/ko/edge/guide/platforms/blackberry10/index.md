@@ -30,9 +30,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 블랙베리 10 장치 시뮬레이터:
 
 *   프로세서: 인텔 듀얼 코어 2.0 GHz/AMD 애슬론 4200 + 이상
-*   디스크 공간: 10 GB 
-*   RAM 메모리: 4 GB 
-*   가상화: 다음 중 하나: 
+*   디스크 공간: 10 GB
+*   RAM 메모리: 4 GB
+*   가상화: 다음 중 하나:
     *   **인텔 가상화 기술** (버몬트, 버몬트-x, vmx) → [인텔 VT x 지원 프로세서 목록][1]
     *   **AMD 가상화** (AMD-V, SVM) (2006 년 5 월부터 모든 AMD Cpu AMD 셈프론 제외 하 고 V 포함).
 
@@ -63,53 +63,53 @@ Windows:
 *   **내 컴퓨터 → 속성 → 고급 → 환경 변수** 로 이동.
 
 *   예를 들어 네이티브 SDK 설치 디렉토리 경로에 추가:
-    
+
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
-        
+
 
 Mac 및 Linux:
 
 *   편집은 `~/.bash_profile` 파일을 네이티브 SDK 설치 된에 따라 다음과 같은 줄을 추가:
-    
+
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-        
-    
+
+
     또는 10.2 네이티브 SDK에 대 한:
-    
+
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
-        
+
 
 *   현재 세션에서 변경 내용을 적용 하려면 다음을 실행:
-    
+
         $ source ~/.bash_profile
-        
+
 
 당신이 커맨드 라인에서 네이티브 SDK를 사용 하 여 어떤 환경 문제가 있어, 설치 경로 내에 있는 귀하의 플랫폼에 대 한 적절 한 파일을 실행:
 
 *   Windows에서 → MS-DOS 셸:
-    
+
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-        
+
 
 *   Windows에서 → git bash 쉘:
-    
+
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-        
+
 
 *   리눅스에서 → 루트 사용자로 설치:
-    
+
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   리눅스에서 → 루트가 아닌 사용자로 설치:
-    
+
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   Mac:
-    
+
         $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 ## 서명 설정
 
@@ -124,7 +124,7 @@ Mac 및 Linux:
 마지막 단계는 서명 인증서를 생성 하는:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## 프로젝트 만들기
 
@@ -134,7 +134,7 @@ Mac 및 Linux:
         $ cd hello
         $ cordova platform add blackberry10
         $ cordova build
-    
+
 
 ## 에뮬레이터에 배포
 
@@ -151,30 +151,30 @@ Mac 및 Linux:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 이동 하는 **보안 및 개인 정보 → 개발 모드** 섹션 및 옵션을 사용:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 프로젝트에 대 한 블랙베리 10 플랫폼을 설정 하면 명령줄 유틸리티의 추가적인 세트 포함 됩니다. 이 경우 프로젝트 최상위 디렉토리에서 호출 다음 명령을 위에 표시 된 IP 주소와 *뮤* 라는 대상을 연결 합니다.
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-        
+
 
 *   맥/리눅스:
-    
+
         $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-        
+
 
 그런 다음 실행 하는 `emulate` 명령을 응용 프로그램을 볼 수:
 
         $ cordova emulate blackberry10
-    
+
 
 ## 장치에 배포
 
@@ -182,19 +182,19 @@ Mac 및 Linux:
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 IP 주소, 장치 암호 및 핀 이름을 연결할 대상 명령줄 유틸리티를 실행 합니다.
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 *   맥/리눅스:
-    
+
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 장소:
 
@@ -205,19 +205,19 @@ IP 주소, 장치 암호 및 핀 이름을 연결할 대상 명령줄 유틸리�
 그런 다음 실행 하는 `run` 명령을 응용 프로그램을 볼 수:
 
         blackberry10 실행 $ 코르도바
-    
+
 
 디버그 토큰은 아직 설정 하지 장치, 서명 키에 등록할 때 지정한 암호와 함께 스크립트를 실행 하는 플랫폼을 사용 하는 오류 메시지가 나타납니다.
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-        
+
 
 *   맥/리눅스:
-    
+
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
-        
+
 
 ## WebInspector를 사용 하 여 디버깅
 
@@ -232,7 +232,7 @@ IP 주소, 장치 암호 및 핀 이름을 연결할 대상 명령줄 유틸리�
 사용 `--release` 릴리스 버전 검은 딸기 세계를 통해 배포를 위해 적당 한 만드는.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`옵션에 서명 하 여 컴퓨터를 구성할 때 정의 하는 암호를 지정 합니다. 응용 프로그램.
 
@@ -243,14 +243,14 @@ IP 주소, 장치 암호 및 핀 이름을 연결할 대상 명령줄 유틸리�
 프로젝트에 대 한 블랙베리 10 플랫폼을 설정 하면 명령줄 유틸리티의 추가적인 세트 포함 됩니다. 이 경우 프로젝트 최상위 디렉토리에서 호출 다음 명령을 대상 IP 주소와 *뮤* 라는 연결 합니다.
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-        
+
 
 *   맥/리눅스:
-    
+
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-        
+
 
 목표를 정의한 후 실행된 명령을 사용 하 여 제공할 수 있습니다 `--target` .
 

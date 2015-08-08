@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -51,24 +51,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   비주얼 스튜디오 2012를 열고 **새 프로젝트** 선택.
 
 *   프로젝트 목록에서 나무, 그리고 다음 **빈 응용 프로그램** 에서 **설치 → 템플릿 → 기타 언어 → 자바 → Windows 저장소** 를 선택 합니다. 당신 처럼, 같은 어떤 프로젝트 이름을 입력 `CordovaWin8Foo` 이 예제와 같이.
-    
+
     ![][4]
 
 *   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . (게다가 그것은 프로젝트의 다른 플랫폼 이체에서 당신이 사용 하는 가능성이 `index.html` 기본 페이지의 이름으로.) 이 문제를 해결, 솔루션 탐색기의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` 파일 및 **시작 페이지** 값을 변경`index.html`.
-    
+
     ![][5]
 
 *   포함 하려면 `cordova.js` 마우스 오른쪽 단추로 프로젝트를 클릭에 `js` **→ 새 항목 추가**선택 하 고 솔루션 탐색기에서 디렉토리. 위치는 `cordova.js` 파일에 `lib\windows-8` 디렉터리 위에 언급 된.
 
 *   편집에 대 한 코드 `index.html` . 에 대 한 참조를 추가할 `cordova.js` . 이렇게 하려면 수동으로, 또는 솔루션 탐색기에서 파일을 드래그 하 여.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### 참조 추가...
 
         <!-WinJS 참조-> < href="//Microsoft.WinJS.1.0/css/ui-dark.css 링크" rel = "stylesheet" / >< src="//Microsoft.WinJS.1.0/js/base.js 스크립트" >< / 스크립트 >< src="//Microsoft.WinJS.1.0/js/ui.js 스크립트" >< / 스크립트 ><!-코르도바-> < src="/js/cordova.js 스크립트" >< / 스크립트 ><!-CordovaWin8Foo 참조-> < href="/css/default.css 링크" rel = "stylesheet" / >< src="/js/default.js 스크립트" >< / 스크립트 >
-    
+
 
 *   다음, 코르도바를 보여 주는 몇 가지 코드 작업을 추가 합니다.
 
@@ -76,28 +76,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
     <body>
         <p>Content goes here</p>
-    
+
         <script type="text/javascript">
-    
+
             console.log("Subscribing...");
             document.addEventListener("deviceready", function () {
-    
+
                 navigator.notification.alert("The device is ready!");
-    
+
             });
-    
+
         </script>
-    
+
     </body>
-    
+
 
 ## 5입니다. 테스트 프로젝트
 
 *   Visual Studio에서 프로젝트를 실행 합니다. 표시 메시지 상자가 표시 됩니다.
-    
+
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## 끝 났 어!
 

@@ -57,23 +57,23 @@ Aby zainstalować narzędzia wiersza poleceń projektu `cordova`, wykonaj nastę
  [2]: http://git-scm.com/
 
 *   na OS X i Linux:
-    
+
             $ sudo npm install -g cordova
-        
-    
+
+
     Na OS X i Linux Tworzenie prefiksu `npm` z `sudo` może być konieczne wobec rata ten rozwój narzędzie w inny sposób zastrzeżonych katalogów takich jak `/usr/local/share` . Jeśli używasz narzędzia opcjonalnie nvm/nawy lub ma dostęp do zapisu do katalogu instalacji, może być w stanie pominąć `sudo` prefiks. Jest dostępnych [więcej porad][3] na temat korzystania z `npm` bez `sudo` , jeśli chcecie to zrobić.
 
 *   w systemie Windows:
-    
+
             C:\>npm install -g cordova
-        
-    
+
+
     `-g`Flaga powyżej mówi `npm` zainstalować `cordova` na całym świecie. W przeciwnym razie zostanie zainstalowana w `node_modules` podkatalogiem bieżącego katalogu roboczego.
-    
+
     Może trzeba dodać `npm` do swojej `PATH` Aby wywołać globalnie rata `npm` modułów. W systemie Windows `npm` zazwyczaj można znaleźć w `C:\Users\username\AppData\Roaming\npm` . Na OS X i Linux to zwykle znajdują się w`/usr/local/share/npm`.
-    
+
     Dziennik instalacji może powodować błędy na dowolnej platformie odinstalowałem SDK.
-    
+
     Po instalacji, powinny być w stanie uruchomić `cordova` w wierszu polecenia bez argumentów i to należy wydrukować tekst pomocy.
 
  [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
@@ -83,7 +83,7 @@ Aby zainstalować narzędzia wiersza poleceń projektu `cordova`, wykonaj nastę
 Przejdź do katalogu, gdzie utrzymujesz swój kod źródłowy i wywołaj poniższe polecenie:
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 Może to zająć trochę czasu dla polecenia do wykonania, więc uzbroić się w cierpliwość. Uruchomienie polecenia z `-d` opcja wyświetla informacje o postępach.
 
@@ -98,7 +98,7 @@ Trzeci argument `HelloWorld` zawiera tytuł wyświetlania aplikacji. Ten argumen
 Wszystkie kolejne polecenia muszą być uruchamiane w katalogu projektu lub w odpowiednich podkatalogach:
 
         $ cd hello
-    
+
 
 Zanim zbudujesz projekt, musisz określić docelowe platformy. Możliwość uruchomienia tych poleceń zależy od tego czy Twój komputer wspiera dany zestaw SDK oraz czy jest on zainstalowany. Uruchom jedno z nich na komputerze Mac:
 
@@ -107,17 +107,17 @@ Zanim zbudujesz projekt, musisz określić docelowe platformy. Możliwość uruc
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Uruchom jedno z nich na komputerze z Windows, *wp* odnosi się do różnych wersji systemu operacyjnego Windows Phone:
 
         dodać platformy cordova $ wp8 $ cordova platformy windows $ cordova platformy dodać dodać dodać Amazonka fireos $ cordova platformy android $ cordova platformy dodać blackberry10 $ cordova platformy dodać firefoxos
-    
+
 
 Aby sprawdzić aktualny zestaw platform uruchom:
 
         $ cordova platforms ls
-    
+
 
 (Zauważ, że polecenia `platform` i `platforms` są tożsame.)
 
@@ -126,7 +126,7 @@ Uruchom jedno z tożsamych poleceń aby usunąć platformę:
         $ cordova platform remove blackberry10
         $ cordova platform rm amazon-fireos
         $ cordova platform rm android
-    
+
 
 Uruchamianie polecenia, aby dodać lub usunąć platform wpływa na zawartość katalogu projektu *platformy* , gdzie każdej określonej platformy pojawia się jako podkatalog. *Www* katalog źródłowy jest powielana w podkatalogu każdej platformy, znajdujących się na przykład w `platforms/ios/www` lub `platforms/android/assets/www` . Ponieważ CLI stale kopie plików z folderu *www* źródła, powinno się edytować tylko te pliki, a nie te znajdujące się w podkatalogach *platformy* . Jeśli używasz wersji oprogramowania, należy dodać ten folder źródłowy *www* wraz z folderu *Scala* , systemu kontroli wersji. (Więcej informacji na temat folderu *Scala* , który można znaleźć w sekcji Dostosuj każdy platformy poniżej).
 
@@ -143,18 +143,18 @@ Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na 
 Uruchom następujące polecenie, aby zbudować wielokrotnie powtarzane projekt:
 
         $ cordova build
-    
+
 
 To generuje kod specyficzny dla platformy w ramach projektu `platforms` podkatalogu. Opcjonalnie można ograniczyć zakres każdej budowy do platformy:
 
         $ cordova build ios
-    
+
 
 `cordova build`Polecenia jest skrótem następujące dane, które w tym przykładzie jest również ukierunkowane na jednej platformie:
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 W tym przypadku, po uruchomieniu `prepare` , można użyć Apple Xcode SDK jako alternatywa do modyfikowania i skompilować kod specyficzny dla platformy, Cordova generuje w `platforms/ios` . Za pomocą tego samego podejścia z innych Platform SDK.
 
@@ -163,7 +163,7 @@ W tym przypadku, po uruchomieniu `prepare` , można użyć Apple Xcode SDK jako 
 SDK dla platform mobilnych, często pochodzą z emulatorów, które wykonać obraz urządzenie, tak, że można uruchomić aplikacji na ekranie i zobaczyć, jak to współgra z wieloma funkcjami platformy. Uruchom polecenie, takie jak następujące odbudować aplikacji i wyświetlić go w specjalnej platformy emulatora:
 
         $ cordova emulate android
-    
+
 
 Niektóre platformy mobilne naśladować konkretne urządzenie domyślnie, takich jak iPhone iOS projektów. Dla innych platform może trzeba najpierw powiązać urządzenie z emulatorem.
 
@@ -173,18 +173,18 @@ Niektóre platformy mobilne naśladować konkretne urządzenie domyślnie, takic
 
 ![][4]
 
- [4]: img/guide/cli/android_emulate_init.png
+ [4]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Następujących się z `cordova emulate` polecenie odświeża obraz emulatora do wyświetlania najnowszych aplikacji, która jest już dostępna do uruchomienia na ekranie:
 
 ![][5]
 
- [5]: img/guide/cli/android_emulate_install.png
+ [5]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Na przemian można podłączyć telefon do komputera i przetestować aplikację bezpośrednio:
 
         $ cordova run android
-    
+
 
 Przed uruchomieniem tego polecenia, należy skonfigurować urządzenie do testowania, zgodnie z procedurami, które są różne dla każdej platformy. W urządzenia Android i Amazon ognia systemu operacyjnego trzeba by włączyć **debugowanie USB** opcja na urządzeniu i może dodać sterownik USB od twój environmnent rozwoju. Zobacz szczegóły każdej platformy platformy przewodników.
 
@@ -203,78 +203,78 @@ Wykaz tych pluginów, w tym dodatkowe pluginy trzeciej przez Wspólnotę, można
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
-    
+
         com.phonegap.plugins.barcodescanner - Scans Barcodes
-    
+
 
 Wyszukiwanie tylko `bar` określenie wydajności i wyników dodatkowe:
 
         cordova-plugin-statusbar - Cordova StatusBar Plugin
-    
+
 
 `cordova plugin add`Polecenia wymaga określenia repozytorium kodu wtyczki. Oto przykłady jak może używasz CLI do dodawania funkcji do aplikacji:
 
 *   Informacje podstawowe urządzenie (urządzenia API):
-    
+
         $ cordova plugin add cordova-plugin-device
-        
+
 
 *   Połączenie sieciowe i akumulator wydarzeń:
-    
+
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
-        
+
 
 *   Akcelerometr, kompas i geolokalizacja:
-    
+
         $ cordova plugin add cordova-plugin-device-motion
         $ cordova plugin add cordova-plugin-device-orientation
         $ cordova plugin add cordova-plugin-geolocation
-        
+
 
 *   Kamera, odtwarzanie i przechwytywania:
-    
+
         $ cordova plugin add cordova-plugin-camera
         $ cordova plugin add cordova-plugin-media-capture
         $ cordova plugin add cordova-plugin-media
-        
+
 
 *   Dostęp do plików na urządzeniu lub w sieci (File API):
-    
+
         $ cordova plugin add cordova-plugin-file
         $ cordova plugin add cordova-plugin-file-transfer
-        
+
 
 *   Powiadomienia za pośrednictwem okna dialogowego lub wibracji:
-    
+
         $ cordova plugin add cordova-plugin-dialogs
         $ cordova plugin add cordova-plugin-vibration
-        
+
 
 *   Kontakty:
-    
+
         $ cordova plugin add cordova-plugin-contacts
-        
+
 
 *   Globalizacja:
-    
+
         $ cordova plugin add cordova-plugin-globalization
-        
+
 
 *   Ekranu powitalnego:
-    
+
         $ cordova plugin add cordova-plugin-splashscreen
-        
+
 
 *   Otwarta nowa przeglądarka windows (InAppBrowser):
-    
+
         $ cordova plugin add cordova-plugin-inappbrowser
-        
+
 
 *   Konsoli debugowania:
-    
+
         $ cordova plugin add cordova-plugin-console
-        
+
 
 **Uwaga**: The CLI dodaje kod wtyczki odpowiednio dla każdej platformy. Jeśli chcesz się rozwijać z niższego poziomu powłoka narzędzia lub platformy SDK, jak wspomniano w przeglądzie, należy uruchomić narzędzie Plugman dodac pluginy osobno dla każdej platformy. (Aby uzyskać więcej informacji, zobacz za pomocą Plugman do zarządzania wtyczki).
 
@@ -282,56 +282,56 @@ Użycie `plugin ls` (lub `plugin list` , lub `plugin` przez sam) aby wyświetli�
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'cordova-plugin-console' ]
-    
+
 
 Usunąć plugin, odnoszą się do niego przez ten sam identyfikator, który pojawia się na liście. Na przykład tutaj jest, jak usunie wsparcie dla konsoli debugowania od wersji:
 
         $ cordova plugin rm cordova-plugin-console
         $ cordova plugin remove cordova-plugin-console    # same
-    
+
 
 Można usunąć partii lub określania więcej niż jeden argument dla każdego polecenia, aby dodać pluginy:
 
         $ cordova plugin add cordova-plugin-console cordova-plugin-device
-    
+
 
 ## Wtyczki zaawansowane opcje
 
 Po dodaniu pluginu, kilka opcje pozwalają określić skąd pobrać wtyczkę. Powyższe przykłady za pomocą dobrze znanych `registry.cordova.io` wpisywać do rejestru i plugin jest określony przez `id` :
 
         $ cordova plugin add cordova-plugin-console
-    
+
 
 `id`Może również obejmować numer wersji wtyczki, dołączane po `@` charakter. `latest`Wersja jest aliasem do najnowszej wersji. Na przykład:
 
         $ cordova plugin add cordova-plugin-console@latest
         $ cordova plugin add cordova-plugin-console@0.2.1
-    
+
 
 Jeśli wtyczka nie jest zarejestrowany w `registry.cordova.io` , ale znajduje się w innym repozytorium git, można określić alternatywnego adresu URL:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
-    
+
 
 W powyższym przykładzie git pobiera wtyczki od końca gałąź master, ale alternatywne git-ref tagu lub oddział można być dołączane po `#` znaków:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
-    
+
 
 Jeśli plugin (i jego `plugin.xml` pliku) jest w podkatalogu w git repo, można określić jej `:` charakter. Należy zauważyć, że `#` charakter jest nadal potrzebne:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
-    
+
 
 Można również połączyć git-ref i podkatalogu:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
-    
+
 
 Na przemian, określić lokalną ścieżkę do katalogu plugin, który zawiera `plugin.xml` pliku:
 
         $ cordova plugin add ../my_plugin_dir
-    
+
 
 ## Za pomocą *łączy* do dostosować każdy platformy
 
@@ -340,16 +340,16 @@ Podczas gdy Cordova umożliwia łatwe wdrażanie aplikacji na wielu różnych pl
 Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy określić zasoby do wdrażania na platformy. Każdy podkatalog platformy w `merges` lustra w strukturze katalogów `www` drzewo źródeł, dzięki czemu można zmienić lub dodać pliki, w razie potrzeby. Na przykład, Oto jak można używa `merges` do zwiększenia domyślny rozmiar czcionki dla urządzenia Android i Amazon ognia systemu operacyjnego:
 
 *   Edytuj `www/index.html` pliku, dodanie linka do dodatkowego pliku CSS, `overrides.css` w tym przypadku:
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   Opcjonalnie można utworzyć pustą `www/css/overrides.css` plików, które miałyby zastosowanie do wszystkich buduje-Android, zapobieganie błąd brak pliku.
 
 *   Tworzenie `css` podkatalogu, w `merges/android` , następnie dodać odpowiednie `overrides.css` pliku. Określ CSS, który zastępuje domyślny 12-punktowa czcionka rozmiar określony w `www/css/index.css` , na przykład:
-    
+
         body { font-size:14px; }
-        
+
 
 Podczas odbudować projekt, Android wersja posiada rozmiar czcionki niestandardowe, podczas gdy inne pozostają niezmienione.
 
@@ -361,17 +361,17 @@ Cordova oferuje kilka polecenia globalne, które mogą pomóc, jeśli utkniesz l
 
     $ cordova help
     $ cordova        # same
-    
+
 
 Dodatkowo można uzyskać bardziej szczegółową pomoc dotyczącą określonego polecenia. Na przykład:
 
     $ cordova run --help
-    
+
 
 `info`Polecenie tworzy listę potencjalnie przydatnych informacji, aktualnie zainstalowany platformy, pluginy, wersje SDK dla każdej platformy i wersji CLI i `node.js` :
 
     $ cordova info
-    
+
 
 Zarówno przedstawia informacje na ekranie i przechwytuje dane wyjściowe w lokalnym `info.txt` pliku.
 
@@ -382,18 +382,18 @@ Zarówno przedstawia informacje na ekranie i przechwytuje dane wyjściowe w loka
 Po zainstalowaniu `cordova` Narzędzia, można zawsze zaktualizować go do najnowszej wersji uruchamiając następujące polecenie:
 
         $ sudo npm update -g cordova
-    
+
 
 Aby zainstalować określonej wersji, należy użyć następującej składni:
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
-    
+
 
 Uruchom `cordova -v` Aby sprawdzić, która wersja jest aktualnie uruchomione. Uruchom `npm
 info` polecenie już aukcji, który zawiera wersję z innych numerów dostępna w wersji:
 
         $ npm info cordova
-    
+
 
 Cordova 3.0 jest pierwsza wersja obsługująca interfejs wiersza polecenia opisanych w tej sekcji. Jeśli aktualizujesz z wersji przed 3.0, musisz utworzyć nowy projekt, jak opisano powyżej, a następnie skopiuj starszych aplikacji aktywów do najwyższego poziomu `www` katalogu. W stosownych przypadkach, dalsze szczegółowe informacje na temat uaktualniania do wersji 3.0 są dostępne w prowadnice platformy. Po uaktualnieniu do `cordova` interfejs wiersza polecenia i wykorzystanie `npm update` na bieżąco, bardziej czasochłonnych procedur opisanych tam już są istotne.
 

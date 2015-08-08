@@ -61,7 +61,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-    
+
 
 ## 創建一個新專案
 
@@ -71,19 +71,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 ## 部署應用程式
 
 要部署的應用程式連接的 iOS 設備上：
 
         $ cordova run ios --device
-    
+
 
 部署預設 iOS 模擬器上的應用程式：
 
         $ cordova emulate ios
-    
+
 
 您可以使用**cordova run ios --list**看到所有可用的目標和**cordova run ios --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run ios --target="iPhone-6"`).
 
@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 部署到模擬程式
 
@@ -106,17 +106,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 2.  選擇**你好**app 立即向右面板中。
 
 3.  從工具列上的**計畫**功能表中選擇預定的設備、 iPhone 等作為 6.0 模擬器在這裡突出了：
-    
+
     ![][7]
 
 4.  按下**運行**按鈕出現在同一工具列左側的**計畫**中。 那生成、 部署並在模擬器中運行應用程式。 一個單獨的模擬器應用程式將打開，並顯示該應用程式：
-    
+
     ![][8]
-    
+
     只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許可以從**Xcode → 首選項 → 下載 → 元件**面板。
 
@@ -151,7 +151,7 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
 `InvokeString`方法 Xcode 的警告有關啟動一個應用程式從一個自訂的 URL 的功能。 雖然從一個自訂的 URL 載入的機制發生了改變，此代碼是仍然存在，以便為科爾多瓦的較早版本創建的應用程式提供向後的功能。 應用程式範例不使用此功能，因此可以忽略這些警告。 若要防止出現這些警告，請移除引用已棄用的 invokeString API 的代碼：
 
 *   編輯*Classes/MainViewController.m*檔、 環繞的代碼與下面的塊 `/*` 和 `*/` 的評論如下所示，然後鍵入**命令-s**保存該檔：
-    
+
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -165,15 +165,15 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-        
+
         return [super webViewDidFinishLoad:theWebView];
         }
-        
+
 
 *   編輯*Classes/AppViewDelegate.m*檔，注釋掉下面的行插入雙斜杠，如下所示，然後鍵入**命令-s**保存該檔：
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   按**命令-b**重新生成專案並消除此警告。
 
@@ -184,10 +184,10 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
 1.  選擇**Xcode → 首選項 → 位置**.
 
 2.  在**派生的資料**部分中，按**高級**按鈕並選擇**唯一**作為**生成位置**如下所示：
-    
+
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 這是一個新的 Xcode 安裝的預設設置，但可以設置不同的升級之後從 Xcode 舊版本。
 

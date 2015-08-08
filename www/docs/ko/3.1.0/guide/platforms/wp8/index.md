@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,27 +29,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 1. 시스템 요구 사항
 
 *   운영 체제:
-    
-    *   윈도우 8 또는 윈도우 8 프로 
+
+    *   윈도우 8 또는 윈도우 8 프로
         *   Windows의 64 비트 버전 (64)가 SDK에 대 한 필요 합니다.
         *   장치 에뮬레이터를 실행할 수 있도록, 프로 버전에 것이 좋습니다.
 
 *   하드웨어:
-    
+
     *   6.5 G B의 하드 디스크 여유 공간
     *   4 기가바이트 램
     *   64 비트 (x64) CPU
 
 *   Windows Phone 에뮬레이터 8
-    
+
     *   그래서이 목록에 포함 되어 그 필수 전화 에뮬레이터 하이퍼-V를 사용 합니다.
     *   윈도우 8 프로 64 비트 버전 또는 더 큰
-    *   가상화를 지 원하는 프로세서를 요구 하 고 [두 번째 수준의 주소 변환 (판금)][1] 
+    *   가상화를 지 원하는 프로세서를 요구 하 고 [두 번째 수준의 주소 변환 (판금)][1]
         *   [인텔 프로세서를 지원 하려면 VT-x (가상화) EPT (판금) 목록][2] 참조
     *   일반적으로이 기본적으로 비활성화 되어 BIOS 설정에서 가상화 기능 (인텔에 즉, VT-x) 사용.
 
 *   SDK + IDE (Visual Studio)
-    
+
     *   비주얼 스튜디오 2012 전문가, 프리미엄, 또는 궁극. Note Visual Studio Express에 대 한 Windows Phone (SDK에 포함)은 권장 하지 않습니다 VS 익스프레스 서식 파일 (아래 참조)를 구축 하지 수 있기 때문에 VS 프로에서 서만 또는 더 높은 **템플릿 내보내기** 기능을 필요 하지 않습니다.
 
 *   등록 및 실제 장치에 응용 프로그램을 설치 하거나 시장 장소에 그것을 제출 하는 경우 [Windows Phone 개발 센터][3] 계정에 대 한 지불.
@@ -88,7 +88,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 스크립트를 실행 합니다.
 
     > createTemplates.bat-설치
-    
+
 
 ## 3. 새 프로젝트 설정
 
@@ -100,7 +100,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. 프로젝트 구조를 검토
 
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. 빌드하고 에뮬레이터에 배포
 
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. 장치에 대 한 프로젝트를 빌드
 
@@ -138,7 +138,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 끝 났 어!
 

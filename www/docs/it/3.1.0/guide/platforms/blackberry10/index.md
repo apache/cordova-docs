@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,21 +35,21 @@ Su Windows:
 *   Andare al **mio Computer → proprietà → avanzate → variabili di ambiente**.
 
 *   Aggiungere la directory di installazione di SDK nativo al percorso, ad esempio:
-    
+
     ;C:\bbndk\host\_10\_1\_0\_132\darwin\x86\usr\bin\
 
 Su Mac e Linux:
 
 *   Modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove è stato installato il SDK nativo:
-    
+
     esportazione $ PATH = ${PATH}: / applicazioni/bbndk/host\_10\_1\_0\_132/darwin/x86/usr/bin /
-    
+
     o per il SDK nativo 10.2:
-    
+
     esportazione di $ PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Eseguire le operazioni seguenti per applicare la modifica nella sessione corrente:
-    
+
     $ fonte ~/.bash_profile
 
 ## Istituito per firma
@@ -72,7 +72,7 @@ Istruzioni dettagliate possono essere trovate qui:
 Uso il `cordova` utility per impostare un nuovo progetto, come descritto in l'interfaccia della riga di comando. Ad esempio, in una directory del codice sorgente:
 
     $ cordova creare Ciao com.example.hello $ cd $ Ciao cordova piattaforma aggiungere compilazione di cordova $ blackberry10
-    
+
 
 ## Distribuire all'emulatore
 
@@ -89,28 +89,28 @@ Lanciare l'immagine di emulatore, quindi scegliere **Impostazioni** dalla scherm
 
 ![][5]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Passare al **sicurezza e Privacy → modalità di sviluppo** sezione, attivare l'opzione e ottenere l'indirizzo IP:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Un ulteriore insieme di utilità della riga di comando sono inclusi quando si configura la piattaforma BlackBerry 10 per il progetto. Il comando riportato di seguito, in questo caso richiamato dalla directory principale del progetto, associa una destinazione denominata *UEM* con l'indirizzo IP visualizzato sopra.
 
 *   Su Windows:
-    
+
     $ platforms\blackberry10\cordova\target.bat aggiungere simulatore di emu 169.254.0.1 -t
 
 *   Su Mac/Linux:
-    
+
     $ piattaforme/blackberry10/cordova/destinazione aggiungere simulatore di emu 169.254.0.1 -t
 
 Quindi, eseguire il `emulate` comando per visualizzare l'app:
 
     $ cordova emulare blackberry10
-    
+
 
 ## Distribuire al dispositivo
 
@@ -118,16 +118,16 @@ Per distribuire un dispositivo, assicurarsi che sia collegato al computer. Abili
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_pin.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Eseguire l'utilità della riga di destinazione per associare un nome a un indirizzo IP, password dispositivo e PIN.
 
 *   Su Windows:
-    
+
     $ platforms\blackberry10\cordova\target.bat aggiungere mydevice 169.254.0.1 dispositivo di -t - password 123456 - perno FFFF972E
 
 *   Su Mac/Linux:
-    
+
     $ piattaforme/blackberry10/cordova/destinazione aggiungere mydevice 169.254.0.1 dispositivo di -t - password 123456 - perno FFFF972E
 
 dove:
@@ -139,16 +139,16 @@ dove:
 Quindi, eseguire il `run` comando per visualizzare l'app:
 
     $ cordova eseguire blackberry10
-    
+
 
 Se un token di debug non è ancora impostato per il dispositivo, un messaggio di errore richiede di utilizzare la piattaforma di eseguire script con la password che hai fornito durante la registrazione per chiavi di firma.
 
 *   Su Windows:
-    
+
     $ platforms\blackberry10\cordova\run.bat - dispositivo - keystorepass mysecret
 
 *   Su Mac/Linux:
-    
+
     $ piattaforme/blackberry10/cordova/run - dispositivo - keystorepass mysecret
 
 ## Debug con WebInspector
@@ -164,11 +164,11 @@ Per impostazione predefinita, esegue il `cordova build` comando crea un file di 
 È necessario eseguire una diversa `build` comando per creare una versione non adatta per la distribuzione attraverso il mondo BlackBerry. Non fa affidamento sul `cordova` strumento CLI e invece utilizza la seguente sintassi:
 
 *   Su Windows:
-    
+
     $ platforms\blackberry10\cordova\build.bat - rilascio - keystorepass mysecret
 
 *   Su Mac/Linux:
-    
+
     $ piattaforme/blackberry10/cordova/build--rilascio - keystorepass mysecret
 
 Il `--keystorepass` opzione specifica la password che definito quando si configura il computer per firmare applicazioni.

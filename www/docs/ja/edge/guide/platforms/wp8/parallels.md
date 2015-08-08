@@ -28,14 +28,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  平行線デスクトップの準備が Windows 8 のディスク イメージを選択し、**設定**を選択します.
 
 2.  **一般的な → Cpu**オプションを選択します。*2 つ*の Cpu を指定します。推奨条件の範囲外になる場合でも少なくとも 2 GB のメモリを指定します。
-    
+
     ![][2]
 
 3.  Windows 8 の仮想マシン内でデバイス エミュレーター イメージを実行できる**最適化**オプションを選択し、**入れ子に仮想化**を有効にします。.
-    
+
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 これらの手順が完了すると、Windows Phone SDK をインストールする準備が整いました。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。

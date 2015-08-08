@@ -61,26 +61,26 @@ Comman ライン ・ ターミナルから実行します。
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-    
+
 
 ## 新しいプロジェクトを作成します。
 
 コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトをセットアップする`コルドバ`ユーティリティを使用します。たとえば、ソース コード ディレクトリ: で
 
         $ コルドバ作成こんにちは com.example.hello"HelloWorld"$ cd こんにちは $ コルドバ プラットフォームは、ios を追加 $ コルドバ準備 # または"構築コルドバ"
-    
+
 
 ## アプリを展開します。
 
 接続されている iOS デバイス上のアプリを展開。
 
         $ cordova run ios --device
-    
+
 
 デフォルト iOS エミュレーター上でアプリケーションを展開するには
 
         $ cordova emulate ios
-    
+
 
 使用することができます**cordova run ios --list**を見るすべての利用可能なターゲットと**cordova run ios --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run ios --target="iPhone-6"`).
 
@@ -92,7 +92,7 @@ Ios プラットフォームをプロジェクトに追加すると、Xcode の�
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## エミュレーターへの展開します。
 
@@ -103,17 +103,17 @@ Ios プラットフォームをプロジェクトに追加すると、Xcode の�
 2.  右側のパネルで**こんにち**はアプリを選択します。
 
 3.  ツールバーの**配色**メニューから目的のデバイスを選択します、iPhone などとして 6.0 シミュレータはここに強調：
-    
+
     ![][7]
 
 4.  **スキーム**の左側に同じツールバーに表示される**実行**ボタンを押します。 ビルド、配置、エミュレーターでアプリケーションを実行します。 独立したエミュレータ アプリケーションは、アプリを表示するが開きます。
-    
+
     ![][8]
-    
+
     1 つだけのエミュレーターでは一度に実行可能性がありますので、別のエミュレーターでアプリケーションをテストする場合は、エミュレーターのアプリケーションを終了し、Xcode の内で別のターゲットを実行する必要があります。
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode は、iPhone および iPad の最新バージョン用のエミュレーターが付属しています。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
@@ -148,7 +148,7 @@ Xcode は、iPhone および iPad の最新バージョン用のエミュレー�
 Xcode の警告`invokeString`方法についてカスタム URL からアプリケーションを起動する機能にかかわる。 カスタム URL から読み込むためのメカニズムが変更されており、このコードはまだ存在している後方コルドバの古いバージョンで作成されたアプリの機能を提供します。 これらの警告を無視することができますので、サンプル アプリはこの機能を使用しません。 これらの警告が表示されないように、非推奨となった invokeString API を参照するコードを削除します。
 
 *   *Classes/MainViewController.m*ファイルを編集して、コードの次のブロックを囲む `/*` および `*/` 下図のように、そのタイプのコメント**コマンドの**ファイルを保存します。
-    
+
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -162,15 +162,15 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-        
+
         return [super webViewDidFinishLoad:theWebView];
         }
-        
+
 
 *   下図のように、2 つのスラッシュを挿入して次の行をコメント アウト、 *Classes/AppViewDelegate.m*ファイルを編集し、**コマンドの**ファイルを保存する入力します。
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   **コマンド + b**ボタンを押して、プロジェクトをリビルドし、警告を除去します。
 
@@ -181,10 +181,10 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
 1.  **Xcode → 設定 → 場所**を選択します.
 
 2.  **派生データ**] セクションで、**詳細設定**ボタンを押しますをここに示すように**ビルド場所**として**ユニークな**を選択します。
-    
+
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 これは新しい Xcode のインストールの既定の設定が異なる Xcode の旧バージョンからのアップグレード、次を設定可能性があります。
 

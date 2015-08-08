@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Перейти к **переменным среды → мой компьютер → свойства → расширенный**.
 
 *   Добавьте каталог установки собственного SDK путь, например:
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 На Mac и Linux:
 
 *   Редактировать `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где была установлена родного SDK:
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
-    
+
     $ Источник ~/.bash_profile
 
 ## Для подписи
@@ -61,7 +61,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Последним шагом является для создания сертификата подписи:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## Создание проекта
 
@@ -71,7 +71,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## Развертывание в эмулятор
 
@@ -88,18 +88,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Перейдите к **безопасность и конфиденциальность → режим развития** раздел и включить опцию:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Затем, запустите `emulate` команду для просмотра приложений:
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## Развернуть устройстве
 
@@ -108,12 +108,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Затем, запустите `run` команду для просмотра приложений:
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 Если маркер отладки еще не создали для устройства, сообщение об ошибке попросит ввести пароль, заданные при настройке компьютер для подписи приложений.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## Отладка с WebInspector
 
@@ -128,7 +128,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Используйте `--release` для создания релиз версии для распространения через BlackBerry World.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`Параметр определяет пароль, заданные при настройке компьютера для подписи приложений.
 
@@ -139,11 +139,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Дополнительный набор утилит командной строки включаются при установке платформы BlackBerry 10 для вашего проекта. Следующая команда, в данном случае вызван из каталога верхнего уровня проекта, связывает целевой объект с именем *эму* с IP-адресом.
 
 *   В Windows:
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   На Mac/Linux:
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 После того, как цель определена, вы можете предоставить его с помощью команды run `--target` :

@@ -49,12 +49,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Mac、Linux または他の Unix ライクなプラットフォームで、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK のインストールに応じて、次のような行を追加します。
 
     エクスポート パス ${path} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール
-    
+
 
 これは、SDK で新しくオープンしたターミナル windows のツールを公開します。それ以外の場合、現在のセッションで使用できるようにするこれを実行します。
 
     $ ソース ~/.bash_profile
-    
+
 
 Windows 7 を道の環境を変更: する
 
@@ -67,16 +67,16 @@ Windows 7 を道の環境を変更: する
 *   **パス**変数を選択し、キーを押して**編集**.
 
 *   たとえば、SDK をインストールしたに基づくパスに次を追加します。
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   値を保存して両方のダイアログ ボックスを閉じます。
 
 また、コマンド ・ プロンプトとタイプ Java および Ant. オープンを有効にする必要があります `java` 、また入力と `ant` 。パスに追加いずれかを実行する失敗します。
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### アマゾン WebView SDK
 
@@ -93,7 +93,7 @@ Windows 7 を道の環境を変更: する
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 作成したらここでは、SDK を使用して、それを変更する方法です。
 
@@ -107,7 +107,7 @@ Windows 7 を道の環境を変更: する
 
 *   **終了**キーを押します。.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 
@@ -130,7 +130,7 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 アプリをデバイスにプッシュするには、コマンド行から。
 
     $ cordova run amazon-fireos
-    
+
 
 Eclipse、内でプロジェクトを右クリックし、**人造人間アプリケーション → として実行**を選択します.
 

@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -55,13 +55,13 @@ Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 Una vez creado, puede abrir desde dentro de Xcode. Haga doble clic para abrir el `hello/platforms/ios/hello.xcodeproj` archivo. La pantalla debe verse así:
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Desplegar en emulador
 
@@ -72,17 +72,17 @@ Para previsualizar la aplicación en el emulador de iOS:
 2.  Seleccione la aplicación **hello** en el panel inmediatamente a la derecha.
 
 3.  Seleccione el dispositivo deseado desde el menú de la barra de herramientas **Scheme**, como el iPhone Simulator 6.0 como destacado aquí:
-    
+
     ![][5]
 
 4.  Presione el botón **Run** que aparece en la misma barra de herramientas a la izquierda del **Scheme**. Construye, implementa y ejecuta la aplicación en el emulador. Una aplicación separada emulador se abre para mostrar la aplicación:
-    
+
     ![][6]
-    
+
     Sólo un emulador puede ejecutar al mismo tiempo, así que si quieres probar la aplicación en un emulador diferente, tienes que dejar la aplicación del emulador y llevar un objetivo diferente dentro de Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode viene liado con emuladores para las ultimas versiones de iPhone y iPad. Las versiones más antiguas pueden estar disponibles en el **Xcode → preferencias → descargas → componentes** panel.
 
@@ -117,20 +117,20 @@ Para desplegar en el dispositivo:
 Xcode de la advertencia sobre el `invokeString` método refiere a una funcionalidad que lanza una app desde una dirección URL personalizada. Mientras que el mecanismo para cargar desde una dirección URL personalizada ha cambiado, este código todavía está presente para proporcionar la funcionalidad al revés para aplicaciones creadas con versiones anteriores de Córdoba. La aplicación muestra no utiliza esta funcionalidad, así que estas advertencias pueden ser ignoradas. Para evitar que aparezcan estas advertencias, quitar el código que hace referencia a la invokeString obsoleta API:
 
 *   Edite el archivo *Classes/MainViewController.m* , rodean el siguiente bloque de código con `/*` y `*/` comentarios como se muestra a continuación, escriba el **comando + s** para guardar el archivo:
-    
+
         theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / sólo son válidas si ___PROJECTNAME__-Info.plist especifica un protocolo para manejar / * si (self.invokeString) {/ / se pasa antes de que se desencadena el evento deviceready, así que se puede acceder en js cuando Recibes deviceready NSLog (@"DEPRECATED: window.invokeString - utilice la función window.handleOpenURL(url), que siempre se llama cuando la aplicación se ejecuta a través de una url de esquema personalizado.");
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         } * / / / Base color negro para fondo coincide con las aplicaciones nativas theWebView.backgroundColor = [UIColor blackColor];
-        
+
         retorno [super webViewDidFinishLoad: theWebView];
         }
-        
+
 
 *   Edite el archivo *Classes/AppViewDelegate.m* , comentar la siguiente línea insertando una doble barra como se muestra abajo, a continuación, escriba el **comando + s** para guardar el archivo:
-    
+
         //Self.viewController.invokeString = invokeString;
-        
+
 
 *   Pulse **comando + b** para reconstruir el proyecto y eliminar las advertencias.
 
@@ -141,10 +141,10 @@ Xcode de la advertencia sobre el `invokeString` método refiere a una funcionali
 1.  Seleccione **Xcode → preferencias → ubicaciones de**.
 
 2.  En la sección de **Datos derivados**, pulse el botón **avanzado** y seleccione **único** como la **Ubicación de construir** como se muestra aquí:
-    
+
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Esta es la configuración predeterminada para una instalación nueva de Xcode, pero se puede ajustar diferentemente después de una actualización de una versión anterior de Xcode.
 

@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ Windows:
 *   **私のコンピューター → プロパティ → 詳細設定 → 環境変数**に行く.
 
 *   ネイティブ SDK のインストール ディレクトリ パスに追加、たとえば。
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 Mac および Linux:
 
 *   編集、 `~/.bash_profile` ネイティブ SDK のインストール先に応じて、次のような行を追加するファイル。
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   現在のセッションで変更を適用するのには、次を実行します。
-    
+
     $ ソース ~/.bash_profile
 
 ## 署名を設定します。
@@ -61,7 +61,7 @@ Mac および Linux:
 最後の手順は、署名証明書を生成します。
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## プロジェクトを作成します。
 
@@ -71,7 +71,7 @@ Mac および Linux:
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## エミュレーターへの展開します。
 
@@ -88,18 +88,18 @@ Mac および Linux:
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 移動し、**セキュリティとプライバシー → 開発モード**セクションし、オプションを有効にします。
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 その後、実行、 `emulate` アプリケーションを表示するコマンド。
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## デバイスへの配置します。
 
@@ -108,12 +108,12 @@ Mac および Linux:
 その後、実行、 `run` アプリケーションを表示するコマンド。
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 デバッグ トークンがまだない場合、デバイスの設定、エラー メッセージされたらパスワードを入力するときにアプリケーションに署名するお使いのコンピューターの構成を定義しています。
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## WebInspector とデバッグ
 
@@ -128,7 +128,7 @@ Mac および Linux:
 使用する `--release` BlackBerry の世界を介して配信に適してリリース バージョンを作成します。
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`オプションに署名するお使いのコンピューターを構成するときに定義されたパスワードを指定しますアプリケーション。
 
@@ -139,11 +139,11 @@ Mac および Linux:
 コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 この場合、プロジェクトの最上位ディレクトリから呼び出される、次のコマンドは*emu* IP アドレスを持つという名前のターゲットを関連付けます。
 
 *   Windows:
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   Mac の/Linux: 上
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 ターゲットが定義されたら、実行するコマンドを使用する提供できます `--target` :

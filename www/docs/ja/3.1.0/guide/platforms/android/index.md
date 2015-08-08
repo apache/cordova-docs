@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -53,12 +53,12 @@ NOTE, doc said:
 コルドバ動作するコマンド ライン ツール、SDK の含まする必要があります `tools` と `platform-tools` パス環境のディレクトリ。 Mac、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK のインストールに応じて、次のような行を追加します。
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
-    
+
 
 これは、SDK で新しくオープンしたターミナル windows のツールを公開します。それ以外の場合、現在のセッションで使用できるようにするこれを実行します。
 
     $ source ~/.bash_profile
-    
+
 
 Windows 7 を道の環境を変更: する
 
@@ -71,23 +71,23 @@ Windows 7 を道の環境を変更: する
 *   **パス**変数を選択し、キーを押して**編集**.
 
 *   たとえば、SDK をインストールしたに基づくパスに次を追加します。
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   値を保存して両方のダイアログ ボックスを閉じます。
 
 また、コマンド ・ プロンプトとタイプ Java および Ant. オープンを有効にする必要があります `java` 、また入力と `ant` 。パスに追加いずれかを実行する失敗します。
 
         %JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ## SDK でプロジェクトを開く
 
 使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
         $ コルドバ作成こんにちは com.example.hello"HelloWorld"$ cd こんにちは $ コルドバ プラットフォーム android $ コルドバ ビルドを追加
-    
+
 
 作成したらここでは、SDK を使用して、それを変更する方法です。
 
@@ -101,7 +101,7 @@ Windows 7 を道の環境を変更: する
 
 *   **終了**キーを押します。.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 
@@ -122,45 +122,45 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 *   実行 `android` コマンド ・ ラインで。
 
 *   Eclipse、内でこのツールバー アイコンを押します。
-    
+
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 一度開いて、アンドロイド SDK マネージャーはさまざまなランタイム ライブラリが表示されます。
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 **ツール → 管理 Avd** (Android 仮想デバイス) を選択し、表示されたダイアログ ボックス内の**デバイス定義**から任意の項目を選択します。
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 これで、AVD **Android 仮想デバイス**リストに表示されます。
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 この時点で使用することができます、 `cordova` ユーティリティをコマンドラインからエミュレーターにアプリケーションを配置します。
 
         $ コルドバ android をエミュレートします。
-    
+
 
 代わりに Eclipse 内で作業している、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
 
@@ -183,6 +183,6 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 アプリをデバイスにプッシュするには、コマンド行から。
 
         android を実行 $ コルドバ
-    
+
 
 Eclipse、内でプロジェクトを右クリックし、**人造人間アプリケーション → として実行**を選択します.

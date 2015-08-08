@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -51,24 +51,24 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 *   打開 Visual Studio 2012 並選擇**新的專案**.
 
 *   從專案清單從樹，然後**空白應用程式**選擇**安裝 → 範本 → 其它語言 → JavaScript → Windows 存儲區**。 輸入你喜歡的如無論專案名稱 `CordovaWin8Foo` 如本示例所示。
-    
+
     ![][4]
 
 *   Microsoft 將繼續使用 `default.html` 作為預設的主頁，但大多數的 網頁程式開發人員使用 `index.html` 。 （再加上它是有可能的在其他平臺變形的您的專案中使用的 `index.html` 作為您的預設頁的名稱.)若要修復此問題，在解決方案資源管理器中重命名 `default.html` 檔到 `index.html` 。 然後按兩下 `package.appxmanifest` 檔，並將**起始頁**該值更改為`index.html`.
-    
+
     ![][5]
 
 *   要包括 `cordova.js` 在專案中，按右鍵 `js` 目錄在解決方案資源管理器並選擇**添加 → 新專案**。 找到 `cordova.js` 檔在 `lib\windows-8` 上面指出的目錄。
 
 *   編輯的代碼為 `index.html` 。將引用添加到 `cordova.js` 。您可以手動，或通過從解決方案資源管理器中拖動檔。
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### 增加參考......
 
         <! — — WinJS 的引用--> < 連結 href="//Microsoft.WinJS.1.0/css/ui-dark.css"rel ="樣式表"/ >< 腳本 src="//Microsoft.WinJS.1.0/js/base.js">< / 腳本 >< 腳本 src="//Microsoft.WinJS.1.0/js/ui.js">< / 腳本 ><! — — 科爾多瓦--> < 腳本 src="/js/cordova.js">< / 腳本 ><! — — CordovaWin8Foo 的引用--> < 連結 href="/css/default.css"rel ="樣式表"/ >< 腳本 src="/js/default.js">< / 腳本 >
-    
+
 
 *   下一步，添加一些代碼，演示科爾多瓦工作。
 
@@ -76,28 +76,28 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 
     <body>
         <p>Content goes here</p>
-    
+
         <script type="text/javascript">
-    
+
             console.log("Subscribing...");
             document.addEventListener("deviceready", function () {
-    
+
                 navigator.notification.alert("The device is ready!");
-    
+
             });
-    
+
         </script>
-    
+
     </body>
-    
+
 
 ## 5.測試專案
 
 *   從 Visual Studio 中運行該專案。你會看到顯示的訊息方塊：
-    
+
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## 完成了 ！
 

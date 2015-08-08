@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -65,7 +65,7 @@ La radice del repo contiene un `createTemplates.bat` file. Facendo doppio clic s
 Se si esegue il file batch dalla riga di comando, è possibile chiamare anche con un parametro per installare automaticamente:
 
         > createTemplates.bat-installare
-    
+
 
 ## Impostare un nuovo progetto
 
@@ -83,7 +83,7 @@ Il seguente esempio struttura rappresenta un 2.3.0 di progetto, ma può variare 
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Compilare il progetto per il dispositivo
 
@@ -99,6 +99,6 @@ Prima di testare l'applicazione su un dispositivo, il dispositivo deve essere re
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 A questo punto, hai finito.

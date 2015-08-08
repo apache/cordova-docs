@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ Su Windows:
 *   Andare al **mio Computer → proprietà → avanzate → variabili di ambiente**.
 
 *   Aggiungere la directory di installazione di SDK nativo al percorso, ad esempio:
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 Su Mac e Linux:
 
 *   Modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove è stato installato il SDK nativo:
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Eseguire le operazioni seguenti per applicare la modifica nella sessione corrente:
-    
+
     $ fonte ~/.bash_profile
 
 ## Istituito per firma
@@ -61,7 +61,7 @@ Immettere una password e fare clic su "Ottieni Token" per scaricare bbidtoken.cs
 Il passo finale è quello di generare un certificato di firma:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## Creare un progetto
 
@@ -71,7 +71,7 @@ Uso il `cordova` utility per impostare un nuovo progetto, come descritto in l'in
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## Distribuire all'emulatore
 
@@ -88,18 +88,18 @@ Lanciare l'immagine di emulatore, quindi scegliere **Impostazioni** dalla scherm
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Passare al **sicurezza e Privacy → modalità di sviluppo** sezione e attivare l'opzione:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Quindi, eseguire il `emulate` comando per visualizzare l'app:
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## Distribuire al dispositivo
 
@@ -108,12 +108,12 @@ Per distribuire un dispositivo, assicurarsi che il computer è collegato ed è a
 Quindi, eseguire il `run` comando per visualizzare l'app:
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 Se un token di debug non è ancora impostata per il dispositivo, un messaggio di errore richiede di fornire la password è definito quando si configura il computer per firmare le applicazioni.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## Debug con WebInspector
 
@@ -128,7 +128,7 @@ Per impostazione predefinita, esegue il `cordova build` comando crea un file di 
 Uso `--release` per creare una versione non adatta per la distribuzione attraverso il mondo BlackBerry.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 Il `--keystorepass` opzione specifica la password che definito quando si configura il computer per firmare applicazioni.
 
@@ -139,11 +139,11 @@ Le istruzioni di cui sopra assumono un dispositivo è collegato tramite USB o un
 Un ulteriore insieme di utilità della riga di comando sono inclusi quando si configura la piattaforma BlackBerry 10 per il progetto. Il comando riportato di seguito, in questo caso richiamato dalla directory principale del progetto, associa una destinazione denominata *emu* con un indirizzo IP.
 
 *   Su Windows:
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   Su Mac/Linux:
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 Una volta definito l'obiettivo, è possibile fornire al comando di corsa con `--target` :

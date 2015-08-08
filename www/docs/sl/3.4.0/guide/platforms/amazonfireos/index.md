@@ -49,12 +49,12 @@ Za Cordova orodja ukazne vrstice za delo, morate vključiti v SDK `tools` in `pl
 Na Mac, Linux ali drugi Unix-všeč biti platforme, lahko uporabite urejevalnik besedil tvoriti ali ublažiti z `~/.bash_profile` datoteko, dodal vrstico, kot sledi, odvisno od tega, kjer SDK namesti:
 
     izvozite poti = ${pot}: / razvoj/adt-snop/sdk/platformo-orodja: / razvoj/adt-snop / / orodja sdk
-    
+
 
 To izpostavlja orodja SDK v Novoodprti terminalsko okno. Sicer zaženite to na voljo v trenutni seji:
 
     $ vir ~/.bash_profile
-    
+
 
 V ublažiti STEZA okolje na Windows 7:
 
@@ -67,16 +67,16 @@ V ublažiti STEZA okolje na Windows 7:
 *   Izberite spremenljivko **PATH** in pritisnite **Uredi**.
 
 *   Privesiti sledeč poti, kjer ste namestili SDK, na primer na osnovi:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Vrednost shranite in zaprite obeh pogovornih oknih.
 
 Prav tako morate omogočiti Java in Ant. plan a zapoved uren ter stavek `java` , in tudi vnesite `ant` . Dodaj pot kar uspelo teči:
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### Amazon spletni pogled SDK
 
@@ -93,7 +93,7 @@ Uporaba na `cordova` korist zaiti ki gre gor a nov projekt, kot je opisano v The
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 Ko ga enkrat ustvariš, tukaj je kako rabiti SDK spremeniti:
 
@@ -107,7 +107,7 @@ Ko ga enkrat ustvariš, tukaj je kako rabiti SDK spremeniti:
 
 *   Pritisnite **konča**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Ko se odpre okno Eclipse, rdeč **X** lahko zdi, da kažejo nerešenih problemov. Če je tako, sledite naslednjim korakom dodatne:
 
@@ -130,7 +130,7 @@ Push app neposredno na napravo, poskrbite, USB debugging omogočena v napravi, k
 Napravo lahko push app iz ukazne vrstice:
 
     $ cordova run amazon-fireos
-    
+
 
 Izmenično v mrk, desno projekta in izberite **Zaženi kot → Android aplikacij**.
 

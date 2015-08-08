@@ -49,12 +49,12 @@ Pour les outils de ligne de commande de Cordova pour travailler, vous devez incl
 Sur Mac, Linux ou autres plates-formes de type Unix, vous pouvez utiliser un éditeur de texte pour créer ou modifier le `~/.bash_profile` fichier, en ajoutant une ligne comme ci-dessous, en fonction d'où le kit de développement logiciel installe :
 
     export PATH = ${chemin}: / / adt-bundle/sdk/plateforme-outils de développement: / développement/adt-bundle/sdk/tools
-    
+
 
 Cela expose les outils SDK dans windows terminales nouvellement ouverts. Dans le cas contraire, exécutez-le pour les rendre disponibles dans la session en cours :
 
     $ source ~/.bash_profile
-    
+
 
 Pour modifier l'environnement PATH sur Windows 7 :
 
@@ -67,16 +67,16 @@ Pour modifier l'environnement PATH sur Windows 7 :
 *   Sélectionnez la variable **PATH** et appuyer sur **modifier**.
 
 *   Le chemin d'accès basé sur lequel vous avez installé le SDK, par exemple, ajoutez ce qui suit :
-    
+
         ;C:\Development\adt-bundle\sdk\platform-Tools ;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Enregistrez la valeur et fermez les deux boîtes de dialogue.
 
 Vous devrez peut-être également activer Java et Open ant une invite de commandes et tapez `java` , puis tapez également `ant` . Ajoutez le chemin d'accès si elle ne pas s'exécuter :
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### Amazon WebView SDK
 
@@ -93,7 +93,7 @@ Utilisation du `cordova` utilitaire de mettre en place un nouveau projet, tel qu
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 Une fois créé, voici comment utiliser le SDK pour le modifier :
 
@@ -107,7 +107,7 @@ Une fois créé, voici comment utiliser le SDK pour le modifier :
 
 *   Appuyez sur **Terminer**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Une fois que la fenêtre de Eclipse s'ouvre, un rouge **X** peut apparaître pour indiquer les problèmes non résolus. Dans l'affirmative, suivez ces étapes supplémentaires :
 
@@ -130,7 +130,7 @@ Pour repousser un $ $ etAPP directement sur l'appareil, assurez-vous que déboga
 Vous pouvez pousser l'app à l'appareil de la ligne de commande :
 
     $ cordova run amazon-fireos
-    
+
 
 En alternance au sein d'Eclipse, cliquez droit sur le projet et choisissez **exécute en tant que → Application Android**.
 

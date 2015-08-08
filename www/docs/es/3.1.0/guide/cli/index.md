@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -41,10 +41,10 @@ Para instalar el `cordova` de línea de comandos de la herramienta, siga estos p
 1.  Descargar e instalar [Node.js][1]. Después de la instalación, usted debe ser capaz de invocar `nodo` o `npm` en su línea de comandos.
 
 2.  Instalar la utilidad de `cordova`. En Unix, prefijando el comando `sudo` de adicional puede ser necesario instalar utilidades de desarrollo en lo contrario restringido directorios:
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     El registro de instalación puede producir errores para cualquier plataforma desinstalado SDK. Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos.
 
  [1]: http://nodejs.org/
@@ -54,7 +54,7 @@ Para instalar el `cordova` de línea de comandos de la herramienta, siga estos p
 Vaya al directorio donde mantener su código fuente y ejecutar un comando como el siguiente:
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 Puede tomar algún tiempo para que el comando completar, así que tenga paciencia. Ejecute el `cordova -d` para obtener más información sobre el progreso.
 
@@ -67,7 +67,7 @@ Los otros dos argumentos son opcionales: el `com.example.hello` argumento propor
 Todos los comandos posteriores necesitan ejecutarse dentro de directorio del proyecto, o cualquier subdirectorios dentro de su ámbito de aplicación:
 
         $ cd hello
-    
+
 
 Antes de que usted puede construir el proyecto, tienes que especificar un conjunto de plataformas de destino. Su capacidad para ejecutar estos comandos depende de si tu maquina soporta cada SDK, y si ya tienes instalación cada SDK. Ejecutar cualquiera de éstos desde un Mac:
 
@@ -75,7 +75,7 @@ Antes de que usted puede construir el proyecto, tienes que especificar un conjun
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere a diferentes versiones del sistema operativo Windows Phone:
 
@@ -85,12 +85,12 @@ Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere 
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Ejecutar para comprobar su sistema actual de plataformas:
 
         $ cordova platforms ls
-    
+
 
 (Nota del `platform` y `platforms` son sinónimos comandos.)
 
@@ -98,7 +98,7 @@ Ejecutar cualquiera de los siguientes comandos sinónimos para quitar una plataf
 
         $ cordova platform remove blackberry10
         $ cordova platform rm android
-    
+
 
 Ejecución de comandos para agregar o quitar afecta a plataformas el contenido del directorio de *plataformas* del proyecto, donde cada plataforma especificado aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www` . De forma predeterminada, archivo de configuración de cada plataforma se configura para poder acceder a todas las APIs de Cordova.
 
@@ -113,18 +113,18 @@ XREF -->
 Ejecute el siguiente comando para crear iterativamente el proyecto:
 
         $ cordova build
-    
+
 
 Esto genera código específico de plataforma dentro del proyecto `platforms` subdirectorio. Opcionalmente puede limitar el alcance de cada generación de plataformas específicas:
 
         $ cordova build ios
-    
+
 
 El `cordova build` el comando es una abreviatura para el siguiente, que en este ejemplo también está orientado a una única plataforma:
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 En este caso, una vez se ejecuta `prepare` , puede utilizar como una alternativa Xcode SDK de Apple para modificar y compilar el código específico de plataforma que Córdoba se genera dentro de `platforms/ios` . Puede utilizar el mismo enfoque con SDK de otras plataformas.
 
@@ -133,24 +133,24 @@ En este caso, una vez se ejecuta `prepare` , puede utilizar como una alternativa
 SDK para plataformas móviles vienen a menudo incluidos con emuladores que ejecutan una imagen del dispositivo, así que usted puede lanzar la aplicación desde la pantalla principal y ver cómo interactúa con muchas características de la plataforma. Ejecutar un comando como el siguiente para reconstruir la aplicación y visualizarlo en emulador de una plataforma específica:
 
         $ cordova emulate android
-    
+
 
 Algunas plataformas móviles emulan un dispositivo especial de forma predeterminada, como el iPhone iOS proyectos. Para otras plataformas, necesitará primero asociado a un dispositivo con un emulador. (Vea a las guías de plataforma para más detalles). Por ejemplo, usted primero de puede ejecutar el `android` comando para iniciar el SDK de Android, y luego ejecute una imagen del dispositivo en particular, que inicia según su comportamiento predeterminado:
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Seguimiento con el `cordova emulate` comando actualiza la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativamente, puedes enchufe del auricular en el ordenador y probar la aplicación directamente:
 
         $ cordova run android
-    
+
 
 Antes de ejecutar este comando, tienes que configurar el dispositivo para la prueba, siguiendo los procedimientos que varían para cada plataforma. En caso de Android, tienes que activar una opción de **depuración USB** en el dispositivo y quizás añadir un controlador USB dependiendo de su entorno de desarrollo. Ver a las guias de plataforma para obtener más información sobre los requisitos de cada plataforma.
 
@@ -163,78 +163,78 @@ Un *plugin* es un poco de código adicional que proporciona una interfaz para co
 El `cordova plugin add` comando requiere especificar el repositorio para el código del plugin. Estos son ejemplos de funciones que se podría añadir:
 
 *   Información básica del dispositivo (dispositivo API):
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   Conexión de red y eventos de batería:
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   Acelerómetro, brújula y geolocalización:
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   Cámara, reproducción multimedia y captura:
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+
 
 *   Acceder a archivos en el dispositivo o red (archivo API):
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   Notificación mediante vibración o cuadro de diálogo:
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   Contactos:
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   Globalización:
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   SplashScreen:
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   Abrir nuevas ventanas del navegador (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   Consola de depuración:
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo le quita apoyo para una consola de depuración de una versión:
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 Puede lote-quitar o agregar plugins por especificar más de un argumento para cada comando.
 
@@ -245,16 +245,16 @@ Mientras que Córdoba permite implementar fácilmente una aplicación para mucha
 En cambio, el nivel superior `merges` Directorio ofrece un lugar para especificar activos para desplegar en plataformas específicas. Cada subdirectorio específico de plataforma dentro de `merges` refleja la estructura de directorios de la `www` árbol de código fuente, lo que permite reemplazar o agregar archivos según sea necesario. Por ejemplo, aquí es cómo podrías utiliza `merges` para aumentar el tamaño de fuente por defecto para los dispositivos Android:
 
 *   Editar el `www/index.html` archivo, añadir un enlace a un archivo CSS adicional, `overrides.css` en este caso:
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   Opcionalmente crear un vacío `www/css/overrides.css` archivo, que se aplicaría para todas las versiones no-Android, evitando un error de archivo que falta.
 
 *   Crear un `css` subdirectorio dentro de `merges/android` , luego añadir un correspondiente `overrides.css` archivo. Especificar CSS que reemplaza el tamaño de letra de 12 puntos por defecto especificado dentro de `www/css/index.css` , por ejemplo:
-    
+
         body { font-size:14px; }
-        
+
 
 Al reconstruir el proyecto, la versión para Android cuenta con el tamaño de fuente personalizada, mientras que otros permanecen inalterados.
 
@@ -265,17 +265,17 @@ También se puede utilizar `merges` para agregar archivos no presenten en el ori
 Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la versión más reciente ejecutando el siguiente comando:
 
         $ sudo npm update -g cordova
-    
+
 
 Para instalar una versión específica, utilice esta sintaxis:
 
         $ sudo npm instalar cordova@3.1.0 -g
-    
+
 
 Ejecute `cordova -v` para ver la versión actualmente en ejecución. Ejecute el `npm
 info` comando para obtener una lista más larga que incluye la versión actual junto con otros números de la versión disponible:
 
         $ npm info cordova
-    
+
 
 Cordova 3.0 es la primera versión compatible con la interfaz de línea de comandos descrita en esta sección. Si actualiza desde una versión anterior a 3.0, tienes que crear un nuevo proyecto como se describió anteriormente, luego copie los activos de la mayor aplicación en el nivel superior `www` Directorio. En su caso, más detalles sobre la actualización a 3.0 están disponibles en las guías de la plataforma. Una vez que se actualiza a la `cordova` interfaz de línea de comandos y uso `npm update` para estar al día, los más lentos procedimientos descritos allí ya no son relevantes.

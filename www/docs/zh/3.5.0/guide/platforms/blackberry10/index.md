@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   轉到**我的電腦 → 屬性 → 高級 → 環境變數**.
 
 *   追加本機 SDK 安裝目錄的路徑，例如：
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 關於 Mac 和 Linux：
 
 *   編輯 `~/.bash_profile` 檔，添加如下所示，根據安裝本機的 SDK 了一行：
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   運行下面的命令將在當前會話中的更改應用：
-    
+
     元源 ~/.bash_profile
 
 ## 為簽章設定
@@ -61,7 +61,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 最後一步是生成簽名的證書：
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## 創建一個專案
 
@@ -71,7 +71,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## 部署到模擬程式
 
@@ -88,18 +88,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 導航到**的安全和隱私 → 發展模式**節和啟用的選項：
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 然後，運行 `emulate` 命令來查看該應用程式：
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## 將部署到設備
 
@@ -108,12 +108,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 然後，運行 `run` 命令來查看該應用程式：
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 如果調試的權杖還沒有為該設備設置，錯誤訊息，提示您提供密碼您定義配置您的電腦以簽名的應用程式時。
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## WebInspector 的調試
 
@@ -128,7 +128,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 使用 `--release` 創建一個發佈版本適合通過黑莓手機世界分佈。
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`選項指定定義配置您的電腦登錄時的密碼的應用程式。
 
@@ -139,11 +139,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄中，將一個名為*動車組*與 IP 位址的目標相關聯。
 
 *   關於視窗：
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   關於 Mac/Linux：
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 一旦定義了目標，你可以提供給運行的命令使用 `--target` ：

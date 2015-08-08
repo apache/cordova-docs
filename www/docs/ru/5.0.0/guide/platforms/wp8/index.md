@@ -87,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][10]
 
- [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Создание нового проекта
 
@@ -96,12 +96,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 Вот соответствующий подход shell инструмент более низкого уровня:
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Построение проекта
 
@@ -109,57 +109,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 Если вы используете инструменты Windows Phone специфические оболочки в процессе развития, существует другой подход. После создания проекта приложения по умолчанию источник доступен в `projects\wp8\www` подкаталога. Последующие команды доступны в `cordova` подкаталога на том же уровне.
 
 `build`Команда очищает файлы проекта и перестраивает app. Первый пример генерирует отладочную информацию, и второй подписывает apps для выпуска:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 `clean`Команда помогает вымывать каталогов в рамках подготовки к следующей `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Развертывание на эмулятор
 
 К этому моменту можно использовать утилиту CLI `cordova` для развертывания приложения на эмулятор из командной строки:
 
         > cordova emulate wp8
-    
+
 
 В противном случае используйте интерфейс альтернативной оболочки:
 
         C:\path\to\project\cordova\run
-    
+
 
 По умолчанию `run` сценарий вызывает эмулятор флаг и принимает дополнительные построения флаги, для которого `--debug` предоставляет значение по умолчанию:
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 Эмулятор запускает образа устройства с установленным приложением. От домашнего экрана перейдите на панель приложения для запуска приложения **HelloWorld** . Это показывает запуск с его заставка, после чего его основной интерфейс приложения:
 
 ![][11]
 
- [11]: img/guide/platforms/wp8/wp8_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Основные элементы эмулятора на правом верхнем углу экрана устройства позволяют переключаться между книжной и альбомной ориентации. **>** Кнопка открывает больше элементов управления, которые позволяют протестировать более сложных установок и жесты:
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Эти дополнительные элементы управления также позволяют изменять местоположение устройства или для моделирования последовательностей движений:
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Развертывание на устройство
 
@@ -170,12 +170,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Затем запустите следующую команду CLI для запуска приложения на устройстве:
 
     > cordova run wp8
-    
+
 
 Он соответствует этой команды оболочки более низкого уровня:
 
     C:\path\to\project\cordova\run --device
-    
+
 
 Кроме того если вы работаете в Visual Studio, выберите **Устройство Windows Phone** из раскрывающегося меню в верхней, а затем нажмите зеленый **играть** кнопку рядом, или же введите **F5**.
 
@@ -185,6 +185,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_vs.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Сверяйтесь с разделом "Введение" о том как использовать интерфейс командной строки Cordova командной или SDK в вашем рабочем процессе. Кордова CLI опирается на кросс платформенной исходный код, который постоянно перезаписывает файлы платформы, используемые в SDK. Если вы хотите работать в рамках SDK, используйте инструменты низкого уровня оболочки как альтернатива CLI.

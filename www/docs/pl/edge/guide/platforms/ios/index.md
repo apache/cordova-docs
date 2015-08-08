@@ -61,7 +61,7 @@ Należy uruchomić terminal comman-line:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-    
+
 
 ## Tworzenie nowego projektu
 
@@ -71,19 +71,19 @@ Użyj narzędzia `cordova` założyć nowy projekt, opisanym w The Cordova inter
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 ## Wdrażanie aplikacji
 
 Do wdrażania aplikacji na urządzenia podłączone iOS:
 
         $ cordova run ios --device
-    
+
 
 Aby wdrożyć aplikację na domyślny emulator iOS:
 
         $ cordova emulate ios
-    
+
 
 Można użyć **cordova run ios --list** aby zobaczyć wszystkie dostępne cele i **cordova run ios --target=target_name** do uruchomienia aplikacji na urządzenia lub emulatora (na przykład `cordova run ios --target="iPhone-6"`).
 
@@ -95,7 +95,7 @@ Po platformie ios jest dodawany do projektu, można otworzyć go w Xcode. Klikni
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Uruchamianie na emulatorze
 
@@ -106,17 +106,17 @@ Aby wyświetlić podgląd aplikacji w emulatorze iOS:
 2.  Wybierz aplikację **Witaj** w panelu po prawej stronie.
 
 3.  Wybierz urządzenie przeznaczone z paska menu **programu** , takich jak iPhone symulator 6.0 jako wyróżnione tu:
-    
+
     ![][7]
 
 4.  Naciśnij przycisk **Uruchom** , który pojawia się w tych samych narzędzi po lewej stronie **systemu**. Który tworzy, wdraża i uruchamia aplikację w emulatorze. Stosowanie oddzielnych emulatora otwiera do wyświetlania aplikacji:
-    
+
     ![][8]
-    
+
     Tylko jeden emulatora może działać w czasie, więc jeśli chcesz przetestować aplikację w inny emulator, musisz zamknąć aplikację emulatora i uruchomić inny cel w Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode jest dostarczany z emulatorów dla najnowszej wersji iPhone i iPad. Starsze wersje mogą być dostępne z **Xcode → preferencje → pobieranie składników →** panelu.
 
@@ -151,7 +151,7 @@ Aby wdrożyć urządzenie:
 Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które uruchamia aplikację z niestandardowego adresu URL. Chociaż mechanizm ładowania z niestandardowy adres URL został zmieniony, ten kod jest nadal obecny do tyłu funkcjonalność dla aplikacji utworzonych w starszych wersjach Cordova. Aplikacja przykładowej nie używać tej funkcji, więc te ostrzeżenia, mogą być ignorowane. Aby zapobiec te ostrzeżenia wyświetlane, należy usunąć kod, który odwołuje się do invokeString przestarzałe API:
 
 *   Edytuj plik *Classes/MainViewController.m* , otoczyć w następującym fragmencie kodu z `/*` i `*/` komentarzy jak pokazano poniżej, a następnie wpisz **polecenia s** , aby zapisać plik:
-    
+
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -165,15 +165,15 @@ Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które urucha
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-        
+
         return [super webViewDidFinishLoad:theWebView];
         }
-        
+
 
 *   Edytuj plik *Classes/AppViewDelegate.m* , komentarz na zewnątrz ten kolejne specjalność wstawiając podwójny ukośnik, jak pokazano poniżej, a następnie wpisz **polecenie s** , aby zapisać plik:
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   Naciśnij **b polecenie** Odbuduj projekt i wyeliminowania ostrzeżenia.
 
@@ -184,10 +184,10 @@ Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które urucha
 1.  Wybierz **Xcode → preferencje → lokalizacje**.
 
 2.  W sekcji **Uzyskanych danych** naciśnij przycisk **Zaawansowane** i wybierz **unikatowy** jako **Miejsce budowy** , jak pokazano poniżej:
-    
+
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Jest to ustawienie domyślne dla nowych Xcode zainstalować, ale może być zestaw, inaczej po uaktualnienie ze starszej wersji Xcode.
 

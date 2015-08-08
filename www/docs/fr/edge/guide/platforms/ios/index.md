@@ -61,7 +61,7 @@ Exécuter à partir de terminal Command-line :
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-    
+
 
 ## Créez un nouveau projet
 
@@ -71,19 +71,19 @@ Utilisez l'utilitaire de `cordova` à mettre en place un nouveau projet, tel que
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 ## Déployer l'application
 
 Pour déployer l'application sur un appareil iOS connecté :
 
         $ cordova run ios --device
-    
+
 
 Pour déployer l'application sur un émulateur d'iOS par défaut :
 
         $ cordova emulate ios
-    
+
 
 Vous pouvez utiliser **cordova run ios --list** pour voir toutes les cibles disponibles et **cordova run ios --target=target_name** pour exécuter l'application sur un émulateur ou un périphérique spécifique (par exemple, `cordova run ios --target="iPhone-6"`).
 
@@ -95,7 +95,7 @@ Une fois que la plateforme ios est ajouté à votre projet, vous pouvez l'ouvrir
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Déployer sur émulateur
 
@@ -106,17 +106,17 @@ Pour afficher un aperçu de l'application dans l'émulateur iOS :
 2.  Sélectionnez l'application **Bonjour** dans le panneau immédiatement à droite.
 
 3.  Sélectionnez le dispositif prévu dans le menu de la barre d'outils **système** , tels que l'iPhone Simulator 6.0 comme mis en évidence ici :
-    
+
     ![][7]
 
 4.  Appuyez sur le bouton **exécuter** qui apparaît dans la barre d'outils même vers la gauche du **schéma**. Qui s'appuie, déploie et exécute l'application dans l'émulateur. Une demande distincte émulateur s'ouvre et affiche l'application :
-    
+
     ![][8]
-    
+
     Qu'un émulateur peut exécuter à la fois, donc si vous voulez tester l'app dans un émulateur différent, vous devez quitter l'application de l'émulateur et exécuter une cible différente dans Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode est livré avec les émulateurs pour les dernières versions des iPhone et iPad. Des versions plus anciennes peuvent être obtenues auprès du **Xcode → préférences → téléchargements → composants** panneau.
 
@@ -151,7 +151,7 @@ Pour déployer sur le périphérique :
 Avertissement de Xcode sur la méthode de `invokeString` concerne une fonctionnalité qui lance une application à partir d'une URL personnalisée. Alors que le mécanisme à charger à partir d'une URL personnalisée a changé, ce code est toujours présent pour fournir des fonctionnalités en arrière pour les applications créées avec des versions plus anciennes de Cordova. L'exemple d'application n'utilise pas cette fonctionnalité, donc ces avertissements peuvent être ignorés. Pour éviter ces avertissements d'apparaître, supprimez le code qui fait référence à l'obsolète invokeString API :
 
 *   Modifiez le fichier *Classes/MainViewController.m* , entourent le bloc suivant de code avec `/*` et `*/` commentaires comme indiqué ci-dessous, puis tapez **commande + s** pour enregistrer le fichier :
-    
+
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -165,15 +165,15 @@ Avertissement de Xcode sur la méthode de `invokeString` concerne une fonctionna
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-        
+
         return [super webViewDidFinishLoad:theWebView];
         }
-        
+
 
 *   Modifiez le fichier *Classes/AppViewDelegate.m* , commentez la ligne suivante en insérant une double barre oblique, comme indiqué ci-dessous, puis tapez la **commande + s** pour enregistrer le fichier :
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   Appuyez sur **commande + b** pour reconstruire le projet et à éliminer les avertissements.
 
@@ -184,10 +184,10 @@ Avertissement de Xcode sur la méthode de `invokeString` concerne une fonctionna
 1.  Sélectionnez **Xcode → préférences → emplacements**.
 
 2.  Dans la section de **Données dérivées** , appuyez sur le bouton **avancé** et sélectionnez **Unique** comme **Emplacement de construire** , comme illustré ici :
-    
+
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Il s'agit du paramètre par défaut pour une nouvelle installation de Xcode, mais elle peut être définie différemment suite à une mise à niveau d'une ancienne version de Xcode.
 

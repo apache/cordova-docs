@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -55,13 +55,13 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 作成後は、Xcode の内でからそれを開くことができます。ダブルクリックして開き、 `hello/platforms/ios/hello.xcodeproj` ファイル。このような画面になります。
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## エミュレーターへの展開します。
 
@@ -72,17 +72,17 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
 2.  右側のパネルで**こんにち**はアプリを選択します。
 
 3.  ツールバーの**配色**メニューから目的のデバイスを選択します、iPhone などとして 6.0 シミュレータはここに強調：
-    
+
     ![][5]
 
 4.  **スキーム**の左側に同じツールバーに表示される**実行**ボタンを押します。 ビルド、配置、エミュレーターでアプリケーションを実行します。 独立したエミュレータ アプリケーションは、アプリを表示するが開きます。
-    
+
     ![][6]
-    
+
     1 つだけのエミュレーターでは一度に実行可能性がありますので、別のエミュレーターでアプリケーションをテストする場合は、エミュレーターのアプリケーションを終了し、Xcode の内で別のターゲットを実行する必要があります。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode のためのエミュレーターが付属、最新の iPhone と iPad のバージョン。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
@@ -117,14 +117,14 @@ Xcode のためのエミュレーターが付属、最新の iPhone と iPad の
 Xcode の警告について、 `invokeString` メソッドは、カスタム URL からアプリを起動する機能にかかわる。 カスタム URL から読み込むためのメカニズムが変更されており、このコードはまだ存在している後方コルドバの古いバージョンで作成されたアプリの機能を提供します。 これらの警告を無視することができますので、サンプル アプリはこの機能を使用しません。 これらの警告が表示されないように、非推奨となった invokeString API を参照するコードを削除します。
 
 *   *Classes/MainViewController.m*ファイルを編集して、コードの次のブロックを囲む `/*` および `*/` 下図のように、そのタイプのコメント**コマンドの**ファイルを保存します。
-    
+
         (void) webViewDidFinishLoad:(UIWebView*) theWebView {//___PROJECTNAME__ Info.plist を処理するプロトコルを指定した場合にのみ有効/* 場合 (self.invokeString) {//deviceready NSLog を受信したときの js でアクセスすることができますので、deviceready イベントが発生する前に渡されます (@"非推奨： window.invokeString - 常によばれるカスタム スキームの url を使用してアプリを起動したとき、代わりに window.handleOpenURL(url) 関数を使用します");。NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"% @\「;」、self.invokeString];[theWebView stringByEvaluatingJavaScriptFromString:jsString];} *//黒の基本色/背景に一致するネイティブ アプリ theWebView.backgroundColor = [UIColor blackColor];[スーパー webViewDidFinishLoad: theWebView] を返します。}
-        
+
 
 *   下図のように、2 つのスラッシュを挿入して次の行をコメント アウト、 *Classes/AppViewDelegate.m*ファイルを編集し、**コマンドの**ファイルを保存する入力します。
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   **コマンド + b**ボタンを押して、プロジェクトをリビルドし、警告を除去します。
 
@@ -135,10 +135,10 @@ Xcode の警告について、 `invokeString` メソッドは、カスタム URL
 1.  **Xcode → 設定 → 場所**を選択します.
 
 2.  **派生データ**] セクションで、**詳細設定**ボタンを押しますをここに示すように**ビルド場所**として**ユニークな**を選択します。
-    
+
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 これは新しい Xcode のインストールの既定の設定が異なる Xcode の旧バージョンからのアップグレード、次を設定可能性があります。
 

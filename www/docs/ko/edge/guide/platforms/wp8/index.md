@@ -92,7 +92,7 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 새 프로젝트 만들기
 
@@ -101,12 +101,12 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 여기에 해당 하위 셸 도구 접근이 이다:
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## 프로젝트 빌드
 
@@ -114,57 +114,57 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 개발에서 Windows Phone 관련 셸 도구를 사용 하는 경우는 다른 접근이 이다.입니다. 일단 프로젝트를 생성 하면 기본 응용 프로그램의 소스는에 `projects\wp8\www` 하위 디렉터리. 후속 명령에서 사용할 수 있습니다는 `cordova` 동일한 수준의 하위 디렉터리.
 
 `build`명령을 프로젝트 파일 및 응용 프로그램을 다시 작성 합니다. 첫 번째 예제에서는 디버깅 정보를 생성 하 고 두 번째 릴리스에 대 한 애플 리 케이 션 서명:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 `clean`명령 다음에 대 한 준비 디렉터리 밖으로 플러시 도움이 됩니다 `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## 에뮬레이터에 배포
 
 이 시점에서 사용할 수 있는 `cordova` CLI 유틸리티는 명령줄에서 에뮬레이터에 응용 프로그램 배포를:
 
         > cordova emulate wp8
-    
+
 
 그렇지 않으면 대체 셸 인터페이스를 사용 하 여:
 
         C:\path\to\project\cordova\run
-    
+
 
 기본적으로는 `run` 스크립트 에뮬레이터 플래그를 호출 하 고 있는 추가 빌드 플래그를 수용 `--debug` 기본값을 제공 합니다:
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 에뮬레이터 설치 된 애플 리 케이 션 장치 이미지를 실행 합니다. 홈 화면에서 **HelloWorld** 응용 프로그램을 실행 하는 애플 리 케이 션 패널으로 이동 합니다. 이 뒤에 그것의 주요 인터페이스는 시작 화면을 실행 하는 응용 프로그램을 보여 줍니다.
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 에뮬레이터의 기본 컨트롤 장치 화면의 상단 오른쪽에 세로 가로 방향 사이 전환할 수 있습니다. **>** 단추 더 복잡 한 방향 및 제스처를 테스트할 수 있는 더 많은 컨트롤을 엽니다.
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 이러한 고급 컨트롤 또한 소자의 위치를 수정 하거나 수 시퀀스의 움직임을 시뮬레이션 하기 위해:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## 장치에 배포
 
@@ -175,12 +175,12 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 다음은 장치에서 응용 프로그램을 실행 하려면 다음 CLI 명령을 실행:
 
     > cordova run wp8
-    
+
 
 그것은이 낮은 수준의 쉘 명령에 해당:
 
     C:\path\to\project\cordova\run --device
-    
+
 
 또는, Visual Studio에서 작업 하는 경우 상단, 그 후에 보도 녹색 **재생** 버튼을 인근 또는 다른 **f 5** 를 입력에서 드롭 다운 메뉴에서 **Windows Phone 장치** 를 선택합니다.
 
@@ -190,6 +190,6 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 워크플로에서 코르도바의 명령줄 도구 또는 SDK를 사용 하는 방법에 대 한 조언에 대 한 개요를 참조 하십시오. 코르 도우 바 CLI 정기적으로 SDK에서 사용 되는 플랫폼 특정 파일을 덮어 씁니다 크로스 플랫폼 소스 코드에 의존 합니다. SDK 내에서 작동 하려면 하위 셸 도구를 사용 하 여 CLI에 대 안으로.

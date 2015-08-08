@@ -61,12 +61,12 @@ Detaillierte Installationsanweisungen finden Sie im Rahmen der Installationslink
 Für Cordova Befehlszeilen-Tools für die Arbeit oder die CLI, das darauf basiert, müssen Sie das SDK `Tools` und `Plattform` Verzeichnisse im `Pfad`enthalten. Auf einem Mac können Sie einen Text-Editor zum Erstellen oder Ändern der Datei `~/.bash_profile` eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 Diese Zeile in `~/.bash_profile` macht diese Werkzeuge in neu eröffneten terminal-Fenster verfügbar. Wenn Ihr terminal-Fenster bereits geöffnet in OSX oder ein Logout/Login auf Linux zu vermeiden ist, führen Sie dies, um sie in aktuellen terminal-Fenster zur Verfügung stellen:
 
         $ source ~/.bash_profile
-    
+
 
 So ändern Sie die `PATH` -Umgebung unter Windows:
 
@@ -79,9 +79,9 @@ So ändern Sie die `PATH` -Umgebung unter Windows:
 4.  Wählen Sie die **PATH** -Variable und klicken Sie **Bearbeiten**.
 
 5.  Fügen Sie Folgendes, um die `PATH` auf der Grundlage von wo Sie das SDK, zum Beispiel installiert:
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
@@ -103,25 +103,25 @@ Android Sdk kein Standardinstanz Emulator standardmäßig zur Verfügung. Sie k�
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Presse **AVD erstellen**, ändern optional den Namen und drücken Sie **OK** um die Änderungen zu übernehmen.
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 Der AVD wird dann in der Liste **Android Virtual Devices** angezeigt:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD und **Starten**. Es bringt viel, wie es auf dem Gerät mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 Für eine schnellere Erfahrung können Sie die `Virtual Machine-Beschleunigung` verwenden, um die Ausführungsgeschwindigkeit zu verbessern. Viele moderne CPUs bieten Erweiterungen um virtuelle Maschinen effizienter auszuführen. Bevor Sie versuchen, diese Art von Beschleunigung verwenden, müssen Sie bestimmen, ob Ihre aktuelle Entwicklungssystem CPU, unterstützt man die folgenden Virtualisierungstechnologien:
 
@@ -139,7 +139,7 @@ Nach dem Installieren und Ausführen des `Intel Processor Identification Utility
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 Um den Emulator zu beschleunigen, müssen Sie downloaden und installieren Sie ein oder mehrere Bilder der `Intel X 86 Atom` -System sowie die `Intel Hardware beschleunigte Ausführung Manager (HAXM)`.
 
@@ -147,7 +147,7 @@ Um den Emulator zu beschleunigen, müssen Sie downloaden und installieren Sie ei
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 Nach dem Download, das Intel-Installationsprogramm ausführen, das in Ihrem Android SDK unter `Extras/Intel/Hardware_Accelerated_Execution_Manager`zur Verfügung steht. **Hinweis**:`Wenn Sie irgendwelche Probleme Installation des Pakets finden Sie weitere Informationen und Schritt-für-Schritt-Anleitung, check this` [Intel Artikel][17].
 
@@ -169,13 +169,13 @@ Zu diesem Zeitpunkt zum Erstellen eines neuen Projekts können Sie zwischen das 
         $ cd hello
         $ cordova platform add android
         $ ccordova prepare              # or "cordova build"
-    
+
 
 Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz für Unix und Windows:
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Erstellen Sie das Projekt
 
@@ -185,7 +185,7 @@ Wenn Sie in der Entwicklung die CLI verwenden, enthält das Projektverzeichnis d
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 Verwenden Sie die Android-spezifische-Shell-Werkzeugen in der Entwicklung, gibt es ein anderen Ansatz. Sobald Sie das Projekt erstellen, ist die Standard-app-Quelle verfügbar im Unterverzeichnis `assets/www` . Nachfolgende Befehle stehen in dessen `Cordova` -Unterverzeichnis.
 
@@ -193,10 +193,10 @@ Der `build` -Befehl reinigt Projektdateien und Umbauten, die app. Hier ist die S
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## Die app bereitstellen
 
@@ -204,13 +204,13 @@ Der `build` -Befehl reinigt Projektdateien und Umbauten, die app. Hier ist die S
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 Verwenden Sie andernfalls die Alternative Shell-Schnittstelle:
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 Können Sie **cordova run android --list** alle verfügbaren Ziele sehen und **cordova run android --target=target_name** Anwendung auf ein bestimmtes Gerät oder einen Emulator ausführen (z. B. `cordova run android --target="Nexus4_emulator"`).
 
@@ -220,12 +220,12 @@ Dies drückt die app zum home-Bildschirm und startet es:
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 Wenn Sie die app `run` Sie auch `build` es. Sie können zusätzliche Anhängen `--debug`, `--release`, und `--nobuild` -Flags zu steuern, wie sie gebaut ist, oder sogar ob ein Umbau notwendig ist:
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## Andere Befehle
 
@@ -233,13 +233,13 @@ Im folgenden wird ein detailliertes Protokoll der app, wie es läuft:
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 Folgende reinigt die Projektdateien:
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Öffnen Sie ein neues Projekt im SDK
 
@@ -248,23 +248,23 @@ Nachdem android-Plattform zu Ihrem Projekt hinzugefügt haben, können Sie es vo
 1.  Starten Sie die **Android-Studio** -Anwendung.
 
 2.  Wählen Sie **Import-Projekt (Eclipse ADT, Gradle usw.)**.
-    
+
     ![][19]
 
 3.  Wählen Sie die Stelle, wo die android-Plattform gespeicherten (`Ihr/Projekt/Plattformen/Android` ist).
-    
+
     ![][20]
 
 4.  Für die Frage, `Gradle Sync` können Sie einfach **Ja** beantworten.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 Sie können sind eingestellt jetzt bauen und führen Sie die Anwendung direkt vom `Android-Studio`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 Finden Sie unter [Übersicht über Android-Studio][22] und und [erstellen und Ausführen von Android-Studio][23] für weitere Details.
 

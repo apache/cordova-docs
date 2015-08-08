@@ -61,12 +61,12 @@ Instructions d'installation détaillées sont disponibles dans le cadre des lien
 Pour outils de ligne de commande de Cordova pour travailler, ou la CLI qui repose sur eux, vous devez inclure les répertoires de `plate-forme-outils` et `outils` du SDK dans votre `PATH`. Sur un Mac, vous pouvez utiliser un éditeur de texte pour créer ou modifier le fichier `~/.bash_profile` , ajoutant une ligne comme ci-dessous, en fonction d'où le kit de développement logiciel installe :
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 Cette ligne dans `~/.bash_profile` expose ces outils dans windows terminales nouvellement ouverts. Si votre fenêtre de terminal est déjà ouvert dans OSX ou d'éviter une déconnexion/connexion sur Linux, exécutez ceci pour les rendre disponibles dans la fenêtre du terminal actuelle :
 
         $ source ~/.bash_profile
-    
+
 
 Pour modifier l'environnement `PATH` sous Windows :
 
@@ -79,9 +79,9 @@ Pour modifier l'environnement `PATH` sous Windows :
 4.  Sélectionnez la variable **PATH** et appuyer sur **modifier**.
 
 5.  Ajouter ce qui suit à le `PATH` basé sur lequel vous avez installé le SDK, par exemple :
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  Enregistrez la valeur et fermez les deux boîtes de dialogue.
 
@@ -103,25 +103,25 @@ Android sdk ne fournit pas de n'importe quelle instance d'émulateur par défaut
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Appuyez sur **Créer AVD**, éventuellement modifier le nom, puis appuyez sur **OK** pour accepter les modifications :
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 L'AVD apparaît alors dans la liste **Des périphériques virtuels Android** :
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Pour ouvrir l'émulateur comme une demande distincte, l'AVD et cliquez sur **Démarrer**. Il lance autant qu'il le ferait sur le dispositif, avec des contrôles supplémentaires disponibles pour les boutons matériels :
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 Pour une expérience plus rapide, vous pouvez utiliser l' `Accélération de la Machine virtuelle` pour améliorer la vitesse d'exécution. De nombreux processeurs modernes fournissent des extensions pour exécuter des Machines virtuelles plus efficacement. Avant d'utiliser ce type d'accélération, vous devez déterminer si CPU de votre système actuel de développement, on supporte les technologies de virtualisation suivants :
 
@@ -139,7 +139,7 @@ Après avoir installer et exécuter `l'Utilitaire d'Identification des processeu
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 Afin d'accélérer l'émulateur, vous devez télécharger et installer une ou plusieurs Images de système `Atom d'Intel x 86` , ainsi que l' `Intel matériel accéléré l'exécution Manager (HAXM)`.
 
@@ -147,7 +147,7 @@ Ouvrez votre gestionnaire de SDK Android et sélectionnez l'Image du système `A
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 Après le téléchargement, exécuter le programme d'installation d'Intel, qui est disponible dans votre Android SDK à `Options/intel/Hardware_Accelerated_Execution_Manager`. **Remarque**:`si vous avez des difficultés pour installer le package, vous pouvez trouver plus d'informations et conseils étape par étape cochez-le` [Article Intel][17].
 
@@ -169,13 +169,13 @@ Après le téléchargement, exécuter le programme d'installation d'Intel, qui e
         $ cd hello
         $ cordova platform add android
         $ ccordova prepare              # or "cordova build"
-    
+
 
 Voici l'approche de shell-outil de niveau inférieur correspondant pour Unix et Windows :
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Générez le projet
 
@@ -185,7 +185,7 @@ Si vous utilisez l'interface CLI dans le développement, le répertoire de nivea
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 Si vous utilisez les outils de coquille spécifiques à Android en développement, il y a une approche différente. Une fois que vous générez le projet, source de l'application par défaut est disponible dans le sous-répertoire `assets/www` . Les commandes suivantes sont disponibles dans son sous-répertoire de `cordova` .
 
@@ -193,10 +193,10 @@ La commande `build` nettoie les fichiers projet et régénère l'app. Voici la s
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## Déployer l'application
 
@@ -204,13 +204,13 @@ Vous pouvez utiliser l'utilitaire CLI de `cordova` pour déployer l'application 
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 Sinon, utilisez l'interface de coquille alternative :
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 Vous pouvez utiliser **cordova run android --list** pour voir toutes les cibles disponibles et **cordova run android --target=target_name** pour exécuter l'application sur un émulateur ou un périphérique spécifique (par exemple, `cordova run android --target="Nexus4_emulator"`).
 
@@ -220,12 +220,12 @@ Cela pousse l'app à l'écran d'accueil et il lance :
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 Lorsque vous `run` l'application, vous aussi `build` il. Vous pouvez ajouter supplémentaires `--debug`, `--release`et `--nobuild` drapeaux pour contrôler comment il est construit, ou même si une reconstruction est nécessaire :
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## Autres commandes
 
@@ -233,13 +233,13 @@ Ce qui suit génère un journal détaillé de l'application en cours d'exécutio
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 Le texte suivant nettoie les fichiers de projet :
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Ouvrez un nouveau projet dans le SDK
 
@@ -248,23 +248,23 @@ Une fois que la plateforme android est ajouté à votre projet, vous pouvez l'ou
 1.  Lancez l'application **Android de Studio** .
 
 2.  Sélectionnez **Import Project (Eclipse ADT, Gradle, etc.)**.
-    
+
     ![][19]
 
 3.  Sélectionnez l'emplacement où la plateforme android est stockée (`votre/projet/platforms/android`).
-    
+
     ![][20]
 
 4.  Pour la question `Gradle Sync` vous pouvez simplement répondre **Oui**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 Vous êtes tous ensemble maintenant et pouvez générer et exécuter l'application directement à partir de `Studio Android`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 Consultez [Vue d'ensemble Studio de Android][22] et et [génération et l'exécution de Studio Android][23] pour plus de détails.
 

@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,11 +29,11 @@ Cordova WebViews corriendo en Windows 8 confían en Internet Explorer 10 como su
 Se necesita lo siguiente:
 
 *   Una versión de 64 bits de Windows 8 Pro, un disco de instalación o un archivo de imagen de disco *ISO* . Una versión de evaluación está disponible en la [Microsoft Developer Network][2].
-    
+
     <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
 
 *   [Visual Studio][3], ediciones 2013 el *Ultimate*, *Premium*o *profesional* .
-    
+
     <!-- true? -->
 
  [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
@@ -69,7 +69,7 @@ Instalar la *Ultimate*, *Premium*o las ediciones de [Visual Studio][3] *Professi
 
 ![][8]
 
- [8]: img/guide/platforms/win8/win8_installSDK.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 ## Crear un nuevo proyecto
 
@@ -79,12 +79,12 @@ En este punto, para crear un nuevo proyecto puede elegir entre la herramienta CL
         > cd hello
         > cordova platform add windows8
         > cordova build
-    
+
 
 Este es el enfoque de shell-herramienta de nivel inferior correspondiente:
 
         C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Construir el proyecto
 
@@ -92,20 +92,20 @@ Si utilizas la CLI en el desarrollo, el directorio del proyecto es de alto nivel
 
         > cordova build
         > cordova build windows8   # do not rebuild other platforms
-    
+
 
 Si está utilizando las herramientas de shell de Windows Phone específicos en desarrollo, hay un enfoque diferente. Una vez que se genera el proyecto, fuente de la aplicación por defecto está disponible en el `projects\windows8\www` subdirectorio. Los comandos están disponibles en el `cordova` subdirectorio en el mismo nivel.
 
 El `build` comando limpia archivos de proyecto y reconstruye la aplicación. El primer ejemplo genera información de depuración, y la segunda firma las aplicaciones para el lanzamiento:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 El `clean` comando ayuda a eliminar directorios en preparación para la siguiente `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Abra el proyecto en el SDK y desplegar la aplicación
 
@@ -115,25 +115,25 @@ Una vez que construyes una aplicación Cordova como se describió anteriormente,
 
 ![][9]
 
- [9]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 El `CordovaApp` componente muestra dentro de la solución y su `www` directorio contiene el código fuente basada en web, incluyendo el `index.html` página de Inicio:
 
 ![][10]
 
- [10]: img/guide/platforms/win8/win8_sdk.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Los controles debajo del menú principal de Visual Studio permiten probar o desplegar la aplicación:
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Con la **Máquina Local** seleccionado, pulse la flecha verde para instalar la aplicación en la misma máquina ejecutando Visual Studio. Una vez lo haces, la aplicación aparece en los listados de la aplicación de Windows 8:
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Cada vez que reconstruir la aplicación, se actualiza la versión disponible en la interfaz.
 
@@ -141,19 +141,19 @@ Una vez disponibles en los listados de la aplicación, manteniendo presionada la
 
 ![][13]
 
- [13]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Tenga en cuenta que si se abre la aplicación dentro de un entorno de máquina virtual, necesite hacer clic en las esquinas o a lo largo de los lados de las ventanas para cambiar aplicaciones o acceder a funciones adicionales:
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_run.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Alternativamente, seleccione la opción de despliegue de **simulador** para ver la aplicación como si se estaban ejecutando en un dispositivo de tableta:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_sim.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 A diferencia de la implementación de escritorio, esta opción permite simular la orientación de la tableta, ubicación, y variar su configuración de red.
 

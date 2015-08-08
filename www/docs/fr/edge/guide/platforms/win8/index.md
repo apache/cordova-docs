@@ -93,7 +93,7 @@ Installer n'importe quelle édition de [Visual Studio][2] correspondant à la ve
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Pour 10 de Windows, le programme d'installation de Visual Studio a une option pour installer les outils pour créer des applications Windows universel. Vous devez vous assurer que cette option est sélectionnée lors de l'installation pour installer le SDK requis.
 
@@ -104,12 +104,12 @@ Pour 10 de Windows, le programme d'installation de Visual Studio a une option po
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
-    
+
 
 Voici l'approche de shell-outil de niveau inférieur correspondant :
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 Ce projet cible Windows 8.1 comme cible par défaut OS. Vous pouvez choisir de cibler 8.0 ou 10.0 (voir « Configuration cible Windows version » ci-dessous) pour toutes les constructions, ou vous ciblez spécifique à une version particulière au cours de chaque génération.
 
@@ -121,25 +121,25 @@ Si vous utilisez l'interface CLI dans le développement, le niveau supérieur du
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
-    
+
 
 Voici l'approche de shell-outil de niveau inférieur correspondant :
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 Le `clean` commande aide à débusquer les répertoires en préparation pour le prochain `build` :
 
-        C:\path\to\project\cordova\clean.bat 
-    
+        C:\path\to\project\cordova\clean.bat
+
 
 ## Configurer cible Windows version
 
 Par défaut `build` commande produit deux paquets : Windows 8.0 et 8.1 de Windows Phone. Pour installer le package Windows version 8.1 que le paramètre de configuration suivant doit être ajouté au fichier de configuration (`config.xml`).
 
         <preference name="windows-target-version" value="8.1" />
-    
+
 
 Une fois que vous ajoutez cette commande réglage de `build` commencera à produire des paquets 8.1 de Windows et Windows Phone 8.1.
 
@@ -148,7 +148,7 @@ Une fois que vous ajoutez cette commande réglage de `build` commencera à produ
 Vous pouvez décider que vous voulez construire une version particulière de votre application ciblant un OS particulier (par exemple, vous avez peut-être défini que vous souhaitez cibler Windows 10, mais vous voulez construire pour Windows Phone 8.1). Pour ce faire, vous pouvez utiliser le paramètre `--appx` :
 
         > cordova build windows -- --appx=8.1-phone
-    
+
 
 Le système de génération ignorera l'ensemble de préférence dans le fichier config.xml pour la version Windows de cible et strictement construire un paquet pour Windows Phone 8.1.
 
@@ -168,13 +168,13 @@ Pour déployer le package de Windows :
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-    
+
 
 Pour déployer le package de Windows Phone :
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-    
+
 
 Vous pouvez utiliser **cordova run windows --list** pour voir toutes les cibles disponibles et **cordova run windows --target=target_name \-- -|-phone** pour exécuter l'application sur un émulateur ou un périphérique spécifique (par exemple, `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
@@ -186,25 +186,25 @@ Une fois que vous générez une application Cordova comme décrit ci-dessus, vou
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Le composant `CordovaApp` permet d'afficher au sein de la solution et son répertoire `www` contient le code source basé sur le web, y compris la page d'accueil `index.html` :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Les commandes sous le menu principal de Visual Studio vous permettent de tester ou déployer l'application :
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Avec l' **Ordinateur Local** est sélectionné, appuyez sur la flèche verte pour installer l'application sur le même ordinateur qui exécute Visual Studio. Une fois que vous le faire, l'application apparaît dans des listes de Windows 8 app :
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Chaque fois que vous reconstruisez l'application, la version disponible dans l'interface est régénérée.
 
@@ -212,19 +212,19 @@ Une fois disponibles dans la liste des app, maintenez la touche **CTRL** enfonc�
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Notez que si vous ouvrez l'application dans un environnement de machine virtuelle, vous devrez peut-être cliquer dans les coins ou sur les côtés des fenêtres pour basculer des applications ou accéder à des fonctionnalités supplémentaires :
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Vous pouvez également choisir l'option déploiement sur **simulateur** pour visualiser l'application comme s'il s'exécutait sur un périphérique de tablette :
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 À la différence de déploiement de bureau, cette option vous permet de simuler l'orientation de la tablette, emplacement et de varier ses paramètres réseau.
 

@@ -49,12 +49,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥, 리눅스 또는 다른 유닉스 플랫폼에는 `~/.bash_profile` 파일을 SDK 설치에 따라 다음과 같은 줄을 추가:
 
     내보내기 경로 = ${경로}: / 개발/adt-번들/sdk/플랫폼-도구: / 개발/adt-번들/sdk/도구
-    
+
 
 이것 새롭게 문을 연 터미널 windows에서 SDK 도구를 제공합니다. 그렇지 않으면 현재 세션에서 사용할 수 있도록이 실행.
 
     $ 소스 ~/.bash_profile
-    
+
 
 윈도우 7에 경로 환경 수정:
 
@@ -67,16 +67,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   **경로** 변수를 선택 하 고 **편집** 을 누릅니다.
 
 *   설치한 SDK를 예를 기반으로 경로에 다음을 추가:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   값을 저장 하 고 두 대화 상자를 닫습니다.
 
 또한 명령 프롬프트 및 유형 자바와 개미 열기를 사용 하도록 설정 해야 할 수 있습니다 `java` , 또한 입력 `ant` . 추가 경로 중 실행 실패:
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### 아마존 WebView SDK
 
@@ -93,7 +93,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 일단 창조 해, 여기에 SDK를 사용 하 여 그것을 수정 하는 방법이입니다.
 
@@ -107,7 +107,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   **완료** 를 누르면합니다.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 일단 이클립스 창이 열립니다, 해결 되지 않은 문제를 나타내는 빨간색 **X** 나타날 수 있습니다. 그렇다면, 다음 추가 단계를 수행:
 
@@ -130,7 +130,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 명령줄에서 장치에 app를 밀어 수 있습니다.
 
     $ cordova run amazon-fireos
-    
+
 
 또는 Eclipse 내에서 프로젝트를 마우스 오른쪽 단추로 클릭 고 **안 드 로이드 응용 프로그램 → 실행** 선택.
 

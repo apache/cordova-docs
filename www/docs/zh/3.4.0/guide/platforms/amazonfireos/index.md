@@ -49,12 +49,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 關於 Mac、 Linux 或其他 unix 平臺，您可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
 
     匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具
-    
+
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
 
     元源 ~/.bash_profile
-    
+
 
 若要修改路徑上 Windows 7 的環境：
 
@@ -67,16 +67,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   選擇**PATH**變數，然後按**編輯**.
 
 *   將以下內容追加到基於例如安裝 SDK 的位置的路徑：
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools ；C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   將值保存並關閉這兩個對話方塊。
 
 您可能還需要啟用 JAVA 和螞蟻打開一個命令提示符並鍵入 `java` ，然後還鍵入 `ant` 。將追加到該路徑無法運行的日期為准：
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### 亞馬遜 web 視圖 SDK
 
@@ -93,7 +93,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 一旦創建了，這裡是如何使用 SDK 來修改它：
 
@@ -107,7 +107,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   按**完成**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 一旦日食視窗將打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，執行這些額外的步驟：
 
@@ -130,7 +130,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 從命令列，可以將應用程式推送到設備：
 
     $ cordova run amazon-fireos
-    
+
 
 交替內日食，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.
 

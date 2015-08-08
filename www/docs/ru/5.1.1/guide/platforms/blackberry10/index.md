@@ -30,9 +30,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Симулятор BlackBerry 10:
 
 *   Процессор: Intel dual core 2.0 ГГц/AMD Athlon 4200 + или выше
-*   Место на диске: 10 ГБ 
-*   Оперативной памяти: 4 ГБ 
-*   Виртуализация: одно из следующих действий: 
+*   Место на диске: 10 ГБ
+*   Оперативной памяти: 4 ГБ
+*   Виртуализация: одно из следующих действий:
     *   **Технология виртуализации Intel** (VT, VT-x, vmx) → [Intel VT-x список поддерживаемых процессоров][1]
     *   **AMD виртуализации** (AMD-V, SVM) (С мая 2006 года все процессоры AMD включают AMD-V за исключением Sempron).
 
@@ -63,47 +63,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Перейти к **мой компьютер → Свойства → Дополнительно → Переменные среды**.
 
 *   Добавьте каталог установки Native SDK к пути, например:
-    
+
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
-        
+
 
 На Mac и Linux:
 
 *   Отредактируйте файл `~/.bash_profile`, добавив строку, наподобие нижеуказанной, изменив ее в зависимости от того, где был установлен Native SDK:
-    
+
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-        
+
     или для Native SDK 10.2:
-    
+
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
-        
+
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
-    
+
         $ источника ~/.bash_profile
-        
+
 
 Если у вас есть любые проблемы со средой, используя Native SDK выполните из командной строки, соответствующий для вашей платформы файл, расположенный в пути установки:
 
 *   На Windows → оболочку MS-DOS:
-    
+
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-        
+
 *   На Windows → оболочка bash git:
-    
+
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-        
+
 *   На Linux → установлен в качестве пользователя root:
-    
+
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 *   На Linux → установлен как не root пользователя:
-    
+
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 *   На Mac:
-    
+
         $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 ## Настройка для подписывания
 
@@ -118,7 +118,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Последним шагом является создания сертификата подписи:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## Создание проекта
 
@@ -128,7 +128,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         $ cd hello
         $ cordova platform add blackberry10
         $ cordova build
-    
+
 
 ## Развертывание на эмулятор
 
@@ -145,29 +145,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Перейдите к разделу **Безопасности и конфиденциальность → Режим разработки** и включить опцию:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Дополнительный набор утилит командной строки включаются при установке платформы BlackBerry 10 для вашего проекта. Следующая команда, в данном случае вызваная из каталога проекта верхнего уровня, связывает целевой объект с именем *emu* с IP-адресом указанным выше.
 
 *   В Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-        
+
 *   На Mac/Linux:
-    
+
         $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-        
+
 
 Затем выполните команду `emulate` для просмотра приложения:
 
         $ cordova emulate blackberry10
-    
+
 
 ## Развертывание на устройство
 
@@ -175,18 +175,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Запустите утилиту командной строки чтобы связать имя с IP адресом, паролем устройства и ПИН-кодом.
 
 *   В Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 *   На Mac/Linux:
-    
+
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 где:
 
@@ -197,18 +197,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Затем выполните команду `run` для просмотра приложений:
 
         $ cordova run blackberry10
-    
+
 
 Если маркер отладки еще не настроен для устройства, сообщение об ошибке предложит вам использовать скрипт платформы run, c паролем который вы указали при регистрации для ключей подписи.
 
 *   В Windows:
-    
+
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-        
+
 *   На Mac/Linux:
-    
+
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
-        
+
 
 ## Отладка с WebInspector
 
@@ -223,7 +223,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Используйте `--release` для создания релиз версии подходящей для распространения через BlackBerry World.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 Параметр `--keystorepass` определяет пароль, заданные при настройке вашего компьютера для подписи приложений.
 
@@ -234,13 +234,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Дополнительный набор утилит командной строки включаются при установке платформы BlackBerry 10 для вашего проекта. Следующая команда, в данном случае вызваная из каталога проекта верхнего уровня, связывает целевой объект с именем *emu* с IP-адресом.
 
 *   В Windows:
-    
+
         $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-        
+
 *   На Mac/Linux:
-    
+
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-        
+
 После того, как цель определена, вы можете передавать ее команде run с помощью `--target`:
 
     $ cordova run blackberry10 --target=emu

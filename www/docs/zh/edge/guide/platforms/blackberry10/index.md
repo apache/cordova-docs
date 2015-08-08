@@ -30,9 +30,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 黑莓 10 設備模擬器：
 
 *   處理器： 英特爾雙核心 2.0 GHz/AMD 速龍 4200 + 或更高
-*   磁碟空間： 10 GB 
-*   RAM 記憶體： 4 GB 
-*   虛擬化： 為下列情況之一： 
+*   磁碟空間： 10 GB
+*   RAM 記憶體： 4 GB
+*   虛擬化： 為下列情況之一：
     *   **英特爾虛擬化技術**(VT，VT-x，vmx) →[英特爾 VT-x 支援的處理器清單][1]
     *   **AMD 虛擬化**(AMD-V，支援向量機)（自 2006 年 5 月以來所有 AMD Cpu 都包括 AMD-V 閃龍除外）。
 
@@ -63,53 +63,53 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   轉到**我的電腦 → 屬性 → 高級 → 環境變數**.
 
 *   追加本機 SDK 安裝目錄的路徑，例如：
-    
+
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
-        
+
 
 關於 Mac 和 Linux：
 
 *   編輯 `~/.bash_profile` 檔，添加如下所示，根據安裝本機的 SDK 了一行：
-    
+
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-        
-    
+
+
     或為 10.2 本機 SDK：
-    
+
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
-        
+
 
 *   運行下面的命令將在當前會話中的更改應用：
-    
+
         $ source ~/.bash_profile
-        
+
 
 如果你有任何的環境問題，使用本機 SDK 從命令列，執行您的平臺，在安裝路徑內的適當檔：
 
 *   在 Windows 上 → MS-DOS shell：
-    
+
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-        
+
 
 *   在 Windows 上 → git bash：
-    
+
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-        
+
 
 *   在 Linux 上 → 作為 root 使用者安裝：
-    
+
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   在 Linux 上 → 作為非根使用者安裝：
-    
+
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   關於 Mac：
-    
+
         $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 ## 為簽章設定
 
@@ -124,7 +124,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 最後一步是生成簽名的證書：
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## 創建一個專案
 
@@ -134,7 +134,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         $ cd hello
         $ cordova platform add blackberry10
         $ cordova build
-    
+
 
 ## 部署到模擬程式
 
@@ -151,30 +151,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 導航到**的安全和隱私 → 發展模式**節和啟用的選項：
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄，將目標命名*動車組*與上面顯示的 IP 位址相關聯。
 
 *   關於視窗：
-    
+
         $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-        
+
 
 *   關於 Mac/Linux：
-    
+
         $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-        
+
 
 然後，運行 `emulate` 命令來查看該應用程式：
 
         $ cordova emulate blackberry10
-    
+
 
 ## 將部署到設備
 
@@ -182,19 +182,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 運行目標命令列實用程式將一個名稱與一個 IP 位址、 裝置密碼和 PIN 相關聯。
 
 *   關於視窗：
-    
+
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 *   關於 Mac/Linux：
-    
+
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 地點：
 
@@ -205,19 +205,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 然後，運行 `run` 命令來查看該應用程式：
 
         運行 blackberry10 $ 科爾多瓦
-    
+
 
 如果調試權杖未尚未設置的設備，一條錯誤訊息會提示您使用與您的簽名金鑰提供註冊時的密碼運行腳本的平臺。
 
 *   關於視窗：
-    
+
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-        
+
 
 *   關於 Mac/Linux：
-    
+
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
-        
+
 
 ## WebInspector 的調試
 
@@ -232,7 +232,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 使用 `--release` 創建一個發佈版本適合通過黑莓手機世界分佈。
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`選項指定定義配置您的電腦登錄時的密碼的應用程式。
 
@@ -243,14 +243,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄中，將一個名為*動車組*與 IP 位址的目標相關聯。
 
 *   關於視窗：
-    
+
         $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-        
+
 
 *   關於 Mac/Linux：
-    
+
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-        
+
 
 一旦定義了目標，你可以提供給運行的命令使用 `--target` ：
 

@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -53,12 +53,12 @@ NOTE, doc said:
 Для Кордова средств командной строки для работы, вам необходимо включить в SDK `tools` и `platform-tools` каталогов в среде PATH. На Mac, вы можете использовать текстовый редактор для создания или изменения `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где SDK устанавливает:
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
-    
+
 
 Это предоставляет средства SDK в недавно открывшийся терминал windows. В противном случае выполните это, чтобы сделать их доступными в текущем сеансе:
 
     $ source ~/.bash_profile
-    
+
 
 Чтобы изменить путь среды на Windows 7:
 
@@ -71,16 +71,16 @@ NOTE, doc said:
 *   Выберите переменную **PATH** и нажмите **редактировать**.
 
 *   Добавьте путь, основанный на котором установлен пакет SDK, например следующие:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Сохраните значение и закрыть и диалоговые окна.
 
 Также может потребоваться включить Java и Ant. открыть командную строку и введите `java` , а также ввести `ant` . Добавления к пути зависимости не удается запустить:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ## Откройте проект в SDK
 
@@ -90,7 +90,7 @@ NOTE, doc said:
         $ cd hello
         $ cordova platform add android
         $ cordova build
-    
+
 
 Как только создан, вот как использовать пакет SDK для его изменения:
 
@@ -104,7 +104,7 @@ NOTE, doc said:
 
 *   Нажмите кнопку **Готово**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться указывают нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 
@@ -125,45 +125,45 @@ NOTE, doc said:
 *   Запуск `android` в командной строке.
 
 *   В Eclipse, нажмите этот значок на панели инструментов:
-    
+
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 После открытой, Android SDK Manager отображает различные библиотеки времени выполнения:
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Выберите **Инструменты → Управление AVDs** (Android виртуального устройства), а затем выберите любой элемент из **Определения устройства** в диалоговом окне возникшей:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Нажмите **Создать AVD**, при необходимости изменяя имя, затем нажмите **кнопку ОК** чтобы принять изменения:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD затем появляется в списке **Виртуальных устройств Android** :
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Чтобы открыть эмулятор как отдельное приложение, выберите AVD и нажать кнопку **старт**. Он запускает, как он на устройство, с дополнительные элементы управления, доступные для аппаратных кнопок:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 В этот момент вы можете использовать `cordova` утилита для развертывания приложения в эмулятор из командной строки:
 
         $ cordova emulate android
-    
+
 
 Если вместо этого вы работаете в среде Eclipse, щелкните правой кнопкой мыши проект и выберите **выполнить как → Android-приложение**. Вас могут попросить указать AVD, если нет уже открыт.
 
@@ -186,6 +186,6 @@ AVD затем появляется в списке **Виртуальных у�
 Вы можете нажать приложение на устройство из командной строки:
 
         $ cordova run android
-    
+
 
 Попеременно в Eclipse, щелкните правой кнопкой мыши проект и выберите **выполнить как → приложения для Android**.

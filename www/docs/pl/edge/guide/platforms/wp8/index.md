@@ -92,7 +92,7 @@ Zainstaluj najnowszą wersję zestawu SDK Windows Phone z obszaru **do pobrania*
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Tworzenie nowego projektu
 
@@ -101,12 +101,12 @@ W tym momencie aby utworzyć nowy projekt można wybrać narzędzia CLI przekre�
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 Tutaj jest odpowiednie podejście shell narzędzie niższego poziomu:
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Skompiluj projekt
 
@@ -114,57 +114,57 @@ Jeśli używasz CLI w rozwoju, katalogu projektu na najwyższym poziomie `www` k
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 Jeśli używasz narzędzia powłoki Windows Phone określonych w rozwoju, ma innego podejścia. Po wygenerowaniu projektu, domyślnie aplikacja źródła jest dostępnych w `projects\wp8\www` podkatalogu. Kolejne polecenia są dostępne w `cordova` podkatalogu na tym samym poziomie.
 
 `build`Polecenie czyści pliki projektu i odbudowuje aplikacji. W pierwszym przykładzie generuje informacje debugowania, a drugi znaki aplikacje do wydania:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 `clean`Polecenia pomoże przepłukiwanie katalogów w ramach przygotowań do następnego `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Uruchamianie na emulatorze
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
         > cordova emulate wp8
-    
+
 
 W przeciwnym razie Użyj interfejs powłoki alternatywne:
 
         C:\path\to\project\cordova\run
-    
+
 
 Domyślnie `run` skrypt wywołuje flagę emulatora i akceptuje budować dodatkowe flagi, dla którego `--debug` zapewnia domyślne:
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 Emulator uruchamia urządzenie obraz z zainstalowana aplikacja. Na ekranie przejdź do panelu aplikacji do uruchomienia aplikacji **HelloWorld** . To pokazuje aplikacji, uruchomienie z jego ekran powitalny, następuje jego głównego interfejsu:
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Emulator podstawowego kontroli w prawym górnym rogu ekranu urządzenia pozwalają na przełączanie pomiędzy portret i krajobraz. **>** Otwiera więcej formantów, które pozwoli Ci przetestować kierunki bardziej złożone i gesty:
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Te Zaawansowane sterowanie pozwala również do modyfikowania położenia urządzenia lub symulować sekwencje ruchów:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Uruchamianie na urządzeniu
 
@@ -175,12 +175,12 @@ Przed testowaniem aplikacji na urządzeniu, urządzenie musi być zarejestrowany
 Uruchom następujące polecenie CLI, aby uruchomić aplikację na urządzeniu:
 
     > cordova run wp8
-    
+
 
 Odpowiada to polecenie powłoki niższego poziomu:
 
     C:\path\to\project\cordova\run --device
-    
+
 
 Alternatywnie Jeśli pracujesz w programie Visual Studio, wybierz **Urządzenia Windows Phone** z drop niedziałający menu w górę, a następnie naciśnij Zielona **gry** przycisk pobliżu, lub innego typu **F5**.
 
@@ -190,6 +190,6 @@ Gdy budujesz Cordova aplikacji, jak opisano powyżej, można go otworzyć z zest
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Konsultacje przegląd porady jak korzystać z narzędzi wiersza polecenia w Cordova lub zestawu SDK w pracy. W consoli Cordova opiera się na kod źródłowy przekreślać platforma, które rutynowo zastępuje pliki specyficzne dla platformy, używany przez SDK. Jeśli chcesz pracować w zestawie SDK, należy użyć narzędzi niższego poziomu powłoki jako alternatywa do consoli.

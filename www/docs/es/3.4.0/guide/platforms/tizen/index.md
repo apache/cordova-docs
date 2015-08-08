@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -59,7 +59,7 @@ Descargar el SDK de Tizen de [tizen.org][1].
 1.  Lanzar el Tizen Eclipse IDE.
 
 2.  Seleccione **archivo → Import → proyecto Tizen Web**:
-    
+
     ![][2]
 
 3.  Pulse **siguiente**.
@@ -69,22 +69,22 @@ Descargar el SDK de Tizen de [tizen.org][1].
 5.  Asegúrese de **que copiar proyectos en espacio de trabajo** está activada.
 
 6.  Pulse en **Browse** y seleccione el directorio del proyecto Cordova Tizen `samples` (por ejemplo `/ cordova-basic`):
-    
+
     ![][3]
 
 7.  Pulse **Finish**. Su proyecto debe ahora ser importado y aparecen en la vista **Project Explorer**:
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Para reconstruir el proyecto, haga clic en la vista **Project Explorer** y seleccione **Build Project**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 Debe generar un archivo de paquete de widget como *hello.wgt* en el directorio de raíz del proyecto.
 
@@ -94,19 +94,19 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Desplegar en el dispositivo
 
 *   Asegúrese de que el dispositivo de destino correctamente es lanzado, conectado y configurado. Su configuración de **fecha y hora** debe configurarse correctamente.
 
 *   Utilizar la vista **Explorador de conexión** para seleccionar el objetivo del despliegue de aplicación: **ventana → Mostrar vista → conexión Explorer**.
-    
+
     ![][7]
 
 *   Haga clic derecho en el proyecto en el **Explorador de proyecto** visión, luego seleccionar ejecutar como **& rarr; Aplicación Web Tizen**:
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

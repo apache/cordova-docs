@@ -28,23 +28,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  VMWare Fusion 内、Windows 8 ディスク イメージを選択する用意しており、**設定**を選択します.
 
 2.  **プロセッサとメモリ**の構成オプションを選択します。 *2 つ*のプロセッサ コアを指定することを確認し、**この仮想マシンでハイパーバイザー アプリケーションを有効に**します。
-    
+
     ![][2]
-    
+
     Windows Phone エミュレーターだけで全体的な VMWare の少なくとも 2 GB を予約するメモリの 1 ギガバイトを使用します。
 
 3.  **高度な**設定を選択します。有効にすると、**優先仮想化エンジン: EPT で Intel VT-x**オプション。
-    
+
     ![][3]
 
 4.  *.Vmx*ファイルを追加または変更、次の設定を変更します。
-    
+
         hypervisor.cpuid.v0 = "FALSE"
         mce.enable = "TRUE"
         vhv.enable = "TRUE"
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 これらの手順が完了すると、Windows Phone SDK をインストールする準備ができているし。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。

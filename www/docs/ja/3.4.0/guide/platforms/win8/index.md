@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -52,33 +52,33 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
 *   Visual Studio 2012 を開き、**新しいプロジェクト**を選択します.
 
 *   「プロジェクト」リストからツリーし**空アプリケーション**から**インストール → テンプレート → その他の言語 → JavaScript → Windows ストア**を選択します。 などのような任意のプロジェクトの名前を入力します `CordovaWin8Foo` この例のように：
-    
+
     ![][4]
 
 *   マイクロソフトは引き続き使用 `default.html` 既定のホーム ページが、ほとんどの web 開発者向けとして `index.html` 。 ためには、少なくとも可能性が取り組んでいる他のプラットフォームと一致することをお勧めします。 これを修正する、名前を変更する**ソリューション エクスプ ローラー**で、 `default.html` ファイルを `index.html` 。 ダブルクリックし、 `package.appxmanifest` ファイルし、**ページの開始**値を変更する `index.html` :
-    
+
         ![](img/guide/platforms/win8/wschangemanifest.png)
-        
+
 
 *   含むように `cordova.js` を右クリックして、プロジェクトで、 `js` **ソリューション エクスプ**ローラーおよび**追加 → 新規項目**選択ディレクトリ。 検索、 `cordova.js` ファイルで、 `lib\windows-8` ディレクトリ。
 
 *   コードを編集の `index.html` 。 参照を追加 `cordova.js` 。 手動で、または**ソリューション エクスプ ローラー**からファイルをドラッグすることによってこれを行うことができます。 次の追加アプリのホーム ページに他の依存関係。
-    
+
             <!-- WinJS references -->
             <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
             <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
             <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-        
+
             <!-- Cordova -->
             <script src="/js/cordova.js"></script>
-        
+
             <!-- CordovaWin8Foo references -->
             <link href="/css/default.css" rel="stylesheet" />
             <script src="/js/default.js"></script>
-        
+
 
 *   追加、 `deviceready` コルドバを示すためにハンドラーの処理します。
-    
+
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
@@ -88,15 +88,15 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
                 });
             </script>
         </body>
-        
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## プロジェクトをテストします
 
 Visual Studio から、プロジェクトを実行します。表示されるメッセージ ボックスが表示されます。
 
         ![](img/guide/platforms/win8/wsalert.png)
-    
+
 
 それだけです。コルドバでの Windows ストア アプリを構築する準備が整いました。

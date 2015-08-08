@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ Sur Windows :
 *   Aller à **mon ordinateur → propriétés → avancé → Variables d'environnement**.
 
 *   Ajoute le répertoire d'installation du SDK natif au chemin, par exemple :
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 Sur Mac et Linux :
 
 *   Modifier la `~/.bash_profile` fichier, en ajoutant une ligne semblable à la suivante, selon lequel le kit de développement natif a été installé :
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Exécutez la commande suivante pour appliquer la modification à la présente session :
-    
+
     $ source ~/.bash_profile
 
 ## Mis en place pour la signature
@@ -61,7 +61,7 @@ Entrez un mot de passe et cliquez sur « Get jeton » pour télécharger bbidtok
 La dernière étape consiste à générer un certificat de signature :
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## Créer un projet
 
@@ -71,7 +71,7 @@ Utilisation du `cordova` utilitaire de mettre en place un nouveau projet, tel qu
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## Déployer sur émulateur
 
@@ -88,18 +88,18 @@ Lancer l'image de l'émulateur, puis cliquez sur **paramètres** depuis l'écran
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Accédez à la **→ sécurité et vie privée Mode de développement** section et activer l'option :
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Ensuite, exécutez le `emulate` commande pour visualiser l'application :
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## Déployer sur le périphérique
 
@@ -108,12 +108,12 @@ Ensuite, exécutez le `emulate` commande pour visualiser l'application :
 Ensuite, exécutez le `run` commande pour visualiser l'application :
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 Si un jeton de débogage n'est pas encore mis en place pour le périphérique, un message d'erreur vous demande de fournir le mot de passe, vous avez défini lors de la configuration de votre ordinateur pour vous connecter à des applications.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## Débogage avec WebInspector
 
@@ -128,7 +128,7 @@ Par défaut, exécutez la `cordova build` commande crée un fichier de package n
 Utiliser `--release` pour créer une version adaptée à la distribution par l'intermédiaire de BlackBerry World.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 Le `--keystorepass` option spécifie le mot de passe vous avez défini lors de la configuration de votre ordinateur pour signer les applications.
 
@@ -139,11 +139,11 @@ Les instructions ci-dessus supposent un appareil est branché via USB ou d'un si
 Un jeu supplémentaire d'utilitaires de ligne de commande sont inclus lorsque vous configurez la plate-forme BlackBerry 10 pour votre projet. La commande suivante, appelée dans ce cas depuis le répertoire racine du projet, associe une cible nommée *l'UEM* avec une adresse IP.
 
 *   Sur Windows :
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   Sur Mac/Linux :
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 Une fois que la cible est définie, vous pouvez le fournir à la commande d'exécution à l'aide `--target` :

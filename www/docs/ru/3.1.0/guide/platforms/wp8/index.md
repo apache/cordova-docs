@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,27 +29,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 1. Системные требования
 
 *   Операционная система:
-    
-    *   Windows 8 или Windows 8 Pro 
+
+    *   Windows 8 или Windows 8 Pro
         *   Для SDK требуется 64-разрядная версия (x 64) Windows.
         *   Рекомендуется использовать версию Pro, так что вы можете запустить эмулятор устройства.
 
 *   Аппаратное обеспечение:
-    
+
     *   6,5 ГБ свободного дискового пространства
     *   4 ГБ ОПЕРАТИВНОЙ ПАМЯТИ
     *   64-разрядный (x 64) процессор
 
 *   Эмулятор Windows Phone 8
-    
+
     *   Телефон Эмулятор использует Hyper-V, поэтому этот список включает те предпосылки.
     *   Про 64-разрядная версия Windows 8 или больше
-    *   Требуется процессор поддерживает виртуализацию и [Второй перевод адреса уровня (SLAT)][1] 
+    *   Требуется процессор поддерживает виртуализацию и [Второй перевод адреса уровня (SLAT)][1]
         *   Смотрите [список процессоров Intel, которые поддерживают VT-x (виртуализация) и EPT (SLAT)][2]
     *   Включите возможность виртуализации (например, VT-x на Intel) в настройках BIOS, как обычно, эта возможность отключена по умолчанию.
 
 *   SDK + IDE (Visual Studio)
-    
+
     *   Visual Studio 2012 Professional, Premium или Ultimate. Обратите внимание что Visual Studio Express для Windows Phone (входит в пакет SDK) не рекомендуется, потому что вы не можете построить шаблон (см. ниже) с VS Express, как он не имеет функциональность **Экспорт шаблона** , который является только в VS Pro или выше.
 
 *   Зарегистрироваться и оплатить для учетной записи [Windows Phone Dev центр][3] , если вы хотите установить приложение на реальном устройстве или представить его на рынке.
@@ -88,7 +88,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Запустите сценарий:
 
     >createTemplates.bat -install
-    
+
 
 ## 3. Установите новый проект
 
@@ -100,7 +100,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. Обзор структуры проекта
 
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. Построение и развертывание в эмулятор
 
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. Создайте свой проект для устройства
 
@@ -138,7 +138,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Договорились!
 

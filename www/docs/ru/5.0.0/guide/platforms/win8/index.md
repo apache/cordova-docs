@@ -67,7 +67,7 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][9]
 
- [9]: img/guide/platforms/win8/win8_installSDK.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 ## Использование инструментов командной строки Cordova
 
@@ -88,12 +88,12 @@ Cordova WebView под управлением ОС Windows полагаются 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
-    
+
 
 Вот соответствующий подход shell инструмент более низкого уровня:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Построение проекта
 
@@ -103,21 +103,21 @@ Cordova WebView под управлением ОС Windows полагаются 
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
-    
+
 
 Вот соответствующий подход shell инструмент более низкого уровня:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Настройка целевой версии Windows
 
 По умолчанию, команда `build` производит два пакета: Windows 8.0 и 8.1 Windows Phone. Чтобы обновить пакет Windows до версии 8.1 следующие параметры конфигурации должны быть добавлены в файл конфигурации (`config.xml`).
 
         <preference name='windows-target-version' value='8.1' />
-    
+
 
 После того, как вы добавите этот параметр, команда `build` начнет создавать пакеты Windows 8.1 и 8.1 Windows Phone.
 
@@ -127,13 +127,13 @@ Cordova WebView под управлением ОС Windows полагаются 
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-    
+
 
 Развертывание пакета Windows Phone:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-    
+
 
 Можно использовать **cordova run windows --list** чтобы увидеть все доступные цели и **cordova run windows --target=target_name \-- -|-phone** для запуска приложения на конкретном устройстве или эмуляторе (например, `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
@@ -145,25 +145,25 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Компонент `CordovaApp` отображается внутри решения, и его каталог `www` содержит исходный код, включая домашнюю страницу `index.html` :
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Элементы управления ниже главного меню Visual Studio позволяют вам тестировать или развертывать приложения:
 
 ![][13]
 
- [13]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 При выбранном пункте **Локальный компьютер** нажмите зеленую стрелку, чтобы установить приложение на том же компьютере где работает Visual Studio. Как только вы сделаете это, приложение появляется в списках приложений Windows 8:
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Каждый раз, когда вы перестроить приложение, версия доступная в интерфейсе обновляется.
 
@@ -171,19 +171,19 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Обратите внимание, что если вы открываете приложение в среде виртуальной машины, вам может понадобиться нажать в углах или по бокам окна переключения приложений или получить доступ к дополнительным функциям:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_run.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Альтернативно выберите параметр развертывания **Симулятор** для просмотра приложения, как если бы она была установлена на планшетном устройстве:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_sim.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 В отличие от развертывания на настольные системы этот параметр позволяет имитировать ориентацию планшета, его местоположение и изменять его параметры сети.
 

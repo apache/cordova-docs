@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,8 +29,8 @@ Les outils de ligne de commande ci-dessus se référer aux versions antérieures
 ## 1. Configuration requise
 
 *   Système d'exploitation:
-    
-    *   Windows 7 ou Windows 8 (Pro) ou Windows Vista avec Service Pack 2 
+
+    *   Windows 7 ou Windows 8 (Pro) ou Windows Vista avec Service Pack 2
         *   La version 64-bit (x 64) de Windows est requise pour le SDK.
         *   La version Pro est recommandée pour exécuter un Microsoft device emulator.
 
@@ -68,7 +68,7 @@ Afin de simplifier le processus de développement, Cordova est livré avec un sc
 Exécutez le script :
 
     > createTemplates.bat-installer
-    
+
 
 ## 3. Mettre en place le nouveau projet
 
@@ -88,7 +88,7 @@ Exécutez le script :
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. Générez votre projet pour le dispositif
 
@@ -104,6 +104,6 @@ Afin de tester votre application sur un périphérique, le périphérique doit �
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fait !

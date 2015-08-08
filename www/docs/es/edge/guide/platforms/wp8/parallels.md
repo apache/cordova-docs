@@ -28,14 +28,14 @@ La [Microsoft Developer Network][1] proporciona instrucciones generales sobre c�
 1.  Dentro de Parallels Desktop, seleccione la imagen de disco de Windows 8 que ha preparado y elija la **configuración**.
 
 2.  Elija las opciones **→ General CPUs** . Especificar *dos* CPUs. Especificar al menos 2GB de memoria, incluso si cae fuera del rango recomendado:
-    
+
     ![][2]
 
 3.  Para poder ejecutar el dispositivo emulador de imagen dentro de la máquina virtual de Windows 8, elija las opciones de **optimización** y permiten **Virtualización anidados**.
-    
+
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 Una vez que complete estos pasos, estás listo para instalar el SDK de Windows Phone. Consulte a la guía de plataforma de Windows Phone 8 para más detalles.

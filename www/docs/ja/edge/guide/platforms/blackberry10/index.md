@@ -30,9 +30,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ブラックベリー 10 デバイス シミュレーター:
 
 *   プロセッサ: インテルデュアルコア 2.0 GHz/AMD Athlon 4200 + またはより高い
-*   ディスクの空き容量: 10 ギガバイト 
-*   RAM メモリ: 4 GB 
-*   仮想化： 次のいずれか。 
+*   ディスクの空き容量: 10 ギガバイト
+*   RAM メモリ: 4 GB
+*   仮想化： 次のいずれか。
     *   **インテル バーチャライゼーション ・ テクノロジー**(VT、VT-x、vmx) → [Intel VT-x 対応のプロセッサ一覧][1]
     *   **AMD の仮想化**（AMD-V、SVM）(2006 年 5 月以来すべての AMD の Cpu を含む AMD-V Sempron を除く)。
 
@@ -63,53 +63,53 @@ Windows:
 *   **私のコンピューター → プロパティ → 詳細設定 → 環境変数**に行く.
 
 *   ネイティブ SDK は、インストール ディレクトリのパスに追加、たとえば。
-    
+
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
-        
+
 
 Mac および Linux:
 
 *   編集、 `~/.bash_profile` ネイティブ SDK のインストール先に応じて、次のような行を追加するファイル。
-    
+
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-        
-    
+
+
     または 10.2 ネイティブ SDK:
-    
+
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
-        
+
 
 *   現在のセッションで変更を適用するのには、次を実行します。
-    
+
         $ source ~/.bash_profile
-        
+
 
 得た場合は、環境問題、コマンド ・ ラインからネイティブ SDK を使用して、実行、適切なプラットフォーム用のファイル、インストール先のパス内にある：
 
 *   Windows → MS-DOS シェル。
-    
+
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-        
+
 
 *   Windows → git bash シェル。
-    
+
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-        
+
 
 *   Linux の → ルート ユーザーとしてインストールされています。
-    
+
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   Linux の → 非ルートユーザとしてインストールされています。
-    
+
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 *   Mac:
-    
+
         $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 
 ## 署名を設定します。
 
@@ -124,7 +124,7 @@ Mac および Linux:
 最後の手順は、署名証明書を生成します。
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## プロジェクトを作成します。
 
@@ -134,7 +134,7 @@ Mac および Linux:
         $ cd hello
         $ cordova platform add blackberry10
         $ cordova build
-    
+
 
 ## エミュレーターへの展開します。
 
@@ -151,30 +151,30 @@ Mac および Linux:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 移動し、**セキュリティとプライバシー → 開発モード**セクションし、オプションを有効にします。
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 この場合、プロジェクトの最上位ディレクトリから呼び出される、次のコマンドは、 *emu*上に表示される IP アドレスを持つという名前のターゲットを関連付けます。
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-        
+
 
 *   Mac の/Linux: 上
-    
+
         $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-        
+
 
 その後、実行、 `emulate` アプリケーションを表示するコマンド。
 
         $ cordova emulate blackberry10
-    
+
 
 ## デバイスへの配置します。
 
@@ -182,19 +182,19 @@ Mac および Linux:
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 名前に関連付ける IP アドレス、デバイスのパスワードと PIN とターゲット コマンド ライン ユーティリティを実行します。
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 *   Mac の/Linux: 上
-    
+
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 
 場所：
 
@@ -205,19 +205,19 @@ Mac および Linux:
 その後、実行、 `run` アプリケーションを表示するコマンド。
 
         blackberry10 を実行 $ コルドバ
-    
+
 
 デバッグ トークンがまだ設定されていないデバイスの場合、エラー メッセージはキーに署名するための登録時に指定したパスワードでスクリプトを実行するプラットフォームを使用するよう指示します。
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-        
+
 
 *   Mac の/Linux: 上
-    
+
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
-        
+
 
 ## WebInspector とデバッグ
 
@@ -232,7 +232,7 @@ Mac および Linux:
 使用する `--release` BlackBerry の世界を介して配信に適してリリース バージョンを作成します。
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 `--keystorepass`オプションに署名するお使いのコンピューターを構成するときに定義されたパスワードを指定しますアプリケーション。
 
@@ -243,14 +243,14 @@ Mac および Linux:
 コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 この場合、プロジェクトの最上位ディレクトリから呼び出される、次のコマンドは*emu* IP アドレスを持つという名前のターゲットを関連付けます。
 
 *   Windows:
-    
+
         $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-        
+
 
 *   Mac の/Linux: 上
-    
+
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-        
+
 
 ターゲットが定義されたら、実行するコマンドを使用する提供できます `--target` :
 

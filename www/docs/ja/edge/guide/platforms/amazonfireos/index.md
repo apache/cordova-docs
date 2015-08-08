@@ -70,12 +70,12 @@ Apache Ant ビルドツール[、Ant のバイナリ配布物をダウンロー�
 Mac、Linux または他の Unix ライクなプラットフォームで、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK と Ant のインストール先に応じて、次のような行を追加します。
 
     エクスポート パス ${PATH} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール：/開発/apache ant/bin
-    
+
 
 これは新しくオープンしたターミナル ウィンドウで SDK ツールを公開します。それ以外の場合、現在のセッションで使用できるようにするこれを実行します。
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows パス
 
@@ -90,16 +90,16 @@ Windows の PATH 環境を変更: する
 *   **パス**変数を選択し、キーを押して**編集**.
 
 *   次のパスに追加インストールした SDK と Ant、たとえばに基づいて：
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   値を保存して両方のダイアログ ボックスを閉じます。
 
 *   また、Java を有効にする必要があります。 コマンド プロンプトを開き、型 `java` 実行されない場合、同様にあなたのパスに Java バイナリの場所を追加します。 ％ JAVA_HOME が JDK のインストール ディレクトリを指していることを確認します。 JAVA_HOME 環境変数別途追加する必要があります。
-    
+
         %JAVA_HOME%\bin
-        
+
 
 ### アマゾン WebView SDK
 
@@ -108,9 +108,9 @@ Windows の PATH 環境を変更: する
 *   [Amazon 開発者ポータル][1]からアマゾン WebView SDK をダウンロードします。.
 
 *   コピー `awv_interface.jar` コルドバの作業ディレクトリにダウンロードした SDK から。それが存在しない場合は、commonlibs(shown below) フォルダーを作成します。
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## アマゾン火 OS の新しいプロジェクトを作成します。
@@ -121,7 +121,7 @@ Windows の PATH 環境を変更: する
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***注：***アマゾン fireos プラットフォームは、システムにインストールされている初めてコルドバの作業ディレクトリに適切なファイルをダウンロードするそれとして AWV SDK サポート ファイル (上記参照) が不足しては失敗します。 インストールするには、上記の手順に従って、 `awv_interface.jar` 、削除し、再度アマゾン fireos プラットフォームをプロジェクトに追加します。 この手順はのみ行う必要があります最初のアマゾン火 OS プロジェクト。
 
@@ -134,7 +134,7 @@ Windows の PATH 環境を変更: する
 アプリをデバイスにプッシュするには、コマンド行から。
 
     アマゾン fireos 実行 $ コルドバ
-    
+
 
 交互 Eclipse、内でプロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します.
 
@@ -147,14 +147,14 @@ Windows の PATH 環境を変更: する
 開発者ツールを使用するには、を入力します。
 
     $ cordova run --debug amazon-fireos
-    
+
 
 これは実行しているクライアント上のツールを有効になります。接続できますクライアントに Android のデバッグ橋 （adb） を使用してポート転送によって、アプリのパッケージ名を参照します。
 
 たとえば。
 
     adb 前方 tcp:9222 localabstract:com.example.helloworld.devtools
-    
+
 
 クロム ベースのブラウザーを介して DevTools に移動して使用することしてできます。`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Windows の PATH 環境を変更: する
 
 *   **終了**キーを押します。.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 

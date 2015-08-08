@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,27 +29,27 @@ Las herramientas de línea de comandos anteriores se refieren a las versiones an
 ## Requisitos del sistema
 
 *   Sistema operativo:
-    
-    *   Windows 8 o Windows 8 Pro 
+
+    *   Windows 8 o Windows 8 Pro
         *   La versión de 64-bit (x 64) de Windows es necesaria para el SDK.
         *   La versión Pro se recomienda para que pueda ejecutar un emulador de dispositivos.
 
 *   Hardware:
-    
+
     *   6,5 GB de espacio libre en disco duro
     *   4 GB DE RAM
     *   CPU de 64-bit (x 64)
 
 *   Emulador de Windows Phone 8
-    
+
     *   El emulador de teléfono utiliza Hyper-V, así que esta lista incluye los requisitos previos.
     *   Edición Pro de 64 bits de Windows 8 o superior
-    *   Requiere un procesador compatible con virtualización y [Segunda dirección nivel traducción (listón)][1] 
+    *   Requiere un procesador compatible con virtualización y [Segunda dirección nivel traducción (listón)][1]
         *   Ver la [lista de procesadores compatibles (virtualización) VT-x y EPT (listón)][2]
     *   Activar la capacidad de virtualización (es decir, VT-x en Intel) en la configuración del BIOS, generalmente esto está deshabilitado por defecto.
 
 *   SDK e IDE (Visual Studio)
-    
+
     *   Visual Studio Professional 2012, Premium o Ultimate. Tenga en cuenta que Visual Studio Express para Windows Phone (incluida en el SDK) no es recomendable porque no se puede construir la plantilla (véase abajo) VS Express, como no tiene la funcionalidad de la **Plantilla de exportación** , que es sólo en VS Pro o superior.
 
 *   Registrarse y pagar una cuenta de [Windows Phone Dev Center][3] si quieres instalar tu aplicación en un dispositivo real o enviarlo al mercado.
@@ -89,7 +89,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` . Entonces eres capaz 
 Si ejecuta el archivo por lotes desde la línea de comandos, también puedes llamarlo con un parámetro para instalar de forma automática:
 
         >createTemplates.bat -install
-    
+
 
 ## Configurar un nuevo proyecto
 
@@ -101,7 +101,7 @@ Dar al proyecto un nombre y seleccione **OK**.
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## Revisar la estructura del proyecto
 
@@ -111,7 +111,7 @@ La siguiente muestra estructura representa un 2.3.0 del proyecto, pero puede var
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Construir y desplegar en emulador
 
@@ -121,7 +121,7 @@ Luego presione el botón verde **jugar** al lado de la lista desplegable para em
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## Genere el proyecto para el dispositivo
 
@@ -137,7 +137,7 @@ Antes de probar la aplicación en un dispositivo, el dispositivo debe estar regi
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 En este punto, ya está.
 

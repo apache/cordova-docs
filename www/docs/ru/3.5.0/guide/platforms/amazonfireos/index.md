@@ -49,12 +49,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 На Mac, Linux или других Unix подобных платформах, вы можете использовать текстовый редактор для создания или изменения `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где SDK устанавливает:
 
     экспорт путь = ${путь}: / развития/АТД Комплект/sdk/платформы tools: / развития/АТД Комплект/sdk/инструменты
-    
+
 
 Это предоставляет средства SDK в недавно открытый терминал windows. В противном случае выполните это, чтобы сделать их доступными в текущем сеансе:
 
     $ источника ~/.bash_profile
-    
+
 
 Чтобы изменить путь среды на Windows 7:
 
@@ -67,16 +67,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Выберите переменную **PATH** и нажмите **редактировать**.
 
 *   Добавьте следующее в путь, основанный на котором установлен пакет SDK, например:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Сохраните значение и закройте оба диалоговые окна.
 
 Также может потребоваться включить Java и Ant. открыть командную строку и введите `java` , а также ввести `ant` . Добавления к пути зависимости не удается запустить:
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### Amazon WebView SDK
 
@@ -93,7 +93,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 После создания, вот как использовать пакет SDK для его изменения:
 
@@ -107,7 +107,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   Нажмите кнопку **Готово**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться указывают нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 
@@ -130,7 +130,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Вы можете нажать приложение на устройство из командной строки:
 
     $ cordova run amazon-fireos
-    
+
 
 Попеременно в Eclipse, щелкните правой кнопкой мыши проект и выберите **выполнить как → приложения для Android**.
 

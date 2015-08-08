@@ -92,7 +92,7 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 新しいプロジェクトを作成します。
 
@@ -101,12 +101,12 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 ここでは、対応する下位レベル シェル ツール アプローチ：
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## プロジェクトをビルドします
 
@@ -114,57 +114,57 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 開発で Windows Phone 固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリケーションのソースは、 `projects\wp8\www` サブディレクトリ。 以降のコマンドは、 `cordova` 、同じレベルのサブディレクトリ。
 
 `build`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。最初の例では、デバッグ情報を生成して、2 番目のリリースのアプリに署名します。
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 `clean`コマンドは準備として、次のディレクトリを洗い流すのに役立ちます `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## エミュレーターへの展開します。
 
 この時点で使用することができます、 `cordova` CLI ユーティリティ コマンドラインからエミュレーターにアプリケーションを配置します。
 
         > cordova emulate wp8
-    
+
 
 それ以外の場合、代替シェル インターフェイスを使用します。
 
         C:\path\to\project\cordova\run
-    
+
 
 既定で、 `run` スクリプト エミュレーター フラグを呼び出すし、追加のビルド フラグを受け入れる `--debug` 、既定値を提供します。
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 エミュレーターはインストールされているアプリケーションとデバイス イメージを起動します。 ホーム画面から、 **HelloWorld**アプリケーションを起動するアプリのパネルに移動します。これはメイン インタ フェースに続いてそのスプラッシュ画面を起動するアプリを示しています。
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 **>**ボタンより複雑な方向とジェスチャをテストすることができますより多くのコントロールが表示されます。
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 これらの高度なコントロールを使用または動きのシーケンスをシミュレートするデバイスの場所を変更するしたりすることもできます。
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## デバイスへの配置します。
 
@@ -175,12 +175,12 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 その後、デバイス上のアプリを実行するには、次の CLI コマンドを実行します。
 
     > cordova run wp8
-    
+
 
 この低レベルのシェル コマンドに対応しています。
 
     C:\path\to\project\cordova\run --device
-    
+
 
 代わりに、Visual Studio で作業する場合は、トップ、押します**再生**緑の近隣にはボタンまたは他の**f5 キーを押して**にドロップ ダウン メニューから**Windows Phone デバイス**を選択します。.
 
@@ -190,6 +190,6 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスは、「概要」を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK 内で作業する場合、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。

@@ -70,12 +70,12 @@ Cordova wiersza polecenia narzędzia do pracy, musisz dołączyć Android SDK `t
 Na Mac, Linux lub innych platform uniksowych, można użyć edytora tekstu do tworzenia lub modyfikowania `~/.bash_profile` pliku, dodanie linii następujących, w zależności od tego, gdzie są zainstalowane SDK i Ant:
 
     Export PATH = ${ścieżka}: / rozwój/adt pakiet/sdk/platformy narzędzia: / rozwój/adt pakiet/sdk/tools: / rozwój/Apasz mrówka/bin
-    
+
 
 Ten udostępnia narzędzia SDK w nowo otwartego okna terminala. W przeciwnym wypadku Uruchom ten je udostępnić w bieżącej sesji:
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows ścieżka
 
@@ -90,16 +90,16 @@ Aby zmienić ścieżka środowisko naturalne w systemie Windows:
 *   Wybierz zmienną **PATH** i naciśnij klawisz **Edytuj**.
 
 *   Dołącz następujące ścieżki, w oparciu o gdzie zainstalowałeś SDK i mrówka, na przykład:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   Zapisz wartość i zamknij obu oknach dialogowych.
 
 *   Także trzeba będzie włączyć Java. Otworzyć pewien rozkazywać wierzyciel i typ `java` , jeśli to nie działa, Dołącz lokalizacji plików binarnych Java do Twojej ścieżki, jak również. Upewnij się, że JAVA_HOME % jest skierowany do zainstalowanego katalogu JDK. Może trzeba dodać środowiska JAVA_HOME zmienny osobno.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -108,9 +108,9 @@ Aby utworzyć Cordova aplikacji przy użyciu Amazon ogień OS platformy docelowe
 *   Pobrać Amazon WebView SDK [Amazon Developer Portal][1].
 
 *   Kopia `awv_interface.jar` z pobrać SDK do Cordova w katalogu roboczym. Utwórz commonlibs(shown below) folder, jeśli nie istnieje:
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Tworzenie nowego projektu dla Amazon ogień OS
@@ -121,7 +121,7 @@ Użycie `cordova` narzędzie, aby skonfigurować nowy projekt, opisanym w The Co
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Uwaga:*** Po raz pierwszy na platformie amazon-fireos jest zainstalowana w systemie, to pobierze odpowiednie pliki do katalogu roboczego Cordova, ale wtedy zakończy się niepowodzeniem, ponieważ brakuje plików pomocy AWV SDK (patrz wyżej). Postępuj zgodnie z instrukcjami powyżej, aby zainstalować `awv_interface.jar` , a następnie usunąć i dodać ponownie platformie amazon-fireos do projektu. Ten krok będzie tylko trzeba będzie zrobić pierwszy projekt Amazon ogień OS.
 
@@ -134,7 +134,7 @@ Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB j
 Aplikację można wcisnąć do urządzenia z linii poleceń:
 
     $ cordova uruchomić Amazonka fireos
-    
+
 
 Na przemian w Eclipse, kliknij prawym przyciskiem myszy projekt i wybierz **Uruchom jako → Android aplikacji**.
 
@@ -147,14 +147,14 @@ Uruchom polecenie akceptuje parametry opcjonalne, jak określono w dokumencie Co
 Aby użyć narzędzia programistyczne, wpisz:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Umożliwi to narzędzia działa klient. Można to podłączyć do klienta przez przekierowanie portów przy użyciu Android Debug most (adb) powołując się na nazwę pakiet aplikacji.
 
 Na przykład:
 
     ADB tcp:9222 do przodu localabstract:com.example.helloworld.devtools
-    
+
 
 Następnie można użyć DevTools za pośrednictwem przeglądarki na bazie chromu, przechodząc do:`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Po utworzeniu, możesz użyć Eclipse, które przychodzi wraz z Android SDK, aby
 
 *   Naciśnij przycisk **Zakończ**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Gdy otworzy się okno Eclipse, czerwony **X** mogą pojawiać się problemy nierozwiązane. Jeśli tak, wykonaj następujące kroki dodatkowe:
 

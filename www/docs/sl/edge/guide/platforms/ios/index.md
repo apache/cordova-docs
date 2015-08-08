@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -55,13 +55,13 @@ Uporaba na `cordova` korist zaiti ki gre gor a nov projekt, kot je opisano v The
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 Ko ga enkrat ustvariš, jo lahko odprete iz v Xcode. Odprem v `hello/platforms/ios/hello.xcodeproj` datoteko. Zaslon mora izgledati takole:
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Razporedi na Emulator
 
@@ -72,17 +72,17 @@ Predogled v iOS emulator app:
 2.  Izberite **zdravo** app na plošči takoj na desni.
 
 3.  Izberite napravo, predvideno **shemo** meniju v orodni vrstici, kot so iPhone 6.0 Simulator kot višek tukaj:
-    
+
     ![][5]
 
 4.  Pritisnite gumb za **zagon** , ki se pojavi v isti orodni vrstici na levi **sheme**. Ki gradi, razvije in izvaja uporabo v emulator. A uporaba ločenih emulator odpre razpoložiti app:
-    
+
     ![][6]
-    
+
     Edini emulator lahko delujejo hkrati, tako da če hočeš skušnja app v različnih emulator, morate prenehati uporabo emulator in prost dostop a različen tarča v Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode priti povesmo s emulatorji za na najnovejše različice iPhone in iPad. Starejše različice so lahko na voljo od na **Xcode → nastavitve → Downloads → komponente** panel.
 
@@ -117,7 +117,7 @@ Za uvajanje v napravo:
 Xcode opozorilo o je `invokeString` metoda zadeva funkcionalnost, to pobudnik app iz custom URL. Mehanizem za obremenitve od šega URL je spremenila, ta številka je še vedno predvideti nazaj funkcionalnost aplikacije, ustvarjene s prejšnjimi različicami Cordova. Vzorec app ne uporabite te funkcije, tako teh opozoril lahko prezrete. Za preprečevanje teh opozoril pojavljali, odstranite kodo, da sklicevanja neustrezen invokeString API:
 
 *   Uredite datoteko *Classes/MainViewController.m* , obkrožajo ta blok kode z `/*` in `*/` Komentarji, kot je prikazano spodaj, nato vnesite **ukaz-s** rešiti pila:
-    
+
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -131,15 +131,15 @@ Xcode opozorilo o je `invokeString` metoda zadeva funkcionalnost, to pobudnik ap
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-        
+
         return [super webViewDidFinishLoad:theWebView];
         }
-        
+
 
 *   Izdajati *Classes/AppViewDelegate.m* pila, razložiti jasno sledeč črta z vstavitvijo dvojna poševnica, kot je prikazano spodaj, in nato vnesite **ukaz-s** rešiti pila:
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   Pritisnite **Command-b** za obnovo projekta in odpravo opozorila.
 
@@ -150,10 +150,10 @@ Xcode opozorilo o je `invokeString` metoda zadeva funkcionalnost, to pobudnik ap
 1.  Izberite **Xcode → nastavitve → lokacijah**.
 
 2.  V razdelku **Pridobljenih podatkov** pritisnite gumb **dodatno** in izberite **Unique** kot **Izgradnjo mesta** , kot je prikazano tukaj:
-    
+
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 To je privzeta nastavitev za novo Xcode namestiti, vendar to lahko določi drugače po nadgradnjo iz starejše različice programa Xcode.
 

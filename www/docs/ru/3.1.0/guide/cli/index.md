@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -41,10 +41,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 1.  Скачать и установить [Node.js][1]. После установки, вы должны иметь возможность ссылаться на `node` или `npm` в командной строке.
 
 2.  Установить `cordova` утилита. В Unix, предваряя дополнительные `sudo` команда может быть необходимым для установки утилиты разработки в противном случае ограничено каталоги:
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     Журнал установки может приводить к ошибкам для любой удаленной платформы SDK. После установки, вы должны иметь возможность запускать `cordova` в командной строке.
 
  [1]: http://nodejs.org/
@@ -54,7 +54,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Перейдите в каталог, где вы сохранить ваш исходный код и выполнить команду следующего вида:
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 Это может занять некоторое время для выполнения команды, так что будьте терпеливы. Запустите `cordova -d` для просмотра сведений о прогрессе.
 
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 Все последующие команды должны быть запущены в каталоге проекта, или подкаталоги в пределах своей области:
 
         $ cd hello
-    
+
 
 Перед тем, как можно построить проект, необходимо указать набор целевых платформ. Ваша способность выполнить эти команды зависит от того, поддерживает ли ваш компьютер каждого пакета SDK, и есть ли у вас уже установлен каждого пакета SDK. Запуск любого из них от Mac:
 
@@ -75,7 +75,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Выполните любую из этих из окна машины, где *wp* относится к различных версий операционной системы Windows Phone:
 
@@ -85,12 +85,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Выполните это, чтобы проверить ваш текущий набор платформ:
 
         $ cordova platforms ls
-    
+
 
 (Примечание `platform` и `platforms` команды являются синонимами.)
 
@@ -98,7 +98,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
         $ cordova platform remove blackberry10
         $ cordova platform rm android
-    
+
 
 Выполнение команд для добавления или удаления платформ влияет на содержимое каталога *платформы* проекта, где каждый указанной платформе появляется как подкаталог. Исходный каталог *www* воспроизводится в подкаталоге каждой платформы, например появляясь в `platforms/ios/www` или `platforms/android/assets/www` . По умолчанию чтобы иметь возможность получить доступ ко всем API, Кордова настроен файл конфигурации каждой платформы.
 
@@ -113,18 +113,18 @@ XREF -->
 Выполните следующую команду для последовательного построения проекта:
 
         $ cordova build
-    
+
 
 Это создает платформенно зависимый код в рамках проекта `platforms` подкаталог. При необходимости можно ограничить сферу охвата каждой сборки для конкретных платформ:
 
         $ cordova build ios
-    
+
 
 `cordova build`Команда является краткой формой для следующее, что в этом примере также ориентирована на единую платформу:
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 В этом случае, после запуска `prepare` , можно использовать Apple в Xcode SDK в качестве альтернативы изменить и скомпилировать платформенно зависимый код, генерирующий Кордова в пределах `platforms/ios` . Можно использовать тот же подход с других платформ SDK.
 
@@ -133,24 +133,24 @@ XREF -->
 SDK для мобильных платформ, которые часто поставляются в комплекте с эмуляторами, выполняемых изображения устройства, так что вы можете запустить приложение на главном экране и посмотреть, как он взаимодействует со многими функциями платформы. Выполните команду следующего вида восстановить приложение и просмотреть его в пределах определенной платформы эмулятора:
 
         $ cordova emulate android
-    
+
 
 Некоторые мобильные платформы эмулировать конкретного устройства по умолчанию, такие как iPhone iOS проектов. Для других платформ необходимо сначала связать устройство с эмулятором. (См. платформа направляющие для деталей.) Например, вы можете сначала запустить `android` команда для запуска Android SDK, а затем запустить изображение конкретного устройства, которое запускает согласно его поведение по умолчанию:
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Следующие вверх с `cordova emulate` команда обновляет образ эмулятора для отображения последние приложения, который теперь доступен для запуска на начальном экране:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Поочередно Подключите телефон к компьютеру и тестирование приложения непосредственно можно:
 
         $ cordova run android
-    
+
 
 Перед выполнением этой команды, необходимо настроить устройство для тестирования, следуя процедурам, которые различаются для каждой платформы. В случае Android вам придется включить опцию **USB отладки** в устройстве и возможно добавить драйвер USB в зависимости от развития далее. Смотрите подробную информацию о потребностях каждой платформы платформы руководства.
 
@@ -163,78 +163,78 @@ SDK для мобильных платформ, которые часто пос
 `cordova plugin add`Команды необходимо указать хранилище для код плагина. Ниже приведены примеры функций, которые можно добавить:
 
 *   Информация основные устройства (устройства API):
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   Сетевое подключение и батарея события:
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   Акселерометр, компас и географического расположения:
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   Камера, воспроизведение мультимедиа и захват:
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+
 
 *   Доступ к файлам на устройстве или сети (файл API):
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   Уведомление через диалоговое окно или вибрации:
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   Контакты:
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   Глобализация:
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   Экран-заставка:
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   Открывать новые окна браузера (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   Отладка консоли:
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 Использование `plugin ls` (или `plugin list` , или `plugin` сама по себе) для просмотра в настоящее время установленные плагины. Каждый отображает по его идентификатору:
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 Чтобы удалить плагин, относятся к нему, тот же идентификатор, который отображается в списке. Например вот как бы удалить поддержка консоли отладки версии:
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 Можно удалить пакет или добавлять плагины, указав более одного аргумента, для каждой команды.
 
@@ -245,16 +245,16 @@ SDK для мобильных платформ, которые часто пос
 Вместо этого верхнего уровня `merges` Каталог предлагает место для указания активов для развертывания на определенных платформах. Каждая платформа специфического подкаталога в пределах `merges` отражает структуру каталогов `www` дерево исходных текстов, позволяет переопределять или добавлять файлы при необходимости. Например, вот как вы, возможно, использует `merges` чтобы увеличить размер шрифта по умолчанию для устройств Android:
 
 *   Редактировать `www/index.html` файл, добавив ссылку на дополнительные CSS-файл, `overrides.css` в этом случае:
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   При необходимости создать пустой `www/css/overrides.css` файл, который будет применяться для всех построений-андроида, предотвращая недостающий файл ошибка.
 
 *   Создание `css` подкаталог внутри `merges/android` , затем добавить соответствующий `overrides.css` файл. Укажите CSS, который переопределяет размер шрифта 12 пунктов по умолчанию, указанный в `www/css/index.css` , например:
-    
+
         body { font-size:14px; }
-        
+
 
 При повторном построении проекта, Android версия имеет размер пользовательского шрифта, в то время как другие остаются неизменными.
 
@@ -265,17 +265,17 @@ SDK для мобильных платформ, которые часто пос
 После установки `cordova` утилиты, вы можете всегда обновить его до последней версии, выполнив следующую команду:
 
         $ sudo npm update -g cordova
-    
+
 
 Используйте этот синтаксис для установки определенной версии:
 
         $ sudo npm установить -g cordova@3.1.0
-    
+
 
 Запуск `cordova -v` чтобы увидеть текущие версии. Запустите `npm
 info` команды длиннее список, включающий текущей версии, а также другие номера версии:
 
         $ npm info cordova
-    
+
 
 Кордова 3.0 это первая версия для поддержки интерфейса командной строки, описанные в этом разделе. Если вы обновляете с версии 3.0, необходимо создать новый проект, как описано выше, а затем скопируйте старые приложения активы в верхнего уровня `www` каталог. Там, где это применимо, дальнейшие сведения об обновлении до 3.0 доступны в платформе гидов. После обновления до `cordova` интерфейс командной строки и использование `npm update` в курсе, более длительных процедур, описанные там более не являются актуальными.

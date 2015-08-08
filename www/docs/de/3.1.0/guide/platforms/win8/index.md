@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -51,19 +51,19 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
 *   Öffnen Sie Visual Studio 2012 und wählen Sie **Neues Projekt**.
 
 *   Wählen Sie **Installierte → → andere Sprachen → JavaScript → Windows Vorlagenspeicher** vom Baum und dann **Leere App** aus der Projektliste. Geben Sie was auch immer du, wie z. B. magst Projektname `CordovaWin8Foo` wie in diesem Beispiel.
-    
+
     ![][4]
 
 *   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . (Außerdem ist es wahrscheinlich, dass in anderen Varianten Ihres Projekts Plattform Sie verwenden `index.html` als Namen für Ihre Standard-Seite.) Dieses, im Projektmappen-Explorer umbenennen Regeln die `default.html` Datei zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` Datei und ändern Sie den Wert **Start Page** zu`index.html`.
-    
+
     ![][5]
 
 *   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im Projektmappen-Explorer und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` Datei das `lib\windows-8` Verzeichnis oben erwähnt.
 
 *   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der Datei im Projektmappen-Explorer.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### Hinzufügen des Verweises...
 
@@ -71,14 +71,14 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
         <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
         <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
         <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-    
+
         <!-- Cordova -->
         <script src="/js/cordova.js"></script>
-    
+
         <!-- CordovaWin8Foo references -->
         <link href="/css/default.css" rel="stylesheet" />
         <script src="/js/default.js"></script>
-    
+
 
 *   Als Nächstes fügen Sie Code, der die Cordova veranschaulicht arbeitet.
 
@@ -86,28 +86,28 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
 
     <body>
         <p>Content goes here</p>
-    
+
         <script type="text/javascript">
-    
+
             console.log("Subscribing...");
             document.addEventListener("deviceready", function () {
-    
+
                 navigator.notification.alert("The device is ready!");
-    
+
             });
-    
+
         </script>
-    
+
     </body>
-    
+
 
 ## 5. Testen Sie das Projekt
 
 *   Führen Sie das Projekt von Visual Studio. Sie werden sehen, dass das Meldungsfeld angezeigt werden:
-    
+
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Fertig!
 

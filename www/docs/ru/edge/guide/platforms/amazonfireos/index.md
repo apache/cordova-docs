@@ -70,12 +70,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 На Mac, Linux или других Unix подобных платформах, вы можете использовать текстовый редактор для создания или изменения `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где установлен пакет SDK и муравей:
 
     экспорт путь = ${путь}: / развития/АТД Комплект/sdk/платформы tools: / развития/АТД Комплект/sdk/инструменты: / развитие/apache муравей/bin
-    
+
 
 Это предоставляет доступ к средствам SDK во вновь открытом терминале Windows. В противном случае выполните нижеуказанную команду, чтобы сделать изменения доступными в текущем сеансе:
 
     $ source ~/.bash_profile
-    
+
 
 #### Путь к каталогу Windows
 
@@ -90,15 +90,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Выберите переменную **PATH** и нажмите **редактировать**.
 
 *   Добавьте следующее в путь, основанный на где вы установили SDK и муравей, например:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 *   Сохраните значение и закройте оба диалоговые окна.
 
 *   Вам также нужно будет включить Java. Откройте командную строку и введите `java` , если она не запущена, добавить местоположение двоичных файлов Java в ваш путь также. Убедитесь, что JAVA_HOME % указывает установленный каталог JDK. Возможно, вам придется добавить среды JAVA_HOME переменной отдельно.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -107,9 +107,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Скачать Амазонка WebView SDK от [Amazon разработчик портала][1].
 
 *   Копия `awv_interface.jar` из загруженного пакета SDK Кордова в рабочий каталог. Создайте папку commonlibs(shown below), если он не существует:
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Создайте новый проект для Amazon Fire ОС
@@ -120,7 +120,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Примечание:*** В первый раз Амазонки fireos платформа установлена на вашей системе, он загрузит соответствующие файлы в рабочий каталог Cordova, но будет потом не как не хватает файлов поддержки AWV SDK (см. выше). Следуйте приведенным выше инструкциям, чтобы установить `awv_interface.jar` , затем удалить и повторно добавить Амазонки fireos платформа для вашего проекта. Этот шаг нужно будет только сделать для первого проекта Amazon Fire OS.
 
@@ -133,7 +133,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Вы можете опубликовать приложение на устройство из командной строки:
 
     $ cordova запускать Амазонки fireos
-    
+
 
 Альтернативно в Eclipse, щелкните правой кнопкой мыши проект и выберите **выполнить как → приложения для Android**.
 
@@ -146,14 +146,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Чтобы использовать средства разработчика, введите:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Это даст возможность средства на запуск клиента. Вы можете подключиться к клиенту по переадресации портов с помощью Android Debug Bridge (АБР) ссылаясь на имя пакета приложения.
 
 Например:
 
     АБР вперед tcp:9222 localabstract:com.example.helloworld.devtools
-    
+
 
 Затем можно использовать DevTools через браузер на основе Chromium, перейдя на:`http://localhost:9222`.
 
@@ -173,7 +173,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   Нажмите кнопку **Готово**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться, указывая на нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 

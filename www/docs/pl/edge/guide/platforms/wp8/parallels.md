@@ -28,14 +28,14 @@ Ta sekcja pokazuje jak skonfigurować Parallels Desktop na komputerze Mac, tak, 
 1.  W ramach programu Parallels Desktop zaznacz obraz dysku Windows 8, który przygotowali i wybrać **Ustawienia**.
 
 2.  Wybierz opcje **→ ogólne procesorów** . Określ *dwa* procesory. Określ co najmniej 2GB pamięci, nawet jeśli wypada poza zakres zalecane:
-    
+
     ![][2]
 
 3.  Aby móc uruchomić obraz emulatora urządzenia na maszynie wirtualnej Windows 8, wybierz opcje **optymalizacji** i Włącz **Zagnieżdżone wirtualizacji**.
-    
+
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 Po wykonaniu tych kroków, jesteś gotowy do zainstalowania zestawu SDK Windows Phone. Zobacz przewodnik platformy Windows Phone 8 szczegóły.

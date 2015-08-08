@@ -70,12 +70,12 @@ Pour les outils de ligne de commande de Cordova pour travailler, vous devez incl
 Sur Mac, Linux ou autres plates-formes de type Unix, vous pouvez utiliser un éditeur de texte pour créer ou modifier le `~/.bash_profile` fichier, en ajoutant une ligne comme ci-dessous, en fonction d'où sont installés les SDK et la fourmi :
 
     export PATH = ${chemin}: / / adt-bundle/sdk/plateforme-outils de développement: / développement/adt-bundle/sdk/tools: / développement/apache-ant/bin
-    
+
 
 Cela expose les outils SDK dans windows terminales nouvellement ouverts. Dans le cas contraire, exécutez-le pour les rendre disponibles dans la session en cours :
 
     $ source ~/.bash_profile
-    
+
 
 #### Chemin d'accès Windows
 
@@ -90,16 +90,16 @@ Pour modifier l'environnement PATH sous Windows :
 *   Sélectionnez la variable **PATH** et appuyer sur **modifier**.
 
 *   Le chemin d'accès basé sur lequel vous avez installé le SDK et les fourmis, par exemple, ajoutez ce qui suit :
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   Enregistrez la valeur et fermez les deux boîtes de dialogue.
 
 *   Vous devrez aussi activer Java. Ouvrez une invite de commandes et tapez `java` , si elle ne s'exécute pas, ajoutez l'emplacement des fichiers binaires Java à votre chemin aussi bien. Assurez-vous de JAVA_HOME % pointe vers le répertoire JDK installé. Vous devrez peut-être ajouter JAVA_HOME environnement variable séparément.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -108,9 +108,9 @@ Afin de créer des applications de Cordoue à l'aide de la plateforme cible de A
 *   Télécharger le SDK de WebView Amazon depuis [Amazon Developer Portal][1].
 
 *   Copie `awv_interface.jar` du SDK téléchargé au répertoire de travail de Cordova. Créer le dossier commonlibs(shown below) si il n'existe pas :
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Créer le nouveau projet pour Amazon Fire OS
@@ -121,7 +121,7 @@ Utilisation du `cordova` utilitaire de mettre en place un nouveau projet, tel qu
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Remarque :*** La première fois que la plate-forme amazon-fireos est installée sur votre système, il va télécharger les fichiers appropriés dans le répertoire de travail de Cordova, mais échouera alors qu'il manque les fichiers de support AWV SDK (voir ci-dessus). Suivez les instructions ci-dessus pour installer le `awv_interface.jar` , puis supprimer et rajouter la plate-forme amazon-fireos à votre projet. Cette étape ne devrons être fait pour le premier projet Amazon Fire OS.
 
@@ -134,7 +134,7 @@ Pour repousser un $ $ etAPP directement sur l'appareil, assurez-vous que déboga
 Vous pouvez pousser l'app à l'appareil de la ligne de commande :
 
     $ cordova exécuter amazon-fireos
-    
+
 
 En alternance au sein d'Eclipse, cliquez droit sur le projet et choisissez **Exécuter en tant que → Application Android**.
 
@@ -147,14 +147,14 @@ La commande exécuter accepte des paramètres optionnels comme spécifié dans l
 Pour utiliser les outils du développeur, saisissez :
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Cela permettra à des outils sur le client en cours d'exécution. Vous pouvez ensuite connecter au client par la redirection de port en utilisant l'Android Debug pont (adb) faisant référence au nom du paquet de l'application.
 
 Par exemple :
 
     ADB tcp:9222 avant localabstract:com.example.helloworld.devtools
-    
+
 
 Vous pouvez ensuite utiliser le DevTools via un navigateur basé sur Chromium en accédant à :`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Une fois créé, vous pouvez utiliser l'éclipse qui est livré avec le SDK Andr
 
 *   Appuyez sur **Terminer**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Une fois que la fenêtre de Eclipse s'ouvre, un rouge **X** peut apparaître pour indiquer les problèmes non résolus. Dans l'affirmative, suivez ces étapes supplémentaires :
 

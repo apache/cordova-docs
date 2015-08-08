@@ -70,12 +70,12 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 關於 Mac、 Linux 或其他 unix 平臺，您可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，依據的 SDK 和 Ant 安裝位置：
 
     匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具：/發展/阿帕奇-ant/bin
-    
+
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows 路徑
 
@@ -90,16 +90,16 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 *   選擇**PATH**變數，然後按**編輯**.
 
 *   將以下內容追加到哪裡你安裝了 SDK 和螞蟻，例如基於的路徑：
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   將值保存並關閉這兩個對話方塊。
 
 *   您還將需要啟用 JAVA。 打開一個命令提示符並鍵入 `java` ，如果它沒有運行，追加到您的路徑以及 JAVA 二進位檔案的位置。 請確保已安裝 JDK 目錄指向的 %JAVA_HOME%。 您可能必須添加 JAVA_HOME 環境變數分別。
-    
+
         ； %JAVA_HOME%\bin
-        
+
 
 ### 亞馬遜 web 視圖 SDK
 
@@ -108,9 +108,9 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 *   從[亞馬遜開發人員門戶][1]下載亞馬遜 web 視圖 SDK.
 
 *   複製 `awv_interface.jar` 從下載 SDK 到科爾多瓦的工作目錄。如果它不存在，請創建 commonlibs(shown below) 資料夾：
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## 為亞馬遜火 OS 創建新專案
@@ -121,7 +121,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***注：***第一次亞馬遜 fireos 平臺的安裝在您的系統，它會到科爾多瓦的工作目錄，下載相應的檔但然後會失敗，因為它缺少 AWV SDK 的支援檔 （見上文）。 請按照上面的說明來安裝 `awv_interface.jar` ，刪除，然後重新將亞馬遜 fireos 平臺添加到您的專案。 這一步只需要為第一次亞馬遜火 OS 專案做。
 
@@ -134,7 +134,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 您可以從命令列將應用程式推送到設備：
 
     $ 科爾多瓦運行亞馬遜 fireos
-    
+
 
 或者在 Eclipse，按右鍵該專案，然後選擇**→ 作為運行 Android 應用程式**.
 
@@ -147,14 +147,14 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 要使用的開發工具，請輸入：
 
     $ cordova run --debug amazon-fireos
-    
+
 
 這將使在用戶端上運行的工具。你可以連接到用戶端通過埠轉發使用安卓系統調試橋 （亞銀） 指的應用程式的包名。
 
 例如：
 
     亞行轉發 tcp:9222 localabstract:com.example.helloworld.devtools
-    
+
 
 然後，可以使用通過基於鉻的瀏覽器 DevTools 導航到：`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 *   按**完成**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 一旦日食視窗打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，請按照這些額外的步驟：
 

@@ -28,21 +28,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  В VMWare Fusion выберите образ диска Windows 8 который вы подготовили и выберите **Параметры**.
 
 2.  Выберите параметры конфигурации **Процессоры и память** . Не забудьте указать *два* процессорных ядра и выберите **Позволить приложения гипервизора в этой виртуальной машины**:
-    
+
     ![][2]
-    
+
     Один только эмулятор Windows Phone использует половину гигабайта памяти, поэтому в целом вы должны зарезервировать минимум 2 ГБ для VMWare.
 
 3.  Выберите **Дополнительные** параметры. Выберите вариант **Предпочитаемая технология виртуализации : Intel VT-x с EPT**:
-    
+
     ![][3]
 
 4.  Измените файл *.vmx* , чтобы добавить или изменить следующие настройки:
-    
-        Hypervisor.CPUID.v0 = «FALSE» mce.enable = «TRUE» vhv.enable = «TRUE»
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+        Hypervisor.CPUID.v0 = «FALSE» mce.enable = «TRUE» vhv.enable = «TRUE»
+
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите Руководство для платформы Windows Phone 8 для подробностей.

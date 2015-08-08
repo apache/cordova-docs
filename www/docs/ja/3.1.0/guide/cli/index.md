@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -41,10 +41,10 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 1.  ダウンロードしてインストール[Node.js][1]。呼び出すことができる必要がありますインストール直後は、 `node` または `npm` コマンド ライン。
 
 2.  インストール、 `cordova` ユーティリティ。Unix では、プレフィックス、追加 `sudo` 開発ユーティリティをインストールする必要があるかもしれませんコマンドでディレクトリを制限されてそれ以外の場合。
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     インストール ログすべてアンインストールされたプラットフォーム Sdk の誤差が生じる可能性があります。インストール後、実行することができる必要があります `cordova` コマンド ・ ラインで。
 
  [1]: http://nodejs.org/
@@ -54,7 +54,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 ソース コードを維持する、ディレクトリに移動し、次のようなコマンドを実行します。
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 いくつかの時間がかかるを完了するコマンドがかかります。実行、 `cordova -d` の進行状況に関する情報を表示します。
 
@@ -67,7 +67,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 すべての後続コマンドは、プロジェクトのディレクトリまたはそのサブディレクトリのスコープ内で実行する必要があります。
 
         $ cd hello
-    
+
 
 プロジェクトをビルドする前に対象プラットフォームのセットを指定する必要があります。 これらのコマンドを実行する能力にあなたのマシンが各 SDK をサポートしているかどうかに依存し、各 SDK をインストールされて既にがあるかどうか。 Mac からこれらのいずれかを実行します。
 
@@ -75,7 +75,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 *Wp*は Windows Phone オペレーティング システムの異なるバージョンを参照 Windows マシンからこれらのいずれかを実行します。
 
@@ -85,12 +85,12 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 現在のプラットフォームのセットを確認するこれを実行します。
 
         $ cordova platforms ls
-    
+
 
 （注、 `platform` と `platforms` コマンドは同じ意味です)。
 
@@ -98,7 +98,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
         $ cordova platform remove blackberry10
         $ cordova platform rm android
-    
+
 
 各指定されたプラットフォームがサブディレクトリとして追加またはプラットフォームに影響を与えるプロジェクトの*プラットフォーム*ディレクトリの内容を削除するコマンドを実行します。 *Www*ソース ディレクトリは再現などに表示されるプラットフォームごとのサブディレクトリ内で `platforms/ios/www` または `platforms/android/assets/www` 。 既定では、コルドバの Api のすべてにアクセスできるようにする各プラットフォームの構成ファイルが設定します。
 
@@ -113,18 +113,18 @@ XREF -->
 繰り返しプロジェクトをビルドする、次のコマンドを実行します。
 
         $ cordova build
-    
+
 
 これは、プロジェクト内でプラットフォーム固有のコードを生成します `platforms` サブディレクトリ。必要に応じて、特定のプラットフォームを各ビルドのスコープを制限できます。
 
         $ cordova build ios
-    
+
 
 `cordova build`コマンドは、この例では、単一のプラットフォームにも対象指定される次の簡略化。
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 この場合、1 回を実行する `prepare` 、変更およびコルドバ内で生成するプラットフォーム固有のコードをコンパイルする別の方法として Apple の Xcode SDK を使用することができます `platforms/ios` 。 他のプラットフォームの Sdk と同じアプローチを使用できます。
 
@@ -133,24 +133,24 @@ XREF -->
 モバイル プラットフォーム用の Sdk はしばしばホーム画面からアプリを起動し、それは多くのプラットフォーム機能と対話する方法を参照してくださいすることができますようにデバイス イメージを実行するエミュレーターにバンドルされています。 アプリを再構築し、特定のプラットフォームのエミュレーター内で表示するには、次のようなコマンドを実行します。
 
         $ cordova emulate android
-    
+
 
 いくつかのモバイル プラットフォーム既定では、iOS のプロジェクトのため iPhone など、特定のデバイスをエミュレートします。 他のプラットフォーム用に最初のデバイス エミュレーターに関連付ける必要があります。 (詳細については、プラットフォームのガイドを参照)。たとえば、あなたが最初の実行、 `android` 人造人間 SDK を起動し、その既定の動作によると起動する特定のデバイスのイメージを実行するコマンド。
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 フォロー アップで、 `cordova emulate` コマンドは、ホーム画面から起動できるようになります最新のアプリケーションを表示するエミュレーター イメージを更新します。
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 代わりに、携帯電話をお使いのコンピューターに差し込み、アプリを直接テストすることができます。
 
         $ cordova run android
-    
+
 
 このコマンドを実行する前に必要、テスト デバイスを設定するプラットフォームごとに異なる手順に従います。 Android の場合、デバイス上の**USB デバッグ**オプションを有効にして、おそらく開発環境に応じて USB ドライバーを追加する必要があります。 各プラットフォームの要件の詳細については、プラットフォームのガイドを参照してください。
 
@@ -163,78 +163,78 @@ XREF -->
 `cordova plugin add`コマンドは、プラグインのコードのリポジトリを指定する必要があります。追加可能性があります機能の例を示します。
 
 *   基本的なデバイス情報 (デバイス API):
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   ネットワーク接続とバッテリーのイベント:
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   加速度計、コンパス、および地理位置情報:
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   カメラ、メディアの再生とキャプチャ：
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+
 
 *   デバイスまたはネットワーク (File API) 上のアクセス ファイル:
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   ダイアログ ボックスまたは振動による通知:
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   連絡先：
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   グローバル化:
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   スプラッシュ ・ スクリーン:
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   開いている新しいブラウザー ウィンドウ (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   デバッグ コンソール：
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 使用 `plugin ls` (または `plugin list` 、または `plugin` 自体によって) 現在を表示するプラグインをインストールします。それぞれの識別子が表示されます。
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 プラグインを削除するには、リストに表示される同じ識別子によってそれを参照してください。たとえば、ここではリリース バージョンからデバッグ コンソールのサポートを削除するだろう方法です。
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 バッチ削除したりコマンドごとに 1 つ以上の引数を指定して、プラグインを追加できます。
 
@@ -245,16 +245,16 @@ XREF -->
 代わりに、最上位 `merges` ディレクトリの特定のプラットフォームに展開する資産を指定する場所を提供しています。 各プラットフォーム固有のサブディレクトリ内で `merges` のディレクトリ構造をミラー、 `www` ソース ツリーで、オーバーライドまたは必要に応じてファイルを追加することができます。 たとえば、使用する可能性がありますどのようにここでは `merges` Android デバイス用の既定のフォント サイズを後押しします。
 
 *   編集、 `www/index.html` 、追加の CSS ファイルへのリンクを追加して、ファイル `overrides.css` この場合。
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   必要に応じて作成する空の `www/css/overrides.css` ファイル、不足しているファイルのエラーを防止する、すべてのアンドロイド ビルドに適用されます。
 
 *   作成、 `css` 内のサブディレクトリ `merges/android` 、追加し、対応する `overrides.css` ファイル。 CSS オーバーライド内で指定された 12 ポイントの既定のフォント サイズを指定する `www/css/index.css` 、たとえば。
-    
+
         body { font-size:14px; }
-        
+
 
 プロジェクトをリビルドするとき他が変わらない間、Android のバージョン カスタム フォント サイズを備えています。
 
@@ -265,17 +265,17 @@ XREF -->
 インストールした後、 `cordova` ユーティリティ、常に更新できます、最新のバージョンに次のコマンドを実行します。
 
         $ sudo npm update -g cordova
-    
+
 
 特定のバージョンをインストールするには、この構文を使用します。
 
         $ sudo 故宮をインストール-g cordova@3.1.0
-    
+
 
 実行 `cordova -v` を現在実行中のバージョンを参照してください。 実行、 `npm
 info` をその他の利用可能なバージョン番号と共に現在のバージョンを含む長い一覧のコマンド。
 
         $ npm info cordova
-    
+
 
 コルドバ 3.0 は、このセクションで説明されているコマンド ライン インターフェイスをサポートするために最初のバージョンです。 前述のように、新しいプロジェクトを作成し、古いアプリケーション資産の最上位レベルにコピーする必要があります 3.0 以前のバージョンから更新する場合は `www` ディレクトリ。 該当する場合は、3.0 へのアップグレードに関する詳細はプラットフォームのガイドで利用できます。 アップグレードした後、 `cordova` コマンド ライン インターフェイスおよび使用 `npm update` 現在滞在より時間のかかる手順には、もはや関連。

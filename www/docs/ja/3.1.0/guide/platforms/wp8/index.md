@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,27 +29,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 1. システム要件
 
 *   オペレーティング システム：
-    
-    *   Windows 8 または Windows 8 Pro 
+
+    *   Windows 8 または Windows 8 Pro
         *   64 ビット バージョンの Windows の （64） が、SDK に必要です。
         *   デバイス エミュレーターを実行できるようには、Pro バージョンの使用をお勧めします。
 
 *   ハードウェア:
-    
+
     *   6.5 GB のハード ディスク空き容量
     *   4 GB の RAM
     *   64 ビット (x64) の CPU
 
 *   Windows Phone 8 エミュレーター
-    
+
     *   電話エミュレーター使用ハイパー-V は、このリストにはこれらの前提が含まれています。
     *   Windows 8 Pro の 64 ビット エディションまたはそれ以上
-    *   仮想化をサポートするプロセッサが必要ですと [2 番目のレベル アドレス変換 (SLAT)][1] 
+    *   仮想化をサポートするプロセッサが必要ですと [2 番目のレベル アドレス変換 (SLAT)][1]
         *   [VT-x （仮想化） と EPT (SLAT) をサポートする Intel プロセッサのリスト][2]を見なさい
     *   通常これは既定で無効になっていると、BIOS 設定で仮想化機能 (すなわち、VT-x インテル) を有効にします。
 
 *   SDK + IDE (Visual Studio)
-    
+
     *   Visual Studio 2012 プロ、プレミアム、または究極の。 メモ Visual Studio Express の Windows Phone (SDK に同梱) はお勧めできません VS Express を使ってテンプレート （下記参照） を築くことができないのでのみ VS プロまたはそれ以上は、**テンプレートのエクスポート**機能を持っていないので。
 
 *   登録し、実際のデバイスでアプリをインストールまたは市場の場所に送信する場合に[Windows Phone デベロッパー センター][3]アカウントのお支払い。
@@ -88,7 +88,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 スクリプトを実行します。
 
     > createTemplates.bat-インストール
-    
+
 
 ## 3. 新しいプロジェクトをセットアップします。
 
@@ -100,7 +100,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. プロジェクトの構造を確認します。
 
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. ビルドし、エミュレーターへの展開
 
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. プロジェクトをビルドし、デバイスの
 
@@ -138,7 +138,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## やった ！
 

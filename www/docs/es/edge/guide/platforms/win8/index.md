@@ -93,7 +93,7 @@ Instalar cualquier edición de [Visual Studio][2] que empareja la versión requi
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Para Windows, el instalador de Visual Studio tiene una opción para instalar las herramientas para construir aplicaciones Windows Universal. Debe asegurarse de que esta opción está seleccionada durante la instalación para instalar el SDK requiere.
 
@@ -104,12 +104,12 @@ En este punto, para crear un nuevo proyecto puede elegir entre la plataforma CLI
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
-    
+
 
 Este es el enfoque de shell-herramienta de nivel inferior correspondiente:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 Este proyecto apunta a Windows 8.1 como el destino por defecto OS. Puedes elegir destino 8.0 o 10.0 (véase "Versión de Windows de configurar destino") para todas las versiones o destino específico de una versión especial durante cada generación.
 
@@ -121,25 +121,25 @@ Si utilizas la CLI en el desarrollo, el directorio del proyecto es de alto nivel
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
-    
+
 
 Este es el enfoque de shell-herramienta de nivel inferior correspondiente:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 El `clean` comando ayuda a eliminar directorios en preparación para la siguiente `build` :
 
-        C:\path\to\project\cordova\clean.bat 
-    
+        C:\path\to\project\cordova\clean.bat
+
 
 ## Configurar la versión de Windows blanco
 
 Por defecto `crear` comando produce dos paquetes: Windows 8.0 y 8.1 de Windows Phone. Para actualizar el paquete de Windows a la versión 8.1 que debe añadirse la siguiente configuración al archivo de configuración (`config.xml`).
 
         <preference name="windows-target-version" value="8.1" />
-    
+
 
 Una vez que se agrega este comando `build` ajuste comenzará a producir paquetes Windows 8.1 y 8.1 de Windows Phone.
 
@@ -148,7 +148,7 @@ Una vez que se agrega este comando `build` ajuste comenzará a producir paquetes
 Usted puede decidir que usted quiere construir una versión particular de su aplicación a un determinado sistema operativo (por ejemplo, puede selecionar destino Windows 10 que quieres construir para Windows Phone 8.1). Para ello, puede utilizar el parámetro `--appx` :
 
         > cordova build windows -- --appx=8.1-phone
-    
+
 
 El sistema ignorará el sistema de preferencia en archivo config.xml de la versión de Windows de destino y estrictamente construir un paquete para Windows Phone 8.1.
 
@@ -168,13 +168,13 @@ Para desplegar el paquete de Windows:
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-    
+
 
 Para desplegar el paquete de Windows Phone:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-    
+
 
 Puede utilizar **cordova run windows --list** para ver todos los destinos disponibles y **cordova run windows --target=target_name \-- -|-phone** para ejecutar la aplicación en un dispositivo específico o emulador (por ejemplo, `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
@@ -186,25 +186,25 @@ Una vez que construyes una aplicación Cordova como se describe anteriormente, u
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 El componente de `CordovaApp` muestra dentro de la solución, y su directorio `www` contiene el código fuente basada en web, incluyendo la página `index.html` :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Los controles debajo de menú principal de Visual Studio le permite probar o implementar la aplicación:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Con la **Máquina Local** seleccionado, pulsaremos la flecha verde para instalar la aplicación en el mismo equipo que ejecuta Visual Studio. Una vez lo haces, la aplicación aparece en los listados de la aplicación de Windows 8:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Cada vez que reconstruir la aplicación, se actualiza la versión disponible en la interfaz.
 
@@ -212,19 +212,19 @@ Una vez disponible en la lista aplicación, manteniendo presionada la tecla **CT
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Tenga en cuenta que si usted abre la aplicación dentro de un entorno de máquina virtual, puede que necesite hacer clic en las esquinas o a lo largo de los lados de las ventanas para cambiar de aplicaciones o acceder a funciones adicionales:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Alternativamente, elija la opción de despliegue de **simulador** para ver la aplicación como si estuviera ejecutando en un dispositivo tablet:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 A diferencia de la implementación de escritorio, esta opción le permite simular la orientación de la tableta, ubicación, y variar su configuración de red.
 

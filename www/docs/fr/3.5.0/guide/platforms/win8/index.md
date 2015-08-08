@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,11 +29,11 @@ Cordova WebViews s'exécutant sur Windows 8 s'appuient sur Internet Explorer 10 
 Vous avez besoin de ce qui suit :
 
 *   Une version 64 bits de Windows 8 Pro, un disque d'installation ou un fichier d'image disque *ISO* . Une version d'évaluation est disponible sur le [Microsoft Developer Network][2].
-    
+
     <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
 
 *   [Visual Studio][3], les éditions 2013 soit *l'ultime*, *Premium*ou *professionnel* .
-    
+
     <!-- true? -->
 
  [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
@@ -69,7 +69,7 @@ Installer *l'ultime*, *Premium*ou *Professional* 2013 éditions de [Visual Studi
 
 ![][8]
 
- [8]: img/guide/platforms/win8/win8_installSDK.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 ## Créez un nouveau projet
 
@@ -79,12 +79,12 @@ Installer *l'ultime*, *Premium*ou *Professional* 2013 éditions de [Visual Studi
         > cd hello
         > cordova platform add windows8
         > cordova build
-    
+
 
 Voici l'approche de shell-outil de niveau inférieur correspondant :
 
         C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Générez le projet
 
@@ -92,20 +92,20 @@ Si vous utilisez l'interface CLI dans le développement, le niveau supérieur du
 
         > cordova build
         > cordova build windows8   # do not rebuild other platforms
-    
+
 
 Si vous utilisez les outils de shell Windows Phone spécifiques au développement, il y a une approche différente. Une fois que vous générez le projet, source de l'application par défaut est disponible dans le `projects\windows8\www` sous-répertoire. Les commandes suivantes sont disponibles dans la `cordova` sous-répertoire au même niveau.
 
 Le `build` commande nettoie les fichiers projet et régénère le $ $ etAPP. Le premier exemple génère des informations de débogage, et le second signe les apps pour diffusion immédiate :
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 Le `clean` commande aide à débusquer les répertoires en préparation pour le prochain `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Ouvrez le projet dans le SDK et de déployer l'application
 
@@ -115,25 +115,25 @@ Une fois que vous générez une application Cordova comme décrit ci-dessus, vou
 
 ![][9]
 
- [9]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Le `CordovaApp` composant affiche au sein de la solution et ses `www` répertoire contient le code source sur le web, y compris la `index.html` page d'accueil :
 
 ![][10]
 
- [10]: img/guide/platforms/win8/win8_sdk.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Les commandes sous le menu principal de Visual Studio vous permettent de tester ou déployer l'application :
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Avec l' **Ordinateur Local** est sélectionné, appuyez sur la flèche verte pour installer l'application sur le même ordinateur qui exécute Visual Studio. Une fois vous le faites, le $ $ etAPP apparaît dans des listes de Windows 8 app :
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Chaque fois que vous reconstruisez l'application, la version disponible dans l'interface est régénérée.
 
@@ -141,19 +141,19 @@ Une fois disponibles dans les listes de l'app, maintenant la touche **CTRL** enf
 
 ![][13]
 
- [13]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Notez que si vous ouvrez l'application dans un environnement de machine virtuelle, vous devrez peut-être cliquer dans les coins ou sur les côtés des fenêtres pour basculer des applications ou accéder à des fonctionnalités supplémentaires :
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_run.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Vous pouvez également choisir l'option déploiement sur **simulateur** pour visualiser l'application comme s'il s'exécutait sur un périphérique de tablette :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_sim.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 À la différence de déploiement de bureau, cette option vous permet de simuler l'orientation de la tablette, emplacement et de modifier ses paramètres réseau.
 

@@ -62,7 +62,7 @@ Descargar el SDK de Tizen de [tizen.org][1].
 1.  Lanzar el Tizen Eclipse IDE.
 
 2.  Seleccione **archivo → Import → proyecto Tizen Web**:
-    
+
     ![][2]
 
 3.  Pulse **siguiente**.
@@ -72,22 +72,22 @@ Descargar el SDK de Tizen de [tizen.org][1].
 5.  Asegúrese de **que copiar proyectos en el área de trabajo** está marcada.
 
 6.  Pulse en **Browse** y seleccione el directorio del proyecto Cordova Tizen `samples` (por ejemplo `/ cordova-basic`):
-    
+
     ![][3]
 
 7.  Pulse **Finish**. Su proyecto debe ahora ser importado y aparecen en la vista **Project Explorer**:
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Para reconstruir el proyecto, haga clic en la vista **Project Explorer** y seleccione **Build Project**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 Debe generar un archivo de paquete de widget como *hello.wgt* en el directorio de raíz del proyecto.
 
@@ -97,19 +97,19 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Desplegar en el dispositivo
 
 *   Asegúrese de que el dispositivo de destino correctamente es lanzado, conectado y configurado. Su configuración de **fecha y hora** debe configurarse correctamente.
 
 *   Utilice la vista **Connection Explorer** para seleccionar el objetivo del despliegue de aplicaciones: **Window → Show View → Connection Explorer**.
-    
+
     ![][7]
 
 *   Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione **Ejecutar como → Tizen Web Application**:
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

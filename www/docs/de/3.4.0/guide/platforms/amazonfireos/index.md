@@ -49,12 +49,12 @@ Für Cordova Kommandozeilen-Tools arbeiten, müssen Sie das SDK enthalten `tools
 Auf Mac, Linux oder andere Unix-ähnliche Plattformen, können Sie einen Text-Editor zum Erstellen oder ändern die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
 
     Export PATH = ${PATH}: / Entwicklung/Adt-Bundle/Sdk/Plattform-Tools: / Entwicklung/Adt-Bundle/Sdk/Tools
-    
+
 
 Dies macht die SDK-Tools im neu eröffneten terminal-Fenster verfügbar. Sonst laufen Sie hier, um sie in der aktuellen Sitzung zur Verfügung stellen:
 
     $ Quelle ~/.bash_profile
-    
+
 
 Die PATH-Umgebung unter Windows 7 zu ändern:
 
@@ -67,16 +67,16 @@ Die PATH-Umgebung unter Windows 7 zu ändern:
 *   Wählen Sie die **PATH** -Variable und klicken Sie **Bearbeiten**.
 
 *   Fügen Sie Folgendes in den Pfad basierend auf dem Sie das SDK, zum Beispiel installiert:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 Sie müssen möglicherweise auch Java und Ant öffnen eine Eingabeaufforderung und geben aktivieren `java` , und geben Sie auch `ant` . Hängen Sie an den Pfad, welcher nicht ausgeführt:
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ### Amazon WebView SDK
 
@@ -93,7 +93,7 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The 
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
@@ -107,7 +107,7 @@ Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
 *   Drücken Sie **Fertig stellen**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 
@@ -130,7 +130,7 @@ Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debu
 Drücken Sie die app auf das Gerät von der Befehlszeile aus:
 
     $ cordova run amazon-fireos
-    
+
 
 Abwechselnd innerhalb von Eclipse, Maustaste auf das Projekt, und wählen Sie **Ausführen als → Android-Anwendung**.
 

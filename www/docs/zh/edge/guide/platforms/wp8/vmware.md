@@ -28,21 +28,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  在 VMWare 融合內, 選擇您已編寫並選擇**設置**的 Windows 8 磁片映射.
 
 2.  選擇的**處理器和記憶體**的配置選項。 請確保指定*兩個*處理器內核，並**啟用在此虛擬機器的虛擬機器管理程式應用程式**：
-    
+
     ![][2]
-    
+
     Windows Phone 模擬器單獨使用半位元組的記憶體，所以，總體來說，你應該為 VMWare 預留至少 2 GB。
 
 3.  選擇**高級**設置。啟用**首選虛擬化引擎： 英特爾 VT-x 與 EPT**選項：
-    
+
     ![][3]
 
 4.  修改*.vmx*檔，添加或修改以下設置：
-    
-        hypervisor.cpuid.v0 ="FALSE"mce.enable ="TRUE"vhv.enable ="TRUE"
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+        hypervisor.cpuid.v0 ="FALSE"mce.enable ="TRUE"vhv.enable ="TRUE"
+
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 一旦你完成這些步驟，你準備然後安裝 Windows Phone SDK。請參閱 Windows Phone 8 平臺指南的詳細資訊。

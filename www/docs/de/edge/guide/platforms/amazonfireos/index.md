@@ -70,12 +70,12 @@ Für Cordova Kommandozeilen-Tools arbeiten, müssen Sie das Android SDK enthalte
 Auf Mac, Linux oder andere Unix-ähnliche Plattformen, können Sie einen Text-Editor zum Erstellen oder ändern die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo das SDK und Ant installiert sind:
 
     Export PATH = ${PATH}: / Entwicklung/Adt-Bundle/Sdk/Plattform-Tools: / Entwicklung/Adt-Bundle/Sdk/Tools: / Entwicklung/Apache-Ant/bin
-    
+
 
 Dies macht die SDK-Tools im neu eröffneten terminal-Fenster verfügbar. Sonst laufen Sie hier, um sie in der aktuellen Sitzung zur Verfügung stellen:
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows-Pfad
 
@@ -90,16 +90,16 @@ So ändern Sie die PATH-Umgebung unter Windows:
 *   Wählen Sie die **PATH** -Variable und klicken Sie **Bearbeiten**.
 
 *   Fügen Sie Folgendes in den Pfad basierend auf dem Sie das SDK und die Ameise, z. B. installiert:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 *   Auch müssen Sie Java aktivieren. Öffnen Sie eine Eingabeaufforderung und geben `java` , wenn es nicht ausgeführt wird, fügen Sie den Speicherort der Java-Binärdateien an Ihren Weg auch. Stellen Sie sicher, dass %JAVA_HOME% auf installierte JDK-Verzeichnis verweist. Sie müssen möglicherweise JAVA_HOME Umgebung Variable separat hinzufügen.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -108,9 +108,9 @@ Um Cordova-Anwendungen mittels der Zielplattform Amazon Fire OS zu erstellen, m�
 *   Laden Sie das Amazon WebView SDK aus dem [Amazon-Entwicklerportal][1].
 
 *   Kopie `awv_interface.jar` aus dem heruntergeladenen SDK in Cordova Arbeitsverzeichnis. Erstellen Sie Commonlibs(shown below)-Ordner, wenn es nicht vorhanden ist:
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Neues Projekt für Amazon Fire OS erstellen
@@ -121,7 +121,7 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The 
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Hinweis:*** Zum ersten Mal, das die Amazon-Fireos-Plattform auf Ihrem System installiert ist, es downloadet die entsprechenden Dateien in das Arbeitsverzeichnis von Cordova, aber schlägt dann fehl, da es die AWV SDK-Support-Dateien (siehe oben) fehlt. Folgen Sie die obigen Anweisungen zum Installieren der `awv_interface.jar` , dann entfernen und erneut hinzufügen die Amazon-Fireos-Plattform für Ihr Projekt. Dieser Schritt muss nur für erste Amazon Fire OS-Projekt durchgeführt werden.
 
@@ -134,7 +134,7 @@ Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debu
 Drücken Sie die app auf das Gerät von der Befehlszeile aus:
 
     $ Cordova führen Sie Amazon-fireos
-    
+
 
 Abwechselnd innerhalb von Eclipse, Maustaste auf das Projekt, und wählen Sie **Ausführen als → Android-Anwendung**.
 
@@ -147,14 +147,14 @@ Der Befehl "ausführen" akzeptiert optionale Parameter entsprechend den Angaben 
 Developer Tools verwenden, indem Sie:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Dadurch werden die Tools auf dem Client ausgeführt. Sie können dann an den Client von Port-Weiterleitung mit der Android Debug Bridge (Adb) unter Bezugnahme auf die app-Paketname.
 
 Zum Beispiel:
 
     ADB vorwärts Tcp:9222 localabstract:com.example.helloworld.devtools
-    
+
 
 Die DevTools über einen Chrom-basierte Browser können Sie durch die Navigation zu:`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Einmal erstellt, können Sie die Sonnenfinsternis, die zusammen mit dem Android 
 
 *   Drücken Sie **Fertig stellen**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 

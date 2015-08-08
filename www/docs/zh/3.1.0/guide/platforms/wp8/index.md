@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,27 +29,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 1.系統要求
 
 *   作業系統：
-    
-    *   Windows 8 或 Windows 8 臨 
+
+    *   Windows 8 或 Windows 8 臨
         *   需要的 SDK 的 Windows 64 位版本 (x64)。
         *   Pro 版建議以便您可以運行的設備模擬程式。
 
 *   硬體：
-    
+
     *   6.5 GB 的可用硬碟空間
     *   4 GB RAM
     *   (x64) 64 位 CPU
 
 *   Windows Phone 8 模擬器
-    
+
     *   手機模擬器使用 HYPER-V，因此該清單只包含那些必備。
     *   Windows 8 Pro 64 位版或更高
-    *   需要支援虛擬化的處理器和 [第二級別位址翻譯 (板式)][1] 
+    *   需要支援虛擬化的處理器和 [第二級別位址翻譯 (板式)][1]
         *   查看[清單中的英特爾處理器支援 VT-x （虛擬化） 和 EPT (板式)][2]
     *   啟用虛擬化功能 （即，VT-x 上英特爾） 在您的 BIOS 設置，如預設情況下通常禁用此。
 
 *   SDK + IDE (Visual Studio)
-    
+
     *   Visual Studio 2012 專業、 保費或極限。 請注意 Visual Studio 表示為 Windows Phone （包含在 SDK） 建議不要因為你可以不生成範本 （見下文） 與 VS 表示，由於它並沒有**匯出範本**功能，這是只有在 VS Pro 或更高。
 
 *   註冊和支付為[Windows Phone 開發中心][3]帳戶，如果你想要在實際設備上安裝您的應用程式或將其提交給市場的地方。
@@ -88,7 +88,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 運行該腳本：
 
     > createTemplates.bat-安裝
-    
+
 
 ## 3.設置新專案
 
@@ -100,7 +100,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4.審查的專案結構
 
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5.生成並部署到模擬程式
 
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6.生成您的設備的專案
 
@@ -138,7 +138,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 完成了 ！
 

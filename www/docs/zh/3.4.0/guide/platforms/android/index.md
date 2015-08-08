@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -54,12 +54,12 @@ NOTE, doc said:
 科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。 在 Mac 上可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
 
     匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具
-    
+
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
 
     元源 ~/.bash_profile
-    
+
 
 若要修改路徑上 Windows 7 的環境：
 
@@ -72,16 +72,16 @@ NOTE, doc said:
 *   選擇**PATH**變數，然後按**編輯**.
 
 *   將以下內容追加到基於例如安裝 SDK 的位置的路徑：
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   將值保存並關閉這兩個對話方塊。
 
 您可能還需要啟用 JAVA 和螞蟻打開一個命令提示符並鍵入 `java` ，然後還鍵入 `ant` 。將追加到該路徑無法運行的日期為准：
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ## 在 SDK 中打開的專案
 
@@ -91,7 +91,7 @@ NOTE, doc said:
         $ cd hello
         $ cordova platform add android
         $ cordova build
-    
+
 
 一旦創建了，這裡是如何使用 SDK 來修改它：
 
@@ -107,7 +107,7 @@ NOTE, doc said:
 
 *   按**完成**.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 一旦日食視窗將打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，執行這些額外的步驟：
 
@@ -128,45 +128,45 @@ NOTE, doc said:
 *   運行 `android` 命令列上。
 
 *   從內日食，按此工具列圖示：
-    
+
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 一旦打開，Android SDK 管理器將顯示不同的運行時庫：
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 選擇**工具 → 管理 AVDs** （Android 的虛擬裝置），然後從**裝置定義**在隨後出現的對話方塊中選擇任何項：
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 新聞**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 若要打開模擬器作為單獨的應用程式，選擇 AVD 然後按**開始**。它發射將在設備上，與其他控制項可用的硬體按鈕：
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 此時你可以使用 `cordova` 實用程式將應用部署到模擬程式從命令列：
 
         $ cordova emulate android
-    
+
 
 如果改為您在 Eclipse 內工作，用滑鼠右鍵按一下該專案，並選擇**作為 → 運行 Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
 
@@ -189,6 +189,6 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 從命令列，可以將應用程式推送到設備：
 
         $ cordova run android
-    
+
 
 交替內日食，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.

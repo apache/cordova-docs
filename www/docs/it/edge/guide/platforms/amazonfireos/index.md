@@ -70,12 +70,12 @@ Per strumenti da riga di comando di Cordova a lavorare, è necessario includere 
 Su Mac, Linux o altre piattaforme Unix-like, è possibile utilizzare un editor di testo per creare o modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove sono installate il SDK e la formica:
 
     Export PATH = ${PATH}: / / adt-bundle/sdk/piattaforma-strumenti di sviluppo: / / adt-bundle/sdk/strumenti di sviluppo: / sviluppo/apache-ant/bin
-    
+
 
 Questo espone strumenti SDK in windows terminal inaugurato di recente. In caso contrario eseguire questo per renderli disponibili nella sessione corrente:
 
     $ source ~/.bash_profile
-    
+
 
 #### Percorso di Windows
 
@@ -90,16 +90,16 @@ Per modificare l'ambiente del percorso su Windows:
 *   Selezionare la variabile **PATH** e premere **Modifica**.
 
 *   Aggiungere quanto segue al percorso basato su cui è stato installato il SDK e la formica, ad esempio:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   Salvare il valore e chiudere le due finestre di dialogo.
 
 *   Inoltre devi abilitare Java. Aprire un prompt dei comandi e digitare `java` , se non viene eseguito, aggiungere il percorso dei binari Java al vostro percorso pure. Rendere %JAVA_HOME% sia rivolto verso il JDK installato nella directory. Potrebbe essere necessario aggiungere separatamente variabile di ambiente JAVA_HOME.
-    
+
         ; %JAVA_HOME%\bin
-        
+
 
 ### Amazon WebView SDK
 
@@ -108,9 +108,9 @@ Al fine di creare app di Cordova la destinazione della piattaforma Amazon fuoco 
 *   Scaricare il SDK di WebView Amazon [Amazon Developer Portal][1].
 
 *   Copia `awv_interface.jar` da SDK scaricato nella directory di lavoro di Cordova. Creare la cartella commonlibs(shown below) se non esiste:
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Crea nuovo progetto per Amazon fuoco OS
@@ -121,7 +121,7 @@ Uso il `cordova` utility per impostare un nuovo progetto, come descritto in The 
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***Nota:*** La prima volta che la piattaforma amazon-fireos è installata sul vostro sistema, Scarica i file appropriati per la directory di lavoro di Cordova, ma mancherà poi come manca i file di supporto AWV SDK (vedi sopra). Seguire le istruzioni riportate sopra per installare il `awv_interface.jar` , quindi rimuovere e aggiungere nuovamente la piattaforma amazon-fireos al progetto. Solo questo passaggio dovrà essere fatto per il primo progetto di Amazon fuoco OS.
 
@@ -134,7 +134,7 @@ Per spingere un app direttamente al dispositivo, assicurarsi che il debug USB è
 Si può spingere l'app per il dispositivo dalla riga di comando:
 
     $ cordova eseguire amazon-fireos
-    
+
 
 Alternativamente all'interno di Eclipse, il progetto di fare clic destro e scegliere **Esegui come → applicazione Android**.
 
@@ -147,14 +147,14 @@ Il comando run accetta i parametri facoltativi come specificato nel documento Co
 Per utilizzare gli strumenti per sviluppatori, immettere:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 Ciò consentirà gli strumenti client in esecuzione. Può quindi connettersi al client di inoltro porta utilizzando l'Android Debug Bridge (adb) riferendosi al nome del pacchetto dell'applicazione.
 
 Ad esempio:
 
     ADB tcp:9222 avanti localabstract:com.example.helloworld.devtools
-    
+
 
 È quindi possibile utilizzare il DevTools tramite un browser basato su Chromium spostandosi a:`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Una volta creato, è possibile utilizzare l'eclissi che arriva con il SDK di And
 
 *   Premere **fine**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:
 

@@ -28,23 +28,23 @@ La [Microsoft Developer Network][1] proporciona instrucciones generales sobre c�
 1.  Dentro de VMWare Fusion, seleccione la imagen de disco de Windows 8 que ha preparado y elija **configuración**.
 
 2.  Elija las opciones de configuración de **los procesadores y memoria** . Asegúrese de especificar *dos* núcleos de procesador y que **permiten a las aplicaciones de hipervisor en esta máquina Virtual**:
-    
+
     ![][2]
-    
+
     El emulador de Windows Phone solo utiliza la mitad de un gigabyte de memoria, así que en general que se debe reservar por lo menos 2GB para VMWare.
 
 3.  Elija la configuración **avanzada** . Activar el **motor de virtualización preferido: Intel VT-x con EPT** opción:
-    
+
     ![][3]
 
 4.  Modificar el archivo *VMX* para agregar o modificar los siguientes parámetros:
-    
+
         hypervisor.cpuid.v0 = "FALSE"
         mce.enable = "TRUE"
         vhv.enable = "TRUE"
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 Una vez que complete estos pasos, entonces estás listo para instalar el SDK de Windows Phone. Consulte a la guía de plataforma de Windows Phone 8 para más detalles.

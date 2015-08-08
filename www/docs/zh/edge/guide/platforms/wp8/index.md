@@ -92,7 +92,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 創建一個新專案
 
@@ -101,12 +101,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 下面是相應的低級別 shell 工具方法：
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## 生成專案
 
@@ -114,57 +114,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 如果您使用特定的 Windows Phone 外殼工具在發展中，還有不同的做法。 一旦您生成專案時，預設的應用程式的源是可用在 `projects\wp8\www` 子目錄。 隨後命令都可用在 `cordova` 子目錄中同一級別的。
 
 `build`命令清除專案檔案並重新生成應用程式。第一個示例將生成調試資訊，和第二個標誌發佈的應用程式：
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 `clean`命令可以説明沖洗中準備的下一個目錄 `build` ：
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## 部署到模擬程式
 
 在這一點上，您可以使用 `cordova` 實用程式 CLI 應用程式部署到模擬程式從命令列：
 
         > cordova emulate wp8
-    
+
 
 否則使用備用殼介面：
 
         C:\path\to\project\cordova\run
-    
+
 
 預設情況下， `run` 腳本調用的模擬器的標誌，並為其接受附加生成標誌， `--debug` 提供的預設值：
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 在啟動模擬器設備圖像與安裝的應用程式。 從主畫面，導航到要啟動**HelloWorld**應用程式的應用程式面板。這顯示了應用程式啟動與它閃屏，其次是它的主介面：
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 設備的螢幕頂部右邊模擬程式的基本控制項允許您以縱向和橫向方向之間切換。 **>**按鈕將打開更多的控制項，使您可以測試更複雜的取向和手勢：
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 這些先進的控制項還允許您修改該設備的位置或類比的運動序列：
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## 將部署到設備
 
@@ -175,12 +175,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 然後運行下面的 CLI 命令，要在設備上運行的應用程式：
 
     > cordova run wp8
-    
+
 
 它對應于此較低級別 shell 命令：
 
     C:\path\to\project\cordova\run --device
-    
+
 
 或者，如果你工作在 Visual Studio 中， **Windows Phone 設備**從功能表中選擇下拉在頂部，然後按綠色**播放**按鈕附近，否則鍵入**F5**.
 
@@ -190,6 +190,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 的建議諮詢的概述。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常會覆蓋使用 SDK 的特定于平臺的檔。 如果你想要在 SDK 內工作，使用較低級別外殼工具作為 CLI 的替代方法。

@@ -28,21 +28,21 @@ Ta sekcja pokazuje jak skonfigurować VMWare Fusion na Mac, więc, że Cordova m
 1.  W VMWare Fusion wybierz obrazu dysku systemu Windows 8, przygotowali i wybrać **Ustawienia**.
 
 2.  Wybierz opcje konfiguracji **procesorów i pamięci** . Upewnij się określić *dwa* rdzenie procesora oraz w celu **umożliwienia hypervisor aplikacji w ten czynny maszyna**:
-    
+
     ![][2]
-    
+
     Emulator Windows Phone sam używa pół gigabajt pamięci, więc ogólnie należy zarezerwować co najmniej 2GB dla VMWare.
 
 3.  Wybierz opcję ustawienia **Zaawansowane** . Włącz **preferowane virtualization silnik: Intel VT-x z EPT** opcji:
-    
+
     ![][3]
 
 4.  Zmodyfikować plik *.vmx* dodać lub modyfikować następujące ustawienia:
-    
-        hypervisor.CPUID.v0 = "FALSE" mce.enable = "TRUE" vhv.enable = "TRUE"
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+        hypervisor.CPUID.v0 = "FALSE" mce.enable = "TRUE" vhv.enable = "TRUE"
+
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 Po wykonaniu tych kroków, to jesteś gotowy do zainstalowania zestawu SDK Windows Phone. Zobacz przewodnik platformy Windows Phone 8 szczegóły.

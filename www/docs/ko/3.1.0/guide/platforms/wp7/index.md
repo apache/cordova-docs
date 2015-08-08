@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -29,8 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 1. 시스템 요구 사항
 
 *   운영 체제:
-    
-    *   윈도우 7 또는 윈도우 8 (프로) 또는 s p 2와 윈도 즈 조망 
+
+    *   윈도우 7 또는 윈도우 8 (프로) 또는 s p 2와 윈도 즈 조망
         *   Windows의 64 비트 버전 (64)가 SDK에 대 한 필요 합니다.
         *   프로 버전은 장치 에뮬레이터를 실행 하기 위한 것이 좋습니다.
 
@@ -68,7 +68,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 스크립트를 실행 합니다.
 
     > createTemplates.bat-설치
-    
+
 
 ## 3. 새 프로젝트 설정
 
@@ -88,7 +88,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. 장치에 대 한 프로젝트를 빌드
 
@@ -104,6 +104,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 끝 났 어!

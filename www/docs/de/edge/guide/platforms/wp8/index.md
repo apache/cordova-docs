@@ -92,7 +92,7 @@ Installieren Sie die neueste Version des Windows Phone SDK von der **Downloads**
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Erstellen eines neuen Projekts
 
@@ -101,12 +101,12 @@ Zu diesem Zeitpunkt zum Erstellen eines neuen Projekts können Sie zwischen das 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-    
+
 
 Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz:
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## Erstellen Sie das Projekt
 
@@ -114,57 +114,57 @@ Bei Verwendung von CLI in der Entwicklung ist das Projektverzeichnis der oberste
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
-    
+
 
 Wenn Sie Shell-Werkzeugen von Windows Phone-spezifischen Entwicklung verwenden, gibt es ein anderen Ansatz. Sobald Sie das Projekt generieren, die Standard-app-Quelle steht in den `projects\wp8\www` Unterverzeichnis. Nachfolgende Befehle stehen in der `cordova` Unterverzeichnis auf dem gleichen Niveau.
 
 Der `build` Befehl reinigt Projektdateien und Umbauten, die app. Das erste Beispiel generiert Debuginformationen und das zweite Zeichen der apps für Release:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 Der `clean` Befehl können Sie die Verzeichnisse in der Vorbereitung für die nächste auszuschwemmen `build` :
 
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## Bereitstellen auf Emulator
 
 An dieser Stelle können Sie die `cordova` CLI-Dienstprogramm zum Bereitstellen der Anwendung für den Emulator von der Befehlszeile aus:
 
         > cordova emulate wp8
-    
+
 
 Andernfalls verwenden Sie die Alternative Shell-Schnittstelle:
 
         C:\path\to\project\cordova\run
-    
+
 
 Standardmäßig die `run` Skript ruft das Emulator-Flag und übernimmt zusätzliche Flags, die für die `--debug` stellt die Standardeinstellung:
 
         C:\path\to\project\cordova\run --emulator --debug
         C:\path\to\project\cordova\run --emulator --release
         C:\path\to\project\cordova\run --emulator --nobuild
-    
+
 
 Der Emulator startet eine Geräte-Image mit der app installiert. Navigieren Sie im home-Bildschirm dem Bedienfeld "apps", die **"HelloWorld"** app zu starten. Dies zeigt die app starten mit seinen Splash-Screen, gefolgt von seiner wichtigsten Schnittstelle:
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Des Emulators grundlegenden Steuerelemente, auf die sich oben rechts auf dem Bildschirm des Geräts können Sie zwischen hoch-und Querformat zu wechseln. Die Schaltfläche **>** öffnet weitere Steuerelemente, die Sie komplexere Orientierungen und Gesten testen können:
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Diese erweiterte Steuerelemente ermöglichen auch Ihnen, das Gerät den Speicherort ändern oder Abfolgen von Bewegungen zu simulieren:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Bereitstellung auf Gerät
 
@@ -175,12 +175,12 @@ Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werde
 Führen Sie den folgenden CLI-Befehl die app auf dem Gerät ausführen:
 
     > cordova run wp8
-    
+
 
 Es entspricht dieser Low-Level Shellbefehl:
 
     C:\path\to\project\cordova\run --device
-    
+
 
 Alternativ, wenn Sie in Visual Studio arbeiten, wählen Sie **Windows Phone Gerät** aus dem Dropdown-Menü oben, dann drücken Sie Schaltfläche in der Nähe der grünen **spielen** , sonst geben Sie **F5**.
 
@@ -190,6 +190,6 @@ Sobald Sie eine Cordova-Anwendung zu erstellen, wie oben beschrieben, können Si
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Ratschläge, wie mithilfe von Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow finden Sie in der Übersicht. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Wenn Sie im SDK arbeiten möchten, verwenden Sie die Low-Level-Shell-Werkzeugen als Alternative zu den CLI.

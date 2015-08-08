@@ -28,23 +28,23 @@ In questa sezione viene illustrato come configurare VMWare Fusion su Mac in modo
 1.  All'interno di VMWare Fusion, selezionare l'immagine disco di Windows 8 si sono preparati e scegli **Impostazioni**.
 
 2.  Scegliere le opzioni di configurazione di **processori e memoria** . Assicurarsi di specificare *due* core del processore e per **consentire alle applicazioni di hypervisor in questa macchina virtuale**:
-    
+
     ![][2]
-    
+
     L'emulatore di Windows Phone solo utilizza un mezzo gigabyte di memoria, così in generale che è necessario riservare almeno 2GB per VMWare.
 
 3.  Scegliere le impostazioni **avanzate** . Abilitare la **motore di virtualizzazione preferito: Intel VT-x con EPT** opzione:
-    
+
     ![][3]
 
 4.  Modificare il file *con estensione vmx* per aggiungere o modificare le seguenti impostazioni:
-    
+
         hypervisor.cpuid.v0 = "FALSE"
         mce.enable = "TRUE"
         vhv.enable = "TRUE"
-        
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 Dopo aver completato questi passaggi, allora siete pronti ad installare il SDK di Windows Phone. Vedere la guida di piattaforma Windows Phone 8 per dettagli.

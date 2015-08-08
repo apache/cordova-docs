@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -35,17 +35,17 @@ Na okno:
 *   Pojdite na **Moj računalnik → lastnosti napredno → → spremenljivke okolja**.
 
 *   Dodaj Native SDK namestite directory pot, na primer:
-    
+
     ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 Na Mac in Linux:
 
 *   Urejanje z `~/.bash_profile` datoteko, dodal vrstico, kot sledi, glede na to, kje je bil Native SDK nameščen:
-    
+
     $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Prost dostop sledeč uporabiti spremembe v trenutno sejo:
-    
+
     $ vir ~/.bash_profile
 
 ## Za podpis
@@ -61,7 +61,7 @@ Vnesite geslo in kliknite "Get žetona« prenesti bbidtoken.csk. Shranite to dat
 Zadnji korak je ustvariti podpisno potrdilo:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
-    
+
 
 ## Ustvarjanje projekta
 
@@ -71,7 +71,7 @@ Uporaba na `cordova` korist zaiti ki gre gor a nov projekt, kot je opisano v vme
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
-    
+
 
 ## Razporedi na Emulator
 
@@ -88,18 +88,18 @@ Začetek emulator slike, nato pa izberite **Nastavitve** z za četnega zaslona:
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Pluti v **varnost in zasebnost → razvoj način** oddelek in omogočiti možnost:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Nato zaženite je `emulate` ukaz razgledati app:
 
     $ cordova emulate blackberry10 --devicepass <password>
-    
+
 
 ## Razporedi na napravo
 
@@ -108,12 +108,12 @@ Napotiti na napravo, preverite, ali je priključen na računalnik in je omogoče
 Nato zaženite je `run` ukaz razgledati app:
 
     $ cordova run blackberry10 --devicepass <password>
-    
+
 
 Če debug žeton še ni ustanovljen za napravo, sporočilo o napaki povpraša, geslo ste določili pri konfiguraciji računalnika za podpisovanje aplikacij.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
-    
+
 
 ## Odpravljanje napak s WebInspector
 
@@ -128,7 +128,7 @@ Privzeto, teče na `cordova build` ukaz Ustvari datoteko paket nepodpisan *.bar*
 Uporabo `--release` ustvariti izpust prevod primerna za distribucijo prek svetu robida.
 
     $ cordova build --release --keystorepass <signing password>
-    
+
 
 Je `--keystorepass` možnost določa geslo, ki ste določili pri konfiguraciji računalnika za podpis aplikacije.
 
@@ -139,11 +139,11 @@ Zgoraj navodila domnevati napravo je priključen preko USB ali simulator izvaja 
 Dodaten komplet orodjih ukazne vrstice, so vključeni, ko nastavite BlackBerry 10 platformo za vaš projekt. Ukaz, v tem primeru uveljavlja iz projekta najvišji ravni imenika, associates cilj imenovan *emu* z IP naslovom.
 
 *   Na okno:
-    
+
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   Na Mac/Linux:
-    
+
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
 Ko je opredeljen cilj, vam lahko zagotovi, da prost dostop zapoved z `--target` :

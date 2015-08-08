@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -54,12 +54,12 @@ NOTE, doc said:
 코르 도우 바 작업 명령줄 도구, SDK의 포함 해야 `tools` 와 `platform-tools` 디렉터리 경로 환경에서. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥에 있는 `~/.bash_profile` 파일을 SDK 설치에 따라 다음과 같은 줄을 추가:
 
     내보내기 경로 = ${경로}: / 개발/adt-번들/sdk/플랫폼-도구: / 개발/adt-번들/sdk/도구
-    
+
 
 이것 새롭게 문을 연 터미널 windows에서 SDK 도구를 제공합니다. 그렇지 않으면 현재 세션에서 사용할 수 있도록이 실행.
 
     $ 소스 ~/.bash_profile
-    
+
 
 윈도우 7에 경로 환경 수정:
 
@@ -72,16 +72,16 @@ NOTE, doc said:
 *   **경로** 변수를 선택 하 고 **편집** 을 누릅니다.
 
 *   설치한 SDK를 예를 기반으로 경로에 다음을 추가:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   값을 저장 하 고 두 대화 상자를 닫습니다.
 
 또한 명령 프롬프트 및 유형 자바와 개미 열기를 사용 하도록 설정 해야 할 수 있습니다 `java` , 또한 입력 `ant` . 추가 경로 중 실행 실패:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ## Sdk에서는 프로젝트를 열려면
 
@@ -91,7 +91,7 @@ NOTE, doc said:
         $ cd hello
         $ cordova platform add android
         $ cordova build
-    
+
 
 일단 창조 해, 여기에 SDK를 사용 하 여 그것을 수정 하는 방법이입니다.
 
@@ -107,7 +107,7 @@ NOTE, doc said:
 
 *   **완료** 를 누르면합니다.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 일단 이클립스 창이 열립니다, 해결 되지 않은 문제를 나타내는 빨간색 **X** 나타날 수 있습니다. 그렇다면, 다음 추가 단계를 수행:
 
@@ -128,45 +128,45 @@ NOTE, doc said:
 *   실행 `android` 커맨드 라인에.
 
 *   이클립스 내에서이 도구 모음 아이콘 눌러:
-    
+
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 일단 오픈, 안 드 로이드 SDK 관리자는 다양 한 런타임 라이브러리를 표시 합니다.
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 **도구 → 관리 AVDs** (안 드 로이드 가상 장치)를 선택한 다음 **장치 정의** 결과 대화 상자에서 모든 항목 선택:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 보도 **AVD 생성**, 선택적으로 이름, 수정 변경 내용을 적용 하려면 **확인** 을 누릅니다.
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 **시작**을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 장치 것 만큼 출시:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 이 시점에서 사용할 수 있는 `cordova` 명령줄에서 에뮬레이터에 응용 프로그램을 배포 하려면 유틸리티:
 
         $ cordova emulate android
-    
+
 
 대신 이클립스 내에서 작업 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **→ 안 드 로이드 응용 프로그램을 실행**을 선택 합니다. 이미 열려 있다면 아무도 AVD를 지정 하려면 요청 받을 수 있습니다.
 
@@ -189,6 +189,6 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 명령줄에서 장치에 app를 밀어 수 있습니다.
 
         $ cordova run android
-    
+
 
 또는 Eclipse 내에서 프로젝트를 마우스 오른쪽 단추로 클릭 고 **안 드 로이드 응용 프로그램 → 실행** 선택.

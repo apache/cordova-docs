@@ -62,7 +62,7 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 1.  Tizen の Eclipse IDE を起動します。
 
 2.  **→ インポート → Tizen Web プロジェクトのファイル**を選択します。
-    
+
     ![][2]
 
 3.  **次**のキーを押します.
@@ -72,22 +72,22 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 5.  **プロジェクト ワークスペースにコピー**がオンになっていることを確認します。
 
 6.  **参照**を押すし、選択コルドバ Tizen `samples` プロジェクト ディレクトリ (など `/cordova-basic` )。
-    
+
     ![][3]
 
 7.  **終了**キーを押します。プロジェクト必要があります今インポートして、**プロジェクト エクスプ ローラー]**ビューに表示されます。
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 **プロジェクト エクスプ ローラー]**ビューを右クリックしてプロジェクトをリビルドし、**プロジェクトのビルド**を選択します。
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 *Hello.wgt*などのウィジェット パッケージ ファイルがプロジェクトのルート ディレクトリに生成されます。
 
@@ -97,19 +97,19 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## デバイスへの配置します。
 
 *   ターゲット デバイス正しく起動、接続され構成されていることを確認します。その**日付と時刻**の設定を正しく設定する必要があります。
 
 *   **接続エクスプ ローラー]**ビューを使用してアプリケーションの配置先を選択します：**ウィンドウ → 表示 → 接続エクスプ ローラー**.
-    
+
     ![][7]
 
 *   **プロジェクト エクスプ ローラー]**ビューでプロジェクトを右クリックし、 **→ として Tizen Web アプリケーションの実行**を選択します。
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

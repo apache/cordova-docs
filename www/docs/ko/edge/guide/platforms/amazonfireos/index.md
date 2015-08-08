@@ -70,12 +70,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥, 리눅스 또는 다른 유닉스 플랫폼에는 `~/.bash_profile` 파일을 SDK와 개미가 설치에 따라 다음과 같은 줄을 추가:
 
     내보내기 경로 = ${경로}: / 개발/adt-번들/sdk/플랫폼-도구: / 개발/adt-번들/sdk/도구: / 개발/아파치 개미/빈
-    
+
 
 이것 새롭게 문을 연 터미널 windows에서 SDK 도구를 제공합니다. 그렇지 않으면 현재 세션에서 사용할 수 있도록이 실행.
 
     $ source ~/.bash_profile
-    
+
 
 #### Windows 경로
 
@@ -90,16 +90,16 @@ Windows에서 경로 환경 수정:
 *   **경로** 변수를 선택 하 고 **편집** 을 누릅니다.
 
 *   설치한 SDK와 개미, 예를 들어 기반 경로에 다음을 추가:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
-        
+
 
 *   값을 저장 하 고 두 대화 상자를 닫습니다.
 
 *   자바를 사용 해야 합니다. 명령 프롬프트를 열고 입력 `java` 실행 되지 않는 경우, 뿐만 아니라 당신의 경로를 자바 바이너리의 위치를 추가 합니다. %JAVA_HOME% 설치 된 JDK 디렉토리를 가리키는 있는지 확인 하십시오. JAVA_HOME 환경 변수 별도로 추가를 할 수 있습니다.
-    
+
         %JAVA_HOME%\bin
-        
+
 
 ### 아마존 WebView SDK
 
@@ -108,9 +108,9 @@ Windows에서 경로 환경 수정:
 *   [아마존 개발자 포털][1] 에서 아마존 WebView SDK를 다운로드.
 
 *   복사 `awv_interface.jar` 코르도바의 작업 디렉터리에 다운로드 한 SDK에서. 존재 하지 않는 경우 commonlibs(shown below) 폴더를 만듭니다.
-    
+
     **Mac/Linux:** `~/.cordova/lib/commonlibs/`
-    
+
     **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## 아마존 화재 운영 체제에 대 한 새 프로젝트를 만들려면
@@ -121,7 +121,7 @@ Windows에서 경로 환경 수정:
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
-    
+
 
 ***참고:*** 아마존 fireos 플랫폼, 시스템에 설치 되어 처음으로 그것은 코르도바 작업 디렉터리에 적절 한 파일을 다운로드 하지만 AWV SDK 지원 파일 (위 참조) 누락으로 다음 못합니다. 설치 하려면 위의 지침에 따라는 `awv_interface.jar` , 다음 제거 하 고 다시 아마존 fireos 플랫폼을 프로젝트에 추가 합니다. 이 단계는 첫 번째 아마존 화재 OS 프로젝트를 위해 할 수만 필요 합니다.
 
@@ -134,7 +134,7 @@ Windows에서 경로 환경 수정:
 명령줄에서 장치에 app를 밀어 수 있습니다.
 
     아마존 fireos 실행 $ 코르도바
-    
+
 
 또는 Eclipse 내에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **안 드 로이드 응용 프로그램 → 실행** 선택.
 
@@ -147,14 +147,14 @@ Windows에서 경로 환경 수정:
 개발자 도구를 사용 하려면을 입력 합니다.:
 
     $ cordova run --debug amazon-fireos
-    
+
 
 이 도구를 실행 중인 클라이언트를 수 있게 된다. 연결할 수 있습니다 다음 클라이언트 포트 포워딩 안 드 로이드 디버그 브리지 (adb)를 사용 하 여 응용 프로그램의 패키지 이름을 참조 합니다.
 
 예를 들어:
 
     adb 앞으로 tcp:9222 localabstract:com.example.helloworld.devtools
-    
+
 
 크롬 기반 브라우저를 통해 DevTools를 사용 하 여 이동 하 여 다음 수 있습니다.`http://localhost:9222`.
 
@@ -174,7 +174,7 @@ Windows에서 경로 환경 수정:
 
 *   **완료** 를 누르면합니다.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 일단 이클립스 창이 열립니다, 해결 되지 않은 문제를 나타내는 빨간색 **X** 나타날 수 있습니다. 그렇다면, 다음 추가 단계를 수행:
 

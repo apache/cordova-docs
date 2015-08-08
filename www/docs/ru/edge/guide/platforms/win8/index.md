@@ -93,7 +93,7 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Для 10 Windows установщик Visual Studio имеет возможность установить инструменты для создания универсальных приложений Windows. Необходимо убедиться, что этот параметр выбран при установке чтобы установить требуемый пакет SDK.
 
@@ -104,12 +104,12 @@ Cordova WebView под управлением ОС Windows полагаются 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
-    
+
 
 Вот соответствующий подход используя инструменты командной строки более низкого уровня:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 Этот проект нацелен на Windows 8.1 как целевую ОС по умолчанию. Вы можете выбрать целевой 8.0 или 10.0 (см. "Настройка целевой версии Windows" ниже) для всех сборок, или вы можете ориантироваться на конкретную версию при каждом построении.
 
@@ -121,25 +121,25 @@ Cordova WebView под управлением ОС Windows полагаются 
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
-    
+
 
 Вот соответствующий подход используя инструменты командной строки более низкого уровня:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 Команда `clean` помогает очищать каталоги в рамках подготовки к следующей команде `build` :
 
-        C:\path\to\project\cordova\clean.bat 
-    
+        C:\path\to\project\cordova\clean.bat
+
 
 ## Настройка целевой версии Windows
 
 По умолчанию, команда `build` производит два пакета: Windows 8.0 и 8.1 Windows Phone. Чтобы обновить пакет Windows до версии 8.1 следующие параметры конфигурации должны быть добавлены в файл конфигурации (`config.xml`).
 
         <preference name="windows-target-version" value="8.1" />
-    
+
 
 После того, как вы добавите этот параметр, команда `build` начнет создавать пакеты Windows 8.1 и 8.1 Windows Phone.
 
@@ -148,7 +148,7 @@ Cordova WebView под управлением ОС Windows полагаются 
 Вы можете решить, что вы хотите построить конкретную версию приложения, ориентированную на конкретную ОС (например, вы могли бы задать что вы хотите ориентироваться на Windows 10, но вы хотите построить для Windows Phone 8.1). Для этого можно использовать параметр `--appx` :
 
         > cordova build windows -- --appx=8.1-phone
-    
+
 
 Система построения будет игнорировать набор предпочтений в файле config.xml для целевой версии Windows и строго построит пакет для Windows Phone 8.1.
 
@@ -168,13 +168,13 @@ Windows 10 поддерживает новый «Удаленный» режим
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-    
+
 
 Развертывание пакета Windows Phone:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-    
+
 
 Можно использовать **cordova run windows --list** чтобы увидеть все доступные цели и **cordova run windows --target=target_name \-- -|-phone** для запуска приложения на конкретном устройстве или эмуляторе (например, `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
@@ -186,25 +186,25 @@ Windows 10 поддерживает новый «Удаленный» режим
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Компонент `CordovaApp` отображается внутри решения, и его каталог `www` содержит исходный код, включая домашнюю страницу `index.html`:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Элементы управления ниже главного меню Visual Studio позволяют вам тестировать или развертывать приложения:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 При выбранном пункте **Локальный компьютер** нажмите зеленую стрелку, чтобы установить приложение на том же компьютере где работает Visual Studio. Как только вы сделаете это, приложение появляется в списках приложений Windows 8:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Каждый раз, когда вы перестроить приложение, версия доступная в интерфейсе обновляется.
 
@@ -212,19 +212,19 @@ Windows 10 поддерживает новый «Удаленный» режим
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Обратите внимание, что если вы открываете приложение в среде виртуальной машины, вам может понадобиться нажать в углах или по бокам окна переключения приложений или получить доступ к дополнительным функциям:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Альтернативно выберите параметр развертывания **Симулятор** для просмотра приложения, как если бы она была установлена на планшетном устройстве:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 В отличие от развертывания на настольные системы этот параметр позволяет имитировать ориентацию планшета, его местоположение и изменять его параметры сети.
 

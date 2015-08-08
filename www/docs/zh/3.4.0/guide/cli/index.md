@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -42,12 +42,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 1.  下載並安裝[Node.js][1]。安裝完成後，您應該能夠調用 `node` 或 `npm` 在命令列上。
 
 2.  安裝 `cordova` 實用程式。在 Unix 中，首碼的額外 `sudo` 命令可能需要安裝開發實用程式中以其他方式限制目錄：
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     安裝日誌可能會產生錯誤的任何已卸載平臺 Sdk。安裝完成後，您應該能夠運行 `cordova` 命令列上。
-    
+
     **注**： `-g` 標誌上面告訴故宮全域安裝科爾多瓦。 您可能需要添加到您的路徑，為了調用全域的故宮目錄安裝故宮模組。 在 Windows 上，故宮通常可以找到在 `C:\Users\username\AppData\Roaming\npm` 和在 Unix 上`/usr/local/share/npm`.
 
  [1]: http://nodejs.org/
@@ -57,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 轉至目錄位置您維護您的原始程式碼，並運行以下命令：
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 它可能需要一些時間完成的命令，有耐心。運行該命令與 `-d` 選項將顯示有關其進度的資訊。
 
@@ -72,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 後面的所有命令都需要在專案的目錄或在其範圍內的任何子目錄內運行：
 
         $ cd hello
-    
+
 
 您可以生成專案之前，您需要指定一組的目標平臺。 您運行這些命令的能力取決於您的電腦是否支援每個 SDK，是否你已經安裝每個 SDK。 運行任何這些從 Mac：
 
@@ -81,7 +81,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 運行的這些 Windows 機器上，從任何地方*wp*指的是不同版本的 Windows Phone 作業系統：
 
@@ -92,12 +92,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 運行此檢查當前設置的平臺：
 
         $ cordova platforms ls
-    
+
 
 （請注意 `platform` 和 `platforms` 命令是同義語.)
 
@@ -106,7 +106,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform remove blackberry10
         $ cordova platform rm amazon-fireos
         $ cordova platform rm android
-    
+
 
 運行命令來添加或刪除平臺影響專案的*平臺*目錄的內容每個指定的平臺作為一個子目錄中的顯示位置。 *Www*原始目錄轉載內每個平臺的子目錄中，例如出現在 `platforms/ios/www` 或 `platforms/android/assets/www` 。 因為 CLI 不斷複製在源*www*資料夾中的檔，應只編輯這些檔，並不是位於*平臺*的子目錄下。 如果您使用的版本控制軟體，您應將此源*www*資料夾，該*合併*的資料夾，添加到您的版本控制系統。 （有關*合併*資料夾的詳細資訊可以找到下面的自訂每個平臺部分中）
 
@@ -123,18 +123,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 運行以下命令以反覆運算方式生成專案：
 
         $ cordova build
-    
+
 
 這將生成特定于平臺代碼內專案的 `platforms` 子目錄。你可以選擇限制到特定的平臺每個生成的範圍：
 
         $ cordova build ios
-    
+
 
 `cordova build`命令是以下，而在此示例中還針對的是一個單一的平臺的簡寫形式：
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 在這種情況下，一次您運行 `prepare` ，你可以作為備用使用蘋果公司的 Xcode SDK 修改和編譯科爾多瓦在範圍內生成的特定于平臺代碼 `platforms/ios` 。 您可以使用相同的方法與其他平臺的 Sdk。
 
@@ -143,7 +143,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 移動平臺 Sdk 經常與捆綁在一起執行設備的圖像，以便您可以啟動該應用程式從主畫面並看看它如何與許多平臺功能交互的模擬程式。 運行如下命令來重新生成應用程式並查看它在特定的平臺模擬器內：
 
         $ cordova emulate android
-    
+
 
 一些移動平臺類比特定設備預設情況下，iPhone 的 iOS 專案等。對於其他平臺，您可能需要首先將設備模擬程式與相關聯。
 
@@ -153,18 +153,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 跟進與 `cordova emulate` 命令刷新顯示的最新應用，現已從主畫面發射的模擬程式圖像：
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 或者，可以將手機插入您的電腦和直接測試應用程式：
 
         $ cordova run android
-    
+
 
 在運行此命令之前, 您需要設置的設備進行測試，之後會發生變化，為每個平臺的程式。 在 Android 和亞馬遜火 OS 設備，你將必須啟用設備上的**USB 調試**的選項和或許添加 USB 驅動程式根據您發展導讀工作。 每個平臺的要求的詳細資訊，請參閱平臺指南。
 
@@ -177,135 +177,135 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [4]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
-    
+
         com.phonegap.plugins.barcodescanner - Scans Barcodes
-    
+
 
 僅搜索 `bar` 期限國債收益率和更多的結果：
 
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
-    
+
 
 `cordova plugin add`命令需要您指定的外掛程式代碼的存儲庫。 請注意當你遵循 Web 專案開發工作流和使用 CLI，CLI 會照顧到適當的位置為每個平臺添加外掛程式的代碼。 (如果你是在本機專案開發工作流，您會添加外掛程式使用 Plugman （這裡指南連結），多次為每個平臺)。
 
 這裡是如何使用 CLI 將功能添加到應用程式的示例：
 
 *   基本設備資訊 （設備 API）：
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   網路連接和電池事件：
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   加速度計、 指南針、 和地理定位：
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   相機、 媒體重播和捕獲：
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-        
+
 
 *   訪問設備或網路 （檔 API） 上的檔：
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   通過對話方塊或振動發出通知：
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   連絡人：
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   全球化：
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   閃屏：
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   打開新的瀏覽器視窗 (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   調試主控台：
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 使用 `plugin ls` （或 `plugin list` ，或 `plugin` 本身） 查看當前已安裝的外掛程式。每個顯示由其識別碼：
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 若要刪除某個外掛程式，它通過引用相同的識別碼出現在該清單中。例如，這裡是你會怎麼移除調試主控台支援從一個發佈版本：
 
         $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 你可以大量刪除或添加的外掛程式通過指定多個參數的每個命令：
 
         $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
-    
+
 
 ## 高級的外掛程式選項
 
 當添加外掛程式，幾個選項允許您指定從何處獲取該外掛程式。 上面的示例使用知名 `registry.cordova.io` 註冊表和外掛程式指定的 `id` ：
 
         $ cordova plugin add org.apache.cordova.console
-    
+
 
 `id`還可能包括外掛程式的版本號碼後, 追加 `@` 字元。`latest`版本是最新版本的別名。例如：
 
         $ cordova plugin add org.apache.cordova.console@latest
         $ cordova plugin add org.apache.cordova.console@0.2.1
-    
+
 
 如果在沒有註冊該外掛程式 `registry.cordova.io` 位於另一個 git 資源庫中，但您可以指定一個備用的 URL：
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
-    
+
 
 上面的 git 示例讀取外掛程式末尾的主分支上，但可以後追加一個標記或分支如備用 git ref `#` 字元：
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
-    
+
 
 如果外掛程式 (和其 `plugin.xml` 檔） 是在 git 回購協定內的子目錄中，您可以指定它與 `:` 的字元。 請注意， `#` 字元仍然需要：
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
-    
+
 
 您也可以組合 git ref 和子目錄：
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
-    
+
 
 或者，指定包含的外掛程式目錄的本地路徑 `plugin.xml` 檔：
 
         $ cordova plugin add ../my_plugin_dir
-    
+
 
 ## 使用*合併*到自訂的每個平臺
 
@@ -314,16 +314,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 相反，頂級 `merges` 目錄提供了一個指定資產在特定平臺上部署的地方。 每個特定于平臺的子目錄內 `merges` 鏡像的目錄結構的 `www` 源樹中，從而允許您重寫或根據需要添加的檔。 例如，在這裡是如何你可能會使用 `merges` 來推動 Android 和亞馬遜火 OS 設備的預設字型大小：
 
 *   編輯 `www/index.html` 檔，添加一個連結到一個額外的 CSS 檔，該檔 `overrides.css` 在這種情況下：
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   （可選） 創建一個空的 `www/css/overrides.css` 檔，將適用于所有非 Android 生成，防止丟失檔錯誤。
 
 *   創建 `css` 中的子目錄 `merges/android` ，然後添加相應的 `overrides.css` 檔。 指定將覆蓋 12 點預設的字體大小範圍內指定的 CSS `www/css/index.css` ，例如：
-    
+
         body { font-size:14px; }
-        
+
 
 當你重新生成專案時，Android 版本功能自訂字體大小，而其他人保持不變。
 
@@ -335,12 +335,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
     $ cordova help
     $ cordova        # same
-    
+
 
 `info`命令產生的潛在的有用的詳細資訊，如當前安裝的平臺，為每個平臺 SDK 版本和外掛程式的 CLI 版本的清單和 `node.js` ：
 
     $ cordova info
-    
+
 
 它既呈現到螢幕資訊並捕獲在本地輸出 `info.txt` 檔。
 
@@ -351,18 +351,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 安裝後 `cordova` 實用程式，您可以始終進行更新到最新版本通過運行以下命令：
 
         $ sudo npm update -g cordova
-    
+
 
 使用此語法來安裝特定的版本：
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
-    
+
 
 運行 `cordova -v` 查看當前運行的版本。 運行 `npm
 info` 命令長清單，其中包含當前版本以及其他可用的版本號：
 
         $ npm info cordova
-    
+
 
 科爾多瓦 3.0 是要支援這一節中描述的命令列介面的第一個版本。 如果您正在從 3.0 以前的版本更新，您需要創建一個新專案，如以上所述，然後將舊應用程式的資源複製到頂級 `www` 目錄。 在適用的情況，進一步有關升級到 3.0 的詳細資訊是可用的平臺指南中。 一旦你升級到 `cordova` 的命令列介面和使用 `npm update` 待當前，那裡所描述的更耗時過程不再相關。
 

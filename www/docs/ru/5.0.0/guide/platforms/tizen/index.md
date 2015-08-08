@@ -62,7 +62,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 1.  Запуск Tizen Eclipse IDE.
 
 2.  Выберите **файл → импорт → Tizen веб-проекта**:
-    
+
     ![][2]
 
 3.  Нажмите **Далее**.
@@ -72,22 +72,22 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 5.  Убедитесь, что установлен **копирования проектов в рабочую область** .
 
 6.  Нажмите **Обзор** и выберите Cordova Tizen `samples` каталог проекта (такие как `/cordova-basic` ):
-    
+
     ![][3]
 
 7.  Нажмите кнопку **Готово**. Теперь ваш проект должен быть импортированы и появляются в представлении **Обозреватель проектов** :
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Чтобы перестроить проект, щелкните правой кнопкой мыши в представлении **Обозреватель проектов** и выберите **Построить проект**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 В корневом каталоге проекта должен создать файл пакета виджета, например *hello.wgt* .
 
@@ -97,19 +97,19 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Развертывание на устройство
 
 *   Убедитесь, что целевое устройство должным образом начали, подключено и настроено. Необходимо правильно задать его параметры **даты и времени** .
 
 *   Выберите цель развертывания приложения с помощью **Connection Explorer** представления: **окна → Показать вид → Connection Explorer**.
-    
+
     ![][7]
 
 *   Щелкните правой кнопкой мыши проект в представлении **Обозреватель проектов** , а затем выберите **запустить → Tizen веб-приложения**:
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

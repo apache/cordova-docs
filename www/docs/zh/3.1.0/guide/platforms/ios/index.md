@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -55,13 +55,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 創建後，您可以在 Xcode 內打開它從。按兩下打開 `hello/platforms/ios/hello.xcodeproj` 檔。螢幕應該如下所示：
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 部署到模擬程式
 
@@ -72,17 +72,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 2.  選擇**你好**app 立即向右面板中。
 
 3.  從工具列上的**計畫**功能表中選擇預定的設備、 iPhone 等作為 6.0 模擬器在這裡突出了：
-    
+
     ![][5]
 
 4.  按下**運行**按鈕出現在同一工具列左側的**計畫**中。 那生成、 部署並在模擬器中運行應用程式。 一個單獨的模擬器應用程式將打開，並顯示該應用程式：
-    
+
     ![][6]
-    
+
     只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 捆綁了模擬器為最新版本的 iPhone 和 iPad。 較舊的版本中可能會提供**Xcode → 首選項 → 下載 → 元件**面板。
 
@@ -117,14 +117,14 @@ Xcode 捆綁了模擬器為最新版本的 iPhone 和 iPad。 較舊的版本中
 Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自訂 URL 的功能。 雖然從自訂 URL 載入的機制發生了變化，此代碼目前仍在繼續為科爾多瓦的較早版本創建的應用程式提供向後的功能。 應用程式範例不使用這一功能，因此可以忽略這些警告。 若要防止出現這些警告，請刪除引用已棄用的 invokeString API 的代碼：
 
 *   編輯*Classes/MainViewController.m*檔、 環繞的代碼與下面的塊 `/*` 和 `*/` 的評論如下所示，然後鍵入**命令-s**保存該檔：
-    
+
         （失效） webViewDidFinishLoad:(UIWebView*) theWebView {/ / 如果 ___PROJECTNAME__ Info.plist 指定協定來處理的唯一有效 / * 如果 (self.invokeString) {/ / 這傳遞之前觸發 deviceready 事件，以便您可以訪問它的 js 時您會收到 deviceready NSLog (@"已否決： window.invokeString-相反，使用 window.handleOpenURL(url) 函數，總是調用通過自訂方案 url 啟動應用程式時.") ；NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"%@\"；"self.invokeString] ；[theWebView stringByEvaluatingJavaScriptFromString:jsString] ；} * / / / 黑色底彩色背景匹配的本機應用程式 theWebView.backgroundColor = [UIColor blackColor] ；返回 [超級 webViewDidFinishLoad: theWebView] ；}
-        
+
 
 *   編輯*Classes/AppViewDelegate.m*檔，注釋掉下面的行插入雙斜杠，如下所示，然後鍵入**命令-s**保存該檔：
-    
+
         //self.viewController.invokeString = invokeString ；
-        
+
 
 *   按**命令-b**重新生成專案並消除此警告。
 
@@ -135,10 +135,10 @@ Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自�
 1.  選擇**Xcode → 首選項 → 位置**.
 
 2.  在**派生的資料**部分中，按**高級**按鈕並選擇**唯一**作為**生成位置**如下所示：
-    
+
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 這是預設設置為一個新的 Xcode 安裝，但也可以設置以不同的方式從較早版本的 Xcode 後升級。
 

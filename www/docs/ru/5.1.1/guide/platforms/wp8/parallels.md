@@ -28,14 +28,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  В Parallels Desktop выберите образ диска Windows 8, вы подготовили и выберите **Параметры**.
 
 2.  Выберите параметры **Общие → процессоры** . Укажите *два* ЦП. Укажите по крайней мере 2 ГБ памяти, даже если он выходит за пределы рекомендуемого диапазона:
-    
+
     ![][2]
 
 3.  Чтобы иметь возможность запускать образ эмулятора устройства в виртуальной машине Windows 8, выберите настройки, **оптимизации** и включение **Вложенных виртуализации**.
-    
+
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите Руководство для платформы Windows Phone 8 для подробностей.

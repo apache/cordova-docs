@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -65,7 +65,7 @@ Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성이 파일을
 명령줄에서 배치 파일을 실행 하면 자동으로 설치 하도록 매개 변수와 함께 호출할 수 있습니다.
 
         > createTemplates.bat-설치
-    
+
 
 ## 새 프로젝트 설정
 
@@ -83,7 +83,7 @@ Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성이 파일을
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 장치에 대 한 프로젝트를 구축
 
@@ -99,6 +99,6 @@ Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성이 파일을
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 이 시점에서, 당신이 끝났습니다.

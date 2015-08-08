@@ -62,7 +62,7 @@ Téléchargez le SDK de Tizen de [tizen.org][1].
 1.  Lancer l'IDE Eclipse de paciarelli.
 
 2.  Sélectionnez **fichier → importer → paciarelli projet Web**:
-    
+
     ![][2]
 
 3.  Appuyez sur **suivant**.
@@ -72,22 +72,22 @@ Téléchargez le SDK de Tizen de [tizen.org][1].
 5.  Assurez-vous de **que copier les projets dans l'espace de travail** est vérifiée.
 
 6.  Appuyez sur **Parcourir** et sélectionnez le Cordova Tizen `samples` répertoire du projet (comme `/cordova-basic` ) :
-    
+
     ![][3]
 
 7.  Appuyez sur **Terminer**. Votre projet doit désormais être importés et apparaissent dans la vue **Explorateur de projets** :
-    
+
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Pour reconstruire le projet, faites un clic droit dans **l'Explorateur de projet** , puis sélectionnez **Générer le projet**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 Un fichier de package de widget comme *hello.wgt* devrait générer dans le répertoire racine du projet.
 
@@ -97,19 +97,19 @@ Cliquez droit sur le projet dans **l'Explorateur de projet** , puis sélectionne
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Déployer sur le périphérique
 
 *   Assurez-vous que le périphérique cible est correctement lancé, connecté et configuré. Ses paramètres de **Date et heure** doivent être définis correctement.
 
 *   La vue **Explorateur de connexion** permet de sélectionner la cible de déploiement d'application : **fenêtre → Afficher la vue → connexion Explorer**.
-    
+
     ![][7]
 
 *   Cliquez droit sur le projet dans **l'Explorateur de projet** , puis sélectionnez **exécuter comme → paciarelli Web Application**:
-    
+
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

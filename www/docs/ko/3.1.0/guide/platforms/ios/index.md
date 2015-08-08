@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -55,13 +55,13 @@ Xcode 설치 되 면 여러 명령줄 도구 실행 코르도바를 사용 하�
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-    
+
 
 일단 창조 해, Xcode 내에서 그것을 열 수 있습니다. 열려면 두 번 클릭 합니다 `hello/platforms/ios/hello.xcodeproj` 파일. 스크린은 다음과 같이 한다:
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 에뮬레이터에 배포
 
@@ -72,17 +72,17 @@ IOS 에뮬레이터에서 응용 프로그램을 미리 보기:
 2.  **안녕하세요** 애플 리 케이 션 오른쪽에 즉시 패널에서 선택 합니다.
 
 3.  **스키마** 메뉴에서 원하는 장치를 선택, 아이폰으로 6.0 시뮬레이터 여기 강조:
-    
+
     ![][5]
 
 4.  **구성표**의 왼쪽에 동일한 도구 모음에 나타나는 **실행** 단추를 누릅니다. 빌드, 배포 하 고 에뮬레이터에서 응용 프로그램을 실행 합니다. 별도 에뮬레이터 응용 프로그램 응용 프로그램을 표시 하려면 열립니다.
-    
+
     ![][6]
-    
+
     하나의 에뮬레이터는 한 번에 실행 될 수 있습니다 다른 에뮬레이터에서 응용 프로그램을 테스트 하려면 에뮬레이터 응용 프로그램을 종료 하 고 Xcode 내에서 서로 다른 목표를 실행 해야 합니다.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 용 에뮬레이터와 함께 번들로 제공 된 최신 버전의 iPhone 및 iPad. 이전 버전에서 사용할 수 있는 **Xcode → 환경 설정 → 다운로드 → 구성 요소** 패널.
 
@@ -117,20 +117,20 @@ Xcode 용 에뮬레이터와 함께 번들로 제공 된 최신 버전의 iPhone
 Xcode의에 대 한 경고는 `invokeString` 메서드 사용자 지정 URL에서 응용 프로그램을 실행 하는 기능을 염려 한다. 사용자 지정 URL에서 로드 하는 메커니즘은 변경 하는 동안이 코드는 거꾸로 코르도바의 이전 버전을 사용 하 여 만든 애플 리 케이 션에 대 한 기능을 제공 하도록 여전히 존재 합니다. 샘플 응용 프로그램은이 기능을 사용 하지 않으므로 이러한 경고를 무시할 수 있습니다. 이러한 경고가 나타나지 않도록 방지 하기 위해 사용 되지 않는 invokeString API를 참조 하는 코드를 제거 합니다.
 
 *   *Classes/MainViewController.m* 파일을 편집, 코드의 다음 블록을 둘러싸고 `/*` 및 `*/` 코멘트 아래와 같이 입력 합니다 **명령-s** 파일을 저장할:
-    
+
         (void) webViewDidFinishLoad:(UIWebView*) theWebView {/ / ___PROJECTNAME__-Info.plist 처리 하는 프로토콜을 지정 하는 경우에 유효 / * 경우 (self.invokeString) {/ /이 전달 deviceready 이벤트가 발생 하기 전에 deviceready NSLog를 받을 때 js에 액세스할 수 있습니다 (@"사용 되지 않음: window.invokeString-window.handleOpenURL(url) 함수를 사용, 항상 라는 응용 프로그램을 사용자 지정 스키마 url을 통해 시작할 때.");
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         } * / / / 기본 색상 블랙 배경 일치 네이티브 애플 리 케이 션 theWebView.backgroundColor = [UIColor blackColor];
-        
+
         [슈퍼 webViewDidFinishLoad: theWebView] 반환;
         }
-        
+
 
 *   *Classes/AppViewDelegate.m* 파일을 아래와 같이 이중 슬래시를 삽입 하 여 다음 라인을 코멘트 편집 후 파일을 저장 하도록 **명령을-s** 를 입력:
-    
+
         //self.viewController.invokeString = invokeString;
-        
+
 
 *   **명령 b** 프로젝트를 다시 빌드하고 경고 제거를 누릅니다.
 
@@ -141,10 +141,10 @@ Xcode의에 대 한 경고는 `invokeString` 메서드 사용자 지정 URL에�
 1.  **Xcode → 환경 설정 → 위치** 선택.
 
 2.  **파생 데이터** 섹션에서 **고급** 단추를 누르고 다음과 같이 **고유** **빌드 위치** 선택:
-    
+
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 이것이 새로운 Xcode 설치의 기본 설정은 이지만 Xcode의 이전 버전에서 업그레이 드에 따라 다르게 설정할 수 있습니다.
 

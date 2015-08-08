@@ -3,13 +3,13 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-    
+
 
    under the License.
 ---
@@ -53,12 +53,12 @@ Installieren Sie das Android SDK von [developer.android.com/sdk][3]. Sie können
 Für Cordova Kommandozeilen-Tools arbeiten, müssen Sie das SDK enthalten `tools` und `platform-tools` Verzeichnisse in Ihrer PATH-Umgebung. Auf Mac, können Sie einen Text-Editor zum Erstellen oder ändern die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
-    
+
 
 Dies macht die SDK-Tools im neu eröffneten terminal-Fenster verfügbar. Sonst laufen Sie hier, um sie in der aktuellen Sitzung zur Verfügung stellen:
 
     $ source ~/.bash_profile
-    
+
 
 Die PATH-Umgebung unter Windows 7 zu ändern:
 
@@ -71,16 +71,16 @@ Die PATH-Umgebung unter Windows 7 zu ändern:
 *   Wählen Sie die **PATH** -Variable und klicken Sie **Bearbeiten**.
 
 *   Fügen Sie Folgendes in den Pfad basierend auf dem Sie das SDK, zum Beispiel installiert:
-    
+
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
-        
+
 
 *   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 Sie müssen möglicherweise auch Java und Ant öffnen eine Eingabeaufforderung und geben aktivieren `java` , und geben Sie auch `ant` . Hängen Sie an den Pfad, welcher nicht ausgeführt:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
-    
+
 
 ## Öffnen Sie ein Projekt im SDK
 
@@ -90,7 +90,7 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The 
         $ cd hello
         $ cordova platform add android
         $ cordova build
-    
+
 
 Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
@@ -104,7 +104,7 @@ Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
 *   Drücken Sie **Fertig stellen**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 
@@ -125,45 +125,45 @@ Können Sie das `cordova` -Dienstprogramm eine app in einem Emulator, oder Sie l
 *   Führen Sie `android` in der Befehlszeile.
 
 *   Drücken Sie von Eclipse, dieses Symbol in der Symbolleiste:
-    
+
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Nach dem Öffnen zeigt das Android SDK Manager verschiedene Laufzeit-Bibliotheken:
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Wählen Sie **Extras → Verwaltung AVDs** (Android Virtual Devices), dann wählen Sie ein Element aus **Gerätedefinitionen** in dem daraufhin angezeigten Dialogfeld:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Presse **AVD erstellen**, ändern optional den Namen und drücken Sie **OK** um die Änderungen zu übernehmen.
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 Der AVD wird dann in der Liste **Android Virtual Devices** angezeigt:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD, und drücken Sie **Start**. Es bringt viel, wie es auf dem Gerät mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 An dieser Stelle können Sie das `cordova` -Dienstprogramm zum Bereitstellen der Anwendung für den Emulator von der Befehlszeile aus:
 
         $ cordova emulate android
-    
+
 
 Wenn Sie stattdessen in Eclipse arbeiten, Maustaste auf das Projekt, und wählen Sie **Ausführen als → Android-Anwendung**. Sie möglicherweise aufgefordert, eine AVD angeben, wenn keine bereits geöffnet.
 
@@ -186,6 +186,6 @@ Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debu
 Drücken Sie die app auf das Gerät von der Befehlszeile aus:
 
         $ cordova run android
-    
+
 
 Abwechselnd innerhalb von Eclipse, Maustaste auf das Projekt, und wählen Sie **Ausführen als → Android-Anwendung**.

@@ -93,7 +93,7 @@ Installieren Sie eine beliebige Edition von [Visual Studio][2] die Version, die 
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Für Windows 10 hat der Visual Studio Installer eine Option zum Installieren des Tools zur universellen Windows-Anwendungen erstellen. Sie müssen sicherstellen, dass die Auswahl dieser Option bei der Installation das erforderliche SDK installieren.
 
@@ -104,12 +104,12 @@ Zu diesem Zeitpunkt zum Erstellen eines neuen Projekts können Sie zwischen das 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
-    
+
 
 Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 Dieses Projekt richtet sich an Windows 8.1 als Standardziel OS. Du kannst deiner Wahl 8.0 oder 10.0 (siehe "Konfigurieren deiner Windows-Version" unten) für alle Builds oder Sie Ziel bestimmte eine bestimmte Version bei jedem Build.
 
@@ -121,25 +121,25 @@ Bei Verwendung von CLI in der Entwicklung ist das Projektverzeichnis der oberste
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
-    
+
 
 Hier ist der entsprechende Low-Level-Shell-Tool-Ansatz:
 
-        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --debug
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 Der `clean` Befehl können Sie die Verzeichnisse in der Vorbereitung für die nächste auszuschwemmen `build` :
 
-        C:\path\to\project\cordova\clean.bat 
-    
+        C:\path\to\project\cordova\clean.bat
+
 
 ## Ziel-Windows-Version zu konfigurieren
 
 Von Standard `build` Befehl erzeugt zwei Pakete: Windows 8.0 und 8.1 Windows Phone. Aktualisieren von Windows-Paket auf Version 8.1, dass die Konfigurationsdatei (`"config.xml"` folgende Konfigurationseinstellung hinzugefügt werden müssen).
 
         <preference name="windows-target-version" value="8.1" />
-    
+
 
 Sobald Sie hinzufügen startet diese Einstellung-Befehl `build` Windows 8.1 und Windows Phone 8.1 Pakete zu produzieren.
 
@@ -148,7 +148,7 @@ Sobald Sie hinzufügen startet diese Einstellung-Befehl `build` Windows 8.1 und 
 Sie können beschließen, dass Sie eine bestimmte Version der Anwendung auf einen bestimmten OS erstellen möchten (beispielsweise Sie möglicherweise haben festgelegt, dass Sie Windows 10 ansprechen möchten, aber Sie wollen bauen für Windows Phone 8.1). Hierzu können Sie den Parameter `--appx` :
 
         > cordova build windows -- --appx=8.1-phone
-    
+
 
 Das Buildsystem ignoriert den Präferenz-Satz in "config.xml" für die Ziel-Windows-Version und streng Erstellen eines Pakets für Windows Phone 8.1.
 
@@ -168,13 +168,13 @@ Windows-Paket bereitstellen:
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-    
+
 
 Windows Phone-Paket bereitstellen:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-    
+
 
 Können Sie **cordova run windows --list** finden alle verfügbaren Ziele und **cordova run windows --target=target_name \-- -|-phone** Anwendung auf ein bestimmtes Gerät oder einen Emulator ausführen (z. B. `cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`Ausführen).
 
@@ -186,25 +186,25 @@ Sobald Sie eine Cordova-Anwendung zu erstellen, wie oben beschrieben, können Si
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Die `CordovaApp` -Komponente zeigt innerhalb der Lösung und ihrer `Www` -Verzeichnis enthält den Web-basierte Quellcode, einschließlich der `index.html` -Homepage:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Die Steuerelemente unter Visual Studio im Hauptmenü können Sie testen oder die app bereitstellen:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 **Lokalen Computer** ausgewählt drücken Sie den grünen Pfeil, um die app auf dem gleichen Computer ausführen von Visual Studio installieren. Einmal tun Sie dies, die app wird in Windows 8 app Kleinanzeigen:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Jedes Mal, wenn Sie die Anwendung neu erstellen wird aktualisiert, die Version, die in der Schnittstelle zur Verfügung.
 
@@ -212,19 +212,19 @@ Sobald in der app-Angebote erhältlich, kann halten Sie die **STRG** -Taste beim
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Beachten Sie, dass wenn Sie die app in einer virtuellen Umgebung öffnen, müssen Sie möglicherweise klicken in den Ecken oder an den Seiten des Windows apps zu wechseln oder auf zusätzliche Funktionen zugreifen:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Wählen Sie alternativ die **Simulator** -Bereitstellungsoption die app anzeigen, als ob es auf einem Tablettgerät ausgeführt wurden:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 Im Gegensatz zu desktop-Bereitstellung mit dieser Option können Sie simulieren die Tablette Orientierung, Lage, und variieren ihre Netzwerkeinstellungen.
 

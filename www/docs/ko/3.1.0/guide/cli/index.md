@@ -3,14 +3,14 @@
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-    
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
-    
+
 
 ---
 
@@ -41,10 +41,10 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 1.  다운로드 및 [Node.js][1]를 설치. 설치, 다음 호출 할 수 있어야 `node` 또는 `npm` 커맨드 라인에.
 
 2.  설치는 `cordova` 유틸리티. Unix에서 추가로 붙여 `sudo` 명령을 개발 유틸리티를 설치 해야 할 수 있습니다에서 그렇지 않으면 디렉터리 제한:
-    
+
         $ sudo npm install -g cordova
-        
-    
+
+
     설치 로그는 모든 제거 플랫폼 Sdk에 대 한 오류를 생성할 수 있습니다. 설치, 다음 실행 할 수 있어야 `cordova` 커맨드 라인에.
 
  [1]: http://nodejs.org/
@@ -54,7 +54,7 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 소스 코드를 관리할 수 있는 디렉토리에가 고 다음과 같은 명령을 실행:
 
         $ cordova create hello com.example.hello HelloWorld
-    
+
 
 그것은 시간이 좀 걸릴 수 있습니다를 완료 하려면 명령에 대 한 그래서 인내심. 실행은 `cordova -d` 진행 상황에 대 한 정보를 볼 수 있습니다.
 
@@ -67,7 +67,7 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 모든 후속 명령 프로젝트의 디렉터리 또는 해당 범위 내에서 모든 하위 디렉터리 내에서 실행 해야 합니다.
 
         $ cd hello
-    
+
 
 프로젝트를 작성할 수 전에 대상 플랫폼의 집합을 지정 해야 합니다. 이러한 명령을 실행 하는 능력 컴퓨터 각 SDK를 지원 하는지 여부에 따라 달라 집니다 그리고 여부 당신은 이미 각 SDK 설치. Mac에서이 중 하나를 실행 합니다.
 
@@ -75,7 +75,7 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다른 버전을 말합니다.
 
@@ -85,12 +85,12 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
-    
+
 
 이 플랫폼의 현재 집합을 확인 하려면 실행:
 
         $ cordova platforms ls
-    
+
 
 (참고는 `platform` 및 `platforms` 명령을 동의어로 사용 됩니다.)
 
@@ -98,7 +98,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
         $ cordova platform remove blackberry10
         $ cordova platform rm android
-    
+
 
 각 지정 된 플랫폼 하위 나타나는 추가 하거나 플랫폼에 영향을 미치는 프로젝트의 *플랫폼* 디렉터리의 내용을 제거 하려면 명령을 실행 합니다. *Www* 소스 디렉토리에 예를 들면 나타나는 각 플랫폼의 하위 디렉터리 내에서 재현 `platforms/ios/www` 또는 `platforms/android/assets/www` . 기본적으로 각 플랫폼의 구성 파일 모든 코르도바의 Api에 액세스할 수 있도록 설정 됩니다.
 
@@ -113,18 +113,18 @@ XREF -->
 반복적으로 프로젝트를 빌드하려면 다음 명령을 실행:
 
         $ cordova build
-    
+
 
 프로젝트 내에서 플랫폼 전용 코드를 생성 하는이 `platforms` 하위 디렉터리. 필요에 따라 특정 플랫폼에 각 빌드 범위를 제한할 수 있습니다.
 
         $ cordova build ios
-    
+
 
 `cordova build`명령 또한 단일 플랫폼을 대상으로 다음이이 예제에서에 대 한 속기 이다:
 
         $ cordova prepare ios
         $ cordova compile ios
-    
+
 
 이 경우에, 한 번 실행 `prepare` , 수정 하 고 코르 도우 바 내에서 생성 하는 플랫폼별 코드 컴파일 대신 애플의 Xcode SDK를 사용할 수 있습니다 `platforms/ios` . 다른 플랫폼의 Sdk와 동일한 접근 방식을 사용할 수 있습니다.
 
@@ -133,24 +133,24 @@ XREF -->
 모바일 플랫폼을 위한 Sdk는 자주 홈 화면에서 응용 프로그램을 실행 하 고 많은 플랫폼 기능과 상호 작용 하는 방법을 볼 수 있도록 장치 이미지를 실행 하는 에뮬레이터와 함께 번들로 가자. 응용 프로그램을 다시 작성 하 고 특정 플랫폼의 에뮬레이터 내에서 보기에 다음과 같은 명령을 실행 합니다.
 
         $ cordova emulate android
-    
+
 
 일부 모바일 플랫폼 아이폰 iOS 프로젝트 등 기본적으로 특정 장치를 에뮬레이션할. 다른 플랫폼을 위해 에뮬레이터와 장치를 처음 연결할 할 수 있습니다. (자세한 내용은 플랫폼 가이드를 참조 하십시오.) 예를 들어, 당신이 먼저 실행에 `android` 명령을 실행 안 드 로이드 SDK 다음 그것의 기본 동작에 따라 시작 특정 장치 이미지를 실행:
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 함께 위로 다음는 `cordova emulate` 명령 에뮬레이터 이미지 홈 화면에서 실행을 위해 사용할 수 있는 최신 응용 프로그램 표시를 새로 고칩니다.
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 또는 당신의 컴퓨터에 휴대폰을 연결 하 고 직접 응용 프로그램을 테스트:
 
         $ cordova run android
-    
+
 
 이 명령을 실행 하기 전에 해야 테스트를 위한 장치를 설정 하려면 다음 절차를 각 플랫폼 마다 다릅니다. 안 드 로이드의 경우, 장치에서 **USB 디버깅** 옵션을 사용 하 여 아마도 개발 environmnent에 따라 USB 드라이버를 추가 할 것입니다. 각 플랫폼의 요구 사항에 대 한 내용은 플랫폼 가이드를 참조 하십시오.
 
@@ -163,78 +163,78 @@ XREF -->
 `cordova plugin add`명령 코드를 플러그인에 대 한 저장소를 지정 해야 합니다. 여기에 기능을 추가할 수 있습니다 예입니다.
 
 *   기본 장치 정보 (장치 API):
-    
+
         $ cordova plugin add org.apache.cordova.device
-        
+
 
 *   네트워크 연결 및 배터리 이벤트:
-    
+
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
-        
+
 
 *   가 속도계, 나침반, 및 지리적 위치:
-    
+
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
-        
+
 
 *   카메라, 미디어 재생 및 캡처:
-    
+
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+
 
 *   장치 또는 네트워크 (파일 API) 액세스 파일:
-    
+
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
-        
+
 
 *   대화 상자 또는 진동 알림:
-    
+
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
-        
+
 
 *   연락처:
-    
+
         $ cordova plugin add org.apache.cordova.contacts
-        
+
 
 *   세계화:
-    
+
         $ cordova plugin add org.apache.cordova.globalization
-        
+
 
 *   Splashscreen:
-    
+
         $ cordova plugin add org.apache.cordova.splashscreen
-        
+
 
 *   새로운 브라우저 윈도우 열기 (InAppBrowser):
-    
+
         $ cordova plugin add org.apache.cordova.inappbrowser
-        
+
 
 *   콘솔 디버깅:
-    
+
         $ cordova plugin add org.apache.cordova.console
-        
+
 
 사용 `plugin ls` (또는 `plugin list` , 또는 `plugin` 자체) 현재 보려면 플러그인을 설치 합니다. 각 식별자에 의해 표시 됩니다.
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
-    
+
 
 플러그인을 제거 하려면 목록에서 나타나는 같은 식별자로 그것을 참조 하십시오. 예를 들어, 여기에 어떻게 릴리스 버전에서 디버그 콘솔에 대 한 지원을 제거할 것입니다.
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
-    
+
 
 일괄 제거 하거나 추가할 수 있습니다 플러그인 각 명령에 대 한 하나 이상의 인수를 지정 하 여.
 
@@ -245,16 +245,16 @@ XREF -->
 대신, 최상위 `merges` 디렉터리 특정 플랫폼에 배포 하기 위해 자산을 지정 하는 장소를 제공 합니다. 각 플랫폼 관련 하위 디렉터리 내에서 `merges` 거울의 디렉토리 구조는 `www` 소스 트리를 무시 하거나 필요에 따라 파일을 추가할 수 있습니다. 예를 들어, 여기 어떻게 사용 하는 수도 `merges` 안 드 로이드 장치에 대 한 기본 글꼴 크기를 밀어 주기 위하여:
 
 *   편집은 `www/index.html` 추가 CSS 파일에 링크를 추가 하는 파일 `overrides.css` 이 경우:
-    
+
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 
 *   필요에 따라 빈 만들 `www/css/overrides.css` 파일, 누락 된 파일 오류를 방지 하는 모든 비-안 드 로이드 빌드를 신청할 것 이다.
 
 *   만들기는 `css` 하위 디렉터리 내에서 `merges/android` , 해당 추가 `overrides.css` 파일. 내 지정 12 포인트 기본 글꼴 크기를 재정의 하는 CSS를 지정 `www/css/index.css` , 예를 들면:
-    
+
         body { font-size:14px; }
-        
+
 
 프로젝트를 다시 작성 하면 안 드 로이드 버전 다른 그대로 유지 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
 
@@ -265,17 +265,17 @@ XREF -->
 설치한 후에 `cordova` 유틸리티를 업데이트할 수 있습니다 항상 그것 최신 버전을 다음 명령을 실행 하 여:
 
         $ sudo npm update -g cordova
-    
+
 
 이 구문을 사용 하 여 특정 버전을 설치.
 
         $ sudo npm 설치-g cordova@3.1.0
-    
+
 
 실행 `cordova -v` 현재 실행 중인 버전을 볼 수 있습니다. 실행은 `npm
 info` 다른 사용 가능한 버전 번호와 함께 현재 버전을 포함 하 긴 목록에 대 한 명령:
 
         $ npm info cordova
-    
+
 
 코르 도우 바 3.0은이 섹션에서 설명 하는 명령줄 인터페이스를 지 원하는 최초의 버전. 위에서 설명한 대로 새 프로젝트를 만든 다음 자산 이전 응용 프로그램의 최상위에 복사를 해야 3.0 이전 버전에서 업데이트 하는 경우 `www` 디렉터리. 해당 되는 추가 3.0 업그레이드에 대 한 자세한 내용은 플랫폼 가이드에서 사용할 수 있습니다. 일단 업그레이드는 `cordova` 명령줄 인터페이스 및 사용 `npm update` 최신, 거기 설명 하는 더 많은 시간이 걸리는 절차는 더 이상 관련.

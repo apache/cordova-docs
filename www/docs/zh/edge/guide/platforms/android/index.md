@@ -61,12 +61,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 科爾多瓦的命令列工具來工作，或者基於他們的 CLI，您需要在您的`路徑`中包括 SDK 的`工具`和`平臺工具`目錄。 在 Mac 上可以使用一個文字編輯器來創建或修改`~/.bash_profile`檔中，添加如下所示，根據 SDK 安裝的位置的行：
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-    
+
 
 這條線在`~/.bash_profile`公開這些工具在新打開的終端視窗。 如果您的終端視窗已經打開在 OSX，或避免在 Linux 上的登出/登錄，運行此工具以使他們在當前的終端視窗中可用：
 
         $ source ~/.bash_profile
-    
+
 
 若要修改`PATH`在窗戶上的環境：
 
@@ -79,9 +79,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 4.  選擇**PATH**變數，然後按**編輯**.
 
 5.  追加到以下 `PATH` 基於在安裝 SDK，例如：
-    
+
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-        
+
 
 6.  將值保存並關閉這兩個對話方塊。
 
@@ -103,25 +103,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 按**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 若要打開模擬器作為單獨的應用程式，請選擇 AVD，然後按**開始**。它推出一樣在設備上，使用其他控制項可用的硬體按鈕:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 為獲得更快的體驗，你可以使用`虛擬機器加速`以提高執行速度。 許多現代的 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前，您需要確定是否您當前的開發系統 CPU 支援一種以下的虛擬化技術：
 
@@ -139,7 +139,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 為了加快模擬程式，您需要下載並安裝一個或多個`Intel x86 原子`系統映射，以及`英特爾硬體加速執行經理 (HAXM)`.
 
@@ -147,7 +147,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 下載後，運行英特爾安裝程式時，這是你 Android SDK 在`臨時演員/英特爾/Hardware_Accelerated_Execution_Manager`中可用。 **注意**：`如果您有任何問題，安裝套裝軟體，你可以找到更多的資訊和一步一步指導檢查這` [篇文章英特爾][17].
 
@@ -169,13 +169,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
         $ cd hello
         $ cordova platform add android
         $ ccordova prepare              # or "cordova build"
-    
+
 
 這裡是 Unix 和 Windows 的相應較低級別 shell 工具方法：
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-    
+
 
 ## 生成專案
 
@@ -185,7 +185,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-    
+
 
 如果使用的特定于 Android 的 shell 工具在發展中，還有一個不同的方法。 一旦您生成專案時，預設的應用程式的來源是可用的`資產/www`子目錄中。 後續的命令，可在其`科爾多瓦`子目錄。
 
@@ -193,10 +193,10 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-    
+
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-    
+
 
 ## 部署應用程式
 
@@ -204,13 +204,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-    
+
 
 否則，請使用備用殼介面：
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-    
+
 
 您可以使用**cordova run android --list**看到所有可用的目標和**cordova run android --target=target_name**在一個特定的設備或模擬器上運行應用程式 （例如，`cordova run android --target="Nexus4_emulator"`).
 
@@ -220,12 +220,12 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 當您`run`該應用程式，您還`build`它。 您可以附加額外`--debug`， `--release`，和`--nobuild`標誌來控制它如何構建的或甚至是否重建是必需的：
 
         $ /path/to/project/cordova/run --emulator --nobuild
-    
+
 
 ## 其他命令
 
@@ -233,13 +233,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-    
+
 
 以下清理的專案檔案：
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-    
+
 
 ## 在 SDK 中打開一個新專案
 
@@ -248,23 +248,23 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 1.  推出**Android 工作室**中的應用。
 
 2.  選擇**導入專案 （Eclipse ADT，Gradle 等）**.
-    
+
     ![][19]
 
 3.  選擇存儲 （`你/專案/platforms/android` android 平臺的位置).
-    
+
     ![][20]
 
 4.  `Gradle Sync`問題你可以乾脆的回答**是**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 你現在有所有的和可以從生成並運行該應用程式直接`Android 工作室`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 請參閱[Android 工作室概述][22][生成並運行從 Android 工作室][23]為更多的細節。
 
