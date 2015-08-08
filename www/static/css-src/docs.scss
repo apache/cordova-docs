@@ -2,6 +2,8 @@
 
 .site-toc-container {
     position: fixed;
+    overflow-y: scroll;
+    height: 80%;
 }
 .site-toc-title {
     font-weight: 300;
