@@ -95,6 +95,12 @@ h1, ul, li {
 /*  overflow:auto;*/
   z-index:0;
 }
+#notLatestVersion {
+  display: none;
+  text-align: center;
+  padding: 10px 180px 10px 0px;
+  border-bottom: 1px solid #919395;
+}
 
 #header h1,
 #header h1 a,

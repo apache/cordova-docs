@@ -29,7 +29,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-64283057-1', 'auto');
 ga('send', 'pageview');
 } else {
-    function ga() {
+    var ga = function() {
         console.log(arguments);
     }
 }
@@ -72,7 +72,7 @@ function setupLanguageSelect() {
     languageElement.value = settings.lang;
     languageElement.addEventListener('change', function(e) {
         var language    = languageElement.value;
-        var languageVersions = versions[language];
+        var languageVersions = getCurrentVersions();
         var hasVersionInLanguage = languageVersions.filter(function (versionString) {
             versionString === settings.version;
         }).length > 0;
@@ -90,7 +90,7 @@ function setupLanguageSelect() {
 
 function setupVersionSelect() {
     var versionElement = document.getElementById('version');
-    var languageVersions = versions[settings.lang] || [];
+    var languageVersions = getCurrentVersions();
     languageVersions.reverse().forEach(function (version) {
         var optionElement = document.createElement("option");
         optionElement.value = version;
@@ -107,16 +107,43 @@ function setupVersionSelect() {
     }, false);
 }
 
+function getCurrentVersions() {
+    return versions[settings.lang] || [];
+}
+
+function displayNotLatestVersion() {
+    // Edge version always latest.
+    if (settings.version === "edge") {
+        return;
+    }
+
+    var languageVersions = getCurrentVersions();
+    // Skip if we have only two language.
+    // We have at least edge + latest docs.
+    // All versions sorted in descending order, so second entry is latest language.
+    if (languageVersions.length <= 2 || languageVersions[1] === settings.version) {
+        return;
+    }
+
+    var messageElement = document.getElementById('notLatestVersion');
+    messageElement.style.display = "block";
+}
+
 //
 // API <select>
 //
+function setupChangeSubsection() {
+    var $select = document.getElementById('subheader').getElementsByTagName('select')[0];
+    if (!$select) return;
+    
+    $select.addEventListener('change', function(e) {
+        document.location = '#' + this.options[this.selectedIndex].value;
+    }, false);
+}
+
 (function() {
     window.addEventListener('load', function() {
-        var $select = document.getElementById('subheader').getElementsByTagName('select')[0];
-        if (!$select) return;
-        
-        $select.addEventListener('change', function(e) {
-            document.location = '#' + this.options[this.selectedIndex].value;
-        }, false);
+        setupChangeSubsection();
+        displayNotLatestVersion();
     }, false);
 })();
