@@ -49,6 +49,10 @@
     display: inline-block;
     margin-left: 0.3em;
 }
+.content-header .dropdown .selected {
+    font-weight: bold;
+    font-style: italic;
+}
 .content-header .dropdown button.dropdown-toggle {
     border-radius: 4px;
     background-color: rgb(214, 214, 214);
@@ -59,16 +63,6 @@
 .content-header .edit {
     margin-right: 1em;
     margin-left: 1em;
-}
-
-/*
- * the id that gets assigned to each heading in a page,
- * and which gets referred by the <a>s in the page ToC
- */
-.page-toc-anchor {
-    display: block;
-    position: relative;
-    bottom: 50px;
 }
 
 /* missing version highlight */

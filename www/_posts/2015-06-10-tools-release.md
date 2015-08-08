@@ -7,6 +7,7 @@ title:  "Tools Release: June 10, 2015"
 categories: news
 tags: release tools
 ---
+
 New versions of cordova tools are now live!
 
 * [cordova-lib@5.1.1](https://www.npmjs.org/package/cordova-lib)
@@ -15,9 +16,10 @@ New versions of cordova tools are now live!
 * [cordova-js@4.0.0](https://www.npmjs.org/package/cordova-js)
 
 Release highlights:
+
 * [CB-8898](https://issues.apache.org/jira/browse/CB-8898) Introduced a new `cordova requirements` command
-* [CB-8441](https://issues.apache.org/jira/browse/CB-8441) `cordova prepare --browserify` now supports 3rd party plugins to build your `cordova.js` at run time! Try it out! 
-* [CB-9075](https://issues.apache.org/jira/browse/CB-9075) pinned platforms will include platform patch updates without requiring a new tools release. 
+* [CB-8441](https://issues.apache.org/jira/browse/CB-8441) `cordova prepare --browserify` now supports 3rd party plugins to build your `cordova.js` at run time! Try it out!
+* [CB-9075](https://issues.apache.org/jira/browse/CB-9075) pinned platforms will include platform patch updates without requiring a new tools release.
 
 To update your tools:
 

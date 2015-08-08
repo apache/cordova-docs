@@ -1,6 +1,7 @@
 ---
 layout: cordova
 title: Apache Cordova
+permalink: /
 ---
 
 <!-- REMOVE THIS LINK BEFORE PUBLISHING.  This is just for IntelliSense while coding -->
@@ -22,8 +23,12 @@ title: Apache Cordova
                     <img src="{{ site.baseurl }}/static/img/4-platforms.png" />
                 </div>
                 <div>
-                    <button type="button" class="btn btn-lg btn-primary">Get Started</button>
-                    <button type="button" class="btn btn-lg btn-primary">Documentation</button>
+                    <a href="#getstarted" class="btn btn-lg btn-primary">
+                        Get Started
+                    </a>
+                    <a href="{{ site.baseurl }}/docs/en/edge" class="btn btn-lg btn-primary">
+                        Documentation
+                    </a>
                 </div>
             </div>
         </div>
@@ -57,9 +62,11 @@ title: Apache Cordova
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12 text-center">
+            <a id="getstarted" name="getstarted" class="fragment-anchor"></a>
             <h1>Get Started Fast</h1>
             <p>Looks like you're using
-                <span id="current_os">Windows</span>to develop your apps</p>
+                <span id="current_os">Windows</span>
+                to develop your apps</p>
             <p>
                 <a href="#" role="button">Use a different OS?</a>
             </p>
@@ -166,9 +173,11 @@ title: Apache Cordova
                 <h1>Supported Platforms</h1>
                 <h2>See a list of
                     <a href="#">features supported</a> in each platform</h2>
-                <p>Cordova wraps your HTML/JavaScript app into a native container which can access the device functions of several platforms.
+                <p>
+                    Cordova wraps your HTML/JavaScript app into a native container which can access the device functions of several platforms.
                     These functions are exposed via a unified JavaScript API, allowing you to easily write one set of code to target nearly every
-                    phone or tablet on the market today and publish to their app stores.</p>
+                    phone or tablet on the market today and publish to their app stores.
+                </p>
             </div>
         </div>
     </div><!-- /container -->
@@ -193,105 +202,29 @@ title: Apache Cordova
         </div>
         <!-- ROW 1 Starts -->
         <div class="row cordova_tools_gallery">
-            <div class="col-lg-2 col-sm-4 card">
+            {% for tool in site.data.tools %}
+            <div class="col-lg-2 col-sm-va card">
                 <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
+                    <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
+                    <p class="card_title">
+                        {{ tool.name }}
+                    </p>
+                    <p>
+                        {{ tool.description | truncatewords:25 }}
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ROW 2 Starts -->
-        <div class="row cordova_tools_gallery">
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="card_inner">
-                    <img src="{{ site.baseurl }}/static/img/cordova_48.png" class="center-block"/>
-                    <p class="card_title">LitWare</p>
-                    <p>Nullam dictum condimentum sapien, et venenatis lectus tempor vehicula. Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="row"> <!-- Add yours or see more links -->
             <div class="col-sm-12">
                 <div class="pull-right add_seemore_links">
-                    <a href="#">Add your tool</a><a href="#">See more...</a>
+                    <a href="#">Add your tool</a>
                 </div>
             </div>
         </div>
-        
-        
     </div><!-- /container -->
+
     <div class="container">
         <div class="row showcase_section_intro">
             <div class="col-md-12 text-center">
@@ -300,58 +233,31 @@ title: Apache Cordova
             </div>
         </div>
         <div class="row cordova_tools_gallery">
+            {% for app in site.data.sample-apps %}
             <div class="col-lg-2 col-sm-4 card">
                 <div class="sample_app_thumb"></div>
                 <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
+                    <p class="card_title">{{ app.name }}</p>
+                    <p>{{ app.description | truncatewords:10 }}</p>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="sample_app_thumb"></div>
-                <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="sample_app_thumb"></div>
-                <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="sample_app_thumb"></div>
-                <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="sample_app_thumb"></div>
-                <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-4 card">
-                <div class="sample_app_thumb"></div>
-                <div class="card_inner">
-                    <p class="card_title">LitWare</p>
-                    <p>Aenean ac ligula in purus sollicitudin maximus.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="row"> <!-- Add yours or see more links -->
             <div class="col-sm-12">
                 <div class="pull-right add_seemore_links">
-                    <a href="#">Add your app</a><a href="#">See more...</a>
+                    <a href="#">Add your app</a>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <p>
+                &nbsp;
+            </p>
+        </div>
     </div>
 </div><!-- /container-fluid -->
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

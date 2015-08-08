@@ -74,8 +74,7 @@ gulp.task("watch", function () {
     );
     gulp.watch(
         [
-            CONFIG_FILE,
-            DEFAULTS_FILE,
+            "*.yml",
             path.join(DATA_DIR, "**", "*.yml"),
             path.join(SOURCE_DIR, "**", "*.html"),
             path.join(SOURCE_DIR, "**", "*.md"),

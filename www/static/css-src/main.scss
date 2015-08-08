@@ -210,7 +210,7 @@ img#logo_top {
 .cordova_tools_gallery {
 	color:white;
 	.card {
-			padding:8px;		
+			padding:8px;
 			.card_title {
 				color: $brand-primary;
 				font-weight: bold;
@@ -235,16 +235,37 @@ img#logo_top {
 	a {	padding-left:30px; }
 }
 
+/* footer */
+footer {
+    background-color: white;
+    position: relative;
+}
+footer ul.nav li > a {
+    padding-left: 0px;
+}
+footer .copyright_text {
+    margin-top: 25px;
+}
+
+/*
+ * position anchirs of fragment links slightly above their targets
+ */
+.fragment-anchor {
+    display: block;
+    position: relative;
+    bottom: 50px;
+}
+
 /*
 ********* Modifications to Bootstrap ***********
 */
-button.btn {
+button.btn, a.btn {
     border-radius: 0;
 	background-color:$brand-primary;
 	color:black;
 	border:0;
 }
-button.btn:hover {
+button.btn:hover, a.btn {
 	color:black;
 }
 h1 {

@@ -1,8 +1,8 @@
 ---
 layout: post
 author:
-name: Andrew Grieve
-url: https://twitter.com/GrieveAndrew
+    name: Andrew Grieve
+    url: https://twitter.com/GrieveAndrew
 title:  "Plugins Release: February 10, 2015"
 categories: news
 tags: release plugins

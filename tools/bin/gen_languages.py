@@ -31,6 +31,8 @@ def main():
         lang_path     = os.path.join(root_dir, lang_id)
         version_names = list(listdirs(lang_path))
 
+        version_names.reverse()
+
         config[lang_id] = {
             'name':     LANGUAGE_MAP[lang_id],
             'versions': version_names
