@@ -1,0 +1,6 @@
+- {name: Guide, url: /docs/sl/edge/index.html}
+- {name: Getting Started, url: /docs/sl/edge/guide/cli/index.html}
+- {name: Plugins, url: /docs/sl/edge/cordova/plugins/pluginapis.html}
+- {name: Configuration, url: /docs/sl/edge/config_ref/index.html}
+- {name: Privacy and Security, url: /docs/sl/edge/guide/appdev/security/index.html} # Privacy: /docs/sl/edge/guide/appdev/privacy/index.html
+- {name: Storage, url: /docs/sl/edge/cordova/storage/storage.html}

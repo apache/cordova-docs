@@ -1,3 +1,4 @@
+- {name: Guide, url: /docs/en/edge/index.html}
 - {name: Getting Started, url: /docs/en/edge/guide/cli/index.html}
 - {name: Plugins, url: /docs/en/edge/cordova/plugins/pluginapis.html}
 - {name: Configuration, url: /docs/en/edge/config_ref/index.html}

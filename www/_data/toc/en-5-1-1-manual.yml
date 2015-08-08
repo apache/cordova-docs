@@ -1,0 +1,6 @@
+- {name: Guide, url: /docs/en/5.1.1/index.html}
+- {name: Getting Started, url: /docs/en/5.1.1/guide/cli/index.html}
+- {name: Plugins, url: /docs/en/5.1.1/cordova/plugins/pluginapis.html}
+- {name: Configuration, url: /docs/en/5.1.1/config_ref/index.html}
+- {name: Privacy and Security, url: /docs/en/5.1.1/guide/appdev/security/index.html} # Privacy: /docs/en/5.1.1/guide/appdev/privacy/index.html
+- {name: Storage, url: /docs/en/5.1.1/cordova/storage/storage.html}
