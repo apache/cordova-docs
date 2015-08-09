@@ -216,17 +216,24 @@ Run following commands (All commands here would be for NodeJS version of Crowdin
    
 3. Now unpack the download content to the temporary directory.
 
-   `unzip -x ru.zip -d tmp/ru`
+   ```
+   mkdir -p tmp/ru
+   unzip -x ru.zip -d tmp/ru
+   ```
    
 4. Copy the unpacked content to the `docs` folder.
 
    a) on Linux: 
     `cp tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/`
  
-   b) on Windows:
-    `xcopy tmp/ru/cordova-docs/docs/ru/edge/* docs/ru/edge/`
+   b) on Windows (assuming PowerShell):
+    `cp -r -force tmp/ru/cordova-docs/docs/ru/edge docs/ru/`
     
 5. Remove temporary directory. In my case `tmp/ru`.
+
+   ```
+   rm -f tmp/ru
+   ```
 
    Now you have fresh translation and could generate content.
    
