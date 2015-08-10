@@ -32,7 +32,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Окна (Windows)
+*   Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
 На Mac командная строка доступна с помощью приложения *Терминал*. На ПК он доступен как приложение *Командная строка* в разделе *Аксессуары*.
@@ -47,22 +47,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Чтобы установить инструмент командной строки `cordova`, выполните следующие действия:
 
-1.  Скачайте и установите [Node.js](http://nodejs.org/). После установки вы должны быть возможность выполнять `node` и `npm` в командной строке. При желании, вы можете дополнительно использовать инструмент, как например `nvm` или `nave` для управления вашей установкой Node.js.
+1.  Скачайте и установите [Node.js][1]. После установки вы должны быть возможность выполнять `node` и `npm` в командной строке. При желании, вы можете дополнительно использовать инструмент, как например `nvm` или `nave` для управления вашей установкой Node.js.
 
-2.  Скачайте и установите [git клиент](http://git-scm.com/), если у вас его еще нет. После установки вы должны быть способны вызвать `git` из вашей командной строки. Даже несмотря на то, что вы не будете использовать `git` вручную, CLI использовать для загрузки некоторых ресурсов при создании нового проекта.
+2.  Скачайте и установите [git клиент][2], если у вас его еще нет. После установки вы должны быть способны вызвать `git` из вашей командной строки. Даже несмотря на то, что вы не будете использовать `git` вручную, CLI использовать для загрузки некоторых ресурсов при создании нового проекта.
 
 3.  Установите модуль `cordova` с помощью инструмента `npm` Node.js. Модуль `cordova` будет автоматически загружен `npm`.
 
-   * В OS X и Linux:
+    *   В OS X и Linux:
     
-          $ sudo npm install -g cordova
-        
-      В OS X и Linux, может быть необходимым предварять команду `npm` командой `sudo` чтобы установить этот инструмент разработки, в защищенные каталоги, такие как `usr/local/share`. Если вы используете инструмент nvm/nave и имеете доступ на запись к каталогу установки, префикс `sudo` можно опустить. Есть [больше подсказок][3] по использованию `npm` без `sudo`, если вы имеете желание сделать это.
+            $ sudo npm install -g cordova
+    
+        В OS X и Linux, может быть необходимым предварять команду `npm` командой `sudo` чтобы установить этот инструмент разработки, в защищенные каталоги, такие как `usr/local/share`. Если вы используете инструмент nvm/nave и имеете доступ на запись к каталогу установки, префикс `sudo` можно опустить. Есть [больше подсказок][3] по использованию `npm` без `sudo`, если вы имеете желание сделать это.
 
-  *   В Windows:
+    *   В Windows:
     
             C:\>npm install -g cordova
-        
+    
     Упомянутый выше флаг `-g` указывает `npm` установить `cordova` глобально. В противном случае он будет установлен в подкаталоге `node_modules` текущего рабочего каталога.
     
     Вам может понадобиться добавить каталог `npm` в переменную `PATH` вашего окружения, для того чтобы вызывать глобально установленные `npm` модули. В Windows `npm` обычно можно найти в каталоге `C:\Users\username\AppData\Roaming\npm`. На OS X и Linux его обычно можно найти в каталоге `/usr/local/share/npm`.
@@ -71,7 +71,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
     После установки вы должны иметь возможность запускать `cordova` в командной строке без аргументов, и это должно напечатать текст справки.
 
- [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
+[1]: http://nodejs.org/
+[2]: http://git-scm.com/
+[3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
 
 ## Создание приложения
 
@@ -106,11 +108,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Запустите любую из этих команд на Windows компьютере, где *wp* ссылается на различные версии операционной системы Windows Phone:
 
-        $ cordova platform add wp8 
-        $ cordova platform add windows 
-        $ cordova platform add amazon-fireos 
-        $ cordova platform add android 
-        $ cordova platform add blackberry10 
+        $ cordova platform add wp8
+        $ cordova platform add windows
+        $ cordova platform add amazon-fireos
+        $ cordova platform add android
+        $ cordova platform add blackberry10
         $ cordova platform add firefoxos
     
 
@@ -217,50 +219,50 @@ SDK для мобильных платформ часто поставляютс
 *   Базовая информация устройства (Device API):
     
         $ cordova plugin add cordova-plugin-device
-        
+
 *   Сетевое подключение и События батареи:
     
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
-        
+
 *   Акселерометр, компас и информация о расположении:
     
         $ cordova plugin add cordova-plugin-device-motion
         $ cordova plugin add cordova-plugin-device-orientation
         $ cordova plugin add cordova-plugin-geolocation
-        
+
 *   Камера, воспроизведение мультимедиа и съемка:
     
         $ cordova plugin add cordova-plugin-camera
         $ cordova plugin add cordova-plugin-media-capture
         $ cordova plugin add cordova-plugin-media
-        
+
 *   Доступ к файлам на устройстве или по сети (File API):
     
         $ cordova plugin add cordova-plugin-file
         $ cordova plugin add cordova-plugin-file-transfer
-        
+
 *   Уведомление с помощью диалогового окна или вибрации:
     
         $ cordova plugin add cordova-plugin-dialogs
         $ cordova plugin add cordova-plugin-vibration
-        
+
 *   Контакты:
     
         $ cordova plugin add cordova-plugin-contacts
-        
+
 *   Глобализация:
     
         $ cordova plugin add cordova-plugin-globalization
-        
+
 *   Заставка:
     
         $ cordova plugin add cordova-plugin-splashscreen
-        
+
 *   Открытие новых окон браузера (InAppBrowser):
     
         $ cordova plugin add cordova-plugin-inappbrowser
-        
+
 *   Консоль отладки:
     
         $ cordova plugin add cordova-plugin-console
@@ -305,7 +307,19 @@ SDK для мобильных платформ часто поставляютс
 
 Приведенный выше пример git получает плагин из последней версии ветки master, но альтернативная git ссылка например тег или другая ветка могут быть добавлены после символа `#`:
 
+Установка из тега:
+
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+или из ветки:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#CB-8438cordova-plugin-console
+    
+
+или git-ref также может также быть конкретным коммитом:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#f055daec45575bf08538f885e09c85a0eba363ff
     
 
 Если плагин (и его файл `plugin.xml`) находится в подкаталоге репозитария git, вы можете указать его после символа `:`. Обратите внимание, что символ `#` все еще необходим:
@@ -332,7 +346,7 @@ SDK для мобильных платформ часто поставляютс
 *   Измените файл `www/index.html`, добавив ссылку на дополнительный CSS-файл, `overrides.css` в данном случае:
     
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
-        
+
 *   При необходимости создайте пустой `www/css/overrides.css` файл, который будет применяться для всех построений отличных от Android, предотвращая ошибку недостающего файла.
 
 *   Создайте `css` подкаталог внутри `merges/android` , затем добавьте соответствующий файл `overrides.css`. Укажите CSS, который переопределяет 12 пунктовый размер шрифта по умолчанию, указанный в `www/css/index.css` , например:

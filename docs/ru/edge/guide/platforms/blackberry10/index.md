@@ -79,7 +79,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
     
-        $ источника ~/.bash_profile
+        $ source ~/.bash_profile
         
 
 Если у вас есть любые проблемы со средой, используя Native SDK выполните из командной строки, соответствующий для вашей платформы файл, расположенный в пути установки:
@@ -87,15 +87,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   На Windows → оболочку MS-DOS:
     
         C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
-        
+
 *   На Windows → оболочка bash git:
     
         $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
-        
+
 *   На Linux → установлен в качестве пользователя root:
     
         $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-        
+
 *   На Linux → установлен как не root пользователя:
     
         $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
@@ -182,7 +182,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   В Windows:
     
         $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-        
+
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
@@ -204,7 +204,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   В Windows:
     
         $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-        
+
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
@@ -240,7 +240,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   На Mac/Linux:
     
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
-        
+
 После того, как цель определена, вы можете передавать ее команде run с помощью `--target`:
 
     $ cordova run blackberry10 --target=emu

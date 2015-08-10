@@ -204,6 +204,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
     
+
 В противном случае используйте интерфейс альтернативной оболочки:
 
         $ /path/to/project/cordova/run --emulator
@@ -232,6 +233,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
     
+
 Следующие команды очищают файлы проекта:
 
         $ /path/to/project/cordova/clean

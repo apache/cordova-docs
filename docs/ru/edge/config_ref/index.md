@@ -120,25 +120,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `BackgroundColor`: Задайте цвет фона приложения. Поддерживает шестнадцатеричное значение размером 4 байта, где первый байт представляющий альфа-канал и стандартные значения RGB для следующих трех байтов. В этом примере указывается голубой цвет:
     
         <preference name="BackgroundColor" value="0xff0000ff"/>
-        
+    
     Применяется к Android и BlackBerry. Переопределяет CSS, который доступен для *всех* платформ, например:`body{background-color:blue}`.
 
 *   `HideKeyboardFormAccessoryBar`(логическое значение, по умолчанию `false` ): Установите в `true` чтобы скрыть дополнительную панель инструментов, которая появляется над клавиатурой, помогая пользователям перемещаться из одной формы ввода на другой.
     
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-        
-    Применяется к iOS и BlackBerry.
+    
+    Применяется к BlackBerry.
 
 *   `Orientation` (строка, по умолчанию `default`): позволяет вам заблокировать ориентацию и предотвратить интерфейс от вращения в ответ на изменения в ориентации. Возможные значения `default`, `landscape`, или `portrait`. Пример:
     
         <preference name="Orientation" value="landscape" />
-        
+    
     Кроме того можно указать любое значение платформо-зависимое значение для ориентации, если вы разместите элемент `<preference>` внутри элемента `<platform>`:
     
         <platform name="android">
             <preference name="Orientation" value="sensorLandscape" />
         </platform>
-        
+    
     Применяется к Android, iOS, WP8, Amazon Fire OS и Firefox OS.
     
     **Примечание**: Значение `default` означает что Cordova удалит предпочитаемое значение orientation из файла конфигурации/манифеста платформы позволяя платформе использовать свое поведение по умолчанию.
@@ -148,10 +148,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <platform name="ios">
             <preference name="Orientation" value="all" />
         </platform>
-        
+    
     Для iOS ориентацией можно программно управлять путем определения функции обратного вызова javascript в объекте `window`:
-
-     <pre>/** 
+     <pre>
+     /** 
      * @param {Number} degree 
      *     UIInterfaceOrientationPortrait: 0, 
      *     UIInterfaceOrientationLandscapeRight: 90, 
@@ -181,7 +181,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </feature>
     
 
-Смотрите подробную информацию о том, как определить каждую функции в разделе Справочник API. Также смотрите Руководство по разработке плагинов для получения дополнительной информации по плагинам.
+Смотрите подробную информацию о том, как определить каждую функции в разделе Справочник по API. Также смотрите Руководство по разработке плагинов для получения дополнительной информации по плагинам.
 
 ## Элемент *platform*
 

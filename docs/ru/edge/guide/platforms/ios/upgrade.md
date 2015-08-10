@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекта
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекта
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:
@@ -53,7 +53,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекта
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:
@@ -66,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекта
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:
@@ -79,7 +79,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекта
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:
@@ -179,14 +179,14 @@ platform add ios`.
             <param name="ios-package" value="CDVLocalStorage" />
         </feature>
         <!-- other <feature> tags -->
-        
+
 8.  Удалить `CordovaLib` каталог и копию `CordovaLib` каталог из нового проекта в корневой директории вашего проекта.
 
 9.  Добавьте эти два фреймворка в проект:
     
         OpenAL
         ImageIO
-        
+
 10. Обновите для цели построения вашего проекта **Build Settings**. В разделе **Linking → Other Linker Flags**, измените **"-Obj-C"** на **"-ObjC"**.
 
 11. Обновите для цели построения вашего проекта **Build Settings**. В разделе **Linking → Other Linker Flags**, измените **"-all_load"** на `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a`. Вам только нужно будет это сделать, если у вас есть проблемы, определенные в [этом запросе.][2].
@@ -334,7 +334,7 @@ platform add ios`.
 11. Добавьте плагин InAppBrowser в `config.xml`, путем добавления этого тега в `cordova>< plugins><`:
     
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
-        
+
 12. Обратите внимание, что плагины Objective-C, более *не* whitelisted. Чтобы разрешить ваши соединения с помощью списка разрешенных ресурсов приложение, вам нужно задать заголовок `User-Agent` для соединения таким же как пользовательский агент у основного Cordova WebView. Вы можете получить это, обратившись к свойство `userAgent` основного контроллера представления. Основной контроллер представления (`CDVViewController`) также имеет метод `URLisAllowed` который позволяет вам проверить, прошел ли URL-адрес ограничения списка разрешенных ресурсов.
 
 13. Изменения API устройства:
@@ -441,7 +441,7 @@ platform add ios`.
 14. Для ошибок `#import` измените любой импорт в двойных кавычках в следующем стиле:
     
         #import "CDV.h"
-        
+    
     в стиль, основанный на скобках:
     
         #import <Cordova/CDV.h>
@@ -489,11 +489,11 @@ platform add ios`.
         "$(OBJROOT)/UninstalledProducts/include"
         
         "$(BUILT_PRODUCTS_DIR)"
-        
+
 33. Найдите **Other Linker Flags**. Для этого параметра, добавьте это значение:
     
         -weak_framework CoreFoundation
-        
+
 34. Постройте свой проект, это должно скомпилировать и связать **без** вопросов.
 
 35. Выберите проект в раскрывающемся списке **Scheme** , а затем выберите **iPhone 5.1 Simulator**.
@@ -559,7 +559,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         Cordova.plist
-        
+
 5.  Добавьте в свой проект Xcode все новые файлы `MainViewController` и `AppDelegate` .
 
 6.  Скопируйте файл `www/cordova-1.6.0.js` из нового проекта в папке `www` и удалите файл `www/cordova-1.5.0.js`.
@@ -619,7 +619,7 @@ platform add ios`.
 18. В файлах `AppDelegate.h`, `AppDelegate.m`и `MainViewController.h` замените весь блок `#ifdef PHONEGAP_FRAMEWORK` на:
     
         #import "CDVDeprecated.h"
-        
+
 19. Выберите **значок проекта** в Project Navigator, выберите **Target** проекта, а затем выберите вкладку **Build Phases**.
 
 20. Найдите **Framework Search Paths**.
@@ -681,7 +681,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 5.  Добавьте файл `MainViewController.m` в ваш проект Xcode.
 
 6.  Скопируйте файл `www/phonegap-1.4.0.js` из нового проекта в папке `www` и удалите файл `www/phonegap-1.3.0.js`.
@@ -707,7 +707,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 5.  Добавьте файл `MainViewController.m` в ваш проект Xcode.
 
 6.  Скопируйте файл `www/phonegap-1.3.0.js` из нового проекта в папке `www` и удалите файл `www/phonegap-1.2.0.js`.
@@ -733,7 +733,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 5.  Добавьте файл `MainViewController.m` в ваш проект Xcode.
 
 6.  Скопируйте файл `www/phonegap-1.2.0.js` из нового проекта в папке `www` и удалите файл `www/phonegap-1.1.0.js`.
@@ -759,7 +759,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 5.  Добавьте файл `MainViewController.m` в ваш проект Xcode.
 
 6.  Скопируйте файл `www/phonegap-1.1.0.js` из нового проекта в папке `www` и удалите файл `www/phonegap-1.0.0.js`.
@@ -785,7 +785,7 @@ platform add ios`.
         MainViewController.h
         MainViewController.m
         MainViewController.xib
-        
+
 5.  Добавьте файл `MainViewController.m` в ваш проект Xcode.
 
 6.  Скопируйте файл `www/phonegap-1.0.0.js` из нового проекта в папке `www` и удалите файл `www/phonegap-0.9.6.js`.

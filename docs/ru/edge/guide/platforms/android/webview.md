@@ -49,7 +49,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
                 Config.init(this);
                 cwv.loadUrl(Config.getStartUrl());
             }
-        
+
 6.  Если приложение должно использовать камеру, реализуйте следующее:
     
         @Override
@@ -101,7 +101,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-        
+
 8.  Скопируйте файлы HTML и JavaScript приложения в каталог `/assets/www` проекта Android.
 
 9.  Скопируйте `config.xml` файл из `/framework/res/xml` в каталог `/res/xml` проекта.
