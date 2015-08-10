@@ -76,6 +76,11 @@
 					
 					.date{
 						color: #2f2f2f;
+					}
+
+					.comment{
+						float: right;
+						font-size: 15px;
 					}			
 				}		
 			}
@@ -203,6 +208,24 @@
 			padding: 40px 0;
 			color: black;
 		}
+		footer{
+			.title{
+				color: #3992ab;
+				font-size: 12pt;
+				margin-top: 20px;
+			}
+			.author, .date{
+				font-size: 10pt;
+				color: #999;
+				padding: 0 2px;			
+			}
+			.content{
+				max-height: 40px;
+			}
+		}
+	}
+	.disqus{
+		margin-top: 30px;
 	}
 	
 	
