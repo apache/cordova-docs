@@ -208,8 +208,8 @@ moving to a read-only state. `publish`/
 use corresponding `npm` commands.
 
 Other developers can install your plugin automatically using either `plugman`
- or the Cordova CLI.  (For details on each development path, see Using
- Plugman to Manage Plugins and The Command-Line Interface.)
+ or the Cordova CLI.  (For details on each development path, see
+ Using Plugman to Manage Plugins and The Command-Line Interface.)
 
 To publish a plugin to NPM registry you need to follow steps below:
 
