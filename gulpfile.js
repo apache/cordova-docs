@@ -119,9 +119,9 @@ gulp.task("serve", function (done) {
 });
 
 gulp.task("configs", function (done) {
-    execPiped("python", [bin("gen_defaults.py"), DOCS_DIR], DEFAULTS_FILE)
+    execPiped("node", [bin("gen_defaults.py"), DOCS_DIR], DEFAULTS_FILE)
         .pipe(gulp.dest("."));
-    execPiped("python", [bin("gen_languages.py"), DOCS_DIR], LANGUAGES_FILE)
+    execPiped("node", [bin("gen_languages.js"), DOCS_DIR], LANGUAGES_FILE)
         .pipe(gulp.dest("."));
     exec("python", [bin("all_toc.py"), DOCS_DIR, DATA_DIR], done);
 });
