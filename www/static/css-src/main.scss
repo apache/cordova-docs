@@ -35,6 +35,17 @@ $gray-20: lighten($gray-base, 80%);
 $gray-10: lighten($gray-base, 90%);
 $brand-primary: #4CC2E4;
 
+
+/* Mixin that prefixes any CSS rule */
+@mixin vendor-prefix($property, $argument) {
+  -webkit-#{$property}: #{$argument};
+  -ms-#{$property}: #{$argument};
+  -moz-#{$property}: #{$argument};
+  -o-#{$property}: #{$argument};
+  #{$property}: #{$argument};
+}
+
+
 #hero {
 	height:1020px;
 	background-color:$gray-transparent;
@@ -73,7 +84,8 @@ $brand-primary: #4CC2E4;
     width: 100%;
     margin: 0;
     /* margin-top: -200px; */ /* Less responsive */
-    transform: translateY(-100%);
+	@include vendor-prefix(transform, translateY(-100%));
+	
 	.container {
 		padding-top:55px;
 		padding-bottom:55px;

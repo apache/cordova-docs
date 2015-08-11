@@ -35,4 +35,5 @@ exclude:
     - docs/en/3.6.0
     - docs/en/4.0.0
     - docs/en/5.1.1
+    - docs/en #take this off to build docs
     # not excluding edge or 5.0.0 for english (testing purposes)
