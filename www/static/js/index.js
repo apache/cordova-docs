@@ -74,8 +74,8 @@ function getCookie(cname) {
     return "";
 }
 
+var lastVisit = getCookie("visitTime");
 function checkNotification() {
-    var lastVisit = getCookie("visitTime");
     var dates = [];
     if (lastVisit != "") {
         {% for post in site.posts %}
@@ -104,6 +104,13 @@ var new_blog_count = checkNotification();
 if(new_blog_count) {
     document.getElementById("new_blog_count").innerHTML = new_blog_count;
 }
+
+$('.adorner').each(function(i) {
+    var blog_time = new Date($(this).attr('blogTime')).getTime();
+    if(blog_time > lastVisit) {
+        this.style.backgroundColor = "#3992ab";
+    }
+});
 
 $(document).ready(function () {
 });
