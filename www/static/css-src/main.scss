@@ -1,5 +1,5 @@
 @import 'lib/bootstrap';
-@import 'blog';
+/* @import 'blog'; */
 @import 'plugins';
 
 /* Customized Variables for Bootstrap */
@@ -35,6 +35,14 @@ $gray-20: lighten($gray-base, 80%);
 $gray-10: lighten($gray-base, 90%);
 $brand-primary: #4CC2E4;
 
+/* Grid size (mirrors Bootstraps) */
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1;
+$screen-md-min: 992px;
+$screen-sm-max: $screen-md-min - 1;
+$screen-lg: (min-width: 1200px);
+$scree-md-max: $screen-lg - 1;
+
 
 /* Mixin that prefixes any CSS rule */
 @mixin vendor-prefix($property, $argument) {
@@ -46,6 +54,13 @@ $brand-primary: #4CC2E4;
 }
 
 
+@media (min-width: $screen-sm-min) { body { font-size:.5em; } }
+
+
+body {
+	
+}
+
 #hero {
 	height:1020px;
 	background-color:$gray-transparent;
@@ -54,26 +69,38 @@ $brand-primary: #4CC2E4;
 	position:relative;
 	color:white;
 	#hero_section {
-		width:730px;
+		width:80%;
+		max-width:730px;
 		font-size:18px;
 		margin-top:-100px;  /* vertically centers more accuaretly since bottom bar is absolutely positioned*/
-		#hero_section_left {
-			width:312px;
-			float:left;
+		> div {
+			display: inline-block;
 		}
+		#hero_section_left {
+			width:39%;
+			vertical-align: top;
+		}
+		
 		#hero_section_right {
-			width:730px - 312px;
-			float:right;
+			width:59%;
 			div {
 				padding-bottom:20px;
 			}
+			.platforms_more {
+		    	font-size: 12px;
+			    padding-left: 20px;
+			    font-weight: bold;
+			}
 		}
 	}
-	#hero_logo {
-		width:350px;
+	.hero_logo {
+		width:100%;
 		padding-top:40px;
 		padding-bottom:20px;
 	}
+}
+@media (max-width: 768px) {
+	#hero #hero_section #hero_section_right { width:100%; }
 }
 
 #hero_bottom_strip {
@@ -143,7 +170,7 @@ img#logo_top {
 		position:absolute;
 		top:50%;
 		left:50%;
-		transform:translate(-50%,-50%);
+		@include vendor-prefix(transform, translate(-50%,-50%));
 	}
 }
 
@@ -178,7 +205,7 @@ img#logo_top {
 		@extend .well_code;
 		position: absolute;
 	    top: 100%;
-	    transform: translateY(-100%);
+		@include vendor-prefix(transform, translateY(-100%));
 	    padding: 0;
 		margin:0;
 		background-color: $gray-20;

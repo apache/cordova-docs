@@ -10,16 +10,17 @@ title: Apache Cordova
 <div id="hero">
     <div class="container vertical-center-parent">
         <div id="hero_section" class="vertical-center-child">
-            <div id="hero_section_left">
+            <div id="hero_section_left" class="hidden-xs">
                 <img src="{{ site.baseurl }}/static/img/cordova_bot.png" style="width:100%" />
             </div>
             <div id="hero_section_right">
-                <img id="hero_logo" src="{{ site.baseurl }}/static/img/logo_text.svg" />
+                <img class="hero_logo hidden-xs" src="{{ site.baseurl }}/static/img/logo_text.svg" />
+                <img class="hero_logo visible-xs" src="{{ site.baseurl }}/static/img/logo_full_2.svg" />
                 <p>Native mobile apps with HTML, CSS & JavaScript</p>
                 <p>Target multiple platforms with one code base</p>
                 <p>Free and open source</p>
                 <div>
-                    <img src="{{ site.baseurl }}/static/img/platform-logos.svg" width="188px" />
+                    <img src="{{ site.baseurl }}/static/img/platform-logos.svg" width="188px" /><a href="#supported_platforms_section" class="platforms_more">+6 more...</a>
                 </div>
                 <div>
                     <button type="button" class="btn btn-lg btn-primary">Get Started</button>
@@ -161,7 +162,7 @@ title: Apache Cordova
 
 <div class="container-fluid dark">
     <div class="container">
-        <div class="row showcase_section_intro">
+        <div class="row showcase_section_intro" id="supported_platforms_section">
             <div class="col-md-12 text-center">
                 <h1>Supported Platforms</h1>
                 <h2>See a list of
