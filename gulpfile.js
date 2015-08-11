@@ -87,7 +87,7 @@ gulp.task("watch", function () {
 });
 
 gulp.task("gen-dev", function (done) {
-    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(DEV_FLAGS), done);
+    exec("jekyll.bat", ["build"].concat(DEV_FLAGS), done);
 });
 
 gulp.task("regen-dev", ["gen-dev"], function () {
@@ -99,7 +99,7 @@ gulp.task("build-dev", ["configs", "styles"], function () {
 });
 
 gulp.task("gen-prod", function (done) {
-    exec("C:\\Ruby21\\bin\\jekyll.bat", ["build"].concat(PROD_FLAGS), done);
+    exec("jekyll.bat", ["build"].concat(PROD_FLAGS), done);
 });
 
 gulp.task("build-prod", ["configs", "styles"], function (done) {
@@ -119,7 +119,7 @@ gulp.task("serve", function (done) {
 });
 
 gulp.task("configs", function (done) {
-    execPiped("node", [bin("gen_defaults.py"), DOCS_DIR], DEFAULTS_FILE)
+    execPiped("node", [bin("gen_defaults.js"), DOCS_DIR], DEFAULTS_FILE)
         .pipe(gulp.dest("."));
     execPiped("node", [bin("gen_languages.js"), DOCS_DIR], LANGUAGES_FILE)
         .pipe(gulp.dest("."));
