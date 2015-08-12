@@ -11,7 +11,7 @@
             <a class="navbar-brand" href="{{ site.baseurl }}/"><img id="logo_top" src="{{ site.baseurl }}/static/img/logo_full_2.svg"/></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <img class="pull-right hidden-xs" style="width:25px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
+            <img class="pull-right hidden-xs hidden" style="width:25px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
             <div class="nav_bar_center">
                 <ul class="nav navbar-nav">
                     <li {% if page.docs_tab %}class="active"{% endif %}>
@@ -29,7 +29,7 @@
                     <li>
                         <a href="{{ site.baseurl }}/#contact">Contact</a>
                     </li>
-                    <li class="visible-xs">
+                    <li class="visible-xs hidden">
                         <img class="" style="width:25px;margin-left:13px" src="{{ site.baseurl }}/static/img/search_icon.svg"/>
                     </li>
                 </ul>

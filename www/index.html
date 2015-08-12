@@ -60,7 +60,7 @@ title: Apache Cordova
         <div class="col-md-12 text-center">
             <h1>Get Started Fast</h1>
             <p>Looks like you're using
-                <span id="current_os">Windows</span>to develop your apps</p>
+                <span id="current_os">Windows</span> to develop your apps</p>
             <p>
                 <a href="#" role="button">Use a different OS?</a>
             </p>
@@ -72,16 +72,15 @@ title: Apache Cordova
             <div class="number_circle">1</div>
         </div>
         <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <h2>Installing Cordova</h2>
+            <p>Cordova command-line runs on <a href="http://nodejs.org/">Node.js</a> and available on <a href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code></p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
-                $ sudo npm install -g cordova
+                $ npm install -g cordova
             </div>
         </div>
     </div>
@@ -90,16 +89,16 @@ title: Apache Cordova
             <div class="number_circle">2</div>
         </div>
         <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <h2>Create a project</h2>
+            <p>Create a Cordova project using the command-line tool to create a blank project.  Navigate to the directory where to create your project and type <code>cordova create &lt;PATH&gt;</code></p>
+            <p>For a complete set of options, type cordova help create</p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
-                $ sudo npm install -g cordova
+                $ cordova create MyApp
             </div>
         </div>
     </div>
@@ -108,16 +107,18 @@ title: Apache Cordova
             <div class="number_circle">3</div>
         </div>
         <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <h2>Add a platform</h2>
+            <p>After creating a Cordova project, navigate to the project directory.  From the project directory, you need to add a platform you want to build your app.</p>
+            <p>To add platform, type <code>cordova platform add &lt;platform name&gt;</code>.</p>
+            <p>For a complete list of platforms you can add, run <code>cordova platform</code></p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
-                $ sudo npm install -g cordova
+                <p>$ cd MyApp</p>
+                <p>$ cordova platform add browser</p>
             </div>
         </div>
     </div>
@@ -126,16 +127,16 @@ title: Apache Cordova
             <div class="number_circle">4</div>
         </div>
         <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <h2>Run your app</h2>
+            <p>From the command line, run <code>cordova run &lt;platform name&gt;</code>.</p>
+            <p>You can replace browser with the platform that you would like to run (e.g. iOS, Android, Windows)</p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
-                $ sudo npm install -g cordova
+                $ cordova run browser
             </div>
         </div>
     </div>
@@ -144,17 +145,15 @@ title: Apache Cordova
             <div class="number_circle">5</div>
         </div>
         <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <h2>Common next steps</h2>
+            <ul class="nav">
+                <li><a href="{{ site.baseurl }}/docs/en/edge/index.html">Read the docs</a></li>
+                <li><a href="{{ site.baseurl }}/docs/en/edge/guide_cli_index.md.html">Add a Plugin</a></li>
+                <li><a href="{{ site.baseurl }}/docs/en/edge/config_ref_index.md.html">Add Icons and Splash Screen</a></li>
+                <li><a href="{{ site.baseurl }}/docs/en/edge/config_ref_images.md.html">Configure Your App</a></li>
+            </ul>
         </div>
         <div class="col-md-4">
-            <div class="well_code">
-                <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
-                </div>
-                $ sudo npm install -g cordova
-            </div>
         </div>
     </div>
 </div>
