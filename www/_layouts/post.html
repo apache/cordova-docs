@@ -24,32 +24,32 @@ layout: blog
                     </div>
                 </section>
                 <footer>
-                	<div class="row">
-	                	<div class="col-sm-6">
-	                		{% if page.previous %}
-	                			<a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
-	                			<br>
-	                			<br>
-	                			<a class="title" href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
-	                			<div class="date"> {{ page.previous.date | date_to_string }} - By {{ page.previous.author.name }} </div>
-	                			<div class="content"> {{ page.previous.content | strip_html | truncatewords:20 }} </div>
-	                		{% endif %}		
-	                	</div>	
-	                	<div class="col-sm-6">
-	                		{% if page.next %}
-	                			<a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
-	                			<br>
-	                			<br>
-	                			<a class="title" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
-	                			<div class="date"> {{ page.next.date | date_to_string }} - By {{ page.next.author.name}} </div>
-	                			<div class="content"> {{ page.next.content | strip_html | truncatewords:20 }} </div>
-	                		{% endif %}	
-	                	</div>	
-                	</div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            {% if page.previous %}
+                                <a href="{{ site.baseurl }}{{ page.previous.url }}">Previous</a>
+                                <br>
+                                <br>
+                                <a class="title" href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
+                                <div class="date"> {{ page.previous.date | date_to_string }} - By {{ page.previous.author.name }} </div>
+                                <div class="content"> {{ page.previous.content | strip_html | truncatewords:20 }} </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-6">
+                            {% if page.next %}
+                                <a href="{{ site.baseurl }}{{ page.next.url }}">Next</a>
+                                <br>
+                                <br>
+                                <a class="title" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
+                                <div class="date"> {{ page.next.date | date_to_string }} - By {{ page.next.author.name}} </div>
+                                <div class="content"> {{ page.next.content | strip_html | truncatewords:20 }} </div>
+                            {% endif %}
+                        </div>
+                    </div>
                 </footer>
                 <div class="disqus">
-					{% include disqus.html %}
-				</div>
+                    {% include disqus.html %}
+                </div>
             </div>
         </div>
     </div>

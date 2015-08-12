@@ -6,7 +6,7 @@ title: Apache Cordova Blog
 <div class="blog">
   <div id="content" class="container">
      <div class="row">
-        <div class="col-sm-8 blog-list">  
+        <div class="col-sm-8 blog-list">
           <div class="blogHeader">
             <h1>Blog</h1>
             <div>
@@ -22,11 +22,11 @@ title: Apache Cordova Blog
                   <div>
                     <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
                     <div>
-                    	<span class="date">{{ post.date | date_to_string }}</span>
-                		  <span> - by </span>
-                		  <span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
-                		  <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
-                  	</div>	
+                      <span class="date">{{ post.date | date_to_string }}</span>
+                      <span> - by </span>
+                      <span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
+                      <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+                    </div>
                   </div>
                 </header>
                 <section class="post-excerpt">
@@ -37,9 +37,9 @@ title: Apache Cordova Blog
               {% endfor %}
           </ul>
           <!-- <a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a> -->
-        </div>  
-        <div class="col-sm-4 social-container">    
-            {% include twitterFeed.html %}        
+        </div>
+        <div class="col-sm-4 social-container">
+            {% include twitterFeed.html %}
         </div>
      </div>
  </div>
