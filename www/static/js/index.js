@@ -74,24 +74,17 @@ function getCookie(cname) {
     return "";
 }
 
-function getTimeFromDateTime(dateTime) {
-    var date_value = dateTime.substr(0,10);
-    date_value = date_value.replace(/-/g,'/');
-    var time_value = dateTime.substr(10);
-    return new Date(date_value + time_value).getTime();
-}
-
 var lastVisit = getCookie("visitTime");
 function checkNotification() {
     var dates = [];
     if (lastVisit != "") {
         {% for post in site.posts %}
-            dates.push('{{ post.date }}');
+            dates.push('{{ post.date | date_to_rfc822 }}');
         {% endfor %}
     }
     var new_blog_count = 0;
     for(var i = 0; i < dates.length ; i++) {
-        var blog_time = getTimeFromDateTime(dates[i]);
+        var blog_time = new Date(dates[i]).getTime();
         if(blog_time > lastVisit) {
             new_blog_count++;
         }
@@ -110,7 +103,7 @@ document.getElementById("blog_button").onclick = function() {
 $(document).ready(function () {
 
     $('.adorner').each(function(i) {
-        var blog_time = getTimeFromDateTime($(this).attr('blogTime'));
+        var blog_time = new Date($(this).attr('blogTime')).getTime();
         if(blog_time > lastVisit) {
             this.style.backgroundColor = "#3992ab";
         }
