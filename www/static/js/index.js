@@ -1,3 +1,5 @@
+---
+---
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
 // distributed with this work for additional information
@@ -54,5 +56,62 @@ function submitJiraSearchForm() {
     window.open('https://issues.apache.org/jira/secure/IssueNavigator.jspa?mode=show&reset=true&navType=simple&jqlQuery=' + encodeURIComponent(query), '_newtab' + new Date);
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires + "path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+var lastVisit = getCookie("visitTime");
+function checkNotification() {
+    var dates = [];
+    if (lastVisit != "") {
+        {% for post in site.posts %}
+            dates.push('{{ post.date | date_to_rfc822 }}');
+        {% endfor %}
+    }
+    var new_blog_count = 0;
+    for(var i = 0; i < dates.length ; i++) {
+        var blog_time = new Date(dates[i]).getTime();
+        if(blog_time > lastVisit) {
+            new_blog_count++;
+        }
+        else {
+            break;
+        }
+    }
+    return new_blog_count;
+}
+
+document.getElementById("blog_button").onclick = function() {
+    var currentTime = new Date().getTime();
+    setCookie("visitTime", currentTime, 365);
+};
+
 $(document).ready(function () {
+
+    $('.adorner').each(function(i) {
+        var blog_time = new Date($(this).attr('blogTime')).getTime();
+        if(blog_time > lastVisit) {
+            this.style.backgroundColor = "#3992ab";
+        }
+    });
+
+    var new_blog_count = checkNotification();
+    if(new_blog_count) {
+        document.getElementById("new_blog_count").innerHTML = new_blog_count;
+    }
+
 });

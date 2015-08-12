@@ -18,10 +18,15 @@ title: Apache Cordova Blog
               {% for post in site.posts %}
               <li>
                 <header>
-                  <div class="adorner"></div>
+                  <div class="adorner" blogTime="{{ post.date | date_to_rfc822 }}"></div>
                   <div>
                     <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
-                    <div><span class="date">{{ post.date | date_to_string }}</span><span> - by </span><span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span></div>
+                    <div>
+                    	<span class="date">{{ post.date | date_to_string }}</span>
+                		  <span> - by </span>
+                		  <span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
+                		  <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+                  	</div>	
                   </div>
                 </header>
                 <section class="post-excerpt">
@@ -36,6 +41,8 @@ title: Apache Cordova Blog
         <div class="col-sm-4 social-container">    
             {% include twitterFeed.html %}        
         </div>
-     </div> 
-  </div>
+     </div>
+ </div>
 </div>
+
+{% include comment_count.html %}
