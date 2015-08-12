@@ -23,10 +23,11 @@ title: Apache Cordova Blog
                     <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
                     <div>
                     	<span class="date">{{ post.date | date_to_string }}</span>
-                		<span> - by </span>
-                		<span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
-                		<a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+                		  <span> - by </span>
+                		  <span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
+                		  <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
                   	</div>	
+                  </div>
                 </header>
                 <section class="post-excerpt">
                   <p>{{ post.content | strip_html | truncatewords:80 }}</p>
