@@ -74,6 +74,13 @@ function getCookie(cname) {
     return "";
 }
 
+function getTimeFromDateTime(dateTime) {
+    var date_value = dateTime.substr(0,10);
+    date_value = date_value.replace(/-/g,'/');
+    var time_value = dateTime.substr(10);
+    return new Date(date_value + time_value).getTime();
+}
+
 var lastVisit = getCookie("visitTime");
 function checkNotification() {
     var dates = [];
@@ -84,7 +91,7 @@ function checkNotification() {
     }
     var new_blog_count = 0;
     for(var i = 0; i < dates.length ; i++) {
-        var blog_time = new Date(dates[i]).getTime();
+        var blog_time = getTimeFromDateTime(dates[i]);
         if(blog_time > lastVisit) {
             new_blog_count++;
         }
@@ -100,17 +107,18 @@ document.getElementById("blog_button").onclick = function() {
     setCookie("visitTime", currentTime, 365);
 };
 
-var new_blog_count = checkNotification();
-if(new_blog_count) {
-    document.getElementById("new_blog_count").innerHTML = new_blog_count;
-}
-
-$('.adorner').each(function(i) {
-    var blog_time = new Date($(this).attr('blogTime')).getTime();
-    if(blog_time > lastVisit) {
-        this.style.backgroundColor = "#3992ab";
-    }
-});
-
 $(document).ready(function () {
+
+    $('.adorner').each(function(i) {
+        var blog_time = getTimeFromDateTime($(this).attr('blogTime'));
+        if(blog_time > lastVisit) {
+            this.style.backgroundColor = "#3992ab";
+        }
+    });
+
+    var new_blog_count = checkNotification();
+    if(new_blog_count) {
+        document.getElementById("new_blog_count").innerHTML = new_blog_count;
+    }
+
 });
