@@ -18,7 +18,7 @@ title: Apache Cordova Blog
               {% for post in site.posts %}
               <li>
                 <header>
-                  <div class="adorner" blogTime="{{ post.date }}"></div>
+                  <div class="adorner" blogTime="{{ post.date | date_to_rfc822 }}"></div>
                   <div>
                     <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
                     <div>
