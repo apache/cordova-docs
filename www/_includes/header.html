@@ -23,7 +23,7 @@
                     <li {% if page.blog_tab %}class="active"{% endif %}>
                         <a href="{{ site.baseurl }}/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
                     </li>
-                    <li>
+                    <li {% if page.contribute_tab %}class="active"{% endif %}>
                         <a href="{{ site.baseurl }}/contribute">Contribute</a>
                     </li>
                     <li>
