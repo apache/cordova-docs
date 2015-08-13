@@ -123,7 +123,7 @@ gulp.task("configs", function (done) {
         .pipe(gulp.dest("."));
     execPiped("node", [bin("gen_languages.js"), DOCS_DIR], LANGUAGES_FILE)
         .pipe(gulp.dest("."));
-    exec("python", [bin("all_toc.py"), DOCS_DIR, DATA_DIR], done);
+    exec("node", [bin("toc.js"), DOCS_DIR, DATA_DIR], done);
 });
 
 gulp.task("styles", function() {
