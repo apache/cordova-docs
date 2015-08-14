@@ -21,4 +21,22 @@ button.btn {
 }
 .progress {
 	width:12%;
+	margin:0;
+}
+.featured-list-header{
+	margin-top:0;	
+}
+.featured-list {
+	list-style: none;
+	padding-left:0;
+	div { display:inline-block; }
+}
+.plugin {
+	position:absolute;
+	left:126px;
+}
+.plugin-stats {
+	position: absolute;
+	right:0;
+	width:100px;
 }
