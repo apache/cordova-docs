@@ -26,10 +26,23 @@ button.btn {
 .featured-list-header{
 	margin-top:0;	
 }
-.featured-list {
-	list-style: none;
-	padding-left:0;
-	div { display:inline-block; }
+.well.featured-list {
+	padding:0;
+	h2 { text-align: center; }
+	ul {
+		list-style: none;
+		padding-left:0;
+		div { display:inline-block; }
+		li {
+			padding-left:19px;
+			padding-right:19px;
+			padding-top:5px;
+			height:33px;
+		}
+		li:nth-child(odd) {
+			background-color:$gray-20;
+		}
+	}
 }
 .plugin {
 	position:absolute;
