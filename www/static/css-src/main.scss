@@ -1,5 +1,4 @@
 @import 'lib/bootstrap';
-@import 'blog';
 
 /* Customized Variables for Bootstrap */
 $gray-base:black;
@@ -34,93 +33,23 @@ $gray-20: lighten($gray-base, 80%);
 $gray-10: lighten($gray-base, 90%);
 $brand-primary: #4CC2E4;
 
-#hero {
-	height:1020px;
-	background-color:$gray-transparent;
-    background-image: url("{{ site.baseurl }}/static/img/wisplight.jpg");
-    background-size: cover;
-	position:relative;
-	color:white;
-	#hero_section {
-		width:730px;
-		font-size:18px;
-		margin-top:-100px;  /* vertically centers more accuaretly since bottom bar is absolutely positioned*/
-		#hero_section_left {
-			width:312px;
-			float:left;
-		}
-		#hero_section_right {
-			width:730px - 312px;
-			float:right;
-			div {
-				padding-bottom:20px;
-			}
-		}
-	}
-	#hero_logo {
-		width:350px;
-		padding-top:40px;
-		padding-bottom:20px;
-	}
-}
+/* Grid size (mirrors Bootstraps) */
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1;
+$screen-md-min: 992px;
+$screen-sm-max: $screen-md-min - 1;
+$screen-lg: (min-width: 1200px);
+$scree-md-max: $screen-lg - 1;
 
-#hero_bottom_strip {
-    position: absolute;
-    top: 100%;
-    min-height: 200px;
-    background-color: rgba(128,128,128,.15);
-    width: 100%;
-    margin: 0;
-    /* margin-top: -200px; */ /* Less responsive */
-    transform: translateY(-100%);
-	.container {
-		padding-top:55px;
-		padding-bottom:55px;
-		font-size: 18px;
-	}
-	.sprite_img {
-		position:relative;
-	    left: 0px;
-	    margin: 0;
-	    padding: 0;
-		top:0;
-		width: 85px;
-   		height: 85px;
-		background-repeat: no-repeat;
-    	background-size: cover;
-	}
-}
-.value_prop {
 
+/* Mixin that prefixes any CSS rule */
+@mixin vendor-prefix($property, $argument) {
+  -webkit-#{$property}: #{$argument};
+  -ms-#{$property}: #{$argument};
+  -moz-#{$property}: #{$argument};
+  -o-#{$property}: #{$argument};
+  #{$property}: #{$argument};
 }
-
-@mixin sprite-img($a, $b) {
-	background: url("{{ site.baseurl }}/static/img/value-prop-sprite.svg") $a $b;
-}
-
-#sprite_shared_code { @include sprite-img(0px, 0) }
-#sprite_offline { @include sprite-img(-84px, 0) }
-#sprite_apis { @include sprite-img(-84px*2, 0) }
-
-.navbar-brand {
-	padding:0;
-	position: absolute;
-}
-img#logo_top {
-	width:190px;
-	padding:5px;
-}
-
-@media (min-width: 768px) { /* Center the navs when not collapsed */
-	.nav_bar_center {
-		text-align:center;
-		height:50px;
-	}
-	.nav_bar_center > ul {
-		display: inline-block;
-		float:none;
-	}
-  }
 
 .vertical-center-parent {
 	position: relative;
@@ -285,3 +214,9 @@ h2 {
 .contribute-content {
 	padding-top: 15px;
 }
+
+@import 'home';
+@import 'blog';
+@import 'plugins';
+@import 'contribute';
+@import 'contact';

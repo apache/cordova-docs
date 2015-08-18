@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row showcase_section_intro">
+        <div class="col-md-12 text-center">
+            <h1>Codorva Tools</h1>
+            <h2>Work with Cordova even more efficiently</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat sem, cursus quis nibh porta, scelerisque blandit lorem. Vivamus blandit nec odio non bibendum. Morbi efficitur purus ut metus viverra sodales. In aliquet nunc sagittis, dignissim libero ut, vulputate nisi. Phasellus vulputate fermentum libero, lorem hah.</p>
+        </div>
+    </div>
+    <!-- ROW 1 Starts -->
+    <div class="row cordova_tools_gallery">
+        {% for tool in site.data.tools %}
+        <div class="col-lg-2 col-sm-va card">
+            <div class="card_inner">
+                <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
+                <p class="card_title">
+                    {{ tool.name }}
+                </p>
+                <p>
+                    {{ tool.description | truncatewords:25 }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row"> <!-- Add yours or see more links -->
+        <div class="col-sm-12">
+            <div class="pull-right add_seemore_links">
+                <a href="#">Add your tool</a>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+<div class="container">
+    <div class="row showcase_section_intro">
+        <div class="col-md-12 text-center">
+            <h1>Sample Cordova Apps</h1>
+            <h2>See examples how to access native device APIs and more</h2>
+        </div>
+    </div>
+    <div class="row cordova_tools_gallery">
+        {% for app in site.data.sample-apps %}
+        <div class="col-lg-2 col-sm-4 card">
+            <div class="sample_app_thumb"></div>
+            <div class="card_inner">
+                <p class="card_title">{{ app.name }}</p>
+                <p>{{ app.description | truncatewords:10 }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row"> <!-- Add yours or see more links -->
+        <div class="col-sm-12">
+            <div class="pull-right add_seemore_links">
+                <a href="#">Add your app</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            &nbsp;
+        </p>
+    </div>
+</div>

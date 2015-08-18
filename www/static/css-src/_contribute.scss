@@ -1,0 +1,36 @@
+.list {
+    padding:0;
+}
+
+.list li {
+    background:$gray-10;
+    padding: 8px;
+    position: relative;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.platforms-list li a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: background 0.25s linear;
+    -moz-transition: background 0.25s linear;
+    transition: background 0.25s linear;
+    width: 36px;
+    background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
+    background-position: 3px -127px;
+    background-color: #4cc2e4;
+}
+.platforms-list li a.link-apache {
+    right: 39px;
+    background-position: 2px -94px;
+}
+.platforms-list li.first a {
+    width: 108px;
+}
+.platforms-list li.first a.link-apache {
+    width: 144px;
+    right: 111px;
+}

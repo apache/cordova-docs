@@ -1,8 +1,7 @@
 .blog{
     .blogHeader{
         position: relative;
-        padding-bottom:26px;
-        padding-left:40px;
+        padding:0 15px 25px 15px;
         h1{
             color: #b58733;
             font-size: 30pt;
@@ -10,7 +9,7 @@
         div{
             position: absolute;
             top: 20px;
-            left: 126px;
+            left: 96px;
 
             img{
                 float: left;
@@ -182,10 +181,9 @@
 
     }
 
-
     //blog post page
-    .post{
-        padding:0 40px;
+    div.post{
+        padding:0 15px;
 
         header{
 
@@ -196,7 +194,7 @@
             .author, .date{
                 font-size: 14pt;
                 color: #999;
-                padding: 0 2px;
+                padding: 0 4px;
             }
             .date{
                 float:right;
@@ -204,7 +202,7 @@
                 top:-20pt;
             }
         }
-        section{
+        section > div.content{
             padding: 40px 0;
             color: black;
         }
@@ -228,21 +226,89 @@
         margin-top: 30px;
     }
 
+    section.nextprev-posts{
+        div{
+            .header{
+                padding: 10px 0;
+            }
+            .title{
+                color: #3992ab;
+                font-size: 14pt;
+            }
+            span{
+                font-size: 9pt;
+                color: #999;
+                padding: 0 4px;
+            }
+        }
+        .next , .prev{
+            padding: 10px 15px;
+        }
+    }
 
+    section.nextprev-controls{
+
+        div{
+            position: fixed;
+            top:37%;
+            .title{
+                color: white;
+                font-size: 12pt;
+            }
+            span{
+                font-size: 9pt;
+                color: #999;
+                padding: 0 2px;
+            }
+            div{
+                position: relative;
+                top: 64px;
+                left: 20px;
+                z-index:10;
+                width: 240px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        .next {
+            right: 0px;
+            height:90px;
+            width: 321px;
+            top:calc(37% - 38px);
+            img{
+                position: fixed;
+                right: 0px;
+            }
+        }
+        .prev{
+            left:0px;
+        }
+
+
+        @media (max-width: 1800px) {
+            .next {
+                img{
+                    clip: rect(0px, 321px, 89px, 262px);
+                    top:37%;
+                }
+            }
+            div{
+                .title{
+                    display:none;
+                }
+                span{
+                    display:none;
+                }
+            }
+        }
+        @media (max-width: 1300px) {
+            .next, .prev {
+                img{
+                    display:none;
+                }
+            }
+        }
+    }
 }
-
-//         <div class="post">
-//             <header>
-//               <div class="title">{{ page.title }}</div>
-//               <div class="author">By: {{ page.author.name }}</div>
-//               <div class="date">{{ page.date | date_to_string }}</div>
-//             </header>
-//             <section>
-//               <div class="content">
-//                 {{ content }}
-//               </div>
-//             </section>
-//         </div>
-//      </div>
-//   </div>
-// </div>

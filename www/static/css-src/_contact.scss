@@ -1,0 +1,22 @@
+.list a {
+    position: absolute;
+    right: 50px;
+    width: 313px;
+}
+
+.email_link_button {
+    width: 49px;
+    background-color: $brand-primary;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    .glyphicon {
+        font-size: 20px;
+        padding-top: 7px;
+    }
+}
