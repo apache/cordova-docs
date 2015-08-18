@@ -7,6 +7,7 @@ title:  "Plugins Release: June 22, 2015"
 categories: news
 tags: release plugins
 ---
+
 The following plugins were updated today:
 
 * cordova-plugin-battery-status@1.1.0
