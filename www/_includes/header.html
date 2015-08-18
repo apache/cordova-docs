@@ -17,7 +17,7 @@
                     <li {% if page.docs_tab %}class="active"{% endif %}>
                         <a href="{{ site.baseurl }}/docs/en/edge/guide/cli/">Documentation</a>
                     </li>
-                    <li>
+                    <li {% if page.plugins_tab %}class="active"{% endif %}>
                         <a href="{{ site.baseurl }}/plugins">Plugins</a>
                     </li>
                     <li {% if page.blog_tab %}class="active"{% endif %}>
