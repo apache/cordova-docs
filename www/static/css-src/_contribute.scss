@@ -1,3 +1,8 @@
+.report-bug-icon {
+    height:1em;
+    width:1em;   
+}
+
 .list {
     padding:0;
 }
@@ -33,4 +38,26 @@
 .platforms-list li.first a.link-apache {
     width: 144px;
     right: 111px;
+}
+.contribute-get-started-steps {
+    list-style: none;
+    counter-reset: contribute-steps-counter;
+    > li {
+        margin-bottom:.5em;
+    }
+    > li::before {
+        counter-increment: contribute-steps-counter;
+        content: counter(contribute-steps-counter);
+        width: 2em;
+        height: 2em;
+        background: $brand-primary-darker;
+        display: inline-block;
+        border-radius: 2em;
+        line-height: 2em;
+        text-align: center;
+        font-size: 1em;
+        color: white;
+        margin-left:-40px;
+        margin-right:19px;
+    }   
 }
