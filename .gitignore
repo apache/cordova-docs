@@ -5,5 +5,6 @@ _defaults.yml
 www/_data/languages.yml
 node_modules
 www/static/css
+www/static/react
 Gemfile.lock
 settings.json

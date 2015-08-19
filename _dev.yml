@@ -1,5 +1,6 @@
 exclude:
     - static/css-src
+    - static/react-src
     - docs/de
     - docs/es
     - docs/fr

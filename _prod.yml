@@ -2,3 +2,4 @@ baseurl: "/use-the-force-luke"
 destination: deploy
 exclude:
     - static/css-src
+    - static/react-src

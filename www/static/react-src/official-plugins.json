@@ -1,0 +1,26 @@
+{
+    "plugins" : [
+        "cordova-plugin-battery-status",
+        "cordova-plugin-camera",
+        "cordova-plugin-console",
+        "cordova-plugin-contacts",
+        "cordova-plugin-device",
+        "cordova-plugin-device-motion",
+        "cordova-plugin-device-orientation",
+        "cordova-plugin-dialogs",
+        "cordova-plugin-file",
+        "cordova-plugin-file-transfer",
+        "cordova-plugin-geolocation",
+        "cordova-plugin-globalization",
+        "cordova-plugin-inappbrowser",
+        "cordova-plugin-legacy-whitelist",
+        "cordova-plugin-media",
+        "cordova-plugin-media-capture",
+        "cordova-plugin-ms-appinsights",
+        "cordova-plugin-network-information",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-statusbar",
+        "cordova-plugin-vibration",
+        "cordova-plugin-whitelist"
+    ]
+}
