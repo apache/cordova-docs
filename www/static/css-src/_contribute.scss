@@ -1,6 +1,26 @@
+.sprite_img {
+    position:relative;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    top:0;
+    width: 85px;
+    height: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .report-bug-icon {
+    @extend .sprite_img;
     height:1em;
-    width:1em;   
+    width:1em;
+    background-image: url("{{ site.baseurl }}/static/img/bug_icon.svg");
+    background-size: 2em 1em;
+    display: inline-block;   
+}
+
+a:hover .report-bug-icon {
+    background-position: -1em 0;
 }
 
 .list {
