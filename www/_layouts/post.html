@@ -32,7 +32,7 @@ layout: blog
                                 <br>
                                 <a class="title" href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a>
                                 <div class="date"> {{ page.previous.date | date_to_string }} - By {{ page.previous.author.name }} </div>
-                                <div class="content"> {{ page.previous.content | strip_html | truncatewords:20 }} </div>
+                                <div class="content"> {{ page.previous.content | strip_html | truncate:130 }} </div>
                             {% endif %}
                         </div>
                         <div class="col-sm-6">
@@ -42,7 +42,7 @@ layout: blog
                                 <br>
                                 <a class="title" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a>
                                 <div class="date"> {{ page.next.date | date_to_string }} - By {{ page.next.author.name}} </div>
-                                <div class="content"> {{ page.next.content | strip_html | truncatewords:20 }} </div>
+                                <div class="content"> {{ page.next.content | strip_html | truncate:130 }} </div>
                             {% endif %}
                         </div>
                     </div>

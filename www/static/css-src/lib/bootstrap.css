@@ -256,8 +256,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot');
-  src: url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://bootstrap-live-customizer.com/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.eot');
+  src: url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.woff') format('woff'), url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('{{ site.baseurl }}/static/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;

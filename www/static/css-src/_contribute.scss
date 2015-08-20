@@ -1,3 +1,28 @@
+.sprite_img {
+    position:relative;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    top:0;
+    width: 85px;
+    height: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.report-bug-icon {
+    @extend .sprite_img;
+    height:1em;
+    width:1em;
+    background-image: url("{{ site.baseurl }}/static/img/bug_icon.svg");
+    background-size: 2em 1em;
+    display: inline-block;   
+}
+
+a:hover .report-bug-icon {
+    background-position: -1em 0;
+}
+
 .list {
     padding:0;
 }
@@ -33,4 +58,26 @@
 .platforms-list li.first a.link-apache {
     width: 144px;
     right: 111px;
+}
+.contribute-get-started-steps {
+    list-style: none;
+    counter-reset: contribute-steps-counter;
+    > li {
+        margin-bottom:.5em;
+    }
+    > li::before {
+        counter-increment: contribute-steps-counter;
+        content: counter(contribute-steps-counter);
+        width: 2em;
+        height: 2em;
+        background: $brand-primary-darker;
+        display: inline-block;
+        border-radius: 2em;
+        line-height: 2em;
+        text-align: center;
+        font-size: 1em;
+        color: white;
+        margin-left:-40px;
+        margin-right:19px;
+    }   
 }
