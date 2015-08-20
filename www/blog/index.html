@@ -3,6 +3,15 @@ layout: blog
 title: Apache Cordova Blog
 ---
 
+<script>
+window.onload = function(){
+  setTimeout(function(){
+    var lastPostTime = new Date("{{ site.posts[0].date | date_to_rfc822 }}").getTime();
+    setCookie("visitTime", lastPostTime, 365);
+  }, 2000);
+};
+</script>
+
 <div class="blog">
   <div id="content" class="container">
      <div class="row">
