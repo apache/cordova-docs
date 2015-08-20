@@ -1,10 +1,8 @@
-public
-deploy
+build-*
 *.pyc
 _defaults.yml
 www/_data/languages.yml
 node_modules
 www/static/css
-www/static/react
+www/static/js/plugins.js
 Gemfile.lock
-settings.json

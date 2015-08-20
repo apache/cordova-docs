@@ -17,7 +17,7 @@ repo:
 # Build settings
 # =======
 source:      www
-destination: public
+destination: build-dev
 
 keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 

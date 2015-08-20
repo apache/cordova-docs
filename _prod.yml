@@ -1,5 +1,5 @@
 baseurl: "/use-the-force-luke"
-destination: deploy
+destination: build-prod
 exclude:
     - static/css-src
-    - static/react-src
+    - static/plugins

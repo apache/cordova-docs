@@ -91,15 +91,15 @@ This section requires basic knowledge of SVN. If you do not know how to use SVN,
 
 First, inspect `_prod.yml` to check that the correct `baseurl` is used. For pre-production deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
 
-    gulp deploy
+    gulp build --prod
 
-A folder called `deploy` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running (committer access required):
+A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running (committer access required):
 
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
-Now, copy the `cordova-docs/deploy/` directory to the corresponding directory in SVN (i.e. something like `cordova-website/public/use-the-force-luke/` for the pre-production deployment, or just `cordova-website/public/` for the production deployment):
+Now, copy the `cordova-docs/build-prod/` directory to the corresponding directory in SVN (i.e. something like `cordova-website/public/use-the-force-luke/` for the pre-production deployment, or just `cordova-website/public/` for the production deployment):
 
-    cp -R cordova-docs/deploy/ cordova-website/public/use-the-force-luke/
+    cp -R cordova-docs/build-prod/ cordova-website/public/use-the-force-luke/
 
 Finally, go into the cordova-website directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
 

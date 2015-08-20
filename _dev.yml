@@ -1,6 +1,6 @@
 exclude:
     - static/css-src
-    - static/react-src
+    - static/plugins
     - docs/de
     - docs/es
     - docs/fr
@@ -36,6 +36,6 @@ exclude:
     - docs/en/3.5.0
     - docs/en/3.6.0
     - docs/en/4.0.0
-    # - docs/en/5.0.0
+    - docs/en/5.0.0
     - docs/en/5.1.1
     # - docs/en/edge
