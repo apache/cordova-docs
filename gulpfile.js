@@ -82,7 +82,8 @@ function remove(path) {
 
 function jekyllBuild(done) {
     var flags = prod ? PROD_FLAGS : DEV_FLAGS;
-    exec("jekyll.bat", ["build"].concat(flags), done);
+    var JEKYLL= (process.platform === 'darwin') ? 'jekyll' : 'jekyll.bat';
+    exec(JEKYLL, ["build"].concat(flags), done);
 }
 
 // tasks
