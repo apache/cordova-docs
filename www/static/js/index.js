@@ -95,11 +95,6 @@ function checkNotification() {
     return new_blog_count;
 }
 
-document.getElementById("blog_button").onclick = function() {
-    var lastPostTime = new Date("{{ site.posts[0].date | date_to_rfc822 }}").getTime();
-    setCookie("visitTime", lastPostTime, 365);
-};
-
 $(document).ready(function () {
     $('.adorner').each(function(i) {
         var blog_time = new Date($(this).attr('blogTime')).getTime();
@@ -108,7 +103,7 @@ $(document).ready(function () {
         }
     });
     var new_blog_count = checkNotification();
-    if(new_blog_count && window.location.pathname != "/blog/") {
+    if(new_blog_count) {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
