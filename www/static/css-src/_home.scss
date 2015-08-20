@@ -43,7 +43,7 @@ body {
 		padding-bottom:20px;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#hero #hero_section #hero_section_right { width:100%; }
 }
 
@@ -95,7 +95,7 @@ img#logo_top {
 	padding:5px;
 }
 
-@media (min-width: 768px) { /* Center the navs when not collapsed */
+@media (min-width: 767px) { /* Center the navs when not collapsed */
 	.nav_bar_center {
 		text-align:center;
 		height:50px;
