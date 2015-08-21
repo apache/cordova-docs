@@ -81,9 +81,9 @@ function remove(path) {
 }
 
 function jekyllBuild(done) {
-    var flags = prod ? PROD_FLAGS : DEV_FLAGS;
-    var JEKYLL= (process.platform === 'darwin') ? 'jekyll' : 'jekyll.bat';
-    exec(JEKYLL, ["build"].concat(flags), done);
+    var flags  = prod ? PROD_FLAGS : DEV_FLAGS;
+    var jekyll = (process.platform === 'darwin') ? 'jekyll' : 'jekyll.bat';
+    exec(jekyll, ["build"].concat(flags), done);
 }
 
 // tasks
@@ -217,7 +217,7 @@ gulp.task("plugins", function() {
 });
 
 // compound tasks
-gulp.task("configs", ["toc", "languages", "defaults"]);
+gulp.task("configs", ["languages", "defaults"]);
 gulp.task("styles", ["less", "css", "sass"]);
 gulp.task("build", ["gen-full"]);
 gulp.task("default", ["watch"]);
