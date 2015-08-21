@@ -1,6 +1,7 @@
-<!--
-    https://svn.apache.org/repos/asf/cordova/site cordova-website
--->
+Introduction
+============
+
+This repository contains the source code behind [cordova.io](http://cordova.io) and some of its subdomains (namely, [docs.cordova.io](http://docs.cordova.io) and [plugins.cordova.io](http://plugins.cordova.io)).
 
 Installing
 ==========
