@@ -17,34 +17,39 @@
 
 $(document).ready(function () {
 
+    function getAnchorName(i, heading, prefix) {
+        var name = prefix;
+        if (heading.id) {
+            name += heading.id;
+        } else if (heading.name) {
+            name += heading.name;
+        } else {
+            name += i;
+        }
+        return name;
+    }
+
     // Table of Contents
     $('#page-toc').toc({
         'selectors':         'h1,h2,h3,h4,h5,h6', // elements to use as headings
         'container':         '#page-toc-source', // element to find all selectors in
-        'prefix':            'toc', // prefix for anchor tags and class names
+        'prefix':            'link-', // prefix for anchor tags and class names
         'onHighlight':       function(el) {}, // called when a new section is highlighted
         'highlightOnScroll': true, // add class to heading that is currently in focus
         'highlightOffset':   100, // offset to trigger the next headline
         'anchorName':        function(i, heading, prefix) { // custom function for anchor name
-
-            // use "tocX" by default
-            var fragmentName = prefix + i;
-
-            // use the id or the name of the heading, if given, in
-            // that order of precedence (i.e. id first, then name)
-            if (heading.id) {
-                fragmentName = heading.id;
-            } else if (heading.name) {
-                fragmentName = heading.name;
-            }
-
-            return fragmentName;
+            return getAnchorName(i, heading, prefix);
         },
         'headerText': function(i, heading, $heading) { // custom function building the header-item text
             return $heading.text();
         },
         'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
-            $('#' + prefix + i).addClass('fragment-anchor');
+
+            // add a special class to the anchor for this toc entry
+            var anchorName = getAnchorName(i, heading, prefix);
+            $('#' + anchorName).addClass('fragment-anchor');
+
+            // don't assign any special classes to the toc entry itself
             return '';
         }
     });
