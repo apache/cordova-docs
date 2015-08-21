@@ -39,17 +39,20 @@ var SearchBar = React.createClass({
 
     render: function() {
         return (
-                <div className="contentwrap">
-                    <div id="search">
+                <div className="plugins_search_container">
+                    <div className="input-group">
                         <input
-                            className="searchBox"
-                            type="search"
+                            className="form-control"
+                            type="text"
                             autoComplete="off"
-                            placeholder={this.props.placeHolderText}
+                            placeholder="Find a Plugin..."
                             value={this.state.textValue}
                             onChange={this.handleChange}
                             ref="filterTextInput"
-                        />
+                            />
+                        <span className="input-group-btn">
+                            <button className="btn btn-default" type="button"><span className="glyphicon glyphicon-search"></span></button>
+                        </span>
                     </div>
                 </div>
         );

@@ -12,9 +12,19 @@ var SupportedPlatforms = React.createClass({
             moreClicked: true
         });
     },
+    componentWillReceiveProps: function(nextProps) {
+        this.setState({
+            moreClicked: false
+        });
+    },
     render: function() {
         var keywords = this.props.keywords;
-        var sortedMajorPlatforms = [{present:false, text: "Android"}, {present:false, text: "iOS"}, {present:false, text: "Windows"}, {present:false, text: "Blackberry10"}];
+        var sortedMajorPlatforms = [
+            {present:false, text: "Android", keyword:"cordova-android"},
+            {present:false, text: "iOS", keyword:"cordova-ios"},
+            {present:false, text: "Windows", keyword:"cordova-windows"},
+            {present:false, text: "Blackberry10", keyword:"cordova-blackberry10"}
+        ];
         var majorPlatformsSupported = [];
         var otherPlatformsSupported = [];
         // remove windows8 & windows dupe
@@ -24,16 +34,16 @@ var SupportedPlatforms = React.createClass({
         keywords.forEach(function(keyword) {
             switch (keyword) {
                 case 'cordova-firefoxos':
-                    otherPlatformsSupported.push(<PlatformButton platform="FirefoxOS" />);
+                    otherPlatformsSupported.push(<PlatformButton platform="FirefoxOS" keyword={keyword} />);
                     break;
                 case 'cordova-android':
                     sortedMajorPlatforms[0].present = true;
                     break;
                 case 'cordova-amazon-fireos':
-                    otherPlatformsSupported.push(<PlatformButton platform="FireOS" />);
+                    otherPlatformsSupported.push(<PlatformButton platform="FireOS" keyword={keyword} />);
                     break;
                 case 'cordova-ubuntu':
-                    otherPlatformsSupported.push(<PlatformButton platform="Ubuntu" />);
+                    otherPlatformsSupported.push(<PlatformButton platform="Ubuntu" keyword={keyword} />);
                     break;
                 case 'cordova-ios':
                     sortedMajorPlatforms[1].present = true;
@@ -42,21 +52,21 @@ var SupportedPlatforms = React.createClass({
                     sortedMajorPlatforms[3].present = true;
                     break;
                 case 'cordova-wp8':
-                    otherPlatformsSupported.push(<PlatformButton platform="Windows Phone 8" />);
+                    otherPlatformsSupported.push(<PlatformButton platform="Windows Phone 8" keyword={keyword} />);
                     break;
                 case 'cordova-windows8':
                 case 'cordova-windows':
                     sortedMajorPlatforms[2].present = true;
                     break;
                 case 'cordova-browser':
-                    otherPlatformsSupported.push(<PlatformButton platform="Browser" />);
+                    otherPlatformsSupported.push(<PlatformButton platform="Browser" keyword={keyword} />);
                     break;
             }
         });
 
         sortedMajorPlatforms.forEach(function(platform) {
             if(platform.present) {
-                majorPlatformsSupported.push(<PlatformButton platform={platform.text} />)
+                majorPlatformsSupported.push(<PlatformButton platform={platform.text} keyword={platform.keyword}/>)
             }
         });
         while(majorPlatformsSupported.length < 4 && otherPlatformsSupported.length > 0) {

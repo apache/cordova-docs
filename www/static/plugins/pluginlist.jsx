@@ -30,10 +30,8 @@ var PluginList = React.createClass({
             };
 
             return (
-                <div className="contentwrap">
-                    <ul className="pluginList">
-                        {emptyPluginList}
-                    </ul>
+                <div className="container plugins-results-container">
+                    {emptyPluginList}
                 </div>
             )
         } else {
@@ -52,10 +50,8 @@ var PluginList = React.createClass({
 
             if (plugins.length === 0) {
                 return (
-                    <div className="contentwrap">
-                        <div className="pluginEmptyMessage">
+                    <div className="container plugins-results-container">
                             No plugins found. Learn how to <a href="http://cordova.apache.org/docs/en/edge/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">create one</a>
-                        </div>
                     </div>
                 );
             } else {
@@ -67,10 +63,8 @@ var PluginList = React.createClass({
                     }
                 };
                 return (
-                    <div className="contentwrap">
-                        <ul className="pluginList">
-                            {visiblePlugins}
-                        </ul>
+                    <div className="container plugins-results-container">
+                        {visiblePlugins}
                         {showMore}
                     </div>
                 );

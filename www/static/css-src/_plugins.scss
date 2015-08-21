@@ -10,9 +10,9 @@ button.btn {
 
 	img {
 		float:left;
-		    padding-right: 20px;
+			padding-right: 20px;
 			padding-bottom: 20px;
-		    width: 84px;
+			width: 84px;
 	}
 }
 .plugins_links {
@@ -69,8 +69,8 @@ button.btn {
 }
 
 /***
-****	Plugins Results	
-****	
+****	Plugins Results
+****
 */
 
 .plugins-results-container {
@@ -81,6 +81,11 @@ button.btn {
 	margin-bottom:20px;
 	background-color:$gray-5;
 	position: relative;
+	.plugin-npm-command {
+		width:0px;
+		height:0px;
+		overflow:hidden;
+	}
 }
 .version_and_author {
 	display: inline-block;

@@ -6,18 +6,38 @@ var Plugin = React.createClass({
     shouldComponentUpdate: function(nextProps, nextState) {
         return this.props.plugin !== nextProps.plugin;
     },
+    copyText: function() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("command-" + this.props.plugin.name));
+
+        var select = window.getSelection();
+        select.addRange(range);
+        try {
+            document.execCommand("copy");
+        } catch(error) {
+
+        }
+        select.removeAllRanges();
+    },
     render: function() {
         if(!this.props.plugin) {
             // Empty card with loading wheel
             return (
-                <li>
-                    <div className="pluginCard">
-                        <div style={{ textAlign: 'center', height: 10 + "rem"}}>
-                            <span style={{ display: 'inline-block', height: 100 + "%", verticalAlign: 'middle'}} />
-                            <img style={{verticalAlign: 'middle'}} src="img/loading.gif" />
+                // <li>
+                //     <div className="pluginCard">
+                //         <div style={{ textAlign: 'center', height: 10 + "rem"}}>
+                //             <span style={{ display: 'inline-block', height: 100 + "%", verticalAlign: 'middle'}} />
+                //             <img style={{verticalAlign: 'middle'}} src="img/loading.gif" />
+                //         </div>
+                //     </div>
+                // </li>
+                <div className="container plugin-results-result">
+                    <div className="row">
+                        <div className="col-sm-9">
+                            <h2>Loading...</h2>
                         </div>
                     </div>
-                </li>
+                </div>
             )
         }
 
@@ -26,6 +46,7 @@ var Plugin = React.createClass({
             license = license[0];
         }
         var downloadField;
+        var copyIcon;
         var npmLink = 'https://www.npmjs.com/package/' + this.props.plugin.name;
 
         var classes = classNames({
@@ -38,28 +59,32 @@ var Plugin = React.createClass({
             downloadField = <p><small> {downloadCount} downloads last month</small></p>;
         }
 
+        if(document.queryCommandSupported("copy")) {
+            copyIcon = (<img src="/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard" onClick={this.copyText}/>)
+        }
+
         return (
-            <li>
-                <div className={classes}>
-                    <div className="primaryContent">
-                        <div className="header">
-                            <h3><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h3>
-                            <small className="pluginVersion">v{this.props.plugin.version}</small>
-                            <small> by </small>
-                            <small className="pluginAuthor">{this.props.plugin.author}</small>
-                        </div>
-                        <div className="pluginDesc">{this.props.plugin.description}</div>
-                    </div>
-                    <div className="secondaryContent">
-                        <SupportedPlatforms keywords={this.props.plugin.keywords}/>
-                        <div className="extraInfo">
-                            <p><small><strong>License:</strong> {license}</small></p>
-                            {downloadField}
-                            <p><small><em>Last updated {this.props.plugin.modified} days ago</em></small></p>
-                        </div>
+            <div className="container plugin-results-result">
+                {copyIcon}
+                <div className="row">
+                    <div className="col-sm-9">
+                        <h2><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h2>
+                        <p className="version_and_author">v{this.props.plugin.version} by <strong>{this.props.plugin.author}</strong></p>
                     </div>
                 </div>
-            </li>
+                <div className="row">
+                    <div className="col-sm-8">
+                        <p>{this.props.plugin.description}</p>
+                    </div>
+                    <div className="col-sm-3 col-sm-offset-1">
+                        <hr className="visible-xs results-divider-line"/>
+                        <p className="license">{license}</p>
+                        <p className="downloads"><strong>{downloadCount}</strong> downloads last month</p>
+                        <p className="last-updated">Last updated <strong>{this.props.plugin.modified} days ago</strong></p>
+                    </div>
+                    <div className="plugin-npm-command" id={"command-" + this.props.plugin.name}>{"npm install " + this.props.plugin.name}</div>
+                </div>
+            </div>
         )
     }
 });

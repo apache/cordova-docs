@@ -1,7 +1,9 @@
 var React           = window.React = require('react'), // assign it to window for react chrome extension
     SearchBar       = require('./searchbar.jsx'),
     PluginList      = require('./pluginlist.jsx'),
-    App             = {};
+    PlatformButton  = require('./platformbutton.jsx')
+    App             = {},
+    SortDropdown = require('./sortdropdown.jsx');
 
 var timer = null;
 var Constants = {
@@ -18,49 +20,72 @@ window.addEventListener('popstate', function(e) {
 
 var App = React.createClass({
     getInitialState: function() {
+        var staticFilters = [];
+        staticFilters['platforms'] = [];
+        staticFilters['authors'] = [];
+        staticFilters['licenses'] = [];
+        var platforms = App.getURLParameter('platforms');
+        if(platforms) {
+            staticFilters['platforms'] = staticFilters['platforms'].concat(platforms.split(','));
+        }
         var q = App.getURLParameter('q');
         if (q) {
             return {
                 plugins: [],
                 filterText: q,
                 placeHolderText: 'Loading...',
-                searchResults: []
-            }
+                searchResults: [],
+                staticFilters: staticFilters
+            };
         } else {
             return {
                 plugins: [],
                 filterText: '',
                 placeHolderText: 'Loading...',
-                searchResults: []
+                searchResults: [],
+                staticFilters: staticFilters
             };
         }
     },
     handleUserInput: function(filterText) {
         /* Routing logic */
-        var filterTextLowerCase = filterText.toLowerCase();
+        var platformFilters = this.state.staticFilters["platforms"];
         delay(function(){
-            window.history.pushState({"filterText":filterTextLowerCase}, "", "?q=" + filterTextLowerCase);
-            ga('send', 'pageview', '/index.html?q=' + filterTextLowerCase);
+            App.updateURL(filterText, platformFilters);
         }, 2000 );
 
         this.setState({
             filterText: filterText,
-            searchResults: App.filterPlugins(this.state.plugins, filterText)
+            searchResults: App.filterPlugins(this.state.plugins, filterText, this.state.staticFilters)
         });
     },
-    addCondition: function(condition) {
+    toggleCondition: function(keyword, condition) {
         this.setState(function(previousState, currentProps) {
-            if(previousState.filterText.indexOf(condition) > -1) {
-                return {
-                    filterText: previousState.filterText,
-                    plugins: previousState.plugins
-                };
+            var conditionIndex = previousState.staticFilters[keyword].indexOf(condition);
+            if(conditionIndex > -1) {
+                previousState.staticFilters[keyword].splice(conditionIndex, 1);
             }
             else {
-                return {
-                    filterText: previousState.filterText.trim() + ' ' + condition + ' ',
-                    plugins: previousState.plugins
-                };
+                previousState.staticFilters[keyword].push(condition);
+            }
+
+            delay(function(){
+                App.updateURL(previousState.filterText, previousState.staticFilters['platforms']);
+            }, 2000 );
+
+            return {
+                staticFilters: previousState.staticFilters,
+                plugins: previousState.plugins,
+                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters)
+            };
+        });
+    },
+    setSort: function(sort) {
+        this.setState(function(previousState, currentProps) {
+            App.sortPlugins(previousState.plugins, sort)
+            return {
+                plugins: previousState.plugins,
+                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters)
             }
         });
     },
@@ -89,7 +114,7 @@ var App = React.createClass({
         tagOfficialPlugins: function() {
 
         },
-        filterPlugins: function(plugins, filter) {
+        filterPlugins: function(plugins, filter, staticFilters) {
             var contains = function(values, pluginInfo) {
                 var allValuesPresent = true;
                 if(values.length == 0) {
@@ -151,18 +176,96 @@ var App = React.createClass({
             }
             var results = [];
             var filters = populateFilters(filter);
+
+            var combine = function(filter1, filter2) {
+                var result = [].concat(filter1)
+                for(var i = 0; i < filter2.length; i++) {
+                    if(result.indexOf(filter2[i]) === -1) {
+                        result.push(filter2[i])
+                    }
+                }
+                return result;
+            }
+
             for (var i = 0; i < plugins.length; i++) {
                 var plugin = plugins[i];
                 var fullPluginText = plugin.name.concat(plugin.author, plugin.keywords, plugin.license, plugin.description);
-                if(contains(filters['platforms'], plugin.keywords)
-                    && contains(filters['authors'], plugin.author)
-                    && contains(filters['licenses'], plugin.license)
+
+                if(contains(combine(filters['platforms'], staticFilters['platforms']), plugin.keywords)
+                    && contains(combine(filters['authors'], staticFilters['authors']), plugin.author)
+                    && contains(combine(filters['licenses'], staticFilters['licenses']), plugin.license)
                     && contains(filters['searchWords'], fullPluginText)) {
                         results.push(plugin);
                 }
             };
             return results;
-        }
+        },
+        sortPlugins: function(plugins, criteria) {
+            // Search results should be deterministic, so we need a secondary
+            // sort function for cases where the plugins are equal
+            var compareName = function(p1, p2) {
+                if(p1.name === p2.name) {
+                    return 0;
+                } else if(p1.name > p2.name) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+            switch(criteria) {
+                case 'Downloads':
+                    plugins.sort(function(p1, p2) {
+                        if(p2.downloadCount === p1.downloadCount) {
+                            return compareName(p1, p2);
+                        };
+                        return p2.downloadCount - p1.downloadCount;
+                    });
+                    break;
+                case 'Recently Updated':
+                    plugins.sort(function(p1, p2) {
+                        if(p2.modified === p1.modified) {
+                            return compareName(p1, p2);
+                        };
+                        return p1.modified - p2.modified;
+                    });
+                    break;
+                case 'Quality':
+                default:
+                    plugins.sort(function(p1, p2) {
+                        if(p2.rating === p1.rating) {
+                            return compareName(p1, p2);
+                        };
+                        return p2.rating - p1.rating;
+                    });
+                    break;
+            }
+            return plugins;
+        },
+        updateURL: function(filterText, platformFilters) {
+            var query = "";
+            var stateObj = {};
+            if(filterText) {
+                var filterTextLowerCase = filterText;
+                query = "?q=" + filterTextLowerCase;
+                stateObj.filterText = filterTextLowerCase;
+            }
+
+            if(platformFilters.length > 0) {
+                if(!query) {
+                    query = "?platforms=";
+                } else {
+                    query = query + "&platforms=";
+                }
+                platformFilters.forEach(function(platform) {
+                    query = query + platform + ",";
+                });
+                query = query.slice(0, query.length - 1);
+                stateObj.platforms = platformFilters;
+            }
+
+            window.history.pushState(stateObj, "", query);
+            ga('send', 'pageview', '/index.html' + query);
+        },
     },
     componentDidMount: function() {
         var plugins = [],
@@ -171,17 +274,17 @@ var App = React.createClass({
             pluginCount = 0,
             self = this,
             queryHost = "http://npmsearch.com/query",
-            queryFields = "fields=name,keywords,license,description,author,modified,homepage,version",
+            queryFields = "fields=name,keywords,license,description,author,modified,homepage,version,rating",
             queryKeywords = "q=keywords:%22ecosystem:cordova%22",
             queryInitialSize = Constants.NpmSearchInitialSize;
 
-        xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + queryInitialSize + "&start=0&sort=rating:desc", function(xhrResult) {
+        xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + queryInitialSize + "&start=0", function(xhrResult) {
             plugins = xhrResult.results;
             pluginCount = xhrResult.total;
             if (pluginCount <= queryInitialSize) {
                 processPlugins.bind(self, officialPlugins, plugins)();
             } else {
-                xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + (pluginCount - queryInitialSize) + "&start=" + queryInitialSize + "&sort=rating:desc", function(xhrResult) {
+                xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + (pluginCount - queryInitialSize) + "&start=" + queryInitialSize, function(xhrResult) {
                         plugins = [].concat(plugins, xhrResult.results);
                         processPlugins.bind(self, officialPlugins, plugins)();
                 }, function() { console.log('xhr err'); });
@@ -201,17 +304,9 @@ var App = React.createClass({
                             }
                         }
 
-                        // If we were unable to do server side sorting because
-                        // we requested in multiple batches, do it in the client
-                        if(plugins.length > Constants.NpmSearchInitialSize) {
-                            plugins.sort(function(p1, p2) {
-                                return p2.downloadCount - p1.downloadCount;
-                            });
-                        }
-
                         that.setState({
                             plugins: plugins,
-                            searchResults: App.filterPlugins(plugins, this.state.filterText)
+                            searchResults: App.filterPlugins(plugins, this.state.filterText, this.state.staticFilters)
                         });
                     }.bind(self), function() { console.log('xhr err'); });
                     packageNames = "";
@@ -251,6 +346,9 @@ var App = React.createClass({
                 plugins[i].modified = Math.ceil((dateNow - new Date(plugins[i].modified)) / oneDay);
             };
 
+            // Initial sort is always on quality
+            plugins = App.sortPlugins(plugins, 'Quality');
+
             if (this.isMounted()) {
                 var q = App.getURLParameter('q');
                 if(q) {
@@ -258,14 +356,14 @@ var App = React.createClass({
                         plugins: plugins,
                         filterText: q,
                         placeHolderText: 'Search ' + pluginCount + ' plugins...',
-                        searchResults: App.filterPlugins(plugins, q)
+                        searchResults: App.filterPlugins(plugins, q, this.state.staticFilters)
                     });
                 }
                 else {
                     this.setState({
                         plugins: plugins,
                         placeHolderText: 'Search ' + pluginCount + ' plugins...',
-                        searchResults: plugins
+                        searchResults: App.filterPlugins(plugins, '', this.state.staticFilters)
                     });
                 }
                 getDownloadCount(plugins,this);
@@ -273,18 +371,50 @@ var App = React.createClass({
         }
     },
     render: function() {
+        var createPlatformButton = function(platform, keyword, state) {
+            var active = state.staticFilters["platforms"].indexOf(keyword) > -1;
+            return (
+                <PlatformButton platform={platform} keyword={keyword} initiallyActive={active}/>
+            );
+        }
         return (
             <div>
-                <div id="headblock">
-                    <div id="topcontent">
-                        <div id="pluggy"></div>
-                        <div id="discovermessage"><h1>Search Cordova Plugins</h1></div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12 text-center">
+                            <h1>Cordova Plugins</h1>
+                        </div>
                     </div>
-                    <SearchBar
-                        initialValue={this.state.filterText}
-                        placeHolderText={this.state.placeHolderText}
-                        onUserInput={this.handleUserInput}
-                    />
+                    <div className="row">
+                        <div className="col-sm-12">
+                        <SearchBar
+                            initialValue={this.state.filterText}
+                            placeHolderText={this.state.placeHolderText}
+                            onUserInput={this.handleUserInput}
+                        />
+                            <div className="plugins_links">
+                                    <ul className="nav nav-justified">
+                                    <li><a href="#"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
+                                    <li><a href="#"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
+                                    <li><a href="#"><span className="glyphicon glyphicon-alert"></span><i>&nbsp;</i>Plugin Issue Tracker</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row filter-by-platforms">
+                        <div className="filter-by-platform-label"><span>Platform:</span></div>
+                        <ul className="nav nav-pills filter-by-platform-filters">
+                            {createPlatformButton("Android", "cordova-android", this.state)}
+                            {createPlatformButton("iOS", "cordova-ios", this.state)}
+                            {createPlatformButton("Windows 10", "cordova-windows", this.state)}
+                            {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
+                            {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
+                            {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
+                            {createPlatformButton("WebOS", "cordova-webos", this.state)}
+                            {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
+                            {createPlatformButton("Browser", "cordova-browser", this.state)}
+                        </ul>
+                    </div>
                 </div>
                 <PluginList plugins={this.state.searchResults} />
             </div>
