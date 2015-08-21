@@ -25,7 +25,7 @@ lsi: false
 safe: true
 highlighter: pygments
 
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - autolink

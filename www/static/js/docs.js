@@ -26,7 +26,19 @@ $(document).ready(function () {
         'highlightOnScroll': true, // add class to heading that is currently in focus
         'highlightOffset':   100, // offset to trigger the next headline
         'anchorName':        function(i, heading, prefix) { // custom function for anchor name
-            return prefix + i;
+
+            // use "tocX" by default
+            var fragmentName = prefix + i;
+
+            // use the id or the name of the heading, if given, in
+            // that order of precedence (i.e. id first, then name)
+            if (heading.id) {
+                fragmentName = heading.id;
+            } else if (heading.name) {
+                fragmentName = heading.name;
+            }
+
+            return fragmentName;
         },
         'headerText': function(i, heading, $heading) { // custom function building the header-item text
             return $heading.text();
