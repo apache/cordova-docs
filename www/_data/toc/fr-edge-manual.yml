@@ -10,5 +10,5 @@
 - {name: !!python/unicode 'Stockage', url: !!python/unicode '/docs/fr/edge/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Guide de crochets', url: !!python/unicode '/docs/fr/edge/guide/appdev/hooks/index.html'}
 - {name: "Prochaines \xE9tapes", url: !!python/unicode '/docs/fr/edge/guide/next/index.html'}
-- {name: "Index des mots cl\xE9s", url: !!python/unicode '/docs/fr/edge//index.html'}
+- {name: "Index des mots cl\xE9s", url: !!python/unicode '/docs/fr/edge/_index.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/fr/edge/cordova/plugins/pluginapis.html'}

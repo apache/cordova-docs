@@ -10,7 +10,7 @@
 - {name: "\u30D7\u30E9\u30B0\u30A4\u30F3\u958B\u767A\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: "\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC \u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/3.1.0/guide/appdev/privacy/index.html'}
 - {name: "\u30DB\u30EF\u30A4\u30C8 \u30EA\u30B9\u30C8 \u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "\u30AD\u30FC\u30EF\u30FC\u30C9 \u30A4\u30F3\u30C7\u30C3\u30AF\u30B9", url: !!python/unicode '/docs/ja/3.1.0//index.html'}
+- {name: "\u30AD\u30FC\u30EF\u30FC\u30C9 \u30A4\u30F3\u30C7\u30C3\u30AF\u30B9", url: !!python/unicode '/docs/ja/3.1.0/_index.html'}
 - {name: "\u52A0\u901F\u5EA6\u30BB\u30F3\u30B5\u30FC", url: !!python/unicode '/docs/ja/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: "\u30AB\u30E1\u30E9", url: !!python/unicode '/docs/ja/3.1.0/cordova/camera/camera.html'}
 - {name: "\u30AD\u30E3\u30D7\u30C1\u30E3", url: !!python/unicode '/docs/ja/3.1.0/cordova/media/capture/capture.html'}

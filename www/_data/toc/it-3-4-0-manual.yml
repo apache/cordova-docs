@@ -10,6 +10,6 @@
 - {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/3.4.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/3.4.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Archiviazione', url: !!python/unicode '/docs/it/3.4.0/cordova/storage/storage.html'}
-- {name: !!python/unicode 'Parola chiave indice', url: !!python/unicode '/docs/it/3.4.0//index.html'}
+- {name: !!python/unicode 'Parola chiave indice', url: !!python/unicode '/docs/it/3.4.0/_index.html'}
 - {name: !!python/unicode 'Eventi', url: !!python/unicode '/docs/it/3.4.0/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/it/3.4.0/cordova/plugins/pluginapis.html'}

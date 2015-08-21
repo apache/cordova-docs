@@ -7,7 +7,7 @@
 - {name: "\u5916\u639B\u7A0B\u5F0F\u958B\u767C\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/appdev/privacy/index.html'}
 - {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode '/docs/zh/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/3.1.0//index.html'}
+- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/3.1.0/_index.html'}
 - {name: "\u52A0\u901F\u5EA6\u8A08", url: !!python/unicode '/docs/zh/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: "\u76F8\u6A5F", url: !!python/unicode '/docs/zh/3.1.0/cordova/camera/camera.html'}
 - {name: "\u6355\u7372", url: !!python/unicode '/docs/zh/3.1.0/cordova/media/capture/capture.html'}

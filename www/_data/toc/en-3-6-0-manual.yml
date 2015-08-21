@@ -12,6 +12,6 @@
 - {name: !!python/unicode 'Whitelist Guide', url: !!python/unicode '/docs/en/3.6.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/3.6.0/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Next Steps', url: !!python/unicode '/docs/en/3.6.0/guide/next/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/3.6.0//index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/3.6.0/_index.html'}
 - {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/3.6.0/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/en/3.6.0/cordova/plugins/pluginapis.html'}

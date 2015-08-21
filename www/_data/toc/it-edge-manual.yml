@@ -13,6 +13,6 @@
 - {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/edge/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Guida di ganci', url: !!python/unicode '/docs/it/edge/guide/appdev/hooks/index.html'}
 - {name: !!python/unicode 'Prossimi passi', url: !!python/unicode '/docs/it/edge/guide/next/index.html'}
-- {name: !!python/unicode 'Indice delle parole chiave', url: !!python/unicode '/docs/it/edge//index.html'}
+- {name: !!python/unicode 'Indice delle parole chiave', url: !!python/unicode '/docs/it/edge/_index.html'}
 - {name: !!python/unicode 'Eventi', url: !!python/unicode '/docs/it/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/it/edge/cordova/plugins/pluginapis.html'}

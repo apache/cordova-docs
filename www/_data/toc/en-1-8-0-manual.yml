@@ -14,4 +14,4 @@
 - {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode '/docs/en/1.8.0/guide/getting-started/index.html'}
 - {name: !!python/unicode 'Upgrading Guides', url: !!python/unicode '/docs/en/1.8.0/guide/upgrading/index.html'}
 - {name: !!python/unicode 'Domain Whitelist Guide', url: !!python/unicode '/docs/en/1.8.0/guide/whitelist/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.8.0//index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.8.0/_index.html'}

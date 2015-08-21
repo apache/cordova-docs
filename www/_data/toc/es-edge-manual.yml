@@ -12,6 +12,6 @@
 - {name: "Gu\xEDa de lista blanca", url: !!python/unicode '/docs/es/edge/guide/appdev/whitelist/index.html'}
 - {name: "Almacenamiento de informaci\xF3n", url: !!python/unicode '/docs/es/edge/cordova/storage/storage.html'}
 - {name: "Ganchos de gu\xEDa", url: !!python/unicode '/docs/es/edge/guide/appdev/hooks/index.html'}
-- {name: "\xCDndice de palabra clave", url: !!python/unicode '/docs/es/edge//index.html'}
+- {name: "\xCDndice de palabra clave", url: !!python/unicode '/docs/es/edge/_index.html'}
 - {name: !!python/unicode 'Eventos', url: !!python/unicode '/docs/es/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/edge/cordova/plugins/pluginapis.html'}

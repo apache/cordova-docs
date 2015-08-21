@@ -12,4 +12,4 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/ja/1.7.0/cordova/notification/notification.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/ja/1.7.0/cordova/storage/storage.html'}
 - {name: "\u5165\u9580\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/1.7.0/guide/getting-started/index.html'}
-- {name: "\u7D22\u5F15", url: !!python/unicode '/docs/ja/1.7.0//index.html'}
+- {name: "\u7D22\u5F15", url: !!python/unicode '/docs/ja/1.7.0/_index.html'}

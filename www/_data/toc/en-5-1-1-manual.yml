@@ -14,6 +14,6 @@
 - {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/5.1.1/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Hooks Guide', url: !!python/unicode '/docs/en/5.1.1/guide/appdev/hooks/index.html'}
 - {name: !!python/unicode 'Next Steps', url: !!python/unicode '/docs/en/5.1.1/guide/next/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/5.1.1//index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/5.1.1/_index.html'}
 - {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/5.1.1/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/en/5.1.1/cordova/plugins/pluginapis.html'}

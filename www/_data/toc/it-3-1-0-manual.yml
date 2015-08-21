@@ -7,7 +7,7 @@
 - {name: !!python/unicode 'Guida allo sviluppo di plugin', url: !!python/unicode '/docs/it/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/3.1.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Guida di whitelist', url: !!python/unicode '/docs/it/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Parola chiave indice', url: !!python/unicode '/docs/it/3.1.0//index.html'}
+- {name: !!python/unicode 'Parola chiave indice', url: !!python/unicode '/docs/it/3.1.0/_index.html'}
 - {name: !!python/unicode 'Accelerometro', url: !!python/unicode '/docs/it/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: !!python/unicode 'Fotocamera', url: !!python/unicode '/docs/it/3.1.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Cattura', url: !!python/unicode '/docs/it/3.1.0/cordova/media/capture/capture.html'}

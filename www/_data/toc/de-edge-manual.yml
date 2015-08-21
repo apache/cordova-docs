@@ -12,6 +12,6 @@
 - {name: !!python/unicode 'Plattformen und Plugins Versionsmanagement', url: !!python/unicode '/docs/de/edge/platform_plugin_versioning_ref/index.html'}
 - {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode '/docs/de/edge/guide/appdev/whitelist/index.html'}
 - {name: "Die n\xE4chsten Schritte", url: !!python/unicode '/docs/de/edge/guide/next/index.html'}
-- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/edge//index.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/edge/_index.html'}
 - {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/edge/cordova/plugins/pluginapis.html'}
