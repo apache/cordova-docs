@@ -19,17 +19,17 @@ var PlatformButton = React.createClass({
         if(this.state.isActive) {
             return (
                 <li role="presentation" className="active" onClick={this.onClick}>
-                    <a href="#">
+                    <button className="btn btn-primary">
                         <span className="glyphicon glyphicon-ok"></span><i>&nbsp;</i>{this.props.platform}
-                    </a>
+                    </button>
                 </li>
             );
         } else {
             return (
                 <li role="presentation" onClick={this.onClick}>
-                    <a href="#">
+                    <button className="btn btn-default">
                         {this.props.platform}
-                    </a>
+                    </button>
                 </li>
             );
         }

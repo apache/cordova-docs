@@ -2,12 +2,11 @@
 	max-width:405px;
 	margin:auto;
 
-}
-button.btn {
-	color:white;
+	button.btn {
+		color:white;
+	}
 }
 .whatisplugin_box {
-
 	img {
 		float:left;
 			padding-right: 20px;
@@ -59,13 +58,27 @@ button.btn {
 }
 
 .filter-by-platform-label {
-	line-height:40px;
 	display: inline-block;
 	vertical-align: top;
+	line-height:40px;
+	margin-right: 1em;
 }
 
 .filter-by-platform-filters {
+	line-height:40px;
 	display: inline-block;
+	button.btn {
+		&.btn-primary {
+			background-color:$brand-primary;
+		}
+		&.btn-default {
+			background-color:$gray-10;
+			&:hover {
+				background-color: $brand-primary;
+				color: white;
+			}
+		}
+	}
 }
 
 /***

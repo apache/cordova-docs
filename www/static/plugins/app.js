@@ -5,6 +5,8 @@ var React           = window.React = require('react'), // assign it to window fo
     App             = {},
     SortDropdown = require('./sortdropdown.jsx');
 
+var INPUT_DELAY = 500; // in milliseconds
+
 var timer = null;
 var Constants = {
     DownloadCountBatch: 100,
@@ -71,7 +73,7 @@ var App = React.createClass({
 
             delay(function(){
                 App.updateURL(previousState.filterText, previousState.staticFilters['platforms']);
-            }, 2000 );
+            }, INPUT_DELAY);
 
             return {
                 staticFilters: previousState.staticFilters,
@@ -242,7 +244,7 @@ var App = React.createClass({
             return plugins;
         },
         updateURL: function(filterText, platformFilters) {
-            var query = "";
+            var query = "?";
             var stateObj = {};
             if(filterText) {
                 var filterTextLowerCase = filterText;
@@ -251,7 +253,7 @@ var App = React.createClass({
             }
 
             if(platformFilters.length > 0) {
-                if(!query) {
+                if(query === "?") {
                     query = "?platforms=";
                 } else {
                     query = query + "&platforms=";
@@ -263,7 +265,7 @@ var App = React.createClass({
                 stateObj.platforms = platformFilters;
             }
 
-            window.history.pushState(stateObj, "", query);
+            window.history.replaceState(stateObj, "", query);
             ga('send', 'pageview', '/index.html' + query);
         },
     },
