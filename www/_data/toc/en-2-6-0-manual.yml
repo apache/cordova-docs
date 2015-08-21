@@ -1,6 +1,24 @@
-- {name: Guide, url: /docs/en/2.6.0/index.html}
-- {name: Getting Started, url: /docs/en/2.6.0/guide/cli/index.html}
-- {name: Plugins, url: /docs/en/2.6.0/cordova/plugins/pluginapis.html}
-- {name: Configuration, url: /docs/en/2.6.0/config_ref/index.html}
-- {name: Privacy and Security, url: /docs/en/2.6.0/guide/appdev/security/index.html} # Privacy: /docs/en/2.6.0/guide/appdev/privacy/index.html
-- {name: Storage, url: /docs/en/2.6.0/cordova/storage/storage.html}
+- {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/en/2.6.0/cordova/accelerometer/accelerometer.html'}
+- {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/en/2.6.0/cordova/camera/camera.html'}
+- {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/en/2.6.0/cordova/media/capture/capture.html'}
+- {name: !!python/unicode 'Compass', url: !!python/unicode '/docs/en/2.6.0/cordova/compass/compass.html'}
+- {name: !!python/unicode 'Connection', url: !!python/unicode '/docs/en/2.6.0/cordova/connection/connection.html'}
+- {name: !!python/unicode 'Contacts', url: !!python/unicode '/docs/en/2.6.0/cordova/contacts/contacts.html'}
+- {name: !!python/unicode 'Device', url: !!python/unicode '/docs/en/2.6.0/cordova/device/device.html'}
+- {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/2.6.0/cordova/events/events.html'}
+- {name: !!python/unicode 'File', url: !!python/unicode '/docs/en/2.6.0/cordova/file/file.html'}
+- {name: !!python/unicode 'Geolocation', url: !!python/unicode '/docs/en/2.6.0/cordova/geolocation/geolocation.html'}
+- {name: !!python/unicode 'Globalization', url: !!python/unicode '/docs/en/2.6.0/cordova/globalization/globalization.html'}
+- {name: !!python/unicode 'InAppBrowser', url: !!python/unicode '/docs/en/2.6.0/cordova/inappbrowser/inappbrowser.html'}
+- {name: !!python/unicode 'Media', url: !!python/unicode '/docs/en/2.6.0/cordova/media/media.html'}
+- {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/en/2.6.0/cordova/notification/notification.html'}
+- {name: !!python/unicode 'Splashscreen', url: !!python/unicode '/docs/en/2.6.0/cordova/splashscreen/splashscreen.html'}
+- {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/2.6.0/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode '/docs/en/2.6.0/guide/getting-started/index.html'}
+- {name: !!python/unicode 'Command-Line Usage', url: !!python/unicode '/docs/en/2.6.0/guide/command-line/index.html'}
+- {name: !!python/unicode 'Upgrading Guides', url: !!python/unicode '/docs/en/2.6.0/guide/upgrading/index.html'}
+- {name: !!python/unicode 'Project Settings', url: !!python/unicode '/docs/en/2.6.0/guide/project-settings/index.html'}
+- {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode '/docs/en/2.6.0/guide/plugin-development/index.html'}
+- {name: !!python/unicode 'Domain Whitelist Guide', url: !!python/unicode '/docs/en/2.6.0/guide/whitelist/index.html'}
+- {name: !!python/unicode 'Embedding WebView', url: !!python/unicode '/docs/en/2.6.0/guide/cordova-webview/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/2.6.0//index.html'}

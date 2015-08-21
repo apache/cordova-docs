@@ -1,6 +1,19 @@
-- {name: Guide, url: /docs/en/edge/index.html}
-- {name: Getting Started, url: /docs/en/edge/guide/cli/index.html}
-- {name: Plugins, url: /docs/en/edge/cordova/plugins/pluginapis.html}
-- {name: Configuration, url: /docs/en/edge/config_ref/index.html}
-- {name: Privacy and Security, url: /docs/en/edge/guide/appdev/security/index.html} # Privacy: /docs/en/edge/guide/appdev/privacy/index.html
-- {name: Storage, url: /docs/en/edge/cordova/storage/storage.html}
+- {name: !!python/unicode 'Overview', url: !!python/unicode '/docs/en/edge/guide/overview/index.html'}
+- {name: !!python/unicode 'Platform Support', url: !!python/unicode '/docs/en/edge/guide/support/index.html'}
+- {name: !!python/unicode 'The Command-Line Interface', url: !!python/unicode '/docs/en/edge/guide/cli/index.html'}
+- {name: !!python/unicode 'Platform Guides', url: !!python/unicode '/docs/en/edge/guide/platforms/index.html'}
+- {name: !!python/unicode 'Using Plugman to Manage Plugins', url: !!python/unicode '/docs/en/edge/plugin_ref/plugman.html'}
+- {name: !!python/unicode 'The config.xml File', url: !!python/unicode '/docs/en/edge/config_ref/index.html'}
+- {name: !!python/unicode 'Icons and Splash Screens', url: !!python/unicode '/docs/en/edge/config_ref/images.html'}
+- {name: !!python/unicode 'Embedding WebViews', url: !!python/unicode '/docs/en/edge/guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode '/docs/en/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Privacy Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/privacy/index.html'}
+- {name: !!python/unicode 'Security Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/security/index.html'}
+- {name: !!python/unicode 'Platforms and Plugins Version Management', url: !!python/unicode '/docs/en/edge/platform_plugin_versioning_ref/index.html'}
+- {name: !!python/unicode 'Whitelist Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/whitelist/index.html'}
+- {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/edge/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Hooks Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/hooks/index.html'}
+- {name: !!python/unicode 'Next Steps', url: !!python/unicode '/docs/en/edge/guide/next/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/edge//index.html'}
+- {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/edge/cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/en/edge/cordova/plugins/pluginapis.html'}

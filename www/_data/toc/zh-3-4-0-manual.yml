@@ -1,6 +1,15 @@
-- {name: Guide, url: /docs/zh/3.4.0/index.html}
-- {name: Getting Started, url: /docs/zh/3.4.0/guide/cli/index.html}
-- {name: Plugins, url: /docs/zh/3.4.0/cordova/plugins/pluginapis.html}
-- {name: Configuration, url: /docs/zh/3.4.0/config_ref/index.html}
-- {name: Privacy and Security, url: /docs/zh/3.4.0/guide/appdev/security/index.html} # Privacy: /docs/zh/3.4.0/guide/appdev/privacy/index.html
-- {name: Storage, url: /docs/zh/3.4.0/cordova/storage/storage.html}
+- {name: "\u6982\u8FF0", url: !!python/unicode '/docs/zh/3.4.0/guide/overview/index.html'}
+- {name: "\u5E73\u81FA\u652F\u63F4", url: !!python/unicode '/docs/zh/3.4.0/guide/support/index.html'}
+- {name: "\u547D\u4EE4\u5217\u4ECB\u9762", url: !!python/unicode '/docs/zh/3.4.0/guide/cli/index.html'}
+- {name: "\u5E73\u81FA\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/platforms/index.html'}
+- {name: "\u4F7F\u7528 Plugman \u4F86\u7BA1\u7406\u5916\u639B\u7A0B\u5F0F", url: !!python/unicode '/docs/zh/3.4.0/plugin_ref/plugman.html'}
+- {name: "Config.xml \u6A94", url: !!python/unicode '/docs/zh/3.4.0/config_ref/index.html'}
+- {name: "\u5716\u793A\u548C\u555F\u52D5\u756B\u9762", url: !!python/unicode '/docs/zh/3.4.0/config_ref/images.html'}
+- {name: "\u5D4C\u5165 WebViews", url: !!python/unicode '/docs/zh/3.4.0/guide/hybrid/webviews/index.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u958B\u767C\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/hybrid/plugins/index.html'}
+- {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/appdev/privacy/index.html'}
+- {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/appdev/whitelist/index.html'}
+- {name: "\u5B58\u5132", url: !!python/unicode '/docs/zh/3.4.0/cordova/storage/storage.html'}
+- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/3.4.0//index.html'}
+- {name: "\u4E8B\u4EF6", url: !!python/unicode '/docs/zh/3.4.0/cordova/events/events.html'}
+- {name: "\u5916\u639B\u7A0B\u5F0F\u7684 Api", url: !!python/unicode '/docs/zh/3.4.0/cordova/plugins/pluginapis.html'}

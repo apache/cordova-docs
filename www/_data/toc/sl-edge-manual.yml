@@ -1,6 +1,15 @@
-- {name: Guide, url: /docs/sl/edge/index.html}
-- {name: Getting Started, url: /docs/sl/edge/guide/cli/index.html}
-- {name: Plugins, url: /docs/sl/edge/cordova/plugins/pluginapis.html}
-- {name: Configuration, url: /docs/sl/edge/config_ref/index.html}
-- {name: Privacy and Security, url: /docs/sl/edge/guide/appdev/security/index.html} # Privacy: /docs/sl/edge/guide/appdev/privacy/index.html
-- {name: Storage, url: /docs/sl/edge/cordova/storage/storage.html}
+- {name: !!python/unicode 'Pregled', url: !!python/unicode '/docs/sl/edge/guide/overview/index.html'}
+- {name: !!python/unicode 'Platforma podporo', url: !!python/unicode '/docs/sl/edge/guide/support/index.html'}
+- {name: !!python/unicode 'Vmesnik ukazne vrstice', url: !!python/unicode '/docs/sl/edge/guide/cli/index.html'}
+- {name: !!python/unicode 'Platforma vodniki', url: !!python/unicode '/docs/sl/edge/guide/platforms/index.html'}
+- {name: !!python/unicode 'Uporaba Plugman za upravljanje Plugins', url: !!python/unicode '/docs/sl/edge/plugin_ref/plugman.html'}
+- {name: !!python/unicode 'Config.xml datoteke', url: !!python/unicode '/docs/sl/edge/config_ref/index.html'}
+- {name: !!python/unicode 'Ikone in brizg zaslon', url: !!python/unicode '/docs/sl/edge/config_ref/images.html'}
+- {name: !!python/unicode 'Vdelava spletni pogledi', url: !!python/unicode '/docs/sl/edge/guide/hybrid/webviews/index.html'}
+- {name: !!python/unicode 'Plugin razvoj vodnik', url: !!python/unicode '/docs/sl/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Vodnik o zasebnosti', url: !!python/unicode '/docs/sl/edge/guide/appdev/privacy/index.html'}
+- {name: !!python/unicode 'Seznam dovoljenih vodnik', url: !!python/unicode '/docs/sl/edge/guide/appdev/whitelist/index.html'}
+- {name: !!python/unicode 'Shranjevanje', url: !!python/unicode '/docs/sl/edge/cordova/storage/storage.html'}
+- {name: "Klju\u010Dne besede kazalo", url: !!python/unicode '/docs/sl/edge//index.html'}
+- {name: !!python/unicode 'Dogodki', url: !!python/unicode '/docs/sl/edge/cordova/events/events.html'}
+- {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/sl/edge/cordova/plugins/pluginapis.html'}

@@ -1,6 +1,11 @@
-- {name: Guide, url: /docs/es/3.5.0/index.html}
-- {name: Getting Started, url: /docs/es/3.5.0/guide/cli/index.html}
-- {name: Plugins, url: /docs/es/3.5.0/cordova/plugins/pluginapis.html}
-- {name: Configuration, url: /docs/es/3.5.0/config_ref/index.html}
-- {name: Privacy and Security, url: /docs/es/3.5.0/guide/appdev/security/index.html} # Privacy: /docs/es/3.5.0/guide/appdev/privacy/index.html
-- {name: Storage, url: /docs/es/3.5.0/cordova/storage/storage.html}
+- {name: !!python/unicode 'Perspectiva general', url: !!python/unicode '/docs/es/3.5.0/guide/overview/index.html'}
+- {name: !!python/unicode 'Soporte de plataformas', url: !!python/unicode '/docs/es/3.5.0/guide/support/index.html'}
+- {name: "Gu\xEDas de plataformas", url: !!python/unicode '/docs/es/3.5.0/guide/platforms/index.html'}
+- {name: !!python/unicode 'El archivo config.xml', url: !!python/unicode '/docs/es/3.5.0/config_ref/index.html'}
+- {name: !!python/unicode 'Iconos y pantallas de Splash', url: !!python/unicode '/docs/es/3.5.0/config_ref/images.html'}
+- {name: "Gu\xEDa de desarrollo de Plugins", url: !!python/unicode '/docs/es/3.5.0/guide/hybrid/plugins/index.html'}
+- {name: "Gu\xEDa de privacidad", url: !!python/unicode '/docs/es/3.5.0/guide/appdev/privacy/index.html'}
+- {name: "Gu\xEDa Whitelist", url: !!python/unicode '/docs/es/3.5.0/guide/appdev/whitelist/index.html'}
+- {name: !!python/unicode 'Almacenamiento', url: !!python/unicode '/docs/es/3.5.0/cordova/storage/storage.html'}
+- {name: "\xCDndice de palabras clave", url: !!python/unicode '/docs/es/3.5.0//index.html'}
+- {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/3.5.0/cordova/plugins/pluginapis.html'}
