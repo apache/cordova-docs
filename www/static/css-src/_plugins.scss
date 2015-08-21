@@ -53,3 +53,55 @@ button.btn {
 	right:0;
 	width:100px;
 }
+.filter-by-platforms {
+	margin-top:40px;
+	margin-bottom:10px;
+}
+
+.filter-by-platform-label {
+	line-height:40px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.filter-by-platform-filters {
+	display: inline-block;
+}
+
+/***
+****	Plugins Results	
+****	
+*/
+
+.plugins-results-container {
+	margin-bottom:40px;
+	padding:0;
+}
+.plugin-results-result {
+	margin-bottom:20px;
+	background-color:$gray-5;
+	position: relative;
+}
+.version_and_author {
+	display: inline-block;
+}
+
+.plugins-copy-to-clipboard {
+	width:15px;
+	position:absolute;
+	right:0;
+	top:20px;
+	margin-right:10px;
+}
+
+@media (min-width: 767px) {
+	.version_and_author {
+	float:right;
+	margin-top:20px;
+	}
+	h2 { display: inline-block }
+}
+.license { font-weight: bold }
+hr.results-divider-line {
+	border-color:$gray-20;
+}

@@ -39,20 +39,20 @@ permalink: /
             <div class="row">
                 <div class="col-xs-4">
                     <div class="row">
-                        <div class="col-sm-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
-                        <div class="col-sm-9"><div class="value_prop"><p>100% shared code across platforms</p></div></div>
+                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
+                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>100% shared code across platforms</p></div></div>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="row">
-                        <div class="col-sm-3"><div class="sprite_img" id="sprite_offline"></div></div>
-                        <div class="col-sm-9"><div class="value_prop">Support for offline scenarios</div></div>
+                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_offline"></div></div>
+                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Support for offline scenarios</p></div></div>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="row">
-                        <div class="col-sm-3"><div class="sprite_img" id="sprite_apis"></div></div>
-                        <div class="col-sm-9"><div class="value_prop">Access native Device APIs</div></div>
+                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_apis"></div></div>
+                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Access native Device APIs</p></div></div>
                     </div>
                 </div>
             </div>
@@ -209,3 +209,25 @@ permalink: /
 <script src="../../dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+        //Smooth scroll to anchor links
+    	$("#navbar ul li a[href^='/#']").on('click', function(e) { 
+		// prevent default anchor click behavior
+		console.log('Scrolled to where you asked');
+		e.preventDefault();
+
+		// store hash
+		var hash = this.hash;
+		
+		// animate
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+			}, 300, function(){
+		
+			// when done, add hash to url
+			// (default click behaviour)
+			window.location.hash = hash;
+			});
+		
+	});
+</script>

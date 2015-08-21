@@ -31,6 +31,7 @@ $gray-50: lighten($gray-base, 50%);
 $gray-40: lighten($gray-base, 60%);
 $gray-20: lighten($gray-base, 80%);
 $gray-10: lighten($gray-base, 90%);
+$gray-5: lighten($gray-base, 95%);
 $brand-primary: #4CC2E4;
 
 /* Grid size (mirrors Bootstraps) */
@@ -166,11 +167,26 @@ $scree-md-max: $screen-lg - 1;
 
 /* footer */
 footer {
-    background-color: white;
+    background-color: $gray-5;
     position: relative;
+	strong { color:inherit; }
+	h1 {
+		font-size:2.5em;
+		color:$brand-primary-darker;
+	}
+  	h2 {
+    text-transform: uppercase;
+    color:$gray-50;
+    font-size: 1em;
+    font-weight: bold;
+    }
 }
 footer ul.nav li > a {
-    padding-left: 0px;
+	font-size:1em;
+	margin-left: -15px;
+}
+footer ul.nav li > a:hover {
+	background-color: $gray-20;
 }
 footer .copyright_text {
     margin-top: 25px;
