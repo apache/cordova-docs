@@ -7,7 +7,7 @@ var SortButton = React.createClass({
     },
     render: function() {
         return (
-            <li className="clickable" onClick={this.onClick}><a>{this.props.criteria}</a></li>
+            <li className="clickable" onClick={this.onClick}><a href="#">{this.props.criteria}</a></li>
         );
     }
 });
