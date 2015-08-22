@@ -37,7 +37,8 @@ var App = React.createClass({
                 filterText: q,
                 placeHolderText: 'Loading...',
                 searchResults: [],
-                staticFilters: staticFilters
+                staticFilters: staticFilters,
+                sortCriteria: "Quality"
             };
         } else {
             return {
@@ -45,7 +46,8 @@ var App = React.createClass({
                 filterText: '',
                 placeHolderText: 'Loading...',
                 searchResults: [],
-                staticFilters: staticFilters
+                staticFilters: staticFilters,
+                sortCriteria: "Quality"
             };
         }
     },
@@ -87,7 +89,8 @@ var App = React.createClass({
             App.sortPlugins(previousState.plugins, sort)
             return {
                 plugins: previousState.plugins,
-                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters)
+                searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters),
+                sortCriteria: sort
             }
         });
     },
@@ -389,11 +392,19 @@ var App = React.createClass({
                     </div>
                     <div className="row">
                         <div className="col-sm-12">
-                        <SearchBar
-                            initialValue={this.state.filterText}
-                            placeHolderText={this.state.placeHolderText}
-                            onUserInput={this.handleUserInput}
-                        />
+                            <div className="plugins_search_container">
+                            <SearchBar
+                                initialValue={this.state.filterText}
+                                placeHolderText={this.state.placeHolderText}
+                                onUserInput={this.handleUserInput}
+                            />
+                            <div className="whatisplugin_box">
+                                <img src="/static/img/pluggy.png"/>
+                                <h2>What is a Cordova plugin?</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ante placerat, gravida ligula in, interdum mauris. Sed quis est vel erat vestibulum volutpat in vitae.  <a href="#">Learn more...</a></p>
+                            </div>
+                            <div className="clearfix"></div>
+                        </div>
                             <div className="plugins_links">
                                     <ul className="nav nav-justified">
                                     <li><a href="#"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
@@ -404,18 +415,23 @@ var App = React.createClass({
                         </div>
                     </div>
                     <div className="row filter-by-platforms">
-                        <div className="filter-by-platform-label"><span>Platform:</span></div>
-                        <ul className="nav nav-pills filter-by-platform-filters">
-                            {createPlatformButton("Android", "cordova-android", this.state)}
-                            {createPlatformButton("iOS", "cordova-ios", this.state)}
-                            {createPlatformButton("Windows 10", "cordova-windows", this.state)}
-                            {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
-                            {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
-                            {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
-                            {createPlatformButton("WebOS", "cordova-webos", this.state)}
-                            {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
-                            {createPlatformButton("Browser", "cordova-browser", this.state)}
-                        </ul>
+                        <div className="col-sm-9">
+                            <div className="filter-by-platform-label"><span>Must Support Platform(s):</span></div>
+                            <ul className="nav nav-pills filter-by-platform-filters">
+                                {createPlatformButton("Android", "cordova-android", this.state)}
+                                {createPlatformButton("iOS", "cordova-ios", this.state)}
+                                {createPlatformButton("Windows 10", "cordova-windows", this.state)}
+                                {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
+                                {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
+                                {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
+                                {createPlatformButton("WebOS", "cordova-webos", this.state)}
+                                {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
+                                {createPlatformButton("Browser", "cordova-browser", this.state)}
+                            </ul>
+                        </div>
+                        <div className="col-sm-3">
+                            <SortDropdown selected={this.state.sortCriteria}/>
+                        </div>
                     </div>
                 </div>
                 <PluginList plugins={this.state.searchResults} />
