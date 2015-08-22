@@ -65,6 +65,17 @@
 
 .filter-by-platform-filters {
 	display: inline-block;
+	button.btn {
+		&.btn-primary {
+			background-color: $brand-primary;
+		}
+		&.btn-default {
+			background-color: $gray-10;
+			&:hover {
+				background-color: $brand-primary;
+			}
+		}
+	}
 }
 
 .nav-pills > li > a {

@@ -56,7 +56,7 @@ var App = React.createClass({
         var platformFilters = this.state.staticFilters["platforms"];
         delay(function(){
             App.updateURL(filterText, platformFilters);
-        }, 2000 );
+        }, INPUT_DELAY);
 
         this.setState({
             filterText: filterText,
