@@ -1,21 +1,22 @@
 .plugins_search_container {
 	max-width:405px;
 	margin:auto;
-
-	button.btn {
-		color:white;
+	.input-group {
+		width:100%;
 	}
 }
+
 .whatisplugin_box {
+	margin-top:20px;
 	img {
 		float:left;
-			padding-right: 20px;
+		    padding-right: 20px;
 			padding-bottom: 20px;
-			width: 84px;
+		    width: 84px;
 	}
 }
 .plugins_links {
-	max-width: 50%;
+	max-width: 405px;
 	margin:auto;
 }
 .progress {
@@ -58,27 +59,30 @@
 }
 
 .filter-by-platform-label {
-	display: inline-block;
-	vertical-align: top;
 	line-height:40px;
-	margin-right: 1em;
+	vertical-align: top;
 }
 
 .filter-by-platform-filters {
-	line-height:40px;
 	display: inline-block;
-	button.btn {
-		&.btn-primary {
-			background-color:$brand-primary;
-		}
-		&.btn-default {
-			background-color:$gray-10;
-			&:hover {
-				background-color: $brand-primary;
-				color: white;
-			}
-		}
-	}
+}
+
+.nav-pills > li > a {
+	background-color:$gray-5;
+}
+
+.nav > li > a:hover {
+	background-color:$gray-10;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color:$brand-primary;
+	color:black;
+}
+
+.plugins-sort-dropdown {
+	height:40px;
+	margin-top:40px;
 }
 
 /***

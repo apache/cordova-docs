@@ -60,14 +60,14 @@ var Plugin = React.createClass({
         }
 
         if(document.queryCommandSupported("copy")) {
-            copyIcon = (<img src="/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard" onClick={this.copyText}/>)
+            copyIcon = (<a href="#" data-toggle="tooltip" data-placement="left" title="Copy npm install command to clipboard" onClick={this.copyText}><img src="/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/></a>);
         }
 
         return (
             <div className="container plugin-results-result">
                 {copyIcon}
                 <div className="row">
-                    <div className="col-sm-9">
+                    <div className="col-sm-8">
                         <h2><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h2>
                         <p className="version_and_author">v{this.props.plugin.version} by <strong>{this.props.plugin.author}</strong></p>
                     </div>
