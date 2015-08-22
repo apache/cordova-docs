@@ -2,7 +2,7 @@
 
 
 body {
-	
+
 }
 
 #hero {
@@ -24,7 +24,7 @@ body {
 			width:39%;
 			vertical-align: top;
 		}
-		
+
 		#hero_section_right {
 			width:59%;
 			div {
@@ -53,7 +53,7 @@ body {
     margin: 0;
     /* margin-top: -200px; */ /* Less responsive */
 	@include vendor-prefix(transform, translateY(-100%));
-	
+
 	.container {
 		padding-top:55px;
 		padding-bottom:55px;
@@ -94,6 +94,14 @@ body {
 	}
 	.sprite_img { display:inline-block }
 	.value_prop { max-width:initial }
+}
+
+@media (max-width: 550px) {  /* Scrunch the icons even smaller on very small devices */
+	.sprite_img {
+		width:45px;
+		height:45px;
+		background-size:135px 45px;
+	}
 }
 
 @mixin sprite-img($a, $b) {
@@ -220,7 +228,7 @@ img#logo_top {
 .cordova_tools_gallery {
 	color:white;
 	.card {
-			padding:8px;		
+			padding:8px;
 			.card_title {
 				color: $brand-primary;
 				font-weight: bold;
