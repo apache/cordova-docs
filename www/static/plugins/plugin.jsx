@@ -56,7 +56,7 @@ var Plugin = React.createClass({
 
         if(this.props.plugin.downloadCount) {
             var downloadCount = this.props.plugin.downloadCount.toLocaleString();
-            downloadField = <p><small> {downloadCount} downloads last month</small></p>;
+            downloadField = <p className="downloads"><strong>{downloadCount}</strong> downloads last month</p>;
         }
 
         if(document.queryCommandSupported("copy")) {
@@ -79,7 +79,7 @@ var Plugin = React.createClass({
                     <div className="col-sm-3 col-sm-offset-1">
                         <hr className="visible-xs results-divider-line"/>
                         <p className="license">{license}</p>
-                        <p className="downloads"><strong>{downloadCount}</strong> downloads last month</p>
+                        {downloadField}
                         <p className="last-updated">Last updated <strong>{this.props.plugin.modified} days ago</strong></p>
                     </div>
                     <div className="plugin-npm-command" id={"command-" + this.props.plugin.name}>{"npm install " + this.props.plugin.name}</div>
