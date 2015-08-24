@@ -52,16 +52,19 @@ var App = React.createClass({
         }
     },
     handleUserInput: function(filterText) {
-        /* Routing logic */
-        var platformFilters = this.state.staticFilters["platforms"];
-        delay(function(){
-            App.updateURL(filterText, platformFilters);
-        }, INPUT_DELAY);
+        /* We receive events for all inputs, so make sure text changed */
+        if(this.state.filterText !== filterText) {
+            /* Routing logic */
+            var platformFilters = this.state.staticFilters["platforms"];
+            delay(function(){
+                App.updateURL(filterText, platformFilters);
+            }, INPUT_DELAY);
 
-        this.setState({
-            filterText: filterText,
-            searchResults: App.filterPlugins(this.state.plugins, filterText, this.state.staticFilters)
-        });
+            this.setState({
+                filterText: filterText,
+                searchResults: App.filterPlugins(this.state.plugins, filterText, this.state.staticFilters)
+            });
+        }
     },
     toggleCondition: function(keyword, condition) {
         this.setState(function(previousState, currentProps) {
