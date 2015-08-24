@@ -75,6 +75,7 @@ var Plugin = React.createClass({
                 <div className="row">
                     <div className="col-sm-8">
                         <p>{this.props.plugin.description}</p>
+                        <SupportedPlatforms keywords={this.props.plugin.keywords}/>
                     </div>
                     <div className="col-sm-3 col-sm-offset-1">
                         <hr className="visible-xs results-divider-line"/>
