@@ -24,6 +24,7 @@ The following plugins were updated today:
 * cordova-plugin-globalization@1.0.1
 * cordova-plugin-inappbrowser@1.0.1
 * cordova-plugin-legacy-whitelist@1.1.0
+<!--more-->
 * cordova-plugin-media@1.0.1
 * cordova-plugin-media-capture@1.0.1
 * cordova-plugin-network-information@1.0.1

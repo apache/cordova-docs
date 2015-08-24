@@ -27,6 +27,7 @@ This will also allow current **Cordova** developers to upgrade their `CLI` to ve
 To find plugins on **npm**, search for [ecosystem:cordova].
 We are working with **npm** to improve discoverability and will have more to announce later this year.
 We encourage all third party plugin developers to add `ecosystem:cordova` as a keyword in their plugin's `package.json`.
+<!--more-->
 
 ## Plugin Authors: Steps to move your plugin to **npm**
 1. **Optional** Decide if you want to change your plugin's `id`. If you decide to change it,
@@ -93,7 +94,6 @@ Then remove your old plugin and re-add it using the new ID.
         `cordova plugin add cordova-plugin-camera`
 
 Plugin changes include:
-<!--more-->
 
 cordova-plugin-battery-status@1.0.0
 

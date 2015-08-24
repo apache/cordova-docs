@@ -30,10 +30,9 @@ To update your tools:
   * If you have `plugman` installed:
 
         npm install -g plugman
-
+<!--more-->
 
 # Changes include:
-<!--more-->
 
 ## Platform updates
 When adding these platforms to your project, the following versions are now used by default.
