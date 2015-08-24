@@ -20,8 +20,8 @@ var SearchBar = React.createClass({
             delay = 200, // in ms
             inputElem = React.findDOMNode(this.refs.filterTextInput);
 
-        // Convert keydown events to stream
-        var text = Bacon.fromEvent(inputElem, 'keydown')
+        // Convert input events to stream
+        var text = Bacon.fromEvent(inputElem, 'input')
             .debounce(delay)
             .map(function(event) {
                 return event.target.value;
