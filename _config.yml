@@ -6,7 +6,6 @@ description: Apache Cordova is a set of device APIs that allow a web mobile app 
 url:         "http://cordova.apache.org" # the base hostname & protocol
 baseurl:     "" # the subpath of the site, e.g. /blog/
 rss_path:    /feed.xml
-excerpt_separator:  <!--more-->
 
 excerpt_separator: <!--more-->
 repo:
