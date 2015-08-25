@@ -220,6 +220,11 @@ var App = React.createClass({
             switch(criteria) {
                 case 'Downloads':
                     plugins.sort(function(p1, p2) {
+                        if(!p1.downloadCount) {
+                            return 1;
+                        } else if(!p2.downloadCount) {
+                            return -1;
+                        }
                         if(p2.downloadCount === p1.downloadCount) {
                             return compareName(p1, p2);
                         };
