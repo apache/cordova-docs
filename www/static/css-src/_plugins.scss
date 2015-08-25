@@ -109,7 +109,7 @@
 	margin-bottom:20px;
 	background-color:$gray-5;
 	position: relative;
-	.plugin-npm-command {
+	.plugin-cordova-command {
 		width:0px;
 		height:0px;
 		overflow:hidden;
@@ -125,6 +125,7 @@
 	right:0;
 	top:20px;
 	margin-right:10px;
+	cursor:pointer;
 }
 
 @media (min-width: 767px) {
