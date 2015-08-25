@@ -60,7 +60,11 @@ var Plugin = React.createClass({
         }
 
         if(document.queryCommandSupported("copy")) {
-            copyIcon = (<a href="#" data-toggle="tooltip" data-placement="left" title="Copy npm install command to clipboard" onClick={this.copyText}><img src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/></a>);
+            copyIcon = (
+                <div data-toggle="tooltip" data-placement="left" title="Copy cordova plugin add command to clipboard" onClick={this.copyText}>
+                    <img src="{{ site.baseurl }}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
+                </div>
+            );
         }
 
         return (
@@ -83,7 +87,7 @@ var Plugin = React.createClass({
                         {downloadField}
                         <p className="last-updated">Last updated <strong>{this.props.plugin.modified} days ago</strong></p>
                     </div>
-                    <div className="plugin-npm-command" id={"command-" + this.props.plugin.name}>{"npm install " + this.props.plugin.name}</div>
+                    <div className="plugin-cordova-command" id={"command-" + this.props.plugin.name}>{"cordova plugin add " + this.props.plugin.name}</div>
                 </div>
             </div>
         )
