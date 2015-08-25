@@ -35,8 +35,8 @@ This should make it easier developing cordova projects among a team.
 * We are preparing to transition our plugin hosting over to npm.  We will be doing a detailed blog post soon.
 **Stay tuned**.
 
-# Changes include:
 <!--more-->
+# Changes include:
 
 ## Platform updates
 When adding these platforms to your project, the following versions are now used by default.

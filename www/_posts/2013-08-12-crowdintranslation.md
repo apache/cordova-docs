@@ -16,8 +16,8 @@ need your help!  With the support of <a href="http://crowdin.net/project/cordova
 localization management platform, translators can login to the easy-to-use
 tooling and provide as much or as little translation assistance as they would
 like.  If you know another language please support Cordova and contribute.
-<!--more-->
 
 <a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>
 
 Email <a href="mailto:ldeluca@apache.org">ldeluca@apache.org</a> for more information.
+<!--more-->
