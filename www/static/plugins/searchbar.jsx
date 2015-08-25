@@ -35,6 +35,8 @@ var SearchBar = React.createClass({
         textObservable.onValue(function(val) {
             self.props.onUserInput(val);
         });
+
+        inputElem.focus();
     },
 
     render: function() {
