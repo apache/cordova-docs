@@ -31,25 +31,22 @@ var App = React.createClass({
             staticFilters['platforms'] = staticFilters['platforms'].concat(platforms.split(','));
         }
         var q = App.getURLParameter('q');
-        if (q) {
-            return {
-                plugins: [],
-                filterText: q,
-                placeHolderText: 'Loading...',
-                searchResults: [],
-                staticFilters: staticFilters,
-                sortCriteria: "Quality"
-            };
-        } else {
-            return {
-                plugins: [],
-                filterText: '',
-                placeHolderText: 'Loading...',
-                searchResults: [],
-                staticFilters: staticFilters,
-                sortCriteria: "Quality"
-            };
+        var state = {
+            plugins: [],
+            placeHolderText: 'Loading...',
+            searchResults: [],
+            staticFilters: staticFilters,
+            sortCriteria: "Quality",
+            downloadsReceived: false
         }
+
+        if (q) {
+            state.filterText = 'q';
+        } else {
+            state.filterText = '';
+        }
+
+        return state;
     },
     handleUserInput: function(filterText) {
         /* We receive events for all inputs, so make sure text changed */
@@ -223,6 +220,11 @@ var App = React.createClass({
             switch(criteria) {
                 case 'Downloads':
                     plugins.sort(function(p1, p2) {
+                        if(!p1.downloadCount) {
+                            return 1;
+                        } else if(!p2.downloadCount) {
+                            return -1;
+                        }
                         if(p2.downloadCount === p1.downloadCount) {
                             return compareName(p1, p2);
                         };
@@ -314,7 +316,8 @@ var App = React.createClass({
 
                         that.setState({
                             plugins: plugins,
-                            searchResults: App.filterPlugins(plugins, this.state.filterText, this.state.staticFilters)
+                            searchResults: App.filterPlugins(plugins, this.state.filterText, this.state.staticFilters),
+                            downloadsReceived: true
                         });
                     }.bind(self), function() { console.log('xhr err'); });
                     packageNames = "";
@@ -433,7 +436,7 @@ var App = React.createClass({
                             </ul>
                         </div>
                         <div className="col-sm-3">
-                            <SortDropdown selected={this.state.sortCriteria}/>
+                            <SortDropdown selected={this.state.sortCriteria} downloadsEnabled={this.state.downloadsReceived}/>
                         </div>
                     </div>
                 </div>
