@@ -41,7 +41,7 @@ var App = React.createClass({
         }
 
         if (q) {
-            state.filterText = 'q';
+            state.filterText = q;
         } else {
             state.filterText = '';
         }
