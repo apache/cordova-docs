@@ -1,3 +1,4 @@
+{% if site.data.tools | size > 0 %}
 <div class="container">
     <div class="row showcase_section_intro">
         <div class="col-md-12 text-center">
@@ -6,14 +7,19 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat sem, cursus quis nibh porta, scelerisque blandit lorem. Vivamus blandit nec odio non bibendum. Morbi efficitur purus ut metus viverra sodales. In aliquet nunc sagittis, dignissim libero ut, vulputate nisi. Phasellus vulputate fermentum libero, lorem hah.</p>
         </div>
     </div>
-    <!-- ROW 1 Starts -->
     <div class="row cordova_tools_gallery">
         {% for tool in site.data.tools %}
         <div class="col-lg-2 col-sm-4 card">
             <div class="card_inner">
                 <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
                 <p class="card_title">
-                    {{ tool.name }}
+                    {% if tool.url %}
+                        <a href="{{ tool.url }}">
+                            {{ tool.name }}
+                        </a>
+                    {% else %}
+                        {{ tool.name }}
+                    {% endif %}
                 </p>
                 <p>
                     {{ tool.description | truncatewords:25 }}
@@ -29,8 +35,10 @@
             </div>
         </div>
     </div>
-</div><!-- /container -->
+</div>
+{% endif %}
 
+{% if site.data.sample-apps | size > 0 %}
 <div class="container">
     <div class="row showcase_section_intro">
         <div class="col-md-12 text-center">
@@ -43,13 +51,21 @@
         <div class="col-lg-2 col-sm-4 card">
             <div class="sample_app_thumb"></div>
             <div class="card_inner">
-                <p class="card_title">{{ app.name }}</p>
+                <p class="card_title">
+                    {% if app.url %}
+                        <a href="{{ app.url }}">
+                            {{ app.name }}
+                        </a>
+                    {% else %}
+                        {{ app.name }}
+                    {% endif %}
+                </p>
                 <p>{{ app.description | truncatewords:10 }}</p>
             </div>
         </div>
         {% endfor %}
     </div>
-    <div class="row"> <!-- Add yours or see more links -->
+    <div class="row">
         <div class="col-sm-12">
             <div class="pull-right add_seemore_links">
                 <a href="#">Add your app</a>
@@ -62,3 +78,4 @@
         </p>
     </div>
 </div>
+{% endif %}
