@@ -72,8 +72,10 @@ var Plugin = React.createClass({
                 {copyIcon}
                 <div className="row">
                     <div className="col-sm-8">
-                        <h2><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h2>
-                        <p className="version_and_author">v{this.props.plugin.version} by <strong>{this.props.plugin.author}</strong></p>
+                        <span>
+                            <h2><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h2>
+                            <p className="version_and_author">v{this.props.plugin.version} by <strong>{this.props.plugin.author}</strong></p>
+                        </span>
                     </div>
                 </div>
                 <div className="row">
