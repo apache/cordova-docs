@@ -413,8 +413,8 @@ var App = React.createClass({
                         </div>
                             <div className="plugins_links">
                                     <ul className="nav nav-justified">
-                                    <li><a href="#"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
-                                    <li><a href="#"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
+                                    <li><a href="authors.html"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
+                                    <li><a href="faq.html"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
                                     <li><a href="#"><span className="glyphicon glyphicon-alert"></span><i>&nbsp;</i>Plugin Issue Tracker</a></li>
                                     </ul>
                             </div>
