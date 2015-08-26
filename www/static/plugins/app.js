@@ -426,12 +426,12 @@ var App = React.createClass({
                             <ul className="nav nav-pills filter-by-platform-filters">
                                 {createPlatformButton("Android", "cordova-android", this.state)}
                                 {createPlatformButton("iOS", "cordova-ios", this.state)}
-                                {createPlatformButton("Windows 10", "cordova-windows", this.state)}
+                                {createPlatformButton("Windows", "cordova-windows", this.state)}
                                 {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
                                 {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
                                 {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
-                                {createPlatformButton("WebOS", "cordova-webos", this.state)}
                                 {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
+                                {createPlatformButton("Wp8", "cordova-wp8", this.state)}
                                 {createPlatformButton("Browser", "cordova-browser", this.state)}
                             </ul>
                         </div>
