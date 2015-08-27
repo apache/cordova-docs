@@ -182,8 +182,10 @@ _Linked Posts_ - If the content was written by a contributor and is worth curati
 ***Creating "last week" Posts:***
 
 To get a summary of changes (and count the changes):
+
     for l in cordova-*; do ( cd $l ; git log --format="$(printf %30s $l) %s" --no-merges --since='1 week ago' ) ; done | grep -iv version | grep -v CHANGELOG > all_logs.txt
 To get the number of authors:
+
     for l in cordova-*; do ( cd $l ; git log --format="%an" --no-merges --since='1 week ago' ) ; done | sort | uniq | wc -l
 
 ***Creating Release Announcement Posts***
@@ -194,6 +196,7 @@ To print the list of plugin versions tested:
 
 1. Make sure all plugin repos are cloned, updated, and on master branch
 2. Run:
+
         for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
