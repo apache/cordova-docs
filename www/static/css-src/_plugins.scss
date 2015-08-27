@@ -93,7 +93,6 @@
 
 .plugins-sort-dropdown {
 	height:40px;
-	margin-top:40px;
 }
 
 /***
@@ -105,6 +104,13 @@
 	margin-bottom:40px;
 	padding:0;
 }
+
+.plugin-results-number {
+	line-height:40px;
+	vertical-align: top;
+	text-align: center;
+}
+
 .plugin-results-result {
 	margin-bottom:20px;
 	background-color:$gray-5;
