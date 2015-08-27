@@ -130,21 +130,27 @@ Writing a Blog Post
 ===================
 
 1. Pull down the latest website codebase for the current posts
+
     git pull
 
 2. Create a new entry in the www/_posts directory.
 
 3. Use an earlier post an a template. Edit your md file to remove undesired markdown links. If there is a phrase in square brackets that isn't a CB-xxxx reference, escape it with backslashes. Otherwise, heruko might error out and fail to build all the html.
+
     [CB-1234] \[iOS\] \[Camera\] add a whizzbang to the snarfblat
 
 4. Set a marker where the summary on the home page should stop displaying. Add the following html comment line to your md file at the desired cutoff point:
+
     <!--more-->
 
 5. In the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (i.e., "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
+    
     date: 2014-09-22
     categories: releases
 
 6. Run gulp link-bugs to linkify 
+
+    gulp link-bugs
 
 7. Preview it locally by running the site using gulp
 
