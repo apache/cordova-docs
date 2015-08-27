@@ -32,6 +32,7 @@ var ROOT_DIR   = ".";
 var SOURCE_DIR = path.join(ROOT_DIR, "www");
 var DEV_DIR    = path.join(ROOT_DIR, "build-dev");
 var PROD_DIR   = path.join(ROOT_DIR, "build-prod");
+var BASE_URL   = "/use-the-force-luke";
 
 var DATA_DIR         = path.join(SOURCE_DIR, "_data");
 var DOCS_DIR         = path.join(SOURCE_DIR, "docs");
@@ -127,10 +128,16 @@ gulp.task("watch", ["serve"], function () {
 });
 
 gulp.task("serve", ["build"], function () {
+    var route = {};
+    if(prod) {
+        route[BASE_URL] = out_dir;
+    }
+
     browsersync({
         notify: true,
         server: {
-            baseDir: out_dir
+            baseDir: out_dir,
+            routes: route
         }
     });
 });
