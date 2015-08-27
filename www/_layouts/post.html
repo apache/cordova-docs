@@ -15,7 +15,7 @@ layout: blog
             <div class="post">
                 <header>
                     <div class="title">{{ page.title }}</div>
-                    <div class="author">By: {{ page.author.name }}</div>
+                    <div class="author">By: <a href="{{ page.author.url }}">{{ page.author.name }}</a></div>
                     <div class="date">{{ page.date | date_to_string }}</div>
                 </header>
                 <section>
