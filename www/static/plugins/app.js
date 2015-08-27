@@ -366,14 +366,14 @@ var App = React.createClass({
                     this.setState({
                         plugins: plugins,
                         filterText: q,
-                        placeHolderText: 'Search ' + pluginCount + ' plugins...',
+                        placeHolderText: 'Search ' + plugins.length + ' plugins...',
                         searchResults: App.filterPlugins(plugins, q, this.state.staticFilters)
                     });
                 }
                 else {
                     this.setState({
                         plugins: plugins,
-                        placeHolderText: 'Search ' + pluginCount + ' plugins...',
+                        placeHolderText: 'Search ' + plugins.length + ' plugins...',
                         searchResults: App.filterPlugins(plugins, '', this.state.staticFilters)
                     });
                 }
@@ -436,6 +436,7 @@ var App = React.createClass({
                             </ul>
                         </div>
                         <div className="col-sm-3">
+                            <div className="plugin-results-number">{this.state.searchResults.length} result(s) found</div>
                             <SortDropdown selected={this.state.sortCriteria} downloadsEnabled={this.state.downloadsReceived}/>
                         </div>
                     </div>
