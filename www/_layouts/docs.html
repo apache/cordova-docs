@@ -120,15 +120,15 @@ analytics_id: UA-64283057-1
             </div>
         </div>
         <div class="row">
-        <!-- Show warning if this version isn't the latest -->
-        {% if page.version != 'edge' %}
-        <a href="{{ site.baseurl }}{{ page.url | replace:page.version,'edge' }}">
-            <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Warning!</strong> {{ page.not_latest_warning_text }}
-            </div>  
-        </a>
-        {% endif %}
+            <!-- Show warning if this version isn't the latest -->
+            {% if page.version != 'edge' %}
+            <a href="{{ site.baseurl }}{{ page.url | replace:page.version,'edge' }}">
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> {{ page.not_latest_warning_text }}
+                </div>  
+            </a>
+            {% endif %}
         </div>
         <div class="row">
             {{ content }}
