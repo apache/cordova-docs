@@ -129,27 +129,22 @@ Ask for help on the IRC channel: #cordova on irc.freenode.net.
 Writing a Blog Post
 ===================
 
-Use the grunt scripts!
-
-    # Clone apache-blog-posts repo if you haven't already
-    $ grunt cloneBlog
-
-    # Create your blog posts in the apache-blog-posts (or on github) directory, and share with other for review via `git commit`. If creating a new md file, use an earlier one as a template.
-
-    # pull down the latest shared edits of apache-blog-posts
+    # Pull down the latest website codebase for the current posts
     git pull
 
-    # Edit your md file to remove undesired markdown links. If there is a phrase in square brackets that isn't a CB-xxxx reference, escape it with backslashes. Otherwise, heruko might error out and fail to build all the html.
+    # Create a new entry in the www/_posts directory.
+
+    # Use an earlier post an a template. Edit your md file to remove undesired markdown links. If there is a phrase in square brackets that isn't a CB-xxxx reference, escape it with backslashes. Otherwise, heruko might error out and fail to build all the html.
     [CB-1234] \[iOS\] \[Camera\] add a whizzbang to the snarfblat
 
     # Set a marker where the summary on the home page should stop displaying. Add the following html comment line to your md file at the desired cutoff point:
     <!--more-->
 
-    # in the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (i.e., "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
+    # In the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (i.e., "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
     date: 2014-09-22
     categories: releases
 
-    # git commit your changes to apache-blog-posts
+    # Preview it locally by running the site using gulp
 
     # copy blog www/_posts directory + linkify
     $ grunt updateBlog
@@ -171,19 +166,6 @@ _Core Content_ - If the content has to do with cordova-core, or publishing guide
 
 _Linked Posts_ - If the content was written by a contributor and is worth curating for the whole community, but is not really core ie. non-core plugins, dev tips, research, opinion-pieces, statistics, etc., post a short description, perhaps adding a document-snippet, but then link to the externally hosted content, making it clearly not written by the organization.
 
-**How to add a Post**
-
-Blog posts live in `www/_posts`. To create a new post:
-
-1. Copy one of the existing posts into a new file (changing the name appropriately).
-2. Run `rake serve` in the background.
-3. Draft your post.
-4. Get approval (see below)
-5. Update the file name to reflect the commit date (if necessary)
-6. Run `rake build`
-7. Run `www/_posts/linkify-bugs.sh so that the CB-****` turn into links
-8. Validate `public/rss.xml` with [http://validator.w3.org](http://validator.w3.org)
-9. svn commit
 
 **Post guidelines:**
 
@@ -193,11 +175,11 @@ Blog posts live in `www/_posts`. To create a new post:
 * One of: `howto`, `news`, `releases`, `announcements`, `blog` (the catch-all category)
 * Use appropriate tags:
 * `tools`, `plugins`, `android`, `ios`, `windowsphone`, `blackberry`, `plugin-$FOO`, `cli`, `performance`, `last-week`, `security` (add to this list as necessary)
-* Use `rake serve` to preview your post, and refresh frequently.
+* Use gulp to preview your posts locally.
 * Jekyll does a poor job telling you where markdown errors exist.
 * Use the <!--more--> tag to specify the cutoff point for displaying your post on the main page.
 * Review your post yourself before asking for a review. This includes spell-check :).
-* Ask for a review by pasting it into piratepad.net, and emailing the link to it to the ML.
+* Ask for a review by raising a pull request
 
 ***Creating "last week" Posts:***
 
