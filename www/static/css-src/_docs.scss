@@ -39,6 +39,12 @@
 .content-header {
     text-align: right;
     margin-top: 22px;
+    .alert { 
+        text-align:left;
+    }
+}
+.alert.alert-warning.alert-dismissible {
+    margin-top:15px;
 }
 .content-header .dropdown {
     display: inline-block;
