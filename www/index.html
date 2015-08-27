@@ -80,7 +80,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-npm-install" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ npm install -g cordova
             </div>
@@ -98,7 +98,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-create" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ cordova create MyApp
             </div>
@@ -117,7 +117,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-platform-add" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 <p>$ cd MyApp</p>
                 <p>$ cordova platform add browser</p>
@@ -136,7 +136,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-run" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ cordova run browser
             </div>
@@ -222,4 +222,18 @@ permalink: /
 			});
 
 	});
+</script>
+<script src="{{site.baseurl}}/static/js/lib/ZeroClipboard.js"></script>
+<script>
+    var addCopyText = function(elementId, copyText) {
+        new ZeroClipboard(document.getElementById(elementId))
+            .on("copy", function(event) {
+                event.clipboardData.setData("text/plain", copyText);
+            });
+    }
+
+    addCopyText("copy-npm-install", "npm install -g cordova");
+    addCopyText("copy-cordova-create", "cordova create MyApp");
+    addCopyText("copy-cordova-platform-add", "cd MyApp\ncordova platform add browser");
+    addCopyText("copy-cordova-run", "cordova run browser");
 </script>

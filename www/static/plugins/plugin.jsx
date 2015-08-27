@@ -1,23 +1,21 @@
 var React = require('react'),
     SupportedPlatforms = require('./supportedplatforms.jsx'),
-    classNames      = require('classnames');
+    classNames      = require('classnames'),
+    ZeroClipboard = require('../js/lib/ZeroClipboard.js');
 
 var Plugin = React.createClass({
     shouldComponentUpdate: function(nextProps, nextState) {
         return this.props.plugin !== nextProps.plugin;
     },
-    copyText: function() {
-        var range = document.createRange();
-        range.selectNode(document.getElementById("command-" + this.props.plugin.name));
-
-        var select = window.getSelection();
-        select.addRange(range);
-        try {
-            document.execCommand("copy");
-        } catch(error) {
-
+    setClipboardText: function() {
+        if(this.props.plugin) {
+            var client = new ZeroClipboard(document.getElementById("copy-" + this.props.plugin.name));
+            var copyText = "cordova plugin add " + this.props.plugin.name;
+            client.off();
+            client.on("copy", function(event) {
+                event.clipboardData.setData("text/plain", copyText);
+            });
         }
-        select.removeAllRanges();
     },
     render: function() {
         if(!this.props.plugin) {
@@ -59,10 +57,10 @@ var Plugin = React.createClass({
             downloadField = <p className="downloads"><strong>{downloadCount}</strong> downloads last month</p>;
         }
 
-        if(document.queryCommandSupported("copy")) {
+        if(this.props.plugin) {
             copyIcon = (
-                <div data-toggle="tooltip" data-placement="left" title="Copy cordova plugin add command to clipboard" onClick={this.copyText}>
-                    <img src="{{ site.baseurl }}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
+                <div data-toggle="tooltip" data-placement="left" title="Copy cordova plugin add command to clipboard">
+                    <img id={"copy-" + this.props.plugin.name} src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
                 </div>
             );
         }
@@ -89,10 +87,18 @@ var Plugin = React.createClass({
                         {downloadField}
                         <p className="last-updated">Last updated <strong>{this.props.plugin.modified} days ago</strong></p>
                     </div>
-                    <div className="plugin-cordova-command" id={"command-" + this.props.plugin.name}>{"cordova plugin add " + this.props.plugin.name}</div>
                 </div>
             </div>
         )
+    },
+    componentWillMount: function() {
+        ZeroClipboard.config({swfPath: "{{ site.baseurl }}/static/js/lib/ZeroClipboard.swf"});
+    },
+    componentDidMount: function() {
+        this.setClipboardText();
+    },
+    componentDidUpdate: function() {
+        this.setClipboardText();
     }
 });
 
