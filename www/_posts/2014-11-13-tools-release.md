@@ -24,8 +24,8 @@ To update your tools:
 
         npm install -g plugman
 
-# Changes include
 <!--more-->
+# Changes include
 
 ## Platform updates
 When adding these platforms to your project, the following versions are now used by default.

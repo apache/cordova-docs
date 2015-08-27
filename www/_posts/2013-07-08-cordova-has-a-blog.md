@@ -12,5 +12,6 @@ tags: news
 Cordova now has a Blog! Look here to stay up-to-date with what's happening with the project.
 There is a major release [3.0](https://issues.apache.org/jira/browse/CB/fixforversion/12322491)
 just around the corner (July 19, 2013), and we are really excited about it!
-<!--more-->
+
 Be sure to [subscribe]({{ site.baseurl }}{{ site.rss_path }}) using RSS
+<!--more-->

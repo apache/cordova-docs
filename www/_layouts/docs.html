@@ -97,11 +97,11 @@ analytics_id: UA-64283057-1
 
             <!-- Version dropdown -->
             <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Version {{ page.version }}
                     <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <ul class="dropdown-menu" aria-labelledby="versionDropdown">
 
                     <!-- List versions available in this language -->
                     {% for version in site.data.languages.[page.language].versions %}

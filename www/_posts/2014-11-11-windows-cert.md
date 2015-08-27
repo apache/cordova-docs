@@ -28,6 +28,7 @@ For more information about renewing certificates, see [http://go.microsoft.com/f
 This issue will be fixed in the next release of the **Cordova CLI**
 
 However, to ensure that you can continue building your existing **Cordova** projects for **Windows** till then, please replace the expired certificate located at `yourCordovaProject\platforms\windows\CordovaApp_TemporaryKey.pfx` with a new one from [here](https://git-wip-us.apache.org/repos/asf?p=cordova-windows.git;a=blob;f=template/CordovaApp_TemporaryKey.pfx;h=90d7ab2208ce170d176a2ac8a60eb22fbc1cbf7a;hb=refs/tags/3.7.1). Ensure that the downloaded file is renamed to `CordovaApp_TemporaryKey.pfx`
+<!--more-->
 
 You can also remove the **Windows** platform using `cordova platform remove windows` and add it again, specifiying a version like `cordova platform add windows@3.7.1`. This picks up the latest release of the **Windows** platform that has a newer certificate.  
 

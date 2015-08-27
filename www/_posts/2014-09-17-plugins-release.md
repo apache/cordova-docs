@@ -36,6 +36,7 @@ Notable changes include:
 * Brought the vibration plugin API into alignment with the W3C specification.
 
 The plugins have been updated on our registry at [plugins.cordova.io](http://plugins.cordova.io/).
+<!--more-->
 
 ----
 You can update any plugin by removing it, and then readding it. E.g. To update your file plugin:
@@ -44,7 +45,6 @@ You can update any plugin by removing it, and then readding it. E.g. To update y
     cordova plugin add org.apache.cordova.file
 
 Other changes include:
-<!--more-->
 
 `org.apache.cordova.battery-status@0.2.11`
 ### 0.2.11 (Sep 17, 2014)

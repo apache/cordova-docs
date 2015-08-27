@@ -9,6 +9,7 @@ var gulp        = require("gulp");
 var gutil       = require("gulp-util");
 var less        = require("gulp-less");
 var sass        = require("gulp-sass");
+var replace     = require("gulp-replace");
 var vstream     = require("vinyl-source-stream");
 var buffer      = require("vinyl-buffer");
 var browsersync = require("browser-sync");
@@ -213,7 +214,19 @@ gulp.task("plugins", function() {
             .on("error", gutil.log);
     }
 
-    return stream.pipe(gulp.dest(JS_DIR));
+    return stream
+
+        // NOTE:
+        //      adding YAML front matter at the end
+        //      so that uglify doesn't screw it up
+        .pipe(header(YAML_FRONT_MATTER))
+
+        // WORKAOUND:
+        //           minified JS has some things that look like
+        //           Liquid tags, so we replace them manually
+        .pipe(replace("){{", "){ {"))
+
+        .pipe(gulp.dest(JS_DIR));
 });
 
 // compound tasks

@@ -13,7 +13,7 @@ performance is a common concern many developers have.
 Though recent WebView improvements have made smooth experiences easy to achieve,
 it is always important to watch out for code in our apps that may make the app [janky](http://jankfree.org).
 
-# Measuring Performance
+## Measuring Performance
 The latest versions of **Android** and **iOS** *WebView*s can connect to and leverage developer tools in browsers for profiling rendering performance of apps.
 Developer tools provide insights into details like frames rates, repaints, layouts, etc.
 
@@ -26,7 +26,7 @@ and
 articulate the typical workflow for auditing performance of webpages.
 Similar principles can be applied to apps too.
 <!--more-->
-# Automating Performance measurements
+## Automating Performance measurements
 With rapid development and release cycles of apps,
 it becomes hard to do regular performance audits.
 Automating the process with tools would ensure that we have a handle on the performance of the app.
@@ -99,7 +99,7 @@ Additional details about setting up the test environment can be found
 with reference for `browser-perf` in the
 [axemclion wiki pages](https://github.com/axemclion/browser-perf/wiki/Node-Module---API).
 
-# Finishing touches
+## Finishing touches
 `browser-perf` can record a plethora of metrics ranging from frame rates,
 to count of expensive paints or expensive events that could cause jank.
 Each of these metrics indicates how a CSS transform or an onscroll handler may have changed the performance of the app.
@@ -109,7 +109,7 @@ For example,
 [Perfjankie](http://npmjs.org/package/perfjankie) works on top of browser-perf,
 stores the results in a **CouchDB** database, and displays the results.
 
-# Summary
+## Summary
 In this article, we saw how to measure the rendering performance of **Cordova** apps.
 With the tools described, you can ensure that your apps are just as good as native apps are supposed to be.
 

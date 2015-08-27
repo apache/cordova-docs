@@ -3,6 +3,11 @@ var SortButton = require('./sortbutton.jsx');
 
 var SortDropdown = React.createClass({
     render: function() {
+        var downloadsButton;
+
+        if(this.props.downloadsEnabled) {
+            downloadsButton = <SortButton criteria="Downloads"/>;
+        }
         return (
             <div className="dropdown plugins-sort-dropdown">
                 <button className="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -12,7 +17,7 @@ var SortDropdown = React.createClass({
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <SortButton criteria="Quality"/>
                     <SortButton criteria="Recently Updated"/>
-                    <SortButton criteria="Downloads"/>
+                    {downloadsButton}
                 </ul>
             </div>
         );
