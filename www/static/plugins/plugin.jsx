@@ -62,7 +62,7 @@ var Plugin = React.createClass({
         if(document.queryCommandSupported("copy")) {
             copyIcon = (
                 <div data-toggle="tooltip" data-placement="left" title="Copy cordova plugin add command to clipboard" onClick={this.copyText}>
-                    <img src="/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
+                    <img src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
                 </div>
             );
         }

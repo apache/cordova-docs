@@ -155,7 +155,7 @@ hr.results-divider-line {
                 display: inline-block;
 }
 .results-supported-platforms > li > div {
-                background-image:url('/static/img/platform-logos-all-sprite.svg');
+                background-image:url('{{ site.baseurl }}/static/img/platform-logos-all-sprite.svg');
                 width:50px;
                 height:50px;
                 display:inline-block;

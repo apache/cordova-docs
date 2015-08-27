@@ -405,7 +405,7 @@ var App = React.createClass({
                                 onUserInput={this.handleUserInput}
                             />
                             <div className="whatisplugin_box">
-                                <img src="/static/img/pluggy.png"/>
+                                <img src="{{ site.baseurl }}/static/img/pluggy.png"/>
                                 <h2>What is a Cordova plugin?</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ante placerat, gravida ligula in, interdum mauris. Sed quis est vel erat vestibulum volutpat in vitae.  <a href="#">Learn more...</a></p>
                             </div>
