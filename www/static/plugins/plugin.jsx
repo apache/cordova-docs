@@ -60,7 +60,7 @@ var Plugin = React.createClass({
         }
 
         if(document.queryCommandSupported("copy")) {
-            copyIcon = (<a href="#" data-toggle="tooltip" data-placement="left" title="Copy npm install command to clipboard" onClick={this.copyText}><img src="/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/></a>);
+            copyIcon = (<a href="#" data-toggle="tooltip" data-placement="left" title="Copy npm install command to clipboard" onClick={this.copyText}><img src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/></a>);
         }
 
         return (
