@@ -366,14 +366,14 @@ var App = React.createClass({
                     this.setState({
                         plugins: plugins,
                         filterText: q,
-                        placeHolderText: 'Search ' + pluginCount + ' plugins...',
+                        placeHolderText: 'Search ' + plugins.length + ' plugins...',
                         searchResults: App.filterPlugins(plugins, q, this.state.staticFilters)
                     });
                 }
                 else {
                     this.setState({
                         plugins: plugins,
-                        placeHolderText: 'Search ' + pluginCount + ' plugins...',
+                        placeHolderText: 'Search ' + plugins.length + ' plugins...',
                         searchResults: App.filterPlugins(plugins, '', this.state.staticFilters)
                     });
                 }
@@ -413,8 +413,8 @@ var App = React.createClass({
                         </div>
                             <div className="plugins_links">
                                     <ul className="nav nav-justified">
-                                    <li><a href="#"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
-                                    <li><a href="#"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
+                                    <li><a href="{{ site.baseurl }}/plugins/authors.html"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
+                                    <li><a href="{{ site.baseurl }}/plugins/faq.html"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
                                     <li><a href="#"><span className="glyphicon glyphicon-alert"></span><i>&nbsp;</i>Plugin Issue Tracker</a></li>
                                     </ul>
                             </div>
@@ -426,16 +426,17 @@ var App = React.createClass({
                             <ul className="nav nav-pills filter-by-platform-filters">
                                 {createPlatformButton("Android", "cordova-android", this.state)}
                                 {createPlatformButton("iOS", "cordova-ios", this.state)}
-                                {createPlatformButton("Windows 10", "cordova-windows", this.state)}
+                                {createPlatformButton("Windows", "cordova-windows", this.state)}
                                 {createPlatformButton("Blackberry", "cordova-blackberry10", this.state)}
                                 {createPlatformButton("Ubuntu", "cordova-ubuntu", this.state)}
                                 {createPlatformButton("Firefox OS", "cordova-firefoxos", this.state)}
-                                {createPlatformButton("WebOS", "cordova-webos", this.state)}
                                 {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
+                                {createPlatformButton("Wp8", "cordova-wp8", this.state)}
                                 {createPlatformButton("Browser", "cordova-browser", this.state)}
                             </ul>
                         </div>
                         <div className="col-sm-3">
+                            <div className="plugin-results-number">{this.state.searchResults.length} result(s) found</div>
                             <SortDropdown selected={this.state.sortCriteria} downloadsEnabled={this.state.downloadsReceived}/>
                         </div>
                     </div>

@@ -1,0 +1,50 @@
+---
+layout: cordova
+title: Apache Cordova Plugin Contributors
+plugins_tab: true
+---
+
+<div class="container">
+  <h1 class="icon icon-about">npm Plugin Search for Plugin Authors</h1>
+  <h2>How do I add a new plugin to Plugin Search?</h2>
+  <p>If you want your Cordova Plugin to show up in search, simply add <code>ecosystem:cordova</code> keyword to the <code>package.json</code> file of your plugin and publish it to npm registry.</p>
+  <h2>How can I tag supported platforms for my plugin?</h2>
+  <p>Similar to <code>ecosystem:cordova</code>, platform support too uses keywords. Just add the platform name prefixed with "<strong>cordova-</strong>" to plugins list of keywords. E.g.</p>
+  <pre><code>  "keywords": [
+      "ecosystem:cordova",
+      "cordova-android",
+      "cordova-ios",
+      "cordova-windows"
+    ]</code></pre>
+  <h2>My plugin is in plugins.cordova.io but I want to publish to npm. How do I do that?</h2>
+  <ol>
+    <li>
+      <strong>Optional</strong> Decide if you want to change your plugin’s id. If you decide to change it,
+      <ol>
+        <li>Update the id in plugin.xml and update your readme with the new id.</li>
+        <li>Send a pull request adding your new id and old id to Cordova Registry Mapper.</li>
+        <li>We integrate that module into the Cordova CLI to warn users to use the new id when adding plugins to their projects.</li>
+      </ol>
+    </li>
+    <li>Add a <code>package.json</code> to your plugins,
+      <ul>
+        <li>
+          <strong>Note</strong>: To keep things simple, please make sure your <code>id</code> in <code>plugin.xml</code> is the same as your <code>package-name</code> in <code>package.json</code>.</li>
+        <li>Use <code>plugman createpackagejson [PLUGIN DIRECTORY]</code> to create <code>package.json</code>.
+          <ul>
+            <li>This will create defaults based on existing values in your <code>plugin.xml</code>.</li>
+            <li>It will also automatically add the keyword <code>ecosystem:cordova</code> to your newly generated package.json file.</li>
+            <li>In addition, a cordova key will be added to your <code>package.json</code> which we plan to use in future updates of the tooling.</li>
+          </ul>
+        </li>
+        <li>View the <code>package.json</code> of <a href="https://github.com/apache/cordova-plugin-device/blob/master/package.json" target="_blank">cordova-plugin-device</a> to see an example of what your <code>package.json</code> should look like after running <code>plugman createpackagejson [PLUGIN DIRECTORY]</code> command.</li>
+        <li>Plugins still require a <code>plugin.xml</code> to be installed into <strong>Cordova</strong> projects.</li>
+      </ul>
+    </li>
+    <li>Publish your plugin to npm using the <code>npm publish [PLUGIN DIRECTORY]</code>.</li>
+  </ol>
+  <h2>Are there any additional documents to assist me with plugins?</h2>
+  <p>Yes there are. Please take a look at <a href="{{ site.baseurl }}/docs/en/edge/guide/hybrid/plugins/index.html" target="_blank">Plugin Development Guide</a> for a more detailed guide.</p>
+  <h2>I don't like X. How can I help improve the website?</h2>
+  <p>You can help improving this site by opening bugs on <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20%3D%20Open%20AND%20component%20%3D%20%22Registry%20Web%22" target="_blank">JIRA</a> or by sending PRs on <a href="https://github.com/apache/cordova-registry-web" target="_blank">GitHub</a>.</p>
+</div>

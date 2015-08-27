@@ -35,6 +35,8 @@ var SearchBar = React.createClass({
         textObservable.onValue(function(val) {
             self.props.onUserInput(val);
         });
+
+        inputElem.focus();
     },
 
     render: function() {
@@ -45,7 +47,7 @@ var SearchBar = React.createClass({
                     className="form-control"
                     type="text"
                     autoComplete="off"
-                    placeholder="Find a Plugin..."
+                    placeholder={this.props.placeHolderText}
                     value={this.state.textValue}
                     onChange={this.handleChange}
                     ref="filterTextInput"
