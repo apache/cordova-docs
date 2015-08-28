@@ -199,6 +199,10 @@ var 解像度 = EchoRuntimeComponent.EchoPluginRT.echo("boom");これをファ�
 
 それは、今、世界と共有することができます、配布可能なプラグインがある! 1 つの事に注意してください Windows コルドバ プロジェクトにフレームワークを追加するためのサポートは、コルドバの現在のツーリングになっていることを確認する必要がありますのでのみ最近追加されました。 コルドバ cli とコルドバ plugman サポート ネイティブ バックアップのプラグインを削除するを追加します。
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
+
+または
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/cordova-runtimecomp-echoplug

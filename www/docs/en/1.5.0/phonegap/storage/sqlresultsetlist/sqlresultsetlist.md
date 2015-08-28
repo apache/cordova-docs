@@ -52,17 +52,17 @@ Execute SQL Quick Example
 	}
 
 	function querySuccess(tx, results) {
-        var len = results.rows.length;
-        console.log("DEMO table: " + len + " rows found.");
-        for (var i=0; i<len; i++){
-            console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+		var len = results.rows.length;
+	   	console.log("DEMO table: " + len + " rows found.");
+	   	for (var i=0; i<len; i++){
+	    	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
 		}
 	}
-
+	
 	function errorCB(err) {
 		alert("Error processing SQL: "+err.code);
 	}
-
+	
 	var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
@@ -81,7 +81,7 @@ Full Example
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// Populate the database
+		// Populate the database 
 		//
 		function populateDB(tx) {
 			tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -125,7 +125,7 @@ Full Example
 			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
-
+	
         </script>
       </head>
       <body>

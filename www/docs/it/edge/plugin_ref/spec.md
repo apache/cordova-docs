@@ -76,8 +76,21 @@ Il `<engine>` tag ha anche il supporto predefinito per tutte le principali piatt
     </engines>
     
 
-Ecco un elenco di default motori che la '<engine>' etichetta supporta: * 'cordova' * 'cordova-plugman' * 'cordova-Amazzonia-fireos' * 'cordova-android' * 'cordova-ios' * 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
-* ' android-sdk' / / restituisce l'api di Android più alto livello installato * 'apple xcode-' / / restituisce la versione di xcode * 'apple-ios' / / restituisce la versione iOS installata * 'apple-osx' / / restituisce la versione OSX * 'blackberry-ndk' / / restituisce la versione SDK nativo blackberry
+Ecco un elenco di default motori che il `<engine>` tag supporta:
+
+*   `cordova`
+*   `cordova-plugman`
+*   `cordova-amazon-fireos`
+*   `cordova-android`
+*   `cordova-ios`
+*   `cordova-blackberry10`
+*   `cordova-wp8`
+*   `cordova-windows8`
+*   `android-sdk` // returns the highest Android api level installed
+*   `apple-xcode` // returns the xcode version 
+*   `apple-ios` // returns the highest iOS version installed
+*   `apple-osx` // returns the OSX version
+*   `blackberry-ndk` // returns the native blackberry SDK version
 
 Specifica quadri personalizzati basati su Apache Cordova dovrebbero essere elencati sotto l'etichetta del motore in questo modo:
 
@@ -92,11 +105,11 @@ Un quadro personalizzato basato su Apache Cordova richiede che un elemento motor
 
 *   `name`(obbligatorio): un nome leggibile per il tuo quadro personalizzato.
 
-*   `version`(obbligatorio): la versione del vostro quadro deve avere per installare.
+*   `version`(richiesto): la versione che il quadro deve avere per poter installare.
 
-*   `scriptSrc`(obbligatorio): file di script che dice plugman è quale versione del framework personalizzato. Idealmente, questo file dovrebbe essere all'interno della directory di livello superiore della directory dei plugin.
+*   `scriptSrc`(obbligatorio): il file di script che dice plugman è quale versione di framework personalizzati. Idealmente, questo file deve essere all'interno della directory di livello superiore della directory dei plugin.
 
-*   `platform`(obbligatorio): quali piattaforme che supporta il vostro quadro. Si può utilizzare il carattere jolly `*` per dire supportati per tutte le piattaforme, specificare multiplo con un carattere come `android|ios|blackberry10` o solo una singola piattaforma come`android`.
+*   `platform`(obbligatorio): quali piattaforme che supporta il framework. È possibile utilizzare il carattere jolly `*` per dire supportati per tutte le piattaforme, specificare più con un carattere di pipe come `android|ios|blackberry10` o solo una singola piattaforma come`android`.
 
 plugman viene interrotta con un codice diverso da zero per qualsiasi plugin il cui progetto di destinazione non soddisfa i vincoli del motore.
 
@@ -153,16 +166,16 @@ Uno o più elementi che elenca i file o le directory da copiare in un'app di Cor
 
 Tutti i `<asset>` tag richiedono entrambi `src` e `target` gli attributi. Solo Web plugin contiene principalmente `<asset>` elementi. Qualsiasi `<asset>` elementi annidati all'interno di `<platform>` elementi specificano risorse specifiche della piattaforma web, come descritto di seguito. Attributi includono:
 
-*   `src`(obbligatorio): dove si trova la directory o il file nel pacchetto di plugin relativo al `plugin.xml` documento. Se non esiste un file specificato `src` percorso, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto ed esce con un codice diverso da zero.
+*   `src`(obbligatorio): dove si trova il file o la directory nel pacchetto di plugin, relativo alla `plugin.xml` documento. Se un file non esiste a specificato `src` posizione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto e termina con un codice diverso da zero.
 
-*   `target`(obbligatorio):
+*   `target` (required):
     
-    Dove la directory o il file dovrebbe trovarsi nella app Cordova, relativo alla `www` directory. Patrimonio può essere destinato alla sottodirectory, ad esempio:
+    Dove il file o la directory deve trovarsi nell'app di Cordova, relativo al `www` directory. Beni possono essere mirati alle sottodirectory, ad esempio:
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    Crea il `js/experimental` directory all'interno il `www` directory, se non già presente, quindi copie il `new-foo.js` file e rinominarlo `foo.js` . Se un file esiste già presso la località di destinazione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto ed esce con un codice diverso da zero.
+    Crea il `js/experimental` directory all'interno il `www` directory, a meno che non già presente, quindi copie il `new-foo.js` il file e rinominarlo `foo.js` . Se un file esiste già nella posizione di destinazione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto ed esce con un codice diverso da zero.
 
 ## *JS-modulo* Elemento
 
@@ -179,19 +192,19 @@ Quando si installa un plugin con l'esempio precedente, `socket.js` viene copiato
 
 I dettagli per il `<js-module>` tag:
 
-*   Il `src` fa riferimento a un file nella directory dei plugin relativo alla `plugin.xml` file.
+*   Il `src` fa riferimento a un file nella directory dei plugin relativi alla `plugin.xml` file.
 
-*   La `name` fornisce l'ultima parte del nome del modulo. Generalmente può essere quello che vuoi, e conta solo se si desidera utilizzare `cordova.require` per importare altre parti del vostro plugin nel codice JavaScript. Il nome del modulo per un `<js-module>` è il tuo plugin `id` seguita dal valore della `name` . Per l'esempio precedente, con un `id` di `chrome.socket` , il nome del modulo è`chrome.socket.Socket`.
+*   Il `name` fornisce l'ultima parte del nome del modulo. Generalmente può essere quello che vuoi, e conta solo se si desidera utilizzare `cordova.require` per importare altre parti del vostro plugin nel codice JavaScript. Il nome del modulo per un `<js-module>` è il vostro plugin `id` seguito dal valore di `name` . Per l'esempio precedente, con un `id` di `chrome.socket` , il nome del modulo è`chrome.socket.Socket`.
 
 *   Tre tag sono consentiti all'interno di `<js-module>` :
     
-    *   `<clobbers target="some.value"/>`indica che il `module.exports` è inserito il `window` object come `window.some.value` . Si può avere come molti `<clobbers>` come ti piace. Qualsiasi oggetto non disponibile su `window` è stato creato.
+    *   `<clobbers target="some.value"/>`indica che il `module.exports` viene inserito il `window` oggetto come `window.some.value` . Si può avere come molti `<clobbers>` come ti piace. Qualsiasi oggetto non disponibile su `window` viene creato.
     
-    *   `<merges target="some.value"/>`indica che il modulo dovrebbe essere fusa con qualsiasi valore esistente presso `window.some.value` . Se esiste già un tasto qualsiasi, versione del modulo sostituisce l'originale. Si può avere come molti `<merges>` come ti piace. Qualsiasi oggetto non disponibile su `window` è stato creato.
+    *   `<merges target="some.value"/>`indica che il modulo dovrebbe essere unito con qualsiasi valore esistente presso `window.some.value` . Se esiste già un tasto qualsiasi, versione del modulo sostituisce l'originale. Si può avere come molti `<merges>` come ti piace. Qualsiasi oggetto non disponibile su `window` viene creato.
     
-    *   `<runs/>`significa che il codice deve essere specificato con `cordova.require` , ma non installato il `window` oggetto. Questo è utile quando l'inizializzazione del modulo, associare gestori eventi o altrimenti. Si può avere solo uno `<runs/>` tag. Si noti che tra cui un `<runs/>` con `<clobbers/>` o `<merges/>` è ridondante, dato che anche `cordova.require` tuo modulo.
+    *   `<runs/>`significa che il codice deve essere specificato con `cordova.require` , ma non installato il `window` oggetto. Questo è utile durante l'inizializzazione del modulo, associare gestori eventi o altrimenti. Si può avere solo fino a uno `<runs/>` tag. Si noti che, tra cui un `<runs/>` con `<clobbers/>` o `<merges/>` è ridondante, dato che anche `cordova.require` il tuo modulo.
     
-    *   Un vuoto `<js-module>` ancora carica e accessibili in altri moduli tramite`cordova.require`.
+    *   Un vuoto `<js-module>` ancora carica e può essere letta in altri moduli`cordova.require`.
 
 Se `src` non si risolve in un file esistente, plugman si ferma e inverte l'installazione, invia una notifica del problema ed esce con un codice diverso da zero.
 
@@ -204,13 +217,13 @@ Il `<dependency>` tag consente di specificare altri plugin da cui dipende l'attu
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
-*   `id`: fornisce l'ID del plugin. Dovrebbe essere univoco globale ed espresse in stile retro-dominio. Mentre nessuna di queste restrizioni è attualmente applicata, può essere in futuro.
+*   `id`: fornisce l'ID del plugin. Dovrebbe essere univoco globale ed espresse in stile retro-dominio. Mentre nessuna di queste restrizioni è attualmente applicata, possono essere in futuro.
 
-*   `url`: Un URL per il plugin. Questo dovrebbe fare riferimento a un repository git, che plugman tenta di clonare.
+*   `url`: Un URL per il plugin. Questo dovrebbe fare riferimento a un repository git, quali plugman tenta di clonare.
 
-*   `commit`: Questo è qualsiasi riferimento git compreso da `git checkout` : un nome di tag o ramo (ad es., `master` , `0.3.1` ), o un commit hash (ad es.,`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+*   `commit`: Si tratta di qualsiasi riferimento di git compreso da `git checkout` : un nome del ramo o tag (ad es., `master` , `0.3.1` ), o un commit hash (ad es.,`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`: Specifica che il plugin mirati dipendenza esiste come una sottodirectory del repository git. Questo è utile perché permette il repository contenere diversi plugin correlati, ciascuno individualmente specificati.
+*   `subdir`: Specifica che il plugin mirate dipendenza esiste come una sottodirectory del repository git. Questo è utile perché permette al repository di contenere diversi plugin correlati, ciascuno individualmente specificati.
 
 In futuro, saranno introdotto vincoli versione e un repository dei plugin esisterà per supportare il recupero di nome anziché gli URL espliciti.
 
@@ -242,10 +255,10 @@ Nomi di piattaforma dovrebbero essere minuscoli. Nomi di piattaforma, come arbit
 
 *   Amazon-fireos
 *   Android
-*   blackberry10
+*   BlackBerry 10
 *   iOS
-*   WP8
-*   Windows8
+*   wp8
+*   windows8
 
 ## *file di origine* Elemento
 
@@ -262,15 +275,15 @@ Il `<source-file>` elemento identifica il codice eseguibile sorgente che deve es
 
 Esso supporta i seguenti attributi:
 
-*   `src`(obbligatorio): percorso del file relativo alla `plugin.xml` . Se il `src` file non viene trovato, plugman si ferma e inverte l'installazione, invia una notifica sul problema ed esce con un codice diverso da zero.
+*   `src`(obbligatorio): percorso del file relativo a `plugin.xml` . Se il `src` Impossibile trovare il file, plugman si ferma e inverte l'installazione, invia una notifica sul problema e si chiude con un codice diverso da zero.
 
-*   `target-dir`: Una directory in cui devono essere copiati i file, rispetto alla radice del progetto Cordova. In pratica, questo è più importante per piattaforme basate su Java, dove un file nella `com.alunny.foo` pacchetto deve essere situato all'interno del `com/alunny/foo` directory. Per le piattaforme dove la directory di origine non è importante, questo attributo deve essere omesso.
+*   `target-dir`: Una directory in cui devono essere copiati i file, relativo alla radice del progetto Cordova. In pratica, questo è più importante per piattaforme basate su Java, dove un file nella `com.alunny.foo` pacchetto deve essere situato il `com/alunny/foo` directory. Per le piattaforme dove la directory di origine non è importante, questo attributo deve essere omesso.
     
-    Come con i beni, se il `target` di un `source-file` vuoi sovrascrivere un file esistente, plugman si ferma e inverte l'installazione, invia una notifica sul problema ed esce con un codice diverso da zero.
+    Come con i beni, se il `target` di un `source-file` sarebbe sovrascrivere un file esistente, plugman si ferma e inverte l'installazione, invia una notifica sul problema e si chiude con un codice diverso da zero.
 
-*   `framework`(solo iOS): se impostato su `true` , inoltre aggiunge il file specificato come un quadro al progetto.
+*   `framework`(solo iOS): se impostato su `true` , inoltre aggiunge il file specificato come un quadro di riferimento al progetto.
 
-*   `compiler-flags`(solo iOS): se impostato, viene assegnato il flag del compilatore specificato per il file di origine particolare.
+*   `compiler-flags`(solo iOS): se impostato, assegna i flag del compilatore specificato per il file di origine specifico.
 
 ## *config-file* Elemento
 
@@ -306,23 +319,21 @@ Esso supporta i seguenti attributi:
 
 *   `target`:
     
-    Il file da modificare e il percorso relativo alla radice del progetto Cordova.
+    Il file deve essere modificato e il percorso relativo alla radice del progetto Cordova.
     
-    La destinazione può includere caratteri jolly ( `*` ) elementi. In questo caso, plugman ricorsivamente attraverso la struttura di directory del progetto e viene utilizzato il primo match.
+    La destinazione può includere caratteri jolly ( `*` ) elementi. In questo caso, in modo ricorsivo plugman cerca attraverso la struttura di directory del progetto e utilizza la prima partita.
     
-    IOS, la posizione dei file di configurazione relativo alla radice della directory del progetto non è nota, quindi specificare un target di `config.xml` si risolve in`cordova-ios-project/MyAppName/config.xml`.
+    Su iOS, il percorso dei file di configurazione relativo alla radice della directory del progetto non è noto, quindi specificando una destinazione `config.xml` si risolve in`cordova-ios-project/MyAppName/config.xml`.
     
     Se il file specificato non esiste, lo strumento ignora il cambiamento di configurazione e continua l'installazione.
 
-*   `parent`: Un selettore XPath che fa riferimento al padre di elementi da aggiungere al file config. Se si utilizzano selettori assolute, è possibile utilizzare un carattere jolly ( `*` ) per specificare l'elemento radice, ad esempio,`/*/plugins`.
+*   `parent`: Un selettore XPath che fa riferimento il padre degli elementi da aggiungere al file di configurazione. Se si utilizzano selettori assolute, è possibile utilizzare un carattere jolly ( `*` ) per specificare l'elemento radice, ad esempio,`/*/plugins`.
     
     Per `plist` file, il `parent` determina quale chiave padre XML specificato deve essere inserito.
     
-    Se il selettore non si risolve in un bambino del documento specificato, il tool si ferma e inverte il processo di installazione, genera un avviso ed esce con un codice diverso da zero.
+    Se il selettore non si risolve in un bambino del documento specificato, il tool si ferma ed inverte il processo di installazione, genera un avviso ed esce con un codice diverso da zero.
 
-*   `after`: Un elenco con priorità di fratelli accettati dopo di che aggiungere il frammento XML. Utile per specificare le modifiche nei file che richiedono ordine rigido di elementi XML come [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
-
- [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+*   `after`: Un elenco prioritario dei fratelli accettati dopo di che aggiungere il frammento XML. Utile per specificare le modifiche nei file che richiedono ordine rigido di elementi XML come <http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement>
 
 La piattaforma Windows supporta due attributi aggiuntivi (entrambi optional) quando colpisce il meta-nome `package.appxmanifest`:
 
@@ -385,7 +396,7 @@ Come sorgente, risorse e file di intestazione, ma specificamente per piattaforme
 
 Attributi supportati:
 
-*   `src`(obbligatorio): il percorso del file relativo alla `plugin.xml` . Se `src` non trovato, plugman si ferma e inverte l'installazione, questioni un avvertimento circa il problema ed esce con un codice diverso da zero.
+*   `src`(obbligatorio): il percorso del file relativo a `plugin.xml` . Se `src` non viene trovato, plugman si ferma e inverte l'installazione, problemi un avvertimento circa il problema ed esce con un codice diverso da zero.
 
 *   `arch`: L'architettura per la quale il `.so` file è stato costruito, o `device` o`simulator`.
 
@@ -393,13 +404,13 @@ Per la piattaforma Windows, elemento `< lib-file >` permette l'inserimento di un
 
 Attributi supportati:
 
-*   `src` (obbligatorio): il nome del SDK per includere (che verrà utilizzato come valore dell'attributo `Include` dell'elemento `<SDKReference>` generato).
+*   `src`(obbligatorio): il nome di SDK per includere (che verrà utilizzato come valore del `Include` attributo di generato `<SDKReference>` elemento).
 
-*   `arch`: indica che il `<SDKReference>` solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
+*   `arch`: Indica che il `<SDKReference>` deve essere incluso solo quando si costruisce per l'architettura specificata. Valori supportati sono `x86` , `x64` o`ARM`.
 
-*   `device-target`: indica che il `< SDKReference >` solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+*   `device-target`: Indica che il `<SDKReference>` deve essere incluso solo durante la compilazione per il tipo di periferica di destinazione specificato. Valori supportati sono `win` (o `windows` ), `phone` o`all`.
 
-*   `versions`: indica che il `<SDKReference>` solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificato. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+*   `versions`: Indica che il `<SDKReference>` deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di intervallo semantico versione nodo valido.
 
 Esempi:
 
@@ -463,7 +474,7 @@ L'attributo di `arch` indica che il quadro deve essere incluso solo quando si co
 
 L'attributo `device-target` indica che il quadro deve essere incluso solo durante la compilazione per il tipo di periferica di destinazione specificato. Valori supportati sono `win` (o `windows`), `phone` o `all`.
 
-L'attributo di `versions` indica che il quadro deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+L'attributo di `versions` indica che il quadro deve essere incluso solo durante la compilazione per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di intervallo semantico versione nodo valido.
 
 Esempi di utilizzo di questi attributi specifici di Windows:
 

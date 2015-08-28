@@ -145,16 +145,30 @@ Tizen-Plattform unterstützt keine Plugins.
 
 ## Publishing Plugins
 
-Wenn Sie Ihr Plugin zu entwickeln, empfiehlt es sich, zu veröffentlichen und mit der Community teilen. Können Sie das Plugin auf der Cordova- [Registrierung][1] veröffentlichen (basierend auf [ `npmjs` ][4]) oder jede andere `npmjs` -basierte Registry. Andere Entwickler können installieren automatisch mit entweder `plugman` oder Cordova-CLI. (Für Details zu jedem Entwicklungspfad, siehe Plugman Plugins verwalten und die Befehlszeilenschnittstelle verwenden.)
+Wenn Sie Ihr Plugin zu entwickeln, empfiehlt es sich, zu veröffentlichen und mit der Community teilen. Können Sie Ihr Plugin auf jeder `npmjs`veröffentlichen-basierten Registrierung, aber die empfohlenen ist der [NPM-Registrierung][4]. Bitte lesen Sie unsere [Veröffentlichung Plugins Npm-Guide][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Um ein Plugin zu veröffentlichen, Sie verwenden müssen, die `plugman` -tool und gehen Sie durch die folgenden Schritte aus:
+**Hinweis**: [Cordova Plugin Registrierung][6] bewegt sich auf einem schreibgeschützten Zustand. `publish`/ `unpublish` Befehle entzogen wurde `Plugman`, d. h. Sie entsprechende `Npm` -Befehle verwenden müssen.
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Andere Entwickler können Ihr automatisch mit `Plugman` oder Cordova CLI Plugin installieren. (Für Details zu jedem Entwicklungspfad, siehe Plugman Plugins verwalten und die Befehlszeilenschnittstelle verwenden.)
+
+Um ein Plugin zu NPM-Registrierung zu veröffentlichen müssen Sie folgenden Schritte:
+
+*   `package.json` -Datei für Ihr Plugin zu erstellen:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   Veröffentlichen Sie sie:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 Das ist es!
 
-Unter `plugman --help` sind andere verfügbare registrierungsbasierte Befehle aufgeführt.
+`plugman --help` ausgeführt werden anderen verfügbaren registrierungsbasierte-Befehle aufgelistet.

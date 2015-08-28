@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
  [7]: http://www.windowsstore.com/
 
-為 Windows 開發科爾多瓦的應用程式，您可以使用 pc 機運行 Windows，但你也可能發展在 Mac 上運行的虛擬機器環境或到雙啟動 Windows 8.1 分區使用新兵訓練營。 請查閱這些資源以設置在 Mac 上所需的 Windows 開發環境：
+為 Windows 開發科爾多瓦的應用程式，您可以使用 pc 機運行 Windows，但你也可能發展在 Mac 上運行的虛擬機器環境或到雙啟動 Windows 8.1 分區使用新兵訓練營。 請查閱這些資源來設置在 Mac 上所需的 Windows 開發環境:
 
 *   [VMWare Fusion][8]
 
@@ -93,7 +93,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ![][12]
 
- [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
+ [12]: img/guide/platforms/win8/win8_installSDK.png
 
 為 Windows 10，Visual Studio 安裝程式沒有安裝工具來構建通用的 Windows 應用程式的選項。 你必須確保，此選項是在安裝時選擇安裝所需的 SDK。
 
@@ -104,42 +104,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
+    
 
-
-下面是相應的低級別 shell 工具方法：
+下面是相應的較低級別殼工具方法:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-
+    
 
 本專案的目標 Windows 8.1 作為預設的目標作業系統。 你可以選擇目標 8.0 或 10.0 (見下文的"配置目標 Windows 版本") 為所有的生成，或你在每次生成目標特定于特定的版本。
 
 ## 生成專案
 
-如果您在開發中使用 CLI，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任一內要重新生成應用程式的專案目錄：
+如果您使用 CLI 在發展中，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任一專案目錄重新生成該應用程式中:
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
+    
 
+下面是相應的較低級別殼工具方法:
 
-下面是相應的低級別 shell 工具方法：
-
-        C:\path\to\project\cordova\build.bat --debug
+        C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
+    
 
+`clean`命令可以説明搜捕中準備的下一個目錄 `build` :
 
-`clean`命令可以説明沖洗中準備的下一個目錄 `build` ：
-
-        C:\path\to\project\cordova\clean.bat
-
+        C:\path\to\project\cordova\clean.bat 
+    
 
 ## 配置目標 Windows 版本
 
 由預設的`生成`命令將生成兩個包: Windows 8.0 和 Windows Phone 8.1。 升級到版本 8.1 以下配置設置必須添加到設定檔 (`config.xml`的 Windows 套裝程式).
 
         <preference name="windows-target-version" value="8.1" />
-
+    
 
 一旦你添加此設置`生成`命令將開始生產 Windows 8.1 和 Windows Phone 8.1 包。
 
@@ -148,7 +148,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 您可能會決定你想要建立的針對特定作業系統的應用程式的特定版本 (例如，您可能有設置您想要針對 Windows 10，但您想要構建 Windows Phone 8.1)。 要做到這一點，你可以使用`--appx`參數:
 
         > cordova build windows -- --appx=8.1-phone
-
+    
 
 生成系統將忽略 config.xml 目標 Windows 版本中設置的偏好，並嚴格為 Windows Phone 8.1 生成套裝軟體。
 
@@ -168,17 +168,17 @@ Windows 10 科爾多瓦的應用程式 (和一般的 HTML 應用程式) 支援�
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-
+    
 
 要將 Windows Phone 包部署:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-
+    
 
 可以使用**cordova run windows --list**來查看所有可用的目標和**cordova run windows --target=target_name \-- -|-phone**，在特定的設備或模擬器上運行的應用程式 （例如，`cordova run windows --target="Emulator 8.1 720P 4.7 inch" -- --phone`).
 
-您還可以使用**cordova run --help**查看附加的生成和運行選項。
+您還可以使用**科爾多瓦運行 — — 説明**查看附加的生成和運行選項。
 
 ## 在 SDK 中打開的專案和部署應用程式
 
@@ -186,25 +186,25 @@ Windows 10 科爾多瓦的應用程式 (和一般的 HTML 應用程式) 支援�
 
 ![][14]
 
- [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
 
 `CordovaApp`元件顯示解決方案中, 和其`www`目錄包含基於 web 的原始程式碼，包括`index.html`主頁:
 
 ![][15]
 
- [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
+ [15]: img/guide/platforms/win8/win8_sdk.png
 
 Visual Studio 主功能表下面的控制項允許您測試或部署應用程式:
 
 ![][16]
 
- [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: img/guide/platforms/win8/win8_sdk_deploy.png
 
 選擇**本地電腦**，請按綠色箭頭運行 Visual Studio 在同一機器上安裝的應用程式。一旦你這樣做，應用程式將出現在 Windows 8 應用程式清單:
 
 ![][17]
 
- [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: img/guide/platforms/win8/win8_sdk_runApp.png
 
 每次您重新生成應用程式，在介面中可用的版本被刷新。
 
@@ -212,19 +212,19 @@ Visual Studio 主功能表下面的控制項允許您測試或部署應用程式
 
 ![][18]
 
- [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: img/guide/platforms/win8/win8_sdk_runHome.png
 
 請注意，是否你打開的應用程式在虛擬機器環境中，您可能需要按一下在角落裡或兩側的窗戶，切換應用程式或訪問附加功能:
 
 ![][19]
 
- [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
+ [19]: img/guide/platforms/win8/win8_sdk_run.png
 
 或者，選擇**模擬器**部署選項以查看該應用程式，就好像它在平板設備上運行:
 
 ![][20]
 
- [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: img/guide/platforms/win8/win8_sdk_sim.png
 
 與不同的桌面部署，此選項允許您類比平板電腦的定位，位置，和改變其網路設置。
 

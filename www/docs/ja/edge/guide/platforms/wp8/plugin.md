@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 8 プラグイン
 
-Windows Phone プラットフォームでネイティブのプラグインのコードを実装する方法の詳細について説明します。 これを読む前に、プラグインの構造とその一般的な JavaScript のインタ フェースの概要プラグイン開発ガイド 』 を参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。
+Windows Phone プラットフォームでネイティブのプラグインのコードを実装する方法の詳細について説明します。 これを読んで、前にプラグインの構造とその一般的な JavaScript のインターフェイスの概要についてはプラグイン開発ガイド 』 を参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。
 
 Windows Phone 上のコルドバのプラグインを書くには、コルドバのアーキテクチャの基本的な理解が必要です。 コルドバ WP8 から成っている、 `WebBrowser` をホスト アプリケーションの JavaScript コードとネイティブ API 呼び出しを管理します。 C# を拡張する `BaseCommand` クラス ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` )、必要な機能のほとんどが付属しています：
 

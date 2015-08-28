@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Hooks Przewodnik
 
-Cordova haki stanowią specjalne skrypty, które może być dodany przez aplikację i programistów wtyczki lub nawet przez swój własny zbudować system do Dostosuj polecenia cordova. Hak skryptów może być definiowane przez dodanie ich do specjalnych wstępnie zdefiniowanych folderów (`/hooks`) lub poprzez pliki konfiguracyjne (`plik config.xml` i `plugin.xml`) i uruchomić pojedynczo w następującej kolejności: * aplikacji haki z `/hooks`; * Aplikacja haki z `pliku config.xml`; * Wtyczki haki z `plugins/.../plugin.xml`.
+Cordova haki stanowią specjalne skrypty, które może być dodany przez aplikację i programistów wtyczki lub nawet przez swój własny zbudować system do Dostosuj polecenia cordova. Hak skryptów może definiowane przez dodanie ich do specjalnego folderu wstępnie zdefiniowane ( `/hooks` ) lub poprzez pliki konfiguracyjne ( `config.xml` i `plugin.xml` ) i uruchomić pojedynczo w następującej kolejności:
+
+  * Stosowania haczyków z `/hooks` ;
+  * Stosowania haczyków z `config.xml` ;
+  * Haki plugin z`plugins/.../plugin.xml`.
 
 **Uwaga**: katalog `/hooks` jest uważana za zastąpiona hak elementy w pliku config.xml i plugin.xml.
 

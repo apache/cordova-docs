@@ -70,14 +70,14 @@ Należy pamiętać, że CLI obsługuje wyłącznie na platformie BlackBerry10. P
 
 1.  Tworzenie nowego projektu Apache Cordova 3.0.0 za pomocą CLI, cordova, zgodnie z opisem w interfejs wiersza poleceń.
 
-2.  Dodać swojej platformy do projektu cordova, na przykład:`cordova
+2.  Dodaj swojej platformy do projektu cordova, na przykład:`cordova
 platform add blackberry10`.
 
-3.  Skopiuj zawartość oryginalnego projektu `www` katalogu `www` katalog w katalogu głównym projektu cordova właśnie utworzyłeś.
+3.  Skopiuj zawartość oryginalnego projektu `www` katalogu do `www` katalog w katalogu głównym projektu cordova właśnie utworzyłeś.
 
 4.  Skopiuj lub zastąpić rodzimych aktywów z oryginalnego projektu ( `Resources` , itp.)
 
-5.  Kopia `config.xml` plik w `www` katalogu i usunąć wszelkie definicje plugin. Należy zmodyfikować ustawienia, tutaj raczej niż w katalogu.
+5.  Kopia `config.xml` plik w `www` katalogu i usunąć wszelkie definicje plugin. Należy zmodyfikować ustawienia tutaj a nie w katalogu.
 
 6.  Narzędzia CLI cordova instalowac pluginy, czego potrzebujesz. Należy zauważyć, że CLI obsługuje wszystkie podstawowe API jako wtyczki, więc mogą one potrzebować do dodania. Tylko 3.0.0 wtyczki są kompatybilne z CLI.
 
@@ -93,7 +93,7 @@ Dla BlackBerry 10:
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Staje się to w domu zaktualizowanego projektu.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. To staje się domem zaktualizowanego projektu.
 
 5.  Skopiować źródła projektów od starego projektu `/ www` katalogu do nowego projektu `/ www` katalogu.
 
@@ -101,13 +101,13 @@ Dla BlackBerry 10:
 
 Dla BlackBerryOS/Playbook:
 
-1.  Pobierz i rozpakuj źródła Cordova 2.9.0 na miejsce stałe katalogu na dysku twardym, na przykład do`~/Cordova-2.9.0`.
+1.  Pobierz i rozpakuj źródła Cordova 2.9.0 do lokalizacji stałych katalogu na dysku twardym, na przykład do`~/Cordova-2.9.0`.
 
 2.  Zamknąć uruchomione narzędzi SDK: Eclipse, Momentics i tym podobne.
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
@@ -121,7 +121,7 @@ Dla BlackBerryOS/Playbook:
 
 ## Projekty modernizacji 2.7.0 do 2.8.0
 
-BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowe API jako wtyczki. Instrukcje przenieść swój projekt do nowego projektu, zamiast aktualizacji istniejącego projektu, ze względu na złożoność aktualizacji starej projektem. Także Uwaga, że cordova js skrypt plik nazywa się teraz "cordova.js" i już zawiera ciąg wersja.
+BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowych interfejsów API jako wtyczki. Instrukcji migracji projektu nowego projektu, zamiast aktualizacji istniejącego projektu, ze względu na złożoność aktualizacji starego projektu. Także Uwaga, że cordova js skrypt pliku teraz nazywa się "cordova.js" i już zawiera ciąg wersji.
 
 1.  Pobierz i rozpakuj źródła Cordova 2.8.0 do lokalizacji stałych katalogu na dysku, na przykład do`~/Cordova-2.8.0`.
 
@@ -129,7 +129,7 @@ BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowe API jako wt
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Staje się to w domu zaktualizowanego projektu.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. To staje się domem zaktualizowanego projektu.
 
 5.  Skopiować źródła projektów od starego projektu `/ www` katalogu do nowego projektu `/ www` katalogu.
 
@@ -137,17 +137,17 @@ BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowe API jako wt
 
 Dla BlackBerryOS/Playbook:
 
-1.  Pobierz i rozpakuj źródła Cordova 2.8.0 do lokalizacji stałych katalogu na dysku, na przykład do`~/Cordova-2.8.0`.
+1.  Pobierz i rozpakuj źródła Cordova 2.8.0 do lokalizacji stałych katalogu na dysku twardym, na przykład do`~/Cordova-2.8.0`.
 
 2.  Zamknąć uruchomione narzędzi SDK: Eclipse, Momentics i tym podobne.
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, zgodnie z opisem w iOS Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  Zaktualizować odniesienia skrypt Cordova w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) wskaż Nowy `cordova.js` pliku.
 
 7.  Kopia `native` katalogu z nowym projektem do istniejącego projektu, zastępując stare `native` katalogu.
 
@@ -161,13 +161,13 @@ Dla BlackBerryOS/Playbook:
 
 2.  Zamknąć uruchomione narzędzi SDK: Eclipse, Momentics i tym podobne.
 
-3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
+3.  Przejdź do katalogu, gdzie można umieścić pobrany źródła powyżej, za pomocą systemu unix jak terminal: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova-2.7.0.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova-2.6.0.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova-2.7.0.js` pliku.
+6.  Zaktualizować odniesienia skrypt Cordova w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) wskaż Nowy `cordova-2.7.0.js` pliku.
 
 7.  Kopia `native` katalogu z nowym projektem do istniejącego projektu, zastępując stare `native` katalogu.
 
@@ -175,9 +175,9 @@ Dla BlackBerryOS/Playbook:
 
 9.  Kopia `cordova` katalogu z nowym projektem do istniejącego projektu, zastępując stare `cordova` katalogu.
 
-## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
+## Uaktualnienie do 2.6.0 z 2.5.0
 
-Aktualizacja katalogu download telefon:
+Aktualizacja katalogu download PhoneGap:
 
 Zalecane jest, że można pobrać nową kopię całego katalogu.
 
@@ -193,7 +193,7 @@ Jednakże tu są nowe części potrzebne do aktualizacji fragmentaryczne:
 
 5.  Aktualizacja `VERSION` plik w `Phonegap-2.6.0/lib/blackberry` katalogu.
 
-Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
+Aktualizowanie w przykładzie / katalogu lub migracja istniejącego projektu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -205,11 +205,11 @@ Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
 
 5.  Skopiuj nowe `cordova-2.6.0.js` do projektu.
 
-6.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.6.0.js` pliku.
+6.  Uaktualnić twój HTML do używania nowych `cordova-2.6.0.js` pliku.
 
-## Uaktualnić do 2.5.0 2.4.0
+## Uaktualnienie do 2.5.0 od 2.4.0
 
-Aktualizacja katalogu download telefon:
+Aktualizacja katalogu download PhoneGap:
 
 Zalecane jest, że można pobrać nową kopię całego katalogu.
 
@@ -225,7 +225,7 @@ Jednakże tu są nowe części potrzebne do aktualizacji fragmentaryczne:
 
 5.  Aktualizacja `VERSION` plik w `Phonegap-2.5.0/lib/blackberry` katalogu.
 
-Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
+Aktualizowanie w przykładzie / katalogu lub migracja istniejącego projektu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -237,9 +237,9 @@ Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
 
 5.  Skopiuj nowe `cordova-2.5.0.js` do projektu.
 
-6.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.5.0.js` pliku.
+6.  Uaktualnić twój HTML do używania nowych `cordova-2.5.0.js` pliku.
 
-## Uaktualnić do 2.4.0 2.3.0
+## Uaktualnienie do 2.4.0 od 2.3.0
 
 Aktualizacja tylko `www` katalogu:
 
@@ -254,7 +254,7 @@ Aktualizacja tylko `www` katalogu:
     *   Jeśli playbook, a następnie aktualizacja JS plików w `playbook/` katalogu.
     *   Jeśli BlackBerry 10, a następnie zaktualizować plik js w `qnx/` katalogu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.4.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.4.0.js` pliku.
 
 Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
@@ -270,11 +270,11 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 6.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.3.0/` katalogu`cordova.2.4.0/`.
 
-7.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z aktualizacja Cordova.
+7.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z zaktualizowaną Cordova.
 
-8.  Otwarte `www` katalog i uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.4.0.js` pliku.
+8.  Otwarte `www` katalog i uaktualnić twój HTML do używania nowych `cordova-2.4.0.js` pliku.
 
-## Uaktualnić do 2.3.0 2.2.0
+## Uaktualnienie do 2.3.0 od 2.2.0
 
 Aktualizacja tylko `www` katalogu:
 
@@ -289,7 +289,7 @@ Aktualizacja tylko `www` katalogu:
     *   Jeśli playbook, a następnie aktualizacja JS plików w `playbook/` katalogu.
     *   Jeśli BlackBerry 10, a następnie zaktualizować plik js w `qnx/` katalogu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.3.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.3.0.js` pliku.
 
 Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
@@ -340,9 +340,9 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 6.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.1.0/` katalogu`cordova.2.2.0/`.
 
-7.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z aktualizacja Cordova.
+7.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z zaktualizowaną Cordova.
 
-8.  Otwarte `www` katalog i uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.2.0.js` pliku.
+8.  Otwarte `www` katalog i uaktualnić twój HTML do używania nowych `cordova-2.2.0.js` pliku.
 
 ## Uaktualnienie do 2.1.0 z 2.0.0
 
@@ -358,7 +358,7 @@ Aktualizacja tylko `www` katalogu:
     
     *   Jeśli playbook, a następnie aktualizacja JS plików w `playbook/` katalogu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.1.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.1.0.js` pliku.
 
 Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
@@ -372,11 +372,11 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.0.0/` katalogu`cordova.2.1.0/`.
 
-6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z aktualizacja Cordova.
+6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z zaktualizowaną Cordova.
 
-7.  Otwarte `www` katalog i uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.1.0.js` pliku.
+7.  Otwarte `www` katalog i uaktualnić twój HTML do używania nowych `cordova-2.1.0.js` pliku.
 
-## Uaktualnić do 2.0.0 1.9.0
+## Uaktualnienie do 2.0.0 od 1.9.0
 
 Aktualizacja tylko `www` katalogu:
 
@@ -390,9 +390,9 @@ Aktualizacja tylko `www` katalogu:
     
     *   Jeśli playbook, a następnie aktualizacja JS plików w `playbook/` katalogu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.0.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-2.0.0.js` pliku.
 
-6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy dla wtyczek przechwytywania i kontakt z:
     
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -416,11 +416,11 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.1.9.0/` katalogu`cordova.2.0.0/`.
 
-6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z aktualizacja Cordova.
+6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z zaktualizowaną Cordova.
 
-7.  Otwarte `www` katalog i uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.0.0.js` pliku.
+7.  Otwarte `www` katalog i uaktualnić twój HTML do używania nowych `cordova-2.0.0.js` pliku.
 
-8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy dla wtyczek przechwytywania i kontakt z:
     
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -448,9 +448,9 @@ Aktualizacja tylko `www` katalogu:
     
     *   Jeśli playbook, a następnie aktualizacja JS plików w `playbook/` katalogu.
 
-5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-1.8.0.js` pliku.
+5.  Uaktualnić twój HTML do używania nowych `cordova-1.8.0.js` pliku.
 
-6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy dla wtyczek przechwytywania i kontakt z:
     
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -474,11 +474,11 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.1.7.0/` katalogu`cordova.1.8.0/`.
 
-6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z aktualizacja Cordova.
+6.  Typ `ant blackberry build` lub `ant playbook build` do aktualizacji `www` katalogu z zaktualizowaną Cordova.
 
-7.  Otwarte `www` katalog i uaktualnić twój HTML, aby skorzystać z nowego `cordova-1.8.0.js` pliku.
+7.  Otwarte `www` katalog i uaktualnić twój HTML do używania nowych `cordova-1.8.0.js` pliku.
 
-8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy dla wtyczek przechwytywania i kontakt z:
     
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>

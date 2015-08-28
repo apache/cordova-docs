@@ -130,7 +130,7 @@ A más de una plataforma, pero no a todos ellos se aplican las siguientes prefer
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    Se aplica a iOS y BlackBerry.
+    Se aplica para BlackBerry.
 
 *   `Orientation`(string, el valor predeterminado de `default` ): le permite bloquear orientación y evitar que roten en respuesta a cambios en la orientación de la interfaz. Los valores posibles son `default` , `landscape` o `portrait` . Ejemplo:
     

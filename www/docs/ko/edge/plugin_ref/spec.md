@@ -76,8 +76,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </engines>
     
 
-기본 목록에 엔진은 여기에 '<engine>' 태그를 지원 합니다: * '코르도바' * ' 코르도바-plugman' * ' 코르도바-아마존-fireos' * ' 코르도바-안 드 로이드 ' * ' 코르도바-ios' * ' 코르도바-blackberry10' * ' 코르도바-wp8' * ' 코르도바 windows8'  
-* ' 안 드 로이드 sdk' / 설치 수준 높은 안 드 로이드 api 반환 / * ' 애플-xcode' / xcode 버전 반환 합니다 / * ' 애플-ios' / / 설치 된 가장 높은 iOS 버전을 반환 합니다 * ' 애플-os x ' / OSX 버전 반환 합니다 / * ' 블랙베리 ndk' / / 네이티브 blackberry SDK 버전을 반환 합니다
+여기는 기본값의 목록을 그 엔진는 `<engine>` 태그를 지원 합니다:
+
+*   `cordova`
+*   `cordova-plugman`
+*   `cordova-amazon-fireos`
+*   `cordova-android`
+*   `cordova-ios`
+*   `cordova-blackberry10`
+*   `cordova-wp8`
+*   `cordova-windows8`
+*   `android-sdk` // returns the highest Android api level installed
+*   `apple-xcode` // returns the xcode version 
+*   `apple-ios` // returns the highest iOS version installed
+*   `apple-osx` // returns the OSX version
+*   `blackberry-ndk` // returns the native blackberry SDK version
 
 이렇게 사용자 정의 아파치 코르도바 기반 프레임 워크 엔진 태그 아래 나열 되어야 합니다 지정:
 
@@ -94,9 +107,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 *   `version`(필수): 당신의 프레임 워크 설치 해야 하는 버전.
 
-*   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 디렉토리의 최상위 수준 디렉터리 내에서 해야 합니다.
+*   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 디렉토리의 최상위 디렉토리 이어야 한다.
 
-*   `platform`(필수): 어떤 플랫폼을 당신의 프레임 워크를 지원 합니다. 와일드 카드를 사용할 수 있습니다 `*` 모든 플랫폼에 대 한 지원, 말 처럼 파이프 문자로 여러 개 지정 `android|ios|blackberry10` 또는 같은 단일 플랫폼`android`.
+*   `platform`(필수): 당신의 프레임 워크를 지 원하는 어떤 플랫폼. 와일드 카드를 사용할 수 있습니다 `*` 모든 플랫폼에 대 한 지원, 말 처럼 파이프 문자로 여러 개 지정 `android|ios|blackberry10` 또는 같은 단일 플랫폼`android`.
 
 plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 않는 모든 플러그인에 대 한 0이 아닌 코드를 중단 합니다.
 
@@ -153,16 +166,16 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 모든 `<asset>` 태그 필요 둘 다 `src` 와 `target` 특성. 웹 전용 플러그인 포함 주로 `<asset>` 요소. 모든 `<asset>` 요소 안에 중첩 된 `<platform>` 아래 설명 된 대로 요소 플랫폼 관련 웹 자산을 지정 합니다. 특성은 다음과 같습니다.
 
-*   `src`(필수): 파일 또는 디렉토리 위치 플러그인 패키지에 상대적으로 `plugin.xml` 문서. 파일에 지정 된 존재 하지 않는 경우 `src` 위치, plugman 중지 및 설치 프로세스를 취소, 문제는 충돌에 대 한 알림 및 0이 아닌 코드와 함께 종료 합니다.
+*   `src`(필수): 파일 또는 디렉터리 위치 플러그인 패키지에 상대적으로 `plugin.xml` 문서. 파일에 지정 된 존재 하지 않는 경우 `src` 위치, plugman 중지 하 고 설치 과정을 반전, 충돌에 대 한 알림을 문제점과 0이 아닌 코드와 함께 종료.
 
-*   `target`(필수):
+*   `target` (required):
     
-    어디 파일 또는 디렉터리에에서 있어야 코르도바 애플 리 케이 션, 상대적으로 `www` 디렉터리. 자산 하위 디렉터리, 예를 들어 대상 될 수 있습니다.
+    파일 또는 디렉터리 한다 위치 코르도바 애플 리 케이 션에 상대적으로 `www` 디렉터리. 자산 수 대상으로 지정할 하위 디렉터리, 예를 들면.
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    만듭니다는 `js/experimental` 내의 디렉토리는 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` 파일 및 그것의 이름을 바꾸고 `foo.js` . 파일이 대상 위치에 이미 있으면 plugman 중지 하 고 설치 프로세스를 취소, 충돌에 대 한 알림을 고 0이 아닌 코드와 함께 종료 됩니다.
+    만듭니다는 `js/experimental` 디렉토리 내에서 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` 파일 및 그것의 이름을 바꾸고 `foo.js` . 파일이 대상 위치에 이미 있으면 plugman 중지 하 고 설치 과정을 반전, 충돌에 대 한 알림을 고 0이 아닌 코드와 함께 종료 됩니다.
 
 ## *js 모듈* 요소
 
@@ -179,19 +192,19 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 에 대 한 세부 정보는 `<js-module>` 태그:
 
-*   `src`관련 플러그인 디렉토리에서 파일 참조를 `plugin.xml` 파일.
+*   `src`관련 플러그인 디렉토리에서 파일을 참조는 `plugin.xml` 파일.
 
-*   `name`모듈 이름의 마지막 부분을 제공 합니다. 그것은 일반적으로 당신이 무엇을 좋아 하든지 수 고만 사용 하려는 경우 중요 한 `cordova.require` 를 JavaScript 코드에서 플러그인의 다른 부분을 가져오는. 모듈 이름을 한 `<js-module>` 귀하의 플러그인은 `id` 의 값에 따라 `name` . 예를 들어, 위의와 `id` 의 `chrome.socket` , 모듈 이름`chrome.socket.Socket`.
+*   `name`모듈 이름의 마지막 부분을 제공 합니다. 그것은 일반적으로 당신이 무엇을 좋아 하든지 수 고만 사용 하려는 경우 중요 한 `cordova.require` 를 JavaScript 코드에서 플러그인의 다른 부분을 가져오는. 모듈 이름을 `<js-module>` 플러그인의 `id` 의 값에 따라 `name` . 위의 예제와 `id` 의 `chrome.socket` , 모듈 이름이`chrome.socket.Socket`.
 
 *   3 태그 내에서 사용할 수 있습니다 `<js-module>` .
     
     *   `<clobbers target="some.value"/>`나타냅니다는 `module.exports` 에 삽입 되는 `window` 개체를 `window.some.value` . 만큼 당신이 수 있는 `<clobbers>` 당신 처럼. 모든 개체에 사용할 수 없는 `window` 만들어집니다.
     
-    *   `<merges target="some.value"/>`모듈에서 기존 값을 병합 해야 나타냅니다 `window.some.value` . 어떤 키가 이미 있는 경우 모듈의 버전 원래를 재정의 합니다. 만큼 당신이 수 있는 `<merges>` 당신 처럼. 모든 개체에 사용할 수 없는 `window` 만들어집니다.
+    *   `<merges target="some.value"/>`모듈에서 모든 기존 값을 병합 해야 나타냅니다 `window.some.value` . 어떤 키가 이미 있는 경우 모듈의 버전에는 원래 보다 우선 합니다. 만큼 당신이 수 있는 `<merges>` 당신 처럼. 모든 개체에 사용할 수 없는 `window` 만들어집니다.
     
-    *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이벤트 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
+    *   `<runs/>`코드와 함께 지정 해야 합니다 즉 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이 이벤트 처리기를 연결 하는 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 있습니다 당신은 1까지 `<runs/>` 태그. 그 등을 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 는 중복, 이후 그들은 또한 `cordova.require` 를 모듈.
     
-    *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스할 수 있습니다`cordova.require`.
+    *   빈 `<js-module>` 아직도 로드 하 고를 통해 다른 모듈에 액세스할 수 있습니다`cordova.require`.
 
 만약 `src` plugman 중지 및 설치 반대, 문제, 알림 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
 
@@ -204,13 +217,13 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
-*   `id`: 플러그인의 ID를 제공 합니다. 세계적으로 독특하고 리버스 도메인 스타일 표현 이어야 한다. 이러한 제한 중 어느 쪽도 아니는 현재 적용 하는 동안 그들은 미래에 있을 수 있습니다.
+*   `id`: 플러그인의 ID를 제공 합니다. 그것은 세계적으로 독특하고 리버스 도메인 스타일 표현 해야 합니다. 이러한 제한의 어느 쪽도 아니는 현재 적용 하는 동안 그들은 미래에 있을 수 있습니다.
 
-*   `url`: 플러그인에 대 한 URL입니다. 이 plugman 복제 하려고 git 저장소를 참조 해야 합니다.
+*   `url`플러그인: URL입니다. 이 plugman 복제 하려고 git 저장소를 참조 해야 합니다.
 
-*   `commit`: 이것은 어떤 자식 참조 이해 `git checkout` : 브랜치 또는 태그 이름 (예: `master` , `0.3.1` ), 또는 커밋 (예를 들어, 해시`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+*   `commit`: 이것은 어떤 자식 참조 이해 `git checkout` : 브랜치 또는 태그 이름 (예: `master` , `0.3.1` ), 커밋 (예를 들어, 해시 또는`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`: 타겟된 플러그인 종속성 git 저장소의 하위 존재를 지정 합니다. 이것은 몇 가지 관련된 플러그인을 포함 하는 저장소를 허용 하기 때문에 도움이 된다, 각각 개별적으로 지정 합니다.
+*   `subdir`: 타겟된 플러그인 종속성 git 저장소의 하위 있음을 지정 합니다. 여러 관련된 플러그인을 포함 하는 저장소를 허용 하기 때문에 이것은 도움이, 각각 개별적으로 지정 합니다.
 
 나중에 버전 제약 도입, 그리고 플러그인 저장소 명시적 Url 대신 이름으로 페치를 지원 하기 위해 존재 합니다.
 
@@ -240,7 +253,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 
-*   아마존 fireos
+*   아마존-fireos
 *   안 드 로이드
 *   blackberry10
 *   ios
@@ -262,15 +275,15 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 그것은 다음과 같은 특성을 지원합니다.
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 경우는 `src` 파일을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
+*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 경우는 `src` 파일을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 알림을 하 고 0이 아닌 코드와 함께 종료 됩니다.
 
-*   `target-dir`: 디렉터리에 파일 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 파일 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
+*   `target-dir`: 디렉토리는 파일 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 파일 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
     
-    자산, 것과 같이 경우는 `target` 의 한 `source-file` 기존 파일을 덮어쓸 것, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
+    자산, 것과 같이 경우는 `target` 의 한 `source-file` 는 기존 파일을 덮어쓸 것, plugman 중지 설치 반대, 문제, 문제에 대 한 알림을 고 0이 아닌 코드와 함께 종료.
 
-*   `framework`(iOS): 만약 설정 `true` , 또한 프로젝트에는 프레임 워크 지정된 된 파일을 추가 합니다.
+*   `framework`(iOS만): 만약 설정 `true` , 또한 프로젝트에는 프레임 워크 지정된 된 파일을 추가 합니다.
 
-*   `compiler-flags`(iOS): 만약 설정, 특정 소스 파일에 대해 지정 된 컴파일러 플래그를 지정 합니다.
+*   `compiler-flags`(iOS만): 만약 설정, 특정 소스 파일에 대 한 지정 된 컴파일러 플래그를 할당 합니다.
 
 ## *구성 파일* 요소
 
@@ -308,19 +321,19 @@ XML에 대 한 예제:
     
     파일을 수정할 수 및 코르도바 프로젝트의 루트에 상대적인 경로입니다.
     
-    대상에는 와일드 카드 포함 될 수 있습니다 ( `*` ) 요소. 이 경우에, plugman 반복적으로 프로젝트 디렉터리 구조를 통해 검색 하 고 첫 번째 일치 항목을 사용 하 여.
+    대상에는 와일드 카드 포함 될 수 있습니다 ( `*` ) 요소. 이 경우에, plugman 재귀적으로 프로젝트 디렉터리 구조를 통해 검색 하 고 첫 번째 일치 항목을 사용 하 여.
     
-    Ios, 프로젝트 디렉터리 루트를 기준으로 구성 파일의 위치는 알려져 있지, 그래서의 대상 지정 `config.xml` 을 확인`cordova-ios-project/MyAppName/config.xml`.
+    IOS에 프로젝트 디렉터리 루트를 기준으로 구성 파일의 위치는 알려져 있지, 그래서의 대상 지정 `config.xml` 확인`cordova-ios-project/MyAppName/config.xml`.
     
-    지정 된 파일이 존재 하지 않는 경우 도구 구성 변화를 무시 하 고 설치를 계속.
+    지정된 된 파일을 존재 하지 않는 경우 도구 구성 변화를 무시 하 고 설치를 계속.
 
 *   `parent`구성 파일에 추가 될 요소의 부모를 참조: XPath 선택기입니다. 절대 선택기를 사용 하는 경우 와일드 카드를 사용할 수 있습니다 ( `*` ) 예를 들어, 루트 요소를 지정 하려면`/*/plugins`.
     
-    대 한 `plist` 파일에 `parent` 어떤 부모 키 아래 지정 된 XML을 삽입 해야 합니다 확인 합니다.
+    대 한 `plist` 파일은 `parent` 어떤 부모 키 아래 지정 된 XML을 삽입 해야 합니다 결정 합니다.
     
-    선택기 지정 된 문서의 아이 게 해결 되지 않으면, 도구 중지 되 고 반대로 설치 프로세스 경고를 표시 및 0이 아닌 코드와 함께 종료 됩니다.
+    선택기는 지정된 된 문서에의 아이 게 해결 되지 않으면, 도구 중지 되 고 반전 설치 과정 경고, 고 0이 아닌 코드와 함께 종료 됩니다.
 
-*   `after`: XML 조각을 추가 허용된 형제 자매의 우선 순위가 지정 된 목록입니다. [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1] 같은 XML 요소의 엄격한 순서 필요로 하는 파일에 변경 내용을 지정 하는 데 유용
+*   `after`: XML 조각을 추가 허용된 형제 자매의 우선 순위 목록입니다. [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement][1] 같은 XML 요소의 엄격한 순서 필요로 하는 파일에 변경 내용을 지정 하는 데 유용
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
@@ -347,7 +360,7 @@ Windows 플랫폼 지원 (모두 선택) 2 개의 추가적인 특성 메타 이
 
 이것은 *오래 된* 코르 도우 바-ios 2.2.0 아래만 적용 됩니다. 코르 도우 바의 최신 버전에 대 한 `< config 파일 >` 태그를 사용 합니다.
 
-예를 들어:
+예:
 
     <config-file target="config.xml" parent="/widget/plugins">
         <feature name="ChildBrowser">
@@ -385,21 +398,21 @@ Windows 플랫폼 지원 (모두 선택) 2 개의 추가적인 특성 메타 이
 
 지원된 특성:
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 만약 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 반대 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
+*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 경우 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 취소 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
 
-*   `arch`: 어떤 아키텍처는 `.so` 파일이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
+*   `arch`: 어떤 아키텍처는 `.so` 파일은 건설 되었습니다, 어느 `device` 또는`simulator`.
 
 Windows 플랫폼 `<lib-file>` 요소는 `< SDKReference >` 생성 된 Windows 프로젝트 파일에 포함을 할 수 있습니다.
 
 지원된 특성:
 
-*   `src` (필수 사항): 포함 하려면 SDK의 이름 (이 생성 된 `< SDKReference >` 요소의 `Include` 특성의 값으로 사용 됩니다).
+*   `src`(필수 사항): 포함 SDK의 이름 (는의 값으로 사용 될 것입니다는 `Include` 는 생성의 특성 `<SDKReference>` 요소).
 
-*   `arch`: `< SDKReference >`만 포함 되어야 함을 지정 된 아키텍처에 대 한 구축 하는 경우를 나타냅니다. 지원 되는 값은 `x86`, `x64` 또는 `ARM`.
+*   `arch`: 나타냅니다는 `<SDKReference>` 지정 된 아키텍처에 대 한 만들 때 포함 되어야만 한다. 지원 되는 값은 `x86` , `x64` 또는`ARM`.
 
-*   `device-target`: `< SDKReference >` 만 포함 되어야 함을 지정 된 대상 장치 유형에 대 한 때를 나타냅니다. 지원 되는 값은 `win` (또는 `windows`), `phone` 또는 `all`.
+*   `device-target`: 나타냅니다는 `<SDKReference>` 지정 된 대상 장치 유형에 대 한 빌드할 때 포함 되어야만 한다. 지원 되는 값은 `win` (또는 `windows` ), `phone` 또는`all`.
 
-*   `versions`: `< SDKReference >`만 포함 되어야 함을 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 나타냅니다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
+*   `versions`: 나타냅니다는 `<SDKReference>` 지정 된 버전 문자열과 일치 하는 버전을 작성할 때 포함 되어야만 한다. 모든 유효한 노드 의미 버전 범위 문자열 값일 수 있습니다.
 
 예:
 

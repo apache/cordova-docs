@@ -104,7 +104,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     
     指定訪問到所有的域，包括本地 `file://` 協定：
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 （有關支援的詳細資訊，請參閱黑莓的文檔 [訪問元素][9] 上.)
 

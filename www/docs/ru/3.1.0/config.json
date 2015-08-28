@@ -1,5 +1,5 @@
 {
-    "language": "Russian",
+    "language": "Русский",
     "merge": {
         "accelerometer.md": [
             "cordova/accelerometer/accelerometer.md",

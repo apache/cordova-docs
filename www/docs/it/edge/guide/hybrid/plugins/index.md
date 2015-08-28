@@ -145,16 +145,30 @@ La piattaforma di Tizen non supporta plugin.
 
 ## Editrice Plugins
 
-Una volta che si sviluppa il tuo plugin, puoi pubblicare e condividere con la Comunità. È possibile pubblicare il tuo plugin al [Registro di sistema][1] di Cordova (basato su [ `npmjs` ][4]) o a qualsiasi altro `npmjs` -base del registro di sistema. Altri sviluppatori possono installarlo automaticamente utilizzando `plugman` o Cordova CLI. (Per informazioni dettagliate su ciascun percorso di sviluppo, vedere utilizzando Plugman per gestire i plugin e l'interfaccia della riga di comando).
+Una volta che si sviluppa il tuo plugin, puoi pubblicare e condividere con la Comunità. È possibile pubblicare il tuo plugin in qualsiasi `npmjs` -base del registro di sistema, ma quella consigliata è il [Registro di sistema NPM][4]. Si prega di leggere il nostro [plugin editrice npm guida][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Per pubblicare un plugin è necessario utilizzare il `plugman` tool e passare attraverso le seguenti fasi:
+**Nota**: [Registro dei plugin di Cordova][6] si sta muovendo per uno stato di sola lettura. `publish`/ `unpublish` i comandi sono stati rimossi dal `plugman` , quindi avrete bisogno di utilizzare la corrispondente `npm` comandi.
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Altri sviluppatori possono installare il plugin automaticamente utilizzando uno `plugman` o Cordova CLI. (Per informazioni dettagliate su ciascun percorso di sviluppo, vedere utilizzando Plugman per gestire i plugin e The Command-Line Interface).
+
+Per pubblicare un plugin del registro di sistema NPM che è necessario seguire la procedura riportata di seguito:
+
+*   creare `package.json` file per il vostro plugin:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   pubblicarlo:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 Questo è tutto!
 
-Esecuzione `plugman --help` elenca altri comandi disponibili basati sul Registro di sistema.
+Esecuzione `plugman --help` elenca altri comandi disponibili basati sui registri.

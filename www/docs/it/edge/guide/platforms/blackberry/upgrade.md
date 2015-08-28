@@ -45,7 +45,7 @@ BlackBerry 10:
 
 3.  Spostarsi nella directory dove avete messo la fonte scaricata sopra, utilizzando un unix come terminal: Terminal. app, Bash, Cygwin, ecc.
 
-4.  Creare un nuovo progetto, come descritto nella guida strumento Shell di iOS. Avete bisogno di beni da questo nuovo progetto.
+4.  Creare un nuovo progetto, come descritto nella Guida di strumento Shell BlackBerry. Avete bisogno di beni da questo nuovo progetto.
 
 5.  Copia il `www/cordova.js` file del nuovo progetto nella `www` directory e cancellare il `www/cordova.js` file.
 
@@ -83,7 +83,7 @@ BlackBerryOS/Playbook:
 
 3.  Spostarsi nella directory dove avete messo la fonte scaricata sopra, utilizzando un unix come terminal: Terminal. app, Bash, Cygwin, ecc.
 
-4.  Creare un nuovo progetto, come descritto nella guida strumento Shell di iOS. Avete bisogno di beni da questo nuovo progetto.
+4.  Creare un nuovo progetto, come descritto nella Guida di strumento Shell BlackBerry. Avete bisogno di beni da questo nuovo progetto.
 
 5.  Copia il `www/cordova.js` file del nuovo progetto nella `www` directory e cancellare il `www/cordova.js` file.
 

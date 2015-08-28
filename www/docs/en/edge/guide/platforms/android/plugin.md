@@ -150,6 +150,30 @@ thread, but do not want to block the `WebCore` thread either:
             return false;
         }
 
+## Adding Dependency Libraries
+
+If a plugin requires additional libraries to work, you can use
+one of the following approaches to add them via `config.xml`.
+
+Option A. Via _Gradle_ reference, for example:
+
+        <framework src="com.android.support:support-v4:+" />
+
+This is a recommended approach as it allows multiple plugins
+to refer to the same dependency library such as _gson_,
+_android-support-v4_, _google-play-services_, etc and
+_Gradle_ will resolve duplicate dependencies using its
+[Dependency Management logic](https://docs.gradle.org/current/userguide/dependency_management.html).
+
+Option B. As _JAR_ files placed to some plugin's folder and
+linked using `lib-file`, for example:
+
+        <lib-file src="src/android/libs/gcm.jar"/>
+
+We recommend using this approach only if you are sure that
+dependency jar is plugin specific and won't be used by
+other plugins. Otherwise, there will be platform build issue.
+
 ## Echo Android Plugin Example
 
 To match the JavaScript interface's _echo_ feature described in

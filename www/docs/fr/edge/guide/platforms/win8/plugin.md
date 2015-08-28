@@ -199,6 +199,10 @@ Maintenant que nous avons un plugin de travail, nous avons besoin de revenir sur
 
 Ça y est, vous avez maintenant un plugin distribuable que vous pouvez partager avec le monde ! Une chose à noter, l'ajout de cadres au projet Windows Cordova a été ajouté seulement récemment donc vous aurez besoin pour s'assurer que votre cordova outillage courant. Cordova-cli et cordova-plugman les deux supportent l'ajout suppression des plugins soutenue par native.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-https://github.com/purplecabbage/Cordova-runtimecomp-echoplug
+ou
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

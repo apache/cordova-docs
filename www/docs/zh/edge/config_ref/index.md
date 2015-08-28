@@ -130,7 +130,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    適用于 iOS 和黑莓手機。
+    適用于黑莓手機。
 
 *   `Orientation`（字串，預設值為 `default`）： 允許您鎖定方向並防止介面回應變化的方向旋轉。 可能的值是 `default`，`landscape` 或 `portrait`。 示例：
     

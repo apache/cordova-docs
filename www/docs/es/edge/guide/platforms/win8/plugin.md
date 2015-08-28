@@ -199,6 +199,10 @@ Ahora que tenemos un plugin de trabajo, tenemos que revisar la definición de pl
 
 Eso es todo, ahora tienes un plugin distribuible que puedes compartir con el mundo! Una cosa que tenga en cuenta, sólo recientemente se agregó soporte para añadir marcos a Windows Cordova proyecto así que tendrá que asegurarse de que su cordova herramientas corriente. La cli de cordova y cordova-plugman soportan agregar quitar plugins nativos respaldado.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-https://github.com/purplecabbage/Cordova-runtimecomp-echoplug
+o
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

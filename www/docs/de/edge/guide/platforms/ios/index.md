@@ -25,7 +25,7 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 *   IOS Upgrade
 *   iOS Webansichten für
 *   iOS Plugins
-*   iOS-Befehlszeilenprogrammen
+*   iOS Shell Tool Guide
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -61,7 +61,7 @@ Comman-Netzanschlussklemme führen:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-
+    
 
 ## Erstellen eines neuen Projekts
 
@@ -71,23 +71,23 @@ Mithilfe des Dienstprogramms `Cordova` zum Einrichten eines neuen Projekts, wie 
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-
+    
 
 ## Die app bereitstellen
 
 Die app auf einem angeschlossenen iOS-Gerät bereitstellen:
 
         $ cordova run ios --device
-
+    
 
 So bringen Sie die app auf einem Standard-iOS-Emulator:
 
         $ cordova emulate ios
-
+    
 
 Können Sie **cordova run ios --list** alle verfügbaren Ziele sehen und **cordova run ios --target=target_name** Anwendung auf ein bestimmtes Gerät oder einen Emulator ausführen (z. B. `cordova run ios --target="iPhone-6"`).
 
-Sie können auch **cordova run --help** finden Sie unter zusätzliche Build und Ausführungsoptionen.
+Sie können auch **Cordova ausführen--Hilfe** siehe zusätzliche erstellen und Ausführen von Optionen.
 
 ## Öffnen Sie ein Projekt im SDK
 
@@ -95,7 +95,7 @@ Sobald Ios Plattform zum Projekt hinzugefügt wurde, können Sie es innerhalb vo
 
 ![][6]
 
- [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
+ [6]: img/guide/platforms/ios/helloworld_project.png
 
 ## Bereitstellen auf Emulator
 
@@ -106,25 +106,25 @@ Die app in der iOS-Emulator Vorschau:
 2.  Wählen Sie die **Hallo** -app im Bereich sofort nach rechts.
 
 3.  Wählen Sie das gewünschte Gerät " **Schema** " der Symbolleiste, wie das iPhone hervorgehoben 6.0 Simulator als hier:
-
+    
     ![][7]
 
 4.  Drücken Sie die Schaltfläche **Ausführen** , die in der gleichen Symbolleiste auf der linken Seite des **Programms**angezeigt wird. Das baut, setzt und führt die Anwendung im Emulator. Eine separate Emulator Anwendung öffnet um die app anzuzeigen:
-
+    
     ![][8]
-
+    
     Nur ein Emulator kann zu einem Zeitpunkt ausführen möchten Sie die Anwendung in einem anderen Emulator zu testen, musst du den Emulator-Programm beenden, und führen Sie ein anderes Ziel in Xcode.
 
- [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
- [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode kommt zusammengerollt mit Emulatoren für die neuesten Versionen von iPhone und iPad. Ältere Versionen möglicherweise zur Verfügung, aus der **Xcode → Einstellungen → Downloads → Komponenten** Panel.
 
 ## Bereitstellung auf Gerät
 
-Ausführliche Informationen zu unterschiedlichen Anforderungen an ein Gerät bereitstellen finden Sie im Abschnitt " *Konfigurieren von Entwicklung und Vertrieb Vermögenswerte* " Apples [Tools Workflow Guide für iOS][9]. Kurz gesagt, müssen Sie folgendermaßen vorgehen, bevor Sie bereitstellen:
+Ausführliche Informationen zu unterschiedlichen Anforderungen an ein Gerät bereitstellen finden Sie im Abschnitt *Starten Ihre App auf Geräten* von Apple [Über App-Distribution-Workflows][9]. Kurz gesagt, müssen Sie folgendermaßen vorgehen, bevor Sie bereitstellen:
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  Teilnehmen Sie das Apple iOS Developer Program.
 
@@ -151,7 +151,7 @@ Für das Gerät bereitstellen:
 Xcode die Warnung über die `InvokeString` -Methode betrifft die Funktionalität, die eine Anwendung über einen benutzerdefinierten URL startet. Obwohl der Mechanismus zum Laden aus einer benutzerdefinierten URL geändert hat, ist dieser Code noch rückwärts Funktionalität für Anwendungen, die mit älteren Versionen von Cordova erstellt. Die Beispielanwendung wird diese Funktionalität nicht verwendet, können diese Warnungen ignoriert werden. Um diese Warnungen angezeigt zu vermeiden, entfernen Sie den Code, der die veraltete InvokeString API verweist:
 
 *   Bearbeiten Sie die Datei *Classes/MainViewController.m* , umgeben von den folgenden Codeblock mit `/*` und `*/` Kommentare wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
-
+    
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -165,15 +165,15 @@ Xcode die Warnung über die `InvokeString` -Methode betrifft die Funktionalität
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-
+        
         return [super webViewDidFinishLoad:theWebView];
         }
-
+        
 
 *   Bearbeiten Sie die *Classes/AppViewDelegate.m* -Datei, kommentieren Sie die folgende Zeile durch einen doppelten Schrägstrich einfügen, wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
-
+    
         //self.viewController.invokeString = invokeString;
-
+        
 
 *   Drücken Sie **Befehl-b** das Projekt neu zu erstellen und zu beseitigen die Warnungen.
 
@@ -184,10 +184,10 @@ Xcode die Warnung über die `InvokeString` -Methode betrifft die Funktionalität
 1.  **Xcode → Einstellungen → Speicherorte** auswählen.
 
 2.  Drücken Sie im Abschnitt **Abgeleitete Daten** die Schaltfläche " **erweitert** " und wählen Sie **Unique** als den **Buildspeicherort** , wie hier gezeigt:
-
+    
     ![][11]
 
- [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
+ [11]: img/guide/platforms/ios/xcode_build_location.png
 
 Dies ist die Standardeinstellung für eine neue Xcode-Installation, aber es kann anders nach einem Upgrade von einer älteren Version von Xcode festgelegt werden.
 
@@ -197,18 +197,19 @@ Weitere Informationen finden Sie in Apples Dokumentation:
 
 *   [Member Center-Homepage][13] enthält Links zu mehreren iOS technische Ressourcen, einschließlich der technische Ressourcen, das provisioning Portal, Verteilung Führer und Community-Foren.
 
-*   [Tools-Workflow-Guide für iOS][9]
+*   [Tools-Workflow-Guide für iOS][14]
 
-*   [Xcode-Benutzerhandbuch][14]
+*   [Xcode-Benutzerhandbuch][15]
 
-*   [Session-Videos][15] aus der Apple World Wide Developer Conference 2012 (WWDC2012)
+*   [Session-Videos][16] aus der Apple World Wide Developer Conference 2012 (WWDC2012)
 
-*   Der [Xcode-Select-Befehl][16], der hilft, wenn mehrere geben Sie die richtige Version von Xcode installiert ist.
+*   Der [Xcode-Select-Befehl][17], der hilft, wenn mehrere geben Sie die richtige Version von Xcode installiert ist.
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ®, Apple ®, Xcode App Store℠, iPad ®, iPhone ®, iPod ® und Finder ® sind Marken von Apple Inc.)

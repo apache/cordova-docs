@@ -104,7 +104,8 @@ Utilisation de quelques dizaines de blackBerry de caractères génériques se di
     
     Spécifier l'accès à tous les domaines, y compris le protocole local `file://` :
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (Pour plus d'informations sur la prise en charge, consultez documentation de BlackBerry sur l' [élément access][9].)
 

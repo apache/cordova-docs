@@ -166,7 +166,7 @@ all of them:
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
-  Applies to iOS and BlackBerry.
+  Applies to BlackBerry.
   
 - `Orientation` (string, defaults to `default`): allows you to lock 
   orientation and prevent the interface from rotating in response to 

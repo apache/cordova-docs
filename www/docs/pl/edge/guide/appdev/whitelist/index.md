@@ -104,7 +104,8 @@ Jeżyna 10 korzystanie z symboli wieloznacznych różni się od innych platform 
     
     Określ dostęp do wszystkich domen, w tym protokołu lokalnych `file://` :
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (Aby uzyskać więcej informacji na temat wsparcia, dokumentacji BlackBerry [dostęp do elementu][9].)
 

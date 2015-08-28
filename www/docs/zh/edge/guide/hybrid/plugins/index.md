@@ -145,16 +145,30 @@ Tizen 平臺不支援外掛程式。
 
 ## 發佈外掛程式
 
-一旦你開發你的外掛程式，你可能想要發佈並與社區分享它。 你可以將你的外掛程式發佈到科爾多瓦[註冊表][1]（基於[ `npmjs` ][4]） 或為任何其他 `npmjs` -基於註冊表。 其他開發人員可以將它要麼使用自動安裝 `plugman` 或科爾多瓦 CLI。 （每個發展路徑的詳細資訊，見到管理外掛程式和命令列介面使用 Plugman）。
+一旦你開發你的外掛程式，你可能想要發佈並與社區分享它。 你可以將你的外掛程式發佈到任何`npmjs`-基於註冊表，但推薦的一種[NPM 註冊表][4]。 請閱讀我們的[新公共管理指南 》 的發佈外掛程式][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-若要發佈一個外掛程式，您需要使用 `plugman` 工具，然後通過以下步驟：
+**注**:[科爾多瓦外掛程式註冊表][6]移動到唯讀狀態。 `publish`/`unpublish`命令刪除從`plugman`，所以你需要使用相應的`新公共管理`命令。
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+其他開發人員可以安裝你的外掛程式使用`plugman`或科爾多瓦 CLI 自動。 (每個發展路徑的詳細資訊，請參閱使用 Plugman 管理外掛程式和命令列介面。)
+
+要將一個外掛程式發佈到故宮註冊表你需要按照以下的步驟:
+
+*   創建你的外掛程式的`package.json`檔:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
 
-就是它 ！
+*   發佈:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
-運行 `plugman --help` 列出了其他可用的基於註冊表的命令。
+就是這個!
+
+運行`plugman --help`列出其他可用的基於註冊表的命令。

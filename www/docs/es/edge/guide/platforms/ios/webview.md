@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Esta guía le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación iOS más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
 
-Soporte para iOS WebViews comenzó con Cordova versión 1.4, usando un `Cleaver` para que la plantilla de Xcode sirve como una implementación de referencia de componente. Cordova 2.0 y versiones posteriores sólo admiten la implementación basada en el subproyecto Cleaver.
+Apoyo WebViews iOS comenzó con Córdoba versión 1.4, usando un `Cleaver` para que sirve la plantilla de Xcode como una implementación de referencia del componente. Cordova 2.0 y versiones posteriores sólo admiten la implementación basada en el subproyecto Cleaver.
 
 Estas instrucciones requieren menos Cordova 3.x y Xcode 6.0, junto con un `config.xml` el archivo de un proyecto de iOS recién creado. Puede utilizar el procedimiento en la interfaz de línea de comandos para crear un nuevo proyecto, y luego obtener el `config.xml` archivo de dentro del subdirectorio dentro de la aplicación llamado`platforms/ios`.
 

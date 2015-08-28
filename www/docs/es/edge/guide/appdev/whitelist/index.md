@@ -104,7 +104,8 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
     
     Especifique el acceso a todos los ámbitos, incluido el protocolo local `file://` :
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (Para obtener más información sobre soporte, véase documentación de BlackBerry en el [elemento de acceso][9].)
 

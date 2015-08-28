@@ -85,7 +85,7 @@ Dopo aver eseguito makecert per la prima volta, è necessario immettere la passw
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Una volta creato il file pvk e cer, abbiamo bisogno di creare un file pfx da questi certificati. Un file pfx (Personal Exchange Format) contiene una varietà di informazioni di crittografia, quali certificati, certificati di autorità principale, catene di certificati e chiavi private. Per assemblare il CERT, useremo l'uno strumento chiamato [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Questo strumento viene fornito con Windows SDK e può essere trovato sotto `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64` o `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86`.
+Una volta creato il file pvk e cer, abbiamo bisogno di creare un file pfx da questi certificati. Un file pfx (Personal Exchange Format) contiene una varietà di informazioni di crittografia, quali certificati, certificati di autorità principale, catene di certificati e chiavi private. Per assemblare il CERT, useremo l'uno strumento chiamato [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Questo strumento viene fornito con Windows SDK e può essere trovato sotto `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` o`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

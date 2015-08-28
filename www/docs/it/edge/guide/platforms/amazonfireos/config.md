@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Configurazione di fuoco OS Amazon
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. Costruisce le preferenze di dettagli questa sezione che si applicano solo al sistema operativo di fuoco di Amazon. Per informazioni sulle opzioni di configurazione globale, vedere [il File config. xml][1].
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. Costruisce le preferenze di dettagli questa sezione che si applicano solo al sistema operativo di fuoco di Amazon. Per informazioni sulle opzioni di configurazione globale, vedere [il File config. XML][1] .
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 

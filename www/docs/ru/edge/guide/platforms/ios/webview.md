@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 В этом руководстве показано, как внедрить компонент WebView Cordova поддержкой в рамках более крупных приложений iOS. Дополнительные сведения о том, как эти компоненты могут взаимодействовать друг с другом смотрите приложение плагины.
 
-Поддержка WebViews для iOS началась с Cordova версии 1.4, с помощью компонента`Cleaver`, для которого шаблон Xcode выступает в качестве эталонной реализации.Кордова 2.0 и более поздних версий поддерживают только реализация на основе подпроекта Кливер.
+Поддержка WebViews для iOS началась с Cordova версии 1.4, с помощью компонента `Cleaver`, для которого шаблон Xcode выступает в качестве эталонной реализации. Кордова 2.0 и более поздних версий поддерживают только реализация на основе подпроекта Кливер.
 
 Эти инструкции требуют по крайней мере Cordova 3.x и Xcode 6.0, совместно с файлом `config.xml` из только что созданного проекта iOS. Вы можете использовать процедуру в разделе "Интерфейс командной строки" можно использовать для создания нового проекта, а затем получить файл `config.xml` в подкаталоге именованного приложения в `platforms/ios`.
 
@@ -89,11 +89,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 1.  Добавьте следующий заголовок:
     
         #import <Cordova/CDVViewController.h>
-        
+
 2.  Создайте экземпляр нового `CDVViewController` и сохраните его где-нибудь, например, для свойства класса:
     
         CDVViewController* viewController = [CDVViewController new];
-        
+
 3.  При необходимости задайте `wwwFolderName` свойства, которое по умолчанию равно `www` :
     
         viewController.wwwFolderName = @"myfolder";
@@ -105,11 +105,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     .. или удаленный веб-узел:
     
         <content src="http://apache.org" />
-        
+
 5.  При необходимости задайте `useSplashScreen` свойства, которое по умолчанию равно `NO` :
     
         viewController.useSplashScreen = YES;
-        
+
 6.  Задайте **кадр представления**. Всегда установите это как Последнее свойство:
     
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
@@ -117,7 +117,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 7.  Добавьте в представление Кливер:
     
         [myView addSubview:viewController.view];
-        
+
 ## Добавление HTML, CSS и JavaScript активы
 
 1.  Создайте новый каталог в рамках проекта, `www` например.

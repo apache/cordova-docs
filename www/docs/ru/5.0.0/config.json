@@ -1,5 +1,5 @@
 {
-    "language": "Russian",
+    "language": "Русский",
     "merge": {
         "events.md": [
             "cordova/events/events.md",

@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Ganchos de guía
 
-Cordova Hooks representan secuencias especiales que podrían agregarse por su aplicación y los desarrolladores del plugin o incluso por su propia construcción de sistema para personalizar comandos de Córdoba. Scripts gancho podrían ser definidos por agregarlos a la carpeta predefinida especial (`/hooks`) o mediante archivos de configuración (`config.xml` y `plugin.xml`) y ejecutar en serie en el siguiente orden: * aplicación ganchos de `/hooks`; * Aplicación ganchos de `config.xml`; * Plugin ganchos de `plugins/.../plugin.xml`.
+Cordova Hooks representan secuencias especiales que podrían agregarse por su aplicación y los desarrolladores del plugin o incluso por su propia construcción de sistema para personalizar comandos de Córdoba. Scripts gancho podrían definirse mediante la adición a la carpeta predefinida especial ( `/hooks` ) o a través de archivos de configuración ( `config.xml` y `plugin.xml` ) y en serie en el siguiente orden:
+
+  * Aplicación de ganchos de `/hooks` ;
+  * Aplicación de ganchos de `config.xml` ;
+  * Ganchos de plugin de`plugins/.../plugin.xml`.
 
 **Nota**: `/hooks` directorio se considera obsoleta en favor de los elementos de gancho en config.xml y plugin.xml.
 
@@ -192,7 +196,7 @@ Scripts de javascript no se ejecutan vía spawn child_process nodo del directori
   * CORDOVA_PLATFORMS - lista de plataformas que el comando se aplica a separaron por comas (por ejemplo: android, ios).
   * CORDOVA_PLUGINS - lista de plugin ID que el comando se aplica a separaron por comas (por ejemplo: org.apache.cordova.file, org.apache.cordova.file-transferencia)
   * CORDOVA_HOOK - camino al gancho que está siendo ejecutado.
-  * CORDOVA_CMDLINE - los argumentos de línea de comandos exactos pasados a Córdoba (p. ej.: cordova run ios --emulate)
+  * CORDOVA_CMDLINE - los argumentos de línea de comandos exactos pasados a Córdoba (p. ej.: cordova ejecutar ios--emular)
 
 Si una secuencia de comandos devuelve un código de salida distinto de cero, el comando de padre Córdova se interrumpirá.
 

@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with BlackBerry 10
 ==================================
 
-Apache Cordova is an application development platform that allows you to use common web technologies - primarily HTML5, JavaScript, and CSS - to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.
+Apache Cordova is an application development platform that allows you to use common web technologies用rimarily HTML5, JavaScript, and CSS葉o create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.
 
 Requirements
 ------------
@@ -34,7 +34,7 @@ Cordova for BlackBerry has the following software requirements:
 Setting up your signing keys
 ----------------------------
 
-Before starting development, you'll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.
+Before starting development, you値l need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.
 
 -   [Register for your code signing key now.](https://www.blackberry.com/SignedKeys/codesigning.html)
 -   [Set your computer up for code signing. ](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
@@ -156,7 +156,7 @@ where
 Adding and managing plugins
 ---------------------------
 
-To add additional functionality that is outside of the core features of Cordova, you'll need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform.
+To add additional functionality that is outside of the core features of Cordova, you値l need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform.
 
 In order to use a plugin, you must first add it into your project. Once added into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.
 

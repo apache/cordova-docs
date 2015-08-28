@@ -199,6 +199,10 @@ Teraz, że mamy plugin działający, musimy ponownie definicji plugin z wcześni
 
 To wszystko, teraz masz podziałowi plugin, który można podzielić ze światem! Jeden rzecz wobec skrypt dłużny, dopiero niedawno została dodana obsługa dodawania ram do projektu Windows Cordova, więc będziesz musiał upewnić się, że twój cordova oprzyrządowania prądu. Cordova-cli i cordova-plugman obsługuje dodawanie, usuwanie macierzystego kopii pluginów.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-https://github.com/purplecabbage/Cordova-runtimecomp-echoplug
+lub
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # 鉤子指南
 
-科爾多瓦鉤表示特別的腳本可以由應用程式和外掛程式開發人員添加或甚至由您自己構建體系，以自訂科爾多瓦命令。 鉤腳本可以通過將其添加到特殊的預定義資料夾 (`/hooks`) 或通過設定檔 (`config.xml`和`plugin.xml`) 定義和連續運行順序如下: * 應用程式掛鉤從`/hooks`; * 應用程式掛鉤從`config.xml`; * 外掛程式鉤子從`plugins/.../plugin.xml`.
+科爾多瓦鉤表示特別的腳本可以由應用程式和外掛程式開發人員添加或甚至由您自己構建體系，以自訂科爾多瓦命令。 鉤腳本可以通過將其添加到特殊的預定義資料夾 (`/hooks`) 或通過設定檔 (`config.xml`和`plugin.xml`) 定義和連續運行順序如下:
+
+  * 應用程式掛鉤從`/hooks`;
+  * 應用鉤子從`config.xml`;
+  * 從`plugins/.../plugin.xml`外掛程式鉤子.
 
 **注**: `/hooks`目錄被認為是支援在 config.xml 和 plugin.xml 鉤元素，否決。
 

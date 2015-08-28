@@ -63,7 +63,7 @@ Windows 플랫폼을 위한 애플 리 케이 션을 개발 하기 위해 다음
 
  [7]: http://www.windowsstore.com/
 
-Windows에 대 한 코르도바 애플 리 케이 션을 개발, 당신은 Windows를 실행 하는 PC를 사용할 수 있지만 가상 컴퓨터 환경 실행 하거나 듀얼-부팅 윈도우 8.1 파티션에 부트 캠프를 사용 하 여 당신은 또한 Mac에서 개발할 수 있습니다. Mac에서 필요한 Windows 개발 환경을 설정 하려면 이러한 리소스를 참조 하십시오.
+Windows에 대 한 코르도바 애플 리 케이 션을 개발, 당신은 Windows를 실행 하는 PC를 사용할 수 있지만 가상 컴퓨터 환경 실행 하거나 듀얼-부팅 윈도우 8.1 파티션에 부트 캠프를 사용 하 여 당신은 또한 Mac에서 개발할 수 있습니다. Mac에서 필요한 Windows 개발 환경을 설정 하는 이러한 리소스를 참조 하십시오.
 
 *   [VMWare Fusion][8]
 
@@ -93,7 +93,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 
 ![][12]
 
- [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
+ [12]: img/guide/platforms/win8/win8_installSDK.png
 
 윈도우 10, Visual Studio 설치 관리자 범용 윈도우 애플 리 케이 션을 구축 하는 도구를 설치 하려면 옵션이 있다. 이 옵션을 선택 설치할 때 필요한 SDK를 설치 해야 합니다.
 
@@ -104,42 +104,42 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add windows
+    
 
-
-여기에 해당 하위 셸 도구 접근이 이다:
+여기에 해당 하위 셸 도구 접근은:
 
         C:\path\to\cordova-windows\package\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
-
+    
 
 이 프로젝트는 기본 대상 OS로 윈도우 8.1을 대상. 8.0 또는 10.0 ("구성 대상 윈도우 버전" 아래 참조) 모든 빌드를 대상으로 선택할 수 있습니다 하거나 각 빌드 동안 특정 특정 버전을 대상.
 
 ## 프로젝트 빌드
 
-프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리 소스 파일이 들어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.
+프로젝트 디렉터리의 최상위 개발에서 CLI를 사용 하는 경우 `www` 디렉터리에 소스 파일 포함 되어 있습니다. 응용 프로그램을 다시 프로젝트 디렉터리에서 다음 중 하나를 실행 합니다.
 
         > cordova build
         > cordova build windows              # do not rebuild other platforms
         > cordova build windows   --debug    # generates debugging information
         > cordova build windows   --release  # signs the apps for release
+    
 
+여기에 해당 하위 셸 도구 접근은:
 
-여기에 해당 하위 셸 도구 접근이 이다:
-
-        C:\path\to\project\cordova\build.bat --debug
+        C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
-
+    
 
 `clean`명령 다음에 대 한 준비 디렉터리 밖으로 플러시 도움이 됩니다 `build` :
 
-        C:\path\to\project\cordova\clean.bat
-
+        C:\path\to\project\cordova\clean.bat 
+    
 
 ## 대상 Windows 버전 구성
 
 기본 `구축` 으로 명령 두 패키지 생성: 윈도우 8.0과 Windows Phone 8.1. 버전 8.1 다음 구성 설정은 구성 파일 (`config.xml` 에 추가 되어야 합니다 Windows 패키지 업그레이드).
 
         <preference name="windows-target-version" value="8.1" />
-
+    
 
 추가한 후이 설정을 `빌드` 명령을 Windows 8.1와 Windows Phone 8.1 패키지 생산을 시작할 것 이다.
 
@@ -148,7 +148,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 특정 운영 체제를 대상으로 하는 응용 프로그램의 특정 버전을 구축 하려는 결정할 수 있습니다 (예를 들어 수 설정한 대상 Windows 10, 하지만 Windows Phone 8.1에 대 한 빌드 하려는). 이 위해 `--appx` 매개 변수를 사용할 수 있습니다.
 
         > cordova build windows -- --appx=8.1-phone
-
+    
 
 빌드 시스템 config.xml 대상 Windows 버전에 대 한 기본 설정 집합을 무시 하 고 엄격 하 게 Windows Phone 8.1에 대 한 패키지를 구축 합니다.
 
@@ -168,17 +168,17 @@ Windows 패키지 배포:
 
         > cordova run windows -- --win  # explicitly specify Windows as deployment target
         > cordova run windows # `run` uses Windows package by default
-
+    
 
 Windows Phone 패키지 배포:
 
         > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
         > cordova run windows --device -- --phone  # deploy app to connected device
-
+    
 
 당신이 보고 사용할 수 있습니다 **코르도바 실행 창-목록** 모두 사용 가능한 대상 및 **코르도바 실행 창-대상 target_name-=-전화** 특정 장치 또는 에뮬레이터에서 응용 프로그램을 실행 (예를 들어 `코르도바 실행 창-대상 = "에뮬레이터 8.1 720 P 4.7 인치"--전화`).
 
-참조 추가 빌드 및 실행 옵션에 **cordova run --help** 사용할 수 있습니다.
+또한 참조 추가 빌드 및 실행 옵션에 **코르도바 실행-도움말을** 사용할 수 있습니다.
 
 ## SDK에서 프로젝트를 열고 응용 프로그램 배포
 
@@ -186,25 +186,25 @@ Windows Phone 패키지 배포:
 
 ![][14]
 
- [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
 
 `CordovaApp` 구성 요소는 솔루션 내에서 표시 하 고 그 `www` 디렉토리는 `index.html` 홈 페이지를 포함 하 여 웹 기반 소스 코드를 포함:
 
 ![][15]
 
- [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
+ [15]: img/guide/platforms/win8/win8_sdk.png
 
 Visual Studio의 주 메뉴 아래 컨트롤을 사용 하 여 테스트 또는 응용 프로그램을 배포할 수 있습니다.
 
 ![][16]
 
- [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: img/guide/platforms/win8/win8_sdk_deploy.png
 
 **로컬 컴퓨터** 선택, Visual Studio를 실행 하는 동일한 컴퓨터에 응용 프로그램을 설치 하려면 녹색 화살표를 누릅니다. 일단 당신이 이렇게, 응용 프로그램 윈도우 8의 응용 프로그램 목록에 나타납니다.
 
 ![][17]
 
- [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: img/guide/platforms/win8/win8_sdk_runApp.png
 
 응용 프로그램을 다시 만들 때마다 인터페이스에서 사용할 수 있는 버전을 새로 고칩니다.
 
@@ -212,19 +212,19 @@ Visual Studio의 주 메뉴 아래 컨트롤을 사용 하 여 테스트 또는 
 
 ![][18]
 
- [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: img/guide/platforms/win8/win8_sdk_runHome.png
 
 가상 컴퓨터 환경 내에서 응용 프로그램을 열면 당신은 모서리 또는 애플 리 케이 션을 전환 또는 추가 기능에 액세스 하는 windows의 측면을 따라 클릭 해야 할 수도 있습니다 note:
 
 ![][19]
 
- [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
+ [19]: img/guide/platforms/win8/win8_sdk_run.png
 
 또는, **시뮬레이터** 배포 옵션 마치 태블릿 장치에서 실행 되는 응용 프로그램을 선택:
 
 ![][20]
 
- [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: img/guide/platforms/win8/win8_sdk_sim.png
 
 데스크톱 배포와 달리이 옵션을 시뮬레이션 하는 태블릿의 방향, 위치, 네트워크 설정을 다를 수 있습니다.
 

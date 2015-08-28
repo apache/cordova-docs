@@ -104,13 +104,14 @@ Https プロトコルを使用してなどまたは国固有のドメインを�
     
     ローカル`file://`プロトコルを含むすべてのドメインへのアクセスを指定します。
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 （サポートの詳細については、マニュアル参照してくださいブラックベリーの[アクセス要素][9].)
 
  [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## Firefox の OS
+## Firefox OS
 
 Firefox の OS でない概念はホワイト リストの特定のドメインです。 代わりに[SystemXHR][10]と呼ばれる特別なアクセス許可です。 このアクセス許可を`config.xml`に追加する必要があります。
 

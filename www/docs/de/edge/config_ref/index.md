@@ -130,7 +130,7 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    Gilt für iOS und BlackBerry.
+    Gilt für BlackBerry.
 
 *   `Orientation` (string, der Standardwert ist `default`): erlaubt Ihnen lock Orientierung und verhindern, dass die Schnittstelle rotierend in Reaktion auf Änderungen in der Ausrichtung. Mögliche Werte sind `defaul`, `landscape` oder `portrait`. Beispiel:
     

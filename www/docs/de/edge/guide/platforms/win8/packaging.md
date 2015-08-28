@@ -85,7 +85,7 @@ Nach dem Ausführen von Makecert zum ersten Mal, geben Sie ein Kennwort für den
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Sobald Pvk und Cer-Datei erstellt wurde, müssen wir eine Pfx-Datei aus dieser Zertifikate zu erstellen. Eine (persönliche Austauschformat) Pfx-Datei enthält eine Vielzahl von kryptografischen Informationen, z. B. Zertifikate, Wurzel-Zertifikate, Zertifikatketten und privaten Schlüssel. Um die Zertifikate zu packen, wir verwenden die ein Tool namens [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Dieses Tool im Lieferumfang von Windows SDK und finden Sie unter `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64` oder `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86`.
+Sobald Pvk und Cer-Datei erstellt wurde, müssen wir eine Pfx-Datei aus dieser Zertifikate zu erstellen. Eine (persönliche Austauschformat) Pfx-Datei enthält eine Vielzahl von kryptografischen Informationen, z. B. Zertifikate, Wurzel-Zertifikate, Zertifikatketten und privaten Schlüssel. Um die Zertifikate zu packen, wir verwenden die ein Tool namens [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Dieses Tool im Lieferumfang von Windows SDK und finden Sie unter `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` oder`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

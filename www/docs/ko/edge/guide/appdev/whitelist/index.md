@@ -104,7 +104,8 @@ Note는 whitelist 주요 코르도바 webview에만 적용 되며 InAppBrowser w
     
     로컬 `file://` 프로토콜을 포함 하 여 모든 도메인에 대 한 액세스를 지정 합니다.
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (자세한 내용은 지원 설명서를 참조 하십시오 블랙베리의 [액세스 요소][9] 에.)
 

@@ -145,15 +145,29 @@ La plateforme de paciarelli ne supporte pas les plugins.
 
 ## Plugins édition
 
-Une fois que vous développez votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin dans le [Registre][1] de Cordova (basé sur [ `npmjs` ][4]) ou à tout autre `npmjs` -base de Registre. Autres développeurs puissent l'installer automatiquement à l'aide soit `plugman` ou la CLI de Cordova. (Pour plus de détails sur chaque voie de développement, voir Plugman à l'aide à gérer les Plugins et l'Interface de ligne de commande).
+Une fois que vous développez votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin sur n'importe quel `npmjs`-base de Registre, mais celle recommandée est le [Registre de la NGP][4]. S'il vous plaît lire notre [publication plugins au guide du Musée][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Pour publier un plugin, vous devez utiliser le `plugman` outil et passer par les étapes suivantes :
+**NOTE**: [Cordova plugin registre][6] évolue vers un État en lecture seule. `publish`/ `unpublish` des commandes ont été retirés de la `plugman`, donc vous aurez besoin d'utiliser les commandes correspondantes de `npm` .
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Autres développeurs puissent l'installer votre plugin automatiquement à l'aide soit de `plugman` ou de la CLI de Cordova. (Pour plus de détails sur chaque voie de développement, voir Plugman à l'aide à gérer les Plugins et l'Interface de ligne de commande).
+
+Pour publier un plugin sur le Registre du Musée, que vous devez suivre les étapes ci-dessous :
+
+*   Créez votre plugin dans le fichier `package.json` :
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   publier :
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 C'est tout !
 

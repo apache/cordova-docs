@@ -45,7 +45,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 
@@ -83,7 +83,7 @@ BlackBerryOS/行動手冊：
 
 3.  導航到您放在上面，使用的 unix 像終端的下載的源的目錄： 終端程式，Bash，這個軟體，等等。
 
-4.  創建一個新專案，如 iOS 殼工具指南中所述。您需要從這個新的專案資產。
+4.  創建一個新的專案，如黑莓手機殼工具指南中所述。你需要從這個新的專案資產。
 
 5.  複製 `www/cordova.js` 到新專案中的檔 `www` 目錄中，並刪除 `www/cordova.js` 檔。
 

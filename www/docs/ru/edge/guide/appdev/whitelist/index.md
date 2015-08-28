@@ -34,23 +34,23 @@ Cordova следует спецификации [W3C Доступ виджета
 *   Доступ к [google.com][3]:
     
         <access origin="http://google.com" />
-        
+
 *   Доступ по защищенному протоколу к [google.com][4] (`https://`):
     
         <access origin="https://google.com" />
-        
+
 *   Доступ к поддомену [maps.google.com][5]:
     
         <access origin="http://maps.google.com" />
-        
+
 *   Доступ для всех поддоменов для домена [google.com][3], например, [mail.google.com][6] и [docs.google.com][7]:
     
         <access origin="http://*.google.com" />
-        
+
 *   Доступ ко *всем* доменам, например, [google.com][3] и [developer.mozilla.org][8]:
     
         <access origin="*" />
-        
+    
     Это значение по умолчанию для вновь созданных проектов CLI.
 
  [3]: http://google.com
@@ -85,15 +85,15 @@ Cordova следует спецификации [W3C Доступ виджета
 *   Любой контент, к которому получается доступ с использованием `XMLHttpRequest` должн быть объявлен явным образом. Установка `origin="*"` в этом случае не работает. Как вариант, веб-безопасность можно отключить с помощью параметра `WebSecurity`, описанном в разделе Настройка BlackBerry:
     
         <preference name="websecurity" value="disable" />
-        
+
 *   Как альтернатива параметру `*.domain` , установите дополнительный атрибут `subdomains` со значением `true`. Он установлен в `false` по умолчанию. Например, следующее описание позволяет получить доступ к `google.com` , `maps.google.com` , и `docs.google.com`:
     
         <access origin="http://google.com" subdomains="true" />
-        
+    
     А следующее описание ограничивает доступ до `google.com`:
     
         <access origin="http://google.com" subdomains="false" />
-        
+    
     Укажите доступ ко всем доменам, в том числе для протокола локальной файловой системы `file://`:
     
         <access origin="*" subdomains="true" />
@@ -113,7 +113,7 @@ Cordova следует спецификации [W3C Доступ виджета
     </platform>
     
 
-Объект`XMLHttpRequest` должен быть инстанцирован с двумя параметрами `mozAnon` и `mozSystem`:
+Объект `XMLHttpRequest` должен быть инстанцирован с двумя параметрами `mozAnon` и `mozSystem`:
 
     var request = new XMLHttpRequest({
         mozAnon: true,
