@@ -80,9 +80,10 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button id="copy-npm-install" type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-npm-install-text">Copy</button>
                 </div>
                 $ npm install -g cordova
+                <div id="copy-npm-install-text" class="copy-text">npm install -g cordova</div>
             </div>
         </div>
     </div>
@@ -98,9 +99,10 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button id="copy-cordova-create" type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-create-text">Copy</button>
                 </div>
                 $ cordova create MyApp
+                <div id="copy-cordova-create-text" class="copy-text">cordova create MyApp</div>
             </div>
         </div>
     </div>
@@ -117,10 +119,11 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button id="copy-cordova-platform-add" type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-platform-add-text">Copy</button>
                 </div>
                 <p>$ cd MyApp</p>
                 <p>$ cordova platform add browser</p>
+                <div id="copy-cordova-platform-add-text" class="copy-text">cd MyApp&#10;cordova platform add browser</div>
             </div>
         </div>
     </div>
@@ -136,9 +139,10 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button id="copy-cordova-run" type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-run-text">Copy</button>
                 </div>
                 $ cordova run browser
+                <div id="copy-cordova-run-text" class="copy-text">cordova run browser</div>
             </div>
         </div>
     </div>
@@ -201,4 +205,3 @@ permalink: /
     {% include tools_and_samples.html %}
 
 </div><!-- /container-fluid -->
-
