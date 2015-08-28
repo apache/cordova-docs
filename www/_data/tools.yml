@@ -5,6 +5,12 @@
 #         A description that can
 #         span multiple lines.
 
+-   name: Adobe PhoneGap
+    image: phonegap.svg
+    url: http://phonegap.com/
+    description: >
+        PhoneGap is the original and most popular distribution of Apache Cordova. Turn your HTML, CSS and JavaScript into an app on your device in minutes using our simple <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/">desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">developer</a> apps.
+
 -   name: Ionic
     image: ionic.png
     url: http://ionicframework.com/
