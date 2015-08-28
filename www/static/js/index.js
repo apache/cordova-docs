@@ -109,17 +109,10 @@ $(document).ready(function () {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
-    // code for copy text
-    var addCopyText = function(elementId, copyText) {
-        new ZeroClipboard(document.getElementById(elementId))
-            .on("copy", function(event) {
-                event.clipboardData.setData("text/plain", copyText);
-            });
+    var copyButtons = document.getElementsByClassName("btn-copy");
+    for(var i = 0; i < copyButtons.length; i++) {
+        new ZeroClipboard(copyButtons[i]);
     }
-    addCopyText("copy-npm-install", "npm install -g cordova");
-    addCopyText("copy-cordova-create", "cordova create MyApp");
-    addCopyText("copy-cordova-platform-add", "cd MyApp\ncordova platform add browser");
-    addCopyText("copy-cordova-run", "cordova run browser");
 
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {
