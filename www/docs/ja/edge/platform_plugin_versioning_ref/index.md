@@ -40,12 +40,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <engine name="android" spec="^4.0.0" />
+        <engine name="android" spec="~4.0.0" />
         ...
-    </ xml>
+    </xml>
     
 
-いくつかの例: * = > **'cordova platform add android --save'**を固定の android プラットフォームのバージョンを取得します、それをプロジェクトに追加し、config.xml を更新します。 = > **'cordova platform add android@3.7.0 --save'**をバージョン 3.7.0 npm から android プラットフォームを取得します、それをプロジェクトに追加します、次に、config.xml を更新します。 = > **'cordova platform add android@https://github.com/apache/cordova-android.git​ --save'**指定したコルドバ android git リポジトリをクローン、android プラットフォームをプロジェクトに追加します config.xml を更新し、指定した git url をそのバージョンをポイントします。 指定したディレクトリから android プラットフォームを取得 = > **'cordova platform add C:/path/to/android/platform --save'**をプロジェクトに追加、config.xml を更新し、ディレクトリをポイントします。
+いくつかの例:
+
+  * android プラットフォームの固定されたバージョンを取得します = > **'保存コルドバ プラットフォームを追加 android-'**を、プロジェクトに追加し、config.xml を更新します。
+  * 取得 = > **'保存コルドバ プラットフォームの追加 android@3.7.0-'**をバージョン 3.7.0 npm から android プラットフォームはプロジェクト、その後更新 config.xml にそれを追加します。
+  * = > **'コルドバ プラットフォーム android @https://github.com/apache/cordova-android.git - を保存追加'**指定したコルドバ android git リポジトリをクローン、android プラットフォームをプロジェクトに追加します config.xml を更新し、指定した git url をそのバージョンをポイントします。
+  * 取得 = > **'保存コルドバ プラットフォームの追加 c:/パス/を/アンドロイド/プラットフォーム-'**を指定したディレクトリから android プラットフォームはプロジェクト、し、更新プログラムの config.xml ファイルとディレクトリにポイントにそれを追加します。
 
 ### 既存のプロジェクトのプラットフォームを保存質量
 
@@ -62,15 +67,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cordova platform remove <platform> --save
     
 
-いくつかの例: * 固定バージョン、config.xml の更新のエントリに android プラットフォームのアップデートに加えて => **'コルドバ プラットフォーム アップ デート android - 保存'** * バージョン 3.8.0、config.xml の更新のエントリに android プラットフォームのアップデートに加えて => **'コルドバのプラットフォームは、android@3.8.0 - を保存更新'** * フォルダーで、config.xml の更新のエントリのバージョンに android プラットフォームのアップデートに加えて => **'コルドバのプラットフォームは、/path/to/android/platform - を保存更新'** * = > **'保存するコルドバ プラットフォーム削除アンドロイド-'** android プラットフォームをプロジェクトから削除し、config.xml からそのエントリを削除します。
+いくつかの例:
+
+  * 固定バージョン、config.xml の更新のエントリに android プラットフォームのアップデートに加えて = > **'コルドバ プラットフォーム アップ デート android - 保存'**を
+  * バージョン 3.8.0、config.xml の更新のエントリに android プラットフォームのアップデートに加えて => **'コルドバのプラットフォームは、android@3.8.0 - を保存更新'**
+  * フォルダーで、config.xml の更新のエントリのバージョンに android プラットフォームのアップデートに加えて => **'コルドバのプラットフォームは、/path/to/android/platform - を保存更新'**
+  * = > **'保存するコルドバ プラットフォーム削除アンドロイド-'**をプロジェクトから android プラットフォームを削除し、config.xml からそのエントリを削除します。
 
 ### プラットフォームの復元
 
-  * プラットフォームは、 **cordova prepare**コマンドの実行時に自動的に config.xml から復元されます。
-  * インストールするバージョンは、config.xml から撮影バージョン/フォルダー/git_url を指定せず、プラットフォームを追加した場合 **場合が見つかりました**. 
-      * 例: config.xml ファイルに次のエントリが含まれていると仮定します: <? xml バージョン '1.0' エンコード = ='utf-8'? >. <0></0>... </xml > コマンド
-        
-        **'cordova platform add android'** (ないバージョン/フォルダー/git_url 指定) を実行すると、'android@3.7.0' (config.xml から取得)、プラットフォームがインストールされます。
+プラットフォームは、 **「コルドバ準備」**コマンドの実行時に自動的に config.xml から復元されます。
+
+インストールするバージョンは、config.xml から撮影バージョン/フォルダー/git_url を指定せず、プラットフォームを追加した場合**場合が見つかりました**.
+
+例:
+
+Config.xml ファイルに次のエントリが含まれているとします。
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <engine name="android" spec="3.7.0" />
+        ...
+    </xml>
+    
+
+コマンド**'コルドバ プラットフォームは、android を追加'** (ないバージョン/フォルダー/git_url 指定) を実行すると、'android@3.7.0' (config.xml から取得)、プラットフォームがインストールされます。
 
 * * *
 
@@ -89,16 +110,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
-        <plugin name="cordova-plugin-console" spec="^1.0.0" />
+        <plugin name="cordova-plugin-console" spec="~1.0.0" />
         ...
-    </ xml>
+    </xml>
     
 
-いくつかの例: * = > **'cordova plugin add cordova-plugin-console --save'**をコンソール ・ プラグインの固定されたバージョンを取得します、それをプロジェクトに追加します、次に、config.xml を更新します。 = > **'cordova plugin add cordova-plugin-console@0.2.13 --save'**を android のプラグイン バージョン 0.2.13 npm からを取得、それをプロジェクトに追加し、config.xml を更新します。 **'cordova plugin add https://github.com/apache/cordova-plugin-console.git --save'** = > 指定されたコンソールのプラグインの git リポジトリのクローンを作成、コンソール ・ プラグインをプロジェクトに追加しますし、config.xml を更新および指定した git url をそのバージョンをポイントします。 指定したディレクトリからコンソール ・ プラグインを取得します = > **'cordova plugin add C:/path/to/console/plugin --save'**をプロジェクトに追加、config.xml を更新し、ディレクトリをポイントします。
+いくつかの例:
+
+  * = > **'を保存コルドバ プラグインの追加コルドバ-プラグイン-コンソール-'**をコンソール ・ プラグインの固定されたバージョンを取得します、それをプロジェクトに追加します、次に、config.xml を更新します。
+  * 取得 = > **'保存コルドバ プラグインの追加 cordova-plugin-console@0.2.13-'**を android のプラグインは、バージョン 0.2.13 npm からはプロジェクト、その後更新 config.xml にそれを追加します。
+  * **'保存コルドバ プラグインの追加 https://github.com/apache/cordova-plugin-console.git-'** = > 指定されたコンソールのプラグインの git リポジトリのクローンを作成、コンソール ・ プラグインをプロジェクトに追加しますし、config.xml を更新および指定した git url をそのバージョンをポイントします。
+  * 取得 = > **'保存コルドバ プラグインの追加 c:/パス/を/コンソール/プラグイン-'**を指定したディレクトリからコンソール ・ プラグインはプロジェクト、し、更新プログラムの config.xml ファイルとディレクトリにポイントにそれを追加します。
 
 ### 既存のプロジェクトのプラグインを保存質量
 
-'--save' 上記フラグは、プラグインの追加を使用して、それを覚えている場合にのみ役に立つ。 既存のプロジェクトがある場合や保存する場合、すべては現在プロジェクトにプラグインを追加を使用できます。
+'--保存' 上記のフラグは、プラグイン追加時に使用するを忘れないで場合にのみ役に立つ。 既存のプロジェクトがある場合や保存する場合、すべては現在、プロジェクトのプラグインを追加を使用できます。
 
     $ cordova plugin save
     
@@ -111,12 +137,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     $ cordova plugin remove <plugin> --save
     
 
-いくつかの例: * 固定バージョン、config.xml の更新のエントリにコンソール ・ プラグインの更新に加えて => **'コルドバ プラグイン更新保存のコルドバ-プラグイン-コンソール-'** * バージョン 3.8.0、config.xml の更新のエントリに android のプラグインの更新に加えて => **'コルドバ プラグインは、cordova-plugin-console@0.2.13 - を保存更新'** * フォルダーで、config.xml の更新のエントリのバージョンをコンソール ・ プラグインの更新に加えて => **'コルドバ プラグインは、/path/to/console/plugin - を保存更新'** * = > **'保存するコルドバ プラグイン削除コルドバ-プラグイン-コンソール-'**をプロジェクトからコンソール ・ プラグインを削除し、config.xml からそのエントリを削除します。
+いくつかの例:
+
+  * 固定されたバージョン、config.xml の更新のエントリをコンソール ・ プラグインの更新に加えて => **「保存コルドバ プラグインのアップデート コルドバ-プラグイン-コンソール」**
+  * android のプラグインの更新バージョン 3.8.0、config.xml の更新のエントリに加え => **'コルドバ プラグインは、cordova-plugin-console@0.2.13 - を保存更新'**
+  * フォルダーで、config.xml の更新のエントリのバージョンをコンソール ・ プラグインの更新に加えて => **'コルドバ プラグインは、/path/to/console/plugin - を保存更新'**
+  * = > **'保存するコルドバ プラグイン削除コルドバ-プラグイン-コンソール-'**をプロジェクトからコンソール ・ プラグインを削除し、config.xml からそのエントリを削除します。
 
 ### プラグインを復元します。
 
-  * プラグインは、 **cordova prepare**コマンドの実行時に自動的に config.xml から復元されます。
-  * インストールするバージョンは、config.xml から撮影バージョン/フォルダー/git_url を指定することがなく、プラグインを追加する場合 **場合が見つかりました**. 
-      * 例: config.xml ファイルに次のエントリが含まれていると仮定します: <? xml バージョン '1.0' エンコード = ='utf-8'? >. <0></0>... </xml > コマンド
-        
-        **'コルドバ プラグインは、コルドバ プラグイン コンソールを追加する'** (ないバージョン/フォルダー/git_url 指定) を実行すると、'cordova-plugin-console@0.2.11' (config.xml から取得)、プラグインがインストールされます。
+プラグインは、 **「コルドバ準備」**コマンドの実行時に自動的に config.xml から復元されます。
+
+バージョン/フォルダー/git_url を指定することがなく、プラグインを追加すると、インストールするバージョンは、config.xml から取ら**場合が見つかりました**.
+
+例:
+
+Config.xml ファイルに次のエントリが含まれているとします。
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <plugin name="cordova-plugin-console" spec="0.2.11" />
+        ...
+    </ xml>
+    
+
+コマンド**'コルドバ プラグインは、コルドバ プラグイン コンソールを追加する'** (ないバージョン/フォルダー/git_url 指定) を実行すると、'cordova-plugin-console@0.2.11' (config.xml から取得)、プラグインがインストールされます。

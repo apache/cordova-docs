@@ -73,9 +73,21 @@ Mac の/Linux または Windows のリリース：
 
 署名の要件ここで Android アプリを確認することができます： http://developer.android.com/tools/publishing/app-signing.html
 
-アプリを署名する必要があります、次のパラメーター: * キーストア (`--キーストア`): キーのセットを保持できるバイナリ ファイルへのパス。 * キーストア パスワード (`--storePassword`): キーストア パスワード * エイリアス (`--別名`): 歌うことのために使用される秘密のキーを指定する id。 * パスワード (`--password`): 指定された秘密キーのパスワード。 * キーストア (`--keystoreType`) のタイプ: jks pkcs12 (デフォルト: 自動検出ファイル拡張子に基づいて)`ビルド`または`実行`スクリプトを上記のコマンドライン引数を使用してこれらのパラメーターを指定することができます。
+アプリケーションを署名するには、次のパラメーターが必要です。
 
-また、(`-buildConfig`) 引数を使用してビルド構成ファイル (build.json) で指定する可能性があります。ビルドの構成ファイルのサンプルを次に示します。
+*   キーストア ( `--keystore` ): キーのセットを保持できるバイナリ ファイルへのパス。
+
+*   キーストアのパスワード ( `--storePassword` ): キーストア パスワード
+
+*   エイリアス ( `--alias` ): 歌うことのために使用する秘密キーを指定する id。
+
+*   パスワード ( `--password` ): 指定されたプライベート キーのパスワード。
+
+*   キーストアのタイプ ( `--keystoreType` ): pkcs12、jks (デフォルト: 自動検出ファイル拡張子に基づいて)
+
+上記のコマンドライン引数を使用してこれらのパラメーターを指定することができます `build` または `run` スクリプト。
+
+また、使用してビルド構成ファイル (build.json) に指定 ( `--buildConfig` ) の引数。ビルド構成ファイルのサンプルです。
 
     {
          "android": {
@@ -97,11 +109,11 @@ Mac の/Linux または Windows のリリース：
      }
     
 
-リリース署名用パスワードを除外することができ、ビルド システムは、パスワードを求めるプロンプトを発行します。
+リリース署名、パスワードを除外することができ、ビルド システムは、パスワードを要求するプロンプトを発行します。
 
-ミックスし、一致するコマンドライン引数と build.json ファイル内のパラメーターへのサポートがあります。 コマンドライン引数の値は、優先順位を取得します。 これは、コマンドラインでパスワードを指定するために役立ちますすることができます。
+サポートをミックスし、コマンド ・ ライン引数および build.json ファイルのパラメーターと一致しています。 コマンドライン引数から値は優先順位を取得します。 これは、コマンドラインでパスワードを指定することができます。
 
-## ログの記録
+## ログ
 
         $ /path/to/project/cordova/log
     
@@ -117,29 +129,29 @@ Mac の/Linux または Windows のリリース：
 
 ## Gradle の構築
 
-Cordova-android@4.0.0、現在プロジェクトは[Gradle][2]を使用してビルドされます。 ANT の建物には古いバージョンのドキュメントを参照してください。
+現在 cordova-android@4.0.0、 [Gradle][2]を使用してプロジェクトのビルド。 ANT の構築には、ドキュメントの古いバージョンを参照してください。
 
  [2]: http://www.gradle.org/
 
 ### Gradle プロパティ
 
-これらの[プロパティ][3]は、ビルドのカスタマイズを設定できます。
+これらの[プロパティ][3]を設定して、ビルドをカスタマイズできます。
 
  [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 
-*   **cdvBuildMultipleApks**(デフォルト: false)
+*   **cdvBuildMultipleApks**(既定値: false)
     
-    これが設定されている場合は複数の APK ファイルが生成されます: ライブラリ プロジェクトでサポートされているネイティブ プラットフォームごとに 1 つ (x 86、腕、等)。 これは、プロジェクトで生成された APK のサイズを大幅に増やすことができます大規模なのネイティブ ライブラリを使用する場合に重要なことができます。
+    これが設定されている場合、複数の APK ファイルが生成されます: ライブラリ プロジェクトでサポートされているネイティブなプラットフォームごとに 1 つ (x 86、腕など)。 これは、プロジェクトで生成された APK のサイズを大幅に増やすことができます大規模なネイティブ ライブラリを使用する場合に重要です。
     
-    設定しない場合、[すべてのデバイスで使用できる単一の APK が生成されます。
+    ない場合、設定は、すべてのデバイスで使用できる単一の APK が生成されます。
 
 *   **cdvVersionCode**
     
-    VersionCode `AndroidManifest.xml` で設定よりも優先されます。
+    VersionCode 設定よりも優先されます。`AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile**(デフォルト: release-signing.properties)
+*   **cdvReleaseSigningPropertiesFile**(デフォルト: リリース signing.properties)
     
-    リリースの署名情報を含む .properties ファイルへのパスを構築します。ファイルはようになります。
+    リリースの署名情報が含まれる .properties ファイルへのパスを構築します。 ファイルは、次のようになります。
     
         storeFile=relative/path/to/keystore.p12
         storePassword=SECRET1
@@ -148,27 +160,27 @@ Cordova-android@4.0.0、現在プロジェクトは[Gradle][2]を使用してビ
         keyPassword=SECRET2
         
     
-    `storePassword` および `keyPassword` は省略可能、促されるを省略した場合。
+    `storePassword``keyPassword`省略可能で、省略した場合を求められます。
 
-*   **cdvDebugSigningPropertiesFile**(デフォルト: debug-signing.properties)
+*   **cdvDebugSigningPropertiesFile**(デフォルト: デバッグ signing.properties)
     
-    同じです cdvReleaseSigningPropertiesFile がデバッグをビルドします。署名キーを他の開発者と共有する必要がある場合に役立ちます。
+    CdvReleaseSigningPropertiesFile と同じデバッグ、ビルドします。署名キーを他の開発者と共有する場合に便利です。
 
 *   **cdvMinSdkVersion**
     
-    `MinSdkVersion` `与えます` で設定の値をオーバーライドします。複数を作成するときに便利です APKs SDK バージョンをに基づいてください。
+    値を上書き `minSdkVersion` で `AndroidManifest.xml` 。複数を作成するときに役に立つ APKs は SDK のバージョンに基づいています。
 
 *   **cdvBuildToolsVersion**
     
-    自動検出された `android.buildToolsVersion` 値をオーバーライドします。
+    自動的に検出をオーバーライドして `android.buildToolsVersion` の値。
 
 *   **cdvCompileSdkVersion**
     
-    自動検出された `android.compileSdkVersion` 値をオーバーライドします。
+    自動的に検出をオーバーライドして `android.compileSdkVersion` の値。
 
 ### 拡張 build.gradle
 
-`Build.gradle`、カスタマイズするのではなく、直接編集する必要がある場合`ビルド extras.gradle`をという名前の兄弟ファイルを作成する必要があります。 このファイルは、メインの`build.gradle`が存在する場合にインクルードされます。 ここで例に示します。
+カスタマイズする必要がある場合 `build.gradle` ではなく、直接編集よりも兄弟ファイルを作成する必要があります `build-extras.gradle` 。 このファイルは、メインの表示 `build.gradle` 時提示します。 以下は例です。
 
     # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
@@ -179,7 +191,7 @@ Cordova-android@4.0.0、現在プロジェクトは[Gradle][2]を使用してビ
     }
     
 
-プラグインは`ビルド extras.gradle`経由でのファイルも含めることができます注意してください。
+プラグインを含めることも、注意してください `build-extras.gradle` を介してファイルします。
 
     <framework src="some.gradle" custom="true" type="gradleReference" />
     

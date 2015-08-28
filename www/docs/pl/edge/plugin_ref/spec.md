@@ -76,8 +76,21 @@ Może również określić elementy silnika dopasowania rozmyte, aby uniknąć p
     </engines>
     
 
-Oto lista domyślnie wyszukiwarki, że "<engine>"tag obsługuje: * 'cordova' * 'cordova-plugman' * 'cordova Amazonka fireos' *"cordova-android"*"cordova-ios"* 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
-* "android sdk' / / zwraca najwyższy api Android poziom zainstalowane * 'jabłko xcode' / / zwraca wersję xcode *"apple ios"/ / zwraca najwyższej wersji iOS instalowane *"apple osx"/ / zwraca informacje o wersji OSX *"blackberry-ndk"/ / zwraca wersji macierzysta blackberry SDK
+Oto lista domyślnie wyszukiwarki która `<engine>` tag obsługuje:
+
+*   `cordova`
+*   `cordova-plugman`
+*   `cordova-amazon-fireos`
+*   `cordova-android`
+*   `cordova-ios`
+*   `cordova-blackberry10`
+*   `cordova-wp8`
+*   `cordova-windows8`
+*   `android-sdk` // returns the highest Android api level installed
+*   `apple-xcode` // returns the xcode version 
+*   `apple-ios` // returns the highest iOS version installed
+*   `apple-osx` // returns the OSX version
+*   `blackberry-ndk` // returns the native blackberry SDK version
 
 Określanie niestandardowych opartych na Apache Cordova ram powinna być wymieniona w tagu silnik tak:
 
@@ -90,11 +103,11 @@ Określanie niestandardowych opartych na Apache Cordova ram powinna być wymieni
 
 Ramy niestandardowych opartych na Apache Cordova wymaga, aby element silnika zawiera następujące atrybuty: `name` , `version` , `scriptSrc` , i`platform`.
 
-*   `name`(wymagane): nazwę ludzki-mo¿liwy do czytania dla swojego niestandardowego ramy.
+*   `name`(wymagane): nazwę czytelnej dla niestandardowych RAM.
 
-*   `version`(wymagane): wersja, że swoje ramy muszą mieć, aby zainstalować.
+*   `version`(wymagane): wersja, która swoje ramy muszą mieć, aby zainstalować.
 
-*   `scriptSrc`(wymagane): plik skryptu, który mówi plugman jaka wersja niestandardowych RAM jest. Idealnie ten plik powinien być w katalogu najwyższego poziomu katalogu wtyczki.
+*   `scriptSrc`(wymagane): plik skryptu, który opowiada plugman jaka wersja niestandardowych RAM jest. Idealnie ten plik powinien być w katalogu najwyższego poziomu katalogu wtyczki.
 
 *   `platform`(wymagane): które platformy, które obsługuje twój ramy. Można użyć symbolu wieloznacznego `*` powiedzieć obsługiwane dla wszystkich platform, określić wiele z kreski jak `android|ios|blackberry10` lub tylko jednej platformy jak`android`.
 
@@ -153,16 +166,16 @@ Jeden lub więcej elementów listy pliki lub katalogi, które mają zostać skop
 
 Wszystkie `<asset>` Tagi wymagają zarówno `src` i `target` atrybuty. Wtyczki tylko do sieci Web zawiera głównie `<asset>` elementów. Wszelkie `<asset>` elementy, które są zagnieżdżone w `<platform>` określić elementy specyficzne dla platformy internetowej aktywów, zgodnie z opisem poniżej. Atrybuty:
 
-*   `src`(wymagane): gdzie w pliku lub katalogu znajduje się w pakiecie plugin, stosunku do `plugin.xml` dokumentu. Jeśli plik nie istnieje w określonej `src` lokalizacji, plugman zatrzymuje się i odwraca proces instalacji, wysyła powiadomienie o konflikcie, a wychodzi z niezerowy kod.
+*   `src`(wymagane): gdzie w pliku lub katalogu znajduje się w paczce plugin, stosunku do `plugin.xml` dokumentu. Jeśli plik nie istnieje w określonej `src` lokalizacji, plugman zatrzymuje się i odwraca proces instalacji, wysyła powiadomienie o konflikcie, a wychodzi z niezerowy kod.
 
-*   `target`(wymagane):
+*   `target` (required):
     
-    Gdzie w pliku lub katalogu powinien znajdować się w aplikacji Cordova, stosunku do `www` katalogu. Aktywa mogą być kierowane do podkatalogów, na przykład:
+    Gdzie w pliku lub katalogu powinien znajdować się w aplikacji Cordova, stosunku do `www` katalogu. Aktywów mogą być kierowane do podkatalogów, na przykład:
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    tworzy `js/experimental` katalogu w `www` katalogu, chyba że już obecny, a następnie kopie `new-foo.js` pliku i zmienia jego nazwę na `foo.js` . Jeżeli plik już istnieje w lokalizacji docelowej, plugman zatrzymuje się i odwraca proces instalacji, wysyła powiadomienie o konflikcie i wychodzi z niezerowy kod.
+    tworzy `js/experimental` katalogu w `www` katalogu, chyba że już obecny, a następnie kopie `new-foo.js` pliku i zmienia jego nazwę na `foo.js` . Jeżeli plik już istnieje w lokalizacji docelowej, plugman zatrzymuje się i odwraca proces instalacji, wysyła powiadomienie o konflikcie i wychodzi z kodem zera.
 
 ## *js moduł* Elementu
 
@@ -181,15 +194,15 @@ Szczegóły na `<js-module>` znacznika:
 
 *   `src`Odwołuje się do pliku w katalogu wtyczki w stosunku do `plugin.xml` pliku.
 
-*   `name`Zawiera ostatnią częścią nazwy modułu. Ogólnie może być cokolwiek chcesz, i to tylko ważne, jeśli chcesz używać `cordova.require` Aby importować inne części swoje wtyczki w kodzie JavaScript. Nazwa modułu `<js-module>` masz plugin `id` następuje wartość `name` . Dla powyższego przykładu z `id` z `chrome.socket` , Nazwa modułu jest`chrome.socket.Socket`.
+*   `name`Zawiera ostatnią częścią nazwy modułu. Ogólnie może być cokolwiek chcesz, i to tylko ważne, jeśli chcesz używać `cordova.require` Aby importować inne części wtyczek w kodzie JavaScript. Nazwa modułu dla `<js-module>` masz plugin `id` następuje wartość `name` . Dla powyższego przykładu z `id` z `chrome.socket` , Nazwa modułu jest`chrome.socket.Socket`.
 
-*   Trzy znaczniki są dozwolone w obrębie `<js-module>` :
+*   Trzech Tagi są dozwolone w obrębie `<js-module>` :
     
     *   `<clobbers target="some.value"/>`wskazuje, że `module.exports` jest wstawiany do `window` obiekt jako `window.some.value` . Możesz mieć jak najwięcej `<clobbers>` , jak chcesz. Każdy obiekt nie jest dostępna na `window` jest tworzony.
     
     *   `<merges target="some.value"/>`wskazuje, że moduł powinny być połączone z każdej istniejącej wartości w `window.some.value` . Jeśli wszelki klucz już istnieje, wersja modułu zastępuje oryginalny. Możesz mieć jak najwięcej `<merges>` , jak chcesz. Każdy obiekt nie jest dostępna na `window` jest tworzony.
     
-    *   `<runs/>`oznacza, że kod powinien być określony z `cordova.require` , ale nie zainstalowany na `window` obiektu. Jest to przydatne podczas inicjowania modułu, dołączanie procedury obsługi zdarzeń lub w inny sposób. Można mieć tylko do jednego `<runs/>` tagu. Należy zauważyć, że w tym `<runs/>` z `<clobbers/>` lub `<merges/>` jest zbędne, ponieważ one również `cordova.require` modułu.
+    *   `<runs/>`oznacza, że kod powinien być określony z `cordova.require` , ale nie zainstalowany na `window` obiektu. Jest to przydatne podczas inicjowania modułu, dołączanie procedury obsługi zdarzeń lub w inny sposób. Można mieć tylko do jednego `<runs/>` tagu. Należy zauważyć, że w tym `<runs/>` z `<clobbers/>` lub `<merges/>` jest zbędny, ponieważ one również `cordova.require` modułu.
     
     *   Pusta `<js-module>` jeszcze ładuje i są dostępne w innych modułów`cordova.require`.
 
@@ -204,11 +217,11 @@ Zagnieżdżanie `<js-module>` elementy w `<platform>` deklaruje platformy JavaSc
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
-*   `id`: zawiera identyfikator wtyczki. To powinien być unikatowy i wyrażone w stylu domeny odwrotnej. Chociaż żaden z tych ograniczeń jest obecnie wymuszane, mogą być w przyszłości.
+*   `id`: zawiera identyfikator wtyczki. Powinno być globalnie unikatowe i wyrażone w stylu domeny odwrotnej. Podczas gdy żadna z tych ograniczeń jest obecnie wymuszane, mogą być w przyszłości.
 
-*   `url`: Adres URL dla wtyczki. To powinien odwoływać się do repozytorium git, które plugman próbuje klon.
+*   `url`: Adres URL dla wtyczki. To powinien odwołać repozytorium git, które plugman próbuje klon.
 
-*   `commit`: To wszelkie odniesienia git rozumiane przez `git checkout` : oddział lub tag nazwę (np. `master` , `0.3.1` ), lub zatwierdzanie mieszania (np.`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+*   `commit`: To wszelkie odniesienia git rozumiane przez `git checkout` : oddział lub tag nazwę (np., `master` , `0.3.1` ), lub zatwierdzanie mieszania (np.`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
 *   `subdir`: Określa, że istnieje zależność ukierunkowane plugin jako podkatalog repozytorium git. Jest to pomocne, ponieważ pozwala repozytorium zawiera kilka wtyczek powiązane, każdego indywidualnie określonego.
 
@@ -241,7 +254,7 @@ Wymagane `name` atrybut identyfikuje platformy obsługiwane, kojarzenie elementu
 Platforma nazwy powinny być pisane małymi literami. Platforma nazwy, jak arbitralnie, znajdują się:
 
 *   Amazonka fireos
-*   Android
+*   Androida
 *   blackberry10
 *   iOS
 *   wp8
@@ -262,9 +275,9 @@ Platforma nazwy powinny być pisane małymi literami. Platforma nazwy, jak arbit
 
 Obsługuje następujące atrybuty:
 
-*   `src`(wymagane): lokalizację pliku w stosunku do `plugin.xml` . Jeśli `src` nie można znaleźć pliku, plugman zatrzymuje się i odwraca instalacji, wysyła powiadomienie o problemie i wychodzi z kodem zera.
+*   `src`(wymagane): Lokalizacja pliku stosunku do `plugin.xml` . Jeśli `src` nie można znaleźć pliku, plugman zatrzymuje się i odwraca instalacji, wysyła powiadomienie o problemie i wychodzi z kodem zera.
 
-*   `target-dir`: Katalog, do którego pliki powinny być skopiowane, względem katalogu głównego projektu Cordova. W praktyce, to jest najważniejsze dla opartych na platformie Java Platform, gdzie plik w `com.alunny.foo` pakiet musi znajdować się w `com/alunny/foo` katalogu. Dla platformy gdzie katalog źródłowy nie jest ważne ten atrybut powinny być pominięte.
+*   `target-dir`: Katalog do którego pliki powinny być skopiowane, względem katalogu głównego projektu Cordova. W praktyce, to jest najważniejsze dla opartych na platformie Java Platform, gdzie plik w `com.alunny.foo` pakiet musi znajdować się w `com/alunny/foo` katalogu. Dla platformy gdzie katalog źródłowy nie jest ważne należy pominąć ten atrybut.
     
     Podobnie jak w przypadku aktywów, jeśli `target` z `source-file` chcieliby zastąpić istniejący plik, plugman zatrzymuje się i odwraca instalacji, wysyła powiadomienie o problemie i wychodzi z kodem zera.
 
@@ -310,19 +323,17 @@ Obsługuje następujące atrybuty:
     
     Cel może zawierać symboli wieloznacznych ( `*` ) elementy. W tym przypadku plugman rekursywnie wyszukiwania poprzez strukturę katalogów dla projektu i używa pierwszy mecz.
     
-    Na iOS, nie wiadomo lokalizacji Konfiguracja pliki do głównego katalogu projektu, więc określając cel `config.xml` postanawia`cordova-ios-project/MyAppName/config.xml`.
+    Na iOS, lokalizację plików konfiguracyjnych względem katalogu głównego katalogu projektu nie jest znana, więc określając cel `config.xml` postanawia`cordova-ios-project/MyAppName/config.xml`.
     
-    Jeśli określony plik nie istnieje, narzędzie ignoruje zmiany konfiguracji i kontynuuje instalację.
+    Jeśli określony plik nie istnieje, narzędzie ignoruje zmiany konfiguracja i kontynuuje instalację.
 
-*   `parent`: Selektor XPath, odwoływanie się do rodziców elementy mają zostać dodane do pliku konfiguracyjnego. Możesz użyć selektorów absolutną, można użyć symboli wieloznacznych ( `*` ) aby określić główny element, np.`/*/plugins`.
+*   `parent`: Selektor XPath odwołującego się do rodziców elementy mają zostać dodane do pliku konfiguracyjnego. Jeśli używasz absolutną selektory, można użyć symboli wieloznacznych ( `*` ) aby określić element główny, np.`/*/plugins`.
     
     Dla `plist` plików, `parent` Określa, jakiego klucza nadrzędnego dodaje określony plik XML.
     
-    Jeśli selektor nie rozpoznać dziecko określonego dokumentu, narzędzie zatrzymuje się i odwraca proces instalacji, ostrzeżenia i wychodzi z kodem zera.
+    Jeśli selektor nie rozwiąże do podrzędność określonego dokumentu, narzędzie zatrzymuje się i odwraca proces instalacji, ostrzeżenia i wychodzi z kodem zera.
 
-*   `after`: Priorytetową listę przyjętych rodzeństwo, po czym dodać fragment kodu XML. Przydatne do określania zmian w plikach, które wymagają ścisłej kolejności elementów XML, takich jak [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
-
- [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+*   `after`: Priorytetową listę przyjętych rodzeństwo po czym dodać fragment kodu XML. Przydatne do określania zmian w plikach, które wymagają ściśle kolejność elementów XML, takich jak <http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement>
 
 Na platformie Windows obsługuje dwa dodatkowe atrybuty (oba opcjonalne) gdy wpływających na meta-nazwa `package.appxmanifest`:
 
@@ -393,13 +404,13 @@ Na platformie Windows element `<lib-file>` umożliwia włączenie `< SDKReferenc
 
 Obsługiwanych atrybutów:
 
-*   `src` (wymagane): Nazwa zestawu SDK do (który będzie używany jako wartość atrybut `Include` wygenerowane elementu `< SDKReference >`).
+*   `src`(wymagane): Nazwa zestawu SDK do włączenia (który będzie służyć jako wartość `Include` atrybut wygenerowany `<SDKReference>` element).
 
-*   `arch`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
+*   `arch`: Wskazuje, że `<SDKReference>` powinny być włączone, podczas tworzenia dla określonej architektury. Obsługiwane wartości są `x86` , `x64` lub`ARM`.
 
-*   `device-target`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+*   `device-target`: Wskazuje, że `<SDKReference>` powinny być włączone, podczas tworzenia dla określonego miejsce docelowe urządzenie typu. Obsługiwane wartości są `win` (lub `windows` ), `phone` lub`all`.
 
-*   `versions`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
+*   `versions`: Wskazuje, że `<SDKReference>` powinny być włączone, podczas tworzenia dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
 
 Przykłady:
 

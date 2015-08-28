@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Hooks-Guide
 
-Cordova-Hooks stellen besondere Skripts die konnten durch Anwendung und Plugin-Entwickler hinzugefügt werden oder auch durch Ihr eigenes Buildsystem Cordova Befehle anpassen. Aktionsskripte definiert, indem sie auf die besonderen vordefinierte Ordner (`/hooks`) oder über Konfigurationsdateien (`config.xml` und `plugin.xml`) und nacheinander in folgender Reihenfolge ausgeführt werden konnte: * Anwendung Haken aus `/hooks`; * Anwendung Haken von `"config.xml"`; * Plugin-Haken aus `plugins/.../plugin.xml`.
+Cordova-Hooks stellen besondere Skripts die konnten durch Anwendung und Plugin-Entwickler hinzugefügt werden oder auch durch Ihr eigenes Buildsystem Cordova Befehle anpassen. Aktionsskripte einrichten könnte definiert, indem sie auf die besonderen vordefinierte Ordner (`/hooks`) oder über Konfigurationsdateien (`config.xml` und `plugin.xml`) und nacheinander in folgender Reihenfolge ausgeführt werden:
+
+  * Anwendung Haken aus `/hooks`;
+  * Anwendung-Haken von `"config.xml"`;
+  * Plugin-Haken aus `plugins/.../plugin.xml`.
 
 **Hinweis**: `/hooks` Verzeichnis gilt zugunsten der Haken Elemente in config.xml und plugin.xml.
 

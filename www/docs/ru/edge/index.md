@@ -18,9 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 <div id="home">
-  <h1>
-    Инструкции
-  </h1>
+  <h1>Инструкции</h1>
   
   <ul>
     <li>
@@ -144,9 +142,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
   </ul>
   
-  <h1>
-    Справочник по API
-  </h1>
+  <h1>Справочник по API</h1>
   
   <ul>
     <li>

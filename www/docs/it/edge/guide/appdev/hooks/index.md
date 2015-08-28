@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Guida di ganci
 
-Cordova Hooks rappresentano gli script speciali che potrebbero essere aggiunto dall'applicazione e gli sviluppatori di plugin o anche da soli la propria costruire sistema per personalizzare comandi di cordova. Gancio script potrebbe essere definito aggiungendoli alla cartella speciale predefinita (`/hooks`) o tramite file di configurazione (`config. XML` e `plugin`) ed eseguire in serie nel seguente ordine: * applicazione ganci da `/hooks`; * Applicazione ganci da `config. XML`; * Plugin ganci da `plugins/.../plugin.xml`.
+Cordova Hooks rappresentano gli script speciali che potrebbero essere aggiunto dall'applicazione e gli sviluppatori di plugin o anche da soli la propria costruire sistema per personalizzare comandi di cordova. Gancio script potrebbe essere definito aggiungendoli alla cartella speciale predefinita ( `/hooks` ) o tramite file di configurazione ( `config.xml` e `plugin.xml` ) ed eseguire in serie nell'ordine seguente:
+
+  * Applicazione ganci da `/hooks` ;
+  * Applicazione ganci da `config.xml` ;
+  * Ganci di plugin da`plugins/.../plugin.xml`.
 
 **Nota**: `/hooks` directory è considerato deprecato a favore di elementi gancio in config. XML e plugin.
 

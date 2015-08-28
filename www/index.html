@@ -60,17 +60,12 @@ permalink: /
     </div>
 </div>
 <div class="blue-divider"></div>
-<div class="container">
+<div class="container get-started-section">
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-12 text-center">
             <a id="getstarted" name="getstarted" class="fragment-anchor"></a>
             <h1>Get Started Fast</h1>
-            <p>Looks like you're using
-                <span id="current_os">Windows</span> to develop your apps</p>
-            <p>
-                <a href="#" role="button">Use a different OS?</a>
-            </p>
         </div>
     </div>
     <!-- GETTING STARTED -->
@@ -80,12 +75,12 @@ permalink: /
         </div>
         <div class="col-md-7">
             <h2>Installing Cordova</h2>
-            <p>Cordova command-line runs on <a href="http://nodejs.org/">Node.js</a> and available on <a href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code></p>
+            <p>Cordova command-line runs on <a href="http://nodejs.org/">Node.js</a> and is available on <a href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide/platforms/">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code></p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-npm-install" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ npm install -g cordova
             </div>
@@ -103,7 +98,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-create" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ cordova create MyApp
             </div>
@@ -122,7 +117,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-platform-add" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 <p>$ cd MyApp</p>
                 <p>$ cordova platform add browser</p>
@@ -141,7 +136,7 @@ permalink: /
         <div class="col-md-4">
             <div class="well_code">
                 <div>
-                    <button type="button" class="btn btn btn-primary pull-right">Copy</button>
+                    <button id="copy-cordova-run" type="button" class="btn btn btn-primary pull-right">Copy</button>
                 </div>
                 $ cordova run browser
             </div>
@@ -154,10 +149,18 @@ permalink: /
         <div class="col-md-7">
             <h2>Common next steps</h2>
             <ul class="nav">
-                <li><a href="{{ site.baseurl }}/docs/en/edge/index.html">Read the docs</a></li>
-                <li><a href="{{ site.baseurl }}/docs/en/edge/guide_cli_index.md.html">Add a Plugin</a></li>
-                <li><a href="{{ site.baseurl }}/docs/en/edge/config_ref_index.md.html">Add Icons and Splash Screen</a></li>
-                <li><a href="{{ site.baseurl }}/docs/en/edge/config_ref_images.md.html">Configure Your App</a></li>
+                <li>
+                    <a href="{{ site.baseurl }}/docs/en/edge/">Read the docs</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/docs/en/edge/guide/cli/#add-plugin-features">Add a Plugin</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/docs/en/edge/config_ref/images.html">Add Icons and Splash Screen</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/docs/en/edge/config_ref/">Configure Your App</a>
+                </li>
             </ul>
         </div>
         <div class="col-md-4">
@@ -167,7 +170,7 @@ permalink: /
 <!-- /container -->
 
 <div class="blue-divider"></div>
-<div class="container-fluid dark">
+<div class="container-fluid dark vertical-aligned-columns">
     <div class="container">
         <div class="row showcase_section_intro" id="supported_platforms_section">
             <div class="col-md-12 text-center">
@@ -183,7 +186,7 @@ permalink: /
         </div>
     </div><!-- /container -->
 
-    <div class="container-fluid supported_platforms">
+    <div class="container-fluid supported_platforms vertical-aligned-columns">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -199,32 +202,3 @@ permalink: /
 
 </div><!-- /container-fluid -->
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script>
-        //Smooth scroll to anchor links
-    	$("#navbar ul li a[href^='/#']").on('click', function(e) {
-		// prevent default anchor click behavior
-		console.log('Scrolled to where you asked');
-		e.preventDefault();
-
-		// store hash
-		var hash = this.hash;
-
-		// animate
-		$('html, body').animate({
-			scrollTop: $(hash).offset().top
-			}, 300, function(){
-
-			// when done, add hash to url
-			// (default click behaviour)
-			window.location.hash = hash;
-			});
-
-	});
-</script>

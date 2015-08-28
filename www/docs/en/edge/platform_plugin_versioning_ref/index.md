@@ -72,17 +72,22 @@ Some examples :
 
 
 ### Restoring platforms
-  * Platforms are automatically restored from config.xml when the **'cordova prepare'** command is run.
-  * If you add a platform without specifying a version/folder/git_url, the version to install is taken from config.xml, **if found**.
-    * Example:
-      Suppose your config.xml file contains the following entry:
 
-          <?xml version='1.0' encoding='utf-8'?>
-              ...
-              <engine name="android" spec="3.7.0" />
-              ...
-          </xml>
-      If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
+Platforms are automatically restored from config.xml when the **'cordova prepare'** command is run.
+
+If you add a platform without specifying a version/folder/git_url, the version to install is taken from config.xml, **if found**.
+
+Example:
+
+Suppose your config.xml file contains the following entry:
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <engine name="android" spec="3.7.0" />
+        ...
+    </xml>
+
+If you run the command **'cordova platform add android'** (no version/folder/git_url specified), the platform 'android@3.7.0' (as retrieved from config.xml) will be installed.
 
 
 
@@ -133,13 +138,20 @@ Some examples :
 
 
 ### Restoring plugins
-  * Plugins are automatically restored from config.xml when the **'cordova prepare'** command is run.
-  * If you add a plugin without specifying a version/folder/git_url, the version to be installed is taken from config.xml, **if found**.
-    * Example:
-      Suppose your config.xml file contains the following entry:
-          <?xml version='1.0' encoding='utf-8'?>
-              ...
-              <plugin name="cordova-plugin-console" spec="0.2.11" />
-              ...
-          </ xml>
-      If you run the command **'cordova plugin add cordova-plugin-console'** (no version/folder/git_url specified), the plugin 'cordova-plugin-console@0.2.11' (as retrieved from config.xml) will be installed.
+
+Plugins are automatically restored from config.xml when the **'cordova prepare'** command is run.
+
+If you add a plugin without specifying a version/folder/git_url, the version to be installed is taken from config.xml, **if found**.
+
+Example:
+
+Suppose your config.xml file contains the following entry:
+
+    <?xml version='1.0' encoding='utf-8'?>
+        ...
+        <plugin name="cordova-plugin-console" spec="0.2.11" />
+        ...
+    </ xml>
+
+If you run the command **'cordova plugin add cordova-plugin-console'** (no version/folder/git_url specified), the plugin 'cordova-plugin-console@0.2.11' (as retrieved from config.xml) will be installed.
+

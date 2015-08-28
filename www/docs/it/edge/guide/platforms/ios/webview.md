@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Questa guida Mostra come incorporare un componente WebView Cordova abilitato all'interno di una più ampia applicazione iOS. Per dettagli su come questi componenti possono comunicare con a vicenda, vedere applicazione plugin.
 
-Supporto per iOS visualizzazioni Web iniziato con Cordova versione 1.4, utilizzando un `Cleaver` componente per il quale il modello di Xcode serve come un'implementazione di riferimento. Cordova 2.0 e versioni successive supportano solo l'implementazione basata su sottoprogetto di mannaia.
+Supporto per visualizzazioni Web per iOS iniziato con Cordova versione 1.4, utilizzando un `Cleaver` componente per il quale il modello di Xcode serve come un'implementazione di riferimento. Cordova 2.0 e versioni successive supportano solo l'implementazione basata su sottoprogetto di mannaia.
 
 Queste istruzioni richiedono almeno Cordova 3. x e 6.0 di Xcode, insieme a un file `config. xml` da un progetto di iOS appena creato. È possibile utilizzare la procedura in l'interfaccia della riga di comando per creare un nuovo progetto, quindi ottenere il `config.xml` all'interno di sottodirectory dell'applicazione denominata all'interno del file da`platforms/ios`.
 

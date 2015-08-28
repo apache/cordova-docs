@@ -104,7 +104,8 @@ Uso di blackBerry 10 di caratteri jolly si differenzia da altre piattaforme in d
     
     Specificare l'accesso a tutti i domini, compreso il protocollo locale `file://` :
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (Per ulteriori informazioni sul supporto, vedere documentazione di BlackBerry nell' [elemento di accesso][9].)
 

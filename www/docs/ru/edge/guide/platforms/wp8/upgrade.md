@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Для проектов-CLI выполните:
 
-        bin/update путь/к/проекту
+        bin/обновить путь/к/проекта
     
 
 Для проектов CLI:

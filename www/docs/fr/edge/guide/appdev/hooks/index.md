@@ -19,7 +19,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Guide de crochets
 
-Cordova Hooks représentent des scripts spéciaux qui pourraient être ajoutées par application et développeurs de plugins ou même par votre propre build system pour personnaliser les commandes de cordova. Scripts de hook pourraient être définies en les ajoutant au dossier prédéfini spécial (`/hooks`) ou via des fichiers de configuration (`config.xml` et `plugin.xml`) et exécuter en série dans l'ordre suivant: * Application crochets de `/hooks`; * Application crochets de `config.xml`; * Plugin crochets de `plugins/.../plugin.xml`.
+Cordova Hooks représentent des scripts spéciaux qui pourraient être ajoutées par application et développeurs de plugins ou même par votre propre build system pour personnaliser les commandes de cordova. Scripts de hook pourraient être définies en les ajoutant au dossier prédéfini spécial (`/hooks`) ou via des fichiers de configuration (`config.xml` et `plugin.xml`) et exécuter en série dans l'ordre suivant :
+
+  * Crochets de demande de `/hooks`;
+  * Application des crochets de `config.xml`;
+  * Crochets de plugin de `plugins/.../plugin.xml`.
 
 **Remarque**: `/hooks` répertoire est considérée comme dépréciée en faveur des éléments crochet dans config.xml et plugin.xml.
 

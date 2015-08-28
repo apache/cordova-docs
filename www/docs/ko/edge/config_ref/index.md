@@ -130,7 +130,7 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    IOS와 블랙베리에 적용 됩니다.
+    블랙베리에 적용 됩니다.
 
 *   `Orientation` (문자열, `디폴트` 기본값): 잠금 방향 및 회전 방향에서 변화에 대응에서 인터페이스를 방지 수 있습니다. 가능한 값은 `default`, `landscape` 또는 `portrait`. 예를 들어:
     

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Ten poradnik pokazuje jak wobec sprzeniewierzyć Cordova włączony Widok sieci Web składnika w większych aplikacji na iOS. Szczegółowe informacje na temat jak te składniki mogą komunikować się ze sobą, zobacz wtyczki aplikacji.
 
-Wsparcie dla iOS WebViews rozpoczął Cordova wersja 1.4, za pomocą `Cleaver` element, dla którego szablon Xcode służy jako implementacji. Cordova 2.0 i nowsze wersje obsługują tylko realizacji podprojektu w oparciu tasak.
+Wsparcie dla WebViews dla iOS rozpoczął z Cordova wersja 1.4, za pomocą `Cleaver` element, dla którego szablon Xcode służy jako odniesienie realizacji. Cordova 2.0 i nowsze wersje obsługują tylko realizacji podprojektu w oparciu tasak.
 
 Instrukcje te wymagają co najmniej Cordova 3.x i Xcode 6.0, wraz z pliku `config.xml` z nowo utworzonego iOS projektu. Można użyć procedury na interfejs wiersza polecenia do tworzenia nowego projektu, a następnie uzyskać `config.xml` plik w aplikacji o nazwie podkatalogu w`platforms/ios`.
 

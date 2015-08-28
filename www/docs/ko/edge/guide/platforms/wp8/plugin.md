@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 8 플러그인
 
-이 섹션에서는 Windows Phone 플랫폼에 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스에 대 한 플러그인 개발 가이드를 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
+이 섹션에서는 Windows Phone 플랫폼에 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이 읽기 전에 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스에 대 한 플러그인 개발 가이드를 참조. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
 
 코르 도우 바에 대 한 Windows Phone는 플러그인을 작성 코르도바의 아키텍처에 대 한 기본적인 이해를 필요 합니다. 코르 도우 바 WP8에 의하여 이루어져 있는 `WebBrowser` 네이티브 API 호출을 관리 하 고 응용 프로그램의 자바 스크립트 코드를 호스팅하. C#을 확장할 수 있습니다. `BaseCommand` 클래스 ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), 어떤 대부분의 필요한 기능을 함께 제공:
 

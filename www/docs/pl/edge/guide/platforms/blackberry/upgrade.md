@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Uaktualnianie BlackBerry
 
-Ten poradnik pokazuje jak zmodyfikować BlackBerry projektów do uaktualnienia ze starszych wersji Cordova. Te instrukcje dotyczą projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.
+Ten poradnik pokazuje jak zmodyfikować BlackBerry projektów do uaktualnienia ze starszych wersji Cordova. Te instrukcje dotyczą projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować wersja od CLI.
 
 ## Projekty modernizacji 2.8.0 do 2.9.0
 
@@ -45,7 +45,7 @@ Jeżyna 10:
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, zgodnie z opisem w iOS Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
@@ -83,7 +83,7 @@ BlackBerryOS/Playbook:
 
 3.  Przejdź do katalogu, gdzie można umieścić pobrać źródła powyżej, za pomocą systemu unix jak terminalu: Terminal.app, Bash, Cygwin, itp.
 
-4.  Tworzenie nowego projektu, zgodnie z opisem w iOS Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
+4.  Tworzenie nowego projektu, zgodnie z opisem w BlackBerry Shell narzędzia przewodnik. Potrzebujesz aktywów od ten nowy projekt.
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 

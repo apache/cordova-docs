@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 8 外掛程式
 
-此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱外掛程式開發者指南外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
+此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱外掛程式開發指南外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 
 在 Windows Phone 上的科爾多瓦編寫外掛程式需要科爾多瓦的體系結構的一個基本的瞭解。 科爾多瓦 WP8 組成的 `WebBrowser` ，承載應用程式的 JavaScript 代碼和管理本機 API 呼叫。 您可以擴展 C# `BaseCommand` 類 （ `WPCordovaClassLib.Cordova.Commands.BaseCommand` ），其中附帶了大部分的你需要的功能：
 

@@ -75,9 +75,9 @@ platform add blackberry10`.
 
 3.  Kopieren Sie den Inhalt des ursprünglichen Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
 
-4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` , etc..)
+4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt überschreiben ( `Resources` , etc..)
 
-5.  Kopie der `config.xml` -Datei in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Du musst Einstellungen hier anstatt innerhalb des Plattform-Verzeichnisses ändern.
+5.  Kopie der `config.xml` -Datei in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Sie müssen Einstellungen hier anstatt innerhalb des Plattform-Verzeichnisses ändern.
 
 6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
@@ -113,15 +113,15 @@ Für BlackBerryOS/Textbuch:
 
 6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
-7.  Kopie der `native` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `native` Verzeichnis.
+7.  Kopie der `native` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `native` Verzeichnis.
 
-8.  Kopie der `lib` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `lib` Verzeichnis.
+8.  Kopie der `lib` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `lib` Verzeichnis.
 
-9.  Kopie der `cordova` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `cordova` Verzeichnis.
+9.  Kopie der `cordova` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `cordova` Verzeichnis.
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Zeichenfolge enthält.
+BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen migrieren Sie Ihr Projekt in ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Versionszeichenfolge enthält.
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 
@@ -143,11 +143,11 @@ Für BlackBerryOS/Textbuch:
 
 3.  Navigieren Sie zum Verzeichnis, in dem Sie die heruntergeladene Quelle oben, ein Unix wie Terminal setzen: Terminal.app, Bash, Cygwin.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in BlackBerry Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
+6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) verweisen auf die neue `cordova.js` Datei.
 
 7.  Kopie der `native` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `native` Verzeichnis.
 
@@ -161,19 +161,19 @@ Für BlackBerryOS/Textbuch:
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
-3.  Navigieren Sie zum Verzeichnis, in dem Sie die heruntergeladene Quelle oben, ein Unix wie Terminal setzen: Terminal.app, Bash, Cygwin.
+3.  Navigieren Sie zum Verzeichnis, in dem Sie die heruntergeladene Quelle oben mit einem Unix wie Terminal setzen: Terminal.app, Bash, Cygwin.
 
 4.  Erstellen Sie ein neues Projekt, wie in BlackBerry Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova-2.7.0.js` Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova-2.6.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.7.0.js` Datei.
+6.  Aktualisieren von Cordova Skriptverweis in der `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) verweisen auf die neue `cordova-2.7.0.js` Datei.
 
-7.  Kopie der `native` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `native` Verzeichnis.
+7.  Kopie der `native` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `native` Verzeichnis.
 
-8.  Kopie der `lib` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `lib` Verzeichnis.
+8.  Kopie der `lib` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `lib` Verzeichnis.
 
-9.  Kopie der `cordova` Verzeichnis des neuen Projekts in das bestehende Projekt, überschreiben die alte `cordova` Verzeichnis.
+9.  Kopie der `cordova` Verzeichnis des neuen Projekts in das vorhandene Projekt Überschreiben der altes `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.6.0 von 2.5.0
 
@@ -181,7 +181,7 @@ Fortschreibung des PhoneGap-Download-Verzeichnis:
 
 Es wird empfohlen, dass Sie eine neue Kopie von das gesamte Verzeichnis herunterladen.
 
-Aber auch hier sind die neuen Teile für die schrittweise Aktualisierung:
+Allerdings sind hier die neuen Teile für die schrittweise Aktualisierung:
 
 1.  Aktualisieren Sie die Datei cordova.blackberry.js in das `Phonegap-2.6.0/lib/blackberry/javascript` Verzeichnis.
 
@@ -205,7 +205,7 @@ Aktualisieren das Beispiel / Verzeichnis oder Migrieren einer vorhandenen Projek
 
 5.  Kopieren Sie die neue `cordova-2.6.0.js` in Ihr Projekt.
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.6.0.js` Datei.
+6.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.6.0.js` Datei.
 
 ## Ein Upgrade auf 2.5.0 von 2.4.0
 
@@ -213,7 +213,7 @@ Fortschreibung des PhoneGap-Download-Verzeichnis:
 
 Es wird empfohlen, dass Sie eine neue Kopie von das gesamte Verzeichnis herunterladen.
 
-Aber auch hier sind die neuen Teile für die schrittweise Aktualisierung:
+Allerdings sind hier die neuen Teile für die schrittweise Aktualisierung:
 
 1.  Aktualisieren Sie die Datei cordova.blackberry.js in das `Phonegap-2.5.0/lib/blackberry/javascript` Verzeichnis.
 
@@ -237,7 +237,7 @@ Aktualisieren das Beispiel / Verzeichnis oder Migrieren einer vorhandenen Projek
 
 5.  Kopieren Sie die neue `cordova-2.5.0.js` in Ihr Projekt.
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.5.0.js` Datei.
+6.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.5.0.js` Datei.
 
 ## Ein Upgrade auf 2.4.0 von 2.3.0
 
@@ -252,9 +252,9 @@ Aktualisierung nur das `www` Verzeichnis:
 4.  Kopieren Sie die neue `cordova-2.4.0.js` in Ihr Projekt.
     
     *   Wenn Textbuch, dann Update die JS-in Datei das `playbook/` Verzeichnis.
-    *   Wenn BlackBerry 10, aktualisieren Sie dann die JS-Datei in das `qnx/` Verzeichnis.
+    *   Wenn BlackBerry 10, dann aktualisieren Sie die JS-Datei in das `qnx/` Verzeichnis.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` Datei.
+5.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.4.0.js` Datei.
 
 Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
 
@@ -272,7 +272,7 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 7.  Typ `ant blackberry build` oder `ant playbook build` zum Aktualisieren der `www` Verzeichnis mit aktualisierten Cordova.
 
-8.  Öffnen der `www` Verzeichnis und aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` Datei.
+8.  Öffnen der `www` Verzeichnis und aktualisieren Sie Ihre HTML-um das neue `cordova-2.4.0.js` Datei.
 
 ## Ein Upgrade auf 2.3.0 von 2.2.0
 
@@ -287,9 +287,9 @@ Aktualisierung nur das `www` Verzeichnis:
 4.  Kopieren Sie die neue `cordova-2.3.0.js` in Ihr Projekt.
     
     *   Wenn Textbuch, dann Update die JS-in Datei das `playbook/` Verzeichnis.
-    *   Wenn BlackBerry 10, aktualisieren Sie dann die JS-Datei in das `qnx/` Verzeichnis.
+    *   Wenn BlackBerry 10, dann aktualisieren Sie die JS-Datei in das `qnx/` Verzeichnis.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.3.0.js` Datei.
+5.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.3.0.js` Datei.
 
 Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
 
@@ -342,7 +342,7 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 7.  Typ `ant blackberry build` oder `ant playbook build` zum Aktualisieren der `www` Verzeichnis mit aktualisierten Cordova.
 
-8.  Öffnen der `www` Verzeichnis und aktualisieren Sie den HTML-Code um das neue `cordova-2.2.0.js` Datei.
+8.  Öffnen der `www` Verzeichnis und aktualisieren Sie Ihre HTML-um das neue `cordova-2.2.0.js` Datei.
 
 ## Upgrade auf 2.1.0 von 2.0.0
 
@@ -358,7 +358,7 @@ Aktualisierung nur das `www` Verzeichnis:
     
     *   Wenn Textbuch, dann Update die JS-in Datei das `playbook/` Verzeichnis.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` Datei.
+5.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.1.0.js` Datei.
 
 Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
 
@@ -374,7 +374,7 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 6.  Typ `ant blackberry build` oder `ant playbook build` zum Aktualisieren der `www` Verzeichnis mit aktualisierten Cordova.
 
-7.  Öffnen der `www` Verzeichnis und aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` Datei.
+7.  Öffnen der `www` Verzeichnis und aktualisieren Sie Ihre HTML-um das neue `cordova-2.1.0.js` Datei.
 
 ## Ein Upgrade auf 2.0.0 von 1.9.0
 
@@ -390,7 +390,7 @@ Aktualisierung nur das `www` Verzeichnis:
     
     *   Wenn Textbuch, dann Update die JS-in Datei das `playbook/` Verzeichnis.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` Datei.
+5.  Aktualisieren Sie Ihre HTML-um das neue `cordova-2.0.0.js` Datei.
 
 6.  Update der `www/plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
@@ -418,7 +418,7 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 6.  Typ `ant blackberry build` oder `ant playbook build` zum Aktualisieren der `www` Verzeichnis mit aktualisierten Cordova.
 
-7.  Öffnen der `www` Verzeichnis und aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` Datei.
+7.  Öffnen der `www` Verzeichnis und aktualisieren Sie Ihre HTML-um das neue `cordova-2.0.0.js` Datei.
 
 8.  Öffnen der `www` Verzeichnis und Update der `plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
@@ -448,7 +448,7 @@ Aktualisierung nur das `www` Verzeichnis:
     
     *   Wenn Textbuch, dann Update die JS-in Datei das `playbook/` Verzeichnis.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` Datei.
+5.  Aktualisieren Sie Ihre HTML-um das neue `cordova-1.8.0.js` Datei.
 
 6.  Update der `www/plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     
@@ -462,7 +462,7 @@ Aktualisierung nur das `www` Verzeichnis:
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
-Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Tools):
+Aktualisierung im Beispielverzeichnis (d. h. Aktualisieren mit der Ameise-Tools):
 
 1.  Öffnen der `sample/lib/` Verzeichnis.
 
@@ -476,7 +476,7 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
 
 6.  Typ `ant blackberry build` oder `ant playbook build` zum Aktualisieren der `www` Verzeichnis mit aktualisierten Cordova.
 
-7.  Öffnen der `www` Verzeichnis und aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` Datei.
+7.  Öffnen der `www` Verzeichnis und aktualisieren Sie Ihre HTML-um das neue `cordova-1.8.0.js` Datei.
 
 8.  Öffnen der `www` Verzeichnis und Update der `plugins.xml` Datei. Zwei Plugins verändert ihr Label-Namespace-Dienst. Ändern Sie die alten Einträge für die Erfassung und Kontakt-Plugins von:
     

@@ -58,15 +58,15 @@ Windows をインストールするときも JDK インストール パス (た�
 
 詳細なインストール手順は利用可能な上記のリンクをインストールの一部として。
 
-コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac では、テキスト エディターを使用して、作成または SDK のインストールに応じて、次のような行を追加する`~/.bash_profile`ファイルを変更することができます。
+コルドバするために、コマンド ライン ツールまたはに基づいては、CLI は、SDK の`ツール`や`プラットフォーム固有のツール`ディレクトリ`パス`に含める必要があります。 Mac または Linux は、作成または変更するテキスト エディターを使用することができます、 `~/.bash_profile` ファイルは、SDK がインストールに応じて、次のような行を追加します。
 
         export PATH=${PATH}:/Development/android-sdk/platform-tools:/Development/android-sdk/tools
-
+    
 
 `~/.Bash_profile`内のこの行は、新しくオープンしたターミナル ウィンドウでこれらのツールを公開します。 ターミナル ・ ウィンドウをまだ開いて場合は osx 版、またはログアウト/ログイン Linux 上を避けるために、現在の端末ウィンドウで使用できるようにするこれを実行します。
 
         $ source ~/.bash_profile
-
+    
 
 Windows の`PATH`環境を変更: する
 
@@ -79,9 +79,9 @@ Windows の`PATH`環境を変更: する
 4.  **パス**変数を選択し、キーを押して**編集**.
 
 5.  追加するのには、次の `PATH` 例えば、SDK をインストールしたに基づきます。
-
+    
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
-
+        
 
 6.  値を保存して両方のダイアログ ボックスを閉じます。
 
@@ -103,25 +103,25 @@ Windows の`PATH`環境を変更: する
 
 ![][8]
 
- [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
 
 ![][9]
 
- [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 これで、AVD **Android 仮想デバイス**リストに表示されます。
 
 ![][10]
 
- [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
 
 ![][11]
 
- [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 高速な経験のため、実行速度を向上させる`仮想マシン加速`を使用できます。 多くの近代的な Cpu をより効率的に仮想マシンを実行する拡張機能を提供します。 加速度のこのタイプを使用する前にかどうか、現在の開発システムの CPU をサポートしています 1 つ次の仮想化テクノロジを決定する必要があります。
 
@@ -139,7 +139,7 @@ Windows の`PATH`環境を変更: する
 
 ![][15]
 
- [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: img/guide/platforms/android/intel_pid_util_620px.png
 
 エミュレーターをスピードアップするためにダウンロードし、1 つ以上の`Intel x86 原子`システム イメージとして`インテル ハードウェア加速実行マネージャー (HAXM)`をインストールする必要があります。.
 
@@ -147,7 +147,7 @@ Windows の`PATH`環境を変更: する
 
 ![][16]
 
- [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 ダウンロード後`エクストラ/インテル/Hardware_Accelerated_Execution_Manager`でアンドロイド SDK で提供されているインテル インストーラーを実行します。 **注**:`より多くの情報とステップ バイ ステップ ガイダンスこのチェックを見つけることができる場合は、パッケージのインストールに問題がある` [Intel の記事][17].
 
@@ -169,15 +169,15 @@ Windows の`PATH`環境を変更: する
         $ cd hello
         $ cordova platform add android
         $ ccordova prepare              # or "cordova build"
-
+    
 
 ここでは Unix および Windows の対応する低レベル シェル ツール アプローチ：
 
         $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
         C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+    
 
-
-## プロジェクトをビルドします
+## プロジェクトをビルドします。
 
 開発で CLI を使用している場合、プロジェクトの最上位レベルの`www`ディレクトリにはソース ファイルが含まれます。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
 
@@ -185,7 +185,7 @@ Windows の`PATH`環境を変更: する
         $ cordova build android           # build debug for only Android
         $ cordova build android --debug   # build debug for only Android
         $ cordova build android --release # build release for only Android
-
+    
 
 開発で人造人間に固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリのソースは`資産/www`サブディレクトリで利用可能です。 以降のコマンドはその`コルドバ`サブディレクトリで利用できます。
 
@@ -193,10 +193,10 @@ Windows の`PATH`環境を変更: する
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
-
+    
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
-
+    
 
 ## アプリを展開します。
 
@@ -204,13 +204,13 @@ Windows の`PATH`環境を変更: する
 
         $ cordova emulate android       #to deploy the app on a default android emulator
         $ cordova run android --device  #to deploy the app on a connected device
-
+    
 
 それ以外の場合は、代替シェル インターフェイスを使用します。
 
         $ /path/to/project/cordova/run --emulator
         $ /path/to/project/cordova/run --device
-
+    
 
 使用することができます**cordova run android --list**を見るすべての利用可能なターゲットと**cordova run android --target=target_name** 、特定のデバイスまたはエミュレーターでアプリケーションを実行する (たとえば、`cordova run android --target="Nexus4_emulator"`).
 
@@ -220,12 +220,12 @@ Windows の`PATH`環境を変更: する
 
 ![][18]
 
- [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
+ [18]: img/guide/platforms/android/emulator2x.png
 
 ときにアプリを`実行`を`構築`することもそれ。 追加を追加することができます`--デバッグ`、 `-リリース`、および構築方法や、再構築が必要かどうかも制御する`--nobuild`フラグ。
 
         $ /path/to/project/cordova/run --emulator --nobuild
-
+    
 
 ## その他のコマンド
 
@@ -233,13 +233,13 @@ Windows の`PATH`環境を変更: する
 
         $ /path/to/project/cordova/log
         C:\path\to\project\cordova\log.bat
-
+    
 
 次のプロジェクト ファイルが消去されます。
 
         $ /path/to/project/cordova/clean
         C:\path\to\project\cordova\clean.bat
-
+    
 
 ## SDK で新しいプロジェクトを開く
 
@@ -248,23 +248,23 @@ Android プラットフォームは、プロジェクトに追加されます、
 1.  **アンドロイド Studio**アプリケーションを起動します。
 
 2.  **インポート プロジェクト (Eclipse ADT、Gradle など)**を選択します.
-
+    
     ![][19]
 
 3.  Android プラットフォームは、ストアド`あなた/プロジェクト/プラットフォーム/android`の場所を選択します。).
-
+    
     ![][20]
 
 4.  `Gradle 同期`質問の単に答えが**はい**.
 
- [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
- [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
+ [19]: img/guide/platforms/android/asdk_import_project.png
+ [20]: img/guide/platforms/android/asdk_import_select_location.png
 
 あなたを構築し、 `Android のスタジオ`から直接アプリケーションを実行することができますすべての現在設定されて.
 
 ![][21]
 
- [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
+ [21]: img/guide/platforms/android/asdk_import_done.png
 
 [Android のスタジオの概要][22]を参照してください、そして[建物と Android Studio から実行する][23]詳細については。
 

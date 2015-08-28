@@ -25,7 +25,7 @@ Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova apli
 *   Aktualizacja iOS
 *   iOS WebViews
 *   iOS wtyczek
-*   iOS narzędzia wiersza polecenia
+*   iOS Shell narzędzia Przewodnik
 
 Narzędzia wiersza polecenia powyżej odnosi się do wcześniejszych Cordova 3.0. Zobacz interfejs wiersza poleceń do informacji o bieżącym interfejs.
 
@@ -61,7 +61,7 @@ Należy uruchomić terminal comman-line:
 
         $ npm install -g ios-sim
         $ npm install -g ios-deploy
-
+    
 
 ## Tworzenie nowego projektu
 
@@ -71,33 +71,33 @@ Użyj narzędzia `cordova` założyć nowy projekt, opisanym w The Cordova inter
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
-
+    
 
 ## Wdrażanie aplikacji
 
 Do wdrażania aplikacji na urządzenia podłączone iOS:
 
         $ cordova run ios --device
-
+    
 
 Aby wdrożyć aplikację na domyślny emulator iOS:
 
         $ cordova emulate ios
-
+    
 
 Można użyć **cordova run ios --list** aby zobaczyć wszystkie dostępne cele i **cordova run ios --target=target_name** do uruchomienia aplikacji na urządzenia lub emulatora (na przykład `cordova run ios --target="iPhone-6"`).
 
-Za pomocą **cordova run --help** Zobacz dodatkowe budować i uruchamiać opcji.
+Umożliwia także **cordova uruchomić--Pomoc** Zobacz dodatkowe budować i uruchamiać opcji.
 
-## Otwieranie projektu w SDK
+## Otwórz projekt w SDK
 
 Po platformie ios jest dodawany do projektu, można otworzyć go w Xcode. Kliknij dwukrotnie, aby otworzyć plik `hello/platforms/ios/hello.xcodeproj` . Ekran powinien wyglądać tak:
 
 ![][6]
 
- [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
+ [6]: img/guide/platforms/ios/helloworld_project.png
 
-## Uruchamianie na emulatorze
+## Wdrażanie do emulatora
 
 Aby wyświetlić podgląd aplikacji w emulatorze iOS:
 
@@ -106,25 +106,25 @@ Aby wyświetlić podgląd aplikacji w emulatorze iOS:
 2.  Wybierz aplikację **Witaj** w panelu po prawej stronie.
 
 3.  Wybierz urządzenie przeznaczone z paska menu **programu** , takich jak iPhone symulator 6.0 jako wyróżnione tu:
-
+    
     ![][7]
 
 4.  Naciśnij przycisk **Uruchom** , który pojawia się w tych samych narzędzi po lewej stronie **systemu**. Który tworzy, wdraża i uruchamia aplikację w emulatorze. Stosowanie oddzielnych emulatora otwiera do wyświetlania aplikacji:
-
+    
     ![][8]
-
+    
     Tylko jeden emulatora może działać w czasie, więc jeśli chcesz przetestować aplikację w inny emulator, musisz zamknąć aplikację emulatora i uruchomić inny cel w Xcode.
 
- [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
- [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode jest dostarczany z emulatorów dla najnowszej wersji iPhone i iPad. Starsze wersje mogą być dostępne z **Xcode → preferencje → pobieranie składników →** panelu.
 
-## Uruchamianie na urządzeniu
+## Wdrażanie do urządzenia
 
-Szczegółowe informacje na temat różnych wymagań, aby wdrożyć urządzenie odnoszą się do sekcji *konfiguracji rozwoju i dystrybucji majątku* firmy Apple [Narzędzia pracy poradnik dla iOS][9]. Krótko mówiąc trzeba wykonać następujące czynności przed wdrożeniem:
+Szczegółowe informacje na temat różnych wymagań aby wdrożyć urządzenie odnoszą się do sekcji *Uruchomić twój aplikacja na urządzenia* firmy Apple [O przepływy dystrybucji aplikacji][9]. Krótko mówiąc trzeba wykonać następujące czynności przed wdrożeniem:
 
- [9]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
 1.  Dołącz do Apple iOS Developer Program.
 
@@ -151,7 +151,7 @@ Aby wdrożyć urządzenie:
 Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które uruchamia aplikację z niestandardowego adresu URL. Chociaż mechanizm ładowania z niestandardowy adres URL został zmieniony, ten kod jest nadal obecny do tyłu funkcjonalność dla aplikacji utworzonych w starszych wersjach Cordova. Aplikacja przykładowej nie używać tej funkcji, więc te ostrzeżenia, mogą być ignorowane. Aby zapobiec te ostrzeżenia wyświetlane, należy usunąć kod, który odwołuje się do invokeString przestarzałe API:
 
 *   Edytuj plik *Classes/MainViewController.m* , otoczyć w następującym fragmencie kodu z `/*` i `*/` komentarzy jak pokazano poniżej, a następnie wpisz **polecenia s** , aby zapisać plik:
-
+    
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
@@ -165,15 +165,15 @@ Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które urucha
         */
         // Black base color for background matches the native apps
         theWebView.backgroundColor = [UIColor blackColor];
-
+        
         return [super webViewDidFinishLoad:theWebView];
         }
-
+        
 
 *   Edytuj plik *Classes/AppViewDelegate.m* , komentarz na zewnątrz ten kolejne specjalność wstawiając podwójny ukośnik, jak pokazano poniżej, a następnie wpisz **polecenie s** , aby zapisać plik:
-
+    
         //self.viewController.invokeString = invokeString;
-
+        
 
 *   Naciśnij **b polecenie** Odbuduj projekt i wyeliminowania ostrzeżenia.
 
@@ -184,10 +184,10 @@ Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które urucha
 1.  Wybierz **Xcode → preferencje → lokalizacje**.
 
 2.  W sekcji **Uzyskanych danych** naciśnij przycisk **Zaawansowane** i wybierz **unikatowy** jako **Miejsce budowy** , jak pokazano poniżej:
-
+    
     ![][11]
 
- [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
+ [11]: img/guide/platforms/ios/xcode_build_location.png
 
 Jest to ustawienie domyślne dla nowych Xcode zainstalować, ale może być zestaw, inaczej po uaktualnienie ze starszej wersji Xcode.
 
@@ -197,18 +197,19 @@ Aby uzyskać więcej informacji zajrzyj do dokumentacji firmy Apple:
 
 *   [Centrum Państwa Strona][13] zawiera linki do kilku iOS zasobów technicznych, w tym zasobów technicznych, obsługi portalu, dystrybucja przewodników i fora.
 
-*   [Narzędzia pracy poradnik dla iOS][9]
+*   [Narzędzia pracy poradnik dla iOS][14]
 
-*   [Podręcznik użytkownika Xcode][14]
+*   [Podręcznik użytkownika Xcode][15]
 
-*   [Sesja wideo][15] z konferencji dewelopera szerokim świecie Apple 2012 (WWDC2012)
+*   [Sesja wideo][16] z konferencji dewelopera szerokim świecie Apple 2012 (WWDC2012)
 
-*   [Xcode wybierz polecenie][16], które pomaga określić poprawną wersję Xcode, jeśli więcej niż jeden jest zainstalowany.
+*   [Xcode wybierz polecenie][17], które pomaga określić poprawną wersję Xcode, jeśli więcej niż jeden jest zainstalowany.
 
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
- [14]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
- [15]: https://developer.apple.com/videos/wwdc/2012/
- [16]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
+ [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [16]: https://developer.apple.com/videos/wwdc/2012/
+ [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 
 (Mac ® OS X ®, Xcode ®, Apple ® App Store℠, iPad ®, iPhone ®, iPoda ® i Finder ® są znakami towarowymi firmy Apple Inc)

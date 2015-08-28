@@ -199,6 +199,10 @@ Ora che abbiamo un plugin di lavoro, abbiamo bisogno di rivedere la definizione 
 
 Ecco, ora avete un plugin distribuibile che puoi condividere con il mondo! Una cosa da notare, solo recentemente è stato aggiunto il supporto per l'aggiunta di quadri al progetto Windows Cordova quindi sarà necessario assicurarsi che il vostro cordova utensileria corrente. Cordova-cli e cordova-plugman entrambi supportano l'aggiunta rimozione plugin backup nativo.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-https://github.com/purplecabbage/Cordova-runtimecomp-echoplug
+o
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

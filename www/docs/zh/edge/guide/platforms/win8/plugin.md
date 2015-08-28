@@ -199,6 +199,10 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
 
 就是這樣，你現在有一個可分發的外掛程式，你可以與世界分享 ！ 要注意，將框架添加到 Windows 科爾多瓦專案支援最近才加入，所以您將需要確保模具當前你科爾多瓦的一件事。 科爾多瓦 cli 和科爾多瓦 plugman 支援添加刪除本機支援的外掛程式。
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-HTTPs://github.com/purplecabbage/cordova-runtimecomp-echoplug
+或
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

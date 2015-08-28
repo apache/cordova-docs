@@ -104,13 +104,14 @@ BlackBerry 10 Verwendung von Platzhaltern unterscheidet sich von anderen Plattfo
     
     Geben Sie Zugriff auf alle Domänen, einschließlich lokalen `file://` Protokoll an:
     
-    <access origin="*" subdomains="true" />
+        <access origin="*" subdomains="true" />
+        
 
 (Weitere Informationen zum Support finden Sie BlackBerry Dokumentation auf dem [Access-element][9].)
 
  [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## Firefox OS
+## Firefox-OS
 
 In Firefox-OS gibt es kein Konzept für Whitelisting eine bestimmte Domäne. Stattdessen gibt es eine Ausnahmegenehmigung, genannt [SystemXHR][10]. Besteht die Notwendigkeit dieser Berechtigung `"config.xml"` hinzu:
 

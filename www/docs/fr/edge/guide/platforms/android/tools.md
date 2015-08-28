@@ -73,9 +73,21 @@ Assurez-vous que vous créez au moins un Android Virtual Device, autrement vous 
 
 Vous pouvez consulter Android app signature exigences ici : http://developer.android.com/tools/publishing/app-signing.html
 
-Pour signer une application, vous devez les paramètres suivants: * Keystore (`--keystore`): chemin d'accès à un fichier binaire qui peut contenir un jeu de clés. * Keystore password (`--storePassword`): mot de passe pour le fichier de clés * Alias (`--alias`): l'id en spécifiant la clé privée utilisée pour le chant. * Mot de passe (`--password`): mot de passe de clé privée spécifié. * Type du keystore (`--keystoreType`): pkcs12, jks (par défaut : détection automatique basée sur l'extension de fichier) ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `build` ou `run` des scripts.
+Pour signer une application, vous devez les paramètres suivants :
 
-Alternativement, vous pouvez spécifier les dans un fichier (build.json) de configuration de build à l'aide (`--buildConfig`) argument. Voici un exemple de fichier de configuration de génération :
+*   Keystore (`--keystore`): chemin d'accès à un fichier binaire qui peut contenir un jeu de clés.
+
+*   Keystore password (`--storePassword`): mot de passe pour le fichier de clés
+
+*   Alias (`--alias`): l'id spécifiant la clé privée utilisée pour le chant.
+
+*   Mot de passe (`--password`): mot de passe de clé privée spécifié.
+
+*   Type du keystore (`--keystoreType`): pkcs12, jks (par défaut : détection automatique basée sur l'extension de fichier)
+
+Ces paramètres peuvent être spécifiés en utilisant les arguments de ligne de commande ci-dessus à `construire` ou `exécuter` des scripts.
+
+Alternativement, vous pouvez spécifier les dans un fichier (build.json) de configuration de build à l'aide ( `--buildConfig` ) argument. Voici un exemple de fichier de configuration de génération :
 
     {
          "android": {
@@ -99,7 +111,7 @@ Alternativement, vous pouvez spécifier les dans un fichier (build.json) de conf
 
 Pour la version signature, mots de passe ne peuvent être exclus et le système de génération attribuera une invite vous demandant le mot de passe.
 
-Il y a aussi des soutien à mélanger et assortir les arguments de ligne de commande et les paramètres dans le fichier build.json. Les valeurs des ligne de commande arguments obtiendrez priorité. Cela peut être utile pour spécifier des mots de passe sur la ligne de commande.
+Il y a aussi des soutien à mélanger et assortir les arguments de ligne de commande et les paramètres dans le fichier build.json. Valeurs de l'argument de ligne de comamnd obtiendrez priorité. Cela peut être utile pour spécifier des mots de passe sur la ligne de commande.
 
 ## Exploitation forestière
 
@@ -129,15 +141,15 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
 
 *   **cdvBuildMultipleApks** (par défaut : false)
     
-    Si la valeur est, plusieurs fichiers APK seront générés : une par plate-forme native soutenue par des projets de bibliothèque (x 86, ARM, etc.). Cela peut être important si votre projet utilise des grandes bibliothèques natives, qui peuvent augmenter considérablement la taille de l'APK généré.
+    Si celui-ci est défini, les fichiers APK multiples seront générés : une par natif plate-forme prise en charge de projets de bibliothèques (x 86, ARM, etc.). Cela peut être important si votre projet utilise des grandes bibliothèques natives, qui peuvent augmenter considérablement la taille de l'APK généré.
     
-    Si ce n'est pas défini, alors un APK unique qui peut être utilisé sur tous les périphériques sera généré.
+    Si ce n'est pas défini, alors un APK unique qui peut être utilisé sur tous les appareils est généré.
 
 *   **cdvVersionCode**
     
     Substitue le versionCode situé dans `AndroidManifest.xml`
 
-*   **cdvReleaseSigningPropertiesFile** (par défaut : libération-signing.properties)
+*   **cdvReleaseSigningPropertiesFile** (par défaut : release-signing.properties)
     
     Chemin vers un fichier .properties qui contient les informations de signature pour diffusion immédiate s'appuie. Le fichier devrait ressembler à :
     
@@ -148,7 +160,7 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
         keyPassword=SECRET2
         
     
-    `storePassword` `keyPassword` sont optionnelle et sera demandé en cas d'omission.
+    `storePassword` et `keyPassword` sont facultatifs et vont demandera si omise.
 
 *   **cdvDebugSigningPropertiesFile** (par défaut : debug-signing.properties)
     
@@ -160,11 +172,11 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
 
 *   **cdvBuildToolsVersion**
     
-    Remplacer la valeur automatiquement détecté `android.buildToolsVersion`.
+    Substituer la valeur automatiquement détecté `android.buildToolsVersion` .
 
 *   **cdvCompileSdkVersion**
     
-    Remplacer la valeur automatiquement détecté `android.compileSdkVersion`.
+    Substituer la valeur automatiquement détecté `android.compileSdkVersion` .
 
 ### Extension build.gradle
 

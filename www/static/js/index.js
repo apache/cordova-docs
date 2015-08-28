@@ -96,6 +96,8 @@ function checkNotification() {
 }
 
 $(document).ready(function () {
+
+    // code for blog badge
     $('.adorner').each(function(i) {
         var blog_time = new Date($(this).attr('blogTime')).getTime();
         if(lastVisit != "" && blog_time > lastVisit) {
@@ -103,8 +105,41 @@ $(document).ready(function () {
         }
     });
     var new_blog_count = checkNotification();
-    if(new_blog_count) {
+    if (new_blog_count) {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
+    // code for copy text
+    var addCopyText = function(elementId, copyText) {
+        new ZeroClipboard(document.getElementById(elementId))
+            .on("copy", function(event) {
+                event.clipboardData.setData("text/plain", copyText);
+            });
+    }
+    addCopyText("copy-npm-install", "npm install -g cordova");
+    addCopyText("copy-cordova-create", "cordova create MyApp");
+    addCopyText("copy-cordova-platform-add", "cd MyApp\ncordova platform add browser");
+    addCopyText("copy-cordova-run", "cordova run browser");
+
+    // Smooth scroll to anchor links
+    $("a[href^='#']").on('click', function(e) {
+
+        // prevent default anchor click behavior
+        console.log('Scrolled to where you asked');
+        e.preventDefault();
+
+        // store hash
+        var hash = this.hash;
+        var LINK_OFFSET = 20; // in pt
+
+        // animate
+        $('html, body').animate(
+            {scrollTop: $(hash).offset().top - LINK_OFFSET},
+            300,
+            function () {
+                // when done, add hash to url (default click behaviour)
+                window.location.hash = hash;
+            }
+        );
+    });
 });

@@ -135,12 +135,12 @@ Tip: It is possible on Android Nexus devices to easily flash different versions 
 
 Debugging Cordova requires some setup. Unlike a desktop application, you can't simply open dev tools on your mobile device and start debugging, luckily there are some great alternatives.
 
-##iOS Debugging
+## iOS Debugging
 
-###Xcode
+### Xcode
 With Xcode you can debug the iOS native side of your Cordova application. Make sure the Debug Area is showing (View -> Debug Area). Once your app is running on the device (or simulator), you can view log output in the debug area. This is where any errors or warnings will print. You can also set breakpoints within the source files. This will allow you to step through the code one line at a time and view the state of the variables at that time. The state of the variables is shown in the debug area when a breakpoint is hit. Once your app is up and running on the device, you can bring up Safari's web inspector (as described below) to debug the webview and js side of your application. For more details and help, see the Xcode guide: [Xcode Debugging Guide](https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1)
 
-###Safari Remote Debugging with Web Inspector
+### Safari Remote Debugging with Web Inspector
 With Safari's web inspector you can debug the webview and js code in your Cordova application. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. Like Xcode, with Safari's web inspector you can set breakpoints in the JavaScript code and view the state of the variables at that time. You can view any errors, warnings or messages that are printed to the console. You can also run JavaScript commands directly from the console as your app is running. For more details on how to set it up and what you can do, see this excellent blog post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/) and this guide: [Safari Web Inspector Guide](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)
 
 ## Chrome Remote Debugging
@@ -210,7 +210,7 @@ The following links are the best places to get help for Cordova:
 * StackOverflow: [http://stackoverflow.com/questions/tagged/cordova](http://stackoverflow.com/questions/tagged/cordova)
 By using the Cordova tag, you can view and browse all Cordova questions. Note that StackOverflow automatically converts the "Phonegap" tag to "Cordova", so this way you will be able to access historical questions as well
 * PhoneGap Google Group: [https://groups.google.com/forum/#!forum/phonegap](https://groups.google.com/forum/#!forum/phonegap)
-This Google Group was the old support forum for when Cordova was still called PhoneGap. While there are still a lot of Cordova users that frequent this group, the Cordova community has expressed an interest in focusing less on this group and instead using StackOverflow for support
+This Google Group was the old support forum when Cordova was still called PhoneGap. While there are still a lot of Cordova users that frequently visit this group, the Cordova community has expressed an interest in focusing less on this group and instead using StackOverflow for support
 * Meetup: [http://phonegap.meetup.com](http://phonegap.meetup.com) - 
 Consider finding a local Cordova/PhoneGap meetup group
 

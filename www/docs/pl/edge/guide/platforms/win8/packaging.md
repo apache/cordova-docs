@@ -85,7 +85,7 @@ Po uruchomieniu makecert po raz pierwszy, wpisz hasło prywatnego na ekranie, kt
 
 ![](img/guide/platforms/win8/createprivatekeywindow.png)
 
-Gdy tworzony jest plik pvk i cer, musimy utworzyć plik pfx z tych świadectw. Plik pfx (Personal Exchange Format) zawiera szeroką gamę informacji kryptograficznych, świadectw, certyfikatów głównych władz, łańcuchów certyfikatów i kluczy prywatnych. Do pakietu certyfikatów, będziemy używać narzędzie o nazwie [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). To narzędzie jest dostarczany z Windows SDK i można znaleźć pod `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x64` lub `%ProgramFiles(x86) %\Windows Kits\8.1\bin\x86`.
+Gdy tworzony jest plik pvk i cer, musimy utworzyć plik pfx z tych świadectw. Plik pfx (Personal Exchange Format) zawiera szeroką gamę informacji kryptograficznych, świadectw, certyfikatów głównych władz, łańcuchów certyfikatów i kluczy prywatnych. Do pakietu certyfikatów, będziemy używać narzędzie o nazwie [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). To narzędzie jest dostarczany z Windows SDK i można znaleźć pod `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` lub`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 
 `pvk2pfx -pvk FakeCorp.com.pvk -pi pvkPassword -spc FakeCorp.com.cer -pfx FakeCorp.com.pfx -po pfxPassword`
 

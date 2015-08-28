@@ -199,6 +199,10 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom"); 우리의 echopluginPr
 
 즉, 이제는 세계와 공유할 수 있습니다 배포할 플러그인 있다! 한 가지 주의할 점은, 현재 공구 당신의 코르도바 있는지 확인 해야 합니다 그래서 Windows 코르도바 프로젝트에 프레임 워크를 추가 하기 위한 지원만 최근에 추가 되었습니다. 코르 도우 바 cli 및 코르도바 plugman 네이티브 백업된 플러그인 제거 추가 지원.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
+
+또는
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/cordova-runtimecomp-echoplug

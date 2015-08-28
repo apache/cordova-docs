@@ -130,7 +130,7 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
         
     
-    IOS とブラックベリーに適用されます。
+    ブラックベリーに適用されます。
 
 *   `orientation`(文字列、既定値を `既定値`): 方向をロックし、インターフェイスから回転の向きの変更に応答しないようにすることができます。 可能な値は、`default`、`landscape` または `portrait` です。 例:
     

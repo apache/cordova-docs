@@ -199,6 +199,10 @@ Jetzt, da wir eine Plugin arbeiten, müssen wir die Plugin-Definition von frühe
 
 Das ist es, Sie haben jetzt eine verteilbare Plugin, die Sie mit der Welt teilen können! Folgendes ist zu beachten, Unterstützung für das Hinzufügen von Rahmen zu Windows-Cordova-Projekt erst kürzlich hinzugefügt wurde, müssen Sie sicherstellen, dass Ihre aktuellen Werkzeugmaschinen Cordova. Cordova-Cli und Cordova-Plugman unterstützt hinzufügen, Entfernen von native unterstützt Plugins.
 
-> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
+> cordova plugin add com.risingj.echoplugin
 
-https://github.com/purplecabbage/Cordova-runtimecomp-echoplug
+oder
+
+> plugman install --platform windows --plugin com.risingj.echoplugin --project .
+
+https://github.com/purplecabbage/cordova-runtimecomp-echoplug

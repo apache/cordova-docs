@@ -55,14 +55,15 @@ Sie finden weitere Informationen zum Signieren, Verteilung von iOS apps, Erstell
 
  [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
 
-Die app in Cordova Signieren benötigen Sie das folgende: * Code Signaturidentität (`--odeSignIdentity`): [Verwendung von XCode][3] können Sie erstellen eine neue iOS Signaturidentität und fügen Sie es Ihrem Schlüsselbund. Der Typ des von dem Code signing-Identität - in der Regel Vertrieb oder Entwicklung, muss hier angegeben werden.
+Um die app in Cordova anzumelden, benötigen Sie Folgendes:
 
- [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+*   Code signing-Identität (`--codeSignIdentity`): [Verwendung von XCode][3] können Sie erstellen eine neue iOS Signaturidentität und fügen Sie es Ihrem Schlüsselbund. Der Typ des von dem Code signing-Identität - in der Regel Vertrieb oder Entwicklung, muss hier angegeben werden.
 
 *   Bereitstellung von Profil (`--provisioningProfile`): [Verwenden des Apple-Mitglied erhalten][4] Sie können ein Bereitstellung-Profil erstellen. Herunterladen Sie das Bereitstellung Profil auf Ihren Rechner und starten Sie es in XCode zu registrieren. Es wird hier auf Ihrem Mac kopiert: ~/Library/MobileDevice/Provisioning\ Profile /. Es in einem Text-Editor öffnen, finden Sie die UUID muss hier angegeben werden.
 
 *   Code signing-Ressource-Regeln (`--codeSignResourceRules`) (Optional): können Sie benutzerdefinierte Ressource Zeichnungsrechten angeben.
 
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
  [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Diese Parameter können mithilfe der Befehlszeilenargumente oben zu `build` oder `run` von Skripts angegeben werden:

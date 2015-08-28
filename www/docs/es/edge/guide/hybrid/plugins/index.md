@@ -145,16 +145,30 @@ La plataforma Tizen no admite plugins.
 
 ## Editorial Plugins
 
-Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puedes publicar tu extensión en el [registry][1] de Cordova (basado en [`npmjs`][4]) o en cualquier otro registro basado en `npmjs`. Otros desarrolladores pueden instalar automáticamente usando ya sea `plugman` o la CLI Cordova. (Para más detalles sobre cada camino hacia el desarrollo, véase utilizando Plugman para gestionar Plugins y la interfaz de línea de comandos).
+Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puedes publicar tu plugin a cualquier `npmjs` -base de registro, pero el recomendado es el [registro de la nueva gestión pública][4]. Lea nuestro [editorial plugins guía del MNP][5].
 
- [4]: https://github.com/isaacs/npmjs.org
+ [4]: https://www.npmjs.com
+ [5]: http://plugins.cordova.io/npm/developers.html
 
-Para publicar un plugin es necesario utilizar la `plugman` de la herramienta y seguir los siguientes pasos:
+**Nota**: [registro de plugin de Córdoba][6] se está moviendo a un estado de sólo lectura. `publish`/ `unpublish` se han eliminado los comandos de `plugman` , así que necesitarás usar correspondiente `npm` comandos.
 
-    $ plugman adduser # that is if you don't have an account yet
-    $ plugman publish /path/to/your/plugin
+ [6]: https://plugins.cordova.io
+
+Otros desarrolladores pueden instalar el plugin automáticamente mediante `plugman` o CLI Cordova. (Para más detalles sobre cada paso del desarrollo, ver Plugman utilizando para administrar Plugins y la interfaz de línea de comandos).
+
+Para publicar un plugin para registro de MNP necesita seguir los siguientes pasos:
+
+*   crear `package.json` archivo de tu plugin:
     
+        $ plugman createpackagejson /path/to/your/plugin
+        
+
+*   publicarla:
+    
+        $ npm adduser # that is if you don't have an account yet
+        $ npm publish /path/to/your/plugin
+        
 
 Eso es todo!
 
-Ejecutando `plugman --help` enumera otros comandos disponibles basados en el registro.
+Ejecutando `plugman --help` enumera otros basados en el registro de los comandos disponibles.

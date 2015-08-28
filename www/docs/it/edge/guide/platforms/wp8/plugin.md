@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 8 plugin
 
-In questa sezione vengono fornite informazioni dettagliate per come implementare il codice plugin nativo sulla piattaforma Windows Phone. Prima di leggere questo, vedere la guida allo sviluppo di Plugin per una panoramica della struttura del plugin e la sua interfaccia JavaScript comune. Questa sezione continua a dimostrare il plugin di esempio *eco* che comunica da Cordova webview alla piattaforma nativa e ritorno.
+In questa sezione vengono fornite informazioni dettagliate per come implementare il codice plugin nativo sulla piattaforma Windows Phone. Prima di leggere questo, vedere la Guida allo sviluppo di Plugin per una panoramica della struttura del plugin e la sua interfaccia JavaScript comune. Questa sezione continua a dimostrare il plugin di esempio *eco* che comunica da Cordova webview alla piattaforma nativa e ritorno.
 
 Scrivere un plugin per Cordova su Windows Phone richiede una conoscenza base dell'architettura di Cordova. Cordova-WP8 consiste di un `WebBrowser` che ospita il codice dell'applicazione JavaScript e gestisce le chiamate API native. È possibile estendere un C# `BaseCommand` classe ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), che viene fornito con la maggior parte delle funzionalità necessarie:
 

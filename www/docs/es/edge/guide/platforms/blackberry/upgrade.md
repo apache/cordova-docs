@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Actualizar BlackBerry
 
-Esta guía le muestra cómo modificar los proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. Estas instrucciones son aplicables a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
+Esta guía le muestra cómo modificar los proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. Estas instrucciones son aplicables a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Ver la interfaz de línea de comandos para obtener información como actualizar la versión de la CLI.
 
 ## Proyectos de modernización 2.8.0 a 2.9.0 magnetohidrodinámica
 
@@ -45,7 +45,7 @@ BlackBerry 10:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesita los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova.js` archivo.
 
@@ -83,7 +83,7 @@ BlackBerryOS/Playbook:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en la guía de herramientas de Shell de BlackBerry. Necesita los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova.js` archivo.
 
