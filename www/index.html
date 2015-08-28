@@ -75,7 +75,7 @@ permalink: /
         </div>
         <div class="col-md-7">
             <h2>Installing Cordova</h2>
-            <p>Cordova command-line runs on <a href="http://nodejs.org/">Node.js</a> and available on <a href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide_platforms_index.md.html#Platform%20Guides">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code></p>
+            <p>Cordova command-line runs on <a href="http://nodejs.org/">Node.js</a> and is available on <a href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide/platforms/">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code></p>
         </div>
         <div class="col-md-4">
             <div class="well_code">
@@ -153,10 +153,10 @@ permalink: /
                     <a href="{{ site.baseurl }}/docs/en/edge/">Read the docs</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/edge/guide/cli/">Add a Plugin</a>
+                    <a href="{{ site.baseurl }}/docs/en/edge/guide/cli/#add-plugin-features">Add a Plugin</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/en/edge/guide/cli/#add-plugin-features">Add Icons and Splash Screen</a>
+                    <a href="{{ site.baseurl }}/docs/en/edge/config_ref/images.html">Add Icons and Splash Screen</a>
                 </li>
                 <li>
                     <a href="{{ site.baseurl }}/docs/en/edge/config_ref/">Configure Your App</a>
@@ -202,46 +202,3 @@ permalink: /
 
 </div><!-- /container-fluid -->
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script>
-        //Smooth scroll to anchor links
-    	$("#navbar ul li a[href^='/#']").on('click', function(e) {
-		// prevent default anchor click behavior
-		console.log('Scrolled to where you asked');
-		e.preventDefault();
-
-		// store hash
-		var hash = this.hash;
-
-		// animate
-		$('html, body').animate({
-			scrollTop: $(hash).offset().top
-			}, 300, function(){
-
-			// when done, add hash to url
-			// (default click behaviour)
-			window.location.hash = hash;
-			});
-
-	});
-</script>
-<script src="{{site.baseurl}}/static/js/lib/ZeroClipboard.js"></script>
-<script>
-    var addCopyText = function(elementId, copyText) {
-        new ZeroClipboard(document.getElementById(elementId))
-            .on("copy", function(event) {
-                event.clipboardData.setData("text/plain", copyText);
-            });
-    }
-
-    addCopyText("copy-npm-install", "npm install -g cordova");
-    addCopyText("copy-cordova-create", "cordova create MyApp");
-    addCopyText("copy-cordova-platform-add", "cd MyApp\ncordova platform add browser");
-    addCopyText("copy-cordova-run", "cordova run browser");
-</script>

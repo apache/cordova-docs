@@ -1,4 +1,3 @@
-{% if site.data.tools | size > 0 %}
 <div class="container">
     <div class="row showcase_section_intro">
         <div class="col-md-12 text-center">
@@ -21,7 +20,7 @@
                     {% endif %}
                 </p>
                 <p>
-                    {{ tool.description | truncatewords:25 }}
+                    {{ tool.description | truncatewords:50 }}
                 </p>
             </div>
         </div>
@@ -30,19 +29,17 @@
     <div class="row"> <!-- Add yours or see more links -->
         <div class="col-sm-12">
             <div class="pull-right add_seemore_links">
-                <a href="#">Add your tool</a>
+                <a href="https://github.com/apache/cordova-docs/#adding-a-tool-or-a-sample-app">Add your tool</a>
             </div>
         </div>
     </div>
 </div>
-{% endif %}
 
-{% if site.data.sample-apps | size > 0 %}
 <div class="container">
     <div class="row showcase_section_intro">
         <div class="col-md-12 text-center">
             <h1>Sample Cordova Apps</h1>
-            <h2>See examples how to access native device APIs and more</h2>
+            <h2>See examples of how to access native device APIs and more</h2>
         </div>
     </div>
     <div class="row cordova_tools_gallery">
@@ -67,7 +64,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="pull-right add_seemore_links">
-                <a href="#">Add your app</a>
+                <a href="https://github.com/apache/cordova-docs/#adding-a-tool-or-a-sample-app">Add your app</a>
             </div>
         </div>
     </div>
@@ -77,4 +74,3 @@
         </p>
     </div>
 </div>
-{% endif %}
