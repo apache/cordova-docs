@@ -130,11 +130,10 @@ $(document).ready(function () {
 
         // store hash
         var hash = this.hash;
-        var LINK_OFFSET = 20; // in pt
 
         // animate
         $('html, body').animate(
-            {scrollTop: $(hash).offset().top - LINK_OFFSET},
+            {scrollTop: $(hash).offset().top},
             300,
             function () {
                 // when done, add hash to url (default click behaviour)
