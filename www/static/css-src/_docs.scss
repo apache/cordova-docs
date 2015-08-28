@@ -70,3 +70,42 @@
 .missing-version {
     color: gray !important;
 }
+
+/* Formatting for compatibility table in docs */
+.compat {
+    td {
+        text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+        padding:2px;
+    }
+
+    th {
+        text-align: center;
+    }
+
+    /* Not compataible (pink with X) */
+    .n::before {
+        margin-right: 5px;
+        content: "\2718";
+    }
+    .n {
+        background-color: pink;
+        margin-right: 5px;
+    }
+
+    /* Is compataible (green with check) */
+    .y::before {
+        margin-right: 5px;
+        content: "\2714";
+    }
+    .y {
+        background-color: lightgreen;
+    }
+
+    /* Partially compataible */
+    .p {
+        background-color: khaki;
+    }
+}
