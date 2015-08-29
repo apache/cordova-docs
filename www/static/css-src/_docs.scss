@@ -39,22 +39,34 @@
 .content-header {
     text-align: right;
     margin-top: 22px;
-    .alert { 
+    .alert {
         text-align:left;
     }
 }
+.toc-dropdown {
+    text-align: center;
+    width: 100%;
+    .dropdown {
+        width: inherit;
+        button {
+            width: inherit;
+        }
+    }
+}
 .alert.alert-warning.alert-dismissible {
-    margin-top:15px;
+    margin-top: 15px;
 }
-.content-header .dropdown {
+.dropdown {
     display: inline-block;
-    margin-left: 0.3em;
+    &:not(:last-child) {
+        margin-right: 0.3em;
+    }
 }
-.content-header .dropdown .selected {
+.dropdown .selected {
     font-weight: bold;
     font-style: italic;
 }
-.content-header .dropdown button.dropdown-toggle {
+.dropdown button.dropdown-toggle {
     border-radius: 4px;
     background-color: rgb(214, 214, 214);
     &:hover {
@@ -62,8 +74,8 @@
     }
 }
 .content-header .edit {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 /* missing version highlight */
@@ -71,7 +83,7 @@
     color: gray !important;
 }
 
-/* Formatting for compatibility table in docs */
+/* Formatting for compatibility table on plugin docs page */
 .compat {
     td {
         text-align: center;

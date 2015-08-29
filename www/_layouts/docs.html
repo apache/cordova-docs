@@ -4,21 +4,20 @@ docs_tab: true
 analytics_id: UA-64283057-1
 ---
 
+<!-- Use the manual ToC, and if it doesn't exist, use the generated one -->
+{% assign toc_dir = site.data.toc %}
+{% if toc_dir.[page.manual_toc] %}
+    {% assign tocfile = toc_dir.[page.manual_toc] %}
+{% else %}
+    {% assign tocfile = toc_dir.[page.generated_toc] %}
+{% endif %}
+
 <div class="container">
 
     <!-- Table of Contents -->
-    <div class="col-xs-3 site-toc-container">
+    <div class="hidden-xs hidden-sm col-md-3 site-toc-container">
         <h2 class="site-toc-title">{{ page.toc_text }}</h2>
         <ul class="site-toc">
-
-            <!-- Use the manual ToC, and if it doesn't exist, use the generated one -->
-            {% assign toc_dir = site.data.toc %}
-            {% if toc_dir.[page.manual_toc] %}
-                {% assign tocfile = toc_dir.[page.manual_toc] %}
-            {% else %}
-                {% assign tocfile = toc_dir.[page.generated_toc] %}
-            {% endif %}
-
             {% for entry in tocfile %}
             <li>
                 <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
@@ -35,8 +34,33 @@ analytics_id: UA-64283057-1
     </div>
 
     <!-- Page content -->
-    <div id="page-toc-source" class="col-xs-8 col-xs-offset-1">
-        <div class="row content-header">
+    <div id="page-toc-source" class="col-md-8 col-md-offset-1">
+
+        <!-- ToC Dropdown (for XS and SM sizes only) -->
+        <div class="toc-dropdown content-header visible-xs-block visible-sm-block">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{ page.toc_text }}
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    {% for entry in tocfile %}
+                    <li>
+                        <a class="{% if page.url == entry.url %}this-page{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+                            {% if page.url == entry.url %}
+                                <em>{{ entry.name }}</em>
+                            {% else %}
+                                {{ entry.name }}
+                                <!-- DEBUG: {{ page.url }} != {{ entry.url }} -->
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-header">
 
             <a class="edit" href="{{ site.repo.uri }}/tree/{{ site.repo.branch }}/www/{{ page.path }}">
                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
@@ -91,7 +115,7 @@ analytics_id: UA-64283057-1
             <!-- Version dropdown -->
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Version {{ page.version }}
+                    {{ page.version }}
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="versionDropdown">
@@ -119,19 +143,18 @@ analytics_id: UA-64283057-1
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <!-- Show warning if this version isn't the latest -->
-            {% if page.version != 'edge' %}
-            <a href="{{ site.baseurl }}{{ page.url | replace:page.version,'edge' }}">
-                <div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Warning!</strong> {{ page.not_latest_warning_text }}
-                </div>
-            </a>
-            {% endif %}
-        </div>
-        <div class="row">
-            {{ content }}
-        </div>
+
+        <!-- Show warning if this version isn't the latest -->
+        {% if page.version != 'edge' %}
+        <a href="{{ site.baseurl }}{{ page.url | replace:page.version,'edge' }}">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> {{ page.not_latest_warning_text }}
+            </div>
+        </a>
+        {% endif %}
+
+        {{ content }}
+
     </div>
 </div>
