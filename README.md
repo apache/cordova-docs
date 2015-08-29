@@ -119,38 +119,31 @@ To add an item to the **Codorva Tools** or **Sample Cordova Apps** sections on t
     1. Set the `image` field in the YAML file to be just the image file's *name*.
 1. Submit a GitHub pull request with the changes.
 
-Troubleshooting
-===============
-
-Ask for help on the IRC channel: #cordova on irc.freenode.net.
-
-***
-
 Writing a Blog Post
 ===================
 
 1. Pull down the latest website codebase for the current posts
 
-    git pull
+        git pull
 
 2. Create a new entry in the www/_posts directory.
 
 3. Use an earlier post an a template. Edit your md file to remove undesired markdown links. If there is a phrase in square brackets that isn't a CB-xxxx reference, escape it with backslashes. Otherwise, heruko might error out and fail to build all the html.
 
-    [CB-1234] \[iOS\] \[Camera\] add a whizzbang to the snarfblat
+        [CB-1234] \[iOS\] \[Camera\] add a whizzbang to the snarfblat
 
 4. Set a marker where the summary on the home page should stop displaying. Add the following html comment line to your md file at the desired cutoff point:
 
-    <!--more-->
+        <!--more-->
 
-5. In the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (i.e., "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
-    
-    date: 2014-09-22
-    categories: releases
+5. In the front matter of your blog entry, set the `date:` field to the desired date that you want to appear near the title. Be aware that the date (explicit here or implied via the filename) will be used to generate the relative path to this html file (e.g. "/announcements/2014/09/22/cordova-361.html"), as will the `categories:` front matter value.
 
-6. Run gulp link-bugs to linkify 
+        date: 2014-09-22
+        categories: announcements
 
-    gulp link-bugs
+6. Run gulp link-bugs to linkify
+
+        gulp link-bugs
 
 7. Preview it locally by running the site using gulp
 
@@ -163,7 +156,6 @@ _Announcements_ - releases, call for translators, etc
 _Core Content_ - If the content has to do with cordova-core, or publishing guides, etc., we should publish the full text directly on the cordova Blog (by whichever author), as-if written by the organization.
 
 _Linked Posts_ - If the content was written by a contributor and is worth curating for the whole community, but is not really core ie. non-core plugins, dev tips, research, opinion-pieces, statistics, etc., post a short description, perhaps adding a document-snippet, but then link to the externally hosted content, making it clearly not written by the organization.
-
 
 **Post guidelines:**
 
@@ -184,6 +176,7 @@ _Linked Posts_ - If the content was written by a contributor and is worth curati
 To get a summary of changes (and count the changes):
 
     for l in cordova-*; do ( cd $l ; git log --format="$(printf %30s $l) %s" --no-merges --since='1 week ago' ) ; done | grep -iv version | grep -v CHANGELOG > all_logs.txt
+
 To get the number of authors:
 
     for l in cordova-*; do ( cd $l ; git log --format="%an" --no-merges --since='1 week ago' ) ; done | sort | uniq | wc -l
@@ -206,3 +199,8 @@ To print the list of plugin versions tested:
 [nodejs]: https://nodejs.org/
 [install_pip]: https://pip.pypa.io/en/latest/installing.html
 [svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
+
+Troubleshooting
+===============
+
+Ask for help on the IRC channel: #cordova on irc.freenode.net.
