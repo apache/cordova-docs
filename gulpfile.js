@@ -19,6 +19,8 @@ var browserify = require("browserify");
 var reactify   = require("reactify");
 var uglify     = require("gulp-uglify");
 var envify     = require("envify");
+var htmllint   = require('gulp-htmllint');
+var crawler    = require('simplecrawler');
 
 // constants
 var CONFIG_FILES = ["_config.yml", "_defaults.yml"];
@@ -31,6 +33,7 @@ var WATCH_INTERVAL    = 1000; // in milliseconds
 var ROOT_DIR   = ".";
 var SOURCE_DIR = path.join(ROOT_DIR, "www");
 var DEV_DIR    = path.join(ROOT_DIR, "build-dev");
+var LINT_DIR    = path.join(DEV_DIR, "blog");
 var PROD_DIR   = path.join(ROOT_DIR, "build-prod");
 var BASE_URL   = "/use-the-force-luke";
 
@@ -245,6 +248,23 @@ gulp.task("default", ["watch"]);
 // convenience tasks
 gulp.task("link-bugs", function (done) {
     exec(bin("linkify-bugs.sh"), [path.join(SOURCE_DIR, "_posts")], done);
+});
+
+gulp.task('lint', function() {
+    return gulp.src(path.join(LINT_DIR, "**", "*.html"))
+        .pipe(htmllint());
+});
+
+gulp.task('checklinks', function(cb) {
+  crawler.crawl('http://localhost:3000/')
+    .on('fetch404', function(queueItem, response) {
+      gutil.log('Resource not found linked from ' +
+                      queueItem.referrer + ' to', queueItem.url);
+      gutil.log('Status code: ' + response.statusCode);
+    })
+    .on('complete', function(queueItem) {
+      cb();
+    });
 });
 
 gulp.task("clean", function () {
