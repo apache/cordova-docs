@@ -441,6 +441,9 @@ var App = React.createClass({
                     </div>
                 </div>
                 <PluginList plugins={this.state.searchResults} />
+                <div className="row plugin-search-credit">
+                    Search results powered by <a href="http://npmsearch.com/">npmsearch.com</a>
+                </div>
             </div>
         );
     }
