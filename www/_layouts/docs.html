@@ -149,7 +149,7 @@ analytics_id: UA-64283057-1
         <a href="{{ site.baseurl }}{{ page.url | replace:page.version,'edge' }}">
             <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Warning!</strong> {{ page.not_latest_warning_text }}
+                {{ page.not_latest_warning_text }}
             </div>
         </a>
         {% endif %}
