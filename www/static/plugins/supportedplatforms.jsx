@@ -5,14 +5,14 @@ var SupportedPlatforms = React.createClass({
     render: function() {
         var keywords = this.props.keywords;
         var sortedPlatforms = [
-            {present:false, icon: "android"},
-            {present:false, icon: "ios"},
-            {present:false, icon: "windows"},
-            {present:false, icon: "blackberry"},
-            {present:false, icon: "ubuntu"},
-            {present:false, icon: "firefox"},
-            {present:false, icon: "webos"},
-            {present:false, icon: "fireos"}
+            {present:false, icon: "android", alt:"Android"},
+            {present:false, icon: "ios", alt:"iOS"},
+            {present:false, icon: "windows", alt:"Windows"},
+            {present:false, icon: "blackberry", alt:"Blackberry"},
+            {present:false, icon: "ubuntu", alt:"Ubuntu"},
+            {present:false, icon: "firefox", alt:"FirefoxOS"},
+            {present:false, icon: "webos", alt:"webOS"},
+            {present:false, icon: "fireos", alt:"FireOS"}
         ];
 
         var platformsSupported = [];
@@ -58,7 +58,9 @@ var SupportedPlatforms = React.createClass({
 
         sortedPlatforms.forEach(function(platform) {
             if(platform.present) {
-                platformsSupported.push(<li><div className={platform.icon}></div></li>)
+                // Becuase these images are taken from a sprite sheet, we have
+                // to use title rather than alt-text
+                platformsSupported.push(<li><div className={platform.icon} title={platform.alt}></div></li>)
             }
         });
         return (
