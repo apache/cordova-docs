@@ -59,8 +59,14 @@ var Plugin = React.createClass({
 
         if(this.props.plugin) {
             copyIcon = (
-                <div data-toggle="tooltip" data-placement="left" title="Copy cordova plugin add command to clipboard">
-                    <img id={"copy-" + this.props.plugin.name} src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg" className="plugins-copy-to-clipboard"/>
+                <div>
+                    <img
+                        id={"copy-" + this.props.plugin.name}
+                        className="plugins-copy-to-clipboard"
+                        src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg"
+                        title="Copy cordova plugin add command to clipboard"
+                        data-toggle="tooltip"
+                        data-placement="left" />
                 </div>
             );
         }
@@ -96,6 +102,9 @@ var Plugin = React.createClass({
     },
     componentDidMount: function() {
         this.setClipboardText();
+        if(this.props.plugin) {
+            $(this.getDOMNode()).find(".plugins-copy-to-clipboard").tooltip();
+        }
     },
     componentDidUpdate: function() {
         this.setClipboardText();
