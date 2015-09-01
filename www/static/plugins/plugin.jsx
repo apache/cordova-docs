@@ -59,27 +59,27 @@ var Plugin = React.createClass({
 
         if(this.props.plugin) {
             copyIcon = (
-                <div>
                     <img
                         id={"copy-" + this.props.plugin.name}
                         className="plugins-copy-to-clipboard"
                         src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg"
                         title="Copy cordova plugin add command to clipboard"
                         data-toggle="tooltip"
-                        data-placement="left" />
-                </div>
+                        data-placement="auto" />
             );
         }
 
         return (
             <div className="container plugin-results-result">
-                {copyIcon}
                 <div className="row">
-                    <div className="col-sm-8">
+                    <div className="col-sm-8 col-xs-8">
                         <span>
                             <h2><a href={npmLink} onClick={trackOutboundLink.bind(this, npmLink)} target="_blank">{this.props.plugin.name}</a></h2>
                             <p className="version_and_author">v{this.props.plugin.version} by <strong>{this.props.plugin.author}</strong></p>
                         </span>
+                    </div>
+                    <div className="col-sm-4 col-xs-4">
+                        {copyIcon}
                     </div>
                 </div>
                 <div className="row">
