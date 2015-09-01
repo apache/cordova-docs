@@ -121,7 +121,7 @@ analytics_id: UA-64283057-1
                 <ul class="dropdown-menu" aria-labelledby="versionDropdown">
 
                     <!-- List versions available in this language -->
-                    {% for version in site.data.languages.[page.language].versions %}
+                    {% for version in site.data.languages.[page.language].versions reversed %}
                     <li>
 
                         <!--
