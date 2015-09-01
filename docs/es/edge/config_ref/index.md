@@ -154,23 +154,6 @@ A más de una plataforma, pero no a todos ellos se aplican las siguientes prefer
             <preference name="Orientation" value="all" />
         </platform>
         
-    
-    Para iOS, orientación se puede controlar mediante programación por definir un callback de javascript en la `window`:
-
-<pre>/** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## La *función de* elemento
 
 Si utilizas el CLI para construir aplicaciones, usted utilice el comando `plugin` para habilitar dispositivo APIs. No se modifique el archivo `config.xml` de nivel superior, por lo que el elemento `< feature >` no se aplica a su flujo de trabajo. Si trabajas directamente en un SDK y usando el archivo `config.xml` de específicas de la plataforma como fuente, se utiliza la etiqueta `< feature >` para habilitar APIs de nivel de dispositivo y plugins externos. A menudo aparecen con valores personalizados en archivos específicos para cada plataforma `config.xml` . Por ejemplo, aquí es cómo especificar el dispositivo API para los proyectos de Android:

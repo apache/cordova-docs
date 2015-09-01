@@ -154,23 +154,6 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
             <preference name="Orientation" value="all" />
         </platform>
         
-    
-    IOS에 대 한 방향은 프로그래밍 방식으로 `창`에 자바 스크립트 콜백을 정의 하 여 제어할 수 있습니다.
-
-<pre>/** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## *기능* 요소
 
 CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 설정 하려면 `플러그인` 명령을 사용 합니다. 이 `< 기능 >` 요소 워크플로에 적용 되지 않습니다 그래서 최상위 `config.xml` 파일을 수정 하지 않습니다. SDK 및 플랫폼 특정 `config.xml` 파일을 사용 하 여 원본으로에서 직접 작업 하는 경우 장치 수준 Api와 외부 플러그인을 사용 하려면 `< 기능 >` 태그를 사용 합니다. 그들은 종종 플랫폼 특정 `config.xml` 파일에서 사용자 지정 값으로 나타납니다. 예를 들어 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.

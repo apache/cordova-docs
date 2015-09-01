@@ -149,22 +149,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <preference name="Orientation" value="all" />
         </platform>
     
-    Для iOS ориентацией можно программно управлять путем определения функции обратного вызова javascript в объекте `window`:
-     <pre>
-     /** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Определяет допускается ли поворот.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## Элемент *feature*
 
 При использовании командной строки для построения приложений, используйте команду `plugin`, чтобы включить API устройства. Это не изменяет файл `config.xml` верхнего уровня, так что элемент `<feature>` не применяется к вашему рабочему процессу. Если вы работаете непосредственно в SDK и используете специфический для платформы файл `config.xml` в качестве источника, используйте `<feature>` тег, чтобы включить API устройства и внешних плагинов. Эти элементы обычно присутствуют с разными значениями в платформо-зависимых файлах `config.xml`. К примеру, таким образом можно указать Device API для проектов Android:
