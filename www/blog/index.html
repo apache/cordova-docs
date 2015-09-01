@@ -33,7 +33,13 @@ window.onload = function(){
                     <div>
                       <span class="date">{{ post.date | date_to_string }}</span>
                       <span> - by </span>
-                      <span class="author"><a href="{{ post.author.url }}">{{ post.author.name }}</a></span>
+                      <span class="author">
+                        {% if post.author.url %}
+                          <a href="{{ post.author.url }}">{{ post.author.name }}</a>
+                        {% else %}
+                          {{ post.author.name }}
+                        {% endif %}  
+                      </span>
                       <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
                     </div>
                   </div>
