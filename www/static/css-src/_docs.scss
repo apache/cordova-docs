@@ -22,6 +22,9 @@
 }
 
 /* inner ToC for the page */
+.page-toc ul {
+    padding: 0px;
+}
 .page-toc ul > li {
     padding: 0.5em 0em 0.5em 1em;
     font-size: 14px;
