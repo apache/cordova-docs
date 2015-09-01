@@ -39,19 +39,15 @@ var PluginList = React.createClass({
             var showMore = null, visiblePlugins = [];
             if (plugins.length - this.state.searchPage * PageExtensionLength > InitialPageLength) {
                 showMore =
-                    <div className="pluginCard" onClick={this.increaseSearchResults} style={{cursor: 'pointer'}}>
-                        <div style={{ display: 'table', width:100 + '%', minHeight: 5 + 'rem'}}>
-                            <div style={{ display: 'table-cell', verticalAlign: 'middle'}}>
-                                <div style={{textAlign: 'center'}}>Show More</div>
-                            </div>
-                        </div>
+                    <div className="plugin-results-show-more" onClick={this.increaseSearchResults}>
+                        Show More
                     </div>;
             }
 
             if (plugins.length === 0) {
                 return (
                     <div className="container plugins-results-container">
-                            No plugins found. Learn how to <a href="http://cordova.apache.org/docs/en/edge/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide">create one</a>
+                            No plugins found. Learn how to <a href="{{site.baseurl}}/docs/en/edge/guide/hybrid/plugins/index.html">create one</a>
                     </div>
                 );
             } else {

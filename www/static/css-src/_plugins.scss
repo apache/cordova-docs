@@ -101,7 +101,7 @@
 */
 
 .plugins-results-container {
-	margin-bottom:40px;
+	margin-bottom:20px;
 	padding:0;
 }
 
@@ -116,6 +116,12 @@
 	background-color:$gray-5;
 	position: relative;
 }
+
+.plugin-results-show-more {
+	text-align: center;
+	cursor:pointer;
+}
+
 .version_and_author {
 	display: inline-block;
 }
@@ -127,6 +133,11 @@
 	top:20px;
 	margin-right:10px;
 	cursor:pointer;
+}
+
+.plugin-search-credit {
+	margin-left: 0px;
+	margin-bottom: 5px;
 }
 
 @media (min-width: 767px) {

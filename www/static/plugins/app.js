@@ -415,7 +415,6 @@ var App = React.createClass({
                                     <ul className="nav nav-justified">
                                     <li><a href="{{ site.baseurl }}/plugins/authors.html"><span className="glyphicon glyphicon-plus"></span><i>&nbsp;</i>Contribute Plugins</a></li>
                                     <li><a href="{{ site.baseurl }}/plugins/faq.html"><span className="glyphicon glyphicon-question-sign"></span><i>&nbsp;</i>Plugin Help</a></li>
-                                    <li><a href="#"><span className="glyphicon glyphicon-alert"></span><i>&nbsp;</i>Plugin Issue Tracker</a></li>
                                     </ul>
                             </div>
                         </div>
@@ -442,6 +441,9 @@ var App = React.createClass({
                     </div>
                 </div>
                 <PluginList plugins={this.state.searchResults} />
+                <div className="row plugin-search-credit">
+                    Search results powered by <a href="http://npmsearch.com/">npmsearch.com</a>
+                </div>
             </div>
         );
     }
