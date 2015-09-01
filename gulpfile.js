@@ -33,7 +33,6 @@ var WATCH_INTERVAL    = 1000; // in milliseconds
 var ROOT_DIR   = ".";
 var SOURCE_DIR = path.join(ROOT_DIR, "www");
 var DEV_DIR    = path.join(ROOT_DIR, "build-dev");
-var LINT_DIR    = path.join(DEV_DIR, "blog");
 var PROD_DIR   = path.join(ROOT_DIR, "build-prod");
 var BASE_URL   = "/use-the-force-luke";
 
@@ -251,7 +250,7 @@ gulp.task("link-bugs", function (done) {
 });
 
 gulp.task('lint', function() {
-    return gulp.src(path.join(LINT_DIR, "**", "*.html"))
+    return gulp.src(path.join("./", "**", "*.html"))
         .pipe(htmllint());
 });
 
