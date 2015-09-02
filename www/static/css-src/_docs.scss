@@ -1,131 +1,133 @@
-.site-toc-title {
-    font-weight: 300;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-/* outer ToC for the site */
-.site-toc {
-    padding: 0px;
-}
-.site-toc li {
-    list-style: none;
-}
-.site-toc > li {
-    list-style: none;
-    font-size: 18px;
-    font-weight: 300;
-    padding: 0.5em 0em;
-}
-.site-toc > li .this-page {
-    font-weight: bold;
-}
-
-/* inner ToC for the page */
-.page-toc ul {
-    padding: 0px;
-}
-.page-toc ul > li {
-    padding: 0.5em 0em 0.5em 1em;
-    font-size: 14px;
-    border-left: 0.5em solid rgba($brand-primary, 0.5);
-}
-.page-toc ul > li.toc-active {
-    font-weight: bold;
-    border-left: 0.5em solid $brand-primary;
-}
-
-/* Quick fix to remove redundant TOC entries */
-.page-toc li:first-of-type {
-    display: none;
-}
-.page-toc li:nth-of-type(2) {
-    margin-top: 14px;
-}
-
-/* header above page content */
-.content-header {
-    text-align: right;
-    margin-top: 22px;
-    .alert {
-        text-align:left;
+.docs {
+    .site-toc-title {
+        font-weight: 300;
+        font-size: 22px;
+        text-transform: uppercase;
     }
-}
-.toc-dropdown {
-    text-align: center;
-    width: 100%;
-    .dropdown {
-        width: inherit;
-        button {
-            width: inherit;
+
+    /* outer ToC for the site */
+    .site-toc {
+        padding: 0px;
+    }
+    .site-toc li {
+        list-style: none;
+    }
+    .site-toc > li {
+        list-style: none;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 0.5em 0em;
+    }
+    .site-toc > li .this-page {
+        font-weight: bold;
+    }
+
+    /* inner ToC for the page */
+    .page-toc ul {
+        padding: 0px;
+    }
+    .page-toc ul > li {
+        padding: 0.5em 0em 0.5em 1em;
+        font-size: 14px;
+        border-left: 0.5em solid rgba($brand-primary, 0.5);
+    }
+    .page-toc ul > li.toc-active {
+        font-weight: bold;
+        border-left: 0.5em solid $brand-primary;
+    }
+
+    /* Quick fix to remove redundant TOC entries */
+    .page-toc li:first-of-type {
+        display: none;
+    }
+    .page-toc li:nth-of-type(2) {
+        margin-top: 14px;
+    }
+
+    /* header above page content */
+    .content-header {
+        text-align: right;
+        margin-top: 22px;
+        .alert {
+            text-align:left;
         }
     }
-}
-.alert.alert-warning.alert-dismissible {
-    margin-top: 15px;
-}
-.dropdown {
-    display: inline-block;
-    &:not(:last-child) {
-        margin-right: 0.3em;
-    }
-}
-.dropdown .selected {
-    font-weight: bold;
-    font-style: italic;
-}
-.dropdown button.dropdown-toggle {
-    border-radius: 4px;
-    background-color: rgb(214, 214, 214);
-    &:hover {
-        background-color: rgb(191, 191, 191);
-    }
-}
-.content-header .edit {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-}
-
-/* missing version highlight */
-.missing-version {
-    color: gray !important;
-}
-
-/* Formatting for compatibility table on plugin docs page */
-.compat {
-    td {
+    .toc-dropdown {
         text-align: center;
-        border-width: 2px;
-        border-style: solid;
-        border-color: white;
-        padding:2px;
+        width: 100%;
+        .dropdown {
+            width: inherit;
+            button {
+                width: inherit;
+            }
+        }
+    }
+    .alert.alert-warning.alert-dismissible {
+        margin-top: 15px;
+    }
+    .dropdown {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 0.3em;
+        }
+    }
+    .dropdown .selected {
+        font-weight: bold;
+        font-style: italic;
+    }
+    .dropdown button.dropdown-toggle {
+        border-radius: 4px;
+        background-color: rgb(214, 214, 214);
+        &:hover {
+            background-color: rgb(191, 191, 191);
+        }
+    }
+    .content-header .edit {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
     }
 
-    th {
-        text-align: center;
+    /* missing version highlight */
+    .missing-version {
+        color: gray !important;
     }
 
-    /* Not compataible (pink with X) */
-    .n::before {
-        margin-right: 5px;
-        content: "\2718";
-    }
-    .n {
-        background-color: pink;
-        margin-right: 5px;
-    }
+    /* Formatting for compatibility table on plugin docs page */
+    .compat {
+        td {
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+            border-color: white;
+            padding:2px;
+        }
 
-    /* Is compataible (green with check) */
-    .y::before {
-        margin-right: 5px;
-        content: "\2714";
-    }
-    .y {
-        background-color: lightgreen;
-    }
+        th {
+            text-align: center;
+        }
 
-    /* Partially compataible */
-    .p {
-        background-color: khaki;
+        /* Not compataible (pink with X) */
+        .n::before {
+            margin-right: 5px;
+            content: "\2718";
+        }
+        .n {
+            background-color: pink;
+            margin-right: 5px;
+        }
+
+        /* Is compataible (green with check) */
+        .y::before {
+            margin-right: 5px;
+            content: "\2714";
+        }
+        .y {
+            background-color: lightgreen;
+        }
+
+        /* Partially compataible */
+        .p {
+            background-color: khaki;
+        }
     }
 }

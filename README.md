@@ -104,18 +104,18 @@ Now, copy the `cordova-docs/build-prod/` directory to the corresponding director
 
 Finally, go into the cordova-website directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
 
-Adding a Tool or a Sample App
-=============================
+Adding a Tool or a Showcase App
+===============================
 
-To add an item to the **Codorva Tools** or **Sample Cordova Apps** sections on the main page, follow these steps:
+To add an item to the **Codorva Tools** or **Cordova App Showcase** sections on the main page, follow these steps:
 
 1. Change the section's YAML file:
     - `www/_data/tools.yml` for Cordova Tools, or
-    - `www/_data/sample-apps.yml` for Sample Cordova Apps.
+    - `www/_data/showcase-apps.yml` for Cordova App Showcase.
 1. Optionally add an image (the image must be **less than 256KiB** in size):
     1. Place the image it in the `img` directory:
         - `www/static/img/tools` for Cordova Tools, or
-        - `www/static/img/sample-apps` for Sample Cordova Apps.
+        - `www/static/img/showcase-apps` for Cordova App Showcase.
     1. Set the `image` field in the YAML file to be just the image file's *name*.
 1. Submit a GitHub pull request with the changes.
 

@@ -52,117 +52,6 @@ $scree-md-max: $screen-lg - 1;
   #{$property}: #{$argument};
 }
 
-.vertical-center-parent {
-	position: relative;
-	width:100%;
-	height:100%;
-	.vertical-center-child {
-		position:absolute;
-		top:50%;
-		left:50%;
-		transform:translate(-50%,-50%);
-	}
-}
-
-/*
-********* Getting Started ***********
-*/
-
-.number_circle {
-    display: inline-block;
-    width: 50px;
-	height:50px;
-    padding: 8px;
-    font-size: 24px;
-    color: #ffffff;
-    vertical-align: middle;
-    white-space: nowrap;
-    text-align: center;
-    background-color: $brand-primary-darker;
-    border-radius: 50%;
-	margin-top: 20px;
-}
-
-.well_code {
-	@extend .well;
-	padding-bottom:19px + 50px;
-	position:relative;
-	background-color: $gray-10;
-	margin-top:46px;
-	div {
-		@extend .well_code;
-		position: absolute;
-	    top: 100%;
-	    transform: translateY(-100%);
-	    padding: 0;
-		margin:0;
-		background-color: $gray-20;
-		width: 100%;
-		margin-left:-19px;
-		button {
-			background-color: $brand-primary;
-			margin:5px;
-		}
-	}
-}
-
-
-/*
-********* Showcase Section ***********
-*/
-.dark {
-	background-color: $gray-90;
-}
-.showcase_section_intro {
-    margin: auto;
-	float:none;
-    max-width: 700px;
-	h1 { color: $brand-gold; padding-bottom:0; }
-	h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
-	p, span { color: $gray-40; text-align: left; }
-    padding-top: 4px;
- 	padding-bottom: 35px;
-}
-
-.supported_platforms {
-	background-color: darken(white, 85%);
-    margin-left: -15px;
-    margin-right: -15px;
-}
-.platform_logos {
-	list-style-type: none;
-	padding-left:0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.cordova_tools_gallery {
-	color:white;
-	.card {
-			padding:8px;
-			.card_title {
-				color: $brand-primary;
-				font-weight: bold;
-			}
-			.card_inner {
-				background-color:darken(white, 85%);
-				padding: 32px 16px 32px 16px;
-			}
-			.sample_app_thumb {
-				background-color: #AD6E6E;
-                width: 100%;
-                height: 100px;
-			}
-			img {
-				height:50px;
-				padding-bottom:5px;
-			}
-		}
-}
-.add_seemore_links {
-	margin-top:10px;
-	a {	padding-left:30px; }
-}
-
 /* footer */
 footer {
     background-color: $gray-5;
@@ -191,7 +80,7 @@ footer .copyright_text {
 }
 
 /*
- * position anchirs of fragment links slightly above their targets
+ * position anchors of fragment links slightly above their targets
  */
 .fragment-anchor {
     display: block;
