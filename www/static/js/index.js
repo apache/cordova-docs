@@ -116,22 +116,23 @@ $(document).ready(function () {
 
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {
+        if(this.hash) {
+            // prevent default anchor click behavior
+            console.log('Scrolled to where you asked');
+            e.preventDefault();
 
-        // prevent default anchor click behavior
-        console.log('Scrolled to where you asked');
-        e.preventDefault();
+            // store hash
+            var hash = this.hash;
 
-        // store hash
-        var hash = this.hash;
-
-        // animate
-        $('html, body').animate(
-            {scrollTop: $(hash).offset().top},
-            300,
-            function () {
-                // when done, add hash to url (default click behaviour)
-                window.location.hash = hash;
-            }
-        );
+            // animate
+            $('html, body').animate(
+                {scrollTop: $(hash).offset().top},
+                300,
+                function () {
+                    // when done, add hash to url (default click behaviour)
+                    window.location.hash = hash;
+                }
+            );
+        }
     });
 });
