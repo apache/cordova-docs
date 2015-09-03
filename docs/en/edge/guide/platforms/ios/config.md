@@ -135,4 +135,12 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="OverrideUserAgent" value="My Browser" />
 
+- `target-device` (string, defaults to `universal`): Valid values are `handset`, `tablet`, `universal`
+  For targeting a specific device family.  This property maps directly to `TARGETED_DEVICE_FAMILY` 
+  in the xcode project.
+  Note that if you target `universal` (which is the default) you will need to supply screen shots for 
+  both iPhone and iPad or your app may be rejected.
+
+        <preference name="target-device" value="universal" />
+
 
