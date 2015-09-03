@@ -143,4 +143,10 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="target-device" value="universal" />
 
+- `deployment-target` (string, not set by default):
+  This sets the `IPHONEOS_DEPLOYMENT_TARGET` in the build, which ultimately tranlsates to the `MinimumOSVersion` in the ipa.
+  For more details please refer to Apple's documentation on 
+  [`Deployment Target Settings`](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
+
+        <preference name="deployment-target" value="7.0" />
 
