@@ -154,23 +154,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <preference name="Orientation" value="all" />
         </platform>
         
-    
-    IOS，通過`視窗`上定義 javascript 回檔可以以程式設計方式控制方向:
-
-<pre>/** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## *功能*元素
 
 如果你使用的 CLI 來構建應用程式，您將使用`外掛程式`命令來啟用設備的 Api。 這不修改頂級`config.xml`檔中，所以`< 功能 >`元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的`config.xml`檔作為源工作，你使用`< 功能 >`標記啟用設備級 Api 和外部外掛程式。 他們經常出現以特定于平臺的`config.xml`檔中的自訂值。 例如，下面是如何指定設備 API 為 Android 專案:

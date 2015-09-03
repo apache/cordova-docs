@@ -135,4 +135,18 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="OverrideUserAgent" value="My Browser" />
 
+- `target-device` (string, defaults to `universal`): Valid values are `handset`, `tablet`, `universal`
+  For targeting a specific device family.  This property maps directly to `TARGETED_DEVICE_FAMILY` 
+  in the xcode project.
+  Note that if you target `universal` (which is the default) you will need to supply screen shots for 
+  both iPhone and iPad or your app may be rejected.
+
+        <preference name="target-device" value="universal" />
+
+- `deployment-target` (string, not set by default):
+  This sets the `IPHONEOS_DEPLOYMENT_TARGET` in the build, which ultimately tranlsates to the `MinimumOSVersion` in the ipa.
+  For more details please refer to Apple's documentation on 
+  [`Deployment Target Settings`](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
+
+        <preference name="deployment-target" value="7.0" />
 

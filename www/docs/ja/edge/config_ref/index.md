@@ -154,23 +154,6 @@ Android と iOS の両方、iOS のため、2 番目のバージョン文字列 
             <preference name="Orientation" value="all" />
         </platform>
         
-    
-    IOS 用, 向きが`ウィンドウ`で javascript コールバックを定義することによってプログラムで制御できます。
-
-<pre>/** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## *機能*要素
 
 CLI を使用してアプリケーションを構築する場合は、デバイス Api を有効にする`プラグイン`コマンドを使用します。 これは`< feature >`要素は、ワークフローに適用されないのでトップレベルの`config.xml`ファイルを変更されません。 直接で、SDK とソースとしてプラットフォーム固有の`config.xml`ファイルを使用して作業する場合は、デバイス レベルの Api と外部プラグインを有効にする`< 機能 >`タグを使用します。 彼らはしばしばプラットフォーム固有の`config.xml`ファイルにカスタム値で表示されます。 たとえば、ここでは Android プロジェクトのデバイス API を指定する方法です。

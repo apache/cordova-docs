@@ -154,23 +154,6 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
             <preference name="Orientation" value="all" />
         </platform>
         
-    
-    Für iOS kann Orientierung programmgesteuert gesteuert werden, indem Sie einen Javascript-Rückruf für `window`definieren:
-
-<pre>/** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## Das *Feature* Element
 
 Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` -Befehl Gerät APIs zu aktivieren. Dies ändert nicht die Datei auf oberster Ebene `"config.xml"` , also das `<feature>` nicht für Ihren Workflow gilt. Wenn Sie direkt in ein SDK und mit der plattformspezifischen `config.xml` -Datei als Quelle arbeiten, verwenden Sie das Tag `<feature>` Geräteebene APIs und externe Plugins aktivieren. Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `"config.xml"` -Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:

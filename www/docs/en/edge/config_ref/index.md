@@ -194,22 +194,6 @@ all of them:
             <preference name="Orientation" value="all" />
         </platform>
 
-  For iOS, orientation can be programmatically controlled by defining a javascript callback on `window`:
-    <pre>
-    /** 
-     * @param {Number} degree 
-     *     UIInterfaceOrientationPortrait: 0, 
-     *     UIInterfaceOrientationLandscapeRight: 90, 
-     *     UIInterfaceOrientationLandscapeLeft: -90, 
-     *     UIInterfaceOrientationPortraitUpsideDown: 180 
-     *
-     * @returns {Boolean} Indicating if rotation should be allowed.
-     */
-    function shouldRotateToOrientation(degrees) {
-      return true;
-    }
-    </pre>
-
 ## The _feature_ Element
 
 If you use the CLI to build applications, you use the `plugin` command
