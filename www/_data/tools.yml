@@ -18,3 +18,17 @@
         Ionic is a front-end SDK for building cross-platform mobile apps. Built on
         top of Angular, Ionic also provides a platform  for integrating services like
         push notifications and analytics.
+
+-   name: Monaca
+    image: monaca.png
+    url: https://monaca.io/
+    description: >
+        Comprehensive cloud-powered and framework-agnostic set of tools 
+        Monaca supports both online and offline development, debugging with live-reload feature and cloud build experience.
+
+-   name: Onsen UI
+    image: onsen.png
+    url: http://onsen.io/
+    description: >
+        Custom Elements-based HTML5 framework offers a large selection of components and responsive layout support.
+        Onsen UI lets you create professionally designed multiplatform apps without acquiring additional skillset.
