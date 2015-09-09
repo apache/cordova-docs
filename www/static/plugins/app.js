@@ -112,8 +112,19 @@ var App = React.createClass({
             return qs;
         },
         getURLParameter : function(name) {
-            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
-                ||[,""])[1].replace(/\+/g, '%20'))||null;
+                try {
+                    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
+                        ||[,""])[1].replace(/\+/g, '%20'))||null;
+                } catch(error) {
+                    // Improperly encoded URLs are ignored
+                    if (error instanceof URIError) {
+                        window.history.replaceState({}, "", "./");
+                        return null;
+                    }
+
+                    // Throw other errors back out
+                    throw error;
+                }
         },
         shallowCopy: function(src) {
             var dst = {};
