@@ -271,13 +271,10 @@ var App = React.createClass({
 
             if(platformFilters.length > 0) {
                 query = App.appendURLParameter(query, UrlParameters.Platfroms);
-                platformFilters.forEach(function(platform) {
-                    query += encodeURIComponent(platform + ",");
-                });
-                query = query.slice(0, query.length - 1);
+                query += encodeURIComponent(platformFilters.join());
                 stateObj.platforms = platformFilters;
             }
-            
+
             if(sortCriteria !== SortCriteria.Quality) {
                 query = App.appendURLParameter(query, UrlParameters.SortBy);
                 query += encodeURIComponent(sortCriteria);
@@ -317,7 +314,7 @@ var App = React.createClass({
             var downloadCountRequests = [];
             for(var index = 0; index < plugins.length; index++) {
                 packageNames += plugins[index].name + ",";
-               
+
                 if(index % Constants.DownloadCountBatch === 0 || index === plugins.length - 1) {
                     downloadCountRequests.push($.getJSON("https://api.npmjs.org/downloads/point/last-month/" + packageNames));
                     packageNames = "";
@@ -332,7 +329,7 @@ var App = React.createClass({
                             plugins[j] = App.shallowCopy(plugins[j]);
                             plugins[j].downloadCount = xhrResult[plugins[j].name].downloads;
                         }
-                    }                      
+                    }
                 }
                 if(self.state.sortCriteria === SortCriteria.Downloads) {
                     App.sortPlugins(plugins, self.state.sortCriteria);
@@ -384,7 +381,7 @@ var App = React.createClass({
             } else {
                 plugins = App.sortPlugins(plugins, SortCriteria.Quality);
             }
-            
+
             if (this.isMounted()) {
                 var q = App.getURLParameter(UrlParameters.Query);
                 if(q) {
