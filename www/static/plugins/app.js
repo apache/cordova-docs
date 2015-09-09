@@ -3,7 +3,8 @@ var React           = window.React = require('react'), // assign it to window fo
     PluginList      = require('./pluginlist.jsx'),
     PlatformButton  = require('./platformbutton.jsx')
     App             = {},
-    SortDropdown = require('./sortdropdown.jsx');
+    SortDropdown = require('./sortdropdown.jsx'),
+    SortCriteria = require('./SortCriteria');
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -13,12 +14,11 @@ var Constants = {
     NpmSearchInitialSize: 500
 }
 
-window.addEventListener('popstate', function(e) {
-    if(e.state) {
-        var appInstance = React.render(<App />, document.getElementById('container'));
-        appInstance.loadFilterText(e.state.filterText);
-    }
-});
+var UrlParameters = {
+    SortBy: 'sortBy',
+    Query: 'q',
+    Platfroms: 'platforms',
+}
 
 var App = React.createClass({
     getInitialState: function() {
@@ -26,17 +26,21 @@ var App = React.createClass({
         staticFilters['platforms'] = [];
         staticFilters['authors'] = [];
         staticFilters['licenses'] = [];
-        var platforms = App.getURLParameter('platforms');
+        var platforms = App.getURLParameter(UrlParameters.Platfroms);
         if(platforms) {
             staticFilters['platforms'] = staticFilters['platforms'].concat(platforms.split(','));
         }
-        var q = App.getURLParameter('q');
+        var q = App.getURLParameter(UrlParameters.Query);
+        var sortBy = App.getURLParameter(UrlParameters.SortBy);
+        if (!sortBy) {
+            sortBy = SortCriteria.Quality;
+        }
         var state = {
             plugins: [],
             placeHolderText: 'Loading...',
             searchResults: [],
             staticFilters: staticFilters,
-            sortCriteria: "Quality",
+            sortCriteria: sortBy,
             downloadsReceived: false
         }
 
@@ -49,17 +53,18 @@ var App = React.createClass({
         return state;
     },
     handleUserInput: function(filterText) {
+        var self = this;
         /* We receive events for all inputs, so make sure text changed */
         if(this.state.filterText !== filterText) {
             /* Routing logic */
             var platformFilters = this.state.staticFilters["platforms"];
             delay(function(){
-                App.updateURL(filterText, platformFilters);
+                App.updateURL(filterText, platformFilters, self.state.sortCriteria);
             }, INPUT_DELAY);
 
             this.setState({
                 filterText: filterText,
-                searchResults: App.filterPlugins(this.state.plugins, filterText, this.state.staticFilters)
+                searchResults: App.filterPlugins(self.state.plugins, filterText, self.state.staticFilters)
             });
         }
     },
@@ -74,7 +79,7 @@ var App = React.createClass({
             }
 
             delay(function(){
-                App.updateURL(previousState.filterText, previousState.staticFilters['platforms']);
+                App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
             }, INPUT_DELAY);
 
             return {
@@ -87,6 +92,9 @@ var App = React.createClass({
     setSort: function(sort) {
         this.setState(function(previousState, currentProps) {
             App.sortPlugins(previousState.plugins, sort)
+             delay(function(){
+                App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
+            }, INPUT_DELAY);
             return {
                 plugins: previousState.plugins,
                 searchResults: App.filterPlugins(previousState.plugins, this.state.filterText, this.state.staticFilters),
@@ -94,18 +102,29 @@ var App = React.createClass({
             }
         });
     },
-    loadFilterText : function(filterText) {
-        this.setState(function(previousState, currentProps) {
-            return {
-                filterText: filterText,
-                plugins: previousState.plugins
-            };
-        });
-    },
     statics: {
+        appendURLParameter : function(qs, urlParameter) {
+            if(!qs) {
+                qs = '?' + urlParameter + '=';
+            } else {
+                qs = qs + '&' + urlParameter + '=';
+            }
+            return qs;
+        },
         getURLParameter : function(name) {
-            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
-                ||[,""])[1].replace(/\+/g, '%20'))||null;
+                try {
+                    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
+                        ||[,""])[1].replace(/\+/g, '%20'))||null;
+                } catch(error) {
+                    // Improperly encoded URLs are ignored
+                    if (error instanceof URIError) {
+                        window.history.replaceState({}, "", "./");
+                        return null;
+                    }
+
+                    // Throw other errors back out
+                    throw error;
+                }
         },
         shallowCopy: function(src) {
             var dst = {};
@@ -218,7 +237,7 @@ var App = React.createClass({
                 }
             }
             switch(criteria) {
-                case 'Downloads':
+                case SortCriteria.Downloads:
                     plugins.sort(function(p1, p2) {
                         if(!p1.downloadCount) {
                             return 1;
@@ -231,7 +250,7 @@ var App = React.createClass({
                         return p2.downloadCount - p1.downloadCount;
                     });
                     break;
-                case 'Recently Updated':
+                case SortCriteria.RecentlyUpdated:
                     plugins.sort(function(p1, p2) {
                         if(p2.modified === p1.modified) {
                             return compareName(p1, p2);
@@ -239,7 +258,7 @@ var App = React.createClass({
                         return p1.modified - p2.modified;
                     });
                     break;
-                case 'Quality':
+                case SortCriteria.Quality:
                 default:
                     plugins.sort(function(p1, p2) {
                         if(p2.rating === p1.rating) {
@@ -251,28 +270,27 @@ var App = React.createClass({
             }
             return plugins;
         },
-        updateURL: function(filterText, platformFilters) {
-            var query = "?";
+        updateURL: function(filterText, platformFilters, sortCriteria) {
+            var query = '';
             var stateObj = {};
             if(filterText) {
                 var filterTextLowerCase = filterText;
-                query = "?q=" + filterTextLowerCase;
+                query = App.appendURLParameter(query, UrlParameters.Query);
+                query += encodeURIComponent(filterTextLowerCase);
                 stateObj.filterText = filterTextLowerCase;
             }
 
             if(platformFilters.length > 0) {
-                if(query === "?") {
-                    query = "?platforms=";
-                } else {
-                    query = query + "&platforms=";
-                }
-                platformFilters.forEach(function(platform) {
-                    query = query + platform + ",";
-                });
-                query = query.slice(0, query.length - 1);
+                query = App.appendURLParameter(query, UrlParameters.Platfroms);
+                query += encodeURIComponent(platformFilters.join());
                 stateObj.platforms = platformFilters;
             }
 
+            if(sortCriteria !== SortCriteria.Quality) {
+                query = App.appendURLParameter(query, UrlParameters.SortBy);
+                query += encodeURIComponent(sortCriteria);
+                stateObj.sortBy = sortCriteria;
+            }
             window.history.replaceState(stateObj, "", query);
             ga('send', 'pageview', '/index.html' + query);
         },
@@ -286,43 +304,54 @@ var App = React.createClass({
             queryHost = "http://npmsearch.com/query",
             queryFields = "fields=name,keywords,license,description,author,modified,homepage,version,rating",
             queryKeywords = "q=keywords:%22ecosystem:cordova%22",
-            queryInitialSize = Constants.NpmSearchInitialSize;
+            queryInitialSize = Constants.NpmSearchInitialSize,
+            baseUrl = queryHost + "?" + queryFields + "&" + queryKeywords + "&sort=rating:desc";
 
-        xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + queryInitialSize + "&start=0", function(xhrResult) {
+        xhrRequest(baseUrl + "&size=" + queryInitialSize + "&start=0", function(xhrResult) {
             plugins = xhrResult.results;
             pluginCount = xhrResult.total;
             if (pluginCount <= queryInitialSize) {
                 processPlugins.bind(self, officialPlugins, plugins)();
             } else {
-                xhrRequest(queryHost + "?" + queryFields + "&" + queryKeywords + "&size=" + (pluginCount - queryInitialSize) + "&start=" + queryInitialSize, function(xhrResult) {
+                xhrRequest(baseUrl + "&size=" + (pluginCount - queryInitialSize) + "&start=" + queryInitialSize, function(xhrResult) {
                         plugins = [].concat(plugins, xhrResult.results);
                         processPlugins.bind(self, officialPlugins, plugins)();
                 }, function() { console.log('xhr err'); });
             }
         }, function() { console.log('xhr err'); });
 
-        var getDownloadCount = function(plugins, that) {
+        var getDownloadCount = function(plugins) {
             var packageNames = "";
-            for(var index=0; index < plugins.length; index++) {
+            var downloadCountRequests = [];
+            for(var index = 0; index < plugins.length; index++) {
                 packageNames += plugins[index].name + ",";
-                if(index % Constants.DownloadCountBatch === 0 || index === plugins.length -1) {
-                    xhrRequest("https://api.npmjs.org/downloads/point/last-month/" + packageNames, function(xhrResult) {
-                        for(var j = 0; j < plugins.length; j++) {
-                            if(xhrResult[plugins[j].name]) {
-                                plugins[j] = App.shallowCopy(plugins[j]);
-                                plugins[j].downloadCount = xhrResult[plugins[j].name].downloads;
-                            }
-                        }
 
-                        that.setState({
-                            plugins: plugins,
-                            searchResults: App.filterPlugins(plugins, this.state.filterText, this.state.staticFilters),
-                            downloadsReceived: true
-                        });
-                    }.bind(self), function() { console.log('xhr err'); });
+                if(index % Constants.DownloadCountBatch === 0 || index === plugins.length - 1) {
+                    downloadCountRequests.push($.getJSON("https://api.npmjs.org/downloads/point/last-month/" + packageNames));
                     packageNames = "";
                 }
             }
+            // When all the download count requests return - we can populate the plugins and sort them
+            $.when.apply($, downloadCountRequests).done(function() {
+                for(var i = 0; i < arguments.length; i ++) {
+                    var xhrResult = arguments[i][0];
+                    for(var j = 0; j < plugins.length; j++) {
+                        if(xhrResult[plugins[j].name]) {
+                            plugins[j] = App.shallowCopy(plugins[j]);
+                            plugins[j].downloadCount = xhrResult[plugins[j].name].downloads;
+                        }
+                    }
+                }
+                if(self.state.sortCriteria === SortCriteria.Downloads) {
+                    App.sortPlugins(plugins, self.state.sortCriteria);
+                }
+                self.setState({
+                    plugins: plugins,
+                    searchResults: App.filterPlugins(plugins, self.state.filterText, self.state.staticFilters),
+                    downloadsReceived: true
+                });
+            })
+            .fail( function() { console.log('xhr err'); });
         }
 
         function processPlugins(officialPlugins, plugins) {
@@ -357,11 +386,15 @@ var App = React.createClass({
                 plugins[i].modified = Math.ceil((dateNow - new Date(plugins[i].modified)) / oneDay);
             };
 
-            // Initial sort is always on quality
-            plugins = App.sortPlugins(plugins, 'Quality');
+            // Initial sort cannot be on downloads as download counts have not been populated.
+            if (this.state.sortCriteria !== SortCriteria.Downloads) {
+                plugins = App.sortPlugins(plugins, this.state.sortCriteria);
+            } else {
+                plugins = App.sortPlugins(plugins, SortCriteria.Quality);
+            }
 
             if (this.isMounted()) {
-                var q = App.getURLParameter('q');
+                var q = App.getURLParameter(UrlParameters.Query);
                 if(q) {
                     this.setState({
                         plugins: plugins,
@@ -377,7 +410,7 @@ var App = React.createClass({
                         searchResults: App.filterPlugins(plugins, '', this.state.staticFilters)
                     });
                 }
-                getDownloadCount(plugins,this);
+                getDownloadCount(plugins);
             }
         }
     },

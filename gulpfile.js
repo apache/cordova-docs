@@ -204,7 +204,6 @@ gulp.task("sass", function() {
 });
 
 gulp.task("plugins", function() {
-
     if (prod) {
         process.env.NODE_ENV = "production";
     }
@@ -224,7 +223,8 @@ gulp.task("plugins", function() {
     }
 
     return stream
-
+        .pipe(gulp.dest(JS_DIR.replace(SOURCE_DIR, out_dir)))
+        .pipe(browsersync.reload({stream: true}))
         // NOTE:
         //      adding YAML front matter at the end
         //      so that uglify doesn't screw it up
@@ -234,7 +234,6 @@ gulp.task("plugins", function() {
         //           minified JS has some things that look like
         //           Liquid tags, so we replace them manually
         .pipe(replace("){{", "){ {"))
-
         .pipe(gulp.dest(JS_DIR));
 });
 

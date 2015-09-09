@@ -21,14 +21,6 @@ var Plugin = React.createClass({
         if(!this.props.plugin) {
             // Empty card with loading wheel
             return (
-                // <li>
-                //     <div className="pluginCard">
-                //         <div style={{ textAlign: 'center', height: 10 + "rem"}}>
-                //             <span style={{ display: 'inline-block', height: 100 + "%", verticalAlign: 'middle'}} />
-                //             <img style={{verticalAlign: 'middle'}} src="img/loading.gif" />
-                //         </div>
-                //     </div>
-                // </li>
                 <div className="container plugin-results-result">
                     <div className="row">
                         <div className="col-sm-9">
@@ -46,11 +38,6 @@ var Plugin = React.createClass({
         var downloadField;
         var copyIcon;
         var npmLink = 'https://www.npmjs.com/package/' + this.props.plugin.name;
-
-        var classes = classNames({
-            'pluginCard': true,
-            'featuredPlugin': this.props.plugin.isOfficial
-        });
 
         if(this.props.plugin.downloadCount) {
             var downloadCount = this.props.plugin.downloadCount.toLocaleString();
