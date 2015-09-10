@@ -32,7 +32,7 @@ license: >
 
 *   **позиция**: текущее положение указателя файла. *(длинная)*
 
-*   **Ошибка**: объект, который содержит ошибки. *(FileError)*
+*   **Ошибка**: объект, который содержит ошибки. *(<a href="../fileerror/fileerror.html">FileError</a>)*
 
 *   **onwritestart**: вызывается, когда начинается запись. *(Функция)*
 
@@ -182,26 +182,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter Example</title>
+        <title>FileWriter <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
+        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
     
@@ -228,7 +228,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Write File</p>
       </body>
     </html>

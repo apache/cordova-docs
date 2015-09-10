@@ -20,11 +20,11 @@ license: >
 
 # CaptureVideoOptions
 
-> 비디오 캡처 구성 옵션을 캡슐화합니다.
+> 비디오 <a href="capture.html">캡처</a> 구성 옵션을 캡슐화합니다.
 
 ## 속성
 
-*   **제한**: 디바이스의 사용자는 단일 캡처 작업에서 캡처할 수 있는 비디오 클립의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+*   **제한**: 디바이스의 사용자는 단일 <a href="capture.html">캡처</a> 작업에서 <a href="capture.html">캡처</a>할 수 있는 비디오 클립의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 *   **기간**: 비디오 클립의 최대 기간 초.
 
@@ -33,13 +33,13 @@ license: >
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
     
-    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
     
 
 ## 블랙베리 WebWorks 단점
 
-*   **기간** 매개 변수가 지원 되지 않으므로 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+*   **기간** 매개 <a href="../../../plugin_ref/spec.html">변수</a>가 지원 되지 않으므로 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ## iOS 단점
 
-*   **제한** 매개 변수는 지원 되지 않습니다. 비디오 호출 당 기록 됩니다.
+*   **제한** 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다. 비디오 호출 당 기록 됩니다.

@@ -20,4 +20,4 @@ license: >
 
 # database_version
 
-資料庫的版本。
+<a href="../database/database.html">資料庫</a>的版本。

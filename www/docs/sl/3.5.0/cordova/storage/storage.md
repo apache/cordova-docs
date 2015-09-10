@@ -20,7 +20,7 @@ license: >
 
 # Shranjevanje
 
-> Pregled možnosti za shranjevanje za Cordova.
+> <a href="../../guide/overview/index.html">Pregled</a> možnosti za shranjevanje za Cordova.
 
 Shranjevanje več API-jev so na voljo za Cordova aplikacije. Glej [html5rocks][1]. za popolnejši pregled in primeri.
 

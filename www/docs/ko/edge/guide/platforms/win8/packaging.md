@@ -108,7 +108,7 @@ Pvk 파일과 cer 파일 생성 되 면, 우리가 이러한 인증서에서 pfx
   * p: pfx 파일 암호
   * importPfx: pfx 파일의 이름
 
-일단 설치 해, 다음 단계는 packageThumbprint 및 packageCertificateKeyFile build.json를 추가 하는. packageThumbprint을 찾기 위해 우리는 인증서와 연결 된 했습니다 CommonName 검색:
+일단 설치 해, <a href="../../next/index.html">다음 단계</a>는 packageThumbprint 및 packageCertificateKeyFile build.json를 추가 하는. packageThumbprint을 찾기 위해 우리는 인증서와 연결 된 했습니다 CommonName 검색:
 
 `powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"`
 

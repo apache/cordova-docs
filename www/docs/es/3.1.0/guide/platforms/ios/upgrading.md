@@ -71,7 +71,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 
@@ -89,7 +89,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 
@@ -105,7 +105,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.7.0.js` archivo.
 
@@ -147,7 +147,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.7.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.6.0.js` archivo.
 
@@ -170,7 +170,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del proyecto `www/cordova-2.6.0.js` de archivos a tu `www` Directorio y eliminar su `www/cordova-2.5.0.js` archivo.
 
@@ -201,7 +201,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.5.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.4.0.js` archivo.
 
@@ -232,7 +232,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.4.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.3.0.js` archivo.
 
@@ -263,7 +263,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.3.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.2.0.js` archivo.
 
@@ -277,18 +277,18 @@ platform add ios`.
 
 10. Convertir tu `Cordova.plist` de archivos a `config.xml` , ejecutando el script `bin/cordova\_plist\_to\_config\_xml` en el archivo de proyecto.
 
-11. Añadir el plugin InAppBrowser para su `config.xml` , añadiendo esta etiqueta bajo `<cordova><plugins>` :
+11. Añadir el plugin <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> para su `config.xml` , añadiendo esta etiqueta bajo `<cordova><plugins>` :
     
-        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+        <plugin name="<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" value="CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" />
         
 
 12. Nota que los plugins Objective-C son ya *no* clasificarlas. A la lista blanca sus conexiones con la lista blanca de la aplicación, tendrá que configurar el `User-Agent` cabecera de la conexión con el mismo agente de usuario como la principal Cordova WebView. Esto puedes acceder a la `userAgent` propiedad del modelo-vista-controlador principal. El modelo-vista-controlador principal (CDVViewController) también tiene un `URLisAllowed` método para comprobar si una URL pasará a la lista blanca.
 
 13. Cambios de dispositivo API:
     
-    *   Para iOS, device.platform se utiliza para `iPhone` , `iPad` o `iPod Touch` ; ahora devuelve (correctamente)`iOS`.
-    *   Para iOS, device.name (ahora en desuso para todas las plataformas) se utiliza para devolver el nombre del dispositivo del usuario (por ejemplo ' iPhone 5′ de Shazron); Ahora devuelve utilizado para devolver lo que device.platform: `iPhone` , `iPad` o`iPod Touch`.
-    *   Para todas las plataformas, hay una nueva propiedad llamada device.model; Esto devuelve el modelo de dispositivo específico, por ejemplo `iPad2,5` (para otras plataformas, devuelve lo que device.name utilizada para devolver).
+    *   Para iOS, <a href="../../../cordova/device/device.platform.html">device.platform</a> se utiliza para `iPhone` , `iPad` o `iPod Touch` ; ahora devuelve (correctamente)`iOS`.
+    *   Para iOS, <a href="../../../cordova/device/device.name.html">device.name</a> (ahora en desuso para todas las plataformas) se utiliza para devolver el nombre del dispositivo del usuario (por ejemplo ' iPhone 5′ de Shazron); Ahora devuelve utilizado para devolver lo que <a href="../../../cordova/device/device.platform.html">device.platform</a>: `iPhone` , `iPad` o`iPod Touch`.
+    *   Para todas las plataformas, hay una nueva propiedad llamada <a href="../../../cordova/device/device.model.html">device.model</a>; Esto devuelve el modelo de dispositivo específico, por ejemplo `iPad2,5` (para otras plataformas, devuelve lo que <a href="../../../cordova/device/device.name.html">device.name</a> utilizada para devolver).
 
 ## Proyectos de modernización 2.1.0 a 2.2.0
 
@@ -298,7 +298,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.2.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.1.0.js` archivo.
 
@@ -330,7 +330,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.1.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-2.0.0.js` archivo.
 
@@ -361,7 +361,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 1.  Instale Cordova 2.0.0.
 
-2.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+2.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 3.  Copia el `www/cordova-2.0.0.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova-1.9.0.js` archivo.
 
@@ -369,11 +369,11 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 5.  Copia del `cordova` del proyecto nuevo directorio en el directorio raíz del proyecto (si quieres las herramientas de línea de comandos de proyecto).
 
-6.  Añadir una nueva entrada en `Plugins` en el `Cordova.plist` archivo, en el grupo de **Archivos auxiliares** . La clave es `Device` y el valor es`CDVDevice`.
+6.  Añadir una nueva entrada en `Plugins` en el `Cordova.plist` archivo, en el grupo de **<a href="../../../cordova/file/fileobj/fileobj.html">Archivo</a>s auxiliares** . La clave es `Device` y el valor es`CDVDevice`.
 
 7.  Quitar`Cordova.framework`.
 
-8.  Quitar `verify.sh` del grupo de **Archivos auxiliares** .
+8.  Quitar `verify.sh` del grupo de **<a href="../../../cordova/file/fileobj/fileobj.html">Archivo</a>s auxiliares** .
 
 9.  Seleccione el icono del proyecto en el navegador de proyectos, seleccione el proyecto **objetivo**, luego seleccione la ficha **Configuración de construir** .
 
@@ -423,9 +423,9 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 27. Seleccione el `VERSION` archivo que sólo se haya arrastrado en un paso anterior.
 
-28. Tipo de la combinación de teclas **Command-Option-1** para mostrar el **Inspector de archivo** (o menuitem **ve utilidades → → Mostrar archivo Inspector**).
+28. Tipo de la combinación de teclas **Command-Option-1** para mostrar el **Inspector de archivo** (o menuitem **ve utilidades → → <a href="../../../cordova/inappbrowser/inappbrowser.html">Mostrar</a> archivo Inspector**).
 
-29. Elegir **comparado con CORDOVALIB** en el **Archivo Inspector** para el menú desplegable para **Ubicación**.
+29. Elegir **comparado con CORDOVALIB** en el **<a href="../../../cordova/file/fileobj/fileobj.html">Archivo</a> Inspector** para el menú desplegable para **Ubicación**.
 
 30. Establecer la preferencia de Xcode **Xcode preferencias → ubicaciones → los datos derivados → avanzado...** a **Unique**, así que pueden encontrarse las cabeceras unificadas.
 

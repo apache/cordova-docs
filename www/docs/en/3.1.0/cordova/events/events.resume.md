@@ -22,15 +22,15 @@ license: >
 
 The event fires when an application is retrieved from the background.
 
-    document.addEventListener("resume", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
 
 ## Details
 
 The `resume` event fires when the native platform pulls the
 application out from the background.
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 ## Supported Platforms
 
@@ -40,20 +40,20 @@ attach an event listener once the `deviceready` event fires.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
-    document.addEventListener("resume", onResume, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
 
     function onResume() {
         // Handle the resume event
     }
 
-## Full Example
+## Full <a href="../storage/storage.opendatabase.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ attach an event listener once the `deviceready` event fires.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            document.addEventListener("resume", onResume, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         }
 
         // Handle the resume event
@@ -83,7 +83,7 @@ attach an event listener once the `deviceready` event fires.
 
 ## iOS Quirks
 
-Any interactive functions called from a `pause` event handler execute
+Any interactive functions called from a `<a href="events.pause.html">pause</a>` event handler execute
 later when the app resumes, as signaled by the `resume` event. These
 include alerts, `console.log()`, and any calls from plugins or the
 Cordova API, which go through Objective-C.
@@ -106,7 +106,7 @@ to `YES`. To run when locked on iOS 4, this setting does not matter.
 as `alert()` need to be wrapped in a `setTimeout()` call with a
 timeout value of zero, or else the app hangs. For example:
 
-        document.addEventListener("resume", onResume, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

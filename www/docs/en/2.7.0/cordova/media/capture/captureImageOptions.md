@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-CaptureImageOptions
+<a href="capture.html">Capture</a>ImageOptions
 ===================
 
 > Encapsulates image capture configuration options.
@@ -28,13 +28,13 @@ Properties
 
 - __limit:__ The maximum number of images the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // limit capture operation to 3 images
     var options = { limit: 3 };
 
-    navigator.device.capture.captureImage(captureSuccess, captureError, options);
+    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
 
 iOS Quirks
 ----------

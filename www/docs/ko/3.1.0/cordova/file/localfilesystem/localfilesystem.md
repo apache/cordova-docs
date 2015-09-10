@@ -20,13 +20,13 @@ license: >
 
 # LocalFileSystem
 
-이 개체는 루트 파일 시스템을 얻을 수 있는 방법을 제공 합니다.
+이 개체는 루트 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>을 얻을 수 있는 방법을 제공 합니다.
 
 ## 메서드
 
-*   **requestFileSystem**: 파일 시스템을 요청 합니다. *(기능)*
+*   **requestFileSystem**: <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>을 요청 합니다. *(기능)*
 
-*   **resolveLocalFileSystemURI**: 검색 된 `DirectoryEntry` 또는 `FileEntry` 로컬 URI를 사용 하 여. *(기능)*
+*   **resolveLocalFileSystemURI**: 검색 된 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` 또는 `<a href="../fileentry/fileentry.html">FileEntry</a>` 로컬 URI를 사용 하 여. *(기능)*
 
 ## 상수
 
@@ -46,7 +46,7 @@ license: >
 *   Windows Phone 7과 8
 *   윈도우 8
 
-## 파일 시스템 빠른 예를 들어 요청
+## <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 빠른 예를 들어 요청
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -56,7 +56,7 @@ license: >
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## 로컬 파일 시스템 URI 빠른 예를 들어 해결
+## 로컬 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> URI 빠른 예를 들어 해결
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Local File System</p>
       </body>
     </html>
@@ -109,18 +109,18 @@ license: >
 
 # requestFileSystem
 
-> 응용 프로그램 데이터를 저장 하는 파일 시스템을 요청 합니다.
+> 응용 프로그램 데이터를 저장 하는 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>을 요청 합니다.
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **창**: 글로벌 window 개체에 대 한 참조
-*   **형식**: 로컬 파일 시스템 형식, LocalFileSystem 상수 참조
+*   **형식**: 로컬 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 형식, LocalFileSystem 상수 참조
 *   **크기**: 바이트에서 저장 공간이 얼마나 필요 기대 하는 응용 프로그램을 나타냅니다
-*   **successCallback**: 파일 시스템 개체와 호출
-*   **errorCallback**: 오류가 발생 하면 검색 파일 시스템 호출
+*   **successCallback**: <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 개체와 호출
+*   **errorCallback**: 오류가 발생 하면 검색 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 호출
 
-## 파일 시스템 빠른 예를 들어 요청
+## <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 빠른 예를 들어 요청
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

@@ -29,7 +29,7 @@ Devuelve el primer día de la semana según las preferencias del usuario y calen
 
 Los días de la semana están contados a partir de la 1, donde 1 se supone que es el domingo. Devuelve el día de la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `Number`.
 
-Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `GlobalizationError` objeto como parámetro. Código esperado del error es`GlobalizationError.UNKNOWN\_ERROR`.
+Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objeto como parámetro. Código esperado del error es`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 
@@ -53,7 +53,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, muestra un cuadro 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek Example</title>
+        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -22,7 +22,7 @@ license: >
 
 Eine Plugin ist eine Objective-C-Klasse, die erweitert die `CDVPlugin` Klasse.
 
-Jedes Plugin-Klasse muss registriert sein, als ein `<feature>` tag-in der `config.xml` Datei. Es ist über diesen Mechanismus, dass JavaScript `exec` Methode `service` Parameter ordnet eine Objective-C-Klasse.
+Jedes Plugin-Klasse muss registriert sein, als ein `<feature>` tag-in der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Es ist über diesen Mechanismus, dass JavaScript `exec` Methode `service` Parameter ordnet eine Objective-C-Klasse.
 
 ## Plugin-Klasse Zuordnung
 
@@ -33,7 +33,7 @@ Der JavaScript-Teil eines Plugins verwendet immer die `cordova.exec` Methode wie
 
 Dies marshallt Ersuchen der `UIWebView` auf die iOS native Seite, mehr oder weniger kochendes bis Berufung der `action` -Methode für die `service` -Klasse mit der übergebenen Argumente der `args` Array.
 
-Geben Sie das Plugin als ein `<feature>` Tag in Ihre Cordova-iOS-Anwendung-Projekt `config.xml` Datei.
+Geben Sie das Plugin als ein `<feature>` Tag in Ihre Cordova-iOS-Anwendung-Projekt `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
 
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
@@ -54,11 +54,11 @@ Wird eine Instanz eines Plugin-Objekts erstellt, für das Leben eines jeden `UIW
 
 Es gibt *keine* benannten Initialisierer für Plugins. Stattdessen sollten die Plugins verwenden die `pluginInitialize` -Methode für ihre Start-up-Logik.
 
-Plugins mit langer Laufzeit-Anforderungen, elektronische Aktivität (z. B. spielen Medien), Zuhörer oder internen Zustand sollten implementieren die `onReset` Methode und stoppen oder Bereinigen Sie diese Tätigkeiten. Diese Methode wird ausgeführt, wenn die `UIWebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
+Plugins mit langer Laufzeit-Anforderungen, elektronische Aktivität (z. B. spielen <a href="../../../cordova/media/media.html">Medien</a>), Zuhörer oder internen Zustand sollten implementieren die `onReset` Methode und stoppen oder Bereinigen Sie diese Tätigkeiten. Diese Methode wird ausgeführt, wenn die `UIWebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
 
 ## Ein iOS Cordova Plugin schreiben
 
-Wir haben JavaScript Feuer aus eine Plugin-Anforderung an die systemeigene Seite. Wir haben das iOS Objective-C-Plugin richtig zugeordnet, über die `config.xml` Datei. Also sieht die letzte iOS Objective-C-Plugin-Klasse wie?
+Wir haben JavaScript Feuer aus eine Plugin-Anforderung an die systemeigene Seite. Wir haben das iOS Objective-C-Plugin richtig zugeordnet, über die `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Also sieht die letzte iOS Objective-C-Plugin-Klasse wie?
 
 Was an das Plugin per JavaScript gesendet ruft `exec` Funktion übergeben wird, in der entsprechenden Plugin-Klasse `action` Methode. Eine Plugin-Methode hat diese Signatur:
 
@@ -103,14 +103,14 @@ Sie können erstellen, `String` , `Int` , `Double` , `Bool` , `Array` , `Diction
 
 ## Echo-Plugin iOS Plugin
 
-Wir würden fügen Sie Folgendes in des Projekts `config.xml` Datei:
+Wir würden fügen Sie Folgendes in des Projekts `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>:
 
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
     
 
-Dann wir die folgenden Dateien fügen würden ( `Echo.h` und `Echo.m` ) in das Plugins-Verzeichnis unserer Cordova-iOS-Anwendung-Verzeichnis:
+Dann wir die folgenden <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en fügen würden ( `Echo.h` und `Echo.m` ) in das Plugins-Verzeichnis unserer Cordova-iOS-Anwendung-Verzeichnis:
 
     /********* Echo.h Cordova Plugin Header *******/
     
@@ -197,4 +197,4 @@ Für iOS 6 würden Sie Safari 6.0 verwenden, einfach an Ihre Anwendung, die in d
 
 *   Vergessen Sie nicht, Ihr Plugin Zuordnung zu "config.xml" hinzugefügt werden. Wenn Sie vergessen haben, wird ein Fehler in der Xcode-Konsole protokolliert.
 
-*   Vergessen Sie nicht, alle Hosts, die Verbindung in die Whitelist hinzufügen, wie in Domain-Whitelist-Handbuch beschrieben. Wenn Sie vergessen haben, wird ein Fehler in der Xcode-Konsole protokolliert.
+*   Vergessen Sie nicht, alle Hosts, die <a href="../../../cordova/connection/connection.html">Verbindung</a> in die Whitelist hinzufügen, wie in Domain-Whitelist-Handbuch beschrieben. Wenn Sie vergessen haben, wird ein Fehler in der Xcode-Konsole protokolliert.

@@ -31,7 +31,7 @@ SQLTransaction
 詳細
 -------
 
-Database オブジェクトの transaction メソッドを呼ぶとき、それに対応するコールバック関数が SQLTransaction オブジェクトと一緒に呼び出されます。 executeSql メソッドを複数回使用することで、データベーストランザクションを作成できます。
+<a href="../database/database.html">Database</a> オブジェクトの transaction メソッドを呼ぶとき、それに対応するコールバック関数が SQLTransaction オブジェクトと一緒に呼び出されます。 executeSql メソッドを複数回使用することで、データベーストランザクションを作成できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -59,28 +59,28 @@ Execute SQL の例
         alert("成功しました。");
     }
 
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-詳細な使用例
+詳細な<a href="../storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage の使用例</title>
+        <title><a href="../storage.html">Storage</a> の<a href="../storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
@@ -108,7 +108,7 @@ Execute SQL の例
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../storage.opendatabase.html">使用例</a></h1>
         <p>SQLトランザクション</p>
       </body>
     </html>

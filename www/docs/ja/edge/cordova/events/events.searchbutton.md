@@ -27,11 +27,11 @@ Android 上に検索ボタンを押したときに発生します。
 
 ## 詳細
 
-Android のデフォルト検索ボタンの動作をオーバーライドする必要がある場合 '［ 検索 ］' イベントのイベント リスナーを登録できます。
+Android のデフォルト検索ボタンの動作をオーバーライドする必要がある場合 '［ 検索 ］' <a href="events.html">イベント</a>の<a href="events.html">イベント</a> リスナーを登録できます。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
 
-## サポートされているプラットフォーム
+## <a href="../../config_ref/images.html">サポートされているプラットフォーム</a>
 
 *   アンドロイド
 
@@ -50,7 +50,7 @@ Android のデフォルト検索ボタンの動作をオーバーライドする
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button Example</title>
+        <title>Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Android のデフォルト検索ボタンの動作をオーバーライドする
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

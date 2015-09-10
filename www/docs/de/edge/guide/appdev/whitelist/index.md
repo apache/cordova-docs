@@ -88,7 +88,7 @@ Die Whitelist-Regeln werden in `www/config.xml` gefunden..
 
 BlackBerry 10 Verwendung von Platzhaltern unterscheidet sich von anderen Plattformen auf zwei Arten:
 
-*   Alle Inhalte erreichbar `XMLHttpRequest` muss explizit deklariert werden. Festlegen von `origin="*"` funktioniert nicht in diesem Fall. Alternativ kann die gesamte Websicherheit verwenden die `WebSecurity`-Präferenz beschrieben in BlackBerry-Konfiguration deaktiviert werden:
+*   Alle Inhalte erreichbar `XMLHttpRequest` muss explizit deklariert werden. Festlegen von `origin="*"` funktioniert nicht in diesem Fall. Alternativ kann die gesamte Websicherheit verwenden die `WebSecurity`-Präferenz beschrieben in <a href="../../platforms/blackberry/config.html">BlackBerry-Konfiguration</a> deaktiviert werden:
     
         <preference name="websecurity" value="disable" />
         

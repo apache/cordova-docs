@@ -18,39 +18,39 @@ license: >
     under the License.
 ---
 
-# 地理位置情報
+# 地理<a href="Position/position.html">位置</a>情報
 
-> `geolocation`オブジェクトの場所データに基づいて、デバイスの GPS センサーから推論されるかネットワーク信号へのアクセスを提供します。
+> `geolocation`オブジェクトの場所データに基づいて、<a href="../device/device.html">デバイス</a>の GPS センサーから推論されるかネットワーク信号へのアクセスを提供します。
 
-`Geolocation`緯度と経度などのデバイスの場所についてを説明します。 位置情報の共通のソースはグローバル ポジショニング システム （GPS） と IP アドレス、RFID、WiFi および Bluetooth の MAC アドレス、および GSM/cdma 方式携帯 Id などのネットワーク信号から推定される場所にもあります。 API は、デバイスの実際の場所を返すことの保証はありません。
+`Geolocation`緯度と経度などの<a href="../device/device.html">デバイス</a>の場所についてを説明します。 <a href="Position/position.html">位置</a>情報の共通のソースはグローバル ポジショニング システム （GPS） と IP アドレス、RFID、WiFi および Bluetooth の MAC アドレス、および GSM/cdma 方式携帯 Id などのネットワーク信号から推定される場所にもあります。 API は、<a href="../device/device.html">デバイス</a>の実際の場所を返すことの保証はありません。
 
-この API は[W3C 地理位置情報 API 仕様][1]に基づいており、既に実装を提供しないデバイス上のみで実行します。
+この API は[W3C 地理<a href="Position/position.html">位置</a>情報 API 仕様][1]に基づいており、既に実装を提供しない<a href="../device/device.html">デバイス</a>上のみで実行します。
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要なプライバシーの注意：**地理位置情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理位置情報データを使用する方法を議論すべきです。 地理位置情報データと一般に見なされる敏感なそれは人の所在を明らかにすることができますので、保存される場合、彼または彼女の旅行の歴史。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります (デバイス オペレーティング システムしない場合そう既に) 地理位置情報データにアクセスするアプリの前にちょうど時間通知を提供しています。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
+**重要なプライバシーの注意：**地理<a href="Position/position.html">位置</a>情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理<a href="Position/position.html">位置</a>情報データを使用する方法を議論すべきです。 地理<a href="Position/position.html">位置</a>情報データと一般に見なされる敏感なそれは人の所在を明らかにすることができますので、保存される場合、彼または彼女の旅行の歴史。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります (<a href="../device/device.html">デバイス</a> オペレーティング システムしない場合そう既に) 地理<a href="Position/position.html">位置</a>情報データにアクセスするアプリの前にちょうど時間<a href="../notification/notification.html">通知</a>を提供しています。 その<a href="../notification/notification.html">通知</a>は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関する<a href="../../index.html">ガイド</a>を参照してください。
 
 ## メソッド
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   <a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>
+*   <a href="geolocation.watchPosition.html">geolocation.watchPosition</a>
+*   <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
 
 ## 引数
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
+*   <a href="parameters/geolocationError.html">geolocationError</a>
+*   <a href="parameters/geolocation.options.html">geolocationOptions</a>
 
 ## オブジェクト (読み取り専用)
 
 *   Position
-*   PositionError
+*   <a href="PositionError/positionError.html">PositionError</a>
 *   Coordinates
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.geolocation
         $ cordova plugin ls
@@ -104,4 +104,4 @@ license: >
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。

@@ -20,7 +20,7 @@ license: >
 
 # Transfert de fichiers
 
-L'objet `FileTransfer` permet de charger ou télécharger des fichiers vers et depuis un serveur.
+L'objet `<a href="../fileobj/fileobj.html">File</a>Transfer` permet de charger ou télécharger des fichiers vers et depuis un serveur.
 
 ## Propriétés
 
@@ -36,7 +36,7 @@ L'objet `FileTransfer` permet de charger ou télécharger des fichiers vers et d
 
 ## Détails
 
-L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur distant à l'aide d'une requête HTTP de type POST multi-part. Les protocoles HTTP et HTTPS sont tous deux supportés. Des paramètres optionnels peuvent être spécifiés en passant un objet `FileUploadOptions` à la méthode `upload()`. Dans le cas d'un téléchargement réussi, un objet `FileUploadResult` est passé à la callback de succès. Si une erreur survient, un objet `FileTransferError` objet est passé à la callback d'erreur. Il est également possible (uniquement sur iOS et Android) de télécharger un fichier depuis un serveur distant et l'enregistrer sur l'appareil.
+L'objet `<a href="../fileobj/fileobj.html">File</a>Transfer` offre un moyen d'envoyer des fichiers vers un serveur distant à l'aide d'une requête HTTP de type POST multi-part. Les protocoles HTTP et HTTPS sont tous deux supportés. Des paramètres optionnels peuvent être spécifiés en passant un objet `<a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>` à la méthode `upload()`. Dans le cas d'un téléchargement réussi, un objet `<a href="../fileuploadresult/fileuploadresult.html"><a href="../fileobj/fileobj.html">File</a>UploadResult</a>` est passé à la callback de succès. Si une erreur survient, un objet `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>` objet est passé à la callback d'erreur. Il est également possible (uniquement sur iOS et Android) de télécharger un fichier depuis un serveur distant et l'enregistrer sur l'appareil.
 
 ## Plates-formes supportées
 
@@ -54,9 +54,9 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
 
 *   **server** : l'URL du serveur destiné à recevoir le fichier, encodée via `encodeURI()`.
 
-*   **successCallback** : callback de succès à laquelle est passé un objet `Metadata`. *(Function)*
+*   **successCallback** : callback de succès à laquelle est passé un objet `<a href="../metadata/metadata.html">Metadata</a>`. *(Function)*
 
-*   **errorCallback** : callback d'erreur s'exécutant si une erreur survient lors de la récupération de l'objet `Metadata` . Appelée avec un objet `FileTransferError`. *(Function)*
+*   **errorCallback** : callback d'erreur s'exécutant si une erreur survient lors de la récupération de l'objet `<a href="../metadata/metadata.html">Metadata</a>` . Appelée avec un objet `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>`. *(Function)*
 
 *   **options** : paramètres facultatifs tels que le nom du fichier et son type mime.
 
@@ -78,7 +78,7 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
         console.log("upload error target " + error.target);
     }
     
-    var options = new FileUploadOptions();
+    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -89,7 +89,7 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
     
     options.params = params;
     
-    var ft = new FileTransfer();
+    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     
 
@@ -98,20 +98,20 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a> Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.camera.getPicture(
+                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
             }
     
             function uploadPhoto(imageURI) {
-                var options = new FileUploadOptions();
+                var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -134,7 +134,7 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
     
                 options.params = params;
     
-                var ft = new FileTransfer();
+                var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
                 ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
     
@@ -153,8 +153,8 @@ L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur dis
             </script>
     </head>
     <body>
-        <h1>Example</h1>
-        <p>Upload File</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Upload <a href="../fileobj/fileobj.html">File</a></p>
     </body>
     </html>
     
@@ -177,7 +177,7 @@ Supporté par Android et iOS
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new FileUploadOptions();
+    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -186,7 +186,7 @@ Supporté par Android et iOS
     
     options.headers = headers;
     
-    var ft = new FileTransfer();
+    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
     ft.upload(fileURI, uri, win, fail, options);
     
 
@@ -202,9 +202,9 @@ Régler la valeur de l'option `chunkedMode` à `false` afin d'éviter les probl�
 
 *   **target** : chemin d'accès complet au fichier sur l'appareil.
 
-*   **successCallback** : une callback de succès à laquelle est passée un objet `FileEntry`. *(Function)*
+*   **successCallback** : une callback de succès à laquelle est passée un objet `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>`. *(Function)*
 
-*   **errorCallback** : une callback d'erreur s'exécutant si une erreur se produit lors de la récupération de l'objet `Metadata`. Appelée avec un objet `FileTransferError`. *(Function)*
+*   **errorCallback** : une callback d'erreur s'exécutant si une erreur se produit lors de la récupération de l'objet `<a href="../metadata/metadata.html">Metadata</a>`. Appelée avec un objet `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>`. *(Function)*
 
 *   **trustAllHosts** : paramètre facultatif, sa valeur par défaut est `false`. Si sa valeur est réglée à `true`, tous les certificats de sécurité sont acceptés. Ceci peut être utile car Android rejette les certificats auto-signés. N'est pas recommandé pour une utilisation en production. Supporté sous Android et iOS. *(boolean)*
 
@@ -214,7 +214,7 @@ Régler la valeur de l'option `chunkedMode` à `false` afin d'éviter les probl�
 
     // !! Suppose que filePath est un chemin valide sur l'appareil
     
-    var fileTransfer = new FileTransfer();
+    var fileTransfer = new <a href="../fileobj/fileobj.html">File</a>Transfer();
     var uri = encodeURI("http://some.server.com/download.php");
     
     fileTransfer.download(
@@ -239,7 +239,7 @@ Régler la valeur de l'option `chunkedMode` à `false` afin d'éviter les probl�
 
 ## abort
 
-Abandonne un transfert en cours. Un objet FileTransferError avec un code d'erreur FileTransferError.ABORT_ERR est passé à la callback d'erreur onerror.
+Abandonne un transfert en cours. Un objet <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> avec un code d'erreur <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>.ABORT_ERR est passé à la callback d'erreur onerror.
 
 **Plates-formes supportées**
 
@@ -255,18 +255,18 @@ Abandonne un transfert en cours. Un objet FileTransferError avec un code d'erreu
     }
     
     var fail = function(error) {
-        // error.code == FileTransferError.ABORT_ERR
+        // error.code == <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>.ABORT_ERR
         alert("Une erreur est survenue : code = " + error.code);
         console.log("Source pour l'erreur de téléchargement : " + error.source);
         console.log("Destination pour l'erreur de téléchargement : " + error.target);
     }
     
-    var options = new FileUploadOptions();
+    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";
     
-    var ft = new FileTransfer();
+    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort();
     

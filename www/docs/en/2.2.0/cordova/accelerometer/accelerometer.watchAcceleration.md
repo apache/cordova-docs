@@ -18,23 +18,23 @@ license: >
     under the License.
 ---
 
-accelerometer.watchAcceleration
+accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
 ===============================
 
 At a regular interval, get the acceleration along the x, y, and z axis.
 
-    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
+    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
+                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
+                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
                                                            
 Description
 -----------
 
 The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-The `accelerometer.watchAcceleration` gets the device's current acceleration at a regular interval. Each time the `Acceleration` is retrieved, the `accelerometerSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `acceleratorOptions` object.
+The `accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>` gets the device's current acceleration at a regular interval. Each time the `<a href="acceleration/acceleration.html">Acceleration</a>` is retrieved, the `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `acceleratorOptions` object.
 
-The returned watch ID references the accelerometer watch interval. The watch ID can be used with `accelerometer.clearWatch` to stop watching the accelerometer.
+The returned watch ID references the accelerometer watch interval. The watch ID can be used with `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` to stop watching the accelerometer.
 
 Supported Platforms
 -------------------
@@ -47,13 +47,13 @@ Supported Platforms
 - Tizen
 
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
+        alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
+              '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
+              '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };
 
@@ -63,29 +63,29 @@ Quick Example
 
     var options = { frequency: 3000 };  // Update every 3 seconds
     
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // The watch id references the current `watchAcceleration`
+        // The watch id references the current `watch<a href="acceleration/acceleration.html">Acceleration</a>`
         var watchID = null;
         
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             startWatch();
         }
 
@@ -96,14 +96,14 @@ Full Example
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
             
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
         }
         
         // Stop watching the acceleration
         //
         function stopWatch() {
             if (watchID) {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -112,9 +112,9 @@ Full Example
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
-            element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-                                'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' +
+            element.innerHTML = '<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '<br />' +
+                                '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '<br />' +
+                                '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 

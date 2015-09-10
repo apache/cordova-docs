@@ -72,7 +72,7 @@ Pobrać Tizen SDK z [tizen.org][1].
 
 5.  Upewnij się, że **kopiowanie projektów w obszarze roboczym** jest zaznaczone.
 
-6.  Naciśnij przycisk **Przeglądaj** i wybierz Cordova Tizen `samples` katalogu projektu (takich jak `/cordova-basic` ):
+6.  Naciśnij przycisk **<a href="../../overview/index.html">Przegląd</a>aj** i wybierz Cordova Tizen `samples` katalogu projektu (takich jak `/cordova-basic` ):
     
     ![][3]
 

@@ -24,21 +24,21 @@ license: >
 
 ## Типы событий
 
-*   deviceready
-*   Пауза
-*   резюме
-*   онлайн
-*   автономном режиме
-*   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   menubutton
-*   searchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   <a href="events.deviceready.html">deviceready</a>
+*   <a href="events.pause.html">Пауза</a>
+*   <a href="events.resume.html">резюме</a>
+*   <a href="events.online.html">онлайн</a>
+*   <a href="events.offline.html">автономном режиме</a>
+*   <a href="events.backbutton.html">backbutton</a>
+*   <a href="events.batterycritical.html">batterycritical</a>
+*   <a href="events.batterylow.html">batterylow</a>
+*   <a href="events.batterystatus.html">batterystatus</a>
+*   <a href="events.menubutton.html">menubutton</a>
+*   <a href="events.searchbutton.html">searchButton</a>
+*   <a href="events.startcallbutton.html">startcallbutton</a>
+*   <a href="events.endcallbutton.html">endcallbutton</a>
+*   <a href="events.volumedownbutton.html">volumedownbutton</a>
+*   <a href="events.volumeupbutton.html">volumeupbutton</a>
 
 ## Доступ к функции
 

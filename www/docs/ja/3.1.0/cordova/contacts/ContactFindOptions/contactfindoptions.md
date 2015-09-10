@@ -20,13 +20,13 @@ license: >
 
 # ContactFindOptions
 
-結果をフィルター処理するために使用できるプロパティが含まれています、 `contacts.find` 操作。
+結果をフィルター処理するために使用できるプロパティが含まれています、 `<a href="../contacts.find.html">contacts.find</a>` 操作。
 
 ## プロパティ
 
-*   **フィルター**: 連絡先を検索に使用する検索文字列。*（，）*(既定値します。`""`)
+*   **フィルター**: <a href="../parameters/contactFields.html">連絡先</a>を検索に使用する検索文字列。*（，）*(既定値します。`""`)
 
-*   **複数**: かどうか、検索操作を複数の連絡先を返しますを決定します。*(ブール値)*(既定値します。`false`)
+*   **複数**: かどうか、検索操作を複数の<a href="../parameters/contactFields.html">連絡先</a>を返しますを決定します。*(ブール値)*(既定値します。`false`)
 
 ## サポートされているプラットフォーム
 
@@ -46,7 +46,7 @@ license: >
     };
     
     // error callback
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
@@ -57,7 +57,7 @@ license: >
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 完全な例
@@ -65,14 +65,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -84,7 +84,7 @@ license: >
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>

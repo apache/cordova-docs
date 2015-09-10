@@ -20,7 +20,7 @@ license: >
 
 # 升級 iOS
 
-本指南演示如何修改 iOS 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
+本指南演示如何修改 iOS 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。
 
 **注：**Xcode 4.6 是必需的建議 Xcode 5。 目前，以提交到蘋果 App Store，你應使用最新的產品出廠的版本的 iOS SDK，這是 iOS 7。 iOS 7 SDK 尚不需要，但這可能會很快改變。
 
@@ -33,12 +33,12 @@ license: >
 
 對於 CLI 的專案，請運行：
 
-        1.更新的 '科爾多瓦' CLI 版本--請參閱命令列介面 2。運行 '科爾多瓦平臺更新 ios'
+        1.更新的 '科爾多瓦' CLI 版本--請參閱<a href="../../cli/index.html">命令列介面</a> 2。運行 '科爾多瓦平臺更新 ios'
     
 
 ### iOS 7 問題
 
-    1。 刪除的值"寬度 = 設備-寬度、 高度 = 設備高度"從您 meta 標記"視口"index.html 檔中的屬性，請參閱 HTTPs://issues.apache.org/jira/browse/CB-4323 2。 更新 iOS 7 支援您媒體、 媒體捕獲和閃屏核心的外掛程式
+    1。 刪除的值"寬度 = <a href="../../../cordova/device/device.html">設備</a>-寬度、 高度 = <a href="../../../cordova/device/device.html">設備</a>高度"從您 meta 標記"視口"index.html <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>中的屬性，請參閱 HTTPs://issues.apache.org/jira/browse/CB-4323 2。 更新 iOS 7 支援您<a href="../../../cordova/media/media.html">媒體</a>、 <a href="../../../cordova/media/media.html">媒體</a><a href="../../../cordova/media/capture/capture.html">捕獲</a>和<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>核心的外掛程式
     
 
 ### Xcode 5 問題
@@ -48,14 +48,14 @@ license: >
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
 
 2.  添加您的平臺的科爾多瓦專案，例如：`cordova
 platform add ios`.
 
 3.  該專案的內容複寫 `www` 目錄到 `www` 目錄在您剛剛創建的科爾多瓦專案的根目錄。
 
-4.  複製或覆蓋任何本機資產從原始專案 （ `Resources` 等），這讓肯定要添加任何新檔到 `.xcodeproj` 專案。 IOS 專案內生成 `platforms\ios` 目錄。
+4.  複製或覆蓋任何本機資產從原始專案 （ `Resources` 等），這讓肯定要添加任何新<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>到 `.xcodeproj` 專案。 IOS 專案內生成 `platforms\ios` 目錄。
 
 5.  複製您 `config.xml` 到 `www` 目錄中，並刪除任何外掛程式定義。修改設置在這裡而不是平臺目錄。
 
@@ -65,17 +65,17 @@ platform add ios`.
 
 ## 升級 2.9.0 專案到 3.0.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 3.0.0 源，例如到`~/Documents/Cordova-3.0.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 3.0.0 源，例如到`~/Documents/Cordova-3.0.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
+5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>本身在標題中） 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 7.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
@@ -83,33 +83,33 @@ platform add ios`.
 
 ## 升級 2.8.0 專案到 2.9.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.9.0 源，例如到`~/Documents/Cordova-2.9.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.9.0 源，例如到`~/Documents/Cordova-2.9.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
+5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>本身在標題中） 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 7.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
 ## 升級 2.7.0 專案到 2.8.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.8.0 源，例如到`~/Documents/Cordova-2.8.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.8.0 源，例如到`~/Documents/Cordova-2.8.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.7.0.js` 檔。
+5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>本身在標題中） 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 7.  更新任何 `<plugin>` 中標記您 `config.xml` 到 `<feature>` 的標記。 注意，現有 `<plugin>` 標籤將仍然工作，但都被否決了。 您可以複製此資訊在 `config.xml` 的一個新的專案。 例如：
     
@@ -123,29 +123,29 @@ platform add ios`.
         OpenAL ImageIO
         
 
-10. 更新您的專案目標**生成設置**。編輯**"-Obj-C"**要下**連結 → 其他連結器標誌**， **"-ObjC"**.
+10. 更新您的專案目標**生成設置**。編輯**"-Obj-C"**要下**連結 → 其他連結器<a href="../../../cordova/file/flags/flags.html">標誌</a>**， **"-ObjC"**.
 
-11. 更新您的專案目標**生成設置**。 在**連結 → 其他連結器標誌**，更改**"-all_load"**是 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` 。 你只需要這樣做，如果你有在中定義的問題[這一問題。][1].
+11. 更新您的專案目標**生成設置**。 在**連結 → 其他連結器<a href="../../../cordova/file/flags/flags.html">標誌</a>**，更改**"-all_load"**是 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` 。 你只需要這樣做，如果你有在中定義的問題[這一問題。][1].
 
  [1]: https://issues.apache.org/jira/browse/CB-3458
 
 ## 升級 2.6.0 專案到 2.7.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.7.0 源，例如到`~/Documents/Cordova-2.7.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.7.0 源，例如到`~/Documents/Cordova-2.7.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.7.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.6.0.js` 檔。
+5.  複製 `www/cordova-2.7.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][2]).
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>根據您從新專案 (見[此比較][2]).
 
-8.  在您 `config.xml` 檔，[刪除這條線][3].
+8.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[刪除這條線][3].
 
 9.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
@@ -154,27 +154,27 @@ platform add ios`.
 
 ## 升級 2.5.0 專案到 2.6.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.6.0 源，例如到`~/Documents/Cordova-2.6.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.6.0 源，例如到`~/Documents/Cordova-2.6.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製專案的 `www/cordova-2.6.0.js` 檔到您 `www` 目錄中，並刪除您 `www/cordova-2.5.0.js` 檔。
+5.  複製專案的 `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>到您 `www` 目錄中，並刪除您 `www/cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及引用的腳本的任何其他檔） 來引用到新的 `cordova-2.6.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及引用的腳本的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 來引用到新的 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][4]).
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>根據您從新專案 (見[此比較][4]).
 
-8.  在您 `config.xml` 檔，[添加此新行][5].
+8.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[添加此新行][5].
 
-9.  在您 `config.xml` 檔，[添加此新行][6].
+9.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[添加此新行][6].
 
-10. 在您 `config.xml` 檔， [UIWebViewBounce 已改為 DisallowOverscroll，和預設值都不同][7].
+10. 在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>， [UIWebViewBounce 已改為 DisallowOverscroll，和預設值都不同][7].
 
-11. 在您 `config.xml` 檔， `EnableLocation` 首選項已被否決。
+11. 在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>， `EnableLocation` 首選項已被否決。
 
 12. 刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
@@ -185,25 +185,25 @@ platform add ios`.
 
 ## 升級 2.4.0 專案到 2.5.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.5.0 源，例如到`~/Documents/Cordova-2.5.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.5.0 源，例如到`~/Documents/Cordova-2.5.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.5.0.js` 到新專案中的檔您 `www` 目錄並刪除您 `www/cordova-2.4.0.js` 檔。
+5.  複製 `www/cordova-2.5.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄並刪除您 `www/cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.5.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][8]).
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>根據您從新專案 (見[此比較][8]).
 
-8.  在您 `config.xml` 檔，[添加這些新行][9].
+8.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[添加這些新行][9].
 
-9.  在您 `config.xml` 檔，[編輯的根項目，更改它從科爾多瓦到構件][10].
+9.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[編輯的根項目，更改它從科爾多瓦到構件][10].
 
-10. 在您 `config.xml` 檔，[刪除 OpenAllWhitelistURLsInWebView 首選項][11].
+10. 在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[刪除 OpenAllWhitelistURLsInWebView 首選項][11].
 
 11. 刪除您 `cordova` 目錄和副本 `cordova` 目錄從新專案到專案的根目錄。在 2.5.0，這已更新腳本。
 
@@ -216,23 +216,23 @@ platform add ios`.
 
 ## 升級 2.3.0 專案到 2.4.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.4.0 源，例如到`~/Documents/Cordova-2.4.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.4.0 源，例如到`~/Documents/Cordova-2.4.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.4.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.3.0.js` 檔。
+5.  複製 `www/cordova-2.4.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.4.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或替換，如果您從未更改檔） 您 `MainViewController.m` 檔根據您從新專案 (見[此比較][12]).
+7.  更新 （或替換，如果您從未更改<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 您 `MainViewController.m` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>根據您從新專案 (見[此比較][12]).
 
-8.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][13]).
+8.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>根據您從新專案 (見[此比較][13]).
 
-9.  在您 `config.xml` 檔，[添加此新行][14].
+9.  在您 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，[添加此新行][14].
 
 10. 刪除您 `cordova` 目錄和副本 `cordova` 目錄從新專案到專案的根目錄。在 2.4.0，這已固定的腳本。
 
@@ -247,103 +247,103 @@ platform add ios`.
 
 ## 升級 2.2.0 專案到 2.3.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.3.0 源，例如到`~/Documents/Cordova-2.3.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.3.0 源，例如到`~/Documents/Cordova-2.3.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.3.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.2.0.js` 檔。
+5.  複製 `www/cordova-2.3.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.3.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `MainViewController.m` 根據新專案中的一個。
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `MainViewController.m` 根據新專案中的一個。
 
 8.  刪除您 `cordova` 目錄和副本 `cordova` 目錄從新專案到專案的根目錄。2.3.0，在這新的腳本。
 
 9.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
-10. 轉換您 `Cordova.plist` 檔為 `config.xml` ，通過運行腳本 `bin/cordova\_plist\_to\_config\_xml` 對您的專案檔案。
+10. 轉換您 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>為 `config.xml` ，通過運行腳本 `bin/cordova\_plist\_to\_config\_xml` 對您的專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-11. 添加到 InAppBrowser 外掛程式你 `config.xml` ，通過添加此標記下的 `<cordova><plugins>` ：
+11. 添加到 <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> 外掛程式你 `config.xml` ，通過添加此標記下的 `<cordova><plugins>` ：
     
-        < 外掛程式名稱 = 值"InAppBrowser"="CDVInAppBrowser"/ >
+        < 外掛程式名稱 = 值"<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>"="CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>"/ >
         
 
-12. 請注意目標 C 外掛程式*不*列入白名單了。 到白名單中您連接與應用程式白名單中，您將需要設置 `User-Agent` 連接到同一個使用者代理作為主要的科爾多瓦 web 視圖的標題。 你可以通過訪問 `userAgent` 關閉主視圖-控制器屬性。 主視圖-控制器 (CDVViewController) 也有 `URLisAllowed` 你檢查一個 URL 是否會通過白名單中的方法。
+12. 請注意目標 C 外掛程式*不*列入白名單了。 到白名單中您<a href="../../../cordova/connection/connection.html">連接</a>與應用程式白名單中，您將需要設置 `User-Agent` <a href="../../../cordova/connection/connection.html">連接</a>到同一個使用者代理作為主要的科爾多瓦 web 視圖的標題。 你可以通過訪問 `userAgent` <a href="../../../cordova/inappbrowser/inappbrowser.html">關閉</a>主視圖-控制器屬性。 主視圖-控制器 (CDVViewController) 也有 `URLisAllowed` 你檢查一個 URL 是否會通過白名單中的方法。
 
-13. 設備的 API 更改：
+13. <a href="../../../cordova/device/device.html">設備</a>的 API 更改：
     
-    *   Ios，device.platform 用於返回 `iPhone` ， `iPad` 或 `iPod Touch` ； 現在它返回 （正確）`iOS`.
-    *   對於 iOS，device.name (現已被否決所有平臺) 用於返回使用者的設備的名稱 （例如 Shazron 的 iPhone 5 ′) ；現在它返回用於返回什麼 device.platform： `iPhone` ， `iPad` 或`iPod Touch`.
-    *   對於所有平臺，有一個名為 device.model ； 的新屬性這將返回特定的設備模型，例如： `iPad2,5` （對於其他平臺，返回用於返回什麼 device.name）。
+    *   Ios，<a href="../../../cordova/device/device.platform.html">device.platform</a> 用於返回 `iPhone` ， `iPad` 或 `iPod Touch` ； 現在它返回 （正確）`iOS`.
+    *   對於 iOS，<a href="../../../cordova/device/device.name.html">device.name</a> (現已被否決所有平臺) 用於返回使用者的<a href="../../../cordova/device/device.html">設備</a>的名稱 （例如 Shazron 的 iPhone 5 ′) ；現在它返回用於返回什麼 <a href="../../../cordova/device/device.platform.html">device.platform</a>： `iPhone` ， `iPad` 或`iPod Touch`.
+    *   對於所有平臺，有一個名為 <a href="../../../cordova/device/device.model.html">device.model</a> ； 的新屬性這將返回特定的<a href="../../../cordova/device/device.html">設備</a>模型，例如： `iPad2,5` （對於其他平臺，返回用於返回什麼 <a href="../../../cordova/device/device.name.html">device.name</a>）。
 
 ## 升級 2.1.0 專案到 2.2.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.2.0 源，例如到`~/Documents/Cordova-2.2.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.2.0 源，例如到`~/Documents/Cordova-2.2.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.2.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.1.0.js` 檔。
+5.  複製 `www/cordova-2.2.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.2.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `MainViewController.m` 根據新專案中的一個：
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `MainViewController.m` 根據新專案中的一個：
     
     *   更新 → viewWillAppear
 
 8.  複製 `cordova` 目錄從新專案到專案的根目錄。在 2.2.0，這有更新的 '模仿' 腳本。
 
-9.  下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
+9.  下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">變數</a>不再使用引用的<a href="../../../cordova/geolocation/Position/position.html">位置</a>時 `CordovaLib` 駐留，引用現在是絕對<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>引用。
     
     1.  啟動終端程式
-    2.  轉到您安裝科爾多瓦的位置 （請參見步驟 1）、 在 `bin` 子目錄
-    3.  運行下面的腳本，其中第一個參數是您的專案的路徑 `.xcodeproj` 檔：
+    2.  轉到您安裝科爾多瓦的<a href="../../../cordova/geolocation/Position/position.html">位置</a> （請參見步驟 1）、 在 `bin` 子目錄
+    3.  運行下面的腳本，其中第一個參數是您的專案的路徑 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>：
         
         `update_cordova_subproject 路徑/為/您/專案/xcodeproj`
 
-**注：**2.2.0，在 `bin/create` 腳本中的副本 `CordovaLib` 分專案到您的專案。 要有相同種類的安裝程式，只是複製權在 `CordovaLib` 到你的專案目錄和更新 `CordovaLib` 分專案 （相對於專案) 在 Xcode 檔檢查器中的位置。
+**注：**2.2.0，在 `bin/create` 腳本中的副本 `CordovaLib` 分專案到您的專案。 要有相同種類的安裝程式，只是複製權在 `CordovaLib` 到你的專案目錄和更新 `CordovaLib` 分專案 （相對於專案) 在 Xcode <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器中的<a href="../../../cordova/geolocation/Position/position.html">位置</a>。
 
 ## 升級 2.0.0 專案到 2.1.0
 
 與科爾多瓦 2.1.0， `CordovaLib` 已升級為使用**自動引用計數 (弧)**。 你不需要升級到**弧**要使用 CordovaLib，但是如果你想要升級您的專案使用**弧**，請使用 Xcode 遷移嚮導從功能表中：**編輯 → 重構 → 轉換為目標 C 弧...**，取消選擇 libCordova.a，然後運行嚮導完成。
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.1.0 源，例如到`~/Documents/Cordova-2.1.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦 2.1.0 源，例如到`~/Documents/Cordova-2.1.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+4.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-5.  複製 `www/cordova-2.1.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.0.0.js` 檔。
+5.  複製 `www/cordova-2.1.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.1.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 根據新專案中的一個：
+7.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `AppDelegate.m` 根據新專案中的一個：
     
     *   編輯 → 應用程式： didFinishLaunchingWithOptions：
     *   添加 → 應用程式： supportedInterfaceOrientationsForWindow：
 
-8.  更新 （或如果您從未更改該檔替換） 您 `MainViewController.m` 根據新專案中的一個：
+8.  更新 （或如果您從未更改該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>替換） 您 `MainViewController.m` 根據新專案中的一個：
     
     *   添加 → viewWillAppear
 
 9.  複製 `cordova` 目錄從新專案到專案的根目錄。在 2.1.0，這有更新的腳本，支援帶空格的路徑。
 
-10. 刪除 `VERSION` 檔從您的專案參考 （**是在`CordovaLib`).
+10. 刪除 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從您的專案參考 （**是在`CordovaLib`).
 
-11. 下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
+11. 下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">變數</a>不再使用引用的<a href="../../../cordova/geolocation/Position/position.html">位置</a>時 `CordovaLib` 駐留，引用現在是絕對<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>引用。
     
     1.  啟動終端程式
-    2.  轉到您安裝科爾多瓦的位置 （請參見步驟 1）、 在 `bin` 子目錄
-    3.  運行下面的腳本，其中第一個參數是您的專案的路徑 `.xcodeproj` 檔：
+    2.  轉到您安裝科爾多瓦的<a href="../../../cordova/geolocation/Position/position.html">位置</a> （請參見步驟 1）、 在 `bin` 子目錄
+    3.  運行下面的腳本，其中第一個參數是您的專案的路徑 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>：
         
         `update_cordova_subproject 路徑/為/您/專案/xcodeproj`
 
@@ -351,19 +351,19 @@ platform add ios`.
 
 1.  安裝 2.0.0 科爾多瓦。
 
-2.  創建一個新專案，如 iOS 命令列工具中所述。您需要從這個新的專案資產。
+2.  創建一個新專案，如 <a href="tools.html">iOS 命令列工具</a>中所述。您需要從這個新的專案資產。
 
-3.  複製 `www/cordova-2.0.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.9.0.js` 檔。
+3.  複製 `www/cordova-2.0.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.0.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 5.  複製 `cordova` 目錄從新專案到專案的根目錄 （如果你想要的專案的命令列工具)。
 
-6.  添加一個新條目下的 `Plugins` 在你 `Cordova.plist` 下**支援檔**組的檔。 關鍵是 `Device` 和值是`CDVDevice`.
+6.  添加一個新條目下的 `Plugins` 在你 `Cordova.plist` 下**支援<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>**組的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 關鍵是 `Device` 和值是`CDVDevice`.
 
 7.  刪除`Cordova.framework`.
 
-8.  刪除 `verify.sh` 從**支援檔**組。
+8.  刪除 `verify.sh` 從**支援<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>**組。
 
 9.  在專案導航器中選擇專案圖示，選擇您的專案**目標**，然後選擇**生成設置**選項卡。
 
@@ -371,7 +371,7 @@ platform add ios`.
 
 11. 找到 `CordovaLib` 安裝在您的硬碟-上根據您的個人資料夾中的目錄 `Documents` 子目錄。
 
-12. 找到 `CordovaLib.xcodeproj` 檔在 `CordovaLib` 目錄中，然後拖放到您的專案檔案。它應顯示作為子專案。
+12. 找到 `CordovaLib.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>在 `CordovaLib` 目錄中，然後拖放到您的專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。它應<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>作為子專案。
 
 13. 構建您的專案，你應該與有關的一些錯誤 `#import` 指令。
 
@@ -403,21 +403,21 @@ platform add ios`.
 
 22. 在專案導航器中選擇**專案圖示**，選擇您的專案**目標**，然後選擇**生成設置**選項卡。
 
-23. 搜索**其他的連結器標誌**，並添加相應的值**-all_load**和**-Obj C**.
+23. 搜索**其他的連結器<a href="../../../cordova/file/flags/flags.html">標誌</a>**，並添加相應的值**-all_load**和**-Obj C**.
 
 24. 擴大 `CordovaLib` 子專案。
 
-25. 找到 `VERSION` 檔，將它拖動到您 （我們想要創建一個連結到它，不是副本） 的主專案。
+25. 找到 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，將它拖動到您 （我們想要創建一個連結到它，不是副本） 的主專案。
 
 26. 選擇**創建組的任何添加的資料夾**選項按鈕，然後選擇**完成**按鈕。
 
-27. 選擇 `VERSION` 檔，你只是被拖上一步中。
+27. 選擇 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，你只是被拖上一步中。
 
-28. 鍵入**選項-命令-1**鍵的組合，以顯示**檔檢查器**(或功能表項目**查看 → 實用程式 → 顯示檔檢查器**).
+28. 鍵入**選項-命令-1**鍵的組合，以<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**(或功能表項目**查看 → 實用程式 → <a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a><a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**).
 
-29. 選擇**相對於 CORDOVALIB** **檔檢查器**器下拉式功能表中的**位置**.
+29. 選擇**相對於 CORDOVALIB** **<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**器下拉式功能表中的**<a href="../../../cordova/geolocation/Position/position.html">位置</a>**.
 
-30. 設置為**獨特**，這樣才可以找到統一標頭的 Xcode 偏好**Xcode 首選項 → 位置 → 派生資料 → 先進的......** 。
+30. 設置為**獨特**，這樣才可以找到統一標頭的 Xcode 偏好**Xcode 首選項 → <a href="../../../cordova/geolocation/Position/position.html">位置</a> → 派生資料 → 先進的......** 。
 
 31. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 
@@ -430,7 +430,7 @@ platform add ios`.
         "$(BUILT_PRODUCTS_DIR)"
         
 
-33. 搜索**其他連結器標誌**。該設置將追加此值：
+33. 搜索**其他連結器<a href="../../../cordova/file/flags/flags.html">標誌</a>**。該設置將追加此值：
     
         -weak_framework CoreFoundation
         
@@ -449,9 +449,9 @@ platform add ios`.
 
 2.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-3.  複製 `www/cordova-1.9.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.8.x.js` 檔。
+3.  複製 `www/cordova-1.9.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-1.8.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.9.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 **注意：** 1.9.0 支援新 `BackupWebStorage` 布林 `Cordova.plist` 設置。 它預設啟用的那麼將其設置為 `false` ，禁用它，尤其是在 iOS 6 上。 請參閱[版本資訊： 野生動物園和 UIKit 科][16]
 
@@ -463,11 +463,11 @@ platform add ios`.
 
 2.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-3.  複製 `www/cordova-1.8.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.7.x.js` 檔。
+3.  複製 `www/cordova-1.8.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-1.7.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.8.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-如果您打算使用捕獲 API，您將需要在新的**iPad 視網膜顯示**資產：
+如果您打算使用<a href="../../../cordova/media/capture/capture.html">捕獲</a> API，您將需要在新的**iPad 視網膜<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>**資產：
 
 1.  複製 `Resources/Capture.bundle` 從新專案到專案目錄中，覆蓋您現有的專案 `Resources/Capture.bundle` 專案。
 
@@ -481,9 +481,9 @@ platform add ios`.
 
 2.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-3.  複製 `www/cordova-1.7.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.6.0.js` 檔。
+3.  複製 `www/cordova-1.7.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.7.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 升級 1.5.0 專案到 1.6.x
 
@@ -493,24 +493,24 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 1.5.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 1.5.0-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
 
-5.  添加所有新的 `MainViewController` 和 `AppDelegate` 檔，放入您的 Xcode 專案。
+5.  添加所有新的 `MainViewController` 和 `AppDelegate` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，放入您的 Xcode 專案。
 
-6.  複製 `www/cordova-1.6.1.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.5.0.js` 檔。
+6.  複製 `www/cordova-1.6.1.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.6.1.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加新的 `Cordova.plist` 檔到您的專案。 這是必要的因為核心外掛程式服務名稱必須更改以匹配為一個統一的科爾多瓦 JavaScript 檔 (從 Android 和黑莓，部分`cordova-js`).
+8.  添加新的 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>到您的專案。 這是必要的因為核心外掛程式服務名稱必須更改以匹配為一個統一的科爾多瓦 JavaScript <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> (從 Android 和黑莓，部分`cordova-js`).
 
 9.  集成任何設置，你在你的**備份 Cordova.plist**成新的**外掛程式**和**ExternalHosts**條目`Cordova.plist`.
 
-10. 集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。 任何 `UIWebViewDelegate` 或 `CDVCommandDelegate` 中的代碼 `AppDelegate.m` 就需要去到 `MainViewController.m` 現在 （見評論說出該檔中的節）。
+10. 集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 任何 `UIWebViewDelegate` 或 `CDVCommandDelegate` 中的代碼 `AppDelegate.m` 就需要去到 `MainViewController.m` 現在 （見評論說出該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>中的節）。
 
-11. 集成任何您已在您的備份中的具體專案代碼 `MainViewController.h` 和 `MainViewController.m` 成新的 MainViewController 檔。
+11. 集成任何您已在您的備份中的具體專案代碼 `MainViewController.h` 和 `MainViewController.m` 成新的 MainViewController <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 12. 在專案導航器中的專案圖示上按一下，選擇您的**專案**，然後選擇**生成設置**選項卡。
 
@@ -524,37 +524,37 @@ platform add ios`.
 
 2.  創建一個新的專案並運行一次。您將需要的一些資產從這個新的專案。
 
-3.  複製 `www/cordova-1.5.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.4.x.js` 檔。
+3.  複製 `www/cordova-1.5.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-1.4.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新的科爾多瓦 `cordova-1.5.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新的科爾多瓦 `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 5.  找到 `PhoneGap.framework` 在你專案導航器中選擇它。
 
 6.  鍵入**Delete**鍵，刪除 `PhoneGap.framework` 專案導航器中的引用。
 
-7.  鍵入**選項-命令-A**複合鍵，應下拉表將檔添加到您的專案 （**添加檔...**表）。 請確保選中**創建組的任何添加的資料夾**選項按鈕。
+7.  鍵入**選項-命令-A**複合鍵，應下拉表將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>添加到您的專案 （**添加<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>...**表）。 請確保選中**創建組的任何添加的資料夾**選項按鈕。
 
 8.  鍵入的**Shift-命令-G**鍵組合，應下拉你去到一個資料夾中的另一個工作表 （**轉到資料夾：**表）。
 
 9.  輸入 `/Users/Shared/Cordova/Frameworks/Cordova.framework` 在**轉到資料夾：**工作表，然後按**繼續**按鈕。
 
-10. 在工作表中**添加的檔......** ，請按**添加**按鈕。
+10. 在工作表中**添加的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>......** ，請按**添加**按鈕。
 
 11. 選擇 `Cordova.framework` 專案導航器中。
 
-12. 鍵入**選項-命令-1**鍵的組合，以顯示**檔檢查器**.
+12. 鍵入**選項-命令-1**鍵的組合，以<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**.
 
-13. **絕對路徑**在**檔檢查器**的下拉式功能表中選擇的**位置**.
+13. **絕對路徑**在**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**的下拉式功能表中選擇的**<a href="../../../cordova/geolocation/Position/position.html">位置</a>**.
 
-14. 鍵入**選項-命令-A**複合鍵，應下拉表將檔添加到您的專案 （**添加檔...**表）。 請確保選中**創建組的任何添加的資料夾**選項按鈕。
+14. 鍵入**選項-命令-A**複合鍵，應下拉表將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>添加到您的專案 （**添加<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>...**表）。 請確保選中**創建組的任何添加的資料夾**選項按鈕。
 
 15. 鍵入的**Shift-命令-G**鍵組合，應下拉你去到一個資料夾中的另一個工作表 （**轉到資料夾：**表）。
 
 16. 輸入 `~/Documents/CordovaLib/Classes/deprecated` 在**轉到資料夾：**工作表，然後按**繼續**按鈕。
 
-17. 在工作表中**添加的檔......** ，請按**添加**按鈕。
+17. 在工作表中**添加的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>......** ，請按**添加**按鈕。
 
-18. 在你 `AppDelegate.h` ， `AppDelegate.m` ，和 `MainViewController.h` 檔，替換整個 `#ifdef PHONEGAP_FRAMEWORK` 與塊：
+18. 在你 `AppDelegate.h` ， `AppDelegate.m` ，和 `MainViewController.h` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，替換整個 `#ifdef PHONEGAP_FRAMEWORK` 與塊：
     
         #import "CDVDeprecated.h"
         
@@ -575,7 +575,7 @@ platform add ios`.
 
 26. 與**科爾多瓦**的**PhoneGap**任何替換.
 
-27. 找到您 `PhoneGap.plist` 檔在專案導航器，並按一下檔案名一旦輸入名稱編輯模式。
+27. 找到您 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>在專案導航器，並按一下<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案名一旦輸入名稱編輯模式。
 
 28. 重命名 `PhoneGap.plist` 到`Cordova.plist`.
 
@@ -597,13 +597,13 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  複製 `MainViewController.m` 到 1.4.0-based 專案目錄中的新專案從磁片上的檔，替換舊檔 （備份您的檔第一次從上面的步驟 2）。
+4.  複製 `MainViewController.m` 到 1.4.0-based 專案目錄中的新專案從磁片上的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，替換舊<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>第一次從上面的步驟 2）。
 
-5.  添加 `MainViewController.m` 到 Xcode 專案檔案。
+5.  添加 `MainViewController.m` 到 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  將任何您已在您的備份中的具體專案代碼集成 `MainViewController.m` 成新的檔。
+6.  將任何您已在您的備份中的具體專案代碼集成 `MainViewController.m` 成新的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新 `phonegap-1.4.0.js` 檔是可選的 JavaScript 1.4.0 和 1.4.1 之間上沒有任何改變。
+7.  更新 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>是可選的 JavaScript 1.4.0 和 1.4.1 之間上沒有任何改變。
 
 ## 升級 1.3.0 專案到 1.4.0
 
@@ -613,20 +613,20 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 1.3.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 1.3.0-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  添加所有 `MainViewController` 入 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  複製 `www/phonegap-1.4.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.3.0.js` 檔。
+6.  複製 `www/phonegap-1.4.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.4.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 升級 1.2.0 專案到 1.3.0
 
@@ -636,20 +636,20 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 1.2.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 1.2.0-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  添加所有 `MainViewController` 入 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  複製 `www/phonegap-1.3.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.2.0.js` 檔。
+6.  複製 `www/phonegap-1.3.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.3.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 升級 1.1.0 專案到 1.2.0
 
@@ -659,20 +659,20 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 1.1.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 1.1.0-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  添加所有 `MainViewController` 入 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  複製 `www/phonegap-1.2.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.1.0.js` 檔。
+6.  複製 `www/phonegap-1.2.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.2.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 升級 1.0.0 專案到 1.1.0
 
@@ -682,20 +682,20 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 1.0.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 1.0.0-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  添加所有 `MainViewController` 入 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  複製 `www/phonegap-1.1.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.0.0.js` 檔。
+6.  複製 `www/phonegap-1.1.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.1.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 升級 0.9.6 專案到 1.0.0
 
@@ -705,17 +705,17 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到您的 0.9.6-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
+4.  將這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從新專案複製到您的 0.9.6-based 專案目錄在磁片上，取代任何舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （備份您的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  添加所有 `MainViewController` 入 Xcode 專案檔案。
+5.  添加所有 `MainViewController` 入 Xcode 專案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。
 
-6.  複製 `www/phonegap-1.0.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-0.9.6.js` 檔。
+6.  複製 `www/phonegap-1.0.0.js` 到新專案中的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>您 `www` 目錄中，並刪除您 `www/phonegap-0.9.6.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.0.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （以及包含該腳本引用的任何其他<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>） 以指向新 `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
+8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
-9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate 檔。
+9.  集成任何您已在您的備份中的具體專案代碼 `AppDelegate.h` 和 `AppDelegate.m` 成新的 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。

@@ -22,14 +22,14 @@ license: >
 
 Ottenere la corrente della bussola.
 
-    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
+    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
     
 
 ## Descrizione
 
 La bussola è un sensore che rileva la direzione o la voce che il dispositivo è puntato, in genere dalla parte superiore del dispositivo. Esso misura la rotta in gradi da 0 a 359.99, dove 0 è a nord.
 
-Le informazioni della bussola viene restituite tramite una `CompassHeading` oggetto utilizzando il `compassSuccess` funzione di callback.
+Le informazioni della bussola viene restituite tramite una `CompassHeading` oggetto utilizzando il `<a href="parameters/compassSuccess.html">compassSuccess</a>` funzione di callback.
 
 ## Piattaforme supportate
 
@@ -47,7 +47,7 @@ Le informazioni della bussola viene restituite tramite una `CompassHeading` ogge
     };
     
     function onError(error) {
-        alert('CompassError: ' + error.code);
+        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ Le informazioni della bussola viene restituite tramite una `CompassHeading` ogge
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ Le informazioni della bussola viene restituite tramite una `CompassHeading` ogge
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass Error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

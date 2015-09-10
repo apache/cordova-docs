@@ -21,26 +21,26 @@ license: >
 contacts.find
 =============
 
-デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトを取得します。
+デバイスの連絡先データベースに問い合わせを行い、 `<a href="Contact/contact.html">Contact</a>` オブジェクトを取得します。
 
-    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
+    navigator.contacts.find(<a href="parameters/contactFields.html">contactFields</a>, <a href="parameters/contactSuccess.html">contactSuccess</a>, <a href="parameters/contactError.html">contactError</a>, <a href="parameters/contactFindOptions.html">contactFindOptions</a>);
 
 概要
 -----------
 
-contacts.find 関数は、デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトの配列を返す非同期関数です。 作成されたオブジェクトは __contactSuccess__ に従って `contactSuccess` コールバック関数に送られます。
+contacts.find 関数は、デバイスの連絡先データベースに問い合わせを行い、 `<a href="Contact/contact.html">Contact</a>` オブジェクトの配列を返す非同期関数です。 作成されたオブジェクトは __<a href="parameters/contactSuccess.html">contactSuccess</a>__ に従って `<a href="parameters/contactSuccess.html">contactSuccess</a>` コールバック関数に送られます。
 
-このメソッドを使用する際は __contactFields__ パラメーターに検索フィールドを指定します。 __contactFields__ パラメーターに渡したフィールドだけが、 `Contact` オブジェクトのプロパティーとして __contactSuccess__ コールバック関数に渡されます。 __contactFields__ パラメーターが空の場合は、 `id` プロパティーのみを持つ `Contact` オブジェクト配列が作成されます。 __contactFields__ の値が["*"]の場合は、全ての連絡先フィールドが返されます。
+このメソッドを使用する際は __<a href="parameters/contactFields.html">contactFields</a>__ パラメーターに検索フィールドを指定します。 __<a href="parameters/contactFields.html">contactFields</a>__ パラメーターに渡したフィールドだけが、 `<a href="Contact/contact.html">Contact</a>` オブジェクトのプロパティーとして __<a href="parameters/contactSuccess.html">contactSuccess</a>__ コールバック関数に渡されます。 __<a href="parameters/contactFields.html">contactFields</a>__ パラメーターが空の場合は、 `id` プロパティーのみを持つ `<a href="Contact/contact.html">Contact</a>` オブジェクト配列が作成されます。 __<a href="parameters/contactFields.html">contactFields</a>__ の値が["*"]の場合は、全ての連絡先フィールドが返されます。
 
-連絡先データベースの問い合わせの際には、 __contactFindOptions.filter__ を用いて検索条件を絞ることが出来ます。このオプションが指定されていた場合、大文字小文字の区別なく、部分一致方式により __contactFields__ パラメーターに指定されたフィールドの検索が行われます。いずれかのフィールドにマッチした内容があった場合、その連絡先情報が返されます。
+連絡先データベースの問い合わせの際には、 __<a href="parameters/contactFindOptions.html">contactFindOptions</a>.filter__ を用いて検索条件を絞ることが出来ます。このオプションが指定されていた場合、大文字小文字の区別なく、部分一致方式により __<a href="parameters/contactFields.html">contactFields</a>__ パラメーターに指定されたフィールドの検索が行われます。いずれかのフィールドにマッチした内容があった場合、その連絡先情報が返されます。
 
 パラメーター
 ----------
 
-- __contactFields:__ 検索条件に格納されるフィールドを指定します。このパラメーターに定義されたフィールドのみが `Contact` オブジェクトにセットされます。 _(DOMString[])_ [必須]
-- __contactSuccess:__ 連絡先データベースへの問い合わせに成功した場合に呼び出されるコールバック関数を指定します [必須]
-- __contactError:__ エラーコールバック関数を指定します。連絡先データベースへの問い合わせに失敗した場合に呼び出されます [任意]
-- __contactFindOptions:__ 連絡先情報に絞り込み検索を行うための検索オプションを指定します [任意]
+- __<a href="parameters/contactFields.html">contactFields</a>:__ 検索条件に格納されるフィールドを指定します。このパラメーターに定義されたフィールドのみが `<a href="Contact/contact.html">Contact</a>` オブジェクトにセットされます。 _(DOMString[])_ [必須]
+- __<a href="parameters/contactSuccess.html">contactSuccess</a>:__ 連絡先データベースへの問い合わせに成功した場合に呼び出されるコールバック関数を指定します [必須]
+- __<a href="parameters/contactError.html">contactError</a>:__ エラーコールバック関数を指定します。連絡先データベースへの問い合わせに失敗した場合に呼び出されます [任意]
+- __<a href="parameters/contactFindOptions.html">contactFindOptions</a>:__ 連絡先情報に絞り込み検索を行うための検索オプションを指定します [任意]
 
 サポートされているプラットフォーム
 -------------------
@@ -50,44 +50,44 @@ contacts.find 関数は、デバイスの連絡先データベースに問い合
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function onSuccess(contacts) {
         alert(contacts.length + '  件の連絡先が見つかりました。');
     };
 
-    function onError(contactError) {
+    function onError(<a href="parameters/contactError.html">contactError</a>) {
         alert('エラーが発生しました。');
     };
 
     // Bob という名前が含まれる全ての連絡先を取得
-    var options = new ContactFindOptions();
+    var options = new <a href="Contact/contact.html">Contact</a>FindOptions();
     options.filter="Bob";
     options.multiple=true;
     var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title><a href="Contact/contact.html">Contact</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Bob という名前が含まれる全ての連絡先を取得
-            var options = new ContactFindOptions();
+            var options = new <a href="Contact/contact.html">Contact</a>FindOptions();
             options.filter="Bob";
             var fields = ["displayName", "name"];
             navigator.contacts.find(fields, onSuccess, onError, options);
@@ -103,14 +103,14 @@ contacts.find 関数は、デバイスの連絡先データベースに問い合
 
         // onError: 連絡先の取得に失敗した場合
         //
-        function onError(contactError) {
+        function onError(<a href="parameters/contactError.html">contactError</a>) {
             alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../storage/storage.opendatabase.html">使用例</a></h1>
         <p>連絡先の検索</p>
       </body>
     </html>

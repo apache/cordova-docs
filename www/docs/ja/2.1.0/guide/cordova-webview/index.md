@@ -23,6 +23,6 @@ WebView の埋め込み
 
 > Cordova WebView をプロジェクトで実装します。
 
-- Embedding Cordova WebView on Android
-- Embedding Cordova WebView on iOS
+- <a href="android.html">Embedding Cordova WebView on Android</a>
+- <a href="ios.html">Embedding Cordova WebView on iOS</a>
 

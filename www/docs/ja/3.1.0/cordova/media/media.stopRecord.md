@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# media.stopRecord
+# <a href="media.stop.html">media.stop</a>Record
 
-オーディオ ファイルの録音を停止します。
+オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を停止します。
 
-    media.stopRecord();
+    <a href="media.stop.html">media.stop</a>Record();
     
 
 ## 説明
 
-`media.stopRecord`オーディオ ファイルの録音を停止するメソッドを同期的に実行します。
+`<a href="media.stop.html">media.stop</a>Record`オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を停止するメソッドを同期的に実行します。
 
 ## サポートされているプラットフォーム
 
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -136,4 +136,4 @@ license: >
 
 ## Tizen の癖
 
-*   Tizen のデバイスでサポートされていません。
+*   Tizen の<a href="../device/device.html">デバイス</a>でサポートされていません。

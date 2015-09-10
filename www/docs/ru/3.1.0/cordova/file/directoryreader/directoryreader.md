@@ -42,9 +42,9 @@ license: >
 
 **Параметры:**
 
-*   **successCallback**: обратный вызов, который передается массив из `FileEntry` и `DirectoryEntry` объектов. *(Функция)*
+*   **successCallback**: обратный вызов, который передается массив из `<a href="../fileentry/fileentry.html">FileEntry</a>` и `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` объектов. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при извлечении листинг каталога. Вызываемый с `FileError` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при извлечении листинг каталога. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
 
 **Быстрый пример**
 

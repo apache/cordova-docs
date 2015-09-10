@@ -25,9 +25,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* <a href="config.html">Amazon Fire OS Configuration</a>
+* <a href="webview.html">Amazon Fire OS WebViews</a>
+* <a href="plugin.html">Amazon Fire OS Plugins</a>
 
 ## Requirements and Support
 

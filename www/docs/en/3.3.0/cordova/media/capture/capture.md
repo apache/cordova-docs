@@ -35,26 +35,26 @@ user's permission (e.g., by presenting choices for __OK__ and __No
 Thanks__).  Note that some app marketplaces may require your app to
 provide just-in-time notice and obtain permission from the user prior
 to accessing the camera or microphone.  For more information, please
-see the Privacy Guide.
+see the <a href="../../../guide/appdev/privacy/index.html">Privacy Guide</a>.
 
 ## Objects
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
+- <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+- <a href="captureImageOptions.html">CaptureImageOptions</a>
+- <a href="captureVideoOptions.html">CaptureVideoOptions</a>
 - CaptureCallback
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+- <a href="ConfigurationData.html">ConfigurationData</a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 ## Methods
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- <a href="captureAudio.html">capture.captureAudio</a>
+- <a href="captureImage.html">capture.captureImage</a>
+- <a href="captureVideo.html">capture.captureVideo</a>
+- <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>
 
 ## Scope
 
@@ -66,19 +66,19 @@ therefore has global scope.
 
 ## Properties
 
-- __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes__: The audio recording formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-- __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
+- __supportedImageModes__: The recording image sizes and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 ## Methods
 
-- `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
+- `<a href="captureAudio.html">capture.captureAudio</a>`: Launch the device's audio recording application to record audio clips.
 
-- `capture.captureImage`: Launch the device's camera application to take photos.
+- `<a href="captureImage.html">capture.captureImage</a>`: Launch the device's camera application to take photos.
 
-- `capture.captureVideo`: Launch the device's video recorder application to record videos.
+- `<a href="captureVideo.html">capture.captureVideo</a>`: Launch the device's video recorder application to record videos.
 
 ## Supported Platforms
 
@@ -107,8 +107,8 @@ platform-specific configuration settings described below:
 * Amazon Fire OS
 
         (in app/res/xml/config.xml)
-        <feature name="File">
-            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <feature name="<a href="../../file/fileobj/fileobj.html">File</a>">
+            <param name="android-package" value="org.apache.cordova.file.<a href="../../file/fileobj/fileobj.html">File</a>Utils" />
         </feature>
         <feature name="Capture">
             <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
@@ -122,8 +122,8 @@ platform-specific configuration settings described below:
 * Android
 
         (in app/res/xml/config.xml)
-        <feature name="File">
-            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <feature name="<a href="../../file/fileobj/fileobj.html">File</a>">
+            <param name="android-package" value="org.apache.cordova.file.<a href="../../file/fileobj/fileobj.html">File</a>Utils" />
         </feature>
         <feature name="Capture">
             <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
@@ -138,7 +138,7 @@ platform-specific configuration settings described below:
 
         (in www/plugins.xml)
         <feature name="Capture">
-            <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
+            <param name="blackberry-package" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" />
         </feature>
 
         (in www/config.xml)
@@ -162,4 +162,4 @@ platform-specific configuration settings described below:
         </Capabilities>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../../guide/support/index.html">Platform Support</a> for an overview.

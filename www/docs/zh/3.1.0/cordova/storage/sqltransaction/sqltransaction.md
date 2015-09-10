@@ -20,7 +20,7 @@ license: >
 
 # SQLTransaction
 
-允許對資料庫的 SQL 語句的執行。
+允許對<a href="../database/database.html">資料庫</a>的 SQL 語句的執行。
 
 ## 方法
 
@@ -28,7 +28,7 @@ license: >
 
 ## 詳細資訊
 
-調用 `Database` 物件的交易方法，刀路 `SQLTransaction` 指定的回檔方法的物件。
+調用 `Database` 物件的交易方法，刀路 `SQLTransaction` 指定的回<a href="../../file/fileobj/fileobj.html">檔</a>方法的物件。
 
 ## 支援的平臺
 
@@ -54,7 +54,7 @@ license: >
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

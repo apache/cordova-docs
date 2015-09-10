@@ -18,37 +18,37 @@ license: >
     under the License.
 ---
 
-# Kontakte
+# <a href="Contact/contact.html">Kontakt</a>e
 
-> Das `contacts` Objekt bietet Zugriff auf die Kontaktdatenbank Gerät.
+> Das `contacts` Objekt bietet Zugriff auf die <a href="Contact/contact.html">Kontakt</a>datenbank <a href="../device/device.html">Gerät</a>.
 
-**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Kontaktdaten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app Kontaktdaten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. Kontaktinformationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung Zugriff oder die Verwendung der Kontaktdaten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf Kontaktdaten einholen. Eine klare und leicht verständliche Benutzererfahrung rund um den Einsatz von Kontakt Daten hilft Benutzer Verwirrung zu vermeiden und wahrgenommene Missbrauch der Kontaktdaten. Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von <a href="Contact/contact.html">Kontakt</a>daten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app <a href="Contact/contact.html">Kontakt</a>daten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. <a href="Contact/contact.html">Kontakt</a>informationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung Zugriff oder die Verwendung der <a href="Contact/contact.html">Kontakt</a>daten (wenn das Betriebssystem des <a href="../device/device.html">Gerät</a>s bereits tun nicht). Diese <a href="../notification/notification.html">Benachrichtigung</a> sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf <a href="Contact/contact.html">Kontakt</a>daten einholen. Eine klare und leicht verständliche Benutzererfahrung rund um den Einsatz von <a href="Contact/contact.html">Kontakt</a> Daten hilft Benutzer Verwirrung zu vermeiden und wahrgenommene Missbrauch der <a href="Contact/contact.html">Kontakt</a>daten. Weitere Informationen finden Sie in der <a href="../../guide/appdev/privacy/index.html">Datenschutz-Guide</a>.
 
 ## Methoden
 
-*   Contacts.Create
+*   <a href="contacts.create.html">Contacts.Create</a>
 *   Contacts.Find
 
 ## Argumente
 
-*   contactFields
-*   contactSuccess
-*   contactError
-*   contactFindOptions
+*   <a href="parameters/contactFields.html">contactFields</a>
+*   <a href="parameters/contactSuccess.html">contactSuccess</a>
+*   <a href="parameters/contactError.html">contactError</a>
+*   <a href="parameters/contactFindOptions.html">contactFindOptions</a>
 
 ## Objekte
 
-*   Kontakt
-*   ContactName
-*   ContactField
-*   ContactAddress
-*   ContactOrganization
-*   ContactFindOptions
-*   ContactError
+*   <a href="Contact/contact.html">Kontakt</a>
+*   <a href="ContactName/contactname.html">ContactName</a>
+*   <a href="ContactField/contactfield.html">ContactField</a>
+*   <a href="ContactAddress/contactaddress.html">ContactAddress</a>
+*   <a href="ContactOrganization/contactorganization.html">ContactOrganization</a>
+*   <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>
+*   <a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.contacts
         $ cordova plugin ls
@@ -104,4 +104,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

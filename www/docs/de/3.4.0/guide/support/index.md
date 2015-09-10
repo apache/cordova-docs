@@ -443,7 +443,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Veranstaltungen</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Veranstaltungen</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +724,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Speicher</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Speicher</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

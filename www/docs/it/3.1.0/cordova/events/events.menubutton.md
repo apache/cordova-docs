@@ -22,14 +22,14 @@ license: >
 
 L'evento viene generato quando l'utente preme il tasto menu.
 
-    document.addEventListener("menubutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", yourCallbackFunction, false);
     
 
 ## Dettagli
 
 Applicando un gestore eventi esegue l'override il comportamento del pulsante di menu predefinito.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
 
 ## Piattaforme supportate
 
@@ -38,7 +38,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## Esempio rapido
 
-    document.addEventListener("menubutton", onMenuKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", onMenuKeyDown, false);
     
     function onMenuKeyDown() {
         // Handle the back button
@@ -51,7 +51,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Menu Button Example</title>
+        <title>Menu Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,14 +59,14 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("menubutton", onMenuKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", onMenuKeyDown, false);
         }
     
         // Handle the menu button

@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# media.getCurrentPosition
+# media.getCurrent<a href="../geolocation/Position/position.html">Position</a>
 
-Gibt die aktuelle Position in einer Audiodatei.
+Gibt die aktuelle <a href="../geolocation/Position/position.html">Position</a> in einer Audiodatei.
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(mediaSuccess, [mediaError]);
     
 
 ## Parameter
 
-*   **MediaSuccess**: der Rückruf, der die aktuelle Position in Sekunden übergeben wird.
+*   **MediaSuccess**: der Rückruf, der die aktuelle <a href="../geolocation/Position/position.html">Position</a> in Sekunden übergeben wird.
 
-*   **Medienfehler**: (Optional) der Rückruf ausgeführt, wenn ein Fehler auftritt.
+*   **<a href="Parameters/mediaError.html"><a href="media.html">Medien</a>fehler</a>**: (Optional) der Rückruf ausgeführt, wenn ein Fehler auftritt.
 
 ## Beschreibung
 
-Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audiodatei der zurückgibt ein `Media` Objekt. Aktualisiert auch die `Media` des Objekts `position` Parameter.
+Eine asynchrone Funktion, die die aktuelle <a href="../geolocation/Position/position.html">Position</a> der zugrunde liegenden Audiodatei der zurückgibt ein `Media` Objekt. Aktualisiert auch die `Media` des Objekts `position` Parameter.
 
 ## Unterstützte Plattformen
 
@@ -58,7 +58,7 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
     // Update media position every second
     var mediaTimer = setInterval(function () {
         // get media position
-        my_media.getCurrentPosition(
+        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
             // success callback
             function (position) {
                 if (position > -1) {
@@ -79,14 +79,14 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -112,17 +112,17 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -141,7 +141,7 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -162,7 +162,7 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
     
             // Set audio position
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     

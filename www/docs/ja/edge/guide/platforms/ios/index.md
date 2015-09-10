@@ -18,23 +18,23 @@ license: >
     under the License.
 ---
 
-# iOS プラットフォーム ガイド
+# iOS プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、iPhone や iPad などの iOS デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
+この<a href="../../../index.html">ガイド</a>は、iPhone や iPad などの iOS デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   iOS 構成
-*   IOS のアップグレード
-*   iOS の web 表示
-*   iOS のプラグイン
-*   iOS シェル ツール ガイド
+*   <a href="config.html">iOS 構成</a>
+*   <a href="upgrading.html">IOS のアップグレード</a>
+*   <a href="webview.html">iOS の web 表示</a>
+*   <a href="plugin.html">iOS のプラグイン</a>
+*   iOS シェル ツール <a href="../../../index.html">ガイド</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
 ## 要件、およびサポート
 
 Apple ® ツール インテル ベースの Mac OS X オペレーティング システム上でのみ実行 iOS アプリケーションを構築するために必要です。 OS X バージョン 10.9 (異端者) でのみ実行されます Xcode ® 6.0 (最低限必要なバージョン) 以上に設定すると、iOS 8 が含まれています SDK （ソフトウェア開発キット）。 アップルのアプリ Store℠ にアプリを提出するには、アップル ツールの最新バージョンが必要です。
 
-多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスを少なくともいる必要があります iOS 6.x がインストールされて、コルドバ 3.0 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 このガイド開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
+多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスを少なくともいる必要があります iOS 6.x がインストールされて、コルドバ 3.0 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 この<a href="../../../index.html">ガイド</a>開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -66,7 +66,7 @@ Comman ライン ・ ターミナルから実行します。
 
 ## 新しいプロジェクトを作成します。
 
-コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトをセットアップする`コルドバ`ユーティリティを使用します。たとえば、ソース コード ディレクトリ: で
+コルドバの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているように、新しいプロジェクトをセットアップする`コルドバ`ユーティリティを使用します。たとえば、ソース コード ディレクトリ: で
 
         $ コルドバ作成こんにちは com.example.hello"HelloWorld"$ cd こんにちは $ コルドバ プラットフォームは、ios を追加 $ コルドバ準備 # または"構築コルドバ"
     
@@ -155,7 +155,7 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -191,13 +191,13 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
 
 詳細は、Apple のドキュメントを参照してください。
 
-*   [開発開始 iOS アプリ今日][12]iOS アプリを開発するための手順の概要を提供します。
+*   [開発開始 iOS アプリ今日][12]iOS アプリを開発するための手順の<a href="../../overview/index.html">概要</a>を提供します。
 
-*   [メンバー センターのホーム ページ][13]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布ガイドおよびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
+*   [メンバー センターのホーム ページ][13]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布<a href="../../../index.html">ガイド</a>およびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
 
-*   [IOS 用ツール ワークフロー ガイド][14]
+*   [IOS 用ツール ワークフロー <a href="../../../index.html">ガイド</a>][14]
 
-*   [Xcode ユーザー ガイド][15]
+*   [Xcode ユーザー <a href="../../../index.html">ガイド</a>][15]
 
 *   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][16]
 

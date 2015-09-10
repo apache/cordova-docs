@@ -34,6 +34,6 @@ license: >
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` 기본 `enable` ): 설정 `disable` 알 수 없는 소스에서 원격 콘텐츠에 액세스할 수 있도록 웹 보안 설정을 무시 합니다. 이 기본 설정은 개발 편의, 그래서 제거 배포용 응용 프로그램을 포장 하기 전에 것입니다. 출시 애플 리 케이 션에 대 한 모든 Uri 해야 알려진 허용을 사용 하는 `<access>` 도메인 화이트 리스트 가이드에 설명 된 요소.
+*   `WebSecurity`( `disable` 기본 `enable` ): 설정 `disable` 알 수 없는 소스에서 원격 콘텐츠에 액세스할 수 있도록 웹 보안 설정을 무시 합니다. 이 기본 설정은 개발 편의, 그래서 제거 배포용 응용 프로그램을 포장 하기 전에 것입니다. 출시 애플 리 케이 션에 대 한 모든 Uri 해야 알려진 허용을 사용 하는 `<access>` 도메인 화이트 리스트 <a href="../../../index.html">가이드</a>에 설명 된 요소.
     
         <preference name="WebSecurity" value="disable"/>

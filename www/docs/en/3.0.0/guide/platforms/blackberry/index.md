@@ -20,25 +20,25 @@ license: >
 
 # BlackBerry Platform Guide
 
-This guide shows you how to set up an SDK environment to target
+This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s you how to set up an SDK environment to target
 applications for the BlackBerry platform prior to version 10.  If you
 want to target the most recent version, see the BlackBerry 10 Platform
 Guide.  See the following for more detailed platform-specific
 information:
 
-* BlackBerry Configuration
-* Upgrading BlackBerry
-* BlackBerry Plugins
-* BlackBerry Command-line Tools
+* <a href="config.html">BlackBerry Configuration</a>
+* <a href="upgrading.html">Upgrading BlackBerry</a>
+* <a href="plugin.html">BlackBerry Plugins</a>
+* <a href="tools.html">BlackBerry Command-line Tools</a>
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See <a href="../../cli/index.html">The Command-line Interface</a> for information about the
 current interface.
 
 ## Requirements and Support
 
 This version of BlackBerry is not supported by the `cordova` utility
-described in The Command-line Interface, but by a separate set of
+described in <a href="../../cli/index.html">The Command-line Interface</a>, but by a separate set of
 command-line tools. Download the Cordova distribution from
 [cordova.apache.org](http://cordova.apache.org/#download).
 
@@ -101,9 +101,9 @@ Download and extract the latest copy of [Cordova](http://cordova.apache.org/#dow
   BlackBerry PlayBook, BlackBerry Smartphone (OS5-7), or BlackBerry 10
   (QNX):
 
-        playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
-        blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
-        qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
+        playbook.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
+        blackberry.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks Packager
+        qnx.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
 
 These correspond to parameters you specify when building your
 project.  The first time you run these commands, they generate a
@@ -160,7 +160,7 @@ For BlackBerry Smartphone, edit the `project.properties` file to
 customize the `blackberry.sim.dir` and `blackberry.sim.bin`
 properties.  You need to escape path delimiters when specifying
 directory paths on Windows, for example: `C:\\Program
-Files\\BlackBerry\\Simulator`.
+<a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\BlackBerry\\Simulator`.
 
 Once the emulator is installed and running, run either of the
 following to install an application to the home screen:
@@ -174,7 +174,7 @@ answer no.
 __NOTE:__ On BlackBerry OS 5, the application is installed in the
 `Downloads` directory.
 
-## Deploy to Device
+## Deploy to <a href="../../../cordova/device/device.html">Device</a>
 
 To deploy your app to a device, it must be connected, and you must be
 registered for code signing keys as described above.  Also, to deploy

@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-PositionError
+<a href="../Position/position.html">Position</a>Error
 ========
 
-A `PositionError` object is passed to the `geolocationError` callback when an error occurs.
+A `<a href="../Position/position.html">Position</a>Error` object is passed to the `<a href="../parameters/geolocationError.html">geolocationError</a>` callback when an error occurs.
 
 Properties
 ----------
@@ -33,30 +33,30 @@ Properties
 Constants
 ---------
 
-- `PositionError.PERMISSION_DENIED`
-- `PositionError.POSITION_UNAVAILABLE`
-- `PositionError.TIMEOUT`
+- `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
+- `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
+- `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
 
 Description
 -----------
 
-The `PositionError` object is passed to the `geolocationError`
+The `<a href="../Position/position.html">Position</a>Error` object is passed to the `<a href="../parameters/geolocationError.html">geolocationError</a>`
 callback function when an error occurs with geolocation.
 
-### `PositionError.PERMISSION_DENIED`
+### `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
 
 Returned when the user does not allow your application to retrieve
 position information. This is dependent on the platform.
 
-### `PositionError.POSITION_UNAVAILABLE`
+### `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
 
 Returned when the device is unable to retrieve a position. In general
 this means the device has no network connectivity and/or cannot get a
 satellite fix.
 
-### `PositionError.TIMEOUT`
+### `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
 
 Returned when the device is unable to retrieve a position within the
-time specified in the `geolocationOptions`' `timeout` property. When
-used with `geolocation.watchPosition`, this error could be passed to
-the `geolocationError` callback every `timeout` milliseconds.
+time specified in the `<a href="../parameters/geolocation.options.html">geolocationOptions</a>`' `timeout` property. When
+used with `geolocation.watch<a href="../Position/position.html">Position</a>`, this error could be passed to
+the `<a href="../parameters/geolocationError.html">geolocationError</a>` callback every `timeout` milliseconds.

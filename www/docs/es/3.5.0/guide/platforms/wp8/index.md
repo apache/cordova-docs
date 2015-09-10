@@ -26,8 +26,8 @@ Muestra cómo utilizar herramientas shell Windows Phone específicas para genera
 
 Vea el siguiente para los detalles específicos a la plataforma de Windows Phone:
 
-*   Windows Phone Plugins
-*   Actualización de Windows Phone
+*   <a href="plugin.html">Windows Phone Plugins</a>
+*   <a href="upgrading.html">Actualización de Windows Phone</a>
 
 Para la plataforma Windows Phone 8, el Cordova WebView confía en Internet Explorer 10 como su motor de render, así como una cuestión práctica puede utilizar a potente depurador de IE10 para probar cualquier contenido web que no invoca Cordova APIs. El Blog de desarrolladores de Windows Phone proporciona una [guía útil][1] sobre cómo apoyar IE10 junto con navegadores WebKit comparables.
 
@@ -80,7 +80,7 @@ Si desea utilizar herramientas de shell de Windows Phone-centrado de Cordova en 
 
  [9]: http://cordova.apache.org
 
-Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y Windows Phone Plugins para detalles específicos de la plataforma de Windows Phone.
+Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y <a href="plugin.html">Windows Phone Plugins</a> para detalles específicos de la plataforma de Windows Phone.
 
 ## Instalar el SDK
 

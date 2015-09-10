@@ -36,36 +36,36 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     navigator.splashscreen.hide();
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title><a href="splashscreen.html">Splashscreen</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
 			navigator.splashscreen.hide();
         }
 		
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>
 
@@ -74,7 +74,7 @@ iOS Quirk
 
 1. In your **config.xml**, you need to [modify the value](guide_project-settings_index.md.html#Project%20Settings) for **"AutoHideSplashScreen”** to false
 
-2. Then, if you want to delay hiding the splash screen for 2 seconds, you can do this in your **deviceready** event handler:
+2. Then, if you want to delay hiding the splash screen for 2 seconds, you can do this in your **<a href="../events/events.deviceready.html">deviceready</a>** event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

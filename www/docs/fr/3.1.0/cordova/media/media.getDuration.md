@@ -42,7 +42,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
 
     // Audio player
     //
-    var my_media = new Media(src, onSuccess, onError);
+    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
     // Get duration
     var counter = 0;
@@ -65,14 +65,14 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -88,8 +88,8 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -98,17 +98,17 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -117,9 +117,9 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
     
             // Pause audio
             //
-            function pauseAudio() {
+            function <a href="../events/events.pause.html">pause</a>Audio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_media.<a href="../events/events.pause.html">pause</a>();
                 }
             }
     
@@ -127,7 +127,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -148,7 +148,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
     
             // Set audio position
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     
@@ -156,7 +156,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

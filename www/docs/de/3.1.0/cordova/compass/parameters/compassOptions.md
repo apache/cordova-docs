@@ -20,11 +20,11 @@ license: >
 
 # compassOptions
 
-Ein optionaler Parameter, um das Abrufen des Kompasses anzupassen.
+Ein optionaler Parameter, um das Abrufen des <a href="../compass.html">Kompass</a>es anzupassen.
 
 ## Optionen
 
-*   **Häufigkeit**: wie oft die Kompassrichtung in Millisekunden abrufen. *(Anzahl)* (Default: 100)
+*   **Häufigkeit**: wie oft die <a href="../compass.html">Kompass</a>richtung in Millisekunden abrufen. *(Anzahl)* (Default: 100)
 
 *   **Filter**: die Veränderung der Grad benötigt, um einen WatchHeading Erfolg Rückruf initiiert. *(Anzahl)*
 

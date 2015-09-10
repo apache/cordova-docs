@@ -22,10 +22,10 @@ license: >
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per i dispositivi iOS come iPhone e iPad. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione iOS
-*   L'aggiornamento iOS
-*   iOS visualizzazioni Web
-*   iOS Plugins
+*   <a href="config.html">Configurazione iOS</a>
+*   <a href="upgrading.html">L'aggiornamento iOS</a>
+*   <a href="webview.html">iOS visualizzazioni Web</a>
+*   <a href="plugin.html">iOS Plugins</a>
 *   iOS Guida strumento Shell
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
@@ -125,7 +125,7 @@ Xcode viene fornito in bundle con gli emulatori per le ultime versioni di iPhone
 
 Per informazioni dettagliate sui vari requisiti per distribuire un dispositivo, fare riferimento alla sezione *Launch Your App su dispositivi* di Apple [Sulle App distribuzione dei flussi di lavoro][9]. In breve, è necessario effettuare le seguenti operazioni prima di distribuire:
 
- [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
+ [9]: https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistribution<a href="../../../index.html">Guide</a>/Introduction/Introduction.html
 
 1.  Unire l'Apple iOS Developer Program.
 
@@ -158,7 +158,7 @@ Avviso di Xcode sul metodo `invokeString` riguarda funzionalità che lancia un'a
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -209,7 +209,7 @@ Per ulteriori informazioni, consultare la documentazione di Apple:
  [12]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [13]: https://developer.apple.com/membercenter/index.action
  [14]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
- [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [15]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4User<a href="../../../index.html">Guide</a>/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
  [16]: https://developer.apple.com/videos/wwdc/2012/
  [17]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 

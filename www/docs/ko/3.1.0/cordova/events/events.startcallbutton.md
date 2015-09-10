@@ -20,16 +20,16 @@ license: >
 
 # startcallbutton
 
-이벤트 시작 호출 단추를 누를 때 발생 합니다.
+<a href="events.html">이벤트</a> 시작 호출 단추를 누를 때 발생 합니다.
 
-    document.addEventListener("startcallbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-대 한 이벤트 리스너를 등록할 수 있습니다 시작 호출 기본 동작을 재정의 해야 할 경우는 `startcallbutton` 이벤트.
+대 한 <a href="events.html">이벤트</a> 리스너를 등록할 수 있습니다 시작 호출 기본 동작을 재정의 해야 할 경우는 `startcallbutton` <a href="events.html">이벤트</a>.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 한번 <a href="events.html">이벤트</a> 리스너를 <a href="../connection/connection.html">연결</a> 하는 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">이벤트</a>가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -37,7 +37,7 @@ license: >
 
 ## 빠른 예제
 
-    document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
     
     function onStartCallKeyDown() {
         // Handle the start call button
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Start Call Button Example</title>
+        <title>Start Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
         }
     
         // Handle the start call button

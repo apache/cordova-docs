@@ -24,7 +24,7 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche. Affectation de `false` ne tue pas l'appli après un `pause` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
+*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `<a href="../../../cordova/events/events.pause.html">pause</a>` événement se déclenche. Affectation de `false` ne tue pas l'appli après un `<a href="../../../cordova/events/events.pause.html">pause</a>` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
     
         <preference name="KeepRunning" value="false"/>
         

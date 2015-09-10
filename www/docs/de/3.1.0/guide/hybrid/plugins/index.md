@@ -24,7 +24,7 @@ Ein Cordova Plugin Brücken ein wenig Funktionalität zwischen den WebView eine 
 
 Dieser Leitfaden Schritte der Prozess des Schreibens ein einfaches Echo-Plugin, das übergibt eine Zeichenfolge von JavaScript und sendet sie in die native-Umgebung für die unterstützten Plattformen. Der systemeigene Code gibt dann dieselbe Zeichenfolge an die Rückrufe innerhalb des Plugins JavaScript zurück.
 
-Dieses Handbuch bietet ausreichend Übersicht, auf der Sie aufbauen können, um komplexere Plugins zu schreiben.
+Dieses Handbuch bietet ausreichend <a href="../../overview/index.html">Übersicht</a>, auf der Sie aufbauen können, um komplexere Plugins zu schreiben.
 
 ## JavaScript
 
@@ -69,21 +69,21 @@ Zunächst werfen wir einen Blick auf die letzten drei Argumente für die `exec` 
 
 Der Erfolg-Rückruf übergebenen `exec` ist lediglich ein Verweis auf den Rückruf, die Funktion `window.echo` führt. Wir machen ein bisschen mehr für den Fehler-Rückruf: Wenn die systemeigene Seite aus der Fehler-Rückruf ausgelöst wird, wir einfach den Erfolg-Rückruf aufzurufen und übergeben sie eine Zeichenfolge "Standard".
 
-## Plugin-Spezifikation
+## <a href="../../../plugin_ref/spec.html">Plugin-Spezifikation</a>
 
-Cordova hat eine Plugin-Spezifikation verfügbar, aktivieren Sie die automatische Installation des Plugins für Android, iOS, BlackBerry 10 und Windows Phone-Plattformen. Indem Ihr Plugin in einer bestimmten Weise zu strukturieren und ein `plugin.xml` manifest-Datei, Sie können Benutzern ermöglichen, Ihr Plugin über die Befehlszeile Werkzeuge zu installieren.
+Cordova hat eine <a href="../../../plugin_ref/spec.html">Plugin-Spezifikation</a> verfügbar, aktivieren Sie die automatische Installation des Plugins für Android, iOS, BlackBerry 10 und Windows Phone-Plattformen. Indem Ihr Plugin in einer bestimmten Weise zu strukturieren und ein `plugin.xml` manifest-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, Sie können Benutzern ermöglichen, Ihr Plugin über die Befehlszeile Werkzeuge zu installieren.
 
-*   Plugin-Spezifikation
+*   <a href="../../../plugin_ref/spec.html">Plugin-Spezifikation</a>
 
 ## Native
 
 Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens einem nativen Implementierung zu ergänzen. Details für jede Plattform dazu sind unten aufgeführt. Diese Leitfäden weiterhin auf dem einfachen Echo-Plugin-Beispiel wie oben beschrieben zu bauen.
 
-*   Android Plugins
-*   BlackBerry-Plugins
-*   BlackBerry 10 Plugins
-*   iOS Plugins
-*   Windows Phone Plugins
+*   <a href="../../platforms/android/plugin.html">Android Plugins</a>
+*   <a href="../../platforms/blackberry/plugin.html">BlackBerry-Plugins</a>
+*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
+*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
 
 Tizen-Plattform unterstützt derzeit keine Plugins.
 

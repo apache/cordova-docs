@@ -36,4 +36,4 @@ license: >
 
 ## Методы
 
-*   **MediaFile.getFormatData**: Возвращает сведения о формате файла мультимедиа.
+*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: Возвращает сведения о формате файла мультимедиа.

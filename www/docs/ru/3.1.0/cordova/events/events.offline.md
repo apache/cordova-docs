@@ -22,14 +22,14 @@ license: >
 
 Событие возникает, когда приложение переходит в автономный режим, и устройство не подключено к сети Интернет.
 
-    document.addEventListener("offline", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
-`offline`Событие возникает, когда ранее подключенное устройство теряет подключение к сети, так что приложение больше не может получить доступ к Интернет. Он опирается на ту же информацию, подключение API и применяется при `connection.type` изменяется от `NONE` в любое значение.
+`offline`Событие возникает, когда ранее подключенное устройство теряет подключение к сети, так что приложение больше не может получить доступ к Интернет. Он опирается на ту же информацию, подключение API и применяется при `<a href="../connection/connection.type.html">connection.type</a>` изменяется от `NONE` в любое значение.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -42,7 +42,7 @@ license: >
 
 ## Быстрый пример
 
-    document.addEventListener("offline", onOffline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
     
     function onOffline() {
         // Handle the offline event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline Example</title>
+        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,13 +62,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("offline", onOffline, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
         }
     
         // Handle the offline event

@@ -38,7 +38,7 @@ and `false` indicates that it is not.
 The inbound parameter `date` should be of type `Date`.
 
 If there is an error reading the date, then the `errorCallback`
-executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes. The error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -48,7 +48,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 During the summer, and if the browser is set to a DST-enabled
@@ -61,13 +61,13 @@ timezone, this should display a popup dialog with text similar to
         function () {alert('Error getting names\n');}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

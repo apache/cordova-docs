@@ -21,16 +21,16 @@ license: >
 contacts.create
 ===============
 
-新しい Contact オブジェクトを作成します。
+新しい <a href="Contact/contact.html">Contact</a> オブジェクトを作成します。
 
     var contact = navigator.contacts.create(properties);
 
 概要
 -----------
 
-contacts.create 関数は、新しい `Contact` オブジェクトを同期的に作成します。
+contacts.create 関数は、新しい `<a href="Contact/contact.html">Contact</a>` オブジェクトを同期的に作成します。
 
-この関数で作成した Contact オブジェクトは、デバイスの連絡先データベースには残りません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` 関数を使用します。
+この関数で作成した <a href="Contact/contact.html">Contact</a> オブジェクトは、デバイスの連絡先データベースには残りません。 <a href="Contact/contact.html">Contact</a> オブジェクトをデバイスに保存するには、 `<a href="Contact/contact.html">Contact</a>.save` 関数を使用します。
 
 サポートされているプラットフォーム
 -------------------
@@ -40,39 +40,39 @@ contacts.create 関数は、新しい `Contact` オブジェクトを同期的�
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
-    var myContact = navigator.contacts.create({"displayName": "Test User"});
+    var my<a href="Contact/contact.html">Contact</a> = navigator.contacts.create({"displayName": "Test User"});
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title><a href="Contact/contact.html">Contact</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            var myContact = navigator.contacts.create({"displayName": "Test User"});
-            myContact.note = "この連絡先のメモ";
-            console.log("連絡先, " + myContact.displayName + ", メモ: " + myContact.note);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            var my<a href="Contact/contact.html">Contact</a> = navigator.contacts.create({"displayName": "Test User"});
+            my<a href="Contact/contact.html">Contact</a>.note = "この連絡先のメモ";
+            console.log("連絡先, " + my<a href="Contact/contact.html">Contact</a>.displayName + ", メモ: " + my<a href="Contact/contact.html">Contact</a>.note);
         }
 
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../storage/storage.opendatabase.html">使用例</a></h1>
         <p>連絡先を作成します</p>
       </body>
     </html>

@@ -40,7 +40,7 @@ NOTE, doc said:
 -->
 
 Developers should use the the `cordova` utility in conjunction with
-the Android SDK.  See The Cordova Command-line Interface for
+the Android SDK.  See <a href="../../cli/index.html">The Cordova Command-line Interface</a> for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -81,7 +81,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+* Save the value and <a href="../../../cordova/inappbrowser/inappbrowser.html">close</a> both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to
@@ -135,8 +135,8 @@ Once open, the Android SDK Manager displays various runtime libraries:
 
 ![](img/guide/platforms/android/asdk_window.png)
 
-Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
-choose any item from __Device Definitions__ in the resulting dialog
+Choose __Tools &rarr; Manage AVDs__ (Android Virtual <a href="../../../cordova/device/device.html">Device</a>s), then
+choose any item from __<a href="../../../cordova/device/device.html">Device</a> Definitions__ in the resulting dialog
 box:
 
 ![](img/guide/platforms/android/asdk_device.png)
@@ -146,7 +146,7 @@ to accept the changes:
 
 ![](img/guide/platforms/android/asdk_newAVD.png)
 
-The AVD then appears in the __Android Virtual Devices__ list:
+The AVD then appears in the __Android Virtual <a href="../../../cordova/device/device.html">Device</a>s__ list:
 
 ![](img/guide/platforms/android/asdk_avds.png)
 
@@ -176,7 +176,7 @@ For a faster experience, use an Intel-based emulator image:
 * When starting the emulator, ensure there are no error messages
   indicating a failure to load HAX modules.
 
-## Deploy to Device
+## Deploy to <a href="../../../cordova/device/device.html">Device</a>
 
 To push an app directly to the device, make sure USB debugging is
 enabled on your device as described on the

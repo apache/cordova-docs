@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-PositionError
+<a href="../Position/position.html">Position</a>Error
 ========
 
-`PositionError` オブジェクトは、エラーが発生したときに `geolocationError` コールバック関数に渡されます。
+`<a href="../Position/position.html">Position</a>Error` オブジェクトは、エラーが発生したときに `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -32,23 +32,23 @@ PositionError
 定数
 ---------
 
-- `PositionError.PERMISSION_DENIED`
-- `PositionError.POSITION_UNAVAILABLE`
-- `PositionError.TIMEOUT`
+- `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
+- `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
+- `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
 
 概要
 -----------
 
-`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
+`<a href="../Position/position.html">Position</a>Error` オブジェクトは、位置情報取得に関するエラーが発生したときに `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバック関数を通してユーザーに返されます。
 
-### `PositionError.PERMISSION_DENIED`
+### `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
 
 ユーザーがアプリケーションに対して、位置情報の取得を許可しなかった場合に返されます。これはプラットフォームに依存します。
 
-### `PositionError.POSITION_UNAVAILABLE`
+### `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
 
 デバイスが位置を取得できなかった場合に返されます。大抵、これはデバイスがネットワークに接続されていない、および／または衛生情報が取得出来なかったことを意味します。
 
-### `PositionError.TIMEOUT`
+### `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
 
-デバイスが、 `geolocationOptions` の `timeout` プロパティーによって指定された時間内に位置が取得できなかった場合に返されます。 `geolocation.watchPosition` と一緒に使用するとき、このエラーは `geolocationError` コールバックの中で毎 `timeout` ミリ秒後呼ばれる可能性があります。
+デバイスが、 `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` の `timeout` プロパティーによって指定された時間内に位置が取得できなかった場合に返されます。 `geolocation.watch<a href="../Position/position.html">Position</a>` と一緒に使用するとき、このエラーは `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバックの中で毎 `timeout` ミリ秒後呼ばれる可能性があります。

@@ -23,7 +23,7 @@ license: >
 > Iniciar la aplicación grabadora de audio y devolver información acerca de los archivos capturados clip de audio.
 
     navigator.device.capture.captureAudio(
-        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError,  [<a href="captureAudioOptions.html">CaptureAudioOptions</a> options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Inicia una operación asincrónica para capturar grabaciones de audio mediante la aplicación de grabación de audio del dispositivo por defecto. La operación permite al usuario del dispositivo capturar varias grabaciones en una sola sesión.
 
-La operación de captura termina cuando el usuario sale del audio grabación de aplicación, o el número máximo de registros especificado por `CaptureAudioOptions.limit` se alcanza. Si no `limit` se especifica el valor del parámetro, por defecto a uno (1), y la operación de captura termina después de que el usuario registra un solo clip de audio.
+La operación de captura termina cuando el usuario sale del audio grabación de aplicación, o el número máximo de registros especificado por `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` se alcanza. Si no `limit` se especifica el valor del parámetro, por defecto a uno (1), y la operación de captura termina después de que el usuario registra un solo clip de audio.
 
-Cuando finaliza la operación de captura, el `CaptureCallback` se ejecuta con una gran variedad de `MediaFile` objetos describiendo cada uno capturado archivo del clip de audio. Si el usuario finaliza la operación antes de que sea capturado un clip de audio, el `CaptureErrorCallback` se ejecuta con un `CaptureError` de objeto, con el `CaptureError.CAPTURE_NO_MEDIA_FILES` código de error.
+Cuando finaliza la operación de captura, el `CaptureCallback` se ejecuta con una gran variedad de `<a href="MediaFile.html">MediaFile</a>` objetos describiendo cada uno capturado archivo del clip de audio. Si el usuario finaliza la operación antes de que sea capturado un clip de audio, el `<a href="CaptureError.html">CaptureError</a>Callback` se ejecuta con un `<a href="CaptureError.html">CaptureError</a>` de objeto, con el `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` código de error.
 
 ## Plataformas soportadas
 
@@ -56,7 +56,7 @@ Cuando finaliza la operación de captura, el `CaptureCallback` se ejecuta con un
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start audio capture
@@ -87,7 +87,7 @@ Cuando finaliza la operación de captura, el `CaptureCallback` se ejecuta con un
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -126,7 +126,7 @@ Cuando finaliza la operación de captura, el `CaptureCallback` se ejecuta con un
 
 ## BlackBerry WebWorks rarezas
 
-*   Cordova para BlackBerry WebWorks intenta lanzar la aplicación **Grabadora de notas de voz** , proporcionada por RIM, capturar grabaciones de audio. La aplicación recibe una `CaptureError.CAPTURE_NOT_SUPPORTED` código de error si la aplicación no está instalada en el dispositivo.
+*   Cordova para BlackBerry WebWorks intenta lanzar la aplicación **Grabadora de notas de voz** , proporcionada por RIM, capturar grabaciones de audio. La aplicación recibe una `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` código de error si la aplicación no está instalada en el dispositivo.
 
 ## iOS rarezas
 

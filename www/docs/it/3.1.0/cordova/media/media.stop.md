@@ -22,7 +22,7 @@ license: >
 
 Interrompe la riproduzione di un file audio.
 
-    Media.Stop();
+    <a href="media.html">Media</a>.Stop();
     
 
 ## Descrizione
@@ -44,7 +44,7 @@ Il `media.stop` metodo viene eseguito in modo sincrono per interrompere la ripro
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new Media(url,
+        var my_media = new <a href="media.html">Media</a>(url,
             // success callback
             function() {
                 console.log("playAudio():Audio Success");
@@ -71,14 +71,14 @@ Il `media.stop` metodo viene eseguito in modo sincrono per interrompere la ripro
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -94,8 +94,8 @@ Il `media.stop` metodo viene eseguito in modo sincrono per interrompere la ripro
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -104,7 +104,7 @@ Il `media.stop` metodo viene eseguito in modo sincrono per interrompere la ripro
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {

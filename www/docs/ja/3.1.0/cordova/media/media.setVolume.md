@@ -20,7 +20,7 @@ license: >
 
 # media.setVolume
 
-オーディオ ファイルの音量を設定します。
+オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の音量を設定します。
 
     media.setVolume(volume);
     
@@ -55,7 +55,7 @@ license: >
         });
     
         // Play audio
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     
         // Mute volume after 2 seconds
         setTimeout(function() {
@@ -75,14 +75,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for Cordova to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // Cordova is ready
             //
@@ -102,13 +102,13 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -137,7 +137,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

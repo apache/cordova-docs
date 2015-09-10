@@ -20,11 +20,11 @@ license: >
 
 # 配置
 
-> 封裝一組設備支援的媒體捕獲參數。
+> 封裝一組<a href="../../device/device.html">設備</a>支援的<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>參數。
 
 ## 說明
 
-描述設備所支援的媒體捕獲模式。配置資料包含的 MIME 類型和捕獲尺寸的視頻或圖像捕獲。
+描述<a href="../../device/device.html">設備</a>所支援的<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>模式。配置資料包含的 MIME 類型和<a href="capture.html">捕獲</a>尺寸的視頻或圖像<a href="capture.html">捕獲</a>。
 
 MIME 類型應堅持[RFC2046][1]。例子：
 
@@ -38,7 +38,7 @@ MIME 類型應堅持[RFC2046][1]。例子：
 
 ## 屬性
 
-*   **類型**： ASCII 編碼的小寫字串表示的媒體類型。() DOMString
+*   **類型**： ASCII 編碼的小寫字串表示的<a href="../media.html">媒體</a>類型。() DOMString
 
 *   **高度**： 圖像或視頻以圖元為單位的高度。值為零的音效片段。（人數）
 

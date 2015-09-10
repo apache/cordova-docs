@@ -20,19 +20,19 @@ license: >
 
 # SQLResultSet
 
-當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數。
+當 `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` 物件的 `executeSql` 方法時，執行指定的回<a href="../../file/fileobj/fileobj.html">檔</a> `SQLResultSet` 參數。
 
 ## 屬性
 
-*   **insertId**： 行的行的 ID， `SQLResultSet` 物件的 SQL 語句插入到資料庫中。
+*   **insertId**： 行的行的 ID， `SQLResultSet` 物件的 SQL 語句插入到<a href="../database/database.html">資料庫</a>中。
 
 *   **rowsAffected**： 由零如果該語句不會影響任何行的 SQL 語句更改的行數。
 
-*   **行**： `SQLResultSetRowList` 表示返回的行，如果未返回行，則為空。
+*   **行**： `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` 表示返回的行，如果未返回行，則為空。
 
 ## 詳細資訊
 
-當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數，其中包含三個屬性：
+當 `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` 物件的 `executeSql` 方法時，執行指定的回<a href="../../file/fileobj/fileobj.html">檔</a> `SQLResultSet` 參數，其中包含三個屬性：
 
 *   `insertId`返回組裝成功的 SQL 插入語句的行號。如果 SQL 不會插入任何行， `insertId` 未設置。
 
@@ -49,9 +49,9 @@ license: >
 
 ## 執行 SQL 快速示例
 
-    函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB);}函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId);}函數 errorCB(err) {警報 （"處理 SQL 時出錯:"+ err.code);}var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；
+    函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB);}函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId);}函數 errorCB(err) {警報 （"處理 SQL 時出錯:"+ err.code);}var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database ("<a href="../database/database.html">資料庫</a>"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > 存儲示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 填充資料庫 / / 函數 populateDB(tx) {tx.executeSql ('下拉表如果存在演示') ；tx.executeSql (' 創建表如果不存在演示 （id 唯一的資料） ') ；tx.executeSql (' 的值插入到演示 （id、 資料） （1，"第一行"） ') ；tx.executeSql （插入到演示 （id、 資料） 值 （2，"第二行")) ；} / / 查詢資料庫 / / 函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB） ；} / / 查詢成功回檔 / / 函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId） ；} / / 交易錯誤回檔 / / 函數 errorCB(err) {console.log ("處理 SQL 時出錯:"+ err.code） ；} / / 交易成功回檔 / / 函數 successCB() {var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；} / / 設備的 Api 可 / / 函數 onDeviceReady() {var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction （populateDB、 errorCB、 successCB） ；} < / 腳本 >< / 頭 >< 身體 >< h1 > 示例 < / h1 >< p > 資料庫 </p >< / 身體 >< / html >
+    <!DOCTYPE html >< html >< 頭 >< 標題 > <a href="../storage.html">存儲</a>示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待<a href="../../device/device.html">設備</a> API 庫載入 / / document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a> ("<a href="../../events/events.deviceready.html">deviceready</a>"，onDeviceReady，false);/ / 填充<a href="../database/database.html">資料庫</a> / / 函數 populateDB(tx) {tx.executeSql ('下拉表如果存在演示') ；tx.executeSql (' 創建表如果不存在演示 （id 唯一的資料） ') ；tx.executeSql (' 的值插入到演示 （id、 資料） （1，"第一行"） ') ；tx.executeSql （插入到演示 （id、 資料） 值 （2，"第二行")) ；} / / 查詢<a href="../database/database.html">資料庫</a> / / 函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB） ；} / / 查詢成功回<a href="../../file/fileobj/fileobj.html">檔</a> / / 函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId） ；} / / 交易錯誤回<a href="../../file/fileobj/fileobj.html">檔</a> / / 函數 errorCB(err) {console.log ("處理 SQL 時出錯:"+ err.code） ；} / / 交易成功回<a href="../../file/fileobj/fileobj.html">檔</a> / / 函數 successCB() {var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database ("<a href="../database/database.html">資料庫</a>"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；} / / <a href="../../device/device.html">設備</a>的 Api 可 / / 函數 onDeviceReady() {var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database ("<a href="../database/database.html">資料庫</a>"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction （populateDB、 errorCB、 successCB） ；} < / 腳本 >< / 頭 >< 身體 >< h1 > 示例 < / h1 >< p > <a href="../database/database.html">資料庫</a> </p >< / 身體 >< / html >

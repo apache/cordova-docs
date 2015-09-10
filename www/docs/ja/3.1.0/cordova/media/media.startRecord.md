@@ -20,14 +20,14 @@ license: >
 
 # media.startRecord
 
-オーディオ ファイルの録音を開始します。
+オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を開始します。
 
     media.startRecord();
     
 
 ## 説明
 
-`media.startRecord`メソッドは同期的に実行、オーディオ ファイルの録音を開始します。
+`media.startRecord`メソッドは同期的に実行、オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を開始します。
 
 ## サポートされているプラットフォーム
 
@@ -64,14 +64,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -130,23 +130,23 @@ license: >
 
 ## Android の癖
 
-*   Android 端末適応型マルチレート形式にオーディオを録音します。指定したファイルは、 *.amr*拡張子で終わる必要があります。
+*   Android 端末適応型マルチレート形式にオーディオを録音します。指定した<a href="../file/fileobj/fileobj.html">ファイル</a>は、 *.amr*拡張子で終わる必要があります。
 
 ## ブラックベリー WebWorks 癖
 
-*   BlackBerry デバイスでオーディオを録音適応型マルチレート形式。指定したファイルは、 *.amr*拡張子で終わる必要があります。
+*   BlackBerry <a href="../device/device.html">デバイス</a>でオーディオを録音適応型マルチレート形式。指定した<a href="../file/fileobj/fileobj.html">ファイル</a>は、 *.amr*拡張子で終わる必要があります。
 
 ## iOS の癖
 
-*   iOS の種類*.wav*と返しますエラー場合は、ファイル名拡張子がファイルをレコードのみが修正されません。
+*   iOS の種類*.wav*と返しますエラー場合は、<a href="../file/fileobj/fileobj.html">ファイル</a>名拡張子が<a href="../file/fileobj/fileobj.html">ファイル</a>をレコードのみが修正されません。
 
-*   記録は、アプリケーションの配置の完全なパスを指定しない場合 `documents/tmp` ディレクトリ。 これを介してアクセスすることができます、 `File` API を使用して `LocalFileSystem.TEMPORARY` 。 記録時に指定された任意のサブディレクトリに存在する必要があります。
+*   記録は、アプリケーションの配置の完全なパスを指定しない場合 `documents/tmp` ディレクトリ。 これを介してアクセスすることができます、 `File` API を使用して `<a href="../file/localfilesystem/localfilesystem.html">LocalFileSystem</a>.TEMPORARY` 。 記録時に指定された任意のサブディレクトリに存在する必要があります。
 
-*   ファイルを記録し、再生することができますドキュメント URI を使用して。
+*   <a href="../file/fileobj/fileobj.html">ファイル</a>を記録し、再生することができますドキュメント URI を使用して。
     
         var myMedia = new Media("documents://beer.mp3")
         
 
 ## Tizen の癖
 
-*   Tizen のデバイスでサポートされていません。
+*   Tizen の<a href="../device/device.html">デバイス</a>でサポートされていません。

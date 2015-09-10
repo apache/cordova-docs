@@ -40,9 +40,9 @@ Quando si utilizza la CLI per costruire un progetto, versioni di questo file ven
 
 In questa sezione in dettaglio le opzioni di configurazione globale e multi-piattaforma. Vedere le sezioni seguenti per le opzioni specifiche della piattaforma:
 
-*   Configurazione iOS
-*   Configurazione Android
-*   Configurazione di blackBerry 10
+*   <a href="../guide/platforms/ios/config.html">Configurazione iOS</a>
+*   <a href="../guide/platforms/android/config.html">Configurazione Android</a>
+*   <a href="../guide/platforms/blackberry10/config.html"><a href="../guide/platforms/blackberry/config.html">Configurazione di blackBerry</a> 10</a>
 
 Oltre le varie opzioni di configurazione descritte di seguito, è possibile configurare anche set di base di un'applicazione delle immagini per ogni piattaforma di destinazione. Per ulteriori informazioni, vedere icone e schermate iniziali.
 
@@ -53,7 +53,7 @@ In questo esempio viene illustrato il valore predefinito `config.xml` generato d
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -184,6 +184,6 @@ Quando si utilizza la CLI per costruire applicazioni, a volte è necessario spec
 
 ## Il *hook* elemento
 
-Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la Guida di ganci.
+Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la <a href="../guide/appdev/hooks/index.html">Guida di ganci</a>.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

@@ -22,7 +22,7 @@ license: >
 
 L'évènement se déclenche lorsque l'état de la batterie évolue.
 
-    window.addEventListener("batterystatus", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", yourCallbackFunction, false);
     
 
 ## Détails
@@ -35,7 +35,7 @@ Le gestionnaire est appelé avec un objet contenant deux propriétés :
 
 *   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
 
 ## Plates-formes supportées
 
@@ -51,10 +51,10 @@ Windows Phone 7 ne fournit pas d'API native pour déterminer le niveau de la bat
 
 ## Exemple court
 
-    window.addEventListener("batterystatus", onBatteryStatus, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
     
     function onBatteryStatus(info) {
-        // Handle the online event
+        // Handle the <a href="events.online.html">online</a> event
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
     
@@ -64,7 +64,7 @@ Windows Phone 7 ne fournit pas d'API native pour déterminer le niveau de la bat
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -72,13 +72,13 @@ Windows Phone 7 ne fournit pas d'API native pour déterminer le niveau de la bat
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
         }
     
         // Handle the batterystatus event

@@ -22,5 +22,5 @@ license: >
 
 > 在您自己的專案中實現科爾多瓦 web 視圖。
 
-*   Android WebViews
-*   WebViews iOS
+*   <a href="../../platforms/android/webview.html">Android WebViews</a>
+*   <a href="../../platforms/ios/webview.html">WebViews iOS</a>

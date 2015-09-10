@@ -60,14 +60,14 @@ iOS와 SDK과 Cordova 설치하기
 - 새로 만든 프로젝트 폴더로 이동해서 
 - 폴더안의 `.xcodeproj` 를 실행한다.
 
-Hello World
+<a href="../webos/index.html">Hello World</a>
 -----------
 
 - Xcode의 _Project Navigator_ 에서 `www` 폴더를 선택한다.
 - `index.html`를 선택하고
 - `<body>` 아래에 이하의 코드를 추가한다.:
 
-        <h1>Hello World</h1>
+        <h1><a href="../webos/index.html">Hello World</a></h1>
 
 이 외에 관련된 JS, CSS파일들을 추가할 수 있다. 
     
@@ -78,10 +78,10 @@ Deploy to Simulator
 - 툴바에 있는 **Scheme** 드롭다운 메뉴의 **Active SDK** 를  **iOS [version] Simulator** 로 바꾼다.
 -  **Run** 버튼을 선택한다.
 
-Deploy to Device
+Deploy to <a href="../../../cordova/device/device.html">Device</a>
 ----------------
 
-- **Supporting Files** 그룹 아래의 `HelloWorld-Info.plist`파일을 연다.
+- **Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s** 그룹 아래의 `HelloWorld-Info.plist`파일을 연다.
 - Change **BundleIdentifier** to the identifier provided by Apple or your own bundle identifier
     - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
 - 툴바의 Scheme 드롭다운 메뉴에서 **Active SDK**칸에 장치를 선택한다. 

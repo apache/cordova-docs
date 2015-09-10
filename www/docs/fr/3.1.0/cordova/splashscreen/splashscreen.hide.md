@@ -47,14 +47,14 @@ Cette méthode rejette écran de démarrage de l'application.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ Cette méthode rejette écran de démarrage de l'application.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>
     
 
 ## iOS Quirk
 
-La `config.xml` du fichier `AutoHideSplashScreen` doit être `false` . Pour retarder la cacher l'écran de démarrage pendant deux secondes, ajoute un minuteur comme suit dans la `deviceready` gestionnaire d'événements :
+La `config.xml` du fichier `AutoHide<a href="splashscreen.html">SplashScreen</a>` doit être `false` . Pour retarder la cacher l'écran de démarrage pendant deux secondes, ajoute un minuteur comme suit dans la `<a href="../events/events.deviceready.html">deviceready</a>` gestionnaire d'événements :
 
         setTimeout(function() {
             navigator.splashscreen.hide();

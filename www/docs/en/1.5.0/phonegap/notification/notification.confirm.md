@@ -43,7 +43,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 	// process the confirmation dialog result
@@ -62,24 +62,24 @@ Quick Example
         );
     }
         
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // PhoneGap is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
     
@@ -109,4 +109,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- Ignores button names, always 'OK|Cancel'
+- Ignores button <a href="../storage/parameters/name.html">name</a>s, always 'OK|Cancel'

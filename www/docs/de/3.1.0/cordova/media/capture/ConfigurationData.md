@@ -20,11 +20,11 @@ license: >
 
 # ConfigurationData
 
-> Kapselt eine Reihe von Medien-Aufnahme-Parameter, die ein Gerät unterstützt.
+> Kapselt eine Reihe von <a href="../media.html">Medien</a>-Aufnahme-Parameter, die ein <a href="../../device/device.html">Gerät</a> unterstützt.
 
 ## Beschreibung
 
-Beschreibt Medien-Aufnahmemodi, die vom Gerät unterstützt. Die Konfigurationsdaten enthält den MIME-Typ und Capture Dimensionen für die Aufnahme von Video- oder Bilddateien.
+Beschreibt <a href="../media.html">Medien</a>-Aufnahmemodi, die vom <a href="../../device/device.html">Gerät</a> unterstützt. Die Konfigurationsdaten enthält den MIME-Typ und Capture Dimensionen für die Aufnahme von Video- oder Bilddateien.
 
 Die MIME-Typen sollten [RFC2046][1]einhalten. Beispiele:
 
@@ -38,7 +38,7 @@ Die MIME-Typen sollten [RFC2046][1]einhalten. Beispiele:
 
 ## Eigenschaften
 
-*   **Typ**: die ASCII-codierte Zeichenfolge aus Kleinbuchstaben, den Medientyp darstellt. (DOM-String und enthält)
+*   **Typ**: die ASCII-codierte Zeichenfolge aus Kleinbuchstaben, den <a href="../media.html">Medien</a>typ darstellt. (DOM-String und enthält)
 
 *   **Höhe**: die Höhe des Bildes oder Videos in Pixel. Der Wert ist NULL für sound-Clips. (Anzahl)
 

@@ -42,20 +42,20 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 1. **Copy** the `Cordova.plist` file into your project folder on disk
 2. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
 3. **Choose** the radio-button **"Create groups for any added folders"**
-4. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
+4. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 5. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)
 6. Enter `~/Documents/CordovaLib/` in the **"Go to the folder:" sheet** and then press the **"Go"** button
-7. Select the `VERSION` file in the the **"Add Files..." sheet**
-8. Press the **"Add"** button in the **"Add Files..." sheet**
-9. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
+7. Select the `VERSION` file in the the **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**
+8. Press the **"Add"** button in the **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**
+9. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 10. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)
 11. Enter `~/Documents/CordovaLib/CordovaLib.xcodeproj` in the **"Go to the folder:" sheet** and then press the **"Go"** button
-12. Press the **"Add"** button in the **"Add Files..." sheet**
+12. Press the **"Add"** button in the **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**
 13. Select `CordovaLib.xcodeproj` in the Project Navigator
-14. Press the key combination **Option-Command-1** to show the **File Inspector**
-15. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location** 
+14. Press the key combination **Option-Command-1** to show the **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector**
+15. Choose **"Relative to CORDOVALIB"** in the **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** for the drop-down menu for **Location** 
 16. Click on the **project icon** in the Project Navigator, select your **Project**, then select the **"Build Settings"** tab
-17. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+17. Add `-all_load` and `-Obj-C` - for the **"Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>"** value
 18. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
 19. Expand **"Link Binaries with Libraries"** 
 20. Click on the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
@@ -65,11 +65,11 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
         AudioToolbox.framework
         AVFoundation.framework
         CoreLocation.framework
-        MediaPlayer.framework
+        <a href="../../cordova/media/media.html">Media</a>Player.framework
         QuartzCore.framework
         SystemConfiguration.framework
         MobileCoreServices.framework
-        CoreMedia.framework
+        Core<a href="../../cordova/media/media.html">Media</a>.framework
 
 21. Expand **"Target Dependencies"** - the top box labeled like this if you have multiple boxes!
 22. Click on the **"+" button**, and add the `CordovaLib` build product

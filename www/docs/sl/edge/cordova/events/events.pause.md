@@ -29,7 +29,7 @@ V primeru požarov, ko aplikacija je dal v ozadju.
 
 V `pause` primeru požarov, ko native platformo postavlja program v ozadju, ponavadi ko uporabnik preklopi v drugem programu.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `<a href="events.deviceready.html">deviceready</a>` dogodek požarov.
 
 ## Podprte platforme
 
@@ -62,7 +62,7 @@ Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogo
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

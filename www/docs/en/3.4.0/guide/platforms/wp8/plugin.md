@@ -68,7 +68,7 @@ most of the functionality you need:
 See the
 [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 class for methods available for the plugin to override.  For example,
-the plugin can capture 'pause' and 'resume' events.
+the plugin can capture '<a href="../../../cordova/events/events.pause.html">pause</a>' and '<a href="../../../cordova/events/events.resume.html">resume</a>' events.
 
 ## Namespaces
 
@@ -168,7 +168,7 @@ bad input. This pattern appears throughout the Cordova C# code:
 
 The following shows how to use the `plugin.xml` file to specify a
 plugin's source files on the Windows Phone platform.  See Application
-Plugins for an overview, and Plugin Specification for details on
+Plugins for an overview, and <a href="../../../plugin_ref/spec.html">Plugin Specification</a> for details on
 available options.
 
 - The `<source-file>` element defines all plugin resources, such

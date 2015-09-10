@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 8.0 WebViews
 
-이 가이드에서는 더 큰 Windows Phone 8.0 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다.
+이 <a href="../../../index.html">가이드</a>에서는 더 큰 Windows Phone 8.0 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다.
 
 이러한 지침에 따라, 최신 코르도바 분포를가지고 있는지 확인 합니다. [Cordova.apache.org](http://cordova.apache.org) 에서 다운로드 하 고 Windows Phone 8.0 패키지 (코르도바-wp8-*.zip)의 압축을 풉니다.
 

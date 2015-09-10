@@ -20,20 +20,20 @@ license: >
 
 # CaptureImageOptions
 
-> 이미지 캡처 구성 옵션을 캡슐화합니다.
+> 이미지 <a href="capture.html">캡처</a> 구성 옵션을 캡슐화합니다.
 
 ## 속성
 
-*   **제한**: 사용자는 단일 캡처 작업에서 캡처할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+*   **제한**: 사용자는 단일 <a href="capture.html">캡처</a> 작업에서 <a href="capture.html">캡처</a>할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 ## 빠른 예제
 
     // limit capture operation to 3 images
     var options = { limit: 3 };
     
-    navigator.device.capture.captureImage(captureSuccess, captureError, options);
+    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
     
 
 ## iOS 단점
 
-*   **제한** 매개 변수는 지원 되지 않습니다, 그리고 하나의 이미지 호출 당 촬영.
+*   **제한** 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다, 그리고 하나의 이미지 호출 당 촬영.

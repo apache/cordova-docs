@@ -20,7 +20,7 @@ license: >
 
 # L'aggiornamento iOS
 
-Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI.
 
 **Nota:** 5 Xcode Xcode 4.6 è obbligatorio, è consigliabile. Attualmente, per presentare all'Apple App Store, è necessario utilizzare più recente versione di iOS SDK, che è iOS 7. iOS SDK 7 non è necessario ancora, ma questo può cambiare rapidamente.
 
@@ -38,7 +38,7 @@ Per i progetti di CLI, eseguire:
 
 ### Problemi iOS 7
 
-    1. Rimuovere i valori "width = dispositivo-larghezza, altezza = dispositivo-altezza" dall'attributo meta tag "viewport" nel file index. html, vedere https://issues.apache.org/jira/browse/CB-4323 2. Aggiornare il tuo plugin core media, media-cattura e splashscreen per supporto iOS 7
+    1. Rimuovere i valori "width = dispositivo-larghezza, altezza = dispositivo-altezza" dall'attributo meta tag "viewport" nel file index. html, vedere https://issues.apache.org/jira/browse/CB-4323 2. Aggiornare il tuo plugin core media, media-cattura e <a href="../../../cordova/splashscreen/splashscreen.show.html">splashscreen</a> per supporto iOS 7
     
 
 ### Problemi di Xcode 5
@@ -67,7 +67,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 3.0.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-3.0.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -85,7 +85,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.9.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.9.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -101,7 +101,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.8.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.8.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -133,7 +133,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.7.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.7.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -156,7 +156,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.6.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.6.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -187,7 +187,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.5.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.5.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -218,7 +218,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.4.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.4.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -249,7 +249,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.3.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.3.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -267,9 +267,9 @@ platform add ios`.
 
 10. Convertire il `Cordova.plist` del file di `config.xml` , eseguendo lo script `bin/cordova\_plist\_to\_config\_xml` su file di progetto.
 
-11. Aggiungere il plugin InAppBrowser per tuo `config.xml` , aggiungendo questo tag sotto `<cordova><plugins>` :
+11. Aggiungere il plugin <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> per tuo `config.xml` , aggiungendo questo tag sotto `<cordova><plugins>` :
     
-        < nome plugin = "InAppBrowser" value = "CDVInAppBrowser" / >
+        < nome plugin = "<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" value = "CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" / >
         
 
 12. Nota che i plugin di Objective-C sono *non* whitelisted piu '. Alla whitelist le connessioni con la whitelist app, sarà necessario impostare il `User-Agent` intestazione del collegamento alla stesso user-agent come principale Cordova WebView. È possibile ottenere ciò accedendo la `userAgent` Proprietà fuori il view controller principale. Il controller principale-vista (CDVViewController) ha anche un `URLisAllowed` metodo per verificare se un URL passerà la whitelist.
@@ -277,14 +277,14 @@ platform add ios`.
 13. Modifiche del dispositivo API:
     
     *   Per iOS, il device utilizzato per restituire `iPhone` , `iPad` o `iPod Touch` ; ora restituisce (correttamente)`iOS`.
-    *   Per iOS, device.name (ormai obsoleto per tutte le piattaforme) utilizzato per restituire il nome del dispositivo dell'utente (ad esempio ' iPhone 5 ′ su Shazron '); ora restituisce quale device utilizzato per restituire: `iPhone` , `iPad` o`iPod Touch`.
-    *   Per tutte le piattaforme, c'è una nuova proprietà denominata device.model; Questo metodo restituisce il modello di dispositivo specifico, ad esempio `iPad2,5` (per altre piattaforme, questo restituisce ciò che device.name per restituire).
+    *   Per iOS, <a href="../../../cordova/device/device.name.html">device.name</a> (ormai obsoleto per tutte le piattaforme) utilizzato per restituire il nome del dispositivo dell'utente (ad esempio ' iPhone 5 ′ su Shazron '); ora restituisce quale device utilizzato per restituire: `iPhone` , `iPad` o`iPod Touch`.
+    *   Per tutte le piattaforme, c'è una nuova proprietà denominata <a href="../../../cordova/device/device.model.html">device.model</a>; Questo metodo restituisce il modello di dispositivo specifico, ad esempio `iPad2,5` (per altre piattaforme, questo restituisce ciò che <a href="../../../cordova/device/device.name.html">device.name</a> per restituire).
 
 ## All'aggiornamento 2.1.0 proietta alla 2.2.0
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.2.0 per un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.2.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -308,7 +308,7 @@ platform add ios`.
         
         `update_cordova_subproject percorso/per/your/progetto/xcodeproj`
 
-**Nota:** In 2.2.0, il `bin/create` lo script copia nella `CordovaLib` Sub-progetto nel progetto. Per avere lo stesso tipo di installazione, basta copiare il diritto `CordovaLib` nella directory del progetto e aggiornamento il `CordovaLib` sottoprogetto percorso (relativo al progetto) in Xcode File ispettore.
+**Nota:** In 2.2.0, il `bin/create` lo script copia nella `CordovaLib` Sub-progetto nel progetto. Per avere lo stesso tipo di installazione, basta copiare il diritto `CordovaLib` nella directory del progetto e aggiornamento il `CordovaLib` sottoprogetto percorso (relativo al progetto) in Xcode <a href="../../../cordova/file/fileobj/fileobj.html">File</a> ispettore.
 
 ## All'aggiornamento 2.0.0 proietta alla 2.1.0
 
@@ -316,7 +316,7 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggi
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.1.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.1.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -359,11 +359,11 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggi
 
 5.  Copia il `cordova` dalla nuovo progetto directory nella directory di root del vostro progetto (se si desidera che gli strumenti della riga di comando di progetto).
 
-6.  Aggiungere una nuova voce sotto `Plugins` nel tuo `Cordova.plist` file, sotto il gruppo di **File di supporto** . La chiave è `Device` e il valore è`CDVDevice`.
+6.  Aggiungere una nuova voce sotto `Plugins` nel tuo `Cordova.plist` file, sotto il gruppo di **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> di supporto** . La chiave è `Device` e il valore è`CDVDevice`.
 
 7.  Rimuovere`Cordova.framework`.
 
-8.  Rimuovere `verify.sh` dal gruppo di **File di supporto** .
+8.  Rimuovere `verify.sh` dal gruppo di **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> di supporto** .
 
 9.  Selezionare l'icona del progetto nel Navigatore progetto, selezionare il **Target**del progetto, quindi selezionare la scheda **Impostazioni di compilazione** .
 
@@ -413,9 +413,9 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggi
 
 27. Selezionare il `VERSION` file appena trascinata in un passaggio precedente.
 
-28. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector** (o menuitem **Mostra Utilities → → Visualizza File ispettore**).
+28. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** (o menuitem **Mostra Utilities → → <a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a> <a href="../../../cordova/file/fileobj/fileobj.html">File</a> ispettore**).
 
-29. Scegliere **relativa a CORDOVALIB** nel **File ispettore** per il menu a discesa per **posizione**.
+29. Scegliere **relativa a CORDOVALIB** nel **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> ispettore** per il menu a discesa per **posizione**.
 
 30. Impostare la preferenza di Xcode **Xcode preferenze → posizioni → dati derivati → avanzate...** a **Unique**, così che si possono trovare le intestazioni unificate.
 
@@ -542,9 +542,9 @@ Se si intende usare l'API di cattura, è necessario i nuovo **iPad display retin
 
 11. Selezionare `Cordova.framework` nel Navigatore progetto.
 
-12. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector**.
+12. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector**.
 
-13. Scegliere il **Percorso assoluto** nel **File ispettore** per il menu a discesa per **posizione**.
+13. Scegliere il **Percorso assoluto** nel **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> ispettore** per il menu a discesa per **posizione**.
 
 14. Digitare la combinazione di tasti **Comando-opzione-A** , che dovrebbe cadere giù un foglio per aggiungere file al progetto (il foglio **Aggiungi file...** ). Assicurarsi che sia selezionato il pulsante **creato gruppi per eventuali cartelle aggiunte** .
 

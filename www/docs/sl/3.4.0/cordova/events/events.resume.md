@@ -29,7 +29,7 @@ V primeru požarov, ko aplikacija pridobi iz ozadja.
 
 V `resume` primeru požarov, ko native platformo izpuli uporabo iz ozadja.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `<a href="events.deviceready.html">deviceready</a>` dogodek požarov.
 
 ## Podprte platforme
 
@@ -62,7 +62,7 @@ Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogo
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogo
 
 ## iOS Quirks
 
-Vse interaktivne funkcije, ki se imenuje iz a `pause` rutine izvršiti kasneje, ko app začne znova, kot signal za `resume` dogodek. Ti vključujejo opozorila, `console.log()` , in vse klice iz plugins ali Cordova API, ki gredo skozi Objective-C.
+Vse interaktivne funkcije, ki se imenuje iz a `<a href="events.pause.html">pause</a>` rutine izvršiti kasneje, ko app začne znova, kot signal za `resume` dogodek. Ti vključujejo opozorila, `console.log()` , in vse klice iz plugins ali Cordova API, ki gredo skozi Objective-C.
 
 *   **aktivno** dogodek
     

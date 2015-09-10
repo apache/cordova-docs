@@ -54,7 +54,7 @@ contains the following properties:
 - Android
 - iOS
 
-## Quick Example
+## Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
     // process the promp dialog results
     function onPrompt(results) {
@@ -63,7 +63,7 @@ contains the following properties:
 
     // Show a custom prompt dialog
     //
-    function showPrompt() {
+    function <a href="../inappbrowser/inappbrowser.html">show</a>Prompt() {
         navigator.notification.prompt(
             'Please enter your name',  // message
             onPrompt,                  // callback to invoke
@@ -73,23 +73,23 @@ contains the following properties:
         );
     }
 
-## Full Example
+## Full <a href="../storage/storage.opendatabase.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog Example</title>
+        <title><a href="notification.html">Notification</a> Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
 
@@ -100,7 +100,7 @@ contains the following properties:
 
         // Show a custom prompt dialog
         //
-        function showPrompt() {
+        function <a href="../inappbrowser/inappbrowser.html">show</a>Prompt() {
             navigator.notification.prompt(
                 'Please enter your name',  // message
                 onPrompt,                  // callback to invoke
@@ -113,7 +113,7 @@ contains the following properties:
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showPrompt(); return false;">Show Prompt</a></p>
+        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Prompt(); return false;">Show Prompt</a></p>
       </body>
     </html>
 

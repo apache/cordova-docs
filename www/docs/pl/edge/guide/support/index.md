@@ -457,7 +457,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Wydarzenia</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Wydarzenia</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -792,7 +792,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Magazyn</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Magazyn</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

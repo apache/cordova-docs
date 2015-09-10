@@ -24,7 +24,7 @@ license: >
 
 ## Properties
 
-- connection.type
+- <a href="connection.type.html">connection.type</a>
 
 ## Constants
 
@@ -97,4 +97,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.

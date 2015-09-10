@@ -29,7 +29,7 @@ The event fires when the user presses the menu button.
 Applying an event handler overrides the default menu button behavior.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 ## Supported Platforms
 
@@ -59,7 +59,7 @@ attach an event listener once the `deviceready` event fires.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
 
         // device APIs are available

@@ -29,9 +29,9 @@ license: >
 
 Если необходимо переопределить поведение по умолчанию кнопки увличения громкости вы можете зарегистрировать обработчик для события `volumeupbutton`.
 
-Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `<a href="events.deviceready.html">deviceready</a>`.
 
-## Поддерживаемые платформы
+## <a href="../../config_ref/images.html">Поддерживаемые платформы</a>
 
 *   BlackBerry 10
 *   Android
@@ -59,7 +59,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# compass.clearWatchFilter
+# <a href="compass.clearWatch.html">compass.clearWatch</a>Filter
 
-Nicht mehr unterstützt ab 1.6. Finden Sie unter`compass.clearWatch`.
+Nicht mehr unterstützt ab 1.6. Finden Sie unter`<a href="compass.clearWatch.html">compass.clearWatch</a>`.

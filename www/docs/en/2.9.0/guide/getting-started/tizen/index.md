@@ -42,7 +42,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Method #1: Import a Cordova Tizen project sample**
     - Launch Tizen Eclipse IDE
-    - Select  **File &rarr; Import &rarr; Tizen Web Project**
+    - Select  **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; Import &rarr; Tizen Web Project**
 
     ![](img/guide/platforms/tizen/import_project.png)
 
@@ -62,7 +62,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates**
     - Launch Tizen Eclipse IDE
-    - Select  **File &rarr; New &rarr; Tizen Web Project**
+    - Select  **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New &rarr; Tizen Web Project**
     - Select **User Template** and **User defined** items
     - Select one of the Tizen Cordova template (e.g: **CordovaBasicTemplate**)
     - Fill the **Project name** and its target **Location**
@@ -95,11 +95,11 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
-5B. Deploy to Device/Emulator
+5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>/Emulator
 --------------------
 
 - Make sure that your target device is properly launched, connected and configured. Its __Date and Time__ settings must be set correctly.
-- Select your application deployment target with the **Connection Explorer** view (Select **Window &rarr; Show View &rarr; Connection Explorer**.)
+- Select your application deployment target with the **<a href="../../../cordova/connection/connection.html">Connection</a> Explorer** view (Select **Window &rarr; Show View &rarr; <a href="../../../cordova/connection/connection.html">Connection</a> Explorer**.)
 
     ![](img/guide/platforms/tizen/connection_explorer.png)
 

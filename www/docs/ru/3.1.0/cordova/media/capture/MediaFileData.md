@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# MediaFileData
+# <a href="MediaFile.html">MediaFile</a>Data
 
 > Инкапсулирует сведения о файле мультимедиа формате.
 
@@ -36,7 +36,7 @@ license: >
 
 ## Ежевика WebWorks совместимости
 
-Нет API предоставляет сведения о формате для мультимедийных файлов, так что `MediaFileData` объект, возвращенный `MediaFile.getFormatData` имеет следующие значения по умолчанию:
+Нет API предоставляет сведения о формате для мультимедийных файлов, так что `<a href="MediaFile.html">MediaFile</a>Data` объект, возвращенный `<a href="<a href="MediaFile.html">MediaFile</a>.getFormatData.html"><a href="MediaFile.html">MediaFile</a>.getFormatData</a>` имеет следующие значения по умолчанию:
 
 *   **кодеки**: не поддерживается и возвращает`null`.
 
@@ -50,7 +50,7 @@ license: >
 
 ## Андроид причуды
 
-Поддерживает следующие `MediaFileData` Свойства:
+Поддерживает следующие `<a href="MediaFile.html">MediaFile</a>Data` Свойства:
 
 *   **кодеки**: не поддерживается и возвращает`null`.
 
@@ -64,7 +64,7 @@ license: >
 
 ## iOS причуды
 
-Поддерживает следующие `MediaFileData` Свойства:
+Поддерживает следующие `<a href="MediaFile.html">MediaFile</a>Data` Свойства:
 
 *   **кодеки**: не поддерживается и возвращает`null`.
 

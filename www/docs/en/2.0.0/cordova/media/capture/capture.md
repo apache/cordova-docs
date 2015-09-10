@@ -27,22 +27,22 @@ Objects
 -------
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
-- CaptureCB
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+- <a href="captureImageOptions.html">CaptureImageOptions</a>
+- <a href="captureVideoOptions.html">CaptureVideoOptions</a>
+- <a href="CaptureCB.html">CaptureCB</a>
+- <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+- <a href="ConfigurationData.html">ConfigurationData</a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 Methods
 -------
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- <a href="captureAudio.html">capture.captureAudio</a>
+- <a href="captureImage.html">capture.captureImage</a>
+- <a href="captureVideo.html">capture.captureVideo</a>
+- <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>
 
 Scope
 -----
@@ -55,16 +55,16 @@ The __capture__ object is assigned to the __navigator.device__ object, and there
 Properties
 ----------
 
-- __supportedAudioModes:__ The audio recording formats supported by the device. (ConfigurationData[])
-- __supportedImageModes:__ The recording image sizes and formats supported by the device. (ConfigurationData[])
-- __supportedVideoModes:__ The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes:__ The audio recording formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+- __supportedImageModes:__ The recording image sizes and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+- __supportedVideoModes:__ The recording video resolutions and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 Methods
 -------
 
-- capture.captureAudio: Launch the device audio recording application for recording audio clip(s).
-- capture.captureImage: Launch the device camera application for taking image(s).
-- capture.captureVideo: Launch the device video recorder application for recording video(s).
+- <a href="captureAudio.html">capture.captureAudio</a>: Launch the device audio recording application for recording audio clip(s).
+- <a href="captureImage.html">capture.captureImage</a>: Launch the device camera application for taking image(s).
+- <a href="captureVideo.html">capture.captureVideo</a>: Launch the device video recorder application for recording video(s).
 
 
 Supported Platforms
@@ -101,7 +101,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
+    <plugin name="Capture" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" />
 
 #### www/config.xml
 
@@ -110,7 +110,7 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

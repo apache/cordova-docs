@@ -53,7 +53,7 @@ Die `options` Parameter ist optional und wird mit den folgenden Werten:
 Die `options.formatLength` kann `short` , `medium` , `long` , oder `full` . Die `options.selector` kann `date` , `time` oder`date and
 time`.
 
-Wenn es ist ein Fehler beim Analysieren der Datumszeichenfolge dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PARSING\_ERROR`.
+Wenn es ist ein Fehler beim Analysieren der Datumszeichenfolge dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -81,7 +81,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, dies zeigt einen
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate Example</title>
+        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

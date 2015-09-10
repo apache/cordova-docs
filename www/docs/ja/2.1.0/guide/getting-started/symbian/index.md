@@ -50,11 +50,11 @@ Getting Started with Symbian
 - cygwin で、 Cordova を解凍したディレクトリまで移動し、 Symbian ディレクトリに移動します
 
 
-4. Hello World の作成
+4. <a href="../webos/index.html">Hello World</a> の作成
 --------------
 
 - phonegap/symbian/framework/www にある index.html を好きなエディタで開きます
-- `body` タグの中にある `"Build your phonegap app here! Dude!"` を削除し、 `<h1>Hello World</h1>` を追加します
+- `body` タグの中にある `"Build your phonegap app here! Dude!"` を削除し、 `<h1><a href="../webos/index.html">Hello World</a></h1>` を追加します
 - cygwin または terminal で、 make を実行します。これにより、 phonegap-symbian.wrt と app.wgz が作られます
 
 

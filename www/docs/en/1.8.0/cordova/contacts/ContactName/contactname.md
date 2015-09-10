@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-ContactName
+<a href="../Contact/contact.html">Contact</a>Name
 ===========
 
-Contains name properties of a `Contact` object.
+Contains name properties of a `<a href="../Contact/contact.html">Contact</a>` object.
 
 Properties
 ----------
@@ -36,7 +36,7 @@ Properties
 Details
 -------
 
-The `ContactName` object stores name properties of a contact.
+The `<a href="../Contact/contact.html">Contact</a>Name` object stores name properties of a contact.
 
 Supported Platforms
 -------------------
@@ -46,7 +46,7 @@ Supported Platforms
 - iOS
 - Bada 1.2 & 2.0
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(contacts) {
@@ -60,37 +60,37 @@ Quick Example
 		}
     };
 
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
 
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
 	options.filter="";
 	filter = ["displayName","name"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-			var options = new ContactFindOptions();
+        function on<a href="../../device/device.html">Device</a>Ready() {
+			var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
 			options.filter="";
 			filter = ["displayName","name"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+			navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -108,15 +108,15 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
       </body>
     </html>
 

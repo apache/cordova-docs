@@ -23,7 +23,7 @@ license: >
 > Avviare l'applicazione fotocamera e restituire informazioni sui file di immagine catturata.
 
     navigator.device.capture.captureImage(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Avvia un'operazione asincrona per catturare immagini utilizzando l'applicazione della fotocamera del dispositivo. L'operazione consente agli utenti di catturare più immagini in una sola seduta.
 
-L'operazione di acquisizione o termina quando l'utente chiude l'applicazione fotocamera, o il numero massimo di registrazioni specificato da `CaptureAudioOptions.limit` è raggiunto. Se non `limit` valore è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente acquisisce una singola immagine.
+L'operazione di acquisizione o termina quando l'utente chiude l'applicazione fotocamera, o il numero massimo di registrazioni specificato da `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` è raggiunto. Se non `limit` valore è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente acquisisce una singola immagine.
 
-Quando termina l'operazione di acquisizione, richiama il `CaptureCB` callback con una matrice di `MediaFile` oggetti che descrivono ogni file immagine catturata. Se l'utente termina l'operazione prima di catturare un'immagine, la `CaptureErrorCB` callback viene eseguita con un `CaptureError` oggetto con un `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, richiama il `<a href="CaptureCB.html">CaptureCB</a>` callback con una matrice di `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` oggetti che descrivono ogni file immagine catturata. Se l'utente termina l'operazione prima di catturare un'immagine, la `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` callback viene eseguita con un `<a href="CaptureError.html">CaptureError</a>` oggetto con un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 
@@ -50,10 +50,10 @@ Invocando l'applicazione nativa fotocamera mentre il dispositivo è collegato tr
 ## Esempio rapido
 
     // capture callback
-    var captureSuccess = function(mediaFiles) {
+    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
         var i, path, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            path = mediaFiles[i].fullPath;
+        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
             // do something interesting with the file
         }
     };
@@ -80,10 +80,10 @@ Invocando l'applicazione nativa fotocamera mentre il dispositivo è collegato tr
     
         // Called when capture operation is finished
         //
-        function captureSuccess(mediaFiles) {
+        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
             var i, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-                uploadFile(mediaFiles[i]);
+            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
             }
         }
     
@@ -103,10 +103,10 @@ Invocando l'applicazione nativa fotocamera mentre il dispositivo è collegato tr
         }
     
         // Upload files to server
-        function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
-                path = mediaFile.fullPath,
-                name = mediaFile.name;
+        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
+            var ft = new <a href="../../file/filetransfer/filetransfer.html"><a href="../../file/fileobj/fileobj.html">File</a>Transfer</a>(),
+                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
+                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",

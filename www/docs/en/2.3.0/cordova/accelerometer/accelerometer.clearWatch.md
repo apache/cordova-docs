@@ -21,11 +21,11 @@ license: >
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+Stop watching the `<a href="acceleration/acceleration.html">Acceleration</a>` referenced by the watch ID parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: The ID returned by `accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>`.
 
 Supported Platforms
 -------------------
@@ -38,36 +38,36 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
     
     // ... later on ...
     
     navigator.accelerometer.clearWatch(watchID);
     
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // The watch id references the current `watchAcceleration`
+        // The watch id references the current `watch<a href="acceleration/acceleration.html">Acceleration</a>`
         var watchID = null;
         
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             startWatch();
         }
 
@@ -78,7 +78,7 @@ Full Example
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
             
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
         }
         
         // Stop watching the acceleration
@@ -94,9 +94,9 @@ Full Example
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
-            element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-                                'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' + 
+            element.innerHTML = '<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '<br />' +
+                                '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '<br />' +
+                                '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '<br />' + 
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 

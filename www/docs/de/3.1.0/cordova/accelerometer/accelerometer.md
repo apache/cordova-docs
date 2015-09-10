@@ -18,29 +18,29 @@ license: >
     under the License.
 ---
 
-# Beschleunigungsmesser
+# <a href="acceleration/acceleration.html">Beschleunigung</a>smesser
 
-> Erfasst die Bewegung des Geräts in der *x-*, *y-* und *Z*-Richtung.
+> Erfasst die Bewegung des <a href="../device/device.html">Gerät</a>s in der *x-*, *y-* und *Z*-Richtung.
 
 ## Methoden
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   <a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>
+*   <a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>
+*   <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 ## Argumente
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+*   <a href="parameters/accelerometerError.html">accelerometerError</a>
+*   <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 ## Objekte (schreibgeschützt)
 
-*   Beschleunigung
+*   <a href="acceleration/acceleration.html">Beschleunigung</a>
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie den CLI `plugin` Befehl, welche im Command-Line Interface beschrieben ist, zum hinzufügen oder entfernen dieses Features für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie den CLI `plugin` Befehl, welche im Command-Line Interface beschrieben ist, zum hinzufügen oder entfernen dieses Features für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -87,4 +87,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen K
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

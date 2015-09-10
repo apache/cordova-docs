@@ -48,7 +48,7 @@ The inbound `dateString` parameter should be of type `String`.
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The options parameter is optional.
 
-If there is an error parsing the date string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+If there is an error parsing the date string, then the errorCB callback is invoked with a <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> object as a parameter. The expected code for this error is <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR.
 
 
 Supported Platforms
@@ -59,7 +59,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
@@ -74,7 +74,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
     );
 
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>

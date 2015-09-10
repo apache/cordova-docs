@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# media.stopRecord
+# <a href="media.stop.html">media.stop</a>Record
 
 Detiene la grabación de un archivo de audio.
 
-    media.stopRecord();
+    <a href="media.stop.html">media.stop</a>Record();
     
 
 ## Descripción
 
-El método `media.stopRecord` se ejecuta sincrónicamente, detener la grabación de un archivo de audio.
+El método `<a href="media.stop.html">media.stop</a>Record` se ejecuta sincrónicamente, detener la grabación de un archivo de audio.
 
 ## Plataformas soportadas
 
@@ -70,14 +70,14 @@ El método `media.stopRecord` se ejecuta sincrónicamente, detener la grabación
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //

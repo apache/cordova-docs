@@ -21,7 +21,7 @@ license: >
 Domain Whitelist Guide
 ======================
 
-Overview
+<a href="../overview/index.html">Overview</a>
 --------
 
 Domain whitelisting is a security model that controls access to

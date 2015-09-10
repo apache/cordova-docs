@@ -45,39 +45,39 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
 
-    function onDeviceReady() {
+    function on<a href="../device/device.html">Device</a>Ready() {
         // Cordova API を安全に使用できます
     }
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready 使用例</title>
+        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに onDeviceReady を呼び出します。
+        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.9.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Cordova API を安全に使用できます
         }
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-compass.watchHeadingFilter
+<a href="compass.watchHeading.html">compass.watchHeading</a>Filter
 ==========================
 
-1.6以降はサポートされていません。同等の機能として、 `compass.watchHeading` を参照してください。
+1.6以降はサポートされていません。同等の機能として、 `<a href="compass.watchHeading.html">compass.watchHeading</a>` を参照してください。

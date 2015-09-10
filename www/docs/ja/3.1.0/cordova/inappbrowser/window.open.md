@@ -20,40 +20,40 @@ license: >
 
 # window.open
 
-新しい URL を開き `InAppBrowser` インスタンス、現在のブラウザー インスタンスまたはシステムのブラウザー。
+新しい URL を開き `<a href="inappbrowser.html">InAppBrowser</a>` インスタンス、現在のブラウザー インスタンスまたはシステムのブラウザー。
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**: への参照を `InAppBrowser` ウィンドウ。*(InAppBrowser)*
+*   **ref**: への参照を `<a href="inappbrowser.html">InAppBrowser</a>` ウィンドウ。*(<a href="inappbrowser.html">InAppBrowser</a>)*
 
 *   **url**: *(文字列)*をロードする URL。電話 `encodeURI()` 場合は、この上の URL は Unicode 文字を含みます。
 
 *   **ターゲット**: ターゲット URL は、既定値は、省略可能なパラメーターをロードするを `_self` 。*(文字列)*
     
-    *   `_self`: コルドバ WebView URL がホワイト リストにある場合で開きます、それ以外の場合で開きます、`InAppBrowser`.
-    *   `_blank`: で開きます、`InAppBrowser`.
+    *   `_self`: コルドバ WebView URL がホワイト リストにある場合で開きます、それ以外の場合で開きます、`<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_blank`: で開きます、`<a href="inappbrowser.html">InAppBrowser</a>`.
     *   `_system`: システムの web ブラウザーで開きます。
 
-*   **オプション**: おぷしょん、 `InAppBrowser` 。省略可能にする: `location=yes` 。*(文字列)*
+*   **オプション**: おぷしょん、 `<a href="inappbrowser.html">InAppBrowser</a>` 。省略可能にする: `location=yes` 。*(文字列)*
     
     `options`文字列にはする必要があります任意の空白スペースが含まれていないと、各機能の名前と値のペアをコンマで区切る必要があります。 機能名では大文字小文字を区別します。 以下の値をサポートするプラットフォーム。
     
-    *   **場所**： に設定 `yes` または `no` を有効にする、 `InAppBrowser` の場所バー オンまたはオフにします。
+    *   **場所**： に設定 `yes` または `no` を有効にする、 `<a href="inappbrowser.html">InAppBrowser</a>` の場所バー オンまたはオフにします。
     ## アンドロイドのみ
     
     *   **closebuttoncaption** -"Done"ボタンのキャプションなります文字列に設定します。 
-    *   **隠された**- ブラウザーを作成し、ページを読み込むには、[はい] に設定されているが表示されません。 ロード イベントは、読み込みが完了したときに発生します。 省略または 'no' (既定値) を開くし、通常負荷ブラウザーに設定します。 
+    *   **隠された**- ブラウザーを作成し、ページを読み込むには、[はい] に設定されているが表示されません。 ロード <a href="../events/events.html">イベント</a>は、読み込みが完了したときに発生します。 省略または 'no' (既定値) を開くし、通常負荷ブラウザーに設定します。 
     *   **clearcache** - はオフにすると、新しいウィンドウが開く前に、ブラウザーのクッキー キャッシュを 'yes' に設定
     *   **clearsessioncache** - をオフにすると、新しいウィンドウが開く前にセッション cookie のキャッシュを持っている 'yes' に設定
     ## iOS のみ
     
     *   **closebuttoncaption** -"Done"ボタンのキャプションなります文字列に設定します。自分でこの値をローカライズする必要がありますに注意してください。
-    *   **隠された**- ブラウザーを作成し、ページを読み込むには、[はい] に設定されているが表示されません。 ロード イベントは、読み込みが完了したときに発生します。 省略または 'no' (既定値) を開くし、通常負荷ブラウザーに設定します。 
-    *   **ツールバー** - は 'yes' または 'no' を InAppBrowser (デフォルトは 'yes') のツールバーをオンまたはオフに設定
+    *   **隠された**- ブラウザーを作成し、ページを読み込むには、[はい] に設定されているが表示されません。 ロード <a href="../events/events.html">イベント</a>は、読み込みが完了したときに発生します。 省略または 'no' (既定値) を開くし、通常負荷ブラウザーに設定します。 
+    *   **ツールバー** - は 'yes' または 'no' を <a href="inappbrowser.html">InAppBrowser</a> (デフォルトは 'yes') のツールバーをオンまたはオフに設定
     *   **enableViewportScale**： に設定されている `yes` または `no` を (デフォルトではメタタグを介してスケーリング ビューポートを防ぐために`no`).
     *   **mediaPlaybackRequiresUserAction**： に設定されている `yes` または `no` を HTML5 オーディオまたはビデオを自動再生 （初期設定から防ぐために`no`).
-    *   **allowInlineMediaPlayback**： に設定されている `yes` や `no` デバイス固有再生インターフェイスではなく、ブラウザー ウィンドウ内に表示するインライン HTML5 メディアの再生を許可します。 HTML の `video` 要素を含める必要がありますまた、 `webkit-playsinline` 属性 (デフォルトは`no`)
+    *   **allowInlineMediaPlayback**： に設定されている `yes` や `no` <a href="../device/device.html">デバイス</a>固有再生インターフェイスではなく、ブラウザー ウィンドウ内に表示するインライン HTML5 <a href="../media/media.html">メディア</a>の再生を許可します。 HTML の `video` 要素を含める必要がありますまた、 `webkit-playsinline` 属性 (デフォルトは`no`)
     *   **keyboardDisplayRequiresUserAction**： に設定されている `yes` または `no` をフォーム要素の JavaScript を介してフォーカスを受け取るときに、キーボードを開く `focus()` コール （デフォルトは`yes`).
     *   **suppressesIncrementalRendering**： に設定されている `yes` または `no` (デフォルトでは表示される前にビューのすべての新しいコンテンツを受信するまで待機するには`no`).
     *   **presentationstyle**： に設定されている `pagesheet` 、 `formsheet` または `fullscreen` (デフォルトでは、[プレゼンテーション スタイル][1]を設定するには`fullscreen`).
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open Example</title>
+        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

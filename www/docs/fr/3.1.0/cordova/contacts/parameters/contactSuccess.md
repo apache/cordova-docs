@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-Fonction de callback de succès qui fournit le tableau `Contact` résultant d'une opération `contacts.find`.
+Fonction de callback de succès qui fournit le tableau `<a href="../Contact/contact.html">Contact</a>` résultant d'une opération `<a href="../contacts.find.html">contacts.find</a>`.
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ Fonction de callback de succès qui fournit le tableau `Contact` résultant d'un
 
 ## Paramètres
 
-*   **contacts** : le tableau de contact résultant d'une opération de recherche. *(Contact)*
+*   **contacts** : le tableau de contact résultant d'une opération de recherche. *(<a href="../Contact/contact.html">Contact</a>)*
 
 ## Exemple
 

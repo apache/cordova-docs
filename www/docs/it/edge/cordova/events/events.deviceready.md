@@ -35,7 +35,7 @@ Il `deviceready` viene generato un evento una volta Cordova ha caricato completa
 
 Il `deviceready` evento si comporta in modo un po' diverso dagli altri. Qualsiasi gestore registrato dopo il `deviceready` evento incendi ha la funzione di callback chiamata immediatamente.
 
-## Piattaforme supportate
+## <a href="../../config_ref/images.html">Piattaforme supportate</a>
 
 *   Amazon fuoco OS
 *   Android
@@ -59,7 +59,7 @@ Il `deviceready` evento si comporta in modo un po' diverso dagli altri. Qualsias
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">

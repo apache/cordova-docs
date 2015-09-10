@@ -37,9 +37,9 @@ the platform, its contents generally do not. Some platform-specific
 features are also specified in the same configuration file. Details
 are listed below:
 
-- iOS Configuration
-- Android Configuration
-- BlackBerry Configuration
+- <a href="../guide/platforms/ios/config.html">iOS Configuration</a>
+- <a href="../guide/platforms/android/config.html">Android Configuration</a>
+- <a href="../guide/platforms/blackberry/config.html">BlackBerry Configuration</a>
 
 ## config.xml Elements
 
@@ -69,7 +69,7 @@ otherwise unavailable to typical web-based applications.
 ### `<access>`
 
 These elements define how your whitelist works. Please see the
-Domain Whitelist Guide for more information.
+<a href="../guide/appdev/whitelist/index.html">Domain Whitelist Guide</a> for more information.
 
 ### `<content>`
 

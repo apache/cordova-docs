@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# ContactField
+# <a href="../Contact/contact.html">Contact</a>Field
 
-Prend en charge les champs génériques dans un objet `Contact`. Certaines propriétés stockées comme objets `ContactField` incluent des adresses e-mail, numéros de téléphone et URL.
+Prend en charge les champs génériques dans un objet `<a href="../Contact/contact.html">Contact</a>`. Certaines propriétés stockées comme objets `<a href="../Contact/contact.html">Contact</a>Field` incluent des adresses e-mail, numéros de téléphone et URL.
 
 ## Propriétés
 
@@ -28,13 +28,13 @@ Prend en charge les champs génériques dans un objet `Contact`. Certaines propr
 
 *   **value** : la valeur du champ, comme un téléphone numéro ou adresse e-mail. *(DOMString)*
 
-*   **pref** : la valeur `true` si `ContactField` contient la valeur de préférence de l'utilisateur. *(booléen)*
+*   **pref** : la valeur `true` si `<a href="../Contact/contact.html">Contact</a>Field` contient la valeur de préférence de l'utilisateur. *(booléen)*
 
 ## Détails
 
-L'objet `ContactField` est un composant réutilisable que représente un champ de contact générique. Chaque objet `ContactField` contient une propriété `value` , `type` , et `pref`. Un objet `Contact` stocke plusieurs propriétés dans les tableaux `ContactField[]`, tels que les numéros de téléphone et adresses e-mail.
+L'objet `<a href="../Contact/contact.html">Contact</a>Field` est un composant réutilisable que représente un champ de contact générique. Chaque objet `<a href="../Contact/contact.html">Contact</a>Field` contient une propriété `value` , `type` , et `pref`. Un objet `<a href="../Contact/contact.html">Contact</a>` stocke plusieurs propriétés dans les tableaux `<a href="../Contact/contact.html">Contact</a>Field[]`, tels que les numéros de téléphone et adresses e-mail.
 
-Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attribut **type** de l'objet `ContactField`. Par exemple, un numéro de téléphone peut spécifier des valeurs pour **type** comme *home*, *work*, *mobile*, *iPhone*, ou toute autre valeur qui est prise en charge par la base de contacts de la plate-forme d'un appareil particulier. Toutefois, pour le champ **photos** de `Contact` , le champ **type** indique le format de l'image retournée : **url** lorsque l'attribut **value** contient une URL vers la photo ou *base64* lorsque la **valeur** contient une chaîne d'image codée en base64. 
+Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attribut **type** de l'objet `<a href="../Contact/contact.html">Contact</a>Field`. Par exemple, un numéro de téléphone peut spécifier des valeurs pour **type** comme *home*, *work*, *mobile*, *iPhone*, ou toute autre valeur qui est prise en charge par la base de contacts de la plate-forme d'un appareil particulier. Toutefois, pour le champ **photos** de `<a href="../Contact/contact.html">Contact</a>` , le champ **type** indique le format de l'image retournée : **url** lorsque l'attribut **value** contient une URL vers la photo ou *base64* lorsque la **valeur** contient une chaîne d'image codée en base64. 
 
 ## Plates-formes prises en charge
 
@@ -49,11 +49,11 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
         // create a new contact
         var contact = navigator.contacts.create();
     
-        // store contact phone numbers in ContactField[]
+        // store contact phone numbers in <a href="../Contact/contact.html">Contact</a>Field[]
         var phoneNumbers = [];
-        phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-        phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-        phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+        phoneNumbers[0] = new <a href="../Contact/contact.html">Contact</a>Field('work', '212-555-1234', false);
+        phoneNumbers[1] = new <a href="../Contact/contact.html">Contact</a>Field('mobile', '917-555-5432', true); // preferred number
+        phoneNumbers[2] = new <a href="../Contact/contact.html">Contact</a>Field('home', '203-555-7890', false);
         contact.phoneNumbers = phoneNumbers;
     
         // save the contact
@@ -65,14 +65,14 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,21 +81,21 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
             // create a new contact
             var contact = navigator.contacts.create();
     
-            // store contact phone numbers in ContactField[]
+            // store contact phone numbers in <a href="../Contact/contact.html">Contact</a>Field[]
             var phoneNumbers = [];
-            phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-            phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-            phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+            phoneNumbers[0] = new <a href="../Contact/contact.html">Contact</a>Field('work', '212-555-1234', false);
+            phoneNumbers[1] = new <a href="../Contact/contact.html">Contact</a>Field('mobile', '917-555-5432', true); // preferred number
+            phoneNumbers[2] = new <a href="../Contact/contact.html">Contact</a>Field('home', '203-555-7890', false);
             contact.phoneNumbers = phoneNumbers;
     
             // save the contact
             contact.save();
     
             // search contacts, returning display name and phone numbers
-            var options = new ContactFindOptions();
+            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
             options.filter = "";
             filter = ["displayName", "phoneNumbers"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,15 +113,15 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
       </body>
     </html>
     

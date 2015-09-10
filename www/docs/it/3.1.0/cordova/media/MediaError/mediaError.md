@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# Errore MediaError
+# Errore <a href="../media.html">Media</a>Error
 
-A `MediaError` oggetto viene restituito alla `mediaError` funzione di callback quando si verifica un errore.
+A `<a href="../media.html">Media</a>Error` oggetto viene restituito alla `mediaError` funzione di callback quando si verifica un errore.
 
 ## Proprietà
 
@@ -30,11 +30,11 @@ A `MediaError` oggetto viene restituito alla `mediaError` funzione di callback q
 
 ## Costanti
 
-*   `MediaError.MEDIA_ERR_ABORTED`
-*   `MediaError.MEDIA_ERR_NETWORK`
-*   `MediaError.MEDIA_ERR_DECODE`
-*   `MediaError.MEDIA_ERR_NONE_SUPPORTED`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_ABORTED`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_NETWORK`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_DECODE`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_NONE_SUPPORTED`
 
 ## Descrizione
 
-Il `MediaError` oggetto viene passato a un `mediaError` funzione di callback quando si verifica un errore.
+Il `<a href="../media.html">Media</a>Error` oggetto viene passato a un `mediaError` funzione di callback quando si verifica un errore.

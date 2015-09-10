@@ -24,20 +24,20 @@ license: >
 
 ## Proprietà
 
-*   device.model
+*   <a href="device.model.html">device.model</a>
 *   Device.Cordova
 *   Device
 *   Device.UUID
 *   Device.Version
-*   device.name
+*   <a href="device.name.html">device.name</a>
 
 ## Portata variabile
 
 Poiché `device` viene assegnato il `window` dell'oggetto, è implicitamente in ambito globale.
 
     // These reference the same `device`
-    var phoneModel = window.device.model;
-    var phoneModel = device.model;
+    var phoneModel = window.<a href="device.model.html">device.model</a>;
+    var phoneModel = <a href="device.model.html">device.model</a>;
     
 
 ## La funzionalità di accesso

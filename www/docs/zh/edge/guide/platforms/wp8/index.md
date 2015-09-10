@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# Windows Phone 8 平臺指南
+# Windows Phone 8 <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Windows Phone 設備的應用程式。 它側重于 Windows Phone 8，但提供如何支援 Windows Phone 7 的附加詳細資訊。
 
-該示例演示如何使用任一特定的 Windows Phone 外殼程式工具來生成和生成的應用程式，或者跨平臺科爾多瓦 CLI 討論在命令列介面。 （見的概述的這些發展工作流比較）。此部分還顯示了如何打開科爾多瓦的應用程式，以便您可以在 Visual Studio 中修改他們。 無論你採取哪種方法，您需要安裝 Windows Phone SDK，如下所述。
+該示例演示如何使用任一特定的 Windows Phone 外殼程式工具來生成和生成的應用程式，或者跨平臺科爾多瓦 CLI 討論在<a href="../../cli/index.html">命令列介面</a>。 （見的<a href="../../overview/index.html">概述</a>的這些發展工作流比較）。此部分還顯示了如何打開科爾多瓦的應用程式，以便您可以在 Visual Studio 中修改他們。 無論你採取哪種方法，您需要安裝 Windows Phone SDK，如下所述。
 
 見到 Windows Phone 平臺特定的詳細資訊如下：
 
-*   Windows Phone 8 外掛程式
-*   升級 Windows Phone 8
+*   <a href="plugin.html">Windows Phone 8 外掛程式</a>
+*   <a href="upgrade.html"><a href="upgrading.html">升級 Windows Phone</a> 8</a>
 
 對於 Windows Phone 8 平臺，科爾多瓦 web 視圖依賴于互聯網資源管理器中 10 作為自己的渲染引擎，因此作為一個實際問題你可以使用 IE10 的功能強大的調試器來測試並不調用科爾多瓦 Api 的任何 web 內容。 Windows Phone 開發者博客如何支援 IE10 和可比較的 WebKit 瀏覽器提供[有益的指導][1]。
 
@@ -49,7 +49,7 @@ license: >
 
 為了開發科爾多瓦的 Windows Phone 設備的應用程式，您可以使用運行 Windows 的電腦，但你也可能發展的 mac，通過運行一個虛擬機器環境或者通過使用新兵訓練營雙啟動 Windows 的分區。 請查閱這些資源以設置在 Mac 上所需的 Windows 開發環境：
 
-*   **VMWare 融合**： 要設置了 Windows 8 的虛擬機器，按照[Microsoft 開發人員網路][5]，所提供的說明，然後請參閱配置 VMWare 融合的虛擬環境運行 SDK 捆綁的模擬器的準備工作資訊。
+*   **VMWare 融合**： 要設置了 Windows 8 的虛擬機器，按照[Microsoft 開發人員網路][5]，所提供的說明，然後請參閱<a href="vmware.html">配置 VMWare 融合</a>的虛擬環境運行 SDK 捆綁的模擬器的準備工作資訊。
 
 *   **桌面的相似之處**： 若要設置 Windows 8 虛擬機器，按照[Microsoft 開發人員網路][6]，所提供的說明，然後請參閱配置平行桌面虛擬環境運行 SDK 捆綁的模擬器的準備工作資訊。
 
@@ -83,7 +83,7 @@ license: >
 
  [10]: http://cordova.apache.org
 
-這些外殼工具允許您創建、 構建和運行 Windows Phone 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 指導如何開發外掛程式和 Windows Phone 8 外掛程式特定于 Windows Phone 平臺的詳細資訊，請參閱應用程式外掛程式。
+這些外殼工具允許您創建、 構建和運行 Windows Phone 應用程式。 額外的<a href="../../cli/index.html">命令列介面</a>，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 指導如何開發外掛程式和 <a href="plugin.html">Windows Phone 8 外掛程式</a>特定于 Windows Phone 平臺的詳細資訊，請參閱應用程式外掛程式。
 
 ## 安裝 SDK
 
@@ -97,7 +97,7 @@ license: >
 
 ## 創建一個新專案
 
-在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的命令列介面或的一組特定的 Windows Phone 殼工具中所述。 在原始程式碼目錄中，這裡是從 CLI 的方法：
+在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的<a href="../../cli/index.html">命令列介面</a>或的一組特定的 Windows Phone 殼工具中所述。 在原始程式碼目錄中，這裡是從 CLI 的方法：
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
@@ -193,4 +193,4 @@ license: >
 
  [17]: img/guide/platforms/wp8/wp8_vs.png
 
-如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 的建議諮詢的概述。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常會覆蓋使用 SDK 的特定于平臺的檔。 如果你想要在 SDK 內工作，使用較低級別外殼工具作為 CLI 的替代方法。
+如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 的建議諮詢的<a href="../../overview/index.html">概述</a>。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常會覆蓋使用 SDK 的特定于平臺的檔。 如果你想要在 SDK 內工作，使用較低級別外殼工具作為 CLI 的替代方法。

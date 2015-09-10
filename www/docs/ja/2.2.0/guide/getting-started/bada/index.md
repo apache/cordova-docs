@@ -39,7 +39,7 @@ Getting Started with Bada
 
 3. 新規プロジェクトの作成
 --------------------
-- Bada IDE で、 File -> Import project -> Bada C++ / Flash Project を選択します
+- Bada IDE で、 <a href="../../../cordova/file/fileobj/fileobj.html">File</a> -> Import project -> Bada C++ / Flash Project を選択します
     - 注意: Bada 1.2 では "Bada Application Project" を選択します
 
     ![](img/guide/getting-started/bada/import_bada_project.png)
@@ -54,7 +54,7 @@ Getting Started with Bada
     ![](img/guide/getting-started/bada/bada_project.png)
 
 
-4. Hello World の作成
+4. <a href="../webos/index.html">Hello World</a> の作成
 --------------
 
 **Bada 2.x**: HTML/CSS/Javascript のコードは Res/ フォルダー直下にあります。 以下の2行が index.html の <head> に含まれていることを確認します。

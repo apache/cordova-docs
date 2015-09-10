@@ -36,37 +36,37 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
 
         // Show a custom alert
         //
         function showAlert() {
-            navigator.notification.alert(
+            navigator.<a href="notification.alert.html">notification.alert</a>(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -82,7 +82,7 @@ Full Example
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.notification.vibrate(2000);
+            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
         }
 
         </script>
@@ -97,7 +97,7 @@ Full Example
 Android Quirks
 --------------
 
-- Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
+- Android plays the default __<a href="notification.html">Notification</a> ringtone__ specified under the __Settings/Sound & Display__ panel.
 
 iOS Quirks
 -------------

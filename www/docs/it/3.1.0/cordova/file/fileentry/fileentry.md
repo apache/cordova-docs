@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# FileEntry
+# <a href="../fileobj/fileobj.html">File</a>Entry
 
 Rappresenta un file su un file system, come definito nella specifica [W3C directory e sistemi][1] .
 
@@ -26,17 +26,17 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 
 ## Proprietà
 
-*   **isFile**: sempre `true` . *(booleano)*
+*   **is<a href="../fileobj/fileobj.html">File</a>**: sempre `true` . *(booleano)*
 
 *   **isDirectory**: sempre `false` . *(booleano)*
 
-*   **nome**: il nome della `FileEntry` , escludendo il sentiero che conduce ad esso. *(DOMString)*
+*   **nome**: il nome della `<a href="../fileobj/fileobj.html">File</a>Entry` , escludendo il sentiero che conduce ad esso. *(DOMString)*
 
-*   **fullPath**: il percorso completo assoluto dalla radice per il `FileEntry` . *(DOMString)*
+*   **fullPath**: il percorso completo assoluto dalla radice per il `<a href="../fileobj/fileobj.html">File</a>Entry` . *(DOMString)*
 
 **Nota:** Il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
 
-*   **filesystem**: il filesystem su cui il `FileEntry` risiede. *(FileSystem)*
+*   **filesystem**: il filesystem su cui il `<a href="../fileobj/fileobj.html">File</a>Entry` risiede. *(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>)*
 
 ## Metodi
 
@@ -54,9 +54,9 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 
 *   **getParent**: cercare la directory padre.
 
-*   **createWriter**: crea un `FileWriter` che può essere utilizzato per scrivere in un file.
+*   **createWriter**: crea un `<a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a>` che può essere utilizzato per scrivere in un file.
 
-*   **file**: crea un `File` oggetto contenente le proprietà del file.
+*   **file**: crea un `<a href="../fileobj/fileobj.html">File</a>` oggetto contenente le proprietà del file.
 
 ## Piattaforme supportate
 
@@ -74,7 +74,7 @@ Cercare i metadati relativi a un file.
 
 *   **successCallback**: un callback passato un `Metadata` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -87,7 +87,7 @@ Cercare i metadati relativi a un file.
 
 ## setMetadata
 
-Metadati impostati su un file.
+<a href="../metadata/metadata.html">Metadati</a> impostati su un file.
 
 **Attualmente funziona solo su iOS.**
 
@@ -121,7 +121,7 @@ Metadati impostati su un file.
 
 **Esempio rapido**
 
-    function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue)
+    function set<a href="../fileobj/fileobj.html">File</a>Metadata(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, filePath, metadataKey, metadataValue)
     {
         var onSetMetadataWin = function() {
             console.log("success setting metadata")
@@ -130,27 +130,27 @@ Metadati impostati su un file.
             console.log("error setting metadata")
         }
     
-        var onGetFileWin = function(parent) {
+        var onGet<a href="../fileobj/fileobj.html">File</a>Win = function(parent) {
             var data = {};
             data[metadataKey] = metadataValue;
             parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
         }
-        var onGetFileFail = function() {
+        var onGet<a href="../fileobj/fileobj.html">File</a>Fail = function() {
             console.log("error getting file")
         }
     
         var onFSWin = function(fileSystem) {
-            fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>(filePath, {create: true, exclusive: false}, onGet<a href="../fileobj/fileobj.html">File</a>Win, onGet<a href="../fileobj/fileobj.html">File</a>Fail);
         }
     
         var onFSFail = function(evt) {
             console.log(evt.target.error.code);
         }
     
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, 0, onFSWin, onFSFail);
     }
     
-        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        set<a href="../fileobj/fileobj.html">File</a>Metadata(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -165,13 +165,13 @@ Inoltre, lo spostamento di un file in cima a un file esistente tenta di eliminar
 
 **Parametri:**
 
-*   **padre**: directory superiore, per cui spostare il file. *(DirectoryEntry)*
+*   **padre**: directory superiore, per cui spostare il file. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
 
 *   **newName**: il nuovo nome del file. Impostazioni predefinite per il nome attuale, se non specificato. *(DOMString)*
 
-*   **successCallback**: un callback passato il nuovo file `FileEntry` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato il nuovo file `<a href="../fileobj/fileobj.html">File</a>Entry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare il file. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -183,13 +183,13 @@ Inoltre, lo spostamento di un file in cima a un file esistente tenta di eliminar
         alert(error.code);
     }
     
-    function moveFile(entry) {
+    function move<a href="../fileobj/fileobj.html">File</a>(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new DirectoryEntry(parentName, parent);
+            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
     
         // move the file to a new directory and rename it
-        entry.moveTo(parentEntry, "newFile.txt", success, fail);
+        entry.moveTo(parentEntry, "new<a href="../fileobj/fileobj.html">File</a>.txt", success, fail);
     }
     
 
@@ -201,13 +201,13 @@ Copiare un file in una nuova posizione nel file System. Un errore risultati se t
 
 **Parametri:**
 
-*   **padre**: la directory genitore in cui copiare il file. *(DirectoryEntry)*
+*   **padre**: la directory genitore in cui copiare il file. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
 
 *   **newName**: il nuovo nome del file. Impostazioni predefinite per il nome attuale, se non specificato. *(DOMString)*
 
-*   **successCallback**: un callback passato il nuovo file `FileEntry` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato il nuovo file `<a href="../fileobj/fileobj.html">File</a>Entry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare il file. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -219,10 +219,10 @@ Copiare un file in una nuova posizione nel file System. Un errore risultati se t
         alert(error.code);
     }
     
-    function copyFile(entry) {
+    function copy<a href="../fileobj/fileobj.html">File</a>(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new DirectoryEntry(parentName, parent);
+            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
     
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
@@ -248,7 +248,7 @@ Elimina un file.
 
 *   **successCallback**: un callback che viene eseguito dopo che il file è stato eliminato. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il file. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -266,13 +266,13 @@ Elimina un file.
 
 ## getParent
 
-Cercare il padre `DirectoryEntry` che contiene il file.
+Cercare il padre `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` che contiene il file.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato padre del file `DirectoryEntry` . *(Funzione)*
+*   **successCallback**: un callback passato padre del file `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -284,19 +284,19 @@ Cercare il padre `DirectoryEntry` che contiene il file.
         alert(error.code);
     }
     
-    // Get the parent DirectoryEntry
+    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
     entry.getParent(success, fail);
     
 
 ## createWriter
 
-Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
+Creare un `<a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a>` oggetto associato al file rappresentato dalla`<a href="../fileobj/fileobj.html">File</a>Entry`.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato un `FileWriter` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `<a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a>` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il tentativo di creare il FileWriter. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il tentativo di creare il <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a>. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -308,24 +308,24 @@ Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
         alert(error.code);
     }
     
-    // create a FileWriter to write to the file
+    // create a <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a> to write to the file
     entry.createWriter(success, fail);
     
 
 ## file
 
-Restituire un `File` oggetto che rappresenta lo stato corrente del file che questa `FileEntry` rappresenta.
+Restituire un `<a href="../fileobj/fileobj.html">File</a>` oggetto che rappresenta lo stato corrente del file che questa `<a href="../fileobj/fileobj.html">File</a>Entry` rappresenta.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato un `File` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `<a href="../fileobj/fileobj.html">File</a>` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione del `File` oggetto, ad esempio quando il file non esiste più. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione del `<a href="../fileobj/fileobj.html">File</a>` oggetto, ad esempio quando il file non esiste più. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
     function success(file) {
-        console.log("File size: " + file.size);
+        console.log("<a href="../fileobj/fileobj.html">File</a> size: " + file.size);
     }
     
     function fail(error) {

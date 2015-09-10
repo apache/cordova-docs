@@ -20,7 +20,7 @@ license: >
 
 # CaptureError
 
-> 失敗したメディア キャプチャ操作からの結果のエラー コードをカプセル化します。
+> 失敗した<a href="../media.html">メディア</a> <a href="capture.html">キャプチャ</a>操作からの結果のエラー コードをカプセル化します。
 
 ## プロパティ
 
@@ -28,12 +28,12 @@ license: >
 
 ## 定数
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: カメラまたはマイクの画像やサウンドをキャプチャに失敗しました。
+*   `CaptureError.CAPTURE_INTERNAL_ERR`: <a href="../../camera/camera.html">カメラ</a>またはマイクの画像やサウンドを<a href="capture.html">キャプチャ</a>に失敗しました。
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 現在カメラやオーディオのキャプチャのアプリケーション別のキャプチャ要求を提供します。
+*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 現在<a href="../../camera/camera.html">カメラ</a>やオーディオの<a href="capture.html">キャプチャ</a>のアプリケーション別の<a href="capture.html">キャプチャ</a>要求を提供します。
 
 *   `CaptureError.CAPTURE_INVALID_ARGUMENT`： 無効な API の使用 (例えば、の値 `limit` が 1 未満です)。
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: ユーザーが何かをキャプチャする前にカメラやオーディオのキャプチャ アプリケーションを終了します。
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: ユーザーが何かを<a href="capture.html">キャプチャ</a>する前に<a href="../../camera/camera.html">カメラ</a>やオーディオの<a href="capture.html">キャプチャ</a> アプリケーションを終了します。
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 要求されたキャプチャ操作はサポートされていません。
+*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 要求された<a href="capture.html">キャプチャ</a>操作はサポートされていません。

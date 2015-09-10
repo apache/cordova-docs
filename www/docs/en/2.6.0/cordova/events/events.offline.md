@@ -23,14 +23,14 @@ offline
 
 This is an event that fires when a Cordova application is offline (not connected to the Internet).
 
-    document.addEventListener("offline", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
 
 Details
 -------
 
 When the application's network connection changes to being offline, the offline event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` once you receive the Cordova '<a href="events.deviceready.html">deviceready</a>' event.
 
 Supported Platforms
 -------------------
@@ -42,40 +42,40 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("offline", onOffline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
 
     function onOffline() {
         // Handle the offline event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Offline Example</title>
+        <title>Cordova Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-2.6.0.js has not.
         // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
-		    document.addEventListener("offline", onOffline, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+		    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
         }
 
         // Handle the offline event

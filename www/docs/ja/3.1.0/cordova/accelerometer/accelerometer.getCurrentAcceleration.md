@@ -20,16 +20,16 @@ license: >
 
 # accelerometer.getCurrentAcceleration
 
-*X* *y*、および*z*軸に沿って現在の加速を取得します。
+*X* *y*、および*z*軸に沿って現在の<a href="acceleration/acceleration.html">加速</a>を取得します。
 
-    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
     
 
 ## 説明
 
-加速度計の現在のデバイスの向き、 *x* *y*、および*z*軸に沿って 3 つの次元の相対運動の変更 (*デルタ*) を検出するモーション センサーです。
+<a href="acceleration/acceleration.html">加速</a>度計の現在の<a href="../device/device.html">デバイス</a>の向き、 *x* *y*、および*z*軸に沿って 3 つの次元の相対運動の変更 (*デルタ*) を検出するモーション センサーです。
 
-これらの加速度値に返されます、 `accelerometerSuccess` コールバック関数。
+これらの<a href="acceleration/acceleration.html">加速</a>度値に返されます、 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` コールバック関数。
 
 ## サポートされているプラットフォーム
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>
@@ -102,8 +102,8 @@ license: >
 
 ## iOS の癖
 
-*   iOS は、任意の時点で現在の加速度を得ることの概念を認識しません。
+*   iOS は、任意の時点で現在の<a href="acceleration/acceleration.html">加速</a>度を得ることの概念を認識しません。
 
-*   加速度を見るし、データをキャプチャする必要があります指定した時間間隔で。
+*   <a href="acceleration/acceleration.html">加速</a>度を見るし、データを<a href="../media/capture/capture.html">キャプチャ</a>する必要があります指定した時間間隔で。
 
 *   したがって、 `getCurrentAcceleration` 関数から報告された最後の値が生成されます、 `watchAccelerometer` を呼び出します。

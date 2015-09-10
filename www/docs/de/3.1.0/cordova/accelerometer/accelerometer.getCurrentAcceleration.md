@@ -20,16 +20,16 @@ license: >
 
 # accelerometer.getCurrentAcceleration
 
-Erhalten Sie die aktuelle Beschleunigung entlang der *x-*, *y-*und *Z* -Achsen.
+Erhalten Sie die aktuelle <a href="acceleration/acceleration.html">Beschleunigung</a> entlang der *x-*, *y-*und *Z* -Achsen.
 
-    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
     
 
 ## Beschreibung
 
-Der Beschleunigungsmesser ist ein Bewegungssensor, der die Änderung (*Delta*) erkennt Bewegung im Verhältnis zu der aktuellen Geräte-Orientierung in drei Dimensionen entlang der *x-*, *y-*und *Z* -Achse.
+Der <a href="acceleration/acceleration.html">Beschleunigung</a>smesser ist ein Bewegungssensor, der die Änderung (*Delta*) erkennt Bewegung im Verhältnis zu der aktuellen <a href="../device/device.html">Gerät</a>e-Orientierung in drei Dimensionen entlang der *x-*, *y-*und *Z* -Achse.
 
-Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Callback-Funktion.
+Diese <a href="acceleration/acceleration.html">Beschleunigung</a>swerte werden zurückgegeben die `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` Callback-Funktion.
 
 ## Unterstützte Plattformen
 
@@ -61,14 +61,14 @@ Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Call
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Call
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>
@@ -102,8 +102,8 @@ Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Call
 
 ## iOS Macken
 
-*   iOS erkennt nicht das Konzept die aktuelle Beschleunigung zu einem bestimmten Zeitpunkt zu bekommen.
+*   iOS erkennt nicht das Konzept die aktuelle <a href="acceleration/acceleration.html">Beschleunigung</a> zu einem bestimmten Zeitpunkt zu bekommen.
 
-*   Müssen Sie die Beschleunigung zu sehen und erfassen die Daten zu bestimmten Zeitintervallen.
+*   Müssen Sie die <a href="acceleration/acceleration.html">Beschleunigung</a> zu sehen und erfassen die Daten zu bestimmten Zeitintervallen.
 
 *   So die `getCurrentAcceleration` -Funktion führt zu den letzten Wert berichtet von einer `watchAccelerometer` rufen.

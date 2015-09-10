@@ -20,14 +20,14 @@ license: >
 
 # backbutton
 
-在使用者按後退按鈕時，將觸發該事件。
+在使用者按後退按鈕時，將觸發該<a href="events.html">事件</a>。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-要重寫後退按鈕的預設行為，註冊為事件攔截器 `backbutton` 事件，通常通過調用 `document.addEventListener` 一旦您收到 `deviceready` 事件。 不再需要調用任何其他方法重寫的後退按鈕的行為。
+要重寫後退按鈕的預設行為，註冊為<a href="events.html">事件</a>攔截器 `backbutton` <a href="events.html">事件</a>，通常通過調用 `document.addEventListener` 一旦您收到 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>。 不再需要調用任何其他方法重寫的後退按鈕的行為。
 
 ## 支援的平臺
 
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

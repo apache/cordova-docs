@@ -20,11 +20,11 @@ license: >
 
 # ブラックベリーのプラグイン
 
-このガイドはブラックベリー上のエコー プラグインを開発する方法を示します。 プラグイン開発ガイドをすでにおく必要があります、広範囲な概観を提供し、このガイドをオフに葉をピックアップします。 さらに、[コルドバ ブラックベリー リポジトリ][1]をダウンロードします。.
+この<a href="../../../index.html">ガイド</a>はブラックベリー上のエコー プラグインを開発する方法を示します。 プラグイン開発<a href="../../../index.html">ガイド</a>をすでにおく必要があります、広範囲な概観を提供し、この<a href="../../../index.html">ガイド</a>をオフに葉をピックアップします。 さらに、[コルドバ ブラックベリー リポジトリ][1]をダウンロードします。.
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 
-`Cordova-BlackBerry`プロジェクトでは、トーチ、太字、脚本などの BlackBerry デバイスに展開することができます。 脚本は、他の BlackBerry ハンドヘルド装置、開発努力を複製する必要があるより別のコードベースを使用します。 このガイドは、タブレットではなく、ハンドヘルド デバイスに焦点を当てください。 （将来、このガイドする必要がありますカバー両方のプラットフォーム）
+`Cordova-BlackBerry`プロジェクトでは、トーチ、太字、脚本などの BlackBerry <a href="../../../cordova/device/device.html">デバイス</a>に展開することができます。 脚本は、他の BlackBerry ハンドヘルド装置、開発努力を複製する必要があるより別のコードベースを使用します。 この<a href="../../../index.html">ガイド</a>は、タブレットではなく、ハンドヘルド <a href="../../../cordova/device/device.html">デバイス</a>に焦点を当てください。 （将来、この<a href="../../../index.html">ガイド</a>する必要がありますカバー両方のプラットフォーム）
 
 エコー プラグインは本質的にどのようなメッセージ、ユーザーに提供を返します、 `window.echo` 機能。
 
@@ -46,7 +46,7 @@ license: >
 
 ## Echo.java を追加します。
 
-気付いた場合、value 属性の構造は、エコーのプラグインにつながる、定義されたパスが表示されます。 呼ばれるディレクトリを探しますでコルドバ ブラックベリー WebWorks レポのルート ディレクトリに `framework` 。 このディレクトリには、すべての黒イチゴでネイティブで実行されるソース コードが含まれます。 移動 `framework/ext/src/org/apache/cordova` 。 この時点で、内部では、ソース コード、プラグイン ディレクトリのすべてが表示されます。 だから、ディレクトリ エコーを追加する `framework/ext/src/org/apache/cordova/echo` と呼ばれるファイルを作成して `Echo.java` で`framework/ext/src/org/apache/cordova/echo/Echo.java`.
+気付いた場合、value 属性の構造は、エコーのプラグインにつながる、定義されたパスが表示されます。 呼ばれるディレクトリを探しますでコルドバ ブラックベリー WebWorks レポのルート ディレクトリに `framework` 。 このディレクトリには、すべての黒イチゴでネイティブで実行されるソース コードが含まれます。 移動 `framework/ext/src/org/apache/cordova` 。 この時点で、内部では、ソース コード、プラグイン ディレクトリのすべてが表示されます。 だから、ディレクトリ エコーを追加する `framework/ext/src/org/apache/cordova/echo` と呼ばれる<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を作成して `Echo.java` で`framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## 書き込み Echo.java
 
@@ -96,11 +96,11 @@ Args パラメーターによって供給されている引数から入ってく
 
 ## プロジェクトの www ディレクトリに .jar を更新
 
-追加された `Echo.java` プロジェクトで更新する必要があります。 構築する、 `.jar` ファイル、ブラックベリー WebWorks レポのルート ディレクトリに移動し、実行、 `ant` コマンド。
+追加された `Echo.java` プロジェクトで更新する必要があります。 構築する、 `.jar` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、ブラックベリー WebWorks レポのルート ディレクトリに移動し、実行、 `ant` コマンド。
 
     ant update -Dproject.path="~/path_to_my_project"
     
 
-これは、新しい構築します `.jar` ファイルで、 `build/ext` ディレクトリ。コピー、 `build/ext/cordova.jar` にファイルを `project/www/ext` ディレクトリ。
+これは、新しい構築します `.jar` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `build/ext` ディレクトリ。コピー、 `build/ext/cordova.jar` に<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `project/www/ext` ディレクトリ。
 
 もしすべてがうまくいけば、ブラックベリーでエコー プラグインを使用することができます。

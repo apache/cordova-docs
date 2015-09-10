@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# MediaError
+# <a href="../media.html">Media</a>Error
 
-A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'une erreur survient.
+A `<a href="../media.html">Media</a>Error` objet est retourné à la `<a href="../Parameters/mediaError.html">mediaError</a>` fonction de rappel lorsqu'une erreur survient.
 
 ## Propriétés
 
@@ -30,11 +30,11 @@ A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'
 
 ## Constantes
 
-*   `MediaError.MEDIA_ERR_ABORTED`
-*   `MediaError.MEDIA_ERR_NETWORK`
-*   `MediaError.MEDIA_ERR_DECODE`
-*   `MediaError.MEDIA_ERR_NONE_SUPPORTED`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_ABORTED`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_NETWORK`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_DECODE`
+*   `<a href="../media.html">Media</a>Error.MEDIA_ERR_NONE_SUPPORTED`
 
 ## Description
 
-Le `MediaError` objet est passé à une `mediaError` fonction de rappel lorsqu'une erreur survient.
+Le `<a href="../media.html">Media</a>Error` objet est passé à une `<a href="../Parameters/mediaError.html">mediaError</a>` fonction de rappel lorsqu'une erreur survient.

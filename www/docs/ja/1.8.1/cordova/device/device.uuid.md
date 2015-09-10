@@ -40,7 +40,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // Android: ランダムな64ビットの数値を文字列として返します
@@ -49,7 +49,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
     // BlackBerry: デバイスの PIN 番号を文字列として返します
     //             この番号は9桁の一意な数値です
     //
-    // iPhone: (UIDevice クラスのドキュメントに記載)
+    // iPhone: (UI<a href="device.html">Device</a> クラスのドキュメントに記載)
     //         ハードウエア ID に基づくハッシュ値を返します
     //         デバイスに固有でユーザーアカウントとは
     //         リンクされていません
@@ -59,31 +59,31 @@ UUID の生成方法については、デバイスの製造者やプラットフ
     // webOS: デバイスの NDUID を返します
     var deviceID = device.uuid;
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
 
-            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
-                                'デバイス Cordova: '    + device.cordova    + '<br />' +
-                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
+            element.innerHTML = 'デバイス名: '          + <a href="device.name.html">device.name</a>       + '<br />' +
+                                'デバイス Cordova: '    + <a href="device.cordova.html">device.cordova</a>    + '<br />' +
+                                'デバイスプラットフォーム: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
                                 'デバイス UUID: '       + device.uuid       + '<br />' +
-                                'デバイスバージョン: '  + device.version    + '<br />';
+                                'デバイスバージョン: '  + <a href="device.version.html">device.version</a>    + '<br />';
         }
 
         </script>

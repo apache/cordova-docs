@@ -139,7 +139,7 @@ Czytaj dalej, jeśli chcesz korzystać z podejścia przekreślać platforma prac
 
 ## Budowanie aplikacji
 
-Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na sieci web, których strona jest projektem `www/index.html` pliku. Edycja tej aplikacji, jednak chcesz, ale wszelkie inicjowania powinien być określony jako część `deviceready` obsługi zdarzeń, odwołuje się domyślnie z`www/js/index.js`.
+Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na sieci web, których strona jest projektem `www/index.html` pliku. Edycja tej aplikacji, jednak chcesz, ale wszelkie inicjowania powinien być określony jako część `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` obsługi zdarzeń, odwołuje się domyślnie z`www/js/index.js`.
 
 Uruchom następujące polecenie, aby zbudować wielokrotnie powtarzane projekt:
 
@@ -193,7 +193,7 @@ Przed uruchomieniem tego polecenia, należy skonfigurować urządzenie do testow
 
 Podczas budowania i zobacz nowy projekt, domyślnej aplikacji, która pojawia się robi bardzo wiele. Można zmodyfikować aplikację na wiele sposobów, aby skorzystać z standardowych technologii internetowych, ale dla aplikacji do komunikowania się ściśle z różnych funkcji na poziomie urządzenia, trzeba dodać pluginy, które zapewniają dostęp do podstawowych interfejsów API Cordova.
 
-*Plugin* jest trochę o dodatku kodu, który dostarcza interfejs do rodzimych komponentów. Można zaprojektować swój własny interfejs wtyczki, na przykład podczas projektowania hybrydowych aplikacji, która łączy Cordova WebView z rodzimych komponentów. (Zobacz osadzanie WebViews i [Plugin rozwoju Przewodnik][6] szczegółów.) Częściej możesz dodać plugin aby włączyć jedną z Cordova w podstawowe funkcje urządzenia poziom w API Reference.
+*Plugin* jest trochę o dodatku kodu, który dostarcza interfejs do rodzimych komponentów. Można zaprojektować swój własny interfejs wtyczki, na przykład podczas projektowania hybrydowych aplikacji, która łączy Cordova WebView z rodzimych komponentów. (Zobacz osadzanie WebViews i [<a href="../hybrid/plugins/index.html">Plugin rozwoju Przewodnik</a>][6] szczegółów.) Częściej możesz dodać plugin aby włączyć jedną z Cordova w podstawowe funkcje urządzenia poziom w <a href="../../index.html">API Reference</a>.
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
 
@@ -366,7 +366,7 @@ Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy okr
 
 Podczas odbudować projekt, Android wersja posiada rozmiar czcionki niestandardowe, podczas gdy inne pozostają bez zmian.
 
-Można również użyć `merges` aby dodać pliki nie obecne w oryginalnym `www` katalogu. Na przykład, aplikacja wcielić *wstecz,* grafiki do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , podczas gdy Android w wersji można zamiast przechwytywania `backbutton` wydarzenia z przycisku odpowiedniego sprzętu.
+Można również użyć `merges` aby dodać pliki nie obecne w oryginalnym `www` katalogu. Na przykład, aplikacja wcielić *wstecz,* grafiki do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , podczas gdy Android w wersji można zamiast przechwytywania `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` wydarzenia z przycisku odpowiedniego sprzętu.
 
 ## Pomocy poleceń
 

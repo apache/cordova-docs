@@ -20,7 +20,7 @@ license: >
 
 # 가속
 
-포함 `Accelerometer` 특정 시점에 캡처된 데이터가.
+포함 `Accelerometer` 특정 시점에 <a href="../../media/capture/capture.html">캡처</a>된 데이터가.
 
 ## 속성
 
@@ -31,7 +31,7 @@ license: >
 
 ## 설명
 
-`Acceleration`개체 채워집니다 및 API에 의해 반환 된 `Accelerometer` 방법. 가속도 값 포함 중력의 효과 (9.81 m/s ^2) 때 장치 거짓말 평평 하 고 *x*, *y*, 최대 직면 하 고 *z* 값 반환 되어야 합니다 있도록, `` , `` , 그리고`9.81`.
+`Acceleration`개체 채워집니다 및 API에 의해 반환 된 `Accelerometer` 방법. 가속도 값 포함 중력의 효과 (9.81 m/s ^2) 때 <a href="../../device/device.html">장치</a> 거짓말 평평 하 고 *x*, *y*, 최대 직면 하 고 *z* 값 반환 되어야 합니다 있도록, `` , `` , 그리고`9.81`.
 
 ## 지원 되는 플랫폼
 
@@ -55,7 +55,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
     
 
 ## 전체 예제
@@ -63,19 +63,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
@@ -96,7 +96,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

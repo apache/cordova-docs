@@ -20,20 +20,20 @@ license: >
 
 # capture.captureVideo
 
-> 비디오 레코더 응용 프로그램을 시작 하 고 캡처한 비디오 클립 파일에 대 한 정보를 반환 합니다.
+> 비디오 레코더 응용 프로그램을 시작 하 고 <a href="capture.html">캡처</a>한 비디오 클립 <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 정보를 반환 합니다.
 
     navigator.device.capture.captureVideo(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="CaptureError.html">CaptureError</a>CB captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
     );
     
 
 ## 설명
 
-비디오 녹화 장치의 비디오 레코딩 응용 프로그램을 사용 하 여 캡처하는 비동기 작업을 시작 합니다. 작업을 사용 하면 단일 세션에서 하나 이상의 녹음을 캡처할 수 있습니다.
+비디오 녹화 <a href="../../device/device.html">장치</a>의 비디오 레코딩 응용 프로그램을 사용 하 여 <a href="capture.html">캡처</a>하는 비동기 작업을 시작 합니다. 작업을 사용 하면 단일 세션에서 하나 이상의 녹음을 <a href="capture.html">캡처</a>할 수 있습니다.
 
-캡처 작업이 끝나면 사용자 종료 비디오 레코딩 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `CaptureVideoOptions.limit` 에 도달. 없는 경우 `limit` 매개 변수 값 지정, 하나 (1), 기본 및 캡처 작업이 종료 되 면 사용자는 하나의 비디오 클립을 기록 하는 후.
+<a href="capture.html">캡처</a> 작업이 끝나면 사용자 종료 비디오 레코딩 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` 에 도달. 없는 경우 `limit` 매개 <a href="../../../plugin_ref/spec.html">변수</a> 값 지정, 하나 (1), 기본 및 <a href="capture.html">캡처</a> 작업이 종료 되 면 사용자는 하나의 비디오 클립을 기록 하는 후.
 
-캡처 작업이 완료 되 면 그것은 `CaptureCB` 의 배열과 콜백 실행 `MediaFile` 비디오 클립 파일을 캡처 설명 하는 각 개체. 사용자는 비디오 클립을 캡처하기 전에 작업을 종료 하는 경우는 `CaptureErrorCB` 콜백 실행 한 `CaptureError` 개체를 특징으로 `CaptureError.CAPTURE_NO_MEDIA_FILES` 오류 코드.
+<a href="capture.html">캡처</a> 작업이 완료 되 면 그것은 `<a href="CaptureCB.html">CaptureCB</a>` 의 배열과 콜백 실행 `MediaFile` 비디오 클립 <a href="../../file/fileobj/fileobj.html">파일</a>을 <a href="capture.html">캡처</a> 설명 하는 각 개체. 사용자는 비디오 클립을 <a href="capture.html">캡처</a>하기 전에 작업을 종료 하는 경우는 `<a href="CaptureError.html">CaptureError</a>CB` 콜백 실행 한 `<a href="CaptureError.html">CaptureError</a>` 개체를 특징으로 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 오류 코드.
 
 ## 지원 되는 플랫폼
 
@@ -56,7 +56,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start video capture
@@ -87,7 +87,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -100,7 +100,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
+            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     
@@ -126,4 +126,4 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-*   블랙베리 WebWorks 위한 코르도바 **비디오 레코더** 응용, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
+*   블랙베리 WebWorks 위한 코르도바 **비디오 레코더** 응용, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 <a href="../../device/device.html">장치</a>에 설치 되어 있지 않으면.

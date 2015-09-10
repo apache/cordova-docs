@@ -29,7 +29,7 @@ Restituisce il primo giorno della settimana secondo le preferenze dell'utente de
 
 I giorni della settimana sono numerati a partire da 1, dove 1 è presupposto per essere domenica. Restituisce il giorno per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `Number` valore.
 
-Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 
@@ -53,7 +53,7 @@ Quando il browser è impostato per la `en\_US` locale, questa viene visualizzata
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek Example</title>
+        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

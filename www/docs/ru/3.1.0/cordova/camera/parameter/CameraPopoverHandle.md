@@ -20,7 +20,7 @@ license: >
 
 # CameraPopoverHandle
 
-Дескриптор диалогового окна инструмента, созданного`camera.getPicture`.
+Дескриптор диалогового окна инструмента, созданного`<a href="../camera.getPicture.html">camera.getPicture</a>`.
 
 ## Методы
 
@@ -36,11 +36,11 @@ license: >
 
 **Параметры:**
 
-*   `cameraPopoverOptions`: `CameraPopoverOptions` , укажите новое положение
+*   `cameraPopoverOptions`: `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` , укажите новое положение
 
 ## Быстрый пример
 
-     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
@@ -54,12 +54,12 @@ license: >
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

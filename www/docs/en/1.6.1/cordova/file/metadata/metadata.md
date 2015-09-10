@@ -31,7 +31,7 @@ Properties
 Details
 -------
 
-The `Metadata` object represents information about the state of a file or directory.  You can get an instance of a Metadata object by calling the __getMetadata__ method of a `DirectoryEntry` or `FileEntry` object.
+The `Metadata` object represents information about the state of a file or directory.  You can get an instance of a Metadata object by calling the __getMetadata__ method of a `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` or `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` object.
 
 Supported Platforms
 -------------------
@@ -41,7 +41,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
 	function win(metadata) {

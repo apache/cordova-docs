@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-成功コールバック関数を提供する、 `Contact` 結果の配列は `contacts.find` 操作。
+成功コールバック関数を提供する、 `Contact` 結果の配列は `<a href="../contacts.find.html">contacts.find</a>` 操作。
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## パラメーター
 
-*   **連絡先**: 連絡先の配列検索操作からの結果します。*（お問い合わせ）*
+*   **<a href="contactFields.html">連絡先</a>**: <a href="contactFields.html">連絡先</a>の配列検索操作からの結果します。*（<a href="../Contact/contact.html">お問い合わせ</a>）*
 
 ## 例
 

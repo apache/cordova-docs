@@ -31,7 +31,7 @@ Indica se è o meno dell'ora legale in vigore alla `successCallback` con un `pro
 
 Il parametro in ingresso `date` dovrebbe essere di tipo`Date`.
 
-Se c'è un errore di lettura della data, allora il `errorCallback` esegue. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore di lettura della data, allora il `errorCallback` esegue. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 
@@ -56,7 +56,7 @@ Durante l'estate, e se il browser è impostato su un fuso orario abilitato DST, 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `contacts.find` Betrieb.
+Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `<a href="../contacts.find.html">contacts.find</a>` Betrieb.
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `contacts.find` Be
 
 ## Parameter
 
-*   **Kontakt**: das Kontakt Array aus einem Suchvorgang. *(Kontakt)*
+*   **<a href="../Contact/contact.html">Kontakt</a>**: das <a href="../Contact/contact.html">Kontakt</a> Array aus einem Suchvorgang. *(<a href="../Contact/contact.html">Kontakt</a>)*
 
 ## Beispiel
 

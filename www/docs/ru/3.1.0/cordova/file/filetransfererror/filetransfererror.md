@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileTransferError
+# <a href="../filetransfer/filetransfer.html">FileTransfer</a>Error
 
-A `FileTransferError` объект передается при ошибке обратного вызова при возникновении ошибки.
+A `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error` объект передается при ошибке обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -34,11 +34,11 @@ A `FileTransferError` объект передается при ошибке об
 
 ## Константы
 
-*   `FileTransferError.FILE_NOT_FOUND_ERR`
-*   `FileTransferError.INVALID_URL_ERR`
-*   `FileTransferError.CONNECTION_ERR`
-*   `FileTransferError.ABORT_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.FILE_NOT_FOUND_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.INVALID_URL_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.CONNECTION_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.ABORT_ERR`
 
 ## Описание
 
-`FileTransferError`Ошибка обратного вызова передается объект, когда происходит ошибка при загрузке или Загрузка файла.
+`<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error`Ошибка обратного вызова передается объект, когда происходит ошибка при загрузке или Загрузка файла.

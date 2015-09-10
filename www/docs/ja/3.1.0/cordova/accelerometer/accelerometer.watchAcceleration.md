@@ -20,20 +20,20 @@ license: >
 
 # accelerometer.watchAcceleration
 
-定期的な間隔で*x* *y*、および*z*軸に沿った加速度を取得します。
+定期的な間隔で*x* *y*、および*z*軸に沿った<a href="acceleration/acceleration.html">加速</a>度を取得します。
 
-    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
+    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
+                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
+                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
     
 
 ## 説明
 
-加速度計は現在位置との相対運動の変更 (デルタ) を検出するモーション センサーです。 加速度計は、 *x* *y*、および*z*軸に沿って 3次元の動きを検出できます。
+<a href="acceleration/acceleration.html">加速</a>度計は現在<a href="../geolocation/Position/position.html">位置</a>との相対運動の変更 (デルタ) を検出するモーション センサーです。 <a href="acceleration/acceleration.html">加速</a>度計は、 *x* *y*、および*z*軸に沿って 3次元の動きを検出できます。
 
-`accelerometer.watchAcceleration`メソッドは、デバイスの電流を取得 `Acceleration` 一定の間隔で実行する、 `accelerometerSuccess` コールバック関数するたびに。 経由でミリ秒単位で間隔を指定する、 `acceleratorOptions` オブジェクトの `frequency` パラメーター。
+`accelerometer.watchAcceleration`メソッドは、<a href="../device/device.html">デバイス</a>の電流を取得 `Acceleration` 一定の間隔で実行する、 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` コールバック関数するたびに。 経由でミリ秒単位で間隔を指定する、 `acceleratorOptions` オブジェクトの `frequency` パラメーター。
 
-返される ID の参照、加速度計腕時計間隔を見るし、で使用することができます `accelerometer.clearWatch` 、加速度計を見て停止します。
+返される ID の参照、<a href="acceleration/acceleration.html">加速</a>度計腕時計間隔を見るし、で使用することができます `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` 、<a href="acceleration/acceleration.html">加速</a>度計を見て停止します。
 
 ## サポートされているプラットフォーム
 
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -130,4 +130,4 @@ license: >
 
 ## iOS の癖
 
-API は、要求された間隔で、成功コールバック関数を呼び出しますが 40 ms の間デバイスへの要求の範囲を制限し、1000 ミリ秒になります。 たとえば、(ms) 3 秒の間隔を要求した場合、API 1 秒ごとに、デバイスからデータを要求がのみ成功コールバック 3 秒ごとを実行します。
+API は、要求された間隔で、成功コールバック関数を呼び出しますが 40 ms の間<a href="../device/device.html">デバイス</a>への要求の範囲を制限し、1000 ミリ秒になります。 たとえば、(ms) 3 秒の間隔を要求した場合、API 1 秒ごとに、<a href="../device/device.html">デバイス</a>からデータを要求がのみ成功コールバック 3 秒ごとを実行します。

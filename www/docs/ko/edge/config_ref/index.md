@@ -24,7 +24,7 @@ license: >
 
  [1]: http://www.w3.org/TR/widgets/
 
-코르도바 CLI (명령줄 인터페이스에 설명)를 사용 하 여 만든 프로젝트에 대 한 최상위 디렉터리에이 파일을 찾을 수 있습니다.
+코르도바 CLI (<a href="../guide/cli/index.html">명령줄 인터페이스</a>에 설명)를 사용 하 여 만든 프로젝트에 대 한 최상위 디렉터리에이 파일을 찾을 수 있습니다.
 
         app/config.xml
     
@@ -40,20 +40,20 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
 
 이 섹션에는 글로벌 및 크로스 플랫폼 구성 옵션 자세히 설명합니다. 플랫폼 특정 옵션에 대 한 다음 섹션을 참조 하십시오.
 
-*   iOS 구성
-*   안 드 로이드 구성
-*   블랙베리 10 구성
+*   <a href="../guide/platforms/ios/config.html">iOS 구성</a>
+*   <a href="../guide/platforms/android/config.html">안 드 로이드 구성</a>
+*   <a href="../guide/platforms/blackberry10/config.html">블랙베리 10 구성</a>
 
-다양 한 구성 옵션 아래에 선발 외에 각 대상 플랫폼에 대 한 이미지는 응용 프로그램의 핵심 집합을 구성할 수 있습니다. 자세한 내용은 아이콘 및 시작 화면을 참조 하십시오.
+다양 한 구성 옵션 아래에 선발 외에 각 대상 플랫폼에 대 한 이미지는 응용 프로그램의 핵심 집합을 구성할 수 있습니다. 자세한 내용은 <a href="images.html">아이콘 및 시작 화면</a>을 참조 하십시오.
 
 ## 핵심 구성 요소
 
-이 예제는 기본 `config.xml` 는 CLI에서 생성 된 `create` 명령, 명령줄 인터페이스 설명:
+이 예제는 기본 `config.xml` 는 CLI에서 생성 된 `create` 명령, <a href="../guide/cli/index.html">명령줄 인터페이스</a> 설명:
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -75,7 +75,7 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
 
 *   옵션 `<content>` 요소는 최상위 웹 자산 디렉터리에서 응용 프로그램의 시작 페이지를 정의 합니다. 기본값은 `index.html` , 최상위의 관례는 프로젝트에 나타나는 `www` 디렉터리.
 
-*   `<access>`요소는 app와 통신 하도록 허용 하는 외부 도메인 집합을 정의 합니다. 기본 값 위에 표시 된 모든 서버에 액세스할 수 있습니다. 자세한 내용은 도메인 화이트 리스트 가이드를 참조 하십시오.
+*   `<access>`요소는 app와 통신 하도록 허용 하는 외부 도메인 집합을 정의 합니다. 기본 값 위에 표시 된 모든 서버에 액세스할 수 있습니다. 자세한 내용은 도메인 화이트 리스트 <a href="../index.html">가이드</a>를 참조 하십시오.
 
 *   `<preference>`태그의 쌍으로 다양 한 옵션을 설정 합니다. `name` / `value` 특성. 각 기본 설정 `name` 은 대/소문자 구분. 이 페이지의 상단에 나열 된 많은 특혜는 특정 플랫폼에 고유한. 다음 섹션에서는 세부 둘 이상의 플랫폼에 적용 되는 환경 설정.
 
@@ -171,7 +171,7 @@ CLI를 사용 하 여 응용 프로그램을 구축할 경우 장치 Api를 설�
         </feature>
     
 
-각 기능을 지정 하는 방법에 대 한 자세한 내용은 API 참조를 참조 하십시오. 플러그인에 대 한 자세한 내용은 플러그인 개발 가이드를 참조 하십시오.
+각 기능을 지정 하는 방법에 대 한 자세한 내용은 <a href="../index.html">API 참조</a>를 참조 하십시오. 플러그인에 대 한 자세한 내용은 플러그인 개발 <a href="../index.html">가이드</a>를 참조 하십시오.
 
 ## *플랫폼* 요소
 
@@ -184,6 +184,6 @@ CLI를 사용 하 여 응용 프로그램을 구축, 그것은 때로는 기본 
 
 ## *hook* 요소
 
-특정 동작이 발생 하면 코르도바에 의해 호출 됩니다 사용자 지정 스크립트를 나타냅니다 (예를 들어 후 플러그인 추가 또는 논리를 준비 하는 플랫폼 호출 됩니다). 코르도바의 기본 기능을 확장 해야 할 때 유용 합니다. 자세한 내용은 후크 가이드를 참조 하십시오.
+특정 동작이 발생 하면 코르도바에 의해 호출 됩니다 사용자 지정 스크립트를 나타냅니다 (예를 들어 후 플러그인 추가 또는 논리를 준비 하는 플랫폼 호출 됩니다). 코르도바의 기본 기능을 확장 해야 할 때 유용 합니다. 자세한 내용은 후크 <a href="../index.html">가이드</a>를 참조 하십시오.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

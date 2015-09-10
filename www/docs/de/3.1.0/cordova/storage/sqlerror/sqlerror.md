@@ -41,4 +41,4 @@ A `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt.
 
 ## Beschreibung
 
-Das `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt, wenn eine Datenbank zu manipulieren.
+Das `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt, wenn eine <a href="../database/database.html">Datenbank</a> zu manipulieren.

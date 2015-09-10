@@ -20,28 +20,28 @@ license: >
 
 # geolocation.watchPosition
 
-디바이스의 현재 위치에 대 한 변경 시계.
+디바이스의 현재 <a href="Position/position.html">위치</a>에 대 한 변경 시계.
 
-    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
-                                                      [geolocationError],
-                                                      [geolocationOptions]);
+    var watchId = navigator.geolocation.watchPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                                      [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                                      [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
-## 매개 변수
+## 매개 <a href="../../plugin_ref/spec.html">변수</a>
 
-*   **geolocationSuccess**: 현재의 위치를 전달 되는 콜백.
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: 현재의 <a href="Position/position.html">위치</a>를 전달 되는 콜백.
 
-*   **geolocationError**: (선택 사항) 오류가 발생 하면 실행 되는 콜백.
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**: (선택 사항) 오류가 발생 하면 실행 되는 콜백.
 
-*   **geolocationOptions**: (선택 사항)는 지리적 위치 옵션.
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: (선택 사항)는 <a href="geolocation.html">지리적 <a href="Position/position.html">위치</a></a> 옵션.
 
 ## 반환
 
-*   **문자열**: 시계 위치 간격을 참조 하는 시계 id를 반환 합니다. 시계 id와 함께 사용 해야 합니다 `geolocation.clearWatch` 위치 변화에 대 한 보고 중지.
+*   **문자열**: 시계 <a href="Position/position.html">위치</a> 간격을 참조 하는 시계 id를 반환 합니다. 시계 id와 함께 사용 해야 합니다 `<a href="geolocation.clearWatch.html">geolocation.clearWatch</a>` <a href="Position/position.html">위치</a> 변화에 대 한 보고 중지.
 
 ## 설명
 
-`geolocation.watchPosition`비동기 함수가입니다. 그것은 위치에 변화를 탐지할 때 소자의 현재 위치를 반환 합니다. 새 위치를 검색 하는 장치는 `geolocationSuccess` 콜백 실행 한 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `geolocationError` 콜백 실행 한 `PositionError` 매개 변수로 개체.
+`geolocation.watchPosition`비동기 함수가입니다. 그것은 <a href="Position/position.html">위치</a>에 변화를 탐지할 때 소자의 현재 <a href="Position/position.html">위치</a>를 반환 합니다. 새 <a href="Position/position.html">위치</a>를 검색 하는 <a href="../device/device.html">장치</a>는 `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` 콜백 실행 한 `Position` 매개 <a href="../../plugin_ref/spec.html">변수</a>로 개체. 오류가 발생 하는 경우는 `<a href="parameters/geolocationError.html">geolocationError</a>` 콜백 실행 한 `<a href="PositionError/positionError.html">PositionError</a>` 매개 <a href="../../plugin_ref/spec.html">변수</a>로 개체.
 
 ## 지원 되는 플랫폼
 
@@ -65,7 +65,7 @@ license: >
                             '<hr />'      + element.innerHTML;
     }
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -82,14 +82,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         var watchID = null;
     
@@ -110,7 +110,7 @@ license: >
                                 '<hr />'      + element.innerHTML;
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

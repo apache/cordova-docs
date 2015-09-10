@@ -27,11 +27,11 @@ license: >
 
 ## 詳細
 
-イベント リスナーを登録できます、デフォルト ボリュームの動作をオーバーライドする必要がある場合、 `volumeupbutton` イベント。
+<a href="events.html">イベント</a> リスナーを登録できます、デフォルト ボリュームの動作をオーバーライドする必要がある場合、 `volumeupbutton` <a href="events.html">イベント</a>。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
 
-## サポートされているプラットフォーム
+## <a href="../../config_ref/images.html">サポートされているプラットフォーム</a>
 
 *   ブラックベリー 10
 *   アンドロイド
@@ -51,7 +51,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Up Button Example</title>
+        <title>Volume Up Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,7 +59,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

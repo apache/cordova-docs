@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Actualización de Windows Phone 8
+# <a href="upgrading.html">Actualización de Windows Phone</a> 8
 
 Esta guía le muestra cómo modificar Windows Phone 8 proyectos, para actualizar desde versiones anteriores de Córdoba. Algunas de estas instrucciones se aplican a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI. La sección siguiente muestra cómo actualizar desde no-CLI CLI.
 

@@ -20,14 +20,14 @@ license: >
 
 # media.play
 
-開始またはオーディオ ファイルの再生を再開します。
+開始またはオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の再生を<a href="../events/events.resume.html">再開</a>します。
 
     media.play();
     
 
 ## 説明
 
-`media.play`メソッドを同期的に実行し、開始またはオーディオ ファイルの再生を再開します。
+`media.play`メソッドを同期的に実行し、開始またはオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の再生を<a href="../events/events.resume.html">再開</a>します。
 
 ## サポートされているプラットフォーム
 
@@ -65,14 +65,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -99,7 +99,7 @@ license: >
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -120,7 +120,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     
@@ -128,7 +128,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -166,11 +166,11 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-*   BlackBerry デバイスは、同時のオーディオ チャネルの限られた数をサポートします。 CDMA デバイスのみ 1 つのオーディオ チャンネルをサポートします。 その他のデバイスを 2 つまでの同時チャンネルをサポートします。 サポートされている量よりもより多くのオーディオ ファイルを再生しよう結果以前の再生を停止しています。
+*   BlackBerry <a href="../device/device.html">デバイス</a>は、同時のオーディオ チャネルの限られた数をサポートします。 CDMA <a href="../device/device.html">デバイス</a>のみ 1 つのオーディオ チャンネルをサポートします。 その他の<a href="../device/device.html">デバイス</a>を 2 つまでの同時チャンネルをサポートします。 サポートされている量よりもより多くのオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>を再生しよう結果以前の再生を停止しています。
 
 ## iOS の癖
 
-*   **numberOfLoops**: このオプションを指定して、 `play` メディア ファイルを再生する、例えば回数を指定する方法。
+*   **numberOfLoops**: このオプションを指定して、 `play` <a href="media.html">メディア</a> <a href="../file/fileobj/fileobj.html">ファイル</a>を再生する、例えば回数を指定する方法。
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
@@ -182,7 +182,7 @@ license: >
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **ファイル検索の順序**: iOS の検索でファイル名または単純なパスのみが提供される場合、 `www` ディレクトリ、ファイルをアプリケーションの `documents/tmp` ディレクトリ。
+*   **<a href="../file/fileobj/fileobj.html">ファイル</a>検索の順序**: iOS の検索で<a href="../file/fileobj/fileobj.html">ファイル</a>名または単純なパスのみが提供される場合、 `www` ディレクトリ、<a href="../file/fileobj/fileobj.html">ファイル</a>をアプリケーションの `documents/tmp` ディレクトリ。
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

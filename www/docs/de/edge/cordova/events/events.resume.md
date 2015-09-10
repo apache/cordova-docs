@@ -29,9 +29,9 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung aus dem Hintergrund abgerufen 
 
 Das `resume` -Ereignis wird ausgelöst, wenn die native Plattform die Anwendung aus dem Hintergrund zieht.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
-## Unterstützte Plattformen
+## <a href="../../config_ref/images.html">Unterstützte Plattformen</a>
 
 *   Amazon Fire OS
 *   Android
@@ -54,7 +54,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## iOS Macken
 
-Alle interaktiven Funktionen Intensivlehrgang ein `pause` -Ereignishandler ausgeführt später, wenn die app wieder aufgenommen wird, wie durch signalisiert die `resume` Ereignis. Dazu gehören Warnungen, `console.log()` , und keine Anrufe von Plugins oder Cordova API, das Durchlaufen von Objective-C.
+Alle interaktiven Funktionen Intensivlehrgang ein `<a href="events.pause.html">pause</a>` -Ereignishandler ausgeführt später, wenn die app wieder aufgenommen wird, wie durch signalisiert die `resume` Ereignis. Dazu gehören Warnungen, `console.log()` , und keine Anrufe von Plugins oder Cordova API, das Durchlaufen von Objective-C.
 
 *   **aktiv** -Ereignis
     

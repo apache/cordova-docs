@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileReader
+# <a href="../fileobj/fileobj.html">File</a>Reader
 
-Il `FileReader` permette l'accesso a un file di base.
+Il `<a href="../fileobj/fileobj.html">File</a>Reader` permette l'accesso a un file di base.
 
 ## Proprietà
 
@@ -28,7 +28,7 @@ Il `FileReader` permette l'accesso a un file di base.
 
 *   **risultato**: il contenuto del file che è stati letti. *(DOMString)*
 
-*   **errore**: oggetto contenente errori. *(FileError)*
+*   **errore**: oggetto contenente errori. *(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)*
 
 *   **onloadstart**: chiamato quando inizia la lettura. *(Funzione)*
 
@@ -58,7 +58,7 @@ Il `FileReader` permette l'accesso a un file di base.
 
 ## Dettagli
 
-Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del dispositivo. I file possono essere letti come testo o come una stringa di dati con codifica base64. Listener di eventi ricevono il `loadstart` , `progress` , `load` , `loadend` , `error` , e `abort` eventi.
+Il `<a href="../fileobj/fileobj.html">File</a>Reader` oggetto offre un modo per leggere i file dal sistema di file del dispositivo. I file possono essere letti come testo o come una stringa di dati con codifica base64. Listener di eventi ricevono il `loadstart` , `progress` , `load` , `loadend` , `error` , e `abort` eventi.
 
 ## Piattaforme supportate
 
@@ -77,7 +77,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
 ## Esempio rapido
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -103,7 +103,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
 ## Esempio rapido
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -121,7 +121,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
 ## Abort
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function(evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -142,36 +142,36 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a>Reader <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", null, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
-            fileEntry.file(gotFile, fail);
+        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
+            fileEntry.file(got<a href="../fileobj/fileobj.html">File</a>, fail);
         }
     
-        function gotFile(file){
+        function got<a href="../fileobj/fileobj.html">File</a>(file){
             readDataUrl(file);
             readAsText(file);
         }
     
         function readDataUrl(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("Read as data URL");
                 console.log(evt.target.result);
@@ -180,7 +180,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
         }
     
         function readAsText(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("Read as text");
                 console.log(evt.target.result);
@@ -195,8 +195,8 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Read File</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Read <a href="../fileobj/fileobj.html">File</a></p>
       </body>
     </html>
     
@@ -216,7 +216,7 @@ Attualmente supportato solo su iOS e Android.
 ## Esempio rapido
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -242,7 +242,7 @@ Attualmente supportato solo su iOS e Android.
 ## Esempio rapido
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(new Uint8Array(evt.target.result));

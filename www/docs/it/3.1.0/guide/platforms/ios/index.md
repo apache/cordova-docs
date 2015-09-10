@@ -22,11 +22,11 @@ license: >
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per i dispositivi iOS come iPhone e iPad. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   iOS Configuration
-*   L'aggiornamento iOS
-*   iOS visualizzazioni Web
-*   iOS Plugins
-*   iOS Command-line Tools
+*   <a href="config.html">iOS Configuration</a>
+*   <a href="upgrading.html">L'aggiornamento iOS</a>
+*   <a href="webview.html">iOS visualizzazioni Web</a>
+*   <a href="plugin.html">iOS Plugins</a>
+*   <a href="tools.html">iOS Command-line Tools</a>
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -122,7 +122,7 @@ Xcode avvertimento circa il `invokeString` Metodo riguarda funzionalità che lan
 
 *   Modificare il file *Classes/MainViewController.m* , circondano il seguente blocco di codice con `/*` e `*/` commenti come illustrato di seguito, quindi digitare il **comando-s** per salvare il file:
     
-        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / valido solo se ___PROJECTNAME__-info. plist specifica un protocollo per gestire / * se (self.invokeString) {/ / questo è passato prima che venga generato l'evento deviceready, quindi è possibile accedere in js quando ricevi deviceready NSLog (@"SCONSIGLIATI: window.invokeString - utilizzare la funzione window.handleOpenURL(url), che viene sempre chiamato quando l'app viene avviata tramite un url personalizzato regime.");
+        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / valido solo se ___PROJECTNAME__-info. plist specifica un protocollo per gestire / * se (self.invokeString) {/ / questo è passato prima che venga generato l'evento <a href="../../../cordova/events/events.deviceready.html">deviceready</a>, quindi è possibile accedere in js quando ricevi <a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog (@"SCONSIGLIATI: window.invokeString - utilizzare la funzione window.handleOpenURL(url), che viene sempre chiamato quando l'app viene avviata tramite un url personalizzato regime.");
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ":", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         } * / / / Nero colore di base per le applicazioni native theWebView.backgroundColor corrisponde a sfondo = [blackColor UIColor];
@@ -168,7 +168,7 @@ Per ulteriori informazioni, consultare la documentazione di Apple:
 
  [10]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [11]: https://developer.apple.com/membercenter/index.action
- [12]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
+ [12]: http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4User<a href="../../../index.html">Guide</a>/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215
  [13]: https://developer.apple.com/videos/wwdc/2012/
  [14]: http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html
 

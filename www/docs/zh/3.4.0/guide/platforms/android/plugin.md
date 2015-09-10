@@ -20,11 +20,11 @@ license: >
 
 # Android 外掛程式
 
-此部分提供了如何在 Android 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。 另一個示例，請參閱還在[CordovaPlugin.java][1]的評論.
+此部分提供了如何在 Android 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的<a href="../../overview/index.html">概述</a>。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。 另一個示例，請參閱還在[CordovaPlugin.java][1]的評論.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與附加到它上面的鉤子。 外掛程式被表示為類映射的 `config.xml` 檔。 外掛程式包括至少一個擴展的 JAVA 類的 `CordovaPlugin` 類，重寫的一個其 `execute` 方法。 作為最佳實踐，該外掛程式還應處理 `pause` 和 `resume` 事件，以及任何外掛程式之間傳遞的消息。 外掛程式需要長時間運行的請求，後臺活動媒體重播、 聽眾或內部狀態等應執行 `onReset()` ，以及方法。 它執行時 `WebView` 定位到新的一頁或刷新，重新載入 JavaScript。
+Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與附加到它上面的鉤子。 外掛程式被表示為類映射的 `config.xml` 檔。 外掛程式包括至少一個擴展的 JAVA 類的 `CordovaPlugin` 類，重寫的一個其 `execute` 方法。 作為最佳實踐，該外掛程式還應處理 `pause` 和 `resume` <a href="../../../cordova/events/events.html">事件</a>，以及任何外掛程式之間傳遞的消息。 外掛程式需要長時間運行的請求，後臺活動媒體重播、 聽眾或內部狀態等應執行 `onReset()` ，以及方法。 它執行時 `WebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
 ## 外掛程式類映射
 

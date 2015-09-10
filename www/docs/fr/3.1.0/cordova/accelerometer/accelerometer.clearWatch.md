@@ -25,7 +25,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: l'ID retourné par`accelerometer.watchAcceleration`.
+*   **watchID**: l'ID retourné par`<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>`.
 
 ## Plates-formes prises en charge
 
@@ -38,7 +38,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
 
 ## Exemple rapide
 
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    var watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration

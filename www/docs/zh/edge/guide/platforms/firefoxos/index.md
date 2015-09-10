@@ -18,13 +18,13 @@ license: >
     under the License.
 ---
 
-# 火狐瀏覽器作業系統平臺指南
+# 火狐瀏覽器作業系統<a href="../index.html">平臺指南</a>
 
 本指南介紹了如何設置您的開發環境創建科爾多瓦應用程式為火狐 OS 的設備，然後測試和發佈這些應用程式。
 
 ## 要求和支援
 
-火狐瀏覽器作業系統的應用程式，基本上只是為 web 應用程式，加上一個 manifest.webapp 檔，定義了有關應用程式的中繼資料，並允許它在火狐瀏覽器作業系統的設備上安裝。 可以使用任何科爾多瓦支援的平臺。要找出有關構建 web 應用程式的詳細資訊，請諮詢上[國語][1]的[App 中心][2].
+火狐瀏覽器作業系統的應用程式，基本上只是為 web 應用程式，加上一個 manifest.webapp 檔，定義了有關應用程式的中繼資料，並允許它在火狐瀏覽器作業系統的設備上安裝。 可以使用任何科爾多瓦<a href="../../../config_ref/images.html">支援的平臺</a>。要找出有關構建 web 應用程式的詳細資訊，請諮詢上[國語][1]的[App 中心][2].
 
  [1]: https://developer.mozilla.org/en-US/
  [2]: https://developer.mozilla.org/en-US/Apps
@@ -44,7 +44,7 @@ license: >
     $ cd test-app
     
 
-火狐瀏覽器作業系統作為受支援的平臺添加到在以下應用程式：
+火狐瀏覽器作業系統作為受<a href="../../../config_ref/images.html">支援的平臺</a>添加到在以下應用程式：
 
     $ cordova platform add firefoxos
     

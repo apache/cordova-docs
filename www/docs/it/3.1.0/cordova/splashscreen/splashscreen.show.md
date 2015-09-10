@@ -20,7 +20,7 @@ license: >
 
 # splashscreen
 
-Visualizza la schermata iniziale.
+<a href="../inappbrowser/inappbrowser.html">Visualizza</a> la schermata iniziale.
 
     navigator.splashscreen.show();
     
@@ -46,14 +46,14 @@ Questo metodo visualizza la schermata iniziale dell'applicazione.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title><a href="splashscreen.html">Splashscreen</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,6 +64,6 @@ Questo metodo visualizza la schermata iniziale dell'applicazione.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>

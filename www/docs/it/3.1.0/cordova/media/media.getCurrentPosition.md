@@ -29,11 +29,11 @@ Restituisce la posizione corrente all'interno di un file audio.
 
 *   **mediaSuccess**: il callback passato la posizione corrente in pochi secondi.
 
-*   **errore mediaError**: (facoltativo) il callback da eseguire se si verifica un errore.
+*   **<a href="Parameters/mediaError.html">errore mediaError</a>**: (facoltativo) il callback da eseguire se si verifica un errore.
 
 ## Descrizione
 
-Una funzione asincrona che restituisce la posizione corrente del file audio sottostante di un `Media` oggetto. Aggiorna anche il `Media` dell'oggetto `position` parametro.
+Una funzione asincrona che restituisce la posizione corrente del file audio sottostante di un `<a href="media.html">Media</a>` oggetto. Aggiorna anche il `<a href="media.html">Media</a>` dell'oggetto `position` parametro.
 
 ## Piattaforme supportate
 
@@ -53,7 +53,7 @@ Una funzione asincrona che restituisce la posizione corrente del file audio sott
 
     // Audio player
     //
-    var my_media = new Media(src, onSuccess, onError);
+    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
     // Update media position every second
     var mediaTimer = setInterval(function () {
@@ -79,14 +79,14 @@ Una funzione asincrona che restituisce la posizione corrente del file audio sott
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -102,8 +102,8 @@ Una funzione asincrona che restituisce la posizione corrente del file audio sott
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -141,7 +141,7 @@ Una funzione asincrona che restituisce la posizione corrente del file audio sott
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

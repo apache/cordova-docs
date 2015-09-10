@@ -20,7 +20,7 @@ license: >
 
 # accelerometerError
 
-OnError Callback-Funktion für Beschleunigungsfunktionen.
+OnError Callback-Funktion für <a href="../acceleration/acceleration.html">Beschleunigung</a>sfunktionen.
 
     function() {
         // Handle the error

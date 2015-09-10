@@ -26,11 +26,11 @@ Este objeto representa un sistema de archivos.
 
 *   **nombre**: el nombre del sistema de archivos. *(DOMString)*
 
-*   **raíz**: el directorio raíz del sistema de archivos. *(DirectoryEntry)*
+*   **raíz**: el directorio raíz del sistema de archivos. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
 
 ## Detalles
 
-El `FileSystem` objeto representa la información sobre el sistema de archivos. El nombre del sistema de archivos es único en toda la lista de sistemas de archivos expuestos. La propiedad raíz contiene una `DirectoryEntry` objeto que representa el directorio raíz del sistema de archivos.
+El `FileSystem` objeto representa la información sobre el sistema de archivos. El nombre del sistema de archivos es único en toda la lista de sistemas de archivos expuestos. La propiedad raíz contiene una `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` objeto que representa el directorio raíz del sistema de archivos.
 
 ## Plataformas soportadas
 
@@ -48,7 +48,7 @@ El `FileSystem` objeto representa la información sobre el sistema de archivos. 
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, null);
     
 
 ## Ejemplo completo
@@ -56,19 +56,19 @@ El `FileSystem` objeto representa la información sobre el sistema de archivos. 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System Example</title>
+        <title>File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
     
         function onFileSystemSuccess(fileSystem) {
@@ -83,7 +83,7 @@ El `FileSystem` objeto representa la información sobre el sistema de archivos. 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>File System</p>
       </body>
     </html>

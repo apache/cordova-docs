@@ -25,7 +25,7 @@ Geolocation
 
 `Geolocation` provides information about the device's location, such as
 latitude and longitude. Common sources of location information include
-Global Positioning System (GPS) and location inferred from network
+Global <a href="Position/position.html">Position</a>ing System (GPS) and location inferred from network
 signals such as IP address, RFID, WiFi and Bluetooth MAC addresses,
 and GSM/CDMA cell IDs. There is no guarantee that the API returns the
 device's actual location.
@@ -34,28 +34,28 @@ This API is based on the
 [W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html),
 and only executes on devices that don't already provide an implementation.
 
-**Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the <a href="../../guide/privacy/index.html">Privacy Guide</a>.
 
 Methods
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- geolocation.getCurrent<a href="Position/position.html">Position</a>
+- geolocation.watch<a href="Position/position.html">Position</a>
+- <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
 
 Arguments
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
+- <a href="parameters/geolocationError.html">geolocationError</a>
+- <a href="parameters/geolocation.options.html">geolocationOptions</a>
 
 Objects (Read-Only)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- <a href="Position/position.html">Position</a>
+- <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>
+- <a href="Coordinates/coordinates.html">Coordinates</a>
 
 Permissions
 -----------

@@ -457,7 +457,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Eventos</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Eventos</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -792,7 +792,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Almacenamiento de información</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Almacenamiento de información</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -814,11 +814,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="tizen"       class="y">

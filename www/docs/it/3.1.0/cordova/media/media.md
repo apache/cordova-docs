@@ -33,7 +33,7 @@ license: >
 
 *   **mediaSuccess**: (facoltativo) il callback che viene eseguito dopo un `Media` oggetto ha completato il gioco corrente, record o interrompere l'azione. *(Funzione)*
 
-*   **errore mediaError**: (facoltativo) il callback che viene eseguito se si verifica un errore. *(Funzione)*
+*   **<a href="Parameters/mediaError.html">errore mediaError</a>**: (facoltativo) il callback che viene eseguito se si verifica un errore. *(Funzione)*
 
 *   **mediaStatus**: (facoltativo) il callback che viene eseguito per indicare i cambiamenti di stato. *(Funzione)*
 
@@ -49,25 +49,25 @@ Costanti sono segnalate come unico parametro per il `mediaStatus` callback:
 
 ## Metodi
 
-*   `media.getCurrentPosition`: Restituisce la posizione corrente all'interno di un file audio.
+*   `<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>`: Restituisce la posizione corrente all'interno di un file audio.
 
-*   `media.getDuration`: Restituisce la durata di un file audio.
+*   `<a href="media.getDuration.html">media.getDuration</a>`: Restituisce la durata di un file audio.
 
 *   `media.play`: Iniziare o riprendere la riproduzione di un file audio.
 
 *   `media.pause`: Pausa la riproduzione di un file audio.
 
-*   `media.release`: Libera risorse audio del sistema operativo sottostante.
+*   `<a href="media.release.html">media.release</a>`: Libera risorse audio del sistema operativo sottostante.
 
-*   `media.seekTo`: Sposta la posizione all'interno del file audio.
+*   `<a href="media.seekTo.html">media.seekTo</a>`: Sposta la posizione all'interno del file audio.
 
-*   `media.setVolume`: Impostare il volume per la riproduzione audio.
+*   `<a href="media.setVolume.html">media.setVolume</a>`: Impostare il volume per la riproduzione audio.
 
-*   `media.startRecord`: Iniziare a registrare un file audio.
+*   `<a href="media.startRecord.html">media.startRecord</a>`: Iniziare a registrare un file audio.
 
-*   `media.stopRecord`: Interrompere la registrazione di un file audio.
+*   `<a href="media.stop.html">media.stop</a>Record`: Interrompere la registrazione di un file audio.
 
-*   `media.stop`: Interrompere la riproduzione di un file audio.
+*   `<a href="media.stop.html">media.stop</a>`: Interrompere la riproduzione di un file audio.
 
 ## Parametri supplementari ReadOnly
 
@@ -142,7 +142,7 @@ Alcune piattaforme possono supportare questa funzionalità senza richiedere alcu
 
 ### Stranezze di Windows Phone
 
-*   File sola multimediale può essere riprodotti in un momento.
+*   <a href="../file/fileobj/fileobj.html">File</a> sola multimediale può essere riprodotti in un momento.
 
 *   Ci sono severe restrizioni su come l'applicazione interagisce con altri media. Vedere la [documentazione di Microsoft per maggiori dettagli][2].
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Aktualizacja systemu Windows 8
+# <a href="../android/upgrade.html">Aktualizacja</a> systemu Windows 8
 
 Ten poradnik pokazuje jak zmienić Windows 8 projektów do uaktualnienia ze starszych wersji Cordova. Większość tych instrukcji ma zastosowanie do projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.
 
@@ -26,7 +26,7 @@ Ten poradnik pokazuje jak zmienić Windows 8 projektów do uaktualnienia ze star
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  <a href="../android/upgrade.html">Aktualizacja</a> `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update windows8`.
 
@@ -39,7 +39,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 Cordova CLI wsparcie dla Windows 8 został wprowadzony w Cordova 3.1.0. Do aktualizacji, zalecamy tworzenie nowych CLI Cordova, projektu i przenoszenie przez wszystkie niezbędne zasoby.
 
-## Aktualizacja z wersji 2.8.0 do wersji 2.9.0
+## <a href="../android/upgrade.html">Aktualizacja</a> z wersji 2.8.0 do wersji 2.9.0
 
 Następujące polecenia powinny być wykonywane z w Visual Studio Aby upewnić się że wszelkie odwołania są aktualizowane usunięte.
 
@@ -49,7 +49,7 @@ Następujące polecenia powinny być wykonywane z w Visual Studio Aby upewnić s
 
 3.  Tworzenie i testowanie!
 
-## Aktualizacja z wersji 2.7.0 do wersji 2.8.0
+## <a href="../android/upgrade.html">Aktualizacja</a> z wersji 2.7.0 do wersji 2.8.0
 
 Następujące polecenia powinny być wykonywane z w Visual Studio Aby upewnić się że wszelkie odwołania są aktualizowane usunięte.
 

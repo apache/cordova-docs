@@ -32,12 +32,12 @@ camera (if the device operating system doesn't do so already).  That
 notice should provide the same information noted above, as well as
 obtaining the user's permission (e.g., by presenting choices for
 __OK__ and __No Thanks__).  For more information, please see the
-Privacy Guide.
+<a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.
 
 ## Methods
 
-- camera.getPicture
-- camera.cleanup
+- <a href="camera.getPicture.html">camera.getPicture</a>
+- <a href="camera.cleanup.html">camera.cleanup</a>
 
 ## Accessing the Feature
 
@@ -100,4 +100,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the Overview section.
+configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.

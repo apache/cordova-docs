@@ -20,11 +20,11 @@ license: >
 
 # Plugins verwalten mithilfe Plugman
 
-Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins. Die erste ist mithilfe der `cordova` CLI in der Command-Line Interface beschrieben. Die zweite ist die Verwendung einer untergeordnete [Plugman][1] -Kommandozeilen-Schnittstelle. Dieses Handbuch konzentriert sich auf den zweiten Ansatz, der möglicherweise nützlich für Entwickler, die ihre Version von Cordova aktualisieren wollen, aber wer noch nicht noch angenommen Cordova CLI in ihren Workflow.
+Ab Version 3.0 ff. Cordova implementiert alle <a href="../cordova/device/device.html">Gerät</a> APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins. Die erste ist mithilfe der `cordova` CLI in der Command-Line Interface beschrieben. Die zweite ist die Verwendung einer untergeordnete [Plugman][1] -Kommandozeilen-Schnittstelle. Dieses Handbuch konzentriert sich auf den zweiten Ansatz, der möglicherweise nützlich für Entwickler, die ihre Version von Cordova aktualisieren wollen, aber wer noch nicht noch angenommen Cordova CLI in ihren Workflow.
 
  [1]: https://github.com/apache/cordova-plugman/
 
-Weitere Informationen über Plugman finden Sie in [der README-Datei im repository][2].
+Weitere Informationen über Plugman finden Sie in [der README-<a href="../cordova/file/fileobj/fileobj.html">Datei</a> im repository][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 

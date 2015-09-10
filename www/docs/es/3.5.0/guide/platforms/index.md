@@ -18,66 +18,66 @@ license: >
     under the License.
 ---
 
-# Guías de plataformas
+# <a href="../../index.html">Guías</a> de plataformas
 
 Antes de desarrollar para cualquiera de las plataformas que se enumeran a continuación, instalar la interfaz de línea de comandos de cordova (CLI). (Para más detalles, ver la interfaz de línea de comandos).
 
 Para desarrollar aplicaciones de Cordova, debe instalar los SDK para cada plataforma móvil que usted está apuntando. Esta instalación es necesaria independientemente de los hacen la mayoría de su trabajo en el SDK o utiliza la CLI para su ciclo de construir.
 
-Cada *Plataforma guía* a continuación te dice lo que necesitas saber para configurar el entorno de desarrollo de cada plataforma: dónde obtener el SDK, cómo configurar emuladores de dispositivo, cómo conectar dispositivos para pruebas directas y cómo administrar los requerimientos claves de firma. Guías adicionales proporcionan información sobre el conjunto único de cada plataforma de opciones de configuración, instrucciones para agregar plugins, cómo actualizar cada plataforma y herramientas de línea de comandos específicos a la plataforma que sirven como una alternativa de nivel inferior a la utilidad de línea de comandos de `cordova`.
+Cada *Plataforma guía* a continuación te dice lo que necesitas saber para configurar el entorno de desarrollo de cada plataforma: dónde obtener el SDK, cómo configurar emuladores de dispositivo, cómo conectar dispositivos para pruebas directas y cómo administrar los requerimientos claves de firma. <a href="../../index.html">Guías</a> adicionales proporcionan información sobre el conjunto único de cada plataforma de opciones de configuración, instrucciones para agregar plugins, cómo actualizar cada plataforma y herramientas de línea de comandos específicos a la plataforma que sirven como una alternativa de nivel inferior a la utilidad de línea de comandos de `cordova`.
 
 ## Amazon fuego OS
 
-*   Amazon fuego OS Platform Guide
-*   Amazon fuego OS configuración
-*   Amazon fuego OS WebViews
-*   Amazon fuego OS Plugins
+*   <a href="amazonfireos/index.html">Amazon fuego OS Platform Guide</a>
+*   <a href="amazonfireos/config.html">Amazon fuego OS configuración</a>
+*   <a href="amazonfireos/webview.html">Amazon fuego OS WebViews</a>
+*   <a href="amazonfireos/plugin.html">Amazon fuego OS Plugins</a>
 
 ## Android
 
-*   Guía de la plataforma Android
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Android Herramientas de línea de comandos
-*   Actualizar Android
+*   <a href="android/index.html">Guía de la plataforma Android</a>
+*   <a href="android/config.html">Configuración de Android</a>
+*   <a href="android/webview.html">Android WebViews</a>
+*   <a href="android/plugin.html">Android Plugins</a>
+*   <a href="android/tools.html">Android Herramientas de línea de comandos</a>
+*   <a href="android/upgrading.html">Actualizar Android</a>
 
 ## BlackBerry 10
 
-*   Guía de la plataforma BlackBerry 10
-*   Configuración de blackBerry 10
-*   BlackBerry 10 Plugins
-*   BlackBerry 10 herramientas de línea de comandos
-*   Actualizar BlackBerry 10
+*   <a href="blackberry/index.html">Guía de la plataforma BlackBerry</a> 10
+*   <a href="blackberry10/config.html">Configuración de blackBerry 10</a>
+*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="blackberry10/tools.html">BlackBerry 10 herramientas de línea de comandos</a>
+*   <a href="blackberry10/upgrading.html"><a href="blackberry/upgrading.html">Actualizar BlackBerry</a> 10</a>
 
 ## Firefox OS
 
-*   Firefox OS Platform Guide
+*   <a href="firefoxos/index.html">Firefox OS Platform Guide</a>
 
 ## iOS
 
 *   Guía de la plataforma iOS
-*   iOS configuración
-*   iOS WebViews
-*   iOS Plugins
-*   iOS herramientas de línea de comandos
-*   Actualizar iOS
+*   <a href="ios/config.html">iOS configuración</a>
+*   <a href="ios/webview.html">iOS WebViews</a>
+*   <a href="ios/plugin.html">iOS Plugins</a>
+*   <a href="ios/tools.html">iOS herramientas de línea de comandos</a>
+*   <a href="ios/upgrading.html">Actualizar iOS</a>
 
 ## Ubuntu
 
-*   Guía de la plataforma de Ubuntu
+*   <a href="ubuntu/index.html">Guía de la plataforma de Ubuntu</a>
 
 ## Windows Phone
 
-*   Guía de la plataforma de Windows Phone
-*   Windows Phone Plugins
-*   Actualización de Windows Phone
+*   <a href="wp8/index.html">Guía de la plataforma de Windows Phone</a>
+*   <a href="wp8/plugin.html">Windows Phone Plugins</a>
+*   <a href="wp8/upgrading.html">Actualización de Windows Phone</a>
 
 ## Windows 8
 
-*   Windows 8 plataforma guía
-*   Actualización de Windows 8
+*   <a href="win8/index.html">Windows 8 plataforma guía</a>
+*   <a href="win8/upgrading.html">Actualización de Windows 8</a>
 
 ## Tizen
 
-*   Guía de la plataforma Tizen
+*   <a href="tizen/index.html">Guía de la plataforma Tizen</a>

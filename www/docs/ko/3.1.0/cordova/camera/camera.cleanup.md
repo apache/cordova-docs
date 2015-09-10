@@ -20,14 +20,14 @@ license: >
 
 # camera.cleanup
 
-제거 임시 저장소에서 카메라로 찍은 사진을 중간.
+제거 임시 저장소에서 <a href="camera.html">카메라</a>로 찍은 사진을 중간.
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
     
 
 ## 설명
 
-제거 중간 전화 후 임시 저장소에 보관 된 이미지 파일 `camera.getPicture` . 경우에만 적용의 값 `Camera.sourceType` 와 `Camera.PictureSourceType.CAMERA` 와 `Camera.destinationType` 같음`Camera.DestinationType.FILE_URI`.
+제거 중간 전화 후 임시 저장소에 보관 된 이미지 <a href="../file/fileobj/fileobj.html">파일</a> `<a href="camera.getPicture.html">camera.getPicture</a>` . 경우에만 적용의 값 `Camera.sourceType` 와 `Camera.PictureSourceType.CAMERA` 와 `Camera.destinationType` 같음`Camera.DestinationType.FILE_URI`.
 
 ## 지원 되는 플랫폼
 

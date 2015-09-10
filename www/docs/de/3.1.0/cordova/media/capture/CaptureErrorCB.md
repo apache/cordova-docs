@@ -18,18 +18,18 @@ license: >
     under the License.
 ---
 
-# CaptureErrorCB
+# <a href="CaptureError.html">CaptureError</a>CB
 
-> Wird aufgerufen, wenn ein Fehler, während eines Medien auftritt.
+> Wird aufgerufen, wenn ein Fehler, während eines <a href="../media.html">Medien</a> auftritt.
 
-    function captureError( CaptureError error ) { ... };
+    function captureError( <a href="CaptureError.html">CaptureError</a> error ) { ... };
     
 
 ## Beschreibung
 
-Diese Funktion wird ausgeführt, wenn ein Fehler auftritt, wenn Sie versuchen, starten Sie ein Medium capture Betrieb. Fehlerszenarien enthalten, wenn die Sicherungsanwendung beschäftigt, ein Capture-Vorgang ist bereits im Gange, oder der Benutzer den Vorgang abbricht, bevor alle Mediendateien erfasst werden.
+Diese Funktion wird ausgeführt, wenn ein Fehler auftritt, wenn Sie versuchen, starten Sie ein Medium capture Betrieb. Fehlerszenarien enthalten, wenn die Sicherungsanwendung beschäftigt, ein Capture-Vorgang ist bereits im Gange, oder der Benutzer den Vorgang abbricht, bevor alle <a href="../media.html">Medien</a>dateien erfasst werden.
 
-Diese Funktion führt mit einem `CaptureError` -Objekt, enthält einen entsprechenden Fehler`code`.
+Diese Funktion führt mit einem `<a href="CaptureError.html">CaptureError</a>` -Objekt, enthält einen entsprechenden Fehler`code`.
 
 ## Kleines Beispiel
 

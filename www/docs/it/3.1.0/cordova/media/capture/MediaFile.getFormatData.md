@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# MediaFile.getFormatData
+# <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData
 
 > Recupera il formato informazioni su cattura file multimediale.
 
-    mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB errorCallback]);
+    media<a href="../../file/fileobj/fileobj.html">File</a>.getFormatData (<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB successCallback, [<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB errorCallback]);
     
 
 ## Descrizione
 
-Questa funzione in modo asincrono tenta di recuperare le informazioni sul formato del file multimediale. Se riuscito, richiama il `MediaFileDataSuccessCB` callback con un `MediaFileData` oggetto. Se il tentativo fallisce, questa funzione richiama il `MediaFileDataErrorCB` callback.
+Questa funzione in modo asincrono tenta di recuperare le informazioni sul formato del file multimediale. Se riuscito, richiama il `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB` callback con un `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` oggetto. Se il tentativo fallisce, questa funzione richiama il `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB` callback.
 
 ## Piattaforme supportate
 
@@ -39,12 +39,12 @@ Questa funzione in modo asincrono tenta di recuperare le informazioni sul format
 
 ## BlackBerry WebWorks stranezze
 
-Non fornisce un'API per informazioni sui file multimediali, quindi tutti `MediaFileData` oggetti restituiscono con valori predefiniti.
+Non fornisce un'API per informazioni sui file multimediali, quindi tutti `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` oggetti restituiscono con valori predefiniti.
 
 ## Stranezze Android
 
-L'API per informazioni sul formato dei file multimediali accesso è limitato, quindi non tutti `MediaFileData` proprietà supportate.
+L'API per informazioni sul formato dei file multimediali accesso è limitato, quindi non tutti `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` proprietà supportate.
 
 ## iOS stranezze
 
-L'API per informazioni sul formato dei file multimediali accesso è limitato, quindi non tutti `MediaFileData` proprietà supportate.
+L'API per informazioni sul formato dei file multimediali accesso è limitato, quindi non tutti `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` proprietà supportate.

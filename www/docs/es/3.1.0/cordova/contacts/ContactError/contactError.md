@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` objeto se pasa a la `contactError` devolución de llamada cuando se produce un error.
+A `ContactError` objeto se pasa a la `<a href="../parameters/contactError.html">contactError</a>` devolución de llamada cuando se produce un error.
 
 ## Propiedades
 
@@ -38,4 +38,4 @@ A `ContactError` objeto se pasa a la `contactError` devolución de llamada cuand
 
 ## Descripción
 
-El `ContactError` objeto se devuelve al usuario a través de la `contactError` función de devolución de llamada cuando se produce un error.
+El `ContactError` objeto se devuelve al usuario a través de la `<a href="../parameters/contactError.html">contactError</a>` función de devolución de llamada cuando se produce un error.

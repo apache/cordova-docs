@@ -24,9 +24,9 @@ Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova
 
 Glej naslednje podrobnejše informacije značilne za platformo, ki velja za obe različici:
 
-*   Nadgradnja Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone orodja ukazne vrstice
+*   <a href="upgrading.html">Nadgradnja Windows Phone</a>
+*   <a href="plugin.html">Windows Phone Plugins</a>
+*   <a href="tools.html">Windows Phone orodja ukazne vrstice</a>
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 
@@ -107,7 +107,7 @@ Projektom dajejo ime, in izberite **OK**.
 
  [7]: img/guide/platforms/wp8/StandAloneTemplate.png
 
-## Pregled strukture projekta
+## <a href="../../overview/index.html">Pregled</a> strukture projekta
 
 Na `www` imenika funkcije `html` , `js` , in `css` podimenikov in drugih virov zahteva vaš app. Vse dodatne vsebine mora biti del projekta Visual Studio, in mora biti nastavljen kot vsebine.
 

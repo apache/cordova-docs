@@ -20,16 +20,16 @@ license: >
 
 # contactSuccess
 
-성공 콜백 함수를 제공 하는 `Contact` 배열에서 결과 `contacts.find` 작업.
+성공 콜백 함수를 제공 하는 `Contact` 배열에서 결과 `<a href="../contacts.find.html">contacts.find</a>` 작업.
 
     function(contacts) {
         // Do something
     }
     
 
-## 매개 변수
+## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
 
-*   **연락처**: 연락처 배열 찾기 작업에서 유래한. *(연락처)*
+*   **<a href="../contacts.html">연락처</a>**: <a href="../contacts.html">연락처</a> 배열 찾기 작업에서 유래한. *(<a href="../contacts.html">연락처</a>)*
 
 ## 예를 들어
 

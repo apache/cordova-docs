@@ -106,7 +106,7 @@ Getting Started with Android
     ![](img/guide/getting-started/android/manifest.png)
 
 
-4. Hello World の作成
+4. <a href="../webos/index.html">Hello World</a> の作成
 --------------
 
 - **index.html** という名前のファイルを **assets/www** ディレクトリに新規作成します。 以下のコードを貼り付けます:
@@ -118,7 +118,7 @@ Getting Started with Android
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         </head>
         <body>
-        <h1>Hello World</h1>
+        <h1><a href="../webos/index.html">Hello World</a></h1>
         </body>
         </html>
 

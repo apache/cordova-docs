@@ -47,19 +47,19 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen` (por defecto valor booleano, `true`): establecida en `false` para evitar que la pantalla de bienvenida descoloramiento entrar y salir cuando cambia su estado de presentación.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>` (por defecto valor booleano, `true`): establecida en `false` para evitar que la pantalla de bienvenida descoloramiento entrar y salir cuando cambia su estado de presentación.
     
-        <preference name="FadeSplashScreen" value="false"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>" value="false"/>
         
 
-*   `FadeSplashScreenDuration` (float, el valor predeterminado de `2`): especifica el número de segundos para que la pantalla de bienvenida se desvanecen efecto de ejecutar.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration` (float, el valor predeterminado de `2`): especifica el número de segundos para que la pantalla de bienvenida se desvanecen efecto de ejecutar.
     
-        <preference name="FadeSplashScreenDuration" value="4"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration" value="4"/>
         
 
-*   `ShowSplashScreenSpinner` (por defecto valor booleano, `true`): establecida en `false` para ocultar el hilandero de la pantalla.
+*   `Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner` (por defecto valor booleano, `true`): establecida en `false` para ocultar el hilandero de la pantalla.
     
-        <preference name="ShowSplashScreenSpinner" value="false"/>
+        <preference name="Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner" value="false"/>
         
 
 *   `KeyboardDisplayRequiresUserAction` (por defecto valor booleano, `true`): establecida en `false` para permitir que el teclado que aparece cuando se llama `focus()` en entradas del formulario.

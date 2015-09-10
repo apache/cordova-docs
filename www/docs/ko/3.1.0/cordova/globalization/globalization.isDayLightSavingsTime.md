@@ -27,11 +27,11 @@ license: >
 
 ## 설명
 
-나타냅니다 여부 일광 절약 시간 적용 하는 `successCallback` 와 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `dst` 속성을 `Boolean` 값. A `true` 값 나타냅니다 일광 절약 시간이 특정된 날짜에 대해 적용 되 고 `false` 하지 않음을 나타냅니다.
+나타냅니다 여부 일광 절약 시간 적용 하는 `successCallback` 와 `properties` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 있어야 해당 개체는 `dst` 속성을 `Boolean` 값. A `true` 값 나타냅니다 일광 절약 시간이 특정된 날짜에 대해 적용 되 고 `false` 하지 않음을 나타냅니다.
 
-인바운드 매개 변수는 `date` 형식 이어야 합니다`Date`.
+인바운드 매개 <a href="../../plugin_ref/spec.html">변수</a>는 `date` 형식 이어야 합니다`Date`.
 
-날짜 읽기 오류가 발생 하는 경우 다음 `errorCallback` 를 실행 합니다. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
+날짜 읽기 오류가 발생 하는 경우 다음 `errorCallback` 를 실행 합니다. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## 지원 되는 플랫폼
 
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

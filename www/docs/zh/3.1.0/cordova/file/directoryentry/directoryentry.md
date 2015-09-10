@@ -20,7 +20,7 @@ license: >
 
 # 枚舉指定工作組或
 
-此物件表示一個目錄在檔案系統上，如由[W3C 目錄和系統][1]規範定義的。
+此物件表示一個目錄在<a href="../fileobj/fileobj.html">檔</a>案系統上，如由[W3C 目錄和系統][1]規範定義的。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,19 +36,19 @@ license: >
 
 **注：**下面的屬性由 W3C 規範定義，但*不是*支援：
 
-*   **檔案系統**： 檔案系統的 `DirectoryEntry` 駐留。*（檔案系統）*
+*   **<a href="../fileobj/fileobj.html">檔</a>案系統**： <a href="../fileobj/fileobj.html">檔</a>案系統的 `DirectoryEntry` 駐留。*（<a href="../fileobj/fileobj.html">檔</a>案系統）*
 
 ## 方法
 
 下面的方法可以上調用 `DirectoryEntry` 物件：
 
-*   **getMetadata**: 查找一個目錄有關的中繼資料。
+*   **getMetadata**: 查找一個目錄有關的<a href="../metadata/metadata.html">中繼資料</a>。
 
-*   **setMetadata**： 在目錄上設置的中繼資料。
+*   **setMetadata**： 在目錄上設置的<a href="../metadata/metadata.html">中繼資料</a>。
 
-*   **moveTo**： 移動到不同的位置在檔案系統上的目錄。
+*   **moveTo**： 移動到不同的<a href="../../geolocation/Position/position.html">位置</a>在<a href="../fileobj/fileobj.html">檔</a>案系統上的目錄。
 
-*   **copyTo**： 將一個目錄複寫到檔案系統上的不同位置。
+*   **copyTo**： 將一個目錄複寫到<a href="../fileobj/fileobj.html">檔</a>案系統上的不同<a href="../../geolocation/Position/position.html">位置</a>。
 
 *   **toURL**： 返回來説明定位目錄的 URL。
 
@@ -56,11 +56,11 @@ license: >
 
 *   **getParent**: 查找父目錄。
 
-*   **createReader**: 創建一個新的 `DirectoryReader` ，可以從目錄中讀取條目。
+*   **createReader**: 創建一個新的 `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` ，可以從目錄中讀取條目。
 
 *   **getDirectory**: 創建或者查找一個目錄。
 
-*   **getFile**: 創建或查找檔。
+*   **getFile**: 創建或查找<a href="../fileobj/fileobj.html">檔</a>。
 
 *   **removeRecursively**： 刪除一個目錄和其所有內容。
 
@@ -74,30 +74,30 @@ license: >
 
 ## getMetadata
 
-查找有關目錄的中繼資料。
+查找有關目錄的<a href="../metadata/metadata.html">中繼資料</a>。
 
 **參數：**
 
 *   **successCallback**： 要與執行的回呼函數 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**: 一個回呼函數來執行如果檢索時出現錯誤 `Metadata` 。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 一個回呼函數來執行如果檢索時出現錯誤 `Metadata` 。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
-    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的中繼資料物件的此條目 entry.getMetadata （成功、 失敗） ；
+    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的<a href="../metadata/metadata.html">中繼資料</a>物件的此條目 entry.getMetadata （成功、 失敗） ；
     
 
 ## setMetadata
 
-設置目錄的擴展的屬性或中繼資料。*目前僅適用于 iOS。*
+設置目錄的擴展的屬性或<a href="../metadata/metadata.html">中繼資料</a>。*目前僅適用于 iOS。*
 
 **參數：**
 
-*   **successCallback**： 在成功地設置該中繼資料時執行回檔。*（函數）*
+*   **successCallback**： 在成功地設置該<a href="../metadata/metadata.html">中繼資料</a>時執行回<a href="../fileobj/fileobj.html">檔</a>。*（函數）*
 
-*   **errorCallback**: 執行中繼資料失敗要設置時的回檔。*（函數）*
+*   **errorCallback**: 執行<a href="../metadata/metadata.html">中繼資料</a>失敗要設置時的回<a href="../fileobj/fileobj.html">檔</a>。*（函數）*
 
-*   **metadataObject**： 包含中繼資料的鍵和值的物件。*（物件）*
+*   **metadataObject**： 包含<a href="../metadata/metadata.html">中繼資料</a>的鍵和值的物件。*（物件）*
 
 **快速的示例**
 
@@ -145,7 +145,7 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
     }
     
         setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
@@ -153,13 +153,13 @@ license: >
 
 ## moveTo
 
-移動到不同的位置在檔案系統上的目錄。如果應用程式嘗試向會導致錯誤：
+移動到不同的<a href="../../geolocation/Position/position.html">位置</a>在<a href="../fileobj/fileobj.html">檔</a>案系統上的目錄。如果應用程式嘗試向會導致錯誤：
 
 *   在任何深度移動一個目錄裡面本身或任何兒童。
 
 *   如果不提供不同從其目前的目錄的名稱，則將一個目錄移到其父。
 
-*   將一個目錄移到被佔領的一個檔的路徑。
+*   將一個目錄移到被佔領的一個<a href="../fileobj/fileobj.html">檔</a>的路徑。
 
 *   將一個目錄移到被佔領的一個不是空的目錄的路徑。
 
@@ -171,9 +171,9 @@ license: >
 
 *   **newName**： 目錄的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
+*   **successCallback**： 與執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**: 如果移動該目錄時，會出現一個錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果移動該目錄時，會出現一個錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
@@ -198,7 +198,7 @@ license: >
 
 ## copyTo
 
-將一個目錄複寫到檔案系統上的不同位置。如果應用程式嘗試向會導致錯誤：
+將一個目錄複寫到<a href="../fileobj/fileobj.html">檔</a>案系統上的不同<a href="../../geolocation/Position/position.html">位置</a>。如果應用程式嘗試向會導致錯誤：
 
 *   複製一個目錄裡面本身在任何深度。
 
@@ -212,9 +212,9 @@ license: >
 
 *   **newName**： 目錄的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
+*   **successCallback**： 與執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**： 如果試圖複製基礎目錄時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖複製基礎目錄時發生錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
@@ -254,13 +254,13 @@ license: >
 
 *   刪除一個目錄，不是空的。
 
-*   刪除根目錄下的一個檔案系統。
+*   刪除根目錄下的一個<a href="../fileobj/fileobj.html">檔</a>案系統。
 
 **參數：**
 
-*   **successCallback**： 在刪除該目錄後執行的回檔。不帶參數調用。*（函數）*
+*   **successCallback**： 在刪除該目錄後執行的回<a href="../fileobj/fileobj.html">檔</a>。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果要刪除的目錄時，會出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果要刪除的目錄時，會出現錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
@@ -273,9 +273,9 @@ license: >
 
 **參數：**
 
-*   **successCallback**： 一個通過目錄的父目錄的回檔 `DirectoryEntry` 。*（函數）*
+*   **successCallback**： 一個通過目錄的父目錄的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 。 調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -293,7 +293,7 @@ license: >
 
 ## createReader
 
-創建新的 DirectoryReader 來讀取目錄中的條目。
+創建新的 <a href="../directoryreader/directoryreader.html">DirectoryReader</a> 來讀取目錄中的條目。
 
 **快速的示例**
 
@@ -311,11 +311,11 @@ license: >
 
 *   **路徑**： 要查找或創建的目錄的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
-*   **選項**： 選項，以指定是否要如果它不存在，則創建該目錄。*（標誌）*
+*   **選項**： 選項，以指定是否要如果它不存在，則創建該目錄。*（<a href="../flags/flags.html">標誌</a>）*
 
-*   **successCallback**： 回檔的執行的 `DirectoryEntry` 物件。*（函數）*
+*   **successCallback**： 回<a href="../fileobj/fileobj.html">檔</a>的執行的 `DirectoryEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果發生錯誤時創建或查找目錄執行的回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果發生錯誤時創建或查找目錄執行的回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
@@ -324,36 +324,36 @@ license: >
 
 ## getFile
 
-創建或查找檔。如果應用程式嘗試向會導致錯誤：
+創建或查找<a href="../fileobj/fileobj.html">檔</a>。如果應用程式嘗試向會導致錯誤：
 
-*   創建一個其直接父尚不存在的檔。
+*   創建一個其直接父尚不存在的<a href="../fileobj/fileobj.html">檔</a>。
 
 **參數：**
 
-*   **路徑**： 要查找或創建的檔的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
+*   **路徑**： 要查找或創建的<a href="../fileobj/fileobj.html">檔</a>的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
-*   **選項**： 選項，以指定是否是否它不存在，則創建該檔。*（標誌）*
+*   **選項**： 選項，以指定是否是否它不存在，則創建該<a href="../fileobj/fileobj.html">檔</a>。*（<a href="../flags/flags.html">標誌</a>）*
 
-*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `<a href="../fileentry/fileentry.html">FileEntry</a>` 物件。*（函數）*
 
-*   **errorCallback**: 如果在創建或查找檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果在創建或查找<a href="../fileobj/fileobj.html">檔</a>時出現錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
-    函數 success(fileEntry) {console.log ("檔的名稱："+ fileEntry.name);}函數 fail(error) {警報 ("未能檢索檔："+ error.code);}/ / 檢索現有的檔，或創建它，如果它不存在 entry.getFile ("newFile.txt"，{創建： true，獨家: false}，成功，失敗） ；
+    函數 success(fileEntry) {console.log ("<a href="../fileobj/fileobj.html">檔</a>的名稱："+ fileEntry.name);}函數 fail(error) {警報 ("未能檢索<a href="../fileobj/fileobj.html">檔</a>："+ error.code);}/ / 檢索現有的<a href="../fileobj/fileobj.html">檔</a>，或創建它，如果它不存在 entry.getFile ("newFile.txt"，{創建： true，獨家: false}，成功，失敗） ；
     
 
 ## removeRecursively
 
-刪除一個目錄和其所有內容。 如果發生錯誤 （例如試圖刪除包含一個不能被刪除的檔的目錄），可能會刪除一些目錄的內容。 如果應用程式嘗試向會導致錯誤：
+刪除一個目錄和其所有內容。 如果發生錯誤 （例如試圖刪除包含一個不能被刪除的<a href="../fileobj/fileobj.html">檔</a>的目錄），可能會刪除一些目錄的內容。 如果應用程式嘗試向會導致錯誤：
 
-*   刪除根目錄下的一個檔案系統。
+*   刪除根目錄下的一個<a href="../fileobj/fileobj.html">檔</a>案系統。
 
 **參數：**
 
-*   **successCallback**： 後執行的回檔 `DirectoryEntry` 已被刪除。不帶參數調用。*（函數）*
+*   **successCallback**： 後執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 已被刪除。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果試圖刪除時發生錯誤執行的回檔 `DirectoryEntry` 。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖刪除時發生錯誤執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 
@@ -377,6 +377,6 @@ license: >
 
 > 解決方案： 確保手動，或由前重新安裝應用程式的臨時目錄，清潔。
 
-*   如果該設備通過 USB 連接。
+*   如果該<a href="../../device/device.html">設備</a>通過 USB <a href="../../connection/connection.html">連接</a>。
 
-> 解決方案： 從設備拔下 USB 電纜，然後再次運行。
+> 解決方案： 從<a href="../../device/device.html">設備</a>拔下 USB 電纜，然後再次運行。

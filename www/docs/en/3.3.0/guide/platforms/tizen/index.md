@@ -29,7 +29,7 @@ The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
 or Windows XP SP3/7 (32-bit).
 
 Developers should use the `cordova` utility in conjunction with
-the Tizen SDK.  See The Command-Line Interface for information
+the Tizen SDK.  See <a href="../../cli/index.html">The Command-Line Interface</a> for information
 how to install it, add projects, then build and deploy a project.
 
 ## Install the SDK
@@ -46,7 +46,7 @@ Download the Tizen SDK from
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
-    - Select  __File &rarr; New &rarr; Tizen Web Project__
+    - Select  __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
@@ -65,7 +65,7 @@ Download the Tizen SDK from
 
 1. Launch the Tizen Eclipse IDE.
 
-2. Select __File &rarr; Import &rarr; Tizen Web Project__:
+2. Select __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; Import &rarr; Tizen Web Project__:
 
    ![](img/guide/platforms/tizen/import_project.png)
 
@@ -99,13 +99,13 @@ __Run As &rarr; Tizen Web Simulator Application__:
 
 ![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
-## Deploy to Device
+## Deploy to <a href="../../../cordova/device/device.html">Device</a>
 
 * Make sure that the target device is properly launched, connected and
   configured. Its __Date and Time__ settings must be set correctly.
 
-* Use the __Connection Explorer__ view to select the application
-  deployment target: __Window &rarr; Show View &rarr; Connection
+* Use the __<a href="../../../cordova/connection/connection.html">Connection</a> Explorer__ view to select the application
+  deployment target: __Window &rarr; Show View &rarr; <a href="../../../cordova/connection/connection.html">Connection</a>
   Explorer__.
 
   ![](img/guide/platforms/tizen/connection_explorer.png)

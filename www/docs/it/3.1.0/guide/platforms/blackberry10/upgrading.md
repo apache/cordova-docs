@@ -20,7 +20,7 @@ license: >
 
 # L'aggiornamento di BlackBerry
 
-Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI.
 
 ## Aggiornamento a 3.1.0 da 3.0.0
 
@@ -371,11 +371,11 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
@@ -396,11 +396,11 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
         
 
 *   Per aggiornare a 1.8.0, si prega di andare da 1.7.0
@@ -423,11 +423,11 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
@@ -448,8 +448,8 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >

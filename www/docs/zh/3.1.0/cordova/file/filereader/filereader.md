@@ -20,15 +20,15 @@ license: >
 
 # FileReader
 
-`FileReader`允許基本檔的存取權限。
+`FileReader`允許基本<a href="../fileobj/fileobj.html">檔</a>的存取權限。
 
 ## 屬性
 
 *   **readyState**： 一個讀者的三個可能的狀態，要麼 `EMPTY` ， `LOADING` 或`DONE`.
 
-*   **結果**： 已讀取檔的內容。*() DOMString*
+*   **結果**： 已讀取<a href="../fileobj/fileobj.html">檔</a>的內容。*() DOMString*
 
-*   **錯誤**： 包含錯誤的物件。*() FileError*
+*   **錯誤**： 包含錯誤的物件。*() <a href="../fileerror/fileerror.html">FileError</a>*
 
 *   **onloadstart**: 讀取啟動時調用。*（函數）*
 
@@ -42,23 +42,23 @@ license: >
 
 **注：**以下產權不受支援：
 
-*   **onprogress**: 讀取該檔，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
+*   **onprogress**: 讀取該<a href="../fileobj/fileobj.html">檔</a>，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
 
 ## 方法
 
-*   **中止**: 中止讀取檔。
+*   **中止**: 中止讀取<a href="../fileobj/fileobj.html">檔</a>。
 
-*   **readAsDataURL**: 讀取檔並返回資料作為 base64 編碼的資料的 URL。
+*   **readAsDataURL**: 讀取<a href="../fileobj/fileobj.html">檔</a>並返回資料作為 base64 編碼的資料的 URL。
 
-*   **readAsText**： 檔中讀取文本。
+*   **readAsText**： <a href="../fileobj/fileobj.html">檔</a>中讀取文本。
 
-*   **readAsBinaryString**: 讀取檔為二進位檔案，並返回一個二進位字串。
+*   **readAsBinaryString**: 讀取<a href="../fileobj/fileobj.html">檔</a>為二進位<a href="../fileobj/fileobj.html">檔</a>案，並返回一個二進位字串。
 
-*   **readAsArrayBuffer**: 讀取檔作為`ArrayBuffer`.
+*   **readAsArrayBuffer**: 讀取<a href="../fileobj/fileobj.html">檔</a>作為`ArrayBuffer`.
 
 ## 詳細資訊
 
-`FileReader`物件提供的方法來從該設備的檔案系統中讀取檔。 可以讀取檔，作為文本或 base64 編碼的資料的字串。 事件攔截器接收 `loadstart` ， `progress` ， `load` ， `loadend` ， `error` ，和 `abort` 的事件。
+`FileReader`物件提供的方法來從該<a href="../../device/device.html">設備</a>的<a href="../fileobj/fileobj.html">檔</a>案系統中讀取<a href="../fileobj/fileobj.html">檔</a>。 可以讀取<a href="../fileobj/fileobj.html">檔</a>，作為文本或 base64 編碼的資料的字串。 <a href="../../events/events.html">事件</a>攔截器接收 `loadstart` ， `progress` ， `load` ， `loadend` ， `error` ，和 `abort` 的<a href="../../events/events.html">事件</a>。
 
 ## 支援的平臺
 
@@ -72,7 +72,7 @@ license: >
 
 **參數：**
 
-*   **檔**： 要讀取的檔物件。
+*   **<a href="../fileobj/fileobj.html">檔</a>**： 要讀取的<a href="../fileobj/fileobj.html">檔</a>物件。
 
 ## 快速的示例
 
@@ -96,9 +96,9 @@ license: >
 
 **參數：**
 
-*   **檔**： 要讀取的檔物件。
+*   **<a href="../fileobj/fileobj.html">檔</a>**： 要讀取的<a href="../fileobj/fileobj.html">檔</a>物件。
 
-*   **編碼**： 使用編碼的檔內容的編碼。預設值為 UTF8。
+*   **編碼**： 使用編碼的<a href="../fileobj/fileobj.html">檔</a>內容的編碼。預設值為 UTF8。
 
 ## 快速的示例
 
@@ -142,26 +142,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.getFile("readme.txt", null, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
+        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
             fileEntry.file(gotFile, fail);
         }
     
@@ -195,7 +195,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Read File</p>
       </body>
     </html>
@@ -211,7 +211,7 @@ license: >
 
 **參數：**
 
-*   **檔**： 要讀取的檔物件。
+*   **<a href="../fileobj/fileobj.html">檔</a>**： 要讀取的<a href="../fileobj/fileobj.html">檔</a>物件。
 
 ## 快速的示例
 
@@ -237,7 +237,7 @@ license: >
 
 **參數：**
 
-*   **檔**： 要讀取的檔物件。
+*   **<a href="../fileobj/fileobj.html">檔</a>**： 要讀取的<a href="../fileobj/fileobj.html">檔</a>物件。
 
 ## 快速的示例
 

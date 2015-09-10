@@ -20,9 +20,9 @@ license: >
 
 # Speicher
 
-> Eine Übersicht über Storage-Optionen für Cordova.
+> Eine <a href="../../guide/overview/index.html">Übersicht</a> über Storage-Optionen für Cordova.
 
-Mehrere Speicher-APIs sind für Cordova-Anwendungen verfügbar. Finden Sie unter [html5rocks][1]. eine vollständigere Übersicht und Beispiele.
+Mehrere Speicher-APIs sind für Cordova-Anwendungen verfügbar. Finden Sie unter [html5rocks][1]. eine vollständigere <a href="../../guide/overview/index.html">Übersicht</a> und Beispiele.
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -32,11 +32,11 @@ Auch bekannt als *web-Speicher*, *einfache Lagerung*, oder durch seine Alternati
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 Quirk**: Dot Notation ist *nicht* möglich, so sicher sein, verwenden Sie `setItem` oder `getItem` eher als Zugriffstasten direkt aus dem Speicherobjekt, wie in`window.localStorage.someKey`.
+**Windows Phone 7 Quirk**: Dot Notation ist *nicht* möglich, so sicher sein, verwenden Sie `setItem` oder `getItem` eher als Zugriffstasten direkt aus dem Speicherobjekt, wie in`window.<a href="localstorage/localstorage.html">localStorage</a>.someKey`.
 
 ## WebSQL
 
-Diese API ist verfügbar in den zugrunde liegenden WebView. Der [Web SQL Database-Spezifikation][3] bietet Zugriff auf weitere vollwertige Datenbanktabellen über SQL-Abfragen.
+Diese API ist verfügbar in den zugrunde liegenden WebView. Der [Web SQL Database-Spezifikation][3] bietet Zugriff auf weitere vollwertige <a href="database/database.html">Datenbank</a>tabellen über SQL-Abfragen.
 
  [3]: http://dev.w3.org/html5/webdatabase/
 

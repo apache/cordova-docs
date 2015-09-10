@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-FileWriter
+<a href="../fileobj/fileobj.html">File</a>Writer
 ==========
 
-FileWriter is an object that allows one to write a file.
+<a href="../fileobj/fileobj.html">File</a>Writer is an object that allows one to write a file.
 
 Properties
 ----------
@@ -30,7 +30,7 @@ Properties
 - __fileName:__ The name of the file to be written. _(DOMString)_
 - __length:__ The length of the file to be written. _(long)_
 - __position:__ The current position of the file pointer. _(long)_
-- __error:__ An object containing errors. _(FileError)_
+- __error:__ An object containing errors. _(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)_
 - __onwritestart:__ Called when the write starts. . _(Function)_
 - __onprogress:__ Called while writing the file, reports progress (progress.loaded/progress.total). _(Function)_ -NOT SUPPORTED
 - __onwrite:__ Called when the request has completed successfully.  _(Function)_
@@ -49,9 +49,9 @@ Methods
 Details
 -------
 
-The `FileWriter` object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
+The `<a href="../fileobj/fileobj.html">File</a>Writer` object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
 
-A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
+A <a href="../fileobj/fileobj.html">File</a>Writer is created for a single file. You can use it to write to a file multiple times. The <a href="../fileobj/fileobj.html">File</a>Writer maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the <a href="../fileobj/fileobj.html">File</a>Writer writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the <a href="../fileobj/fileobj.html">File</a>Writer's constructor to begin writing to the end of the file.
 
 Supported Platforms
 -------------------
@@ -62,7 +62,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Seek Quick Example
+Seek Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------------------------
 
 	function win(writer) {
@@ -76,7 +76,7 @@ Seek Quick Example
 	
     entry.createWriter(win, fail);
 
-Truncate Quick Example
+Truncate Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 --------------------------
 
 	function win(writer) {
@@ -89,7 +89,7 @@ Truncate Quick Example
 	
     entry.createWriter(win, fail);
 
-Write Quick Example
+Write Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------------	
 
 	function win(writer) {
@@ -105,7 +105,7 @@ Write Quick Example
 	
     entry.createWriter(win, fail);
 
-Append Quick Example
+Append Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 --------------------	
 
 	function win(writer) {
@@ -122,7 +122,7 @@ Append Quick Example
 	
     entry.createWriter(win, fail);
 	
-Abort Quick Example
+Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------------
 
 	function win(writer) {
@@ -139,35 +139,35 @@ Abort Quick Example
 	
     entry.createWriter(win, fail);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a>Writer <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
     
         // Cordova is ready
         //
-        function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
-            fileEntry.createWriter(gotFileWriter, fail);
+        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
+            fileEntry.createWriter(got<a href="../fileobj/fileobj.html">File</a>Writer, fail);
         }
     
-        function gotFileWriter(writer) {
+        function got<a href="../fileobj/fileobj.html">File</a>Writer(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
                 writer.truncate(11);  
@@ -190,7 +190,7 @@ Full Example
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Write File</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Write <a href="../fileobj/fileobj.html">File</a></p>
       </body>
     </html>

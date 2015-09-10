@@ -20,28 +20,28 @@ license: >
 
 # CameraPopoverHandle
 
-Agit sur la boîte de dialogue créée par `camera.getPicture`.
+Agit sur la boîte de dialogue créée par `<a href="../camera.getPicture.html">camera.getPicture</a>`.
 
 ## Méthodes
 
-*   **setPosition**: Définit la position de la boite de dialogue.
+*   **set<a href="../../geolocation/Position/position.html">Position</a>**: Définit la position de la boite de dialogue.
 
 ## Plates-formes suportées
 
 *   iOS
 
-## setPosition
+## set<a href="../../geolocation/Position/position.html">Position</a>
 
 Définit la position de la boite de dialogue.
 
 **Paramètres :**
 
-*   `cameraPopoverOptions`: l'objet `CameraPopoverOptions` spécifiant la nouvelle position
+*   `cameraPopoverOptions`: l'objet `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` spécifiant la nouvelle position
 
 ## Exemple court
 
-     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
-     cameraPopoverHandle.setPosition(cameraPopoverOptions);
+     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
     
 
 ## Exemple complet
@@ -54,12 +54,12 @@ Définit la position de la boite de dialogue.
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
-         cameraPopoverHandle.setPosition(cameraPopoverOptions);
+         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
+         cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
      }

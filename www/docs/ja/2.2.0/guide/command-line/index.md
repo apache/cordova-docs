@@ -103,7 +103,7 @@ PATH に、 Android SDK の `tools` 及び `platform-tools` フォルダーが
 
     $ /path/to/my_new_cordova_project/cordova/emulate.bat
 
-少なくとも一つの Android Virtual Device が作成済みであることを確認して下さい。もしない場合は、 `android` コマンドを使用して作成してください。
+少なくとも一つの Android Virtual <a href="../../cordova/device/device.html">Device</a> が作成済みであることを確認して下さい。もしない場合は、 `android` コマンドを使用して作成してください。
 もし複数の AVD がある場合には、コマンド実行後に AVD を選択してください。
 
 ### ログ

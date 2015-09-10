@@ -20,7 +20,7 @@ license: >
 
 # Amazon ogenj OS Plugins
 
-Sledite navodilom v priročniku Android Plugins za pregled razvoja meri plugins.
+Sledite navodilom v priročniku <a href="../android/plugin.html">Android Plugins</a> za pregled razvoja meri plugins.
 
 ## ECHO Amazon ogenj OS Plugin primer
 

@@ -20,18 +20,18 @@ license: >
 
 # media.seekTo
 
-오디오 파일 내의 현재 위치를 설정합니다.
+오디오 <a href="../file/fileobj/fileobj.html">파일</a> 내의 현재 <a href="../geolocation/Position/position.html">위치</a>를 설정합니다.
 
     media.seekTo(milliseconds);
     
 
-## 매개 변수
+## 매개 <a href="../../plugin_ref/spec.html">변수</a>
 
-*   **밀리초**: 밀리초에서는 오디오에서 재생 위치를 설정 하는 위치.
+*   **밀리초**: 밀리초에서는 오디오에서 재생 <a href="../geolocation/Position/position.html">위치</a>를 설정 하는 <a href="../geolocation/Position/position.html">위치</a>.
 
 ## 설명
 
-`media.seekTo`에서 참조 하는 오디오 파일 내에서 현재 재생 위치를 업데이트를 비동기적으로 실행 한 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 변수.
+`media.seekTo`에서 참조 하는 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 내에서 현재 재생 <a href="../geolocation/Position/position.html">위치</a>를 업데이트를 비동기적으로 실행 한 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 <a href="../../plugin_ref/spec.html">변수</a>.
 
 ## 지원 되는 플랫폼
 
@@ -47,7 +47,7 @@ license: >
     // Audio player
     //
     var my_media = new Media(src, onSuccess, onError);
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
         my_media.seekTo(10000);
@@ -60,14 +60,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -87,12 +87,12 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_media.getCurrentPosition(
+                    my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                         // success callback
                         function(position) {
                             if (position > -1) {
@@ -116,7 +116,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -153,4 +153,4 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-*   블랙베리 OS 5 장치에서 지원 되지 않습니다.
+*   블랙베리 OS 5 <a href="../device/device.html">장치</a>에서 지원 되지 않습니다.

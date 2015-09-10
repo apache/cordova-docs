@@ -20,15 +20,15 @@ license: >
 
 # FileReader
 
-`FileReader`基本ファイルへのアクセスを許可します。
+`FileReader`基本<a href="../fileobj/fileobj.html">ファイル</a>へのアクセスを許可します。
 
 ## プロパティ
 
 *   **readyState**: リーダーの 1 つの 3 つの可能な状態は、どちらか `EMPTY` 、 `LOADING` または`DONE`.
 
-*   **結果**: 読み込まれているファイルの内容。*（，）*
+*   **結果**: 読み込まれている<a href="../fileobj/fileobj.html">ファイル</a>の内容。*（，）*
 
-*   **エラー**: エラーを格納するオブジェクト。*(FileError)*
+*   **エラー**: エラーを格納するオブジェクト。*(<a href="../fileerror/fileerror.html">FileError</a>)*
 
 *   **onloadstart**： 読み取りの起動時に呼び出されます。*(機能)*
 
@@ -42,23 +42,23 @@ license: >
 
 **注：**次の porperty はサポートされていません。
 
-*   **onprogress**: の進行状況をレポート ファイルの読み取り中と呼ばれる `progress.loaded` / `progress.total` 。*(機能)*
+*   **onprogress**: の進行状況をレポート <a href="../fileobj/fileobj.html">ファイル</a>の読み取り中と呼ばれる `progress.loaded` / `progress.total` 。*(機能)*
 
 ## メソッド
 
-*   **中止**: ファイルの読み込みを中止します。
+*   **中止**: <a href="../fileobj/fileobj.html">ファイル</a>の読み込みを中止します。
 
-*   **readAsDataURL**: ファイルやデータの base64 でエンコードされた URL として戻り値のデータを読み取る。
+*   **readAsDataURL**: <a href="../fileobj/fileobj.html">ファイル</a>やデータの base64 でエンコードされた URL として戻り値のデータを読み取る。
 
-*   **readAsText**: テキスト ファイルを読み取ります。
+*   **readAsText**: テキスト <a href="../fileobj/fileobj.html">ファイル</a>を読み取ります。
 
-*   **readAsBinaryString**: バイナリ ファイルを読み取り、バイナリ文字列を返します。
+*   **readAsBinaryString**: バイナリ <a href="../fileobj/fileobj.html">ファイル</a>を読み取り、バイナリ文字列を返します。
 
-*   **readAsArrayBuffer**： 読み取りファイルとして、`ArrayBuffer`.
+*   **readAsArrayBuffer**： 読み取り<a href="../fileobj/fileobj.html">ファイル</a>として、`ArrayBuffer`.
 
 ## 詳細
 
-`FileReader`オブジェクトは、デバイスのファイル システムからファイルを読み取る方法を提供します。 ファイルは、テキストまたは base64 データ エンコード文字列として読むことができます。 イベント リスナーは、受信、 `loadstart` 、 `progress` 、 `load` 、 `loadend` 、 `error` 、および `abort` イベント。
+`FileReader`オブジェクトは、<a href="../../device/device.html">デバイス</a>の<a href="../fileobj/fileobj.html">ファイル</a> システムから<a href="../fileobj/fileobj.html">ファイル</a>を読み取る方法を提供します。 <a href="../fileobj/fileobj.html">ファイル</a>は、テキストまたは base64 データ エンコード文字列として読むことができます。 <a href="../../events/events.html">イベント</a> リスナーは、受信、 `loadstart` 、 `progress` 、 `load` 、 `loadend` 、 `error` 、および `abort` <a href="../../events/events.html">イベント</a>。
 
 ## サポートされているプラットフォーム
 
@@ -72,7 +72,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **<a href="../fileobj/fileobj.html">ファイル</a>**: <a href="../fileobj/fileobj.html">ファイル</a> オブジェクトを読みます。
 
 ## 簡単な例
 
@@ -96,9 +96,9 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **<a href="../fileobj/fileobj.html">ファイル</a>**: <a href="../fileobj/fileobj.html">ファイル</a> オブジェクトを読みます。
 
-*   **エンコーディング**： ファイルのコンテンツのエンコードに使用するエンコーディングします。既定は UTF8 です。
+*   **エンコーディング**： <a href="../fileobj/fileobj.html">ファイル</a>のコンテンツのエンコードに使用するエンコーディングします。既定は UTF8 です。
 
 ## 簡単な例
 
@@ -142,26 +142,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.getFile("readme.txt", null, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
+        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
             fileEntry.file(gotFile, fail);
         }
     
@@ -195,7 +195,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Read File</p>
       </body>
     </html>
@@ -211,7 +211,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **<a href="../fileobj/fileobj.html">ファイル</a>**: <a href="../fileobj/fileobj.html">ファイル</a> オブジェクトを読みます。
 
 ## 簡単な例
 
@@ -237,7 +237,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **<a href="../fileobj/fileobj.html">ファイル</a>**: <a href="../fileobj/fileobj.html">ファイル</a> オブジェクトを読みます。
 
 ## 簡単な例
 

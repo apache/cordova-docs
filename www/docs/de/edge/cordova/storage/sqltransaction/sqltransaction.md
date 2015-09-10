@@ -20,7 +20,7 @@ license: >
 
 # SQLTransaction
 
-Ermöglicht die Ausführung von SQL-Anweisungen für die Datenbank.
+Ermöglicht die Ausführung von SQL-Anweisungen für die <a href="../database/database.html">Datenbank</a>.
 
 ## Methoden
 
@@ -30,7 +30,7 @@ Ermöglicht die Ausführung von SQL-Anweisungen für die Datenbank.
 
 Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTransaction` Objekt, das die angegebene Callback-Methode.
 
-## Unterstützte Plattformen
+## <a href="../../../config_ref/images.html">Unterstützte Plattformen</a>
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 und höher)
@@ -54,7 +54,7 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

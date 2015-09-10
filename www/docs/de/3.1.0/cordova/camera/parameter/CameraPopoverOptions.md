@@ -40,7 +40,7 @@ nur iOS-Parametern, die Anker-Element Lage und Pfeil Richtung der Popover angebe
             Camera.PopoverArrowDirection = {ARROW_UP: 1, / / entspricht iOS UIPopoverArrowDirection Konstanten ARROW_DOWN: 2, ARROW_LEFT: 4, ARROW_RIGHT: 8, ARROW_ANY: 15};
         
 
-Beachten Sie, dass die Größe der Popover ändern kann, um die Richtung des Pfeils und Ausrichtung des Bildschirms anzupassen. Achten Sie darauf, um Orientierung zu berücksichtigen, wenn Sie den Anker-Element-Speicherort angeben.
+Beachten Sie, dass die Größe der Popover ändern kann, um die Richtung des Pfeils und Ausrichtung des Bildschirms anzupassen. Achten Sie darauf, um Orientierung zu berücksichtigen, wenn Sie den Anker-Element-<a href="../../storage/storage.html">Speicher</a>ort angeben.
 
 ## Kleines Beispiel
 
@@ -52,7 +52,7 @@ Beachten Sie, dass die Größe der Popover ändern kann, um die Richtung des Pfe
          popoverOptions  : popover
      };
     
-     navigator.camera.getPicture(onSuccess, onFail, options);
+     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
     
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

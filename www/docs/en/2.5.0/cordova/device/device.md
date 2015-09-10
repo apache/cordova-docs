@@ -26,12 +26,12 @@ Device
 Properties
 ----------
 
-- device.name
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
-- device.model
+- <a href="device.name.html">device.name</a>
+- <a href="device.cordova.html">device.cordova</a>
+- <a href="device.platform.html">device.platform</a>
+- <a href="device.uuid.html">device.uuid</a>
+- <a href="device.version.html">device.version</a>
+- <a href="device.model.html">device.model</a>
 
 Variable Scope
 --------------
@@ -39,8 +39,8 @@ Variable Scope
 Since `device` is assigned to the `window` object, it is implicitly in the global scope.
 
     // These reference the same `device`
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneName = window.<a href="device.name.html">device.name</a>;
+    var phoneName = <a href="device.name.html">device.name</a>;
 
 Permissions
 -----------

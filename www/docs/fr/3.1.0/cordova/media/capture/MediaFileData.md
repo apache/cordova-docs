@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# MediaFileData
+# <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 > Encapsule des informations sur le format d'un fichier multimédia.
 
@@ -36,7 +36,7 @@ license: >
 
 ## BlackBerry WebWorks Quirks
 
-Aucune API ne fournit des informations sur le format des fichiers multimédias, donc le `MediaFileData` objet retourné par `MediaFile.getFormatData` comporte les valeurs par défaut suivantes :
+Aucune API ne fournit des informations sur le format des fichiers multimédias, donc le `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` objet retourné par `<a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>` comporte les valeurs par défaut suivantes :
 
 *   **codecs**: pas pris en charge et retourne`null`.
 
@@ -50,7 +50,7 @@ Aucune API ne fournit des informations sur le format des fichiers multimédias, 
 
 ## Quirks Android
 
-Prend en charge ce qui suit `MediaFileData` Propriétés :
+Prend en charge ce qui suit `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` Propriétés :
 
 *   **codecs**: pas pris en charge et retourne`null`.
 
@@ -64,7 +64,7 @@ Prend en charge ce qui suit `MediaFileData` Propriétés :
 
 ## iOS Quirks
 
-Prend en charge ce qui suit `MediaFileData` Propriétés :
+Prend en charge ce qui suit `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` Propriétés :
 
 *   **codecs**: pas pris en charge et retourne`null`.
 

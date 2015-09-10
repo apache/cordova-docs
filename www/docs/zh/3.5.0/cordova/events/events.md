@@ -24,16 +24,16 @@ license: >
 
 ## 事件種類
 
-*   deviceready
-*   暫停
-*   簡歷
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   <a href="events.deviceready.html">deviceready</a>
+*   <a href="events.pause.html">暫停</a>
+*   <a href="events.resume.html">簡歷</a>
+*   <a href="events.backbutton.html">backbutton</a>
+*   <a href="events.menubutton.html">menubutton</a>
+*   <a href="events.searchbutton.html">searchbutton</a>
+*   <a href="events.startcallbutton.html">startcallbutton</a>
+*   <a href="events.endcallbutton.html">endcallbutton</a>
+*   <a href="events.volumedownbutton.html">volumedownbutton</a>
+*   <a href="events.volumeupbutton.html">volumeupbutton</a>
 
 ## 由[org.apache.cordova.battery 狀態][1]添加事件
 

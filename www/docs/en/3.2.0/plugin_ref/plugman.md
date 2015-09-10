@@ -23,13 +23,13 @@ license: >
 From version 3.0 onward, Cordova implements all device APIs as
 plugins, and leaves them disabled by default. It also supports two
 different ways to add and remove plugins. The first is by using the
-`cordova` CLI described in The Command-Line Interface. The second is
+`cordova` CLI described in <a href="../guide/cli/index.html">The Command-Line Interface</a>. The second is
 by using a lower-level
 [Plugman](https://github.com/apache/cordova-plugman/)
 command-line interface ("Native platform dev" workflow.) The main difference between these two development
 paths is that Plugman can only add plugins to one platform at a time, whereas the CLI will add plugins
 to all of the platforms that you are targeting.  Because of this, it makes more sense to use Plugman when
-you are working closely with a single platform, hence the "Native Platform Dev" name of the workflow. 
+you are working <a href="../cordova/inappbrowser/inappbrowser.html">close</a>ly with a single platform, hence the "Native Platform Dev" name of the workflow. 
 
 For more information on Plugman, especially if you are interested in consuming Plugman as a node module 
 or hacking on the Plugman code, see [the README file in its repository](https://github.com/apache/cordova-plugman/blob/master/README.md).
@@ -56,7 +56,7 @@ The rest of this guide assumes you have installed Plugman globally, meaning you 
 
 Before you can use Plugman, you must create a Cordova project.  You can do this with either the Command-line Interface or with
 the lower level shell scripts. Instructions for using the shell scripts to create your project are located in the various "Command-line Tools" guides
-listed on the Platform Guides page. 
+listed on the <a href="../guide/platforms/index.html">Platform Guides</a> page. 
 
 ## Adding a Plugin
 
@@ -91,7 +91,7 @@ a list of all available Plugman commands and their syntax:
     plugman -help
     plugman  # same as above
 
-   **NOTE**: `plugman -help` may show some additional registry-related commands. These commands are for plugin developers and may not be implemented on third-party plugin registries.
+   **NOTE**: `plugman -help` may <a href="../cordova/inappbrowser/inappbrowser.html">show</a> some additional registry-related commands. These commands are for plugin developers and may not be implemented on third-party plugin registries.
 
 
 You can also append the `--debug|-d` flag to any Plugman command to run that command in verbose mode, which will display
@@ -133,7 +133,7 @@ This will contact the plugin registry and fetch information such as the plugin's
 
 ## Installing Core Plugins
 
-The examples below show how to add plugins as needed so that any
+The examples below <a href="../cordova/inappbrowser/inappbrowser.html">show</a> how to add plugins as needed so that any
 Cordova APIs you use in your project still work after you upgrade to
 version 3.0.  For each command, you need to select the target
 platform, and reference the platform's project directory.

@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-ContactAddress
+<a href="../Contact/contact.html">Contact</a>Address
 ==============
 
-`Contact` オブジェクトの住所プロパティーを表します。
+`<a href="../Contact/contact.html">Contact</a>` オブジェクトの住所プロパティーを表します。
 
 プロパティー
 ----------
-- __pref:__ `ContactAddress` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
+- __pref:__ `<a href="../Contact/contact.html">Contact</a>Address` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
 - __type:__ フィールドのタイプを表します (例: 'home') _(DOMString)_
 - __formatted:__ 住所全体を表します _(DOMString)_
 - __streetAddress:__ 番地を表します _(DOMString)_
@@ -37,7 +37,7 @@ ContactAddress
 詳細
 -------
 
-`ContactAddress` オブジェクトは連絡先の住所に関するプロパティーを表します。 `Contact` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
+`<a href="../Contact/contact.html">Contact</a>Address` オブジェクトは連絡先の住所に関するプロパティーを表します。 `<a href="../Contact/contact.html">Contact</a>` オブジェクトは、複数の住所が格納された `<a href="../Contact/contact.html">Contact</a>Address[]` 配列を保持しています。
 
 サポートされているプラットフォーム
 -------------------
@@ -47,7 +47,7 @@ ContactAddress
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // すべての連絡先の住所情報を取得し、表示します
@@ -66,39 +66,39 @@ ContactAddress
         }
     };
 
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('エラーが発生しました。');
     };
 
     // 連絡先を検索します
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
     options.filter="";
     var filter = ["displayName","addresses"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title><a href="../Contact/contact.html">Contact</a> の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../../device/device.html">Device</a>Ready() {
             // find all contacts
-            var options = new ContactFindOptions();
+            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
             options.filter="";
             var filter = ["displayName","addresses"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
 
         // onSuccess: 連絡先の取得に成功した場合
@@ -121,14 +121,14 @@ ContactAddress
 
         // onError: 連絡先の取得に失敗した場合
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
         <p>連絡先の検索</p>
       </body>
     </html>

@@ -28,7 +28,7 @@ This object is exposed as `navigator.connection`.
 Properties
 ----------
 
-- connection.type
+- <a href="connection.type.html">connection.type</a>
 
 Constants
 ---------
@@ -70,7 +70,7 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

@@ -20,7 +20,7 @@ license: >
 
 # Notification.beep
 
-Устройство воспроизводит звуковой сигнал звук.
+<a href="../device/device.html">Устройство</a> воспроизводит звуковой сигнал звук.
 
     navigator.notification.beep(times);
     
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -80,7 +80,7 @@ license: >
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.notification.vibrate(2000);
+            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
         }
     
         </script>

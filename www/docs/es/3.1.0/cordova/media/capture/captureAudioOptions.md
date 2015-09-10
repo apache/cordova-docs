@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
     
 
 ## Rarezas Android

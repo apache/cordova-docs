@@ -46,23 +46,23 @@ Ottenere la versione del sistema operativo.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
+            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
+                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
+                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
                                 'Device Version: '  + device.version  + '<br />';
         }
     

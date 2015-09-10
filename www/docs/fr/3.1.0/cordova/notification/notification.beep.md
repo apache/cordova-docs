@@ -46,14 +46,14 @@ Le dispositif joue un bip sonore.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -63,7 +63,7 @@ Le dispositif joue un bip sonore.
     
         // Show a custom alert
         //
-        function showAlert() {
+        function <a href="../inappbrowser/inappbrowser.html">show</a>Alert() {
             navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
@@ -86,7 +86,7 @@ Le dispositif joue un bip sonore.
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Alert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
@@ -95,7 +95,7 @@ Le dispositif joue un bip sonore.
 
 ## Bizarreries Android
 
-*   Android joue la **sonnerie de Notification** spécifié sous le panneau des **réglages/son et affichage** de valeur par défaut.
+*   Android joue la **sonnerie de <a href="notification.html">Notification</a>** spécifié sous le panneau des **réglages/son et affichage** de valeur par défaut.
 
 ## Windows Phone 7 et 8 Quirks
 

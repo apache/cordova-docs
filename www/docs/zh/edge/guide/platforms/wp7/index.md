@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Windows Phone 7 平臺指南
+# Windows Phone 7 <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Windows Phone 7 設備的應用程式。 應用程式也使用相同的 Api，但 7 缺乏的一些 IE10 的高級功能上 Windows Phone 8 可用的版本的 Windows Phone 8 設備上運行。 Windows Phone 8 應用程式*不*在 Windows Phone 7 設備上運行。
 
 適用于這兩個版本的更多詳細的平臺特定資訊如下所示：
 
-*   升級 Windows Phone
+*   <a href="../wp8/upgrading.html">升級 Windows Phone</a>
 *   Windows Phone 外掛程式
-*   Windows Phone 的命令列工具
+*   <a href="../wp8/tools.html">Windows Phone 的命令列工具</a>
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 ## 系統要求
 

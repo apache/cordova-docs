@@ -20,7 +20,7 @@ license: >
 
 # Plugin-Spezifikation
 
-Die `plugin.xml` Datei ist ein XML‑Dokument in den `plugins` Namespace: `http://apache.org/cordova/ns/plugins/1.0` . Es enthält eine Top-Level- `plugin` Element, das das Plugin definiert, und Kinder, die die Struktur des Plugins zu definieren.
+Die `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> ist ein XML‑Dokument in den `plugins` Namespace: `http://apache.org/cordova/ns/plugins/1.0` . Es enthält eine Top-Level- `plugin` Element, das das Plugin definiert, und Kinder, die die Struktur des Plugins zu definieren.
 
 Ein Beispiel-Plugin-Element:
 
@@ -35,7 +35,7 @@ Ein Beispiel-Plugin-Element:
 
 Das `plugin` Element ist das Plugin Manifest Element der obersten Ebene. Es verfügt über die folgenden Attribute:
 
-*   `xmlns`(erforderlich): die Plugin-Namespace `http://apache.org/cordova/ns/plugins/1.0` . Enthält das Dokument XML aus anderen Namespaces, z. B. Tags hinzugefügt werden die `AndroidManifest.xml` -Datei, diese Namespaces sollten auch in Element der obersten Ebene enthalten sein.
+*   `xmlns`(erforderlich): die Plugin-Namespace `http://apache.org/cordova/ns/plugins/1.0` . Enthält das Dokument XML aus anderen Namespaces, z. B. Tags hinzugefügt werden die `AndroidManifest.xml` -<a href="../cordova/file/fileobj/fileobj.html">Datei</a>, diese Namespaces sollten auch in Element der obersten Ebene enthalten sein.
 
 *   `id`(erforderlich): eine Reverse-Domain style Bezeichner für das Plugin, wie`com.alunny.foo`
 
@@ -94,7 +94,7 @@ Ein benutzerdefinierter Apache Cordova-basiertes Framework erfordert, dass ein M
 
 *   `version`(erforderlich): die Version, die Ihr Framework verfügen muss, um zu installieren.
 
-*   `scriptSrc`(erforderlich): der Skript-Datei, die Plugman sagt, welche Version von benutzerdefinierten Rahmen ist. Im Idealfall sollte diese Datei innerhalb des Verzeichnisses der obersten Ebene für Ihr Pluginverzeichnis.
+*   `scriptSrc`(erforderlich): der Skript-<a href="../cordova/file/fileobj/fileobj.html">Datei</a>, die Plugman sagt, welche Version von benutzerdefinierten Rahmen ist. Im Idealfall sollte diese <a href="../cordova/file/fileobj/fileobj.html">Datei</a> innerhalb des Verzeichnisses der obersten Ebene für Ihr Pluginverzeichnis.
 
 *   `platform`(erforderlich): Welche Plattformen, Ihr Framework unterstützt. Sie können den Platzhalter ' *' um zu sagen, für alle Plattformen unterstützt, geben Sie mehrere mit ein Pipe-Zeichen wie 'android|ios|blackberry10' oder nur einer einzigen Plattform wie 'Android'.
 
@@ -143,7 +143,7 @@ Plugin-Lizenz. Der Textinhalt des Elements enthält das Plugin-Lizenz. Ein Beisp
 
 ## `<asset>`Element
 
-Ein oder mehrere Elemente Auflisten der Dateien oder Verzeichnisse in einer Cordova app kopieren `www` Verzeichnis. Beispiele:
+Ein oder mehrere Elemente Auflisten der <a href="../cordova/file/fileobj/fileobj.html">Datei</a>en oder Verzeichnisse in einer Cordova app kopieren `www` Verzeichnis. Beispiele:
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -153,32 +153,32 @@ Ein oder mehrere Elemente Auflisten der Dateien oder Verzeichnisse in einer Cord
 
 Alle `<asset>` Tags erfordern beide `src` und `target` Attribute. Nur Web-Plugins enthält meist `<asset>` Elemente. Alle `<asset>` Elemente, die geschachtelt sind `<platform>` Elemente geben plattformspezifische Web Vermögenswerte, wie unten beschrieben. Attribute enthalten:
 
-*   `src`(erforderlich): wo die Datei oder das Verzeichnis befindet sich in das Plugin-Paket, bezogen auf das `plugin.xml` Dokument. Wenn eine Datei nicht, an der angegebenen vorhanden ist `src` Lage, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
+*   `src`(erforderlich): wo die <a href="../cordova/file/fileobj/fileobj.html">Datei</a> oder das Verzeichnis befindet sich in das Plugin-Paket, bezogen auf das `plugin.xml` Dokument. Wenn eine <a href="../cordova/file/fileobj/fileobj.html">Datei</a> nicht, an der angegebenen vorhanden ist `src` Lage, Plugman beendet und kehrt den Installationsvorgang, gibt eine <a href="../cordova/notification/notification.html">Benachrichtigung</a> über den Konflikt und beendet mit einem NULL-Code.
 
 *   `target`(erforderlich):
     
-    Wo die Datei oder das Verzeichnis sollte gefunden werden in der app Cordova bezogen auf das `www` Verzeichnis. Vermögenswerte können z. B. auf Unterverzeichnisse, eingesetzt werden:
+    Wo die <a href="../cordova/file/fileobj/fileobj.html">Datei</a> oder das Verzeichnis sollte gefunden werden in der app Cordova bezogen auf das `www` Verzeichnis. Vermögenswerte können z. B. auf Unterverzeichnisse, eingesetzt werden:
     
     <asset src="www/new-foo.js" target="js/experimental/foo.js" />
     
-    erstellt die `js/experimental` Verzeichnis innerhalb der `www` Verzeichnis, sofern bereits vorhanden, dann Kopien der `new-foo.js` Datei und benennt es `foo.js` . Existiert eine Datei schon am Zielort, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
+    erstellt die `js/experimental` Verzeichnis innerhalb der `www` Verzeichnis, sofern bereits vorhanden, dann Kopien der `new-foo.js` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> und benennt es `foo.js` . Existiert eine <a href="../cordova/file/fileobj/fileobj.html">Datei</a> schon am Zielort, Plugman beendet und kehrt den Installationsvorgang, gibt eine <a href="../cordova/notification/notification.html">Benachrichtigung</a> über den Konflikt und beendet mit einem NULL-Code.
 
 ## `<js-module>`Element
 
-Die meisten Plugins enthalten eine oder mehrere JavaScript-Dateien. Jeder `<js-module>` Tag entspricht einer JavaScript-Datei, und verhindert, dass das Plugin Benutzer hinzufügen ein `<script>` Tag für jede Datei. Während `<asset>` Markierungen kopieren Sie einfach eine Datei aus dem Plugin-Unterverzeichnis in `www` , `<js-module>` Markierungen sind viel komplexer. Sie sieht wie folgt:
+Die meisten Plugins enthalten eine oder mehrere JavaScript-<a href="../cordova/file/fileobj/fileobj.html">Datei</a>en. Jeder `<js-module>` Tag entspricht einer JavaScript-<a href="../cordova/file/fileobj/fileobj.html">Datei</a>, und verhindert, dass das Plugin Benutzer hinzufügen ein `<script>` Tag für jede <a href="../cordova/file/fileobj/fileobj.html">Datei</a>. Während `<asset>` Markierungen kopieren Sie einfach eine <a href="../cordova/file/fileobj/fileobj.html">Datei</a> aus dem Plugin-Unterverzeichnis in `www` , `<js-module>` Markierungen sind viel komplexer. Sie sieht wie folgt:
 
     <js-module src="socket.js" name="Socket">
         <clobbers target="chrome.socket" />
     </js-module>
     
 
-Wenn Sie eine Plugin mit dem obigen Beispiel installieren `socket.js` wird kopiert `www/plugins/my.plugin.id/socket.js` , und als einen Eintrag hinzugefügt `www/cordova_plugins.js` . Einloggen zur Ladezeit `cordova.js` XHR verwendet, um jede Datei zu lesen und injizieren ein `<script>` Tag in HTML. Es fügt eine Zuordnung zum verprügeln oder gegebenenfalls zusammenführen, wie unten beschrieben.
+Wenn Sie eine Plugin mit dem obigen Beispiel installieren `socket.js` wird kopiert `www/plugins/my.plugin.id/socket.js` , und als einen Eintrag hinzugefügt `www/cordova_plugins.js` . Einloggen zur Ladezeit `cordova.js` XHR verwendet, um jede <a href="../cordova/file/fileobj/fileobj.html">Datei</a> zu lesen und injizieren ein `<script>` Tag in HTML. Es fügt eine Zuordnung zum verprügeln oder gegebenenfalls zusammenführen, wie unten beschrieben.
 
-Wickeln Sie *nicht* die Datei mit `cordova.define` , automatisch hinzugefügt wird. Das Modul ist verpackt in einen Verschluss mit `module` , `exports` , und `require` im Bereich, ist als normal, dass AMD-Module.
+Wickeln Sie *nicht* die <a href="../cordova/file/fileobj/fileobj.html">Datei</a> mit `cordova.define` , automatisch hinzugefügt wird. Das Modul ist verpackt in einen Verschluss mit `module` , `exports` , und `require` im Bereich, ist als normal, dass AMD-Module.
 
 Details für den `<js-module>` Tag:
 
-*   Der `src` verweist auf eine Datei in das Pluginverzeichnis bezogen auf die `plugin.xml` Datei.
+*   Der `src` verweist auf eine <a href="../cordova/file/fileobj/fileobj.html">Datei</a> in das Pluginverzeichnis bezogen auf die `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>.
 
 *   Die `name` stellt den letzten Teil den Namen des Moduls. Es kann in der Regel sein, was du willst, und es nur wichtig, wenn Sie verwenden möchten `cordova.require` anderen Teilen Ihrer plugins in Ihrem JavaScript-Code importieren. Der Modulname für eine `<js-module>` ist Ihr Plugins `id` gefolgt vom Wert der `name` . Für das obige Beispiel mit einer `id` von `chrome.socket` , den Namen des Moduls ist`chrome.socket.Socket`.
 
@@ -192,7 +192,7 @@ Details für den `<js-module>` Tag:
     
     *   Eine leere `<js-module>` noch geladen und kann vorzugeben in anderen Modulen über`cordova.require`.
 
-Wenn `src` , löst nicht an eine vorhandene Datei Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung des Problems und beendet mit einem NULL-Code.
+Wenn `src` , löst nicht an eine vorhandene <a href="../cordova/file/fileobj/fileobj.html">Datei</a> Plugman beendet und kehrt die Installation, gibt eine <a href="../cordova/notification/notification.html">Benachrichtigung</a> des Problems und beendet mit einem NULL-Code.
 
 Schachteln `<js-module>` Elemente im `<platform>` deklariert plattformspezifische JavaScript-Modul Bindungen.
 
@@ -260,21 +260,21 @@ Die `<source-file>` Element identifiziert ausführbare Quellcodes, die in ein Pr
 
 Es unterstützt die folgenden Attribute:
 
-*   `src`(erforderlich): Speicherort der Datei relativ zum `plugin.xml` . Wenn die `src` Datei nicht gefunden, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
+*   `src`(erforderlich): <a href="../cordova/storage/storage.html">Speicher</a>ort der <a href="../cordova/file/fileobj/fileobj.html">Datei</a> relativ zum `plugin.xml` . Wenn die `src` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> nicht gefunden, Plugman beendet und kehrt die Installation, gibt eine <a href="../cordova/notification/notification.html">Benachrichtigung</a> über das Problem und beendet mit einem NULL-Code.
 
-*   `target-dir`: Ein Verzeichnis, in dem die Dateien sollen, relativ zum Stammverzeichnis des Projektes Cordova kopiert werden. In der Praxis ist das wichtigste für Java-basierte Plattformen, wo eine Datei in die `com.alunny.foo` Paket muss in das `com/alunny/foo` Verzeichnis. Für Plattformen, wo das Quellverzeichnis nicht wichtig ist, sollte dieses Attribut weggelassen werden.
+*   `target-dir`: Ein Verzeichnis, in dem die <a href="../cordova/file/fileobj/fileobj.html">Datei</a>en sollen, relativ zum Stammverzeichnis des Projektes Cordova kopiert werden. In der Praxis ist das wichtigste für Java-basierte Plattformen, wo eine <a href="../cordova/file/fileobj/fileobj.html">Datei</a> in die `com.alunny.foo` Paket muss in das `com/alunny/foo` Verzeichnis. Für Plattformen, wo das Quellverzeichnis nicht wichtig ist, sollte dieses Attribut weggelassen werden.
     
-    Wie bei Papieren, wenn die `target` von einer `source-file` würde die vorhandene Datei überschreiben, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
+    Wie bei Papieren, wenn die `target` von einer `source-file` würde die vorhandene <a href="../cordova/file/fileobj/fileobj.html">Datei</a> überschreiben, Plugman beendet und kehrt die Installation, gibt eine <a href="../cordova/notification/notification.html">Benachrichtigung</a> über das Problem und beendet mit einem NULL-Code.
 
-*   `framework`(nur iOS): Wenn legen Sie auf `true` , auch die angegebene Datei als Rahmen dem Projekt hinzugefügt.
+*   `framework`(nur iOS): Wenn legen Sie auf `true` , auch die angegebene <a href="../cordova/file/fileobj/fileobj.html">Datei</a> als Rahmen dem Projekt hinzugefügt.
 
-*   `compiler-flags`(nur iOS): Wenn festgelegt ist, weist der angegebenen Compiler-Flags für die bestimmten Quelldatei.
+*   `compiler-flags`(nur iOS): Wenn festgelegt ist, weist der angegebenen Compiler-<a href="../cordova/file/flags/flags.html">Flags</a> für die bestimmten Quelldatei.
 
 ## `<config-file>`
 
-Bezeichnet eine XML-basierte Konfiguration-Datei, die geändert werden, wo in diesem Dokument die Änderung stattfinden sollen, und was geändert werden sollte.
+Bezeichnet eine XML-basierte Konfiguration-<a href="../cordova/file/fileobj/fileobj.html">Datei</a>, die geändert werden, wo in diesem Dokument die Änderung stattfinden sollen, und was geändert werden sollte.
 
-Zwei Dateitypen, die auf die Änderung mit diesem Element getestet wurden sind `xml` und `plist` Dateien.
+Zwei <a href="../cordova/file/fileobj/fileobj.html">Datei</a>typen, die auf die Änderung mit diesem Element getestet wurden sind `xml` und `plist` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>en.
 
 Die `config-file` Element nur können Sie neue Kinder an eine XML-Dokumentstruktur anhängen. Die Kinder sind XML-Literale im Zieldokument eingefügt werden soll.
 
@@ -304,17 +304,17 @@ Es unterstützt die folgenden Attribute:
 
 *   `target`:
     
-    Die Datei geändert werden, und der Pfad relativ zum Stammverzeichnis des Projektes Cordova.
+    Die <a href="../cordova/file/fileobj/fileobj.html">Datei</a> geändert werden, und der Pfad relativ zum Stammverzeichnis des Projektes Cordova.
     
     Das Ziel kann Platzhalter enthalten ( `*` ) Elemente. In diesem Fall Plugman rekursiv durchsucht die Verzeichnisstruktur des Projekts und verwendet die erste Übereinstimmung.
     
-    Auf iOS, der Speicherort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
+    Auf iOS, der <a href="../cordova/storage/storage.html">Speicher</a>ort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
     
-    Wenn die angegebene Datei nicht vorhanden ist, wird das Tool ignoriert die Konfigurationsänderung und wird die Installation fortgesetzt.
+    Wenn die angegebene <a href="../cordova/file/fileobj/fileobj.html">Datei</a> nicht vorhanden ist, wird das Tool ignoriert die Konfigurationsänderung und wird die Installation fortgesetzt.
 
-*   `parent`: Eine XPath-Selector, verweisen auf das übergeordnete Element der Elemente der Config-Datei hinzugefügt werden. Wenn Sie absolute Selektoren verwenden, können Sie einen Platzhalter ( `*` ) an das Root-Element, z.B.`/*/plugins`.
+*   `parent`: Eine XPath-Selector, verweisen auf das übergeordnete Element der Elemente der Config-<a href="../cordova/file/fileobj/fileobj.html">Datei</a> hinzugefügt werden. Wenn Sie absolute Selektoren verwenden, können Sie einen Platzhalter ( `*` ) an das Root-Element, z.B.`/*/plugins`.
     
-    Für `plist` Dateien, die `parent` bestimmt, unter welchen übergeordneten Schlüssel der angegebene XML-Code eingefügt werden soll.
+    Für `plist` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>en, die `parent` bestimmt, unter welchen übergeordneten Schlüssel der angegebene XML-Code eingefügt werden soll.
     
     Wenn die Auswahl auf ein untergeordnetes Element des angegebenen Dokuments nicht behoben wird, das Tool beendet und kehrt des Installationsvorgangs gibt eine Warnung aus und beendet mit einem NULL-Code.
 
@@ -331,7 +331,7 @@ Beispiel:
     </config-file>
     
 
-Gibt einen Schlüssel und Wert auf den richtigen anfügen `AppInfo.plist` Datei in einem iOS-Cordova-Projekt. Zum Beispiel:
+Gibt einen Schlüssel und Wert auf den richtigen anfügen `AppInfo.plist` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> in einem iOS-Cordova-Projekt. Zum Beispiel:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
@@ -347,7 +347,7 @@ Wie Quelldateien, aber speziell für Plattformen wie iOS unterscheiden, die Quel
 
 ## `<lib-file>`
 
-Wie Quelle, Ressourcen- und Header-Dateien, aber speziell für Plattformen wie BlackBerry 10 User generated Bibliotheken verwenden. Beispiele:
+Wie Quelle, Ressourcen- und Header-<a href="../cordova/file/fileobj/fileobj.html">Datei</a>en, aber speziell für Plattformen wie BlackBerry 10 User generated Bibliotheken verwenden. Beispiele:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -355,9 +355,9 @@ Wie Quelle, Ressourcen- und Header-Dateien, aber speziell für Plattformen wie B
 
 Unterstützte Attribute:
 
-*   `src`(erforderlich): der Speicherort der Datei relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
+*   `src`(erforderlich): der <a href="../cordova/storage/storage.html">Speicher</a>ort der <a href="../cordova/file/fileobj/fileobj.html">Datei</a> relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
 
-*   `arch`: Die Architektur, für die die `.so` Datei erstellt wurde, entweder `device` oder`simulator`.
+*   `arch`: Die Architektur, für die die `.so` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> erstellt wurde, entweder `device` oder`simulator`.
 
 ## `<framework>`
 
@@ -394,13 +394,13 @@ In bestimmten Fällen kann eine Plugin müssen Änderungen an der Konfiguration 
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-In solchen Fällen, wo der Inhalt, von eingefügt, der `plugin.xml` Datei ist nicht bekannt, vor der Zeit, Variablen durch ein Dollarzeichen, gefolgt von einer Reihe von Großbuchstaben, Ziffern und Unterstriche angezeigt werden können. Für das obige Beispiel die `plugin.xml` Datei würde diesem Tag enthalten:
+In solchen Fällen, wo der Inhalt, von eingefügt, der `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> ist nicht bekannt, vor der Zeit, Variablen durch ein Dollarzeichen, gefolgt von einer Reihe von Großbuchstaben, Ziffern und Unterstriche angezeigt werden können. Für das obige Beispiel die `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> würde diesem Tag enthalten:
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-Plugman Variablenreferenzen mit dem angegebenen Wert oder eine leere Zeichenfolge ersetzt, wenn keine gefunden. Der Wert der Variable Referenz erkannt werden kann (in diesem Fall aus der `AndroidManifest.xml` Datei) oder vom Benutzer des Werkzeugs angegebene der genaue Vorgang ist abhängig von der speziellen Werkzeug.
+Plugman Variablenreferenzen mit dem angegebenen Wert oder eine leere Zeichenfolge ersetzt, wenn keine gefunden. Der Wert der Variable Referenz erkannt werden kann (in diesem Fall aus der `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>) oder vom Benutzer des Werkzeugs angegebene der genaue Vorgang ist abhängig von der speziellen Werkzeug.
 
 Plugman kann Benutzer ein Plugin erforderlichen Variablen angeben anfordern. API-Schlüssel für C2M und Google Maps können beispielsweise als Befehlszeilenargument angegeben werden:
 
@@ -418,4 +418,4 @@ Bestimmten Variablennamen sollte reserviert werden, wie unten aufgeführt.
 
 ## $PACKAGE_NAME
 
-Die Reverse-Domain style eindeutigen Bezeichner für das Paket, das entspricht der `CFBundleIdentifier` auf iOS oder das `package` -Attribut des der obersten Ebene `manifest` Element in eine `AndroidManifest.xml` Datei.
+Die Reverse-Domain style eindeutigen Bezeichner für das Paket, das entspricht der `CFBundleIdentifier` auf iOS oder das `package` -Attribut des der obersten Ebene `manifest` Element in eine `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>.

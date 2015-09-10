@@ -22,8 +22,8 @@ license: >
 
 onError callback function for compass functions.
 
-## Example
+## <a href="../../storage/storage.opendatabase.html">Example</a>
 
-    function(CompassError) {
+    function(<a href="../compassError/compassError.html"><a href="../compass.html">Compass</a>Error</a>) {
         // Handle the error
     }

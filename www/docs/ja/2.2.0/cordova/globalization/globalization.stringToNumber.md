@@ -30,7 +30,7 @@ globalization.stringToNumber
 
 プロパティーオブジェクトをパラメーターとして数字を successCB コールバック関数に返します。このオブジェクトは数字の ``value`` プロパティーを持っています。
 
-もし数字の変換中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.PARSING\_ERROR です。
+もし数字の変換中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR です。
 
 `options.type` には 'decimal', 'percent', または 'currency' が指定出来ます。
 デフォルトのオプションは `{type:'decimal'}` です。この `options` パラメーターはオプション (任意) です。
@@ -43,7 +43,7 @@ globalization.stringToNumber
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは "number: 1234.56" といったような文字列をポップアップダイアログに表示します。
@@ -56,7 +56,7 @@ globalization.stringToNumber
     );
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>

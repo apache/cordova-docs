@@ -23,16 +23,16 @@ camera.getPicture
 
 Takes a photo using the camera or retrieves a photo from the device's album.  The image is returned as a base64 encoded `String` or as the URI of an image file.
 
-    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
 
 Description
 -----------
 
-Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
+Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
+If `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY` or `<a href="camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+The return value will be sent to the `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` function, in one of the following formats, depending on the `<a href="parameter/cameraOptions.html">cameraOptions</a>` you specify:
 
 - A `String` containing the Base64 encoded photo image.
 - A `String` representing the image file location on local storage (default).
@@ -40,10 +40,10 @@ The return value will be sent to the `cameraSuccess` function, in one of the fol
 You can do whatever you want with the encoded image or URI, for example:
 
 - Render the image in an `<img>` tag _(see example below)_
-- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
+- Save the data locally (`Local<a href="../storage/storage.html">Storage</a>`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the '<a href="camera.html">Camera</a>.destinationType' is highly recommended.
 
 Supported Platforms
 -------------------
@@ -53,7 +53,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 Take photo and retrieve Base64-encoded image:
@@ -72,7 +72,7 @@ Take photo and retrieve Base64-encoded image:
 Take photo and retrieve image file location: 
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-        destinationType: Camera.DestinationType.FILE_URI }); 
+        destinationType: <a href="camera.html">Camera</a>.DestinationType.FILE_URI }); 
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -84,13 +84,13 @@ Take photo and retrieve image file location:
     }
 
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Photo</title>
+        <title><a href="../media/capture/capture.html">Capture</a> Photo</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -100,11 +100,11 @@ Full Example
         
         // Wait for PhoneGap to connect with the device
         //
-        document.addEventListener("deviceready",onDeviceReady,false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>",on<a href="../device/device.html">Device</a>Ready,false);
     
         // PhoneGap is ready to be used!
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
         }
@@ -124,7 +124,7 @@ Full Example
           smallImage.style.display = 'block';
       
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The inline CSS rules are used to re<a href="../storage/parameters/size.html">size</a> the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -144,7 +144,7 @@ Full Example
           largeImage.style.display = 'block';
       
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The inline CSS rules are used to re<a href="../storage/parameters/size.html">size</a> the image
           //
           largeImage.src = imageURI;
         }
@@ -181,8 +181,8 @@ Full Example
         </script>
       </head>
       <body>
-        <button onclick="capturePhoto();">Capture Photo</button> <br>
-        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+        <button onclick="capturePhoto();"><a href="../media/capture/capture.html">Capture</a> Photo</button> <br>
+        <button onclick="capturePhotoEdit();"><a href="../media/capture/capture.html">Capture</a> Editable Photo</button> <br>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
         <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />

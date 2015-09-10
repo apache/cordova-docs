@@ -18,13 +18,13 @@ license: >
     under the License.
 ---
 
-# Windows 平臺指南
+# Windows <a href="../index.html">平臺指南</a>
 
-本指南介紹如何設置您的 SDK 開發環境來構建和部署應用程式科爾多瓦為 Windows 8、 Windows 8.1、 Windows Phone 8.1 和 Windows 10 通用應用程式平臺。 它演示如何使用 shell 工具來生成和生成應用程式，或跨平臺科爾多瓦 CLI 討論了在命令列介面。 (見比較這些發展選項的概述)。本節還演示了如何修改科爾多瓦在 Visual Studio 中的應用程式。 無論你採取哪種方法，您需要安裝 Visual Studio SDK，如下所述。
+本指南介紹如何設置您的 SDK 開發環境來構建和部署應用程式科爾多瓦為 Windows 8、 Windows 8.1、 Windows Phone 8.1 和 Windows 10 通用應用程式平臺。 它演示如何使用 shell 工具來生成和生成應用程式，或跨平臺科爾多瓦 CLI 討論了在<a href="../../cli/index.html">命令列介面</a>。 (見比較這些發展選項的<a href="../../overview/index.html">概述</a>)。本節還演示了如何修改科爾多瓦在 Visual Studio 中的應用程式。 無論你採取哪種方法，您需要安裝 Visual Studio SDK，如下所述。
 
-有關如何升級現有的 Windows 8 科爾多瓦專案的資訊，請參閱升級 Windows 8。
+有關如何升級現有的 Windows 8 科爾多瓦專案的資訊，請參閱<a href="upgrading.html">升級 Windows 8</a>。
 
-視窗電話 8 （wp8） 住宿作為一個獨立的平臺，有關詳細資訊，請參閱 Windows Phone 8 平臺指南。
+視窗電話 8 （wp8） 住宿作為一個獨立的平臺，有關詳細資訊，請參閱 <a href="../wp8/index.html">Windows Phone 8 <a href="../index.html">平臺指南</a></a>。
 
 在 Windows 上運行的科爾多瓦 WebViews 依賴互聯網資源管理器中 10 （Windows 8.0） 和互聯網資源管理器中 11 （Windows 8.1 和 Windows Phone 8.1） 作為他們的渲染引擎，因此作為一個實際問題你可以使用 IE 的功能強大的調試器來測試並不調用科爾多瓦 Api 的任何 web 內容。 Windows Phone 開發者博客上可比的 WebKit 瀏覽器支援 IE 如何提供[有益的指導][1]。
 
@@ -86,7 +86,7 @@ license: >
 
  [11]: https://www.apache.org/dist/cordova/platforms/
 
-這些外殼工具允許您創建、 構建和運行 Windows 應用程式。 附加的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 管理外掛程式。
+這些外殼工具允許您創建、 構建和運行 Windows 應用程式。 附加的<a href="../../cli/index.html">命令列介面</a>，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 管理外掛程式。
 
 ## 安裝 SDK
 
@@ -100,7 +100,7 @@ license: >
 
 ## 創建一個新專案
 
-在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的命令列介面或一組特定的 Windows 外殼工具所述。 下面的 CLI 方法生成新的`你好`專案目錄中命名*HelloWorld*應用程式:
+在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的<a href="../../cli/index.html">命令列介面</a>或一組特定的 Windows 外殼工具所述。 下面的 CLI 方法生成新的`你好`專案目錄中命名*HelloWorld*應用程式:
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
@@ -229,4 +229,4 @@ Visual Studio 主功能表下面的控制項允許您測試或部署應用程式
 
 與不同的桌面部署，此選項允許您類比平板電腦的定位，位置，和改變其網路設置。
 
-**注**: 有關如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 建議查閱概述。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常覆蓋 SDK 所使用的特定于平臺的檔。 如果你想要使用 SDK 來修改專案，使用較低級別外殼工具作為 CLI 的替代方法。
+**注**: 有關如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 建議查閱<a href="../../overview/index.html">概述</a>。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常覆蓋 SDK 所使用的特定于平臺的檔。 如果你想要使用 SDK 來修改專案，使用較低級別外殼工具作為 CLI 的替代方法。

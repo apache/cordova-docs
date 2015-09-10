@@ -72,7 +72,7 @@ The parameters are detailed below:
 
 * `[/* arguments */]`: Arguments to pass into the native environment.
 
-### Echo Plugin JavaScript Example
+### Echo Plugin JavaScript <a href="../../../cordova/storage/storage.opendatabase.html">Example</a>
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -99,7 +99,7 @@ error callback: if the native side fires off the error callback, we
 simply invoke the success callback and pass into it a "default"
 string.
 
-## Plugin Specification
+## <a href="../../../plugin_ref/spec.html">Plugin Specification</a>
 
 Cordova has a plugin specification available to enable automated
 installation of the plugin for Android, iOS, BlackBerry 10 and Windows
@@ -107,7 +107,7 @@ Phone platforms. By structuring your plugin in a particular way and
 adding a `plugin.xml` manifest file, you can enable users to install
 your plugin via the command-line tooling.
 
-- Plugin Specification
+- <a href="../../../plugin_ref/spec.html">Plugin Specification</a>
 
 ## Native
 
@@ -116,10 +116,10 @@ with at least one native implementation. Details to do so for each
 platform are listed below.  These guides continue to build on the
 simple Echo Plugin example discussed above.
 
-- Android Plugins
-- BlackBerry Plugins
-- BlackBerry 10 Plugins
-- iOS Plugins
-- Windows Phone Plugins
+- <a href="../../platforms/android/plugin.html">Android Plugins</a>
+- <a href="../../platforms/blackberry/plugin.html">BlackBerry Plugins</a>
+- <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+- <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
+- <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
 
 The Tizen platform currently does not support plugins.

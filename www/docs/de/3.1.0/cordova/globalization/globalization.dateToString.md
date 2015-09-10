@@ -31,7 +31,7 @@ Gibt das formatierte Datum `String` über eine `value` -Eigenschaft zugänglich 
 
 Die eingehende `date` -Parameter des Typs sein sollte`Date`.
 
-Wenn ein Fehler, die Formatierung des Datums vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.FORMATTING\_ERROR`.
+Wenn ein Fehler, die Formatierung des Datums vorliegt dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 Die `options` Parameter ist optional, und die Standardwerte sind:
 
@@ -66,7 +66,7 @@ Wenn der Browser so, dass eingestellt ist die `en\_US` Gebietsschema, dies zeigt
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString Example</title>
+        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

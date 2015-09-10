@@ -22,11 +22,11 @@ license: >
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Actualizar Android
-*   Android Herramientas de línea de comandos
+*   <a href="config.html">Configuración de Android</a>
+*   <a href="webview.html">Android WebViews</a>
+*   <a href="plugin.html">Android Plugins</a>
+*   <a href="upgrading.html">Actualizar Android</a>
+*   <a href="tools.html">Android Herramientas de línea de comandos</a>
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos de Cordova para obtener más información sobre la interfaz actual.
 
@@ -70,7 +70,7 @@ Para modificar el entorno PATH en Windows 7:
 
 *   En la columna de la izquierda, haga clic en **Configuración avanzada del sistema** .
 
-*   En el cuadro de diálogo resultante, pulse **Las Variables de entorno**.
+*   En el cuadro de diálogo resultante, pulse **Las <a href="../../../plugin_ref/spec.html">Variables</a> de entorno**.
 
 *   Seleccionar la variable **PATH** y pulse **Editar**.
 
@@ -79,7 +79,7 @@ Para modificar el entorno PATH en Windows 7:
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   El valor de guardar y cerrar ambos cuadros de diálogo.
+*   El valor de guardar y <a href="../../../cordova/inappbrowser/inappbrowser.html">cerrar</a> ambos cuadros de diálogo.
 
 También necesitará habilitar Java y Ant. abrir un símbolo del sistema y el tipo `java` y también de tipo `ant` . Anexar a la trayectoria de cualquiera que no se puedan ejecutar:
 
@@ -149,7 +149,7 @@ Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para 
 
  [8]: img/guide/platforms/android/asdk_newAVD.png
 
-La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
+La AVD entonces aparece en la lista de **<a href="../../../cordova/device/device.html">Dispositivo</a>s Android Virtual** :
 
 ![][9]
 

@@ -32,20 +32,20 @@ license: >
 
 ## Методы
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   <a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>
+*   <a href="geolocation.watchPosition.html">geolocation.watchPosition</a>
+*   <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
 
 ## Аргументы
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
+*   <a href="parameters/geolocationError.html">geolocationError</a>
+*   <a href="parameters/geolocation.options.html">geolocationOptions</a>
 
 ## Объекты (только для чтения)
 
 *   Position
-*   PositionError
+*   <a href="PositionError/positionError.html">PositionError</a>
 *   Coordinates
 
 ## Доступ к функции

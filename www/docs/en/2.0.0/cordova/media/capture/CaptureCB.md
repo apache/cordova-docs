@@ -18,28 +18,28 @@ license: >
     under the License.
 ---
 
-CaptureCB
+<a href="capture.html">Capture</a>CB
 =========
 
 > Invoked upon a successful media capture operation.
 
-    function captureSuccess( MediaFile[] mediaFiles ) { ... };
+    function captureSuccess( <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>[] media<a href="../../file/fileobj/fileobj.html">File</a>s ) { ... };
 
 Description
 -----------
 
 This function is invoked after a successful capture operation has completed.  This means a media file has been captured, and either the user has exited the media capture application, or the capture limit has been reached.
 
-Each MediaFile object describes a captured media file.  
+Each <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a> object describes a captured media file.  
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // capture callback
-    function captureSuccess(mediaFiles) {
+    function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
         var i, path, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            path = mediaFiles[i].fullPath;
+        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
             // do something interesting with the file
         }
     };

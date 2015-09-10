@@ -38,14 +38,14 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
     
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Record audio
     // 
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
+        var mediaRec = new <a href="media.html">Media</a>(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -61,26 +61,26 @@ Quick Example
     }
 
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="../device/device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Record audio
         // 
         function recordAudio() {
             var src = "myrecording.mp3";
-            var mediaRec = new Media(src, onSuccess, onError);
+            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
 
             // Record audio
             mediaRec.startRecord();
@@ -89,7 +89,7 @@ Full Example
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -99,7 +99,7 @@ Full Example
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             recordAudio();
         }
     
@@ -118,7 +118,7 @@ Full Example
 
         // Set audio position
         // 
-        function setAudioPosition(position) {
+        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
 
@@ -134,4 +134,4 @@ Full Example
 iOS Quirks
 ----------
 
-- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+- The file to record to must already exist and should be of type .wav. The <a href="../file/fileobj/fileobj.html">File</a> API's can be used to create the file.

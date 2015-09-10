@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# SQLResultSetRowList
+# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
 
-Eine der Eigenschaften von den `SQLResultSet` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
+Eine der Eigenschaften von den `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
 
 ## Eigenschaften
 
@@ -32,7 +32,7 @@ Eine der Eigenschaften von den `SQLResultSet` mit den Zeilen aus einer SQL-Abfra
 
 ## Informationen
 
-Die `SQLResultSetRowList` enthält die Daten aus einer SQL zurückgegeben `select` Anweisung. Das Objekt enthält eine `length` Eigenschaft, die angibt, wie viele Zeilen der `select` Anweisung zurückgegeben. Um eine Zeile mit Daten abzurufen, rufen Sie die `item` -Methode, um einen Index angeben. Es gibt eine JavaScript `Object` deren Eigenschaften sind die Datenbankspalten der `select` Anweisung ausgeführt wurde.
+Die `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList` enthält die Daten aus einer SQL zurückgegeben `select` Anweisung. Das Objekt enthält eine `length` Eigenschaft, die angibt, wie viele Zeilen der `select` Anweisung zurückgegeben. Um eine Zeile mit Daten abzurufen, rufen Sie die `item` -Methode, um einen Index angeben. Es gibt eine JavaScript `Object` deren Eigenschaften sind die <a href="../database/database.html">Datenbank</a>spalten der `select` Anweisung ausgeführt wurde.
 
 ## Unterstützte Plattformen
 
@@ -59,7 +59,7 @@ Die `SQLResultSetRowList` enthält die Daten aus einer SQL zurückgegeben `selec
             alert("Error processing SQL: "+err.code);
         }
     
-        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
         db.transaction(queryDB, errorCB);
     
 
@@ -68,14 +68,14 @@ Die `SQLResultSetRowList` enthält die Daten aus einer SQL zurückgegeben `selec
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Populate the database
         //
@@ -111,21 +111,21 @@ Die `SQLResultSetRowList` enthält die Daten aus einer SQL zurückgegeben `selec
         // Transaction success callback
         //
         function successCB() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>Database</p>
       </body>
     </html>

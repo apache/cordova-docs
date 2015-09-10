@@ -20,23 +20,23 @@ license: >
 
 # Accelerometro
 
-> Cattura dispositivo movimento nella direzione *x*, *y*e *z* .
+> <a href="../media/capture/capture.html">Cattura</a> dispositivo movimento nella direzione *x*, *y*e *z* .
 
 ## Metodi
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   <a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>
+*   <a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>
+*   <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 ## Argomenti
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+*   <a href="parameters/accelerometerError.html">accelerometerError</a>
+*   <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 ## Oggetti (sola lettura)
 
-*   Accelerazione
+*   <a href="acceleration/acceleration.html">Accelerazione</a>
 
 ## La funzionalità di accesso
 

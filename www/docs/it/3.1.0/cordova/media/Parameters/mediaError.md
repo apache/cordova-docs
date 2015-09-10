@@ -29,4 +29,4 @@ Una funzione di callback specificato dall'utente che viene eseguito quando si ve
 
 ## Parametri
 
-*   **errore**: l'errore restituito dal dispositivo. *(Errore MediaError)*
+*   **errore**: l'errore restituito dal dispositivo. *(<a href="../<a href="../media.html">Media</a>Error/mediaError.html">Errore <a href="../media.html">Media</a>Error</a>)*

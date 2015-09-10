@@ -22,7 +22,7 @@ license: >
 
 Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
-    {qualità: 75, destinationType: Camera.DestinationType.DATA_URL, sourceType: Camera.PictureSourceType.CAMERA, allowEdit: vero, encodingType: Camera.EncodingType.JPEG, targetWidth: 100, targetHeight: 100, popoverOptions: CameraPopoverOptions, saveToPhotoAlbum: false};
+    {qualità: 75, destinationType: Camera.DestinationType.DATA_URL, sourceType: Camera.PictureSourceType.CAMERA, allowEdit: vero, encodingType: Camera.EncodingType.JPEG, targetWidth: 100, targetHeight: 100, popoverOptions: <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>, saveToPhotoAlbum: false};
     
 
 ## Opzioni
@@ -50,9 +50,9 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 *   **targetHeight**: altezza in pixel all'immagine della scala. Deve essere usato con **targetWidth**. Proporzioni rimane costante. *(Numero)*
 
-*   **mediaType**: impostare il tipo di supporto per scegliere da. Funziona solo quando `PictureSourceType` è `PHOTOLIBRARY` o `SAVEDPHOTOALBUM` . Definito in `nagivator.camera.MediaType` *(numero)* 
+*   **mediaType**: impostare il tipo di supporto per scegliere da. Funziona solo quando `PictureSourceType` è `PHOTOLIBRARY` o `SAVEDPHOTOALBUM` . Definito in `nagivator.camera.<a href="../../media/media.html">Media</a>Type` *(numero)* 
     
-        Camera.MediaType = {foto: 0, / / permette la selezione di immagini ancora solo. PER IMPOSTAZIONE PREDEFINITA. Restituirà il formato specificato tramite dei DestinationType: 1, / / permette la selezione di solo, il video sarà sempre tornare FILE_URI ALLMEDIA: 2 / / Consenti selezione da tutti i tipi di supporto
+        Camera.<a href="../../media/media.html">Media</a>Type = {foto: 0, / / permette la selezione di immagini ancora solo. PER IMPOSTAZIONE PREDEFINITA. Restituirà il formato specificato tramite dei DestinationType: 1, / / permette la selezione di solo, il video sarà sempre tornare FILE_URI ALLMEDIA: 2 / / Consenti selezione da tutti i tipi di supporto
         
     
     };
@@ -61,7 +61,7 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 *   **saveToPhotoAlbum**: salvare l'immagine nell'album di foto sul dispositivo dopo la cattura. *(Booleano)*
 
-*   **popoverOptions**: solo iOS opzioni che specificano la posizione di muffin in iPad. Definito in`CameraPopoverOptions`.
+*   **popoverOptions**: solo iOS opzioni che specificano la posizione di muffin in iPad. Definito in`<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -84,11 +84,11 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 *   Ignora il `allowEdit` parametro.
 
-*   Applicazione deve disporre delle autorizzazioni di iniezione chiave per chiudere l'applicazione nativa fotocamera dopo l'utente scatta la foto.
+*   Applicazione deve disporre delle autorizzazioni di iniezione chiave per <a href="../../inappbrowser/inappbrowser.html">chiudere</a> l'applicazione nativa fotocamera dopo l'utente scatta la foto.
 
 *   Utilizzando immagini di grandi dimensioni può comportare l'impossibilità di codificare immagini su dispositivi modello successivo (ad es., Torch 9800) quella caratteristica di telecamere ad alta risoluzione.
 
-*   `Camera.MediaType`non è supportato.
+*   `Camera.<a href="../../media/media.html">Media</a>Type`non è supportato.
 
 *   Ignora il `correctOrientation` parametro.
 

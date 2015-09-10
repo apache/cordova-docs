@@ -82,7 +82,7 @@ platform add blackberry10`.
 
 3.  Перейдите в каталог, где вы положили загруженных исходных выше, используя unix как терминал: Terminal.app, Баш, Cygwin и т.д.
 
-4.  Создайте новый проект, как описано в iOS утилиты командной строки. Вам нужен активов от этого нового проекта.
+4.  Создайте новый проект, как описано в <a href="../ios/tools.html">iOS утилиты командной строки</a>. Вам нужен активов от этого нового проекта.
 
 5.  Копия `www/cordova.js` файл из нового проекта в ваш `www` каталог и удалить ваш `www/cordova.js` файл.
 
@@ -120,7 +120,7 @@ BlackberryOS обеспечение/пьес:
 
 3.  Перейдите в каталог, где вы положили загруженных исходных выше, используя unix как терминал: Terminal.app, Баш, Cygwin и т.д.
 
-4.  Создайте новый проект, как описано в iOS утилиты командной строки. Вам нужен активов от этого нового проекта.
+4.  Создайте новый проект, как описано в <a href="../ios/tools.html">iOS утилиты командной строки</a>. Вам нужен активов от этого нового проекта.
 
 5.  Копия `www/cordova.js` файл из нового проекта в ваш `www` каталог и удалить ваш `www/cordova.js` файл.
 
@@ -371,11 +371,11 @@ BlackberryOS обеспечение/пьес:
 
 6.  Обновление вашего `www/plugins.xml` файл. Два плагины изменил их лейблом служба имен. Измените старые записи для захвата и контакт плагины от:
     
-        < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
+        < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>» value="org.apache.cordova.pim.Contact"/ >
         
     Кому:
     
-        < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
+        < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>ы» value="org.apache.cordova.pim.Contact"/ >
         
 
 Обновление каталога образцов (например, обновления через инструменты муравей):
@@ -396,11 +396,11 @@ BlackberryOS обеспечение/пьес:
 
 8.  Открытые `www/` каталог и обновление `plugins.xml` файл. Два плагины изменил их лейблом служба имен. Измените старые записи для захвата и контакт плагины от:
     
-         < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
+         < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>» value="org.apache.cordova.pim.Contact"/ >
         
     Кому:
     
-         < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
+         < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>ы» value="org.apache.cordova.pim.Contact"/ >
         
 
 *   Чтобы обновить до 1.8.0, пожалуйста идет от 1.7.0
@@ -423,11 +423,11 @@ BlackberryOS обеспечение/пьес:
 
 6.  Обновление вашего `www/plugins.xml` файл. Два плагины изменил их лейблом служба имен. Измените старые записи для захвата и контакт плагины от:
     
-        < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
+        < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>» value="org.apache.cordova.pim.Contact"/ >
         
     Кому:
     
-        < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
+        < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>ы» value="org.apache.cordova.pim.Contact"/ >
         
 
 Обновление каталога образцов (например, обновления через инструменты муравей):
@@ -448,8 +448,8 @@ BlackberryOS обеспечение/пьес:
 
 8.  Открытые `www/` каталог и обновление `plugins.xml` файл. Два плагины изменил их лейблом служба имен. Измените старые записи для захвата и контакт плагины от:
     
-         < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
+         < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>» value="org.apache.cordova.pim.Contact"/ >
         
     Кому:
     
-         < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
+         < плагин имя = «<a href="../../../cordova/media/capture/capture.html">Захват</a>а» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «<a href="../../../cordova/contacts/Contact/contact.html">Контакт</a>ы» value="org.apache.cordova.pim.Contact"/ >

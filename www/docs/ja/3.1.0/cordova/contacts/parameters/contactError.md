@@ -20,7 +20,7 @@ license: >
 
 # contactError
 
-連絡先機能のエラー コールバック関数。
+<a href="contactFields.html">連絡先</a>機能のエラー コールバック関数。
 
     function(error) {
         // Handle the error

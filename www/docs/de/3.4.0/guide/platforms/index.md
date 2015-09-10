@@ -28,55 +28,55 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 ## Amazon Fire OS
 
-*   Handbuch für die OS-Plattform von Amazon-Feuer
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   <a href="amazonfireos/index.html">Handbuch für die OS-Plattform von Amazon-Feuer</a>
+*   <a href="amazonfireos/config.html">Amazon Fire OS Konfiguration</a>
+*   <a href="amazonfireos/webview.html">Amazon Fire OS Webansichten für</a>
+*   <a href="amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
 
 ## Android
 
-*   Android-Plattform-Guide
-*   Android-Konfiguration
-*   Android Webansichten für
-*   Android Plugins
-*   Android-Befehlszeilenprogrammen
-*   Aktualisierung von Android
+*   <a href="android/index.html">Android-Plattform-Guide</a>
+*   <a href="android/config.html">Android-Konfiguration</a>
+*   <a href="android/webview.html">Android Webansichten für</a>
+*   <a href="android/plugin.html">Android Plugins</a>
+*   <a href="android/tools.html">Android-Befehlszeilenprogrammen</a>
+*   <a href="android/upgrading.html">Aktualisierung von Android</a>
 
 ## BlackBerry 10
 
-*   Handbuch für die Plattform von BlackBerry 10
-*   BlackBerry 10 Konfiguration
-*   BlackBerry 10 Plugins
-*   BlackBerry 10-Befehlszeilentools
-*   Aktualisieren der BlackBerry 10
+*   <a href="blackberry10/index.html">Handbuch für die Plattform von BlackBerry 10</a>
+*   <a href="blackberry10/config.html">BlackBerry 10 Konfiguration</a>
+*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="blackberry10/tools.html">BlackBerry 10-Befehlszeilentools</a>
+*   <a href="blackberry/upgrading.html">Aktualisieren der BlackBerry</a> 10
 
 ## iOS
 
-*   iOS Platform Guide
-*   iOS Konfiguration
-*   iOS Webansichten für
-*   iOS Plugins
-*   iOS-Befehlszeilenprogrammen
-*   IOS Upgrade
+*   <a href="ios/index.html">iOS Platform Guide</a>
+*   <a href="ios/config.html">iOS Konfiguration</a>
+*   <a href="ios/webview.html">iOS Webansichten für</a>
+*   <a href="ios/plugin.html">iOS Plugins</a>
+*   <a href="ios/tools.html">iOS-Befehlszeilenprogrammen</a>
+*   <a href="ios/upgrading.html">IOS Upgrade</a>
 
 ## Ubuntu
 
-*   Handbuch Ubuntu Plattform
+*   <a href="ubuntu/index.html">Handbuch Ubuntu Plattform</a>
 
 ## Windows Phone
 
-*   Handbuch für die Plattform von Windows Phone-8
-*   Windows Phone 7 Plattform Guide
+*   <a href="wp8/index.html">Handbuch für die Plattform von Windows Phone-8</a>
+*   <a href="wp7/index.html">Windows Phone 7 Plattform Guide</a>
 *   Windows Phone-Konfiguration
-*   Windows Phone Befehlszeilentools
-*   Aktualisieren von Windows Phone
+*   <a href="wp8/tools.html">Windows Phone Befehlszeilentools</a>
+*   <a href="wp8/upgrading.html">Aktualisieren von Windows Phone</a>
 
 ## Windows 8
 
-*   Anleitung zur Windows 8 Platform
-*   Windows 8-Befehlszeilentools
-*   Aktualisieren von Windows 8
+*   <a href="win8/index.html">Anleitung zur Windows 8 Platform</a>
+*   <a href="win8/tools.html">Windows 8-Befehlszeilentools</a>
+*   <a href="win8/upgrading.html">Aktualisieren von Windows 8</a>
 
 ## Tizen
 
-*   Tizen Plattform Guide
+*   <a href="tizen/index.html">Tizen Plattform Guide</a>

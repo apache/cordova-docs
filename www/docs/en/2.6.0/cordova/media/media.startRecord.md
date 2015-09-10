@@ -40,14 +40,14 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
     
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Record audio
     // 
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
+        var mediaRec = new <a href="media.html">Media</a>(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -63,26 +63,26 @@ Quick Example
     }
 
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="../device/device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Record audio
         // 
         function recordAudio() {
             var src = "myrecording.amr";
-            var mediaRec = new Media(src, onSuccess, onError);
+            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
 
             // Record audio
             mediaRec.startRecord();
@@ -91,7 +91,7 @@ Full Example
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -101,7 +101,7 @@ Full Example
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             recordAudio();
         }
     
@@ -120,7 +120,7 @@ Full Example
 
         // Set audio position
         // 
-        function setAudioPosition(position) {
+        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
 
@@ -146,10 +146,10 @@ iOS Quirks
 ----------
 
 - iOS only records to files of type .wav and returns an error if the file name extension is not correct.
-- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the File apis using LocalFileSystem.TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
-- Files can be recorded and played back using the documents URI:
+- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the <a href="../file/fileobj/fileobj.html">File</a> apis using Local<a href="../file/filesystem/filesystem.html"><a href="../file/fileobj/fileobj.html">File</a>System</a>.TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
+- <a href="../file/fileobj/fileobj.html">File</a>s can be recorded and played back using the documents URI:
 
-        var myMedia = new Media("documents://beer.mp3")
+        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("documents://beer.mp3")
 
 Tizen Quirks
 ----------

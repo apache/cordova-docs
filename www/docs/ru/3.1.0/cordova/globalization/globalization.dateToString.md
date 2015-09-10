@@ -31,7 +31,7 @@ license: >
 
 Входящий `date` параметр должен иметь тип`Date`.
 
-Если есть ошибка форматирования даты, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.FORMATTING\_ERROR`.
+Если есть ошибка форматирования даты, то `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 `options`Параметр является необязательным, и его значения по умолчанию являются:
 
@@ -66,7 +66,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString Example</title>
+        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

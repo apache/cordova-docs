@@ -22,7 +22,7 @@ license: >
 
 La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
-*   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi. Nota: questa impostazione su false non ucciderà l'app dopo un evento di pausa, arresterà solo l'esecuzione di codice in webview cordova mentre l'app è in background.
+*   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi. Nota: questa impostazione su false non ucciderà l'app dopo un evento di <a href="../../../cordova/events/events.pause.html">pausa</a>, arresterà solo l'esecuzione di codice in webview cordova mentre l'app è in background.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -42,7 +42,7 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(boolean, impostazioni predefinite a `true` ): controlli se pagine aperto all'interno di un InAppBrowser possono accedere la stessa localStorage e archiviazione WebSQL come pagine aperte con il browser predefinito.
+*   `InAppBrowserStorageEnabled`(boolean, impostazioni predefinite a `true` ): controlli se pagine aperto all'interno di un InAppBrowser possono accedere la stessa <a href="../../../cordova/storage/localstorage/localstorage.html">localStorage</a> e archiviazione WebSQL come pagine aperte con il browser predefinito.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

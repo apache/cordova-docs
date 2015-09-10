@@ -18,20 +18,20 @@ license: >
     under the License.
 ---
 
-MediaFile.getFormatData
+<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData
 =======================
 
 > メディアキャプチャーファイルのフォーマット情報を取得します。
 
-    mediaFile.getFormatData(
-        MediaFileDataSuccessCB successCallback,
-        [MediaFileDataErrorCB errorCallback]
+    media<a href="../../file/fileobj/fileobj.html">File</a>.getFormatData(
+        <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB successCallback,
+        [<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB errorCallback]
     );
 
 概要
 -----------
 
-この関数は、メディアファイルのフォーマット情報の取得を非同期で試みます。もし成功すれば、 MediaFileData オブジェクトを伴った MediaFileDataSuccessCB コールバック関数を呼び出します。もし失敗すれば、 MediaFileDataErrorCB コールバック関数を呼び出します。
+この関数は、メディアファイルのフォーマット情報の取得を非同期で試みます。もし成功すれば、 <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data オブジェクトを伴った <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB コールバック関数を呼び出します。もし失敗すれば、 <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB コールバック関数を呼び出します。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,12 +43,12 @@ MediaFile.getFormatData
 
 BlackBerry WebWorks に関する注意点
 --------------------------
-メディアファイルのフォーマット情報を提供する API はありません。従って、全ての MediaFileData オブジェクトはデフォルト値で返されます。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を提供する API はありません。従って、全ての <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data オブジェクトはデフォルト値で返されます。詳しくは <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data のドキュメントをご覧ください。
 
 Android に関する注意点
 --------------
-メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data のプロパティーがサポートされている訳ではありません。詳しくは <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data のドキュメントをご覧ください。
 
 iOS に関する注意点
 ----------
-メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data のプロパティーがサポートされている訳ではありません。詳しくは <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data のドキュメントをご覧ください。

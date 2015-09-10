@@ -22,11 +22,11 @@ license: >
 
 Ce guide montre comment configurer votre environnement de développement SDK pour déployer des applications de Cordova pour appareils Android. Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   Configuration Android
-*   Android WebViews
-*   Plugins Android
-*   Mise à jour Android
-*   Outils de ligne de commande Android
+*   <a href="config.html">Configuration Android</a>
+*   <a href="webview.html">Android WebViews</a>
+*   <a href="plugin.html">Plugins Android</a>
+*   <a href="upgrading.html">Mise à jour Android</a>
+*   <a href="tools.html">Outils de ligne de commande Android</a>
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 
@@ -70,7 +70,7 @@ Pour modifier l'environnement PATH sur Windows 7 :
 
 *   Cliquez sur **Paramètres système avancés** dans la colonne de gauche.
 
-*   Dans la boîte de dialogue, appuyez sur **Variables d'environnement**.
+*   Dans la boîte de dialogue, appuyez sur **<a href="../../../plugin_ref/spec.html">Variables</a> d'environnement**.
 
 *   Sélectionnez la variable **PATH** et appuyer sur **modifier**.
 

@@ -22,14 +22,14 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird.
 
-    document.addEventListener("pause", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
     
 
 ## Informationen
 
 Das `pause` -Ereignis wird ausgelöst, wenn die einheitlichen Plattform die Anwendung in den Hintergrund, in der Regel, setzt wenn der Benutzer zu einer anderen Anwendung wechselt.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -41,7 +41,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## Kleines Beispiel
 
-    document.addEventListener("pause", onPause, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
     
     function onPause() {
         // Handle the pause event
@@ -53,7 +53,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("pause", onPause, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
         }
     
         // Handle the pause event
@@ -86,6 +86,6 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 In der `pause` Handler, keine Anrufe an die Cordova-API oder native Plugins, die Objective-C durchlaufen funktionieren nicht, zusammen mit interaktiven Aufrufe, z. B. Warnungen oder `console.log()` . Sie werden nur verarbeitet, wenn die app auf der nächsten laufen Schleife fortgesetzt wird.
 
-Die iOS-spezifische `resign` Ereignis ist verfügbar als Alternative zu `pause` , und erkennt, wenn Benutzer die **Lock** -Taste um das Gerät mit der app im Vordergrund ausgeführt zu sperren können. Wenn die app (und Gerät) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `pause` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
+Die iOS-spezifische `resign` Ereignis ist verfügbar als Alternative zu `pause` , und erkennt, wenn Benutzer die **Lock** -Taste um das <a href="../device/device.html">Gerät</a> mit der app im Vordergrund ausgeführt zu sperren können. Wenn die app (und <a href="../device/device.html">Gerät</a>) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `pause` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
 
  [1]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html

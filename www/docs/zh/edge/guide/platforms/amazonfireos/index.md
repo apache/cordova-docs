@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# 亞馬遜火 OS 平臺指南
+# 亞馬遜火 OS <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境部署亞馬遜火 OS 的設備，如 Kindle 火 HDX 科爾多瓦應用軟體。
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   亞馬遜火 OS 配置
-*   亞馬遜火 OS WebViews
-*   亞馬遜火 OS 外掛程式
+*   <a href="config.html">亞馬遜火 OS 配置</a>
+*   <a href="webview.html">亞馬遜火 OS WebViews</a>
+*   <a href="plugin.html">亞馬遜火 OS 外掛程式</a>
 
 ## 簡介
 
@@ -41,7 +41,7 @@ license: >
 
 亞馬遜火 os 開發科爾多瓦的應用程式需要安裝的各種支援檔，包括 android 系統的發展，以及亞馬遜 web 視圖 SDK 所需的一切。 請檢查下面的清單中所需的安裝：
 
-*   命令列介面
+*   <a href="../../cli/index.html">命令列介面</a>
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [亞馬遜 web 視圖 SDK][1]
@@ -53,7 +53,7 @@ license: >
 
 ### Android SDK 和 Apache Ant
 
-從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
+從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您<a href="../../../cordova/storage/storage.html">存儲</a>的開發工具。
 
 你需要在運行 Android SDK 管理器 （ `android` 從命令列） 開始您的科爾多瓦專案前至少一次。 一定要安裝最新版本的 Android SDK 工具和 SDK 平臺**具體 API 級別為 19**。 請關於亞馬遜開發人員門戶如何設置您的開發環境為 Kindle 火 OS 設備的詳細資訊，參閱[您的開發環境設置][5]。
 
@@ -116,7 +116,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 ## 為亞馬遜火 OS 創建新專案
 
-使用 `cordova` 實用程式來建立一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄:
+使用 `cordova` 實用程式來建立一個新的專案，如所述在科爾多瓦的<a href="../../cli/index.html">命令列介面</a>。例如，在一個原始程式碼目錄:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -143,7 +143,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 ### 運行標誌
 
-運行命令接受可選參數作為科爾多瓦的命令列介面文檔中指定，火 OS 也接受額外 `--debug` 將啟用遠端 web 調試鉻的開發人員工具的標誌。
+運行命令接受可選參數作為科爾多瓦的<a href="../../cli/index.html">命令列介面</a>文檔中指定，火 OS 也接受額外 `--debug` 將啟用遠端 web 調試鉻的開發人員工具的標誌。
 
 要使用的開發工具，請輸入：
 
@@ -167,7 +167,7 @@ Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後�
 
 *   選擇**新建專案**功能表項目。
 
-*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**： ![][9]
+*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**<a href="../../next/index.html">下一步</a>**： ![][9]
 
 *   定位到 `hello` ，或無論你創建目錄的專案，然後到 `platforms/amazon-fireos` 子目錄。
 

@@ -20,7 +20,7 @@ license: >
 
 # contacts.create
 
-返回一個新的連絡人物件。
+返回一個新的<a href="contacts.html">連絡人</a>物件。
 
     var contact = navigator.contacts.create(properties);
     
@@ -29,7 +29,7 @@ license: >
 
 `contacts.create`方法是同步的並返回一個新的 `Contact` 物件。
 
-此方法不會保留連絡人物件在設備的連絡人資料庫中，您需要為其調用 `Contact.save` 方法。
+此方法不會保留<a href="contacts.html">連絡人</a>物件在<a href="../device/device.html">設備</a>的<a href="contacts.html">連絡人</a><a href="../storage/database/database.html">資料庫</a>中，您需要為其調用 `Contact.save` 方法。
 
 ## 支援的平臺
 
@@ -48,14 +48,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -68,7 +68,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>Create Contact</p>
       </body>
     </html>

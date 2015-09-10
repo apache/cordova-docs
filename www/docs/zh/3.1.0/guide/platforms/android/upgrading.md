@@ -20,13 +20,13 @@ license: >
 
 # 升級 Android
 
-本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
+本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。
 
 ## 從 3.0.0 升級到 3.1.0
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本-請參閱命令列介面 
+1.  更新 `cordova` CLI 版本-請參閱<a href="../../cli/index.html">命令列介面</a> 
 2.  運行`cordova platform update android`
 
 對於不使用 CLI 科爾多瓦創建的專案，請運行：
@@ -35,7 +35,7 @@ license: >
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
 
 2.  添加您的平臺的科爾多瓦專案，例如：`cordova
 platform add android`.
@@ -56,7 +56,7 @@ platform add android`.
 
 4.  複製在你安裝從任何外掛程式 `src` 子目錄到新專案。
 
-5.  請確保要升級任何棄用 `<plugin>` 從你的舊的引用 `config.xml` 到新檔 `<feature>` 規範。
+5.  請確保要升級任何棄用 `<plugin>` 從你的舊的引用 `config.xml` 到新<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> `<feature>` 規範。
 
 6.  更新對任何引用 `org.apache.cordova.api` 包被`org.apache.cordova`.
 
@@ -76,13 +76,13 @@ platform add android`.
 
 4.  複製新 `cordova.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
-6.  複製 `res/xml/config.xml` 檔，以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，以匹配`framework/res/xml/config.xml`.
 
 7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+8.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.6.0 升級到 2.7.0
 
@@ -94,13 +94,13 @@ platform add android`.
 
 4.  複製新 `cordova-2.7.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.7.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
 7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+8.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.5.0 升級到 2.6.0
 
@@ -112,13 +112,13 @@ platform add android`.
 
 4.  複製新 `cordova-2.6.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
 7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+8.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 運行 `bin/update <project>` 的專案路徑與科爾多瓦原始目錄中列出。
 
@@ -132,13 +132,13 @@ platform add android`.
 
 4.  複製新 `cordova-2.5.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
 7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+8.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.3.0 升級到 2.4.0
 
@@ -150,11 +150,11 @@ platform add android`.
 
 4.  複製新 `cordova-2.4.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+7.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.2.0 升級到 2.3.0
 
@@ -166,11 +166,11 @@ platform add android`.
 
 4.  複製新 `cordova-2.3.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+7.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.1.0 升級到 2.2.0
 
@@ -182,11 +182,11 @@ platform add android`.
 
 4.  複製新 `cordova-2.2.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+7.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.0.0 升級到 2.1.0
 
@@ -198,11 +198,11 @@ platform add android`.
 
 4.  複製新 `cordova-2.1.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+7.  將<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 1.9.0 升級到 2.0.0
 
@@ -214,13 +214,13 @@ platform add android`.
 
 4.  複製新 `cordova-2.0.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
 ### 注意到關於 2.0.0 發佈
 
-`config.xml`將會更換 `cordova.xml` 和 `plugins.xml` 。 這個新的檔是前面兩種的組合。 但是，舊的檔已被否決，和目前仍工作，同時將停止在將來的版本中工作。
+`config.xml`將會更換 `cordova.xml` 和 `plugins.xml` 。 這個新的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>是前面兩種的組合。 但是，舊的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>已被否決，和目前仍工作，同時將停止在將來的版本中工作。
 
 ## 從 1.8.1 升級到 1.9.0
 
@@ -232,7 +232,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.9.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.9.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -250,7 +250,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.8.1.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.8.1.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -264,7 +264,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -278,7 +278,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -316,7 +316,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.6.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.6.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -332,7 +332,7 @@ platform add android`.
 
 4.  複製新 `cordova-1.5.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `cordova-1.5.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -348,7 +348,7 @@ platform add android`.
 
 4.  複製新 `phonegap-1.4.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.4.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -364,7 +364,7 @@ platform add android`.
 
 4.  複製新 `phonegap-1.3.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -380,7 +380,7 @@ platform add android`.
 
 4.  複製新 `phonegap-1.2.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -396,7 +396,7 @@ platform add android`.
 
 4.  複製新 `phonegap-1.1.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.1.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
@@ -410,6 +410,6 @@ platform add android`.
 
 4.  複製新 `phonegap-1.0.0.js` 到您的專案。
 
-5.  更新您的 html 代碼，使用新的 `phonegap-1.0.0.js` 檔。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 6.  添加 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.

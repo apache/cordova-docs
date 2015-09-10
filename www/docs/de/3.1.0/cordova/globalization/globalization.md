@@ -24,24 +24,24 @@ Ruft Informationen und führt durch spezifisch für Gebietsschema und der Zeitzo
 
 ## Objekte
 
-*   GlobalizationError
+*   <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>
 
 ## Methoden
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   <a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a>
+*   <a href="globalization.getLocaleName.html">globalization.getLocaleName</a>
+*   <a href="globalization.dateToString.html">globalization.dateToString</a>
+*   <a href="globalization.stringToDate.html">globalization.stringToDate</a>
+*   <a href="globalization.getDatePattern.html">globalization.getDatePattern</a>
+*   <a href="globalization.getDateNames.html">globalization.getDateNames</a>
+*   <a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a>
+*   <a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a>
+*   <a href="globalization.numberToString.html">globalization.numberToString</a>
+*   <a href="globalization.stringToNumber.html">globalization.stringToNumber</a>
+*   <a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a>
+*   <a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a>
 
-## Geltungsbereich von Variablen
+## Geltungsbereich von <a href="../../plugin_ref/spec.html">Variablen</a>
 
 Das `globalization` -Objekt ist ein untergeordnetes Element des der `navigator` -Objekt, und daher hat globalen Gültigkeitsbereich.
 
@@ -51,7 +51,7 @@ Das `globalization` -Objekt ist ein untergeordnetes Element des der `navigator` 
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.globalization
         $ cordova plugin ls
@@ -68,4 +68,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

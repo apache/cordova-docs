@@ -24,24 +24,24 @@ license: >
 
 ## 개체
 
-*   GlobalizationError
+*   <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>
 
 ## 메서드
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   <a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a>
+*   <a href="globalization.getLocaleName.html">globalization.getLocaleName</a>
+*   <a href="globalization.dateToString.html">globalization.dateToString</a>
+*   <a href="globalization.stringToDate.html">globalization.stringToDate</a>
+*   <a href="globalization.getDatePattern.html">globalization.getDatePattern</a>
+*   <a href="globalization.getDateNames.html">globalization.getDateNames</a>
+*   <a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a>
+*   <a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a>
+*   <a href="globalization.numberToString.html">globalization.numberToString</a>
+*   <a href="globalization.stringToNumber.html">globalization.stringToNumber</a>
+*   <a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a>
+*   <a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a>
 
-## 변수 범위
+## <a href="../../plugin_ref/spec.html">변수</a> 범위
 
 `globalization`개체의 자식 인지는 `navigator` 개체 및 따라서 전역 범위를 갖는.
 
@@ -51,7 +51,7 @@ license: >
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.globalization
         $ cordova plugin ls
@@ -68,4 +68,4 @@ license: >
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.

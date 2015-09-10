@@ -20,4 +20,4 @@ license: >
 
 # database_name
 
-데이터베이스의 이름입니다.
+<a href="../database/database.html">데이터베이스</a>의 이름입니다.

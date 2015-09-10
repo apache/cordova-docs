@@ -39,62 +39,62 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    function checkConnection() {
+    function check<a href="connection.html">Connection</a>() {
         var networkState = navigator.connection.type;
 
         var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.CELL]     = 'Cell generic connection';
-        states[Connection.NONE]     = 'No network connection';
+        states[<a href="connection.html">Connection</a>.UNKNOWN]  = 'Unknown connection';
+        states[<a href="connection.html">Connection</a>.ETHERNET] = 'Ethernet connection';
+        states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi connection';
+        states[<a href="connection.html">Connection</a>.CELL_2G]  = 'Cell 2G connection';
+        states[<a href="connection.html">Connection</a>.CELL_3G]  = 'Cell 3G connection';
+        states[<a href="connection.html">Connection</a>.CELL_4G]  = 'Cell 4G connection';
+        states[<a href="connection.html">Connection</a>.CELL]     = 'Cell generic connection';
+        states[<a href="connection.html">Connection</a>.NONE]     = 'No network connection';
 
-        alert('Connection type: ' + states[networkState]);
+        alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
     }
 
-    checkConnection();
+    check<a href="connection.html">Connection</a>();
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type Example</title>
+        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            checkConnection();
+        function on<a href="../device/device.html">Device</a>Ready() {
+            check<a href="connection.html">Connection</a>();
         }
 
-            function checkConnection() {
+            function check<a href="connection.html">Connection</a>() {
                 var networkState = navigator.connection.type;
 
                 var states = {};
-                states[Connection.UNKNOWN]  = 'Unknown connection';
-                states[Connection.ETHERNET] = 'Ethernet connection';
-                states[Connection.WIFI]     = 'WiFi connection';
-                states[Connection.CELL_2G]  = 'Cell 2G connection';
-                states[Connection.CELL_3G]  = 'Cell 3G connection';
-                states[Connection.CELL_4G]  = 'Cell 4G connection';
-                states[Connection.CELL]     = 'Cell generic connection';
-                states[Connection.NONE]     = 'No network connection';
+                states[<a href="connection.html">Connection</a>.UNKNOWN]  = 'Unknown connection';
+                states[<a href="connection.html">Connection</a>.ETHERNET] = 'Ethernet connection';
+                states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi connection';
+                states[<a href="connection.html">Connection</a>.CELL_2G]  = 'Cell 2G connection';
+                states[<a href="connection.html">Connection</a>.CELL_3G]  = 'Cell 3G connection';
+                states[<a href="connection.html">Connection</a>.CELL_4G]  = 'Cell 4G connection';
+                states[<a href="connection.html">Connection</a>.CELL]     = 'Cell generic connection';
+                states[<a href="connection.html">Connection</a>.NONE]     = 'No network connection';
 
-                alert('Connection type: ' + states[networkState]);
+                alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
             }
 
         </script>
@@ -107,7 +107,7 @@ Full Example
 API Change
 ----------
 
-Until Cordova 2.3.0, the `Connection` object was accessed via
+Until Cordova 2.3.0, the `<a href="connection.html">Connection</a>` object was accessed via
 `navigator.network.connection`, after which it was changed to
 `navigator.connection` to match the W3C specification.  It's still
 available at its original location, but is deprecated and will
@@ -117,17 +117,17 @@ iOS Quirks
 ----------
 
 - iOS cannot detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return `Connection.CELL` in a future release.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL_2G` for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return `<a href="connection.html">Connection</a>.CELL` in a future release.
 
 Windows Phone Quirks
 --------------------
 
-- When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- When running in the emulator, always detects `navigator.connection.type` as `<a href="connection.html">Connection</a>.UNKNOWN`.
 - Windows Phone cannot detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL` for all cellular data.
 
 Tizen Quirks
 --------------------
 
 - Tizen can only detect a WiFi or cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL_2G` for all cellular data.

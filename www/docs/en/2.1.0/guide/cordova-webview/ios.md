@@ -46,10 +46,10 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 6. **Choose** the radio-button **"Create groups for any added folders"**, select the **Finish** button
 7. **Drag and drop** the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the CordovaLib sub-folder)
 8. Select `CordovaLib.xcodeproj` in the Project Navigator
-9. Press the key combination **Option-Command-1** to show the **File Inspector**
-10. Choose **"Relative to Group"** in the **File Inspector** for the drop-down menu for **Location** 
+9. Press the key combination **Option-Command-1** to show the **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector**
+10. Choose **"Relative to Group"** in the **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** for the drop-down menu for **Location** 
 11. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
-12. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+12. Add `-all_load` and `-Obj-C` - for the **"Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>"** value
 13. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
 14. Expand **"Link Binaries with Libraries"** 
 15. Select the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
@@ -59,11 +59,11 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
         AudioToolbox.framework
         AVFoundation.framework
         CoreLocation.framework
-        MediaPlayer.framework
+        <a href="../../cordova/media/media.html">Media</a>Player.framework
         QuartzCore.framework
         SystemConfiguration.framework
         MobileCoreServices.framework
-        CoreMedia.framework
+        Core<a href="../../cordova/media/media.html">Media</a>.framework
 
 16. Expand **"Target Dependencies"** - the top box labeled like this if you have multiple boxes!
 17. Select the **"+" button**, and add the `CordovaLib` build product

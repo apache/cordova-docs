@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Medienfehler
+# <a href="../Parameters/mediaError.html"><a href="../media.html">Medien</a>fehler</a>
 
 A `MediaError` Objekt wird zurückgegeben, um die `mediaError` Callback-Funktion, wenn ein Fehler auftritt.
 

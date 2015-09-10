@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-onSuccess callback function that provides the compass heading information via a `compassHeading` object.
+onSuccess callback function that provides the compass heading information via a `<a href="compassHeading.html">compassHeading</a>` object.
 
     function(heading) {
         // Do something
@@ -28,9 +28,9 @@ onSuccess callback function that provides the compass heading information via a 
 
 ## Parameters
 
-- __heading__: The heading information. _(compassHeading)_
+- __heading__: The heading information. _(<a href="compassHeading.html">compassHeading</a>)_
 
-## Example
+## <a href="../../storage/storage.opendatabase.html">Example</a>
 
     function onSuccess(heading) {
         alert('Heading: ' + heading.magneticHeading);

@@ -57,8 +57,8 @@ The `options.formatLength` can be `short`, `medium`, `long`, or
 time`.
 
 If there is an error parsing the date string, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.PARSING\_ERROR`.
+executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
+error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR`.
 
 ## Supported Platforms
 
@@ -67,7 +67,7 @@ error's expected code is `GlobalizationError.PARSING\_ERROR`.
 - iOS
 - Windows Phone 8
 
-## Quick Example
+## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
 When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `month:8 day:25 year:2012`. Note
@@ -83,12 +83,12 @@ integer represents an array index.
         {selector: 'date'}
     );
 
-## Full Example
+## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate Example</title>
+        <title>stringToDate <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

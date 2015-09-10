@@ -29,7 +29,7 @@ Obtenir l'identificateur de chaîne pour la langue du client actuel.
 
 Retourne la chaîne d'identificateur de langue à la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
 
-S'il y a une erreur d'obtention de la langue, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+S'il y a une erreur d'obtention de la langue, puis le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## Plates-formes prises en charge
 
@@ -53,7 +53,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela doit afficher
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage Example</title>
+        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -39,14 +39,14 @@ media.startRecord
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // オーディオの録音
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
+        var mediaRec = new <a href="media.html">Media</a>(src,
             // 呼び出し成功
             function() {
                 console.log("recordAudio():Audio Success");
@@ -62,26 +62,26 @@ media.startRecord
     }
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // オーディオの録音
         //
         function recordAudio() {
             var src = "myrecording.amr";
-            var mediaRec = new Media(src, onSuccess, onError);
+            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
 
             // オーディオの録音
             mediaRec.startRecord();
@@ -90,7 +90,7 @@ media.startRecord
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -100,7 +100,7 @@ media.startRecord
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             recordAudio();
         }
 
@@ -119,7 +119,7 @@ media.startRecord
 
         // 再生位置をセット
         //
-        function setAudioPosition(position) {
+        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
 
@@ -144,7 +144,7 @@ BlackBerry WebWorks に関する注意点
 iOS に関する注意点
 ----------
 
-- 録音するためのファイルは既に .wav 形式で存在していなければなりません。 File API 群を使用することでファイルを作成することができます。
+- 録音するためのファイルは既に .wav 形式で存在していなければなりません。 <a href="../file/fileobj/fileobj.html">File</a> API 群を使用することでファイルを作成することができます。
 
 Tizen に関する注意点
 ----------

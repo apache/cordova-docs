@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# アマゾン火 OS プラットフォーム ガイド
+# アマゾン火 OS プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドの Kindle 火災 HDX などのアマゾン火 OS デバイス Cordova アプリを展開する SDK の開発環境を設定する方法を示します。
+この<a href="../../../index.html">ガイド</a>の Kindle 火災 HDX などのアマゾン火 OS デバイス Cordova アプリを展開する SDK の開発環境を設定する方法を示します。
 
 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   アマゾン火 OS 構成
-*   アマゾン火 OS web 表示
-*   アマゾン火 OS プラグイン
+*   <a href="config.html">アマゾン火 OS 構成</a>
+*   <a href="webview.html">アマゾン火 OS web 表示</a>
+*   <a href="plugin.html">アマゾン火 OS プラグイン</a>
 
 ## 要件、およびサポート
 
@@ -88,7 +88,7 @@ Windows 7 を道の環境を変更: する
 
 ## SDK でプロジェクトを開く
 
-使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+使用、 `cordova` コルドバの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

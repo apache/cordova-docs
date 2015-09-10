@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# CaptureErrorCB
+# <a href="CaptureError.html">CaptureError</a>CB
 
-> 如果媒體捕獲操作期間發生錯誤，調用。
+> 如果<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>操作期間發生錯誤，調用。
 
-    function captureError( CaptureError error ) { ... };
+    function captureError( <a href="CaptureError.html">CaptureError</a> error ) { ... };
     
 
 ## 說明
 
-如果發生錯誤時試圖發起一個媒體捕獲操作，執行此函數。 故障情形包括捕獲應用程式正忙、 捕獲操作已經發生，或使用者取消該操作之前捕獲任何媒體檔案時。
+如果發生錯誤時試圖發起一個<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>操作，執行此函數。 故障情形包括<a href="capture.html">捕獲</a>應用程式正忙、 <a href="capture.html">捕獲</a>操作已經發生，或使用者取消該操作之前<a href="capture.html">捕獲</a>任何<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案時。
 
-此函數執行與 `CaptureError` 物件，其中包含適當的錯誤`code`.
+此函數執行與 `<a href="CaptureError.html">CaptureError</a>` 物件，其中包含適當的錯誤`code`.
 
 ## 快速的示例
 
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };

@@ -37,7 +37,7 @@ The details of how a UUID is generated are determined by the device manufacturer
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
     // Android: Returns a random 64-bit integer (as a string, again!)
     //          The integer is generated on the device's first boot
@@ -45,7 +45,7 @@ The details of how a UUID is generated are determined by the device manufacturer
     // BlackBerry: Returns the PIN number of the device
     //             This is a nine-digit unique integer (as a string, though!)
     //
-    // iPhone: (Paraphrased from the UIDevice Class documentation)
+    // iPhone: (Paraphrased from the UI<a href="device.html">Device</a> Class documentation)
     //         Returns a string of hash values created from multiple hardware identifies.
     //         It is guaranteed to be unique for every device and cannot be tied
     //         to the user account.
@@ -55,29 +55,29 @@ The details of how a UUID is generated are determined by the device manufacturer
     // unique to every GSM and UMTS mobile phone.
     var deviceID = device.uuid;
 
-## Full Example
+## Full <a href="../storage/storage.opendatabase.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
+            element.innerHTML = '<a href="device.html">Device</a> Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
+                                '<a href="device.html">Device</a> Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
+                                '<a href="device.html">Device</a> Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                '<a href="device.html">Device</a> UUID: '     + device.uuid     + '<br />' +
+                                '<a href="device.html">Device</a> Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
 
         </script>

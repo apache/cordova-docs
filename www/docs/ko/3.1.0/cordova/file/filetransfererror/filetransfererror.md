@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileTransferError
+# <a href="../filetransfer/filetransfer.html">FileTransfer</a>Error
 
-A `FileTransferError` 오류가 발생 하면 오류 콜백 개체 전달 됩니다.
+A `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error` 오류가 발생 하면 오류 콜백 개체 전달 됩니다.
 
 ## 속성
 
@@ -30,15 +30,15 @@ A `FileTransferError` 오류가 발생 하면 오류 콜백 개체 전달 됩니
 
 *   **대상**: 대상 URI. (문자열)
 
-*   **http_status**: HTTP 상태 코드. 이 특성은 응답 코드를 HTTP 연결에서 수신에 사용할 수 있습니다. (수)
+*   **http_status**: HTTP 상태 코드. 이 특성은 응답 코드를 HTTP <a href="../../connection/connection.html">연결</a>에서 수신에 사용할 수 있습니다. (수)
 
 ## 상수
 
-*   `FileTransferError.FILE_NOT_FOUND_ERR`
-*   `FileTransferError.INVALID_URL_ERR`
-*   `FileTransferError.CONNECTION_ERR`
-*   `FileTransferError.ABORT_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.FILE_NOT_FOUND_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.INVALID_URL_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.CONNECTION_ERR`
+*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.ABORT_ERR`
 
 ## 설명
 
-`FileTransferError`업로드 하거나 파일을 다운로드 하는 경우 오류가 발생 하면 오류 콜백 개체 전달 됩니다.
+`<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error`업로드 하거나 <a href="../fileobj/fileobj.html">파일</a>을 다운로드 하는 경우 오류가 발생 하면 오류 콜백 개체 전달 됩니다.

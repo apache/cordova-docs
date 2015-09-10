@@ -54,7 +54,7 @@ Eseguire il `create` comando, specificando il percorso esistente per il progetto
 
 È possibile ottenere ulteriori informazioni firma, distribuendo applicazioni iOS, creazione di un certificato e profilo su [iOS Developer Library][2] di provisioning.
 
- [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html
+ [2]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistribution<a href="../../../index.html">Guide</a>/ConfiguringYourApp/ConfiguringYourApp.html
 
 Per firmare l'app a Cordova è necessario quanto segue:
 
@@ -64,8 +64,8 @@ Per firmare l'app a Cordova è necessario quanto segue:
 
 *   Codice firma regole delle risorse ( `--codeSignResourceRules` ) (opzionale): consente di specificare le regole di risorsa firma personalizzata.
 
- [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
- [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
+ [3]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistribution<a href="../../../index.html">Guide</a>/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW6
+ [4]: https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistribution<a href="../../../index.html">Guide</a>/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW61
 
 Questi parametri possono essere specificati utilizzando gli argomenti della riga di comando sopra per `compile` o `run` script:
 

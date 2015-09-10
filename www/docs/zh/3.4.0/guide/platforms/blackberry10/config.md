@@ -32,6 +32,6 @@ license: >
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` 或預設的 `enable` ）： 設置為 `disable` 重寫 web 安全設置，允許訪問遠端內容從未知的來源。 此首選項的目的是作為發展方便只，所以之前將它刪除包裝分發您的應用程式。 發佈應用程式，所有 Uri 都應已知和白名單使用 `<access>` 元素，域白名單指南中所述。
+*   `WebSecurity`( `disable` 或預設的 `enable` ）： 設置為 `disable` 重寫 web 安全設置，允許訪問遠端內容從未知的來源。 此首選項的目的是作為發展方便只，所以之前將它刪除包裝分發您的應用程式。 發佈應用程式，所有 Uri 都應已知和白名單使用 `<access>` 元素，域<a href="../../appdev/whitelist/index.html">白名單指南</a>中所述。
     
         <preference name="WebSecurity" value="disable"/>

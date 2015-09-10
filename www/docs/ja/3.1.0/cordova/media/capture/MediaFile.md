@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# メディアファイル
+# <a href="../media.html">メディア</a><a href="../../file/fileobj/fileobj.html">ファイル</a>
 
-> メディア キャプチャ ファイルのプロパティをカプセル化します。
+> <a href="../media.html">メディア</a> <a href="capture.html">キャプチャ</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>のプロパティをカプセル化します。
 
 ## プロパティ
 
-*   **名前**: パス情報なしのファイルの名前。（，）
+*   **名前**: パス情報なしの<a href="../../file/fileobj/fileobj.html">ファイル</a>の名前。（，）
 
-*   **fullPath**: 名を含むファイルの完全パス。（，）
+*   **fullPath**: 名を含む<a href="../../file/fileobj/fileobj.html">ファイル</a>の完全パス。（，）
 
-*   **タイプ**: ファイルの mime の種類 (，)
+*   **タイプ**: <a href="../../file/fileobj/fileobj.html">ファイル</a>の mime の種類 (，)
 
-*   **ファイルサイズ**: 日付と時刻、ファイルが最後に変更されました。（日）
+*   **<a href="../../file/fileobj/fileobj.html">ファイル</a>サイズ**: 日付と時刻、<a href="../../file/fileobj/fileobj.html">ファイル</a>が最後に変更されました。（日）
 
-*   **サイズ**: バイトで、ファイルのサイズ。(数)
+*   **サイズ**: バイトで、<a href="../../file/fileobj/fileobj.html">ファイル</a>のサイズ。(数)
 
 ## メソッド
 
-*   **MediaFile.getFormatData**: メディア ファイルの形式情報を取得します。
+*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: <a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>の形式情報を取得します。

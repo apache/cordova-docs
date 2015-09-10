@@ -27,21 +27,21 @@ license: >
 ## Объекты
 
 *   Захват
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+*   <a href="captureImageOptions.html">CaptureImageOptions</a>
+*   <a href="captureVideoOptions.html">CaptureVideoOptions</a>
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+*   <a href="ConfigurationData.html">ConfigurationData</a>
+*   <a href="MediaFile.html">MediaFile</a>
+*   <a href="MediaFile.html">MediaFile</a>Data
 
 ## Методы
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   <a href="captureAudio.html">capture.captureAudio</a>
+*   <a href="captureImage.html">capture.captureImage</a>
+*   <a href="captureVideo.html">capture.captureVideo</a>
+*   <a href="<a href="MediaFile.html">MediaFile</a>.getFormatData.html"><a href="MediaFile.html">MediaFile</a>.getFormatData</a>
 
 ## Сфера
 
@@ -53,19 +53,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Свойства
 
-*   **supportedAudioModes**: аудио записи форматы, поддерживаемые устройством. (ConfigurationData[])
+*   **supportedAudioModes**: аудио записи форматы, поддерживаемые устройством. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedImageModes**: запись изображения размеры и форматы, поддерживаемые устройством. (ConfigurationData[])
+*   **supportedImageModes**: запись изображения размеры и форматы, поддерживаемые устройством. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedVideoModes**: запись видео резолюций и форматы, поддерживаемые устройством. (ConfigurationData[])
+*   **supportedVideoModes**: запись видео резолюций и форматы, поддерживаемые устройством. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 ## Методы
 
-*   `capture.captureAudio`: Запуск приложения устройства записи звука для записи аудио клипы.
+*   `<a href="captureAudio.html">capture.captureAudio</a>`: Запуск приложения устройства записи звука для записи аудио клипы.
 
-*   `capture.captureImage`: Запуск приложения камеры устройства принимать фотографии.
+*   `<a href="captureImage.html">capture.captureImage</a>`: Запуск приложения камеры устройства принимать фотографии.
 
-*   `capture.captureVideo`: Запуск приложения видеомагнитофон устройства для записи видео.
+*   `<a href="captureVideo.html">capture.captureVideo</a>`: Запуск приложения видеомагнитофон устройства для записи видео.
 
 ## Поддерживаемые платформы
 

@@ -24,6 +24,6 @@ license: >
 
 ## 示例
 
-    function(CompassError) {
+    function(<a href="../compassError/compassError.html">CompassError</a>) {
         // Handle the error
     }

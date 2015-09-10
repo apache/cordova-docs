@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-FileTransferError
+<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error
 ========
 
-A `FileTransferError` object is returned via the error callback when an error occurs.
+A `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` object is returned via the error callback when an error occurs.
 
 Properties
 ----------
@@ -34,11 +34,11 @@ Properties
 Constants
 ---------
 
-- `FileTransferError.FILE_NOT_FOUND_ERR`
-- `FileTransferError.INVALID_URL_ERR`
-- `FileTransferError.CONNECTION_ERR`
+- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.FILE_NOT_FOUND_ERR`
+- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.INVALID_URL_ERR`
+- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.CONNECTION_ERR`
 
 Description
 -----------
 
-The `FileTransferError` object is returned via the error callback  when an error occurs when uploading a file.
+The `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` object is returned via the error callback  when an error occurs when uploading a file.

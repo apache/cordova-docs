@@ -20,13 +20,13 @@ license: >
 
 # ContactFindOptions
 
-Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filtern einen `contacts.find` Betrieb.
+Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filtern einen `<a href="../contacts.find.html">contacts.find</a>` Betrieb.
 
 ## Eigenschaften
 
-*   **Filter**: die zu suchende Zeichenfolge verwendet, um Kontakte zu finden. *(DOM-String und enthält)* (Standard:`""`)
+*   **Filter**: die zu suchende Zeichenfolge verwendet, um <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a> zu finden. *(DOM-String und enthält)* (Standard:`""`)
 
-*   **mehrere**: bestimmt, ob der Suchvorgang mehrere Kontakte gibt. *(Boolesch)* (Standard:`false`)
+*   **mehrere**: bestimmt, ob der Suchvorgang mehrere <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a> gibt. *(Boolesch)* (Standard:`false`)
 
 ## Unterstützte Plattformen
 
@@ -46,7 +46,7 @@ Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filte
     };
     
     // error callback
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
@@ -57,7 +57,7 @@ Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filte
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## Vollständiges Beispiel
@@ -65,14 +65,14 @@ Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filte
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -84,7 +84,7 @@ Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filte
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filte
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>

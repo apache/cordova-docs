@@ -42,7 +42,7 @@ license: >
 
 ## 詳細
 
-`ContactAddress`オブジェクトの連絡先の 1 つのアドレスのプロパティが格納されます。 A `Contact` オブジェクトで 1 つ以上のアドレスを含めることができます、 `ContactAddress[]` 配列。
+`ContactAddress`オブジェクトの<a href="../parameters/contactFields.html">連絡先</a>の 1 つのアドレスのプロパティが格納されます。 A `Contact` オブジェクトで 1 つ以上のアドレスを含めることができます、 `ContactAddress[]` 配列。
 
 ## サポートされているプラットフォーム
 
@@ -71,15 +71,15 @@ license: >
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
     // find all contacts
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 完全な例
@@ -87,23 +87,23 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // find all contacts
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -126,14 +126,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -141,13 +141,13 @@ license: >
 
 ## アンドロイド 2.X 癖
 
-*   **県**: サポートされていない返す `false` 2.X の Android デバイスで。
+*   **県**: サポートされていない返す `false` 2.X の Android <a href="../../device/device.html">デバイス</a>で。
 
 ## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
 
-*   **県**： 戻る、BlackBerry デバイスでサポートされていません`false`.
+*   **県**： 戻る、BlackBerry <a href="../../device/device.html">デバイス</a>でサポートされていません`false`.
 
-*   **種類**: 部分的にサポートされます。連絡先ごとの 1 つだけ各*仕事*と*家庭*の種類のアドレスを格納できます。
+*   **種類**: 部分的にサポートされます。<a href="../parameters/contactFields.html">連絡先</a>ごとの 1 つだけ各*仕事*と*家庭*の種類のアドレスを格納できます。
 
 *   **フォーマット**： 部分的にサポートされます。すべての BlackBerry アドレス フィールドの連結を返します。
 
@@ -163,6 +163,6 @@ license: >
 
 ## iOS の癖
 
-*   **県**: 戻る iOS デバイスでサポートされていません`false`.
+*   **県**: 戻る iOS <a href="../../device/device.html">デバイス</a>でサポートされていません`false`.
 
 *   **フォーマット**: 現在サポートされていません。

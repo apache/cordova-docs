@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-FileSystem
+<a href="../fileobj/fileobj.html">File</a>System
 ==========
 
 このオブジェクトはファイルシステムを表します。
@@ -27,12 +27,12 @@ FileSystem
 ----------
 
 - __name:__ ファイルシステムの名前を表します _(DOMString)_
-- __root:__ ファイルシステムのルートディレクトリを表します _(DirectoryEntry)_
+- __root:__ ファイルシステムのルートディレクトリを表します _(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)_
 
 詳細
 -------
 
-`FileSystem` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `DirectoryEntry` オブジェクトを保持します。
+`<a href="../fileobj/fileobj.html">File</a>System` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` オブジェクトを保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +42,7 @@ FileSystem
 - iOS
 - Windows Phone 7 (Mango)
 
-File System の使用例
+<a href="../fileobj/fileobj.html">File</a> System の<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------------------
 
     function onSuccess(fileSystem) {
@@ -51,30 +51,30 @@ File System の使用例
     }
 
     // ファイルシステムをリクエスト
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, null);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System の使用例</title>
+        <title><a href="../fileobj/fileobj.html">File</a> System の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../fileobj/fileobj.html">File</a>SystemSuccess, fail);
         }
 
-        function onFileSystemSuccess(fileSystem) {
+        function on<a href="../fileobj/fileobj.html">File</a>SystemSuccess(fileSystem) {
             console.log(fileSystem.name);
             console.log(fileSystem.root.name);
         }
@@ -86,7 +86,7 @@ File System の使用例
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>File System</p>
+        <h1><a href="../../storage/database/database.html">Example</a></h1>
+        <p><a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>

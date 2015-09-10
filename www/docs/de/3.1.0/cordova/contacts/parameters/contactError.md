@@ -20,7 +20,7 @@ license: >
 
 # contactError
 
-Fehler Callback-Funktion für Kontakt-Funktionen.
+Fehler Callback-Funktion für <a href="../Contact/contact.html">Kontakt</a>-Funktionen.
 
     function(error) {
         // Handle the error

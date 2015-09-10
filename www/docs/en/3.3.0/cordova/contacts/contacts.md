@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-# Contacts
+# <a href="Contact/contact.html">Contact</a>s
 
 > The `contacts` object provides access to the device contacts database.
 
 __WARNING__: Collection and use of contact data raises
 important privacy issues.  Your app's privacy policy should discuss
 how the app uses contact data and whether it is shared with any other
-parties.  Contact information is considered sensitive because it
+parties.  <a href="Contact/contact.html">Contact</a> information is considered sensitive because it
 reveals the people with whom a person communicates.  Therefore, in
 addition to the app's privacy policy, you should strongly consider
 providing a just-in-time notice before the app accesses or uses
@@ -37,29 +37,29 @@ marketplaces may require the app to provide a just-in-time notice and
 obtain the user's permission before accessing contact data.  A
 clear and easy-to-understand user experience surrounding the use of
 contact data helps avoid user confusion and perceived misuse of
-contact data.  For more information, please see the Privacy Guide.
+contact data.  For more information, please see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.
 
 ## Methods
 
-- contacts.create
-- contacts.find
+- <a href="contacts.create.html">contacts.create</a>
+- <a href="contacts.find.html">contacts.find</a>
 
 ## Arguments
 
-- contactFields
-- contactSuccess
-- contactError
-- contactFindOptions
+- <a href="parameters/contactFields.html">contactFields</a>
+- <a href="parameters/contactSuccess.html">contactSuccess</a>
+- <a href="parameters/contactError.html">contactError</a>
+- <a href="parameters/contactFindOptions.html">contactFindOptions</a>
 
 ## Objects
 
-- Contact
-- ContactName
-- ContactField
-- ContactAddress
-- ContactOrganization
-- ContactFindOptions
-- ContactError
+- <a href="Contact/contact.html">Contact</a>
+- <a href="Contact/contact.html">Contact</a>Name
+- <a href="Contact/contact.html">Contact</a>Field
+- <a href="Contact/contact.html">Contact</a>Address
+- <a href="Contact/contact.html">Contact</a>Organization
+- <a href="Contact/contact.html">Contact</a>FindOptions
+- <a href="Contact/contact.html">Contact</a>Error
 
 ## Accessing the Feature
 
@@ -78,8 +78,8 @@ platform-specific configuration settings described below:
 * Amazon Fire OS
 
         (in app/res/xml/config.xml)
-        <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+        <feature name="<a href="Contact/contact.html">Contact</a>s">
+            <param name="android-package" value="org.apache.cordova.contacts.<a href="Contact/contact.html">Contact</a>Manager" />
         </feature>
 
         (in app/AndroidManifest.xml)      
@@ -90,8 +90,8 @@ platform-specific configuration settings described below:
 * Android
 
         (in app/res/xml/config.xml)
-        <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+        <feature name="<a href="Contact/contact.html">Contact</a>s">
+            <param name="android-package" value="org.apache.cordova.contacts.<a href="Contact/contact.html">Contact</a>Manager" />
         </feature>
 
         (in app/AndroidManifest.xml)      
@@ -103,13 +103,13 @@ platform-specific configuration settings described below:
 
         (in www/config.xml)
 
-        <feature name="Contacts" value="Contacts"/>
+        <feature name="<a href="Contact/contact.html">Contact</a>s" value="<a href="Contact/contact.html">Contact</a>s"/>
         <rim:permit>access_pimdomain_contacts</rim:permit>
 
 * iOS (in the named application directory's `config.xml`)
 
-        <feature name="Contacts">
-            <param name="ios-package" value="CDVContacts" />
+        <feature name="<a href="Contact/contact.html">Contact</a>s">
+            <param name="ios-package" value="CDV<a href="Contact/contact.html">Contact</a>s" />
         </feature>
 
 * FirefoxOS
@@ -137,4 +137,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.

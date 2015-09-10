@@ -20,7 +20,7 @@ license: >
 
 # プラグイン仕様
 
-`plugin.xml`ファイル内の XML ドキュメントは、 `plugins` 名前空間: `http://apache.org/cordova/ns/plugins/1.0` 。 トップが含まれています `plugin` のプラグインを定義する要素とプラグインの構造を定義する子要素。
+`plugin.xml`<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>内の XML ドキュメントは、 `plugins` 名前空間: `http://apache.org/cordova/ns/plugins/1.0` 。 トップが含まれています `plugin` のプラグインを定義する要素とプラグインの構造を定義する子要素。
 
 サンプル プラグイン要素:
 
@@ -35,7 +35,7 @@ license: >
 
 `plugin`要素は、プラグイン マニフェストのトップレベルの要素です。これは次の属性の特徴：
 
-*   `xmlns`(必須): プラグイン名前空間 `http://apache.org/cordova/ns/plugins/1.0` 。 ドキュメントに追加するタグなどの他の名前空間から XML が含まれる場合、 `AndroidManifest.xml` ファイル、それらの名前空間はトップレベルの要素にも含めなければなりません。
+*   `xmlns`(必須): プラグイン名前空間 `http://apache.org/cordova/ns/plugins/1.0` 。 ドキュメントに追加するタグなどの他の名前空間から XML が含まれる場合、 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>、それらの名前空間はトップレベルの要素にも含めなければなりません。
 
 *   `id`(必須): 逆ドメイン スタイルのようなプラグインの識別子`com.alunny.foo`
 
@@ -94,7 +94,7 @@ license: >
 
 *   `version`（必須）： バージョンをインストールするために、フレームワークがあります。
 
-*   `scriptSrc`(必須): カスタム フレームワークのバージョンは plugman に指示するスクリプト ファイルです。理想的には、このファイルは、プラグイン ディレクトリの最上位レベル ディレクトリ内する必要があります。
+*   `scriptSrc`(必須): カスタム フレームワークのバージョンは plugman に指示するスクリプト <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>です。理想的には、この<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>は、プラグイン ディレクトリの最上位レベル ディレクトリ内する必要があります。
 
 *   `platform`(必須): あなたのフレームワークをサポートするプラットフォーム。 ワイルドカードを使用することがあります ' *' すべてのプラットフォームのサポートされていると言って、'android|ios|blackberry10' のようなパイプ文字または '人造人間' のような単一のプラットフォームだけで複数指定します。
 
@@ -143,7 +143,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 ## `<asset>`要素
 
-1 つまたは複数の要素に Cordova アプリをコピーするディレクトリまたはファイル一覧 `www` ディレクトリ。例:
+1 つまたは複数の要素に Cordova アプリをコピーするディレクトリまたは<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>一覧 `www` ディレクトリ。例:
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -153,32 +153,32 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 すべて `<asset>` タグを両方必要とする `src` と `target` の属性。 Web だけのプラグインが含まれている主 `<asset>` の要素。 どんな `<asset>` 要素内にネストされた `<platform>` 要素プラットフォーム固有の web 資産を指定して、以下のとおりです。 属性は次のとおりです。
 
-*   `src`(必須): ファイルまたはディレクトリが含まれているプラグイン パッケージを基準に、 `plugin.xml` ドキュメント。 指定されたファイルが存在しない場合 `src` 、plugman 停止し、場所と、インストール プロセスを逆に、競合について通知を発行 0 以外のコードで終了します。
+*   `src`(必須): <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>またはディレクトリが含まれているプラグイン パッケージを基準に、 `plugin.xml` ドキュメント。 指定された<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が存在しない場合 `src` 、plugman 停止し、場所と、インストール プロセスを逆に、競合について<a href="../cordova/notification/notification.html">通知</a>を発行 0 以外のコードで終了します。
 
 *   `target`(必須)。
     
-    ファイルまたはディレクトリ場所 Cordova アプリでは、相対的に、 `www` ディレクトリ。資産などのサブディレクトリを対象とすることができます。
+    <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>またはディレクトリ場所 Cordova アプリでは、相対的に、 `www` ディレクトリ。資産などのサブディレクトリを対象とすることができます。
     
     <asset src="www/new-foo.js" target="js/experimental/foo.js" />
     
-    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、しない限り、既に存在、しコピーする、 `new-foo.js` ファイルし、名前が変更されます `foo.js` 。 ターゲットの場所にファイルが既に存在する場合 plugman 停止しインストール プロセスを逆に、競合について通知を発行し、ゼロ以外のコードで終了します。
+    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、しない限り、既に存在、しコピーする、 `new-foo.js` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>し、名前が変更されます `foo.js` 。 ターゲットの場所に<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が既に存在する場合 plugman 停止しインストール プロセスを逆に、競合について<a href="../cordova/notification/notification.html">通知</a>を発行し、ゼロ以外のコードで終了します。
 
 ## `<js-module>`要素
 
-ほとんどのプラグインには、1 つまたは複数の JavaScript ファイルが含まれます。 各 `<js-module>` タグ、JavaScript ファイルなどに対応し、なくなりますプラグインのユーザーを追加する、 `<script>` の各ファイルのタグ。 一方 `<asset>` タグは、単にプラグインのサブディレクトリからファイルをコピー `www` 、 `<js-module>` タグは、はるかに洗練されました。 彼らはこのようになります：
+ほとんどのプラグインには、1 つまたは複数の JavaScript <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が含まれます。 各 `<js-module>` タグ、JavaScript <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>などに対応し、なくなりますプラグインのユーザーを追加する、 `<script>` の各<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>のタグ。 一方 `<asset>` タグは、単にプラグインのサブディレクトリから<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>をコピー `www` 、 `<js-module>` タグは、はるかに洗練されました。 彼らはこのようになります：
 
     <js-module src="socket.js" name="Socket">
         <clobbers target="chrome.socket" />
     </js-module>
     
 
-上記の例ではプラグインをインストールするとき `socket.js` にコピー `www/plugins/my.plugin.id/socket.js` にエントリとして追加されます `www/cordova_plugins.js` 。 読み込み時にコード `cordova.js` XHR を使用して各ファイルの読み取りを注入、 `<script>` タグを HTML に。 それを壊したくまたは以下に示すように適切なマージ マッピングを追加します。
+上記の例ではプラグインをインストールするとき `socket.js` にコピー `www/plugins/my.plugin.id/socket.js` にエントリとして追加されます `www/cordova_plugins.js` 。 読み込み時にコード `cordova.js` XHR を使用して各<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の読み取りを注入、 `<script>` タグを HTML に。 それを壊したくまたは以下に示すように適切なマージ マッピングを追加します。
 
-持つファイルをラップ*しない* `cordova.define` 、それが自動的に追加されます。 モジュールで、閉鎖に包まれて `module` 、 `exports` と `require` スコープでは、AMD モジュールのために正常です。
+持つ<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>をラップ*しない* `cordova.define` 、それが自動的に追加されます。 モジュールで、閉鎖に包まれて `module` 、 `exports` と `require` スコープでは、AMD モジュールのために正常です。
 
 詳細は `<js-module>` タグ。
 
-*   `src`を基準としてプラグイン ディレクトリ内のファイルを参照して、 `plugin.xml` ファイル。
+*   `src`を基準としてプラグイン ディレクトリ内の<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>を参照して、 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 *   `name`モジュール名の最後の部分を提供します。 それは一般的にあなたが好きをすることができ、使用する場合にのみ問題 `cordova.require` の JavaScript コードであなたのプラグインの他の部分をインポートします。 モジュール名は `<js-module>` は、プラグインの `id` の値が続く `name` 。 上記の例のために、 `id` の `chrome.socket` 、モジュール名が`chrome.socket.Socket`.
 
@@ -188,11 +188,11 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
     
     *   `<merges target="some.value"/>`モジュールで既存の値とマージされることを示します `window.some.value` 。 任意のキーが既に存在する場合、モジュールのバージョン、元より優先されます。 多くとして持つことができます `<merges>` あなたのよう。 任意のオブジェクトでは使用できません `window` が作成されます。
     
-    *   `<runs/>`あなたのコードで指定する必要があることを意味します `cordova.require` にインストールされていないが、 `window` オブジェクト。 イベント ハンドラーをアタッチするモジュールを初期化する場合に便利ですまたはそれ以外の場合。 あなただけ 1 つまで持つことができます `<runs/>` タグ。 メモを含む、 `<runs/>` と `<clobbers/>` または `<merges/>` は冗長ですのでまた `cordova.require` あなたのモジュール。
+    *   `<runs/>`あなたのコードで指定する必要があることを意味します `cordova.require` にインストールされていないが、 `window` オブジェクト。 <a href="../cordova/events/events.html">イベント</a> ハンドラーをアタッチするモジュールを初期化する場合に便利ですまたはそれ以外の場合。 あなただけ 1 つまで持つことができます `<runs/>` タグ。 メモを含む、 `<runs/>` と `<clobbers/>` または `<merges/>` は冗長ですのでまた `cordova.require` あなたのモジュール。
     
     *   空の `<js-module>` がまだロードでき他のモジュール経由でアクセスされます。`cordova.require`.
 
-場合 `src` plugman 停止インストールを逆に、問題の通知を発行し、0 以外のコードで終了します、既存のファイルに解決されません。
+場合 `src` plugman 停止インストールを逆に、問題の<a href="../cordova/notification/notification.html">通知</a>を発行し、0 以外のコードで終了します、既存の<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>に解決されません。
 
 ネスト `<js-module>` 内の要素 `<platform>` プラットフォーム固有 JavaScript モジュール バインディングを宣言します。
 
@@ -221,7 +221,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 ## `<platform>`
 
-`<platform>`タグが関連付けられているネイティブ コードまたはその構成ファイルへの変更を必要とするプラットフォームを識別します。 この仕様を使用してツールはサポートされているプラットフォームを識別およびコルドバのプロジェクトにコードをインストールできます。
+`<platform>`タグが関連付けられているネイティブ コードまたはその構成<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>への変更を必要とするプラットフォームを識別します。 この仕様を使用してツールはサポートされているプラットフォームを識別およびコルドバのプロジェクトにコードをインストールできます。
 
 プラグインなし `<platform>` タグは JavaScript だけ、したがって、すべてのプラットフォームでインストール可能と見なされます。
 
@@ -260,21 +260,21 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 次の属性をサポートしています。
 
-*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合は、 `src` ファイルが見つからない、plugman 停止逆に、インストールの問題に関する通知を発行し、0 以外のコードで終了します。
+*   `src`(必須): 相対的な<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の場所 `plugin.xml` 。 場合は、 `src` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が見つからない、plugman 停止逆に、インストールの問題に関する<a href="../cordova/notification/notification.html">通知</a>を発行し、0 以外のコードで終了します。
 
-*   `target-dir`: をファイルがコピー、コルドバ プロジェクトのルートからの相対ディレクトリです。 実習では、これでファイルの場所に Java ベースのプラットフォームのために最も重要なは、 `com.alunny.foo` パッケージ内に配置する必要があります、 `com/alunny/foo` ディレクトリ。 ソース ディレクトリが重要でないプラットフォームでは、この属性を省略してください。
+*   `target-dir`: を<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>がコピー、コルドバ プロジェクトのルートからの相対ディレクトリです。 実習では、これで<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の場所に Java ベースのプラットフォームのために最も重要なは、 `com.alunny.foo` パッケージ内に配置する必要があります、 `com/alunny/foo` ディレクトリ。 ソース ディレクトリが重要でないプラットフォームでは、この属性を省略してください。
     
-    同様に、資産場合、 `target` の `source-file` は既存のファイルを上書き、plugman 停止逆に、インストールの問題に関する通知を発行し、0 以外のコードで終了します。
+    同様に、資産場合、 `target` の `source-file` は既存の<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>を上書き、plugman 停止逆に、インストールの問題に関する<a href="../cordova/notification/notification.html">通知</a>を発行し、0 以外のコードで終了します。
 
-*   `framework`(iOS の場合のみ): 場合に設定されている `true` 、またフレームワークとして、プロジェクト指定ファイルに追加されます。
+*   `framework`(iOS の場合のみ): 場合に設定されている `true` 、またフレームワークとして、プロジェクト指定<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>に追加されます。
 
-*   `compiler-flags`(iOS の場合のみ): 場合設定、特定のソース ファイルの指定したコンパイラ フラグを割り当てます。
+*   `compiler-flags`(iOS の場合のみ): 場合設定、特定のソース <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の指定したコンパイラ <a href="../cordova/file/flags/flags.html">フラグ</a>を割り当てます。
 
 ## `<config-file>`
 
-ドキュメントに変更を行う場所、および何を変更する必要があります変更する XML ベースの構成ファイルを示します。
+ドキュメントに変更を行う場所、および何を変更する必要があります変更する XML ベースの構成<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>を示します。
 
-この要素を変更するためにテストされている 2 つのファイルの種類は `xml` と `plist` ファイル。
+この要素を変更するためにテストされている 2 つの<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の種類は `xml` と `plist` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 `config-file`要素はのみ、XML ドキュメントのツリーに新しい子を追加することができます。子供たちは、ターゲット ドキュメントに挿入される XML リテラルです。
 
@@ -304,17 +304,17 @@ XML の例：
 
 *   `target`:
     
-    変更されるファイルとコルドバ プロジェクトのルートからの相対パス。
+    変更される<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>とコルドバ プロジェクトのルートからの相対パス。
     
     ターゲットは、ワイルドカードを含めることができます ( `*` ) 要素。この場合、plugman を再帰的にプロジェクトのディレクトリ構造を検索し、最初の一致を使用します。
     
-    IOS、上のプロジェクト ディレクトリのルートを基準にして構成ファイルの場所は知られていない、だからのターゲットを指定する `config.xml` を解決します`cordova-ios-project/MyAppName/config.xml`.
+    IOS、上のプロジェクト ディレクトリのルートを基準にして構成<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の場所は知られていない、だからのターゲットを指定する `config.xml` を解決します`cordova-ios-project/MyAppName/config.xml`.
     
-    指定したファイルが存在しない場合、ツール、構成の変更は無視され、インストールが続行されます。
+    指定した<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が存在しない場合、ツール、構成の変更は無視され、インストールが続行されます。
 
-*   `parent`構成ファイルに追加する要素の親を参照する: XPath セレクター。 絶対的なセレクターを使用する場合はワイルドカードを使用できます ( `*` ) 例えば、ルート要素を指定するには`/*/plugins`.
+*   `parent`構成<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>に追加する要素の親を参照する: XPath セレクター。 絶対的なセレクターを使用する場合はワイルドカードを使用できます ( `*` ) 例えば、ルート要素を指定するには`/*/plugins`.
     
-    `plist`、ファイル、 `parent` どのような親キーの下で指定した XML を挿入するを決定します。
+    `plist`、<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>、 `parent` どのような親キーの下で指定した XML を挿入するを決定します。
     
     セレクターで指定したドキュメントの子を解決しない場合、ツールが停止した逆インストール プロセスにより警告が発行し、0 以外のコードで終了します。
 
@@ -331,14 +331,14 @@ XML の例：
     </config-file>
     
 
-キーと、適切に追加する値を指定します `AppInfo.plist` iOS コルドバ プロジェクト内のファイル。たとえば。
+キーと、適切に追加する値を指定します `AppInfo.plist` iOS コルドバ プロジェクト内の<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>。たとえば。
 
     < プラグイン plist キー文字列"Foo"= ="CDVFoo"/>
     
 
 ## `<resource-file>`と`<header-file>`
 
-ソース ファイルのようなが iOS などのプラットフォームのために特別にソース ファイル、ヘッダー、およびリソース間区別します。例:
+ソース <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>のようなが iOS などのプラットフォームのために特別にソース <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>、ヘッダー、およびリソース間区別します。例:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
@@ -347,7 +347,7 @@ XML の例：
 
 ## `<lib-file>`
 
-ブラックベリー 10 などのプラットフォームのために特別にしかし、ソース、リソース、およびヘッダー ファイルのようなユーザー生成ライブラリを使用します。例:
+ブラックベリー 10 などのプラットフォームのために特別にしかし、ソース、リソース、およびヘッダー <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>のようなユーザー生成ライブラリを使用します。例:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -355,9 +355,9 @@ XML の例：
 
 サポートされている属性:
 
-*   `src`(必須): 相対的なファイルの場所 `plugin.xml` 。 場合 `src` が見つからない plugman 停止、インストール、問題、問題について警告を反転し、0 以外のコードで終了します。
+*   `src`(必須): 相対的な<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>の場所 `plugin.xml` 。 場合 `src` が見つからない plugman 停止、インストール、問題、問題について警告を反転し、0 以外のコードで終了します。
 
-*   `arch`: 対象アーキテクチャ、 `.so` ファイルが作成されたら、どちらか `device` または`simulator`.
+*   `arch`: 対象アーキテクチャ、 `.so` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が作成されたら、どちらか `device` または`simulator`.
 
 ## `< フレームワーク >`
 
@@ -394,13 +394,13 @@ XML の例：
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-このような場合、コンテンツの挿入、 `plugin.xml` ファイルが前もって知られていない、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連によって示されることができます。 上記の例については、 `plugin.xml` ファイルには、このタグが含まれます。
+このような場合、コンテンツの挿入、 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>が前もって知られていない、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連によって示されることができます。 上記の例については、 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>には、このタグが含まれます。
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 参照変数の値を検出可能性があります (からこの場合は、 `AndroidManifest.xml` ファイル） またはツール; のユーザーによって指定された正確なプロセスは、特定のツールに依存。
+plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 参照変数の値を検出可能性があります (からこの場合は、 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>） またはツール; のユーザーによって指定された正確なプロセスは、特定のツールに依存。
 
 plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google Maps API キーは、コマンドライン引数として指定できます。
 
@@ -418,4 +418,4 @@ plugman はこれらの必要な設定が渡されたことを確認します。
 
 ## $PACKAGE_NAME
 
-逆ドメイン スタイルに対応するパッケージの一意の識別子、 `CFBundleIdentifier` iOS 上または、 `package` 、最上位の属性 `manifest` 内の要素、 `AndroidManifest.xml` ファイル。
+逆ドメイン スタイルに対応するパッケージの一意の識別子、 `CFBundleIdentifier` iOS 上または、 `package` 、最上位の属性 `manifest` 内の要素、 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>。

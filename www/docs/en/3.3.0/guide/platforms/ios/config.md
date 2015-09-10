@@ -23,7 +23,7 @@ license: >
 The `config.xml` file controls an app's basic settings that apply
 across each application and CordovaWebView instance. This section
 details preferences that only apply to iOS builds. See The config.xml
-File for information on global configuration options.
+<a href="../../../cordova/file/fileobj/fileobj.html">File</a> for information on global configuration options.
 
 - `EnableViewportScale` (boolean, defaults to `false`): Set to `true`
   to allow a viewport meta tag to either disable or restrict the range
@@ -36,26 +36,26 @@ File for information on global configuration options.
 
         <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 
-- `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
+- `<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction` (boolean, defaults to `false`):
   Set to `true` to prevent HTML5 videos or audios from playing
   automatically with the `autoplay` attribute or via JavaScript.
 
-        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        <preference name="<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction" value="true"/>
 
-- `AllowInlineMediaPlayback` (boolean, defaults to `false`): Set to
+- `AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback` (boolean, defaults to `false`): Set to
   `true` to allow HTML5 media playback to appear _inline_ within the
   screen layout, using browser-supplied controls rather than native
   controls. For this to work, add the `webkit-playsinline` attribute
   to any `<video>` elements.
 
-        <preference name="AllowInlineMediaPlayback" value="true"/>
+        <preference name="AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback" value="true"/>
 
-- `BackupWebStorage` (string, either `none`, `local`, or the default
+- `BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>` (string, either `none`, `local`, or the default
   `cloud`): Set to `cloud` to allow web storage data to backup via
   iCloud. Set to `local` to allow only local backups via iTunes
   sync. Set to `none` prevent web storage backups.
 
-        <preference name="BackupWebStorage" value="local"/>
+        <preference name="BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>" value="local"/>
 
 - `TopActivityIndicator` (string, defaults to `gray`): Controls the
   appearance of the small spinning icon in the status bar that
@@ -100,7 +100,7 @@ File for information on global configuration options.
 - `PaginationMode` (string, defaults to `unpaginated`): Valid values are `unpaginated`,
   `leftToRight`, `topToBottom`, `bottomToTop`, and `rightToLeft`. This property determines 
   whether content in the web view is broken up into pages that fill the view one screen 
-  at a time, or shown as one long scrolling view. If set to a paginated form, this 
+  at a time, or <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n as one long scrolling view. If set to a paginated form, this 
   property toggles a paginated layout on the content, causing the web view to use the 
   values of PageLength and GapBetweenPages to relayout its content.
 

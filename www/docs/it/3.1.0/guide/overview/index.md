@@ -38,7 +38,7 @@ Cordova applicazioni si basano su una comune `config.xml` file che fornisce info
 
 L'applicazione stessa è implementato come una pagina web, denominato *index. html* per impostazione predefinita, che fa riferimento a qualunque CSS, JavaScript, immagini, file multimediali, o altre risorse sono necessarie per essere eseguito. L'app viene eseguita come una *WebView* all'interno del wrapper di applicazione nativa, che distribuiscono ai negozi di app. Per l'applicazione web interagire con varie caratteristiche dispositivo fare le applicazioni in modo native, deve anche fare riferimento a un `cordova.js` file che fornisce API associazioni. <!-- XREF
 (See the API Reference for an overview, and the Application
-Development Guide for examples of how to use them.)
+Development <a href="../../index.html">Guide</a> for examples of how to use them.)
 XREF -->
 
 WebView Cordova abilitato può fornire l'applicazione con l'intera interfaccia utente. Può anche essere un componente all'interno di un'applicazione ibrida più grande, che mescola WebView con componenti di un'applicazione nativa. Cordova fornisce un'interfaccia di *plugin* per questi componenti comunicare con a vicenda.
@@ -54,7 +54,7 @@ Il modo più semplice per impostare un'applicazione è quello di eseguire il `co
 *   Per il supporto di piattaforme, CLI può compilare applicazioni eseguibile ed eseguirli in un emulatore di dispositivo basato su SDK. <!-XRIF XRIF (Vedere Applicazione Guida allo Sviluppo per i dettagli.)--> per la prova completa, si può anche generare file di applicazione e installarli direttamente su un dispositivo.
 
 In qualsiasi punto del ciclo di sviluppo, può anche contare su strumenti SDK specifico della piattaforma, che possono fornire un insieme più ricco di opzioni. (Vedi le guide di piattaforma per ulteriori informazioni sullo strumento SDK su ogni piattaforma impostato). Un ambiente SDK è più appropriato se si desidera implementare un'applicazione ibrida che mescola i componenti dell'applicazione web-based e nativo. <!-XRIF XRIF (Vedi Ibrido Applicazione Guida per maggiori informazioni.)--> si possono utilizzare l'utilità della riga di comando per generare inizialmente l'app, o in modo iterativo successivamente per alimentare il codice aggiornato a strumenti SDK. Si può anche costruire il file di configurazione dell'app te stesso. <!-- XREF
-(See The config.xml File for details.)
+(See The config.xml <a href="../../cordova/file/fileobj/fileobj.html">File</a> for details.)
 XREF -->
 
 <!-- XREF
@@ -221,7 +221,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Accelerometro</a>
+          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/accelerometer.html">Accelerometro</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -251,7 +251,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Fotocamera</a>
+          <a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">Fotocamera</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -281,7 +281,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Cattura</a>
+          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Cattura</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -311,7 +311,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Bussola</a>
+          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Bussola</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -342,7 +342,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Connessione</a>
+          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Connessione</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -372,7 +372,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Contatti</a>
+          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/contacts.html">Contatti</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -402,7 +402,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Dispositivo</a>
+          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">Dispositivo</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -432,7 +432,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Eventi</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Eventi</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -462,7 +462,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">File</a>
+          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">File</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -478,11 +478,11 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="winphone7"  class="p">
-          nessun FileTransfer
+          nessun <a href="../../cordova/file/filetransfer/filetransfer.html"><a href="../../cordova/file/fileobj/fileobj.html">File</a>Transfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          nessun FileTransfer
+          nessun <a href="../../cordova/file/filetransfer/filetransfer.html"><a href="../../cordova/file/fileobj/fileobj.html">File</a>Transfer</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -494,7 +494,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Geolocalizzazione</a>
+          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">Geolocalizzazione</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -524,7 +524,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Globalizzazione</a>
+          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Globalizzazione</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -554,7 +554,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -584,7 +584,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Media</a>
+          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Media</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -614,7 +614,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Notifica</a>
+          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Notifica</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -644,7 +644,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a>
+          <a href="cordova_<a href="../../cordova/splashscreen/splashscreen.show.html">splashscreen</a>_<a href="../../cordova/splashscreen/splashscreen.show.html">splashscreen</a>.md.html"><a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -674,7 +674,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Archiviazione</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Archiviazione</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -690,11 +690,11 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="winphone7"  class="p">
-          localStorage solo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> solo
         </td>
         
         <td data-col="winphone8"  class="p">
-          localStorage solo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> solo
         </td>
         
         <td data-col="win8"       class="y">

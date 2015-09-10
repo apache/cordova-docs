@@ -18,53 +18,53 @@ license: >
     under the License.
 ---
 
-# 연락처
+# <a href="../contacts.html">연락처</a>
 
-연락처를 사용자의 개인 또는 비즈니스 연락처 등을 설명 하는 속성이 포함 되어 있습니다.
+<a href="../contacts.html">연락처</a>를 사용자의 개인 또는 비즈니스 <a href="../contacts.html">연락처</a> 등을 설명 하는 속성이 포함 되어 있습니다.
 
 ## 속성
 
 *   **id**: 글로벌 고유 식별자. *(DOMString)*
 
-*   **displayName**: 최종 사용자에 게 표시에 적합이 연락처의 이름. *(DOMString)*
+*   **displayName**: 최종 사용자에 게 표시에 적합이 <a href="../contacts.html">연락처</a>의 이름. *(DOMString)*
 
-*   **이름**: 사람 이름의 모든 구성 요소를 포함 하는 개체. *(담당자 이름)*
+*   **이름**: 사람 이름의 모든 구성 요소를 포함 하는 개체. *(<a href="../ContactName/contactname.html">담당자 이름</a>)*
 
-*   **별명**: 캐주얼 이름 연락처 주소입니다. *(DOMString)*
+*   **별명**: 캐주얼 이름 <a href="../contacts.html">연락처</a> 주소입니다. *(DOMString)*
 
-*   **phoneNumbers**: 모든 연락처의 전화 번호의 배열. *(ContactField[])*
+*   **phoneNumbers**: 모든 <a href="../contacts.html">연락처</a>의 전화 번호의 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **이메일**: 모든 연락처의 전자 메일 주소의 배열. *(ContactField[])*
+*   **이메일**: 모든 <a href="../contacts.html">연락처</a>의 전자 메일 주소의 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **주소**: 모든 연락처의 주소 배열. *(ContactAddress[])*
+*   **주소**: 모든 <a href="../contacts.html">연락처</a>의 주소 배열. *(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
 
-*   **ims**: 모든 연락처의 IM 주소 배열. *(ContactField[])*
+*   **ims**: 모든 <a href="../contacts.html">연락처</a>의 IM 주소 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **조직**: 다양 한 모든 연락처의 조직. *(ContactOrganization[])*
+*   **조직**: 다양 한 모든 <a href="../contacts.html">연락처</a>의 조직. *(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
 
-*   **생일**: 연락처의 생일. *(날짜)*
+*   **생일**: <a href="../contacts.html">연락처</a>의 생일. *(날짜)*
 
-*   **참고**: 연락처에 대 한 참고. *(DOMString)*
+*   **참고**: <a href="../contacts.html">연락처</a>에 대 한 참고. *(DOMString)*
 
-*   **사진**: 연락처의 사진을 배열. *(ContactField[])*
+*   **사진**: <a href="../contacts.html">연락처</a>의 사진을 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **카테고리**: 모든 사용자 정의 범주 연락처에 연결 된 배열. *(ContactField[])*
+*   **카테고리**: 모든 사용자 정의 범주 <a href="../contacts.html">연락처</a>에 <a href="../../connection/connection.html">연결</a> 된 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **url**: 연락처에 연결 된 웹 페이지의 배열. *(ContactField[])*
+*   **url**: <a href="../contacts.html">연락처</a>에 <a href="../../connection/connection.html">연결</a> 된 웹 페이지의 배열. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
 ## 메서드
 
 *   **복제**: 새로운 반환 합니다 `Contact` 으로 호출 하는 개체의 전체 복사본은 개체는 `id` 속성으로 설정`null`.
 
-*   **제거**: 장치 연락처 데이터베이스에서 연락처를 제거 합니다, 그렇지 않으면와 오류 콜백을 실행 한 `ContactError` 개체.
+*   **제거**: <a href="../../device/device.html">장치</a> <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>에서 <a href="../contacts.html">연락처</a>를 제거 합니다, 그렇지 않으면와 오류 콜백을 실행 한 `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` 개체.
 
-*   **저장**: 장치 연락처 데이터베이스를 새 연락처를 저장 또는 동일한 **id** 를 가진 연락처가 이미 있는 경우 기존 연락처를 업데이트 합니다.
+*   **저장**: <a href="../../device/device.html">장치</a> <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>를 새 <a href="../contacts.html">연락처</a>를 저장 또는 동일한 **id** 를 가진 <a href="../contacts.html">연락처</a>가 이미 있는 경우 기존 <a href="../contacts.html">연락처</a>를 업데이트 합니다.
 
 ## 세부 정보
 
-`Contact`개체는 사용자의 연락처를 나타냅니다. 연락처 생성 수, 저장 또는 장치 연락처 데이터베이스에서 제거 합니다. 연락처도 검색할 수 있습니다 (개별적으로 또는 일괄적으로) 데이터베이스에서 호출 하 여는 `contacts.find` 방법.
+`Contact`개체는 사용자의 <a href="../contacts.html">연락처</a>를 나타냅니다. <a href="../contacts.html">연락처</a> 생성 수, 저장 또는 <a href="../../device/device.html">장치</a> <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>에서 제거 합니다. <a href="../contacts.html">연락처</a>도 검색할 수 있습니다 (개별적으로 또는 일괄적으로) <a href="../../storage/database/database.html">데이터베이스</a>에서 호출 하 여는 `<a href="../contacts.find.html">contacts.find</a>` 방법.
 
-**참고:** 모든 연락처 필드 위에 나열 된 모든 장치 플랫폼에서 지원 됩니다. 자세한 내용은 각 플랫폼의 *단점이* 섹션을 확인 하시기 바랍니다.
+**참고:** 모든 <a href="../contacts.html">연락처</a> 필드 위에 나열 된 모든 <a href="../../device/device.html">장치</a> 플랫폼에서 지원 됩니다. 자세한 내용은 각 플랫폼의 *단점이* 섹션을 확인 하시기 바랍니다.
 
 ## 지원 되는 플랫폼
 
@@ -80,12 +80,12 @@ license: >
         alert("Save Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
     // create a new contact object
-    var contact = navigator.contacts.create();
+    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
     contact.displayName = "Plumber";
     contact.nickname = "Plumber";            // specify both to support all devices
     
@@ -114,8 +114,8 @@ license: >
         alert("Removal Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
         // remove the contact from the device
@@ -127,20 +127,20 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // create
-            var contact = navigator.contacts.create();
+            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
             var name = new ContactName();
@@ -169,8 +169,8 @@ license: >
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ license: >
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -196,11 +196,11 @@ license: >
 
 ## 안 드 로이드 2.X 단점
 
-*   **카테고리**: 안 드 로이드 2.X 장치, 반환에서 지원 되지 않습니다`null`.
+*   **카테고리**: 안 드 로이드 2.X <a href="../../device/device.html">장치</a>, 반환에서 지원 되지 않습니다`null`.
 
 ## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
 
-*   **id**: 지원. 연락처를 저장 하면 장치에 의해 할당 된.
+*   **id**: 지원. <a href="../contacts.html">연락처</a>를 저장 하면 <a href="../../device/device.html">장치</a>에 의해 할당 된.
 
 *   **displayName**: 지원. 블랙베리 **사용자 1** 필드에 저장 합니다.
 
@@ -216,7 +216,7 @@ license: >
 
 *   **조직**: 부분적으로 지원 합니다. **이름** 및 **제목** 첫 번째 조직의 각각 블랙베리 **회사** 및 **제목** 필드에 저장 됩니다.
 
-*   **사진**: 부분적으로 지원 합니다. 단일 축소판 그림 크기의 사진 지원 됩니다. 연락처의 사진으로 설정 하려면 전달에 base64 인코딩된 이미지 또는 이미지를 가리키는 URL. 블랙베리 연락처 데이터베이스에 저장 하기 전에 이미지는 축소 된. 연락처 사진 base64 인코딩 이미지로 반환 됩니다.
+*   **사진**: 부분적으로 지원 합니다. 단일 축소판 그림 크기의 사진 지원 됩니다. <a href="../contacts.html">연락처</a>의 사진으로 설정 하려면 전달에 base64 인코딩된 이미지 또는 이미지를 가리키는 URL. 블랙베리 <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>에 저장 하기 전에 이미지는 축소 된. <a href="../contacts.html">연락처</a> 사진 base64 인코딩 이미지로 반환 됩니다.
 
 *   **카테고리**: 부분적으로 지원 합니다. *비즈니스* 및 *개인적인* 종류만 지원 됩니다.
 
@@ -228,15 +228,15 @@ license: >
 
 *   **생일**: 자바 스크립트로 입력 해야 합니다 `Date` 개체를 같은 방식으로 반환 됩니다.
 
-*   **사진**: 응용 프로그램의 임시 디렉터리에 저장 된 이미지 파일 URL을 반환 합니다. 응용 프로그램이 종료 될 때 임시 디렉터리의 내용은 제거 됩니다.
+*   **사진**: 응용 프로그램의 임시 디렉터리에 저장 된 이미지 <a href="../../file/fileobj/fileobj.html">파일</a> URL을 반환 합니다. 응용 프로그램이 종료 될 때 임시 디렉터리의 내용은 제거 됩니다.
 
 *   **카테고리**:이 속성은 현재 지원 되지 않습니다, 반환`null`.
 
 ## Windows Phone 7, 8 특수
 
-*   **displayName**: 연락처를 만들 때 표시 이름에서 표시 이름 매개 변수 다릅니다 제공 값 검색 연락처를 찾을 때.
+*   **displayName**: <a href="../contacts.html">연락처</a>를 만들 때 표시 이름에서 표시 이름 매개 <a href="../../../plugin_ref/spec.html">변수</a> 다릅니다 제공 값 검색 <a href="../contacts.html">연락처</a>를 찾을 때.
 
-*   **url**: 때 연락처를 만드는 사용자가 입력을 하나 이상의 웹 주소를 저장 하지만 하나만 사용할 수 때 사용할 수 있는 연락처를 검색 합니다.
+*   **url**: 때 <a href="../contacts.html">연락처</a>를 만드는 사용자가 입력을 하나 이상의 웹 주소를 저장 하지만 하나만 사용할 수 때 사용할 수 있는 <a href="../contacts.html">연락처</a>를 검색 합니다.
 
 *   **phoneNumbers**: *pref* 옵션이 지원 되지 않습니다. *형식* *찾기* 작업에서 지원 되지 않습니다. 단 하나 `phoneNumber` 각 *형식* 에 대 한 허용.
 

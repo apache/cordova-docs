@@ -20,13 +20,13 @@ license: >
 
 # Flags
 
-Liefert Argumente für die `DirectoryEntry` des Objekts `getFile()` und `getDirectory()` Methoden, die nachschlagen oder erstellen Sie Dateien und Verzeichnisse.
+Liefert Argumente für die `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` des Objekts `getFile()` und `getDirectory()` Methoden, die nachschlagen oder erstellen Sie <a href="../fileobj/fileobj.html">Datei</a>en und Verzeichnisse.
 
 ## Eigenschaften
 
-*   **Erstellen**: gibt an, dass die Datei oder das Verzeichnis erstellt werden soll, wenn es nicht bereits vorhanden ist. *(boolesch)*
+*   **Erstellen**: gibt an, dass die <a href="../fileobj/fileobj.html">Datei</a> oder das Verzeichnis erstellt werden soll, wenn es nicht bereits vorhanden ist. *(boolesch)*
 
-*   **exklusiv**: hat wirkt sich nicht von selbst, aber mit `create` bewirkt die Datei oder das Verzeichnis-Erstellung schlägt fehl, wenn der Zielpfad bereits vorhanden ist. *(boolesch)*
+*   **exklusiv**: hat wirkt sich nicht von selbst, aber mit `create` bewirkt die <a href="../fileobj/fileobj.html">Datei</a> oder das Verzeichnis-Erstellung schlägt fehl, wenn der Zielpfad bereits vorhanden ist. *(boolesch)*
 
 ## Unterstützte Plattformen
 
@@ -41,5 +41,5 @@ Liefert Argumente für die `DirectoryEntry` des Objekts `getFile()` und `getDire
     / / Get das Datenverzeichnis, die ihn herstellen, wenn es nicht vorhanden ist.
     DataDir = fileSystem.root.getDirectory ("Daten", {erstellen: True});
     
-    / / Die Lock-Datei zu erstellen, wenn es nicht vorhanden ist.
+    / / Die Lock-<a href="../fileobj/fileobj.html">Datei</a> zu erstellen, wenn es nicht vorhanden ist.
     LockFile = dataDir.getFile ("lockfile.txt", {erstellen: echte, exklusive: True});

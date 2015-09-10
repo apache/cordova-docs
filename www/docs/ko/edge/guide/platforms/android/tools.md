@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# 안 드 로이드 쉘 도구 가이드
+# 안 드 로이드 쉘 도구 <a href="../../../index.html">가이드</a>
 
-이 가이드에는 코르도바의 플랫폼을 중심으로 셸 도구 세트를 사용 하 여 안 드 로이드 애플 리 케이 션을 개발 하는 방법을 보여 줍니다. 이 개발 경로 개요에서 설명한 명령줄 인터페이스에 설명 된 크로스 플랫폼 CLI 도구 보다 개발 옵션의 넓은 범위를 제공할 수 있습니다. 예를 들어, 네이티브 구성 요소와 함께 사용자 지정 코르도바 WebView를 배포 하는 경우 셸 도구를 사용 해야 합니다. 개발 경로 중 하나를 사용 하기 전에 먼저 구성 해야 안 드 로이드 SDK 환경 안 드 로이드 플랫폼 가이드에 설명 된 대로.
+이 <a href="../../../index.html">가이드</a>에는 코르도바의 플랫폼을 중심으로 셸 도구 세트를 사용 하 여 안 드 로이드 애플 리 케이 션을 개발 하는 방법을 보여 줍니다. 이 개발 경로 <a href="../../overview/index.html">개요</a>에서 설명한 <a href="../../cli/index.html">명령줄 인터페이스</a>에 설명 된 크로스 플랫폼 CLI 도구 보다 개발 옵션의 넓은 범위를 제공할 수 있습니다. 예를 들어, 네이티브 구성 요소와 함께 사용자 지정 코르도바 WebView를 배포 하는 경우 셸 도구를 사용 해야 합니다. 개발 경로 중 하나를 사용 하기 전에 먼저 구성 해야 안 드 로이드 SDK 환경 안 드 로이드 플랫폼 <a href="../../../index.html">가이드</a>에 설명 된 대로.
 
 안 드 로이드에 대 한 셸 도구를 사용 하려면 [cordova.apache.org][1]에서 코르도바를 다운로드. 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 대상으로 하 고 싶은 각 확장 `android` 이 경우. 관련 도구는 일반적으로 최상위 수준에서 사용할 수 있는 `bin` 자세한 지시 사항에 대 한 디렉터리, 그렇지 않으면 **README** 파일을 참조 하십시오.
 
  [1]: http://cordova.apache.org
 
-이러한 도구를 사용 하 여 작성, 구축 및 실행 안 드 로이드 애플 리 케이 션 수 있습니다. 모든 플랫폼에 걸쳐 플러그인 기능을 활성화 하는 추가 명령줄 인터페이스에 대 한 정보를 관리 플러그인을 사용 하 여 Plugman를 참조 하십시오. 플러그인을 개발 하는 방법에 대 한 내용은 응용 프로그램 플러그인을 참조 하십시오.
+이러한 도구를 사용 하 여 작성, 구축 및 실행 안 드 로이드 애플 리 케이 션 수 있습니다. 모든 플랫폼에 걸쳐 플러그인 기능을 활성화 하는 추가 <a href="../../cli/index.html">명령줄 인터페이스</a>에 대 한 정보를 관리 플러그인을 사용 하 여 Plugman를 참조 하십시오. 플러그인을 개발 하는 방법에 대 한 내용은 응용 프로그램 플러그인을 참조 하십시오.
 
 ## 프로젝트 만들기
 
@@ -183,7 +183,7 @@ license: >
 
 사용자 지정 하려는 경우 `build.gradle` , 오히려 직접 편집, 보다 만들어야 합니다 라는 형제 파일 `build-extras.gradle` . 이 파일은 주에 의해 포함 될 것입니다 `build.gradle` 때 제시. 여기에 예가입니다.
 
-    # Example build-extras.gradle
+    # <a href="../../../cordova/storage/storage.opendatabase.html">Example</a> build-extras.gradle
     # This file is included at the beginning of `build.gradle`
     ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
     # When set, this function allows code to run at the end of `build.gradle`

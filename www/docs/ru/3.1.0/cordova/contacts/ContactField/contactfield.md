@@ -47,7 +47,7 @@ license: >
 ## Быстрый пример
 
         // create a new contact
-        var contact = navigator.contacts.create();
+        var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
     
         // store contact phone numbers in ContactField[]
         var phoneNumbers = [];
@@ -65,21 +65,21 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
     
         function onDeviceReady() {
             // create a new contact
-            var contact = navigator.contacts.create();
+            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
     
             // store contact phone numbers in ContactField[]
             var phoneNumbers = [];
@@ -92,10 +92,10 @@ license: >
             contact.save();
     
             // search contacts, returning display name and phone numbers
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter = "";
             filter = ["displayName", "phoneNumbers"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,14 +113,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>

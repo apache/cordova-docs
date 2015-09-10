@@ -29,9 +29,9 @@ Zdarzenie fires, gdy użytkownik naciśnie klawisz ciszej "przycisk.
 
 Jeśli chcesz zastąpić ciszej domyślne zachowanie można zarejestrować detektor zdarzeń dla `volumedownbutton` zdarzenie.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `<a href="events.deviceready.html">deviceready</a>` pożary zdarzenia.
 
-## Obsługiwane platformy
+## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
 
 *   BlackBerry 10
 *   Android
@@ -59,7 +59,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

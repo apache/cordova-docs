@@ -67,14 +67,14 @@ Die meisten Implementierungen von Cordova ein native Dialogfeld für dieses Feat
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -108,7 +108,7 @@ Die meisten Implementierungen von Cordova ein native Dialogfeld für dieses Feat
 
 ## Windows Phone 7 und 8 Macken
 
-*   Es gibt keine eingebaute Datenbanksuchroutine-Warnung, aber Sie können binden, wie folgt zu nennen `alert()` im globalen Gültigkeitsbereich:
+*   Es gibt keine eingebaute <a href="../storage/database/database.html">Datenbank</a>suchroutine-Warnung, aber Sie können binden, wie folgt zu nennen `alert()` im globalen Gültigkeitsbereich:
     
         window.alert = navigator.notification.alert;
         

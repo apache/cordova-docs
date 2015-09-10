@@ -20,20 +20,20 @@ license: >
 
 # capture.captureVideo
 
-> 啟動視頻錄製器應用程式並返回有關捕獲的視訊短片檔的資訊。
+> 啟動視頻錄製器應用程式並返回有關<a href="capture.html">捕獲</a>的視訊短片<a href="../../file/fileobj/fileobj.html">檔</a>的資訊。
 
     navigator.device.capture.captureVideo(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
     );
     
 
 ## 說明
 
-開始非同步作業以捕獲使用該設備的視頻錄製應用程式的視頻錄製。該操作允許使用者在一個會話中捕獲多個錄音。
+開始非同步作業以<a href="capture.html">捕獲</a>使用該<a href="../../device/device.html">設備</a>的視頻錄製應用程式的視頻錄製。該操作允許使用者在一個會話中<a href="capture.html">捕獲</a>多個錄音。
 
-在捕獲操作結束時或者在使用者退出視頻錄製應用程式或由指定的錄音的最大數目 `CaptureVideoOptions.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個視訊短片。
+在<a href="capture.html">捕獲</a>操作結束時或者在使用者退出視頻錄製應用程式或由指定的錄音的最大數目 `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和<a href="capture.html">捕獲</a>操作終止後使用者記錄單個視訊短片。
 
-在捕獲操作完成後，它 `CaptureCB` 回檔執行與陣列的 `MediaFile` 物件描述每個捕獲視訊短片檔。 如果使用者終止之前捕獲的視訊短片，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
+在<a href="capture.html">捕獲</a>操作完成後，它 `<a href="CaptureCB.html">CaptureCB</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>執行與陣列的 `MediaFile` 物件描述每個<a href="capture.html">捕獲</a>視訊短片<a href="../../file/fileobj/fileobj.html">檔</a>。 如果使用者終止之前<a href="capture.html">捕獲</a>的視訊短片，操作 `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>執行與 `<a href="CaptureError.html">CaptureError</a>` 物件特色 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
 ## 支援的平臺
 
@@ -56,7 +56,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start video capture
@@ -87,7 +87,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -126,4 +126,4 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-*   科爾多瓦的黑莓 WebWorks 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
+*   科爾多瓦的黑莓 WebWorks 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以<a href="capture.html">捕獲</a>視頻的錄製。 這款應用程式會收到 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在<a href="../../device/device.html">設備</a>上。

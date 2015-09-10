@@ -24,9 +24,9 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma que se aplica para las dos versiones:
 
-*   Actualización de Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone herramientas de línea de comandos
+*   <a href="upgrading.html">Actualización de Windows Phone</a>
+*   <a href="plugin.html">Windows Phone Plugins</a>
+*   <a href="tools.html">Windows Phone herramientas de línea de comandos</a>
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 
@@ -136,7 +136,7 @@ Con el fin de probar su aplicación en un dispositivo, el dispositivo debe estar
 
 *   Asegúrese de que su teléfono está conectado, y la pantalla se desbloquea.
 
-*   En Visual Studio, seleccione 'Dispositivo' en el menú desplegable superior.
+*   En Visual Studio, seleccione '<a href="../../../cordova/device/device.html">Dispositivo</a>' en el menú desplegable superior.
 
 *   Pulse el botón verde **jugar** junto al menú desplegable para empezar a depurar, o **F5**.
 

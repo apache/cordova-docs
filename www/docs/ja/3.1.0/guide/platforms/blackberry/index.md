@@ -18,20 +18,20 @@ license: >
     under the License.
 ---
 
-# BlackBerry プラットフォーム ガイド
+# BlackBerry プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドはターゲット用のアプリケーションをバージョン 10 より前の BlackBerry プラットホーム SDK 環境を設定する方法を示します。 場合は、最新のバージョンをターゲットにする BlackBerry 10 プラットフォーム ガイドを参照してください。 詳細なプラットフォーム固有の情報は、次を参照してください。
+この<a href="../../../index.html">ガイド</a>はターゲット用のアプリケーションをバージョン 10 より前の BlackBerry プラットホーム SDK 環境を設定する方法を示します。 場合は、最新のバージョンをターゲットにする BlackBerry 10 プラットフォーム <a href="../../../index.html">ガイド</a>を参照してください。 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   ブラックベリーの構成
-*   ブラックベリーのアップグレード
-*   ブラックベリーのプラグイン
-*   ブラックベリーのコマンド ライン ツール
+*   <a href="../blackberry10/config.html">ブラックベリーの構成</a>
+*   <a href="../blackberry10/upgrading.html">ブラックベリーのアップグレード</a>
+*   <a href="plugin.html">ブラックベリーのプラグイン</a>
+*   <a href="tools.html">ブラックベリーのコマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
 ## 要件、およびサポート
 
-ブラックベリーのこのバージョンでサポートされていない、 `cordova` ユーティリティのコマンド ライン インターフェイスで、しかし、コマンド ライン ツールの別個のセットによって記述されています。 [Cordova.apache.org][1]から、コルドバのディストリビューションをダウンロードします。.
+ブラックベリーのこのバージョンでサポートされていない、 `cordova` ユーティリティの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で、しかし、コマンド ライン ツールの別個のセットによって記述されています。 [Cordova.apache.org][1]から、コルドバのディストリビューションをダウンロードします。.
 
  [1]: http://cordova.apache.org/#download
 
@@ -61,7 +61,7 @@ WebWorks は、Java 開発キット (JDK) が必要です。 Windows、 [Oracle 
 
 ## 署名キーを登録します。
 
-ブラックベリー App の世界、または実際のデバイスでアプリケーションを公開したい場合は無料コード署名キーのセットを登録する必要があります。 これを行うに、[ブラックベリーのキー注文フォーム][7]を完了します。 署名のキーを受け取ったら、セットアップが必要です。 情報のための[ブラックベリー WebWorks/HTML5 web サイト][8]を参照してください。
+ブラックベリー App の世界、または実際の<a href="../../../cordova/device/device.html">デバイス</a>でアプリケーションを公開したい場合は無料コード署名キーのセットを登録する必要があります。 これを行うに、[ブラックベリーのキー注文フォーム][7]を完了します。 署名のキーを受け取ったら、セットアップが必要です。 情報のための[ブラックベリー WebWorks/HTML5 web サイト][8]を参照してください。
 
  [7]: https://www.blackberry.com/SignedKeys
  [8]: https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html
@@ -78,9 +78,9 @@ WebWorks は、Java 開発キット (JDK) が必要です。 Windows、 [Oracle 
 
 *   `blackberry`ディレクトリにいくつかのサブディレクトリが含まれています。 `example`ディレクトリにコルドバの完全なプロジェクトが含まれています。 コピー、 `example` 、コンピューター上の別の場所にディレクトリが移動します。
 
-*   編集、 `project.properties` ファイルを使用して WebWorks SDK を指定します。 たとえば、ここではブラックベリー脚本は、BlackBerry スマート フォン (OS5-7)、またはブラックベリー 10 （QNX） のそれぞれの設定です。
+*   編集、 `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を使用して WebWorks SDK を指定します。 たとえば、ここではブラックベリー脚本は、BlackBerry スマート フォン (OS5-7)、またはブラックベリー 10 （QNX） のそれぞれの設定です。
     
-        playbook.bbwp.dir=C:\\Program Motion\\BlackBerry WebWorks SDK で Files\\Research TabletOS 2.1.0.6\\bbwp blackberry.bbwp.dir=C:\\Program Motion\\BlackBerry WebWorks パッケー ジャーで Files\\Research qnx.bbwp.dir=C:\\Program ファイル (86) \\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9 用
+        playbook.bbwp.dir=C:\\Program Motion\\BlackBerry WebWorks SDK で Files\\Research TabletOS 2.1.0.6\\bbwp blackberry.bbwp.dir=C:\\Program Motion\\BlackBerry WebWorks パッケー ジャーで Files\\Research qnx.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> (86) \\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9 用
         
 
 プロジェクトのビルド時に指定したパラメーターに対応します。これらのコマンドを実行する最初の時間"HelloWorld"アプリケーションを生成します。
@@ -88,13 +88,13 @@ WebWorks は、Java 開発キット (JDK) が必要です。 Windows、 [Oracle 
         コルドバ/ビルド脚本コルドバ/ビルド ブラックベリー コルドバ/ビルド qnx
     
 
-SDK と一緒にもコード署名キーおよびデバッグ トークンを登録する必要があります。 署名キーでは BlackBerry の世界を通じてアプリケーションを配布することができます。 デバッグ トークン ブラックベリー エミュレーターまたはデバイス上の符号なしのアプリをテストすることができます。 作成し、デバッグ トークン; 自分でインストールする必要はありません。キーストアのパスワードする場合ビルド スクリプトを作成し、あなたのためのデバッグ トークンをインストールします。 署名のキーを設定するには、ウェブサイトに行く、ブラックベリーを取得する、指定したパスワードを保持することを確かめます。 実行して、 `blackberry-signer` ユーティリティ、SDK に含まれています。 ブラックベリーここでより多くの情報を提供します。
+SDK と一緒にもコード署名キーおよびデバッグ トークンを登録する必要があります。 署名キーでは BlackBerry の世界を通じてアプリケーションを配布することができます。 デバッグ トークン ブラックベリー エミュレーターまたは<a href="../../../cordova/device/device.html">デバイス</a>上の符号なしのアプリをテストすることができます。 作成し、デバッグ トークン; 自分でインストールする必要はありません。キーストアのパスワードする場合ビルド スクリプトを作成し、あなたのためのデバッグ トークンをインストールします。 署名のキーを設定するには、ウェブサイトに行く、ブラックベリーを取得する、指定したパスワードを保持することを確かめます。 実行して、 `blackberry-signer` ユーティリティ、SDK に含まれています。 ブラックベリーここでより多くの情報を提供します。
 
 *   [コード署名キーを登録します。][9]
 
 *   [コードの署名用にコンピューターを設定します。][10]
 
-*   [SDK 環境を設定する包括的なガイド][11]
+*   [SDK 環境を設定する包括的な<a href="../../../index.html">ガイド</a>][11]
 
  [9]: https://www.blackberry.com/SignedKeys/codesigning.html
  [10]: http://developer.blackberry.com/html5/documentation/set_up_for_signing.html
@@ -117,9 +117,9 @@ Windows には、blackBerry スマート フォンのエミュレーターはの
  [13]: https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html
  [14]: https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html
 
-ブラックベリー脚本、編集、 `project.properties` ファイルをカスタマイズする、 `playbook.sim.ip` および `playbook.sim.password` プロパティ。 エミュレーターの IP アドレスは、ホーム画面上**の設定**アプリケーションを通して利用できます。 有効にすると、**のセキュリティとプライバシー → 開発モード**アドレスを表示するオプション。 パスワードは、**セキュリティとプライバシー** ] タブで設定することもできます。
+ブラックベリー脚本、編集、 `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をカスタマイズする、 `playbook.sim.ip` および `playbook.sim.password` プロパティ。 エミュレーターの IP アドレスは、ホーム画面上**の設定**アプリケーションを通して利用できます。 有効にすると、**のセキュリティとプライバシー → 開発モード**アドレスを表示するオプション。 パスワードは、**セキュリティとプライバシー** ] タブで設定することもできます。
 
-BlackBerry スマート フォンの編集、 `project.properties` ファイルをカスタマイズする、 `blackberry.sim.dir` および `blackberry.sim.bin` プロパティ。 例えば windows では、ディレクトリ パスを指定するときにパス区切り記号をエスケープする必要があります。`C:\\Program
+BlackBerry スマート フォンの編集、 `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をカスタマイズする、 `blackberry.sim.dir` および `blackberry.sim.bin` プロパティ。 例えば windows では、ディレクトリ パスを指定するときにパス区切り記号をエスケープする必要があります。`C:\\Program
 Files\\BlackBerry\\Simulator`.
 
 エミュレーターがインストールされ、実行されている、一度、ホーム画面にアプリケーションをインストールするには、次のいずれかを実行します。
@@ -127,15 +127,15 @@ Files\\BlackBerry\\Simulator`.
         コルドバ/実行脚本コルドバ/実行ブラックベリー
     
 
-場合は、デバイスがお使いのコンピューターに接続されているかどうかを求められたら、[いいえ。
+場合は、<a href="../../../cordova/device/device.html">デバイス</a>がお使いのコンピューターに<a href="../../../cordova/connection/connection.html">接続</a>されているかどうかを求められたら、[いいえ。
 
 **注：**アプリケーションがインストールされているブラックベリー OS 5、 `Downloads` ディレクトリ。
 
-## デバイスへの配置します。
+## <a href="../../../cordova/device/device.html">デバイス</a>への配置します。
 
-アプリをデバイスに展開する、それを接続する必要があります、そして、コード署名キーを上記のように登録する必要があります。 また、ブラックベリー戦略上のアプリを展開する、**の設定 → セキュリティ → 開発モード**オプションが有効になっている必要があります。
+アプリを<a href="../../../cordova/device/device.html">デバイス</a>に展開する、それを<a href="../../../cordova/connection/connection.html">接続</a>する必要があります、そして、コード署名キーを上記のように登録する必要があります。 また、ブラックベリー戦略上のアプリを展開する、**の設定 → セキュリティ → 開発モード**オプションが有効になっている必要があります。
 
-ブラックベリー脚本の編集、 `project.properties` ファイルし、変更を反映するデバイスの ip アドレスとパスワードとして挙げた、に沿って署名キーのパスワードを設定すると、次の：
+ブラックベリー脚本の編集、 `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>し、変更を反映する<a href="../../../cordova/device/device.html">デバイス</a>の ip アドレスとパスワードとして挙げた、に沿って署名キーのパスワードを設定すると、次の：
 
 プロジェクト ディレクトリで、入力 `./cordova/run <target>` 、交換 `<target>` どちらかと `qnx` 、 `playbook` 、または`blackberry`.
 
@@ -146,7 +146,7 @@ Files\\BlackBerry\\Simulator`.
         コルドバ/実行脚本コルドバ/実行ブラックベリー
     
 
-場合は、デバイスがお使いのコンピューターに接続されているかどうかを求められたら、[はい]。
+場合は、<a href="../../../cordova/device/device.html">デバイス</a>がお使いのコンピューターに<a href="../../../cordova/connection/connection.html">接続</a>されているかどうかを求められたら、[はい]。
 
 **注：**アプリケーションがインストールされているブラックベリー OS 5、 `Downloads` ディレクトリ。
 

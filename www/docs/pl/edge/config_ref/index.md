@@ -40,9 +40,9 @@ Podczas tworzenia projektu za pomocą CLI, wersje tego pliku biernie są kopiowa
 
 Ta sekcja zawiera opcje konfiguracji globalnej i przekreślać platforma szczegóły. Zobacz następujące sekcje dla poszczególnych platform opcje:
 
-*   Konfiguracja iOS
-*   Konfiguracja dla platformy Android
-*   Konfiguracja blackBerry 10
+*   <a href="../guide/platforms/ios/config.html">Konfiguracja iOS</a>
+*   <a href="../guide/platforms/android/config.html">Konfiguracja dla platformy Android</a>
+*   <a href="../guide/platforms/blackberry10/config.html">Konfiguracja blackBerry 10</a>
 
 Oprócz różnych konfiguracji opcji poniżej można również skonfigurować zestaw podstawowych aplikacji obrazów dla każdej platformy docelowej. Aby uzyskać więcej informacji, zobacz ikony i ekrany powitalne w aplikacjach.
 
@@ -53,7 +53,7 @@ W tym przykładzie przedstawiono domyślne `config.xml` generowane przez CLI `cr
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -171,7 +171,7 @@ Oto, jak element jest wyświetlany dla iOS projektów:
         </feature>
     
 
-Zobacz API Reference szczegółów w jaki sposób określić każdej funkcji. Zobacz Podręcznik rozwoju Plugin aby uzyskać więcej informacji na wtyczki.
+Zobacz <a href="../index.html">API Reference</a> szczegółów w jaki sposób określić każdej funkcji. Zobacz Podręcznik rozwoju Plugin aby uzyskać więcej informacji na wtyczki.
 
 ## *Platform* Element
 

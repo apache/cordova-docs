@@ -20,7 +20,7 @@ license: >
 
 # SQLResultSet
 
-Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet`.
+Cuando se llama al método de un objeto `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet`.
 
 ## Propiedades
 
@@ -28,11 +28,11 @@ Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devoluc
 
 *   **rowsAffected**: cambió el número de filas en la sentencia SQL, cero si la declaración no afectó a ninguna fila.
 
-*   **rows**: un `SQLResultSetRowList` que representan las filas devueltas, vacío si no hay filas son devueltos.
+*   **rows**: un `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` que representan las filas devueltas, vacío si no hay filas son devueltos.
 
 ## Detalles
 
-Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet` que contiene tres propiedades:
+Cuando se llama al método de un objeto `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet` que contiene tres propiedades:
 
 *   El `insertId` devuelve el número de fila de una instrucción de inserción de SQL successly. Si el SQL no introduzca ninguna fila, el `insertId` no está establecida.
 
@@ -58,13 +58,13 @@ Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devoluc
     
     function errorCB(err) {alert ("Error al procesar SQL:" + err.code);}
     
-    var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
     DB.Transaction (queryDB, errorCB);
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< título > almacenamiento ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / espera para que las bibliotecas del dispositivo API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html >< html >< cabeza >< título > almacenamiento ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / espera para que las bibliotecas del dispositivo API cargar / / document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a> ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         / / Rellenar la base de datos / / function populateDB(tx) {tx.executeSql ('DROP TABLE IF EXISTS DEMO');
             tx.executeSql ('crear tabla si no existe DEMO (id único, data)');
@@ -76,8 +76,8 @@ Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devoluc
                 devolver false;
             } / / para una instrucción insert, esta propiedad devuelve el ID de la última fila insertada console.log ("última inserta fila ID =" + results.insertId);
         } / / Callback de error de transacción / / function errorCB(err) {console.log ("Error al procesar SQL:" + err.code);
-        } / / Callback éxito de transacción / / function successCB() {var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
+        } / / Callback éxito de transacción / / function successCB() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
             DB.Transaction (queryDB, errorCB);
-        } / / dispositivo APIs están disponibles / / function onDeviceReady() {var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
+        } / / dispositivo APIs están disponibles / / function onDeviceReady() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
             DB.Transaction (populateDB, errorCB, successCB);
         } < /script >< / cabeza >< cuerpo >< h1 > ejemplo < / h1 >< p > base de datos < /p >< cuerpo / >< / html >

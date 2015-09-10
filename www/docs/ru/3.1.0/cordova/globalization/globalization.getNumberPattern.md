@@ -45,7 +45,7 @@ license: >
 
 *   **Группировка**: символ группировки использовать для синтаксического анализа и форматирования. *(Строка)*
 
-Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PATTERN\_ERROR`.
+Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
 
 `options`Параметр является необязательным, и значения по умолчанию являются:
 
@@ -96,7 +96,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern Example</title>
+        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

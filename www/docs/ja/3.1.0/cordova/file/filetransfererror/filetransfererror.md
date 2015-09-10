@@ -30,7 +30,7 @@ A `FileTransferError` オブジェクトは、エラーが発生エラー コー
 
 *   **ターゲット**: 先の URI。(文字列)
 
-*   **http_status**: HTTP ステータス コード。この属性は、HTTP 接続から応答コードを受信したときにのみ使用できます。(数)
+*   **http_status**: HTTP ステータス コード。この属性は、HTTP <a href="../../connection/connection.html">接続</a>から応答コードを受信したときにのみ使用できます。(数)
 
 ## 定数
 
@@ -41,4 +41,4 @@ A `FileTransferError` オブジェクトは、エラーが発生エラー コー
 
 ## 説明
 
-`FileTransferError`オブジェクトは、ファイルのダウンロードまたはアップロードするときにエラーが発生エラー コールバックに渡されます。
+`FileTransferError`オブジェクトは、<a href="../fileobj/fileobj.html">ファイル</a>のダウンロードまたはアップロードするときにエラーが発生エラー コールバックに渡されます。

@@ -48,7 +48,7 @@ Les fonctionnalités suivantes ne sont pas disponibles lorsque vous déployez vo
   * Bibliothèque musicale (`musicLibrary`)
   * Bibliothèque d'images (`picturesLibrary`)
   * Bibliothèque de vidéos (`videosLibrary`)
-  * Stockage amovible (`removableStorage`)
+  * <a href="../../../cordova/storage/storage.html">Stockage</a> amovible (`removableStorage`)
   * Client/serveur Internet (`internetClientClientServer`) - Notez `internetClient` est toujours permise
   * Client/serveur de réseau privé (`privateNetworkClientServer`)
 

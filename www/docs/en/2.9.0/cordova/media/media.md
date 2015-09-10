@@ -23,7 +23,7 @@ Media
 
 > The `Media` object provides the ability to record and play back audio files on a device.
 
-    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
 
 __NOTE:__ The current implementation does not adhere to a W3C
 specification for media capture, and is provided for convenience only.
@@ -35,7 +35,7 @@ Parameters
 
 - __src__: A URI containing the audio content. _(DOMString)_
 - __mediaSuccess__: (Optional) The callback that executes after a `Media` object has completed the current play, record, or stop action. _(Function)_
-- __mediaError__: (Optional) The callback that executes if an error occurs. _(Function)_
+- __<a href="Parameters/mediaError.html">mediaError</a>__: (Optional) The callback that executes if an error occurs. _(Function)_
 - __mediaStatus__: (Optional) The callback that executes to indicate status changes. _(Function)_
 
 Constants
@@ -53,22 +53,22 @@ The following constants are reported as the only parameter to the
 Methods
 -------
 
-- `media.getCurrentPosition`: Returns the current position within an audio file.
-- `media.getDuration`: Returns the duration of an audio file.
-- `media.play`: Start or resume playing an audio file.
-- `media.pause`: Pause playback of an audio file.
-- `media.release`: Releases the underlying operating system's audio resources.
-- `media.seekTo`: Moves the position within the audio file.
-- `media.setVolume`: Set the volume for audio playback.
-- `media.startRecord`: Start recording an audio file.
-- `media.stopRecord`: Stop recording an audio file.
-- `media.stop`: Stop playing an audio file.
+- `media.getCurrent<a href="../geolocation/Position/position.html">Position</a>`: Returns the current position within an audio file.
+- `<a href="media.getDuration.html">media.getDuration</a>`: Returns the duration of an audio file.
+- `<a href="media.play.html">media.play</a>`: Start or <a href="../events/events.resume.html">resume</a> playing an audio file.
+- `media.<a href="../events/events.pause.html">pause</a>`: Pause playback of an audio file.
+- `<a href="media.release.html">media.release</a>`: Releases the underlying operating system's audio resources.
+- `<a href="media.seekTo.html">media.seekTo</a>`: Moves the position within the audio file.
+- `<a href="media.setVolume.html">media.setVolume</a>`: Set the volume for audio playback.
+- `<a href="media.startRecord.html">media.startRecord</a>`: Start recording an audio file.
+- `<a href="media.stop.html">media.stop</a>Record`: Stop recording an audio file.
+- `<a href="media.stop.html">media.stop</a>`: Stop playing an audio file.
 
 Additional ReadOnly Parameters
 ---------------------
 
 - __position__: The position within the audio playback, in seconds.
-    - Not automatically updated during play; call `getCurrentPosition` to update.
+    - Not automatically updated during play; call `getCurrent<a href="../geolocation/Position/position.html">Position</a>` to update.
 - __duration__: The duration of the media, in seconds.
 
 Supported Platforms
@@ -100,7 +100,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture" />
+    <plugin name="<a href="capture/capture.html">Capture</a>" value="org.apache.cordova.media.Media<a href="capture/capture.html">Capture</a>" />
 
 ### iOS
 

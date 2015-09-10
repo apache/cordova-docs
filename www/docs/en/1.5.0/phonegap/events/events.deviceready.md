@@ -43,39 +43,39 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
 
-    function onDeviceReady() {
+    function on<a href="../device/device.html">Device</a>Ready() {
         // Now safe to use the PhoneGap API
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>PhoneGap <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when PhoneGap is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when PhoneGap is loaded.
         //
         // At this point, the document has loaded but cordova-1.5.0.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Now safe to use the PhoneGap API
         }
 
@@ -100,13 +100,13 @@ A workaround is to manually query `PhoneGap.available` until PhoneGap has fully 
           function() {
               if (PhoneGap.available) {
                   window.clearInterval(intervalID);
-                  onDeviceReady();
+                  on<a href="../device/device.html">Device</a>Ready();
               }
           },
           500
         );
     }
 
-    function onDeviceReady() {
+    function on<a href="../device/device.html">Device</a>Ready() {
         // Now safe to use the PhoneGap API
     }

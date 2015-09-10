@@ -20,13 +20,13 @@ license: >
 
 # compassOptions
 
-若要自訂的指南針檢索一個可選參數。
+若要自訂的<a href="../compass.html">指南針</a>檢索一個可選參數。
 
 ## 選項
 
 *   **頻率**： 經常如何檢索以毫秒為單位的羅經航向。*（人數）*（預設值： 100）
 
-*   **篩選器**： 啟動 watchHeading 成功回檔所需的度的變化。*（人數）*
+*   **篩選器**： 啟動 watchHeading 成功回<a href="../../file/fileobj/fileobj.html">檔</a>所需的度的變化。*（人數）*
 
 Android 的怪癖
 

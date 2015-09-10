@@ -37,8 +37,8 @@ more or less boiling down to calling the `action` method on the
 The plugin must be added under the `<plugins>` tag of your Cordova-iOS
 application's project's `config.xml` file.
 
-    <feature name="LocalStorage">
-        <param name="ios-package" value="CDVLocalStorage" />
+    <feature name="Local<a href="../../../cordova/storage/storage.html">Storage</a>">
+        <param name="ios-package" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
     </feature>
 
 The feature name='name' should match what you use in the JavaScript
@@ -196,7 +196,7 @@ See other methods that you can override in:
 1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
+For example, you can hook into the `<a href="../../../cordova/events/events.pause.html">pause</a>`, `<a href="../../../cordova/events/events.resume.html">resume</a>`, app terminate and `handleOpenURL` events.
 
 ## Debugging Plugins
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-Project Settings for BlackBerry
+<a href="../index.html">Project Settings</a> for BlackBerry
 ===================================
 
 BlackBerry fully supports the

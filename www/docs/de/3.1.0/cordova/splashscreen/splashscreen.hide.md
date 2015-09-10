@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# SplashScreen.Hide
+# <a href="splashscreen.html">SplashScreen</a>.Hide
 
-Schließen Sie den Splash-Screen.
+<a href="../inappbrowser/inappbrowser.html">Schließen</a> Sie den Splash-Screen.
 
     navigator.splashscreen.hide();
     
@@ -47,14 +47,14 @@ Diese Methode weist Begrüßungsbildschirm der Anwendung.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ Diese Methode weist Begrüßungsbildschirm der Anwendung.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>
     
 
 ## iOS Quirk
 
-Die `config.xml` Datei `AutoHideSplashScreen` muss `false` . Verstecken den Splash-Screen für zwei Sekunden Verzögerung, fügen Sie einen Timer wie die folgende in der `deviceready` -Ereignishandler:
+Die `config.xml` <a href="../file/fileobj/fileobj.html">Datei</a> `AutoHide<a href="splashscreen.html">SplashScreen</a>` muss `false` . Verstecken den Splash-Screen für zwei Sekunden Verzögerung, fügen Sie einen Timer wie die folgende in der `<a href="../events/events.deviceready.html">deviceready</a>` -Ereignishandler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

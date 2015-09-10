@@ -20,7 +20,7 @@ license: >
 
 # 座標
 
-描述位置的地理座標的屬性集。
+描述<a href="../Position/position.html">位置</a>的地理座標的屬性集。
 
 ## 屬性
 
@@ -28,7 +28,7 @@ license: >
 
 *   **經度**: 經度以十進位度為單位。*（人數）*
 
-*   **海拔高度**： 高度在米以上橢球體中的位置。*（人數）*
+*   **海拔高度**： 高度在米以上橢球體中的<a href="../Position/position.html">位置</a>。*（人數）*
 
 *   **準確性**： 中米的緯度和經度座標的精度級別。*（人數）*
 
@@ -36,7 +36,7 @@ license: >
 
 *   **標題**： 旅行，指定以度為單位元數目相對於真北順時針方向。*（人數）*
 
-*   **速度**： 當前地面速度的設備，指定在米每秒。*（人數）*
+*   **速度**： 當前地面速度的<a href="../../device/device.html">設備</a>，指定在米每秒。*（人數）*
 
 ## 說明
 
@@ -72,7 +72,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
     
 
 ## 完整的示例
@@ -80,18 +80,18 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position Example</title>
+        <title>Geolocation Position <a href="../../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
         // Display `Position` properties from the geolocation
@@ -124,4 +124,4 @@ license: >
 
 ## Android 的怪癖
 
-**altitudeAccuracy**: 不支援的 Android 設備，返回`null`.
+**altitudeAccuracy**: 不支援的 Android <a href="../../device/device.html">設備</a>，返回`null`.

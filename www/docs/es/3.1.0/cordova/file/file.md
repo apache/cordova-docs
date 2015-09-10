@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Archivo
+# <a href="fileobj/fileobj.html">Archivo</a>
 
 > Una API para leer, escribir y navegar por las jerarquías de sistema de archivo, basadas en la [api de archivo w3c][1].
 
@@ -26,20 +26,20 @@ license: >
 
 ## Objetos
 
-*   DirectoryEntry
-*   DirectoryReader
-*   Archivo
-*   FileEntry
-*   FileError
-*   FileReader
+*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+*   <a href="fileobj/fileobj.html">Archivo</a>
+*   <a href="fileentry/fileentry.html">FileEntry</a>
+*   <a href="fileerror/fileerror.html">FileError</a>
+*   <a href="filereader/filereader.html">FileReader</a>
 *   FileSystem
 *   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
+*   <a href="filetransfererror/filetransfererror.html">FileTransferError</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
+*   <a href="filewriter/filewriter.html">FileWriter</a>
 *   Flags
-*   LocalFileSystem
+*   <a href="localfilesystem/localfilesystem.html">LocalFileSystem</a>
 *   Metadata
 
 ## Acceso a la función

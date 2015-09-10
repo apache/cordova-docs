@@ -28,7 +28,7 @@ Connection
 プロパティー
 ----------
 
-- connection.type
+- <a href="connection.type.html">connection.type</a>
 
 定数
 ---------
@@ -70,7 +70,7 @@ Connection
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

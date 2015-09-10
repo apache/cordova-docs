@@ -30,7 +30,7 @@ globalization.getDateNames
 
 successCB コールバック関数に、プロパティーオブジェクトをパラメーターとして名前の配列を返します。このオブジェクトは文字列配列の ``value`` プロパティーを持っています。この文字列配列は、オプションで何が選択されたかによって、最初の月もしくは最初の曜日の名前から始まります。
 
-もし名前の取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.UNKNOWN\_ERROR です。
+もし名前の取得中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR です。
 
 `options.type` には 'narrow' または 'wide' が指定出来ます。
 `options.item` には 'months' または 'days' が指定出来ます。
@@ -46,7 +46,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは 12 個のポップアップダイアログを次々と表示します。それぞれのポップアップダイアログには、 "month: January" といったような文字列が表示されます。
@@ -62,7 +62,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
     );
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>

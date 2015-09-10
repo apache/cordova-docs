@@ -59,7 +59,7 @@ Confrontiamo il valore dei `action` parametro e invio richiesta fuori per un met
 
 Quando cattura eccezioni e restituendo errori, è importante per motivi di chiarezza che gli errori restituiti ai nomi di eccezione di JavaScript match Java quanto più possibili.
 
-### Filettatura
+### <a href="../../../cordova/file/fileobj/fileobj.html">File</a>ttatura
 
 JavaScript in WebView fa *non* eseguito sul thread dell'interfaccia utente. Esso viene eseguito sul thread WebCore. Il `execute` metodo gestisce anche sul thread WebCore.
 

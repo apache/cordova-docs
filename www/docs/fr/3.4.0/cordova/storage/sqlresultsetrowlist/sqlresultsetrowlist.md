@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# SQLResultSetRowList
+# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
 
-Une des propriétés de le `SQLResultSet` contenant les lignes retournées par une requête SQL.
+Une des propriétés de le `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` contenant les lignes retournées par une requête SQL.
 
 ## Propriétés
 
@@ -32,7 +32,7 @@ Une des propriétés de le `SQLResultSet` contenant les lignes retournées par u
 
 ## Détails
 
-Le `SQLResultSetRowList` contient les données retournées à partir d'un SQL `select` déclaration. L'objet contient un `length` propriété indiquant combien de lignes le `select` instruction renvoie. Pour obtenir une ligne de données, appelez la `item` méthode pour spécifier un index. Elle retourne un JavaScript `Object` dont les propriétés sont les colonnes de base de données la `select` instruction a été exécutée dans.
+Le `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList` contient les données retournées à partir d'un SQL `select` déclaration. L'objet contient un `length` propriété indiquant combien de lignes le `select` instruction renvoie. Pour obtenir une ligne de données, appelez la `item` méthode pour spécifier un index. Elle retourne un JavaScript `Object` dont les propriétés sont les colonnes de base de données la `select` instruction a été exécutée dans.
 
 ## Plates-formes prises en charge
 
@@ -49,13 +49,13 @@ Le `SQLResultSetRowList` contient les données retournées à partir d'un SQL `s
             Console.log ("table de démo:" + len + « lignes trouvées. ») ;
             pour (var j'ai = 0; j'ai < len; i ++) {console.log ("ligne =" + i + "ID =" + results.rows.item (i) .id + "données =" + results.rows.item(i).data) ;
             }} function errorCB(err) {alert ("erreur lors du traitement SQL:" + err.code) ;
-        } var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
+        } var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
         DB.transaction (queryDB, errorCB) ;
     
 
 ## Exemple complet
 
-    < !DOCTYPE html >< html >< tête >< titre > stockage exemple < / titre >< script type = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< script type = "text/javascript" charset = "utf-8" > / / attendre pour les bibliothèques de périphérique API charger / / document.addEventListener ("deviceready", onDeviceReady, false) ;
+    < !DOCTYPE html >< html >< tête >< titre > stockage exemple < / titre >< script type = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< script type = "text/javascript" charset = "utf-8" > / / attendre pour les bibliothèques de périphérique API charger / / document.addEventListener ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false) ;
     
         / / Remplir la base de données / / function populateDB(tx) {tx.executeSql ("DROP TABLE IF EXISTS démo") ;
             tx.executeSql ("créer TABLE IF NOT existe démo (données uniques, id)") ;
@@ -66,8 +66,8 @@ Le `SQLResultSetRowList` contient les données retournées à partir d'un SQL `s
             Console.log ("table de démo:" + len + « lignes trouvées. ») ;
             pour (var j'ai = 0; j'ai < len; i ++) {console.log ("ligne =" + i + "ID =" + results.rows.item (i) .id + "données =" + results.rows.item(i).data) ;
             }} / / Rappel erreur de transaction / / function errorCB(err) {console.log ("erreur lors du traitement SQL:" + err.code) ;
-        } / / Rappel réussi de transaction / / function successCB() {var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
+        } / / Rappel réussi de transaction / / function successCB() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
             DB.transaction (queryDB, errorCB) ;
-        } / / périphérique API sont disponibles / / function onDeviceReady() {var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
+        } / / périphérique API sont disponibles / / function onDeviceReady() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
             DB.transaction (populateDB, errorCB, successCB) ;
         } < /script >< / chef >< corps >< h1 > exemple < / h1 >< p > base de données < /p >< / body >< / html >

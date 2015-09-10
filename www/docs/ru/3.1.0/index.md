@@ -26,35 +26,35 @@ license: >
   <ul>
     <li>
       <h2>
-        Введение
+        <a href="guide/overview/index.html">Введение</a>
       </h2>
       
       <span>Начните отсюда, если вы новичок в Cordova.</span>
     </li>
     <li>
       <h2>
-        Интерфейс командной строки
+        <a href="guide/cli/index.html">Интерфейс командной строки</a>
       </h2>
       
       <span>Создание, сборка и развертывание из командной строки.</span>
     </li>
     <li>
       <h2>
-        Руководство по поддерживаемым платформам
+        <a href="guide/platforms/index.html">Руководство по поддерживаемым платформам</a>
       </h2>
       
       <span>Настройка SDK и обновление существующих проектов</span>
     </li>
     <li>
       <h2>
-        Файл config.xml
+        <a href="cordova/file/fileobj/fileobj.html">Файл</a> config.xml
       </h2>
       
       <span>Настройка возможностей вашего приложения.</span>
     </li>
     <li>
       <h2>
-        Иконки и заставки
+        <a href="config_ref/images.html">Иконки и заставки</a>
       </h2>
       
       <span>Настройка приложения и отображения изображений.</span>
@@ -75,14 +75,14 @@ license: >
     </li>
     <li>
       <h2>
-        Руководство по конфиденциальности
+        <a href="guide/appdev/privacy/index.html">Руководство по конфиденциальности</a>
       </h2>
       
       <span>Узнайте о важных мобильных конфиденциальности.</span>
     </li>
     <li>
       <h2>
-        Whitelist Путеводитель
+        <a href="guide/appdev/whitelist/index.html">Whitelist Путеводитель</a>
       </h2>
       
       <span>Предоставьте приложению доступ к внешним ресурсам.</span>
@@ -103,112 +103,112 @@ license: >
   <ul>
     <li>
       <h2>
-        Accelerometer
+        <a href="cordova/accelerometer/accelerometer.html">Accelerometer</a>
       </h2>
       
       <span>Прикоснитесь к датчику движения устройства.</span>
     </li>
     <li>
       <h2>
-        Камера
+        <a href="cordova/camera/camera.html">Камера</a>
       </h2>
       
       <span>Делайте снимки, используя фотокамеру.</span>
     </li>
     <li>
       <h2>
-        Захват
+        <a href="cordova/media/capture/capture.html">Захват</a>
       </h2>
       
       <span>Запись видео и аудио.</span>
     </li>
     <li>
       <h2>
-        Компас
+        <a href="cordova/compass/compass.html">Компас</a>
       </h2>
       
       <span>Получите направление, указываемое устройством.</span>
     </li>
     <li>
       <h2>
-        Подключение
+        <a href="cordova/connection/connection.html">Подключение</a>
       </h2>
       
       <span>Проверка наличия и состояние интенита и получение информации о сотовой сети.</span>
     </li>
     <li>
       <h2>
-        Контакты
+        <a href="cordova/contacts/Contact/contact.html">Контакт</a>ы
       </h2>
       
       <span>Работа со списком контактов из адресной книги.</span>
     </li>
     <li>
       <h2>
-        Устройство
+        <a href="cordova/device/device.html">Устройство</a>
       </h2>
       
       <span>Специальная информация об устройстве.</span>
     </li>
     <li>
       <h2>
-        События
+        <a href="cordova/events/events.html">События</a>
       </h2>
       
       <span>Перехват в нативных события через JavaScript.</span>
     </li>
     <li>
       <h2>
-        Файл
+        <a href="cordova/file/fileobj/fileobj.html">Файл</a>
       </h2>
       
       <span>Обращение в файловой системе через JavaScript.</span>
     </li>
     <li>
       <h2>
-        Географическое положение
+        <a href="cordova/geolocation/geolocation.html">Географическое положение</a>
       </h2>
       
       <span>Предоставляет приложению доступ к географическому местоположению.</span>
     </li>
     <li>
       <h2>
-        Глобализация
+        <a href="cordova/globalization/globalization.html">Глобализация</a>
       </h2>
       
       <span>Включите представление объектов, определенных для локали.</span>
     </li>
     <li>
       <h2>
-        InAppBrowser
+        <a href="cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
       </h2>
       
       <span>Открывайте ссылки во встроенном в приложение браузере.</span>
     </li>
     <li>
       <h2>
-        Средства массовой информации
+        <a href="cordova/media/media.html">Средства массовой информации</a>
       </h2>
       
       <span>Запись и воспроизведение видео и аудио.</span>
     </li>
     <li>
       <h2>
-        Уведомление
+        <a href="cordova/notification/notification.html">Уведомление</a>
       </h2>
       
       <span>Визуальные, звуковые, и тактильные уведомления на устройстве</span>
     </li>
     <li>
       <h2>
-        Экран-заставка
+        <a href="cordova/splashscreen/splashscreen.html">Экран-заставка</a>
       </h2>
       
       <span>Управление заставкой приложения.</span>
     </li>
     <li>
       <h2>
-        Хранения
+        <a href="cordova/storage/storage.html">Хранения</a>
       </h2>
       
       <span>Доступ к свойствам нативного хранилища данных .</span>

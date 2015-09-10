@@ -24,18 +24,18 @@ license: >
 
 ## Metodi
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (obsoleto)
-*   compass.clearWatchFilter (obsoleto)
+*   <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
+*   <a href="compass.watchHeading.html">compass.watchHeading</a>
+*   <a href="compass.clearWatch.html">compass.clearWatch</a>
+*   <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a> (obsoleto)
+*   <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a> (obsoleto)
 
 ## Argomenti
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   <a href="parameters/compassSuccess.html">compassSuccess</a>
+*   <a href="parameters/compassError.html">compassError</a>
+*   <a href="parameters/compassOptions.html">compassOptions</a>
+*   <a href="parameters/compassHeading.html">compassHeading</a>
 
 ## La funzionalità di accesso
 

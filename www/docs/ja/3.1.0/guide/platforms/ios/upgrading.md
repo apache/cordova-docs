@@ -20,7 +20,7 @@ license: >
 
 # IOS のアップグレード
 
-このガイドは、コルドバの旧バージョンからアップグレードする iOS のプロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
+この<a href="../../../index.html">ガイド</a>は、コルドバの旧バージョンからアップグレードする iOS のプロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>参照してください。
 
 **注：**Xcode 4.6 は必要、Xcode 5 がオススメです。 現在、Apple の App Store に提出する必要があります使用する iOS SDK の最新の出荷されたバージョン iOS 7 であります。 iOS 7 SDK 必要はありませんまだ、しかしこれはすぐに変更可能性があります。
 
@@ -33,12 +33,12 @@ CLI 以外のプロジェクトを実行します。
 
 CLI プロジェクトの場合、次のように実行します。
 
-        1. 'コルドバ' CLI バージョンの更新-、コマンド ライン インターフェイス 2 を参照してください。実行 'コルドバ プラットフォーム更新イオス島'
+        1. 'コルドバ' CLI バージョンの更新-、<a href="../../cli/index.html">コマンド ライン インターフェイス</a> 2 を参照してください。実行 'コルドバ プラットフォーム更新イオス島'
     
 
 ### iOS 7 問題
 
-    1。 値を削除"幅デバイスの幅、高さ = デバイス高さ ="index.html ファイル内の属性を「ビューポート」するメタ タグがあなたから https://issues.apache.org/jira/browse/CB-4323 2 を参照してください。 IOS 7 サポートのメディア、メディアのキャプチャ、splashscreen コア プラグインを更新します。
+    1。 値を削除"幅<a href="../../../cordova/device/device.html">デバイス</a>の幅、高さ = <a href="../../../cordova/device/device.html">デバイス</a>高さ ="index.html <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>内の属性を「ビューポート」するメタ タグがあなたから https://issues.apache.org/jira/browse/CB-4323 2 を参照してください。 IOS 7 サポートの<a href="../../../cordova/media/media.html">メディア</a>、<a href="../../../cordova/media/media.html">メディア</a>の<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>、splashscreen コア プラグインを更新します。
     
 
 ### Xcode 5 の問題
@@ -48,14 +48,14 @@ CLI プロジェクトの場合、次のように実行します。
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード
 
-1.  コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
+1.  <a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
 
 2.  あなたのプラットフォームの追加、cordova のプロジェクトします。`cordova
 platform add ios`.
 
 3.  プロジェクトの内容をコピー `www` ディレクトリを `www` で作成したコルドバ プロジェクトのルート ディレクトリ。
 
-4.  コピーまたは元のプロジェクトから任意のネイティブの資産を上書き ( `Resources` など)、確実に新しいファイルを追加する、 `.xcodeproj` プロジェクト。 IOS のプロジェクトのビルド中、 `platforms\ios` ディレクトリ。
+4.  コピーまたは元のプロジェクトから任意のネイティブの資産を上書き ( `Resources` など)、確実に新しい<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を追加する、 `.xcodeproj` プロジェクト。 IOS のプロジェクトのビルド中、 `platforms\ios` ディレクトリ。
 
 5.  コピー、 `config.xml` に、 `www` ディレクトリ、すべてのプラグインの定義を削除します。プラットフォーム ディレクトリの代わりにここでの設定を変更します。
 
@@ -73,9 +73,9 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを `www` ディレクトリと削除あなた `www/cordova.js` ファイル。
+5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>自体には注意してください) に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリと削除あなた `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
@@ -91,9 +91,9 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを `www` ディレクトリと削除あなた `www/cordova.js` ファイル。
+5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>自体には注意してください) に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリと削除あなた `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
@@ -107,9 +107,9 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー ファイル自体には注意してください) に新しいプロジェクトからファイルを `www` ディレクトリと削除あなた `www/cordova-2.7.0.js` ファイル。
+5.  コピー、 `www/cordova.js` (バージョン サフィックスをもうがない、バージョン ヘッダー <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>自体には注意してください) に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリと削除あなた `www/cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  更新 `<plugin>` タグ内にある、 `config.xml` に `<feature>` タグ。 既存のことに注意してください `<plugin>` タグはまだ動作しますが、廃止予定です。 この情報をコピーすることができます、 `config.xml` 、新しいプロジェクトのため。 たとえば。
     
@@ -123,9 +123,9 @@ platform add ios`.
         OpenAL ImageIO
         
 
-10. ターゲット プロジェクトの**ビルド設定**を更新します。**リンク → その他のリンカーのフラグ**の下で編集する**"- Obj - C"** **"-ObjC」**.
+10. ターゲット プロジェクトの**ビルド設定**を更新します。**リンク → その他のリンカーの<a href="../../../cordova/file/flags/flags.html">フラグ</a>**の下で編集する**"- Obj - C"** **"-ObjC」**.
 
-11. ターゲット プロジェクトの**ビルド設定**を更新します。 **リンク → その他のリンカーのフラグ**の下を変更**"-all_load"**を `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` 。 これを行うにで定義されている問題がある場合必要がありますのみ[この問題します][1]。.
+11. ターゲット プロジェクトの**ビルド設定**を更新します。 **リンク → その他のリンカーの<a href="../../../cordova/file/flags/flags.html">フラグ</a>**の下を変更**"-all_load"**を `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` 。 これを行うにで定義されている問題がある場合必要がありますのみ[この問題します][1]。.
 
  [1]: https://issues.apache.org/jira/browse/CB-3458
 
@@ -139,13 +139,13 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.7.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.6.0.js` ファイル。
+5.  コピー、 `www/cordova-2.7.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.7.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][2]を見るプロジェクト).
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から、新しい 1 つによると （[この diff][2]を見るプロジェクト).
 
-8.  `config.xml`ファイルに[この行を削除][3].
+8.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>に[この行を削除][3].
 
 9.  削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
@@ -162,19 +162,19 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  プロジェクトのコピー `www/cordova-2.6.0.js` にファイルを `www` ディレクトリ、および削除を `www/cordova-2.5.0.js` ファイル。
+5.  プロジェクトのコピー `www/cordova-2.6.0.js` に<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバのスクリプト参照を更新あなた `www/index.html` ファイルと共に、スクリプトを参照する他のファイル) を指す、新しい `cordova-2.6.0.js` ファイル。
+6.  コルドバのスクリプト参照を更新あなた `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>と共に、スクリプトを参照する他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][4]を見るプロジェクト).
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から、新しい 1 つによると （[この diff][4]を見るプロジェクト).
 
-8.  `config.xml`ファイルは、[この新しい行を追加][5].
+8.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、[この新しい行を追加][5].
 
-9.  `config.xml`ファイルは、[この新しい行を追加][6].
+9.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、[この新しい行を追加][6].
 
-10. `config.xml`ファイル、 [UIWebViewBounce DisallowOverscroll に変更されているしデフォルト値が異なる][7].
+10. `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、 [UIWebViewBounce DisallowOverscroll に変更されているしデフォルト値が異なる][7].
 
-11. `config.xml`ファイル、 `EnableLocation` の好みは廃止されました。
+11. `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、 `EnableLocation` の好みは廃止されました。
 
 12. 削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
@@ -193,17 +193,17 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.5.0.js` に新しいプロジェクトからファイルを `www` ディレクトリと削除あなた `www/cordova-2.4.0.js` ファイル。
+5.  コピー、 `www/cordova-2.5.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリと削除あなた `www/cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.5.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][8]を見るプロジェクト).
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から、新しい 1 つによると （[この diff][8]を見るプロジェクト).
 
-8.  `config.xml`ファイル、[これらの新しい行を追加][9].
+8.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、[これらの新しい行を追加][9].
 
-9.  `config.xml`ファイル、[ルート要素を編集する、ウィジェットにコルドバからそれを変える][10].
+9.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、[ルート要素を編集する、ウィジェットにコルドバからそれを変える][10].
 
-10. `config.xml`ファイル、 [OpenAllWhitelistURLsInWebView 設定の削除][11].
+10. `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、 [OpenAllWhitelistURLsInWebView 設定の削除][11].
 
 11. 削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.5.0 で、これはスクリプトを更新します。
 
@@ -224,15 +224,15 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.4.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.3.0.js` ファイル。
+5.  コピー、 `www/cordova-2.4.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.4.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` ファイルから、新しい 1 つによると （[この diff][12]を見るプロジェクト).
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `MainViewController.m` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から、新しい 1 つによると （[この diff][12]を見るプロジェクト).
 
-8.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][13]を見るプロジェクト).
+8.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から、新しい 1 つによると （[この diff][13]を見るプロジェクト).
 
-9.  `config.xml`ファイルは、[この新しい行を追加][14].
+9.  `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、[この新しい行を追加][14].
 
 10. 削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.4.0 でこのスクリプトを修正します。
 
@@ -255,30 +255,30 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.3.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.2.0.js` ファイル。
+5.  コピー、 `www/cordova-2.3.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.3.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると。
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると。
 
 8.  削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.3.0、新しいスクリプトがあります。
 
 9.  削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
-10. 変換、 `Cordova.plist` ファイルを `config.xml` 、スクリプトを実行して `bin/cordova\_plist\_to\_config\_xml` プロジェクト ファイル。
+10. 変換、 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `config.xml` 、スクリプトを実行して `bin/cordova\_plist\_to\_config\_xml` プロジェクト <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-11. InAppBrowser プラグインを追加、 `config.xml` の下でこのタグを追加することによって `<cordova><plugins>` :
+11. <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> プラグインを追加、 `config.xml` の下でこのタグを追加することによって `<cordova><plugins>` :
     
-        < プラグイン名"InAppBrowser"の値を = ="CDVInAppBrowser"/>
+        < プラグイン名"<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>"の値を = ="CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>"/>
         
 
-12. Objective-C のプラグインはもう*ない*ホワイト注意ください。 ホワイト リストにアプリケーションのホワイト リストとの接続をする必要があります設定、 `User-Agent` メイン コルドバ WebView として同じユーザー エージェントへの接続のヘッダー。 アクセスしてこれを得ることができる、 `userAgent` メイン ビュー コント ローラーをオフ プロパティ。 メイン ビュー-コント ローラー (CDVViewController) しています、 `URLisAllowed` URL がホワイト リストを渡すかどうかをチェックするメソッド。
+12. Objective-C のプラグインはもう*ない*ホワイト注意ください。 ホワイト リストにアプリケーションのホワイト リストとの<a href="../../../cordova/connection/connection.html">接続</a>をする必要があります設定、 `User-Agent` メイン コルドバ WebView として同じユーザー エージェントへの<a href="../../../cordova/connection/connection.html">接続</a>のヘッダー。 アクセスしてこれを得ることができる、 `userAgent` メイン ビュー コント ローラーをオフ プロパティ。 メイン ビュー-コント ローラー (CDVViewController) しています、 `URLisAllowed` URL がホワイト リストを渡すかどうかをチェックするメソッド。
 
-13. デバイス API の変更:
+13. <a href="../../../cordova/device/device.html">デバイス</a> API の変更:
     
-    *   IOS は、device.platform を返すを使用して `iPhone` 、 `iPad` または `iPod Touch` （正しく） を返します今;`iOS`.
-    *   IOS は、ユーザーのデバイスの名前を返す使用 (すべてのプラットフォームでは非推奨今) device.name (例えば ' Shazron の iPhone 5 '）;今、それを返すために使用どのような device.platform を返します： `iPhone` 、 `iPad` または`iPod Touch`.
-    *   すべてのプラットフォーム、device.model; と呼ばれる新しいプロパティがありますこれは特定のデバイス モデルを返します、例えば `iPad2,5` (他のプラットフォームでは、返すを返すために使用どのような device.name)。
+    *   IOS は、<a href="../../../cordova/device/device.platform.html">device.platform</a> を返すを使用して `iPhone` 、 `iPad` または `iPod Touch` （正しく） を返します今;`iOS`.
+    *   IOS は、ユーザーの<a href="../../../cordova/device/device.html">デバイス</a>の名前を返す使用 (すべてのプラットフォームでは非推奨今) <a href="../../../cordova/device/device.name.html">device.name</a> (例えば ' Shazron の iPhone 5 '）;今、それを返すために使用どのような <a href="../../../cordova/device/device.platform.html">device.platform</a> を返します： `iPhone` 、 `iPad` または`iPod Touch`.
+    *   すべてのプラットフォーム、<a href="../../../cordova/device/device.model.html">device.model</a>; と呼ばれる新しいプロパティがありますこれは特定の<a href="../../../cordova/device/device.html">デバイス</a> モデルを返します、例えば `iPad2,5` (他のプラットフォームでは、返すを返すために使用どのような <a href="../../../cordova/device/device.name.html">device.name</a>)。
 
 ## 2.2.0 にプロジェクト アップグレード 2.1.0
 
@@ -290,25 +290,25 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.2.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.1.0.js` ファイル。
+5.  コピー、 `www/cordova-2.2.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.2.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると：
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると：
     
     *   更新 → viewWillAppear
 
 8.  コピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.2.0、これは、更新されたエミュレート' スクリプト。
 
-9.  次に、更新、 `CordovaLib` サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode 変数もうどこを参照するとき `CordovaLib` が存在する、参照は絶対参照、現在。
+9.  次に、更新、 `CordovaLib` サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">変数</a>もうどこを参照するとき `CordovaLib` が存在する、参照は絶対参照、現在。
     
     1.  ターミナル.app を起動します。
     2.  コルドバをインストールした場所に移動 (手順 1 を参照) で、 `bin` サブディレクトリ
-    3.  最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 `.xcodeproj` ファイル。
+    3.  最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
         
         `update_cordova_subproject パス/を/あなた/プロジェクト/xcodeproj`
 
-**注：**コードを至る 2.2.0 で、 `bin/create` スクリプトのコピーで、 `CordovaLib` プロジェクトにプロジェクトのサブ。 セットアップの同じようなものが、ちょうど右のコピー `CordovaLib` 更新をプロジェクト ディレクトリに、 `CordovaLib` サブテーマ Xcode ファイル インスペクター (プロジェクト) の相対位置。
+**注：**コードを至る 2.2.0 で、 `bin/create` スクリプトのコピーで、 `CordovaLib` プロジェクトにプロジェクトのサブ。 セットアップの同じようなものが、ちょうど右のコピー `CordovaLib` 更新をプロジェクト ディレクトリに、 `CordovaLib` サブテーマ Xcode <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> インスペクター (プロジェクト) の相対<a href="../../../cordova/geolocation/Position/position.html">位置</a>。
 
 ## アップグレード 2.0.0 プロジェクト 2.1.0
 
@@ -322,28 +322,28 @@ platform add ios`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.1.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.0.0.js` ファイル。
+5.  コピー、 `www/cordova-2.1.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.1.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` 新しいプロジェクトからの 1 つによると：
+7.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `AppDelegate.m` 新しいプロジェクトからの 1 つによると：
     
     *   編集 → アプリケーション: didFinishLaunchingWithOptions:
     *   追加 → アプリケーション: supportedInterfaceOrientationsForWindow:
 
-8.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると：
+8.  更新 (または置き換えるには、決して<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると：
     
     *   追加 → viewWillAppear
 
 9.  コピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.1.0 でスペースを含むパスをサポートする更新されたスクリプトがあります。
 
-10. 削除する、 `VERSION` ファイルをプロジェクトから参照 (*ない*1 つで`CordovaLib`).
+10. 削除する、 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をプロジェクトから参照 (*ない*1 つで`CordovaLib`).
 
-11. 次に、更新、 `CordovaLib` サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode 変数もうどこを参照するとき `CordovaLib` が存在する、参照は絶対参照、現在。
+11. 次に、更新、 `CordovaLib` サブ プロジェクト参照。 コルドバ 2.1.0 以降では、使用していない CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">変数</a>もうどこを参照するとき `CordovaLib` が存在する、参照は絶対参照、現在。
     
     1.  ターミナル.app を起動します。
     2.  コルドバをインストールした場所に移動 (手順 1 を参照) で、 `bin` サブディレクトリ
-    3.  最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 `.xcodeproj` ファイル。
+    3.  最初のパラメーターは、プロジェクトのパスをあなたの以下のスクリプトを実行 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
         
         `update_cordova_subproject パス/を/あなた/プロジェクト/xcodeproj`
 
@@ -353,17 +353,17 @@ platform add ios`.
 
 2.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-3.  コピー、 `www/cordova-2.0.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-1.9.0.js` ファイル。
+3.  コピー、 `www/cordova-2.0.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-4.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.0.0.js` ファイル。
+4.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 5.  コピー、 `cordova` (場合プロジェクト コマンド ライン ツール) は、プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
-6.  下の新しいエントリを追加 `Plugins` で、 `Cordova.plist` ファイル、**サポート ファイル**のグループの下で。 キーが `Device` で、値は`CDVDevice`.
+6.  下の新しいエントリを追加 `Plugins` で、 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、**サポート <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>**のグループの下で。 キーが `Device` で、値は`CDVDevice`.
 
 7.  削除`Cordova.framework`.
 
-8.  削除 `verify.sh` **サポート ファイル**グループから。
+8.  削除 `verify.sh` **サポート <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>**グループから。
 
 9.  プロジェクト ナビゲーターでプロジェクト アイコンを選択して、**ターゲット**プロジェクトを選択し、[**ビルド設定**] タブを選択します。
 
@@ -371,7 +371,7 @@ platform add ios`.
 
 11. 検索、 `CordovaLib` ホーム ・ フォルダーの下に、ハード ドライブにインストールされているディレクトリ `Documents` サブディレクトリ。
 
-12. 検索、 `CordovaLib.xcodeproj` ファイルで、 `CordovaLib` ディレクトリ、その後ドラッグ アンド ドロップ、ファイルをプロジェクトに。それは、サブプロジェクトとして表示されます。
+12. 検索、 `CordovaLib.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `CordovaLib` ディレクトリ、その後ドラッグ アンド ドロップ、<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をプロジェクトに。それは、サブプロジェクトとして表示されます。
 
 13. プロジェクトをビルドし、関連するいくつかのエラーを取得する必要があります `#import` ディレクティブ。
 
@@ -403,19 +403,19 @@ platform add ios`.
 
 22. プロジェクト ナビゲーターで**プロジェクトのアイコン**を選択、**ターゲット**プロジェクトを選択し、[**ビルド設定**] タブを選択します。
 
-23. **その他のリンカーのフラグ**を検索し、値を追加**-all_load**と**Obj-C**.
+23. **その他のリンカーの<a href="../../../cordova/file/flags/flags.html">フラグ</a>**を検索し、値を追加**-all_load**と**Obj-C**.
 
 24. 展開、 `CordovaLib` サブ プロジェクト。
 
-25. 検索、 `VERSION` ファイルは、(コピーではなく、それへのリンクを作成する) をメイン プロジェクトにドラッグします。
+25. 検索、 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、(コピーではなく、それへのリンクを作成する) をメイン プロジェクトにドラッグします。
 
 26. **追加フォルダーを作成するグループ**のラジオボタンを選択し、[**完了**] ボタンを選択します。
 
-27. 選択、 `VERSION` 、前の手順でドラッグしたファイル。
+27. 選択、 `VERSION` 、前の手順でドラッグした<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-28. **ファイル インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせ入力 (または menuitem**表示 → ユーティリティ → ファイル インスペクターの表示**).
+28. **<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせ入力 (または menuitem**表示 → ユーティリティ → <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> インスペクターの表示**).
 
-29. ドロップ ダウン メニューを**ファイル検査**で**場所**に対して**相対 CORDOVALIB**を選択します。.
+29. ドロップ ダウン メニューを**<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>検査**で**場所**に対して**相対 CORDOVALIB**を選択します。.
 
 30. 設定、Xcode **Xcode 設定 → 場所 → 派生データ高度な...**を**ユニークな**統一されたヘッダーを見つけることができますように。
 
@@ -430,7 +430,7 @@ platform add ios`.
         "$(BUILT_PRODUCTS_DIR)"
         
 
-33. **その他のリンカーのフラグ**を検索します。この設定では、この値を追加します。
+33. **その他のリンカーの<a href="../../../cordova/file/flags/flags.html">フラグ</a>**を検索します。この設定では、この値を追加します。
     
         -weak_framework CoreFoundation
         
@@ -449,9 +449,9 @@ platform add ios`.
 
 2.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-3.  コピー、 `www/cordova-1.9.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-1.8.x.js` ファイル。
+3.  コピー、 `www/cordova-1.9.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-1.8.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-4.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.9.0.js` ファイル。
+4.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 **注:** 1.9.0 サポートする新しい `BackupWebStorage` ブール `Cordova.plist` 設定。 それはデフォルトで有効になっているので、設定それ `false` 特に iOS の 6 で、それを無効にします。 参照してください[リリース ノート: サファリと UIKit セクション][16]
 
@@ -463,11 +463,11 @@ platform add ios`.
 
 2.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-3.  コピー、 `www/cordova-1.8.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-1.7.x.js` ファイル。
+3.  コピー、 `www/cordova-1.8.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-1.7.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-4.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.8.0.js` ファイル。
+4.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-キャプチャ API を使用する、新しい**ipad と網膜ディスプレイ**資産必要があります。
+<a href="../../../cordova/media/capture/capture.html">キャプチャ</a> API を使用する、新しい**ipad と網膜ディスプレイ**資産必要があります。
 
 1.  コピー、 `Resources/Capture.bundle` 、上書き、既存のプロジェクトのディレクトリに新しいプロジェクトからの項目 `Resources/Capture.bundle` アイテム。
 
@@ -481,9 +481,9 @@ platform add ios`.
 
 2.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-3.  コピー、 `www/cordova-1.7.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-1.6.0.js` ファイル。
+3.  コピー、 `www/cordova-1.7.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-4.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.7.0.js` ファイル。
+4.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## アップグレード 1.5.0 1.6.x にプロジェクトします。
 
@@ -493,24 +493,24 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  1.5.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  1.5.0-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
 
-5.  追加するすべての新しい `MainViewController` と `AppDelegate` 、Xcode プロジェクトへファイルを。
+5.  追加するすべての新しい `MainViewController` と `AppDelegate` 、Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/cordova-1.6.1.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-1.5.0.js` ファイル。
+6.  コピー、 `www/cordova-1.6.1.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.6.1.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  追加、新しい `Cordova.plist` ファイルをプロジェクトに。 統一コルドバ JavaScript ファイル （Android とブラックベリーからのものと一致するコアのプラグインのサービスの名前を変更する必要がありますので、これは必要です。`cordova-js`).
+8.  追加、新しい `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をプロジェクトに。 統一コルドバ JavaScript <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> （Android とブラックベリーからのものと一致するコアのプラグインのサービスの名前を変更する必要がありますので、これは必要です。`cordova-js`).
 
 9.  統合の設定、新しいにあなたの**バックアップ Cordova.plist**でいた**プラグイン**と**ExternalHosts**のエントリ`Cordova.plist`.
 
-10. あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。 任意 `UIWebViewDelegate` または `CDVCommandDelegate` でコード `AppDelegate.m` に移動する必要があります `MainViewController.m` 今 (コメント アウトそのファイル内のセクションを参照してください)。
+10. あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。 任意 `UIWebViewDelegate` または `CDVCommandDelegate` でコード `AppDelegate.m` に移動する必要があります `MainViewController.m` 今 (コメント アウトその<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>内のセクションを参照してください)。
 
-11. あなたのバックアップであるプロジェクトに固有のコードを統合 `MainViewController.h` と `MainViewController.m` に新しい MainViewController ファイル。
+11. あなたのバックアップであるプロジェクトに固有のコードを統合 `MainViewController.h` と `MainViewController.m` に新しい MainViewController <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 12. プロジェクト ナビゲーターでプロジェクト アイコンをクリックして、**プロジェクト**を選択し、[**ビルド設定**] タブを選択します。
 
@@ -524,37 +524,37 @@ platform add ios`.
 
 2.  新しいプロジェクトを作成し、一度それを実行します。この新しいプロジェクトから資産の一部を必要があります。
 
-3.  コピー、 `www/cordova-1.5.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-1.4.x.js` ファイル。
+3.  コピー、 `www/cordova-1.5.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-1.4.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-4.  コルドバのスクリプト参照に更新あなた `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す新しいコルドバ `cordova-1.5.0.js` ファイル。
+4.  コルドバのスクリプト参照に更新あなた `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す新しいコルドバ `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 5.  検索 `PhoneGap.framework` 、プロジェクト ナビゲーターでそれを選択します。
 
 6.  **削除**キーを入力し、削除、 `PhoneGap.framework` プロジェクト ナビゲーターの参照。
 
-7.  (**ファイルの追加**シート） プロジェクトにファイルを追加するシートをドロップダウンする必要があります**オプション コマンド A**のキーの組み合わせを入力します。 **追加フォルダーを作成済みグループ**のラジオボタンが選択されていることを確認してください。
+7.  (**<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の追加**シート） プロジェクトに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を追加するシートをドロップダウンする必要があります**オプション コマンド A**のキーの組み合わせを入力します。 **追加フォルダーを作成済みグループ**のラジオボタンが選択されていることを確認してください。
 
 8.  フォルダーに移動するための別のシートにドロップダウンする必要があります**シフト コマンド G**のキーの組み合わせ入力 (、**フォルダーに移動する：**シート)。
 
 9.  入力してください `/Users/Shared/Cordova/Frameworks/Cordova.framework` で、**フォルダーに移動する：**シートし、 **[移動**] ボタンを押します。
 
-10. **ファイルの追加**シートで、**追加**ボタンを押します。
+10. **<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の追加**シートで、**追加**ボタンを押します。
 
 11. 選択 `Cordova.framework` プロジェクト ナビゲーターで。
 
-12. **ファイル インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせを入力します。.
+12. **<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせを入力します。.
 
-13. ドロップ ダウン メニューを**ファイル検査**で**場所**の**絶対パス**を選択します。.
+13. ドロップ ダウン メニューを**<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>検査**で**場所**の**絶対パス**を選択します。.
 
-14. (**ファイルの追加**シート） プロジェクトにファイルを追加するシートをドロップダウンする必要があります**オプション コマンド A**のキーの組み合わせを入力します。 **追加フォルダーを作成済みグループ**のラジオボタンが選択されていることを確認してください。
+14. (**<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の追加**シート） プロジェクトに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を追加するシートをドロップダウンする必要があります**オプション コマンド A**のキーの組み合わせを入力します。 **追加フォルダーを作成済みグループ**のラジオボタンが選択されていることを確認してください。
 
 15. フォルダーに移動するための別のシートにドロップダウンする必要があります**シフト コマンド G**のキーの組み合わせ入力 (、**フォルダーに移動する：**シート)。
 
 16. 入力してください `~/Documents/CordovaLib/Classes/deprecated` で、**フォルダーに移動する：**シートし、 **[移動**] ボタンを押します。
 
-17. **ファイルの追加**シートで、**追加**ボタンを押します。
+17. **<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の追加**シートで、**追加**ボタンを押します。
 
-18. `AppDelegate.h`、 `AppDelegate.m` 、および `MainViewController.h` 、ファイル全体を置き換える `#ifdef PHONEGAP_FRAMEWORK` とブロックします。
+18. `AppDelegate.h`、 `AppDelegate.m` 、および `MainViewController.h` 、<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>全体を置き換える `#ifdef PHONEGAP_FRAMEWORK` とブロックします。
     
         #import "CDVDeprecated.h"
         
@@ -575,7 +575,7 @@ platform add ios`.
 
 26. **コルドバ**の**PhoneGap**の出現を置き換える.
 
-27. 見つけるあなた `PhoneGap.plist` プロジェクト ナビゲーターのファイルし、一度名前編集モードを入力するファイル名をクリックします。
+27. 見つけるあなた `PhoneGap.plist` プロジェクト ナビゲーターの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>し、一度名前編集モードを入力する<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>名をクリックします。
 
 28. 名前を変更する `PhoneGap.plist` に`Cordova.plist`.
 
@@ -597,13 +597,13 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  コピー、 `MainViewController.m` プロジェクトの 1.4.0-based ディレクトリに新しいプロジェクトから古いファイルを置き換える、ディスク上のファイル (バックアップ ファイルを最初から上記の手順 2)。
+4.  コピー、 `MainViewController.m` プロジェクトの 1.4.0-based ディレクトリに新しいプロジェクトから古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2)。
 
-5.  追加、 `MainViewController.m` 、Xcode プロジェクトにファイル。
+5.  追加、 `MainViewController.m` 、Xcode プロジェクトに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  統合、バックアップ内にあるプロジェクトに固有のコード `MainViewController.m` 新しいファイルに。
+6.  統合、バックアップ内にあるプロジェクトに固有のコード `MainViewController.m` 新しい<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>に。
 
-7.  更新、 `phonegap-1.4.0.js` ファイルは省略可能、何も JavaScript 1.4.0 と 1.4.1 の間で変わった。
+7.  更新、 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は省略可能、何も JavaScript 1.4.0 と 1.4.1 の間で変わった。
 
 ## アップグレード 1.3.0 プロジェクト 1.4.0
 
@@ -613,20 +613,20 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  1.3.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  1.3.0-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
+5.  すべて追加の `MainViewController` Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/phonegap-1.4.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-1.3.0.js` ファイル。
+6.  コピー、 `www/phonegap-1.4.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.4.0.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
+8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
-9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
+9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 1.3.0 に 1.2.0 アップグレード プロジェクトします。
 
@@ -636,20 +636,20 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  1.2.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  1.2.0-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
+5.  すべて追加の `MainViewController` Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/phonegap-1.3.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-1.2.0.js` ファイル。
+6.  コピー、 `www/phonegap-1.3.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.3.0.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
+8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
-9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
+9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 1.2.0 をプロジェクト アップグレード 1.1.0
 
@@ -659,20 +659,20 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  1.1.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  1.1.0-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
+5.  すべて追加の `MainViewController` Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/phonegap-1.2.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-1.1.0.js` ファイル。
+6.  コピー、 `www/phonegap-1.2.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.2.0.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
+8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
-9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
+9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## アップグレード 1.0.0 1.1.0 するプロジェクトします。
 
@@ -682,20 +682,20 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  1.0.0-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  1.0.0-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
+5.  すべて追加の `MainViewController` Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/phonegap-1.1.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-1.0.0.js` ファイル。
+6.  コピー、 `www/phonegap-1.1.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.1.0.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
+8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
-9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
+9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## アップグレード 0.9.6 プロジェクトを 1.0.0 に
 
@@ -705,17 +705,17 @@ platform add ios`.
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  0.9.6-Based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
+4.  0.9.6-Based プロジェクトのディレクトリ (バックアップ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を最初から上記の手順 2) すべての古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を置き換える、ディスク上に新しいプロジェクトからこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
+5.  すべて追加の `MainViewController` Xcode プロジェクトへ<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を。
 
-6.  コピー、 `www/phonegap-1.0.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/phonegap-0.9.6.js` ファイル。
+6.  コピー、 `www/phonegap-1.0.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/phonegap-0.9.6.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.0.0.js` ファイル。
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
+8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
-9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
+9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。

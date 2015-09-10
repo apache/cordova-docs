@@ -37,7 +37,7 @@ Restituisce il modello per la `successCallback` . L'oggetto passato come paramet
 
 *   **DST_OFFSET**: l'offset corrente ora legale in secondi tra non-legale del client di fuso orario e ora legale del cliente risparmio di fuso orario. *(Numero)*
 
-Se c'è un errore per ottenere il modello, il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PATTERN\_ERROR`.
+Se c'è un errore per ottenere il modello, il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
 
 Il `options` parametro è facoltativo e verrà impostato i seguenti valori:
 
@@ -72,7 +72,7 @@ Quando il browser è impostato per la `en\_US` locale, in questo esempio viene v
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern Example</title>
+        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

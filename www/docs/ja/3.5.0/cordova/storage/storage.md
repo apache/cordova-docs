@@ -20,9 +20,9 @@ license: >
 
 # ストレージ
 
-> コルドバの記憶域オプションの概要です。
+> コルドバの記憶域オプションの<a href="../../guide/overview/index.html">概要</a>です。
 
-いくつかのストレージ Api は、コルドバのアプリケーションで使用できます。[Html5rocks][1]を参照してください。完全な概要と例。
+いくつかのストレージ Api は、コルドバのアプリケーションで使用できます。[Html5rocks][1]を参照してください。完全な<a href="../../guide/overview/index.html">概要</a>と例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -32,11 +32,11 @@ license: >
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 気まぐれ**: ドット表記は*いない*利用可能な必ずを使用 `setItem` または `getItem` としてのストレージ オブジェクトから直接キーにアクセスするのではなく`window.localStorage.someKey`.
+**Windows Phone 7 気まぐれ**: ドット表記は*いない*利用可能な必ずを使用 `setItem` または `getItem` としてのストレージ オブジェクトから直接キーにアクセスするのではなく`window.<a href="localstorage/localstorage.html">localStorage</a>.someKey`.
 
 ## WebSQL
 
-この API は、基になる web ビューで利用可能です。 [Web SQL データベースの仕様][3]では、SQL クエリを通じてより多くのフル機能を備えたデータベース テーブルにアクセスを提供しています。
+この API は、基になる web ビューで利用可能です。 [Web SQL <a href="database/database.html">データベース</a>の仕様][3]では、SQL クエリを通じてより多くのフル機能を備えた<a href="database/database.html">データベース</a> テーブルにアクセスを提供しています。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 

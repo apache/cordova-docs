@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# Android プラットフォーム ガイド
+# Android プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 それの Android SDK をインストールする Eclipse SDK で Android プロジェクトを開くと、エミュレーターまたはデバイスに展開するプロセスについて説明します。 このガイドに従って少なくとも次ワークフローに関係なく、Android SDK をインストールをする必要があります。 ( *Web プロジェクト Dev*と*ネイティブのプラットフォーム開発*のワークフロー要求 Android SDK をインストールし、パス経由でアクセス可能）
+この<a href="../../../index.html">ガイド</a>は、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 それの Android SDK をインストールする Eclipse SDK で Android プロジェクトを開くと、エミュレーターまたはデバイスに展開するプロセスについて説明します。 この<a href="../../../index.html">ガイド</a>に従って少なくとも次ワークフローに関係なく、Android SDK をインストールをする必要があります。 ( *Web プロジェクト Dev*と*ネイティブのプラットフォーム開発*のワークフロー要求 Android SDK をインストールし、パス経由でアクセス可能）
 
 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   Android の構成
-*   Android の web 表示
-*   Android のプラグイン
-*   Android のアップグレード
-*   Android のコマンド ライン ツール
+*   <a href="config.html">Android の構成</a>
+*   <a href="webview.html">Android の web 表示</a>
+*   <a href="plugin.html">Android のプラグイン</a>
+*   <a href="upgrading.html">Android のアップグレード</a>
+*   <a href="tools.html">Android のコマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
 ## 要件、およびサポート
 
@@ -48,7 +48,7 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-開発者を使用する必要があります、 `cordova` 人造人間 SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、コマンド ライン インターフェイス参照してください。
+開発者を使用する必要があります、 `cordova` 人造人間 SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>参照してください。
 
 Android SDK をインストールします。 [developer.android.com/sdk][3].Android の sdk として配布されて、' adt-バンドル-<os>-<arch>-<ver>' ファイル。Windows では、adt バンドルは、インストーラーにパッケージ化されます。OSX と Linux 上に簡単に解凍 'adt バンドル' 開発ツールを格納する場所。 [Android の SDK のセットアップに関する詳細情報をここで発見ことができます。][4]
 
@@ -89,7 +89,7 @@ Windows 7 を道の環境を変更: する
 
 ## SDK でプロジェクトを開く
 
-使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+使用、 `cordova` コルドバの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello

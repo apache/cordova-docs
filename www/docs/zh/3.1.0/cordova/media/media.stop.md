@@ -20,14 +20,14 @@ license: >
 
 # media.stop
 
-停止播放音訊檔。
+停止播放音訊<a href="../file/fileobj/fileobj.html">檔</a>。
 
     media.stop() ；
     
 
 ## 說明
 
-`media.stop`方法同步執行停止播放音訊檔。
+`media.stop`方法同步執行停止播放音訊<a href="../file/fileobj/fileobj.html">檔</a>。
 
 ## 支援的平臺
 
@@ -56,7 +56,7 @@ license: >
         );
     
         // Play audio
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     
         // Pause after 10 seconds
         setTimeout(function() {
@@ -71,14 +71,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -98,13 +98,13 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -125,7 +125,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     

@@ -189,7 +189,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     *   `<merges target="some.value"/>`모듈에서 기존 값을 병합 해야 나타냅니다 `window.some.value` . 어떤 키가 이미 있는 경우 모듈의 버전 원래를 재정의 합니다. 만큼 당신이 수 있는 `<merges>` 당신 처럼. 모든 개체에 사용할 수 없는 `window` 만들어집니다.
     
-    *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이벤트 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
+    *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. <a href="../cordova/events/events.html">이벤트</a> 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
     
     *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스 될 수 있습니다`cordova.require`.
 
@@ -236,7 +236,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     </platform>
     
 
-필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 연결.
+필요한 `name` 특성을 식별 하는 <a href="../guide/support/index.html">플랫폼 지원</a>, 플랫폼 요소의 자식 연결.
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 

@@ -24,54 +24,54 @@ Prima di sviluppare per una qualsiasi delle piattaforme elencate di seguito, ins
 
 Per sviluppare applicazioni di Cordova, è necessario installare il SDK per ogni piattaforma mobile che vi si rivolgono. Questa installazione è necessaria indipendentemente dal fatto se non la maggior parte del vostro lavoro in SDK o utilizzare la CLI per il ciclo di generazione.
 
-Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. Guide aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
+Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. <a href="../../index.html">Guide</a> aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
 
 ## Android
 
-*   Guida piattaforma Android
-*   Android configurazione
-*   Visualizzazioni Web Android
-*   Plugin Android
-*   Android strumenti da riga di comando
-*   L'aggiornamento di Android
+*   <a href="android/index.html">Guida piattaforma Android</a>
+*   <a href="android/config.html">Android configurazione</a>
+*   <a href="android/webview.html"><a href="../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>zioni Web Android</a>
+*   <a href="android/plugin.html">Plugin Android</a>
+*   <a href="android/tools.html">Android strumenti da riga di comando</a>
+*   <a href="android/upgrading.html">L'aggiornamento di Android</a>
 
 ## BlackBerry
 
-*   Guida piattaforma blackBerry
-*   Configurazione di blackBerry
-*   Strumenti della riga di comando di blackBerry
-*   L'aggiornamento di BlackBerry
+*   <a href="blackberry/index.html">Guida piattaforma blackBerry</a>
+*   <a href="blackberry10/config.html">Configurazione di blackBerry</a>
+*   <a href="blackberry/tools.html">Strumenti della riga di comando di blackBerry</a>
+*   <a href="blackberry10/upgrading.html">L'aggiornamento di BlackBerry</a>
 
 ## BlackBerry 10
 
-*   Guida piattaforma blackBerry 10
-*   Configurazione di blackBerry 10
-*   BlackBerry 10 plugin
-*   Strumenti della riga di comando di blackBerry 10
+*   <a href="blackberry10/index.html"><a href="blackberry/index.html">Guida piattaforma blackBerry</a> 10</a>
+*   <a href="blackberry10/config.html">Configurazione di blackBerry</a> 10
+*   <a href="blackberry10/plugin.html">BlackBerry 10 plugin</a>
+*   <a href="blackberry/tools.html">Strumenti della riga di comando di blackBerry</a> 10
 
 ## iOS
 
-*   iOS guida piattaforma
-*   iOS Configuration
-*   iOS visualizzazioni Web
-*   iOS Plugins
-*   iOS Command-line Tools
-*   L'aggiornamento iOS
+*   <a href="ios/index.html">iOS guida piattaforma</a>
+*   <a href="ios/config.html">iOS Configuration</a>
+*   <a href="ios/webview.html">iOS visualizzazioni Web</a>
+*   <a href="ios/plugin.html">iOS Plugins</a>
+*   <a href="ios/tools.html">iOS Command-line Tools</a>
+*   <a href="ios/upgrading.html">L'aggiornamento iOS</a>
 
 ## Windows Phone
 
-*   Guida di Windows Phone 8 piattaforma
-*   Guida di piattaforma Windows Phone 7
+*   <a href="wp8/index.html">Guida di Windows Phone 8 piattaforma</a>
+*   <a href="wp7/index.html">Guida di piattaforma Windows Phone 7</a>
 *   Configurazione di Windows Phone
-*   Windows Phone strumenti da riga di comando
-*   L'aggiornamento di Windows Phone
+*   <a href="wp8/tools.html">Windows Phone strumenti da riga di comando</a>
+*   <a href="wp8/upgrading.html">L'aggiornamento di Windows Phone</a>
 
 ## Windows 8
 
-*   Windows 8 piattaforma guida
-*   Strumenti della riga di comando di Windows 8
-*   L'aggiornamento di Windows 8
+*   <a href="win8/index.html">Windows 8 piattaforma guida</a>
+*   <a href="win8/tools.html">Strumenti della riga di comando di Windows 8</a>
+*   <a href="win8/upgrading.html">L'aggiornamento di Windows 8</a>
 
 ## Tizen
 
-*   Tizen piattaforma guida
+*   <a href="tizen/index.html">Tizen piattaforma guida</a>

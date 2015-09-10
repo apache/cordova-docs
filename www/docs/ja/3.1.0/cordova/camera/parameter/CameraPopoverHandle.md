@@ -20,11 +20,11 @@ license: >
 
 # CameraPopoverHandle
 
-によって作成されたポップオーバーパン ダイアログへのハンドル`camera.getPicture`.
+によって作成されたポップオーバーパン ダイアログへのハンドル`<a href="../camera.getPicture.html">camera.getPicture</a>`.
 
 ## メソッド
 
-*   **setPosition**: ポップ オーバーの位置を設定します。
+*   **setPosition**: ポップ オーバーの<a href="../../geolocation/Position/position.html">位置</a>を設定します。
 
 ## サポートされているプラットフォーム
 
@@ -32,15 +32,15 @@ license: >
 
 ## setPosition
 
-ポップ オーバーの位置を設定します。
+ポップ オーバーの<a href="../../geolocation/Position/position.html">位置</a>を設定します。
 
 **パラメーター:**
 
-*   `cameraPopoverOptions`:、 `CameraPopoverOptions` の新しい位置を指定します。
+*   `cameraPopoverOptions`:、 `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` の新しい<a href="../../geolocation/Position/position.html">位置</a>を指定します。
 
 ## 簡単な例
 
-     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
@@ -54,12 +54,12 @@ license: >
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

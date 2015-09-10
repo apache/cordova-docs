@@ -31,7 +31,7 @@ license: >
 
 入站的參數 `date` 的類型應為`Date`.
 
-如果有錯誤讀取日期，然後 `errorCallback` 執行。錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤讀取日期，然後 `errorCallback` 執行。錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## 支援的平臺
 
@@ -42,7 +42,7 @@ license: >
 
 ## 快速的示例
 
-在夏天的時候，如果瀏覽器被設置為啟用 DST 時區，這應顯示一個彈出式對話方塊與類似的文本和 `dst: true` ：
+在夏天的時候，如果瀏覽器被設置為啟用 DST 時區，這應<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出式對話方塊與類似的文本和 `dst: true` ：
 
     navigator.globalization.isDayLightSavingsTime(
         new Date(),
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

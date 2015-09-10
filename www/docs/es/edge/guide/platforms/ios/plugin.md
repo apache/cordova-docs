@@ -146,7 +146,7 @@ Comprueba el parámetro para asegurarse de que no es `nil` o una cadena vacía, 
 
 ## iOS integración
 
-El `CDVPlugin` clase cuenta con otros métodos que puede invalidar su plugin. Por ejemplo, usted puede capturar el `pause` , `resume` , poner fin a la aplicación y `handleOpenURL` eventos. Vea la clase [CDVPlugin.h][1] y [CDVPlugin.m][2] para la dirección.
+El `CDVPlugin` clase cuenta con otros métodos que puede invalidar su plugin. Por ejemplo, usted puede capturar el `<a href="../../../cordova/events/events.pause.html">pause</a>` , `<a href="../../../cordova/events/events.resume.html">resume</a>` , poner fin a la aplicación y `handleOpenURL` eventos. Vea la clase [CDVPlugin.h][1] y [CDVPlugin.m][2] para la dirección.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

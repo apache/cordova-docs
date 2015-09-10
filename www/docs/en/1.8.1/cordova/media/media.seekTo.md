@@ -34,7 +34,7 @@ Parameters
 Description
 -----------
 
-Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a <a href="media.html">Media</a> object. Also updates the ___position__ parameter within the <a href="media.html">Media</a> object. 
 
 Supported Platforms
 -------------------
@@ -44,38 +44,38 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
     
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
         // Audio player
         //
-        var my_media = new Media(src, onSuccess, onError);
-		my_media.play();
+        var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+		my_<a href="media.play.html">media.play</a>();
         // SeekTo to 10 seconds after 5 seconds
         setTimeout(function() {
             my_media.seekTo(10000);
         }, 5000);
 
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
         
             <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
             <script type="text/javascript" charset="utf-8">
         
             // Wait for Cordova to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         
             // Cordova is ready
             //
-            function onDeviceReady() {
+            function on<a href="../device/device.html">Device</a>Ready() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
         
@@ -87,19 +87,19 @@ Full Example
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
         
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
                 // Update media position every second
         		mediaTimer = setInterval(function() {
             		// get media position
-           			my_media.getCurrentPosition(
+           			my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                 		// success callback
                 		function(position) {
                     		if (position > -1) {
-                        		setAudioPosition(position + " sec");
+                        		setAudio<a href="../geolocation/Position/position.html">Position</a>(position + " sec");
                     		}
                 		},
                 		// error callback
@@ -118,7 +118,7 @@ Full Example
             // 
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -139,7 +139,7 @@ Full Example
         
             // Set audio position
             // 
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
         

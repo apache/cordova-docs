@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-GlobalizationError
+<a href="../globalization.html">Globalization</a>Error
 ============
 
-Globalization API からのエラーを表すオブジェクトです。
+<a href="../globalization.html">Globalization</a> API からのエラーを表すオブジェクトです。
 
 プロパティー
 ----------
 
 - __code:__  以下のエラータイプを表すコードのうちの1つを表します (`Number`)
-  - GlobalizationError.UNKNOWN\_ERROR: 0
-  - GlobalizationError.FORMATTING\_ERROR: 1
-  - GlobalizationError.PARSING\_ERROR: 2
-  - GlobalizationError.PATTERN\_ERROR: 3
+  - <a href="../globalization.html">Globalization</a>Error.UNKNOWN\_ERROR: 0
+  - <a href="../globalization.html">Globalization</a>Error.FORMATTING\_ERROR: 1
+  - <a href="../globalization.html">Globalization</a>Error.PARSING\_ERROR: 2
+  - <a href="../globalization.html">Globalization</a>Error.PATTERN\_ERROR: 3
 - __message:__  エラーの内容を表すエラーメッセージを表します (`String`)
 
 概要
@@ -45,7 +45,7 @@ Globalization API からのエラーを表すオブジェクトです。
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 以下のエラーコールバックが呼び出されるとき、 "code: 3" と "message: " といったような文字列とともにポップアップダイアログが表示されます。
@@ -55,7 +55,7 @@ Globalization API からのエラーを表すオブジェクトです。
               'message: ' + error.message + '\n');
     };
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>
@@ -77,7 +77,7 @@ Globalization API からのエラーを表すオブジェクトです。
         };
 
         function checkError() {
-          navigator.globalization.stringToDate(
+          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
             'notADate',
             successCB,
             errorCB,

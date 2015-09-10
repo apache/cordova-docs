@@ -33,8 +33,8 @@ Returns the formatted number string to the `successCallback` with a
 property with a `String` value.
 
 If there is an error formatting the number, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
+error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 
@@ -50,7 +50,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a popup
@@ -63,13 +63,13 @@ dialog with text similar to `number: 3.142`:
         {type:'decimal'}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString Example</title>
+        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

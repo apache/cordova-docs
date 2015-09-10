@@ -22,22 +22,22 @@ license: >
 
 Restituisce la posizione corrente del dispositivo come un `Position` oggetto.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                             [geolocationError],
-                                             [geolocationOptions]);
+    navigator.geolocation.getCurrentPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
 ## Parametri
 
-*   **geolocationSuccess**: il callback passato alla posizione corrente.
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: il callback passato alla posizione corrente.
 
-*   **geolocationError**: *(facoltativo)* il callback che viene eseguito se si verifica un errore.
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**: *(facoltativo)* il callback che viene eseguito se si verifica un errore.
 
-*   **geolocationOptions**: *(opzionale)* le opzioni di geolocalizzazione.
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: *(opzionale)* le opzioni di geolocalizzazione.
 
 ## Descrizione
 
-`geolocation.getCurrentPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo per la `geolocationSuccess` callback con un `Position` oggetto come parametro. Se c'è un errore, il `geolocationError` callback viene passata una `PositionError` oggetto.
+`geolocation.getCurrentPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo per la `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` callback con un `Position` oggetto come parametro. Se c'è un errore, il `<a href="parameters/geolocationError.html">geolocationError</a>` callback viene passata una `<a href="PositionError/positionError.html">PositionError</a>` oggetto.
 
 ## Piattaforme supportate
 
@@ -65,7 +65,7 @@ Restituisce la posizione corrente del dispositivo come un `Position` oggetto.
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -80,14 +80,14 @@ Restituisce la posizione corrente del dispositivo come un `Position` oggetto.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -109,7 +109,7 @@ Restituisce la posizione corrente del dispositivo come un `Position` oggetto.
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
-        // onError Callback receives a PositionError object
+        // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

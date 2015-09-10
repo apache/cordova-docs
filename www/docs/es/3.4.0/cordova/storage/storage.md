@@ -32,7 +32,7 @@ También conocido como *web storage*, *almacenamiento de información simple*, o
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 chanfle**: notación de puntos es *no* disponible, así que asegúrate de usar `setItem` o `getItem` en lugar de acceder a las teclas directamente desde el objeto de almacenamiento, como en`window.localStorage.someKey`.
+**Windows Phone 7 chanfle**: notación de puntos es *no* disponible, así que asegúrate de usar `setItem` o `getItem` en lugar de acceder a las teclas directamente desde el objeto de almacenamiento, como en`window.<a href="localstorage/localstorage.html">localStorage</a>.someKey`.
 
 ## WebSQL
 

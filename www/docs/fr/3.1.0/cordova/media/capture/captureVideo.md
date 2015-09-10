@@ -23,7 +23,7 @@ license: >
 > Démarrez l'application enregistreur vidéo et renvoyer des informations sur les fichiers de clips vidéo capturée.
 
     navigator.device.capture.captureVideo(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+        <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> captureSuccess, <a href="capture.html">Capture</a>ErrorCB captureError, [<a href="capture.html">Capture</a>VideoOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Commence une opération asynchrone pour capturer des enregistrements vidéo à l'aide de la demande d'enregistrement vidéo de l'appareil. L'opération permet à l'utilisateur de capturer plusieurs enregistrements en une seule séance.
 
-L'opération de capture se termine lorsque l'utilisateur quitte l'application de l'enregistrement vidéo, ou le nombre maximal d'enregistrements spécifié par `CaptureVideoOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip vidéo unique.
+L'opération de capture se termine lorsque l'utilisateur quitte l'application de l'enregistrement vidéo, ou le nombre maximal d'enregistrements spécifié par `<a href="capture.html">Capture</a>VideoOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip vidéo unique.
 
-Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tableau de `MediaFile` objets décrivant chacune capturé clip vidéo. Si l'utilisateur annule l'opération avant la capture d'un clip vidéo, le `CaptureErrorCB` rappel s'exécute avec un `CaptureError` objet mettant en vedette un `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Fin de l'opération de capture, il le `<a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a>` rappel s'exécute avec un tableau de `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` objets décrivant chacune capturé clip vidéo. Si l'utilisateur annule l'opération avant la capture d'un clip vidéo, le `<a href="capture.html">Capture</a>ErrorCB` rappel s'exécute avec un `<a href="capture.html">Capture</a>Error` objet mettant en vedette un `<a href="capture.html">Capture</a>Error.CAPTURE_NO_MEDIA_FILES` code d'erreur.
 
 ## Plates-formes prises en charge
 
@@ -46,17 +46,17 @@ Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tabl
 ## Petit exemple
 
     // capture callback
-    var captureSuccess = function(mediaFiles) {
+    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
         var i, path, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            path = mediaFiles[i].fullPath;
+        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
             // do something interesting with the file
         }
     };
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
     };
     
     // start video capture
@@ -68,7 +68,7 @@ Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tabl
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Video</title>
+        <title><a href="capture.html">Capture</a> Video</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
@@ -76,10 +76,10 @@ Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tabl
     
         // Called when capture operation is finished
         //
-        function captureSuccess(mediaFiles) {
+        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
             var i, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-                uploadFile(mediaFiles[i]);
+            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
             }
         }
     
@@ -99,10 +99,10 @@ Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tabl
         }
     
         // Upload files to server
-        function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
-                path = mediaFile.fullPath,
-                name = mediaFile.name;
+        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
+            var ft = new <a href="../../file/fileobj/fileobj.html">File</a>Transfer(),
+                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
+                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -119,11 +119,11 @@ Fin de l'opération de capture, il le `CaptureCB` rappel s'exécute avec un tabl
         </script>
         </head>
         <body>
-            <button onclick="captureVideo();">Capture Video</button> <br>
+            <button onclick="captureVideo();"><a href="capture.html">Capture</a> Video</button> <br>
         </body>
     </html>
     
 
 ## BlackBerry WebWorks Quirks
 
-*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Enregistreur vidéo** , fournie par RIM, pour capturer les enregistrements vidéo. L'application reçoit un `CaptureError.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
+*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Enregistreur vidéo** , fournie par RIM, pour capturer les enregistrements vidéo. L'application reçoit un `<a href="capture.html">Capture</a>Error.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.

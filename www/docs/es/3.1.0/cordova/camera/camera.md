@@ -26,7 +26,7 @@ license: >
 
 ## Métodos
 
-*   camera.getPicture
+*   <a href="camera.getPicture.html">camera.getPicture</a>
 *   Camera.Cleanup
 
 ## Acceso a la función

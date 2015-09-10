@@ -20,7 +20,7 @@ license: >
 
 # MediaFileData
 
-> 封裝有關的媒體檔案的格式資訊。
+> 封裝有關的<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案的格式資訊。
 
 ## 屬性
 
@@ -36,7 +36,7 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-沒有 API 提供的格式資訊的媒體檔案，所以 `MediaFileData` 物件返回的 `MediaFile.getFormatData` 功能以下預設值：
+沒有 API 提供的格式資訊的<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案，所以 `MediaFileData` 物件返回的 `<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>` 功能以下預設值：
 
 *   **編解碼器**： 不受支援，並且返回`null`.
 
@@ -56,11 +56,11 @@ license: >
 
 *   **位元速率**: 不受支援，並且返回零。
 
-*   **高度**： 支援： 僅圖像和視頻檔。
+*   **高度**： 支援： 僅圖像和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。
 
-*   **寬度**： 支援： 僅圖像和視頻檔。
+*   **寬度**： 支援： 僅圖像和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。
 
-*   **持續時間**： 支援： 僅音訊和視頻檔。
+*   **持續時間**： 支援： 僅音訊和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。
 
 ## iOS 的怪癖
 
@@ -68,10 +68,10 @@ license: >
 
 *   **編解碼器**： 不受支援，並且返回`null`.
 
-*   **位元速率**： 僅音訊 iOS4 設備上受支援。對於圖像和視頻，返回零。
+*   **位元速率**： 僅音訊 iOS4 <a href="../../device/device.html">設備</a>上受支援。對於圖像和視頻，返回零。
 
-*   **高度**： 支援： 僅圖像和視頻檔。
+*   **高度**： 支援： 僅圖像和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。
 
-*   **寬度**： 支援： 僅圖像和視頻檔。
+*   **寬度**： 支援： 僅圖像和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。
 
-*   **持續時間**： 支援： 僅音訊和視頻檔。
+*   **持續時間**： 支援： 僅音訊和視頻<a href="../../file/fileobj/fileobj.html">檔</a>。

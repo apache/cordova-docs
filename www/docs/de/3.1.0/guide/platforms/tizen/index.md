@@ -20,13 +20,13 @@ license: >
 
 # Tizen Plattform Guide
 
-Diese Anleitung beschreibt zum Einrichten Ihrer Entwicklungsumgebung SDK Cordova apps für Geräte mit dem Betriebssystem Tizen bereitstellen.
+Diese Anleitung beschreibt zum Einrichten Ihrer Entwicklungsumgebung SDK Cordova apps für <a href="../../../cordova/device/device.html">Gerät</a>e mit dem Betriebssystem Tizen bereitstellen.
 
 ## Anforderungen und Unterstützung
 
 Tizen SDK erfordert Linux Ubuntu 10.04/10.10/11.04/11.10 (32-Bit) oder Windows XP SP3/7 (32-Bit).
 
-Entwickler sollten verwenden die `cordova` in Verbindung mit dem Tizen-SDK-Dienstprogramm. Finden Sie die Command-Line Interface Informationen zum Installieren, fügen Sie Projekte, dann erstellen und Bereitstellen eines Projekts.
+Entwickler sollten verwenden die `cordova` in <a href="../../../cordova/connection/connection.html">Verbindung</a> mit dem Tizen-SDK-Dienstprogramm. Finden Sie die Command-Line Interface Informationen zum Installieren, fügen Sie Projekte, dann erstellen und Bereitstellen eines Projekts.
 
 ## Das SDK installieren
 
@@ -62,7 +62,7 @@ Laden Sie die Tizen-SDK von [tizen.org][1].
 
 1.  Starten Sie Tizen Eclipse IDE.
 
-2.  Wählen Sie **Datei → importieren → Tizen Web-Projekt**:
+2.  Wählen Sie **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> → importieren → Tizen Web-Projekt**:
     
     ![][2]
 
@@ -90,7 +90,7 @@ Um das Projekt neu erstellen, mit der rechten Maustaste in der **Projekt-Explore
 
  [5]: img/guide/platforms/tizen/build_project.png
 
-Eine Widget-Paket-Datei z. B. *hello.wgt* sollte im Root-Verzeichnis des Projekts erzeugen.
+Eine Widget-Paket-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> z. B. *hello.wgt* sollte im Root-Verzeichnis des Projekts erzeugen.
 
 ## Bereitstellen auf Emulator
 
@@ -100,11 +100,11 @@ Maustaste auf das Projekt in der **Projekt-Explorer** -Ansicht, und wählen Sie 
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## Bereitstellung auf Gerät
+## Bereitstellung auf <a href="../../../cordova/device/device.html">Gerät</a>
 
-*   Stellen Sie sicher, dass das Gerät ordnungsgemäß gestartet, verbunden und konfiguriert ist. Die **Datums- und** Zeiteinstellungen müssen richtig eingestellt sein.
+*   Stellen Sie sicher, dass das <a href="../../../cordova/device/device.html">Gerät</a> ordnungsgemäß gestartet, verbunden und konfiguriert ist. Die **Datums- und** Zeiteinstellungen müssen richtig eingestellt sein.
 
-*   Verwenden Sie die **Verbindung Explorer** -Ansicht, um das Weitergabeziel Anwendung wählen: **Fenster → Show View → Verbindung Explorer**.
+*   Verwenden Sie die **<a href="../../../cordova/connection/connection.html">Verbindung</a> Explorer** -Ansicht, um das Weitergabeziel Anwendung wählen: **Fenster → Show View → <a href="../../../cordova/connection/connection.html">Verbindung</a> Explorer**.
     
     ![][7]
 

@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# compass.watchHeadingFilter
+# <a href="compass.watchHeading.html">compass.watchHeading</a>Filter
 
-Больше не поддерживается начиная с 1.6, см `compass.watchHeading` для эквивалентной функциональности.
+Больше не поддерживается начиная с 1.6, см `<a href="compass.watchHeading.html">compass.watchHeading</a>` для эквивалентной функциональности.

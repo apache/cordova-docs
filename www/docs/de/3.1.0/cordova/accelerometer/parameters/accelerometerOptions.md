@@ -20,7 +20,7 @@ license: >
 
 # accelerometerOptions
 
-Ein optionaler Parameter, um den Abruf der Beschleunigungswerte anzupassen.
+Ein optionaler Parameter, um den Abruf der <a href="../acceleration/acceleration.html">Beschleunigung</a>swerte anzupassen.
 
 ## Optionen
 

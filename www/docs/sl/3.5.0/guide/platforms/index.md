@@ -28,55 +28,55 @@ Vsako *Platformo vodič* spodaj vam pove, kaj morate vedeti, da nastavite vsako 
 
 ## Amazon ogenj OS
 
-*   Amazon ogenj OS platformo vodnik
-*   Amazon ogenj OS konfiguracijo
-*   Amazon ogenj OS spletni pogledi
-*   Amazon ogenj OS Plugins
+*   <a href="amazonfireos/index.html">Amazon ogenj OS platformo vodnik</a>
+*   <a href="amazonfireos/config.html">Amazon ogenj OS konfiguracijo</a>
+*   <a href="amazonfireos/webview.html">Amazon ogenj OS spletni pogledi</a>
+*   <a href="amazonfireos/plugin.html">Amazon ogenj OS Plugins</a>
 
 ## Android
 
-*   Vodnik za platformo Android
-*   Android konfiguracijo
-*   Spletni Android pogledi
-*   Android Plugins
-*   Android orodja ukazne vrstice
-*   Nadgradnji Android
+*   <a href="android/index.html">Vodnik za platformo Android</a>
+*   <a href="android/config.html">Android konfiguracijo</a>
+*   <a href="android/webview.html">Spletni Android pogledi</a>
+*   <a href="android/plugin.html">Android Plugins</a>
+*   <a href="android/tools.html">Android orodja ukazne vrstice</a>
+*   <a href="android/upgrading.html">Nadgradnji Android</a>
 
 ## BlackBerry 10
 
-*   BlackBerry 10 platformo vodnik
-*   Konfiguracije blackBerry 10
-*   BlackBerry 10 Plugins
-*   BlackBerry 10 orodij ukazne vrstice
-*   Nadgradnja BlackBerry 10
+*   <a href="blackberry10/index.html">BlackBerry 10 platformo vodnik</a>
+*   <a href="blackberry10/config.html">Konfiguracije blackBerry 10</a>
+*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="blackberry10/tools.html">BlackBerry 10 orodij ukazne vrstice</a>
+*   <a href="blackberry10/upgrading.html">Nadgradnja BlackBerry 10</a>
 
 ## iOS
 
-*   iOS platformi vodnik
-*   iOS konfiguracijo
-*   iOS spletni pogledi
-*   iOS Plugins
-*   iOS orodja ukazne vrstice
-*   Nadgradnja iOS
+*   <a href="ios/index.html">iOS platformi vodnik</a>
+*   <a href="ios/config.html">iOS konfiguracijo</a>
+*   <a href="ios/webview.html">iOS spletni pogledi</a>
+*   <a href="ios/plugin.html">iOS Plugins</a>
+*   <a href="ios/tools.html">iOS orodja ukazne vrstice</a>
+*   <a href="ios/upgrading.html">Nadgradnja iOS</a>
 
 ## Ubuntu
 
-*   Vodnik Ubuntu Platform
+*   <a href="ubuntu/index.html">Vodnik Ubuntu Platform</a>
 
 ## Windows Phone
 
-*   Vodnik za platformo Windows Phone 8
-*   Vodnik za platformo Windows Phone 7
+*   <a href="wp8/index.html">Vodnik za platformo Windows Phone 8</a>
+*   <a href="wp7/index.html">Vodnik za platformo Windows Phone 7</a>
 *   Windows Phone konfiguracijo
-*   Windows Phone orodja ukazne vrstice
-*   Nadgradnja Windows Phone
+*   <a href="wp8/tools.html">Windows Phone orodja ukazne vrstice</a>
+*   <a href="wp8/upgrading.html">Nadgradnja Windows Phone</a>
 
 ## Windows 8
 
-*   Windows 8 platformi vodnik
-*   Orodja ukazne vrstice Windows 8
-*   Nadgradnjo operacijskega sistema Windows 8
+*   <a href="win8/index.html">Windows 8 platformi vodnik</a>
+*   <a href="win8/tools.html">Orodja ukazne vrstice Windows 8</a>
+*   <a href="win8/upgrading.html">Nadgradnjo operacijskega sistema Windows 8</a>
 
 ## Tizen
 
-*   Tizen platforma vodnik
+*   <a href="tizen/index.html">Tizen platforma vodnik</a>

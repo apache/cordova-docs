@@ -26,7 +26,7 @@ license: >
 
  [1]: https://github.com/apache/cordova-plugin-whitelist
 
-對於其他平臺，科爾多瓦遵循 [W3C 部件訪問][2] 規範，這依賴于應用程式的 `config.xml` 檔以啟用對特定域的網路訪問中的 `<access>` 元素。 對於依賴于描述在命令列介面的 CLI 工作流程的專案，此檔位於專案的頂級目錄。 否則對於特定于平臺的發展路徑，以下各節列出的位置。 （每個平臺上見各種平臺指南的詳細資訊）。
+對於其他平臺，科爾多瓦遵循 [W3C 部件訪問][2] 規範，這依賴于應用程式的 `config.xml` 檔以啟用對特定域的網路訪問中的 `<access>` 元素。 對於依賴于描述在<a href="../../cli/index.html">命令列介面</a>的 CLI 工作流程的專案，此檔位於專案的頂級目錄。 否則對於特定于平臺的發展路徑，以下各節列出的位置。 （每個平臺上見各種<a href="../../platforms/index.html">平臺指南</a>的詳細資訊）。
 
  [2]: http://www.w3.org/TR/widgets-access/
 
@@ -88,7 +88,7 @@ license: >
 
 黑莓 10年使用萬用字元有別于其他平臺兩種方式：
 
-*   必須顯式聲明由 `XMLHttpRequest` 訪問的任何內容。 設置 `origin="*"` 不能在這種情況下。 或者，可能使用黑莓手機配置中所述的 `WebSecurity` 偏好禁用所有 web 安全性：
+*   必須顯式聲明由 `XMLHttpRequest` 訪問的任何內容。 設置 `origin="*"` 不能在這種情況下。 或者，可能使用<a href="../../platforms/blackberry/config.html">黑莓手機配置</a>中所述的 `WebSecurity` 偏好禁用所有 web 安全性：
     
         <preference name="websecurity" value="disable" />
         

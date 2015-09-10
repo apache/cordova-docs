@@ -20,26 +20,26 @@ license: >
 
 # window.open
 
-Apre un URL in una nuova `InAppBrowser` istanza, l'istanza corrente del browser o il browser di sistema.
+Apre un URL in una nuova `<a href="inappbrowser.html">InAppBrowser</a>` istanza, l'istanza corrente del browser o il browser di sistema.
 
     var ref = window.open(url, target, options);
     
 
-*   **Rif**: fare riferimento alla `InAppBrowser` finestra. *(InAppBrowser)*
+*   **Rif**: fare riferimento alla `<a href="inappbrowser.html">InAppBrowser</a>` finestra. *(<a href="inappbrowser.html">InAppBrowser</a>)*
 
 *   **URL**: l'URL da caricare *(String)*. Chiamare `encodeURI()` su questo, se l'URL contiene caratteri Unicode.
 
 *   **destinazione**: la destinazione in cui caricare l'URL, un parametro facoltativo che il valore predefinito è `_self` . *(String)*
     
-    *   `_self`: Si apre in Cordova WebView se l'URL è nella lista bianca, altrimenti si apre nella`InAppBrowser`.
-    *   `_blank`: Apre il`InAppBrowser`.
+    *   `_self`: Si apre in Cordova WebView se l'URL è nella lista bianca, altrimenti si apre nella`<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_blank`: Apre il`<a href="inappbrowser.html">InAppBrowser</a>`.
     *   `_system`: Si apre nel browser web del sistema.
 
-*   **opzioni**: opzioni per il `InAppBrowser` . Opzionale, inadempiente a: `location=yes` . *(String)*
+*   **opzioni**: opzioni per il `<a href="inappbrowser.html">InAppBrowser</a>` . Opzionale, inadempiente a: `location=yes` . *(String)*
     
     Il `options` stringa non deve contenere alcun spazio vuoto, e coppie nome/valore ogni funzionalità devono essere separate da una virgola. Caratteristica nomi sono tra maiuscole e minuscole. Tutte le piattaforme supportano il valore riportato di seguito:
     
-    *   **posizione**: impostata su `yes` o `no` per trasformare il `InAppBrowser` di barra di posizione on o off.
+    *   **posizione**: impostata su `yes` o `no` per trasformare il `<a href="inappbrowser.html">InAppBrowser</a>` di barra di posizione on o off.
     ## Android solo
     
     *   **closebuttoncaption** - impostare una stringa che sarà la didascalia per il pulsante "Done". 
@@ -50,10 +50,10 @@ Apre un URL in una nuova `InAppBrowser` istanza, l'istanza corrente del browser 
     
     *   **closebuttoncaption** - impostare una stringa che sarà la didascalia per il pulsante "Done". Nota che devi localizzare questo valore a te stesso.
     *   **nascosti** - impostato su 'sì' per creare il browser e caricare la pagina, ma non mostrarlo. L'evento di carico sarà il fuoco quando il caricamento è completato. Omettere o impostato su 'no' (predefinito) per avere il browser aperto e caricare normalmente. 
-    *   **toolbar** - impostato su 'sì' o 'no' per attivare o disattivare la barra degli strumenti per il InAppBrowser (default 'sì')
+    *   **toolbar** - impostato su 'sì' o 'no' per attivare o disattivare la barra degli strumenti per il <a href="inappbrowser.html">InAppBrowser</a> (default 'sì')
     *   **enableViewportScale**: impostare su `yes` o `no` per impedire la viewport ridimensionamento tramite un tag meta (default`no`).
     *   **mediaPlaybackRequiresUserAction**: impostare su `yes` o `no` per impedire HTML5 audio o video da AutoPlay (default`no`).
-    *   **allowInlineMediaPlayback**: impostare su `yes` o `no` per consentire la riproduzione multimediale inline HTML5, visualizzando all'interno della finestra del browser, piuttosto che un'interfaccia specifica del dispositivo di riproduzione. L'HTML `video` elemento deve includere anche il `webkit-playsinline` (default di attributo`no`)
+    *   **allowInline<a href="../media/media.html">Media</a>Playback**: impostare su `yes` o `no` per consentire la riproduzione multimediale inline HTML5, visualizzando all'interno della finestra del browser, piuttosto che un'interfaccia specifica del dispositivo di riproduzione. L'HTML `video` elemento deve includere anche il `webkit-playsinline` (default di attributo`no`)
     *   **keyboardDisplayRequiresUserAction**: impostare su `yes` o `no` per aprire la tastiera quando elementi form ricevano lo stato attivo tramite di JavaScript `focus()` chiamata (default`yes`).
     *   **suppressesIncrementalRendering**: impostare su `yes` o `no` aspettare fino a quando tutti i nuovi contenuti di vista viene ricevuto prima il rendering (default`no`).
     *   **presentationstyle**: impostare su `pagesheet` , `formsheet` o `fullscreen` per impostare lo [stile di presentazione][1] (default`fullscreen`).
@@ -80,14 +80,14 @@ Apre un URL in una nuova `InAppBrowser` istanza, l'istanza corrente del browser 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open Example</title>
+        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

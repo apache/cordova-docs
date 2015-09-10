@@ -24,7 +24,7 @@ Contiene `Position` coordenadas y timestamp, creado por la API de geolocalizaci�
 
 ## Propiedades
 
-*   **coordenadas**: un conjunto de coordenadas geográficas. *(Coordenadas)*
+*   **coordenadas**: un conjunto de coordenadas geográficas. *(<a href="../Coordinates/coordinates.html">Coordenadas</a>)*
 
 *   **timestamp**: fecha y hora de creación `coords` . *(Fecha)*
 
@@ -56,14 +56,14 @@ El `Position` objeto es creado y poblado por Córdoba y devuelve al usuario medi
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
     
 
 ## Ejemplo completo
@@ -71,19 +71,19 @@ El `Position` objeto es creado y poblado por Córdoba y devuelve al usuario medi
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
         // onSuccess Geolocation
@@ -100,7 +100,7 @@ El `Position` objeto es creado y poblado por Córdoba y devuelve al usuario medi
                                 'Timestamp: '         + position.timestamp               + '<br />';
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

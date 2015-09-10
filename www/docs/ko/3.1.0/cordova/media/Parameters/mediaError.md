@@ -20,13 +20,13 @@ license: >
 
 # mediaError
 
-미디어 기능에 오류가 있을 때 실행 되는 사용자 지정 된 콜백 함수.
+<a href="../media.html">미디어</a> 기능에 오류가 있을 때 실행 되는 사용자 지정 된 콜백 함수.
 
     function(error) {
         // Handle the error
     }
     
 
-## 매개 변수
+## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
 
-*   **오류**: 장치에 의해 반환 된 오류. *(MediaError)*
+*   **오류**: <a href="../../device/device.html">장치</a>에 의해 반환 된 오류. *(<a href="../MediaError/mediaError.html">MediaError</a>)*

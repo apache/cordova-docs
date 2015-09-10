@@ -20,7 +20,7 @@ license: >
 
 # Android configurazione
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML <a href="../../../cordova/file/fileobj/fileobj.html">File</a> per informazioni sulle opzioni di configurazione globale.
 
 *   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi.
     
@@ -32,12 +32,12 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
         <preference name="ErrorUrl" value="error.html"/>
         
 
-*   `LoadingDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento dell'app. Il formato del valore è il *titolo, messaggio*
+*   `LoadingDialog`: <a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>re una finestra di dialogo nativo durante il caricamento dell'app. Il formato del valore è il *titolo, messaggio*
     
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
         
 
-*   `LoadingPageDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento di pagine secondarie all'interno di un'app. Il formato del valore è il *titolo, messaggio*
+*   `LoadingPageDialog`: <a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>re una finestra di dialogo nativo durante il caricamento di pagine secondarie all'interno di un'app. Il formato del valore è il *titolo, messaggio*
     
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
         

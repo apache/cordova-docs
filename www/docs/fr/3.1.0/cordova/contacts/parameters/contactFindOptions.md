@@ -20,7 +20,7 @@ license: >
 
 # contactFindOptions
 
-Paramètre facultatif de la méthode `contacts.find`, utilisé pour filtrer les contacts retournés à partir de la base de données de contacts.
+Paramètre facultatif de la méthode `<a href="../contacts.find.html">contacts.find</a>`, utilisé pour filtrer les contacts retournés à partir de la base de données de contacts.
 
     {filter: "", multiples : true,} ;
     

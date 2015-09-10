@@ -56,7 +56,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
     // process the confirmation dialog result
     function onConfirm(buttonIndex) {
@@ -65,7 +65,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 
     // Show a custom confirmation dialog
     //
-    function showConfirm() {
+    function <a href="../inappbrowser/inappbrowser.html">show</a>Confirm() {
         navigator.notification.confirm(
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
@@ -74,23 +74,23 @@ indexing, so the value is `1`, `2`, `3`, etc.
         );
     }
 
-## Full Example
+## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
 
@@ -101,7 +101,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 
         // Show a custom confirmation dialog
         //
-        function showConfirm() {
+        function <a href="../inappbrowser/inappbrowser.html">show</a>Confirm() {
             navigator.notification.confirm(
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
@@ -113,7 +113,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Confirm(); return false;">Show Confirm</a></p>
       </body>
     </html>
 

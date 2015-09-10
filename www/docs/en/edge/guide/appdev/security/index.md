@@ -33,7 +33,7 @@ The following guide includes some security best practices that you should consid
 
 ## Whitelist
 
-* Read and understand the Whitelist Guide
+* Read and understand the <a href="../whitelist/index.html">Whitelist Guide</a>
 
 * Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins. 
 

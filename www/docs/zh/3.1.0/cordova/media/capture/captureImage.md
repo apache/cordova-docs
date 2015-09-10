@@ -20,20 +20,20 @@ license: >
 
 # capture.captureImage
 
-> 啟動攝像頭應用程式並返回有關捕獲的影像檔的資訊。
+> 啟動攝像頭應用程式並返回有關<a href="capture.html">捕獲</a>的影像<a href="../../file/fileobj/fileobj.html">檔</a>的資訊。
 
     navigator.device.capture.captureImage(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
     );
     
 
 ## 說明
 
-開始非同步作業以捕獲圖像使用該設備的攝像頭應用程式。該操作允許使用者在一個會話中捕獲多個圖像。
+開始非同步作業以<a href="capture.html">捕獲</a>圖像使用該<a href="../../device/device.html">設備</a>的攝像頭應用程式。該操作允許使用者在一個會話中<a href="capture.html">捕獲</a>多個圖像。
 
-在捕獲操作結束或者當使用者關閉攝像頭應用程式或由指定的錄音的最大數目 `CaptureAudioOptions.limit` 到達。 如果沒有 `limit` 指定的值，它將預設為一 (1) 和捕獲操作終止後使用者捕獲單個圖像。
+在<a href="capture.html">捕獲</a>操作結束或者當使用者<a href="../../inappbrowser/inappbrowser.html">關閉</a>攝像頭應用程式或由指定的錄音的最大數目 `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` 到達。 如果沒有 `limit` 指定的值，它將預設為一 (1) 和<a href="capture.html">捕獲</a>操作終止後使用者<a href="capture.html">捕獲</a>單個圖像。
 
-在捕獲操作完成後，它將調用 `CaptureCB` 回檔與陣列的 `MediaFile` 物件描述每個捕獲的影像檔。 如果使用者終止之前捕獲圖像，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
+在<a href="capture.html">捕獲</a>操作完成後，它將調用 `<a href="CaptureCB.html">CaptureCB</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>與陣列的 `MediaFile` 物件描述每個<a href="capture.html">捕獲</a>的影像<a href="../../file/fileobj/fileobj.html">檔</a>。 如果使用者終止之前<a href="capture.html">捕獲</a>圖像，操作 `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>執行與 `<a href="CaptureError.html">CaptureError</a>` 物件特色 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
 ## 支援的平臺
 
@@ -45,7 +45,7 @@ license: >
 
 ## Windows Phone 7 的怪癖
 
-調用本機攝像頭應用程式，同時通過 Zune 連接您的設備不工作，並錯誤回檔執行。
+調用本機攝像頭應用程式，同時通過 Zune <a href="../../connection/connection.html">連接</a>您的<a href="../../device/device.html">設備</a>不工作，並錯誤回<a href="../../file/fileobj/fileobj.html">檔</a>執行。
 
 ## 快速的示例
 
@@ -60,7 +60,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start image capture
@@ -91,7 +91,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function

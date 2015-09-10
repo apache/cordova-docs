@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# Tizen プラットフォーム ガイド
+# Tizen プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは Tizen オペレーティング システムを実行するデバイスの Cordova アプリを展開する SDK の開発環境を設定する方法について説明します。
+この<a href="../../../index.html">ガイド</a>は Tizen オペレーティング システムを実行する<a href="../../../cordova/device/device.html">デバイス</a>の Cordova アプリを展開する SDK の開発環境を設定する方法について説明します。
 
 ## 要件、およびサポート
 
 Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、または Windows XP SP3/7 （32 ビット） が必要です。
 
-開発者を使用する必要があります、 `cordova` Tizen SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、コマンド ライン インターフェイス参照してください。
+開発者を使用する必要があります、 `cordova` Tizen SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>参照してください。
 
 ## SDK をインストールします。
 
@@ -62,7 +62,7 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 
 1.  Tizen の Eclipse IDE を起動します。
 
-2.  **→ インポート → Tizen Web プロジェクトのファイル**を選択します。
+2.  **→ インポート → Tizen Web プロジェクトの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>**を選択します。
     
     ![][2]
 
@@ -90,7 +90,7 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 
  [5]: img/guide/platforms/tizen/build_project.png
 
-*Hello.wgt*などのウィジェット パッケージ ファイルがプロジェクトのルート ディレクトリに生成されます。
+*Hello.wgt*などのウィジェット パッケージ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>がプロジェクトのルート ディレクトリに生成されます。
 
 ## エミュレーターへの展開します。
 
@@ -100,11 +100,11 @@ Tizen SDK には、Linux Ubuntu 10.04/10.10/11.04/11.10 (32-ビット)、また�
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## デバイスへの配置します。
+## <a href="../../../cordova/device/device.html">デバイス</a>への配置します。
 
-*   ターゲット デバイス正しく起動、接続され構成されていることを確認します。その**日付と時刻**の設定を正しく設定する必要があります。
+*   ターゲット <a href="../../../cordova/device/device.html">デバイス</a>正しく起動、<a href="../../../cordova/connection/connection.html">接続</a>され構成されていることを確認します。その**日付と時刻**の設定を正しく設定する必要があります。
 
-*   **接続エクスプ ローラー]**ビューを使用してアプリケーションの配置先を選択します：**ウィンドウ → 表示 → 接続エクスプ ローラー**.
+*   **<a href="../../../cordova/connection/connection.html">接続</a>エクスプ ローラー]**ビューを使用してアプリケーションの配置先を選択します：**ウィンドウ → 表示 → <a href="../../../cordova/connection/connection.html">接続</a>エクスプ ローラー**.
     
     ![][7]
 

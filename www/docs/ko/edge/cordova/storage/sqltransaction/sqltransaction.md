@@ -20,7 +20,7 @@ license: >
 
 # SQLTransaction
 
-데이터베이스에 대해 SQL 문 실행할 수 있습니다.
+<a href="../database/database.html">데이터베이스</a>에 대해 SQL 문 실행할 수 있습니다.
 
 ## 메서드
 
@@ -30,7 +30,7 @@ license: >
 
 전화는 `Database` 개체의 트랜잭션 메서드, 패스를 `SQLTransaction` 개체는 지정 된 콜백 메서드를.
 
-## 지원 되는 플랫폼
+## <a href="../../../config_ref/images.html">지원 되는 플랫폼</a>
 
 *   안 드 로이드
 *   블랙베리 WebWorks (OS 6.0 및 높은)
@@ -54,7 +54,7 @@ license: >
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

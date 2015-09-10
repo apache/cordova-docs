@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-onSuccess コールバック関数を介してコンパス針路情報を提供する、 `compassHeading` オブジェクト。
+onSuccess コールバック関数を介して<a href="../compass.html">コンパス</a>針路情報を提供する、 `<a href="compassHeading.html">compassHeading</a>` オブジェクト。
 
     function(heading) {
         // Do something
@@ -29,7 +29,7 @@ onSuccess コールバック関数を介してコンパス針路情報を提供�
 
 ## パラメーター
 
-*   **見出し**： 見出し情報。*(compassHeading)*
+*   **見出し**： 見出し情報。*(<a href="compassHeading.html">compassHeading</a>)*
 
 ## 例
 

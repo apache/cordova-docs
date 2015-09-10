@@ -20,13 +20,13 @@ license: >
 
 # contactFindOptions
 
-Optionale Parameter von der `contacts.find` -Methode, verwendet um die Kontakte von der Kontaktdatenbank zurückgegebenen zu filtern.
+Optionale Parameter von der `<a href="../contacts.find.html">contacts.find</a>` -Methode, verwendet um die <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a> von der <a href="../Contact/contact.html">Kontakt</a>datenbank zurückgegebenen zu filtern.
 
     {Filter: "", mehrere: true};
     
 
 ## Optionen
 
-*   **Filter**: die zu suchende Zeichenfolge verwendet, um Kontakte zu filtern. *(DOM-String und enthält)* (Standard:`""`)
+*   **Filter**: die zu suchende Zeichenfolge verwendet, um <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a> zu filtern. *(DOM-String und enthält)* (Standard:`""`)
 
-*   **mehrere**: bestimmt, ob der Suchvorgang mehrere Kontakte gibt. *(Boolesch)* (Standard:`false`)
+*   **mehrere**: bestimmt, ob der Suchvorgang mehrere <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a> gibt. *(Boolesch)* (Standard:`false`)

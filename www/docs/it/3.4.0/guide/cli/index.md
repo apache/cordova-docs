@@ -122,7 +122,7 @@ Leggere se si desidera utilizzare l'approccio del flusso di lavoro multi-piattaf
 
 ## Costruire l'App
 
-Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da`www/js/index.js`.
+Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` gestore di eventi, a cui fa riferimento predefinito da`www/js/index.js`.
 
 Eseguire il comando seguente per costruire in modo iterativo del progetto:
 
@@ -331,7 +331,7 @@ Invece, il primo livello `merges` directory offre un posto per specificare i ben
 
 Quando si ricostruisce il progetto, la versione di Android presenta la dimensione del carattere personalizzato, mentre gli altri rimangono invariati.
 
-È inoltre possibile utilizzare `merges` per aggiungere file non presenti nell'originale `www` directory. Ad esempio, un'app può incorporare una grafica del *pulsante indietro* nell'interfaccia di iOS, memorizzato `merges/ios/img/back_button.png` , mentre la versione di Android invece può catturare `backbutton` eventi dal corrispondente pulsante hardware.
+È inoltre possibile utilizzare `merges` per aggiungere file non presenti nell'originale `www` directory. Ad esempio, un'app può incorporare una grafica del *pulsante indietro* nell'interfaccia di iOS, memorizzato `merges/ios/img/back_button.png` , mentre la versione di Android invece può catturare `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` eventi dal corrispondente pulsante hardware.
 
 ## Aiuto comandi
 

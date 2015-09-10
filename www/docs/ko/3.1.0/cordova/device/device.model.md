@@ -20,14 +20,14 @@ license: >
 
 # device.model
 
-장치의 모델 이름을 얻을.
+<a href="device.html">장치</a>의 모델 이름을 얻을.
 
     var string = device.model;
     
 
 ## 설명
 
-`device.model`소자의 모델 또는 제품의 이름을 반환 합니다. 값 장치 제조업체에서 설정 되 고 동일 제품의 버전 간에 다를 수 있습니다.
+`device.model`소자의 모델 또는 제품의 이름을 반환 합니다. 값 <a href="device.html">장치</a> 제조업체에서 설정 되 고 동일 제품의 버전 간에 다를 수 있습니다.
 
 ## 지원 되는 플랫폼
 
@@ -48,24 +48,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
             element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
+                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
+                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
+                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
     
         </script>
@@ -89,4 +89,4 @@ license: >
 
 ## Windows Phone 7, 8 특수
 
-*   제조업체에서 지정 하는 장치 모델을 반환 합니다. 예를 들어 삼성 포커스를 반환 합니다.`SGH-i917`.
+*   제조업체에서 지정 하는 <a href="device.html">장치</a> 모델을 반환 합니다. 예를 들어 삼성 포커스를 반환 합니다.`SGH-i917`.

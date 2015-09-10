@@ -79,8 +79,8 @@ license: >
       * 1.3.6.1.4.1.311.10.3.13 指示證書尊重一生簽署。 通常情況下，如果簽名是時間戳記，只要證書是在點有效時間戳記的時候，該簽名仍然有效即使在證書過期。 這 EKU 部隊要過期而不管簽名是否加蓋時間戳記的簽名。
   * -e"2020/1/1": 設置證書的過期日期。 
   * -h 0: 將此證書下面的樹的最大高度設置為 0，以防止證書被用於作為憑證授權單位 (CA) 可以頒發其他證書。
-  * -sv FakeCorp.com.pvk: 輸出 PVK 檔。Windows 使用 PVK 檔來存儲用於代碼簽名的私密金鑰。
-  * FakeCorp.com.cer: 輸出證書檔。CER 檔用於存儲 X.509 憑證。
+  * -sv FakeCorp.com.pvk: 輸出 PVK 檔。Windows 使用 PVK 檔來<a href="../../../cordova/storage/storage.html">存儲</a>用於代碼簽名的私密金鑰。
+  * FakeCorp.com.cer: 輸出證書檔。CER 檔用於<a href="../../../cordova/storage/storage.html">存儲</a> X.509 憑證。
 
 在第一次運行金鑰之後, 在螢幕上就會彈出輸入私人密碼:
 
@@ -98,13 +98,13 @@ license: >
   * pfx: 輸出 pfx 檔案名稱
   * 大埔: pfx 密碼;pvk 密碼如果不提供相同
 
-如果我們提供此 pfx 檔到 build.json 檔中，我們將會有以下錯誤:"金鑰檔可能受密碼保護。 要更正此問題，請嘗試手動導入證書到當前使用者的個人憑證存儲區。"。 為了將其導入我們必須使用[certutil](https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx)從 admin 提示符:
+如果我們提供此 pfx 檔到 build.json 檔中，我們將會有以下錯誤:"金鑰檔可能受密碼保護。 要更正此問題，請嘗試手動導入證書到當前使用者的個人憑證<a href="../../../cordova/storage/storage.html">存儲</a>區。"。 為了將其導入我們必須使用[certutil](https://technet.microsoft.com/en-us/library/ee624045(v=ws.10).aspx)從 admin 提示符:
 
 `certutil -user -p PASSWORD -importPFX FakeCorp.com.pfx`
 
 地點:
 
-  * user: 指定"當前使用者"個人存儲區
+  * user: 指定"當前使用者"個人<a href="../../../cordova/storage/storage.html">存儲</a>區
   * p: pfx 檔密碼
   * importPfx: pfx 檔的名稱
 

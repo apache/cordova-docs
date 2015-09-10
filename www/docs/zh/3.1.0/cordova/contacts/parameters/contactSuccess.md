@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-提供的成功回呼函數 `Contact` 陣列產生的 `contacts.find` 操作。
+提供的成功回呼函數 `Contact` 陣列產生的 `<a href="../contacts.find.html">contacts.find</a>` 操作。
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## 參數
 
-*   **連絡人**： 連絡人陣列產生的查找操作。*（連絡人）*
+*   **<a href="../contacts.html">連絡人</a>**： <a href="../contacts.html">連絡人</a>陣列產生的查找操作。*（<a href="../contacts.html">連絡人</a>）*
 
 ## 示例
 

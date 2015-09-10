@@ -20,7 +20,7 @@ license: >
 
 # iOS 구성
 
-`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 단원만 iOS 빌드에 적용 되는 환경 설정을 자세히 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
+`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 단원만 iOS 빌드에 적용 되는 환경 설정을 자세히 설명 합니다. 글로벌 구성 옵션에 config.xml <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 정보를 참조 하십시오.
 
 *   `EnableViewportScale`(boolean, 기본값은 `false` ): 설정 `true` 뷰포트 메타 태그를 사용 하 여 비활성화 하거나 사용자 비율의 범위를 제한 하기.
     
@@ -32,12 +32,12 @@ license: >
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(boolean, 기본값은 `false` ): 설정 `true` HTML5 미디어 재생 네이티브 컨트롤 대신 브라우저 제공 컨트롤을 사용 하 여 화면 레이아웃 내에서 *인라인* 을 표시할 수 있도록 합니다. 이 대 한 추가 `webkit-playsinline` 모든 특성 `<video>` 요소.
+*   `AllowInlineMediaPlayback`(boolean, 기본값은 `false` ): 설정 `true` HTML5 <a href="../../../cordova/media/media.html">미디어</a> 재생 네이티브 컨트롤 대신 브라우저 제공 컨트롤을 사용 하 여 화면 레이아웃 내에서 *인라인* 을 표시할 수 있도록 합니다. 이 대 한 추가 `webkit-playsinline` 모든 특성 `<video>` 요소.
     
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(문자열, 중 `none` , `local` , 또는 기본 `cloud` ): 설정 `cloud` 웹 저장 공간 데이터를 iCloud 통해 백업 수 있도록. 설정 `local` 만 로컬 백업을 아이튠즈 동기화를 통해 수 있도록. 설정 `none` 웹 스토리지 백업 방지.
+*   `BackupWebStorage`(문자열, 중 `none` , `local` , 또는 기본 `cloud` ): 설정 `cloud` 웹 저장 공간 데이터를 iCloud 통해 백업 수 있도록. 설정 `local` 만 로컬 백업을 아이튠즈 동기화를 통해 수 있도록. 설정 `none` 웹 <a href="../../../cordova/storage/storage.html">스토리지</a> 백업 방지.
     
         <preference name="BackupWebStorage" value="local"/>
         
@@ -87,11 +87,11 @@ license: >
         < 선호 이름 = "PageLength" 값 = "0" / >
         
 
-*   `PaginationBreakingMode`(문자열, 기본값: `page` ): 유효한 값은 `page` 및 `column` .방식으로 열 또는 페이지 바꿈이 발생 합니다. 이 속성에는 특정 CSS 속성에 대 한 열 및 페이지 분리 영광 아니면 무시할지 여부를 결정 합니다. 이 속성 설정 하면 `column` , 콘텐츠 열 바꿈 페이지 바꿈의 위치에 관련 된 CSS 속성을 존중 합니다.
+*   `PaginationBreakingMode`(문자열, 기본값: `page` ): 유효한 값은 `page` 및 `column` .방식으로 열 또는 페이지 바꿈이 발생 합니다. 이 속성에는 특정 CSS 속성에 대 한 열 및 페이지 분리 영광 아니면 무시할지 여부를 결정 합니다. 이 속성 설정 하면 `column` , 콘텐츠 열 바꿈 페이지 바꿈의 <a href="../../../cordova/geolocation/Position/position.html">위치</a>에 관련 된 CSS 속성을 존중 합니다.
     
         < 선호 이름 = "PaginationBreakingMode" 값 = "페이지" / >
         
 
-*   `PaginationMode`(문자열, 기본값: `unpaginated` ): 유효한 값은 `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , 및 `rightToLeft` . 이 속성에는 웹 보기에서 콘텐츠도 한 번에 보기 한 화면을 작성 하는 페이지 또는 하나의 긴 스크롤 뷰로 표시 여부를 결정 합니다. 만약 설정 페이지가 매겨진된 폼에이 속성을 일으키는 relayout에 PageLength 및 GapBetweenPages 값을 사용 하 여 웹 보기 콘텐츠 내용에 페이지가 매겨진된 레이아웃 전환 합니다.
+*   `PaginationMode`(문자열, 기본값: `unpaginated` ): 유효한 값은 `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , 및 `rightToLeft` . 이 속성에는 웹 <a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a>에서 콘텐츠도 한 번에 <a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a> 한 화면을 작성 하는 페이지 또는 하나의 긴 스크롤 뷰로 표시 여부를 결정 합니다. 만약 설정 페이지가 매겨진된 폼에이 속성을 일으키는 relayout에 PageLength 및 GapBetweenPages 값을 사용 하 여 웹 <a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a> 콘텐츠 내용에 페이지가 매겨진된 레이아웃 전환 합니다.
     
         < 선호 이름 = "PaginationMode" 값 = "매겨지지" / >

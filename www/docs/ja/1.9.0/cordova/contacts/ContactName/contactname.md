@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-ContactName
+<a href="../Contact/contact.html">Contact</a>Name
 ===========
 
-`Contact` オブジェクトの名前プロパティーを表します。
+`<a href="../Contact/contact.html">Contact</a>` オブジェクトの名前プロパティーを表します。
 
 プロパティー
 ----------
@@ -36,7 +36,7 @@ ContactName
 詳細
 -------
 
-`ContactName` オブジェクトは連絡先の名前プロパティーの情報を格納します。
+`<a href="../Contact/contact.html">Contact</a>Name` オブジェクトは連絡先の名前プロパティーの情報を格納します。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,7 +46,7 @@ ContactName
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function onSuccess(contacts) {
@@ -60,37 +60,37 @@ ContactName
         }
     };
 
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('エラーが発生しました。');
     };
 
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
     options.filter="";
     filter = ["displayName","name"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title><a href="../Contact/contact.html">Contact</a> の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            var options = new ContactFindOptions();
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
             options.filter="";
             filter = ["displayName","name"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
 
         // onSuccess: 連絡先の取得に成功した場合
@@ -108,14 +108,14 @@ ContactName
 
         // onError: 連絡先の取得に失敗した場合
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
         <p>連絡先の検索</p>
       </body>
     </html>

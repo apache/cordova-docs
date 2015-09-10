@@ -20,7 +20,7 @@ license: >
 
 # MediaFileData
 
-> メディア ファイルの形式情報をカプセル化します。
+> <a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>の形式情報をカプセル化します。
 
 ## プロパティ
 
@@ -36,7 +36,7 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-メディア ファイルの形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `MediaFile.getFormatData` 機能次の既定値。
+<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>の形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>` 機能次の既定値。
 
 *   **コーデック**： いないサポートしを返します`null`.
 
@@ -56,11 +56,11 @@ license: >
 
 *   **ビットレート**： いないサポートし、ゼロを返します。
 
-*   **高さ**: サポート: イメージ ファイルやビデオ ファイルのみです。
+*   **高さ**: サポート: イメージ <a href="../../file/fileobj/fileobj.html">ファイル</a>やビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。
 
-*   **幅**: サポート: イメージ ファイルやビデオ ファイルのみです。
+*   **幅**: サポート: イメージ <a href="../../file/fileobj/fileobj.html">ファイル</a>やビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。
 
-*   **期間**: サポート: オーディオおよびビデオ ファイルのみです。
+*   **期間**: サポート: オーディオおよびビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。
 
 ## iOS の癖
 
@@ -68,10 +68,10 @@ license: >
 
 *   **コーデック**： いないサポートしを返します`null`.
 
-*   **ビットレート**： iOS4 オーディオのみのデバイスでサポートされています。画像や動画はゼロを返します。
+*   **ビットレート**： iOS4 オーディオのみの<a href="../../device/device.html">デバイス</a>でサポートされています。画像や動画はゼロを返します。
 
-*   **高さ**: サポート: イメージ ファイルやビデオ ファイルのみです。
+*   **高さ**: サポート: イメージ <a href="../../file/fileobj/fileobj.html">ファイル</a>やビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。
 
-*   **幅**: サポート: イメージ ファイルやビデオ ファイルのみです。
+*   **幅**: サポート: イメージ <a href="../../file/fileobj/fileobj.html">ファイル</a>やビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。
 
-*   **期間**: サポート: オーディオおよびビデオ ファイルのみです。
+*   **期間**: サポート: オーディオおよびビデオ <a href="../../file/fileobj/fileobj.html">ファイル</a>のみです。

@@ -18,21 +18,21 @@ license: >
     under the License.
 ---
 
-# Die Datei config.xml
+# Die <a href="../cordova/file/fileobj/fileobj.html">Datei</a> config.xml
 
-Zahlreiche Aspekte des Verhaltens einer app können mit einer globalen Konfigurationsdatei `config.xml` gesteuert werden, welche sich in der obersten Ebene des Web Asset Verzeichnisses zusammen mit der app-Homepage befindet. Diese plattformunabhängig XML-Datei wird basierend auf der W3C [Verpackt von Web-Anwendungen (Widgets)][1] Spezifikation formatiert, und erweitert, um die Kern-Cordova-API-Funktionen, Plugins und Plattform-spezifischen Einstellungen angeben.
+Zahlreiche Aspekte des Verhaltens einer app können mit einer globalen Konfigurationsdatei `config.xml` gesteuert werden, welche sich in der obersten Ebene des Web Asset Verzeichnisses zusammen mit der app-Homepage befindet. Diese plattformunabhängig XML-<a href="../cordova/file/fileobj/fileobj.html">Datei</a> wird basierend auf der W3C [Verpackt von Web-Anwendungen (Widgets)][1] Spezifikation formatiert, und erweitert, um die Kern-Cordova-API-Funktionen, Plugins und Plattform-spezifischen Einstellungen angeben.
 
  [1]: http://www.w3.org/TR/widgets/
 
-Für Projekte, die mit dem Cordova-CLI (beschrieben in Die Kommandozeilen-Schnittstelle) erstellt wurden, finden Sie diese Datei im `www` Verzeichnis der obersten Ebene. Mit dem CLI zum Erstellen eines Projekts regeneriert Versionen dieser Datei in verschiedenen Unterverzeichnissen innerhalb `platforms` . Wenn Sie die CLI zum Erstellen eines Projekts, aber dann verlagern Ihren Workflow auf ein SDK verwenden, dient die Plattform-spezifische Datei als Quelle.
+Für Projekte, die mit dem Cordova-CLI (beschrieben in Die Kommandozeilen-Schnittstelle) erstellt wurden, finden Sie diese <a href="../cordova/file/fileobj/fileobj.html">Datei</a> im `www` Verzeichnis der obersten Ebene. Mit dem CLI zum Erstellen eines Projekts regeneriert Versionen dieser <a href="../cordova/file/fileobj/fileobj.html">Datei</a> in verschiedenen Unterverzeichnissen innerhalb `platforms` . Wenn Sie die CLI zum Erstellen eines Projekts, aber dann verlagern Ihren Workflow auf ein SDK verwenden, dient die Plattform-spezifische <a href="../cordova/file/fileobj/fileobj.html">Datei</a> als Quelle.
 
 Dieser Abschnitt beschreibt globale und Cross-Plattform-Konfigurationsoptionen. Finden Sie in den folgenden Abschnitten für Plattform-spezifische Optionen:
 
-*   iOS Konfiguration
+*   <a href="../guide/platforms/ios/config.html">iOS Konfiguration</a>
 *   Android Konfiguration
 *   BlackBerry Konfiguration
 
-Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter Symbole und Splash-Screens.
+Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter <a href="images.html">Symbole und Splash-Screens</a>.
 
 ## Kern-Konfigurationselemente
 
@@ -41,7 +41,7 @@ In diesem Beispiel wird den Standardwert `config.xml` erzeugt durch der CLI `cre
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -55,17 +55,17 @@ In diesem Beispiel wird den Standardwert `config.xml` erzeugt durch der CLI `cre
 
 <!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
-Die folgenden Konfigurationselemente in der obersten Ebene angezeigt `config.xml` Datei und werden auf allen unterstützten Cordova-Plattformen unterstützt:
+Die folgenden Konfigurationselemente in der obersten Ebene angezeigt `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> und werden auf allen unterstützten Cordova-Plattformen unterstützt:
 
 *   Die `<widget>` des Elements `id` Attribut bietet die app-Reverse-Domänen-ID, und der `version` seine vollständige Versionsnummer in Major/Minor/Patch-Notation ausgedrückt.
 
-*   Die `<name>` Element gibt die app formalen Namen, wie er auf home-Bildschirm des Geräts und im app-Store-Schnittstellen erscheint.
+*   Die `<name>` Element gibt die app formalen Namen, wie er auf home-Bildschirm des <a href="../cordova/device/device.html">Gerät</a>s und im app-Store-Schnittstellen erscheint.
 
-*   Die `<description>` und `<author>` Elemente geben, Metadaten und Kontaktinformationen, die im app-Shop-Angebote angezeigt werden kann.
+*   Die `<description>` und `<author>` Elemente geben, <a href="../cordova/file/metadata/metadata.html">Metadaten</a> und <a href="../cordova/contacts/Contact/contact.html">Kontakt</a>informationen, die im app-Shop-Angebote angezeigt werden kann.
 
 *   Der optionale `<content>` -Element definiert die Anwendung Startseite in der obersten Ebene Webverzeichnis Vermögenswerte. Der Standardwert ist `index.html` , die üblicherweise in einem Projekt angezeigt wird, ist der obersten Ebene `www` Verzeichnis.
 
-*   `<access>`Elemente definieren den Satz der externen Domänen, die, denen die app erlaubt ist, zu kommunizieren. Der Standardwert, der oben gezeigten ermöglicht es, jeden beliebigen Server zugreifen. Finden Sie im Domain-Whitelist-Guide für Details.
+*   `<access>`Elemente definieren den Satz der externen Domänen, die, denen die app erlaubt ist, zu kommunizieren. Der Standardwert, der oben gezeigten ermöglicht es, jeden beliebigen Server zugreifen. Finden Sie im Domain-<a href="../guide/appdev/whitelist/index.html">Whitelist-Guide</a> für Details.
 
 *   Die `<preference>` Tag stellt verschiedene Optionen als Paare von `name` / `value` Attribute. Jede Vorliebe `name` ist case-insensitive. Viele Einstellungen sind nur für bestimmte Plattformen, wie oben auf dieser Seite aufgeführt. In den folgenden Abschnitten beschreiben die Einstellungen, die für mehrere Plattformen gelten.
 
@@ -83,7 +83,7 @@ Die folgenden globalen Einstellungen gelten für alle Plattformen:
         <preference name="Orientation" value="landscape" />
         
     
-    **Hinweis:** Die `default` Wert bedeutet *sowohl* quer- und Hochformat Ausrichtungen sind aktiviert. Wenn Sie Standardeinstellungen für jede Plattform (in der Regel Porträt nur) verwenden möchten, lassen Sie dieses Tag von der `config.xml` Datei. Verwendet außerdem BlackBerry `auto` anstelle von `default` in der `config.xml` Datei. Bei Angabe von `default` in der globalen `config.xml` , es übersetzt `auto` in den BlackBerry-Build.
+    **Hinweis:** Die `default` Wert bedeutet *sowohl* quer- und Hochformat Ausrichtungen sind aktiviert. Wenn Sie Standardeinstellungen für jede Plattform (in der Regel Porträt nur) verwenden möchten, lassen Sie dieses Tag von der `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>. Verwendet außerdem BlackBerry `auto` anstelle von `default` in der `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>. Bei Angabe von `default` in der globalen `config.xml` , es übersetzt `auto` in den BlackBerry-Build.
 
 ## Multi-Plattform-Einstellungen
 
@@ -94,7 +94,7 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
         <preference name="DisallowOverscroll" value="true"/>
         
     
-    Gilt für Android und iOS. Auf iOS, Overscroll Gesten Ursache Inhalt zurück an seine ursprüngliche Position gut zu machen. Auf Android produzieren sie ein subtiler Glüheffekt am oberen oder unteren Rand des Inhalts.
+    Gilt für Android und iOS. Auf iOS, Overscroll Gesten Ursache Inhalt zurück an seine ursprüngliche <a href="../cordova/geolocation/Position/position.html">Position</a> gut zu machen. Auf Android produzieren sie ein subtiler Glüheffekt am oberen oder unteren Rand des Inhalts.
 
 *   `BackgroundColor`: Die app-Hintergrundfarbe festgelegt. Unterstützt eine 4-Byte hex-Wert, mit dem ersten Byte, die den Alphakanal und standard-RGB-Werte für die folgenden drei Bytes. In diesem Beispiel gibt blau:
     
@@ -114,12 +114,12 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
 
 ## Die `<feature>` Element
 
-Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` Befehl Gerät APIs zu aktivieren. Dies ändert jedoch nicht die Top-Level- `config.xml` Datei, so dass die `<feature>` Element gilt nicht für Ihren Workflow. Wenn Sie direkt in ein SDK arbeiten und mit der Plattform-spezifischen `config.xml` Datei als Quelle, Sie verwenden die `<feature>` Tag auf Device-Ebene APIs und externe Plugins aktivieren. Sie werden in der Regel in dieser Form:
+Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` Befehl <a href="../cordova/device/device.html">Gerät</a> APIs zu aktivieren. Dies ändert jedoch nicht die Top-Level- `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>, so dass die `<feature>` Element gilt nicht für Ihren Workflow. Wenn Sie direkt in ein SDK arbeiten und mit der Plattform-spezifischen `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a> als Quelle, Sie verwenden die `<feature>` Tag auf Device-Ebene APIs und externe Plugins aktivieren. Sie werden in der Regel in dieser Form:
 
         <feature name="Plugin" value="PluginID" />
     
 
-Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `config.xml` Dateien. Hier ist beispielsweise die Device-API für Android Projekte angeben:
+Sie erscheinen oft mit benutzerdefinierten Werte in plattformspezifischen `config.xml` <a href="../cordova/file/fileobj/fileobj.html">Datei</a>en. Hier ist beispielsweise die Device-API für Android Projekte angeben:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />

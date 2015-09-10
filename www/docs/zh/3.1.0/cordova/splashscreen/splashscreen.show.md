@@ -20,14 +20,14 @@ license: >
 
 # splashscreen.show
 
-顯示初始螢幕。
+<a href="../inappbrowser/inappbrowser.html">顯示</a>初始螢幕。
 
     navigator.splashscreen.show();
     
 
 ## 說明
 
-此方法顯示應用程式的初始螢幕。
+此方法<a href="../inappbrowser/inappbrowser.html">顯示</a>應用程式的初始螢幕。
 
 ## 支援的平臺
 
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,6 +64,6 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>

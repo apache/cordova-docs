@@ -35,38 +35,38 @@ Supported Platforms
 - iPhone
 - Windows Phone 7
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Vibrate for 2.5 seconds
     //
     navigator.notification.vibrate(2500);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
     
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
     
         // Show a custom alert
         //
         function showAlert() {
-		    navigator.notification.alert(
+		    navigator.<a href="notification.alert.html">notification.alert</a>(
 		        'You are the winner!',  // message
 		        'Game Over',            // title
 		        'Done'                  // buttonName
@@ -76,7 +76,7 @@ Full Example
         // Beep three times
         //
         function playBeep() {
-            navigator.notification.beep(3);
+            navigator.<a href="notification.beep.html">notification.beep</a>(3);
         }
     
         // Vibrate for 2 seconds

@@ -30,9 +30,9 @@ cameraSuccess
 パラメーター
 ----------
 
-- __imageData:__ Base64 エンコーディングされた画像データ、またはイメージファイルの URI (`cameraOptions`による) (`String`)
+- __imageData:__ Base64 エンコーディングされた画像データ、またはイメージファイルの URI (`<a href="cameraOptions.html">cameraOptions</a>`による) (`String`)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------
 
     // 画像を表示

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Mise à jour de BlackBerry 10
+# <a href="../blackberry/upgrading.html">Mise à jour de BlackBerry</a> 10
 
 Ce guide montre comment modifier des projets BlackBerry mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 

@@ -22,14 +22,14 @@ license: >
 
 > Auf eine erfolgreiche Media-Erfassungsvorgangs aufgerufen.
 
-    function captureSuccess( MediaFile[] mediaFiles ) { ... };
+    function captureSuccess( <a href="MediaFile.html">MediaFile</a>[] mediaFiles ) { ... };
     
 
 ## Beschreibung
 
-Diese Funktion wird ausgeführt, nachdem ein erfolgreiche Capture-Vorgang abgeschlossen ist. An diesem Punkt kann eine Mediendatei erfasst wurden und entweder der Benutzer die Medien-Capture-Anwendung beendet hat oder die Capture-erreicht.
+Diese Funktion wird ausgeführt, nachdem ein erfolgreiche Capture-Vorgang abgeschlossen ist. An diesem Punkt kann eine <a href="../media.html">Medien</a>datei erfasst wurden und entweder der Benutzer die <a href="../media.html">Medien</a>-Capture-Anwendung beendet hat oder die Capture-erreicht.
 
-Jedes `MediaFile` Objekt beschreibt eine aufgenommenen Medien-Datei.
+Jedes `<a href="MediaFile.html">MediaFile</a>` Objekt beschreibt eine aufgenommenen <a href="../media.html">Medien</a>-<a href="../../file/fileobj/fileobj.html">Datei</a>.
 
 ## Kleines Beispiel
 

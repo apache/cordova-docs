@@ -18,29 +18,29 @@ license: >
     under the License.
 ---
 
-# File
+# <a href="fileobj/fileobj.html">File</a>
 
 > Un'API per leggere, scrivere e navigare gerarchie file di sistema, basati sul [w3c file api][1].
 
- [1]: http://www.w3.org/TR/FileAPI
+ [1]: http://www.w3.org/TR/<a href="fileobj/fileobj.html">File</a>API
 
 ## Oggetti
 
-*   DirectoryEntry
-*   DirectoryReader
-*   File
-*   FileEntry
-*   FileError
-*   FileReader
-*   FileSystem
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   Bandiere
-*   LocalFileSystem
-*   Metadati
+*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+*   <a href="fileobj/fileobj.html">File</a>
+*   <a href="fileentry/fileentry.html"><a href="fileobj/fileobj.html">File</a>Entry</a>
+*   <a href="fileerror/fileerror.html"><a href="fileobj/fileobj.html">File</a>Error</a>
+*   <a href="filereader/filereader.html"><a href="fileobj/fileobj.html">File</a>Reader</a>
+*   <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
+*   <a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>
+*   <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>Error</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html"><a href="fileobj/fileobj.html">File</a>UploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html"><a href="fileobj/fileobj.html">File</a>UploadResult</a>
+*   <a href="filewriter/filewriter.html"><a href="fileobj/fileobj.html">File</a>Writer</a>
+*   <a href="flags/flags.html">Bandiere</a>
+*   Local<a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
+*   <a href="metadata/metadata.html">Metadati</a>
 
 ## La funzionalità di accesso
 
@@ -65,11 +65,11 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 *   Android
     
         (in app/res/xml/config.xml)
-        <feature name="File">
-            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="android-package" value="org.apache.cordova.<a href="fileobj/fileobj.html">File</a>Utils" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
+            <param name="android-package" value="org.apache.cordova.<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -79,11 +79,11 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 *   BlackBerry WebWorks
     
         (in www/plugins.xml)
-        <feature name="File">
-            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="blackberry-package" value="org.apache.cordova.file.<a href="fileobj/fileobj.html">File</a>Manager" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
+            <param name="blackberry-package" value="org.apache.cordova.http.<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
         </feature>
         
         (in www/config.xml)
@@ -97,11 +97,11 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   iOS (in`config.xml`)
     
-        <feature name="File">
-            <param name="ios-package" value="CDVFile" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="ios-package" value="CDV<a href="fileobj/fileobj.html">File</a>" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="ios-package" value="CDVFileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
+            <param name="ios-package" value="CDV<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
         </feature>
         
 

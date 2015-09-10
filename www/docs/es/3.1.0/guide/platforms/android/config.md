@@ -22,7 +22,7 @@ license: >
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena.
+*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `<a href="../../../cordova/events/events.pause.html">pause</a>` de evento se desencadena.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -47,11 +47,11 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
+*   `<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
     
-        <preference name="SplashScreen" value="splash"/>
+        <preference name="<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>" value="splash"/>
         
 
-*   `SplashScreenDelay` (número, el valor predeterminado de `5000`): la cantidad de tiempo que muestra la imagen en pantalla splash.
+*   `<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Delay` (número, el valor predeterminado de `5000`): la cantidad de tiempo que muestra la imagen en pantalla splash.
     
-        <preference name="SplashScreenDelay" value="10000"/>
+        <preference name="<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Delay" value="10000"/>

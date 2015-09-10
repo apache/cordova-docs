@@ -21,14 +21,14 @@ license: >
 InAppBrowser
 ============
 
-> The InAppBrowser is a web-browser that is shown in your app when you use the `window.open` call.
+> The InAppBrowser is a web-browser that is <a href="../splashscreen/splashscreen.show.html">show</a>n in your app when you use the `<a href="window.open.html">window.open</a>` call.
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     
 Description
 -----------
 
-The object returned from a call to `window.open`.
+The object returned from a call to `<a href="window.open.html">window.open</a>`.
 
 Methods
 ----------
@@ -85,31 +85,31 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.addEventListener Example</title>
+        <title>InAppBrowser.addEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+        function on<a href="../device/device.html">Device</a>Ready() {
+             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
              ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
              ref.addEventListener('exit', function() { alert(event.type); });
@@ -145,28 +145,28 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.removeEventListener Example</title>
+        <title>InAppBrowser.removeEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         
         // Global InAppBrowser reference
         var iabRef = null;
@@ -188,8 +188,8 @@ Full Example
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+        function on<a href="../device/device.html">Device</a>Ready() {
+             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
              iabRef.addEventListener('exit', iabClose);
@@ -217,31 +217,31 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.close();
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.close Example</title>
+        <title>InAppBrowser.close <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+        function on<a href="../device/device.html">Device</a>Ready() {
+             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              // close InAppBrowser after 5 seconds
              setTimeout(function() {
                  ref.close();

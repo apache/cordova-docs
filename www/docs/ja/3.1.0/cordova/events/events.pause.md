@@ -22,14 +22,14 @@ license: >
 
 アプリケーションは、背景に置かれたときに発生します。
 
-    document.addEventListener("pause", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
     
 
 ## 詳細
 
 `pause`に任せたらネイティブ プラットフォームを背景にアプリケーション通常ユーザーが別のアプリケーションに切り替えたときに発生します。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
 
 ## サポートされているプラットフォーム
 
@@ -41,7 +41,7 @@ license: >
 
 ## 簡単な例
 
-    document.addEventListener("pause", onPause, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
     
     function onPause() {
         // Handle the pause event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("pause", onPause, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
         }
     
         // Handle the pause event
@@ -84,8 +84,8 @@ license: >
 
 ## iOS の癖
 
-`pause`ハンドラー、コルドバ API または Objective-C を通過するネイティブのプラグインの呼び出し動作しない、警告など、対話型の呼び出しと一緒にまたは `console.log()` 。 次の実行ループで、アプリが再開したときのみ処理されます。
+`pause`ハンドラー、コルドバ API または Objective-C を通過するネイティブのプラグインの呼び出し動作しない、警告など、対話型の呼び出しと一緒にまたは `console.log()` 。 次の実行ループで、アプリが<a href="events.resume.html">再開</a>したときのみ処理されます。
 
-IOS 固有 `resign` イベントの代替として利用可能です `pause` 、しユーザーにフォア グラウンドで実行されているアプリでデバイスをロックする**ロック**ボタンを有効にするときを検出します。 マルチタスクのアプリケーション (とデバイス) が有効な場合このペアは、その後 `pause` しか iOS の 5 の下でのイベント。 実際には、ios 5 で有効にマルチタスクを持っているすべてのロックされたアプリはバック グラウンドにプッシュされます。 IOS の 5 の下でロックされている場合、実行されているアプリ、アプリのマルチタスク設定を無効に[UIApplicationExitsOnSuspend][1] `YES` 。 IOS 4 でロックされている場合、実行するには、この設定は問題ではないです。
+IOS 固有 `resign` <a href="events.html">イベント</a>の代替として利用可能です `pause` 、しユーザーにフォア グラウンドで実行されているアプリで<a href="../device/device.html">デバイス</a>をロックする**ロック**ボタンを有効にするときを検出します。 マルチタスクのアプリケーション (と<a href="../device/device.html">デバイス</a>) が有効な場合このペアは、その後 `pause` しか iOS の 5 の下での<a href="events.html">イベント</a>。 実際には、ios 5 で有効にマルチタスクを持っているすべてのロックされたアプリはバック グラウンドにプッシュされます。 IOS の 5 の下でロックされている場合、実行されているアプリ、アプリのマルチタスク設定を無効に[UIApplicationExitsOnSuspend][1] `YES` 。 IOS 4 でロックされている場合、実行するには、この設定は問題ではないです。
 
  [1]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html

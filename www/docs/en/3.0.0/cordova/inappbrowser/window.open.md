@@ -21,42 +21,42 @@ license: >
 window.open
 ===========
 
-Opens a URL in a new `InAppBrowser` instance, the current browser
+Opens a URL in a new `<a href="inappbrowser.html">InAppBrowser</a>` instance, the current browser
 instance, or the system browser.
 
     var ref = window.open(url, target, options);
 
-- __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
+- __ref__: Reference to the `<a href="inappbrowser.html">InAppBrowser</a>` window. _(<a href="inappbrowser.html">InAppBrowser</a>)_
 
 - __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
 
 - __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
 
-    - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
-    - `_blank`: Opens in the `InAppBrowser`.
+    - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `<a href="inappbrowser.html">InAppBrowser</a>`.
+    - `_blank`: Opens in the `<a href="inappbrowser.html">InAppBrowser</a>`.
     - `_system`: Opens in the system's web browser.
 
-- __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
+- __options__: Options for the `<a href="inappbrowser.html">InAppBrowser</a>`. Optional, defaulting to: `location=yes`. _(String)_
 
     The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:
 
-    - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
+    - __location__: Set to `yes` or `no` to turn the `<a href="inappbrowser.html">InAppBrowser</a>`'s location bar on or off.
     
     Android only
     --------------------
-    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. 
-    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
+    - __<a href="inappbrowser.html">close</a>buttoncaption__ - set to a string that will be the caption for the "Done" button. 
+    - __hidden__ - set to 'yes' to create the browser and load the page, but not <a href="inappbrowser.html">show</a> it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
     - __clearcache__ - set to 'yes' to have the browser's cookie cache cleared before the new window is opened
     - __clearsessioncache__ - set to 'yes' to have the session cookie cache cleared before the new window is opened
 
     iOS only
     --------
-    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. Note that you will have to localize this value yourself.
-    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
-    - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the InAppBrowser (defaults to 'yes')
+    - __<a href="inappbrowser.html">close</a>buttoncaption__ - set to a string that will be the caption for the "Done" button. Note that you will have to localize this value yourself.
+    - __hidden__ - set to 'yes' to create the browser and load the page, but not <a href="inappbrowser.html">show</a> it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
+    - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the <a href="inappbrowser.html">InAppBrowser</a> (defaults to 'yes')
     - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
     - __mediaPlaybackRequiresUserAction__: Set to `yes` or `no` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
-    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow inline HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
+    - __allowInline<a href="../media/media.html">Media</a>Playback__: Set to `yes` or `no` to allow inline HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
     - __keyboardDisplayRequiresUserAction__: Set to `yes` or `no` to open the keyboard when form elements receive focus via JavaScript's `focus()` call (defaults to `yes`).
     - __suppressesIncrementalRendering__: Set to `yes` or `no` to wait until all new view content is received before being rendered (defaults to `no`).
     - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to `fullscreen`).
@@ -70,30 +70,30 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open Example</title>
+        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // external url
             var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
             // relative document

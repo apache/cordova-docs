@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-FileSystem
+<a href="../fileobj/fileobj.html">File</a>System
 ==========
 
 This object represents a file system.
@@ -27,12 +27,12 @@ Properties
 ----------
 
 - __name:__ The name of the file system. _(DOMString)_
-- __root:__ The root directory of the file system. _(DirectoryEntry)_
+- __root:__ The root directory of the file system. _(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)_
 
 Details
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+The `<a href="../fileobj/fileobj.html">File</a>System` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` object which represents the root directory of the file system.
 
 Supported Platforms
 -------------------
@@ -42,7 +42,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-File System Quick Example
+<a href="../fileobj/fileobj.html">File</a> System Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------------------
 
 	function onSuccess(fileSystem) {
@@ -51,30 +51,30 @@ File System Quick Example
 	}
 	
 	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+	window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, null);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a> System <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+			window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../fileobj/fileobj.html">File</a>SystemSuccess, fail);
         }
 
-		function onFileSystemSuccess(fileSystem) {
+		function on<a href="../fileobj/fileobj.html">File</a>SystemSuccess(fileSystem) {
 			console.log(fileSystem.name);
 			console.log(fileSystem.root.name);
 		}
@@ -86,7 +86,7 @@ Full Example
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>File System</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p><a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>

@@ -35,7 +35,7 @@ batterycritical ハンドラーは以下の2つのプロパティーを含むオ
 - __level:__ バッテリーのパーセンテージ (0-100) _(Number)_
 - __isPlugged:__ デバイスが充電器に接続されているかどうかを表します _(Boolean)_
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '<a href="events.deviceready.html">deviceready</a>' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -44,7 +44,7 @@ batterycritical ハンドラーは以下の2つのプロパティーを含むオ
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
@@ -54,30 +54,30 @@ batterycritical ハンドラーは以下の2つのプロパティーを含むオ
         alert("バッテリー残量が危険です " + info.level + "%\nすぐに充電してください。");
     }
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready 使用例</title>
+        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに onDeviceReady を呼び出します。
+        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.0.0.js はまだ完了していません。
         // Cordova のロード完了とともに
-        // `deviceready` イベントが呼び出されます。
+        // `<a href="events.deviceready.html">deviceready</a>` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             window.addEventListener("batterycritical", onBatteryCritical, false);
         }
 

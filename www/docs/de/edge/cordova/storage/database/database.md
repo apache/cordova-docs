@@ -30,9 +30,9 @@ Ermöglicht den Zugriff auf eine SQL-Datenbank.
 
 ## Informationen
 
-Die `window.openDatabase()` -Methode gibt ein `Database` Objekt.
+Die `window.<a href="../storage.opendatabase.html">openDatabase</a>()` -Methode gibt ein `Database` Objekt.
 
-## Unterstützte Plattformen
+## <a href="../../../config_ref/images.html">Unterstützte Plattformen</a>
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 und höher)
@@ -56,13 +56,13 @@ Die `window.openDatabase()` -Methode gibt ein `Database` Objekt.
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
 ## Änderung Version kleines Beispiel
 
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
     
 
@@ -71,19 +71,19 @@ Die `window.openDatabase()` -Methode gibt ein `Database` Objekt.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -111,7 +111,7 @@ Die `window.openDatabase()` -Methode gibt ein `Database` Objekt.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>Database</p>
       </body>
     </html>

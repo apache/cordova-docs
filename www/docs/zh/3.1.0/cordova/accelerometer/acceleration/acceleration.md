@@ -20,7 +20,7 @@ license: >
 
 # 加速度
 
-包含 `Accelerometer` 在時間中的特定點捕獲的資料。
+包含 `Accelerometer` 在時間中的特定點<a href="../../media/capture/capture.html">捕獲</a>的資料。
 
 ## 屬性
 
@@ -31,7 +31,7 @@ license: >
 
 ## 說明
 
-`Acceleration`物件是填充的返回的任何的 API 的 `Accelerometer` 方法。 加速度值包括引力的影響 (9.81 m/s ^2)，因此當設備謊言平面和麵朝上， *x*、 *y*，和*z*返回的值應該是 `` ， `` ，和`9.81`.
+`Acceleration`物件是填充的返回的任何的 API 的 `Accelerometer` 方法。 加速度值包括引力的影響 (9.81 m/s ^2)，因此當<a href="../../device/device.html">設備</a>謊言平面和麵朝上， *x*、 *y*，和*z*返回的值應該是 `` ， `` ，和`9.81`.
 
 ## 支援的平臺
 
@@ -55,7 +55,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
     
 
 ## 完整的示例
@@ -63,19 +63,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
@@ -96,7 +96,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

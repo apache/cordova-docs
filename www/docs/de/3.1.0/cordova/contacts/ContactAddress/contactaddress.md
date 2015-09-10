@@ -42,7 +42,7 @@ Enthält Eigenschaften für ein `Contact` Objekt.
 
 ## Informationen
 
-Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse eines Kontakts. A `Contact` Objekt gehören mehr als eine Adresse in ein `ContactAddress[]` Array.
+Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse eines <a href="../Contact/contact.html">Kontakt</a>s. A `Contact` Objekt gehören mehr als eine Adresse in ein `ContactAddress[]` Array.
 
 ## Unterstützte Plattformen
 
@@ -71,15 +71,15 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
     // find all contacts
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## Vollständiges Beispiel
@@ -87,23 +87,23 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // find all contacts
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -126,14 +126,14 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -141,13 +141,13 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
 
 ## Android 2.X Macken
 
-*   **Pref**: nicht unterstützt, Rückkehr `false` auf Android 2.X Geräten.
+*   **Pref**: nicht unterstützt, Rückkehr `false` auf Android 2.X <a href="../../device/device.html">Gerät</a>en.
 
 ## BlackBerry WebWorks (OS 5.0 und höher) Macken
 
-*   **Pref**: BlackBerry-Geräten, Rückgabe nicht unterstützt`false`.
+*   **Pref**: BlackBerry-<a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`false`.
 
-*   **Typ**: teilweise unterstützt. Nur eine *Arbeit* und *Home* Typ Adressen kann pro Kontakt gespeichert werden.
+*   **Typ**: teilweise unterstützt. Nur eine *Arbeit* und *Home* Typ Adressen kann pro <a href="../Contact/contact.html">Kontakt</a> gespeichert werden.
 
 *   **formatiert**: teilweise unterstützt. Gibt eine Verkettung von allen BlackBerry-Adressfelder.
 
@@ -163,6 +163,6 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
 
 ## iOS Macken
 
-*   **Pref**: iOS-Geräten, Rückgabe nicht unterstützt`false`.
+*   **Pref**: iOS-<a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`false`.
 
 *   **formatiert**: derzeit nicht unterstützt.

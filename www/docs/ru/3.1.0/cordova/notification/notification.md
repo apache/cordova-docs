@@ -25,10 +25,10 @@ license: >
 ## Методы
 
 *   `notification.alert`
-*   `notification.confirm`
-*   `notification.prompt`
+*   `<a href="notification.confirm.html">notification.confirm</a>`
+*   `<a href="notification.prompt.html">notification.prompt</a>`
 *   `notification.beep`
-*   `notification.vibrate`
+*   `<a href="notification.vibrate.html">notification.vibrate</a>`
 
 ## Доступ к функции
 

@@ -42,7 +42,7 @@ license: >
 
 ## 세부 정보
 
-`ContactAddress`개체는 연락처의 단일 주소 속성을 저장 합니다. A `Contact` 개체에 하나 이상의 주소가 포함 될 수 있습니다는 `ContactAddress[]` 배열.
+`ContactAddress`개체는 <a href="../contacts.html">연락처</a>의 단일 주소 속성을 저장 합니다. A `Contact` 개체에 하나 이상의 주소가 포함 될 수 있습니다는 `ContactAddress[]` 배열.
 
 ## 지원 되는 플랫폼
 
@@ -71,15 +71,15 @@ license: >
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
     // find all contacts
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 전체 예제
@@ -87,23 +87,23 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // find all contacts
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -126,14 +126,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -141,17 +141,17 @@ license: >
 
 ## 안 드 로이드 2.X 단점
 
-*   **pref**: 지원 되지 않는 반환 `false` 안 드 로이드 2.X 장치에.
+*   **pref**: 지원 되지 않는 반환 `false` 안 드 로이드 2.X <a href="../../device/device.html">장치</a>에.
 
 ## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
 
-*   **pref**: 반환 BlackBerry 장치에서 지원 되지 않습니다`false`.
+*   **pref**: 반환 BlackBerry <a href="../../device/device.html">장치</a>에서 지원 되지 않습니다`false`.
 
 *   **유형**: 부분적으로 지원 합니다. *작업* 및 *홈* 형식 주소 각 단 하나 접촉 당 저장할 수 있습니다.
 
-*   **포맷**: 부분적으로 지원 합니다. 모든 검은 딸기 주소 필드의 연결을 반환합니다.
+*   **포맷**: 부분적으로 지원 합니다. 모든 검은 딸기 주소 필드의 <a href="../../connection/connection.html">연결</a>을 반환합니다.
 
-*   **streetAddress**: 지원. 블랙베리 **address1** **주소 2** 의 연결 주소 필드를 반환합니다.
+*   **streetAddress**: 지원. 블랙베리 **address1** **주소 2** 의 <a href="../../connection/connection.html">연결</a> 주소 필드를 반환합니다.
 
 *   **지역**: 지원. 블랙베리 **시** 주소 필드에 저장 합니다.
 
@@ -163,6 +163,6 @@ license: >
 
 ## iOS 단점
 
-*   **pref**: 반환 하는 iOS 장치에서 지원 되지 않습니다`false`.
+*   **pref**: 반환 하는 iOS <a href="../../device/device.html">장치</a>에서 지원 되지 않습니다`false`.
 
 *   **포맷**: 현재 지원 되지 않습니다.

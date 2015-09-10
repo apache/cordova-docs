@@ -24,20 +24,20 @@ license: >
 
 ## プロパティ
 
-*   device.model
-*   device.cordova
-*   device.platform
-*   device.uuid
-*   device.version
-*   device.name
+*   <a href="device.model.html">device.model</a>
+*   <a href="device.cordova.html">device.cordova</a>
+*   <a href="device.platform.html">device.platform</a>
+*   <a href="device.uuid.html">device.uuid</a>
+*   <a href="device.version.html">device.version</a>
+*   <a href="device.name.html">device.name</a>
 
-## 変数のスコープ
+## <a href="../../plugin_ref/spec.html">変数</a>のスコープ
 
 以来、 `device` に割り当てられている、 `window` オブジェクトは、グローバル スコープでは暗黙的に。
 
     // These reference the same `device`
-    var phoneModel = window.device.model;
-    var phoneModel = device.model;
+    var phoneModel = window.<a href="device.model.html">device.model</a>;
+    var phoneModel = <a href="device.model.html">device.model</a>;
     
 
 ## 機能へのアクセス
@@ -98,4 +98,4 @@ license: >
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。

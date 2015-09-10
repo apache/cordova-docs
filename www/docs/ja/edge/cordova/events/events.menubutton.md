@@ -27,11 +27,11 @@ license: >
 
 ## 詳細
 
-イベント ハンドラーを適用する既定のメニューのボタンの動作をオーバーライドします。
+<a href="events.html">イベント</a> ハンドラーを適用する既定のメニューのボタンの動作をオーバーライドします。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
 
-## サポートされているプラットフォーム
+## <a href="../../config_ref/images.html">サポートされているプラットフォーム</a>
 
 *   アマゾン火 OS
 *   アンドロイド
@@ -52,7 +52,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Menu Button Example</title>
+        <title>Menu Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

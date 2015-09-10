@@ -23,7 +23,7 @@ pause
 
 The event fires when an application is put into the background.
 
-    document.addEventListener("pause", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
 
 Details
 -------
@@ -33,8 +33,8 @@ The `pause` event fires when the native platform puts the application
 into the background, typically when the user switches to a different
 application.
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
@@ -45,22 +45,22 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("pause", onPause, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
 
     function onPause() {
         // Handle the pause event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -68,13 +68,13 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            document.addEventListener("pause", onPause, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
         }
 
         // Handle the pause event
@@ -94,7 +94,7 @@ iOS Quirks
 In the `pause` handler, any calls to the Cordova API or to native
 plug-ins that go through Objective-C do not work, along with any
 interactive calls, such as alerts or `console.log()`. They are only
-processed when the app resumes, on the next run loop.
+processed when the app <a href="events.resume.html">resume</a>s, on the next run loop.
 
 The iOS-specific `resign` event is available as an alternative to
 `pause`, and detects when users enable the __Lock__ button to lock the

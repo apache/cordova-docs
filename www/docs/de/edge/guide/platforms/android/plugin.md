@@ -24,7 +24,7 @@ Dieser Abschnitt enthält Informationen für das native Plugin-Code auf der Andr
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android Plugins basieren auf Cordova-Android, bestehend aus einem Android WebView mit Haken verbunden. Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` Datei. Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` -Klasse überschreiben eines seiner `execute` Methoden. Als beste Praxis, das Plugin sollte auch behandeln, `pause` und `resume` Veranstaltungen, zusammen mit jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie Medienwiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
+Android Plugins basieren auf Cordova-Android, bestehend aus einem Android WebView mit Haken verbunden. Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` Datei. Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` -Klasse überschreiben eines seiner `execute` Methoden. Als beste Praxis, das Plugin sollte auch behandeln, `<a href="../../../cordova/events/events.pause.html">pause</a>` und `<a href="../../../cordova/events/events.resume.html">resume</a>` <a href="../../../cordova/events/events.html">Veranstaltungen</a>, zusammen mit jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie Medienwiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
 
 ## Plugin-Klasse Zuordnung
 
@@ -80,7 +80,7 @@ Wann Abfangen von Ausnahmen und Fehler zurückgeben, ist es wichtig aus Gründen
 
 ## Threading
 
-Das Plugin-JavaScript ist *nicht* führen Sie in der Haupt-Thread der die `WebView` Schnittstelle; stattdessen läuft auf die `WebCore` thread, wie die `execute` Methode. Wenn Sie mit der Benutzeroberfläche interagieren müssen, verwenden Sie die folgende Variante:
+Das Plugin-JavaScript ist *nicht* führen Sie in der Haupt-Thread der die `WebView` Schnittstelle; stattdessen läuft auf die `WebCore` thread, wie die `execute` Methode. Wenn Sie mit der <a href="../../next/index.html">Benutzeroberfläche</a> interagieren müssen, verwenden Sie die folgende Variante:
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {

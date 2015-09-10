@@ -22,26 +22,26 @@ license: >
 
 Orologi per le modifiche alla posizione corrente del dispositivo.
 
-    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
-                                                      [geolocationError],
-                                                      [geolocationOptions]);
+    var watchId = navigator.geolocation.watchPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                                      [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                                      [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
 ## Parametri
 
-*   **geolocationSuccess**: il callback passato alla posizione corrente.
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: il callback passato alla posizione corrente.
 
-*   **geolocationError**: (facoltativo) il callback che viene eseguito se si verifica un errore.
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**: (facoltativo) il callback che viene eseguito se si verifica un errore.
 
-*   **geolocationOptions**: opzioni (opzionale) la geolocalizzazione.
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: opzioni (opzionale) la geolocalizzazione.
 
 ## Restituisce
 
-*   **Stringa**: restituisce un id di orologio che fa riferimento l'intervallo di posizione orologio. L'id dell'orologio deve essere usato con `geolocation.clearWatch` a smettere di guardare per cambiamenti di posizione.
+*   **Stringa**: restituisce un id di orologio che fa riferimento l'intervallo di posizione orologio. L'id dell'orologio deve essere usato con `<a href="geolocation.clearWatch.html">geolocation.clearWatch</a>` a smettere di guardare per cambiamenti di posizione.
 
 ## Descrizione
 
-`geolocation.watchPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo quando viene rilevata una modifica della posizione. Quando il dispositivo recupera una nuova posizione, la `geolocationSuccess` callback viene eseguita con un `Position` oggetto come parametro. Se c'è un errore, il `geolocationError` callback viene eseguita con un `PositionError` oggetto come parametro.
+`geolocation.watchPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo quando viene rilevata una modifica della posizione. Quando il dispositivo recupera una nuova posizione, la `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` callback viene eseguita con un `Position` oggetto come parametro. Se c'è un errore, il `<a href="parameters/geolocationError.html">geolocationError</a>` callback viene eseguita con un `<a href="PositionError/positionError.html">PositionError</a>` oggetto come parametro.
 
 ## Piattaforme supportate
 
@@ -65,7 +65,7 @@ Orologi per le modifiche alla posizione corrente del dispositivo.
                             '<hr />'      + element.innerHTML;
     }
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -82,14 +82,14 @@ Orologi per le modifiche alla posizione corrente del dispositivo.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         var watchID = null;
     
@@ -110,7 +110,7 @@ Orologi per le modifiche alla posizione corrente del dispositivo.
                                 '<hr />'      + element.innerHTML;
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

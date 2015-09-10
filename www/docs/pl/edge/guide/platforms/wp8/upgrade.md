@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Aktualizacja Windows Phone 8
+# <a href="../android/upgrade.html">Aktualizacja</a> Windows Phone 8
 
 Ten poradnik pokazuje jak zmienić Windows Phone 8 projektów, do uaktualnienia ze starszych wersji Cordova. Niektóre z tych instrukcji dotyczą projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI. Sekcji poniżej pokazuje jak uaktualnić od-CLI CLI projektów i.
 
@@ -31,7 +31,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  <a href="../android/upgrade.html">Aktualizacja</a> `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchomić `cordova platform update wp8` w istniejących projektach.
 
@@ -39,7 +39,7 @@ Dla projektów CLI:
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  <a href="../android/upgrade.html">Aktualizacja</a> `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update wp8`
 
@@ -52,7 +52,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  <a href="../android/upgrade.html">Aktualizacja</a> `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update wp8`
 

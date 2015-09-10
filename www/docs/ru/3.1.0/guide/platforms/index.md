@@ -28,50 +28,50 @@ license: >
 
 ## Android
 
-*   Платформа Android руководство
+*   <a href="android/index.html">Платформа Android руководство</a>
 *   Андроид конфигурации
 *   Андроид WebViews
 *   Андроид плагины
-*   Android средства командной строки
-*   Обновление Android
+*   <a href="android/tools.html">Android средства командной строки</a>
+*   <a href="android/upgrading.html">Обновление Android</a>
 
 ## Ежевика
 
-*   Руководство по платформы ежевики
-*   BlackBerry конфигурации
+*   <a href="blackberry/index.html">Руководство по платформы ежевики</a>
+*   <a href="blackberry10/config.html">BlackBerry конфигурации</a>
 *   Средства командной строки ежевики
-*   Модернизация BlackBerry
+*   <a href="blackberry10/upgrading.html">Модернизация BlackBerry</a>
 
 ## Ежевика 10
 
-*   Руководство по платформы ежевики 10
+*   <a href="blackberry/index.html">Руководство по платформы ежевики</a> 10
 *   Конфигурации ежевики 10
 *   Ежевика 10 плагинов
 *   Ежевика 10 средства командной строки
 
 ## iOS
 
-*   iOS платформы Руководство
-*   iOS конфигурации
-*   iOS WebViews
+*   <a href="ios/index.html">iOS платформы</a> Руководство
+*   <a href="ios/config.html">iOS конфигурации</a>
+*   <a href="ios/webview.html">iOS WebViews</a>
 *   iOS, плагины
-*   iOS утилиты командной строки
-*   Обновление iOS
+*   <a href="ios/tools.html">iOS утилиты командной строки</a>
+*   <a href="ios/upgrading.html">Обновление iOS</a>
 
 ## Windows Phone
 
-*   Руководство по платформы Windows Phone 8
-*   Руководство по платформы Windows Phone 7
+*   <a href="wp8/index.html">Руководство по платформы Windows Phone 8</a>
+*   <a href="wp7/index.html">Руководство по платформы Windows Phone 7</a>
 *   Конфигурация Windows Phone
-*   Windows Phone средств командной строки
-*   Обновление Windows Phone
+*   <a href="wp8/tools.html">Windows Phone средств командной строки</a>
+*   <a href="wp8/upgrading.html">Обновление Windows Phone</a>
 
 ## ОС Windows 8
 
-*   Руководство по Windows 8 платформы
-*   Средства командной строки Windows 8
-*   Обновление для Windows 8
+*   <a href="win8/index.html">Руководство по Windows 8 платформы</a>
+*   <a href="win8/tools.html">Средства командной строки Windows 8</a>
+*   <a href="win8/upgrading.html">Обновление для Windows 8</a>
 
 ## Tizen
 
-*   Руководство по Tizen платформы
+*   <a href="tizen/index.html">Руководство по Tizen платформы</a>

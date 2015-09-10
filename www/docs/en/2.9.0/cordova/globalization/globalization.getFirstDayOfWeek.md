@@ -35,8 +35,8 @@ to be Sunday.  Returns the day to the `successCallback` with a
 property with a `Number` value.
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
+error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -46,7 +46,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a
@@ -57,13 +57,13 @@ popup dialog with text similar to `day: 1`.
         function () {alert('Error getting day\n');}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek Example</title>
+        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

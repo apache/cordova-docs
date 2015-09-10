@@ -24,7 +24,7 @@ license: >
 
 Cette API offre des options de stockage basées sur deux différentes spécifications de W3C :
 
-*   La [Spécification de l'API Web Storage][1] vous permet d'accéder aux données via des paires clé/valeur simple. Voir la section sur le localStorage pour plus de détails sur cette interface.
+*   La [Spécification de l'API Web Storage][1] vous permet d'accéder aux données via des paires clé/valeur simple. Voir la section sur le <a href="localstorage/localstorage.html">localStorage</a> pour plus de détails sur cette interface.
 
 *   La [Spécification de base de données SQL Web][2] propose plusieurs tables de base de données complète accessible via des requêtes SQL. Un résumé de cette interface apparaît immédiatement en dessous.
 
@@ -35,22 +35,22 @@ Cordova permet de rejoindre les deux interfaces pour la minorité d'appareils qu
 
 ## Méthodes
 
-*   openDatabase
+*   <a href="storage.opendatabase.html">openDatabase</a>
 
 ## Arguments
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   <a href="parameters/name.html">database_name</a>
+*   <a href="parameters/version.html">database_version</a>
+*   <a href="parameters/display_name.html">database_displayname</a>
+*   <a href="parameters/size.html">database_size</a>
 
 ## Objets
 
-*   Base de données
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   <a href="database/database.html">Base de données</a>
+*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+*   <a href="sqlerror/sqlerror.html">SQLError</a>
 
 ## Accéder à la fonctionnalité
 

@@ -20,7 +20,7 @@ license: >
 
 # FileTransferError
 
-A `FileTransferError` 物件傳遞到錯誤回檔時出現錯誤。
+A `FileTransferError` 物件傳遞到錯誤回<a href="../fileobj/fileobj.html">檔</a>時出現錯誤。
 
 ## 屬性
 
@@ -30,7 +30,7 @@ A `FileTransferError` 物件傳遞到錯誤回檔時出現錯誤。
 
 *   **目標**： 向目標 URI。（字串）
 
-*   **HTTP_status**： HTTP 狀態碼。從 HTTP 連接收到一個回應代碼時，此屬性才可用。（人數）
+*   **HTTP_status**： HTTP 狀態碼。從 HTTP <a href="../../connection/connection.html">連接</a>收到一個回應代碼時，此屬性才可用。（人數）
 
 ## 常量
 
@@ -41,4 +41,4 @@ A `FileTransferError` 物件傳遞到錯誤回檔時出現錯誤。
 
 ## 說明
 
-`FileTransferError`上傳或下載檔案時出現錯誤時，將物件傳遞到錯誤回檔。
+`FileTransferError`上傳或下載<a href="../fileobj/fileobj.html">檔</a>案時出現錯誤時，將物件傳遞到錯誤回<a href="../fileobj/fileobj.html">檔</a>。

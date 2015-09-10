@@ -20,20 +20,20 @@ license: >
 
 # media.getCurrentPosition
 
-オーディオ ファイル内の現在位置を返します。
+オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>内の現在<a href="../geolocation/Position/position.html">位置</a>を返します。
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.getCurrentPosition(mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>]);
     
 
 ## パラメーター
 
-*   **mediaSuccess**: 秒の現在の位置を渡されるコールバック。
+*   **mediaSuccess**: 秒の現在の<a href="../geolocation/Position/position.html">位置</a>を渡されるコールバック。
 
-*   **mediaError**: (省略可能) コールバックでエラーが発生した場合に実行します。
+*   **<a href="Parameters/mediaError.html">mediaError</a>**: (省略可能) コールバックでエラーが発生した場合に実行します。
 
 ## 説明
 
-基になっているオーディオ ファイルの現在位置を返します、非同期関数、 `Media` オブジェクト。また更新して、 `Media` オブジェクトの `position` パラメーター。
+基になっているオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の現在<a href="../geolocation/Position/position.html">位置</a>を返します、非同期関数、 `Media` オブジェクト。また更新して、 `Media` オブジェクトの `position` パラメーター。
 
 ## サポートされているプラットフォーム
 
@@ -79,14 +79,14 @@ license: >
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -106,7 +106,7 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
@@ -133,7 +133,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     
@@ -141,7 +141,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

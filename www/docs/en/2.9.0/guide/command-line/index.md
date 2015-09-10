@@ -23,8 +23,8 @@ license: >
 Cordova now ships with a set of command-line tools that make it easier
 for you to develop cross-platform applications. You can build, clean,
 and launch an emulator with a single command. You can consider these
-instructions as an alternative to the Platform Guides. Whereas
-the Platform Guides help you get setup with the default IDEs and
+instructions as an alternative to the <a href="../getting-started/index.html">Platform Guides</a>. Whereas
+the <a href="../getting-started/index.html">Platform Guides</a> help you get setup with the default IDEs and
 tooling surrounding the platforms you are working with, the command-line
 tools aim to provide a shell-based approach to creating and working with
 Cordova projects.
@@ -185,7 +185,7 @@ Run the 'run' command with the following *optional* parameters
 
     $ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
 
-Make sure you create at least one Android Virtual Device, otherwise
+Make sure you create at least one Android Virtual <a href="../../cordova/device/device.html">Device</a>, otherwise
 you're prompted to do so with the `android` command.  If you have
 multiple AVDs, you're prompted to select one. By default the `run`
 command will detect a connected device. When no device is found,

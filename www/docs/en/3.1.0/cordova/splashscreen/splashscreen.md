@@ -24,8 +24,8 @@ license: >
 
 ## Methods
 
-- splashscreen.show
-- splashscreen.hide
+- splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>
+- <a href="splashscreen.hide.html">splashscreen.hide</a>
 
 ## Accessing the Feature
 
@@ -54,7 +54,7 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the Overview section.
+configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.
 
 ## Setup
 
@@ -75,7 +75,7 @@ configuration.  See _Platform Support_ in the Overview section.
         <preference name="splashScreenDelay" value="10000" />
       
       The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
-    The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.
+    The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `<a href="../events/events.deviceready.html">deviceready</a>` event, call the `navigator.<a href="splashscreen.hide.html">splashscreen.hide</a>()` method.
 
 ### iOS
 

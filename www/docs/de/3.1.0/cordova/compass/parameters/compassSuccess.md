@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-OnSuccess-Callback-Funktion, die die Kompassrichtung Informationen über ein `compassHeading` Objekt.
+OnSuccess-Callback-Funktion, die die <a href="../compass.html">Kompass</a>richtung Informationen über ein `<a href="compassHeading.html">compassHeading</a>` Objekt.
 
     function(heading) {
         // Do something

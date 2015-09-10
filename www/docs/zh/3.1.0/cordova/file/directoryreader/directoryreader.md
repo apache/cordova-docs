@@ -20,7 +20,7 @@ license: >
 
 # DirectoryReader
 
-列出檔和目錄在目錄中，如[W3C 目錄和系統][1]規範中定義的物件。
+列出<a href="../fileobj/fileobj.html">檔</a>和目錄在目錄中，如[W3C 目錄和系統][1]規範中定義的物件。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -42,9 +42,9 @@ license: >
 
 **參數：**
 
-*   **successCallback**: 一個傳遞的陣列的回檔 `FileEntry` 和 `DirectoryEntry` 的物件。*（函數）*
+*   **successCallback**: 一個傳遞的陣列的回<a href="../fileobj/fileobj.html">檔</a> `<a href="../fileentry/fileentry.html">FileEntry</a>` 和 `DirectoryEntry` 的物件。*（函數）*
 
-*   **errorCallback**: 如果檢索目錄清單時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果檢索目錄清單時發生錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
 
 **快速的示例**
 

@@ -27,7 +27,7 @@ license: >
 
 ## 說明
 
-此方法關閉該應用程式的初始螢幕。
+此方法<a href="../inappbrowser/inappbrowser.html">關閉</a>該應用程式的初始螢幕。
 
 ## 支援的平臺
 
@@ -47,14 +47,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>
     
 
 ## iOS 怪癖
 
-`config.xml`檔的 `AutoHideSplashScreen` 設置必須為 `false` 。 若要延遲兩秒鐘隱藏的閃屏，添加如下所示在計時器 `deviceready` 事件處理常式：
+`config.xml`<a href="../file/fileobj/fileobj.html">檔</a>的 `AutoHideSplashScreen` 設置必須為 `false` 。 若要延遲兩秒鐘隱藏的<a href="splashscreen.html">閃屏</a>，添加如下所示在計時器 `<a href="../events/events.deviceready.html">deviceready</a>` <a href="../events/events.html">事件</a>處理常式：
 
         setTimeout(function() {
             navigator.splashscreen.hide();

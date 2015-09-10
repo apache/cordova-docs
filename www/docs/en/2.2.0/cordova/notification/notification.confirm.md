@@ -52,7 +52,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 	// process the confirmation dialog result
@@ -62,7 +62,7 @@ Quick Example
 
     // Show a custom confirmation dialog
     //
-    function showConfirm() {
+    function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
         navigator.notification.confirm(
 	        'You are the winner!',  // message
 			onConfirm,				// callback to invoke with index of button pressed
@@ -71,24 +71,24 @@ Quick Example
         );
     }
         
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
     
@@ -99,7 +99,7 @@ Full Example
 
         // Show a custom confirmation dialog
         //
-        function showConfirm() {
+        function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
             navigator.notification.confirm(
 		        'You are the winner!',  // message
 				onConfirm,				// callback to invoke with index of button pressed
@@ -111,7 +111,7 @@ Full Example
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Confirm(); return false;">Show Confirm</a></p>
       </body>
     </html>
 

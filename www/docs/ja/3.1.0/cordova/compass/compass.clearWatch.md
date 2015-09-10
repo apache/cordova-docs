@@ -20,12 +20,12 @@ license: >
 
 # compass.clearWatch
 
-時計 ID パラメーターによって参照されるコンパスを見て停止します。
+時計 ID パラメーターによって参照される<a href="compass.html">コンパス</a>を見て停止します。
 
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: によって返される ID`compass.watchHeading`.
+*   **watchID**: によって返される ID`<a href="compass.watchHeading.html">compass.watchHeading</a>`.
 
 ## サポートされているプラットフォーム
 
@@ -38,7 +38,7 @@ license: >
 
 ## 簡単な例
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ license: >
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
         }
     
         // Stop watching the compass
@@ -96,8 +96,8 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>

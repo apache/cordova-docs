@@ -20,14 +20,14 @@ license: >
 
 # camera.cleanup
 
-刪除中間由從臨時存儲相機所拍攝的照片。
+刪除中間由從臨時<a href="../storage/storage.html">存儲</a><a href="camera.html">相機</a>所拍攝的照片。
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
     
 
 ## 說明
 
-刪除中間打完電話後保留在臨時存儲的影像檔 `camera.getPicture` 。 適用時，才的價值 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等於`Camera.DestinationType.FILE_URI`.
+刪除中間打完電話後保留在臨時<a href="../storage/storage.html">存儲</a>的影像<a href="../file/fileobj/fileobj.html">檔</a> `<a href="camera.getPicture.html">camera.getPicture</a>` 。 適用時，才的價值 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等於`Camera.DestinationType.FILE_URI`.
 
 ## 支援的平臺
 

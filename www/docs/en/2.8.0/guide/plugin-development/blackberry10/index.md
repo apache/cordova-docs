@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# Developing a Plugin on BlackBerry 10
+# <a href="../blackberry/index.html">Developing a Plugin on BlackBerry</a> 10
 
-This is a continuation of the Plugin Development Guide for Cordova. Once you have reviewed that content, now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
+This is a continuation of the <a href="../index.html">Plugin Development Guide</a> for Cordova. Once you have reviewed that content, now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
 
     window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -33,7 +33,7 @@ A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also 
 
 ## Creating the native part of your plugin ##
 
-To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select File > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
+To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select <a href="../../../cordova/file/fileobj/fileobj.html">File</a> > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
 
 The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.
 
@@ -160,7 +160,7 @@ You can now send the data back. Let’s put it all together:
 
 ## Architecture of the plugin ##
 
-You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files (.so) within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we show a typical structure that you can follow:
+You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files (.so) within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a> a typical structure that you can follow:
 
 ***your_project_folder*** (>plugin.xml)
 
@@ -170,7 +170,7 @@ You can place the artifacts of the plugin, which includes the plugin.xml file, t
   - **device** (>*biary file* *.so)
   - **simulator** (>*binary file* *.so)
 
-(The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. File names are preceded by the '>' sign.)
+(The list <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a>s the hierarchical relationship among the top level folders. The parenthesis <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a>s the contents of a given folder. All folder names appear in bold text. <a href="../../../cordova/file/fileobj/fileobj.html">File</a> names are preceded by the '>' sign.)
 
 ## Contents of the plugin.xml file##
 The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:

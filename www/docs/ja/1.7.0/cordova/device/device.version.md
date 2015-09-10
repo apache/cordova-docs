@@ -34,7 +34,7 @@ OS のバージョンを取得します。
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // Android:     Froyo の場合は "2.2" を返す
@@ -48,30 +48,30 @@ OS のバージョンを取得します。
     // Windows Phone 7: 現在の OS バージョンを返す、例: Mango は7.10.7720を返す
     var deviceVersion = device.version;
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
 
-            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
-                                'デバイス Cordova: '    + device.cordova    + '<br />' +
-                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
-                                'デバイス UUID: '       + device.uuid       + '<br />' +
+            element.innerHTML = 'デバイス名: '          + <a href="device.name.html">device.name</a>       + '<br />' +
+                                'デバイス Cordova: '    + <a href="device.cordova.html">device.cordova</a>    + '<br />' +
+                                'デバイスプラットフォーム: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'デバイス UUID: '       + <a href="device.uuid.html">device.uuid</a>       + '<br />' +
                                 'デバイスバージョン: '  + device.version    + '<br />';
         }
 

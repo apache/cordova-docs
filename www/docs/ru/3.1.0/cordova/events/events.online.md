@@ -22,14 +22,14 @@ license: >
 
 Это событие возникает, когда приложение выходит в онлайн, и устройство становится подключен к Интернету.
 
-    document.addEventListener("online", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
-`online`Событие возникает, когда ранее несвязанных устройство получает связь сети, чтобы разрешить приложению доступ к Интернету. Он опирается на ту же информацию, подключение API и пожары, когда значение `connection.type` становится`NONE`.
+`online`Событие возникает, когда ранее несвязанных устройство получает связь сети, чтобы разрешить приложению доступ к Интернету. Он опирается на ту же информацию, подключение API и пожары, когда значение `<a href="../connection/connection.type.html">connection.type</a>` становится`NONE`.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -42,7 +42,7 @@ license: >
 
 ## Быстрый пример
 
-    document.addEventListener("online", onOnline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online Example</title>
+        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("online", onOnline, false);
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ license: >
 
 ## iOS причуды
 
-Во время первоначального запуска первая `online` событий (если применимо) занимает по меньшей мере второе огонь, до которой `connection.type` является`UNKNOWN`.
+Во время первоначального запуска первая `online` событий (если применимо) занимает по меньшей мере второе огонь, до которой `<a href="../connection/connection.type.html">connection.type</a>` является`UNKNOWN`.
 
 ## Windows Phone 7 причуды
 

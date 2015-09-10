@@ -25,7 +25,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: `compass.watchHeading` によって返される ID。
+- __watchID__: `<a href="compass.watchHeading.html">compass.watchHeading</a>` によって返される ID。
 
 サポートされているプラットフォーム
 -------------------
@@ -35,22 +35,22 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 - Windows Phone 7 ( Mango ) ハードウェア内で有効な場合
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
 
     // ... 後に続く ...
 
     navigator.compass.clearWatch(watchID);
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title><a href="compass.html">Compass</a> <a href="../storage/database/database.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,11 +60,11 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             startWatch();
         }
 
@@ -75,7 +75,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
             // コンパスを3秒ごとに更新
             var options = { frequency: 3000 };
 
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
         }
 
         // コンパスの監視を停止
@@ -96,8 +96,8 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 
         // onError: 方位の取得に失敗
         //
-        function onError(compassError) {
-            alert('コンパスのエラーが発生しました: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('コンパスのエラーが発生しました: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
 
 

@@ -20,18 +20,18 @@ license: >
 
 # Kamera
 
-> Das `camera` Objekt bietet Zugriff auf das Gerät Standard-Kamera-Anwendung.
+> Das `camera` Objekt bietet Zugriff auf das <a href="../device/device.html">Gerät</a> Standard-Kamera-Anwendung.
 
-**Wichtige Datenschutzhinweis:** Sammlung und Verwendung von Bildern von einem Gerät Kamera löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app die Kamera verwendet und ob die Bilder aufgenommen mit irgendwelchen anderen Parteien geteilt werden. Außerdem, wenn die app-Nutzung der Kamera in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie bereitstellen eine just-in-Time-Bekanntmachung vor Ihrer Anwendung den Zugriff auf die Kamera (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Wichtige Datenschutzhinweis:** Sammlung und Verwendung von Bildern von einem <a href="../device/device.html">Gerät</a> Kamera löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app die Kamera verwendet und ob die Bilder aufgenommen mit irgendwelchen anderen Parteien geteilt werden. Außerdem, wenn die app-Nutzung der Kamera in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie bereitstellen eine just-in-Time-Bekanntmachung vor Ihrer Anwendung den Zugriff auf die Kamera (wenn das Betriebssystem des <a href="../device/device.html">Gerät</a>s bereits tun nicht). Diese <a href="../notification/notification.html">Benachrichtigung</a> sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der <a href="../../guide/appdev/privacy/index.html">Datenschutz-Guide</a>.
 
 ## Methoden
 
-*   camera.getPicture
+*   <a href="camera.getPicture.html">camera.getPicture</a>
 *   Camera.Cleanup
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin ls
@@ -95,4 +95,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

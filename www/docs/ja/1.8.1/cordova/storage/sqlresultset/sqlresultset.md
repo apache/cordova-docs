@@ -21,7 +21,7 @@ license: >
 SQLResultSet
 =======
 
-SQLTransaction の executeSql メソッドが呼ばれるとき、 SQLResultSet とともにコールバック関数が呼び出されます。
+<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> の executeSql メソッドが呼ばれるとき、 SQLResultSet とともにコールバック関数が呼び出されます。
 
 プロパティー
 -------
@@ -33,7 +33,7 @@ SQLTransaction の executeSql メソッドが呼ばれるとき、 SQLResultSet 
 詳細
 -------
 
-SQLTransaction の executeSql メソッドが呼び出されるとき、 SQLResultSet オブジェクトとともにコールバック関数が呼び出されます。この結果オブジェクトは3つのプロパティーを持っています。1つめは `insertId` で、 SQL の insert 文が成功した行の番号を返します。もし SQL 文が insert 文では無かった場合、 `insertId` はセットされません。2つめの `rowsAffected` は SQL の select 文に対しては常に0を返します。 insert もしくは update 文に対しては、修正された行数を返します。最後の SQLResultSetList は、 SQL の select 文によって返されたデータを保持します。
+<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> の executeSql メソッドが呼び出されるとき、 SQLResultSet オブジェクトとともにコールバック関数が呼び出されます。この結果オブジェクトは3つのプロパティーを持っています。1つめは `insertId` で、 SQL の insert 文が成功した行の番号を返します。もし SQL 文が insert 文では無かった場合、 `insertId` はセットされません。2つめの `rowsAffected` は SQL の select 文に対しては常に0を返します。 insert もしくは update 文に対しては、修正された行数を返します。最後の <a href="../sqlresultsetlist/sqlresultsetlist.html">SQLResultSetList</a> は、 SQL の select 文によって返されたデータを保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -65,23 +65,23 @@ Execute SQL の例
         alert("SQL 実行中にエラーが発生しました: "+err.code);
     }
 
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
     db.transaction(queryDB, errorCB);
 
-詳細な使用例
+詳細な<a href="../storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage の使用例</title>
+        <title><a href="../storage.html">Storage</a> の<a href="../storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // データベースを操作
         //
@@ -114,21 +114,21 @@ Execute SQL の例
         // トランザクション失敗時のコールバック
         //
         function successCB() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../storage.opendatabase.html">使用例</a></h1>
         <p>データベース</p>
       </body>
     </html>

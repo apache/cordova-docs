@@ -23,7 +23,7 @@ license: >
 > Iniciar la aplicación grabadora de vídeo y devolver información acerca de archivos de vídeo capturado.
 
     navigator.device.capture.captureVideo(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Inicia una operación asincrónica para capturar video grabaciones mediante aplicación de grabación de vídeo del dispositivo. La operación permite al usuario capturar grabaciones de más de una en una sola sesión.
 
-La operación de captura termina cuando el usuario sale de la aplicación de grabación de vídeo, o el número máximo de registros especificado por `CaptureVideoOptions.limit` se alcanza. Si no `limit` se especifica el valor del parámetro, por defecto a uno (1), y la operación de captura termina después de que el usuario registra un solo clip de video.
+La operación de captura termina cuando el usuario sale de la aplicación de grabación de vídeo, o el número máximo de registros especificado por `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` se alcanza. Si no `limit` se especifica el valor del parámetro, por defecto a uno (1), y la operación de captura termina después de que el usuario registra un solo clip de video.
 
-Cuando finaliza la operación de captura, es la `CaptureCB` devolución de llamada se ejecuta con una gran variedad de `MediaFile` objetos describiendo cada uno capturado archivo de videoclip. Si el usuario finaliza la operación antes de capturar un clip de vídeo, el `CaptureErrorCB` devolución de llamada se ejecuta con un `CaptureError` objeto ofrece un `CaptureError.CAPTURE_NO_MEDIA_FILES` código de error.
+Cuando finaliza la operación de captura, es la `<a href="CaptureCB.html">CaptureCB</a>` devolución de llamada se ejecuta con una gran variedad de `<a href="MediaFile.html">MediaFile</a>` objetos describiendo cada uno capturado archivo de videoclip. Si el usuario finaliza la operación antes de capturar un clip de vídeo, el `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` devolución de llamada se ejecuta con un `<a href="CaptureError.html">CaptureError</a>` objeto ofrece un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` código de error.
 
 ## Plataformas soportadas
 
@@ -56,7 +56,7 @@ Cuando finaliza la operación de captura, es la `CaptureCB` devolución de llama
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start video capture
@@ -87,7 +87,7 @@ Cuando finaliza la operación de captura, es la `CaptureCB` devolución de llama
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -126,4 +126,4 @@ Cuando finaliza la operación de captura, es la `CaptureCB` devolución de llama
 
 ## BlackBerry WebWorks rarezas
 
-*   Cordova para BlackBerry WebWorks intenta lanzar la aplicación **Grabadora de Video** , proporcionada por RIM, capturar grabaciones de vídeo. La aplicación recibe una `CaptureError.CAPTURE_NOT_SUPPORTED` código de error si la aplicación no está instalada en el dispositivo.
+*   Cordova para BlackBerry WebWorks intenta lanzar la aplicación **Grabadora de Video** , proporcionada por RIM, capturar grabaciones de vídeo. La aplicación recibe una `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` código de error si la aplicación no está instalada en el dispositivo.

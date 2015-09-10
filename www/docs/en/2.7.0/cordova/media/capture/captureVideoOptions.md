@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-CaptureVideoOptions
+<a href="capture.html">Capture</a>VideoOptions
 ===================
 
 > Encapsulates video capture configuration options.
@@ -29,13 +29,13 @@ Properties
 - __limit:__ The maximum number of video clips the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 - __duration:__ The maximum duration of a video clip, in seconds.
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
 
-    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
 
 BlackBerry WebWorks Quirks
 --------------------------

@@ -44,39 +44,39 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
 
-    function onDeviceReady() {
+    function on<a href="../device/device.html">Device</a>Ready() {
         // Now safe to use the Cordova API
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-1.6.0.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Now safe to use the Cordova API
         }
 

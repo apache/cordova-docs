@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 8.0 web 表示
 
-このガイドより大規模な Windows Phone 8.0 アプリケーション内のコルドバ有効 WebView コンポーネントを埋め込む方法を示します。
+この<a href="../../../index.html">ガイド</a>より大規模な Windows Phone 8.0 アプリケーション内のコルドバ有効 WebView コンポーネントを埋め込む方法を示します。
 
 これらの指示に従う、最新コルドバ分布があることを確認します。 [Cordova.apache.org](http://cordova.apache.org)からダウンロードし、Windows Phone 8.0 パッケージ （コルドバ wp8 *.zip) を解凍します。
 

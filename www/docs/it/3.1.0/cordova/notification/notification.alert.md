@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Notification.Alert
+# <a href="notification.html">Notifica</a>tion.Alert
 
 Mostra una finestra di avviso o la finestra di dialogo personalizzata.
 
@@ -67,14 +67,14 @@ La maggior parte delle implementazioni di Cordova una dialogo nativa per questa 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notifica</a>tion <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

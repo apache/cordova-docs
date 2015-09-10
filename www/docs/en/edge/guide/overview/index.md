@@ -61,7 +61,7 @@ which you distribute to app stores.
 The Cordova-enabled WebView may provide the application with its
 entire user interface. On some platforms, it can also be a component
 within a larger, hybrid application that mixes the WebView with native
-application components. (See Embedding WebViews for details.)
+application components. (See <a href="../hybrid/webviews/index.html">Embedding WebViews</a> for details.)
 
 A _plugin_ interface is available for Cordova and native components to
 communicate with each other. This enables you to invoke native code
@@ -72,7 +72,7 @@ additional bindings to features not necessarily available on all
 platforms. You can find these third-party plugins in the
 [plugin registry](http://plugins.cordova.io) and use them in your
 application. You can also develop your own plugins, as described in the
-Plugin Development Guide. Plugins may be necessary, for example, to
+<a href="../hybrid/plugins/index.html">Plugin Development Guide</a>. Plugins may be necessary, for example, to
 communicate between Cordova and custom native components.
 
 __NOTE__: As of version 3.0, when you create a Cordova project it does not have
@@ -109,7 +109,7 @@ task, they each offer advantages:
   focus on building an app for a single platform and need to be able
   to modify it at a lower level. You need to use this approach, for
   example, if you want your app to mix custom native components with
-  web-based Cordova components, as discussed in Embedding WebViews.
+  web-based Cordova components, as discussed in <a href="../hybrid/webviews/index.html">Embedding WebViews</a>.
   As a rule of thumb, use this workflow if you need to modify the
   project within the SDK.  This workflow relies on a set of
   lower-level shell scripts that are tailored for each supported
@@ -119,11 +119,11 @@ task, they each offer advantages:
   higher-level tool means separate build cycles and plugin
   modifications for each platform. Still, this workflow allows you
   greater access to development options provided by each SDK, and is
-  essential for complex hybrid apps. See the various Platform Guides
+  essential for complex hybrid apps. See the various <a href="../platforms/index.html">Platform Guides</a>
   for details on each platform's available shell utilities.
 
 When first starting out, it may be easiest to use the cross-platform
-workflow to create an app, as described in The Command-Line Interface.
+workflow to create an app, as described in <a href="../cli/index.html">The Command-Line Interface</a>.
 You then have the option to switch to a platform-centered workflow if
 you need the greater control the SDK provides.  Lower-level shell
 utilities are available at
@@ -146,13 +146,13 @@ platform-specific source code.
 The installation of Cordova will differ depending on the workflow above
 you choose:
 
-  * Cross-platform workflow: see The Command-Line Interface.
+  * Cross-platform workflow: see <a href="../cli/index.html">The Command-Line Interface</a>.
 
-  * Platform-centered workflow: see the Platform Guides.
+  * Platform-centered workflow: see the <a href="../platforms/index.html">Platform Guides</a>.
 
-After installing Cordova, it is recommended that you review the Platform Guides
+After installing Cordova, it is recommended that you review the <a href="../platforms/index.html">Platform Guides</a>
 for the mobile platforms that you will be developing for. It is also
-recommended that you also review the Privacy Guide, Security Guide, and
-Next Steps. For configuring Cordova, see The config.xml File.
+recommended that you also review the <a href="../appdev/privacy/index.html">Privacy Guide</a>, <a href="../appdev/security/index.html">Security Guide</a>, and
+<a href="../next/index.html">Next Steps</a>. For configuring Cordova, see <a href="../../config_ref/index.html">The config.xml File</a>.
 For accessing native function on a device from JavaScript, refer
-to the Plugin APIs. And refer to the other included guides as necessary.
+to the <a href="../../cordova/plugins/pluginapis.html">Plugin APIs</a>. And refer to the other included guides as necessary.

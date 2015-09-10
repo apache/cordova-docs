@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# ContactName
+# <a href="../Contact/contact.html">Contact</a>Name
 
-Contains different kinds of information about a `Contact` object's name.
+Contains different kinds of information about a `<a href="../Contact/contact.html">Contact</a>` object's name.
 
 ## Properties
 
@@ -38,7 +38,7 @@ Contains different kinds of information about a `Contact` object's name.
 
 ## Details
 
-The `ContactName` object stores a contact's name properties.
+The `<a href="../Contact/contact.html">Contact</a>Name` object stores a contact's name properties.
 
 ## Supported Platforms
 
@@ -48,7 +48,7 @@ The `ContactName` object stores a contact's name properties.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     function onSuccess(contacts) {
         for (var i = 0; i < contacts.length; i++) {
@@ -61,36 +61,36 @@ The `ContactName` object stores a contact's name properties.
         }
     };
 
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
 
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
     options.filter = "";
     filter = ["displayName", "name"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
 
-## Full Example
+## Full <a href="../../storage/storage.opendatabase.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            var options = new ContactFindOptions();
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
             options.filter="";
             filter = ["displayName","name"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
 
         // onSuccess: Get a snapshot of the current contacts
@@ -108,15 +108,15 @@ The `ContactName` object stores a contact's name properties.
 
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
       </body>
     </html>
 

@@ -24,19 +24,19 @@ offline
 The event fires when an application goes offline, and the device is
 not connected to the Internet.
 
-    document.addEventListener("offline", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
 
 Details
 -------
 
 The `offline` event fires when a previously connected device loses a
 network connection so that an application can no longer access the
-Internet.  It relies on the same information as the Connection API,
-and fires when the `connection.type` changes from `NONE` to any other
+Internet.  It relies on the same information as the <a href="../connection/connection.html">Connection</a> API,
+and fires when the `<a href="../connection/connection.type.html">connection.type</a>` changes from `NONE` to any other
 value.
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
@@ -48,22 +48,22 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("offline", onOffline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
 
     function onOffline() {
         // Handle the offline event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline Example</title>
+        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -71,13 +71,13 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            document.addEventListener("offline", onOffline, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
         }
 
         // Handle the offline event

@@ -24,11 +24,11 @@ Diese Anleitung zeigt wie Ihre Entwicklungsumgebung SDK eingerichtet, Cordova ap
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Android-Konfiguration
-*   Android Webansichten für
-*   Android Plugins
-*   Aktualisierung von Android
-*   Android-Befehlszeilenprogrammen
+*   <a href="config.html">Android-Konfiguration</a>
+*   <a href="webview.html">Android Webansichten für</a>
+*   <a href="plugin.html">Android Plugins</a>
+*   <a href="upgrading.html">Aktualisierung von Android</a>
+*   <a href="tools.html">Android-Befehlszeilenprogrammen</a>
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -80,7 +80,7 @@ Die PATH-Umgebung unter Windows 7 zu ändern:
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
+*   <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 Sie müssen möglicherweise auch Java und Ant öffnen eine Eingabeaufforderung und geben aktivieren `java` , und geben Sie auch `ant` . Hängen Sie an den Pfad, welcher nicht ausgeführt:
 

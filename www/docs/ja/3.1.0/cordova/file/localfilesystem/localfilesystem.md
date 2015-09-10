@@ -20,19 +20,19 @@ license: >
 
 # LocalFileSystem
 
-このオブジェクトは、ルート ・ ファイル ・ システムを取得する方法を提供します。
+このオブジェクトは、ルート ・ <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">ファイル</a> ・ システム</a>を取得する方法を提供します。
 
 ## メソッド
 
-*   **requestFileSystem**： ファイル ・ システムを要求します。*(機能)*
+*   **requestFileSystem**： <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">ファイル</a> ・ システム</a>を要求します。*(機能)*
 
-*   **resolveLocalFileSystemURI**: 取得、 `DirectoryEntry` または `FileEntry` ローカル URI を使用します。*(機能)*
+*   **resolveLocalFileSystemURI**: 取得、 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` または `<a href="../fileentry/fileentry.html">FileEntry</a>` ローカル URI を使用します。*(機能)*
 
 ## 定数
 
 *   `LocalFileSystem.PERSISTENT`: アプリケーションまたはユーザーの許可なくユーザー エージェントによって除去されるべきではない記憶域に対して使用されます。
 
-*   `LocalFileSystem.TEMPORARY`： 永続性の保証なしでストレージに使用します。
+*   `LocalFileSystem.TEMPORARY`： 永続性の保証なしで<a href="../../storage/storage.html">ストレージ</a>に使用します。
 
 ## 詳細
 
@@ -46,7 +46,7 @@ license: >
 *   Windows Phone 7 と 8
 *   Windows 8
 
-## ファイル システムの簡単な例を要求します。
+## <a href="../fileobj/fileobj.html">ファイル</a> システムの簡単な例を要求します。
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -56,7 +56,7 @@ license: >
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## ローカル ファイル システム URI のクイック例を解決します。
+## ローカル <a href="../fileobj/fileobj.html">ファイル</a> システム URI のクイック例を解決します。
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Local File System</p>
       </body>
     </html>
@@ -109,18 +109,18 @@ license: >
 
 # requestFileSystem
 
-> アプリケーション データを格納するファイル システムを要求します。
+> アプリケーション データを格納する<a href="../fileobj/fileobj.html">ファイル</a> システムを要求します。
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **ウィンドウ**: グローバル ウィンドウ オブジェクトへの参照
-*   **タイプ**: ローカル ファイル システムの種類、LocalFileSystem 定数を参照ください
-*   **サイズ**: どのくらいのストレージ容量をバイト、必要とするアプリケーションで想定されることを示します。
-*   **successCallback**: ファイルシステム ・ オブジェクトを使って呼び出されます
-*   **解り**: エラー取得するファイルシステムが発生した場合に呼び出されます
+*   **タイプ**: ローカル <a href="../fileobj/fileobj.html">ファイル</a> システムの種類、LocalFileSystem 定数を参照ください
+*   **サイズ**: どのくらいの<a href="../../storage/storage.html">ストレージ</a>容量をバイト、必要とするアプリケーションで想定されることを示します。
+*   **successCallback**: <a href="../fileobj/fileobj.html">ファイル</a>システム ・ オブジェクトを使って呼び出されます
+*   **解り**: エラー取得する<a href="../fileobj/fileobj.html">ファイル</a>システムが発生した場合に呼び出されます
 
-## ファイル システムの簡単な例を要求します。
+## <a href="../fileobj/fileobj.html">ファイル</a> システムの簡単な例を要求します。
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

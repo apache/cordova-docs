@@ -32,7 +32,7 @@ top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
 For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
+plugins, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
 for an overview.
 
 ## Windows Phone
@@ -48,7 +48,7 @@ repo has subdirectories for each: `wp7/` and `wp8/`.
 
 There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 application.
 
-### Run the Batch File to Create and Install the Templates
+### Run the Batch <a href="../../../cordova/file/fileobj/fileobj.html">File</a> to Create and Install the Templates
 
 - The root of the repo contains a `createTemplates.bat` file.
   Double-clicking it generates two `.zip` files:
@@ -57,7 +57,7 @@ There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 applicatio
   Visual Studio, copy them to `My Documents\Visual Studio
   2012\Templates\ProjectTemplates\`. You are then able to create
   new Apache Cordova Windows Phone apps from Visual Studio's
-  __File &rarr; New Project__ menu.
+  __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New Project__ menu.
 
 - If you run the batch file from the command line, you can also call with a parameter to install automatically
 
@@ -75,7 +75,7 @@ name.  Here is the syntax for both Windows Phone 7 and 8:
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
 
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/splashscreen/<a href="../../../cordova/splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
 
     >examples:

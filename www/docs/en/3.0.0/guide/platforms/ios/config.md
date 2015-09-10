@@ -38,9 +38,9 @@ existing apps. The available preferences are:
   `whiteLarge`, `white`, and `gray`.
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
-  initialize the Geolocation plugin at start-up (so the fix on your
+  initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your
   location can be more accurate) __DEPRECATED__: please set the
-  `onload` attribute of the `Geolocation` plugin to `true`
+  `onload` attribute of the `<a href="../../../cordova/geolocation/geolocation.html">Geolocation</a>` plugin to `true`
   instead.
 
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
@@ -50,7 +50,7 @@ existing apps. The available preferences are:
   control when the splashscreen is hidden through a JavaScript API.
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
-  prevent the splash-screen to fade in and out when showing or hiding
+  prevent the splash-screen to fade in and out when <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>ing or hiding
   it.
 
 * `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
@@ -59,15 +59,15 @@ existing apps. The available preferences are:
 * `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
   to hide the splash-screen spinner.
 
-* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
+* `<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction` (boolean, defaults to `false`): set
   to true to not allow autoplayed HTML5 video.
 
-* `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
+* `AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback` (boolean, defaults to `false`): set to
   true to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
   attribute.
 
-* `BackupWebStorage` (string, defaults to `cloud`): valid values are
+* `BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>` (string, defaults to `cloud`): valid values are
   `none`, `cloud` and `local`. Set to `cloud` to allow the web
   storage data to be backed up to iCloud, and set to `local` to only
   allow local backups (iTunes sync). Set to `none` to not allow any

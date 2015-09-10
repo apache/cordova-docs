@@ -22,7 +22,7 @@ license: >
 
 Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails section s'appliquant uniquement aux OS feu Amazon s'appuie. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche.
+*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `<a href="../../../cordova/events/events.pause.html">pause</a>` événement se déclenche.
     
         <preference name="KeepRunning" value="false"/>
         

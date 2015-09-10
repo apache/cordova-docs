@@ -53,7 +53,7 @@ license: >
 `options.formatLength`Может быть `short` , `medium` , `long` , или `full` . `options.selector`Может быть `date` , `time` или`date and
 time`.
 
-Если есть ошибка при разборе строки даты, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PARSING\_ERROR`.
+Если есть ошибка при разборе строки даты, то `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
 
 ## Поддерживаемые платформы
 
@@ -81,7 +81,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate Example</title>
+        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

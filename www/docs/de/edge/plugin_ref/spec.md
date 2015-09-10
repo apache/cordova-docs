@@ -167,7 +167,7 @@ Ein oder mehrere Elemente Auflisten der Dateien oder Verzeichnisse in einer Cord
 
 Alle `<asset>` Tags erfordern beide `src` und `target` Attribute. Nur Web-Plugins enthält meist `<asset>` Elemente. Alle `<asset>` Elemente, die geschachtelt sind `<platform>` Elemente geben plattformspezifische Web Vermögenswerte, wie unten beschrieben. Attribute enthalten:
 
-*   `src` (erforderlich): wo ist die Datei oder das Verzeichnis in das Plugin-Paket relativ zum Dokument `plugin.xml` liegt. Wenn eine Datei am Speicherort angegebenen `Src` nicht existiert, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
+*   `src` (erforderlich): wo ist die Datei oder das Verzeichnis in das Plugin-Paket relativ zum Dokument `plugin.xml` liegt. Wenn eine Datei am <a href="../cordova/storage/storage.html">Speicher</a>ort angegebenen `Src` nicht existiert, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
 
 *   `target` (required):
     
@@ -276,7 +276,7 @@ Die `<source-file>` Element identifiziert ausführbare Quellcodes, die in ein Pr
 
 Es unterstützt die folgenden Attribute:
 
-*   `src` (erforderlich): Speicherort der Datei relativ `plugin.xml`. Wenn die `src` -Datei nicht gefunden werden kann, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
+*   `src` (erforderlich): <a href="../cordova/storage/storage.html">Speicher</a>ort der Datei relativ `plugin.xml`. Wenn die `src` -Datei nicht gefunden werden kann, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
 
 *   `target-dir`: ein Verzeichnis, in das die Dateien sollen, relativ zum Stammverzeichnis des Projektes Cordova kopiert werden. In der Praxis ist das wichtigste für Java-basierte Plattformen, wo muß eine Datei in das `com.alunny.foo` -Paket in das `com/Alunny/Foo` -Verzeichnis liegen. Für Plattformen, wo das Quellverzeichnis nicht wichtig ist, sollte dieses Attribut weggelassen werden.
     
@@ -324,7 +324,7 @@ Es unterstützt die folgenden Attribute:
     
     Das Ziel kann Platzhalter enthalten ( `*` ) Elemente. In diesem Fall Plugman rekursiv durchsucht die Verzeichnisstruktur des Projekts und verwendet die erste Übereinstimmung.
     
-    Auf iOS, der Speicherort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
+    Auf iOS, der <a href="../cordova/storage/storage.html">Speicher</a>ort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
     
     Wenn die angegebene Datei nicht vorhanden ist, wird das Tool ignoriert die Konfigurationsänderung und wird die Installation fortgesetzt.
 
@@ -397,7 +397,7 @@ Wie Quelle, Ressourcen- und Header-Dateien, aber speziell für Plattformen wie B
 
 Unterstützte Attribute:
 
-*   `src`(erforderlich): der Speicherort der Datei relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
+*   `src`(erforderlich): der <a href="../cordova/storage/storage.html">Speicher</a>ort der Datei relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
 
 *   `arch`: Die Architektur, für die die `.so` Datei erstellt wurde, entweder `device` oder`simulator`.
 

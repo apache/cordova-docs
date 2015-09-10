@@ -29,7 +29,7 @@ L'évènement se déclenche lorsqu'une application est renvoyée au premier plan
 
 L'évènement `resume` se déclenche lorsque la plate-forme native sort l'application de l'arrière-plan.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
 
 ## Plates-formes supportées
 
@@ -54,7 +54,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 
 ## Notes au sujet d'iOS
 
-Toutes les fonctions interactives appelées à partir d'un gestionnaire de l'évènement `pause` s'exécutent plus tard, lorsque l'application est reprise, comme l'évènement `resume` l'indique. Il s'agit notamment d'alertes, `console.log()` et tous les appels vers des plugins ou l'API Cordova passant par l'Objective-C.
+Toutes les fonctions interactives appelées à partir d'un gestionnaire de l'évènement `<a href="events.pause.html">pause</a>` s'exécutent plus tard, lorsque l'application est reprise, comme l'évènement `resume` l'indique. Il s'agit notamment d'alertes, `console.log()` et tous les appels vers des plugins ou l'API Cordova passant par l'Objective-C.
 
 *   évènement **active**
     

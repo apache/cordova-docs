@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# MediaFile.getFormatData
+# <a href="MediaFile.html">MediaFile</a>.getFormatData
 
-> Ruft formatieren Informationen über die Medien-Capture-Datei.
+> Ruft formatieren Informationen über die <a href="../media.html">Medien</a>-Capture-<a href="../../file/fileobj/fileobj.html">Datei</a>.
 
     mediaFile.getFormatData(
-        MediaFileDataSuccessCB successCallback,
-        [MediaFileDataErrorCB errorCallback]
+        <a href="MediaFile.html">MediaFile</a>DataSuccessCB successCallback,
+        [<a href="MediaFile.html">MediaFile</a>DataErrorCB errorCallback]
     );
     
 
 ## Beschreibung
 
-Diese Funktion versucht asynchron, die Formatierungsinformationen für die Mediendatei abzurufen. Wenn erfolgreich, es ruft die `MediaFileDataSuccessCB` Rückruf mit einem `MediaFileData` Objekt. Wenn der Versuch fehlschlägt, ruft diese Funktion die `MediaFileDataErrorCB` Rückruf.
+Diese Funktion versucht asynchron, die Formatierungsinformationen für die <a href="../media.html">Medien</a>datei abzurufen. Wenn erfolgreich, es ruft die `<a href="MediaFile.html">MediaFile</a>DataSuccessCB` Rückruf mit einem `<a href="MediaFile.html">MediaFile</a>Data` Objekt. Wenn der Versuch fehlschlägt, ruft diese Funktion die `<a href="MediaFile.html">MediaFile</a>DataErrorCB` Rückruf.
 
 ## Unterstützte Plattformen
 
@@ -42,12 +42,12 @@ Diese Funktion versucht asynchron, die Formatierungsinformationen für die Medie
 
 ## BlackBerry WebWorks Macken
 
-Bietet eine API keine Informationen zum Media-Dateien, so dass alle `MediaFileData` Objekte zurückgeben, mit Standardwerten.
+Bietet eine API keine Informationen zum Media-<a href="../../file/fileobj/fileobj.html">Datei</a>en, so dass alle `<a href="MediaFile.html">MediaFile</a>Data` Objekte zurückgeben, mit Standardwerten.
 
 ## Android Macken
 
-Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht alle `MediaFileData` Eigenschaften werden unterstützt.
+Die API zum Zugriff <a href="../media.html">Medien</a> <a href="../../file/fileobj/fileobj.html">Datei</a>format-Information ist begrenzt, so dass nicht alle `<a href="MediaFile.html">MediaFile</a>Data` Eigenschaften werden unterstützt.
 
 ## iOS Macken
 
-Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht alle `MediaFileData` Eigenschaften werden unterstützt.
+Die API zum Zugriff <a href="../media.html">Medien</a> <a href="../../file/fileobj/fileobj.html">Datei</a>format-Information ist begrenzt, so dass nicht alle `<a href="MediaFile.html">MediaFile</a>Data` Eigenschaften werden unterstützt.

@@ -20,7 +20,7 @@ license: >
 
 # Whitelist Guide
 
-## Overview
+## <a href="../../overview/index.html">Overview</a>
 
 Resource whitelisting is a security model that controls access to
 external network resources, such as `http://google.com`.  Apache Cordova's
@@ -32,7 +32,7 @@ its whitelist and declare access to specific network domains and subdomains.
 
 Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network resources. Apache Cordova extends this concept to allow whitelisting of individual network resources (URLs). In the future, Apache Cordova will abstract the platform whitelisting implementations. However, for now each platform implements its own resource or domain whitelisting. The differences between platform implementations are described later in this document.
 
-The general format for whitelist entries follows the "[match pattern][11]" specification for Google Chrome Packaged Apps. Resources are specified by URL, but an asterisk (\*) character may be used as a "wildcard" in several places to indicate "any value may go here". Specific examples are shown below.
+The general format for whitelist entries follows the "[match pattern][11]" specification for Google Chrome Packaged Apps. Resources are specified by URL, but an asterisk (\*) character may be used as a "wildcard" in several places to indicate "any value may go here". Specific examples are <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n below.
 
 ## Syntax
 

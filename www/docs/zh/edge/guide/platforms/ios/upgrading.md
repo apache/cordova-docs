@@ -20,7 +20,7 @@ license: >
 
 # 升級 iOS
 
-本指南演示如何修改 iOS 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
+本指南演示如何修改 iOS 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。
 
 **注**： Xcode 4.6 必需的推薦 Xcode 5。 目前，以提交到蘋果 App Store，你應使用最新的產品出廠的版本的 iOS SDK，這是 iOS 7。 iOS 7 SDK 尚不需要，但這可能會很快改變。
 
@@ -33,7 +33,7 @@ license: >
 
 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行`cordova platform update ios`
 
@@ -46,7 +46,7 @@ CLI 的專案：
 
 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行`cordova platform update ios`
 
@@ -66,7 +66,7 @@ Xcode 5 的問題：
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
 
 2.  添加您的平臺到科爾多瓦專案中，例如：`cordova
 platform add ios`.
@@ -327,7 +327,7 @@ platform add ios`.
 
 8.  複製 `cordova` 目錄從新專案到專案的根目錄。在 2.2.0，這有更新的 '模仿' 腳本。
 
-9.  下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
+9.  <a href="../../next/index.html">下一步</a>，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
     
     1.  啟動終端程式
     2.  轉到您安裝科爾多瓦的位置 （請參見步驟 1）、 在 `bin` 子目錄
@@ -366,7 +366,7 @@ platform add ios`.
 
 10. 刪除 `VERSION` 檔從您的專案參考 （**是在`CordovaLib`).
 
-11. 下一步，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
+11. <a href="../../next/index.html">下一步</a>，更新您 `CordovaLib` 分專案的引用。 從科爾多瓦 2.1.0 開始，我們 CORDOVALIB Xcode 變數不再使用引用的位置時 `CordovaLib` 駐留，引用現在是絕對檔引用。
     
     1.  啟動終端程式
     2.  轉到您安裝科爾多瓦的位置 （請參見步驟 1）、 在 `bin` 子目錄

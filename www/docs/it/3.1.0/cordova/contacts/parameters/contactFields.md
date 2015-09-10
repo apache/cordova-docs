@@ -20,6 +20,6 @@ license: >
 
 # contactFields
 
-Richiesto il parametro per il `contacts.find` metodo, utilizzato per specificare quali campi devono essere inclusi nella `Contact` oggetti derivanti da un'operazione di ricerca.
+Richiesto il parametro per il `<a href="../contacts.find.html">contacts.find</a>` metodo, utilizzato per specificare quali campi devono essere inclusi nella `Contact` oggetti derivanti da un'operazione di ricerca.
 
     ["nome", "phoneNumbers", "email"]

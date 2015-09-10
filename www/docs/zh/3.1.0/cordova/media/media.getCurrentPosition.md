@@ -20,20 +20,20 @@ license: >
 
 # media.getCurrentPosition
 
-返回一個音訊檔內的當前位置。
+返回一個音訊<a href="../file/fileobj/fileobj.html">檔</a>內的當前<a href="../geolocation/Position/position.html">位置</a>。
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.getCurrentPosition(mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>]);
     
 
 ## 參數
 
-*   **mediaSuccess**： 傳遞的當前的位置，以秒為單位的回檔。
+*   **mediaSuccess**： 傳遞的當前的<a href="../geolocation/Position/position.html">位置</a>，以秒為單位的回<a href="../file/fileobj/fileobj.html">檔</a>。
 
-*   **mediaError**： （可選） 回檔執行如果發生錯誤。
+*   **<a href="Parameters/mediaError.html">mediaError</a>**： （可選） 回<a href="../file/fileobj/fileobj.html">檔</a>執行如果發生錯誤。
 
 ## 說明
 
-一個非同步函數，它返回的基礎音訊檔的當前位置 `Media` 物件。此外可以更新 `Media` 物件的 `position` 參數。
+一個非同步函數，它返回的基礎音訊<a href="../file/fileobj/fileobj.html">檔</a>的當前<a href="../geolocation/Position/position.html">位置</a> `Media` 物件。此外可以更新 `Media` 物件的 `position` 參數。
 
 ## 支援的平臺
 
@@ -79,14 +79,14 @@ license: >
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -106,7 +106,7 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
@@ -133,7 +133,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     
@@ -141,7 +141,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

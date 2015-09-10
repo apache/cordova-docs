@@ -28,9 +28,9 @@ Consente l'esecuzione di istruzioni SQL sul database.
 
 ## Dettagli
 
-Chiamare un `Database` metodo di transazione dell'oggetto, passa un `SQLTransaction` oggetto al metodo di callback specificato.
+Chiamare un `<a href="../database/database.html">Database</a>` metodo di transazione dell'oggetto, passa un `SQLTransaction` oggetto al metodo di callback specificato.
 
-## Piattaforme supportate
+## <a href="../../../config_ref/images.html">Piattaforme supportate</a>
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 e superiori)
@@ -54,7 +54,7 @@ Chiamare un `Database` metodo di transazione dell'oggetto, passa un `SQLTransact
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ Chiamare un `Database` metodo di transazione dell'oggetto, passa un `SQLTransact
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ Chiamare un `Database` metodo di transazione dell'oggetto, passa un `SQLTransact
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# 아마존 화재 OS 플랫폼 가이드
+# 아마존 화재 OS <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a>
 
-이 가이드에는 코르도바 애플 리 케이 션 킨 들의 화재 HDX 같은 아마존 화재 OS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다.
+이 <a href="../../../index.html">가이드</a>에는 코르도바 애플 리 케이 션 킨 들의 화재 HDX 같은 아마존 화재 OS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다.
 
 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   아마존 화재 운영 체제 구성
-*   아마존 화재 OS WebViews
-*   아마존 화재 OS 플러그인
+*   <a href="config.html">아마존 화재 운영 체제 구성</a>
+*   <a href="webview.html">아마존 화재 OS WebViews</a>
+*   <a href="plugin.html">아마존 화재 OS 플러그인</a>
 
 ## 요구 사항 및 지원
 
@@ -88,7 +88,7 @@ license: >
 
 ## Sdk에서는 프로젝트를 열려면
 
-사용 된 `cordova` 에 코르도바는 명령줄 인터페이스를 설명 하는 대로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에:
+사용 된 `cordova` 에 코르도바는 <a href="../../cli/index.html">명령줄 인터페이스</a>를 설명 하는 대로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

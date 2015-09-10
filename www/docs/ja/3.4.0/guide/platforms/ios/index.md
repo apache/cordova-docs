@@ -18,23 +18,23 @@ license: >
     under the License.
 ---
 
-# iOS プラットフォーム ガイド
+# iOS プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、iPhone や iPad などの iOS デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
+この<a href="../../../index.html">ガイド</a>は、iPhone や iPad などの iOS デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   iOS 構成
-*   IOS のアップグレード
-*   iOS の web 表示
-*   iOS のプラグイン
-*   iOS コマンド ライン ツール
+*   <a href="config.html">iOS 構成</a>
+*   <a href="upgrading.html">IOS のアップグレード</a>
+*   <a href="webview.html">iOS の web 表示</a>
+*   <a href="plugin.html">iOS のプラグイン</a>
+*   <a href="tools.html">iOS コマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
 ## 要件、およびサポート
 
 Apple ® ツール インテル ベースの Mac OS X オペレーティング システム上でのみ実行 iOS アプリケーションを構築するために必要です。 OS X 10.7 (ライオン) のバージョンでのみ動作する Xcode ® 4.5 (最低限必要なバージョン) 以上に設定すると、iOS 6 にはが含まれています SDK （ソフトウェア開発キット）。 アップルのアプリ Store℠ にアプリを提出するには、アップル ツールの最新バージョンが必要です。
 
-多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスは、少なくともが必要 iOS の 5.x がインストールされている、コルドバ 2.3 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 このガイド開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
+多くの iOS SDK と Xcode のインストール iOS エミュレーターを使用してコルドバ機能をテストできますが、実際のデバイスを完全に App Store に提出する前にすべてのアプリのデバイス機能をテストする必要があります。 デバイスは、少なくともが必要 iOS の 5.x がインストールされている、コルドバ 2.3 現在サポートされている最小の iOS のバージョン。サポート デバイスなどがすべて計算された ® モデル、iPhone ® 3 gs と、上記と iPod ® タッチ第 3 世代またはそれ以降。 アプリをインストールするデバイス上に、アップルの[iOS デベロッパー プログラム][1], そのコスト $99 1 年ごとのメンバーが必要です。 この<a href="../../../index.html">ガイド</a>開発者プログラムに登録する必要はありません iOS エミュレーターにアプリケーションを展開する方法を示しています。
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -53,7 +53,7 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
 
 ## SDK でプロジェクトを開く
 
-使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+使用、 `cordova` コルドバの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -92,7 +92,7 @@ Xcode のためのエミュレーターが付属、最新の iPhone と iPad の
 
 ## デバイスへの配置します。
 
-デバイスに展開するさまざまな要件の詳細については Apple の[iOS 用ツール ワークフロー ガイド][7]の*構成の開発と配布の資産*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
+デバイスに展開するさまざまな要件の詳細については Apple の[iOS 用ツール ワークフロー <a href="../../../index.html">ガイド</a>][7]の*構成の開発と配布の資産*セクションを参照してください。 簡単に言えば、展開する前に以下を行う必要があります。
 
  [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
@@ -122,7 +122,7 @@ Xcode の警告について、 `invokeString` メソッドは、カスタム URL
 
 *   *Classes/MainViewController.m*ファイルを編集して、コードの次のブロックを囲む `/*` および `*/` 下図のように、そのタイプのコメント**コマンドの**ファイルを保存します。
     
-        (void) webViewDidFinishLoad:(UIWebView*) theWebView {//___PROJECTNAME__ Info.plist を処理するプロトコルを指定した場合にのみ有効/* 場合 (self.invokeString) {//deviceready NSLog を受信したときの js でアクセスすることができますので、deviceready イベントが発生する前に渡されます (@"非推奨： window.invokeString - 常によばれるカスタム スキームの url を使用してアプリを起動したとき、代わりに window.handleOpenURL(url) 関数を使用します");。NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"% @\「;」、self.invokeString];[theWebView stringByEvaluatingJavaScriptFromString:jsString];} *//黒の基本色/背景に一致するネイティブ アプリ theWebView.backgroundColor = [UIColor blackColor];[スーパー webViewDidFinishLoad: theWebView] を返します。}
+        (void) webViewDidFinishLoad:(UIWebView*) theWebView {//___PROJECTNAME__ Info.plist を処理するプロトコルを指定した場合にのみ有効/* 場合 (self.invokeString) {//<a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog を受信したときの js でアクセスすることができますので、<a href="../../../cordova/events/events.deviceready.html">deviceready</a> <a href="../../../cordova/events/events.html">イベント</a>が発生する前に渡されます (@"非推奨： window.invokeString - 常によばれるカスタム スキームの url を使用してアプリを起動したとき、代わりに window.handleOpenURL(url) 関数を使用します");。NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"% @\「;」、self.invokeString];[theWebView stringByEvaluatingJavaScriptFromString:jsString];} *//黒の基本色/背景に一致するネイティブ アプリ theWebView.backgroundColor = [UIColor blackColor];[スーパー webViewDidFinishLoad: theWebView] を返します。}
         
 
 *   下図のように、2 つのスラッシュを挿入して次の行をコメント アウト、 *Classes/AppViewDelegate.m*ファイルを編集し、**コマンドの**ファイルを保存する入力します。
@@ -148,13 +148,13 @@ Xcode の警告について、 `invokeString` メソッドは、カスタム URL
 
 詳細は、Apple のドキュメントを参照してください。
 
-*   [開発開始 iOS アプリ今日][10]iOS アプリを開発するための手順の概要を提供します。
+*   [開発開始 iOS アプリ今日][10]iOS アプリを開発するための手順の<a href="../../overview/index.html">概要</a>を提供します。
 
-*   [メンバー センターのホーム ページ][11]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布ガイドおよびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
+*   [メンバー センターのホーム ページ][11]はテクニカル リソース テクニカル リソース、プロビジョニング ポータル、配布<a href="../../../index.html">ガイド</a>およびコミュニティ フォーラムを含むいくつかの iOS へのリンクを提供します。
 
-*   [IOS 用ツール ワークフロー ガイド][7]
+*   [IOS 用ツール ワークフロー <a href="../../../index.html">ガイド</a>][7]
 
-*   [Xcode 4 ユーザー ガイド][12]
+*   [Xcode 4 ユーザー <a href="../../../index.html">ガイド</a>][12]
 
 *   アップル世界広い開発者会議 2012 (WWDC2012) からの[セッションのビデオ][13]
 

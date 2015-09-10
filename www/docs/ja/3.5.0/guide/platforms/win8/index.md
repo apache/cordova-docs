@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# Windows 8 プラットフォーム ガイド
+# Windows 8 プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、Windows 8 向け Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
+この<a href="../../../index.html">ガイド</a>は、Windows 8 向け Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   Windows 8 アップグレード
-*   Windows 8 のコマンド ライン ツール
+*   <a href="upgrading.html">Windows 8 アップグレード</a>
+*   <a href="tools.html">Windows 8 のコマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
-マイクロソフト推奨*Metro スタイル アプリ*の Windows 8 と Windows 左折し、ルートの名前 MSDN 今アプリを*Windows ストア*アプリのこのタイプとこのガイドに従って条約。 また、このガイドでは、 *Windows 8*意味 Windows 8 と Windows の右
+マイクロソフト推奨*Metro スタイル アプリ*の Windows 8 と Windows 左折し、ルートの名前 MSDN 今アプリを*Windows ストア*アプリのこのタイプとこの<a href="../../../index.html">ガイド</a>に従って条約。 また、この<a href="../../../index.html">ガイド</a>では、 *Windows 8*意味 Windows 8 と Windows の右
 
 ## 要件
 
@@ -81,13 +81,13 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
             <script src="/js/default.js"></script>
         
 
-*   追加、 `deviceready` コルドバを示すためにハンドラーの処理します。
+*   追加、 `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` コルドバを示すためにハンドラーの処理します。
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("deviceready", function () {
+                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

@@ -20,7 +20,7 @@ license: >
 
 # FileUploadResult
 
-Объект `FileUploadResult` передается на успех обратного вызова метода `upload()` объекта `FileTransfer`.
+Объект `FileUploadResult` передается на успех обратного вызова метода `upload()` объекта `<a href="../filetransfer/filetransfer.html">FileTransfer</a>`.
 
 ## Параметры
 
@@ -32,7 +32,7 @@ license: >
 
 ## Описание
 
-`FileUploadResult`Объект возвращается через успех обратного вызова `FileTransfer` объекта `upload()` метод.
+`FileUploadResult`Объект возвращается через успех обратного вызова `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` объекта `upload()` метод.
 
 ## iOS причуды
 

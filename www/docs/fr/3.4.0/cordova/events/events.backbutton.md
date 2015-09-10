@@ -27,7 +27,7 @@ L'évènement se déclenche lorsque l'utilisateur appuie sur le bouton retour.
 
 ## Détails
 
-Afin de modifier le comportement par défaut du bouton retour, attachez un écouteur pour l'évènement `backbutton` généralement en appelant `document.addEventListener` une fois l'évènement `deviceready` reçu. Il n'est désormais plus nécessaire d'appeler d'autres méthodes pour altérer le comportement du bouton retour.
+Afin de modifier le comportement par défaut du bouton retour, attachez un écouteur pour l'évènement `backbutton` généralement en appelant `document.addEventListener` une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` reçu. Il n'est désormais plus nécessaire d'appeler d'autres méthodes pour altérer le comportement du bouton retour.
 
 ## Plates-formes supportées
 
@@ -50,7 +50,7 @@ Afin de modifier le comportement par défaut du bouton retour, attachez un écou
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Afin de modifier le comportement par défaut du bouton retour, attachez un écou
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

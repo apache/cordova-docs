@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# MediaFile.getFormatData
+# <a href="MediaFile.html">MediaFile</a>.getFormatData
 
 > El formato recupera información sobre el archivo de captura de los medios de comunicación.
 
-    mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB errorCallback]);
+    mediaFile.getFormatData (<a href="MediaFile.html">MediaFile</a>DataSuccessCB successCallback, [<a href="MediaFile.html">MediaFile</a>DataErrorCB errorCallback]);
     
 
 ## Descripción
 
-Esta función asincrónica intentará recuperar la información de formato para el archivo de los medios de comunicación. Si exitoso, invoca la `MediaFileDataSuccessCB` devolución de llamada con un `MediaFileData` objeto. Si fracasa el intento, esta función invoca el `MediaFileDataErrorCB` "callback".
+Esta función asincrónica intentará recuperar la información de formato para el archivo de los medios de comunicación. Si exitoso, invoca la `<a href="MediaFile.html">MediaFile</a>DataSuccessCB` devolución de llamada con un `<a href="MediaFile.html">MediaFile</a>Data` objeto. Si fracasa el intento, esta función invoca el `<a href="MediaFile.html">MediaFile</a>DataErrorCB` "callback".
 
 ## Plataformas soportadas
 
@@ -39,12 +39,12 @@ Esta función asincrónica intentará recuperar la información de formato para 
 
 ## BlackBerry WebWorks rarezas
 
-No proporciona una API para obtener información sobre los archivos de medios, para que todos `MediaFileData` devolver objetos con valores predeterminados.
+No proporciona una API para obtener información sobre los archivos de medios, para que todos `<a href="MediaFile.html">MediaFile</a>Data` devolver objetos con valores predeterminados.
 
 ## Rarezas Android
 
-La API de acceso a la prensa archivo formato información es limitada, así que no todos `MediaFileData` se admiten las propiedades.
+La API de acceso a la prensa archivo formato información es limitada, así que no todos `<a href="MediaFile.html">MediaFile</a>Data` se admiten las propiedades.
 
 ## iOS rarezas
 
-La API de acceso a la prensa archivo formato información es limitada, así que no todos `MediaFileData` se admiten las propiedades.
+La API de acceso a la prensa archivo formato información es limitada, así que no todos `<a href="MediaFile.html">MediaFile</a>Data` se admiten las propiedades.

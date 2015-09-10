@@ -35,9 +35,9 @@ Eine Cordova-Plugin für BlackBerry 10 enthält sowohl JavaScript als auch nativ
 
 ## Erstellen der systemeigenen Klasse
 
-Um den einheitlichen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie **Datei → neu → BlackBerry Project → Native Erweiterung → BlackBerry 10**. Geben Sie den gewünschten Projektnamen und den Speicherort, und drücken Sie **Fertig stellen**.
+Um den einheitlichen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie **Datei → neu → BlackBerry Project → Native Erweiterung → BlackBerry 10**. Geben Sie den gewünschten Projektnamen und den <a href="../../../cordova/storage/storage.html">Speicher</a>ort, und drücken Sie **Fertig stellen**.
 
-Das Projekt, erstellt von der IDE enthält Beispielcode für ein Speicher-Plugin. Sie können zu ersetzen oder diese Dateien ändern, um Ihre eigene Funktionalität zu implementieren:
+Das Projekt, erstellt von der IDE enthält Beispielcode für ein <a href="../../../cordova/storage/storage.html">Speicher</a>-Plugin. Sie können zu ersetzen oder diese Dateien ändern, um Ihre eigene Funktionalität zu implementieren:
 
 *   `*name*_js.hpp`: C++-Header für den JNEXT-Code.
 
@@ -124,7 +124,7 @@ Die `onCreateObject` Funktion nimmt zwei Parameter. Die erste ist der Name der a
 
 Das Plugin muss die folgenden JavaScript-Dateien enthalten:
 
-*   `client.js`: Dies wird als die Client-Seite und enthält die API eine Cordova-Anwendung zur Verfügung gestellt. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den Veranstaltungen, die die Rückrufe auslösen herstellt.
+*   `client.js`: Dies wird als die Client-Seite und enthält die API eine Cordova-Anwendung zur Verfügung gestellt. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den <a href="../../../cordova/events/events.html">Veranstaltungen</a>, die die Rückrufe auslösen herstellt.
 
 *   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` Datei Aufrufe an die API in der `index.js` Datei, die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
 

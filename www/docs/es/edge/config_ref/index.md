@@ -41,8 +41,8 @@ Cuando se usa la CLI para construir un proyecto, las versiones de este archivo p
 Esta sección detalla las opciones de configuración global y multiplataforma. Consulte las siguientes secciones para las opciones específicas de la plataforma:
 
 *   Configuración de iOS
-*   Configuración de Android
-*   Configuración de BlackBerry 10
+*   <a href="../guide/platforms/android/config.html">Configuración de Android</a>
+*   <a href="../guide/platforms/blackberry/config.html">Configuración de BlackBerry</a> 10
 
 Además de las diversas opciones de configuración detalladas a continuación, también puede configurar el conjunto básico de una aplicación de imágenes para cada plataforma de destino. Ver los iconos y salpicadura pantallas para obtener más información.
 
@@ -53,7 +53,7 @@ Este ejemplo muestra el valor predeterminado `config.xml` generados por la CLI `
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

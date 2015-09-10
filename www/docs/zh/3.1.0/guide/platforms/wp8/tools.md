@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 的命令列工具
 
-`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
+`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案中包含單獨的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
@@ -34,11 +34,11 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
 
 有 2 種方法去有關創建一個新的 Apache 科爾多瓦 WP7 或 WP8 應用程式。
 
-### 運行該批次檔來創建和安裝範本。
+### 運行該批次<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>來創建和安裝範本。
 
-*   根的回購協定包含檔 createTemplates.bat。 按兩下此檔將生成 2 個.ZIP 檔案。 （CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x 哪裡的當前版本號）方便地使用這些檔在 Visual Studio 中，複製他們到"我的 Documents\Visual 工作室 2012\Templates\ProjectTemplates\"你然後將能夠從 Visual Studio 檔-> 新專案功能表創建新的 Apache 科爾多瓦 Windows Phone 應用程式。
+*   根的回購協定包含<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> createTemplates.bat。 按兩下此<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>將生成 2 個.ZIP <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案。 （CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x 哪裡的當前版本號）方便地使用這些<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>在 Visual Studio 中，複製他們到"我的 Documents\Visual 工作室 2012\Templates\ProjectTemplates\"你然後將能夠從 Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>-> 新專案功能表創建新的 Apache 科爾多瓦 Windows Phone 應用程式。
 
-*   如果您從命令列運行該批次檔，還可以調用同一個參數，以便自動安裝
+*   如果您從命令列運行該批次<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，還可以調用同一個參數，以便自動安裝
 
 運行該腳本：
 
@@ -47,13 +47,13 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
 
 ### 在命令列上使用創建腳本
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。 下面是 Windows Phone 7 和 8 的語法：
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>名稱。 下面是 Windows Phone 7 和 8 的語法：
 
     >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:
@@ -61,7 +61,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
     
 
-啟動 Visual Studio 和打開解決方案檔 (.sln) 中 (C:\path\to\my\_new\_project)
+啟動 Visual Studio 和打開解決方案<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> (.sln) 中 (C:\path\to\my\_new\_project)
 
 生成並運行它
 
@@ -85,7 +85,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
     
     $ C:\path\to\my\_new\_project\cordova\run \[目標\] \[生成\]
 
-預設情況下 `run` 命令將調用 `--emulator --debug` 如果不提供了標誌。
+預設情況下 `run` 命令將調用 `--emulator --debug` 如果不提供了<a href="../../../cordova/file/flags/flags.html">標誌</a>。
 
 ## 清洗
 

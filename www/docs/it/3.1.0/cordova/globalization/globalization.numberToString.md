@@ -29,7 +29,7 @@ Restituisce un numero formattato come una stringa secondo le preferenze dell'ute
 
 Restituisce la stringa formattata numero per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `String` valore.
 
-Se c'è un errore di formattazione del numero, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
+Se c'è un errore di formattazione del numero, poi il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 Il `options` parametro è facoltativo e valori predefiniti sono:
 
@@ -62,7 +62,7 @@ Quando il browser è impostato per la `en\_US` locale, questa viene visualizzata
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString Example</title>
+        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

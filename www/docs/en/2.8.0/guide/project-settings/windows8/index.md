@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-Project Settings for Windows 8 
+<a href="../index.html">Project Settings</a> for Windows 8 
 ===================================
 
 Windows 8 does not currently support this feature.

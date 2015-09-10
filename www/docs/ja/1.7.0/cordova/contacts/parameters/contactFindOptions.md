@@ -21,7 +21,7 @@ license: >
 contactFindOptions
 ==================
 
-`contacts.find` メソッドを使用する際のオプションのパラメーターです。連絡先の検索時にフィルターをかける場合に使用します。
+`<a href="../contacts.find.html">contacts.find</a>` メソッドを使用する際のオプションのパラメーターです。連絡先の検索時にフィルターをかける場合に使用します。
 
     {
         filter: "",

@@ -18,26 +18,26 @@ license: >
     under the License.
 ---
 
-File
+<a href="fileobj/fileobj.html">File</a>
 ==========
 
->  このAPIはW3Cの [File API](http://www.w3.org/TR/FileAPI) をベースとしています。ファイルシステムへの読み書きのための API です。
+>  このAPIはW3Cの [<a href="fileobj/fileobj.html">File</a> API](http://www.w3.org/TR/<a href="fileobj/fileobj.html">File</a>API) をベースとしています。ファイルシステムへの読み書きのための API です。
 
 オブジェクト
 -------
 
-- DirectoryEntry
-- DirectoryReader
-- File
-- FileEntry
-- FileError
-- FileReader
-- FileSystem
-- FileTransfer
-- FileTransferError
-- FileUploadOptions
-- FileUploadResult
-- FileWriter
-- Flags
-- LocalFileSystem
-- Metadata
+- <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+- <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+- <a href="fileobj/fileobj.html">File</a>
+- <a href="fileentry/fileentry.html"><a href="fileobj/fileobj.html">File</a>Entry</a>
+- <a href="fileerror/fileerror.html"><a href="fileobj/fileobj.html">File</a>Error</a>
+- <a href="filereader/filereader.html"><a href="fileobj/fileobj.html">File</a>Reader</a>
+- <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
+- <a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>
+- <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>Error</a>
+- <a href="fileuploadoptions/fileuploadoptions.html"><a href="fileobj/fileobj.html">File</a>UploadOptions</a>
+- <a href="fileuploadresult/fileuploadresult.html"><a href="fileobj/fileobj.html">File</a>UploadResult</a>
+- <a href="filewriter/filewriter.html"><a href="fileobj/fileobj.html">File</a>Writer</a>
+- <a href="flags/flags.html">Flags</a>
+- Local<a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
+- <a href="metadata/metadata.html">Metadata</a>

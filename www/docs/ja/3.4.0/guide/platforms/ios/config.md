@@ -42,7 +42,7 @@ license: >
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web ストレージ データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web ストレージ バックアップを防ぐ。
+*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web <a href="../../../cordova/storage/storage.html">ストレージ</a> データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web <a href="../../../cordova/storage/storage.html">ストレージ</a> バックアップを防ぐ。
     
         <preference name="BackupWebStorage" value="local"/>
         

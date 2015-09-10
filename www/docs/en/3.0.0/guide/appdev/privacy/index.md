@@ -50,7 +50,7 @@ guides and references.
 
 * __Collection of sensitive information__: An app's collection of
   sensitive personal information raises important privacy concerns.
-  Examples of sensitive personal information include financial
+  <a href="../../../cordova/storage/storage.opendatabase.html">Example</a>s of sensitive personal information include financial
   information, health information, and information from or about
   children. It also includes information gathered from certain sensors
   and databases typically found on mobile devices and tablets, such as

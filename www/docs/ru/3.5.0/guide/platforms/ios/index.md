@@ -22,11 +22,11 @@ license: >
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для iOS-устройств, таких как iPhone и iPad. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   iOS конфигурации
-*   Обновление iOS
-*   iOS WebViews
+*   <a href="config.html">iOS конфигурации</a>
+*   <a href="upgrading.html">Обновление iOS</a>
+*   <a href="webview.html">iOS WebViews</a>
 *   iOS, плагины
-*   iOS утилиты командной строки
+*   <a href="tools.html">iOS утилиты командной строки</a>
 
 Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 
@@ -127,7 +127,7 @@ Xcode предупреждение о `invokeString` метод касается
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];

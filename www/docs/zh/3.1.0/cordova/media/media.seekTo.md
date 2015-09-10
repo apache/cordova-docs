@@ -20,18 +20,18 @@ license: >
 
 # media.seekTo
 
-在音訊檔中設置的當前的位置。
+在音訊<a href="../file/fileobj/fileobj.html">檔</a>中設置的當前的<a href="../geolocation/Position/position.html">位置</a>。
 
     media.seekTo(milliseconds);
     
 
 ## 參數
 
-*   **毫秒為單位）**： 要以毫秒為單位設置中，音訊的播放位置的位置。
+*   **毫秒為單位）**： 要以毫秒為單位設置中，音訊的播放<a href="../geolocation/Position/position.html">位置</a>的<a href="../geolocation/Position/position.html">位置</a>。
 
 ## 說明
 
-`media.seekTo`非同步，執行更新引用的音訊檔中的當前播放位置 `Media` 物件。 此外可以更新 `Media` 物件的 `position` 參數。
+`media.seekTo`非同步，執行更新引用的音訊<a href="../file/fileobj/fileobj.html">檔</a>中的當前播放<a href="../geolocation/Position/position.html">位置</a> `Media` 物件。 此外可以更新 `Media` 物件的 `position` 參數。
 
 ## 支援的平臺
 
@@ -47,7 +47,7 @@ license: >
     // Audio player
     //
     var my_media = new Media(src, onSuccess, onError);
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
         my_media.seekTo(10000);
@@ -60,14 +60,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -87,12 +87,12 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_media.getCurrentPosition(
+                    my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                         // success callback
                         function(position) {
                             if (position > -1) {
@@ -116,7 +116,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -153,4 +153,4 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓 OS 5 設備上不支援。
+*   黑莓 OS 5 <a href="../device/device.html">設備</a>上不支援。

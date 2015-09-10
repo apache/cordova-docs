@@ -23,14 +23,14 @@ backbutton
 
 The event fires when the user presses the back button.
 
-    document.addEventListener("backbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", yourCallbackFunction, false);
 
 Details
 -------
 
 To override the default back-button behavior, register an event
 listener for the `backbutton` event, typically by calling
-`document.addEventListener` once you receive the `deviceready` event.
+`document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` once you receive the `<a href="events.deviceready.html">deviceready</a>` event.
 It is no longer necessary to call any other method to override the
 back-button behavior.
 
@@ -41,22 +41,22 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
 
     function onBackKeyDown() {
         // Handle the back button
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -65,14 +65,14 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Register the event listener
-            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
         }
 
         // Handle the back button

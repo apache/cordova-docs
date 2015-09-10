@@ -28,7 +28,7 @@ Shows a custom alert or dialog box.
 - __message:__ Dialog message (`String`)
 - __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Alert")
-- __buttonName:__ Button name (`String`) (Optional, Default: "OK")
+- __buttonName:__ Button <a href="../storage/parameters/name.html">name</a> (`String`) (Optional, Default: "OK")
     
 Description
 -----------
@@ -44,7 +44,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
@@ -64,24 +64,24 @@ Quick Example
     //
     navigator.notification.alert('You are the winner!');
         
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // PhoneGap is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
     
@@ -111,4 +111,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- Ignores button names, always uses 'OK' 
+- Ignores button <a href="../storage/parameters/name.html">name</a>s, always uses 'OK' 

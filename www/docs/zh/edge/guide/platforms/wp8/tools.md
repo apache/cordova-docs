@@ -24,7 +24,7 @@ license: >
 
  [1]: http://cordova.apache.org
 
-低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
+低級<a href="../../cli/index.html">命令列介面</a>，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關<a href="../../overview/index.html">概述</a>，請參見應用程式外掛程式。
 
 ## Windows Phone
 
@@ -56,7 +56,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:

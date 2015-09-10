@@ -22,12 +22,12 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn der Benutzer den "zurück"-Button drückt.
 
-    document.addEventListener("backbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", yourCallbackFunction, false);
     
 
 ## Details
 
-Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.addEventListener` sobald Sie erhalten die `deviceready` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
+Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` sobald Sie erhalten die `<a href="events.deviceready.html">deviceready</a>` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
 
 ## Unterstützte Plattformen
 
@@ -37,7 +37,7 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
 
 ## Kurzes Beispiel
 
-    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
     
     function onBackKeyDown() {
         // Handle the back button
@@ -49,7 +49,7 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -57,14 +57,14 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
         }
     
         // Handle the back button

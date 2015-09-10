@@ -23,7 +23,7 @@ license: >
 > Avviare l'applicazione registratore audio e restituire informazioni sui file di clip audio catturato.
 
     navigator.device.capture.captureAudio(
-        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError,  [<a href="captureAudioOptions.html">CaptureAudioOptions</a> options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Avvia un'operazione asincrona per acquisire registrazioni audio utilizzando l'applicazione di registrazione audio predefinita del dispositivo. L'operazione consente all'utente di dispositivo acquisire registrazioni multiple in una singola sessione.
 
-L'operazione di acquisizione termina quando l'utente esce l'audio registrazione applicazione, o il numero massimo di registrazioni specificato da `CaptureAudioOptions.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra una singola clip audio.
+L'operazione di acquisizione termina quando l'utente esce l'audio registrazione applicazione, o il numero massimo di registrazioni specificato da `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra una singola clip audio.
 
-Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita con una matrice di `MediaFile` oggetti che descrivono ciascuna catturato file clip audio. Se l'utente termina l'operazione prima di un clip audio viene catturato, il `CaptureErrorCallback` viene eseguito con un `CaptureError` oggetto, con il `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita con una matrice di `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` oggetti che descrivono ciascuna catturato file clip audio. Se l'utente termina l'operazione prima di un clip audio viene catturato, il `<a href="CaptureError.html">CaptureError</a>Callback` viene eseguito con un `<a href="CaptureError.html">CaptureError</a>` oggetto, con il `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 
@@ -46,10 +46,10 @@ Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita
 ## Esempio rapido
 
     // capture callback
-    var captureSuccess = function(mediaFiles) {
+    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
         var i, path, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-            path = mediaFiles[i].fullPath;
+        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
             // do something interesting with the file
         }
     };
@@ -76,10 +76,10 @@ Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita
     
         // Called when capture operation is finished
         //
-        function captureSuccess(mediaFiles) {
+        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
             var i, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-                uploadFile(mediaFiles[i]);
+            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
+                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
             }
         }
     
@@ -99,10 +99,10 @@ Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita
         }
     
         // Upload files to server
-        function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
-                path = mediaFile.fullPath,
-                name = mediaFile.name;
+        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
+            var ft = new <a href="../../file/filetransfer/filetransfer.html"><a href="../../file/fileobj/fileobj.html">File</a>Transfer</a>(),
+                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
+                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -126,7 +126,7 @@ Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita
 
 ## BlackBerry WebWorks stranezze
 
-*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore di note vocali** , fornito da RIM, per catturare le registrazioni audio. L'applicazione riceve un `CaptureError.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
+*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore di note vocali** , fornito da RIM, per catturare le registrazioni audio. L'applicazione riceve un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
 
 ## iOS stranezze
 

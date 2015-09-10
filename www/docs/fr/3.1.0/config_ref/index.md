@@ -29,7 +29,7 @@ Pour les projets créés avec l'interface en ligne de commande de Cordova (décr
 Cette section décrit en détail les options de configuration globale et multi-plateforme. Consultez les sections suivantes pour les options spécifiques à la plateforme :
 
 *   Configuration iOS
-*   Configuration Android
+*   <a href="../guide/platforms/android/config.html">Configuration Android</a>
 *   Configuration BlackBerry
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.
@@ -41,7 +41,7 @@ Cet exemple affiche la valeur par défaut `config.xml` généré par le CLI `cre
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

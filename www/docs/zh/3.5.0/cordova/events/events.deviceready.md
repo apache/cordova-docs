@@ -20,20 +20,20 @@ license: >
 
 # deviceready
 
-科爾多瓦是在完全載入時，將觸發該事件。
+科爾多瓦是在完全載入時，將觸發該<a href="events.html">事件</a>。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-此事件的任何應用程式至關重要。它發出信號科爾多瓦的設備已載入的 Api，並準備訪問。
+此<a href="events.html">事件</a>的任何應用程式至關重要。它發出信號科爾多瓦的設備已載入的 Api，並準備訪問。
 
 科爾多瓦組成的兩個代碼庫： 本機和 JavaScript。 雖然本機代碼載入、 顯示的自訂載入圖像。 然而，JavaScript 僅載入一旦 DOM 裝載。 這意味著 web 應用程式可能有可能調用的科爾多瓦 JavaScript 函數之前的相應的本機代碼變得可用。
 
-`deviceready`科爾多瓦已完全載入後會觸發事件。 一次事件火，你可以安全地使對科爾多瓦 Api 的調用。 應用程式通常將附加一個事件攔截器與 `document.addEventListener` 一旦 HTML 文檔的 DOM 已載入。
+`deviceready`科爾多瓦已完全載入後會觸發<a href="events.html">事件</a>。 一次<a href="events.html">事件</a>火，你可以安全地使對科爾多瓦 Api 的調用。 應用程式通常將附加一個<a href="events.html">事件</a>攔截器與 `document.addEventListener` 一旦 HTML 文檔的 DOM 已載入。
 
-`deviceready`事件從其他人的行為方式略有不同。註冊後的任何事件處理 `deviceready` 事件將觸發了其立即調用的回呼函數。
+`deviceready`<a href="events.html">事件</a>從其他人的行為方式略有不同。註冊後的任何<a href="events.html">事件</a>處理 `deviceready` <a href="events.html">事件</a>將觸發了其立即調用的回呼函數。
 
 ## 支援的平臺
 
@@ -59,7 +59,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">

@@ -20,19 +20,19 @@ license: >
 
 # LocalFileSystem
 
-Dieses Objekt bietet eine Möglichkeit, Root-Dateisysteme zu erhalten.
+Dieses Objekt bietet eine Möglichkeit, Root-<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>e zu erhalten.
 
 ## Methoden
 
-*   **RequestFileSystem**: ein Dateisystem anfordert. *(Funktion)*
+*   **RequestFileSystem**: ein <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> anfordert. *(Funktion)*
 
-*   **ResolveLocalFileSystemURI**: Abrufen einer `DirectoryEntry` oder `FileEntry` mit lokalen URI. *(Funktion)*
+*   **ResolveLocalFileSystemURI**: Abrufen einer `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` oder `FileEntry` mit lokalen URI. *(Funktion)*
 
 ## Konstanten
 
-*   `LocalFileSystem.PERSISTENT`: Verwendet für die Speicherung, die nicht vom User Agent Anwendung oder Benutzer unerlaubt entfernt werden sollte.
+*   `LocalFileSystem.PERSISTENT`: Verwendet für die <a href="../../storage/storage.html">Speicher</a>ung, die nicht vom User Agent Anwendung oder Benutzer unerlaubt entfernt werden sollte.
 
-*   `LocalFileSystem.TEMPORARY`: Verwendet für die Speicherung mit keine Garantie für Dauerhaftigkeit.
+*   `LocalFileSystem.TEMPORARY`: Verwendet für die <a href="../../storage/storage.html">Speicher</a>ung mit keine Garantie für Dauerhaftigkeit.
 
 ## Informationen
 
@@ -56,7 +56,7 @@ Die `LocalFileSystem` sind Objektmethoden definiert, auf das `window` Objekt.
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## Lokale Datei System URI kurzes Beispiel zu lösen
+## Lokale <a href="../fileobj/fileobj.html">Datei</a> System URI kurzes Beispiel zu lösen
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
@@ -70,14 +70,14 @@ Die `LocalFileSystem` sind Objektmethoden definiert, auf das `window` Objekt.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ Die `LocalFileSystem` sind Objektmethoden definiert, auf das `window` Objekt.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Local File System</p>
       </body>
     </html>
@@ -109,16 +109,16 @@ Die `LocalFileSystem` sind Objektmethoden definiert, auf das `window` Objekt.
 
 # requestFileSystem
 
-> Fordern Sie ein Dateisystem zum Speichern von Anwendungsdaten.
+> Fordern Sie ein <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> zum <a href="../../storage/storage.html">Speicher</a>n von Anwendungsdaten.
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **Fenster**: Verweis auf den globalen Window-Objekt
-*   **Typ**: lokale Datei Systemtyp, siehe LocalFileSystem-Konstanten
-*   **Größe**: gibt an, wieviel Speicherplatz in Byte, die Anwendung erwartet, müssen
-*   **SuccessCallback**: mit einem Dateisystem Objekt aufgerufen
-*   **ErrorCallback**: aufgerufen, wenn Fehler beim Abrufen des Dateisystem auftritt
+*   **Typ**: lokale <a href="../fileobj/fileobj.html">Datei</a> Systemtyp, siehe LocalFileSystem-Konstanten
+*   **Größe**: gibt an, wieviel <a href="../../storage/storage.html">Speicher</a>platz in Byte, die Anwendung erwartet, müssen
+*   **SuccessCallback**: mit einem <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> Objekt aufgerufen
+*   **ErrorCallback**: aufgerufen, wenn Fehler beim Abrufen des <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> auftritt
 
 ## Schnelle System-Beispieldatei anfordern
 

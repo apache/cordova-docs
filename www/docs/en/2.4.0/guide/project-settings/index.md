@@ -32,15 +32,15 @@ As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet.
 properties, characterstics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
 `config.xml` file. The following sub-sections linked to are guides which go into more details about these preferences.
 
-- Project Settings for iOS
-- Project Settings for Android
-- Project Settings for BlackBerry
-- Project Settings for Windows Phone 7
-- Project Settings for Windows Phone 8
-- Project Settings for Windows 8
-- Project Settings for webOS
-- Project Settings for Bada
-- Project Settings for FirefoxOS
+- <a href="ios/index.html">Project Settings for iOS</a>
+- <a href="android/index.html">Project Settings for Android</a>
+- <a href="blackberry/index.html">Project Settings for BlackBerry</a>
+- <a href="wp7/index.html">Project Settings for Windows Phone 7</a>
+- <a href="wp8/index.html">Project Settings for Windows Phone 8</a>
+- <a href="windows8/index.html">Project Settings for Windows 8</a>
+- <a href="webos/index.html">Project Settings for webOS</a>
+- <a href="bada/index.html">Project Settings for Bada</a>
+- <a href="firefoxos/index.html">Project Settings for FirefoxOS</a>
 
 ## config.xml Elements
 
@@ -69,7 +69,7 @@ unavailable to typical web-based applications.
 
 ### `<access>`
 
-These elements define how your whitelist works. Please see the Domain Whitelist Guide for more information.  
+These elements define how your whitelist works. Please see the <a href="../whitelist/index.html">Domain Whitelist Guide</a> for more information.  
 
 ### `<content>`
 

@@ -22,9 +22,9 @@ license: >
 
 科爾多瓦的應用程式通常是作為基於瀏覽器的*web 視圖*在本機的移動平臺內實現的。 這一節演示如何，為支援平臺，以創建您自己的 web 視圖元件，充分使用科爾多瓦的 api。 然後，您可以部署在混合應用程式中的本機組件以及這些科爾多瓦應用程式元件。
 
-若要部署 web 視圖，您需要熟悉每個本機程式設計環境。下面提供了支援的平臺的說明：
+若要部署 web 視圖，您需要熟悉每個本機程式設計環境。下面提供了<a href="../../../config_ref/images.html">支援的平臺</a>的說明：
 
-*   亞馬遜火 OS WebViews
-*   Android WebViews
-*   WebViews iOS
-*   Windows Phone 8.0 WebViews
+*   <a href="../../platforms/amazonfireos/webview.html">亞馬遜火 OS WebViews</a>
+*   <a href="../../platforms/android/webview.html">Android WebViews</a>
+*   <a href="../../platforms/ios/webview.html">WebViews iOS</a>
+*   <a href="../../platforms/wp8/webview.html">Windows Phone 8.0 WebViews</a>

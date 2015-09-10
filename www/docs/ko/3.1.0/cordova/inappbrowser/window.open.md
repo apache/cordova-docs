@@ -20,42 +20,42 @@ license: >
 
 # window.open
 
-새 URL을 엽니다 `InAppBrowser` 인스턴스, 현재 브라우저 인스턴스 또는 시스템 브라우저.
+새 URL을 엽니다 `<a href="inappbrowser.html">InAppBrowser</a>` 인스턴스, 현재 브라우저 인스턴스 또는 시스템 브라우저.
 
     var ref = window.open(url, target, options);
     
 
-*   **심판**:에 대 한 참조는 `InAppBrowser` 창. *(InAppBrowser)*
+*   **심판**:에 대 한 참조는 `<a href="inappbrowser.html">InAppBrowser</a>` 창. *(<a href="inappbrowser.html">InAppBrowser</a>)*
 
 *   **url**: *(문자열)를*로드 하는 URL. 전화 `encodeURI()` 이 경우에는 URL 유니코드 문자를 포함 합니다.
 
-*   **대상**: 대상 URL, 기본적으로 선택적 매개 변수를 로드 하는 `_self` . *(문자열)*
+*   **대상**: 대상 URL, 기본적으로 선택적 매개 <a href="../../plugin_ref/spec.html">변수</a>를 로드 하는 `_self` . *(문자열)*
     
-    *   `_self`: URL 화이트 리스트에 있으면 코르도바 WebView에서 열리고, 그렇지 않으면 열에`InAppBrowser`.
-    *   `_blank`: 준공에`InAppBrowser`.
+    *   `_self`: URL 화이트 리스트에 있으면 코르도바 WebView에서 열리고, 그렇지 않으면 열에`<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_blank`: 준공에`<a href="inappbrowser.html">InAppBrowser</a>`.
     *   `_system`: 시스템의 웹 브라우저에서 엽니다.
 
-*   **옵션**: 옵션은 `InAppBrowser` . 선택적, 디폴트에: `location=yes` . *(문자열)*
+*   **옵션**: 옵션은 `<a href="inappbrowser.html">InAppBrowser</a>` . 선택적, 디폴트에: `location=yes` . *(문자열)*
     
     `options`문자열 텅 빈 어떤 스페이스 포함 해서는 안 그리고 쉼표 각 기능의 이름/값 쌍을 구분 합니다. 기능 이름은 대/소문자입니다. 모든 플랫폼 지원 아래 값:
     
-    *   **위치**: 설정 `yes` 또는 `no` 설정 하는 `InAppBrowser` 의 위치 표시줄 켜거나 끕니다.
+    *   **<a href="../geolocation/Position/position.html">위치</a>**: 설정 `yes` 또는 `no` 설정 하는 `<a href="inappbrowser.html">InAppBrowser</a>` 의 <a href="../geolocation/Position/position.html">위치</a> 표시줄 켜거나 끕니다.
     ## 안 드 로이드만
     
     *   **closebuttoncaption** -것입니다 "완료" 버튼에 대 한 캡션 문자열을 설정 합니다. 
-    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
+    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load <a href="../events/events.html">이벤트</a>는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
     *   **clearcache** -브라우저의 쿠키 캐시 새 창을 열기 전에 허가를 '예'로 설정
     *   **clearsessioncache** -새 창 열기 전에 해제 세션 쿠키 캐시를 '예'로 설정
     ## iOS만
     
     *   **closebuttoncaption** -것입니다 "완료" 버튼에 대 한 캡션 문자열을 설정 합니다. 참고 직접이 값을 지역화 해야 합니다.
-    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
-    *   **도구 모음** -'예' 또는 '아니요'를 InAppBrowser (기본값은 '예')에 대 한 도구 모음 설정 또는 해제 설정
+    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load <a href="../events/events.html">이벤트</a>는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
+    *   **도구 모음** -'예' 또는 '아니요'를 <a href="inappbrowser.html">InAppBrowser</a> (기본값은 '예')에 대 한 도구 모음 설정 또는 해제 설정
     *   **enableViewportScale**: 설정 `yes` 또는 `no` 뷰포트 메타 태그 (기본값:를 통해 확장을 방지 하기 위해`no`).
     *   **mediaPlaybackRequiresUserAction**: 설정 `yes` 또는 `no` HTML5 오디오 또는 비디오 자동 재생 (기본값에서에서 방지 하기 위해`no`).
-    *   **allowInlineMediaPlayback**: 설정 `yes` 또는 `no` 장치 전용 재생 인터페이스 보다는 브라우저 창 내에서 표시 하는 인라인 HTML5 미디어 재생 허용. HTML의 `video` 요소가 포함 되어야 합니다는 `webkit-playsinline` 특성 (기본값:`no`)
+    *   **allowInlineMediaPlayback**: 설정 `yes` 또는 `no` <a href="../device/device.html">장치</a> 전용 재생 인터페이스 보다는 브라우저 창 내에서 표시 하는 인라인 HTML5 <a href="../media/media.html">미디어</a> 재생 허용. HTML의 `video` 요소가 포함 되어야 합니다는 `webkit-playsinline` 특성 (기본값:`no`)
     *   **keyboardDisplayRequiresUserAction**: 설정 `yes` 또는 `no` 양식 요소는 자바 스크립트를 통해 포커스를 받을 때 키보드를 열고 `focus()` 전화 (기본값:`yes`).
-    *   **suppressesIncrementalRendering**: 설정 `yes` 또는 `no` (기본값을 렌더링 하기 전에 모든 새로운 보기 콘텐츠를 받을 때까지 기다려야`no`).
+    *   **suppressesIncrementalRendering**: 설정 `yes` 또는 `no` (기본값을 렌더링 하기 전에 모든 새로운 <a href="inappbrowser.html">보기</a> 콘텐츠를 받을 때까지 기다려야`no`).
     *   **presentationstyle**: 설정 `pagesheet` , `formsheet` 또는 `fullscreen` [프레 젠 테이 션 스타일][1] (기본값을 설정 하려면`fullscreen`).
     *   **transitionstyle**: 설정 `fliphorizontal` , `crossdissolve` 또는 `coververtical` [전환 스타일][2] (기본값을 설정 하려면`coververtical`).
 
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open Example</title>
+        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

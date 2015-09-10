@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Guía de la plataforma BlackBerry 10
+# <a href="../blackberry/index.html">Guía de la plataforma BlackBerry</a> 10
 
 Esta guía le muestra cómo configurar su entorno SDK para desplegar aplicaciones Cordova para dispositivos BlackBerry 10. Para las versiones anteriores de BlackBerry, tienes que usar un diverso ambiente SDK y conjunto de herramientas de línea de comandos, que se describe en la guía de la plataforma BlackBerry. Para BlackBerry 10, tienes que instalar el SDK de independientemente de si desea utilizar el CLI Cordova multiplataforma para el desarrollo, o un estrecho conjunto de herramientas de línea de comandos centrado en plataforma. Para una comparación de las trayectorias de dos desarrollo, vea la información general. Para obtener más información sobre cada uno, ver el BlackBerry 10 Shell herramienta de guía y la interfaz de línea de comandos.
 

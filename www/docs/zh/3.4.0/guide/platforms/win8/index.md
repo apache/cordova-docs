@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-# Windows 8 平臺指南
+# Windows 8 <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境為 Windows 8 部署科爾多瓦的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   升級 Windows 8
-*   Windows 8 的命令列工具
+*   <a href="upgrading.html">升級 Windows 8</a>
+*   <a href="tools.html">Windows 8 的命令列工具</a>
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應用程式*名稱 MSDN 現在指的是這種類型的應用程式作為*Windows 應用商店*的應用程式，並且本指南跟隨該公約 》。 此外，在本指南中*Windows 8*表示 Windows 8 和 Windows 室溫下
 
@@ -55,7 +55,7 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 
 *   打開 Visual Studio 2012 並選擇**新的專案**.
 
-*   從專案清單從樹，然後**空白應用程式**選擇**安裝 → 範本 → 其它語言 → JavaScript → Windows 存儲區**。 輸入你喜歡的如無論專案名稱 `CordovaWin8Foo` 如本示例所示：
+*   從專案清單從樹，然後**空白應用程式**選擇**安裝 → 範本 → 其它語言 → JavaScript → Windows <a href="../../../cordova/storage/storage.html">存儲</a>區**。 輸入你喜歡的如無論專案名稱 `CordovaWin8Foo` 如本示例所示：
     
     ![][4]
 
@@ -81,13 +81,13 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
             <script src="/js/default.js"></script>
         
 
-*   添加 `deviceready` 處理常式，以演示科爾多瓦工作：
+*   添加 `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` 處理常式，以演示科爾多瓦工作：
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("deviceready", function () {
+                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

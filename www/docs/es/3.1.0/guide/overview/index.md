@@ -66,7 +66,7 @@ XREF -->
 
 ## Soporte de plataformas
 
-A continuación muestra el conjunto de herramientas de desarrollo y dispositivo API disponibles para cada plataforma móvil. (Encabezados de columna Mostrar recibos de forma abreviada de la CLI).
+A continuación muestra el conjunto de herramientas de desarrollo y dispositivo API disponibles para cada plataforma móvil. (Encabezados de columna <a href="../../cordova/inappbrowser/inappbrowser.html">Mostrar</a> recibos de forma abreviada de la CLI).
 
 <!-- START HTML -->
 
@@ -223,7 +223,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Acelerómetro</a>
+          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/accelerometer.html">Acelerómetro</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -253,7 +253,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Cámara</a>
+          <a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">Cámara</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -283,7 +283,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Captura</a>
+          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Captura</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +313,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Brújula</a>
+          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Brújula</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +344,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Conexión</a>
+          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Conexión</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +374,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Contactos</a>
+          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/Contact/contact.html">Contacto</a>s</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -404,7 +404,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Dispositivo</a>
+          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">Dispositivo</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -434,7 +434,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Eventos</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Eventos</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -464,7 +464,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Archivo</a>
+          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">Archivo</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -480,11 +480,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="winphone7"  class="p">
-          No File Transfer
+          No <a href="../../cordova/file/filetransfer/filetransfer.html">File Transfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          No File Transfer
+          No <a href="../../cordova/file/filetransfer/filetransfer.html">File Transfer</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -496,7 +496,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Geolocalización</a>
+          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">Geolocalización</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +526,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Globalización</a>
+          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Globalización</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +556,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +586,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Los medios de comunicación</a>
+          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Los medios de comunicación</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +616,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Notificación</a>
+          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Notificación</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +646,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
+          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">SplashScreen</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +676,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Almacenamiento de información</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Almacenamiento de información</a></a>
         </th>
         
         <td data-col="android"    class="y">
@@ -692,11 +692,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="winphone7"  class="p">
-          localStorage sólo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> sólo
         </td>
         
         <td data-col="winphone8"  class="p">
-          localStorage sólo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> sólo
         </td>
         
         <td data-col="win8"       class="y">

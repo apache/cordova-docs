@@ -22,7 +22,7 @@ license: >
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 注: これを false に設定がない殺すアプリ一時停止イベントの後、アプリはバック グラウンドでコルドバ webview でコードの実行を停止のみです。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` <a href="../../../cordova/events/events.html">イベント</a>が発生します。 注: これを false に設定がない殺すアプリ一時停止<a href="../../../cordova/events/events.html">イベント</a>の後、アプリはバック グラウンドでコルドバ webview でコードの実行を停止のみです。
     
         <preference name="KeepRunning" value="false"/>
         
@@ -42,7 +42,7 @@ license: >
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ localStorage および WebSQL ストレージ ページ、既定のブラウザーで開かれます。
+*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ <a href="../../../cordova/storage/localstorage/localstorage.html">localStorage</a> および WebSQL <a href="../../../cordova/storage/storage.html">ストレージ</a> ページ、既定のブラウザーで開かれます。
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

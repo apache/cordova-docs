@@ -20,7 +20,7 @@ license: >
 
 # Flags
 
-Fournit des arguments aux méthodes `getFile()` et `getDirectory()` de l'objet `DirectoryEntry` qui se chargent respectivement de rechercher ou créer des fichiers et des répertoires.
+Fournit des arguments aux méthodes `get<a href="../fileobj/fileobj.html">File</a>()` et `getDirectory()` de l'objet `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` qui se chargent respectivement de rechercher ou créer des fichiers et des répertoires.
 
 ## Propriétés
 
@@ -42,4 +42,4 @@ Fournit des arguments aux méthodes `getFile()` et `getDirectory()` de l'objet `
     dataDir = fileSystem.root.getDirectory("data", {create: true});
     
     // Créer le fichier de verrouillage uniquement s'il n'existe pas déjà.
-    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
+    lock<a href="../fileobj/fileobj.html">File</a> = dataDir.get<a href="../fileobj/fileobj.html">File</a>("lockfile.txt", {create: true, exclusive: true});

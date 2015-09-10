@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 플러그인
 
-이 섹션에서는 Windows Phone 플랫폼에 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
+이 섹션에서는 Windows Phone 플랫폼에 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 <a href="../../overview/index.html">개요</a> 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
 
 코르 도우 바에 대 한 Windows Phone는 플러그인을 작성 코르도바의 아키텍처에 대 한 기본적인 이해를 필요 합니다. 코르 도우 바 WP7 이루어져 있는 `WebBrowser` 네이티브 API 호출을 관리 하 고 응용 프로그램의 자바 스크립트 코드를 호스팅하. C#을 확장할 수 있습니다. `BaseCommand` 클래스 ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), 어떤 대부분의 필요한 기능을 함께 제공:
 
@@ -46,7 +46,7 @@ license: >
                 / 공공, 무효, 1 인수를 문자열로 반환 /}}
         
 
-재정의 하려면 플러그인에 대 한 사용할 수 있는 방법에 대 한 [BaseCommand.cs][1] 클래스를 참조 하십시오. 예를 들어 플러그인 '일시 중지' 및 '다시 시작' 이벤트를 캡처할 수 있습니다.
+재정의 하려면 플러그인에 대 한 사용할 수 있는 방법에 대 한 [BaseCommand.cs][1] 클래스를 참조 하십시오. 예를 들어 플러그인 '<a href="../../../cordova/events/events.pause.html">일시 중지</a>' 및 '다시 시작' <a href="../../../cordova/events/events.html">이벤트</a>를 캡처할 수 있습니다.
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
@@ -144,7 +144,7 @@ license: >
 
 ## 플러그인 XML
 
-다음 사용 하는 방법을 보여 줍니다 있는 `plugin.xml` 파일 Windows Phone 플랫폼에는 플러그인의 소스 파일을 지정 합니다. 사용 가능한 옵션에 대 한 자세한 내용은 응용 프로그램 플러그인 플러그인 사양에 대 한 개요, 참조.
+다음 사용 하는 방법을 보여 줍니다 있는 `plugin.xml` 파일 Windows Phone 플랫폼에는 플러그인의 소스 파일을 지정 합니다. 사용 가능한 옵션에 대 한 자세한 내용은 응용 프로그램 플러그인 플러그인 사양에 대 한 <a href="../../overview/index.html">개요</a>, 참조.
 
 *   `<source-file>`요소 정의 *.cs* *.xaml*, 같은 모든 플러그인 리소스 *. xaml.cs*, *.dll* 파일, 그리고 이미지 자산.
 

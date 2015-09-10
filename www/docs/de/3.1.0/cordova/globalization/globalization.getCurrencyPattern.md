@@ -43,7 +43,7 @@ Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Par
 
 Die eingehende `currencyCode` Parameter sollte ein `String` einer der ISO 4217 Währungscodes, z. B. 'USD'.
 
-Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.FORMATTING\_ERROR`.
+Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -84,7 +84,7 @@ Erwartete Ergebnis:
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern Example</title>
+        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -39,60 +39,60 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    function checkConnection() {
+    function check<a href="connection.html">Connection</a>() {
         var networkState = navigator.connection.type;
         
         var states = {};
-        states[Connection.UNKNOWN]	= 'Unknown connection';
-        states[Connection.ETHERNET]	= 'Ethernet connection';
-        states[Connection.WIFI]   	= 'WiFi connection';
-        states[Connection.CELL_2G]	= 'Cell 2G connection';
-        states[Connection.CELL_3G]	= 'Cell 3G connection';
-        states[Connection.CELL_4G]	= 'Cell 4G connection';
-        states[Connection.NONE]   	= 'No network connection';
+        states[<a href="connection.html">Connection</a>.UNKNOWN]	= 'Unknown connection';
+        states[<a href="connection.html">Connection</a>.ETHERNET]	= 'Ethernet connection';
+        states[<a href="connection.html">Connection</a>.WIFI]   	= 'WiFi connection';
+        states[<a href="connection.html">Connection</a>.CELL_2G]	= 'Cell 2G connection';
+        states[<a href="connection.html">Connection</a>.CELL_3G]	= 'Cell 3G connection';
+        states[<a href="connection.html">Connection</a>.CELL_4G]	= 'Cell 4G connection';
+        states[<a href="connection.html">Connection</a>.NONE]   	= 'No network connection';
     
-        alert('Connection type: ' + states[networkState]);
+        alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
     }
     
-    checkConnection();
+    check<a href="connection.html">Connection</a>();
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type Example</title>
+        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
         
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
             
         // Wait for Cordova to load
         // 
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
-            checkConnection();
+        function on<a href="../device/device.html">Device</a>Ready() {
+            check<a href="connection.html">Connection</a>();
         }
         
-	    function checkConnection() {
+	    function check<a href="connection.html">Connection</a>() {
 	        var networkState = navigator.connection.type;
 
 	        var states = {};
-	        states[Connection.UNKNOWN]	= 'Unknown connection';
-	        states[Connection.ETHERNET]	= 'Ethernet connection';
-	        states[Connection.WIFI]   	= 'WiFi connection';
-	        states[Connection.CELL_2G]	= 'Cell 2G connection';
-	        states[Connection.CELL_3G]	= 'Cell 3G connection';
-	        states[Connection.CELL_4G]	= 'Cell 4G connection';
-	        states[Connection.NONE]   	= 'No network connection';
+	        states[<a href="connection.html">Connection</a>.UNKNOWN]	= 'Unknown connection';
+	        states[<a href="connection.html">Connection</a>.ETHERNET]	= 'Ethernet connection';
+	        states[<a href="connection.html">Connection</a>.WIFI]   	= 'WiFi connection';
+	        states[<a href="connection.html">Connection</a>.CELL_2G]	= 'Cell 2G connection';
+	        states[<a href="connection.html">Connection</a>.CELL_3G]	= 'Cell 3G connection';
+	        states[<a href="connection.html">Connection</a>.CELL_4G]	= 'Cell 4G connection';
+	        states[<a href="connection.html">Connection</a>.NONE]   	= 'No network connection';
 
-	        alert('Connection type: ' + states[networkState]);
+	        alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
 	    }
         
         </script>
@@ -104,7 +104,7 @@ Full Example
 
 API Change
 ----------
-Before Cordova 2.2.0, the Connection object existed at: `navigator.network.connection`.
+Before Cordova 2.2.0, the <a href="connection.html">Connection</a> object existed at: `navigator.network.connection`.
 
 To match the spec, this was changed to `navigator.connection` in 2.2.0.
 
@@ -114,26 +114,26 @@ iOS Quirks
 ----------
 
 - iOS cannot detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL_2G` for all cellular data.
 
 Bada Quirks
 -----------
 
 - Bada can only detect a WiFi or cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL_2G` for all cellular data.
 
 webOS Quirks
 ------------
 
-- Only shows that a connection is available, but not which type.
+- Only <a href="../splashscreen/splashscreen.show.html">show</a>s that a connection is available, but not which type.
 
 Windows Phone Quirks
 --------------------
 
-- Windows Phone Emulator always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- Windows Phone Emulator always detects `navigator.connection.type` as `<a href="connection.html">Connection</a>.UNKNOWN`.
 
 Tizen Quirks
 --------------------
 
 - Tizen can only detect a WiFi or cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `<a href="connection.html">Connection</a>.CELL_2G` for all cellular data.

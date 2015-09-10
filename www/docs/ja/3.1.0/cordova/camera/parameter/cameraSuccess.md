@@ -29,7 +29,7 @@ license: >
 
 ## パラメーター
 
-*   **imagedata を扱う**: Base64 エンコード イメージのデータ、*または*画像ファイルによって URI の `cameraOptions` 効果。*(文字列)*
+*   **imagedata を扱う**: Base64 エンコード イメージのデータ、*または*画像<a href="../../file/fileobj/fileobj.html">ファイル</a>によって URI の `<a href="cameraOptions.html">cameraOptions</a>` 効果。*(文字列)*
 
 ## 例
 

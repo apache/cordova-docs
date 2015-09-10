@@ -22,7 +22,7 @@ license: >
 
 域白是一種安全模式，控制訪問到您應用程式有沒有控制的外部域。 科爾多瓦的預設安全性原則允許訪問的任何網站。 在移動之前您在生產中的應用，應制訂白名單和允許訪問特定的網路域和子域。
 
-科爾多瓦遵循[W3C 構件訪問][1]規範，它依賴于 `<access>` 中應用程式的元素 `config.xml` 檔以啟用對特定域的網路訪問。 對於依賴于所述的命令列介面 CLI 工作流的專案，此檔位於專案的頂級目錄。 否則為特定于平臺的發展道路，位置列出以下各節。 （每個平臺上見各種平臺指南的詳細資訊）。
+科爾多瓦遵循[W3C 構件訪問][1]規範，它依賴于 `<access>` 中應用程式的元素 `config.xml` 檔以啟用對特定域的網路訪問。 對於依賴于所述的<a href="../../cli/index.html">命令列介面</a> CLI 工作流的專案，此檔位於專案的頂級目錄。 否則為特定于平臺的發展道路，位置列出以下各節。 （每個平臺上見各種<a href="../../platforms/index.html">平臺指南</a>的詳細資訊）。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
@@ -93,7 +93,7 @@ license: >
 
 黑莓 10 位使用萬用字元有別于其他平臺兩種方式：
 
-*   通過訪問任何內容 `XMLHttpRequest` 必須顯式聲明。 設置 `origin="*"` 不在這種情況下工作。 另外，所有 web 安全性可能會都禁用使用 `WebSecurity` 黑莓手機配置中所述的首選項：
+*   通過訪問任何內容 `XMLHttpRequest` 必須顯式聲明。 設置 `origin="*"` 不在這種情況下工作。 另外，所有 web 安全性可能會都禁用使用 `WebSecurity` <a href="../../platforms/blackberry/config.html">黑莓手機配置</a>中所述的首選項：
     
         <preference name="websecurity" value="disable" />
         

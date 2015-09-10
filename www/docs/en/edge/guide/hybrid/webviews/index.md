@@ -31,7 +31,7 @@ To deploy a WebView, you need to be familiar with each native
 programming environment. The following provides instructions for
 supported platforms:
 
-- Amazon Fire OS WebViews
-- Android WebViews
-- iOS WebViews
-- Windows Phone 8.0 WebViews
+- <a href="../../platforms/amazonfireos/webview.html">Amazon Fire OS WebViews</a>
+- <a href="../../platforms/android/webview.html">Android WebViews</a>
+- <a href="../../platforms/ios/webview.html">iOS WebViews</a>
+- <a href="../../platforms/wp8/webview.html">Windows Phone 8.0 WebViews</a>

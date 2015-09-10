@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Notification.Beep
+# <a href="notification.html">Notifica</a>tion.Beep
 
 Il dispositivo riproduce un bip sonoro.
 
@@ -46,14 +46,14 @@ Il dispositivo riproduce un bip sonoro.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notifica</a>tion <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -95,7 +95,7 @@ Il dispositivo riproduce un bip sonoro.
 
 ## Stranezze Android
 
-*   Android giochi default **Notification ringtone** specificato sotto il pannello **impostazioni/audio e Display** .
+*   Android giochi default **<a href="notification.html">Notifica</a>tion ringtone** specificato sotto il pannello **impostazioni/audio e Display** .
 
 ## Windows Phone 7 e 8 stranezze
 

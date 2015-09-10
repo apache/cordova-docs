@@ -42,9 +42,9 @@ Leer las entradas en este directorio.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa una matriz de `FileEntry` y `DirectoryEntry` los objetos. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa una matriz de `<a href="../fileentry/fileentry.html">FileEntry</a>` y `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` los objetos. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar el listado del directorio. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar el listado del directorio. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
 
 **Ejemplo rápido**
 

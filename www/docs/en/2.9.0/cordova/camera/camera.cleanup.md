@@ -24,28 +24,28 @@ camera.cleanup
 Removes intermediate photos taken by the camera from temporary
 storage.
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
 
 Description
 -----------
 
 Removes intermediate image files that are kept in temporary storage
-after calling `camera.getPicture`. Applies only when the value of
-`Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
-`Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.
+after calling `<a href="camera.getPicture.html">camera.getPicture</a>`. Applies only when the value of
+`<a href="camera.html">Camera</a>.sourceType` equals `<a href="camera.html">Camera</a>.PictureSourceType.CAMERA` and the
+`<a href="camera.html">Camera</a>.destinationType` equals `<a href="camera.html">Camera</a>.DestinationType.FILE_URI`.
 
 Supported Platforms
 -------------------
 
 - iOS
 
-Example
+<a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail);
 
     function onSuccess() {
-        console.log("Camera cleanup success.")
+        console.log("<a href="camera.html">Camera</a> cleanup success.")
     }
 
     function onFail(message) {

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Actualizar BlackBerry 10
+# <a href="../blackberry/upgrading.html">Actualizar BlackBerry</a> 10
 
 Esta guía le muestra cómo modificar proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un conjunto mayor de herramientas de línea de comandos que preceden a la utilidad de la CLI de `cordova`. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 

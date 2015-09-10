@@ -20,11 +20,11 @@ license: >
 
 # 位置
 
-含まれています `Position` 座標、地理位置情報 API で作成されたタイムスタンプ。
+含まれています `Position` <a href="../Coordinates/coordinates.html">座標</a>、<a href="../geolocation.html">地理位置情報</a> API で作成されたタイムスタンプ。
 
 ## プロパティ
 
-*   **coords**: 地理的座標のセット。*（座標）*
+*   **coords**: 地理的<a href="../Coordinates/coordinates.html">座標</a>のセット。*（<a href="../Coordinates/coordinates.html">座標</a>）*
 
 *   **タイムスタンプ**: 作成のタイムスタンプを `coords` 。*（日）*
 
@@ -56,14 +56,14 @@ license: >
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
     
 
 ## 完全な例
@@ -71,19 +71,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
         // onSuccess Geolocation
@@ -100,7 +100,7 @@ license: >
                                 'Timestamp: '         + position.timestamp               + '<br />';
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

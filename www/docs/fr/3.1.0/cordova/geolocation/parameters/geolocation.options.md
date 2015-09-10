@@ -20,16 +20,16 @@ license: >
 
 # geolocationOptions
 
-Paramètres optionnels permettant la personnalisation de la récupération d'une `Position` géolocalisée.
+Paramètres optionnels permettant la personnalisation de la récupération d'une `<a href="../Position/position.html">Position</a>` géolocalisée.
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
     
 
 ## Options
 
-*   **enableHighAccuracy** : indique que l'application nécessite les meilleurs résultats possibles. Par défaut, l'appareil tente de récupérer une `Position` à l'aide de méthodes basées sur le réseau. Définir cette propriété à `true` demande à Cordova d'utiliser des méthodes plus précises, telles que la localisation par satellite. *(Boolean)*
+*   **enableHighAccuracy** : indique que l'application nécessite les meilleurs résultats possibles. Par défaut, l'appareil tente de récupérer une `<a href="../Position/position.html">Position</a>` à l'aide de méthodes basées sur le réseau. Définir cette propriété à `true` demande à Cordova d'utiliser des méthodes plus précises, telles que la localisation par satellite. *(Boolean)*
 
-*   **timeout** : la durée maximale (en millisecondes) allouée depuis l'appel à `geolocation.getCurrentPosition` ou `geolocation.watchPosition` jusqu'à ce que la fonction callback `geolocationSuccess` correspondante soit exécutée. Si `geolocationSuccess` n'est pas appelée dans ce délai, le code d'erreur `PositionError.TIMEOUT` est transmis à la fonction callback `geolocationError`. (Notez que, dans le cas de `geolocation.watchPosition`, la fonction callback `geolocationError` pourrait être appelée à un intervalle régulier de `timeout` millisecondes !) *(Number)*
+*   **timeout** : la durée maximale (en millisecondes) allouée depuis l'appel à `geolocation.getCurrent<a href="../Position/position.html">Position</a>` ou `geolocation.watch<a href="../Position/position.html">Position</a>` jusqu'à ce que la fonction callback `<a href="geolocationSuccess.html">geolocationSuccess</a>` correspondante soit exécutée. Si `<a href="geolocationSuccess.html">geolocationSuccess</a>` n'est pas appelée dans ce délai, le code d'erreur `<a href="../<a href="../Position/position.html">Position</a>Error/positionError.html"><a href="../Position/position.html">Position</a>Error</a>.TIMEOUT` est transmis à la fonction callback `<a href="geolocationError.html">geolocationError</a>`. (Notez que, dans le cas de `geolocation.watch<a href="../Position/position.html">Position</a>`, la fonction callback `<a href="geolocationError.html">geolocationError</a>` pourrait être appelée à un intervalle régulier de `timeout` millisecondes !) *(Number)*
 
 *   **maximumAge** : accepter une position mise en cache dont l'âge ne dépasse pas le délai spécifié en millisecondes. *(Number)*
 

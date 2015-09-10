@@ -37,37 +37,37 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
 
         // Show a custom alert
         //
-        function showAlert() {
-		    navigator.notification.alert(
+        function <a href="../splashscreen/splashscreen.show.html">show</a>Alert() {
+		    navigator.<a href="notification.alert.html">notification.alert</a>(
 		        'You are the winner!',  // message
 		        'Game Over',            // title
 		        'Done'                  // buttonName
@@ -83,13 +83,13 @@ Full Example
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.notification.vibrate(2000);
+            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
         }
 
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Alert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
@@ -98,7 +98,7 @@ Full Example
 Android Quirks
 --------------
 
-- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
+- Android plays the default "<a href="notification.html">Notification</a> ringtone" specified under the "Settings/Sound & Display" panel.
 
 iPhone Quirks
 -------------

@@ -23,30 +23,30 @@ Storage
 
 > デバイスのストレージにアクセスする機能を提供します。
 
-この API は [W3C Web SQL Database 仕様書](http://dev.w3.org/html5/webdatabase/) と [W3C Web Storage API 仕様書](http://dev.w3.org/html5/webstorage/) をベースとしています。いくつかのデバイスではすでにこの機能の実装を提供しています。これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。ストレージのサポートがされてないデバイスについては、 Cordova の実装によって W3C の仕様に沿った機能が提供されます。
+この API は [W3C Web SQL <a href="database/database.html">Database</a> 仕様書](http://dev.w3.org/html5/webdatabase/) と [W3C Web Storage API 仕様書](http://dev.w3.org/html5/webstorage/) をベースとしています。いくつかのデバイスではすでにこの機能の実装を提供しています。これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。ストレージのサポートがされてないデバイスについては、 Cordova の実装によって W3C の仕様に沿った機能が提供されます。
 
 メソッド
 -------
 
-- openDatabase
+- <a href="storage.opendatabase.html">open<a href="database/database.html">Database</a></a>
 
 引数
 ---------
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+- <a href="parameters/name.html">database_name</a>
+- <a href="parameters/version.html">database_version</a>
+- <a href="parameters/display_name.html">database_displayname</a>
+- <a href="parameters/size.html">database_size</a>
 
 オブジェクト
 -------
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetList
-- SQLError
-- localStorage
+- <a href="database/database.html">Database</a>
+- <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>List
+- <a href="sqlerror/sqlerror.html">SQLError</a>
+- <a href="localstorage/localstorage.html">localStorage</a>
 
 パーミッション
 -----------

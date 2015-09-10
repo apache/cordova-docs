@@ -20,7 +20,7 @@ license: >
 
 # Amazon Fire OS Plugins
 
-Folgen Sie den Anweisungen im Handbuch für das Android Plugins für einen Überblick über die Entwicklung von benutzerdefinierten Plugins.
+Folgen Sie den Anweisungen im Handbuch für das <a href="../android/plugin.html">Android Plugins</a> für einen Überblick über die Entwicklung von benutzerdefinierten Plugins.
 
 ## Echo Amazon Fire OS Plugin Beispiel
 

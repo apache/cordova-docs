@@ -58,7 +58,7 @@ which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings.
 <!-- XREF
-(See the API Reference for an overview, and the API and Configuration
+(See the <a href="../../index.html">API Reference</a> for an overview, and the API and Configuration
 Guide for examples of how to use them.)
 XREF -->
 
@@ -72,7 +72,7 @@ components to communicate with each other.
 
 The easiest way to set up an application is to run the `cordova`
 command-line utility, also known as the _command-line interface_
-(CLI). (To install the CLI, see The Cordova Command-line Interface.)
+(CLI). (To install the CLI, see <a href="../cli/index.html">The Cordova Command-line Interface</a>.)
 Depending on the set of platforms you wish to target, you can rely on
 the CLI for progressively greater shares of the development cycle:
 
@@ -84,7 +84,7 @@ the CLI for progressively greater shares of the development cycle:
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
   <!-- XREF
-  (See the Platform Guides for instructions.)
+  (See the <a href="../getting-started/index.html">Platform Guides</a> for instructions.)
   XREF -->
   As indicated in the Platform Support table below, you may need to
   run the CLI on different operating systems depending on the targeted
@@ -103,7 +103,7 @@ At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
 options. 
 <!-- XREF
-(See the Platform Guides for details about each platform's SDK tool set.)
+(See the <a href="../getting-started/index.html">Platform Guides</a> for details about each platform's SDK tool set.)
 XREF -->
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
@@ -207,7 +207,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_accelerometer_accelerometer.md.html">Accelerometer</a></th>
+        <th><a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/accelerometer.html">Accelerometer</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -218,7 +218,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_camera_camera.md.html">Camera</a></th>
+        <th><a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">Camera</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -229,7 +229,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_media_capture_capture.md.html">Capture</a></th>
+        <th><a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Capture</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -240,7 +240,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_compass_compass.md.html">Compass</a></th>
+        <th><a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Compass</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -251,7 +251,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_connection_connection.md.html">Connection</a></th>
+        <th><a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Connection</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -262,7 +262,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_contacts_contacts.md.html">Contacts</a></th>
+        <th><a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/Contact/contact.html">Contact</a>s</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -273,7 +273,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_device_device.md.html">Device</a></th>
+        <th><a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">Device</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -284,7 +284,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_events_events.md.html">Events</a></th>
+        <th><a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Events</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -295,7 +295,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_file_file.md.html">File</a></th>
+        <th><a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">File</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -306,7 +306,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_geolocation_geolocation.md.html">Geolocation</a></th>
+        <th><a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">Geolocation</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -317,7 +317,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_globalization_globalization.md.html">Globalization</a></th>
+        <th><a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Globalization</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -328,7 +328,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a></th>
+        <th><a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -339,7 +339,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_media_media.md.html">Media</a></th>
+        <th><a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Media</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -350,7 +350,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_notification_notification.md.html">Notification</a></th>
+        <th><a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Notification</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -361,7 +361,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a></th>
+        <th><a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -372,7 +372,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="cordova_storage_storage.md.html">Storage</a></th>
+        <th><a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Storage</a></a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>

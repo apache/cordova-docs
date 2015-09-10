@@ -20,7 +20,7 @@ license: >
 
 # geolocationSuccess
 
-Funzione di callback dell'utente che viene eseguito quando una posizione di geolocalizzazione diventa disponibile (quando viene chiamato da `geolocation.getCurrentPosition` ), o quando si modifica la posizione (quando viene chiamato da`geolocation.watchPosition`).
+Funzione di callback dell'utente che viene eseguito quando una posizione di geolocalizzazione diventa disponibile (quando viene chiamato da `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ), o quando si modifica la posizione (quando viene chiamato da`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
 
     function(position) {
         // Do something
@@ -29,7 +29,7 @@ Funzione di callback dell'utente che viene eseguito quando una posizione di geol
 
 ## Parametri
 
-*   **posizione**: la posizione di geolocalizzazione restituita dal dispositivo. *(Posizione)*
+*   **posizione**: la posizione di geolocalizzazione restituita dal dispositivo. *(<a href="../Position/position.html">Posizione</a>)*
 
 ## Esempio
 

@@ -20,7 +20,7 @@ license: >
 
 # device.platform
 
-デバイスのオペレーティング システム名を取得します。
+<a href="device.html">デバイス</a>のオペレーティング システム名を取得します。
 
     var string = device.platform;
     
@@ -50,24 +50,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
+            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
+                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
+                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
+                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
     
         </script>
@@ -80,12 +80,12 @@ license: >
 
 ## ブラックベリーの癖
 
-デバイスは、プラットフォーム名ではなくデバイス プラットフォームのバージョン番号を返すことがあります。たとえば、Storm2 9550 を返しますよう`2.13.0.95`.
+<a href="device.html">デバイス</a>は、プラットフォーム名ではなく<a href="device.html">デバイス</a> プラットフォームのバージョン番号を返すことがあります。たとえば、Storm2 9550 を返しますよう`2.13.0.95`.
 
 ## Windows Phone 7 の癖
 
-Windows Phone 7 デバイスとプラットフォームを報告します。`WinCE`.
+Windows Phone 7 <a href="device.html">デバイス</a>とプラットフォームを報告します。`WinCE`.
 
 ## Windows Phone 8 癖
 
-Windows Phone 8 デバイスとプラットフォームを報告します。`Win32NT`.
+Windows Phone 8 <a href="device.html">デバイス</a>とプラットフォームを報告します。`Win32NT`.

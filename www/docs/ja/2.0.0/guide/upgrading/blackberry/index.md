@@ -35,15 +35,15 @@ www フォルダーのアップデート:
 5. HTML を、新しい `cordova-2.0.0.js` を使って更新します
 6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い <a href="../../../cordova/media/capture/capture.html">Capture</a> 及び <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> プラグインを次から:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    次に変更します:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 サンプルフォルダーのアップデート (例, ant ツールを使ったアップデート):
@@ -57,15 +57,15 @@ www フォルダーのアップデート:
 7. `www/` フォルダーを開き、新しい `cordova-2.0.0.js` を使って HTML を更新します
 8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い <a href="../../../cordova/media/capture/capture.html">Capture</a> 及び <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> プラグインを次から:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    次に変更します:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 
@@ -84,15 +84,15 @@ www フォルダーのアップデート:
 5. 新しい `cordova-1.8.0.js` を使って HTML を更新します
 6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い <a href="../../../cordova/media/capture/capture.html">Capture</a> 及び <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> プラグインを次から:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    次に変更します:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 サンプルフォルダーのアップデート (例, ant ツールを使ったアップデート):
@@ -106,13 +106,13 @@ www フォルダーのアップデート:
 7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.8.0.js` を使って更新します
 8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い <a href="../../../cordova/media/capture/capture.html">Capture</a> 及び <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> プラグインを次から:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    次に変更します:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 

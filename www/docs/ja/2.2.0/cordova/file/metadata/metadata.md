@@ -31,7 +31,7 @@ Metadata
 詳細
 -------
 
-`Metadata` オブジェクトは、ファイルやディレクトリの状態を表します。 `DirectoryEntry` または `FileEntry` の __getMetadata__ メソッドを呼び出すことで、 Metadata オブジェクトが取得できます。
+`Metadata` オブジェクトは、ファイルやディレクトリの状態を表します。 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` または `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` の __getMetadata__ メソッドを呼び出すことで、 Metadata オブジェクトが取得できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -41,7 +41,7 @@ Metadata
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function win(metadata) {

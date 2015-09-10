@@ -26,29 +26,29 @@ DirectoryEntry
 プロパティー
 ----------
 
-- __isFile:__ 常に false を表します _(boolean)_
+- __is<a href="../fileobj/fileobj.html">File</a>:__ 常に false を表します _(boolean)_
 - __isDirectory:__ 常に true を表します _(boolean)_
 - __name:__ パスを除いた DirectoryEntry の名前を表します _(DOMString)_
 - __fullPath:__ ルートから DirectoryEntry への絶対パスを表します _(DOMString)_
 
 注意: 以下の属性は W3C の仕様書によって定義されていますが、 Cordova では __サポートされていません__ :
 
-- __filesystem:__ DirectoryEntry が属するファイルシステムを表します _(FileSystem)_
+- __filesystem:__ DirectoryEntry が属するファイルシステムを表します _(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>)_
 
 メソッド
 -------
 
 以下のメソッドは DirectoryEntry オブジェクトから呼び出すことができます:
 
-- __getMetadata__: ディレクトリのメタデータを取得します
+- __get<a href="../metadata/metadata.html">Metadata</a>__: ディレクトリのメタデータを取得します
 - __moveTo__: ディレクトリを、ファイルシステム内の別の場所に移動します
 - __copyTo__: ディレクトリを、ファイルシステム内の別の場所にコピーします
 - __toURI__: ディレクトリの位置特定に使用できる URI を返します
 - __remove__: ディレクトリを削除します。ディレクトリは空である必要があります
 - __getParent__: 親ディレクトリを取得します
-- __getParent__: ディレクトリからエントリを読み込みできる DirectoryReader を作成します
+- __getParent__: ディレクトリからエントリを読み込みできる <a href="../directoryreader/directoryreader.html">DirectoryReader</a> を作成します
 - __getDirectory__: ディレクトリを取得または作成します
-- __getFile__: ファイルを取得または作成します
+- __get<a href="../fileobj/fileobj.html">File</a>__: ファイルを取得または作成します
 - __removeRecursively__: ディレクトリと、その中身をすべて削除します
 
 
@@ -60,18 +60,18 @@ DirectoryEntry
 - iOS
 - Windows Phone 7 (Mango)
 
-getMetadata
+get<a href="../metadata/metadata.html">Metadata</a>
 -----------
 
 ディレクトリのメタデータを取得します。
 
 __パラメーター:__
 
-- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - <a href="../metadata/metadata.html">Metadata</a> オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - <a href="../metadata/metadata.html">Metadata</a> の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(metadata) {
         console.log("最終更新日: " + metadata.modificationTime);
@@ -81,8 +81,8 @@ __使用例__
         alert(error.code);
     }
 
-    // このエントリーの Metadata オブジェクトを取得
-    entry.getMetadata(success, fail);
+    // このエントリーの <a href="../metadata/metadata.html">Metadata</a> オブジェクトを取得
+    entry.get<a href="../metadata/metadata.html">Metadata</a>(success, fail);
 
 
 moveTo
@@ -102,10 +102,10 @@ __パラメーター:__
 - __parent__ - ディレクトリの移動先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(entry) {
         console.log("新しいパス: " + entry.fullPath);
@@ -139,10 +139,10 @@ __パラメーター:__
 - __parent__ - ディレクトリのコピー先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function win(entry) {
         console.log("新しいパス: " + entry.fullPath);
@@ -167,7 +167,7 @@ toURI
 
 ディレクトリの位置特定に使用できる URI を返します。
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     // ディレクトリ URI の取得
     var uri = entry.toURI();
@@ -185,9 +185,9 @@ remove
 __パラメーター:__
 
 - __successCallback__ - ディレクトリが削除されたときに呼び出されるコールバック関数を表します。パラメーターなしで呼び出されます _(Function)_
-- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(entry) {
         console.log("削除成功");
@@ -209,9 +209,9 @@ getParent
 __パラメーター:__
 
 - __successCallback__ - ディレクトリの親 DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(parent) {
         console.log("親ディレクトリの名前: " + parent.name);
@@ -228,9 +228,9 @@ __使用例__
 createReader
 ------------
 
-ディレクトリのエントリを読み込みするための DirectoryReader を作成します。
+ディレクトリのエントリを読み込みするための <a href="../directoryreader/directoryreader.html">DirectoryReader</a> を作成します。
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     // directory reader の作成
     var directoryReader = entry.createReader();
@@ -246,11 +246,11 @@ getDirectory
 __パラメーター:__
 
 - __path__ - 取得または作成したいディレクトリまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
-- __options__ - もしディレクトリが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
+- __options__ - もしディレクトリが存在しない場合、作成するかどうかを指定するオプションを表します _(<a href="../flags/flags.html">Flags</a>)_
 - __successCallback__ - DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(parent) {
         console.log("親ディレクトリの名前: " + parent.name);
@@ -264,7 +264,7 @@ __使用例__
     entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 
 
-getFile
+get<a href="../fileobj/fileobj.html">File</a>
 -------
 
 ファイルを取得または作成します。 以下のことを試みるとエラーが発生します:
@@ -274,11 +274,11 @@ getFile
 __パラメーター:__
 
 - __path__ - 取得または作成したいファイルまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
-- __options__ - もしファイルが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
-- __successCallback__ - FileEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __options__ - もしファイルが存在しない場合、作成するかどうかを指定するオプションを表します _(<a href="../flags/flags.html">Flags</a>)_
+- __successCallback__ - <a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a> を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ファイルの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(parent) {
         console.log("親ディレクトリの名前: " + parent.name);
@@ -289,7 +289,7 @@ __使用例__
     }
 
     // 既存のファイルを取得。存在しない場合は作成
-    entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail); 
+    entry.get<a href="../fileobj/fileobj.html">File</a>("new<a href="../fileobj/fileobj.html">File</a>.txt", {create: true, exclusive: false}, success, fail); 
 
 
 removeRecursively
@@ -304,9 +304,9 @@ removeRecursively
 __パラメーター:__
 
 - __successCallback__ - DirectoryEntry が削除されたときに呼び出されるコールバック関数を表します。 パラメーターなしで呼び出されます _(Function)_
-- __errorCallback__ - DirectoryEntry の削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - DirectoryEntry の削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
 
-__使用例__
+__<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     function success(parent) {
         console.log("再帰的な削除成功");

@@ -32,7 +32,7 @@ Aussi connu comme *stockage web*, *stockage simple*, ou par son interface de rec
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 bizarrerie**: notation par points est *pas* disponible, alors n'oubliez pas d'utiliser `setItem` ou `getItem` plutôt que d'accéder aux clés directement à partir de l'objet de stockage, comme dans`window.localStorage.someKey`.
+**Windows Phone 7 bizarrerie**: notation par points est *pas* disponible, alors n'oubliez pas d'utiliser `setItem` ou `getItem` plutôt que d'accéder aux clés directement à partir de l'objet de stockage, comme dans`window.<a href="localstorage/localstorage.html">localStorage</a>.someKey`.
 
 ## WebSQL
 

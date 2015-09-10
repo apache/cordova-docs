@@ -29,7 +29,7 @@ Restituisce una matrice di nomi di mesi o giorni della settimana, a seconda dell
 
 Restituisce la matrice di nomi per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto contiene un `value` proprietà con un `Array` di `String` i valori. I nomi di funzioni matrice a partire da entrambi il primo mese dell'anno o il primo giorno della settimana, a seconda dell'opzione selezionata.
 
-Se c'è un errore ottenendo i nomi, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore ottenendo i nomi, poi il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 Il `options` parametro è facoltativo e valori predefiniti sono:
 
@@ -67,7 +67,7 @@ Quando il browser è impostato per la `en\_US` locale, in questo esempio viene v
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames Example</title>
+        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
