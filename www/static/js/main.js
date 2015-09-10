@@ -1,5 +1,5 @@
-$(function(){
-	
+$(document).ready(function () {
+
 	function setHeroHeight() {
 		console.log('IT works!');
 		// resize the hero to the innerWidth of the window
@@ -13,5 +13,5 @@ $(function(){
 	}
 	setHeroHeight();
 	$(window).resize(function() { setHeroHeight() });
-	
+
  });

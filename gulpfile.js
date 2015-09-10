@@ -51,7 +51,7 @@ var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
 
-// default variables
+// global variables
 var prod = false;
 
 // passed options
@@ -84,9 +84,17 @@ function remove(path) {
     fse.removeSync(path);
 }
 
+function getJekyllExecutable() {
+    if (process.platform === 'win32') {
+        return 'jekyll.bat';
+    } else {
+        return 'jekyll';
+    }
+}
+
 function jekyllBuild(done) {
     var flags  = prod ? PROD_FLAGS : DEV_FLAGS;
-    var jekyll = (process.platform === 'darwin') ? 'jekyll' : 'jekyll.bat';
+    var jekyll = getJekyllExecutable();
     exec(jekyll, ["build"].concat(flags), done);
 }
 

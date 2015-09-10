@@ -4,60 +4,60 @@ title: Apache Cordova Blog
 ---
 
 <script>
-window.onload = function(){
-  setTimeout(function(){
-    var lastPostTime = new Date("{{ site.posts[0].date | date_to_rfc822 }}").getTime();
-    setCookie("visitTime", lastPostTime, 365);
-  }, 2000);
-};
+    window.onload = function(){
+        setTimeout(function(){
+            var lastPostTime = new Date("{{ site.posts[0].date | date_to_rfc822 }}").getTime();
+          setCookie("visitTime", lastPostTime, 365);
+        }, 2000);
+    };
 </script>
 
 <div class="blog">
-  <div id="content" class="container">
-     <div class="row">
-        <div class="col-sm-8 blog-list">
-          <div class="blogHeader">
-            <h1>Blog</h1>
-            <div>
-              <img src="{{ site.baseurl }}/static/img/subscribe.png">
-              <a href="{{ site.baseurl }}{{ site.rss_path }}">RSS Feed</a>
-            </div>
-          </div>
-          <ul class="posts">
-              {% for post in site.posts %}
-              <li>
-                <header>
-                  <div class="adorner" blogTime="{{ post.date | date_to_rfc822 }}"></div>
-                  <div>
-                    <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+    <div id="content" class="container">
+        <div class="row">
+            <div class="col-sm-8 blog-list">
+                <div class="blogHeader">
+                    <h1>Blog</h1>
                     <div>
-                      <span class="date">{{ post.date | date_to_string }}</span>
-                      <span> - by </span>
-                      <span class="author">
-                        {% if post.author.url %}
-                          <a href="{{ post.author.url }}">{{ post.author.name }}</a>
-                        {% else %}
-                          {{ post.author.name }}
-                        {% endif %}  
-                      </span>
-                      <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+                        <img src="{{ site.baseurl }}/static/img/subscribe.png">
+                        <a href="{{ site.baseurl }}{{ site.rss_path }}">RSS Feed</a>
                     </div>
-                  </div>
-                </header>
-                <section class="post-excerpt">
-                  <p>{{ post.excerpt }}</p>
-                  <div><a href="{{ site.baseurl }}{{ post.url }}">More...</a></div>
-                </section>
-              </li>
-              {% endfor %}
-          </ul>
-          <!-- <a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a> -->
+                </div>
+                <ul class="posts">
+                    {% for post in site.posts %}
+                    <li>
+                        <header>
+                            <div class="adorner" blogTime="{{ post.date | date_to_rfc822 }}"></div>
+                            <div>
+                                <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+                                <div>
+                                    <span class="date">{{ post.date | date_to_string }}</span>
+                                    <span> - by </span>
+                                    <span class="author">
+                                        {% if post.author.url %}
+                                            <a href="{{ post.author.url }}">{{ post.author.name }}</a>
+                                        {% else %}
+                                            {{ post.author.name }}
+                                        {% endif %}
+                                    </span>
+                                    <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </header>
+                        <section class="post-excerpt">
+                            <p>{{ post.excerpt }}</p>
+                            <div><a href="{{ site.baseurl }}{{ post.url }}">More...</a></div>
+                        </section>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <!-- <a href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a> -->
+            </div>
+            <div class="col-sm-4 social-container">
+                {% include twitterFeed.html %}
+            </div>
         </div>
-        <div class="col-sm-4 social-container">
-            {% include twitterFeed.html %}
-        </div>
-     </div>
- </div>
+    </div>
 </div>
 
 {% include comment_count.html %}
