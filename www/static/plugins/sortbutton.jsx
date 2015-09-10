@@ -2,7 +2,7 @@ var React = require('react');
 
 var SortButton = React.createClass({
     onClick: function() {
-        var appInstance = React.render(<App />, document.getElementById('container'));
+        var appInstance = React.render(<App />, document.getElementById('pluginsAppContainer'));
         appInstance.setSort(this.props.criteria);
     },
     render: function() {

@@ -7,7 +7,7 @@ var PlatformButton = React.createClass({
         };
     },
     onClick: function() {
-        var appInstance = React.render(<App />, document.getElementById('container'));
+        var appInstance = React.render(<App />, document.getElementById('pluginsAppContainer'));
         appInstance.toggleCondition('platforms', this.props.keyword);
         this.setState(function(prevState, currentProps) {
             return {

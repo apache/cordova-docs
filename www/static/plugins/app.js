@@ -483,7 +483,7 @@ var App = React.createClass({
 });
 
 App.start = function() {
-    React.render(<App />, document.getElementById('container'));
+    React.render(<App />, document.getElementById('pluginsAppContainer'));
 };
 
 function delay(callback, ms){
@@ -509,3 +509,6 @@ function xhrRequest(url, success, fail) {
 }
 
 module.exports = window.App = App;
+
+// run the app
+App.start();
