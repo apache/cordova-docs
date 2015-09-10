@@ -135,4 +135,6 @@ $(document).ready(function () {
             );
         }
     });
+
+    $("#jira-search-button").on("click", submitJiraSearchForm);
 });
