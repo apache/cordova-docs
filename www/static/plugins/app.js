@@ -421,6 +421,13 @@ var App = React.createClass({
                 <PlatformButton platform={platform} keyword={keyword} initiallyActive={active}/>
             );
         }
+        var listContent = null;
+        if(window.location.protocol !== "https:") {
+            listContent = <PluginList plugins={this.state.searchResults} />;
+        } else {
+            var httpUrl = window.location.href.replace("https://", "http://");
+            listContent = <div className="alert alert-warning" role="alert">Search results are not currently supported over HTTPS. Please visit this page <a href={httpUrl}>using HTTP</a></div>;
+        }
         return (
             <div>
                 <div className="container">
@@ -473,7 +480,7 @@ var App = React.createClass({
                         </div>
                     </div>
                 </div>
-                <PluginList plugins={this.state.searchResults} />
+                {listContent}
                 <div className="row plugin-search-credit">
                     Search results powered by <a href="http://npmsearch.com/">npmsearch.com</a>
                 </div>
