@@ -1,3 +1,23 @@
+---
+license: >
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+---
+
 # Windows 10 コルドバ
 
 多分、代わりにそれを呼び出すこと"10 を Windows コルドバの" Windows 10 プラットフォーム セキュリティ制限あなたの方法のうちを取得して web にコルドバのサポートをもたらすことを再設計、HTML と JavaScript アプリのプラットフォームを持っています。
