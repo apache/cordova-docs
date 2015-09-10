@@ -32,3 +32,16 @@
     description: >
         Custom Elements-based HTML5 framework offers a large selection of components and responsive layout support.
         Onsen UI lets you create professionally designed multiplatform apps without acquiring additional skillset.
+
+-   name: Visual Studio
+    image: visual_studio_white.png
+    url: http://aka.ms/cordova
+    description: >
+        Popular IDE for building cross-platform apps for Android, iOS, and Windows. Complete with advanced build and debugging support.
+
+-   name: TACO
+    image: TACO_105px.png
+    url: http://taco.tools
+    description: >
+        Tools for Apache Cordova is a command line utility designed to make building hybrid apps easy and fun.  Faster setup. Friendlier command line. Validated quality at run-time.
+
