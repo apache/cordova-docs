@@ -4,7 +4,7 @@
 
 .button {
     display: block;
-    background: url(/static/img/sprite.png) no-repeat;
+    background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
     background-color: #4cc2e4;
     background-position: 100% -171px;
     width: 310px;
