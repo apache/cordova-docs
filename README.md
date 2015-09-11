@@ -113,11 +113,11 @@ To add an item to the **Codorva Tools** or **Cordova App Showcase** sections on 
     - `www/_data/tools.yml` for Cordova Tools, or
     - `www/_data/showcase-apps.yml` for Cordova App Showcase.
 1. Optionally add an image (the image must be **less than 256KiB** in size):
-    1. Place the image it in the `img` directory:
+    1. Place the image in the `img` directory:
         - `www/static/img/tools` for Cordova Tools, or
         - `www/static/img/showcase-apps` for Cordova App Showcase.
     1. Set the `image` field in the YAML file to be just the image file's *name*.
-1. Submit a GitHub pull request with the changes.
+1. Submit a [GitHub pull request][pr] with the changes.
 
 Writing a Blog Post
 ===================
@@ -192,6 +192,11 @@ To print the list of plugin versions tested:
 
         for d in *-plugin-*; do ( cd $d && echo "* $(basename $PWD): $(grep version plugin.xml|grep -v encoding|cut -d'"' -f2)" ) ; done | grep '^\*'
 
+Troubleshooting
+===============
+
+Ask for help on the IRC channel: #cordova on irc.freenode.net.
+
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
@@ -199,8 +204,4 @@ To print the list of plugin versions tested:
 [nodejs]: https://nodejs.org/
 [install_pip]: https://pip.pypa.io/en/latest/installing.html
 [svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
-
-Troubleshooting
-===============
-
-Ask for help on the IRC channel: #cordova on irc.freenode.net.
+[pr]: https://help.github.com/articles/using-pull-requests/
