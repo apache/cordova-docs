@@ -39,7 +39,7 @@ var PluginList = React.createClass({
             var showMore = null, visiblePlugins = [];
             if (plugins.length - this.state.searchPage * PageExtensionLength > InitialPageLength) {
                 showMore =
-                    <div className="plugin-results-show-more" onClick={this.increaseSearchResults}>
+                    <div className="plugin-results-show-more btn-block btn-primary" onClick={this.increaseSearchResults}>
                         Show More
                     </div>;
             }

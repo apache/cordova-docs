@@ -120,6 +120,13 @@
 .plugin-results-show-more {
 	text-align: center;
 	cursor:pointer;
+	padding: 10px;
+	background-color: #4CC2E4;
+	color: #000;
+}
+
+.plugin-results-show-more:hover {
+	color: #000;
 }
 
 .version_and_author {
