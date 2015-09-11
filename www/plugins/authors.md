@@ -3,7 +3,7 @@ layout: plugins-help
 title: Apache Cordova Plugin Contributors
 ---
 
-# npm Plugin Search for Plugin Authors
+# Plugin Search for Plugin Authors
 
 ## How do I add a new plugin to Plugin Search?
 
@@ -45,3 +45,6 @@ Yes there are. Please take a look at the [Plugin Development Guide]({{ site.base
 ## I don't like X. How can I help improve the website?
 
 You can help improve this site by opening bugs on [JIRA](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20%3D%20Open%20AND%20component%20%3D%20%22Registry%20Web%22) or by sending PRs on [GitHub](https://github.com/apache/cordova-docs/tree/cordova-website).
+
+
+
