@@ -98,7 +98,7 @@ This guide describes how to set up your development environment for Cordova and 
     ![](img/guide/platforms/android/manifest.jpg)
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------    
 
 - Create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
@@ -110,7 +110,7 @@ This guide describes how to set up your development environment for Cordova and 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
         </head>
         <body>
-        <h1><a href="../webos/index.html">Hello World</a></h1>
+        <h1>Hello World</h1>
         </body>
         </html>
 
@@ -121,7 +121,7 @@ This guide describes how to set up your development environment for Cordova and 
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)

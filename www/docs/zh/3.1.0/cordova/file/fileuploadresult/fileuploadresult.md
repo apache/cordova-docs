@@ -20,7 +20,7 @@ license: >
 
 # FileUploadResult
 
-A `FileUploadResult` 物件傳遞給成功回<a href="../fileobj/fileobj.html">檔</a>的 `FileTransfer` 物件的 `upload()` 方法。
+A `FileUploadResult` 物件傳遞給成功回檔的 `FileTransfer` 物件的 `upload()` 方法。
 
 ## 屬性
 
@@ -32,7 +32,7 @@ A `FileUploadResult` 物件傳遞給成功回<a href="../fileobj/fileobj.html">�
 
 ## 說明
 
-`FileUploadResult`通過成功回<a href="../fileobj/fileobj.html">檔</a>的返回的物件是 `FileTransfer` 物件的 `upload()` 方法。
+`FileUploadResult`通過成功回檔的返回的物件是 `FileTransfer` 物件的 `upload()` 方法。
 
 ## iOS 的怪癖
 

@@ -20,7 +20,7 @@ license: >
 
 # geolocation.clearWatch
 
-によって参照される、<a href="../device/device.html">デバイス</a>の場所への変更を見て停止、 `watchID` パラメーター。
+によって参照される、デバイスの場所への変更を見て停止、 `watchID` パラメーター。
 
     navigator.geolocation.clearWatch(watchID);
     
@@ -31,7 +31,7 @@ license: >
 
 ## 説明
 
-`geolocation.clearWatch`をオフにして、<a href="../device/device.html">デバイス</a>の場所の変更を見て停止します、 `<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>` によって参照されます。`watchID`.
+`geolocation.clearWatch`をオフにして、デバイスの場所の変更を見て停止します、 `geolocation.watchPosition` によって参照されます。`watchID`.
 
 ## サポートされているプラットフォーム
 
@@ -44,9 +44,9 @@ license: >
 
 ## 簡単な例
 
-    //オプション: <a href="Position/position.html">位置</a>の変化を監視し、頻繁に使用//正確な<a href="Position/position.html">位置</a>取得法利用可能。
+    //オプション: 位置の変化を監視し、頻繁に使用//正確な位置取得法利用可能。
     //
-    var watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     
     // ...later on...
     
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -75,7 +75,7 @@ license: >
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
         // onSuccess Geolocation
@@ -96,7 +96,7 @@ license: >
             }
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
               alert('code: '    + error.code    + '\n' +

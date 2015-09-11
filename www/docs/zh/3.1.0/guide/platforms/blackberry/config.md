@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# 黑莓手機<a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>
+# 黑莓手機配置
 
-黑莓手機完全支援[W3C 構件規範][1]以及專有的 RIM 擴展。 請全面[黑莓 WebWorks <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>關於 config.xml][2]的詳細資訊，參閱。
+黑莓手機完全支援[W3C 構件規範][1]以及專有的 RIM 擴展。 請全面[黑莓 WebWorks 檔關於 config.xml][2]的詳細資訊，參閱。
 
  [1]: http://www.w3.org/TR/widgets/
  [2]: https://developer.blackberry.com/html5/documentation/working_with_config_xml_file_1866970_11.html

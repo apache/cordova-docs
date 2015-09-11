@@ -56,7 +56,7 @@ Los métodos siguientes pueden invocarse en un `DirectoryEntry` objeto:
 
 *   **getParent**: ver el directorio padre.
 
-*   **createReader**: crear un nuevo `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` que puede leer las entradas de un directorio.
+*   **createReader**: crear un nuevo `DirectoryReader` que puede leer las entradas de un directorio.
 
 *   **getDirectory**: crear o buscar un directorio.
 
@@ -80,7 +80,7 @@ Ver metadatos de un directorio.
 
 *   **successCallback**: una función de devolución de llamada para ejecutar con un `Metadata` objeto. *(Función)*
 
-*   **errorCallback**: una función de devolución de llamada que se ejecutarán si se produce un error al recuperar los `Metadata` . Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una función de devolución de llamada que se ejecutarán si se produce un error al recuperar los `Metadata` . Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -149,10 +149,10 @@ Establece los atributos extendidos de un directorio, o metadatos. *Actualmente s
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -177,7 +177,7 @@ Mover un directorio en la cima de un directorio vacío existente intenta elimina
 
 *   **successCallback**: una devolución de llamada que se ejecuta con el `DirectoryEntry` objeto para el nuevo directorio. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el directorio. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el directorio. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -218,7 +218,7 @@ Directorio copias son siempre recursivo y copiar todo el contenido del directori
 
 *   **successCallback**: una devolución de llamada que se ejecuta con el `DirectoryEntry` objeto para el nuevo directorio. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el directorio subyacente. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el directorio subyacente. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -264,7 +264,7 @@ Elimina un directorio. Un error de los resultados si la aplicación intenta:
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de que el directorio se borra. Se invoca sin parámetros. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el directorio. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el directorio. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -283,7 +283,7 @@ Ver el padre `DirectoryEntry` que contiene el directorio.
 
 *   **successCallback**: una devolución de llamada que se pasa a los padres del directorio `DirectoryEntry` . *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `DirectoryEntry` . Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `DirectoryEntry` . Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -301,7 +301,7 @@ Ver el padre `DirectoryEntry` que contiene el directorio.
 
 ## createReader
 
-Crea un nuevo <a href="../directoryreader/directoryreader.html">DirectoryReader</a> para leer las entradas en un directorio.
+Crea un nuevo DirectoryReader para leer las entradas en un directorio.
 
 **Ejemplo rápido**
 
@@ -319,11 +319,11 @@ Crea o busca un directorio existente. Un error de los resultados si la aplicaci�
 
 *   **ruta**: la ruta al directorio que admiraba o creado. Una ruta absoluta, o una ruta de acceso relativa de este `DirectoryEntry` . *(DOMString)*
 
-*   **Opciones**: opciones para especificar si el directorio va a ser creado si no existe. *(<a href="../flags/flags.html">Banderas</a>)*
+*   **Opciones**: opciones para especificar si el directorio va a ser creado si no existe. *(Banderas)*
 
 *   **successCallback**: una devolución de llamada que se ejecuta con un `DirectoryEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear o buscar el directorio. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear o buscar el directorio. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -344,11 +344,11 @@ Crea o busca un archivo. Un error de los resultados si la aplicación intenta:
 
 *   **ruta**: la ruta del archivo que admiraba o creado. Una ruta absoluta, o una ruta de acceso relativa de este `DirectoryEntry` . *(DOMString)*
 
-*   **Opciones**: opciones para especificar si el archivo es creado si no existe. *(<a href="../flags/flags.html">Banderas</a>)*
+*   **Opciones**: opciones para especificar si el archivo es creado si no existe. *(Banderas)*
 
-*   **successCallback**: una devolución de llamada que se pasa un `<a href="../fileentry/fileentry.html">FileEntry</a>` objeto. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa un `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear o buscar el archivo. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear o buscar el archivo. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -369,7 +369,7 @@ Elimina un directorio y todo su contenido. En caso de error (por ejemplo, tratan
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de la `DirectoryEntry` ha sido eliminado. Se invoca sin parámetros. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar eliminar el `DirectoryEntry` . Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar eliminar el `DirectoryEntry` . Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 

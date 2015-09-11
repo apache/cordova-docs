@@ -21,7 +21,7 @@ license: >
 device.platform
 ===============
 
-Get the device's operating system <a href="../storage/parameters/name.html">name</a>.
+Get the device's operating system name.
 
     var string = device.platform;
 
@@ -34,7 +34,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Depending on the device, a few examples are:
@@ -45,31 +45,31 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
     //   - "WinCE"
     var devicePlatform = device.platform;
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = '<a href="device.html">Device</a> Name: '     + device.<a href="../storage/parameters/name.html">name</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> PhoneGap: ' + <a href="device.phonegap.html">device.phonegap</a> + '<br />' + 
-                                '<a href="device.html">Device</a> Platform: ' + device.platform + '<br />' + 
-                                '<a href="device.html">Device</a> UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> Version: '  + device.<a href="../storage/parameters/version.html">version</a>  + '<br />';
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                                'Device PhoneGap: ' + device.phonegap + '<br />' + 
+                                'Device Platform: ' + device.platform + '<br />' + 
+                                'Device UUID: '     + device.uuid     + '<br />' + 
+                                'Device Version: '  + device.version  + '<br />';
         }
 
         </script>
@@ -87,4 +87,4 @@ All devices return `iPhone` as the platform. This is inaccurate because Apple ha
 BlackBerry Quirks
 -----------------
 
-<a href="device.html">Device</a>s may return the device platform <a href="../storage/parameters/version.html">version</a> instead of the platform <a href="../storage/parameters/name.html">name</a>.  For example, the Storm2 9550 would return '2.13.0.95' or similar.
+Devices may return the device platform version instead of the platform name.  For example, the Storm2 9550 would return '2.13.0.95' or similar.

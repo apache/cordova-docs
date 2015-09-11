@@ -20,9 +20,9 @@ license: >
 
 # Amazon Fire OS Plugins
 
-Follow the instructions provided in the <a href="../android/plugin.html">Android Plugins</a> Guide for an overview of developing custom plugins.
+Follow the instructions provided in the Android Plugins Guide for an overview of developing custom plugins.
 
-## Echo Amazon Fire OS Plugin <a href="../../../cordova/splashscreen/<a href="../../../cordova/splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Echo Amazon Fire OS Plugin Example
 
 To match the JavaScript interface's _echo_ feature described in
 Application Plugins, use the `plugin.xml` to inject a `feature`

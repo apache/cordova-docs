@@ -39,7 +39,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 
 引数の `currencyCode` パラメーターは、例えば 'USD' などの、 ISO 4217 通貨コードのうちの1つである必要があります。
 
-もしパターン取得中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR です。
+もしパターン取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.FORMATTING\_ERROR です。
 
 サポートされているプラットフォーム
 -------------------
@@ -48,7 +48,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
 ブラウザーのロケールが en\_US に設定され、通貨には US ドルが選択された場合、以下のような文字列をポップアップダイアログに表示します:
@@ -74,7 +74,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
     );
 
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML>

@@ -22,7 +22,7 @@ license: >
 
 > L'objet `geolocation` permet l'accès aux données de localisation basées sur le capteur GPS de l'appareil ou déduites des signaux du réseau.
 
-`Geolocation` fournit des informations sur l'emplacement de l'appareil, telles que la latitude et la longitude. Les sources habituelles d'information incluent le Système de <a href="Position/position.html">Position</a>nement Global (GPS) et la position déduite de signaux des réseaux tels que l'adresse IP, RFID, les adresses MAC WiFi et Bluetooth et les IDs cellulaires GSM/CDMA. Il n'y a cependant aucune garantie que cette API renvoie la position réelle de l'appareil.
+`Geolocation` fournit des informations sur l'emplacement de l'appareil, telles que la latitude et la longitude. Les sources habituelles d'information incluent le Système de Positionnement Global (GPS) et la position déduite de signaux des réseaux tels que l'adresse IP, RFID, les adresses MAC WiFi et Bluetooth et les IDs cellulaires GSM/CDMA. Il n'y a cependant aucune garantie que cette API renvoie la position réelle de l'appareil.
 
 Cette API est basée sur la [Spécification de l'API Geolocation du W3C][1] et s'exécute uniquement sur les appareils qui n'en proposent pas déjà une implémentation.
 
@@ -32,20 +32,20 @@ Cette API est basée sur la [Spécification de l'API Geolocation du W3C][1] et s
 
 ## Méthodes
 
-*   geolocation.getCurrent<a href="Position/position.html">Position</a>
-*   geolocation.watch<a href="Position/position.html">Position</a>
-*   <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
+*   geolocation.getCurrentPosition
+*   geolocation.watchPosition
+*   geolocation.clearWatch
 
 ## Arguments
 
-*   <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
-*   <a href="parameters/geolocationError.html">geolocationError</a>
-*   <a href="parameters/geolocation.options.html">geolocationOptions</a>
+*   geolocationSuccess
+*   geolocationError
+*   geolocationOptions
 
 ## Objets (lecture seule)
 
-*   <a href="Position/position.html">Position</a>
-*   <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>
+*   Position
+*   PositionError
 *   Coordonnées
 
 ## Accéder à la fonctionnalité

@@ -28,7 +28,7 @@ Das [Microsoft Developer Network][1] bietet allgemeine Anweisungen zum Ausführe
 
 1.  VMWare Fusion wählen Sie die Image-Datei von Windows 8, die Sie vorbereitet haben, und wählen Sie **Einstellungen**.
 
-2.  Wählen Sie die **Prozessoren & <a href="../../../cordova/storage/storage.html">Speicher</a>** -Konfigurationsoptionen. Geben Sie, *zwei* Prozessorkerne und **Hypervisor-Anwendungen in dieser virtuellen Maschine zu ermöglichen**:
+2.  Wählen Sie die **Prozessoren & Speicher** -Konfigurationsoptionen. Geben Sie, *zwei* Prozessorkerne und **Hypervisor-Anwendungen in dieser virtuellen Maschine zu ermöglichen**:
     
     ![][2]
     

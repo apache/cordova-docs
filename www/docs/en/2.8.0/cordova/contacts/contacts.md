@@ -18,37 +18,37 @@ license: >
     under the License.
 ---
 
-<a href="Contact/contact.html">Contact</a>s
+Contacts
 ========
 
 > The `contacts` object provides access to the device contacts database.
 
-**Important privacy note:** Collection and use of contact data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses contact data and whether it is shared with any other parties.  <a href="Contact/contact.html">Contact</a> information is considered sensitive because it reveals the people with whom a person communicates.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing or using contact data (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing contact data.  A clear and easy to understand user experience surrounding the use of contact data will help avoid user confusion and perceived misuse of contact data.  For more information, please see the <a href="../../guide/privacy/index.html">Privacy Guide</a>.
+**Important privacy note:** Collection and use of contact data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses contact data and whether it is shared with any other parties.  Contact information is considered sensitive because it reveals the people with whom a person communicates.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing or using contact data (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing contact data.  A clear and easy to understand user experience surrounding the use of contact data will help avoid user confusion and perceived misuse of contact data.  For more information, please see the Privacy Guide.
 
 Methods
 -------
 
-- <a href="contacts.create.html">contacts.create</a>
-- <a href="contacts.find.html">contacts.find</a>
+- contacts.create
+- contacts.find
 
 Arguments
 ---------
 
-- <a href="parameters/contactFields.html">contactFields</a>
-- <a href="parameters/contactSuccess.html">contactSuccess</a>
-- <a href="parameters/contactError.html">contactError</a>
-- <a href="parameters/contactFindOptions.html">contactFindOptions</a>
+- contactFields
+- contactSuccess
+- contactError
+- contactFindOptions
 
 Objects
 -------
 
-- <a href="Contact/contact.html">Contact</a>
-- <a href="Contact/contact.html">Contact</a>Name
-- <a href="Contact/contact.html">Contact</a>Field
-- <a href="Contact/contact.html">Contact</a>Address
-- <a href="Contact/contact.html">Contact</a>Organization
-- <a href="Contact/contact.html">Contact</a>FindOptions
-- <a href="Contact/contact.html">Contact</a>Error
+- Contact
+- ContactName
+- ContactField
+- ContactAddress
+- ContactOrganization
+- ContactFindOptions
+- ContactError
 
 Permissions
 -----------
@@ -57,7 +57,7 @@ Permissions
 
 #### app/res/xml/config.xml
 
-    <plugin name="<a href="Contact/contact.html">Contact</a>s" value="org.apache.cordova.<a href="Contact/contact.html">Contact</a>Manager" />
+    <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
 
 #### app/AndroidManifest.xml
 
@@ -77,20 +77,20 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="<a href="Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="Contact/contact.html">Contact</a>" />
+    <plugin name="Contact" value="org.apache.cordova.pim.Contact" />
 
 #### www/config.xml
 
     <feature id="blackberry.find"        required="true" version="1.0.0.0" />
     <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-    <feature id="blackberry.pim.<a href="Contact/contact.html">Contact</a>" required="true" version="1.0.0.0" />
+    <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
 ### iOS
 
 #### config.xml
 
-    <plugin name="<a href="Contact/contact.html">Contact</a>s" value="CDV<a href="Contact/contact.html">Contact</a>s" />
+    <plugin name="Contacts" value="CDVContacts" />
 
 ### webOS
 

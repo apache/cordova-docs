@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.connection.type Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

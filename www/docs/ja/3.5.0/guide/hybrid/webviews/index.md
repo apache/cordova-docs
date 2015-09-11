@@ -24,6 +24,6 @@ Cordova アプリ通常ネイティブ モバイル プラットフォーム内�
 
 WebView を展開するには、各ネイティブ プログラミング環境に精通する必要があります。サポートされているプラットフォームの説明を次に示します。
 
-*   <a href="../../platforms/amazonfireos/webview.html">アマゾン火 OS web 表示</a>
-*   <a href="../../platforms/android/webview.html">Android の web 表示</a>
-*   <a href="../../platforms/ios/webview.html">iOS の web 表示</a>
+*   アマゾン火 OS web 表示
+*   Android の web 表示
+*   iOS の web 表示

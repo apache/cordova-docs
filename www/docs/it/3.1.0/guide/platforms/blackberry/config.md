@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry10/config.html">Configurazione di blackBerry</a>
+# Configurazione di blackBerry
 
 BlackBerry supporta pienamente il [W3C Widget specifica][1] così come le estensioni proprietarie di RIM. Si prega di consultare il completo [per quanto riguarda la documentazione di BlackBerry WebWorks config. xml][2] per i dettagli.
 

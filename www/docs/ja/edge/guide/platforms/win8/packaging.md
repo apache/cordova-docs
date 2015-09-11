@@ -108,7 +108,7 @@ Pvk と cer ファイルが作成されると、これらの証明書から pfx 
   * p: pfx ファイルのパスワード
   * importPfx: pfx ファイルの名前
 
-一度インストールすれば、<a href="../../next/index.html">次のステップ</a>は、packageThumbprint と packageCertificateKeyFile を build.json に追加するのには。 PackageThumbprint を見つけるために、我々 は証明書に関連付けられている共通の検索します。
+一度インストールすれば、次のステップは、packageThumbprint と packageCertificateKeyFile を build.json に追加するのには。 PackageThumbprint を見つけるために、我々 は証明書に関連付けられている共通の検索します。
 
 `powershell -Command " & {dir -path cert:\LocalMachine\My | where { $_.Subject -like \"*FakeCorp.com*\" }}"`
 

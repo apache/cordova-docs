@@ -28,7 +28,7 @@ the `CordovaWebView` as its main view, regardless of whether the
 legacy `CordovaActivity` approach is used.
 
 If you're unfamiliar with Android application development, please read
-the <a href="../getting-started/android/index.html">Android Platform Guide</a> to developing a Cordova Application before
+the Android Platform Guide to developing a Cordova Application before
 attempting to include a WebView. It's not the main way to author
 Android Cordova applications. These instructions are currently manual,
 but may be eventually be automated.

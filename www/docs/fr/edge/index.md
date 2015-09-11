@@ -33,7 +33,7 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">Plateforme de Support</a>
+        Plateforme de Support
       </h2>
       
       <span>Tableau de compatibilité pour tous les principales caractéristiques.</span>
@@ -47,7 +47,7 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Guides de la plate-forme</a>
+        Guides de la plate-forme
       </h2>
       
       <span>Mis en place chaque plate-forme SDK et mettre à jour des projets.</span>
@@ -61,14 +61,14 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Le fichier config.xml</a> File
+        Le fichier config.xml File
       </h2>
       
       <span>Personnaliser les fonctionnalités de votre application.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Icones et Splash Screen</a>
+        Icones et Splash Screen
       </h2>
       
       <span>Personnaliser les images affichage de votre application.</span>
@@ -82,56 +82,56 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Guide de développement de plugin</a>
+        Guide de développement de plugin
       </h2>
       
       <span>Développer votre propre plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Guide de la vie privée</a>
+        Guide de la vie privée
       </h2>
       
       <span>Découvrez les problèmes de confidentialité mobile important.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/security/index.html">Guide de sécurité</a>
+        Guide de sécurité
       </h2>
       
       <span>Informations et conseils pour la création d'une application sécurisée.</span>
     </li>
     <li>
       <h2>
-        <a href="platform_plugin_versioning_ref/index.html">Plates-formes et gestion de Plugins Version</a>
+        Plates-formes et gestion de Plugins Version
       </h2>
       
       <span>Enregistrer et restaurer vos projets CLI à un état connu sans tracas.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Guide de la liste blanche</a>
+        Guide de la liste blanche
       </h2>
       
       <span>Accorder un accès de l'application vers des ressources externes.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Stockage</a>
+        Stockage
       </h2>
       
       <span>Un aperçu des options de stockage native.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/hooks/index.html">Guide de crochets</a>
+        Guide de crochets
       </h2>
       
       <span>Étendre les fonctionnalités de Cordoue par défaut en ajoutant des scripts personnalisés.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/next/index.html">Prochaines étapes</a>
+        Prochaines étapes
       </h2>
       
       <span>Un regard sur les sujets que les nouveaux développeurs Cordova rencontreront.</span>
@@ -159,7 +159,7 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
+        Plugin API
       </h2>
       
       <span>Découvrez ce que les plugins Cordova peuvent être utilisés dans votre projet.</span>

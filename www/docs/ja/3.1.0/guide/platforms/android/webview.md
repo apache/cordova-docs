@@ -22,7 +22,7 @@ license: >
 
 コルドバ 1.9 での援助にはじまって、 `CordovaActivity` 、コルドバ大きいネイティブ Android アプリケーションでコンポーネントとして使用できます。 Android としてこのコンポーネントを指す、 `CordovaWebView` 。 1.9 から新しいコルドバ ベースのアプリケーションを使用し、 `CordovaWebView` かどうかに関係なくそのメイン ビューとして、従来の `CordovaActivity` のアプローチが使用されます。
 
-Android アプリケーションの開発に慣れていないしている場合は、WebView を含めようとして前にコルドバのアプリケーションを開発する Android <a href="../index.html">プラットフォームの<a href="../../../index.html">ガイド</a></a>をお読みください。 アンドロイド Cordova アプリを作成する主な方法ではありません。 これらの手順は、現在マニュアルですが可能性があります最終的に自動化されます。
+Android アプリケーションの開発に慣れていないしている場合は、WebView を含めようとして前にコルドバのアプリケーションを開発する Android プラットフォームのガイドをお読みください。 アンドロイド Cordova アプリを作成する主な方法ではありません。 これらの手順は、現在マニュアルですが可能性があります最終的に自動化されます。
 
 ## 前提条件
 
@@ -30,13 +30,13 @@ Android アプリケーションの開発に慣れていないしている場合
 
 *   最新の SDK を更新 android SDK
 
-## Android プロジェクトでの CordovaWebView の使用への<a href="../../../index.html">ガイド</a>します。
+## Android プロジェクトでの CordovaWebView の使用へのガイドします。
 
-1.  `cd``/framework`を実行 `ant jar` コルドバの jar を構築します。 として形成された .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を作成します `cordova-x.x.x.jar` で、 `/framework` ディレクトリ。
+1.  `cd``/framework`を実行 `ant jar` コルドバの jar を構築します。 として形成された .jar ファイルを作成します `cordova-x.x.x.jar` で、 `/framework` ディレクトリ。
 
 2.  コルドバ jar を Android プロジェクト内にコピー `/libs` ディレクトリ。
 
-3.  編集アプリケーションの `main.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> （下 `/res/xml` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
+3.  編集アプリケーションの `main.xml` ファイル （下 `/res/xml` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -44,7 +44,7 @@ Android アプリケーションの開発に慣れていないしている場合
             android:layout_height="match_parent" />
         
 
-4.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML <a href="../../../cordova/file/flags/flags.html">フラグ</a>メントで指定された属性。
+4.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -59,7 +59,7 @@ Android アプリケーションの開発に慣れていないしている場合
             }
         
 
-<a href="../../../cordova/camera/camera.html">カメラ</a>を使用する場合もこれを実装する必要があります。
+カメラを使用する場合もこれを実装する必要があります。
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -113,6 +113,6 @@ Android アプリケーションの開発に慣れていないしている場合
         }
     
 
-1.  アプリケーションの HTML や JavaScript <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>、プロジェクトにコピー Android の `/assets/www` ディレクトリ。
+1.  アプリケーションの HTML や JavaScript ファイル、プロジェクトにコピー Android の `/assets/www` ディレクトリ。
 
 2.  コピー `config.xml` から `/framework/res/xml` プロジェクトの `/res/xml` ディレクトリ。

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/index.html">Guía de la plataforma BlackBerry</a> 10
+# Guía de la plataforma BlackBerry 10
 
 Esta guía le muestra cómo configurar el entorno de desarrollo para construir y desplegar aplicaciones Cordova para dispositivos BlackBerry 10. Para las versiones anteriores de BlackBerry, tienes que utilizar un conjunto diverso de herramientas de línea de comandos, descritas en la guía de la plataforma BlackBerry.
 
@@ -36,7 +36,7 @@ El SDK nativo de BlackBerry está disponible en [developer.blackberry.com][1]. D
 
 En Windows:
 
-*   Ir a **mis <a href="../../../plugin_ref/spec.html">Variables</a> de entorno informático → propiedades → avanzada →**.
+*   Ir a **mis Variables de entorno informático → propiedades → avanzada →**.
 
 *   Anexar el directorio de instalación del SDK nativo a la ruta, por ejemplo:
     

@@ -49,8 +49,8 @@ application's project's `config.xml` file, using the `plugin.xml` file
 to inject this markup automatically, as described in Application
 Plugins:
 
-        <feature name="Local<a href="../../../cordova/storage/storage.html">Storage</a>">
-            <param name="ios-package" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
         </feature>
 
 The feature's `name` attribute should match what you specify as the
@@ -134,7 +134,7 @@ Note the following for complex return values:
   serialized or deserialized as necessary, so it is safe to return
   `NSData*` as multipart, but not as `Array`/`Dictionary`.
 
-## Echo iOS Plugin <a href="../../../cordova/splashscreen/<a href="../../../cordova/splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Echo iOS Plugin Example
 
 To match the JavaScript interface's _echo_ feature described in
 Application Plugins, use the `plugin.xml` to inject a `feature`
@@ -203,7 +203,7 @@ success callback is called, it passes in the `echo` parameter.
 ## iOS Integration
 
 The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `<a href="../../../cordova/events/events.pause.html">pause</a>`, `<a href="../../../cordova/events/events.resume.html">resume</a>`, app
+override.  For example, you can capture the `pause`, `resume`, app
 terminate and `handleOpenURL` events. See the
 [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 and
@@ -243,5 +243,5 @@ can attach Safari 6.0 to your app running within the iOS 6 Simulator.
   forget, an error is logged in the Xcode console.
 
 - Don't forget to add any hosts you connect to in the whitelist, as
-  described in Domain <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>. If you forget, an error is
+  described in Domain Whitelist Guide. If you forget, an error is
   logged in the Xcode console.

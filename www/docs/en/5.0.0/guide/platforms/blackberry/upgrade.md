@@ -50,7 +50,7 @@ BlackBerry 10:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
@@ -89,7 +89,7 @@ BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 

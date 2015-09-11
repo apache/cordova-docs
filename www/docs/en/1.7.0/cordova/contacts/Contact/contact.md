@@ -28,31 +28,31 @@ Properties
 
 - __id:__ A globally unique identifier. _(DOMString)_
 - __displayName:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
-- __name:__ An object containing all components of a persons name. _(<a href="../ContactName/contactname.html">ContactName</a>)_
+- __name:__ An object containing all components of a persons name. _(ContactName)_
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
-- __phoneNumbers:__ An array of all the contact's phone numbers. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
-- __emails:__ An array of all the contact's email addresses. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
-- __addresses:__ An array of all the contact's addresses. _(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>es[])_
-- __ims:__ An array of all the contact's IM addresses. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
-- __organizations:__ An array of all the contact's organizations. _(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])_
+- __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
+- __emails:__ An array of all the contact's email addresses. _(ContactField[])_
+- __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
+- __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
+- __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
 - __birthday:__ The birthday of the contact. _(Date)_
 - __note:__ A note about the contact. _(DOMString)_
-- __photos:__ An array of the contact's photos. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
-- __categories:__  An array of all the contacts user defined categories. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
-- __urls:__  An array of web pages associated to the contact. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __photos:__ An array of the contact's photos. _(ContactField[])_
+- __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
+- __urls:__  An array of web pages associated to the contact. _(ContactField[])_
 
 Methods
 -------
 
 - __clone__: Returns a new Contact object that is a deep copy of the calling object, with the id property set to `null`. 
-- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` object if the removal is unsuccessful.
+- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `ContactError` object if the removal is unsuccessful.
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
 
 Details
 -------
 
-The `Contact` object represents a user contact.  <a href="../contacts.html">Contacts</a> can be created, saved to, or removed from the device contacts database.  <a href="../contacts.html">Contacts</a> can also be retrieved (individually or in bulk) from the database by invoking the `<a href="../contacts.find.html">contacts.find</a>` method.
+The `Contact` object represents a user contact.  Contacts can be created, saved to, or removed from the device contacts database.  Contacts can also be retrieved (individually or in bulk) from the database by invoking the `contacts.find` method.
 
 _Note: Not all of the above contact fields are supported on every device platform.  Please check each platform's Quirks section for information about which fields are supported._
 
@@ -64,24 +64,24 @@ Supported Platforms
 - iOS
 - Bada 1.2
 
-Save Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Save Quick Example
 ------------------
 
 	function onSuccess(contact) {
 		alert("Save Success");
 	};
 
-	function onError(<a href="../parameters/contactError.html">contactError</a>) {
-		alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+	function onError(contactError) {
+		alert("Error = " + contactError.code);
 	};
 
 	// create a new contact object
-    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+    var contact = navigator.contacts.create();
 	contact.displayName = "Plumber";
 	contact.nickname = "Plumber"; 		//specify both to support all devices
 	
 	// populate some fields
-	var name = new <a href="../ContactName/contactname.html">ContactName</a>();
+	var name = new ContactName();
 	name.givenName = "Jane";
 	name.familyName = "Doe";
 	contact.name = name;
@@ -89,7 +89,7 @@ Save Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 	// save to device
 	contact.save(onSuccess,onError);
 
-Clone Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Clone Quick Example
 -------------------
 
 	// clone the contact object
@@ -98,43 +98,43 @@ Clone Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 	console.log("Original contact name = " + contact.name.givenName);
 	console.log("Cloned contact name = " + clone.name.givenName); 
 
-Remove Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Remove Quick Example
 --------------------
 
     function onSuccess() {
         alert("Removal Success");
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
 
 	// remove the contact from the device
 	contact.remove(onSuccess,onError);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
 		    // create
-		    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+		    var contact = navigator.contacts.create();
 			contact.displayName = "Plumber";
 			contact.nickname = "Plumber"; 		//specify both to support all devices
-			var name = new <a href="../ContactName/contactname.html">ContactName</a>();
+			var name = new ContactName();
 			name.givenName = "Jane";
 			name.familyName = "Doe";
 			contact.name = name;
@@ -160,8 +160,8 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
-			alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onSaveError(contactError) {
+			alert("Error = " + contactError.code);
         }
         
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -172,15 +172,15 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
-			alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onRemoveError(contactError) {
+			alert("Error = " + contactError.code);
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../contacts.html">Contacts</a></p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 
@@ -217,7 +217,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no <a href="../ContactName/contactname.html">ContactName</a> specified.  If there is no <a href="../ContactName/contactname.html">ContactName</a>, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
+- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
-- __photos:__ Returned Photo is stored in the application's temporary directory and a <a href="../../file/fileobj/fileobj.html">File</a> URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
+- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.

@@ -18,36 +18,36 @@ license: >
     under the License.
 ---
 
-<a href="compass.clearWatch.html">compass.clearWatch</a>Filter
+compass.clearWatchFilter
 ========================
 
 Stop watching the compass referenced by the watch ID parameter.
 
-    navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>Filter(watchID);
+    navigator.compass.clearWatchFilter(watchID);
 
-- __watchID__: The ID returned by `<a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a>`.
+- __watchID__: The ID returned by `compass.watchHeadingFilter`.
 
 Supported Platforms
 -------------------
 
 - iPhone
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    var watchID = navigator.<a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a>(onSuccess, onError, options);
+    var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
     
     // ... later on ...
     
-    navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>Filter(watchID);
+    navigator.compass.clearWatchFilter(watchID);
     
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -57,11 +57,11 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             startWatch();
         }
 
@@ -72,14 +72,14 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             // Get notified on compass heading changes or 10 degrees or more
             var options = { filter: 10 };
             
-            watchID = navigator.<a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a>(onSuccess, onError, options);
+            watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
         }
         
         // Stop watching the compass
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>Filter(watchID);
+                navigator.compass.clearWatchFilter(watchID);
                 watchID = null;
             }
         }
@@ -93,8 +93,8 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
 
 

@@ -45,22 +45,22 @@ for guidance.
 ## Building a Plugin
 
 Application developers use the CLI's `plugin add` command (discussed
-in <a href="../../cli/index.html">The Command-Line Interface</a>) to apply a plugin to a project. The
+in The Command-Line Interface) to apply a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
-the plugin code.  This example implements Cordova's <a href="../../../cordova/device/device.html">Device</a> API:
+the plugin code.  This example implements Cordova's Device API:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
 The plugin repository must feature a top-level `plugin.xml` manifest
 file. There are many ways to configure this file, details for which
-are available in the <a href="../../../plugin_ref/spec.html">Plugin Specification</a>. This abbreviated version of
-the `<a href="../../../cordova/device/device.html">Device</a>` plugin provides a simple example to use as a model:
+are available in the Plugin Specification. This abbreviated version of
+the `Device` plugin provides a simple example to use as a model:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
                 id="org.apache.cordova.device" version="0.2.3">
-            <name><a href="../../../cordova/device/device.html">Device</a></name>
-            <description>Cordova <a href="../../../cordova/device/device.html">Device</a> Plugin</description>
+            <name>Device</name>
+            <description>Cordova Device Plugin</description>
             <license>Apache 2.0</license>
             <keywords>cordova,device</keywords>
             <js-module src="www/device.js" name="device">
@@ -68,12 +68,12 @@ the `<a href="../../../cordova/device/device.html">Device</a>` plugin provides a
             </js-module>
             <platform name="ios">
                 <config-file target="config.xml" parent="/*">
-                    <feature name="<a href="../../../cordova/device/device.html">Device</a>">
-                        <param name="ios-package" value="CDV<a href="../../../cordova/device/device.html">Device</a>"/>
+                    <feature name="Device">
+                        <param name="ios-package" value="CDVDevice"/>
                     </feature>
                 </config-file>
-                <header-file src="src/ios/CDV<a href="../../../cordova/device/device.html">Device</a>.h" />
-                <source-file src="src/ios/CDV<a href="../../../cordova/device/device.html">Device</a>.m" />
+                <header-file src="src/ios/CDVDevice.h" />
+                <source-file src="src/ios/CDVDevice.m" />
             </platform>
         </plugin>
 
@@ -97,7 +97,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-<a href="../../cli/index.html">The Command-Line Interface</a>.  Make sure the app's `index.html` home
+The Command-Line Interface.  Make sure the app's `index.html` home
 page reference the name of the plugin's JavaScript interface, as if it
 were in the same source directory:
 
@@ -108,7 +108,7 @@ dependencies load properly:
 
         $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
 
-For details on `plugman` options, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>.
+For details on `plugman` options, see Using Plugman to Manage Plugins.
 For information on how to actually _debug_ plugins, see each
 platform's native interface listed at the bottom of this page.
 
@@ -149,7 +149,7 @@ Here is how each parameter works:
 
 ## Sample JavaScript
 
-This example <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s one way to implement the plugin's JavaScript
+This example shows one way to implement the plugin's JavaScript
 interface:
 
         window.echo = function(str, callback) {
@@ -182,11 +182,11 @@ Once you define JavaScript for your plugin, you need to complement it
 with at least one native implementation. Details for each platform are
 listed below, and each builds on the simple Echo Plugin example above:
 
-- <a href="../../platforms/amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
-- <a href="../../platforms/android/plugin.html">Android Plugins</a>
-- <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-- <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-- <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
+- Amazon Fire OS Plugins
+- Android Plugins
+- iOS Plugins
+- BlackBerry 10 Plugins
+- Windows Phone Plugins
 
 The Tizen platform does not support plugins.
 
@@ -197,7 +197,7 @@ with the community. You can publish your plugin to the cordova
 registry (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
 to any other `npmjs`-based registry. Other developers can install it
 automatically using either `plugman` or the Cordova CLI.  (For details
-on each development path, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> and The
+on each development path, see Using Plugman to Manage Plugins and The
 Command-Line Interface.)
 
 To publish a plugin you need to use the `plugman` tool and go through

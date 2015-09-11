@@ -23,9 +23,9 @@ compassError
 
 onError callback function for compass functions.
 
-<a href="../../storage/storage.opendatabase.html">Example</a>
+Example
 -------
 
-    function(<a href="../compassError/compassError.html"><a href="../compass.html">Compass</a>Error</a>) {
+    function(CompassError) {
         // Handle the error
     }

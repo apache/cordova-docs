@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../compass.html">Compass</a>Error
+# CompassError
 
-A `<a href="../compass.html">Compass</a>Error` object is returned to the `<a href="../parameters/compassError.html">compassError</a>` callback function when an error occurs.
+A `CompassError` object is returned to the `compassError` callback function when an error occurs.
 
 ## Properties
 
@@ -28,10 +28,10 @@ A `<a href="../compass.html">Compass</a>Error` object is returned to the `<a hre
 
 ## Constants
 
-- `<a href="../compass.html">Compass</a>Error.COMPASS_INTERNAL_ERR`
-- `<a href="../compass.html">Compass</a>Error.COMPASS_NOT_SUPPORTED`
+- `CompassError.COMPASS_INTERNAL_ERR`
+- `CompassError.COMPASS_NOT_SUPPORTED`
 
 ## Description
 
-When an error occurs, the `<a href="../compass.html">Compass</a>Error` object is passed as a
-parameter to a `<a href="../parameters/compassError.html">compassError</a>` callback function.
+When an error occurs, the `CompassError` object is passed as a
+parameter to a `compassError` callback function.

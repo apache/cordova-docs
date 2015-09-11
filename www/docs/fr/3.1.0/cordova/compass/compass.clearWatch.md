@@ -25,7 +25,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID** : l'ID retourné par`<a href="compass.watchHeading.html">compass.watchHeading</a>`.
+*   **watchID** : l'ID retourné par`compass.watchHeading`.
 
 ## Plates-formes prises en charge
 
@@ -38,7 +38,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
 
 ## Petit exemple
 
-    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
+    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
+            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
         }
     
         // Stop watching the compass
@@ -96,8 +96,8 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
     
         </script>

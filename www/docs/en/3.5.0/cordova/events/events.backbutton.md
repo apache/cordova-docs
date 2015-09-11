@@ -28,7 +28,7 @@ The event fires when the user presses the back button.
 
 To override the default back-button behavior, register an event
 listener for the `backbutton` event, typically by calling
-`document.addEventListener` once you receive the `<a href="events.deviceready.html">deviceready</a>` event.
+`document.addEventListener` once you receive the `deviceready` event.
 It is no longer necessary to call any other method to override the
 back-button behavior.
 
@@ -60,7 +60,7 @@ back-button behavior.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // device APIs are available

@@ -31,7 +31,7 @@ Restituisce la data formattata `String` tramite un `value` proprietà accessibil
 
 L'ingresso `date` parametro dovrebbe essere di tipo`Date`.
 
-Se c'è un errore di formattazione della data, allora il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+Se c'è un errore di formattazione della data, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
 
 Il `options` parametro è facoltativo e valori predefiniti sono:
 
@@ -66,7 +66,7 @@ Se il browser è impostato per la `en\_US` locale, questa viene visualizzata una
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

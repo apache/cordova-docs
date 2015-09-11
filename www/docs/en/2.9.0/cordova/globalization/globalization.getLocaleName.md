@@ -34,8 +34,8 @@ Returns the locale identifier string to the `successCallback` with a
 property with a `String` value.
 
 If there is an error getting the locale, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a popup
@@ -56,13 +56,13 @@ dialog with the text `locale: en\_US`.
         function () {alert('Error getting locale\n');}
     );
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getLocaleName <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getLocaleName Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

@@ -22,14 +22,14 @@ license: >
 
 獲取當前加速沿*x*、 *y*和*z*軸。
 
-    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## 說明
 
-<a href="acceleration/acceleration.html">加速度</a>計是動作感應器檢測到的更改 (*三角洲*) 在相對於當前的<a href="../device/device.html">設備</a>方向，在三個維度沿*x*、 *y*和*z*軸運動。
+加速度計是動作感應器檢測到的更改 (*三角洲*) 在相對於當前的設備方向，在三個維度沿*x*、 *y*和*z*軸運動。
 
-這些<a href="acceleration/acceleration.html">加速度</a>值將返回到 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` 回呼函數。
+這些加速度值將返回到 `accelerometerSuccess` 回呼函數。
 
 ## 支援的平臺
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>
@@ -102,8 +102,8 @@ license: >
 
 ## iOS 的怪癖
 
-*   iOS 不會認識到在任何給定的點獲取當前<a href="acceleration/acceleration.html">加速度</a>的概念。
+*   iOS 不會認識到在任何給定的點獲取當前加速度的概念。
 
-*   你必須看加速和<a href="../media/capture/capture.html">捕獲</a>的資料在特定的時間間隔。
+*   你必須看加速和捕獲的資料在特定的時間間隔。
 
 *   因此， `getCurrentAcceleration` 收益率從報告的最後一個值的函數 `watchAccelerometer` 調用。

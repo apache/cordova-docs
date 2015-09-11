@@ -36,37 +36,37 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
 
         // Show a custom alert
         //
         function showAlert() {
-		    navigator.<a href="notification.alert.html">notification.alert</a>(
+		    navigator.notification.alert(
 		        'You are the winner!',  // message
 		        'Game Over',            // title
 		        'Done'                  // buttonName
@@ -82,7 +82,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
+            navigator.notification.vibrate(2000);
         }
 
         </script>
@@ -97,7 +97,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 Android Quirks
 --------------
 
-- Android plays the default "<a href="notification.html">Notification</a> ringtone" specified under the "Settings/Sound & Display" panel.
+- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
 
 iPhone Quirks
 -------------

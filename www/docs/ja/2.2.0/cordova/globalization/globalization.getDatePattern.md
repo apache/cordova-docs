@@ -35,7 +35,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - utc\_offset {Number}: クライアントのタイムゾーンと協定世界時との現在の差を秒で表します。
 - dst\_offset {Number}: 現在のサマータイム (デイライトセービングタイム) のオフセットを秒で表します。
 
-もしパターン取得中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PATTERN\_ERROR です。
+もしパターン取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.PATTERN\_ERROR です。
 
 `options.formatLength` には 'short', 'medium', 'long', または 'full' が指定出来ます。
 `options.selector` には 'date', 'time' または 'date and time' が指定出来ます。
@@ -50,7 +50,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは "pattern: M/d/yyyy h:mm a" といったような文字列をポップアップダイアログに表示します。
@@ -63,7 +63,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
       );
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML>

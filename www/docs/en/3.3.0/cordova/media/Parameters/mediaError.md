@@ -29,4 +29,4 @@ error in media functions.
 
 ## Parameters
 
-- __error__: The error returned by the device. _(<a href="../<a href="../media.html">Media</a>Error/mediaError.html"><a href="../media.html">Media</a>Error</a>)_
+- __error__: The error returned by the device. _(MediaError)_

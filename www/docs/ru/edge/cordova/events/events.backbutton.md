@@ -27,9 +27,9 @@ license: >
 
 ## Подробности
 
-Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `<a href="events.deviceready.html">deviceready</a>`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
+Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `deviceready`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
 
-## <a href="../../config_ref/images.html">Поддерживаемые платформы</a>
+## Поддерживаемые платформы
 
 *   Amazon Fire OS
 *   Android
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

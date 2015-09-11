@@ -47,13 +47,13 @@ license: >
 
 `options`パラメーターはオプションであり、次の値を既定値します。
 
-    {formatLength: '<a href="../inappbrowser/inappbrowser.html">ショー</a>ト' セレクター： '日付と時刻'}
+    {formatLength: 'ショート' セレクター： '日付と時刻'}
     
 
 `options.formatLength`することができます `short` 、 `medium` 、 `long` 、または `full` 。 `options.selector`することができます `date` 、 `time` または`date and
 time`.
 
-日付文字列の解析エラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+日付文字列の解析エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PARSING\_ERROR`.
 
 ## サポートされているプラットフォーム
 
@@ -81,7 +81,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToDate Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

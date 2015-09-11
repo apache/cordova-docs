@@ -20,9 +20,9 @@ license: >
 
 # Configuration Android
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions Android. Voir le fichier config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions Android. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `<a href="../../../cordova/events/events.pause.html">pause</a>` événement se déclenche.
+*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -47,11 +47,11 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Divers éléments d'actif doivent partager ce nom commun dans les différents sous-répertoires.
+*   `SplashScreen`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Divers éléments d'actif doivent partager ce nom commun dans les différents sous-répertoires.
     
-        <preference name="<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>" value="splash"/>
+        <preference name="SplashScreen" value="splash"/>
         
 
-*   `<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Delay`(numéro, par défaut, `5000` ): affiche de l'image de l'écran splash le laps de temps.
+*   `SplashScreenDelay`(numéro, par défaut, `5000` ): affiche de l'image de l'écran splash le laps de temps.
     
-        <preference name="<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Delay" value="10000"/>
+        <preference name="SplashScreenDelay" value="10000"/>

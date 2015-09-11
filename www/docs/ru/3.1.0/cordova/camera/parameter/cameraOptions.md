@@ -22,7 +22,7 @@ license: >
 
 Необязательные параметры для настройки параметров камеры.
 
-    {качество: 75, destinationType: Camera.DestinationType.DATA_URL, тип источника: Camera.PictureSourceType.CAMERA, allowEdit: Правда, Тип_шифрования: Camera.EncodingType.JPEG, targetWidth: 100, targetHeight: 100, popoverOptions: <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>, saveToPhotoAlbum: значение false};
+    {качество: 75, destinationType: Camera.DestinationType.DATA_URL, тип источника: Camera.PictureSourceType.CAMERA, allowEdit: Правда, Тип_шифрования: Camera.EncodingType.JPEG, targetWidth: 100, targetHeight: 100, popoverOptions: CameraPopoverOptions, saveToPhotoAlbum: значение false};
     
 
 ## Параметры
@@ -61,7 +61,7 @@ license: >
 
 *   **saveToPhotoAlbum**: сохранить изображение в фотоальбом на устройстве после захвата. *(Логический)*
 
-*   **popoverOptions**: только для iOS параметры, которые определяют местоположение инструмента в iPad. Определены в`<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>`.
+*   **popoverOptions**: только для iOS параметры, которые определяют местоположение инструмента в iPad. Определены в`CameraPopoverOptions`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -84,7 +84,7 @@ license: >
 
 *   Игнорирует `allowEdit` параметр.
 
-*   Приложение должно иметь разрешения ключевых инъекции <a href="../../inappbrowser/inappbrowser.html">закрыть</a> приложение, предназначенное для камеры после того, как пользователь прикрепляет фото.
+*   Приложение должно иметь разрешения ключевых инъекции закрыть приложение, предназначенное для камеры после того, как пользователь прикрепляет фото.
 
 *   Использование размеров больших изображений может привести к невозможности кодирования изображений на поздней модели устройств (например, факел 9800) что функция камер высокого разрешения.
 

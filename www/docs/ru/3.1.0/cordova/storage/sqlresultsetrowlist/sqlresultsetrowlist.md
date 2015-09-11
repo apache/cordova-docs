@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+# SQLResultSetRowList
 
-Одним из свойств `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` содержащие строки возвращенных запросом SQL.
+Одним из свойств `SQLResultSet` содержащие строки возвращенных запросом SQL.
 
 ## Свойства
 
@@ -32,7 +32,7 @@ license: >
 
 ## Подробная информация
 
-`<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList`Содержит данные, возвращаемые SQL `select` заявление. Объект содержит `length` свойство, указывающее, сколько строк `select` возвращает заявление. Чтобы получить строки данных, вызовите `item` метод, чтобы указать индекс. Он возвращает JavaScript `Object` , свойства которых являются столбцами базы данных `select` против был выполнен оператор.
+`SQLResultSetRowList`Содержит данные, возвращаемые SQL `select` заявление. Объект содержит `length` свойство, указывающее, сколько строк `select` возвращает заявление. Чтобы получить строки данных, вызовите `item` метод, чтобы указать индекс. Он возвращает JavaScript `Object` , свойства которых являются столбцами базы данных `select` против был выполнен оператор.
 
 ## Поддерживаемые платформы
 
@@ -59,7 +59,7 @@ license: >
             alert("Error processing SQL: "+err.code);
         }
     
-        var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
         db.transaction(queryDB, errorCB);
     
 
@@ -68,14 +68,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Populate the database
         //
@@ -111,21 +111,21 @@ license: >
         // Transaction success callback
         //
         function successCB() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

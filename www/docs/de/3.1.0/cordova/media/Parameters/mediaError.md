@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../media.html">Medien</a>fehler
+# Medienfehler
 
-Ein benutzerdefinierter Rückruffunktion, die ausgeführt wird, wenn ein Fehler, in <a href="../media.html">Medien</a>funktionen vorliegt.
+Ein benutzerdefinierter Rückruffunktion, die ausgeführt wird, wenn ein Fehler, in Medienfunktionen vorliegt.
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ Ein benutzerdefinierter Rückruffunktion, die ausgeführt wird, wenn ein Fehler,
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das <a href="../../device/device.html">Gerät</a> zurückgegeben. *(<a href="../media.html">Medien</a>fehler)*
+*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(Medienfehler)*

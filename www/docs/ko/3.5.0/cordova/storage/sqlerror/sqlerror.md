@@ -41,4 +41,4 @@ A `SQLError` 개체 오류가 발생 하면 throw 됩니다.
 
 ## 설명
 
-`SQLError`개체는 <a href="../database/database.html">데이터베이스</a>를 조작 하는 경우 오류가 발생 하면 throw 됩니다.
+`SQLError`개체는 데이터베이스를 조작 하는 경우 오류가 발생 하면 throw 됩니다.

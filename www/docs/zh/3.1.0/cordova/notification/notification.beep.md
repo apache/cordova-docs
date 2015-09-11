@@ -20,7 +20,7 @@ license: >
 
 # notification.beep
 
-該<a href="../device/device.html">設備</a>播放提示音聲音。
+該設備播放提示音聲音。
 
     navigator.notification.beep(times);
     
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,7 +64,7 @@ license: >
         // Show a custom alert
         //
         function showAlert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+            navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -80,7 +80,7 @@ license: >
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
+            navigator.notification.vibrate(2000);
         }
     
         </script>
@@ -95,14 +95,14 @@ license: >
 
 ## Android 的怪癖
 
-*   Android 系統播放的預設**<a href="notification.html">通知</a>鈴聲****設置/聲音和<a href="../inappbrowser/inappbrowser.html">顯示</a>**面板下指定。
+*   Android 系統播放的預設**通知鈴聲****設置/聲音和顯示**面板下指定。
 
 ## Windows Phone 7 和 8 怪癖
 
-*   依賴泛型蜂鳴音<a href="../file/fileobj/fileobj.html">檔</a>從科爾多瓦分佈。
+*   依賴泛型蜂鳴音檔從科爾多瓦分佈。
 
 ## Tizen 怪癖
 
-*   Tizen 通過播放音訊<a href="../file/fileobj/fileobj.html">檔</a>通過<a href="../media/media.html">媒體</a> API 實現會發出蜂鳴聲。
+*   Tizen 通過播放音訊檔通過媒體 API 實現會發出蜂鳴聲。
 
-*   蜂鳴音<a href="../file/fileobj/fileobj.html">檔</a>必須很短，必須設在 `sounds` 子目錄中的應用程式的根目錄中，並且必須命名`beep.wav`.
+*   蜂鳴音檔必須很短，必須設在 `sounds` 子目錄中的應用程式的根目錄中，並且必須命名`beep.wav`.

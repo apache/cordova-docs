@@ -26,11 +26,11 @@ Device
 Properties
 ----------
 
-- device.<a href="../storage/parameters/name.html">name</a>
-- <a href="device.phonegap.html">device.phonegap</a>
-- <a href="device.platform.html">device.platform</a>
-- <a href="device.uuid.html">device.uuid</a>
-- device.<a href="../storage/parameters/version.html">version</a>
+- device.name
+- device.phonegap
+- device.platform
+- device.uuid
+- device.version
 
 Variable Scope
 --------------
@@ -39,5 +39,5 @@ Since `device` is assigned to the `window` object, it is implicitly in the globa
 
     // These reference the same `device`
     //
-    var phoneName = window.device.<a href="../storage/parameters/name.html">name</a>;
-    var phoneName = device.<a href="../storage/parameters/name.html">name</a>;
+    var phoneName = window.device.name;
+    var phoneName = device.name;

@@ -22,7 +22,7 @@ license: >
 
 L'évènement se déclenche lorsque la batterie a atteint un seuil critique.
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", yourCallbackFunction, false);
+    window.addEventListener("batterycritical", yourCallbackFunction, false);
     
 
 ## Détails
@@ -35,7 +35,7 @@ Le gestionnaire `batterycritical` est appelé avec un objet contenant deux propr
 
 *   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications devraient en général utiliser `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
+Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
 ## Plates-formes supportées
 
@@ -46,7 +46,7 @@ Les applications devraient en général utiliser `window.<a href="../inappbrowse
 
 ## Exemple court
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
+    window.addEventListener("batterycritical", onBatteryCritical, false);
     
     function onBatteryCritical(info) {
         // Handle the battery critical event
@@ -59,7 +59,7 @@ Les applications devraient en général utiliser `window.<a href="../inappbrowse
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Battery Critical <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Battery Critical Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -67,13 +67,13 @@ Les applications devraient en général utiliser `window.<a href="../inappbrowse
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
+            window.addEventListener("batterycritical", onBatteryCritical, false);
         }
     
         // Handle the batterycritical event

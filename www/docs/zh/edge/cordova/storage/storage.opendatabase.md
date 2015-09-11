@@ -22,14 +22,14 @@ license: >
 
 返回一個新的 `Database` 物件。
 
-    var dbShell = window.openDatabase(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## 說明
 
-方法創建一個新的 SQL Lite <a href="database/database.html">資料庫</a>並返回 `Database` 允許對資料進行操作的物件。
+方法創建一個新的 SQL Lite 資料庫並返回 `Database` 允許對資料進行操作的物件。
 
-## <a href="../../config_ref/images.html">支援的平臺</a>
+## 支援的平臺
 
 *   Android 系統
 *   黑莓手機 WebWorks （OS 6.0 和更高）
@@ -53,7 +53,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

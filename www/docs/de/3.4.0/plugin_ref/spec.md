@@ -262,7 +262,7 @@ Die `<source-file>` Element identifiziert ausführbare Quellcodes, die in ein Pr
 
 Es unterstützt die folgenden Attribute:
 
-*   `src`(erforderlich): <a href="../cordova/storage/storage.html">Speicher</a>ort der Datei relativ zum `plugin.xml` . Wenn die `src` Datei nicht gefunden, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
+*   `src`(erforderlich): Speicherort der Datei relativ zum `plugin.xml` . Wenn die `src` Datei nicht gefunden, Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung über das Problem und beendet mit einem NULL-Code.
 
 *   `target-dir`: Ein Verzeichnis, in dem die Dateien sollen, relativ zum Stammverzeichnis des Projektes Cordova kopiert werden. In der Praxis ist das wichtigste für Java-basierte Plattformen, wo eine Datei in die `com.alunny.foo` Paket muss in das `com/alunny/foo` Verzeichnis. Für Plattformen, wo das Quellverzeichnis nicht wichtig ist, sollte dieses Attribut weggelassen werden.
     
@@ -310,7 +310,7 @@ Es unterstützt die folgenden Attribute:
     
     Das Ziel kann Platzhalter enthalten ( `*` ) Elemente. In diesem Fall Plugman rekursiv durchsucht die Verzeichnisstruktur des Projekts und verwendet die erste Übereinstimmung.
     
-    Auf iOS, der <a href="../cordova/storage/storage.html">Speicher</a>ort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
+    Auf iOS, der Speicherort der Konfigurationsdateien relativ zum Stammverzeichnis des Projekt-Verzeichnis ist nicht bekannt, also ein Ziel angeben `config.xml` löst in`cordova-ios-project/MyAppName/config.xml`.
     
     Wenn die angegebene Datei nicht vorhanden ist, wird das Tool ignoriert die Konfigurationsänderung und wird die Installation fortgesetzt.
 
@@ -362,7 +362,7 @@ Wie Quelle, Ressourcen- und Header-Dateien, aber speziell für Plattformen wie B
 
 Unterstützte Attribute:
 
-*   `src`(erforderlich): der <a href="../cordova/storage/storage.html">Speicher</a>ort der Datei relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
+*   `src`(erforderlich): der Speicherort der Datei relativ zum `plugin.xml` . Wenn `src` nicht auffindbar, Plugman beendet und kehrt die Installation Probleme eine Warnung über das Problem und beendet mit einem NULL-Code.
 
 *   `arch`: Die Architektur, für die die `.so` Datei erstellt wurde, entweder `device` oder`simulator`.
 

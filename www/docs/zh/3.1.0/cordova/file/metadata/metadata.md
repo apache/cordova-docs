@@ -20,15 +20,15 @@ license: >
 
 # 中繼資料
 
-供應狀態資訊的<a href="../fileobj/fileobj.html">檔</a>或目錄的一個介面。
+供應狀態資訊的檔或目錄的一個介面。
 
 ## 屬性
 
-*   **modificationTime**： 當<a href="../fileobj/fileobj.html">檔</a>或目錄被最後修改的時間。*（日期）*
+*   **modificationTime**： 當檔或目錄被最後修改的時間。*（日期）*
 
 ## 詳細資訊
 
-`Metadata`物件表示<a href="../fileobj/fileobj.html">檔</a>或目錄的狀態資訊。 調用 `DirectoryEntry` 或 `<a href="../fileentry/fileentry.html">FileEntry</a>` 物件的 `getMetadata()` 方法將產生 `Metadata` 實例。
+`Metadata`物件表示檔或目錄的狀態資訊。 調用 `DirectoryEntry` 或 `FileEntry` 物件的 `getMetadata()` 方法將產生 `Metadata` 實例。
 
 ## 支援的平臺
 

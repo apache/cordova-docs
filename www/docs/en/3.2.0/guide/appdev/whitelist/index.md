@@ -29,10 +29,10 @@ access to specific network domains and subdomains.
 Cordova adheres to the [W3C Widget Access][1] specification, which
 relies on the `<access>` element within the app's `config.xml` file to
 enable network access to specific domains. For projects that rely on
-the CLI workflow described in <a href="../../cli/index.html">The Command-Line Interface</a>, this file is
+the CLI workflow described in The Command-Line Interface, this file is
 located in the project's top-level `www` directory. Otherwise for
 platform-specific development paths, locations are listed in the
-sections below. (See the various <a href="../../platforms/index.html">Platform Guides</a> for more information
+sections below. (See the various Platform Guides for more information
 on each platform.)
 
 The following examples demonstrate whitelist syntax:
@@ -109,7 +109,7 @@ ways:
 * Any content accessed by `XMLHttpRequest` must be declared
   explicity. Setting `origin="*"` does not work in this case.
   Alternatively, all web security may be disabled using the
-  `WebSecurity` preference described in <a href="../../platforms/blackberry10/config.html">BlackBerry Configuration</a>:
+  `WebSecurity` preference described in BlackBerry Configuration:
  
         <preference name="websecurity" value="disable" />
 

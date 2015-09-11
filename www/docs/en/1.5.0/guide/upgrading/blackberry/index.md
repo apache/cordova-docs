@@ -21,7 +21,7 @@ license: >
 Upgrading Cordova BlackBerry
 ============================
 
-This document is for people who need to upgrade their Cordova <a href="../../../phonegap/storage/parameters/version.html">version</a>s from an older <a href="../../../phonegap/storage/parameters/version.html">version</a> to a current <a href="../../../phonegap/storage/parameters/version.html">version</a> of Cordova.
+This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 1.4.1
 Note: 1.5.0 represents a semi-major change to the PhoneGap/Cordova project! All references to PhoneGap have been changed to Cordova.
 
@@ -33,39 +33,39 @@ Updating just the www folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the old phonegap.1.4.1.jar file in the `ext/` folder and replace it with cordova.1.5.0.jar.
-3. Update the contents of the `ext-air/` folder and make sure to re<a href="../../../phonegap/storage/parameters/name.html">name</a> the folders with Phonegap with them to Cordova.
+3. Update the contents of the `ext-air/` folder and make sure to rename the folders with Phonegap with them to Cordova.
 4. Copy the new `cordova-1.5.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-1.5.0.js` file.
 6. Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:
 
 From: 
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="App"            value="com.phonegap.app.App"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/device/device.html">Device</a>"         value="com.phonegap.device.<a href="../../../phonegap/device/device.html">Device</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/camera/camera.html">Camera</a>"         value="com.phonegap.camera.<a href="../../../phonegap/camera/camera.html">Camera</a>"/>	
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Network Status" value="com.phonegap.network.Network"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/notification/notification.html">Notification</a>"   value="com.phonegap.notification.<a href="../../../phonegap/notification/notification.html">Notification</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"  value="com.phonegap.accelerometer.<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"    value="com.phonegap.geolocation.<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>"           value="com.phonegap.file.<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Manager"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"   value="com.phonegap.http.<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"        value="com.phonegap.pim.<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"   value="com.phonegap.media.<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Battery"        value="com.phonegap.battery.Battery"/>
+    <plugin name="App"            value="com.phonegap.app.App"/>
+    <plugin name="Device"         value="com.phonegap.device.Device"/>
+    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>	
+    <plugin name="Network Status" value="com.phonegap.network.Network"/>
+    <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
+    <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>
+    <plugin name="Geolocation"    value="com.phonegap.geolocation.Geolocation"/>
+    <plugin name="File"           value="com.phonegap.file.FileManager"/>
+    <plugin name="FileTransfer"   value="com.phonegap.http.FileTransfer"/>
+    <plugin name="Contact"        value="com.phonegap.pim.Contact"/>
+    <plugin name="MediaCapture"   value="com.phonegap.media.MediaCapture"/>
+    <plugin name="Battery"        value="com.phonegap.battery.Battery"/>
 
 To:
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="App"            value="org.apache.cordova.app.App"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/device/device.html">Device</a>"         value="org.apache.cordova.device.<a href="../../../phonegap/device/device.html">Device</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/camera/camera.html">Camera</a>"         value="org.apache.cordova.camera.<a href="../../../phonegap/camera/camera.html">Camera</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Network Status" value="org.apache.cordova.network.Network"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/notification/notification.html">Notification</a>"   value="org.apache.cordova.notification.<a href="../../../phonegap/notification/notification.html">Notification</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"  value="org.apache.cordova.accelerometer.<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"    value="org.apache.cordova.geolocation.<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>"           value="org.apache.cordova.file.<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Manager"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"   value="org.apache.cordova.http.<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"        value="org.apache.cordova.pim.<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"   value="org.apache.cordova.media.<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Battery"        value="org.apache.cordova.battery.Battery"/>
+    <plugin name="App"            value="org.apache.cordova.app.App"/>
+    <plugin name="Device"         value="org.apache.cordova.device.Device"/>
+    <plugin name="Camera"         value="org.apache.cordova.camera.Camera"/>
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
+    <plugin name="Notification"   value="org.apache.cordova.notification.Notification"/>
+    <plugin name="Accelerometer"  value="org.apache.cordova.accelerometer.Accelerometer"/>
+    <plugin name="Geolocation"    value="org.apache.cordova.geolocation.Geolocation"/>
+    <plugin name="File"           value="org.apache.cordova.file.FileManager"/>
+    <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
+    <plugin name="Contact"        value="org.apache.cordova.pim.Contact"/>
+    <plugin name="MediaCapture"   value="org.apache.cordova.media.MediaCapture"/>
+    <plugin name="Battery"        value="org.apache.cordova.battery.Battery"/>
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -73,37 +73,37 @@ Updating the sample folder (ie, updating using the ant tools):
 2. Update the .jar file in the `phonegap.1.4.1/ext/` folder.
 3. Update the contents of the `phonegap.1.4.1/ext-air/` folder.
 4. Update the .js file in the `phonegap.1.4.1/javascript/` folder.
-5. Open the `sample/lib/` folder and re<a href="../../../phonegap/storage/parameters/name.html">name</a> the `cordova.1.4.1/` folder to `cordova.1.5.0/`.
+5. Open the `sample/lib/` folder and rename the `cordova.1.4.1/` folder to `cordova.1.5.0/`.
 6. Update build.xml to update the ant tools.
 7. Type `ant blackberry build` or `ant playbook build` to update the `www/` folder with updated Cordova.
 8. Open the `www/` folder and update your HTML to use the new `cordova-1.5.0.js` file.
 9. Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:
 
 From: 
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="App"            value="com.phonegap.app.App"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/device/device.html">Device</a>"         value="com.phonegap.device.<a href="../../../phonegap/device/device.html">Device</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/camera/camera.html">Camera</a>"         value="com.phonegap.camera.<a href="../../../phonegap/camera/camera.html">Camera</a>"/>	
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Network Status" value="com.phonegap.network.Network"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/notification/notification.html">Notification</a>"   value="com.phonegap.notification.<a href="../../../phonegap/notification/notification.html">Notification</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"  value="com.phonegap.accelerometer.<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"    value="com.phonegap.geolocation.<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>"           value="com.phonegap.file.<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Manager"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"   value="com.phonegap.http.<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"        value="com.phonegap.pim.<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"   value="com.phonegap.media.<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Battery"        value="com.phonegap.battery.Battery"/>
+    <plugin name="App"            value="com.phonegap.app.App"/>
+    <plugin name="Device"         value="com.phonegap.device.Device"/>
+    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>	
+    <plugin name="Network Status" value="com.phonegap.network.Network"/>
+    <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
+    <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>
+    <plugin name="Geolocation"    value="com.phonegap.geolocation.Geolocation"/>
+    <plugin name="File"           value="com.phonegap.file.FileManager"/>
+    <plugin name="FileTransfer"   value="com.phonegap.http.FileTransfer"/>
+    <plugin name="Contact"        value="com.phonegap.pim.Contact"/>
+    <plugin name="MediaCapture"   value="com.phonegap.media.MediaCapture"/>
+    <plugin name="Battery"        value="com.phonegap.battery.Battery"/>
 
 To:
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="App"            value="org.apache.cordova.app.App"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/device/device.html">Device</a>"         value="org.apache.cordova.device.<a href="../../../phonegap/device/device.html">Device</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/camera/camera.html">Camera</a>"         value="org.apache.cordova.camera.<a href="../../../phonegap/camera/camera.html">Camera</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Network Status" value="org.apache.cordova.network.Network"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/notification/notification.html">Notification</a>"   value="org.apache.cordova.notification.<a href="../../../phonegap/notification/notification.html">Notification</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"  value="org.apache.cordova.accelerometer.<a href="../../../phonegap/accelerometer/accelerometer.html">Accelerometer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"    value="org.apache.cordova.geolocation.<a href="../../../phonegap/geolocation/geolocation.html">Geolocation</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>"           value="org.apache.cordova.file.<a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Manager"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"   value="org.apache.cordova.http.<a href="../../../phonegap/file/filetransfer/filetransfer.html"><a href="../../../phonegap/file/fileobj/fileobj.html">File</a>Transfer</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"        value="org.apache.cordova.pim.<a href="../../../phonegap/contacts/Contact/contact.html">Contact</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"   value="org.apache.cordova.media.<a href="../../../phonegap/media/media.html">Media</a><a href="../../../phonegap/media/capture/capture.html">Capture</a>"/>
-    <plugin <a href="../../../phonegap/storage/parameters/name.html">name</a>="Battery"        value="org.apache.cordova.battery.Battery"/>
+    <plugin name="App"            value="org.apache.cordova.app.App"/>
+    <plugin name="Device"         value="org.apache.cordova.device.Device"/>
+    <plugin name="Camera"         value="org.apache.cordova.camera.Camera"/>
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
+    <plugin name="Notification"   value="org.apache.cordova.notification.Notification"/>
+    <plugin name="Accelerometer"  value="org.apache.cordova.accelerometer.Accelerometer"/>
+    <plugin name="Geolocation"    value="org.apache.cordova.geolocation.Geolocation"/>
+    <plugin name="File"           value="org.apache.cordova.file.FileManager"/>
+    <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
+    <plugin name="Contact"        value="org.apache.cordova.pim.Contact"/>
+    <plugin name="MediaCapture"   value="org.apache.cordova.media.MediaCapture"/>
+    <plugin name="Battery"        value="org.apache.cordova.battery.Battery"/>
 

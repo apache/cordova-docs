@@ -23,29 +23,29 @@ license: >
 Takes a photo using the camera, or retrieves a photo from the device's
 image gallery.  The image is passed to the success callback as a
 base64-encoded `String`, or as the URI for the image file.  The method
-itself returns a `<a href="parameter/<a href="camera.html">Camera</a>PopoverHandle.html"><a href="camera.html">Camera</a>PopoverHandle</a>` object that can be used to
+itself returns a `CameraPopoverHandle` object that can be used to
 reposition the file selection popover.
 
-    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
+    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
 ## Description
 
 The `camera.getPicture` function opens the device's default camera
 application that allows users to snap pictures. This behavior occurs
-by default, when `<a href="camera.html">Camera</a>.sourceType` equals
-`<a href="camera.html">Camera</a>.PictureSourceType.CAMERA`.  Once the user snaps the photo, the
-camera application <a href="../inappbrowser/inappbrowser.html">close</a>s and the application is restored.
+by default, when `Camera.sourceType` equals
+`Camera.PictureSourceType.CAMERA`.  Once the user snaps the photo, the
+camera application closes and the application is restored.
 
-If `<a href="camera.html">Camera</a>.sourceType` is `<a href="camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY` or
-`<a href="camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
+If `Camera.sourceType` is `Camera.PictureSourceType.PHOTOLIBRARY` or
+`Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
 that allows users to select an existing image.  The
-`camera.getPicture` function returns a `<a href="parameter/<a href="camera.html">Camera</a>PopoverHandle.html"><a href="camera.html">Camera</a>PopoverHandle</a>` object,
+`camera.getPicture` function returns a `CameraPopoverHandle` object,
 which can be used to reposition the image selection dialog, for
 example, when the device orientation changes.
 
-The return value is sent to the `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` callback function, in
+The return value is sent to the `cameraSuccess` callback function, in
 one of the following formats, depending on the specified
-`<a href="parameter/cameraOptions.html">cameraOptions</a>`:
+`cameraOptions`:
 
 - A `String` containing the base64-encoded photo image.
 
@@ -56,14 +56,14 @@ example:
 
 - Render the image in an `<img>` tag, as in the example below
 
-- Save the data locally (`Local<a href="../storage/storage.html">Storage</a>`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc.)
+- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc.)
 
 - Post the data to a remote server
 
 __NOTE:__ Photo resolution on newer devices is quite good. Photos
 selected from the device's gallery are not downscaled to a lower
 quality, even if a `quality` parameter is specified.  To avoid common
-memory problems, set `<a href="camera.html">Camera</a>.destinationType` to `FILE_URI` rather
+memory problems, set `Camera.destinationType` to `FILE_URI` rather
 than `DATA_URL`.
 
 ## Supported Platforms
@@ -85,7 +85,7 @@ scenario, the image may not appear when the cordova activity is restored.
 
 Including a JavaScript `alert()` in either of the callback functions
 can cause problems.  Wrap the alert within a `setTimeout()` to allow
-the iOS image picker or popover to fully <a href="../inappbrowser/inappbrowser.html">close</a> before the alert
+the iOS image picker or popover to fully close before the alert
 displays:
 
     setTimeout(function() {
@@ -100,15 +100,15 @@ via Zune does not work, and triggers an error callback.
 ## Tizen Quirks
 
 Tizen only supports a `destinationType` of
-`<a href="camera.html">Camera</a>.DestinationType.FILE_URI` and a `sourceType` of
-`<a href="camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY`.
+`Camera.DestinationType.FILE_URI` and a `sourceType` of
+`Camera.PictureSourceType.PHOTOLIBRARY`.
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
 Take a photo and retrieve it as a base64-encoded image:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-        destinationType: <a href="camera.html">Camera</a>.DestinationType.DATA_URL
+        destinationType: Camera.DestinationType.DATA_URL
     });
 
     function onSuccess(imageData) {
@@ -123,7 +123,7 @@ Take a photo and retrieve it as a base64-encoded image:
 Take a photo and retrieve the image's file location:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-        destinationType: <a href="camera.html">Camera</a>.DestinationType.FILE_URI });
+        destinationType: Camera.DestinationType.FILE_URI });
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -134,12 +134,12 @@ Take a photo and retrieve the image's file location:
         alert('Failed because: ' + message);
     }
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../media/capture/capture.html">Capture</a> Photo</title>
+        <title>Capture Photo</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -149,11 +149,11 @@ Take a photo and retrieve the image's file location:
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",on<a href="../device/device.html">Device</a>Ready,false);
+        document.addEventListener("deviceready",onDeviceReady,false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
         }
@@ -232,8 +232,8 @@ Take a photo and retrieve the image's file location:
         </script>
       </head>
       <body>
-        <button onclick="capturePhoto();"><a href="../media/capture/capture.html">Capture</a> Photo</button> <br>
-        <button onclick="capturePhotoEdit();"><a href="../media/capture/capture.html">Capture</a> Editable Photo</button> <br>
+        <button onclick="capturePhoto();">Capture Photo</button> <br>
+        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
         <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />

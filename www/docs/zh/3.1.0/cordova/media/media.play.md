@@ -20,14 +20,14 @@ license: >
 
 # media.play
 
-開始或重新開始播放音訊<a href="../file/fileobj/fileobj.html">檔</a>。
+開始或重新開始播放音訊檔。
 
     media.play();
     
 
 ## 說明
 
-`media.play`方法執行同步，並開始或繼續播放音訊<a href="../file/fileobj/fileobj.html">檔</a>。
+`media.play`方法執行同步，並開始或繼續播放音訊檔。
 
 ## 支援的平臺
 
@@ -65,14 +65,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -99,7 +99,7 @@ license: >
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -120,7 +120,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_<a href="media.pause.html">media.pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -128,7 +128,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -166,11 +166,11 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓<a href="../device/device.html">設備</a>支援有限的數量的同時音訊通道。 CDMA <a href="../device/device.html">設備</a>僅支援單個音訊通道。 其他<a href="../device/device.html">設備</a>都支援最多兩個同時播放的頻道。 嘗試播放音訊<a href="../file/fileobj/fileobj.html">檔</a>的支援金額多於導致以前播放被停止。
+*   黑莓設備支援有限的數量的同時音訊通道。 CDMA 設備僅支援單個音訊通道。 其他設備都支援最多兩個同時播放的頻道。 嘗試播放音訊檔的支援金額多於導致以前播放被停止。
 
 ## iOS 的怪癖
 
-*   **numberOfLoops**： 傳遞到此選項 `play` 方法，以指定的次數，你想讓<a href="media.html">媒體</a><a href="../file/fileobj/fileobj.html">檔</a>案以播放，例如：
+*   **numberOfLoops**： 傳遞到此選項 `play` 方法，以指定的次數，你想讓媒體檔案以播放，例如：
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
@@ -182,7 +182,7 @@ license: >
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **<a href="../file/fileobj/fileobj.html">檔</a>搜索順序**： 當只有一個<a href="../file/fileobj/fileobj.html">檔</a>的名稱或簡單路徑提供時，搜索中的 iOS `www` 目錄為該<a href="../file/fileobj/fileobj.html">檔</a>，然後在應用程式中的 `documents/tmp` 目錄：
+*   **檔搜索順序**： 當只有一個檔的名稱或簡單路徑提供時，搜索中的 iOS `www` 目錄為該檔，然後在應用程式中的 `documents/tmp` 目錄：
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

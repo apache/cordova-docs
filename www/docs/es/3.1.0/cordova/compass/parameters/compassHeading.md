@@ -20,7 +20,7 @@ license: >
 
 # compassHeading
 
-A `CompassHeading` objeto es devuelto a la `<a href="compassSuccess.html">compassSuccess</a>` función de callback.
+A `CompassHeading` objeto es devuelto a la `compassSuccess` función de callback.
 
 ## Propiedades
 
@@ -34,7 +34,7 @@ A `CompassHeading` objeto es devuelto a la `<a href="compassSuccess.html">compas
 
 ## Descripción
 
-El `CompassHeading` objeto es devuelto a la `<a href="compassSuccess.html">compassSuccess</a>` función de callback.
+El `CompassHeading` objeto es devuelto a la `compassSuccess` función de callback.
 
 ## Rarezas Android
 

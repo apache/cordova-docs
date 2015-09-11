@@ -29,4 +29,4 @@ Une fonction de rappel spécifiée par l'utilisateur qui s'exécute lorsqu'il y 
 
 ## Paramètres
 
-*   **erreur**: l'erreur retournée par le périphérique. *(<a href="../<a href="../media.html">Media</a>Error/mediaError.html"><a href="../media.html">Media</a>Error</a>)*
+*   **erreur**: l'erreur retournée par le périphérique. *(MediaError)*

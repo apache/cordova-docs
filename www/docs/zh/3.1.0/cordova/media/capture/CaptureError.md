@@ -20,7 +20,7 @@ license: >
 
 # CaptureError
 
-> 封裝失敗的<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>操作所引起的錯誤代碼。
+> 封裝失敗的媒體捕獲操作所引起的錯誤代碼。
 
 ## 屬性
 
@@ -28,12 +28,12 @@ license: >
 
 ## 常量
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`： 攝像機或麥克風無法<a href="capture.html">捕獲</a>的圖像或聲音。
+*   `CaptureError.CAPTURE_INTERNAL_ERR`： 攝像機或麥克風無法捕獲的圖像或聲音。
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`： <a href="../../camera/camera.html">相機</a>或音訊<a href="capture.html">捕獲</a>應用程式正在服另一個<a href="capture.html">捕獲</a>請求。
+*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 相機或音訊捕獲應用程式正在服另一個捕獲請求。
 
 *   `CaptureError.CAPTURE_INVALID_ARGUMENT`： API 的使用無效 （例如，價值 `limit` 小於 1)。
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在使用者退出之前<a href="capture.html">捕獲</a>任何<a href="../../camera/camera.html">相機</a>或音訊<a href="capture.html">捕獲</a>應用程式。
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在使用者退出之前捕獲任何相機或音訊捕獲應用程式。
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 請求的<a href="capture.html">捕獲</a>操作不受支援。
+*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 請求的捕獲操作不受支援。

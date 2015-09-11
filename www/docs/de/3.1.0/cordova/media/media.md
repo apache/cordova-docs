@@ -20,7 +20,7 @@ license: >
 
 # Medien
 
-> Das `Media` Objekt bietet die Möglichkeit zum Aufzeichnen und Wiedergeben von audio-<a href="../file/fileobj/fileobj.html">Datei</a>en auf einem <a href="../device/device.html">Gerät</a>.
+> Das `Media` Objekt bietet die Möglichkeit zum Aufzeichnen und Wiedergeben von audio-Dateien auf einem Gerät.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
@@ -33,7 +33,7 @@ license: >
 
 *   **MediaSuccess**: (Optional) der Rückruf, der nach dem führt ein `Media` -Objekt abgeschlossen hat, die aktuelle Wiedergabe, Aufzeichnung oder Stop-Action. *(Funktion)*
 
-*   **<a href="Parameters/mediaError.html">Medienfehler</a>**: (Optional) der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt. *(Funktion)*
+*   **Medienfehler**: (Optional) der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt. *(Funktion)*
 
 *   **MediaStatus**: (Optional) der Rückruf, der ausgeführt wird, um Statusänderungen anzugeben. *(Funktion)*
 
@@ -49,31 +49,31 @@ Die folgenden Konstanten werden gemeldet, als einzigem Parameter an die `mediaSt
 
 ## Methoden
 
-*   `media.getCurrent<a href="../geolocation/Position/position.html">Position</a>`: Gibt die aktuelle <a href="../geolocation/Position/position.html">Position</a> in einer Audiodatei.
+*   `media.getCurrentPosition`: Gibt die aktuelle Position in einer Audiodatei.
 
-*   `<a href="media.getDuration.html">media.getDuration</a>`: Gibt die Dauer einer Audiodatei.
+*   `media.getDuration`: Gibt die Dauer einer Audiodatei.
 
 *   `media.play`: Starten Sie oder fortsetzen Sie der Wiedergabe einer Audiodatei.
 
-*   `media.pause`: <a href="../events/events.pause.html">Anhalten</a> der Wiedergabe einer Audiodatei.
+*   `media.pause`: Anhalten der Wiedergabe einer Audiodatei.
 
-*   `<a href="media.release.html">media.release</a>`: Das zugrunde liegende Betriebssystem audio Ressourcen frei.
+*   `media.release`: Das zugrunde liegende Betriebssystem audio Ressourcen frei.
 
-*   `<a href="media.seekTo.html">media.seekTo</a>`: Verschiebt die <a href="../geolocation/Position/position.html">Position</a> innerhalb der audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+*   `media.seekTo`: Verschiebt die Position innerhalb der audio-Datei.
 
-*   `<a href="media.setVolume.html">media.setVolume</a>`: Stellen Sie die Lautstärke für die Audiowiedergabe.
+*   `media.setVolume`: Stellen Sie die Lautstärke für die Audiowiedergabe.
 
-*   `<a href="media.startRecord.html">media.startRecord</a>`: Starten der Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+*   `media.startRecord`: Starten der Aufnahme einer audio-Datei.
 
-*   `<a href="media.stop.html">media.stop</a>Record`: Stoppen Sie die Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+*   `media.stopRecord`: Stoppen Sie die Aufnahme einer audio-Datei.
 
-*   `<a href="media.stop.html">media.stop</a>`: Abspielen einer Audiodatei zu stoppen.
+*   `media.stop`: Abspielen einer Audiodatei zu stoppen.
 
 ## Zusätzliche ReadOnly-Parameter
 
-*   **<a href="../geolocation/Position/position.html">Position</a>**: die <a href="../geolocation/Position/position.html">Position</a> innerhalb der audio-Wiedergabe in Sekunden.
+*   **Position**: die Position innerhalb der audio-Wiedergabe in Sekunden.
     
-    *   Nicht während des Spiels automatisch aktualisiert; Rufen Sie `getCurrent<a href="../geolocation/Position/position.html">Position</a>` zu aktualisieren.
+    *   Nicht während des Spiels automatisch aktualisiert; Rufen Sie `getCurrentPosition` zu aktualisieren.
 
 *   **Dauer**: die Dauer der Medien, in Sekunden.
 
@@ -88,7 +88,7 @@ Die folgenden Konstanten werden gemeldet, als einzigem Parameter an die `mediaSt
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ Cordova Plugin hinzufügen org.apache.cordova.media $ Cordova Plugin ls ['org.apache.cordova.media'] $ Cordova Plugin Rm org.apache.cordova.media
      
@@ -138,7 +138,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
 
 ### Windows Phone Macken
 

@@ -20,14 +20,14 @@ license: >
 
 # media.play
 
-시작 또는 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 재생을 다시 시작 합니다.
+시작 또는 오디오 파일 재생을 다시 시작 합니다.
 
     media.play();
     
 
 ## 설명
 
-`media.play`메서드가 동기적으로 실행 및 시작 또는 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 재생을 다시 시작 합니다.
+`media.play`메서드가 동기적으로 실행 및 시작 또는 오디오 파일 재생을 다시 시작 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -65,14 +65,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -99,7 +99,7 @@ license: >
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -120,7 +120,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_<a href="media.pause.html">media.pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -128,7 +128,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -166,11 +166,11 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-*   검은 딸기 <a href="../device/device.html">장치</a> 지원 동시 오디오 채널의 수를 제한 합니다. CDMA <a href="../device/device.html">장치</a> 오디오 채널을 지원합니다. 다른 <a href="../device/device.html">장치</a>는 최대 두 개의 동시 채널을 지원합니다. 지원 되는 용량 보다 더 많은 오디오 <a href="../file/fileobj/fileobj.html">파일</a>을 재생 하려고 이전 재생이 중지 되 고 결과.
+*   검은 딸기 장치 지원 동시 오디오 채널의 수를 제한 합니다. CDMA 장치 오디오 채널을 지원합니다. 다른 장치는 최대 두 개의 동시 채널을 지원합니다. 지원 되는 용량 보다 더 많은 오디오 파일을 재생 하려고 이전 재생이 중지 되 고 결과.
 
 ## iOS 단점
 
-*   **numberOfLoops**:이 옵션을 전달할는 `play` 시간을 재생 하려면, 예를 들어 <a href="media.html">미디어</a> <a href="../file/fileobj/fileobj.html">파일</a>의 수를 지정 하는 방법:
+*   **numberOfLoops**:이 옵션을 전달할는 `play` 시간을 재생 하려면, 예를 들어 미디어 파일의 수를 지정 하는 방법:
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
@@ -182,7 +182,7 @@ license: >
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **<a href="../file/fileobj/fileobj.html">파일</a> 검색의 순서**: iOS에서 검색 한 <a href="../file/fileobj/fileobj.html">파일</a> 이름 또는 간단한 경로 제공 하는 경우는 `www` <a href="../file/fileobj/fileobj.html">파일</a>을 다음 응용 프로그램의 디렉터리 `documents/tmp` 디렉터리:
+*   **파일 검색의 순서**: iOS에서 검색 한 파일 이름 또는 간단한 경로 제공 하는 경우는 `www` 파일을 다음 응용 프로그램의 디렉터리 `documents/tmp` 디렉터리:
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

@@ -21,7 +21,7 @@ license: >
 Flags
 =====
 
-このオブジェクトは、 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` の __get<a href="../fileobj/fileobj.html">File</a>__ メソッドと __getDirectory__ メソッド (ファイルやディレクトリを取得または作成するメソッド) に渡される引数として使われます。
+このオブジェクトは、 `DirectoryEntry` の __getFile__ メソッドと __getDirectory__ メソッド (ファイルやディレクトリを取得または作成するメソッド) に渡される引数として使われます。
 
 プロパティー
 ----------
@@ -37,11 +37,11 @@ Flags
 - iOS
 - Windows Phone 7 (Mango)
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // data ディレクトリを取得します。もし存在しない場合は、作成します
     dataDir = fileSystem.root.getDirectory("data", {create: true});
 
     // lockfile.txt ファイルを、存在しない場合のみ作成します
-    lock<a href="../fileobj/fileobj.html">File</a> = dataDir.get<a href="../fileobj/fileobj.html">File</a>("lockfile.txt", {create: true, exclusive: true});
+    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});

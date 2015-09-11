@@ -39,8 +39,8 @@ more or less boiling down to calling the `action` method on the
 Specifiy the plugin as a `<feature>` tag in your Cordova-iOS
 application's project's `config.xml` file.
 
-    <feature name="Local<a href="../../../cordova/storage/storage.html">Storage</a>">
-        <param name="ios-package" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
     </feature>
 
 The feature `name` attribute should match what you use in the JavaScript
@@ -202,7 +202,7 @@ See other methods that you can override in:
 
 * [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-For example, you can hook into the `<a href="../../../cordova/events/events.pause.html">pause</a>`, `<a href="../../../cordova/events/events.resume.html">resume</a>`, app terminate and `handleOpenURL` events.
+For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
 
 ## Debugging Plugins
 
@@ -218,4 +218,4 @@ running in the iOS 6 Simulator.
 
 * Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
 
-* Don't forget to add any hosts you connect to in the whitelist, as described in <a href="../../appdev/whitelist/index.html">Domain Whitelist Guide</a>. If you forget, an error is logged in the Xcode console.
+* Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.

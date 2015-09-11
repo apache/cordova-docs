@@ -22,8 +22,8 @@ license: >
 
 Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova aplikacije za Windows 8. Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   <a href="upgrading.html">Nadgradnjo operacijskega sistema Windows 8</a>
-*   <a href="tools.html">Orodja ukazne vrstice Windows 8</a>
+*   Nadgradnjo operacijskega sistema Windows 8
+*   Orodja ukazne vrstice Windows 8
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 
@@ -81,13 +81,13 @@ Travnato gričevje ter citat ki postaja latenten ulitek [Cordova][3]. Ti instuct
             <script src="/js/default.js"></script>
         
 
-*   Dodaj a `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` trener dokazati Cordova deluje:
+*   Dodaj a `deviceready` trener dokazati Cordova deluje:
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+                document.addEventListener("deviceready", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

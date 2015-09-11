@@ -29,7 +29,7 @@ Retourne un tableau des noms des mois ou jours de la semaine, selon le calendrie
 
 Retourne le tableau de noms à la `successCallback` avec un `properties` objet comme paramètre. Cet objet contient une `value` propriété avec un `Array` de `String` valeurs. Les noms de fonctionnalités de tableau à partir de soit le premier mois de l'année ou le premier jour de la semaine, selon l'option choisie.
 
-S'il y a une erreur d'obtention des noms, puis les `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+S'il y a une erreur d'obtention des noms, puis les `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
 
 Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
 
@@ -67,7 +67,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple affich
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

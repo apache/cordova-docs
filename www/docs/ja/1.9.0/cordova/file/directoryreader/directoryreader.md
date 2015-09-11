@@ -44,10 +44,10 @@ readEntries
 
 __パラメーター:__
 
-- __successCallback__ - <a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a> と <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> オブジェクトの配列を渡すコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリリストの取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - FileEntry と DirectoryEntry オブジェクトの配列を渡すコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリリストの取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__<a href="../../storage/storage.opendatabase.html">使用例</a>__
+__使用例__
 
     function success(entries) {
         var i;

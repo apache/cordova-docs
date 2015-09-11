@@ -20,14 +20,14 @@ license: >
 
 # Configurazione di blackBerry
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. Le preferenze di dettagli questa sezione che si applicano solo a BlackBerry 10 costruisce. Vedere il file config. XML <a href="../../../cordova/file/fileobj/fileobj.html">File</a> per informazioni sulle opzioni di configurazione globale.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. Le preferenze di dettagli questa sezione che si applicano solo a BlackBerry 10 costruisce. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
-*   `ChildBrowser`( `disable` o default `enable` ): disattiva windows browser bambino. Per impostazione predefinita, apps lanciare una finestra del browser secondario per visualizzare risorse accessibili tramite `<a href="../../../cordova/inappbrowser/window.open.html">window.open</a>()` o specificando un `_blank` obiettivo di ancoraggio. Specificare `disable` per eseguire l'override di questo comportamento predefinito.
+*   `ChildBrowser`( `disable` o default `enable` ): disattiva windows browser bambino. Per impostazione predefinita, apps lanciare una finestra del browser secondario per visualizzare risorse accessibili tramite `window.open()` o specificando un `_blank` obiettivo di ancoraggio. Specificare `disable` per eseguire l'override di questo comportamento predefinito.
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` o default `disable` ): consente il blocco dei popup, che impedisce che le chiamate a `<a href="../../../cordova/inappbrowser/window.open.html">window.open</a>()` . Per impostazione predefinita, popup visualizzano in una finestra del browser di bambino. L'impostazione della preferenza `enable` impedisce la visualizzazione a tutti.
+*   `PopupBlocker`( `enable` o default `disable` ): consente il blocco dei popup, che impedisce che le chiamate a `window.open()` . Per impostazione predefinita, popup visualizzano in una finestra del browser di bambino. L'impostazione della preferenza `enable` impedisce la visualizzazione a tutti.
     
         <preference name="PopupBlocker" value="enable"/>
         

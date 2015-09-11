@@ -32,7 +32,7 @@ Database
 詳細
 -------
 
-Database オブジェクトは `window.<a href="../storage.opendatabase.html">openDatabase</a>()` メソッド呼び出し時に返されるオブジェクトです。
+Database オブジェクトは `window.openDatabase()` メソッド呼び出し時に返されるオブジェクトです。
 
 サポートされているプラットフォーム
 -------------------
@@ -58,34 +58,34 @@ Transaction の例
         alert("成功しました。");
     }
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
 Change Version の例
 -------------------
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
 
-詳細な<a href="../storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../../contacts/Contact/contact.html">Contact</a> の<a href="../storage.opendatabase.html">使用例</a></title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 

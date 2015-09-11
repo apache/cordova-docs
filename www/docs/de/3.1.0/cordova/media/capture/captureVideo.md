@@ -20,20 +20,20 @@ license: >
 
 # capture.captureVideo
 
-> Die Videorecorder-Anwendung starten und geben Informationen zu aufgezeichneten video-Clip-<a href="../../file/fileobj/fileobj.html">Datei</a>en zurück.
+> Die Videorecorder-Anwendung starten und geben Informationen zu aufgezeichneten video-Clip-Dateien zurück.
 
     navigator.device.capture.captureVideo(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
     
 
 ## Beschreibung
 
-Beginnt einen asynchronen Vorgang um Videoaufnahmen mit Videoaufzeichnung-Anwendung des <a href="../../device/device.html">Gerät</a>s zu erfassen. Die Operation ermöglicht dem Benutzer, mehrere Aufnahmen in einer einzigen Sitzung zu erfassen.
+Beginnt einen asynchronen Vorgang um Videoaufnahmen mit Videoaufzeichnung-Anwendung des Geräts zu erfassen. Die Operation ermöglicht dem Benutzer, mehrere Aufnahmen in einer einzigen Sitzung zu erfassen.
 
-Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet wird, die video-Aufnahme-Anwendung oder die maximale Anzahl an Aufnahmen von angegebenen `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer einen einzelnen video Clip aufgezeichnet.
+Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet wird, die video-Aufnahme-Anwendung oder die maximale Anzahl an Aufnahmen von angegebenen `CaptureVideoOptions.limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer einen einzelnen video Clip aufgezeichnet.
 
-Wenn der Capture-Vorgang abgeschlossen ist, es der `<a href="CaptureCB.html">CaptureCB</a>` Rückruf führt mit einer Reihe von `<a href="MediaFile.html">MediaFile</a>` Objekten beschreiben jedes video-Clip-<a href="../../file/fileobj/fileobj.html">Datei</a> erfasst. Wenn der Benutzer den Vorgang vor dem <a href="capture.html">Erfassen</a> eines Videoclips, beendet die `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` Rückruf führt mit ein `<a href="CaptureError.html">CaptureError</a>` Objekt mit eine `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` Fehlercode.
+Wenn der Capture-Vorgang abgeschlossen ist, es der `CaptureCB` Rückruf führt mit einer Reihe von `MediaFile` Objekten beschreiben jedes video-Clip-Datei erfasst. Wenn der Benutzer den Vorgang vor dem Erfassen eines Videoclips, beendet die `CaptureErrorCB` Rückruf führt mit ein `CaptureError` Objekt mit eine `CaptureError.CAPTURE_NO_MEDIA_FILES` Fehlercode.
 
 ## Unterstützte Plattformen
 
@@ -100,7 +100,7 @@ Wenn der Capture-Vorgang abgeschlossen ist, es der `<a href="CaptureCB.html">Cap
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
+            var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     
@@ -126,4 +126,4 @@ Wenn der Capture-Vorgang abgeschlossen ist, es der `<a href="CaptureCB.html">Cap
 
 ## BlackBerry WebWorks Macken
 
-*   Cordova für BlackBerry WebWorks versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem <a href="../../device/device.html">Gerät</a> installiert ist.
+*   Cordova für BlackBerry WebWorks versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `CaptureError.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem Gerät installiert ist.

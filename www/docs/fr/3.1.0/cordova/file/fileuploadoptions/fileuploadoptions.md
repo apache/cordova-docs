@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>UploadOptions
+# FileUploadOptions
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>UploadOptions` peut être passé à la méthode `upload()` de l'objet `<a href="../fileobj/fileobj.html">File</a>Transfer` pour spécifier des paramètres supplémentaires au script d'upload.
+Un objet `FileUploadOptions` peut être passé à la méthode `upload()` de l'objet `FileTransfer` pour spécifier des paramètres supplémentaires au script d'upload.
 
 ## Propriétés
 
@@ -38,7 +38,7 @@ Un objet `<a href="../fileobj/fileobj.html">File</a>UploadOptions` peut être pa
 
 ## Description
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>UploadOptions` peut être passé à la méthode `upload()` de l'objet `<a href="../fileobj/fileobj.html">File</a>Transfer` pour spécifier des paramètres supplémentaires au script d'upload.
+Un objet `FileUploadOptions` peut être passé à la méthode `upload()` de l'objet `FileTransfer` pour spécifier des paramètres supplémentaires au script d'upload.
 
 ## Particularités de WP7
 

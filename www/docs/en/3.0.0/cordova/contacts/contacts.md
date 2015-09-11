@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="Contact/contact.html">Contact</a>s
+Contacts
 ========
 
 > The `contacts` object provides access to the device contacts database.
@@ -26,7 +26,7 @@ license: >
 __Important privacy note:__ Collection and use of contact data raises
 important privacy issues.  Your app's privacy policy should discuss
 how the app uses contact data and whether it is shared with any other
-parties.  <a href="Contact/contact.html">Contact</a> information is considered sensitive because it
+parties.  Contact information is considered sensitive because it
 reveals the people with whom a person communicates.  Therefore, in
 addition to your app's privacy policy, you should strongly consider
 providing a just-in-time notice prior to your app accessing or using
@@ -38,32 +38,32 @@ marketplaces may require your app to provide just-in-time notice and
 obtain permission from the user prior to accessing contact data.  A
 clear and easy-to-understand user experience surrounding the use of
 contact data will help avoid user confusion and perceived misuse of
-contact data.  For more information, please see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.
+contact data.  For more information, please see the Privacy Guide.
 
 Methods
 -------
 
-- <a href="contacts.create.html">contacts.create</a>
-- <a href="contacts.find.html">contacts.find</a>
+- contacts.create
+- contacts.find
 
 Arguments
 ---------
 
-- <a href="parameters/contactFields.html">contactFields</a>
-- <a href="parameters/contactSuccess.html">contactSuccess</a>
-- <a href="parameters/contactError.html">contactError</a>
-- <a href="parameters/contactFindOptions.html">contactFindOptions</a>
+- contactFields
+- contactSuccess
+- contactError
+- contactFindOptions
 
 Objects
 -------
 
-- <a href="Contact/contact.html">Contact</a>
-- <a href="Contact/contact.html">Contact</a>Name
-- <a href="Contact/contact.html">Contact</a>Field
-- <a href="Contact/contact.html">Contact</a>Address
-- <a href="Contact/contact.html">Contact</a>Organization
-- <a href="Contact/contact.html">Contact</a>FindOptions
-- <a href="Contact/contact.html">Contact</a>Error
+- Contact
+- ContactName
+- ContactField
+- ContactAddress
+- ContactOrganization
+- ContactFindOptions
+- ContactError
 
 ## Accessing the Feature
 
@@ -80,8 +80,8 @@ platform-specific configuration settings described below:
 * Android
 
         (in app/res/xml/config.xml)
-        <feature name="<a href="Contact/contact.html">Contact</a>s">
-            <param name="android-package" value="org.apache.cordova.<a href="Contact/contact.html">Contact</a>Manager" />
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
         </feature>
 
         (in app/AndroidManifest.xml)
@@ -92,20 +92,20 @@ platform-specific configuration settings described below:
 * BlackBerry WebWorks
 
         (in www/plugins.xml)
-        <feature name="<a href="Contact/contact.html">Contact</a>">
-            <param name="blackberry-package" value="org.apache.cordova.pim.<a href="Contact/contact.html">Contact</a>" />
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
         </feature>
 
         (in www/config.xml)
         <feature id="blackberry.find"        required="true" version="1.0.0.0" />
         <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
         <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-        <feature id="blackberry.pim.<a href="Contact/contact.html">Contact</a>" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
 * iOS (in `config.xml`)
 
-        <feature name="<a href="Contact/contact.html">Contact</a>s">
-            <param name="ios-package" value="CDV<a href="Contact/contact.html">Contact</a>s" />
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
         </feature>
 
 * Windows Phone

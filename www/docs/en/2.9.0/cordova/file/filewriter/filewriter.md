@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>Writer
+FileWriter
 ==========
 
 As object that allows you to create and write data to a file.
@@ -30,7 +30,7 @@ Properties
 - __fileName__: The name of the file to be written. _(DOMString)_
 - __length__: The length of the file to be written. _(long)_
 - __position__: The current position of the file pointer. _(long)_
-- __error__: An object containing errors. _(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)_
+- __error__: An object containing errors. _(FileError)_
 - __onwritestart__: Called when the write starts. _(Function)_
 - __onwrite__: Called when the request has completed successfully.  _(Function)_
 - __onabort__: Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
@@ -52,16 +52,16 @@ Methods
 Details
 -------
 
-The `<a href="../fileobj/fileobj.html">File</a>Writer` object offers a way to write UTF-8 encoded files to
+The `FileWriter` object offers a way to write UTF-8 encoded files to
 the device file system.  Applications respond to `writestart`,
 `progress`, `write`, `writeend`, `error`, and `abort` events.
 
-Each `<a href="../fileobj/fileobj.html">File</a>Writer` corresponds to a single file, to which data can be
-written many times.  The `<a href="../fileobj/fileobj.html">File</a>Writer` maintains the file's `position`
+Each `FileWriter` corresponds to a single file, to which data can be
+written many times.  The `FileWriter` maintains the file's `position`
 and `length` attributes, which allow the app to `seek` and `write`
-anywhere in the file. By default, the `<a href="../fileobj/fileobj.html">File</a>Writer` writes to the
+anywhere in the file. By default, the `FileWriter` writes to the
 beginning of the file, overwriting existing data. Set the optional
-`append` boolean to `true` in the `<a href="../fileobj/fileobj.html">File</a>Writer`'s constructor to
+`append` boolean to `true` in the `FileWriter`'s constructor to
 write to the end of the file.
 
 Text data is supported by all platforms listed below. Text is encoded as UTF-8 before being written to the filesystem. Some platforms also support binary data, which can be passed in as either an ArrayBuffer or a Blob.
@@ -80,7 +80,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Seek Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Seek Quick Example
 ------------------------------
 
     function win(writer) {
@@ -94,7 +94,7 @@ Seek Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Truncate Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Truncate Quick Example
 --------------------------
 
     function win(writer) {
@@ -107,7 +107,7 @@ Truncate Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Write Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Write Quick Example
 -------------------
 
     function win(writer) {
@@ -123,7 +123,7 @@ Write Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Binary Write Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Binary Write Quick Example
 --------------------------
 
     function win(writer) {
@@ -144,7 +144,7 @@ Binary Write Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Append Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Append Quick Example
 --------------------
 
     function win(writer) {
@@ -161,7 +161,7 @@ Append Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Abort Quick Example
 -------------------
 
     function win(writer) {
@@ -178,35 +178,35 @@ Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     entry.createWriter(win, fail);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../fileobj/fileobj.html">File</a>Writer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileWriter Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
+        function onDeviceReady() {
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
 
         function gotFS(fileSystem) {
-            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
 
-        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
-            fileEntry.createWriter(got<a href="../fileobj/fileobj.html">File</a>Writer, fail);
+        function gotFileEntry(fileEntry) {
+            fileEntry.createWriter(gotFileWriter, fail);
         }
 
-        function got<a href="../fileobj/fileobj.html">File</a>Writer(writer) {
+        function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
                 writer.truncate(11);
@@ -229,7 +229,7 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Write <a href="../fileobj/fileobj.html">File</a></p>
+        <h1>Example</h1>
+        <p>Write File</p>
       </body>
     </html>

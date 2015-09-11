@@ -29,7 +29,7 @@ Obtener el identificador de cadena en el lenguaje actual del cliente.
 
 Devuelve el identificador de idioma a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `String`.
 
-Si hay un error al obtener el idioma, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Si hay un error al obtener el idioma, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 
@@ -53,7 +53,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, esto debe mostrar 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

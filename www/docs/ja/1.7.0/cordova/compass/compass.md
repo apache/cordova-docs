@@ -26,16 +26,16 @@ Compass
 メソッド
 -------
 
-- <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
-- <a href="compass.watchHeading.html">compass.watchHeading</a>
-- <a href="compass.clearWatch.html">compass.clearWatch</a>
-- <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a>    (廃止)
-- <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a>      (廃止)
+- compass.getCurrentHeading
+- compass.watchHeading
+- compass.clearWatch
+- compass.watchHeadingFilter    (廃止)
+- compass.clearWatchFilter      (廃止)
 
 引数
 ---------
 
-- <a href="parameters/compassSuccess.html">compassSuccess</a>
-- <a href="parameters/compassError.html">compassError</a>
-- <a href="parameters/compassOptions.html">compassOptions</a>
-- <a href="parameters/compassHeading.html">compassHeading</a>
+- compassSuccess
+- compassError
+- compassOptions
+- compassHeading

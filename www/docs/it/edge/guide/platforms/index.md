@@ -24,62 +24,62 @@ Prima di sviluppare per una qualsiasi delle piattaforme elencate di seguito, ins
 
 Per sviluppare applicazioni di Cordova, è necessario installare il SDK per ogni piattaforma mobile che vi si rivolgono. Questa installazione è necessaria indipendentemente dal fatto se non la maggior parte del vostro lavoro in SDK o utilizzare la CLI per il ciclo di generazione.
 
-Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. <a href="../../index.html">Guide</a> aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
+Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. Guide aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
 
 ## Amazon fuoco OS
 
-*   <a href="amazonfireos/index.html">Amazon fuoco piattaforma OS guida</a>
-*   <a href="amazonfireos/config.html">Configurazione di fuoco OS Amazon</a>
-*   <a href="amazonfireos/webview.html">Amazon fuoco OS visualizzazioni Web</a>
-*   <a href="amazonfireos/plugin.html">Amazon fuoco OS Plugins</a>
+*   Amazon fuoco piattaforma OS guida
+*   Configurazione di fuoco OS Amazon
+*   Amazon fuoco OS visualizzazioni Web
+*   Amazon fuoco OS Plugins
 
 ## Android
 
-*   <a href="android/index.html">Guida piattaforma Android</a>
-*   <a href="android/tools.html">Shell Android strumento guida</a>
-*   <a href="android/config.html">Configurazione Android</a>
-*   <a href="android/plugin.html">Plugin Android</a>
-*   <a href="android/webview.html">Visualizzazioni Web Android</a>
-*   <a href="android/upgrading.html">L'aggiornamento di Android</a>
+*   Guida piattaforma Android
+*   Shell Android strumento guida
+*   Configurazione Android
+*   Plugin Android
+*   Visualizzazioni Web Android
+*   L'aggiornamento di Android
 
 ## BlackBerry 10
 
-*   <a href="blackberry10/index.html"><a href="blackberry/index.html">Guida piattaforma blackBerry</a> 10</a>
-*   <a href="blackberry10/tools.html">BlackBerry 10 Shell strumento guida</a>
-*   <a href="blackberry10/config.html"><a href="blackberry/config.html">Configurazione di blackBerry</a> 10</a>
-*   <a href="blackberry10/plugin.html">BlackBerry 10 plugin</a>
-*   <a href="blackberry10/upgrading.html"><a href="blackberry/upgrading.html">L'aggiornamento di BlackBerry</a> 10</a>
+*   Guida piattaforma blackBerry 10
+*   BlackBerry 10 Shell strumento guida
+*   Configurazione di blackBerry 10
+*   BlackBerry 10 plugin
+*   L'aggiornamento di BlackBerry 10
 
 ## Firefox OS
 
-*   <a href="firefoxos/index.html">Firefox guida piattaforma OS</a>
+*   Firefox guida piattaforma OS
 
 ## iOS
 
-*   <a href="ios/index.html">iOS guida piattaforma</a>
-*   <a href="ios/tools.html">iOS guida strumento Shell</a>
-*   <a href="ios/config.html">Configurazione iOS</a>
-*   <a href="ios/plugin.html">iOS Plugins</a>
-*   <a href="ios/webview.html">iOS visualizzazioni Web</a>
-*   <a href="ios/upgrading.html">L'aggiornamento iOS</a>
+*   iOS guida piattaforma
+*   iOS guida strumento Shell
+*   Configurazione iOS
+*   iOS Plugins
+*   iOS visualizzazioni Web
+*   L'aggiornamento iOS
 
 ## Ubuntu
 
-*   <a href="ubuntu/index.html">Piattaforma ubuntu guida</a>
+*   Piattaforma ubuntu guida
 
 ## Windows Phone 8
 
-*   <a href="wp8/index.html">Guida di Windows Phone 8 piattaforma</a>
-*   <a href="wp8/plugin.html">Windows Phone 8 plugin</a>
-*   <a href="wp8/upgrading.html">L'aggiornamento di Windows Phone</a> 8
+*   Guida di Windows Phone 8 piattaforma
+*   Windows Phone 8 plugin
+*   L'aggiornamento di Windows Phone 8
 
 ## Windows
 
-*   <a href="win8/index.html">Guida alla piattaforma Windows</a>
-*   <a href="win8/plugin.html">Plugin di Windows</a>
-*   <a href="win8/packaging.html">Imballaggio di Windows</a>
-*   <a href="win8/upgrading.html">L'aggiornamento di Windows 8</a>
+*   Guida alla piattaforma Windows
+*   Plugin di Windows
+*   Imballaggio di Windows
+*   L'aggiornamento di Windows 8
 
 ## Tizen
 
-*   <a href="tizen/index.html">Tizen piattaforma guida</a>
+*   Tizen piattaforma guida

@@ -20,7 +20,7 @@ license: >
 
 # compassHeading
 
-A `CompassHeading` 개체에 반환 되는 `<a href="compassSuccess.html">compassSuccess</a>` 콜백 함수.
+A `CompassHeading` 개체에 반환 되는 `compassSuccess` 콜백 함수.
 
 ## 속성
 
@@ -34,7 +34,7 @@ A `CompassHeading` 개체에 반환 되는 `<a href="compassSuccess.html">compas
 
 ## 설명
 
-`CompassHeading`개체를 반환 되는 `<a href="compassSuccess.html">compassSuccess</a>` 콜백 함수.
+`CompassHeading`개체를 반환 되는 `compassSuccess` 콜백 함수.
 
 ## 안 드 로이드 단점
 
@@ -46,4 +46,4 @@ A `CompassHeading` 개체에 반환 되는 `<a href="compassSuccess.html">compas
 
 *   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 
-*   IOS 4 기기 및 디바이스의 현재 방향 절대 <a href="../../geolocation/Position/position.html">위치</a>로 참조 하지 머리글 요소 위에 애플 리 케이 션을 위해 지 원하는 그 방향.
+*   IOS 4 기기 및 디바이스의 현재 방향 절대 위치로 참조 하지 머리글 요소 위에 애플 리 케이 션을 위해 지 원하는 그 방향.

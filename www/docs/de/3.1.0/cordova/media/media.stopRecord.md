@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.stop.html">media.stop</a>Record
+# media.stopRecord
 
-Stoppt die Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+Stoppt die Aufnahme einer audio-Datei.
 
-    <a href="media.stop.html">media.stop</a>Record();
+    media.stopRecord();
     
 
 ## Beschreibung
 
-Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a> beenden.
+Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei beenden.
 
 ## Unterstützte Plattformen
 
@@ -70,14 +70,14 @@ Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, A
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
@@ -92,7 +92,7 @@ Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, A
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
+                setAudioPosition(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -121,7 +121,7 @@ Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, A
     
         // Set audio position
         //
-        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+        function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
     
@@ -136,4 +136,4 @@ Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, A
 
 ## Tizen Macken
 
-*   Tizen <a href="../device/device.html">Gerät</a>en unterstützt nicht.
+*   Tizen Geräten unterstützt nicht.

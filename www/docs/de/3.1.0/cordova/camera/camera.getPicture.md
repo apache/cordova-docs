@@ -20,22 +20,22 @@ license: >
 
 # camera.getPicture
 
-Nimmt ein Foto mit der <a href="camera.html">Kamera</a>, oder ein Foto aus dem <a href="../device/device.html">Gerät</a> Bildergalerie abgerufen. Das Bild wird an den Erfolg-Rückruf als eine base64-codierte übergeben `String` , oder als den URI für die Image-<a href="../file/fileobj/fileobj.html">Datei</a>. Die Methode selbst gibt ein `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` -Objekt, das verwendet werden kann, um die <a href="../file/fileobj/fileobj.html">Datei</a>-Auswahl-Popover neu zu positionieren.
+Nimmt ein Foto mit der Kamera, oder ein Foto aus dem Gerät Bildergalerie abgerufen. Das Bild wird an den Erfolg-Rückruf als eine base64-codierte übergeben `String` , oder als den URI für die Image-Datei. Die Methode selbst gibt ein `CameraPopoverHandle` -Objekt, das verwendet werden kann, um die Datei-Auswahl-Popover neu zu positionieren.
 
-    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
+    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
 
 ## Beschreibung
 
-Die `camera.getPicture` -Funktion öffnet das <a href="../device/device.html">Gerät</a> Standard-<a href="camera.html">Kamera</a>-Anwendung, die Benutzern ermöglicht, Bilder ausrichten. Dieses Verhalten tritt standardmäßig, wenn `Camera.sourceType` gleich `Camera.PictureSourceType.CAMERA` . Sobald der Benutzer die Fotoschnäpper, die <a href="camera.html">Kamera</a>anwendung geschlossen wird und die Anwendung wird wiederhergestellt.
+Die `camera.getPicture` -Funktion öffnet das Gerät Standard-Kamera-Anwendung, die Benutzern ermöglicht, Bilder ausrichten. Dieses Verhalten tritt standardmäßig, wenn `Camera.sourceType` gleich `Camera.PictureSourceType.CAMERA` . Sobald der Benutzer die Fotoschnäpper, die Kameraanwendung geschlossen wird und die Anwendung wird wiederhergestellt.
 
-Wenn `Camera.sourceType` ist `Camera.PictureSourceType.PHOTOLIBRARY` oder `Camera.PictureSourceType.SAVEDPHOTOALBUM` , dann ein Dialog-Displays, die Benutzern ermöglicht, ein vorhandenes Bild auszuwählen. Die `camera.getPicture` Funktion gibt ein `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` -Objekt, das verwendet werden kann, um den Bild-Auswahl-Dialog, zum Beispiel beim ändert sich der Orientierung des <a href="../device/device.html">Gerät</a>s neu positionieren.
+Wenn `Camera.sourceType` ist `Camera.PictureSourceType.PHOTOLIBRARY` oder `Camera.PictureSourceType.SAVEDPHOTOALBUM` , dann ein Dialog-Displays, die Benutzern ermöglicht, ein vorhandenes Bild auszuwählen. Die `camera.getPicture` Funktion gibt ein `CameraPopoverHandle` -Objekt, das verwendet werden kann, um den Bild-Auswahl-Dialog, zum Beispiel beim ändert sich der Orientierung des Geräts neu positionieren.
 
-Der Rückgabewert wird gesendet, um die `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` Callback-Funktion in einem der folgenden Formate, je nach dem angegebenen `<a href="parameter/cameraOptions.html">cameraOptions</a>` :
+Der Rückgabewert wird gesendet, um die `cameraSuccess` Callback-Funktion in einem der folgenden Formate, je nach dem angegebenen `cameraOptions` :
 
 *   A `String` mit dem base64-codierte Foto-Bild.
 
-*   A `String` , die die Bild-<a href="../file/fileobj/fileobj.html">Datei</a>-Stelle auf lokalem <a href="../storage/storage.html">Speicher</a> (Standard).
+*   A `String` , die die Bild-Datei-Stelle auf lokalem Speicher (Standard).
 
 Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel:
 
@@ -47,7 +47,7 @@ Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**Hinweis:** Fotoauflösung auf neueren <a href="../device/device.html">Gerät</a>en ist recht gut. Fotos aus dem <a href="../device/device.html">Gerät</a> Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um <a href="../storage/storage.html">Speicher</a>probleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
+**Hinweis:** Fotoauflösung auf neueren Geräten ist recht gut. Fotos aus dem Gerät Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um Speicherprobleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
 
 ## Unterstützte Plattformen
 
@@ -60,7 +60,7 @@ Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel
 
 ## Android Macken
 
-Android verwendet Absichten zum Starten von der <a href="camera.html">Kamera</a>-Aktivität auf dem <a href="../device/device.html">Gerät</a>, um Bilder zu erfassen und auf Handys mit wenig <a href="../storage/storage.html">Speicher</a>, Cordova Tätigkeit getötet werden kann. In diesem Szenario kann das Bild nicht angezeigt, wenn die Aktivität von Cordova wiederhergestellt wird.
+Android verwendet Absichten zum Starten von der Kamera-Aktivität auf dem Gerät, um Bilder zu erfassen und auf Handys mit wenig Speicher, Cordova Tätigkeit getötet werden kann. In diesem Szenario kann das Bild nicht angezeigt, wenn die Aktivität von Cordova wiederhergestellt wird.
 
 ## iOS Macken
 
@@ -71,7 +71,7 @@ Darunter eine JavaScript `alert()` entweder des Rückrufs Funktionen können Pro
 
 ## Windows Phone 7 Macken
 
-Die native <a href="camera.html">Kamera</a>anwendung aufrufen, während Ihr <a href="../device/device.html">Gerät</a> über Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
+Die native Kameraanwendung aufrufen, während Ihr Gerät über Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
 
 ## Tizen Macken
 
@@ -95,7 +95,7 @@ Nehmen Sie ein Foto und rufen Sie sie als base64-codierte Bild:
     }
     
 
-Nehmen Sie ein Foto und rufen Sie das Bild-<a href="../file/fileobj/fileobj.html">Datei</a>-<a href="../storage/storage.html">Speicher</a>ort:
+Nehmen Sie ein Foto und rufen Sie das Bild-Datei-Speicherort:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });
@@ -125,7 +125,7 @@ Nehmen Sie ein Foto und rufen Sie das Bild-<a href="../file/fileobj/fileobj.html
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
+        document.addEventListener("deviceready",onDeviceReady,false);
     
         // device APIs are available
         //

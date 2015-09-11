@@ -29,7 +29,7 @@ license: >
 
 `resume`Событие возникает, когда родной платформе вытаскивает приложения от фона.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Resume Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

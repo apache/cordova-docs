@@ -20,20 +20,20 @@ license: >
 
 # accelerometer.watchAcceleration
 
-固定間隔，在獲得沿*x*、 *y*和*z*軸<a href="acceleration/acceleration.html">加速度</a>。
+固定間隔，在獲得沿*x*、 *y*和*z*軸加速度。
 
-    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
-                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
-                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
+    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                           accelerometerError,
+                                                           [accelerometerOptions]);
     
 
 ## 說明
 
-<a href="acceleration/acceleration.html">加速度</a>計是動作感應器檢測到的更改 (delta) 相對於當前<a href="../geolocation/Position/position.html">位置</a>的運動中。 <a href="acceleration/acceleration.html">加速度</a>感應器可以檢測到沿*x*、 *y*和*z*軸的三維運動。
+加速度計是動作感應器檢測到的更改 (delta) 相對於當前位置的運動中。 加速度感應器可以檢測到沿*x*、 *y*和*z*軸的三維運動。
 
-`accelerometer.watchAcceleration`方法檢索<a href="../device/device.html">設備</a>的電流 `Acceleration` 間隔時間定期，執行 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` 回呼函數每次。 指定的時間間隔，以毫秒為單位通過 `acceleratorOptions` 物件的 `frequency` 參數。
+`accelerometer.watchAcceleration`方法檢索設備的電流 `Acceleration` 間隔時間定期，執行 `accelerometerSuccess` 回呼函數每次。 指定的時間間隔，以毫秒為單位通過 `acceleratorOptions` 物件的 `frequency` 參數。
 
-返回的觀看 ID 引用<a href="acceleration/acceleration.html">加速度</a>計的手錶時間間隔，並可以用 `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` 來停止看<a href="acceleration/acceleration.html">加速度</a>計。
+返回的觀看 ID 引用加速度計的手錶時間間隔，並可以用 `accelerometer.clearWatch` 來停止看加速度計。
 
 ## 支援的平臺
 
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
+                navigator.accelerometer.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -130,4 +130,4 @@ license: >
 
 ## iOS 的怪癖
 
-API 呼叫成功的回呼函數的時間間隔的要求，但到 40ms年之間<a href="../device/device.html">設備</a>限制所請求的範圍和 1000ms。 例如，如果請求的時間間隔為 3 秒，(3000ms) API 請求資料從<a href="../device/device.html">設備</a>每隔 1 秒，但只有執行成功回<a href="../file/fileobj/fileobj.html">檔</a>每隔 3 秒。
+API 呼叫成功的回呼函數的時間間隔的要求，但到 40ms年之間設備限制所請求的範圍和 1000ms。 例如，如果請求的時間間隔為 3 秒，(3000ms) API 請求資料從設備每隔 1 秒，但只有執行成功回檔每隔 3 秒。

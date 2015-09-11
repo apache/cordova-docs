@@ -22,12 +22,12 @@ license: >
 
 ユーザーが [戻る] ボタンを押したときに発生します。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", yourCallbackFunction, false);
+    document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
 ## 詳細
 
-既定の [戻る] ボタンの動作をオーバーライドする<a href="events.html">イベント</a> リスナーを登録、 `backbutton` を呼び出すことによって通常の<a href="events.html">イベント</a> `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` を受信したら、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
+既定の [戻る] ボタンの動作をオーバーライドするイベント リスナーを登録、 `backbutton` を呼び出すことによって通常のイベント `document.addEventListener` を受信したら、 `deviceready` イベント。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
 
 ## サポートされているプラットフォーム
 
@@ -37,7 +37,7 @@ license: >
 
 ## 簡単な例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
+    document.addEventListener("backbutton", onBackKeyDown, false);
     
     function onBackKeyDown() {
         // Handle the back button
@@ -49,7 +49,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Back Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -57,14 +57,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("backbutton", onBackKeyDown, false);
+            document.addEventListener("backbutton", onBackKeyDown, false);
         }
     
         // Handle the back button

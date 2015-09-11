@@ -189,7 +189,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     
     *   `<merges target="some.value"/>`指示應與任何現有的值在合併模組 `window.some.value` 。 如果已經存在任何鍵，該模組的版本將覆蓋原始。 你可以有很多 `<merges>` 像你喜歡。 上沒有可用的任何物件 `window` 創建的。
     
-    *   `<runs/>`意味著，您的代碼應與指定 `cordova.require` ，但不是安裝在 `window` 物件。 這是有用的模組，將附加的<a href="../cordova/events/events.html">事件</a>處理常式初始化時或以其他方式。 你只能有一個 `<runs/>` 標記。 請注意，包括 `<runs/>` 與 `<clobbers/>` 或 `<merges/>` 是多餘的因為他們也 `cordova.require` 您的模組。
+    *   `<runs/>`意味著，您的代碼應與指定 `cordova.require` ，但不是安裝在 `window` 物件。 這是有用的模組，將附加的事件處理常式初始化時或以其他方式。 你只能有一個 `<runs/>` 標記。 請注意，包括 `<runs/>` 與 `<clobbers/>` 或 `<merges/>` 是多餘的因為他們也 `cordova.require` 您的模組。
     
     *   一個空的 `<js-module>` 仍然載入，並且可以訪問的其他模組通過中`cordova.require`.
 
@@ -210,7 +210,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 *   `commit`： 這是理解的任何 git 引用 `git checkout` ： 一個分支或標記的名稱 （例如， `master` ， `0.3.1` ），或提交 （例如，雜湊`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`： 指定目標的外掛程式依賴項存在作為 git 資源庫的子目錄。 這是很有説明的因為它允許<a href="../cordova/storage/storage.html">存儲</a>庫中包含幾個相關的外掛程式，每個單獨指定。
+*   `subdir`： 指定目標的外掛程式依賴項存在作為 git 資源庫的子目錄。 這是很有説明的因為它允許存儲庫中包含幾個相關的外掛程式，每個單獨指定。
 
 在將來，將會介紹版本限制，和一個外掛程式庫會存在支援按名稱而不是顯式 Url 獲取。
 
@@ -236,7 +236,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     </platform>
     
 
-所需 `name` 屬性標識一個<a href="../guide/support/index.html">平臺支援</a>，將與該平臺關聯元素的子級。
+所需 `name` 屬性標識一個平臺支援，將與該平臺關聯元素的子級。
 
 平臺名稱應該是小寫字母。平臺名稱，如任意選擇，列出：
 

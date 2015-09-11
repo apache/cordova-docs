@@ -27,22 +27,22 @@ Capture
 -------
 
 - Capture
-- <a href="captureAudioOptions.html">CaptureAudioOptions</a>
-- <a href="captureImageOptions.html">CaptureImageOptions</a>
-- <a href="captureVideoOptions.html">CaptureVideoOptions</a>
-- <a href="CaptureCB.html">CaptureCB</a>
-- <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
-- <a href="ConfigurationData.html">ConfigurationData</a>
-- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
-- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
+- CaptureAudioOptions
+- CaptureImageOptions
+- CaptureVideoOptions
+- CaptureCB
+- CaptureErrorCB
+- ConfigurationData
+- MediaFile
+- MediaFileData
 
 メソッド
 -------
 
-- <a href="captureAudio.html">capture.captureAudio</a>
-- <a href="captureImage.html">capture.captureImage</a>
-- <a href="captureVideo.html">capture.captureVideo</a>
-- <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>
+- capture.captureAudio
+- capture.captureImage
+- capture.captureVideo
+- MediaFile.getFormatData
 
 スコープ
 -----
@@ -55,16 +55,16 @@ __capture__ オブジェクトは __navigator.device__ オブジェクトに割�
 プロパティー
 ----------
 
-- __supportedAudioModes:__ デバイスによってサポートされているオーディオ録音のフォーマットです。 (<a href="ConfigurationData.html">ConfigurationData</a>[])
-- __supportedImageModes:__ デバイスによってサポートされている記録用の画像サイズやフォーマットです。 (<a href="ConfigurationData.html">ConfigurationData</a>[])
-- __supportedVideoModes:__ デバイスによってサポートされている記録用のビデオ解像度やフォーマットです。 (<a href="ConfigurationData.html">ConfigurationData</a>[])
+- __supportedAudioModes:__ デバイスによってサポートされているオーディオ録音のフォーマットです。 (ConfigurationData[])
+- __supportedImageModes:__ デバイスによってサポートされている記録用の画像サイズやフォーマットです。 (ConfigurationData[])
+- __supportedVideoModes:__ デバイスによってサポートされている記録用のビデオ解像度やフォーマットです。 (ConfigurationData[])
 
 メソッド
 -------
 
-- <a href="captureAudio.html">capture.captureAudio</a>: オーディオ録音のために、デバイスのオーディオ録音アプリを起動します。
-- <a href="captureImage.html">capture.captureImage</a>: 画像取得のために、デバイスのカメラアプリを起動します。
-- <a href="captureVideo.html">capture.captureVideo</a>: ビデオ録画のために、デバイスのビデオ録画アプリを起動します。
+- capture.captureAudio: オーディオ録音のために、デバイスのオーディオ録音アプリを起動します。
+- capture.captureImage: 画像取得のために、デバイスのカメラアプリを起動します。
+- capture.captureVideo: ビデオ録画のために、デバイスのビデオ録画アプリを起動します。
 
 
 サポートされているプラットフォーム
@@ -101,7 +101,7 @@ __capture__ オブジェクトは __navigator.device__ オブジェクトに割�
 
 #### www/plugins.xml
 
-    <plugin name="Capture" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" />
+    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
 
 #### www/config.xml
 
@@ -110,7 +110,7 @@ __capture__ オブジェクトは __navigator.device__ オブジェクトに割�
 
 ### iOS
 
-#### App/Supporting <a href="../../file/fileobj/fileobj.html">File</a>s/Cordova.plist
+#### App/Supporting Files/Cordova.plist
 
     <key>Plugins</key>
     <dict>

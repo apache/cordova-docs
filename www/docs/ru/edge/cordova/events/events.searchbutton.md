@@ -29,9 +29,9 @@ license: >
 
 Если необходимо переопределить поведение по умолчанию кнопки поиск на Android вы можете зарегистрировать обработчик события для события «searchbutton».
 
-Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `<a href="events.deviceready.html">deviceready</a>`.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
 
-## <a href="../../config_ref/images.html">Поддерживаемые платформы</a>
+## Поддерживаемые платформы
 
 *   Android
 
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

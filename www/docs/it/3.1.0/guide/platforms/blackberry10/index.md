@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/index.html">Guida piattaforma blackBerry</a> 10
+# Guida piattaforma blackBerry 10
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo per creare e distribuire applicazioni di Cordova per dispositivi BlackBerry 10. Per le precedenti versioni di BlackBerry, è necessario utilizzare un diverso insieme di strumenti da riga di comando, descritti nella guida piattaforma BlackBerry.
 
@@ -26,7 +26,7 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo per creare e
 
 L'ambiente di sviluppo è disponibile su Windows, Mac e Linux.
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK nativo Blackberry. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come installare `cordova` , aggiungere progetti, quindi creare e distribuire per ogni piattaforma.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK nativo Blackberry. L'interfaccia della riga di comando per informazioni, vedere come installare `cordova` , aggiungere progetti, quindi creare e distribuire per ogni piattaforma.
 
 ## Installare il SDK nativo BlackBerry
 

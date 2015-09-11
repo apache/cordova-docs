@@ -20,7 +20,7 @@ license: >
 
 # FileTransfer
 
-Das `FileTransfer` -Objekt können Sie hoch-oder Herunterladen von <a href="../fileobj/fileobj.html">Datei</a>en zu und von einem Server.
+Das `FileTransfer` -Objekt können Sie hoch-oder Herunterladen von Dateien zu und von einem Server.
 
 ## Eigenschaften
 
@@ -28,15 +28,15 @@ Das `FileTransfer` -Objekt können Sie hoch-oder Herunterladen von <a href="../f
 
 ## Methoden
 
-*   **Upload**: sendet eine <a href="../fileobj/fileobj.html">Datei</a> an einen Server.
+*   **Upload**: sendet eine Datei an einen Server.
 
-*   **Download**: lädt eine <a href="../fileobj/fileobj.html">Datei</a> vom Server.
+*   **Download**: lädt eine Datei vom Server.
 
 *   **Abbrechen**: Abbruch eine Übertragung in Bearbeitung.
 
 ## Informationen
 
-Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="../fileobj/fileobj.html">Datei</a>en auf einem remote-Server mithilfe einer mehrteiligen HTTP-POST-Anforderung. HTTP- und HTTPS-Protokolle werden unterstützt. Optionale Parameter können angegeben werden, indem Sie übergeben ein `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` gegen die `upload()` Methode. Auf erfolgreichen Upload ein `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` -Objekt wird an den Erfolg-Rückruf übergeben. Wenn ein Fehler auftritt, ein `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` -Objekt wird an den Fehler-Rückruf übergeben. Es ist auch möglich (nur auf iOS und Android), eine <a href="../fileobj/fileobj.html">Datei</a> von einem remote-Server herunterladen und speichern Sie es auf dem <a href="../../device/device.html">Gerät</a>.
+Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von Dateien auf einem remote-Server mithilfe einer mehrteiligen HTTP-POST-Anforderung. HTTP- und HTTPS-Protokolle werden unterstützt. Optionale Parameter können angegeben werden, indem Sie übergeben ein `FileUploadOptions` gegen die `upload()` Methode. Auf erfolgreichen Upload ein `FileUploadResult` -Objekt wird an den Erfolg-Rückruf übergeben. Wenn ein Fehler auftritt, ein `FileTransferError` -Objekt wird an den Fehler-Rückruf übergeben. Es ist auch möglich (nur auf iOS und Android), eine Datei von einem remote-Server herunterladen und speichern Sie es auf dem Gerät.
 
 ## Unterstützte Plattformen
 
@@ -50,15 +50,15 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="..
 
 **Parameter:**
 
-*   **FilePath**: vollständigen Pfad der <a href="../fileobj/fileobj.html">Datei</a> auf das <a href="../../device/device.html">Gerät</a>.
+*   **FilePath**: vollständigen Pfad der Datei auf das Gerät.
 
-*   **Server**: URL des Servers, die <a href="../fileobj/fileobj.html">Datei</a> zu empfangen, wie kodiert`encodeURI()`.
+*   **Server**: URL des Servers, die Datei zu empfangen, wie kodiert`encodeURI()`.
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `Metadata` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileTransferError` Objekt. *(Funktion)*
 
-*   **Optionen**: optionale Parameter wie z. B. <a href="../fileobj/fileobj.html">Datei</a>namen und Mimetype.
+*   **Optionen**: optionale Parameter wie z. B. Dateinamen und Mimetype.
 
 *   **TrustAllHosts**: Optionaler Parameter, wird standardmäßig auf `false` . Wenn legen Sie auf `true` , es akzeptiert alle Sicherheitszertifikate. Dies ist nützlich, da Android selbstsignierte Zertifikate ablehnt. Nicht für den produktiven Einsatz empfohlen. Auf Android und iOS unterstützt. *(Boolean)*
 
@@ -78,7 +78,7 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="..
         console.log("upload error target " + error.target);
     }
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="..
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="..
             }
     
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von <a href="..
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ Auf Android und iOS unterstützt
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -198,13 +198,13 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 **Parameter:**
 
-*   **Quelle**: URL des Servers, um die <a href="../fileobj/fileobj.html">Datei</a> herunterzuladen, wie kodiert`encodeURI()`.
+*   **Quelle**: URL des Servers, um die Datei herunterzuladen, wie kodiert`encodeURI()`.
 
-*   **Ziel**: vollständige Pfad der <a href="../fileobj/fileobj.html">Datei</a> auf das <a href="../../device/device.html">Gerät</a>.
+*   **Ziel**: vollständige Pfad der Datei auf das Gerät.
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileTransferError` Objekt. *(Funktion)*
 
 *   **TrustAllHosts**: Optionaler Parameter, wird standardmäßig auf `false` . Wenn legen Sie auf `true` , dann es alle Sicherheitszertifikate akzeptieren wird. Dies ist nützlich, da Android selbst signierte Zertifikate ablehnt. Nicht für den produktiven Einsatz empfohlen. Auf Android und iOS unterstützt. *(Boolean)*
 
@@ -212,7 +212,7 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 **Kleines Beispiel**
 
-    // !! Übernimmt FilePath ist ein gültiger Pfad auf den <a href="../../device/device.html">Gerät</a>-Var-FileTransfer = neue FileTransfer();
+    // !! Übernimmt FilePath ist ein gültiger Pfad auf den Gerät-Var-FileTransfer = neue FileTransfer();
     Var Uri = EncodeURI ("http://some.server.com/download.php");
     
     fileTransfer.download (Uri, FilePath, function(entry) {console.log ("Download abgeschlossen:" + entry.fullPath);
@@ -224,7 +224,7 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 ## Abbruch
 
-Bricht einen in-Progress-Transfer. Der Onerror-Rückruf wird ein <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>-Objekt übergeben, die einen Fehlercode <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR hat.
+Bricht einen in-Progress-Transfer. Der Onerror-Rückruf wird ein FileTransferError-Objekt übergeben, die einen Fehlercode FileTransferError.ABORT_ERR hat.
 
 **Unterstützte Plattformen**
 
@@ -233,13 +233,13 @@ Bricht einen in-Progress-Transfer. Der Onerror-Rückruf wird ein <a href="../fil
 
 **Kleines Beispiel**
 
-    // !! Wird davon ausgegangen, Variable FileURI enthält einen gültigen URI in eine Textdatei auf dem <a href="../../device/device.html">Gerät</a> Var gewinnen = function(r) {console.log ("sollte nicht aufgerufen werden.");}
+    // !! Wird davon ausgegangen, Variable FileURI enthält einen gültigen URI in eine Textdatei auf dem Gerät Var gewinnen = function(r) {console.log ("sollte nicht aufgerufen werden.");}
     
-    Var Fehler = function(error) {/ / error.code == <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR Alert ("Fehler: Code =" + error.code);
+    Var Fehler = function(error) {/ / error.code == FileTransferError.ABORT_ERR Alert ("Fehler: Code =" + error.code);
         Console.log ("Upload-Fehlerquelle" + error.source);
         Console.log ("Upload-Fehler-Ziel" + error.target);}
     
-    Var Optionen = neue <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    Var Optionen = neue FileUploadOptions();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";

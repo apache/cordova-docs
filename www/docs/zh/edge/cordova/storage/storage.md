@@ -20,9 +20,9 @@ license: >
 
 # 存儲
 
-> 科爾多瓦的存儲選項的<a href="../../guide/overview/index.html">概述</a>。
+> 科爾多瓦的存儲選項的概述。
 
-幾個存儲 Api 是對科爾多瓦應用程式可用。請參閱 [html5rocks][1]。有關更完整的<a href="../../guide/overview/index.html">概述</a>和示例。
+幾個存儲 Api 是對科爾多瓦應用程式可用。請參閱 [html5rocks][1]。有關更完整的概述和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -34,11 +34,11 @@ license: >
 
 ## WebSQL
 
-此 API 是在底層 web 視圖中可用。 [Web SQL <a href="database/database.html">資料庫</a>規範][3]提供了更多的功能全面的<a href="database/database.html">資料庫</a>表可以通過 SQL 查詢訪問。
+此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供了更多的功能全面的資料庫表可以通過 SQL 查詢訪問。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 
-以下<a href="../../guide/support/index.html">平臺支援</a> WebSQL：
+以下平臺支援 WebSQL：
 
 *   Android 系統
 *   黑莓 10
@@ -51,7 +51,7 @@ license: >
 
  [4]: http://www.w3.org/TR/IndexedDB/
 
-以下<a href="../../guide/support/index.html">平臺支援</a> IndexedDB：
+以下平臺支援 IndexedDB：
 
 *   黑莓 10
 *   火狐瀏覽器的作業系統

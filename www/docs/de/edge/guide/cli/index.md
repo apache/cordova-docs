@@ -20,7 +20,7 @@ license: >
 
 # Die Befehlszeilenschnittstelle
 
-Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow in der <a href="../overview/index.html">Übersicht</a> beschrieben verwenden. Ansonsten können Sie auch die CLI Projektcode zu initialisieren, dann wechseln Sie in die verschiedenen Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung.
+Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow in der Übersicht beschrieben verwenden. Ansonsten können Sie auch die CLI Projektcode zu initialisieren, dann wechseln Sie in die verschiedenen Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung.
 
 ## Voraussetzungen
 
@@ -139,7 +139,7 @@ Lesen Sie weiter, wenn Sie das plattformübergreifende Workflow-Konzept (CLI) f�
 
 ## Die App zu bauen
 
-In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` -Ereignishandler, standardmäßig von verwiesen`www/js/index.js`.
+In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `deviceready` -Ereignishandler, standardmäßig von verwiesen`www/js/index.js`.
 
 Führen Sie den folgenden Befehl, um das Projekt iterativ zu erstellen:
 
@@ -220,7 +220,7 @@ Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code 
         $ cordova plugin add cordova-plugin-device
         
 
-*   Netzwerkverbindung und Batterie-<a href="../../cordova/events/events.html">Veranstaltungen</a>:
+*   Netzwerkverbindung und Batterie-Veranstaltungen:
     
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
@@ -277,7 +277,7 @@ Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code 
         $ cordova plugin add cordova-plugin-console
         
 
-**Hinweis**: die CLI fügt Plugin-Code entsprechend für jede Plattform. Wenn Sie mit Low-Level-Shell-Werkzeugen oder Platform SDKs wie in der <a href="../overview/index.html">Übersicht</a> beschrieben entwickeln wollen, müssen Sie das Plugman-Dienstprogramm zum Hinzufügen von Plugins separat für jede Plattform ausführen. (Weitere Informationen finden Sie unter Using Plugman zu Plugins verwalten.)
+**Hinweis**: die CLI fügt Plugin-Code entsprechend für jede Plattform. Wenn Sie mit Low-Level-Shell-Werkzeugen oder Platform SDKs wie in der Übersicht beschrieben entwickeln wollen, müssen Sie das Plugman-Dienstprogramm zum Hinzufügen von Plugins separat für jede Plattform ausführen. (Weitere Informationen finden Sie unter Using Plugman zu Plugins verwalten.)
 
 Verwendung `plugin ls` (oder `plugin list` , oder `plugin` von selbst) derzeit anzeigen Plugins installiert. Jede zeigt durch seinen Bezeichner:
 
@@ -366,7 +366,7 @@ Stattdessen bietet das Verzeichnis der obersten Ebene `merges` einen Ort um Verm
 
 Wenn Sie das Projekt neu erstellen, verfügt die Android Version die benutzerdefinierte Schriftgröße, während andere unverändert bleiben.
 
-Sie können `merges` auch zum Hinzufügen von Dateien in das ursprüngliche `Www` -Verzeichnis nicht vorhanden. Beispielsweise kann eine app integrieren eine *zurück-Schaltfläche* Grafik in die iOS-<a href="../next/index.html">Benutzeroberfläche</a>, gespeichert in `merges/ios/img/back_button.png`, während die Android Version stattdessen `Backbutton` Ereignisse über die entsprechende Taste erfassen kann.
+Sie können `merges` auch zum Hinzufügen von Dateien in das ursprüngliche `Www` -Verzeichnis nicht vorhanden. Beispielsweise kann eine app integrieren eine *zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert in `merges/ios/img/back_button.png`, während die Android Version stattdessen `Backbutton` Ereignisse über die entsprechende Taste erfassen kann.
 
 ## Hilfebefehle
 

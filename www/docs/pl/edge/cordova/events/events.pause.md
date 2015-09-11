@@ -29,9 +29,9 @@ Zdarzenie fires, gdy aplikacja jest w tle.
 
 `pause`Zdarzenie fires po platformie rodzimych stawia aplikacji w tle, zazwyczaj, gdy użytkownik przechodzi do innej aplikacji.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `<a href="events.deviceready.html">deviceready</a>` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
 
-## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
+## Obsługiwane platformy
 
 *   Amazon Fire OS
 *   Android
@@ -62,7 +62,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

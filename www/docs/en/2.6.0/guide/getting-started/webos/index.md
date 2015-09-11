@@ -66,7 +66,7 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 - Type `make` in your terminal/cygwin while in the webOS directory.
 
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)

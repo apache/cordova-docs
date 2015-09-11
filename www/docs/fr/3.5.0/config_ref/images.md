@@ -20,7 +20,7 @@ license: >
 
 # Icones et Splash Screen
 
-Cette section indique comment configurer une icône et un écran de démarrage facultatif pour une application sur diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les <a href="../guide/platforms/index.html"><a href="../index.html">Guides</a> de la plate-forme</a>).
+Cette section indique comment configurer une icône et un écran de démarrage facultatif pour une application sur diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les Guides de la plate-forme).
 
 ## Configuration des icônes dans le CLI
 
@@ -97,7 +97,7 @@ Windows Phone spécifie une image d'écran de démarrage unique :
         windows-phone/screen-portrait.jpg
     
 
-Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les <a href="../guide/platforms/index.html"><a href="../index.html">Guides</a> de la plate-forme</a>.
+Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les Guides de la plate-forme.
 
 N'oubliez pas d'installer le plugin de SplashScreen avant d'essayer d'utiliser les `navigator.splashscreen.hide()` ou `navigator.splashscreen.show()` méthodes.
 
@@ -129,7 +129,7 @@ La première ligne définit l'image à afficher comme écran de démarrage. C'es
 
 La deuxième ligne définit le délai par défaut de combien de temps le splashscreen apparaît en millisecondes. Cela devrait être l'heure de début prévue plus pessimistes. La valeur par défaut pour SplashScreenDelay est 3000 ms.
 
-Enfin, en tant que pratique exemplaire, l'écran de démarrage devrait être présent seulement aussi longtemps que nécessaire. Lorsque votre application a commencé et le mode Web a chargé, votre application doit masquer l'écran de démarrage afin que votre vue principale est visible dès qu'elle est prête. Car l'heure de début d'application varie un peu en raison de plusieurs facteurs tels que la vitesse du CPU et réseau, il est recommandé que votre application appelle explicitement `navigator.splashscreen.hide()` dans la méthode JavaScript qui répond à la `<a href="../cordova/events/events.deviceready.html">deviceready</a>` événement. Sinon l'écran de démarrage sera visible pour la valeur de SplashScreenDelay que vous avez configuré plus haut, qui est probablement plus longtemps que nécessaire. Cette approche événementielle est hautement recommandée par rapport à avoir l'écran de démarrage visible pour toujours une durée fixe.
+Enfin, en tant que pratique exemplaire, l'écran de démarrage devrait être présent seulement aussi longtemps que nécessaire. Lorsque votre application a commencé et le mode Web a chargé, votre application doit masquer l'écran de démarrage afin que votre vue principale est visible dès qu'elle est prête. Car l'heure de début d'application varie un peu en raison de plusieurs facteurs tels que la vitesse du CPU et réseau, il est recommandé que votre application appelle explicitement `navigator.splashscreen.hide()` dans la méthode JavaScript qui répond à la `deviceready` événement. Sinon l'écran de démarrage sera visible pour la valeur de SplashScreenDelay que vous avez configuré plus haut, qui est probablement plus longtemps que nécessaire. Cette approche événementielle est hautement recommandée par rapport à avoir l'écran de démarrage visible pour toujours une durée fixe.
 
 ## Écrans de démarrage pour la plate-forme l'iOS
 

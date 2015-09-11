@@ -37,7 +37,7 @@ Devuelve el patrón a la `successCallback`. El objeto se pasa como parámetro co
 
 *   **dst_offset**: el desplazamiento horario actual en segundos entre no-horario del cliente de huso horario y día del cliente ahorro de zona horaria. *(Número)*
 
-Si hay un error obteniendo el patrón, el `errorCallback` se ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+Si hay un error obteniendo el patrón, el `errorCallback` se ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
 
 El parámetro `options` es opcional y por defecto para los siguientes valores:
 
@@ -71,7 +71,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, este ejemplo muest
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDatePattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

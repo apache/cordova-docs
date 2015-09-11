@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` オブジェクトに渡されます、 `<a href="../parameters/contactError.html">contactError</a>` コールバック エラーが発生します。
+A `ContactError` オブジェクトに渡されます、 `contactError` コールバック エラーが発生します。
 
 ## プロパティ
 
@@ -38,4 +38,4 @@ A `ContactError` オブジェクトに渡されます、 `<a href="../parameters
 
 ## 説明
 
-`ContactError`オブジェクトを介してユーザーに返されます、 `<a href="../parameters/contactError.html">contactError</a>` コールバック関数でエラーが発生したとき。
+`ContactError`オブジェクトを介してユーザーに返されます、 `contactError` コールバック関数でエラーが発生したとき。

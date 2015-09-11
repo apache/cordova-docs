@@ -30,7 +30,7 @@ resume
 
 Cordova はネイティブと JavaScript の2つのコードで形成されます。ネイティブコードがアプリをバックグラウンドから復帰させるとき、 resume イベントが呼び出されます。
 
-通常は、 Cordova の '<a href="events.deviceready.html">deviceready</a>' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -40,7 +40,7 @@ Cordova はネイティブと JavaScript の2つのコードで形成されま�
 - iOS
 - Windows Phone 7
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     document.addEventListener("resume", onResume, false);
@@ -49,30 +49,30 @@ Cordova はネイティブと JavaScript の2つのコードで形成されま�
         // resume イベントに関する操作を記述
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Resume <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Cordova Resume 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.2.0.js はまだ完了していません。
         // Cordova のロード完了とともに
-        // `<a href="events.deviceready.html">deviceready</a>` イベントが呼び出されます。
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             document.addEventListener("resume", onResume, false);
         }
 
@@ -89,7 +89,7 @@ Cordova はネイティブと JavaScript の2つのコードで形成されま�
 
 iOS に関する注意点
 --------------------------
-アプリが復帰したとき、 **<a href="events.pause.html">pause</a>** イベントハンドラー中の console.log への呼び出しが走ります。 **<a href="events.pause.html">pause</a>** イベントの iOS に関する注意点のセクションに詳細を記載しています。
+アプリが復帰したとき、 **pause** イベントハンドラー中の console.log への呼び出しが走ります。 **pause** イベントの iOS に関する注意点のセクションに詳細を記載しています。
 
 - __active__ イベント
 

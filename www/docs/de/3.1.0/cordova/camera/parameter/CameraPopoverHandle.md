@@ -20,28 +20,28 @@ license: >
 
 # CameraPopoverHandle
 
-Ein Handle für das Dialogfeld "Popover" erstellt von`<a href="../camera.getPicture.html">camera.getPicture</a>`.
+Ein Handle für das Dialogfeld "Popover" erstellt von`camera.getPicture`.
 
 ## Methoden
 
-*   **Set<a href="../../geolocation/Position/position.html">Position</a>**: Legen Sie die <a href="../../geolocation/Position/position.html">Position</a> der Popover.
+*   **SetPosition**: Legen Sie die Position der Popover.
 
 ## Unterstützte Plattformen
 
 *   iOS
 
-## set<a href="../../geolocation/Position/position.html">Position</a>
+## setPosition
 
-Legen Sie die <a href="../../geolocation/Position/position.html">Position</a> von der Popover.
+Legen Sie die Position von der Popover.
 
 **Parameter:**
 
-*   `cameraPopoverOptions`: die `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` angeben, dass die neue <a href="../../geolocation/Position/position.html">Position</a>
+*   `cameraPopoverOptions`: die `CameraPopoverOptions` angeben, dass die neue Position
 
 ## Kleines Beispiel
 
-     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
-     cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
+     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
 ## Vollständiges Beispiel
@@ -54,12 +54,12 @@ Legen Sie die <a href="../../geolocation/Position/position.html">Position</a> vo
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
-         cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
+         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+         cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

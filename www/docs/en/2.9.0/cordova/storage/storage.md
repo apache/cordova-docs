@@ -23,7 +23,7 @@ Storage
 
 > Provides access to the device's storage options.
 
-This API is based on the [W3C Web SQL <a href="database/database.html">Database</a>
+This API is based on the [W3C Web SQL Database
 Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web
 Storage API Specification](http://dev.w3.org/html5/webstorage/). Some
 devices already provide an implementation of these specifications, in
@@ -33,25 +33,25 @@ offers compatible support for those that don't.
 Methods
 -------
 
-- <a href="storage.opendatabase.html">open<a href="database/database.html">Database</a></a>
+- openDatabase
 
 Arguments
 ---------
 
-- <a href="parameters/name.html">database_name</a>
-- <a href="parameters/version.html">database_version</a>
-- <a href="parameters/display_name.html">database_displayname</a>
-- <a href="parameters/size.html">database_size</a>
+- database_name
+- database_version
+- database_displayname
+- database_size
 
 Objects
 -------
 
-- <a href="database/database.html">Database</a>
-- <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
-- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
-- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
-- <a href="sqlerror/sqlerror.html">SQLError</a>
-- <a href="localstorage/localstorage.html">localStorage</a>
+- Database
+- SQLTransaction
+- SQLResultSet
+- SQLResultSetRowList
+- SQLError
+- localStorage
 
 Permissions
 -----------

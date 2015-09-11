@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>Error
+ContactError
 ========
 
-`<a href="../Contact/contact.html">Contact</a>Error` オブジェクトは、エラーが発生したときに `<a href="../parameters/contactError.html">contactError</a>` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
 
 プロパティー
 ----------
@@ -31,16 +31,16 @@ license: >
 定数
 ---------
 
-- `<a href="../Contact/contact.html">Contact</a>Error.UNKNOWN_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.INVALID_ARGUMENT_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.TIMEOUT_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.PENDING_OPERATION_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.IO_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.NOT_SUPPORTED_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.PERMISSION_DENIED_ERROR`
+- `ContactError.UNKNOWN_ERROR`
+- `ContactError.INVALID_ARGUMENT_ERROR`
+- `ContactError.TIMEOUT_ERROR`
+- `ContactError.PENDING_OPERATION_ERROR`
+- `ContactError.IO_ERROR`
+- `ContactError.NOT_SUPPORTED_ERROR`
+- `ContactError.PERMISSION_DENIED_ERROR`
 
 概要
 -----------
 
-`<a href="../Contact/contact.html">Contact</a>Error` オブジェクトは、エラーが発生したときに `<a href="../parameters/contactError.html">contactError</a>` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
 

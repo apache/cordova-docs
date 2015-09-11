@@ -24,7 +24,7 @@ license: >
 
 ## Свойства
 
-*   <a href="connection.type.html">connection.type</a>
+*   connection.type
 
 ## Константы
 

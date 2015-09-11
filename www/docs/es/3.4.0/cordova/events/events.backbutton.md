@@ -27,7 +27,7 @@ El evento se desencadena cuando el usuario presiona el botón back.
 
 ## Detalles
 
-Para reemplazar el comportamiento predeterminado de botón atrás, registrar un detector de eventos para el evento `backbutton`, típicamente llamando `document.addEventListener` una vez que reciba el evento `<a href="events.deviceready.html">deviceready</a>`. Ya no es necesario llamar a cualquier otro método para reemplazar el comportamiento del botón atrás.
+Para reemplazar el comportamiento predeterminado de botón atrás, registrar un detector de eventos para el evento `backbutton`, típicamente llamando `document.addEventListener` una vez que reciba el evento `deviceready`. Ya no es necesario llamar a cualquier otro método para reemplazar el comportamiento del botón atrás.
 
 ## Plataformas soportadas
 
@@ -50,7 +50,7 @@ Para reemplazar el comportamiento predeterminado de botón atrás, registrar un 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Back Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Para reemplazar el comportamiento predeterminado de botón atrás, registrar un 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

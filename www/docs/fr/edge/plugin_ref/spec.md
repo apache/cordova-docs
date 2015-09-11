@@ -500,7 +500,7 @@ Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque 
 
 ## *hook* Élément
 
-Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir <a href="../guide/appdev/hooks/index.html">Guide de crochets</a> pour plus d'informations.
+Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir Guide de crochets pour plus d'informations.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     

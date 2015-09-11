@@ -22,12 +22,12 @@ license: >
 
 This guide shows how to use Cordova's set of platform-centered shell
 tools to develop Android apps. This development path, discussed in the
-<a href="../../overview/index.html">Overview</a>, may offer you a greater range of development options than
-the cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+Overview, may offer you a greater range of development options than
+the cross-platform CLI tool described in The Command-Line Interface.
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components.  Before using either
 development path, you must first configure the Android SDK environment
-as described in the <a href="index.html">Android Platform Guide</a>.
+as described in the Android Platform Guide.
 
 To enable shell tools for Android, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). The download contains

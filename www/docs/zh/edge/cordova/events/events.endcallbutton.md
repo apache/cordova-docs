@@ -20,18 +20,18 @@ license: >
 
 # endcallbutton
 
-當使用者按下結束通話按鈕時，將激發此<a href="events.html">事件</a>。
+當使用者按下結束通話按鈕時，將激發此事件。
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-該<a href="events.html">事件</a>將重寫預設結束調用行為。
+該事件將重寫預設結束調用行為。
 
-應用程式通常應使用 `document.addEventListener` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## <a href="../../config_ref/images.html">支援的平臺</a>
+## 支援的平臺
 
 *   黑莓 10
 
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>End Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>End Call Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

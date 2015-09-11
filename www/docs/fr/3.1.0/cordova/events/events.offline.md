@@ -22,14 +22,14 @@ license: >
 
 L'évènement se déclenche lorsqu'une application se déconnecte, quand l'appareil n'est pas connecté à Internet.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
+    document.addEventListener("offline", yourCallbackFunction, false);
     
 
 ## Détails
 
-L'évènement `offline` se déclenche lorsqu'un appareil précédemment connecté perd sa connexion au réseau, empêchant ainsi l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand `<a href="../connection/connection.type.html">connection.type</a>` passe de `NONE` à une autre valeur.
+L'évènement `offline` se déclenche lorsqu'un appareil précédemment connecté perd sa connexion au réseau, empêchant ainsi l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand `connection.type` passe de `NONE` à une autre valeur.
 
-Les applications devraient en général utiliser `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
 ## Plates-formes supportées
 
@@ -42,7 +42,7 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
 
 ## Exemple court
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+    document.addEventListener("offline", onOffline, false);
     
     function onOffline() {
         // Handle the offline event
@@ -54,7 +54,7 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Offline Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,13 +62,13 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+            document.addEventListener("offline", onOffline, false);
         }
     
         // Handle the offline event

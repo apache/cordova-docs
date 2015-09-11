@@ -29,7 +29,7 @@ Fonction de callback onSuccess qui fournit les données de l'image.
 
 ## Paramètres
 
-*   **imageData**: codage Base64 de l'image, *ou* le fichier image URI, selon `<a href="cameraOptions.html">cameraOptions</a>` utilisé. *(String)*
+*   **imageData**: codage Base64 de l'image, *ou* le fichier image URI, selon `cameraOptions` utilisé. *(String)*
 
 ## Exemple
 

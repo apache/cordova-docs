@@ -20,13 +20,13 @@ license: >
 
 # contactFindOptions
 
-省略可能なパラメーター、 `<a href="../contacts.find.html">contacts.find</a>` <a href="contactFields.html">連絡先</a>を<a href="contactFields.html">連絡先</a><a href="../../storage/database/database.html">データベース</a>から返されるフィルター処理に使用するメソッド。
+省略可能なパラメーター、 `contacts.find` 連絡先を連絡先データベースから返されるフィルター処理に使用するメソッド。
 
     {フィルター：""、複数: true};
     
 
 ## オプション
 
-*   **フィルター**: <a href="contactFields.html">連絡先</a>をフィルター処理に使用する検索文字列。*（，）*(既定値します。`""`)
+*   **フィルター**: 連絡先をフィルター処理に使用する検索文字列。*（，）*(既定値します。`""`)
 
-*   **複数**: かどうか、検索操作を複数の<a href="contactFields.html">連絡先</a>を返しますを決定します。*(ブール値)*(既定値します。`false`)
+*   **複数**: かどうか、検索操作を複数の連絡先を返しますを決定します。*(ブール値)*(既定値します。`false`)

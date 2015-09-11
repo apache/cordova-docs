@@ -20,23 +20,23 @@ license: >
 
 # Übersicht
 
-Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes <a href="../../cordova/device/device.html">Gerät</a> Sensoren, Daten und Netzwerkstatus zugreifen.
+Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
 
 Verwenden Sie Cordova, falls Sie sind:
 
 *   mobile Entwickler und wollen eine Anwendung über mehrere Plattformen hinweg zu erweitern, ohne es erneut mit Sprache und Tool jede Plattform implementieren festgelegt.
 
-*   <a href="../../cordova/storage/storage.html">Speicher</a>n Portale, Webentwickler und wollen eine Webanwendung bereitstellen, die für den Vertrieb in verschiedenen app gepackt ist.
+*   Speichern Portale, Webentwickler und wollen eine Webanwendung bereitstellen, die für den Vertrieb in verschiedenen app gepackt ist.
 
-*   mobile Entwickler interessiert mischen systemeigene Anwendungskomponenten mit einer *WebView* (Browser-Fenster), die auf <a href="../../cordova/device/device.html">Gerät</a>eebene APIs, zugreifen kann oder wollen Sie eine Plugin-Schnittstelle zwischen systemeigenen und WebView Komponenten entwickeln.
+*   mobile Entwickler interessiert mischen systemeigene Anwendungskomponenten mit einer *WebView* (Browser-Fenster), die auf Geräteebene APIs, zugreifen kann oder wollen Sie eine Plugin-Schnittstelle zwischen systemeigenen und WebView Komponenten entwickeln.
 
 ## Basiskomponenten
 
-Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -<a href="../../cordova/file/fileobj/fileobj.html">Datei</a>, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese <a href="../../cordova/file/fileobj/fileobj.html">Datei</a> entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
+Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese Datei entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
 
  [1]: http://www.w3.org/TR/widgets/
 
-Die Anwendung selbst ist als eine Web-Seite implementiert, mit dem Namen *index.html* standardmäßig die verweist, was CSS, JavaScript, Bilder, <a href="../../cordova/media/media.html">Medien</a>dateien, oder andere Ressourcen sind notwendig für die Ausführung. Die app führt als ein *WebView* in der Ausgangsanwendung-Wrapper, die Sie auf app Stores zu verteilen. Für die Web-app für die Interaktion mit verschiedenen <a href="../../cordova/device/device.html">Gerät</a>efunktionen Weg native apps zu tun, muss es auch verweisen eine `cordova.js` -<a href="../../cordova/file/fileobj/fileobj.html">Datei</a>, die API Bindungen bietet. <!-- XREF
+Die Anwendung selbst ist als eine Web-Seite implementiert, mit dem Namen *index.html* standardmäßig die verweist, was CSS, JavaScript, Bilder, Mediendateien, oder andere Ressourcen sind notwendig für die Ausführung. Die app führt als ein *WebView* in der Ausgangsanwendung-Wrapper, die Sie auf app Stores zu verteilen. Für die Web-app für die Interaktion mit verschiedenen Gerätefunktionen Weg native apps zu tun, muss es auch verweisen eine `cordova.js` -Datei, die API Bindungen bietet. <!-- XREF
 (See the API Reference for an overview, and the Application
 Development Guide for examples of how to use them.)
 XREF -->
@@ -49,9 +49,9 @@ Die einfachste Möglichkeit, eine Anwendung eingerichtet ist, führen Sie die `c
 
 *   Im einfachsten Szenario können die CLI Sie einfach erstellen ein neues Projekt, das gefüllt ist mit Standard-Konfiguration zu ändern.
 
-*   Für viele mobile Plattformen können Sie auch die CLI einrichten weitere Projekt-<a href="../../cordova/file/fileobj/fileobj.html">Datei</a>en erforderlich, um innerhalb jedes SDK kompilieren. Damit dies funktioniert müssen Sie jede gezielte Plattform-SDK installieren. (Siehe den Plattform-Führern Anweisungen.) Wie in der folgenden Tabelle der Plattformunterstützung angegeben, müssen Sie möglicherweise die CLI auf verschiedenen Betriebssystemen abhängig von der Zielplattform ausgeführt.
+*   Für viele mobile Plattformen können Sie auch die CLI einrichten weitere Projekt-Dateien erforderlich, um innerhalb jedes SDK kompilieren. Damit dies funktioniert müssen Sie jede gezielte Plattform-SDK installieren. (Siehe den Plattform-Führern Anweisungen.) Wie in der folgenden Tabelle der Plattformunterstützung angegeben, müssen Sie möglicherweise die CLI auf verschiedenen Betriebssystemen abhängig von der Zielplattform ausgeführt.
 
-*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes <a href="../../cordova/device/device.html">Gerät</a>-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem <a href="../../cordova/device/device.html">Gerät</a>.
+*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem Gerät.
 
 Zu jedem Zeitpunkt im Entwicklungszyklus können Sie sich auf Plattform-spezifischen SDK Tools verlassen, die eine umfangreichere Optionen bieten. (Siehe die Plattform-Führer für Details über jede Plattform-SDK-Tool festgelegt.) Eine SDK-Umgebung ist besser geeignet, wenn Sie möchten, eine Hybrid-app zu implementieren, die Web-basierte und native Anwendungskomponenten mischt. <!--XREF (Siehe Hybrid Application Guide für mehr informationen.) XREF--> Sie können das Befehlszeile-Dienstprogramm verwenden, um zunächst die app generieren oder iterativ danach, aktualisierten Code zu SDK-Tools zu ernähren. Sie können die app-Konfigurationsdatei auch selbst erstellen. 
 
@@ -66,7 +66,7 @@ XREF -->
 
 ## Plattformunterstützung
 
-Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href="../../cordova/device/device.html">Gerät</a> für jede mobile Plattform. (Spaltenüberschriften angezeigt die CLI Kurzschrift gestorben.)
+Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät für jede mobile Plattform. (Spaltenüberschriften angezeigt die CLI Kurzschrift gestorben.)
 
 <!-- START HTML -->
 
@@ -223,7 +223,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/acceleration/acceleration.html">Beschleunigung</a>smesser</a>
+          <a href="cordova_accelerometer_accelerometer.md.html">Beschleunigungsmesser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -253,7 +253,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">Kamera</a></a>
+          <a href="cordova_camera_camera.md.html">Kamera</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -283,7 +283,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Erfassen</a></a>
+          <a href="cordova_media_capture_capture.md.html">Erfassen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +313,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Kompass</a></a>
+          <a href="cordova_compass_compass.md.html">Kompass</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +344,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Verbindung</a></a>
+          <a href="cordova_connection_connection.md.html">Verbindung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +374,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/contacts.html"><a href="../../cordova/contacts/Contact/contact.html">Kontakt</a>e</a></a>
+          <a href="cordova_contacts_contacts.md.html">Kontakte</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -404,7 +404,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">Gerät</a></a>
+          <a href="cordova_device_device.md.html">Gerät</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -434,7 +434,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Veranstaltungen</a></a>
+          <a href="cordova_events_events.md.html">Veranstaltungen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -464,7 +464,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">Datei</a></a>
+          <a href="cordova_file_file.md.html">Datei</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -480,11 +480,11 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
         </td>
         
         <td data-col="winphone7"  class="p">
-          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          kein FileTransfer
         </td>
         
         <td data-col="winphone8"  class="p">
-          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          kein FileTransfer
         </td>
         
         <td data-col="win8"       class="y">
@@ -496,7 +496,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">Geolocation</a></a>
+          <a href="cordova_geolocation_geolocation.md.html">Geolocation</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +526,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Globalisierung</a></a>
+          <a href="cordova_globalization_globalization.md.html">Globalisierung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +556,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +586,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Medien</a></a>
+          <a href="cordova_media_media.md.html">Medien</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +616,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Benachrichtigung</a></a>
+          <a href="cordova_notification_notification.md.html">Benachrichtigung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +646,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">SplashScreen</a></a>
+          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +676,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-<a href=
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Speicher</a></a>
+          <a href="cordova_storage_storage.md.html">Speicher</a>
         </th>
         
         <td data-col="android"    class="y">

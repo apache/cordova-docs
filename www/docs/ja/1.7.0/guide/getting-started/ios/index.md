@@ -48,7 +48,7 @@ Getting Started with iOS
 --------------------
 
 - Xcode を起動します
-- メニューから **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** を選択します
+- メニューから **File** を選択します
 - **New** を選択し、 **New Project...** を選択します
 - テンプレートのリストから **Cordova-based Application** を選択します
 
@@ -86,12 +86,12 @@ Getting Started with iOS
 - **Finish** ボタンをクリックします
 
 
-4. <a href="../webos/index.html">Hello World</a> の作成
+4. Hello World の作成
 --------------
 
 - Xcode の Project Navigator にある **www** フォルダーを選択します
 - **index.html** ファイルを選択します
-- `<body>` タグの後に `<h1><a href="../webos/index.html">Hello World</a></h1>` と記述します
+- `<body>` タグの後に `<h1>Hello World</h1>` と記述します
 
 関連する JavaScript や CSS ファイルも追加することができます。
 
@@ -106,7 +106,7 @@ Getting Started with iOS
 5B. デバイスへのデプロイ
 --------------------
 
-- "Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s" グループの中にある [AppName]-Info.plist ([AppName]は作成したアプリの名前) を開きます
+- "Supporting Files" グループの中にある [AppName]-Info.plist ([AppName]は作成したアプリの名前) を開きます
 - **BundleIdentifier** を Apple から提供された Identifer 、または自分の Identifer に変更します。もし開発者ライセンスを持っている場合は、 Assistant に [ここ](http://developer.apple.com/iphone/manage/overview/index.action) からアクセスし、アプリを登録できます
 - ツールバーにあるドロップダウンメニューから Active SDK を **[DEVICENAME]** に変更します。ここで、 [DEVICENAME] はデプロイしたいデバイスの名前です
 - プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします

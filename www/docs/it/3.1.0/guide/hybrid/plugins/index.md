@@ -69,21 +69,21 @@ In primo luogo, diamo un'occhiata agli ultimi tre argomenti per la `exec` funzio
 
 Il callback di successo passati in `exec` è semplicemente un riferimento al metodo di callback che la funzione `window.echo` accetta. Facciamo un po' di più per il callback di errore: se il lato nativo spara il callback di errore, semplicemente richiamare il callback di successo e passarvi una stringa "predefinito".
 
-## <a href="../../../plugin_ref/spec.html">Plugin Specification</a>
+## Plugin Specification
 
 Cordova ha una specifica di plugin disponibile per consentire l'installazione automatica del plugin per Android, iOS, piattaforme 10 BlackBerry e Windows Phone. Strutturare il vostro plugin in modo particolare e aggiungendo un `plugin.xml` file manifesto, si possono consentire agli utenti di installare il plugin tramite l'utensileria da riga di comando.
 
-*   <a href="../../../plugin_ref/spec.html">Plugin Specification</a>
+*   Plugin Specification
 
 ## Nativo
 
 Una volta definito per il plugin JavaScript, è necessario integrarla con almeno un'implementazione nativa. Dettagli di farlo per ciascuna piattaforma sono elencate di seguito. Queste guide continuano a costruire il semplice esempio Echo Plugin discusso sopra.
 
-*   <a href="../../platforms/android/plugin.html">Plugin Android</a>
-*   <a href="../../platforms/blackberry/plugin.html">BlackBerry Plugins</a>
-*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 plugin</a>
-*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
+*   Plugin Android
+*   BlackBerry Plugins
+*   BlackBerry 10 plugin
+*   iOS Plugins
+*   Windows Phone Plugins
 
 La piattaforma di Tizen attualmente non supporta plugin.
 

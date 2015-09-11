@@ -24,20 +24,20 @@ license: >
 
 ## Eigenschaften
 
-*   <a href="device.model.html">device.model</a>
+*   device.model
 *   Device.Cordova
 *   Device.Platform
 *   Device.UUID
 *   Device.Version
-*   <a href="device.name.html">device.name</a>
+*   device.name
 
-## Geltungsbereich von <a href="../../plugin_ref/spec.html">Variablen</a>
+## Geltungsbereich von Variablen
 
 Da `device` zugewiesen ist das `window` -Objekt, es ist implizit im globalen Gültigkeitsbereich.
 
     // These reference the same `device`
-    var phoneModel = window.<a href="device.model.html">device.model</a>;
-    var phoneModel = <a href="device.model.html">device.model</a>;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
     
 
 ## Zugriff auf die Funktion
@@ -98,4 +98,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

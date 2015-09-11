@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="capture.html">Capture</a>AudioOptions
+# CaptureAudioOptions
 
 > Encapsule les options de configuration de capture audio.
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
     
 
 ## Quirks Android

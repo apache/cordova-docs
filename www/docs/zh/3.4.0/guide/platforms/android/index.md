@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# Android <a href="../index.html">平臺指南</a>
+# Android 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Android 設備的應用程式。 它引導您通過安裝 Android SDK，在 Eclipse SDK 中打開 Android 專案和部署到模擬器或設備的過程。 您將需要按照本指南，請至少在安裝 Android SDK，無論哪個工作流如下。 （ *Web 專案開發*和*本機平臺開發*工作流需要預先安裝並在您的路徑通過讀取了 Android SDK。
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   <a href="config.html">Android 系統組態</a>
-*   <a href="webview.html">Android WebViews</a>
-*   <a href="plugin.html">Android 外掛程式</a>
-*   <a href="upgrading.html">升級 Android</a>
-*   <a href="tools.html">Android 系統的命令列工具</a>
+*   Android 系統組態
+*   Android WebViews
+*   Android 外掛程式
+*   升級 Android
+*   Android 系統的命令列工具
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 
 ## 要求和支援
 
@@ -48,9 +48,9 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-開發人員應使用 `cordova` 實用程式與 Android SDK 一起。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
+開發人員應使用 `cordova` 實用程式與 Android SDK 一起。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
 
-請在安裝 Android SDK 從 [developer.android.com/sdk][3].作為分發，android sdk ' adt-捆綁-<os>-<arch>-<ver>' 檔。在 windows 上，adt 捆綁打包用安裝程式安裝。在 OSX 和 Linux，只需打開包裝 'adt 捆綁' 中的位置，您將<a href="../../../cordova/storage/storage.html">存儲</a>的開發工具。 [關於 Android SDK 安裝程式的詳細的資訊可以在這裡找到][4]
+請在安裝 Android SDK 從 [developer.android.com/sdk][3].作為分發，android sdk ' adt-捆綁-<os>-<arch>-<ver>' 檔。在 windows 上，adt 捆綁打包用安裝程式安裝。在 OSX 和 Linux，只需打開包裝 'adt 捆綁' 中的位置，您將存儲的開發工具。 [關於 Android SDK 安裝程式的詳細的資訊可以在這裡找到][4]
 
  [3]: http://developer.android.com/sdk/
  [4]: http://developer.android.com/sdk/installing/bundle.html
@@ -89,7 +89,7 @@ NOTE, doc said:
 
 ## 在 SDK 中打開的專案
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦<a href="../../cli/index.html">命令列介面</a>。例如，在原始程式碼中的目錄：
+使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello

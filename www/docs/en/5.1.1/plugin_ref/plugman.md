@@ -23,10 +23,10 @@ license: >
 From version 3.0 onward, Cordova implements all device APIs as
 plugins, and leaves them disabled by default. It also supports two
 different ways to add and remove plugins, depending on your choice of
-workflow discussed in the <a href="../guide/overview/index.html">Overview</a>:
+workflow discussed in the Overview:
 
 - If you use a cross-platform workflow, you use the `cordova` CLI
-  utility to add plugins, as described in <a href="../guide/cli/index.html">The Command-Line Interface</a>.
+  utility to add plugins, as described in The Command-Line Interface.
   The CLI modifies plugins for all specified platforms at once.
 
 - If you use a platform-centered workflow, you use a lower-level
@@ -66,7 +66,7 @@ with just `plugman`.
 
 Before you can use Plugman, you must create a Cordova project.  You can do this with either the Command-line Interface or with
 the lower level shell scripts. Instructions for using the shell scripts to create your project are located in the various "Command-line Tools" guides
-listed on the <a href="../guide/platforms/index.html">Platform Guides</a> page. 
+listed on the Platform Guides page. 
 
 ## Adding a Plugin
 

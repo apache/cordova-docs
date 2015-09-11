@@ -20,14 +20,14 @@ license: >
 
 # splashscreen.hide
 
-<a href="splashscreen.html">スプラッシュ スクリーン</a>を閉じます。
+スプラッシュ スクリーンを閉じます。
 
     navigator.splashscreen.hide();
     
 
 ## 説明
 
-このメソッドは、アプリケーションの<a href="splashscreen.html">スプラッシュ スクリーン</a>を閉じます。
+このメソッドは、アプリケーションのスプラッシュ スクリーンを閉じます。
 
 ## サポートされているプラットフォーム
 
@@ -47,14 +47,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Splashscreen Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
       </body>
     </html>
     
 
 ## iOS の気まぐれ
 
-`config.xml`<a href="../file/fileobj/fileobj.html">ファイル</a>の `AutoHideSplashScreen` 設定する必要があります `false` 。 遅延を 2 秒間<a href="splashscreen.html">スプラッシュ スクリーン</a>を非表示、する、タイマーを追加しますで次のように `<a href="../events/events.deviceready.html">deviceready</a>` <a href="../events/events.html">イベント</a> ハンドラー。
+`config.xml`ファイルの `AutoHideSplashScreen` 設定する必要があります `false` 。 遅延を 2 秒間スプラッシュ スクリーンを非表示、する、タイマーを追加しますで次のように `deviceready` イベント ハンドラー。
 
         setTimeout(function() {
             navigator.splashscreen.hide();

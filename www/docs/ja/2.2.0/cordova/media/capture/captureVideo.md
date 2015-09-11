@@ -24,7 +24,7 @@ capture.captureVideo
 > ビデオ録画アプリを起動し、キャプチャーしたビデオファイルの情報を返します。
 
     navigator.device.capture.captureVideo(
-        <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> captureSuccess, <a href="capture.html">Capture</a>ErrorCB captureError, [<a href="capture.html">Capture</a>VideoOptions options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
 
 概要
@@ -32,9 +32,9 @@ capture.captureVideo
 
 このメソッドは、デバイスのビデオ録画アプリを使用して、ビデオをキャプチャーするための非同期操作を開始します。この操作はユーザーに、単一セッションで複数のビデオのキャプチャーをユーザーに許可します。
 
-キャプチャー操作は、ユーザーがビデオ録画アプリを終了するか、 <a href="capture.html">Capture</a>VideoOptions の中の __limit__ パラメーターで指定された最大録画回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度ビデオを録画した後に終了します。
+キャプチャー操作は、ユーザーがビデオ録画アプリを終了するか、 CaptureVideoOptions の中の __limit__ パラメーターで指定された最大録画回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度ビデオを録画した後に終了します。
 
-キャプチャー操作が終了した時、それぞれのビデオ録画ファイル情報が書かれた <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a> オブジェクトの配列を伴った <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> コールバック関数を呼び出します。もしオーディオがキャプチャーされる前にユーザーによって操作が終了されたら、 <a href="capture.html">Capture</a>Error.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ <a href="capture.html">Capture</a>Error オブジェクトを伴った <a href="capture.html">Capture</a>ErrorCB コールバック関数が呼び出されます。
+キャプチャー操作が終了した時、それぞれのビデオ録画ファイル情報が書かれた MediaFile オブジェクトの配列を伴った CaptureCB コールバック関数を呼び出します。もしオーディオがキャプチャーされる前にユーザーによって操作が終了されたら、 CaptureError.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ CaptureError オブジェクトを伴った CaptureErrorCB コールバック関数が呼び出されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -45,27 +45,27 @@ capture.captureVideo
 - Windows Phone 7 (Mango)
 - Bada 2.x
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // capture コールバック関数
-    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    var captureSuccess = function(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // ファイルを使用した処理
         }
     };
 
     // capture エラーコールバック関数
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
     // ビデオキャプチャーを開始
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
-詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
@@ -79,10 +79,10 @@ capture.captureVideo
 
         // キャプチャー操作の正常終了時の処理
         //
-        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+        function captureSuccess(mediaFiles) {
             var i, len;
-            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+                uploadFile(mediaFiles[i]);
             }
         }
 
@@ -90,7 +90,7 @@ capture.captureVideo
         //
         function captureError(error) {
             var msg = 'キャプチャー中にエラーが発生しました: ' + error.code;
-            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'エラー');
+            navigator.notification.alert(msg, null, 'エラー');
         }
 
         // ボタンがクリックされた場合の処理
@@ -102,10 +102,10 @@ capture.captureVideo
         }
 
         // ファイルをサーバーにアップロード
-        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html"><a href="../../file/fileobj/fileobj.html">File</a>Transfer</a>(),
-                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
-                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
+        function uploadFile(mediaFile) {
+            var ft = new FileTransfer(),
+                path = mediaFile.fullPath,
+                name = mediaFile.name;
 
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -129,7 +129,7 @@ capture.captureVideo
 BlackBerry WebWorks に関する注意点
 --------------------------
 
-- Cordova for BlackBerry WebWorks は、ビデオ録画のために RIM より提供されている __Video Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は <a href="capture.html">Capture</a>Error.`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
+- Cordova for BlackBerry WebWorks は、ビデオ録画のために RIM より提供されている __Video Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は CaptureError.`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
 
 Bada 2.x に関する注意点
 ---------------
@@ -142,19 +142,19 @@ Bada は _captureVideo_ を他のデバイスと同様にサポートします�
 
 2. カメラプレビューを以下のメソッドで初期化します
 
-        navigator.camera.<a href="../../splashscreen/splashscreen.show.html">show</a>Preview("preview");
+        navigator.camera.showPreview("preview");
 
 3. プレビューを取得した後、以下のことが可能です
 
     3.1 ビデオのキャプチャーを開始
 
-        navigator.capture.startVideo<a href="capture.html">Capture</a>(success, fail, {duration: 5000, destination<a href="../../file/fileobj/fileobj.html">File</a>name: "videos/a.3gp"});
+        navigator.capture.startVideoCapture(success, fail, {duration: 5000, destinationFilename: "videos/a.3gp"});
 
     3.2 ビデオのキャプチャーを停止
 
-        navigator.capture.stopVideo<a href="capture.html">Capture</a>();
+        navigator.capture.stopVideoCapture();
 
 3. 以下のメソッドでカメラプレビュー画面を隠します
 
-        navigator.camera.<a href="../../splashscreen/splashscreen.hide.html">hide</a>Preview("preview");
+        navigator.camera.hidePreview("preview");
 

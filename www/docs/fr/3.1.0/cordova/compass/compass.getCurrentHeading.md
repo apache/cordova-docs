@@ -22,14 +22,14 @@ license: >
 
 Téléchargez la direction courante de la boussole.
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## Description
 
 La boussole est un capteur qui détecte la direction ou la position vers laquelle l'appareil pointe, généralement depuis le haut de l'appareil. Il mesure la direction en degrés de 0 à 359.99, où 0 indique le Nord.
 
-Les informations de la boussole sont retournées via un objet `CompassHeading` utilisant la fonction de callback `<a href="parameters/compassSuccess.html">compassSuccess</a>`.
+Les informations de la boussole sont retournées via un objet `CompassHeading` utilisant la fonction de callback `compassSuccess`.
 
 ## Plates-formes prises en charge
 
@@ -47,7 +47,7 @@ Les informations de la boussole sont retournées via un objet `CompassHeading` u
     };
     
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ Les informations de la boussole sont retournées via un objet `CompassHeading` u
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ Les informations de la boussole sont retournées via un objet `CompassHeading` u
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

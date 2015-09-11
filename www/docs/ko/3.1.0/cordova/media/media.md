@@ -20,26 +20,26 @@ license: >
 
 # 미디어
 
-> `Media`개체를 기록 하 고 <a href="../device/device.html">장치</a>에서 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 재생 기능을 제공 합니다.
+> `Media`개체를 기록 하 고 장치에서 오디오 파일 재생 기능을 제공 합니다.
 
-    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**참고:** 현재 구현 미디어 <a href="capture/capture.html">캡처</a>에 대 한 W3C 사양을 준수 하지 않는 및 편의 위해서만 제공 됩니다. 미래 구현 최신 W3C 사양을 준수 한다 고 현재 Api 사용 중지 될 수 있습니다.
+**참고:** 현재 구현 미디어 캡처에 대 한 W3C 사양을 준수 하지 않는 및 편의 위해서만 제공 됩니다. 미래 구현 최신 W3C 사양을 준수 한다 고 현재 Api 사용 중지 될 수 있습니다.
 
-## 매개 <a href="../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
 *   **src**: 오디오 콘텐츠를 포함 하는 URI. *(DOMString)*
 
 *   **mediaSuccess**: (선택 사항) 후 실행 되는 콜백 한 `Media` 개체 현재 재생, 기록, 또는 중지 작업을 완료 했습니다. *(기능)*
 
-*   **<a href="Parameters/mediaError.html">mediaError</a>**: (선택 사항) 오류가 발생 하면 실행 되는 콜백. *(기능)*
+*   **mediaError**: (선택 사항) 오류가 발생 하면 실행 되는 콜백. *(기능)*
 
 *   **mediaStatus**: (선택 사항) 상태 변화를 나타내기 위해 실행 하는 콜백. *(기능)*
 
 ## 상수
 
-다음 상수를 유일한 매개 <a href="../../plugin_ref/spec.html">변수</a>로 보고 되는 `mediaStatus` 콜백:
+다음 상수를 유일한 매개 변수로 보고 되는 `mediaStatus` 콜백:
 
 *   `Media.MEDIA_NONE` = 0;
 *   `Media.MEDIA_STARTING` = 1;
@@ -49,29 +49,29 @@ license: >
 
 ## 메서드
 
-*   `<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 내에서 현재 <a href="../geolocation/Position/position.html">위치</a>를 반환합니다.
+*   `media.getCurrentPosition`: 오디오 파일 내에서 현재 위치를 반환합니다.
 
-*   `<a href="media.getDuration.html">media.getDuration</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 기간을 반환합니다.
+*   `media.getDuration`: 오디오 파일의 기간을 반환합니다.
 
-*   `<a href="media.play.html">media.play</a>`: 시작 또는 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 재생을 다시 시작 합니다.
+*   `media.play`: 시작 또는 오디오 파일 재생을 다시 시작 합니다.
 
-*   `<a href="media.pause.html">media.pause</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 재생을 <a href="../events/events.pause.html">일시 중지</a> 합니다.
+*   `media.pause`: 오디오 파일의 재생을 일시 중지 합니다.
 
-*   `<a href="media.release.html">media.release</a>`: 기본 운영 체제의 오디오 리소스를 해제합니다.
+*   `media.release`: 기본 운영 체제의 오디오 리소스를 해제합니다.
 
-*   `<a href="media.seekTo.html">media.seekTo</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 내에서 <a href="../geolocation/Position/position.html">위치</a>를 이동합니다.
+*   `media.seekTo`: 오디오 파일 내에서 위치를 이동합니다.
 
-*   `<a href="media.setVolume.html">media.setVolume</a>`: 오디오 재생 볼륨을 설정 합니다.
+*   `media.setVolume`: 오디오 재생 볼륨을 설정 합니다.
 
-*   `<a href="media.startRecord.html">media.startRecord</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a>을 녹음을 시작 합니다.
+*   `media.startRecord`: 오디오 파일을 녹음을 시작 합니다.
 
-*   `<a href="media.stop.html">media.stop</a>Record`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 기록을 중지 합니다.
+*   `media.stopRecord`: 오디오 파일 기록을 중지 합니다.
 
-*   `<a href="media.stop.html">media.stop</a>`: 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 재생을 중지 합니다.
+*   `media.stop`: 오디오 파일 재생을 중지 합니다.
 
-## 추가 읽기 전용 매개 <a href="../../plugin_ref/spec.html">변수</a>
+## 추가 읽기 전용 매개 변수
 
-*   **<a href="../geolocation/Position/position.html">위치</a>**: <a href="../geolocation/Position/position.html">위치</a> 오디오 재생 시간 (초).
+*   **위치**: 위치 오디오 재생 시간 (초).
     
     *   플레이; 하는 동안 자동으로 업데이트 전화 `getCurrentPosition` 를 업데이트 합니다.
 
@@ -88,7 +88,7 @@ license: >
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ 코르도바 플러그인 추가 org.apache.cordova.media $ 코르도바 플러그인 ls ['org.apache.cordova.media'] $ 코르도바 플러그인 rm org.apache.cordova.media
      
@@ -138,11 +138,11 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
 
 ### Windows Phone 단점
 
-*   한 번에 하나의 미디어 <a href="../file/fileobj/fileobj.html">파일</a>을 다시 재생할 수 있습니다.
+*   한 번에 하나의 미디어 파일을 다시 재생할 수 있습니다.
 
 *   응용 프로그램 다른 미디어와 상호 작용 하는 방법에 대 한 엄격한 제한이 있다. [자세한 내용은 Microsoft 문서][2] 를 참조 하십시오.
 

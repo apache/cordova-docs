@@ -30,7 +30,7 @@ Description
 
 It returns the number to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a Number value.
 
-If there is an error parsing the number string, then the errorCB callback is invoked with a <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> object as a parameter. The expected code for this error is <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR.
+If there is an error parsing the number string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
 
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.
@@ -44,7 +44,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "number: 1234.56".
@@ -57,7 +57,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
     );
 
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML>

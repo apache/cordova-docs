@@ -183,7 +183,7 @@ license: >
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-Например вы можете подключить в «пауза» и «<a href="../../../cordova/events/events.resume.html">резюме</a>» события приложения.
+Например вы можете подключить в «пауза» и «резюме» события приложения.
 
 ### Отладка плагины
 

@@ -20,9 +20,9 @@ license: >
 
 # Upgrading Windows 8
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to modify Windows 8 projects to upgrade from older versions of Cordova.
+This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-line Interface</a> for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
 version of the CLI.
 
 ## Upgrade to 2.9.0 from 2.8.0 ##

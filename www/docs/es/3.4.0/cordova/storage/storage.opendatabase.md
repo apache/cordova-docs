@@ -22,7 +22,7 @@ license: >
 
 Devuelve un nuevo objeto de `base de datos`.
 
-    var dbShell = window.openDatabase(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## Descripción
@@ -53,7 +53,7 @@ El método crea un nuevo SQL Database Lite y devuelve un objeto de `Database` qu
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

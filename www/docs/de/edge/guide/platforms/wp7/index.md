@@ -24,9 +24,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen, die für beide Versionen gilt:
 
-*   <a href="../wp8/upgrading.html">Aktualisieren von Windows Phone</a>
+*   Aktualisieren von Windows Phone
 *   Windows Phone Plugins
-*   <a href="../wp8/tools.html">Windows Phone Befehlszeilentools</a>
+*   Windows Phone Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 

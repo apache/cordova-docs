@@ -24,16 +24,16 @@ license: >
 
 ## イベントの種類
 
-*   <a href="events.deviceready.html">deviceready</a>
-*   <a href="events.pause.html">一時停止します。</a>
-*   <a href="events.resume.html">再開</a>
-*   <a href="events.backbutton.html">backbutton</a>
-*   <a href="events.menubutton.html">menubutton</a>
-*   <a href="events.searchbutton.html">searchbutton</a>
-*   <a href="events.startcallbutton.html">startcallbutton</a>
-*   <a href="events.endcallbutton.html">endcallbutton</a>
-*   <a href="events.volumedownbutton.html">volumedownbutton</a>
-*   <a href="events.volumeupbutton.html">volumeupbutton</a>
+*   deviceready
+*   一時停止します。
+*   再開
+*   backbutton
+*   menubutton
+*   searchbutton
+*   startcallbutton
+*   endcallbutton
+*   volumedownbutton
+*   volumeupbutton
 
 ## [Org.apache.cordova.battery ステータス][1]によって追加されるイベント
 

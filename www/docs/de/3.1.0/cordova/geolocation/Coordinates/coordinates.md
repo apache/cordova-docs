@@ -20,7 +20,7 @@ license: >
 
 # Koordinaten
 
-Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer <a href="../Position/position.html">Position</a> zu beschreiben.
+Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer Position zu beschreiben.
 
 ## Eigenschaften
 
@@ -28,7 +28,7 @@ Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer <a hr
 
 *   **Länge**: Länge in Dezimalgrad. *(Anzahl)*
 
-*   **Höhe**: Höhe der <a href="../Position/position.html">Position</a> in Meter über dem Ellipsoid. *(Anzahl)*
+*   **Höhe**: Höhe der Position in Meter über dem Ellipsoid. *(Anzahl)*
 
 *   **Genauigkeit**: Genauigkeit der breiten- und Längengrad Koordinaten in Metern. *(Anzahl)*
 
@@ -36,11 +36,11 @@ Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer <a hr
 
 *   **Rubrik**: Fahrtrichtung, angegeben in Grad relativ zu den Norden im Uhrzeigersinn gezählt. *(Anzahl)*
 
-*   **Geschwindigkeit**: aktuelle Geschwindigkeit über Grund des <a href="../../device/device.html">Gerät</a>s, in Metern pro Sekunde angegeben. *(Anzahl)*
+*   **Geschwindigkeit**: aktuelle Geschwindigkeit über Grund des Geräts, in Metern pro Sekunde angegeben. *(Anzahl)*
 
 ## Beschreibung
 
-Die `Coordinates` Objekt ist angefügt das `<a href="../Position/position.html">Position</a>` -Objekt, das Callback-Funktionen in Anforderungen für die aktuelle <a href="../Position/position.html">Position</a> zur Verfügung steht.
+Die `Coordinates` Objekt ist angefügt das `Position` -Objekt, das Callback-Funktionen in Anforderungen für die aktuelle Position zur Verfügung steht.
 
 ## Unterstützte Plattformen
 
@@ -72,7 +72,7 @@ Die `Coordinates` Objekt ist angefügt das `<a href="../Position/position.html">
         alert('onError!');
     };
     
-    navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## Vollständiges Beispiel
@@ -80,21 +80,21 @@ Die `Coordinates` Objekt ist angefügt das `<a href="../Position/position.html">
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../geolocation.html">Geolocation</a> <a href="../Position/position.html">Position</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Geolocation Position Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
-        // Display `<a href="../Position/position.html">Position</a>` properties from the geolocation
+        // Display `Position` properties from the geolocation
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');
@@ -124,4 +124,4 @@ Die `Coordinates` Objekt ist angefügt das `<a href="../Position/position.html">
 
 ## Android Macken
 
-**AltitudeAccuracy**: von Android-<a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`null`.
+**AltitudeAccuracy**: von Android-Geräten, Rückgabe nicht unterstützt`null`.

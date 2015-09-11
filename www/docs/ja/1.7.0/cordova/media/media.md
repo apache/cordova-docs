@@ -23,7 +23,7 @@ Media
 
 > `Media` オブジェクトは、デバイス上でのオーディオファイルの再生や録音などといった機能をサポートします。
 
-    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
 
 注意: 現在の実装はメディアキャプチャーに関する W3C の仕様を満たしていません。利便性のためだけに提供されています。将来的には最新の W3C の仕様に合わせるとともに、現在の API を廃止することも検討されています。
@@ -33,26 +33,26 @@ Media
 
 - __src__: オーディオコンテンツを示す URI を表します _(DOMString)_
 - __mediaSuccess__: (オプション) Media オブジェクトが再生、録音、停止などのアクションを完了したときに呼ばれるコールバック関数を表します _(Function)_
-- __<a href="Parameters/mediaError.html">mediaError</a>__: (オプション) エラー発生時に呼ばれるコールバック関数を表します _(Function)_
+- __mediaError__: (オプション) エラー発生時に呼ばれるコールバック関数を表します _(Function)_
 - __mediaStatus__: (オプション) ステータスが変わったときに呼ばれるコールバック関数を表します _(Function)_
 
 メソッド
 -------
 
-- media.getCurrent<a href="../geolocation/Position/position.html">Position</a>: オーディオファイル内の現在の再生位置を返します
-- <a href="media.getDuration.html">media.getDuration</a>: オーディオファイルの再生時間を返します
-- <a href="media.play.html">media.play</a>: オーディオファイルを再生または再開します
-- media.<a href="../events/events.pause.html">pause</a>: オーディオファイルを一時停止します
-- <a href="media.release.html">media.release</a>: OS のオーディオリソースを開放します
-- <a href="media.seekTo.html">media.seekTo</a>: オーディオファイル中の再生位置を動かします
-- <a href="media.startRecord.html">media.startRecord</a>: オーディオファイルの録音を開始します
-- <a href="media.stop.html">media.stop</a>Record: オーディオファイルの録音を停止します
-- <a href="media.stop.html">media.stop</a>: オーディオファイルを停止します
+- media.getCurrentPosition: オーディオファイル内の現在の再生位置を返します
+- media.getDuration: オーディオファイルの再生時間を返します
+- media.play: オーディオファイルを再生または再開します
+- media.pause: オーディオファイルを一時停止します
+- media.release: OS のオーディオリソースを開放します
+- media.seekTo: オーディオファイル中の再生位置を動かします
+- media.startRecord: オーディオファイルの録音を開始します
+- media.stopRecord: オーディオファイルの録音を停止します
+- media.stop: オーディオファイルを停止します
 
 追加の読み取り専用パラメーター
 ---------------------
 
-- ___position__: 再生位置を秒単位で表します。 再生中は自動的に値が更新されないので、 getCurrent<a href="../geolocation/Position/position.html">Position</a> メソッドを呼び、値を更新します
+- ___position__: 再生位置を秒単位で表します。 再生中は自動的に値が更新されないので、 getCurrentPosition メソッドを呼び、値を更新します
 - ___duration__: メディアの再生時間を秒単位で表します
 
 サポートされているプラットフォーム

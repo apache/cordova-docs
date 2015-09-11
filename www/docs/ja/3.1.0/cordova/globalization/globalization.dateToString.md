@@ -31,11 +31,11 @@ license: >
 
 受信 `date` パラメーター型である必要があります`Date`.
 
-場合は、日付の書式設定エラーがあるし、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+場合は、日付の書式設定エラーがあるし、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 
-    {formatLength: '<a href="../inappbrowser/inappbrowser.html">ショー</a>ト' セレクター： '日付と時刻'}
+    {formatLength: 'ショート' セレクター： '日付と時刻'}
     
 
 `options.formatLength`することができます `short` 、 `medium` 、 `long` 、または`full`.
@@ -66,7 +66,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

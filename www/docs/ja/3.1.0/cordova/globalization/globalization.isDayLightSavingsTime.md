@@ -31,7 +31,7 @@ license: >
 
 受信パラメーター `date` 型である必要があります`Date`.
 
-日付を読み取り中にエラーがある場合、 `errorCallback` を実行します。予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+日付を読み取り中にエラーがある場合、 `errorCallback` を実行します。予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## サポートされているプラットフォーム
 
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>isDayLightSavingsTime Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -193,7 +193,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Events</a></a></th>
+        <th><a href="cordova_events_events.md.html">Events</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -305,16 +305,16 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Storage</a></a></th>
+        <th><a href="cordova_storage_storage.md.html">Storage</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y">local<a href="../../cordova/storage/storage.html">Storage</a> &amp; indexedDB</td>
-        <td data-col="winphone8"  class="y">local<a href="../../cordova/storage/storage.html">Storage</a> &amp; indexedDB</td>
-        <td data-col="win8"       class="y">local<a href="../../cordova/storage/storage.html">Storage</a> &amp; indexedDB</td>
+        <td data-col="winphone7"  class="y">localStorage &amp; indexedDB</td>
+        <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
+        <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
         <td data-col="tizen"       class="y"></td>
     </tr>
 

@@ -20,16 +20,16 @@ license: >
 
 # compassSuccess
 
-onSuccess 콜백 함수를 통해 <a href="../compass.html">나침반</a> 머리글 정보를 제공 하는 `<a href="compassHeading.html">compassHeading</a>` 개체.
+onSuccess 콜백 함수를 통해 나침반 머리글 정보를 제공 하는 `compassHeading` 개체.
 
     function(heading) {
         // Do something
     }
     
 
-## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
-*   **제목**: 제목 정보. *(<a href="compassHeading.html">compassHeading</a>)*
+*   **제목**: 제목 정보. *(compassHeading)*
 
 ## 예를 들어
 

@@ -20,7 +20,7 @@ license: >
 
 # 座標
 
-<a href="../Position/position.html">位置</a>の地理座標を記述するプロパティのセットです。
+位置の地理座標を記述するプロパティのセットです。
 
 ## プロパティ
 
@@ -28,7 +28,7 @@ license: >
 
 *   **経度**: 10 進度の経度。*(数)*
 
-*   **高度**: 楕円体上のメートルの<a href="../Position/position.html">位置</a>の高さ。*(数)*
+*   **高度**: 楕円体上のメートルの位置の高さ。*(数)*
 
 *   **精度**: メートルの緯度と経度座標の精度レベル。*(数)*
 
@@ -36,11 +36,11 @@ license: >
 
 *   **見出し**: 進行方向、カウント、真北から時計回りの角度で指定します。*(数)*
 
-*   **速度**： 毎秒メートルで指定された<a href="../../device/device.html">デバイス</a>の現在の対地速度。*(数)*
+*   **速度**： 毎秒メートルで指定されたデバイスの現在の対地速度。*(数)*
 
 ## 説明
 
-`Coordinates`オブジェクトに使用されて、 `Position` は、現在の<a href="../Position/position.html">位置</a>のための要求でコールバック関数を利用可能なオブジェクト。
+`Coordinates`オブジェクトに使用されて、 `Position` は、現在の位置のための要求でコールバック関数を利用可能なオブジェクト。
 
 ## サポートされているプラットフォーム
 
@@ -72,7 +72,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## 完全な例
@@ -80,18 +80,18 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Geolocation Position Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
         // Display `Position` properties from the geolocation
@@ -124,4 +124,4 @@ license: >
 
 ## Android の癖
 
-**altitudeAccuracy**： 返すの Android <a href="../../device/device.html">デバイス</a>でサポートされていません`null`.
+**altitudeAccuracy**： 返すの Android デバイスでサポートされていません`null`.

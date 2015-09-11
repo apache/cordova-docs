@@ -22,16 +22,16 @@ license: >
 
 À intervalle régulier, obtenez la direction de la boussole en degrés.
 
-    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
+    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
 ## Description
 
 La boussole est un capteur qui détecte la direction ou la position vers laquelle l'appareil pointe. Il mesure la direction en degrés de 0 à 359.99.
 
-Le `compass.watchHeading` obtient la direction actuelle de l'appareil à intervalle régulier. Chaque fois que la direction est récupérée, la fonction de callback `headingSuccess` est exécutée. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` dans l'objet `<a href="parameters/compassOptions.html">compassOptions</a>`.
+Le `compass.watchHeading` obtient la direction actuelle de l'appareil à intervalle régulier. Chaque fois que la direction est récupérée, la fonction de callback `headingSuccess` est exécutée. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` dans l'objet `compassOptions`.
 
-L'ID de surveillance retourné référence l'intervalle de surveillance de la boussole. L'ID de surveillance peut être utilisé avec `<a href="compass.clearWatch.html">compass.clearWatch</a>` pour arrêter de surveiller la boussole.
+L'ID de surveillance retourné référence l'intervalle de surveillance de la boussole. L'ID de surveillance peut être utilisé avec `compass.clearWatch` pour arrêter de surveiller la boussole.
 
 ## Plates-formes prises en charge
 
@@ -49,8 +49,8 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(<a href="parameters/compassError.html">compassError</a>) {
-        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
+                navigator.compass.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
 
 ## Spécificités iOS
 
-Dans iOS `compass.watchHeading` peut également récupérer la direction actuelle de l'appareil lorsqu'elle change d'un certain nombre de degrés. Chaque fois que la direction change du nombre de degrés spécifiés ou plus, la fonction de callback `headingSuccess` s'exécute. Spécifier les degrés de changement via le paramètre `filter` dans l'objet `<a href="parameters/compassOptions.html">compassOptions</a>`. Désactivez la boussole comme d'habitude en passant l'ID de surveillance retourné à `<a href="compass.clearWatch.html">compass.clearWatch</a>` . Cette fonctionnalité remplace les fonctionnalités précédentes, uniquement sur iOS, `watchHeadingFilter` et `clearWatchFilter`, qui ont été supprimées dans la version 1.6.
+Dans iOS `compass.watchHeading` peut également récupérer la direction actuelle de l'appareil lorsqu'elle change d'un certain nombre de degrés. Chaque fois que la direction change du nombre de degrés spécifiés ou plus, la fonction de callback `headingSuccess` s'exécute. Spécifier les degrés de changement via le paramètre `filter` dans l'objet `compassOptions`. Désactivez la boussole comme d'habitude en passant l'ID de surveillance retourné à `compass.clearWatch` . Cette fonctionnalité remplace les fonctionnalités précédentes, uniquement sur iOS, `watchHeadingFilter` et `clearWatchFilter`, qui ont été supprimées dans la version 1.6.
 
 Seulement un `watchHeading` peut être utilisé à un moment donné sur iOS. Si un `watchHeading` utilise un filtre, un appel à `getCurrentHeading` ou `watchHeading` utilise la valeur existante de filtre pour spécifier des changements de direction. Surveiller les changements de position avec un filtre est plus efficace qu'avec des intervalles de temps.

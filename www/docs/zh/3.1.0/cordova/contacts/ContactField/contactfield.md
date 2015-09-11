@@ -20,7 +20,7 @@ license: >
 
 # ContactField
 
-支援泛型欄位在 `Contact` 物件。某些屬性<a href="../../storage/storage.html">存儲</a>作為 `ContactField` 物件包括電子郵件地址、 電話號碼和 Url。
+支援泛型欄位在 `Contact` 物件。某些屬性存儲作為 `ContactField` 物件包括電子郵件地址、 電話號碼和 Url。
 
 ## 屬性
 
@@ -32,9 +32,9 @@ license: >
 
 ## 詳細資訊
 
-`ContactField`物件是可重用的元件表示泛指<a href="../contacts.html">連絡人</a>欄位。 每個 `ContactField` 物件包含 `value` ， `type` ，和 `pref` 屬性。 A `Contact` 物件<a href="../../storage/storage.html">存儲</a>中的幾個屬性 `ContactField[]` 陣列，如電話號碼和電子郵件地址。
+`ContactField`物件是可重用的元件表示泛指連絡人欄位。 每個 `ContactField` 物件包含 `value` ， `type` ，和 `pref` 屬性。 A `Contact` 物件存儲中的幾個屬性 `ContactField[]` 陣列，如電話號碼和電子郵件地址。
 
-在大多數情況下，沒有任何預先確定的值為 `ContactField` 物件的**type**屬性。 例如，電話號碼可以指定**類型**的*家庭*、*工作*、*移動*、 *iPhone*或由一個特定的<a href="../../device/device.html">設備</a>平臺聯繫<a href="../../storage/database/database.html">資料庫</a>支援的任何其他值的值。 然而，對於 `Contact` **的照片**欄位，**類型**欄位指示返回圖像的格式： **url**的**值**屬性包含的照片圖像或*base64*的 URL 時的**值**包含一個 base64 編碼的圖像字串時。 
+在大多數情況下，沒有任何預先確定的值為 `ContactField` 物件的**type**屬性。 例如，電話號碼可以指定**類型**的*家庭*、*工作*、*移動*、 *iPhone*或由一個特定的設備平臺聯繫資料庫支援的任何其他值的值。 然而，對於 `Contact` **的照片**欄位，**類型**欄位指示返回圖像的格式： **url**的**值**屬性包含的照片圖像或*base64*的 URL 時的**值**包含一個 base64 編碼的圖像字串時。 
 
 ## 支援的平臺
 
@@ -47,7 +47,7 @@ license: >
 ## 快速的示例
 
         // create a new contact
-        var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+        var contact = navigator.contacts.create();
     
         // store contact phone numbers in ContactField[]
         var phoneNumbers = [];
@@ -65,21 +65,21 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
     
         function onDeviceReady() {
             // create a new contact
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
     
             // store contact phone numbers in ContactField[]
             var phoneNumbers = [];
@@ -92,10 +92,10 @@ license: >
             contact.save();
     
             // search contacts, returning display name and phone numbers
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter = "";
             filter = ["displayName", "phoneNumbers"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,14 +113,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

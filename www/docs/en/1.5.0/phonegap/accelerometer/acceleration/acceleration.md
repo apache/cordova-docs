@@ -21,7 +21,7 @@ license: >
 Acceleration
 ============
 
-Contains `<a href="../accelerometer.html">Accelerometer</a>` data captured at a specific point in time.
+Contains `Accelerometer` data captured at a specific point in time.
 
 Properties
 ----------
@@ -34,7 +34,7 @@ Properties
 Description
 -----------
 
-This object is created and populated by PhoneGap, and returned by an `<a href="../accelerometer.html">Accelerometer</a>` method.
+This object is created and populated by PhoneGap, and returned by an `Accelerometer` method.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(acceleration) {
@@ -58,27 +58,27 @@ Quick <a href="../../storage/storage.opendatabase.html">Example</a>
         alert('onError!');
     };
 
-    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
 
         // onSuccess: Get a snapshot of the current acceleration
@@ -99,7 +99,7 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

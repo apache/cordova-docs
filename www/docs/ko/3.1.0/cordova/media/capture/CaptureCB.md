@@ -20,16 +20,16 @@ license: >
 
 # CaptureCB
 
-> 성공적인 <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> 작업에 따라 호출 됩니다.
+> 성공적인 미디어 캡처 작업에 따라 호출 됩니다.
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## 설명
 
-이 함수는 성공적인 <a href="capture.html">캡처</a> 작업이 완료 된 후 실행 합니다. <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>을 <a href="capture.html">캡처</a>한이 포인트와 중에 사용자가 <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> 응용 프로그램 종료 또는 <a href="capture.html">캡처</a> 한계에 도달 했습니다.
+이 함수는 성공적인 캡처 작업이 완료 된 후 실행 합니다. 미디어 파일을 캡처한이 포인트와 중에 사용자가 미디어 캡처 응용 프로그램 종료 또는 캡처 한계에 도달 했습니다.
 
-각 `MediaFile` 개체 <a href="capture.html">캡처</a>한 <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 설명 합니다.
+각 `MediaFile` 개체 캡처한 미디어 파일에 설명 합니다.
 
 ## 빠른 예제
 

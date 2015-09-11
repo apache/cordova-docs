@@ -31,7 +31,7 @@ license: >
 
 ## Описание
 
-`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>` ссылается`watchID`.
+`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `geolocation.watchPosition` ссылается`watchID`.
 
 ## Поддерживаемые платформы
 
@@ -46,7 +46,7 @@ license: >
 
     / / Опции: наблюдать за изменениями в положении и использовать наиболее / / точная позиция доступный метод приобретения.
     //
-    var watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     
     // ...later on...
     
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -75,7 +75,7 @@ license: >
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
         // onSuccess Geolocation
@@ -96,7 +96,7 @@ license: >
             }
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
               alert('code: '    + error.code    + '\n' +

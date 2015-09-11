@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# open<a href="database/database.html">Database</a>
+# openDatabase
 
-Restituisce un nuovo `<a href="database/database.html">Database</a>` oggetto.
+Restituisce un nuovo `Database` oggetto.
 
-    var dbShell = window.open<a href="database/database.html">Database</a>(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## Descrizione
 
-Il metodo crea un nuovo <a href="database/database.html">Database</a> di SQL Lite e restituisce un `<a href="database/database.html">Database</a>` oggetto che consente la manipolazione dei dati.
+Il metodo crea un nuovo Database di SQL Lite e restituisce un `Database` oggetto che consente la manipolazione dei dati.
 
 ## Piattaforme supportate
 
@@ -38,7 +38,7 @@ Il metodo crea un nuovo <a href="database/database.html">Database</a> di SQL Lit
 
 ## Esempio rapido
 
-    var db = window.open<a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
     
 
 ## Esempio completo
@@ -53,18 +53,18 @@ Il metodo crea un nuovo <a href="database/database.html">Database</a> di SQL Lit
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.open<a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
     
         </script>
       </head>
       <body>
         <h1>Example</h1>
-        <p>Open <a href="database/database.html">Database</a></p>
+        <p>Open Database</p>
       </body>
     </html>

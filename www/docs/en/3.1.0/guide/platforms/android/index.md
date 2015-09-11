@@ -20,18 +20,18 @@ license: >
 
 # Android Platform Guide
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to set up your SDK development environment to
+This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Android devices. See the following for more
 detailed platform-specific information:
 
-* <a href="config.html">Android Configuration</a>
-* <a href="webview.html">Android WebViews</a>
-* <a href="plugin.html">Android Plugins</a>
-* <a href="upgrading.html">Upgrading Android</a>
-* <a href="tools.html">Android Command-line Tools</a>
+* Android Configuration
+* Android WebViews
+* Android Plugins
+* Upgrading Android
+* Android Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See <a href="../../cli/index.html">The Command-line Interface</a> for information about the
+See The Command-line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -53,7 +53,7 @@ NOTE, doc said:
 -->
 
 Developers should use the `cordova` utility in conjunction with
-the Android SDK.  See <a href="../../cli/index.html">The Command-line Interface</a> for
+the Android SDK.  See The Command-line Interface for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -85,7 +85,7 @@ To modify the PATH environment on Windows 7:
 
 * Click __Advanced System Settings__ in the column on the left.
 
-* In the resulting dialog box, press __Environment <a href="../../../plugin_ref/spec.html">Variables</a>__.
+* In the resulting dialog box, press __Environment Variables__.
 
 * Select the __PATH__ variable and press __Edit__.
 
@@ -94,7 +94,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and <a href="../../../cordova/inappbrowser/inappbrowser.html">close</a> both dialog boxes.
+* Save the value and close both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to
@@ -105,7 +105,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova <a href="../../cli/index.html">The Command-line Interface</a>. For example, in a source-code directory:
+Cordova The Command-line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -156,8 +156,8 @@ Once open, the Android SDK Manager displays various runtime libraries:
 
 ![](img/guide/platforms/android/asdk_window.png)
 
-Choose __Tools &rarr; Manage AVDs__ (Android Virtual <a href="../../../cordova/device/device.html">Device</a>s), then
-choose any item from __<a href="../../../cordova/device/device.html">Device</a> Definitions__ in the resulting dialog
+Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
+choose any item from __Device Definitions__ in the resulting dialog
 box:
 
 ![](img/guide/platforms/android/asdk_device.png)
@@ -167,7 +167,7 @@ to accept the changes:
 
 ![](img/guide/platforms/android/asdk_newAVD.png)
 
-The AVD then appears in the __Android Virtual <a href="../../../cordova/device/device.html">Device</a>s__ list:
+The AVD then appears in the __Android Virtual Devices__ list:
 
 ![](img/guide/platforms/android/asdk_avds.png)
 
@@ -200,7 +200,7 @@ For a faster experience, use an Intel-based emulator image:
 * When starting the emulator, ensure there are no error messages
   indicating a failure to load HAX modules.
 
-## Deploy to <a href="../../../cordova/device/device.html">Device</a>
+## Deploy to Device
 
 To push an app directly to the device, make sure USB debugging is
 enabled on your device as described on the

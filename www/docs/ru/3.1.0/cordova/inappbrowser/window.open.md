@@ -20,26 +20,26 @@ license: >
 
 # window.open
 
-Открывает URL-адрес в новой `<a href="inappbrowser.html">InAppBrowser</a>` например, текущий экземпляр браузера или браузера системы.
+Открывает URL-адрес в новой `InAppBrowser` например, текущий экземпляр браузера или браузера системы.
 
     var ref = window.open(url, target, options);
     
 
-*   **ссылка**: ссылка для `<a href="inappbrowser.html">InAppBrowser</a>` окно. *(<a href="inappbrowser.html">InAppBrowser</a>)*
+*   **ссылка**: ссылка для `InAppBrowser` окно. *(InAppBrowser)*
 
 *   **URL**: URL-адрес для загрузки *(String)*. Вызвать `encodeURI()` на это, если URL-адрес содержит символы Unicode.
 
 *   **Цель**: цель для загрузки URL-адреса, необязательный параметр, по умолчанию `_self` . *(Строка)*
     
-    *   `_self`: Открывается в Cordova WebView, если URL-адрес в белый список, в противном случае он открывается в`<a href="inappbrowser.html">InAppBrowser</a>`.
-    *   `_blank`: Открывает в`<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_self`: Открывается в Cordova WebView, если URL-адрес в белый список, в противном случае он открывается в`InAppBrowser`.
+    *   `_blank`: Открывает в`InAppBrowser`.
     *   `_system`: Открывается в веб-браузера системы.
 
-*   **опции**: параметры для `<a href="inappbrowser.html">InAppBrowser</a>` . Необязательный параметр, виновная в: `location=yes` . *(Строка)*
+*   **опции**: параметры для `InAppBrowser` . Необязательный параметр, виновная в: `location=yes` . *(Строка)*
     
     `options`Строка не должна содержать каких-либо пустое пространство, и каждая функция пар имя/значение должны быть разделены запятой. Функция имена нечувствительны к регистру. Все платформы поддерживают исходное значение:
     
-    *   **Расположение**: равным `yes` или `no` превратить `<a href="inappbrowser.html">InAppBrowser</a>` в адресную строку или выключить.
+    *   **Расположение**: равным `yes` или `no` превратить `InAppBrowser` в адресную строку или выключить.
     ## Андроид только
     
     *   **closebuttoncaption** - задать строку, которая будет заголовок для кнопки "Готово". 
@@ -50,7 +50,7 @@ license: >
     
     *   **closebuttoncaption** - задать строку, которая будет заголовок для кнопки "Готово". Обратите внимание, что вам будет необходимо локализовать это значение самостоятельно.
     *   **скрытые** - присвоено значение 'yes', чтобы создать браузера и загрузки страницы, но не показать его. Событие load будет срабатывать, когда загрузка завершена. Опустить или значение «нет» (по умолчанию) иметь браузера открыть и загрузить нормально. 
-    *   **панель инструментов** - набор «да» или «нет», чтобы включение и отключение панели инструментов для <a href="inappbrowser.html">InAppBrowser</a> (по умолчанию 'Да')
+    *   **панель инструментов** - набор «да» или «нет», чтобы включение и отключение панели инструментов для InAppBrowser (по умолчанию 'Да')
     *   **enableViewportScale**: значение `yes` или `no` для предотвращения видового экрана, масштабирование через тег meta (по умолчанию`no`).
     *   **mediaPlaybackRequiresUserAction**: значение `yes` или `no` для предотвращения HTML5 аудио или видео от Автовоспроизведение (по умолчанию`no`).
     *   **allowInlineMediaPlayback**: значение `yes` или `no` чтобы разрешить воспроизведение мультимедиа Встроенный HTML5, отображение в окне браузера, а не конкретного устройства воспроизведения интерфейса. HTML `video` элемент должен также включать `webkit-playsinline` атрибут (по умолчанию`no`)
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>window.open Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

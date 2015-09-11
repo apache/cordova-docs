@@ -24,11 +24,11 @@ license: >
 
 ## Methods
 
-- `<a href="notification.alert.html">notification.alert</a>`
-- `<a href="notification.confirm.html">notification.confirm</a>`
-- `<a href="notification.prompt.html">notification.prompt</a>`
-- `<a href="notification.beep.html">notification.beep</a>`
-- `<a href="notification.vibrate.html">notification.vibrate</a>`
+- `notification.alert`
+- `notification.confirm`
+- `notification.prompt`
+- `notification.beep`
+- `notification.vibrate`
 
 ## Accessing the Feature
 
@@ -85,4 +85,4 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.
+configuration.  See Platform Support for an overview.

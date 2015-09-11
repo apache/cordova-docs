@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../Position/position.html">Position</a>Error
+PositionError
 ========
 
-A `<a href="../Position/position.html">Position</a>Error` object is returned to the <a href="../parameters/geolocationError.html">geolocationError</a> callback when an error occurs.
+A `PositionError` object is returned to the geolocationError callback when an error occurs.
 
 Properties
 ----------
@@ -32,12 +32,12 @@ Properties
 Constants
 ---------
 
-- `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
-- `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
-- `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
+- `PositionError.PERMISSION_DENIED`
+- `PositionError.POSITION_UNAVAILABLE`
+- `PositionError.TIMEOUT`
 
 Description
 -----------
 
-The `<a href="../Position/position.html">Position</a>Error` object is returned to the user through the `<a href="../parameters/geolocationError.html">geolocationError</a>` callback function when an error occurs with geolocation.
+The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
 

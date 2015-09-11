@@ -29,9 +29,9 @@ Zdarzenie fires, gdy aplikacja jest źródło tła.
 
 `resume`Zdarzenie fires po platformie rodzimych wyciąga wniosek od tła.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `<a href="events.deviceready.html">deviceready</a>` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
 
-## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
+## Obsługiwane platformy
 
 *   Amazon Fire OS
 *   Android
@@ -62,7 +62,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Dziwactwa iOS
 
-Wszelkie interaktywne funkcje wywoływane z `<a href="events.pause.html">pause</a>` obsługi zdarzeń wykonać później podczas wznawiania działania aplikacji, jak sygnalizowane przez `resume` zdarzenie. Należą do nich alerty, `console.log()` i wszelkie rozmowy z wtyczki lub Cordova API, które przechodzą przez Objective-C.
+Wszelkie interaktywne funkcje wywoływane z `pause` obsługi zdarzeń wykonać później podczas wznawiania działania aplikacji, jak sygnalizowane przez `resume` zdarzenie. Należą do nich alerty, `console.log()` i wszelkie rozmowy z wtyczki lub Cordova API, które przechodzą przez Objective-C.
 
 *   **aktywnych** zdarzeń
     

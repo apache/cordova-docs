@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Tizen <a href="../index.html">平臺指南</a>
+# Tizen 平臺指南
 
 本指南介紹了如何設置您的 SDK 開發環境部署科爾多瓦運行 Tizen 作業系統的設備的應用程式。
 
@@ -26,7 +26,7 @@ license: >
 
 Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows XP SP3/7 （32 位）。
 
-開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
+開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
 
 ## 安裝 SDK
 

@@ -20,14 +20,14 @@ license: >
 
 # MediaFile.getFormatData
 
-> 取得についての書式情報<a href="../media.html">メディア</a> <a href="capture.html">キャプチャ</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>。
+> 取得についての書式情報メディア キャプチャ ファイル。
 
-    mediaFile.getFormatData (<a href="MediaFileData.html">MediaFileData</a>SuccessCB successCallback, [<a href="MediaFileData.html">MediaFileData</a>ErrorCB 解り]);
+    mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB 解り]);
     
 
 ## 説明
 
-この関数は、非同期的に<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>の形式情報を取得しようとします。 かどうかは成功、呼び出します、 `<a href="MediaFileData.html">MediaFileData</a>SuccessCB` コールバックを `<a href="MediaFileData.html">MediaFileData</a>` オブジェクト。 この関数を呼び出します、試行が失敗した場合、 `<a href="MediaFileData.html">MediaFileData</a>ErrorCB` コールバック。
+この関数は、非同期的にメディア ファイルの形式情報を取得しようとします。 かどうかは成功、呼び出します、 `MediaFileDataSuccessCB` コールバックを `MediaFileData` オブジェクト。 この関数を呼び出します、試行が失敗した場合、 `MediaFileDataErrorCB` コールバック。
 
 ## サポートされているプラットフォーム
 
@@ -39,12 +39,12 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-ので、すべての<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>に関する情報の API を提供しない `<a href="MediaFileData.html">MediaFileData</a>` 既定値を持つオブジェクトを返します。
+ので、すべてのメディア ファイルに関する情報の API を提供しない `MediaFileData` 既定値を持つオブジェクトを返します。
 
 ## Android の癖
 
-API 情報にアクセスする<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>形式は限られて、それで、必ずしもすべて `<a href="MediaFileData.html">MediaFileData</a>` プロパティがサポートされます。
+API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `MediaFileData` プロパティがサポートされます。
 
 ## iOS の癖
 
-API 情報にアクセスする<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>形式は限られて、それで、必ずしもすべて `<a href="MediaFileData.html">MediaFileData</a>` プロパティがサポートされます。
+API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `MediaFileData` プロパティがサポートされます。

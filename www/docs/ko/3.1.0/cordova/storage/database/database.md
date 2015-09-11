@@ -30,7 +30,7 @@ SQL 데이터베이스에 대 한 액세스를 제공합니다.
 
 ## 세부 정보
 
-`window.<a href="../storage.opendatabase.html">openDatabase</a>()`메서드가 반환 된 `Database` 개체.
+`window.openDatabase()`메서드가 반환 된 `Database` 개체.
 
 ## 지원 되는 플랫폼
 
@@ -56,13 +56,13 @@ SQL 데이터베이스에 대 한 액세스를 제공합니다.
         alert("success!");
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
 ## 변경 버전 빠른 예제
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
     
 
@@ -71,19 +71,19 @@ SQL 데이터베이스에 대 한 액세스를 제공합니다.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -111,7 +111,7 @@ SQL 데이터베이스에 대 한 액세스를 제공합니다.
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

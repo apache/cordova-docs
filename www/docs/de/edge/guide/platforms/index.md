@@ -28,58 +28,58 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 ## Amazon Fire OS
 
-*   <a href="amazonfireos/index.html">Handbuch für die OS-Plattform von Amazon-Feuer</a>
-*   <a href="amazonfireos/config.html">Amazon Fire OS Konfiguration</a>
-*   <a href="amazonfireos/webview.html">Amazon Fire OS Webansichten für</a>
-*   <a href="amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
+*   Handbuch für die OS-Plattform von Amazon-Feuer
+*   Amazon Fire OS Konfiguration
+*   Amazon Fire OS Webansichten für
+*   Amazon Fire OS Plugins
 
 ## Android
 
-*   <a href="android/index.html">Android-Plattform-Guide</a>
-*   <a href="android/tools.html">Android Shell Tool Guide</a>
-*   <a href="android/config.html">Android Konfiguration</a>
-*   <a href="android/plugin.html">Android Plugins</a>
-*   <a href="android/webview.html">Android Webansichten für</a>
-*   <a href="android/upgrading.html">Aktualisierung von Android</a>
+*   Android-Plattform-Guide
+*   Android Shell Tool Guide
+*   Android Konfiguration
+*   Android Plugins
+*   Android Webansichten für
+*   Aktualisierung von Android
 
 ## BlackBerry 10
 
-*   <a href="blackberry10/index.html">Handbuch für die Plattform von BlackBerry 10</a>
-*   <a href="blackberry10/tools.html">BlackBerry 10 Shell Tool Guide</a>
-*   <a href="blackberry10/config.html">BlackBerry 10 Konfiguration</a>
-*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="blackberry/upgrading.html">Aktualisieren der BlackBerry</a> 10
+*   Handbuch für die Plattform von BlackBerry 10
+*   BlackBerry 10 Shell Tool Guide
+*   BlackBerry 10 Konfiguration
+*   BlackBerry 10 Plugins
+*   Aktualisieren der BlackBerry 10
 
 ## Firefox OS
 
-*   <a href="firefoxos/index.html">Firefox-OS-Plattform-Guide</a>
+*   Firefox-OS-Plattform-Guide
 
 ## iOS
 
-*   <a href="ios/index.html">iOS Platform Guide</a>
-*   <a href="ios/tools.html">iOS Shell Tool Guide</a>
-*   <a href="ios/config.html">iOS Konfiguration</a>
-*   <a href="ios/plugin.html">iOS Plugins</a>
-*   <a href="ios/webview.html">iOS Webansichten für</a>
-*   <a href="ios/upgrading.html">IOS Upgrade</a>
+*   iOS Platform Guide
+*   iOS Shell Tool Guide
+*   iOS Konfiguration
+*   iOS Plugins
+*   iOS Webansichten für
+*   IOS Upgrade
 
 ## Ubuntu
 
-*   <a href="ubuntu/index.html">Handbuch Ubuntu Plattform</a>
+*   Handbuch Ubuntu Plattform
 
 ## Windows Phone 8
 
-*   <a href="wp8/index.html">Handbuch für die Plattform von Windows Phone-8</a>
-*   <a href="wp8/plugin.html">Windows Phone 8 Plugins</a>
-*   <a href="wp8/upgrading.html">Aktualisieren von Windows Phone</a> 8
+*   Handbuch für die Plattform von Windows Phone-8
+*   Windows Phone 8 Plugins
+*   Aktualisieren von Windows Phone 8
 
 ## Windows
 
-*   <a href="win8/index.html">Anleitung zur Windows Platform</a>
-*   <a href="win8/plugin.html">Windows Plugins</a>
-*   <a href="win8/packaging.html">Windows-Verpackungen</a>
-*   <a href="win8/upgrading.html">Aktualisieren von Windows 8</a>
+*   Anleitung zur Windows Platform
+*   Windows Plugins
+*   Windows-Verpackungen
+*   Aktualisieren von Windows 8
 
 ## Tizen
 
-*   <a href="tizen/index.html">Tizen Plattform Guide</a>
+*   Tizen Plattform Guide

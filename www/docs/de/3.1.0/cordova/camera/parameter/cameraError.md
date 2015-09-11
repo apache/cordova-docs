@@ -29,4 +29,4 @@ OnError-Callback-Funktion, die eine Fehlermeldung bereitstellt.
 
 ## Parameter
 
-*   **Meldung**: die Nachricht wird durch das <a href="../../device/device.html">Gerät</a> systemeigenen Code bereitgestellt. *(String)*
+*   **Meldung**: die Nachricht wird durch das Gerät systemeigenen Code bereitgestellt. *(String)*

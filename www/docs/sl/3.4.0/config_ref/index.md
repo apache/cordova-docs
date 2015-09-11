@@ -40,9 +40,9 @@ Upoštevajte, da pred 3.3.1-0.2.0 različico, datoteko obstajala na `app/www/con
 
 Ta oddelek podrobno globalno in cross-platform konfiguracijo možnosti. Videli v nadaljevanju, za posamezne možnosti:
 
-*   <a href="../guide/platforms/ios/config.html">iOS konfiguracijo</a>
-*   <a href="../guide/platforms/android/config.html">Android konfiguracijo</a>
-*   <a href="../guide/platforms/blackberry10/config.html">Konfiguracije blackBerry 10</a>
+*   iOS konfiguracijo
+*   Android konfiguracijo
+*   Konfiguracije blackBerry 10
 
 Poleg različnih možnosti konfiguracije, navedenih spodaj, lahko konfigurirate tudi aplikacijskimi jedro niz podob za vsako ciljno platformo. Več informacij najdete ikone in brizg zaslon.
 
@@ -53,7 +53,7 @@ Ta primer prikazuje privzete `config.xml` nastanejo v CLI `create` ukaz, opisane
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -134,4 +134,4 @@ Tukaj je, kako se prikaže element za iOS projektov:
         </feature>
     
 
-Glej sklic API za podrobnosti o tem, kako določiti vsako funkcijo. Glej <a href="../guide/hybrid/plugins/index.html">Plugin razvoj vodnik</a> za več informacij o plugins.
+Glej sklic API za podrobnosti o tem, kako določiti vsako funkcijo. Glej Plugin razvoj vodnik za več informacij o plugins.

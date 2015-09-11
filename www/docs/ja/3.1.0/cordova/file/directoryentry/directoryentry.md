@@ -20,7 +20,7 @@ license: >
 
 # DirectoryEntry
 
-[W3C ディレクトリとシステム][1]仕様で定義されている<a href="../fileobj/fileobj.html">ファイル</a> システム上のディレクトリを表します。
+[W3C ディレクトリとシステム][1]仕様で定義されているファイル システム上のディレクトリを表します。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,19 +36,19 @@ license: >
 
 **注：**次の属性は、W3C の仕様によって定義されますが*サポートされます*。
 
-*   **<a href="../fileobj/fileobj.html">ファイル</a>システム**: <a href="../fileobj/fileobj.html">ファイル</a>システムを `DirectoryEntry` が存在します。*(<a href="../fileobj/fileobj.html">ファイル</a>システム)*
+*   **ファイルシステム**: ファイルシステムを `DirectoryEntry` が存在します。*(ファイルシステム)*
 
 ## メソッド
 
 次の方法で呼び出し可能な `DirectoryEntry` オブジェクト。
 
-*   **getMetadata**: ディレクトリに関する<a href="../metadata/metadata.html">メタデータ</a>を検索します。
+*   **getMetadata**: ディレクトリに関するメタデータを検索します。
 
-*   **setMetadata**： ディレクトリに<a href="../metadata/metadata.html">メタデータ</a>を設定します。
+*   **setMetadata**： ディレクトリにメタデータを設定します。
 
-*   **[moveto]**: <a href="../fileobj/fileobj.html">ファイル</a> システムに別の場所にディレクトリを移動します。
+*   **[moveto]**: ファイル システムに別の場所にディレクトリを移動します。
 
-*   **copyTo**: <a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリをコピーします。
+*   **copyTo**: ファイル システム上の別の場所にディレクトリをコピーします。
 
 *   **網**: ディレクトリを検出する URL を返します。
 
@@ -56,11 +56,11 @@ license: >
 
 *   **getParent**: 親ディレクトリを検索します。
 
-*   **createReader**: 新規作成 `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` をディレクトリからエントリを読み取ることができます。
+*   **createReader**: 新規作成 `DirectoryReader` をディレクトリからエントリを読み取ることができます。
 
 *   **getDirectory**: 作成または、ディレクトリを検索します。
 
-*   **getFile**: 作成または、<a href="../fileobj/fileobj.html">ファイル</a>を検索します。
+*   **getFile**: 作成または、ファイルを検索します。
 
 *   **removeRecursively**： ディレクトリとそのすべての内容を削除します。
 
@@ -74,30 +74,30 @@ license: >
 
 ## getMetadata
 
-ディレクトリに関する<a href="../metadata/metadata.html">メタデータ</a>をご覧ください。
+ディレクトリに関するメタデータをご覧ください。
 
 **パラメーター:**
 
 *   **successCallback**: が実行するコールバック関数を `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: コールバック関数を取得するときにエラーが発生した場合の実行を `Metadata` 。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: コールバック関数を取得するときにエラーが発生した場合の実行を `Metadata` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
-    success(metadata) 関数 {console.log ("最終更新日時:"+ metadata.modificationTime);}関数 fail(error) {alert(error.code);}//このエントリ entry.getMetadata (成功、失敗）; の<a href="../metadata/metadata.html">メタデータ</a> オブジェクトをリクエスト
+    success(metadata) 関数 {console.log ("最終更新日時:"+ metadata.modificationTime);}関数 fail(error) {alert(error.code);}//このエントリ entry.getMetadata (成功、失敗）; のメタデータ オブジェクトをリクエスト
     
 
 ## setMetadata
 
-ディレクトリの拡張属性、または<a href="../metadata/metadata.html">メタデータ</a>を設定します。*現在 iOS でのみ動作します*。
+ディレクトリの拡張属性、またはメタデータを設定します。*現在 iOS でのみ動作します*。
 
 **パラメーター:**
 
-*   **successCallback**: <a href="../metadata/metadata.html">メタデータ</a>の設定が成功したときに実行されるコールバック。*(機能)*
+*   **successCallback**: メタデータの設定が成功したときに実行されるコールバック。*(機能)*
 
-*   **解り**: <a href="../metadata/metadata.html">メタデータ</a>を設定するが失敗したときに実行されるコールバック。*(機能)*
+*   **解り**: メタデータを設定するが失敗したときに実行されるコールバック。*(機能)*
 
-*   **metadataObject**: <a href="../metadata/metadata.html">メタデータ</a>のキーと値を格納しているオブジェクト。*(オブジェクト)*
+*   **metadataObject**: メタデータのキーと値を格納しているオブジェクト。*(オブジェクト)*
 
 **簡単な例**
 
@@ -145,21 +145,21 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## [moveto]
 
-<a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリを移動します。アプリしようとすると、エラーが発生します。
+ファイル システム上の別の場所にディレクトリを移動します。アプリしようとすると、エラーが発生します。
 
 *   任意の深さでそれ自体の内部または任意の子にディレクトリを移動します。
 
 *   その現在のディレクトリとは異なる名前を指定しない場合、親にディレクトリを移動します。
 
-*   <a href="../fileobj/fileobj.html">ファイル</a>によって占められるパスにディレクトリを移動します。
+*   ファイルによって占められるパスにディレクトリを移動します。
 
 *   ディレクトリが空でないディレクトリによって占められるパスに移動します。
 
@@ -173,7 +173,7 @@ license: >
 
 *   **successCallback**: コールバックで実行することを `DirectoryEntry` の新しいディレクトリ オブジェクト。*(機能)*
 
-*   **解り**: ディレクトリを移動するしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ディレクトリを移動するしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -198,7 +198,7 @@ license: >
 
 ## copyTo
 
-<a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所にディレクトリをコピーします。アプリしようとすると、エラーが発生します。
+ファイル システム上の別の場所にディレクトリをコピーします。アプリしようとすると、エラーが発生します。
 
 *   任意の深さでそれ自体の内部のディレクトリをコピーします。
 
@@ -214,7 +214,7 @@ license: >
 
 *   **successCallback**: コールバックで実行することを `DirectoryEntry` の新しいディレクトリ オブジェクト。*(機能)*
 
-*   **解り**: 基になるディレクトリをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: 基になるディレクトリをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -254,13 +254,13 @@ license: >
 
 *   空でないディレクトリを削除します。
 
-*   <a href="../fileobj/fileobj.html">ファイル</a>システムのルート ディレクトリを削除します。
+*   ファイルシステムのルート ディレクトリを削除します。
 
 **パラメーター:**
 
 *   **successCallback**: ディレクトリが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: ディレクトリを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ディレクトリを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -275,7 +275,7 @@ license: >
 
 *   **successCallback**： ディレクトリの親を渡されるコールバック `DirectoryEntry` 。*(機能)*
 
-*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。 *(機能)*
+*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
 
 **簡単な例**
 
@@ -293,7 +293,7 @@ license: >
 
 ## createReader
 
-ディレクトリ内のエントリを読み取る新しい <a href="../directoryreader/directoryreader.html">DirectoryReader</a> を作成します。
+ディレクトリ内のエントリを読み取る新しい DirectoryReader を作成します。
 
 **簡単な例**
 
@@ -311,11 +311,11 @@ license: >
 
 *   **パス**: ルックアップまたは作成するディレクトリへのパス。これからの相対パスまたは絶対パス `DirectoryEntry` 。*（，）*
 
-*   **オプション**: ディレクトリが存在しない場合に作成するかどうかを指定するオプション。*(<a href="../flags/flags.html">フラグ</a>)*
+*   **オプション**: ディレクトリが存在しない場合に作成するかどうかを指定するオプション。*(フラグ)*
 
 *   **successCallback**： で実行するコールバックを `DirectoryEntry` オブジェクト。*(機能)*
 
-*   **解り**: 作成または、ディレクトリを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: 作成または、ディレクトリを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -324,36 +324,36 @@ license: >
 
 ## getFile
 
-作成または、<a href="../fileobj/fileobj.html">ファイル</a>を検索します。アプリしようとすると、エラーが発生します。
+作成または、ファイルを検索します。アプリしようとすると、エラーが発生します。
 
-*   そのすぐ上の親がまだ存在しない<a href="../fileobj/fileobj.html">ファイル</a>を作成します。
+*   そのすぐ上の親がまだ存在しないファイルを作成します。
 
 **パラメーター:**
 
-*   **パス**: ルックアップまたは作成する<a href="../fileobj/fileobj.html">ファイル</a>へのパス。これからの相対パスまたは絶対パス `DirectoryEntry` 。*（，）*
+*   **パス**: ルックアップまたは作成するファイルへのパス。これからの相対パスまたは絶対パス `DirectoryEntry` 。*（，）*
 
-*   **オプション**: が存在しない場合、<a href="../fileobj/fileobj.html">ファイル</a>が作成されるかどうかを指定するオプション。*(<a href="../flags/flags.html">フラグ</a>)*
+*   **オプション**: が存在しない場合、ファイルが作成されるかどうかを指定するオプション。*(フラグ)*
 
-*   **successCallback**: 渡されたコールバックを `<a href="../fileentry/fileentry.html">FileEntry</a>` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: 作成または、<a href="../fileobj/fileobj.html">ファイル</a>を探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: 作成または、ファイルを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
-    success(fileEntry) 関数 {console.log （"<a href="../fileobj/fileobj.html">ファイル</a>名:"+ fileEntry.name);}fail(error) 機能 {警告 （"<a href="../fileobj/fileobj.html">ファイル</a>を取得できませんでした:"+ error.code);}//、既存の<a href="../fileobj/fileobj.html">ファイル</a>を取得または entry.getFile が存在しない場合に作成する ("newFile.txt"{作成: true の場合、排他的な: false}、成功、失敗);
+    success(fileEntry) 関数 {console.log （"ファイル名:"+ fileEntry.name);}fail(error) 機能 {警告 （"ファイルを取得できませんでした:"+ error.code);}//、既存のファイルを取得または entry.getFile が存在しない場合に作成する ("newFile.txt"{作成: true の場合、排他的な: false}、成功、失敗);
     
 
 ## removeRecursively
 
-ディレクトリとそのすべての内容を削除します。 (削除することはできません<a href="../fileobj/fileobj.html">ファイル</a>を含むディレクトリを削除しようとしています) など、エラーが発生した場合、ディレクトリの内容の一部を削除可能性があります。 アプリしようとすると、エラーが発生します。
+ディレクトリとそのすべての内容を削除します。 (削除することはできませんファイルを含むディレクトリを削除しようとしています) など、エラーが発生した場合、ディレクトリの内容の一部を削除可能性があります。 アプリしようとすると、エラーが発生します。
 
-*   <a href="../fileobj/fileobj.html">ファイル</a>システムのルート ディレクトリを削除します。
+*   ファイルシステムのルート ディレクトリを削除します。
 
 **パラメーター:**
 
 *   **successCallback**: の後に実行されるコールバック、 `DirectoryEntry` が削除されています。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: コールバックを削除しようとしたときにエラーが発生した場合に実行される、 `DirectoryEntry` 。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: コールバックを削除しようとしたときにエラーが発生した場合に実行される、 `DirectoryEntry` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -377,6 +377,6 @@ license: >
 
 > 解決策: 手動で、または再インストールする前にアプリケーションによって一時ディレクトリはきれいに確認してください。
 
-*   場合は、<a href="../../device/device.html">デバイス</a>は USB で<a href="../../connection/connection.html">接続</a>されました。
+*   場合は、デバイスは USB で接続されました。
 
-> ソリューション: 再実行して、<a href="../../device/device.html">デバイス</a>から USB ケーブルを外します。
+> ソリューション: 再実行して、デバイスから USB ケーブルを外します。

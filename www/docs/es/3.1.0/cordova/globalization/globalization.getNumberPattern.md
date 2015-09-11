@@ -45,7 +45,7 @@ Devuelve el patrón a la `successCallback` con un objeto de `properties` como un
 
 *   **agrupación**: el símbolo de la agrupación para analizar y dar formato. *(String)*
 
-Si hay un error obteniendo el patrón, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+Si hay un error obteniendo el patrón, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
 
 El parámetro `options` es opcional, y los valores por defecto son:
 
@@ -96,7 +96,7 @@ Resultados:
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

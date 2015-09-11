@@ -32,7 +32,7 @@ Die folgenden Befehle sollten aus innerhalb von Visual Studio gewiss geschehen, 
 
 1.  Entfernen von `cordova-2.8.0.js` aus des Projekts `www` Verzeichnis.
 
-2.  Fügen Sie `cordova.js` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nicht mehr eine Versionsnummer im <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>namen enthält.)
+2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die Datei nicht mehr eine Versionsnummer im Dateinamen enthält.)
 
 3.  Erstellen und testen!
 
@@ -42,6 +42,6 @@ Die folgenden Befehle sollten aus innerhalb von Visual Studio gewiss geschehen, 
 
 1.  Entfernen von `cordova-2.7.0.js` aus des Projekts `www` Verzeichnis.
 
-2.  Fügen Sie `cordova.js` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nicht mehr eine Versionsnummer im <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>namen enthält.)
+2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die Datei nicht mehr eine Versionsnummer im Dateinamen enthält.)
 
 3.  Erstellen und testen!

@@ -23,7 +23,7 @@ license: >
 > Démarrez l'application appareil photo et retourner des informations sur les fichiers de l'image capturée.
 
     navigator.device.capture.captureImage(
-        <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> captureSuccess, <a href="capture.html">Capture</a>ErrorCB captureError, [<a href="capture.html">Capture</a>ImageOptions options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Commence une opération asynchrone pour capturer des images à l'aide d'application caméra de l'appareil. L'opération permet aux utilisateurs de capturer plusieurs images en une seule séance.
 
-L'opération de capture soit termine lorsque l'utilisateur ferme l'application appareil photo, ou le nombre maximal d'enregistrements spécifié par `<a href="capture.html">Capture</a>AudioOptions.limit` est atteinte. Si aucun `limit` valeur est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur saisit une image unique.
+L'opération de capture soit termine lorsque l'utilisateur ferme l'application appareil photo, ou le nombre maximal d'enregistrements spécifié par `CaptureAudioOptions.limit` est atteinte. Si aucun `limit` valeur est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur saisit une image unique.
 
-Lorsque l'opération de capture terminée, elle appelle le `<a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a>` rappel avec un tableau de `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` objets décrivant chaque fichier de l'image capturée. Si l'utilisateur annule l'opération avant la capture d'une image, la `<a href="capture.html">Capture</a>ErrorCB` rappel s'exécute avec un `<a href="capture.html">Capture</a>Error` objet mettant en vedette un `<a href="capture.html">Capture</a>Error.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Lorsque l'opération de capture terminée, elle appelle le `CaptureCB` rappel avec un tableau de `MediaFile` objets décrivant chaque fichier de l'image capturée. Si l'utilisateur annule l'opération avant la capture d'une image, la `CaptureErrorCB` rappel s'exécute avec un `CaptureError` objet mettant en vedette un `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
 
 ## Plates-formes prises en charge
 
@@ -50,17 +50,17 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
 ## Petit exemple
 
     // capture callback
-    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    var captureSuccess = function(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // do something interesting with the file
         }
     };
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start image capture
@@ -72,7 +72,7 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="capture.html">Capture</a> Image</title>
+        <title>Capture Image</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
@@ -80,10 +80,10 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
     
         // Called when capture operation is finished
         //
-        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+        function captureSuccess(mediaFiles) {
             var i, len;
-            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+                uploadFile(mediaFiles[i]);
             }
         }
     
@@ -103,10 +103,10 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
         }
     
         // Upload files to server
-        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
-            var ft = new <a href="../../file/fileobj/fileobj.html">File</a>Transfer(),
-                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
-                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
+        function uploadFile(mediaFile) {
+            var ft = new FileTransfer(),
+                path = mediaFile.fullPath,
+                name = mediaFile.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -123,6 +123,6 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
         </script>
         </head>
         <body>
-            <button onclick="captureImage();"><a href="capture.html">Capture</a> Image</button> <br>
+            <button onclick="captureImage();">Capture Image</button> <br>
         </body>
     </html>

@@ -21,7 +21,7 @@ license: >
 geolocationSuccess
 ==================
 
-The user's callback function that is called when a geolocation position becomes available (when using with `geolocation.getCurrent<a href="../Position/position.html">Position</a>`), or when the position changes (when using with `geolocation.watch<a href="../Position/position.html">Position</a>`).
+The user's callback function that is called when a geolocation position becomes available (when using with `geolocation.getCurrentPosition`), or when the position changes (when using with `geolocation.watchPosition`).
 
     function(position) {
         // Do something
@@ -30,9 +30,9 @@ The user's callback function that is called when a geolocation position becomes 
 Parameters
 ----------
 
-- __position:__ The geolocation position returned by the device. (`<a href="../Position/position.html">Position</a>`)
+- __position:__ The geolocation position returned by the device. (`Position`)
 
-<a href="../../storage/storage.opendatabase.html">Example</a>
+Example
 -------
 
     function geolocationSuccess(position) {

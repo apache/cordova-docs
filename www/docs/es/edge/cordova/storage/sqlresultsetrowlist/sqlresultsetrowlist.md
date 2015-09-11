@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+# SQLResultSetRowList
 
-Una de las propiedades de la `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` que contiene las filas devueltas desde una consulta SQL.
+Una de las propiedades de la `SQLResultSet` que contiene las filas devueltas desde una consulta SQL.
 
 ## Propiedades
 
@@ -32,9 +32,9 @@ Una de las propiedades de la `<a href="../sqlresultset/sqlresultset.html">SQLRes
 
 ## Detalles
 
-El `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList` contiene los datos devueltos de una instrucción SQL `select`. El objeto contiene una propiedad de `longitud` que indica cuántas filas devuelve la instrucción `select`. Para obtener una fila de datos, llame al método de `item` para especificar un índice. Devuelve un JavaScript `Object` cuyas propiedades son las columnas de la base de datos que la instrucción `select` fue ejecutada contra.
+El `SQLResultSetRowList` contiene los datos devueltos de una instrucción SQL `select`. El objeto contiene una propiedad de `longitud` que indica cuántas filas devuelve la instrucción `select`. Para obtener una fila de datos, llame al método de `item` para especificar un índice. Devuelve un JavaScript `Object` cuyas propiedades son las columnas de la base de datos que la instrucción `select` fue ejecutada contra.
 
-## <a href="../../../config_ref/images.html">Plataformas soportadas</a>
+## Plataformas soportadas
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 o superior)
@@ -49,13 +49,13 @@ El `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList` contien
             Console.log ("table DEMO:" len + "filas encontradas.");
             para (var i = 0; < len; i ++) {console.log ("fila =" + i + "ID =" + results.rows.item (i) .id + "datos =" + results.rows.item(i).data);
             errorCB(err) función}} {alert ("Error al procesar SQL:" + err.code);
-        } var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
+        } var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
         DB.Transaction (queryDB, errorCB);
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< título > almacenamiento ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / espera para que las bibliotecas del dispositivo API cargar / / document.addEventListener ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+    <!DOCTYPE html >< html >< cabeza >< título > almacenamiento ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / espera para que las bibliotecas del dispositivo API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
     
         / / Rellenar la base de datos / / function populateDB(tx) {tx.executeSql ('DROP TABLE IF EXISTS DEMO');
             tx.executeSql ('crear tabla si no existe DEMO (id único, data)');
@@ -66,8 +66,8 @@ El `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList` contien
             Console.log ("table DEMO:" len + "filas encontradas.");
             para (var i = 0; < len; i ++) {console.log ("fila =" + i + "ID =" + results.rows.item (i) .id + "datos =" + results.rows.item(i).data);
             }} / / Callback de error de transacción / / function errorCB(err) {console.log ("Error al procesar SQL:" + err.code);
-        } / / Callback éxito de transacción / / function successCB() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
+        } / / Callback éxito de transacción / / function successCB() {var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
             DB.Transaction (queryDB, errorCB);
-        } / / dispositivo APIs están disponibles / / function onDeviceReady() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Demo Córdova", 200000);
+        } / / dispositivo APIs están disponibles / / function onDeviceReady() {var db = window.openDatabase ("Database", "1.0", "Demo Córdova", 200000);
             DB.Transaction (populateDB, errorCB, successCB);
         } < /script >< / cabeza >< cuerpo >< h1 > ejemplo < / h1 >< p > base de datos < /p >< cuerpo / >< / html >

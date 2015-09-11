@@ -22,14 +22,14 @@ license: >
 
 Conseguir el actual rumbo de la brújula.
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## Descripción
 
 La brújula es un sensor que detecta la dirección o rumbo que el dispositivo está apuntado, normalmente desde la parte superior del dispositivo. Mide el rumbo en grados de 0 a 359.99, donde 0 es el norte.
 
-La información de rumbo de la brújula es devuelta mediante un objeto `CompassHeading`, utilizando la función de devolución de llamada `<a href="parameters/compassSuccess.html">compassSuccess</a>`.
+La información de rumbo de la brújula es devuelta mediante un objeto `CompassHeading`, utilizando la función de devolución de llamada `compassSuccess`.
 
 ## Plataformas soportadas
 
@@ -47,7 +47,7 @@ La información de rumbo de la brújula es devuelta mediante un objeto `CompassH
     };
     
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ La información de rumbo de la brújula es devuelta mediante un objeto `CompassH
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ La información de rumbo de la brújula es devuelta mediante un objeto `CompassH
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

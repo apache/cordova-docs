@@ -47,14 +47,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="splashscreen.html">Splashscreen</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Splashscreen Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
       </body>
     </html>
     
 
 ## iOS 특질
 
-`config.xml`<a href="../file/fileobj/fileobj.html">파일</a>의 `AutoHideSplashScreen` 설정을 해야 합니다 `false` . 2 초 동안 시작 화면을 숨기고 지연에 다음과 같이 타이머 추가 `<a href="../events/events.deviceready.html">deviceready</a>` <a href="../events/events.html">이벤트</a> 처리기:
+`config.xml`파일의 `AutoHideSplashScreen` 설정을 해야 합니다 `false` . 2 초 동안 시작 화면을 숨기고 지연에 다음과 같이 타이머 추가 `deviceready` 이벤트 처리기:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

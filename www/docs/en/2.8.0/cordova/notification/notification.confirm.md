@@ -53,7 +53,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 	// process the confirmation dialog result
@@ -63,7 +63,7 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
     // Show a custom confirmation dialog
     //
-    function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
+    function showConfirm() {
         navigator.notification.confirm(
 	        'You are the winner!',  // message
 			onConfirm,				// callback to invoke with index of button pressed
@@ -72,24 +72,24 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         );
     }
         
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
     
@@ -100,7 +100,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         // Show a custom confirmation dialog
         //
-        function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
+        function showConfirm() {
             navigator.notification.confirm(
 		        'You are the winner!',  // message
 				onConfirm,				// callback to invoke with index of button pressed
@@ -112,7 +112,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Confirm(); return false;">Show Confirm</a></p>
+        <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
       </body>
     </html>
 

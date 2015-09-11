@@ -36,7 +36,7 @@ license: >
 
 ## Подробная информация
 
-`FileTransfer`Объект предоставляет способ для загрузки файлов на удаленный сервер с помощью нескольких частей запроса POST HTTP. Поддерживаются протоколы HTTP и HTTPS. Необязательные параметры можно указать путем передачи `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` объектов для `upload()` метода. При успешной отправке `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` объект передается в метод обратного вызова успех. Если возникает ошибка, `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` объект передается в метод обратного вызова ошибки. Это также возможно (только на iOS и Android), чтобы загрузить файл с удаленного сервера и сохранить его на устройстве.
+`FileTransfer`Объект предоставляет способ для загрузки файлов на удаленный сервер с помощью нескольких частей запроса POST HTTP. Поддерживаются протоколы HTTP и HTTPS. Необязательные параметры можно указать путем передачи `FileUploadOptions` объектов для `upload()` метода. При успешной отправке `FileUploadResult` объект передается в метод обратного вызова успех. Если возникает ошибка, `FileTransferError` объект передается в метод обратного вызова ошибки. Это также возможно (только на iOS и Android), чтобы загрузить файл с удаленного сервера и сохранить его на устройстве.
 
 ## Поддерживаемые платформы
 
@@ -56,7 +56,7 @@ license: >
 
 *   **successCallback**: обратного вызова, передаваемого `Metadata` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется в случае получения ошибки `Metadata` . Вызываемый с `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется в случае получения ошибки `Metadata` . Вызываемый с `FileTransferError` объект. *(Функция)*
 
 *   **опции**: необязательные параметры, такие как имя файла и тип MIME.
 
@@ -78,7 +78,7 @@ license: >
         console.log("upload error target " + error.target);
     }
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ license: >
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ license: >
             }
     
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ license: >
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ license: >
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -202,9 +202,9 @@ license: >
 
 *   **Цель**: полный путь к файлу на устройстве.
 
-*   **successCallback**: обратного вызова, передаваемого `<a href="../fileentry/fileentry.html">FileEntry</a>` объект. *(Функция)*
+*   **successCallback**: обратного вызова, передаваемого `FileEntry` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `FileTransferError` объект. *(Функция)*
 
 *   **trustAllHosts**: необязательный параметр, по умолчанию равен `false` . Если значение `true` , то он будет принимать все сертификаты безопасности. Это полезно, как Android отвергает самостоятельной подписанные сертификаты. Не рекомендуется для использования в производстве. Поддерживается на Android и iOS. *(логическое значение)*
 
@@ -224,7 +224,7 @@ license: >
 
 ## прервать
 
-Прерывает передачу в прогресс. Onerror обратного вызова передается объект <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>, который имеет код ошибки <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR.
+Прерывает передачу в прогресс. Onerror обратного вызова передается объект FileTransferError, который имеет код ошибки FileTransferError.ABORT_ERR.
 
 **Поддерживаемые платформы**
 
@@ -235,11 +235,11 @@ license: >
 
     // !! Предполагается переменная fileURI содержит допустимый URI в текстовый файл на устройство победить var = function(r) {console.log («не должен вызываться.");}
     
-    Сбой var = function(error) {/ / error.code == <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR оповещения («произошла ошибка: код =» + error.code);
+    Сбой var = function(error) {/ / error.code == FileTransferError.ABORT_ERR оповещения («произошла ошибка: код =» + error.code);
         Console.log («источник ошибки загрузки» + error.source);
         Console.log («загрузить ошибка цель» + error.target);}
     
-    Параметры var = новый <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    Параметры var = новый FileUploadOptions();
     options.fileKey="file»;
     options.fileName="myphoto.jpg»;
     options.mimeType="image/jpeg»;

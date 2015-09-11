@@ -18,18 +18,18 @@ license: >
     under the License.
 ---
 
-<a href="media.stop.html">media.stop</a>Record
+media.stopRecord
 ================
 
 オーディオファイルの録音を停止します。
 
-    <a href="media.stop.html">media.stop</a>Record();
+    media.stopRecord();
 
 
 概要
 -----------
 
-`<a href="media.stop.html">media.stop</a>Record` 関数はオーディオファイルの録音を停止させる同期関数です。
+`media.stopRecord` 関数はオーディオファイルの録音を停止させる同期関数です。
 
 サポートされているプラットフォーム
 -------------------
@@ -39,14 +39,14 @@ license: >
 - iOS
 - Windows Phone 7 (Mango)
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // オーディオの録音
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new <a href="media.html">Media</a>(src,
+        var mediaRec = new Media(src,
             // 呼び出し成功
             function() {
                 console.log("recordAudio():Audio Success");
@@ -67,26 +67,26 @@ license: >
     }
 
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // オーディオの録音
         //
         function recordAudio() {
             var src = "myrecording.mp3";
-            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
+            var mediaRec = new Media(src, onSuccess, onError);
 
             // オーディオの録音
             mediaRec.startRecord();
@@ -95,7 +95,7 @@ license: >
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
+                setAudioPosition(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -105,7 +105,7 @@ license: >
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             recordAudio();
         }
 
@@ -124,7 +124,7 @@ license: >
 
         // 再生位置をセット
         //
-        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+        function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
 

@@ -47,7 +47,7 @@ En la mayoría de los casos, no existen previamente determinados valores para un
 ## Ejemplo rápido
 
         // create a new contact
-        var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+        var contact = navigator.contacts.create();
     
         // store contact phone numbers in ContactField[]
         var phoneNumbers = [];
@@ -65,21 +65,21 @@ En la mayoría de los casos, no existen previamente determinados valores para un
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
     
         function onDeviceReady() {
             // create a new contact
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
     
             // store contact phone numbers in ContactField[]
             var phoneNumbers = [];
@@ -92,10 +92,10 @@ En la mayoría de los casos, no existen previamente determinados valores para un
             contact.save();
     
             // search contacts, returning display name and phone numbers
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter = "";
             filter = ["displayName", "phoneNumbers"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,14 +113,14 @@ En la mayoría de los casos, no existen previamente determinados valores para un
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

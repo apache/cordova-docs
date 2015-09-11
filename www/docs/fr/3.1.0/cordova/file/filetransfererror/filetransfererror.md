@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>TransferError
+# FileTransferError
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>TransferError` est passé à une callback d'erreur lorsqu'une erreur survient.
+Un objet `FileTransferError` est passé à une callback d'erreur lorsqu'une erreur survient.
 
 ## Propriétés
 
@@ -34,11 +34,11 @@ Un objet `<a href="../fileobj/fileobj.html">File</a>TransferError` est passé à
 
 ## Constantes
 
-*   `<a href="../fileobj/fileobj.html">File</a>TransferError.FILE_NOT_FOUND_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>TransferError.INVALID_URL_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>TransferError.CONNECTION_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>TransferError.ABORT_ERR`
+*   `FileTransferError.FILE_NOT_FOUND_ERR`
+*   `FileTransferError.INVALID_URL_ERR`
+*   `FileTransferError.CONNECTION_ERR`
+*   `FileTransferError.ABORT_ERR`
 
 ## Description
 
-L'objet `<a href="../fileobj/fileobj.html">File</a>TransferError` est passé à la callback d'erreur si une erreur se produit lors de l'envoi ou la réception d'un fichier.
+L'objet `FileTransferError` est passé à la callback d'erreur si une erreur se produit lors de l'envoi ou la réception d'un fichier.

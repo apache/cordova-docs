@@ -18,18 +18,18 @@ license: >
     under the License.
 ---
 
-# accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
+# accelerometer.getCurrentAcceleration
 
 Возвращает текущее ускорение вдоль осей *x*, *y* и *z*.
 
-    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## Описание
 
 Акселерометр это датчик движения, который отслеживает изменение (*delta*) в движении по отношению к текущей ориентации устройства, в трех измерениях вдоль осей *x*, *y* и *z*.
 
-Эти значения ускорения возвращается функций обратного вызова `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>`.
+Эти значения ускорения возвращается функций обратного вызова `accelerometerSuccess`.
 
 ## Поддерживаемые платформы
 
@@ -43,9 +43,9 @@ license: >
 ## Краткий пример
 
     function onSuccess(acceleration) {
-        alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };
     
@@ -53,7 +53,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
     
 
 ## Развернутый пример
@@ -61,27 +61,27 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
-            alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-                  '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-                  '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+            alert('Acceleration X: ' + acceleration.x + '\n' +
+                  'Acceleration Y: ' + acceleration.y + '\n' +
+                  'Acceleration Z: ' + acceleration.z + '\n' +
                   'Timestamp: '      + acceleration.timestamp + '\n');
         }
     
@@ -94,8 +94,8 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
-        <p>getCurrent<a href="acceleration/acceleration.html">Acceleration</a></p>
+        <h1>Example</h1>
+        <p>getCurrentAcceleration</p>
       </body>
     </html>
     
@@ -106,4 +106,4 @@ license: >
 
 *   Вы должны самостоятельно отслеживать изменение ускорение и считывать данные в учетом интервалов времени.
 
-*   Таким образом функция `getCurrent<a href="acceleration/acceleration.html">Acceleration</a>` возвращает последнее значение, полученное из вызова `watch<a href="accelerometer.html">Accelerometer</a>`.
+*   Таким образом функция `getCurrentAcceleration` возвращает последнее значение, полученное из вызова `watchAccelerometer`.

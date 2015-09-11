@@ -20,16 +20,16 @@ license: >
 
 # InAppBrowser
 
-> `InAppBrowser`はときに表示する web ブラウザーのビューを呼び出す `<a href="window.open.html">window.open</a>()` 、または時として形成されたリンクを開く`<a target="_blank">`.
+> `InAppBrowser`はときに表示する web ブラウザーのビューを呼び出す `window.open()` 、または時として形成されたリンクを開く`<a target="_blank">`.
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
 **注：**InAppBrowser ウィンドウは標準的な web ブラウザーのように動作し、コルドバ Api にアクセスできません。
 
 ## 説明
 
-呼び出しから返されるオブジェクト`<a href="window.open.html">window.open</a>`.
+呼び出しから返されるオブジェクト`window.open`.
 
 ## メソッド
 
@@ -42,7 +42,7 @@ license: >
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.inappbrowser
         $ cordova plugin ls
@@ -71,25 +71,25 @@ license: >
         <feature name="InAppBrowser" />
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
 
 # addEventListener
 
-> <a href="../events/events.html">イベント</a>のリスナーを追加します、`InAppBrowser`.
+> イベントのリスナーを追加します、`InAppBrowser`.
 
     ref.addEventListener(eventname, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ*(InAppBrowser)*
 
-*   **eventname**: *(文字列)*をリッスンする<a href="../events/events.html">イベント</a>
+*   **eventname**: *(文字列)*をリッスンするイベント
     
-    *   ****： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` の URL の読み込みが開始します。
-    *   **loadstop**： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` URL の読み込みが完了します。
-    *   **loaderror**： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` URL の読み込みでエラーが発生します。
-    *   **終了**: <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` ウィンドウが閉じられます。
+    *   ****： イベントが発生するとき、 `InAppBrowser` の URL の読み込みが開始します。
+    *   **loadstop**： イベントが発生するとき、 `InAppBrowser` URL の読み込みが完了します。
+    *   **loaderror**： イベントが発生するとき、 `InAppBrowser` URL の読み込みでエラーが発生します。
+    *   **終了**: イベントが発生するとき、 `InAppBrowser` ウィンドウが閉じられます。
 
-*   **コールバック**: <a href="../events/events.html">イベント</a>が発生したときに実行される関数。関数に渡されますが、 `InAppBrowserEvent` オブジェクトをパラメーターとして。
+*   **コールバック**: イベントが発生したときに実行される関数。関数に渡されますが、 `InAppBrowserEvent` オブジェクトをパラメーターとして。
 
 ## サポートされているプラットフォーム
 
@@ -100,7 +100,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
@@ -109,19 +109,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.addEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.addEventListener Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
              ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
              ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
              ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
@@ -137,21 +137,21 @@ license: >
 
 # removeEventListener
 
-> <a href="../events/events.html">イベント</a>のリスナーを削除します、`InAppBrowser`.
+> イベントのリスナーを削除します、`InAppBrowser`.
 
     ref.removeEventListener(eventname, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ。*(InAppBrowser)*
 
-*   **eventname**: <a href="../events/events.html">イベント</a>のリッスンを停止します。*(文字列)*
+*   **eventname**: イベントのリッスンを停止します。*(文字列)*
     
-    *   ****： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` の URL の読み込みが開始します。
-    *   **loadstop**： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` URL の読み込みが完了します。
-    *   **loaderror**： <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` URL の読み込みエラーが発生します。
-    *   **終了**: <a href="../events/events.html">イベント</a>が発生するとき、 `InAppBrowser` ウィンドウが閉じられます。
+    *   ****： イベントが発生するとき、 `InAppBrowser` の URL の読み込みが開始します。
+    *   **loadstop**： イベントが発生するとき、 `InAppBrowser` URL の読み込みが完了します。
+    *   **loaderror**： イベントが発生するとき、 `InAppBrowser` URL の読み込みエラーが発生します。
+    *   **終了**: イベントが発生するとき、 `InAppBrowser` ウィンドウが閉じられます。
 
-*   **コールバック**: <a href="../events/events.html">イベント</a>が発生するときに実行する関数。関数に渡されますが、 `InAppBrowserEvent` オブジェクト。
+*   **コールバック**: イベントが発生するときに実行する関数。関数に渡されますが、 `InAppBrowserEvent` オブジェクト。
 
 ## サポートされているプラットフォーム
 
@@ -162,7 +162,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
@@ -173,14 +173,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.removeEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.removeEventListener Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -208,7 +208,7 @@ license: >
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
              iabRef.removeEventListener('loaderror', iabLoadError);
@@ -240,7 +240,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
     
 
@@ -249,19 +249,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.close <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.close Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
              // close InAppBrowser after 5 seconds
              setTimeout(function() {
                  ref.close();
@@ -292,7 +292,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
     ref.show();
     
 
@@ -301,19 +301,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.show <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.show Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Cordova is ready
         //
         function onDeviceReady() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
              ref.addEventListener('loadstop', function(event) {
                  alert('background window loaded'); 
              });
@@ -341,7 +341,7 @@ license: >
 
 *   **injectDetails**： 詳細を実行するスクリプトのいずれかを指定する、 `file` または `code` キー。*(オブジェクト)*
     
-    *   **<a href="../file/fileobj/fileobj.html">ファイル</a>**： スクリプトの URL を注入します。
+    *   **ファイル**： スクリプトの URL を注入します。
     *   **コード**: スクリプトのテキストを挿入します。
 
 *   **コールバック**: JavaScript コードを注入した後に実行される関数。
@@ -356,7 +356,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.executeSript({file: "myscript.js"});
     });
@@ -367,14 +367,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.executeScript <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.executeScript Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -397,7 +397,7 @@ license: >
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', replaceHeaderImage);
              iabRef.addEventListener('exit', iabClose);
         }
@@ -420,7 +420,7 @@ license: >
 
 *   **injectDetails**： 詳細を実行するスクリプトのいずれかを指定する、 `file` または `code` キー。*(オブジェクト)*
     
-    *   **<a href="../file/fileobj/fileobj.html">ファイル</a>**: 注入するスタイル シートの URL。
+    *   **ファイル**: 注入するスタイル シートの URL。
     *   **コード**: 注入するスタイル シートのテキスト。
 
 *   **コールバック**: CSS の注入後に実行される関数。
@@ -433,7 +433,7 @@ license: >
 
 ## 簡単な例
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.insertCSS({file: "mystyles.css"});
     });
@@ -444,14 +444,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.insertCSS <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>InAppBrowser.insertCSS Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -474,7 +474,7 @@ license: >
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', changeBackgroundColor);
              iabRef.addEventListener('exit', iabClose);
         }

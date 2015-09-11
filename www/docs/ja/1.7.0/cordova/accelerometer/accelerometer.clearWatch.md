@@ -25,7 +25,7 @@ accelerometer.clearWatch
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: `accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>`  によって返される ID。
+- __watchID__: `accelerometer.watchAcceleration`  によって返される ID。
 
 サポートされているプラットフォーム
 -------------------
@@ -36,36 +36,36 @@ accelerometer.clearWatch
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
     // ... 後に続く ...
 
     navigator.accelerometer.clearWatch(watchID);
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>加速度センサーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>加速度センサーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // watch ID が現在の `watch<a href="acceleration/acceleration.html">Acceleration</a>` を参照
+        // watch ID が現在の `watchAcceleration` を参照
         var watchID = null;
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             startWatch();
         }
 
@@ -76,7 +76,7 @@ accelerometer.clearWatch
             // 加速度情報を3秒ごとに更新
             var options = { frequency: 3000 };
 
-            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
 
         // 加速度情報の監視を停止

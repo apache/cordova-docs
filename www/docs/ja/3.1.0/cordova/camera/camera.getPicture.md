@@ -20,22 +20,22 @@ license: >
 
 # camera.getPicture
 
-<a href="camera.html">カメラ</a>を使用して写真を取るか、<a href="../device/device.html">デバイス</a>の画像ギャラリーから写真を取得します。 イメージは base64 エンコードとして成功時のコールバックに渡される `String` 、またはイメージ <a href="../file/fileobj/fileobj.html">ファイル</a>の URI。 メソッド自体を返します、 `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` オブジェクト <a href="../file/fileobj/fileobj.html">ファイル</a>選択ポップ オーバーの<a href="../geolocation/Position/position.html">位置</a>を変更するために使用することができます。
+カメラを使用して写真を取るか、デバイスの画像ギャラリーから写真を取得します。 イメージは base64 エンコードとして成功時のコールバックに渡される `String` 、またはイメージ ファイルの URI。 メソッド自体を返します、 `CameraPopoverHandle` オブジェクト ファイル選択ポップ オーバーの位置を変更するために使用することができます。
 
-    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
+    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
 
 ## 説明
 
-`camera.getPicture`関数は<a href="../device/device.html">デバイス</a>のデフォルトの<a href="camera.html">カメラ</a> アプリケーションの写真をスナップするユーザーことができますを開きます。 既定では、この現象が発生したときに `Camera.sourceType` に等しい `Camera.PictureSourceType.CAMERA` 。 ユーザーは写真をスナップ、<a href="camera.html">カメラ</a> アプリケーションを<a href="../inappbrowser/inappbrowser.html">閉じる</a>し、アプリケーションが復元されます。
+`camera.getPicture`関数はデバイスのデフォルトのカメラ アプリケーションの写真をスナップするユーザーことができますを開きます。 既定では、この現象が発生したときに `Camera.sourceType` に等しい `Camera.PictureSourceType.CAMERA` 。 ユーザーは写真をスナップ、カメラ アプリケーションを閉じるし、アプリケーションが復元されます。
 
-場合 `Camera.sourceType` は、 `Camera.PictureSourceType.PHOTOLIBRARY` または `Camera.PictureSourceType.SAVEDPHOTOALBUM` 、その後、ダイアログが表示されますユーザーを既存のイメージを選択することができます。 `camera.getPicture`関数を返す、 `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` オブジェクトは、たとえば、イメージの選択ダイアログには、<a href="../device/device.html">デバイス</a>の向きが変更されたときの<a href="../geolocation/Position/position.html">位置</a>を変更するために使用することができます。
+場合 `Camera.sourceType` は、 `Camera.PictureSourceType.PHOTOLIBRARY` または `Camera.PictureSourceType.SAVEDPHOTOALBUM` 、その後、ダイアログが表示されますユーザーを既存のイメージを選択することができます。 `camera.getPicture`関数を返す、 `CameraPopoverHandle` オブジェクトは、たとえば、イメージの選択ダイアログには、デバイスの向きが変更されたときの位置を変更するために使用することができます。
 
-戻り値に送信されます、 `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` の指定によって、次の形式のいずれかのコールバック関数 `<a href="parameter/cameraOptions.html">cameraOptions</a>` :
+戻り値に送信されます、 `cameraSuccess` の指定によって、次の形式のいずれかのコールバック関数 `cameraOptions` :
 
 *   A `String` 写真の base64 でエンコードされたイメージを含んでいます。
 
-*   A `String` (既定値) のローカル記憶域上のイメージ <a href="../file/fileobj/fileobj.html">ファイル</a>の場所を表します。
+*   A `String` (既定値) のローカル記憶域上のイメージ ファイルの場所を表します。
 
 自由に変更、エンコードされたイメージ、または URI などを行うことができます。
 
@@ -47,7 +47,7 @@ license: >
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**注：**新しい装置で写真の解像度はかなり良いです。 <a href="../device/device.html">デバイス</a>のギャラリーから選択した写真が下方の品質に縮小しない場合でも、 `quality` パラメーターを指定します。 一般的なメモリの問題を回避する設定 `Camera.destinationType` を `FILE_URI` よりもむしろ`DATA_URL`.
+**注：**新しい装置で写真の解像度はかなり良いです。 デバイスのギャラリーから選択した写真が下方の品質に縮小しない場合でも、 `quality` パラメーターを指定します。 一般的なメモリの問題を回避する設定 `Camera.destinationType` を `FILE_URI` よりもむしろ`DATA_URL`.
 
 ## サポートされているプラットフォーム
 
@@ -60,7 +60,7 @@ license: >
 
 ## Android の癖
 
-アンドロイド、イメージを<a href="../media/capture/capture.html">キャプチャ</a>する<a href="../device/device.html">デバイス</a>上で<a href="camera.html">カメラ</a>のアクティビティを開始する意図を使用し、メモリの少ない携帯電話、コルドバ活動が殺されるかもしれない。 このシナリオでは、コルドバの活動が復元されるとき、画像が表示されません。
+アンドロイド、イメージをキャプチャするデバイス上でカメラのアクティビティを開始する意図を使用し、メモリの少ない携帯電話、コルドバ活動が殺されるかもしれない。 このシナリオでは、コルドバの活動が復元されるとき、画像が表示されません。
 
 ## iOS の癖
 
@@ -71,7 +71,7 @@ JavaScript を含む `alert()` 関数コールバックのいずれかの問題�
 
 ## Windows Phone 7 の癖
 
-Zune を介してお使いの<a href="../device/device.html">デバイス</a>が<a href="../connection/connection.html">接続</a>されているネイティブの<a href="camera.html">カメラ</a> アプリケーションの起動動作しませんし、エラー コールバックをトリガーします。
+Zune を介してお使いのデバイスが接続されているネイティブのカメラ アプリケーションの起動動作しませんし、エラー コールバックをトリガーします。
 
 ## Tizen の癖
 
@@ -95,7 +95,7 @@ Tizen のみをサポートしている、 `destinationType` の `Camera.Destina
     }
     
 
-写真を撮るし、イメージの<a href="../file/fileobj/fileobj.html">ファイル</a>の場所を取得します。
+写真を撮るし、イメージのファイルの場所を取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });
@@ -125,7 +125,7 @@ Tizen のみをサポートしている、 `destinationType` の `Camera.Destina
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
+        document.addEventListener("deviceready",onDeviceReady,false);
     
         // device APIs are available
         //

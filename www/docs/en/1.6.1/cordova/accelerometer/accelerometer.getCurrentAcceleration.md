@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
+accelerometer.getCurrentAcceleration
 ====================================
 
 Get the current acceleration along the x, y, and z axis.
 
-    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
 Description
 -----------
 
 The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-The acceleration is returned using the `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` callback function.
+The acceleration is returned using the `accelerometerSuccess` callback function.
 
 Supported Platforms
 -------------------
@@ -40,13 +40,13 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 (Mango)
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(acceleration) {
-        alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };
 
@@ -54,35 +54,35 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         alert('onError!');
     };
 
-    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
-            alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-                  '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-                  '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+            alert('Acceleration X: ' + acceleration.x + '\n' +
+                  'Acceleration Y: ' + acceleration.y + '\n' +
+                  'Acceleration Z: ' + acceleration.z + '\n' +
                   'Timestamp: '      + acceleration.timestamp + '\n');
         }
     
@@ -95,8 +95,8 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
-        <p>getCurrent<a href="acceleration/acceleration.html">Acceleration</a></p>
+        <h1>Example</h1>
+        <p>getCurrentAcceleration</p>
       </body>
     </html>
     
@@ -105,4 +105,4 @@ iPhone Quirks
 
 - iPhone doesn't have the concept of getting the current acceleration at any given point.
 - You must watch the acceleration and capture the data at given time intervals.
-- Thus, the `getCurrent<a href="acceleration/acceleration.html">Acceleration</a>` function will give you the last value reported from a Cordova `watch<a href="accelerometer.html">Accelerometer</a>` call.
+- Thus, the `getCurrentAcceleration` function will give you the last value reported from a Cordova `watchAccelerometer` call.

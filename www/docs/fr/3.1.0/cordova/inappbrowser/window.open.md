@@ -20,40 +20,40 @@ license: >
 
 # window.open
 
-Ouvre une URL dans une nouvelle instance de la classe `<a href="inappbrowser.html">InAppBrowser</a>`, une instance déjà existante ou dans le navigateur système.
+Ouvre une URL dans une nouvelle instance de la classe `InAppBrowser`, une instance déjà existante ou dans le navigateur système.
 
     var ref = window.open(url, target, options);
     
 
-*   **ref** : référence à la fenêtre `<a href="inappbrowser.html">InAppBrowser</a>`. *(<a href="inappbrowser.html">InAppBrowser</a>)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
 *   **url** : l'URL à charger *(String)*. À encoder au préalable via `encodeURI()` si celle-ci contient des caractères Unicode.
 
 *   **target** : la cible du chargement de l'URL, ce paramètre est optionnel, sa valeur par défaut est `_self`. *(String)*
     
-    *   `_self` : dirige le chargement vers la WebView Cordova si l'URL figure dans la liste blanche, sinon dans une fenêtre `<a href="inappbrowser.html">InAppBrowser</a>`.
-    *   `_blank` : dirige le chargement vers une fenêtre `<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_self` : dirige le chargement vers la WebView Cordova si l'URL figure dans la liste blanche, sinon dans une fenêtre `InAppBrowser`.
+    *   `_blank` : dirige le chargement vers une fenêtre `InAppBrowser`.
     *   `_system` : dirige le chargement vers le navigateur Web du système.
 
-*   **options** : permet de personnaliser la fenêtre `<a href="inappbrowser.html">InAppBrowser</a>`. Paramètre facultatif dont la valeur par défaut est `location=yes`. *(String)*
+*   **options** : permet de personnaliser la fenêtre `InAppBrowser`. Paramètre facultatif dont la valeur par défaut est `location=yes`. *(String)*
     
     La chaîne `options` ne doit contenir aucun caractère vide, chaque paire nom/valeur représentant une fonctionnalité doit être séparée de la précédente par une virgule. Les noms de fonctionnalités sont sensibles à la casse. Toutes les plates-formes prennent en charge la valeur ci-dessous :
     
-    *   **location** : régler à `yes` ou `no` afin d'afficher ou masquer la barre d'adresse de la fenêtre `<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   **location** : régler à `yes` ou `no` afin d'afficher ou masquer la barre d'adresse de la fenêtre `InAppBrowser`.
     ## Android uniquement
     
-    *   **<a href="inappbrowser.html">close</a>buttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". 
+    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". 
     *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
     *   **clearcache** : régler sur 'yes' pour que les cookies du navigateur soient effacés avant l'ouverture de la nouvelle fenêtre
     *   **clearsessioncache** : régler sur 'yes' afin que les cookies de session soient supprimés avant l'ouverture de la nouvelle fenêtre
     ## iOS uniquement
     
-    *   **<a href="inappbrowser.html">close</a>buttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". Dans le cas d'une application multilingue, vous devrez localiser cette valeur par vos propres moyens.
+    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". Dans le cas d'une application multilingue, vous devrez localiser cette valeur par vos propres moyens.
     *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
-    *   **toolbar** : régler sur 'yes' ou 'no' afin d'afficher ou masquer la barre d'outils de la fenêtre <a href="inappbrowser.html">InAppBrowser</a> ('yes' par défaut).
+    *   **toolbar** : régler sur 'yes' ou 'no' afin d'afficher ou masquer la barre d'outils de la fenêtre InAppBrowser ('yes' par défaut).
     *   **enableViewportScale** : selon si la valeur est `yes` ou `no`, une balise meta est injectée avec pour but de permettre ou empêcher l'utilisateur de zoomer dans le viewport (`no` par défaut).
     *   **mediaPlaybackRequiresUserAction** : selon si la valeur est `yes` ou `no`, la lecture automatique de contenus HTML5 audio ou vidéo (c'est à dire sans action préalable de l'utilisateur) est désactivée ou activée (`no` par défaut).
-    *   **allowInline<a href="../media/media.html">Media</a>Playback** : régler sur `yes` ou `no` pour permettre ou interdire la lecture de contenu HTML5 audio ou vidéo directement au sein du navigateur plutôt que dans une fenêtre de lecture spécifique à l'appareil. L'élément HTML `video` doit également comporter l'attribut `webkit-playsinline` (`no` par défaut)
+    *   **allowInlineMediaPlayback** : régler sur `yes` ou `no` pour permettre ou interdire la lecture de contenu HTML5 audio ou vidéo directement au sein du navigateur plutôt que dans une fenêtre de lecture spécifique à l'appareil. L'élément HTML `video` doit également comporter l'attribut `webkit-playsinline` (`no` par défaut)
     *   **keyboardDisplayRequiresUserAction** : régler sur `yes` ou `no` pour interdire ou autoriser l'ouverture du clavier lorsque des éléments de formulaire reçoivent le focus par l'intermédiaire d'un appel à la méthode JavaScript `focus()` (`yes` par défaut).
     *   **suppressesIncrementalRendering** : selon si la valeur est `yes` ou `no`, le rendu de la vue attendra ou non que tout nouveau contenu soit reçu (`no` par défaut).
     *   **presentationstyle** : régler sur `pagesheet`, `formsheet` ou `fullscreen` afin d'obtenir le [style de présentation][1] de fenêtre souhaité (`fullscreen` par défaut).
@@ -80,14 +80,14 @@ Ouvre une URL dans une nouvelle instance de la classe `<a href="inappbrowser.htm
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>window.open Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

@@ -21,7 +21,7 @@ license: >
 media.play
 ==========
 
-Starts or <a href="../events/events.resume.html">resume</a>s playing an audio file.
+Starts or resumes playing an audio file.
 
     media.play();
 
@@ -29,7 +29,7 @@ Starts or <a href="../events/events.resume.html">resume</a>s playing an audio fi
 Description
 -----------
 
-Function `media.play` is a synchronous function that starts or <a href="../events/events.resume.html">resume</a>s playing an audio file.
+Function `media.play` is a synchronous function that starts or resumes playing an audio file.
 
 Supported Platforms
 -------------------
@@ -41,14 +41,14 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Play audio
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // success callback
             function() {
                 console.log("playAudio():Audio Success");
@@ -63,25 +63,25 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
     }
 
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
         
             <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
             <script type="text/javascript" charset="utf-8">
         
             // Wait for Cordova to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         
             // Cordova is ready
             //
-            function on<a href="../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
         
@@ -94,8 +94,8 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             //
             function playAudio(src) {
             	if (my_media == null) {
-                	// Create <a href="media.html">Media</a> object from src
-                	my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                	// Create Media object from src
+                	my_media = new Media(src, onSuccess, onError);
             	} // else play current audio
                 // Play audio
                 my_media.play();
@@ -104,17 +104,17 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -123,9 +123,9 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
             // Pause audio
             // 
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
         
@@ -133,7 +133,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             // 
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -154,7 +154,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
             // Set audio position
             // 
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
         
@@ -162,7 +162,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>
@@ -180,20 +180,20 @@ iOS Quirk
  
     Pass in this option to the **play** method to specify the number of times you want the media file to play. e.g:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ numberOfLoops: 2 })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ numberOfLoops: 2 })
 
 - __playAudioWhenScreenIsLocked__
  
     Pass in this option to the **play** method to specify whether you want to play the audio of the media file when the screen is locked (this defaults to true if not set). If this is set to true, it will ignore the state of the hardware mute button. e.g:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ playAudioWhenScreenIsLocked : false })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ playAudioWhenScreenIsLocked : false })
 
 
 - __order of file search__
 
     When only a file name or simple path is provided, iOS will search in the www for the file and then in the application documents/tmp directory.
 
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("audio/beer.mp3")
-        my<a href="media.html">Media</a>.play()  // will first look for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        var myMedia = new Media("audio/beer.mp3")
+        myMedia.play()  // will first look for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

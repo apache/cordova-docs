@@ -122,7 +122,7 @@ Berite naprej, če želite uporabiti potek dela prek-plosčad pristop (CLI) za c
 
 ## Graditi App
 
-Privzeto je `cordova create` scenarij ustvari skeletnih spletni program, katerega domača stran je projekta `www/index.html` datoteke. Uredite ta program, pa hočeš, ampak vse inicializacijo mora biti naveden kot del je `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` rutine, sklicuje privzeti iz`www/js/index.js`.
+Privzeto je `cordova create` scenarij ustvari skeletnih spletni program, katerega domača stran je projekta `www/index.html` datoteke. Uredite ta program, pa hočeš, ampak vse inicializacijo mora biti naveden kot del je `deviceready` rutine, sklicuje privzeti iz`www/js/index.js`.
 
 Zaženite ukaz zgraditi iteratively projekta:
 
@@ -176,7 +176,7 @@ Preden zaženete ta ukaz, morate nastaviti napravo za testiranje, po postopkih, 
 
 Ko boste graditi in si ogledate nov projekt, ne naredi privzeti program, ki se pojavi zelo veliko. Spremenite app v marsičem zavzeti ugodnost od standardne spletne tehnologije, ampak za app za tesno komunikacijo z različnih funkcij naprave-ravni, morate dodati plugins, ki zagotavljajo dostop do jedra Cordova API.
 
-*Plugin* je malo add-on kodo, ki zagotavlja vmesnik za avtohtone komponente. Lahko oblikujete svoje plugin vmesnika, na primer pri načrtovanju hibridni app, ki meša Cordova spletni pogled z native komponent. (Glej Embedding spletni pogledi in <a href="../hybrid/plugins/index.html">Plugin razvoj vodnik</a> za podrobnosti.) Bolj pogosto, bi dodal plugin, da eden od osebe Cordova osnovne funkcije naprave ravni podroben sklic API. Seznam teh plugins, vključno z dodatnih plugins, ki jih Skupnosti, je mogoče najti na [plugins.cordova.io][4]. CLI lahko uporabite za iskanje plugins iz tega registra. Na primer, iskanje `bar` in `code` Ustvari posamezen razultat, ki ustreza tako pogoji kot case-insensitive podnizov:
+*Plugin* je malo add-on kodo, ki zagotavlja vmesnik za avtohtone komponente. Lahko oblikujete svoje plugin vmesnika, na primer pri načrtovanju hibridni app, ki meša Cordova spletni pogled z native komponent. (Glej Embedding spletni pogledi in Plugin razvoj vodnik za podrobnosti.) Bolj pogosto, bi dodal plugin, da eden od osebe Cordova osnovne funkcije naprave ravni podroben sklic API. Seznam teh plugins, vključno z dodatnih plugins, ki jih Skupnosti, je mogoče najti na [plugins.cordova.io][4]. CLI lahko uporabite za iskanje plugins iz tega registra. Na primer, iskanje `bar` in `code` Ustvari posamezen razultat, ki ustreza tako pogoji kot case-insensitive podnizov:
 
  [4]: http://plugins.cordova.io/
 
@@ -331,7 +331,7 @@ Namesto tega, najvišje ravni `merges` imenik ponuja prostor za določanje sreds
 
 Ko znova zgradite projekta, Android prevod značilnosti velikosti pisave po meri, medtem ko druge ostanejo nespremenjene.
 
-Uporabite lahko tudi `merges` dodati datoteke niso prisotni v izvirniku `www` imenik. Primer app lahko vključi grafike *prislon popek* v iOS vmesnik, shranjeni v `merges/ios/img/back_button.png` , medtem ko Android prevod lahko namesto kapitan `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` dogodkov iz ustreznih železnina popek.
+Uporabite lahko tudi `merges` dodati datoteke niso prisotni v izvirniku `www` imenik. Primer app lahko vključi grafike *prislon popek* v iOS vmesnik, shranjeni v `merges/ios/img/back_button.png` , medtem ko Android prevod lahko namesto kapitan `backbutton` dogodkov iz ustreznih železnina popek.
 
 ## Pomoč ukazov
 

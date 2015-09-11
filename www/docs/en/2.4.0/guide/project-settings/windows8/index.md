@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for Windows 8 
+Project Settings for Windows 8 
 ===================================
 

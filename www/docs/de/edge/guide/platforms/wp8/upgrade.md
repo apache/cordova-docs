@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="upgrading.html">Aktualisieren von Windows Phone</a> 8
+# Aktualisieren von Windows Phone 8
 
 Diese Anleitung zeigt, wie Windows Phone 8 Projekte, um ein upgrade von älteren Versionen von Cordova zu ändern. Einige dieser Anweisungen beziehen sich auf Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren. Der folgende Abschnitt zeigt wie von nicht-CLI und CLI Projekte aktualisiert.
 

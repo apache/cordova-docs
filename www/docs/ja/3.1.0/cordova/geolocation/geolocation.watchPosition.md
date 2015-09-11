@@ -20,28 +20,28 @@ license: >
 
 # geolocation.watchPosition
 
-<a href="../device/device.html">デバイス</a>の現在の<a href="Position/position.html">位置</a>への変更のための時計。
+デバイスの現在の位置への変更のための時計。
 
-    var watchId = navigator.geolocation.watchPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
-                                                      [<a href="parameters/geolocationError.html">geolocationError</a>],
-                                                      [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
+    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+                                                      [geolocationError],
+                                                      [geolocationOptions]);
     
 
 ## パラメーター
 
-*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: 現在の<a href="Position/position.html">位置</a>を渡されるコールバック。
+*   **geolocationSuccess**: 現在の位置を渡されるコールバック。
 
-*   **<a href="parameters/geolocationError.html">geolocationError</a>**: (省略可能) エラーが発生した場合に実行されるコールバック。
+*   **geolocationError**: (省略可能) エラーが発生した場合に実行されるコールバック。
 
-*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: (オプション) 地理<a href="Position/position.html">位置</a>情報のオプションです。
+*   **geolocationOptions**: (オプション) 地理位置情報のオプションです。
 
 ## 返します
 
-*   **文字列**: 時計の<a href="Position/position.html">位置</a>の間隔を参照する時計 id を返します。時計 id で使用する必要があります `<a href="geolocation.clearWatch.html">geolocation.clearWatch</a>` 停止<a href="Position/position.html">位置</a>の変化を監視します。
+*   **文字列**: 時計の位置の間隔を参照する時計 id を返します。時計 id で使用する必要があります `geolocation.clearWatch` 停止位置の変化を監視します。
 
 ## 説明
 
-`geolocation.watchPosition`非同期関数です。 <a href="Position/position.html">位置</a>の変更が検出された場合は、<a href="../device/device.html">デバイス</a>の現在<a href="Position/position.html">位置</a>を返します。 <a href="../device/device.html">デバイス</a>を新しい場所を取得するとき、 `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` コールバックを実行すると、 `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `<a href="parameters/geolocationError.html">geolocationError</a>` コールバックを実行すると、 `<a href="PositionError/positionError.html">PositionError</a>` オブジェクトをパラメーターとして。
+`geolocation.watchPosition`非同期関数です。 位置の変更が検出された場合は、デバイスの現在位置を返します。 デバイスを新しい場所を取得するとき、 `geolocationSuccess` コールバックを実行すると、 `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `geolocationError` コールバックを実行すると、 `PositionError` オブジェクトをパラメーターとして。
 
 ## サポートされているプラットフォーム
 
@@ -65,7 +65,7 @@ license: >
                             '<hr />'      + element.innerHTML;
     }
     
-    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+    // onError Callback receives a PositionError object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -82,14 +82,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -110,7 +110,7 @@ license: >
                                 '<hr />'      + element.innerHTML;
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

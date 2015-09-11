@@ -18,12 +18,12 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>ErrorCB
+CaptureErrorCB
 ==============
 
 > Invoked if an error occurs during a media capture operation.
 
-    function captureError( <a href="capture.html">Capture</a>Error error ) { ... };
+    function captureError( CaptureError error ) { ... };
 
 Description
 -----------
@@ -33,13 +33,13 @@ media capture operation. Failure scenarios include when the capture
 application is busy, a capture operation is already taking place, or
 the user cancels the operation before any media files are captured.
 
-This function executes with a `<a href="capture.html">Capture</a>Error` object containing an
+This function executes with a `CaptureError` object containing an
 appropriate error `code`.
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // capture error callback
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };

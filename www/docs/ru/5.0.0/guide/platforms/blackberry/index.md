@@ -22,8 +22,8 @@ license: >
 
 В этом руководстве показано, как настроить среду SDK для приложений для платформы ежевики до версии 10. Если вы хотите цели самой последней версии, смотрите в руководстве платформы BlackBerry 10. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   <a href="config.html">BlackBerry конфигурации</a>
-*   <a href="upgrading.html">Модернизация BlackBerry</a>
+*   BlackBerry конфигурации
+*   Модернизация BlackBerry
 *   Ежевика плагины
 *   Средства командной строки ежевики
 
@@ -162,7 +162,7 @@ Files\\BlackBerry\\Simulator`.
 
 *   [Ежевика WebWorks развития ловушек][15]
 
-*   [<a href="../../next/index.html">Лучшие практики</a> для упаковки приложений WebWorks][16]
+*   [Лучшие практики для упаковки приложений WebWorks][16]
 
  [15]: http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712
  [16]: https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html

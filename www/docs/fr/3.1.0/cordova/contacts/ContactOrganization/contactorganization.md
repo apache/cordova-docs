@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>Organization
+# ContactOrganization
 
-Contient les propriétés de l'entreprise de l'objet `<a href="../Contact/contact.html">Contact</a></code.></p>
+Contient les propriétés de l'entreprise de l'objet `Contact</code.></p>
 
 <h2>Propriétés</h2>
 
 <ul>
-<li><p><strong>pref</strong> : fixé à <code>true` si `<a href="../Contact/contact.html">Contact</a>Organization` contient la valeur préférée de l'utilisateur. *(booléen)*</li> 
+<li><p><strong>pref</strong> : fixé à <code>true` si `ContactOrganization` contient la valeur préférée de l'utilisateur. *(booléen)*</li> 
 
 *   **type** : une chaîne qui indique le type de champ, *home* par exemple. _(DOMString)
 
@@ -37,7 +37,7 @@ Contient les propriétés de l'entreprise de l'objet `<a href="../Contact/contac
 
 ## Détails
 
-L'objet `<a href="../Contact/contact.html">Contact</a>Organization` stocke des propriétés de l'entreprise d'un contact. Un objet `<a href="../Contact/contact.html">Contact</a>` contient un ou plusieurs objets `<a href="../Contact/contact.html">Contact</a>Organization` dans un tableau.
+L'objet `ContactOrganization` stocke des propriétés de l'entreprise d'un contact. Un objet `Contact` contient un ou plusieurs objets `ContactOrganization` dans un tableau.
 
 ## Plates-formes prises en charge
 
@@ -61,14 +61,14 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Organization` stocke des p
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## Exemple complet
@@ -76,22 +76,22 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Organization` stocke des p
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -110,15 +110,15 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Organization` stocke des p
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
     

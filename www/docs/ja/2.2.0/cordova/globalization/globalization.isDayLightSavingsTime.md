@@ -32,7 +32,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 
 引数の ``date`` パラメーターは ``Date`` 型である必要があります。
 
-もし日付の読み取り中にエラーが発生した場合、 errorCB コールバックが呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR です。
+もし日付の読み取り中にエラーが発生した場合、 errorCB コールバックが呼び出されます。このエラーに対するエラーコードは GlobalizationError.UNKNOWN\_ERROR です。
 
 サポートされているプラットフォーム
 -------------------
@@ -41,7 +41,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
 ブラウザーが DST が有効なタイムゾーンで、夏の場合、次のコードは "dst: true" といったような文字列をポップアップダイアログに表示します。
@@ -52,7 +52,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
       function () {alert('Error getting names\n');}
     );
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML>

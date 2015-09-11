@@ -46,8 +46,8 @@ as a parameter. That object contains the following properties:
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PATTERN\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
 The `options` parameter is optional, and default values are:
 
@@ -63,7 +63,7 @@ The `options.type` can be `decimal`, `percent`, or `currency`.
 - iOS
 - Windows Phone 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to the results that follow:
@@ -92,12 +92,12 @@ Results:
     decimal: .
     grouping: ,
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

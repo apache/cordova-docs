@@ -30,7 +30,7 @@ backbutton
 
 もしデフォルトの戻るボタンの挙動を上書きしたい場合は、 'backbutton' イベントにイベントリスナーを登録することができます。戻るボタンの挙動を上書きするために、他のメソッドを呼び出す必要はありません。ただ 'backbutton' イベントリスナーを登録するだけで大丈夫です。
 
-通常は、 Cordova の '<a href="events.deviceready.html">deviceready</a>' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -39,7 +39,7 @@ backbutton
 - BlackBerry WebWorks (OS 5.0 以上)
 - Windows Phone 7 (Mango)
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -48,30 +48,30 @@ backbutton
         // メニューボタン関する操作を記述
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Back Button <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Cordova Back Button 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordovaのロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
+        // Cordovaのロード完了とともに onDeviceReady を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.0.0.js はまだ完了していません。
         // Cordova のロード完了とともに
-        // `<a href="events.deviceready.html">deviceready</a>` イベントが呼び出されます。
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // イベントリスナーを登録
             document.addEventListener("backbutton", onBackKeyDown, false);
         }

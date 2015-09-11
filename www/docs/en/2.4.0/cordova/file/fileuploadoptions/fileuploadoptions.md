@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>UploadOptions
+FileUploadOptions
 ========
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` object can be passed to the <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
 
 Properties
 ----------
@@ -37,7 +37,7 @@ Properties
 Description
 -----------
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` object can be passed to the <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
 
 WP7 Quirk
 ---------

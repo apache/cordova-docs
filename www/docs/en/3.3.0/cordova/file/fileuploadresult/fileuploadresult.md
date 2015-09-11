@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>UploadResult
+# FileUploadResult
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadResult` object is passed to the success callback of the
-`<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>` object's `upload()` method.
+A `FileUploadResult` object is passed to the success callback of the
+`FileTransfer` object's `upload()` method.
 
 ## Properties
 
@@ -33,8 +33,8 @@ A `<a href="../fileobj/fileobj.html">File</a>UploadResult` object is passed to t
 
 ## Description
 
-The `<a href="../fileobj/fileobj.html">File</a>UploadResult` object is returned via the success callback of
-the `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>` object's `upload()` method.
+The `FileUploadResult` object is returned via the success callback of
+the `FileTransfer` object's `upload()` method.
 
 ## iOS Quirks
 

@@ -20,11 +20,11 @@ license: >
 
 # 命令列介面
 
-本指南演示如何創建應用程式並將它們部署到各種本機移動平臺，使用 `cordova` 命令列介面 (CLI)。 此工具允許您創建新的專案、 生成它們在不同平臺上，並運行實際設備或模擬程式內。 CLI 是要使用的跨平臺工作流的主要工具 （見有關的各項工作流程說明<a href="../overview/index.html">概述</a>）。然而，你也可以使用 CLI 初始化專案代碼後，您使用各種平臺 Sdk 和外殼工具為繼續發展。
+本指南演示如何創建應用程式並將它們部署到各種本機移動平臺，使用 `cordova` 命令列介面 (CLI)。 此工具允許您創建新的專案、 生成它們在不同平臺上，並運行實際設備或模擬程式內。 CLI 是要使用的跨平臺工作流的主要工具 （見有關的各項工作流程說明概述）。然而，你也可以使用 CLI 初始化專案代碼後，您使用各種平臺 Sdk 和外殼工具為繼續發展。
 
 ## 系統必備元件
 
-在運行任何命令列工具之前, 您需要為每個您想要的目標的平臺安裝 Sdk。（參見<a href="../platforms/index.html">平臺指南</a>更多詳細資訊。
+在運行任何命令列工具之前, 您需要為每個您想要的目標的平臺安裝 Sdk。（參見平臺指南更多詳細資訊。
 
 若要添加支援或重建任何平臺的一個專案，您需要從支援的平臺 SDK 的同一台電腦上運行命令列介面。CLI 支援以下組合：
 
@@ -116,13 +116,13 @@ license: >
 
 **警告**： 當使用 CLI 來構建您的應用程式，您是從編輯中的任何檔，強烈建議不要採用 `/platforms/` 資料夾除非你知道你正在做什麼，或特別在文檔中以其他方式告知。 這是因為中的檔 `/platforms/` direcotry 將被覆蓋上準備或外掛程式重新安裝。
 
-如果您希望在此時，你可以使用 Eclipse 或 Xcode SDK 打開你創建的專案。 您將需要打開的資產從衍生金融工具集 `/platforms/` 要用 SDK 開發目錄。 這是因為 SDK 的特定元資料檔案<a href="../../cordova/storage/storage.html">存儲</a>在相應的 `/platform/` 子目錄。 （見如何開發應用程式每個 IDE 內的資訊<a href="../platforms/index.html">平臺指南</a>）使用這種方法，如果你只是想要初始化使用 CLI 的專案，然後切換到 SDK 為本機的工作。
+如果您希望在此時，你可以使用 Eclipse 或 Xcode SDK 打開你創建的專案。 您將需要打開的資產從衍生金融工具集 `/platforms/` 要用 SDK 開發目錄。 這是因為 SDK 的特定元資料檔案存儲在相應的 `/platform/` 子目錄。 （見如何開發應用程式每個 IDE 內的資訊平臺指南）使用這種方法，如果你只是想要初始化使用 CLI 的專案，然後切換到 SDK 為本機的工作。
 
 如果您想要使用的整個開發週期的跨平臺的工作流方式 (CLI)，請繼續閱讀。
 
 ## 構建應用程式
 
-預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` <a href="../../cordova/events/events.html">事件</a>處理常式中，從預設的引用`www/js/index.js`.
+預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用`www/js/index.js`.
 
 運行以下命令以反覆運算方式生成專案：
 
@@ -153,7 +153,7 @@ license: >
 
 注： 模擬器支援目前不是可供亞馬遜火 OS
 
-（見<a href="../platforms/index.html">平臺指南</a>的詳細資訊）。例如，您可能會首先運行 `android` 命令以啟動 Android SDK，然後運行一個特定的設備圖像，啟動它根據其預設行為：
+（見平臺指南的詳細資訊）。例如，您可能會首先運行 `android` 命令以啟動 Android SDK，然後運行一個特定的設備圖像，啟動它根據其預設行為：
 
 ![][2]
 
@@ -170,13 +170,13 @@ license: >
         $ cordova run android
     
 
-在運行此命令之前, 您需要設置的設備進行測試，之後會發生變化，為每個平臺的程式。 在 Android 和亞馬遜火 OS 設備，你將必須啟用設備上的**USB 調試**的選項和或許添加 USB 驅動程式根據您發展導讀工作。 每個平臺的要求的詳細資訊，請參閱<a href="../platforms/index.html">平臺指南</a>。
+在運行此命令之前, 您需要設置的設備進行測試，之後會發生變化，為每個平臺的程式。 在 Android 和亞馬遜火 OS 設備，你將必須啟用設備上的**USB 調試**的選項和或許添加 USB 驅動程式根據您發展導讀工作。 每個平臺的要求的詳細資訊，請參閱平臺指南。
 
 ## 添加外掛程式的功能
 
 生成和查看一個新專案時，將顯示預設的應用程式不會很多。 您可以修改該應用程式在許多方面，利用標準的 web 技術，但應用程式緊密的聯繫，與各種設備級功能，您需要添加外掛程式，提供對核心科爾多瓦 Api 的訪問。
 
-*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱<a href="../hybrid/webviews/index.html">嵌入 WebViews</a> 和<a href="../hybrid/plugins/index.html">外掛程式開發指南</a>的詳細資訊。更常見的是，您將添加外掛程式，以便啟用科爾多瓦的基本設備級功能詳細的 API Reference 中之一。 可以在[plugins.cordova.io][4]發現這些外掛程式，包括社會，所提供的附加外掛程式的清單。 你可以使用 CLI 來搜索外掛程式從此註冊表。 例如，搜索 `bar` 和 `code` 產生單個結果相匹配這兩個詞作為子字串不區分大小寫：
+*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱嵌入 WebViews 和外掛程式開發指南的詳細資訊。更常見的是，您將添加外掛程式，以便啟用科爾多瓦的基本設備級功能詳細的 API Reference 中之一。 可以在[plugins.cordova.io][4]發現這些外掛程式，包括社會，所提供的附加外掛程式的清單。 你可以使用 CLI 來搜索外掛程式從此註冊表。 例如，搜索 `bar` 和 `code` 產生單個結果相匹配這兩個詞作為子字串不區分大小寫：
 
  [4]: http://plugins.cordova.io/
 
@@ -190,7 +190,7 @@ license: >
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-`cordova plugin add`命令需要您指定的外掛程式代碼的<a href="../../cordova/storage/storage.html">存儲</a>庫。 請注意當你遵循 Web 專案開發工作流和使用 CLI，CLI 會照顧到適當的位置為每個平臺添加外掛程式的代碼。 (如果你是在本機專案開發工作流，您會添加外掛程式使用 Plugman （這裡指南連結），多次為每個平臺)。
+`cordova plugin add`命令需要您指定的外掛程式代碼的存儲庫。 請注意當你遵循 Web 專案開發工作流和使用 CLI，CLI 會照顧到適當的位置為每個平臺添加外掛程式的代碼。 (如果你是在本機專案開發工作流，您會添加外掛程式使用 Plugman （這裡指南連結），多次為每個平臺)。
 
 這裡是如何使用 CLI 將功能添加到應用程式的示例：
 
@@ -199,7 +199,7 @@ license: >
         $ cordova plugin add org.apache.cordova.device
         
 
-*   網路連接和電池<a href="../../cordova/events/events.html">事件</a>：
+*   網路連接和電池事件：
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
@@ -331,7 +331,7 @@ license: >
 
 當你重新生成專案時，Android 版本功能自訂字體大小，而其他人保持不變。
 
-您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，<a href="../../cordova/storage/storage.html">存儲</a>在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` 從相應的硬體按鈕的<a href="../../cordova/events/events.html">事件</a>。
+您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `backbutton` 從相應的硬體按鈕的事件。
 
 ## 説明命令
 
@@ -368,7 +368,7 @@ info` 命令長清單，其中包含當前版本以及其他可用的版本號�
         $ npm info cordova
     
 
-科爾多瓦 3.0 是要支援這一節中描述的命令列介面的第一個版本。 如果您正在從 3.0 以前的版本更新，您需要創建一個新專案，如以上所述，然後將舊應用程式的資源複製到頂級 `www` 目錄。 在適用的情況，進一步有關升級到 3.0 的詳細資訊是可用的<a href="../platforms/index.html">平臺指南</a>中。 一旦你升級到 `cordova` 的命令列介面和使用 `npm update` 待當前，那裡所描述的更耗時過程不再相關。
+科爾多瓦 3.0 是要支援這一節中描述的命令列介面的第一個版本。 如果您正在從 3.0 以前的版本更新，您需要創建一個新專案，如以上所述，然後將舊應用程式的資源複製到頂級 `www` 目錄。 在適用的情況，進一步有關升級到 3.0 的詳細資訊是可用的平臺指南中。 一旦你升級到 `cordova` 的命令列介面和使用 `npm update` 待當前，那裡所描述的更耗時過程不再相關。
 
 科爾多瓦 3.0 + 可能仍然需要對專案級別的目錄結構和其他依賴關係的各種變化。 在您運行 `npm` 命令上面更新科爾多瓦本身，您可能需要確保您的專案資源符合最新的版本要求。 運行下面這樣的命令為每個平臺您正在構建：
 

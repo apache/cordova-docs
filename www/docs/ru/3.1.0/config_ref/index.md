@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../cordova/file/fileobj/fileobj.html">Файл</a> config.xml
+# Файл config.xml
 
 Многие аспекты поведения приложения можно управлять с помощью глобальной конфигурации файла `config.xml` , то есть в верхнего уровня веб-каталог активов, а также на домашней странице приложения. Этот XML-файл платформа агностик форматируются основаны на спецификации W3C [Упакованы веб-приложений (виджетов)][1] и продлил указать основные Cordova API функции, плагины и платформо зависимые параметры.
 
@@ -28,9 +28,9 @@ license: >
 
 В этом разделе описываются параметры конфигурации глобальных и кросс платформенной. В следующих разделах для конкретной платформы вариантов:
 
-*   <a href="../guide/platforms/ios/config.html">iOS конфигурации</a>
+*   iOS конфигурации
 *   Андроид конфигурации
-*   <a href="../guide/platforms/blackberry10/config.html">BlackBerry конфигурации</a>
+*   BlackBerry конфигурации
 
 Помимо различных параметров конфигурации, подробно описаны ниже можно также настроить приложения основной набор образов для каждой целевой платформы. Увидеть иконки и заставки для получения дополнительной информации.
 
@@ -41,7 +41,7 @@ license: >
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

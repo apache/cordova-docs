@@ -22,14 +22,14 @@ license: >
 
 Tienes la aceleración actual a lo largo de los ejes *x*, *y* y *z*.
 
-    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## Descripción
 
 El acelerómetro es un sensor de movimiento que detecta el cambio (*delta*) en movimiento con respecto a la orientación actual del dispositivo, en tres dimensiones a lo largo del eje *x*, *y* y *z*.
 
-Estos valores de aceleración son devueltos a la función de devolución de llamada `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>`.
+Estos valores de aceleración son devueltos a la función de devolución de llamada `accelerometerSuccess`.
 
 ## Plataformas soportadas
 
@@ -61,14 +61,14 @@ Estos valores de aceleración son devueltos a la función de devolución de llam
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ Estos valores de aceleración son devueltos a la función de devolución de llam
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

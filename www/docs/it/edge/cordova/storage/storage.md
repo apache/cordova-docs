@@ -34,7 +34,7 @@ Conosciuto anche come *web storage*, *archiviazione semplice*, o dalla sua inter
 
 ## WebSQL
 
-Questa API è disponibile in WebView sottostante. La [Specifica di <a href="database/database.html">Database</a> SQL Web][3] offre più tabelle di database completo accessibili tramite query SQL.
+Questa API è disponibile in WebView sottostante. La [Specifica di Database SQL Web][3] offre più tabelle di database completo accessibili tramite query SQL.
 
  [3]: http://dev.w3.org/html5/webdatabase/
 

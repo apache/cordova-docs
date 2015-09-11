@@ -26,7 +26,7 @@ Cordova-Android は Android WebView とそれに付属するコールバック�
 
 プラグインは `Pluguin` クラスを継承した少なくとも1つの Java クラスによって構成されます。
 プラグインは `PluginResult` オブジェクトを返す `execute` メソッドを **必ず **実装しなければなりません。
-加えて、プラグイン作成のベストプラクティスとして、プラグインは <a href="../../../cordova/events/events.pause.html">pause</a> と <a href="../../../cordova/events/events.resume.html">resume</a> イベントをサポートし、またプラグイン間のメッセージのやりとりもサポートしているべきです。
+加えて、プラグイン作成のベストプラクティスとして、プラグインは pause と resume イベントをサポートし、またプラグイン間のメッセージのやりとりもサポートしているべきです。
 
 ## プラグインクラスのマッピング
 

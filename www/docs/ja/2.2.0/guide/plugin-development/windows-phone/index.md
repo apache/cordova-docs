@@ -157,7 +157,7 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
 1. [BaseCommand.cs](https://github.com/apache/incubator-cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
-例えば、 '<a href="../../../cordova/events/events.pause.html">pause</a>' や '<a href="../../../cordova/events/events.resume.html">resume</a>' といったアプリケーションイベントもオーバーライドできます。
+例えば、 'pause' や 'resume' といったアプリケーションイベントもオーバーライドできます。
 
 ### プラグインのデバッグ
 

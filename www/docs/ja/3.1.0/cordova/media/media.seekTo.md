@@ -20,18 +20,18 @@ license: >
 
 # media.seekTo
 
-オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>内の現在<a href="../geolocation/Position/position.html">位置</a>を設定します。
+オーディオ ファイル内の現在位置を設定します。
 
     media.seekTo(milliseconds);
     
 
 ## パラメーター
 
-*   **ミリ秒単位**： ミリ秒単位で、オーディオの再生<a href="../geolocation/Position/position.html">位置</a>を設定する<a href="../geolocation/Position/position.html">位置</a>。
+*   **ミリ秒単位**： ミリ秒単位で、オーディオの再生位置を設定する位置。
 
 ## 説明
 
-`media.seekTo`によって参照されるオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>内の現在の再生<a href="../geolocation/Position/position.html">位置</a>の更新を非同期に実行される、 `Media` オブジェクト。 また更新して、 `Media` オブジェクトの `position` パラメーター。
+`media.seekTo`によって参照されるオーディオ ファイル内の現在の再生位置の更新を非同期に実行される、 `Media` オブジェクト。 また更新して、 `Media` オブジェクトの `position` パラメーター。
 
 ## サポートされているプラットフォーム
 
@@ -47,7 +47,7 @@ license: >
     // Audio player
     //
     var my_media = new Media(src, onSuccess, onError);
-        my_<a href="media.play.html">media.play</a>();
+        my_media.play();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
         my_media.seekTo(10000);
@@ -60,14 +60,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -87,12 +87,12 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
     
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                    my_media.getCurrentPosition(
                         // success callback
                         function(position) {
                             if (position > -1) {
@@ -116,7 +116,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -153,4 +153,4 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-*   ブラックベリー OS 5 <a href="../device/device.html">デバイス</a>でサポートされていません。
+*   ブラックベリー OS 5 デバイスでサポートされていません。

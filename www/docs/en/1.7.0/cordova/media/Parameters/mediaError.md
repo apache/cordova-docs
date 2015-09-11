@@ -30,4 +30,4 @@ A user specified callback function that is invoked when there is an error in med
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`<a href="../<a href="../media.html">Media</a>Error/mediaError.html"><a href="../media.html">Media</a>Error</a>`)
+- __error:__ The error returned by the device. (`MediaError`)

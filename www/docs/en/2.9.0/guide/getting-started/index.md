@@ -23,7 +23,7 @@ Platform Guides
 
 Before developing for any of the platforms listed below, install
 cordova's command-line interface (CLI).
-(For details, see <a href="../cli/index.html">The Cordova Command-line Interface</a>.)
+(For details, see The Cordova Command-line Interface.)
 
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless
@@ -35,11 +35,11 @@ environment to support each platform: where to obtain the SDK, how to
 set up device emulators, how to connect devices for direct testing,
 and managing signing key requirements.
 
-- <a href="android/index.html">Android Platform Guide</a> (Windows, Mac, Linux)
-- <a href="blackberry/index.html">BlackBerry Platform Guide</a> (Windows, Mac)
-- <a href="blackberry/index.html">BlackBerry Platform Guide</a> 10 (Windows, Mac)
-- <a href="ios/index.html">iOS Platform Guide</a> (Mac)
-- <a href="windows-phone-7/index.html">Windows Phone 7 Platform Guide</a> (Windows 7 or 8)
-- <a href="windows-phone-8/index.html">Windows Phone 8 Platform Guide</a> (Windows 8)
-- <a href="windows-8/index.html">Windows 8 Platform Guide</a> (Windows 8)
-- <a href="tizen/index.html">Tizen Platform Guide</a>
+- Android Platform Guide (Windows, Mac, Linux)
+- BlackBerry Platform Guide (Windows, Mac)
+- BlackBerry Platform Guide 10 (Windows, Mac)
+- iOS Platform Guide (Mac)
+- Windows Phone 7 Platform Guide (Windows 7 or 8)
+- Windows Phone 8 Platform Guide (Windows 8)
+- Windows 8 Platform Guide (Windows 8)
+- Tizen Platform Guide

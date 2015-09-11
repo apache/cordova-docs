@@ -64,7 +64,7 @@ The following platforms support IndexedDB:
 
 ## Plugin-Based Options
 
-In addition to the storage APIs listed above, the <a href="../file/fileobj/fileobj.html">File</a> API allows you
+In addition to the storage APIs listed above, the File API allows you
 to cache data on the local file system.  Other
 [Cordova plugins](http://plugins.cordova.io/) provide similar storage
 options.

@@ -18,25 +18,25 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>Name
+ContactName
 ===========
 
-Contains <a href="../../storage/parameters/name.html">name</a> properties of a `<a href="../Contact/contact.html">Contact</a>` object.
+Contains name properties of a `Contact` object.
 
 Properties
 ----------
 
-- __formatted:__ The complete <a href="../../storage/parameters/name.html">name</a> of the contact. _(DOMString)_
-- __familyName:__ The contacts family <a href="../../storage/parameters/name.html">name</a>. _(DOMString)_
-- __givenName:__ The contacts given <a href="../../storage/parameters/name.html">name</a>. _(DOMString)_
-- __middleName:__ The contacts middle <a href="../../storage/parameters/name.html">name</a>. _(DOMString)_
+- __formatted:__ The complete name of the contact. _(DOMString)_
+- __familyName:__ The contacts family name. _(DOMString)_
+- __givenName:__ The contacts given name. _(DOMString)_
+- __middleName:__ The contacts middle name. _(DOMString)_
 - __honorificPrefix:__ The contacts prefix (example Mr. or Dr.) _(DOMString)_
 - __honorificSuffix:__ The contacts suffix (example Esq.). _(DOMString)_
 
 Details
 -------
 
-The `<a href="../Contact/contact.html">Contact</a>Name` object stores <a href="../../storage/parameters/name.html">name</a> properties of a contact.
+The `ContactName` object stores name properties of a contact.
 
 Supported Platforms
 -------------------
@@ -45,77 +45,77 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
-			alert("Formatted: " + contacts[i].<a href="../../storage/parameters/name.html">name</a>.formatted + "\n" + 
-					"Family Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.familyName + "\n" + 
-					"Given Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.givenName + "\n" + 
-					"Middle Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.middleName + "\n" + 
-					"Suffix: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.honorificSuffix + "\n" + 
-					"Prefix: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.honorificSuffix);
+			alert("Formatted: " + contacts[i].name.formatted + "\n" + 
+					"Family Name: "  + contacts[i].name.familyName + "\n" + 
+					"Given Name: "  + contacts[i].name.givenName + "\n" + 
+					"Middle Name: "  + contacts[i].name.middleName + "\n" + 
+					"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
+					"Prefix: "  + contacts[i].name.honorificSuffix);
 		}
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
 	options.filter="";
-	filter = ["displayName","<a href="../../storage/parameters/name.html">name</a>"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+	filter = ["displayName","name"];
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-			var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+        function onDeviceReady() {
+			var options = new ContactFindOptions();
 			options.filter="";
-			filter = ["displayName","<a href="../../storage/parameters/name.html">name</a>"];
-			navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+			filter = ["displayName","name"];
+			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
         //
 		function onSuccess(contacts) {
 			for (var i=0; i<contacts.length; i++) {
-				alert("Formatted: " + contacts[i].<a href="../../storage/parameters/name.html">name</a>.formatted + "\n" + 
-						"Family Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.familyName + "\n" + 
-						"Given Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.givenName + "\n" + 
-						"Middle Name: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.middleName + "\n" + 
-						"Suffix: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.honorificSuffix + "\n" + 
-						"Prefix: "  + contacts[i].<a href="../../storage/parameters/name.html">name</a>.honorificPrefix);
+				alert("Formatted: " + contacts[i].name.formatted + "\n" + 
+						"Family Name: "  + contacts[i].name.familyName + "\n" + 
+						"Given Name: "  + contacts[i].name.givenName + "\n" + 
+						"Middle Name: "  + contacts[i].name.middleName + "\n" + 
+						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
+						"Prefix: "  + contacts[i].name.honorificPrefix);
 			}
 		};
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

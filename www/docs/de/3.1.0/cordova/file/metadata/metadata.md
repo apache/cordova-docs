@@ -20,15 +20,15 @@ license: >
 
 # Metadaten
 
-Eine Schnittstelle, die Informationen über den Status einer <a href="../fileobj/fileobj.html">Datei</a> oder eines Verzeichnisses angibt.
+Eine Schnittstelle, die Informationen über den Status einer Datei oder eines Verzeichnisses angibt.
 
 ## Eigenschaften
 
-*   **ModificationTime**: die Zeit, wann die <a href="../fileobj/fileobj.html">Datei</a> oder das Verzeichnis zuletzt geändert wurde. *(Datum)*
+*   **ModificationTime**: die Zeit, wann die Datei oder das Verzeichnis zuletzt geändert wurde. *(Datum)*
 
 ## Informationen
 
-Das `Metadata` -Objekt stellt Informationen über den Status einer <a href="../fileobj/fileobj.html">Datei</a> oder eines Verzeichnisses dar. Aufruf einer `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` oder `FileEntry` des Objekts `getMetadata()` Methode führt eine `Metadata` Instanz.
+Das `Metadata` -Objekt stellt Informationen über den Status einer Datei oder eines Verzeichnisses dar. Aufruf einer `DirectoryEntry` oder `FileEntry` des Objekts `getMetadata()` Methode führt eine `Metadata` Instanz.
 
 ## Unterstützte Plattformen
 

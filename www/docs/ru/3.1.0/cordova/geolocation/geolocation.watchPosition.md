@@ -22,26 +22,26 @@ license: >
 
 Часы для изменения в текущее положение устройства.
 
-    var watchId = navigator.geolocation.watchPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
-                                                      [<a href="parameters/geolocationError.html">geolocationError</a>],
-                                                      [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
+    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+                                                      [geolocationError],
+                                                      [geolocationOptions]);
     
 
 ## Параметры
 
-*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: обратный вызов, который передается в текущей позиции.
+*   **geolocationSuccess**: обратный вызов, который передается в текущей позиции.
 
-*   **<a href="parameters/geolocationError.html">geolocationError</a>**: (необязательно) обратного вызова, который выполняется при возникновении ошибки.
+*   **geolocationError**: (необязательно) обратного вызова, который выполняется при возникновении ошибки.
 
-*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: параметры (необязательно) географического расположения.
+*   **geolocationOptions**: параметры (необязательно) географического расположения.
 
 ## Возвращает
 
-*   **Строка**: Возвращает идентификатор часы, ссылается на часы позиции интервала. Идентификатор часы должны использоваться с `<a href="geolocation.clearWatch.html">geolocation.clearWatch</a>` чтобы остановить просмотр изменений в позиции.
+*   **Строка**: Возвращает идентификатор часы, ссылается на часы позиции интервала. Идентификатор часы должны использоваться с `geolocation.clearWatch` чтобы остановить просмотр изменений в позиции.
 
 ## Описание
 
-`geolocation.watchPosition`Это асинхронные функции. Возвращает текущую позицию устройства при обнаружении изменения в позиции. Когда устройство получает новое местоположение, `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` обратного вызова выполняется с `Position` объект в качестве параметра. Если есть ошибка, `<a href="parameters/geolocationError.html">geolocationError</a>` обратного вызова выполняется с `<a href="PositionError/positionError.html">PositionError</a>` объект в качестве параметра.
+`geolocation.watchPosition`Это асинхронные функции. Возвращает текущую позицию устройства при обнаружении изменения в позиции. Когда устройство получает новое местоположение, `geolocationSuccess` обратного вызова выполняется с `Position` объект в качестве параметра. Если есть ошибка, `geolocationError` обратного вызова выполняется с `PositionError` объект в качестве параметра.
 
 ## Поддерживаемые платформы
 
@@ -65,7 +65,7 @@ license: >
                             '<hr />'      + element.innerHTML;
     }
     
-    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+    // onError Callback receives a PositionError object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -82,14 +82,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -110,7 +110,7 @@ license: >
                                 '<hr />'      + element.innerHTML;
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

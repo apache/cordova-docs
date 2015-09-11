@@ -22,7 +22,7 @@ license: >
 
 Возвращает новый объект `Database` объект.
 
-    var dbShell = <a href="../inappbrowser/window.open.html">window.open</a>Database(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## Описание
@@ -38,7 +38,7 @@ license: >
 
 ## Быстрый пример
 
-    var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
     
 
 ## Полный пример
@@ -53,12 +53,12 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
     
         </script>

@@ -22,14 +22,14 @@ license: >
 
 Ottenere l'attuale accelerazione lungo gli assi *x*, *y*e *z* .
 
-    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## Descrizione
 
 L'accelerometro è un sensore di movimento che rileva il cambiamento (*delta*) nel movimento relativo l'orientamento corrente del dispositivo, in tre dimensioni lungo l'asse *x*, *y*e *z* .
 
-I valori di accelerazione vengono restituiti per la `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` funzione di callback.
+I valori di accelerazione vengono restituiti per la `accelerometerSuccess` funzione di callback.
 
 ## Piattaforme supportate
 
@@ -61,14 +61,14 @@ I valori di accelerazione vengono restituiti per la `<a href="parameters/acceler
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ I valori di accelerazione vengono restituiti per la `<a href="parameters/acceler
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

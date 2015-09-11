@@ -24,12 +24,12 @@ license: >
 
 ## メソッド
 
-*   <a href="splashscreen.show.html">splashscreen.show</a>
-*   <a href="splashscreen.hide.html">splashscreen.hide</a>
+*   splashscreen.show
+*   splashscreen.hide
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.splashscreen
         $ cordova plugin ls
@@ -53,6 +53,6 @@ license: >
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
 
-これらのイメージを構成する方法の詳細については、<a href="../../config_ref/images.html">アイコンとスプラッシュ画面</a>を参照してください。
+これらのイメージを構成する方法の詳細については、アイコンとスプラッシュ画面を参照してください。

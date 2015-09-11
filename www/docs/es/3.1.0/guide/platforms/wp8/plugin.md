@@ -179,7 +179,7 @@ Ver otros métodos que se pueden reemplazar en:
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-Por ejemplo, puede conectar en los eventos de aplicación 'continuar' y '<a href="../../../cordova/events/events.pause.html">pause</a>'.
+Por ejemplo, puede conectar en los eventos de aplicación 'continuar' y 'pause'.
 
 ### Depuración de Plugins
 

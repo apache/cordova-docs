@@ -23,7 +23,7 @@ license: >
 > Iniciar una aplicación de cámara y devolver información acerca de los archivos de imagen capturada.
 
     navigator.device.capture.captureImage(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Inicia una operación asincrónica para capturar imágenes utilizando la aplicación de la cámara del dispositivo. La operación permite a los usuarios capturar más de una imagen en una sola sesión.
 
-La operación de captura tampoco termina cuando el usuario cierra una aplicación de cámara, o el número máximo de registros especificado por `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` se alcanza. Si no `limit` se especifica el valor por defecto a uno (1) y termina la operación de captura después de que el usuario capta una sola imagen.
+La operación de captura tampoco termina cuando el usuario cierra una aplicación de cámara, o el número máximo de registros especificado por `CaptureAudioOptions.limit` se alcanza. Si no `limit` se especifica el valor por defecto a uno (1) y termina la operación de captura después de que el usuario capta una sola imagen.
 
-Cuando finaliza la operación de captura, invoca la `<a href="CaptureCB.html">CaptureCB</a>` "callback" con una gran variedad de `<a href="MediaFile.html">MediaFile</a>` objetos que describen cada archivo de imagen capturada. Si el usuario finaliza la operación antes de capturar una imagen, la `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` devolución de llamada se ejecuta con un `<a href="CaptureError.html">CaptureError</a>` objeto ofrece un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` código de error.
+Cuando finaliza la operación de captura, invoca la `CaptureCB` "callback" con una gran variedad de `MediaFile` objetos que describen cada archivo de imagen capturada. Si el usuario finaliza la operación antes de capturar una imagen, la `CaptureErrorCB` devolución de llamada se ejecuta con un `CaptureError` objeto ofrece un `CaptureError.CAPTURE_NO_MEDIA_FILES` código de error.
 
 ## Plataformas soportadas
 
@@ -60,7 +60,7 @@ Invocando la aplicación de cámara nativa mientras el dispositivo está conecta
     
     // capture error callback
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start image capture
@@ -91,7 +91,7 @@ Invocando la aplicación de cámara nativa mientras el dispositivo está conecta
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
+            navigator.notification.alert(msg, null, 'Uh oh!');
         }
     
         // A button will call this function

@@ -20,11 +20,11 @@ license: >
 
 # 위치
 
-포함 `Position` <a href="../Coordinates/coordinates.html">좌표</a> 및 타임 스탬프, geolocation API에 의해 만들어진.
+포함 `Position` 좌표 및 타임 스탬프, geolocation API에 의해 만들어진.
 
 ## 속성
 
-*   **coords**: 지리적 <a href="../Coordinates/coordinates.html">좌표</a> 집합. *(<a href="../Coordinates/coordinates.html">좌표</a>)*
+*   **coords**: 지리적 좌표 집합. *(좌표)*
 
 *   **타임 스탬프**: 생성 타임 스탬프에 대 한 `coords` . *(날짜)*
 
@@ -56,14 +56,14 @@ license: >
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
+    // onError Callback receives a PositionError object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
     
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## 전체 예제
@@ -71,19 +71,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
         // onSuccess Geolocation
@@ -100,7 +100,7 @@ license: >
                                 'Timestamp: '         + position.timestamp               + '<br />';
         }
     
-            // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

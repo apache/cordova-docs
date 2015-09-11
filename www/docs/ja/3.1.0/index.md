@@ -26,63 +26,63 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">概要</a>
+        概要
       </h2>
       
       <span>コルドバに新しければ、ここから始めてください。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">コマンド ライン インターフェイス</a>
+        コマンド ライン インターフェイス
       </h2>
       
       <span>作成、構築、およびコマンドラインから展開します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">プラットフォームのガイド</a>
+        プラットフォームのガイド
       </h2>
       
       <span>各 SDK の更新プロジェクトを設定します。</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Config.xml <a href="cordova/file/fileobj/fileobj.html">ファイル</a></a>
+        Config.xml ファイル
       </h2>
       
       <span>アプリの機能をカスタマイズします。</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">アイコンとスプラッシュ画面</a>
+        アイコンとスプラッシュ画面
       </h2>
       
       <span>イメージを表示するアプリをカスタマイズします。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">埋め込み web 表示</a>
+        埋め込み web 表示
       </h2>
       
       <span>あなたのプロジェクトにコルドバ WebView を実装します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">プラグイン開発ガイド</a>
+        プラグイン開発ガイド
       </h2>
       
       <span>あなたの最初のプラグインを開発します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">プライバシー ガイド</a>
+        プライバシー ガイド
       </h2>
       
       <span>重要なモバイル プライバシーの問題について説明します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">ホワイト リスト ガイド</a>
+        ホワイト リスト ガイド
       </h2>
       
       <span>外部リソースへのアプリケーション アクセスを付与します。</span>
@@ -103,115 +103,115 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/accelerometer/accelerometer.html"><a href="cordova/accelerometer/acceleration/acceleration.html">加速</a>度センサー</a>
+        加速度センサー
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>のモーション センサーをタップします。</span>
+      <span>デバイスのモーション センサーをタップします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/camera/camera.html">カメラ</a>
+        カメラ
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>の<a href="cordova/camera/camera.html">カメラ</a>を使用して写真を<a href="cordova/media/capture/capture.html">キャプチャ</a>します。</span>
+      <span>デバイスのカメラを使用して写真をキャプチャします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/capture/capture.html">キャプチャ</a>
+        キャプチャ
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>の<a href="cordova/media/media.html">メディア</a> ・ <a href="cordova/media/capture/capture.html">キャプチャ</a> ・ アプリケーションを使用して<a href="cordova/media/media.html">メディア</a> <a href="cordova/file/fileobj/fileobj.html">ファイル</a>を<a href="cordova/media/capture/capture.html">キャプチャ</a>します。</span>
+      <span>デバイスのメディア ・ キャプチャ ・ アプリケーションを使用してメディア ファイルをキャプチャします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/compass/compass.html">コンパス</a>
+        コンパス
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>が指している方向を取得します。</span>
+      <span>デバイスが指している方向を取得します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/connection/connection.html">接続</a>
+        接続
       </h2>
       
       <span>ネットワークの状態、および携帯電話のネットワーク情報をすばやく確認します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/contacts/parameters/contactFields.html">連絡先</a>
+        連絡先
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>の<a href="cordova/contacts/parameters/contactFields.html">連絡先</a><a href="cordova/storage/database/database.html">データベース</a>で動作します。</span>
+      <span>デバイスの連絡先データベースで動作します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/device/device.html">デバイス</a>
+        デバイス
       </h2>
       
-      <span><a href="cordova/device/device.html">デバイス</a>固有の情報を収集します。</span>
+      <span>デバイス固有の情報を収集します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/events/events.html">イベント</a>
+        イベント
       </h2>
       
-      <span>Java スクリプトの設定をネイティブ <a href="cordova/events/events.html">イベント</a>にフックします。</span>
+      <span>Java スクリプトの設定をネイティブ イベントにフックします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/file/fileobj/fileobj.html">ファイル</a>
+        ファイル
       </h2>
       
-      <span>Java スクリプトの設定をネイティブの<a href="cordova/file/fileobj/fileobj.html">ファイル</a> システムにフックします。</span>
+      <span>Java スクリプトの設定をネイティブのファイル システムにフックします。</span>
     </li>
     <li>
       <h2>
-        地理<a href="cordova/geolocation/Position/position.html">位置</a>情報
+        地理位置情報
       </h2>
       
       <span>アプリケーションの場所を認識させます。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/globalization/globalization.html">グローバリゼーション</a>
+        グローバリゼーション
       </h2>
       
       <span>ロケールに固有のオブジェクトの表現を有効にします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
+        InAppBrowser
       </h2>
       
       <span>別のアプリ内ブラウザー インスタンスで Url を起動します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/media.html">メディア</a>
+        メディア
       </h2>
       
-      <span>記録し、オーディオ <a href="cordova/file/fileobj/fileobj.html">ファイル</a>を再生します。</span>
+      <span>記録し、オーディオ ファイルを再生します。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/notification/notification.html">通知</a>
+        通知
       </h2>
       
-      <span>音、視覚と触覚<a href="cordova/device/device.html">デバイス</a><a href="cordova/notification/notification.html">通知</a>。</span>
+      <span>音、視覚と触覚デバイス通知。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>
+        スプラッシュ スクリーン
       </h2>
       
-      <span>アプリケーションの<a href="cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>を非表示。</span>
+      <span>アプリケーションのスプラッシュ スクリーンを非表示。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">ストレージ</a>
+        ストレージ
       </h2>
       
-      <span>ネイティブの<a href="cordova/storage/storage.html">ストレージ</a> オプションを<a href="cordova/device/device.html">デバイス</a>にフックします。</span>
+      <span>ネイティブのストレージ オプションをデバイスにフックします。</span>
     </li>
   </ul>
 </div>

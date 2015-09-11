@@ -20,7 +20,7 @@ license: >
 
 # SQLTransaction
 
-Ermöglicht die Ausführung von SQL-Anweisungen für die <a href="../database/database.html">Datenbank</a>.
+Ermöglicht die Ausführung von SQL-Anweisungen für die Datenbank.
 
 ## Methoden
 
@@ -54,7 +54,7 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
         alert("success!");
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ Aufrufen einer `Database` -Methode des Objekts Transaktion, Pässe ein `SQLTrans
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>SQLTransaction</p>
       </body>
     </html>

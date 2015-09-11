@@ -20,16 +20,16 @@ license: >
 
 # 離線
 
-當一個應用程式離線時，與該<a href="../device/device.html">設備</a>未<a href="../connection/connection.html">連接</a>到互聯網時，將觸發該<a href="events.html">事件</a>。
+當一個應用程式離線時，與該設備未連接到互聯網時，將觸發該事件。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
+    document.addEventListener("offline", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-`offline`以前<a href="../connection/connection.html">連接</a>的<a href="../device/device.html">設備</a>失去網路<a href="../connection/connection.html">連接</a>，這樣，應用程式不再可以訪問互聯網時激發的<a href="events.html">事件</a>。 它依賴于<a href="../connection/connection.html">連接</a> API 中，相同的資訊和火災時 `<a href="../connection/connection.type.html">connection.type</a>` 從更改 `NONE` 為其他任何值。
+`offline`以前連接的設備失去網路連接，這樣，應用程式不再可以訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時 `connection.type` 從更改 `NONE` 為其他任何值。
 
-應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
 ## 支援的平臺
 
@@ -42,7 +42,7 @@ license: >
 
 ## 快速的示例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+    document.addEventListener("offline", onOffline, false);
     
     function onOffline() {
         // Handle the offline event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Offline Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,13 +62,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+            document.addEventListener("offline", onOffline, false);
         }
     
         // Handle the offline event
@@ -85,12 +85,12 @@ license: >
 
 ## iOS 的怪癖
 
-在初始啟動期間，第一次離線<a href="events.html">事件</a> （如果適用） 需至少一秒的火。
+在初始啟動期間，第一次離線事件 （如果適用） 需至少一秒的火。
 
 ## Windows Phone 7 的怪癖
 
-當運行在模擬器中， `connection.status` 始終是未知的因此此<a href="events.html">事件</a>不會*不*火。
+當運行在模擬器中， `connection.status` 始終是未知的因此此事件不會*不*火。
 
 ## Windows Phone 8 怪癖
 
-模擬程式報告連線類型為 `Cellular` ，而不會更改，所以該<a href="events.html">事件</a>不會*不*火。
+模擬程式報告連線類型為 `Cellular` ，而不會更改，所以該事件不會*不*火。

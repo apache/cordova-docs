@@ -46,14 +46,14 @@ Vibre le dispositif pour la durée spécifiée.
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -63,7 +63,7 @@ Vibre le dispositif pour la durée spécifiée.
     
         // Show a custom alert
         //
-        function <a href="../inappbrowser/inappbrowser.html">show</a>Alert() {
+        function showAlert() {
             navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
@@ -86,7 +86,7 @@ Vibre le dispositif pour la durée spécifiée.
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Alert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>

@@ -22,7 +22,7 @@ license: >
 
 `config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 此節詳細資訊首選項僅適用于亞馬遜火 OS 的基礎。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` <a href="../../../cordova/events/events.html">事件</a>火災。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。
     
         <preference name="KeepRunning" value="false"/>
         

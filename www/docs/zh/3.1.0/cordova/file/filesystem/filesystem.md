@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">檔</a>案系統
+# 檔案系統
 
-此物件表示一個<a href="../fileobj/fileobj.html">檔</a>案系統。
+此物件表示一個檔案系統。
 
 ## 屬性
 
-*   **名稱**： <a href="../fileobj/fileobj.html">檔</a>案系統的名稱。*() DOMString*
+*   **名稱**： 檔案系統的名稱。*() DOMString*
 
-*   **根**： <a href="../fileobj/fileobj.html">檔</a>案系統的根目錄。*() DirectoryEntry*
+*   **根**： 檔案系統的根目錄。*() DirectoryEntry*
 
 ## 詳細資訊
 
-`FileSystem`物件表示<a href="../fileobj/fileobj.html">檔</a>案系統的資訊。 <a href="../fileobj/fileobj.html">檔</a>案系統的名稱的公開的<a href="../fileobj/fileobj.html">檔</a>案系統的清單中是唯一的。 根屬性包含 `DirectoryEntry` 物件，表示<a href="../fileobj/fileobj.html">檔</a>案系統的根目錄。
+`FileSystem`物件表示檔案系統的資訊。 檔案系統的名稱的公開的檔案系統的清單中是唯一的。 根屬性包含 `DirectoryEntry` 物件，表示檔案系統的根目錄。
 
 ## 支援的平臺
 
@@ -40,7 +40,7 @@ license: >
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## <a href="../fileobj/fileobj.html">檔</a>案系統快速示例
+## 檔案系統快速示例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -48,7 +48,7 @@ license: >
     }
     
     // request the persistent file system
-    window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
     
 
 ## 完整的示例
@@ -56,19 +56,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File System Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
     
         function onFileSystemSuccess(fileSystem) {
@@ -83,7 +83,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>File System</p>
       </body>
     </html>

@@ -23,10 +23,10 @@ Upgrading Guides
 
 > Learn how to upgrade an application to the latest Apache Cordova release.
 
-- <a href="android/index.html">Upgrading Cordova Android</a>
-- <a href="blackberry/index.html">Upgrading Cordova BlackBerry</a>
-- <a href="ios/index.html">Upgrading Cordova iOS</a>
-- <a href="symbian/index.html">Upgrading Cordova Symbian</a>
-- <a href="webos/index.html">Upgrading Cordova webOS</a>
-- <a href="windows-phone/index.html">Upgrading Cordova Windows Phone</a>
-- <a href="bada/index.html">Upgrading Cordova Bada</a>
+- Upgrading Cordova Android
+- Upgrading Cordova BlackBerry
+- Upgrading Cordova iOS
+- Upgrading Cordova Symbian
+- Upgrading Cordova webOS
+- Upgrading Cordova Windows Phone
+- Upgrading Cordova Bada

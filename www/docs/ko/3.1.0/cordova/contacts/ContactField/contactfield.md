@@ -34,7 +34,7 @@ license: >
 
 `ContactField`개체는 재사용 가능한 구성 요소를 나타내는 필드를 일반적으로 문의. 각 `ContactField` 개체에 포함 되어 있는 `value` , `type` , 및 `pref` 속성. A `Contact` 개체에 여러 속성이 저장 `ContactField[]` 배열, 전화 번호 및 이메일 주소.
 
-대부분의 경우에는 미리 결정 된 값에 대 한는 `ContactField` 개체의 **type** 속성. 예를 들어 전화 번호 *홈*, *작품*, *모바일*, *아이폰*, 또는 특정 <a href="../../device/device.html">장치</a> 플랫폼의 <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>에서 지원 되는 다른 값 **형식** 값을 지정할 수 있습니다. 그러나는 `Contact` **사진** 필드 **유형** 필드 나타냅니다 반환 된 이미지 형식: **url** **값** 특성 **값** 이미지 base64 인코딩된 문자열을 포함 하는 경우 사진 이미지 또는 *base64* URL이 포함 된 경우. 
+대부분의 경우에는 미리 결정 된 값에 대 한는 `ContactField` 개체의 **type** 속성. 예를 들어 전화 번호 *홈*, *작품*, *모바일*, *아이폰*, 또는 특정 장치 플랫폼의 연락처 데이터베이스에서 지원 되는 다른 값 **형식** 값을 지정할 수 있습니다. 그러나는 `Contact` **사진** 필드 **유형** 필드 나타냅니다 반환 된 이미지 형식: **url** **값** 특성 **값** 이미지 base64 인코딩된 문자열을 포함 하는 경우 사진 이미지 또는 *base64* URL이 포함 된 경우. 
 
 ## 지원 되는 플랫폼
 
@@ -47,7 +47,7 @@ license: >
 ## 빠른 예제
 
         // create a new contact
-        var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+        var contact = navigator.contacts.create();
     
         // store contact phone numbers in ContactField[]
         var phoneNumbers = [];
@@ -65,21 +65,21 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
     
         function onDeviceReady() {
             // create a new contact
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
     
             // store contact phone numbers in ContactField[]
             var phoneNumbers = [];
@@ -92,10 +92,10 @@ license: >
             contact.save();
     
             // search contacts, returning display name and phone numbers
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter = "";
             filter = ["displayName", "phoneNumbers"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,14 +113,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

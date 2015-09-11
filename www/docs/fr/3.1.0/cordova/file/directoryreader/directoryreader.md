@@ -42,9 +42,9 @@ Lire les entrées dans ce répertoire.
 
 **Paramètres :**
 
-*   **successCallback**: un callback qui est passé à un tableau d'objets `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` et `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>`. *(Fonction)*
+*   **successCallback**: un callback qui est passé à un tableau d'objets `FileEntry` et `DirectoryEntry`. *(Fonction)*
 
-*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération de la liste de répertoires. Appelée avec un objet `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>`. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération de la liste de répertoires. Appelée avec un objet `FileError`. *(Fonction)*
 
 **Petit exemple**
 

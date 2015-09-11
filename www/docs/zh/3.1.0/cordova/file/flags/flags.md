@@ -20,13 +20,13 @@ license: >
 
 # 標誌
 
-提供的參數 `DirectoryEntry` 物件的 `getFile()` 和 `getDirectory()` 方法，查找或創建的<a href="../fileobj/fileobj.html">檔</a>和目錄，分別。
+提供的參數 `DirectoryEntry` 物件的 `getFile()` 和 `getDirectory()` 方法，查找或創建的檔和目錄，分別。
 
 ## 屬性
 
-*   **創建**： 指示應創建的<a href="../fileobj/fileobj.html">檔</a>或目錄，是否它不存在。*（布林）*
+*   **創建**： 指示應創建的檔或目錄，是否它不存在。*（布林）*
 
-*   **獨家**: 已由本身，但與一起使用時不起任何作用 `create` 導致<a href="../fileobj/fileobj.html">檔</a>或目錄的創建，如果已經存在的目標路徑失敗。*（布林）*
+*   **獨家**: 已由本身，但與一起使用時不起任何作用 `create` 導致檔或目錄的創建，如果已經存在的目標路徑失敗。*（布林）*
 
 ## 支援的平臺
 
@@ -39,5 +39,5 @@ license: >
 ## 快速的示例
 
     / / 獲取資料目錄，如果它不存在，則創建它。
-    dataDir = fileSystem.root.getDirectory （"資料"，{創建: true});/ / 創建鎖定<a href="../fileobj/fileobj.html">檔</a>，當且僅當它不存在。
-    備份的鎖定<a href="../fileobj/fileobj.html">檔</a> = dataDir.getFile ("lockfile.txt"，{創建: 真實、 獨家： true}) ；
+    dataDir = fileSystem.root.getDirectory （"資料"，{創建: true});/ / 創建鎖定檔，當且僅當它不存在。
+    備份的鎖定檔 = dataDir.getFile ("lockfile.txt"，{創建: 真實、 獨家： true}) ；

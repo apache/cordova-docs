@@ -29,9 +29,9 @@ L'evento viene generato quando un'applicazione viene messo in secondo piano.
 
 Il `pause` evento viene generato quando la piattaforma nativa mette l'applicazione in background, in genere quando si passa a un'altra applicazione.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
 
-## <a href="../../config_ref/images.html">Piattaforme supportate</a>
+## Piattaforme supportate
 
 *   Amazon fuoco OS
 *   Android
@@ -54,7 +54,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Pause Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

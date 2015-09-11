@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.stop.html">media.stop</a>Record
+# media.stopRecord
 
-오디오 <a href="../file/fileobj/fileobj.html">파일</a> 녹음을 중지 합니다.
+오디오 파일 녹음을 중지 합니다.
 
-    <a href="media.stop.html">media.stop</a>Record();
+    media.stopRecord();
     
 
 ## 설명
 
-`<a href="media.stop.html">media.stop</a>Record`메서드가 동기적으로 실행 됩니다 오디오 <a href="../file/fileobj/fileobj.html">파일</a> 녹음을 중지 합니다.
+`media.stopRecord`메서드가 동기적으로 실행 됩니다 오디오 파일 녹음을 중지 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
@@ -136,4 +136,4 @@ license: >
 
 ## Tizen 특수
 
-*   Tizen <a href="../device/device.html">장치</a>에서 지원 되지 않습니다.
+*   Tizen 장치에서 지원 되지 않습니다.

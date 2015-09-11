@@ -55,7 +55,7 @@ La función `media.setVolume` es una función asincrónica que establece el volu
         });
     
         // Play audio
-        my_<a href="media.play.html">media.play</a>();
+        my_media.play();
     
         // Mute volume after 2 seconds
         setTimeout(function() {
@@ -75,14 +75,14 @@ La función `media.setVolume` es una función asincrónica que establece el volu
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for Cordova to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // Cordova is ready
             //
@@ -102,13 +102,13 @@ La función `media.setVolume` es una función asincrónica que establece el volu
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -137,7 +137,7 @@ La función `media.setVolume` es una función asincrónica que establece el volu
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

@@ -20,7 +20,7 @@ license: >
 
 # localStorage
 
-W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイス][1]へのアクセスを提供します
+W3C の[Web ストレージ インターフェイス][1]へのアクセスを提供します
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,11 +42,11 @@ W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイ�
 
 ## 詳細
 
-`window.localStorage`、W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイス][2]が実装するインターフェイス。 アプリを使用するキーと値のペアを使用して永続的なデータを保存できます。 `window.sessionStorage`インターフェイスのすべてのデータは、アプリを閉じるたびにクリアされることを除いてあらゆる点で同じように動作します。 各<a href="../database/database.html">データベース</a>は、別の名前空間を提供します。
+`window.localStorage`、W3C の[Web ストレージ インターフェイス][2]が実装するインターフェイス。 アプリを使用するキーと値のペアを使用して永続的なデータを保存できます。 `window.sessionStorage`インターフェイスのすべてのデータは、アプリを閉じるたびにクリアされることを除いてあらゆる点で同じように動作します。 各データベースは、別の名前空間を提供します。
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## <a href="../../../config_ref/images.html">サポートされているプラットフォーム</a>
+## サポートされているプラットフォーム
 
 *   アンドロイド
 *   ブラックベリー WebWorks (OS 6.0 およびより高い)
@@ -85,14 +85,14 @@ W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイ�
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイ�
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>localStorage</p>
       </body>
     </html>
@@ -119,4 +119,4 @@ W3C の[Web <a href="../storage.html">ストレージ</a> インターフェイ�
 
 ## Windows Phone 7 の癖
 
-ドット表記では*ない*Windows Phone 7 で利用可能です。 使用してください `setItem` または `getItem` など、<a href="../storage.html">ストレージ</a> オブジェクトから直接キーにアクセスするのではなく`window.localStorage.someKey`.
+ドット表記では*ない*Windows Phone 7 で利用可能です。 使用してください `setItem` または `getItem` など、ストレージ オブジェクトから直接キーにアクセスするのではなく`window.localStorage.someKey`.

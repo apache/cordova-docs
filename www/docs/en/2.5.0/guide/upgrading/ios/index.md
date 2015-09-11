@@ -65,15 +65,15 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 8. Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.3.0, this has new scripts)** 
 9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 10. Convert your **Cordova.plist** file to **config.xml**, by running the script **bin/cordova\_plist\_to\_config\_xml** on your project file.
-11. Add the <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
+11. Add the InAppBrowser plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
 
-        <plugin name="<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" value="CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" />
+        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 12. Note that Objective-C plugins are **not** whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the “User-Agent” header of the connection to the same user-agent as the main Cordova WebView. 
 You can get this by accessing the **userAgent** property off the main view-controller. The main view-controller (CDVViewController) also has a **URLisAllowed** method for you to check whether a URL will pass the whitelist.        
-13. <a href="../../../cordova/device/device.html">Device</a> API changes: 
-    * For iOS, <a href="../../../cordova/device/device.platform.html">device.platform</a> used to return “iPhone”, “iPad” or “iPod Touch” — now it returns (correctly) “iOS”. 
-    * For iOS, <a href="../../../cordova/device/device.name.html">device.name</a> (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′) — now it returns what <a href="../../../cordova/device/device.platform.html">device.platform</a> used to return: ”iPhone”, “iPad” or “iPod Touch”.  
-    * For all platforms, there is a new property called <a href="../../../cordova/device/device.model.html">device.model</a> — this returns the specific device model, e.g “iPad2,5″ (for other platforms, this returns what <a href="../../../cordova/device/device.name.html">device.name</a> used to return).
+13. Device API changes: 
+    * For iOS, device.platform used to return “iPhone”, “iPad” or “iPod Touch” — now it returns (correctly) “iOS”. 
+    * For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′) — now it returns what device.platform used to return: ”iPhone”, “iPad” or “iPod Touch”.  
+    * For all platforms, there is a new property called device.model — this returns the specific device model, e.g “iPad2,5″ (for other platforms, this returns what device.name used to return).
 
 ## Upgrading Cordova 2.1.0 projects to 2.2.0 ##
 
@@ -93,7 +93,7 @@ You can get this by accessing the **userAgent** property off the main view-contr
     
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode <a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector.
+**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode File Inspector.
 
 ## Upgrading Cordova 2.0.0 projects to 2.1.0 ##
 
@@ -127,9 +127,9 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 3. **Copy** the **www/cordova-2.0.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.9.0.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.0.0.js** file
 5. Copy the **"cordova"** folder from the new project into your project's root folder (if you want the project command-line tools) 
-6. **Add** a new entry under **Plugins** in your **Cordova.plist** file (under the **Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s** group) - the key is **<a href="../../../cordova/device/device.html">Device</a>** and the value is **CDV<a href="../../../cordova/device/device.html">Device</a>**
+6. **Add** a new entry under **Plugins** in your **Cordova.plist** file (under the **Supporting Files** group) - the key is **Device** and the value is **CDVDevice**
 7. Remove **Cordova.framework**
-8. Remove **verify.sh** from the **Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s** group
+8. Remove **verify.sh** from the **Supporting Files** group
 9. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
 10. Search for **"Preprocessor Macros"**, then remove all **"CORDOVA_FRAMEWORK=1"** values
 11. Locate the **CordovaLib** folder that was installed in your hard-drive under your home folder's **Documents** sub-folder.
@@ -152,13 +152,13 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 20. Select the **libCordova.a** static library, then select the **"Add"** button
 21. Delete the **"Run Script"** phase.
 22. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
-23. Search for **"Other Linker <a href="../../../cordova/file/flags/flags.html">Flags</a>"**, and add the values **-all_load** and **-Obj-C**
+23. Search for **"Other Linker Flags"**, and add the values **-all_load** and **-Obj-C**
 24. Expand the **"CordovaLib" sub-project**
 25. Locate the **"VERSION"** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **"Create groups for any added folders"** radiobutton, then select the **"Finish"** button
 27. Select the **"VERSION"** file that you just dragged in a previous step
-28. Press the key combination **Option-Command-1** to <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a> the **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** (or menuitem **View -> Utilities -> Show <a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector**)
-29. Choose **"Relative to CORDOVALIB"** in the **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** for the drop-down menu for **Location**
+28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
 30. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"** (this is so the unified headers can be found)
 31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
 32. Search for **"Header Search Paths"**. For that setting, add these three values below (with quotes):
@@ -169,7 +169,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
     
         "$(BUILT_PRODUCTS_DIR)"
 
-33. Search for **"Other Linker <a href="../../../cordova/file/flags/flags.html">Flags</a>"**. For that setting, add this value below:
+33. Search for **"Other Linker Flags"**. For that setting, add this value below:
 
         -weak_framework CoreFoundation
 
@@ -189,7 +189,7 @@ If your project is **not working** as expected in the Simulator, please **take a
 
 **Note:**
 
-1.9.0 supports the new **"BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>"** boolean setting in Cordova.plist. By default, this setting is turned on, set it to "false" to turn it off - especially for iOS 6 - see [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
+1.9.0 supports the new **"BackupWebStorage"** boolean setting in Cordova.plist. By default, this setting is turned on, set it to "false" to turn it off - especially for iOS 6 - see [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
 
 ## Upgrading Cordova 1.7.0 projects to 1.8.x ##
@@ -199,11 +199,11 @@ If your project is **not working** as expected in the Simulator, please **take a
 3. **Copy** the **www/cordova-1.8.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.7.x.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-1.8.0.js** file
 
-If you intend on using the **<a href="../../../cordova/media/capture/capture.html">Capture</a> API**, you will need the new **iPad retina-display** assets:
+If you intend on using the **Capture API**, you will need the new **iPad retina-display** assets:
 
-1.  **Copy** the **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item from the new project into your project folder, over-writing your existing **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item
-2.  In your project, select the **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item into Xcode into your Project Navigator, and press the **Delete** key, then select **Remove Reference** from the dialog that pops up.
-3.  Drag the new **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** from Step 1. above into Xcode into your Project Navigator, and select the **Create groups for any added folders** radio-button
+1.  **Copy** the **Resources/Capture.bundle** item from the new project into your project folder, over-writing your existing **Resources/Capture.bundle** item
+2.  In your project, select the **Capture.bundle** item into Xcode into your Project Navigator, and press the **Delete** key, then select **Remove Reference** from the dialog that pops up.
+3.  Drag the new **Capture.bundle** from Step 1. above into Xcode into your Project Navigator, and select the **Create groups for any added folders** radio-button
 
 ## Upgrading Cordova 1.6.x projects to 1.7.0 ##
 
@@ -244,17 +244,17 @@ If you intend on using the **<a href="../../../cordova/media/capture/capture.htm
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new Cordova **cordova-1.5.0.js** file
 5. Find **"PhoneGap.framework"** in your Project Navigator, select it
 6. Press the **Delete** key and delete the **"PhoneGap.framework"** reference in the Project Navigator
-7. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
+7. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 8. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)
 9. Enter **"/Users/Shared/Cordova/Frameworks/Cordova.framework"** in the **"Go to the folder:" sheet** and then press the **"Go"** button
-10. Press the **"Add"** button in the **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**
+10. Press the **"Add"** button in the **"Add Files..." sheet**
 11. **Select "Cordova.framework"** in the Project Navigator
-12. Press the key combination **Option-Command-1** to <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a> the **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector**
-13. Choose **"Absolute Path"** in the **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** for the drop-down menu for **Location**
-14. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
+12. Press the key combination **Option-Command-1** to show the **File Inspector**
+13. Choose **"Absolute Path"** in the **File Inspector** for the drop-down menu for **Location**
+14. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 15. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)
 16. Enter **"~/Documents/CordovaLib/Classes/deprecated"** in the **"Go to the folder:" sheet** and then press the **"Go"** button
-17. Press the **"Add"** button in the **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s..." sheet**
+17. Press the **"Add"** button in the **"Add Files..." sheet**
 18. In your **AppDelegate.h, AppDelegate.m, and MainViewController.h** files - replace the whole **#ifdef PHONEGAP_FRAMEWORK** block with:
 
         #import "CDVDeprecated.h"

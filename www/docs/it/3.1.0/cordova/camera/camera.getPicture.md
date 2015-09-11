@@ -20,18 +20,18 @@ license: >
 
 # camera.getPicture
 
-Prende una foto utilizzando la fotocamera, o recupera una foto dalla galleria di immagini del dispositivo. L'immagine viene passata al metodo di callback successo come una codifica base64 `String` , o come l'URI per il file di immagine. Il metodo stesso restituisce un `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` che può essere utilizzato per riposizionare il Muffin di selezione file.
+Prende una foto utilizzando la fotocamera, o recupera una foto dalla galleria di immagini del dispositivo. L'immagine viene passata al metodo di callback successo come una codifica base64 `String` , o come l'URI per il file di immagine. Il metodo stesso restituisce un `CameraPopoverHandle` che può essere utilizzato per riposizionare il Muffin di selezione file.
 
-    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
+    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
 
 ## Descrizione
 
 il `camera.getPicture` funzione apre predefinito fotocamera applicazione il dispositivo che consente agli utenti di scattare foto. Questo comportamento si verifica per impostazione predefinita, quando `Camera.sourceType` è uguale a `Camera.PictureSourceType.CAMERA` . Una volta che l'utente scatta la foto, si chiude l'applicazione fotocamera e l'applicazione viene ripristinato.
 
-Se `Camera.sourceType` è `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM` , quindi un display finestra di dialogo che consente agli utenti di selezionare un'immagine esistente. La `camera.getPicture` la funzione restituisce un `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` oggetto, che può essere utilizzato per riposizionare la finestra di selezione immagine, ad esempio, quando l'orientamento del dispositivo.
+Se `Camera.sourceType` è `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM` , quindi un display finestra di dialogo che consente agli utenti di selezionare un'immagine esistente. La `camera.getPicture` la funzione restituisce un `CameraPopoverHandle` oggetto, che può essere utilizzato per riposizionare la finestra di selezione immagine, ad esempio, quando l'orientamento del dispositivo.
 
-Il valore restituito viene inviato alla `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` funzione di callback, in uno dei seguenti formati, a seconda che l'oggetto specificato `<a href="parameter/cameraOptions.html">cameraOptions</a>` :
+Il valore restituito viene inviato alla `cameraSuccess` funzione di callback, in uno dei seguenti formati, a seconda che l'oggetto specificato `cameraOptions` :
 
 *   A `String` contenente l'immagine della foto con codifica base64.
 
@@ -64,7 +64,7 @@ Android utilizza intenti a lanciare l'attività della fotocamera sul dispositivo
 
 ## iOS stranezze
 
-Compreso un JavaScript `alert()` in entrambi il callback funzioni possono causare problemi. Avvolgere l'avviso all'interno di un `setTimeout()` per consentire la selezione immagine iOS o muffin per <a href="../inappbrowser/inappbrowser.html">chiudere</a> completamente la prima che viene visualizzato l'avviso:
+Compreso un JavaScript `alert()` in entrambi il callback funzioni possono causare problemi. Avvolgere l'avviso all'interno di un `setTimeout()` per consentire la selezione immagine iOS o muffin per chiudere completamente la prima che viene visualizzato l'avviso:
 
     setTimeout(function() {/ / fai la tua cosa qui!}, 0);
     
@@ -125,7 +125,7 @@ Scattare una foto e recuperare il percorso del file dell'immagine:
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
+        document.addEventListener("deviceready",onDeviceReady,false);
     
         // device APIs are available
         //

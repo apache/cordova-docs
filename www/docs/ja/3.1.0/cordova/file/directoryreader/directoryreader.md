@@ -20,7 +20,7 @@ license: >
 
 # DirectoryReader
 
-[W3C ディレクトリとシステム][1]仕様で定義されている<a href="../fileobj/fileobj.html">ファイル</a>と、ディレクトリ内のディレクトリを一覧表示するオブジェクト。
+[W3C ディレクトリとシステム][1]仕様で定義されているファイルと、ディレクトリ内のディレクトリを一覧表示するオブジェクト。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -42,9 +42,9 @@ license: >
 
 **パラメーター:**
 
-*   **successCallback**: の配列が渡されるコールバック `<a href="../fileentry/fileentry.html">FileEntry</a>` と `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` オブジェクト。*(機能)*
+*   **successCallback**: の配列が渡されるコールバック `FileEntry` と `DirectoryEntry` オブジェクト。*(機能)*
 
-*   **解り**: ディレクトリ一覧を取得するときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ディレクトリ一覧を取得するときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 

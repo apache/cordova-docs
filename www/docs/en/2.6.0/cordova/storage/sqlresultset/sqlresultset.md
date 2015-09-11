@@ -21,19 +21,19 @@ license: >
 SQLResultSet
 =======
 
-When the executeSql method of a <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> is called it will invoke it's callback with a SQLResultSet.
+When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
 
 Properties
 -------
 
 - __insertId__: the row ID of the row that the SQLResultSet object's SQL statement inserted into the database
 - __rowsAffected__: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0. 
-- __rows__: a <a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a> representing the rows returned.  If no rows are returned the object will be empty.
+- __rows__: a SQLResultSetRowList representing the rows returned.  If no rows are returned the object will be empty.
 
 Details
 -------
 
-When you call the <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When you call the SQLTransaction executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
+Execute SQL Quick Example
 ------------------
 
     function queryDB(tx) {
@@ -66,23 +66,23 @@ Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
         alert("Error processing SQL: "+err.code);
     }
 
-    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(queryDB, errorCB);
 
-Full <a href="../storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../storage.html">Storage</a> <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Populate the database 
         //
@@ -121,21 +121,21 @@ Full <a href="../storage.opendatabase.html">Example</a>
         // Transaction success callback
         //
         function successCB() {
-            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
 
         // Cordova is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
-        <p><a href="../database/database.html">Database</a></p>
+        <h1>Example</h1>
+        <p>Database</p>
       </body>
     </html>

@@ -20,19 +20,19 @@ license: >
 
 # 場合
 
-此物件提供一個獲取根<a href="../fileobj/fileobj.html">檔</a>案系統方法。
+此物件提供一個獲取根檔案系統方法。
 
 ## 方法
 
-*   **requestFileSystem**: 請求的<a href="../fileobj/fileobj.html">檔</a>案系統。*（函數）*
+*   **requestFileSystem**: 請求的檔案系統。*（函數）*
 
-*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `<a href="../fileentry/fileentry.html">FileEntry</a>` 使用當地的 URI。*（函數）*
+*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `FileEntry` 使用當地的 URI。*（函數）*
 
 ## 常量
 
-*   `LocalFileSystem.PERSISTENT`： 用於<a href="../../storage/storage.html">存儲</a>，不應由使用者代理不應用程式或使用者的許可權的情況下刪除。
+*   `LocalFileSystem.PERSISTENT`： 用於存儲，不應由使用者代理不應用程式或使用者的許可權的情況下刪除。
 
-*   `LocalFileSystem.TEMPORARY`： 用於不能保證的持久性<a href="../../storage/storage.html">存儲</a>。
+*   `LocalFileSystem.TEMPORARY`： 用於不能保證的持久性存儲。
 
 ## 詳細資訊
 
@@ -46,7 +46,7 @@ license: >
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 請求<a href="../fileobj/fileobj.html">檔</a>案系統快速示例
+## 請求檔案系統快速示例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -56,7 +56,7 @@ license: >
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## 解決本地<a href="../fileobj/fileobj.html">檔</a>案系統的 URI 快速示例
+## 解決本地檔案系統的 URI 快速示例
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Local File System Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Local File System</p>
       </body>
     </html>
@@ -109,18 +109,18 @@ license: >
 
 # requestFileSystem
 
-> 請求一個<a href="../fileobj/fileobj.html">檔</a>案系統，用來<a href="../../storage/storage.html">存儲</a>應用程式資料。
+> 請求一個檔案系統，用來存儲應用程式資料。
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **視窗**： 對全球視窗物件的引用
-*   **類型**： 本地<a href="../fileobj/fileobj.html">檔</a>案系統類型，請參見場合常數
-*   **大小**： 指示應用程式期望需要多少<a href="../../storage/storage.html">存儲</a>空間，以位元組為單位，
-*   **successCallback**： 使用一個<a href="../fileobj/fileobj.html">檔</a>案系統物件調用
-*   **errorCallback**： 如果發生錯誤的檢索<a href="../fileobj/fileobj.html">檔</a>案系統調用
+*   **類型**： 本地檔案系統類型，請參見場合常數
+*   **大小**： 指示應用程式期望需要多少存儲空間，以位元組為單位，
+*   **successCallback**： 使用一個檔案系統物件調用
+*   **errorCallback**： 如果發生錯誤的檢索檔案系統調用
 
-## 請求<a href="../fileobj/fileobj.html">檔</a>案系統快速示例
+## 請求檔案系統快速示例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

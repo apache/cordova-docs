@@ -22,14 +22,14 @@ license: >
 
 Получите текущий курс.
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## Описание
 
-<a href="compass.html">Компас</a> является датчик, который определяет направление или заголовок, что устройство указал, обычно из верхней части устройства. Он измеряет направление в градусах от 0 до 359,99 градусов, где 0 — север.
+Компас является датчик, который определяет направление или заголовок, что устройство указал, обычно из верхней части устройства. Он измеряет направление в градусах от 0 до 359,99 градусов, где 0 — север.
 
-Курс информация возвращается через `CompassHeading` объект с помощью `<a href="parameters/compassSuccess.html">compassSuccess</a>` функции обратного вызова.
+Курс информация возвращается через `CompassHeading` объект с помощью `compassSuccess` функции обратного вызова.
 
 ## Поддерживаемые платформы
 
@@ -47,7 +47,7 @@ license: >
     };
     
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

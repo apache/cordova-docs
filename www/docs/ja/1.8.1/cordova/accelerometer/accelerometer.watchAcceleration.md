@@ -18,23 +18,23 @@ license: >
     under the License.
 ---
 
-accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
+accelerometer.watchAcceleration
 ===============================
 
 ある時間間隔における x, y, z 軸上の加速度を返します。
 
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
-                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
-                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
+    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                           accelerometerError,
+                                                           [accelerometerOptions]);
 
 概要
 -----------
 
 加速度センサーはデバイスの傾きの増加量を計測します。加速度センサーでは x, y, z 軸の3次元の傾きを取得出来ます。
 
-`accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>` 関数を使うと、一定の間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` コールバック関数が実行されます。加速度情報を取得する間隔は、 `acceleratorOptions` オブジェクトのパラメーター `frequency` を通じてミリ秒単位で指定できます。
+`accelerometer.watchAcceleration` 関数を使うと、一定の間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `accelerometerSuccess` コールバック関数が実行されます。加速度情報を取得する間隔は、 `acceleratorOptions` オブジェクトのパラメーター `frequency` を通じてミリ秒単位で指定できます。
 
-本関数の戻り値である watch ID は、実行中の加速度センサー測定への参照を表します。また、 `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` 関数に watch ID を渡すことで、加速度センサーの監視を停止できます。
+本関数の戻り値である watch ID は、実行中の加速度センサー測定への参照を表します。また、 `accelerometer.clearWatch` 関数に watch ID を渡すことで、加速度センサーの監視を停止できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,7 +46,7 @@ accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
 - Bada 1.2 & 2.x
 
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     function onSuccess(acceleration) {
@@ -62,29 +62,29 @@ accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
 
     var options = { frequency: 3000 };  // 3秒ごとに更新
 
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>加速度センサーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>加速度センサーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // watch ID が現在の `watch<a href="acceleration/acceleration.html">Acceleration</a>` を参照
+        // watch ID が現在の `watchAcceleration` を参照
         var watchID = null;
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             startWatch();
         }
 
@@ -95,14 +95,14 @@ accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
             // 加速度情報を3秒ごとに更新
             var options = { frequency: 3000 };
 
-            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
 
         // 加速度情報の監視を停止
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
+                navigator.accelerometer.clearWatch(watchID);
                 watchID = null;
             }
         }

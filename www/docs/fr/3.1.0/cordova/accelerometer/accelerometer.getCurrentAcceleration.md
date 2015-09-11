@@ -22,14 +22,14 @@ license: >
 
 Renvoie l'accélération en cours sur les axes *x*, *y*et *z* .
 
-    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## Description
 
 L'accéléromètre est un capteur de mouvement qui détecte la modification (*delta*) en mouvement relatif à l'orientation actuelle de l'appareil, en trois dimensions le long de l'axe *x*, *y* et *z* .
 
-Ces valeurs d'accélération sont retournées par la fonction callback `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>`.
+Ces valeurs d'accélération sont retournées par la fonction callback `accelerometerSuccess`.
 
 ## Plates-formes supportées
 
@@ -61,14 +61,14 @@ Ces valeurs d'accélération sont retournées par la fonction callback `<a href=
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ Ces valeurs d'accélération sont retournées par la fonction callback `<a href=
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

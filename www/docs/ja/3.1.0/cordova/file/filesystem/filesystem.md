@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">ファイル</a> ・ システム
+# ファイル ・ システム
 
-このオブジェクトは、<a href="../fileobj/fileobj.html">ファイル</a> ・ システムを表します。
+このオブジェクトは、ファイル ・ システムを表します。
 
 ## プロパティ
 
-*   **名前**: <a href="../fileobj/fileobj.html">ファイル</a> システムの名前。*（，）*
+*   **名前**: ファイル システムの名前。*（，）*
 
-*   **ルート**: <a href="../fileobj/fileobj.html">ファイル</a> システムのルート ディレクトリ。*(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **ルート**: ファイル システムのルート ディレクトリ。*(DirectoryEntry)*
 
 ## 詳細
 
-`FileSystem`オブジェクトは、<a href="../fileobj/fileobj.html">ファイル</a> システムに関する情報を表します。 <a href="../fileobj/fileobj.html">ファイル</a> システムの名前は公開されている<a href="../fileobj/fileobj.html">ファイル</a> ・ システムのリストの間でユニークです。 Root プロパティが含まれています、 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` <a href="../fileobj/fileobj.html">ファイル</a>システムのルート ディレクトリを表すオブジェクト。
+`FileSystem`オブジェクトは、ファイル システムに関する情報を表します。 ファイル システムの名前は公開されているファイル ・ システムのリストの間でユニークです。 Root プロパティが含まれています、 `DirectoryEntry` ファイルシステムのルート ディレクトリを表すオブジェクト。
 
 ## サポートされているプラットフォーム
 
@@ -40,7 +40,7 @@ license: >
 *   Windows Phone 7 と 8
 *   Windows 8
 
-## <a href="../fileobj/fileobj.html">ファイル</a> システムの簡単な例
+## ファイル システムの簡単な例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -48,7 +48,7 @@ license: >
     }
     
     // request the persistent file system
-    window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, null);
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
     
 
 ## 完全な例
@@ -56,19 +56,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File System Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
     
         function onFileSystemSuccess(fileSystem) {
@@ -83,7 +83,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>File System</p>
       </body>
     </html>

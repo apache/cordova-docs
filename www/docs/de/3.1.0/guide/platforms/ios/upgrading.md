@@ -38,7 +38,7 @@ Führen Sie für CLI-Projekte:
 
 ### iOS 7 Fragen
 
-    1. Entfernen Sie die Werte "Breite = <a href="../../../cordova/device/device.html">Gerät</a>e-Breite, Höhe = Device-Height" entnehmen Sie Ihre Meta-Tag "Viewport" Attribut in der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> "index.html", https://issues.apache.org/jira/browse/CB-4323 2. Aktualisieren Sie Ihre <a href="../../../cordova/media/media.html">Medien</a>, <a href="../../../cordova/media/media.html">Medien</a>-Capture und Splashscreen Core-Plugins für iOS 7 Unterstützung
+    1. Entfernen Sie die Werte "Breite = Geräte-Breite, Höhe = Device-Height" entnehmen Sie Ihre Meta-Tag "Viewport" Attribut in der Datei "index.html", https://issues.apache.org/jira/browse/CB-4323 2. Aktualisieren Sie Ihre Medien, Medien-Capture und Splashscreen Core-Plugins für iOS 7 Unterstützung
     
 
 ### Xcode 5 Fragen
@@ -55,7 +55,7 @@ platform add ios`.
 
 3.  Kopieren Sie den Inhalt des Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
 
-4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` usw.), die sicher um jede neuen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zu den `.xcodeproj` Projekt. Das iOS-Projekt erstellt, in das `platforms\ios` Verzeichnis.
+4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` usw.), die sicher um jede neuen Dateien zu den `.xcodeproj` Projekt. Das iOS-Projekt erstellt, in das `platforms\ios` Verzeichnis.
 
 5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie die Einstellungen hier anstelle des Plattform-Verzeichnisses.
 
@@ -65,7 +65,7 @@ platform add ios`.
 
 ## Upgrade 2.9.0 Projekte 3.0.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -73,9 +73,9 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> selbst in der Kopfzeile) <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
 7.  Löschen Sie Ihre `CordovaLib` Verzeichnis, und kopieren die `CordovaLib` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis.
 
@@ -83,7 +83,7 @@ platform add ios`.
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -91,15 +91,15 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> selbst in der Kopfzeile) <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
 7.  Löschen Sie Ihre `CordovaLib` Verzeichnis, und kopieren die `CordovaLib` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis.
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -107,9 +107,9 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> selbst in der Kopfzeile) <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.7.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
 7.  Aktualisieren `<plugin>` Markierungen, die in Ihrer `config.xml` zu `<feature>` Markierungen. Beachten Sie, dass die vorhandenen `<plugin>` Tags noch funktionieren, aber sind veraltet. Sie können diese Informationen in der `config.xml` für ein neues Projekt. Zum Beispiel:
     
@@ -123,15 +123,15 @@ platform add ios`.
         OpenAL ImageIO
         
 
-10. Aktualisieren Sie Ihr Projektziel **Buildeinstellungen**. Unter **<a href="../../../cordova/connection/connection.html">Verbindung</a> → Sonstiges Linker-<a href="../../../cordova/file/flags/flags.html">Flags</a>**, bearbeiten **"- Obj - C"** zu **"-ObjC"**.
+10. Aktualisieren Sie Ihr Projektziel **Buildeinstellungen**. Unter **Verbindung → Sonstiges Linker-Flags**, bearbeiten **"- Obj - C"** zu **"-ObjC"**.
 
-11. Aktualisieren Sie Ihr Projektziel **Buildeinstellungen**. Ändern Sie unter **<a href="../../../cordova/connection/connection.html">Verbindung</a> → Sonstiges Linker-<a href="../../../cordova/file/flags/flags.html">Flags</a>**, **"-All_load"** zu `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . Sie müssten nur, dies zu tun, haben Sie das Problem in definierten [dieses Problem.][1].
+11. Aktualisieren Sie Ihr Projektziel **Buildeinstellungen**. Ändern Sie unter **Verbindung → Sonstiges Linker-Flags**, **"-All_load"** zu `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . Sie müssten nur, dies zu tun, haben Sie das Problem in definierten [dieses Problem.][1].
 
  [1]: https://issues.apache.org/jira/browse/CB-3458
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -139,13 +139,13 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.7.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.6.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.7.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> entsprechend von dem neuen Projekt (siehe [diese Diff][2]).
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `AppDelegate.m` Datei entsprechend von dem neuen Projekt (siehe [diese Diff][2]).
 
-8.  In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [Entfernen Sie diese Zeile][3].
+8.  In der `config.xml` Datei, [Entfernen Sie diese Zeile][3].
 
 9.  Löschen Sie Ihre `CordovaLib` Verzeichnis, und kopieren die `CordovaLib` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis.
 
@@ -154,7 +154,7 @@ platform add ios`.
 
 ## Upgrade 2.5.0 Projekte 2.6.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -162,19 +162,19 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopieren Sie das Projekt `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in Ihr `www` Verzeichnis, und Löschen der `www/cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopieren Sie das Projekt `www/cordova-2.6.0.js` Datei in Ihr `www` Verzeichnis, und Löschen der `www/cordova-2.5.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (zusammen mit anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die das Skript verweisen) zum Verweisen auf die neue `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (zusammen mit anderen Dateien, die das Skript verweisen) zum Verweisen auf die neue `cordova-2.6.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> entsprechend von dem neuen Projekt (siehe [diese Diff][4]).
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `AppDelegate.m` Datei entsprechend von dem neuen Projekt (siehe [diese Diff][4]).
 
-8.  In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [fügen Sie diese neue Linie][5].
+8.  In der `config.xml` Datei, [fügen Sie diese neue Linie][5].
 
-9.  In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [fügen Sie diese neue Linie][6].
+9.  In der `config.xml` Datei, [fügen Sie diese neue Linie][6].
 
-10. In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [UIWebViewBounce, DisallowOverscroll, geändert wurde und Standardwerte sind unterschiedlich][7].
+10. In der `config.xml` Datei, [UIWebViewBounce, DisallowOverscroll, geändert wurde und Standardwerte sind unterschiedlich][7].
 
-11. In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die `EnableLocation` Präferenz ist veraltet.
+11. In der `config.xml` Datei, die `EnableLocation` Präferenz ist veraltet.
 
 12. Löschen Sie Ihre `CordovaLib` Verzeichnis, und kopieren die `CordovaLib` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis.
 
@@ -185,7 +185,7 @@ platform add ios`.
 
 ## Upgrade 2.4.0 Projekte 2.5.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -193,17 +193,17 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihrem `www` -Verzeichnis und löschen Ihre `www/cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.5.0.js` Datei aus dem neuen Projekt in Ihrem `www` -Verzeichnis und löschen Ihre `www/cordova-2.4.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.5.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> entsprechend von dem neuen Projekt (siehe [diese Diff][8]).
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `AppDelegate.m` Datei entsprechend von dem neuen Projekt (siehe [diese Diff][8]).
 
-8.  In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [fügen Sie diese neuen Zeilen][9].
+8.  In der `config.xml` Datei, [fügen Sie diese neuen Zeilen][9].
 
-9.  In Ihrem `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [das Root-Element zu bearbeiten, ändern sie von Cordova, Widget][10].
+9.  In Ihrem `config.xml` Datei, [das Root-Element zu bearbeiten, ändern sie von Cordova, Widget][10].
 
-10. In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [Entfernen Sie die Voreinstellung "OpenAllWhitelistURLsInWebView"][11].
+10. In der `config.xml` Datei, [Entfernen Sie die Voreinstellung "OpenAllWhitelistURLsInWebView"][11].
 
 11. Löschen Sie Ihre `cordova` Verzeichnis, und kopieren die `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis. In 2.5.0 hat dieses Skripts aktualisiert.
 
@@ -216,7 +216,7 @@ platform add ios`.
 
 ## Upgrade 2.3.0 Projekte 2.4.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -224,15 +224,15 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.4.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.3.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.4.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en nie geändert) Ihre `MainViewController.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> entsprechend von dem neuen Projekt (siehe [diese Diff][12]).
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Dateien nie geändert) Ihre `MainViewController.m` Datei entsprechend von dem neuen Projekt (siehe [diese Diff][12]).
 
-8.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `AppDelegate.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> entsprechend von dem neuen Projekt (siehe [diese Diff][13]).
+8.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `AppDelegate.m` Datei entsprechend von dem neuen Projekt (siehe [diese Diff][13]).
 
-9.  In der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, [fügen Sie diese neue Linie][14].
+9.  In der `config.xml` Datei, [fügen Sie diese neue Linie][14].
 
 10. Löschen Sie Ihre `cordova` Verzeichnis, und kopieren die `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis. In 2.4.0 hat dieses Skripts fest.
 
@@ -247,7 +247,7 @@ platform add ios`.
 
 ## Upgrade 2.2.0 Projekte 2.3.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -255,34 +255,34 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.3.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.2.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.3.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt.
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt.
 
 8.  Löschen Sie Ihre `cordova` Verzeichnis, und kopieren die `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis. In 2.3.0 hat das neue Skripte.
 
 9.  Löschen Sie Ihre `CordovaLib` Verzeichnis, und kopieren die `CordovaLib` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis.
 
-10. Konvertieren Ihrer `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zu `config.xml` , durch Ausführen des Skripts `bin/cordova\_plist\_to\_config\_xml` auf Ihre Projektdatei.
+10. Konvertieren Ihrer `Cordova.plist` Datei zu `config.xml` , durch Ausführen des Skripts `bin/cordova\_plist\_to\_config\_xml` auf Ihre Projektdatei.
 
-11. Fügen Sie das <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>-Plugin, um Ihre `config.xml` , durch Hinzufügen von diesem Tag unter `<cordova><plugins>` :
+11. Fügen Sie das InAppBrowser-Plugin, um Ihre `config.xml` , durch Hinzufügen von diesem Tag unter `<cordova><plugins>` :
     
-        < Plugin Name = "<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" Value = "CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" / >
+        < Plugin Name = "InAppBrowser" Value = "CDVInAppBrowser" / >
         
 
-12. Beachten Sie, dass Objective-C-Plugins *nicht* auf der weißen Liste mehr sind. Zur weißen Liste Ihre <a href="../../../cordova/connection/connection.html">Verbindung</a>en mit der app-Whitelist, Sie müssen die `User-Agent` die <a href="../../../cordova/connection/connection.html">Verbindung</a> mit der gleichen User-Agent als die wichtigsten Cordova WebView-Header. Erhalten Sie durch den Zugriff auf die `userAgent` Eigenschaft aus den wichtigsten anzeigen-Controller. Die wichtigste View-Controller (CDVViewController) hat auch eine `URLisAllowed` Methode, damit Sie prüfen, ob eine URL die Whitelist übergeben wird.
+12. Beachten Sie, dass Objective-C-Plugins *nicht* auf der weißen Liste mehr sind. Zur weißen Liste Ihre Verbindungen mit der app-Whitelist, Sie müssen die `User-Agent` die Verbindung mit der gleichen User-Agent als die wichtigsten Cordova WebView-Header. Erhalten Sie durch den Zugriff auf die `userAgent` Eigenschaft aus den wichtigsten anzeigen-Controller. Die wichtigste View-Controller (CDVViewController) hat auch eine `URLisAllowed` Methode, damit Sie prüfen, ob eine URL die Whitelist übergeben wird.
 
-13. <a href="../../../cordova/device/device.html">Gerät</a>e API-Änderungen:
+13. Geräte API-Änderungen:
     
-    *   Für iOS, <a href="../../../cordova/device/device.platform.html">device.platform</a> zurückgeben verwendet `iPhone` , `iPad` oder `iPod Touch` , jetzt es gibt (richtig)`iOS`.
-    *   Für iOS, <a href="../../../cordova/device/device.name.html">device.name</a> (veraltet für alle Plattformen) verwendet, um den Namen von dem <a href="../../../cordova/device/device.html">Gerät</a> des Benutzers zurückzugeben (z.B. ' Shazrons iPhone 5 '); Jetzt gibt es was <a href="../../../cordova/device/device.platform.html">device.platform</a> zurückgegeben: `iPhone` , `iPad` oder`iPod Touch`.
-    *   Für alle Plattformen gibt es eine neue Eigenschaft namens <a href="../../../cordova/device/device.model.html">device.model</a>; Dies gibt das jeweilige <a href="../../../cordova/device/device.html">Gerät</a>emodell, z.B. `iPad2,5` (für andere Plattformen gibt das was <a href="../../../cordova/device/device.name.html">device.name</a> zurückgegeben).
+    *   Für iOS, device.platform zurückgeben verwendet `iPhone` , `iPad` oder `iPod Touch` , jetzt es gibt (richtig)`iOS`.
+    *   Für iOS, device.name (veraltet für alle Plattformen) verwendet, um den Namen von dem Gerät des Benutzers zurückzugeben (z.B. ' Shazrons iPhone 5 '); Jetzt gibt es was device.platform zurückgegeben: `iPhone` , `iPad` oder`iPod Touch`.
+    *   Für alle Plattformen gibt es eine neue Eigenschaft namens device.model; Dies gibt das jeweilige Gerätemodell, z.B. `iPad2,5` (für andere Plattformen gibt das was device.name zurückgegeben).
 
 ## Upgrade 2.1.0 Projekte 2.2.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -290,31 +290,31 @@ platform add ios`.
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.2.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.1.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.2.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt:
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt:
     
     *   Aktualisiert → ViewWillAppear
 
 8.  Kopie der `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis. Im 2.2.0 hat dies ein aktualisiertes 'emulieren' Skript.
 
-9.  Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>verweis jetzt.
+9.  Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
-    3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>:
+    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
+    3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` Datei:
         
         `Update_cordova_subproject Pfad/zu/Ihrem/Projekt/xcodeproj`
 
-**Hinweis:** In 2.2.0 das `bin/create` Skript-Kopie in der `CordovaLib` Teilprojekt in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in der rechten `CordovaLib` in Ihr Projektverzeichnis, und Update der `CordovaLib` Teilprojekt Lage (bezogen auf "Projekt") in der Xcode-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-Inspektor.
+**Hinweis:** In 2.2.0 das `bin/create` Skript-Kopie in der `CordovaLib` Teilprojekt in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in der rechten `CordovaLib` in Ihr Projektverzeichnis, und Update der `CordovaLib` Teilprojekt Lage (bezogen auf "Projekt") in der Xcode-Datei-Inspektor.
 
 ## Upgrade 2.0.0 Projekte auf 2.1.0
 
 Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**verwenden aktualisiert wurde. Sie nicht müssen upgrade auf **ARC** mithilfe von CordovaLib, aber wenn Sie, aktualisieren Sie das Projekt zur Verwendung von **ARC möchten**, verwenden Sie bitte den Xcode-Migrations-Assistenten aus dem Menü: **Bearbeiten → → umgestalten Convert in Objective-C-Bogen...**, libCordova.a aufzuheben, dann führen Sie den Assistenten bis zum Abschluss.
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -322,28 +322,28 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 4.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-5.  Kopie der `www/cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Kopie der `www/cordova-2.1.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-2.0.0.js` Datei.
 
-6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.1.0.js` Datei.
 
-7.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `AppDelegate.m` nach von dem neuen Projekt:
+7.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `AppDelegate.m` nach von dem neuen Projekt:
     
     *   Bearbeitet → Anwendung: DidFinishLaunchingWithOptions:
     *   Hinzugefügt → Anwendung: SupportedInterfaceOrientationsForWindow:
 
-8.  Aktualisieren (oder zu ersetzen, wenn Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt:
+8.  Aktualisieren (oder zu ersetzen, wenn Sie die Datei nie geändert) Ihre `MainViewController.m` nach von dem neuen Projekt:
     
     *   Hinzugefügt → ViewWillAppear
 
 9.  Kopie der `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis. Im 2.1.0 hat dies die aktualisierte Skripts um Pfade mit Leerzeichen zu unterstützen.
 
-10. Entfernen Sie die `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Verweis aus dem Projekt (*nicht* die in`CordovaLib`).
+10. Entfernen Sie die `VERSION` Datei Verweis aus dem Projekt (*nicht* die in`CordovaLib`).
 
-11. Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>verweis jetzt.
+11. Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
-    3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>:
+    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
+    3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` Datei:
         
         `Update_cordova_subproject Pfad/zu/Ihrem/Projekt/xcodeproj`
 
@@ -353,13 +353,13 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 2.  Erstellen Sie ein neues Projekt, wie in iOS Command-Line Tools beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
-3.  Kopie der `www/cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+3.  Kopie der `www/cordova-2.0.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.9.0.js` Datei.
 
-4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-2.0.0.js` Datei.
 
 5.  Kopie der `cordova` Verzeichnis des neuen Projekts in Ihrem Projekt-Root-Verzeichnis (wenn Sie möchten, dass die Projekt-Befehlszeilen-Tools).
 
-6.  Fügen Sie einen neuen Eintrag unter `Plugins` in Ihrem `Cordova.plist` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> unter der **Hilfsdateien** -Gruppe. Der Schlüssel ist `Device` und der Wert ist`CDVDevice`.
+6.  Fügen Sie einen neuen Eintrag unter `Plugins` in Ihrem `Cordova.plist` -Datei unter der **Hilfsdateien** -Gruppe. Der Schlüssel ist `Device` und der Wert ist`CDVDevice`.
 
 7.  Entfernen`Cordova.framework`.
 
@@ -371,7 +371,7 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 11. Suchen Sie das `CordovaLib` -Verzeichnis, das auf Ihrer Festplatte unter Ihrem Benutzerordner installiert wurde `Documents` Unterverzeichnis.
 
-12. Suchen Sie die `CordovaLib.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> das `CordovaLib` Verzeichnis, dann per Drag & Drop die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in Ihr Projekt. Es sollte als ein Teilprojekt angezeigt.
+12. Suchen Sie die `CordovaLib.xcodeproj` Datei das `CordovaLib` Verzeichnis, dann per Drag & Drop die Datei in Ihr Projekt. Es sollte als ein Teilprojekt angezeigt.
 
 13. Erstellen Sie das Projekt, solltest du einige Fehler im Zusammenhang mit `#import` Richtlinien.
 
@@ -403,19 +403,19 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 22. Wählen Sie das **Symbol "Projekt"** in der Projekt-Navigator, wählen Sie das Projekt **Target**, dann wählen Sie die Registerkarte **Einstellungen erstellen** .
 
-23. Suchen Sie nach **Anderen Linker-<a href="../../../cordova/file/flags/flags.html">Flags</a>**, und addieren Sie die Werte **-All_load** und **- Obj-C**.
+23. Suchen Sie nach **Anderen Linker-Flags**, und addieren Sie die Werte **-All_load** und **- Obj-C**.
 
 24. Erweitern Sie die `CordovaLib` Teilprojekt.
 
-25. Suchen Sie die `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, ziehen Sie es in Ihr Haupt-Projekt (wir möchten einen Link zu ihr, keine Kopie erstellen).
+25. Suchen Sie die `VERSION` Datei, ziehen Sie es in Ihr Haupt-Projekt (wir möchten einen Link zu ihr, keine Kopie erstellen).
 
 26. Aktivieren Sie das Optionsfeld **erstellen Gruppen für alle hinzugefügten Ordner** , und wählen Sie die Schaltfläche **Fertig stellen** .
 
-27. Wählen Sie die `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die Sie nur in einem vorherigen Schritt gezogen.
+27. Wählen Sie die `VERSION` Datei, die Sie nur in einem vorherigen Schritt gezogen.
 
-28. Geben Sie die **Option-Befehl-1** -Tastenkombination zum Anzeigen der **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Inspector** (oder Menuitem **anzeigen → Dienstprogramme → "<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-Informationen einblenden"**).
+28. Geben Sie die **Option-Befehl-1** -Tastenkombination zum Anzeigen der **Datei Inspector** (oder Menuitem **anzeigen → Dienstprogramme → "Datei-Informationen einblenden"**).
 
-29. Wählen Sie **relativ zum CORDOVALIB** in der **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-Inspektor** für die Drop-Down-Menü für **Lage**.
+29. Wählen Sie **relativ zum CORDOVALIB** in der **Datei-Inspektor** für die Drop-Down-Menü für **Lage**.
 
 30. Legen Sie die Voreinstellung "Xcode" **Xcode "Einstellungen" → Standorte → abgeleitete Daten → Advanced...** auf **Unique**, damit die einheitliche Header gefunden werden können.
 
@@ -430,7 +430,7 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
         "$(BUILT_PRODUCTS_DIR)"
         
 
-33. Suche nach **anderen Linker-<a href="../../../cordova/file/flags/flags.html">Flags</a>**. Fügen Sie diesen Wert für diese Einstellung:
+33. Suche nach **anderen Linker-Flags**. Fügen Sie diesen Wert für diese Einstellung:
     
         -Weak_framework CoreFoundation
         
@@ -449,9 +449,9 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 2.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-3.  Kopie der `www/cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.8.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+3.  Kopie der `www/cordova-1.9.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.8.x.js` Datei.
 
-4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.9.0.js` Datei.
 
 **Hinweis:** 1.9.0 unterstützt das neue `BackupWebStorage` boolesche `Cordova.plist` Einstellung. Es ist standardmäßig aktiviert, so legen Sie es auf `false` , besonders auf iOS 6 deaktivieren. Finden Sie unter [Release Notes: Safari und UIKit Abschnitt][16]
 
@@ -463,9 +463,9 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 2.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-3.  Kopie der `www/cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.7.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+3.  Kopie der `www/cordova-1.8.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.7.x.js` Datei.
 
-4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.8.0.js` Datei.
 
 Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **iPad Retina-Display** -Vermögen:
 
@@ -481,9 +481,9 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 2.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-3.  Kopie der `www/cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+3.  Kopie der `www/cordova-1.7.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.6.0.js` Datei.
 
-4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.7.0.js` Datei.
 
 ## Upgrade 1.5.0 Projekte 1.6.x
 
@@ -493,24 +493,24 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 1.5.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.5.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
 
-5.  Fügen Sie die neue `MainViewController` und `AppDelegate` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie die neue `MainViewController` und `AppDelegate` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/cordova-1.6.1.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/cordova-1.5.0.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova-1.6.1.js` Datei.
 
-8.  Fügen Sie das neue `Cordova.plist` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in Ihrem Projekt. Dies ist notwendig, da die Core-Plugin-Dienst-Namen ändern müssen, um die für eine einheitliche Cordova JavaScript-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (von Android und BlackBerry, übereinstimmen`cordova-js`).
+8.  Fügen Sie das neue `Cordova.plist` -Datei in Ihrem Projekt. Dies ist notwendig, da die Core-Plugin-Dienst-Namen ändern müssen, um die für eine einheitliche Cordova JavaScript-Datei (von Android und BlackBerry, übereinstimmen`cordova-js`).
 
 9.  Alle Einstellungen, **Plugins** und **ExternalHosts** Einträge, die Sie in Ihrem **gesicherten Cordova.plist** in das neue hatten zu integrieren`Cordova.plist`.
 
-10. Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en. `UIWebViewDelegate`Oder `CDVCommandDelegate` code in `AppDelegate.m` müssen in `MainViewController.m` jetzt (siehe Abschnitte in der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> auskommentiert).
+10. Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien. `UIWebViewDelegate`Oder `CDVCommandDelegate` code in `AppDelegate.m` müssen in `MainViewController.m` jetzt (siehe Abschnitte in der Datei auskommentiert).
 
-11. Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `MainViewController.h` und `MainViewController.m` in die neuen MainViewController-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+11. Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `MainViewController.h` und `MainViewController.m` in die neuen MainViewController-Dateien.
 
 12. Klicken Sie auf das Projektsymbol in der Projekt-Navigator, wählen Sie das **Projekt**, dann wählen Sie die Registerkarte **Einstellungen erstellen** .
 
@@ -524,37 +524,37 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 2.  Erstellen Sie ein neues Projekt, und führen Sie es einmal. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-3.  Kopie der `www/cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.4.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+3.  Kopie der `www/cordova-1.5.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.4.x.js` Datei.
 
-4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue Cordova hinzu `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+4.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue Cordova hinzu `cordova-1.5.0.js` Datei.
 
 5.  Finden Sie `PhoneGap.framework` in Ihrem Projekt-Navigator, wählen Sie es.
 
 6.  Geben Sie den Schlüssel **Löschen** und Löschen der `PhoneGap.framework` Verweis in der Projekt-Navigator.
 
-7.  Geben Sie die **Option-Befehl-A** -Tastenkombination, die drop-down-ein Blatt zu dem Projekt (die **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen...** -Blatt) <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen sollten. Stellen Sie sicher, dass das Optionsfeld **erstellt Gruppen für alle hinzugefügten Ordner** ausgewählt ist.
+7.  Geben Sie die **Option-Befehl-A** -Tastenkombination, die drop-down-ein Blatt zu dem Projekt (die **Dateien hinzufügen...** -Blatt) Dateien hinzufügen sollten. Stellen Sie sicher, dass das Optionsfeld **erstellt Gruppen für alle hinzugefügten Ordner** ausgewählt ist.
 
 8.  Geben Sie die Tastenkombination **Umschalt-Befehl-G** , drop-down-ein weiteres Blatt für Sie zu einem Ordner gehen sollte (die **gehen in den Ordner:** Blatt).
 
 9.  Geben Sie `/Users/Shared/Cordova/Frameworks/Cordova.framework` in die **gehen in den Ordner:** Blatt und drücken Sie dann die Schaltfläche " **Go** ".
 
-10. Drücken Sie die Taste " **Hinzufügen** " in dem **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen...** -Blatt.
+10. Drücken Sie die Taste " **Hinzufügen** " in dem **Dateien hinzufügen...** -Blatt.
 
 11. Wählen Sie `Cordova.framework` in der Projektnavigator.
 
-12. Geben Sie die **Option-Befehl-1** -Tastenkombination zum Anzeigen der **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Inspector**.
+12. Geben Sie die **Option-Befehl-1** -Tastenkombination zum Anzeigen der **Datei Inspector**.
 
-13. Wählen Sie **Absoluter Pfad** in der **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-Inspektor** für die Drop-Down-Menü für **Standort**.
+13. Wählen Sie **Absoluter Pfad** in der **Datei-Inspektor** für die Drop-Down-Menü für **Standort**.
 
-14. Geben Sie die **Option-Befehl-A** -Tastenkombination, die drop-down-ein Blatt zu dem Projekt (die **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen...** -Blatt) <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen sollten. Stellen Sie sicher, dass das Optionsfeld **erstellt Gruppen für alle hinzugefügten Ordner** ausgewählt ist.
+14. Geben Sie die **Option-Befehl-A** -Tastenkombination, die drop-down-ein Blatt zu dem Projekt (die **Dateien hinzufügen...** -Blatt) Dateien hinzufügen sollten. Stellen Sie sicher, dass das Optionsfeld **erstellt Gruppen für alle hinzugefügten Ordner** ausgewählt ist.
 
 15. Geben Sie die Tastenkombination **Umschalt-Befehl-G** , drop-down-ein weiteres Blatt für Sie zu einem Ordner gehen sollte (die **gehen in den Ordner:** Blatt).
 
 16. Geben Sie `~/Documents/CordovaLib/Classes/deprecated` in die **gehen in den Ordner:** Blatt und drücken Sie dann die Schaltfläche " **Go** ".
 
-17. Drücken Sie die Taste " **Hinzufügen** " in dem **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en hinzufügen...** -Blatt.
+17. Drücken Sie die Taste " **Hinzufügen** " in dem **Dateien hinzufügen...** -Blatt.
 
-18. In Ihrem `AppDelegate.h` , `AppDelegate.m` , und `MainViewController.h` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, ersetzen die gesamte `#ifdef PHONEGAP_FRAMEWORK` -block mit:
+18. In Ihrem `AppDelegate.h` , `AppDelegate.m` , und `MainViewController.h` Dateien, ersetzen die gesamte `#ifdef PHONEGAP_FRAMEWORK` -block mit:
     
         #import "CDVDeprecated.h"
         
@@ -575,7 +575,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 26. Ersetzen Sie alle Vorkommen von **PhoneGap** mit **Cordova**.
 
-27. Finden Sie Ihre `PhoneGap.plist` in der Projekt-Navigator <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, und klicken Sie auf den <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>namen eingeben Name Bearbeitungsmodus.
+27. Finden Sie Ihre `PhoneGap.plist` in der Projekt-Navigator Datei, und klicken Sie auf den Dateinamen eingeben Name Bearbeitungsmodus.
 
 28. Benennen Sie `PhoneGap.plist` auf`Cordova.plist`.
 
@@ -597,13 +597,13 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopie der `MainViewController.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in das 1.4.0-based-Projekt-Verzeichnis auf der Festplatte, die alte <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ersetzen (backup Ihrer <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben).
+4.  Kopie der `MainViewController.m` Datei aus dem neuen Projekt in das 1.4.0-based-Projekt-Verzeichnis auf der Festplatte, die alte Datei ersetzen (backup Ihrer Dateien zuerst aus Schritt 2 oben).
 
-5.  Fügen Sie die `MainViewController.m` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das Xcode-Projekt.
+5.  Fügen Sie die `MainViewController.m` Datei in das Xcode-Projekt.
 
-6.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `MainViewController.m` in die neue <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `MainViewController.m` in die neue Datei.
 
-7.  Aktualisierung der `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ist optional, in der JavaScript zwischen 1.4.0 und 1.4.1 hat sich nichts geändert.
+7.  Aktualisierung der `phonegap-1.4.0.js` Datei ist optional, in der JavaScript zwischen 1.4.0 und 1.4.1 hat sich nichts geändert.
 
 ## Upgrade 1.3.0 Projekte 1.4.0
 
@@ -613,20 +613,20 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 1.3.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.3.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  Fügen Sie alle die `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie alle die `MainViewController` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/phonegap-1.4.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.3.0.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.4.0.js` Datei.
 
-8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
+8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` Datei. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
 
-9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.
 
 ## Upgrade 1.2.0 Projekte 1.3.0
 
@@ -636,20 +636,20 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 1.2.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.2.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  Fügen Sie alle die `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie alle die `MainViewController` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/phonegap-1.3.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.2.0.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.3.0.js` Datei.
 
-8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
+8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` Datei. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
 
-9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.
 
 ## Upgrade 1.1.0 Projekte 1.2.0
 
@@ -659,20 +659,20 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 1.1.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.1.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  Fügen Sie alle die `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie alle die `MainViewController` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/phonegap-1.2.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.1.0.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.2.0.js` Datei.
 
-8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
+8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` Datei. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
 
-9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.
 
 ## Upgrade 1.0.0 auf 1.1.0 Projekte
 
@@ -682,20 +682,20 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 1.0.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.0.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  Fügen Sie alle die `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie alle die `MainViewController` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/phonegap-1.1.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-1.0.0.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.1.0.js` Datei.
 
-8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
+8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` Datei. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
 
-9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.
 
 ## Upgrade 0.9.6 Projekte 1.0.0
 
@@ -705,17 +705,17 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus dem neuen Projekt in Ihr 0.9.6-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (sichern Sie Ihre <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 0.9.6-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  Fügen Sie alle die `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in das Xcode-Projekt.
+5.  Fügen Sie alle die `MainViewController` Dateien in das Xcode-Projekt.
 
-6.  Kopie der `www/phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-0.9.6.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+6.  Kopie der `www/phonegap-1.0.0.js` Datei aus dem neuen Projekt in Ihr `www` Verzeichnis und löschen Ihre `www/phonegap-0.9.6.js` Datei.
 
-7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (und alle anderen <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+7.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `phonegap-1.0.0.js` Datei.
 
-8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
+8.  Fügen Sie einen neuen Eintrag unter `Plugins` in der `PhoneGap.plist` Datei. Der Schlüssel ist `com.phonegap.battery` und der Wert ist`PGBattery`.
 
-9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.

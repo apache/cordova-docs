@@ -24,6 +24,6 @@ fonction de callback onError pour les fonctions de la boussole.
 
 ## Exemple
 
-    function(<a href="../compassError/compassError.html">CompassError</a>) {
+    function(CompassError) {
         // Handle the error
     }

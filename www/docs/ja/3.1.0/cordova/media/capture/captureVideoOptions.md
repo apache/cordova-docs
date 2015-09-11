@@ -20,11 +20,11 @@ license: >
 
 # CaptureVideoOptions
 
-> ビデオ <a href="capture.html">キャプチャ</a>の構成オプションをカプセル化します。
+> ビデオ キャプチャの構成オプションをカプセル化します。
 
 ## プロパティ
 
-*   **制限**: <a href="../../device/device.html">デバイス</a>のユーザーを単一の<a href="capture.html">キャプチャ</a>操作で<a href="capture.html">キャプチャ</a>することができますビデオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
+*   **制限**: デバイスのユーザーを単一のキャプチャ操作でキャプチャすることができますビデオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
 
 *   **期間**: ビデオ クリップの最大継続時間を秒単位で。
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
     
-    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
     
 
 ## ブラックベリー WebWorks 癖

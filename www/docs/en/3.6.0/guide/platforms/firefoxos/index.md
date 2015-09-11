@@ -72,7 +72,7 @@ When your app code is written, deploy your changes to the Firefox OS app you've 
   	
 Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
 
-##<a href="../../next/index.html">Testing</a> and <a href="../../next/index.html">Debugging</a>
+##Testing and Debugging
 
 The app can be tested using the Firefox OS [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
 

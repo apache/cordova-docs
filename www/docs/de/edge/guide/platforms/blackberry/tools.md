@@ -36,7 +36,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rüc
 
 ## Erstellen eines Projekts
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben <a href="../../../cordova/storage/storage.html">Speicher</a>orte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
@@ -44,7 +44,7 @@ Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properti
 
 ## Emulator starten
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben <a href="../../../cordova/storage/storage.html">Speicher</a>orte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/run <platform>
     

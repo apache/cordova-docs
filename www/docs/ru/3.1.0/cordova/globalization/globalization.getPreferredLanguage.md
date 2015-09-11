@@ -29,7 +29,7 @@ license: >
 
 Возвращает строку идентификатора языка для `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `String` значение.
 
-Если есть ошибка, как язык, то `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Если есть ошибка, как язык, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Поддерживаемые платформы
 
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

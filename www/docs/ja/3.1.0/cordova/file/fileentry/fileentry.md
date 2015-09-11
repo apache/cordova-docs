@@ -20,7 +20,7 @@ license: >
 
 # FileEntry
 
-[W3C ディレクトリとシステム][1]仕様で定義されている<a href="../fileobj/fileobj.html">ファイル</a> システム上の<a href="../fileobj/fileobj.html">ファイル</a>を表します。
+[W3C ディレクトリとシステム][1]仕様で定義されているファイル システム上のファイルを表します。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,27 +36,27 @@ license: >
 
 **注：**次の属性は、W3C の仕様によって定義されますが*サポートされます*。
 
-*   **<a href="../fileobj/fileobj.html">ファイル</a>システム**: <a href="../fileobj/fileobj.html">ファイル</a>システムを `FileEntry` が存在します。*(<a href="../fileobj/fileobj.html">ファイル</a>システム)*
+*   **ファイルシステム**: ファイルシステムを `FileEntry` が存在します。*(ファイルシステム)*
 
 ## メソッド
 
-*   **getMetadata**: <a href="../fileobj/fileobj.html">ファイル</a>についての<a href="../metadata/metadata.html">メタデータ</a>を検索します。
+*   **getMetadata**: ファイルについてのメタデータを検索します。
 
-*   **setMetadata**： <a href="../fileobj/fileobj.html">ファイル</a>の<a href="../metadata/metadata.html">メタデータ</a>を設定します。
+*   **setMetadata**： ファイルのメタデータを設定します。
 
-*   **[moveto]**: <a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所に<a href="../fileobj/fileobj.html">ファイル</a>を移動します。
+*   **[moveto]**: ファイル システム上の別の場所にファイルを移動します。
 
-*   **copyTo**: <a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所に<a href="../fileobj/fileobj.html">ファイル</a>をコピーします。
+*   **copyTo**: ファイル システム上の別の場所にファイルをコピーします。
 
-*   **網**: <a href="../fileobj/fileobj.html">ファイル</a>を検索するために使用できる URL を返します。
+*   **網**: ファイルを検索するために使用できる URL を返します。
 
-*   **削除**: <a href="../fileobj/fileobj.html">ファイル</a>を削除します。
+*   **削除**: ファイルを削除します。
 
 *   **getParent**: 親ディレクトリを検索します。
 
-*   **createWriter**: 作成し、 `<a href="../filewriter/filewriter.html">FileWriter</a>` <a href="../fileobj/fileobj.html">ファイル</a>への書き込みに使用できるオブジェクト。
+*   **createWriter**: 作成し、 `FileWriter` ファイルへの書き込みに使用できるオブジェクト。
 
-*   **<a href="../fileobj/fileobj.html">ファイル</a>**: 作成し、 `File` <a href="../fileobj/fileobj.html">ファイル</a>のプロパティを含むオブジェクト。
+*   **ファイル**: 作成し、 `File` ファイルのプロパティを含むオブジェクト。
 
 ## サポートされているプラットフォーム
 
@@ -68,34 +68,34 @@ license: >
 
 ## getMetadata
 
-<a href="../fileobj/fileobj.html">ファイル</a>についての<a href="../metadata/metadata.html">メタデータ</a>をご覧ください。
+ファイルについてのメタデータをご覧ください。
 
 **パラメーター:**
 
 *   **successCallback**: 渡されたコールバックを `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
-    success(metadata) 関数 {console.log ("最終更新日時:"+ metadata.modificationTime);}関数 fail(error) {alert(error.code);}//このエントリ entry.getMetadata (成功、失敗）; の<a href="../metadata/metadata.html">メタデータ</a> オブジェクトをリクエスト
+    success(metadata) 関数 {console.log ("最終更新日時:"+ metadata.modificationTime);}関数 fail(error) {alert(error.code);}//このエントリ entry.getMetadata (成功、失敗）; のメタデータ オブジェクトをリクエスト
     
 
 ## setMetadata
 
-<a href="../fileobj/fileobj.html">ファイル</a> セットの<a href="../metadata/metadata.html">メタデータ</a>。
+ファイル セットのメタデータ。
 
 **現在 iOS でのみ動作します。**
 
-*   これは、<a href="../fileobj/fileobj.html">ファイル</a>の拡張属性を設定します。
+*   これは、ファイルの拡張属性を設定します。
 
 **パラメーター:**
 
-*   **successCallback**: <a href="../metadata/metadata.html">メタデータ</a>が設定時に実行されるコールバック。*(機能)*
+*   **successCallback**: メタデータが設定時に実行されるコールバック。*(機能)*
 
-*   **解り**: <a href="../metadata/metadata.html">メタデータ</a>が正常に設定されていないときに実行されるコールバック。*(機能)*
+*   **解り**: メタデータが正常に設定されていないときに実行されるコールバック。*(機能)*
 
-*   **metadataObject**: <a href="../metadata/metadata.html">メタデータ</a>のキーと値を格納しているオブジェクト。*(オブジェクト)*
+*   **metadataObject**: メタデータのキーと値を格納しているオブジェクト。*(オブジェクト)*
 
 **簡単な例**
 
@@ -113,7 +113,7 @@ license: >
 
 **iOS の気まぐれ**
 
-*   のみ、 `com.apple.MobileBackup` 拡張属性がサポートされています。 値を設定します `1` を iCloud にバックアップされてから、<a href="../fileobj/fileobj.html">ファイル</a>を防ぐために。 値を設定します `` 再 iCloud にバックアップ <a href="../fileobj/fileobj.html">ファイル</a>を有効にします。
+*   のみ、 `com.apple.MobileBackup` 拡張属性がサポートされています。 値を設定します `1` を iCloud にバックアップされてから、ファイルを防ぐために。 値を設定します `` 再 iCloud にバックアップ ファイルを有効にします。
 
 **簡単な例**
 
@@ -143,31 +143,31 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFileMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
     
 
 ## [moveto]
 
-<a href="../fileobj/fileobj.html">ファイル</a> システム上の別の場所に<a href="../fileobj/fileobj.html">ファイル</a>を移動します。アプリしようとすると、エラーが発生します。
+ファイル システム上の別の場所にファイルを移動します。アプリしようとすると、エラーが発生します。
 
-*   その現在とは異なる名前を指定ではない; 場合、その親に<a href="../fileobj/fileobj.html">ファイル</a>を移動します。
+*   その現在とは異なる名前を指定ではない; 場合、その親にファイルを移動します。
 
-*   ディレクトリ; によって占められるパスに<a href="../fileobj/fileobj.html">ファイル</a>を移動します。
+*   ディレクトリ; によって占められるパスにファイルを移動します。
 
-さらに、既存の<a href="../fileobj/fileobj.html">ファイル</a>の上に移動した<a href="../fileobj/fileobj.html">ファイル</a>を削除し、その<a href="../fileobj/fileobj.html">ファイル</a>を置き換えるを試みます。
+さらに、既存のファイルの上に移動したファイルを削除し、そのファイルを置き換えるを試みます。
 
 **パラメーター:**
 
-*   **親**： <a href="../fileobj/fileobj.html">ファイル</a>の移動先となる親ディレクトリ。*(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **親**： ファイルの移動先となる親ディレクトリ。*(DirectoryEntry)*
 
-*   **newName**: <a href="../fileobj/fileobj.html">ファイル</a>の新しい名前。現在の名前を指定しない場合のデフォルトです。*（，）*
+*   **newName**: ファイルの新しい名前。現在の名前を指定しない場合のデフォルトです。*（，）*
 
-*   **successCallback**: 新しい<a href="../fileobj/fileobj.html">ファイル</a>に渡されるコールバック `FileEntry` オブジェクト。*(機能)*
+*   **successCallback**: 新しいファイルに渡されるコールバック `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: <a href="../fileobj/fileobj.html">ファイル</a>を移動しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ファイルを移動しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -182,7 +182,7 @@ license: >
     function moveFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // move the file to a new directory and rename it
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
@@ -191,19 +191,19 @@ license: >
 
 ## copyTo
 
-<a href="../fileobj/fileobj.html">ファイル</a> システム上の新しい場所に<a href="../fileobj/fileobj.html">ファイル</a>をコピーします。アプリしようとすると、エラーが発生します。
+ファイル システム上の新しい場所にファイルをコピーします。アプリしようとすると、エラーが発生します。
 
-*   その現在のものとは異なる名前を指定しない場合、親に<a href="../fileobj/fileobj.html">ファイル</a>をコピーします。
+*   その現在のものとは異なる名前を指定しない場合、親にファイルをコピーします。
 
 **パラメーター:**
 
-*   **親**： 親ディレクトリに<a href="../fileobj/fileobj.html">ファイル</a>をコピーします。*(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **親**： 親ディレクトリにファイルをコピーします。*(DirectoryEntry)*
 
-*   **newName**: <a href="../fileobj/fileobj.html">ファイル</a>の新しい名前。現在の名前を指定しない場合のデフォルトです。*（，）*
+*   **newName**: ファイルの新しい名前。現在の名前を指定しない場合のデフォルトです。*（，）*
 
-*   **successCallback**: 新しい<a href="../fileobj/fileobj.html">ファイル</a>に渡されるコールバック `FileEntry` オブジェクト。*(機能)*
+*   **successCallback**: 新しいファイルに渡されるコールバック `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: <a href="../fileobj/fileobj.html">ファイル</a>をコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ファイルをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -218,7 +218,7 @@ license: >
     function copyFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
@@ -227,7 +227,7 @@ license: >
 
 ## 網
 
-<a href="../fileobj/fileobj.html">ファイル</a>の検索に使用できる URL を返します。
+ファイルの検索に使用できる URL を返します。
 
 **簡単な例**
 
@@ -238,13 +238,13 @@ license: >
 
 ## 削除
 
-<a href="../fileobj/fileobj.html">ファイル</a>を削除します。
+ファイルを削除します。
 
 **パラメーター:**
 
-*   **successCallback**： <a href="../fileobj/fileobj.html">ファイル</a>が削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
+*   **successCallback**： ファイルが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: <a href="../fileobj/fileobj.html">ファイル</a>を削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: ファイルを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -262,13 +262,13 @@ license: >
 
 ## getParent
 
-親を検索 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` <a href="../fileobj/fileobj.html">ファイル</a>を含みます。
+親を検索 `DirectoryEntry` ファイルを含みます。
 
 **パラメーター:**
 
-*   **successCallback**： <a href="../fileobj/fileobj.html">ファイル</a>の親に渡されるコールバック `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` 。*(機能)*
+*   **successCallback**： ファイルの親に渡されるコールバック `DirectoryEntry` 。*(機能)*
 
-*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` 。 呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。 *(機能)*
+*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
 
 **簡単な例**
 
@@ -280,19 +280,19 @@ license: >
         alert(error.code);
     }
     
-    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
+    // Get the parent DirectoryEntry
     entry.getParent(success, fail);
     
 
 ## createWriter
 
-作成する、 `<a href="../filewriter/filewriter.html">FileWriter</a>` オブジェクトによって表される<a href="../fileobj/fileobj.html">ファイル</a>に関連付けられている、`FileEntry`.
+作成する、 `FileWriter` オブジェクトによって表されるファイルに関連付けられている、`FileEntry`.
 
 **パラメーター:**
 
-*   **successCallback**: 渡されたコールバックを `<a href="../filewriter/filewriter.html">FileWriter</a>` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `FileWriter` オブジェクト。*(機能)*
 
-*   **解り**: <a href="../filewriter/filewriter.html">FileWriter</a> を作成中にエラーが発生した場合に実行されるコールバック。呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。*(機能)*
+*   **解り**: FileWriter を作成中にエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -304,19 +304,19 @@ license: >
         alert(error.code);
     }
     
-    // create a <a href="../filewriter/filewriter.html">FileWriter</a> to write to the file
+    // create a FileWriter to write to the file
     entry.createWriter(success, fail);
     
 
-## <a href="../fileobj/fileobj.html">ファイル</a>
+## ファイル
 
-返す、 `File` <a href="../fileobj/fileobj.html">ファイル</a>の現在の状態を表すオブジェクトは、この `FileEntry` を表します。
+返す、 `File` ファイルの現在の状態を表すオブジェクトは、この `FileEntry` を表します。
 
 **パラメーター:**
 
 *   **successCallback**: 渡されたコールバックを `File` オブジェクト。*(機能)*
 
-*   **解り**： を作成するときにエラーが発生した場合に実行されるコールバックが `File` とき、<a href="../fileobj/fileobj.html">ファイル</a>が存在しないなどのオブジェクト。 呼び出されると、 `<a href="../fileerror/fileerror.html">FileError</a>` オブジェクト。 *(機能)*
+*   **解り**： を作成するときにエラーが発生した場合に実行されるコールバックが `File` とき、ファイルが存在しないなどのオブジェクト。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
 
 **簡単な例**
 

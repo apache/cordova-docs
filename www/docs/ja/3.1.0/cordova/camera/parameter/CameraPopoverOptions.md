@@ -27,9 +27,9 @@ iOS だけ指定パラメーターをポップ オーバーのアンカー要素
 
 ## CameraPopoverOptions
 
-*   **x**: ピクセルの x <a href="../../geolocation/Coordinates/coordinates.html">座標</a>画面要素にポップ オーバーのアンカーになります。*(数)*
+*   **x**: ピクセルの x 座標画面要素にポップ オーバーのアンカーになります。*(数)*
 
-*   **y**: y ピクセル<a href="../../geolocation/Coordinates/coordinates.html">座標</a>の画面要素にポップ オーバーのアンカーになります。*(数)*
+*   **y**: y ピクセル座標の画面要素にポップ オーバーのアンカーになります。*(数)*
 
 *   **幅**: ポップ オーバーのアンカーになる上の画面要素のピクセル単位の幅。*(数)*
 
@@ -40,7 +40,7 @@ iOS だけ指定パラメーターをポップ オーバーのアンカー要素
             Camera.PopoverArrowDirection = {ARROW_UP: 1、/iOS UIPopoverArrowDirection 定数 ARROW_DOWN と一致する/: 2、ARROW_LEFT： 4、ARROW_RIGHT： 8、ARROW_ANY: 15};
         
 
-矢印の方向と、画面の向きを調整するポップ オーバーのサイズを変更可能性がありますに注意してください。 アンカー要素の<a href="../../geolocation/Position/position.html">位置</a>を指定するときの方向の変化を考慮することを確認します。
+矢印の方向と、画面の向きを調整するポップ オーバーのサイズを変更可能性がありますに注意してください。 アンカー要素の位置を指定するときの方向の変化を考慮することを確認します。
 
 ## 簡単な例
 
@@ -52,7 +52,7 @@ iOS だけ指定パラメーターをポップ オーバーのアンカー要素
          popoverOptions  : popover
      };
     
-     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
+     navigator.camera.getPicture(onSuccess, onFail, options);
     
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

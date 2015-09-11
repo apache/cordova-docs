@@ -44,8 +44,8 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
     //
     var my_media = new Media(src, onSuccess, onError);
     
-    my_<a href="media.play.html">media.play</a>();
-    my_<a href="media.stop.html">media.stop</a>();
+    my_media.play();
+    my_media.stop();
     my_media.release();
     
 
@@ -55,14 +55,14 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -82,13 +82,13 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -107,9 +107,9 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
     
             // Pause audio
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -117,7 +117,7 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -146,7 +146,7 @@ El método `media.release` se ejecuta sincrónicamente, liberando recursos de au
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

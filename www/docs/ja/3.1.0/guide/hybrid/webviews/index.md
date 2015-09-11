@@ -22,5 +22,5 @@ license: >
 
 > 独自のプロジェクトにコルドバ WebView を実装します。
 
-*   <a href="../../platforms/android/webview.html">Android の web 表示</a>
-*   <a href="../../platforms/ios/webview.html">iOS の web 表示</a>
+*   Android の web 表示
+*   iOS の web 表示

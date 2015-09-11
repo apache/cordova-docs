@@ -20,12 +20,12 @@ license: >
 
 # Notification.Vibrate
 
-Vibriert das <a href="../device/device.html">Gerät</a> für den angegebenen Zeitraum.
+Vibriert das Gerät für den angegebenen Zeitraum.
 
     navigator.notification.vibrate(milliseconds)
     
 
-*   **Zeit**: Millisekunden Vibrieren des <a href="../device/device.html">Gerät</a>s, wobei 1000 Millisekunden entspricht 1 Sekunde. *(Anzahl)*
+*   **Zeit**: Millisekunden Vibrieren des Geräts, wobei 1000 Millisekunden entspricht 1 Sekunde. *(Anzahl)*
 
 ## Unterstützte Plattformen
 
@@ -46,14 +46,14 @@ Vibriert das <a href="../device/device.html">Gerät</a> für den angegebenen Zei
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

@@ -22,7 +22,7 @@ license: >
 
 Affiche l'écran de démarrage.
 
-    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+    navigator.splashscreen.show();
     
 
 ## Description
@@ -38,7 +38,7 @@ Cette méthode affiche écran de démarrage de l'application.
 
 ## Petit exemple
 
-    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+    navigator.splashscreen.show();
     
 
 ## Exemple complet
@@ -46,24 +46,24 @@ Cette méthode affiche écran de démarrage de l'application.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Splashscreen Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+            navigator.splashscreen.show();
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
       </body>
     </html>

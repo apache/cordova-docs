@@ -20,7 +20,7 @@ license: >
 
 # BlackBerry 10-Befehlszeilentools
 
-Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ausführlichere Wegbeschreibung.
+Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -Datei ausführlichere Wegbeschreibung.
 
  [1]: http://cordova.apache.org
 
@@ -45,22 +45,22 @@ wo
 
 ## Ziel
 
-Die `target` mit dem Befehl können Sie verwalten den Emulator oder BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a>e, mit denen Sie Ihre Anwendung testen. Sie können hinzufügen oder entfernen ein Ziel oder ein Ziel gesetzt, als Standardziel.
+Die `target` mit dem Befehl können Sie verwalten den Emulator oder BlackBerry-Geräte, mit denen Sie Ihre Anwendung testen. Sie können hinzufügen oder entfernen ein Ziel oder ein Ziel gesetzt, als Standardziel.
 
 ### Fügen Sie ein Ziel
 
-    < Path-Projekt >/Cordova/Ziel hinzufügen <name> < Ip-Adresse > [-t |--Typ < <a href="../../../cordova/device/device.html">Gerät</a> | Simulator >] [-p |--Kennwort <password>] [--polig < <a href="../../../cordova/device/device.html">Gerät</a>-polig >]
+    < Path-Projekt >/Cordova/Ziel hinzufügen <name> < Ip-Adresse > [-t |--Typ < Gerät | Simulator >] [-p |--Kennwort <password>] [--polig < Gerät-polig >]
     
 
 wo
 
 *   `<name>`Gibt einen eindeutigen Namen für das Ziel.
 
-*   `<ip-address>`Gibt die Ip-Adresse des BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a>s oder Simulator.
+*   `<ip-address>`Gibt die Ip-Adresse des BlackBerry-Geräts oder Simulator.
 
-*   `-p | --password <password>`Gibt das Kennwort für das <a href="../../../cordova/device/device.html">Gerät</a> oder den Emulator. Dies ist erforderlich, nur, wenn das <a href="../../../cordova/device/device.html">Gerät</a> oder den Emulator kennwortgeschützt ist.
+*   `-p | --password <password>`Gibt das Kennwort für das Gerät oder den Emulator. Dies ist erforderlich, nur, wenn das Gerät oder den Emulator kennwortgeschützt ist.
 
-*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a>, das dieses <a href="../../../cordova/device/device.html">Gerät</a> als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur, wenn Sie ein Debug-Token erstellen.
+*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-Gerät, das dieses Gerät als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur, wenn Sie ein Debug-Token erstellen.
 
 ### Entfernen Sie ein Ziel
 
@@ -74,11 +74,11 @@ wo
 
 ## Build
 
-Der `build` Befehl erstellt das Projekt als ...verlegt <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Sie können Ihre app in beiden Release-Modus (der eine signierte ...verlegt <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> erzeugt) oder im Debug-Modus (der eine vorzeichenlose ...verlegt <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> erzeugt) erstellen.
+Der `build` Befehl erstellt das Projekt als ...verlegt Datei. Sie können Ihre app in beiden Release-Modus (der eine signierte ...verlegt Datei erzeugt) oder im Debug-Modus (der eine vorzeichenlose ...verlegt Datei erzeugt) erstellen.
 
 ### Erstellen Sie das Projekt im Release-Modus
 
-    < Path-Projekt >/Cordova/Release build [-k |--Keystorepass <password>] [-b |--BuildId <number>] [-p |--Params < Params-JSON-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> >]
+    < Path-Projekt >/Cordova/Release build [-k |--Keystorepass <password>] [-b |--BuildId <number>] [-p |--Params < Params-JSON-Datei >]
     
 
 wo
@@ -87,38 +87,38 @@ wo
 
 *   `-b | --buildId <number>`Gibt die Build-Versionsnummer der Anwendung. In der Regel sollte diese Zahl signierte der Vorgängerversion erhöht werden. Dieses Argument ist optional.
 
-*   `-p | --params <params-JSON-file>`gibt eine JSON-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die mit zusätzlichen Parameter zur Übergabe an nachgelagerte Werkzeuge. Dieses Argument ist optional.
+*   `-p | --params <params-JSON-file>`gibt eine JSON-Datei, die mit zusätzlichen Parameter zur Übergabe an nachgelagerte Werkzeuge. Dieses Argument ist optional.
 
 ### Erstellen Sie das Projekt im Debugmodus
 
-    < Path-Projekt >/Cordova/build Debug [<target>] [-k |--Keystorepass <password>] [-p |--Params < Params-JSON-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> >] [-ll |--Loglevel <error|warn|verbose>]
+    < Path-Projekt >/Cordova/build Debug [<target>] [-k |--Keystorepass <password>] [-p |--Params < Params-JSON-Datei >] [-ll |--Loglevel <error|warn|verbose>]
     
 
 wo
 
-*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` nicht angegeben ist, das Standardziel wird verwendet, wenn eine erstellt wurde. Dieses Argument ist nur erforderlich, wenn Sie das Skript zum Bereitstellen Ihrer Anwendung auf einem BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a> oder Emulator, in dem Sie als Standardziel nicht erstellt haben. Zusätzlich, wenn `<target>` ist ein <a href="../../../cordova/device/device.html">Gerät</a>, dann das <a href="../../../cordova/device/device.html">Gerät</a> vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
+*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` nicht angegeben ist, das Standardziel wird verwendet, wenn eine erstellt wurde. Dieses Argument ist nur erforderlich, wenn Sie das Skript zum Bereitstellen Ihrer Anwendung auf einem BlackBerry-Gerät oder Emulator, in dem Sie als Standardziel nicht erstellt haben. Zusätzlich, wenn `<target>` ist ein Gerät, dann das Gerät vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
 
 *   `-k | --keystorepass <password>`Gibt das Kennwort, die, das Sie definiert, wenn Sie Ihren Computer zum Signieren von Anwendungen konfiguriert. Dieses Kennwort wird auch verwendet, um das Debug-Token zu erstellen. Dieses Argument ist nur erforderlich, wenn Sie wollen das Skript zum Erstellen und installieren das Debug-Token für Sie.
 
-*   `-p | --params <params-JSON-file>`gibt eine JSON-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die mit zusätzlichen Parameter zur Übergabe an nachgelagerte Werkzeuge.
+*   `-p | --params <params-JSON-file>`gibt eine JSON-Datei, die mit zusätzlichen Parameter zur Übergabe an nachgelagerte Werkzeuge.
 
 *   `-ll | --loglevel <level>`Gibt die Protokollebene. Die Protokollebene möglicherweise einer der `error` , `warn` , oder`verbose`.
 
-Wenn Sie zuvor definiert als Standardziel (und zuvor installiert haben ein Debug-Token, wenn das Ziel ein BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a> ist), führen Sie das Skript ohne Argumente und das Skript wird Ihre app-Paket und auf das Standardziel bereitstellen. Zum Beispiel:
+Wenn Sie zuvor definiert als Standardziel (und zuvor installiert haben ein Debug-Token, wenn das Ziel ein BlackBerry-Gerät ist), führen Sie das Skript ohne Argumente und das Skript wird Ihre app-Paket und auf das Standardziel bereitstellen. Zum Beispiel:
 
     < Path-Projekt >/Cordova/build debug
     
 
 ## Ausführen
 
-Der `run` Befehl stellt die app auf dem BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a> oder einen Emulator. Bevor Sie Ihre Anwendung bereitstellen, müssen Sie zunächst ein Ziel für das <a href="../../../cordova/device/device.html">Gerät</a> oder den Emulator Ihre Anwendung bereitgestellt, mit dem Ziel-Skript soll erstellen. Das Bereitstellen-Skript wird das letzte Build Ihrer Anwendung bereitstellen.
+Der `run` Befehl stellt die app auf dem BlackBerry-Gerät oder einen Emulator. Bevor Sie Ihre Anwendung bereitstellen, müssen Sie zunächst ein Ziel für das Gerät oder den Emulator Ihre Anwendung bereitgestellt, mit dem Ziel-Skript soll erstellen. Das Bereitstellen-Skript wird das letzte Build Ihrer Anwendung bereitstellen.
 
     < Path-Projekt >/Cordova/run <target>
     
 
 wo
 
-*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein <a href="../../../cordova/device/device.html">Gerät</a>, dann das <a href="../../../cordova/device/device.html">Gerät</a> vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
+*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein Gerät, dann das Gerät vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
 
 ## Plugin
 

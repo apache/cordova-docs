@@ -56,7 +56,7 @@ Lorsque le rappel d'erreur suivant s'exécute, il affiche une fenêtre popup ave
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -72,7 +72,7 @@ Lorsque le rappel d'erreur suivant s'exécute, il affiche une fenêtre popup ave
         };
     
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

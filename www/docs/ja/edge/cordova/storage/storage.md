@@ -20,9 +20,9 @@ license: >
 
 # ストレージ
 
-> コルドバの記憶域オプションの<a href="../../guide/overview/index.html">概要</a>です。
+> コルドバの記憶域オプションの概要です。
 
-いくつかのストレージ Api は、コルドバのアプリケーションで使用できます。[Html5rocks][1] を参照してください。完全な<a href="../../guide/overview/index.html">概要</a>と例。
+いくつかのストレージ Api は、コルドバのアプリケーションで使用できます。[Html5rocks][1] を参照してください。完全な概要と例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -34,7 +34,7 @@ license: >
 
 ## WebSQL
 
-この API は、基になる web ビューで利用可能です。 [Web の SQL <a href="database/database.html">データベース</a>の仕様][3]を利用してより多くのフル機能を備えた<a href="database/database.html">データベース</a> テーブル アクセス SQL クエリ。
+この API は、基になる web ビューで利用可能です。 [Web の SQL データベースの仕様][3]を利用してより多くのフル機能を備えたデータベース テーブル アクセス SQL クエリ。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 

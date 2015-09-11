@@ -20,14 +20,14 @@ license: >
 
 # device.cordova
 
-獲取科爾多瓦在<a href="device.html">設備</a>上運行的版本。
+獲取科爾多瓦在設備上運行的版本。
 
     var string = device.cordova;
     
 
 ## 說明
 
-`device.cordova`返回科爾多瓦在<a href="device.html">設備</a>上運行的版本。
+`device.cordova`返回科爾多瓦在設備上運行的版本。
 
 ## 支援的平臺
 
@@ -48,24 +48,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
                                 'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
-                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>

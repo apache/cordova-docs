@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-提供了通過的羅經航向資訊的 onSuccess 回呼函數 `<a href="compassHeading.html">compassHeading</a>` 物件。
+提供了通過的羅經航向資訊的 onSuccess 回呼函數 `compassHeading` 物件。
 
     function(heading) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## 參數
 
-*   **標題**： 標題資訊。*() <a href="compassHeading.html">compassHeading</a>*
+*   **標題**： 標題資訊。*() compassHeading*
 
 ## 示例
 

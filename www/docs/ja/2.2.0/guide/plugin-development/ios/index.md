@@ -130,7 +130,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 ## スレッド
 
-たとえ UIWebView が dedicated thread 上で実行されるとしても、プラグインメソッドは UI スレッドで実行されます。もしプラグインが尋常じゃない数のプロセスが必要、または処理をブロックする必要がある場合は、バックグラウンドスレッドを使用するべきです。<a href="../../../cordova/storage/storage.opendatabase.html">使用例</a>は次のとおりです:
+たとえ UIWebView が dedicated thread 上で実行されるとしても、プラグインメソッドは UI スレッドで実行されます。もしプラグインが尋常じゃない数のプロセスが必要、または処理をブロックする必要がある場合は、バックグラウンドスレッドを使用するべきです。使用例は次のとおりです:
 
     - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
     {
@@ -152,7 +152,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 1. [CDVPlugin.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 2. [CDVPlugin.m](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-例えば、 pausa, <a href="../../../cordova/events/events.resume.html">resume</a>, app terminate, handleOpenURL events といったような機能を実装できます。
+例えば、 pausa, resume, app terminate, handleOpenURL events といったような機能を実装できます。
 
 ## プラグインのデバッグ
 

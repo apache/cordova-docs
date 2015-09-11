@@ -24,7 +24,7 @@ license: >
 
  [1]: http://plugins.cordova.io
 
-外掛程式包括一個單一的 JavaScript 介面和相應的本機代碼庫，每個受<a href="../../../config_ref/images.html">支援的平臺</a>。 本質上這隱藏在一個共同的 JavaScript 介面背後各種本機代碼實現。
+外掛程式包括一個單一的 JavaScript 介面和相應的本機代碼庫，每個受支援的平臺。 本質上這隱藏在一個共同的 JavaScript 介面背後各種本機代碼實現。
 
 這一節步驟通過一個簡單的*echo*外掛程式，將一個字串從 JavaScript 傳遞到本機平臺又回來，一個人，你可以使用作為一種模式，建立更為複雜的功能。 本節討論的基本外掛程式結構和麵向外部的 JavaScript 介面。 對於每個相應的本機介面，看到這一節的結尾處的清單。
 
@@ -34,12 +34,12 @@ license: >
 
 ## 建設一個外掛程式
 
-應用程式開發人員使用 CLI 的 `plugin add` 命令 （討論中的<a href="../../cli/index.html">命令列介面</a>），適用于一個專案的一個外掛程式。 該命令的參數是一個包含外掛程式代碼的*git*<a href="../../../cordova/storage/storage.html">存儲</a>庫的 URL。 此示例實現科爾多瓦的設備 API：
+應用程式開發人員使用 CLI 的 `plugin add` 命令 （討論中的命令列介面），適用于一個專案的一個外掛程式。 該命令的參數是一個包含外掛程式代碼的*git*存儲庫的 URL。 此示例實現科爾多瓦的設備 API：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-外掛程式<a href="../../../cordova/storage/storage.html">存儲</a>庫必須功能頂級 `plugin.xml` 清單檔。 有很多方法來配置這個檔的可用<a href="../../../plugin_ref/spec.html">外掛程式規範</a>中的詳細資訊。 此縮寫的版本的 `Device` 外掛程式提供了一個簡單的例子，使用作為一種模式：
+外掛程式存儲庫必須功能頂級 `plugin.xml` 清單檔。 有很多方法來配置這個檔的可用外掛程式規範中的詳細資訊。 此縮寫的版本的 `Device` 外掛程式提供了一個簡單的例子，使用作為一種模式：
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -74,7 +74,7 @@ license: >
         $ npm install -g plugman
     
 
-你需要有效的應用程式的原始目錄中，如頂級 `www` 目錄包含在預設 CLI 生成專案中所述的<a href="../../cli/index.html">命令列介面</a>。 請確保應用程式的 `index.html` 的主頁引用名稱的外掛程式的 JavaScript 介面，好像它是相同的原始目錄中：
+你需要有效的應用程式的原始目錄中，如頂級 `www` 目錄包含在預設 CLI 生成專案中所述的命令列介面。 請確保應用程式的 `index.html` 的主頁引用名稱的外掛程式的 JavaScript 介面，好像它是相同的原始目錄中：
 
         <script src="myplugin.js"></script>
     
@@ -135,12 +135,12 @@ JavaScript 提供了面向前面的介面，使外掛程式的也許最重要的
 
 一旦你為你的外掛程式定義 JavaScript，你需要補充與至少一個本機實現。 下面，列出每個平臺的詳細資訊和每個生成回聲外掛程式上面的簡單示例：
 
-*   <a href="../../platforms/amazonfireos/plugin.html">亞馬遜火 OS 外掛程式</a>
-*   <a href="../../platforms/android/plugin.html">Android 外掛程式</a>
-*   <a href="../../platforms/ios/plugin.html">iOS 外掛程式</a>
-*   <a href="../../platforms/blackberry10/plugin.html">黑莓 10 外掛程式</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone 8 外掛程式</a>
-*   <a href="../../platforms/win8/plugin.html">Windows 外掛程式</a>
+*   亞馬遜火 OS 外掛程式
+*   Android 外掛程式
+*   iOS 外掛程式
+*   黑莓 10 外掛程式
+*   Windows Phone 8 外掛程式
+*   Windows 外掛程式
 
 Tizen 平臺不支援外掛程式。
 
@@ -155,7 +155,7 @@ Tizen 平臺不支援外掛程式。
 
  [6]: https://plugins.cordova.io
 
-其他開發人員可以安裝你的外掛程式使用`plugman`或科爾多瓦 CLI 自動。 (每個發展路徑的詳細資訊，請參閱使用 Plugman 管理外掛程式和<a href="../../cli/index.html">命令列介面</a>。)
+其他開發人員可以安裝你的外掛程式使用`plugman`或科爾多瓦 CLI 自動。 (每個發展路徑的詳細資訊，請參閱使用 Plugman 管理外掛程式和命令列介面。)
 
 要將一個外掛程式發佈到故宮註冊表你需要按照以下的步驟:
 

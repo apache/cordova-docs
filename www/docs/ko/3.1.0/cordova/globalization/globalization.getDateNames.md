@@ -27,11 +27,11 @@ license: >
 
 ## 설명
 
-이름의 배열을 반환 합니다는 `successCallback` 와 `properties` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로 합니다. 해당 개체를 포함 한 `value` 속성으로는 `Array` 의 `String` 값. 배열 기능 이름과 년 또는 선택한 옵션에 따라 일주일의 첫날 첫 번째 달에서 시작.
+이름의 배열을 반환 합니다는 `successCallback` 와 `properties` 개체를 매개 변수로 합니다. 해당 개체를 포함 한 `value` 속성으로는 `Array` 의 `String` 값. 배열 기능 이름과 년 또는 선택한 옵션에 따라 일주일의 첫날 첫 번째 달에서 시작.
 
-이름을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+이름을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
 
-`options`매개 <a href="../../plugin_ref/spec.html">변수</a>는 선택적 이며 그것의 기본 값은:
+`options`매개 변수는 선택적 이며 그것의 기본 값은:
 
     {유형: '활짝', 항목: '달'}
     
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

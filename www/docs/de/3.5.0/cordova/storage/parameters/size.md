@@ -20,4 +20,4 @@ license: >
 
 # database_size
 
-Die Grösse der <a href="../database/database.html">Datenbank</a> in Bytes.
+Die Grösse der Datenbank in Bytes.

@@ -20,7 +20,7 @@ license: >
 
 # contactFindOptions
 
-Optional parameter of the `<a href="../contacts.find.html">contacts.find</a>` method, used to filter the
+Optional parameter of the `contacts.find` method, used to filter the
 contacts returned from the contacts database.
 
     {

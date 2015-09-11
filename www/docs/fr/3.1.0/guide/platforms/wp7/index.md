@@ -24,9 +24,9 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir ci-dessous pour plus d'informations spécifiques à la plate-forme qui s'applique aux deux versions :
 
-*   <a href="../wp8/upgrading.html">La mise à niveau de Windows Phone</a>
-*   <a href="../wp8/plugin.html">Windows Phone Plugins</a>
-*   <a href="../wp8/tools.html">Windows Phone outils de ligne de commande</a>
+*   La mise à niveau de Windows Phone
+*   Windows Phone Plugins
+*   Windows Phone outils de ligne de commande
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 

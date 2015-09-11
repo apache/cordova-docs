@@ -23,7 +23,7 @@ license: >
 > Запустите приложение видеомагнитофон и возвращают сведения о файлах захваченного видео клип.
 
     navigator.device.capture.captureVideo(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Начинает асинхронную операцию, чтобы захватить видео записи с помощью устройства записи видео приложения. Операция позволяет пользователю захватить более чем одной записи в течение одной сессии.
 
-Операции захвата заканчивается, когда либо пользователь выходит из приложения записи видео, или максимальное количество записей, указанный `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` достигается. Если не `limit` значение параметра указывается, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь записывает один видео клип.
+Операции захвата заканчивается, когда либо пользователь выходит из приложения записи видео, или максимальное количество записей, указанный `CaptureVideoOptions.limit` достигается. Если не `limit` значение параметра указывается, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь записывает один видео клип.
 
-По завершении операции захвата его `<a href="CaptureCB.html">CaptureCB</a>` обратного вызова выполняется с массивом `<a href="MediaFile.html">MediaFile</a>` объекты, описывающие каждый захвачен файл видео клип. Если пользователь завершает операцию до захвата видео клип, `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` обратного вызова выполняется с `<a href="CaptureError.html">CaptureError</a>` объекта с изображением `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` код ошибки.
+По завершении операции захвата его `CaptureCB` обратного вызова выполняется с массивом `MediaFile` объекты, описывающие каждый захвачен файл видео клип. Если пользователь завершает операцию до захвата видео клип, `CaptureErrorCB` обратного вызова выполняется с `CaptureError` объекта с изображением `CaptureError.CAPTURE_NO_MEDIA_FILES` код ошибки.
 
 ## Поддерживаемые платформы
 
@@ -100,7 +100,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
+            var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     
@@ -126,4 +126,4 @@ license: >
 
 ## Ежевика WebWorks совместимости
 
-*   Cordova для BlackBerry WebWorks пытается запустить приложение **Видеомагнитофон** , предоставляемых RIM, чтобы захватить видео записи. Приложение получает `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` код ошибки, если приложение не установлено на устройстве.
+*   Cordova для BlackBerry WebWorks пытается запустить приложение **Видеомагнитофон** , предоставляемых RIM, чтобы захватить видео записи. Приложение получает `CaptureError.CAPTURE_NOT_SUPPORTED` код ошибки, если приложение не установлено на устройстве.

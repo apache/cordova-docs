@@ -18,18 +18,18 @@ license: >
     under the License.
 ---
 
-# <a href="CaptureError.html">CaptureError</a>CB
+# CaptureErrorCB
 
 > Richiamato se si verifica un errore durante un'operazione di acquisizione di mezzi di comunicazione.
 
-    function captureError( <a href="CaptureError.html">CaptureError</a> error ) { ... };
+    function captureError( CaptureError error ) { ... };
     
 
 ## Descrizione
 
 Questa funzione viene eseguita se si verifica un errore quando si tenta di lanciare un media catturare operazione. Fallimento scenari includono quando l'applicazione di cattura è occupato, un'operazione di acquisizione è già in atto, o l'utente annulla l'operazione prima che tutti i file multimediali vengono catturati.
 
-Questa funzione viene eseguita con un `<a href="CaptureError.html">CaptureError</a>` oggetto contenente un errore appropriato`code`.
+Questa funzione viene eseguita con un `CaptureError` oggetto contenente un errore appropriato`code`.
 
 ## Esempio rapido
 

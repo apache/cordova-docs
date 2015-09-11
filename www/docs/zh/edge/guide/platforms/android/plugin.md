@@ -20,11 +20,11 @@ license: >
 
 # Android 外掛程式
 
-此部分提供了如何在 Android 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的<a href="../../overview/index.html">概述</a>。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。 另一個示例，請參閱還在[CordovaPlugin.java][1]的評論.
+此部分提供了如何在 Android 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。 另一個示例，請參閱還在[CordovaPlugin.java][1]的評論.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與附加到它上面的鉤子。 外掛程式被表示為類映射的 `config.xml` 檔。 外掛程式包括至少一個擴展的 JAVA 類的 `CordovaPlugin` 類，重寫的一個其 `execute` 方法。 作為最佳實踐，該外掛程式還應處理 `<a href="../../../cordova/events/events.pause.html">pause</a>` 和 `<a href="../../../cordova/events/events.resume.html">resume</a>` <a href="../../../cordova/events/events.html">事件</a>，以及任何外掛程式之間傳遞的消息。 外掛程式需要長時間運行的請求，後臺活動媒體重播、 聽眾或內部狀態等應執行 `onReset()` ，以及方法。 它執行時 `WebView` 定位到新的一頁或刷新，重新載入 JavaScript。
+Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與附加到它上面的鉤子。 外掛程式被表示為類映射的 `config.xml` 檔。 外掛程式包括至少一個擴展的 JAVA 類的 `CordovaPlugin` 類，重寫的一個其 `execute` 方法。 作為最佳實踐，該外掛程式還應處理 `pause` 和 `resume` 事件，以及任何外掛程式之間傳遞的消息。 外掛程式需要長時間運行的請求，後臺活動媒體重播、 聽眾或內部狀態等應執行 `onReset()` ，以及方法。 它執行時 `WebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
 ## 外掛程式類映射
 
@@ -77,7 +77,7 @@ JavaScript `exec` 函數的 `action` 參數對應于一個類的私有類方法�
 
 ## 執行緒
 
-外掛程式的 JavaScript 並*不*在主執行緒中運行 `WebView` 介面 ； 相反，它會運行 `WebCore` 執行緒，一樣 `execute` 方法。 如果您需要與<a href="../../next/index.html">使用者介面</a>進行交互，則應使用以下變化：
+外掛程式的 JavaScript 並*不*在主執行緒中運行 `WebView` 介面 ； 相反，它會運行 `WebCore` 執行緒，一樣 `execute` 方法。 如果您需要與使用者介面進行交互，則應使用以下變化：
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -164,7 +164,7 @@ JavaScript `exec` 函數的 `action` 參數對應于一個類的私有類方法�
 
 必要的進口商品在檔的頂部延伸中的類 `CordovaPlugin` ，其 `execute()` 方法，它將覆蓋從其接收郵件 `exec()` 。 `execute()`方法第一次測試的值 `action` ，在這種情況下有有效期的只有一個 `echo` 的值。 任何其他行動返回 `false` ，並導致 `INVALID_ACTION` 錯誤，會轉換為調用的 JavaScript 一邊錯誤回檔。
 
-<a href="../../next/index.html">下一步</a>，該方法檢索 echo 字串使用 `args` 物件的 `getString` 方法，指定的第一個參數傳遞給該方法。 值傳遞給一個私人後 `echo` 的方法，它是參數檢查，以確保它不是 `null` 或空字串，這種情況下的 `callbackContext.error()` 調用 JavaScript 的錯誤回檔。 如果通過各種檢查， `callbackContext.success()` 將傳遞原始 `message` 回 JavaScript 的成功回檔作為參數的字串。
+下一步，該方法檢索 echo 字串使用 `args` 物件的 `getString` 方法，指定的第一個參數傳遞給該方法。 值傳遞給一個私人後 `echo` 的方法，它是參數檢查，以確保它不是 `null` 或空字串，這種情況下的 `callbackContext.error()` 調用 JavaScript 的錯誤回檔。 如果通過各種檢查， `callbackContext.success()` 將傳遞原始 `message` 回 JavaScript 的成功回檔作為參數的字串。
 
 ## Android 系統集成
 

@@ -26,8 +26,8 @@ Camera
 Methods
 -------
 
-- <a href="camera.getPicture.html">camera.getPicture</a>
-- <a href="camera.cleanup.html">camera.cleanup</a>
+- camera.getPicture
+- camera.cleanup
 
 Permissions
 -----------

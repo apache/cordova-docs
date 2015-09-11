@@ -20,4 +20,4 @@ license: >
 
 # database_name
 
-<a href="../database/database.html">資料庫</a>的名稱。
+資料庫的名稱。

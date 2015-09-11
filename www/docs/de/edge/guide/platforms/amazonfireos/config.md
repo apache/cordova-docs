@@ -24,7 +24,7 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `<a href="../../../cordova/events/events.pause.html">pause</a>` -Ereignis ausgelöst. Diese `false` tötet nicht die app nach einem `<a href="../../../cordova/events/events.pause.html">pause</a>` Ereignis, sondern einfach hält Ausführung von Code innerhalb der Webview Cordova, während die app im Hintergrund ist.
+*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst. Diese `false` tötet nicht die app nach einem `pause` Ereignis, sondern einfach hält Ausführung von Code innerhalb der Webview Cordova, während die app im Hintergrund ist.
     
         <preference name="KeepRunning" value="false"/>
         

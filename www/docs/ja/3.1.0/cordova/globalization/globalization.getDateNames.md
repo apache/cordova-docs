@@ -29,7 +29,7 @@ license: >
 
 名前の配列を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが含まれています、 `value` プロパティ、 `Array` の `String` の値。 年または選択したオプションに応じて、週の最初の日の最初の月のいずれかから始まってアレイ機能の名前。
 
-名前の取得エラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+名前の取得エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

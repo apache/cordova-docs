@@ -22,7 +22,7 @@ license: >
 
 Событие возникает, когда есть изменения в состояние батареи.
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", yourCallbackFunction, false);
+    window.addEventListener("batterystatus", yourCallbackFunction, false);
     
 
 ## Подробная информация
@@ -35,7 +35,7 @@ license: >
 
 *   **isPlugged**: логическое значение, указывающее, является ли устройство подключено дюйма *(Boolean)*
 
-Приложения обычно должны использовать `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
+Приложения обычно должны использовать `window.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -51,7 +51,7 @@ Windows Phone 7 не обеспечивает родной API, чтобы оп�
 
 ## Быстрый пример
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
+    window.addEventListener("batterystatus", onBatteryStatus, false);
     
     function onBatteryStatus(info) {
         // Handle the online event
@@ -64,7 +64,7 @@ Windows Phone 7 не обеспечивает родной API, чтобы оп�
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Ready Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -72,13 +72,13 @@ Windows Phone 7 не обеспечивает родной API, чтобы оп�
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
+            window.addEventListener("batterystatus", onBatteryStatus, false);
         }
     
         // Handle the batterystatus event

@@ -56,7 +56,7 @@ if you prefer, you may add the project instead to the `Silverlight for Windows P
 __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a `CordovaWP7_x.x.x.zip` file.
 
 - Open the `lib\windows-phone\templates\standalone\CordovaSolution.sln` in Visual Studio Express for Windows Phone
-- Select __Export Template...__ from the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a>__ menu.
+- Select __Export Template...__ from the __File__ menu.
 - Choose template type __Project template__
 - Supply a name of the exported template, such as `CordovaStarter-2.1.0` to produce a `CordovaStarter-2.1.0.zip` file.
 
@@ -102,7 +102,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 To test your application on a device, the device must be registered. MSDN provides [documentation][register-url] to help deploy and test your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Windows Phone <a href="../../../cordova/device/device.html">Device</a>' from the top drop-down menu.
+- In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
     ![](img/guide/platforms/wp7/wpd.png)

@@ -18,13 +18,13 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>Address
+# ContactAddress
 
-Contient les propriétés de l'adresse pour un objet `<a href="../Contact/contact.html">Contact</a>`.
+Contient les propriétés de l'adresse pour un objet `Contact`.
 
 ## Propriétés
 
-*   **pref** : la valeur `true` si `<a href="../Contact/contact.html">Contact</a>Address` contient la valeur de préférence de l'utilisateur. *(booléen)*
+*   **pref** : la valeur `true` si `ContactAddress` contient la valeur de préférence de l'utilisateur. *(booléen)*
 
 *   **type** : une chaîne qui indique le type de champ, *maison* par exemple. *(DOMString)*
 
@@ -42,7 +42,7 @@ Contient les propriétés de l'adresse pour un objet `<a href="../Contact/contac
 
 ## Détails
 
-L'objet `<a href="../Contact/contact.html">Contact</a>Address` stocke les propriétés d'une seule adresse d'un contact. Un objet `<a href="../Contact/contact.html">Contact</a>` peut inclure plusieurs adresses dans un tableau `<a href="../Contact/contact.html">Contact</a>Address[]`.
+L'objet `ContactAddress` stocke les propriétés d'une seule adresse d'un contact. Un objet `Contact` peut inclure plusieurs adresses dans un tableau `ContactAddress[]`.
 
 ## Plates-formes prises en charge
 
@@ -71,15 +71,15 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Address` stocke les propri
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
     // find all contacts
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## Exemple complet
@@ -87,23 +87,23 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Address` stocke les propri
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // find all contacts
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+            var options = new ContactFindOptions();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -126,15 +126,15 @@ L'objet `<a href="../Contact/contact.html">Contact</a>Address` stocke les propri
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
     

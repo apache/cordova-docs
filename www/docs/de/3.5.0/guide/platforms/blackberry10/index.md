@@ -20,7 +20,7 @@ license: >
 
 # Handbuch für die Plattform von BlackBerry 10
 
-Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 Geräte aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im <a href="../blackberry/index.html">Handbuch der BlackBerry-Plattform</a> zu verwenden.
+Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 Geräte aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im Handbuch der BlackBerry-Plattform zu verwenden.
 
 ## Anforderungen
 
@@ -60,7 +60,7 @@ Um einen Signaturschlüssel zu erhalten, gehen Sie zu \[BlackBerry Schlüssel Be
 
 Markieren Sie das erste Feld: "für BlackBerry10 Anwendungen mit BlackBerry NDK entwickelt" und dann anmelden oder erstellen eine BBID.
 
-Geben Sie ein Kennwort, und klicken Sie auf "Token erhalten", um bbidtoken.csk zu downloaden. <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie diese Datei auf den standardmäßigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort für Ihr Betriebssystem, die auf der Downloadseite angezeigt wird.
+Geben Sie ein Kennwort, und klicken Sie auf "Token erhalten", um bbidtoken.csk zu downloaden. Speichern Sie diese Datei auf den standardmäßigen Speicherort für Ihr Betriebssystem, die auf der Downloadseite angezeigt wird.
 
 Der letzte Schritt ist ein Signaturzertifikat zu generieren:
 
@@ -136,9 +136,9 @@ Verwendung `--release` zu eine Release-Version zu erstellen, die für Verteilung
 
 Die `--keystorepass` Option gibt das Kennwort, die Sie beim Konfigurieren des Computers zum Signieren definiert Anwendungen.
 
-## An anderen <a href="../../../cordova/storage/storage.html">Speicher</a>orten bereitstellen
+## An anderen Speicherorten bereitstellen
 
-Die Anleitung oben übernehmen ein Gerät über USB angeschlossen ist oder ein Simulator auf dem lokalen Computer ausgeführt wird. Es ist auch möglich, an anderen <a href="../../../cordova/storage/storage.html">Speicher</a>orten bereitstellen.
+Die Anleitung oben übernehmen ein Gerät über USB angeschlossen ist oder ein Simulator auf dem lokalen Computer ausgeführt wird. Es ist auch möglich, an anderen Speicherorten bereitstellen.
 
 Eine weitere Gruppe von Befehlszeilen-Dienstprogramme sind enthalten, wenn Sie die BlackBerry 10-Plattform für Ihr Projekt einrichten. Der folgende Befehl, in diesem Fall aus dem Projektverzeichnis auf oberster Ebene aufgerufen verknüpft ein Ziel mit dem Namen *emu* mit einer IP-Adresse.
 

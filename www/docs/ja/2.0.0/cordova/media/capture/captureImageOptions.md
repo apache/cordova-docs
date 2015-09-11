@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>ImageOptions
+CaptureImageOptions
 ===================
 
 > 画像キャプチャーのオプションをカプセル化します。
@@ -29,13 +29,13 @@ license: >
 - __limit:__ 一つのキャプチャー操作で撮影できる画像の最大値を表します。値は1以上の必要があります (デフォルトは1です) 。
 - __mode:__ 選択された画像のモードを表します。値は `capture.supportedImageModes` の中の一つである必要があります。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // キャプチャー操作時の取得画像の最大値を3に制限
     var options = { limit: 3 };
 
-    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureImage(captureSuccess, captureError, options);
 
 Android に関する注意点
 --------------

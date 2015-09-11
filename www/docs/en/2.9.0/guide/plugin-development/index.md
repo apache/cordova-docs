@@ -68,7 +68,7 @@ The parameters are detailed below:
    The native guides listed below provide details.
 5. `[/* arguments */]` - Arguments to pass into the native environment.
 
-### Echo Plugin JavaScript <a href="../../cordova/storage/storage.opendatabase.html">Example</a>
+### Echo Plugin JavaScript Example
 
     window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
@@ -102,10 +102,10 @@ with at least one native implementation. Details to do so for each
 platform are listed below.  These guides continue to build on the
 simple Echo Plugin example discussed above.
 
-- <a href="android/index.html">Developing a Plugin on Android</a>
-- <a href="blackberry/index.html">Developing a Plugin on BlackBerry</a>
-- <a href="blackberry/index.html">Developing a Plugin on BlackBerry</a> 10
-- <a href="ios/index.html">Developing a Plugin on iOS</a>
-- <a href="windows-phone/index.html">Developing a Plugin on Windows Phone</a>
+- Developing a Plugin on Android
+- Developing a Plugin on BlackBerry
+- Developing a Plugin on BlackBerry 10
+- Developing a Plugin on iOS
+- Developing a Plugin on Windows Phone
 
 The webOS and Tizen platforms currently do not support plugins.

@@ -22,14 +22,14 @@ license: >
 
 獲取當前的羅經航向。
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## 說明
 
-羅盤是感應器，可檢測的方向或<a href="../device/device.html">設備</a>通常指從<a href="../device/device.html">設備</a>的頂部的標題。它的措施中從 0 度到 359.99，其中 0 是北部的標題。
+羅盤是感應器，可檢測的方向或設備通常指從設備的頂部的標題。它的措施中從 0 度到 359.99，其中 0 是北部的標題。
 
-通過返回的羅經航向資訊 `CompassHeading` 物件使用 `<a href="parameters/compassSuccess.html">compassSuccess</a>` 回呼函數。
+通過返回的羅經航向資訊 `CompassHeading` 物件使用 `compassSuccess` 回呼函數。
 
 ## 支援的平臺
 
@@ -47,7 +47,7 @@ license: >
     };
     
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

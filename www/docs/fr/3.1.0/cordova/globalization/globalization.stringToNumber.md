@@ -29,7 +29,7 @@ Analyse un nombre mis en forme comme une chaîne selon les préférences de l'ut
 
 Retourne le nombre de la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `Number` valeur.
 
-S'il y a une erreur, l'analyse de la chaîne de numéro, puis le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+S'il y a une erreur, l'analyse de la chaîne de numéro, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PARSING\_ERROR`.
 
 Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
 
@@ -62,7 +62,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela doit afficher
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToNumber Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

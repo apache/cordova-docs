@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# アンドロイド シェル ツール <a href="../../../index.html">ガイド</a>
+# アンドロイド シェル ツール ガイド
 
-この<a href="../../../index.html">ガイド</a>は、コルドバの一連のプラットフォームを中心としたシェル ツールを使用して Android アプリを開発する方法を示します。 <a href="../../overview/index.html">概要</a>で説明したこの開発パスは<a href="../../cli/index.html">コマンド ライン インターフェイス</a>で記述されているクロス プラットフォーム CLI ツールよりも開発オプションの大きい範囲を提供するかもしれない。 たとえば、ネイティブ コンポーネントと一緒にカスタム コルドバ WebView を展開する場合、シェル ・ ツールを使用する必要があります。 開発パスはいずれかを使用する前に Android プラットフォーム <a href="../../../index.html">ガイド</a>で説明されているよう、Android SDK 環境を構成すること最初する必要があります。
+このガイドは、コルドバの一連のプラットフォームを中心としたシェル ツールを使用して Android アプリを開発する方法を示します。 概要で説明したこの開発パスはコマンド ライン インターフェイスで記述されているクロス プラットフォーム CLI ツールよりも開発オプションの大きい範囲を提供するかもしれない。 たとえば、ネイティブ コンポーネントと一緒にカスタム コルドバ WebView を展開する場合、シェル ・ ツールを使用する必要があります。 開発パスはいずれかを使用する前に Android プラットフォーム ガイドで説明されているよう、Android SDK 環境を構成すること最初する必要があります。
 
 人造人間のためのシェル ・ ツールを有効にする、コルドバ[cordova.apache.org][1]からダウンロードします。 ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 各ターゲット、たい展開 `android` この場合。 関連するツールは、最上位レベルでふつう利用できる `bin` ディレクトリ、それ以外の場合より詳細な方向の**README**ファイルを参照してください。
 
  [1]: http://cordova.apache.org
 
-これらのツールを作成、構築、および Android アプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加の<a href="../../cli/index.html">コマンド ライン インターフェイス</a>については、管理プラグインを使用して Plugman を参照してください。 プラグインを開発する方法の詳細については、アプリケーション ・ プラグインを参照してください。
+これらのツールを作成、構築、および Android アプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。 プラグインを開発する方法の詳細については、アプリケーション ・ プラグインを参照してください。
 
 ## プロジェクトを作成します。
 
@@ -183,7 +183,7 @@ Mac の/Linux または Windows のリリース：
 
 カスタマイズする必要がある場合 `build.gradle` ではなく、直接編集よりも兄弟ファイルを作成する必要があります `build-extras.gradle` 。 このファイルは、メインの表示 `build.gradle` 時提示します。 以下は例です。
 
-    # <a href="../../../cordova/storage/storage.opendatabase.html">Example</a> build-extras.gradle
+    # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
     ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
     # When set, this function allows code to run at the end of `build.gradle`

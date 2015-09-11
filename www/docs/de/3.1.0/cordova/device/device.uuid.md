@@ -20,7 +20,7 @@ license: >
 
 # device.uuid
 
-Des <a href="device.html">Gerät</a>s Universally Unique Identifier ([UUID][1] zu erhalten).
+Des Geräts Universally Unique Identifier ([UUID][1] zu erhalten).
 
  [1]: http://en.wikipedia.org/wiki/Universally_Unique_Identifier
 
@@ -29,7 +29,7 @@ Des <a href="device.html">Gerät</a>s Universally Unique Identifier ([UUID][1] z
 
 ## Beschreibung
 
-Die Details wie eine UUID generiert wird werden vom <a href="device.html">Gerät</a>ehersteller und beziehen sich auf die Plattform oder das Modell des <a href="device.html">Gerät</a>s.
+Die Details wie eine UUID generiert wird werden vom Gerätehersteller und beziehen sich auf die Plattform oder das Modell des Geräts.
 
 ## Unterstützte Plattformen
 
@@ -42,9 +42,9 @@ Die Details wie eine UUID generiert wird werden vom <a href="device.html">Gerät
 
 ## Kleines Beispiel
 
-    / / Android: wird eine zufällige 64-Bit-Ganzzahl (als Zeichenfolge, wieder!) / / die ganze Zahl wird beim ersten Start des <a href="device.html">Gerät</a>s erzeugt / / / / BlackBerry: gibt die PIN-Nummer des <a href="device.html">Gerät</a>es / / Dies ist eine neunstellige eindeutige Ganzzahl (als String, obwohl!) / / / / iPhone: (paraphrasiert aus der Dokumentation zur UIDevice-Klasse) / / liefert eine Reihe von Hash-Werte, die aus mehreren Hardware erstellt identifiziert.
-    / / Es ist gewährleistet, dass für jedes <a href="device.html">Gerät</a> eindeutig sein und kann nicht gebunden werden / / an den Benutzer weitergeleitet.
-    / / Windows Phone 7: gibt einen Hash des <a href="device.html">Gerät</a> + aktueller Benutzer, / / wenn der Benutzer nicht definiert ist, eine Guid generiert und wird weiter bestehen, bis die app deinstalliert wird / / Tizen: gibt das <a href="device.html">Gerät</a> IMEI (International Mobile Equipment Identity oder IMEI ist eine Zahl / / einzigartig für jedes GSM- und UMTS-Handy.
+    / / Android: wird eine zufällige 64-Bit-Ganzzahl (als Zeichenfolge, wieder!) / / die ganze Zahl wird beim ersten Start des Geräts erzeugt / / / / BlackBerry: gibt die PIN-Nummer des Gerätes / / Dies ist eine neunstellige eindeutige Ganzzahl (als String, obwohl!) / / / / iPhone: (paraphrasiert aus der Dokumentation zur UIDevice-Klasse) / / liefert eine Reihe von Hash-Werte, die aus mehreren Hardware erstellt identifiziert.
+    / / Es ist gewährleistet, dass für jedes Gerät eindeutig sein und kann nicht gebunden werden / / an den Benutzer weitergeleitet.
+    / / Windows Phone 7: gibt einen Hash des Gerät + aktueller Benutzer, / / wenn der Benutzer nicht definiert ist, eine Guid generiert und wird weiter bestehen, bis die app deinstalliert wird / / Tizen: gibt das Gerät IMEI (International Mobile Equipment Identity oder IMEI ist eine Zahl / / einzigartig für jedes GSM- und UMTS-Handy.
     var deviceID = device.uuid;
     
 
@@ -53,24 +53,24 @@ Die Details wie eine UUID generiert wird werden vom <a href="device.html">Gerät
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
                                 'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -83,8 +83,8 @@ Die Details wie eine UUID generiert wird werden vom <a href="device.html">Gerät
 
 ## iOS Quirk
 
-Die `uuid` auf iOS ist nicht eindeutig auf ein <a href="device.html">Gerät</a>, aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder aktualisieren Sie auch Ihre app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
+Die `uuid` auf iOS ist nicht eindeutig auf ein Gerät, aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder aktualisieren Sie auch Ihre app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
 
 ## Windows Phone 7 und 8 Macken
 
-Die `uuid` für Windows Phone 7 die Berechtigung erfordert `ID_CAP_IDENTITY_DEVICE` . Microsoft wird diese Eigenschaft wahrscheinlich bald abzuschaffen. Wenn die Funktion nicht verfügbar ist, generiert die Anwendung eine persistente Guid, die für die Dauer der Installation der Anwendung auf dem <a href="device.html">Gerät</a> verwaltet wird.
+Die `uuid` für Windows Phone 7 die Berechtigung erfordert `ID_CAP_IDENTITY_DEVICE` . Microsoft wird diese Eigenschaft wahrscheinlich bald abzuschaffen. Wenn die Funktion nicht verfügbar ist, generiert die Anwendung eine persistente Guid, die für die Dauer der Installation der Anwendung auf dem Gerät verwaltet wird.

@@ -20,7 +20,7 @@ license: >
 
 # MediaError
 
-A `MediaError` объект возвращается к `<a href="../Parameters/mediaError.html">mediaError</a>` функции обратного вызова при возникновении ошибки.
+A `MediaError` объект возвращается к `mediaError` функции обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -37,4 +37,4 @@ A `MediaError` объект возвращается к `<a href="../Parameters/
 
 ## Описание
 
-`MediaError`Передается объект `<a href="../Parameters/mediaError.html">mediaError</a>` функцию обратного вызова при возникновении ошибки.
+`MediaError`Передается объект `mediaError` функцию обратного вызова при возникновении ошибки.

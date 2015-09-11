@@ -46,7 +46,7 @@ Il `window.localStorage` interfaccia implementa [interfaccia Web Storage sul W3C
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## <a href="../../../config_ref/images.html">Piattaforme supportate</a>
+## Piattaforme supportate
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 e superiori)
@@ -85,14 +85,14 @@ Il `window.localStorage` interfaccia implementa [interfaccia Web Storage sul W3C
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ Il `window.localStorage` interfaccia implementa [interfaccia Web Storage sul W3C
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>localStorage</p>
       </body>
     </html>

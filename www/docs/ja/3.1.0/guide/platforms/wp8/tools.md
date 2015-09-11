@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone のコマンド ライン ツール
 
-`cordova`コマンド ライン ユーティリティは、一度にいくつかのプラットフォームでアプリケーションをビルドすることができます高度なツールです。 コルドバ フレームワークの古いバージョンをそれぞれのプラットフォームに固有のコマンド ライン ツールのセットを提供します。 CLI に代わるものとしてそれらを使用するには[cordova.apache.org][1]からコルドバのこのバージョンをダウンロードする必要があります。 ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 ターゲットにするプラットフォームを展開します。 ここで説明したツールは、最上位レベルでふつう利用できる `bin` ディレクトリ、それ以外の場合より詳細な方向の**README**<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を参照してください。
+`cordova`コマンド ライン ユーティリティは、一度にいくつかのプラットフォームでアプリケーションをビルドすることができます高度なツールです。 コルドバ フレームワークの古いバージョンをそれぞれのプラットフォームに固有のコマンド ライン ツールのセットを提供します。 CLI に代わるものとしてそれらを使用するには[cordova.apache.org][1]からコルドバのこのバージョンをダウンロードする必要があります。 ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 ターゲットにするプラットフォームを展開します。 ここで説明したツールは、最上位レベルでふつう利用できる `bin` ディレクトリ、それ以外の場合より詳細な方向の**README**ファイルを参照してください。
 
  [1]: http://cordova.apache.org
 
@@ -34,11 +34,11 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
 
 新しい Apache コルドバ WP7 または WP8 アプリケーションの作成について移動する 2 つの方法があります。
 
-### 作成し、テンプレートをインストールするバッチ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を実行します。
+### 作成し、テンプレートをインストールするバッチ ファイルを実行します。
 
-*   レポのルートには、<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> createTemplates.bat が含まれています。 この<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をダブルクリック 2 .zip <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>が生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から新しい Apache コルドバ Windows Phone アプリを作成します。
+*   レポのルートには、ファイル createTemplates.bat が含まれています。 このファイルをダブルクリック 2 .zip ファイルが生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらのファイルを簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio ファイルから新しい Apache コルドバ Windows Phone アプリを作成します。
 
-*   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を実行する場合
+*   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ ファイルを実行する場合
 
 スクリプトを実行します。
 
@@ -53,7 +53,7 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
+    >PackageName      : The namespace for the project (default is Cordova.Example)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:
@@ -61,7 +61,7 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
     
 
-Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューション <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> (.sln) を開く
+Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューション ファイル (.sln) を開く
 
 ビルドし、実行
 
@@ -85,7 +85,7 @@ Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューショ
     
     $ C:\path\to\my\_new\_project\cordova\run [ターゲット] は、[ビルド]
 
-既定では、 `run` コマンドが呼び出された `--emulator --debug` <a href="../../../cordova/file/flags/flags.html">フラグ</a>が指定されていない場合。
+既定では、 `run` コマンドが呼び出された `--emulator --debug` フラグが指定されていない場合。
 
 ## クリーニング
 

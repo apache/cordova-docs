@@ -20,19 +20,19 @@ license: >
 
 # FileWriter
 
-Als Objekt, das Sie erstellen und Daten in eine <a href="../fileobj/fileobj.html">Datei</a> schreiben kann.
+Als Objekt, das Sie erstellen und Daten in eine Datei schreiben kann.
 
 ## Eigenschaften
 
 *   **ReadyState**: eines der drei möglichen Zuständen, entweder `INIT` , `WRITING` , oder`DONE`.
 
-*   **<a href="../fileobj/fileobj.html">Datei</a>name**: der Name der <a href="../fileobj/fileobj.html">Datei</a> geschrieben werden. *(DOM-String und enthält)*
+*   **Dateiname**: der Name der Datei geschrieben werden. *(DOM-String und enthält)*
 
-*   **Länge**: die Länge der <a href="../fileobj/fileobj.html">Datei</a> geschrieben werden. *(lange)*
+*   **Länge**: die Länge der Datei geschrieben werden. *(lange)*
 
-*   **Lage**: die aktuelle <a href="../../geolocation/Position/position.html">Position</a> des <a href="../fileobj/fileobj.html">Datei</a>zeigers. *(lange)*
+*   **Lage**: die aktuelle Position des Dateizeigers. *(lange)*
 
-*   **Fehler**: ein Objekt, die Fehler enthalten. *(<a href="../fileerror/fileerror.html">FileError</a>)*
+*   **Fehler**: ein Objekt, die Fehler enthalten. *(FileError)*
 
 *   **Onwritestart**: wird aufgerufen, wenn der Schreibvorgang beginnt. *(Funktion)*
 
@@ -46,25 +46,25 @@ Als Objekt, das Sie erstellen und Daten in eine <a href="../fileobj/fileobj.html
 
 Die folgende Eigenschaft wird *nicht* unterstützt:
 
-*   **OnProgress**: aufgerufen, beim Schreiben der <a href="../fileobj/fileobj.html">Datei</a> Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
+*   **OnProgress**: aufgerufen, beim Schreiben der Datei Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
 
 ## Methoden
 
-*   **Abbrechen**: bricht die <a href="../fileobj/fileobj.html">Datei</a> schreibt.
+*   **Abbrechen**: bricht die Datei schreibt.
 
-*   **Suchen**: bewegt den <a href="../fileobj/fileobj.html">Datei</a>zeiger auf das angegebene Byte.
+*   **Suchen**: bewegt den Dateizeiger auf das angegebene Byte.
 
-*   **abschneiden**: die <a href="../fileobj/fileobj.html">Datei</a> auf die angegebene Länge verkürzt.
+*   **abschneiden**: die Datei auf die angegebene Länge verkürzt.
 
-*   **schreiben**: schreibt Daten in die <a href="../fileobj/fileobj.html">Datei</a>.
+*   **schreiben**: schreibt Daten in die Datei.
 
 ## Informationen
 
-Das `FileWriter` -Objekt bietet eine Möglichkeit zum Schreiben von UTF-8 kodierten <a href="../fileobj/fileobj.html">Datei</a>en in <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> des <a href="../../device/device.html">Gerät</a>s. Anwendungen reagieren auf `writestart` , `progress` , `write` , `writeend` , `error` , und `abort` Ereignisse.
+Das `FileWriter` -Objekt bietet eine Möglichkeit zum Schreiben von UTF-8 kodierten Dateien in Dateisystem des Geräts. Anwendungen reagieren auf `writestart` , `progress` , `write` , `writeend` , `error` , und `abort` Ereignisse.
 
-Jeder `FileWriter` entspricht einer <a href="../fileobj/fileobj.html">Datei</a>, auf die Daten können viele Male geschrieben werden. Die `FileWriter` behält der <a href="../fileobj/fileobj.html">Datei</a> `position` und `length` Attribute, die die app zu ermöglichen `seek` und `write` an einer beliebigen Stelle in der <a href="../fileobj/fileobj.html">Datei</a>. In der Standardeinstellung der `FileWriter` schreibt an den Anfang der <a href="../fileobj/fileobj.html">Datei</a> überschreiben vorhandene Daten. Legen Sie das optionale `append` boolesche zu `true` in der `FileWriter` der Konstruktor, bis zum Ende der <a href="../fileobj/fileobj.html">Datei</a> zu schreiben.
+Jeder `FileWriter` entspricht einer Datei, auf die Daten können viele Male geschrieben werden. Die `FileWriter` behält der Datei `position` und `length` Attribute, die die app zu ermöglichen `seek` und `write` an einer beliebigen Stelle in der Datei. In der Standardeinstellung der `FileWriter` schreibt an den Anfang der Datei überschreiben vorhandene Daten. Legen Sie das optionale `append` boolesche zu `true` in der `FileWriter` der Konstruktor, bis zum Ende der Datei zu schreiben.
 
-Text-Daten werden von allen unten aufgelisteten Plattformen unterstützt. Text wird als UTF-8 codiert, bevor Sie in das <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> geschrieben werden. Einige Plattformen unterstützen auch Binärdaten, die in als ein ArrayBuffer oder ein Blob übergeben werden können.
+Text-Daten werden von allen unten aufgelisteten Plattformen unterstützt. Text wird als UTF-8 codiert, bevor Sie in das Dateisystem geschrieben werden. Einige Plattformen unterstützen auch Binärdaten, die in als ein ArrayBuffer oder ein Blob übergeben werden können.
 
 ## Unterstützte Plattformen
 
@@ -182,19 +182,19 @@ Nur-Text Unterstützung:
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileWriter Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
@@ -228,7 +228,7 @@ Nur-Text Unterstützung:
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Write File</p>
       </body>
     </html>

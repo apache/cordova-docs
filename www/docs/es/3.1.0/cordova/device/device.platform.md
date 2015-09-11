@@ -50,24 +50,24 @@ Obtener el nombre del sistema operativo del dispositivo.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -80,12 +80,12 @@ Obtener el nombre del sistema operativo del dispositivo.
 
 ## Rarezas de blackBerry
 
-<a href="device.html">Dispositivo</a>s pueden devolver el número de versión de plataforma de dispositivo en lugar del nombre de la plataforma. Por ejemplo, la Storm2 9550 devuelve un valor como `2.13.0.95`.
+Dispositivos pueden devolver el número de versión de plataforma de dispositivo en lugar del nombre de la plataforma. Por ejemplo, la Storm2 9550 devuelve un valor como `2.13.0.95`.
 
 ## Windows Phone 7 rarezas
 
-<a href="device.html">Dispositivo</a>s Windows Phone 7 informe de la plataforma como `WinCE`.
+Dispositivos Windows Phone 7 informe de la plataforma como `WinCE`.
 
 ## Windows Phone 8 rarezas
 
-<a href="device.html">Dispositivo</a>s Windows Phone 8 Informe la plataforma como `Win32NT`.
+Dispositivos Windows Phone 8 Informe la plataforma como `Win32NT`.

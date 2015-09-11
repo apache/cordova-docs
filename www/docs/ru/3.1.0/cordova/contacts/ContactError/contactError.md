@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` объект передается в `<a href="../parameters/contactError.html">contactError</a>` обратного вызова при возникновении ошибки.
+A `ContactError` объект передается в `contactError` обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -38,4 +38,4 @@ A `ContactError` объект передается в `<a href="../parameters/co
 
 ## Описание
 
-`ContactError`Объект возвращается пользователю через `<a href="../parameters/contactError.html">contactError</a>` функцию обратного вызова при возникновении ошибки.
+`ContactError`Объект возвращается пользователю через `contactError` функцию обратного вызова при возникновении ошибки.

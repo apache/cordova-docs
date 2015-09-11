@@ -35,7 +35,7 @@ The batterylow handler will be called with an object that contains two propertie
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '<a href="events.deviceready.html">deviceready</a>' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     window.addEventListener("batterylow", onBatteryLow, false);
@@ -54,30 +54,30 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
        	alert("Battery Level Low " + info.level + "%"); 
     }
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>PhoneGap Device Ready Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call on<a href="../device/device.html">Device</a>Ready when PhoneGap is loaded.
+        // Call onDeviceReady when PhoneGap is loaded.
         //
         // At this point, the document has loaded but cordova-1.5.0.js has not.
         // When PhoneGap is loaded and talking with the native device,
-        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
+        // it will call the event `deviceready`.
         // 
 	    function onLoad() {
-    	    document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+    	    document.addEventListener("deviceready", onDeviceReady, false);
     	}
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
 		    window.addEventListener("batterylow", onBatteryLow, false);
         }
 

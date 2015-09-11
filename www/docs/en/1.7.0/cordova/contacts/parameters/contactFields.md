@@ -21,6 +21,6 @@ license: >
 contactFields
 =============
 
-Required parameter of the `<a href="../contacts.find.html">contacts.find</a>` method.  Use this parameter to specify which fields should be included in the `<a href="../Contact/contact.html">Contact</a>` objects resulting from a find operation.
+Required parameter of the `contacts.find` method.  Use this parameter to specify which fields should be included in the `Contact` objects resulting from a find operation.
 
     ["name", "phoneNumbers", "emails"]

@@ -20,11 +20,11 @@ license: >
 
 # iOS WebViews
 
-이 <a href="../../../index.html">가이드</a>에서는 더 큰 iOS 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
+이 가이드에서는 더 큰 iOS 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
 
 IOS에 대 한 WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사용 하 여는 `Cleaver` Xcode 템플릿을 참조 구현으로 쓸모 있는 구성 요소. 코르 도우 바 2.0 및 이후 버전 에서만 하위 프로젝트 기반 칼 구현을 지원합니다.
 
-이러한 지침을 적어도 필요로 코르도바 3.x 및 새로 만든된 iOS 프로젝트에서 `config.xml` 파일과 함께 Xcode 6.0. 절차 수 있습니다는 <a href="../../cli/index.html">명령줄 인터페이스</a>에서 새 프로젝트를 만든 다음 얻을 하는 `config.xml` 내에서 명명 된 응용 프로그램의 하위 디렉터리 내에서 파일`platforms/ios`.
+이러한 지침을 적어도 필요로 코르도바 3.x 및 새로 만든된 iOS 프로젝트에서 `config.xml` 파일과 함께 Xcode 6.0. 절차 수 있습니다는 명령줄 인터페이스에서 새 프로젝트를 만든 다음 얻을 하는 `config.xml` 내에서 명명 된 응용 프로그램의 하위 디렉터리 내에서 파일`platforms/ios`.
 
 이러한 지침에 따라, 최신 코르도바 분포를가지고 있는지 확인 합니다. [Cordova.apache.org][1] 에서 다운로드 하 고 그것의 iOS 패키지의 압축을 풉니다.
 
@@ -94,7 +94,7 @@ IOS에 대 한 WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사�
         #import <Cordova/CDVViewController.h>
         
 
-2.  새로운 인스턴스화할 `CDVViewController` 어딘가에, 예를 들어, 클래스 속성에 <a href="../../next/index.html">유지</a>:
+2.  새로운 인스턴스화할 `CDVViewController` 어딘가에, 예를 들어, 클래스 속성에 유지:
     
         CDVViewController* viewController = [CDVViewController new];
         

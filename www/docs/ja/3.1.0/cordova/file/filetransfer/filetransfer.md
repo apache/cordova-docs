@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">ファイル</a>転送
+# ファイル転送
 
 `FileTransfer`オブジェクトをサーバーからダウンロードまたはアップロードすることができます。
 
@@ -28,15 +28,15 @@ license: >
 
 ## メソッド
 
-*   **アップロード**: サーバーに<a href="../fileobj/fileobj.html">ファイル</a>を送信します。
+*   **アップロード**: サーバーにファイルを送信します。
 
-*   **ダウンロード**: サーバーから<a href="../fileobj/fileobj.html">ファイル</a>をダウンロードします。
+*   **ダウンロード**: サーバーからファイルをダウンロードします。
 
 *   **中止**: 進行中の転送を中止します。
 
 ## 詳細
 
-`FileTransfer`オブジェクトはマルチパートのポスト http を使用してリモート サーバーに<a href="../fileobj/fileobj.html">ファイル</a>をアップロードする方法を提供します。 HTTP と HTTPS の両方のプロトコルがサポートされます。 省略可能なパラメーターを渡すことによって指定することができます、 `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` オブジェクトの `upload()` メソッド。 成功したアップロード時に、 `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` オブジェクト、成功時のコールバックに渡されます。 エラーが発生した場合、 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` オブジェクト エラー コールバックに渡されます。 リモート サーバーから<a href="../fileobj/fileobj.html">ファイル</a>をダウンロードし、<a href="../../device/device.html">デバイス</a>に保存する (iOS と Android） でのみ可能です。
+`FileTransfer`オブジェクトはマルチパートのポスト http を使用してリモート サーバーにファイルをアップロードする方法を提供します。 HTTP と HTTPS の両方のプロトコルがサポートされます。 省略可能なパラメーターを渡すことによって指定することができます、 `FileUploadOptions` オブジェクトの `upload()` メソッド。 成功したアップロード時に、 `FileUploadResult` オブジェクト、成功時のコールバックに渡されます。 エラーが発生した場合、 `FileTransferError` オブジェクト エラー コールバックに渡されます。 リモート サーバーからファイルをダウンロードし、デバイスに保存する (iOS と Android） でのみ可能です。
 
 ## サポートされているプラットフォーム
 
@@ -50,15 +50,15 @@ license: >
 
 **パラメーター:**
 
-*   **filePath**: <a href="../../device/device.html">デバイス</a>上の<a href="../fileobj/fileobj.html">ファイル</a>の完全パス。
+*   **filePath**: デバイス上のファイルの完全パス。
 
-*   **サーバー**: によって符号化されるように、<a href="../fileobj/fileobj.html">ファイル</a>を受信するサーバーの URL`encodeURI()`.
+*   **サーバー**: によって符号化されるように、ファイルを受信するサーバーの URL`encodeURI()`.
 
 *   **successCallback**: 渡されたコールバックを `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: エラー取得が発生した場合に実行されるコールバック、 `Metadata` 。呼び出されると、 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` オブジェクト。*(機能)*
+*   **解り**: エラー取得が発生した場合に実行されるコールバック、 `Metadata` 。呼び出されると、 `FileTransferError` オブジェクト。*(機能)*
 
-*   **オプション**: <a href="../fileobj/fileobj.html">ファイル</a>名と mime タイプなどの省略可能なパラメーター。
+*   **オプション**: ファイル名と mime タイプなどの省略可能なパラメーター。
 
 *   **trustAllHosts**: 省略可能なパラメーターは、デフォルト `false` 。 場合設定 `true` 、セキュリティ証明書をすべて受け付けます。 これは Android の自己署名入りセキュリティ証明書を拒否するので便利です。 運用環境で使用しないでください。 Android と iOS でサポートされています。 *(ブール値)*
 
@@ -78,7 +78,7 @@ license: >
         console.log("upload error target " + error.target);
     }
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ license: >
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ license: >
             }
     
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ license: >
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ Android と iOS でサポートされています。
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -198,13 +198,13 @@ Android と iOS でサポートされています。
 
 **パラメーター:**
 
-*   **ソース**: によって符号化されるように、<a href="../fileobj/fileobj.html">ファイル</a>をダウンロードするサーバーの URL`encodeURI()`.
+*   **ソース**: によって符号化されるように、ファイルをダウンロードするサーバーの URL`encodeURI()`.
 
-*   **ターゲット**: <a href="../../device/device.html">デバイス</a>上の<a href="../fileobj/fileobj.html">ファイル</a>の完全パス。
+*   **ターゲット**: デバイス上のファイルの完全パス。
 
-*   **successCallback**: 渡されたコールバックを `<a href="../fileentry/fileentry.html">FileEntry</a>` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` オブジェクト。*(機能)*
+*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `FileTransferError` オブジェクト。*(機能)*
 
 *   **trustAllHosts**: 省略可能なパラメーターは、デフォルト `false` 。 場合に設定されている `true` すべてのセキュリティ証明書を受け入れるでしょう。 これは便利ですアンドロイドの自己署名入りセキュリティ証明書を拒否します。 運用環境で使用しないでください。 Android と iOS でサポートされています。 *(ブール値)*
 
@@ -212,12 +212,12 @@ Android と iOS でサポートされています。
 
 **簡単な例**
 
-    // !! FilePath は<a href="../../device/device.html">デバイス</a> var 出色で有効なパスと見なされます = 新しい FileTransfer();var uri = encodeURI ("http://some.server.com/download.php");fileTransfer.download (uri、filePath、function(entry) {console.log ("ダウンロードが完了しました:"+ entry.fullPath);}、function(error) {console.log (「ダウンロード エラー ソース」+ error.source);console.log (「ダウンロード エラー ターゲット」+ error.target);console.log (「アップロード エラー コード」+ error.code);}、false {ヘッダー: {「承認」:「基本的な dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}});
+    // !! FilePath はデバイス var 出色で有効なパスと見なされます = 新しい FileTransfer();var uri = encodeURI ("http://some.server.com/download.php");fileTransfer.download (uri、filePath、function(entry) {console.log ("ダウンロードが完了しました:"+ entry.fullPath);}、function(error) {console.log (「ダウンロード エラー ソース」+ error.source);console.log (「ダウンロード エラー ターゲット」+ error.target);console.log (「アップロード エラー コード」+ error.code);}、false {ヘッダー: {「承認」:「基本的な dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}});
     
 
 ## 中止
 
-進行中の転送を中止します。Onerror コールバックが <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR のエラー コードを持っている <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> オブジェクトに渡されます。
+進行中の転送を中止します。Onerror コールバックが FileTransferError.ABORT_ERR のエラー コードを持っている FileTransferError オブジェクトに渡されます。
 
 **サポートされているプラットフォーム**
 
@@ -226,7 +226,7 @@ Android と iOS でサポートされています。
 
 **簡単な例**
 
-    // !! 可変 fileURI <a href="../../device/device.html">デバイス</a> var 勝利上のテキスト <a href="../fileobj/fileobj.html">ファイル</a>を有効な URI が含まれている前提としています function(r) = {console.log (「呼び出すことはできません」);}。var の失敗 function(error) = {//error.code <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR 警告 = = ("エラーが発生しました: コード ="+ error.code);console.log (「アップロード エラー ソース」+ error.source);console.log (「アップロード エラー ターゲット」+ error.target);}var のオプション = 新しい <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();options.fileKey="file";options.fileName="myphoto.jpg";options.mimeType="image/jpeg";var ft = 新しい FileTransfer();ft.upload fileURI、encodeURI ("http://some.server.com/upload.php")、勝利、失敗する （オプション）;ft.abort();
+    // !! 可変 fileURI デバイス var 勝利上のテキスト ファイルを有効な URI が含まれている前提としています function(r) = {console.log (「呼び出すことはできません」);}。var の失敗 function(error) = {//error.code FileTransferError.ABORT_ERR 警告 = = ("エラーが発生しました: コード ="+ error.code);console.log (「アップロード エラー ソース」+ error.source);console.log (「アップロード エラー ターゲット」+ error.target);}var のオプション = 新しい FileUploadOptions();options.fileKey="file";options.fileName="myphoto.jpg";options.mimeType="image/jpeg";var ft = 新しい FileTransfer();ft.upload fileURI、encodeURI ("http://some.server.com/upload.php")、勝利、失敗する （オプション）;ft.abort();
     
 
 ## onprogress

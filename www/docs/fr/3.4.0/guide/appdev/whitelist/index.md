@@ -22,7 +22,7 @@ license: >
 
 Domaine liste blanche est un modèle de sécurité qui contrôle l'accès à des domaines externes sur lesquels votre application n'a aucun contrôle. Stratégie de sécurité par défaut de Cordova permet d'accéder à n'importe quel site. Avant de déplacer votre application à la production, vous devez formuler une liste blanche et permettre l'accès au réseau des domaines et sous-domaines.
 
-Cordova respecte la spécification [W3C Widget accès][1] , qui s'appuie sur le `<access>` élément au sein du PPA `config.xml` fichier pour activer l'accès réseau à des domaines spécifiques. Pour les projets qui s'appuient sur le workflow de CLI décrit dans l'Interface de ligne de commande, ce fichier se trouve dans le répertoire racine du projet. Autrement pour les chemins de développement spécifiques à la plateforme, les endroits sont énumérés dans les sections ci-dessous. (Voir les différents <a href="../../../index.html">Guides</a> de plate-forme pour plus d'informations sur chaque plate-forme).
+Cordova respecte la spécification [W3C Widget accès][1] , qui s'appuie sur le `<access>` élément au sein du PPA `config.xml` fichier pour activer l'accès réseau à des domaines spécifiques. Pour les projets qui s'appuient sur le workflow de CLI décrit dans l'Interface de ligne de commande, ce fichier se trouve dans le répertoire racine du projet. Autrement pour les chemins de développement spécifiques à la plateforme, les endroits sont énumérés dans les sections ci-dessous. (Voir les différents Guides de plate-forme pour plus d'informations sur chaque plate-forme).
 
  [1]: http://www.w3.org/TR/widgets-access/
 

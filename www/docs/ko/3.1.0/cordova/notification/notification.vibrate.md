@@ -20,12 +20,12 @@ license: >
 
 # notification.vibrate
 
-지정 된 시간 동안 <a href="../device/device.html">장치</a>를 진동.
+지정 된 시간 동안 장치를 진동.
 
     navigator.notification.vibrate(milliseconds)
     
 
-*   **시간**: 밀리초 1000 밀리초 1 초를 같게 <a href="../device/device.html">장치</a> 진동. *(수)*
+*   **시간**: 밀리초 1000 밀리초 1 초를 같게 장치 진동. *(수)*
 
 ## 지원 되는 플랫폼
 
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,7 +64,7 @@ license: >
         // Show a custom alert
         //
         function showAlert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+            navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -74,7 +74,7 @@ license: >
         // Beep three times
         //
         function playBeep() {
-            navigator.<a href="notification.beep.html">notification.beep</a>(3);
+            navigator.notification.beep(3);
         }
     
         // Vibrate for 2 seconds

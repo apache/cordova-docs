@@ -21,14 +21,14 @@ license: >
 device.phonegap
 ===============
 
-Get the <a href="../storage/parameters/version.html">version</a> of phonegap running on the device.
+Get the version of phonegap running on the device.
 
     var string = device.phonegap;
     
 Description
 -----------
 
-`device.phonegap` returns the <a href="../storage/parameters/version.html">version</a> of phonegap running on the device.
+`device.phonegap` returns the version of phonegap running on the device.
 
 Supported Platforms
 -------------------
@@ -39,36 +39,36 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    var <a href="../storage/parameters/name.html">name</a> = device.phonegap;
+    var name = device.phonegap;
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = '<a href="device.html">Device</a> Name: '     + device.<a href="../storage/parameters/name.html">name</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> PhoneGap: ' + device.phonegap + '<br />' + 
-                                '<a href="device.html">Device</a> Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' + 
-                                '<a href="device.html">Device</a> UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> Version: '  + device.<a href="../storage/parameters/version.html">version</a>  + '<br />';
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                                'Device PhoneGap: ' + device.phonegap + '<br />' + 
+                                'Device Platform: ' + device.platform + '<br />' + 
+                                'Device UUID: '     + device.uuid     + '<br />' + 
+                                'Device Version: '  + device.version  + '<br />';
         }
 
         </script>

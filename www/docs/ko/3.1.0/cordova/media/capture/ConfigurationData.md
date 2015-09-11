@@ -20,11 +20,11 @@ license: >
 
 # ConfigurationData
 
-> <a href="../../device/device.html">장치</a>가 지 원하는 <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> 매개 <a href="../../../plugin_ref/spec.html">변수</a> 집합을 캡슐화 합니다.
+> 장치가 지 원하는 미디어 캡처 매개 변수 집합을 캡슐화 합니다.
 
 ## 설명
 
-<a href="../../device/device.html">장치</a>에서 지 원하는 <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> 모드를 설명 합니다. 구성 데이터는 MIME 유형 및 비디오 또는 이미지 <a href="capture.html">캡처</a> <a href="capture.html">캡처</a> 크기 포함 됩니다.
+장치에서 지 원하는 미디어 캡처 모드를 설명 합니다. 구성 데이터는 MIME 유형 및 비디오 또는 이미지 캡처 캡처 크기 포함 됩니다.
 
 MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
 
@@ -38,7 +38,7 @@ MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
 
 ## 속성
 
-*   **유형**: <a href="../media.html">미디어</a> 형식을 나타내는 ASCII로 인코딩 소문자 문자열. (DOMString)
+*   **유형**: 미디어 형식을 나타내는 ASCII로 인코딩 소문자 문자열. (DOMString)
 
 *   **높이**: 이미지 또는 비디오 픽셀에서의 높이 있습니다. 사운드 클립에 대 한 0입니다. (수)
 

@@ -20,13 +20,13 @@ license: >
 
 # ContactFindOptions
 
-包含可用於篩選結果的屬性 `<a href="../contacts.find.html">contacts.find</a>` 操作。
+包含可用於篩選結果的屬性 `contacts.find` 操作。
 
 ## 屬性
 
-*   **篩選器**： 用來查找<a href="../contacts.html">連絡人</a>的搜索字串。*() DOMString*（預設值：`""`)
+*   **篩選器**： 用來查找連絡人的搜索字串。*() DOMString*（預設值：`""`)
 
-*   **多個**： 確定是否查找操作返回多個<a href="../contacts.html">連絡人</a>。*（布林）*（預設值：`false`)
+*   **多個**： 確定是否查找操作返回多個連絡人。*（布林）*（預設值：`false`)
 
 ## 支援的平臺
 
@@ -46,7 +46,7 @@ license: >
     };
     
     // error callback
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
@@ -57,7 +57,7 @@ license: >
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## 完整的示例
@@ -65,14 +65,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -84,7 +84,7 @@ license: >
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

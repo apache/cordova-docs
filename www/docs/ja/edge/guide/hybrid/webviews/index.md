@@ -22,9 +22,9 @@ license: >
 
 Cordova アプリ通常ネイティブ モバイル プラットフォーム内でブラウザ ベース*WebView*として実装されます。 このセクション使用方法示します、プラットフォームをサポートするため、独自の WebView を作成するフル コンポーネント コルドバ Api の。 その後、ハイブリッド アプリケーションでのネイティブ コンポーネントと共にこれらコルドバのアプリケーション コンポーネントを展開できます。
 
-WebView を展開するには、各ネイティブ プログラミング環境に精通する必要があります。<a href="../../../config_ref/images.html">サポートされているプラットフォーム</a>の説明を次に示します。
+WebView を展開するには、各ネイティブ プログラミング環境に精通する必要があります。サポートされているプラットフォームの説明を次に示します。
 
-*   <a href="../../platforms/amazonfireos/webview.html">アマゾン火 OS web 表示</a>
-*   <a href="../../platforms/android/webview.html">Android の web 表示</a>
-*   <a href="../../platforms/ios/webview.html">iOS の web 表示</a>
-*   <a href="../../platforms/wp8/webview.html">Windows Phone 8.0 web 表示</a>
+*   アマゾン火 OS web 表示
+*   Android の web 表示
+*   iOS の web 表示
+*   Windows Phone 8.0 web 表示

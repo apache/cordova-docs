@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
+MediaFileData
 =============
 
 > Encapsulates format information about a media file.
@@ -34,7 +34,7 @@ Properties
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  So the <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data object returned by the <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a> function will have the following default values:
+There is no API that provides format information of media files.  So the MediaFileData object returned by the MediaFile.getFormatData function will have the following default values:
 
 - __codecs:__ Not supported. The attribute will always be null.
 - __bitrate:__ Not supported.  The attribute will always be 0.
@@ -44,7 +44,7 @@ There is no API that provides format information of media files.  So the <a href
 
 Android Quirks
 --------------
-Support for the <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data properties is as follows:
+Support for the MediaFileData properties is as follows:
 
 - __codecs:__ Not supported.  The attribute will always be null.
 - __bitrate:__ Not supported.  The attribute will always be 0.
@@ -54,7 +54,7 @@ Support for the <a href="<a href="../media.html">Media</a><a href="../../file/fi
 
 iOS Quirks
 ----------
-Support for the <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data properties is as follows:
+Support for the MediaFileData properties is as follows:
 
 - __codecs:__ Not supported.  The attribute will always be null.
 - __bitrate:__ Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.

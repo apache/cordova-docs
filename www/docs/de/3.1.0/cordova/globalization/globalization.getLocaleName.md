@@ -29,7 +29,7 @@ Bekommen Sie der Bezeichner für die aktuelle Gebietsschema-Einstellung des Clie
 
 Gibt die Gebietsschemabezeichner-Zeichenfolge, die `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `String` Wert.
 
-Wenn es ist ein Fehler, der immer des Gebietsschemas, dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Wenn es ist ein Fehler, der immer des Gebietsschemas, dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -53,7 +53,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, dies zeigt einen
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getLocaleName <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getLocaleName Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/upgrading.html">Upgrading BlackBerry</a> 10
+# Upgrading BlackBerry 10
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to modify BlackBerry projects to upgrade from older versions of Cordova.
+This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-line Interface</a> for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
 version of the CLI.
 
 ## Upgrade to 3.1.0 from 3.0.0 ##
 
 1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
-   described in <a href="../../cli/index.html">The Command-line Interface</a>.
+   described in The Command-line Interface.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
@@ -52,7 +52,7 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in <a href="../../cli/index.html">The Command-line Interface</a>.
+   described in The Command-line Interface.
 
 2. Add your platforms the the cordova project, for example: `cordova
    platform add blackberry10`.
@@ -81,7 +81,7 @@ BlackBerry 10:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../blackberry/tools.html">BlackBerry Command-line Tools</a>. This becomes the home of your updated project.
+4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
 
 5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
@@ -95,7 +95,7 @@ BlackBerry 10:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../ios/tools.html">iOS Command-line Tools</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -120,7 +120,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../blackberry/tools.html">BlackBerry Command-line Tools</a>. This becomes the home of your updated project.
+4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
 
 5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
@@ -134,7 +134,7 @@ BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../ios/tools.html">iOS Command-line Tools</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -154,7 +154,7 @@ BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in <a href="../blackberry/tools.html">BlackBerry Command-line Tools</a>. You need the assets from this new project.
+4. Create a new project, as described in BlackBerry Command-line Tools. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.6.0.js` file.
 
@@ -379,16 +379,16 @@ Updating just the `www` directory:
 5. Update your HTML to use the new `cordova-2.0.0.js` file.
 
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
-   <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
+   namespace/service label. Change the old entries for the Capture and
+   Contact plugins from:
 
-        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
    To:
 
-        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
 Updating the sample directory (i.e., updating using the ant tools):
 
@@ -408,15 +408,15 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
+   Capture and Contact plugins from:
 
-         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
    To:
 
-         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
 - To upgrade to 1.8.0, please go from 1.7.0
 
@@ -436,16 +436,16 @@ Updating just the `www` directory:
 5. Update your HTML to use the new `cordova-1.8.0.js` file.
 
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
-   <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
+   namespace/service label. Change the old entries for the Capture and
+   Contact plugins from:
 
-        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
    To:
 
-        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
 Updating the sample directory (i.e., updating using the ant tools):
 
@@ -465,13 +465,13 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
+   Capture and Contact plugins from:
 
-         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
    To:
 
-         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
-         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 

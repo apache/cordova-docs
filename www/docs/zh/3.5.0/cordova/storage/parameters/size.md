@@ -20,4 +20,4 @@ license: >
 
 # database_size
 
-以位元組為單位的<a href="../database/database.html">資料庫</a>的大小。
+以位元組為單位的資料庫的大小。

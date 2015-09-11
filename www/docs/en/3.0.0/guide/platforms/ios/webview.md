@@ -56,13 +56,13 @@ based Cleaver implementation.
 
 8. Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9. Type the __Option-Command-1__ key combination to <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector__.
+9. Type the __Option-Command-1__ key combination to show the __File Inspector__.
 
-10. Choose __Relative to Group__ in the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector__ for the drop-down menu for __Location__.
+10. Choose __Relative to Group__ in the __File Inspector__ for the drop-down menu for __Location__.
 
 11. Select the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Settings__ tab.
 
-12. Add `-all_load` and `-Obj-C` for the __Other Linker <a href="../../../cordova/file/flags/flags.html">Flags</a>__ value.
+12. Add `-all_load` and `-Obj-C` for the __Other Linker Flags__ value.
 
 13. Click on the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Phases__ tab.
 

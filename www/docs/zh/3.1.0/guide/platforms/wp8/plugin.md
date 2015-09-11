@@ -84,9 +84,9 @@ license: >
 
 ## 將從 C# 的結果傳遞給 JavaScript
 
-BaseCommand 類的基類提供用於將資料傳遞給您的 JavaScript 回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>處理常式方法。 只是發出信號命令已成功執行，沒有額外的結果資訊需要的時候，你可以簡單地調用：
+BaseCommand 類的基類提供用於將資料傳遞給您的 JavaScript 回檔處理常式方法。 只是發出信號命令已成功執行，沒有額外的結果資訊需要的時候，你可以簡單地調用：
 
-    DispatchCommandResult() ；/ 調用回與空外掛程式的結果，認為成功的回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>
+    DispatchCommandResult() ；/ 調用回與空外掛程式的結果，認為成功的回檔
     
 
 若要傳遞回來的資料，你需要調用不同版本的 `DispatchCommandResult` ：
@@ -130,7 +130,7 @@ BaseCommand 類的基類提供用於將資料傳遞給您的 JavaScript 回<a hr
 
 ## 外掛程式 XML
 
-這些都是 windows 電話具體例子使用通過<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>、 外掛程式規格的更多詳細資訊，請參閱
+這些都是 windows 電話具體例子使用通過檔、 外掛程式規格的更多詳細資訊，請參閱
 
 ### `<source-file>`
 
@@ -138,12 +138,12 @@ Windows 電話 `<source-file>` 目前使用元素來定義外掛程式的所有�
 
 ### `<config-file>`
 
-`<config-file>`元素定義了哪些元素得到放入設定<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。例如要將外掛程式添加到平臺 config.xml，你會做這樣的事情：
+`<config-file>`元素定義了哪些元素得到放入設定檔。例如要將外掛程式添加到平臺 config.xml，你會做這樣的事情：
 
-    < 設定<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> target="config.xml"父 ="/ *">< 功能名稱 ="PluginName">< 參數名稱 ="wp-包"值 ="PluginName"/ >< / 功能 >< / 設定<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> >
+    < 設定檔 target="config.xml"父 ="/ *">< 功能名稱 ="PluginName">< 參數名稱 ="wp-包"值 ="PluginName"/ >< / 功能 >< / 設定檔 >
     
 
-如果我們想要添加的<a href="../../../cordova/contacts/contacts.html">連絡人</a>的功能到 WMAppManifest.xml，它會看起來像這樣：
+如果我們想要添加的連絡人的功能到 WMAppManifest.xml，它會看起來像這樣：
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />
@@ -158,7 +158,7 @@ Windows 電話 `<source-file>` 目前使用元素來定義外掛程式的所有�
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-例如，你可以掛接到 '<a href="../../../cordova/events/events.pause.html">暫停</a>' 和 '恢復' 應用程式<a href="../../../cordova/events/events.html">事件</a>。
+例如，你可以掛接到 '暫停' 和 '恢復' 應用程式事件。
 
 ### 調試外掛程式
 
@@ -168,7 +168,7 @@ JavaScript 是有點更難在 Windows Phone 上進行調試。您需要使用 `c
 
 ## 常見的陷阱
 
-*   您將傳遞給本機 JavaScript 實現中的參數在決定時要小心。 大多數<a href="../../../cordova/device/device.html">設備</a>平臺期望 args 傳遞到 cordova.exec 必須是一個陣列，但如果您在此陣列中有不同類型的物件，它變得困難或不可能進行反序列化。
+*   您將傳遞給本機 JavaScript 實現中的參數在決定時要小心。 大多數設備平臺期望 args 傳遞到 cordova.exec 必須是一個陣列，但如果您在此陣列中有不同類型的物件，它變得困難或不可能進行反序列化。
     
         cordova.exec (勝利、 失敗，"ServiceName"、"方法名稱"["這是一個字串"、 54，{文字： '麻煩'}]) ；
         

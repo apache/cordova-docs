@@ -20,7 +20,7 @@ license: >
 
 # 圖示和啟動畫面
 
-這一節演示如何配置應用程式的圖示和可選初始螢幕上的各種平臺上，兩者在科爾多瓦 CLI （描述在<a href="../guide/cli/index.html">命令列介面</a>） 中工作時或使用特定于平臺 SDK 工具 （<a href="../guide/platforms/index.html">平臺指南</a>中詳細說明）。
+這一節演示如何配置應用程式的圖示和可選初始螢幕上的各種平臺上，兩者在科爾多瓦 CLI （描述在命令列介面） 中工作時或使用特定于平臺 SDK 工具 （平臺指南中詳細說明）。
 
 ## 在 CLI 中配置圖示
 
@@ -97,7 +97,7 @@ Windows Phone 指定單個初始螢幕圖像：
         windows-phone/screen-portrait.jpg
     
 
-以下各節詳細說明了如何設置初始螢幕時使用 Sdk 和相關的命令列工具在<a href="../guide/platforms/index.html">平臺指南</a>仲介紹。
+以下各節詳細說明了如何設置初始螢幕時使用 Sdk 和相關的命令列工具在平臺指南仲介紹。
 
 別忘了在嘗試使用之前安裝的閃屏外掛程式 `navigator.splashscreen.hide()` 或 `navigator.splashscreen.show()` 方法。
 
@@ -150,7 +150,7 @@ Windows Phone 指定單個初始螢幕圖像：
 
 第二行設置預設延遲多久閃屏顯示以毫秒為單位。這應該是最大的預期的開始時間。SplashScreenDelay 的預設值是 3000 毫秒。
 
-最後，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您的主視圖是可見。 因為應用程式開始時間將由多個因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JAVAscript 方法 `<a href="../cordova/events/events.deviceready.html">deviceready</a>` <a href="../cordova/events/events.html">事件</a>。 否則，初始螢幕將可見該你上述配置的 SplashScreenDelay 值。 與具有可見的總是固定工期的初始螢幕高度建議使用此<a href="../cordova/events/events.html">事件</a>驅動方法。
+最後，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您的主視圖是可見。 因為應用程式開始時間將由多個因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JAVAscript 方法 `deviceready` 事件。 否則，初始螢幕將可見該你上述配置的 SplashScreenDelay 值。 與具有可見的總是固定工期的初始螢幕高度建議使用此事件驅動方法。
 
 ## IOS 平臺的初始螢幕
 

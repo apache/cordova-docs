@@ -27,7 +27,7 @@ Libère les ressources audio du système d'exploitation sous-jacent.
 
 ## Description
 
-La `media.release` méthode s'exécute de façon synchrone, libérant des ressources audio du système d'exploitation sous-jacent. Cela est particulièrement important pour Android, puisqu'il y a une quantité finie d'instances OpenCore pour la lecture du média. Les applications doivent appeler le `release` fonction pour tout `<a href="media.html">Media</a>` ressource qui n'est plus nécessaire.
+La `media.release` méthode s'exécute de façon synchrone, libérant des ressources audio du système d'exploitation sous-jacent. Cela est particulièrement important pour Android, puisqu'il y a une quantité finie d'instances OpenCore pour la lecture du média. Les applications doivent appeler le `release` fonction pour tout `Media` ressource qui n'est plus nécessaire.
 
 ## Plates-formes prises en charge
 
@@ -42,10 +42,10 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
 
     // Audio player
     //
-    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+    var my_media = new Media(src, onSuccess, onError);
     
     my_media.play();
-    my_<a href="media.stop.html">media.stop</a>();
+    my_media.stop();
     my_media.release();
     
 
@@ -55,14 +55,14 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -78,8 +78,8 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -88,17 +88,17 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -107,9 +107,9 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
     
             // Pause audio
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -117,7 +117,7 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -138,7 +138,7 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
     
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     
@@ -146,7 +146,7 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

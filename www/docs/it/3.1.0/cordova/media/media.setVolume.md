@@ -44,7 +44,7 @@ Funzione `media.setVolume` è una funzione asincrona che imposta il volume duran
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // success callback
             function() {
                 console.log("playAudio():Audio Success");
@@ -75,14 +75,14 @@ Funzione `media.setVolume` è una funzione asincrona che imposta il volume duran
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for Cordova to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // Cordova is ready
             //
@@ -98,8 +98,8 @@ Funzione `media.setVolume` è una funzione asincrona che imposta il volume duran
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -108,7 +108,7 @@ Funzione `media.setVolume` è una funzione asincrona che imposta il volume duran
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -137,7 +137,7 @@ Funzione `media.setVolume` è una funzione asincrona che imposta il volume duran
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

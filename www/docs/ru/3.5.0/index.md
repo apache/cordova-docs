@@ -26,84 +26,84 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Введение</a>
+        Введение
       </h2>
       
       <span>Начните отсюда, если вы новичок в Cordova.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">Поддерживаемые Платформы</a>
+        Поддерживаемые Платформы
       </h2>
       
       <span>Таблица совместимости для всех основных функций.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">Интерфейс командной строки</a>
+        Интерфейс командной строки
       </h2>
       
       <span>Создание, сборка и развертывание из командной строки.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Руководство по поддерживаемым платформам</a>
+        Руководство по поддерживаемым платформам
       </h2>
       
       <span>Настройка SDK и обновление существующих проектов</span>
     </li>
     <li>
       <h2>
-        <a href="plugin_ref/plugman.html">Использование Plugman для управления расширениями</a>
+        Использование Plugman для управления расширениями
       </h2>
       
       <span>Использование Plugman дл управления плагинами без CLI</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Файл config.xml</a>
+        Файл config.xml
       </h2>
       
       <span>Настройка возможностей вашего приложения.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Иконки и заставки</a>
+        Иконки и заставки
       </h2>
       
       <span>Настройка отображаемых приложением изображений.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Интеграция WebViews</a>
+        Интеграция WebViews
       </h2>
       
       <span>Добавление Cordova WebView в ваш проект.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Руководство по разработке расширений</a>
+        Руководство по разработке расширений
       </h2>
       
       <span>Создайте свой первый плагин.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Руководство по конфиденциальности</a>
+        Руководство по конфиденциальности
       </h2>
       
       <span>Узнайте о важных проблемах конфиденциальности при работе с мобильными устройствами.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Инструкция по доступу к внешним ресурсам</a>
+        Инструкция по доступу к внешним ресурсам
       </h2>
       
       <span>Разрешите приложению доступ к внешним ресурсам.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Хранилище</a>
+        Хранилище
       </h2>
       
       <span>Обзор возможностей хранения данных, предоставляемых различными платформами.</span>
@@ -124,14 +124,14 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/events/events.html">События</a>
+        События
       </h2>
       
       <span>Подключение к событиям платформы с использованием JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">API плагинов</a>
+        API плагинов
       </h2>
       
       <span>Узнайте какие плагины Cordova доступны для использования в вашем проекте.</span>

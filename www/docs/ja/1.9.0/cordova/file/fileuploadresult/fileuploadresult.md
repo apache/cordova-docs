@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>UploadResult
+FileUploadResult
 ========
 
-`<a href="../fileobj/fileobj.html">File</a>UploadResult` オブジェクトは、 <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
+`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
 プロパティー
 ----------
@@ -33,8 +33,8 @@ license: >
 概要
 -----------
 
-`<a href="../fileobj/fileobj.html">File</a>UploadResult` オブジェクトは、 <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
+`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
 iOS に関する注意点
 ----------
-- iOS では、成功コールバック関数に渡される <a href="../fileobj/fileobj.html">File</a>UploadResult オブジェクトには、 responseCode も bytesSent も含まれません。
+- iOS では、成功コールバック関数に渡される FileUploadResult オブジェクトには、 responseCode も bytesSent も含まれません。

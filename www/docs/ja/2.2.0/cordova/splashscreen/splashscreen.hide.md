@@ -36,36 +36,36 @@ navigator.splashscreen.hide() はアプリケーションのスプラッシュ�
 - Android
 - iOS
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     navigator.splashscreen.hide();
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>スプラッシュスクリーン<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>スプラッシュスクリーン使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             navigator.splashscreen.hide();
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../storage/database/database.html">Example</a></h1>
+        <h1>Example</h1>
       </body>
     </html>
 
@@ -74,7 +74,7 @@ iOS に関する注意点
 
 1. Cordova.plist の中で、 **"AutoHideSplashScreen”** を false に設定するために [値を編集](guide_project-settings_index.md.html#Project%20Settings) する必要があります
 
-2. もしスプラッシュスクリーンを非表示にするのを 2 秒間遅らせたい場合は、 **<a href="../events/events.deviceready.html">deviceready</a>** イベントハンドラー内で設定できます:
+2. もしスプラッシュスクリーンを非表示にするのを 2 秒間遅らせたい場合は、 **deviceready** イベントハンドラー内で設定できます:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

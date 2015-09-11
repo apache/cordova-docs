@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="compass.watchHeading.html">compass.watchHeading</a>Filter
+compass.watchHeadingFilter
 ==========================
 
-No longer supported as of 1.6, see `<a href="compass.watchHeading.html">compass.watchHeading</a>` for equivalent functionality.
+No longer supported as of 1.6, see `compass.watchHeading` for equivalent functionality.

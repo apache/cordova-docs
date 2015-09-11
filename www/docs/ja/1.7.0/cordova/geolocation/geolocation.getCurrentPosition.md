@@ -18,26 +18,26 @@ license: >
     under the License.
 ---
 
-geolocation.getCurrent<a href="Position/position.html">Position</a>
+geolocation.getCurrentPosition
 ==============================
 
-デバイスの現在位置を `<a href="Position/position.html">Position</a>` オブジェクトとして返します。
+デバイスの現在位置を `Position` オブジェクトとして返します。
 
-    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
-                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
-                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
+    navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                             [geolocationError],
+                                             [geolocationOptions]);
 
 パラメーター
 ----------
 
-- __<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>__: 現在位置情報の取得成功時に呼ばれるコールバック関数を表します
-- __<a href="parameters/geolocationError.html">geolocationError</a>__: (オプション) エラー発生時に呼ばれるコールバック関数を表します
-- __<a href="parameters/geolocation.options.html">geolocationOptions</a>__: (オプション) 位置情報取得のオプションを表します
+- __geolocationSuccess__: 現在位置情報の取得成功時に呼ばれるコールバック関数を表します
+- __geolocationError__: (オプション) エラー発生時に呼ばれるコールバック関数を表します
+- __geolocationOptions__: (オプション) 位置情報取得のオプションを表します
 
 概要
 -----------
 
-`geolocation.getCurrent<a href="Position/position.html">Position</a>` 関数は非同期関数です。 `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` コールバック関数に、`<a href="Position/position.html">Position</a>` オブジェクトをパラメーターとしてデバイスの現在位置を返します。エラーが発生した場合、 `<a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>` オブジェクトとともに `<a href="parameters/geolocationError.html">geolocationError</a>` コールバック関数が呼び出されます。
+`geolocation.getCurrentPosition` 関数は非同期関数です。 `geolocationSuccess` コールバック関数に、`Position` オブジェクトをパラメーターとしてデバイスの現在位置を返します。エラーが発生した場合、 `PositionError` オブジェクトとともに `geolocationError` コールバック関数が呼び出されます。
 
 
 サポートされているプラットフォーム
@@ -49,12 +49,12 @@ geolocation.getCurrent<a href="Position/position.html">Position</a>
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // 成功時のコールバック関数
     // このメソッドは GPS の現在座標を保持する
-    // `<a href="Position/position.html">Position</a>` オブジェクトを引数とする
+    // `Position` オブジェクトを引数とする
     //
     var onSuccess = function(position) {
         alert('緯度: '              + position.coords.latitude      + '\n' +
@@ -67,37 +67,37 @@ geolocation.getCurrent<a href="Position/position.html">Position</a>
               'タイムスタンプ: '    + new Date(position.timestamp) + '\n');
     };
 
-    // エラー時のコールバック関数は <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> オブジェクトを受けとる
+    // エラー時のコールバック関数は PositionError オブジェクトを受けとる
     //
     function onError(error) {
         alert('コード: '        + error.code    + '\n' +
               'メッセージ: '    + error.message + '\n');
     }
 
-    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
 
-        // onSuccess <a href="geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -111,7 +111,7 @@ geolocation.getCurrent<a href="Position/position.html">Position</a>
                                 'タイムスタンプ: '  + new Date(position.timestamp)  + '<br />';
         }
 
-        // エラー時のコールバック関数は <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> オブジェクトを受けとる
+        // エラー時のコールバック関数は PositionError オブジェクトを受けとる
         //
         function onError(error) {
             alert('コード: '        + error.code    + '\n' +

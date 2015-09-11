@@ -26,87 +26,87 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Pregled</a>
+        Pregled
       </h2>
       
       <span>Začnite tukaj, če je Cordova za vas nekaj novega.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">Platforma podporo</a>
+        Platforma podporo
       </h2>
       
       <span>Združljivost tabele za vse glavne funkcije.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">Vmesnik ukazne vrstice</a>
+        Vmesnik ukazne vrstice
       </h2>
       
       <span>Ustvarite, gradite in objavljajte iz ukazne vrstice.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Platforma vodniki</a>
+        Platforma vodniki
       </h2>
       
       <span>Nastaviti vsak SDK in posodobitev projektov</span>
     </li>
     <li>
       <h2>
-        <a href="plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a>
+        Uporaba Plugman za upravljanje Plugins
       </h2>
       
-      <span><a href="plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a> brez CLI</span>
+      <span>Uporaba Plugman za upravljanje Plugins brez CLI</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Config.xml datoteke</a>
+        Config.xml datoteke
       </h2>
       
       <span>Prilagodite značilnosti vaš app.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Ikone in brizg zaslon</a>
+        Ikone in brizg zaslon
       </h2>
       
       <span>Prilagodite app je prikaz slike.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Vdelava spletni pogledi</a>
+        Vdelava spletni pogledi
       </h2>
       
       <span>Izvajanje Cordova spletni pogled v vašem projektu.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Plugin razvoj vodnik</a>
+        Plugin razvoj vodnik
       </h2>
       
       <span>Razvoj vaš prvi plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Vodnik o zasebnosti</a>
+        Vodnik o zasebnosti
       </h2>
       
       <span>Preberite več o pomembno mobilne osamljenost izdaja.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Seznam dovoljenih vodnik</a>
+        Seznam dovoljenih vodnik
       </h2>
       
       <span>Odobri uporabo dostopa do zunanjih virov.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Shranjevanje</a>
+        Shranjevanje
       </h2>
       
-      <span><a href="guide/overview/index.html">Pregled</a> možnosti native skladiščenja.</span>
+      <span>Pregled možnosti native skladiščenja.</span>
     </li>
     <li>
       <h2>
@@ -124,14 +124,14 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/events/events.html">Dogodki</a>
+        Dogodki
       </h2>
       
       <span>Trnek v native dogodkov prek JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
+        Plugin API
       </h2>
       
       <span>Odkrijte, kaj plugins Cordova, ki so na voljo za uporabo v vašem projektu.</span>

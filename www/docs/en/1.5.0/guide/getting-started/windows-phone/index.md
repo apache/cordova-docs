@@ -36,7 +36,7 @@ Video Tutorials:
 
 Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista
 
-Necessary for Installing on <a href="../../../phonegap/device/device.html">Device</a> and Submitting to Market Place:
+Necessary for Installing on Device and Submitting to Market Place:
 
 - Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
 
@@ -53,7 +53,7 @@ Necessary for Installing on <a href="../../../phonegap/device/device.html">Devic
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
 - Select **PhoneGapStarter**.
-- Give your project a <a href="../../../phonegap/storage/parameters/name.html">name</a>, and select OK.
+- Give your project a name, and select OK.
 
     ![](img/guide/platforms/wp7/wpnewproj.png)
 
@@ -83,7 +83,7 @@ Necessary for Installing on <a href="../../../phonegap/device/device.html">Devic
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Windows Phone <a href="../../../phonegap/device/device.html">Device</a>' from the top drop-down menu.
+- In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
     ![](img/guide/platforms/wp7/wpd.png)
@@ -92,6 +92,6 @@ In order to test your application on a device, the device must be registered. Cl
 Done!
 -----
 
-You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide [here](http://wiki.phonegap.com/w/page/48672055/Getting%20Started%20with%20PhoneGap%20Windows%20Phone%207).
+You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/48672055/Getting%20Started%20with%20PhoneGap%20Windows%20Phone%207).
 
 [register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx

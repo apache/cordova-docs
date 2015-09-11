@@ -36,7 +36,7 @@ device.platform
 - webOS
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // デバイスによって異なります。例:
@@ -48,31 +48,31 @@ device.platform
     // - "Tizen"
     var devicePlatform = device.platform;
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
 
-            element.innerHTML = 'デバイス名: '          + <a href="device.name.html">device.name</a>       + '<br />' +
-                                'デバイス Cordova: '    + <a href="device.cordova.html">device.cordova</a>    + '<br />' +
+            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
+                                'デバイス Cordova: '    + device.cordova    + '<br />' +
                                 'デバイスプラットフォーム: ' + device.platform + '<br />' +
-                                'デバイス UUID: '       + <a href="device.uuid.html">device.uuid</a>       + '<br />' +
-                                'デバイスバージョン: '  + <a href="device.version.html">device.version</a>    + '<br />';
+                                'デバイス UUID: '       + device.uuid       + '<br />' +
+                                'デバイスバージョン: '  + device.version    + '<br />';
         }
 
         </script>

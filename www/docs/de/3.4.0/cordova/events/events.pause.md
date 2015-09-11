@@ -29,7 +29,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird
 
 Das `pause` -Ereignis wird ausgelöst, wenn die einheitlichen Plattform die Anwendung in den Hintergrund, in der Regel, setzt wenn der Benutzer zu einer anderen Anwendung wechselt.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -54,7 +54,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Pause Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

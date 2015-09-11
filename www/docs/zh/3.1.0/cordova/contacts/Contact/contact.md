@@ -18,53 +18,53 @@ license: >
     under the License.
 ---
 
-# <a href="../contacts.html">連絡人</a>
+# 連絡人
 
-包含描述聯繫，如使用者的個人或業務<a href="../contacts.html">連絡人</a>的屬性。
+包含描述聯繫，如使用者的個人或業務連絡人的屬性。
 
 ## 屬性
 
 *   **id**： 一個全域唯一識別碼。*() DOMString*
 
-*   **<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱**： 此<a href="../contacts.html">連絡人</a>，適合於向最終使用者<a href="../../inappbrowser/inappbrowser.html">顯示</a>的名稱。*() DOMString*
+*   **顯示名稱**： 此連絡人，適合於向最終使用者顯示的名稱。*() DOMString*
 
-*   **名稱**： 包含所有元件的人的名稱的物件。*(<a href="../contacts.html">連絡人</a>姓名)*
+*   **名稱**： 包含所有元件的人的名稱的物件。*(連絡人姓名)*
 
-*   **昵稱**: 休閒的解決<a href="../contacts.html">連絡人</a>名稱。*() DOMString*
+*   **昵稱**: 休閒的解決連絡人名稱。*() DOMString*
 
-*   **手機**： 一個陣列的所有<a href="../contacts.html">連絡人</a>的電話號碼。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **手機**： 一個陣列的所有連絡人的電話號碼。*(ContactField[])*
 
-*   **電子郵件**： 所有<a href="../contacts.html">連絡人</a>的電子郵件地址的陣列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **電子郵件**： 所有連絡人的電子郵件地址的陣列。*(ContactField[])*
 
-*   **位址**： 該<a href="../contacts.html">連絡人</a>的所有位址的陣列。*(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
+*   **位址**： 該連絡人的所有位址的陣列。*(ContactAddress[])*
 
-*   **ims**： 所有<a href="../contacts.html">連絡人</a>的 IM 位址的陣列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **ims**： 所有連絡人的 IM 位址的陣列。*(ContactField[])*
 
-*   **組織**： 該<a href="../contacts.html">連絡人</a>的所有組織的陣列。*(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
+*   **組織**： 該連絡人的所有組織的陣列。*(ContactOrganization[])*
 
-*   **生日**： <a href="../contacts.html">連絡人</a>的生日。*（日期）*
+*   **生日**： 連絡人的生日。*（日期）*
 
-*   **注**： 有關<a href="../contacts.html">連絡人</a>的注釋。*() DOMString*
+*   **注**： 有關連絡人的注釋。*() DOMString*
 
-*   **照片**： 陣列<a href="../contacts.html">連絡人</a>的照片。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **照片**： 陣列連絡人的照片。*(ContactField[])*
 
-*   **類別**： 陣列與<a href="../contacts.html">連絡人</a>關聯的所有使用者定義的類別。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **類別**： 陣列與連絡人關聯的所有使用者定義的類別。*(ContactField[])*
 
-*   **url**： 陣列與<a href="../contacts.html">連絡人</a>關聯的 web 頁。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **url**： 陣列與連絡人關聯的 web 頁。*(ContactField[])*
 
 ## 方法
 
 *   **克隆**： 返回一個新的 `Contact` 物件就是調用物件的深層副本 `id` 屬性設置為`null`.
 
-*   **刪除**： 從<a href="../../device/device.html">設備</a>的<a href="../contacts.html">連絡人</a><a href="../../storage/database/database.html">資料庫</a>中刪除<a href="../contacts.html">連絡人</a>，否則執行錯誤回<a href="../../file/fileobj/fileobj.html">檔</a>與 `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` 物件。
+*   **刪除**： 從設備的連絡人資料庫中刪除連絡人，否則執行錯誤回檔與 `ContactError` 物件。
 
-*   **保存**： 將一個新的<a href="../contacts.html">連絡人</a>保存到<a href="../../device/device.html">設備</a>的<a href="../contacts.html">連絡人</a><a href="../../storage/database/database.html">資料庫</a>中，或更新現有的<a href="../contacts.html">連絡人</a> （如果已存在具有相同**id**的<a href="../contacts.html">連絡人</a>。
+*   **保存**： 將一個新的連絡人保存到設備的連絡人資料庫中，或更新現有的連絡人 （如果已存在具有相同**id**的連絡人。
 
 ## 詳細資訊
 
-`Contact`物件表示使用者的<a href="../contacts.html">連絡人</a>。 可以創建、 <a href="../../storage/storage.html">存儲</a>，或從<a href="../../device/device.html">設備</a>的<a href="../contacts.html">連絡人</a><a href="../../storage/database/database.html">資料庫</a>中刪除的<a href="../contacts.html">連絡人</a>。 <a href="../contacts.html">連絡人</a>可以還 (單獨或批量） 從<a href="../../storage/database/database.html">資料庫</a>中檢索通過調用 `<a href="../contacts.find.html">contacts.find</a>` 方法。
+`Contact`物件表示使用者的連絡人。 可以創建、 存儲，或從設備的連絡人資料庫中刪除的連絡人。 連絡人可以還 (單獨或批量） 從資料庫中檢索通過調用 `contacts.find` 方法。
 
-**注：**不是所有的上面列出的<a href="../contacts.html">連絡人</a>欄位平臺支援的每個<a href="../../device/device.html">設備</a>。請檢查每個平臺*的怪癖*節瞭解詳細資訊。
+**注：**不是所有的上面列出的連絡人欄位平臺支援的每個設備。請檢查每個平臺*的怪癖*節瞭解詳細資訊。
 
 ## 支援的平臺
 
@@ -80,12 +80,12 @@ license: >
         alert("Save Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
     // create a new contact object
-    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+    var contact = navigator.contacts.create();
     contact.displayName = "Plumber";
     contact.nickname = "Plumber";            // specify both to support all devices
     
@@ -114,8 +114,8 @@ license: >
         alert("Removal Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
         // remove the contact from the device
@@ -127,20 +127,20 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // create
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
             var name = new ContactName();
@@ -169,8 +169,8 @@ license: >
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onSaveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ license: >
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onRemoveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -196,47 +196,47 @@ license: >
 
 ## Android 2.X 的怪癖
 
-*   **類別**： 不支援 Android 2.X <a href="../../device/device.html">設備</a>上，返回`null`.
+*   **類別**： 不支援 Android 2.X 設備上，返回`null`.
 
 ## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **id**： 支援。由該<a href="../../device/device.html">設備</a>分配時保存該<a href="../contacts.html">連絡人</a>。
+*   **id**： 支援。由該設備分配時保存該連絡人。
 
-*   **<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱**： 支援。黑莓**user1**欄位中<a href="../../storage/storage.html">存儲</a>。
+*   **顯示名稱**： 支援。黑莓**user1**欄位中存儲。
 
 *   **昵稱**: 不受支援，返回`null`.
 
-*   **手機**： 部分支援。 電話號碼<a href="../../storage/storage.html">存儲</a>在黑莓的欄位**homePhone1**和**homePhone2**中，如果*類型*是 '回家'， **workPhone1**和**workPhone2**如果*類型*是 '工作'，**手機**如果*類型*為行動電話， **faxPhone** ，如果*類型*是傳真， **pagerPhone** ，如果*類型*是 '呼叫器' 和**otherPhone**如果*類型*是以上都不是。
+*   **手機**： 部分支援。 電話號碼存儲在黑莓的欄位**homePhone1**和**homePhone2**中，如果*類型*是 '回家'， **workPhone1**和**workPhone2**如果*類型*是 '工作'，**手機**如果*類型*為行動電話， **faxPhone** ，如果*類型*是傳真， **pagerPhone** ，如果*類型*是 '呼叫器' 和**otherPhone**如果*類型*是以上都不是。
 
-*   **電子郵件**： 部分支援。 第三個電子郵件地址分別<a href="../../storage/storage.html">存儲</a>在黑莓**電子郵件 1**，**電子郵件 2**、**電子郵件 3**欄位。
+*   **電子郵件**： 部分支援。 第三個電子郵件地址分別存儲在黑莓**電子郵件 1**，**電子郵件 2**、**電子郵件 3**欄位。
 
-*   **位址**： 部分支援。第一和第二個位址分別<a href="../../storage/storage.html">存儲</a>在黑莓**家庭位址**和**workAddress**欄位中。
+*   **位址**： 部分支援。第一和第二個位址分別存儲在黑莓**家庭位址**和**workAddress**欄位中。
 
 *   **ims**: 不受支援，返回`null`.
 
-*   **組織**： 部分支援。 **名稱**和**標題**的第一個組織<a href="../../storage/storage.html">存儲</a>在黑莓**公司**和**標題**欄位中，分別。
+*   **組織**： 部分支援。 **名稱**和**標題**的第一個組織存儲在黑莓**公司**和**標題**欄位中，分別。
 
-*   **照片**： 部分支援。 支援單一的縮略圖大小的照片。 若要設置<a href="../contacts.html">連絡人</a>的照片，通過在任一 base64 編碼的圖像或指向圖像的 URL。 圖像保存到黑莓手機的<a href="../contacts.html">連絡人</a><a href="../../storage/database/database.html">資料庫</a>前按比例縮小。 <a href="../contacts.html">連絡人</a>照片返回 base64 編碼的圖像。
+*   **照片**： 部分支援。 支援單一的縮略圖大小的照片。 若要設置連絡人的照片，通過在任一 base64 編碼的圖像或指向圖像的 URL。 圖像保存到黑莓手機的連絡人資料庫前按比例縮小。 連絡人照片返回 base64 編碼的圖像。
 
 *   **類別**： 部分支援。支援的只有*商業*和*個人*的類別。
 
-*   **url**： 部分支援。第一個 URL <a href="../../storage/storage.html">存儲</a>在黑莓手機**網頁**欄位中。
+*   **url**： 部分支援。第一個 URL 存儲在黑莓手機**網頁**欄位中。
 
 ## iOS 的怪癖
 
-*   **<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱**： 上返回的 iOS 不支援 `null` 除非有沒有 `ContactName` 指定，在這種情況下它將返回複合名稱，**綽號**或 `""` ，分別。
+*   **顯示名稱**： 上返回的 iOS 不支援 `null` 除非有沒有 `ContactName` 指定，在這種情況下它將返回複合名稱，**綽號**或 `""` ，分別。
 
 *   **生日**： 必須輸入 JavaScript 作為 `Date` 物件，它將返回相同的方式。
 
-*   **照片**： 返回到圖像，<a href="../../storage/storage.html">存儲</a>在應用程式的臨時目錄中的<a href="../../file/fileobj/fileobj.html">檔</a>的 URL。當應用程式退出時刪除臨時目錄的內容。
+*   **照片**： 返回到圖像，存儲在應用程式的臨時目錄中的檔的 URL。當應用程式退出時刪除臨時目錄的內容。
 
 *   **類別**： 這目前不支援屬性，返回`null`.
 
 ## Windows Phone 7 和 8 怪癖
 
-*   **<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱**： 當創建一個<a href="../contacts.html">連絡人</a>，提供的<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱參數不同于<a href="../../inappbrowser/inappbrowser.html">顯示</a>名稱的值檢索查找<a href="../contacts.html">連絡人</a>時。
+*   **顯示名稱**： 當創建一個連絡人，提供的顯示名稱參數不同于顯示名稱的值檢索查找連絡人時。
 
-*   **url**： 當創建一個<a href="../contacts.html">連絡人</a>，使用者可以輸入和保存多個 web 位址，但只有一個是可用時，可以使用搜索<a href="../contacts.html">連絡人</a>。
+*   **url**： 當創建一個連絡人，使用者可以輸入和保存多個 web 位址，但只有一個是可用時，可以使用搜索連絡人。
 
 *   **手機**： 不支援*參照*選項。 在*查找*操作中不是支援的*類型*。 只有一個 `phoneNumber` 允許為每個*類型*.
 

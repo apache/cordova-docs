@@ -83,7 +83,7 @@ platform add ios`.
 
 ## Upgrade 2.9.0 Projekte 3.0.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -101,7 +101,7 @@ platform add ios`.
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -117,7 +117,7 @@ platform add ios`.
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -158,7 +158,7 @@ platform add ios`.
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -181,7 +181,7 @@ platform add ios`.
 
 ## Upgrade 2.5.0 Projekte 2.6.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -212,7 +212,7 @@ platform add ios`.
 
 ## Upgrade 2.4.0 Projekte 2.5.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -243,7 +243,7 @@ platform add ios`.
 
 ## Upgrade 2.3.0 Projekte 2.4.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -274,7 +274,7 @@ platform add ios`.
 
 ## Upgrade 2.2.0 Projekte 2.3.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -309,7 +309,7 @@ platform add ios`.
 
 ## Upgrade 2.1.0 Projekte 2.2.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -330,7 +330,7 @@ platform add ios`.
 9.  Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
+    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
     3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` Datei:
         
         `update_cordova_subproject path/to/your/project/xcodeproj`
@@ -341,7 +341,7 @@ platform add ios`.
 
 Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**verwenden aktualisiert wurde. Sie nicht müssen upgrade auf **ARC** mithilfe von CordovaLib, aber wenn Sie, aktualisieren Sie das Projekt zur Verwendung von **ARC möchten**, verwenden Sie bitte den Xcode-Migrations-Assistenten aus dem Menü: **Bearbeiten → → umgestalten Convert in Objective-C-Bogen...**, libCordova.a aufzuheben, dann führen Sie den Assistenten bis zum Abschluss.
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -369,7 +369,7 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 11. Anschließend aktualisieren Ihre `CordovaLib` Teilprojekt Verweis. Beginnend mit Cordova 2.1.0, wir verwenden nicht die CORDOVALIB Xcode-Variable nicht mehr wo verweisen auf `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
+    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in der `bin` Unterverzeichnis
     3.  Führen Sie das Skript unten, wo der erste Parameter ist der Pfad zu Ihrem Projekts `.xcodeproj` Datei:
         
         `Update_cordova_subproject Pfad/zu/Ihrem/Projekt/xcodeproj`

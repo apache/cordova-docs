@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>
+MediaFile
 =========
 
 > Encapsulates properties of a media capture file.
@@ -35,4 +35,4 @@ Properties
 Methods
 -------
 
-- __<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData</a>:__ Retrieves the format information of the media file.
+- __MediaFile.getFormatData:__ Retrieves the format information of the media file.

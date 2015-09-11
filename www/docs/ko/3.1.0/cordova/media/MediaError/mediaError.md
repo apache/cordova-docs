@@ -20,7 +20,7 @@ license: >
 
 # MediaError
 
-A `MediaError` 개체에 반환 됩니다는 `<a href="../Parameters/mediaError.html">mediaError</a>` 콜백 함수 오류가 발생 합니다.
+A `MediaError` 개체에 반환 됩니다는 `mediaError` 콜백 함수 오류가 발생 합니다.
 
 ## 속성
 
@@ -37,4 +37,4 @@ A `MediaError` 개체에 반환 됩니다는 `<a href="../Parameters/mediaError.
 
 ## 설명
 
-`MediaError`개체에 전달 되는 `<a href="../Parameters/mediaError.html">mediaError</a>` 콜백 함수를 때 오류가 발생 합니다.
+`MediaError`개체에 전달 되는 `mediaError` 콜백 함수를 때 오류가 발생 합니다.

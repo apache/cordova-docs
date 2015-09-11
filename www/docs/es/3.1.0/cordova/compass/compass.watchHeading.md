@@ -22,16 +22,16 @@ license: >
 
 A intervalos regulares, conseguir la brújula en grados.
 
-    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
+    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
 ## Descripción
 
 La brújula es un sensor que detecta la dirección o rumbo que el dispositivo está apuntando. Mide el rumbo en grados de 0 a 359.99.
 
-El `compass.watchHeading` obtiene el rumbo actual del dispositivo a intervalos regulares. Cada vez que el título es obtenido, se ejecuta la función de devolución de llamada `headingSuccess`. Especificar el intervalo en milisegundos mediante el parámetro de `frecuencia` en el objeto `<a href="parameters/compassOptions.html">compassOptions</a>`.
+El `compass.watchHeading` obtiene el rumbo actual del dispositivo a intervalos regulares. Cada vez que el título es obtenido, se ejecuta la función de devolución de llamada `headingSuccess`. Especificar el intervalo en milisegundos mediante el parámetro de `frecuencia` en el objeto `compassOptions`.
 
-El identificador devuelto reloj hace referencia al intervalo de reloj brújula. El ID del reloj puede utilizarse con `<a href="compass.clearWatch.html">compass.clearWatch</a>` para dejar de mirar la brújula.
+El identificador devuelto reloj hace referencia al intervalo de reloj brújula. El ID del reloj puede utilizarse con `compass.clearWatch` para dejar de mirar la brújula.
 
 ## Plataformas soportadas
 
@@ -49,8 +49,8 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(<a href="parameters/compassError.html">compassError</a>) {
-        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
+                navigator.compass.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
 
 ## iOS rarezas
 
-En iOS `compass.watchHeading` también puede obtener rumbo actual del dispositivo cuando cambia un número especificado de grados. Cada vez los cambios de rumbo el número especificado de grados o más, ejecuta la función de devolución de llamada `headingSuccess`. Especifique los grados de cambio a través del parámetro de `filtro` en el objeto `<a href="parameters/compassOptions.html">compassOptions</a>`. Claro como siempre el reloj pasando el identificador devuelto reloj al `<a href="compass.clearWatch.html">compass.clearWatch</a>`. Esta funcionalidad sustituye las funciones de `clearWatchFilter`, que fueron quitadas en la versión 1.6 y previamente separadas, sólo iOS `watchHeadingFilter`.
+En iOS `compass.watchHeading` también puede obtener rumbo actual del dispositivo cuando cambia un número especificado de grados. Cada vez los cambios de rumbo el número especificado de grados o más, ejecuta la función de devolución de llamada `headingSuccess`. Especifique los grados de cambio a través del parámetro de `filtro` en el objeto `compassOptions`. Claro como siempre el reloj pasando el identificador devuelto reloj al `compass.clearWatch`. Esta funcionalidad sustituye las funciones de `clearWatchFilter`, que fueron quitadas en la versión 1.6 y previamente separadas, sólo iOS `watchHeadingFilter`.
 
 Sólo un `watchHeading` puede ser en efecto a la vez en iOS. Si un `watchHeading` utiliza un filtro, llamando al `getCurrentHeading` o `watchHeading` utiliza el valor existente de filtro para especificar los cambios de rumbo. Observando los cambios de rumbo con un filtro es más eficiente que con intervalos de tiempo.

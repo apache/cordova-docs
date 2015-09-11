@@ -30,4 +30,4 @@ geolocationError
 パラメーター
 ----------
 
-- __error:__ デバイスから返されるエラーを表します (`<a href="../<a href="../Position/position.html">Position</a>Error/positionError.html"><a href="../Position/position.html">Position</a>Error</a>`)
+- __error:__ デバイスから返されるエラーを表します (`PositionError`)

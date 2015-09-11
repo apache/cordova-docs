@@ -35,9 +35,9 @@ Gibt das Muster auf der `successCallback` . Das als Parameter übergebene Objekt
 
 *   **Utc_offset**: die aktuelle Differenz in Sekunden zwischen dem Client Zeitzone und koordinierte Weltzeit. *(Anzahl)*
 
-*   **Dst_offset**: der aktuelle Sommerzeit-Offset in Sekunden zwischen der Client-Sommerzeit der Zeitzone und der Client Tageslicht <a href="../storage/storage.html">Speicher</a>n der Zeitzone. *(Anzahl)*
+*   **Dst_offset**: der aktuelle Sommerzeit-Offset in Sekunden zwischen der Client-Sommerzeit der Zeitzone und der Client Tageslicht Speichern der Zeitzone. *(Anzahl)*
 
-Wenn es einen Fehler erhalten das Muster der `errorCallback` führt mit ein `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+Wenn es einen Fehler erhalten das Muster der `errorCallback` führt mit ein `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
 
 Die `options` Parameter ist optional und wird mit den folgenden Werten:
 
@@ -72,7 +72,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, in diesem Beispi
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDatePattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

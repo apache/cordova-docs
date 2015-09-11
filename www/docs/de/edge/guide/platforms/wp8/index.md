@@ -22,12 +22,12 @@ license: >
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows Phone Geräte bereitstellen. Es konzentriert sich auf Windows Phone 8, sondern enthält weitere Details zum Windows Phone 7 Unterstützung.
 
-Es veranschaulicht, wie mithilfe von entweder Windows Phone-spezifischen Shell Tools generieren und bauen apps oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die <a href="../../overview/index.html">Übersicht</a> für einen Vergleich dieser Entwicklung-Workflows). In diesem Abschnitt veranschaulicht auch Cordova apps zu öffnen, so dass diese innerhalb von Visual Studio ändern zu können. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie das Windows Phone SDK installieren, wie unten beschrieben.
+Es veranschaulicht, wie mithilfe von entweder Windows Phone-spezifischen Shell Tools generieren und bauen apps oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die Übersicht für einen Vergleich dieser Entwicklung-Workflows). In diesem Abschnitt veranschaulicht auch Cordova apps zu öffnen, so dass diese innerhalb von Visual Studio ändern zu können. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie das Windows Phone SDK installieren, wie unten beschrieben.
 
 Im folgenden Details, die spezifisch auf die Windows Phone-Plattform finden Sie:
 
-*   <a href="plugin.html">Windows Phone 8 Plugins</a>
-*   <a href="upgrading.html">Aktualisieren von Windows Phone</a> 8
+*   Windows Phone 8 Plugins
+*   Aktualisieren von Windows Phone 8
 
 Für die Plattform Windows Phone 8 setzt die Cordova WebView auf Internet Explorer 10 als die Rendering-Engine, so als eine praktische Sache IE10s leistungsstarken Debugger können Sie verwenden Web-Inhalte testen, die Cordova-APIs aufrufen nicht. Die Windows Phone Developer Blog enthält [hilfreiche Anleitungen][1] , IE10 zusammen mit vergleichbaren WebKit-Browser zu unterstützen.
 
@@ -51,7 +51,7 @@ Um Cordova apps für Windows Phone Geräte zu entwickeln, können einen PC mit W
 
 *   **VMWare Fusion**: um die Windows 8 virtuelle Maschine einzurichten, folgen Sie die Anweisungen im [Microsoft Developer Network][5], dann finden Sie unter Konfigurieren von VMWare Fusion Informationen zum Vorbereiten der virtuellen Umgebung gebündelt mit dem SDK Emulator ausführen.
 
-*   **Parallels Desktop**: um die Windows 8 virtuelle Maschine einzurichten, folgen Sie die Anweisungen im [Microsoft Developer Network][6], dann finden Sie unter <a href="parallels.html">Konfigurieren von Parallels Desktop</a> Informationen zum Vorbereiten der virtuellen Umgebung gebündelt mit dem SDK Emulator ausführen.
+*   **Parallels Desktop**: um die Windows 8 virtuelle Maschine einzurichten, folgen Sie die Anweisungen im [Microsoft Developer Network][6], dann finden Sie unter Konfigurieren von Parallels Desktop Informationen zum Vorbereiten der virtuellen Umgebung gebündelt mit dem SDK Emulator ausführen.
 
  [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
  [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
@@ -83,7 +83,7 @@ Wenn Sie Cordovas Windows Phone-zentrierte Shell-Werkzeugen in Verbindung mit de
 
  [10]: http://cordova.apache.org
 
-Diese Shell-Tools können Sie erstellen, erstellen und Ausführen von Windows Phone apps. Informationen über die zusätzliche Befehlszeilenschnittstelle, die Plugin-Features für alle Plattformen aktiviert, finden Sie unter Using Plugman zu Plugins verwalten. Finden Sie unter Application Plugins, Anleitungen, Plugins und <a href="plugin.html">Windows Phone 8 Plugins</a> für Informationen speziell für die Windows Phone-Plattform zu entwickeln.
+Diese Shell-Tools können Sie erstellen, erstellen und Ausführen von Windows Phone apps. Informationen über die zusätzliche Befehlszeilenschnittstelle, die Plugin-Features für alle Plattformen aktiviert, finden Sie unter Using Plugman zu Plugins verwalten. Finden Sie unter Application Plugins, Anleitungen, Plugins und Windows Phone 8 Plugins für Informationen speziell für die Windows Phone-Plattform zu entwickeln.
 
 ## Das SDK installieren
 
@@ -161,7 +161,7 @@ Des Emulators grundlegenden Steuerelemente, auf die sich oben rechts auf dem Bil
 
  [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
-Diese erweiterte Steuerelemente ermöglichen auch Ihnen, das Gerät den <a href="../../../cordova/storage/storage.html">Speicher</a>ort ändern oder Abfolgen von Bewegungen zu simulieren:
+Diese erweiterte Steuerelemente ermöglichen auch Ihnen, das Gerät den Speicherort ändern oder Abfolgen von Bewegungen zu simulieren:
 
 ![][15]
 
@@ -193,4 +193,4 @@ Sobald Sie eine Cordova-Anwendung zu erstellen, wie oben beschrieben, können Si
 
  [17]: img/guide/platforms/wp8/wp8_vs.png
 
-Ratschläge, wie mithilfe von Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow finden Sie in der <a href="../../overview/index.html">Übersicht</a>. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Wenn Sie im SDK arbeiten möchten, verwenden Sie die Low-Level-Shell-Werkzeugen als Alternative zu den CLI.
+Ratschläge, wie mithilfe von Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow finden Sie in der Übersicht. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Wenn Sie im SDK arbeiten möchten, verwenden Sie die Low-Level-Shell-Werkzeugen als Alternative zu den CLI.

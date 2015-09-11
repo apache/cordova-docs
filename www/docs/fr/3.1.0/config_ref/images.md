@@ -20,7 +20,7 @@ license: >
 
 # Icones et Splash Screen
 
-Cette section indique comment configurer une application icône et écran de démarrage facultatif pour diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les <a href="../guide/platforms/index.html"><a href="../index.html">Guides</a> de la plate-forme</a>).
+Cette section indique comment configurer une application icône et écran de démarrage facultatif pour diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les Guides de la plate-forme).
 
 ## Configuration des icônes dans le CLI
 
@@ -94,7 +94,7 @@ BlackBerry et Windows Phone à la fois spécifient une image à l'écran splash 
         windows-phone/screen-portrait.jpg
     
 
-Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les <a href="../guide/platforms/index.html"><a href="../index.html">Guides</a> de la plate-forme</a>.
+Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les Guides de la plate-forme.
 
 ## Écrans de démarrage pour la plateforme Android
 
@@ -115,7 +115,7 @@ Dans `config.xml` , ajoutez les préférences suivantes :
 
 La première ligne définit l'image à afficher comme écran de démarrage. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne.
 
-La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `<a href="../cordova/events/events.deviceready.html">deviceready</a>` événement, appelez le `navigator.splashscreen.hide()` méthode.
+La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
 
 ## Écrans de démarrage pour l'iOS plate-forme
 

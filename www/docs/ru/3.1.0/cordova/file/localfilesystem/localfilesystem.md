@@ -26,7 +26,7 @@ license: >
 
 *   **requestFileSystem**: просит файловой системы. *(Функция)*
 
-*   **resolveLocalFileSystemURI**: получить `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` или `<a href="../fileentry/fileentry.html">FileEntry</a>` с помощью местных URI. *(Функция)*
+*   **resolveLocalFileSystemURI**: получить `DirectoryEntry` или `FileEntry` с помощью местных URI. *(Функция)*
 
 ## Константы
 
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Local File System Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Local File System</p>
       </body>
     </html>

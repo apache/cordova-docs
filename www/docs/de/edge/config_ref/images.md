@@ -29,7 +29,7 @@ Beim Arbeiten in der CLI Sie können definieren app obige über `<icon>` Element
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-Src: (erforderlich) gibt den <a href="../cordova/storage/storage.html">Speicher</a>ort der Bilddatei, im Verhältnis zu Ihrem Projektverzeichnis
+Src: (erforderlich) gibt den Speicherort der Bilddatei, im Verhältnis zu Ihrem Projektverzeichnis
 
 Plattform: (optional) Zielplattform
 

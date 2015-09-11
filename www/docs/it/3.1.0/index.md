@@ -26,63 +26,63 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Panoramica</a>
+        Panoramica
       </h2>
       
       <span>Iniziare qui se siete nuovi a Cordova.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">L'interfaccia della riga di comando</a>
+        L'interfaccia della riga di comando
       </h2>
       
       <span>Creare, costruire e distribuire dalla riga di comando.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Piattaforma guide</a>
+        Piattaforma guide
       </h2>
       
       <span>Impostare ogni SDK e aggiornamento progetti</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Il <a href="cordova/file/fileobj/fileobj.html">File</a> config. Xml</a>
+        Il File config. Xml
       </h2>
       
       <span>Personalizzare le funzionalità della tua app.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Icone e Splash screen</a>
+        Icone e Splash screen
       </h2>
       
       <span>Personalizzare immagini visualizzazione dell'app.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Incorporamento visualizzazioni Web</a>
+        Incorporamento visualizzazioni Web
       </h2>
       
       <span>Implementare Cordova WebView nel vostro progetto.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Guida allo sviluppo di plugin</a>
+        Guida allo sviluppo di plugin
       </h2>
       
       <span>Sviluppare il tuo primo plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Guida sulla privacy</a>
+        Guida sulla privacy
       </h2>
       
       <span>Ulteriori informazioni su questioni di privacy mobile importante.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Guida di whitelist</a>
+        Guida di whitelist
       </h2>
       
       <span>Concedere un'accesso di applicazione a risorse esterne.</span>
@@ -103,112 +103,112 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/accelerometer/accelerometer.html">Accelerometro</a>
+        Accelerometro
       </h2>
       
       <span>Sfruttare il sensore di movimento del dispositivo.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/camera/camera.html">Fotocamera</a>
+        Fotocamera
       </h2>
       
-      <span><a href="cordova/media/capture/capture.html">Cattura</a>re una foto usando la fotocamera del dispositivo.</span>
+      <span>Catturare una foto usando la fotocamera del dispositivo.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/capture/capture.html">Cattura</a>
+        Cattura
       </h2>
       
-      <span><a href="cordova/media/capture/capture.html">Cattura</a>re i file multimediali utilizzando le applicazioni di cattura multimediale del dispositivo.</span>
+      <span>Catturare i file multimediali utilizzando le applicazioni di cattura multimediale del dispositivo.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/compass/compass.html">Bussola</a>
+        Bussola
       </h2>
       
       <span>Ottenere la direzione che il dispositivo sta puntando.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/connection/connection.html">Connessione</a>
+        Connessione
       </h2>
       
       <span>Verificare rapidamente lo stato di rete e informazioni della rete cellulare.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/contacts/contacts.html">Contatti</a>
+        Contatti
       </h2>
       
       <span>Lavorare con il database di contatti di dispositivi.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/device/device.html">Dispositivo</a>
+        Dispositivo
       </h2>
       
       <span>Raccogliere informazioni specifiche del dispositivo.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/events/events.html">Eventi</a>
+        Eventi
       </h2>
       
       <span>Gancio in nativo degli eventi tramite JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/file/fileobj/fileobj.html">File</a>
+        File
       </h2>
       
       <span>Gancio in file system nativo tramite JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/geolocation/geolocation.html">Geolocalizzazione</a>
+        Geolocalizzazione
       </h2>
       
       <span>Sensibilizzare la vostra sede di applicazione.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/globalization/globalization.html">Globalizzazione</a>
+        Globalizzazione
       </h2>
       
       <span>Attivare la rappresentazione degli oggetti specifici di una lingua.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
+        InAppBrowser
       </h2>
       
       <span>Lanciare gli URL in un'altra istanza del browser in-app.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/media.html">Media</a>
+        Media
       </h2>
       
       <span>Registrare e riprodurre file audio.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/notification/notification.html">Notifica</a>
+        Notifica
       </h2>
       
       <span>Notifiche di dispositivi visivi, acustici e tattili.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/splashscreen/splashscreen.html">Splashscreen</a>
+        Splashscreen
       </h2>
       
       <span>Mostrare e nascondere la schermata iniziale di applicazioni.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Archiviazione</a>
+        Archiviazione
       </h2>
       
       <span>Collegare i dispositivi opzioni di archiviazione nativo.</span>

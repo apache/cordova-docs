@@ -31,7 +31,7 @@ license: >
 
 入站 `date` 參數的類型應為`Date`.
 
-如果有錯誤格式日期，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+如果有錯誤格式日期，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
 
 `options`參數是可選的且其預設值：
 
@@ -51,7 +51,7 @@ license: >
 
 ## 快速的示例
 
-如果瀏覽器設置為 `en\_US` 的地區設定，這將<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出對話方塊與類似的文本 `date: 9/25/2012 4:21PM` 使用預設選項：
+如果瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本 `date: 9/25/2012 4:21PM` 使用預設選項：
 
     navigator.globalization.dateToString(
         new Date(),
@@ -66,7 +66,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

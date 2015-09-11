@@ -77,14 +77,14 @@ Die `promptCallback` wird ausgeführt, wenn der Benutzer eine der Schaltflächen
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Prompt Dialog Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -121,4 +121,4 @@ Die `promptCallback` wird ausgeführt, wenn der Benutzer eine der Schaltflächen
 
 *   Android unterstützt maximal drei Schaltflächen und mehr als das ignoriert.
 
-*   Auf Android 3.0 und höher, werden die Schaltflächen in umgekehrter Reihenfolge für <a href="../device/device.html">Gerät</a>e angezeigt, die das Holo-Design verwenden.
+*   Auf Android 3.0 und höher, werden die Schaltflächen in umgekehrter Reihenfolge für Geräte angezeigt, die das Holo-Design verwenden.

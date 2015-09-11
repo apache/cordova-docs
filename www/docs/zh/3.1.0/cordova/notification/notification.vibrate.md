@@ -20,12 +20,12 @@ license: >
 
 # notification.vibrate
 
-為指定的時間量振動<a href="../device/device.html">設備</a>。
+為指定的時間量振動設備。
 
     navigator.notification.vibrate(milliseconds)
     
 
-*   **時間**： 毫秒為單位） 在震動的<a href="../device/device.html">設備</a>，其中 1000年毫秒等於 1 秒。*（人數）*
+*   **時間**： 毫秒為單位） 在震動的設備，其中 1000年毫秒等於 1 秒。*（人數）*
 
 ## 支援的平臺
 
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,7 +64,7 @@ license: >
         // Show a custom alert
         //
         function showAlert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+            navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -74,7 +74,7 @@ license: >
         // Beep three times
         //
         function playBeep() {
-            navigator.<a href="notification.beep.html">notification.beep</a>(3);
+            navigator.notification.beep(3);
         }
     
         // Vibrate for 2 seconds

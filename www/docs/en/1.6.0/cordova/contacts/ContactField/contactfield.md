@@ -18,24 +18,24 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>Field
+ContactField
 ============
 
-Supports generic fields in a `<a href="../Contact/contact.html">Contact</a>` object.  Some properties that are stored as `<a href="../Contact/contact.html">Contact</a>Field` objects include email addresses, phone numbers, and urls.
+Supports generic fields in a `Contact` object.  Some properties that are stored as `ContactField` objects include email addresses, phone numbers, and urls.
 
 Properties
 ----------
 
 - __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)_
 - __value:__ The value of the field (such as a phone number or email address). _(DOMString)_
-- __pref:__ Set to `true` if this `<a href="../Contact/contact.html">Contact</a>Field` contains the user's preferred value. _(boolean)_
+- __pref:__ Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
 Details
 -------
 
-The `<a href="../Contact/contact.html">Contact</a>Field` object is a reusable component that is used to support contact fields in a generic fashion.  Each `<a href="../Contact/contact.html">Contact</a>Field` object contains a value property, a type property, and a pref property.  A `<a href="../Contact/contact.html">Contact</a>` object stores several properties in `<a href="../Contact/contact.html">Contact</a>Field[]` arrays, such as phone numbers and email addresses.
+The `ContactField` object is a reusable component that is used to support contact fields in a generic fashion.  Each `ContactField` object contains a value property, a type property, and a pref property.  A `Contact` object stores several properties in `ContactField[]` arrays, such as phone numbers and email addresses.
 
-In most instances, there are no pre-determined values for the __type__ attribute of a `<a href="../Contact/contact.html">Contact</a>Field` object.  For example, a phone number can have __type__ values of 'home', 'work', 'mobile', 'iPhone', or any other value that is supported by the contact database on a particular device platform.  However, in the case of the `<a href="../Contact/contact.html">Contact</a>` __photos__ field, Cordova makes use of the __type__ field to indicate the format of the returned image.  Cordova will return __type: 'url'__ when the __value__ attribute contains a URL to the photo image, or __type: 'base64'__ when the returned __value__ attribute contains a Base64 encoded image string.
+In most instances, there are no pre-determined values for the __type__ attribute of a `ContactField` object.  For example, a phone number can have __type__ values of 'home', 'work', 'mobile', 'iPhone', or any other value that is supported by the contact database on a particular device platform.  However, in the case of the `Contact` __photos__ field, Cordova makes use of the __type__ field to indicate the format of the returned image.  Cordova will return __type: 'url'__ when the __value__ attribute contains a URL to the photo image, or __type: 'base64'__ when the returned __value__ attribute contains a Base64 encoded image string.
 
 Supported Platforms
 -------------------
@@ -44,58 +44,58 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 	// create a new contact
-	var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+	var contact = navigator.contacts.create();
 	
-	// store contact phone numbers in <a href="../Contact/contact.html">Contact</a>Field[]
+	// store contact phone numbers in ContactField[]
 	var phoneNumbers = [];
-	phoneNumbers[0] = new <a href="../Contact/contact.html">Contact</a>Field('work', '212-555-1234', false);
-	phoneNumbers[1] = new <a href="../Contact/contact.html">Contact</a>Field('mobile', '917-555-5432', true); // preferred number
-	phoneNumbers[2] = new <a href="../Contact/contact.html">Contact</a>Field('home', '203-555-7890', false);
+	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
+	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
 	contact.phoneNumbers = phoneNumbers;
 	
 	// save the contact
 	contact.save();
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
 			// create a new contact
-			var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+			var contact = navigator.contacts.create();
 
-			// store contact phone numbers in <a href="../Contact/contact.html">Contact</a>Field[]
+			// store contact phone numbers in ContactField[]
 			var phoneNumbers = [];
-			phoneNumbers[0] = new <a href="../Contact/contact.html">Contact</a>Field('work', '212-555-1234', false);
-			phoneNumbers[1] = new <a href="../Contact/contact.html">Contact</a>Field('mobile', '917-555-5432', true); // preferred number
-			phoneNumbers[2] = new <a href="../Contact/contact.html">Contact</a>Field('home', '203-555-7890', false);
+			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
+			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
 			contact.phoneNumbers = phoneNumbers;
 
 			// save the contact
 			contact.save();
 
 			// search contacts, returning display name and phone numbers
-			var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+			var options = new ContactFindOptions();
 			options.filter="";
 			filter = ["displayName","phoneNumbers"];
-			navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -113,15 +113,15 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

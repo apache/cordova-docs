@@ -42,7 +42,7 @@ license: >
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`（字串，或者 `none` ， `local` ，或預設的 `cloud` ）： 設置為 `cloud` 允許通過 iCloud 備份到 web <a href="../../../cordova/storage/storage.html">存儲</a>資料。 設置為 `local` ，使得只有本地備份通過 iTunes 同步。 設置為 `none` 防止 web <a href="../../../cordova/storage/storage.html">存儲</a>備份。
+*   `BackupWebStorage`（字串，或者 `none` ， `local` ，或預設的 `cloud` ）： 設置為 `cloud` 允許通過 iCloud 備份到 web 存儲資料。 設置為 `local` ，使得只有本地備份通過 iTunes 同步。 設置為 `none` 防止 web 存儲備份。
     
         <preference name="BackupWebStorage" value="local"/>
         

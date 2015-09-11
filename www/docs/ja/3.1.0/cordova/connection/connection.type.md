@@ -20,11 +20,11 @@ license: >
 
 # connection.type
 
-現在アクティブなネットワーク<a href="connection.html">接続</a>を確認します。
+現在アクティブなネットワーク接続を確認します。
 
 ## 説明
 
-このプロパティは<a href="../device/device.html">デバイス</a>のネットワーク<a href="connection.html">接続</a>状態を確認する速い方法を提供し、<a href="connection.html">接続</a>の種類。
+このプロパティはデバイスのネットワーク接続状態を確認する速い方法を提供し、接続の種類。
 
 ## サポートされているプラットフォーム
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.connection.type Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -106,18 +106,18 @@ license: >
 
 ## iOS の癖
 
-*   iOS は、携帯電話のネットワーク<a href="connection.html">接続</a>の種類を検出できません。 
+*   iOS は、携帯電話のネットワーク接続の種類を検出できません。 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone の癖
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone 携帯電話ネットワーク<a href="connection.html">接続</a>の種類を検出できません。
+*   Windows Phone 携帯電話ネットワーク接続の種類を検出できません。
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Tizen の癖
 
-*   Tizen には、WiFi または携帯電話の<a href="connection.html">接続</a>だけを検出できます。 
+*   Tizen には、WiFi または携帯電話の接続だけを検出できます。 
     *   `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.

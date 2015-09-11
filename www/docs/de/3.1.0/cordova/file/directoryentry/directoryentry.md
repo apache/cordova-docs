@@ -20,7 +20,7 @@ license: >
 
 # DirectoryEntry
 
-Dieses Objekt stellt ein Verzeichnis auf einem <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>, wie durch die [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
+Dieses Objekt stellt ein Verzeichnis auf einem Dateisystem, wie durch die [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,19 +36,19 @@ Dieses Objekt stellt ein Verzeichnis auf einem <a href="../filesystem/filesystem
 
 **Hinweis:** Das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
 
-*   **<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>**: das <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>, auf dem der `DirectoryEntry` befindet. *(FileSystem)*
+*   **Dateisystem**: das Dateisystem, auf dem der `DirectoryEntry` befindet. *(FileSystem)*
 
 ## Methoden
 
 Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objekt:
 
-*   **GetMetadata**: <a href="../metadata/metadata.html">Metadaten</a> über ein Verzeichnis nachschlagen.
+*   **GetMetadata**: Metadaten über ein Verzeichnis nachschlagen.
 
-*   **SetMetadata**: <a href="../metadata/metadata.html">Metadaten</a> für ein Verzeichnis festgelegt.
+*   **SetMetadata**: Metadaten für ein Verzeichnis festgelegt.
 
-*   **MoveTo**: Verschieben Sie ein Verzeichnis an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>.
+*   **MoveTo**: Verschieben Sie ein Verzeichnis an einen anderen Speicherort im Dateisystem.
 
-*   **CopyTo**: Kopieren eines Verzeichnisses in einem anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>.
+*   **CopyTo**: Kopieren eines Verzeichnisses in einem anderen Speicherort im Dateisystem.
 
 *   **Besuch**: Rückkehr eine URL zu helfen, ein Verzeichnis zu suchen.
 
@@ -56,11 +56,11 @@ Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objek
 
 *   **GetParent**: das übergeordnete Verzeichnis nachschlagen.
 
-*   **CreateReader**: Erstellen Sie eine neue `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` , die können Einträge aus dem Verzeichnis lesen.
+*   **CreateReader**: Erstellen Sie eine neue `DirectoryReader` , die können Einträge aus dem Verzeichnis lesen.
 
 *   **GetDirectory**: Erstellen oder ein Verzeichnis nachschlagen.
 
-*   **GetFile**: Erstellen oder eine <a href="../fileobj/fileobj.html">Datei</a> nachschlagen.
+*   **GetFile**: Erstellen oder eine Datei nachschlagen.
 
 *   **RemoveRecursively**: ein Verzeichnis und seinen Inhalt zu löschen.
 
@@ -74,13 +74,13 @@ Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objek
 
 ## getMetadata
 
-<a href="../metadata/metadata.html">Metadaten</a> über ein Verzeichnis nachschlagen.
+Metadaten über ein Verzeichnis nachschlagen.
 
 **Parameter:**
 
 *   **SuccessCallback**: eine Callback-Funktion mit einem `Metadata` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: eine Callback-Funktion ausführen, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: eine Callback-Funktion ausführen, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -88,20 +88,20 @@ Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objek
     
     Function fail(error) {alert(error.code);}
     
-    / / Anfrage das <a href="../metadata/metadata.html">Metadaten</a>objekt für diesen Eintrag entry.getMetadata (Erfolg, Fehler);
+    / / Anfrage das Metadatenobjekt für diesen Eintrag entry.getMetadata (Erfolg, Fehler);
     
 
 ## setMetadata
 
-Legt ein Verzeichnis erweiterte Attribute oder <a href="../metadata/metadata.html">Metadaten</a>. *Funktioniert derzeit nur auf iOS.*
+Legt ein Verzeichnis erweiterte Attribute oder Metadaten. *Funktioniert derzeit nur auf iOS.*
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die <a href="../metadata/metadata.html">Metadaten</a> erfolgreich festgelegt ist. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten erfolgreich festgelegt ist. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die <a href="../metadata/metadata.html">Metadaten</a> nicht festgelegt werden. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten nicht festgelegt werden. *(Funktion)*
 
-*   **MetadataObject**: ein Objekt, das der <a href="../metadata/metadata.html">Metadaten</a> Schlüssel und Werte enthält. *(Objekt)*
+*   **MetadataObject**: ein Objekt, das der Metadaten Schlüssel und Werte enthält. *(Objekt)*
 
 **Kleines Beispiel**
 
@@ -149,21 +149,21 @@ Legt ein Verzeichnis erweiterte Attribute oder <a href="../metadata/metadata.htm
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
 
-Verschieben Sie ein Verzeichnis an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>. Ein Fehler auftritt, wenn die app versucht:
+Verschieben Sie ein Verzeichnis an einen anderen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
 
 *   Verschieben Sie ein Verzeichnis in sich selbst oder an jedes Kind in jede Tiefe.
 
 *   Verschieben Sie ein Verzeichnis in übergeordneten, wenn ein Name unterscheidet sich von seinem aktuellen Verzeichnis nicht bereitgestellt wird.
 
-*   Verschieben Sie ein Verzeichnis auf einen Pfad, der von einer <a href="../fileobj/fileobj.html">Datei</a> belegt.
+*   Verschieben Sie ein Verzeichnis auf einen Pfad, der von einer Datei belegt.
 
 *   Verschieben Sie ein Verzeichnis auf einen Pfad, belegt durch ein Verzeichnis, das nicht leer ist.
 
@@ -177,7 +177,7 @@ Verschieben eines Verzeichnisses auf einem vorhandenen leeren Verzeichnis versuc
 
 *   **SuccessCallback**: ein Rückruf, der mit führt das `DirectoryEntry` -Objekt für das neue Verzeichnis. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das Verzeichnis zu verschieben. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das Verzeichnis zu verschieben. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -202,7 +202,7 @@ Verschieben eines Verzeichnisses auf einem vorhandenen leeren Verzeichnis versuc
 
 ## copyTo
 
-Kopieren Sie ein Verzeichnis an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>. Ein Fehler auftritt, wenn die app versucht:
+Kopieren Sie ein Verzeichnis an einen anderen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
 
 *   Kopieren eines Verzeichnisses in sich in beliebiger Tiefe.
 
@@ -218,7 +218,7 @@ Verzeichnis-Kopien sind immer rekursive, und kopieren Sie alle Inhalte des Verze
 
 *   **SuccessCallback**: ein Rückruf, der mit führt das `DirectoryEntry` -Objekt für das neue Verzeichnis. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, vom zugrunde liegenden Verzeichnis kopieren. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, vom zugrunde liegenden Verzeichnis kopieren. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -258,13 +258,13 @@ Löscht ein Verzeichnis. Ein Fehler auftritt, wenn die app versucht:
 
 *   Löschen Sie ein Verzeichnis, das nicht leer ist.
 
-*   Löschen Sie das Root-Verzeichnis des <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>s.
+*   Löschen Sie das Root-Verzeichnis des Dateisystems.
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem das Verzeichnis gelöscht wird. Ohne Parameter aufgerufen. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das Verzeichnis zu löschen. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das Verzeichnis zu löschen. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -283,7 +283,7 @@ Suchen Sie den übergeordneten `DirectoryEntry` mit dem Verzeichnis.
 
 *   **SuccessCallback**: ein Rückruf, der das Verzeichnis übergeordnete übergeben wird `DirectoryEntry` . *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `DirectoryEntry` . Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `DirectoryEntry` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -301,7 +301,7 @@ Suchen Sie den übergeordneten `DirectoryEntry` mit dem Verzeichnis.
 
 ## createReader
 
-Erstellt eine neue <a href="../directoryreader/directoryreader.html">DirectoryReader</a> um Einträge in einem Verzeichnis zu lesen.
+Erstellt eine neue DirectoryReader um Einträge in einem Verzeichnis zu lesen.
 
 **Kleines Beispiel**
 
@@ -319,11 +319,11 @@ Erstellt oder ein vorhandenes Verzeichnis sucht. Ein Fehler auftritt, wenn die a
 
 *   **Pfad**: der Pfad zu dem Verzeichnis nachgeschlagen oder erstellt werden. Ein absoluter Pfad oder einen relativen Pfad von diesem `DirectoryEntry` . *(DOM-String und enthält)*
 
-*   **Optionen**: Optionen, um anzugeben, ob das Verzeichnis erstellt werden, wenn er nicht vorhanden ist. *(<a href="../flags/flags.html">Flags</a>)*
+*   **Optionen**: Optionen, um anzugeben, ob das Verzeichnis erstellt werden, wenn er nicht vorhanden ist. *(Flags)*
 
 *   **SuccessCallback**: ein Rückruf, der mit führt ein `DirectoryEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen oder suchen Sie das Verzeichnis. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen oder suchen Sie das Verzeichnis. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -336,40 +336,40 @@ Erstellt oder ein vorhandenes Verzeichnis sucht. Ein Fehler auftritt, wenn die a
 
 ## getFile
 
-Erstellt oder eine <a href="../fileobj/fileobj.html">Datei</a> sucht. Ein Fehler auftritt, wenn die app versucht:
+Erstellt oder eine Datei sucht. Ein Fehler auftritt, wenn die app versucht:
 
-*   Erstellen Sie eine <a href="../fileobj/fileobj.html">Datei</a>, deren unmittelbar übergeordnete noch nicht vorhanden ist.
+*   Erstellen Sie eine Datei, deren unmittelbar übergeordnete noch nicht vorhanden ist.
 
 **Parameter:**
 
-*   **Pfad**: der Pfad zu der <a href="../fileobj/fileobj.html">Datei</a> nachgeschlagen oder erstellt werden. Ein absoluter Pfad oder einen relativen Pfad von diesem `DirectoryEntry` . *(DOM-String und enthält)*
+*   **Pfad**: der Pfad zu der Datei nachgeschlagen oder erstellt werden. Ein absoluter Pfad oder einen relativen Pfad von diesem `DirectoryEntry` . *(DOM-String und enthält)*
 
-*   **Optionen**: Optionen, um anzugeben, ob die <a href="../fileobj/fileobj.html">Datei</a> erstellt wird, wenn es nicht vorhanden ist. *(<a href="../flags/flags.html">Flags</a>)*
+*   **Optionen**: Optionen, um anzugeben, ob die Datei erstellt wird, wenn es nicht vorhanden ist. *(Flags)*
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen oder suchen Sie die <a href="../fileobj/fileobj.html">Datei</a>. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen oder suchen Sie die Datei. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
-    Function success(fileEntry) {console.log ("<a href="../fileobj/fileobj.html">Datei</a>name:" + fileEntry.name);}
+    Function success(fileEntry) {console.log ("Dateiname:" + fileEntry.name);}
     
-    Function fail(error) {Alert ("Fehler beim Abrufen der <a href="../fileobj/fileobj.html">Datei</a>:" + error.code);}
+    Function fail(error) {Alert ("Fehler beim Abrufen der Datei:" + error.code);}
     
-    / / Abrufen eine vorhandene <a href="../fileobj/fileobj.html">Datei</a>, oder erstellen Sie ihn, wenn er nicht, entry.getFile vorhanden ist ("newFile.txt", {erstellen: echte, exklusive: False}, Erfolg, Fehler);
+    / / Abrufen eine vorhandene Datei, oder erstellen Sie ihn, wenn er nicht, entry.getFile vorhanden ist ("newFile.txt", {erstellen: echte, exklusive: False}, Erfolg, Fehler);
     
 
 ## removeRecursively
 
-Löscht ein Verzeichnis und seinen Inhalt. Im Falle eines Fehlers (z. B. versuchen, Löschen eines Verzeichnisses mit einer <a href="../fileobj/fileobj.html">Datei</a>, die nicht entfernt werden), können einige der den Inhalt des Verzeichnisses gelöscht werden. Ein Fehler auftritt, wenn die app versucht:
+Löscht ein Verzeichnis und seinen Inhalt. Im Falle eines Fehlers (z. B. versuchen, Löschen eines Verzeichnisses mit einer Datei, die nicht entfernt werden), können einige der den Inhalt des Verzeichnisses gelöscht werden. Ein Fehler auftritt, wenn die app versucht:
 
-*   Löschen Sie das Root-Verzeichnis des <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>s.
+*   Löschen Sie das Root-Verzeichnis des Dateisystems.
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der nach dem führt die `DirectoryEntry` gelöscht wurden. Ohne Parameter aufgerufen. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, löschen Sie die `DirectoryEntry` . Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, löschen Sie die `DirectoryEntry` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -393,6 +393,6 @@ Möglicherweise nicht mit einem `ControlledAccessException` in den folgenden Fä
 
 > Lösung: Stellen Sie sicher, dass temporäre Verzeichnisse manuell oder durch die Anwendung vor der Neuinstallation gereinigt werden.
 
-*   Wenn das <a href="../../device/device.html">Gerät</a> per USB angeschlossen ist.
+*   Wenn das Gerät per USB angeschlossen ist.
 
-> Lösung: Trennen Sie das USB-Kabel vom <a href="../../device/device.html">Gerät</a> und erneut ausführen.
+> Lösung: Trennen Sie das USB-Kabel vom Gerät und erneut ausführen.

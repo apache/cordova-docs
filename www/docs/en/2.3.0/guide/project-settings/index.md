@@ -21,4 +21,4 @@ license: >
 Project Settings
 ================
 
-- <a href="ios/index.html">Project Settings for iOS</a>
+- Project Settings for iOS

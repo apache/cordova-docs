@@ -47,7 +47,7 @@ typically less customizable.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
     //
@@ -62,23 +62,23 @@ typically less customizable.
         'Done'                  // buttonName
     );
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
 
@@ -89,7 +89,7 @@ typically less customizable.
 
         // Show a custom alertDismissed
         //
-        function <a href="../inappbrowser/inappbrowser.html">show</a>Alert() {
+        function showAlert() {
             navigator.notification.alert(
                 'You are the winner!',  // message
                 alertDismissed,         // callback
@@ -101,7 +101,7 @@ typically less customizable.
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Alert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
       </body>
     </html>
 

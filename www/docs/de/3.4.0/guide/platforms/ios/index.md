@@ -22,11 +22,11 @@ license: >
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für iOS-Geräte wie iPhone und iPad bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="config.html">iOS Konfiguration</a>
-*   <a href="upgrading.html">IOS Upgrade</a>
-*   <a href="webview.html">iOS Webansichten für</a>
-*   <a href="plugin.html">iOS Plugins</a>
-*   <a href="tools.html">iOS-Befehlszeilenprogrammen</a>
+*   iOS Konfiguration
+*   IOS Upgrade
+*   iOS Webansichten für
+*   iOS Plugins
+*   iOS-Befehlszeilenprogrammen
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -34,7 +34,7 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
 
 Apple ® Werkzeuge zum Erstellen von iOS-Anwendungen, die nur auf das Betriebssystem OS X auf Intel-basierten Macs ausgeführt. Xcode ® 4.5 (die erforderliche Mindestversion) läuft nur unter OS X Version 10.7 (Lion) oder größer, und umfasst das iOS 6 SDK (Software Development Kit). Einreichen von apps, die Apple-App-Store℠ erfordert die neuesten Versionen der Apple-Tools.
 
-Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-<a href="../../../cordova/storage/storage.html">Speicher</a>. Das Gerät muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
+Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das Gerät muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -127,7 +127,7 @@ Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -151,7 +151,7 @@ Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die
 
 **Fehlende Header**: Kompilierungsfehler im Zusammenhang mit fehlenden Header werden durch Probleme mit den Buildspeicherort und kann über Xcode-Einstellungen festgelegt werden:
 
-1.  **Xcode → Einstellungen → <a href="../../../cordova/storage/storage.html">Speicher</a>orte** auswählen.
+1.  **Xcode → Einstellungen → Speicherorte** auswählen.
 
 2.  Drücken Sie im Abschnitt **Abgeleitete Daten** die Schaltfläche " **erweitert** " und wählen Sie **Unique** als den **Buildspeicherort** , wie hier gezeigt:
     

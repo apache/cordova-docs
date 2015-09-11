@@ -22,14 +22,14 @@ license: >
 
 L'évènement se déclenche lorsqu'une application se connecte, quand l'appareil est connecté à Internet.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
+    document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## Détails
 
-L'évènement `online` se déclenche lorsqu'un appareil précédemment non-connecté se connecte au réseau, permettant ainsi à l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand la valeur de `<a href="../connection/connection.type.html">connection.type</a>` devient `NONE`.
+L'évènement `online` se déclenche lorsqu'un appareil précédemment non-connecté se connecte au réseau, permettant ainsi à l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand la valeur de `connection.type` devient `NONE`.
 
-Les applications devraient en général utiliser `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
 ## Plates-formes supportées
 
@@ -42,7 +42,7 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
 
 ## Exemple court
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+    document.addEventListener("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Online Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("online", onOnline, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Les applications devraient en général utiliser `document.<a href="../inappbrow
 
 ## Notes au sujet d'iOS
 
-Lors du démarrage initial, le déclenchement du premier évènement `online` (si applicable) prend au moins une seconde avant quoi `<a href="../connection/connection.type.html">connection.type</a>` vaut `UNKNOWN`.
+Lors du démarrage initial, le déclenchement du premier évènement `online` (si applicable) prend au moins une seconde avant quoi `connection.type` vaut `UNKNOWN`.
 
 ## Notes au sujet de Windows Phone 7
 

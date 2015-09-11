@@ -27,13 +27,13 @@ license: >
 
 ## 설명
 
-서식이 지정 된 날짜를 반환 합니다 `String` 통해는 `value` 개체에서 액세스할 수 있는 속성을 매개 <a href="../../plugin_ref/spec.html">변수</a>로 전달 되는`successCallback`.
+서식이 지정 된 날짜를 반환 합니다 `String` 통해는 `value` 개체에서 액세스할 수 있는 속성을 매개 변수로 전달 되는`successCallback`.
 
-인바운드는 `date` 매개 <a href="../../plugin_ref/spec.html">변수</a> 유형 이어야 합니다`Date`.
+인바운드는 `date` 매개 변수 유형 이어야 합니다`Date`.
 
-날짜 서식을 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+날짜 서식을 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.FORMATTING\_ERROR`.
 
-`options`매개 <a href="../../plugin_ref/spec.html">변수</a>는 선택적 이며 그것의 기본 값은:
+`options`매개 변수는 선택적 이며 그것의 기본 값은:
 
     {formatLength: '짧은' 선택기: '날짜 및 시간'}
     
@@ -66,7 +66,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

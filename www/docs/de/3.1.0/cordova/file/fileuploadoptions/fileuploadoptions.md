@@ -20,13 +20,13 @@ license: >
 
 # FileUploadOptions
 
-A `FileUploadOptions` Objekt übergeben werden kann, um die `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
+A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
 
 ## Eigenschaften
 
 *   **FileKey**: der Name des Form-Elements. Wird standardmäßig auf `file` . (DOM-String und enthält)
 
-*   **<a href="../fileobj/fileobj.html">Datei</a>name**: der <a href="../fileobj/fileobj.html">Datei</a>name beim <a href="../../storage/storage.html">Speicher</a>n der <a href="../fileobj/fileobj.html">Datei</a> auf dem Server verwendet. Wird standardmäßig auf `image.jpg` . (DOM-String und enthält)
+*   **Dateiname**: der Dateiname beim Speichern der Datei auf dem Server verwendet. Wird standardmäßig auf `image.jpg` . (DOM-String und enthält)
 
 *   **MimeType**: den Mime-Typ der Daten hochzuladen. Wird standardmäßig auf `image/jpeg` . (DOM-String und enthält)
 
@@ -34,11 +34,11 @@ A `FileUploadOptions` Objekt übergeben werden kann, um die `<a href="../filetra
 
 *   **ChunkedMode**: ob die Daten in "Chunked" streaming-Modus hochladen. Wird standardmäßig auf `true` . (Boolean)
 
-*   **Header**: eine <a href="../../inappbrowser/inappbrowser.html">Karte</a> von Header-Name-Header-Werte. Verwenden Sie ein Array, um mehr als einen Wert anzugeben. (Objekt)
+*   **Header**: eine Karte von Header-Name-Header-Werte. Verwenden Sie ein Array, um mehr als einen Wert anzugeben. (Objekt)
 
 ## Beschreibung
 
-A `FileUploadOptions` Objekt übergeben werden kann, um die `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
+A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
 
 ## WP7 Quirk
 

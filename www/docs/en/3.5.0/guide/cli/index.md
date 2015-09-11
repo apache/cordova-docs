@@ -25,7 +25,7 @@ various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
 them on different platforms, and run on real devices or within
 emulators. The CLI is the main tool to use for the cross-platform
-workflow described in the <a href="../overview/index.html">Overview</a>.  Otherwise you can also use the
+workflow described in the Overview.  Otherwise you can also use the
 CLI to initialize project code, then switch to various platforms' SDKs
 and shell tools for continued development.
 
@@ -33,7 +33,7 @@ and shell tools for continued development.
 
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
-(See the <a href="../platforms/index.html">Platform Guides</a> for more details.)
+(See the Platform Guides for more details.)
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -54,7 +54,7 @@ _Accessories_.
 __NOTE__: For Windows-only platforms, you can still do your
 development on Mac hardware by running Windows in a virtual machine
 environment or in dual-boot mode. For available options, see the
-<a href="../platforms/wp8/index.html">Windows Phone Platform Guide</a> or the <a href="../platforms/win8/index.html">Windows 8 Platform Guide</a>.
+Windows Phone Platform Guide or the Windows 8 Platform Guide.
 
 The more likely it is that you run the CLI from different machines,
 the more it makes sense to maintain a remote source code repository,
@@ -210,7 +210,7 @@ If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
 from the `/platforms/` directory to develop with an SDK. This is because
 the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
-(See the <a href="../platforms/index.html">Platform Guides</a> for information on how to develop applications within each IDE.)
+(See the Platform Guides for information on how to develop applications within each IDE.)
 Use this approach if you simply want to initialize a project using the CLI and 
 then switch to an SDK for native work.
 
@@ -222,7 +222,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` event handler, referenced by
+be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
 
 Run the following command to iteratively build the project:
@@ -262,7 +262,7 @@ first associate a device with an emulator.
 
 __NOTE__: Emulator support is currently not available for Amazon Fire OS.
 
-(See the <a href="../platforms/index.html">Platform Guides</a> for details.)
+(See the Platform Guides for details.)
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
@@ -285,7 +285,7 @@ testing, following procedures that vary for each platform. In
 Android and Amazon Fire OS devices, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
-See <a href="../platforms/index.html">Platform Guides</a> for details on each platform's requirements.
+See Platform Guides for details on each platform's requirements.
 
 ## Add Plugin Features
 
@@ -298,10 +298,10 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See <a href="../hybrid/webviews/index.html">Embedding WebViews</a> and [Plugin Development
+native components. (See Embedding WebViews and [Plugin Development
 Guide](guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
-detailed in the <a href="../../index.html">API Reference</a>. A list of these plugins, including
+detailed in the API Reference. A list of these plugins, including
 additional third-party plugins provided by the community, can be found
 in the registry at
 [plugins.cordova.io](http://plugins.cordova.io/). You can use
@@ -325,7 +325,7 @@ use the CLI to add features to the app:
 
         $ cordova plugin add org.apache.cordova.device
 
-* Network Connection and Battery <a href="../../cordova/events/events.html">Events</a>:
+* Network Connection and Battery Events:
 
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
@@ -374,9 +374,9 @@ use the CLI to add features to the app:
 
 __NOTE__: The CLI adds plugin code as appropriate for each platform.
 If you want to develop with lower-level shell tools or platform SDKs
-as discussed in the <a href="../overview/index.html">Overview</a>, you need to run the Plugman utility to
+as discussed in the Overview, you need to run the Plugman utility to
 add plugins separately for each platform. (For more information, see
-<a href="../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>.)
+Using Plugman to Manage Plugins.)
 
 Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
 currently installed plugins. Each displays by its identifier:
@@ -475,7 +475,7 @@ You can also use `merges` to add files not present in the original
 `www` directory. For example, an app can incorporate a _back button_
 graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
-instead capture `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` events from the corresponding hardware
+instead capture `backbutton` events from the corresponding hardware
 button.
 
 ## Help Commands
@@ -521,7 +521,7 @@ described in this section. If you are updating from a version prior to
 3.0, you need to create a new project as described above, then copy
 the older application's assets into the top-level `www` directory.
 Where applicable, further details about upgrading to 3.0 are available
-in the <a href="../platforms/index.html">Platform Guides</a>.  Once you upgrade to the `cordova`
+in the Platform Guides.  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
 

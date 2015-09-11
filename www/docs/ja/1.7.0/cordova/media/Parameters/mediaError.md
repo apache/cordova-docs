@@ -30,4 +30,4 @@ mediaError
 パラメーター
 ----------
 
-- __error:__ デバイスから返されるエラーを表します (`<a href="../<a href="../media.html">Media</a>Error/mediaError.html"><a href="../media.html">Media</a>Error</a>`)
+- __error:__ デバイスから返されるエラーを表します (`MediaError`)

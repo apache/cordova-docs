@@ -28,12 +28,12 @@ Stop watching for changes to the device's location referenced by the `watchID` p
 Parameters
 ----------
 
-- __watchID:__ The id of the `watch<a href="Position/position.html">Position</a>` interval to clear. (String)
+- __watchID:__ The id of the `watchPosition` interval to clear. (String)
 
 Description
 -----------
 
-`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watch<a href="Position/position.html">Position</a>` referenced by `watchID`.
+`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
 
 Supported Platforms
 -------------------
@@ -45,46 +45,46 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Options: watch for changes in position, and use the most
     // accurate position acquisition method available.
     //
-    var watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
 
     // ...later on...
 
     navigator.geolocation.clearWatch(watchID);
 
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../device/device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
-        // onSuccess <a href="geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -102,7 +102,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             }
         }
     
-	    // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
+	    // onError Callback receives a PositionError object
 	    //
 	    function onError(error) {
 	      alert('code: '    + error.code    + '\n' +

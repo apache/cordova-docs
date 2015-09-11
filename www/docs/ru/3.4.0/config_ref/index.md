@@ -24,7 +24,7 @@ license: >
 
  [1]: http://www.w3.org/TR/widgets/
 
-Для проектов, созданных с использованием Cordova CLI (описанном в разделе <a href="../guide/cli/index.html">Интерфейс командной строки</a>) этот файл можно найти в директории верхнего уровня:
+Для проектов, созданных с использованием Cordova CLI (описанном в разделе Интерфейс командной строки) этот файл можно найти в директории верхнего уровня:
 
         app/config.xml
     
@@ -48,12 +48,12 @@ license: >
 
 ## Основные элементы конфигурации
 
-Этот пример показывает значения по умолчанию в файле `config.xml` сформированном командой CLI `create`, описанной в разделе <a href="../guide/cli/index.html">Интерфейс командной строки</a>:
+Этот пример показывает значения по умолчанию в файле `config.xml` сформированном командой CLI `create`, описанной в разделе Интерфейс командной строки:
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

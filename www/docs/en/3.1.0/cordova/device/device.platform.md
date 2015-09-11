@@ -33,7 +33,7 @@ Get the device's operating system name.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
     // Depending on the device, a few examples are:
     //   - "Android"
@@ -43,29 +43,29 @@ Get the device's operating system name.
     //   - "Tizen"
     var devicePlatform = device.platform;
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = '<a href="device.html">Device</a> Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                '<a href="device.html">Device</a> Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                '<a href="device.html">Device</a> Platform: ' + device.platform + '<br />' +
-                                '<a href="device.html">Device</a> UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                '<a href="device.html">Device</a> Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
 
         </script>
@@ -77,7 +77,7 @@ Get the device's operating system name.
 
 ## BlackBerry Quirks
 
-<a href="device.html">Device</a>s may return the device platform version number instead of the
+Devices may return the device platform version number instead of the
 platform name.  For example, the Storm2 9550 returns a value such as
 `2.13.0.95`.
 

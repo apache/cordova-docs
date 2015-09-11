@@ -43,7 +43,7 @@ license: >
 
 受信した `currencyCode` パラメーターをする必要があります、 `String` 、ISO 4217 通貨コードは、たとえば 'USD' のいずれかの。
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
 
 ## サポートされているプラットフォーム
 
@@ -84,7 +84,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

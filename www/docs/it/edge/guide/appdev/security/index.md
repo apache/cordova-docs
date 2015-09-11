@@ -30,7 +30,7 @@ La seguente guida include alcune procedure ottimali di protezione che è necessa
 *   Iframes e il meccanismo di Callback Id
 *   Certificato appuntare
 *   Certificati autofirmati
-*   <a href="../../../cordova/storage/storage.html">Archiviazione</a> crittografata
+*   Archiviazione crittografata
 *   Consigli generali
 *   Articoli consigliati e altre risorse
 
@@ -60,7 +60,7 @@ I principi qui descritti non sono specifici di Apache Cordova, si applicano a tu
 
 Durante l'esecuzione di Cordova su Android, utilizzando `android:debuggable="true"` nell'applicazione manifesto permetteranno Errori SSL come certificato errori di convalida catena su certificati autofirmati. Quindi è possibile utilizzare i certificati autofirmati in questa configurazione, ma questa non è una configurazione che deve essere utilizzata quando l'applicazione è in produzione. È pensato per essere usato solo durante lo sviluppo di applicazioni.
 
-## <a href="../../../cordova/storage/storage.html">Archiviazione</a> crittografata
+## Archiviazione crittografata
 
 (TBD)
 

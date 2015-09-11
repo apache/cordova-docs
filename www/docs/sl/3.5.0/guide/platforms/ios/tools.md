@@ -26,7 +26,7 @@ Na `cordova` pripomoček ukazne vrstice je na visoki ravni orodje, ki vam omogo�
 
 Ukazne vrstice orodja iOS so nadgrajevati lupine skripte in se zanašajo na Xcode orodja ukazne vrstice, kot `xcode-select` in`xcodebuild`.
 
-Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte <a href="../../../plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a>. Glejte Uporaba Plugins za pregled.
+Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte Uporaba Plugman za upravljanje Plugins. Glejte Uporaba Plugins za pregled.
 
 ## Ustvarjanje projekta
 

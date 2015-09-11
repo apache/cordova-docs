@@ -32,7 +32,7 @@ top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
 For information on the low-level command-line interface that enables
-plugins, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
+plugins, see Using Plugman to Manage Plugins. See Application Plugins
 for details on how to develop plugins.
 
 If you need help with any command listed below, type the command along

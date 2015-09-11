@@ -20,4 +20,4 @@ license: >
 
 # database_name
 
-<a href="../database/database.html">データベース</a>の名前。
+データベースの名前。

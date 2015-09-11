@@ -29,7 +29,7 @@ Gibt ein Array der Namen der Monate oder Tage der Woche, abhängig von dem Clien
 
 Gibt das Array von Namen der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt enthält eine `value` -Eigenschaft mit einer `Array` der `String` Werte. Die Namen von Array-Funktionen, entweder der erste Monat im Jahr oder der erste Tag der Woche, je nach der ausgewählten Option ab.
 
-Wenn es einen Fehler erhalten die Namen dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Wenn es einen Fehler erhalten die Namen dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
 
 Die `options` Parameter ist optional, und die Standardwerte sind:
 
@@ -67,7 +67,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, in diesem Beispi
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

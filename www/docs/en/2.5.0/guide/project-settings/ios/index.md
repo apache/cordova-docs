@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for iOS
+Project Settings for iOS
 ========================
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
@@ -32,23 +32,23 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 
 2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
 
-3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your location can be more accurate)
+3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate)
 
 4. **EnableViewportScale (boolean, defaults to false)** - set to true to prevent viewport scaling through a meta tag
 
 5. **AutoHideSplashScreen (boolean, defaults to true)** - set to false to control when the splashscreen is hidden through a JavaScript API
 
-6. **FadeSplashScreen (boolean, defaults to true)** - set to false to prevent the splash-screen to fade in and out when <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a>ing/hiding it.
+6. **FadeSplashScreen (boolean, defaults to true)** - set to false to prevent the splash-screen to fade in and out when showing/hiding it.
 
 7. **FadeSplashScreenDuration (float, defaults to 2)** - The splash-screen Fade duration in seconds.
 
-8. **ShowSplashScreenSpinner (boolean, defaults to true)** - set to false to <a href="../../../cordova/splashscreen/splashscreen.hide.html">hide</a> the splash-screen spinner
+8. **ShowSplashScreenSpinner (boolean, defaults to true)** - set to false to hide the splash-screen spinner
 
-9. **<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
+9. **MediaPlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
 
-10. **AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
+10. **AllowInlineMediaPlayback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
 
-11. **BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a> (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
+11. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
 
 12. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
 

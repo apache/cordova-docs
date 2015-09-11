@@ -64,7 +64,7 @@ Weitere Parameter:
 
 *   `--plugins_dir`standardmaessig `<project>/cordova/plugins` , aber kann jedes Verzeichnis ein Unterverzeichnis für jeden abgerufenen Plugin.
 *   `--www`der Standardwert ist des Projekts `www` Ordnerspeicherort, kann jedoch jedes Verzeichnis, das als Cordova Projekt Anwendung Web Vermögenswerte verwendet werden.
-*   `--variable`ermöglicht es, bestimmte Variablen zum Zeitpunkt der Installation notwendig für bestimmte Plugins, die die API-Schlüssel oder andere benutzerdefinierte, benutzerdefinierte Parameter angeben. Finden Sie die [<a href="spec.html">Plugin-Spezifikation</a>][4] für weitere Informationen.
+*   `--variable`ermöglicht es, bestimmte Variablen zum Zeitpunkt der Installation notwendig für bestimmte Plugins, die die API-Schlüssel oder andere benutzerdefinierte, benutzerdefinierte Parameter angeben. Finden Sie die [Plugin-Spezifikation][4] für weitere Informationen.
 
  [4]: plugin_spec.md
 

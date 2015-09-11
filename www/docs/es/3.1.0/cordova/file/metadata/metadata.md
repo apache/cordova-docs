@@ -28,7 +28,7 @@ Una interfaz que proporciona información sobre el estado de un archivo o direct
 
 ## Detalles
 
-El `Metadata` objeto representa la información sobre el estado de un archivo o directorio. Llamando a `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` o `<a href="../fileentry/fileentry.html">FileEntry</a>` del objeto `getMetadata()` método da como resultado un `Metadata` instancia.
+El `Metadata` objeto representa la información sobre el estado de un archivo o directorio. Llamando a `DirectoryEntry` o `FileEntry` del objeto `getMetadata()` método da como resultado un `Metadata` instancia.
 
 ## Plataformas soportadas
 

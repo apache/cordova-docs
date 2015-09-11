@@ -29,7 +29,7 @@ license: >
 
 番号の書式設定された文字列を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが必要な `value` を持つプロパティ、 `String` 値。
 
-番号、書式設定エラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+番号、書式設定エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>numberToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

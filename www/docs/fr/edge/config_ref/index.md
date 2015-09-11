@@ -42,7 +42,7 @@ Cette section décrit en détail les options de configuration globale et multi-p
 
 *   Configuration iOS
 *   Configuration Android
-*   <a href="../guide/platforms/blackberry/config.html">Configuration de blackBerry</a> 10
+*   Configuration de blackBerry 10
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.
 
@@ -53,7 +53,7 @@ Cet exemple affiche la valeur par défaut `config.xml` généré par le CLI `cre
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -184,6 +184,6 @@ Lorsque vous utilisez l'interface CLI pour créer des applications, il est parfo
 
 ## Le *hook* élément
 
-Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir <a href="../guide/appdev/hooks/index.html">Guide de crochets</a> pour plus d'informations.
+Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir Guide de crochets pour plus d'informations.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

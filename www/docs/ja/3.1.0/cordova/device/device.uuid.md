@@ -20,7 +20,7 @@ license: >
 
 # device.uuid
 
-<a href="device.html">デバイス</a>のユニバーサル ・ ユニーク識別子 ([UUID][1]を取得します。).
+デバイスのユニバーサル ・ ユニーク識別子 ([UUID][1]を取得します。).
 
  [1]: http://en.wikipedia.org/wiki/Universally_Unique_Identifier
 
@@ -29,7 +29,7 @@ license: >
 
 ## 説明
 
-UUID を生成する方法の詳細は、<a href="device.html">デバイス</a>の製造元によって決定され、<a href="device.html">デバイス</a>のプラットフォームやモデルに固有です。
+UUID を生成する方法の詳細は、デバイスの製造元によって決定され、デバイスのプラットフォームやモデルに固有です。
 
 ## サポートされているプラットフォーム
 
@@ -42,9 +42,9 @@ UUID を生成する方法の詳細は、<a href="device.html">デバイス</a>�
 
 ## 簡単な例
 
-    //アンドロイド: ランダムな 64 ビットの整数 (を文字列として返します、再び ！）/<a href="device.html">デバイス</a>の最初の起動時に生成される整数/////ブラックベリー: <a href="device.html">デバイス</a>のピン番号を返します//これは 9 桁の一意な整数 (を文字列としても ！)////iPhone: (UIDevice クラスのドキュメントから言い換え）//識別複数のハードウェアから作成されたハッシュ値の文字列を返します。。
-    //それはすべての<a href="device.html">デバイス</a>に対して一意であることが保証され、<a href="../connection/connection.html">接続</a>することはできません//ユーザー アカウント。
-    //Windows Phone 7: <a href="device.html">デバイス</a> + 現在のユーザーのハッシュを返します//ユーザーが定義されていない場合 guid が生成され、アプリがアンインストールされるまで保持されます//Tizen: <a href="device.html">デバイス</a>の IMEI を返します （国際モバイル機器アイデンティティまたは IMEI は番号です//すべての GSM および UMTS の携帯電話に固有です。
+    //アンドロイド: ランダムな 64 ビットの整数 (を文字列として返します、再び ！）/デバイスの最初の起動時に生成される整数/////ブラックベリー: デバイスのピン番号を返します//これは 9 桁の一意な整数 (を文字列としても ！)////iPhone: (UIDevice クラスのドキュメントから言い換え）//識別複数のハードウェアから作成されたハッシュ値の文字列を返します。。
+    //それはすべてのデバイスに対して一意であることが保証され、接続することはできません//ユーザー アカウント。
+    //Windows Phone 7: デバイス + 現在のユーザーのハッシュを返します//ユーザーが定義されていない場合 guid が生成され、アプリがアンインストールされるまで保持されます//Tizen: デバイスの IMEI を返します （国際モバイル機器アイデンティティまたは IMEI は番号です//すべての GSM および UMTS の携帯電話に固有です。
     var deviceID = device.uuid;
     
 
@@ -53,24 +53,24 @@ UUID を生成する方法の詳細は、<a href="device.html">デバイス</a>�
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
                                 'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -83,8 +83,8 @@ UUID を生成する方法の詳細は、<a href="device.html">デバイス</a>�
 
 ## iOS の気まぐれ
 
-`uuid`IOS で、<a href="device.html">デバイス</a>に固有はありませんインストールごと、アプリケーションごとに異なります。 削除、アプリを再インストールした場合に変更とおそらくもとき、iOS をアップグレードまたはもアップグレードするアプリ (iOS の 5.1 で明らかに） バージョンごと。 `uuid`は信頼性の高い値ではありません。
+`uuid`IOS で、デバイスに固有はありませんインストールごと、アプリケーションごとに異なります。 削除、アプリを再インストールした場合に変更とおそらくもとき、iOS をアップグレードまたはもアップグレードするアプリ (iOS の 5.1 で明らかに） バージョンごと。 `uuid`は信頼性の高い値ではありません。
 
 ## Windows Phone 7 と 8 癖
 
-`uuid`のために Windows Phone 7 には、権限が必要です `ID_CAP_IDENTITY_DEVICE` 。 Microsoft はすぐにこのプロパティを廃止して可能性があります。 機能が利用できない場合、アプリケーションは<a href="device.html">デバイス</a>へのアプリケーションのインストールの持続期間のために保持されている永続的な guid を生成します。
+`uuid`のために Windows Phone 7 には、権限が必要です `ID_CAP_IDENTITY_DEVICE` 。 Microsoft はすぐにこのプロパティを廃止して可能性があります。 機能が利用できない場合、アプリケーションはデバイスへのアプリケーションのインストールの持続期間のために保持されている永続的な guid を生成します。

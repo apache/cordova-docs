@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>List
+SQLResultSetList
 =======
 
-One of the properties of the <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a> containing the rows returned from a SQL query.
+One of the properties of the SQLResultSet containing the rows returned from a SQL query.
 
 Properties
 -------
@@ -36,7 +36,7 @@ Methods
 Details
 -------
 
-The <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>List contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
+The SQLResultSetList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
+Execute SQL Quick Example
 ------------------
 
 	function queryDB(tx) {
@@ -64,23 +64,23 @@ Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
 		alert("Error processing SQL: "+err.code);
 	}
 	
-	var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
-Full <a href="../storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../../contacts/Contact/contact.html">Contact</a> <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
 		// Populate the database 
 		//
@@ -116,21 +116,21 @@ Full <a href="../storage.opendatabase.html">Example</a>
 		// Transaction success callback
 		//
 		function successCB() {
-			var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 			db.transaction(queryDB, errorCB);
 		}
 
 		// Cordova is ready
 		//
-		function on<a href="../../device/device.html">Device</a>Ready() {
-			var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+		function onDeviceReady() {
+			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
 	
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
-        <p><a href="../database/database.html">Database</a></p>
+        <h1>Example</h1>
+        <p>Database</p>
       </body>
     </html>

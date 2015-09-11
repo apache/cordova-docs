@@ -49,14 +49,14 @@ La meilleure façon de mettre en place une application doit exécuter le `cordov
 
 *   Dans le scénario de base, vous pouvez utiliser l'interface CLI simplement pour créer un nouveau projet qui est rempli avec la configuration par défaut pour modifier.
 
-*   Pour de nombreuses plateformes mobiles, vous pouvez également utiliser la CLI de mettre en place les fichiers de projet supplémentaire requis pour compiler dans chaque kit de développement logiciel. Pour ce faire, vous devez installer SDK chaque ciblée de la plate-forme. (Voir les <a href="../platforms/index.html"><a href="../../index.html">Guides</a> de la plate-forme</a> pour obtenir des instructions.) Comme indiqué dans le tableau de la plateforme de Support ci-dessous, vous devrez peut-être exécuter la CLI sur différents systèmes d'exploitation selon la plateforme ciblée.
+*   Pour de nombreuses plateformes mobiles, vous pouvez également utiliser la CLI de mettre en place les fichiers de projet supplémentaire requis pour compiler dans chaque kit de développement logiciel. Pour ce faire, vous devez installer SDK chaque ciblée de la plate-forme. (Voir les Guides de la plate-forme pour obtenir des instructions.) Comme indiqué dans le tableau de la plateforme de Support ci-dessous, vous devrez peut-être exécuter la CLI sur différents systèmes d'exploitation selon la plateforme ciblée.
 
 *   Pour les plateformes, la CLI peut compiler les applications et de les exécuter dans un émulateur de périphérique SDK. <!--XRÉF XRÉF (Voir Application Development Guide pour les détails.)--> pour le test complet, vous pouvez également générer des fichiers d'application et les installer directement sur un périphérique.
 
-À tout moment dans le cycle de développement, vous pouvez également compter sur les outils spécifiques à la plate-forme SDK, qui peuvent offrir un ensemble plus large d'options. (Voir les <a href="../platforms/index.html"><a href="../../index.html">Guides</a> de la plate-forme</a> pour plus d'informations sur l'outil du SDK de la plate-forme chaque jeu). Un environnement SDK est plus approprié si vous voulez implémenter une application hybride qui mêle des composants d'applications web et natives. <!--XRÉF XRÉF (Voir Hybride Guide d'Application pour plus d'informations.)--> vous pouvez utiliser l'utilitaire de ligne de commande pour générer initialement l'app, ou de manière itérative par la suite pour nourrir code mis à jour pour les outils du kit de développement logiciel. Vous pouvez également créer fichier de configuration de l'application vous-même. 
+À tout moment dans le cycle de développement, vous pouvez également compter sur les outils spécifiques à la plate-forme SDK, qui peuvent offrir un ensemble plus large d'options. (Voir les Guides de la plate-forme pour plus d'informations sur l'outil du SDK de la plate-forme chaque jeu). Un environnement SDK est plus approprié si vous voulez implémenter une application hybride qui mêle des composants d'applications web et natives. <!--XRÉF XRÉF (Voir Hybride Guide d'Application pour plus d'informations.)--> vous pouvez utiliser l'utilitaire de ligne de commande pour générer initialement l'app, ou de manière itérative par la suite pour nourrir code mis à jour pour les outils du kit de développement logiciel. Vous pouvez également créer fichier de configuration de l'application vous-même. 
 
 <!-- XREF
-(See The config.xml <a href="../../cordova/file/fileobj/fileobj.html">File</a> for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF
@@ -223,7 +223,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/accelerometer.html">Accéléromètre</a></a>
+          <a href="cordova_accelerometer_accelerometer.md.html">Accéléromètre</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -253,7 +253,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html"><a href="../../cordova/device/device.html">Appareil</a> photo</a>
+          <a href="cordova_camera_camera.md.html">Appareil photo</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -283,7 +283,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Capture</a></a>
+          <a href="cordova_media_capture_capture.md.html">Capture</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +313,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Boussole</a></a>
+          <a href="cordova_compass_compass.md.html">Boussole</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +344,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Connexion</a></a>
+          <a href="cordova_connection_connection.md.html">Connexion</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +374,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/Contact/contact.html">Contact</a>s</a>
+          <a href="cordova_contacts_contacts.md.html">Contacts</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +526,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Mondialisation</a></a>
+          <a href="cordova_globalization_globalization.md.html">Mondialisation</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +556,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +586,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Media</a></a>
+          <a href="cordova_media_media.md.html">Media</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +616,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Notification</a></a>
+          <a href="cordova_notification_notification.md.html">Notification</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +646,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">SplashScreen</a></a>
+          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +676,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Stockage</a></a>
+          <a href="cordova_storage_storage.md.html">Stockage</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -692,11 +692,11 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         </td>
         
         <td data-col="winphone7"  class="p">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> seulement
+          localStorage seulement
         </td>
         
         <td data-col="winphone8"  class="p">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> seulement
+          localStorage seulement
         </td>
         
         <td data-col="win8"       class="y">

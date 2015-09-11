@@ -37,61 +37,61 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    function check<a href="connection.html">Connection</a>() {
+    function checkConnection() {
         var networkState = navigator.network.connection.type;
         
         var states = {};
-        states[<a href="connection.html">Connection</a>.UNKNOWN]	= 'Unknown connection';
-        states[<a href="connection.html">Connection</a>.ETHERNET]	= 'Ethernet connection';
-        states[<a href="connection.html">Connection</a>.WIFI]   	= 'WiFi connection';
-        states[<a href="connection.html">Connection</a>.CELL_2G]	= 'Cell 2G connection';
-        states[<a href="connection.html">Connection</a>.CELL_3G]	= 'Cell 3G connection';
-        states[<a href="connection.html">Connection</a>.CELL_4G]	= 'Cell 4G connection';
-        states[<a href="connection.html">Connection</a>.NONE]   	= 'No network connection';
+        states[Connection.UNKNOWN]	= 'Unknown connection';
+        states[Connection.ETHERNET]	= 'Ethernet connection';
+        states[Connection.WIFI]   	= 'WiFi connection';
+        states[Connection.CELL_2G]	= 'Cell 2G connection';
+        states[Connection.CELL_3G]	= 'Cell 3G connection';
+        states[Connection.CELL_4G]	= 'Cell 4G connection';
+        states[Connection.NONE]   	= 'No network connection';
     
-        alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
+        alert('Connection type: ' + states[networkState]);
     }
     
-    check<a href="connection.html">Connection</a>();
+    checkConnection();
 
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.network.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.network.connection.type Example</title>
         
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
             
         // Wait for Cordova to load
         // 
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
         
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            check<a href="connection.html">Connection</a>();
+        function onDeviceReady() {
+            checkConnection();
         }
         
-	    function check<a href="connection.html">Connection</a>() {
+	    function checkConnection() {
 	        var networkState = navigator.network.connection.type;
 
 	        var states = {};
-	        states[<a href="connection.html">Connection</a>.UNKNOWN]	= 'Unknown connection';
-	        states[<a href="connection.html">Connection</a>.ETHERNET]	= 'Ethernet connection';
-	        states[<a href="connection.html">Connection</a>.WIFI]   	= 'WiFi connection';
-	        states[<a href="connection.html">Connection</a>.CELL_2G]	= 'Cell 2G connection';
-	        states[<a href="connection.html">Connection</a>.CELL_3G]	= 'Cell 3G connection';
-	        states[<a href="connection.html">Connection</a>.CELL_4G]	= 'Cell 4G connection';
-	        states[<a href="connection.html">Connection</a>.NONE]   	= 'No network connection';
+	        states[Connection.UNKNOWN]	= 'Unknown connection';
+	        states[Connection.ETHERNET]	= 'Ethernet connection';
+	        states[Connection.WIFI]   	= 'WiFi connection';
+	        states[Connection.CELL_2G]	= 'Cell 2G connection';
+	        states[Connection.CELL_3G]	= 'Cell 3G connection';
+	        states[Connection.CELL_4G]	= 'Cell 4G connection';
+	        states[Connection.NONE]   	= 'No network connection';
 
-	        alert('<a href="connection.html">Connection</a> type: ' + states[networkState]);
+	        alert('Connection type: ' + states[networkState]);
 	    }
         
         </script>

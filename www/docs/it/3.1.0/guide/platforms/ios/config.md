@@ -20,21 +20,21 @@ license: >
 
 # iOS Configuration
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. Vedere il file config. XML <a href="../../../cordova/file/fileobj/fileobj.html">File</a> per informazioni sulle opzioni di configurazione globale.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
 *   `EnableViewportScale`(boolean, impostazioni predefinite a `false` ): impostare su `true` utilizzare un metatag viewport per disabilitare oppure limitare l'intervallo di ridimensionamento dell'utente.
     
         <preference name="EnableViewportScale" value="true"/>
         
 
-*   `<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction`(boolean, impostazioni predefinite a `false` ): impostata su `true` per impedire che HTML5 video giocare automaticamente con il `autoplay` attributo. Non si applica quando si chiama `play()` su un oggetto video.
+*   `MediaPlaybackRequiresUserAction`(boolean, impostazioni predefinite a `false` ): impostata su `true` per impedire che HTML5 video giocare automaticamente con il `autoplay` attributo. Non si applica quando si chiama `play()` su un oggetto video.
     
-        <preference name="<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction" value="true"/>
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback`(boolean, impostazioni predefinite a `false` ): impostare su `true` per consentire la riproduzione multimediale di HTML5 apparire *in linea* all'interno del layout di schermo, utilizzando il browser fornito controlli piuttosto che controlli nativi. Per questo lavoro, aggiungere il `webkit-playsinline` attribuire a qualsiasi `<video>` elementi.
+*   `AllowInlineMediaPlayback`(boolean, impostazioni predefinite a `false` ): impostare su `true` per consentire la riproduzione multimediale di HTML5 apparire *in linea* all'interno del layout di schermo, utilizzando il browser fornito controlli piuttosto che controlli nativi. Per questo lavoro, aggiungere il `webkit-playsinline` attribuire a qualsiasi `<video>` elementi.
     
-        <preference name="AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback" value="true"/>
+        <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
 *   `BackupWebStorage`(stringa, o `none` , `local` , o il default `cloud` ): impostata su `cloud` per consentire l'archiviazione web dati backup tramite iCloud. Impostare `local` per consentire solo i backup locali tramite iTunes sync. Impostare `none` prevenire i backup di archiviazione web.

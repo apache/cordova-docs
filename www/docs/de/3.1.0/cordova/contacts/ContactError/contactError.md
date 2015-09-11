@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` -Objekt übergeben, um die `<a href="../parameters/contactError.html">contactError</a>` Rückruf, wenn ein Fehler auftritt.
+A `ContactError` -Objekt übergeben, um die `contactError` Rückruf, wenn ein Fehler auftritt.
 
 ## Eigenschaften
 
@@ -38,4 +38,4 @@ A `ContactError` -Objekt übergeben, um die `<a href="../parameters/contactError
 
 ## Beschreibung
 
-Das `ContactError` -Objekt wird zurückgegeben, die der Benutzer über die `<a href="../parameters/contactError.html">contactError</a>` Callback-Funktion, wenn ein Fehler auftritt.
+Das `ContactError` -Objekt wird zurückgegeben, die der Benutzer über die `contactError` Callback-Funktion, wenn ein Fehler auftritt.

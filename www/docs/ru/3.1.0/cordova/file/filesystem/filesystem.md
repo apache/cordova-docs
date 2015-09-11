@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">Файл</a>овая система
+# Файловая система
 
 Этот объект представляет файловую систему.
 
@@ -26,11 +26,11 @@ license: >
 
 *   **имя**: имя файловой системы. *(DOMString)*
 
-*   **корень**: корневой каталог в файловой системе. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **корень**: корневой каталог в файловой системе. *(DirectoryEntry)*
 
 ## Подробная информация
 
-`FileSystem`Объект представляет сведения о файловой системе. Имя файловой системы является уникальным через список открытых файловых систем. Свойство root содержит `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` объект, представляющий корневой каталог в файловой системе.
+`FileSystem`Объект представляет сведения о файловой системе. Имя файловой системы является уникальным через список открытых файловых систем. Свойство root содержит `DirectoryEntry` объект, представляющий корневой каталог в файловой системе.
 
 ## Поддерживаемые платформы
 
@@ -48,7 +48,7 @@ license: >
     }
     
     // request the persistent file system
-    window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, null);
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
     
 
 ## Полный пример
@@ -56,19 +56,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File System Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
     
         function onFileSystemSuccess(fileSystem) {
@@ -83,7 +83,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>File System</p>
       </body>
     </html>

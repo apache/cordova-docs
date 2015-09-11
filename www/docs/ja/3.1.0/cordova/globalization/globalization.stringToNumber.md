@@ -29,7 +29,7 @@ license: >
 
 番号を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。そのオブジェクトが必要な `value` を持つプロパティ、 `Number` 値。
 
-数値文字列の解析エラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+数値文字列の解析エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PARSING\_ERROR`.
 
 `options`パラメーターはオプションであり、次の値を既定値します。
 
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToNumber Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

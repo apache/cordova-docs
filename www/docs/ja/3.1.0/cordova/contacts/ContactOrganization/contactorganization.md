@@ -32,11 +32,11 @@ license: >
 
 *   **部門**: 契約に勤めている部門。*（，）*
 
-*   **タイトル**: 組織の<a href="../parameters/contactFields.html">連絡先</a>のタイトル。*（，）*
+*   **タイトル**: 組織の連絡先のタイトル。*（，）*
 
 ## 詳細
 
-`ContactOrganization`オブジェクトは、<a href="../parameters/contactFields.html">連絡先</a>の組織のプロパティを格納します。A `Contact` 1 つまたは複数のオブジェクトに格納されます `ContactOrganization` 配列内のオブジェクト。
+`ContactOrganization`オブジェクトは、連絡先の組織のプロパティを格納します。A `Contact` 1 つまたは複数のオブジェクトに格納されます `ContactOrganization` 配列内のオブジェクト。
 
 ## サポートされているプラットフォーム
 
@@ -60,14 +60,14 @@ license: >
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
-    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## 完全な例
@@ -75,22 +75,22 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -124,13 +124,13 @@ license: >
 
 ## アンドロイド 2.X 癖
 
-*   **県**: 返す 2.X の Android <a href="../../device/device.html">デバイス</a>でサポートされていません`false`.
+*   **県**: 返す 2.X の Android デバイスでサポートされていません`false`.
 
 ## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
 
-*   **県**： 戻る、BlackBerry <a href="../../device/device.html">デバイス</a>でサポートされていません`false`.
+*   **県**： 戻る、BlackBerry デバイスでサポートされていません`false`.
 
-*   **タイプ**： 戻る、BlackBerry <a href="../../device/device.html">デバイス</a>でサポートされていません`null`.
+*   **タイプ**： 戻る、BlackBerry デバイスでサポートされていません`null`.
 
 *   **名前**： 部分的にサポートされます。最初の組織名は、**会社**のブラックベリーのフィールドに格納されます。
 
@@ -140,9 +140,9 @@ license: >
 
 ## iOS の癖
 
-*   **県**: 戻る iOS <a href="../../device/device.html">デバイス</a>でサポートされていません`false`.
+*   **県**: 戻る iOS デバイスでサポートされていません`false`.
 
-*   **タイプ**： 戻る iOS <a href="../../device/device.html">デバイス</a>でサポートされていません`null`.
+*   **タイプ**： 戻る iOS デバイスでサポートされていません`null`.
 
 *   **名前**： 部分的にサポートされます。最初の組織名は、iOS **kABPersonOrganizationProperty**フィールドに格納されます。
 

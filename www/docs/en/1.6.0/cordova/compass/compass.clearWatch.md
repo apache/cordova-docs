@@ -25,7 +25,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: The ID returned by `<a href="compass.watchHeading.html">compass.watchHeading</a>`.
+- __watchID__: The ID returned by `compass.watchHeading`.
 
 Supported Platforms
 -------------------
@@ -34,22 +34,22 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango ) if available in hardware
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
+    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
     
     // ... later on ...
     
     navigator.compass.clearWatch(watchID);
     
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,11 +59,11 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             startWatch();
         }
 
@@ -74,7 +74,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
             
-            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
+            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
         }
         
         // Stop watching the compass
@@ -95,8 +95,8 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
 
 

@@ -20,13 +20,13 @@ license: >
 
 # iOS Platform Guide
 
-Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für iOS-<a href="../../../cordova/device/device.html">Gerät</a>e wie iPhone und iPad bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
+Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für iOS-Geräte wie iPhone und iPad bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="config.html">iOS Konfiguration</a>
-*   <a href="upgrading.html">IOS Upgrade</a>
-*   <a href="webview.html">iOS Webansichten für</a>
-*   <a href="plugin.html">iOS Plugins</a>
-*   <a href="tools.html">iOS-Befehlszeilenprogrammen</a>
+*   iOS Konfiguration
+*   IOS Upgrade
+*   iOS Webansichten für
+*   iOS Plugins
+*   iOS-Befehlszeilenprogrammen
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -34,7 +34,7 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
 
 Apple ® Werkzeuge zum Erstellen von iOS-Anwendungen, die nur auf das Betriebssystem OS X auf Intel-basierten Macs ausgeführt. Xcode ® 4.5 (die erforderliche Mindestversion) läuft nur unter OS X Version 10.7 (Lion) oder größer, und umfasst das iOS 6 SDK (Software Development Kit). Einreichen von apps, die Apple-App-Store℠ erfordert die neuesten Versionen der Apple-Tools.
 
-Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes <a href="../../../cordova/device/device.html">Gerät</a> vollständig testen aller <a href="../../../cordova/device/device.html">Gerät</a>efunktionen die app vor der Einreichung zum App-<a href="../../../cordova/storage/storage.html">Speicher</a>. Das <a href="../../../cordova/device/device.html">Gerät</a> muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende <a href="../../../cordova/device/device.html">Gerät</a>en gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem <a href="../../../cordova/device/device.html">Gerät</a> zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
+Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das Gerät muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -61,7 +61,7 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The 
         $ cordova prepare              # or "cordova build"
     
 
-Einmal erstellt, können Sie es innerhalb von Xcode öffnen. Doppelklicken Sie zum Öffnen der `hello/platforms/ios/hello.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Der Bildschirm sollte wie folgt aussehen:
+Einmal erstellt, können Sie es innerhalb von Xcode öffnen. Doppelklicken Sie zum Öffnen der `hello/platforms/ios/hello.xcodeproj` Datei. Der Bildschirm sollte wie folgt aussehen:
 
 ![][4]
 
@@ -71,11 +71,11 @@ Einmal erstellt, können Sie es innerhalb von Xcode öffnen. Doppelklicken Sie z
 
 Die app in der iOS-Emulator Vorschau:
 
-1.  Stellen Sie sicher, dass die *.xcodeproj* -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> im linken Bereich ausgewählt ist.
+1.  Stellen Sie sicher, dass die *.xcodeproj* -Datei im linken Bereich ausgewählt ist.
 
 2.  Wählen Sie die **Hallo** -app im Bereich sofort nach rechts.
 
-3.  Wählen Sie das gewünschte <a href="../../../cordova/device/device.html">Gerät</a> " **Schema** " der Symbolleiste, wie das iPhone hervorgehoben 6.0 Simulator als hier:
+3.  Wählen Sie das gewünschte Gerät " **Schema** " der Symbolleiste, wie das iPhone hervorgehoben 6.0 Simulator als hier:
     
     ![][5]
 
@@ -90,9 +90,9 @@ Die app in der iOS-Emulator Vorschau:
 
 Xcode kommt zusammengerollt mit Emulatoren für die neuesten Versionen von iPhone und iPad. Ältere Versionen möglicherweise zur Verfügung, aus der **Xcode → Einstellungen → Downloads → Komponenten** Panel.
 
-## Bereitstellung auf <a href="../../../cordova/device/device.html">Gerät</a>
+## Bereitstellung auf Gerät
 
-Ausführliche Informationen zu unterschiedlichen Anforderungen an ein <a href="../../../cordova/device/device.html">Gerät</a> bereitstellen finden Sie im Abschnitt " *Konfigurieren von Entwicklung und Vertrieb Vermögenswerte* " Apples [Tools Workflow Guide für iOS][7]. Kurz gesagt, müssen Sie vor der Bereitstellung Folgendes:
+Ausführliche Informationen zu unterschiedlichen Anforderungen an ein Gerät bereitstellen finden Sie im Abschnitt " *Konfigurieren von Entwicklung und Vertrieb Vermögenswerte* " Apples [Tools Workflow Guide für iOS][7]. Kurz gesagt, müssen Sie vor der Bereitstellung Folgendes:
 
  [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
@@ -104,15 +104,15 @@ Ausführliche Informationen zu unterschiedlichen Anforderungen an ein <a href=".
 
  [8]: https://developer.apple.com/ios/manage/overview/index.action
 
-Für das <a href="../../../cordova/device/device.html">Gerät</a> bereitstellen:
+Für das Gerät bereitstellen:
 
-1.  Verwenden Sie das USB-Kabel, um das <a href="../../../cordova/device/device.html">Gerät</a> an Ihren Mac anschließen
+1.  Verwenden Sie das USB-Kabel, um das Gerät an Ihren Mac anschließen
 
 2.  Wählen Sie den Namen des Projekts in das Xcode-Fenster **Schema** Dropdown Liste.
 
-3.  Wählen Sie Ihr <a href="../../../cordova/device/device.html">Gerät</a> aus der Dropdownliste **<a href="../../../cordova/device/device.html">Gerät</a>** . Wenn es über USB angeschlossen ist, aber immer noch nicht angezeigt, drücken Sie die Schaltfläche " **Organizer** ", um Fehler zu beheben.
+3.  Wählen Sie Ihr Gerät aus der Dropdownliste **Gerät** . Wenn es über USB angeschlossen ist, aber immer noch nicht angezeigt, drücken Sie die Schaltfläche " **Organizer** ", um Fehler zu beheben.
 
-4.  Drücken Sie die Schaltfläche **Ausführen** , erstellen, bereitstellen und führen Sie die Anwendung auf Ihrem <a href="../../../cordova/device/device.html">Gerät</a>.
+4.  Drücken Sie die Schaltfläche **Ausführen** , erstellen, bereitstellen und führen Sie die Anwendung auf Ihrem Gerät.
 
 ## Häufige Probleme
 
@@ -120,14 +120,14 @@ Für das <a href="../../../cordova/device/device.html">Gerät</a> bereitstellen:
 
 Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die eine Anwendung über einen benutzerdefinierten URL startet. Obwohl der Mechanismus zum Laden aus einer benutzerdefinierten URL geändert hat, ist dieser Code noch rückwärts Funktionalität für Anwendungen, die mit älteren Versionen von Cordova erstellt. Die Beispielanwendung wird diese Funktionalität nicht verwendet, können diese Warnungen ignoriert werden. Um diese Warnungen angezeigt zu vermeiden, entfernen Sie den Code, der die veraltete InvokeString API verweist:
 
-*   Bearbeiten Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> *Classes/MainViewController.m* , umgeben von den folgenden Codeblock mit `/*` und `*/` Kommentare wie folgt, dann geben Sie **Befehl-s** , um die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zu speichern:
+*   Bearbeiten Sie die Datei *Classes/MainViewController.m* , umgeben von den folgenden Codeblock mit `/*` und `*/` Kommentare wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
     
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -140,7 +140,7 @@ Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die
         }
         
 
-*   Bearbeiten Sie die *Classes/AppViewDelegate.m* -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, kommentieren Sie die folgende Zeile durch einen doppelten Schrägstrich einfügen, wie folgt, dann geben Sie **Befehl-s** , um die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zu speichern:
+*   Bearbeiten Sie die *Classes/AppViewDelegate.m* -Datei, kommentieren Sie die folgende Zeile durch einen doppelten Schrägstrich einfügen, wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
     
         //self.viewController.invokeString = invokeString;
         
@@ -151,7 +151,7 @@ Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die
 
 **Fehlende Header**: Kompilierungsfehler im Zusammenhang mit fehlenden Header werden durch Probleme mit den Buildspeicherort und kann über Xcode-Einstellungen festgelegt werden:
 
-1.  **Xcode → Einstellungen → <a href="../../../cordova/storage/storage.html">Speicher</a>orte** auswählen.
+1.  **Xcode → Einstellungen → Speicherorte** auswählen.
 
 2.  Drücken Sie im Abschnitt **Abgeleitete Daten** die Schaltfläche " **erweitert** " und wählen Sie **Unique** als den **Buildspeicherort** , wie hier gezeigt:
     

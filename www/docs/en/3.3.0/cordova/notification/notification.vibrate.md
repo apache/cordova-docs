@@ -34,36 +34,36 @@ Vibrates the device for the specified amount of time.
 - iOS
 - Windows Phone 7 and 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     // Vibrate for 2.5 seconds
     //
     navigator.notification.vibrate(2500);
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
 
         // Show a custom alert
         //
-        function <a href="../inappbrowser/inappbrowser.html">show</a>Alert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+        function showAlert() {
+            navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -73,7 +73,7 @@ Vibrates the device for the specified amount of time.
         // Beep three times
         //
         function playBeep() {
-            navigator.<a href="notification.beep.html">notification.beep</a>(3);
+            navigator.notification.beep(3);
         }
 
         // Vibrate for 2 seconds
@@ -85,7 +85,7 @@ Vibrates the device for the specified amount of time.
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Alert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>

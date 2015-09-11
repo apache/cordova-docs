@@ -49,8 +49,8 @@ application's project's `config.xml` file, using the `plugin.xml` file
 to inject this markup automatically, as described in Application
 Plugins:
 
-        <feature name="Local<a href="../../../cordova/storage/storage.html">Storage</a>">
-            <param name="ios-package" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
         </feature>
 
 The feature's `name` attribute should match what you specify as the
@@ -203,7 +203,7 @@ success callback is called, it passes in the `echo` parameter.
 ## iOS Integration
 
 The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `<a href="../../../cordova/events/events.pause.html">pause</a>`, `<a href="../../../cordova/events/events.resume.html">resume</a>`, app
+override.  For example, you can capture the `pause`, `resume`, app
 terminate and `handleOpenURL` events. See the
 [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 and
@@ -229,7 +229,7 @@ example:
             }];
         }
 
-## <a href="../../next/index.html">Debugging</a> iOS Plugins
+## Debugging iOS Plugins
 
 To debug on the Objective-C side, you need Xcode's built-in debugger.
 For JavaScript, on iOS 5.0 or greater you can use [Weinre, an Apache Cordova
@@ -243,5 +243,5 @@ can attach Safari 8.0 to the app running within the iOS 8 Simulator.
   forget, an error is logged in the Xcode console.
 
 - Don't forget to add any hosts you connect to in the whitelist, as
-  described in Domain <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>. If you forget, an error is
+  described in Domain Whitelist Guide. If you forget, an error is
   logged in the Xcode console.

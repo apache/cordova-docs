@@ -77,14 +77,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Prompt Dialog Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -121,4 +121,4 @@ license: >
 
 *   Android は最大 3 つのボタンをサポートしているし、それ以上無視します。
 
-*   アンドロイド 3.0 と後、ホロのテーマを使用する<a href="../device/device.html">デバイス</a>を逆の順序でボタンが表示されます。
+*   アンドロイド 3.0 と後、ホロのテーマを使用するデバイスを逆の順序でボタンが表示されます。

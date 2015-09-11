@@ -24,7 +24,7 @@ license: >
 
  [1]: http://www.w3.org/TR/widgets/
 
-コルドバ CLI (<a href="../guide/cli/index.html">コマンド ライン インターフェイス</a>で説明します) で作成されたプロジェクトのトップレベル ディレクトリにこのファイルを検出することができます。
+コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクトのトップレベル ディレクトリにこのファイルを検出することができます。
 
         app/config.xml
     
@@ -40,20 +40,20 @@ license: >
 
 このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
-*   <a href="../guide/platforms/ios/config.html">iOS 構成</a>
-*   <a href="../guide/platforms/android/config.html">Android の構成</a>
-*   <a href="../guide/platforms/blackberry10/config.html">ブラックベリー 10 構成</a>
+*   iOS 構成
+*   Android の構成
+*   ブラックベリー 10 構成
 
-以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、<a href="images.html">アイコンとスプラッシュ画面</a>を参照してください。
+以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、アイコンとスプラッシュ画面を参照してください。
 
 ## コア構成要素
 
-この例では、既定の `config.xml` は CLI によって生成される `create` コマンドは、<a href="../guide/cli/index.html">コマンド ライン インターフェイス</a>で記述されています。
+この例では、既定の `config.xml` は CLI によって生成される `create` コマンドは、コマンド ライン インターフェイスで記述されています。
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -73,7 +73,7 @@ license: >
 
 *   省略可能な `<content>` 要素を最上位の web 資産ディレクトリで、アプリの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
 
-*   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン <a href="../guide/appdev/whitelist/index.html">ホワイト リスト <a href="../index.html">ガイド</a></a>を参照してください。
+*   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン ホワイト リスト ガイドを参照してください。
 
 *   `<preference>`タグのペアとして様々 なオプションを設定します `name` / `value` の属性。 各設定項目 `name` 小文字は区別されません。 多くの設定は、このページの上部に記載されている特定のプラットフォームに固有です。 次のセクションでは、1 つ以上のプラットフォームに適用される設定を詳細します。
 
@@ -134,4 +134,4 @@ license: >
         </feature>
     
 
-各機能を指定する方法の詳細については <a href="../index.html">API リファレンス</a>を参照してください。プラグインの詳細については、<a href="../guide/hybrid/plugins/index.html">プラグイン開発<a href="../index.html">ガイド</a></a>を参照してください。
+各機能を指定する方法の詳細については API リファレンスを参照してください。プラグインの詳細については、プラグイン開発ガイドを参照してください。

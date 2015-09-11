@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-open<a href="database/database.html">Database</a>
+openDatabase
 ===============
 
-<a href="database/database.html">Database</a> オブジェクトを新規作成します。
+Database オブジェクトを新規作成します。
 
-    var dbShell = window.open<a href="database/database.html">Database</a>(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 概要
 -----------
 
-window.open<a href="database/database.html">Database</a> メソッドは新しい <a href="database/database.html">Database</a> オブジェクトを返します。
+window.openDatabase メソッドは新しい Database オブジェクトを返します。
 
-このメソッドは SQLite のデータベースを新規作成し、 <a href="database/database.html">Database</a> オブジェクトを返します。 <a href="database/database.html">Database</a> オブジェクトは、データを操作するために使います。
+このメソッドは SQLite のデータベースを新規作成し、 Database オブジェクトを返します。 Database オブジェクトは、データを操作するために使います。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,7 +43,7 @@ window.open<a href="database/database.html">Database</a> メソッドは新し�
 使用例
 -------------
 
-    var db = window.open<a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
 
 詳細な使用例
 ------------
@@ -51,19 +51,19 @@ window.open<a href="database/database.html">Database</a> メソッドは新し�
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="storage.html">Storage</a> の使用例</title>
+        <title>Storage の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            var db = window.open<a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+        function onDeviceReady() {
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
 
         </script>

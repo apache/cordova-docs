@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>Error
+FileError
 ========
 
-`<a href="../fileobj/fileobj.html">File</a>Error` オブジェクトはエラーが発生した際に <a href="../fileobj/fileobj.html">File</a> API のメソッドに渡されます。
+`FileError` オブジェクトはエラーが発生した際に File API のメソッドに渡されます。
 
 プロパティー
 ----------
@@ -31,20 +31,20 @@ license: >
 定数
 ---------
 
-- `<a href="../fileobj/fileobj.html">File</a>Error.NOT_FOUND_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.SECURITY_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.ABORT_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.NOT_READABLE_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.ENCODING_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.NO_MODIFICATION_ALLOWED_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_STATE_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.SYNTAX_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_MODIFICATION_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.QUOTA_EXCEEDED_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.TYPE_MISMATCH_ERR`
-- `<a href="../fileobj/fileobj.html">File</a>Error.PATH_EXISTS_ERR`
+- `FileError.NOT_FOUND_ERR`
+- `FileError.SECURITY_ERR`
+- `FileError.ABORT_ERR`
+- `FileError.NOT_READABLE_ERR`
+- `FileError.ENCODING_ERR`
+- `FileError.NO_MODIFICATION_ALLOWED_ERR`
+- `FileError.INVALID_STATE_ERR`
+- `FileError.SYNTAX_ERR`
+- `FileError.INVALID_MODIFICATION_ERR`
+- `FileError.QUOTA_EXCEEDED_ERR`
+- `FileError.TYPE_MISMATCH_ERR`
+- `FileError.PATH_EXISTS_ERR`
 
 概要
 -----------
 
-`<a href="../fileobj/fileobj.html">File</a>Error` オブジェクトは <a href="../fileobj/fileobj.html">File</a> API のあらゆるエラーコールバック関数への唯一のパラメーターです。開発者はエラーのタイプを特定するために、 code プロパティーを確認する必要があります。
+`FileError` オブジェクトは File API のあらゆるエラーコールバック関数への唯一のパラメーターです。開発者はエラーのタイプを特定するために、 code プロパティーを確認する必要があります。

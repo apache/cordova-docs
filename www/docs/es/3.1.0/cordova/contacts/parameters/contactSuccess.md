@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-Función de devolución de llamada de éxito que proporciona la `Contact` matriz resultante de una `<a href="../contacts.find.html">contacts.find</a>` operación.
+Función de devolución de llamada de éxito que proporciona la `Contact` matriz resultante de una `contacts.find` operación.
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ Función de devolución de llamada de éxito que proporciona la `Contact` matriz
 
 ## Parámetros
 
-*   **contactos**: la matriz contacto resultante de una operación de búsqueda. *(<a href="../Contact/contact.html">Contacto</a>)*
+*   **contactos**: la matriz contacto resultante de una operación de búsqueda. *(Contacto)*
 
 ## Ejemplo
 

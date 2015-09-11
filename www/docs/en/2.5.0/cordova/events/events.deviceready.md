@@ -23,7 +23,7 @@ deviceready
 
 This is an event that fires when Cordova is fully loaded.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
+    document.addEventListener("deviceready", yourCallbackFunction, false);
 
 Details
 -------
@@ -34,7 +34,7 @@ Cordova consists of two code bases: native and JavaScript. While the native code
 
 The Cordova `deviceready` event fires once Cordova has fully loaded. After the device has fired, you can safely make calls to Cordova function.
 
-Typically, you will want to attach an event listener with `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` once the HTML document's DOM has loaded.
+Typically, you will want to attach an event listener with `document.addEventListener` once the HTML document's DOM has loaded.
 
 This event behaves differently from others in that any event handler registered after the event has been fired will have its callback function called immediately.
 
@@ -49,39 +49,39 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    function on<a href="../device/device.html">Device</a>Ready() {
+    function onDeviceReady() {
         // Now safe to use the Cordova API
     }
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Cordova Device Ready Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
+        // Call onDeviceReady when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-2.5.0.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Now safe to use the Cordova API
         }
 

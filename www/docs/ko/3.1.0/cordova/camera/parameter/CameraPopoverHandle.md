@@ -20,11 +20,11 @@ license: >
 
 # CameraPopoverHandle
 
-에 의해 만들어진 popover 대화에 대 한 핸들`<a href="../camera.getPicture.html">camera.getPicture</a>`.
+에 의해 만들어진 popover 대화에 대 한 핸들`camera.getPicture`.
 
 ## 메서드
 
-*   **setPosition**:는 popover의 <a href="../../geolocation/Position/position.html">위치</a>를 설정 합니다.
+*   **setPosition**:는 popover의 위치를 설정 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -32,15 +32,15 @@ license: >
 
 ## setPosition
 
-popover의 <a href="../../geolocation/Position/position.html">위치</a>를 설정 합니다.
+popover의 위치를 설정 합니다.
 
-**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
+**매개 변수:**
 
-*   `cameraPopoverOptions`:는 `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` 새 <a href="../../geolocation/Position/position.html">위치</a>를 지정 하는
+*   `cameraPopoverOptions`:는 `CameraPopoverOptions` 새 위치를 지정 하는
 
 ## 빠른 예제
 
-     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
@@ -54,12 +54,12 @@ popover의 <a href="../../geolocation/Position/position.html">위치</a>를 설�
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
+         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

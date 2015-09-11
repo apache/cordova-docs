@@ -20,7 +20,7 @@ license: >
 
 # Флаги
 
-Аргументы для `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` объекта `getFile()` и `getDirectory()` методы, которые смотрят или создавать файлы и каталоги, соответственно.
+Аргументы для `DirectoryEntry` объекта `getFile()` и `getDirectory()` методы, которые смотрят или создавать файлы и каталоги, соответственно.
 
 ## Свойства
 

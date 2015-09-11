@@ -26,42 +26,42 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Resumen</a>
+        Resumen
       </h2>
       
       <span>Comience aquí si usted es nuevo a Córdoba. Incluye la instalación y próximos pasos.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">Soporte de plataformas</a>
+        Soporte de plataformas
       </h2>
       
       <span>Tabla de compatibilidad para todas las funciones principales.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">La interfaz de linea de comandos</a>
+        La interfaz de linea de comandos
       </h2>
       
       <span>Crear, construir y desplegar desde la línea de comandos.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Guías de plataformas</a>
+        Guías de plataformas
       </h2>
       
       <span>Configurar cada plataforma SDK y actualización de proyectos.</span>
     </li>
     <li>
       <h2>
-        <a href="plugin_ref/plugman.html">Utilizando Plugman para administrar Plugins</a>
+        Utilizando Plugman para administrar Plugins
       </h2>
       
       <span>Administrar plugins sin la CLI cuando se utiliza el flujo de trabajo centrado en plataforma.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">El archivo config.xml</a>
+        El archivo config.xml
       </h2>
       
       <span>Personalizar las características de su aplicación.</span>
@@ -75,56 +75,56 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Incrustar WebViews</a>
+        Incrustar WebViews
       </h2>
       
       <span>Implementar la Cordova WebView en su proyecto nativo.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Guía de desarrollo de plugin</a>
+        Guía de desarrollo de plugin
       </h2>
       
       <span>Desarrollar tu propio plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Guía de privacidad</a>
+        Guía de privacidad
       </h2>
       
       <span>Aprenda sobre cuestiones de privacidad móvil importantes.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/security/index.html">Guía de seguridad</a>
+        Guía de seguridad
       </h2>
       
       <span>Información y consejos para la creación de una aplicación segura.</span>
     </li>
     <li>
       <h2>
-        <a href="platform_plugin_versioning_ref/index.html">Plataformas y gestión de versiones de Plugins</a>
+        Plataformas y gestión de versiones de Plugins
       </h2>
       
       <span>Guardar y restaurar proyectos CLI a un estado conocido sin problemas.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Guía de lista blanca</a>
+        Guía de lista blanca
       </h2>
       
       <span>Una aplicación acceso a recursos externos.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Almacenamiento de información</a>
+        Almacenamiento de información
       </h2>
       
-      <span>Un <a href="cordova/events/events.resume.html">resume</a>n de opciones de almacenamiento de información nativo.</span>
+      <span>Un resumen de opciones de almacenamiento de información nativo.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/hooks/index.html">Ganchos de guía</a>
+        Ganchos de guía
       </h2>
       
       <span>Extender la funcionalidad de Cordova por defecto añadiendo scripts personalizados.</span>
@@ -152,14 +152,14 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/events/events.html">Eventos</a>
+        Eventos
       </h2>
       
       <span>Hooks a eventos nativos a través de JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin APIs</a>
+        Plugin APIs
       </h2>
       
       <span>Descubra qué plugins Cordova están disponibles para usar en su proyecto.</span>

@@ -24,9 +24,9 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   <a href="config.html">Amazon fuego OS configuración</a>
-*   <a href="webview.html">Amazon fuego OS WebViews</a>
-*   <a href="plugin.html">Amazon fuego OS Plugins</a>
+*   Amazon fuego OS configuración
+*   Amazon fuego OS WebViews
+*   Amazon fuego OS Plugins
 
 ## Requerimientos y apoyo
 

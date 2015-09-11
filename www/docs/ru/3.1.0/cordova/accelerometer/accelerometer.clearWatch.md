@@ -20,12 +20,12 @@ license: >
 
 # accelerometer.clearWatch
 
-Перестать отслеживать изменения объекта `<a href="acceleration/acceleration.html">Acceleration</a>`, на который ссылается параметр `watchID`.
+Перестать отслеживать изменения объекта `Acceleration`, на который ссылается параметр `watchID`.
 
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: идентификатор, возвращяемый `accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>`.
+*   **watchID**: идентификатор, возвращяемый `accelerometer.watchAcceleration`.
 
 ## Поддерживаемые платформы
 
@@ -38,7 +38,7 @@ license: >
 
 ## Краткий пример
 
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,17 +50,17 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // The watch id references the current `watch<a href="acceleration/acceleration.html">Acceleration</a>`
+        // The watch id references the current `watchAcceleration`
         var watchID = null;
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ license: >
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration
@@ -92,9 +92,9 @@ license: >
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
     
-            element.innerHTML = '<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '<br />' +
-                                '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '<br />' +
-                                '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '<br />' +
+            element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+                                'Acceleration Y: ' + acceleration.y + '<br />' +
+                                'Acceleration Z: ' + acceleration.z + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
     

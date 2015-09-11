@@ -39,7 +39,7 @@ license: >
 
  [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-如果您獲取該模式，錯誤 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+如果您獲取該模式，錯誤 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
 
 `options`參數是可選的並且預設為以下值：
 
@@ -58,7 +58,7 @@ time`.
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，此示例<a href="../inappbrowser/inappbrowser.html">顯示</a>彈出式對話方塊中的文本如 `pattern: M/d/yyyy h:mm a` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此示例顯示彈出式對話方塊中的文本如 `pattern: M/d/yyyy h:mm a` ：
 
     function checkDatePattern() {
         navigator.globalization.getDatePattern(
@@ -74,7 +74,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDatePattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

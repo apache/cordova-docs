@@ -20,7 +20,7 @@ license: >
 
 # CompassError
 
-A `CompassError` 物件返回到 `<a href="../parameters/compassError.html">compassError</a>` 時出現錯誤的回呼函數。
+A `CompassError` 物件返回到 `compassError` 時出現錯誤的回呼函數。
 
 ## 屬性
 
@@ -33,4 +33,4 @@ A `CompassError` 物件返回到 `<a href="../parameters/compassError.html">comp
 
 ## 說明
 
-當錯誤發生時， `CompassError` 物件作為一個參數傳遞 `<a href="../parameters/compassError.html">compassError</a>` 回呼函數。
+當錯誤發生時， `CompassError` 物件作為一個參數傳遞 `compassError` 回呼函數。

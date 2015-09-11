@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="fileobj/fileobj.html">Файл</a>
+# Файл
 
 > Интерфейс API, чтобы читать, писать и навигации по иерархиям файловой системы, основанные на [w3c файла api][1].
 
@@ -26,21 +26,21 @@ license: >
 
 ## Объекты
 
-*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
-*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
-*   <a href="fileobj/fileobj.html">Файл</a>
-*   <a href="fileentry/fileentry.html">FileEntry</a>
-*   <a href="fileerror/fileerror.html">FileError</a>
-*   <a href="filereader/filereader.html">FileReader</a>
-*   <a href="fileobj/fileobj.html">Файл</a>овая система
-*   <a href="filetransfer/filetransfer.html">FileTransfer</a>
-*   <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html">FileTransfer</a>Error</a>
-*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
-*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
-*   <a href="filewriter/filewriter.html">Уничтожал</a>
-*   <a href="flags/flags.html">Флаги</a>
-*   <a href="localfilesystem/localfilesystem.html">LocalFileSystem</a>
-*   <a href="metadata/metadata.html">Метаданные</a>
+*   DirectoryEntry
+*   DirectoryReader
+*   Файл
+*   FileEntry
+*   FileError
+*   FileReader
+*   Файловая система
+*   FileTransfer
+*   FileTransferError
+*   FileUploadOptions
+*   FileUploadResult
+*   Уничтожал
+*   Флаги
+*   LocalFileSystem
+*   Метаданные
 
 ## Доступ к функции
 
@@ -68,8 +68,8 @@ license: >
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="android-package" value="org.apache.cordova.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -82,8 +82,8 @@ license: >
         <feature name="File">
             <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="blackberry-package" value="org.apache.cordova.http.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
         </feature>
         
         (in www/config.xml)
@@ -100,8 +100,8 @@ license: >
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="ios-package" value="CDV<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
         </feature>
         
 

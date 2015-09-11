@@ -24,7 +24,7 @@ license: >
 
  [1]: http://cordova.apache.org
 
-低級<a href="../../cli/index.html">命令列介面</a>，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關<a href="../../overview/index.html">概述</a>，請參見應用程式外掛程式。
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
 
 ## 創建一個專案
 

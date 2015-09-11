@@ -20,7 +20,7 @@ license: >
 
 # Plugins de BlackBerry
 
-Esta guía le muestra cómo desarrollar un plugin de Echo en BlackBerry. La guía de desarrollo de Plugin ofrece un amplio <a href="../../../cordova/events/events.resume.html">resume</a>n con el cual ya debe estar familiarizado, y esta guía recoge donde sale. Además, descargar el [repositorio Cordova BlackBerry][1].
+Esta guía le muestra cómo desarrollar un plugin de Echo en BlackBerry. La guía de desarrollo de Plugin ofrece un amplio resumen con el cual ya debe estar familiarizado, y esta guía recoge donde sale. Además, descargar el [repositorio Cordova BlackBerry][1].
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 

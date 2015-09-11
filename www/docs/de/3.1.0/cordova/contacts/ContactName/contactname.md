@@ -24,21 +24,21 @@ Enthält verschiedene Arten von Informationen über ein `Contact` Name des Objek
 
 ## Eigenschaften
 
-*   **formatiert**: den vollständigen Namen des <a href="../Contact/contact.html">Kontakt</a>s. *(DOM-String und enthält)*
+*   **formatiert**: den vollständigen Namen des Kontakts. *(DOM-String und enthält)*
 
-*   **Nachname**: Familienname des <a href="../Contact/contact.html">Kontakt</a>s. *(DOM-String und enthält)*
+*   **Nachname**: Familienname des Kontakts. *(DOM-String und enthält)*
 
-*   **GivenName**: Given Name des <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a>s. *(DOM-String und enthält)*
+*   **GivenName**: Given Name des Kontaktes. *(DOM-String und enthält)*
 
-*   **MiddleName**: Middle Name des <a href="../contacts.html"><a href="../Contact/contact.html">Kontakt</a>e</a>s. *(DOM-String und enthält)*
+*   **MiddleName**: Middle Name des Kontaktes. *(DOM-String und enthält)*
 
-*   **HonorificPrefix**: der <a href="../Contact/contact.html">Kontakt</a>-Präfix (z.B. *Mr.* oder *Dr.*) *(DOM-String und enthält)*
+*   **HonorificPrefix**: der Kontakt-Präfix (z.B. *Mr.* oder *Dr.*) *(DOM-String und enthält)*
 
-*   **HonorificSuffix**: der <a href="../Contact/contact.html">Kontakt</a>-Suffix (Beispiel *Esq.*). *(DOM-String und enthält)*
+*   **HonorificSuffix**: der Kontakt-Suffix (Beispiel *Esq.*). *(DOM-String und enthält)*
 
 ## Informationen
 
-Das `ContactName` -Objekt speichert Namenseigenschaften eines <a href="../Contact/contact.html">Kontakt</a>s.
+Das `ContactName` -Objekt speichert Namenseigenschaften eines Kontakts.
 
 ## Unterstützte Plattformen
 
@@ -61,14 +61,14 @@ Das `ContactName` -Objekt speichert Namenseigenschaften eines <a href="../Contac
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
-    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "name"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## Vollständiges Beispiel
@@ -76,22 +76,22 @@ Das `ContactName` -Objekt speichert Namenseigenschaften eines <a href="../Contac
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","name"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ Das `ContactName` -Objekt speichert Namenseigenschaften eines <a href="../Contac
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

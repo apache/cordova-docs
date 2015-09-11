@@ -30,7 +30,7 @@ Proporciona acceso a una base de datos SQL.
 
 ## Detalles
 
-El `window.<a href="../storage.opendatabase.html">openDatabase</a>()` método devuelve un `Database` objeto.
+El `window.openDatabase()` método devuelve un `Database` objeto.
 
 ## Plataformas soportadas
 
@@ -56,13 +56,13 @@ El `window.<a href="../storage.opendatabase.html">openDatabase</a>()` método de
         alert("success!");
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
 ## Ejemplo rápido cambio versión
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
     
 
@@ -71,19 +71,19 @@ El `window.<a href="../storage.opendatabase.html">openDatabase</a>()` método de
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -111,7 +111,7 @@ El `window.<a href="../storage.opendatabase.html">openDatabase</a>()` método de
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

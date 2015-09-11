@@ -20,10 +20,10 @@ license: >
 
 # compassError
 
-<a href="../compass.html">나침반</a> 기능에 대 한 onError 콜백 함수입니다.
+나침반 기능에 대 한 onError 콜백 함수입니다.
 
 ## 예를 들어
 
-    function(<a href="../compassError/compassError.html">CompassError</a>) {
+    function(CompassError) {
         // Handle the error
     }

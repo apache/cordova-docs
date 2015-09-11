@@ -20,13 +20,13 @@ license: >
 
 # 升級 Windows Phone
 
-本指南演示如何修改 Windows Phone 的專案，這兩個版本 7 和 8，從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。 以下部分<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>了如何從非 CLI 專案升級。
+本指南演示如何修改 Windows Phone 的專案，這兩個版本 7 和 8，從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
 
 ## 從 3.0.0 升級到 3.1.0
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本-請參閱<a href="../../cli/index.html">命令列介面</a> 
+1.  更新 `cordova` CLI 版本-請參閱命令列介面 
 2.  運行 `cordova platform update wp8` （或 `wp7` ，每添加到您的專案的平臺）。
 
 對於不使用 CLI 科爾多瓦創建的專案，請運行：
@@ -35,14 +35,14 @@ license: >
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
 
 2.  添加您的平臺的科爾多瓦專案，例如：`cordova
 platform add wp7 wp8`.
 
 3.  該專案的內容複寫 `www` 目錄到 `www` 目錄在您剛剛創建的科爾多瓦專案的根目錄。
 
-4.  複製或覆蓋任何本機資產從原始專案 （ `SplashScreen` ， `ApplicationIcon` 等等），這讓確定要添加的任何新<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> `.csproj` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 Windows 電話裡面的專案生成 `platforms\wp7` 或 `platforms\wp8` 目錄。
+4.  複製或覆蓋任何本機資產從原始專案 （ `SplashScreen` ， `ApplicationIcon` 等等），這讓確定要添加的任何新檔 `.csproj` 檔。 Windows 電話裡面的專案生成 `platforms\wp7` 或 `platforms\wp8` 目錄。
 
 5.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
@@ -56,7 +56,7 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+3.  複製並覆蓋任何閃屏或圖示圖像。
 
 4.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -74,9 +74,9 @@ platform add wp7 wp8`.
 
 3.  更新的名稱 `cordova.js` 的 HTML 標籤，如果它仍在使用科爾多瓦 VERSION.js (應該是剛中`cordova.js`).
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
-5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們也添加到.csproj <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們也添加到.csproj 檔。
 
 6.  生成並測試。
 
@@ -88,9 +88,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。（注意<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案名中的版本號的缺乏。
+3.  更新您的 html 代碼，使用新的 `cordova.js` 檔。（注意檔案名中的版本號的缺乏。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -104,9 +104,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.7.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -120,9 +120,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -136,9 +136,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -152,9 +152,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -168,9 +168,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -184,9 +184,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -200,9 +200,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -210,7 +210,7 @@ platform add wp7 wp8`.
 
 ## 從 1.9.0 升級到 2.0.0
 
-有很大變化到 Apache 科爾多瓦 2.0.0 WP7 專案結構，使這升級有點更多涉及的其他人。 本質上這不是升級而建立一個新的專案和對現有原始程式碼<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>的副本。
+有很大變化到 Apache 科爾多瓦 2.0.0 WP7 專案結構，使這升級有點更多涉及的其他人。 本質上這不是升級而建立一個新的專案和對現有原始程式碼檔的副本。
 
 在 Visual Studio 的解決方案資源管理器視窗中：
 
@@ -218,9 +218,9 @@ platform add wp7 wp8`.
 
 2.  將複製的內容你 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-3.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+3.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
 
-4.  複製並覆蓋任何<a href="../../../cordova/splashscreen/splashscreen.html">閃屏</a>或圖示圖像。
+4.  複製並覆蓋任何閃屏或圖示圖像。
 
 5.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
@@ -236,13 +236,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.9.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.9.0.js` 檔。
 
 ## 從 1.7.0 升級到 1.8.0
 
@@ -254,13 +254,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.8.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
 
 ## 從 1.6.0 升級到 1.7.0
 
@@ -272,13 +272,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.7.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.7.0.js` 檔。
 
 ## 從 1.6.0 升級到 1.6.1
 
@@ -290,13 +290,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.6.1.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.6.1.js` 檔。
 
 ## 從 1.5.0 版升級到 1.6.0
 
@@ -308,13 +308,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.6.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.6.0.js` 檔。
 
 ## 從 1.4.0 升級到 1.5.0 版
 
@@ -326,13 +326,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.5.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.5.0.js` 檔。
 
 ## 從 1.3.0 升級到 1.4.0
 
@@ -344,13 +344,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.4.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.4.0.js` 檔。
 
 ## 從 1.2.0 升級到 1.3.0
 
@@ -362,13 +362,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.3.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.3.0.js` 檔。
 
 ## 從 1.1.0 升級到 1.2.0
 
@@ -380,13 +380,13 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.2.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.2.0.js` 檔。
 
 ## 從 1.0.0 升級到 1.1.0
 
@@ -398,10 +398,10 @@ platform add wp7 wp8`.
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
     *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.1.0.js` 到您的專案。（請確定它被標記為內容）。
 
-6.  更新您的 html 代碼，使用新的 `cordova-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+6.  更新您的 html 代碼，使用新的 `cordova-1.1.0.js` 檔。

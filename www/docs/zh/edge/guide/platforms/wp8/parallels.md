@@ -39,4 +39,4 @@ license: >
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-一旦你完成這些步驟，你是準備好安裝 Windows Phone SDK。請參閱 <a href="index.html">Windows Phone 8 <a href="../index.html">平臺指南</a></a>的詳細資訊。
+一旦你完成這些步驟，你是準備好安裝 Windows Phone SDK。請參閱 Windows Phone 8 平臺指南的詳細資訊。

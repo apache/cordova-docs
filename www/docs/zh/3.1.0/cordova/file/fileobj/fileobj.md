@@ -40,7 +40,7 @@ license: >
 
 ## 詳細資訊
 
-`File`物件包含單個檔的屬性。您可以獲取的實例 `File` 物件通過調用 `<a href="../fileentry/fileentry.html">FileEntry</a>` 物件的 `file()` 方法。
+`File`物件包含單個檔的屬性。您可以獲取的實例 `File` 物件通過調用 `FileEntry` 物件的 `file()` 方法。
 
 ## 支援的平臺
 
@@ -52,7 +52,7 @@ license: >
 
 ## 切片
 
-返回一個新的 `File` 物件，為其 `<a href="../filereader/filereader.html">FileReader</a>` 返回只有該檔的指定的部分。 負值設置為 `start` 或 `end` 測量從檔的末尾。 相對於當前切片定位的索引。 （請參閱下面的完整示例）。
+返回一個新的 `File` 物件，為其 `FileReader` 返回只有該檔的指定的部分。 負值設置為 `start` 或 `end` 測量從檔的末尾。 相對於當前切片定位的索引。 （請參閱下面的完整示例）。
 
 **參數：**
 

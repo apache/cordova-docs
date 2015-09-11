@@ -26,7 +26,7 @@ Questa guida descrive come configurare l'ambiente di sviluppo SDK per distribuir
 
 Tizen SDK richiede Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit) o Windows XP SP3/7 (32 bit).
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con Tizen SDK. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con Tizen SDK. L'interfaccia della riga di comando per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
 
 ## Installare il SDK
 
@@ -43,7 +43,7 @@ Scaricare il SDK di Tizen da [tizen.org][1].
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
-    - Select  __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New &rarr; Tizen Web Project__
+    - Select  __File &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
@@ -62,7 +62,7 @@ Scaricare il SDK di Tizen da [tizen.org][1].
 
 1.  Lanciare Tizen Eclipse IDE.
 
-2.  Selezionare **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> → Importa → Tizen Web progetto**:
+2.  Selezionare **File → Importa → Tizen Web progetto**:
     
     ![][2]
 
@@ -104,7 +104,7 @@ Fare clic sul progetto in **Esplora progetti** visualizzazione e selezionare **E
 
 *   Assicurarsi che il dispositivo di destinazione è correttamente avviato, collegato e configurato. È necessario impostare correttamente le impostazioni di **data e ora** .
 
-*   Utilizzare la **<a href="../../../cordova/connection/connection.html">Connessione</a> Explorer** per selezionare la destinazione di distribuzione applicazione: **→ di vista <a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a> → finestra connessione Explorer**.
+*   Utilizzare la **Connessione Explorer** per selezionare la destinazione di distribuzione applicazione: **→ di vista Visualizza → finestra connessione Explorer**.
     
     ![][7]
 

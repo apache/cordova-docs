@@ -22,5 +22,5 @@ license: >
 
 > 자신의 프로젝트에서 코르도바 WebView를 구현 합니다.
 
-*   <a href="../../platforms/android/webview.html">안 드 로이드 WebViews</a>
-*   <a href="../../platforms/ios/webview.html">iOS WebViews</a>
+*   안 드 로이드 WebViews
+*   iOS WebViews

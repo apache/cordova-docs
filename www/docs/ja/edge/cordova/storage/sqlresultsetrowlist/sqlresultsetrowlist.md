@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+# SQLResultSetRowList
 
-プロパティの 1 つ、 `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` の行を含む SQL クエリから返されます。
+プロパティの 1 つ、 `SQLResultSet` の行を含む SQL クエリから返されます。
 
 ## プロパティ
 
@@ -32,9 +32,9 @@ license: >
 
 ## 詳細
 
-`<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList`、SQL から返されたデータが含まれています `select` ステートメント。 オブジェクトが含まれています、 `length` どのように多くの列を示すプロパティ、 `select` ステートメントを返します。 データの行を取得する呼び出し、 `item` のインデックスを指定するメソッド。 Java スクリプトの設定を返します `Object` プロパティは、<a href="../database/database.html">データベース</a>の列、 `select` に対してステートメントを実行します。
+`SQLResultSetRowList`、SQL から返されたデータが含まれています `select` ステートメント。 オブジェクトが含まれています、 `length` どのように多くの列を示すプロパティ、 `select` ステートメントを返します。 データの行を取得する呼び出し、 `item` のインデックスを指定するメソッド。 Java スクリプトの設定を返します `Object` プロパティは、データベースの列、 `select` に対してステートメントを実行します。
 
-## <a href="../../../config_ref/images.html">サポートされているプラットフォーム</a>
+## サポートされているプラットフォーム
 
 *   アンドロイド
 *   ブラックベリー WebWorks (OS 6.0 およびより高い)
@@ -43,9 +43,9 @@ license: >
 
 ## 簡単な例を SQL を実行します。
 
-    機能 queryDB(tx) {tx.executeSql (' 選択 * からデモ '、、querySuccess、errorCB);}querySuccess （テキサス州、結果） 機能 {var len = results.rows.length;console.log ("デモ テーブル:"len +「行が見つかりませんでした」);(var 私 = 0; 私は < len; i++) {console.log （"行 ="+ 私は +"ID ="+ results.rows.item (i) .id +"データ ="+ results.rows.item(i).data);}} 関数 errorCB(err) {警告 ("SQL を処理中にエラー:"+ err.code);} var db = window.<a href="../storage.opendatabase.html">openDatabase</a> (「<a href="../database/database.html">データベース</a>」、「1.0」、」コルドバ デモ「、200000);db.transaction queryDB （errorCB）;
+    機能 queryDB(tx) {tx.executeSql (' 選択 * からデモ '、、querySuccess、errorCB);}querySuccess （テキサス州、結果） 機能 {var len = results.rows.length;console.log ("デモ テーブル:"len +「行が見つかりませんでした」);(var 私 = 0; 私は < len; i++) {console.log （"行 ="+ 私は +"ID ="+ results.rows.item (i) .id +"データ ="+ results.rows.item(i).data);}} 関数 errorCB(err) {警告 ("SQL を処理中にエラー:"+ err.code);} var db = window.openDatabase (「データベース」、「1.0」、」コルドバ デモ「、200000);db.transaction queryDB （errorCB）;
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > <a href="../storage.html">ストレージ</a>の例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"<a href="../../events/events.deviceready.html">deviceready</a>"、onDeviceReady、false);//<a href="../database/database.html">データベース</a>設定//関数 populateDB(tx) {tx.executeSql （' ドロップ テーブル IF EXISTS デモ'）;tx.executeSql （' 作成テーブル IF NOT 存在するデモ (id 固有データ)'）;tx.executeSql (' (id、データ) のデモに挿入値 （1、「最初の行」)');tx.executeSql ('(id、データ) のデモに挿入値 （2、」2 番目の行"));}//<a href="../database/database.html">データベース</a>のクエリ//queryDB(tx) 関数 {tx.executeSql (' 選択 * からデモ '、、querySuccess、errorCB);}//クエリ成功コールバック//querySuccess （テキサス州、結果） 関数 {var len = results.rows.length;console.log ("デモ テーブル:"len +「行が見つかりませんでした」);(var 私 = 0; 私は < len; i++) {console.log （"行 ="+ 私は +"ID ="+ results.rows.item (i) .id +"データ ="+ results.rows.item(i).data);}}//トランザクション エラー コールバック//errorCB(err) 関数 {console.log ("SQL を処理中にエラー:"+ err.code);}//取引成功コールバック//successCB() 関数 {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> (「<a href="../database/database.html">データベース</a>」、「1.0」、」コルドバ デモ「、200000);db.transaction queryDB （errorCB）;}/デバイス Api が利用可能な///onDeviceReady() 関数 {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> (「<a href="../database/database.html">データベース</a>」、「1.0」、」コルドバ デモ「、200000);db.transaction (populateDB、errorCB、successCB);} </スクリプト ></ヘッド >< 本体 >< h1 > 例 </h1 >< <a href="../database/database.html">データベース</a> p > </p ></ボディ ></html >
+    <!DOCTYPE html >< html >< 頭 >< タイトル > ストレージの例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//データベース設定//関数 populateDB(tx) {tx.executeSql （' ドロップ テーブル IF EXISTS デモ'）;tx.executeSql （' 作成テーブル IF NOT 存在するデモ (id 固有データ)'）;tx.executeSql (' (id、データ) のデモに挿入値 （1、「最初の行」)');tx.executeSql ('(id、データ) のデモに挿入値 （2、」2 番目の行"));}//データベースのクエリ//queryDB(tx) 関数 {tx.executeSql (' 選択 * からデモ '、、querySuccess、errorCB);}//クエリ成功コールバック//querySuccess （テキサス州、結果） 関数 {var len = results.rows.length;console.log ("デモ テーブル:"len +「行が見つかりませんでした」);(var 私 = 0; 私は < len; i++) {console.log （"行 ="+ 私は +"ID ="+ results.rows.item (i) .id +"データ ="+ results.rows.item(i).data);}}//トランザクション エラー コールバック//errorCB(err) 関数 {console.log ("SQL を処理中にエラー:"+ err.code);}//取引成功コールバック//successCB() 関数 {var db = window.openDatabase (「データベース」、「1.0」、」コルドバ デモ「、200000);db.transaction queryDB （errorCB）;}/デバイス Api が利用可能な///onDeviceReady() 関数 {var db = window.openDatabase (「データベース」、「1.0」、」コルドバ デモ「、200000);db.transaction (populateDB、errorCB、successCB);} </スクリプト ></ヘッド >< 本体 >< h1 > 例 </h1 >< データベース p > </p ></ボディ ></html >

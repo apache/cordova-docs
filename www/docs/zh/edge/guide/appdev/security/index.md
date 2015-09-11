@@ -30,13 +30,13 @@ license: >
 *   Iframe 和回檔 Id 機制
 *   證書寄
 *   自簽名的證書
-*   加密的<a href="../../../cordova/storage/storage.html">存儲</a>
+*   加密的存儲
 *   一般提示
 *   推薦的文章和其他資源
 
 ## 白名單
 
-*   閱讀和理解，<a href="../whitelist/index.html">白名單指南</a>
+*   閱讀和理解，白名單指南
 
 *   域白名單不能在 Android API 10 及以下，WP8 iframe 和用戶端代碼。 這意味著攻擊者可以載入任何域中的 iframe，在 iframe 內頁面上的任何腳本可以直接存取科爾多瓦 JavaScript 物件和相應的本機 JAVA 物件。 當為這些平臺構建應用程式時，應考慮到這種情況。 在實踐中這意味著確保目標高於 10，Android API 和如果可能的話您不使用 iframe 載入外部內容-使用 inAppBrowser 外掛程式或其他協力廠商外掛程式。
 
@@ -60,7 +60,7 @@ license: >
 
 當運行時科爾多瓦在 android 系統上，使用 `android:debuggable="true"` 應用程式中清單將允許 SSL 錯誤，例如憑證連結驗證錯誤的自簽章憑證。 所以您可以在此配置中，使用自簽名的證書，但這不是一種配置，您的應用程式是在生產時，應使用。 意思是，只有在應用程式開發期間使用。
 
-## 加密的<a href="../../../cordova/storage/storage.html">存儲</a>
+## 加密的存儲
 
 （TBD）
 

@@ -21,7 +21,7 @@ license: >
 contactFindOptions
 ==================
 
-Optional parameter of the `<a href="../contacts.find.html">contacts.find</a>` method.  Use this parameter to filter the contacts returned from the contacts database.
+Optional parameter of the `contacts.find` method.  Use this parameter to filter the contacts returned from the contacts database.
 
     { 
 		filter: "",

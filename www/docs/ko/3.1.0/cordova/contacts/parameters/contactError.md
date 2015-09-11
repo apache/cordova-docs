@@ -20,7 +20,7 @@ license: >
 
 # contactError
 
-<a href="../contacts.html">연락처</a> 기능에 대 한 오류 콜백 함수입니다.
+연락처 기능에 대 한 오류 콜백 함수입니다.
 
     function(error) {
         // Handle the error

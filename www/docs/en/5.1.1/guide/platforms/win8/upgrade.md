@@ -22,14 +22,14 @@ license: >
 
 This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
 ## Upgrade to 4.0.0 from 3.1.0 or later
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>. 
+1. Update the `cordova` CLI version. See The Command-Line Interface. 
 
 2. Run `cordova platform update windows8`.
         

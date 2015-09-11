@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../camera.html">Camera</a>PopoverOptions
+CameraPopoverOptions
 ====================
 
 画像をライブラリーもしくはアルバムから選択する際の、 iPad でのポップオーバーの位置や矢印の向きを指定するためのパラメーターです。 iOS のみのオプションです。
@@ -27,10 +27,10 @@ license: >
       y :  32,
       width : 320,
       height : 480,
-      arrowDir : <a href="../camera.html">Camera</a>.PopoverArrowDirection.ARROW_ANY
+      arrowDir : Camera.PopoverArrowDirection.ARROW_ANY
     };
 
-<a href="../camera.html">Camera</a>PopoverOptions
+CameraPopoverOptions
 --------------------
 
 - __x:__ ポップオーバーの x 座標をピクセルで表します。 (`Number`)
@@ -41,9 +41,9 @@ license: >
 
 - __height:__ ポップオーバーの高さをピクセルで表します。 (`Number`)
 
-- __arrowDir:__ ポップオーバーの矢印の向きを表します。 <a href="../camera.html">Camera</a>.PopoverArrowDirection で定義されます。 (`Number`)
+- __arrowDir:__ ポップオーバーの矢印の向きを表します。 Camera.PopoverArrowDirection で定義されます。 (`Number`)
 
-            <a href="../camera.html">Camera</a>.PopoverArrowDirection = {
+            Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // iOS の UIPopoverArrowDirection 定数に同じ
                 ARROW_DOWN : 2,
                 ARROW_LEFT : 4,
@@ -53,13 +53,13 @@ license: >
 
 ポップオーバーのサイズは矢印の方向や画面の向きによって調節され、変わる可能性があることについて注意してください。アンカー要素の位置を特定するとき、画面の向きの変化を考慮に入れることを忘れないで下さい。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
-    var popover = new <a href="../camera.html">Camera</a>PopoverOptions(300,300,100,100,<a href="../camera.html">Camera</a>.PopoverArrowDirection.ARROW_ANY);
-    var options = { quality: 50, destinationType: <a href="../camera.html">Camera</a>.DestinationType.DATA_URL,sourceType: <a href="../camera.html">Camera</a>.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
+    var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
+    var options = { quality: 50, destinationType: Camera.DestinationType.DATA_URL,sourceType: Camera.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
 
-    navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
+    navigator.camera.getPicture(onSuccess, onFail, options);
 
     function onSuccess(imageData) {
         var image = document.getElementById('myImage');

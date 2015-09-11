@@ -22,8 +22,8 @@ license: >
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire applicazioni Cordova per Windows 8. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   <a href="upgrading.html">L'aggiornamento di Windows 8</a>
-*   <a href="tools.html">Strumenti della riga di comando di Windows 8</a>
+*   L'aggiornamento di Windows 8
+*   Strumenti della riga di comando di Windows 8
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -76,7 +76,7 @@ Seguire le istruzioni [qui][1] a presentare le tue applicazioni Windows Store.
 
 *   Successivamente, aggiungere qualche codice che illustra come Cordova sta lavorando.
 
-### L'aggiunta di un gestore di '<a href="../../../cordova/events/events.deviceready.html">deviceready</a>'...
+### L'aggiunta di un gestore di 'deviceready'...
 
     <body>
         <p>Content goes here</p>
@@ -84,7 +84,7 @@ Seguire le istruzioni [qui][1] a presentare le tue applicazioni Windows Store.
         <script type="text/javascript">
     
             console.log("Subscribing...");
-            document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+            document.addEventListener("deviceready", function () {
     
                 navigator.notification.alert("The device is ready!");
     

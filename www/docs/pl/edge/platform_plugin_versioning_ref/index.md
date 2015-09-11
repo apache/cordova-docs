@@ -70,9 +70,9 @@ Istnieje również możliwość aktualizacji/usunąć z pliku config.xml podczas
 
 Kilka przykładów:
 
-  * **'Zapisz cordova aktualizacji platformy android--'** => oprócz aktualizacji platformy android do wersji przypięty, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
-  * **'Platforma cordova aktualizacji android@3.8.0--zapisać'** => oprócz aktualizacji platformy android do wersji 3.8.0, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
-  * **'Platforma cordova aktualizacji /path/to/android/platform--zapisać'** => oprócz aktualizacji platformy android do wersji w folderze, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
+  * **'Zapisz cordova aktualizacji platformy android--'** => oprócz aktualizacji platformy android do wersji przypięty, Aktualizacja pliku config.xml wpis
+  * **'Platforma cordova aktualizacji android@3.8.0--zapisać'** => oprócz aktualizacji platformy android do wersji 3.8.0, Aktualizacja pliku config.xml wpis
+  * **'Platforma cordova aktualizacji /path/to/android/platform--zapisać'** => oprócz aktualizacji platformy android do wersji w folderze, Aktualizacja pliku config.xml wpis
   * **'Platforma cordova usunąć android--zapisać'** => usuwa platformy android z projektu i usuwa jego wpisu z pliku config.xml.
 
 ### Przywracanie platformy
@@ -140,9 +140,9 @@ Istnieje również możliwość aktualizacji/usunąć z pliku config.xml podczas
 
 Kilka przykładów:
 
-  * **'cordova plugin aktualizacja cordova-plugin konsoli - Zapisz'** => oprócz aktualizacji konsoli plugin do wersja przypiętych, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
-  * **'cordova plugin aktualizacja cordova-plugin-console@0.2.13--zapisać'** => oprócz aktualizacji Androida wtyczki do wersji 3.8.0, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
-  * **'cordova plugin aktualizacja /path/to/console/plugin--zapisać'** => poza aktualizacja wtyczki do wersji w folderze, <a href="../guide/platforms/android/upgrade.html">Aktualizacja</a> pliku config.xml wpis
+  * **'cordova plugin aktualizacja cordova-plugin konsoli - Zapisz'** => oprócz aktualizacji konsoli plugin do wersja przypiętych, Aktualizacja pliku config.xml wpis
+  * **'cordova plugin aktualizacja cordova-plugin-console@0.2.13--zapisać'** => oprócz aktualizacji Androida wtyczki do wersji 3.8.0, Aktualizacja pliku config.xml wpis
+  * **'cordova plugin aktualizacja /path/to/console/plugin--zapisać'** => poza aktualizacja wtyczki do wersji w folderze, Aktualizacja pliku config.xml wpis
   * **'cordova plugin Usuń cordova-plugin konsoli - Zapisz'** => usuwa wtyczki konsoli z projektu i usuwa jego wpisu z pliku config.xml.
 
 ### Przywracanie wtyczek

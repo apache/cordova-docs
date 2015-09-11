@@ -24,7 +24,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否<a href="../../next/index.html">保持</a>甚至後在後臺運行 `<a href="../../../cordova/events/events.pause.html">pause</a>` <a href="../../../cordova/events/events.html">事件</a>火災。 將此設置為 `false` 不會殺死後的 app `<a href="../../../cordova/events/events.pause.html">pause</a>` <a href="../../../cordova/events/events.html">事件</a>，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     
         <preference name="KeepRunning" value="false"/>
         

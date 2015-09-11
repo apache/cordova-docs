@@ -29,7 +29,7 @@ El evento se desencadena cuando una aplicación se recupera desde el fondo.
 
 El evento `resume` se desencadena cuando la plataforma nativa saca la aplicación del fondo.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
 
 ## Plataformas soportadas
 
@@ -54,7 +54,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Resume Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -20,16 +20,16 @@ license: >
 
 # オンライン
 
-アプリケーションは、オンラインになるし、<a href="../device/device.html">デバイス</a>がインターネットに<a href="../connection/connection.html">接続</a>するときに発生します。
+アプリケーションは、オンラインになるし、デバイスがインターネットに接続するときに発生します。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
+    document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## 詳細
 
-`online`以前<a href="../connection/connection.html">接続</a>されていない<a href="../device/device.html">デバイス</a>が、インターネットへのアプリケーション アクセスを許可するネットワーク<a href="../connection/connection.html">接続</a>を受信するときに発生します。 <a href="../connection/connection.html">接続</a> API と同じ情報に依存しており、火災時の値 `<a href="../connection/connection.type.html">connection.type</a>` になります。`NONE`.
+`online`以前接続されていないデバイスが、インターネットへのアプリケーション アクセスを許可するネットワーク接続を受信するときに発生します。 接続 API と同じ情報に依存しており、火災時の値 `connection.type` になります。`NONE`.
 
-通常アプリケーションに使用する必要があります `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
 
 ## サポートされているプラットフォーム
 
@@ -42,7 +42,7 @@ license: >
 
 ## 簡単な例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+    document.addEventListener("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Online Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("online", onOnline, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,12 +85,12 @@ license: >
 
 ## iOS の癖
 
-初回起動時には、最初の `online` (当てはまる場合) <a href="events.html">イベント</a>が少なくとも火を前に第 2 `<a href="../connection/connection.type.html">connection.type</a>` は`UNKNOWN`.
+初回起動時には、最初の `online` (当てはまる場合) イベントが少なくとも火を前に第 2 `connection.type` は`UNKNOWN`.
 
 ## Windows Phone 7 の癖
 
-エミュレーターで実行しているとき、 `connection.status` は常に知られているので、この<a href="events.html">イベント</a>は*ない*火。
+エミュレーターで実行しているとき、 `connection.status` は常に知られているので、このイベントは*ない*火。
 
 ## Windows Phone 8 癖
 
-エミュレーターと<a href="../connection/connection.html">接続</a>の種類のレポート `Cellular` は変化しません、<a href="events.html">イベント</a>は*ない*火。
+エミュレーターと接続の種類のレポート `Cellular` は変化しません、イベントは*ない*火。

@@ -89,7 +89,7 @@ Getting Started with Windows Phone
 デバイスでアプリをテストするためには、デバイスは登録されていなければなりません。 [ここ][register-url] をクリックし、 Windows Phone へのデプロイとテストに関するドキュメントを読んでください。
 
 - デバイスが接続され、スクリーンがアンロックなことを確認します
-- Visual Studio で、上部のドロップダウンメニューから 'Windows Phone <a href="../../../cordova/device/device.html">Device</a>' を選択します
+- Visual Studio で、上部のドロップダウンメニューから 'Windows Phone Device' を選択します
 - ドロップダウンメニューの隣にある緑の **play ボタン** をクリックするか、 F5 を押下しデバッグを開始します
 
     ![](img/guide/getting-started/windows-phone/wpd.png)

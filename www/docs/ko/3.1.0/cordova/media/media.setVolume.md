@@ -20,12 +20,12 @@ license: >
 
 # media.setVolume
 
-오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 볼륨을 설정 합니다.
+오디오 파일의 볼륨을 설정 합니다.
 
     media.setVolume(volume);
     
 
-## 매개 <a href="../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
 *   **볼륨**: 볼륨 재생을 위한 설정. 값은 0.0에서 1.0의 범위 내에서 해야 합니다.
 
@@ -55,7 +55,7 @@ license: >
         });
     
         // Play audio
-        my_<a href="media.play.html">media.play</a>();
+        my_media.play();
     
         // Mute volume after 2 seconds
         setTimeout(function() {
@@ -75,14 +75,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for Cordova to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // Cordova is ready
             //
@@ -102,13 +102,13 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -137,7 +137,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

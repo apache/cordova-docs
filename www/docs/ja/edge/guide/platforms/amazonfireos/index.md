@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# アマゾン火 OS プラットフォーム <a href="../../../index.html">ガイド</a>
+# アマゾン火 OS プラットフォーム ガイド
 
-この<a href="../../../index.html">ガイド</a>の Kindle 火災 HDX などのアマゾン火 OS デバイス Cordova アプリを展開する SDK の開発環境を設定する方法を示します。
+このガイドの Kindle 火災 HDX などのアマゾン火 OS デバイス Cordova アプリを展開する SDK の開発環境を設定する方法を示します。
 
 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   <a href="config.html">アマゾン火 OS 構成</a>
-*   <a href="webview.html">アマゾン火 OS web 表示</a>
-*   <a href="plugin.html">アマゾン火 OS プラグイン</a>
+*   アマゾン火 OS 構成
+*   アマゾン火 OS web 表示
+*   アマゾン火 OS プラグイン
 
 ## 導入
 
@@ -41,7 +41,7 @@ license: >
 
 アマゾン火 OS 用 Cordova アプリの開発には様々 なアマゾン WebView SDK と同様に Android の開発に必要なすべてを含むサポート ファイルのインストールが必要です。 必要なインストールは、以下のリストを確認してください。
 
-*   <a href="../../cli/index.html">コマンド ライン インターフェイス</a>
+*   コマンド ライン インターフェイス
 *   [Android の SDK][3]
 *   [Apache Ant][4]
 *   [アマゾン WebView SDK][1]
@@ -116,7 +116,7 @@ Windows の PATH 環境を変更: する
 
 ## アマゾン火 OS の新しいプロジェクトを作成します。
 
-使用、 `cordova` 、コルドバの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>での説明に従って新しいプロジェクトを設定するためのユーティリティ。たとえば、ソース コード ディレクトリ: で
+使用、 `cordova` 、コルドバのコマンド ライン インターフェイスでの説明に従って新しいプロジェクトを設定するためのユーティリティ。たとえば、ソース コード ディレクトリ: で
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

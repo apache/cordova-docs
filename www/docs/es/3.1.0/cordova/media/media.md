@@ -22,7 +22,7 @@ license: >
 
 > El objeto de `Media` proporciona la capacidad de grabar y reproducir archivos de audio en un dispositivo.
 
-    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
 **NOTA:** La implementación actual no se adhiere a una especificación del W3C para la captura de los medios de comunicación y se proporciona únicamente para su comodidad. Una futura implementación se adherirá a la más reciente especificación W3C y puede desaprueban las API actuales.
@@ -33,7 +33,7 @@ license: >
 
 *   **mediaSuccess**: (opcional) la devolución de llamada que se ejecuta después de un `Media` objeto ha completado el juego actual, registro o acción. *(Función)*
 
-*   **<a href="Parameters/mediaError.html">mediaError</a>**: (opcional) la devolución de llamada que se ejecuta si se produce un error. *(Función)*
+*   **mediaError**: (opcional) la devolución de llamada que se ejecuta si se produce un error. *(Función)*
 
 *   **mediaStatus**: (opcional) la devolución de llamada que se ejecuta para indicar cambios en el estado. *(Función)*
 
@@ -49,25 +49,25 @@ Las siguientes constantes son reportadas como el único parámetro para la devol
 
 ## Métodos
 
-*   `<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>`: Devuelve la posición actual dentro de un archivo de audio.
+*   `media.getCurrentPosition`: Devuelve la posición actual dentro de un archivo de audio.
 
-*   `<a href="media.getDuration.html">media.getDuration</a>`: Devuelve la duración de un archivo de audio.
+*   `media.getDuration`: Devuelve la duración de un archivo de audio.
 
-*   `<a href="media.play.html">media.play</a>`: Iniciar o reanudar la reproducción de un archivo de audio.
+*   `media.play`: Iniciar o reanudar la reproducción de un archivo de audio.
 
-*   `media.<a href="../events/events.pause.html">pause</a>`: Pausar la reproducción de un archivo de audio.
+*   `media.pause`: Pausar la reproducción de un archivo de audio.
 
-*   `<a href="media.release.html">media.release</a>`: Libera recursos de audio del sistema operativo subyacente.
+*   `media.release`: Libera recursos de audio del sistema operativo subyacente.
 
-*   `<a href="media.seekTo.html">media.seekTo</a>`: Mueve la posición dentro del archivo de audio.
+*   `media.seekTo`: Mueve la posición dentro del archivo de audio.
 
-*   `<a href="media.setVolume.html">media.setVolume</a>`: Ajusta el volumen para la reproducción de audio.
+*   `media.setVolume`: Ajusta el volumen para la reproducción de audio.
 
-*   `<a href="media.startRecord.html">media.startRecord</a>`: Iniciar la grabación de un archivo de audio.
+*   `media.startRecord`: Iniciar la grabación de un archivo de audio.
 
-*   `<a href="media.stop.html">media.stop</a>Record`: Deja de grabar un archivo de audio.
+*   `media.stopRecord`: Deja de grabar un archivo de audio.
 
-*   `<a href="media.stop.html">media.stop</a>`: Para reproducir un archivo de audio.
+*   `media.stop`: Para reproducir un archivo de audio.
 
 ## Parámetros adicionales ReadOnly
 
@@ -142,7 +142,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ### Windows Phone rarezas
 
-*   <a href="../file/fileobj/fileobj.html">Archivo</a> sólo multimedia puede reproducir en un momento.
+*   Archivo sólo multimedia puede reproducir en un momento.
 
 *   Hay restricciones estrictas sobre cómo interactúa la aplicación con otros medios. Consulte la [documentación de Microsoft para obtener más detalles][2].
 

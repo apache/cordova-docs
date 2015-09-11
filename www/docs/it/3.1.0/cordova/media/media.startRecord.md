@@ -43,7 +43,7 @@ Il `media.startRecord` metodo viene eseguita in modo sincrono, inizia una regist
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new <a href="media.html">Media</a>(src,
+        var mediaRec = new Media(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -64,20 +64,20 @@ Il `media.startRecord` metodo viene eseguita in modo sincrono, inizia una regist
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
         function recordAudio() {
             var src = "myrecording.amr";
-            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
+            var mediaRec = new Media(src, onSuccess, onError);
     
             // Record audio
             mediaRec.startRecord();
@@ -140,11 +140,11 @@ Il `media.startRecord` metodo viene eseguita in modo sincrono, inizia una regist
 
 *   iOS solo i record per i file di tipo *WAV* e restituisce un errore se il file di nome estensione è non corretto.
 
-*   Se non è specificato un percorso completo, la registrazione viene inserita nell'applicazione `documents/tmp` directory. Questo si può accedere tramite il `<a href="../file/fileobj/fileobj.html">File</a>` API utilizzando `Local<a href="../file/filesystem/filesystem.html"><a href="../file/fileobj/fileobj.html">File</a>System</a>.TEMPORARY` . Deve esistere alcuna sottodirectory specificate a tempo di record.
+*   Se non è specificato un percorso completo, la registrazione viene inserita nell'applicazione `documents/tmp` directory. Questo si può accedere tramite il `File` API utilizzando `LocalFileSystem.TEMPORARY` . Deve esistere alcuna sottodirectory specificate a tempo di record.
 
 *   I file possono essere registrati e giocati indietro usando i documenti URI:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("documents://beer.mp3")
+        var myMedia = new Media("documents://beer.mp3")
         
 
 ## Tizen stranezze

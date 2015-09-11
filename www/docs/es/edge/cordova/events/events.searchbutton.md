@@ -29,9 +29,9 @@ El evento se desencadena cuando el usuario presiona el botón de búsqueda en An
 
 Si necesita reemplazar el comportamiento de botón de búsqueda por defecto en Android puede registrar un detector de eventos para el evento 'botón'.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
 
-## <a href="../../config_ref/images.html">Plataformas soportadas</a>
+## Plataformas soportadas
 
 *   Android
 
@@ -50,7 +50,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Search Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

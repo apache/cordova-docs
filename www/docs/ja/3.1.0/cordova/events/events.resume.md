@@ -22,14 +22,14 @@ license: >
 
 アプリケーションがバック グラウンドから取得されるときに発生します。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
+    document.addEventListener("resume", yourCallbackFunction, false);
     
 
 ## 詳細
 
 `resume`ネイティブ プラットフォームは、背景から、アプリケーションを引き出すときに発生します。
 
-通常アプリケーションに使用する必要があります `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 一度の<a href="events.html">イベント</a> リスナーをアタッチし、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>が発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
 
 ## サポートされているプラットフォーム
 
@@ -41,7 +41,7 @@ license: >
 
 ## 簡単な例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+    document.addEventListener("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Resume Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+            document.addEventListener("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -84,17 +84,17 @@ license: >
 
 ## iOS の癖
 
-その対話型関数から呼び出された、 `pause` 後<a href="events.html">イベント</a> ハンドラーで実行、アプリケーションの再開時によってシグナル状態になると、 `resume` <a href="events.html">イベント</a>。 これらの警告を含める `console.log()` と目的 C. を通過するプラグインやコルドバ、API からの呼び出し
+その対話型関数から呼び出された、 `pause` 後イベント ハンドラーで実行、アプリケーションの再開時によってシグナル状態になると、 `resume` イベント。 これらの警告を含める `console.log()` と目的 C. を通過するプラグインやコルドバ、API からの呼び出し
 
-*   **アクティブな**<a href="events.html">イベント</a>
+*   **アクティブな**イベント
     
-    IOS 固有 `active` <a href="events.html">イベント</a>の代替として利用可能です `resume` 、しユーザーにフォア グラウンドで実行されているアプリケーションと<a href="../device/device.html">デバイス</a>のロック解除を**ロック**ボタンを無効にするときを検出します。 マルチタスクのアプリケーション (と<a href="../device/device.html">デバイス</a>) が有効な場合このペアは、その後 `resume` しか iOS の 5 の下での<a href="events.html">イベント</a>。 実際には、ios 5 で有効にマルチタスクを持っているすべてのロックされたアプリはバック グラウンドにプッシュされます。 IOS の 5 の下でロックされている場合、実行されているアプリ、アプリのマルチタスク設定を無効に[UIApplicationExitsOnSuspend][1] `YES` 。 IOS 4 でロックされている場合、実行するには、この設定は問題ではないです。
+    IOS 固有 `active` イベントの代替として利用可能です `resume` 、しユーザーにフォア グラウンドで実行されているアプリケーションとデバイスのロック解除を**ロック**ボタンを無効にするときを検出します。 マルチタスクのアプリケーション (とデバイス) が有効な場合このペアは、その後 `resume` しか iOS の 5 の下でのイベント。 実際には、ios 5 で有効にマルチタスクを持っているすべてのロックされたアプリはバック グラウンドにプッシュされます。 IOS の 5 の下でロックされている場合、実行されているアプリ、アプリのマルチタスク設定を無効に[UIApplicationExitsOnSuspend][1] `YES` 。 IOS 4 でロックされている場合、実行するには、この設定は問題ではないです。
 
-*   **再開**<a href="events.html">イベント</a>
+*   **再開**イベント
     
-    呼び出された場合、 `resume` <a href="events.html">イベント</a> ハンドラー、インタラクティブ機能 `alert()` でラップする必要があります、 `setTimeout()` 、タイムアウト値をゼロ、または他のアプリケーションがハングするの呼び出し。 たとえば。
+    呼び出された場合、 `resume` イベント ハンドラー、インタラクティブ機能 `alert()` でラップする必要があります、 `setTimeout()` 、タイムアウト値をゼロ、または他のアプリケーションがハングするの呼び出し。 たとえば。
     
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+        document.addEventListener("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

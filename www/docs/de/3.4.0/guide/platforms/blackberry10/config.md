@@ -32,6 +32,6 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` oder Standard `enable` ): Legen Sie auf `disable` Web-Sicherheits-Einstellungen, den Zugriff auf remote-Inhalte aus unbekannten Quellen zu überschreiben. Diese Einstellung soll wie vor Entwicklung Bequemlichkeit nur, also dem Entfernen Verpackung Ihrer app für den Vertrieb. Für die veröffentlichten app sollte alle URIs bekannt und auf der weißen Liste mithilfe der `<access>` in die Domain-<a href="../../appdev/whitelist/index.html">Whitelist-Guide</a> beschriebene Element.
+*   `WebSecurity`( `disable` oder Standard `enable` ): Legen Sie auf `disable` Web-Sicherheits-Einstellungen, den Zugriff auf remote-Inhalte aus unbekannten Quellen zu überschreiben. Diese Einstellung soll wie vor Entwicklung Bequemlichkeit nur, also dem Entfernen Verpackung Ihrer app für den Vertrieb. Für die veröffentlichten app sollte alle URIs bekannt und auf der weißen Liste mithilfe der `<access>` in die Domain-Whitelist-Guide beschriebene Element.
     
         <preference name="WebSecurity" value="disable"/>

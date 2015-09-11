@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# Ubuntu <a href="../index.html">平臺指南</a>
+# Ubuntu 平臺指南
 
 ## 初始版本
 
-歡迎來到科爾多瓦 Ubuntu <a href="../../support/index.html">平臺支援</a>的初始版本。 此版本中，重點是在 Ubuntu 的系統上開發和使用<a href="../../overview/index.html">概述</a>中討論的跨平臺工作流。 這包括將 Ubuntu 平臺添加到您的專案，添加標準科爾多瓦外掛程式，以及建設和運行的 Ubuntu 平臺的應用程式。
+歡迎來到科爾多瓦 Ubuntu 平臺支援的初始版本。 此版本中，重點是在 Ubuntu 的系統上開發和使用概述中討論的跨平臺工作流。 這包括將 Ubuntu 平臺添加到您的專案，添加標準科爾多瓦外掛程式，以及建設和運行的 Ubuntu 平臺的應用程式。
 
 ### Ubuntu SDK
 
-您還可能想要安裝 Ubuntu QtCreator 開發環境。 請參閱[developer.ubuntu.com][1]為更多的資訊。 (QtCreator SDK 不是需要將 Ubuntu <a href="../../support/index.html">平臺支援</a>添加到應用程式科爾多瓦。)
+您還可能想要安裝 Ubuntu QtCreator 開發環境。 請參閱[developer.ubuntu.com][1]為更多的資訊。 (QtCreator SDK 不是需要將 Ubuntu 平臺支援添加到應用程式科爾多瓦。)
 
  [1]: http://developer.ubuntu.com
 

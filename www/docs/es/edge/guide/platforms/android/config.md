@@ -24,7 +24,7 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `<a href="../../../cordova/events/events.pause.html">pause</a>` de evento se desencadena. Si se establece como `false` no mata la aplicación después de un `<a href="../../../cordova/events/events.pause.html">pause</a>` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
+*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena. Si se establece como `false` no mata la aplicación después de un `pause` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -44,7 +44,7 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo <a href="../../../cordova/storage/localstorage/localstorage.html">localStorage</a> y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.
+*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo localStorage y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

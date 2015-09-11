@@ -22,22 +22,22 @@ license: >
 
 > Richiamato su di un'operazione di acquisizione di mezzi di successo.
 
-    function captureSuccess( <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>[] media<a href="../../file/fileobj/fileobj.html">File</a>s ) { ... };
+    function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## Descrizione
 
 Questa funzione viene eseguita al termine di un'operazione di acquisizione di successo. A questo punto che è stato catturato un file multimediale e neanche l'utente è stato terminato l'applicazione di cattura di media, o è stato raggiunto il limite di cattura.
 
-Ogni `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` oggetto descrive un file multimediali catturati.
+Ogni `MediaFile` oggetto descrive un file multimediali catturati.
 
 ## Esempio rapido
 
     // capture callback
-    function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    function captureSuccess(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // do something interesting with the file
         }
     };

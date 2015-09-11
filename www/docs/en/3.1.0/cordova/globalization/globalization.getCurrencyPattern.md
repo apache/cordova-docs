@@ -46,8 +46,8 @@ The inbound `currencyCode` parameter should be a `String` of one of
 the ISO 4217 currency codes, for example 'USD'.
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 ## Supported Platforms
 
@@ -55,7 +55,7 @@ error's expected code is `<a href="<a href="globalization.html">Globalization</a
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
 When the browser is set to the `en\_US` locale and the selected
 currency is United States Dollars, this example displays a popup
@@ -83,12 +83,12 @@ Expected result:
     decimal: .
     grouping: ,
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

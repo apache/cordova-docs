@@ -23,7 +23,7 @@ Developing a Plugin on Bada
 
 Plugins are only supported on Bada 2.0 and above. Bada 1.2 does not support plugins.
 
-The Bada implementation is a full javascript implementation. Therefore, adding a custom plugin involves updating CordovaJS with your plugin code. Follow these steps to add a simple _<a href="../../getting-started/webos/index.html">Hello World</a>_ plugin:
+The Bada implementation is a full javascript implementation. Therefore, adding a custom plugin involves updating CordovaJS with your plugin code. Follow these steps to add a simple _Hello World_ plugin:
 
 1. Clone the CordovaJS repository
 

@@ -20,16 +20,16 @@ license: >
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `<a href="device.model.html">device.model</a>` instead.
+**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
-獲取<a href="device.html">設備</a>的模型名稱。
+獲取設備的模型名稱。
 
     var string = device.name;
     
 
 ## 說明
 
-`device.name`返回<a href="device.html">設備</a>的模型或產品的名稱。此值由<a href="device.html">設備</a>製造商設置的並且可能不同，同一產品的不同版本。
+`device.name`返回設備的模型或產品的名稱。此值由設備製造商設置的並且可能不同，同一產品的不同版本。
 
 ## 支援的平臺
 
@@ -55,25 +55,25 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
             element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
-                                'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
-                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -93,8 +93,8 @@ license: >
 
 ## Windows Phone 7 和 8 怪癖
 
-*   返回由製造商指定的<a href="device.html">設備</a>模型。例如，三星焦點返回`SGH-i917`.
+*   返回由製造商指定的設備模型。例如，三星焦點返回`SGH-i917`.
 
 ## Tizen 怪癖
 
-*   例如，返回與供應商指派的<a href="device.html">設備</a>模型`TIZEN`
+*   例如，返回與供應商指派的設備模型`TIZEN`

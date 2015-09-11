@@ -20,7 +20,7 @@ license: >
 
 # contacts.create
 
-新しい<a href="parameters/contactFields.html">連絡先</a>オブジェクトを返します。
+新しい連絡先オブジェクトを返します。
 
     var contact = navigator.contacts.create(properties);
     
@@ -29,7 +29,7 @@ license: >
 
 `contacts.create`メソッドは同期的にし、新しいを返します `Contact` オブジェクト。
 
-このメソッドを呼び出す必要がある<a href="../device/device.html">デバイス</a>の<a href="parameters/contactFields.html">連絡先</a><a href="../storage/database/database.html">データベース</a>に<a href="parameters/contactFields.html">連絡先</a>オブジェクトを保持しない、 `Contact.save` メソッド。
+このメソッドを呼び出す必要があるデバイスの連絡先データベースに連絡先オブジェクトを保持しない、 `Contact.save` メソッド。
 
 ## サポートされているプラットフォーム
 
@@ -48,14 +48,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -68,7 +68,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Create Contact</p>
       </body>
     </html>

@@ -29,7 +29,7 @@ An interface that supplies information about the state of a file or directory.
 ## Details
 
 The `Metadata` object represents information about the state of a file
-or directory.  Calling a `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` or `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` object's
+or directory.  Calling a `DirectoryEntry` or `FileEntry` object's
 `getMetadata()` method results in a `Metadata` instance.
 
 ## Supported Platforms
@@ -40,7 +40,7 @@ or directory.  Calling a `<a href="../directoryentry/directoryentry.html">Direct
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
     function win(metadata) {
         console.log("Last Modified: " + metadata.modificationTime);

@@ -18,11 +18,11 @@ license: >
     under the License.
 ---
 
-# <a href="splashscreen.show.html">splashscreen</a>.Hide
+# splashscreen.Hide
 
 Respingere la schermata iniziale.
 
-    navigator.<a href="splashscreen.show.html">splashscreen</a>.hide();
+    navigator.splashscreen.hide();
     
 
 ## Descrizione
@@ -39,7 +39,7 @@ Questo metodo è respinto la schermata iniziale dell'applicazione.
 
 ## Esempio rapido
 
-    navigator.<a href="splashscreen.show.html">splashscreen</a>.hide();
+    navigator.splashscreen.hide();
     
 
 ## Esempio completo
@@ -47,33 +47,33 @@ Questo metodo è respinto la schermata iniziale dell'applicazione.
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="splashscreen.html">Splashscreen</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Splashscreen Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="splashscreen.show.html">splashscreen</a>.hide();
+            navigator.splashscreen.hide();
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
       </body>
     </html>
     
 
 ## iOS Quirk
 
-Il `config.xml` di file `AutoHideSplashScreen` impostazione deve essere `false` . Per ritardare nascondendo la schermata iniziale per due secondi, aggiungere un timer ad esempio nel `<a href="../events/events.deviceready.html">deviceready</a>` gestore di evento:
+Il `config.xml` di file `AutoHideSplashScreen` impostazione deve essere `false` . Per ritardare nascondendo la schermata iniziale per due secondi, aggiungere un timer ad esempio nel `deviceready` gestore di evento:
 
         setTimeout(function() {
-            navigator.<a href="splashscreen.show.html">splashscreen</a>.hide();
+            navigator.splashscreen.hide();
         }, 2000);

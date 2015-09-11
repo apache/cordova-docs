@@ -20,7 +20,7 @@ license: >
 
 # PositionError
 
-A `PositionError` オブジェクトに渡されます、 `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバック エラーが発生します。
+A `PositionError` オブジェクトに渡されます、 `geolocationError` コールバック エラーが発生します。
 
 ## プロパティ
 
@@ -36,16 +36,16 @@ A `PositionError` オブジェクトに渡されます、 `<a href="../parameter
 
 ## 説明
 
-`PositionError`オブジェクトに渡されます、 `<a href="../parameters/geolocationError.html">geolocationError</a>` 地理<a href="../Position/position.html">位置</a>情報と、エラーが発生した場合のコールバック関数。
+`PositionError`オブジェクトに渡されます、 `geolocationError` 地理位置情報と、エラーが発生した場合のコールバック関数。
 
 ### `PositionError.PERMISSION_DENIED`
 
-ユーザーの<a href="../Position/position.html">位置</a>情報を取得するアプリケーションを許可していない場合に返されます。これはプラットフォームに依存します。
+ユーザーの位置情報を取得するアプリケーションを許可していない場合に返されます。これはプラットフォームに依存します。
 
 ### `PositionError.POSITION_UNAVAILABLE`
 
-<a href="../../device/device.html">デバイス</a>が、<a href="../Position/position.html">位置</a>を取得することができます返されます。一般にこれは、<a href="../../device/device.html">デバイス</a>のネットワーク<a href="../../connection/connection.html">接続</a>や衛星の修正を得ることができません。
+デバイスが、位置を取得することができます返されます。一般にこれは、デバイスのネットワーク接続や衛星の修正を得ることができません。
 
 ### `PositionError.TIMEOUT`
 
-<a href="../../device/device.html">デバイス</a>がで指定された時間内の<a href="../Position/position.html">位置</a>を取得することができるときに返される、 `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` ' `timeout` プロパティ。 使用すると `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` 、このエラーを渡すことができます、 `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバックごと `timeout` (ミリ秒単位)。
+デバイスがで指定された時間内の位置を取得することができるときに返される、 `geolocationOptions` ' `timeout` プロパティ。 使用すると `geolocation.watchPosition` 、このエラーを渡すことができます、 `geolocationError` コールバックごと `timeout` (ミリ秒単位)。

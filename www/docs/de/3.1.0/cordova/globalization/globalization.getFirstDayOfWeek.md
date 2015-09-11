@@ -29,7 +29,7 @@ Den ersten Tag der Woche laut dem Client Benutzereinstellungen und Kalender gibt
 
 Die Wochentage sind nummeriert, beginnend mit 1, wo wird 1 Sonntag angenommen. Liefert den Tag auf der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `Number` Wert.
 
-Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -53,7 +53,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, dies zeigt einen
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getFirstDayOfWeek Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

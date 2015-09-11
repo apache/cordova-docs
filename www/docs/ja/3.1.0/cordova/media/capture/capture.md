@@ -20,28 +20,28 @@ license: >
 
 # キャプチャ
 
-> <a href="../../device/device.html">デバイス</a>のオーディオ、イメージ、およびビデオ キャプチャ機能へのアクセスを提供します。
+> デバイスのオーディオ、イメージ、およびビデオ キャプチャ機能へのアクセスを提供します。
 
-**重要なプライバシーの注意：**画像、ビデオ、または<a href="../../device/device.html">デバイス</a>の<a href="../../camera/camera.html">カメラ</a>やマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、<a href="../../camera/camera.html">カメラ</a>またはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリ (<a href="../../device/device.html">デバイス</a> オペレーティング システムしない場合そう既に) <a href="../../camera/camera.html">カメラ</a>またはマイクにアクセスする前に、ジャスト イン タイム<a href="../../notification/notification.html">通知</a>を提供する必要があります。 その<a href="../../notification/notification.html">通知</a>は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の<a href="../../notification/notification.html">通知</a>を提供して、<a href="../../camera/camera.html">カメラ</a>またはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関する<a href="../../../index.html">ガイド</a>を参照してください。
+**重要なプライバシーの注意：**画像、ビデオ、またはデバイスのカメラやマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、カメラまたはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリ (デバイス オペレーティング システムしない場合そう既に) カメラまたはマイクにアクセスする前に、ジャスト イン タイム通知を提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の通知を提供して、カメラまたはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## オブジェクト
 
 *   キャプチャ
-*   <a href="captureAudioOptions.html">CaptureAudioOptions</a>
-*   <a href="captureImageOptions.html">CaptureImageOptions</a>
-*   <a href="captureVideoOptions.html">CaptureVideoOptions</a>
+*   CaptureAudioOptions
+*   CaptureImageOptions
+*   CaptureVideoOptions
 *   CaptureCallback
-*   <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
-*   <a href="ConfigurationData.html">ConfigurationData</a>
-*   <a href="../media.html">メディア</a><a href="../../file/fileobj/fileobj.html">ファイル</a>
-*   <a href="MediaFileData.html">MediaFileData</a>
+*   CaptureErrorCB
+*   ConfigurationData
+*   メディアファイル
+*   MediaFileData
 
 ## メソッド
 
-*   <a href="captureAudio.html">capture.captureAudio</a>
-*   <a href="captureImage.html">capture.captureImage</a>
-*   <a href="captureVideo.html">capture.captureVideo</a>
-*   <a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>
+*   capture.captureAudio
+*   capture.captureImage
+*   capture.captureVideo
+*   MediaFile.getFormatData
 
 ## スコープ
 
@@ -53,19 +53,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## プロパティ
 
-*   **supportedAudioModes**: <a href="../../device/device.html">デバイス</a>でサポートされている形式の録音。（<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedAudioModes**: デバイスでサポートされている形式の録音。（ConfigurationData[])
 
-*   **supportedImageModes**: 記録画像サイズと<a href="../../device/device.html">デバイス</a>でサポートされている形式です。（<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedImageModes**: 記録画像サイズとデバイスでサポートされている形式です。（ConfigurationData[])
 
-*   **supportedVideoModes**: 記録のビデオ解像度と<a href="../../device/device.html">デバイス</a>でサポートされている形式です。（<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedVideoModes**: 記録のビデオ解像度とデバイスでサポートされている形式です。（ConfigurationData[])
 
 ## メソッド
 
-*   `<a href="captureAudio.html">capture.captureAudio</a>`: オーディオ クリップを記録する<a href="../../device/device.html">デバイス</a>のオーディオ録音アプリケーションを起動します。
+*   `capture.captureAudio`: オーディオ クリップを記録するデバイスのオーディオ録音アプリケーションを起動します。
 
-*   `<a href="captureImage.html">capture.captureImage</a>`: 写真を撮るため、<a href="../../device/device.html">デバイス</a>の<a href="../../camera/camera.html">カメラ</a> アプリケーションを起動します。
+*   `capture.captureImage`: 写真を撮るため、デバイスのカメラ アプリケーションを起動します。
 
-*   `<a href="captureVideo.html">capture.captureVideo</a>`: ビデオを記録するための<a href="../../device/device.html">デバイス</a>のビデオ レコーダー アプリケーションを起動します。
+*   `capture.captureVideo`: ビデオを記録するためのデバイスのビデオ レコーダー アプリケーションを起動します。
 
 ## サポートされているプラットフォーム
 
@@ -77,7 +77,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
@@ -113,4 +113,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

@@ -28,7 +28,7 @@ license: >
 
 *   **類型**： 一個字串，例如指示哪種類型的欄位這是*回家*。*() DOMString*
 
-*   **格式**： <a href="../../inappbrowser/inappbrowser.html">顯示</a>格式的完整位址。*() DOMString*
+*   **格式**： 顯示格式的完整位址。*() DOMString*
 
 *   **streetAddress**： 完整的街道位址。*() DOMString*
 
@@ -42,7 +42,7 @@ license: >
 
 ## 詳細資訊
 
-`ContactAddress`物件<a href="../../storage/storage.html">存儲</a>的單一位址的<a href="../contacts.html">連絡人</a>的屬性。 A `Contact` 物件可能包括多個位址在 `ContactAddress[]` 陣列。
+`ContactAddress`物件存儲的單一位址的連絡人的屬性。 A `Contact` 物件可能包括多個位址在 `ContactAddress[]` 陣列。
 
 ## 支援的平臺
 
@@ -71,15 +71,15 @@ license: >
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
     // find all contacts
-    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options = new ContactFindOptions();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## 完整的示例
@@ -87,23 +87,23 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // find all contacts
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -126,14 +126,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -141,28 +141,28 @@ license: >
 
 ## Android 2.X 的怪癖
 
-*   **上一頁**: 不受支援，返回 `false` Android 2.X 的<a href="../../device/device.html">設備</a>上。
+*   **上一頁**: 不受支援，返回 `false` Android 2.X 的設備上。
 
 ## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **上一頁**： 返回的黑莓<a href="../../device/device.html">設備</a>上不支援`false`.
+*   **上一頁**： 返回的黑莓設備上不支援`false`.
 
-*   **類型**： 部分支援。*工作*和*家庭*類型位址的每個唯一一個可以<a href="../../storage/storage.html">存儲</a>每個<a href="../contacts.html">連絡人</a>。
+*   **類型**： 部分支援。*工作*和*家庭*類型位址的每個唯一一個可以存儲每個連絡人。
 
 *   **格式化**： 部分支援。返回的串聯的所有黑莓手機位址欄位。
 
 *   **streetAddress**: 支援。返回的串聯的黑莓**位址 1**和**位址 2**的位址欄位。
 
-*   **現場**: 支援。黑莓手機**城**位址欄位中<a href="../../storage/storage.html">存儲</a>。
+*   **現場**: 支援。黑莓手機**城**位址欄位中存儲。
 
-*   **區域**： 支援。黑莓手機**stateProvince**位址欄位中<a href="../../storage/storage.html">存儲</a>。
+*   **區域**： 支援。黑莓手機**stateProvince**位址欄位中存儲。
 
-*   **郵遞區號**: 支援。黑莓手機**zipPostal**位址欄位中<a href="../../storage/storage.html">存儲</a>。
+*   **郵遞區號**: 支援。黑莓手機**zipPostal**位址欄位中存儲。
 
 *   **國家**： 支援。
 
 ## iOS 的怪癖
 
-*   **上一頁**： 返回的 iOS <a href="../../device/device.html">設備</a>上不支援`false`.
+*   **上一頁**： 返回的 iOS 設備上不支援`false`.
 
 *   **格式化**： 目前不支援。

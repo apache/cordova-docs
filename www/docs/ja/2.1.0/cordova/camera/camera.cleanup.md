@@ -23,12 +23,12 @@ camera.cleanup
 
 カメラで撮影され、ローカルストレージ temporary ディレクトリに保存された画像ファイルをクリーンアップします。
 
-    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
+    navigator.camera.cleanup( cameraSuccess, cameraError );
 
 概要
 -----------
 
-`<a href="camera.getPicture.html">camera.getPicture</a>` が `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.CAMERA` と `<a href="camera.html">Camera</a>.destinationType = <a href="camera.html">Camera</a>.DestinationType.FILE_URI` と一緒に使用されたとき、ローカルストレージ temporary ディレクトリに保存された画像ファイルをクリーンアップします。
+`camera.getPicture` が `Camera.sourceType = Camera.PictureSourceType.CAMERA` と `Camera.destinationType = Camera.DestinationType.FILE_URI` と一緒に使用されたとき、ローカルストレージ temporary ディレクトリに保存された画像ファイルをクリーンアップします。
 
 
 サポートされているプラットフォーム
@@ -37,7 +37,7 @@ camera.cleanup
 - iOS
 
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail);

@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.stop.html">media.stop</a>Record
+# media.stopRecord
 
-停止錄製音訊<a href="../file/fileobj/fileobj.html">檔</a>。
+停止錄製音訊檔。
 
-    <a href="media.stop.html">media.stop</a>Record() ；
+    media.stopRecord() ；
     
 
 ## 說明
 
-`<a href="media.stop.html">media.stop</a>Record`方法執行同步，停止錄製的音訊<a href="../file/fileobj/fileobj.html">檔</a>。
+`media.stopRecord`方法執行同步，停止錄製的音訊檔。
 
 ## 支援的平臺
 
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
@@ -136,4 +136,4 @@ license: >
 
 ## Tizen 怪癖
 
-*   Tizen <a href="../device/device.html">設備</a>上不支援。
+*   Tizen 設備上不支援。

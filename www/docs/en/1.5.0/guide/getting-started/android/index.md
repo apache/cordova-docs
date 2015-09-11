@@ -66,38 +66,38 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 	![](img/guide/platforms/android/javaSrc.jpg)
 - You might experience an error here, where Eclipse can't find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
-- Paste the following permissions under <a href="../../../phonegap/storage/parameters/version.html">version</a>Name: (view image below)
+- Paste the following permissions under versionName: (view image below)
 
-        <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:re<a href="../../../phonegap/storage/parameters/size.html">size</a>able="true" android:anyDensity="true" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.CAMERA" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.VIBRATE" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.ACCESS_COARSE_LOCATION" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.READ_PHONE_STATE" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.INTERNET" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.RECEIVE_SMS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.RECORD_AUDIO" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.MODIFY_AUDIO_SETTINGS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.READ_CONTACTS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.WRITE_CONTACTS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.ACCESS_NETWORK_STATE" /> <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="android.permission.BROADCAST_STICKY" />
+        <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.RECEIVE_SMS" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
 - Add a second activity under you application tag in AndroidManifest. (view image below)
 	
-	    <activity android:<a href="../../../phonegap/storage/parameters/name.html">name</a>="com.phonegap.DroidGap" android:label="@string/app_<a href="../../../phonegap/storage/parameters/name.html">name</a>" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
+	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 
 	![](img/guide/platforms/android/manifest.jpg)
 
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------    
 
-Now create and open a new file <a href="../../../phonegap/storage/parameters/name.html">name</a>d **index.html** in the **assets/www** directory. Paste the following code:
+Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
         <!DOCTYPE HTML>
         <html>
@@ -106,7 +106,7 @@ Now create and open a new file <a href="../../../phonegap/storage/parameters/nam
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         </head>
         <body>
-        <h1><a href="../webos/index.html">Hello World</a></h1>
+        <h1>Hello World</h1>
         </body>
         </html>
 
@@ -118,7 +118,7 @@ Now create and open a new file <a href="../../../phonegap/storage/parameters/nam
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 
-5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (Settings &gt; Applications &gt; Development)
@@ -128,5 +128,5 @@ Now create and open a new file <a href="../../../phonegap/storage/parameters/nam
 Done!
 -----
 
-You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
+You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
 

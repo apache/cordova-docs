@@ -20,16 +20,16 @@ license: >
 
 # CameraPopoverOptions
 
-iOS 僅指定彈出的錨元素的<a href="../../geolocation/Position/position.html">位置</a>和箭頭方向，從 iPad 的庫或專輯選擇圖像時的參數。
+iOS 僅指定彈出的錨元素的位置和箭頭方向，從 iPad 的庫或專輯選擇圖像時的參數。
 
     {x: 0，y： 32，寬度： 320，高度： 480，arrowDir： Camera.PopoverArrowDirection.ARROW_ANY} ；
     
 
 ## CameraPopoverOptions
 
-*   **x**： 圖元的 x <a href="../../geolocation/Coordinates/coordinates.html">座標</a>上的錨定彈出螢幕元素。*（人數）*
+*   **x**： 圖元的 x 座標上的錨定彈出螢幕元素。*（人數）*
 
-*   **y**： 到其錨定彈出螢幕元素的 y 圖元<a href="../../geolocation/Coordinates/coordinates.html">座標</a>。*（人數）*
+*   **y**： 到其錨定彈出螢幕元素的 y 圖元座標。*（人數）*
 
 *   **寬度**： 寬度以圖元為單位），到其錨定彈出螢幕元素。*（人數）*
 
@@ -40,7 +40,7 @@ iOS 僅指定彈出的錨元素的<a href="../../geolocation/Position/position.h
             Camera.PopoverArrowDirection = {ARROW_UP: 1，/ / 匹配 iOS UIPopoverArrowDirection 常量 ARROW_DOWN： 2，ARROW_LEFT： 4，ARROW_RIGHT： 8，ARROW_ANY： 15} ；
         
 
-請注意彈出的大小可能會更改箭頭的方向和螢幕的方向調整。 請確保帳戶方向更改時指定的錨點的元素<a href="../../geolocation/Position/position.html">位置</a>。
+請注意彈出的大小可能會更改箭頭的方向和螢幕的方向調整。 請確保帳戶方向更改時指定的錨點的元素位置。
 
 ## 快速的示例
 
@@ -52,7 +52,7 @@ iOS 僅指定彈出的錨元素的<a href="../../geolocation/Position/position.h
          popoverOptions  : popover
      };
     
-     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
+     navigator.camera.getPicture(onSuccess, onFail, options);
     
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

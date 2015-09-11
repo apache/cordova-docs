@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# <a href="MediaFile.html">MediaFile</a>.getFormatData
+# MediaFile.getFormatData
 
 > Извлекает формат сведений о файле записи СМИ.
 
     mediaFile.getFormatData(
-        <a href="MediaFile.html">MediaFile</a>DataSuccessCB successCallback,
-        [<a href="MediaFile.html">MediaFile</a>DataErrorCB errorCallback]
+        MediaFileDataSuccessCB successCallback,
+        [MediaFileDataErrorCB errorCallback]
     );
     
 
 ## Описание
 
-Эта функция асинхронно пытается извлечь сведения о формате для файла мультимедиа. Если успешно, он вызывает `<a href="MediaFile.html">MediaFile</a>DataSuccessCB` обратного вызова с `<a href="MediaFile.html">MediaFile</a>Data` объект. Если попытка завершается неудачей, то функция вызывает `<a href="MediaFile.html">MediaFile</a>DataErrorCB` обратного вызова.
+Эта функция асинхронно пытается извлечь сведения о формате для файла мультимедиа. Если успешно, он вызывает `MediaFileDataSuccessCB` обратного вызова с `MediaFileData` объект. Если попытка завершается неудачей, то функция вызывает `MediaFileDataErrorCB` обратного вызова.
 
 ## Поддерживаемые платформы
 
@@ -42,12 +42,12 @@ license: >
 
 ## Ежевика WebWorks совместимости
 
-Не предоставляет API для получения информации о медиа-файлов, так что все `<a href="MediaFile.html">MediaFile</a>Data` объекты возвращают со значениями по умолчанию.
+Не предоставляет API для получения информации о медиа-файлов, так что все `MediaFileData` объекты возвращают со значениями по умолчанию.
 
 ## Андроид причуды
 
-API для доступа к медиа файла формата информации ограничено, поэтому не все `<a href="MediaFile.html">MediaFile</a>Data` свойства поддерживаются.
+API для доступа к медиа файла формата информации ограничено, поэтому не все `MediaFileData` свойства поддерживаются.
 
 ## iOS причуды
 
-API для доступа к медиа файла формата информации ограничено, поэтому не все `<a href="MediaFile.html">MediaFile</a>Data` свойства поддерживаются.
+API для доступа к медиа файла формата информации ограничено, поэтому не все `MediaFileData` свойства поддерживаются.

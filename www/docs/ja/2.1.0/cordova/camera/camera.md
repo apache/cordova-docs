@@ -26,8 +26,8 @@ Camera
 メソッド
 -------
 
-- <a href="camera.getPicture.html">camera.getPicture</a>
-- <a href="camera.cleanup.html">camera.cleanup</a>
+- camera.getPicture
+- camera.cleanup
 
 パーミッション
 -----------
@@ -69,7 +69,7 @@ Camera
 
 ### iOS
 
-#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
+#### App/Supporting Files/Cordova.plist
 
     <key>Plugins</key>
     <dict>

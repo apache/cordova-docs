@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>UploadOptions
+# FileUploadOptions
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` object can be passed to the `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>`
+A `FileUploadOptions` object can be passed to the `FileTransfer`
 object's `upload()` method to specify additional parameters to the
 upload script.
 
@@ -40,7 +40,7 @@ upload script.
 
 ## Description
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` object can be passed to the `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>`
+A `FileUploadOptions` object can be passed to the `FileTransfer`
 object's `upload()` method to specify additional parameters to the
 upload script.
 

@@ -22,26 +22,26 @@ license: >
 
 Consulta la base de datos de contactos del dispositivo y vuelve a uno o más objetos de `Contact`, cada una contiene los campos especificados.
 
-    navigator.contacts.find(<a href="parameters/contactFields.html">contactFields</a>, <a href="parameters/contactSuccess.html">contactSuccess</a>, <a href="parameters/contactError.html">contactError</a>, <a href="parameters/contactFindOptions.html">contactFindOptions</a>);
+    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
     
 
 ## Descripción
 
-El método `contacts.find` se ejecuta asincrónicamente, consultando la base de datos de contactos del dispositivo y devolver una matriz de objetos de `Contact`. Los objetos resultantes son pasados a la función de callback `<a href="parameters/contactSuccess.html">contactSuccess</a>` especificada por el parámetro **<a href="parameters/contactSuccess.html">contactSuccess</a>**.
+El método `contacts.find` se ejecuta asincrónicamente, consultando la base de datos de contactos del dispositivo y devolver una matriz de objetos de `Contact`. Los objetos resultantes son pasados a la función de callback `contactSuccess` especificada por el parámetro **contactSuccess**.
 
-El parámetro **<a href="parameters/contactFields.html">contactFields</a>** especifica los campos para ser utilizado como un calificador de búsqueda, y sólo esos resultados son pasados a la función de devolución de llamada **<a href="parameters/contactSuccess.html">contactSuccess</a>**. Un parámetro de longitud cero **<a href="parameters/contactFields.html">contactFields</a>** no es válido y resultados en `<a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>.INVALID_ARGUMENT_ERROR`. Un valor de **<a href="parameters/contactFields.html">contactFields</a>** de `"*"` devuelve todo contacto con los campos.
+El parámetro **contactFields** especifica los campos para ser utilizado como un calificador de búsqueda, y sólo esos resultados son pasados a la función de devolución de llamada **contactSuccess**. Un parámetro de longitud cero **contactFields** no es válido y resultados en `ContactError.INVALID_ARGUMENT_ERROR`. Un valor de **contactFields** de `"*"` devuelve todo contacto con los campos.
 
-La cadena de **<a href="parameters/contactFindOptions.html">contactFindOptions</a>.filter** puede ser usada como un filtro de búsqueda al consultar la base de datos de contactos. Si proporciona, mayúsculas y minúsculas, coincidencia parcial valor se aplica a cada campo especificado en el parámetro **<a href="parameters/contactFields.html">contactFields</a>**. Si hay un partido para *cualquier* de los campos especificados, se devuelve el contacto.
+La cadena de **contactFindOptions.filter** puede ser usada como un filtro de búsqueda al consultar la base de datos de contactos. Si proporciona, mayúsculas y minúsculas, coincidencia parcial valor se aplica a cada campo especificado en el parámetro **contactFields**. Si hay un partido para *cualquier* de los campos especificados, se devuelve el contacto.
 
 ## Parámetros
 
-*   **<a href="parameters/contactFields.html">contactFields</a>**: póngase en contacto con campos para usar como un calificador de búsqueda. La resultante `Contact` objeto sólo cuenta con los valores de estos campos. *(DOMString[])* [Obligatorio]
+*   **contactFields**: póngase en contacto con campos para usar como un calificador de búsqueda. La resultante `Contact` objeto sólo cuenta con los valores de estos campos. *(DOMString[])* [Obligatorio]
 
-*   **<a href="parameters/contactSuccess.html">contactSuccess</a>**: función callback éxito invocada con los contactos de regresar de la base de datos. [Obligatorio]
+*   **contactSuccess**: función callback éxito invocada con los contactos de regresar de la base de datos. [Obligatorio]
 
-*   **<a href="parameters/contactError.html">contactError</a>**: función de callback de Error, se invoca cuando se produce un error. [Opcional]
+*   **contactError**: función de callback de Error, se invoca cuando se produce un error. [Opcional]
 
-*   **<a href="parameters/contactFindOptions.html">contactFindOptions</a>**: buscar opciones para filtrar contactos. [Opcional]
+*   **contactFindOptions**: buscar opciones para filtrar contactos. [Opcional]
 
 ## Plataformas soportadas
 
@@ -57,12 +57,12 @@ La cadena de **<a href="parameters/contactFindOptions.html">contactFindOptions</
         alert('Found ' + contacts.length + ' contacts.');
     };
     
-    function onError(<a href="parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
     // find all contacts with 'Bob' in any name field
-    var options      = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options      = new ContactFindOptions();
     options.filter   = "Bob";
     options.multiple = true;
     var fields       = ["displayName", "name"];
@@ -74,18 +74,18 @@ La cadena de **<a href="parameters/contactFindOptions.html">contactFindOptions</
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Contact Example</title>
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
                 // Wait for device API libraries to load
-                document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+                document.addEventListener("deviceready", onDeviceReady, false);
     
                 // device APIs are available
     
                 function onDeviceReady() {
                     // find all contacts with 'Bob' in any name field
-                    var options = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+                    var options = new ContactFindOptions();
                     options.filter = "Bob";
                     var fields = ["displayName", "name"];
                     navigator.contacts.find(fields, onSuccess, onError, options);
@@ -101,14 +101,14 @@ La cadena de **<a href="parameters/contactFindOptions.html">contactFindOptions</
     
                 // onError: Failed to get the contacts
     
-                function onError(<a href="parameters/contactError.html">contactError</a>) {
+                function onError(contactError) {
                     alert('onError!');
                 }
             </script>
         </head>
     
         <body>
-            <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+            <h1>Example</h1>
             <p>Find Contacts</p>
         </body>
     </html>

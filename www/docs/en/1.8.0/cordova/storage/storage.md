@@ -23,30 +23,30 @@ Storage
 
 > Provides access to the devices storage options.
 
-This API is based on the [W3C Web SQL <a href="database/database.html">Database</a> Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with Cordova's implementation. For devices that don't have storage support, Cordova's implementation should be compatible with the W3C specification.
+This API is based on the [W3C Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with Cordova's implementation. For devices that don't have storage support, Cordova's implementation should be compatible with the W3C specification.
 
 Methods
 -------
 
-- <a href="storage.opendatabase.html">open<a href="database/database.html">Database</a></a>
+- openDatabase
 
 Arguments
 ---------
 
-- <a href="parameters/name.html">database_name</a>
-- <a href="parameters/version.html">database_version</a>
-- <a href="parameters/display_name.html">database_displayname</a>
-- <a href="parameters/size.html">database_size</a>
+- database_name
+- database_version
+- database_displayname
+- database_size
 
 Objects
 -------
 
-- <a href="database/database.html">Database</a>
-- <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
-- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
-- <a href="sqlresultsetlist/sqlresultsetlist.html"><a href="sqlresultset/sqlresultset.html">SQLResultSet</a>List</a>
-- <a href="sqlerror/sqlerror.html">SQLError</a>
-- <a href="localstorage/localstorage.html">localStorage</a>
+- Database
+- SQLTransaction
+- SQLResultSet
+- SQLResultSetList
+- SQLError
+- localStorage
 
 Permissions
 -----------

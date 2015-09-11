@@ -36,7 +36,7 @@ Niniejszy Przewodnik obejmuje kilka zabezpieczeń najlepszych praktyk, które na
 
 ## Biała
 
-*   Przeczytać i zrozumieć <a href="../whitelist/index.html">Przewodnik białej listy</a>
+*   Przeczytać i zrozumieć Przewodnik białej listy
 
 *   Białą domeny nie działa na Android API 10 i poniżej i WP8 dla ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
 

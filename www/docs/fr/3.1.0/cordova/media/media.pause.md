@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.html">Media</a>.<a href="../events/events.pause.html">pause</a>
+# Media.pause
 
 Suspendre la lecture d'un fichier audio.
 
-    media.<a href="../events/events.pause.html">pause</a>();
+    media.pause();
     
 
 ## Description
 
-La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute de façon synchrone et suspend la lecture d'un fichier audio.
+La `media.pause` méthode s'exécute de façon synchrone et suspend la lecture d'un fichier audio.
 
 ## Plates-formes prises en charge
 
@@ -44,7 +44,7 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // success callback
             function () { console.log("playAudio():Audio Success"); },
             // error callback
@@ -56,7 +56,7 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
     
         // Pause after 10 seconds
         setTimeout(function () {
-            media.<a href="../events/events.pause.html">pause</a>();
+            media.pause();
         }, 10000);
     }
     
@@ -67,14 +67,14 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -90,8 +90,8 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -100,17 +100,17 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -119,9 +119,9 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
     
             // Pause audio
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -129,7 +129,7 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -150,7 +150,7 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
     
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     
@@ -158,7 +158,7 @@ La `media.<a href="../events/events.pause.html">pause</a>` méthode s'exécute d
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

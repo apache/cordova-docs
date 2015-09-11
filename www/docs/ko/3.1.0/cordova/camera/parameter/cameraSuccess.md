@@ -27,9 +27,9 @@ license: >
     }
     
 
-## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
-*   **imageData**: Base64 인코딩은 이미지 데이터, *또는* 이미지 <a href="../../file/fileobj/fileobj.html">파일</a>에 따라 URI의 `<a href="cameraOptions.html">cameraOptions</a>` 적용. *(문자열)*
+*   **imageData**: Base64 인코딩은 이미지 데이터, *또는* 이미지 파일에 따라 URI의 `cameraOptions` 적용. *(문자열)*
 
 ## 예를 들어
 

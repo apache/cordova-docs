@@ -23,12 +23,12 @@ camera.cleanup
 
 카메라로 찍혀 임시 저장소에 저장된 이미지들을 제거한다.
 
-    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
+    navigator.camera.cleanup( cameraSuccess, cameraError );
 
 Description
 -----------
 
-임시 저장소에 있는 이미지 파일들을 삭제한다. `<a href="camera.getPicture.html">camera.getPicture</a>`함수는 `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.CAMERA` 과 `<a href="camera.html">Camera</a>.destinationType = <a href="camera.html">Camera</a>.DestinationType.FILE_URI` 일때 이용된다.
+임시 저장소에 있는 이미지 파일들을 삭제한다. `camera.getPicture`함수는 `Camera.sourceType = Camera.PictureSourceType.CAMERA` 과 `Camera.destinationType = Camera.DestinationType.FILE_URI` 일때 이용된다.
 
 
 Supported Platforms
@@ -37,13 +37,13 @@ Supported Platforms
 - iOS
 
 
-<a href="../storage/storage.opendatabase.html">Example</a>
+Example
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail); 
 
     function onSuccess() {
-        console.log("<a href="camera.html">Camera</a> cleanup success.")
+        console.log("Camera cleanup success.")
     }
 
     function onFail(message) {

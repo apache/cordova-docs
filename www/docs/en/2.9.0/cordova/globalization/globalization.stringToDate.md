@@ -53,8 +53,8 @@ The `options.formatLength` can be `short`, `medium`, `long`, or
 time`.
 
 If there is an error parsing the date string, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PARSING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -64,7 +64,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a
@@ -81,13 +81,13 @@ integer represents an array index.
         {selector: 'date'}
     );
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToDate Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

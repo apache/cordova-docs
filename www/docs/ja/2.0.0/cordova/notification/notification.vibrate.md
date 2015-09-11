@@ -36,38 +36,38 @@ notification.vibrate
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // 2.5秒間バイブレーションさせます
     //
     navigator.notification.vibrate(2500);
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // 処理なし
         }
 
         // 通知ダイアログを表示
         //
         function showAlert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+            navigator.notification.alert(
                 'あなたの勝ちです！', // メッセージ
                 'ゲームオーバー', // タイトル
                 '終了' // ボタン名
@@ -77,7 +77,7 @@ notification.vibrate
         // 警告音を3回鳴らす
         //
         function playBeep() {
-            navigator.<a href="notification.beep.html">notification.beep</a>(3);
+            navigator.notification.beep(3);
         }
 
         // 2秒間バイブレーションさせます

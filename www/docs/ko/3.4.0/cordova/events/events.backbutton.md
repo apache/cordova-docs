@@ -20,14 +20,14 @@ license: >
 
 # backbutton
 
-<a href="events.html">이벤트</a>는 사용자가 뒤로 버튼을 누를 때 발생 합니다.
+이벤트는 사용자가 뒤로 버튼을 누를 때 발생 합니다.
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-기본 뒤로 버튼 동작을 재정의 하려면 등록에 대 한 <a href="events.html">이벤트</a> 리스너는 `backbutton` <a href="events.html">이벤트</a>를 호출 하 여 일반적으로 `document.addEventListener` 받으시면는 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">이벤트</a>. 그것은 더 이상 뒤로 버튼 동작을 재정의 하려면 다른 메서드를 호출 하는 데 필요한입니다.
+기본 뒤로 버튼 동작을 재정의 하려면 등록에 대 한 이벤트 리스너는 `backbutton` 이벤트를 호출 하 여 일반적으로 `document.addEventListener` 받으시면는 `deviceready` 이벤트. 그것은 더 이상 뒤로 버튼 동작을 재정의 하려면 다른 메서드를 호출 하는 데 필요한입니다.
 
 ## 지원 되는 플랫폼
 
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Back Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

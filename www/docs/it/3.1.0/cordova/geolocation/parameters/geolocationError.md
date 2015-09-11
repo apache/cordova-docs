@@ -29,4 +29,4 @@ Funzione di callback dell'utente che viene eseguito quando si verifica un errore
 
 ## Parametri
 
-*   **errore**: l'errore restituito dal dispositivo. *(<a href="../PositionError/positionError.html">PositionError</a>)*
+*   **errore**: l'errore restituito dal dispositivo. *(PositionError)*

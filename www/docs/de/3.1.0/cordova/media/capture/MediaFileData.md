@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="MediaFile.html">MediaFile</a>Data
+# MediaFileData
 
-> Kapselt Formatinformationen zu einer <a href="../media.html">Medien</a>datei.
+> Kapselt Formatinformationen zu einer Mediendatei.
 
 ## Eigenschaften
 
@@ -36,7 +36,7 @@ license: >
 
 ## BlackBerry WebWorks Macken
 
-Keine API bietet Informationen für <a href="../media.html">Medien</a>-<a href="../../file/fileobj/fileobj.html">Datei</a>en, so dass die `<a href="MediaFile.html">MediaFile</a>Data` von zurückgegebene Objekt `<a href="<a href="MediaFile.html">MediaFile</a>.getFormatData.html"><a href="MediaFile.html">MediaFile</a>.getFormatData</a>` verfügt über die folgenden Standardwerte:
+Keine API bietet Informationen für Medien-Dateien, so dass die `MediaFileData` von zurückgegebene Objekt `MediaFile.getFormatData` verfügt über die folgenden Standardwerte:
 
 *   **Codecs**: nicht unterstützt, und gibt`null`.
 
@@ -50,28 +50,28 @@ Keine API bietet Informationen für <a href="../media.html">Medien</a>-<a href="
 
 ## Android Macken
 
-Unterstützt die folgenden `<a href="MediaFile.html">MediaFile</a>Data` Eigenschaften:
+Unterstützt die folgenden `MediaFileData` Eigenschaften:
 
 *   **Codecs**: nicht unterstützt, und gibt`null`.
 
 *   **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Höhe**: unterstützt: nur Bild und Video-<a href="../../file/fileobj/fileobj.html">Datei</a>en.
+*   **Höhe**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Breite**: unterstützt: nur Bild und Video-<a href="../../file/fileobj/fileobj.html">Datei</a>en.
+*   **Breite**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Dauer**: unterstützt: Audio- und video-<a href="../../file/fileobj/fileobj.html">Datei</a>en nur.
+*   **Dauer**: unterstützt: Audio- und video-Dateien nur.
 
 ## iOS Macken
 
-Unterstützt die folgenden `<a href="MediaFile.html">MediaFile</a>Data` Eigenschaften:
+Unterstützt die folgenden `MediaFileData` Eigenschaften:
 
 *   **Codecs**: nicht unterstützt, und gibt`null`.
 
-*   **Bitrate**: iOS4 <a href="../../device/device.html">Gerät</a>en für nur Audio unterstützt. Gibt 0 (null) für Bilder und Videos.
+*   **Bitrate**: iOS4 Geräten für nur Audio unterstützt. Gibt 0 (null) für Bilder und Videos.
 
-*   **Höhe**: unterstützt: nur Bild und Video-<a href="../../file/fileobj/fileobj.html">Datei</a>en.
+*   **Höhe**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Breite**: unterstützt: nur Bild und Video-<a href="../../file/fileobj/fileobj.html">Datei</a>en.
+*   **Breite**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Dauer**: unterstützt: Audio- und video-<a href="../../file/fileobj/fileobj.html">Datei</a>en nur.
+*   **Dauer**: unterstützt: Audio- und video-Dateien nur.

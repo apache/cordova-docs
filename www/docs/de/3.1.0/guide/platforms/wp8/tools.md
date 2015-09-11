@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone Befehlszeilentools
 
-Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ausführlichere Wegbeschreibung.
+Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -Datei ausführlichere Wegbeschreibung.
 
  [1]: http://cordova.apache.org
 
@@ -36,9 +36,9 @@ Es gibt 2 Möglichkeiten, gehen Sie zum Erstellen einer neuen Apache Cordova WP7
 
 ### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen.
 
-*   Der Stamm der Repo enthält eine <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> createTemplates.bat. Doppelklick auf diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> wird 2 Zip-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en generiert. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-> neues Projekt im Menü erstellen können.
+*   Der Stamm der Repo enthält eine Datei createTemplates.bat. Doppelklick auf diese Datei wird 2 Zip-Dateien generiert. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
 
-*   Wenn Sie die Batch-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
+*   Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
 
 Führen Sie das Skript:
 
@@ -53,7 +53,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rüc
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
+    >PackageName      : The namespace for the project (default is Cordova.Example)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:

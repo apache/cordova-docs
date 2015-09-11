@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error
+FileTransferError
 ========
 
-A `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` object is passed to an error callback when an error occurs.
+A `FileTransferError` object is passed to an error callback when an error occurs.
 
 Properties
 ----------
@@ -37,13 +37,13 @@ Properties
 Constants
 ---------
 
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.FILE_NOT_FOUND_ERR`
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.INVALID_URL_ERR`
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.CONNECTION_ERR`
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.ABORT_ERR`
+- `FileTransferError.FILE_NOT_FOUND_ERR`
+- `FileTransferError.INVALID_URL_ERR`
+- `FileTransferError.CONNECTION_ERR`
+- `FileTransferError.ABORT_ERR`
 
 Description
 -----------
 
-The `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` object is passed to the error callback when an
+The `FileTransferError` object is passed to the error callback when an
 error occurs when uploading or downloading a file.

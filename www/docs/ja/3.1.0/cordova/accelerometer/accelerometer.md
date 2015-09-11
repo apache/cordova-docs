@@ -18,29 +18,29 @@ license: >
     under the License.
 ---
 
-# <a href="acceleration/acceleration.html">加速</a>度センサー
+# 加速度センサー
 
-> *X* *y*、および*z*の方向での<a href="../device/device.html">デバイス</a>の動きを<a href="../media/capture/capture.html">キャプチャ</a>します。
+> *X* *y*、および*z*の方向でのデバイスの動きをキャプチャします。
 
 ## メソッド
 
-*   <a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>
-*   <a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>
-*   <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
+*   accelerometer.getCurrentAcceleration
+*   accelerometer.watchAcceleration
+*   accelerometer.clearWatch
 
 ## 引数
 
-*   <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
-*   <a href="parameters/accelerometerError.html">accelerometerError</a>
-*   <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
+*   accelerometerSuccess
+*   accelerometerError
+*   accelerometerOptions
 
 ## オブジェクト (読み取り専用)
 
-*   <a href="acceleration/acceleration.html">加速</a>
+*   加速
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -87,4 +87,4 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

@@ -20,18 +20,18 @@ license: >
 
 # volumedownbutton
 
-在使用者按下按鈕卷時，將觸發該<a href="events.html">事件</a>。
+在使用者按下按鈕卷時，將觸發該事件。
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-如果您需要重寫預設音量降低的行為你可以註冊為<a href="events.html">事件</a>攔截器 `volumedownbutton` <a href="events.html">事件</a>。
+如果您需要重寫預設音量降低的行為你可以註冊為事件攔截器 `volumedownbutton` 事件。
 
-應用程式通常應使用 `document.addEventListener` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## <a href="../../config_ref/images.html">支援的平臺</a>
+## 支援的平臺
 
 *   黑莓 10
 *   安卓系統
@@ -51,7 +51,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Volume Down Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,7 +59,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

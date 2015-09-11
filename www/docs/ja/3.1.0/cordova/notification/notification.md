@@ -20,19 +20,19 @@ license: >
 
 # 通知
 
-> 音、視覚と触覚<a href="../device/device.html">デバイス</a>通知。
+> 音、視覚と触覚デバイス通知。
 
 ## メソッド
 
-*   `<a href="notification.alert.html">notification.alert</a>`
-*   `<a href="notification.confirm.html">notification.confirm</a>`
-*   `<a href="notification.prompt.html">notification.prompt</a>`
-*   `<a href="notification.beep.html">notification.beep</a>`
-*   `<a href="notification.vibrate.html">notification.vibrate</a>`
+*   `notification.alert`
+*   `notification.confirm`
+*   `notification.prompt`
+*   `notification.beep`
+*   `notification.vibrate`
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
@@ -74,4 +74,4 @@ license: >
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

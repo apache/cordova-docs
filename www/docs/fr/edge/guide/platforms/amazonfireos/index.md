@@ -24,9 +24,9 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   <a href="config.html">Amazon Fire OS Configuration</a>
-*   <a href="webview.html">Amazon Fire OS WebViews</a>
-*   <a href="plugin.html">Amazon Fire OS Plugins</a>
+*   Amazon Fire OS Configuration
+*   Amazon Fire OS WebViews
+*   Amazon Fire OS Plugins
 
 ## Introduction
 

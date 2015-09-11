@@ -22,14 +22,14 @@ license: >
 
 L'evento viene generato quando un'applicazione viene recuperata dallo sfondo.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
+    document.addEventListener("resume", yourCallbackFunction, false);
     
 
 ## Dettagli
 
 Il `resume` evento viene generato quando la piattaforma nativa tira l'applicazione fuori dallo sfondo.
 
-Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
 
 ## Piattaforme supportate
 
@@ -41,7 +41,7 @@ Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrows
 
 ## Esempio rapido
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+    document.addEventListener("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrows
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Resume Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrows
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+            document.addEventListener("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -94,7 +94,7 @@ Eventuali funzioni interattive, chiamate da un `pause` gestore eventi eseguire p
     
     Quando viene chiamato da un `resume` gestore eventi, funzioni interattive come `alert()` bisogno di essere avvolto in un `setTimeout()` con un valore di timeout di zero, altrimenti l'app si blocca. Ad esempio:
     
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+        document.addEventListener("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

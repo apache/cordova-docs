@@ -30,7 +30,7 @@ license: >
 
 ## 詳細資訊
 
-`<a href="../../inappbrowser/window.open.html">window.open</a>Database()`方法返回 `Database` 的物件。
+`window.openDatabase()`方法返回 `Database` 的物件。
 
 ## 支援的平臺
 
@@ -56,13 +56,13 @@ license: >
         alert("success!");
     }
     
-    var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
 ## 更改版本快速示例
 
-    var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
     
 
@@ -71,19 +71,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = <a href="../../inappbrowser/window.open.html">window.open</a>Database("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -111,7 +111,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

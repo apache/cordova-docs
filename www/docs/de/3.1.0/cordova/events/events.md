@@ -24,25 +24,25 @@ license: >
 
 ## Ereignistypen
 
-*   <a href="events.deviceready.html">deviceready</a>
-*   <a href="events.pause.html">Anhalten</a>
-*   <a href="events.resume.html">Lebenslauf</a>
-*   <a href="events.online.html">Online</a>
-*   <a href="events.offline.html">Offline</a>
-*   <a href="events.backbutton.html">BackButton</a>
-*   <a href="events.batterycritical.html">batterycritical</a>
-*   <a href="events.batterylow.html">batterylow</a>
-*   <a href="events.batterystatus.html">batterystatus</a>
-*   <a href="events.menubutton.html">menubutton</a>
-*   <a href="events.searchbutton.html">SearchButton</a>
-*   <a href="events.startcallbutton.html">startcallbutton</a>
-*   <a href="events.endcallbutton.html">endcallbutton</a>
-*   <a href="events.volumedownbutton.html">volumedownbutton</a>
-*   <a href="events.volumeupbutton.html">volumeupbutton</a>
+*   deviceready
+*   Anhalten
+*   Lebenslauf
+*   Online
+*   Offline
+*   BackButton
+*   batterycritical
+*   batterylow
+*   batterystatus
+*   menubutton
+*   SearchButton
+*   startcallbutton
+*   endcallbutton
+*   volumedownbutton
+*   volumeupbutton
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0, Cordova implementiert Batteriestatus und andere <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Zugriff auf alle anderen Ereignisse, die nicht im Zusammenhang mit Batterie-Status sind standardmäßig aktiviert. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, aktivieren oder Deaktivieren von Batterie-Veranstaltungen:
+Ab Version 3.0, Cordova implementiert Batteriestatus und andere Geräteebene APIs als *Plugins*. Zugriff auf alle anderen Ereignisse, die nicht im Zusammenhang mit Batterie-Status sind standardmäßig aktiviert. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, aktivieren oder Deaktivieren von Batterie-Veranstaltungen:
 
         $ cordova plugin add org.apache.cordova.battery-status
         $ cordova plugin ls
@@ -92,4 +92,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

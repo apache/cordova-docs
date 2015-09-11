@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="upgrading.html">La mise à niveau de Windows 8</a>
+# La mise à niveau de Windows 8
 
 Ce guide montre comment modifier des projets Windows 8 mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 

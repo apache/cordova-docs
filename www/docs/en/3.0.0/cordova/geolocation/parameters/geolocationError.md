@@ -31,4 +31,4 @@ geolocation functions.
 Parameters
 ----------
 
-- __error__: The error returned by the device. _(<a href="../<a href="../Position/position.html">Position</a>Error/positionError.html"><a href="../Position/position.html">Position</a>Error</a>)_
+- __error__: The error returned by the device. _(PositionError)_

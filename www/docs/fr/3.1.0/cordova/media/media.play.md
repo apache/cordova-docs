@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="media.html">Media</a>.Play
+# Media.Play
 
 Commence ou reprend la lecture d'un fichier audio.
 
@@ -44,7 +44,7 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // success callback
             function () {
                 console.log("playAudio():Audio Success");
@@ -65,14 +65,14 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -89,8 +89,8 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
             //
             function playAudio(src) {
                 if (my_media == null) {
-                    // Create <a href="media.html">Media</a> object from src
-                    my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                    // Create Media object from src
+                    my_media = new Media(src, onSuccess, onError);
                 } // else play current audio
                 // Play audio
                 my_media.play();
@@ -99,17 +99,17 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -118,9 +118,9 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
     
             // Pause audio
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -128,7 +128,7 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -149,7 +149,7 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
     
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     
@@ -157,7 +157,7 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>
@@ -166,23 +166,23 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
 
 ## BlackBerry WebWorks Quirks
 
-*   <a href="../device/device.html">Appareil</a>s blackBerry soutiennent un nombre limité de canaux audio simultanés. <a href="../device/device.html">Appareil</a>s CDMA ne prennent en charge un seul canal audio. Autres périphériques prennent en charge jusqu'à deux voies simultanées. Tenter de jouer les fichiers audio plus que le montant pris en charge se traduit par la lecture précédente étant arrêtée.
+*   Appareils blackBerry soutiennent un nombre limité de canaux audio simultanés. Appareils CDMA ne prennent en charge un seul canal audio. Autres périphériques prennent en charge jusqu'à deux voies simultanées. Tenter de jouer les fichiers audio plus que le montant pris en charge se traduit par la lecture précédente étant arrêtée.
 
 ## iOS Quirks
 
 *   **numberOfLoops**: passer cette option à le `play` méthode pour spécifier le nombre de fois que vous voulez le support de fichiers pour jouer, par exemple :
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ numberOfLoops: 2 })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ numberOfLoops: 2 })
         
 
 *   **playAudioWhenScreenIsLocked**: passez cette option à le `play` méthode pour spécifier si vous souhaitez permettre la lecture lorsque l'écran est verrouillé. Si la valeur `true` (la valeur par défaut), l'état de la touche mute de matériel est ignoré, par exemple :
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ playAudioWhenScreenIsLocked : false })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
 *   **ordre de recherche de fichier**: lorsque seulement un nom de fichier ou chemin d'accès simple est fournie, iOS recherche dans le `www` répertoire pour le fichier, puis dans de l'application `documents/tmp` répertoire :
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("audio/beer.mp3")
-        my<a href="media.html">Media</a>.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        var myMedia = new Media("audio/beer.mp3")
+        myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

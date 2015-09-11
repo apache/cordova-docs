@@ -32,7 +32,7 @@ Como objeto que le permite crear y escribir datos en un archivo.
 
 *   **posición**: la posición actual del puntero del archivo. *(largo)*
 
-*   **error**: un objeto que contiene errores. *(<a href="../fileerror/fileerror.html">FileError</a>)*
+*   **error**: un objeto que contiene errores. *(FileError)*
 
 *   **onwritestart**: cuando comienza la escritura. *(Función)*
 
@@ -182,26 +182,26 @@ Soporte de sólo texto:
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileWriter Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
     
-        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
+        function gotFileEntry(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
     
@@ -228,7 +228,7 @@ Soporte de sólo texto:
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Write File</p>
       </body>
     </html>

@@ -20,7 +20,7 @@ license: >
 
 # CompassError
 
-A `CompassError` oggetto viene restituito alla `<a href="../parameters/compassError.html">compassError</a>` funzione di callback quando si verifica un errore.
+A `CompassError` oggetto viene restituito alla `compassError` funzione di callback quando si verifica un errore.
 
 ## Proprietà
 
@@ -33,4 +33,4 @@ A `CompassError` oggetto viene restituito alla `<a href="../parameters/compassEr
 
 ## Descrizione
 
-Quando si verifica un errore, il `CompassError` oggetto viene passato come parametro a un `<a href="../parameters/compassError.html">compassError</a>` funzione di callback.
+Quando si verifica un errore, il `CompassError` oggetto viene passato come parametro a un `compassError` funzione di callback.

@@ -22,12 +22,12 @@ license: >
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows 8 bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="upgrading.html">Aktualisieren von Windows 8</a>
-*   <a href="tools.html">Windows 8-Befehlszeilentools</a>
+*   Aktualisieren von Windows 8
+*   Windows 8-Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
-Microsoft als veraltet markiert den Namen *Metro-Style apps* in Windows 8 und Windows RT. MSDN bezieht sich jetzt auf diese app als ein *Windows-<a href="../../../cordova/storage/storage.html">Speicher</a>* -app, und dieser Anleitung folgt dieser Konvention. Darüber hinaus bedeutet in diesem Handbuch *Windows 8* Windows 8 und Windows RT.
+Microsoft als veraltet markiert den Namen *Metro-Style apps* in Windows 8 und Windows RT. MSDN bezieht sich jetzt auf diese app als ein *Windows-Speicher* -app, und dieser Anleitung folgt dieser Konvention. Darüber hinaus bedeutet in diesem Handbuch *Windows 8* Windows 8 und Windows RT.
 
 ## 1. Anforderungen
 
@@ -58,13 +58,13 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
     
     ![][4]
 
-*   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . (Außerdem ist es wahrscheinlich, dass in anderen Varianten Ihres Projekts Plattform Sie verwenden `index.html` als Namen für Ihre Standard-Seite.) Dieses, im Projektmappen-Explorer umbenennen Regeln die `default.html` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> und ändern Sie den Wert **Start Page** zu`index.html`.
+*   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . (Außerdem ist es wahrscheinlich, dass in anderen Varianten Ihres Projekts Plattform Sie verwenden `index.html` als Namen für Ihre Standard-Seite.) Dieses, im Projektmappen-Explorer umbenennen Regeln die `default.html` Datei zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` Datei und ändern Sie den Wert **Start Page** zu`index.html`.
     
     ![][5]
 
-*   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im Projektmappen-Explorer und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> das `lib\windows-8` Verzeichnis oben erwähnt.
+*   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im Projektmappen-Explorer und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` Datei das `lib\windows-8` Verzeichnis oben erwähnt.
 
-*   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> im Projektmappen-Explorer.
+*   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der Datei im Projektmappen-Explorer.
 
  [4]: img/guide/platforms/win8/wsnewproject.png
  [5]: img/guide/platforms/win8/wschangemanifest.png
@@ -94,7 +94,7 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
         <script type="text/javascript">
     
             console.log("Subscribing...");
-            document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+            document.addEventListener("deviceready", function () {
     
                 navigator.notification.alert("The device is ready!");
     

@@ -24,8 +24,8 @@ license: >
 
 ## Методы
 
-*   <a href="splashscreen.show.html">splashscreen.show</a>
-*   <a href="splashscreen.hide.html">splashscreen.hide</a>
+*   splashscreen.show
+*   splashscreen.hide
 
 ## Доступ к функции
 

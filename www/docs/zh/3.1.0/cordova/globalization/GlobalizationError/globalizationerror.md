@@ -20,7 +20,7 @@ license: >
 
 # GlobalizationError
 
-從<a href="../globalization.html">全球化</a> API 表示一個錯誤的物件。
+從全球化 API 表示一個錯誤的物件。
 
 ## 屬性
 
@@ -33,7 +33,7 @@ license: >
 
 ## 說明
 
-此物件創建和填充的科爾多瓦，並返回到出現錯誤時的回<a href="../../file/fileobj/fileobj.html">檔</a>。
+此物件創建和填充的科爾多瓦，並返回到出現錯誤時的回檔。
 
 ## 支援的平臺
 
@@ -43,7 +43,7 @@ license: >
 
 ## 快速的示例
 
-以下錯誤回<a href="../../file/fileobj/fileobj.html">檔</a>執行時，它會<a href="../../inappbrowser/inappbrowser.html">顯示</a>彈出式對話方塊中的文本類似于 `code: 3` 和`message:`
+以下錯誤回檔執行時，它會顯示彈出式對話方塊中的文本類似于 `code: 3` 和`message:`
 
     function errorCallback(error) {
         alert('code: ' + error.code + '\n' +
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -72,7 +72,7 @@ license: >
         };
     
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

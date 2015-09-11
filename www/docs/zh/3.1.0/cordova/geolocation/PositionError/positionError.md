@@ -20,7 +20,7 @@ license: >
 
 # PositionError
 
-A `PositionError` 物件傳遞給 `<a href="../parameters/geolocationError.html">geolocationError</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>時出現錯誤。
+A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
 
 ## 屬性
 
@@ -36,16 +36,16 @@ A `PositionError` 物件傳遞給 `<a href="../parameters/geolocationError.html"
 
 ## 說明
 
-`PositionError`物件傳遞給 `<a href="../parameters/geolocationError.html">geolocationError</a>` 與<a href="../geolocation.html">地理定位</a>發生錯誤時的回呼函數。
+`PositionError`物件傳遞給 `geolocationError` 與地理定位發生錯誤時的回呼函數。
 
 ### `PositionError.PERMISSION_DENIED`
 
-返回當使用者不允許您的應用程式檢索的<a href="../Position/position.html">位置</a>資訊。這是取決於平臺。
+返回當使用者不允許您的應用程式檢索的位置資訊。這是取決於平臺。
 
 ### `PositionError.POSITION_UNAVAILABLE`
 
-返回<a href="../../device/device.html">設備</a>時，不能檢索的<a href="../Position/position.html">位置</a>。這就意味著該<a href="../../device/device.html">設備</a>沒有網路<a href="../../connection/connection.html">連接</a>和/或不能得到衛星的修復。
+返回設備時，不能檢索的位置。這就意味著該設備沒有網路連接和/或不能得到衛星的修復。
 
 ### `PositionError.TIMEOUT`
 
-返回<a href="../../device/device.html">設備</a>時，無法在指定的時間內檢索<a href="../Position/position.html">位置</a> `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` ' `timeout` 屬性。 與一起使用時 `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` ，此錯誤可能傳遞給 `<a href="../parameters/geolocationError.html">geolocationError</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>每 `timeout` 毫秒為單位）。
+返回設備時，無法在指定的時間內檢索位置 `geolocationOptions` ' `timeout` 屬性。 與一起使用時 `geolocation.watchPosition` ，此錯誤可能傳遞給 `geolocationError` 回檔每 `timeout` 毫秒為單位）。

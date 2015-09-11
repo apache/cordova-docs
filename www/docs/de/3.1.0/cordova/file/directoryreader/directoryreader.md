@@ -20,7 +20,7 @@ license: >
 
 # DirectoryReader
 
-Ein Objekt, das <a href="../fileobj/fileobj.html">Datei</a>en und Verzeichnisse in einem Verzeichnis listet in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
+Ein Objekt, das Dateien und Verzeichnisse in einem Verzeichnis listet in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -42,9 +42,9 @@ Lesen Sie die Einträge in diesem Verzeichnis.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ein Array von übergeben wird `FileEntry` und `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` Objekte. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ein Array von übergeben wird `FileEntry` und `DirectoryEntry` Objekte. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der Verzeichnisliste. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der Verzeichnisliste. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 

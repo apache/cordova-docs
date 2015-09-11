@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>System
+FileSystem
 ==========
 
 このオブジェクトはファイルシステムを表します。
@@ -27,12 +27,12 @@ license: >
 ----------
 
 - __name:__ ファイルシステムの名前を表します _(DOMString)_
-- __root:__ ファイルシステムのルートディレクトリを表します _(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)_
+- __root:__ ファイルシステムのルートディレクトリを表します _(DirectoryEntry)_
 
 詳細
 -------
 
-`<a href="../fileobj/fileobj.html">File</a>System` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` オブジェクトを保持します。
+`FileSystem` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `DirectoryEntry` オブジェクトを保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +42,7 @@ license: >
 - iOS
 - Windows Phone 7 (Mango)
 
-<a href="../fileobj/fileobj.html">File</a> System の<a href="../../storage/storage.opendatabase.html">使用例</a>
+File System の使用例
 -------------------------
 
     function onSuccess(fileSystem) {
@@ -51,30 +51,30 @@ license: >
     }
 
     // ファイルシステムをリクエスト
-    window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, null);
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
-詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../fileobj/fileobj.html">File</a> System の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
+        <title>File System の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            window.request<a href="../fileobj/fileobj.html">File</a>System(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../fileobj/fileobj.html">File</a>SystemSuccess, fail);
+        function onDeviceReady() {
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
 
-        function on<a href="../fileobj/fileobj.html">File</a>SystemSuccess(fileSystem) {
+        function onFileSystemSuccess(fileSystem) {
             console.log(fileSystem.name);
             console.log(fileSystem.root.name);
         }
@@ -86,7 +86,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/database/database.html">Example</a></h1>
-        <p><a href="../fileobj/fileobj.html">File</a> System</p>
+        <h1>Example</h1>
+        <p>File System</p>
       </body>
     </html>

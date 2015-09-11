@@ -22,7 +22,7 @@ license: >
 
 Partir de Cordova 1,9, avec l'aide de la `CordovaActivity` , vous pouvez utiliser Cordova comme composant dans une application Android native plus grande. Android fait référence à cet élément comme le `CordovaWebView` . Nouvelles applications basées sur Cordova de 1,9 à partir servir la `CordovaWebView` sa vue principale, quel que soit l'approche héritée de `CordovaActivity` est utilisé.
 
-Si vous n'êtes pas familier avec le développement d'applications Android, veuillez lire le <a href="index.html">Guide de la plate-forme Android</a> au développement d'une Application de Cordova avant d'essayer d'inclure une WebView. Il n'est pas le principal moyen de créer des applications Android Cordova. Ces instructions sont actuellement manuelles, mais peut être éventuellement être automatisée.
+Si vous n'êtes pas familier avec le développement d'applications Android, veuillez lire le Guide de la plate-forme Android au développement d'une Application de Cordova avant d'essayer d'inclure une WebView. Il n'est pas le principal moyen de créer des applications Android Cordova. Ces instructions sont actuellement manuelles, mais peut être éventuellement être automatisée.
 
 ## Conditions préalables
 

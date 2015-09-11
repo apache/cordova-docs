@@ -20,6 +20,6 @@ license: >
 
 # contactFields
 
-Erforderlicher Parameter für die `<a href="../contacts.find.html">contacts.find</a>` -Methode verwendet, um anzugeben, welche Felder enthalten sollte die `Contact` Objekte aus einem Suchvorgang.
+Erforderlicher Parameter für die `contacts.find` -Methode verwendet, um anzugeben, welche Felder enthalten sollte die `Contact` Objekte aus einem Suchvorgang.
 
     ["Name", "Telefonnummern", "Email"]

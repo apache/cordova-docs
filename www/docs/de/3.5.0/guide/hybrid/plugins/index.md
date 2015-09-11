@@ -35,7 +35,7 @@ Anwendungsentwickler verwenden der CLI `plugin add` Befehl (beschrieben in The C
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-Das Plugin Repository muss eine Top-Level-Funktion `plugin.xml` manifest-Datei. Es gibt viele Möglichkeiten um diese Datei zu konfigurieren, die Informationen für die in der <a href="../../../plugin_ref/spec.html">Plugin-Spezifikation</a> verfügbar sind. Diese gekürzte Version von der `Device` Plugin bietet ein einfaches Beispiel, als Vorbild zu verwenden:
+Das Plugin Repository muss eine Top-Level-Funktion `plugin.xml` manifest-Datei. Es gibt viele Möglichkeiten um diese Datei zu konfigurieren, die Informationen für die in der Plugin-Spezifikation verfügbar sind. Diese gekürzte Version von der `Device` Plugin bietet ein einfaches Beispiel, als Vorbild zu verwenden:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -131,11 +131,11 @@ Der Erfolg-Rückruf übergebenen `exec` ist lediglich ein Verweis auf die Callba
 
 Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens einem nativen Implementierung zu ergänzen. Details für jede Plattform sind unten aufgeführt, und jede baut auf dem einfachen Echo-Plugin-Beispiel oben:
 
-*   <a href="../../platforms/amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
-*   <a href="../../platforms/android/plugin.html">Android Plugins</a>
-*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
+*   Amazon Fire OS Plugins
+*   Android Plugins
+*   iOS Plugins
+*   BlackBerry 10 Plugins
+*   Windows Phone Plugins
 
 Tizen-Plattform unterstützt keine Plugins.
 

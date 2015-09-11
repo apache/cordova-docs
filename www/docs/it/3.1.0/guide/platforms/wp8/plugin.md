@@ -161,7 +161,7 @@ Vedere altri metodi che è possibile eseguire l'override in:
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-Ad esempio, è possibile agganciarsi nella '<a href="../../../cordova/events/events.pause.html">pausa</a>' e 'riprendere' eventi di applicazione.
+Ad esempio, è possibile agganciarsi nella 'pausa' e 'riprendere' eventi di applicazione.
 
 ### Plugin debug
 

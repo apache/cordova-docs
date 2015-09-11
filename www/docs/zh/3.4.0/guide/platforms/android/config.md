@@ -22,7 +22,7 @@ license: >
 
 `config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` <a href="../../../cordova/events/events.html">事件</a>火災。 注意： 將此設置為 false 不會殺了這款應用程式<a href="../../../cordova/events/events.pause.html">暫停</a><a href="../../../cordova/events/events.html">事件</a>之後，該應用程式時在後臺只將停止執行科爾多瓦 web 視圖中的代碼。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 注意： 將此設置為 false 不會殺了這款應用程式暫停事件之後，該應用程式時在後臺只將停止執行科爾多瓦 web 視圖中的代碼。
     
         <preference name="KeepRunning" value="false"/>
         
@@ -42,7 +42,7 @@ license: >
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(boolean 類型的值，預設值為 `true` ）： 控制項是否在 InAppBrowser 內打開的頁可以訪問同一認為和 WebSQL <a href="../../../cordova/storage/storage.html">存儲</a>作為預設瀏覽器打開的頁面。
+*   `InAppBrowserStorageEnabled`(boolean 類型的值，預設值為 `true` ）： 控制項是否在 InAppBrowser 內打開的頁可以訪問同一認為和 WebSQL 存儲作為預設瀏覽器打開的頁面。
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

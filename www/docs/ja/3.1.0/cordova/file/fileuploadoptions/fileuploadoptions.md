@@ -26,7 +26,7 @@ A `FileUploadOptions` オブジェクトに渡すことができます、 `FileT
 
 *   **fileKey**: フォーム要素の名前。既定値は `file` です。（，）
 
-*   **<a href="../fileobj/fileobj.html">ファイル</a>名**： <a href="../fileobj/fileobj.html">ファイル</a>名、サーバー上の<a href="../fileobj/fileobj.html">ファイル</a>を保存するときに使用します。既定値は `image.jpg` です。（，）
+*   **ファイル名**： ファイル名、サーバー上のファイルを保存するときに使用します。既定値は `image.jpg` です。（，）
 
 *   **mime タイプ**: アップロードするデータの mime タイプ。既定値は `image/jpeg` です。（，）
 

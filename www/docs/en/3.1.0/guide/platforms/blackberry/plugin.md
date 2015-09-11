@@ -20,8 +20,8 @@ license: >
 
 # BlackBerry Plugins
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to develop an Echo plugin on BlackBerry.  The
-<a href="../../hybrid/plugins/index.html">Plugin Development Guide</a> provides a broad overview with which you
+This guide shows how to develop an Echo plugin on BlackBerry.  The
+Plugin Development Guide provides a broad overview with which you
 should already be familiar, and this guide picks up where it leaves
 off.  In addition, download the [Cordova BlackBerry
 repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git).

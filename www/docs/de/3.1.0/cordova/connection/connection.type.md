@@ -24,7 +24,7 @@ Prüft die aktive Netzwerkverbindung.
 
 ## Beschreibung
 
-Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungsstatus und die Art der <a href="connection.html">Verbindung</a> zu bestimmen.
+Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungsstatus und die Art der Verbindung zu bestimmen.
 
 ## Unterstützte Plattformen
 
@@ -61,14 +61,14 @@ Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungss
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.connection.type Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -106,14 +106,14 @@ Bis Cordova 2.3.0 wurde auf das `Connection` Objekt über `navigator.network.con
 
 ## iOS Macken
 
-*   iOS kann den <a href="connection.html">Verbindung</a>styp des Mobilfunknetzes nicht erkennen. 
+*   iOS kann den Verbindungstyp des Mobilfunknetzes nicht erkennen. 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone Macken
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone kann den <a href="connection.html">Verbindung</a>styp des Mobilfunknetzes nicht erkennen.
+*   Windows Phone kann den Verbindungstyp des Mobilfunknetzes nicht erkennen.
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 

@@ -20,14 +20,14 @@ license: >
 
 # 안 드 로이드 구성
 
-`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 정보를 참조 하십시오.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
 
-*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` <a href="../../../cordova/events/events.html">이벤트</a>가 발생 합니다.
+*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: 표준 HTTP 오류 400-500 범위에 대 한 응답에서을 표시 하는 오류 페이지를 지정 합니다. 홈 페이지와 다른 웹 자산을 포함 하는 최상위 디렉터리에서 지정된 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 놓습니다.
+*   `ErrorUrl`: 표준 HTTP 오류 400-500 범위에 대 한 응답에서을 표시 하는 오류 페이지를 지정 합니다. 홈 페이지와 다른 웹 자산을 포함 하는 최상위 디렉터리에서 지정된 된 파일을 놓습니다.
     
         <preference name="ErrorUrl" value="error.html"/>
         
@@ -47,7 +47,7 @@ license: >
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 확장명 뺀 이름에 `res/drawable` 디렉터리. 다양 한 자산에는 다양 한 하위 디렉터리에이 일반적인 이름을 공유 해야 합니다.
+*   `SplashScreen`: 파일에 확장명 뺀 이름에 `res/drawable` 디렉터리. 다양 한 자산에는 다양 한 하위 디렉터리에이 일반적인 이름을 공유 해야 합니다.
     
         <preference name="SplashScreen" value="splash"/>
         

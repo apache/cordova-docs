@@ -29,7 +29,7 @@ funzione di callback onSuccess fornisce il `Acceleration` informazioni.
 
 ## Parametri
 
-*   **accelerazione**: l'accelerazione in un momento unico. (<a href="../acceleration/acceleration.html">Accelerazione</a>)
+*   **accelerazione**: l'accelerazione in un momento unico. (Accelerazione)
 
 ## Esempio
 

@@ -95,7 +95,7 @@ Za BlackBerryOS/Playbook:
 
 3.  Krmarite do imenika, kjer ste postavili downloaded vir zgoraj, uporabi unix kot terminal: Terminal.app, Bash Cygwin, itd.
 
-4.  Ustvarite nov projekt, kot je opisano v <a href="../ios/tools.html">iOS orodja ukazne vrstice</a>. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova.js` pila.
 
@@ -131,7 +131,7 @@ Za BlackBerryOS/Playbook:
 
 3.  Krmarite do imenika, kjer ste postavili downloaded vir zgoraj, uporabi unix kot terminal: Terminal.app, Bash Cygwin, itd.
 
-4.  Ustvarite nov projekt, kot je opisano v <a href="../ios/tools.html">iOS orodja ukazne vrstice</a>. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova.js` pila.
 

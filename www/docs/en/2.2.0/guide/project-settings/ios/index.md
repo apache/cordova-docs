@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for iOS
+Project Settings for iOS
 ========================
 
 The **Cordova.plist settings file** controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
@@ -31,21 +31,21 @@ The **Cordova.plist settings file** controls various settings of Cordova. This i
 
 	b. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
 
-	c. **EnableLocation (boolean, defaults to NO)** - set to YES, to initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your location can be more accurate)
+	c. **EnableLocation (boolean, defaults to NO)** - set to YES, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate)
 
 	d. **EnableViewportScale (boolean, defaults to NO)** - set to YES to prevent viewport scaling through a meta tag
 
 	e. **AutoHideSplashScreen (boolean, defaults to YES)** - set to NO to control when the splashscreen is hidden through a JavaScript API
 
-	f. **ShowSplashScreenSpinner (boolean, defaults to YES)** - set to NO to <a href="../../../cordova/splashscreen/splashscreen.hide.html">hide</a> the splash-screen spinner
+	f. **ShowSplashScreenSpinner (boolean, defaults to YES)** - set to NO to hide the splash-screen spinner
 
-	g. **<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction (boolean, defaults to NO)** - set to YES to not allow autoplayed HTML5 video
+	g. **MediaPlaybackRequiresUserAction (boolean, defaults to NO)** - set to YES to not allow autoplayed HTML5 video
 
-	h. **AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback (boolean, defaults to NO)** - set to YES to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
+	h. **AllowInlineMediaPlayback (boolean, defaults to NO)** - set to YES to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
 
 	i. **OpenAllWhitelistURLsInWebView (boolean, defaults to NO)** - set to YES to open all white-listed URLs in the main WebView
 
-	j. **BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a> (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
+	j. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
 	
 	k. **KeyboardDisplayRequiresUserAction (boolean, defaults to YES)** - set to NO to open the keyboard when form elements get focus via the JavaScript focus() call.
 

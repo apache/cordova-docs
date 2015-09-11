@@ -20,7 +20,7 @@ license: >
 
 # Notification.Beep
 
-Das <a href="../device/device.html">Gerät</a> spielt einen Signalton sound.
+Das Gerät spielt einen Signalton sound.
 
     navigator.notification.beep(times);
     
@@ -46,14 +46,14 @@ Das <a href="../device/device.html">Gerät</a> spielt einen Signalton sound.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -95,14 +95,14 @@ Das <a href="../device/device.html">Gerät</a> spielt einen Signalton sound.
 
 ## Android Macken
 
-*   Android spielt die Standardeinstellung **<a href="notification.html">Benachrichtigung</a> Klingelton** unter **Einstellungen/Sound & Display** -Panel angegeben.
+*   Android spielt die Standardeinstellung **Benachrichtigung Klingelton** unter **Einstellungen/Sound & Display** -Panel angegeben.
 
 ## Windows Phone 7 und 8 Macken
 
-*   Stützt sich auf eine generische Piepton-<a href="../file/fileobj/fileobj.html">Datei</a> aus Cordova-Distribution.
+*   Stützt sich auf eine generische Piepton-Datei aus Cordova-Distribution.
 
 ## Tizen Macken
 
-*   Tizen implementiert Signaltöne durch Abspielen einer Audiodatei über die <a href="../media/media.html">Medien</a> API.
+*   Tizen implementiert Signaltöne durch Abspielen einer Audiodatei über die Medien API.
 
-*   Die Beep-<a href="../file/fileobj/fileobj.html">Datei</a> muss kurz sein, befinden muss einem `sounds` Unterverzeichnis des Stammverzeichnisses der Anwendung, und muss den Namen`beep.wav`.
+*   Die Beep-Datei muss kurz sein, befinden muss einem `sounds` Unterverzeichnis des Stammverzeichnisses der Anwendung, und muss den Namen`beep.wav`.

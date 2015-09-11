@@ -18,11 +18,11 @@ license: >
     under the License.
 ---
 
-# splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>
+# splashscreen.show
 
 Displays the splash screen.
 
-    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+    navigator.splashscreen.show();
 
 ## Description
 
@@ -38,26 +38,26 @@ This method displays the application's splash screen.
 
 ## Quick Example
 
-    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+    navigator.splashscreen.show();
 
 ## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="splashscreen.html">Splashscreen</a> Example</title>
+        <title>Splashscreen Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
+        function onDeviceReady() {
+            navigator.splashscreen.show();
         }
 
         </script>
@@ -67,14 +67,14 @@ This method displays the application's splash screen.
       </body>
     </html>
 
-Your application can not call `navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>()` until
-the app has started and the `<a href="../events/events.deviceready.html">deviceready</a>` event has fired. But since
+Your application can not call `navigator.splashscreen.show()` until
+the app has started and the `deviceready` event has fired. But since
 typically the
 splash screen is meant to be visible before your app has started, that would
 seem to defeat the purpose of the splash screen.
-Providing some configuration in `config.xml` will automatically `<a href="../inappbrowser/inappbrowser.html">show</a>` the
+Providing some configuration in `config.xml` will automatically `show` the
 splash screen immediately after your app launch and before it has fully
-started and received the `<a href="../events/events.deviceready.html">deviceready</a>` event. See <a href="../../config_ref/images.html">Icons and Splash Screens</a>
+started and received the `deviceready` event. See Icons and Splash Screens
 for more information on doing this configuration. For this reason, it is
-unlikely you need to call `navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>()` to make the
+unlikely you need to call `navigator.splashscreen.show()` to make the
 splash screen visible for app startup.

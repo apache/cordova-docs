@@ -22,8 +22,8 @@ license: >
 
 This section shows how to configure an app's icon and optional splash
 screen for various platforms, both when working in the Cordova CLI
-(described in <a href="../guide/cli/index.html">The Command-Line Interface</a>) or using platform-specific
-SDK tools (detailed in the <a href="../guide/platforms/index.html">Platform Guides</a>).
+(described in The Command-Line Interface) or using platform-specific
+SDK tools (detailed in the Platform Guides).
 
 ## Configuring Icons in the CLI
 
@@ -225,7 +225,7 @@ should hide the splash screen so that your main view is visible as soon as it
 is ready. Because the app start time will vary quite a bit due to a number of
 factors such as CPU speed and network, it is recommended that your app
 explicitly invoke `navigator.splashscreen.hide()` in the JavaScript
-method that responds to the `<a href="../cordova/events/events.deviceready.html">deviceready</a>` event. Otherwise the splash screen
+method that responds to the `deviceready` event. Otherwise the splash screen
 will be visible for the SplashScreenDelay value that you configured above,
 which is likely longer than necessary.
 This event-driven approach is highly recommended versus having the splash

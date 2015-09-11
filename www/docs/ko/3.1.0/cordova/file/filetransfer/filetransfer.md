@@ -20,7 +20,7 @@ license: >
 
 # FileTransfer
 
-`FileTransfer`개체를 사용 하면 업로드 또는 서버에서 <a href="../fileobj/fileobj.html">파일</a>을 다운로드 합니다.
+`FileTransfer`개체를 사용 하면 업로드 또는 서버에서 파일을 다운로드 합니다.
 
 ## 속성
 
@@ -28,15 +28,15 @@ license: >
 
 ## 메서드
 
-*   **업로드**: <a href="../fileobj/fileobj.html">파일</a>을 서버에 보냅니다.
+*   **업로드**: 파일을 서버에 보냅니다.
 
-*   **다운로드**: 서버에서 <a href="../fileobj/fileobj.html">파일</a>을 다운로드 합니다.
+*   **다운로드**: 서버에서 파일을 다운로드 합니다.
 
 *   **중단**: 진행 중인 전송 중단.
 
 ## 세부 정보
 
-`FileTransfer`개체를 HTTP 다중 파트 POST 요청을 사용 하 여 원격 서버에 <a href="../fileobj/fileobj.html">파일</a>을 업로드 하는 방법을 제공 합니다. HTTP 및 HTTPS 프로토콜이 지원 됩니다. 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 전달 하 여 지정할 수 있습니다 한 `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` 개체는 `upload()` 방법. 성공적으로 업로드에 대 한 `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` 개체 성공 콜백에 전달 됩니다. 오류가 발생 하는 경우는 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 개체는 오류를 전달 합니다. 그것도 가능 (iOS와 안 드 로이드)에 원격 서버에서 <a href="../fileobj/fileobj.html">파일</a>을 다운로드 하 여 <a href="../../device/device.html">장치</a>에 저장 합니다.
+`FileTransfer`개체를 HTTP 다중 파트 POST 요청을 사용 하 여 원격 서버에 파일을 업로드 하는 방법을 제공 합니다. HTTP 및 HTTPS 프로토콜이 지원 됩니다. 선택적 매개 변수를 전달 하 여 지정할 수 있습니다 한 `FileUploadOptions` 개체는 `upload()` 방법. 성공적으로 업로드에 대 한 `FileUploadResult` 개체 성공 콜백에 전달 됩니다. 오류가 발생 하는 경우는 `FileTransferError` 개체는 오류를 전달 합니다. 그것도 가능 (iOS와 안 드 로이드)에 원격 서버에서 파일을 다운로드 하 여 장치에 저장 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -48,19 +48,19 @@ license: >
 
 ## 업로드
 
-**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
+**매개 변수:**
 
-*   **filePath**: <a href="../../device/device.html">장치</a>에서 <a href="../fileobj/fileobj.html">파일</a>의 전체 경로.
+*   **filePath**: 장치에서 파일의 전체 경로.
 
-*   **서버**: 인코딩 <a href="../fileobj/fileobj.html">파일</a> 수신 서버의 URL`encodeURI()`.
+*   **서버**: 인코딩 파일 수신 서버의 URL`encodeURI()`.
 
 *   **successCallback**: 콜백 전달 되는 `Metadata` 개체. *(기능)*
 
-*   **errorCallback**: 콜백 검색에 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 개체. *(기능)*
+*   **errorCallback**: 콜백 검색에 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `FileTransferError` 개체. *(기능)*
 
-*   **옵션**: <a href="../fileobj/fileobj.html">파일</a> 이름 및 mimetype 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>.
+*   **옵션**: 파일 이름 및 mimetype 선택적 매개 변수.
 
-*   **trustAllHosts**: 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 기본적으로 `false` . 만약 설정 `true` , 그것은 모든 보안 인증서를 허용 합니다. 이 안 드 로이드 자체 서명 된 보안 인증서를 거부 하기 때문에 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
+*   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` , 그것은 모든 보안 인증서를 허용 합니다. 이 안 드 로이드 자체 서명 된 보안 인증서를 거부 하기 때문에 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
 
 **빠른 예제**
 
@@ -78,7 +78,7 @@ license: >
         console.log("upload error target " + error.target);
     }
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ license: >
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ license: >
             }
     
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ license: >
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ license: >
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -196,23 +196,23 @@ license: >
 
 ## 다운로드
 
-**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
+**매개 변수:**
 
-*   **소스**: URL로 인코딩된 <a href="../fileobj/fileobj.html">파일</a>, 다운로드 서버`encodeURI()`.
+*   **소스**: URL로 인코딩된 파일, 다운로드 서버`encodeURI()`.
 
-*   **대상**: <a href="../../device/device.html">장치</a>에서 <a href="../fileobj/fileobj.html">파일</a>의 전체 경로.
+*   **대상**: 장치에서 파일의 전체 경로.
 
-*   **successCallback**: 콜백 전달 되는 `<a href="../fileentry/fileentry.html">FileEntry</a>` 개체. *(기능)*
+*   **successCallback**: 콜백 전달 되는 `FileEntry` 개체. *(기능)*
 
-*   **errorCallback**: 콜백 검색할 때 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 개체. *(기능)*
+*   **errorCallback**: 콜백 검색할 때 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `FileTransferError` 개체. *(기능)*
 
-*   **trustAllHosts**: 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 기본적으로 `false` . 만약 설정 `true` 후 모든 보안 인증서를 받아들일 것입니다. 안 드 로이드 자체 서명 된 보안 인증서를 거부로 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
+*   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` 후 모든 보안 인증서를 받아들일 것입니다. 안 드 로이드 자체 서명 된 보안 인증서를 거부로 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
 
-*   **옵션**: 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 현재 지 원하는 머리글만 (예: 인증 (기본 인증), 등).
+*   **옵션**: 선택적 매개 변수를 현재 지 원하는 머리글만 (예: 인증 (기본 인증), 등).
 
 **빠른 예제**
 
-    // !! FilePath <a href="../../device/device.html">장치</a> var fileTransfer에 유효한 경로 가정 합니다 = 새로운 FileTransfer();
+    // !! FilePath 장치 var fileTransfer에 유효한 경로 가정 합니다 = 새로운 FileTransfer();
     var uri = encodeURI ("http://some.server.com/download.php");
     
     fileTransfer.download (uri, filePath, function(entry) {console.log ("다운로드 완료:" + entry.fullPath);
@@ -224,7 +224,7 @@ license: >
 
 ## 중단
 
-진행 중인 전송을 중단합니다. Onerror 콜백 <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR의 오류 코드는 <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> 개체를 전달 합니다.
+진행 중인 전송을 중단합니다. Onerror 콜백 FileTransferError.ABORT_ERR의 오류 코드는 FileTransferError 개체를 전달 합니다.
 
 **지원 되는 플랫폼**
 
@@ -233,13 +233,13 @@ license: >
 
 **빠른 예제**
 
-    // !! 가정 <a href="../../device/device.html">장치</a> var 승리에 텍스트 <a href="../fileobj/fileobj.html">파일</a>을 유효한 URI를 포함 하는 <a href="../../../plugin_ref/spec.html">변수</a> fileURI function(r) = {console.log ("호출할 수 없습니다.");}
+    // !! 가정 장치 var 승리에 텍스트 파일을 유효한 URI를 포함 하는 변수 fileURI function(r) = {console.log ("호출할 수 없습니다.");}
     
-    실패 하는 var function(error) = {/ / error.code <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR 경고 = = ("오류가 발생 했습니다: 코드 =" + error.code);
+    실패 하는 var function(error) = {/ / error.code FileTransferError.ABORT_ERR 경고 = = ("오류가 발생 했습니다: 코드 =" + error.code);
         console.log ("업로드 오류 소스" + error.source);
         console.log ("업로드 오류 대상" + error.target);}
     
-    var 옵션 = 새로운 <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var 옵션 = 새로운 FileUploadOptions();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";

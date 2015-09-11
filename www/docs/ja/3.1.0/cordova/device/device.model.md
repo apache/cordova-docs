@@ -20,14 +20,14 @@ license: >
 
 # device.model
 
-<a href="device.html">デバイス</a>のモデル名を取得します。
+デバイスのモデル名を取得します。
 
     var string = device.model;
     
 
 ## 説明
 
-`device.model`、<a href="device.html">デバイス</a>のモデルまたは製品の名前を返します。値は、<a href="device.html">デバイス</a>の製造元によって設定され、同じ製品のバージョン間で異なる可能性があります。
+`device.model`、デバイスのモデルまたは製品の名前を返します。値は、デバイスの製造元によって設定され、同じ製品のバージョン間で異なる可能性があります。
 
 ## サポートされているプラットフォーム
 
@@ -48,24 +48,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
             element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
-                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -85,8 +85,8 @@ license: >
 
 ## Tizen の癖
 
-*   たとえば、ベンダーによって割り当てられている<a href="device.html">デバイス</a>のモデルを返します`TIZEN`
+*   たとえば、ベンダーによって割り当てられているデバイスのモデルを返します`TIZEN`
 
 ## Windows Phone 7 と 8 癖
 
-*   製造元によって指定された<a href="device.html">デバイス</a>のモデルを返します。たとえば、三星フォーカスを返します`SGH-i917`.
+*   製造元によって指定されたデバイスのモデルを返します。たとえば、三星フォーカスを返します`SGH-i917`.

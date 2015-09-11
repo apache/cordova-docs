@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# <a href="CaptureError.html">CaptureError</a>CB
+# CaptureErrorCB
 
-> <a href="../media.html">メディア</a> <a href="capture.html">キャプチャ</a>操作中にエラーが発生した場合に呼び出されます。
+> メディア キャプチャ操作中にエラーが発生した場合に呼び出されます。
 
-    function captureError( <a href="CaptureError.html">CaptureError</a> error ) { ... };
+    function captureError( CaptureError error ) { ... };
     
 
 ## 説明
 
-この関数でエラーが発生を起動しようとすると、<a href="../media.html">メディア</a>の<a href="capture.html">キャプチャ</a>操作を実行します。 障害シナリオを含めます<a href="capture.html">キャプチャ</a> アプリケーションがビジー状態、<a href="capture.html">キャプチャ</a>操作は既に起こって、または、操作をキャンセルする前に<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>が自動的に<a href="capture.html">キャプチャ</a>されます。
+この関数でエラーが発生を起動しようとすると、メディアのキャプチャ操作を実行します。 障害シナリオを含めますキャプチャ アプリケーションがビジー状態、キャプチャ操作は既に起こって、または、操作をキャンセルする前にメディア ファイルが自動的にキャプチャされます。
 
-この関数で実行する、 `<a href="CaptureError.html">CaptureError</a>` 、適切なエラーを格納しているオブジェクト`code`.
+この関数で実行する、 `CaptureError` 、適切なエラーを格納しているオブジェクト`code`.
 
 ## 簡単な例
 
     // capture error callback
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };

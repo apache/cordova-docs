@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>Transfer
+FileTransfer
 ==========
 
-<a href="../fileobj/fileobj.html">File</a>Transfer is an object that allows you to upload files to a server or download files from a server.
+FileTransfer is an object that allows you to upload files to a server or download files from a server.
 
 Properties
 ----------
@@ -38,7 +38,7 @@ Methods
 Details
 -------
 
-The `<a href="../fileobj/fileobj.html">File</a>Transfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a> object to the upload method.  On successful upload, the success callback will be called with a <a href="../fileuploadresult/fileuploadresult.html"><a href="../fileobj/fileobj.html">File</a>UploadResult</a> object.  If an error occurs, the error callback will be invoked with a <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> object.
+The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
 It is also possible to download a file from remote and save it on the device (only iOS and Android).
 
 Supported Platforms
@@ -56,11 +56,11 @@ __Parameters:__
 
 - __filePath__ - Full path of the file on the device
 - __server__ - URL of the server to receive the file (must already be encoded using encodeURI())
-- __successCallback__ - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> object. _(Function)_
+- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
 - __options__ - Optional parameters such as file name and mimetype
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 	
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 	
@@ -76,7 +76,7 @@ __Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
         console.log("upload error target " + error.target);
     }
 	
-	var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+	var options = new FileUploadOptions();
 	options.fileKey="file";
 	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";
@@ -87,29 +87,29 @@ __Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 		
 	options.params = params;
 	
-	var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+	var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     
-__Full <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Full Example__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title><a href="../fileobj/fileobj.html">File</a> Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
             
             // Wait for Cordova to load
             //
-            document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
             
             // Cordova is ready
             //
-            function on<a href="../../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(uploadPhoto,
+                navigator.camera.getPicture(uploadPhoto,
                                             function(message) { alert('get picture failed'); },
                                             { quality: 50, 
                                             destinationType: navigator.camera.DestinationType.FILE_URI,
@@ -119,7 +119,7 @@ __Full <a href="../../storage/storage.opendatabase.html">Example</a>__
             }
             
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -130,7 +130,7 @@ __Full <a href="../../storage/storage.opendatabase.html">Example</a>__
                 
                 options.params = params;
                 
-                var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+                var ft = new FileTransfer();
                 ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
             
@@ -149,8 +149,8 @@ __Full <a href="../../storage/storage.opendatabase.html">Example</a>__
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Upload <a href="../fileobj/fileobj.html">File</a></p>
+        <h1>Example</h1>
+        <p>Upload File</p>
     </body>
     </html>
     
@@ -172,7 +172,7 @@ Supported on Android and iOS
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -182,7 +182,7 @@ Supported on Android and iOS
     
     options.params = params;
     
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);    
 
 __Android Quirks__
@@ -196,14 +196,14 @@ __Parameters:__
 
 - __source__ - URL of the server to download the file (must already be encoded using encodeURI())
 - __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a <a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a> object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> object. _(Function)_
+- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 
     // !! Assumes filePath is a valid path on the device
 
-    var fileTransfer = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
     
     fileTransfer.download(
@@ -222,14 +222,14 @@ __Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 abort
 --------------
 
-Aborts an in-progress transfer. The onerror callback will be called with a <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> object which has an error code of <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback will be called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
 __Supported Platforms__
 
 - Android
 - iOS
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 	
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 	
@@ -245,7 +245,7 @@ __Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
         console.log("upload error target " + error.target);
     }
 	
-	var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+	var options = new FileUploadOptions();
 	options.fileKey="file";
 	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";
@@ -256,7 +256,7 @@ __Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 		
 	options.params = params;
 	
-	var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+	var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort(win, fail);
     
@@ -271,7 +271,7 @@ __Supported Platforms__
 - Android
 - iOS
 
-__<a href="../../storage/storage.opendatabase.html">Example</a>__
+__Example__
 
     fileTransfer.onprogress = function(progressEvent) {
         if (progressEvent.lengthComputable) {

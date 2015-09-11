@@ -18,27 +18,27 @@ license: >
     under the License.
 ---
 
-# <a href="fileobj/fileobj.html">File</a>
+# File
 
-> An API to read, write and navigate file system hierarchies, based on the [w3c file api](http://www.w3.org/TR/<a href="fileobj/fileobj.html">File</a>API).
+> An API to read, write and navigate file system hierarchies, based on the [w3c file api](http://www.w3.org/TR/FileAPI).
 
 ## Objects
 
-- <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
-- <a href="directoryreader/directoryreader.html">DirectoryReader</a>
-- <a href="fileobj/fileobj.html">File</a>
-- <a href="fileentry/fileentry.html"><a href="fileobj/fileobj.html">File</a>Entry</a>
-- <a href="fileerror/fileerror.html"><a href="fileobj/fileobj.html">File</a>Error</a>
-- <a href="filereader/filereader.html"><a href="fileobj/fileobj.html">File</a>Reader</a>
-- <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
-- <a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>
-- <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>Error</a>
-- <a href="fileuploadoptions/fileuploadoptions.html"><a href="fileobj/fileobj.html">File</a>UploadOptions</a>
-- <a href="fileuploadresult/fileuploadresult.html"><a href="fileobj/fileobj.html">File</a>UploadResult</a>
-- <a href="filewriter/filewriter.html"><a href="fileobj/fileobj.html">File</a>Writer</a>
-- <a href="flags/flags.html">Flags</a>
-- Local<a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">File</a>System</a>
-- <a href="metadata/metadata.html">Metadata</a>
+- DirectoryEntry
+- DirectoryReader
+- File
+- FileEntry
+- FileError
+- FileReader
+- FileSystem
+- FileTransfer
+- FileTransferError
+- FileUploadOptions
+- FileUploadResult
+- FileWriter
+- Flags
+- LocalFileSystem
+- Metadata
 
 ## Accessing the Feature
 
@@ -66,8 +66,8 @@ platform-specific configuration settings described below:
 
         (after adding just the file plugin)
         (in app/res/xml/config.xml)
-        <feature name="<a href="fileobj/fileobj.html">File</a>">
-            <param name="android-package" value="org.apache.cordova.<a href="fileobj/fileobj.html">File</a>Utils" />
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
 
         (in app/AndroidManifest.xml)
@@ -75,11 +75,11 @@ platform-specific configuration settings described below:
 
         (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
-        <feature name="<a href="fileobj/fileobj.html">File</a>">
-            <param name="android-package" value="org.apache.cordova.<a href="fileobj/fileobj.html">File</a>Utils" />
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
-            <param name="android-package" value="org.apache.cordova.filetransfer.<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
 
         (in app/AndroidManifest.xml)
@@ -88,11 +88,11 @@ platform-specific configuration settings described below:
 * BlackBerry WebWorks
 
         (in www/plugins.xml)
-        <feature name="<a href="fileobj/fileobj.html">File</a>">
-            <param name="blackberry-package" value="org.apache.cordova.file.<a href="fileobj/fileobj.html">File</a>Manager" />
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
-            <param name="blackberry-package" value="org.apache.cordova.http.<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
         </feature>
 
         (in www/config.xml)
@@ -105,12 +105,12 @@ platform-specific configuration settings described below:
 
 * iOS (in `config.xml`)
 
-        <feature name="<a href="fileobj/fileobj.html">File</a>">
-            <param name="ios-package" value="CDV<a href="fileobj/fileobj.html">File</a>" />
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>">
-            <param name="ios-package" value="CDV<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">File</a>Transfer</a>" />
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.
+configuration.  See _Platform Support_ in the Overview section.

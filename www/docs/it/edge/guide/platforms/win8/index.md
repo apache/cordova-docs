@@ -157,7 +157,7 @@ I valori validi per la bandiera `--appx` sono `8.1-win`, `8.1-phone`e `uap` (per
 
 ### Considerazioni per la versione Windows di destinazione
 
-10 Windows supporta una nuova modalità "Remote" per applicazioni di Cordova (e applicazioni HTML in generale). Questa modalità consente alle app di molta più libertà rispetto all'uso di manipolazione del DOM e modelli web comuni quali l'uso di script inline, ma non così riducendo l'insieme delle funzionalità dell'app può utilizzare quando inviato al pubblico Windows Store. Per ulteriori informazioni su Windows 10 e modalità remota, consultare la documentazione di [<a href="win10-support.html">Cordova per Windows 10</a>][13] .
+10 Windows supporta una nuova modalità "Remote" per applicazioni di Cordova (e applicazioni HTML in generale). Questa modalità consente alle app di molta più libertà rispetto all'uso di manipolazione del DOM e modelli web comuni quali l'uso di script inline, ma non così riducendo l'insieme delle funzionalità dell'app può utilizzare quando inviato al pubblico Windows Store. Per ulteriori informazioni su Windows 10 e modalità remota, consultare la documentazione di [Cordova per Windows 10][13] .
 
  [13]: win10-support.md.html
 

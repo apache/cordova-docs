@@ -29,7 +29,7 @@ V primeru požarov, ko uporabnik pritisne gumb glasnosti.
 
 Če želite preglasiti privzeti glasnosti vedenje lahko registrirate dogodek poslušalca za na `volumedownbutton` dogodek.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `<a href="events.deviceready.html">deviceready</a>` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
 
 ## Podprte platforme
 
@@ -58,7 +58,7 @@ Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogo
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

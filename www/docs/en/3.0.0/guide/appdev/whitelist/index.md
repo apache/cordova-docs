@@ -20,7 +20,7 @@ license: >
 
 # Domain Whitelist Guide
 
-## <a href="../../overview/index.html">Overview</a>
+## Overview
 
 Domain whitelisting is a security model that controls access to
 outside domains, such as `http://google.com`.  Apache Cordova's

@@ -20,13 +20,13 @@ license: >
 
 # フラグ
 
-引数が指定されて、 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、<a href="../fileobj/fileobj.html">ファイル</a>とディレクトリをそれぞれ作成します。
+引数が指定されて、 `DirectoryEntry` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、ファイルとディレクトリをそれぞれ作成します。
 
 ## プロパティ
 
-*   **作成**： 存在しない場合、<a href="../fileobj/fileobj.html">ファイル</a>またはディレクトリを作成する必要がありますを示します。*(ブール値)*
+*   **作成**： 存在しない場合、ファイルまたはディレクトリを作成する必要がありますを示します。*(ブール値)*
 
-*   **排他的な**: は単独でを使用すると、影響を与えません `create` ターゲット パスが既に存在する場合に失敗する、<a href="../fileobj/fileobj.html">ファイル</a>またはディレクトリが作成されます。*(ブール値)*
+*   **排他的な**: は単独でを使用すると、影響を与えません `create` ターゲット パスが既に存在する場合に失敗する、ファイルまたはディレクトリが作成されます。*(ブール値)*
 
 ## サポートされているプラットフォーム
 
@@ -39,5 +39,5 @@ license: >
 ## 簡単な例
 
     //が存在しない場合に作成するデータ ディレクトリを取得します。
-    dataDir fileSystem.root.getDirectory = (「データ」{作成: true});//が存在しない場合にのみ、ロック <a href="../fileobj/fileobj.html">ファイル</a>を作成します。
-    ロック<a href="../fileobj/fileobj.html">ファイル</a> dataDir.getFile = ("lockfile.txt"{作成: true の場合、排他的な: true});
+    dataDir fileSystem.root.getDirectory = (「データ」{作成: true});//が存在しない場合にのみ、ロック ファイルを作成します。
+    ロックファイル dataDir.getFile = ("lockfile.txt"{作成: true の場合、排他的な: true});

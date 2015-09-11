@@ -18,13 +18,13 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>Organization
+# ContactOrganization
 
-Contains a `<a href="../Contact/contact.html">Contact</a>` object's organization properties.
+Contains a `Contact` object's organization properties.
 
 ## Properties
 
-- __pref__: Set to `true` if this `<a href="../Contact/contact.html">Contact</a>Organization` contains the user's preferred value. _(boolean)_
+- __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
 
 - __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)
 
@@ -36,9 +36,9 @@ Contains a `<a href="../Contact/contact.html">Contact</a>` object's organization
 
 ## Details
 
-The `<a href="../Contact/contact.html">Contact</a>Organization` object stores a contact's organization
-properties.  A `<a href="../Contact/contact.html">Contact</a>` object stores one or more
-`<a href="../Contact/contact.html">Contact</a>Organization` objects in an array.
+The `ContactOrganization` object stores a contact's organization
+properties.  A `Contact` object stores one or more
+`ContactOrganization` objects in an array.
 
 ## Supported Platforms
 
@@ -48,7 +48,7 @@ properties.  A `<a href="../Contact/contact.html">Contact</a>` object stores one
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     function onSuccess(contacts) {
         for (var i = 0; i < contacts.length; i++) {
@@ -62,36 +62,36 @@ properties.  A `<a href="../Contact/contact.html">Contact</a>` object stores one
         }
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-## Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+        function onDeviceReady() {
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
 
         // onSuccess: Get a snapshot of the current contacts
@@ -110,15 +110,15 @@ properties.  A `<a href="../Contact/contact.html">Contact</a>` object stores one
 
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

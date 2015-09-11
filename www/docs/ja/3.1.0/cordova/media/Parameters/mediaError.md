@@ -20,7 +20,7 @@ license: >
 
 # mediaError
 
-<a href="../media.html">メディア</a>機能でエラーがあるときに実行されるユーザー指定のコールバック関数。
+メディア機能でエラーがあるときに実行されるユーザー指定のコールバック関数。
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ license: >
 
 ## パラメーター
 
-*   **エラー**: <a href="../../device/device.html">デバイス</a>によって返されるエラーです。*(<a href="../MediaError/mediaError.html">MediaError</a>)*
+*   **エラー**: デバイスによって返されるエラーです。*(MediaError)*

@@ -29,7 +29,7 @@ Paramètres optionnels de personnalisation des réglages de l'appareil photo.
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100,
-      popoverOptions: <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>,
+      popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: false };
     
 
@@ -69,9 +69,9 @@ Paramètres optionnels de personnalisation des réglages de l'appareil photo.
 
 *   **targetHeight**: hauteur de sortie en pixels de l'image. Doit être utilisé avec **targetWidth**. Aspect ratio reste constant. *(Nombre)*
 
-*   **mediaType**: définit le type de média à choisir. Ne fonctionne que quand `PictureSourceType` vaut `PHOTOLIBRARY` ou `SAVEDPHOTOALBUM` . Définie dans `nagivator.camera.<a href="../../media/media.html">Media</a>Type` *(nombre)* 
+*   **mediaType**: définit le type de média à choisir. Ne fonctionne que quand `PictureSourceType` vaut `PHOTOLIBRARY` ou `SAVEDPHOTOALBUM` . Définie dans `nagivator.camera.MediaType` *(nombre)* 
     
-        Camera.<a href="../../media/media.html">Media</a>Type = {photo: 0, / / permettre la sélection de photos seulement. PAR DÉFAUT. Retourne le format spécifié via DestinationType VIDEO: 1, / / autoriser la sélection de la vidéo seulement, RETOURNERA TOUJOURS FILE_URI ALLMEDIA: 2 // permet la sélection de tous les types de médias
+        Camera.MediaType = {photo: 0, / / permettre la sélection de photos seulement. PAR DÉFAUT. Retourne le format spécifié via DestinationType VIDEO: 1, / / autoriser la sélection de la vidéo seulement, RETOURNERA TOUJOURS FILE_URI ALLMEDIA: 2 // permet la sélection de tous les types de médias
         
     
     };
@@ -80,7 +80,7 @@ Paramètres optionnels de personnalisation des réglages de l'appareil photo.
 
 *   **saveToPhotoAlbum**: enregistrer l'image sur l'album photo sur l'appareil après la capture. *(Booléen)*
 
-*   **popoverOptions**: options pour iOS uniquement qui spécifient l'emplacement de la boîte de dialogue sur iPad. Définie dans`<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>`.
+*   **popoverOptions**: options pour iOS uniquement qui spécifient l'emplacement de la boîte de dialogue sur iPad. Définie dans`CameraPopoverOptions`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -107,7 +107,7 @@ Paramètres optionnels de personnalisation des réglages de l'appareil photo.
 
 *   L'utilisation d'images de grandes tailles peut entraîner l'incapacité d'encodage sur d'anciens modèles d'appareils (par exemple, le Torch 9800) qui disposent d'un appareil photo haute résolution.
 
-*   `Camera.<a href="../../media/media.html">Media</a>Type` n'est pas pris en charge.
+*   `Camera.MediaType` n'est pas pris en charge.
 
 *   Ignore le paramètre `correctOrientation`.
 

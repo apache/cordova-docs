@@ -20,7 +20,7 @@ license: >
 
 # compassHeading
 
-A `CompassHeading` объект возвращается к `<a href="compassSuccess.html">compassSuccess</a>` функции обратного вызова.
+A `CompassHeading` объект возвращается к `compassSuccess` функции обратного вызова.
 
 ## Свойства
 
@@ -34,7 +34,7 @@ A `CompassHeading` объект возвращается к `<a href="compassSuc
 
 ## Описание
 
-`CompassHeading`Объект возвращается к `<a href="compassSuccess.html">compassSuccess</a>` функции обратного вызова.
+`CompassHeading`Объект возвращается к `compassSuccess` функции обратного вызова.
 
 ## Андроид причуды
 

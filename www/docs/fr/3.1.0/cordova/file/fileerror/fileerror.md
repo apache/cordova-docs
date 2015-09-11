@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>Error
+# FileError
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>Error` est défini lorsqu'une erreur se produit dans l'une des méthodes de l'API <a href="../fileobj/fileobj.html">File</a>.
+Un objet `FileError` est défini lorsqu'une erreur se produit dans l'une des méthodes de l'API File.
 
 ## Propriétés
 
@@ -28,19 +28,19 @@ Un objet `<a href="../fileobj/fileobj.html">File</a>Error` est défini lorsqu'un
 
 ## Constantes
 
-*   `<a href="../fileobj/fileobj.html">File</a>Error.NOT_FOUND_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.SECURITY_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.ABORT_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.NOT_READABLE_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.ENCODING_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.NO_MODIFICATION_ALLOWED_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_STATE_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.SYNTAX_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_MODIFICATION_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.QUOTA_EXCEEDED_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.TYPE_MISMATCH_ERR`
-*   `<a href="../fileobj/fileobj.html">File</a>Error.PATH_EXISTS_ERR`
+*   `FileError.NOT_FOUND_ERR`
+*   `FileError.SECURITY_ERR`
+*   `FileError.ABORT_ERR`
+*   `FileError.NOT_READABLE_ERR`
+*   `FileError.ENCODING_ERR`
+*   `FileError.NO_MODIFICATION_ALLOWED_ERR`
+*   `FileError.INVALID_STATE_ERR`
+*   `FileError.SYNTAX_ERR`
+*   `FileError.INVALID_MODIFICATION_ERR`
+*   `FileError.QUOTA_EXCEEDED_ERR`
+*   `FileError.TYPE_MISMATCH_ERR`
+*   `FileError.PATH_EXISTS_ERR`
 
 ## Description
 
-L'objet `<a href="../fileobj/fileobj.html">File</a>Error` est le seul paramètre fourni à l'un des callbacks d'erreur de l'API <a href="../fileobj/fileobj.html">File</a>. Pour déterminer le type d'erreur, comparer sa propriété `code` à l'une des propriétés listées ci-dessus.
+L'objet `FileError` est le seul paramètre fourni à l'un des callbacks d'erreur de l'API File. Pour déterminer le type d'erreur, comparer sa propriété `code` à l'une des propriétés listées ci-dessus.

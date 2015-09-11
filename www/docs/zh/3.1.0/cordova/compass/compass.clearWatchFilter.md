@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# <a href="compass.clearWatch.html">compass.clearWatch</a>Filter
+# compass.clearWatchFilter
 
-不再支援 1.6。請參閱`<a href="compass.clearWatch.html">compass.clearWatch</a>`.
+不再支援 1.6。請參閱`compass.clearWatch`.

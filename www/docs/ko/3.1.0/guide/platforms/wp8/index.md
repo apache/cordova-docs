@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Windows Phone <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a> 8
+# Windows Phone 플랫폼 가이드 8
 
-이 <a href="../../../index.html">가이드</a>에서는 Windows Phone 8 <a href="../../../cordova/device/device.html">장치</a>에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 <a href="../../../cordova/device/device.html">장치</a>를 타겟팅 하려는 경우 대신 Windows Phone 7 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a> 상세한 Windows Phone 7 개발. 버전 7 IE10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 <a href="../../../cordova/device/device.html">장치</a>에서 실행.
+이 가이드에서는 Windows Phone 8 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 장치를 타겟팅 하려는 경우 대신 Windows Phone 7 플랫폼 가이드 상세한 Windows Phone 7 개발. 버전 7 IE10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.
 
 두 버전 모두에 적용 되는 자세한 플랫폼 관련 정보에 대 한 다음 참조.
 
-*   <a href="upgrading.html">Windows Phone 업그레이드</a>
-*   <a href="plugin.html">Windows Phone 플러그인</a>
-*   <a href="tools.html">Windows Phone 명령줄 도구</a>
+*   Windows Phone 업그레이드
+*   Windows Phone 플러그인
+*   Windows Phone 명령줄 도구
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
 ## 1. 시스템 요구 사항
 
@@ -36,7 +36,7 @@ license: >
     
     *   윈도우 8 또는 윈도우 8 프로 
         *   Windows의 64 비트 버전 (64)가 SDK에 대 한 필요 합니다.
-        *   <a href="../../../cordova/device/device.html">장치</a> 에뮬레이터를 실행할 수 있도록, 프로 버전에 것이 좋습니다.
+        *   장치 에뮬레이터를 실행할 수 있도록, 프로 버전에 것이 좋습니다.
 
 *   하드웨어:
     
@@ -54,9 +54,9 @@ license: >
 
 *   SDK + IDE (Visual Studio)
     
-    *   비주얼 스튜디오 2012 전문가, 프리미엄, 또는 궁극. Note Visual Studio Express에 대 한 Windows Phone (SDK에 포함)은 권장 하지 않습니다 VS 익스프레스 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (아래 참조)를 구축 하지 수 있기 때문에 VS 프로에서 서만 또는 더 높은 **템플릿 내보내기** 기능을 필요 하지 않습니다.
+    *   비주얼 스튜디오 2012 전문가, 프리미엄, 또는 궁극. Note Visual Studio Express에 대 한 Windows Phone (SDK에 포함)은 권장 하지 않습니다 VS 익스프레스 서식 파일 (아래 참조)를 구축 하지 수 있기 때문에 VS 프로에서 서만 또는 더 높은 **템플릿 내보내기** 기능을 필요 하지 않습니다.
 
-*   등록 및 실제 <a href="../../../cordova/device/device.html">장치</a>에 응용 프로그램을 설치 하거나 시장 장소에 그것을 제출 하는 경우 [Windows Phone 개발 센터][3] 계정에 대 한 지불.
+*   등록 및 실제 장치에 응용 프로그램을 설치 하거나 시장 장소에 그것을 제출 하는 경우 [Windows Phone 개발 센터][3] 계정에 대 한 지불.
 
  [1]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
  [2]: http://ark.intel.com/Products/VirtualizationTechnology
@@ -72,22 +72,22 @@ license: >
 
 *   다운로드 및 [코르도바][6]의 최신 복사본을 추출 합니다. 일 하 게 될 것입니다는 `lib\windows-phone-8\wp8` 하위 디렉터리, `lib\windows-phone-8\wp7` 코르도바의 Windwos Phone 7 버전이 포함 되어 있습니다.
 
-*   복사는 `CordovaWP8_x_x_x.zip` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>은 `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` 디렉터리.
+*   복사는 `CordovaWP8_x_x_x.zip` 파일은 `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` 디렉터리.
 
  [5]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [6]: http://phonegap.com/download
 
 ## 2.1. 건물 템플릿
 
-**참고:** 이 단계는 필요 하지 않을 수 있습니다. Lib\windows 전화 번호부 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> CordovaWP8\_x\_x_x.zip에 이미 포함 되어 있는 경우이 단계를 건너뛸 수 있습니다.
+**참고:** 이 단계는 필요 하지 않을 수 있습니다. Lib\windows 전화 번호부 파일 CordovaWP8\_x\_x_x.zip에 이미 포함 되어 있는 경우이 단계를 건너뛸 수 있습니다.
 
-개발 프로세스를 단순화 하기 위해 코르 도우 바 Visual Studio 템플릿을 빌드하는 스크립트와 함께 제공. Visual Studio 내부 코르도바 응용 프로그램의 빠른 생성을 위한 수 있습니다. 필요한 경우이 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 수정할 수 있습니다 그리고 아래 단계 진행 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 생성 하려면 방법을 나타냅니다.
+개발 프로세스를 단순화 하기 위해 코르 도우 바 Visual Studio 템플릿을 빌드하는 스크립트와 함께 제공. Visual Studio 내부 코르도바 응용 프로그램의 빠른 생성을 위한 수 있습니다. 필요한 경우이 서식 파일을 수정할 수 있습니다 그리고 아래 단계 진행 서식 파일을 생성 하려면 방법을 나타냅니다.
 
-### 설치 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 만들고 배치 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 실행 합니다.
+### 설치 서식 파일을 만들고 배치 파일을 실행 합니다.
 
-*   Repo의 루트 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 2.zip <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
+*   Repo의 루트 파일 createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 파일 2.zip 파일을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 파일을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio 파일에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
 
-*   명령줄에서 배치 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 <a href="../../../plugin_ref/spec.html">변수</a>
+*   명령줄에서 배치 파일을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 변수
 
 스크립트를 실행 합니다.
 
@@ -98,7 +98,7 @@ license: >
 
 *   Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선택.
 
-*   **CordovaWP8**를 선택 합니다. (버전 번호 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 설명에 표시 됩니다.)
+*   **CordovaWP8**를 선택 합니다. (버전 번호 서식 파일 설명에 표시 됩니다.)
 
 *   프로젝트에 이름을 하 고 **확인** 을 선택 합니다.
 
@@ -112,7 +112,7 @@ license: >
 
 *   여기에 추가 하는 콘텐츠 Visual Studio 프로젝트의 일부가 될 필요가 있고 내용으로 설정 해야 합니다.
 
-*   참고:이 화면 <a href="../../../cordova/media/capture/capture.html">캡처</a> 코르도바 2.3.0 다운로드에서 귀하의 목록을 실제 버전 설치에 따라 달라 집니다.
+*   참고:이 화면 캡처 코르도바 2.3.0 다운로드에서 귀하의 목록을 실제 버전 설치에 따라 달라 집니다.
 
 ![][8]
 
@@ -128,15 +128,15 @@ license: >
 
  [9]: img/guide/platforms/wp8/BuildEmulator.png
 
-## 6. <a href="../../../cordova/device/device.html">장치</a>에 대 한 프로젝트를 빌드
+## 6. 장치에 대 한 프로젝트를 빌드
 
-<a href="../../../cordova/device/device.html">장치</a>에서 응용 프로그램을 테스트 하려면 <a href="../../../cordova/device/device.html">장치</a>를 등록 해야 합니다. 클릭 [여기][10] 배포 하 고 Windows Phone 8 테스트에 설명서를 읽을 수 있습니다.
+장치에서 응용 프로그램을 테스트 하려면 장치를 등록 해야 합니다. 클릭 [여기][10] 배포 하 고 Windows Phone 8 테스트에 설명서를 읽을 수 있습니다.
 
  [10]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
-*   귀하의 휴대 전화 <a href="../../../cordova/connection/connection.html">연결</a> 되어 있으며 화면 잠긴 ㄴ 다는 것을 확인 하십시오.
+*   귀하의 휴대 전화 연결 되어 있으며 화면 잠긴 ㄴ 다는 것을 확인 하십시오.
 
-*   Visual Studio에서 상단 드롭다운 메뉴에서 '<a href="../../../cordova/device/device.html">장치</a>'를 선택 합니다.
+*   Visual Studio에서 상단 드롭다운 메뉴에서 '장치'를 선택 합니다.
 
 *   디버깅을 시작 하려면 주요 드롭 다운 메뉴 옆에 있는 녹색 **재생** 버튼을 누르거나 **f5 키** 를 입력합니다.
 
@@ -148,6 +148,6 @@ license: >
 
 ## 더 읽기
 
-특정 차이점 IE10 및 웹 킷 브라우저 및 지 원하는 방법에 대 한 자세한 내용은 모두 MS 유용한 [<a href="../../../index.html">가이드</a>는 여기][12] 있다
+특정 차이점 IE10 및 웹 킷 브라우저 및 지 원하는 방법에 대 한 자세한 내용은 모두 MS 유용한 [가이드는 여기][12] 있다
 
  [12]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx

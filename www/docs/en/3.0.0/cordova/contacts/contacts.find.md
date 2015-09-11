@@ -21,42 +21,42 @@ license: >
 contacts.find
 =============
 
-Queries the device contacts database and returns one or more `<a href="Contact/contact.html">Contact</a>`
+Queries the device contacts database and returns one or more `Contact`
 objects, each containing the fields specified.
 
-    navigator.contacts.find(<a href="parameters/contactFields.html">contactFields</a>, <a href="parameters/contactSuccess.html">contactSuccess</a>, <a href="parameters/contactError.html">contactError</a>, <a href="parameters/contactFindOptions.html">contactFindOptions</a>);
+    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
 Description
 -----------
 
 The `contacts.find` method executes asynchronously, querying the
-device contacts database and returning an array of `<a href="Contact/contact.html">Contact</a>` objects.
-The resulting objects are passed to the `<a href="parameters/contactSuccess.html">contactSuccess</a>` callback
-function specified by the __<a href="parameters/contactSuccess.html">contactSuccess</a>__ parameter.
+device contacts database and returning an array of `Contact` objects.
+The resulting objects are passed to the `contactSuccess` callback
+function specified by the __contactSuccess__ parameter.
 
-The __<a href="parameters/contactFields.html">contactFields</a>__ parameter specifies the fields to be used as a
+The __contactFields__ parameter specifies the fields to be used as a
 search qualifier, and only those results are passed to the
-__<a href="parameters/contactSuccess.html">contactSuccess</a>__ callback function.  A zero-length __<a href="parameters/contactFields.html">contactFields</a>__
+__contactSuccess__ callback function.  A zero-length __contactFields__
 parameter is invalid and results in
-`<a href="Contact/contact.html">Contact</a>Error.INVALID_ARGUMENT_ERROR`. A __<a href="parameters/contactFields.html">contactFields</a>__ value of
+`ContactError.INVALID_ARGUMENT_ERROR`. A __contactFields__ value of
 `"*"` returns all contact fields.
 
-The __<a href="parameters/contactFindOptions.html">contactFindOptions</a>.filter__ string can be used as a search
+The __contactFindOptions.filter__ string can be used as a search
 filter when querying the contacts database.  If provided, a
 case-insensitive, partial value match is applied to each field
-specified in the __<a href="parameters/contactFields.html">contactFields</a>__ parameter.  If there's a match for
+specified in the __contactFields__ parameter.  If there's a match for
 _any_ of the specified fields, the contact is returned.
 
 Parameters
 ----------
 
-- __<a href="parameters/contactFields.html">contactFields</a>__: <a href="Contact/contact.html">Contact</a> fields to use as a search qualifier. The resulting `<a href="Contact/contact.html">Contact</a>` object only features values for these fields. _(DOMString[])_ [Required]
+- __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
 
-- __<a href="parameters/contactSuccess.html">contactSuccess</a>__: Success callback function invoked with the contacts returned from the database. [Required]
+- __contactSuccess__: Success callback function invoked with the contacts returned from the database. [Required]
 
-- __<a href="parameters/contactError.html">contactError</a>__: Error callback function, invoked when an error occurs. [Optional]
+- __contactError__: Error callback function, invoked when an error occurs. [Optional]
 
-- __<a href="parameters/contactFindOptions.html">contactFindOptions</a>__: Search options to filter contacts. [Optional]
+- __contactFindOptions__: Search options to filter contacts. [Optional]
 
 Supported Platforms
 -------------------
@@ -67,42 +67,42 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(contacts) {
         alert('Found ' + contacts.length + ' contacts.');
     };
 
-    function onError(<a href="parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
     // find all contacts with 'Bob' in any name field
-    var options      = new <a href="Contact/contact.html">Contact</a>FindOptions();
+    var options      = new ContactFindOptions();
     options.filter   = "Bob";
     options.multiple = true;
     var fields       = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
         <head>
-            <title><a href="Contact/contact.html">Contact</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Contact Example</title>
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
 
                 // Wait for device API libraries to load
-                document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+                document.addEventListener("deviceready", onDeviceReady, false);
 
                 // device APIs are available
 
-                function on<a href="../device/device.html">Device</a>Ready() {
+                function onDeviceReady() {
                     // find all contacts with 'Bob' in any name field
-                    var options = new <a href="Contact/contact.html">Contact</a>FindOptions();
+                    var options = new ContactFindOptions();
                     options.filter = "Bob";
                     var fields = ["displayName", "name"];
                     navigator.contacts.find(fields, onSuccess, onError, options);
@@ -118,14 +118,14 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
                 // onError: Failed to get the contacts
 
-                function onError(<a href="parameters/contactError.html">contactError</a>) {
+                function onError(contactError) {
                     alert('onError!');
                 }
             </script>
         </head>
 
         <body>
-            <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
-            <p>Find <a href="Contact/contact.html">Contact</a>s</p>
+            <h1>Example</h1>
+            <p>Find Contacts</p>
         </body>
     </html>

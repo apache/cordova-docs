@@ -20,16 +20,16 @@ license: >
 
 # contacts.Create
 
-Retourne un nouvel objet <a href="Contact/contact.html">Contact</a>.
+Retourne un nouvel objet Contact.
 
     var contact = navigator.contacts.create(properties);
     
 
 ## Description
 
-La méthode `contacts.create` est synchrone et retourne un nouvel objet `<a href="Contact/contact.html">Contact</a>`.
+La méthode `contacts.create` est synchrone et retourne un nouvel objet `Contact`.
 
-Cette méthode ne conserve pas l'objet <a href="Contact/contact.html">Contact</a> dans la base de données des contacts de l'appareil, pour lesquels il faut appeler la méthode `<a href="Contact/contact.html">Contact</a>.save`.
+Cette méthode ne conserve pas l'objet Contact dans la base de données des contacts de l'appareil, pour lesquels il faut appeler la méthode `Contact.save`.
 
 ## Plates-formes prises en charge
 
@@ -40,7 +40,7 @@ Cette méthode ne conserve pas l'objet <a href="Contact/contact.html">Contact</a
 
 ## Petit exemple
 
-    var my<a href="Contact/contact.html">Contact</a> = navigator.contacts.create({"displayName": "Test User"});
+    var myContact = navigator.contacts.create({"displayName": "Test User"});
     
 
 ## Exemple complet
@@ -48,27 +48,27 @@ Cette méthode ne conserve pas l'objet <a href="Contact/contact.html">Contact</a
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="Contact/contact.html">Contact</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var my<a href="Contact/contact.html">Contact</a> = navigator.contacts.create({"displayName": "Test User"});
-            my<a href="Contact/contact.html">Contact</a>.note = "This contact has a note.";
-            console.log("The contact, " + my<a href="Contact/contact.html">Contact</a>.displayName + ", note: " + my<a href="Contact/contact.html">Contact</a>.note);
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            myContact.note = "This contact has a note.";
+            console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Create <a href="Contact/contact.html">Contact</a></p>
+        <h1>Example</h1>
+        <p>Create Contact</p>
       </body>
     </html>

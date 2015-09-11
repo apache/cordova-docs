@@ -42,7 +42,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Method #1: Import a Cordova Tizen project sample**
     - Launch Tizen Eclipse IDE
-    - Select  **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** -> **Import** -> **Tizen Web Project**
+    - Select  **File** -> **Import** -> **Tizen Web Project**
 
     ![](img/guide/platforms/tizen/import_project.png)
 
@@ -62,7 +62,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates**
     - Launch Tizen Eclipse IDE
-    - Select  **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** -> **New** -> **Tizen Web Project**
+    - Select  **File** -> **New** -> **Tizen Web Project**
     - Select **User Template** and **User defined** items
     - Select one of the Tizen Cordova template (e.g: **CordovaBasicTemplate**)
     - Fill-up the **Project name** and its target **Location**
@@ -76,7 +76,7 @@ This guide describes how to set up your development environment for Cordova and 
     - Your project should now have been created and appear **Project Explorer** view
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------
 - To build your project:
 
@@ -96,11 +96,11 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>/Emulator
+5B. Deploy to Device/Emulator
 --------------------
 
 - Make sure that your target device is properly launched/connected/configured ("Date and Time" settings must have been set correctly)
-- Select your application deployment target with the **<a href="../../../cordova/connection/connection.html">Connection</a> Explorer** view (Select **Window** Menu -> **Show View** -> **<a href="../../../cordova/connection/connection.html">Connection</a> Explorer** )
+- Select your application deployment target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
 
     ![](img/guide/platforms/tizen/connection_explorer.png)
 

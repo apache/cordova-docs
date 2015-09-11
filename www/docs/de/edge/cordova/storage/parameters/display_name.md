@@ -20,4 +20,4 @@ license: >
 
 # database_displayname
 
-Der Anzeigename der <a href="../database/database.html">Datenbank</a>.
+Der Anzeigename der Datenbank.

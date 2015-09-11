@@ -40,7 +40,7 @@ Methods
 Details
 -------
 
-The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `<a href="../fileentry/fileentry.html">FileEntry</a>` object.
+The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
 
 Supported Platforms
 -------------------
@@ -55,7 +55,7 @@ Supported Platforms
 slice
 --------------
 
-Return a new File object, for which <a href="../filereader/filereader.html">FileReader</a> will return only the specified portion of the file.
+Return a new File object, for which FileReader will return only the specified portion of the file.
 Negative values for __start__ or __end__ are measured from the end of the file.
 The indexes are always relative to the current slice (see the full example).
 
@@ -64,11 +64,11 @@ __Parameters:__
 - __start__ - The index of the first byte to read, inclusive.
 - __end__ - The index of the byte after the last one to read.
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 
     var slicedFile = file.slice(10, 30);
 
-__Full <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Full Example__
 
     var slice1 = file.slice(100, 400);
     var slice2 = slice1.slice(20, 35);

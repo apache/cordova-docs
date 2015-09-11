@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../compass.html">Compass</a>Error
+CompassError
 ==========
 
-エラーが起きた場合、 `<a href="../parameters/compassError.html">compassError</a>` コールバック関数には `<a href="../compass.html">Compass</a>Error` オブジェクトが返されます。
+エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
 
 プロパティー
 ----------
@@ -30,12 +30,12 @@ license: >
 
 定数
 ---------
-- `<a href="../compass.html">Compass</a>Error.COMPASS_INTERNAL_ERR`
-- `<a href="../compass.html">Compass</a>Error.COMPASS_NOT_SUPPORTED`
+- `CompassError.COMPASS_INTERNAL_ERR`
+- `CompassError.COMPASS_NOT_SUPPORTED`
 
 概要
 -----------
 
-エラーが起きた場合、 `<a href="../parameters/compassError.html">compassError</a>` コールバック関数には `<a href="../compass.html">Compass</a>Error` オブジェクトが返されます。
+エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
 
 

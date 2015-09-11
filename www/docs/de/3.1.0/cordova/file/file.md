@@ -18,33 +18,33 @@ license: >
     under the License.
 ---
 
-# <a href="fileobj/fileobj.html">Datei</a>
+# Datei
 
-> Eine API zum Lesen, schreiben und navigieren Sie <a href="fileobj/fileobj.html">Datei</a>-System-Hierarchien, basierend auf der [w3c <a href="fileobj/fileobj.html">Datei</a> api][1].
+> Eine API zum Lesen, schreiben und navigieren Sie Datei-System-Hierarchien, basierend auf der [w3c Datei api][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## Objekte
 
-*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
-*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
-*   <a href="fileobj/fileobj.html">Datei</a>
-*   <a href="fileentry/fileentry.html">FileEntries</a>
-*   <a href="fileerror/fileerror.html">FileError</a>
-*   <a href="filereader/filereader.html">FileReader</a>
-*   <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">Datei</a>system</a>
-*   <a href="filetransfer/filetransfer.html">FileTransfer</a>
-*   <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html">FileTransfer</a>Error</a>
-*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
-*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
-*   <a href="filewriter/filewriter.html">FileWriter</a>
+*   DirectoryEntry
+*   DirectoryReader
+*   Datei
+*   FileEntries
+*   FileError
+*   FileReader
+*   Dateisystem
+*   FileTransfer
+*   FileTransferError
+*   FileUploadOptions
+*   FileUploadResult
+*   FileWriter
 *   Flaggen
-*   <a href="localfilesystem/localfilesystem.html">LocalFileSystem</a>
-*   <a href="metadata/metadata.html">Metadaten</a>
+*   LocalFileSystem
+*   Metadaten
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin ls
@@ -52,7 +52,7 @@ Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>e
         $ cordova plugin rm org.apache.cordova.file
     
 
-Um die <a href="fileobj/fileobj.html">Datei</a>übertragung-Plugin zu verwenden, müssen Sie, die separat hinzufügen.
+Um die Dateiübertragung-Plugin zu verwenden, müssen Sie, die separat hinzufügen.
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
@@ -68,8 +68,8 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="android-package" value="org.apache.cordova.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -82,8 +82,8 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="File">
             <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="blackberry-package" value="org.apache.cordova.http.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
         </feature>
         
         (in www/config.xml)
@@ -100,9 +100,9 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
         </feature>
-        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
-            <param name="ios-package" value="CDV<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

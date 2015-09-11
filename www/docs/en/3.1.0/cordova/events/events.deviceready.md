@@ -22,7 +22,7 @@ license: >
 
 The event fires when Cordova is fully loaded.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
+    document.addEventListener("deviceready", yourCallbackFunction, false);
 
 ## Details
 
@@ -37,7 +37,7 @@ the corresponding native code is available.
 
 The `deviceready` event fires once Cordova has fully loaded. Once the
 event fires, you can safely make calls to Cordova APIs.  Applications
-typically attach an event listener with `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>`
+typically attach an event listener with `document.addEventListener`
 once the HTML document's DOM has loaded.
 
 The `deviceready` event behaves somewhat differently from others.  Any
@@ -53,20 +53,20 @@ callback function called immediately.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    function on<a href="../device/device.html">Device</a>Ready() {
+    function onDeviceReady() {
         // Now safe to use device APIs
     }
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Ready Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -74,12 +74,12 @@ callback function called immediately.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Now safe to use device APIs
         }
 

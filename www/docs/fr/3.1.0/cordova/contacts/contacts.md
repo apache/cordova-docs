@@ -18,33 +18,33 @@ license: >
     under the License.
 ---
 
-# <a href="Contact/contact.html">Contact</a>s
+# Contacts
 
 > L'objet `contacts` fournit l'accès à la base de données de contacts de l'appareil.
 
-**Remarque importante sur la vie privée :** La collecte et l'utilisation des données de contact soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise les données de contact et si elles sont partagées avec d'autres parties. Les information de contact sont considérés comme sensibles parce qu'elles révèlent les gens avec lesquels une personne communique. Par conséquent, en plus de la politique de confidentialité de votre application, vous devez envisager fortement de fournir une alerte au dernier moment avant que votre application n'accède ou en utilise les données de contact (si le système d'exploitation de l'appareil ne l'a pas déjà fait). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi qu'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés d'applications peuvent exiger de votre application qu'elle fournisse une alerte au dernier moment et obtienne l'autorisation de l'utilisateur avant d'accéder à des données de contact. Une expérience utilisateur claire et facile à comprendre autour de l'utilisation des données de contact permettra d'éviter la confusion des utilisateurs et une utilisation jugée abusive des données de contact. Pour plus d'informations, consultez le <a href="../../guide/appdev/privacy/index.html">Guide de la vie privée</a>.
+**Remarque importante sur la vie privée :** La collecte et l'utilisation des données de contact soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise les données de contact et si elles sont partagées avec d'autres parties. Les information de contact sont considérés comme sensibles parce qu'elles révèlent les gens avec lesquels une personne communique. Par conséquent, en plus de la politique de confidentialité de votre application, vous devez envisager fortement de fournir une alerte au dernier moment avant que votre application n'accède ou en utilise les données de contact (si le système d'exploitation de l'appareil ne l'a pas déjà fait). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi qu'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés d'applications peuvent exiger de votre application qu'elle fournisse une alerte au dernier moment et obtienne l'autorisation de l'utilisateur avant d'accéder à des données de contact. Une expérience utilisateur claire et facile à comprendre autour de l'utilisation des données de contact permettra d'éviter la confusion des utilisateurs et une utilisation jugée abusive des données de contact. Pour plus d'informations, consultez le Guide de la vie privée.
 
 ## Méthodes
 
-*   <a href="contacts.create.html">contacts.Create</a>
+*   contacts.Create
 *   contacts.Find
 
 ## Arguments
 
-*   <a href="parameters/contactFields.html">contactFields</a>
-*   <a href="parameters/contactSuccess.html">contactSuccess</a>
-*   <a href="parameters/contactError.html">contactError</a>
-*   <a href="parameters/contactFindOptions.html">contactFindOptions</a>
+*   contactFields
+*   contactSuccess
+*   contactError
+*   contactFindOptions
 
 ## Objets
 
-*   <a href="Contact/contact.html">Contact</a>
-*   <a href="Contact/contact.html">Contact</a>Name
-*   <a href="Contact/contact.html">Contact</a>Field
-*   <a href="Contact/contact.html">Contact</a>Address
-*   <a href="Contact/contact.html">Contact</a>Organization
-*   <a href="Contact/contact.html">Contact</a>FindOptions
-*   <a href="Contact/contact.html">Contact</a>Error
+*   Contact
+*   ContactName
+*   ContactField
+*   ContactAddress
+*   ContactOrganization
+*   ContactFindOptions
+*   ContactError
 
 ## Accéder à la fonctionnalité
 
@@ -61,8 +61,8 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 *   Android
     
         (in app/res/xml/config.xml)
-        <feature name="<a href="Contact/contact.html">Contact</a>s">
-            <param name="android-package" value="org.apache.cordova.<a href="Contact/contact.html">Contact</a>Manager" />
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -74,21 +74,21 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 *   BlackBerry WebWorks
     
         (in www/plugins.xml)
-        <feature name="<a href="Contact/contact.html">Contact</a>">
-            <param name="blackberry-package" value="org.apache.cordova.pim.<a href="Contact/contact.html">Contact</a>" />
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
         </feature>
         
         (in www/config.xml)
         <feature id="blackberry.find"        required="true" version="1.0.0.0" />
         <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
         <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-        <feature id="blackberry.pim.<a href="Contact/contact.html">Contact</a>" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
 *   iOS (en`config.xml`)
     
-        <feature name="<a href="Contact/contact.html">Contact</a>s">
-            <param name="ios-package" value="CDV<a href="Contact/contact.html">Contact</a>s" />
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
         </feature>
         
 

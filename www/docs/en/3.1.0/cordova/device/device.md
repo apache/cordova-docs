@@ -24,20 +24,20 @@ license: >
 
 ## Properties
 
-- <a href="device.model.html">device.model</a>
-- <a href="device.cordova.html">device.cordova</a>
-- <a href="device.platform.html">device.platform</a>
-- <a href="device.uuid.html">device.uuid</a>
-- <a href="device.version.html">device.version</a>
-- <a href="device.name.html">device.name</a>
+- device.model
+- device.cordova
+- device.platform
+- device.uuid
+- device.version
+- device.name
 
 ## Variable Scope
 
 Since `device` is assigned to the `window` object, it is implicitly in the global scope.
 
     // These reference the same `device`
-    var phoneModel = window.<a href="device.model.html">device.model</a>;
-    var phoneModel = <a href="device.model.html">device.model</a>;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
 
 ## Accessing the Feature
 
@@ -90,4 +90,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.
+configuration.  See _Platform Support_ in the Overview section.

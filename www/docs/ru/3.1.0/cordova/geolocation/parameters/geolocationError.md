@@ -29,4 +29,4 @@ license: >
 
 ## Параметры
 
-*   **Ошибка**: ошибки, возвращенной устройством. *(<a href="../PositionError/positionError.html">PositionError</a>)*
+*   **Ошибка**: ошибки, возвращенной устройством. *(PositionError)*

@@ -42,7 +42,7 @@ license: >
 
 *   [連絡人][5]
     
-    > 與設備接觸<a href="../storage/database/database.html">資料庫</a>的工作。
+    > 與設備接觸資料庫的工作。
 
 *   [設備][6]
     

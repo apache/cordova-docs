@@ -24,9 +24,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="config.html">Amazon Fire OS Konfiguration</a>
-*   <a href="webview.html">Amazon Fire OS Webansichten für</a>
-*   <a href="plugin.html">Amazon Fire OS Plugins</a>
+*   Amazon Fire OS Konfiguration
+*   Amazon Fire OS Webansichten für
+*   Amazon Fire OS Plugins
 
 ## Anforderungen und Unterstützung
 
@@ -72,7 +72,7 @@ Die PATH-Umgebung unter Windows 7 zu ändern:
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie den Wert und schließen Sie beide Dialogfelder zu.
+*   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 Sie müssen möglicherweise auch Java und Ant öffnen eine Eingabeaufforderung und geben aktivieren `java` , und geben Sie auch `ant` . Hängen Sie an den Pfad, welcher nicht ausgeführt:
 

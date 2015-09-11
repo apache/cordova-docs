@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="capture.html">Capture</a>AudioOptions
+# CaptureAudioOptions
 
 > Encapsulates audio capture configuration options.
 
@@ -28,12 +28,12 @@ license: >
 
 - __duration__: The maximum duration of an audio sound clip, in seconds.
 
-## Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
 
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
 ## Amazon Fire OS Quirks
 

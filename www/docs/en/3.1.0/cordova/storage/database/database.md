@@ -30,7 +30,7 @@ Provides access to an SQL database.
 
 ## Details
 
-The `window.<a href="../storage.opendatabase.html">openDatabase</a>()` method returns a `Database` object.
+The `window.openDatabase()` method returns a `Database` object.
 
 ## Supported Platforms
 
@@ -39,7 +39,7 @@ The `window.<a href="../storage.opendatabase.html">openDatabase</a>()` method re
 - iOS
 - Tizen
 
-## Transaction Quick <a href="../storage.opendatabase.html">Example</a>
+## Transaction Quick Example
 
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -56,32 +56,32 @@ The `window.<a href="../storage.opendatabase.html">openDatabase</a>()` method re
         alert("success!");
     }
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-## Change Version Quick <a href="../storage.opendatabase.html">Example</a>
+## Change Version Quick Example
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
 
-## Full <a href="../storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../storage.html">Storage</a> <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
@@ -109,7 +109,7 @@ The `window.<a href="../storage.opendatabase.html">openDatabase</a>()` method re
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

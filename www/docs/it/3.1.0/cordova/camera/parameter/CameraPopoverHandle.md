@@ -20,7 +20,7 @@ license: >
 
 # CameraPopoverHandle
 
-Un handle per la finestra di dialogo di muffin creato da`<a href="../camera.getPicture.html">camera.getPicture</a>`.
+Un handle per la finestra di dialogo di muffin creato da`camera.getPicture`.
 
 ## Metodi
 
@@ -36,11 +36,11 @@ Impostare la posizione dei muffin.
 
 **Parametri:**
 
-*   `cameraPopoverOptions`: il `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` che specificare la nuova posizione
+*   `cameraPopoverOptions`: il `CameraPopoverOptions` che specificare la nuova posizione
 
 ## Esempio rapido
 
-     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
@@ -54,12 +54,12 @@ Impostare la posizione dei muffin.
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
+         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

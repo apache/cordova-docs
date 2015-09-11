@@ -20,12 +20,12 @@ license: >
 
 # Android WebViews
 
-This section <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to embed a Cordova-enabled WebView component
+This section shows how to embed a Cordova-enabled WebView component
 within a larger Android application. For details on how these
 components can communicate with each other, see Application Plugins.
 
 If you're unfamiliar with Android, you should first familiarize
-yourself with the <a href="index.html">Android Platform Guide</a> and have the latest Android
+yourself with the Android Platform Guide and have the latest Android
 SDK installed before you attempt the more unusual development option
 of embedding a WebView.  Starting with Cordova 1.9, the Android
 platform relies on a `CordovaWebView` component, which builds on a
@@ -55,9 +55,9 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
    It should implement the included methods.  You may wish to copy
    them from `/framework/src/org/apache/cordova/CordovaActivity.java`,
    or else implement them on your own.  The following code fragment
-   <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s a basic application that relies on the interface. Note how
+   shows a basic application that relies on the interface. Note how
    the referenced view id matches the `id` attribute specified in the
-   XML fragment <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n above:
+   XML fragment shown above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;

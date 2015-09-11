@@ -65,14 +65,14 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -99,7 +99,7 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -118,9 +118,9 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
     
             // Pause audio
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -128,7 +128,7 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -157,7 +157,7 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>
@@ -166,7 +166,7 @@ El método `media.play` se ejecuta sincrónicamente e inicia o reanuda la reprod
 
 ## BlackBerry WebWorks rarezas
 
-*   <a href="../device/device.html">Dispositivo</a>s blackBerry apoyan un número limitado de canales de audio simultáneos. <a href="../device/device.html">Dispositivo</a>s CDMA sólo admiten un solo canal de audio. Otros dispositivos admiten hasta dos canales simultáneos. Un intento de reproducir archivos de audio más que la cantidad de apoyo se traduce en reproducción anterior ser detenida.
+*   Dispositivos blackBerry apoyan un número limitado de canales de audio simultáneos. Dispositivos CDMA sólo admiten un solo canal de audio. Otros dispositivos admiten hasta dos canales simultáneos. Un intento de reproducir archivos de audio más que la cantidad de apoyo se traduce en reproducción anterior ser detenida.
 
 ## iOS rarezas
 

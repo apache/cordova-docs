@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>AudioOptions
+CaptureAudioOptions
 ===================
 
 > Encapsulates audio capture configuration options.
@@ -30,13 +30,13 @@ Properties
 - __duration:__ The maximum duration of an audio sound clip, in seconds.
 - __mode:__ The selected audio mode.  The value must match one of the elements in `capture.supportedAudioModes`.
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
 
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
 Android Quirks
 --------------

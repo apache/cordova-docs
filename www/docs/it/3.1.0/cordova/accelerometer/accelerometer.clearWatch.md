@@ -25,7 +25,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: l'ID restituito da`<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>`.
+*   **watchID**: l'ID restituito da`accelerometer.watchAcceleration`.
 
 ## Piattaforme supportate
 
@@ -38,7 +38,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
 
 ## Esempio rapido
 
-    var watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration

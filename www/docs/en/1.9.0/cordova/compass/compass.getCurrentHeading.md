@@ -23,14 +23,14 @@ compass.getCurrentHeading
 
 Get the current compass heading.
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
 
 Description
 -----------
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The compass heading information is returned via a <a href="compass.html">Compass</a>Heading object using the `<a href="parameters/compassSuccess.html">compassSuccess</a>` callback function.
+The compass heading information is returned via a CompassHeading object using the `compassSuccess` callback function.
 
 Supported Platforms
 -------------------
@@ -41,7 +41,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(heading) {
@@ -49,29 +49,29 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
     };
 
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html"><a href="compass.html">Compass</a>Error</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             navigator.compass.getCurrentHeading(onSuccess, onError);
         }
     
@@ -83,14 +83,14 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('<a href="compass.html">Compass</a> Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

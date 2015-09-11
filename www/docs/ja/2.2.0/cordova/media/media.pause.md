@@ -18,18 +18,18 @@ license: >
     under the License.
 ---
 
-media.<a href="../events/events.pause.html">pause</a>
+media.pause
 ===========
 
 オーディオファイルを一時停止します。
 
-    media.<a href="../events/events.pause.html">pause</a>();
+    media.pause();
 
 
 概要
 -----------
 
-`media.<a href="../events/events.pause.html">pause</a>` 関数はオーディオファイルを一時停止させる同期関数です。
+`media.pause` 関数はオーディオファイルを一時停止させる同期関数です。
 
 サポートされているプラットフォーム
 -------------------
@@ -40,14 +40,14 @@ media.<a href="../events/events.pause.html">pause</a>
 - Windows Phone 7 (Mango)
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // オーディオ再生
     //
     function playAudio(url) {
         // URL のオーディオファイルを再生
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // 呼び出し成功
             function() {
                 console.log("playAudio():Audio Success");
@@ -58,33 +58,33 @@ media.<a href="../events/events.pause.html">pause</a>
         });
 
         // オーディオ再生
-        my_<a href="media.play.html">media.play</a>();
+        my_media.play();
 
         // 10秒後に一時停止
         setTimeout(function() {
-            media.<a href="../events/events.pause.html">pause</a>();
+            media.pause();
         }, 10000);
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>メディアの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+            <title>メディアの使用例</title>
 
             <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
             //
-            document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             // Cordova 準備完了
             //
-            function on<a href="../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
 
@@ -96,27 +96,27 @@ media.<a href="../events/events.pause.html">pause</a>
             // オーディオ再生
             //
             function playAudio(src) {
-                // src から <a href="media.html">Media</a> オブジェクトを作成
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // src から Media オブジェクトを作成
+                my_media = new Media(src, onSuccess, onError);
 
                 // オーディオ再生
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
 
                 // my_media の再生位置を一秒ごとに更新
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // my_media の再生位置を取得
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // 呼び出し成功
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // 呼び出し失敗
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -125,9 +125,9 @@ media.<a href="../events/events.pause.html">pause</a>
 
             // オーディオ一時停止
             //
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
 
@@ -135,7 +135,7 @@ media.<a href="../events/events.pause.html">pause</a>
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -156,7 +156,7 @@ media.<a href="../events/events.pause.html">pause</a>
 
             // 再生位置をセット
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
 
@@ -164,7 +164,7 @@ media.<a href="../events/events.pause.html">pause</a>
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">再生</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">一時停止</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">一時停止</a>
             <a href="#" class="btn large" onclick="stopAudio();">停止</a>
             <p id="audio_position"></p>
           </body>

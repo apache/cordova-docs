@@ -22,7 +22,7 @@ license: >
 
 Событие возникает, когда Кордова полностью загружен.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
+    document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
 ## Подробная информация
@@ -31,7 +31,7 @@ license: >
 
 Кордова состоит из двух кодовых баз: родной и JavaScript. В то время как машинный код загружает, отображается изображение пользовательской загрузки. Однако JavaScript загружает только после того, как DOM загружает. Это означает, что веб-приложение потенциально может вызвать функцию Cordova JavaScript, прежде чем соответствующий машинный код доступен.
 
-`deviceready`Событие возникает после полной загрузки Cordova. Когда событие происходит, вы можете безопасно звонить Cordova интерфейсов API. Приложения обычно придают прослушиватель событий с `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` после загрузки DOM HTML-документа.
+`deviceready`Событие возникает после полной загрузки Cordova. Когда событие происходит, вы можете безопасно звонить Cordova интерфейсов API. Приложения обычно придают прослушиватель событий с `document.addEventListener` после загрузки DOM HTML-документа.
 
 `deviceready`Событий поведение несколько отличается от других. Любой обработчик событий, зарегистрированных после `deviceready` пожаров событие имеет свою функцию обратного вызова вызывается немедленно.
 
@@ -46,7 +46,7 @@ license: >
 
 ## Быстрый пример
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
     
     function onDeviceReady() {
         // Now safe to use device APIs
@@ -58,7 +58,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Ready Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -66,7 +66,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

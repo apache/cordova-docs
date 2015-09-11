@@ -18,12 +18,12 @@ license: >
     under the License.
 ---
 
-device.<a href="../storage/parameters/version.html">version</a>
+device.version
 ==============
 
-Get the operating system <a href="../storage/parameters/version.html">version</a>.
+Get the operating system version.
 
-    var string = device.<a href="../storage/parameters/version.html">version</a>;
+    var string = device.version;
 
 Supported Platforms
 -------------------
@@ -34,7 +34,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Android:    Froyo OS would return "2.2"
@@ -45,34 +45,34 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
     //
     // iPhone:     iOS 3.2 returns "3.2"
     //
-    // Windows Phone 7: returns current OS <a href="../storage/parameters/version.html">version</a> number, ex. on Mango returns 7.10.7720
-    var deviceVersion = device.<a href="../storage/parameters/version.html">version</a>;
+    // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+    var deviceVersion = device.version;
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
         
-            element.innerHTML = '<a href="device.html">Device</a> Name: '     + device.<a href="../storage/parameters/name.html">name</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> PhoneGap: ' + <a href="device.phonegap.html">device.phonegap</a> + '<br />' + 
-                                '<a href="device.html">Device</a> Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' + 
-                                '<a href="device.html">Device</a> UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> Version: '  + device.<a href="../storage/parameters/version.html">version</a>  + '<br />';
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                                'Device PhoneGap: ' + device.phonegap + '<br />' + 
+                                'Device Platform: ' + device.platform + '<br />' + 
+                                'Device UUID: '     + device.uuid     + '<br />' + 
+                                'Device Version: '  + device.version  + '<br />';
         }
 
         </script>

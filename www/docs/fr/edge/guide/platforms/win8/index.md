@@ -24,7 +24,7 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir la mise à niveau de Windows 8 pour plus d'informations sur comment mettre à niveau les projets existants de Windows 8 Cordova.
 
-Séjours 8 Téléphone (wp8) fenêtre comme une plate-forme distincte, voir <a href="../wp8/index.html">Guide de plateforme Windows Phone 8</a> pour plus de détails.
+Séjours 8 Téléphone (wp8) fenêtre comme une plate-forme distincte, voir Guide de plateforme Windows Phone 8 pour plus de détails.
 
 Cordova WebViews fonctionnant sous Windows s'appuient sur Internet Explorer 10 (Windows 8.0) et Internet Explorer 11 (8.1 de Windows et Windows Phone 8.1) comme leur moteur de rendu, donc en pratique vous pouvez utiliser le débogueur puissant de IE pour tester n'importe quel contenu web qui n'est pas invoquer Cordova APIs. Le Blog des développeurs Windows Phone fournit des [indications utiles][1] sur comment soutien IE avec les navigateurs WebKit comparables.
 
@@ -157,7 +157,7 @@ Les valeurs valides pour le drapeau `--appx` sont `8.1-win`, `8.1-phone`et `uap`
 
 ### Considérations pour la version Windows de cible
 
-Windows 10 prend en charge un nouveau mode « Remote » pour les applications de Cordova (et applications HTML en général). Ce mode permet une plus grande liberté dans le respect de l'utilisation de la manipulation du DOM et de modèles web communs tels que l'utilisation de script inline d'apps, mais en réduisant l'ensemble des capacités de votre application peut utiliser lorsque soumis à la Banque publique de Windows le fait. Pour plus d'informations sur Windows 10 et le Mode distant, regardez la documentation de [<a href="win10-support.html">Cordova pour Windows 10</a>][13] .
+Windows 10 prend en charge un nouveau mode « Remote » pour les applications de Cordova (et applications HTML en général). Ce mode permet une plus grande liberté dans le respect de l'utilisation de la manipulation du DOM et de modèles web communs tels que l'utilisation de script inline d'apps, mais en réduisant l'ensemble des capacités de votre application peut utiliser lorsque soumis à la Banque publique de Windows le fait. Pour plus d'informations sur Windows 10 et le Mode distant, regardez la documentation de [Cordova pour Windows 10][13] .
 
  [13]: win10-support.md.html
 

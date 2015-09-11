@@ -183,7 +183,7 @@ Queste [Proprietà][3] possono essere impostate per personalizzare la compilazio
 
 Se avete bisogno di personalizzare `build.gradle` , piuttosto che modificare direttamente, è necessario creare un file di pari livello denominato `build-extras.gradle` . Questo file verrà incluso dai principali `build.gradle` quando è presente. Ecco un esempio:
 
-    # <a href="../../../cordova/storage/storage.opendatabase.html">Example</a> build-extras.gradle
+    # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
     ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
     # When set, this function allows code to run at the end of `build.gradle`

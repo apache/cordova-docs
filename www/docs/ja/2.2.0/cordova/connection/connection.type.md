@@ -39,58 +39,58 @@ connection.type
 - webOS
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
-    function check<a href="connection.html">Connection</a>() {
+    function checkConnection() {
         var networkState = navigator.connection.type;
 
         var states = {};
-        states[<a href="connection.html">Connection</a>.UNKNOWN]  = '不明な接続';
-        states[<a href="connection.html">Connection</a>.ETHERNET] = 'イーサネット接続';
-        states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi接続';
-        states[<a href="connection.html">Connection</a>.CELL_2G]  = '2G接続';
-        states[<a href="connection.html">Connection</a>.CELL_3G]  = '3G接続';
-        states[<a href="connection.html">Connection</a>.CELL_4G]  = '4G接続';
-        states[<a href="connection.html">Connection</a>.NONE]     = 'ネットワーク接続なし';
+        states[Connection.UNKNOWN]  = '不明な接続';
+        states[Connection.ETHERNET] = 'イーサネット接続';
+        states[Connection.WIFI]     = 'WiFi接続';
+        states[Connection.CELL_2G]  = '2G接続';
+        states[Connection.CELL_3G]  = '3G接続';
+        states[Connection.CELL_4G]  = '4G接続';
+        states[Connection.NONE]     = 'ネットワーク接続なし';
 
         alert('コネクションタイプ: ' + states[networkState]);
     }
 
-    check<a href="connection.html">Connection</a>();
+    checkConnection();
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>navigator.connection.type 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            check<a href="connection.html">Connection</a>();
+        function onDeviceReady() {
+            checkConnection();
         }
 
-        function check<a href="connection.html">Connection</a>() {
+        function checkConnection() {
             var networkState = navigator.connection.type;
 
             var states = {};
-            states[<a href="connection.html">Connection</a>.UNKNOWN]  = '不明な接続';
-            states[<a href="connection.html">Connection</a>.ETHERNET] = 'イーサネット接続';
-            states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi接続';
-            states[<a href="connection.html">Connection</a>.CELL_2G]  = '2G接続';
-            states[<a href="connection.html">Connection</a>.CELL_3G]  = '3G接続';
-            states[<a href="connection.html">Connection</a>.CELL_4G]  = '4G接続';
-            states[<a href="connection.html">Connection</a>.NONE]     = 'ネットワーク接続なし';
+            states[Connection.UNKNOWN]  = '不明な接続';
+            states[Connection.ETHERNET] = 'イーサネット接続';
+            states[Connection.WIFI]     = 'WiFi接続';
+            states[Connection.CELL_2G]  = '2G接続';
+            states[Connection.CELL_3G]  = '3G接続';
+            states[Connection.CELL_4G]  = '4G接続';
+            states[Connection.NONE]     = 'ネットワーク接続なし';
 
             alert('コネクションタイプ: ' + states[networkState]);
         }
@@ -104,7 +104,7 @@ connection.type
 
 API の変更点
 ----------
-Cordova 2.2.0 以前では、 <a href="connection.html">Connection</a> オブジェクトは `navigator.network.connection` にありました。
+Cordova 2.2.0 以前では、 Connection オブジェクトは `navigator.network.connection` にありました。
 
 仕様と一致させるため、これは 2.2.0 で `navigator.connection` に変更されました。
 
@@ -115,13 +115,13 @@ iOS に関する注意点
 ----------
 
 - iOS はネットワーク接続のタイプを特定することが出来ません。
-    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `<a href="connection.html">Connection</a>.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。
 
 Bada に関する注意点
 -----------
 
 - Bada は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
-    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `<a href="connection.html">Connection</a>.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。
 
 webOS に関する注意点
 ------------
@@ -131,10 +131,10 @@ webOS に関する注意点
 Windows Phone に関する注意点
 --------------------
 
-- Windows Phone Emulator は常に `navigator.connection.type` を `<a href="connection.html">Connection</a>.UNKNOWN` と返します。
+- Windows Phone Emulator は常に `navigator.connection.type` を `Connection.UNKNOWN` と返します。
 
 Tizen に関する注意点
 --------------------
 
 - Tizen は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
-    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `<a href="connection.html">Connection</a>.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。

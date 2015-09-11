@@ -27,7 +27,7 @@ Rilascia le risorse audio del sistema operativo sottostante.
 
 ## Descrizione
 
-Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse audio del sistema operativo sottostante. Ciò è particolarmente importante per Android, dato che ci sono una quantità finita di OpenCore istanze per la riproduzione multimediale. Le applicazioni devono chiamare il `release` funzione per qualsiasi `<a href="media.html">Media</a>` risorsa che non è più necessario.
+Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse audio del sistema operativo sottostante. Ciò è particolarmente importante per Android, dato che ci sono una quantità finita di OpenCore istanze per la riproduzione multimediale. Le applicazioni devono chiamare il `release` funzione per qualsiasi `Media` risorsa che non è più necessario.
 
 ## Piattaforme supportate
 
@@ -42,10 +42,10 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
 
     // Audio player
     //
-    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+    var my_media = new Media(src, onSuccess, onError);
     
     my_media.play();
-    my_<a href="media.stop.html">media.stop</a>();
+    my_media.stop();
     my_media.release();
     
 
@@ -55,14 +55,14 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -78,8 +78,8 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -88,7 +88,7 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -117,7 +117,7 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

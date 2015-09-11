@@ -20,11 +20,11 @@ license: >
 
 # 連接
 
-> `connection`物件，通過公開 `navigator.connection` ，提供了有關該<a href="../device/device.html">設備</a>的行動電話和無線網路連接的資訊。
+> `connection`物件，通過公開 `navigator.connection` ，提供了有關該設備的行動電話和無線網路連接的資訊。
 
 ## 屬性
 
-*   <a href="connection.type.html">connection.type</a>
+*   connection.type
 
 ## 常量
 
@@ -39,7 +39,7 @@ license: >
 
 ## 訪問功能
 
-從 3.0 版，科爾多瓦作為*外掛程式*實現了<a href="../device/device.html">設備</a>級 Api。 使用 CLI 的 `plugin` 命令，描述在<a href="../../guide/cli/index.html">命令列介面</a>，可以添加或刪除一個專案，為此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin ls
@@ -47,7 +47,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.network-information
     
 
-這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的<a href="../media/capture/ConfigurationData.html">配置</a>設置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
 *   Android 系統
     
@@ -96,4 +96,4 @@ license: >
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平臺可能支援此功能，而無需任何特殊的<a href="../media/capture/ConfigurationData.html">配置</a>。請參見在<a href="../../guide/overview/index.html">概述</a>部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

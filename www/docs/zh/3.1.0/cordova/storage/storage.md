@@ -20,43 +20,43 @@ license: >
 
 # 存儲
 
-> 提供對<a href="../device/device.html">設備</a>的存儲選項的訪問。
+> 提供對設備的存儲選項的訪問。
 
 此 API 提供了基於兩個不同的 W3C 規範的存儲選項：
 
 *   [Web 存儲 API 規範][1]允許您要訪問的資料通過簡單的鍵/值對。 上認為在此介面上的完整詳細資訊，請參閱節。
 
-*   [Web SQL <a href="database/database.html">資料庫</a>規範][2]提供更多的功能全面的<a href="database/database.html">資料庫</a>表訪問通過 SQL 查詢。 此介面的摘要將立即出現下面。
+*   [Web SQL 資料庫規範][2]提供更多的功能全面的資料庫表訪問通過 SQL 查詢。 此介面的摘要將立即出現下面。
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
 
-科爾多瓦提供兩個介面都對少數已經不支援他們的<a href="../device/device.html">設備</a>的訪問。否則內置實現應用。
+科爾多瓦提供兩個介面都對少數已經不支援他們的設備的訪問。否則內置實現應用。
 
 ## 方法
 
-*   <a href="storage.opendatabase.html">大概</a>
+*   大概
 
 ## 參數
 
-*   <a href="parameters/name.html">database_name</a>
-*   <a href="parameters/version.html">database_version</a>
-*   <a href="parameters/display_name.html">database_displayname</a>
-*   <a href="parameters/size.html">database_size</a>
+*   database_name
+*   database_version
+*   database_displayname
+*   database_size
 
 ## 物件
 
-*   <a href="database/database.html">資料庫</a>
-*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
-*   <a href="sqlerror/sqlerror.html">SQLError</a>
+*   資料庫
+*   SQLTransaction
+*   SQLResultSet
+*   SQLResultSetRowList
+*   SQLError
 
 ## 訪問功能
 
-版本為 3.0，對存儲 Api 的訪問內置於科爾多瓦，，不需要使用 CLI 要添加的外掛程式，如所述的<a href="../../guide/cli/index.html">命令列介面</a>。
+版本為 3.0，對存儲 Api 的訪問內置於科爾多瓦，，不需要使用 CLI 要添加的外掛程式，如所述的命令列介面。
 
-如果您使用較舊的前面，CLI 的科爾多瓦工具集，，仍然需要以下的平臺特定的<a href="../media/capture/ConfigurationData.html">配置</a>設置：
+如果您使用較舊的前面，CLI 的科爾多瓦工具集，，仍然需要以下的平臺特定的配置設置：
 
 *   （在 android`app/res/xml/config.xml`)
     
@@ -68,4 +68,4 @@ license: >
         < 功能 id="blackberry.widgetcache"所需 ="true"版本 ="1.0.0.0"/ >
         
 
-一些平臺可能支援此功能，而無需任何特殊的<a href="../media/capture/ConfigurationData.html">配置</a>。請參見在<a href="../../guide/overview/index.html">概述</a>部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

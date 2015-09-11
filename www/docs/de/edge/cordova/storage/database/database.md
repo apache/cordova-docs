@@ -30,9 +30,9 @@ Ermöglicht den Zugriff auf eine SQL-Datenbank.
 
 ## Informationen
 
-Die `window.<a href="../storage.opendatabase.html">openDatabase</a>()` -Methode gibt ein `Database` Objekt.
+Die `window.openDatabase()` -Methode gibt ein `Database` Objekt.
 
-## <a href="../../../config_ref/images.html">Unterstützte Plattformen</a>
+## Unterstützte Plattformen
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 und höher)
@@ -56,13 +56,13 @@ Die `window.<a href="../storage.opendatabase.html">openDatabase</a>()` -Methode 
         alert("success!");
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
 ## Änderung Version kleines Beispiel
 
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
     
 
@@ -71,19 +71,19 @@ Die `window.<a href="../storage.opendatabase.html">openDatabase</a>()` -Methode 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -111,7 +111,7 @@ Die `window.<a href="../storage.opendatabase.html">openDatabase</a>()` -Methode 
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

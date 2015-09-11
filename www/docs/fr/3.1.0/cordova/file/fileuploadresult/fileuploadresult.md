@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>UploadResult
+# FileUploadResult
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>UploadResult` est passé à la callback de succès de la méthode `upload()` de l'objet `<a href="../fileobj/fileobj.html">File</a>Transfer`.
+Un objet `FileUploadResult` est passé à la callback de succès de la méthode `upload()` de l'objet `FileTransfer`.
 
 ## Propriétés
 
@@ -32,7 +32,7 @@ Un objet `<a href="../fileobj/fileobj.html">File</a>UploadResult` est passé à 
 
 ## Description
 
-Un objet `<a href="../fileobj/fileobj.html">File</a>UploadResult` est retourné par la callback de succès de la méthode `upload()` de l'objet `<a href="../fileobj/fileobj.html">File</a>Transfer`.
+Un objet `FileUploadResult` est retourné par la callback de succès de la méthode `upload()` de l'objet `FileTransfer`.
 
 ## Particularités d'iOS
 

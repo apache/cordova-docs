@@ -30,7 +30,7 @@ If you need to override the default volume up behavior you can
 register an event listener for the `volumeupbutton` event.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
+attach an event listener once the `deviceready` event fires.
 
 ## Supported Platforms
 
@@ -59,7 +59,7 @@ attach an event listener once the `<a href="events.deviceready.html">deviceready
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // device APIs are available

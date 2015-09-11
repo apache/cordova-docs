@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for Windows Phone 7 
+Project Settings for Windows Phone 7 
 ===================================
 

@@ -32,37 +32,37 @@ license: >
 
 *   Xcode 4.5 或更大
 
-*   `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> (從新創建的 iOS 專案)
+*   `config.xml`檔 (從新創建的 iOS 專案)
 
 ## 克利弗添加到 Xcode 專案 （CordovaLib 子專案）
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄<a href="../../../cordova/geolocation/Position/position.html">位置</a>的科爾多瓦源，例如到`~/Documents/Cordova`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦源，例如到`~/Documents/Cordova`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  複製 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>到你的專案目錄在磁片上 （請參見上面的前提條件）。
+4.  複製 `config.xml` 檔到你的專案目錄在磁片上 （請參見上面的前提條件）。
 
-5.  拖放式 `config.xml` 到 Xcode 專案導航的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+5.  拖放式 `config.xml` 到 Xcode 專案導航的檔。
 
 6.  選擇**創建組的任何添加的資料夾**選項按鈕，然後按**完成**.
 
-7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 專案導航的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （從永久目錄以上，<a href="../../../cordova/geolocation/Position/position.html">位置</a>和它應該在 `CordovaLib` 子目錄）。
+7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 專案導航的檔 （從永久目錄以上，位置和它應該在 `CordovaLib` 子目錄）。
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  鍵入**選項-命令-1**鍵的組合，以<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**.
+9.  鍵入**選項-命令-1**鍵的組合，以顯示**檔檢查器**.
 
-10. 選擇**相對於組****<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>檢查器**器下拉式功能表中的**<a href="../../../cordova/geolocation/Position/position.html">位置</a>**.
+10. 選擇**相對於組****檔檢查器**器下拉式功能表中的**位置**.
 
 11. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 
-12. 添加 `-all_load` 和 `-Obj-C` 的**其他連結器<a href="../../../cordova/file/flags/flags.html">標誌</a>**值。
+12. 添加 `-all_load` 和 `-Obj-C` 的**其他連結器標誌**值。
 
 13. 按一下專案導航器中的**專案圖示**，選擇你的**目標**，然後選擇**生成階段**選項卡。
 
-14. 展開**連結二進位<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案與庫**.
+14. 展開**連結二進位檔案與庫**.
 
 15. 選擇**+**按鈕，然後添加下列**框架**。（可選） 該專案導航器中移動他們的**框架**組下）：
     
@@ -73,11 +73,11 @@ license: >
 
 17. 選擇**+**按鈕，然後添加 `CordovaLib` 生成產品。
 
-18. 展開**連結二進位<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案與庫**，標有像這樣如果您有多個框的頂部框 ！
+18. 展開**連結二進位檔案與庫**，標有像這樣如果您有多個框的頂部框 ！
 
 19. 選擇**+**按鈕，然後添加`libCordova.a`.
 
-20. 設置為**獨特**Xcode 偏好**Xcode 首選項 → <a href="../../../cordova/geolocation/Position/position.html">位置</a> → 派生資料 → 先進......**.
+20. 設置為**獨特**Xcode 偏好**Xcode 首選項 → 位置 → 派生資料 → 先進......**.
 
 21. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 

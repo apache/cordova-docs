@@ -31,7 +31,7 @@ Imposta la posizione corrente all'interno di un file audio.
 
 ## Descrizione
 
-Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di riproduzione corrente all'interno di un file audio a cui fa riferimento un `<a href="media.html">Media</a>` oggetto. Aggiorna anche il `<a href="media.html">Media</a>` dell'oggetto `position` parametro.
+Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di riproduzione corrente all'interno di un file audio a cui fa riferimento un `Media` oggetto. Aggiorna anche il `Media` dell'oggetto `position` parametro.
 
 ## Piattaforme supportate
 
@@ -46,7 +46,7 @@ Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di 
 
     // Audio player
     //
-    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+    var my_media = new Media(src, onSuccess, onError);
         my_media.play();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
@@ -60,14 +60,14 @@ Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di 
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -83,8 +83,8 @@ Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di 
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -92,7 +92,7 @@ Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di 
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                    my_media.getCurrentPosition(
                         // success callback
                         function(position) {
                             if (position > -1) {
@@ -116,7 +116,7 @@ Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di 
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

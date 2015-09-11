@@ -48,7 +48,7 @@ Setup New Project
 -----------------
 
 - Launch Xcode
-- Select the _<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Menu_
+- Select the _File Menu_
 - Select _New_ -> _New Project..._
 - Select _Cordova-based Application_ from the list of templates
 
@@ -92,14 +92,14 @@ in Xcode project templates.
 
     ![](img/guide/platforms/ios/create-folder-reference.png)
 
-<a href="../webos/index.html">Hello World</a>
+Hello World
 -----------
 
 - Select the folder named `www` in the Xcode _Project Navigator_
 - Select the file `index.html`
 - Add the following after `<body>`:
 
-        <h1><a href="../webos/index.html">Hello World</a></h1>
+        <h1>Hello World</h1>
 
 You can also add any associated JavaScript and CSS files there as well.
     
@@ -109,13 +109,13 @@ Deploy to Simulator
 - Change the _Active SDK_ in the Scheme drop-down menu on the toolbar to _iOS version Simulator_
 - Select the _Run_ button in your project window's toolbar
 
-Deploy to <a href="../../../cordova/device/device.html">Device</a>
+Deploy to Device
 ----------------
 
-- Open `YourAppName-Info.plist`, under the _Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s_ group
+- Open `YourAppName-Info.plist`, under the _Supporting Files_ group
 - Change _BundleIdentifier_ to the identifier provided by Apple or your own bundle identifier
     - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
-- Change the _Active SDK_ in the Scheme drop-down menu on the toolbar to _Your<a href="../../../cordova/device/device.html">Device</a>Name_
+- Change the _Active SDK_ in the Scheme drop-down menu on the toolbar to _YourDeviceName_
     - You will need to have your device connected via USB
 - Select the _Run_ button in your project window's toolbar
 

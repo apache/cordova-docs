@@ -64,7 +64,7 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 - Type `make` in your terminal/cygwin while in the webOS directory.
 
 
-5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
@@ -74,5 +74,5 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 Done!
 -----
 
-You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
+You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
 

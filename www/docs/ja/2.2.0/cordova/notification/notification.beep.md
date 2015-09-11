@@ -37,37 +37,37 @@ notification.beep
 - Bada 1.2 & 2.x
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // 警告音を2回鳴らす
     navigator.notification.beep(2);
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // 処理なし
         }
 
         // 通知ダイアログを表示
         //
-        function <a href="../splashscreen/splashscreen.show.html">show</a>Alert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+        function showAlert() {
+            navigator.notification.alert(
                 'あなたの勝ちです！', // メッセージ
                 'ゲームオーバー', // タイトル
                 '終了' // ボタン名
@@ -83,13 +83,13 @@ notification.beep
         // 2秒間バイブレーションさせます
         //
         function vibrate() {
-            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
+            navigator.notification.vibrate(2000);
         }
 
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Alert(); return false;">通知を表示</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">通知を表示</a></p>
         <p><a href="#" onclick="playBeep(); return false;">警告音を鳴らす</a></p>
         <p><a href="#" onclick="vibrate(); return false;">バイブレーション</a></p>
       </body>
@@ -98,7 +98,7 @@ notification.beep
 Android に関する注意点
 --------------
 
-- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "<a href="notification.html">Notification</a> ringtone" を鳴らします。
+- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "Notification ringtone" を鳴らします。
 
 iPhone に関する注意点
 -------------

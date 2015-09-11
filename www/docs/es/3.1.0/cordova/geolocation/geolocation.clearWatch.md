@@ -31,7 +31,7 @@ Deja de ver cambios en la ubicación del dispositivo al que hace referencia el p
 
 ## Descripción
 
-La `geolocation.clearWatch` se detiene observando los cambios en la ubicación del dispositivo despejando la `<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>` hace referenciada a `watchID`.
+La `geolocation.clearWatch` se detiene observando los cambios en la ubicación del dispositivo despejando la `geolocation.watchPosition` hace referenciada a `watchID`.
 
 ## Plataformas soportadas
 
@@ -47,7 +47,7 @@ La `geolocation.clearWatch` se detiene observando los cambios en la ubicación d
     // Opciones: ver los cambios en la posición y usar más 
     // exacta posición disponible del método de adquisición.
     //
-    var watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     
     // ...later on...
     
@@ -59,14 +59,14 @@ La `geolocation.clearWatch` se detiene observando los cambios en la ubicación d
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -76,7 +76,7 @@ La `geolocation.clearWatch` se detiene observando los cambios en la ubicación d
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
         // onSuccess Geolocation
@@ -97,7 +97,7 @@ La `geolocation.clearWatch` se detiene observando los cambios en la ubicación d
             }
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
               alert('code: '    + error.code    + '\n' +

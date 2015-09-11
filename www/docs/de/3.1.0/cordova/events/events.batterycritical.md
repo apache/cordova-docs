@@ -22,7 +22,7 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn die Batterie den kritischen Schwellenwert für die Level erreicht hat.
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", yourCallbackFunction, false);
+    window.addEventListener("batterycritical", yourCallbackFunction, false);
     
 
 ## Informationen
@@ -33,9 +33,9 @@ Die `batterycritical` Handler übergeben wird ein Objekt mit zwei Eigenschaften:
 
 *   **Ebene**: der Prozentsatz der Batterieladung (0-100). *(Anzahl)*
 
-*   **IsPlugged**: ein boolescher Wert, der angibt, ob das <a href="../device/device.html">Gerät</a> eingesteckt Zoll *(boolesch)*
+*   **IsPlugged**: ein boolescher Wert, der angibt, ob das Gerät eingesteckt Zoll *(boolesch)*
 
-Anwendungen sollten in der Regel verwenden `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `window.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -46,7 +46,7 @@ Anwendungen sollten in der Regel verwenden `window.<a href="../inappbrowser/inap
 
 ## Kleines Beispiel
 
-    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
+    window.addEventListener("batterycritical", onBatteryCritical, false);
     
     function onBatteryCritical(info) {
         // Handle the battery critical event
@@ -59,7 +59,7 @@ Anwendungen sollten in der Regel verwenden `window.<a href="../inappbrowser/inap
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Battery Critical <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Battery Critical Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -67,13 +67,13 @@ Anwendungen sollten in der Regel verwenden `window.<a href="../inappbrowser/inap
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
+            window.addEventListener("batterycritical", onBatteryCritical, false);
         }
     
         // Handle the batterycritical event

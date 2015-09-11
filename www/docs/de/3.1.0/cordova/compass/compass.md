@@ -20,26 +20,26 @@ license: >
 
 # Kompass
 
-> Ruft die Richtung, die das <a href="../device/device.html">Gerät</a> verweist.
+> Ruft die Richtung, die das Gerät verweist.
 
 ## Methoden
 
-*   <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
-*   <a href="compass.watchHeading.html">compass.watchHeading</a>
-*   <a href="compass.clearWatch.html">compass.clearWatch</a>
-*   <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a> (veraltet)
-*   <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a> (veraltet)
+*   compass.getCurrentHeading
+*   compass.watchHeading
+*   compass.clearWatch
+*   compass.watchHeadingFilter (veraltet)
+*   compass.clearWatchFilter (veraltet)
 
 ## Argumente
 
-*   <a href="parameters/compassSuccess.html">compassSuccess</a>
-*   <a href="parameters/compassError.html">compassError</a>
-*   <a href="parameters/compassOptions.html">compassOptions</a>
-*   <a href="parameters/compassHeading.html">compassHeading</a>
+*   compassSuccess
+*   compassError
+*   compassOptions
+*   compassHeading
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin ls
@@ -74,4 +74,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

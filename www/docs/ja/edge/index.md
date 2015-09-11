@@ -26,101 +26,101 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">概要</a>
+        概要
       </h2>
       
-      <span>コルドバに新しければ、ここから始めてください。インストールと<a href="guide/next/index.html">次のステップ</a>が含まれています。</span>
+      <span>コルドバに新しければ、ここから始めてください。インストールと次のステップが含まれています。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">プラットフォームのサポート</a>
+        プラットフォームのサポート
       </h2>
       
       <span>すべての主要な機能の互換性テーブル。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">コマンド ライン インターフェイス</a>
+        コマンド ライン インターフェイス
       </h2>
       
       <span>作成、構築、およびコマンドラインから展開します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">プラットフォームのガイド</a>
+        プラットフォームのガイド
       </h2>
       
       <span>各プラットフォーム SDK を設定し、プロジェクトを更新します。</span>
     </li>
     <li>
       <h2>
-        <a href="plugin_ref/plugman.html">Plugman を使用してプラグインを管理するには</a>
+        Plugman を使用してプラグインを管理するには
       </h2>
       
       <span>プラットフォームを中心としたワークフローを使用する場合、cli をプラグインを管理します。</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Config.xml ファイル</a>
+        Config.xml ファイル
       </h2>
       
       <span>アプリの機能をカスタマイズします。</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">アイコンとスプラッシュ画面</a>
+        アイコンとスプラッシュ画面
       </h2>
       
       <span>イメージを表示するアプリをカスタマイズします。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">埋め込み web 表示</a>
+        埋め込み web 表示
       </h2>
       
       <span>コルドバ WebView をネイティブ プロジェクトで実装します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">プラグイン開発ガイド</a>
+        プラグイン開発ガイド
       </h2>
       
       <span>独自のプラグインを開発します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">プライバシー ガイド</a>
+        プライバシー ガイド
       </h2>
       
       <span>重要なモバイル プライバシーの問題について説明します。</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/security/index.html">セキュリティ ガイド</a>
+        セキュリティ ガイド
       </h2>
       
       <span>情報および安全なアプリケーションを構築するためのヒント。</span>
     </li>
     <li>
       <h2>
-        <a href="platform_plugin_versioning_ref/index.html">プラットフォームとプラグインのバージョン管理</a>
+        プラットフォームとプラグインのバージョン管理
       </h2>
       
       <span>保存および CLI プロジェクトを手間をかけずに既知の状態に復元します</span>。
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">ホワイト リスト ガイド</a>
+        ホワイト リスト ガイド
       </h2>
       
       <span>アプリケーション外部のリソースへのアクセスを許可します</span>。
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">ストレージ</a>
+        ストレージ
       </h2>
       
-      <span>のネイティブ <a href="cordova/storage/storage.html">ストレージ</a> オプションの<a href="guide/overview/index.html">概要</a></span>。
+      <span>のネイティブ ストレージ オプションの概要</span>。
     </li>
     <li>
       <h2>
@@ -131,7 +131,7 @@ license: >
     </li>
     <li>
       <h2>
-        <a href="guide/next/index.html">次のステップ</a>
+        次のステップ
       </h2>
       
       <span>コルドバの新しい開発者が遭遇するトピックを見てみましょう</span>。
@@ -152,14 +152,14 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/events/events.html">イベント</a>
+        イベント
       </h2>
       
-      <span>Java スクリプトの設定をネイティブ <a href="cordova/events/events.html">イベント</a>にフックします。</span>
+      <span>Java スクリプトの設定をネイティブ イベントにフックします。</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">プラグイン Api</a>
+        プラグイン Api
       </h2>
       
       <span>発見コルドバ プラグインは、プロジェクトで使用できます。</span>

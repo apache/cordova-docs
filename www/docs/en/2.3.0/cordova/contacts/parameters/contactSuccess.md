@@ -21,7 +21,7 @@ license: >
 contactSuccess
 ==============
 
-Success callback function that provides the `<a href="../Contact/contact.html">Contact</a>` array resulting from a `<a href="../contacts.find.html">contacts.find</a>` operation.
+Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
 
     function(contacts) {
         // Do something
@@ -30,9 +30,9 @@ Success callback function that provides the `<a href="../Contact/contact.html">C
 Parameters
 ----------
 
-- __contacts:__ The contact array resulting from a find operation. (`<a href="../Contact/contact.html">Contact</a>`)
+- __contacts:__ The contact array resulting from a find operation. (`Contact`)
 
-<a href="../../storage/storage.opendatabase.html">Example</a>
+Example
 -------
 
     function contactSuccess(contacts) {

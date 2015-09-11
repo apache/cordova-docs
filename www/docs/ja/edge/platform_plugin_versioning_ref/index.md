@@ -83,7 +83,7 @@ license: >
 
 例:
 
-<a href="../config_ref/index.html">Config.xml ファイル</a>に次のエントリが含まれているとします。
+Config.xml ファイルに次のエントリが含まれているとします。
 
     <?xml version='1.0' encoding='utf-8'?>
         ...
@@ -153,7 +153,7 @@ license: >
 
 例:
 
-<a href="../config_ref/index.html">Config.xml ファイル</a>に次のエントリが含まれているとします。
+Config.xml ファイルに次のエントリが含まれているとします。
 
     <?xml version='1.0' encoding='utf-8'?>
         ...

@@ -20,7 +20,7 @@ license: >
 
 # Beschleunigung
 
-Zu einem bestimmten Zeitpunkt erfasste `<a href="../accelerometer.html">Beschleunigungsmesser</a>`-Daten.
+Zu einem bestimmten Zeitpunkt erfasste `Beschleunigungsmesser`-Daten.
 
 ## Eigenschaften
 
@@ -31,7 +31,7 @@ Zu einem bestimmten Zeitpunkt erfasste `<a href="../accelerometer.html">Beschleu
 
 ## Beschreibung
 
-Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Accelerometer` Methoden. Beschleunigungswerte sind die Auswirkungen der Schwerkraft (9.81 m/s ^ 2), so dass wenn ein <a href="../../device/device.html">Gerät</a> flach und nach oben, *X*, *y liegt*, und *Z* -Werte zurückgegeben werden sollte `` , `` , und`9.81`.
+Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Accelerometer` Methoden. Beschleunigungswerte sind die Auswirkungen der Schwerkraft (9.81 m/s ^ 2), so dass wenn ein Gerät flach und nach oben, *X*, *y liegt*, und *Z* -Werte zurückgegeben werden sollte `` , `` , und`9.81`.
 
 ## Unterstützte Plattformen
 
@@ -55,7 +55,7 @@ Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Ac
         alert('onError!');
     };
     
-    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
     
 
 ## Vollständiges Beispiel
@@ -63,19 +63,19 @@ Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Ac
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
@@ -96,7 +96,7 @@ Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Ac
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

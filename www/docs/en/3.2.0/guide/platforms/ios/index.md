@@ -20,18 +20,18 @@ license: >
 
 # iOS Platform Guide
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to set up your SDK development environment to
+This guide shows how to set up your SDK development environment to
 deploy Cordova apps for iOS devices such as iPhone and iPad. See the
 following for more detailed platform-specific information:
 
-* <a href="config.html">iOS Configuration</a>
-* <a href="upgrading.html">Upgrading iOS</a>
-* <a href="webview.html">iOS WebViews</a>
-* <a href="plugin.html">iOS Plugins</a>
-* <a href="tools.html">iOS Command-line Tools</a>
+* iOS Configuration
+* Upgrading iOS
+* iOS WebViews
+* iOS Plugins
+* iOS Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -51,7 +51,7 @@ include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
 Generation or later. To install apps onto a device, you must also be a
 member of Apple's
 [iOS Developer Program](https://developer.apple.com/programs/ios/),
-which costs $99 per year. This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to deploy apps to the
+which costs $99 per year. This guide shows how to deploy apps to the
 iOS emulator, for which you don't need to register with the developer
 program.
 
@@ -73,7 +73,7 @@ __Install__ button next to the __Command Line Tools__ listing.
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova <a href="../../cli/index.html">The Command-Line Interface</a>. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -114,7 +114,7 @@ Xcode comes bundled with emulators for the lastest versions of iPhone
 and iPad. Older versions may be available from the __Xcode &rarr;
 Preferences &rarr; Downloads &rarr; Components__ panel.
 
-## Deploy to <a href="../../../cordova/device/device.html">Device</a>
+## Deploy to Device
 
 For details about various requirements to deploy to a device, refer
 to the _Configuring Development and Distribution Assets_ section of
@@ -140,7 +140,7 @@ To deploy to the device:
 2. Select the name of the project in the Xcode window's __Scheme__
    drop-down list.
 
-3. Select your device from the __<a href="../../../cordova/device/device.html">Device</a>__ drop-down list. If it is
+3. Select your device from the __Device__ drop-down list. If it is
    plugged in via USB but still does not appear, press the
    __Organizer__ button to resolve any errors.
 
@@ -165,7 +165,7 @@ warnings can be ignored.  To prevent these warnings from appearing,
 remove the code that references the deprecated invokeString API:
 
 * Edit the _Classes/MainViewController.m_ file, surround the following
-  block of code with `/*` and `*/` comments as <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n below, then type
+  block of code with `/*` and `*/` comments as shown below, then type
   __Command-s__ to save the file:
 
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
@@ -173,7 +173,7 @@ remove the code that references the deprecated invokeString API:
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -186,7 +186,7 @@ remove the code that references the deprecated invokeString API:
         }
 
 * Edit the _Classes/AppViewDelegate.m_ file, comment out the following
-  line by inserting a double slash as <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n below, then type
+  line by inserting a double slash as shown below, then type
   __Command-s__ to save the file:
 
         //self.viewController.invokeString = invokeString;
@@ -202,7 +202,7 @@ via Xcode preferences:
 1. Select __Xcode &rarr; Preferences &rarr; Locations__.
 
 2. In the __Derived Data__ section, press the __Advanced__ button and
-   select __Unique__ as the __Build Location__ as <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n here:
+   select __Unique__ as the __Build Location__ as shown here:
 
    ![](img/guide/platforms/ios/xcode_build_location.png)
 

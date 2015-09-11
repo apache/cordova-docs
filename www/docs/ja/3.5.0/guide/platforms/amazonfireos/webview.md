@@ -30,7 +30,7 @@ license: >
 
 *   アマゾン WebView SDK
 
-## アマゾン火 OS プロジェクトで CordovaWebView の使用への<a href="../../../index.html">ガイド</a>します。
+## アマゾン火 OS プロジェクトで CordovaWebView の使用へのガイドします。
 
 1.  ダウンロード[アマゾン WebView SDK][1]を展開しに awv_interface.jar をコピー `/framework/libs` ディレクトリ。 ライブラリを作成する/フォルダーが存在しない場合。
 

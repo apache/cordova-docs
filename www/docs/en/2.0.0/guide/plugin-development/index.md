@@ -70,7 +70,7 @@ The parameters explained in more detail:
 5. `[/* arguments */]` - Arguments to get passed into the native
    environment
 
-### Echo Plugin JavaScript <a href="../../cordova/storage/storage.opendatabase.html">Example</a>
+### Echo Plugin JavaScript Example
 
     window.echo = function(str, callback) {
         cordova.exec(callback, function(err) {
@@ -104,9 +104,9 @@ specific guides for each platform Cordova supports. The below guides
 will continue on building the simple Echo Plugin example we started in
 this guide.
 
-- <a href="android/index.html">Developing a Plugin on Android</a>
-- <a href="bada/index.html">Developing a Plugin on Bada</a>
-- <a href="blackberry/index.html">Developing a Plugin on BlackBerry</a>
-- <a href="ios/index.html">Developing a Plugin on iOS</a>
-- <a href="webos/index.html">Developing a Plugin on webOS</a>
-- <a href="windows-phone/index.html">Developing a Plugin on Windows Phone</a>
+- Developing a Plugin on Android
+- Developing a Plugin on Bada
+- Developing a Plugin on BlackBerry
+- Developing a Plugin on iOS
+- Developing a Plugin on webOS
+- Developing a Plugin on Windows Phone

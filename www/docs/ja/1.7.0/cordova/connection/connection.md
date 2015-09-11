@@ -28,7 +28,7 @@ Connection
 プロパティー
 ----------
 
-- <a href="connection.type.html">connection.type</a>
+- connection.type
 
 定数
 ---------
@@ -45,7 +45,7 @@ WP7 に関する注意点
 ---------
 
 - __type:__
-Windows Phone Emulator は常に navigator.network.<a href="connection.type.html">connection.type</a> を Connection.UNKNOWN と返します。
+Windows Phone Emulator は常に navigator.network.connection.type を Connection.UNKNOWN と返します。
 
 iOS に関する注意点
 ---------

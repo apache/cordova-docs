@@ -20,7 +20,7 @@ license: >
 
 # accelerometerOptions
 
-若要自訂的<a href="../acceleration/acceleration.html">加速度</a>計值檢索一個可選參數。
+若要自訂的加速度計值檢索一個可選參數。
 
 ## 選項
 

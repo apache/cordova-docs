@@ -20,7 +20,7 @@ license: >
 
 # FileEntry
 
-表示一個<a href="../fileobj/fileobj.html">檔</a>在<a href="../fileobj/fileobj.html">檔</a>案系統上， [W3C 目錄和系統][1]規範中定義。
+表示一個檔在檔案系統上， [W3C 目錄和系統][1]規範中定義。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,27 +36,27 @@ license: >
 
 **注：**下面的屬性由 W3C 規範定義，但*不是*支援：
 
-*   **<a href="../fileobj/fileobj.html">檔</a>案系統**： <a href="../fileobj/fileobj.html">檔</a>案系統的 `FileEntry` 駐留。*（<a href="../fileobj/fileobj.html">檔</a>案系統）*
+*   **檔案系統**： 檔案系統的 `FileEntry` 駐留。*（檔案系統）*
 
 ## 方法
 
-*   **getMetadata**： 查找有關<a href="../fileobj/fileobj.html">檔</a>的<a href="../metadata/metadata.html">中繼資料</a>。
+*   **getMetadata**： 查找有關檔的中繼資料。
 
-*   **setMetadata**: 設置<a href="../fileobj/fileobj.html">檔</a>上的<a href="../metadata/metadata.html">中繼資料</a>。
+*   **setMetadata**: 設置檔上的中繼資料。
 
-*   **moveTo**： 將<a href="../fileobj/fileobj.html">檔</a>移動到一個不同的<a href="../../geolocation/Position/position.html">位置</a>，在<a href="../fileobj/fileobj.html">檔</a>案系統上。
+*   **moveTo**： 將檔移動到一個不同的位置，在檔案系統上。
 
-*   **copyTo**： 將<a href="../fileobj/fileobj.html">檔</a>案複製到<a href="../fileobj/fileobj.html">檔</a>案系統上的不同<a href="../../geolocation/Position/position.html">位置</a>。
+*   **copyTo**： 將檔案複製到檔案系統上的不同位置。
 
-*   **toURL**： 返回一個可用於查找的<a href="../fileobj/fileobj.html">檔</a>的 URL。
+*   **toURL**： 返回一個可用於查找的檔的 URL。
 
-*   **刪除**： 刪除一個<a href="../fileobj/fileobj.html">檔</a>。
+*   **刪除**： 刪除一個檔。
 
 *   **getParent**: 查找父目錄。
 
-*   **createWriter**: 創建 `<a href="../filewriter/filewriter.html">FileWriter</a>` 物件，可用於向<a href="../fileobj/fileobj.html">檔</a>中寫入。
+*   **createWriter**: 創建 `FileWriter` 物件，可用於向檔中寫入。
 
-*   **<a href="../fileobj/fileobj.html">檔</a>**： 創建 `File` 物件，其中包含<a href="../fileobj/fileobj.html">檔</a>案屬性。
+*   **檔**： 創建 `File` 物件，其中包含檔案屬性。
 
 ## 支援的平臺
 
@@ -68,34 +68,34 @@ license: >
 
 ## getMetadata
 
-查找有關<a href="../fileobj/fileobj.html">檔</a>的<a href="../metadata/metadata.html">中繼資料</a>。
+查找有關檔的中繼資料。
 
 **參數：**
 
-*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `Metadata` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 如果錯誤發生在檢索時將執行的回<a href="../fileobj/fileobj.html">檔</a> `Metadata` 。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的<a href="../metadata/metadata.html">中繼資料</a>物件的此條目 entry.getMetadata （成功、 失敗） ；
+    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的中繼資料物件的此條目 entry.getMetadata （成功、 失敗） ；
     
 
 ## setMetadata
 
-上一個<a href="../fileobj/fileobj.html">檔</a>集的<a href="../metadata/metadata.html">中繼資料</a>。
+上一個檔集的中繼資料。
 
 **目前僅適用于 iOS。**
 
-*   這將設置一個<a href="../fileobj/fileobj.html">檔</a>的擴展的屬性。
+*   這將設置一個檔的擴展的屬性。
 
 **參數：**
 
-*   **successCallback**： 當設置該<a href="../metadata/metadata.html">中繼資料</a>時執行回<a href="../fileobj/fileobj.html">檔</a>。*（函數）*
+*   **successCallback**： 當設置該中繼資料時執行回檔。*（函數）*
 
-*   **errorCallback**： 當不成功地設置該<a href="../metadata/metadata.html">中繼資料</a>時執行回<a href="../fileobj/fileobj.html">檔</a>。*（函數）*
+*   **errorCallback**： 當不成功地設置該中繼資料時執行回檔。*（函數）*
 
-*   **metadataObject**： 包含<a href="../metadata/metadata.html">中繼資料</a>的鍵和值的物件。*（物件）*
+*   **metadataObject**： 包含中繼資料的鍵和值的物件。*（物件）*
 
 **快速的示例**
 
@@ -113,7 +113,7 @@ license: >
 
 **iOS 怪癖**
 
-*   只有 `com.apple.MobileBackup` 支援擴展的屬性。 將該值設置為 `1` ，防止<a href="../fileobj/fileobj.html">檔</a>被備份到 iCloud。 將該值設置為 `` ，重新啟用該<a href="../fileobj/fileobj.html">檔</a>以將備份到 iCloud。
+*   只有 `com.apple.MobileBackup` 支援擴展的屬性。 將該值設置為 `1` ，防止檔被備份到 iCloud。 將該值設置為 `` ，重新啟用該檔以將備份到 iCloud。
 
 **快速的示例**
 
@@ -143,7 +143,7 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
         setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
@@ -151,23 +151,23 @@ license: >
 
 ## moveTo
 
-在<a href="../fileobj/fileobj.html">檔</a>案系統上的<a href="../fileobj/fileobj.html">檔</a>移到不同的<a href="../../geolocation/Position/position.html">位置</a>。如果應用程式嘗試向會導致錯誤：
+在檔案系統上的檔移到不同的位置。如果應用程式嘗試向會導致錯誤：
 
-*   將<a href="../fileobj/fileobj.html">檔</a>移到其父，如果沒有提供從其當前的一個不同的名稱 ；
+*   將檔移到其父，如果沒有提供從其當前的一個不同的名稱 ；
 
-*   將<a href="../fileobj/fileobj.html">檔</a>移動到被佔領 ； 每個目錄的路徑
+*   將檔移動到被佔領 ； 每個目錄的路徑
 
-此外，在現有<a href="../fileobj/fileobj.html">檔</a>中移動<a href="../fileobj/fileobj.html">檔</a>將嘗試刪除和替換該<a href="../fileobj/fileobj.html">檔</a>。
+此外，在現有檔中移動檔將嘗試刪除和替換該檔。
 
 **參數：**
 
-*   **父**： 要將<a href="../fileobj/fileobj.html">檔</a>移到父目錄。*() DirectoryEntry*
+*   **父**： 要將檔移到父目錄。*() DirectoryEntry*
 
-*   **newName**： 該<a href="../fileobj/fileobj.html">檔</a>的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
+*   **newName**： 該檔的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 傳遞新<a href="../fileobj/fileobj.html">檔</a>回<a href="../fileobj/fileobj.html">檔</a> `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果嘗試移動<a href="../fileobj/fileobj.html">檔</a>時發生錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
+*   **errorCallback**： 如果嘗試移動檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -191,19 +191,19 @@ license: >
 
 ## copyTo
 
-將<a href="../fileobj/fileobj.html">檔</a>案複製到<a href="../fileobj/fileobj.html">檔</a>案系統上的新<a href="../../geolocation/Position/position.html">位置</a>。如果應用程式嘗試向會導致錯誤：
+將檔案複製到檔案系統上的新位置。如果應用程式嘗試向會導致錯誤：
 
-*   如果未提供從其當前的一個不同的名稱，請將<a href="../fileobj/fileobj.html">檔</a>案複製到其父。
+*   如果未提供從其當前的一個不同的名稱，請將檔案複製到其父。
 
 **參數：**
 
-*   **父**： 要向其複製該<a href="../fileobj/fileobj.html">檔</a>的父目錄。*() DirectoryEntry*
+*   **父**： 要向其複製該檔的父目錄。*() DirectoryEntry*
 
-*   **newName**： 該<a href="../fileobj/fileobj.html">檔</a>的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
+*   **newName**： 該檔的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 傳遞新<a href="../fileobj/fileobj.html">檔</a>回<a href="../fileobj/fileobj.html">檔</a> `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果試圖複製<a href="../fileobj/fileobj.html">檔</a>時發生錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
+*   **errorCallback**： 如果試圖複製檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -227,7 +227,7 @@ license: >
 
 ## toURL
 
-返回一個可用於查找的<a href="../fileobj/fileobj.html">檔</a>的 URL。
+返回一個可用於查找的檔的 URL。
 
 **快速的示例**
 
@@ -238,13 +238,13 @@ license: >
 
 ## 刪除
 
-刪除的<a href="../fileobj/fileobj.html">檔</a>。
+刪除的檔。
 
 **參數：**
 
-*   **successCallback**: 在該<a href="../fileobj/fileobj.html">檔</a>已被刪除後執行的回<a href="../fileobj/fileobj.html">檔</a>。不帶參數調用。*（函數）*
+*   **successCallback**: 在該檔已被刪除後執行的回檔。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果嘗試刪除<a href="../fileobj/fileobj.html">檔</a>時出現錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
+*   **errorCallback**： 如果嘗試刪除檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -262,13 +262,13 @@ license: >
 
 ## getParent
 
-查找父 `DirectoryEntry` 包含該<a href="../fileobj/fileobj.html">檔</a>。
+查找父 `DirectoryEntry` 包含該檔。
 
 **參數：**
 
-*   **successCallback**： 傳遞<a href="../fileobj/fileobj.html">檔</a>的父的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 。*（函數）*
+*   **successCallback**： 傳遞檔的父的回檔 `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回<a href="../fileobj/fileobj.html">檔</a> `DirectoryEntry` 。 調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。 *（函數）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -286,13 +286,13 @@ license: >
 
 ## createWriter
 
-創建 `<a href="../filewriter/filewriter.html">FileWriter</a>` 物件與所代表的<a href="../fileobj/fileobj.html">檔</a>關聯`FileEntry`.
+創建 `FileWriter` 物件與所代表的檔關聯`FileEntry`.
 
 **參數：**
 
-*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `<a href="../filewriter/filewriter.html">FileWriter</a>` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `FileWriter` 物件。*（函數）*
 
-*   **errorCallback**： 如果試圖創建 <a href="../filewriter/filewriter.html">FileWriter</a> 而發生錯誤執行回<a href="../fileobj/fileobj.html">檔</a>。調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。*（函數）*
+*   **errorCallback**： 如果試圖創建 FileWriter 而發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -304,19 +304,19 @@ license: >
         alert(error.code);
     }
     
-    // create a <a href="../filewriter/filewriter.html">FileWriter</a> to write to the file
+    // create a FileWriter to write to the file
     entry.createWriter(success, fail);
     
 
-## <a href="../fileobj/fileobj.html">檔</a>
+## 檔
 
-返回 `File` 物件，它表示該<a href="../fileobj/fileobj.html">檔</a>的目前狀態，這 `FileEntry` 表示。
+返回 `File` 物件，它表示該檔的目前狀態，這 `FileEntry` 表示。
 
 **參數：**
 
-*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `File` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `File` 物件。*（函數）*
 
-*   **errorCallback**： 回<a href="../fileobj/fileobj.html">檔</a>的執行如果發生錯誤時創建 `File` 物件，例如當該<a href="../fileobj/fileobj.html">檔</a>不再存在。 調用與 `<a href="../fileerror/fileerror.html">FileError</a>` 物件。 *（函數）*
+*   **errorCallback**： 回檔的執行如果發生錯誤時創建 `File` 物件，例如當該檔不再存在。 調用與 `FileError` 物件。 *（函數）*
 
 **快速的示例**
 

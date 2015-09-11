@@ -22,14 +22,14 @@ license: >
 
 Событие возникает, когда приложение извлекается от фона.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
+    document.addEventListener("resume", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
 `resume`Событие возникает, когда родной платформе вытаскивает приложения от фона.
 
-Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -41,7 +41,7 @@ license: >
 
 ## Быстрый пример
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+    document.addEventListener("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Resume Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+            document.addEventListener("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -94,7 +94,7 @@ license: >
     
     При вызове из `resume` обработчика событий, интерактивных функций, таких как `alert()` должны быть обернуты в `setTimeout()` вызов с таймаутом нулю, или же в приложение зависает. Например:
     
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+        document.addEventListener("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

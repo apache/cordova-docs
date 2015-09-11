@@ -42,9 +42,9 @@ Leggere le voci in questa directory.
 
 **Parametri:**
 
-*   **successCallback**: un callback che viene passato un array di `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` e `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` oggetti. *(Funzione)*
+*   **successCallback**: un callback che viene passato un array di `FileEntry` e `DirectoryEntry` oggetti. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero dell'elenco di directory. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero dell'elenco di directory. Invocato con un `FileError` oggetto. *(Funzione)*
 
 **Esempio rapido**
 

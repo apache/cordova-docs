@@ -20,7 +20,7 @@ license: >
 
 # GlobalizationError
 
-<a href="../globalization.html">グローバリゼーション</a> API からエラーを表すオブジェクト。
+グローバリゼーション API からエラーを表すオブジェクト。
 
 ## プロパティ
 
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -72,7 +72,7 @@ license: >
         };
     
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

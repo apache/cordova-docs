@@ -18,26 +18,26 @@ license: >
     under the License.
 ---
 
-# geolocation.getCurrent<a href="Position/position.html">Position</a>
+# geolocation.getCurrentPosition
 
-Renvoie la position actuelle de l'appareil sous la forme d'un objet `<a href="Position/position.html">Position</a>`.
+Renvoie la position actuelle de l'appareil sous la forme d'un objet `Position`.
 
-    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
-                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
-                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
+    navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                             [geolocationError],
+                                             [geolocationOptions]);
     
 
 ## Paramètres
 
-*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>** : la fonction callback à laquelle est transmise la position actuelle.
+*   **geolocationSuccess** : la fonction callback à laquelle est transmise la position actuelle.
 
-*   **<a href="parameters/geolocationError.html">geolocationError</a>** : *(facultative)* la fonction callback s'exécutant si une erreur survient.
+*   **geolocationError** : *(facultative)* la fonction callback s'exécutant si une erreur survient.
 
-*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>** : *(facultatives)* des préférences de géolocalisation.
+*   **geolocationOptions** : *(facultatives)* des préférences de géolocalisation.
 
 ## Description
 
-`geolocation.getCurrent<a href="Position/position.html">Position</a>` est une fonction asynchrone. Elle transmet la position actuelle de l'appareil à la fonction callback `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` sous la forme d'un objet `<a href="Position/position.html">Position</a>`. Si une erreur se produit, un objet `<a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>` est passé en paramètre à la fonction callback `<a href="parameters/geolocationError.html">geolocationError</a>`.
+`geolocation.getCurrentPosition` est une fonction asynchrone. Elle transmet la position actuelle de l'appareil à la fonction callback `geolocationSuccess` sous la forme d'un objet `Position`. Si une erreur se produit, un objet `PositionError` est passé en paramètre à la fonction callback `geolocationError`.
 
 ## Plates-formes supportées
 
@@ -51,7 +51,7 @@ Renvoie la position actuelle de l'appareil sous la forme d'un objet `<a href="Po
 ## Exemple court
 
     // onSuccess Callback
-    // This method accepts a <a href="Position/position.html">Position</a> object, which contains the
+    // This method accepts a Position object, which contains the
     // current GPS coordinates
     //
     var onSuccess = function(position) {
@@ -65,14 +65,14 @@ Renvoie la position actuelle de l'appareil sous la forme d'un objet `<a href="Po
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
+    // onError Callback receives a PositionError object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
     
-    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## Exemple complet
@@ -80,22 +80,22 @@ Renvoie la position actuelle de l'appareil sous la forme d'un objet `<a href="Po
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
-        // onSuccess <a href="geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -109,7 +109,7 @@ Renvoie la position actuelle de l'appareil sous la forme d'un objet `<a href="Po
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
-        // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
+        // onError Callback receives a PositionError object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

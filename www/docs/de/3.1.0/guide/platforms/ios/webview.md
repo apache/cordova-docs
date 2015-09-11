@@ -32,33 +32,33 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
 
 *   Xcode 4.5 oder höher
 
-*   `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (aus einem neu erstellten iOS-Projekt)
+*   `config.xml`Datei (aus einem neu erstellten iOS-Projekt)
 
 ## Hinzufügen von Cleaver zum Xcode Projekt (CordovaLib-Teilprojekt)
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova-Quelle zu einem permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app verwenden, navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Kopie der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das Projektverzeichnis auf der Festplatte (siehe die oben genannten Voraussetzungen).
+4.  Kopie der `config.xml` Datei in das Projektverzeichnis auf der Festplatte (siehe die oben genannten Voraussetzungen).
 
-5.  Drag & drop die `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das Projekt-Navigator Xcode.
+5.  Drag & drop die `config.xml` Datei in das Projekt-Navigator Xcode.
 
 6.  Wählen Sie das Optionsfeld **erstellen Gruppen für alle hinzugefügten Ordner** und drücken Sie die Taste **Beenden**.
 
-7.  Drag & drop die `CordovaLib.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das Projekt-Navigator Xcode (aus dem ständigen Verzeichnis Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
+7.  Drag & drop die `CordovaLib.xcodeproj` Datei in das Projekt-Navigator Xcode (aus dem ständigen Verzeichnis Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  Geben Sie die **Option-Befehl-1** -Tastenkombination, um die **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Inspector** -Serie.
+9.  Geben Sie die **Option-Befehl-1** -Tastenkombination, um die **Datei Inspector** -Serie.
 
-10. Wählen Sie **Relative Gruppe** im **<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-Inspektor** für die Drop-Down-Menü für **Lage**.
+10. Wählen Sie **Relative Gruppe** im **Datei-Inspektor** für die Drop-Down-Menü für **Lage**.
 
 11. Wählen Sie das **Symbol "Projekt"** in der Projekt-Navigator, wählen Sie Ihr **Ziel**, dann wählen Sie die Registerkarte **Einstellungen erstellen** .
 
-12. Fügen Sie `-all_load` und `-Obj-C` für den Wert **Anderer Linker-<a href="../../../cordova/file/flags/flags.html">Flags</a>** .
+12. Fügen Sie `-all_load` und `-Obj-C` für den Wert **Anderer Linker-Flags** .
 
 13. Klicken Sie auf das **Symbol "Projekt"** in der Projekt-Navigator, wählen Sie Ihr **Ziel**, dann wählen Sie die Registerkarte **Build Phasen** .
 
@@ -126,9 +126,9 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
         <content src="http://apache.org" />
         
 
-5.  (*OPTIONAL*) Festlegen der `use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>` -Eigenschaft (standardmäßig `NO` ):
+5.  (*OPTIONAL*) Festlegen der `useSplashScreen` -Eigenschaft (standardmäßig `NO` ):
     
-        viewController.use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a> = YES;
+        viewController.useSplashScreen = YES;
         
 
 6.  Legen Sie den **Ansicht-Frame** (immer gesetzt dies als die letzte Eigenschaft):

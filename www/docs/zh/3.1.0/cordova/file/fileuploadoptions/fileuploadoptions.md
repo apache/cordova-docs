@@ -26,7 +26,7 @@ A `FileUploadOptions` 可以將物件傳遞給 `FileTransfer` 物件的 `upload(
 
 *   **fileKey**： 表單元素的名稱。預設值為 `file` 。() DOMString
 
-*   **<a href="../fileobj/fileobj.html">檔</a>案名**： 要保存在伺服器上的<a href="../fileobj/fileobj.html">檔</a>時使用的<a href="../fileobj/fileobj.html">檔</a>案名稱。預設值為 `image.jpg` 。() DOMString
+*   **檔案名**： 要保存在伺服器上的檔時使用的檔案名稱。預設值為 `image.jpg` 。() DOMString
 
 *   **mimeType**： 要上傳的資料的 mime 類型。預設值為 `image/jpeg` 。() DOMString
 

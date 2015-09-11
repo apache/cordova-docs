@@ -26,21 +26,21 @@ Accelerometer
 メソッド
 -------
 
-- accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
-- accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
-- <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
+- accelerometer.getCurrentAcceleration
+- accelerometer.watchAcceleration
+- accelerometer.clearWatch
 
 引数
 ---------
 
-- <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
-- <a href="parameters/accelerometerError.html">accelerometerError</a>
-- <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
+- accelerometerSuccess
+- accelerometerError
+- accelerometerOptions
 
 オブジェクト (読み取り専用)
 -------------------
 
-- <a href="acceleration/acceleration.html">Acceleration</a>
+- Acceleration
 
 パーミッション
 -----------
@@ -68,7 +68,7 @@ Accelerometer
 
 ### iOS
 
-#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
+#### App/Supporting Files/Cordova.plist
 
     <key>Plugins</key>
     <dict>

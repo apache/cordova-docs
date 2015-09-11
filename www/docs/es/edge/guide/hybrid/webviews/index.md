@@ -24,7 +24,7 @@ Cordova aplicaciones se implementan normalmente como un navegador *WebView* dent
 
 Para implementar un WebView, necesitas estar familiarizado con cada entorno de programación nativa. A continuación proporciona instrucciones para plataformas soportadas:
 
-*   <a href="../../platforms/amazonfireos/webview.html">Amazon fuego OS WebViews</a>
-*   <a href="../../platforms/android/webview.html">Android WebViews</a>
-*   <a href="../../platforms/ios/webview.html">iOS WebViews</a>
-*   <a href="../../platforms/wp8/webview.html">Windows Phone 8,0 WebViews</a>
+*   Amazon fuego OS WebViews
+*   Android WebViews
+*   iOS WebViews
+*   Windows Phone 8,0 WebViews

@@ -32,7 +32,7 @@ Video Tutorials:
 1. Requirements
 ---------------
 - Intel-based computer with Mac OS X Lion (10.7)
-- Necessary for Installing on <a href="../../../cordova/device/device.html">Device</a>:
+- Necessary for Installing on Device:
     - An Apple iOS device (iPhone, iPad, iPod Touch)
     - iOS developer certification
 
@@ -48,7 +48,7 @@ Video Tutorials:
 --------------------
 
 - Launch Xcode
-- Select the **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** menu
+- Select the **File** menu
 - Select **New**, then **New Project...**
 - Select **Cordova-based Application** from the list of templates
 
@@ -86,12 +86,12 @@ Video Tutorials:
 - Select the **Finish** button
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------
 
 - Select the folder named **www** in your Project Navigator in Xcode
 - Select the **index.html** file
-- Type `<h1><a href="../webos/index.html">Hello World</a></h1>` after the `<body>` tag
+- Type `<h1>Hello World</h1>` after the `<body>` tag
 
 You can also add any associated JavaScript and CSS files there as well.
     
@@ -103,10 +103,10 @@ You can also add any associated JavaScript and CSS files there as well.
 - Select the **Run** button in your project window's toolbar
 
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
-- Open [AppName]-Info.plist (where [AppName] is your application's name), under the "Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s" group
+- Open [AppName]-Info.plist (where [AppName] is your application's name), under the "Supporting Files" group
 - Change **BundleIdentifier** to the identifier provided by Apple, or your own bundle identifier. If you have a developer license, you can access and run the Assistant [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your app.
 - Change the Active SDK in the Scheme drop-down menu on the toolbar to **[DEVICENAME]** where [DEVICENAME] is the name of the device you want to deploy to.
 - Select the **Run** button in your project window's toolbar

@@ -23,13 +23,13 @@ license: >
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps in Windows 8.  It shows how to use either shell
 tools specific to Windows 8 to generate and build apps, or the
-cross-platform Cordova CLI discussed in <a href="../../cli/index.html">The Command-Line Interface</a>.
-(See the <a href="../../overview/index.html">Overview</a> for a comparison of these development options.) This
+cross-platform Cordova CLI discussed in The Command-Line Interface.
+(See the Overview for a comparison of these development options.) This
 section also shows how to modify Cordova apps within Visual Studio.
 Regardless of which approach you take, you need to install the Visual
 Studio SDK, as described below.
 
-See <a href="upgrade.html">Upgrading Windows 8</a> for information on how to upgrade existing
+See Upgrading Windows 8 for information on how to upgrade existing
 Windows 8 Cordova projects.
 
 Cordova WebViews running on Windows 8 rely on Internet Explorer 10 as
@@ -110,7 +110,7 @@ Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
 ## Create a New Project
 
 At this point, to create a new project you can choose between the
-cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>, or
+cross-platform CLI tool described in The Command-Line Interface, or
 the set of Windows 8-specific shell tools. From within a source-code
 directory, this CLI approach generates an app named _HelloWorld_
 within a new `hello` project directory:
@@ -199,7 +199,7 @@ app as if it were running on a tablet device:
 Unlike desktop deployment, this option allows you to simulate the
 tablet's orientation, location, and vary its network settings.
 
-__NOTE__: Consult the <a href="../../overview/index.html">Overview</a> for advice on how to use Cordova's
+__NOTE__: Consult the Overview for advice on how to use Cordova's
 command-line tools or the SDK in your workflow. The Cordova CLI relies
 on cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to use the SDK to

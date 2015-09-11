@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../Position/position.html">Position</a>sfehler
+# Positionsfehler
 
-A `<a href="../Position/position.html">Position</a>Error` -Objekt übergeben, um die `<a href="../parameters/geolocationError.html">geolocationError</a>` Rückruf, wenn ein Fehler auftritt.
+A `PositionError` -Objekt übergeben, um die `geolocationError` Rückruf, wenn ein Fehler auftritt.
 
 ## Eigenschaften
 
@@ -30,22 +30,22 @@ A `<a href="../Position/position.html">Position</a>Error` -Objekt übergeben, um
 
 ## Konstanten
 
-*   `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
-*   `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
-*   `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
+*   `PositionError.PERMISSION_DENIED`
+*   `PositionError.POSITION_UNAVAILABLE`
+*   `PositionError.TIMEOUT`
 
 ## Beschreibung
 
-Das `<a href="../Position/position.html">Position</a>Error` -Objekt übergeben, um die `<a href="../parameters/geolocationError.html">geolocationError</a>` Callback-Funktion tritt ein Fehler mit <a href="../geolocation.html">Geolocation</a>.
+Das `PositionError` -Objekt übergeben, um die `geolocationError` Callback-Funktion tritt ein Fehler mit Geolocation.
 
-### `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
+### `PositionError.PERMISSION_DENIED`
 
-Zurückgegeben, wenn der Benutzer die Anwendung zum Abrufen von <a href="../Position/position.html">Position</a>sinformationen nicht zulässt. Dies ist abhängig von der Plattform.
+Zurückgegeben, wenn der Benutzer die Anwendung zum Abrufen von Positionsinformationen nicht zulässt. Dies ist abhängig von der Plattform.
 
-### `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
+### `PositionError.POSITION_UNAVAILABLE`
 
-Zurückgegeben, wenn das <a href="../../device/device.html">Gerät</a> nicht in der Lage, eine <a href="../Position/position.html">Position</a> abzurufen ist. Im Allgemeinen bedeutet dies, das <a href="../../device/device.html">Gerät</a> hat keine Netzwerkkonnektivität und/oder kann kein Satelliten-Update erhalten.
+Zurückgegeben, wenn das Gerät nicht in der Lage, eine Position abzurufen ist. Im Allgemeinen bedeutet dies, das Gerät hat keine Netzwerkkonnektivität und/oder kann kein Satelliten-Update erhalten.
 
-### `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
+### `PositionError.TIMEOUT`
 
-Zurückgegeben, wenn das <a href="../../device/device.html">Gerät</a> nicht in der Lage, eine <a href="../Position/position.html">Position</a> innerhalb der angegebenen abzurufen ist die `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` ' `timeout` Eigenschaft. Bei Verwendung mit `geolocation.watch<a href="../Position/position.html">Position</a>` , dieser Fehler konnte übergeben werden, um die `<a href="../parameters/geolocationError.html">geolocationError</a>` Rückruf jedes `timeout` Millisekunden.
+Zurückgegeben, wenn das Gerät nicht in der Lage, eine Position innerhalb der angegebenen abzurufen ist die `geolocationOptions` ' `timeout` Eigenschaft. Bei Verwendung mit `geolocation.watchPosition` , dieser Fehler konnte übergeben werden, um die `geolocationError` Rückruf jedes `timeout` Millisekunden.

@@ -45,7 +45,7 @@ Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Par
 
 *   **Gruppieren**: das Symbol für Zifferngruppierung zum analysieren und formatieren verwenden. *(String)*
 
-Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
 
 Die `options` Parameter ist optional und Standardwerte sind:
 
@@ -91,7 +91,7 @@ Ergebnisse:
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

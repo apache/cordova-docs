@@ -28,7 +28,7 @@ license: >
 
 *   **результат**: содержимое файла, которые были прочитаны. *(DOMString)*
 
-*   **Ошибка**: объект, который содержит ошибки. *(<a href="../fileerror/fileerror.html">FileError</a>)*
+*   **Ошибка**: объект, который содержит ошибки. *(FileError)*
 
 *   **onloadstart**: вызывается, когда начинается чтение. *(Функция)*
 
@@ -58,7 +58,7 @@ license: >
 
 ## Подробная информация
 
-`FileReader`Объект предлагает способ для чтения файлов из файловой системы устройства. <a href="../fileobj/fileobj.html">Файл</a>ы можно читать как текст или как строку данных в кодировке base64. Прослушиватели событий получают `loadstart` , `progress` , `load` , `loadend` , `error` , и `abort` события.
+`FileReader`Объект предлагает способ для чтения файлов из файловой системы устройства. Файлы можно читать как текст или как строку данных в кодировке base64. Прослушиватели событий получают `loadstart` , `progress` , `load` , `loadend` , `error` , и `abort` события.
 
 ## Поддерживаемые платформы
 
@@ -142,26 +142,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileReader Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
+            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
         }
     
-        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
+        function gotFileEntry(fileEntry) {
             fileEntry.file(gotFile, fail);
         }
     
@@ -195,7 +195,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Read File</p>
       </body>
     </html>

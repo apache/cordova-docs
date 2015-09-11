@@ -20,7 +20,7 @@ license: >
 
 # ContactFindOptions
 
-Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a href="../contacts.find.html">contacts.find</a>` operación.
+Contiene propiedades que pueden utilizar para filtrar los resultados de una `contacts.find` operación.
 
 ## Propiedades
 
@@ -46,7 +46,7 @@ Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a 
     };
     
     // error callback
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
@@ -57,7 +57,7 @@ Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a 
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## Ejemplo completo
@@ -65,14 +65,14 @@ Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -84,7 +84,7 @@ Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a 
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ Contiene propiedades que pueden utilizar para filtrar los resultados de una `<a 
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>

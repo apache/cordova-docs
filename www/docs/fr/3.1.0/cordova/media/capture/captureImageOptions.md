@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="capture.html">Capture</a>ImageOptions
+# CaptureImageOptions
 
 > Encapsule les options de configuration de capture image.
 
@@ -31,7 +31,7 @@ license: >
     // limit capture operation to 3 images
     var options = { limit: 3 };
     
-    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureImage(captureSuccess, captureError, options);
     
 
 ## iOS Quirks

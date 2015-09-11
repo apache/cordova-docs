@@ -20,7 +20,7 @@ license: >
 
 # device.platform
 
-獲取該<a href="device.html">設備</a>的作業系統名稱。
+獲取該設備的作業系統名稱。
 
     var string = device.platform;
     
@@ -50,24 +50,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -80,12 +80,12 @@ license: >
 
 ## 黑莓手機的怪癖
 
-<a href="device.html">設備</a>可能會返回而不是平臺名稱的<a href="device.html">設備</a>平臺版本編號。例如，Storm2 9550 返回一個值如`2.13.0.95`.
+設備可能會返回而不是平臺名稱的設備平臺版本編號。例如，Storm2 9550 返回一個值如`2.13.0.95`.
 
 ## Windows Phone 7 的怪癖
 
-Windows Phone 7 <a href="device.html">設備</a>報告作為平臺`WinCE`.
+Windows Phone 7 設備報告作為平臺`WinCE`.
 
 ## Windows Phone 8 怪癖
 
-Windows Phone 8 <a href="device.html">設備</a>報告作為平臺`Win32NT`.
+Windows Phone 8 設備報告作為平臺`Win32NT`.

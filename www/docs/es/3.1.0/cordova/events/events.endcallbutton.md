@@ -22,14 +22,14 @@ license: >
 
 Este evento se desencadena cuando el usuario presiona el botón de llamada final.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", yourCallbackFunction, false);
+    document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
 ## Detalles
 
 El evento reemplaza el comportamiento predeterminado de llamada final.
 
-Las aplicaciones normalmente deben utilizar `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
 
 ## Plataformas soportadas
 
@@ -37,7 +37,7 @@ Las aplicaciones normalmente deben utilizar `document.<a href="../inappbrowser/i
 
 ## Ejemplo rápido
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", onEndCallKeyDown, false);
+    document.addEventListener("endcallbutton", onEndCallKeyDown, false);
     
     function onEndCallKeyDown() {
         // Handle the end call button
@@ -50,7 +50,7 @@ Las aplicaciones normalmente deben utilizar `document.<a href="../inappbrowser/i
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>End Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>End Call Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ Las aplicaciones normalmente deben utilizar `document.<a href="../inappbrowser/i
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", onEndCallKeyDown, false);
+            document.addEventListener("endcallbutton", onEndCallKeyDown, false);
         }
     
         // Handle the end call button

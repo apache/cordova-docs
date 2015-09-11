@@ -24,28 +24,28 @@ license: >
 
 ## Event Types
 
-- <a href="events.deviceready.html">deviceready</a>
-- <a href="events.pause.html">pause</a>
-- <a href="events.resume.html">resume</a>
-- <a href="events.online.html">online</a>
-- <a href="events.offline.html">offline</a>
-- <a href="events.backbutton.html">backbutton</a>
-- <a href="events.batterycritical.html">batterycritical</a>
-- <a href="events.batterylow.html">batterylow</a>
-- <a href="events.batterystatus.html">batterystatus</a>
-- <a href="events.menubutton.html">menubutton</a>
-- <a href="events.searchbutton.html">searchbutton</a>
-- <a href="events.startcallbutton.html">startcallbutton</a>
-- <a href="events.endcallbutton.html">endcallbutton</a>
-- <a href="events.volumedownbutton.html">volumedownbutton</a>
-- <a href="events.volumeupbutton.html">volumeupbutton</a>
+- deviceready
+- pause
+- resume
+- online
+- offline
+- backbutton
+- batterycritical
+- batterylow
+- batterystatus
+- menubutton
+- searchbutton
+- startcallbutton
+- endcallbutton
+- volumedownbutton
+- volumeupbutton
 
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements battery status and other
 device-level APIs as _plugins_. Access to all other events not related
 to battery status are enabled by default.  Use the CLI's `plugin`
-command, described in <a href="../../guide/cli/index.html">The Command-line Interface</a>, to enable or disable
+command, described in The Command-line Interface, to enable or disable
 battery events:
 
         $ cordova plugin add org.apache.cordova.battery-status
@@ -60,7 +60,7 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.<a href="events.batterystatus.html">batterystatus</a>.BatteryListener" />
+            <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
         </feature>
 
 * BlackBerry WebWorks
@@ -88,4 +88,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.
+configuration.  See _Platform Support_ in the Overview section.

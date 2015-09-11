@@ -31,8 +31,8 @@ Sets the current position within an audio file.
 ## Description
 
 The `media.seekTo` executes asynchronously, updating the current
-playback position within an audio file referenced by a `<a href="media.html">Media</a>`
-object. Also updates the `<a href="media.html">Media</a>` object's `position` parameter.
+playback position within an audio file referenced by a `Media`
+object. Also updates the `Media` object's `position` parameter.
 
 ## Supported Platforms
 
@@ -43,35 +43,35 @@ object. Also updates the `<a href="media.html">Media</a>` object's `position` pa
 - Tizen
 - Windows 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     // Audio player
     //
-    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
-        my_<a href="media.play.html">media.play</a>();
+    var my_media = new Media(src, onSuccess, onError);
+        my_media.play();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
         my_media.seekTo(10000);
     }, 5000);
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+            <title>Media Example</title>
 
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             // device APIs are available
             //
-            function on<a href="../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
 
@@ -83,20 +83,20 @@ object. Also updates the `<a href="media.html">Media</a>` object's `position` pa
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
 
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
 
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                    my_media.getCurrentPosition(
                         // success callback
                         function(position) {
                             if (position > -1) {
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>(position + " sec");
+                                setAudioPosition(position + " sec");
                             }
                         },
                         // error callback
@@ -116,7 +116,7 @@ object. Also updates the `<a href="media.html">Media</a>` object's `position` pa
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -137,7 +137,7 @@ object. Also updates the `<a href="media.html">Media</a>` object's `position` pa
 
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
 

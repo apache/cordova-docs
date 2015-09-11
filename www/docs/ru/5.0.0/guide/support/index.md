@@ -457,7 +457,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">События</a></a>
+          <a href="cordova_events_events.md.html">События</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -792,7 +792,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Хранилище</a></a>
+          <a href="cordova_storage_storage.md.html">Хранилище</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

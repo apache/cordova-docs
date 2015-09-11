@@ -20,7 +20,7 @@ license: >
 
 # BlackBerry-Befehlszeilentools
 
-Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ausführlichere Wegbeschreibung.
+Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -Datei ausführlichere Wegbeschreibung.
 
  [1]: http://cordova.apache.org
 
@@ -36,7 +36,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rüc
 
 ## Erstellen eines Projekts
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben <a href="../../../cordova/storage/storage.html">Speicher</a>orte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
@@ -44,21 +44,21 @@ Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properti
 
 ## Emulator starten
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben <a href="../../../cordova/storage/storage.html">Speicher</a>orte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/run <platform>
     
 
 und dann wählen Sie "Nein", mit der Aufforderung:
 
-    Haben Sie ein BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a> an Ihren Computer angeschlossen? (y/n) $ /path/to/my_new_project/cordova/run <platform>
+    Haben Sie ein BlackBerry-Gerät an Ihren Computer angeschlossen? (y/n) $ /path/to/my_new_project/cordova/run <platform>
     
 
 und dann wählen Sie "Nein", mit der Aufforderung:
 
-    Haben Sie ein BlackBerry-<a href="../../../cordova/device/device.html">Gerät</a> an Ihren Computer angeschlossen? (y/n)
+    Haben Sie ein BlackBerry-Gerät an Ihren Computer angeschlossen? (y/n)
     
 
 ## Protokollierung
 
-Leider ist das streaming Protokolle direkt vom <a href="../../../cordova/device/device.html">Gerät</a> derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Textbuch und BlackBerry-Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem <a href="../../../cordova/device/device.html">Gerät</a> durch die '' ALT'' gedrückt aus dem home-Bildschirm und Eingabe '' Lglg'' Schlüssel.
+Leider ist das streaming Protokolle direkt vom Gerät derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Textbuch und BlackBerry-Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem Gerät durch die '' ALT'' gedrückt aus dem home-Bildschirm und Eingabe '' Lglg'' Schlüssel.

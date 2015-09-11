@@ -29,7 +29,7 @@ El evento se desencadena cuando el usuario presiona el volumen botón.
 
 Si necesita reemplazar el volumen predeterminado por comportamiento puede registrar un detector de eventos para el evento `volumedownbutton`.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
 
 ## Plataformas soportadas
 
@@ -50,7 +50,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Volume Down Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -20,4 +20,4 @@ license: >
 
 # database_version
 
-<a href="../database/database.html">데이터베이스</a>의 버전입니다.
+데이터베이스의 버전입니다.

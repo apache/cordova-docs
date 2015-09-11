@@ -20,7 +20,7 @@ license: >
 
 # Android Shell Tool Guide
 
-Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um Android apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der <a href="../../overview/index.html">Übersicht</a>, möglicherweise einen größeren Bereich von Entwicklungsoptionen als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die Android SDK-Umgebung konfigurieren, wie in der Android-Plattform-Handbuch beschrieben.
+Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um Android apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der Übersicht, möglicherweise einen größeren Bereich von Entwicklungsoptionen als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die Android SDK-Umgebung konfigurieren, wie in der Android-Plattform-Handbuch beschrieben.
 
 Zum Aktivieren der Shell-Hilfsmittel für Android download Cordova von [cordova.apache.org][1]. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie jedes Ziel, soll `android` in diesem Fall. Die entsprechenden Tools stehen in der Regel in den übergeordneten `bin` Verzeichnis, sonst finden Sie in der **README** -Datei für detailliertere Wegbeschreibung.
 
@@ -183,7 +183,7 @@ Diese [Eigenschaften][3] können festgelegt werden, um den Build anzupassen:
 
 Wenn Sie `build.gradle`anpassen, anstatt direkt bearbeiten müssen, sollten Sie eine Geschwister-Datei mit dem Namen `Build-extras.gradle`erstellen. Diese Datei wird von den wichtigsten `build.gradle` wenn vorhanden enthalten sein. Hier ist ein Beispiel:
 
-    # <a href="../../../cordova/storage/storage.opendatabase.html">Example</a> build-extras.gradle
+    # Example build-extras.gradle
     # This file is included at the beginning of `build.gradle`
     ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
     # When set, this function allows code to run at the end of `build.gradle`

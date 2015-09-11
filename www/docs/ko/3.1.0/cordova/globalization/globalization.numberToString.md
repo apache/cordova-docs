@@ -27,11 +27,11 @@ license: >
 
 ## 설명
 
-서식이 지정 된 숫자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 있어야 해당 개체는 `value` 속성을 `String` 값.
+서식이 지정 된 숫자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `value` 속성을 `String` 값.
 
-번호, 서식 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+번호, 서식 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.FORMATTING\_ERROR`.
 
-`options`매개 <a href="../../plugin_ref/spec.html">변수</a>는 선택적 이며 그것의 기본 값은:
+`options`매개 변수는 선택적 이며 그것의 기본 값은:
 
     {유형: '10 진수'}
     
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>numberToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

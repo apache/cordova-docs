@@ -20,7 +20,7 @@ license: >
 
 # iOS 命令列工具
 
-`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案中包含單獨的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，瞭解有關更多詳細的指示。
+`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
@@ -28,7 +28,7 @@ IOS 命令列工具都建立在 shell 腳本和依賴于 Xcode 命令列工具�
 
 ## 創建一個專案
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>名稱。
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。
 
     $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     

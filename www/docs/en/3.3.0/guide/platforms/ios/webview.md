@@ -20,7 +20,7 @@ license: >
 
 # iOS WebViews
 
-This section <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to embed a Cordova-enabled WebView component
+This section shows how to embed a Cordova-enabled WebView component
 within a larger iOS application. For details on how these components
 can communicate with each other, see Application Plugins.
 
@@ -31,7 +31,7 @@ subproject-based Cleaver implementation.
 
 These instructions require at least Cordova 2.3 and Xcode 4.5, along
 with a `config.xml` file from a newly created iOS project. You can use
-the procedure in <a href="../../cli/index.html">The Command-Line Interface</a> to create a new project,
+the procedure in The Command-Line Interface to create a new project,
 then obtain the `config.xml` file from within the named application's
 subdirectory within `platforms/ios`.
 
@@ -61,16 +61,16 @@ package.
 
 1. Select `CordovaLib.xcodeproj` within the __Project Navigator__.
 
-1. Type the __Option-Command-1__ key combination to <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a>
+1. Type the __Option-Command-1__ key combination to show the __File
    Inspector__.
 
-1. Choose __Relative to Group__ in the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector__ for the
+1. Choose __Relative to Group__ in the __File Inspector__ for the
    drop-down menu for __Location__.
 
 1. Select the __project icon__ in the __Project Navigator__, select
    the __Target__, then select the __Build Settings__ tab.
 
-1. Add `-force_load` and `-Obj-C` for the __Other Linker <a href="../../../cordova/file/flags/flags.html">Flags</a>__ value.
+1. Add `-force_load` and `-Obj-C` for the __Other Linker Flags__ value.
 
 1. Click on the __project icon__ in the Project Navigator, select the
    __Target__, then select the __Build Phases__ tab.

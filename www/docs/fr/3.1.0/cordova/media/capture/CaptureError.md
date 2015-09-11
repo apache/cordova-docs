@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="capture.html">Capture</a>Error
+# CaptureError
 
 > Encapsule le code d'erreur résultant d'une opération de capture de médias ayant échoué.
 
@@ -28,12 +28,12 @@ license: >
 
 ## Constantes
 
-*   `<a href="capture.html">Capture</a>Error.CAPTURE_INTERNAL_ERR`: La caméra ou un microphone a échoué à capturer l'image ou le son.
+*   `CaptureError.CAPTURE_INTERNAL_ERR`: La caméra ou un microphone a échoué à capturer l'image ou le son.
 
-*   `<a href="capture.html">Capture</a>Error.CAPTURE_APPLICATION_BUSY`: L'application de capture caméra / audio est actuellement une autre demande de capture.
+*   `CaptureError.CAPTURE_APPLICATION_BUSY`: L'application de capture caméra / audio est actuellement une autre demande de capture.
 
-*   `<a href="capture.html">Capture</a>Error.CAPTURE_INVALID_ARGUMENT`: Utilisation incorrecte de l'API (par exemple, la valeur de `limit` est inférieur à 1).
+*   `CaptureError.CAPTURE_INVALID_ARGUMENT`: Utilisation incorrecte de l'API (par exemple, la valeur de `limit` est inférieur à 1).
 
-*   `<a href="capture.html">Capture</a>Error.CAPTURE_NO_MEDIA_FILES`: L'utilisateur quitte l'application capture audio ou de la caméra avant de capturer n'importe quoi.
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: L'utilisateur quitte l'application capture audio ou de la caméra avant de capturer n'importe quoi.
 
-*   `<a href="capture.html">Capture</a>Error.CAPTURE_NOT_SUPPORTED`: L'opération de capture demandée n'est pas pris en charge.
+*   `CaptureError.CAPTURE_NOT_SUPPORTED`: L'opération de capture demandée n'est pas pris en charge.

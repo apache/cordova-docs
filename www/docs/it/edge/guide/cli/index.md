@@ -139,7 +139,7 @@ Leggere se si desidera utilizzare l'approccio del flusso di lavoro multi-piattaf
 
 ## Costruire l'App
 
-Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` gestore di eventi, a cui fa riferimento predefinito da`www/js/index.js`.
+Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da`www/js/index.js`.
 
 Eseguire il comando seguente per costruire in modo iterativo del progetto:
 
@@ -195,7 +195,7 @@ Quando si compila e Mostra un nuovo progetto, l'applicazione predefinita che app
 
 Un *plugin* è un po ' di codice del componente aggiuntivo che fornisce un'interfaccia per i componenti nativi. È possibile progettare la propria interfaccia plugin, per esempio, quando si progetta un'applicazione ibrida che mescola una Cordova WebView con componenti nativi. (Vedere visualizzazioni Web Embedding e [Guida allo sviluppo di Plugin][6] per dettagli). Più comunemente, è necessario aggiungere un plugin per abilitare una delle caratteristiche fondamentali di Cordova dispositivo-livello dettagliati in riferimento all'API.
 
- [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20<a href="../../index.html">Guide</a>
+ [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
 
 A partire dalla versione 3.0, quando si crea un progetto di Cordova non ha alcun plugin presenti. Questo è il nuovo comportamento predefinito. Tutti i plugin che desideri, anche i plugin di nucleo, devono essere aggiunto in modo esplicito.
 
@@ -366,7 +366,7 @@ Invece, il primo livello `merges` directory offre un posto per specificare attiv
 
 Quando si rigenera il progetto, la versione per Android offre la dimensione di carattere personalizzato, mentre gli altri rimangono invariati.
 
-È inoltre possibile utilizzare `merges` per aggiungere file non presenti nell'originale `www` directory. Ad esempio, un'app può incorporare un grafico *pulsante indietro* nell'interfaccia di iOS, memorizzati `merges/ios/img/back_button.png` , mentre invece la versione di Android è in grado di catturare `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` eventi dal corrispondente pulsante hardware.
+È inoltre possibile utilizzare `merges` per aggiungere file non presenti nell'originale `www` directory. Ad esempio, un'app può incorporare un grafico *pulsante indietro* nell'interfaccia di iOS, memorizzati `merges/ios/img/back_button.png` , mentre invece la versione di Android è in grado di catturare `backbutton` eventi dal corrispondente pulsante hardware.
 
 ## Aiuto comandi
 

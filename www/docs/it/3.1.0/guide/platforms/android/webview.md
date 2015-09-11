@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>zioni Web Android
+# Visualizzazioni Web Android
 
 Partire da 1,9 a Cordova, con l'assistenza della `CordovaActivity` , è possibile utilizzare Cordova come componente di un'applicazione Android nativa più grande. Android si riferisce a questo componente come il `CordovaWebView` . Nuove applicazioni basate su Cordova da 1,9 in poi utilizzano il `CordovaWebView` come visualizzazione principale, indipendentemente dal fatto che l'eredità `CordovaActivity` approccio viene utilizzato.
 

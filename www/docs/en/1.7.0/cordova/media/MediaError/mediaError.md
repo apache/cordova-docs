@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../media.html">Media</a>Error
+MediaError
 ==========
 
-A `<a href="../media.html">Media</a>Error` object is returned to the `<a href="../Parameters/mediaError.html">mediaError</a>` callback function when an error occurs.
+A `MediaError` object is returned to the `mediaError` callback function when an error occurs.
 
 Properties
 ----------
@@ -32,14 +32,14 @@ Properties
 Constants
 ---------
 
-- `<a href="../media.html">Media</a>Error.MEDIA_ERR_ABORTED`
-- `<a href="../media.html">Media</a>Error.MEDIA_ERR_NETWORK`
-- `<a href="../media.html">Media</a>Error.MEDIA_ERR_DECODE`
-- `<a href="../media.html">Media</a>Error.MEDIA_ERR_NONE_SUPPORTED`
+- `MediaError.MEDIA_ERR_ABORTED`
+- `MediaError.MEDIA_ERR_NETWORK`
+- `MediaError.MEDIA_ERR_DECODE`
+- `MediaError.MEDIA_ERR_NONE_SUPPORTED`
 
 
 Description
 -----------
 
-The `<a href="../media.html">Media</a>Error` object is returned to the user through the `<a href="../Parameters/mediaError.html">mediaError</a>` callback function when an error occurs.
+The `MediaError` object is returned to the user through the `mediaError` callback function when an error occurs.
 

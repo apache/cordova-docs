@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/index.html">Guía de la plataforma BlackBerry</a> 10
+# Guía de la plataforma BlackBerry 10
 
 Esta guía le muestra cómo configurar el entorno de desarrollo para construir y desplegar aplicaciones Cordova para dispositivos BlackBerry 10. Para las versiones anteriores de BlackBerry, tienes que utilizar un conjunto diverso de herramientas de línea de comandos, descritas en la guía de la plataforma BlackBerry.
 

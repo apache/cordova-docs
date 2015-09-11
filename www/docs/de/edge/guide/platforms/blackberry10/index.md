@@ -20,7 +20,7 @@ license: >
 
 # Handbuch für die Plattform von BlackBerry 10
 
-Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, Cordova apps für BlackBerry 10 Geräte bereitstellen. Für frühere Versionen von BlackBerry müssen Sie mit einem unterschiedlichen SDK Umgebung und Befehlszeilentools, beschrieben im Handbuch für das BlackBerry-Plattform. Sie müssen für BlackBerry 10 installieren Sie das SDK unabhängig davon, ob Sie die Cross-Plattform-Cordova-CLI für Entwicklung, oder ein schmaler Plattform-zentrierte Kommandozeilen-Tools nutzen möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der <a href="../../overview/index.html">Übersicht</a>. Einzelheiten zu jedem finden Sie unter The Command-Line Interface und der <a href="tools.html">BlackBerry 10 Shell Tool Guide</a>.
+Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, Cordova apps für BlackBerry 10 Geräte bereitstellen. Für frühere Versionen von BlackBerry müssen Sie mit einem unterschiedlichen SDK Umgebung und Befehlszeilentools, beschrieben im Handbuch für das BlackBerry-Plattform. Sie müssen für BlackBerry 10 installieren Sie das SDK unabhängig davon, ob Sie die Cross-Plattform-Cordova-CLI für Entwicklung, oder ein schmaler Plattform-zentrierte Kommandozeilen-Tools nutzen möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der Übersicht. Einzelheiten zu jedem finden Sie unter The Command-Line Interface und der BlackBerry 10 Shell Tool Guide.
 
 ## Anforderungen
 
@@ -32,7 +32,7 @@ BlackBerry 10 Geräte-Simulator:
 
 *   Prozessor: Intel Dual-core 2.0 GHz/AMD Athlon 4200 + oder höher
 *   Festplattenspeicher: 10 GB 
-*   RAM-<a href="../../../cordova/storage/storage.html">Speicher</a>: 4 GB 
+*   RAM-Speicher: 4 GB 
 *   Virtualisierung: eine der folgenden: 
     *   **Intel Virtualization Technology** (VT, VT-X, Vmx) → [Intel VT-X unterstützt Prozessor Liste][1]
     *   **AMD Virtualization** (AMD-V, SVM) (Seit Mai 2006 gehören alle AMD-CPUs AMD-V außer Sempron).
@@ -120,7 +120,7 @@ Um einen Signaturschlüssel zu erhalten, gehen Sie zu \[BlackBerry Schlüssel Be
 
 Markieren Sie das erste Feld: "für BlackBerry10 Anwendungen mit BlackBerry NDK entwickelt" und dann anmelden oder erstellen eine BBID.
 
-Geben Sie ein Kennwort, und klicken Sie auf "Token erhalten", um bbidtoken.csk zu downloaden. <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie diese Datei auf den standardmäßigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort für Ihr Betriebssystem, die auf der Downloadseite angezeigt wird.
+Geben Sie ein Kennwort, und klicken Sie auf "Token erhalten", um bbidtoken.csk zu downloaden. Speichern Sie diese Datei auf den standardmäßigen Speicherort für Ihr Betriebssystem, die auf der Downloadseite angezeigt wird.
 
 Der letzte Schritt ist ein Signaturzertifikat zu generieren:
 
@@ -237,9 +237,9 @@ Verwendung `--release` zu eine Release-Version zu erstellen, die für Verteilung
 
 Die `--keystorepass` Option gibt das Kennwort, die Sie beim Konfigurieren des Computers zum Signieren definiert Anwendungen.
 
-## An anderen <a href="../../../cordova/storage/storage.html">Speicher</a>orten bereitstellen
+## An anderen Speicherorten bereitstellen
 
-Die Anleitung oben übernehmen ein Gerät über USB angeschlossen ist oder ein Simulator auf dem lokalen Computer ausgeführt wird. Es ist auch möglich, an anderen <a href="../../../cordova/storage/storage.html">Speicher</a>orten bereitstellen.
+Die Anleitung oben übernehmen ein Gerät über USB angeschlossen ist oder ein Simulator auf dem lokalen Computer ausgeführt wird. Es ist auch möglich, an anderen Speicherorten bereitstellen.
 
 Eine weitere Gruppe von Befehlszeilen-Dienstprogramme sind enthalten, wenn Sie die BlackBerry 10-Plattform für Ihr Projekt einrichten. Der folgende Befehl, in diesem Fall aus dem Projektverzeichnis auf oberster Ebene aufgerufen verknüpft ein Ziel mit dem Namen *emu* mit einer IP-Adresse.
 

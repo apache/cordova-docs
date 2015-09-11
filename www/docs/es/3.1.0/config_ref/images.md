@@ -115,7 +115,7 @@ En `config.xml` , agregue las siguientes preferencias:
 
 La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Si nombre su imagen nada aparte de `splash.png` , tienes que modificar esta línea.
 
-La segunda línea establece la demora de tiempo aparece el splashscreen en milisegundos. Para despedir la pantalla de inicio una vez que la aplicación recibe el `<a href="../cordova/events/events.deviceready.html">deviceready</a>` evento, llamada el `navigator.splashscreen.hide()` método.
+La segunda línea establece la demora de tiempo aparece el splashscreen en milisegundos. Para despedir la pantalla de inicio una vez que la aplicación recibe el `deviceready` evento, llamada el `navigator.splashscreen.hide()` método.
 
 ## Salpicadura pantallas para la plataforma iOS
 

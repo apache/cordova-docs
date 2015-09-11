@@ -443,7 +443,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Eventi</a></a>
+          <a href="cordova_events_events.md.html">Eventi</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +724,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Archiviazione</a></a>
+          <a href="cordova_storage_storage.md.html">Archiviazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -743,15 +743,15 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <!--        <td data-col="firefoxos"  class="n"></td> -->

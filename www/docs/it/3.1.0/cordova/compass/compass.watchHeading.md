@@ -22,16 +22,16 @@ license: >
 
 A intervalli regolari, ottenere la bussola in gradi.
 
-    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
+    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
 ## Descrizione
 
 La bussola è un sensore che rileva la direzione o la voce che il dispositivo è appuntito. Esso misura la rotta in gradi da 0 a 359.99.
 
-Il `compass.watchHeading` ottiene il titolo attuale del dispositivo a intervalli regolari. Ogni volta che viene recuperato il titolo, il `headingSuccess` viene eseguita la funzione di callback. Specificare l'intervallo in millisecondi tramite il `frequency` parametro nel `<a href="parameters/compassOptions.html">compassOptions</a>` oggetto.
+Il `compass.watchHeading` ottiene il titolo attuale del dispositivo a intervalli regolari. Ogni volta che viene recuperato il titolo, il `headingSuccess` viene eseguita la funzione di callback. Specificare l'intervallo in millisecondi tramite il `frequency` parametro nel `compassOptions` oggetto.
 
-L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologio ID può essere usato con `<a href="compass.clearWatch.html">compass.clearWatch</a>` a smettere di guardare la bussola.
+L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologio ID può essere usato con `compass.clearWatch` a smettere di guardare la bussola.
 
 ## Piattaforme supportate
 
@@ -49,8 +49,8 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(<a href="parameters/compassError.html">compassError</a>) {
-        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
+                navigator.compass.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
 
 ## iOS stranezze
 
-In iOS `compass.watchHeading` può anche ottenere la voce corrente del dispositivo quando cambia da un numero di gradi specificato. Ogni volta che i cambiamenti di direzione del numero specificato di gradi o più, il `headingSuccess` viene eseguita la funzione di callback. Specificare i gradi di variazione tramite il `filter` parametro nel `<a href="parameters/compassOptions.html">compassOptions</a>` oggetto. Cancellare l'orologio come al solito passando l'ID orologio restituito da `<a href="compass.clearWatch.html">compass.clearWatch</a>` . Questa funzionalità sostituisce il precedentemente separati, solo iOS `watchHeadingFilter` e `clearWatchFilter` funzioni, che sono stati rimossi nella versione 1.6.
+In iOS `compass.watchHeading` può anche ottenere la voce corrente del dispositivo quando cambia da un numero di gradi specificato. Ogni volta che i cambiamenti di direzione del numero specificato di gradi o più, il `headingSuccess` viene eseguita la funzione di callback. Specificare i gradi di variazione tramite il `filter` parametro nel `compassOptions` oggetto. Cancellare l'orologio come al solito passando l'ID orologio restituito da `compass.clearWatch` . Questa funzionalità sostituisce il precedentemente separati, solo iOS `watchHeadingFilter` e `clearWatchFilter` funzioni, che sono stati rimossi nella versione 1.6.
 
 Solo un `watchHeading` può essere in effetti una volta in iOS. Se un `watchHeading` utilizza un filtro, chiamata `getCurrentHeading` o `watchHeading` utilizza il valore esistente di filtro per specificare le modifiche intestazione. Guardando i cambiamenti di direzione con un filtro è più efficiente con intervalli di tempo.

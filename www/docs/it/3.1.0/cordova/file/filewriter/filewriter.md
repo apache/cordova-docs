@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>Writer
+# FileWriter
 
 Come oggetto che permette di creare e scrivere dati in un file.
 
@@ -32,7 +32,7 @@ Come oggetto che permette di creare e scrivere dati in un file.
 
 *   **posizione**: la posizione corrente del puntatore del file. *(lungo)*
 
-*   **errore**: oggetto contenente errori. *(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)*
+*   **errore**: oggetto contenente errori. *(FileError)*
 
 *   **onwritestart**: chiamato quando inizia la scrittura. *(Funzione)*
 
@@ -60,9 +60,9 @@ La seguente proprietà *non* è supportata:
 
 ## Dettagli
 
-Il `<a href="../fileobj/fileobj.html">File</a>Writer` oggetto offre un modo per scrivere i file con codificata UTF-8 per il file system del dispositivo. Applicazioni rispondono a `writestart` , `progress` , `write` , `writeend` , `error` , e `abort` eventi.
+Il `FileWriter` oggetto offre un modo per scrivere i file con codificata UTF-8 per il file system del dispositivo. Applicazioni rispondono a `writestart` , `progress` , `write` , `writeend` , `error` , e `abort` eventi.
 
-Ogni `<a href="../fileobj/fileobj.html">File</a>Writer` corrisponde a un singolo file, per cui dati possono essere scritto molte volte. Il `<a href="../fileobj/fileobj.html">File</a>Writer` mantiene il file `position` e `length` attributi di consentono l'applicazione di `seek` e `write` ovunque nel file. Per impostazione predefinita, il `<a href="../fileobj/fileobj.html">File</a>Writer` scrive all'inizio del file, sovrascrivendo i dati esistenti. Impostare l'opzionale `append` booleano per `true` nel `<a href="../fileobj/fileobj.html">File</a>Writer` di costruttore di scrivere alla fine del file.
+Ogni `FileWriter` corrisponde a un singolo file, per cui dati possono essere scritto molte volte. Il `FileWriter` mantiene il file `position` e `length` attributi di consentono l'applicazione di `seek` e `write` ovunque nel file. Per impostazione predefinita, il `FileWriter` scrive all'inizio del file, sovrascrivendo i dati esistenti. Impostare l'opzionale `append` booleano per `true` nel `FileWriter` di costruttore di scrivere alla fine del file.
 
 Dati di testo sono supportati da tutte le piattaforme elencate di seguito. Testo è codificato come UTF-8 prima di essere scritto al filesystem. Alcune piattaforme supportano anche dati binari, che possono essere passati come un ArrayBuffer o un Blob.
 
@@ -182,30 +182,30 @@ Supporto di solo testo:
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../fileobj/fileobj.html">File</a>Writer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileWriter Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
     
-        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
-            fileEntry.createWriter(got<a href="../fileobj/fileobj.html">File</a>Writer, fail);
+        function gotFileEntry(fileEntry) {
+            fileEntry.createWriter(gotFileWriter, fail);
         }
     
-        function got<a href="../fileobj/fileobj.html">File</a>Writer(writer) {
+        function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
                 writer.truncate(11);
@@ -228,7 +228,7 @@ Supporto di solo testo:
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Write <a href="../fileobj/fileobj.html">File</a></p>
+        <h1>Example</h1>
+        <p>Write File</p>
       </body>
     </html>

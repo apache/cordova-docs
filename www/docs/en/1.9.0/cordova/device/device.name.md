@@ -40,7 +40,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -50,31 +50,31 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
     //
     var name = device.name;
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="device.html">Device</a>Ready() {
+        function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = '<a href="device.html">Device</a> Name: '     + device.name     + '<br />' + 
-                                '<a href="device.html">Device</a> Cordova: '  + <a href="device.cordova.html">device.cordova</a> + '<br />' + 
-                                '<a href="device.html">Device</a> Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' + 
-                                '<a href="device.html">Device</a> UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' + 
-                                '<a href="device.html">Device</a> Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                                'Device Cordova: '  + device.cordova + '<br />' + 
+                                'Device Platform: ' + device.platform + '<br />' + 
+                                'Device UUID: '     + device.uuid     + '<br />' + 
+                                'Device Version: '  + device.version  + '<br />';
         }
 
         </script>
@@ -95,7 +95,7 @@ Android Quirks
 iPhone Quirks
 -------------
 
-- Gets the [device's custom name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UI<a href="device.html">Device</a>_Class/Reference/UI<a href="device.html">Device</a>.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) instead of the [device model name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UI<a href="device.html">Device</a>_Class/Reference/UI<a href="device.html">Device</a>.html#//apple_ref/doc/uid/TP40006902-CH3-SW1).
+- Gets the [device's custom name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) instead of the [device model name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1).
     - The custom name is set by the owner in iTunes.
     - e.g. "Joe's iPhone"
 

@@ -20,16 +20,16 @@ license: >
 
 # 線上
 
-當應用程式進入線上狀態，和該<a href="../device/device.html">設備</a>將成為<a href="../connection/connection.html">連接</a>到互聯網時觸發此<a href="events.html">事件</a>。
+當應用程式進入線上狀態，和該設備將成為連接到互聯網時觸發此事件。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
+    document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-`online`當先前<a href="../connection/connection.html">連接</a>的行動裝置接收到一個網路<a href="../connection/connection.html">連接</a>以允許應用程式訪問互聯網時激發的<a href="events.html">事件</a>。 它依賴于<a href="../connection/connection.html">連接</a> API 中，相同的資訊和火災時的值 `<a href="../connection/connection.type.html">connection.type</a>` 成為`NONE`.
+`online`當先前連接的行動裝置接收到一個網路連接以允許應用程式訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時的值 `connection.type` 成為`NONE`.
 
-應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
 ## 支援的平臺
 
@@ -42,7 +42,7 @@ license: >
 
 ## 快速的示例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+    document.addEventListener("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Online Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("online", onOnline, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,12 +85,12 @@ license: >
 
 ## iOS 的怪癖
 
-在初始啟動期間第一次 `online` <a href="events.html">事件</a> （如果適用），至少需一秒的火災之前的, `<a href="../connection/connection.type.html">connection.type</a>` 是`UNKNOWN`.
+在初始啟動期間第一次 `online` 事件 （如果適用），至少需一秒的火災之前的, `connection.type` 是`UNKNOWN`.
 
 ## Windows Phone 7 的怪癖
 
-當運行在模擬器中， `connection.status` 始終是未知的因此，此<a href="events.html">事件</a>將*不*火。
+當運行在模擬器中， `connection.status` 始終是未知的因此，此事件將*不*火。
 
 ## Windows Phone 8 怪癖
 
-模擬程式報告連線類型為 `Cellular` ，而不會更改，所以<a href="events.html">事件</a>將*不*火。
+模擬程式報告連線類型為 `Cellular` ，而不會更改，所以事件將*不*火。

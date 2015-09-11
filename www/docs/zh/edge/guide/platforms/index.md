@@ -20,7 +20,7 @@ license: >
 
 # 平臺指南
 
-在開發之前為任何下面列出的平臺，安裝科爾多瓦的<a href="../cli/index.html">命令列介面</a> (CLI)。（有關詳細資訊，見<a href="../cli/index.html">命令列介面</a>）。
+在開發之前為任何下面列出的平臺，安裝科爾多瓦的命令列介面 (CLI)。（有關詳細資訊，見命令列介面）。
 
 要開發科爾多瓦的應用程式，您必須為您的目標每個移動平臺安裝 Sdk。 這種安裝是工作的必要無論你做你在 SDK 中多數還是為您組建循環使用 CLI 的。
 
@@ -28,58 +28,58 @@ license: >
 
 ## 亞馬遜火 OS
 
-*   <a href="amazonfireos/index.html">亞馬遜火 OS 平臺指南</a>
-*   <a href="amazonfireos/config.html">亞馬遜火 OS 配置</a>
-*   <a href="amazonfireos/webview.html">亞馬遜火 OS WebViews</a>
-*   <a href="amazonfireos/plugin.html">亞馬遜火 OS 外掛程式</a>
+*   亞馬遜火 OS 平臺指南
+*   亞馬遜火 OS 配置
+*   亞馬遜火 OS WebViews
+*   亞馬遜火 OS 外掛程式
 
 ## Android 系統
 
-*   <a href="android/index.html">Android 平臺指南</a>
-*   <a href="android/tools.html">Android 殼工具指南</a>
-*   <a href="android/config.html">Android 系統組態</a>
-*   <a href="android/plugin.html">Android 外掛程式</a>
-*   <a href="android/webview.html">Android WebViews</a>
-*   <a href="android/upgrading.html">升級 Android</a>
+*   Android 平臺指南
+*   Android 殼工具指南
+*   Android 系統組態
+*   Android 外掛程式
+*   Android WebViews
+*   升級 Android
 
 ## 黑莓 10
 
-*   <a href="blackberry10/index.html">10 <a href="blackberry/index.html">黑莓平臺指南</a></a>
-*   <a href="blackberry10/tools.html">黑莓 10 手機殼工具指南</a>
-*   <a href="blackberry10/config.html">黑莓 10 配置</a>
-*   <a href="blackberry10/plugin.html">黑莓 10 外掛程式</a>
-*   <a href="blackberry10/upgrading.html">升級黑莓 10</a>
+*   10 黑莓平臺指南
+*   黑莓 10 手機殼工具指南
+*   黑莓 10 配置
+*   黑莓 10 外掛程式
+*   升級黑莓 10
 
 ## 火狐瀏覽器作業系統
 
-*   <a href="firefoxos/index.html">火狐瀏覽器作業系統平臺指南</a>
+*   火狐瀏覽器作業系統平臺指南
 
 ## iOS
 
-*   <a href="ios/index.html">iOS 平臺指南</a>
-*   <a href="ios/tools.html">iOS 殼工具指南</a>
-*   <a href="ios/config.html">iOS 配置</a>
-*   <a href="ios/plugin.html">iOS 外掛程式</a>
-*   <a href="ios/webview.html">WebViews iOS</a>
-*   <a href="ios/upgrading.html">升級 iOS</a>
+*   iOS 平臺指南
+*   iOS 殼工具指南
+*   iOS 配置
+*   iOS 外掛程式
+*   WebViews iOS
+*   升級 iOS
 
 ## Ubuntu
 
-*   <a href="ubuntu/index.html">Ubuntu 平臺指南</a>
+*   Ubuntu 平臺指南
 
 ## Windows Phone 8
 
-*   <a href="wp8/index.html">Windows Phone 8 平臺指南</a>
-*   <a href="wp8/plugin.html">Windows Phone 8 外掛程式</a>
-*   <a href="wp8/upgrade.html"><a href="wp8/upgrading.html">升級 Windows Phone</a> 8</a>
+*   Windows Phone 8 平臺指南
+*   Windows Phone 8 外掛程式
+*   升級 Windows Phone 8
 
 ## Windows
 
-*   <a href="win8/index.html">Windows 平臺指南</a>
-*   <a href="win8/plugin.html">Windows 外掛程式</a>
-*   <a href="win8/packaging.html">Windows 包裝</a>
-*   <a href="win8/upgrading.html">升級 Windows 8</a>
+*   Windows 平臺指南
+*   Windows 外掛程式
+*   Windows 包裝
+*   升級 Windows 8
 
 ## Tizen
 
-*   <a href="tizen/index.html">Tizen 平臺指南</a>
+*   Tizen 平臺指南

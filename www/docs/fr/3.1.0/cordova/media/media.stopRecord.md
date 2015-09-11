@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.stop.html">media.stop</a>Record
+# media.stopRecord
 
 Arrête d'enregistrer un fichier audio.
 
-    <a href="media.stop.html">media.stop</a>Record() ;
+    media.stopRecord() ;
     
 
 ## Description
 
-La `<a href="media.stop.html">media.stop</a>Record` méthode s'exécute de façon synchrone, arrêt de l'enregistrement d'un fichier audio.
+La `media.stopRecord` méthode s'exécute de façon synchrone, arrêt de l'enregistrement d'un fichier audio.
 
 ## Plates-formes prises en charge
 
@@ -43,7 +43,7 @@ La `<a href="media.stop.html">media.stop</a>Record` méthode s'exécute de faço
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new <a href="media.html">Media</a>(src,
+        var mediaRec = new Media(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -70,20 +70,20 @@ La `<a href="media.stop.html">media.stop</a>Record` méthode s'exécute de faço
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
         function recordAudio() {
             var src = "myrecording.mp3";
-            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
+            var mediaRec = new Media(src, onSuccess, onError);
     
             // Record audio
             mediaRec.startRecord();
@@ -92,7 +92,7 @@ La `<a href="media.stop.html">media.stop</a>Record` méthode s'exécute de faço
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
+                setAudioPosition(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -121,7 +121,7 @@ La `<a href="media.stop.html">media.stop</a>Record` méthode s'exécute de faço
     
         // Set audio position
         //
-        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+        function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
     

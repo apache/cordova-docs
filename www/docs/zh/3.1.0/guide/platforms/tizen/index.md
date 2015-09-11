@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# Tizen <a href="../index.html">平臺指南</a>
+# Tizen 平臺指南
 
-本指南介紹了如何設置您的 SDK 開發環境部署科爾多瓦運行 Tizen 作業系統的<a href="../../../cordova/device/device.html">設備</a>的應用程式。
+本指南介紹了如何設置您的 SDK 開發環境部署科爾多瓦運行 Tizen 作業系統的設備的應用程式。
 
 ## 要求和支援
 
 Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows XP SP3/7 （32 位）。
 
-開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
+開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
 
 ## 安裝 SDK
 
@@ -62,7 +62,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 1.  推出 Tizen Eclipse IDE。
 
-2.  選擇**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> → 導入 → Tizen Web 專案**：
+2.  選擇**檔 → 導入 → Tizen Web 專案**：
     
     ![][2]
 
@@ -90,7 +90,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
  [5]: img/guide/platforms/tizen/build_project.png
 
-如*hello.wgt*的小部件包<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>應在專案的根目錄中生成。
+如*hello.wgt*的小部件包檔應在專案的根目錄中生成。
 
 ## 部署到模擬程式
 
@@ -100,11 +100,11 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## 將部署到<a href="../../../cordova/device/device.html">設備</a>
+## 將部署到設備
 
-*   請確保目標<a href="../../../cordova/device/device.html">設備</a>正常啟動、 <a href="../../../cordova/connection/connection.html">連接</a>和<a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>。必須正確設置其**日期和時間**設置。
+*   請確保目標設備正常啟動、 連接和配置。必須正確設置其**日期和時間**設置。
 
-*   使用**<a href="../../../cordova/connection/connection.html">連接</a>資源管理器**視圖選擇的應用程式部署目標：**視窗<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>視圖 → <a href="../../../cordova/connection/connection.html">連接</a>資源管理器**.
+*   使用**連接資源管理器**視圖選擇的應用程式部署目標：**視窗顯示視圖 → 連接資源管理器**.
     
     ![][7]
 

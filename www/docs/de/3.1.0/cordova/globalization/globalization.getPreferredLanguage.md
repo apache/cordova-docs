@@ -29,7 +29,7 @@ Bekommen Sie Bezeichner für die aktuelle Sprache des Clients.
 
 Gibt die Sprache-ID-Zeichenfolge, die die `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `String` Wert.
 
-Wenn ein Fehler, der immer der Sprache vorliegt dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Wenn ein Fehler, der immer der Sprache vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -53,7 +53,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, dies sollte eine
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

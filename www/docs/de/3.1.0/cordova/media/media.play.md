@@ -65,14 +65,14 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -99,17 +99,17 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -128,7 +128,7 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -149,7 +149,7 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
     
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     
@@ -166,11 +166,11 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
 
 ## BlackBerry WebWorks Macken
 
-*   BlackBerry-<a href="../device/device.html">Gerät</a>e unterstützen eine begrenzte Anzahl von gleichzeitigen Audiokanäle. CDMA-<a href="../device/device.html">Gerät</a>e unterstützen nur einen einzigen audio-Kanal. Andere <a href="../device/device.html">Gerät</a>e unterstützen bis zu zwei simultane Kanäle. Der Versuch, weitere audio-<a href="../file/fileobj/fileobj.html">Datei</a>en als der unterstützten Betrag zu spielen führt zu vorherige Wiedergabe gestoppt wird.
+*   BlackBerry-Geräte unterstützen eine begrenzte Anzahl von gleichzeitigen Audiokanäle. CDMA-Geräte unterstützen nur einen einzigen audio-Kanal. Andere Geräte unterstützen bis zu zwei simultane Kanäle. Der Versuch, weitere audio-Dateien als der unterstützten Betrag zu spielen führt zu vorherige Wiedergabe gestoppt wird.
 
 ## iOS Macken
 
-*   **NumberOfLoops**: übergeben Sie diese Option, um die `play` -Methode können Sie die Anzahl der angeben soll die <a href="media.html">Medien</a>datei ausspielen, z.B.:
+*   **NumberOfLoops**: übergeben Sie diese Option, um die `play` -Methode können Sie die Anzahl der angeben soll die Mediendatei ausspielen, z.B.:
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
@@ -182,7 +182,7 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **Reihenfolge der <a href="../file/fileobj/fileobj.html">Datei</a>suche**: Wenn nur ein <a href="../file/fileobj/fileobj.html">Datei</a>name oder Pfad angegeben wird, sucht iOS in das `www` Verzeichnis für die <a href="../file/fileobj/fileobj.html">Datei</a>, dann in der Anwendung `documents/tmp` Verzeichnis:
+*   **Reihenfolge der Dateisuche**: Wenn nur ein Dateiname oder Pfad angegeben wird, sucht iOS in das `www` Verzeichnis für die Datei, dann in der Anwendung `documents/tmp` Verzeichnis:
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

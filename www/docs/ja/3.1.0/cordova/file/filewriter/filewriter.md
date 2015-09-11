@@ -20,19 +20,19 @@ license: >
 
 # FileWriter
 
-オブジェクトとして作成および<a href="../fileobj/fileobj.html">ファイル</a>へのデータの書き込みすることができます。
+オブジェクトとして作成およびファイルへのデータの書き込みすることができます。
 
 ## プロパティ
 
 *   **readyState**: 3 つの状態の 1 つで、どちらか `INIT` 、 `WRITING` 、または`DONE`.
 
-*   **<a href="../fileobj/fileobj.html">ファイル</a>名**： 書き込まれる<a href="../fileobj/fileobj.html">ファイル</a>の名前。*（，）*
+*   **ファイル名**： 書き込まれるファイルの名前。*（，）*
 
-*   **長さ**: 書き込まれる<a href="../fileobj/fileobj.html">ファイル</a>の長さ。*（ロング）*
+*   **長さ**: 書き込まれるファイルの長さ。*（ロング）*
 
-*   **<a href="../../geolocation/Position/position.html">位置</a>**: <a href="../fileobj/fileobj.html">ファイル</a> ポインターの現在<a href="../../geolocation/Position/position.html">位置</a>。*（ロング）*
+*   **位置**: ファイル ポインターの現在位置。*（ロング）*
 
-*   **エラー**: エラーを格納するオブジェクト。*(<a href="../fileerror/fileerror.html">FileError</a>)*
+*   **エラー**: エラーを格納するオブジェクト。*(FileError)*
 
 *   **onwritestart**： 書き込みを開始するときに呼び出されます。*(機能)*
 
@@ -46,25 +46,25 @@ license: >
 
 次のプロパティはサポートされて*いません*。
 
-*   **onprogress**: の進行状況をレポート <a href="../fileobj/fileobj.html">ファイル</a>の書き込み中と呼ばれる `progress.loaded` / `progress.total` 。*(機能)*
+*   **onprogress**: の進行状況をレポート ファイルの書き込み中と呼ばれる `progress.loaded` / `progress.total` 。*(機能)*
 
 ## メソッド
 
-*   **中止**: <a href="../fileobj/fileobj.html">ファイル</a>の書き込みを中止します。
+*   **中止**: ファイルの書き込みを中止します。
 
-*   **求める**: 指定されたバイトに<a href="../fileobj/fileobj.html">ファイル</a> ポインターを移動します。
+*   **求める**: 指定されたバイトにファイル ポインターを移動します。
 
-*   **切り捨てる**: 指定された長さに<a href="../fileobj/fileobj.html">ファイル</a>が短くなります。
+*   **切り捨てる**: 指定された長さにファイルが短くなります。
 
-*   **記述**: <a href="../fileobj/fileobj.html">ファイル</a>にデータを書き込みます。
+*   **記述**: ファイルにデータを書き込みます。
 
 ## 詳細
 
-`FileWriter`オブジェクトは UTF-8 エンコードされた<a href="../fileobj/fileobj.html">ファイル</a>を<a href="../../device/device.html">デバイス</a>の<a href="../fileobj/fileobj.html">ファイル</a> システムに書き込む方法を提供します。 アプリケーション応答を `writestart` 、 `progress` 、 `write` 、 `writeend` 、 `error` 、および `abort` <a href="../../events/events.html">イベント</a>。
+`FileWriter`オブジェクトは UTF-8 エンコードされたファイルをデバイスのファイル システムに書き込む方法を提供します。 アプリケーション応答を `writestart` 、 `progress` 、 `write` 、 `writeend` 、 `error` 、および `abort` イベント。
 
-各 `FileWriter` のデータにすることができます書かれる何回も 1 つの<a href="../fileobj/fileobj.html">ファイル</a>に対応しています。 `FileWriter`<a href="../fileobj/fileobj.html">ファイル</a>の維持する `position` と `length` をアプリに許可属性 `seek` と `write` <a href="../fileobj/fileobj.html">ファイル</a>の任意の場所。 既定では、 `FileWriter` 既存データの上書き、<a href="../fileobj/fileobj.html">ファイル</a>の先頭に書き込まれます。 オプションの設定 `append` にブール `true` で、 `FileWriter` のコンス トラクターは<a href="../fileobj/fileobj.html">ファイル</a>の末尾に書き込む。
+各 `FileWriter` のデータにすることができます書かれる何回も 1 つのファイルに対応しています。 `FileWriter`ファイルの維持する `position` と `length` をアプリに許可属性 `seek` と `write` ファイルの任意の場所。 既定では、 `FileWriter` 既存データの上書き、ファイルの先頭に書き込まれます。 オプションの設定 `append` にブール `true` で、 `FileWriter` のコンス トラクターはファイルの末尾に書き込む。
 
-テキスト データは、以下のすべてのプラットフォームでサポートされています。 テキストは、<a href="../fileobj/fileobj.html">ファイル</a>システムに書き込まれる前に utf-8 としてエンコードされます。 いくつかのプラットフォームは、バイナリ データを渡すことができるの ArrayBuffer または Blob としてもサポートします。
+テキスト データは、以下のすべてのプラットフォームでサポートされています。 テキストは、ファイルシステムに書き込まれる前に utf-8 としてエンコードされます。 いくつかのプラットフォームは、バイナリ データを渡すことができるの ArrayBuffer または Blob としてもサポートします。
 
 ## サポートされているプラットフォーム
 
@@ -182,26 +182,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileWriter Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
     
-        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
+        function gotFileEntry(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
     
@@ -228,7 +228,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Write File</p>
       </body>
     </html>

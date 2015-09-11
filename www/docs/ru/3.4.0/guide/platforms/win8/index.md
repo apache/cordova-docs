@@ -22,8 +22,8 @@ license: >
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для Windows 8. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   <a href="upgrading.html">Обновление для Windows 8</a>
-*   <a href="tools.html">Средства командной строки Windows 8</a>
+*   Обновление для Windows 8
+*   Средства командной строки Windows 8
 
 Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 
@@ -81,13 +81,13 @@ license: >
             <script src="/js/default.js"></script>
         
 
-*   Добавить `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` работает обработчик для демонстрации Кордова:
+*   Добавить `deviceready` работает обработчик для демонстрации Кордова:
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+                document.addEventListener("deviceready", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

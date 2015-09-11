@@ -41,8 +41,8 @@ as a parameter. That object contains the following properties:
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PATTERN\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
 The `options` parameter is optional, and default values are:
 
@@ -58,7 +58,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 When the browser is set to the `en\_US` locale, this should display a
@@ -88,13 +88,13 @@ Results:
     decimal: .
     grouping: ,
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

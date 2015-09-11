@@ -20,35 +20,35 @@ license: >
 
 # 연락처
 
-> `contacts`개체는 <a href="../device/device.html">장치</a> 연락처 <a href="../storage/database/database.html">데이터베이스</a>에 대 한 액세스를 제공 합니다.
+> `contacts`개체는 장치 연락처 데이터베이스에 대 한 액세스를 제공 합니다.
 
-**중요 한 개인 정보 보호 참고:** 연락처 데이터의 수집 및 사용 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 연락처 데이터를 사용 하는 방법 및 다른 당사자와 함께 공유 하는 여부를 토론 해야 한다. 연락처 정보 누구와 통신 하는 사람이 사람들 보여 때문에 민감한으로 간주 됩니다. 따라서, 응용 프로그램의 개인 정보 보호 정책 뿐만 아니라 강하게 좋습니다 그냥--시간 통지 이전에 귀하의 응용 프로그램에 액세스 하거나 사용 하 여 연락처 데이터 (<a href="../device/device.html">장치</a> 운영 체제는 이미 그래서를 하지 않습니다). 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 그냥--시간 공지 및 연락처 데이터에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 연락처 데이터는 사용자의 혼동을 방지 하는 데 도움이 됩니다를 사용 하 여 및 연락처 데이터의 인식된 오용 명확 하 고 이해 하기 쉬운 사용자 경험. 자세한 내용은 <a href="../../guide/appdev/privacy/index.html">개인 정보 보호 <a href="../../index.html">가이드</a></a>를 참조 하십시오.
+**중요 한 개인 정보 보호 참고:** 연락처 데이터의 수집 및 사용 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 연락처 데이터를 사용 하는 방법 및 다른 당사자와 함께 공유 하는 여부를 토론 해야 한다. 연락처 정보 누구와 통신 하는 사람이 사람들 보여 때문에 민감한으로 간주 됩니다. 따라서, 응용 프로그램의 개인 정보 보호 정책 뿐만 아니라 강하게 좋습니다 그냥--시간 통지 이전에 귀하의 응용 프로그램에 액세스 하거나 사용 하 여 연락처 데이터 (장치 운영 체제는 이미 그래서를 하지 않습니다). 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 그냥--시간 공지 및 연락처 데이터에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 연락처 데이터는 사용자의 혼동을 방지 하는 데 도움이 됩니다를 사용 하 여 및 연락처 데이터의 인식된 오용 명확 하 고 이해 하기 쉬운 사용자 경험. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
 
 ## 메서드
 
-*   <a href="contacts.create.html">contacts.create</a>
-*   <a href="contacts.find.html">contacts.find</a>
+*   contacts.create
+*   contacts.find
 
 ## 인수
 
-*   <a href="parameters/contactFields.html">contactFields</a>
-*   <a href="parameters/contactSuccess.html">contactSuccess</a>
-*   <a href="parameters/contactError.html">contactError</a>
-*   <a href="parameters/contactFindOptions.html">contactFindOptions</a>
+*   contactFields
+*   contactSuccess
+*   contactError
+*   contactFindOptions
 
 ## 개체
 
 *   연락처
-*   <a href="ContactName/contactname.html">담당자 이름</a>
-*   <a href="ContactField/contactfield.html">ContactField</a>
-*   <a href="ContactAddress/contactaddress.html">ContactAddress</a>
-*   <a href="ContactOrganization/contactorganization.html">ContactOrganization</a>
-*   <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>
-*   <a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>
+*   담당자 이름
+*   ContactField
+*   ContactAddress
+*   ContactOrganization
+*   ContactFindOptions
+*   ContactError
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.contacts
         $ cordova plugin ls
@@ -104,4 +104,4 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.

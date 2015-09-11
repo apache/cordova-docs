@@ -29,9 +29,9 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lauter Taste drückt.
 
 Wenn Sie die Standard-Lautstärke erhöhen Verhalten überschreiben müssen registrieren Sie einen Ereignis-Listener für das `volumeupbutton` Ereignis.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
 
-## <a href="../../config_ref/images.html">Unterstützte Plattformen</a>
+## Unterstützte Plattformen
 
 *   BlackBerry 10
 *   Android
@@ -51,7 +51,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Up Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Volume Up Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,7 +59,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

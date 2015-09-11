@@ -20,13 +20,13 @@ license: >
 
 # Handbuch für die Plattform von Windows Phone-8
 
-Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows Phone 8 Geräte bereitstellen. Wenn Sie 7,5 und 8 Geräte ansprechen möchten, entwickeln Sie für Windows Phone 7 statt wie in der <a href="../wp7/index.html">Windows Phone 7 Plattform Guide</a> detailliert dargestellt. Version 7 verfügt nicht über die erweiterten Funktionen in Internet Explorer 10 enthalten, aber den gleichen Satz von APIs implementiert. Windows Phone 8 apps tun *nicht* laufen auf Windows Phone 7 Geräte.
+Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows Phone 8 Geräte bereitstellen. Wenn Sie 7,5 und 8 Geräte ansprechen möchten, entwickeln Sie für Windows Phone 7 statt wie in der Windows Phone 7 Plattform Guide detailliert dargestellt. Version 7 verfügt nicht über die erweiterten Funktionen in Internet Explorer 10 enthalten, aber den gleichen Satz von APIs implementiert. Windows Phone 8 apps tun *nicht* laufen auf Windows Phone 7 Geräte.
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen, die für beide Versionen gilt:
 
-*   <a href="upgrading.html">Aktualisieren von Windows Phone</a>
-*   <a href="plugin.html">Windows Phone Plugins</a>
-*   <a href="tools.html">Windows Phone Befehlszeilentools</a>
+*   Aktualisieren von Windows Phone
+*   Windows Phone Plugins
+*   Windows Phone Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 

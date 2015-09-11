@@ -24,7 +24,7 @@ license: >
 
  [1]: http://www.w3.org/TR/widgets/
 
-為專案創建與科爾多瓦 CLI （描述在<a href="../guide/cli/index.html">命令列介面</a>），可以在頂層目錄中找到此檔：
+為專案創建與科爾多瓦 CLI （描述在命令列介面），可以在頂層目錄中找到此檔：
 
         app/config.xml
     
@@ -40,20 +40,20 @@ license: >
 
 本節詳細介紹全球和跨平臺的配置選項。請參見以下各節為平臺特定的選項：
 
-*   <a href="../guide/platforms/ios/config.html">iOS 配置</a>
-*   <a href="../guide/platforms/android/config.html">Android 系統組態</a>
-*   <a href="../guide/platforms/blackberry10/config.html">黑莓 10 配置</a>
+*   iOS 配置
+*   Android 系統組態
+*   黑莓 10 配置
 
-除了下面詳述的各種配置選項，您還可以配置每個目標平臺的圖像應用程式的核心的集。有關更多資訊，請參見<a href="images.html">圖示和啟動畫面</a>。
+除了下面詳述的各種配置選項，您還可以配置每個目標平臺的圖像應用程式的核心的集。有關更多資訊，請參見圖示和啟動畫面。
 
 ## 核心配置元素
 
-此示例顯示了預設的 `config.xml` 生成的 CLI 的 `create` 命令，所述的<a href="../guide/cli/index.html">命令列介面</a>：
+此示例顯示了預設的 `config.xml` 生成的 CLI 的 `create` 命令，所述的命令列介面：
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -63,7 +63,7 @@ license: >
         </widget>
     
 
-以下的配置元素出現在頂級 `config.xml` 檔，並在所有受支援的科爾多瓦<a href="../guide/support/index.html">平臺支援</a>：
+以下的配置元素出現在頂級 `config.xml` 檔，並在所有受支援的科爾多瓦平臺支援：
 
 *   `<widget>`元素的 `id` 屬性提供了應用程式的反向域識別碼和 `version` 主要/次要/修補程式符號表示其完整版本號碼。
 
@@ -73,7 +73,7 @@ license: >
 
 *   可選的 `<content>` 元素在頂級 web 資產目錄中定義應用程式的起始頁。 預設值是 `index.html` ，其中通常出現在一個專案中的頂級 `www` 目錄。
 
-*   `<access>`元素定義應用程式能夠與進行通信的外部域的集。 如上所示的預設值允許它訪問任何伺服器。 請參閱域<a href="../guide/appdev/whitelist/index.html">白名單指南</a>的詳細資訊。
+*   `<access>`元素定義應用程式能夠與進行通信的外部域的集。 如上所示的預設值允許它訪問任何伺服器。 請參閱域白名單指南的詳細資訊。
 
 *   `<preference>`標記設置各種選項作為對 `name` / `value` 屬性。 每個首選項的 `name` 是不區分大小寫。 很多優惠是獨有的特定平臺上，如列于此頁的頂部。 以下各節詳細介紹了適用于多個平臺的首選項。
 
@@ -134,4 +134,4 @@ license: >
         </feature>
     
 
-有關如何指定每個功能，請參閱 <a href="../index.html">API 參考</a>的詳細資訊。在外掛程式上看到<a href="../guide/hybrid/plugins/index.html">外掛程式開發指南</a>的詳細資訊。
+有關如何指定每個功能，請參閱 API 參考的詳細資訊。在外掛程式上看到外掛程式開發指南的詳細資訊。

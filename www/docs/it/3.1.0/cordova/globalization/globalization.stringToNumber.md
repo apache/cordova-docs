@@ -29,7 +29,7 @@ Analizza un numero formattato come una stringa secondo le preferenze dell'utente
 
 Restituisce il numero per il `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `Number` valore.
 
-Se c'è un errore di parsing della stringa di numeri, poi il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+Se c'è un errore di parsing della stringa di numeri, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PARSING\_ERROR`.
 
 Il `options` parametro è facoltativo e verrà impostato i seguenti valori:
 
@@ -62,7 +62,7 @@ Quando il browser è impostato per la `en\_US` locale, questo dovrebbe visualizz
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToNumber Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

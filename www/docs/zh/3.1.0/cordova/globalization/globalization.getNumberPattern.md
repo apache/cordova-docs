@@ -47,7 +47,7 @@ license: >
 
  [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
 
 `options`參數是可選的並且預設值：
 
@@ -65,7 +65,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，此時應<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出對話方塊與類似的結果，請按照操作的文本：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示一個彈出對話方塊與類似的結果，請按照操作的文本：
 
     navigator.globalization.getNumberPattern(
         function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
@@ -91,7 +91,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

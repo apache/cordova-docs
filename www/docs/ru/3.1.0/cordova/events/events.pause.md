@@ -22,14 +22,14 @@ license: >
 
 Событие возникает, когда приложение находится в фоновом режиме.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
+    document.addEventListener("pause", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
 `pause`Событие возникает, когда родной платформе ставит приложения в фоновом режиме, как правило, когда пользователь переключается на другое приложение.
 
-Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -41,7 +41,7 @@ license: >
 
 ## Быстрый пример
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
+    document.addEventListener("pause", onPause, false);
     
     function onPause() {
         // Handle the pause event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Pause Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
+            document.addEventListener("pause", onPause, false);
         }
     
         // Handle the pause event

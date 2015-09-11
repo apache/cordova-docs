@@ -28,7 +28,7 @@ El `FileReader` permite el acceso básico a un archivo.
 
 *   **resultado**: el contenido del archivo que ha leído. *(DOMString)*
 
-*   **error**: un objeto que contiene errores. *(<a href="../fileerror/fileerror.html">FileError</a>)*
+*   **error**: un objeto que contiene errores. *(FileError)*
 
 *   **onloadstart**: cuando comienza la lectura. *(Función)*
 
@@ -142,26 +142,26 @@ El `FileReader` objeto ofrece una manera de leer los archivos de sistema de arch
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>FileReader Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
+            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
         }
     
-        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
+        function gotFileEntry(fileEntry) {
             fileEntry.file(gotFile, fail);
         }
     
@@ -195,7 +195,7 @@ El `FileReader` objeto ofrece una manera de leer los archivos de sistema de arch
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Read File</p>
       </body>
     </html>

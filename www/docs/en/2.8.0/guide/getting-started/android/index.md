@@ -27,7 +27,7 @@ This guide describes how to set up your development environment for Cordova and 
 ---------------
 - Identical to [Android Minimum Requirements](http://developer.android.com/sdk/index.html)
 
-1.1 Supported Android <a href="../../../cordova/device/device.html">Device</a>s
+1.1 Supported Android Devices
 -------------------------------
 - Android 2.1 (Deprecated May 2013)
 - Android 2.2
@@ -123,7 +123,7 @@ If your project has a red X indicating there is a problem follow these additiona
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the [Android Developer Site](http://developer.android.com/tools/device.html)

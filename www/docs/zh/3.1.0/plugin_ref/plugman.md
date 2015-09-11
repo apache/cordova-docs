@@ -20,11 +20,11 @@ license: >
 
 # 使用 Plugman 來管理外掛程式
 
-從 3.0 版本開始，科爾多瓦實現所有<a href="../cordova/device/device.html">設備</a> Api 作為外掛程式，然後留在預設情況下禁用。 此外，它還支援兩種不同的方法來添加和刪除外掛程式。 第一是通過使用 `cordova` 所述的<a href="../guide/cli/index.html">命令列介面</a> CLI。 第二是通過使用一個較低級別[plugman][1]<a href="../guide/cli/index.html">命令列介面</a>。 本指南著重于第二種方法，這可能是誰想要升級其版本的科爾多瓦，但誰都沒尚未通過工作流中，科爾多瓦 CLI 的開發人員非常有用。
+從 3.0 版本開始，科爾多瓦實現所有設備 Api 作為外掛程式，然後留在預設情況下禁用。 此外，它還支援兩種不同的方法來添加和刪除外掛程式。 第一是通過使用 `cordova` 所述的命令列介面 CLI。 第二是通過使用一個較低級別[plugman][1]命令列介面。 本指南著重于第二種方法，這可能是誰想要升級其版本的科爾多瓦，但誰都沒尚未通過工作流中，科爾多瓦 CLI 的開發人員非常有用。
 
  [1]: https://github.com/apache/cordova-plugman/
 
-在 plugman 上的詳細資訊，請參閱[其庫中的讀我<a href="../cordova/file/fileobj/fileobj.html">檔</a>案][2].
+在 plugman 上的詳細資訊，請參閱[其庫中的讀我檔案][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 
@@ -49,7 +49,7 @@ license: >
 
 ## 安裝核心外掛程式
 
-下面的示例<a href="../cordova/inappbrowser/inappbrowser.html">顯示</a>如何添加外掛程式，如需要，這樣您在您的專案中使用任何科爾多瓦 Api 仍然工作後你升級到 3.0 版本。對於每個命令，你需要選擇目標平臺，並引用該平臺的專案目錄。
+下面的示例顯示如何添加外掛程式，如需要，這樣您在您的專案中使用任何科爾多瓦 Api 仍然工作後你升級到 3.0 版本。對於每個命令，你需要選擇目標平臺，並引用該平臺的專案目錄。
 
 *   cordova-plugin-battery-status plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.battery-status
 

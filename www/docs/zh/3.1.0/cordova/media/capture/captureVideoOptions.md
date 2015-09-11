@@ -20,11 +20,11 @@ license: >
 
 # CaptureVideoOptions
 
-> 封裝視頻<a href="capture.html">捕獲</a>的<a href="ConfigurationData.html">配置</a>選項。
+> 封裝視頻捕獲的配置選項。
 
 ## 屬性
 
-*   **限制**： 該<a href="../../device/device.html">設備</a>的使用者可以在單個<a href="capture.html">捕獲</a>操作中<a href="capture.html">捕獲</a>的視訊短片的最大數目。值必須是大於或等於 1 （預設為 1）。
+*   **限制**： 該設備的使用者可以在單個捕獲操作中捕獲的視訊短片的最大數目。值必須是大於或等於 1 （預設為 1）。
 
 *   **持續時間**： 視訊短片，以秒為單位的最長期限。
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
     
-    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
     
 
 ## 黑莓 WebWorks 怪癖

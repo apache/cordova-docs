@@ -18,13 +18,13 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>Address
+# ContactAddress
 
-Contains address properties for a `<a href="../Contact/contact.html">Contact</a>` object.
+Contains address properties for a `Contact` object.
 
 ## Properties
 
-- __pref__: Set to `true` if this `<a href="../Contact/contact.html">Contact</a>Address` contains the user's preferred value. _(boolean)_
+- __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
 
 - __type__: A string indicating what type of field this is, _home_ for example. _(DOMString)_
 
@@ -42,9 +42,9 @@ Contains address properties for a `<a href="../Contact/contact.html">Contact</a>
 
 ## Details
 
-The `<a href="../Contact/contact.html">Contact</a>Address` object stores the properties of a single address
-of a contact.  A `<a href="../Contact/contact.html">Contact</a>` object may include more than one address in
-a `<a href="../Contact/contact.html">Contact</a>Address[]` array.
+The `ContactAddress` object stores the properties of a single address
+of a contact.  A `Contact` object may include more than one address in
+a `ContactAddress[]` array.
 
 ## Supported Platforms
 
@@ -54,7 +54,7 @@ a `<a href="../Contact/contact.html">Contact</a>Address[]` array.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
     // display the address information for all contacts
 
@@ -73,38 +73,38 @@ a `<a href="../Contact/contact.html">Contact</a>Address[]` array.
         }
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
     // find all contacts
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
     options.filter = "";
     var filter = ["displayName", "addresses"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-## Full <a href="../../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // find all contacts
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+            var options = new ContactFindOptions();
             options.filter = "";
             var filter = ["displayName", "addresses"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
 
         // onSuccess: Get a snapshot of the current contacts
@@ -127,15 +127,15 @@ a `<a href="../Contact/contact.html">Contact</a>Address[]` array.
 
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

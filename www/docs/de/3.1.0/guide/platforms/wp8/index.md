@@ -20,13 +20,13 @@ license: >
 
 # Handbuch für die Plattform von Windows Phone-8
 
-Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows Phone 8 <a href="../../../cordova/device/device.html">Gerät</a>e bereitstellen. Wenn Sie 7,5 und 8 <a href="../../../cordova/device/device.html">Gerät</a>e ansprechen möchten, entwickeln Sie für Windows Phone 7 stattdessen, wie detailliert die Windows Phone 7 Plattform-Guide. Version 7 verfügt nicht über die erweiterten Funktionen im IE10 enthalten, aber den gleichen Satz von APIs implementiert. Windows Phone 8 apps tun *nicht* laufen auf Windows Phone 7 <a href="../../../cordova/device/device.html">Gerät</a>e.
+Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows Phone 8 Geräte bereitstellen. Wenn Sie 7,5 und 8 Geräte ansprechen möchten, entwickeln Sie für Windows Phone 7 stattdessen, wie detailliert die Windows Phone 7 Plattform-Guide. Version 7 verfügt nicht über die erweiterten Funktionen im IE10 enthalten, aber den gleichen Satz von APIs implementiert. Windows Phone 8 apps tun *nicht* laufen auf Windows Phone 7 Geräte.
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen, die für beide Versionen gilt:
 
-*   <a href="upgrading.html">Aktualisieren von Windows Phone</a>
-*   <a href="plugin.html">Windows Phone Plugins</a>
-*   <a href="tools.html">Windows Phone Befehlszeilentools</a>
+*   Aktualisieren von Windows Phone
+*   Windows Phone Plugins
+*   Windows Phone Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -36,7 +36,7 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
     
     *   Windows 8 oder Windows 8 Pro 
         *   Die 64-Bit Version (X 64) von Windows ist für das SDK erforderlich.
-        *   Die Pro-Version wird empfohlen, damit Sie einen <a href="../../../cordova/device/device.html">Gerät</a>eemulator ausführen können.
+        *   Die Pro-Version wird empfohlen, damit Sie einen Geräteemulator ausführen können.
 
 *   Hardware:
     
@@ -56,7 +56,7 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
     
     *   Visual Studio 2012 Professional, Premium oder Ultimate. Beachten Sie, dass Visual Studio Express für Windows Phone (enthalten im SDK) ist nicht empfehlenswert da Sie nicht die Vorlage (siehe unten) mit VS Express erstellen können, da es nicht die **Vorlage exportieren** -Funktionalität, die nur in VS Pro oder höher ist.
 
-*   Anmelden und bezahlen für ein [Windows Phone Dev Center][3] -Konto, wenn Sie Ihre app auf einem echten <a href="../../../cordova/device/device.html">Gerät</a> anbringen oder an Marktplatz übermitteln möchten.
+*   Anmelden und bezahlen für ein [Windows Phone Dev Center][3] -Konto, wenn Sie Ihre app auf einem echten Gerät anbringen oder an Marktplatz übermitteln möchten.
 
  [1]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
  [2]: http://ark.intel.com/Products/VirtualizationTechnology
@@ -72,22 +72,22 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
 
 *   Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][6]. Arbeiten Sie der `lib\windows-phone-8\wp8` Unterverzeichnis `lib\windows-phone-8\wp7` enthält die Windwos Phone 7-Version von Cordova.
 
-*   Kopie der `CordovaWP8_x_x_x.zip` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in das `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` Verzeichnis.
+*   Kopie der `CordovaWP8_x_x_x.zip` -Datei in das `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` Verzeichnis.
 
  [5]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [6]: http://phonegap.com/download
 
 ## 2.1. Aufbau der Vorlage
 
-**Hinweis:** dieser Schritt kann nicht verlangt werden. Wenn das Lib\windows-Telefon-Verzeichnis bereits eine CordovaWP8\_x\_x_x.zip-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> enthält, können Sie diesen Schritt überspringen.
+**Hinweis:** dieser Schritt kann nicht verlangt werden. Wenn das Lib\windows-Telefon-Verzeichnis bereits eine CordovaWP8\_x\_x_x.zip-Datei enthält, können Sie diesen Schritt überspringen.
 
 Um den Entwicklungsprozess zu vereinfachen, kommt Cordova mit einem Skript zum Erstellen der Visual Studio-Vorlagen. Dies ermöglicht schnelle Erstellung von Cordova-Anwendungen in Visual Studio. Diese Vorlage kann bei Bedarf geändert werden und die unten aufgeführten Schritte zeigen wie Sie vorgehen, wenn Sie die Vorlage generieren möchten.
 
 ### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen.
 
-*   Der Stamm der Repo enthält eine <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> createTemplates.bat. Doppelklick auf diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> wird 2 Zip-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en generieren. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>-> neues Projekt im Menü erstellen können.
+*   Der Stamm der Repo enthält eine Datei createTemplates.bat. Doppelklick auf diese Datei wird 2 Zip-Dateien generieren. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
 
-*   Wenn Sie die Batch-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
+*   Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
 
 Führen Sie das Skript:
 
@@ -128,15 +128,15 @@ Führen Sie das Skript:
 
  [9]: img/guide/platforms/wp8/BuildEmulator.png
 
-## 6. Erstellen Sie das Projekt für das <a href="../../../cordova/device/device.html">Gerät</a>
+## 6. Erstellen Sie das Projekt für das Gerät
 
-Um die Anwendung auf einem <a href="../../../cordova/device/device.html">Gerät</a> zu testen, muss das <a href="../../../cordova/device/device.html">Gerät</a> registriert werden. Klicken Sie [hier][10] , um auf bereitstellen und Testen auf Ihrem Windows Phone 8 die Dokumentation lesen.
+Um die Anwendung auf einem Gerät zu testen, muss das Gerät registriert werden. Klicken Sie [hier][10] , um auf bereitstellen und Testen auf Ihrem Windows Phone 8 die Dokumentation lesen.
 
  [10]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
 *   Stellen Sie sicher, Ihr Telefon angeschlossen ist, und der Bildschirm ist entsperrt.
 
-*   Wählen Sie in Visual Studio '<a href="../../../cordova/device/device.html">Gerät</a>' aus dem oberen Dropdown-Menü.
+*   Wählen Sie in Visual Studio 'Gerät' aus dem oberen Dropdown-Menü.
 
 *   Drücken Sie die Taste grün **spielen** neben dem wichtigsten Dropdown-Menü Debuggen zu beginnen, oder geben Sie **F5**.
 

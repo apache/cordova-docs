@@ -27,21 +27,21 @@ license: >
 ## Oggetti
 
 *   Cattura
-*   <a href="captureAudioOptions.html">CaptureAudioOptions</a>
-*   <a href="captureImageOptions.html">CaptureImageOptions</a>
-*   <a href="captureVideoOptions.html">CaptureVideoOptions</a>
+*   CaptureAudioOptions
+*   CaptureImageOptions
+*   CaptureVideoOptions
 *   CaptureCallback
-*   <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
-*   <a href="ConfigurationData.html">ConfigurationData</a>
-*   <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
-*   <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
+*   CaptureErrorCB
+*   ConfigurationData
+*   MediaFile
+*   MediaFileData
 
 ## Metodi
 
-*   <a href="captureAudio.html">capture.captureAudio</a>
-*   <a href="captureImage.html">capture.captureImage</a>
-*   <a href="captureVideo.html">capture.captureVideo</a>
-*   <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData
+*   capture.captureAudio
+*   capture.captureImage
+*   capture.captureVideo
+*   MediaFile.getFormatData
 
 ## Ambito di applicazione
 
@@ -53,19 +53,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Proprietà
 
-*   **supportedAudioModes**: la registrazione di formati supportati dal dispositivo audio. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedAudioModes**: la registrazione di formati supportati dal dispositivo audio. (ConfigurationData[])
 
-*   **supportedImageModes**: la registrazione formati immagine e i formati supportati dal dispositivo. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedImageModes**: la registrazione formati immagine e i formati supportati dal dispositivo. (ConfigurationData[])
 
-*   **supportedVideoModes**: I formati supportati dal dispositivo e risoluzioni video registrazione. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+*   **supportedVideoModes**: I formati supportati dal dispositivo e risoluzioni video registrazione. (ConfigurationData[])
 
 ## Metodi
 
-*   `<a href="captureAudio.html">capture.captureAudio</a>`: Lanciare l'applicazione di registrazione audio del dispositivo per registrare clip audio.
+*   `capture.captureAudio`: Lanciare l'applicazione di registrazione audio del dispositivo per registrare clip audio.
 
-*   `<a href="captureImage.html">capture.captureImage</a>`: Lanciare l'applicazione della fotocamera del dispositivo per scattare foto.
+*   `capture.captureImage`: Lanciare l'applicazione della fotocamera del dispositivo per scattare foto.
 
-*   `<a href="captureVideo.html">capture.captureVideo</a>`: Lanciare l'applicazione di registratore video del dispositivo per registrare video.
+*   `capture.captureVideo`: Lanciare l'applicazione di registratore video del dispositivo per registrare video.
 
 ## Piattaforme supportate
 
@@ -94,7 +94,7 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Cattura" >< param nome = "blackberry-pacchetto" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.system" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.io.file" richiesto = "true" versione = "1.0.0.0" / >
+        (in www/plugins.Xml) < nome funzione = "Cattura" >< param nome = "blackberry-pacchetto" value="org.apache.cordova.capture.MediaCapture" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.system" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.io.file" richiesto = "true" versione = "1.0.0.0" / >
         
 
 *   iOS (in`config.xml`)

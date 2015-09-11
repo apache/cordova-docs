@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Il <a href="../cordova/file/fileobj/fileobj.html">File</a> config. Xml
+# Il File config. Xml
 
 Molti aspetti del comportamento di un'app possono essere controllati con un file di configurazione globale, `config.xml` , che è inserito nella directory web di primo livello patrimoniale insieme a pagina iniziale dell'app. Questo file XML indipendente dalla piattaforma è formattato basato sulla specifica [Confezionato Web Apps (widget)][1] di W3C ed esteso per specificare le caratteristiche di nucleo API di Cordova, plugins e impostazioni specifiche della piattaforma.
 
@@ -41,7 +41,7 @@ In questo esempio viene illustrato il valore predefinito `config.xml` generato d
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>Writer
+FileWriter
 ==========
 
-<a href="../fileobj/fileobj.html">File</a>Writer はファイルへの書き込みを行うオブジェクトです。
+FileWriter はファイルへの書き込みを行うオブジェクトです。
 
 プロパティー
 ----------
@@ -30,7 +30,7 @@ license: >
 - __fileName:__ 書き込みの対象となるファイル名を表します _(DOMString)_
 - __length:__ 書き込みの対象となるファイル名を表します _(long)_
 - __position:__ ファイルポインタの現在の位置を表します _(long)_
-- __error:__ エラー情報を表します _(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)_
+- __error:__ エラー情報を表します _(FileError)_
 - __onwritestart:__ 書き込み開始時に呼ばれる関数を表します _(Function)_
 - __onprogress:__ ファイル書き込み中に呼ばれ、進捗状況を報告する関数を表します (progess.loaded/progress.total) _(Function)_ - 現在サポートされていません
 - __onwrite:__ リクエストが成功したときに呼ばれる関数を表します _(Function)_
@@ -49,9 +49,9 @@ license: >
 詳細
 -------
 
-`<a href="../fileobj/fileobj.html">File</a>Writer` オブジェクトはデバイスのファイルシステムに書きこむ際に使用します。また、 writestart, progress, write, writeend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
+`FileWriter` オブジェクトはデバイスのファイルシステムに書きこむ際に使用します。また、 writestart, progress, write, writeend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
 
-<a href="../fileobj/fileobj.html">File</a>Writer は一つのファイルに対して使用されます。複数回の書き込みを行うこともできます。 <a href="../fileobj/fileobj.html">File</a>Writer はファイルポインタの位置と length 属性を指定することができるので、ファイルのどの位置からでも書き込みを行うことができます。デフォルトではファイルの開始位置にポインタがセットされ、既存のデータを上書きしながら書き込みが行われます。書き込みをファイルの最終から始める場合は、 <a href="../fileobj/fileobj.html">File</a>Writer のコンストラクタに true をオプションとして指定してください。
+FileWriter は一つのファイルに対して使用されます。複数回の書き込みを行うこともできます。 FileWriter はファイルポインタの位置と length 属性を指定することができるので、ファイルのどの位置からでも書き込みを行うことができます。デフォルトではファイルの開始位置にポインタがセットされ、既存のデータを上書きしながら書き込みが行われます。書き込みをファイルの最終から始める場合は、 FileWriter のコンストラクタに true をオプションとして指定してください。
 
 サポートされているプラットフォーム
 -------------------
@@ -138,35 +138,35 @@ Abort の例
 
     entry.createWriter(win, fail);
 
-詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../fileobj/fileobj.html">File</a>Writer の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
+        <title>FileWriter の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
+        function onDeviceReady() {
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
 
         function gotFS(fileSystem) {
-            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
 
-        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
-            fileEntry.createWriter(got<a href="../fileobj/fileobj.html">File</a>Writer, fail);
+        function gotFileEntry(fileEntry) {
+            fileEntry.createWriter(gotFileWriter, fail);
         }
 
-        function got<a href="../fileobj/fileobj.html">File</a>Writer(writer) {
+        function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
                 console.log("ファイルの内容が 'some sample text' となりました");
                 writer.truncate(11); 
@@ -189,7 +189,7 @@ Abort の例
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
+        <h1>使用例</h1>
         <p>ファイルに書き込みます。</p>
       </body>
     </html>

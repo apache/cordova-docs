@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="upgrading.html">L'aggiornamento di Windows Phone</a> 8
+# L'aggiornamento di Windows Phone 8
 
-Questa guida Mostra come modificare i progetti Windows Phone 8, eseguire l'aggiornamento da versioni precedenti di Cordova. Alcune di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI. Nella sezione seguente viene illustrato l'aggiornamento da non-CLI e progetti CLI.
+Questa guida Mostra come modificare i progetti Windows Phone 8, eseguire l'aggiornamento da versioni precedenti di Cordova. Alcune di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI. Nella sezione seguente viene illustrato l'aggiornamento da non-CLI e progetti CLI.
 
 ## All'aggiornamento 3.6.0 proietta al 4.0.0
 

@@ -18,68 +18,68 @@ license: >
     under the License.
 ---
 
-# <a href="../../index.html">Guides</a> de la plate-forme
+# Guides de la plate-forme
 
 Avant de développer pour toutes les plates-formes répertoriées ci-dessous, installez l'interface de ligne de commande de cordova (CLI). (Pour plus de détails, consultez l'Interface de ligne de commande).
 
 Pour développer des applications de Cordova, vous devez installer le SDK pour chaque plate-forme mobile que vous ciblez. Cette installation n'est nécessaire que vous faire la plupart de votre travail dans le kit de développement logiciel ou utilisez la CLI pour votre cycle de génération.
 
-Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour mettre en place l'environnement de développement de la plate-forme : où se procurer le kit de développement logiciel, comment configurer les émulateurs de périphérique, comment faire pour connecter des appareils pour tests directs et comment gérer les exigences clés de signature. <a href="../../index.html">Guides</a> supplémentaires renseignent sur l'ensemble unique de chaque plateforme d'options de configuration, instructions pour ajouter des plugins, comment mettre à niveau chaque plate-forme et les outils de ligne de commande spécifique à la plateforme qui servent comme une alternative de niveau inférieur à la `cordova` de l'utilitaire.
+Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour mettre en place l'environnement de développement de la plate-forme : où se procurer le kit de développement logiciel, comment configurer les émulateurs de périphérique, comment faire pour connecter des appareils pour tests directs et comment gérer les exigences clés de signature. Guides supplémentaires renseignent sur l'ensemble unique de chaque plateforme d'options de configuration, instructions pour ajouter des plugins, comment mettre à niveau chaque plate-forme et les outils de ligne de commande spécifique à la plateforme qui servent comme une alternative de niveau inférieur à la `cordova` de l'utilitaire.
 
 ## Amazon Fire OS
 
-*   <a href="amazonfireos/index.html">Amazon Fire OS Platform Guide</a>
-*   <a href="amazonfireos/config.html">Amazon Fire OS Configuration</a>
-*   <a href="amazonfireos/webview.html">Amazon Fire OS WebViews</a>
-*   <a href="amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
+*   Amazon Fire OS Platform Guide
+*   Amazon Fire OS Configuration
+*   Amazon Fire OS WebViews
+*   Amazon Fire OS Plugins
 
 ## Android
 
 *   Guide de la plate-forme Android
-*   <a href="android/tools.html">Android Shell Tool Guide</a>
+*   Android Shell Tool Guide
 *   Configuration Android
-*   <a href="android/plugin.html">Plugins Android</a>
-*   <a href="android/webview.html">Android WebViews</a>
-*   <a href="android/upgrading.html">Mise à jour Android</a>
+*   Plugins Android
+*   Android WebViews
+*   Mise à jour Android
 
 ## BlackBerry 10
 
-*   <a href="blackberry10/index.html"><a href="blackberry/index.html">Guide de la plate-forme blackBerry</a> 10</a>
-*   <a href="blackberry10/tools.html">BlackBerry 10 Shell Tool Guide</a>
-*   <a href="blackberry/config.html">Configuration de blackBerry</a> 10
-*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="blackberry/upgrading.html">Mise à jour de BlackBerry</a> 10
+*   Guide de la plate-forme blackBerry 10
+*   BlackBerry 10 Shell Tool Guide
+*   Configuration de blackBerry 10
+*   BlackBerry 10 Plugins
+*   Mise à jour de BlackBerry 10
 
 ## Firefox OS
 
-*   <a href="firefoxos/index.html">Firefox OS Platform Guide</a>
+*   Firefox OS Platform Guide
 
 ## iOS
 
-*   <a href="ios/index.html">iOS Platform Guide</a>
-*   <a href="ios/tools.html">iOS Shell Tool Guide</a>
-*   <a href="ios/config.html">iOS Configuration</a>
-*   <a href="ios/plugin.html">iOS Plugins</a>
-*   <a href="ios/webview.html">iOS WebViews</a>
-*   <a href="ios/upgrading.html">Mise à jour d'iOS</a>
+*   iOS Platform Guide
+*   iOS Shell Tool Guide
+*   iOS Configuration
+*   iOS Plugins
+*   iOS WebViews
+*   Mise à jour d'iOS
 
 ## Ubuntu
 
-*   <a href="ubuntu/index.html">Guide de la plate-forme Ubuntu</a>
+*   Guide de la plate-forme Ubuntu
 
 ## Windows Phone 8
 
-*   <a href="wp8/index.html">Guide de plateforme Windows Phone 8</a>
-*   <a href="wp8/plugin.html">Windows Phone 8 Plugins</a>
-*   <a href="wp8/upgrading.html">La mise à niveau de Windows Phone</a> 8
+*   Guide de plateforme Windows Phone 8
+*   Windows Phone 8 Plugins
+*   La mise à niveau de Windows Phone 8
 
 ## Windows
 
-*   <a href="win8/index.html">Guide de la plate-forme Windows</a>
-*   <a href="win8/plugin.html">Plugins Windows</a>
-*   <a href="win8/packaging.html">Emballage de Windows</a>
-*   <a href="win8/upgrading.html">La mise à niveau de Windows 8</a>
+*   Guide de la plate-forme Windows
+*   Plugins Windows
+*   Emballage de Windows
+*   La mise à niveau de Windows 8
 
 ## Paciarelli
 
-*   <a href="tizen/index.html">Guide de la plate-forme paciarelli</a>
+*   Guide de la plate-forme paciarelli

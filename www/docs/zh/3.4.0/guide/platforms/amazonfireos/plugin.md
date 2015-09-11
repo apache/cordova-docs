@@ -20,7 +20,7 @@ license: >
 
 # 亞馬遜火 OS 外掛程式
 
-按照有關的開發自訂外掛程式<a href="../../overview/index.html">概述</a> <a href="../android/plugin.html">Android 外掛程式</a>指南中提供的說明。
+按照有關的開發自訂外掛程式概述 Android 外掛程式指南中提供的說明。
 
 ## 回聲亞馬遜火 OS 外掛程式示例
 
@@ -71,7 +71,7 @@ license: >
     }
     
 
-如果你想要重用的亞馬遜火 OS 平臺 <a href="../android/plugin.html">Android 外掛程式</a>代碼然後修改通過指向 `android` 特定的原始檔案。例如，
+如果你想要重用的亞馬遜火 OS 平臺 Android 外掛程式代碼然後修改通過指向 `android` 特定的原始檔案。例如，
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">

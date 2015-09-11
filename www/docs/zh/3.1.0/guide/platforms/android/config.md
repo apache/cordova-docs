@@ -20,24 +20,24 @@ license: >
 
 # Android 系統組態
 
-`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域<a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>選項，請參閱 config.xml <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>的資訊。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` <a href="../../../cordova/events/events.html">事件</a>火災。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`： 指定<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>在 400-500 範圍內的標準 HTTP 錯誤回應的錯誤頁。 將指定的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>放在包含主頁和其他 web 資產的頂級目錄。
+*   `ErrorUrl`： 指定顯示在 400-500 範圍內的標準 HTTP 錯誤回應的錯誤頁。 將指定的檔放在包含主頁和其他 web 資產的頂級目錄。
     
         <preference name="ErrorUrl" value="error.html"/>
         
 
-*   `LoadingDialog`： <a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>本機對話方塊載入應用程式時。值的格式是*標題、 消息*
+*   `LoadingDialog`： 顯示本機對話方塊載入應用程式時。值的格式是*標題、 消息*
     
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
         
 
-*   `LoadingPageDialog`： 載入一個應用程式內的子頁面時<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>本機的對話方塊。值的格式是*標題、 消息*
+*   `LoadingPageDialog`： 載入一個應用程式內的子頁面時顯示本機的對話方塊。值的格式是*標題、 消息*
     
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
         
@@ -47,11 +47,11 @@ license: >
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`： 減去其副<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>名的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>的名稱 `res/drawable` 目錄。各種資產必須共用此各子目錄中的共同名稱。
+*   `SplashScreen`： 減去其副檔名的檔的名稱 `res/drawable` 目錄。各種資產必須共用此各子目錄中的共同名稱。
     
         <preference name="SplashScreen" value="splash"/>
         
 
-*   `SplashScreenDelay`(編號，預設值為 `5000` ）： 所需的時間初始螢幕圖像<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>。
+*   `SplashScreenDelay`(編號，預設值為 `5000` ）： 所需的時間初始螢幕圖像顯示。
     
         <preference name="SplashScreenDelay" value="10000"/>

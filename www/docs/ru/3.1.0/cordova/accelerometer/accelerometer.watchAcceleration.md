@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
+# accelerometer.watchAcceleration
 
 Возвращяет ускорение вдоль осей *x*, *y* и *z* в определенный момент времени.
 
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
-                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
-                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
+    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                           accelerometerError,
+                                                           [accelerometerOptions]);
     
 
 ## Описание
 
 Акселерометр это датчик движения, который отслеживает изменение (delta) в движении относительно текущей позиции. Акселерометр может отслеживать 3D перемещения по *x*, *y* и *z* осям.
 
-Метод `accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>` извлекает текущий объект `<a href="acceleration/acceleration.html">Acceleration</a>` в определенные промежутки времени, и выполняет функцию обратного вызова `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>`. Задает интервал в миллисекундах через параметр `frequency` объекта `acceleratorOptions`.
+Метод `accelerometer.watchAcceleration` извлекает текущий объект `Acceleration` в определенные промежутки времени, и выполняет функцию обратного вызова `accelerometerSuccess`. Задает интервал в миллисекундах через параметр `frequency` объекта `acceleratorOptions`.
 
-Идентификатор watchID ссылается на акселерометр может использоваться с `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` чтобы остановить отслеживание акселерометра.
+Идентификатор watchID ссылается на акселерометр может использоваться с `accelerometer.clearWatch` чтобы остановить отслеживание акселерометра.
 
 ## Поддерживаемые платформы
 
@@ -47,9 +47,9 @@ license: >
 ## Краткий пример
 
     function onSuccess(acceleration) {
-        alert('<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };
     
@@ -59,7 +59,7 @@ license: >
     
     var options = { frequency: 3000 };  // Update every 3 seconds
     
-    var watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     
 
 ## Развернутый пример
@@ -67,17 +67,17 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="acceleration/acceleration.html">Acceleration</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // The watch id references the current `watch<a href="acceleration/acceleration.html">Acceleration</a>`
+        // The watch id references the current `watchAcceleration`
         var watchID = null;
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -92,14 +92,14 @@ license: >
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
+                navigator.accelerometer.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -108,9 +108,9 @@ license: >
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
-            element.innerHTML = '<a href="acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x         + '<br />' +
-                                '<a href="acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y         + '<br />' +
-                                '<a href="acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z         + '<br />' +
+            element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+                                'Acceleration Y: ' + acceleration.y         + '<br />' +
+                                'Acceleration Z: ' + acceleration.z         + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
     

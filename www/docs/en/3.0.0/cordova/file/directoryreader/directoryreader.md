@@ -47,11 +47,11 @@ Read the entries in this directory.
 
 __Parameters:__
 
-- __successCallback__: A callback that is passed an array of `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` and `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` objects. _(Function)_
+- __successCallback__: A callback that is passed an array of `FileEntry` and `DirectoryEntry` objects. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `FileError` object. _(Function)_
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 
     function success(entries) {
         var i;

@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-local<a href="../storage.html">Storage</a>
+localStorage
 ===============
 
-Provides access to a W3C <a href="../storage.html">Storage</a> interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
-    var storage = window.local<a href="../storage.html">Storage</a>;
+    var storage = window.localStorage;
 
 Methods
 -------
 
-- __key__: Returns the <a href="../parameters/name.html">name</a> of the key at the position specified. 
+- __key__: Returns the name of the key at the position specified. 
 - __getItem__: Returns the item identified by it's key.
 - __setItem__: Saves and item at the key provided.
 - __removeItem__: Removes the item identified by it's key.
@@ -37,7 +37,7 @@ Methods
 Details
 -----------
 
-local<a href="../storage.html">Storage</a> provides an interface to a W3C <a href="../storage.html">Storage</a> interface.  It allows one to save data as key-value pairs.
+localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
 
 Supported Platforms
 -------------------
@@ -46,66 +46,66 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Key Quick <a href="../storage.opendatabase.html">Example</a>
+Key Quick Example
 -------------
 
-    var keyName = window.local<a href="../storage.html">Storage</a>.key(0);
+    var keyName = window.localStorage.key(0);
 
-Set Item Quick <a href="../storage.opendatabase.html">Example</a>
+Set Item Quick Example
 -------------
 
-    window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
+    window.localStorage.setItem("key", "value");
 
-Get Item Quick <a href="../storage.opendatabase.html">Example</a>
+Get Item Quick Example
 -------------
 
-	var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
+	var value = window.localStorage.getItem("key");
 	// value is now equal to "value"
 
-Remove Item Quick <a href="../storage.opendatabase.html">Example</a>
+Remove Item Quick Example
 -------------
 
-	window.local<a href="../storage.html">Storage</a>.removeItem("key");
+	window.localStorage.removeItem("key");
 
-Clear Quick <a href="../storage.opendatabase.html">Example</a>
+Clear Quick Example
 -------------
 
-	window.local<a href="../storage.html">Storage</a>.clear();
+	window.localStorage.clear();
 
-Full <a href="../storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../../contacts/Contact/contact.html">Contact</a> <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-			window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
-			var key<a href="../parameters/name.html">name</a> = window.local<a href="../storage.html">Storage</a>.key(i);
-			// key<a href="../parameters/name.html">name</a> is now equal to "key"
-			var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
+        function onDeviceReady() {
+			window.localStorage.setItem("key", "value");
+			var keyname = window.localStorage.key(i);
+			// keyname is now equal to "key"
+			var value = window.localStorage.getItem("key");
 			// value is now equal to "value"
-			window.local<a href="../storage.html">Storage</a>.removeItem("key");
-			window.local<a href="../storage.html">Storage</a>.setItem("key2", "value2");
-			window.local<a href="../storage.html">Storage</a>.clear();
-			// local<a href="../storage.html">Storage</a> is now empty
+			window.localStorage.removeItem("key");
+			window.localStorage.setItem("key2", "value2");
+			window.localStorage.clear();
+			// localStorage is now empty
         }
     
 
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
-        <p>local<a href="../storage.html">Storage</a></p>
+        <h1>Example</h1>
+        <p>localStorage</p>
       </body>
     </html>

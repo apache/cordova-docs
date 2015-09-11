@@ -34,8 +34,8 @@ from the object passed as a parameter to the `successCallback`.
 The inbound `date` parameter should be of type `Date`.
 
 If there is an error formatting the date, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 
@@ -53,7 +53,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 If the browser is set to the `en\_US` locale, this displays a popup
@@ -67,13 +67,13 @@ options:
         { formatLength: 'short', selector: 'date and time' }
     );
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

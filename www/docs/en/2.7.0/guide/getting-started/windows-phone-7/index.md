@@ -37,7 +37,7 @@ Video Tutorials:
 
 Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista
 
-Necessary for Installing on <a href="../../../cordova/device/device.html">Device</a> and Submitting to Market Place:
+Necessary for Installing on Device and Submitting to Market Place:
 
 - Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
 
@@ -50,7 +50,7 @@ Necessary for Installing on <a href="../../../cordova/device/device.html">Device
 - copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates
 ( if the template file does not exist, you will need to build it. See 2.1 below )
 if you have just installed VisualStudio, you should launch it once to create this folder
-if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is <a href="../../../cordova/splashscreen/splashscreen.show.html">show</a>n when creating a new project. Also, You may need to create this folder. 
+if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder. 
 
 
 2.1. Building the template
@@ -103,7 +103,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Windows Phone <a href="../../../cordova/device/device.html">Device</a>' from the top drop-down menu.
+- In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
     ![](img/guide/platforms/wp7/wpd.png)

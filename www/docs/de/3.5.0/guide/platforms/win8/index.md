@@ -22,12 +22,12 @@ license: >
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows 8 bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="upgrading.html">Aktualisieren von Windows 8</a>
-*   <a href="tools.html">Windows 8-Befehlszeilentools</a>
+*   Aktualisieren von Windows 8
+*   Windows 8-Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
-Microsoft als veraltet markiert den Namen *Metro-Style apps* in Windows 8 und Windows RT. MSDN bezieht sich jetzt auf diese app als ein *Windows-<a href="../../../cordova/storage/storage.html">Speicher</a>* -app, und dieser Anleitung folgt dieser Konvention. Darüber hinaus bedeutet in diesem Handbuch *Windows 8* Windows 8 und Windows RT.
+Microsoft als veraltet markiert den Namen *Metro-Style apps* in Windows 8 und Windows RT. MSDN bezieht sich jetzt auf diese app als ein *Windows-Speicher* -app, und dieser Anleitung folgt dieser Konvention. Darüber hinaus bedeutet in diesem Handbuch *Windows 8* Windows 8 und Windows RT.
 
 ## Anforderungen
 
@@ -81,13 +81,13 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
             <script src="/js/default.js"></script>
         
 
-*   Hinzufügen einer `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` Handler veranschaulicht Cordova arbeitet:
+*   Hinzufügen einer `deviceready` Handler veranschaulicht Cordova arbeitet:
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+                document.addEventListener("deviceready", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

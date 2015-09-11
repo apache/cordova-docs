@@ -22,12 +22,12 @@ license: >
 
 返回一個新的 `Database` 物件。
 
-    var dbShell = <a href="../inappbrowser/window.open.html">window.open</a>Database(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## 說明
 
-方法創建一個新的 SQL Lite <a href="database/database.html">資料庫</a>並返回 `Database` 允許對資料進行操作的物件。
+方法創建一個新的 SQL Lite 資料庫並返回 `Database` 允許對資料進行操作的物件。
 
 ## 支援的平臺
 
@@ -38,7 +38,7 @@ license: >
 
 ## 快速的示例
 
-    var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
     
 
 ## 完整的示例
@@ -53,12 +53,12 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
     
         </script>

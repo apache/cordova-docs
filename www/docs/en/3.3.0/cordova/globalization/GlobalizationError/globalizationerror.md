@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# <a href="../globalization.html">Globalization</a>Error
+# GlobalizationError
 
-An object representing a error from the <a href="../globalization.html">Globalization</a> API.
+An object representing a error from the Globalization API.
 
 ## Properties
 
 - __code__:  One of the following codes representing the error type _(Number)_
-  - <a href="../globalization.html">Globalization</a>Error.UNKNOWN\_ERROR: 0
-  - <a href="../globalization.html">Globalization</a>Error.FORMATTING\_ERROR: 1
-  - <a href="../globalization.html">Globalization</a>Error.PARSING\_ERROR: 2
-  - <a href="../globalization.html">Globalization</a>Error.PATTERN\_ERROR: 3
+  - GlobalizationError.UNKNOWN\_ERROR: 0
+  - GlobalizationError.FORMATTING\_ERROR: 1
+  - GlobalizationError.PARSING\_ERROR: 2
+  - GlobalizationError.PATTERN\_ERROR: 3
 - __message__:  A text message that includes the error's explanation and/or details _(String)_
 
 ## Description
@@ -41,7 +41,7 @@ This object is created and populated by Cordova, and returned to a callback in t
 - Android
 - iOS
 
-## Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
 When the following error callback executes, it displays a
 popup dialog with the text similar to `code: 3` and `message:`
@@ -51,12 +51,12 @@ popup dialog with the text similar to `code: 3` and `message:`
               'message: ' + error.message + '\n');
     };
 
-## Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title><a href="../globalization.html">Globalization</a>Error <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -72,7 +72,7 @@ popup dialog with the text similar to `code: 3` and `message:`
         };
 
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

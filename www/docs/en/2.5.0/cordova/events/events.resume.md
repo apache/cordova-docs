@@ -23,14 +23,14 @@ resume
 
 This is an event that fires when a Cordova application is retrieved from the background.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
+    document.addEventListener("resume", yourCallbackFunction, false);
 
 Details
 -------
 
 Cordova consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.  
 
-Typically, you will want to attach an event listener with `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` once you receive the Cordova '<a href="events.deviceready.html">deviceready</a>' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
 
 Supported Platforms
 -------------------
@@ -41,40 +41,40 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+    document.addEventListener("resume", onResume, false);
 
     function onResume() {
         // Handle the resume event
     }
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Cordova Resume Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
+        // Call onDeviceReady when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-2.5.0.js has not.
         // When Cordova is loaded and talking with the native device,
-        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
+        // it will call the event `deviceready`.
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+        function onDeviceReady() {
+            document.addEventListener("resume", onResume, false);
         }
 
         // Handle the resume event
@@ -90,7 +90,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
 iOS Quirks
 --------------------------
-Any calls to console.log during your **<a href="events.pause.html">pause</a>** event handler will be run now when the app resumes, see the iOS Quirks section for the **<a href="events.pause.html">pause</a>** event for an explanation. 
+Any calls to console.log during your **pause** event handler will be run now when the app resumes, see the iOS Quirks section for the **pause** event for an explanation. 
 
 - __active__ event 
 
@@ -102,7 +102,7 @@ Any calls to console.log during your **<a href="events.pause.html">pause</a>** e
 
     Interactive functions like alert() when the resume event fires will need to be wrapped in a setTimeout call with a timeout value of zero, or else the app will hang. e.g.
 
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
+        document.addEventListener("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

@@ -23,16 +23,16 @@ compass.watchHeading
 
 At a regular interval, get the compass heading in degrees.
 
-    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
+    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
                                                            
 Description
 -----------
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `<a href="parameters/compassOptions.html">compassOptions</a>` object.
+The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `compassOptions` object.
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `<a href="compass.clearWatch.html">compass.clearWatch</a>` to stop watching the compass.
+The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatch` to stop watching the compass.
 
 Supported Platforms
 -------------------
@@ -46,7 +46,7 @@ Supported Platforms
 - Windows 8
 
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     function onSuccess(heading) {
@@ -54,21 +54,21 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
 
-    function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+    function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
     };
 
     var options = { frequency: 3000 };  // Update every 3 seconds
     
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -78,11 +78,11 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
         // Wait for Cordova to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             startWatch();
         }
 
@@ -100,7 +100,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
+                navigator.compass.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -114,8 +114,8 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
 
         </script>
@@ -130,6 +130,6 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 iOS Quirks
 --------------
 
-In iOS `compass.watchHeading` can also get the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `<a href="parameters/compassOptions.html">compassOptions</a>` object.  Clear the watch as normal by passing the returned watch ID to `<a href="compass.clearWatch.html">compass.clearWatch</a>`.  This functionality replaces the previously separate, iOS only functions, watchHeadingFilter and clearWatchFilter, which were removed in 1.6.
+In iOS `compass.watchHeading` can also get the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `compassOptions` object.  Clear the watch as normal by passing the returned watch ID to `compass.clearWatch`.  This functionality replaces the previously separate, iOS only functions, watchHeadingFilter and clearWatchFilter, which were removed in 1.6.
 
 In iOS only one watchHeading can be in effect at one time.  If a watchHeading via filter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS watching heading changes via a filter is more efficient than via time.

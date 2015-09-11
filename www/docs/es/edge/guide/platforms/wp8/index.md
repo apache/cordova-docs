@@ -26,8 +26,8 @@ Muestra cómo utilizar herramientas shell Windows Phone específicas para genera
 
 Vea el siguiente para los detalles específicos a la plataforma de Windows Phone:
 
-*   <a href="plugin.html">Windows Phone 8 Plugins</a>
-*   <a href="upgrading.html">Actualización de Windows Phone</a> 8
+*   Windows Phone 8 Plugins
+*   Actualización de Windows Phone 8
 
 Para la plataforma Windows Phone 8, el Cordova WebView confía en Internet Explorer 10 como su motor de render, así como una cuestión práctica puede utilizar a potente depurador de IE10 para probar cualquier contenido web que no invoca Cordova APIs. El Blog de desarrolladores de Windows Phone proporciona una [guía útil][1] sobre cómo apoyar IE10 junto con navegadores WebKit comparables.
 
@@ -83,7 +83,7 @@ Si desea utilizar herramientas de shell de Windows Phone-centrado de Cordova en 
 
  [10]: http://cordova.apache.org
 
-Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y <a href="plugin.html">Windows Phone 8 Plugins</a> para detalles específicos de la plataforma de Windows Phone.
+Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y Windows Phone 8 Plugins para detalles específicos de la plataforma de Windows Phone.
 
 ## Instalar el SDK
 
@@ -193,4 +193,4 @@ Una vez que construyes una aplicación Cordova como se describió anteriormente,
 
  [17]: img/guide/platforms/wp8/wp8_vs.png
 
-Consulte el <a href="../../overview/index.html">Resumen</a> de consejos sobre cómo usar herramientas de línea de comandos de Cordova o el SDK en su flujo de trabajo. Cordova CLI se basa en código multiplataforma que rutinariamente sobrescribe los archivos específicos a una plataforma utilizados por el SDK. Si quieres trabajar dentro del SDK, utilice las herramientas de shell de nivel inferior como una alternativa a la CLI.
+Consulte el Resumen de consejos sobre cómo usar herramientas de línea de comandos de Cordova o el SDK en su flujo de trabajo. Cordova CLI se basa en código multiplataforma que rutinariamente sobrescribe los archivos específicos a una plataforma utilizados por el SDK. Si quieres trabajar dentro del SDK, utilice las herramientas de shell de nivel inferior como una alternativa a la CLI.

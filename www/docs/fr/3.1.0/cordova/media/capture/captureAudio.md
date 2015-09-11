@@ -23,7 +23,7 @@ license: >
 > Démarrez l'application enregistreur audionumérique et renvoyer des informations sur les fichiers de clips audio capturés.
 
     navigator.device.capture.captureAudio(
-        <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> captureSuccess, <a href="capture.html">Capture</a>ErrorCB captureError,  [<a href="capture.html">Capture</a>AudioOptions options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Commence une opération asynchrone pour capturer les enregistrements audio à l'aide d'application d'enregistrement audio de l'appareil par défaut. L'opération permet à l'utilisateur de l'appareil capturer des enregistrements multiples en une seule séance.
 
-L'opération de capture se termine lorsque l'utilisateur quitte l'enregistrement demande, ou le nombre maximal d'enregistrements spécifié par audio `<a href="capture.html">Capture</a>AudioOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip audio unique.
+L'opération de capture se termine lorsque l'utilisateur quitte l'enregistrement demande, ou le nombre maximal d'enregistrements spécifié par audio `CaptureAudioOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip audio unique.
 
-Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` s'exécute avec un tableau de `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` objets décrivant chacune capturé fichiers clip audio. Si l'utilisateur annule l'opération avant un clip audio est capturé, le `<a href="capture.html">Capture</a>ErrorCallback` s'exécute avec un `<a href="capture.html">Capture</a>Error` objet, mettant en vedette le `<a href="capture.html">Capture</a>Error.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau de `MediaFile` objets décrivant chacune capturé fichiers clip audio. Si l'utilisateur annule l'opération avant un clip audio est capturé, le `CaptureErrorCallback` s'exécute avec un `CaptureError` objet, mettant en vedette le `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
 
 ## Plates-formes prises en charge
 
@@ -46,17 +46,17 @@ Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` 
 ## Petit exemple
 
     // capture callback
-    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    var captureSuccess = function(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // do something interesting with the file
         }
     };
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start audio capture
@@ -68,7 +68,7 @@ Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="capture.html">Capture</a> Audio</title>
+        <title>Capture Audio</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
@@ -76,10 +76,10 @@ Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` 
     
         // Called when capture operation is finished
         //
-        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+        function captureSuccess(mediaFiles) {
             var i, len;
-            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+                uploadFile(mediaFiles[i]);
             }
         }
     
@@ -99,10 +99,10 @@ Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` 
         }
     
         // Upload files to server
-        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
-            var ft = new <a href="../../file/fileobj/fileobj.html">File</a>Transfer(),
-                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
-                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
+        function uploadFile(mediaFile) {
+            var ft = new FileTransfer(),
+                path = mediaFile.fullPath,
+                name = mediaFile.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -119,14 +119,14 @@ Fin de l'opération de capture, le `<a href="capture.html">Capture</a>Callback` 
         </script>
         </head>
         <body>
-            <button onclick="captureAudio();"><a href="capture.html">Capture</a> Audio</button> <br>
+            <button onclick="captureAudio();">Capture Audio</button> <br>
         </body>
     </html>
     
 
 ## BlackBerry WebWorks Quirks
 
-*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone Notes** , fournie par RIM, pour capturer des enregistrements audio. L'application reçoit un `<a href="capture.html">Capture</a>Error.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
+*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone Notes** , fournie par RIM, pour capturer des enregistrements audio. L'application reçoit un `CaptureError.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
 
 ## iOS Quirks
 

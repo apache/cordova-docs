@@ -45,7 +45,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
@@ -61,24 +61,24 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         'Done'                  // buttonName
     );
         
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
     

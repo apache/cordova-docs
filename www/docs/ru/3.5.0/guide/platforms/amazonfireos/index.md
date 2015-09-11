@@ -24,9 +24,9 @@ license: >
 
 Смотрите ниже для более подробной информации конкретной платформы:
 
-*   <a href="config.html">Amazon Fire OS конфигурации</a>
-*   <a href="webview.html">Amazon Fire OS WebViews</a>
-*   <a href="plugin.html">Amazon Fire OS плагины</a>
+*   Amazon Fire OS конфигурации
+*   Amazon Fire OS WebViews
+*   Amazon Fire OS плагины
 
 ## Требования и поддержка
 

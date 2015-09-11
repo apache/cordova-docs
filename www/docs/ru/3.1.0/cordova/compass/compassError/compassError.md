@@ -20,7 +20,7 @@ license: >
 
 # CompassError
 
-A `CompassError` объект возвращается к `<a href="../parameters/compassError.html">compassError</a>` функции обратного вызова при возникновении ошибки.
+A `CompassError` объект возвращается к `compassError` функции обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -33,4 +33,4 @@ A `CompassError` объект возвращается к `<a href="../parameter
 
 ## Описание
 
-Когда возникает ошибка, `CompassError` объект передается как параметр `<a href="../parameters/compassError.html">compassError</a>` функции обратного вызова.
+Когда возникает ошибка, `CompassError` объект передается как параметр `compassError` функции обратного вызова.

@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# 亞馬遜火 OS <a href="../index.html">平臺指南</a>
+# 亞馬遜火 OS 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境部署亞馬遜火 OS 的設備，如 Kindle 火 HDX 科爾多瓦應用軟體。
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   <a href="config.html">亞馬遜火 OS 配置</a>
-*   <a href="webview.html">亞馬遜火 OS WebViews</a>
-*   <a href="plugin.html">亞馬遜火 OS 外掛程式</a>
+*   亞馬遜火 OS 配置
+*   亞馬遜火 OS WebViews
+*   亞馬遜火 OS 外掛程式
 
 ## 要求和支援
 
@@ -43,7 +43,7 @@ license: >
 
 ### Android SDK
 
-從[developer.android.com/sdk][1]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您<a href="../../../cordova/storage/storage.html">存儲</a>的開發工具。
+從[developer.android.com/sdk][1]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
 
 科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。
 
@@ -88,7 +88,7 @@ license: >
 
 ## 在 SDK 中打開的專案
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦<a href="../../cli/index.html">命令列介面</a>。例如，在原始程式碼中的目錄：
+使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

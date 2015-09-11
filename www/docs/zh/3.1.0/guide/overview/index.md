@@ -20,23 +20,23 @@ license: >
 
 # 概述
 
-科爾多瓦是一個開放源碼移動開發框架。 它允許您使用標準的 web 技術如 HTML5、 CSS3 和 JavaScript 進行跨平臺開發，避免每個移動平臺的本機開發語言。 應用程式在有針對性的對每個平臺的包裝內執行，並依靠符合標準的 API 綁定訪問每個<a href="../../cordova/device/device.html">設備</a>的感應器、 資料和網路狀態。
+科爾多瓦是一個開放源碼移動開發框架。 它允許您使用標準的 web 技術如 HTML5、 CSS3 和 JavaScript 進行跨平臺開發，避免每個移動平臺的本機開發語言。 應用程式在有針對性的對每個平臺的包裝內執行，並依靠符合標準的 API 綁定訪問每個設備的感應器、 資料和網路狀態。
 
 如果您是，使用科爾多瓦：
 
 *   移動開發人員和想要擴展應用程式跨多個平臺，而無需重新實現它與每個平臺的語言和工具集。
 
-*   網頁程式開發人員和想要部署 web 應用程式打包為分佈在各種應用程式中<a href="../../cordova/storage/storage.html">存儲</a>的門戶。
+*   網頁程式開發人員和想要部署 web 應用程式打包為分佈在各種應用程式中存儲的門戶。
 
-*   移動開發人員感興趣混合本機應用程式中的元件與*web 視圖*（瀏覽器視窗），可以訪問<a href="../../cordova/device/device.html">設備</a>級的 Api，或者如果您想要開發的外掛程式介面本機和 web 視圖元件之間。
+*   移動開發人員感興趣混合本機應用程式中的元件與*web 視圖*（瀏覽器視窗），可以訪問設備級的 Api，或者如果您想要開發的外掛程式介面本機和 web 視圖元件之間。
 
 ## 基本元件
 
-科爾多瓦的應用程式都依賴于一個共同的 `config.xml` <a href="../../cordova/file/fileobj/fileobj.html">檔</a>，提供有關應用程式的資訊，並指定參數影響它如何工作，如它是否回應方向轉移。 此<a href="../../cordova/file/fileobj/fileobj.html">檔</a>遵循 W3C 的[打包 Web 應用程式][1]或*構件*，規範。
+科爾多瓦的應用程式都依賴于一個共同的 `config.xml` 檔，提供有關應用程式的資訊，並指定參數影響它如何工作，如它是否回應方向轉移。 此檔遵循 W3C 的[打包 Web 應用程式][1]或*構件*，規範。
 
  [1]: http://www.w3.org/TR/widgets/
 
-應用程式本身是作為 web 頁來實現，預設情況下，引用任何 CSS、 JavaScript、 圖像、 <a href="../../cordova/media/media.html">媒體</a><a href="../../cordova/file/fileobj/fileobj.html">檔</a>案，命名*index.html*或其他資源是它運行的必要條件。 這款應用程式作為*web 視圖*的本機應用程式中包裝，您分發給應用程式商店內執行。 為 web 應用程式進行交互的方式本機應用程式做的各項裝置功能，它也必須引用 `cordova.js` <a href="../../cordova/file/fileobj/fileobj.html">檔</a>，該<a href="../../cordova/file/fileobj/fileobj.html">檔</a>提供 API 綁定。 <!-- XREF
+應用程式本身是作為 web 頁來實現，預設情況下，引用任何 CSS、 JavaScript、 圖像、 媒體檔案，命名*index.html*或其他資源是它運行的必要條件。 這款應用程式作為*web 視圖*的本機應用程式中包裝，您分發給應用程式商店內執行。 為 web 應用程式進行交互的方式本機應用程式做的各項裝置功能，它也必須引用 `cordova.js` 檔，該檔提供 API 綁定。 <!-- XREF
 (See the API Reference for an overview, and the Application
 Development Guide for examples of how to use them.)
 XREF -->
@@ -45,15 +45,15 @@ XREF -->
 
 ## 發展路徑
 
-設置應用程式的最簡單方法是運行 `cordova` 命令列實用程式，也稱為*<a href="../cli/index.html">命令列介面</a>*(CLI)。 （若要安裝 CLI，參見<a href="../cli/index.html">命令列介面</a>。根據您想要的目標的平臺的集，您可以依靠逐步更多地共用在開發週期的 CLI：
+設置應用程式的最簡單方法是運行 `cordova` 命令列實用程式，也稱為*命令列介面*(CLI)。 （若要安裝 CLI，參見命令列介面。根據您想要的目標的平臺的集，您可以依靠逐步更多地共用在開發週期的 CLI：
 
-*   在最基本的情況下，你可以使用 CLI 只是為了創建一個新專案填充，您要修改的預設<a href="../../cordova/media/capture/ConfigurationData.html">配置</a>。
+*   在最基本的情況下，你可以使用 CLI 只是為了創建一個新專案填充，您要修改的預設配置。
 
-*   對於很多的移動平臺，也可以使用 CLI 來設置內部每個 SDK 編譯所需的額外的專案<a href="../../cordova/file/fileobj/fileobj.html">檔</a>案。 為此，您必須安裝每個目標的平臺 SDK。 （見<a href="../platforms/index.html">平臺指南</a>的說明）。如表中所示的平臺支援下，您可能需要在目標平臺根據不同的作業系統上運行，CLI。
+*   對於很多的移動平臺，也可以使用 CLI 來設置內部每個 SDK 編譯所需的額外的專案檔案。 為此，您必須安裝每個目標的平臺 SDK。 （見平臺指南的說明）。如表中所示的平臺支援下，您可能需要在目標平臺根據不同的作業系統上運行，CLI。
 
-*   為支援平臺，CLI 可以編譯 executible 的應用程式和基於 SDK 的<a href="../../cordova/device/device.html">設備</a>模擬程式中運行它們。 <! — — XREF （請參閱應用程式發展指南的詳細資訊。） XREF--> 為全面的測試，還可以生成應用程式<a href="../../cordova/file/fileobj/fileobj.html">檔</a>，直接在<a href="../../cordova/device/device.html">設備</a>上安裝它們。
+*   為支援平臺，CLI 可以編譯 executible 的應用程式和基於 SDK 的設備模擬程式中運行它們。 <! — — XREF （請參閱應用程式發展指南的詳細資訊。） XREF--> 為全面的測試，還可以生成應用程式檔，直接在設備上安裝它們。
 
-在開發週期中的任何點，你也可以依賴特定于平臺的 SDK 工具，可提供一組更豐富的選項。 （見有關每個平臺 SDK 工具的詳細資訊<a href="../platforms/index.html">平臺指南</a>設置）。SDK 環境是更適當的如果你想要實現一個混合本機和基於 web 的應用程式元件的混合應用。 <! — — XREF （請參閱混合應用指南為更多的資訊。） XREF--> 你可以使用命令列實用程式最初生成應用程式，或以反覆運算方式此後要喂 SDK 工具更新的代碼。 您也可以自己生成應用程式的設定<a href="../../cordova/file/fileobj/fileobj.html">檔</a>。 <!-- XREF
+在開發週期中的任何點，你也可以依賴特定于平臺的 SDK 工具，可提供一組更豐富的選項。 （見有關每個平臺 SDK 工具的詳細資訊平臺指南設置）。SDK 環境是更適當的如果你想要實現一個混合本機和基於 web 的應用程式元件的混合應用。 <! — — XREF （請參閱混合應用指南為更多的資訊。） XREF--> 你可以使用命令列實用程式最初生成應用程式，或以反覆運算方式此後要喂 SDK 工具更新的代碼。 您也可以自己生成應用程式的設定檔。 <!-- XREF
 (See The config.xml File for details.)
 XREF -->
 
@@ -64,7 +64,7 @@ XREF -->
 
 ## 平臺支援
 
-下面<a href="../../cordova/inappbrowser/inappbrowser.html">顯示</a>一的組開發工具和<a href="../../cordova/device/device.html">設備</a>的 Api 可為每個移動平臺。（列標題<a href="../../cordova/inappbrowser/inappbrowser.html">顯示</a>的 CLI 速記存根 (stub)。
+下面顯示一的組開發工具和設備的 Api 可為每個移動平臺。（列標題顯示的 CLI 速記存根 (stub)。
 
 <!-- START HTML -->
 
@@ -221,7 +221,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/acceleration/acceleration.html">加速度</a>計</a>
+          <a href="cordova_accelerometer_accelerometer.md.html">加速度計</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -251,7 +251,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">相機</a></a>
+          <a href="cordova_camera_camera.md.html">相機</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -281,7 +281,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">捕獲</a></a>
+          <a href="cordova_media_capture_capture.md.html">捕獲</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -311,7 +311,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">指南針</a></a>
+          <a href="cordova_compass_compass.md.html">指南針</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -342,7 +342,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">連接</a></a>
+          <a href="cordova_connection_connection.md.html">連接</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -372,7 +372,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/contacts.html">連絡人</a></a>
+          <a href="cordova_contacts_contacts.md.html">連絡人</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -402,7 +402,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">設備</a></a>
+          <a href="cordova_device_device.md.html">設備</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -432,7 +432,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">事件</a></a>
+          <a href="cordova_events_events.md.html">事件</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -462,7 +462,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">檔</a></a>
+          <a href="cordova_file_file.md.html">檔</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -478,11 +478,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          沒有<a href="../../cordova/file/fileobj/fileobj.html">檔</a>案傳輸
+          沒有檔案傳輸
         </td>
         
         <td data-col="winphone8"  class="p">
-          沒有<a href="../../cordova/file/fileobj/fileobj.html">檔</a>案傳輸
+          沒有檔案傳輸
         </td>
         
         <td data-col="win8"       class="y">
@@ -494,7 +494,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">地理定位</a></a>
+          <a href="cordova_geolocation_geolocation.md.html">地理定位</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -524,7 +524,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">全球化</a></a>
+          <a href="cordova_globalization_globalization.md.html">全球化</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -554,7 +554,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -584,7 +584,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">媒體</a></a>
+          <a href="cordova_media_media.md.html">媒體</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -614,7 +614,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">通知</a></a>
+          <a href="cordova_notification_notification.md.html">通知</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -644,7 +644,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">閃屏</a></a>
+          <a href="cordova_splashscreen_splashscreen.md.html">閃屏</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -674,7 +674,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">存儲</a></a>
+          <a href="cordova_storage_storage.md.html">存儲</a>
         </th>
         
         <td data-col="android"    class="y">

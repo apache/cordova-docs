@@ -20,7 +20,7 @@ license: >
 
 # Plugins verwalten mithilfe Plugman
 
-Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins, je nach verwendeter Workflow diskutiert in der <a href="../guide/overview/index.html">Übersicht</a>:
+Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins, je nach verwendeter Workflow diskutiert in der Übersicht:
 
 *   Wenn Sie einen Cross-Plattform-Workflow verwenden, verwenden Sie die `cordova` CLI-Hilfsprogramm, Plugins, hinzufügen, wie in der Command-Line Interface beschrieben. Die CLI ändert Plugins für alle angegebenen Plattformen gleichzeitig.
 
@@ -69,7 +69,7 @@ Weitere Parameter:
 
 *   `--plugins_dir`standardmaessig `<project>/cordova/plugins` , aber kann jedes Verzeichnis ein Unterverzeichnis für jeden abgerufenen Plugin.
 *   `--www`der Standardwert ist des Projekts `www` Ordnerspeicherort, kann jedoch jedes Verzeichnis, das als Cordova Projekt Anwendung Web Vermögenswerte verwendet werden.
-*   `--variable`ermöglicht es, bestimmte Variablen zum Zeitpunkt der Installation notwendig für bestimmte Plugins, die die API-Schlüssel oder andere benutzerdefinierte, benutzerdefinierte Parameter angeben. Finden Sie die [<a href="spec.html">Plugin-Spezifikation</a>][4] für weitere Informationen.
+*   `--variable`ermöglicht es, bestimmte Variablen zum Zeitpunkt der Installation notwendig für bestimmte Plugins, die die API-Schlüssel oder andere benutzerdefinierte, benutzerdefinierte Parameter angeben. Finden Sie die [Plugin-Spezifikation][4] für weitere Informationen.
 
  [4]: plugin_ref_spec.md.html#Plugin%20Specification
 

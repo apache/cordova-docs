@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../filetransfer/filetransfer.html">FileTransfer</a>Error
+# FileTransferError
 
-A `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error` Objekt wird an eine Fehler-Callback übergeben, wenn ein Fehler auftritt.
+A `FileTransferError` Objekt wird an eine Fehler-Callback übergeben, wenn ein Fehler auftritt.
 
 ## Eigenschaften
 
@@ -30,15 +30,15 @@ A `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error` Objekt wir
 
 *   **Ziel**: URI zum Ziel. (String)
 
-*   **HTTP_STATUS**: HTTP-Statuscode. Dieses Attribut ist nur verfügbar, wenn ein Response-Code aus der HTTP-<a href="../../connection/connection.html">Verbindung</a> eingeht. (Anzahl)
+*   **HTTP_STATUS**: HTTP-Statuscode. Dieses Attribut ist nur verfügbar, wenn ein Response-Code aus der HTTP-Verbindung eingeht. (Anzahl)
 
 ## Konstanten
 
-*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.FILE_NOT_FOUND_ERR`
-*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.INVALID_URL_ERR`
-*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.CONNECTION_ERR`
-*   `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error.ABORT_ERR`
+*   `FileTransferError.FILE_NOT_FOUND_ERR`
+*   `FileTransferError.INVALID_URL_ERR`
+*   `FileTransferError.CONNECTION_ERR`
+*   `FileTransferError.ABORT_ERR`
 
 ## Beschreibung
 
-Das `<a href="../filetransfer/filetransfer.html">FileTransfer</a>Error` -Objekt wird an den Rückruf Fehler übergeben, tritt ein Fehler beim Up- oder Download einer <a href="../fileobj/fileobj.html">Datei</a>.
+Das `FileTransferError` -Objekt wird an den Rückruf Fehler übergeben, tritt ein Fehler beim Up- oder Download einer Datei.

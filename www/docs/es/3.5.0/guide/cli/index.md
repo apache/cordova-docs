@@ -124,7 +124,7 @@ Lea sobre si desea utilizar el enfoque de flujo de trabajo multiplataforma (CLI)
 
 ## Construir la aplicación
 
-De forma predeterminada, el `cordova create` script genera una aplicación basada en web esquelética cuya portada es el proyecto `www/index.html` archivo. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
+De forma predeterminada, el `cordova create` script genera una aplicación basada en web esquelética cuya portada es el proyecto `www/index.html` archivo. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `deviceready` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
 
 Ejecute el siguiente comando para crear iterativamente el proyecto:
 
@@ -333,7 +333,7 @@ En cambio, el nivel superior `merges` Directorio ofrece un lugar para especifica
 
 Al reconstruir el proyecto, la versión para Android cuenta con el tamaño de fuente personalizada, mientras que otros permanecen inalterados.
 
-También se puede utilizar `merges` para agregar archivos no presenten en el original `www` Directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, almacenado en `merges/ios/img/back_button.png` , mientras que la versión de Android puede capturar en su lugar `<a href="../../cordova/events/events.backbutton.html">backbutton</a>` eventos desde el correspondiente botón de hardware.
+También se puede utilizar `merges` para agregar archivos no presenten en el original `www` Directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, almacenado en `merges/ios/img/back_button.png` , mientras que la versión de Android puede capturar en su lugar `backbutton` eventos desde el correspondiente botón de hardware.
 
 ## Comandos de ayuda
 

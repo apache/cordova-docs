@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# BlackBerry 10 プラットフォーム <a href="../../../index.html">ガイド</a>
+# BlackBerry 10 プラットフォーム ガイド
 
-この<a href="../../../index.html">ガイド</a>は、開発環境にビルドおよび配置のブラックベリー 10 <a href="../../../cordova/device/device.html">デバイス</a> Cordova アプリを設定する方法を示します。 以前のバージョンのブラックベリー、ブラックベリーのプラットホームの<a href="../../../index.html">ガイド</a>で説明されている、コマンド ライン ツールの異なるセットを使用する必要があります。
+このガイドは、開発環境にビルドおよび配置のブラックベリー 10 デバイス Cordova アプリを設定する方法を示します。 以前のバージョンのブラックベリー、ブラックベリーのプラットホームのガイドで説明されている、コマンド ライン ツールの異なるセットを使用する必要があります。
 
 ## 要件
 
 開発環境は、Windows、Mac および Linux で利用できます。
 
-開発者が使用する、 `cordova` 、ブラックベリーのネイティブ SDK と共にユーティリティ。 インストールする方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください `cordova` 、プロジェクトを追加し、ビルドおよび各プラットフォームの配置。
+開発者が使用する、 `cordova` 、ブラックベリーのネイティブ SDK と共にユーティリティ。 インストールする方法については、コマンド ライン インターフェイスを参照してください `cordova` 、プロジェクトを追加し、ビルドおよび各プラットフォームの配置。
 
 ## ブラックベリーのネイティブ SDK をインストールします。
 
@@ -36,7 +36,7 @@ license: >
 
 Windows:
 
-*   **私のコンピューター → プロパティ → 詳細設定 → 環境<a href="../../../plugin_ref/spec.html">変数</a>**に行く.
+*   **私のコンピューター → プロパティ → 詳細設定 → 環境変数**に行く.
 
 *   ネイティブ SDK のインストール ディレクトリ パスに追加、たとえば。
     
@@ -44,7 +44,7 @@ Windows:
 
 Mac および Linux:
 
-*   編集、 `~/.bash_profile` ネイティブ SDK のインストール先に応じて、次のような行を追加する<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
+*   編集、 `~/.bash_profile` ネイティブ SDK のインストール先に応じて、次のような行を追加するファイル。
     
     $ エクスポート パス ${path} =：/アプリケーション/bbndk/host\_10\_1\_0\_132/ダーウィン/x 86/usr/bin/
     
@@ -58,7 +58,7 @@ Mac および Linux:
 
 ## 署名を設定します。
 
-<a href="../../../cordova/device/device.html">デバイス</a>のテストやブラックベリーの世界を通じてアプリケーションを配布する場合、システムはコード署名用のセットアップをなければなりません。
+デバイスのテストやブラックベリーの世界を通じてアプリケーションを配布する場合、システムはコード署名用のセットアップをなければなりません。
 
 署名キーを取得するためにブラックベリーのウェブサイトに移動し、指定したパスワードを保持することを確認します。 実行して、 `blackberry-signer` ユーティリティ ブラックベリー ネイティブ SDK に含まれています。
 
@@ -73,21 +73,21 @@ Mac および Linux:
 
 ## プロジェクトを作成します。
 
-使用の `cordova` <a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+使用の `cordova` コマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
     $ コルドバ作成こんにちは com.example.hello $ cd こんにちは $ コルドバ プラットフォーム blackberry10 $ コルドバ ビルドを追加
     
 
 ## エミュレーターへの展開します。
 
-<a href="../../../cordova/device/device.html">デバイス</a> エミュレーターを実行する場合は、ダウンロードして、ブラックベリー 10 シミュレータをインストールします。
+デバイス エミュレーターを実行する場合は、ダウンロードして、ブラックベリー 10 シミュレータをインストールします。
 
 *   [ダウンロード][1]
 *   [はじめに][4]
 
  [4]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
-<a href="../../../cordova/device/device.html">デバイス</a>またはエミュレーターでアプリケーションをテストする前に*ターゲット*プロジェクトを追加する必要があります。 それぞれ一意の名前で識別され、IP アドレスに関連付けられています。 アプリの表示に使用する前に、エミュレーターから IP アドレスを取得する必要があります。
+デバイスまたはエミュレーターでアプリケーションをテストする前に*ターゲット*プロジェクトを追加する必要があります。 それぞれ一意の名前で識別され、IP アドレスに関連付けられています。 アプリの表示に使用する前に、エミュレーターから IP アドレスを取得する必要があります。
 
 エミュレーター イメージを起動し、ホーム画面から**設定**を選択します。
 
@@ -116,54 +116,54 @@ Mac および Linux:
     $ コルドバ エミュレート blackberry10
     
 
-## <a href="../../../cordova/device/device.html">デバイス</a>への配置します。
+## デバイスへの配置します。
 
-<a href="../../../cordova/device/device.html">デバイス</a>への配備をお使いのコンピューターに<a href="../../../cordova/connection/connection.html">接続</a>されていることを確認します。 開発モードを有効にして上記のエミュレーター desribed として IP アドレスを取得します。 ピンを取得する必要があります、下の**設定**アプリケーション**→ についてハードウェア**:
+デバイスへの配備をお使いのコンピューターに接続されていることを確認します。 開発モードを有効にして上記のエミュレーター desribed として IP アドレスを取得します。 ピンを取得する必要があります、下の**設定**アプリケーション**→ についてハードウェア**:
 
 ![][7]
 
  [7]: img/guide/platforms/blackberry10/bb_pin.png
 
-名前に関連付ける IP アドレス、<a href="../../../cordova/device/device.html">デバイス</a>のパスワードと PIN とターゲット コマンド ライン ユーティリティを実行します。
+名前に関連付ける IP アドレス、デバイスのパスワードと PIN とターゲット コマンド ライン ユーティリティを実行します。
 
 *   Windows:
     
-    $ platforms\blackberry10\cordova\target.bat mydevice 169.254.0.1 t <a href="../../../cordova/device/device.html">デバイス</a>--パスワード 123456 - ピン FFFF972E を追加します。
+    $ platforms\blackberry10\cordova\target.bat mydevice 169.254.0.1 t デバイス--パスワード 123456 - ピン FFFF972E を追加します。
 
 *   Mac の/Linux: 上
     
-    $ プラットフォーム/blackberry10/コルドバ/ターゲット mydevice 169.254.0.1 t <a href="../../../cordova/device/device.html">デバイス</a>--パスワード 123456 - ピン FFFF972E を追加します。
+    $ プラットフォーム/blackberry10/コルドバ/ターゲット mydevice 169.254.0.1 t デバイス--パスワード 123456 - ピン FFFF972E を追加します。
 
 場所：
 
-*   `--password`<a href="../../../cordova/device/device.html">デバイス</a>のロックを解除するパスワードを指します。
+*   `--password`デバイスのロックを解除するパスワードを指します。
 
-*   `--pin`<a href="../../../cordova/device/device.html">デバイス</a>**の設定**アプリケーションから取得した PIN を指します。
+*   `--pin`デバイス**の設定**アプリケーションから取得した PIN を指します。
 
 その後、実行、 `run` アプリケーションを表示するコマンド。
 
     blackberry10 を実行 $ コルドバ
     
 
-デバッグ トークンがまだ設定されていない<a href="../../../cordova/device/device.html">デバイス</a>の場合、エラー メッセージはキーに署名するための登録時に指定したパスワードでスクリプトを実行するプラットフォームを使用するよう指示します。
+デバッグ トークンがまだ設定されていないデバイスの場合、エラー メッセージはキーに署名するための登録時に指定したパスワードでスクリプトを実行するプラットフォームを使用するよう指示します。
 
 *   Windows:
     
-    $ platforms\blackberry10\cordova\run.bat - <a href="../../../cordova/device/device.html">デバイス</a> - keystorepass mysecret
+    $ platforms\blackberry10\cordova\run.bat - デバイス - keystorepass mysecret
 
 *   Mac の/Linux: 上
     
-    $ プラットフォーム/blackberry10/コルドバ/実行--<a href="../../../cordova/device/device.html">デバイス</a>--keystorepass mysecret
+    $ プラットフォーム/blackberry10/コルドバ/実行--デバイス--keystorepass mysecret
 
 ## WebInspector とデバッグ
 
-<a href="../../../cordova/device/device.html">デバイス</a>またはエミュレーター上でのデバッグ、アプリケーションの内部状態を表示するリモート WebInspector を実行ことがあります。 プロンプトは標準の web ブラウザーを使ってアプリを<a href="../../../cordova/connection/connection.html">接続</a>することができます URL を表示します。 詳細については、[デバッグ使用 WebInspector][8]を参照してください。.
+デバイスまたはエミュレーター上でのデバッグ、アプリケーションの内部状態を表示するリモート WebInspector を実行ことがあります。 プロンプトは標準の web ブラウザーを使ってアプリを接続することができます URL を表示します。 詳細については、[デバッグ使用 WebInspector][8]を参照してください。.
 
  [8]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## リリース バージョンをビルド
 
-既定では、実行して、 `cordova build` コマンドは<a href="../../../cordova/device/device.html">デバイス</a>またはシミュレータにテストに適した符号なし*.bar*パッケージ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を作成します。
+既定では、実行して、 `cordova build` コマンドはデバイスまたはシミュレータにテストに適した符号なし*.bar*パッケージ ファイルを作成します。
 
 別に実行する必要があります `build` のブラックベリーの世界を介して配信に適してリリース バージョンを作成するコマンド。 依存しない、 `cordova` CLI ツールし、代わりに、次の構文を使用します。
 

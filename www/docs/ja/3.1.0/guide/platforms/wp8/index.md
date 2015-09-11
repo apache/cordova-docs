@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Windows Phone 8 プラットフォーム <a href="../../../index.html">ガイド</a>
+# Windows Phone 8 プラットフォーム ガイド
 
-この<a href="../../../index.html">ガイド</a>は、Windows Phone 8 <a href="../../../cordova/device/device.html">デバイス</a>用 Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 7.5 および 8 の<a href="../../../cordova/device/device.html">デバイス</a>をターゲットにする場合は、代わりに Windows Phone 7 <a href="../index.html">プラットフォームの<a href="../../../index.html">ガイド</a></a>詳細 Windows Phone 7 の開発します。 バージョン 7 は、IE10 に含まれているすべての高度な機能を持っていないが、同じ Api のセットを実装します。 Windows Phone 8 アプリは*ない*Windows Phone 7 <a href="../../../cordova/device/device.html">デバイス</a>上で実行します。
+このガイドは、Windows Phone 8 デバイス用 Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 7.5 および 8 のデバイスをターゲットにする場合は、代わりに Windows Phone 7 プラットフォームのガイド詳細 Windows Phone 7 の開発します。 バージョン 7 は、IE10 に含まれているすべての高度な機能を持っていないが、同じ Api のセットを実装します。 Windows Phone 8 アプリは*ない*Windows Phone 7 デバイス上で実行します。
 
 詳細なプラットフォーム固有の情報を両方のバージョンに適用される次を参照してください。
 
-*   <a href="upgrading.html">Windows Phone のアップグレード</a>
-*   <a href="plugin.html">Windows Phone のプラグイン</a>
-*   <a href="tools.html">Windows Phone のコマンド ライン ツール</a>
+*   Windows Phone のアップグレード
+*   Windows Phone のプラグイン
+*   Windows Phone のコマンド ライン ツール
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 
 ## 1. システム要件
 
@@ -36,7 +36,7 @@ license: >
     
     *   Windows 8 または Windows 8 Pro 
         *   64 ビット バージョンの Windows の （64） が、SDK に必要です。
-        *   <a href="../../../cordova/device/device.html">デバイス</a> エミュレーターを実行できるようには、Pro バージョンの使用をお勧めします。
+        *   デバイス エミュレーターを実行できるようには、Pro バージョンの使用をお勧めします。
 
 *   ハードウェア:
     
@@ -56,7 +56,7 @@ license: >
     
     *   Visual Studio 2012 プロ、プレミアム、または究極の。 メモ Visual Studio Express の Windows Phone (SDK に同梱) はお勧めできません VS Express を使ってテンプレート （下記参照） を築くことができないのでのみ VS プロまたはそれ以上は、**テンプレートのエクスポート**機能を持っていないので。
 
-*   登録し、実際の<a href="../../../cordova/device/device.html">デバイス</a>でアプリをインストールまたは市場の場所に送信する場合に[Windows Phone デベロッパー センター][3]アカウントのお支払い。
+*   登録し、実際のデバイスでアプリをインストールまたは市場の場所に送信する場合に[Windows Phone デベロッパー センター][3]アカウントのお支払い。
 
  [1]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
  [2]: http://ark.intel.com/Products/VirtualizationTechnology
@@ -72,22 +72,22 @@ license: >
 
 *   ダウンロードし、[コルドバ][6]の最新のコピーを抽出します。 作業をして、 `lib\windows-phone-8\wp8` サブディレクトリ、 `lib\windows-phone-8\wp7` コルドバの Windwos Phone 7 バージョンが含まれています。
 
-*   コピー、 `CordovaWP8_x_x_x.zip` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
+*   コピー、 `CordovaWP8_x_x_x.zip` ファイルを `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
 
  [5]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [6]: http://phonegap.com/download
 
 ## 2.1 のテンプレートを作成します。
 
-**注：**この手順は必要ありません。Lib\windows 携帯電話のディレクトリはすでに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> CordovaWP8\_x\_x_x.zip が含まれている場合は、この手順をスキップ可能性があります。
+**注：**この手順は必要ありません。Lib\windows 携帯電話のディレクトリはすでにファイル CordovaWP8\_x\_x_x.zip が含まれている場合は、この手順をスキップ可能性があります。
 
 開発プロセスを簡略化するためコルドバは Visual Studio テンプレートを作成するスクリプトが付属しています。 コルドバ Visual Studio アプリケーションを迅速に作成をできます。 必要な場合、このテンプレートを変更することができ、以下の手順、テンプレートを生成する場合を続行する方法を示します。
 
-### 作成し、テンプレートをインストールするバッチ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を実行します。
+### 作成し、テンプレートをインストールするバッチ ファイルを実行します。
 
-*   レポのルートには、<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> createTemplates.bat が含まれています。 この<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をダブルクリック 2 .zip <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>が生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらの<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から新しい Apache コルドバ Windows Phone アプリを作成します。
+*   レポのルートには、ファイル createTemplates.bat が含まれています。 このファイルをダブルクリック 2 .zip ファイルが生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらのファイルを簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio ファイルから新しい Apache コルドバ Windows Phone アプリを作成します。
 
-*   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を実行する場合
+*   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ ファイルを実行する場合
 
 スクリプトを実行します。
 
@@ -112,7 +112,7 @@ license: >
 
 *   Visual Studio プロジェクトの一部である必要がありますここで追加するコンテンツとコンテンツとして設定する必要があります。
 
-*   メモ： この画面<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>はコルドバ 2.3.0 ダウンロードから、あなたのリストは異なります、実際のバージョンがインストールされています。
+*   メモ： この画面キャプチャはコルドバ 2.3.0 ダウンロードから、あなたのリストは異なります、実際のバージョンがインストールされています。
 
 ![][8]
 
@@ -128,15 +128,15 @@ license: >
 
  [9]: img/guide/platforms/wp8/BuildEmulator.png
 
-## 6. プロジェクトをビルドし、<a href="../../../cordova/device/device.html">デバイス</a>の
+## 6. プロジェクトをビルドし、デバイスの
 
-<a href="../../../cordova/device/device.html">デバイス</a>上でアプリケーションをテストするために、<a href="../../../cordova/device/device.html">デバイス</a>を登録する必要があります。 クリックして[ここで][10]を展開すると、Windows Phone 8 でテスト ドキュメントを読みます。
+デバイス上でアプリケーションをテストするために、デバイスを登録する必要があります。 クリックして[ここで][10]を展開すると、Windows Phone 8 でテスト ドキュメントを読みます。
 
  [10]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
-*   あなたの携帯電話は<a href="../../../cordova/connection/connection.html">接続</a>され、画面がロックされていることを確認します。
+*   あなたの携帯電話は接続され、画面がロックされていることを確認します。
 
-*   Visual Studio では、上部のドロップ ダウン メニューから「<a href="../../../cordova/device/device.html">デバイス</a>」を選択します。
+*   Visual Studio では、上部のドロップ ダウン メニューから「デバイス」を選択します。
 
 *   、デバッグを開始する主要なドロップ ダウン メニューの横に緑の**再生**ボタンを押すか、 **f5 キーを押してください**.
 
@@ -148,6 +148,6 @@ license: >
 
 ## 詳細を読む
 
-IE10 と WebKit のブラウザー、およびサポートする方法の特定の相違に関する詳細については両方の MS は[ここの<a href="../../../index.html">ガイド</a>][12]に役立つ
+IE10 と WebKit のブラウザー、およびサポートする方法の特定の相違に関する詳細については両方の MS は[ここのガイド][12]に役立つ
 
  [12]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx

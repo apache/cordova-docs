@@ -24,9 +24,9 @@ Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova
 
 Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   <a href="config.html">Amazon ogenj OS konfiguracijo</a>
-*   <a href="webview.html">Amazon ogenj OS spletni pogledi</a>
-*   <a href="plugin.html">Amazon ogenj OS Plugins</a>
+*   Amazon ogenj OS konfiguracijo
+*   Amazon ogenj OS spletni pogledi
+*   Amazon ogenj OS Plugins
 
 ## Zahteve in podporo
 

@@ -18,24 +18,24 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>ErrorCB
+CaptureErrorCB
 ==============
 
 > メディアキャプチャー操作中にエラーが発生した場合に呼び出されます。
 
-    function captureError( <a href="capture.html">Capture</a>Error error ) { ... };
+    function captureError( CaptureError error ) { ... };
 
 概要
 -----------
 
 この関数は、もしメディアキャプチャーアプリを起動しようとして、アプリがビジー状態であってエラーが発生した場合、もしキャプチャー操作実行中にエラーが発生した場合、もしユーザーによってメディアファイルがキャプチャーされる前にキャプチャー操作がキャンセルされた場合などに呼び出されます。
 
-この関数は適切なエラーコードが含まれた <a href="capture.html">Capture</a>Error オブジェクトを伴って呼び出されます。
+この関数は適切なエラーコードが含まれた CaptureError オブジェクトを伴って呼び出されます。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // capture エラーコールバック関数
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };

@@ -20,7 +20,7 @@ license: >
 
 # accelerometerOptions
 
-<a href="../acceleration/acceleration.html">加速</a>度計の値の検索をカスタマイズするオプションのパラメーター。
+加速度計の値の検索をカスタマイズするオプションのパラメーター。
 
 ## オプション
 

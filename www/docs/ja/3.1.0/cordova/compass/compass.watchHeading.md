@@ -20,18 +20,18 @@ license: >
 
 # compass.watchHeading
 
-定期的な間隔で角度で<a href="compass.html">コンパス</a>の見出しを取得します。
+定期的な間隔で角度でコンパスの見出しを取得します。
 
-    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
+    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
 ## 説明
 
-<a href="compass.html">コンパス</a>は方向または<a href="../device/device.html">デバイス</a>が指摘されている見出しを検出するセンサーです。359.99 に 0 からの角度で見出しを測定します。
+コンパスは方向またはデバイスが指摘されている見出しを検出するセンサーです。359.99 に 0 からの角度で見出しを測定します。
 
-`compass.watchHeading`<a href="../device/device.html">デバイス</a>の定期的な間隔で現在の方位を取得します。 見出しを取り出すたびに、 `headingSuccess` コールバック関数が実行されます。 経由でミリ秒単位で間隔を指定する、 `frequency` パラメーターで、 `<a href="parameters/compassOptions.html">compassOptions</a>` オブジェクト。
+`compass.watchHeading`デバイスの定期的な間隔で現在の方位を取得します。 見出しを取り出すたびに、 `headingSuccess` コールバック関数が実行されます。 経由でミリ秒単位で間隔を指定する、 `frequency` パラメーターで、 `compassOptions` オブジェクト。
 
-返される時計 ID <a href="compass.html">コンパス</a>時計腕時計間隔を参照します。ID を使用することができます時計 `<a href="compass.clearWatch.html">compass.clearWatch</a>` <a href="compass.html">コンパス</a>を見て停止します。
+返される時計 ID コンパス時計腕時計間隔を参照します。ID を使用することができます時計 `compass.clearWatch` コンパスを見て停止します。
 
 ## サポートされているプラットフォーム
 
@@ -49,8 +49,8 @@ license: >
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(<a href="parameters/compassError.html">compassError</a>) {
-        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
+                navigator.compass.clearWatch(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass error: ' + compassError.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ license: >
 
 ## iOS の癖
 
-IOS の `compass.watchHeading` 度の指定数で変更されたときにも、<a href="../device/device.html">デバイス</a>の現在の方位を得ることができます。 度以上の指定された数だけ見出し変更されるたびに、 `headingSuccess` コールバック関数を実行します。 経由で変更の程度を指定する、 `filter` パラメーターで、 `<a href="parameters/compassOptions.html">compassOptions</a>` オブジェクト。 返される時計 ID を渡すことによっていつものように時計をオフに `<a href="compass.clearWatch.html">compass.clearWatch</a>` 。 この機能を置き換えます以前独立した iOS だけ `watchHeadingFilter` と `clearWatchFilter` バージョン 1.6 で削除された機能です。
+IOS の `compass.watchHeading` 度の指定数で変更されたときにも、デバイスの現在の方位を得ることができます。 度以上の指定された数だけ見出し変更されるたびに、 `headingSuccess` コールバック関数を実行します。 経由で変更の程度を指定する、 `filter` パラメーターで、 `compassOptions` オブジェクト。 返される時計 ID を渡すことによっていつものように時計をオフに `compass.clearWatch` 。 この機能を置き換えます以前独立した iOS だけ `watchHeadingFilter` と `clearWatchFilter` バージョン 1.6 で削除された機能です。
 
 1 つだけ `watchHeading` iOS で一度に有効にすることができます。 場合は、 `watchHeading` 、フィルターを使用して呼び出す `getCurrentHeading` または `watchHeading` 既存のフィルターの値を使用して見出しの変更を指定します。 フィルターを使用して見出しの変更を見て時間間隔よりも効率的です。

@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>Address
+ContactAddress
 ==============
 
-Contains address properties for a `<a href="../Contact/contact.html">Contact</a>` object.
+Contains address properties for a `Contact` object.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `<a href="../Contact/contact.html">Contact</a>Address` contains the user's preferred value. _(boolean)_
+- __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
 - __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
 - __formatted:__ The full address formatted for display. _(DOMString)_
 - __streetAddress:__ The full street address. _(DOMString)_
@@ -37,7 +37,7 @@ Properties
 Details
 -------
 
-The `<a href="../Contact/contact.html">Contact</a>Address` object stores the properties of a single address of a contact.  A `<a href="../Contact/contact.html">Contact</a>` object can have one or more addresses in a  `<a href="../Contact/contact.html">Contact</a>Address[]` array. 
+The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
 
 Supported Platforms
 -------------------
@@ -47,7 +47,7 @@ Supported Platforms
 - iOS
 - Bada 1.2 & 2.0
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 	// display the address information for all contacts
@@ -66,39 +66,39 @@ Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 		}
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
     // find all contacts
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
 	options.filter=""; 
 	var filter = ["displayName","addresses"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
 		    // find all contacts
-		    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+		    var options = new ContactFindOptions();
 			options.filter=""; 
 			var filter = ["displayName","addresses"];
-		    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -121,15 +121,15 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

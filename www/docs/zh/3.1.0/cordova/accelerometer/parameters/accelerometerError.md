@@ -20,7 +20,7 @@ license: >
 
 # accelerometerError
 
-<a href="../acceleration/acceleration.html">加速度</a>函數 onError 的回呼函數。
+加速度函數 onError 的回呼函數。
 
     function() {
         // Handle the error

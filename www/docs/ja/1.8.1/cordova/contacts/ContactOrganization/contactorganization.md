@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>Organization
+ContactOrganization
 ===================
 
-`<a href="../Contact/contact.html">Contact</a>` オブジェクトの組織プロパティーを表します。
+`Contact` オブジェクトの組織プロパティーを表します。
 
 プロパティー
 ----------
-- __pref:__ `<a href="../Contact/contact.html">Contact</a>Organization` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
+- __pref:__ `ContactOrganization` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
 - __type:__ フィールドのタイプを表します (例: 'home') _(DOMString)_
 - __name:__ 組織名を表します _(DOMString)_
 - __department:__ 部署名を表します _(DOMString)_
@@ -34,7 +34,7 @@ license: >
 詳細
 -------
 
-`<a href="../Contact/contact.html">Contact</a>Organization` オブジェクトは連絡先の組織情報を表します。 `<a href="../Contact/contact.html">Contact</a>` オブジェクトは複数の `<a href="../Contact/contact.html">Contact</a>Organization` オブジェクトを配列に保持します。
+`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 `Contact` オブジェクトは複数の `ContactOrganization` オブジェクトを配列に保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -44,7 +44,7 @@ license: >
 - iOS
 - Bada 1.2
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     function onSuccess(contacts) {
@@ -59,37 +59,37 @@ license: >
         }
     };
 
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('エラーが発生しました。');
     };
 
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
     options.filter="";
     filter = ["displayName","organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+        function onDeviceReady() {
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
 
         // onSuccess: 連絡先の取得に成功した場合
@@ -108,14 +108,14 @@ license: >
 
         // onError: 連絡先の取得に失敗した場合
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
+        <h1>使用例</h1>
         <p>連絡先の検索</p>
       </body>
     </html>
@@ -151,4 +151,4 @@ iOS に関する注意点
 
 Bada 2.0 に関する注意点
 ---------------
-- <a href="../Contact/contact.html">Contact</a>Organization はサポートされていません。
+- ContactOrganization はサポートされていません。

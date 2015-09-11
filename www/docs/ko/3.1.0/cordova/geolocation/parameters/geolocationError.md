@@ -20,13 +20,13 @@ license: >
 
 # geolocationError
 
-<a href="../Position/position.html">위치</a> 정보 기능에 대 한 오류가 발생 될 때 실행 되는 사용자의 콜백 함수.
+위치 정보 기능에 대 한 오류가 발생 될 때 실행 되는 사용자의 콜백 함수.
 
     function(error) {
         // Handle the error
     }
     
 
-## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
-*   **오류**: <a href="../../device/device.html">장치</a>에 의해 반환 된 오류. *(<a href="../PositionError/positionError.html">PositionError</a>)*
+*   **오류**: 장치에 의해 반환 된 오류. *(PositionError)*

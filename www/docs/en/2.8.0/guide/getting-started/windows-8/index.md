@@ -75,16 +75,16 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 
 - Next we want to add some code that will demonstrate that Cordova is working. 
 
-### Adding a '<a href="../../../cordova/events/events.deviceready.html">deviceready</a>' handler...
+### Adding a 'deviceready' handler...
 	<body>
 	    <p>Content goes here</p>
 
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+	        document.addEventListener("deviceready", function () {
 
-	            navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>("The device is ready!");
+	            navigator.notification.alert("The device is ready!");
 
 	        });
 

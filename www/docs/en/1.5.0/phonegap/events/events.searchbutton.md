@@ -30,14 +30,14 @@ Details
 
 If you need to override the default search button behaviour on Android you can register an event listener for the 'searchbutton' event.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '<a href="events.deviceready.html">deviceready</a>' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
 Supported Platforms
 -------------------
 
 - Android
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
@@ -46,31 +46,31 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         // Handle the search button
     }
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>PhoneGap Search Button Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call on<a href="../device/device.html">Device</a>Ready when PhoneGap is loaded.
+        // Call onDeviceReady when PhoneGap is loaded.
         //
         // At this point, the document has loaded but cordova-1.5.0.js has not.
         // When PhoneGap is loaded and talking with the native device,
-        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
+        // it will call the event `deviceready`.
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Register the event listener
             document.addEventListener("searchbutton", onSearchKeyDown, false);
         }

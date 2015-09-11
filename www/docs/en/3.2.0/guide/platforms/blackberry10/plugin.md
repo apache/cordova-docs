@@ -43,7 +43,7 @@ by JNEXT. Every plugin must also include a `plugin.xml` file.
 ## Creating the Native Class
 
 To create the native portion of your plugin, open the BlackBerry 10
-NDK IDE and select __<a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New &rarr; BlackBerry Project &rarr;
+NDK IDE and select __File &rarr; New &rarr; BlackBerry Project &rarr;
 Native Extension &rarr; BlackBerry WebWorks__. Enter the desired
 project name and location, then press __Finish__.
 
@@ -229,9 +229,9 @@ locations in the `plugin.xml` file. Here is a typical structure:
   - **device** (>*binary file* *.so)
   - **simulator** (>*binary file* *.so)
 
-The list <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s the hierarchical relationship among the top-level
-folders. The parenthesis <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s the contents of a given directory. All
-directory names appear in bold text. <a href="../../../cordova/file/fileobj/fileobj.html">File</a> names are preceded by the `>`
+The list shows the hierarchical relationship among the top-level
+folders. The parenthesis shows the contents of a given directory. All
+directory names appear in bold text. File names are preceded by the `>`
 sign.
 
 ## The _plugin.xml_ file

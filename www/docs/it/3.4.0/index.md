@@ -26,84 +26,84 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Panoramica</a>
+        Panoramica
       </h2>
       
       <span>Iniziare qui se siete nuovi a Cordova.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/support/index.html">Supporto di piattaforma</a>
+        Supporto di piattaforma
       </h2>
       
       <span>Tabella di compatibilità per tutte le principali caratteristiche.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">L'interfaccia della riga di comando</a>
+        L'interfaccia della riga di comando
       </h2>
       
       <span>Creare, costruire e distribuire dalla riga di comando.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Piattaforma guide</a>
+        Piattaforma guide
       </h2>
       
       <span>Impostare ogni SDK e aggiornamento progetti</span>
     </li>
     <li>
       <h2>
-        <a href="plugin_ref/plugman.html">L'utilizzo di Plugman per gestire i plugin</a>
+        L'utilizzo di Plugman per gestire i plugin
       </h2>
       
-      <span><a href="plugin_ref/plugman.html">L'utilizzo di Plugman per gestire i plugin</a> senza CLI</span>
+      <span>L'utilizzo di Plugman per gestire i plugin senza CLI</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Il File config. Xml</a>
+        Il File config. Xml
       </h2>
       
       <span>Personalizzare le funzionalità della tua app.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Icone e Splash screen</a>
+        Icone e Splash screen
       </h2>
       
       <span>Personalizzare immagini visualizzazione dell'app.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Incorporamento visualizzazioni Web</a>
+        Incorporamento visualizzazioni Web
       </h2>
       
       <span>Implementare Cordova WebView nel vostro progetto.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Guida allo sviluppo di plugin</a>
+        Guida allo sviluppo di plugin
       </h2>
       
       <span>Sviluppare il tuo primo plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Guida sulla privacy</a>
+        Guida sulla privacy
       </h2>
       
       <span>Ulteriori informazioni su questioni di privacy mobile importante.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Guida di whitelist</a>
+        Guida di whitelist
       </h2>
       
       <span>Concedere un'accesso di applicazione a risorse esterne.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Archiviazione</a>
+        Archiviazione
       </h2>
       
       <span>Una panoramica delle opzioni di archiviazione nativo.</span>
@@ -124,14 +124,14 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/events/events.html">Eventi</a>
+        Eventi
       </h2>
       
       <span>Gancio in nativo degli eventi tramite JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
+        Plugin API
       </h2>
       
       <span>Scopri quali plugin Cordova sono disponibili all'utilizzo nel progetto.</span>

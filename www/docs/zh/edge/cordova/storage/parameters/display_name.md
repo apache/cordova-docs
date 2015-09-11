@@ -20,4 +20,4 @@ license: >
 
 # database_displayname
 
-顯示<a href="../database/database.html">資料庫</a>的名稱。
+顯示資料庫的名稱。

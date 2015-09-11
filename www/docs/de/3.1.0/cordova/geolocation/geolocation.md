@@ -20,37 +20,37 @@ license: >
 
 # Geolocation
 
-> Das `geolocation` Objekt bietet Zugriff auf <a href="Position/position.html">Position</a>sdaten auf der Grundlage des <a href="../device/device.html">Gerät</a>s GPS-Sensor oder abgeleitet von Netzwerk-Signale.
+> Das `geolocation` Objekt bietet Zugriff auf Positionsdaten auf der Grundlage des Geräts GPS-Sensor oder abgeleitet von Netzwerk-Signale.
 
-`Geolocation`enthält Informationen über das <a href="../device/device.html">Gerät</a> <a href="../storage/storage.html">Speicher</a>ort, z. B. breiten- und Längengrad. Gemeinsame Quellen von Standortinformationen sind Global <a href="Position/position.html">Position</a>ing System (GPS) und Lage von Netzwerk-Signale wie IP-Adresse, RFID, WLAN und Bluetooth MAC-Adressen und GSM/CDMA Zelle IDs abgeleitet. Es gibt keine Garantie, dass die API des <a href="../device/device.html">Gerät</a>s tatsächliche <a href="Position/position.html">Position</a> zurückgibt.
+`Geolocation`enthält Informationen über das Gerät Speicherort, z. B. breiten- und Längengrad. Gemeinsame Quellen von Standortinformationen sind Global Positioning System (GPS) und Lage von Netzwerk-Signale wie IP-Adresse, RFID, WLAN und Bluetooth MAC-Adressen und GSM/CDMA Zelle IDs abgeleitet. Es gibt keine Garantie, dass die API des Geräts tatsächliche Position zurückgibt.
 
-Diese API basiert auf der [W3C Geolocation API-Spezifikation][1], und nur auf <a href="../device/device.html">Gerät</a>en, die nicht bereits eine Implementierung bieten führt.
+Diese API basiert auf der [W3C Geolocation API-Spezifikation][1], und nur auf Geräten, die nicht bereits eine Implementierung bieten führt.
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Geolocation-Daten wirft wichtige Privatsphäre. Wie die app benutzt Geolocation-Daten, Ihre app-Datenschutzrichtlinien zu diskutieren, ob es mit allen anderen Parteien und das Niveau der Genauigkeit der Daten (z. B. grob, fein, Postleitzahl, etc..) freigegeben ist. Geolocation-Daten gilt allgemein als empfindlich, weil es, eine Person Aufenthaltsort erkennen lässt und, wenn gespeichert, die Geschichte von seinen Reisen. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung, die Zugriff auf Geolocation-Daten (wenn das Betriebssystem des <a href="../device/device.html">Gerät</a>s bereits tun nicht). Diese <a href="../notification/notification.html">Benachrichtigung</a> sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der <a href="../../guide/appdev/privacy/index.html">Datenschutz-Guide</a>.
+**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Geolocation-Daten wirft wichtige Privatsphäre. Wie die app benutzt Geolocation-Daten, Ihre app-Datenschutzrichtlinien zu diskutieren, ob es mit allen anderen Parteien und das Niveau der Genauigkeit der Daten (z. B. grob, fein, Postleitzahl, etc..) freigegeben ist. Geolocation-Daten gilt allgemein als empfindlich, weil es, eine Person Aufenthaltsort erkennen lässt und, wenn gespeichert, die Geschichte von seinen Reisen. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung, die Zugriff auf Geolocation-Daten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der Datenschutz-Guide.
 
 ## Methoden
 
-*   geolocation.getCurrent<a href="Position/position.html">Position</a>
-*   geolocation.watch<a href="Position/position.html">Position</a>
-*   <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
+*   geolocation.getCurrentPosition
+*   geolocation.watchPosition
+*   geolocation.clearWatch
 
 ## Argumente
 
-*   <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
-*   <a href="parameters/geolocationError.html">geolocationError</a>
-*   <a href="parameters/geolocation.options.html">geolocationOptions</a>
+*   geolocationSuccess
+*   geolocationError
+*   geolocationOptions
 
 ## Objekte (schreibgeschützt)
 
 *   Stellung
-*   <a href="Position/position.html">Position</a>Error
-*   <a href="Coordinates/coordinates.html">Koordinaten</a>
+*   PositionError
+*   Koordinaten
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.geolocation
         $ cordova plugin ls
@@ -104,4 +104,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

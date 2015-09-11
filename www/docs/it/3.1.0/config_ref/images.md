@@ -61,7 +61,7 @@ Tizen richiede un'icona di 128 pixel:
 
 ## Configurazione schermate iniziali in CLI
 
-Utilizzare l'API di <a href="../cordova/splashscreen/splashscreen.html">Splashscreen</a> per abilitare la visualizzazione della schermata introduttiva di un'app su molte piattaforme. Quando si lavora nella CLI, file di origine di splash screen si trovano all'interno del progetto `www/res/screens` sottodirectory.
+Utilizzare l'API di Splashscreen per abilitare la visualizzazione della schermata introduttiva di un'app su molte piattaforme. Quando si lavora nella CLI, file di origine di splash screen si trovano all'interno del progetto `www/res/screens` sottodirectory.
 
 Android specifica sia ritratto e paesaggio-oriented splash immagini dello schermo di basse, medie, alte e altissima risoluzione:
 
@@ -109,13 +109,13 @@ Inserire i file [immagine 9-patch][1] del progetto Android `res/drawable` direct
 
 In `config.xml` , aggiungere le seguenti preferenze:
 
-    <preference name="<a href="../cordova/splashscreen/splashscreen.show.html">splashscreen</a>", "splash" />
+    <preference name="splashscreen", "splash" />
     <preference name="splashScreenDelay", 10000 />
     
 
 La prima riga imposta l'immagine da visualizzare come schermata iniziale. Se è il nome tuo immagine niente altro che `splash.png` , è necessario modificare questa linea.
 
-La seconda riga imposta il ritardo di quanto tempo lo <a href="../cordova/splashscreen/splashscreen.show.html">splashscreen</a> appare in millisecondi. Per <a href="../cordova/inappbrowser/inappbrowser.html">chiudere</a> la schermata iniziale una volta che l'app riceve il `<a href="../cordova/events/events.deviceready.html">deviceready</a>` evento, chiamare il `navigator.<a href="../cordova/splashscreen/splashscreen.show.html">splashscreen</a>.hide()` metodo.
+La seconda riga imposta il ritardo di quanto tempo lo splashscreen appare in millisecondi. Per chiudere la schermata iniziale una volta che l'app riceve il `deviceready` evento, chiamare il `navigator.splashscreen.hide()` metodo.
 
 ## Schermate iniziali per la piattaforma iOS
 

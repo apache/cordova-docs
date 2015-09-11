@@ -20,7 +20,7 @@ license: >
 
 # Guida di whitelist
 
-## <a href="../../overview/index.html">Panoramica</a>
+## Panoramica
 
 Risorsa whitelisting è un modello di sicurezza che controlla accesso alle risorse di rete esterni, come ad esempio `http://google.com` . Criteri di protezione predefiniti di Cordova Apache consentono l'accesso a qualsiasi risorsa su qualsiasi sito su Internet. Prima di spostare l'applicazione di produzione, si dovrebbe rivedere la sua whitelist e dichiarare l'accesso alla rete specifici domini e sottodomini.
 

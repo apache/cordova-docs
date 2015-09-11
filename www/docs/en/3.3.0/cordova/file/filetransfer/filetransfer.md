@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../fileobj/fileobj.html">File</a>Transfer
+# FileTransfer
 
-The `<a href="../fileobj/fileobj.html">File</a>Transfer` object allows you to upload or download files to
+The `FileTransfer` object allows you to upload or download files to
 and from a server.
 
 ## Properties
@@ -37,12 +37,12 @@ and from a server.
 
 ## Details
 
-The `<a href="../fileobj/fileobj.html">File</a>Transfer` object provides a way to upload files to a remote
+The `FileTransfer` object provides a way to upload files to a remote
 server using an HTTP multi-part POST request.  Both HTTP and HTTPS
 protocols are supported.  Optional parameters can be specified by
-passing a `<a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>` object to the `upload()` method.  On
-successful upload, a `<a href="../fileuploadresult/fileuploadresult.html"><a href="../fileobj/fileobj.html">File</a>UploadResult</a>` object is passed to the
-success callback.  If an error occurs, a `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>` object is
+passing a `FileUploadOptions` object to the `upload()` method.  On
+successful upload, a `FileUploadResult` object is passed to the
+success callback.  If an error occurs, a `FileTransferError` object is
 passed to the error callback.  It is also possible (only on iOS and
 Android) to download a file from a remote server and save it on the
 device.
@@ -64,15 +64,15 @@ __Parameters__:
 
 - __server__: URL of the server to receive the file, as encoded by `encodeURI()`.
 
-- __successCallback__: A callback that is passed a `<a href="../metadata/metadata.html">Metadata</a>` object. _(Function)_
+- __successCallback__: A callback that is passed a `Metadata` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs retrieving the `<a href="../metadata/metadata.html">Metadata</a>`. Invoked with a `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
 
 - __options__: Optional parameters such as file name and mimetype.
 
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true`, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
-__Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>__
+__Quick Example__
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 
@@ -88,7 +88,7 @@ __Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.sho
         console.log("upload error target " + error.target);
     }
 
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -99,28 +99,28 @@ __Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.sho
 
     options.params = params;
 
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
 
-__Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>__
+__Full Example__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title><a href="../fileobj/fileobj.html">File</a> Transfer <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>File Transfer Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             // device APIs are available
             //
-            function on<a href="../../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -132,7 +132,7 @@ __Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show
             }
 
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -143,7 +143,7 @@ __Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show
 
                 options.params = params;
 
-                var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+                var ft = new FileTransfer();
                 ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
 
@@ -162,8 +162,8 @@ __Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show
             </script>
     </head>
     <body>
-        <h1><a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></h1>
-        <p>Upload <a href="../fileobj/fileobj.html">File</a></p>
+        <h1>Example</h1>
+        <p>Upload File</p>
     </body>
     </html>
 
@@ -185,7 +185,7 @@ Supported on Android and iOS
 
     var uri = encodeURI("http://some.server.com/upload.php");
 
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -194,7 +194,7 @@ Supported on Android and iOS
 
     options.headers = headers;
 
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);
 
 __Android Quirks__
@@ -210,19 +210,19 @@ __Parameters__:
 
 - __target__: Full path of the file on the device.
 
-- __successCallback__: A callback that is passed  a `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` object. _(Function)_
+- __successCallback__: A callback that is passed  a `FileEntry` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when retrieving the `<a href="../metadata/metadata.html">Metadata</a>`. Invoked with a `<a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
 
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true`, it accepts all security certificates. This is useful because Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 - __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
-__Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>__
+__Quick Example__
 
     // !! Assumes filePath is a valid path on the device
 
-    var fileTransfer = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
 
     fileTransfer.download(
@@ -246,7 +246,7 @@ __Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.sho
 
 ## abort
 
-Aborts an in-progress transfer. The onerror callback is passed a <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> object which has an error code of <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
 __Supported Platforms__
 
@@ -254,7 +254,7 @@ __Supported Platforms__
 - Android
 - iOS
 
-__Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>__
+__Quick Example__
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 
@@ -263,18 +263,18 @@ __Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.sho
     }
 
     var fail = function(error) {
-        // error.code == <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a>.ABORT_ERR
+        // error.code == FileTransferError.ABORT_ERR
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
 
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";
 
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort();
 
@@ -288,7 +288,7 @@ __Supported Platforms__
 - Android
 - iOS
 
-__<a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>__
+__Example__
 
     fileTransfer.onprogress = function(progressEvent) {
         if (progressEvent.lengthComputable) {

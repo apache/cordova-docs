@@ -500,7 +500,7 @@ Ulteriori informazioni fornite agli utenti. Ciò è utile quando si richiedono p
 
 ## *hook* Elemento
 
-Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la <a href="../guide/appdev/hooks/index.html">Guida di ganci</a>.
+Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la Guida di ganci.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     

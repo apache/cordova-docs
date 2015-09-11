@@ -31,7 +31,7 @@ Project Settings for iOS
 
     b. **TopActivityIndicator (string, デフォルト 'gray')** - ステータスバーにあるインジケーターの色を指定します。有効な値は "whiteLarge" と "white" と"gray" です
 
-    c. **EnableLocation (boolean, デフォルト NO)** - YES に設定することで、 <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> プラグインをアプリ起動時から初期化します (位置情報がより正確になります)
+    c. **EnableLocation (boolean, デフォルト NO)** - YES に設定することで、 Geolocation プラグインをアプリ起動時から初期化します (位置情報がより正確になります)
 
     d. **EnableViewportScale (boolean, デフォルト NO)** - YES に設定することで、メタタグでの viewport のスケーリングを防ぎます
 
@@ -39,13 +39,13 @@ Project Settings for iOS
 
     f. **ShowSplashScreenSpinner (boolean, デフォルト YES)** - NO に設定した場合、スプラッシュスクリーンのスピナーを非表示にします
 
-    g. **<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction (boolean, デフォルト NO)** - YES に設定することで、 HTML5 ビデオの自動再生を禁止します
+    g. **MediaPlaybackRequiresUserAction (boolean, デフォルト NO)** - YES に設定することで、 HTML5 ビデオの自動再生を禁止します
 
-    h. **AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback (boolean, デフォルト NO)** - YES に設定することで、インラインの HTML5 メディアの再生を許可します。また、 HTML 内の video 要素は webkit-playsinline 属性を含む必要があります
+    h. **AllowInlineMediaPlayback (boolean, デフォルト NO)** - YES に設定することで、インラインの HTML5 メディアの再生を許可します。また、 HTML 内の video 要素は webkit-playsinline 属性を含む必要があります
 
     i. **OpenAllWhitelistURLsInWebView (boolean, デフォルト NO)** - YES に設定することで、メインの WebView 内ですべてのホワイトリストの URL を開きます
 
-    j. **BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a> (string, デフォルト 'cloud')** - 有効な値は 'none' と 'cloud' と 'local' です。 Set to 'cloud' と設定することで、 web storage data の iCloud でのバックアップを許可します。 'local' はローカルバックアップ (iTunes との同期によるバックアップ) のみ許可します。 'none' は web storage のいかなるバックアップも許可しません。
+    j. **BackupWebStorage (string, デフォルト 'cloud')** - 有効な値は 'none' と 'cloud' と 'local' です。 Set to 'cloud' と設定することで、 web storage data の iCloud でのバックアップを許可します。 'local' はローカルバックアップ (iTunes との同期によるバックアップ) のみ許可します。 'none' は web storage のいかなるバックアップも許可しません。
 
     k. **KeyboardDisplayRequiresUserAction (boolean, デフォルト YES)** - NO に設定することで、 JavaScript の focus() が呼び出されてフォーム要素がフォーカスされた時、キーボードが開くようにします
 

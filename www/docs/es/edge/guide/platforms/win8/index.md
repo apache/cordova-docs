@@ -229,4 +229,4 @@ Alternativamente, elija la opción de despliegue de **simulador** para ver la ap
 
 A diferencia de la implementación de escritorio, esta opción le permite simular la orientación de la tableta, ubicación, y variar su configuración de red.
 
-**Nota**: Consulte el <a href="../../overview/index.html">Resumen</a> de consejos sobre cómo utilizar herramientas de línea de comandos de Cordova o el SDK en su flujo de trabajo. El CLI Cordova se basa en código fuente entre plataformas que rutinariamente sobrescribe los archivos específicos para cada plataforma utilizados el SDK de. Si desea utilizar el SDK para modificar el proyecto, utilizar las herramientas de nivel inferior shell como una alternativa a la CLI.
+**Nota**: Consulte el Resumen de consejos sobre cómo utilizar herramientas de línea de comandos de Cordova o el SDK en su flujo de trabajo. El CLI Cordova se basa en código fuente entre plataformas que rutinariamente sobrescribe los archivos específicos para cada plataforma utilizados el SDK de. Si desea utilizar el SDK para modificar el proyecto, utilizar las herramientas de nivel inferior shell como una alternativa a la CLI.

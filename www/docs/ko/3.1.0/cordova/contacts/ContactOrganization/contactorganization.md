@@ -32,11 +32,11 @@ license: >
 
 *   **부서**: 계약을 위해 일 하는 부서. *(DOMString)*
 
-*   **제목**: 조직에서 <a href="../contacts.html">연락처</a>의 제목. *(DOMString)*
+*   **제목**: 조직에서 연락처의 제목. *(DOMString)*
 
 ## 세부 정보
 
-`ContactOrganization`개체를 <a href="../contacts.html">연락처</a>의 조직 속성을 저장 합니다. A `Contact` 개체 저장 하나 이상의 `ContactOrganization` 개체 배열에.
+`ContactOrganization`개체를 연락처의 조직 속성을 저장 합니다. A `Contact` 개체 저장 하나 이상의 `ContactOrganization` 개체 배열에.
 
 ## 지원 되는 플랫폼
 
@@ -60,14 +60,14 @@ license: >
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
-    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## 전체 예제
@@ -75,22 +75,22 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -124,13 +124,13 @@ license: >
 
 ## 안 드 로이드 2.X 단점
 
-*   **pref**: 반환 안 드 로이드 2.X <a href="../../device/device.html">장치</a>에 의해 지원 되지 않습니다`false`.
+*   **pref**: 반환 안 드 로이드 2.X 장치에 의해 지원 되지 않습니다`false`.
 
 ## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
 
-*   **pref**: 반환 블랙베리 <a href="../../device/device.html">장치</a>에 의해 지원 되지 않습니다`false`.
+*   **pref**: 반환 블랙베리 장치에 의해 지원 되지 않습니다`false`.
 
-*   **유형**: 반환 블랙베리 <a href="../../device/device.html">장치</a>에 의해 지원 되지 않습니다`null`.
+*   **유형**: 반환 블랙베리 장치에 의해 지원 되지 않습니다`null`.
 
 *   **이름**: 부분적으로 지원 합니다. 첫 번째 조직 이름 블랙베리 **회사** 필드에 저장 됩니다.
 
@@ -140,9 +140,9 @@ license: >
 
 ## iOS 단점
 
-*   **pref**: 반환 하는 iOS <a href="../../device/device.html">장치</a>에서 지원 되지 않습니다`false`.
+*   **pref**: 반환 하는 iOS 장치에서 지원 되지 않습니다`false`.
 
-*   **유형**: 반환 하는 iOS <a href="../../device/device.html">장치</a>에서 지원 되지 않습니다`null`.
+*   **유형**: 반환 하는 iOS 장치에서 지원 되지 않습니다`null`.
 
 *   **이름**: 부분적으로 지원 합니다. 첫 번째 조직 이름은 iOS **kABPersonOrganizationProperty** 필드에 저장 됩니다.
 

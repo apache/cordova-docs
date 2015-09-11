@@ -39,8 +39,8 @@ a parameter contains the following properties:
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
 
 If there is an error obtaining the pattern, the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PATTERN\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following values:
 
@@ -58,7 +58,7 @@ time`.
 - iOS
 - Windows Phone 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this example displays
 a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
@@ -71,12 +71,12 @@ a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
         );
     }
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>getDatePattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

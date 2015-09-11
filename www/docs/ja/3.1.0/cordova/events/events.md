@@ -24,25 +24,25 @@ license: >
 
 ## イベントの種類
 
-*   <a href="events.deviceready.html">deviceready</a>
-*   <a href="events.pause.html">一時停止します。</a>
-*   <a href="events.resume.html">再開</a>
-*   <a href="events.online.html">オンライン</a>
-*   <a href="events.offline.html">オフライン</a>
-*   <a href="events.backbutton.html">戻るボタン</a>
-*   <a href="events.batterycritical.html">batterycritical</a>
-*   <a href="events.batterylow.html">batterylow</a>
-*   <a href="events.batterystatus.html">batterystatus</a>
-*   <a href="events.menubutton.html">メニュー ボタン</a>
-*   <a href="events.searchbutton.html">［ 検索 ］</a>
-*   <a href="events.startcallbutton.html">startcallbutton</a>
-*   <a href="events.endcallbutton.html">endcallbutton</a>
-*   <a href="events.volumedownbutton.html">volumedownbutton</a>
-*   <a href="events.volumeupbutton.html">volumeupbutton</a>
+*   deviceready
+*   一時停止します。
+*   再開
+*   オンライン
+*   オフライン
+*   戻るボタン
+*   batterycritical
+*   batterylow
+*   batterystatus
+*   メニュー ボタン
+*   ［ 検索 ］
+*   startcallbutton
+*   endcallbutton
+*   volumedownbutton
+*   volumeupbutton
 
 ## 機能へのアクセス
 
-バージョン 3.0、コルドバ implements バッテリー状態と他の<a href="../device/device.html">デバイス</a> レベルの Api*のプラグイン*として。 バッテリのステータスに関係のない他のすべてのイベントへのアクセスは既定で有効になります。 CLI の使用して `plugin` で、コマンドライン ・ インタ フェースを有効または無効バッテリー イベント説明されたコマンド。
+バージョン 3.0、コルドバ implements バッテリー状態と他のデバイス レベルの Api*のプラグイン*として。 バッテリのステータスに関係のない他のすべてのイベントへのアクセスは既定で有効になります。 CLI の使用して `plugin` で、コマンドライン ・ インタ フェースを有効または無効バッテリー イベント説明されたコマンド。
 
         $ cordova plugin add org.apache.cordova.battery-status
         $ cordova plugin ls
@@ -92,4 +92,4 @@ license: >
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

@@ -20,7 +20,7 @@ license: >
 
 # SQLResultSet
 
-Quando un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro.
+Quando un `SQLTransaction` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro.
 
 ## Proprietà
 
@@ -28,11 +28,11 @@ Quando un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
 
 *   **rowsAffected**: il numero di righe modificate dall'istruzione SQL, zero se l'istruzione non ha interessato tutte le righe.
 
-*   **righe**: un `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` che rappresentano le righe restituite, vuota se non vengono restituite righe.
+*   **righe**: un `SQLResultSetRowList` che rappresentano le righe restituite, vuota se non vengono restituite righe.
 
 ## Dettagli
 
-Quando un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro contenente tre proprietà:
+Quando un `SQLTransaction` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro contenente tre proprietà:
 
 *   Il `insertId` restituisce il numero di riga di un'istruzione di inserimento SQL successly. Se l'istruzione SQL non inserisce tutte le righe, il `insertId` non è impostata.
 
@@ -58,13 +58,13 @@ Quando un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
     
     funzione errorCB(err) {alert ("errore durante l'elaborazione SQL:" + err.code);}
     
-    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a> ("<a href="../database/database.html">Database</a>", "1.0", "Demo Cordova", 200000);
+    var db = window.openDatabase ("Database", "1.0", "Demo Cordova", 200000);
     funzionalità (queryDB, errorCB);
     
 
 ## Esempio completo
 
-    <!DOCTYPE html >< html >< testa >< titolo > esempio di archiviazione < / title >< tipo di script = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< tipo di script = "text/javascript" charset = "utf-8" > / / aspettare per librerie API di dispositivo caricare / / document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a> ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+    <!DOCTYPE html >< html >< testa >< titolo > esempio di archiviazione < / title >< tipo di script = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< tipo di script = "text/javascript" charset = "utf-8" > / / aspettare per librerie API di dispositivo caricare / / document.addEventListener ("deviceready", onDeviceReady, false);
     
         / / Popolare il database / / function populateDB(tx) {tx.executeSql ('DROP TABLE IF EXISTS DEMO');
             tx.executeSql ('creare tabella se non esiste DEMO (dati univoci, id)');
@@ -76,8 +76,8 @@ Quando un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
                 restituire false;
             } / / per un'istruzione insert, questa proprietà restituirà l'ID dell'ultima riga inserita console ("inserita ultima riga ID =" + results.insertId);
         } / / Callback di errore transazione / / function errorCB(err) {console ("errore durante l'elaborazione SQL:" + err.code);
-        } / / Callback di successo di transazione / / function successCB() {var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a> ("<a href="../database/database.html">Database</a>", "1.0", "Demo Cordova", 200000);
+        } / / Callback di successo di transazione / / function successCB() {var db = window.openDatabase ("Database", "1.0", "Demo Cordova", 200000);
             funzionalità (queryDB, errorCB);
-        } / / dispositivo API sono disponibili / / function onDeviceReady() {var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a> ("<a href="../database/database.html">Database</a>", "1.0", "Demo Cordova", 200000);
+        } / / dispositivo API sono disponibili / / function onDeviceReady() {var db = window.openDatabase ("Database", "1.0", "Demo Cordova", 200000);
             funzionalità (populateDB, errorCB, successCB);
-        } < / script >< / testa >< corpo >< h1 > esempio < / h1 >< <a href="../database/database.html">Database</a> p > </p >< / corpo >< / html >
+        } < / script >< / testa >< corpo >< h1 > esempio < / h1 >< Database p > </p >< / corpo >< / html >

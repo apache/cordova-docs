@@ -34,7 +34,7 @@ media.seekTo
 概要
 -----------
 
-`media.seekTo` 関数は <a href="media.html">Media</a> オブジェクトのオーディオファイルの現在再生位置を更新する非同期関数です。 <a href="media.html">Media</a> オブジェクト内の __position__ パラメーターの値も更新します。
+`media.seekTo` 関数は Media オブジェクトのオーディオファイルの現在再生位置を更新する非同期関数です。 Media オブジェクト内の __position__ パラメーターの値も更新します。
 
 サポートされているプラットフォーム
 -------------------
@@ -45,38 +45,38 @@ media.seekTo
 - Windows Phone 7 (Mango)
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
         // オーディオプレイヤー
         //
-        var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
-        my_<a href="media.play.html">media.play</a>();
+        var my_media = new Media(src, onSuccess, onError);
+        my_media.play();
         // 5秒後に、10秒の位置まで移動
         setTimeout(function() {
             my_media.seekTo(10000);
         }, 5000);
 
 
-Full <a href="../storage/database/database.html">Example</a>
+Full Example
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>メディアの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+            <title>メディアの使用例</title>
 
             <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
             //
-            document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             // Cordova 準備完了
             //
-            function on<a href="../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
 
@@ -88,19 +88,19 @@ Full <a href="../storage/database/database.html">Example</a>
             // オーディオ再生
             //
             function playAudio(src) {
-                // src から <a href="media.html">Media</a> オブジェクトを作成
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // src から Media オブジェクトを作成
+                my_media = new Media(src, onSuccess, onError);
 
                 // オーディオ再生
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
                 // メディアの再生位置を一秒ごとに更新
                 mediaTimer = setInterval(function() {
                     // 再生位置を取得
-                    my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                    my_media.getCurrentPosition(
                         // 呼び出し成功
                         function(position) {
                             if (position > -1) {
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>(position + " sec");
+                                setAudioPosition(position + " sec");
                             }
                         },
                         // 呼び出し失敗
@@ -119,7 +119,7 @@ Full <a href="../storage/database/database.html">Example</a>
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -140,7 +140,7 @@ Full <a href="../storage/database/database.html">Example</a>
 
             // 再生位置をセット
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry10/config.html">ブラックベリーの構成</a>
+# ブラックベリーの構成
 
 ブラックベリーは完全に[W3C のウィジェット仕様][1]として独自の縁の拡張機能をサポートします。 フル[ブラックベリー WebWorks ドキュメントに関する config.xml][2]の詳細を参照してください。
 

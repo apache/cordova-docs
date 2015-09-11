@@ -20,11 +20,11 @@ license: >
 
 # connection.type
 
-檢查當前活動的網路<a href="connection.html">連接</a>。
+檢查當前活動的網路連接。
 
 ## 說明
 
-此屬性提供快速的方法來確定<a href="../device/device.html">設備</a>的網路<a href="connection.html">連接</a>狀態，和連線類型。
+此屬性提供快速的方法來確定設備的網路連接狀態，和連線類型。
 
 ## 支援的平臺
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.connection.type Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -102,22 +102,22 @@ license: >
 
 ## API 更改
 
-科爾多瓦 2.3.0，直到 `Connection` 物件的訪問通過 `navigator.network.connection` 後才改為其中, `navigator.connection` 以匹配的 W3C 規範。 它在其原始<a href="../geolocation/Position/position.html">位置</a>，是仍然可用，但已廢棄，最終將被刪除。
+科爾多瓦 2.3.0，直到 `Connection` 物件的訪問通過 `navigator.network.connection` 後才改為其中, `navigator.connection` 以匹配的 W3C 規範。 它在其原始位置，是仍然可用，但已廢棄，最終將被刪除。
 
 ## iOS 的怪癖
 
-*   iOS 無法檢測到蜂窩網路<a href="connection.html">連接</a>的類型。 
+*   iOS 無法檢測到蜂窩網路連接的類型。 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone 怪癖
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone 不能檢測的蜂窩網路<a href="connection.html">連接</a>的類型。
+*   Windows Phone 不能檢測的蜂窩網路連接的類型。
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Tizen 怪癖
 
-*   Tizen 只可以檢測一個 WiFi 或者蜂窩<a href="connection.html">連接</a>。 
+*   Tizen 只可以檢測一個 WiFi 或者蜂窩連接。 
     *   `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.

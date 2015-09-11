@@ -20,14 +20,14 @@ license: >
 
 # camera.cleanup
 
-Entfernt Mittelstufe Fotos von der <a href="camera.html">Kamera</a> aus der vorübergehenden Verwahrung genommen.
+Entfernt Mittelstufe Fotos von der Kamera aus der vorübergehenden Verwahrung genommen.
 
-    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
+    navigator.camera.cleanup( cameraSuccess, cameraError );
     
 
 ## Beschreibung
 
-Entfernt Mittelstufe Image-<a href="../file/fileobj/fileobj.html">Datei</a>en, die nach der Berufung in vorübergehender Verwahrung gehalten werden `<a href="camera.getPicture.html">camera.getPicture</a>` . Gilt nur, wenn der Wert des `Camera.sourceType` ist gleich `Camera.PictureSourceType.CAMERA` und der `Camera.destinationType` entspricht`Camera.DestinationType.FILE_URI`.
+Entfernt Mittelstufe Image-Dateien, die nach der Berufung in vorübergehender Verwahrung gehalten werden `camera.getPicture` . Gilt nur, wenn der Wert des `Camera.sourceType` ist gleich `Camera.PictureSourceType.CAMERA` und der `Camera.destinationType` entspricht`Camera.DestinationType.FILE_URI`.
 
 ## Unterstützte Plattformen
 

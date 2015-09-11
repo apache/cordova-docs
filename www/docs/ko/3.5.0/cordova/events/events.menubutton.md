@@ -20,16 +20,16 @@ license: >
 
 # menubutton
 
-<a href="events.html">이벤트</a>는 사용자가 메뉴 버튼을 누를 때 발생 합니다.
+이벤트는 사용자가 메뉴 버튼을 누를 때 발생 합니다.
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-<a href="events.html">이벤트</a> 처리기를 적용 기본 메뉴 버튼 동작을 재정의 합니다.
+이벤트 처리기를 적용 기본 메뉴 버튼 동작을 재정의 합니다.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 <a href="events.html">이벤트</a> 리스너를 연결 하는 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">이벤트</a>가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -52,7 +52,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Menu Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Menu Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

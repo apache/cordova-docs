@@ -31,7 +31,7 @@ Retourne la date de mise en forme `String` par une `value` propriété accessibl
 
 Les entrants `date` paramètre doit être de type`Date`.
 
-S'il y a une erreur de mise en forme la date, puis le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+S'il y a une erreur de mise en forme la date, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
 
 Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
 
@@ -66,7 +66,7 @@ Si le navigateur est configuré pour la `en\_US` locale, cela permet d'afficher 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

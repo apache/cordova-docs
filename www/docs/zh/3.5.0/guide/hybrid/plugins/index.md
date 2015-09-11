@@ -30,12 +30,12 @@ license: >
 
 ## 建設一個外掛程式
 
-應用程式開發人員使用 CLI 的 `plugin add` 命令 （討論中<a href="../../cli/index.html">命令列介面</a>），對專案應用外掛程式。 該命令的參數是*git*資源庫中包含的外掛程式代碼的 URL。 此示例實現科爾多瓦的設備 API：
+應用程式開發人員使用 CLI 的 `plugin add` 命令 （討論中命令列介面），對專案應用外掛程式。 該命令的參數是*git*資源庫中包含的外掛程式代碼的 URL。 此示例實現科爾多瓦的設備 API：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-外掛程式<a href="../../../cordova/storage/storage.html">存儲</a>庫必須具備頂級 `plugin.xml` 清單檔。 有許多方式來配置此檔中，其中的詳細資訊是可用的<a href="../../../plugin_ref/spec.html">外掛程式規範</a>中。 此縮寫的版本的 `Device` 外掛程式提供了一個簡單的例子，使用作為一種模型：
+外掛程式存儲庫必須具備頂級 `plugin.xml` 清單檔。 有許多方式來配置此檔中，其中的詳細資訊是可用的外掛程式規範中。 此縮寫的版本的 `Device` 外掛程式提供了一個簡單的例子，使用作為一種模型：
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -70,7 +70,7 @@ license: >
         $ npm install -g plugman
     
 
-你需要有效的 app 原始目錄中，如頂級 `www` 目錄包含在預設生成的 CLI 專案中所述的<a href="../../cli/index.html">命令列介面</a>。 請確保應用程式的 `index.html` 的主頁引用名稱的外掛程式的 JavaScript 介面，好像它是相同的原始目錄中：
+你需要有效的 app 原始目錄中，如頂級 `www` 目錄包含在預設生成的 CLI 專案中所述的命令列介面。 請確保應用程式的 `index.html` 的主頁引用名稱的外掛程式的 JavaScript 介面，好像它是相同的原始目錄中：
 
         <script src="myplugin.js"></script>
     
@@ -131,17 +131,17 @@ JavaScript 提供了前置介面，使該外掛程式的或許最重要的部分
 
 一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面，列出了每個平臺的詳細資訊和每個生成回聲外掛程式上面的簡單示例：
 
-*   <a href="../../platforms/amazonfireos/plugin.html">亞馬遜火 OS 外掛程式</a>
-*   <a href="../../platforms/android/plugin.html">Android 外掛程式</a>
-*   <a href="../../platforms/ios/plugin.html">iOS 外掛程式</a>
-*   <a href="../../platforms/blackberry10/plugin.html">黑莓 10 外掛程式</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone 外掛程式</a>
+*   亞馬遜火 OS 外掛程式
+*   Android 外掛程式
+*   iOS 外掛程式
+*   黑莓 10 外掛程式
+*   Windows Phone 外掛程式
 
 Tizen 平臺不支援外掛程式。
 
 ## 發佈外掛程式
 
-一旦你開發你的外掛程式，您可能希望將發佈與共享它，社會。 你可以將你的外掛程式發佈到科爾多瓦註冊表 （基於[ `npmjs` ][3]） 或任何其它 `npmjs` -基於註冊表。 其他開發人員可以將它要麼使用自動安裝 `plugman` 或科爾多瓦 CLI。 （每個發展路徑的詳細資訊，見到管理外掛程式和<a href="../../cli/index.html">命令列介面</a>使用 Plugman）。
+一旦你開發你的外掛程式，您可能希望將發佈與共享它，社會。 你可以將你的外掛程式發佈到科爾多瓦註冊表 （基於[ `npmjs` ][3]） 或任何其它 `npmjs` -基於註冊表。 其他開發人員可以將它要麼使用自動安裝 `plugman` 或科爾多瓦 CLI。 （每個發展路徑的詳細資訊，見到管理外掛程式和命令列介面使用 Plugman）。
 
  [3]: https://github.com/isaacs/npmjs.org
 

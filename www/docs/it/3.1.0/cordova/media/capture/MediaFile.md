@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>
+# MediaFile
 
 > Incapsula le proprietà di un file di acquisizione di mezzi di comunicazione.
 
@@ -36,4 +36,4 @@ license: >
 
 ## Metodi
 
-*   **<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData**: recupera le informazioni sul formato del file multimediale.
+*   **MediaFile.getFormatData**: recupera le informazioni sul formato del file multimediale.

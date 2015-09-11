@@ -34,8 +34,8 @@ starting from either the first month in the year or the first day of
 the week, depending on the option selected.
 
 If there is an error obtaining the names, then the `errorCallback`
-executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
-error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 
@@ -52,7 +52,7 @@ The value of `options.item` can be `months` or `days`.
 - iOS
 - Windows Phone 8
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this example displays
 a series of twelve popup dialogs, one per month, with text similar to
@@ -68,12 +68,12 @@ a series of twelve popup dialogs, one per month, with text similar to
         { type: 'wide', item: 'months' }
     );
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 

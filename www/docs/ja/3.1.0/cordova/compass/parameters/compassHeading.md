@@ -20,7 +20,7 @@ license: >
 
 # compassHeading
 
-A `CompassHeading` オブジェクトに返される、 `<a href="compassSuccess.html">compassSuccess</a>` コールバック関数。
+A `CompassHeading` オブジェクトに返される、 `compassSuccess` コールバック関数。
 
 ## プロパティ
 
@@ -34,7 +34,7 @@ A `CompassHeading` オブジェクトに返される、 `<a href="compassSuccess
 
 ## 説明
 
-`CompassHeading`オブジェクトに返される、 `<a href="compassSuccess.html">compassSuccess</a>` コールバック関数。
+`CompassHeading`オブジェクトに返される、 `compassSuccess` コールバック関数。
 
 ## Android の癖
 
@@ -46,4 +46,4 @@ A `CompassHeading` オブジェクトに返される、 `<a href="compassSuccess
 
 *   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 
-*   IOS 4 <a href="../../device/device.html">デバイス</a>のため、絶対<a href="../../geolocation/Position/position.html">位置</a>に言及していない<a href="../../device/device.html">デバイス</a>の現在の向きで見出し要因上記のアプリ サポートするその方向。
+*   IOS 4 デバイスのため、絶対位置に言及していないデバイスの現在の向きで見出し要因上記のアプリ サポートするその方向。

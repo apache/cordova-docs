@@ -20,7 +20,7 @@ license: >
 
 # 개요
 
-코르 도우 바는 오픈 소스 모바일 개발 프레임 워크입니다. 각 모바일 플랫폼의 네이티브 개발 언어를 피하고 크로스 플랫폼 개발을 위한 HTML5, CSS3, 자바 스크립트 등 표준 웹 기술을 사용할 수 있습니다. 응용 프로그램 각 플랫폼을 타겟으로 래퍼 내에서 실행 하 고 표준 API 바인딩을 액세스할 각 <a href="../../cordova/device/device.html">장치</a> 센서, 데이터 및 네트워크 상태에 의존.
+코르 도우 바는 오픈 소스 모바일 개발 프레임 워크입니다. 각 모바일 플랫폼의 네이티브 개발 언어를 피하고 크로스 플랫폼 개발을 위한 HTML5, CSS3, 자바 스크립트 등 표준 웹 기술을 사용할 수 있습니다. 응용 프로그램 각 플랫폼을 타겟으로 래퍼 내에서 실행 하 고 표준 API 바인딩을 액세스할 각 장치 센서, 데이터 및 네트워크 상태에 의존.
 
 코르도바를 사용 하 여 있습니다.
 
@@ -28,15 +28,15 @@ license: >
 
 *   웹 애플 리 케이 션은 다양 한 애플 리 케이 션에 배포 패키지를 배포 하 고 웹 개발자 포털을 저장 합니다.
 
-*   모바일 개발자는 *WebView* (브라우저 창) <a href="../../cordova/device/device.html">장치</a> 레벨 Api에 액세스할 수 있는 기본 응용 프로그램 구성 요소를 혼합에 관심된 또는 네이티브 및 WebView 구성 요소 간의 인터페이스를 플러그인을 개발 하려는 경우.
+*   모바일 개발자는 *WebView* (브라우저 창) 장치 레벨 Api에 액세스할 수 있는 기본 응용 프로그램 구성 요소를 혼합에 관심된 또는 네이티브 및 WebView 구성 요소 간의 인터페이스를 플러그인을 개발 하려는 경우.
 
 ## 기본 구성 요소
 
-일반적인 의존 코르도바 응용 프로그램 `config.xml` <a href="../../cordova/file/fileobj/fileobj.html">파일</a>을 응용 프로그램에 대 한 정보를 제공 하 고에 영향을 미치는 어떻게 작동 하는지, 교대 방향 응답 여부와 같은 매개 <a href="../../plugin_ref/spec.html">변수</a>를 지정 합니다. 이 <a href="../../cordova/file/fileobj/fileobj.html">파일</a> 사양을 준수 하는 W3C의 [웹 응용 프로그램 패키지][1], 또는 *위젯*.
+일반적인 의존 코르도바 응용 프로그램 `config.xml` 파일을 응용 프로그램에 대 한 정보를 제공 하 고에 영향을 미치는 어떻게 작동 하는지, 교대 방향 응답 여부와 같은 매개 변수를 지정 합니다. 이 파일 사양을 준수 하는 W3C의 [웹 응용 프로그램 패키지][1], 또는 *위젯*.
 
  [1]: http://www.w3.org/TR/widgets/
 
-응용 프로그램 자체 웹 페이지로 구현, *index.html* 어떤 CSS, 자바 스크립트, 이미지, <a href="../../cordova/media/media.html">미디어</a> <a href="../../cordova/file/fileobj/fileobj.html">파일</a>을 참조 하는 기본적으로 명명 된 또는 다른 리소스는 실행에 필요한. App는 app 상점에 배 부하는 네이티브 응용 프로그램 래퍼 내에서 *WebView* 로 실행 합니다. 다양 한 <a href="../../cordova/device/device.html">장치</a> 기능 방식으로 네이티브 애플 리 케이 션과 상호 작용을 웹 응용 프로그램에 대 한 그것은 또한 참조 해야 합니다는 `cordova.js` API 바인딩을 제공 하는 <a href="../../cordova/file/fileobj/fileobj.html">파일</a>. <!-- XREF
+응용 프로그램 자체 웹 페이지로 구현, *index.html* 어떤 CSS, 자바 스크립트, 이미지, 미디어 파일을 참조 하는 기본적으로 명명 된 또는 다른 리소스는 실행에 필요한. App는 app 상점에 배 부하는 네이티브 응용 프로그램 래퍼 내에서 *WebView* 로 실행 합니다. 다양 한 장치 기능 방식으로 네이티브 애플 리 케이 션과 상호 작용을 웹 응용 프로그램에 대 한 그것은 또한 참조 해야 합니다는 `cordova.js` API 바인딩을 제공 하는 파일. <!-- XREF
 (See the API Reference for an overview, and the Application
 Development Guide for examples of how to use them.)
 XREF -->
@@ -45,15 +45,15 @@ XREF -->
 
 ## 개발 경로
 
-응용 프로그램을 설정 하는 가장 쉬운 방법은 실행 하는 것입니다는 `cordova` 명령줄 유틸리티, 일컬어 *<a href="../cli/index.html">명령줄 인터페이스</a>* (CLI). (CLI를 설치 하는 <a href="../cli/index.html">명령줄 인터페이스</a> 참조.) 플랫폼 대상 원하는 설정에 따라 개발 사이클의 진보적으로 더 큰 주식에 대해 CLI에 의존 수 있습니다.
+응용 프로그램을 설정 하는 가장 쉬운 방법은 실행 하는 것입니다는 `cordova` 명령줄 유틸리티, 일컬어 *명령줄 인터페이스* (CLI). (CLI를 설치 하는 명령줄 인터페이스 참조.) 플랫폼 대상 원하는 설정에 따라 개발 사이클의 진보적으로 더 큰 주식에 대해 CLI에 의존 수 있습니다.
 
 *   가장 기본적인 시나리오에서 간단 하 게 수정할 수 있습니다에 대 한 기본 구성으로 채워지는 새로운 프로젝트를 생성 하려면 CLI를 사용할 수 있습니다.
 
-*   많은 모바일 플랫폼에 대 한 각 SDK에서 컴<a href="../../cordova/file/fileobj/fileobj.html">파일</a> 하는 데 필요한 추가 프로젝트 <a href="../../cordova/file/fileobj/fileobj.html">파일</a>을 설정 하는 CLI를 사용할 수 있습니다. 이 대 한 각 대상된 플랫폼의 SDK를 설치 해야 합니다. (자세한 내용은 <a href="../platforms/index.html">플랫폼 <a href="../../index.html">가이드</a></a>를 참조 하십시오.) 플랫폼 지원 테이블 아래에 표시 된 대로 대상된 플랫폼에 따라 서로 다른 운영 체제에서 CLI를 실행 해야 할 수도 있습니다.
+*   많은 모바일 플랫폼에 대 한 각 SDK에서 컴파일 하는 데 필요한 추가 프로젝트 파일을 설정 하는 CLI를 사용할 수 있습니다. 이 대 한 각 대상된 플랫폼의 SDK를 설치 해야 합니다. (자세한 내용은 플랫폼 가이드를 참조 하십시오.) 플랫폼 지원 테이블 아래에 표시 된 대로 대상된 플랫폼에 따라 서로 다른 운영 체제에서 CLI를 실행 해야 할 수도 있습니다.
 
-*   플랫폼 지원에 대 한 CLI 실행 응용 프로그램을 컴<a href="../../cordova/file/fileobj/fileobj.html">파일</a> 하 고 SDK 기반 <a href="../../cordova/device/device.html">장치</a> 에뮬레이터에서 실행 수 있습니다. <!-포괄적인 테스트에 대 한 외부 참조 (참조 응용 프로그램 개발 <a href="../../index.html">가이드</a>를 자세한 내용은.) 외부 참조-->, 또한 응용 프로그램 <a href="../../cordova/file/fileobj/fileobj.html">파일</a>을 생성 하 고 <a href="../../cordova/device/device.html">장치</a>에 직접 설치할 수 있습니다.
+*   플랫폼 지원에 대 한 CLI 실행 응용 프로그램을 컴파일 하 고 SDK 기반 장치 에뮬레이터에서 실행 수 있습니다. <!-포괄적인 테스트에 대 한 외부 참조 (참조 응용 프로그램 개발 가이드를 자세한 내용은.) 외부 참조-->, 또한 응용 프로그램 파일을 생성 하 고 장치에 직접 설치할 수 있습니다.
 
-개발 주기에서 어느 시점에서 옵션 풍부한 집합을 제공할 수 있습니다 플랫폼 SDK 도구에 사용할 수 있습니다. (각 플랫폼 SDK 도구에 대 한 자세한 내용은 <a href="../platforms/index.html">플랫폼 <a href="../../index.html">가이드</a></a> 설정을 참조 하십시오.) SDK 환경 웹 기반 및 기본 응용 프로그램 구성 요소를 혼합 한 하이브리드 애플 리 케이 션을 구현 하려는 경우에 더 적합 하다. <!-당신이--> 외부 참조 (참조 하이브리드 응용 프로그램 <a href="../../index.html">가이드</a>에 대 한 자세한 내용은) 외부 처음 애플 리 케이 션을 생성 하 명령줄 유틸리티를 사용할 수 있습니다 또는 반복적으로 그 후 SDK 도구 업데이트 코드를 피드를 합니다. 당신은 또한 만들 수 있습니다 응용 프로그램의 구성 <a href="../../cordova/file/fileobj/fileobj.html">파일</a> 자신. <!-- XREF
+개발 주기에서 어느 시점에서 옵션 풍부한 집합을 제공할 수 있습니다 플랫폼 SDK 도구에 사용할 수 있습니다. (각 플랫폼 SDK 도구에 대 한 자세한 내용은 플랫폼 가이드 설정을 참조 하십시오.) SDK 환경 웹 기반 및 기본 응용 프로그램 구성 요소를 혼합 한 하이브리드 애플 리 케이 션을 구현 하려는 경우에 더 적합 하다. <!-당신이--> 외부 참조 (참조 하이브리드 응용 프로그램 가이드에 대 한 자세한 내용은) 외부 처음 애플 리 케이 션을 생성 하 명령줄 유틸리티를 사용할 수 있습니다 또는 반복적으로 그 후 SDK 도구 업데이트 코드를 피드를 합니다. 당신은 또한 만들 수 있습니다 응용 프로그램의 구성 파일 자신. <!-- XREF
 (See The config.xml File for details.)
 XREF -->
 
@@ -64,7 +64,7 @@ XREF -->
 
 ## 플랫폼 지원
 
-다음 개발 도구 및 각 모바일 플랫폼에 대 한 <a href="../../cordova/device/device.html">장치</a> 사용할 수 있는 Api의 집합을 보여 줍니다. (열 머리글 CLI의 속기 스텁이 표시.)
+다음 개발 도구 및 각 모바일 플랫폼에 대 한 장치 사용할 수 있는 Api의 집합을 보여 줍니다. (열 머리글 CLI의 속기 스텁이 표시.)
 
 <!-- START HTML -->
 
@@ -149,7 +149,7 @@ XREF -->
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_platforms_android_webview.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry" class="n">
@@ -159,7 +159,7 @@ XREF -->
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_platforms_ios_webview.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="winphone7"  class="n">
@@ -181,23 +181,23 @@ XREF -->
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_guide_platforms_android_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry" class="y">
-          <a href="guide_guide_platforms_blackberry_plugin.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_guide_platforms_blackberry_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_guide_platforms_ios_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(상세 내용 <a href="../../cordova/inappbrowser/inappbrowser.html">보기</a>)</a>
+          <a href="guide_guide_platforms_wp8_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -221,7 +221,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html"><a href="../../cordova/accelerometer/accelerometer.html">가 속도계</a></a>
+          <a href="cordova_accelerometer_accelerometer.md.html">가 속도계</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -251,7 +251,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html"><a href="../../cordova/camera/camera.html">카메라</a></a>
+          <a href="cordova_camera_camera.md.html">카메라</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -281,7 +281,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">캡처</a></a>
+          <a href="cordova_media_capture_capture.md.html">캡처</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -311,7 +311,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">나침반</a></a>
+          <a href="cordova_compass_compass.md.html">나침반</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -342,7 +342,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">연결</a></a>
+          <a href="cordova_connection_connection.md.html">연결</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -372,7 +372,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/contacts.html">연락처</a></a>
+          <a href="cordova_contacts_contacts.md.html">연락처</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -402,7 +402,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">장치</a></a>
+          <a href="cordova_device_device.md.html">장치</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -432,7 +432,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">이벤트</a></a>
+          <a href="cordova_events_events.md.html">이벤트</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -462,7 +462,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">파일</a></a>
+          <a href="cordova_file_file.md.html">파일</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -478,11 +478,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          없음 <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          없음 FileTransfer
         </td>
         
         <td data-col="winphone8"  class="p">
-          없음 <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          없음 FileTransfer
         </td>
         
         <td data-col="win8"       class="y">
@@ -494,7 +494,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">지리적 <a href="../../cordova/geolocation/Position/position.html">위치</a></a></a>
+          <a href="cordova_geolocation_geolocation.md.html">지리적 위치</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -524,7 +524,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">세계화</a></a>
+          <a href="cordova_globalization_globalization.md.html">세계화</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -554,7 +554,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -584,7 +584,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">미디어</a></a>
+          <a href="cordova_media_media.md.html">미디어</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -614,7 +614,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">알림</a></a>
+          <a href="cordova_notification_notification.md.html">알림</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -644,7 +644,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a></a>
+          <a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -674,7 +674,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">스토리지</a></a>
+          <a href="cordova_storage_storage.md.html">스토리지</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -690,11 +690,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>만
+          localStorage만
         </td>
         
         <td data-col="winphone8"  class="p">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>만
+          localStorage만
         </td>
         
         <td data-col="win8"       class="y">

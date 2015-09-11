@@ -67,7 +67,7 @@ __NOTE:__ this step may not be required.  If the lib\windows-phone directory alr
 In order to simplify the development process, Cordova comes with a Visual Studio template that allows creating a Cordova application rapidly. This template can be modified if needed and the below steps indicate how to proceed if you want to modify and re-generate the template.
 
 - Open the `lib\windows-phone\templates\standalone\CordovaSolution.sln` file in Visual Studio Express for Windows Phone.
-- Select __Export Template...__ from the __<a href="../../../cordova/file/fileobj/fileobj.html">File</a>__ menu.
+- Select __Export Template...__ from the __File__ menu.
 - Choose template type __Project template__
 - Give the exported template a name, such as `CordovaStarter-2.1.0`, which produces a `CordovaStarter-2.1.0.zip` archive.
 - Optionally, you may add a description, icon image, and preview image.  These  display in Visual Studio's __New Project__ dialog.
@@ -120,7 +120,7 @@ choose __do not include in project__.
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
 
 - Make sure your phone is connected, and the screen is unlocked.
-- In Visual Studio, select '<a href="../../../cordova/device/device.html">Device</a>' from the top drop-down menu.
+- In Visual Studio, select 'Device' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp7/wpd.png)

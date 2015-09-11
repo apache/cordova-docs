@@ -20,13 +20,13 @@ license: >
 
 # Guía de lista blanca
 
-## <a href="../../overview/index.html">Perspectiva general</a>
+## Perspectiva general
 
 Listas blancas de recursos es un modelo de seguridad que controla el acceso a recursos de red externos, tales como `http://google.com` . Directiva de seguridad predeterminada de Apache Cordova permite el acceso a cualquier recurso en cualquier sitio en Internet. Antes de su aplicación a la producción, debe revisar su lista blanca y declarar el acceso a la red específica dominios y subdominios.
 
 ## Especificación
 
-Dominio whitelisting sienta las bases para la especificación [W3C Widget acceso][1]. En la especificación de acceso Widget, el `<access>` elemento se utiliza para declarar el acceso a recursos de red específicos. Apache Cordova se extiende este concepto para permitir las listas blancas de recursos (URL) de la red individuales. En el futuro, Apache Cordova se <a href="../../../cordova/events/events.resume.html">resume</a>n las implementaciones de las listas blancas de plataforma. Sin embargo, por ahora cada plataforma implementa sus propias listas blancas recurso o dominio. Las diferencias entre las implementaciones de la plataforma se describen más adelante en este documento.
+Dominio whitelisting sienta las bases para la especificación [W3C Widget acceso][1]. En la especificación de acceso Widget, el `<access>` elemento se utiliza para declarar el acceso a recursos de red específicos. Apache Cordova se extiende este concepto para permitir las listas blancas de recursos (URL) de la red individuales. En el futuro, Apache Cordova se resumen las implementaciones de las listas blancas de plataforma. Sin embargo, por ahora cada plataforma implementa sus propias listas blancas recurso o dominio. Las diferencias entre las implementaciones de la plataforma se describen más adelante en este documento.
 
  [1]: http://www.w3.org/TR/widgets-access/
 

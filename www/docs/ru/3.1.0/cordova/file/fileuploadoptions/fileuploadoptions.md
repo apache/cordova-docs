@@ -20,7 +20,7 @@ license: >
 
 # FileUploadOptions
 
-A `FileUploadOptions` объект может быть передан `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` объекта `upload()` метод, чтобы задать дополнительные параметры для загрузки сценария.
+A `FileUploadOptions` объект может быть передан `FileTransfer` объекта `upload()` метод, чтобы задать дополнительные параметры для загрузки сценария.
 
 ## Свойства
 
@@ -38,7 +38,7 @@ A `FileUploadOptions` объект может быть передан `<a href="
 
 ## Описание
 
-A `FileUploadOptions` объект может быть передан `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` объекта `upload()` метод, чтобы задать дополнительные параметры для загрузки сценария.
+A `FileUploadOptions` объект может быть передан `FileTransfer` объекта `upload()` метод, чтобы задать дополнительные параметры для загрузки сценария.
 
 ## WP7 галтель
 

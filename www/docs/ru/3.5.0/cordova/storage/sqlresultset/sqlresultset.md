@@ -20,7 +20,7 @@ license: >
 
 # SQLResultSet
 
-Когда `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр.
+Когда `SQLTransaction` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр.
 
 ## Свойства
 
@@ -28,11 +28,11 @@ license: >
 
 *   **rowsAffected**: количество строк, изменены инструкцией SQL, нуль, если заявление не затронула ни одной строки.
 
-*   **строки**: `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` представляющие возвращенных строк, empty, если строки не возвращаются.
+*   **строки**: `SQLResultSetRowList` представляющие возвращенных строк, empty, если строки не возвращаются.
 
 ## Подробная информация
 
-Когда `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр, содержащий три свойства:
+Когда `SQLTransaction` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр, содержащий три свойства:
 
 *   `insertId`Возвращает номер строки successly оператора вставки SQL. Если SQL не вставить строки, `insertId` не задано.
 
@@ -68,7 +68,7 @@ license: >
         alert("Error processing SQL: "+err.code);
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(queryDB, errorCB);
     
 
@@ -77,14 +77,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Populate the database
         //
@@ -123,21 +123,21 @@ license: >
         // Transaction success callback
         //
         function successCB() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

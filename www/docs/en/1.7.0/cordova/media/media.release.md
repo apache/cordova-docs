@@ -29,7 +29,7 @@ Releases the underlying operating systems audio resources.
 Description
 -----------
 
-Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the <a href="media.html">Media</a> resource.
+Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
 
 Supported Platforms
 -------------------
@@ -38,36 +38,36 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
     
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
         // Audio player
         //
-        var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+        var my_media = new Media(src, onSuccess, onError);
         
-        my_<a href="media.play.html">media.play</a>();
-        my_<a href="media.stop.html">media.stop</a>();
+        my_media.play();
+        my_media.stop();
         my_media.release();
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
         
             <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
             <script type="text/javascript" charset="utf-8">
         
             // Wait for Cordova to load
             //
-            document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         
             // Cordova is ready
             //
-            function on<a href="../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
         
@@ -79,27 +79,27 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             // Play audio
             //
             function playAudio(src) {
-                // Create <a href="media.html">Media</a> object from src
-                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                // Create Media object from src
+                my_media = new Media(src, onSuccess, onError);
         
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
         
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -108,9 +108,9 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
             // Pause audio
             // 
-            function <a href="../events/events.pause.html">pause</a>Audio() {
+            function pauseAudio() {
                 if (my_media) {
-                    my_media.<a href="../events/events.pause.html">pause</a>();
+                    my_media.pause();
                 }
             }
         
@@ -118,7 +118,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
             // 
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -139,7 +139,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         
             // Set audio position
             // 
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
         
@@ -147,7 +147,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

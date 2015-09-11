@@ -26,63 +26,63 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="guide/overview/index.html">Übersicht</a>
+        Übersicht
       </h2>
       
       <span>Beginnen Sie hier, wenn Sie Cordova Neuland.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/cli/index.html">Die Befehlszeilenschnittstelle</a>
+        Die Befehlszeilenschnittstelle
       </h2>
       
       <span>Erstellen, erstellen und Bereitstellen von der Befehlszeile aus.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/platforms/index.html">Plattform-Guides</a>
+        Plattform-Guides
       </h2>
       
       <span>Jede SDK und Update Projekte</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/index.html">Die <a href="cordova/file/fileobj/fileobj.html">Datei</a> config.xml</a> <a href="cordova/file/fileobj/fileobj.html">Datei</a>
+        Die Datei config.xml Datei
       </h2>
       
       <span>Die Features Ihrer Anwendung anpassen.</span>
     </li>
     <li>
       <h2>
-        <a href="config_ref/images.html">Symbole und Splash-Screens</a>
+        Symbole und Splash-Screens
       </h2>
       
       <span>Die app Anzeigen von Bildern anpassen.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/webviews/index.html">Einbetten von Webansichten für</a>
+        Einbetten von Webansichten für
       </h2>
       
       <span>Implementieren Sie die Cordova WebView in Ihrem Projekt.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/hybrid/plugins/index.html">Plugin-Entwicklung-Guide</a>
+        Plugin-Entwicklung-Guide
       </h2>
       
       <span>Entwickeln Sie Ihre erste Plugin.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/privacy/index.html">Datenschutz-Guide</a>
+        Datenschutz-Guide
       </h2>
       
       <span>Erfahren Sie mehr über wichtige mobile Datenschutzprobleme.</span>
     </li>
     <li>
       <h2>
-        <a href="guide/appdev/whitelist/index.html">Whitelist-Guide</a>
+        Whitelist-Guide
       </h2>
       
       <span>Gewähren Sie eine Anwendungszugriff auf externe Ressourcen.</span>
@@ -103,115 +103,115 @@ license: >
   <ul>
     <li>
       <h2>
-        <a href="cordova/accelerometer/acceleration/acceleration.html">Beschleunigung</a>smesser
+        Beschleunigungsmesser
       </h2>
       
-      <span>Tippen Sie in das <a href="cordova/device/device.html">Gerät</a> Weg-und/oder Geschwindigkeitsgeber.</span>
+      <span>Tippen Sie in das Gerät Weg-und/oder Geschwindigkeitsgeber.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/camera/camera.html">Kamera</a>
+        Kamera
       </h2>
       
-      <span>Ein Foto mit der <a href="cordova/device/device.html">Gerät</a>ekamera zu erfassen.</span>
+      <span>Ein Foto mit der Gerätekamera zu erfassen.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/capture/capture.html">Erfassen</a>
+        Erfassen
       </h2>
       
-      <span>Media-<a href="cordova/file/fileobj/fileobj.html">Datei</a>en mithilfe des <a href="cordova/device/device.html">Gerät</a>s erfassen <a href="cordova/media/media.html">Medien</a>anwendungen zu erfassen.</span>
+      <span>Media-Dateien mithilfe des Geräts erfassen Medienanwendungen zu erfassen.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/compass/compass.html">Kompass</a>
+        Kompass
       </h2>
       
-      <span>Erhalten Sie die Richtung, die das <a href="cordova/device/device.html">Gerät</a> verweist.</span>
+      <span>Erhalten Sie die Richtung, die das Gerät verweist.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/connection/connection.html">Verbindung</a>
+        Verbindung
       </h2>
       
       <span>Der Netzwerkstatus und Mobilfunknetz Informationen schnell zu überprüfen.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/contacts/contacts.html"><a href="cordova/contacts/Contact/contact.html">Kontakt</a>e</a>
+        Kontakte
       </h2>
       
-      <span>Arbeiten Sie mit der <a href="cordova/device/device.html">Gerät</a>e-<a href="cordova/contacts/Contact/contact.html">Kontakt</a>datenbank.</span>
+      <span>Arbeiten Sie mit der Geräte-Kontaktdatenbank.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/device/device.html">Gerät</a>
+        Gerät
       </h2>
       
-      <span><a href="cordova/device/device.html">Gerät</a> bestimmte Informationen zu sammeln.</span>
+      <span>Gerät bestimmte Informationen zu sammeln.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/events/events.html">Veranstaltungen</a>
+        Veranstaltungen
       </h2>
       
       <span>Haken Sie in systemeigene Ereignisse durch JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/file/fileobj/fileobj.html">Datei</a>
+        Datei
       </h2>
       
-      <span>Haken Sie in native <a href="cordova/file/filesystem/filesystem.html"><a href="cordova/file/fileobj/fileobj.html">Datei</a>system</a> durch JavaScript.</span>
+      <span>Haken Sie in native Dateisystem durch JavaScript.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/geolocation/geolocation.html">Geolocation</a>
+        Geolocation
       </h2>
       
       <span>Machen Sie Ihre Anwendung Lage bewusst.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/globalization/globalization.html">Globalisierung</a>
+        Globalisierung
       </h2>
       
       <span>Aktivieren Sie die Darstellung von Objekten, die spezifisch für ein Gebietsschema.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
+        InAppBrowser
       </h2>
       
       <span>URLs in einer anderen in-app Browserinstanz zu starten.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/media/media.html">Medien</a>
+        Medien
       </h2>
       
-      <span>Aufzeichnen und Wiedergeben von audio-<a href="cordova/file/fileobj/fileobj.html">Datei</a>en.</span>
+      <span>Aufzeichnen und Wiedergeben von audio-Dateien.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/notification/notification.html">Benachrichtigung</a>
+        Benachrichtigung
       </h2>
       
-      <span>Visueller, akustischer und taktiler <a href="cordova/device/device.html">Gerät</a>ebenachrichtigungen.</span>
+      <span>Visueller, akustischer und taktiler Gerätebenachrichtigungen.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/splashscreen/splashscreen.html">SplashScreen</a>
+        SplashScreen
       </h2>
       
       <span>Ein- und Ausblenden der Splash-Screen Anwendungen.</span>
     </li>
     <li>
       <h2>
-        <a href="cordova/storage/storage.html">Speicher</a>
+        Speicher
       </h2>
       
-      <span>Haken Sie in die <a href="cordova/device/device.html">Gerät</a>e native Storage-Optionen.</span>
+      <span>Haken Sie in die Geräte native Storage-Optionen.</span>
     </li>
   </ul>
 </div>

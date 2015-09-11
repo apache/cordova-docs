@@ -20,12 +20,12 @@ license: >
 
 # メディア
 
-> `Media`オブジェクトを記録し、<a href="../device/device.html">デバイス</a>上のオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>を再生する機能を提供します。
+> `Media`オブジェクトを記録し、デバイス上のオーディオ ファイルを再生する機能を提供します。
 
-    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**注：**現在の実装では、メディアの<a href="capture/capture.html">キャプチャ</a>のための W3C 仕様に準拠していないとは便宜上提供されるだけです。 将来の実装を最新の W3C 仕様に準拠し、現在 Api をとがめることがあります。
+**注：**現在の実装では、メディアのキャプチャのための W3C 仕様に準拠していないとは便宜上提供されるだけです。 将来の実装を最新の W3C 仕様に準拠し、現在 Api をとがめることがあります。
 
 ## パラメーター
 
@@ -33,7 +33,7 @@ license: >
 
 *   **mediaSuccess**: (省略可能) 後に実行するコールバックを `Media` 再生用に現在、レコード、または stop アクション オブジェクトが完了しました。*(機能)*
 
-*   **<a href="Parameters/mediaError.html">mediaError</a>**: (省略可能) エラーが発生した場合に実行されるコールバック。*(機能)*
+*   **mediaError**: (省略可能) エラーが発生した場合に実行されるコールバック。*(機能)*
 
 *   **mediaStatus**: (省略可能) 状態の変化を示すために実行されるコールバック。*(機能)*
 
@@ -49,29 +49,29 @@ license: >
 
 ## メソッド
 
-*   `<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>`: オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>内の現在<a href="../geolocation/Position/position.html">位置</a>を返します。
+*   `media.getCurrentPosition`: オーディオ ファイル内の現在位置を返します。
 
-*   `<a href="media.getDuration.html">media.getDuration</a>`: オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の継続時間を返します。
+*   `media.getDuration`: オーディオ ファイルの継続時間を返します。
 
-*   `<a href="media.play.html">media.play</a>`: 開始またはオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の再生を<a href="../events/events.resume.html">再開</a>します。
+*   `media.play`: 開始またはオーディオ ファイルの再生を再開します。
 
-*   `<a href="media.pause.html">media.pause</a>`： オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の再生を一時停止。
+*   `media.pause`： オーディオ ファイルの再生を一時停止。
 
-*   `<a href="media.release.html">media.release</a>`: 基になるオペレーティング システムのオーディオ リソースを解放します。
+*   `media.release`: 基になるオペレーティング システムのオーディオ リソースを解放します。
 
-*   `<a href="media.seekTo.html">media.seekTo</a>`: オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>内の<a href="../geolocation/Position/position.html">位置</a>を移動します。
+*   `media.seekTo`: オーディオ ファイル内の位置を移動します。
 
-*   `<a href="media.setVolume.html">media.setVolume</a>`: オーディオの再生ボリュームを設定します。
+*   `media.setVolume`: オーディオの再生ボリュームを設定します。
 
-*   `<a href="media.startRecord.html">media.startRecord</a>`： オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を開始します。
+*   `media.startRecord`： オーディオ ファイルの録音を開始します。
 
-*   `<a href="media.stop.html">media.stop</a>Record`: オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の録音を停止します。
+*   `media.stopRecord`: オーディオ ファイルの録音を停止します。
 
-*   `<a href="media.stop.html">media.stop</a>`: オーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>の再生を停止します。
+*   `media.stop`: オーディオ ファイルの再生を停止します。
 
 ## 追加読み取り専用パラメーター
 
-*   **<a href="../geolocation/Position/position.html">位置</a>**： 数秒でオーディオの再生では、内の<a href="../geolocation/Position/position.html">位置</a>。
+*   **位置**： 数秒でオーディオの再生では、内の位置。
     
     *   自動的に更新されません; のプレイ中にコール `getCurrentPosition` を更新します。
 
@@ -88,7 +88,7 @@ license: >
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ コルドバ プラグイン追加 org.apache.cordova.media $ コルドバ プラグイン ['org.apache.cordova.media'] ls $ コルドバ プラグイン rm org.apache.cordova.media
      
@@ -138,11 +138,11 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
 
 ### Windows Phone の癖
 
-*   のみ 1 つのメディア <a href="../file/fileobj/fileobj.html">ファイル</a>は、一度に再生できます。
+*   のみ 1 つのメディア ファイルは、一度に再生できます。
 
 *   アプリケーションと他のメディアとの対話に厳格な制限があります。 [詳細については、Microsoft のマニュアル][2]を参照してください。.
 

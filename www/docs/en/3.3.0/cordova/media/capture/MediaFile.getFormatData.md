@@ -18,21 +18,21 @@ license: >
     under the License.
 ---
 
-# <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData
+# MediaFile.getFormatData
 
 > Retrieves format information about the media capture file.
 
-    media<a href="../../file/fileobj/fileobj.html">File</a>.getFormatData(
-        <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB successCallback,
-        [<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB errorCallback]
+    mediaFile.getFormatData(
+        MediaFileDataSuccessCB successCallback,
+        [MediaFileDataErrorCB errorCallback]
     );
 
 ## Description
 
 This function asynchronously attempts to retrieve the format
 information for the media file.  If successful, it invokes the
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataSuccessCB` callback with a `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` object.  If
-the attempt fails, this function invokes the `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>DataErrorCB`
+`MediaFileDataSuccessCB` callback with a `MediaFileData` object.  If
+the attempt fails, this function invokes the `MediaFileDataErrorCB`
 callback.
 
 ## Supported Platforms
@@ -47,19 +47,19 @@ callback.
 ## Amazon Fire OS Quirks
 
 The API to access media file format information is limited, so not all
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` properties are supported.
+`MediaFileData` properties are supported.
 
 ## BlackBerry 10 Quirks
 
 Does not provide an API for information about media files, so all
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` objects return with default values.
+`MediaFileData` objects return with default values.
 
 ## Android Quirks
 
 The API to access media file format information is limited, so not all
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` properties are supported.
+`MediaFileData` properties are supported.
 
 ## iOS Quirks
 
 The API to access media file format information is limited, so not all
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` properties are supported.
+`MediaFileData` properties are supported.

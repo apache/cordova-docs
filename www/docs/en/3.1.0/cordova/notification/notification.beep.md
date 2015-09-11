@@ -34,35 +34,35 @@ The device plays a beep sound.
 - Tizen
 - Windows Phone 7 and 8
 
-## Quick <a href="../storage/storage.opendatabase.html">Example</a>
+## Quick Example
 
     // Beep twice!
     navigator.notification.beep(2);
 
-## Full <a href="../storage/storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
 
         // Show a custom alert
         //
-        function <a href="../inappbrowser/inappbrowser.html">show</a>Alert() {
-            navigator.<a href="notification.alert.html">notification.alert</a>(
+        function showAlert() {
+            navigator.notification.alert(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -78,13 +78,13 @@ The device plays a beep sound.
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
+            navigator.notification.vibrate(2000);
         }
 
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Alert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
@@ -92,7 +92,7 @@ The device plays a beep sound.
 
 ## Android Quirks
 
-- Android plays the default __<a href="notification.html">Notification</a> ringtone__ specified under the __Settings/Sound & Display__ panel.
+- Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
 
 ## Windows Phone 7 and 8 Quirks
 

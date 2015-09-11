@@ -22,7 +22,7 @@ license: >
 
 > Le `Media` objet fournit la possibilité d'enregistrer et de lire des fichiers audio sur un périphérique.
 
-    var media = new Media(src, mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>], [mediaStatus]);
+    var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
 **Remarque :** L'implémentation actuelle n'est pas conforme à une spécification du W3C pour la capture de médias et est fournie pour plus de commodité seulement. Une mise en œuvre future adhèrera à la toute dernière spécification W3C et peut déprécier l'API actuelles.
@@ -33,7 +33,7 @@ license: >
 
 *   **mediaSuccess**: (en option) la fonction de rappel qui s'exécute après un `Media` objet a fini le jeu actuel, l'enregistrement ou action stop. *(Fonction)*
 
-*   **<a href="Parameters/mediaError.html">mediaError</a>**: (facultatif) la fonction de rappel qui s'exécute si une erreur survient. *(Fonction)*
+*   **mediaError**: (facultatif) la fonction de rappel qui s'exécute si une erreur survient. *(Fonction)*
 
 *   **mediaStatus**: (facultatif) le rappel qui s'exécute pour indiquer les changements d'État. *(Fonction)*
 
@@ -49,31 +49,31 @@ Les constantes suivantes sont déclarées comme le seul paramètre à la `mediaS
 
 ## Méthodes
 
-*   `media.getCurrent<a href="../geolocation/Position/position.html">Position</a>`: Retourne la position courante dans un fichier audio.
+*   `media.getCurrentPosition`: Retourne la position courante dans un fichier audio.
 
-*   `<a href="media.getDuration.html">media.getDuration</a>`: Retourne la durée d'un fichier audio.
+*   `media.getDuration`: Retourne la durée d'un fichier audio.
 
 *   `media.play`: Commencer ou reprendre la lecture d'un fichier audio.
 
-*   `media.<a href="../events/events.pause.html">pause</a>`: Interrompre la lecture d'un fichier audio.
+*   `media.pause`: Interrompre la lecture d'un fichier audio.
 
-*   `<a href="media.release.html">media.release</a>`: Libère les ressources audio du système d'exploitation sous-jacent.
+*   `media.release`: Libère les ressources audio du système d'exploitation sous-jacent.
 
-*   `<a href="media.seekTo.html">media.seekTo</a>`: Déplace la position au sein du fichier audio.
+*   `media.seekTo`: Déplace la position au sein du fichier audio.
 
-*   `<a href="media.setVolume.html">media.setVolume</a>`: Réglage du volume pour la lecture audio.
+*   `media.setVolume`: Réglage du volume pour la lecture audio.
 
-*   `<a href="media.startRecord.html">media.startRecord</a>`: Commencez à enregistrer un fichier audio.
+*   `media.startRecord`: Commencez à enregistrer un fichier audio.
 
-*   `<a href="media.stop.html">media.stop</a>Record`: Arrêter d'enregistrer un fichier audio.
+*   `media.stopRecord`: Arrêter d'enregistrer un fichier audio.
 
-*   `<a href="media.stop.html">media.stop</a>`: Arrêter la lecture d'un fichier audio.
+*   `media.stop`: Arrêter la lecture d'un fichier audio.
 
 ## Paramètres supplémentaires de ReadOnly
 
 *   **position**: la position au sein de la lecture audio, en quelques secondes.
     
-    *   Pas automatiquement mis à jour pendant la lecture ; appelez `getCurrent<a href="../geolocation/Position/position.html">Position</a>` pour mettre à jour.
+    *   Pas automatiquement mis à jour pendant la lecture ; appelez `getCurrentPosition` pour mettre à jour.
 
 *   **durée**: la durée des médias, en quelques secondes.
 
@@ -111,8 +111,8 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 *   BlackBerry WebWorks
     
         (in www/plugins.xml)
-        <feature name="<a href="capture/capture.html">Capture</a>">
-            <param name="blackberry-package" value="org.apache.cordova.media.Media<a href="capture/capture.html">Capture</a>" />
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
         </feature>
         
 

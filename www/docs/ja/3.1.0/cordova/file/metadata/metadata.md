@@ -20,15 +20,15 @@ license: >
 
 # メタデータ
 
-<a href="../fileobj/fileobj.html">ファイル</a>またはディレクトリの状態に関する情報を提供するインターフェイスです。
+ファイルまたはディレクトリの状態に関する情報を提供するインターフェイスです。
 
 ## プロパティ
 
-*   **修正時刻**: <a href="../fileobj/fileobj.html">ファイル</a>またはディレクトリが最後変更された日時。*（日）*
+*   **修正時刻**: ファイルまたはディレクトリが最後変更された日時。*（日）*
 
 ## 詳細
 
-`Metadata`オブジェクトは、<a href="../fileobj/fileobj.html">ファイル</a>またはディレクトリの状態に関する情報を表します。 呼び出して、 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` または `<a href="../fileentry/fileentry.html">FileEntry</a>` オブジェクトの `getMetadata()` メソッドの結果、 `Metadata` インスタンス。
+`Metadata`オブジェクトは、ファイルまたはディレクトリの状態に関する情報を表します。 呼び出して、 `DirectoryEntry` または `FileEntry` オブジェクトの `getMetadata()` メソッドの結果、 `Metadata` インスタンス。
 
 ## サポートされているプラットフォーム
 

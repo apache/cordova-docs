@@ -20,16 +20,16 @@ license: >
 
 # Offline
 
-Das Ereignis wird ausgelöst, wenn eine Anwendung offline geht, und das <a href="../device/device.html">Gerät</a> nicht mit dem Internet verbunden ist.
+Das Ereignis wird ausgelöst, wenn eine Anwendung offline geht, und das Gerät nicht mit dem Internet verbunden ist.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
+    document.addEventListener("offline", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Das `offline` -Ereignis wird ausgelöst, wenn ein bereits angeschlossenes <a href="../device/device.html">Gerät</a> eine Netzwerkverbindung verliert, so dass eine Anwendung nicht mehr auf das Internet zugreifen kann. Es stützt sich auf die gleichen Informationen wie die <a href="../connection/connection.html">Verbindung</a>-API und wird ausgelöst, wenn die `<a href="../connection/connection.type.html">connection.type</a>` ändert sich von `NONE` auf einen anderen Wert.
+Das `offline` -Ereignis wird ausgelöst, wenn ein bereits angeschlossenes Gerät eine Netzwerkverbindung verliert, so dass eine Anwendung nicht mehr auf das Internet zugreifen kann. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn die `connection.type` ändert sich von `NONE` auf einen anderen Wert.
 
-Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -42,7 +42,7 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
 
 ## Kleines Beispiel
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+    document.addEventListener("offline", onOffline, false);
     
     function onOffline() {
         // Handle the offline event
@@ -54,7 +54,7 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Offline Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,13 +62,13 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
+            document.addEventListener("offline", onOffline, false);
         }
     
         // Handle the offline event
@@ -93,4 +93,4 @@ Bei der Ausführung im Emulator, der `connection.status` ist immer unbekannt, so
 
 ## Windows Phone 8 Macken
 
-Der Emulator meldet den <a href="../connection/connection.html">Verbindung</a>styp als `Cellular` , die wird nicht geändert, so dass das Ereignis *nicht* Feuer.
+Der Emulator meldet den Verbindungstyp als `Cellular` , die wird nicht geändert, so dass das Ereignis *nicht* Feuer.

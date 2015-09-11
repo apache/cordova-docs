@@ -154,7 +154,7 @@ Si elle est, nous retourner un `PluginResult` avec une `ERROR` État. Si toutes 
 
 Enfin, nous envoyer le résultat à `self.commandDelegate` , qui exécute le `exec` rappels de succès ou l'échec de la méthode du côté de JavaScript. Si le rappel de succès est appelé, elle passe dans le `echo` paramètre.
 
-## <a href="../../../cordova/file/fileobj/fileobj.html">File</a>tage
+## Filetage
 
 Méthodes plugin sont exécutées dans le même thread que l'interface utilisateur. Si votre plugin nécessite beaucoup de traitement ou nécessite un appel bloquant, vous devez utiliser un thread d'arrière-plan. Par exemple :
 
@@ -182,7 +182,7 @@ Voir d'autres méthodes que vous pouvez substituer dans :
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-Par exemple, vous pouvez accrocher dans le `<a href="../../../cordova/events/events.pause.html">pause</a>` , `<a href="../../../cordova/events/events.resume.html">resume</a>` , app résilier et `handleOpenURL` événements.
+Par exemple, vous pouvez accrocher dans le `pause` , `resume` , app résilier et `handleOpenURL` événements.
 
 ## Débogage des Plugins
 

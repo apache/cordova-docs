@@ -23,7 +23,7 @@ license: >
 This guide shows how to modify iOS projects to upgrade from older
 versions of Cordova.  Most of these instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information
+`cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
 __NOTE__: Xcode 5 is required. Currently, to submit to the
@@ -37,7 +37,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update ios`
 
@@ -49,7 +49,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update ios`
 
@@ -61,7 +61,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update ios`
         
@@ -74,7 +74,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update ios`
         
@@ -98,7 +98,7 @@ Xcode 5 Issues:
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+   described in The Command-Line Interface.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add ios`.
@@ -128,7 +128,7 @@ Xcode 5 Issues:
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
@@ -138,7 +138,7 @@ Xcode 5 Issues:
 
 __NOTE__: Starting with Cordova 3.0.0, plugins are not pre-installed,
 and you need to use the `plugman` command-line utility to install them
-yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>.
+yourself. See Using Plugman to Manage Plugins.
 
 ## Upgrading 2.8.0 Projects to 2.9.0
 
@@ -148,7 +148,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
@@ -164,7 +164,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into the `www` directory, and delete the `www/cordova-2.7.0.js` file.
 
@@ -176,13 +176,13 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
    for a new project. For example:
 
         <plugins>
-            <plugin name="Local<a href="../../../cordova/storage/storage.html">Storage</a>" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
+            <plugin name="LocalStorage" value="CDVLocalStorage" />
             <!-- other plugins -->
         </plugins>
         
         <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
-        <feature name="Local<a href="../../../cordova/storage/storage.html">Storage</a>">
-    	    <param name="ios-package" value="CDVLocal<a href="../../../cordova/storage/storage.html">Storage</a>" />
+        <feature name="LocalStorage">
+    	    <param name="ios-package" value="CDVLocalStorage" />
     	</feature>
     	<!-- other <feature> tags -->
         
@@ -206,7 +206,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. you need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. you need the assets from this new project.
 
 5. Copy the `www/cordova-2.7.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.6.0.js` file.
 
@@ -226,7 +226,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the project's `www/cordova-2.6.0.js` file into the `www` directory, and delete the `www/cordova-2.5.0.js` file.
 
@@ -252,7 +252,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.5.0.js` file from the new project into the `www` directory and delete the `www/cordova-2.4.0.js` file.
 
@@ -278,7 +278,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.4.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.3.0.js` file.
 
@@ -304,7 +304,7 @@ yourself. See <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.3.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.2.0.js` file.
 
@@ -338,7 +338,7 @@ You can get this by accessing the `userAgent` property off the main view-control
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.2.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.1.0.js` file.
 
@@ -368,7 +368,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-5. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+5. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 6. Copy the `www/cordova-2.1.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.0.0.js` file.
 
@@ -396,7 +396,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 1. Install Cordova 2.0.0.
 
-2. Create a new project, as described in <a href="tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
+2. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
 3. Copy the `www/cordova-2.0.0.js` file from the new project into the `www` directory, and delete the `www/cordova-1.9.0.js` file.
 
@@ -496,7 +496,7 @@ __NOTE__: If your project is not working as expected in the Simulator, please ta
 
 4. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.9.0.js` file.
 
-__NOTE__: 1.9.0 supports the new `BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>` boolean `Cordova.plist` setting. It's enabled by default, so set it to
+__NOTE__: 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
 `false` to disable it, especially on iOS 6. See [Release Notes: Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
 ## Upgrading 1.7.0 Projects to 1.8.x

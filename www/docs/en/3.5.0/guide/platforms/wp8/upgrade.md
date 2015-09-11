@@ -31,7 +31,7 @@ projects.
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>. 
+1. Update the `cordova` CLI version. See The Command-Line Interface. 
 
 2. Run `cordova platform update wp8`
         
@@ -43,7 +43,7 @@ For projects not created with the cordova CLI, run:
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>. 
+1. Update the `cordova` CLI version. See The Command-Line Interface. 
 
 2. Run `cordova platform update wp8`
         
@@ -54,7 +54,7 @@ For projects not created with the cordova CLI, run:
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+   described in The Command-Line Interface.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add wp8`.

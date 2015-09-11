@@ -23,7 +23,7 @@ license: >
 > Avviare l'applicazione registratore video e restituire informazioni sui file di clip video catturati.
 
     navigator.device.capture.captureVideo(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Avvia un'operazione asincrona per acquisire registrazioni video usando registrazione video applicazione del dispositivo. L'operazione consente all'utente di catturare più registrazioni in una sola seduta.
 
-L'operazione di acquisizione termina quando l'utente chiude l'applicazione di registrazione video, o il numero massimo di registrazioni specificato da `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra un unico video clip.
+L'operazione di acquisizione termina quando l'utente chiude l'applicazione di registrazione video, o il numero massimo di registrazioni specificato da `CaptureVideoOptions.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra un unico video clip.
 
-Quando termina l'operazione di acquisizione, e la `<a href="CaptureCB.html">CaptureCB</a>` callback viene eseguita con una matrice di `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>` oggetti che descrivono ciascuna catturato file videoclip. Se l'utente termina l'operazione prima di catturare un video clip, il `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` callback viene eseguita con un `<a href="CaptureError.html">CaptureError</a>` oggetto con un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, e la `CaptureCB` callback viene eseguita con una matrice di `MediaFile` oggetti che descrivono ciascuna catturato file videoclip. Se l'utente termina l'operazione prima di catturare un video clip, il `CaptureErrorCB` callback viene eseguita con un `CaptureError` oggetto con un `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 
@@ -46,10 +46,10 @@ Quando termina l'operazione di acquisizione, e la `<a href="CaptureCB.html">Capt
 ## Esempio rapido
 
     // capture callback
-    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    var captureSuccess = function(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // do something interesting with the file
         }
     };
@@ -76,10 +76,10 @@ Quando termina l'operazione di acquisizione, e la `<a href="CaptureCB.html">Capt
     
         // Called when capture operation is finished
         //
-        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+        function captureSuccess(mediaFiles) {
             var i, len;
-            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+                uploadFile(mediaFiles[i]);
             }
         }
     
@@ -99,10 +99,10 @@ Quando termina l'operazione di acquisizione, e la `<a href="CaptureCB.html">Capt
         }
     
         // Upload files to server
-        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html"><a href="../../file/fileobj/fileobj.html">File</a>Transfer</a>(),
-                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
-                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
+        function uploadFile(mediaFile) {
+            var ft = new FileTransfer(),
+                path = mediaFile.fullPath,
+                name = mediaFile.name;
     
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -126,4 +126,4 @@ Quando termina l'operazione di acquisizione, e la `<a href="CaptureCB.html">Capt
 
 ## BlackBerry WebWorks stranezze
 
-*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore Video** , fornito da RIM, per catturare le registrazioni video. L'applicazione riceve un `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
+*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore Video** , fornito da RIM, per catturare le registrazioni video. L'applicazione riceve un `CaptureError.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.

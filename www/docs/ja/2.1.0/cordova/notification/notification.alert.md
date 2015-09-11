@@ -45,7 +45,7 @@ notification.alert
 - Bada 1.2 & 2.x
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 以上) / iPhone / Tizen
@@ -61,24 +61,24 @@ notification.alert
         '終了' // ボタン名
     );
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // 処理なし
         }
 

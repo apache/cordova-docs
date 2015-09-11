@@ -42,7 +42,7 @@ In questa sezione in dettaglio le opzioni di configurazione globale e multi-piat
 
 *   Configurazione iOS
 *   Configurazione Android
-*   <a href="../guide/platforms/blackberry/config.html">Configurazione di blackBerry</a> 10
+*   Configurazione di blackBerry 10
 
 Oltre le varie opzioni di configurazione descritte di seguito, è possibile configurare anche set di base di un'applicazione delle immagini per ogni piattaforma di destinazione. Per ulteriori informazioni, vedere icone e schermate iniziali.
 
@@ -53,7 +53,7 @@ In questo esempio viene illustrato il valore predefinito `config.xml` generato d
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
+                A sample Apache Cordova application that responds to the deviceready event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team

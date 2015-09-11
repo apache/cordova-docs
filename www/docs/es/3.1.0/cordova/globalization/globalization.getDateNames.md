@@ -29,7 +29,7 @@ Devuelve una matriz de los nombres de los meses o días de la semana, dependiend
 
 Devuelve la matriz de nombres a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto contiene una propiedad de `value` con una `Array` de valores de `String`. Los nombres de funciones de matriz a partir de ya sea el primer mes en el año o el primer día de la semana, dependiendo de la opción seleccionada.
 
-Si hay un error en la obtención de los nombres, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Si hay un error en la obtención de los nombres, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es`GlobalizationError.UNKNOWN\_ERROR`.
 
 El `options` parámetro es opcional, y sus valores por defecto son:
 
@@ -67,7 +67,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, este ejemplo muest
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

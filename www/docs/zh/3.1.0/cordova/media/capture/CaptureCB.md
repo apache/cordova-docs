@@ -20,16 +20,16 @@ license: >
 
 # CaptureCB
 
-> 在成功的<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>操作時調用。
+> 在成功的媒體捕獲操作時調用。
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## 說明
 
-此函數執行成功<a href="capture.html">捕獲</a>操作完成後。 在已<a href="capture.html">捕獲</a>的<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案，這點，或者使用者已退出<a href="../media.html">媒體</a><a href="capture.html">捕獲</a>應用程式，或已達到<a href="capture.html">捕獲</a>限制。
+此函數執行成功捕獲操作完成後。 在已捕獲的媒體檔案，這點，或者使用者已退出媒體捕獲應用程式，或已達到捕獲限制。
 
-每個 `MediaFile` 物件描述一個捕捉的<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案。
+每個 `MediaFile` 物件描述一個捕捉的媒體檔案。
 
 ## 快速的示例
 

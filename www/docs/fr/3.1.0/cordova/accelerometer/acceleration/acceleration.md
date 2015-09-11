@@ -55,7 +55,7 @@ Un objet de type `Acceleration` est retourné par chacune des méthodes de l'API
         alert('onError!');
     };
     
-    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
     
 
 ## Exemple complet
@@ -63,19 +63,19 @@ Un objet de type `Acceleration` est retourné par chacune des méthodes de l'API
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
     
         // onSuccess: Get a snapshot of the current acceleration
@@ -96,7 +96,7 @@ Un objet de type `Acceleration` est retourné par chacune des méthodes de l'API
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

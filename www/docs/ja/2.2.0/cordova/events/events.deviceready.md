@@ -48,39 +48,39 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
 - Bada 1.2 & 2.x
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
-    document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-    function on<a href="../device/device.html">Device</a>Ready() {
+    function onDeviceReady() {
         // Cordova API を安全に使用できます
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Cordova Device Ready 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.2.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("deviceready", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Cordova API を安全に使用できます
         }
 

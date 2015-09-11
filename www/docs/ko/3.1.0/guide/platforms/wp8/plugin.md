@@ -133,7 +133,7 @@ JavaScript에 다시 구조화 된 개체 데이터를 전달 하는 JSON 문자
 
 ## 플러그인 XML
 
-이들은 plugin.xml <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 사용 하 여 windows 전화 특정 예, 자세한 내용은 플러그인 사양을 참조합니다
+이들은 plugin.xml 파일을 사용 하 여 windows 전화 특정 예, 자세한 내용은 플러그인 사양을 참조합니다
 
 ### `<source-file>`
 
@@ -141,12 +141,12 @@ Windows phone은 `<source-file>` 요소는 현재 모든 플러그인 리소스 
 
 ### `<config-file>`
 
-`<config-file>`요소 요소를 구성 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 넣어 정의 합니다. 플랫폼 config.xml에 플러그인을 추가 하는 등이 같은 뭔가 할 것:
+`<config-file>`요소 요소를 구성 파일에 넣어 정의 합니다. 플랫폼 config.xml에 플러그인을 추가 하는 등이 같은 뭔가 할 것:
 
-    < 구성 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> target="config.xml" 부모 = "/ *" >< 기능 이름 "PluginName" = >< param 이름을 = "wp-패키지" 값 = "PluginName" / >< / 기능 >< / config <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> >
+    < 구성 파일 target="config.xml" 부모 = "/ *" >< 기능 이름 "PluginName" = >< param 이름을 = "wp-패키지" 값 = "PluginName" / >< / 기능 >< / config 파일 >
     
 
-우리는 WMAppManifest.xml에 <a href="../../../cordova/contacts/contacts.html">연락처</a> 기능을 추가 하 고 싶 었, 그것은 이렇게 보이는 것입니다.
+우리는 WMAppManifest.xml에 연락처 기능을 추가 하 고 싶 었, 그것은 이렇게 보이는 것입니다.
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />
@@ -161,7 +161,7 @@ Windows phone은 `<source-file>` 요소는 현재 모든 플러그인 리소스 
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-예를 들어 '<a href="../../../cordova/events/events.pause.html">일시 중지</a>' 및 '다시 시작' 응용 프로그램 <a href="../../../cordova/events/events.html">이벤트</a>에 <a href="../../../cordova/connection/connection.html">연결</a>할 수 있습니다.
+예를 들어 '일시 중지' 및 '다시 시작' 응용 프로그램 이벤트에 연결할 수 있습니다.
 
 ### 플러그인을 디버깅
 
@@ -171,7 +171,7 @@ C# 쪽을 디버깅 하려면 Visual Studio 디버거를 사용 하 여, 그냥 
 
 ## 일반적인 함정
 
-*   네이티브 자바 스크립트 구현에 전달 하는 인수를 결정할 때는 주의 해야 합니다. 하지만 대부분 <a href="../../../cordova/device/device.html">장치</a> 플랫폼 기대 args 배열 될 cordova.exec에 전달 된 다른 유형의 개체가이 배열에 있는 경우 deserialize 하기 어렵거나 된다.
+*   네이티브 자바 스크립트 구현에 전달 하는 인수를 결정할 때는 주의 해야 합니다. 하지만 대부분 장치 플랫폼 기대 args 배열 될 cordova.exec에 전달 된 다른 유형의 개체가이 배열에 있는 경우 deserialize 하기 어렵거나 된다.
     
         cordova.exec (승리, 실패, "ServiceName", "MethodName" ["이것은 문자열", 54, {리터럴: '문제'}]);
         
@@ -181,11 +181,11 @@ C# 쪽을 디버깅 하려면 Visual Studio 디버거를 사용 하 여, 그냥 
             "[\"this 이다은 string\ ", 54, {리터럴: '문제'}]"
             
     
-    *   Exec를 호출 하기 전에 모든 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 문자열로 변환 고려 하십시오.
+    *   Exec를 호출 하기 전에 모든 매개 변수를 문자열로 변환 고려 하십시오.
         
             cordova.exec (승리, 실패, "ServiceName", "MethodName" ["이것은 문자열", "54", "{리터럴: '문제'}"]);
             
             문자열 optValues JsonHelper.Deserialize < string > = (옵션);
             
 
-*   그것은 일반적으로 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 호출 하기 전에 자바 스크립트 코드에서 검사 하는 것이 좋습니다 `exec` . 이 플러그인의 다양 한 네이티브 구현 중 더 많은 JavaScript 코드를 다시 사용할 수 있습니다.
+*   그것은 일반적으로 매개 변수를 호출 하기 전에 자바 스크립트 코드에서 검사 하는 것이 좋습니다 `exec` . 이 플러그인의 다양 한 네이티브 구현 중 더 많은 JavaScript 코드를 다시 사용할 수 있습니다.

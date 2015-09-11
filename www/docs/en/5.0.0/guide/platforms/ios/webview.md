@@ -31,7 +31,7 @@ subproject-based Cleaver implementation.
 
 These instructions require at least Cordova 3.x and Xcode 6.0, along
 with a `config.xml` file from a newly created iOS project. You can use
-the procedure in <a href="../../cli/index.html">The Command-Line Interface</a> to create a new project,
+the procedure in The Command-Line Interface to create a new project,
 then obtain the `config.xml` file from within the named application's
 subdirectory within `platforms/ios`.
 

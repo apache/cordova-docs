@@ -24,7 +24,7 @@ license: >
 
 ## Propiedades
 
-*   <a href="connection.type.html">connection.type</a>
+*   connection.type
 
 ## Constantes
 

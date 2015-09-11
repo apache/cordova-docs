@@ -20,7 +20,7 @@ license: >
 
 # GlobalizationError
 
-Ein Objekt, das einen Fehler von der <a href="../globalization.html">Globalisierung</a>-API darstellt.
+Ein Objekt, das einen Fehler von der Globalisierung-API darstellt.
 
 ## Eigenschaften
 
@@ -56,7 +56,7 @@ Die folgenden Fehler-Callback ausgeführt wird, zeigt einen Popup-Dialog mit dem
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -72,7 +72,7 @@ Die folgenden Fehler-Callback ausgeführt wird, zeigt einen Popup-Dialog mit dem
         };
     
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

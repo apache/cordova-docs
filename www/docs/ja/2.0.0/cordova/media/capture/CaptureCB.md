@@ -18,28 +18,28 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>CB
+CaptureCB
 =========
 
 > メディアキャプチャー操作が成功した場合に呼び出されます。
 
-    function captureSuccess( <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>[] media<a href="../../file/fileobj/fileobj.html">File</a>s ) { ... };
+    function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
 概要
 -----------
 
 この関数は、キャプチャー操作が正常に完了したときに呼び出されます。これは、メディアファイルがキャプチャーされ、ユーザーがメディアキャプチャーアプリを終了した、もしくはキャプチャーの取得制限値に達したという意味です。
 
-それぞれの <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a> オブジェクトはキャプチャーされたメディアファイルを表します。
+それぞれの MediaFile オブジェクトはキャプチャーされたメディアファイルを表します。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // capture コールバック関数
-    function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    function captureSuccess(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // ファイルを使用した処理
         }
     };

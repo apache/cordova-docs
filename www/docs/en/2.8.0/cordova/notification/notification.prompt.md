@@ -52,7 +52,7 @@ Supported Platforms
 - Android
 - iPhone
 
-Quick <a href="../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // process the promp dialog results
@@ -62,7 +62,7 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
     // Show a custom prompt dialog
     //
-    function <a href="../splashscreen/splashscreen.show.html">show</a>Prompt() {
+    function showPrompt() {
         navigator.notification.prompt(
             'Please enter your name',  // message
             onPrompt,	               // callback to invoke
@@ -72,24 +72,24 @@ Quick <a href="../storage/storage.opendatabase.html">Example</a>
         );
     }
 
-Full <a href="../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Prompt Dialog Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // Empty
         }
 
@@ -100,7 +100,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         // Show a custom prompt dialog
         //
-        function <a href="../splashscreen/splashscreen.show.html">show</a>Prompt() {
+        function showPrompt() {
             navigator.notification.prompt(
                 'Please enter your name',  // message
                 onPrompt,                  // callback to invoke
@@ -113,7 +113,7 @@ Full <a href="../storage/storage.opendatabase.html">Example</a>
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Prompt(); return false;">Show Prompt</a></p>
+        <p><a href="#" onclick="showPrompt(); return false;">Show Prompt</a></p>
       </body>
     </html>
 

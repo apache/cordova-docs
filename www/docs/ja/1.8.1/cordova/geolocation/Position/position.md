@@ -26,7 +26,7 @@ geolocation API によって作成された位置情報とタイムスタンプ 
 プロパティー
 ----------
 
-- __coords:__ 地理座標を表します _(<a href="../Coordinates/coordinates.html">Coordinates</a>)_
+- __coords:__ 地理座標を表します _(Coordinates)_
 - __timestamp:__ タイムスタンプ値を表します _(Date)_
 
 概要
@@ -44,7 +44,7 @@ geolocation API によって作成された位置情報とタイムスタンプ 
 - Bada 1.2 & 2.x
 - webOS
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // 成功時のコールバック関数
@@ -60,37 +60,37 @@ geolocation API によって作成された位置情報とタイムスタンプ 
               'タイムスタンプ: '    + position.timestamp                + '\n');
     };
 
-    // エラー時のコールバック関数は <a href="../PositionError/positionError.html">PositionError</a> オブジェクトを受けとる
+    // エラー時のコールバック関数は PositionError オブジェクトを受けとる
     //
     function onError(error) {
         alert('コード: '        + error.code    + '\n' +
               'メッセージ: '    + error.message + '\n');
     }
 
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの<a href="../../storage/storage.opendatabase.html">使用例</a></title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova 準備完了
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
 
-        // onSuccess <a href="../geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -104,7 +104,7 @@ geolocation API によって作成された位置情報とタイムスタンプ 
                                 'タイムスタンプ: '  + position.timestamp            + '<br />';
         }
 
-        // エラー時のコールバック関数は <a href="../PositionError/positionError.html">PositionError</a> オブジェクトを受けとる
+        // エラー時のコールバック関数は PositionError オブジェクトを受けとる
         //
         function onError(error) {
             alert('コード: '        + error.code    + '\n' +

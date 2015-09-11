@@ -45,7 +45,7 @@ Retourne le modèle de la `successCallback` avec un `properties` objet comme par
 
 *   **regroupement**: le symbole de groupe à utiliser pour l'analyse et de mise en forme. *(String)*
 
-S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
+S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
 
 Le `options` paramètre est facultatif, et les valeurs par défaut sont :
 
@@ -91,7 +91,7 @@ Résultats :
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

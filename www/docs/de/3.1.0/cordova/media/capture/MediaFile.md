@@ -20,20 +20,20 @@ license: >
 
 # MediaFile
 
-> Kapselt Eigenschaften einer <a href="../media.html">Medien</a>datei erfassen.
+> Kapselt Eigenschaften einer Mediendatei erfassen.
 
 ## Eigenschaften
 
-*   **Name**: der Name der <a href="../../file/fileobj/fileobj.html">Datei</a>, ohne Pfadinformationen. (DOM-String und enthält)
+*   **Name**: der Name der Datei, ohne Pfadinformationen. (DOM-String und enthält)
 
-*   **FullPath**: der vollständige Pfad der <a href="../../file/fileobj/fileobj.html">Datei</a>, einschließlich des Namens. (DOM-String und enthält)
+*   **FullPath**: der vollständige Pfad der Datei, einschließlich des Namens. (DOM-String und enthält)
 
-*   **Typ**: Mime-Typ der <a href="../../file/fileobj/fileobj.html">Datei</a> (DOM-String und enthält)
+*   **Typ**: Mime-Typ der Datei (DOM-String und enthält)
 
-*   **LastModifiedDate**: das Datum und die Uhrzeit wann die <a href="../../file/fileobj/fileobj.html">Datei</a> zuletzt geändert wurde. (Datum)
+*   **LastModifiedDate**: das Datum und die Uhrzeit wann die Datei zuletzt geändert wurde. (Datum)
 
-*   **Größe**: die Größe der <a href="../../file/fileobj/fileobj.html">Datei</a> in Byte. (Anzahl)
+*   **Größe**: die Größe der Datei in Byte. (Anzahl)
 
 ## Methoden
 
-*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: Ruft die Formatierungsinformationen der <a href="../media.html">Medien</a>datei.
+*   **MediaFile.getFormatData**: Ruft die Formatierungsinformationen der Mediendatei.

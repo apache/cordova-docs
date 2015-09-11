@@ -27,7 +27,7 @@ license: >
 
 ## 説明
 
-`media.release`、基になるオペレーティング システムのオーディオ リソースを解放するメソッドを同期的に実行します。 <a href="media.html">メディア</a>の再生のための OpenCore インスタンスの有限な量があるので、人造人間のため特に重要です。 アプリケーションを呼び出す必要があります、 `release` 任意の関数 `Media` は、もはや必要なリソースです。
+`media.release`、基になるオペレーティング システムのオーディオ リソースを解放するメソッドを同期的に実行します。 メディアの再生のための OpenCore インスタンスの有限な量があるので、人造人間のため特に重要です。 アプリケーションを呼び出す必要があります、 `release` 任意の関数 `Media` は、もはや必要なリソースです。
 
 ## サポートされているプラットフォーム
 
@@ -44,8 +44,8 @@ license: >
     //
     var my_media = new Media(src, onSuccess, onError);
     
-    my_<a href="media.play.html">media.play</a>();
-    my_<a href="media.stop.html">media.stop</a>();
+    my_media.play();
+    my_media.stop();
     my_media.release();
     
 
@@ -55,14 +55,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -82,13 +82,13 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_<a href="media.play.html">media.play</a>();
+                my_media.play();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -109,7 +109,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_<a href="media.pause.html">media.pause</a>();
+                    my_media.pause();
                 }
             }
     
@@ -117,7 +117,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

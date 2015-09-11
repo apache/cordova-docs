@@ -29,7 +29,7 @@ Ottenere l'identificatore di stringa per la lingua corrente del client.
 
 Restituisce la stringa di identificatore di lingua per i `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `String` valore.
 
-Se c'è un errore nell'acquisizione della lingua, poi la `errorCallback` viene eseguita con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Se c'è un errore nell'acquisizione della lingua, poi la `errorCallback` viene eseguita con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 
@@ -53,7 +53,7 @@ Quando il browser è impostato per la `en\_US` locale, questo dovrebbe visualizz
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

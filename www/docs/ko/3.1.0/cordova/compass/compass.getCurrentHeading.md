@@ -20,16 +20,16 @@ license: >
 
 # compass.getCurrentHeading
 
-현재 <a href="compass.html">나침반</a> 제목 좀.
+현재 나침반 제목 좀.
 
-    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
+    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## 설명
 
-<a href="compass.html">나침반</a> 방향 또는 표제는 <a href="../device/device.html">장치</a> 지적 이다, 일반적으로 <a href="../device/device.html">장치</a> 위에서 감지 하는 센서입니다. 359.99, 0가 북쪽을 0에서도에서 머리글을 측정 합니다.
+나침반 방향 또는 표제는 장치 지적 이다, 일반적으로 장치 위에서 감지 하는 센서입니다. 359.99, 0가 북쪽을 0에서도에서 머리글을 측정 합니다.
 
-<a href="compass.html">나침반</a> 머리글 정보를 통해 반환 되는 `CompassHeading` 개체를 사용 하는 `<a href="parameters/compassSuccess.html">compassSuccess</a>` 콜백 함수.
+나침반 머리글 정보를 통해 반환 되는 `CompassHeading` 개체를 사용 하는 `compassSuccess` 콜백 함수.
 
 ## 지원 되는 플랫폼
 
@@ -47,7 +47,7 @@ license: >
     };
     
     function onError(error) {
-        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
+        alert('CompassError: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Compass Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(<a href="parameters/compassError.html">compassError</a>) {
-            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

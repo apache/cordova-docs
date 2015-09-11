@@ -22,8 +22,8 @@ license: >
 
 Esta guía le muestra cómo configurar un entorno de SDK para aplicaciones para la plataforma BlackBerry antes de la versión 10. Si quieres apuntar a la versión más reciente, consulte a la guía de plataforma BlackBerry 10. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   <a href="../blackberry10/config.html">Configuración de blackBerry</a>
-*   <a href="../blackberry10/upgrading.html">Actualizar BlackBerry</a>
+*   Configuración de blackBerry
+*   Actualizar BlackBerry
 *   Plugins de blackBerry
 *   Herramientas de línea de comandos de blackBerry
 

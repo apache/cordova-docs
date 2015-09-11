@@ -29,7 +29,7 @@ license: >
 
 週の日 1 日曜日であると見なされます、1 から始まる番号が付けられます。 曜日を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが必要な `value` を持つプロパティ、 `Number` 値。
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## サポートされているプラットフォーム
 
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getFirstDayOfWeek Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

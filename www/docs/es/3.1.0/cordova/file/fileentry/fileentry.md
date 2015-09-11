@@ -54,7 +54,7 @@ Representa un archivo en un sistema de archivos, como se define en la especifica
 
 *   **getParent**: ver el directorio padre.
 
-*   **createWriter**: crea un `<a href="../filewriter/filewriter.html">FileWriter</a>` objeto que puede ser utilizado para escribir en un archivo.
+*   **createWriter**: crea un `FileWriter` objeto que puede ser utilizado para escribir en un archivo.
 
 *   **archivo**: crea un `File` objeto que contiene las propiedades del archivo.
 
@@ -74,7 +74,7 @@ Ver metadatos de un archivo.
 
 *   **successCallback**: una devolución de llamada que se pasa un `Metadata` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -147,10 +147,10 @@ Conjunto de metadatos en un archivo.
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFileMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -165,13 +165,13 @@ Además, mover un archivo en la cima de un archivo existente intentos eliminar y
 
 **Parámetros:**
 
-*   **padres**: el directorio al que se mueva el archivo. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **padres**: el directorio al que se mueva el archivo. *(DirectoryEntry)*
 
 *   **newName**: el nuevo nombre del archivo. Por defecto el nombre actual si no se especifica. *(DOMString)*
 
 *   **successCallback**: una devolución de llamada que se pasa el nuevo archivo `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el archivo. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el archivo. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -186,7 +186,7 @@ Además, mover un archivo en la cima de un archivo existente intentos eliminar y
     function moveFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // move the file to a new directory and rename it
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
@@ -201,13 +201,13 @@ Copiar un archivo a una nueva ubicación en el sistema de archivos. Un error de 
 
 **Parámetros:**
 
-*   **padres**: el directorio al que copiar el archivo. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **padres**: el directorio al que copiar el archivo. *(DirectoryEntry)*
 
 *   **newName**: el nuevo nombre del archivo. Por defecto el nombre actual si no se especifica. *(DOMString)*
 
 *   **successCallback**: una devolución de llamada que se pasa el nuevo archivo `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el archivo. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el archivo. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -222,7 +222,7 @@ Copiar un archivo a una nueva ubicación en el sistema de archivos. Un error de 
     function copyFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
@@ -248,7 +248,7 @@ Elimina un archivo.
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de que el archivo se ha eliminado. Se invoca sin parámetros. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el archivo. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el archivo. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -266,13 +266,13 @@ Elimina un archivo.
 
 ## getParent
 
-Ver el padre `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` que contiene el archivo.
+Ver el padre `DirectoryEntry` que contiene el archivo.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa a los padres del archivo `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa a los padres del archivo `DirectoryEntry` . *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `DirectoryEntry` . Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -284,19 +284,19 @@ Ver el padre `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
         alert(error.code);
     }
     
-    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
+    // Get the parent DirectoryEntry
     entry.getParent(success, fail);
     
 
 ## createWriter
 
-Crear un `<a href="../filewriter/filewriter.html">FileWriter</a>` objeto asociado con el archivo representado por el`FileEntry`.
+Crear un `FileWriter` objeto asociado con el archivo representado por el`FileEntry`.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa un `<a href="../filewriter/filewriter.html">FileWriter</a>` objeto. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa un `FileWriter` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar crear el <a href="../filewriter/filewriter.html">FileWriter</a>. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar crear el FileWriter. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -308,7 +308,7 @@ Crear un `<a href="../filewriter/filewriter.html">FileWriter</a>` objeto asociad
         alert(error.code);
     }
     
-    // create a <a href="../filewriter/filewriter.html">FileWriter</a> to write to the file
+    // create a FileWriter to write to the file
     entry.createWriter(success, fail);
     
 
@@ -320,7 +320,7 @@ Volver a `File` objeto que representa el estado actual del archivo que esta `Fil
 
 *   **successCallback**: una devolución de llamada que se pasa un `File` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear el `File` objeto, por ejemplo, cuando el archivo ya no existe. Invocado con un `<a href="../fileerror/fileerror.html">FileError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear el `File` objeto, por ejemplo, cuando el archivo ya no existe. Invocado con un `FileError` objeto. *(Función)*
 
 **Ejemplo rápido**
 

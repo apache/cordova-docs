@@ -29,7 +29,7 @@ Obtenir l'identificateur de chaîne pour paramètre de langue actuel du client.
 
 Retourne la chaîne d'identificateur de paramètres régionaux pour le `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
 
-S'il y a une erreur d'obtenir les paramètres régionaux, puis le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+S'il y a une erreur d'obtenir les paramètres régionaux, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Plates-formes prises en charge
 
@@ -53,7 +53,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, ceci pour afficher
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getLocaleName <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getLocaleName Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

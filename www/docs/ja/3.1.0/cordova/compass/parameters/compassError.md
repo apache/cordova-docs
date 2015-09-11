@@ -20,10 +20,10 @@ license: >
 
 # compassError
 
-<a href="../compass.html">コンパス</a>機能の onError コールバック関数。
+コンパス機能の onError コールバック関数。
 
 ## 例
 
-    function(<a href="../compassError/compassError.html">CompassError</a>) {
+    function(CompassError) {
         // Handle the error
     }

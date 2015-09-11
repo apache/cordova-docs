@@ -103,9 +103,9 @@ Following are some additional helpful mobile privacy guides for developers:
 
 * California Attorney General, [Privacy on the Go: Recommendations for the Mobile Ecosystem][1]
 
-* Center for Democracy & Technology, Future of Privacy Forum, [<a href="../../next/index.html">Best Practices</a> for Mobile App Developers][2]
+* Center for Democracy & Technology, Future of Privacy Forum, [Best Practices for Mobile App Developers][2]
 
-* CTIA-The Wireless Association, [<a href="../../next/index.html">Best Practices</a> and Guidelines for Location Based Services][3]
+* CTIA-The Wireless Association, [Best Practices and Guidelines for Location Based Services][3]
 
 * Federal Trade Commission, [Mobile Privacy Disclosures: Building Trust Through Transparency][4]
 

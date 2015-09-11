@@ -20,51 +20,51 @@ license: >
 
 # お問い合わせ
 
-ユーザーの個人情報やビジネスの<a href="../parameters/contactFields.html">連絡先</a>などの<a href="../parameters/contactFields.html">連絡先</a>を記述するプロパティが含まれています。
+ユーザーの個人情報やビジネスの連絡先などの連絡先を記述するプロパティが含まれています。
 
 ## プロパティ
 
 *   **id**： グローバルに一意の識別子。*（，）*
 
-*   **displayName**: エンドユーザへの表示に適した、この<a href="../parameters/contactFields.html">連絡先</a>の名前。*（，）*
+*   **displayName**: エンドユーザへの表示に適した、この連絡先の名前。*（，）*
 
 *   **名前**： 人の名前のすべてのコンポーネントを格納するオブジェクト。*(ContactName)*
 
-*   **ニックネーム**: <a href="../parameters/contactFields.html">連絡先</a>のアドレスに使用するカジュアルな名前。*（，）*
+*   **ニックネーム**: 連絡先のアドレスに使用するカジュアルな名前。*（，）*
 
-*   **電話番号**: <a href="../parameters/contactFields.html">連絡先</a>の電話番号の配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **電話番号**: 連絡先の電話番号の配列。*(ContactField[])*
 
-*   **メール**： <a href="../parameters/contactFields.html">連絡先</a>の電子メール アドレスの配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **メール**： 連絡先の電子メール アドレスの配列。*(ContactField[])*
 
-*   **アドレス**: <a href="../parameters/contactFields.html">連絡先</a>のアドレスの配列。*(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
+*   **アドレス**: 連絡先のアドレスの配列。*(ContactAddress[])*
 
-*   **ims**： <a href="../parameters/contactFields.html">連絡先</a>の IM アドレスの配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **ims**： 連絡先の IM アドレスの配列。*(ContactField[])*
 
-*   **組織**: <a href="../parameters/contactFields.html">連絡先</a>の組織の配列。*(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
+*   **組織**: 連絡先の組織の配列。*(ContactOrganization[])*
 
-*   **誕生日**: <a href="../parameters/contactFields.html">連絡先</a>の誕生日。*（日）*
+*   **誕生日**: 連絡先の誕生日。*（日）*
 
-*   **注**: <a href="../parameters/contactFields.html">連絡先</a>についてのメモ。*（，）*
+*   **注**: 連絡先についてのメモ。*（，）*
 
-*   **写真**: <a href="../parameters/contactFields.html">連絡先</a>の写真の配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **写真**: 連絡先の写真の配列。*(ContactField[])*
 
-*   **カテゴリ**: 取引先担当者に関連付けられているすべてのユーザー定義カテゴリの配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **カテゴリ**: 取引先担当者に関連付けられているすべてのユーザー定義カテゴリの配列。*(ContactField[])*
 
-*   **url**: 取引先担当者に関連付けられている web ページの配列。*(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **url**: 取引先担当者に関連付けられている web ページの配列。*(ContactField[])*
 
 ## メソッド
 
 *   **クローン**： 新しいを返します `Contact` と呼び出し元のオブジェクトのディープ コピーであるオブジェクトの `id` プロパティに設定`null`.
 
-*   **削除**: <a href="../../device/device.html">デバイス</a>の<a href="../parameters/contactFields.html">連絡先</a><a href="../../storage/database/database.html">データベース</a>から<a href="../parameters/contactFields.html">連絡先</a>を削除します、それ以外の場合のためのエラー コールバックを実行する、 `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` オブジェクト。
+*   **削除**: デバイスの連絡先データベースから連絡先を削除します、それ以外の場合のためのエラー コールバックを実行する、 `ContactError` オブジェクト。
 
-*   **保存**: <a href="../../device/device.html">デバイス</a>の<a href="../parameters/contactFields.html">連絡先</a><a href="../../storage/database/database.html">データベース</a>に新しい<a href="../parameters/contactFields.html">連絡先</a>を保存または同じ**id**を持つ<a href="../parameters/contactFields.html">連絡先</a>が既に存在する場合、既存の<a href="../parameters/contactFields.html">連絡先</a>を更新します。
+*   **保存**: デバイスの連絡先データベースに新しい連絡先を保存または同じ**id**を持つ連絡先が既に存在する場合、既存の連絡先を更新します。
 
 ## 詳細
 
-`Contact`オブジェクトは、ユーザーの<a href="../parameters/contactFields.html">連絡先</a>を表します。 <a href="../parameters/contactFields.html">連絡先</a>の作成、格納、または<a href="../../device/device.html">デバイス</a>の<a href="../parameters/contactFields.html">連絡先</a><a href="../../storage/database/database.html">データベース</a>から削除することができます。 <a href="../parameters/contactFields.html">連絡先</a>も取得できます (個別にまたは一括） を<a href="../../storage/database/database.html">データベース</a>から呼び出すことによって、 `<a href="../contacts.find.html">contacts.find</a>` メソッド。
+`Contact`オブジェクトは、ユーザーの連絡先を表します。 連絡先の作成、格納、またはデバイスの連絡先データベースから削除することができます。 連絡先も取得できます (個別にまたは一括） をデータベースから呼び出すことによって、 `contacts.find` メソッド。
 
-**注：**すべて上記の<a href="../parameters/contactFields.html">連絡先</a>フィールドのすべての<a href="../../device/device.html">デバイス</a> プラットフォームでサポートされます。詳細については各プラットフォームの*互換*セクションを確認してください。
+**注：**すべて上記の連絡先フィールドのすべてのデバイス プラットフォームでサポートされます。詳細については各プラットフォームの*互換*セクションを確認してください。
 
 ## サポートされているプラットフォーム
 
@@ -80,12 +80,12 @@ license: >
         alert("Save Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
     // create a new contact object
-    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+    var contact = navigator.contacts.create();
     contact.displayName = "Plumber";
     contact.nickname = "Plumber";            // specify both to support all devices
     
@@ -114,8 +114,8 @@ license: >
         alert("Removal Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
         // remove the contact from the device
@@ -127,20 +127,20 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // create
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
             var name = new ContactName();
@@ -169,8 +169,8 @@ license: >
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onSaveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ license: >
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onRemoveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -196,11 +196,11 @@ license: >
 
 ## アンドロイド 2.X 癖
 
-*   **カテゴリ**: 返す 2.X の Android <a href="../../device/device.html">デバイス</a>でサポートされていません`null`.
+*   **カテゴリ**: 返す 2.X の Android デバイスでサポートされていません`null`.
 
 ## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
 
-*   **id**: サポートされています。<a href="../parameters/contactFields.html">連絡先</a>を保存するときに、<a href="../../device/device.html">デバイス</a>によって割り当てられます。
+*   **id**: サポートされています。連絡先を保存するときに、デバイスによって割り当てられます。
 
 *   **displayName**: サポートされています。ブラックベリー **user1**フィールドに格納されます。
 
@@ -216,7 +216,7 @@ license: >
 
 *   **組織**: 部分的にサポートされます。 **名前**と**タイトル**最初の組織のそれぞれブラックベリー**会社**と**タイトル**のフィールドに格納されます。
 
-*   **写真**： 部分的にサポートされます。 サムネイル サイズの画像を 1 つがサポートされています。 <a href="../parameters/contactFields.html">連絡先</a>の写真を設定するには渡す、いずれかで base64 エンコード イメージ、またはイメージを指している URL。 イメージはブラックベリーの<a href="../parameters/contactFields.html">連絡先</a><a href="../../storage/database/database.html">データベース</a>に保存する前に縮小されます。 <a href="../parameters/contactFields.html">連絡先</a>の写真が base64 エンコード イメージとして返されます。
+*   **写真**： 部分的にサポートされます。 サムネイル サイズの画像を 1 つがサポートされています。 連絡先の写真を設定するには渡す、いずれかで base64 エンコード イメージ、またはイメージを指している URL。 イメージはブラックベリーの連絡先データベースに保存する前に縮小されます。 連絡先の写真が base64 エンコード イメージとして返されます。
 
 *   **カテゴリ**: 部分的にサポートされます。*ビジネス*と*個人*のカテゴリのみがサポートされます。
 
@@ -228,15 +228,15 @@ license: >
 
 *   **誕生日**: JavaScript として入力する必要があります `Date` オブジェクト、同じ方法が返されます。
 
-*   **写真**： アプリケーションの一時ディレクトリに格納されているイメージへの<a href="../../file/fileobj/fileobj.html">ファイル</a>の URL を返します。一時ディレクトリの内容は、アプリケーションの終了時に削除されます。
+*   **写真**： アプリケーションの一時ディレクトリに格納されているイメージへのファイルの URL を返します。一時ディレクトリの内容は、アプリケーションの終了時に削除されます。
 
 *   **カテゴリ**: このプロパティは現在サポートされていません、返す`null`.
 
 ## Windows Phone 7 と 8 癖
 
-*   **displayName**: 表示名パラメーターの表示名と異なるために提供値を取得、<a href="../parameters/contactFields.html">連絡先</a>を検索するとき、<a href="../parameters/contactFields.html">連絡先</a>を作成するとき。
+*   **displayName**: 表示名パラメーターの表示名と異なるために提供値を取得、連絡先を検索するとき、連絡先を作成するとき。
 
-*   **url**: 1 つだけが利用できるが、<a href="../parameters/contactFields.html">連絡先</a>の作成、ユーザー入力し 1 つ以上の web アドレスを保存するときは、<a href="../parameters/contactFields.html">連絡先</a>を検索するとき。
+*   **url**: 1 つだけが利用できるが、連絡先の作成、ユーザー入力し 1 つ以上の web アドレスを保存するときは、連絡先を検索するとき。
 
 *   **電話番号**:*県*オプションはサポートされていません。 *型*は、*検索*操作ではサポートされていません。 1 つだけ `phoneNumber` は各*タイプ*の許可.
 

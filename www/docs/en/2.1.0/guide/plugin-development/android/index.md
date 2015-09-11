@@ -26,7 +26,7 @@ file.
 
 A plugin will consist of at least a single Java class that extends the `Plugin` class. A plugin **must**
 have a method called `execute` that must return a `PluginResult` object. In addition to this, there is a best practice that
-the plugin should handle <a href="../../../cordova/events/events.pause.html">pause</a> and <a href="../../../cordova/events/events.resume.html">resume</a> events, and should handle message passing between plugins.
+the plugin should handle pause and resume events, and should handle message passing between plugins.
 
 ## Plugin Class Mapping 
 

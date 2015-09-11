@@ -24,20 +24,20 @@ license: >
 
 ## Propiedades
 
-*   <a href="device.model.html">device.model</a>
-*   <a href="device.cordova.html">device.cordova</a>
-*   <a href="device.platform.html">device.platform</a>
-*   <a href="device.uuid.html">device.uuid</a>
-*   <a href="device.version.html">device.version</a>
-*   <a href="device.name.html">device.name</a>
+*   device.model
+*   device.cordova
+*   device.platform
+*   device.uuid
+*   device.version
+*   device.name
 
 ## Ámbito de variable
 
 Puesto que el `device` se asigna al objeto de `window`, es implícitamente en el ámbito global.
 
     // These reference the same `device`
-    var phoneModel = window.<a href="device.model.html">device.model</a>;
-    var phoneModel = <a href="device.model.html">device.model</a>;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
     
 
 ## Acceso a la función

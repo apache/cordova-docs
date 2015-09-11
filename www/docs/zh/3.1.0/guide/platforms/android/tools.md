@@ -20,13 +20,13 @@ license: >
 
 # Android 系統的命令列工具
 
-`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案中包含單獨的<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，瞭解有關更多詳細的指示。
+`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
 ## 創建一個專案
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>名稱。這裡是 Mac 和 Windows 的語法：
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。這裡是 Mac 和 Windows 的語法：
 
     $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
     $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
@@ -58,7 +58,7 @@ license: >
     
     \[目標\] \[生成\] $ /path/to/project/cordova/run $ C:\path\to\project\cordova\run.bat \[目標\] \[生成\]
 
-請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測<a href="../../../cordova/connection/connection.html">連接</a>的<a href="../../../cordova/device/device.html">設備</a>或當前正在運行的模擬程式，如果沒有<a href="../../../cordova/device/device.html">設備</a>發現。
+請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
 
 ## 日誌記錄
 

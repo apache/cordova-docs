@@ -30,14 +30,14 @@ endcallbutton
 
 もしデフォルトのエンドコールボタンの挙動を上書きしたい場合は、 'endcallbutton' イベントにイベントリスナーを登録することができます。
 
-通常は、 Cordova の '<a href="events.deviceready.html">deviceready</a>' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
 
 - BlackBerry WebWorks (OS 5.0 以上)
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
@@ -46,31 +46,31 @@ endcallbutton
         // エンドコールボタン関する操作を記述
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Cordova End Call Button <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Cordova End Call Button 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
         // Cordova のロード完了とともに
-        // `<a href="events.deviceready.html">deviceready</a>` イベントが呼び出されます。
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // イベントリスナーを登録
             document.addEventListener("endcallbutton", onEndCallKeyDown, false);
         }

@@ -22,55 +22,55 @@ license: >
     <h1>API リファレンス</h1>
     <ul>
         <li>
-            <h2><a href="cordova/accelerometer/accelerometer.html">Accelerometer</a></h2>
+            <h2>Accelerometer</h2>
             <span>デバイスの加速度センサー情報を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/camera/camera.html">Camera</a></h2>
+            <h2>Camera</h2>
             <span>カメラを通じて写真を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/media/capture/capture.html">Capture</a></h2>
+            <h2>Capture</h2>
             <span>デバイスのメディアキャプチャー機能を通じてメディアファイルを取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/compass/compass.html">Compass</a></h2>
+            <h2>Compass</h2>
             <span>コンパス方向を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/connection/connection.html">Connection</a></h2>
+            <h2>Connection</h2>
             <span>ネットワークの状態および携帯電話ネットワークの情報を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/contacts/Contact/contact.html">Contact</a>s</h2>
+            <h2>Contacts</h2>
             <span>連絡先データベース情報を操作します。</span>
         </li>
         <li>
-            <h2><a href="cordova/device/device.html">Device</a></h2>
+            <h2>Device</h2>
             <span>デバイス特有の情報を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/events/events.html">Events</a></h2>
+            <h2>Events</h2>
             <span>JavaScript を通じてネイティブイベントを操作します。</span>
         </li>
         <li>
-            <h2><a href="cordova/file/fileobj/fileobj.html">File</a></h2>
+            <h2>File</h2>
             <span>JavaScript を通じてネイティブファイルシステムを操作します。</span>
         </li>
         <li>
-            <h2><a href="cordova/geolocation/geolocation.html">Geolocation</a></h2>
+            <h2>Geolocation</h2>
             <span>位置情報を取得します。</span>
         </li>
         <li>
-            <h2><a href="cordova/media/media.html">Media</a></h2>
+            <h2>Media</h2>
             <span>オーディオの録音と再生を行います。</span>
         </li>
         <li>
-            <h2><a href="cordova/notification/notification.html">Notification</a></h2>
+            <h2>Notification</h2>
             <span>視覚、聴覚、触覚を用いたデバイス通知機能を提供します。</span>
         </li>
         <li>
-            <h2><a href="cordova/storage/storage.html">Storage</a></h2>
+            <h2>Storage</h2>
             <span>デバイスのネイティブストレージを操作します。</span>
         </li>
     </ul>

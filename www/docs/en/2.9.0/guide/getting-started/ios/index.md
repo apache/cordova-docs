@@ -40,9 +40,9 @@ Apache Cordova is a library used to create native mobile applications using Web 
     1. Open Xcode
     2. Select the following via the Xcode Menus:  **Xcode Preferences> Downloads>Command Line Tools**.  This downloads and installs copies of the core command-line tools and system headers into your computer's system folders.
 
-- **iOS <a href="../../../cordova/device/device.html">Device</a>**
+- **iOS Device**
 
-    You can test many of the Cordova features using the iOS simulator installed with the iOS SDK and Xcode, but you need an actual device to fully test all of the device features your applications use before submitting to the App Store.  The device must have at least iOS 5.x installed, the minimum iOS version supported as of Cordova 2.3.  <a href="../../../cordova/device/device.html">Device</a>s that support at least iOS 5 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd Generation or later. To install apps onto a device, you must also be a member of Apple's [iOS Developer Program](https://developer.apple.com/programs/ios/).  The program costs $99 per year. This platform guide shows how to deploy the application to the iOS simulator, in which case developer program registration is not required.
+    You can test many of the Cordova features using the iOS simulator installed with the iOS SDK and Xcode, but you need an actual device to fully test all of the device features your applications use before submitting to the App Store.  The device must have at least iOS 5.x installed, the minimum iOS version supported as of Cordova 2.3.  Devices that support at least iOS 5 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd Generation or later. To install apps onto a device, you must also be a member of Apple's [iOS Developer Program](https://developer.apple.com/programs/ios/).  The program costs $99 per year. This platform guide shows how to deploy the application to the iOS simulator, in which case developer program registration is not required.
 
 ## Install Cordova
 
@@ -100,7 +100,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
     2. **package name**
 
-      When submitting apps to the App Store, this must be the reverse domain name App ID that is created via the Apple Provisioning Portal (described in the Deploy to <a href="../../../cordova/device/device.html">Device</a> section).  The Provisioning Portal is accessible once you have paid for and signed into your iOS Developer Account.   Since you don't need to submit this sample app, this tutorial uses `org.apache.Cordova` plus the `HelloWorld` app name:   `org.apache.cordova.HelloWorld`
+      When submitting apps to the App Store, this must be the reverse domain name App ID that is created via the Apple Provisioning Portal (described in the Deploy to Device section).  The Provisioning Portal is accessible once you have paid for and signed into your iOS Developer Account.   Since you don't need to submit this sample app, this tutorial uses `org.apache.Cordova` plus the `HelloWorld` app name:   `org.apache.cordova.HelloWorld`
     3. **project name**
 
       This is the name of the actual project.  Most developers match the project name with the application name, so  in this example it's `HelloWorld`.
@@ -157,7 +157,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
   3. Click the **Run** button in your project window's toolbar to build, deploy and run the application in the simulator.
 
-### Deploy to the <a href="../../../cordova/device/device.html">Device</a>
+### Deploy to the Device
 
 #### Requirements
 
@@ -181,7 +181,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
 ## Results
 
-  The running HelloWorld app is shown below.  The <a href="../../../cordova/device/device.html">Device</a> is Ready line should be slowly pulsating.
+  The running HelloWorld app is shown below.  The Device is Ready line should be slowly pulsating.
 
   ![](img/guide/platforms/ios/HelloWorldStandard.png)
 
@@ -212,7 +212,7 @@ references the deprecated invokeString API:
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -273,14 +273,14 @@ references the deprecated invokeString API:
         <script type="text/javascript" src="cordova-x.x.x.js"></script>
         <script>
 	      function onLoad() {
-	    document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>(
-		  ‘<a href="../../../cordova/events/events.deviceready.html">deviceready</a>’, on<a href="../../../cordova/device/device.html">Device</a>Ready, false);
+	    document.addEventListener(
+		  ‘deviceready’, onDeviceReady, false);
         }
-        function on<a href="../../../cordova/device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
           // do Something!
           // example: display a Cordova Alert
           // see docs.cordova.io for full details
-          navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>(
+          navigator.notification.alert(
             'Cordova is ready!',  		// message
             function() {//do something},  // callback
             'Congratulations',            // title
@@ -294,7 +294,7 @@ references the deprecated invokeString API:
 
 ###Code Your Application
 
-  Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova <a href="../../../cordova/file/fileobj/fileobj.html">File</a> or <a href="../../../cordova/storage/storage.html">Storage</a> APIs.
+  Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
 
   You can use many mobile JavaScript frameworks with Cordova  to create the UI and page navigation of your application.  Popular ones include:
 
@@ -302,11 +302,11 @@ references the deprecated invokeString API:
   - Dojo Mobile
   - Sencha Touch
 
-### Modify <a href="../../project-settings/index.html">Project Settings</a>
+### Modify Project Settings
 
   There are many additional considerations to make your application unique.  The sample HelloWorld application is set up to run in all iOS environments, iPhone, iPod, and iPad.  You can design an app for a single device type by modifying the build settings within Xcode.
 
-  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova <a href="../../project-settings/index.html">Project Settings</a> Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
+  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova Project Settings Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
 
 ## Resources
 
@@ -326,7 +326,7 @@ references the deprecated invokeString API:
 
   - Cordova API documentation is available at [http://docs.cordova.io](http://docs.cordova.io)
   - [PhoneGap google group](https://groups.google.com/forum/?fromgroups=%23!forum/phonegap) to discuss and ask questions about Cordova.  This forum is monitored by Cordova developers as well as users.  When posting please include the platform, device type, Cordova version and as many details as possible about the error or problem.
-  - <a href="../../../cordova/file/fileobj/fileobj.html">File</a> Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
+  - File Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
 
 ### Credits
 

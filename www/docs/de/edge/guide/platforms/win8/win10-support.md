@@ -40,7 +40,7 @@ Remote-Modus beseitigt diese Anforderungen, wodurch es möglich, unveränderte-B
 
 ### Wirkung von Remote-Modus auf die Funktionen
 
-Die folgenden Funktionen sind nicht verfügbar, beim Bereitstellen der Anwendung Remote-Modus in der Windows-<a href="../../../cordova/storage/storage.html">Speicher</a>:
+Die folgenden Funktionen sind nicht verfügbar, beim Bereitstellen der Anwendung Remote-Modus in der Windows-Speicher:
 
   * Unternehmensauthentifizierung (`enterpriseAuthentication`)
   * Freigegebene Benutzerzertifikate (`sharedUserCertificates`)
@@ -56,7 +56,7 @@ Jede Bibliothek Beschränkungen kann verlangen, dass der Benutzer interagieren m
 
 Die netzwerkbezogene Einschränkungen müssen um gearbeitet, entweder über eine API, die Fähigkeit Kontrollen nicht verwendet oder durch Vermittlung Kommunikation über standard-Internet-Kommunikation-Kanäle wie `XMLHttpRequest` oder Web Sockets.
 
-Die Unternehmensauthentifizierung und Benutzerzertifikaten freigegebene Funktionen richten sich speziell an Enterprise-Szenarien. Diese Funktionen werden unterstützt für Private/Unternehmen-fähige App Stores, also wenn Sie apps erstellen die werden, auf einen internen Bereitstellungsmechanismus bereitgestellt werden, Sie noch dies unterstützen können. Sie werden jedoch nicht für Remote Mode apps im öffentlichen Windows-<a href="../../../cordova/storage/storage.html">Speicher</a> unterstützt. Wenn Sie Windows 10, Zielen erstellen, wenn man diese Funktionen in Ihrem app-Manifest erkannt wird, wird eine Warnung angezeigt.
+Die Unternehmensauthentifizierung und Benutzerzertifikaten freigegebene Funktionen richten sich speziell an Enterprise-Szenarien. Diese Funktionen werden unterstützt für Private/Unternehmen-fähige App Stores, also wenn Sie apps erstellen die werden, auf einen internen Bereitstellungsmechanismus bereitgestellt werden, Sie noch dies unterstützen können. Sie werden jedoch nicht für Remote Mode apps im öffentlichen Windows-Speicher unterstützt. Wenn Sie Windows 10, Zielen erstellen, wenn man diese Funktionen in Ihrem app-Manifest erkannt wird, wird eine Warnung angezeigt.
 
 ## Referenz
 

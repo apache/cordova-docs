@@ -20,10 +20,10 @@ license: >
 
 # Icons and Splash Screens
 
-This section <a href="../cordova/inappbrowser/inappbrowser.html">show</a>s how to configure an app's icon and optional splash
+This section shows how to configure an app's icon and optional splash
 screen for various platforms, both when working in the Cordova CLI
-(described in <a href="../guide/cli/index.html">The Command-Line Interface</a>) or using platform-specific
-SDK tools (detailed in the <a href="../guide/platforms/index.html">Platform Guides</a>).
+(described in The Command-Line Interface) or using platform-specific
+SDK tools (detailed in the Platform Guides).
 
 ## Configuring Icons in the CLI
 
@@ -69,7 +69,7 @@ Tizen requires an 128-pixel icon:
 
 ## Configuring Splash Screens in the CLI
 
-Use the <a href="../cordova/splashscreen/splashscreen.html">Splashscreen</a> API to enable display of an app's introductory
+Use the Splashscreen API to enable display of an app's introductory
 splash screen on many platforms.  When working in the CLI, splash
 screen source files are located within the project's `www/res/screens`
 subdirectory.
@@ -109,7 +109,7 @@ working with SDKs and related command-line tools described in Platform
 Guides.
 
 Don't forget to install the SplashScreen plugin before trying to use the
-`navigator.<a href="../cordova/splashscreen/splashscreen.hide.html">splashscreen.hide</a>()` or `navigator.splashscreen.<a href="../cordova/inappbrowser/inappbrowser.html">show</a>()` methods.
+`navigator.splashscreen.hide()` or `navigator.splashscreen.show()` methods.
 
 ## Splash Screens for the Android Platform
 
@@ -171,8 +171,8 @@ Finally, the splash screen should be present only as long as necessary. When
 your app has started and the webview has loaded, your app should hide the
 splash screen so that your main view is visible. Because the app start time
 will vary quite a bit due to a number of factors, it is recommended that your
-app explicitly invoke `navigator.<a href="../cordova/splashscreen/splashscreen.hide.html">splashscreen.hide</a>()` in the Javascript
-method that responds to the `<a href="../cordova/events/events.deviceready.html">deviceready</a>` event. Otherwise the splash screen
+app explicitly invoke `navigator.splashscreen.hide()` in the Javascript
+method that responds to the `deviceready` event. Otherwise the splash screen
 will be visible for the SplashScreenDelay value that you configured above.
 This event-driven approach is highly recommended versus having the splash
 screen visible for always a fixed duration.

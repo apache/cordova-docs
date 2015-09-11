@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="Contact/contact.html">Contact</a>s
+Contacts
 ========
 
 > The `contacts` object provides access to the device contacts database.  
@@ -26,24 +26,24 @@ license: >
 Methods
 -------
 
-- <a href="contacts.create.html">contacts.create</a>
-- <a href="contacts.find.html">contacts.find</a>
+- contacts.create
+- contacts.find
 
 Arguments
 ---------
 
-- <a href="parameters/contactFields.html">contactFields</a>
-- <a href="parameters/contactSuccess.html">contactSuccess</a>
-- <a href="parameters/contactError.html">contactError</a>
-- <a href="parameters/contactFindOptions.html">contactFindOptions</a>
+- contactFields
+- contactSuccess
+- contactError
+- contactFindOptions
 
 Objects
 -------
 
-- <a href="Contact/contact.html">Contact</a>
-- <a href="Contact/contact.html">Contact</a>Name
-- <a href="Contact/contact.html">Contact</a>Field
-- <a href="Contact/contact.html">Contact</a>Address
-- <a href="Contact/contact.html">Contact</a>Organization
-- <a href="Contact/contact.html">Contact</a>FindOptions
-- <a href="Contact/contact.html">Contact</a>Error
+- Contact
+- ContactName
+- ContactField
+- ContactAddress
+- ContactOrganization
+- ContactFindOptions
+- ContactError

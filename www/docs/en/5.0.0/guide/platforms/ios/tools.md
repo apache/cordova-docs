@@ -22,12 +22,12 @@ license: >
 
 This guide shows how to use Cordova's set of platform-centered shell
 tools to develop iOS apps. This development path, discussed in the
-<a href="../../overview/index.html">Overview</a>, may offer you a greater range of development options for iOS
+Overview, may offer you a greater range of development options for iOS
 than the cross-platform CLI tool described in The Command-Line
 Interface.  For example, you need to use shell tools when deploying a
 custom Cordova WebView alongside native components. Before using
 either development path, you must first configure the SDK environment
-as described in the <a href="index.html">iOS Platform Guide</a>.  These tools rely upon
+as described in the iOS Platform Guide.  These tools rely upon
 Xcode's command-line tools such as `xcode-select` and `xcodebuild`.
 
 To enable shell tools for iOS, download Cordova from

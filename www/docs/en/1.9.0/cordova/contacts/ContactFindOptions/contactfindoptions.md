@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../Contact/contact.html">Contact</a>FindOptions
+ContactFindOptions
 ==================
 
-Contains properties that can be used to filter the results of a `<a href="../contacts.find.html">contacts.find</a>` operation.
+Contains properties that can be used to filter the results of a `contacts.find` operation.
 
 Properties
 ----------
@@ -38,7 +38,7 @@ Supported Platforms
 - iOS
 - Bada 1.2 & 2.0
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
 	// success callback
@@ -49,45 +49,45 @@ Quick <a href="../../storage/storage.opendatabase.html">Example</a>
     };
 
 	// error callback
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
 	// specify contact search criteria
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
 	options.filter="";			// empty search string returns all contacts
 	options.multiple=true;		// return multiple results
 	filter = ["displayName"];	// return contact.displayName field
 	
 	// find contacts
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
 			// specify contact search criteria
-		    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+		    var options = new ContactFindOptions();
 			options.filter="";			// empty search string returns all contacts
 			options.multiple=true;		// return multiple results
 			filter = ["displayName"];	// return contact.displayName field
 
 			// find contacts
-		    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -100,15 +100,15 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

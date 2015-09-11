@@ -20,7 +20,7 @@ license: >
 
 # localStorage
 
-提供對 W3C [Web <a href="../storage.html">存儲</a>介面][1]的訪問
+提供對 W3C [Web 存儲介面][1]的訪問
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,11 +42,11 @@ license: >
 
 ## 詳細資訊
 
-`window.localStorage`介面實現，W3C [Web <a href="../storage.html">存儲</a>介面][2]。 應用程式可以使用它來保存永久資料使用鍵-值對。 `window.sessionStorage`介面在每個方面，除了，所有資料都被都清除應用程式關閉每次的工作方式相同。 每個<a href="../database/database.html">資料庫</a>提供了單獨的命名空間。
+`window.localStorage`介面實現，W3C [Web 存儲介面][2]。 應用程式可以使用它來保存永久資料使用鍵-值對。 `window.sessionStorage`介面在每個方面，除了，所有資料都被都清除應用程式關閉每次的工作方式相同。 每個資料庫提供了單獨的命名空間。
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## <a href="../../../config_ref/images.html">支援的平臺</a>
+## 支援的平臺
 
 *   Android 系統
 *   黑莓手機 WebWorks （OS 6.0 和更高）
@@ -85,14 +85,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>localStorage</p>
       </body>
     </html>
@@ -119,4 +119,4 @@ license: >
 
 ## Windows Phone 7 的怪癖
 
-點標記法是*沒有*可用的 Windows Phone 7。 一定要使用 `setItem` 或 `getItem` ，而不是直接從<a href="../storage.html">存儲</a>物件，如便捷鍵`window.localStorage.someKey`.
+點標記法是*沒有*可用的 Windows Phone 7。 一定要使用 `setItem` 或 `getItem` ，而不是直接從存儲物件，如便捷鍵`window.localStorage.someKey`.

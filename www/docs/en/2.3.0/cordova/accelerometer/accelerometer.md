@@ -21,26 +21,26 @@ license: >
 Accelerometer
 =============
 
-> <a href="../media/capture/capture.html">Capture</a>s device motion in the x, y, and z direction.
+> Captures device motion in the x, y, and z direction.
 
 Methods
 -------
 
-- accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
-- accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
-- <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
+- accelerometer.getCurrentAcceleration
+- accelerometer.watchAcceleration
+- accelerometer.clearWatch
 
 Arguments
 ---------
 
-- <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
-- <a href="parameters/accelerometerError.html">accelerometerError</a>
-- <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
+- accelerometerSuccess
+- accelerometerError
+- accelerometerOptions
 
 Objects (Read-Only)
 -------------------
 
-- <a href="acceleration/acceleration.html">Acceleration</a>
+- Acceleration
 
 Permissions
 -----------

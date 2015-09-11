@@ -41,7 +41,7 @@ Ten przewodnik zawiera następujące tematy:
 
 Po pierwsze i najważniejsze - aplikacji Cordova powinna przyjąć projekt SPA (pojedynczej strony aplikacji). Luźno zdefiniowane, SPA jest klient aplikacji, która jest uruchamiane jeden wniosek strony sieci web. Użytkownik wczytuje początkowy zbiór zasobów (HTML, CSS i JavaScript) i dalsze aktualizacje (wykazujących Nowy widok, ładowanie danych) odbywa się za pomocą AJAX. Uzdrowiska są często używane do bardziej złożonych aplikacji klient. GMail jest tego doskonałym przykładem. Po załadowaniu GMail, widoki poczty, edycji i organizacji wykonywane są przez aktualizacji DOM zamiast opuszczania bieżącej strony załadować zupełnie nowe.
 
-Przy użyciu SPA może pomóc zorganizować aplikację w bardziej efektywny sposób, ale również ma konkretne korzyści dla aplikacji Cordova. Aplikacja Cordova musi czekać na turnieju <a href="../../cordova/events/events.deviceready.html">deviceready</a> do ognia przed żadnych pluginów, które mogą być używane. Jeśli nie używasz SPA, i twój użytkownik klika, aby przejść z jednej strony na drugą, trzeba będzie czekać na <a href="../../cordova/events/events.deviceready.html">deviceready</a> na ogień ponownie przed korzystać z wtyczki. To jest łatwo zapomnieć, jak aplikacja staje się większy.
+Przy użyciu SPA może pomóc zorganizować aplikację w bardziej efektywny sposób, ale również ma konkretne korzyści dla aplikacji Cordova. Aplikacja Cordova musi czekać na turnieju deviceready do ognia przed żadnych pluginów, które mogą być używane. Jeśli nie używasz SPA, i twój użytkownik klika, aby przejść z jednej strony na drugą, trzeba będzie czekać na deviceready na ogień ponownie przed korzystać z wtyczki. To jest łatwo zapomnieć, jak aplikacja staje się większy.
 
 Nawet, jeśli nie chcesz używać Cordova, tworzenie aplikacji mobilnych bez korzystania z jednej strony architektura będzie mieć wpływ na wydajność poważne. To jest ponieważ nawigowania między stronami będzie wymagać skrypty, aktywów, itp., do załadowania. Nawet, jeżeli te aktywa są buforowane, nadal będą problemy z wydajnością.
 
@@ -126,7 +126,7 @@ Uwaga: niektóre wtyczki mogą nie być zgodne z nową wersją Cordova. Jeśli w
     Cordova plugin rm com.some.plugin cordova plugin dodać com.some.plugin
     
 
-Należy sprawdzić, czy plugin <a href="../platforms/android/upgrade.html">Aktualizacja</a> dokumentacji, jak może trzeba dostosować swój kod aby działał w nowej wersji. Ponadto dwukrotnie Sprawdź, czy nowa wersja pluginu działa z wersją projektu Cordova.
+Należy sprawdzić, czy plugin Aktualizacja dokumentacji, jak może trzeba dostosować swój kod aby działał w nowej wersji. Ponadto dwukrotnie Sprawdź, czy nowa wersja pluginu działa z wersją projektu Cordova.
 
 Zawsze przetestować aplikacje do zapewnienia, że rata nowy plugin nie zepsuł coś, że nie.
 

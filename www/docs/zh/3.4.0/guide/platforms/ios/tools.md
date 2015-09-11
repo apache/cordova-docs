@@ -26,7 +26,7 @@ license: >
 
 IOS 命令列工具都建立在 shell 腳本和依賴于 Xcode 命令列工具如 `xcode-select` 和`xcodebuild`.
 
-低級<a href="../../cli/index.html">命令列介面</a>，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關<a href="../../overview/index.html">概述</a>，請參見應用程式外掛程式。
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
 
 ## 創建一個專案
 

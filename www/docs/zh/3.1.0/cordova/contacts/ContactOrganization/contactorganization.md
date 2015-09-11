@@ -32,11 +32,11 @@ license: >
 
 *   **部門**： 新聞部的工程合約。*() DOMString*
 
-*   **標題**： 在組織<a href="../contacts.html">連絡人</a>的標題。*() DOMString*
+*   **標題**： 在組織連絡人的標題。*() DOMString*
 
 ## 詳細資訊
 
-`ContactOrganization`物件<a href="../../storage/storage.html">存儲</a>的<a href="../contacts.html">連絡人</a>的組織屬性。A `Contact` 物件<a href="../../storage/storage.html">存儲</a>一個或多個 `ContactOrganization` 陣列中的物件。
+`ContactOrganization`物件存儲的連絡人的組織屬性。A `Contact` 物件存儲一個或多個 `ContactOrganization` 陣列中的物件。
 
 ## 支援的平臺
 
@@ -60,14 +60,14 @@ license: >
         }
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
-    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options = new ContactFindOptions();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
     
 
 ## 完整的示例
@@ -75,22 +75,22 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+            var options = new ContactFindOptions();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -124,28 +124,28 @@ license: >
 
 ## Android 2.X 的怪癖
 
-*   **上一頁**: 不支援的 Android 2.X 的<a href="../../device/device.html">設備</a>，返回`false`.
+*   **上一頁**: 不支援的 Android 2.X 的設備，返回`false`.
 
 ## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **上一頁**: 不支援的黑莓<a href="../../device/device.html">設備</a>，返回`false`.
+*   **上一頁**: 不支援的黑莓設備，返回`false`.
 
-*   **類型**： 不支援的黑莓<a href="../../device/device.html">設備</a>，返回`null`.
+*   **類型**： 不支援的黑莓設備，返回`null`.
 
-*   **名稱**： 部分支援。第一次組織名稱<a href="../../storage/storage.html">存儲</a>在黑莓**公司**欄位中。
+*   **名稱**： 部分支援。第一次組織名稱存儲在黑莓**公司**欄位中。
 
 *   **部**: 不受支援，返回`null`.
 
-*   **標題**: 部分支援。第一次組織標題是黑莓**jobTitle**欄位中<a href="../../storage/storage.html">存儲</a>的。
+*   **標題**: 部分支援。第一次組織標題是黑莓**jobTitle**欄位中存儲的。
 
 ## iOS 的怪癖
 
-*   **上一頁**： 返回的 iOS <a href="../../device/device.html">設備</a>上不支援`false`.
+*   **上一頁**： 返回的 iOS 設備上不支援`false`.
 
-*   **類型**： 不支援的 iOS <a href="../../device/device.html">設備</a>上，返回`null`.
+*   **類型**： 不支援的 iOS 設備上，返回`null`.
 
-*   **名稱**： 部分支援。第一次組織名稱<a href="../../storage/storage.html">存儲</a>在 iOS **kABPersonOrganizationProperty**欄位中。
+*   **名稱**： 部分支援。第一次組織名稱存儲在 iOS **kABPersonOrganizationProperty**欄位中。
 
-*   **新聞部**： 部分支援。第一部名稱<a href="../../storage/storage.html">存儲</a>在 iOS **kABPersonDepartmentProperty**欄位中。
+*   **新聞部**： 部分支援。第一部名稱存儲在 iOS **kABPersonDepartmentProperty**欄位中。
 
-*   **標題**: 部分支援。第一個標題是 iOS **kABPersonJobTitleProperty**欄位中<a href="../../storage/storage.html">存儲</a>的。
+*   **標題**: 部分支援。第一個標題是 iOS **kABPersonJobTitleProperty**欄位中存儲的。

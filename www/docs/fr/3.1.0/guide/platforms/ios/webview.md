@@ -66,7 +66,7 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 15. Sélectionnez le **+** bouton et ajoutez le suivant **les cadres**. Éventuellement dans le projet de navigation, déplacez-les dans le groupe de **cadres** ) :
     
-        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework <a href="../../../cordova/media/media.html">Media</a>Player.framework QuartzCore.framework SystemConfiguration.framework MobileCoreServices.framework Core<a href="../../../cordova/media/media.html">Media</a>.framework
+        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework MediaPlayer.framework QuartzCore.framework SystemConfiguration.framework MobileCoreServices.framework CoreMedia.framework
         
 
 16. Développez les **Dépendances de la cible**, la top box étiquetée comme ça si vous avez plusieurs cases !
@@ -117,9 +117,9 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
         <content src="http://apache.org" />
         
 
-5.  (*En option*) Définir la `use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>` propriété (la valeur par défaut `NO` ) :
+5.  (*En option*) Définir la `useSplashScreen` propriété (la valeur par défaut `NO` ) :
     
-        viewController.use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a> = YES;
+        viewController.useSplashScreen = YES;
         
 
 6.  Définir le **cadre de l'avis** (toujours définir cela comme la dernière propriété) :

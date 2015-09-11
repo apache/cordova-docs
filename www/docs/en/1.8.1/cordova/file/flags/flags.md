@@ -21,7 +21,7 @@ license: >
 Flags
 =====
 
-This object is used to supply arguments to the `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` __get<a href="../fileobj/fileobj.html">File</a>__ and __getDirectory__ methods, which look up or create files and directories, respectively.
+This object is used to supply arguments to the `DirectoryEntry` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
 
 Properties
 ----------
@@ -37,11 +37,11 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // Get the data directory, creating it if it doesn't exist.
     dataDir = fileSystem.root.getDirectory("data", {create: true});
 
     // Create the lock file, if and only if it doesn't exist.
-    lock<a href="../fileobj/fileobj.html">File</a> = dataDir.get<a href="../fileobj/fileobj.html">File</a>("lockfile.txt", {create: true, exclusive: true});
+    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});

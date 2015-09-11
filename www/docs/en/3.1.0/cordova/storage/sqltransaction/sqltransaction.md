@@ -20,7 +20,7 @@ license: >
 
 # SQLTransaction
 
-Allows execution of SQL statements against the <a href="../database/database.html">Database</a>.
+Allows execution of SQL statements against the Database.
 
 ## Methods
 
@@ -28,7 +28,7 @@ Allows execution of SQL statements against the <a href="../database/database.htm
 
 ## Details
 
-Calling a `<a href="../database/database.html">Database</a>` object's transaction method, passes a
+Calling a `Database` object's transaction method, passes a
 `SQLTransaction` object to the specified callback method.
 
 ## Supported Platforms
@@ -38,7 +38,7 @@ Calling a `<a href="../database/database.html">Database</a>` object's transactio
 - iOS
 - Tizen
 
-## Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
+## Execute SQL Quick Example
 
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -55,27 +55,27 @@ Calling a `<a href="../database/database.html">Database</a>` object's transactio
         alert("success!");
     }
 
-    var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-## Full <a href="../storage.opendatabase.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../storage.html">Storage</a> <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
 
@@ -103,7 +103,7 @@ Calling a `<a href="../database/database.html">Database</a>` object's transactio
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>SQLTransaction</p>
       </body>
     </html>

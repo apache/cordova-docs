@@ -41,7 +41,7 @@ Details
 -------
 
 The `File` object contains attributes of a single file.  You can get
-an instance of a `File` object by calling a `<a href="../fileentry/fileentry.html">FileEntry</a>` object's
+an instance of a `File` object by calling a `FileEntry` object's
 `file()` method.
 
 Supported Platforms
@@ -56,7 +56,7 @@ Supported Platforms
 slice
 --------------
 
-Return a new `File` object, for which `<a href="../filereader/filereader.html">FileReader</a>` returns only the
+Return a new `File` object, for which `FileReader` returns only the
 specified portion of the file.  Negative values for `start` or `end`
 are measured from the end of the file.  Indexes are positioned
 relative to the current slice. (See the full example below.)
@@ -66,11 +66,11 @@ __Parameters:__
 - __start__: The index of the first byte to read, inclusive.
 - __end__: The index of the byte after the last one to read.
 
-__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Quick Example__
 
     var slicedFile = file.slice(10, 30);
 
-__Full <a href="../../storage/storage.opendatabase.html">Example</a>__
+__Full Example__
 
     var slice1 = file.slice(100, 400);
     var slice2 = slice1.slice(20, 35);

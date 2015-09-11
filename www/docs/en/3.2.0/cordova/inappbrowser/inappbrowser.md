@@ -20,16 +20,16 @@ license: >
 
 # InAppBrowser
 
-> The `InAppBrowser` is a web browser view that displays when calling `<a href="window.open.html">window.open</a>()`, or when opening a link formed as `<a target="_blank">`.
+> The `InAppBrowser` is a web browser view that displays when calling `window.open()`, or when opening a link formed as `<a target="_blank">`.
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
 __NOTE__: The InAppBrowser window behaves like a standard web browser,
 and can't access Cordova APIs.
 
 ## Description
 
-The object returned from a call to `<a href="window.open.html">window.open</a>`.
+The object returned from a call to `window.open`.
 
 ## Methods
 
@@ -77,7 +77,7 @@ platform-specific configuration settings described below:
         <feature name="InAppBrowser" />
 
 Some platforms may support this feature without requiring any special
-configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.
+configuration.  See Platform Support for an overview.
 
 # addEventListener
 
@@ -104,29 +104,29 @@ configuration.  See <a href="../../guide/support/index.html">Platform Support</a
 - iOS
 - Windows Phone 7 and 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.addEventListener <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.addEventListener Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
              ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
              ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
              ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
@@ -165,26 +165,26 @@ The function is passed an `InAppBrowserEvent` object.
 - iOS
 - Windows Phone 7 and 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.removeEventListener <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.removeEventListener Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Global InAppBrowser reference
         var iabRef = null;
@@ -211,8 +211,8 @@ The function is passed an `InAppBrowserEvent` object.
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
              iabRef.addEventListener('loaderror', iabLoadError);
@@ -241,29 +241,29 @@ The function is passed an `InAppBrowserEvent` object.
 - iOS
 - Windows Phone 7 and 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.close <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.close Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
              // close InAppBrowser after 5 seconds
              setTimeout(function() {
                  ref.close();
@@ -291,29 +291,29 @@ The function is passed an `InAppBrowserEvent` object.
 - BlackBerry
 - iOS
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
     ref.show();
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.show <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.show Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is ready
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
              ref.addEventListener('loadstop', function(event) {
                  alert('background window loaded'); 
              });
@@ -355,26 +355,26 @@ The function is passed an `InAppBrowserEvent` object.
 - BlackBerry
 - iOS
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.executeScript({file: "myscript.js"});
     });
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.executeScript <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.executeScript Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Global InAppBrowser reference
         var iabRef = null;
@@ -396,8 +396,8 @@ The function is passed an `InAppBrowserEvent` object.
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', replaceHeaderImage);
              iabRef.addEventListener('exit', iabClose);
         }
@@ -429,26 +429,26 @@ The function is passed an `InAppBrowserEvent` object.
 - BlackBerry
 - iOS
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.insertCSS({file: "mystyles.css"});
     });
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.insertCSS <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>InAppBrowser.insertCSS Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Global InAppBrowser reference
         var iabRef = null;
@@ -470,8 +470,8 @@ The function is passed an `InAppBrowserEvent` object.
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', changeBackgroundColor);
              iabRef.addEventListener('exit', iabClose);
         }

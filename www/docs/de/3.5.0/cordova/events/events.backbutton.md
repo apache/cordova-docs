@@ -27,7 +27,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer den "zurück"-Button drückt.
 
 ## Details
 
-Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.addEventListener` sobald Sie erhalten die `<a href="events.deviceready.html">deviceready</a>` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
+Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.addEventListener` sobald Sie erhalten die `deviceready` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
 
 ## Unterstützte Plattformen
 
@@ -50,7 +50,7 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Back Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

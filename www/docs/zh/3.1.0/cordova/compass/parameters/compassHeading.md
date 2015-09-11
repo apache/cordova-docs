@@ -20,7 +20,7 @@ license: >
 
 # compassHeading
 
-A `CompassHeading` 物件返回到 `<a href="compassSuccess.html">compassSuccess</a>` 回呼函數。
+A `CompassHeading` 物件返回到 `compassSuccess` 回呼函數。
 
 ## 屬性
 
@@ -34,7 +34,7 @@ A `CompassHeading` 物件返回到 `<a href="compassSuccess.html">compassSuccess
 
 ## 說明
 
-`CompassHeading`物件返回到 `<a href="compassSuccess.html">compassSuccess</a>` 回呼函數。
+`CompassHeading`物件返回到 `compassSuccess` 回呼函數。
 
 ## Android 的怪癖
 
@@ -46,4 +46,4 @@ A `CompassHeading` 物件返回到 `<a href="compassSuccess.html">compassSuccess
 
 *   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 
-*   IOS 4 <a href="../../device/device.html">設備</a>及以上標題因素在該<a href="../../device/device.html">設備</a>的當前方向，不涉及其絕對的立場，為應用程式支援的方向。
+*   IOS 4 設備及以上標題因素在該設備的當前方向，不涉及其絕對的立場，為應用程式支援的方向。

@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="notification.html">Notifica</a>tion.Confirm
+# Notification.Confirm
 
-<a href="../inappbrowser/inappbrowser.html">Visualizza</a> una finestra di dialogo conferma personalizzabile.
+Visualizza una finestra di dialogo conferma personalizzabile.
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
     
@@ -76,14 +76,14 @@ Il callback accetta l'argomento `buttonIndex` *(numero)*, che è l'indice del pu
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notifica</a>tion <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

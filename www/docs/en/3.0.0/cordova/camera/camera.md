@@ -33,13 +33,13 @@ camera (if the device operating system doesn't do so already).  That
 notice should provide the same information noted above, as well as
 obtaining the user's permission (e.g., by presenting choices for
 __OK__ and __No Thanks__).  For more information, please see the
-<a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.
+Privacy Guide.
 
 Methods
 -------
 
-- <a href="camera.getPicture.html">camera.getPicture</a>
-- <a href="camera.cleanup.html">camera.cleanup</a>
+- camera.getPicture
+- camera.cleanup
 
 ## Accessing the Feature
 

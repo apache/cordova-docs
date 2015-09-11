@@ -40,7 +40,7 @@ Questo oggetto contiene gli attributi di un singolo file.
 
 ## Dettagli
 
-Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottenere un'istanza di un `File` oggetto chiamando un `<a href="../fileentry/fileentry.html">FileEntry</a>` dell'oggetto `file()` metodo.
+Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottenere un'istanza di un `File` oggetto chiamando un `FileEntry` dell'oggetto `file()` metodo.
 
 ## Piattaforme supportate
 
@@ -52,7 +52,7 @@ Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottene
 
 ## fetta
 
-Restituire un nuovo `File` oggetto, per cui `<a href="../filereader/filereader.html">FileReader</a>` restituisce solo la parte specificata del file. Negativi i valori per `start` o `end` sono misurati dalla fine del file. Gli indici sono posizionati rispetto alla sezione corrente. (Vedere l'esempio completo sotto.)
+Restituire un nuovo `File` oggetto, per cui `FileReader` restituisce solo la parte specificata del file. Negativi i valori per `start` o `end` sono misurati dalla fine del file. Gli indici sono posizionati rispetto alla sezione corrente. (Vedere l'esempio completo sotto.)
 
 **Parametri:**
 

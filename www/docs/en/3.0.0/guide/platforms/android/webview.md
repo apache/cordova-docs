@@ -28,7 +28,7 @@ the `CordovaWebView` as its main view, regardless of whether the
 legacy `CordovaActivity` approach is used.
 
 If you're unfamiliar with Android application development, please read
-the <a href="index.html">Android Platform Guide</a> to developing a Cordova Application before
+the Android Platform Guide to developing a Cordova Application before
 attempting to include a WebView. It's not the main way to author
 Android Cordova applications. These instructions are currently manual,
 but may be eventually be automated.
@@ -52,7 +52,7 @@ but may be eventually be automated.
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n above:
+4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;

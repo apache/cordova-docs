@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` 物件傳遞給 `<a href="../parameters/contactError.html">contactError</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>時出現錯誤。
+A `ContactError` 物件傳遞給 `contactError` 回檔時出現錯誤。
 
 ## 屬性
 
@@ -38,4 +38,4 @@ A `ContactError` 物件傳遞給 `<a href="../parameters/contactError.html">cont
 
 ## 說明
 
-`ContactError`物件返回到使用者通過 `<a href="../parameters/contactError.html">contactError</a>` 回呼函數時出現錯誤。
+`ContactError`物件返回到使用者通過 `contactError` 回呼函數時出現錯誤。

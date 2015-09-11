@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` 개체에 전달 되는 `<a href="../parameters/contactError.html">contactError</a>` 콜백 때 오류가 발생 합니다.
+A `ContactError` 개체에 전달 되는 `contactError` 콜백 때 오류가 발생 합니다.
 
 ## 속성
 
@@ -38,4 +38,4 @@ A `ContactError` 개체에 전달 되는 `<a href="../parameters/contactError.ht
 
 ## 설명
 
-`ContactError`개체를 통해 사용자에 게 반환 되는 `<a href="../parameters/contactError.html">contactError</a>` 콜백 함수는 오류가 발생 한 경우.
+`ContactError`개체를 통해 사용자에 게 반환 되는 `contactError` 콜백 함수는 오류가 발생 한 경우.

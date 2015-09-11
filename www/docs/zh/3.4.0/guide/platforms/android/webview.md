@@ -22,7 +22,7 @@ license: >
 
 這一節演示如何嵌入在較大型的 Android 應用程式內的科爾多瓦啟用 web 視圖元件。這些元件可以如何與對方溝通的詳細資訊，請參閱應用程式外掛程式。
 
-如果你熟悉 Android，你應首先熟悉 Android <a href="../index.html">平臺指南</a>和之前你嘗試更不尋常發展嵌入 web 視圖的選項，安裝了最新 Android sdk。 從開始科爾多瓦 1.9，Android 平臺依靠 `CordovaWebView` 元件，生成遺留下來 `CordovaActivity` 預日期 1.9 版本的元件。
+如果你熟悉 Android，你應首先熟悉 Android 平臺指南和之前你嘗試更不尋常發展嵌入 web 視圖的選項，安裝了最新 Android sdk。 從開始科爾多瓦 1.9，Android 平臺依靠 `CordovaWebView` 元件，生成遺留下來 `CordovaActivity` 預日期 1.9 版本的元件。
 
 1.  要按照這些說明進行操作，請確保您有最新的科爾多瓦分佈。從[cordova.apache.org][1]下載和解壓縮其 android 系統的套裝軟體。
 

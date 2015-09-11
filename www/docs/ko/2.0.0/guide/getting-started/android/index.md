@@ -103,7 +103,7 @@ Getting Started with Android
     ![](img/guide/getting-started/android/manifest.png)
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------    
 
 - **assets/www** 디렉토리에서 **index.html** 을 생성하고 아래의 코드를 붙여넣자:
@@ -115,7 +115,7 @@ Getting Started with Android
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         </head>
         <body>
-        <h1><a href="../webos/index.html">Hello World</a></h1>
+        <h1>Hello World</h1>
         </body>
         </html>
 

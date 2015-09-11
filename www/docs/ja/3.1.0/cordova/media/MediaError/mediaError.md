@@ -20,7 +20,7 @@ license: >
 
 # MediaError
 
-A `MediaError` オブジェクトに返される、 `<a href="../Parameters/mediaError.html">mediaError</a>` コールバック関数でエラーが発生したとき。
+A `MediaError` オブジェクトに返される、 `mediaError` コールバック関数でエラーが発生したとき。
 
 ## プロパティ
 
@@ -37,4 +37,4 @@ A `MediaError` オブジェクトに返される、 `<a href="../Parameters/medi
 
 ## 説明
 
-`MediaError`オブジェクトに渡されます、 `<a href="../Parameters/mediaError.html">mediaError</a>` コールバック関数でエラーが発生したとき。
+`MediaError`オブジェクトに渡されます、 `mediaError` コールバック関数でエラーが発生したとき。

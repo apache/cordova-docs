@@ -29,7 +29,7 @@ license: >
 
 Возвращает форматируемую строку номер для `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `String` значение.
 
-Если есть ошибка форматирования числа, то `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+Если есть ошибка форматирования числа, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.FORMATTING\_ERROR`.
 
 `options`Параметр является необязательным, и его значения по умолчанию являются:
 
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>numberToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

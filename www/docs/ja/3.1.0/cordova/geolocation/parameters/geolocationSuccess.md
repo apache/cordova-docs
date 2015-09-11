@@ -20,7 +20,7 @@ license: >
 
 # geolocationSuccess
 
-地理<a href="../Position/position.html">位置</a>が利用可能になったときに実行されるユーザーのコールバック関数 (から呼び出されると `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ）、（から呼び出されたときに、<a href="../Position/position.html">位置</a>が変更されたとき、または`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
+地理位置が利用可能になったときに実行されるユーザーのコールバック関数 (から呼び出されると `geolocation.getCurrentPosition` ）、（から呼び出されたときに、位置が変更されたとき、または`geolocation.watchPosition`).
 
     function(position) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## パラメーター
 
-*   **<a href="../Position/position.html">位置</a>**: <a href="../../device/device.html">デバイス</a>によって返される地理<a href="../Position/position.html">位置</a>。*（<a href="../Position/position.html">位置</a>）*
+*   **位置**: デバイスによって返される地理位置。*（位置）*
 
 ## 例
 

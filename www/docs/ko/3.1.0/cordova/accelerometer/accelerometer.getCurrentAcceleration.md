@@ -20,16 +20,16 @@ license: >
 
 # accelerometer.getCurrentAcceleration
 
-*X*, *y*및 *z* 축 따라 현재 <a href="acceleration/acceleration.html">가속</a>도 얻을.
+*X*, *y*및 *z* 축 따라 현재 가속도 얻을.
 
-    navigator.accelerometer.getCurrentAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## 설명
 
-<a href="accelerometer.html">가 속도계</a> 3 차원 *x*, *y*및 *z* 축 따라 현재 <a href="../device/device.html">장치</a> 방향 기준으로 이동 (*델타*) 변경 내용을 감지 하는 모션 센서입니다.
+가 속도계 3 차원 *x*, *y*및 *z* 축 따라 현재 장치 방향 기준으로 이동 (*델타*) 변경 내용을 감지 하는 모션 센서입니다.
 
-이 <a href="acceleration/acceleration.html">가속</a>도 값에 반환 되는 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` 콜백 함수.
+이 가속도 값에 반환 되는 `accelerometerSuccess` 콜백 함수.
 
 ## 지원 되는 플랫폼
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -94,7 +94,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>
@@ -102,8 +102,8 @@ license: >
 
 ## iOS 단점
 
-*   iOS는 어떤 주어진된 시점에서 현재 <a href="acceleration/acceleration.html">가속</a>도의 개념을 인식 하지 못합니다.
+*   iOS는 어떤 주어진된 시점에서 현재 가속도의 개념을 인식 하지 못합니다.
 
-*   <a href="acceleration/acceleration.html">가속</a>을 감시 하며 데이터 <a href="../media/capture/capture.html">캡처</a>에 주어진 시간 간격.
+*   가속을 감시 하며 데이터 캡처에 주어진 시간 간격.
 
 *   따라서,는 `getCurrentAcceleration` 에서 보고 된 마지막 값을 생성 하는 함수는 `watchAccelerometer` 전화.

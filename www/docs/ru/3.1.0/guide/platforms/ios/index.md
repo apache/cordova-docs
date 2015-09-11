@@ -22,11 +22,11 @@ license: >
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для iOS-устройств, таких как iPhone и iPad. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   <a href="config.html">iOS конфигурации</a>
-*   <a href="upgrading.html">Обновление iOS</a>
-*   <a href="webview.html">iOS WebViews</a>
+*   iOS конфигурации
+*   Обновление iOS
+*   iOS WebViews
 *   iOS, плагины
-*   <a href="tools.html">iOS утилиты командной строки</a>
+*   iOS утилиты командной строки
 
 Средства командной строки относятся к версии до Cordova 3.0. Сведения о текущем интерфейсе см интерфейс командной строки.
 
@@ -34,7 +34,7 @@ license: >
 
 Apple ® инструменты, необходимые для создания приложений iOS, выполняться только в операционной системе OS X на компьютерах Mac на базе Intel. Xcode ® 4.5 (минимальная требуемая версия) работает только на OS X 10.7 (Lion) версии или выше и включает в себя iOS 6 SDK (Software Development Kit). Чтобы отправить приложений в Apple App Store℠ требует последние версии средств Apple.
 
-Вы можете проверить многие из функций Cordova, используя эмулятор iOS установлен с iOS SDK и Xcode, но вам нужно реальное устройство полностью проверить все функции устройства приложения перед отправкой в App Store. <a href="../../../cordova/device/device.html">Устройство</a> должно иметь по крайней мере iOS 5.x установлен, минимальный iOS версии поддерживается начиная с Cordova 2.3. Вспомогательные устройства включают все iPad ® модели, iPhone ® 3GS и выше и iPod ® Touch 3-го поколения или более поздней версии. Для установки приложений на устройство, необходимо также быть членом компании Apple [iOS разработчик программы][1], которая стоит $99 в год. В этом руководстве показано, как развернуть приложения в эмуляторе iOS, для которого не нужно зарегистрироваться в программе developer.
+Вы можете проверить многие из функций Cordova, используя эмулятор iOS установлен с iOS SDK и Xcode, но вам нужно реальное устройство полностью проверить все функции устройства приложения перед отправкой в App Store. Устройство должно иметь по крайней мере iOS 5.x установлен, минимальный iOS версии поддерживается начиная с Cordova 2.3. Вспомогательные устройства включают все iPad ® модели, iPhone ® 3GS и выше и iPod ® Touch 3-го поколения или более поздней версии. Для установки приложений на устройство, необходимо также быть членом компании Apple [iOS разработчик программы][1], которая стоит $99 в год. В этом руководстве показано, как развернуть приложения в эмуляторе iOS, для которого не нужно зарегистрироваться в программе developer.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -127,7 +127,7 @@ Xcode предупреждение о `invokeString` метод касается
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];

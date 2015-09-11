@@ -27,7 +27,7 @@ license: >
 
 ## 說明
 
-返回的日期與成功回<a href="../file/fileobj/fileobj.html">檔</a>到 `properties` 物件作為參數。該物件應具有以下屬性：
+返回的日期與成功回檔到 `properties` 物件作為參數。該物件應具有以下屬性：
 
 *   **一年**： 將四個數字的年份。*（人數）*
 
@@ -53,7 +53,7 @@ license: >
 `options.formatLength`可以是 `short` ， `medium` ， `long` ，或 `full` 。 `options.selector`可以是 `date` ， `time` 或`date and
 time`.
 
-如果有錯誤解析日期字串，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+如果有錯誤解析日期字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
 
 ## 支援的平臺
 
@@ -64,7 +64,7 @@ time`.
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，這將<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出對話方塊與類似的文本 `month:8 day:25 year:2012` 。 請注意，整數是一個月比少的字串，作為月整數代表陣列索引。
+當瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本 `month:8 day:25 year:2012` 。 請注意，整數是一個月比少的字串，作為月整數代表陣列索引。
 
     navigator.globalization.stringToDate(
         '9/25/2012',
@@ -81,7 +81,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToDate Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

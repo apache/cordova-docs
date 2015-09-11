@@ -50,7 +50,7 @@ SDK と Apache Cordova のインストール
 --------------------
 
 - Xcode を起動します
-- メニューから _<a href="../../../cordova/file/fileobj/fileobj.html">File</a>_ を選択します
+- メニューから _File_ を選択します
 - _New_ を選択し、 _New Project..._ を選択します
 - テンプレートのリストから _Cordova-based Application_ を選択します
 
@@ -92,14 +92,14 @@ Apache Cordova プロジェクトが作成出来ました。次に、プロジ�
 
     ![](img/guide/getting-started/ios/create-folder-reference.png)
 
-<a href="../webos/index.html">Hello World</a> の作成
+Hello World の作成
 --------------
 
 - Xcode の _Project Navigator_ にある `www` フォルダーを選択します
 - `index.html` ファイルを選択します
 - `<body>` タグの後に以下を追加します:
 
-        <h1><a href="../webos/index.html">Hello World</a></h1>
+        <h1>Hello World</h1>
 
 関連する JavaScript や CSS ファイルも追加することができます。
 
@@ -114,10 +114,10 @@ Apache Cordova プロジェクトが作成出来ました。次に、プロジ�
 デバイスへのデプロイ
 --------------------
 
-- _Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s_ グループの中にある `あなたのアプリ名-Info.plist` を開きます
+- _Supporting Files_ グループの中にある `あなたのアプリ名-Info.plist` を開きます
 - _BundleIdentifier_ を Apple から提供された Identifer 、または自分の Identifer に変更します
     - もし開発者ライセンスを持っている場合は、 [Assistant] (http://developer.apple.com/iphone/manage/overview/index.action) よりアプリを登録できます
-- ツールバーにあるドロップダウンメニューから _Active SDK_ を _あなたの<a href="../../../cordova/device/device.html">Device</a>名_ に変更します
+- ツールバーにあるドロップダウンメニューから _Active SDK_ を _あなたのDevice名_ に変更します
     - デバイスを USB で接続する必要があります
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 

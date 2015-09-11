@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="upgrading.html">升級黑莓 10</a>
+# 升級黑莓 10
 
-本指南演示如何修改黑莓手機的專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱<a href="../../cli/index.html">命令列介面</a>如何更新的 CLI 版本。
+本指南演示如何修改黑莓手機的專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。
 
 ## 4.0.0 3.6.0 版升級專案
 
@@ -31,7 +31,7 @@ license: >
 
 對於 CLI 專案:
 
-1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
 2.  在你現有的專案中運行 `cordova platform update blackberry`。
 
@@ -39,7 +39,7 @@ license: >
 
 為專案創建的科爾多瓦 CLI:
 
-1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
 2.  運行 `cordova platform update blackberry`
 
@@ -50,7 +50,7 @@ license: >
 
 ## 從 3.0.0 升級到 3.1.0
 
-1.  創建一個新的 Apache 科爾多瓦 3.1.0 專案使用 CLI，科爾多瓦，所述的<a href="../../cli/index.html">命令列介面</a>。
+1.  創建一個新的 Apache 科爾多瓦 3.1.0 專案使用 CLI，科爾多瓦，所述的命令列介面。
 
 2.  添加您的平臺到科爾多瓦專案中，例如：`cordova
 platform add blackberry10`.
@@ -69,7 +69,7 @@ platform add blackberry10`.
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
 
 2.  添加您的平臺到科爾多瓦專案中，例如:`cordova
 platform add blackberry10`.

@@ -24,54 +24,54 @@ Installieren Sie vor der Entwicklung für den unten aufgeführten Plattformen, C
 
 Um Cordova Anwendungen entwickeln, installieren Sie SDKs für jede mobile Plattform, die Sie abzielen. Diese Installation ist erforderlich, unabhängig davon, ob Sie den Großteil Ihrer Arbeit im SDK oder verwenden die CLI für Ihren Build-Zyklus.
 
-Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen, jede Plattform-Entwicklungsumgebung einrichten: wo Sie das SDK zu erhalten, <a href="../../cordova/device/device.html">Gerät</a>eemulatoren einrichten, wie die <a href="../../cordova/connection/connection.html">Verbindung</a> der <a href="../../cordova/device/device.html">Gerät</a>e zum direkten testen und verwalten, wichtige Signaturanforderungen. Zusätzliche Handbücher enthalten Informationen auf jede Plattform einzigartige Gruppe von Konfigurationsoptionen, Anweisungen zum Hinzufügen von Plugins, aktualisieren, jede Plattform und Plattform-spezifischen Befehlszeilentools, die als eine Low-Level-Alternative zu dienen die `cordova` des Befehlszeilen-Dienstprogramms.
+Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen, jede Plattform-Entwicklungsumgebung einrichten: wo Sie das SDK zu erhalten, Geräteemulatoren einrichten, wie die Verbindung der Geräte zum direkten testen und verwalten, wichtige Signaturanforderungen. Zusätzliche Handbücher enthalten Informationen auf jede Plattform einzigartige Gruppe von Konfigurationsoptionen, Anweisungen zum Hinzufügen von Plugins, aktualisieren, jede Plattform und Plattform-spezifischen Befehlszeilentools, die als eine Low-Level-Alternative zu dienen die `cordova` des Befehlszeilen-Dienstprogramms.
 
 ## Android
 
-*   <a href="android/index.html">Android-Plattform-Guide</a>
-*   <a href="android/config.html">Android-Konfiguration</a>
-*   <a href="android/webview.html">Android Webansichten für</a>
-*   <a href="android/plugin.html">Android Plugins</a>
-*   <a href="android/tools.html">Android-Befehlszeilenprogrammen</a>
-*   <a href="android/upgrading.html">Aktualisierung von Android</a>
+*   Android-Plattform-Guide
+*   Android-Konfiguration
+*   Android Webansichten für
+*   Android Plugins
+*   Android-Befehlszeilenprogrammen
+*   Aktualisierung von Android
 
 ## BlackBerry
 
-*   <a href="blackberry/index.html">Handbuch der BlackBerry-Plattform</a>
-*   <a href="blackberry10/config.html">BlackBerry Configuration</a>
-*   <a href="blackberry/tools.html">BlackBerry-Befehlszeilentools</a>
-*   <a href="blackberry10/upgrading.html">Aktualisieren der BlackBerry</a>
+*   Handbuch der BlackBerry-Plattform
+*   BlackBerry Configuration
+*   BlackBerry-Befehlszeilentools
+*   Aktualisieren der BlackBerry
 
 ## BlackBerry 10
 
-*   <a href="blackberry10/index.html">Handbuch für die Plattform von BlackBerry 10</a>
+*   Handbuch für die Plattform von BlackBerry 10
 *   BlackBerry 10 Konfiguration
-*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="blackberry10/tools.html">BlackBerry 10-Befehlszeilentools</a>
+*   BlackBerry 10 Plugins
+*   BlackBerry 10-Befehlszeilentools
 
 ## iOS
 
-*   <a href="ios/index.html">iOS Platform Guide</a>
-*   <a href="ios/config.html">iOS Konfiguration</a>
-*   <a href="ios/webview.html">iOS Webansichten für</a>
-*   <a href="ios/plugin.html">iOS Plugins</a>
-*   <a href="ios/tools.html">iOS-Befehlszeilenprogrammen</a>
-*   <a href="ios/upgrading.html">IOS Upgrade</a>
+*   iOS Platform Guide
+*   iOS Konfiguration
+*   iOS Webansichten für
+*   iOS Plugins
+*   iOS-Befehlszeilenprogrammen
+*   IOS Upgrade
 
 ## Windows Phone
 
-*   <a href="wp8/index.html">Handbuch für die Plattform von Windows Phone-8</a>
-*   <a href="wp7/index.html">Windows Phone 7 Plattform Guide</a>
+*   Handbuch für die Plattform von Windows Phone-8
+*   Windows Phone 7 Plattform Guide
 *   Windows Phone-Konfiguration
-*   <a href="wp8/tools.html">Windows Phone Befehlszeilentools</a>
-*   <a href="wp8/upgrading.html">Aktualisieren von Windows Phone</a>
+*   Windows Phone Befehlszeilentools
+*   Aktualisieren von Windows Phone
 
 ## Windows 8
 
-*   <a href="win8/index.html">Anleitung zur Windows 8 Platform</a>
-*   <a href="win8/tools.html">Windows 8-Befehlszeilentools</a>
-*   <a href="win8/upgrading.html">Aktualisieren von Windows 8</a>
+*   Anleitung zur Windows 8 Platform
+*   Windows 8-Befehlszeilentools
+*   Aktualisieren von Windows 8
 
 ## Tizen
 
-*   <a href="tizen/index.html">Tizen Plattform Guide</a>
+*   Tizen Plattform Guide

@@ -29,7 +29,7 @@ license: >
 
 Возвращает массив имен для `successCallback` с `properties` объект в качестве параметра. Этот объект содержит `value` свойство с `Array` из `String` значения. Имена функций массива, начиная с либо в первый месяц, в год или в первый день недели, в зависимости от выбранного варианта.
 
-Если есть ошибка получения имена, а затем `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Если есть ошибка получения имена, а затем `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
 
 `options`Параметр является необязательным, и его значения по умолчанию являются:
 
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

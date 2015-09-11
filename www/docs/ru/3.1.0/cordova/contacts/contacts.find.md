@@ -22,26 +22,26 @@ license: >
 
 Запрашивает базу данных контактов устройства и возвращает один или несколько `Contact` объектов, каждый из которых содержит указанные поля.
 
-    navigator.contacts.find(<a href="parameters/contactFields.html">contactFields</a>, <a href="parameters/contactSuccess.html">contactSuccess</a>, <a href="parameters/contactError.html">contactError</a>, <a href="parameters/contactFindOptions.html">contactFindOptions</a>);
+    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
     
 
 ## Описание
 
-`contacts.find`Метод выполняется асинхронно, запрашивая базу контактов устройства и возвращая массив `Contact` объектов. Полученные объекты передаются в `<a href="parameters/contactSuccess.html">contactSuccess</a>` функции обратного вызова, указанный параметром **<a href="parameters/contactSuccess.html">contactSuccess</a>** .
+`contacts.find`Метод выполняется асинхронно, запрашивая базу контактов устройства и возвращая массив `Contact` объектов. Полученные объекты передаются в `contactSuccess` функции обратного вызова, указанный параметром **contactSuccess** .
 
-Параметр **<a href="parameters/contactFields.html">contactFields</a>** указывает поля, чтобы использоваться в качестве квалификатора Поиск, и только те результаты, которые передаются функции обратного вызова **<a href="parameters/contactSuccess.html">contactSuccess</a>** . Нулевой длины **<a href="parameters/contactFields.html">contactFields</a>** параметр является недопустимым и приводит к `<a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>.INVALID_ARGUMENT_ERROR` . Значение **<a href="parameters/contactFields.html">contactFields</a>** `"*"` возвращает все поля контактов.
+Параметр **contactFields** указывает поля, чтобы использоваться в качестве квалификатора Поиск, и только те результаты, которые передаются функции обратного вызова **contactSuccess** . Нулевой длины **contactFields** параметр является недопустимым и приводит к `ContactError.INVALID_ARGUMENT_ERROR` . Значение **contactFields** `"*"` возвращает все поля контактов.
 
-**<a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>.filter** строка может использоваться как фильтр поиска при запросах к базе данных контактов. Если, без учета регистра, матч частичное значение применяется к каждому полю, указанному в параметре **<a href="parameters/contactFields.html">contactFields</a>** . Если есть совпадение для *любого* из указанных полей, возвращается контакт.
+**ContactFindOptions.filter** строка может использоваться как фильтр поиска при запросах к базе данных контактов. Если, без учета регистра, матч частичное значение применяется к каждому полю, указанному в параметре **contactFields** . Если есть совпадение для *любого* из указанных полей, возвращается контакт.
 
 ## Параметры
 
-*   **<a href="parameters/contactFields.html">contactFields</a>**: контакт поля для использования в качестве квалификатора поиска. Полученный `Contact` объект только функции значения для этих полей. *(DOMString[])* [Требуется]
+*   **contactFields**: контакт поля для использования в качестве квалификатора поиска. Полученный `Contact` объект только функции значения для этих полей. *(DOMString[])* [Требуется]
 
-*   **<a href="parameters/contactSuccess.html">contactSuccess</a>**: успех функция обратного вызова вызывается с контактами вернулся из базы данных. [Требуется]
+*   **contactSuccess**: успех функция обратного вызова вызывается с контактами вернулся из базы данных. [Требуется]
 
-*   **<a href="parameters/contactError.html">contactError</a>**: ошибка функции обратного вызова, вызывается при возникновении ошибки. [Опционально]
+*   **contactError**: ошибка функции обратного вызова, вызывается при возникновении ошибки. [Опционально]
 
-*   **<a href="parameters/contactFindOptions.html">contactFindOptions</a>**: параметры для фильтрации контактов поиска. [Опционально]
+*   **contactFindOptions**: параметры для фильтрации контактов поиска. [Опционально]
 
 ## Поддерживаемые платформы
 
@@ -57,12 +57,12 @@ license: >
         alert('Found ' + contacts.length + ' contacts.');
     };
     
-    function onError(<a href="parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
     
     // find all contacts with 'Bob' in any name field
-    var options      = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+    var options      = new ContactFindOptions();
     options.filter   = "Bob";
     options.multiple = true;
     var fields       = ["displayName", "name"];
@@ -74,18 +74,18 @@ license: >
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Contact Example</title>
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
                 // Wait for device API libraries to load
-                document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+                document.addEventListener("deviceready", onDeviceReady, false);
     
                 // device APIs are available
     
                 function onDeviceReady() {
                     // find all contacts with 'Bob' in any name field
-                    var options = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
+                    var options = new ContactFindOptions();
                     options.filter = "Bob";
                     var fields = ["displayName", "name"];
                     navigator.contacts.find(fields, onSuccess, onError, options);
@@ -101,14 +101,14 @@ license: >
     
                 // onError: Failed to get the contacts
     
-                function onError(<a href="parameters/contactError.html">contactError</a>) {
+                function onError(contactError) {
                     alert('onError!');
                 }
             </script>
         </head>
     
         <body>
-            <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
+            <h1>Example</h1>
             <p>Find Contacts</p>
         </body>
     </html>

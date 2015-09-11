@@ -36,13 +36,13 @@ recording for an audio file.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     // Record audio
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new <a href="media.html">Media</a>(src,
+        var mediaRec = new Media(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -57,25 +57,25 @@ recording for an audio file.
         mediaRec.startRecord();
     }
 
-## Full <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../device/device.html">Device</a> Properties <a href="../splashscreen/<a href="../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Record audio
         //
         function recordAudio() {
             var src = "myrecording.amr";
-            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
+            var mediaRec = new Media(src, onSuccess, onError);
 
             // Record audio
             mediaRec.startRecord();
@@ -84,7 +84,7 @@ recording for an audio file.
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
+                setAudioPosition(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -94,7 +94,7 @@ recording for an audio file.
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             recordAudio();
         }
 
@@ -113,7 +113,7 @@ recording for an audio file.
 
         // Set audio position
         //
-        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+        function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
 
@@ -133,11 +133,11 @@ recording for an audio file.
 
 - iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
 
-- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `<a href="../file/fileobj/fileobj.html">File</a>` API using `Local<a href="../file/filesystem/filesystem.html"><a href="../file/fileobj/fileobj.html">File</a>System</a>.TEMPORARY`. Any subdirectory specified at record time must already exist.
+- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `File` API using `LocalFileSystem.TEMPORARY`. Any subdirectory specified at record time must already exist.
 
-- <a href="../file/fileobj/fileobj.html">File</a>s can be recorded and played back using the documents URI:
+- Files can be recorded and played back using the documents URI:
 
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("documents://beer.mp3")
+        var myMedia = new Media("documents://beer.mp3")
 
 ## Tizen Quirks
 

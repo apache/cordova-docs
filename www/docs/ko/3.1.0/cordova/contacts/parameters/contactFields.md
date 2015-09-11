@@ -20,6 +20,6 @@ license: >
 
 # contactFields
 
-필요에 대 한 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 `<a href="../contacts.find.html">contacts.find</a>` 에 포함 되어야 하는 필드를 지정 하는 데 사용 하는 메서드는 `Contact` 개체 찾기 작업에서 유래.
+필요에 대 한 매개 변수는 `contacts.find` 에 포함 되어야 하는 필드를 지정 하는 데 사용 하는 메서드는 `Contact` 개체 찾기 작업에서 유래.
 
     ["이름", "phoneNumbers", "이메일"]

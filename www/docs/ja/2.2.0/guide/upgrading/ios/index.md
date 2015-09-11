@@ -41,7 +41,7 @@ Upgrading Cordova iOS
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**注意** 2.2.0 では、 **bin/create** スクリプトが プロジェクトの CordovaLib サブプロジェクト内にコピーされるようになります。同じようなセットアップを保持するためにも、正しい CordovaLib をプロジェクトのフォルダーにコピーして、 CordovaLib サブプロジェクトの位置情報 (プロジェクトに関係) を Xcode <a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector で更新してください。
+**注意** 2.2.0 では、 **bin/create** スクリプトが プロジェクトの CordovaLib サブプロジェクト内にコピーされるようになります。同じようなセットアップを保持するためにも、正しい CordovaLib をプロジェクトのフォルダーにコピーして、 CordovaLib サブプロジェクトの位置情報 (プロジェクトに関係) を Xcode File Inspector で更新してください。
 
 ## 2.0.0 から 2.1.0 へのアップグレード ##
 
@@ -74,9 +74,9 @@ Upgrading Cordova iOS
 3. 新規プロジェクトから **www/cordova-2.0.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-1.9.0.js** ファイルを削除します
 4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-2.0.0.js** ファイルを参照するように **更新** します
 5. 新規プロジェクトから **"cordova"** フォルダーを、 root フォルダーにコピーします (もしコマンドラインツールを使用したい場合)
-6. **Cordova.plist** ファイル (**Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s** グループの下) の中の **Plugins** 以下に新しいエントリーを **追加** します - キーは **<a href="../../../cordova/device/device.html">Device</a>** で値は **CDV<a href="../../../cordova/device/device.html">Device</a>** です
+6. **Cordova.plist** ファイル (**Supporting Files** グループの下) の中の **Plugins** 以下に新しいエントリーを **追加** します - キーは **Device** で値は **CDVDevice** です
 7. **Cordova.framework** を削除します
-8. **Supporting <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s** グループから **verify.sh** を削除します
+8. **Supporting Files** グループから **verify.sh** を削除します
 9. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
 10.  **"Preprocessor Macros"** を検索し、すべての **"CORDOVA_FRAMEWORK=1"** の値を削除します
 11. ハードドライブのホームディレクトリの下の **Documents** フォルダーにインストールされた **CordovaLib** フォルダーを開きます
@@ -99,13 +99,13 @@ Upgrading Cordova iOS
 20. **libCordova.a** static library を選択し、 **"Add"** ボタンを選択します
 21. **"Ran Script"** phase を削除します
 22. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-23. **"Other Linker <a href="../../../cordova/file/flags/flags.html">Flags</a>"** を探し、 **-all_load** と **-Obj-C** を値に追加します
+23. **"Other Linker Flags"** を探し、 **-all_load** と **-Obj-C** を値に追加します
 24. **"CordovaLib" sub-project** を展開します
 25. **"VERSION"** ファイルを見つけ、メインプロジェクトにドラッグします (ここではコピーではなくリンクを作成します)
 26. **"Create groups for any added folders"** ラジオボタンを選択し、 **"Finish"** ボタンを選択します
 27. 前のステップでドラッグした **"VERSION"** ファイルを選択します
-28. **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** を開くため、 **Option-Command-1** キーを押します (または、メニューから **View -> Utilities -> Show <a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector**)
-29. **Location** のドロップダウンメニューのため、 **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** から **"Relative to CORDOVALIB"** を選択します
+28. **File Inspector** を開くため、 **Option-Command-1** キーを押します (または、メニューから **View -> Utilities -> Show File Inspector**)
+29. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
 30. プロジェクトを **ビルド** します。 **問題なく** コンパイルされるはずです
 31. **Scheme** ドロップダウンから **プロジェクトを選択** し、 **"iPhone 5.1 Simulator"** を選択します
 32. **Run** ボタンを選択します
@@ -125,7 +125,7 @@ Upgrading Cordova iOS
 
 **注意:**
 
-1.9.0 は、 Cordova.plist で新しい boolean の **"BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>"** 設定値をサポートします。デフォルトでは、これは有効に設定されています。 "false" と設定することで無効にすることができます (特に iOS 6 のため) 。詳しくは [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html) を参照してください
+1.9.0 は、 Cordova.plist で新しい boolean の **"BackupWebStorage"** 設定値をサポートします。デフォルトでは、これは有効に設定されています。 "false" と設定することで無効にすることができます (特に iOS 6 のため) 。詳しくは [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html) を参照してください
 
 
 ## 1.7.0 から 1.8.x へのアップグレード ##
@@ -135,11 +135,11 @@ Upgrading Cordova iOS
 3. 新規プロジェクトから **www/cordova-1.8.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-1.7.x.js** ファイルを削除します
 4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-1.8.0.js** ファイルを参照するように **更新** します
 
-もし **<a href="../../../cordova/media/capture/capture.html">Capture</a> API** を使う場合は、新しい **iPad retina-display** アセットが必要です:
+もし **Capture API** を使う場合は、新しい **iPad retina-display** アセットが必要です:
 
-1.  新規プロジェクトから **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を既存プロジェクトの **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** に上書きコピーします
-2.  既存プロジェクトで、 Xcode の Project Navigator の中の **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を選択し、 **Delete** キーを押します。ポップアップダイアログで、 **Remove Reference** を選択します
-3.  ステップ1から新しい **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を Xcode の Project Navigator 上にドラッグし、 **Create groups for any added folders** ラジオボタンを選択します
+1.  新規プロジェクトから **Resources/Capture.bundle** を既存プロジェクトの **Resources/Capture.bundle** に上書きコピーします
+2.  既存プロジェクトで、 Xcode の Project Navigator の中の **Capture.bundle** を選択し、 **Delete** キーを押します。ポップアップダイアログで、 **Remove Reference** を選択します
+3.  ステップ1から新しい **Capture.bundle** を Xcode の Project Navigator 上にドラッグし、 **Create groups for any added folders** ラジオボタンを選択します
 
 ## 1.6.x から 1.7.0 へのアップグレード ##
 
@@ -180,17 +180,17 @@ Upgrading Cordova iOS
 4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-1.5.0.js** ファイルを参照するように **更新** します
 5. Project Navigator から **"PhoneGap.framework"** を探し、選択します
 6. **Delete** キーを押して、 Project Navigator の中の **"PhoneGap.framework"** の参照を削除します
-7. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
+7. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
 8. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 9. **"/Users/Shared/Cordova/Frameworks/Cordova.framework"** と入力し、 **"Go"** ボタンをクリックします
-10. **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s.." 画面** で **"Add"** ボタンをクリックします
+10. **"Add Files.." 画面** で **"Add"** ボタンをクリックします
 11. Project Navigator で **"Cordova.framework" を選択** します
-12. **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** を開くため、 **Option-Command-1** キーを押します
-13. **Location** のドロップダウンメニューのため、 **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector** から **"Absolute Path"** を選択します
-14. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
+12. **File Inspector** を開くため、 **Option-Command-1** キーを押します
+13. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Absolute Path"** を選択します
+14. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
 15. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 16. **"~/Documents/CordovaLib/Classes/deprecated"** と入力し、 **"Go"** ボタンをクリックします
-17. **"Add <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s.." 画面** で **"Add"** ボタンをクリックします
+17. **"Add Files.." 画面** で **"Add"** ボタンをクリックします
 18. **AppDelegate.h, AppDelegate.m, MainViewController.h** ファイルの **#ifdef PHONEGAP_FRAMEWORK** の部分を以下に置き換えます:
 
         #import "CDVDeprecated.h"

@@ -20,18 +20,18 @@ license: >
 
 # geolocation.clearWatch
 
-참조 디바이스의 <a href="Position/position.html">위치</a> 변경에 대 한 보고 중지는 `watchID` 매개 <a href="../../plugin_ref/spec.html">변수</a>.
+참조 디바이스의 위치 변경에 대 한 보고 중지는 `watchID` 매개 변수.
 
     navigator.geolocation.clearWatch(watchID);
     
 
-## 매개 <a href="../../plugin_ref/spec.html">변수</a>
+## 매개 변수
 
 *   **watchID**: id는 `watchPosition` 간격을 취소 합니다. (문자열)
 
 ## 설명
 
-`geolocation.clearWatch`선택을 취소 하 여 소자의 <a href="Position/position.html">위치</a>에 변화를 보고 중지는 `<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>` 에 의해 참조 된`watchID`.
+`geolocation.clearWatch`선택을 취소 하 여 소자의 위치에 변화를 보고 중지는 `geolocation.watchPosition` 에 의해 참조 된`watchID`.
 
 ## 지원 되는 플랫폼
 
@@ -44,9 +44,9 @@ license: >
 
 ## 빠른 예제
 
-    / / 옵션: 대 한 <a href="Position/position.html">위치</a>에서 변경 하 고 가장 많이 사용 / / 정확한 <a href="Position/position.html">위치</a> 수집 방법을 사용할 수 있습니다.
+    / / 옵션: 대 한 위치에서 변경 하 고 가장 많이 사용 / / 정확한 위치 수집 방법을 사용할 수 있습니다.
     //
-    var watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     
     // ...later on...
     
@@ -58,14 +58,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         var watchID = null;
     
@@ -75,7 +75,7 @@ license: >
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.<a href="geolocation.watchPosition.html">geolocation.watchPosition</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
         // onSuccess Geolocation
@@ -96,7 +96,7 @@ license: >
             }
         }
     
-            // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
               alert('code: '    + error.code    + '\n' +

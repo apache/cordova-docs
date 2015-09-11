@@ -26,7 +26,7 @@ Verwenden Sie Cordova, falls Sie sind:
 
 *   mobile Entwickler und wollen eine Anwendung über mehrere Plattformen hinweg zu erweitern, ohne es erneut mit Sprache und Tool jede Plattform implementieren festgelegt.
 
-*   <a href="../../cordova/storage/storage.html">Speicher</a>n Portale, Webentwickler und wollen eine Webanwendung bereitstellen, die für den Vertrieb in verschiedenen app gepackt ist.
+*   Speichern Portale, Webentwickler und wollen eine Webanwendung bereitstellen, die für den Vertrieb in verschiedenen app gepackt ist.
 
 *   mobile Entwickler interessiert mischen systemeigene Anwendungskomponenten mit einer *WebView* (Browser-Fenster), die auf Geräteebene APIs, zugreifen kann oder wollen Sie eine Plugin-Schnittstelle zwischen systemeigenen und WebView Komponenten entwickeln.
 

@@ -21,6 +21,6 @@ license: >
 contactFields
 =============
 
-`<a href="../contacts.find.html">contacts.find</a>` メソッドを使用する際の必須パラメーターです。このパラメーターを使って、検索操作によって得られる `<a href="../Contact/contact.html">Contact</a>` オブジェクトが持つフィールドを指定します。
+`contacts.find` メソッドを使用する際の必須パラメーターです。このパラメーターを使って、検索操作によって得られる `Contact` オブジェクトが持つフィールドを指定します。
 
     ["name", "phoneNumbers", "emails"]

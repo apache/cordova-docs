@@ -32,7 +32,7 @@ various platforms' IDEs to develop them further.
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
 <!-- XREF
-(See the <a href="../getting-started/index.html">Platform Guides</a> for more details.)
+(See the Platform Guides for more details.)
 XREF -->
 
 To add support or rebuild a project for any platform, you need to run
@@ -156,7 +156,7 @@ affect the derivative set of assets, not the original cross-platform
 source files. Use this approach if you simply want to initialize a
 project.
 <!-- XREF
-(See the <a href="../getting-started/index.html">Platform Guides</a> for information on how to develop applications within each SDK.)
+(See the Platform Guides for information on how to develop applications within each SDK.)
 XREF -->
 Read on if you wish to use command-line tools for the entire
 development cycle.
@@ -166,7 +166,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` event handler, referenced by
+be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
 <!-- XREF
 (See API and Configuration Guide for details.)
@@ -216,7 +216,7 @@ SDK's device emulator, or else on the device itself.
 (See View the App in an Emulator, below.)
 
 The default application Cordova provides demonstrates a handler for
-the custom `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` event, which ordinarily fires once Cordova
+the custom `deviceready` event, which ordinarily fires once Cordova
 establishes contact with device-level APIs, at which point an
 application can start running. Within the ripple emulator, you must
 fire the event manually:
@@ -231,7 +231,7 @@ log message:
 Specifying a platform, such as `ios` or `android`, makes the
 application run under `ripple` with a user agent string and screen
 size for a particular device.  You also have the option to modify the
-__<a href="../../cordova/device/device.html">Device</a>s__ tab at the top left to change the target device.  For
+__Devices__ tab at the top left to change the target device.  For
 example, here is how an application would appear on an iPad that's
 tipped to its side:
 
@@ -242,7 +242,7 @@ location, orientation, and varying network conditions, or else if it
 doesn't interact with any of the Cordova APIs at all. The following
 section shows how to run the app in a full platform emulator, which
 may allow access to other device features. Otherwise see Run the App
-on the <a href="../../cordova/device/device.html">Device</a>, below.
+on the Device, below.
 
 -->
 
@@ -260,7 +260,7 @@ Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
 <!-- XREF
-(See the <a href="../getting-started/index.html">Platform Guides</a> for details.)
+(See the Platform Guides for details.)
 XREF -->
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
@@ -276,7 +276,7 @@ launch from the home screen:
 
 <!--
 
-## Run the App on the <a href="../../cordova/device/device.html">Device</a>
+## Run the App on the Device
 
 ## Add a Plug-in
 

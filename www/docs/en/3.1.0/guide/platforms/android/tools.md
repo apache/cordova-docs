@@ -65,7 +65,7 @@ The `run` command accepts the following _optional_ parameters:
     $ /path/to/project/cordova/run [Target] [Build]
     $ C:\path\to\project\cordova\run.bat [Target] [Build]
 
-Make sure you create at least one Android Virtual <a href="../../../cordova/device/device.html">Device</a>, otherwise
+Make sure you create at least one Android Virtual Device, otherwise
 you're prompted to do so with the `android` command.  If more than one
 AVD is available as a target, you're prompted to select one. By
 default the `run` command detects a connected device, or a currently

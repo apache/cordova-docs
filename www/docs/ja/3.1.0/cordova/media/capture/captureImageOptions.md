@@ -20,18 +20,18 @@ license: >
 
 # CaptureImageOptions
 
-> イメージ <a href="capture.html">キャプチャ</a>の構成オプションをカプセル化します。
+> イメージ キャプチャの構成オプションをカプセル化します。
 
 ## プロパティ
 
-*   **制限**: ユーザーは、単一の<a href="capture.html">キャプチャ</a>操作で<a href="capture.html">キャプチャ</a>することができますイメージの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
+*   **制限**: ユーザーは、単一のキャプチャ操作でキャプチャすることができますイメージの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
 
 ## 簡単な例
 
     // limit capture operation to 3 images
     var options = { limit: 3 };
     
-    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureImage(captureSuccess, captureError, options);
     
 
 ## iOS の癖

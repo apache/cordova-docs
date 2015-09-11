@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-Функция обратного вызова onSuccess, предоставляет информацию курс через `<a href="compassHeading.html">compassHeading</a>` объект.
+Функция обратного вызова onSuccess, предоставляет информацию курс через `compassHeading` объект.
 
     function(heading) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## Параметры
 
-*   **заголовок**: сведения заголовка. *(<a href="compassHeading.html">compassHeading</a>)*
+*   **заголовок**: сведения заголовка. *(compassHeading)*
 
 ## Пример
 

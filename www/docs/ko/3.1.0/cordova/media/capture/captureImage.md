@@ -20,20 +20,20 @@ license: >
 
 # capture.captureImage
 
-> <a href="../../camera/camera.html">카메라</a> 응용 프로그램을 시작 하 고 <a href="capture.html">캡처</a>된 이미지 <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 정보를 반환 합니다.
+> 카메라 응용 프로그램을 시작 하 고 캡처된 이미지 파일에 대 한 정보를 반환 합니다.
 
     navigator.device.capture.captureImage(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="CaptureError.html">CaptureError</a>CB captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
     
 
 ## 설명
 
-디바이스의 <a href="../../camera/camera.html">카메라</a> 응용 프로그램을 사용 하 여 이미지를 <a href="capture.html">캡처</a>하는 비동기 작업을 시작 합니다. 작업이 단일 세션에서 하나 이상의 이미지를 <a href="capture.html">캡처</a>할 수 있습니다.
+디바이스의 카메라 응용 프로그램을 사용 하 여 이미지를 캡처하는 비동기 작업을 시작 합니다. 작업이 단일 세션에서 하나 이상의 이미지를 캡처할 수 있습니다.
 
-<a href="capture.html">캡처</a> 작업이 종료 하거나 사용자가 닫으면 <a href="../../camera/camera.html">카메라</a> 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` 에 도달. 없는 경우 `limit` 값이 지정 된, 하나 (1), 기본 및 <a href="capture.html">캡처</a> 작업이 종료 되 면 사용자는 단일 이미지 <a href="capture.html">캡처</a> 후.
+캡처 작업이 종료 하거나 사용자가 닫으면 카메라 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `CaptureAudioOptions.limit` 에 도달. 없는 경우 `limit` 값이 지정 된, 하나 (1), 기본 및 캡처 작업이 종료 되 면 사용자는 단일 이미지 캡처 후.
 
-<a href="capture.html">캡처</a> 작업이 완료 되 면 호출에 `<a href="CaptureCB.html">CaptureCB</a>` 의 배열과 콜백 `MediaFile` 각 <a href="capture.html">캡처</a>된 이미지 <a href="../../file/fileobj/fileobj.html">파일</a>을 설명 하는 개체. 사용자는 이미지를 <a href="capture.html">캡처</a>하기 전에 작업을 종료 하는 경우는 `<a href="CaptureError.html">CaptureError</a>CB` 콜백 실행 한 `<a href="CaptureError.html">CaptureError</a>` 개체를 특징으로 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 오류 코드.
+캡처 작업이 완료 되 면 호출에 `CaptureCB` 의 배열과 콜백 `MediaFile` 각 캡처된 이미지 파일을 설명 하는 개체. 사용자는 이미지를 캡처하기 전에 작업을 종료 하는 경우는 `CaptureErrorCB` 콜백 실행 한 `CaptureError` 개체를 특징으로 `CaptureError.CAPTURE_NO_MEDIA_FILES` 오류 코드.
 
 ## 지원 되는 플랫폼
 
@@ -45,7 +45,7 @@ license: >
 
 ## Windows Phone 7 단점
 
-당신의 <a href="../../device/device.html">장치</a> Zune 통해 <a href="../../connection/connection.html">연결</a> 하는 동안 네이티브 <a href="../../camera/camera.html">카메라</a> 응용 프로그램을 호출 하면 작동 하지 않는다, 및 오류 콜백 실행.
+당신의 장치 Zune 통해 연결 하는 동안 네이티브 카메라 응용 프로그램을 호출 하면 작동 하지 않는다, 및 오류 콜백 실행.
 
 ## 빠른 예제
 
@@ -60,7 +60,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start image capture
@@ -91,7 +91,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
+            navigator.notification.alert(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -104,7 +104,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
+            var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     

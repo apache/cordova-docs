@@ -20,41 +20,41 @@ license: >
 
 # 스토리지
 
-> <a href="../device/device.html">장치</a>의 저장소 옵션에 대 한 액세스를 제공합니다.
+> 장치의 저장소 옵션에 대 한 액세스를 제공합니다.
 
 이 API는 두 가지 다른 W3C 사양에 따라 스토리지 옵션을 제공 합니다.
 
-*   [웹 저장소 API 규격][1] 을 사용 하면 단순한 키/값 쌍을 통해 데이터에 액세스할 수 있습니다. 이 인터페이스에 대 한 자세한 내용은 대 한 <a href="localstorage/localstorage.html">localStorage</a> 섹션을 참조 하십시오.
+*   [웹 저장소 API 규격][1] 을 사용 하면 단순한 키/값 쌍을 통해 데이터에 액세스할 수 있습니다. 이 인터페이스에 대 한 자세한 내용은 대 한 localStorage 섹션을 참조 하십시오.
 
-*   [웹 SQL <a href="database/database.html">데이터베이스</a> 사양][2] 더 완전 한 기능의 <a href="database/database.html">데이터베이스</a> 테이블 액세스 SQL 쿼리를 통해 제공 합니다. 이 인터페이스의 요약 바로 아래에 나타납니다.
+*   [웹 SQL 데이터베이스 사양][2] 더 완전 한 기능의 데이터베이스 테이블 액세스 SQL 쿼리를 통해 제공 합니다. 이 인터페이스의 요약 바로 아래에 나타납니다.
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
 
-코르 도우 바 두 인터페이스에 이미 그들을 지원 하지 않는 <a href="../device/device.html">장치</a>의 소수 민족에 대 한 액세스를 제공 합니다. 그렇지 않으면 기본 구현이 적용 됩니다.
+코르 도우 바 두 인터페이스에 이미 그들을 지원 하지 않는 장치의 소수 민족에 대 한 액세스를 제공 합니다. 그렇지 않으면 기본 구현이 적용 됩니다.
 
 ## 메서드
 
-*   <a href="storage.opendatabase.html">openDatabase</a>
+*   openDatabase
 
 ## 인수
 
-*   <a href="parameters/name.html">database_name</a>
-*   <a href="parameters/version.html">database_version</a>
-*   <a href="parameters/display_name.html">database_displayname</a>
-*   <a href="parameters/size.html">database_size</a>
+*   database_name
+*   database_version
+*   database_displayname
+*   database_size
 
 ## 개체
 
-*   <a href="database/database.html">데이터베이스</a>
-*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
-*   <a href="sqlerror/sqlerror.html">SQLError</a>
+*   데이터베이스
+*   SQLTransaction
+*   SQLResultSet
+*   SQLResultSetRowList
+*   SQLError
 
 ## 기능 액세스
 
-버전 3.0, 저장소 Api에 액세스 하도록 코르도바, 내장 및 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>에 설명 된 대로 플러그인을 추가 하는 CLI를 사용 하 여 필요 하지 않습니다.
+버전 3.0, 저장소 Api에 액세스 하도록 코르도바, 내장 및 명령줄 인터페이스에 설명 된 대로 플러그인을 추가 하는 CLI를 사용 하 여 필요 하지 않습니다.
 
 앞에 CLI 코르도바 도구의 이전 세트를 사용 하는 경우 다음 플랫폼 관련 구성 설정을 여전히 필요 합니다.
 
@@ -68,4 +68,4 @@ license: >
         < id="blackberry.widgetcache 기능" 필수 = "진정한" 버전 "1.0.0.0" = / >
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.

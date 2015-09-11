@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>FindOptions
+# ContactFindOptions
 
-Contains properties that can be used to filter the results of a `<a href="../contacts.find.html">contacts.find</a>` operation.
+Contains properties that can be used to filter the results of a `contacts.find` operation.
 
 ## Properties
 
@@ -36,7 +36,7 @@ Contains properties that can be used to filter the results of a `<a href="../con
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
     // success callback
     function onSuccess(contacts) {
@@ -46,44 +46,44 @@ Contains properties that can be used to filter the results of a `<a href="../con
     };
 
     // error callback
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+    function onError(contactError) {
         alert('onError!');
     };
 
     // specify contact search criteria
-    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+    var options = new ContactFindOptions();
         options.filter="";        // empty search string returns all contacts
         options.multiple=true;    // return multiple results
         filter = ["displayName"]; // return contact.displayName field
 
         // find contacts
-    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
-## Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../Contact/contact.html">Contact</a> <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></title>
+        <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // specify contact search criteria
-            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
+            var options = new ContactFindOptions();
             options.filter = "";      // empty search string returns all contacts
             options.multiple = true;  // return multiple results
             filter = ["displayName"]; // return contact.displayName field
 
             // find contacts
-            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
 
         // onSuccess: Get a snapshot of the current contacts
@@ -96,15 +96,15 @@ Contains properties that can be used to filter the results of a `<a href="../con
 
         // onError: Failed to get the contacts
         //
-        function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1><a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a></h1>
-        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
       </body>
     </html>
 

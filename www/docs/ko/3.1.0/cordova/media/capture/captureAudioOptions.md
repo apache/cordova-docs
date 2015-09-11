@@ -20,11 +20,11 @@ license: >
 
 # CaptureAudioOptions
 
-> 오디오 <a href="capture.html">캡처</a> 구성 옵션을 캡슐화합니다.
+> 오디오 캡처 구성 옵션을 캡슐화합니다.
 
 ## 속성
 
-*   **제한**: 최대 오디오 클립 <a href="../../device/device.html">장치</a> 사용자는 단일 <a href="capture.html">캡처</a> 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+*   **제한**: 최대 오디오 클립 장치 사용자는 단일 캡처 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 *   **기간**: 오디오 사운드 클립의 최대 기간 초.
 
@@ -33,17 +33,17 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
     
 
 ## 안 드 로이드 단점
 
-*   `duration`매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+*   `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ## 블랙베리 WebWorks 단점
 
-*   `duration`매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+*   `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ## iOS 단점
 
-*   `limit`매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.
+*   `limit`매개 변수는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.

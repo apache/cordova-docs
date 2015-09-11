@@ -24,6 +24,6 @@ Cordova-Anwendungen werden normalerweise als eine Browser-basierte *WebView* inn
 
 Wenn einen WebView bereitstellen möchten, müssen Sie mit jedem native Programmierumgebung vertraut sein. Im folgenden finden Sie Anweisungen für die unterstützten Plattformen:
 
-*   <a href="../../platforms/amazonfireos/webview.html">Amazon Fire OS Webansichten für</a>
-*   <a href="../../platforms/android/webview.html">Android Webansichten für</a>
-*   <a href="../../platforms/ios/webview.html">iOS Webansichten für</a>
+*   Amazon Fire OS Webansichten für
+*   Android Webansichten für
+*   iOS Webansichten für

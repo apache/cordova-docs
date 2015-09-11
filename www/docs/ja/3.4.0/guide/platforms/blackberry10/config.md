@@ -32,6 +32,6 @@ license: >
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` またはデフォルト `enable` ）： に設定されている `disable` 未知のソースからリモート コンテンツにアクセスできるように、web のセキュリティ設定をオーバーライドします。 この設定は、開発の利便性だけ、ので削除して配布用アプリケーションのパッケージとして用います。 知られているとホワイト リストに登録を使用してリリースされたアプリは、すべての Uri がする必要があります、 `<access>` ドメイン <a href="../../appdev/whitelist/index.html">ホワイト リスト <a href="../../../index.html">ガイド</a></a>で説明されている要素。
+*   `WebSecurity`( `disable` またはデフォルト `enable` ）： に設定されている `disable` 未知のソースからリモート コンテンツにアクセスできるように、web のセキュリティ設定をオーバーライドします。 この設定は、開発の利便性だけ、ので削除して配布用アプリケーションのパッケージとして用います。 知られているとホワイト リストに登録を使用してリリースされたアプリは、すべての Uri がする必要があります、 `<access>` ドメイン ホワイト リスト ガイドで説明されている要素。
     
         <preference name="WebSecurity" value="disable"/>

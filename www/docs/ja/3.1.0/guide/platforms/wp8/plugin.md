@@ -99,7 +99,7 @@ Windows Phone 上のコルドバのプラグインを書くには、コルドバ
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
     
 
-呼び出すことができます、エラーが発生したことが<a href="../../../cordova/notification/notification.html">通知</a>する必要がある場合 `DispatchCommandResult` で、 `PluginResult` オブジェクト。
+呼び出すことができます、エラーが発生したことが通知する必要がある場合 `DispatchCommandResult` で、 `PluginResult` オブジェクト。
 
     DispatchCommandResult (新しい PluginResult （PluginResult.Status.ERROR、「エコー シグナル エラー」));
     
@@ -130,7 +130,7 @@ Windows Phone 上のコルドバのプラグインを書くには、コルドバ
 
 ## プラグインの XML
 
-これらの windows 携帯電話具体的 plugin.xml <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を使用して、詳細についてプラグインの仕様を参照してください。
+これらの windows 携帯電話具体的 plugin.xml ファイルを使用して、詳細についてプラグインの仕様を参照してください。
 
 ### `<source-file>`
 
@@ -138,12 +138,12 @@ Windows phone で、 `<source-file>` プラグインのすべてのリソース�
 
 ### `<config-file>`
 
-`<config-file>`要素をどのような要素が構成<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>に入れられる定義します。プラットフォーム config.xml にプラグインを追加するなど、このような何か：
+`<config-file>`要素をどのような要素が構成ファイルに入れられる定義します。プラットフォーム config.xml にプラグインを追加するなど、このような何か：
 
-    < 設定<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> target="config.xml"親 ="/*">< 機能名 ="PluginName">< param の名前「wp-パッケージ」値を = ="PluginName"/></機能 ></config <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> >
+    < 設定ファイル target="config.xml"親 ="/*">< 機能名 ="PluginName">< param の名前「wp-パッケージ」値を = ="PluginName"/></機能 ></config ファイル >
     
 
-我々 は、WMAppManifest.xml に<a href="../../../cordova/contacts/parameters/contactFields.html">連絡先</a>を追加する場合は、それはようになります。
+我々 は、WMAppManifest.xml に連絡先を追加する場合は、それはようになります。
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />
@@ -158,17 +158,17 @@ Windows phone で、 `<source-file>` プラグインのすべてのリソース�
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-たとえば、'一時停止' と '<a href="../../../cordova/events/events.resume.html">再開</a>' アプリケーション <a href="../../../cordova/events/events.html">イベント</a>にフックすることができます。
+たとえば、'一時停止' と '再開' アプリケーション イベントにフックすることができます。
 
 ### プラグインのデバッグ
 
 C# 側をデバッグするに Visual Studio デバッガーを使用して、ちょうどあなたのクラスによって公開されるメソッドのいずれかでブレークポイントを設定できます。
 
-Java スクリプトの設定は、Windows Phone 上でデバッグするより少し難しいです。使用する必要があります `console.log` 出力、プラグインの状態やエラーのことは自分に<a href="../../../cordova/notification/notification.html">通知</a>します。
+Java スクリプトの設定は、Windows Phone 上でデバッグするより少し難しいです。使用する必要があります `console.log` 出力、プラグインの状態やエラーのことは自分に通知します。
 
 ## 一般的な落とし穴
 
-*   JavaScript の実装でネイティブに渡す引数を決定する際に注意します。 ほとんどの<a href="../../../cordova/device/device.html">デバイス</a> プラットフォーム配列として cordova.exec に渡された args を期待するが、この配列内のオブジェクトの種類を有すれば、逆シリアル化を困難または不可能になります。
+*   JavaScript の実装でネイティブに渡す引数を決定する際に注意します。 ほとんどのデバイス プラットフォーム配列として cordova.exec に渡された args を期待するが、この配列内のオブジェクトの種類を有すれば、逆シリアル化を困難または不可能になります。
     
         cordova.exec (勝利、失敗すると、「電子メール」、"MethodName"[「これは文字列です」、54、{リテラル： 'トラブル'}]);
         

@@ -49,7 +49,7 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage` (string, entweder `keine`, `lokalen`oder der Standard- `Wolke`): Legen Sie auf `Wolke` Web <a href="../../../cordova/storage/storage.html">Speicher</a>daten-Backup über iCloud können. Legen Sie auf `lokalen` nur lokale Backups über iTunes Sync zu ermöglichen. Satz auf `none` zu verhindern, dass Web-<a href="../../../cordova/storage/storage.html">Speicher</a>-Sicherungen.
+*   `BackupWebStorage` (string, entweder `keine`, `lokalen`oder der Standard- `Wolke`): Legen Sie auf `Wolke` Web Speicherdaten-Backup über iCloud können. Legen Sie auf `lokalen` nur lokale Backups über iTunes Sync zu ermöglichen. Satz auf `none` zu verhindern, dass Web-Speicher-Sicherungen.
     
         <preference name="BackupWebStorage" value="local"/>
         

@@ -133,7 +133,7 @@ Wenn Ihre Argumente zu interpretieren, ist es eine gute Idee, einen Try/Catch-Bl
 
 ## Plugin XML
 
-Dies sind die Windows Telefon konkrete Beispiele für die Verwendung der <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> plugin.xml, beziehen sich auf die <a href="../../../plugin_ref/spec.html">Plugin-Spezifikation</a> für weitere details
+Dies sind die Windows Telefon konkrete Beispiele für die Verwendung der Datei plugin.xml, beziehen sich auf die Plugin-Spezifikation für weitere details
 
 ### `<source-file>`
 
@@ -141,7 +141,7 @@ Windows Phone das `<source-file>` Element wird derzeit verwendet, um alle Plugin
 
 ### `<config-file>`
 
-Das `<config-file>` -Element definiert, welche Elemente in einer Config-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> gestellt bekommen. Zum Beispiel der Plattformen-config.xml ein Plugin hinzu würde Sie so etwas tun:
+Das `<config-file>` -Element definiert, welche Elemente in einer Config-Datei gestellt bekommen. Zum Beispiel der Plattformen-config.xml ein Plugin hinzu würde Sie so etwas tun:
 
     <config-file target="config.xml" parent="/*">
         <feature name="PluginName">
@@ -150,7 +150,7 @@ Das `<config-file>` -Element definiert, welche Elemente in einer Config-<a href=
     </config-file>
     
 
-Wenn wir wollten die WMAppManifest.xml die Fähigkeit <a href="../../../cordova/contacts/contacts.html"><a href="../../../cordova/contacts/Contact/contact.html">Kontakt</a>e</a> hinzu, würde es so aussehen:
+Wenn wir wollten die WMAppManifest.xml die Fähigkeit Kontakte hinzu, würde es so aussehen:
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />

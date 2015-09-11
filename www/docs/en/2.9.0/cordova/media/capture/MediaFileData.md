@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
+MediaFileData
 =============
 
 > Encapsulates format information about a media file.
@@ -36,7 +36,7 @@ BlackBerry WebWorks Quirks
 --------------------------
 
 No API provides format information for media files, so the
-`<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` object returned by `<a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>` features
+`MediaFileData` object returned by `MediaFile.getFormatData` features
 the following default values:
 
 - __codecs__: Not supported, and returns `null`.
@@ -47,7 +47,7 @@ the following default values:
 
 Android Quirks
 --------------
-Supports the following `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` properties:
+Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns `null`.
 - __bitrate__: Not supported, and returns zero.
@@ -57,7 +57,7 @@ Supports the following `<a href="<a href="../media.html">Media</a><a href="../..
 
 iOS Quirks
 ----------
-Supports the following `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` properties:
+Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns null.
 - __bitrate__: Supported on iOS4 devices for audio only. Returns zero for images and videos.

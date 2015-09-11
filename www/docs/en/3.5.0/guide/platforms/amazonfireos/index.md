@@ -25,9 +25,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* <a href="config.html">Amazon Fire OS Configuration</a>
-* <a href="webview.html">Amazon Fire OS WebViews</a>
-* <a href="plugin.html">Amazon Fire OS Plugins</a>
+* Amazon Fire OS Configuration
+* Amazon Fire OS WebViews
+* Amazon Fire OS Plugins
 
 ## Introduction
 
@@ -40,7 +40,7 @@ For more information about the Amazon WebView API, please see the Amazon Develop
 
 Developing Cordova apps for Amazon Fire OS requires installation of a variety of support files, including everything needed for Android development, as well as the Amazon WebView SDK. Check the list below for the required installs: 
 
-* <a href="../../cli/index.html">The Command-Line Interface</a>
+* The Command-Line Interface
 * [Android SDK](http://developer.android.com/sdk/)
 * [Apache Ant](http://ant.apache.org)
 * [Amazon WebView SDK](https://developer.amazon.com/public/solutions/platforms/android-fireos/docs/building-and-testing-your-hybrid-app)

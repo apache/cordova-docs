@@ -28,8 +28,8 @@ Upgrading Cordova iOS
 3. 新規プロジェクトから **www/cordova-1.8.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-1.7.x.js** ファイルを削除します
 4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-1.8.0.js** ファイルを参照するように **更新** します
 
-もし **<a href="../../../cordova/media/capture/capture.html">Capture</a> API** を使う場合は、新しい **iPad retina-display** アセットが必要です:
+もし **Capture API** を使う場合は、新しい **iPad retina-display** アセットが必要です:
 
-1.  新規プロジェクトから **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を既存プロジェクトの **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** に上書きコピーします
-2.  既存プロジェクトで、 Xcode の Project Navigator の中の **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を選択し、 **Delete** キーを押します。ポップアップダイアログで、 **Remove Reference** を選択します
-3.  ステップ1から新しい **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** を Xcode の Project Navigator 上にドラッグし、 **Create groups for any added folders** ラジオボタンを選択します
+1.  新規プロジェクトから **Resources/Capture.bundle** を既存プロジェクトの **Resources/Capture.bundle** に上書きコピーします
+2.  既存プロジェクトで、 Xcode の Project Navigator の中の **Capture.bundle** を選択し、 **Delete** キーを押します。ポップアップダイアログで、 **Remove Reference** を選択します
+3.  ステップ1から新しい **Capture.bundle** を Xcode の Project Navigator 上にドラッグし、 **Create groups for any added folders** ラジオボタンを選択します

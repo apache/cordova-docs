@@ -20,11 +20,11 @@ license: >
 
 # CaptureAudioOptions
 
-> 封裝的音訊<a href="capture.html">捕獲</a>的<a href="ConfigurationData.html">配置</a>選項。
+> 封裝的音訊捕獲的配置選項。
 
 ## 屬性
 
-*   **限制**： 音訊剪輯<a href="../../device/device.html">設備</a>使用者可以在單個<a href="capture.html">捕獲</a>操作中記錄的最大數目。值必須是大於或等於 1 （預設為 1）。
+*   **限制**： 音訊剪輯設備使用者可以在單個捕獲操作中記錄的最大數目。值必須是大於或等於 1 （預設為 1）。
 
 *   **持續時間**： 音訊的音效片段，以秒為單位的最長期限。
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
     
 
 ## Android 的怪癖

@@ -28,41 +28,41 @@ license: >
 
 *   **displayName**: имя этого контакта, подходящую для отображения для конечных пользователей. *(DOMString)*
 
-*   **имя**: объект, содержащий все компоненты имя лица. *(<a href="../ContactName/contactname.html">ContactName</a>)*
+*   **имя**: объект, содержащий все компоненты имя лица. *(ContactName)*
 
 *   **прозвище**: случайные имя, чтобы адрес контакта. *(DOMString)*
 
-*   **phoneNumbers**: массив все контактные телефонные номера. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **phoneNumbers**: массив все контактные телефонные номера. *(ContactField[])*
 
-*   **письма**: массив адресов электронной почты всех контактов. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **письма**: массив адресов электронной почты всех контактов. *(ContactField[])*
 
-*   **адреса**: массив адресов всех контактов. *(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
+*   **адреса**: массив адресов всех контактов. *(ContactAddress[])*
 
-*   **IMS**: массив адресов IM все контакты. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **IMS**: массив адресов IM все контакты. *(ContactField[])*
 
-*   **организаций**: массив всех контактов организаций. *(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
+*   **организаций**: массив всех контактов организаций. *(ContactOrganization[])*
 
 *   **день рождения**: день рождения контакта. *(Дата)*
 
 *   **Примечание**: Примечание о контакте. *(DOMString)*
 
-*   **фотографии**: массив фотографии контакта. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **фотографии**: массив фотографии контакта. *(ContactField[])*
 
-*   **категории**: массив все определяемые пользователем категории, связанные с контактом. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **категории**: массив все определяемые пользователем категории, связанные с контактом. *(ContactField[])*
 
-*   **URL-адреса**: массив веб-страниц, связанных с контактом. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
+*   **URL-адреса**: массив веб-страниц, связанных с контактом. *(ContactField[])*
 
 ## Методы
 
 *   **клон**: возвращает новый `Contact` объект, являющийся глубокой копией вызывающего объекта с `id` свойству присвоено значение`null`.
 
-*   **Удалить**: удаляет контакта из базы данных контактов устройства, в противном случае выполняет обратный вызов ошибка с `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` объект.
+*   **Удалить**: удаляет контакта из базы данных контактов устройства, в противном случае выполняет обратный вызов ошибка с `ContactError` объект.
 
 *   **сохранить**: сохраняет новый контакт в базе данных контактов устройства или обновления существующего контакта, если контакт с тем же **идентификатором** уже существует.
 
 ## Подробная информация
 
-`Contact`Представляет объект пользователя контакта. <a href="../contacts.html">Контакты</a> можно созданы, хранятся или удалены из базы данных контактов устройства. <a href="../contacts.html">Контакты</a> могут также быть получены (индивидуально или навалом) из базы данных путем вызова `<a href="../contacts.find.html">contacts.find</a>` метод.
+`Contact`Представляет объект пользователя контакта. Контакты можно созданы, хранятся или удалены из базы данных контактов устройства. Контакты могут также быть получены (индивидуально или навалом) из базы данных путем вызова `contacts.find` метод.
 
 **Примечание:** На каждой платформе устройства поддерживаются не все поля контактов, перечисленных выше. Пожалуйста, проверьте раздел *причуды* каждой платформы для деталей.
 
@@ -80,17 +80,17 @@ license: >
         alert("Save Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
     // create a new contact object
-    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+    var contact = navigator.contacts.create();
     contact.displayName = "Plumber";
     contact.nickname = "Plumber";            // specify both to support all devices
     
     // populate some fields
-    var name = new <a href="../ContactName/contactname.html">ContactName</a>();
+    var name = new ContactName();
     name.givenName = "Jane";
     name.familyName = "Doe";
     contact.name = name;
@@ -114,8 +114,8 @@ license: >
         alert("Removal Success");
     };
     
-    function onError(<a href="../parameters/contactError.html">contactError</a>) {
-        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
     };
     
         // remove the contact from the device
@@ -127,23 +127,23 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Contact Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // create
-            var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
+            var contact = navigator.contacts.create();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
-            var name = new <a href="../ContactName/contactname.html">ContactName</a>();
+            var name = new ContactName();
             name.givenName = "Jane";
             name.familyName = "Doe";
             contact.name = name;
@@ -169,8 +169,8 @@ license: >
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onSaveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ license: >
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
-            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
+        function onRemoveError(contactError) {
+            alert("Error = " + contactError.code);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -224,7 +224,7 @@ license: >
 
 ## iOS причуды
 
-*   **displayName**: не поддерживается на iOS, возвращая `null` Если нет ни `<a href="../ContactName/contactname.html">ContactName</a>` указан, в этом случае он возвращает имя составного, **прозвище** или `""` , соответственно.
+*   **displayName**: не поддерживается на iOS, возвращая `null` Если нет ни `ContactName` указан, в этом случае он возвращает имя составного, **прозвище** или `""` , соответственно.
 
 *   **день рождения**: необходимо ввести как JavaScript `Date` объекта, таким же образом, он возвращается.
 

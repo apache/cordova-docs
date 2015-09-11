@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry10/upgrading.html">L'aggiornamento di BlackBerry</a>
+# L'aggiornamento di BlackBerry
 
-Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. Queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. Queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
 
 ## 2.8.0 All'aggiornamento di progetti a 2.9.0
 
@@ -335,11 +335,11 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
+        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
+        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento utilizzando gli strumenti della formica):
@@ -360,11 +360,11 @@ Aggiornando la directory di esempio (cioè, aggiornamento utilizzando gli strume
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
+         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
+         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
         
 
 *   Per aggiornare a 1.8.0, si prega di andare da 1.7.0
@@ -387,11 +387,11 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento tuo `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
+        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-        < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
+        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento utilizzando gli strumenti della formica):
@@ -412,8 +412,8 @@ Aggiornando la directory di esempio (cioè, aggiornamento utilizzando gli strume
 
 8.  Aperto il `www/` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< plugin nome = "<a href="../../../cordova/contacts/Contact/contact.html">Contatto</a>" value="org.apache.cordova.pim.Contact"/ >
+         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
         
     A:
     
-         < nome plugin = "<a href="../../../cordova/media/capture/capture.html">Cattura</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a>Capture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "<a href="../../../cordova/contacts/contacts.html">Contatti</a>" >
+         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >

@@ -46,7 +46,7 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   convenience only, so remove it before packaging the app for
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
-  <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>.
+  Whitelist Guide.
 
         <preference name="WebSecurity" value="disable"/>
 

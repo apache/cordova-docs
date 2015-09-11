@@ -135,12 +135,12 @@ Il callback di successo passati in `exec` è semplicemente un riferimento alla f
 
 Una volta definito per il plugin JavaScript, è necessario integrarla con almeno un'implementazione nativa. Di seguito sono elencati i dettagli per ogni piattaforma, e ciascuno si basa sul semplice esempio Echo Plugin precedente:
 
-*   <a href="../../platforms/amazonfireos/plugin.html">Amazon fuoco OS Plugins</a>
-*   <a href="../../platforms/android/plugin.html">Plugin Android</a>
-*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 plugin</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone 8 plugin</a>
-*   <a href="../../platforms/win8/plugin.html">Plugin di Windows</a>
+*   Amazon fuoco OS Plugins
+*   Plugin Android
+*   iOS Plugins
+*   BlackBerry 10 plugin
+*   Windows Phone 8 plugin
+*   Plugin di Windows
 
 La piattaforma di Tizen non supporta plugin.
 

@@ -20,7 +20,7 @@ license: >
 
 # SQLResultSet
 
-Quand un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre.
+Quand un `SQLTransaction` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre.
 
 ## Propriétés
 
@@ -28,11 +28,11 @@ Quand un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` de
 
 *   **rowsAffected**: le nombre de lignes modifiées par l'instruction SQL, zéro si l'instruction n'a pas affecté toutes les lignes.
 
-*   **lignes**: un `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` qui représente les lignes retournées, vide si aucune ligne n'est retournée.
+*   **lignes**: un `SQLResultSetRowList` qui représente les lignes retournées, vide si aucune ligne n'est retournée.
 
 ## Détails
 
-Quand un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre contenant trois propriétés :
+Quand un `SQLTransaction` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre contenant trois propriétés :
 
 *   Le `insertId` retourne le numéro de ligne d'une instruction d'insertion SQL successly. Si le code SQL n'insère pas de toutes les lignes, le `insertId` n'est pas définie.
 
@@ -58,13 +58,13 @@ Quand un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` de
     
     function errorCB(err) {alert ("erreur lors du traitement SQL:" + err.code);}
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
+    var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
     DB.transaction (queryDB, errorCB) ;
     
 
 ## Exemple complet
 
-    < !DOCTYPE html >< html >< tête >< titre > stockage exemple < / titre >< script type = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< script type = "text/javascript" charset = "utf-8" > / / attendre pour les bibliothèques de périphérique API charger / / document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a> ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false) ;
+    < !DOCTYPE html >< html >< tête >< titre > stockage exemple < / titre >< script type = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< script type = "text/javascript" charset = "utf-8" > / / attendre pour les bibliothèques de périphérique API charger / / document.addEventListener ("deviceready", onDeviceReady, false) ;
     
         / / Remplir la base de données / / function populateDB(tx) {tx.executeSql ("DROP TABLE IF EXISTS démo") ;
             tx.executeSql ("créer TABLE IF NOT existe démo (données uniques, id)") ;
@@ -76,8 +76,8 @@ Quand un `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` de
                 retourne la valeur false ;
             } / / une instruction insert, cette propriété retourne l'ID de la dernière console.log ligne insérée ("inséré dernière ligne ID =" + results.insertId) ;
         } / / Rappel erreur de transaction / / function errorCB(err) {console.log ("erreur lors du traitement SQL:" + err.code) ;
-        } / / Rappel réussi de transaction / / function successCB() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
+        } / / Rappel réussi de transaction / / function successCB() {var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
             DB.transaction (queryDB, errorCB) ;
-        } / / périphérique API sont disponibles / / function onDeviceReady() {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("Database", "1.0", "Cordova Demo", 200000) ;
+        } / / périphérique API sont disponibles / / function onDeviceReady() {var db = window.openDatabase ("Database", "1.0", "Cordova Demo", 200000) ;
             DB.transaction (populateDB, errorCB, successCB) ;
         } < /script >< / chef >< corps >< h1 > exemple < / h1 >< p > base de données < /p >< / body >< / html >

@@ -36,7 +36,7 @@ El `FileTransfer` objeto permite cargar o descargar archivos desde y hacia un se
 
 ## Detalles
 
-El `FileTransfer` objeto proporciona una manera para subir archivos a un servidor remoto mediante peticiones HTTP POST multi-partes. Se admiten los protocolos HTTP y HTTPS. Los parámetros opcionales pueden ser especificados por pasar un `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` contra el `upload()` método. En subida exitosa, un `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` objeto se pasa a la devolución de llamada de éxito. Si se produce un error, un `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` objeto se pasa el callback de error. También es posible (en iOS y Android) Descargar un archivo desde un servidor remoto y guardarla en el dispositivo.
+El `FileTransfer` objeto proporciona una manera para subir archivos a un servidor remoto mediante peticiones HTTP POST multi-partes. Se admiten los protocolos HTTP y HTTPS. Los parámetros opcionales pueden ser especificados por pasar un `FileUploadOptions` contra el `upload()` método. En subida exitosa, un `FileUploadResult` objeto se pasa a la devolución de llamada de éxito. Si se produce un error, un `FileTransferError` objeto se pasa el callback de error. También es posible (en iOS y Android) Descargar un archivo desde un servidor remoto y guardarla en el dispositivo.
 
 ## Plataformas soportadas
 
@@ -56,7 +56,7 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
 
 *   **successCallback**: una devolución de llamada que se pasa un `Metadata` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error recuperar la `Metadata` . Invocado con un `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error recuperar la `Metadata` . Invocado con un `FileTransferError` objeto. *(Función)*
 
 *   **Opciones**: parámetros opcionales como nombre de archivo y el tipo MIME.
 
@@ -78,7 +78,7 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
         console.log("upload error target " + error.target);
     }
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>File Transfer Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
+                navigator.camera.getPicture(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
             }
     
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
             </script>
     </head>
     <body>
-        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ Compatible con iOS y Android
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -202,9 +202,9 @@ Establezca el `chunkedMode` opción de `false` para evitar problemas de subir a 
 
 *   **objetivo**: ruta de acceso completa del archivo en el dispositivo.
 
-*   **successCallback**: una devolución de llamada que se pasa un `<a href="../fileentry/fileentry.html">FileEntry</a>` objeto. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa un `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `FileTransferError` objeto. *(Función)*
 
 *   **trustAllHosts**: parámetro opcional, por defecto es `false` . Si a `true` entonces aceptará todos los certificados de seguridad. Esto es útil como Android rechaza los certificados de seguridad firmado del uno mismo. No se recomienda para uso productivo. Compatible con iOS y Android. *(boolean)*
 
@@ -224,7 +224,7 @@ Establezca el `chunkedMode` opción de `false` para evitar problemas de subir a 
 
 ## abortar
 
-Aborta a una transferencia en curso. El callback onerror se pasa un objeto <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> que tiene un código de error de <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR.
+Aborta a una transferencia en curso. El callback onerror se pasa un objeto FileTransferError que tiene un código de error de FileTransferError.ABORT_ERR.
 
 **Plataformas soportadas**
 
@@ -235,11 +235,11 @@ Aborta a una transferencia en curso. El callback onerror se pasa un objeto <a hr
 
     // !! Asume fileURI variable contiene un URI válido para un archivo de texto en la victoria de dispositivo var function(r) = {console.log ("no se debe llamar.");}
     
-    var fallar = function(error) {/ / error.code == <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR alert ("ha ocurrido un error: código =" + error.code);
+    var fallar = function(error) {/ / error.code == FileTransferError.ABORT_ERR alert ("ha ocurrido un error: código =" + error.code);
         Console.log ("error al cargar el origen" + error.source);
         Console.log ("upload error objetivo" + error.target);}
     
-    var opciones = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
+    var opciones = new FileUploadOptions();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";

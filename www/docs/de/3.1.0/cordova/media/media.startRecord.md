@@ -20,14 +20,14 @@ license: >
 
 # media.startRecord
 
-Beginnt mit der Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+Beginnt mit der Aufnahme einer audio-Datei.
 
     media.startRecord();
     
 
 ## Beschreibung
 
-Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für eine audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
+Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für eine audio-Datei.
 
 ## Unterstützte Plattformen
 
@@ -64,14 +64,14 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //
@@ -86,7 +86,7 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
+                setAudioPosition(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -115,7 +115,7 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
     
         // Set audio position
         //
-        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+        function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
     
@@ -130,23 +130,23 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
 
 ## Android Macken
 
-*   Android-<a href="../device/device.html">Gerät</a>e aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene <a href="../file/fileobj/fileobj.html">Datei</a> sollte mit einer Endung *.amr* enden.
+*   Android-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene Datei sollte mit einer Endung *.amr* enden.
 
 ## BlackBerry WebWorks Macken
 
-*   BlackBerry-<a href="../device/device.html">Gerät</a>e aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene <a href="../file/fileobj/fileobj.html">Datei</a> muss mit der Erweiterung *.amr* enden.
+*   BlackBerry-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene Datei muss mit der Erweiterung *.amr* enden.
 
 ## iOS Macken
 
-*   iOS nur Datensätze, die <a href="../file/fileobj/fileobj.html">Datei</a>en des Typs *WAV* und gibt ein Fehler, wenn die <a href="../file/fileobj/fileobj.html">Datei</a>namen-Erweiterung ist richtig nicht.
+*   iOS nur Datensätze, die Dateien des Typs *WAV* und gibt ein Fehler, wenn die Dateinamen-Erweiterung ist richtig nicht.
 
-*   Wenn ein vollständiger Pfad nicht angegeben ist, wird die Aufzeichnung in der Anwendung platziert `documents/tmp` Verzeichnis. Erreichbar über die `File` -API verwenden `<a href="../file/localfilesystem/localfilesystem.html">LocalFileSystem</a>.TEMPORARY` . Allen Unterverzeichnissen in Rekordzeit angegeben muss bereits vorhanden sein.
+*   Wenn ein vollständiger Pfad nicht angegeben ist, wird die Aufzeichnung in der Anwendung platziert `documents/tmp` Verzeichnis. Erreichbar über die `File` -API verwenden `LocalFileSystem.TEMPORARY` . Allen Unterverzeichnissen in Rekordzeit angegeben muss bereits vorhanden sein.
 
-*   <a href="../file/fileobj/fileobj.html">Datei</a>en können aufgezeichnet und spielte mit die Dokumenten URI zurück:
+*   Dateien können aufgezeichnet und spielte mit die Dokumenten URI zurück:
     
         var myMedia = new Media("documents://beer.mp3")
         
 
 ## Tizen Macken
 
-*   Tizen <a href="../device/device.html">Gerät</a>en unterstützt nicht.
+*   Tizen Geräten unterstützt nicht.

@@ -69,21 +69,21 @@ Primero, echemos un vistazo a los tres últimos argumentos de la `exec` función
 
 El callback de éxito pasó a `exec` es simplemente una referencia a la devolución de llamada función que `window.echo` lleva. Hacemos un poco más para el callback de error: Si el lado nativo dispara el callback de error, simplemente invocar callback éxito y pasar en él una cadena "por defecto".
 
-## <a href="../../../plugin_ref/spec.html">Especificación de plugin</a>
+## Especificación de plugin
 
 Córdoba tiene una especificación plugin disponible para permitir la instalación automática del plugin para Android, iOS, plataformas 10 BlackBerry y Windows Phone. Estructuración de su plugin en forma particular y añadiendo un `plugin.xml` archivo de manifiesto, usted puede habilitar a los usuarios a instalar el plugin mediante las herramientas de línea de comandos.
 
-*   <a href="../../../plugin_ref/spec.html">Especificación de plugin</a>
+*   Especificación de plugin
 
 ## Nativo
 
 Una vez se define JavaScript para tu plugin, debes complementarlo con por lo menos una aplicación nativa. A continuación los detalles para hacerlo para cada plataforma. Estas guías de seguirán construyendo en el simple ejemplo Eco Plugin discutido anteriormente.
 
-*   <a href="../../platforms/android/plugin.html">Android Plugins</a>
+*   Android Plugins
 *   Plugins de blackBerry
-*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
+*   BlackBerry 10 Plugins
+*   iOS Plugins
+*   Windows Phone Plugins
 
 La plataforma Tizen actualmente no soporta plugins.
 

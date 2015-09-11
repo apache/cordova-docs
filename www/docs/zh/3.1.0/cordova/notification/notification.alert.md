@@ -20,14 +20,14 @@ license: >
 
 # notification.alert
 
-<a href="../inappbrowser/inappbrowser.html">顯示</a>一個自訂的警報或對話方塊框。
+顯示一個自訂的警報或對話方塊框。
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
     
 
 *   **消息**： 消息對話方塊。*（字串）*
 
-*   **alertCallback**： 當警報對話方塊的被解雇時要調用的回<a href="../file/fileobj/fileobj.html">檔</a>。*（函數）*
+*   **alertCallback**： 當警報對話方塊的被解雇時要調用的回檔。*（函數）*
 
 *   **標題**： 標題對話方塊。*（字串）*（可選，預設值為`Alert`)
 
@@ -67,14 +67,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

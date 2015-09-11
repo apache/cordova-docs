@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="media.html">Media</a>.Play
+# Media.Play
 
 Avvia o riprende la riproduzione di un file audio.
 
@@ -44,7 +44,7 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new <a href="media.html">Media</a>(url,
+        var my_media = new Media(url,
             // success callback
             function () {
                 console.log("playAudio():Audio Success");
@@ -65,14 +65,14 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -89,8 +89,8 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
             //
             function playAudio(src) {
                 if (my_media == null) {
-                    // Create <a href="media.html">Media</a> object from src
-                    my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
+                    // Create Media object from src
+                    my_media = new Media(src, onSuccess, onError);
                 } // else play current audio
                 // Play audio
                 my_media.play();
@@ -99,7 +99,7 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -128,7 +128,7 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -172,17 +172,17 @@ Il `media.play` metodo viene eseguita in modo sincrono e inizia o riprende la ri
 
 *   **numberOfLoops**: passare questa opzione per il `play` metodo per specificare il numero di volte desiderato file multimediale per riprodurre, ad esempio:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ numberOfLoops: 2 })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ numberOfLoops: 2 })
         
 
 *   **playAudioWhenScreenIsLocked**: questa opzione per passare il `play` metodo per specificare se si desidera consentire la riproduzione quando lo schermo è bloccato. Se impostato su `true` (il valore predefinito), viene ignorato lo stato del pulsante mute hardware, ad esempio:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        my<a href="media.html">Media</a>.play({ playAudioWhenScreenIsLocked : false })
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
 *   **ordine di ricerca di file**: quando viene fornito solo un nome file o percorso semplice, cerca in iOS il `www` directory per il file, quindi l'applicazione `documents/tmp` directory:
     
-        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("audio/beer.mp3")
-        my<a href="media.html">Media</a>.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        var myMedia = new Media("audio/beer.mp3")
+        myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

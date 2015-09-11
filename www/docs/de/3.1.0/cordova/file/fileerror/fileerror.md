@@ -20,7 +20,7 @@ license: >
 
 # FileError
 
-A `FileError` -Objekt festgelegt ist, tritt ein Fehler in der <a href="../fileobj/fileobj.html">Datei</a> API-Methoden.
+A `FileError` -Objekt festgelegt ist, tritt ein Fehler in der Datei API-Methoden.
 
 ## Eigenschaften
 
@@ -43,4 +43,4 @@ A `FileError` -Objekt festgelegt ist, tritt ein Fehler in der <a href="../fileob
 
 ## Beschreibung
 
-Das `FileError` -Objekt ist der einzige Parameter, die die <a href="../fileobj/fileobj.html">Datei</a>-API-Fehler-Rückrufe. Um den Typ des Fehlers festzustellen, vergleichen die `code` -Eigenschaft auf eines der oben genannten Angebote.
+Das `FileError` -Objekt ist der einzige Parameter, die die Datei-API-Fehler-Rückrufe. Um den Typ des Fehlers festzustellen, vergleichen die `code` -Eigenschaft auf eines der oben genannten Angebote.

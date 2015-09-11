@@ -20,7 +20,7 @@ license: >
 
 # 升級 Windows 8
 
-本指南演示如何修改 Windows 8 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。
+本指南演示如何修改 Windows 8 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
 
 ## 升級到 3.1.0
 
@@ -32,7 +32,7 @@ license: >
 
 1.  刪除 `cordova-2.8.0.js` 從專案的 `www` 目錄。
 
-2.  添加 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從源到專案中的 `www` 目錄。（請注意該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>不再包含在<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案名中的版本號）。
+2.  添加 `cordova.js` 檔從源到專案中的 `www` 目錄。（請注意該檔不再包含在檔案名中的版本號）。
 
 3.  生成和測試 ！
 
@@ -42,6 +42,6 @@ license: >
 
 1.  刪除 `cordova-2.7.0.js` 從專案的 `www` 目錄。
 
-2.  添加 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>從源到專案中的 `www` 目錄。（請注意該<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>不再包含在<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案名中的版本號）。
+2.  添加 `cordova.js` 檔從源到專案中的 `www` 目錄。（請注意該檔不再包含在檔案名中的版本號）。
 
 3.  生成和測試 ！

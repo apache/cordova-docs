@@ -52,4 +52,4 @@ Windows Phone 8.0 package (cordova-wp8-*.zip).
 1. Copy the `wp8/template/config.xml`to the project's root directory and 
 
 Instructions above will link core Cordova components only, 
-see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> in order to link Cordova plugins.
+see Using Plugman to Manage Plugins in order to link Cordova plugins.

@@ -21,7 +21,7 @@ license: >
 compassHeading
 ==========
 
-A `<a href="../compass.html">Compass</a>Heading` object is returned to the `<a href="compassSuccess.html">compassSuccess</a>` callback function when an error occurs.
+A `CompassHeading` object is returned to the `compassSuccess` callback function when an error occurs.
 
 Properties
 ----------
@@ -33,7 +33,7 @@ Properties
 Description
 -----------
 
-The `<a href="../compass.html">Compass</a>Heading` object is returned to the user through the `<a href="compassSuccess.html">compassSuccess</a>` callback function.
+The `CompassHeading` object is returned to the user through the `compassSuccess` callback function.
 
 Android Quirks
 --------------

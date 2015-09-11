@@ -20,7 +20,7 @@ license: >
 
 # Magazyn
 
-> <a href="../../guide/overview/index.html">Przegląd</a> opcji przechowywania dla Cordova.
+> Przegląd opcji przechowywania dla Cordova.
 
 Kilka magazyn funkcje API są dostępne dla aplikacji Cordova. Zobacz [html5rocks][1]. Aby uzyskać pełniejszy obraz i przykłady.
 

@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-open<a href="database/database.html">Database</a>
+openDatabase
 ===============
 
-Returns a new `<a href="database/database.html">Database</a>` object.
+Returns a new `Database` object.
 
-    var dbShell = <a href="../inappbrowser/window.open.html">window.open</a><a href="database/database.html">Database</a>(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 Description
 -----------
 
-The method creates a new SQL Lite <a href="database/database.html">Database</a> and returns a `<a href="database/database.html">Database</a>`
+The method creates a new SQL Lite Database and returns a `Database`
 object that allows manipulation of the data.
 
 Supported Platforms
@@ -42,7 +42,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    var db = <a href="../inappbrowser/window.open.html">window.open</a><a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
 
 Full Example
 ------------
@@ -50,25 +50,25 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="storage.html">Storage</a> Example</title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
-            var db = <a href="../inappbrowser/window.open.html">window.open</a><a href="database/database.html">Database</a>("test", "1.0", "Test DB", 1000000);
+        function onDeviceReady() {
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
 
         </script>
       </head>
       <body>
         <h1>Example</h1>
-        <p>Open <a href="database/database.html">Database</a></p>
+        <p>Open Database</p>
       </body>
     </html>

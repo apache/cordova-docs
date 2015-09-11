@@ -29,7 +29,7 @@ L'evento viene generato quando l'utente preme il pulsante di ricerca su Android.
 
 Se è necessario eseguire l'override del comportamento del pulsante ricerca predefinito su Android è possibile registrare un listener di eventi per l'evento 'searchbutton'.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
 
 ## Piattaforme supportate
 
@@ -50,7 +50,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Search Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -20,13 +20,13 @@ license: >
 
 # contactFindOptions
 
-선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 `<a href="../contacts.find.html">contacts.find</a>` 메서드, <a href="../contacts.html">연락처</a> <a href="../../storage/database/database.html">데이터베이스</a>에서 반환 된 <a href="../contacts.html">연락처</a>를 필터링 하는 데 사용 합니다.
+선택적 매개 변수는 `contacts.find` 메서드, 연락처 데이터베이스에서 반환 된 연락처를 필터링 하는 데 사용 합니다.
 
     {필터: "", 여러: true};
     
 
 ## 옵션
 
-*   **필터**: <a href="../contacts.html">연락처</a>를 필터링 하는 데 사용 하는 검색 문자열. *(DOMString)* (기본:`""`)
+*   **필터**: 연락처를 필터링 하는 데 사용 하는 검색 문자열. *(DOMString)* (기본:`""`)
 
-*   **여러**: 찾기 작업 여러 <a href="../contacts.html">연락처</a>를 반환 합니다 경우 결정 합니다. *(부울)* (기본:`false`)
+*   **여러**: 찾기 작업 여러 연락처를 반환 합니다 경우 결정 합니다. *(부울)* (기본:`false`)

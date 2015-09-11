@@ -22,11 +22,11 @@ license: >
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos iOS como el iPhone y iPad. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   <a href="config.html">iOS configuración</a>
-*   <a href="upgrading.html">Actualizar iOS</a>
-*   <a href="webview.html">iOS WebViews</a>
-*   <a href="plugin.html">iOS Plugins</a>
-*   <a href="tools.html">iOS herramientas de línea de comandos</a>
+*   iOS configuración
+*   Actualizar iOS
+*   iOS WebViews
+*   iOS Plugins
+*   iOS herramientas de línea de comandos
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 
@@ -34,7 +34,7 @@ Las herramientas de línea de comandos anteriores se refieren a las versiones an
 
 Apple ® herramientas necesarias para crear aplicaciones iOS ejecutar sólo en el sistema operativo OS X de Mac basados en Intel. Xcode ® 4.5 (la versión mínima requerida) se ejecuta en OS X versión 10.7 (Lion) o mayor e incluye el iOS 6 SDK (Software Development Kit). Presentar aplicaciones para el Apple App Store℠ requiere las últimas versiones de las herramientas de Apple.
 
-Usted puede probar muchas de las características de Cordova usando el emulador de iOS instalado con el iOS SDK y Xcode, pero necesita un dispositivo real a completamente todas las características de la aplicación dispositivo de prueba antes de presentar a la App Store. El dispositivo debe tener por lo menos iOS 5.x instalado, la versión de iOS mínimo apoyado desde Cordova 2.3. <a href="../../../cordova/device/device.html">Dispositivo</a>s de apoyo incluyen todos iPad ® modelos, iPhone ® 3GS y arriba y iPod ® Touch de 3ª generación o posterior. Para instalar aplicaciones en un dispositivo, también debe ser un miembro de Apple [iOS Developer Program][1], que cuesta $99 por año. Esta guía le muestra cómo implementar aplicaciones para el emulador de iOS, para lo cual no tienes que registrar con el programa para desarrolladores.
+Usted puede probar muchas de las características de Cordova usando el emulador de iOS instalado con el iOS SDK y Xcode, pero necesita un dispositivo real a completamente todas las características de la aplicación dispositivo de prueba antes de presentar a la App Store. El dispositivo debe tener por lo menos iOS 5.x instalado, la versión de iOS mínimo apoyado desde Cordova 2.3. Dispositivos de apoyo incluyen todos iPad ® modelos, iPhone ® 3GS y arriba y iPod ® Touch de 3ª generación o posterior. Para instalar aplicaciones en un dispositivo, también debe ser un miembro de Apple [iOS Developer Program][1], que cuesta $99 por año. Esta guía le muestra cómo implementar aplicaciones para el emulador de iOS, para lo cual no tienes que registrar con el programa para desarrolladores.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -122,7 +122,7 @@ Xcode de la advertencia sobre el `invokeString` método refiere a una funcionali
 
 *   Edite el archivo *Classes/MainViewController.m* , rodean el siguiente bloque de código con `/*` y `*/` comentarios como se muestra a continuación, escriba el **comando + s** para guardar el archivo:
     
-        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / sólo son válidas si ___PROJECTNAME__-Info.plist especifica un protocolo para manejar / * si (self.invokeString) {/ / se pasa antes de que se desencadena el evento <a href="../../../cordova/events/events.deviceready.html">deviceready</a>, así que se puede acceder en js cuando Recibes <a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog (@"DEPRECATED: window.invokeString - utilice la función window.handleOpenURL(url), que siempre se llama cuando la aplicación se ejecuta a través de una url de esquema personalizado.");
+        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / sólo son válidas si ___PROJECTNAME__-Info.plist especifica un protocolo para manejar / * si (self.invokeString) {/ / se pasa antes de que se desencadena el evento deviceready, así que se puede acceder en js cuando Recibes deviceready NSLog (@"DEPRECATED: window.invokeString - utilice la función window.handleOpenURL(url), que siempre se llama cuando la aplicación se ejecuta a través de una url de esquema personalizado.");
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         } * / / / Base color negro para fondo coincide con las aplicaciones nativas theWebView.backgroundColor = [UIColor blackColor];

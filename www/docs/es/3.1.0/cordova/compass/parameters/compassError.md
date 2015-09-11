@@ -24,6 +24,6 @@ función de callback onError para funciones de brújula.
 
 ## Ejemplo
 
-    function(<a href="../compassError/compassError.html">CompassError</a>) {
+    function(CompassError) {
         // Handle the error
     }

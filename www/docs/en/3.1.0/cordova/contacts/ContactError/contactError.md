@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../Contact/contact.html">Contact</a>Error
+# ContactError
 
-A `<a href="../Contact/contact.html">Contact</a>Error` object is passed to the `<a href="../parameters/contactError.html">contactError</a>` callback when an error occurs.
+A `ContactError` object is passed to the `contactError` callback when an error occurs.
 
 ## Properties
 
@@ -28,16 +28,16 @@ A `<a href="../Contact/contact.html">Contact</a>Error` object is passed to the `
 
 ## Constants
 
-- `<a href="../Contact/contact.html">Contact</a>Error.UNKNOWN_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.INVALID_ARGUMENT_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.TIMEOUT_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.PENDING_OPERATION_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.IO_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.NOT_SUPPORTED_ERROR`
-- `<a href="../Contact/contact.html">Contact</a>Error.PERMISSION_DENIED_ERROR`
+- `ContactError.UNKNOWN_ERROR`
+- `ContactError.INVALID_ARGUMENT_ERROR`
+- `ContactError.TIMEOUT_ERROR`
+- `ContactError.PENDING_OPERATION_ERROR`
+- `ContactError.IO_ERROR`
+- `ContactError.NOT_SUPPORTED_ERROR`
+- `ContactError.PERMISSION_DENIED_ERROR`
 
 ## Description
 
-The `<a href="../Contact/contact.html">Contact</a>Error` object is returned to the user through the
-`<a href="../parameters/contactError.html">contactError</a>` callback function when an error occurs.
+The `ContactError` object is returned to the user through the
+`contactError` callback function when an error occurs.
 

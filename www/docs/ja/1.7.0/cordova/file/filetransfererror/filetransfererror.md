@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error
+FileTransferError
 ========
 
-`<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` オブジェクトは、エラーが発生したときエラーコールバック関数に渡されます。
+`FileTransferError` オブジェクトは、エラーが発生したときエラーコールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -33,11 +33,11 @@ license: >
 定数
 ---------
 
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.FILE_NOT_FOUND_ERR`
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.INVALID_URL_ERR`
-- `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.CONNECTION_ERR`
+- `FileTransferError.FILE_NOT_FOUND_ERR`
+- `FileTransferError.INVALID_URL_ERR`
+- `FileTransferError.CONNECTION_ERR`
 
 概要
 -----------
 
-`<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` オブジェクトは、ファイルアップロード時にエラーが発生したときエラーコールバック関数に渡されます。
+`FileTransferError` オブジェクトは、ファイルアップロード時にエラーが発生したときエラーコールバック関数に渡されます。

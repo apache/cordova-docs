@@ -18,32 +18,32 @@ license: >
     under the License.
 ---
 
-# <a href="../camera.html">Camera</a>PopoverHandle
+# CameraPopoverHandle
 
-A handle to the popover dialog created by `<a href="../camera.getPicture.html">camera.getPicture</a>`.
+A handle to the popover dialog created by `camera.getPicture`.
 
 ## Methods
 
-- __set<a href="../../geolocation/Position/position.html">Position</a>__: Set the position of the popover.
+- __setPosition__: Set the position of the popover.
 
 ## Supported Platforms
 
 - iOS
 
-## set<a href="../../geolocation/Position/position.html">Position</a>
+## setPosition
 
 Set the position of the popover.
 
 __Parameters__:
 
-- `cameraPopoverOptions`: the `<a href="../camera.html">Camera</a>PopoverOptions` that specify the new position
+- `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
 
-## Quick <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Quick Example
 
-     var cameraPopoverOptions = new <a href="../camera.html">Camera</a>PopoverOptions(300, 300, 100, 100, <a href="../camera.html">Camera</a>.PopoverArrowDirection.ARROW_ANY);
-     cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
+     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     cameraPopoverHandle.setPosition(cameraPopoverOptions);
 
-## Full <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
+## Full Example
 
      function onSuccess(imageData) {
           // Do stuff with the image!
@@ -53,12 +53,12 @@ __Parameters__:
          alert('Failed to get the picture: ' + message);
      }
 
-     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
-         { destinationType: <a href="../camera.html">Camera</a>.DestinationType.FILE_URI,
-           sourceType: <a href="../camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY });
+     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+         { destinationType: Camera.DestinationType.FILE_URI,
+           sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
 
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new <a href="../camera.html">Camera</a>PopoverOptions(0, 0, 100, 100, 0);
-         cameraPopoverHandle.set<a href="../../geolocation/Position/position.html">Position</a>(cameraPopoverOptions);
+         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+         cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/config.html">Configuración de BlackBerry</a> 10
+# Configuración de BlackBerry 10
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Se construye este preferencias detalles sección que sólo se aplican a BlackBerry 10. Consulte [el archivo config.xml][1] para obtener información sobre las opciones de configuración global.
 

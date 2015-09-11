@@ -283,7 +283,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html"><a href="../../cordova/media/capture/capture.html">Захват</a></a>
+          <a href="cordova_media_capture_capture.md.html">Захват</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +313,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html"><a href="../../cordova/compass/compass.html">Компас</a></a>
+          <a href="cordova_compass_compass.md.html">Компас</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +344,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html"><a href="../../cordova/connection/connection.html">Подключение</a></a>
+          <a href="cordova_connection_connection.md.html">Подключение</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +374,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html"><a href="../../cordova/contacts/Contact/contact.html">Контакт</a>ы</a>
+          <a href="cordova_contacts_contacts.md.html">Контакты</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -404,7 +404,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html"><a href="../../cordova/device/device.html">Устройство</a></a>
+          <a href="cordova_device_device.md.html">Устройство</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -434,7 +434,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">События</a></a>
+          <a href="cordova_events_events.md.html">События</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -464,7 +464,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html"><a href="../../cordova/file/fileobj/fileobj.html">Файл</a></a>
+          <a href="cordova_file_file.md.html">Файл</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -480,11 +480,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          не <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          не FileTransfer
         </td>
         
         <td data-col="winphone8"  class="p">
-          не <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
+          не FileTransfer
         </td>
         
         <td data-col="win8"       class="y">
@@ -496,7 +496,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html"><a href="../../cordova/geolocation/geolocation.html">Географическое положение</a></a>
+          <a href="cordova_geolocation_geolocation.md.html">Географическое положение</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +526,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html"><a href="../../cordova/globalization/globalization.html">Глобализация</a></a>
+          <a href="cordova_globalization_globalization.md.html">Глобализация</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +556,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html"><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></a>
+          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +586,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html"><a href="../../cordova/media/media.html">Средства массовой информации</a></a>
+          <a href="cordova_media_media.md.html">Средства массовой информации</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +616,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html"><a href="../../cordova/notification/notification.html">Уведомление</a></a>
+          <a href="cordova_notification_notification.md.html">Уведомление</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +646,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html"><a href="../../cordova/splashscreen/splashscreen.html">Экран-заставка</a></a>
+          <a href="cordova_splashscreen_splashscreen.md.html">Экран-заставка</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +676,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Хранения</a></a>
+          <a href="cordova_storage_storage.md.html">Хранения</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -692,11 +692,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          только <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>
+          только localStorage
         </td>
         
         <td data-col="winphone8"  class="p">
-          только <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>
+          только localStorage
         </td>
         
         <td data-col="win8"       class="y">

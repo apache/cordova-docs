@@ -27,9 +27,9 @@ license: >
 
 ## 詳細
 
-既定の [戻る] ボタンの動作をオーバーライドする<a href="events.html">イベント</a> リスナーを登録、 `backbutton` を呼び出すことによって通常の<a href="events.html">イベント</a> `document.addEventListener` を受信したら、 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">イベント</a>。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
+既定の [戻る] ボタンの動作をオーバーライドするイベント リスナーを登録、 `backbutton` を呼び出すことによって通常のイベント `document.addEventListener` を受信したら、 `deviceready` イベント。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
 
-## <a href="../../config_ref/images.html">サポートされているプラットフォーム</a>
+## サポートされているプラットフォーム
 
 *   アマゾン火 OS
 *   アンドロイド
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Back Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

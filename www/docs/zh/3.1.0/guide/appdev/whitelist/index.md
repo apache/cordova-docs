@@ -20,13 +20,13 @@ license: >
 
 # 白名單指南
 
-## <a href="../../overview/index.html">概述</a>
+## 概述
 
 資源白的就是安全模型控制訪問外部網路資源，如 `http://google.com` 。 Apache 科爾多瓦預設安全性原則允許訪問 Internet 上的任何網站上的任何資源。 在移動之前您在生產中的應用，應審查其白名單和聲明訪問到特定的網路域和子域。
 
 ## 規格
 
-域白為[W3C 構件訪問][1]規範奠定了基礎。 在構件訪問規範中， `<access>` 元素，用來聲明對特定的網路資源的訪問。 Apache 科爾多瓦擴展了此概念允許個別網路資源 (Url) 的白。 在將來，Apache 科爾多瓦將抽象的白平臺實現。 然而，現在每個平臺實現其自己的資源或域的白。 平臺實現之間的差異是在本文<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>後面所述。
+域白為[W3C 構件訪問][1]規範奠定了基礎。 在構件訪問規範中， `<access>` 元素，用來聲明對特定的網路資源的訪問。 Apache 科爾多瓦擴展了此概念允許個別網路資源 (Url) 的白。 在將來，Apache 科爾多瓦將抽象的白平臺實現。 然而，現在每個平臺實現其自己的資源或域的白。 平臺實現之間的差異是在本文檔後面所述。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
@@ -148,7 +148,7 @@ iOS 完全支援白語法。
 
 ### 在 3.1.0 中更改：
 
-之前 3.1.0 版，科爾多瓦 iOS 包括一些非標準擴展域 whilelisting 計畫其他科爾多瓦平臺都支援的。 自 3.1.0、 iOS 白名單現在符合資源白名單語法描述了本文<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>的頂部。 如果您從 pre-3.1.0、 升級和使用這些擴展，您可能需要更改您 `config.xml` ，以前一樣繼續白組相同的資源<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
+之前 3.1.0 版，科爾多瓦 iOS 包括一些非標準擴展域 whilelisting 計畫其他科爾多瓦平臺都支援的。 自 3.1.0、 iOS 白名單現在符合資源白名單語法描述了本文檔的頂部。 如果您從 pre-3.1.0、 升級和使用這些擴展，您可能需要更改您 `config.xml` ，以前一樣繼續白組相同的資源檔。
 
 具體而言，這些模式需要更新：
 
@@ -180,7 +180,7 @@ iOS 完全支援白語法。
 
 ### 詳細資訊
 
-應用程式根目錄下的 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>指定域白規則，使用 `<access origin="..." />` 元素。 完整引用，請參閱[Tizen 訪問外部網路資源<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>][10].
+應用程式根目錄下的 `config.xml` 檔指定域白規則，使用 `<access origin="..." />` 元素。 完整引用，請參閱[Tizen 訪問外部網路資源檔][10].
 
  [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 

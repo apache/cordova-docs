@@ -22,10 +22,10 @@ license: >
 
 Diese Anleitung zeigt Ihnen wie ein SDK-Umfeld zu Zielanwendungen für die BlackBerry-Plattform vor Version 10 eingerichtet. Wenn Sie die aktuellste Version ansprechen möchten, finden Sie im BlackBerry-10-Plattform-Guide. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="../blackberry10/config.html">BlackBerry Configuration</a>
-*   <a href="../blackberry10/upgrading.html">Aktualisieren der BlackBerry</a>
-*   <a href="plugin.html">BlackBerry-Plugins</a>
-*   <a href="tools.html">BlackBerry-Befehlszeilentools</a>
+*   BlackBerry Configuration
+*   Aktualisieren der BlackBerry
+*   BlackBerry-Plugins
+*   BlackBerry-Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -61,7 +61,7 @@ Downloaden Sie und installieren Sie das entsprechende WebWorks-SDK für Ihre Ent
 
 ## Registrieren Sie sich für Signaturschlüssel
 
-Wenn Sie Ihre Anwendung auf BlackBerry App World oder auf einem tatsächlichen <a href="../../../cordova/device/device.html">Gerät</a> veröffentlichen möchten, müssen Sie für eine Reihe von kostenlosen Code Signing Keys registrieren. Hierzu füllen Sie das [Bestellformular für BlackBerry-Schlüssel][7]. Sobald Sie Ihre Signatur-Schlüssel erhalten haben, müssen sie Setup. Siehe die [BlackBerry HTML5/WebWorks-Website][8] Informationen.
+Wenn Sie Ihre Anwendung auf BlackBerry App World oder auf einem tatsächlichen Gerät veröffentlichen möchten, müssen Sie für eine Reihe von kostenlosen Code Signing Keys registrieren. Hierzu füllen Sie das [Bestellformular für BlackBerry-Schlüssel][7]. Sobald Sie Ihre Signatur-Schlüssel erhalten haben, müssen sie Setup. Siehe die [BlackBerry HTML5/WebWorks-Website][8] Informationen.
 
  [7]: https://www.blackberry.com/SignedKeys
  [8]: https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html
@@ -76,9 +76,9 @@ Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][1].
 
 *   Es ist ein Verzeichnis für jede Plattform, Cordova unterstützt. Navigieren Sie zu dem `blackberry` Verzeichnis.
 
-*   Das `blackberry` Verzeichnis enthält mehrere Unterverzeichnisse. Das `example` -Verzeichnis enthält ein komplettes Cordova-Projekt. Kopie der `example` Verzeichnis an einen anderen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrem Computer, und dorthin navigieren.
+*   Das `blackberry` Verzeichnis enthält mehrere Unterverzeichnisse. Das `example` -Verzeichnis enthält ein komplettes Cordova-Projekt. Kopie der `example` Verzeichnis an einen anderen Speicherort auf Ihrem Computer, und dorthin navigieren.
 
-*   Bearbeiten Sie die `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> im WebWorks-SDK angeben Sie verwenden. Hier sind beispielsweise die jeweiligen Einstellungen für BlackBerry PlayBook, BlackBerry-Smartphone (OS5-7) oder BlackBerry 10 (QNX):
+*   Bearbeiten Sie die `project.properties` Datei im WebWorks-SDK angeben Sie verwenden. Hier sind beispielsweise die jeweiligen Einstellungen für BlackBerry PlayBook, BlackBerry-Smartphone (OS5-7) oder BlackBerry 10 (QNX):
     
         playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
         blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
@@ -92,7 +92,7 @@ Diese entsprechen den Parametern, die Sie angeben, wenn Sie Ihr Projekt zu erste
         cordova/build qnx
     
 
-Zusammen mit dem SDK müssen Sie auch für einen Code Signaturschlüssel und Debug-Token zu registrieren. Der Signaturschlüssel können Sie apps durch BlackBerry World verteilen. Das Debug-Token können Sie unsignierte apps auf einem BlackBerry-Emulator oder <a href="../../../cordova/device/device.html">Gerät</a> zu testen. Sie müssen nicht erstellen und installieren Sie das Debug-Token; Wenn Sie das Schlüsselspeicher-Kennwort angeben, wird das Buildskript erstellt und installiert das Debug-Token für Sie. Um den Signaturschlüssel einzurichten, gehen Sie die BlackBerry-Website, erhalten Sie es, dafür zu sorgen, das Kennwort zu behalten, die, das Sie angeben. Führen Sie das `blackberry-signer` -Dienstprogramm, das im SDK enthalten ist. BlackBerry bietet weitere Informationen hier:
+Zusammen mit dem SDK müssen Sie auch für einen Code Signaturschlüssel und Debug-Token zu registrieren. Der Signaturschlüssel können Sie apps durch BlackBerry World verteilen. Das Debug-Token können Sie unsignierte apps auf einem BlackBerry-Emulator oder Gerät zu testen. Sie müssen nicht erstellen und installieren Sie das Debug-Token; Wenn Sie das Schlüsselspeicher-Kennwort angeben, wird das Buildskript erstellt und installiert das Debug-Token für Sie. Um den Signaturschlüssel einzurichten, gehen Sie die BlackBerry-Website, erhalten Sie es, dafür zu sorgen, das Kennwort zu behalten, die, das Sie angeben. Führen Sie das `blackberry-signer` -Dienstprogramm, das im SDK enthalten ist. BlackBerry bietet weitere Informationen hier:
 
 *   [Registrieren Sie sich für Ihren Code signing-key][9]
 
@@ -121,9 +121,9 @@ Weitere Informationen finden Sie unter:
  [13]: https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html
  [14]: https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html
 
-Für BlackBerry Playbook, bearbeiten Sie die `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zum Anpassen der `playbook.sim.ip` und `playbook.sim.password` Eigenschaften. IP-Adresse des Emulators ist durch **die Einstellungsanwendung auf dem home-Bildschirm** . Aktivieren der **Sicherheit und Datenschutz → Entwicklungsmodus** Option, um die Adresse anzuzeigen. Das Kennwort kann auch in der Registerkarte " **Sicherheit und Datenschutz** " festgelegt werden.
+Für BlackBerry Playbook, bearbeiten Sie die `project.properties` Datei zum Anpassen der `playbook.sim.ip` und `playbook.sim.password` Eigenschaften. IP-Adresse des Emulators ist durch **die Einstellungsanwendung auf dem home-Bildschirm** . Aktivieren der **Sicherheit und Datenschutz → Entwicklungsmodus** Option, um die Adresse anzuzeigen. Das Kennwort kann auch in der Registerkarte " **Sicherheit und Datenschutz** " festgelegt werden.
 
-Für BlackBerry-Smartphone, bearbeiten Sie die `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> zum Anpassen der `blackberry.sim.dir` und `blackberry.sim.bin` Eigenschaften. Du musst weg Trennzeichen zu entkommen, wenn Verzeichnispfade unter Windows, z. B. die Angabe:`C:\\Program
+Für BlackBerry-Smartphone, bearbeiten Sie die `project.properties` Datei zum Anpassen der `blackberry.sim.dir` und `blackberry.sim.bin` Eigenschaften. Du musst weg Trennzeichen zu entkommen, wenn Verzeichnispfade unter Windows, z. B. die Angabe:`C:\\Program
 Files\\BlackBerry\\Simulator`.
 
 Nachdem der Emulator installiert und ausgeführt wird, führen Sie einen der folgenden Schritte zur Installation einer Anwendung auf dem home-Bildschirm:
@@ -132,15 +132,15 @@ Nachdem der Emulator installiert und ausgeführt wird, führen Sie einen der fol
         cordova/run blackberry
     
 
-Wenn Sie gefragt werden, ob ein <a href="../../../cordova/device/device.html">Gerät</a> an Ihren Computer angeschlossen ist, Antworten Sie mit Nein.
+Wenn Sie gefragt werden, ob ein Gerät an Ihren Computer angeschlossen ist, Antworten Sie mit Nein.
 
 **Hinweis:** Auf BlackBerry OS 5, die Anwendung installiert ist, das `Downloads` Verzeichnis.
 
-## Bereitstellung auf <a href="../../../cordova/device/device.html">Gerät</a>
+## Bereitstellung auf Gerät
 
-Zum Bereitstellen Ihrer Anwendung in ein <a href="../../../cordova/device/device.html">Gerät</a> muss verbunden sein, und Sie müssen registriert sein, für Code signing-Schlüssel wie oben beschrieben. Auch, um apps auf dem BlackBerry PlayBook Bereitstellen der **Einstellungen → Sicherheit → Entwicklungsmodus** Option muss aktiviert sein.
+Zum Bereitstellen Ihrer Anwendung in ein Gerät muss verbunden sein, und Sie müssen registriert sein, für Code signing-Schlüssel wie oben beschrieben. Auch, um apps auf dem BlackBerry PlayBook Bereitstellen der **Einstellungen → Sicherheit → Entwicklungsmodus** Option muss aktiviert sein.
 
-Auf BlackBerry PlayBook "Bearbeiten" die `project.properties` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> und ändern Sie folgendermaßen vor, um das <a href="../../../cordova/device/device.html">Gerät</a> IP und Passwort als beschreibt oben, zusammen mit dem signing Key Passwort reflektieren Sie einrichten:
+Auf BlackBerry PlayBook "Bearbeiten" die `project.properties` Datei und ändern Sie folgendermaßen vor, um das Gerät IP und Passwort als beschreibt oben, zusammen mit dem signing Key Passwort reflektieren Sie einrichten:
 
 Geben Sie Ihrem Projektverzeichnis, `./cordova/run <target>` , ersetzen `<target>` mit `qnx` , `playbook` , oder`blackberry`.
 
@@ -152,7 +152,7 @@ Dann aus dem Projekt-Verzeichnis, führen Sie einen der Befehle würden Sie um d
         cordova/run blackberry
     
 
-Wenn Sie gefragt werden, ob ein <a href="../../../cordova/device/device.html">Gerät</a> an Ihren Computer angeschlossen ist, Antworten Sie mit Ja.
+Wenn Sie gefragt werden, ob ein Gerät an Ihren Computer angeschlossen ist, Antworten Sie mit Ja.
 
 **Hinweis:** Auf BlackBerry OS 5, die Anwendung installiert ist, das `Downloads` Verzeichnis.
 

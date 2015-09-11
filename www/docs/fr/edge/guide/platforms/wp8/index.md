@@ -26,8 +26,8 @@ Il montre comment utiliser deux outils de shell Windows Phone spécifiques pour 
 
 Voir ce qui suit pour plus de détails spécifiques à la plate-forme Windows Phone :
 
-*   <a href="plugin.html">Windows Phone 8 Plugins</a>
-*   <a href="upgrading.html">La mise à niveau de Windows Phone</a> 8
+*   Windows Phone 8 Plugins
+*   La mise à niveau de Windows Phone 8
 
 Pour la plateforme Windows Phone 8, les Cordova WebView s'appuie sur Internet Explorer 10 comme son moteur de rendu, donc en pratique vous pouvez utiliser le débogueur puissant de IE10 pour tester n'importe quel contenu web qui n'est pas invoquer Cordova APIs. Le Blog des développeurs Windows Phone fournit des [indications utiles][1] sur comment soutenir IE10 avec les navigateurs WebKit comparables.
 

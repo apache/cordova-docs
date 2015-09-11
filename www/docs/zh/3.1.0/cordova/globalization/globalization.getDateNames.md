@@ -29,7 +29,7 @@ license: >
 
 返回的陣列的名稱為 `successCallback` 與 `properties` 物件作為參數。 該物件包含 `value` 屬性與 `Array` 的 `String` 的值。 從任一開始一年或一周內，根據所選的選項的第一天中的第一個月的陣列功能名稱。
 
-如果有錯誤取得名字，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+如果有錯誤取得名字，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
 
 `options`參數是可選的且其預設值：
 
@@ -49,7 +49,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，本示例<a href="../inappbrowser/inappbrowser.html">顯示</a>一系列的十二個彈出對話方塊，每個月，與類似的文本一個 `month: January` ：
+當瀏覽器設置為 `en\_US` 的地區設定，本示例顯示一系列的十二個彈出對話方塊，每個月，與類似的文本一個 `month: January` ：
 
     navigator.globalization.getDateNames(
         function (names) {
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

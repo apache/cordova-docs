@@ -20,20 +20,20 @@ license: >
 
 # deviceready
 
-<a href="events.html">이벤트</a>는 코르도바는 완전히 로드 될 때 발생 합니다.
+이벤트는 코르도바는 완전히 로드 될 때 발생 합니다.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
+    document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-이 <a href="events.html">이벤트</a>는 모든 응용 프로그램에 필수적입니다. 코르도바의 <a href="../device/device.html">장치</a> Api 로드를 액세스할 준비가 신호 합니다.
+이 이벤트는 모든 응용 프로그램에 필수적입니다. 코르도바의 장치 Api 로드를 액세스할 준비가 신호 합니다.
 
 코르 도우 바 두 코드 베이스의 구성: 기본과 자바 스크립트. 네이티브 코드를 로드 하는 동안 사용자 지정 로딩 이미지를 표시 합니다. 그러나, 자바 스크립트는 DOM을 로드할 한 번만 로드 합니다. 즉, 웹 응용 프로그램 해당 네이티브 코드는 전에 코르 도우 바 자바 스크립트 함수를 호출 잠재적으로 수 있습니다.
 
-`deviceready`코르도바 완전히 로드 되 면 <a href="events.html">이벤트</a>가 발생 합니다. 한 번 <a href="events.html">이벤트</a>가 발생 하면 안전 하 게 통화를 할 수 Cordova Api. 응용 프로그램은 일반적으로와 <a href="events.html">이벤트</a> 리스너 첨부 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` HTML 문서의 DOM 로드 되 면.
+`deviceready`코르도바 완전히 로드 되 면 이벤트가 발생 합니다. 한 번 이벤트가 발생 하면 안전 하 게 통화를 할 수 Cordova Api. 응용 프로그램은 일반적으로와 이벤트 리스너 첨부 `document.addEventListener` HTML 문서의 DOM 로드 되 면.
 
-`deviceready`다른 사람에서 약간 다르게 동작 하는 <a href="events.html">이벤트</a>. 후 등록 된 <a href="events.html">이벤트</a> 처리기는 `deviceready` <a href="events.html">이벤트</a>가 발생은 즉시 호출 하는 콜백 함수.
+`deviceready`다른 사람에서 약간 다르게 동작 하는 이벤트. 후 등록 된 이벤트 처리기는 `deviceready` 이벤트가 발생은 즉시 호출 하는 콜백 함수.
 
 ## 지원 되는 플랫폼
 
@@ -46,7 +46,7 @@ license: >
 
 ## 빠른 예제
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
     
     function onDeviceReady() {
         // Now safe to use device APIs
@@ -58,7 +58,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Ready Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -66,7 +66,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -21,7 +21,7 @@ license: >
 Upgrading PhoneGap webOS
 =======================
 
-This document is for people who need to upgrade their Cordova <a href="../../../phonegap/storage/parameters/version.html">version</a>s from an older <a href="../../../phonegap/storage/parameters/version.html">version</a> to a current <a href="../../../phonegap/storage/parameters/version.html">version</a> of Cordova.
+This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
 ## Upgrade to 1.5.0 from 1.4.1 ##
 
@@ -35,4 +35,4 @@ This document is for people who need to upgrade their Cordova <a href="../../../
     to:
     <script type="text/javascript" src="phonegap-1.5.0.js"></script> 
 
-3. run the makefile to generate the newest <a href="../../../phonegap/storage/parameters/version.html">version</a> of the phonegap-1.5.0.js file
+3. run the makefile to generate the newest version of the phonegap-1.5.0.js file

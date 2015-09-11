@@ -20,7 +20,7 @@ license: >
 
 # Bandiere
 
-Fornisce argomenti per la `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` dell'oggetto `get<a href="../fileobj/fileobj.html">File</a>()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
+Fornisce argomenti per la `DirectoryEntry` dell'oggetto `getFile()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
 
 ## Proprietà
 
@@ -42,4 +42,4 @@ Fornisce argomenti per la `<a href="../directoryentry/directoryentry.html">Direc
     dataDir = fileSystem.root.getDirectory ("dati", {creare: true});
     
     / / Creare il file di blocco, se e solo se esso non esiste.
-    lock<a href="../fileobj/fileobj.html">File</a> = dataDir.get<a href="../fileobj/fileobj.html">File</a> ("lockfile.txt", {creare: vero, esclusivo: true});
+    lockFile = dataDir.getFile ("lockfile.txt", {creare: vero, esclusivo: true});

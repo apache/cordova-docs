@@ -23,18 +23,18 @@ license: >
 The `config.xml` file controls an app's basic settings that apply
 across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
-config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> for information on global configuration options.
+config.xml File for information on global configuration options.
 
 - `ChildBrowser` (`disable` or the default `enable`): Disables child
   browser windows. By default, apps launch a secondary browser window
-  to display resources accessed via `<a href="../../../cordova/inappbrowser/window.open.html">window.open</a>()` or by specifying a
+  to display resources accessed via `window.open()` or by specifying a
   `_blank` anchor target. Specify `disable` to override this default
   behavior.
 
         <preference name="ChildBrowser" value="disable"/>
 
 - `PopupBlocker` (`enable` or the default `disable`): Enables the
-  popup blocker, which prevents calls to `<a href="../../../cordova/inappbrowser/window.open.html">window.open</a>()`. By default,
+  popup blocker, which prevents calls to `window.open()`. By default,
   popups display in a child browser window. Setting the preference to
   `enable` prevents it from displaying at all.
 
@@ -46,7 +46,7 @@ config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> for inf
   convenience only, so remove it before packaging your app for
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
-  <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>.
+  Whitelist Guide.
 
         <preference name="WebSecurity" value="disable"/>
 

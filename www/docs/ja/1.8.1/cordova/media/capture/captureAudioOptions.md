@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>AudioOptions
+CaptureAudioOptions
 ===================
 
 > オーディオキャプチャーのオプションをカプセル化します。
@@ -30,13 +30,13 @@ license: >
 - __duration:__ オーディオクリップの最大録音時間を秒で表します。
 - __mode:__ 選択されたオーディオのモードを表します。値は `capture.supportedAudioModes` の中の一つである必要があります。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // キャプチャー操作時のオーディオクリップの最大値を3に制限、最大録音時間を10秒に設定
     var options = { limit: 3, duration: 10 };
 
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
 Android に関する注意点
 --------------

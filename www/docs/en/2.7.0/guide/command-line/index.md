@@ -179,7 +179,7 @@ Run the 'run' command with the following *optional* parameters
     $ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
 
 
-Make sure you have created at least one Android Virtual <a href="../../cordova/device/device.html">Device</a>. If you did not it will ask you to create one with the `android` command.
+Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
 By default the `run` command will look for a connected device, if no device is found it will look for any started emulators. If you have multiple AVDs, you can specify a target ID.
 
 ### Logging

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>VideoOptions
+CaptureVideoOptions
 ===================
 
 > Encapsulates video capture configuration options.
@@ -30,13 +30,13 @@ Properties
 - __duration:__ The maximum duration of a video clip, in seconds.
 - __mode:__ The selected video capture mode.  The value must match one of the elements in `capture.supportedVideoModes`.
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
 
-    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
 Android Quirks
 --------------

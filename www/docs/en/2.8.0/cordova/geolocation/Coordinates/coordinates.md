@@ -37,7 +37,7 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is created and populated by Cordova, and attached to the `<a href="../Position/position.html">Position</a>` object. The `<a href="../Position/position.html">Position</a>` object is then returned to the user through a callback function.
+The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
 
 Supported Platforms
 -------------------
@@ -51,7 +51,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // onSuccess Callback
@@ -73,29 +73,29 @@ Quick <a href="../../storage/storage.opendatabase.html">Example</a>
         alert('onError!');
     };
 
-    navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../geolocation.html">Geolocation</a> <a href="../Position/position.html">Position</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Geolocation Position Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Set an event to wait for Cordova to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // Cordova is loaded and Ready
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
-        // Display `<a href="../Position/position.html">Position</a>` properties from the geolocation
+        // Display `Position` properties from the geolocation
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');

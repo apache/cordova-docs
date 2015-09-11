@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# 화이트 리스트 <a href="../../../index.html">가이드</a>
+# 화이트 리스트 가이드
 
-## <a href="../../overview/index.html">개요</a>
+## 개요
 
 리소스 허용과 같은 외부 네트워크 리소스에 액세스를 제어 하는 보안 모델은 `http://google.com` . 아파치 코르도바의 기본 보안 정책은 인터넷에서 어떤 사이트에 리소스에 액세스할 수 있습니다. 프로덕션 응용 프로그램을 이동 하기 전에 그것의 허용을 검토 하 고 특정 네트워크 도메인 및 하위 도메인에 대 한 액세스를 선언 해야.
 
@@ -148,7 +148,7 @@ iOS는 완벽 하 게 허용 된 구문을 지원합니다.
 
 ### 3.1.0에서 변경:
 
-이전 버전 3.1.0, 코르도바 iOS 일부 비표준 확장 다른 코르도바 플랫폼에서 지 원하는 도메인 whilelisting 체계를 포함. 3.1.0, 현재 iOS 허용 지금이 문서 상단에 설명 된 리소스 허용 구문을 따릅니다. 전 3.1.0에서 업그레이드 하는 경우 이러한 확장을 사용 하는 변경 해야 할 수 있습니다 당신의 `config.xml` 전에 허용 된 자원의 동일한 집합을 계속 하려면 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
+이전 버전 3.1.0, 코르도바 iOS 일부 비표준 확장 다른 코르도바 플랫폼에서 지 원하는 도메인 whilelisting 체계를 포함. 3.1.0, 현재 iOS 허용 지금이 문서 상단에 설명 된 리소스 허용 구문을 따릅니다. 전 3.1.0에서 업그레이드 하는 경우 이러한 확장을 사용 하는 변경 해야 할 수 있습니다 당신의 `config.xml` 전에 허용 된 자원의 동일한 집합을 계속 하려면 파일.
 
 특히, 이러한 패턴 업데이트 해야 합니다.
 
@@ -180,7 +180,7 @@ iOS는 완벽 하 게 허용 된 구문을 지원합니다.
 
 ### 세부 정보
 
-응용 프로그램 루트 디렉터리의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 지정 도메인 허용 규칙을 사용 하는 `<access origin="..." />` 요소. 완벽 한 기준에 대 한 [Tizen 외부 네트워크 리소스 액세스 문서][10] 를 참조 하십시오..
+응용 프로그램 루트 디렉터리의 `config.xml` 파일 지정 도메인 허용 규칙을 사용 하는 `<access origin="..." />` 요소. 완벽 한 기준에 대 한 [Tizen 외부 네트워크 리소스 액세스 문서][10] 를 참조 하십시오..
 
  [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 

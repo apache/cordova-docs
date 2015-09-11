@@ -23,9 +23,9 @@ license: >
 Diese Anleitung zeigt Ihnen wie ein SDK-Umfeld zu Zielanwendungen für die BlackBerry-Plattform vor Version 10 eingerichtet. Wenn Sie die aktuellste Version ansprechen möchten, finden Sie im BlackBerry-10-Plattform-Guide. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
 *   BlackBerry Configuration
-*   <a href="upgrading.html">Aktualisieren der BlackBerry</a>
-*   <a href="plugin.html">BlackBerry-Plugins</a>
-*   <a href="tools.html">BlackBerry-Befehlszeilentools</a>
+*   Aktualisieren der BlackBerry
+*   BlackBerry-Plugins
+*   BlackBerry-Befehlszeilentools
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -76,7 +76,7 @@ Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][1].
 
 *   Es ist ein Verzeichnis für jede Plattform, Cordova unterstützt. Navigieren Sie zu dem `blackberry` Verzeichnis.
 
-*   Das `blackberry` Verzeichnis enthält mehrere Unterverzeichnisse. Das `example` -Verzeichnis enthält ein komplettes Cordova-Projekt. Kopie der `example` Verzeichnis an einen anderen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrem Computer, und dorthin navigieren.
+*   Das `blackberry` Verzeichnis enthält mehrere Unterverzeichnisse. Das `example` -Verzeichnis enthält ein komplettes Cordova-Projekt. Kopie der `example` Verzeichnis an einen anderen Speicherort auf Ihrem Computer, und dorthin navigieren.
 
 *   Bearbeiten Sie die `project.properties` Datei im WebWorks-SDK angeben Sie verwenden. Hier sind beispielsweise die jeweiligen Einstellungen für BlackBerry PlayBook, BlackBerry-Smartphone (OS5-7) oder BlackBerry 10 (QNX):
     

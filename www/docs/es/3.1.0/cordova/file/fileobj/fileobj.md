@@ -40,7 +40,7 @@ Este objeto contiene los atributos de un solo archivo.
 
 ## Detalles
 
-El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una instancia de un `File` objeto llamando a una `<a href="../fileentry/fileentry.html">FileEntry</a>` del objeto `file()` método.
+El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una instancia de un `File` objeto llamando a una `FileEntry` del objeto `file()` método.
 
 ## Plataformas soportadas
 
@@ -52,7 +52,7 @@ El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una 
 
 ## rebanada
 
-Devolver un nuevo `File` objeto, para que `<a href="../filereader/filereader.html">FileReader</a>` devuelve sólo la porción especificada del archivo. Para valores negativos `start` o `end` se miden desde el final del archivo. Los índices se colocan en relación con el segmento actual. (Véase el siguiente ejemplo completo).
+Devolver un nuevo `File` objeto, para que `FileReader` devuelve sólo la porción especificada del archivo. Para valores negativos `start` o `end` se miden desde el final del archivo. Los índices se colocan en relación con el segmento actual. (Véase el siguiente ejemplo completo).
 
 **Parámetros:**
 

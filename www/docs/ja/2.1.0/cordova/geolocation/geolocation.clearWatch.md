@@ -28,12 +28,12 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 パラメーター
 ----------
 
-- __watchID:__ `watch<a href="Position/position.html">Position</a>` 関数での監視を停止したい watchID を表します (String)
+- __watchID:__ `watchPosition` 関数での監視を停止したい watchID を表します (String)
 
 概要
 -----------
 
-`geolocation.clearWatch` 関数は、 `watchID` によって参照される `geolocation.watch<a href="Position/position.html">Position</a>` 関数を停止させるによって、位置情報の監視を停止します。
+`geolocation.clearWatch` 関数は、 `watchID` によって参照される `geolocation.watchPosition` 関数を停止させるによって、位置情報の監視を停止します。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,46 +46,46 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 - webOS
 - Tizen
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     // 位置の変化を監視し、取得可能なもっとも精度の高い位置を使います
     // (オプション)
     //
-    var watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
 
     // ... 後に続く ...
 
     navigator.geolocation.clearWatch(watchID);
 
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             // デバイスで有効な最も制度の高い位置で更新
             //
             var options = { enableHighAccuracy: true };
-            watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
 
-        // onSuccess <a href="geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -103,7 +103,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
             }
         }
 
-        // エラー時のコールバック関数は <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> オブジェクトを受けとる
+        // エラー時のコールバック関数は PositionError オブジェクトを受けとる
         //
         function onError(error) {
             alert('コード: '        + error.code    + '\n' +

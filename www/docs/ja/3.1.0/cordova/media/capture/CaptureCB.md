@@ -20,16 +20,16 @@ license: >
 
 # CaptureCB
 
-> 成功した<a href="../media.html">メディア</a> <a href="capture.html">キャプチャ</a>操作時に呼び出されます。
+> 成功したメディア キャプチャ操作時に呼び出されます。
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## 説明
 
-この関数は成功した<a href="capture.html">キャプチャ</a>操作の完了後に実行します。 いずれかの<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>を<a href="capture.html">キャプチャ</a>すると、この時点で、ユーザーが<a href="../media.html">メディア</a> ・ <a href="capture.html">キャプチャ</a> ・ アプリケーションを終了または<a href="capture.html">キャプチャ</a>制限に達しています。
+この関数は成功したキャプチャ操作の完了後に実行します。 いずれかのメディア ファイルをキャプチャすると、この時点で、ユーザーがメディア ・ キャプチャ ・ アプリケーションを終了またはキャプチャ制限に達しています。
 
-各 `MediaFile` オブジェクトには<a href="capture.html">キャプチャ</a>した<a href="../media.html">メディア</a> <a href="../../file/fileobj/fileobj.html">ファイル</a>について説明します。
+各 `MediaFile` オブジェクトにはキャプチャしたメディア ファイルについて説明します。
 
 ## 簡単な例
 

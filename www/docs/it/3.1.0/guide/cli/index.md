@@ -110,8 +110,8 @@ Se lo si desidera, è possibile utilizzare un SDK a questo punto aprire il proge
 
 ## Costruire l'App
 
-Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `<a href="../../cordova/events/events.deviceready.html">deviceready</a>` gestore di eventi, a cui fa riferimento predefinito da `www/js/index.js` . <!-- XREF
-(See the Application Development <a href="../../index.html">Guide</a> for details.)
+Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da `www/js/index.js` . <!-- XREF
+(See the Application Development Guide for details.)
 XREF -->
 
 Eseguire il comando seguente per costruire in modo iterativo del progetto:
@@ -171,13 +171,13 @@ Il `cordova plugin add` comando richiede di specificare il repository per il cod
         $ cordova plugin add org.apache.cordova.device
         
 
-*   <a href="../../cordova/connection/connection.html">Connessione</a> di rete e batteria eventi:
+*   Connessione di rete e batteria eventi:
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
         
 
-*   <a href="../../cordova/accelerometer/accelerometer.html">Accelerometro</a>, bussola e geolocalizzazione:
+*   Accelerometro, bussola e geolocalizzazione:
     
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
@@ -191,34 +191,34 @@ Il `cordova plugin add` comando richiede di specificare il repository per il cod
         $ cordova plugin add org.apache.cordova.media
             
 
-*   Accedere ai file sul dispositivo o rete (<a href="../../cordova/file/fileobj/fileobj.html">File</a> API):
+*   Accedere ai file sul dispositivo o rete (File API):
     
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   <a href="../../cordova/notification/notification.html">Notifica</a> tramite la finestra di dialogo o vibrazione:
+*   Notifica tramite la finestra di dialogo o vibrazione:
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   <a href="../../cordova/contacts/contacts.html">Contatti</a>:
+*   Contatti:
     
         $ cordova plugin add org.apache.cordova.contacts
         
 
-*   <a href="../../cordova/globalization/globalization.html">Globalizzazione</a>:
+*   Globalizzazione:
     
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   <a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a>:
+*   Splashscreen:
     
-        $ cordova plugin add org.apache.cordova.<a href="../../cordova/splashscreen/splashscreen.show.html">splashscreen</a>
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
-*   Finestre aperte del browser nuovo (<a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>):
+*   Finestre aperte del browser nuovo (InAppBrowser):
     
         $ cordova plugin add org.apache.cordova.inappbrowser
         

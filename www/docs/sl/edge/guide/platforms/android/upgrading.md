@@ -81,7 +81,7 @@ platform add android`.
 
 6.  Posodobiti vse sklice na `org.apache.cordova.api` pakiranju,`org.apache.cordova`.
     
-    **Opomba**: vse jedro API-ji so bili odstranjeni in mora biti nameščen kot plugins. Prosimo, glejte <a href="../../../plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a> vodnik za podrobnosti.
+    **Opomba**: vse jedro API-ji so bili odstranjeni in mora biti nameščen kot plugins. Prosimo, glejte Uporaba Plugman za upravljanje Plugins vodnik za podrobnosti.
 
 ## Vzpenjajoč se v 2.9.0 iz 2.8.0
 

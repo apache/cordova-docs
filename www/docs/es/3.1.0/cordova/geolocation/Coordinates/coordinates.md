@@ -72,7 +72,7 @@ El `Coordinates` objeto está unido a la `Position` objeto que está disponible 
         alert('onError!');
     };
     
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## Ejemplo completo
@@ -80,18 +80,18 @@ El `Coordinates` objeto está unido a la `Position` objeto que está disponible 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Geolocation Position Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
         // Display `Position` properties from the geolocation

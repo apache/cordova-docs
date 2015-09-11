@@ -28,58 +28,58 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 ## Amazon Fire OS
 
-*   <a href="amazonfireos/index.html">Amazon ogień platformy OS Przewodnik</a>
-*   <a href="amazonfireos/config.html">Amazon ogień OS konfiguracja</a>
-*   <a href="amazonfireos/webview.html">Amazon ogień OS WebViews</a>
-*   <a href="amazonfireos/plugin.html">Amazon ogień OS Plugins</a>
+*   Amazon ogień platformy OS Przewodnik
+*   Amazon ogień OS konfiguracja
+*   Amazon ogień OS WebViews
+*   Amazon ogień OS Plugins
 
 ## Android
 
-*   <a href="android/index.html">Przewodnik platformy Android</a>
-*   <a href="android/tools.html">Android Shell narzędzia Przewodnik</a>
+*   Przewodnik platformy Android
+*   Android Shell narzędzia Przewodnik
 *   Konfiguracja Androida
 *   Wtyczki dla Androida
 *   WebView
-*   <a href="android/upgrade.html">Aktualizacja</a>
+*   Aktualizacja
 
 ## BlackBerry 10
 
-*   <a href="blackberry10/index.html">Przewodnik platformy blackBerry 10</a>
-*   <a href="blackberry10/tools.html">Przewodnik narzędziem blackBerry 10 powłoki</a>
-*   <a href="blackberry10/config.html">Konfiguracja blackBerry 10</a>
-*   <a href="blackberry10/plugin.html">Jeżyna 10 wtyczek</a>
-*   <a href="blackberry10/upgrade.html"><a href="blackberry/upgrade.html">Uaktualnianie BlackBerry</a> 10</a>
+*   Przewodnik platformy blackBerry 10
+*   Przewodnik narzędziem blackBerry 10 powłoki
+*   Konfiguracja blackBerry 10
+*   Jeżyna 10 wtyczek
+*   Uaktualnianie BlackBerry 10
 
 ## Firefox OS
 
-*   <a href="firefoxos/index.html">Firefox platformy OS Przewodnik</a>
+*   Firefox platformy OS Przewodnik
 
 ## iOS
 
-*   <a href="ios/index.html">Przewodnik platformy iOS</a>
-*   <a href="ios/tools.html">iOS Shell narzędzia Przewodnik</a>
-*   <a href="ios/config.html">Konfiguracja iOS</a>
-*   <a href="ios/plugin.html">iOS wtyczek</a>
-*   <a href="ios/webview.html">iOS WebViews</a>
-*   <a href="ios/upgrade.html"><a href="android/upgrade.html">Aktualizacja</a> iOS</a>
+*   Przewodnik platformy iOS
+*   iOS Shell narzędzia Przewodnik
+*   Konfiguracja iOS
+*   iOS wtyczek
+*   iOS WebViews
+*   Aktualizacja iOS
 
 ## Ubuntu
 
-*   <a href="ubuntu/index.html">Platforma Ubuntu Guide</a>
+*   Platforma Ubuntu Guide
 
 ## Windows Phone 8
 
-*   <a href="wp8/index.html">Przewodnik platformy Windows Phone 8</a>
-*   <a href="wp8/plugin.html">Windows Phone 8 wtyczki</a>
-*   <a href="android/upgrade.html">Aktualizacja</a> Windows Phone 8
+*   Przewodnik platformy Windows Phone 8
+*   Windows Phone 8 wtyczki
+*   Aktualizacja Windows Phone 8
 
 ## Windows
 
-*   <a href="win8/index.html">Przewodnik platforma Windows</a>
-*   <a href="win8/plugin.html">Wtyczki Windows</a>
-*   <a href="win8/packaging.html">Opakowania systemu Windows</a>
-*   <a href="win8/upgrade.html"><a href="android/upgrade.html">Aktualizacja</a> systemu Windows 8</a>
+*   Przewodnik platforma Windows
+*   Wtyczki Windows
+*   Opakowania systemu Windows
+*   Aktualizacja systemu Windows 8
 
 ## Tizen
 
-*   <a href="tizen/index.html">Platforma Tizen Przewodnik</a>
+*   Platforma Tizen Przewodnik

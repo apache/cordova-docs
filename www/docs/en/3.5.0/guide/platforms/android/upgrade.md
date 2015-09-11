@@ -22,7 +22,7 @@ license: >
 
 This guide shows how to modify Android projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
 ## Upgrading to 3.3.0 from 3.2.0
@@ -38,7 +38,7 @@ their workspace.
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update android`
         
@@ -54,7 +54,7 @@ This is a regression with Chromium on Android and the problem can be reproduced 
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update android`
         
@@ -65,7 +65,7 @@ For projects not created with the cordova CLI, run:
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+   described in The Command-Line Interface.
 
 2. Add your platforms the cordova project, for example: `cordova
    platform add android`.
@@ -95,7 +95,7 @@ For projects not created with the cordova CLI, run:
 
 6. Update any references to the `org.apache.cordova.api` package to be `org.apache.cordova`.
 
-   __NOTE__: all core APIs have been removed and must be installed as plugins. Please see the <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> Guide for details.
+   __NOTE__: all core APIs have been removed and must be installed as plugins. Please see the Using Plugman to Manage Plugins Guide for details.
 
 ## Upgrade to 2.9.0 from 2.8.0
 

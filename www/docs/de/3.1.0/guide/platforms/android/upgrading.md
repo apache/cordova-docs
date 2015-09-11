@@ -56,7 +56,7 @@ platform add android`.
 
 4.  Kopie über alle Plugins, die von der Installation der `src` Unterverzeichnisse in das neue Projekt.
 
-5.  Achten Sie darauf, alle veraltet aktualisieren `<plugin>` Referenzen aus Ihrem alten `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> an den neuen `<feature>` Spezifikation.
+5.  Achten Sie darauf, alle veraltet aktualisieren `<plugin>` Referenzen aus Ihrem alten `config.xml` Datei an den neuen `<feature>` Spezifikation.
 
 6.  Aktualisieren Sie alle Verweise auf die `org.apache.cordova.api` Paket ist`org.apache.cordova`.
 
@@ -76,13 +76,13 @@ platform add android`.
 
 4.  Kopieren Sie die neue `cordova.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` Datei.
 
-6.  Kopie der `res/xml/config.xml` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>`framework/res/xml/config.xml`.
+6.  Kopie der `res/xml/config.xml` -Datei`framework/res/xml/config.xml`.
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.7.0 von 2.6.0
 
@@ -94,7 +94,7 @@ platform add android`.
 
 4.  Kopieren Sie die neue `cordova-2.7.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.7.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
@@ -112,13 +112,13 @@ platform add android`.
 
 4.  Kopieren Sie die neue `cordova-2.6.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.6.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichnis aufgeführt.
 
@@ -132,13 +132,13 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.5.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.5.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.4.0 von 2.3.0
 
@@ -150,11 +150,11 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.4.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
-7.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+7.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.3.0 von 2.2.0
 
@@ -166,11 +166,11 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.3.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.3.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
-7.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+7.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.2.0 von 2.1.0
 
@@ -182,11 +182,11 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.2.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.2.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
-7.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+7.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Upgrade auf 2.1.0 von 2.0.0
 
@@ -198,11 +198,11 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.1.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
-7.  Kopieren Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+7.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.0.0 von 1.9.0
 
@@ -214,13 +214,13 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-2.0.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` Datei.
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
 ### Release Notes über 2.0.0
 
-`config.xml`wird anstelle `cordova.xml` und `plugins.xml` . Diese neue <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> ist eine Kombination der beiden vorherigen. Jedoch die alten <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en sind veraltet, und beim arbeiten derzeit noch, werden nicht mehr in einer zukünftigen Version arbeiten.
+`config.xml`wird anstelle `cordova.xml` und `plugins.xml` . Diese neue Datei ist eine Kombination der beiden vorherigen. Jedoch die alten Dateien sind veraltet, und beim arbeiten derzeit noch, werden nicht mehr in einer zukünftigen Version arbeiten.
 
 ## Ein Upgrade auf 1.9.0 von 1.8.1
 
@@ -232,7 +232,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 4.  Kopieren Sie die neue `cordova-1.9.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.9.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -250,7 +250,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `cordova-1.8.1.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.1.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -264,7 +264,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -278,7 +278,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -316,7 +316,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `cordova-1.6.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -332,7 +332,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `cordova-1.5.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.5.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -348,7 +348,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `phonegap-1.4.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.4.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -364,7 +364,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `phonegap-1.3.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.2.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -380,7 +380,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `phonegap-1.2.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.2.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -396,7 +396,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `phonegap-1.1.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.1.0.js` Datei.
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
@@ -410,6 +410,6 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 4.  Kopieren Sie die neue `phonegap-1.0.0.js` in Ihr Projekt.
 
-5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
+5.  Aktualisieren Sie den HTML-Code um das neue `phonegap-1.0.0.js` Datei.
 
 6.  Fügen Sie die `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.

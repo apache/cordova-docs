@@ -117,9 +117,9 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
         <content src="http://apache.org" />
         
 
-5.  (*Opcional*) Fijar la `use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>` propiedad (por defecto `NO` ):
+5.  (*Opcional*) Fijar la `useSplashScreen` propiedad (por defecto `NO` ):
     
-        viewController.use<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a> = YES;
+        viewController.useSplashScreen = YES;
         
 
 6.  Establecer el **marco de la vista** (siempre establecer esto como la última propiedad):

@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# <a href="../media.html">媒體</a>
+# 媒體
 
-> 封裝<a href="../media.html">媒體</a><a href="capture.html">捕獲</a><a href="../../file/fileobj/fileobj.html">檔</a>的屬性。
+> 封裝媒體捕獲檔的屬性。
 
 ## 屬性
 
-*   **名稱**： <a href="../../file/fileobj/fileobj.html">檔</a>的名稱，不包含路徑資訊。() DOMString
+*   **名稱**： 檔的名稱，不包含路徑資訊。() DOMString
 
-*   **完整路徑**： <a href="../../file/fileobj/fileobj.html">檔</a>，包括名稱的完整路徑。() DOMString
+*   **完整路徑**： 檔，包括名稱的完整路徑。() DOMString
 
-*   **類型**： <a href="../../file/fileobj/fileobj.html">檔</a>的 mime 類型 (DOMString)
+*   **類型**： 檔的 mime 類型 (DOMString)
 
-*   **lastModifiedDate**： 日期和<a href="../../file/fileobj/fileobj.html">檔</a>的上次修改時間。（日期）
+*   **lastModifiedDate**： 日期和檔的上次修改時間。（日期）
 
-*   **大小**： <a href="../../file/fileobj/fileobj.html">檔</a>的大小，以位元組為單位。（人數）
+*   **大小**： 檔的大小，以位元組為單位。（人數）
 
 ## 方法
 
-*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: 檢索該<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案的格式資訊。
+*   **MediaFile.getFormatData**: 檢索該媒體檔案的格式資訊。

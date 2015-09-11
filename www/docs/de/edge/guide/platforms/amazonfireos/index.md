@@ -24,9 +24,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   <a href="config.html">Amazon Fire OS Konfiguration</a>
-*   <a href="webview.html">Amazon Fire OS Webansichten für</a>
-*   <a href="plugin.html">Amazon Fire OS Plugins</a>
+*   Amazon Fire OS Konfiguration
+*   Amazon Fire OS Webansichten für
+*   Amazon Fire OS Plugins
 
 ## Einführung
 
@@ -41,7 +41,7 @@ Weitere Informationen über die Amazon-WebView-API finden Sie im Amazon-Entwickl
 
 Entwicklung von Cordova apps für Amazon Fire OS erfordert die Installation einer Vielzahl von Support-Dateien, einschließlich alles für Android Entwicklung, als auch die Amazon-WebView-SDK. Überprüfen Sie die Liste unten für die erforderlichen Installationen:
 
-*   <a href="../../cli/index.html">Die Befehlszeilenschnittstelle</a>
+*   Die Befehlszeilenschnittstelle
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]
@@ -95,9 +95,9 @@ So ändern Sie die PATH-Umgebung unter Windows:
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
         
 
-*   <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie den Wert und schließen Sie beide Dialogfelder zu.
+*   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
-*   Auch müssen Sie Java aktivieren. Öffnen Sie eine Eingabeaufforderung und geben `java` , wenn es nicht ausgeführt wird, fügen Sie den <a href="../../../cordova/storage/storage.html">Speicher</a>ort der Java-Binärdateien an Ihren Weg auch. Stellen Sie sicher, dass %JAVA_HOME% auf installierte JDK-Verzeichnis verweist. Sie müssen möglicherweise JAVA_HOME Umgebung Variable separat hinzufügen.
+*   Auch müssen Sie Java aktivieren. Öffnen Sie eine Eingabeaufforderung und geben `java` , wenn es nicht ausgeführt wird, fügen Sie den Speicherort der Java-Binärdateien an Ihren Weg auch. Stellen Sie sicher, dass %JAVA_HOME% auf installierte JDK-Verzeichnis verweist. Sie müssen möglicherweise JAVA_HOME Umgebung Variable separat hinzufügen.
     
         ; %JAVA_HOME%\bin
         

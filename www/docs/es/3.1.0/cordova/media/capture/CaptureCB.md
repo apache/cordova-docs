@@ -22,14 +22,14 @@ license: >
 
 > Se invoca en una operación de captura exitosa de los medios de comunicación.
 
-    function captureSuccess( <a href="MediaFile.html">MediaFile</a>[] mediaFiles ) { ... };
+    function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## Descripción
 
 Esta función se ejecuta después de que finalice una operación de captura exitosa. En este punto que ha sido capturado un archivo multimedia y tampoco el usuario ha salido de la aplicación de captura de los medios de comunicación, o se ha alcanzado el límite de captura.
 
-Cada `<a href="MediaFile.html">MediaFile</a>` objeto describe un archivo multimedia capturado.
+Cada `MediaFile` objeto describe un archivo multimedia capturado.
 
 ## Ejemplo rápido
 

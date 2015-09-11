@@ -29,4 +29,4 @@ Fonction callback s'exécutant si une erreur se produit lors de l'usage des mét
 
 ## Paramètres
 
-*   **error** : l'erreur renvoyée par l'appareil. *(<a href="../<a href="../Position/position.html">Position</a>Error/positionError.html"><a href="../Position/position.html">Position</a>Error</a>)*
+*   **error** : l'erreur renvoyée par l'appareil. *(PositionError)*

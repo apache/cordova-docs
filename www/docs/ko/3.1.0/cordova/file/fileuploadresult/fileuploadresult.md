@@ -20,7 +20,7 @@ license: >
 
 # FileUploadResult
 
-A `FileUploadResult` 개체의 성공 콜백에 전달 되는 `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` 개체의 `upload()` 메서드.
+A `FileUploadResult` 개체의 성공 콜백에 전달 되는 `FileTransfer` 개체의 `upload()` 메서드.
 
 ## 속성
 
@@ -32,7 +32,7 @@ A `FileUploadResult` 개체의 성공 콜백에 전달 되는 `<a href="../filet
 
 ## 설명
 
-`FileUploadResult`개체의 성공 콜백을 통해 반환 되는 `<a href="../filetransfer/filetransfer.html">FileTransfer</a>` 개체의 `upload()` 메서드.
+`FileUploadResult`개체의 성공 콜백을 통해 반환 되는 `FileTransfer` 개체의 `upload()` 메서드.
 
 ## iOS 단점
 

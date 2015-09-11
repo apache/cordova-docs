@@ -36,7 +36,7 @@ license: >
 
 **Примечание:** Следующий атрибут определен в спецификации W3C, но *не* поддерживается:
 
-*   **<a href="../fileobj/fileobj.html">Файл</a>овая система**: файловая система, на которой `FileEntry` проживает. *(<a href="../fileobj/fileobj.html">Файл</a>овая система)*
+*   **Файловая система**: файловая система, на которой `FileEntry` проживает. *(Файловая система)*
 
 ## Методы
 
@@ -74,7 +74,7 @@ license: >
 
 *   **successCallback**: обратного вызова, передаваемого `Metadata` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -87,7 +87,7 @@ license: >
 
 ## setMetadata
 
-<a href="../metadata/metadata.html">Метаданные</a> набора на файл.
+Метаданные набора на файл.
 
 **В настоящее время работает только на iOS.**
 
@@ -147,10 +147,10 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFileMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -165,13 +165,13 @@ license: >
 
 **Параметры:**
 
-*   **родитель**: родительский каталог, в который необходимо переместить файл. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **родитель**: родительский каталог, в который необходимо переместить файл. *(DirectoryEntry)*
 
 *   **newName**: новое имя файла. По умолчанию используется имя текущей, если значение не указано. *(DOMString)*
 
 *   **successCallback**: обратный вызов, который передается новый файл `FileEntry` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке переместить файл. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке переместить файл. Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -186,7 +186,7 @@ license: >
     function moveFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // move the file to a new directory and rename it
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
@@ -201,13 +201,13 @@ license: >
 
 **Параметры:**
 
-*   **родитель**: родительский каталог, в который необходимо скопировать файл. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **родитель**: родительский каталог, в который необходимо скопировать файл. *(DirectoryEntry)*
 
 *   **newName**: новое имя файла. По умолчанию используется имя текущей, если значение не указано. *(DOMString)*
 
 *   **successCallback**: обратный вызов, который передается новый файл `FileEntry` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке копирования файла. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке копирования файла. Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -222,7 +222,7 @@ license: >
     function copyFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
@@ -248,7 +248,7 @@ license: >
 
 *   **successCallback**: обратного вызова, который выполняется после того, как файл был удален. Вызывается без параметров. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке удалить файл. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке удалить файл. Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -266,13 +266,13 @@ license: >
 
 ## getParent
 
-Посмотрите вверх родительского `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` файл.
+Посмотрите вверх родительского `DirectoryEntry` файл.
 
 **Параметры:**
 
-*   **successCallback**: обратного вызова, передаваемого файла родительского `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . *(Функция)*
+*   **successCallback**: обратного вызова, передаваемого файла родительского `DirectoryEntry` . *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке получить родительского `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке получить родительского `DirectoryEntry` . Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -284,7 +284,7 @@ license: >
         alert(error.code);
     }
     
-    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
+    // Get the parent DirectoryEntry
     entry.getParent(success, fail);
     
 
@@ -296,7 +296,7 @@ license: >
 
 *   **successCallback**: обратного вызова, передаваемого `FileWriter` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке создания уничтожал. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при попытке создания уничтожал. Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 
@@ -320,7 +320,7 @@ license: >
 
 *   **successCallback**: обратного вызова, передаваемого `File` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при создании `File` объекта, например, когда файл больше не существует. Вызываемый с `<a href="../fileerror/fileerror.html">FileError</a>` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при создании `File` объекта, например, когда файл больше не существует. Вызываемый с `FileError` объект. *(Функция)*
 
 **Быстрый пример**
 

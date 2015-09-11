@@ -131,11 +131,11 @@ El callback de éxito pasó a `exec` es simplemente una referencia a la función
 
 Una vez se define JavaScript para tu plugin, debes complementarlo con por lo menos una aplicación nativa. Los datos de cada plataforma se enumeran a continuación, y cada uno se basa en el simple ejemplo Eco Plugin anterior:
 
-*   <a href="../../platforms/amazonfireos/plugin.html">Amazon fuego OS Plugins</a>
-*   <a href="../../platforms/android/plugin.html">Android Plugins</a>
-*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
-*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
-*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
+*   Amazon fuego OS Plugins
+*   Android Plugins
+*   iOS Plugins
+*   BlackBerry 10 Plugins
+*   Windows Phone Plugins
 
 La plataforma Tizen no admite plugins.
 

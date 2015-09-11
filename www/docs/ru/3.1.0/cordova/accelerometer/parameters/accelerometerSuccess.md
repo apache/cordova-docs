@@ -20,7 +20,7 @@ license: >
 
 # accelerometerSuccess
 
-Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `<a href="../acceleration/acceleration.html">Acceleration</a>`.
+Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `Acceleration`.
 
     function(acceleration) {
         // Do something
@@ -34,8 +34,8 @@ license: >
 ## Пример
 
     function onSuccess(acceleration) {
-        alert('<a href="../acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="../acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="../acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };

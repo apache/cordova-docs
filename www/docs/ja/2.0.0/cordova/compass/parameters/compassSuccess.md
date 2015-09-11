@@ -21,7 +21,7 @@ license: >
 compassSuccess
 ==============
 
-コンパス方位の取得に成功したときに、 <a href="compassHeading.html">compassHeading</a> オブジェクトを用いてコンパス方位情報を提供するコールバック関数です。
+コンパス方位の取得に成功したときに、 compassHeading オブジェクトを用いてコンパス方位情報を提供するコールバック関数です。
 
     function(heading) {
         // 任意のコード
@@ -31,9 +31,9 @@ compassSuccess
 ----------
 
 
-- __heading:__ 方位情報。 _(<a href="compassHeading.html">compassHeading</a>)_
+- __heading:__ 方位情報。 _(compassHeading)_
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------
 
     function onSuccess(heading) {

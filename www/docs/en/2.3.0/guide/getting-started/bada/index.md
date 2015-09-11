@@ -39,7 +39,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 3. Setup New Project
 --------------------
-- In Bada IDE, select _<a href="../../../cordova/file/fileobj/fileobj.html">File</a>_ -> Import project -> Bada C++ / Flash Project. 
+- In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project. 
     - Note: Bada 1.2 select "Bada Application Project"
     
     ![](img/guide/platforms/bada/import_bada_project.png)
@@ -54,7 +54,7 @@ This guide describes how to set up your development environment for Cordova and 
     ![](img/guide/platforms/bada/bada_project.png)
 
 
-4. <a href="../webos/index.html">Hello World</a>
+4. Hello World
 --------------
 
 **Bada 2.x**: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
@@ -78,9 +78,9 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/platforms/bada/bada_set_target.png)
 
-- Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to <a href="../../../cordova/inappbrowser/inappbrowser.html">close</a> the emulator every time you update your app!
+- Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure your device is properly configured 
@@ -89,7 +89,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 **Bada 1.2**:
 - Right click on your project&apos;s folder and select Build configurations -> Set Active -> Target-Debug
-- Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to <a href="../../../cordova/inappbrowser/inappbrowser.html">close</a> the emulator every time you update your app!
+- Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to close the emulator every time you update your app!
 
 
 Done!

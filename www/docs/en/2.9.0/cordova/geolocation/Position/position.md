@@ -26,7 +26,7 @@ Contains `Position` coordinates and timestamp, created by the geolocation API.
 Properties
 ----------
 
-- __coords__: A set of geographic coordinates. _(<a href="../Coordinates/coordinates.html">Coordinates</a>)_
+- __coords__: A set of geographic coordinates. _(Coordinates)_
 - __timestamp__: Creation timestamp for `coords`. _(Date)_
 
 Description
@@ -44,7 +44,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // onSuccess Callback
@@ -60,37 +60,37 @@ Quick <a href="../../storage/storage.opendatabase.html">Example</a>
               'Timestamp: '         + position.timestamp                + '\n');
     };
 
-    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
+    // onError Callback receives a PositionError object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
 
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="../../device/device.html">Device</a> Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
         //
-        function on<a href="../../device/device.html">Device</a>Ready() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
 
-        // onSuccess <a href="../geolocation.html">Geolocation</a>
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -104,7 +104,7 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
                                 'Timestamp: '         + position.timestamp               + '<br />';
         }
 
-            // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
+            // onError Callback receives a PositionError object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

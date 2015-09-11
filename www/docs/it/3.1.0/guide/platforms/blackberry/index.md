@@ -22,10 +22,10 @@ license: >
 
 Questa guida viene illustrato come configurare un ambiente SDK per le applicazioni di destinazione per la piattaforma BlackBerry precedenti alla versione 10. Se volete la versione più recente di destinazione, vedere la guida di piattaforma BlackBerry 10. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   <a href="../blackberry10/config.html">Configurazione di blackBerry</a>
-*   <a href="../blackberry10/upgrading.html">L'aggiornamento di BlackBerry</a>
-*   <a href="plugin.html">BlackBerry Plugins</a>
-*   <a href="tools.html">Strumenti della riga di comando di blackBerry</a>
+*   Configurazione di blackBerry
+*   L'aggiornamento di BlackBerry
+*   BlackBerry Plugins
+*   Strumenti della riga di comando di blackBerry
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -80,7 +80,7 @@ Scaricare ed estrarre l'ultima copia di [Cordova][1].
 
 *   Modificare il `project.properties` file per specificare WebWorks SDK si utilizza. Ad esempio, qui sono le rispettive impostazioni per BlackBerry PlayBook, Smartphone BlackBerry (OS5-7) o BlackBerry 10 (QNX):
     
-        playbook.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks SDK per il Tablet 2.1.0.6\\bbwp blackberry.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks Packager qnx.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s (x86) \\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
+        playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK per il Tablet 2.1.0.6\\bbwp blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager qnx.bbwp.dir=C:\\Program Files (x86) \\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
         
 
 Questi corrispondono ai parametri specificati quando si compila il progetto. La prima volta che si eseguono questi comandi, che generano un'applicazione "HelloWorld":
@@ -120,7 +120,7 @@ Vedere le seguenti per ulteriori informazioni:
 Per BlackBerry Playbook, modificare il `project.properties` file per personalizzare il `playbook.sim.ip` e `playbook.sim.password` proprietà. Indirizzo IP dell'emulatore è disponibile attraverso l'applicazione **Impostazioni** sulla schermata home. Abilitare il **sicurezza e Privacy → modalità di sviluppo** opzione per visualizzare l'indirizzo. La password può essere impostata anche nella scheda **sicurezza e Privacy** .
 
 Smartphone BlackBerry, modificare il `project.properties` file per personalizzare il `blackberry.sim.dir` e `blackberry.sim.bin` proprietà. Avete bisogno di fuggire i delimitatori del percorso quando si specificano i percorsi di directory su Windows, ad esempio:`C:\\Program
-<a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\BlackBerry\\Simulator`.
+Files\\BlackBerry\\Simulator`.
 
 Una volta che l'emulatore è installato e in esecuzione, eseguire uno dei seguenti per installare un'applicazione alla schermata iniziale:
 

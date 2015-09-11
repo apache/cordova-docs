@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>Transfer
+FileTransfer
 ==========
 
-<a href="../fileobj/fileobj.html">File</a>Transfer オブジェクトはファイルをサーバーにアップロードまたはサーバからダウンロードする際に使用します。
+FileTransfer オブジェクトはファイルをサーバーにアップロードまたはサーバからダウンロードする際に使用します。
 
 プロパティー
 ----------
@@ -37,7 +37,7 @@ license: >
 詳細
 -------
 
-`<a href="../fileobj/fileobj.html">File</a>Transfer` オブジェクトは HTTP マルチパート POST リクエストを使ってファイルをサーバーにアップロードする機能を提供します。このメソッドは HTTP と HTTPS の両方のプロトコルをサポートします。 upload メソッドに <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a> オブジェクトを渡すことで、任意のパラメーターを追加できます。アップロードが成功した場合 <a href="../fileuploadresult/fileuploadresult.html"><a href="../fileobj/fileobj.html">File</a>UploadResult</a> オブジェクトとともに success コールバック関数が呼ばれます。エラーが発生した場合は <a href="../filetransfererror/filetransfererror.html"><a href="../fileobj/fileobj.html">File</a>TransferError</a> オブジェクトとともに error コールバック関数が呼ばれます。
+`FileTransfer` オブジェクトは HTTP マルチパート POST リクエストを使ってファイルをサーバーにアップロードする機能を提供します。このメソッドは HTTP と HTTPS の両方のプロトコルをサポートします。 upload メソッドに FileUploadOptions オブジェクトを渡すことで、任意のパラメーターを追加できます。アップロードが成功した場合 FileUploadResult オブジェクトとともに success コールバック関数が呼ばれます。エラーが発生した場合は FileTransferError オブジェクトとともに error コールバック関数が呼ばれます。
 また、サーバーからファイルをダウンロードし保存することもできます (iOS と Android のみ) 。
 
 サポートされているプラットフォーム
@@ -55,11 +55,11 @@ __パラメーター:__
 
 - __filePath__ - デバイス内のファイルのフルパスを表します
 - __server__ - ファイルを受け取るサーバーの URL を表します
-- __successCallback__ - <a href="../metadata/metadata.html">Metadata</a> オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - <a href="../metadata/metadata.html">Metadata</a> の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 - __options__ - ファイル名や minetype などのオプションのパラメーターを表します
 
-__<a href="../../storage/storage.opendatabase.html">使用例</a>__
+__使用例__
 
     // !! fileURI の値は有効なデバイス内の有効なテキストファイルの URI であるとみなします
 
@@ -75,7 +75,7 @@ __<a href="../../storage/storage.opendatabase.html">使用例</a>__
         console.log("upload error target " + error.target);
     }
 
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -86,29 +86,29 @@ __<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     options.params = params;
 
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
 
-__詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>__
+__詳細な使用例__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title><a href="../fileobj/fileobj.html">File</a> Transfer の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
+        <title>File Transfer の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
             //
-            document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             // Cordova 準備完了
             //
-            function on<a href="../../device/device.html">Device</a>Ready() {
+            function onDeviceReady() {
 
                 // 写真をファイル URI として取得する場合
-                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(uploadPhoto,
+                navigator.camera.getPicture(uploadPhoto,
                                             function(message) { alert('写真の取得に失敗しました'); },
                                             { quality: 50,
                                             destinationType: navigator.camera.DestinationType.FILE_URI,
@@ -118,7 +118,7 @@ __詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>__
             }
 
             function uploadPhoto(imageURI) {
-                var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+                var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -129,7 +129,7 @@ __詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
                 options.params = params;
 
-                var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+                var ft = new FileTransfer();
                 ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
             }
 
@@ -148,7 +148,7 @@ __詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>__
          </script>
        </head>
        <body>
-         <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
+         <h1>使用例</h1>
          <p>ファイルアップロード</p>
        </body>
     </html>
@@ -156,9 +156,9 @@ __詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>__
 iOS に関する注意点
 ----------
 
-<a href="../fileobj/fileobj.html">File</a>Transfer アップロードのためのヘッダーを設定:
+FileTransfer アップロードのためのヘッダーを設定:
 
-__<a href="../../storage/storage.opendatabase.html">使用例</a>__
+__使用例__
 
     function win(r) {
         console.log("コード = " + r.responseCode);
@@ -174,7 +174,7 @@ __<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     var uri = "http://some.server.com/upload.php";
 
-    var options = new <a href="../fileuploadoptions/fileuploadoptions.html"><a href="../fileobj/fileobj.html">File</a>UploadOptions</a>();
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -184,7 +184,7 @@ __<a href="../../storage/storage.opendatabase.html">使用例</a>__
 
     options.params = params;
 
-    var ft = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);
 
 download
@@ -194,14 +194,14 @@ __パラメーター:__
 
 - __source__ - ファイルを取得するサーバーの URL を表します
 - __target__ - デバイス内のファイルのフルパスを表します
-- __successCallback__ - <a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a> オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - <a href="../metadata/metadata.html">Metadata</a> の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - FileEntry オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__<a href="../../storage/storage.opendatabase.html">使用例</a>__
+__使用例__
 
     // !! url はサーバー内の有効なファイルを指すことと filePath がデバイス内の有効な値であるとみなします
 
-    var fileTransfer = new <a href="../fileobj/fileobj.html">File</a>Transfer();
+    var fileTransfer = new FileTransfer();
 
     fileTransfer.download(
         url,

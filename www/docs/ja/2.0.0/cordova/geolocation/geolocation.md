@@ -23,31 +23,31 @@ Geolocation
 
 > `geolocation` オブジェクトはデバイスの GPS センサーへのアクセスを提供します。
 
-Geolocation は緯度や経度といったデバイスの位置情報を提供します。主に Global <a href="Position/position.html">Position</a>ing System (GPS) から位置情報を取得しますが、 IP アドレスや RFID, WiFi, Bluetooh, MAC アドレス, 基地局 ID などのソースからも現在位置を推測します。ただしこの API がデバイスの正確な位置を特定する保証はありません。
+Geolocation は緯度や経度といったデバイスの位置情報を提供します。主に Global Positioning System (GPS) から位置情報を取得しますが、 IP アドレスや RFID, WiFi, Bluetooh, MAC アドレス, 基地局 ID などのソースからも現在位置を推測します。ただしこの API がデバイスの正確な位置を特定する保証はありません。
 
 この API は [W3C Geo location API Specification](http://dev.w3.org/geo/api/spec-source.html) をベースとしています。いくつかのデバイス (Android, BlackBerry, Bada, Windows Phone 7, webOS) ではすでにこの機能の実装を提供しています。 これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。位置情報のサポートがされてないデバイスについては、Cordovaの実装によってW3Cの仕様に沿った機能が提供されます。
 
 メソッド
 -------
 
-- geolocation.getCurrent<a href="Position/position.html">Position</a>
-- geolocation.watch<a href="Position/position.html">Position</a>
-- <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
+- geolocation.getCurrentPosition
+- geolocation.watchPosition
+- geolocation.clearWatch
 
 
 引数
 ---------
 
-- <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
-- <a href="parameters/geolocationError.html">geolocationError</a>
-- <a href="parameters/geolocation.options.html">geolocationOptions</a>
+- geolocationSuccess
+- geolocationError
+- geolocationOptions
 
 オブジェクト (読み取り専用)
 -------------------
 
-- <a href="Position/position.html">Position</a>
-- <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>
-- <a href="Coordinates/coordinates.html">Coordinates</a>
+- Position
+- PositionError
+- Coordinates
 
 パーミッション
 -----------
@@ -82,7 +82,7 @@ Geolocation は緯度や経度といったデバイスの位置情報を提供�
 
 ### iOS
 
-#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
+#### App/Supporting Files/Cordova.plist
 
     <key>Plugins</key>
     <dict>

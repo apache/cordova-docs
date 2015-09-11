@@ -26,19 +26,19 @@ Events
 Event Types
 -----------
 
-- <a href="events.deviceready.html">deviceready</a>
-- <a href="events.pause.html">pause</a>
-- <a href="events.resume.html">resume</a>
-- <a href="events.online.html">online</a>
-- <a href="events.offline.html">offline</a>
-- <a href="events.backbutton.html">backbutton</a>
-- <a href="events.batterycritical.html">batterycritical</a>
-- <a href="events.batterylow.html">batterylow</a>
-- <a href="events.batterystatus.html">batterystatus</a>
-- <a href="events.menubutton.html">menubutton</a>
-- <a href="events.searchbutton.html">searchbutton</a>
-- <a href="events.startcallbutton.html">startcallbutton</a>
-- <a href="events.endcallbutton.html">endcallbutton</a>
-- <a href="events.volumedownbutton.html">volumedownbutton</a>
-- <a href="events.volumeupbutton.html">volumeupbutton</a>
+- deviceready
+- pause
+- resume
+- online
+- offline
+- backbutton
+- batterycritical
+- batterylow
+- batterystatus
+- menubutton
+- searchbutton
+- startcallbutton
+- endcallbutton
+- volumedownbutton
+- volumeupbutton
 

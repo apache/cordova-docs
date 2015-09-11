@@ -23,9 +23,9 @@ compassError
 
 コンパス方位の取得に失敗したときに呼び出されるコールバック関数です。
 
-<a href="../../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------
 
-function(<a href="../compassError/compassError.html"><a href="../compass.html">Compass</a>Error</a>) {
+function(CompassError) {
     // エラー処理
 }

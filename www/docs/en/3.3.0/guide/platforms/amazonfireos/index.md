@@ -20,14 +20,14 @@ license: >
 
 # Amazon Fire OS Platform Guide
 
-This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to set up your SDK development environment to
+This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* <a href="config.html">Amazon Fire OS Configuration</a>
-* <a href="webview.html">Amazon Fire OS WebViews</a>
-* <a href="plugin.html">Amazon Fire OS Plugins</a>
+* Amazon Fire OS Configuration
+* Amazon Fire OS WebViews
+* Amazon Fire OS Plugins
 
 ## Requirements and Support
 
@@ -78,7 +78,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and <a href="../../../cordova/inappbrowser/inappbrowser.html">close</a> both dialog boxes.
+* Save the value and close both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to
@@ -130,7 +130,7 @@ unresolved problems. If so, follow these additional steps:
 
 * Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
-## Deploy to <a href="../../../cordova/device/device.html">Device</a>
+## Deploy to Device
 
 To push an app directly to the device, make sure USB debugging is enabled on your device as described on the
 [Android Developer Site](http://developer.android.com/tools/device.html),

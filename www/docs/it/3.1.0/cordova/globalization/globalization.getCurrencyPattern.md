@@ -43,7 +43,7 @@ Restituisce il modello per la `successCallback` con un `properties` oggetto come
 
 L'ingresso `currencyCode` parametro dovrebbe essere un `String` di uno dei codici valuta ISO 4217, ad esempio 'USD'.
 
-Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` oggetto come parametro. Previsto codice dell'errore è`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
 
 ## Piattaforme supportate
 
@@ -84,7 +84,7 @@ Risultato atteso:
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

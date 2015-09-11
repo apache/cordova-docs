@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>
+MediaFile
 =========
 
 > メディアキャプチャーファイルのプロパティーをカプセル化します。
@@ -35,4 +35,4 @@ license: >
 メソッド
 -------
 
-- __<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData</a>:__ メディアファイルのフォーマット情報を取得します。
+- __MediaFile.getFormatData:__ メディアファイルのフォーマット情報を取得します。

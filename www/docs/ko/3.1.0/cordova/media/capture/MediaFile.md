@@ -20,20 +20,20 @@ license: >
 
 # 돌아가기
 
-> <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> <a href="../../file/fileobj/fileobj.html">파일</a>의 속성을 캡슐화합니다.
+> 미디어 캡처 파일의 속성을 캡슐화합니다.
 
 ## 속성
 
-*   **이름**: 경로 정보 없이 <a href="../../file/fileobj/fileobj.html">파일</a> 이름. (DOMString)
+*   **이름**: 경로 정보 없이 파일 이름. (DOMString)
 
-*   **fullPath**: 이름을 포함 한 <a href="../../file/fileobj/fileobj.html">파일</a>의 전체 경로. (DOMString)
+*   **fullPath**: 이름을 포함 한 파일의 전체 경로. (DOMString)
 
-*   **유형**: <a href="../../file/fileobj/fileobj.html">파일</a>의 mime 형식 (DOMString)
+*   **유형**: 파일의 mime 형식 (DOMString)
 
-*   **lastModifiedDate**: 날짜 및 시간 <a href="../../file/fileobj/fileobj.html">파일</a>을 마지막으로 수정한. (날짜)
+*   **lastModifiedDate**: 날짜 및 시간 파일을 마지막으로 수정한. (날짜)
 
-*   **크기**: 바이트에서 <a href="../../file/fileobj/fileobj.html">파일</a>의 크기. (수)
+*   **크기**: 바이트에서 파일의 크기. (수)
 
 ## 메서드
 
-*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>의 형식 정보를 검색 합니다.
+*   **MediaFile.getFormatData**: 미디어 파일의 형식 정보를 검색 합니다.

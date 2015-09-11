@@ -29,7 +29,7 @@ Analysiert eine Zahl als Zeichenfolge nach dem Client-Benutzer-Einstellungen for
 
 Liefert die Anzahl an der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `Number` Wert.
 
-Wenn es ist ein Fehler beim Analysieren der Zeichenfolge, dann die `errorCallback` führt mit einem `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` -Objekt als Parameter. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
+Wenn es ist ein Fehler beim Analysieren der Zeichenfolge, dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PARSING\_ERROR`.
 
 Die `options` Parameter ist optional und wird mit den folgenden Werten:
 
@@ -62,7 +62,7 @@ Wenn der Browser auf festgelegt ist die `en\_US` Gebietsschema, dies sollte eine
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>stringToNumber Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

@@ -20,7 +20,7 @@ license: >
 
 # FileEntries
 
-Eine <a href="../fileobj/fileobj.html">Datei</a> in einem <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> darstellt, wie in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
+Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,27 +36,27 @@ Eine <a href="../fileobj/fileobj.html">Datei</a> in einem <a href="../filesystem
 
 **Hinweis:** Das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
 
-*   **<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>**: das <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>, auf dem der `FileEntry` befindet. *(FileSystem)*
+*   **Dateisystem**: das Dateisystem, auf dem der `FileEntry` befindet. *(FileSystem)*
 
 ## Methoden
 
-*   **GetMetadata**: Nachschlagen <a href="../metadata/metadata.html">Metadaten</a> über eine <a href="../fileobj/fileobj.html">Datei</a>.
+*   **GetMetadata**: Nachschlagen Metadaten über eine Datei.
 
-*   **SetMetadata**: <a href="../metadata/metadata.html">Metadaten</a> für eine <a href="../fileobj/fileobj.html">Datei</a> festlegen.
+*   **SetMetadata**: Metadaten für eine Datei festlegen.
 
-*   **MoveTo**: Verschieben einer <a href="../fileobj/fileobj.html">Datei</a> an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>.
+*   **MoveTo**: Verschieben einer Datei an einen anderen Speicherort im Dateisystem.
 
-*   **CopyTo**: Kopieren Sie eine <a href="../fileobj/fileobj.html">Datei</a> an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>.
+*   **CopyTo**: Kopieren Sie eine Datei an einen anderen Speicherort im Dateisystem.
 
-*   **Besuch**: Rückkehr einen URL, die verwendet werden kann, um eine <a href="../fileobj/fileobj.html">Datei</a> zu suchen.
+*   **Besuch**: Rückkehr einen URL, die verwendet werden kann, um eine Datei zu suchen.
 
-*   **Entfernen**: Löschen einer <a href="../fileobj/fileobj.html">Datei</a>.
+*   **Entfernen**: Löschen einer Datei.
 
 *   **GetParent**: das übergeordnete Verzeichnis nachschlagen.
 
-*   **CreateWriter**: erstellt ein `<a href="../filewriter/filewriter.html">FileWriter</a>` -Objekt, das verwendet werden kann, um in eine <a href="../fileobj/fileobj.html">Datei</a> schreiben.
+*   **CreateWriter**: erstellt ein `FileWriter` -Objekt, das verwendet werden kann, um in eine Datei schreiben.
 
-*   **<a href="../fileobj/fileobj.html">Datei</a>**: erstellt ein `File` -Objekt, <a href="../fileobj/fileobj.html">Datei</a>eigenschaften.
+*   **Datei**: erstellt ein `File` -Objekt, Dateieigenschaften.
 
 ## Unterstützte Plattformen
 
@@ -68,13 +68,13 @@ Eine <a href="../fileobj/fileobj.html">Datei</a> in einem <a href="../filesystem
 
 ## getMetadata
 
-Suchen Sie <a href="../metadata/metadata.html">Metadaten</a> zu einer <a href="../fileobj/fileobj.html">Datei</a>.
+Suchen Sie Metadaten zu einer Datei.
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `Metadata` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -82,24 +82,24 @@ Suchen Sie <a href="../metadata/metadata.html">Metadaten</a> zu einer <a href=".
     
     Function fail(error) {alert(error.code);}
     
-    / / Anfrage das <a href="../metadata/metadata.html">Metadaten</a>objekt für diesen Eintrag entry.getMetadata (Erfolg, Fehler);
+    / / Anfrage das Metadatenobjekt für diesen Eintrag entry.getMetadata (Erfolg, Fehler);
     
 
 ## setMetadata
 
-<a href="../metadata/metadata.html">Metadaten</a> in einer <a href="../fileobj/fileobj.html">Datei</a>.
+Metadaten in einer Datei.
 
 **Derzeit funktioniert nur auf iOS.**
 
-*   Dadurch wird die erweiterten Attribute einer <a href="../fileobj/fileobj.html">Datei</a> festgelegt.
+*   Dadurch wird die erweiterten Attribute einer Datei festgelegt.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die <a href="../metadata/metadata.html">Metadaten</a> festgelegt ist. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten festgelegt ist. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die <a href="../metadata/metadata.html">Metadaten</a> nicht erfolgreich festgelegt ist. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten nicht erfolgreich festgelegt ist. *(Funktion)*
 
-*   **MetadataObject**: ein Objekt, das der <a href="../metadata/metadata.html">Metadaten</a> Schlüssel und Werte enthält. *(Objekt)*
+*   **MetadataObject**: ein Objekt, das der Metadaten Schlüssel und Werte enthält. *(Objekt)*
 
 **Kleines Beispiel**
 
@@ -117,7 +117,7 @@ Suchen Sie <a href="../metadata/metadata.html">Metadaten</a> zu einer <a href=".
 
 **iOS Quirk**
 
-*   Nur die `com.apple.MobileBackup` erweitertes Attribut wird unterstützt. Legen Sie den Wert auf `1` zu verhindern, dass die <a href="../fileobj/fileobj.html">Datei</a> auf iCloud gesichert wird. Legen Sie den Wert auf `` , die <a href="../fileobj/fileobj.html">Datei</a> zu iCloud gesichert werden wieder zu aktivieren.
+*   Nur die `com.apple.MobileBackup` erweitertes Attribut wird unterstützt. Legen Sie den Wert auf `1` zu verhindern, dass die Datei auf iCloud gesichert wird. Legen Sie den Wert auf `` , die Datei zu iCloud gesichert werden wieder zu aktivieren.
 
 **Kleines Beispiel**
 
@@ -147,31 +147,31 @@ Suchen Sie <a href="../metadata/metadata.html">Metadaten</a> zu einer <a href=".
             console.log(evt.target.error.code);
         }
     
-        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFileMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
 
-Verschieben Sie eine <a href="../fileobj/fileobj.html">Datei</a> an einen anderen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>. Ein Fehler auftritt, wenn die app versucht:
+Verschieben Sie eine Datei an einen anderen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
 
-*   Verschieben einer <a href="../fileobj/fileobj.html">Datei</a> in seinem übergeordneten Element, sofern ein anderen von seinen aktuellen Namen ist nicht;
+*   Verschieben einer Datei in seinem übergeordneten Element, sofern ein anderen von seinen aktuellen Namen ist nicht;
 
-*   Verschieben einer <a href="../fileobj/fileobj.html">Datei</a> auf einen Pfad, der von einem Verzeichnis besetzt;
+*   Verschieben einer Datei auf einen Pfad, der von einem Verzeichnis besetzt;
 
-Darüber hinaus versucht das Verschieben einer <a href="../fileobj/fileobj.html">Datei</a> auf eine vorhandene <a href="../fileobj/fileobj.html">Datei</a> löschen und die <a href="../fileobj/fileobj.html">Datei</a> zu ersetzen.
+Darüber hinaus versucht das Verschieben einer Datei auf eine vorhandene Datei löschen und die Datei zu ersetzen.
 
 **Parameter:**
 
-*   **Eltern**: das übergeordnete Verzeichnis, in das die <a href="../fileobj/fileobj.html">Datei</a> verschoben. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **Eltern**: das übergeordnete Verzeichnis, in das die Datei verschoben. *(DirectoryEntry)*
 
-*   **NewName**: der neue Name der <a href="../fileobj/fileobj.html">Datei</a>. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
+*   **NewName**: der neue Name der Datei. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen <a href="../fileobj/fileobj.html">Datei</a> `FileEntry` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen Datei `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die <a href="../fileobj/fileobj.html">Datei</a> zu verschieben. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die Datei zu verschieben. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -186,7 +186,7 @@ Darüber hinaus versucht das Verschieben einer <a href="../fileobj/fileobj.html"
     function moveFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // move the file to a new directory and rename it
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
@@ -195,19 +195,19 @@ Darüber hinaus versucht das Verschieben einer <a href="../fileobj/fileobj.html"
 
 ## copyTo
 
-Kopieren Sie eine <a href="../fileobj/fileobj.html">Datei</a> an einen neuen <a href="../../storage/storage.html">Speicher</a>ort im <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a>. Ein Fehler auftritt, wenn die app versucht:
+Kopieren Sie eine Datei an einen neuen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
 
-*   Kopieren Sie eine <a href="../fileobj/fileobj.html">Datei</a> in übergeordneten, wenn ein anderen von seinen aktuellen Namen nicht angegeben ist.
+*   Kopieren Sie eine Datei in übergeordneten, wenn ein anderen von seinen aktuellen Namen nicht angegeben ist.
 
 **Parameter:**
 
-*   **Eltern**: das übergeordnete Verzeichnis, in das die <a href="../fileobj/fileobj.html">Datei</a> kopiert. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
+*   **Eltern**: das übergeordnete Verzeichnis, in das die Datei kopiert. *(DirectoryEntry)*
 
-*   **NewName**: der neue Name der <a href="../fileobj/fileobj.html">Datei</a>. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
+*   **NewName**: der neue Name der Datei. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen <a href="../fileobj/fileobj.html">Datei</a> `FileEntry` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen Datei `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die <a href="../fileobj/fileobj.html">Datei</a> zu kopieren. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die Datei zu kopieren. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -222,7 +222,7 @@ Kopieren Sie eine <a href="../fileobj/fileobj.html">Datei</a> an einen neuen <a 
     function copyFile(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
-            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>(parentName, parent);
+            parentEntry = new DirectoryEntry(parentName, parent);
     
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
@@ -231,7 +231,7 @@ Kopieren Sie eine <a href="../fileobj/fileobj.html">Datei</a> an einen neuen <a 
 
 ## Besuch
 
-Gibt einen URL, die verwendet werden kann, um die <a href="../fileobj/fileobj.html">Datei</a> zu suchen.
+Gibt einen URL, die verwendet werden kann, um die Datei zu suchen.
 
 **Kleines Beispiel**
 
@@ -242,13 +242,13 @@ Gibt einen URL, die verwendet werden kann, um die <a href="../fileobj/fileobj.ht
 
 ## Entfernen
 
-Löscht eine <a href="../fileobj/fileobj.html">Datei</a>.
+Löscht eine Datei.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem die <a href="../fileobj/fileobj.html">Datei</a> gelöscht wurde. Ohne Parameter aufgerufen. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem die Datei gelöscht wurde. Ohne Parameter aufgerufen. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die <a href="../fileobj/fileobj.html">Datei</a> zu löschen. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die Datei zu löschen. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -266,13 +266,13 @@ Löscht eine <a href="../fileobj/fileobj.html">Datei</a>.
 
 ## getParent
 
-Suchen Sie den übergeordneten `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` mit der <a href="../fileobj/fileobj.html">Datei</a>.
+Suchen Sie den übergeordneten `DirectoryEntry` mit der Datei.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der die <a href="../fileobj/fileobj.html">Datei</a> übergeordnete übergeben wird `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der die Datei übergeordnete übergeben wird `DirectoryEntry` . *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` . Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `DirectoryEntry` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -284,19 +284,19 @@ Suchen Sie den übergeordneten `<a href="../directoryentry/directoryentry.html">
         alert(error.code);
     }
     
-    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
+    // Get the parent DirectoryEntry
     entry.getParent(success, fail);
     
 
 ## createWriter
 
-Erstellen einer `<a href="../filewriter/filewriter.html">FileWriter</a>` vom dargestellten <a href="../fileobj/fileobj.html">Datei</a> zugeordnete Objekt der`FileEntry`.
+Erstellen einer `FileWriter` vom dargestellten Datei zugeordnete Objekt der`FileEntry`.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird ein `<a href="../filewriter/filewriter.html">FileWriter</a>` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileWriter` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die <a href="../filewriter/filewriter.html">FileWriter</a> erstellen. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die FileWriter erstellen. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -308,19 +308,19 @@ Erstellen einer `<a href="../filewriter/filewriter.html">FileWriter</a>` vom dar
         alert(error.code);
     }
     
-    // create a <a href="../filewriter/filewriter.html">FileWriter</a> to write to the file
+    // create a FileWriter to write to the file
     entry.createWriter(success, fail);
     
 
-## <a href="../fileobj/fileobj.html">Datei</a>
+## Datei
 
-Zurück, ein `File` -Objekt, das den aktuellen Zustand der <a href="../fileobj/fileobj.html">Datei</a> darstellt, dass dies `FileEntry` darstellt.
+Zurück, ein `File` -Objekt, das den aktuellen Zustand der Datei darstellt, dass dies `FileEntry` darstellt.
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `File` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen der `File` Objekt, z. B. wenn die <a href="../fileobj/fileobj.html">Datei</a> nicht mehr vorhanden ist. Aufgerufene mit einem `<a href="../fileerror/fileerror.html">FileError</a>` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen der `File` Objekt, z. B. wenn die Datei nicht mehr vorhanden ist. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 

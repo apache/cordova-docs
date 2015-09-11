@@ -22,12 +22,12 @@ license: >
 
 Supprime les photos intermédiaires prises par la caméra sur le support de stockage temporaire.
 
-    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
+    navigator.camera.cleanup( cameraSuccess, cameraError );
     
 
 ## Description
 
-Supprime les fichiers d'image intermédiaire qui sont conservés dans le support de stockage temporaire après l'appel à `<a href="camera.getPicture.html">camera.getPicture</a>`. S'applique uniquement lorsque la valeur de `Camera.sourceType` est égale à `Camera.PictureSourceType.CAMERA` et `Camera.destinationType` est égale à `Camera.DestinationType.FILE_URI`.
+Supprime les fichiers d'image intermédiaire qui sont conservés dans le support de stockage temporaire après l'appel à `camera.getPicture`. S'applique uniquement lorsque la valeur de `Camera.sourceType` est égale à `Camera.PictureSourceType.CAMERA` et `Camera.destinationType` est égale à `Camera.DestinationType.FILE_URI`.
 
 ## Plates-formes prises en charge
 

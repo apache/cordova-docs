@@ -20,19 +20,19 @@ license: >
 
 # SQLResultSet
 
-Wenn eine `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einem `SQLResultSet` Parameter.
+Wenn eine `SQLTransaction` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einem `SQLResultSet` Parameter.
 
 ## Eigenschaften
 
-*   **InsertId**: die Zeilen-ID der Zeile, die die `SQLResultSet` des Objekts-SQL-Anweisung, die in die <a href="../database/database.html">Datenbank</a> eingefügt.
+*   **InsertId**: die Zeilen-ID der Zeile, die die `SQLResultSet` des Objekts-SQL-Anweisung, die in die Datenbank eingefügt.
 
 *   **RowsAffected**: die Anzahl der Zeilen geändert werden, indem die SQL-Anweisung, die 0 (null), wenn die Anweisung keine Zeilen nicht ausgewirkt hat.
 
-*   **Zeilen**: eine `<a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a>` , die die zurückgegebenen Zeilen darstellen, empty, wenn keine Zeilen zurückgegeben werden.
+*   **Zeilen**: eine `SQLResultSetRowList` , die die zurückgegebenen Zeilen darstellen, empty, wenn keine Zeilen zurückgegeben werden.
 
 ## Informationen
 
-Wenn eine `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einer `SQLResultSet` Parameter mit den drei Eigenschaften:
+Wenn eine `SQLTransaction` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einer `SQLResultSet` Parameter mit den drei Eigenschaften:
 
 *   Die `insertId` gibt die Zeilennummer einer successly SQL-Einfügung-Anweisung zurück. Wenn die SQL keine Zeilen einfügen wird die `insertId` nicht festgelegt.
 
@@ -68,7 +68,7 @@ Wenn eine `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
         alert("Error processing SQL: "+err.code);
     }
     
-    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(queryDB, errorCB);
     
 
@@ -77,14 +77,14 @@ Wenn eine `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
+        <title>Storage Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Populate the database
         //
@@ -123,21 +123,21 @@ Wenn eine `<a href="../sqltransaction/sqltransaction.html">SQLTransaction</a>` d
         // Transaction success callback
         //
         function successCB() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(queryDB, errorCB);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
         </script>
       </head>
       <body>
-        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <h1>Example</h1>
         <p>Database</p>
       </body>
     </html>

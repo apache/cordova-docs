@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>VideoOptions
+CaptureVideoOptions
 ===================
 
 > Encapsulates video capture configuration options.
@@ -30,31 +30,31 @@ Properties
 - __duration:__ The maximum duration of a video clip, in seconds.
 - __mode:__ The selected video capture mode.  The value must match one of the elements in `capture.supportedVideoModes`.
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
 
-    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
 Android Quirks
 --------------
 
 - The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video <a href="../../storage/parameters/size.html">size</a> and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
+- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
 
 
 BlackBerry WebWorks Quirks
 --------------------------
 
 - The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video <a href="../../storage/parameters/size.html">size</a> and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
+- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
 
 iOS Quirks
 ----------
 
 - The __limit__ parameter is not supported.  One video is recorded per invocation.
 - The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video <a href="../../storage/parameters/size.html">size</a> and format cannot be altered programmatically. By default, videos are recorded in MOV (video/quicktime) format.
+- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically. By default, videos are recorded in MOV (video/quicktime) format.
 

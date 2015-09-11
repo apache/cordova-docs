@@ -20,26 +20,26 @@ license: >
 
 # window.open
 
-Öffnet eine URL in einem neuen `<a href="inappbrowser.html">InAppBrowser</a>` Instanz, die aktuelle Browserinstanz oder der Systembrowser.
+Öffnet eine URL in einem neuen `InAppBrowser` Instanz, die aktuelle Browserinstanz oder der Systembrowser.
 
     var ref = window.open(url, target, options);
     
 
-*   **Ref**: Bezugnahme auf die `<a href="inappbrowser.html">InAppBrowser</a>` Fenster. *(<a href="inappbrowser.html">InAppBrowser</a>)*
+*   **Ref**: Bezugnahme auf die `InAppBrowser` Fenster. *(InAppBrowser)*
 
 *   **URL**: die URL *(String)*zu laden. Rufen Sie `encodeURI()` auf diese Option, wenn die URL enthält Unicode-Zeichen.
 
 *   **Ziel**: das Ziel in der URL, einen optionalen Parameter geladen, die standardmäßig auf `_self` . *(String)*
     
-    *   `_self`: Öffnet sich in der Cordova WebView wenn der URL in der Whitelist ist, andernfalls es öffnet sich in der`<a href="inappbrowser.html">InAppBrowser</a>`.
-    *   `_blank`: Öffnet den`<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_self`: Öffnet sich in der Cordova WebView wenn der URL in der Whitelist ist, andernfalls es öffnet sich in der`InAppBrowser`.
+    *   `_blank`: Öffnet den`InAppBrowser`.
     *   `_system`: Öffnet in den System-Web-Browser.
 
-*   **Optionen**: Optionen für die `<a href="inappbrowser.html">InAppBrowser</a>` . Optional, säumige an: `location=yes` . *(String)*
+*   **Optionen**: Optionen für die `InAppBrowser` . Optional, säumige an: `location=yes` . *(String)*
     
     Die `options` Zeichenfolge muss keine Leerstelle enthalten, und jede Funktion Name/Wert-Paare müssen durch ein Komma getrennt werden. Featurenamen Groß-/Kleinschreibung. Alle Plattformen unterstützen die anderen Werte:
     
-    *   **Lage**: Legen Sie auf `yes` oder `no` , machen die `<a href="inappbrowser.html">InAppBrowser</a>` der Adressleiste ein- oder ausschalten.
+    *   **Lage**: Legen Sie auf `yes` oder `no` , machen die `InAppBrowser` der Adressleiste ein- oder ausschalten.
     ## Android nur
     
     *   **Closebuttoncaption** - setzen Sie auf eine Zeichenfolge, die die Beschriftung für die Schaltfläche "Fertig" sein wird. 
@@ -50,10 +50,10 @@ license: >
     
     *   **Closebuttoncaption** - setzen Sie auf eine Zeichenfolge, die die Beschriftung für die Schaltfläche "Fertig" sein wird. Beachten Sie, dass Sie diesen Wert selbst lokalisieren.
     *   **versteckte** - legen Sie auf 'Ja', um den Browser zu erstellen und laden Sie die Seite, aber nicht zeigen. Das Load-Ereignis wird ausgelöst, wenn der Ladevorgang abgeschlossen ist. Lassen Sie, oder legen Sie auf "Nein" (Standard), den Browser öffnen und laden normalerweise zu haben. 
-    *   **Symbolleiste** - legen Sie auf "Ja" oder "Nein" zu die Symbolleiste aktivieren oder deaktivieren für die <a href="inappbrowser.html">InAppBrowser</a> (standardmäßig "Ja")
+    *   **Symbolleiste** - legen Sie auf "Ja" oder "Nein" zu die Symbolleiste aktivieren oder deaktivieren für die InAppBrowser (standardmäßig "Ja")
     *   **EnableViewportScale**: Legen Sie auf `yes` oder `no` , Viewport Skalierung durch ein Meta-Tag (standardmäßig zu verhindern`no`).
     *   **MediaPlaybackRequiresUserAction**: Legen Sie auf `yes` oder `no` , HTML5 audio oder video von automatisches Abspielen (standardmäßig zu verhindern`no`).
-    *   **AllowInlineMediaPlayback**: Legen Sie auf `yes` oder `no` Inline HTML5 <a href="../media/media.html">Medien</a>wiedergabe, anzeigen innerhalb des Browserfensters statt eine gerätespezifische Wiedergabe-Schnittstelle ermöglichen. Des HTML `video` Element muss auch die `webkit-playsinline` Attribut (Standard:`no`)
+    *   **AllowInlineMediaPlayback**: Legen Sie auf `yes` oder `no` Inline HTML5 Medienwiedergabe, anzeigen innerhalb des Browserfensters statt eine gerätespezifische Wiedergabe-Schnittstelle ermöglichen. Des HTML `video` Element muss auch die `webkit-playsinline` Attribut (Standard:`no`)
     *   **KeyboardDisplayRequiresUserAction**: Legen Sie auf `yes` oder `no` , die Tastatur zu öffnen, wenn Formularelemente Fokus per JavaScript erhalten `focus()` Anruf (Standard:`yes`).
     *   **SuppressesIncrementalRendering**: Legen Sie auf `yes` oder `no` zu warten, bis alle neuen Fensterinhalt empfangen wird, bevor Sie wiedergegeben wird (standardmäßig`no`).
     *   **Presentationstyle**: Legen Sie auf `pagesheet` , `formsheet` oder `fullscreen` [Präsentationsstil][1] (standardmäßig fest`fullscreen`).
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>window.open Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //

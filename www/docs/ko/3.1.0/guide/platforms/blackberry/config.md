@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry10/config.html">블랙베리 구성</a>
+# 블랙베리 구성
 
 블랙베리는 완벽 하 게 [W3C 위젯 사양][1] 뿐만 아니라 독자적인 테두리 확장을 지원합니다. 전체 [블랙베리 WebWorks 설명서 config.xml에 관한][2] 자세한 내용은 참조 하십시오.
 

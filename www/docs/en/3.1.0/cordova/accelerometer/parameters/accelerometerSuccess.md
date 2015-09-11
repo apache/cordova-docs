@@ -20,7 +20,7 @@ license: >
 
 # accelerometerSuccess
 
-onSuccess callback function that provides the `<a href="../acceleration/acceleration.html">Acceleration</a>` information.
+onSuccess callback function that provides the `Acceleration` information.
 
     function(acceleration) {
         // Do something
@@ -28,13 +28,13 @@ onSuccess callback function that provides the `<a href="../acceleration/accelera
 
 ## Parameters
 
-- __acceleration__: The acceleration at a single moment in time. (<a href="../acceleration/acceleration.html">Acceleration</a>)
+- __acceleration__: The acceleration at a single moment in time. (Acceleration)
 
-## <a href="../../storage/storage.opendatabase.html">Example</a>
+## Example
 
     function onSuccess(acceleration) {
-        alert('<a href="../acceleration/acceleration.html">Acceleration</a> X: ' + acceleration.x + '\n' +
-              '<a href="../acceleration/acceleration.html">Acceleration</a> Y: ' + acceleration.y + '\n' +
-              '<a href="../acceleration/acceleration.html">Acceleration</a> Z: ' + acceleration.z + '\n' +
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
               'Timestamp: '      + acceleration.timestamp + '\n');
     };

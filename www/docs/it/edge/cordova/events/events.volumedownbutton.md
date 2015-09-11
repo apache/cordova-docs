@@ -29,9 +29,9 @@ L'evento viene generato quando l'utente preme il volume basso pulsante.
 
 Se è necessario eseguire l'override di volume giù il comportamento predefinito è possibile registrare un listener di eventi per il `volumedownbutton` evento.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
 
-## <a href="../../config_ref/images.html">Piattaforme supportate</a>
+## Piattaforme supportate
 
 *   BlackBerry 10
 *   Android
@@ -51,7 +51,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Volume Down Button Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,7 +59,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

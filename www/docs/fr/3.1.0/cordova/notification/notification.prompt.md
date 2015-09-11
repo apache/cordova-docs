@@ -61,7 +61,7 @@ Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans l
     
     // Show a custom prompt dialog
     //
-    function <a href="../inappbrowser/inappbrowser.html">show</a>Prompt() {
+    function showPrompt() {
         navigator.notification.prompt(
             'Please enter your name',  // message
             onPrompt,                  // callback to invoke
@@ -77,14 +77,14 @@ Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans l
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="notification.html">Notification</a> Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Notification Prompt Dialog Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans l
     
         // Show a custom prompt dialog
         //
-        function <a href="../inappbrowser/inappbrowser.html">show</a>Prompt() {
+        function showPrompt() {
             navigator.notification.prompt(
                 'Please enter your name',  // message
                 onPrompt,                  // callback to invoke
@@ -112,7 +112,7 @@ Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans l
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Prompt(); return false;">Show Prompt</a></p>
+        <p><a href="#" onclick="showPrompt(); return false;">Show Prompt</a></p>
       </body>
     </html>
     

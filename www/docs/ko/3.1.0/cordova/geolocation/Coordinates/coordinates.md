@@ -20,7 +20,7 @@ license: >
 
 # 좌표
 
-<a href="../Position/position.html">위치</a>의 지리적 좌표를 설명 하는 속성의 집합입니다.
+위치의 지리적 좌표를 설명 하는 속성의 집합입니다.
 
 ## 속성
 
@@ -28,7 +28,7 @@ license: >
 
 *   **경도**: 경도 10 진수 각도. *(수)*
 
-*   **고도**: 높이의 타원 면 미터에 <a href="../Position/position.html">위치</a>. *(수)*
+*   **고도**: 높이의 타원 면 미터에 위치. *(수)*
 
 *   **정확도**: 정확도 레벨 미터에 위도 및 경도 좌표. *(수)*
 
@@ -40,7 +40,7 @@ license: >
 
 ## 설명
 
-`Coordinates`개체에 <a href="../../connection/connection.html">연결</a> 된에서 `Position` 개체를 현재 <a href="../Position/position.html">위치</a>에 대 한 요청에 콜백 함수를 사용할 수 있습니다.
+`Coordinates`개체에 연결 된에서 `Position` 개체를 현재 위치에 대 한 요청에 콜백 함수를 사용할 수 있습니다.
 
 ## 지원 되는 플랫폼
 
@@ -72,7 +72,7 @@ license: >
         alert('onError!');
     };
     
-    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
 ## 전체 예제
@@ -80,18 +80,18 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>Geolocation Position Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
         // Display `Position` properties from the geolocation
@@ -124,4 +124,4 @@ license: >
 
 ## 안 드 로이드 단점
 
-**altitudeAccuracy**: 반환 안 드 로이드 <a href="../../device/device.html">장치</a>에 의해 지원 되지 않습니다`null`.
+**altitudeAccuracy**: 반환 안 드 로이드 장치에 의해 지원 되지 않습니다`null`.

@@ -24,24 +24,24 @@ license: >
 
 ## オブジェクト
 
-*   <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>
+*   GlobalizationError
 
 ## メソッド
 
-*   <a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a>
-*   <a href="globalization.getLocaleName.html">globalization.getLocaleName</a>
-*   <a href="globalization.dateToString.html">globalization.dateToString</a>
-*   <a href="globalization.stringToDate.html">globalization.stringToDate</a>
-*   <a href="globalization.getDatePattern.html">globalization.getDatePattern</a>
-*   <a href="globalization.getDateNames.html">globalization.getDateNames</a>
-*   <a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a>
-*   <a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a>
-*   <a href="globalization.numberToString.html">globalization.numberToString</a>
-*   <a href="globalization.stringToNumber.html">globalization.stringToNumber</a>
-*   <a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a>
-*   <a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a>
+*   globalization.getPreferredLanguage
+*   globalization.getLocaleName
+*   globalization.dateToString
+*   globalization.stringToDate
+*   globalization.getDatePattern
+*   globalization.getDateNames
+*   globalization.isDayLightSavingsTime
+*   globalization.getFirstDayOfWeek
+*   globalization.numberToString
+*   globalization.stringToNumber
+*   globalization.getNumberPattern
+*   globalization.getCurrencyPattern
 
-## <a href="../../plugin_ref/spec.html">変数</a>のスコープ
+## 変数のスコープ
 
 `globalization`オブジェクトの子である、 `navigator` オブジェクト、およびしたがってはグローバル スコープを持ちます。
 
@@ -51,7 +51,7 @@ license: >
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.globalization
         $ cordova plugin ls
@@ -68,4 +68,4 @@ license: >
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

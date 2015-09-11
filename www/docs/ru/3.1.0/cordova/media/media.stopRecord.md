@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# <a href="media.stop.html">media.stop</a>Record
+# media.stopRecord
 
 Прекращает запись аудио файлов.
 
-    <a href="media.stop.html">media.stop</a>Record();
+    media.stopRecord();
     
 
 ## Описание
 
-`<a href="media.stop.html">media.stop</a>Record`Метод выполняется синхронно, остановки записи аудио файла.
+`media.stopRecord`Метод выполняется синхронно, остановки записи аудио файла.
 
 ## Поддерживаемые платформы
 
@@ -70,14 +70,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // Record audio
         //

@@ -20,7 +20,7 @@ license: >
 
 # device.uuid
 
-獲取<a href="device.html">設備</a>的通用唯一識別碼 ([UUID][1]).
+獲取設備的通用唯一識別碼 ([UUID][1]).
 
  [1]: http://en.wikipedia.org/wiki/Universally_Unique_Identifier
 
@@ -29,7 +29,7 @@ license: >
 
 ## 說明
 
-UUID 如何生成的詳細資訊由<a href="device.html">設備</a>製造商和特定于<a href="device.html">設備</a>的平臺或模型。
+UUID 如何生成的詳細資訊由設備製造商和特定于設備的平臺或模型。
 
 ## 支援的平臺
 
@@ -42,9 +42,9 @@ UUID 如何生成的詳細資訊由<a href="device.html">設備</a>製造商和�
 
 ## 快速的示例
 
-    / / Android： 一個隨機的 64 位整數 （作為字串返回，再次!) / / 上<a href="device.html">設備</a>的第一次啟動生成的整數 / / / / 黑莓手機： 返回<a href="device.html">設備</a>的 PIN 號碼 / / 這是九個數字的唯一整數 （作為字串，雖然!) / / / / iPhone： （從 UIDevice 類文<a href="../file/fileobj/fileobj.html">檔</a>解釋） / / 返回一個字串的雜湊值創建的多個硬體標識。
-    / / 它保證是唯一的每個<a href="device.html">設備</a>並不能綁 / / 到使用者帳戶。
-    / / Windows Phone 7： 返回的雜湊代碼的<a href="device.html">設備</a> + 當前使用者，/ / 如果未定義使用者，則一個 guid 生成的並且將會保留直到卸載該應用程式 / / Tizen： 返回<a href="device.html">設備</a> IMEI （國際行動裝置身份或 IMEI 是一個數位 / / 獨有的每一個 UMTS 和 GSM 行動電話。
+    / / Android： 一個隨機的 64 位整數 （作為字串返回，再次!) / / 上設備的第一次啟動生成的整數 / / / / 黑莓手機： 返回設備的 PIN 號碼 / / 這是九個數字的唯一整數 （作為字串，雖然!) / / / / iPhone： （從 UIDevice 類文檔解釋） / / 返回一個字串的雜湊值創建的多個硬體標識。
+    / / 它保證是唯一的每個設備並不能綁 / / 到使用者帳戶。
+    / / Windows Phone 7： 返回的雜湊代碼的設備 + 當前使用者，/ / 如果未定義使用者，則一個 guid 生成的並且將會保留直到卸載該應用程式 / / Tizen： 返回設備 IMEI （國際行動裝置身份或 IMEI 是一個數位 / / 獨有的每一個 UMTS 和 GSM 行動電話。
     var deviceID = device.uuid;
     
 
@@ -53,24 +53,24 @@ UUID 如何生成的詳細資訊由<a href="device.html">設備</a>製造商和�
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Device Properties Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
-                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
-                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
                                 'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
+                                'Device Version: '  + device.version  + '<br />';
         }
     
         </script>
@@ -83,8 +83,8 @@ UUID 如何生成的詳細資訊由<a href="device.html">設備</a>製造商和�
 
 ## iOS 怪癖
 
-`uuid`在 iOS 上不是獨有的一種<a href="device.html">設備</a>，但對於每個應用程式，為每個安裝各不相同。 如果您刪除並重新安裝應用程式，它會更改和可能還當你<a href="../../guide/platforms/ios/upgrading.html">升級 iOS</a>，或甚至升級您的應用程式每個版本 (明顯在 iOS 5.1 中)。 `uuid`不是一個可靠的值。
+`uuid`在 iOS 上不是獨有的一種設備，但對於每個應用程式，為每個安裝各不相同。 如果您刪除並重新安裝應用程式，它會更改和可能還當你升級 iOS，或甚至升級您的應用程式每個版本 (明顯在 iOS 5.1 中)。 `uuid`不是一個可靠的值。
 
 ## Windows Phone 7 和 8 怪癖
 
-`uuid`為 Windows Phone 7 需要許可權 `ID_CAP_IDENTITY_DEVICE` 。 Microsoft 可能會很快就棄用此屬性。 如果能力不是可用的應用程式將生成一個持久性的 guid 並保持應用程式的安裝在<a href="device.html">設備</a>上的持續時間。
+`uuid`為 Windows Phone 7 需要許可權 `ID_CAP_IDENTITY_DEVICE` 。 Microsoft 可能會很快就棄用此屬性。 如果能力不是可用的應用程式將生成一個持久性的 guid 並保持應用程式的安裝在設備上的持續時間。

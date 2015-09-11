@@ -24,7 +24,7 @@ license: >
 
 ## Eigenschaften
 
-*   **Limit**: die maximale Anzahl von audio-Clips kann Benutzer des <a href="../../device/device.html">Gerät</a>s in einem einzigen Capture-Vorgang aufzeichnen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
+*   **Limit**: die maximale Anzahl von audio-Clips kann Benutzer des Geräts in einem einzigen Capture-Vorgang aufzeichnen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
 
 *   **Dauer**: die maximale Dauer eines audio-sound-Clips, in Sekunden.
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
     
 
 ## Android Macken

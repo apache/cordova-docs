@@ -27,7 +27,7 @@ Das zugrunde liegende Betriebssystem audio Ressourcen frei.
 
 ## Beschreibung
 
-Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssystem audio Ressourcen freizugeben. Dies ist besonders wichtig für Android, da gibt es eine begrenzte Anzahl von OpenCore-Instanzen für die <a href="media.html">Medien</a>wiedergabe. Anwendungen rufen die `release` -Funktion für alle `Media` Ressource, die nicht mehr benötigt wird.
+Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssystem audio Ressourcen freizugeben. Dies ist besonders wichtig für Android, da gibt es eine begrenzte Anzahl von OpenCore-Instanzen für die Medienwiedergabe. Anwendungen rufen die `release` -Funktion für alle `Media` Ressource, die nicht mehr benötigt wird.
 
 ## Unterstützte Plattformen
 
@@ -45,7 +45,7 @@ Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssyst
     var my_media = new Media(src, onSuccess, onError);
     
     my_media.play();
-    my_<a href="media.stop.html">media.stop</a>();
+    my_media.stop();
     my_media.release();
     
 
@@ -55,14 +55,14 @@ Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssyst
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
+            <title>Media Example</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -88,17 +88,17 @@ Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssyst
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
+                        my_media.getCurrentPosition(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
+                                setAudioPosition("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -117,7 +117,7 @@ Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssyst
             //
             function stopAudio() {
                 if (my_media) {
-                    my_<a href="media.stop.html">media.stop</a>();
+                    my_media.stop();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -138,7 +138,7 @@ Die `media.release` -Methode führt synchron, das zugrunde liegende Betriebssyst
     
             // Set audio position
             //
-            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
+            function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     

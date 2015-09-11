@@ -35,7 +35,7 @@ battery status ハンドラーは以下の2つのプロパティーを含むオ�
 - __level:__ バッテリーのパーセンテージ (0-100) _(Number)_
 - __isPlugged:__ デバイスが充電器に接続されているかどうかを表します _(Boolean)_
 
-通常は、 Cordova の '<a href="events.deviceready.html">deviceready</a>' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -52,7 +52,7 @@ Windows Phone 7 に関する注意点
 Windows Phone 7 はバッテリー残量を取得するネイティブの API を提供していないため、
 level プロパティーは利用できません。 `isPlugged` パラメーターはサポートされています。
 
-<a href="../storage/storage.opendatabase.html">使用例</a>
+使用例
 -------------
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
@@ -62,30 +62,30 @@ level プロパティーは利用できません。 `isPlugged` パラメータ�
         console.log("残量: " + info.level + " 充電器に接続: " + info.isPlugged);
     }
 
-詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova <a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">使用例</a></title>
+        <title>Cordova Device Ready 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Cordova のロード完了とともに on<a href="../device/device.html">Device</a>Ready を呼び出します。
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
         // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.0.0.js はまだ完了していません。
         // Cordova のロード完了とともに
-        // `<a href="events.deviceready.html">deviceready</a>` イベントが呼び出されます。
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
         // Cordova 準備完了
         //
-        function on<a href="../device/device.html">Device</a>Ready() {
+        function onDeviceReady() {
             window.addEventListener("batterystatus", onBatteryStatus, false);
         }
 

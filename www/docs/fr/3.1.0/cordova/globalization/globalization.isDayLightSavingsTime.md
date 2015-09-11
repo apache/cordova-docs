@@ -31,7 +31,7 @@ Indique si l'heure avancée est en vigueur à la `successCallback` avec un `prop
 
 Le paramètre entrant `date` doit être de type`Date`.
 
-S'il y a une erreur de lecture de la date, puis le `errorCallback` s'exécute. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+S'il y a une erreur de lecture de la date, puis le `errorCallback` s'exécute. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Plates-formes prises en charge
 
@@ -56,7 +56,7 @@ Au cours de l'été, et si le navigateur est défini sur un fuseau horaire la DS
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>isDayLightSavingsTime Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

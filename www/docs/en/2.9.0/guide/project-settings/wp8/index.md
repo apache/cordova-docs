@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for Windows Phone 8
+Project Settings for Windows Phone 8
 ===================================
 
 Windows Phone 8 does not currently have any additional configurable features.

@@ -23,7 +23,7 @@ license: >
 > Запустите приложение аудио рекордер и возвращают сведения о файлах захватили аудио клип.
 
     navigator.device.capture.captureAudio(
-        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError,  [<a href="captureAudioOptions.html">CaptureAudioOptions</a> options]
+        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Начинает асинхронную операцию, чтобы захватить аудио записи с помощью устройства по умолчанию аудио записи приложения. Операция позволяет пользователю устройства захвата нескольких записей за один сеанс.
 
-Операции захвата заканчивается, когда либо пользователь выходит из аудио записи приложения, или максимальное количество записей, указанный `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` достигается. Если не `limit` значение параметра указывается, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь записывает один аудио клип.
+Операции захвата заканчивается, когда либо пользователь выходит из аудио записи приложения, или максимальное количество записей, указанный `CaptureAudioOptions.limit` достигается. Если не `limit` значение параметра указывается, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь записывает один аудио клип.
 
-По завершении операции захвата `CaptureCallback` выполняет с массивом `<a href="MediaFile.html">MediaFile</a>` объекты, описывающие каждый захвачен файл аудио клип. Если пользователь завершает операцию перед захваченных аудио клип `<a href="CaptureError.html">CaptureError</a>Callback` выполняет с `<a href="CaptureError.html">CaptureError</a>` объект, показывая `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` код ошибки.
+По завершении операции захвата `CaptureCallback` выполняет с массивом `MediaFile` объекты, описывающие каждый захвачен файл аудио клип. Если пользователь завершает операцию перед захваченных аудио клип `CaptureErrorCallback` выполняет с `CaptureError` объект, показывая `CaptureError.CAPTURE_NO_MEDIA_FILES` код ошибки.
 
 ## Поддерживаемые платформы
 
@@ -100,7 +100,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
+            var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     
@@ -126,7 +126,7 @@ license: >
 
 ## Ежевика WebWorks совместимости
 
-*   Cordova для BlackBerry WebWorks пытается запустить приложение **Диктофон записок** , предоставляемых RIM, чтобы захватить аудио записей. Приложение получает `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` код ошибки, если приложение не установлено на устройстве.
+*   Cordova для BlackBerry WebWorks пытается запустить приложение **Диктофон записок** , предоставляемых RIM, чтобы захватить аудио записей. Приложение получает `CaptureError.CAPTURE_NOT_SUPPORTED` код ошибки, если приложение не установлено на устройстве.
 
 ## iOS причуды
 

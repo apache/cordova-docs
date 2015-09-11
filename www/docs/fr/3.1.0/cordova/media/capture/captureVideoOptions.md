@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# <a href="capture.html">Capture</a>VideoOptions
+# CaptureVideoOptions
 
 > Encapsule les options de configuration de capture vidéo.
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
     
-    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
+    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
     
 
 ## BlackBerry WebWorks Quirks

@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>UploadOptions
+FileUploadOptions
 ========
 
-`<a href="../fileobj/fileobj.html">File</a>UploadOptions` オブジェクトは upload メソッドを実行する際に <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 プロパティー
 ----------
@@ -37,7 +37,7 @@ license: >
 概要
 -----------
 
-`<a href="../fileobj/fileobj.html">File</a>UploadOptions` オブジェクトは upload メソッドを実行する際に <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 WP7 に関する注意点
 ---------

@@ -104,9 +104,9 @@ Cordova JavaScript とネイティブ環境との間のコミュニケーショ�
 以下のガイドでは引き続き、このガイドで作り始めた Echo プラグインを
 作成していきます。
 
-- <a href="android/index.html">Developing a Plugin on Android</a>
-- <a href="bada/index.html">Developing a Plugin on Bada</a>
-- <a href="blackberry/index.html">Developing a Plugin on BlackBerry</a>
-- <a href="ios/index.html">Developing a Plugin on iOS</a>
-- <a href="webos/index.html">Developing a Plugin on webOS</a>
-- <a href="windows-phone/index.html">Developing a Plugin on Windows Phone</a>
+- Developing a Plugin on Android
+- Developing a Plugin on Bada
+- Developing a Plugin on BlackBerry
+- Developing a Plugin on iOS
+- Developing a Plugin on webOS
+- Developing a Plugin on Windows Phone

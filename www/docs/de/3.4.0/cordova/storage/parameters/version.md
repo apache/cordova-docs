@@ -20,4 +20,4 @@ license: >
 
 # database_version
 
-Die Version der <a href="../database/database.html">Datenbank</a>.
+Die Version der Datenbank.

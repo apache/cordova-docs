@@ -24,7 +24,7 @@ license: >
 
  [1]: http://cordova.apache.org
 
-プラグインできるようにする低レベルの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>については、管理プラグインを使用して Plugman を参照してください。<a href="../../overview/index.html">概要</a>については、アプリケーション ・ プラグインを参照してください。
+プラグインできるようにする低レベルのコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。概要については、アプリケーション ・ プラグインを参照してください。
 
 ## Windows Phone
 
@@ -56,7 +56,7 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
+    >PackageName      : The namespace for the project (default is Cordova.Example)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:

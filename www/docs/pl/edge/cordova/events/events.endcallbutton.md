@@ -29,9 +29,9 @@ Wydarzenie to odpala kiedy użytkownik naciśnie przycisk rozmowy end.
 
 Zdarzenie zastępuje domyślne zachowanie wywołanie koniec.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `<a href="events.deviceready.html">deviceready</a>` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
 
-## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
+## Obsługiwane platformy
 
 *   BlackBerry 10
 
@@ -58,7 +58,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

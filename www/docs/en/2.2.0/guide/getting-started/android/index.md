@@ -115,7 +115,7 @@ If your project has a red X indicating there is a problem follow these additiona
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
 
-5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
+5B. Deploy to Device
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)

@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# 안 드 로이드 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a>
+# 안 드 로이드 플랫폼 가이드
 
-이 <a href="../../../index.html">가이드</a>에는 코르도바 애플 리 케이 션 안 드 로이드 <a href="../../../cordova/device/device.html">장치</a>에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 가이드에는 코르도바 애플 리 케이 션 안 드 로이드 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   <a href="config.html">안 드 로이드 구성</a>
-*   <a href="webview.html">안 드 로이드 WebViews</a>
-*   <a href="plugin.html">안 드 로이드 플러그인</a>
-*   <a href="upgrading.html">안 드 로이드 업그레이드</a>
-*   <a href="tools.html">안 드 로이드 명령줄 도구</a>
+*   안 드 로이드 구성
+*   안 드 로이드 WebViews
+*   안 드 로이드 플러그인
+*   안 드 로이드 업그레이드
+*   안 드 로이드 명령줄 도구
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
 ## 요구 사항 및 지원
 
@@ -46,15 +46,15 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-개발자가 사용 해야 합니다 `cordova` 안 드 로이드 SDK와 함께에서 유틸리티. 설치, 프로젝트 추가 다음 빌드하고 프로젝트를 배포 하는 방법 정보에 대 한 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조.
+개발자가 사용 해야 합니다 `cordova` 안 드 로이드 SDK와 함께에서 유틸리티. 설치, 프로젝트 추가 다음 빌드하고 프로젝트를 배포 하는 방법 정보에 대 한 명령줄 인터페이스를 참조.
 
 ## SDK 설치
 
-[Developer.android.com/sdk][3]에서 안 드 로이드 SDK를 설치 합니다. 그렇지 않으면 다운로드 이동 <a href="../../../cordova/geolocation/Position/position.html">위치</a>는 SDK를 설치를 선택으로 나타날 수도 있습니다 `adt-bundle` 트리 개발 도구를 저장 하는 곳에.
+[Developer.android.com/sdk][3]에서 안 드 로이드 SDK를 설치 합니다. 그렇지 않으면 다운로드 이동 위치는 SDK를 설치를 선택으로 나타날 수도 있습니다 `adt-bundle` 트리 개발 도구를 저장 하는 곳에.
 
  [3]: http://developer.android.com/sdk/
 
-코르 도우 바 작업 명령줄 도구, SDK의 포함 해야 `tools` 와 `platform-tools` 디렉터리 경로 환경에서. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥에 있는 `~/.bash_profile` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 SDK 설치에 따라 다음과 같은 줄을 추가:
+코르 도우 바 작업 명령줄 도구, SDK의 포함 해야 `tools` 와 `platform-tools` 디렉터리 경로 환경에서. 만들거나 수정 하려면 텍스트 편집기를 사용할 수 맥에 있는 `~/.bash_profile` 파일을 SDK 설치에 따라 다음과 같은 줄을 추가:
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
     
@@ -70,9 +70,9 @@ NOTE, doc said:
 
 *   왼쪽 열에서 **고급 시스템 설정** 을 클릭 합니다.
 
-*   결과 대화 상자에서 눌러 **환경 <a href="../../../plugin_ref/spec.html">변수</a>**.
+*   결과 대화 상자에서 눌러 **환경 변수**.
 
-*   **경로** <a href="../../../plugin_ref/spec.html">변수</a>를 선택 하 고 **편집** 을 누릅니다.
+*   **경로** 변수를 선택 하 고 **편집** 을 누릅니다.
 
 *   설치한 SDK를 예를 기반으로 경로에 다음을 추가:
     
@@ -88,7 +88,7 @@ NOTE, doc said:
 
 ## Sdk에서는 프로젝트를 열려면
 
-사용 된 `cordova` 에 코르도바는 <a href="../../cli/index.html">명령줄 인터페이스</a>를 설명 하는 대로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에:
+사용 된 `cordova` 에 코르도바는 명령줄 인터페이스를 설명 하는 대로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에:
 
         $ 코르도바 만들기 안녕하세요 com.example.hello "HelloWorld" $ cd 안녕하세요 $ 코르도바 플랫폼 안 드 로이드 $ 코르도바 빌드 추가
     
@@ -121,7 +121,7 @@ NOTE, doc said:
 
 ## 에뮬레이터에 배포
 
-사용할 수 있는 `cordova` 유틸리티는 에뮬레이터에서 응용 프로그램 실행을 SDK 내에서 실행할 수 있습니다. 어느 쪽이 든, SDK 먼저 하나 이상의 <a href="../../../cordova/device/device.html">장치</a>를 표시 하도록 구성 되어야 합니다. 이렇게 하려면, 안 드 로이드 SDK 관리자, 이클립스에서 별도로 실행 되는 Java 응용 프로그램을 사용 합니다. 그것을 여는 방법은 두 가지:
+사용할 수 있는 `cordova` 유틸리티는 에뮬레이터에서 응용 프로그램 실행을 SDK 내에서 실행할 수 있습니다. 어느 쪽이 든, SDK 먼저 하나 이상의 장치를 표시 하도록 구성 되어야 합니다. 이렇게 하려면, 안 드 로이드 SDK 관리자, 이클립스에서 별도로 실행 되는 Java 응용 프로그램을 사용 합니다. 그것을 여는 방법은 두 가지:
 
 *   실행 `android` 커맨드 라인에.
 
@@ -137,7 +137,7 @@ NOTE, doc said:
 
  [6]: img/guide/platforms/android/asdk_window.png
 
-**도구 → 관리 AVDs** (안 드 로이드 가상 <a href="../../../cordova/device/device.html">장치</a>)를 선택한 다음 **<a href="../../../cordova/device/device.html">장치</a> 정의** 결과 대화 상자에서 모든 항목 선택:
+**도구 → 관리 AVDs** (안 드 로이드 가상 장치)를 선택한 다음 **장치 정의** 결과 대화 상자에서 모든 항목 선택:
 
 ![][7]
 
@@ -149,13 +149,13 @@ NOTE, doc said:
 
  [8]: img/guide/platforms/android/asdk_newAVD.png
 
-AVD 다음 **안 드 로이드 가상 <a href="../../../cordova/device/device.html">장치</a>** 목록에 나타납니다.
+AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][9]
 
  [9]: img/guide/platforms/android/asdk_avds.png
 
-별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 **시작**을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 <a href="../../../cordova/device/device.html">장치</a> 것 만큼 출시:
+별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 **시작**을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 장치 것 만큼 출시:
 
 ![][10]
 
@@ -178,13 +178,13 @@ AVD 다음 **안 드 로이드 가상 <a href="../../../cordova/device/device.ht
 
 *   에뮬레이터를 시작할 때 HAX 모듈을 로드 하는 데 실패를 나타내는 오류 메시지가 없는 것을 확인 합니다.
 
-## <a href="../../../cordova/device/device.html">장치</a>에 배포
+## 장치에 배포
 
-<a href="../../../cordova/device/device.html">장치</a>에 직접 응용 프로그램을, [안 드 로이드 개발자 사이트][11]에 설명 된 대로 <a href="../../../cordova/device/device.html">장치</a>에서 USB 디버깅이 활성화 된 ㄴ 다는 것을 확인 하 고 미니 USB 케이블을 사용 하 여 시스템에 <a href="../../../cordova/connection/connection.html">연결</a>.
+장치에 직접 응용 프로그램을, [안 드 로이드 개발자 사이트][11]에 설명 된 대로 장치에서 USB 디버깅이 활성화 된 ㄴ 다는 것을 확인 하 고 미니 USB 케이블을 사용 하 여 시스템에 연결.
 
  [11]: http://developer.android.com/tools/device.html
 
-명령줄에서 <a href="../../../cordova/device/device.html">장치</a>에 app를 밀어 수 있습니다.
+명령줄에서 장치에 app를 밀어 수 있습니다.
 
         안 드 로이드 실행 $ 코르도바
     

@@ -20,16 +20,16 @@ license: >
 
 # 暫停
 
-當一個應用程式放入後臺，將觸發該<a href="events.html">事件</a>。
+當一個應用程式放入後臺，將觸發該事件。
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
+    document.addEventListener("pause", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-`pause`當本機平臺放入背景，應用程式通常在使用者切換到不同的應用程式時激發的<a href="events.html">事件</a>。
+`pause`當本機平臺放入背景，應用程式通常在使用者切換到不同的應用程式時激發的事件。
 
-應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
 ## 支援的平臺
 
@@ -41,7 +41,7 @@ license: >
 
 ## 快速的示例
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
+    document.addEventListener("pause", onPause, false);
     
     function onPause() {
         // Handle the pause event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Pause Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
+            document.addEventListener("pause", onPause, false);
         }
     
         // Handle the pause event
@@ -86,6 +86,6 @@ license: >
 
 在 `pause` 處理常式中，任何調用到科爾多瓦 API 或穿過目標 C 的本機外掛程式不工作，以及任何互動式調用，如警報或 `console.log()` 。 當應用程式恢復後，在下一次運行迴圈上他們，只處理。
 
-特定于 iOS `resign` <a href="events.html">事件</a>是可用作為替代 `pause` ，並檢測時的使用者啟用**鎖定**按鈕鎖定<a href="../device/device.html">設備</a>與應用程式在前臺運行。 如果為多工啟用的應用程式 （和<a href="../device/device.html">設備</a>），則這配對與其後 `pause` <a href="events.html">事件</a>，但只在 iOS 5 下的。 實際上，所有鎖定應用程式已啟用多工的 iOS 5 中被推到背景中。 對於應用程式繼續運行在 iOS 5 下鎖定時，禁用應用程式的多工處理通過將[UIApplicationExitsOnSuspend][1]設置為 `YES` 。 若要運行在 iOS 4 上鎖定狀態時，此設置並不重要。
+特定于 iOS `resign` 事件是可用作為替代 `pause` ，並檢測時的使用者啟用**鎖定**按鈕鎖定設備與應用程式在前臺運行。 如果為多工啟用的應用程式 （和設備），則這配對與其後 `pause` 事件，但只在 iOS 5 下的。 實際上，所有鎖定應用程式已啟用多工的 iOS 5 中被推到背景中。 對於應用程式繼續運行在 iOS 5 下鎖定時，禁用應用程式的多工處理通過將[UIApplicationExitsOnSuspend][1]設置為 `YES` 。 若要運行在 iOS 4 上鎖定狀態時，此設置並不重要。
 
  [1]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html

@@ -20,7 +20,7 @@ license: >
 
 # contactFindOptions
 
-Parámetro opcional de la `<a href="../contacts.find.html">contacts.find</a>` método, utilizado para filtrar los contactos devueltos desde la base de datos de contactos.
+Parámetro opcional de la `contacts.find` método, utilizado para filtrar los contactos devueltos desde la base de datos de contactos.
 
     {filtro: "" múltiple: cierto,};
     

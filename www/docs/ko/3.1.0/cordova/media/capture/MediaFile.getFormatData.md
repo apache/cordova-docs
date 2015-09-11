@@ -20,14 +20,14 @@ license: >
 
 # MediaFile.getFormatData
 
-> 검색은 <a href="../media.html">미디어</a> <a href="capture.html">캡처</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 정보를 서식을 지정 합니다.
+> 검색은 미디어 캡처 파일에 대 한 정보를 서식을 지정 합니다.
 
-    mediaFile.getFormatData (<a href="MediaFileData.html">MediaFileData</a>SuccessCB successCallback, [<a href="MediaFileData.html">MediaFileData</a>ErrorCB errorCallback]);
+    mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB errorCallback]);
     
 
 ## 설명
 
-이 함수는 비동기적으로 <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 형식 정보를 검색 하려고 합니다. 경우, 호출 하는 `<a href="MediaFileData.html">MediaFileData</a>SuccessCB` 와 콜백을 `<a href="MediaFileData.html">MediaFileData</a>` 개체. 이 함수 호출 하는 시도가 실패 하는 경우는 `<a href="MediaFileData.html">MediaFileData</a>ErrorCB` 콜백.
+이 함수는 비동기적으로 미디어 파일에 대 한 형식 정보를 검색 하려고 합니다. 경우, 호출 하는 `MediaFileDataSuccessCB` 와 콜백을 `MediaFileData` 개체. 이 함수 호출 하는 시도가 실패 하는 경우는 `MediaFileDataErrorCB` 콜백.
 
 ## 지원 되는 플랫폼
 
@@ -39,12 +39,12 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-그래서 모든 <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 정보에 대 한 API를 제공 하지 않습니다 `<a href="MediaFileData.html">MediaFileData</a>` 개체를 기본 값으로 반환 합니다.
+그래서 모든 미디어 파일에 대 한 정보에 대 한 API를 제공 하지 않습니다 `MediaFileData` 개체를 기본 값으로 반환 합니다.
 
 ## 안 드 로이드 단점
 
-<a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a> 형식 정보에 액세스할 수 API는 제한, 그래서 모든 `<a href="MediaFileData.html">MediaFileData</a>` 속성이 지원 됩니다.
+미디어 파일 형식 정보에 액세스할 수 API는 제한, 그래서 모든 `MediaFileData` 속성이 지원 됩니다.
 
 ## iOS 단점
 
-<a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a> 형식 정보에 액세스할 수 API는 제한, 그래서 모든 `<a href="MediaFileData.html">MediaFileData</a>` 속성이 지원 됩니다.
+미디어 파일 형식 정보에 액세스할 수 API는 제한, 그래서 모든 `MediaFileData` 속성이 지원 됩니다.

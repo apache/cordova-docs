@@ -24,7 +24,7 @@ capture.captureImage
 > Start the camera application and return information about captured image file(s).
 
     navigator.device.capture.captureImage( 
-	    <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> captureSuccess, <a href="capture.html">Capture</a>ErrorCB captureError, [<a href="capture.html">Capture</a>ImageOptions options]
+	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
 	);
 
 Description
@@ -32,9 +32,9 @@ Description
 
 This method starts an asynchronous operation to capture images using the device camera application.  The operation allows the device user to capture multiple images in a single session.
 
-The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in <a href="capture.html">Capture</a>ImageOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
+The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in CaptureImageOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
 
-When the capture operation is finished, it will invoke the <a href="<a href="capture.html">Capture</a>CB.html"><a href="capture.html">Capture</a>CB</a> callback with an array of <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a> objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the <a href="capture.html">Capture</a>ErrorCB callback will be invoked with a <a href="capture.html">Capture</a>Error object with the <a href="capture.html">Capture</a>Error.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -51,33 +51,33 @@ Windows Phone 7 Quirks
 Invoking the native camera application while your device is connected
 via Zune will not work, and the error callback will be triggered.
 
-Quick <a href="../../storage/storage.opendatabase.html">Example</a>
+Quick Example
 -------------
 
     // capture callback
-    var captureSuccess = function(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+    var captureSuccess = function(mediaFiles) {
         var i, path, len;
-        for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-            path = media<a href="../../file/fileobj/fileobj.html">File</a>s[i].fullPath;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+            path = mediaFiles[i].fullPath;
             // do something interesting with the file
         }
     };
 
     // capture error callback
     var captureError = function(error) {
-        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, '<a href="capture.html">Capture</a> Error');
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
     // start image capture
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
-Full <a href="../../storage/storage.opendatabase.html">Example</a>
+Full Example
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title><a href="capture.html">Capture</a> Image</title>
+        <title>Capture Image</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
@@ -85,10 +85,10 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
 
         // Called when capture operation is finished
         //
-        function captureSuccess(media<a href="../../file/fileobj/fileobj.html">File</a>s) {
+        function captureSuccess(mediaFiles) {
             var i, len;
-            for (i = 0, len = media<a href="../../file/fileobj/fileobj.html">File</a>s.length; i < len; i += 1) {
-                upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>s[i]);
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+                uploadFile(mediaFiles[i]);
             }	    
         }
 
@@ -96,7 +96,7 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
         // 
         function captureError(error) {
 	        var msg = 'An error occurred during capture: ' + error.code;
-            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
+            navigator.notification.alert(msg, null, 'Uh oh!');
         }
 
         // A button will call this function
@@ -108,10 +108,10 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
         }
 
         // Upload files to server
-        function upload<a href="../../file/fileobj/fileobj.html">File</a>(media<a href="../../file/fileobj/fileobj.html">File</a>) {
-            var ft = new <a href="../../file/filetransfer/filetransfer.html"><a href="../../file/fileobj/fileobj.html">File</a>Transfer</a>(),
-                path = media<a href="../../file/fileobj/fileobj.html">File</a>.fullPath,
-                name = media<a href="../../file/fileobj/fileobj.html">File</a>.name;
+        function uploadFile(mediaFile) {
+            var ft = new FileTransfer(),
+                path = mediaFile.fullPath,
+                name = mediaFile.name;
 
             ft.upload(path,
                 "http://my.domain.com/upload.php",
@@ -128,7 +128,7 @@ Full <a href="../../storage/storage.opendatabase.html">Example</a>
         </script>
         </head>
         <body>
-            <button onclick="captureImage();"><a href="capture.html">Capture</a> Image</button> <br>
+            <button onclick="captureImage();">Capture Image</button> <br>
         </body>
     </html>
 
@@ -148,9 +148,9 @@ Bada supports _captureImage_ just like the other platforms. However there is _an
 
 3. Once you get the preview you can
 
-    3.1 <a href="capture.html">Capture</a> an image with
+    3.1 Capture an image with
 
-        var options = { destination<a href="../../file/fileobj/fileobj.html">File</a>name: "images/cam01.jpg", highRes: false};
+        var options = { destinationFilename: "images/cam01.jpg", highRes: false};
         navigator.capture.captureImage(success, fail, options);
     
 3. Hide the camera preview with the following method

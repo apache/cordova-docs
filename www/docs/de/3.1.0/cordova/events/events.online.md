@@ -20,16 +20,16 @@ license: >
 
 # Online
 
-Dieses Ereignis wird ausgelöst, wenn eine Anwendung online geht, und das <a href="../device/device.html">Gerät</a> wird mit dem Internet verbunden.
+Dieses Ereignis wird ausgelöst, wenn eine Anwendung online geht, und das Gerät wird mit dem Internet verbunden.
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
+    document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Das `online` -Ereignis wird ausgelöst, wenn ein zuvor unverbundenen <a href="../device/device.html">Gerät</a> eine Netzwerkverbindung zu einem Anwendung Zugriff auf das Internet empfängt. Es stützt sich auf die gleichen Informationen wie die <a href="../connection/connection.html">Verbindung</a>-API und wird ausgelöst, wenn der Wert des `<a href="../connection/connection.type.html">connection.type</a>` wird`NONE`.
+Das `online` -Ereignis wird ausgelöst, wenn ein zuvor unverbundenen Gerät eine Netzwerkverbindung zu einem Anwendung Zugriff auf das Internet empfängt. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn der Wert des `connection.type` wird`NONE`.
 
-Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -42,7 +42,7 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
 
 ## Kleines Beispiel
 
-    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+    document.addEventListener("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Online Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
-            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
+            document.addEventListener("online", onOnline, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/in
 
 ## iOS Macken
 
-Beim ersten Start die erste `online` Ereignis (falls zutreffend) dauert mindestens eine Sekunde vor dem Feuer `<a href="../connection/connection.type.html">connection.type</a>` ist`UNKNOWN`.
+Beim ersten Start die erste `online` Ereignis (falls zutreffend) dauert mindestens eine Sekunde vor dem Feuer `connection.type` ist`UNKNOWN`.
 
 ## Windows Phone 7 Macken
 
@@ -93,4 +93,4 @@ Bei der Ausführung im Emulator, der `connection.status` ist immer unbekannt, so
 
 ## Windows Phone 8 Macken
 
-Der Emulator meldet den <a href="../connection/connection.html">Verbindung</a>styp als `Cellular` , die ändert sich nicht, so dass Ereignisse werden *nicht* Feuer.
+Der Emulator meldet den Verbindungstyp als `Cellular` , die ändert sich nicht, so dass Ereignisse werden *nicht* Feuer.

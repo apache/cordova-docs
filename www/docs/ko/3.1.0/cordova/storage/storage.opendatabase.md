@@ -22,12 +22,12 @@ license: >
 
 새로운 반환 합니다 `Database` 개체.
 
-    var dbShell = <a href="../inappbrowser/window.open.html">window.open</a>Database(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## 설명
 
-메서드를 사용 하면 새 SQL 라이트 <a href="database/database.html">데이터베이스</a> 만들고 반환는 `Database` 수 있는 데이터의 조작 개체.
+메서드를 사용 하면 새 SQL 라이트 데이터베이스 만들고 반환는 `Database` 수 있는 데이터의 조작 개체.
 
 ## 지원 되는 플랫폼
 
@@ -38,7 +38,7 @@ license: >
 
 ## 빠른 예제
 
-    var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+    var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
     
 
 ## 전체 예제
@@ -53,12 +53,12 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = <a href="../inappbrowser/window.open.html">window.open</a>Database("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
     
         </script>

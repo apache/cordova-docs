@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-<a href="../index.html">Project Settings</a> for BlackBerry 
+Project Settings for BlackBerry 
 ===================================
 

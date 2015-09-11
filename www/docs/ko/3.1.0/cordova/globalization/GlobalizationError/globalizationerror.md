@@ -20,7 +20,7 @@ license: >
 
 # GlobalizationError
 
-<a href="../globalization.html">세계화</a> API에서 오류를 나타내는 개체입니다.
+세계화 API에서 오류를 나타내는 개체입니다.
 
 ## 속성
 
@@ -56,7 +56,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError <a href="../../storage/storage.opendatabase.html">Example</a></title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -72,7 +72,7 @@ license: >
         };
     
         function checkError() {
-          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
+          navigator.globalization.stringToDate(
             'notADate',
             successCallback,
             errorCallback,

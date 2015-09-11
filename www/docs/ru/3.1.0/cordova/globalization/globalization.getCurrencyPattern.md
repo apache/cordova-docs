@@ -43,7 +43,7 @@ license: >
 
 Входящий `currencyCode` параметр должен быть `String` одной из ISO 4217 кодов валют, например «USD».
 
-Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
+Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.FORMATTING\_ERROR`.
 
 ## Поддерживаемые платформы
 
@@ -84,7 +84,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

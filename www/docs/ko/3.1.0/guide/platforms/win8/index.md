@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# Windows 8 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a>
+# Windows 8 플랫폼 가이드
 
-이 <a href="../../../index.html">가이드</a>에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 가이드에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   <a href="upgrading.html">윈도우 8을 업그레이드</a>
-*   <a href="tools.html">윈도우 8 명령줄 도구</a>
+*   윈도우 8을 업그레이드
+*   윈도우 8 명령줄 도구
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
-마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 <a href="../../../index.html">가이드</a> 그 규칙을 따릅니다. 또한,이 <a href="../../../index.html">가이드</a>에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
+마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 가이드 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
 
 ## 1입니다. 요구 사항
 
@@ -58,13 +58,13 @@ license: >
     
     ![][4]
 
-*   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . (게다가 그것은 프로젝트의 다른 플랫폼 이체에서 당신이 사용 하는 가능성이 `index.html` 기본 페이지의 이름으로.) 이 문제를 해결, 솔루션 탐색기의 이름 바꾸기에는 `default.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 및 **시작 페이지** 값을 변경`index.html`.
+*   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . (게다가 그것은 프로젝트의 다른 플랫폼 이체에서 당신이 사용 하는 가능성이 `index.html` 기본 페이지의 이름으로.) 이 문제를 해결, 솔루션 탐색기의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` 파일 및 **시작 페이지** 값을 변경`index.html`.
     
     ![][5]
 
-*   포함 하려면 `cordova.js` 마우스 오른쪽 단추로 프로젝트를 클릭에 `js` **→ 새 항목 추가**선택 하 고 솔루션 탐색기에서 디렉토리. <a href="../../../cordova/geolocation/Position/position.html">위치</a>는 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 `lib\windows-8` 디렉터리 위에 언급 된.
+*   포함 하려면 `cordova.js` 마우스 오른쪽 단추로 프로젝트를 클릭에 `js` **→ 새 항목 추가**선택 하 고 솔루션 탐색기에서 디렉토리. 위치는 `cordova.js` 파일에 `lib\windows-8` 디렉터리 위에 언급 된.
 
-*   편집에 대 한 코드 `index.html` . 에 대 한 참조를 추가할 `cordova.js` . 이렇게 하려면 수동으로, 또는 솔루션 탐색기에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 드래그 하 여.
+*   편집에 대 한 코드 `index.html` . 에 대 한 참조를 추가할 `cordova.js` . 이렇게 하려면 수동으로, 또는 솔루션 탐색기에서 파일을 드래그 하 여.
 
  [4]: img/guide/platforms/win8/wsnewproject.png
  [5]: img/guide/platforms/win8/wschangemanifest.png
@@ -84,9 +84,9 @@ license: >
         <script type="text/javascript">
     
             console.log("Subscribing...");
-            document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
+            document.addEventListener("deviceready", function () {
     
-                navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>("The device is ready!");
+                navigator.notification.alert("The device is ready!");
     
             });
     

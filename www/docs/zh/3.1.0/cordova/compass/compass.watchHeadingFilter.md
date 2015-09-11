@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# <a href="compass.watchHeading.html">compass.watchHeading</a>Filter
+# compass.watchHeadingFilter
 
-不再支援 1.6，見 `<a href="compass.watchHeading.html">compass.watchHeading</a>` 為等效的功能。
+不再支援 1.6，見 `compass.watchHeading` 為等效的功能。

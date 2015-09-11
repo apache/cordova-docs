@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>Error
+CaptureError
 ============
 
 > Encapsulates the error code resulting from a failed media capture operation.
@@ -31,8 +31,8 @@ Properties
 Constants
 ---------
 
-- <a href="capture.html">Capture</a>Error.`CAPTURE_INTERNAL_ERR`: <a href="../../camera/camera.html">Camera</a> or microphone failed to capture image or sound. 
-- <a href="capture.html">Capture</a>Error.`CAPTURE_APPLICATION_BUSY`: <a href="../../camera/camera.html">Camera</a> application or audio capture application is currently serving other capture request.
-- <a href="capture.html">Capture</a>Error.`CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g. limit parameter has value less than one).
-- <a href="capture.html">Capture</a>Error.`CAPTURE_NO_MEDIA_FILES`: User exited camera application or audio capture application before capturing anything.
-- <a href="capture.html">Capture</a>Error.`CAPTURE_NOT_SUPPORTED`: The requested capture operation is not supported.
+- CaptureError.`CAPTURE_INTERNAL_ERR`: Camera or microphone failed to capture image or sound. 
+- CaptureError.`CAPTURE_APPLICATION_BUSY`: Camera application or audio capture application is currently serving other capture request.
+- CaptureError.`CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g. limit parameter has value less than one).
+- CaptureError.`CAPTURE_NO_MEDIA_FILES`: User exited camera application or audio capture application before capturing anything.
+- CaptureError.`CAPTURE_NOT_SUPPORTED`: The requested capture operation is not supported.

@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# <a href="../blackberry/upgrading.html">L'aggiornamento di BlackBerry</a> 10
+# L'aggiornamento di BlackBerry 10
 
-Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
 
 ## L'aggiornamento a 3.2.0 da 3.1.0
 

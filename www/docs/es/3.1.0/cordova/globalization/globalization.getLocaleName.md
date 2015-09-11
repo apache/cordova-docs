@@ -29,7 +29,7 @@ Obtener el identificador de cadena para ajuste de configuración regional actual
 
 Devuelve el identificador de configuración regional para el `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener un `value` propiedad con un `String` valor.
 
-Si hay un error al obtener la configuración regional, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
+Si hay un error al obtener la configuración regional, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es`GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 
@@ -53,7 +53,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, muestra un cuadro 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getLocaleName <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>getLocaleName Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

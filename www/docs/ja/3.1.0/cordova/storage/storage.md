@@ -20,41 +20,41 @@ license: >
 
 # ストレージ
 
-> <a href="../device/device.html">デバイス</a>の記憶域オプションへのアクセスを提供します。
+> デバイスの記憶域オプションへのアクセスを提供します。
 
 この API は 2 つの異なる W3C 仕様に基づくストレージ オプションを提供：
 
 *   [Web ストレージ API 仕様][1]では、単純なキーと値のペアを使用してデータにアクセスすることができます。 LocalStorage このインターフェイスの詳細についてを参照してください。
 
-*   [Web SQL <a href="database/database.html">データベース</a>の仕様][2]では、SQL クエリを通じてより多くのフル機能を備えた<a href="database/database.html">データベース</a> テーブルにアクセスを提供しています。 このインタ フェースの<a href="../../guide/overview/index.html">概要</a>下にすぐに表示されます。
+*   [Web SQL データベースの仕様][2]では、SQL クエリを通じてより多くのフル機能を備えたデータベース テーブルにアクセスを提供しています。 このインタ フェースの概要下にすぐに表示されます。
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
 
-コルドバは既にそれらをサポートしていない<a href="../device/device.html">デバイス</a>の少数派の両方のインターフェイスへのアクセスを提供します。それ以外の場合、組み込みの実装を適用します。
+コルドバは既にそれらをサポートしていないデバイスの少数派の両方のインターフェイスへのアクセスを提供します。それ以外の場合、組み込みの実装を適用します。
 
 ## メソッド
 
-*   <a href="storage.opendatabase.html">openDatabase</a>
+*   openDatabase
 
 ## 引数
 
-*   <a href="parameters/name.html">database_name</a>
-*   <a href="parameters/version.html">database_version</a>
-*   <a href="parameters/display_name.html">database_displayname</a>
-*   <a href="parameters/size.html">database_size</a>
+*   database_name
+*   database_version
+*   database_displayname
+*   database_size
 
 ## オブジェクト
 
-*   <a href="database/database.html">データベース</a>
-*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
-*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+*   データベース
+*   SQLTransaction
+*   SQLResultSet
+*   SQLResultSetRowList
 *   Sqlerror 関数
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、現在ストレージ Api へのアクセスはコルドバに組み込まれてし、プラグインを追加する<a href="../../guide/cli/index.html">コマンド ライン インターフェイス</a>での説明に従って、CLI の使用を必要としません。
+バージョン 3.0 は、現在ストレージ Api へのアクセスはコルドバに組み込まれてし、プラグインを追加するコマンド ライン インターフェイスでの説明に従って、CLI の使用を必要としません。
 
 それ以上の年齢の一連の CLI に先行するコルドバ ツールを使用している場合、次のプラットフォームに固有の構成設定がまだ必要です。
 
@@ -68,4 +68,4 @@ license: >
         < id="blackberry.widgetcache 機能"必要な ="true"バージョン =「1.0.0.0」/>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

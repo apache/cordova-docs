@@ -24,6 +24,6 @@ license: >
 
 Чтобы развернуть WebView, вы должны быть знакомы с каждой родной среды программирования. Ниже приведены инструкции для поддерживаемых платформ.
 
-*   <a href="../../platforms/amazonfireos/webview.html">Amazon Fire OS WebViews</a>
-*   <a href="../../platforms/android/webview.html">Android WebViews</a>
-*   <a href="../../platforms/ios/webview.html">iOS WebViews</a>
+*   Amazon Fire OS WebViews
+*   Android WebViews
+*   iOS WebViews

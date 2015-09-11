@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-<a href="capture.html">Capture</a>Error
+CaptureError
 ============
 
 > 失敗したメディアキャプチャー操作のエラーコードをカプセル化します。
@@ -31,8 +31,8 @@ license: >
 定数
 ---------
 
-- <a href="capture.html">Capture</a>Error.`CAPTURE_INTERNAL_ERR`: カメラまたはマイクが画像または音のキャプチャーに失敗した場合。
-- <a href="capture.html">Capture</a>Error.`CAPTURE_APPLICATION_BUSY`: カメラアプリまたはオーディオ録音アプリが現在他のキャプチャーリクエストを扱っている場合。
-- <a href="capture.html">Capture</a>Error.`CAPTURE_INVALID_ARGUMENT`: API の使用方法が不正であった場合 (例: limit パラメーターの値が1未満である) 。
-- <a href="capture.html">Capture</a>Error.`CAPTURE_NO_MEDIA_FILES`: ユーザーが何もキャプチャーせずにカメラアプリやオーディオ録音アプリを終了した場合。
-- <a href="capture.html">Capture</a>Error.`CAPTURE_NOT_SUPPORTED`: キャプチャー操作のリクエストがサポートされていない場合。
+- CaptureError.`CAPTURE_INTERNAL_ERR`: カメラまたはマイクが画像または音のキャプチャーに失敗した場合。
+- CaptureError.`CAPTURE_APPLICATION_BUSY`: カメラアプリまたはオーディオ録音アプリが現在他のキャプチャーリクエストを扱っている場合。
+- CaptureError.`CAPTURE_INVALID_ARGUMENT`: API の使用方法が不正であった場合 (例: limit パラメーターの値が1未満である) 。
+- CaptureError.`CAPTURE_NO_MEDIA_FILES`: ユーザーが何もキャプチャーせずにカメラアプリやオーディオ録音アプリを終了した場合。
+- CaptureError.`CAPTURE_NOT_SUPPORTED`: キャプチャー操作のリクエストがサポートされていない場合。

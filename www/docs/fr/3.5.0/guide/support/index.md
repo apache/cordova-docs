@@ -747,7 +747,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Stockage</a></a>
+          <a href="cordova_storage_storage.md.html">Stockage</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -769,15 +769,15 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
+          localStorage & indexedDB
         </td>
         
         <td data-col="tizen"       class="y">

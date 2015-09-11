@@ -23,10 +23,10 @@ license: >
 
 > アプリケーションを最新の Apache Cordova にアップグレードする方法を解説します。
 
-- <a href="android/index.html">Upgrading Cordova Android</a>
-- <a href="bada/index.html">Upgrading Cordova Bada</a>
-- <a href="blackberry/index.html">Upgrading Cordova BlackBerry</a>
-- <a href="ios/index.html">Upgrading Cordova iOS</a>
-- <a href="symbian/index.html">Upgrading Cordova Symbian</a>
-- <a href="webos/index.html">Upgrading Cordova webOS</a>
-- <a href="windows-phone/index.html">Upgrading Cordova Windows Phone</a>
+- Upgrading Cordova Android
+- Upgrading Cordova Bada
+- Upgrading Cordova BlackBerry
+- Upgrading Cordova iOS
+- Upgrading Cordova Symbian
+- Upgrading Cordova webOS
+- Upgrading Cordova Windows Phone

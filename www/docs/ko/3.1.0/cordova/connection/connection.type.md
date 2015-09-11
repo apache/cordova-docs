@@ -20,11 +20,11 @@ license: >
 
 # connection.type
 
-현재 활성 네트워크 <a href="connection.html">연결</a>을 확인합니다.
+현재 활성 네트워크 연결을 확인합니다.
 
 ## 설명
 
-이 디바이스의 네트워크 <a href="connection.html">연결</a> 상태를 확인 하는 빠른 방법을 제공 합니다 및 <a href="connection.html">연결</a>의 종류.
+이 디바이스의 네트워크 연결 상태를 확인 하는 빠른 방법을 제공 합니다 및 연결의 종류.
 
 ## 지원 되는 플랫폼
 
@@ -61,14 +61,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.connection.type <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>navigator.connection.type Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -102,22 +102,22 @@ license: >
 
 ## API 변경
 
-코르 도우 바 2.3.0까지 `Connection` 개체를 통해 액세스 했습니다 `navigator.network.connection` , 후에 변경 된 `navigator.connection` W3C 사양에 맞게. 그것은 그것의 원래 <a href="../geolocation/Position/position.html">위치</a>에 계속 사용할 수 하지만 사용 되지 않습니다 및 결국 제거 될 것 이다.
+코르 도우 바 2.3.0까지 `Connection` 개체를 통해 액세스 했습니다 `navigator.network.connection` , 후에 변경 된 `navigator.connection` W3C 사양에 맞게. 그것은 그것의 원래 위치에 계속 사용할 수 하지만 사용 되지 않습니다 및 결국 제거 될 것 이다.
 
 ## iOS 단점
 
-*   iOS는 셀룰러 네트워크 <a href="connection.html">연결</a>의 종류를 감지할 수 없습니다. 
+*   iOS는 셀룰러 네트워크 연결의 종류를 감지할 수 없습니다. 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone 단점
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone 셀룰러 네트워크 <a href="connection.html">연결</a> 유형을 검색할 수 없습니다.
+*   Windows Phone 셀룰러 네트워크 연결 유형을 검색할 수 없습니다.
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Tizen 특수
 
-*   Tizen은 와이파이 또는 휴대 전화 <a href="connection.html">연결</a>에만 검색할 수 있습니다. 
+*   Tizen은 와이파이 또는 휴대 전화 연결에만 검색할 수 있습니다. 
     *   `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.

@@ -76,16 +76,16 @@ Download the latest copy of [Cordova](http://phonegap.com/download) and extract 
 - Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
 
 BlackBerry 10 (QNX)
-- `qnx.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9`
+- `qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9`
 
 BlackBerry PlayBook
-- `playbook.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp`
+- `playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp`
 
 BlackBerry Smartphone (OS5-7)
-- `blackberry.bbwp.dir=C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\Research In Motion\\BlackBerry WebWorks Packager`
+- `blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager`
 
 
-6.  <a href="../webos/index.html">Hello World</a>
+6.  Hello World
 --------------
 
 Build the Cordova sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace `target` with either `qnx` `playbook` or `blackberry`. For example...
@@ -125,7 +125,7 @@ Playbook
 Smartphone (Optional)
 - `blackberry.sim.dir` 
 - `blackberry.sim.bin`
-- Note: On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program <a href="../../../cordova/file/fileobj/fileobj.html">File</a>s\\BlackBerry\\Simulator`.  
+- Note: On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.  
 
 While in your project directory, in command prompt/terminal type `ant target load-simulator`. Replace `target` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the simulator virtual image must already be started.  For example...
 
@@ -141,7 +141,7 @@ BlackBerry Smartphone (OS5-7)
 The application will be installed to the home screen of the simulator. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
 
-7B.  Deploy to <a href="../../../cordova/device/device.html">Device</a> (Windows and Mac)
+7B.  Deploy to Device (Windows and Mac)
 --------------------------------------
 
 To deploy your app to a device you must have registered for, and setup BlackBerry Code Signing Keys.  See section 3 for details. Also, to deploy apps on BlackBerry 10 or PlayBook, the device must be set to Development Mode which can be enabled from the Settings > Security menu.

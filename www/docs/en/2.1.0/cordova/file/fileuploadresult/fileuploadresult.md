@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-<a href="../fileobj/fileobj.html">File</a>UploadResult
+FileUploadResult
 ========
 
-A `<a href="../fileobj/fileobj.html">File</a>UploadResult` object is returned via the success callback of the <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> upload method.
+A `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
 
 Properties
 ----------
@@ -33,9 +33,9 @@ Properties
 Description
 -----------
 
-The `<a href="../fileobj/fileobj.html">File</a>UploadResult` object is returned via the success callback of the <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a> upload method.
+The `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
 
 iOS Quirks
 ----------
-- iOS does not include values for responseCode nor bytesSent in the success callback <a href="../fileobj/fileobj.html">File</a>UploadResult object. 
+- iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object. 
 

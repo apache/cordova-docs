@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 8 外掛程式
 
-此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱<a href="../../hybrid/plugins/index.html">外掛程式開發指南</a>外掛程式的結構和其共同的 JavaScript 介面的<a href="../../overview/index.html">概述</a>。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
+此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱外掛程式開發指南外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 
 在 Windows Phone 上的科爾多瓦編寫外掛程式需要科爾多瓦的體系結構的一個基本的瞭解。 科爾多瓦 WP8 組成的 `WebBrowser` ，承載應用程式的 JavaScript 代碼和管理本機 API 呼叫。 您可以擴展 C# `BaseCommand` 類 （ `WPCordovaClassLib.Cordova.Commands.BaseCommand` ），其中附帶了大部分的你需要的功能：
 
@@ -44,7 +44,7 @@ license: >
                 / / 公共返回 void，1 參數是一個字串}}
         
 
-請參閱可用的外掛程式來重寫方法的[BaseCommand.cs][1]類。 例如，該外掛程式可以捕獲 '暫停' 和 '恢復' <a href="../../../cordova/events/events.html">事件</a>。
+請參閱可用的外掛程式來重寫方法的[BaseCommand.cs][1]類。 例如，該外掛程式可以捕獲 '暫停' 和 '恢復' 事件。
 
  [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
@@ -142,7 +142,7 @@ JavaScript 會需要調用 `exec` 像這樣：
 
 ## 外掛程式使用壽命
 
-外掛程式需要長時間運行的請求，如媒體重播、 聽眾，<a href="../../next/index.html">保持</a>內部狀態應執行的背景活動 `onReset` 方法來清理這些活動。 當 CordovaView webbrowser 控制項導航到新的一頁或刷新，重新載入 JavaScript 運行方法。
+外掛程式需要長時間運行的請求，如媒體重播、 聽眾，保持內部狀態應執行的背景活動 `onReset` 方法來清理這些活動。 當 CordovaView webbrowser 控制項導航到新的一頁或刷新，重新載入 JavaScript 運行方法。
 
         // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
         public virtual void OnReset() { }
@@ -150,7 +150,7 @@ JavaScript 會需要調用 `exec` 像這樣：
 
 ## 外掛程式 XML
 
-下面演示如何使用 `plugin.xml` 檔來指定外掛程式的原始程式碼檔在 Windows Phone 平臺上。 請參閱應用程式外掛程式<a href="../../overview/index.html">概述</a>和<a href="../../../plugin_ref/spec.html">外掛程式規範</a>有關可用選項的詳細資訊。
+下面演示如何使用 `plugin.xml` 檔來指定外掛程式的原始程式碼檔在 Windows Phone 平臺上。 請參閱應用程式外掛程式概述和外掛程式規範有關可用選項的詳細資訊。
 
 *   `<source-file>`元素定義了所有外掛程式資源如*.cs*， *.xaml*， *.xaml.cs*，圖像資產和*.dll*檔的。
 

@@ -33,7 +33,7 @@ Un nativo BlackBerry 10 plugin per Cordova contiene codice JavaScript e possa co
 
 ## Creazione parte nativa del vostro plugin
 
-Per creare la parte nativa del vostro plugin, aprire il BlackBerry 10 NDK IDE e selezionare il <a href="../../../cordova/file/fileobj/fileobj.html">File</a> > New > BlackBerry progetto > estensione nativa > BlackBerry WebWorks. Immettere il nome del progetto desiderato / posizione e fare clic su fine.
+Per creare la parte nativa del vostro plugin, aprire il BlackBerry 10 NDK IDE e selezionare il File > New > BlackBerry progetto > estensione nativa > BlackBerry WebWorks. Immettere il nome del progetto desiderato / posizione e fare clic su fine.
 
 Il progetto creato dall'IDE contiene codice di esempio per un plugin di memoria. Si può sostituire o modificare questi file per includere funzionalità personalizzate.
 

@@ -83,6 +83,6 @@ Negli esempi seguenti mostrano come aggiungere plugin come necessario affinché 
 
 *   cordova-plugin-network-information plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.network-information
 
-*   cordova-plugin-<a href="../cordova/splashscreen/splashscreen.show.html">splashscreen</a> plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.<a href="../cordova/splashscreen/splashscreen.show.html">splashscreen</a>
+*   cordova-plugin-splashscreen plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.splashscreen
 
 *   cordova-plugin-vibration plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin org.apache.cordova.vibration

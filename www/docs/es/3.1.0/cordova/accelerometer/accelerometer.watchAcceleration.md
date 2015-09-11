@@ -22,18 +22,18 @@ license: >
 
 A intervalos regulares, tienes la aceleración a lo largo del eje *x*, *y* y *z*.
 
-    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
-                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
-                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
+    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                           accelerometerError,
+                                                           [accelerometerOptions]);
     
 
 ## Descripción
 
 El acelerómetro es un sensor de movimiento que detecta el cambio (delta) en movimiento con respecto a la posición actual. El acelerómetro puede detectar movimiento 3D a lo largo del eje *z*, *x* y *y*.
 
-El método `accelerometer.watchAcceleration` recupera actual del dispositivo `aceleración` en un intervalo regular, ejecutar la función de devolución de llamada de `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` cada vez. Especificar el intervalo en milisegundos mediante el parámetro de `frequency` del objeto `acceleratorOptions`.
+El método `accelerometer.watchAcceleration` recupera actual del dispositivo `aceleración` en un intervalo regular, ejecutar la función de devolución de llamada de `accelerometerSuccess` cada vez. Especificar el intervalo en milisegundos mediante el parámetro de `frequency` del objeto `acceleratorOptions`.
 
-El identificador devuelto reloj referencias intervalo de reloj del acelerómetro y puede utilizarse con `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` para dejar de ver el acelerómetro.
+El identificador devuelto reloj referencias intervalo de reloj del acelerómetro y puede utilizarse con `accelerometer.clearWatch` para dejar de ver el acelerómetro.
 
 ## Plataformas soportadas
 
@@ -67,7 +67,7 @@ El identificador devuelto reloj referencias intervalo de reloj del acelerómetro
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
+        <title>Acceleration Example</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ El identificador devuelto reloj referencias intervalo de reloj del acelerómetro
     
         // Wait for device API libraries to load
         //
-        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ El identificador devuelto reloj referencias intervalo de reloj del acelerómetro
         //
         function stopWatch() {
             if (watchID) {
-                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
+                navigator.accelerometer.clearWatch(watchID);
                 watchID = null;
             }
         }

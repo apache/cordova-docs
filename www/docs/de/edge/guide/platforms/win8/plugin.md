@@ -20,7 +20,7 @@ license: >
 
 # Windows Plugins
 
-Dieser Abschnitt enthält Informationen für das eine Plugin für die Verwendung in einem Windows-<a href="../../../cordova/storage/storage.html">Speicher</a>-app zu implementieren. Finden Sie bevor Sie dies lesen einen Überblick über die Plugin-Struktur und ihre gemeinsame JavaScript-Schnittstelle Anwendung Plugins. In diesem Abschnitt weiterhin das Beispiel- *Echo* -Plugin, das zum einheitlichen Plattform und zurück von Cordova-Webview kommuniziert.
+Dieser Abschnitt enthält Informationen für das eine Plugin für die Verwendung in einem Windows-Speicher-app zu implementieren. Finden Sie bevor Sie dies lesen einen Überblick über die Plugin-Struktur und ihre gemeinsame JavaScript-Schnittstelle Anwendung Plugins. In diesem Abschnitt weiterhin das Beispiel- *Echo* -Plugin, das zum einheitlichen Plattform und zurück von Cordova-Webview kommuniziert.
 
 Es ist wichtig zu beachten, dass Windows Entwicklung direkt in Javascript, das bedeutet unterstützt, die 'native' Teile in nur erforderlich in besonderen Fällen zu entwickeln.
 
