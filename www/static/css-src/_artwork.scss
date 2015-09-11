@@ -1,0 +1,34 @@
+.iconset {
+  padding: 100px 0;
+}
+
+.button {
+    display: block;
+    background: url(/static/img/sprite.png) no-repeat;
+    background-color: #4cc2e4;
+    background-position: 100% -171px;
+    width: 310px;
+    padding: 16px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    -webkit-transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    transition: background 0.1s linear;
+}
+
+.button label {
+    display: block;
+    font-size: 0.5em;
+    height: 16px;
+}
+
+.button:hover {
+    background-color: #4cd6fc;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button a:hover {
+    color: #4cc2e4;
+}
