@@ -234,7 +234,7 @@ img#logo_top {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.cordova_tools_gallery {
+.card_gallery {
 	color:white;
 	.card {
 			padding:8px;
@@ -249,6 +249,16 @@ img#logo_top {
 					height:50px;
 					padding-bottom:10px;
 				}
+                &.tool {
+                    .text {
+                        height: 250px;
+                    }
+                }
+                &.app {
+                    .text {
+                        height: 100px;
+                    }
+                }
 			}
 			.showcase_app_thumb {
 				background-color: #AD6E6E;
@@ -259,6 +269,25 @@ img#logo_top {
                 }
 			}
 		}
+}
+/* make cards smaller on smaller screens */
+@media (max-width: 767px) {
+    .card_gallery {
+        .card {
+            .card_inner {
+                &.tool {
+                    .text {
+                        height: 100px;
+                    }
+                }
+                &.app {
+                    .text {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
 }
 .add_seemore_links {
 	margin: 15px 0;
