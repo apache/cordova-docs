@@ -45,7 +45,9 @@
     <div class="row cordova_tools_gallery">
         {% for app in site.data.showcase-apps %}
         <div class="col-lg-2 col-sm-4 card">
-            <div class="showcase_app_thumb"></div>
+            <div class="showcase_app_thumb">
+                <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
+            </div>
             <div class="card_inner">
                 <p class="card_title">
                     {% if app.url %}
@@ -56,7 +58,7 @@
                         {{ app.name }}
                     {% endif %}
                 </p>
-                <p>{{ app.description | truncatewords:10 }}</p>
+                <p>{{ app.description | truncatewords:20 }}</p>
             </div>
         </div>
         {% endfor %}
