@@ -18,25 +18,25 @@ license: >
     under the License.
 ---
 
-# LocalFileSystem
+# Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 
 Cet objet fournit un moyen d'obtenir la racine de systèmes de fichiers.
 
 ## Méthodes
 
-*   **requestFileSystem** : demande un système de fichiers. *(Function)*
+*   **request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>** : demande un système de fichiers. *(Function)*
 
-*   **resolveLocalFileSystemURI** : récupère un objet `DirectoryEntry` ou `FileEntry` à partir d'un URI local. *(Function)*
+*   **resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI** : récupère un objet `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` ou `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` à partir d'un URI local. *(Function)*
 
 ## Constantes
 
-*   `LocalFileSystem.PERSISTENT` : constante faisant référence à un stockage qui ne devrait pas être supprimé par l'agent utilisateur sans l'autorisation de application ou de l'utilisateur.
+*   `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT` : constante faisant référence à un stockage qui ne devrait pas être supprimé par l'agent utilisateur sans l'autorisation de application ou de l'utilisateur.
 
-*   `LocalFileSystem.TEMPORARY` : constante faisant référence à un stockage sans garantie de persistance.
+*   `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.TEMPORARY` : constante faisant référence à un stockage sans garantie de persistance.
 
 ## Détails
 
-Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'objet global `window`.
+Les méthodes de l'objet `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>` sont définies directement sur l'objet global `window`.
 
 ## Plates-formes supportées
 
@@ -53,7 +53,7 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, onError);
     
 
 ## Exemple court de résolution d'un système de fichiers via un URI local
@@ -62,7 +62,7 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
         console.log(fileEntry.name);
     }
     
-    window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
+    window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onSuccess, onError);
     
 
 ## Exemple complet
@@ -70,23 +70,23 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local <a href="../fileobj/fileobj.html">File</a> System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-            window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success, fail);
+            window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onResolveSuccess, fail);
         }
     
-        function onFileSystemSuccess(fileSystem) {
+        function on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success(fileSystem) {
             console.log(fileSystem.name);
         }
     
@@ -101,23 +101,23 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Local File System</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Local <a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>
     
 
-# requestFileSystem
+# request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 
 > Demande un système de fichier dans lequel stocker les données de l'application.
 
-     window.requestFileSystem(type, size, successCallback, errorCallback)
+     window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(type, size, successCallback, errorCallback)
     
 
 *   **window** : référence à l'objet global window
-*   **type** : type du système de fichiers local, voir les constantes associées à l'objet LocalFileSystem
+*   **type** : type du système de fichiers local, voir les constantes associées à l'objet Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 *   **size** : indique la quantité d'espace stockage, en octets, requise par l'application
-*   **successCallback** : fonction appelée avec un objet FileSystem
+*   **successCallback** : fonction appelée avec un objet <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 *   **errorCallback** : fonction invoquée si une erreur se produit lors de la récupération du système de fichiers
 
 ## Exemple court de demande d'un système de fichiers
@@ -127,4 +127,4 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, onError);

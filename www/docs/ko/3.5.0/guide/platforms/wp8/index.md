@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Windows Phone 플랫폼 가이드 8
+# Windows Phone <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a> 8
 
-이 가이드에서는 Windows Phone 8 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 장치를 타겟팅 하려는 경우 대신 Windows Phone 7 플랫폼 가이드 상세한 Windows Phone 7 개발. 버전 7 인터넷 익스플로러 10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.
+이 <a href="../../../index.html">가이드</a>에서는 Windows Phone 8 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 장치를 타겟팅 하려는 경우 대신 Windows Phone 7 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a> 상세한 Windows Phone 7 개발. 버전 7 인터넷 익스플로러 10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.
 
 두 버전 모두에 적용 되는 자세한 플랫폼 관련 정보에 대 한 다음 참조.
 
-*   Windows Phone 업그레이드
-*   Windows Phone 플러그인
-*   Windows Phone 명령줄 도구
+*   <a href="upgrading.html">Windows Phone 업그레이드</a>
+*   <a href="plugin.html">Windows Phone 플러그인</a>
+*   <a href="tools.html">Windows Phone 명령줄 도구</a>
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
 
 ## 시스템 요구 사항
 

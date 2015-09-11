@@ -443,7 +443,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">이벤트</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">이벤트</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +724,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">스토리지</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">스토리지</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -743,15 +743,15 @@ license: >
         </td>
         
         <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <!--        <td data-col="firefoxos"  class="n"></td> -->

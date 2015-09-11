@@ -40,14 +40,14 @@ media.play
 - Windows Phone 7 (Mango)
 - Tizen
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // オーディオ再生
     //
     function playAudio(url) {
         // URL のオーディオファイルを再生
-        var my_media = new Media(url,
+        var my_media = new <a href="media.html">Media</a>(url,
             // 呼び出し成功
             function() {
                 console.log("playAudio():Audio Success");
@@ -62,25 +62,25 @@ media.play
     }
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>メディアの使用例</title>
+            <title>メディアの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
             <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
             // Cordova 準備完了
             //
-            function onDeviceReady() {
+            function on<a href="../device/device.html">Device</a>Ready() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
 
@@ -93,8 +93,8 @@ media.play
             //
             function playAudio(src) {
                 if (my_media == null) {
-                    // src から Media オブジェクトを作成
-                    my_media = new Media(src, onSuccess, onError);
+                    // src から <a href="media.html">Media</a> オブジェクトを作成
+                    my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
                 } // else 現在のオーディオを再生
                 // オーディオ再生
                 my_media.play();
@@ -103,17 +103,17 @@ media.play
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // my_media の再生位置を取得
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // 呼び出し成功
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // 呼び出し失敗
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -122,9 +122,9 @@ media.play
 
             // オーディオ一時停止
             //
-            function pauseAudio() {
+            function <a href="../events/events.pause.html">pause</a>Audio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_media.<a href="../events/events.pause.html">pause</a>();
                 }
             }
 
@@ -132,7 +132,7 @@ media.play
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -153,7 +153,7 @@ media.play
 
             // 再生位置をセット
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
 
@@ -161,7 +161,7 @@ media.play
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">再生</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">一時停止</a>
+            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">一時停止</a>
             <a href="#" class="btn large" onclick="stopAudio();">停止</a>
             <p id="audio_position"></p>
           </body>
@@ -179,12 +179,12 @@ iOS に関する注意点
 
     このオプションを **play** メソッドに渡すことで、そのメディアファイルを何回再生するかを指定します。例:
 
-        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        myMedia.play({ numberOfLoops: 2 })
+        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        my<a href="media.html">Media</a>.play({ numberOfLoops: 2 })
 
 - __playAudioWhenScreenIsLocked__
 
     このオプションを **play** メソッドに渡すことで、スクリーンがロックされた状態でもオーディオを再生するかどうかを指定します (設定しなかった場合、デフォルトは true です) 。もし true にセットされた場合は、ハードウェアのミュートボタンの設定は無視されます。例:
 
-        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
-        myMedia.play({ playAudioWhenScreenIsLocked : false })
+        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        my<a href="media.html">Media</a>.play({ playAudioWhenScreenIsLocked : false })

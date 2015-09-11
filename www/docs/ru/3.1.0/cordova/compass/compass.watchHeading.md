@@ -22,16 +22,16 @@ license: >
 
 На регулярные промежутки времени получите компаса направление в градусах.
 
-    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
     
 
 ## Описание
 
-Компас является датчик, который определяет направление или заголовок, что устройство является острый. Он измеряет направление в градусах от 0 до 359,99 градусов.
+<a href="compass.html">Компас</a> является датчик, который определяет направление или заголовок, что устройство является острый. Он измеряет направление в градусах от 0 до 359,99 градусов.
 
-`compass.watchHeading`Получает текущий заголовок устройства в регулярном интервале. Каждый раз, когда извлекается заголовок, `headingSuccess` выполняется функция обратного вызова. Задайте интервал в миллисекундах через `frequency` параметр в `compassOptions` объект.
+`compass.watchHeading`Получает текущий заголовок устройства в регулярном интервале. Каждый раз, когда извлекается заголовок, `headingSuccess` выполняется функция обратного вызова. Задайте интервал в миллисекундах через `frequency` параметр в `<a href="parameters/compassOptions.html">compassOptions</a>` объект.
 
-Идентификатор возвращаемой смотреть ссылается на компас смотреть интервал. Часы, идентификатор может быть использован с `compass.clearWatch` чтобы остановить смотреть компас.
+Идентификатор возвращаемой смотреть ссылается на компас смотреть интервал. Часы, идентификатор может быть использован с `<a href="compass.clearWatch.html">compass.clearWatch</a>` чтобы остановить смотреть компас.
 
 ## Поддерживаемые платформы
 
@@ -49,8 +49,8 @@ license: >
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(compassError) {
-        alert('Compass error: ' + compassError.code);
+    function onError(<a href="parameters/compassError.html">compassError</a>) {
+        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ license: >
 
 ## iOS причуды
 
-В iOS `compass.watchHeading` также можете получить заголовок текущего устройства, когда она меняется на указанное число градусов. Каждый раз изменения заголовка на указанное число градусов или больше, `headingSuccess` выполняет функции обратного вызова. Укажите степень изменения через `filter` параметр в `compassOptions` объект. Снимите часы как обычно, передав идентификатор возвращаемый часы, чтобы `compass.clearWatch` . Эта функция заменяет ранее разрозненные, iOS только `watchHeadingFilter` и `clearWatchFilter` функции, которые были удалены в версии 1.6.
+В iOS `compass.watchHeading` также можете получить заголовок текущего устройства, когда она меняется на указанное число градусов. Каждый раз изменения заголовка на указанное число градусов или больше, `headingSuccess` выполняет функции обратного вызова. Укажите степень изменения через `filter` параметр в `<a href="parameters/compassOptions.html">compassOptions</a>` объект. Снимите часы как обычно, передав идентификатор возвращаемый часы, чтобы `<a href="compass.clearWatch.html">compass.clearWatch</a>` . Эта функция заменяет ранее разрозненные, iOS только `watchHeadingFilter` и `clearWatchFilter` функции, которые были удалены в версии 1.6.
 
 Только один `watchHeading` может быть в силе в одно время в iOS. Если `watchHeading` использует фильтр, вызов `getCurrentHeading` или `watchHeading` для указания изменения заголовка используется существующее значение фильтра. Наблюдая изменения заголовка с помощью фильтра является более эффективным, чем с интервалами времени.

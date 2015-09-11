@@ -25,7 +25,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: The ID returned by `compass.watchHeading`.
+- __watchID__: The ID returned by `<a href="compass.watchHeading.html">compass.watchHeading</a>`.
 
 Supported Platforms
 -------------------
@@ -37,22 +37,22 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
 
     // ... later on ...
 
     navigator.compass.clearWatch(watchID);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,11 +62,11 @@ Full Example
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             startWatch();
         }
 
@@ -77,7 +77,7 @@ Full Example
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
 
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
         }
 
         // Stop watching the compass
@@ -98,8 +98,8 @@ Full Example
 
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
 
         </script>

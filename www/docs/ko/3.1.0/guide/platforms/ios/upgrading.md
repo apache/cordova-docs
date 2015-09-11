@@ -20,7 +20,7 @@ license: >
 
 # IOS 업그레이드
 
-이 가이드에는 코르도바의 이전 버전에서 업그레이 드 하려면 iOS 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 명령줄 인터페이스를 참조.
+이 <a href="../../../index.html">가이드</a>에는 코르도바의 이전 버전에서 업그레이 드 하려면 iOS 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조.
 
 **참고:** Xcode 4.6입니다 필요, Xcode 5 좋습니다. 현재, 애플 앱 스토어에 제출, 당신은 사용 해야 합니다 최신 출하 버전의 iOS SDK, iOS 7입니다. iOS 7 SDK는 필요 하지 않습니다 아직, 하지만이 신속 하 게 변경할 수 있습니다.
 
@@ -33,29 +33,29 @@ license: >
 
 CLI 프로젝트 실행.
 
-        1. '코르도바' CLI 버전 업데이트-명령줄 인터페이스 2를 참조 하십시오. '코르 도우 바 플랫폼 업데이트 ios' 실행
+        1. '코르도바' CLI 버전 업데이트-<a href="../../cli/index.html">명령줄 인터페이스</a> 2를 참조 하십시오. '코르 도우 바 플랫폼 업데이트 ios' 실행
     
 
 ### iOS 7 문제
 
-    1입니다. 값을 제거 "너비 = 장치-너비, 높이 = 장치 높이" index.html 파일에 메타 태그 "뷰" 특성에서 https://issues.apache.org/jira/browse/CB-4323 2를 참조 하십시오. IOS 7 지원에 대 한 귀하의 미디어, 미디어 캡처 및 splashscreen 코어 플러그인 업데이트
+    1입니다. 값을 제거 "너비 = <a href="../../../cordova/device/device.html">장치</a>-너비, 높이 = <a href="../../../cordova/device/device.html">장치</a> 높이" index.html <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 메타 태그 "뷰" 특성에서 https://issues.apache.org/jira/browse/CB-4323 2를 참조 하십시오. IOS 7 지원에 대 한 귀하의 <a href="../../../cordova/media/media.html">미디어</a>, <a href="../../../cordova/media/media.html">미디어</a> <a href="../../../cordova/media/capture/capture.html">캡처</a> 및 splashscreen 코어 플러그인 업데이트
     
 
 ### Xcode 5 문제
 
-    1입니다. Xcode 5 (문제 탐색기)에서 2 할 라는 메시지를 표시 하는 경우 프로젝트 설정을 업데이트 합니다. 업데이트를 "컴파일러 c / C + + / 오브 젝 티브-C" "빌드 설정" 탭에서 "빌드 옵션" 섹션을 설정 합니다. "기본 컴파일러 (Apple LLVM 5.0)"를 선택
+    1입니다. Xcode 5 (문제 탐색기)에서 2 할 라는 메시지를 표시 하는 경우 프로젝트 설정을 업데이트 합니다. 업데이트를 "컴<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>러 c / C + + / 오브 젝 티브-C" "빌드 설정" 탭에서 "빌드 옵션" 섹션을 설정 합니다. "기본 컴<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>러 (Apple LLVM 5.0)"를 선택
     
 
 ## 2.9.0에서 CLI (3.0.0) 업그레이드
 
-1.  명령줄 인터페이스에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
+1.  <a href="../../cli/index.html">명령줄 인터페이스</a>에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
 
 2.  당신의 플랫폼 추가는 코르도바 프로젝트, 예를 들면:`cordova
 platform add ios`.
 
 3.  프로젝트의 내용을 복사 `www` 디렉토리에 `www` 에서 방금 만든 코르 도우 바 프로젝트의 루트 디렉토리.
 
-4.  복사 또는 원래 프로젝트에서 어떤 기본 자산을 덮어쓸 ( `Resources` 등), 물론 모든 새 파일을 추가 하는 `.xcodeproj` 프로젝트. IOS 프로젝트 내부 빌드는 `platforms\ios` 디렉터리.
+4.  복사 또는 원래 프로젝트에서 어떤 기본 자산을 덮어쓸 ( `Resources` 등), 물론 모든 새 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 추가 하는 `.xcodeproj` 프로젝트. IOS 프로젝트 내부 빌드는 `platforms\ios` 디렉터리.
 
 5.  복사를 `config.xml` 에 `www` 디렉터리, 모든 플러그인 정의 제거 하 고. 여기 플랫폼 디렉터리 대신 설정을 수정 합니다.
 
@@ -65,7 +65,7 @@ platform add ios`.
 
 ## 업그레이드 2.9.0 3.0.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 3.0.0 소스 예`~/Documents/Cordova-3.0.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 3.0.0 소스 예`~/Documents/Cordova-3.0.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -73,9 +73,9 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 파일 자체에) 파일에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` 파일.
+5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 자체에) <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 7.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
@@ -83,7 +83,7 @@ platform add ios`.
 
 ## 업그레이드 2.8.0 2.9.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.9.0 소스 예`~/Documents/Cordova-2.9.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.9.0 소스 예`~/Documents/Cordova-2.9.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -91,15 +91,15 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 파일 자체에) 파일에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` 파일.
+5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 자체에) <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 7.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
 ## 업그레이드 2.7.0 2.8.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.8.0 소스 예`~/Documents/Cordova-2.8.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.8.0 소스 예`~/Documents/Cordova-2.8.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -107,9 +107,9 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 파일 자체에) 파일에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.7.0.js` 파일.
+5.  복사는 `www/cordova.js` (참고 있지 않습니다 버전 접미사 더 이상, 버전은 헤더에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 자체에) <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 새 프로젝트에서 당신의 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 7.  업데이트 `<plugin>` 태그에 있는 당신의 `config.xml` 을 `<feature>` 태그. 존재 참고 `<plugin>` 태그 여전히 작동 하지만 사용 되지 않습니다. 이 정보를 복사할 수는 `config.xml` 새로운 프로젝트에 대 한. 예를 들어:
     
@@ -123,15 +123,15 @@ platform add ios`.
         OpenAL ImageIO
         
 
-10. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **연결 → 기타 링커 플래그**에서 편집 해야 **"-Obj-C"** **"-ObjC"**.
+10. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **<a href="../../../cordova/connection/connection.html">연결</a> → 기타 링커 <a href="../../../cordova/file/flags/flags.html">플래그</a>**에서 편집 해야 **"-Obj-C"** **"-ObjC"**.
 
-11. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **연결 → 기타 링커 플래그**에서 변경 **"-all_load"** 수 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . 에 정의 된 문제가 있는 경우 이렇게만 하면 [이 문제.][1].
+11. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **<a href="../../../cordova/connection/connection.html">연결</a> → 기타 링커 <a href="../../../cordova/file/flags/flags.html">플래그</a>**에서 변경 **"-all_load"** 수 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . 에 정의 된 문제가 있는 경우 이렇게만 하면 [이 문제.][1].
 
  [1]: https://issues.apache.org/jira/browse/CB-3458
 
 ## 업그레이드 2.6.0 2.7.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.7.0 소스 예`~/Documents/Cordova-2.7.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.7.0 소스 예`~/Documents/Cordova-2.7.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -139,13 +139,13 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.7.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.6.0.js` 파일.
+5.  복사는 `www/cordova-2.7.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.7.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][2] 프로젝트).
+7.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (볼 [이 사랑][2] 프로젝트).
 
-8.  당신의 `config.xml` 파일을 [이 줄을 제거][3].
+8.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 [이 줄을 제거][3].
 
 9.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
@@ -154,7 +154,7 @@ platform add ios`.
 
 ## 업그레이드 2.5.0 2.6.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.6.0 소스 예`~/Documents/Cordova-2.6.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.6.0 소스 예`~/Documents/Cordova-2.6.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -162,19 +162,19 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  프로젝트의 복사 `www/cordova-2.6.0.js` 로 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.5.0.js` 파일.
+5.  프로젝트의 복사 `www/cordova-2.6.0.js` 로 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (다른 파일과 함께 스크립트를 참조 하는) 새로운 참조를 `cordova-2.6.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (다른 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>과 함께 스크립트를 참조 하는) 새로운 참조를 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][4] 프로젝트).
+7.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (볼 [이 사랑][4] 프로젝트).
 
-8.  당신의 `config.xml` 파일을 [이 새 줄을 추가][5].
+8.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 [이 새 줄을 추가][5].
 
-9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][6].
+9.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 [이 새 줄을 추가][6].
 
-10. 당신의 `config.xml` 파일, [UIWebViewBounce, DisallowOverscroll으로 변경 되었습니다 및 기본 값이 다른][7].
+10. 당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, [UIWebViewBounce, DisallowOverscroll으로 변경 되었습니다 및 기본 값이 다른][7].
 
-11. 당신의 `config.xml` 파일에 `EnableLocation` 특혜 사용 되지 않습니다.
+11. 당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 `EnableLocation` 특혜 사용 되지 않습니다.
 
 12. 삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
@@ -185,7 +185,7 @@ platform add ios`.
 
 ## 업그레이드 2.4.0 2.5.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.5.0 소스 예`~/Documents/Cordova-2.5.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.5.0 소스 예`~/Documents/Cordova-2.5.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -193,17 +193,17 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.5.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 당신의 `www/cordova-2.4.0.js` 파일.
+5.  복사는 `www/cordova-2.5.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 당신의 `www/cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.5.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][8] 프로젝트).
+7.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (볼 [이 사랑][8] 프로젝트).
 
-8.  당신의 `config.xml` 파일, [다음 새 줄을 추가][9].
+8.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, [다음 새 줄을 추가][9].
 
-9.  당신의 `config.xml` 파일, [루트 요소를 편집, 위젯 코르도바에서 변경][10].
+9.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, [루트 요소를 편집, 위젯 코르도바에서 변경][10].
 
-10. 당신의 `config.xml` 파일, [OpenAllWhitelistURLsInWebView 환경 설정 제거][11].
+10. 당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, [OpenAllWhitelistURLsInWebView 환경 설정 제거][11].
 
 11. 삭제를 `cordova` 디렉터리 및 복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.5.0,이 스크립트를 업데이 트 했습니다.
 
@@ -216,7 +216,7 @@ platform add ios`.
 
 ## 업그레이드 2.3.0 2.4.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.4.0 소스 예`~/Documents/Cordova-2.4.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.4.0 소스 예`~/Documents/Cordova-2.4.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -224,15 +224,15 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.4.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.3.0.js` 파일.
+5.  복사는 `www/cordova-2.4.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.4.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `MainViewController.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][12] 프로젝트).
+7.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우) 당신의 `MainViewController.m` 에서 새로운 것에 따라 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (볼 [이 사랑][12] 프로젝트).
 
-8.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][13] 프로젝트).
+8.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (볼 [이 사랑][13] 프로젝트).
 
-9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][14].
+9.  당신의 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 [이 새 줄을 추가][14].
 
 10. 삭제를 `cordova` 디렉터리 및 복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.4.0에이 스크립트는 고정.
 
@@ -247,7 +247,7 @@ platform add ios`.
 
 ## 업그레이드 2.2.0 2.3.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.3.0 소스 예`~/Documents/Cordova-2.3.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.3.0 소스 예`~/Documents/Cordova-2.3.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -255,34 +255,34 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.3.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.2.0.js` 파일.
+5.  복사는 `www/cordova-2.3.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.3.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경 하는 경우)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따르면.
+7.  업데이트 (또는 교체, 결코 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경 하는 경우)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따르면.
 
 8.  삭제를 `cordova` 디렉터리 및 복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.3.0, 새로운 스크립트는 이것.
 
 9.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
-10. 변환 당신의 `Cordova.plist` 파일을 `config.xml` , 스크립트를 실행 하 여 `bin/cordova\_plist\_to\_config\_xml` 파일을 프로젝트에.
+10. 변환 당신의 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `config.xml` , 스크립트를 실행 하 여 `bin/cordova\_plist\_to\_config\_xml` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 프로젝트에.
 
-11. InAppBrowser 플러그인을 추가 `config.xml` , 아래에이 태그를 추가 하 여 `<cordova><plugins>` :
+11. <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> 플러그인을 추가 `config.xml` , 아래에이 태그를 추가 하 여 `<cordova><plugins>` :
     
-        < 플러그인 이름 = "InAppBrowser" 값 = "CDVInAppBrowser" / >
+        < 플러그인 이름 = "<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" 값 = "CDV<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>" / >
         
 
-12. 참고-C 플러그인은 더 이상 허용 *하지* . 허용 된 사이트 목록 애플 리 케이 션 허용 된 사이트 목록에와 함께 연결 해야 설정 하는 `User-Agent` 헤더를 주요 코르도바 WebView로 같은 사용자 에이전트에 연결. 액세스 하 여이 얻을 수 있는 `userAgent` 메인 뷰 컨트롤러에서 속성. 기본 뷰 컨트롤러 (CDVViewController)에 또한 있다는 `URLisAllowed` URL는 허용을 통과할지 여부를 확인 하는 방법.
+12. 참고-C 플러그인은 더 이상 허용 *하지* . 허용 된 사이트 목록 애플 리 케이 션 허용 된 사이트 목록에와 함께 <a href="../../../cordova/connection/connection.html">연결</a> 해야 설정 하는 `User-Agent` 헤더를 주요 코르도바 WebView로 같은 사용자 에이전트에 <a href="../../../cordova/connection/connection.html">연결</a>. 액세스 하 여이 얻을 수 있는 `userAgent` 메인 뷰 컨트롤러에서 속성. 기본 뷰 컨트롤러 (CDVViewController)에 또한 있다는 `URLisAllowed` URL는 허용을 통과할지 여부를 확인 하는 방법.
 
-13. 장치 API 변경:
+13. <a href="../../../cordova/device/device.html">장치</a> API 변경:
     
-    *   IOS에 대 한 device.platform를 반환 하는 데 사용 `iPhone` , `iPad` 또는 `iPod Touch` (정확 하 게) 반환 합니다 지금;`iOS`.
-    *   IOS를 위한 device.name (이제 모든 플랫폼에 대 한 사용 되지 않음) 사용자의 장치 이름을 반환 하는 데 사용 (예: ' Shazron의 아이폰 5 '); 이제 반환 하는 데 사용 하는 어떤 device.platform을 반환 합니다: `iPhone` , `iPad` 또는`iPod Touch`.
-    *   모든 플랫폼에 대 한 device.model; 라는 새로운 속성은 이 특정 장치 모델을 반환 합니다 예를 들어 `iPad2,5` (다른 플랫폼에 대 한이 반환 하는 데 사용 하는 어떤 device.name를 반환).
+    *   IOS에 대 한 <a href="../../../cordova/device/device.platform.html">device.platform</a>를 반환 하는 데 사용 `iPhone` , `iPad` 또는 `iPod Touch` (정확 하 게) 반환 합니다 지금;`iOS`.
+    *   IOS를 위한 <a href="../../../cordova/device/device.name.html">device.name</a> (이제 모든 플랫폼에 대 한 사용 되지 않음) 사용자의 <a href="../../../cordova/device/device.html">장치</a> 이름을 반환 하는 데 사용 (예: ' Shazron의 아이폰 5 '); 이제 반환 하는 데 사용 하는 어떤 <a href="../../../cordova/device/device.platform.html">device.platform</a>을 반환 합니다: `iPhone` , `iPad` 또는`iPod Touch`.
+    *   모든 플랫폼에 대 한 <a href="../../../cordova/device/device.model.html">device.model</a>; 라는 새로운 속성은 이 특정 <a href="../../../cordova/device/device.html">장치</a> 모델을 반환 합니다 예를 들어 `iPad2,5` (다른 플랫폼에 대 한이 반환 하는 데 사용 하는 어떤 <a href="../../../cordova/device/device.name.html">device.name</a>를 반환).
 
 ## 업그레이드 2.1.0 2.2.0에 프로젝트
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.2.0 소스 예`~/Documents/Cordova-2.2.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.2.0 소스 예`~/Documents/Cordova-2.2.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -290,31 +290,31 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.2.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.1.0.js` 파일.
+5.  복사는 `www/cordova-2.2.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.2.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 절대 파일을 변경한 경우 교체)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따라:
+7.  업데이트 (또는 절대 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우 교체)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따라:
     
     *   업데이트 → viewWillAppear
 
 8.  복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.2.0,이 '모방' 스크립트를 업데이트 합니다.
 
-9.  다음으로, 업데이트를 `CordovaLib` 하위 프로젝트가 참조. 코르도바 2.1.0으로 시작, 우리가 사용 하지 않는 CORDOVALIB Xcode 변수 더 이상 위치를 참조할 때 `CordovaLib` 을 참조는 절대 파일 참조 지금.
+9.  다음으로, 업데이트를 `CordovaLib` 하위 프로젝트가 참조. 코르도바 2.1.0으로 시작, 우리가 사용 하지 않는 CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">변수</a> 더 이상 <a href="../../../cordova/geolocation/Position/position.html">위치</a>를 참조할 때 `CordovaLib` 을 참조는 절대 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 참조 지금.
     
     1.  Terminal.app 출시
-    2.  코르도바를 설치한 위치로 이동 (1 단계 참조)에 `bin` 하위 디렉터리
-    3.  아래 스크립트를 실행 하는 첫 번째 매개 변수는 프로젝트의 경로 `.xcodeproj` 파일:
+    2.  코르도바를 설치한 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 이동 (1 단계 참조)에 `bin` 하위 디렉터리
+    3.  아래 스크립트를 실행 하는 첫 번째 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 프로젝트의 경로 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>:
         
         `update_cordova_subproject 경로/로/네/프로젝트/xcodeproj`
 
-**참고:** 2.2.0,은 `bin/create` 에 복사 스크립트는 `CordovaLib` 프로젝트에 하위 프로젝트. 동일한 종류의 설치를 위해, 그냥 오른쪽에 복사 `CordovaLib` 프로젝트 디렉터리 업데이트에는 `CordovaLib` 하위 프로젝트 Xcode 파일 관리자에서 (프로젝트)의 상대적인 위치.
+**참고:** 2.2.0,은 `bin/create` 에 복사 스크립트는 `CordovaLib` 프로젝트에 하위 프로젝트. 동일한 종류의 설치를 위해, 그냥 오른쪽에 복사 `CordovaLib` 프로젝트 디렉터리 업데이트에는 `CordovaLib` 하위 프로젝트 Xcode <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자에서 (프로젝트)의 상대적인 <a href="../../../cordova/geolocation/Position/position.html">위치</a>.
 
 ## 업그레이드 2.0.0 2.1.0을 프로젝트
 
 코르 도우 바 2.1.0와 함께 `CordovaLib` **자동 참조 계산 (아크)를**사용 하도록 업그레이드 되었습니다. 필요 **아크** **아크**를 사용 하 여 프로젝트를 업그레이드 하려면 하지만 CordovaLib를 사용 하 여 업그레이드 하시기 바랍니다 사용 하지 않는 메뉴에서 Xcode 마이그레이션 마법사: **→ 편집 → 리팩터링 변환을 오브 젝 티브-C 호...**, libCordova.a, 선택 취소 다음 마법사 실행이 완료.
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 2.1.0 소스 예`~/Documents/Cordova-2.1.0`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 2.1.0 소스 예`~/Documents/Cordova-2.1.0`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
@@ -322,28 +322,28 @@ platform add ios`.
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.1.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.0.0.js` 파일.
+5.  복사는 `www/cordova-2.1.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.1.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  업데이트 (또는 절대 파일을 변경한 경우 교체)를 `AppDelegate.m` 에서 새로운 프로젝트 하나에 따라:
+7.  업데이트 (또는 절대 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우 교체)를 `AppDelegate.m` 에서 새로운 프로젝트 하나에 따라:
     
     *   편집 → 응용 프로그램: didFinishLaunchingWithOptions:
     *   추가 된 → 응용 프로그램: supportedInterfaceOrientationsForWindow:
 
-8.  업데이트 (또는 절대 파일을 변경한 경우 교체)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따라:
+8.  업데이트 (또는 절대 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 변경한 경우 교체)를 `MainViewController.m` 에서 새로운 프로젝트 하나에 따라:
     
     *   추가 → viewWillAppear
 
 9.  복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.1.0,이 공간을 가진 경로 지원 하도록 업데이트 된 스크립트는.
 
-10. 제거는 `VERSION` 프로젝트의 참조 파일 (*아닌* 것에`CordovaLib`).
+10. 제거는 `VERSION` 프로젝트의 참조 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (*아닌* 것에`CordovaLib`).
 
-11. 다음으로, 업데이트를 `CordovaLib` 하위 프로젝트가 참조. 코르도바 2.1.0으로 시작, 우리가 사용 하지 않는 CORDOVALIB Xcode 변수 더 이상 위치를 참조할 때 `CordovaLib` 을 참조는 절대 파일 참조 지금.
+11. 다음으로, 업데이트를 `CordovaLib` 하위 프로젝트가 참조. 코르도바 2.1.0으로 시작, 우리가 사용 하지 않는 CORDOVALIB Xcode <a href="../../../plugin_ref/spec.html">변수</a> 더 이상 <a href="../../../cordova/geolocation/Position/position.html">위치</a>를 참조할 때 `CordovaLib` 을 참조는 절대 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 참조 지금.
     
     1.  Terminal.app 출시
-    2.  코르도바를 설치한 위치로 이동 (1 단계 참조)에 `bin` 하위 디렉터리
-    3.  아래 스크립트를 실행 하는 첫 번째 매개 변수는 프로젝트의 경로 `.xcodeproj` 파일:
+    2.  코르도바를 설치한 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 이동 (1 단계 참조)에 `bin` 하위 디렉터리
+    3.  아래 스크립트를 실행 하는 첫 번째 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 프로젝트의 경로 `.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>:
         
         `update_cordova_subproject 경로/로/네/프로젝트/xcodeproj`
 
@@ -353,25 +353,25 @@ platform add ios`.
 
 2.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-3.  복사는 `www/cordova-2.0.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.9.0.js` 파일.
+3.  복사는 `www/cordova-2.0.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.0.0.js` 파일.
+4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 5.  복사는 `cordova` 프로젝트의 루트 디렉토리 (만약 당신이 원하는 프로젝트 명령줄 도구)에 새로운 프로젝트에서 디렉토리.
 
-6.  아래에서 새 항목 추가 `Plugins` 에 당신의 `Cordova.plist` **지원 파일** 그룹에서 파일. 키가 `Device` 값은`CDVDevice`.
+6.  아래에서 새 항목 추가 `Plugins` 에 당신의 `Cordova.plist` **지원 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>** 그룹에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `Device` 값은`CDVDevice`.
 
 7.  제거`Cordova.framework`.
 
-8.  제거 `verify.sh` **지원 파일** 그룹에서.
+8.  제거 `verify.sh` **지원 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>** 그룹에서.
 
 9.  프로젝트 탐색기에서 프로젝트 아이콘을 선택, **대상**, 프로젝트를 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
 10. **전처리기 매크로**대 한 검색 다음 모두 제거 **CORDOVA_FRAMEWORK = 1** 값.
 
-11. 위치는 `CordovaLib` 홈 폴더의 아래 당신의 하드 드라이브에 설치 된 디렉터리 `Documents` 하위 디렉터리.
+11. <a href="../../../cordova/geolocation/Position/position.html">위치</a>는 `CordovaLib` 홈 폴더의 아래 당신의 하드 드라이브에 설치 된 디렉터리 `Documents` 하위 디렉터리.
 
-12. 위치는 `CordovaLib.xcodeproj` 파일에 `CordovaLib` 디렉터리 다음 드래그 앤 드롭으로 프로젝트에 파일. 그것은 하위 프로젝트로 표시 됩니다.
+12. <a href="../../../cordova/geolocation/Position/position.html">위치</a>는 `CordovaLib.xcodeproj` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에 `CordovaLib` 디렉터리 다음 드래그 앤 드롭으로 프로젝트에 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 그것은 하위 프로젝트로 표시 됩니다.
 
 13. 프로젝트를 빌드, 당신은 몇 가지 오류에 관련 된 한다 `#import` 지시문.
 
@@ -403,21 +403,21 @@ platform add ios`.
 
 22. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, **대상**, 프로젝트를 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
-23. **기타 링커 플래그**에 대 한 검색 하 고 값을 추가할 **-all_load** 및 **Obj-C**.
+23. **기타 링커 <a href="../../../cordova/file/flags/flags.html">플래그</a>**에 대 한 검색 하 고 값을 추가할 **-all_load** 및 **Obj-C**.
 
 24. 확장은 `CordovaLib` 하위 프로젝트.
 
-25. 위치는 `VERSION` 파일, (우리는 그것, 아니라 복사에 대 한 링크를 만들 원하는) 주요 프로젝트에 끌어 놓습니다.
+25. <a href="../../../cordova/geolocation/Position/position.html">위치</a>는 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>, (우리는 그것, 아니라 복사에 대 한 링크를 만들 원하는) 주요 프로젝트에 끌어 놓습니다.
 
 26. **어떤 추가 된 폴더에 대 한 그룹 만들기** 라디오 단추를 선택 후 **완료** 버튼을 선택 합니다.
 
-27. 선택은 `VERSION` 파일을 이전 단계에서 드래그 합니다.
+27. 선택은 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 이전 단계에서 드래그 합니다.
 
-28. **파일 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합을 입력 (또는 menuitem **보기 → 유틸리티 → 파일 속성**).
+28. **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합을 입력 (또는 menuitem **<a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a> → 유틸리티 → <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 속성**).
 
-29. **위치** 에 대 한 드롭 다운 메뉴에 대 한 **파일 관리자** 에서 **CORDOVALIB를 기준으로** 선택.
+29. **<a href="../../../cordova/geolocation/Position/position.html">위치</a>** 에 대 한 드롭 다운 메뉴에 대 한 **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 에서 **CORDOVALIB를 기준으로** 선택.
 
-30. 통합된 헤더를 찾을 수 있도록 **고유**, **Xcode 환경 설정 → 위치 → 파생 데이터 → 고급...** Xcode 환경 설정.
+30. 통합된 헤더를 찾을 수 있도록 **고유**, **Xcode 환경 설정 → <a href="../../../cordova/geolocation/Position/position.html">위치</a> → 파생 데이터 → 고급...** Xcode 환경 설정.
 
 31. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, 당신의 **대상**을 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
@@ -430,12 +430,12 @@ platform add ios`.
         "$(BUILT_PRODUCTS_DIR)"
         
 
-33. **다른 링커 플래그**에 대 한 검색입니다. 해당 설정에 대 한이 값을 추가:
+33. **다른 링커 <a href="../../../cordova/file/flags/flags.html">플래그</a>**에 대 한 검색입니다. 해당 설정에 대 한이 값을 추가:
     
         -weak_framework CoreFoundation
         
 
-34. 프로젝트를 빌드, 그것을 컴파일하고 문제 **없이** 링크 해야.
+34. 프로젝트를 빌드, 그것을 컴<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>하고 문제 **없이** 링크 해야.
 
 35. **구성표** 드롭 다운에서 프로젝트를 선택한 다음 선택 **아이폰 5.1 시뮬레이터**.
 
@@ -449,9 +449,9 @@ platform add ios`.
 
 2.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-3.  복사는 `www/cordova-1.9.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.8.x.js` 파일.
+3.  복사는 `www/cordova-1.9.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.8.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-1.9.0.js` 파일.
+4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 **참고:** 1.9.0 새로운 지원 `BackupWebStorage` 부울 `Cordova.plist` 설정. 그것은 기본적으로 활성화 되어, 그래서 그것을 설정 `false` 특히 iOS 6에 그것을 사용 하지 않도록 합니다. 참조 [출시 노트: 사파리와 UIKit 섹션][16]
 
@@ -463,11 +463,11 @@ platform add ios`.
 
 2.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-3.  복사는 `www/cordova-1.8.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.7.x.js` 파일.
+3.  복사는 `www/cordova-1.8.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.7.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-1.8.0.js` 파일.
+4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-캡처 API를 사용 하 여 예정 하는 경우 새로운 **iPad 망막 디스플레이** 자산을 필요 합니다.
+<a href="../../../cordova/media/capture/capture.html">캡처</a> API를 사용 하 여 예정 하는 경우 새로운 **iPad 망막 디스플레이** 자산을 필요 합니다.
 
 1.  복사는 `Resources/Capture.bundle` -기존 작성 하 여 프로젝트 디렉터리에 새 프로젝트 항목 `Resources/Capture.bundle` 항목.
 
@@ -481,9 +481,9 @@ platform add ios`.
 
 2.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-3.  복사는 `www/cordova-1.7.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.6.0.js` 파일.
+3.  복사는 `www/cordova-1.7.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-1.7.0.js` 파일.
+4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-1.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 ## 업그레이드 1.5.0 프로젝트 1.6.x를
 
@@ -493,30 +493,30 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.5.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 1.5.0-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
 
-5.  모든 새로운 추가 `MainViewController` 및 `AppDelegate` 파일을 Xcode 프로젝트.
+5.  모든 새로운 추가 `MainViewController` 및 `AppDelegate` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/cordova-1.6.1.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.5.0.js` 파일.
+6.  복사는 `www/cordova-1.6.1.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-1.6.1.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `cordova-1.6.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  새로운 추가 `Cordova.plist` 파일을 프로젝트에. 이것은 코어 플러그인 서비스 이름은 통일 Cordova JavaScript 파일 (안 드 로이드와 블랙베리에서 그들을 일치 하도록 변경 해야 합니다 때문에 필요`cordova-js`).
+8.  새로운 추가 `Cordova.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 프로젝트에. 이것은 코어 플러그인 서비스 이름은 통일 Cordova JavaScript <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (안 드 로이드와 블랙베리에서 그들을 일치 하도록 변경 해야 합니다 때문에 필요`cordova-js`).
 
 9.  모든 설정, **플러그인** 및 **ExternalHosts** 항목에 새로운 당신의 **백업 Cordova.plist** 했다 통합`Cordova.plist`.
 
-10. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일. 모든 `UIWebViewDelegate` 또는 `CDVCommandDelegate` 에서 코드 `AppDelegate.m` 에 들어갈 필요가 있을 것 이다 `MainViewController.m` 지금 (해당 파일에서 섹션을 주석 참조).
+10. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 모든 `UIWebViewDelegate` 또는 `CDVCommandDelegate` 에서 코드 `AppDelegate.m` 에 들어갈 필요가 있을 것 이다 `MainViewController.m` 지금 (해당 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에서 섹션을 주석 참조).
 
-11. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `MainViewController.h` 및 `MainViewController.m` 를 새로운 MainViewController 파일.
+11. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `MainViewController.h` 및 `MainViewController.m` 를 새로운 MainViewController <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 12. 프로젝트 탐색기에서 프로젝트 아이콘을 클릭 하십시오, **프로젝트**를 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
-13. 입력 **컴파일러 c / C + + / 오브 젝 티브-C** 검색 필드에.
+13. 입력 **컴<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>러 c / C + + / 오브 젝 티브-C** 검색 필드에.
 
-14. **Apple LLVM 컴파일러 3.1** 값을 선택 합니다.
+14. **Apple LLVM 컴<a href="../../../cordova/file/fileobj/fileobj.html">파일</a>러 3.1** 값을 선택 합니다.
 
 ## 1.4. X 프로젝트 1.5.0 업그레이드
 
@@ -524,37 +524,37 @@ platform add ios`.
 
 2.  새 프로젝트를 만들고 그것을 한 번 실행 합니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-3.  복사는 `www/cordova-1.5.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.4.x.js` 파일.
+3.  복사는 `www/cordova-1.5.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.4.x.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새로운 코르도바를 가리키도록 `cordova-1.5.0.js` 파일.
+4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새로운 코르도바를 가리키도록 `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 5.  찾을 `PhoneGap.framework` 프로젝트 탐색기에서 선택 합니다.
 
 6.  **삭제** 키를 입력 하 고 삭제는 `PhoneGap.framework` 프로젝트 탐색기에서 참조.
 
-7.  프로젝트 ( **파일 추가...** 시트) 파일을 추가 하는 시트 아래로 드롭 해야 **옵션-명령-한** 키 조합을 입력 합니다. **어떤 추가 된 폴더에 대 한 만든 그룹** 라디오 단추가 선택 되어 있는지 확인 합니다.
+7.  프로젝트 ( **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 추가...** 시트) <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 추가 하는 시트 아래로 드롭 해야 **옵션-명령-한** 키 조합을 입력 합니다. **어떤 추가 된 폴더에 대 한 만든 그룹** 라디오 단추가 선택 되어 있는지 확인 합니다.
 
 8.  폴더에가 서 다른 시트 아래로 드롭 해야 **Shift 명령 G** 키 조합을 입력 (에서 **폴더로 이동:** 시트).
 
 9.  입력 `/Users/Shared/Cordova/Frameworks/Cordova.framework` 에 **폴더로 이동:** 시트 및 다음 **이동** 단추를 누릅니다.
 
-10. **추가 파일** 시트에서 **추가** 버튼을 누릅니다.
+10. **추가 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>** 시트에서 **추가** 버튼을 누릅니다.
 
 11. 선택 `Cordova.framework` 프로젝트 탐색기에서.
 
-12. **파일 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합 입력.
+12. **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합 입력.
 
-13. **위치** 에 대 한 드롭 다운 메뉴에 대 한 **파일 관리자** 에서 **절대 경로** 선택.
+13. **<a href="../../../cordova/geolocation/Position/position.html">위치</a>** 에 대 한 드롭 다운 메뉴에 대 한 **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 에서 **절대 경로** 선택.
 
-14. 프로젝트 ( **파일 추가...** 시트) 파일을 추가 하는 시트 아래로 드롭 해야 **옵션-명령-한** 키 조합을 입력 합니다. **어떤 추가 된 폴더에 대 한 만든 그룹** 라디오 단추가 선택 되어 있는지 확인 합니다.
+14. 프로젝트 ( **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 추가...** 시트) <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 추가 하는 시트 아래로 드롭 해야 **옵션-명령-한** 키 조합을 입력 합니다. **어떤 추가 된 폴더에 대 한 만든 그룹** 라디오 단추가 선택 되어 있는지 확인 합니다.
 
 15. 폴더에가 서 다른 시트 아래로 드롭 해야 **Shift 명령 G** 키 조합을 입력 (에서 **폴더로 이동:** 시트).
 
 16. 입력 `~/Documents/CordovaLib/Classes/deprecated` 에 **폴더로 이동:** 시트 및 다음 **이동** 단추를 누릅니다.
 
-17. **추가 파일** 시트에서 **추가** 버튼을 누릅니다.
+17. **추가 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>** 시트에서 **추가** 버튼을 누릅니다.
 
-18. 당신의 `AppDelegate.h` , `AppDelegate.m` , 및 `MainViewController.h` 파일을 바꿉니다 전체 `#ifdef PHONEGAP_FRAMEWORK` 와 차단:
+18. 당신의 `AppDelegate.h` , `AppDelegate.m` , 및 `MainViewController.h` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 바꿉니다 전체 `#ifdef PHONEGAP_FRAMEWORK` 와 차단:
     
         #import "CDVDeprecated.h"
         
@@ -575,7 +575,7 @@ platform add ios`.
 
 26. **코르 도우 바** 와 **PhoneGap** 의 모든 발생을 대체.
 
-27. 찾기 당신의 `PhoneGap.plist` 프로젝트 탐색기에서 파일을 파일 이름에 입력 이름 편집 모드로 한 번 클릭 합니다.
+27. 찾기 당신의 `PhoneGap.plist` 프로젝트 탐색기에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 이름에 입력 이름 편집 모드로 한 번 클릭 합니다.
 
 28. 이름 바꾸기 `PhoneGap.plist` 에`Cordova.plist`.
 
@@ -597,13 +597,13 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  복사는 `MainViewController.m` 이전 파일 교체 디스크에 1.4.0-based 프로젝트 디렉토리에 새 프로젝트에서 파일 (백업 파일 먼저에서 위의 2 단계).
+4.  복사는 `MainViewController.m` 이전 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 교체 디스크에 1.4.0-based 프로젝트 디렉토리에 새 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (백업 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 먼저에서 위의 2 단계).
 
-5.  추가 `MainViewController.m` Xcode 프로젝트에 파일.
+5.  추가 `MainViewController.m` Xcode 프로젝트에 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-6.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `MainViewController.m` 새 파일에.
+6.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `MainViewController.m` 새 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에.
 
-7.  업데이트 된 `phonegap-1.4.0.js` 파일은 선택 사항, 아무것도 1.4.0 1.4.1 사이 자바에서 변경 되었습니다.
+7.  업데이트 된 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>은 선택 사항, 아무것도 1.4.0 1.4.1 사이 자바에서 변경 되었습니다.
 
 ## 1.4.0을 1.3.0 업그레이드 프로젝트
 
@@ -613,20 +613,20 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.3.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 1.3.0-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  모든 추가 `MainViewController` 파일을 Xcode 프로젝트.
+5.  모든 추가 `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/phonegap-1.4.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.3.0.js` 파일.
+6.  복사는 `www/phonegap-1.4.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `phonegap-1.4.0.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` 파일. 키가 `com.phonegap.battery` 값은`PGBattery`.
+8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `com.phonegap.battery` 값은`PGBattery`.
 
-9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일.
+9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 ## 1.3.0에 1.2.0 업그레이드 프로젝트
 
@@ -636,20 +636,20 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.2.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 1.2.0-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  모든 추가 `MainViewController` 파일을 Xcode 프로젝트.
+5.  모든 추가 `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/phonegap-1.3.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.2.0.js` 파일.
+6.  복사는 `www/phonegap-1.3.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `phonegap-1.3.0.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `phonegap-1.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` 파일. 키가 `com.phonegap.battery` 값은`PGBattery`.
+8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `com.phonegap.battery` 값은`PGBattery`.
 
-9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일.
+9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 ## 업그레이드 1.1.0 1.2.0에 프로젝트
 
@@ -659,20 +659,20 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.1.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 1.1.0-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  모든 추가 `MainViewController` 파일을 Xcode 프로젝트.
+5.  모든 추가 `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/phonegap-1.2.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.1.0.js` 파일.
+6.  복사는 `www/phonegap-1.2.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `phonegap-1.2.0.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` 파일. 키가 `com.phonegap.battery` 값은`PGBattery`.
+8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `com.phonegap.battery` 값은`PGBattery`.
 
-9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일.
+9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 ## 1.1.0에 1.0.0 업그레이드 프로젝트
 
@@ -682,20 +682,20 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.0.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 1.0.0-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  모든 추가 `MainViewController` 파일을 Xcode 프로젝트.
+5.  모든 추가 `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/phonegap-1.1.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.0.0.js` 파일.
+6.  복사는 `www/phonegap-1.1.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `phonegap-1.1.0.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` 파일. 키가 `com.phonegap.battery` 값은`PGBattery`.
+8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `com.phonegap.battery` 값은`PGBattery`.
 
-9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일.
+9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 ## 업그레이드 0.9.6 1.0.0에 프로젝트
 
@@ -705,17 +705,17 @@ platform add ios`.
 
 3.  새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산의 일부를 해야 합니다.
 
-4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 0.9.6-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
+4.  (위의 2 단계에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 먼저 백업) 어떤 오래 된 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 대체 하는 디스크에 0.9.6-based 프로젝트 디렉토리에 새 프로젝트에서이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 복사:
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
-5.  모든 추가 `MainViewController` 파일을 Xcode 프로젝트.
+5.  모든 추가 `MainViewController` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 Xcode 프로젝트.
 
-6.  복사는 `www/phonegap-1.0.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-0.9.6.js` 파일.
+6.  복사는 `www/phonegap-1.0.0.js` 에 새로운 프로젝트에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 `www` 디렉터리 및 삭제 귀하 `www/phonegap-0.9.6.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `phonegap-1.0.0.js` 파일.
+7.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (및 스크립트 참조를 포함 하는 기타 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>) 새를 가리키도록 `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
-8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` 파일. 키가 `com.phonegap.battery` 값은`PGBattery`.
+8.  아래에서 새 항목 추가 `Plugins` 에 당신의 `PhoneGap.plist` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>. 키가 `com.phonegap.battery` 값은`PGBattery`.
 
-9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일.
+9.  당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.

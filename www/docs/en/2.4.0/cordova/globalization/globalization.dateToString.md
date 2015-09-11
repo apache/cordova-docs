@@ -32,7 +32,7 @@ It returns the formatted date string to the successCB callback with a properties
 
 The inbound ``date`` parameter should be of type ``Date``.
 
-If there is an error formatting the date, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error formatting the date, then the errorCB callback is invoked with a <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> object as a parameter. The expected code for this error is <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR.
 
 `options.formatLength` can be 'short', 'medium', 'long', or 'full'.
 `options.selector` can be 'date', 'time' or 'date and time'.
@@ -49,7 +49,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "date: 9/25/2012 4:21PM" using the default options.
@@ -61,7 +61,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
       {formatLength:'short', selector:'date and time'}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>

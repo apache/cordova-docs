@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-FileEntry
+<a href="../fileobj/fileobj.html">File</a>Entry
 ==========
 
 This object represents a file on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
@@ -26,27 +26,27 @@ This object represents a file on a file system.  It is defined in the [W3C Direc
 Properties
 ----------
 
-- __isFile:__ Always true. _(boolean)_
+- __is<a href="../fileobj/fileobj.html">File</a>:__ Always true. _(boolean)_
 - __isDirectory:__ Always false. _(boolean)_
-- __name:__ The name of the FileEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the FileEntry. _(DOMString)_
+- __<a href="../../storage/parameters/name.html">name</a>:__ The <a href="../../storage/parameters/name.html">name</a> of the <a href="../fileobj/fileobj.html">File</a>Entry, excluding the path leading to it. _(DOMString)_
+- __fullPath:__ The full absolute path from the root to the <a href="../fileobj/fileobj.html">File</a>Entry. _(DOMString)_
 
 NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
 
-- __filesystem:__ The file system on which the FileEntry resides. _(FileSystem)_
+- __filesystem:__ The file system on which the <a href="../fileobj/fileobj.html">File</a>Entry resides. _(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>)_
 
 
 Methods
 -------
 
-- __getMetadata__: Look up metadata about a file. 
+- __get<a href="../metadata/metadata.html">Metadata</a>__: Look up metadata about a file. 
 - __moveTo__: Move a file to a different location on the file system.
 - __copyTo__: Copy a file to a different location on the file system.
 - __toURI__: Return a URI that can be used to locate a file.
 - __remove__: Delete a file.  
 - __getParent__: Look up the parent directory.
-- __createWriter__: Creates a FileWriter object that can be used to write to a file.
-- __file__: Creates a File object containing file properties.
+- __createWriter__: Creates a <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a> object that can be used to write to a file.
+- __file__: Creates a <a href="../fileobj/fileobj.html">File</a> object containing file properties.
 
 
 Supported Platforms
@@ -58,18 +58,18 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 
 
-getMetadata
+get<a href="../metadata/metadata.html">Metadata</a>
 ----------------
 
 Look up metadata about a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(metadata) {
         console.log("Last Modified: " + metadata.modificationTime);
@@ -80,7 +80,7 @@ __Quick Example__
     }
 
     // Request the metadata object for this entry
-    entry.getMetadata(success, fail);	
+    entry.get<a href="../metadata/metadata.html">Metadata</a>(success, fail);	
 
 
 moveTo
@@ -88,20 +88,20 @@ moveTo
 
 Move a file to a different location on the file system. It is an error to attempt to:
 
-- move a file into its parent if a name different from its current one isn't provided;
+- move a file into its parent if a <a href="../../storage/parameters/name.html">name</a> different from its current one isn't provided;
 - move a file to a path occupied by a directory;
 
 In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file. 
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
+- __parent__ - The parent directory to which to move the file. _(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)_
+- __newName__ - The new <a href="../../storage/parameters/name.html">name</a> of the file. Defaults to the current <a href="../../storage/parameters/name.html">name</a> if unspecified. _(DOMString)_
+- __successCallback__ - A callback that is called with the <a href="../fileobj/fileobj.html">File</a>Entry object of the new file. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(entry) {
         console.log("New Path: " + entry.fullPath);
@@ -111,12 +111,12 @@ __Quick Example__
         alert(error.code);
     }
 
-    function moveFile(entry) {
+    function move<a href="../fileobj/fileobj.html">File</a>(entry) {
         var parent = document.getElementById('parent').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>({fullPath: parent});
 
-        // move the file to a new directory and rename it
-        entry.moveTo(parentEntry, "newFile.txt", success, fail);
+        // move the file to a new directory and re<a href="../../storage/parameters/name.html">name</a> it
+        entry.moveTo(parentEntry, "new<a href="../fileobj/fileobj.html">File</a>.txt", success, fail);
     }
 	
 
@@ -125,17 +125,17 @@ copyTo
 
 Copy a file to a new location on the file system.  It is an error to attempt to:
 
-- copy a file into its parent if a name different from its current one is not provided. 
+- copy a file into its parent if a <a href="../../storage/parameters/name.html">name</a> different from its current one is not provided. 
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
+- __parent__ - The parent directory to which to copy the file. _(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)_
+- __newName__ - The new <a href="../../storage/parameters/name.html">name</a> of the file. Defaults to the current <a href="../../storage/parameters/name.html">name</a> if unspecified. _(DOMString)_
+- __successCallback__ - A callback that is called with the <a href="../fileobj/fileobj.html">File</a>Entry object of the new file. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function win(entry) {
 	    console.log("New Path: " + entry.fullPath);
@@ -145,11 +145,11 @@ __Quick Example__
 	    alert(error.code);
     }
 
-    function copyFile(entry) {
+    function copy<a href="../fileobj/fileobj.html">File</a>(entry) {
         var parent = document.getElementById('parent').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentEntry = new <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>({fullPath: parent});
 
-        // copy the file to a new directory and rename it
+        // copy the file to a new directory and re<a href="../../storage/parameters/name.html">name</a> it
         entry.copyTo(parentEntry, "file.copy", success, fail);
     }
 
@@ -159,7 +159,7 @@ toURI
 
 Returns a URI that can be used to locate the file. 
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 	
     // Request the URI for this entry
     var uri = entry.toURI();
@@ -174,9 +174,9 @@ Deletes a file.
 __Parameters:__
 
 - __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 	
     function success(entry) {
         console.log("Removal succeeded");
@@ -193,38 +193,38 @@ __Quick Example__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the file. 
+Look up the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> containing the file. 
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with the file's parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>.  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 	
     function success(parent) {
-        console.log("Parent Name: " + parent.name);
+        console.log("Parent Name: " + parent.<a href="../../storage/parameters/name.html">name</a>);
     }
 
     function fail(error) {
         alert(error.code);
     }
 
-    // Get the parent DirectoryEntry
+    // Get the parent <a href="../directoryentry/directoryentry.html">DirectoryEntry</a>
     entry.getParent(success, fail);	
 
 
 createWriter
 ------------
 
-Create a FileWriter object associated with the file that the FileEntry represents.
+Create a <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a> object associated with the file that the <a href="../fileobj/fileobj.html">File</a>Entry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a> object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs while attempting to create the <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a>.  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 	
     function success(writer) {
         writer.write("Some text to the file");
@@ -234,24 +234,24 @@ __Quick Example__
         alert(error.code);
     }
 
-    // create a FileWriter to write to the file
+    // create a <a href="../filewriter/filewriter.html"><a href="../fileobj/fileobj.html">File</a>Writer</a> to write to the file
     entry.createWriter(success, fail);	
 
 
 file
 ----
 
-Return a File object that represents the current state of the file that this FileEntry represents.
+Return a <a href="../fileobj/fileobj.html">File</a> object that represents the current state of the file that this <a href="../fileobj/fileobj.html">File</a>Entry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a File object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a <a href="../fileobj/fileobj.html">File</a> object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when creating the <a href="../fileobj/fileobj.html">File</a> object (e.g. the underlying file no longer exists).  Invoked with a <a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a> object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 	
     function success(file) {
-        console.log("File size: " + file.size);
+        console.log("<a href="../fileobj/fileobj.html">File</a> <a href="../../storage/parameters/size.html">size</a>: " + file.<a href="../../storage/parameters/size.html">size</a>);
     }
 
     function fail(error) {

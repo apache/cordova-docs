@@ -22,12 +22,12 @@ license: >
 
 Gibt eine neue `Database` Objekt.
 
-    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
+    var dbShell = window.openDatabase(<a href="parameters/name.html">database_name</a>, <a href="parameters/version.html">database_version</a>, <a href="parameters/display_name.html">database_displayname</a>, <a href="parameters/size.html">database_size</a>);
     
 
 ## Beschreibung
 
-Die Methode erstellt eine neue SQL-Lite Datenbank und gibt ein `Database` -Objekt, das Manipulation der Daten ermöglicht.
+Die Methode erstellt eine neue SQL-Lite <a href="database/database.html">Datenbank</a> und gibt ein `Database` -Objekt, das Manipulation der Daten ermöglicht.
 
 ## Unterstützte Plattformen
 
@@ -53,7 +53,7 @@ Die Methode erstellt eine neue SQL-Lite Datenbank und gibt ein `Database` -Objek
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

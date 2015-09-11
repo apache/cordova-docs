@@ -156,7 +156,7 @@ See other methods that you can override in:
 
 1. [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
-For example, you can hook into the 'pause' and 'resume' application events.
+For example, you can hook into the '<a href="../../../cordova/events/events.pause.html">pause</a>' and '<a href="../../../cordova/events/events.resume.html">resume</a>' application events.
 
 ### Debugging Plugins
 

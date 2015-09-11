@@ -28,7 +28,7 @@ specification.
 Properties
 ----------
 
-- __isFile__: Always `false`. _(boolean)_
+- __is<a href="../fileobj/fileobj.html">File</a>__: Always `false`. _(boolean)_
 
 - __isDirectory__: Always `true`. _(boolean)_
 
@@ -39,16 +39,16 @@ Properties
 __NOTE:__ The following attribute is defined by the W3C specification,
 but is _not_ supported:
 
-- __filesystem__: The file system on which the `DirectoryEntry` resides. _(FileSystem)_
+- __filesystem__: The file system on which the `DirectoryEntry` resides. _(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>)_
 
 Methods
 -------
 
 The following methods can be invoked on a `DirectoryEntry` object:
 
-- __getMetadata__: Look up metadata about a directory.
+- __get<a href="../metadata/metadata.html">Metadata</a>__: Look up metadata about a directory.
 
-- __setMetadata__: Set metadata on a directory.
+- __set<a href="../metadata/metadata.html">Metadata</a>__: Set metadata on a directory.
 
 - __moveTo__: Move a directory to a different location on the file system.
 
@@ -60,11 +60,11 @@ The following methods can be invoked on a `DirectoryEntry` object:
 
 - __getParent__: Look up the parent directory.
 
-- __createReader__: Create a new `DirectoryReader` that can read entries from a directory.
+- __createReader__: Create a new `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` that can read entries from a directory.
 
 - __getDirectory__: Create or look up a directory.
 
-- __getFile__: Create or look up a file.
+- __get<a href="../fileobj/fileobj.html">File</a>__: Create or look up a file.
 
 - __removeRecursively__: Delete a directory and all of its contents.
 
@@ -77,18 +77,18 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-getMetadata
+get<a href="../metadata/metadata.html">Metadata</a>
 -----------
 
 Look up metadata about a directory.
 
 __Parameters:__
 
-- __successCallback__: A callback function to execute with a `Metadata` object. _(Function)_
+- __successCallback__: A callback function to execute with a `<a href="../metadata/metadata.html">Metadata</a>` object. _(Function)_
 
-- __errorCallback__: A callback function to execute if an error occurs when retrieving the `Metadata`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback function to execute if an error occurs when retrieving the `<a href="../metadata/metadata.html">Metadata</a>`. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(metadata) {
         console.log("Last Modified: " + metadata.modificationTime);
@@ -99,9 +99,9 @@ __Quick Example__
     }
 
     // Request the metadata object for this entry
-    entry.getMetadata(success, fail);
+    entry.get<a href="../metadata/metadata.html">Metadata</a>(success, fail);
 
-setMetadata
+set<a href="../metadata/metadata.html">Metadata</a>
 ----------------
 
 Sets a directory's extended attributes, or metadata. _Currently works
@@ -115,7 +115,7 @@ __Parameters:__
 
 - __metadataObject__: An object that contains the metadata's keys and values. _(Object)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success() {
         console.log("The metadata was successfully set.");
@@ -126,27 +126,27 @@ __Quick Example__
     }
 
     // Set the metadata
-    entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+    entry.set<a href="../metadata/metadata.html">Metadata</a>(success, fail, { "com.apple.MobileBackup": 1});
 
 __iOS Quirk__
 
 - Only the `com.apple.MobileBackup` extended attribute is supported. Set the value to `1` to prevent the directory from being backed up to iCloud. Set the value to `0` to re-enable the directory to be backed up to iCloud.
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
-    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
+    function setFolder<a href="../metadata/metadata.html">Metadata</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, subFolder, metadataKey, metadataValue)
     {
-        var onSetMetadataWin = function() {
+        var onSet<a href="../metadata/metadata.html">Metadata</a>Win = function() {
             console.log("success setting metadata")
         }
-        var onSetMetadataFail = function() {
+        var onSet<a href="../metadata/metadata.html">Metadata</a>Fail = function() {
             console.log("error setting metadata")
         }
 
         var onGetDirectoryWin = function(parent) {
             var data = {};
             data[metadataKey] = metadataValue;
-            parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+            parent.set<a href="../metadata/metadata.html">Metadata</a>(onSet<a href="../metadata/metadata.html">Metadata</a>Win, onSet<a href="../metadata/metadata.html">Metadata</a>Fail, data);
         }
         var onGetDirectoryFail = function() {
             console.log("error getting dir")
@@ -160,10 +160,10 @@ __Quick Example__
             console.log(evt.target.error.code);
         }
 
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, 0, onFSWin, onFSFail);
     }
 
-        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolder<a href="../metadata/metadata.html">Metadata</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
@@ -189,9 +189,9 @@ __Parameters:__
 
 - __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to move the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to move the directory. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(entry) {
         console.log("New Path: " + entry.fullPath);
@@ -230,9 +230,9 @@ __Parameters:__
 
 - __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function win(entry) {
         console.log("New Path: " + entry.fullPath);
@@ -257,7 +257,7 @@ toURL
 
 Returns a URL that can be used to locate the directory.
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     // Get the URL for this directory
     var dirURL = entry.toURL();
@@ -276,9 +276,9 @@ __Parameters:__
 
 - __successCallback__: A callback that executes after the directory is deleted.  Invoked with no parameters. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(entry) {
         console.log("Removal succeeded");
@@ -300,9 +300,9 @@ __Parameters:__
 
 - __successCallback__: A callback that is passed the directory's parent `DirectoryEntry`. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(parent) {
         console.log("Parent Name: " + parent.name);
@@ -318,9 +318,9 @@ __Quick Example__
 createReader
 ------------
 
-Creates a new DirectoryReader to read entries in a directory.
+Creates a new <a href="../directoryreader/directoryreader.html">DirectoryReader</a> to read entries in a directory.
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     // create a directory reader
     var directoryReader = entry.createReader();
@@ -336,13 +336,13 @@ __Parameters:__
 
 - __path__: The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
 
-- __options__: Options to specify whether the directory is to be created if it doesn't exist.  _(Flags)_
+- __options__: Options to specify whether the directory is to be created if it doesn't exist.  _(<a href="../flags/flags.html">Flags</a>)_
 
 - __successCallback__: A callback that executes with a `DirectoryEntry` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(parent) {
         console.log("Parent Name: " + parent.name);
@@ -355,7 +355,7 @@ __Quick Example__
     // Retrieve an existing directory, or create it if it does not already exist
     entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 
-getFile
+get<a href="../fileobj/fileobj.html">File</a>
 -------
 
 Creates or looks up a file.  An error results if the app attempts to:
@@ -366,13 +366,13 @@ __Parameters:__
 
 - __path__: The path to the file to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
 
-- __options__: Options to specify whether the file is created if it doesn't exist.  _(Flags)_
+- __options__: Options to specify whether the file is created if it doesn't exist.  _(<a href="../flags/flags.html">Flags</a>)_
 
-- __successCallback__: A callback that is passed a `FileEntry` object. _(Function)_
+- __successCallback__: A callback that is passed a `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the file. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(parent) {
         console.log("Parent Name: " + parent.name);
@@ -383,7 +383,7 @@ __Quick Example__
     }
 
     // Retrieve an existing file, or create it if it does not exist
-    entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
+    entry.get<a href="../fileobj/fileobj.html">File</a>("new<a href="../fileobj/fileobj.html">File</a>.txt", {create: true, exclusive: false}, success, fail);
 
 removeRecursively
 -----------------
@@ -398,9 +398,9 @@ __Parameters:__
 
 - __successCallback__: A callback that executes after the `DirectoryEntry` has been deleted.  Invoked with no parameters. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to delete the `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the `DirectoryEntry`. Invoked with a `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` object. _(Function)_
 
-__Quick Example__
+__Quick <a href="../../storage/storage.opendatabase.html">Example</a>__
 
     function success(parent) {
         console.log("Remove Recursively Succeeded");

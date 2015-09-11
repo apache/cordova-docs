@@ -35,7 +35,7 @@ The batterycritical handler will be called with an object that contains two prop
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova '<a href="events.deviceready.html">deviceready</a>' event.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
@@ -55,30 +55,30 @@ Quick Example
        	alert("Battery Level Critical " + info.level + "%\nRecharge Soon!"); 
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Battery Criticaly Example</title>
+        <title>Cordova Battery Criticaly <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-2.1.0.js has not.
         // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
         // 
 	    function onLoad() {
-    	    document.addEventListener("deviceready", onDeviceReady, false);
+    	    document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
     	}
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
 		    window.addEventListener("batterycritical", onBatteryCritical, false);
         }
 

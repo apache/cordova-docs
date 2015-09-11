@@ -48,7 +48,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
   * 音楽ライブラリ (`musicLibrary`)
   * 画像ライブラリ (`picturesLibrary`)
   * 動画ライブラリ (`videosLibrary`)
-  * リムーバブル ストレージ (`removableStorage`)
+  * リムーバブル <a href="../../../cordova/storage/storage.html">ストレージ</a> (`removableStorage`)
   * インターネット クライアント/サーバー (`internetClientClientServer`) - その`internetClient`に注意してくださいが許可されても
   * プライベート ネットワーク クライアント/サーバー (`privateNetworkClientServer`)
 
@@ -118,4 +118,4 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
       * `-MaxVersionTested`は、SDK の最も高いテスト バージョンを指定します。 対応する SDK の新しいバージョンがリリースされた場合は、指定されたバージョンの互換モードで実行されます。
   * **バージョンの値**は*major.minor.build.qfe*の形で 4 整数の組. 
 
-Config.xml ファイルのこれらの種類の設定を指定しない場合、既定では Windows.Universal バージョン 10.0.0.0 が選択されます。
+<a href="../../../config_ref/index.html">Config.xml ファイル</a>のこれらの種類の設定を指定しない場合、既定では Windows.Universal バージョン 10.0.0.0 が選択されます。

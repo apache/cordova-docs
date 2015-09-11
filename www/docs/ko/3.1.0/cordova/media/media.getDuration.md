@@ -20,14 +20,14 @@ license: >
 
 # media.getDuration
 
-오디오 파일의 기간을 반환합니다.
+오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 기간을 반환합니다.
 
     media.getDuration();
     
 
 ## 설명
 
-`media.getDuration`메서드가 동기적으로 실행 됩니다 알 초, 오디오 파일의 기간을 반환 합니다. 기간을 알 수 없는 경우-1 값을 반환 합니다.
+`media.getDuration`메서드가 동기적으로 실행 됩니다 알 초, 오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 기간을 반환 합니다. 기간을 알 수 없는 경우-1 값을 반환 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -65,14 +65,14 @@ license: >
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -92,13 +92,13 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -119,7 +119,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     
@@ -127,7 +127,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

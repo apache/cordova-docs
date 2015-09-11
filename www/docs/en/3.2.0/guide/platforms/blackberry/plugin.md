@@ -55,7 +55,7 @@ map the `Echo` argument to the native `Echo` class:
             <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
         </feature>
 
-## The Echo.java File
+## The Echo.java <a href="../../../cordova/file/fileobj/fileobj.html">File</a>
 
 The `feature` specification's `value` attribute references a reverse
 domain-style identifier. This corresponds to a path within the Cordova

@@ -48,14 +48,14 @@ Este método no retener el objeto de contacto en la base de contactos de disposi
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -68,7 +68,7 @@ Este método no retener el objeto de contacto en la base de contactos de disposi
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>Create Contact</p>
       </body>
     </html>

@@ -20,24 +20,24 @@ license: >
 
 # geolocation.getCurrentPosition
 
-返回設備的當前位置作為 `Position` 物件。
+返回<a href="../device/device.html">設備</a>的當前<a href="Position/position.html">位置</a>作為 `Position` 物件。
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                             [geolocationError],
-                                             [geolocationOptions]);
+    navigator.geolocation.getCurrentPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
 ## 參數
 
-*   **geolocationSuccess**： 傳遞當前位置的回檔。
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**： 傳遞當前<a href="Position/position.html">位置</a>的回<a href="../file/fileobj/fileobj.html">檔</a>。
 
-*   **geolocationError**： *（可選）*如果錯誤發生時執行的回檔。
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**： *（可選）*如果錯誤發生時執行的回<a href="../file/fileobj/fileobj.html">檔</a>。
 
-*   **geolocationOptions**： *（可選）*地理定位選項。
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**： *（可選）*<a href="geolocation.html">地理定位</a>選項。
 
 ## 說明
 
-`geolocation.getCurrentPosition`是一個非同步函數。 它將返回到該設備的當前位置 `geolocationSuccess` 回檔與 `Position` 物件作為參數。 如果有錯誤， `geolocationError` 回檔通過 `PositionError` 物件。
+`geolocation.getCurrentPosition`是一個非同步函數。 它將返回到該<a href="../device/device.html">設備</a>的當前<a href="Position/position.html">位置</a> `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` 回<a href="../file/fileobj/fileobj.html">檔</a>與 `Position` 物件作為參數。 如果有錯誤， `<a href="parameters/geolocationError.html">geolocationError</a>` 回<a href="../file/fileobj/fileobj.html">檔</a>通過 `<a href="PositionError/positionError.html">PositionError</a>` 物件。
 
 ## 支援的平臺
 
@@ -65,7 +65,7 @@ license: >
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -109,7 +109,7 @@ license: >
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
-        // onError Callback receives a PositionError object
+        // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

@@ -24,21 +24,21 @@ license: >
 
 ## プロパティ
 
-*   **フォーマット**: 連絡先の完全な名前。*（，）*
+*   **フォーマット**: <a href="../parameters/contactFields.html">連絡先</a>の完全な名前。*（，）*
 
-*   **familyName**: 連絡先の姓。*（，）*
+*   **familyName**: <a href="../parameters/contactFields.html">連絡先</a>の姓。*（，）*
 
-*   **givenName**: 連絡先の名前。*（，）*
+*   **givenName**: <a href="../parameters/contactFields.html">連絡先</a>の名前。*（，）*
 
-*   **ミドル ネーム**: 連絡先のミドル ネーム。*（，）*
+*   **ミドル ネーム**: <a href="../parameters/contactFields.html">連絡先</a>のミドル ネーム。*（，）*
 
-*   **honorificPrefix**: 連絡先のプレフィックス (例*氏*または*博士*) *(，)*
+*   **honorificPrefix**: <a href="../parameters/contactFields.html">連絡先</a>のプレフィックス (例*氏*または*博士*) *(，)*
 
-*   **honorificSuffix**: 連絡先のサフィックス (*弁護士*の例)。*（，）*
+*   **honorificSuffix**: <a href="../parameters/contactFields.html">連絡先</a>のサフィックス (*弁護士*の例)。*（，）*
 
 ## 詳細
 
-`ContactName`オブジェクト、連絡先の名前のプロパティが格納されます。
+`ContactName`オブジェクト、<a href="../parameters/contactFields.html">連絡先</a>の名前のプロパティが格納されます。
 
 ## サポートされているプラットフォーム
 
@@ -61,14 +61,14 @@ license: >
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     filter = ["displayName", "name"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 完全な例
@@ -76,22 +76,22 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter="";
             filter = ["displayName","name"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>

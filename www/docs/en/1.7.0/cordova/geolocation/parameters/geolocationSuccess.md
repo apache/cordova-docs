@@ -30,9 +30,9 @@ The user's callback function that is called when a geolocation position is avail
 Parameters
 ----------
 
-- __position:__ The geolocation position returned by the device. (`Position`)
+- __position:__ The geolocation position returned by the device. (`<a href="../Position/position.html">Position</a>`)
 
-Example
+<a href="../../storage/storage.opendatabase.html">Example</a>
 -------
 
     function geolocationSuccess(position) {

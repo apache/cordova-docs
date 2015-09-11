@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-Contacts
+<a href="Contact/contact.html">Contact</a>s
 ========
 
 > The `contacts` object provides access to the device contacts database.
@@ -26,27 +26,27 @@ Contacts
 Methods
 -------
 
-- contacts.create
-- contacts.find
+- <a href="contacts.create.html">contacts.create</a>
+- <a href="contacts.find.html">contacts.find</a>
 
 Arguments
 ---------
 
-- contactFields
-- contactSuccess
-- contactError
-- contactFindOptions
+- <a href="parameters/contactFields.html">contactFields</a>
+- <a href="parameters/contactSuccess.html">contactSuccess</a>
+- <a href="parameters/contactError.html">contactError</a>
+- <a href="parameters/contactFindOptions.html">contactFindOptions</a>
 
 Objects
 -------
 
-- Contact
-- ContactName
-- ContactField
-- ContactAddress
-- ContactOrganization
-- ContactFindOptions
-- ContactError
+- <a href="Contact/contact.html">Contact</a>
+- <a href="Contact/contact.html">Contact</a>Name
+- <a href="Contact/contact.html">Contact</a>Field
+- <a href="Contact/contact.html">Contact</a>Address
+- <a href="Contact/contact.html">Contact</a>Organization
+- <a href="Contact/contact.html">Contact</a>FindOptions
+- <a href="Contact/contact.html">Contact</a>Error
 
 Permissions
 -----------
@@ -55,7 +55,7 @@ Permissions
 
 #### app/res/xml/config.xml
 
-    <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
+    <plugin name="<a href="Contact/contact.html">Contact</a>s" value="org.apache.cordova.<a href="Contact/contact.html">Contact</a>Manager" />
 
 #### app/AndroidManifest.xml
 
@@ -75,20 +75,20 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Contact" value="org.apache.cordova.pim.Contact" />
+    <plugin name="<a href="Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="Contact/contact.html">Contact</a>" />
 
 #### www/config.xml
 
     <feature id="blackberry.find"        required="true" version="1.0.0.0" />
     <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-    <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
+    <feature id="blackberry.pim.<a href="Contact/contact.html">Contact</a>" required="true" version="1.0.0.0" />
 
 ### iOS
 
 #### config.xml
 
-    <plugin name="Contacts" value="CDVContacts" />
+    <plugin name="<a href="Contact/contact.html">Contact</a>s" value="CDV<a href="Contact/contact.html">Contact</a>s" />
 
 ### webOS
 

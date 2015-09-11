@@ -50,11 +50,11 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - In cygwin, navigate to where you extracted Cordova and go into the Symbian directory</li>
 
  
-4. Hello World
+4. <a href="../webos/index.html">Hello World</a>
 --------------
 
 - Open up index.html located in phonegap/symbian/framework/www with your favourite editor. 
-- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
+- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1><a href="../webos/index.html">Hello World</a></h1>`
 - In cygwin/terminal, type make. This will produce phonegap-symbian.wrt/app.wgz. 
 
 
@@ -66,7 +66,7 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - Load the phonegap-symbian.wrt/app.wgz file into the emulator.
 
 
-5B. Deploy to Device
+5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
 --------------------
 
 - Load the phonegap-symbian.wrt/app.wgz file into the device using bluetooth or email.

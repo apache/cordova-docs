@@ -25,7 +25,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **WatchID**: die ID zurückgegebener`accelerometer.watchAcceleration`.
+*   **WatchID**: die ID zurückgegebener`<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>`.
 
 ## Unterstützte Plattformen
 
@@ -38,7 +38,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
 
 ## Kleines Beispiel
 
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    var watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration

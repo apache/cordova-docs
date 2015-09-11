@@ -24,6 +24,6 @@ Cordova aplikacije se običajno izvajajo kot brskalnik temelji *spletni pogled* 
 
 Napotiti na spletni pogled, morate biti seznanjeni z vsako native programskega okolja. Naslednje navodila za podprte platforme:
 
-*   Amazon ogenj OS spletni pogledi
-*   Spletni Android pogledi
-*   iOS spletni pogledi
+*   <a href="../../platforms/amazonfireos/webview.html">Amazon ogenj OS spletni pogledi</a>
+*   <a href="../../platforms/android/webview.html">Spletni Android pogledi</a>
+*   <a href="../../platforms/ios/webview.html">iOS spletni pogledi</a>

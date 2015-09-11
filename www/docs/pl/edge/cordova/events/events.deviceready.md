@@ -35,7 +35,7 @@ Cordova składa się z dwóch baz kod: macierzystego i JavaScript. Podczas gdy �
 
 `deviceready`Zdarzenie zachowuje się nieco inaczej od innych. Żadnych zdarzeń zarejestrowanych po `deviceready` pożary zdarzenia ma jego funkcja wywołania zwrotnego o nazwie natychmiast.
 
-## Obsługiwane platformy
+## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
 
 *   Amazon Fire OS
 *   Android

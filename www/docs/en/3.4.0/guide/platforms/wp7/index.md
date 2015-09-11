@@ -29,12 +29,12 @@ Phone 8 apps do _not_ run on Windows Phone 7 devices.
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+* <a href="../wp8/upgrading.html">Upgrading Windows Phone</a>
+* <a href="../wp8/plugin.html">Windows Phone Plugins</a>
+* <a href="../wp8/tools.html">Windows Phone Command-line Tools</a>
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
 current interface.
 
 ## System Requirements

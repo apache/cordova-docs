@@ -29,7 +29,7 @@ OnSuccess Callback-Funktion, die die Bilddaten bereitstellt.
 
 ## Parameter
 
-*   **CMYK**: Base64-Codierung der Bilddaten, *oder* die Image-Datei-URI, je nach `cameraOptions` in Kraft. *(String)*
+*   **CMYK**: Base64-Codierung der Bilddaten, *oder* die Image-<a href="../../file/fileobj/fileobj.html">Datei</a>-URI, je nach `<a href="cameraOptions.html">cameraOptions</a>` in Kraft. *(String)*
 
 ## Beispiel
 

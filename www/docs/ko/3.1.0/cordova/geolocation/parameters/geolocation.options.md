@@ -20,19 +20,19 @@ license: >
 
 # geolocationOptions
 
-선택적 매개 변수는 위치 정보 검색을 사용자 지정 하려면`Position`.
+선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 <a href="../Position/position.html">위치</a> 정보 검색을 사용자 지정 하려면`Position`.
 
     {maximumAge: 3000, 타임 아웃: 5000, enableHighAccuracy: true};
     
 
 ## 옵션
 
-*   **enableHighAccuracy**: 힌트는 응용 프로그램에 필요한 최상의 결과 제공 합니다. 기본적으로 장치를 검색 하려고 한 `Position` 네트워크 기반 방법을 사용 하 여. 이 속성을 설정 `true` 위성 위치 등 보다 정확한 방법을 사용 하 여 프레임 워크. *(부울)*
+*   **enableHighAccuracy**: 힌트는 응용 프로그램에 필요한 최상의 결과 제공 합니다. 기본적으로 <a href="../../device/device.html">장치</a>를 검색 하려고 한 `Position` 네트워크 기반 방법을 사용 하 여. 이 속성을 설정 `true` 위성 <a href="../Position/position.html">위치</a> 등 보다 정확한 방법을 사용 하 여 프레임 워크. *(부울)*
 
-*   **시간 제한**: 최대 시간의 길이 (밀리초) 호출에서 전달할 수 있는 `geolocation.getCurrentPosition` 또는 `geolocation.watchPosition` 해당까지 `geolocationSuccess` 콜백 실행. 경우는 `geolocationSuccess` 콜백이이 시간 내에서 호출 되지 않습니다는 `geolocationError` 콜백 전달 되는 `PositionError.TIMEOUT` 오류 코드. (함께 사용 하는 경우 `geolocation.watchPosition` , `geolocationError` 콜백 간격에서 호출 될 수 있는 모든 `timeout` 밀리초!) *(수)*
+*   **시간 제한**: 최대 시간의 길이 (밀리초) 호출에서 전달할 수 있는 `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` 또는 `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` 해당까지 `<a href="geolocationSuccess.html">geolocationSuccess</a>` 콜백 실행. 경우는 `<a href="geolocationSuccess.html">geolocationSuccess</a>` 콜백이이 시간 내에서 호출 되지 않습니다는 `<a href="geolocationError.html">geolocationError</a>` 콜백 전달 되는 `<a href="../PositionError/positionError.html">PositionError</a>.TIMEOUT` 오류 코드. (함께 사용 하는 경우 `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` , `<a href="geolocationError.html">geolocationError</a>` 콜백 간격에서 호출 될 수 있는 모든 `timeout` 밀리초!) *(수)*
 
-*   **maximumAge**: 밀리초 단위로 지정 된 시간 보다 더 큰 되는 캐시 위치를 수락 합니다. *(수)*
+*   **maximumAge**: 밀리초 단위로 지정 된 시간 보다 더 큰 되는 캐시 <a href="../Position/position.html">위치</a>를 수락 합니다. *(수)*
 
 ## 안 드 로이드 단점
 
-하지 않는 한 안 드 로이드 2.x 에뮬레이터 위치 결과 반환 하지 않습니다는 `enableHighAccuracy` 옵션을 설정`true`.
+하지 않는 한 안 드 로이드 2.x 에뮬레이터 <a href="../Position/position.html">위치</a> 결과 반환 하지 않습니다는 `enableHighAccuracy` 옵션을 설정`true`.

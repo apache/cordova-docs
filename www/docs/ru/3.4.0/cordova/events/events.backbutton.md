@@ -27,7 +27,7 @@ license: >
 
 ## Подробная информация
 
-Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `deviceready`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
+Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `<a href="events.deviceready.html">deviceready</a>`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
 
 ## Поддерживаемые платформы
 
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>Back Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

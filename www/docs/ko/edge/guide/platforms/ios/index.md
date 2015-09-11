@@ -18,23 +18,23 @@ license: >
     under the License.
 ---
 
-# iOS 플랫폼 가이드
+# iOS 플랫폼 <a href="../../../index.html">가이드</a>
 
-이 가이드에는 코르도바 애플 리 케이 션 아이폰과 iPad와 같은 iOS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 <a href="../../../index.html">가이드</a>에는 코르도바 애플 리 케이 션 아이폰과 iPad와 같은 iOS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   iOS 구성
-*   IOS 업그레이드
-*   iOS WebViews
-*   iOS 플러그인
-*   iOS 셸 도구 가이드
+*   <a href="config.html">iOS 구성</a>
+*   <a href="upgrading.html">IOS 업그레이드</a>
+*   <a href="webview.html">iOS WebViews</a>
+*   <a href="plugin.html">iOS 플러그인</a>
+*   iOS 셸 도구 <a href="../../../index.html">가이드</a>
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
 
 ## 요구 사항 및 지원
 
 애플 ® 도구 인텔 기반 맥에 OS X 운영 체제 에서만 실행 iOS 응용 프로그램을 빌드하는 데 필요한. Xcode ® 6.0 (최소 필수 버전) 실행 OS X 버전 10.9 (댈러스 매버릭스)에 이상, iOS 8 포함 SDK (소프트웨어 개발 키트). 제출 애플 리 케이 션 애플 애플 리 케이 션 Store℠ 최신 버전을의 Apple 도구를 필요 합니다.
 
-설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 장치 기능을 테스트 하는 실제 장치를 해야 합니다. 장치 해야 합니다 iOS 6.x 설치, 코르도바 3.0 현재 지원 되는 최소 iOS 버전. 지원 장치 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 가이드는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
+설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 장치 기능을 테스트 하는 실제 장치를 해야 합니다. 장치 해야 합니다 iOS 6.x 설치, 코르도바 3.0 현재 지원 되는 최소 iOS 버전. 지원 장치 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 <a href="../../../index.html">가이드</a>는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -66,7 +66,7 @@ Comman 라인 터미널에서 실행:
 
 ## 새 프로젝트 만들기
 
-유틸리티 사용 하 여 `코르도바` 새로운 프로젝트 설정에 코르도바는 명령줄 인터페이스를 설명 하는 대로. 예를 들어 소스 코드 디렉토리에:
+유틸리티 사용 하 여 `코르도바` 새로운 프로젝트 설정에 코르도바는 <a href="../../cli/index.html">명령줄 인터페이스</a>를 설명 하는 대로. 예를 들어 소스 코드 디렉토리에:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -153,7 +153,7 @@ Xcode의 경고 `invokeString` 방법에 대 한 사용자 지정 URL에서 응�
 
 *   *Classes/MainViewController.m* 파일을 편집, 코드의 다음 블록을 둘러싸고 `/*` 및 `*/` 코멘트 아래와 같이 입력 합니다 **명령-s** 파일을 저장할:
     
-        (void) webViewDidFinishLoad:(UIWebView*) theWebView {/ / ___PROJECTNAME__-Info.plist 처리 하는 프로토콜을 지정 하는 경우에 유효 / * 경우 (self.invokeString) {/ /이 전달 deviceready 이벤트가 발생 하기 전에 deviceready NSLog를 받을 때 js에 액세스할 수 있습니다 (@"사용 되지 않음: window.invokeString-window.handleOpenURL(url) 함수를 사용, 항상 라는 응용 프로그램을 사용자 지정 스키마 url을 통해 시작할 때.");
+        (void) webViewDidFinishLoad:(UIWebView*) theWebView {/ / ___PROJECTNAME__-Info.plist 처리 하는 프로토콜을 지정 하는 경우에 유효 / * 경우 (self.invokeString) {/ /이 전달 <a href="../../../cordova/events/events.deviceready.html">deviceready</a> <a href="../../../cordova/events/events.html">이벤트</a>가 발생 하기 전에 <a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog를 받을 때 js에 액세스할 수 있습니다 (@"사용 되지 않음: window.invokeString-window.handleOpenURL(url) 함수를 사용, 항상 라는 응용 프로그램을 사용자 지정 스키마 url을 통해 시작할 때.");
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         } * / / / 기본 색상 블랙 배경 일치 네이티브 애플 리 케이 션 theWebView.backgroundColor = [UIColor blackColor];
@@ -185,11 +185,11 @@ Xcode의 경고 `invokeString` 방법에 대 한 사용자 지정 URL에서 응�
 
 자세한 내용은 Apple의 설명서를 참조 하십시오.
 
-*   [개발 시작 iOS 애플 리 케이 션 오늘][12] iOS 애플 리 케이 션을 개발 하기 위한 단계에 대 한 빠른 개요를 제공 합니다.
+*   [개발 시작 iOS 애플 리 케이 션 오늘][12] iOS 애플 리 케이 션을 개발 하기 위한 단계에 대 한 빠른 <a href="../../overview/index.html">개요</a>를 제공 합니다.
 
-*   [회원 센터 홈 페이지][13] 기술 리소스, 프로 비 저 닝 포털, 배포 가이드 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
+*   [회원 센터 홈 페이지][13] 기술 리소스, 프로 비 저 닝 포털, 배포 <a href="../../../index.html">가이드</a> 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
 
-*   [IOS 용 도구 워크플로 가이드][14]
+*   [IOS 용 도구 워크플로 <a href="../../../index.html">가이드</a>][14]
 
 *   [Xcode 사용 설명서][15]
 

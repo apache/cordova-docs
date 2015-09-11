@@ -20,7 +20,7 @@ license: >
 
 # geolocationSuccess
 
-Функция обратного вызова пользователя, которая выполняется, когда географическое положение становится доступным (при вызове из `geolocation.getCurrentPosition` ), или когда положение изменяется (при вызове из`geolocation.watchPosition`).
+Функция обратного вызова пользователя, которая выполняется, когда географическое положение становится доступным (при вызове из `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ), или когда положение изменяется (при вызове из`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
 
     function(position) {
         // Do something

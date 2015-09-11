@@ -18,30 +18,30 @@ license: >
     under the License.
 ---
 
-# geolocation.watchPosition
+# geolocation.watch<a href="Position/position.html">Position</a>
 
-Uhren für Änderungen an der aktuellen Position des Geräts.
+Uhren für Änderungen an der aktuellen <a href="Position/position.html">Position</a> des <a href="../device/device.html">Gerät</a>s.
 
-    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
-                                                      [geolocationError],
-                                                      [geolocationOptions]);
+    var watchId = navigator.geolocation.watch<a href="Position/position.html">Position</a>(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                                      [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                                      [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
 ## Parameter
 
-*   **GeolocationSuccess**: der Rückruf, der die aktuelle Position übergeben wird.
+*   **<a href="geolocation.html">Geolocation</a>Success**: der Rückruf, der die aktuelle <a href="Position/position.html">Position</a> übergeben wird.
 
-*   **GeolocationError**: (Optional) der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt.
+*   **<a href="geolocation.html">Geolocation</a>Error**: (Optional) der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt.
 
-*   **GeolocationOptions**: (Optional) die Geolocation-Optionen.
+*   **<a href="geolocation.html">Geolocation</a>Options**: (Optional) die <a href="geolocation.html">Geolocation</a>-Optionen.
 
 ## Gibt
 
-*   **String**: gibt eine Uhr-Id, die das Uhr Stellung Intervall verweist zurück. Die Uhr-Id sollte verwendet werden, mit `geolocation.clearWatch` , gerade für Änderungen zu stoppen.
+*   **String**: gibt eine Uhr-Id, die das Uhr Stellung Intervall verweist zurück. Die Uhr-Id sollte verwendet werden, mit `<a href="geolocation.clearWatch.html">geolocation.clearWatch</a>` , gerade für Änderungen zu stoppen.
 
 ## Beschreibung
 
-`geolocation.watchPosition`ist eine asynchrone Funktion. Es gibt das Gerät aktuelle Position zurück, wenn eine Änderung erkannt wird. Wenn das Gerät einen neuen Speicherort und ruft die `geolocationSuccess` Rückruf führt mit einem `Position` Objekt als Parameter. Wenn ein Fehler vorliegt der `geolocationError` Rückruf führt mit einem `PositionError` Objekt als Parameter.
+`geolocation.watch<a href="Position/position.html">Position</a>`ist eine asynchrone Funktion. Es gibt das <a href="../device/device.html">Gerät</a> aktuelle <a href="Position/position.html">Position</a> zurück, wenn eine Änderung erkannt wird. Wenn das <a href="../device/device.html">Gerät</a> einen neuen <a href="../storage/storage.html">Speicher</a>ort und ruft die `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` Rückruf führt mit einem `<a href="Position/position.html">Position</a>` Objekt als Parameter. Wenn ein Fehler vorliegt der `<a href="parameters/geolocationError.html">geolocationError</a>` Rückruf führt mit einem `<a href="Position/position.html">Position</a>Error` Objekt als Parameter.
 
 ## Unterstützte Plattformen
 
@@ -55,7 +55,7 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
 ## Kleines Beispiel
 
     // onSuccess Callback
-    //   This method accepts a `Position` object, which contains
+    //   This method accepts a `<a href="Position/position.html">Position</a>` object, which contains
     //   the current GPS coordinates
     //
     function onSuccess(position) {
@@ -65,7 +65,7 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
                             '<hr />'      + element.innerHTML;
     }
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="Position/position.html">Position</a>Error object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -74,7 +74,7 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
     
     // Options: throw an error if no update is received every 30 seconds.
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+    var watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, { timeout: 30000 });
     
 
 ## Vollständiges Beispiel
@@ -82,14 +82,14 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         var watchID = null;
     
@@ -98,10 +98,10 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
         function onDeviceReady() {
             // Throw an error if no update is received every 30 seconds
             var options = { timeout: 30000 };
-            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+            watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, options);
         }
     
-        // onSuccess Geolocation
+        // onSuccess <a href="geolocation.html">Geolocation</a>
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -110,7 +110,7 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
                                 '<hr />'      + element.innerHTML;
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="Position/position.html">Position</a>Error object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

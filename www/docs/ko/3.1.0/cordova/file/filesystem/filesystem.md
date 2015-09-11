@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-# 파일 시스템
+# <a href="../fileobj/fileobj.html">파일</a> 시스템
 
-이 개체는 파일 시스템을 나타냅니다.
+이 개체는 <a href="../fileobj/fileobj.html">파일</a> 시스템을 나타냅니다.
 
 ## 속성
 
-*   **이름**: 파일 시스템의 이름. *(DOMString)*
+*   **이름**: <a href="../fileobj/fileobj.html">파일</a> 시스템의 이름. *(DOMString)*
 
-*   **루트**: 파일 시스템의 루트 디렉토리. *(DirectoryEntry)*
+*   **루트**: <a href="../fileobj/fileobj.html">파일</a> 시스템의 루트 디렉토리. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
 
 ## 세부 정보
 
-`FileSystem`개체는 파일 시스템에 대 한 정보를 나타냅니다. 파일 시스템의 이름은 노출된 파일 시스템 목록에서 고유 합니다. 루트 속성에 포함 되어 있는 `DirectoryEntry` 파일 시스템의 루트 디렉터리를 나타내는 개체입니다.
+`FileSystem`개체는 <a href="../fileobj/fileobj.html">파일</a> 시스템에 대 한 정보를 나타냅니다. <a href="../fileobj/fileobj.html">파일</a> 시스템의 이름은 노출된 <a href="../fileobj/fileobj.html">파일</a> 시스템 목록에서 고유 합니다. 루트 속성에 포함 되어 있는 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` <a href="../fileobj/fileobj.html">파일</a> 시스템의 루트 디렉터리를 나타내는 개체입니다.
 
 ## 지원 되는 플랫폼
 
@@ -40,7 +40,7 @@ license: >
 *   Windows Phone 7과 8
 *   윈도우 8
 
-## 파일 시스템 빠른 예제
+## <a href="../fileobj/fileobj.html">파일</a> 시스템 빠른 예제
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -48,7 +48,7 @@ license: >
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onSuccess, null);
     
 
 ## 전체 예제
@@ -56,19 +56,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System Example</title>
+        <title>File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
     
         function onFileSystemSuccess(fileSystem) {
@@ -83,7 +83,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>File System</p>
       </body>
     </html>

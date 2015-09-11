@@ -20,7 +20,7 @@ license: >
 
 # 플러그인 명세
 
-`plugin.xml`파일은 XML 문서에는 `plugins` 네임 스페이스: `http://apache.org/cordova/ns/plugins/1.0` . 그것은 포함 한 최상위 `plugin` 플러그인, 정의 하는 요소와 플러그인의 구조를 정의 하는 아이 들.
+`plugin.xml`<a href="../cordova/file/fileobj/fileobj.html">파일</a>은 XML 문서에는 `plugins` 네임 스페이스: `http://apache.org/cordova/ns/plugins/1.0` . 그것은 포함 한 최상위 `plugin` 플러그인, 정의 하는 요소와 플러그인의 구조를 정의 하는 아이 들.
 
 샘플 플러그인 요소:
 
@@ -35,7 +35,7 @@ license: >
 
 `plugin`요소는 플러그인 매니페스트의 최상위 요소입니다. 다음과 같은 특성을 보유 하 고:
 
-*   `xmlns`(필수): 플러그인 네임 스페이스 `http://apache.org/cordova/ns/plugins/1.0` . 문서에 추가할 태그와 같은 다른 네임 스페이스에서 XML에 포함 된 경우는 `AndroidManifest.xml` 파일을 최상위 요소에도 이러한 네임 스페이스를 포함 합니다.
+*   `xmlns`(필수): 플러그인 네임 스페이스 `http://apache.org/cordova/ns/plugins/1.0` . 문서에 추가할 태그와 같은 다른 네임 스페이스에서 XML에 포함 된 경우는 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 최상위 요소에도 이러한 네임 스페이스를 포함 합니다.
 
 *   `id`(필수): 리버스 도메인 같은 식별자는 플러그인에 대 한 스타일`com.alunny.foo`
 
@@ -94,7 +94,7 @@ license: >
 
 *   `version`(필수): 당신의 프레임 워크 설치 해야 하는 버전.
 
-*   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 디렉토리의 최상위 수준 디렉터리 내에서 해야 합니다.
+*   `scriptSrc`(필수): 스크립트 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 <a href="../cordova/file/fileobj/fileobj.html">파일</a>은 플러그인 디렉토리의 최상위 수준 디렉터리 내에서 해야 합니다.
 
 *   `platform`(필수): 어떤 플랫폼을 당신의 프레임 워크를 지원 합니다. 와일드 카드를 사용할 수 있습니다 ' *' 모든 플랫폼에 대 한 지원 말, 'android|ios|blackberry10' 같은 파이프 문자 또는 '안 드 로이드'와 같은 단일 플랫폼으로 여러 개를 지정 합니다.
 
@@ -143,7 +143,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 ## `<asset>`요소
 
-하나 이상의 요소 목록 파일 또는 코르도바 응용 프로그램에 복사할 수 디렉터리 `www` 디렉터리. 예:
+하나 이상의 요소 목록 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 또는 코르도바 응용 프로그램에 복사할 수 디렉터리 `www` 디렉터리. 예:
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -153,32 +153,32 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 모든 `<asset>` 태그 필요 둘 다 `src` 와 `target` 특성. 웹 전용 플러그인 포함 주로 `<asset>` 요소. 모든 `<asset>` 요소 안에 중첩 된 `<platform>` 아래 설명 된 대로 요소 플랫폼 관련 웹 자산을 지정 합니다. 특성은 다음과 같습니다.
 
-*   `src`(필수): 파일 또는 디렉토리 위치 플러그인 패키지에 상대적으로 `plugin.xml` 문서. 파일에 지정 된 존재 하지 않는 경우 `src` 위치, plugman 중지 및 설치 프로세스를 취소, 문제는 충돌에 대 한 알림 및 0이 아닌 코드와 함께 종료 합니다.
+*   `src`(필수): <a href="../cordova/file/fileobj/fileobj.html">파일</a> 또는 디렉토리 <a href="../cordova/geolocation/Position/position.html">위치</a> 플러그인 패키지에 상대적으로 `plugin.xml` 문서. <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 지정 된 존재 하지 않는 경우 `src` <a href="../cordova/geolocation/Position/position.html">위치</a>, plugman 중지 및 설치 프로세스를 취소, 문제는 충돌에 대 한 <a href="../cordova/notification/notification.html">알림</a> 및 0이 아닌 코드와 함께 종료 합니다.
 
 *   `target`(필수):
     
-    어디 파일 또는 디렉터리에에서 있어야 코르도바 애플 리 케이 션, 상대적으로 `www` 디렉터리. 자산 하위 디렉터리, 예를 들어 대상 될 수 있습니다.
+    어디 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 또는 디렉터리에에서 있어야 코르도바 애플 리 케이 션, 상대적으로 `www` 디렉터리. 자산 하위 디렉터리, 예를 들어 대상 될 수 있습니다.
     
     <asset src="www/new-foo.js" target="js/experimental/foo.js" />
     
-    만듭니다는 `js/experimental` 내의 디렉토리는 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` 파일 및 그것의 이름을 바꾸고 `foo.js` . 파일이 대상 위치에 이미 있으면 plugman 중지 하 고 설치 프로세스를 취소, 충돌에 대 한 알림을 고 0이 아닌 코드와 함께 종료 됩니다.
+    만듭니다는 `js/experimental` 내의 디렉토리는 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` <a href="../cordova/file/fileobj/fileobj.html">파일</a> 및 그것의 이름을 바꾸고 `foo.js` . <a href="../cordova/file/fileobj/fileobj.html">파일</a>이 대상 <a href="../cordova/geolocation/Position/position.html">위치</a>에 이미 있으면 plugman 중지 하 고 설치 프로세스를 취소, 충돌에 대 한 <a href="../cordova/notification/notification.html">알림</a>을 고 0이 아닌 코드와 함께 종료 됩니다.
 
 ## `<js-module>`요소
 
-대부분의 플러그인 하나 이상의 JavaScript 파일이 포함 됩니다. 각 `<js-module>` 태그 자바 스크립트 파일에 해당 하 고 플러그인의 사용자 추가 하는 데 하지 못하도록 한 `<script>` 각 파일에 대 한 태그. 반면 `<asset>` 태그 복사한 파일에 플러그인 디렉터리에서 `www` , `<js-module>` 태그는 훨씬 더 정교한. 그들은 다음과 같습니다.
+대부분의 플러그인 하나 이상의 JavaScript <a href="../cordova/file/fileobj/fileobj.html">파일</a>이 포함 됩니다. 각 `<js-module>` 태그 자바 스크립트 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 해당 하 고 플러그인의 사용자 추가 하는 데 하지 못하도록 한 `<script>` 각 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 대 한 태그. 반면 `<asset>` 태그 복사한 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 플러그인 디렉터리에서 `www` , `<js-module>` 태그는 훨씬 더 정교한. 그들은 다음과 같습니다.
 
     <js-module src="socket.js" name="Socket">
         <clobbers target="chrome.socket" />
     </js-module>
     
 
-예를 들어, 위의 플러그인을 설치할 때 `socket.js` 에 복사 `www/plugins/my.plugin.id/socket.js` 에 항목으로 추가 하 고 `www/cordova_plugins.js` . 로드 시 코드 `cordova.js` XHR을 사용 하 여 각 파일을 주입 한 `<script>` html 태그. 지우다 또는 아래에 설명 된 대로 적절 한 병합에 대 한 매핑을 추가 합니다.
+예를 들어, 위의 플러그인을 설치할 때 `socket.js` 에 복사 `www/plugins/my.plugin.id/socket.js` 에 항목으로 추가 하 고 `www/cordova_plugins.js` . 로드 시 코드 `cordova.js` XHR을 사용 하 여 각 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 주입 한 `<script>` html 태그. 지우다 또는 아래에 설명 된 대로 적절 한 병합에 대 한 매핑을 추가 합니다.
 
-*안* 랩 파일을 `cordova.define` , 그것은 자동으로 추가 됩니다. 모듈을 폐쇄에 싸여 있다 `module` , `exports` , 및 `require` 범위에서 마찬가지로 AMD 모듈에 대 한 정상입니다.
+*안* 랩 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 `cordova.define` , 그것은 자동으로 추가 됩니다. 모듈을 폐쇄에 싸여 있다 `module` , `exports` , 및 `require` 범위에서 마찬가지로 AMD 모듈에 대 한 정상입니다.
 
 에 대 한 세부 정보는 `<js-module>` 태그:
 
-*   `src`관련 플러그인 디렉토리에서 파일 참조를 `plugin.xml` 파일.
+*   `src`관련 플러그인 디렉토리에서 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 참조를 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>.
 
 *   `name`모듈 이름의 마지막 부분을 제공 합니다. 그것은 일반적으로 당신이 무엇을 좋아 하든지 수 고만 사용 하려는 경우 중요 한 `cordova.require` 를 JavaScript 코드에서 플러그인의 다른 부분을 가져오는. 모듈 이름을 한 `<js-module>` 귀하의 플러그인은 `id` 의 값에 따라 `name` . 예를 들어, 위의와 `id` 의 `chrome.socket` , 모듈 이름`chrome.socket.Socket`.
 
@@ -188,11 +188,11 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     *   `<merges target="some.value"/>`모듈에서 기존 값을 병합 해야 나타냅니다 `window.some.value` . 어떤 키가 이미 있는 경우 모듈의 버전 원래를 재정의 합니다. 만큼 당신이 수 있는 `<merges>` 당신 처럼. 모든 개체에 사용할 수 없는 `window` 만들어집니다.
     
-    *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이벤트 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
+    *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. <a href="../cordova/events/events.html">이벤트</a> 처리기를 <a href="../cordova/connection/connection.html">연결</a>할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
     
     *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스 될 수 있습니다`cordova.require`.
 
-만약 `src` plugman 중지 및 설치 반대, 문제, 알림 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
+만약 `src` plugman 중지 및 설치 반대, 문제, <a href="../cordova/notification/notification.html">알림</a> 문제 및 0이 아닌 코드와 함께 종료는 기존 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 해결 되지 않습니다.
 
 중첩 `<js-module>` 내의 요소 `<platform>` 플랫폼 관련 자바 스크립트 모듈 바인딩을 선언 합니다.
 
@@ -221,7 +221,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 ## `< 플랫폼 >`
 
-`<platform>`태그 연결 된 네이티브 코드 또는 구성 파일을 수정 해야 하는 플랫폼을 식별 합니다. 이 명세를 사용 하 여 도구 지원 되는 플랫폼을 식별 하 고 코르 도우 바 프로젝트에 코드를 설치할 수 있습니다.
+`<platform>`태그 <a href="../cordova/connection/connection.html">연결</a> 된 네이티브 코드 또는 구성 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 수정 해야 하는 플랫폼을 식별 합니다. 이 명세를 사용 하 여 도구 지원 되는 플랫폼을 식별 하 고 코르 도우 바 프로젝트에 코드를 설치할 수 있습니다.
 
 플러그인 없이 `<platform>` 태그 자바 스크립트 전용 및 따라서 모든 플랫폼에서 설치 가능한 것으로 간주 합니다.
 
@@ -235,7 +235,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     </platform>
     
 
-필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 연결.
+필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 <a href="../cordova/connection/connection.html">연결</a>.
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 
@@ -245,7 +245,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 *   wp7
 *   wp8
 
-## `< 소스 파일 >`
+## `< 소스 <a href="../cordova/file/fileobj/fileobj.html">파일</a> >`
 
 `<source-file>`요소는 프로젝트에는 설치 되어 있어야 실행 가능한 소스 코드를 식별 합니다. 예:
 
@@ -260,21 +260,21 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 그것은 다음과 같은 특성을 지원합니다.
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 경우는 `src` 파일을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
+*   `src`(필수): 관련 <a href="../cordova/file/fileobj/fileobj.html">파일</a>의 <a href="../cordova/geolocation/Position/position.html">위치</a> `plugin.xml` . 경우는 `src` <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 <a href="../cordova/notification/notification.html">알림</a> 및 0이 아닌 코드와 함께 종료 됩니다.
 
-*   `target-dir`: 디렉터리에 파일 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 파일 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
+*   `target-dir`: 디렉터리에 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
     
-    자산, 것과 같이 경우는 `target` 의 한 `source-file` 기존 파일을 덮어쓸 것, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
+    자산, 것과 같이 경우는 `target` 의 한 `source-file` 기존 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 덮어쓸 것, plugman 중지 설치 반대, 문제는 문제에 대 한 <a href="../cordova/notification/notification.html">알림</a> 및 0이 아닌 코드와 함께 종료 됩니다.
 
-*   `framework`(iOS): 만약 설정 `true` , 또한 프로젝트에는 프레임 워크 지정된 된 파일을 추가 합니다.
+*   `framework`(iOS): 만약 설정 `true` , 또한 프로젝트에는 프레임 워크 지정된 된 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 추가 합니다.
 
-*   `compiler-flags`(iOS): 만약 설정, 특정 소스 파일에 대해 지정 된 컴파일러 플래그를 지정 합니다.
+*   `compiler-flags`(iOS): 만약 설정, 특정 소스 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 대해 지정 된 컴<a href="../cordova/file/fileobj/fileobj.html">파일</a>러 <a href="../cordova/file/flags/flags.html">플래그</a>를 지정 합니다.
 
 ## `<config-file>`
 
-수정, 어디 그 문서에서 수정 자리 한다와 무엇을 수정 해야 하는 XML 기반 구성 파일을 식별 합니다.
+수정, 어디 그 문서에서 수정 자리 한다와 무엇을 수정 해야 하는 XML 기반 구성 <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 식별 합니다.
 
-이 요소와 수정에 대 한 테스트 된 두 가지 파일 형식은 `xml` 및 `plist` 파일.
+이 요소와 수정에 대 한 테스트 된 두 가지 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 형식은 `xml` 및 `plist` <a href="../cordova/file/fileobj/fileobj.html">파일</a>.
 
 `config-file`요소는만 XML 문서 트리에 새로운 아이 추가할 수 있습니다. 이들이 XML 리터럴을 대상 문서에 삽입할 수 있습니다.
 
@@ -304,17 +304,17 @@ XML에 대 한 예제:
 
 *   `target`:
     
-    파일을 수정할 수 및 코르도바 프로젝트의 루트에 상대적인 경로입니다.
+    <a href="../cordova/file/fileobj/fileobj.html">파일</a>을 수정할 수 및 코르도바 프로젝트의 루트에 상대적인 경로입니다.
     
     대상에는 와일드 카드 포함 될 수 있습니다 ( `*` ) 요소. 이 경우에, plugman 반복적으로 프로젝트 디렉터리 구조를 통해 검색 하 고 첫 번째 일치 항목을 사용 하 여.
     
-    Ios, 프로젝트 디렉터리 루트를 기준으로 구성 파일의 위치는 알려져 있지, 그래서의 대상 지정 `config.xml` 을 확인`cordova-ios-project/MyAppName/config.xml`.
+    Ios, 프로젝트 디렉터리 루트를 기준으로 구성 <a href="../cordova/file/fileobj/fileobj.html">파일</a>의 <a href="../cordova/geolocation/Position/position.html">위치</a>는 알려져 있지, 그래서의 대상 지정 `config.xml` 을 확인`cordova-ios-project/MyAppName/config.xml`.
     
-    지정 된 파일이 존재 하지 않는 경우 도구 구성 변화를 무시 하 고 설치를 계속.
+    지정 된 <a href="../cordova/file/fileobj/fileobj.html">파일</a>이 존재 하지 않는 경우 도구 구성 변화를 무시 하 고 설치를 계속.
 
-*   `parent`구성 파일에 추가 될 요소의 부모를 참조: XPath 선택기입니다. 절대 선택기를 사용 하는 경우 와일드 카드를 사용할 수 있습니다 ( `*` ) 예를 들어, 루트 요소를 지정 하려면`/*/plugins`.
+*   `parent`구성 <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 추가 될 요소의 부모를 참조: XPath 선택기입니다. 절대 선택기를 사용 하는 경우 와일드 카드를 사용할 수 있습니다 ( `*` ) 예를 들어, 루트 요소를 지정 하려면`/*/plugins`.
     
-    대 한 `plist` 파일에 `parent` 어떤 부모 키 아래 지정 된 XML을 삽입 해야 합니다 확인 합니다.
+    대 한 `plist` <a href="../cordova/file/fileobj/fileobj.html">파일</a>에 `parent` 어떤 부모 키 아래 지정 된 XML을 삽입 해야 합니다 확인 합니다.
     
     선택기 지정 된 문서의 아이 게 해결 되지 않으면, 도구 중지 되 고 반대로 설치 프로세스 경고를 표시 및 0이 아닌 코드와 함께 종료 됩니다.
 
@@ -331,14 +331,14 @@ XML에 대 한 예제:
     </config-file>
     
 
-키 및 올바른에 추가할 값을 지정 `AppInfo.plist` iOS 코르도바 프로젝트에서 파일. 예를 들어:
+키 및 올바른에 추가할 값을 지정 `AppInfo.plist` iOS 코르도바 프로젝트에서 <a href="../cordova/file/fileobj/fileobj.html">파일</a>. 예를 들어:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## `<resource-file>`그리고`<header-file>`
 
-소스 파일 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 파일, 헤더 및 리소스 구분. 예:
+소스 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 <a href="../cordova/file/fileobj/fileobj.html">파일</a>, 헤더 및 리소스 구분. 예:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
@@ -347,7 +347,7 @@ XML에 대 한 예제:
 
 ## `<lib-file>`
 
-블랙베리 10 같은 플랫폼만 소스, 리소스 및 헤더 파일 처럼 사용자가 만든 라이브러리를 사용 하는. 예:
+블랙베리 10 같은 플랫폼만 소스, 리소스 및 헤더 <a href="../cordova/file/fileobj/fileobj.html">파일</a> 처럼 사용자가 만든 라이브러리를 사용 하는. 예:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -355,9 +355,9 @@ XML에 대 한 예제:
 
 지원된 특성:
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 만약 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 반대 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
+*   `src`(필수): 관련 <a href="../cordova/file/fileobj/fileobj.html">파일</a>의 <a href="../cordova/geolocation/Position/position.html">위치</a> `plugin.xml` . 만약 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 반대 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
 
-*   `arch`: 어떤 아키텍처는 `.so` 파일이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
+*   `arch`: 어떤 아키텍처는 `.so` <a href="../cordova/file/fileobj/fileobj.html">파일</a>이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
 
 ## `<framework>`
 
@@ -371,7 +371,7 @@ XML에 대 한 예제:
 
 `src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
 
-옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
+옵션 `weak` 특성은 프레임 워크 약하게 <a href="../cordova/connection/connection.html">연결</a> 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
 
 ## `<info>`
 
@@ -394,13 +394,13 @@ XML에 대 한 예제:
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-내용에서 삽입 된 경우에는 `plugin.xml` 파일은 미리 알 수 없습니다, 변수는 달러 기호 뒤에 대문자, 숫자 또는 밑줄의 시리즈에 의해 나타날 수 있다. 위의 예제는 `plugin.xml` 파일이이 태그를 포함할 것입니다:
+내용에서 삽입 된 경우에는 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>은 미리 알 수 없습니다, 변수는 달러 기호 뒤에 대문자, 숫자 또는 밑줄의 시리즈에 의해 나타날 수 있다. 위의 예제는 `plugin.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>이이 태그를 포함할 것입니다:
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 지정된 된 값 또는 빈 문자열을 변수 참조를 대체 하는 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
+plugman 지정된 된 값 또는 빈 문자열을 변수 참조를 대체 하는 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
 
 plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청할 수 있습니다. 예를 들어 명령줄 인수로 C2M 및 구글 맵 스 API 키를 지정할 수 있습니다.
 
@@ -418,4 +418,4 @@ plugman 확인이 필요한 환경 설정에서 전달 됩니다. 그렇지 않�
 
 ## $PACKAGE_NAME
 
-리버스 도메인 스타일에 해당 하는 패키지에 대 한 고유 식별자는 `CFBundleIdentifier` iOS에서 또는 `package` 특성은 최상위의 `manifest` 요소에는 `AndroidManifest.xml` 파일.
+리버스 도메인 스타일에 해당 하는 패키지에 대 한 고유 식별자는 `CFBundleIdentifier` iOS에서 또는 `package` 특성은 최상위의 `manifest` 요소에는 `AndroidManifest.xml` <a href="../cordova/file/fileobj/fileobj.html">파일</a>.

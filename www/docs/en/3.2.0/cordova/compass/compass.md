@@ -24,18 +24,18 @@ license: >
 
 ## Methods
 
-- compass.getCurrentHeading
-- compass.watchHeading
-- compass.clearWatch
-- compass.watchHeadingFilter (obsolete)
-- compass.clearWatchFilter   (obsolete)
+- <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
+- <a href="compass.watchHeading.html">compass.watchHeading</a>
+- <a href="compass.clearWatch.html">compass.clearWatch</a>
+- <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a> (obsolete)
+- <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a>   (obsolete)
 
 ## Arguments
 
-- compassSuccess
-- compassError
-- compassOptions
-- compassHeading
+- <a href="parameters/compassSuccess.html">compassSuccess</a>
+- <a href="parameters/compassError.html">compassError</a>
+- <a href="parameters/compassOptions.html">compassOptions</a>
+- <a href="parameters/compassHeading.html">compassHeading</a>
 
 ## Accessing the Feature
 
@@ -92,4 +92,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.

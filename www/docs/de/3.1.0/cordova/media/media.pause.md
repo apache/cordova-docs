@@ -67,14 +67,14 @@ Die `media.pause` -Methode führt synchron und Pausen, Abspielen einer Audiodate
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -100,17 +100,17 @@ Die `media.pause` -Methode führt synchron und Pausen, Abspielen einer Audiodate
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -129,7 +129,7 @@ Die `media.pause` -Methode führt synchron und Pausen, Abspielen einer Audiodate
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -150,7 +150,7 @@ Die `media.pause` -Methode führt synchron und Pausen, Abspielen einer Audiodate
     
             // Set audio position
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     

@@ -18,12 +18,12 @@ license: >
     under the License.
 ---
 
-localStorage
+local<a href="../storage.html">Storage</a>
 ===============
 
-W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute) へのアクセスを提供します。
+W3C <a href="../storage.html">Storage</a> interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute) へのアクセスを提供します。
 
-    var storage = window.localStorage;
+    var storage = window.local<a href="../storage.html">Storage</a>;
 
 メソッド
 -------
@@ -37,9 +37,9 @@ W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attr
 詳細
 -----------
 
-localStorage は W3C Storage interface へのインターフェースを提供します。キーと値のペアでデータを管理します。
+local<a href="../storage.html">Storage</a> は W3C <a href="../storage.html">Storage</a> interface へのインターフェースを提供します。キーと値のペアでデータを管理します。
 
-注意: window.sessionStorage は同じインターフェースを提供しますが、アプリが起動するたびにこの値はクリアされます。
+注意: window.session<a href="../storage.html">Storage</a> は同じインターフェースを提供しますが、アプリが起動するたびにこの値はクリアされます。
 
 サポートされているプラットフォーム
 -------------------
@@ -52,64 +52,64 @@ localStorage は W3C Storage interface へのインターフェースを提供�
 Key の例
 -------------
 
-    var keyName = window.localStorage.key(0);
+    var keyName = window.local<a href="../storage.html">Storage</a>.key(0);
 
 Set Item の例
 -------------
 
-    window.localStorage.setItem("key", "value");
+    window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
 
 Get Item の例
 -------------
 
-    var value = window.localStorage.getItem("key");
+    var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
     // value の値は "value"
 
 Remove Item の例
 -------------
 
-    window.localStorage.removeItem("key");
+    window.local<a href="../storage.html">Storage</a>.removeItem("key");
 
 Clear の例
 -------------
 
-    window.localStorage.clear();
+    window.local<a href="../storage.html">Storage</a>.clear();
 
-詳細な使用例
+詳細な<a href="../storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage の使用例</title>
+        <title><a href="../storage.html">Storage</a> の<a href="../storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            window.localStorage.setItem("key", "value");
-            var keyname = window.localStorage.key(i);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
+            var keyname = window.local<a href="../storage.html">Storage</a>.key(i);
             // key の値は "key"
-            var value = window.localStorage.getItem("key");
+            var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
             // value の値は "value"
-            window.localStorage.removeItem("key");
-            window.localStorage.setItem("key2", "value2");
-            window.localStorage.clear();
-            // localStorage は空
+            window.local<a href="../storage.html">Storage</a>.removeItem("key");
+            window.local<a href="../storage.html">Storage</a>.setItem("key2", "value2");
+            window.local<a href="../storage.html">Storage</a>.clear();
+            // local<a href="../storage.html">Storage</a> は空
         }
 
 
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
-        <p>localStorage のサンプル</p>
+        <h1><a href="../storage.opendatabase.html">使用例</a></h1>
+        <p>local<a href="../storage.html">Storage</a> のサンプル</p>
       </body>
     </html>
 
@@ -117,4 +117,4 @@ Clear の例
 Windows Phone 7 に関する注意点
 -------------
 
-- ドット表記は Windows Phone では使用できません。 window.localStorage.setItem/getItem メソッドを使用して、 W3C の仕様で定義されている window.localStorage.someKey = 'someValue'; の方法は使用しないでください。
+- ドット表記は Windows Phone では使用できません。 window.local<a href="../storage.html">Storage</a>.setItem/getItem メソッドを使用して、 W3C の仕様で定義されている window.local<a href="../storage.html">Storage</a>.someKey = 'someValue'; の方法は使用しないでください。

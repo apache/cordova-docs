@@ -29,7 +29,7 @@ license: >
 
 Если необходимо переопределить по умолчанию громкости поведение вы можете зарегистрировать прослушиватель событий для `volumedownbutton` событие.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button Example</title>
+        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

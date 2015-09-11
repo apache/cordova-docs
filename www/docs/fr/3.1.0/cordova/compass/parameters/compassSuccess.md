@@ -20,7 +20,7 @@ license: >
 
 # compassSuccess
 
-fonction de callback onSuccess qui fournit les informations de la boussole via un objet `compassHeading`.
+fonction de callback onSuccess qui fournit les informations de la boussole via un objet `<a href="compassHeading.html">compassHeading</a>`.
 
     function(heading) {
         // Do something
@@ -29,7 +29,7 @@ fonction de callback onSuccess qui fournit les informations de la boussole via u
 
 ## Paramètres
 
-*   **rubrique** : les informations de direction. *(compassHeading)*
+*   **rubrique** : les informations de direction. *(<a href="compassHeading.html">compassHeading</a>)*
 
 ## Exemple
 

@@ -20,7 +20,7 @@ license: >
 
 # ContactError
 
-A `ContactError` oggetto è passato per la `contactError` callback quando si verifica un errore.
+A `ContactError` oggetto è passato per la `<a href="../parameters/contactError.html">contactError</a>` callback quando si verifica un errore.
 
 ## Proprietà
 
@@ -38,4 +38,4 @@ A `ContactError` oggetto è passato per la `contactError` callback quando si ver
 
 ## Descrizione
 
-Il `ContactError` oggetto viene restituito all'utente attraverso la `contactError` funzione di callback quando si verifica un errore.
+Il `ContactError` oggetto viene restituito all'utente attraverso la `<a href="../parameters/contactError.html">contactError</a>` funzione di callback quando si verifica un errore.

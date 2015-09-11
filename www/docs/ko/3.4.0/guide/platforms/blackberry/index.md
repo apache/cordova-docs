@@ -18,20 +18,20 @@ license: >
     under the License.
 ---
 
-# 블랙베리 플랫폼 가이드
+# 블랙베리 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a>
 
-이 가이드 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 <a href="../../../index.html">가이드</a> 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   블랙베리 구성
-*   블랙베리 업그레이드
-*   블랙베리 플러그인
-*   블랙베리 명령줄 도구
+*   <a href="config.html">블랙베리 구성</a>
+*   <a href="upgrading.html">블랙베리 업그레이드</a>
+*   <a href="plugin.html">블랙베리 플러그인</a>
+*   <a href="tools.html">블랙베리 명령줄 도구</a>
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
 
 ## 요구 사항 및 지원
 
-블랙베리의이 버전에서 지원 되지 않습니다는 `cordova` 유틸리티 명령줄 인터페이스에만 별도 명령줄 도구 집합을 설명 합니다. [Cordova.apache.org][1] 에서 코르도바 배포 다운로드.
+블랙베리의이 버전에서 지원 되지 않습니다는 `cordova` 유틸리티 <a href="../../cli/index.html">명령줄 인터페이스</a>에만 별도 명령줄 도구 집합을 설명 합니다. [Cordova.apache.org][1] 에서 코르도바 배포 다운로드.
 
  [1]: http://cordova.apache.org/#download
 
@@ -94,7 +94,7 @@ SDK를 함께 또한 코드 서명 키 및 디버그 토큰 등록 해야 합니
 
 *   [코드 서명 컴퓨터 설정][10]
 
-*   [SDK 환경 설정에 포괄적인 가이드][11]
+*   [SDK 환경 설정에 포괄적인 <a href="../../../index.html">가이드</a>][11]
 
  [9]: https://www.blackberry.com/SignedKeys/codesigning.html
  [10]: http://developer.blackberry.com/html5/documentation/set_up_for_signing.html

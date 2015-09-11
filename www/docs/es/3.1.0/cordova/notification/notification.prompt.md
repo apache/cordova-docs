@@ -77,14 +77,14 @@ El `promptCallback` se ejecuta cuando el usuario presiona uno de los botones en 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog Example</title>
+        <title>Notification Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

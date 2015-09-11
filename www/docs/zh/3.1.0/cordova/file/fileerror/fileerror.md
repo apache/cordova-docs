@@ -20,7 +20,7 @@ license: >
 
 # FileError
 
-A `FileError` 物件時出現錯誤在檔 API 方法中的任何設置。
+A `FileError` 物件時出現錯誤在<a href="../fileobj/fileobj.html">檔</a> API 方法中的任何設置。
 
 ## 屬性
 
@@ -43,4 +43,4 @@ A `FileError` 物件時出現錯誤在檔 API 方法中的任何設置。
 
 ## 說明
 
-`FileError`物件是提供給任何檔 API 錯誤回檔的唯一參數。 若要確定錯誤的類型，比較其 `code` 屬性設置為任何上述的節目表。
+`FileError`物件是提供給任何<a href="../fileobj/fileobj.html">檔</a> API 錯誤回<a href="../fileobj/fileobj.html">檔</a>的唯一參數。 若要確定錯誤的類型，比較其 `code` 屬性設置為任何上述的節目表。

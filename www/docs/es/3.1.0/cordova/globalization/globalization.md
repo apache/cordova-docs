@@ -24,22 +24,22 @@ Obtiene información y realiza las operaciones específicas de la configuración
 
 ## Objetos
 
-*   GlobalizationError
+*   <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>
 
 ## Métodos
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   <a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a>
+*   <a href="globalization.getLocaleName.html">globalization.getLocaleName</a>
+*   <a href="globalization.dateToString.html">globalization.dateToString</a>
+*   <a href="globalization.stringToDate.html">globalization.stringToDate</a>
+*   <a href="globalization.getDatePattern.html">globalization.getDatePattern</a>
+*   <a href="globalization.getDateNames.html">globalization.getDateNames</a>
+*   <a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a>
+*   <a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a>
+*   <a href="globalization.numberToString.html">globalization.numberToString</a>
+*   <a href="globalization.stringToNumber.html">globalization.stringToNumber</a>
+*   <a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a>
+*   <a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a>
 
 ## Ámbito de variable
 

@@ -18,14 +18,14 @@ license: >
     under the License.
 ---
 
-ContactOrganization
+<a href="../Contact/contact.html">Contact</a>Organization
 ===================
 
-Contains organization properties of a `Contact` object.
+Contains organization properties of a `<a href="../Contact/contact.html">Contact</a>` object.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
+- __pref:__ Set to `true` if this `<a href="../Contact/contact.html">Contact</a>Organization` contains the user's preferred value. _(boolean)_
 - __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
 - __name:__ The name of the organization. _(DOMString)_
 - __department:__ The department the contract works for. _(DOMString)_
@@ -34,7 +34,7 @@ Properties
 Details
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+The `<a href="../Contact/contact.html">Contact</a>Organization` object stores a contact's organization properties.  A `<a href="../Contact/contact.html">Contact</a>` object stores one or more `<a href="../Contact/contact.html">Contact</a>Organization` objects in an array. 
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - iOS
 - Bada 1.2
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(contacts) {
@@ -59,37 +59,37 @@ Quick Example
 		}
     };
 
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
 
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
 	options.filter="";
 	filter = ["displayName","organizations"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-			var options = new ContactFindOptions();
+        function on<a href="../../device/device.html">Device</a>Ready() {
+			var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
 			options.filter="";
 			filter = ["displayName","organizations"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+			navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -108,15 +108,15 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
       </body>
     </html>
 	

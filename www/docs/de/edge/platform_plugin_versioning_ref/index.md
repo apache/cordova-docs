@@ -20,17 +20,17 @@ license: >
 
 # Plattformen und Plugins Versionsmanagement
 
-Ab Version 4.3.0 bietet Cordova die Möglichkeit zum Speichern und wiederherstellen, Plattformen und Plugins.
+Ab Version 4.3.0 bietet Cordova die Möglichkeit zum <a href="../cordova/storage/storage.html">Speicher</a>n und wiederherstellen, Plattformen und Plugins.
 
 Dieses Feature ermöglicht Entwicklern, speichern und ihre app in einen bekannten Zustand wiederherstellen, ohne in allen von der Plattform und Plugin Quellcode überprüfen.
 
-Der Befehl "Speichern" speichert Informationen über die app-Plattform und Plugin-Versionen in "config.xml". Der 'Wiederherstellung' Schritt geschieht automatisch, wenn ein **'cordova prepare'** ausgegeben wird, machen Gebrauch von Informationen, die zuvor in der Datei config.xml gespeichert.
+Der Befehl "<a href="../cordova/storage/storage.html">Speicher</a>n" speichert Informationen über die app-Plattform und Plugin-Versionen in "config.xml". Der 'Wiederherstellung' Schritt geschieht automatisch, wenn ein **'cordova prepare'** ausgegeben wird, machen Gebrauch von Informationen, die zuvor in der Datei config.xml gespeichert.
 
 Ein Szenario, wo speichern/wiederherstellen-Funktionen praktisch, ist in großen Teams, die auf eine Anwendung mit jedes Teammitglied Fokussierung auf einer Plattform oder Plugin arbeiten. Diese Funktion erleichtert das Teilen des Projekts und reduzieren die Menge der redundanten Code, der im Repository eingecheckt ist.
 
 ## Plattform-Versionsverwaltung
 
-### Speichern von Plattformen
+### <a href="../cordova/storage/storage.html">Speicher</a>n von Plattformen
 
 Um eine Plattform zu speichern, geben Sie folgenden Befehl ein:
 
@@ -100,7 +100,7 @@ Wenn Sie den Befehl **'cordova platform add android'** (keine Version/Ordner/Git
 
 *(Die Plugin-Befehle sind ein Spiegel der Plugin-Befehle)*
 
-### Speichern von plugins
+### <a href="../cordova/storage/storage.html">Speicher</a>n von plugins
 
 Um ein Plugin zu speichern, geben Sie folgenden Befehl ein:
 

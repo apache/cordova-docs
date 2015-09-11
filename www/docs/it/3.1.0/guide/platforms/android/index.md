@@ -22,11 +22,11 @@ license: >
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per dispositivi Android. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Android configurazione
-*   Visualizzazioni Web Android
-*   Plugin Android
-*   L'aggiornamento di Android
-*   Android strumenti da riga di comando
+*   <a href="config.html">Android configurazione</a>
+*   <a href="webview.html"><a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>zioni Web Android</a>
+*   <a href="plugin.html">Plugin Android</a>
+*   <a href="upgrading.html">L'aggiornamento di Android</a>
+*   <a href="tools.html">Android strumenti da riga di comando</a>
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -46,7 +46,7 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK di Android. L'interfaccia della riga di comando per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK di Android. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
 
 ## Installare il SDK
 
@@ -79,7 +79,7 @@ Per modificare l'ambiente del percorso su Windows 7:
         ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   Salvare il valore e chiudere le due finestre di dialogo.
+*   Salvare il valore e <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> le due finestre di dialogo.
 
 Potrebbe essere necessario abilitare Java e Ant. Apri un prompt dei comandi e digitare `java` e anche di tipo `ant` . Aggiungere al percorso qualunque non riescono ad eseguire:
 

@@ -146,7 +146,7 @@ Il vérifie le paramètre pour s'assurer que ce n'est pas `nil` ou une chaîne v
 
 ## Intégration d'iOS
 
-Le `CDVPlugin` classe dispose d'autres méthodes que votre plugin peut substituer. Par exemple, vous pouvez capturer le `pause` , `resume` , app résilier et `handleOpenURL` événements. Consultez la classe [CDVPlugin.h][1] et [CDVPlugin.m][2] pour l'orientation.
+Le `CDVPlugin` classe dispose d'autres méthodes que votre plugin peut substituer. Par exemple, vous pouvez capturer le `<a href="../../../cordova/events/events.pause.html">pause</a>` , `<a href="../../../cordova/events/events.resume.html">resume</a>` , app résilier et `handleOpenURL` événements. Consultez la classe [CDVPlugin.h][1] et [CDVPlugin.m][2] pour l'orientation.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

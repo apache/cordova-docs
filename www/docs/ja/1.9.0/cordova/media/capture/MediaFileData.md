@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-MediaFileData
+<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 =============
 
 > メディアファイルのフォーマット情報をカプセル化します。
@@ -34,7 +34,7 @@ MediaFileData
 
 BlackBerry WebWorks に関する注意点
 --------------------------
-メディアファイルのフォーマット情報を提供する API はありません。 MediaFileData オブジェクトは、 MediaFile.getFormatData 関数によって返され、以下のようなデフォルト値を持ちます:
+メディアファイルのフォーマット情報を提供する API はありません。 <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data オブジェクトは、 <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a> 関数によって返され、以下のようなデフォルト値を持ちます:
 
 - __codecs:__ サポートされていません。この属性は常に null となります。
 - __bitrate:__ サポートされていません。この属性は常に0となります。
@@ -44,7 +44,7 @@ BlackBerry WebWorks に関する注意点
 
 Android に関する注意点
 --------------
-MediaFileData プロパティーへのサポートは以下のとおりです:
+<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data プロパティーへのサポートは以下のとおりです:
 
 - __codecs:__ サポートされていません。この属性は常に null となります。
 - __bitrate:__ サポートされていません。この属性は常に0となります。
@@ -54,7 +54,7 @@ MediaFileData プロパティーへのサポートは以下のとおりです:
 
 iOS に関する注意点
 ----------
-MediaFileData プロパティーへのサポートは以下のとおりです:
+<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data プロパティーへのサポートは以下のとおりです:
 
 - __codecs:__ サポートされていません。この属性は常に null となります。
 - __bitrate:__ iOS4 のデバイスにおいて、オーディオのみサポートされています。この属性は、画像とビデオについては常に0となります。

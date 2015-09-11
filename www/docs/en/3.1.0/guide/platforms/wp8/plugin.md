@@ -149,7 +149,7 @@ in case we have bad input. This is a pattern used throughout the Cordova C# code
 
 ## Plugin XML
 
-These are windows phone specific examples of using the plugin.xml file, refer to the Plugin Specification for more details
+These are windows phone specific examples of using the plugin.xml file, refer to the <a href="../../../plugin_ref/spec.html">Plugin Specification</a> for more details
 
 ### `<source-file>`
 
@@ -176,7 +176,7 @@ See other methods that you can override in:
 
 * [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
-For example, you can hook into the 'pause' and 'resume' application events.
+For example, you can hook into the '<a href="../../../cordova/events/events.pause.html">pause</a>' and '<a href="../../../cordova/events/events.resume.html">resume</a>' application events.
 
 ### Debugging Plugins
 

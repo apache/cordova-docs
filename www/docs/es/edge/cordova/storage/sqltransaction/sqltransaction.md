@@ -30,7 +30,7 @@ Permite la ejecución de sentencias SQL contra la base de datos.
 
 El método de devolución de llamada especificado llamar método de un objeto de `Database` transacción, pasa un objeto `SQLTransaction`.
 
-## Plataformas soportadas
+## <a href="../../../config_ref/images.html">Plataformas soportadas</a>
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 o superior)
@@ -54,7 +54,7 @@ El método de devolución de llamada especificado llamar método de un objeto de
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ El método de devolución de llamada especificado llamar método de un objeto de
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ El método de devolución de llamada especificado llamar método de un objeto de
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

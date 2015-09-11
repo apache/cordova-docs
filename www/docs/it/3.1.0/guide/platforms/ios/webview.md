@@ -38,7 +38,7 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 1.  Scaricare ed estrarre la sorgente di Cordova in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, <a href="../../../cordova/inappbrowser/inappbrowser.html">chiudere</a> Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -52,9 +52,9 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector**.
+9.  Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> Inspector**.
 
-10. Scegliere nel **File ispettore** per il menu a discesa **relativo al gruppo** per **posizione**.
+10. Scegliere nel **<a href="../../../cordova/file/fileobj/fileobj.html">File</a> ispettore** per il menu a discesa **relativo al gruppo** per **posizione**.
 
 11. Selezionare l' **icona del progetto** nel Navigatore progetto, selezionare la **destinazione**, quindi scegliere la scheda **Impostazioni di compilazione** .
 
@@ -66,7 +66,7 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 15. Selezionare il **+** pulsante e aggiungere i seguenti **quadri**. Facoltativamente nel Navigatore progetto, spostarli sotto il gruppo di **quadri** ):
     
-        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework MediaPlayer.framework QuartzCore.framework SystemConfiguration MobileCoreServices.framework CoreMedia.framework
+        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework <a href="../../../cordova/media/media.html">Media</a>Player.framework QuartzCore.framework SystemConfiguration MobileCoreServices.framework Core<a href="../../../cordova/media/media.html">Media</a>.framework
         
 
 16. Espandere **Dipendenze di destinazione**, il bauletto etichettato come questo se si dispone di più caselle!

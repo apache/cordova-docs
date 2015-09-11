@@ -18,27 +18,27 @@ license: >
     under the License.
 ---
 
-# 連絡人姓名
+# <a href="../contacts.html">連絡人</a>姓名
 
 包含有關的不同種類的資訊 `Contact` 物件的名稱。
 
 ## 屬性
 
-*   **格式化**： 該連絡人的完整名稱。*() DOMString*
+*   **格式化**： 該<a href="../contacts.html">連絡人</a>的完整名稱。*() DOMString*
 
-*   **家族**： 連絡人的姓氏。*() DOMString*
+*   **家族**： <a href="../contacts.html">連絡人</a>的姓氏。*() DOMString*
 
-*   **givenName**： 連絡人的名字。*() DOMString*
+*   **givenName**： <a href="../contacts.html">連絡人</a>的名字。*() DOMString*
 
-*   **之間**： 連絡人的中間名。*() DOMString*
+*   **之間**： <a href="../contacts.html">連絡人</a>的中間名。*() DOMString*
 
-*   **honorificPrefix**： 連絡人的首碼 (例如*先生*或*博士*） *(DOMString)*
+*   **honorificPrefix**： <a href="../contacts.html">連絡人</a>的首碼 (例如*先生*或*博士*） *(DOMString)*
 
-*   **honorificSuffix**： 連絡人的尾碼 （如*律師*）。*() DOMString*
+*   **honorificSuffix**： <a href="../contacts.html">連絡人</a>的尾碼 （如*律師*）。*() DOMString*
 
 ## 詳細資訊
 
-`ContactName`物件存儲的連絡人的名稱屬性。
+`ContactName`物件<a href="../../storage/storage.html">存儲</a>的<a href="../contacts.html">連絡人</a>的名稱屬性。
 
 ## 支援的平臺
 
@@ -61,14 +61,14 @@ license: >
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     filter = ["displayName", "name"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 完整的示例
@@ -76,22 +76,22 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter="";
             filter = ["displayName","name"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -130,9 +130,9 @@ license: >
 
 *   **格式化**： 部分支援。返回的串聯的黑莓手機**名字**和**姓氏**欄位。
 
-*   **家族**: 支援。黑莓**姓氏**欄位中存儲。
+*   **家族**: 支援。黑莓**姓氏**欄位中<a href="../../storage/storage.html">存儲</a>。
 
-*   **givenName**： 支援。黑莓**名字**欄位中存儲。
+*   **givenName**： 支援。黑莓**名字**欄位中<a href="../../storage/storage.html">存儲</a>。
 
 *   **之間**： 不受支援，返回`null`.
 

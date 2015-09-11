@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# media.stopRecord
+# <a href="media.stop.html">media.stop</a>Record
 
-Stoppt die Aufnahme einer audio-Datei.
+Stoppt die Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a>.
 
-    media.stopRecord();
+    <a href="media.stop.html">media.stop</a>Record();
     
 
 ## Beschreibung
 
-Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei beenden.
+Die `<a href="media.stop.html">media.stop</a>Record` -Methode führt synchron, Aufnahme einer audio-<a href="../file/fileobj/fileobj.html">Datei</a> beenden.
 
 ## Unterstützte Plattformen
 
@@ -70,14 +70,14 @@ Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei been
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -92,7 +92,7 @@ Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei been
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -121,7 +121,7 @@ Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei been
     
         // Set audio position
         //
-        function setAudioPosition(position) {
+        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
     
@@ -136,4 +136,4 @@ Die `media.stopRecord` -Methode führt synchron, Aufnahme einer audio-Datei been
 
 ## Tizen Macken
 
-*   Tizen Geräten unterstützt nicht.
+*   Tizen <a href="../device/device.html">Gerät</a>en unterstützt nicht.

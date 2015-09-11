@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# L'aggiornamento iOS
+# <a href="upgrading.html">L'aggiornamento iOS</a>
 
-Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come aggiornare la versione di CLI.
 
 **Nota**: Xcode 6 è richiesto. Attualmente, per presentare all'Apple App Store, è necessario utilizzare l'ultima versione del iOS SDK, che è iOS 8 e questo è incluso solo con Xcode 6.
 

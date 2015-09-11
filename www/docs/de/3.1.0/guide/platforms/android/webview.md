@@ -32,11 +32,11 @@ Wenn Sie mit Android Anwendungsentwicklung nicht vertraut sind, lesen Sie bitte 
 
 ## Anleitung zur Verwendung von CordovaWebView in einem Android-Projekt
 
-1.  `cd`in `/framework` und `ant jar` baut die Cordova-Jar. Es schafft die .jar-Datei als `cordova-x.x.x.jar` in das `/framework` Verzeichnis.
+1.  `cd`in `/framework` und `ant jar` baut die Cordova-Jar. Es schafft die .jar-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> als `cordova-x.x.x.jar` in das `/framework` Verzeichnis.
 
 2.  Kopieren Sie das Cordova-Glas in Ihrem Android Projekts `/libs` Verzeichnis.
 
-3.  Bearbeiten der Anwendung `main.xml` Datei (unter `/res/xml` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
+3.  Bearbeiten der Anwendung `main.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (unter `/res/xml` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -59,7 +59,7 @@ Wenn Sie mit Android Anwendungsentwicklung nicht vertraut sind, lesen Sie bitte 
             }
         
 
-Wenn Sie die Kamera verwenden, sollten Sie dies auch implementieren:
+Wenn Sie die <a href="../../../cordova/camera/camera.html">Kamera</a> verwenden, sollten Sie dies auch implementieren:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -113,6 +113,6 @@ Denken Sie daran, den Threadpool hinzufügen, sonst die Plugins keine Threads au
         }
     
 
-1.  Kopieren Sie Ihre Anwendung HTML und JavaScript-Dateien in Ihr Android Projekts `/assets/www` Verzeichnis.
+1.  Kopieren Sie Ihre Anwendung HTML und JavaScript-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en in Ihr Android Projekts `/assets/www` Verzeichnis.
 
 2.  Kopie `config.xml` von `/framework/res/xml` zu Ihrem Projekts `/res/xml` Verzeichnis.

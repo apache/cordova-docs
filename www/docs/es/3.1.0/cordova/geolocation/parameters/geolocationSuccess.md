@@ -20,7 +20,7 @@ license: >
 
 # geolocationSuccess
 
-Función del usuario que se ejecuta cuando una posición de geolocalización disponible (cuando se llama desde `geolocation.getCurrentPosition` ), o cuando cambia la posición (cuando se llama desde`geolocation.watchPosition`).
+Función del usuario que se ejecuta cuando una posición de geolocalización disponible (cuando se llama desde `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ), o cuando cambia la posición (cuando se llama desde`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
 
     function(position) {
         // Do something
@@ -29,7 +29,7 @@ Función del usuario que se ejecuta cuando una posición de geolocalización dis
 
 ## Parámetros
 
-*   **posición**: la posición de geolocalización devuelta por el dispositivo. *(Posición)*
+*   **posición**: la posición de geolocalización devuelta por el dispositivo. *(<a href="../Position/position.html">Posición</a>)*
 
 ## Ejemplo
 

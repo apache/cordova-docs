@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Mise à jour de BlackBerry
+# <a href="../blackberry10/upgrading.html">Mise à jour de BlackBerry</a>
 
 Ce guide montre comment modifier des projets BlackBerry mise à niveau d'anciennes versions de Cordova. Ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
@@ -46,7 +46,7 @@ BlackBerry 10 :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans <a href="../ios/tools.html">iOS Command-line Tools</a>. Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -84,7 +84,7 @@ BlackBerryOS/Playbook :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans <a href="../ios/tools.html">iOS Command-line Tools</a>. Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -333,13 +333,13 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de <a href="../../../cordova/media/capture/capture.html">Capture</a> et de <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> de :
     
-        < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
+        < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
     À:
     
-        < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
+        < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
 
 Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux outils de fourmi) :
@@ -358,13 +358,13 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
 
 7.  Ouvert le `www/` répertoire et mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
 
-8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de <a href="../../../cordova/media/capture/capture.html">Capture</a> et de <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> de :
     
-         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
+         < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
     À:
     
-         < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
+         < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
 
 *   Pour installer 1.8.0, s'il vous plaît aller de 1.7.0
@@ -385,13 +385,13 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de <a href="../../../cordova/media/capture/capture.html">Capture</a> et de <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> de :
     
-        < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
+        < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
     À:
     
-        < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
+        < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
 
 Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux outils de fourmi) :
@@ -410,10 +410,10 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
 
 7.  Ouvert le `www/` répertoire et mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
 
-8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de <a href="../../../cordova/media/capture/capture.html">Capture</a> et de <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> de :
     
-         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
+         < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >
         
     À:
     
-         < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
+         < nom du plugin = « <a href="../../../cordova/media/capture/capture.html">Capture</a>r » value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/ >< nom du plugin = « <a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s » value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/ >

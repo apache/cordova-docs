@@ -18,11 +18,11 @@ license: >
     under the License.
 ---
 
-# splashscreen.show
+# splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>
 
 Displays the splash screen.
 
-    navigator.splashscreen.show();
+    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
 
 ## Description
 
@@ -35,33 +35,33 @@ This method displays the application's splash screen.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
-    navigator.splashscreen.show();
+    navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
 
-## Full Example
+## Full <a href="../storage/storage.opendatabase.html">Example</a>
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title><a href="splashscreen.html">Splashscreen</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            navigator.splashscreen.show();
+        function on<a href="../device/device.html">Device</a>Ready() {
+            navigator.splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>();
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>

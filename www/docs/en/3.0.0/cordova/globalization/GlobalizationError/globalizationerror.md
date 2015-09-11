@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-GlobalizationError
+<a href="../globalization.html">Globalization</a>Error
 ============
 
-An object representing a error from the Globalization API.
+An object representing a error from the <a href="../globalization.html">Globalization</a> API.
 
 Properties
 ----------
 
 - __code__:  One of the following codes representing the error type _(Number)_
-  - GlobalizationError.UNKNOWN\_ERROR: 0
-  - GlobalizationError.FORMATTING\_ERROR: 1
-  - GlobalizationError.PARSING\_ERROR: 2
-  - GlobalizationError.PATTERN\_ERROR: 3
+  - <a href="../globalization.html">Globalization</a>Error.UNKNOWN\_ERROR: 0
+  - <a href="../globalization.html">Globalization</a>Error.FORMATTING\_ERROR: 1
+  - <a href="../globalization.html">Globalization</a>Error.PARSING\_ERROR: 2
+  - <a href="../globalization.html">Globalization</a>Error.PATTERN\_ERROR: 3
 - __message__:  A text message that includes the error's explanation and/or details _(String)_
 
 Description
@@ -45,7 +45,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
 When the following error callback executes, it displays a
@@ -56,13 +56,13 @@ popup dialog with the text similar to `code: 3` and `message:`
               'message: ' + error.message + '\n');
     };
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError Example</title>
+        <title><a href="../globalization.html">Globalization</a>Error <a href="../../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -78,7 +78,7 @@ Full Example
         };
 
         function checkError() {
-          navigator.globalization.stringToDate(
+          navigator.<a href="../globalization.stringToDate.html">globalization.stringToDate</a>(
             'notADate',
             successCallback,
             errorCallback,

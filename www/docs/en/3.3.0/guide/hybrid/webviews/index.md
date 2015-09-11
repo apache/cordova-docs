@@ -21,7 +21,7 @@ license: >
 # Embedding WebViews
 
 Cordova applications are ordinarily implemented as a browser-based
-_WebView_ within the native mobile platform. This section shows how,
+_WebView_ within the native mobile platform. This section <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how,
 for supporting platforms, to create your own WebView components that
 make full use of Cordova APIs. You can then deploy these Cordova
 application components along with native components in a hybrid
@@ -31,7 +31,7 @@ To deploy a WebView, you need to be familiar with each native
 programming environment. The following provides instructions for
 supported platforms:
 
-- Amazon Fire OS WebViews
-- Android WebViews
-- iOS WebViews
+- <a href="../../platforms/amazonfireos/webview.html">Amazon Fire OS WebViews</a>
+- <a href="../../platforms/android/webview.html">Android WebViews</a>
+- <a href="../../platforms/ios/webview.html">iOS WebViews</a>
 

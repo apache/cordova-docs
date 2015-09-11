@@ -26,11 +26,11 @@ Notification
 Methods
 -------
 
-- `notification.alert`
-- `notification.confirm`
-- `notification.prompt`
-- `notification.beep`
-- `notification.vibrate`
+- `<a href="notification.alert.html">notification.alert</a>`
+- `<a href="notification.confirm.html">notification.confirm</a>`
+- `<a href="notification.prompt.html">notification.prompt</a>`
+- `<a href="notification.beep.html">notification.beep</a>`
+- `<a href="notification.vibrate.html">notification.vibrate</a>`
 
 ## Accessing the Feature
 

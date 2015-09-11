@@ -24,11 +24,11 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Actualizar Android
-*   Android Herramientas de línea de comandos
+*   <a href="config.html">Configuración de Android</a>
+*   <a href="webview.html">Android WebViews</a>
+*   <a href="plugin.html">Android Plugins</a>
+*   <a href="upgrading.html">Actualizar Android</a>
+*   <a href="tools.html">Android Herramientas de línea de comandos</a>
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 

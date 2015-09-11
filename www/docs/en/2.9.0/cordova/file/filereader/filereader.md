@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-FileReader
+<a href="../fileobj/fileobj.html">File</a>Reader
 ==========
 
-The `FileReader` allows basic access to a file.
+The `<a href="../fileobj/fileobj.html">File</a>Reader` allows basic access to a file.
 
 Properties
 ----------
 
 - __readyState__: One of the reader's three possible states, either `EMPTY`, `LOADING` or `DONE`.
 - __result__: The contents of the file that have been read. _(DOMString)_
-- __error__: An object containing errors. _(FileError)_
+- __error__: An object containing errors. _(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)_
 - __onloadstart__: Called when the read starts. _(Function)_
 - __onload__: Called when the read has successfully completed. _(Function)_
 - __onabort__: Called when the read has been aborted. For instance, by invoking the `abort()` method. _(Function)_
@@ -51,8 +51,8 @@ Methods
 Details
 -------
 
-The `FileReader` object offers a way to read files from the device's
-file system.  Files can be read as text or as a base64 data-encoded
+The `<a href="../fileobj/fileobj.html">File</a>Reader` object offers a way to read files from the device's
+file system.  <a href="../fileobj/fileobj.html">File</a>s can be read as text or as a base64 data-encoded
 string.  Event listeners receive the `loadstart`, `progress`, `load`,
 `loadend`, `error`, and `abort` events.
 
@@ -72,11 +72,11 @@ __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -98,11 +98,11 @@ __Parameters:__
 - __file__: the file object to read.
 - __encoding__: the encoding to use to encode the file's content. Default is UTF8.
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -116,11 +116,11 @@ Quick Example
 
     entry.file(win, fail);
 
-Abort Quick Example
+Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function(evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -135,13 +135,13 @@ Abort Quick Example
 
     entry.file(win, fail);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a>Reader <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -149,30 +149,30 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
         }
 
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", null, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
         }
 
-        function gotFileEntry(fileEntry) {
-            fileEntry.file(gotFile, fail);
+        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
+            fileEntry.file(got<a href="../fileobj/fileobj.html">File</a>, fail);
         }
 
-        function gotFile(file){
+        function got<a href="../fileobj/fileobj.html">File</a>(file){
             readDataUrl(file);
             readAsText(file);
         }
 
         function readDataUrl(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("Read as data URL");
                 console.log(evt.target.result);
@@ -181,7 +181,7 @@ Full Example
         }
 
         function readAsText(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("Read as text");
                 console.log(evt.target.result);
@@ -196,8 +196,8 @@ Full Example
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Read File</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Read <a href="../fileobj/fileobj.html">File</a></p>
       </body>
     </html>
 
@@ -214,11 +214,11 @@ __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(evt.target.result);
@@ -241,11 +241,11 @@ __Parameters:__
 
 - __file__:  the file object to read.
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function (evt) {
             console.log("read success");
             console.log(new Uint8Array(evt.target.result));

@@ -20,20 +20,20 @@ license: >
 
 # capture.captureImage
 
-> Starten Sie die Kameraanwendung und geben Informationen über aufgenommene Bild-Dateien zurück.
+> Starten Sie die <a href="../../camera/camera.html">Kamera</a>anwendung und geben Informationen über aufgenommene Bild-<a href="../../file/fileobj/fileobj.html">Datei</a>en zurück.
 
     navigator.device.capture.captureImage(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
     );
     
 
 ## Beschreibung
 
-Beginnt einen asynchronen Vorgang, um Aufnahmen mit Kamera-Anwendung des Geräts. Die Operation erlaubt Benutzern, mehr als ein Bild in einer einzigen Sitzung zu erfassen.
+Beginnt einen asynchronen Vorgang, um Aufnahmen mit <a href="../../camera/camera.html">Kamera</a>-Anwendung des <a href="../../device/device.html">Gerät</a>s. Die Operation erlaubt Benutzern, mehr als ein Bild in einer einzigen Sitzung zu erfassen.
 
-Der Capture-Vorgang endet entweder, wenn der Benutzer schließt die Kameraanwendung oder die maximale Anzahl an Aufnahmen von angegebenen `CaptureAudioOptions.limit` erreicht ist. Wenn keine `limit` angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes Bild erfasst.
+Der Capture-Vorgang endet entweder, wenn der Benutzer schließt die <a href="../../camera/camera.html">Kamera</a>anwendung oder die maximale Anzahl an Aufnahmen von angegebenen `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` erreicht ist. Wenn keine `limit` angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes Bild erfasst.
 
-Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `CaptureCB` Rückruf mit einem Array von `MediaFile` Objekten beschreibt jede aufgenommene Bild-Datei. Wenn der Benutzer den Vorgang vor dem Aufzeichnen eines Abbilds beendet die `CaptureErrorCB` Rückruf führt mit einem `CaptureError` Objekt mit eine `CaptureError.CAPTURE_NO_MEDIA_FILES` Fehlercode.
+Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `<a href="CaptureCB.html">CaptureCB</a>` Rückruf mit einem Array von `<a href="MediaFile.html">MediaFile</a>` Objekten beschreibt jede aufgenommene Bild-<a href="../../file/fileobj/fileobj.html">Datei</a>. Wenn der Benutzer den Vorgang vor dem Aufzeichnen eines Abbilds beendet die `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` Rückruf führt mit einem `<a href="CaptureError.html">CaptureError</a>` Objekt mit eine `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` Fehlercode.
 
 ## Unterstützte Plattformen
 
@@ -45,7 +45,7 @@ Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `CaptureCB` Rückruf mit
 
 ## Windows Phone 7 Macken
 
-Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen ist, funktioniert nicht, und die Fehler-Callback führt.
+Die native <a href="../../camera/camera.html">Kamera</a>anwendung aufrufen, während Ihr <a href="../../device/device.html">Gerät</a> via Zune angeschlossen ist, funktioniert nicht, und die Fehler-Callback führt.
 
 ## Kleines Beispiel
 
@@ -104,7 +104,7 @@ Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen 
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
+            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     

@@ -34,9 +34,9 @@ as a parameter. That object should have a `value` property with a
 `Number` value.
 
 If there is an error parsing the number string, then the
-`errorCallback` executes with a `GlobalizationError` object as a
+`errorCallback` executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a
 parameter. The error's expected code is
-`GlobalizationError.PARSING\_ERROR`.
+`<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following
 values:
@@ -53,7 +53,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 When the browser is set to the `en\_US` locale, this should display a
@@ -66,13 +66,13 @@ popup dialog with text similar to `number: 1234.56`:
         {type:'decimal'}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber Example</title>
+        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

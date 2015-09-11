@@ -210,16 +210,16 @@ Updating just the www folder:
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-2.0.0.js` file.
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+   namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
+   <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    To:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 Updating the sample folder (ie, updating using the ant tools):
@@ -233,15 +233,15 @@ Updating the sample folder (ie, updating using the ant tools):
 7. Open the `www/` folder and update your HTML to use the new `cordova-2.0.0.js` file.
 8. Open the `www/` folder and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+   <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
 
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    To:
 
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 
@@ -259,16 +259,16 @@ Updating just the www folder:
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-1.8.0.js` file.
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+   namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
+   <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    To:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+        <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+        <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
 
 Updating the sample folder (ie, updating using the ant tools):
@@ -282,13 +282,13 @@ Updating the sample folder (ie, updating using the ant tools):
 7. Open the `www/` folder and update your HTML to use the new `cordova-1.8.0.js` file.
 8. Open the `www/` folder and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+   <a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:
 
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.media.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 
    To:
 
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+         <plugin name="<a href="../../../cordova/media/capture/capture.html">Capture</a>" value="org.apache.cordova.capture.<a href="../../../cordova/media/media.html">Media</a><a href="../../../cordova/media/capture/capture.html">Capture</a>"/>
+         <plugin name="<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>s" value="org.apache.cordova.pim.<a href="../../../cordova/contacts/Contact/contact.html">Contact</a>"/>
 

@@ -24,7 +24,7 @@ license: >
 
 Этот API предлагает варианты хранения на основе двух различных спецификаций W3C:
 
-*   [Спецификации API хранения веб][1] позволяет вам получить доступ к данным через пар простой ключ/значение. Смотрите секцию на localStorage для получения подробной информации на этот интерфейс.
+*   [Спецификации API хранения веб][1] позволяет вам получить доступ к данным через пар простой ключ/значение. Смотрите секцию на <a href="localstorage/localstorage.html">localStorage</a> для получения подробной информации на этот интерфейс.
 
 *   [Спецификация SQL базы данных Web][2] предлагает больше таблиц базы данных, полнофункциональный доступ через SQL запросы. Краткое изложение этого интерфейса немедленно появляется ниже.
 
@@ -35,22 +35,22 @@ Cordova предоставляет доступ к обоим интерфейс
 
 ## Методы
 
-*   openDatabase
+*   <a href="storage.opendatabase.html">openDatabase</a>
 
 ## Аргументы
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   <a href="parameters/name.html">database_name</a>
+*   <a href="parameters/version.html">database_version</a>
+*   <a href="parameters/display_name.html">database_displayname</a>
+*   <a href="parameters/size.html">database_size</a>
 
 ## Объекты
 
-*   Базы данных
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   <a href="database/database.html">Базы данных</a>
+*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+*   <a href="sqlerror/sqlerror.html">SQLError</a>
 
 ## Доступ к функции
 

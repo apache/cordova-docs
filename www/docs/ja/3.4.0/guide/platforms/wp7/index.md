@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Windows Phone 7 プラットフォーム ガイド
+# Windows Phone 7 プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、Windows Phone 7 デバイス用の Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 アプリも 7 Windows Phone 8 で利用可能な IE10 の高度な機能の一部が欠けているバージョンは、同じ Api を使用して Windows Phone 8 デバイス上で実行します。 Windows Phone 8 アプリは*ない*Windows Phone 7 デバイス上で実行します。
+この<a href="../../../index.html">ガイド</a>は、Windows Phone 7 デバイス用の Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 アプリも 7 Windows Phone 8 で利用可能な IE10 の高度な機能の一部が欠けているバージョンは、同じ Api を使用して Windows Phone 8 デバイス上で実行します。 Windows Phone 8 アプリは*ない*Windows Phone 7 デバイス上で実行します。
 
 詳細なプラットフォーム固有の情報を両方のバージョンに適用される次を参照してください。
 
-*   Windows Phone のアップグレード
-*   Windows Phone のプラグイン
-*   Windows Phone のコマンド ライン ツール
+*   <a href="../wp8/upgrading.html">Windows Phone のアップグレード</a>
+*   <a href="../wp8/plugin.html">Windows Phone のプラグイン</a>
+*   <a href="../wp8/tools.html">Windows Phone のコマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
 ## システム要件
 

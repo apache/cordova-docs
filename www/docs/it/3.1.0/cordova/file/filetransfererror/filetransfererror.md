@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileTransferError
+# <a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error
 
-A `FileTransferError` oggetto viene passato a un callback di errore quando si verifica un errore.
+A `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` oggetto viene passato a un callback di errore quando si verifica un errore.
 
 ## Proprietà
 
@@ -34,11 +34,11 @@ A `FileTransferError` oggetto viene passato a un callback di errore quando si ve
 
 ## Costanti
 
-*   `FileTransferError.FILE_NOT_FOUND_ERR`
-*   `FileTransferError.INVALID_URL_ERR`
-*   `FileTransferError.CONNECTION_ERR`
-*   `FileTransferError.ABORT_ERR`
+*   `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.FILE_NOT_FOUND_ERR`
+*   `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.INVALID_URL_ERR`
+*   `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.CONNECTION_ERR`
+*   `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error.ABORT_ERR`
 
 ## Descrizione
 
-Il `FileTransferError` oggetto viene passato al metodo di callback errore quando si verifica un errore quando caricare o scaricare un file.
+Il `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>Error` oggetto viene passato al metodo di callback errore quando si verifica un errore quando caricare o scaricare un file.

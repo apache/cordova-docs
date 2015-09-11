@@ -20,16 +20,16 @@ license: >
 
 # 오프 라인
 
-이벤트가 발생 하면 응용 프로그램 오프 라인, 이동 및 장치가 인터넷에 연결 되어 있지.
+<a href="events.html">이벤트</a>가 발생 하면 응용 프로그램 오프 라인, 이동 및 <a href="../device/device.html">장치</a>가 인터넷에 <a href="../connection/connection.html">연결</a> 되어 있지.
 
-    document.addEventListener("offline", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-`offline`이벤트가 발생 하면 응용 프로그램이 더 이상 인터넷에 액세스할 수 있도록 이전 연결 된 장치가 네트워크 연결 손실. 그것은 연결 API와 동일한 정보에 의존 하 고 경우에 `connection.type` 에서 변경 `NONE` 다른 값으로.
+`offline`<a href="events.html">이벤트</a>가 발생 하면 응용 프로그램이 더 이상 인터넷에 액세스할 수 있도록 이전 <a href="../connection/connection.html">연결</a> 된 <a href="../device/device.html">장치</a>가 네트워크 <a href="../connection/connection.html">연결</a> 손실. 그것은 <a href="../connection/connection.html">연결</a> API와 동일한 정보에 의존 하 고 경우에 `<a href="../connection/connection.type.html">connection.type</a>` 에서 변경 `NONE` 다른 값으로.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 한번 <a href="events.html">이벤트</a> 리스너를 <a href="../connection/connection.html">연결</a> 하는 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">이벤트</a>가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -42,7 +42,7 @@ license: >
 
 ## 빠른 예제
 
-    document.addEventListener("offline", onOffline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
     
     function onOffline() {
         // Handle the offline event
@@ -54,7 +54,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Offline Example</title>
+        <title>Offline <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,13 +62,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("offline", onOffline, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("offline", onOffline, false);
         }
     
         // Handle the offline event
@@ -85,12 +85,12 @@ license: >
 
 ## iOS 단점
 
-처음 시작 하는 동안 첫 번째 오프 라인 이벤트 (있는 경우)를 적어도 초를 걸립니다.
+처음 시작 하는 동안 첫 번째 오프 라인 <a href="events.html">이벤트</a> (있는 경우)를 적어도 초를 걸립니다.
 
 ## Windows Phone 7 단점
 
-에뮬레이터에서 실행 하는 경우는 `connection.status` 항상 불명 하다, 그래서이 이벤트는 *없는* 불.
+에뮬레이터에서 실행 하는 경우는 `connection.status` 항상 불명 하다, 그래서이 <a href="events.html">이벤트</a>는 *없는* 불.
 
 ## Windows Phone 8 단점
 
-에뮬레이터도 연결 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트 않습니다 *하지* 불.
+에뮬레이터도 <a href="../connection/connection.html">연결</a> 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 <a href="events.html">이벤트</a> 않습니다 *하지* 불.

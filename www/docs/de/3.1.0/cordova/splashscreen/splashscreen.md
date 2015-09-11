@@ -24,12 +24,12 @@ license: >
 
 ## Methoden
 
-*   SplashScreen.Show
-*   SplashScreen.Hide
+*   <a href="splashscreen.show.html">SplashScreen.Show</a>
+*   <a href="splashscreen.hide.html">SplashScreen.Hide</a>
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.splashscreen
         $ cordova plugin ls
@@ -53,6 +53,6 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
 
-Informationen zum konfiguriert diese Bilder finden Sie unter Symbole und Splash-Screens.
+Informationen zum konfiguriert diese Bilder finden Sie unter <a href="../../config_ref/images.html">Symbole und Splash-Screens</a>.

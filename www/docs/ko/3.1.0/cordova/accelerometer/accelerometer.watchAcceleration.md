@@ -20,20 +20,20 @@ license: >
 
 # accelerometer.watchAcceleration
 
-정기적, *x*, *y*및 *z* 축 따라 가속도 얻을.
+정기적, *x*, *y*및 *z* 축 따라 <a href="acceleration/acceleration.html">가속</a>도 얻을.
 
-    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
+    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
+                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
+                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
     
 
 ## 설명
 
-가 속도계는 현재 위치를 기준으로 운동 (델타) 변경 내용을 감지 하는 모션 센서입니다. 가 속도계는 *x*, *y*및 *z* 축을 따라 3D 이동을 검색할 수 있습니다.
+<a href="accelerometer.html">가 속도계</a>는 현재 <a href="../geolocation/Position/position.html">위치</a>를 기준으로 운동 (델타) 변경 내용을 감지 하는 모션 센서입니다. <a href="accelerometer.html">가 속도계</a>는 *x*, *y*및 *z* 축을 따라 3D 이동을 검색할 수 있습니다.
 
-`accelerometer.watchAcceleration`메서드는 장치의 현재 검색 `Acceleration` 일정 한 간격에 실행는 `accelerometerSuccess` 콜백 함수 때마다. 통해 밀리초 단위로 간격을 지정 된 `acceleratorOptions` 개체의 `frequency` 매개 변수.
+`accelerometer.watchAcceleration`메서드는 <a href="../device/device.html">장치</a>의 현재 검색 `Acceleration` 일정 한 간격에 실행는 `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` 콜백 함수 때마다. 통해 밀리초 단위로 간격을 지정 된 `acceleratorOptions` 개체의 `frequency` 매개 <a href="../../plugin_ref/spec.html">변수</a>.
 
-반환 된 ID 참조가 속도계의 시계 간격, 시청과 함께 사용할 수 있습니다 `accelerometer.clearWatch` 가 속도계를 보고 중지 합니다.
+반환 된 ID 참조<a href="accelerometer.html">가 속도계</a>의 시계 간격, 시청과 함께 사용할 수 있습니다 `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` <a href="accelerometer.html">가 속도계</a>를 보고 중지 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -67,7 +67,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -130,4 +130,4 @@ license: >
 
 ## iOS 단점
 
-API 요청 간격 성공 콜백 함수를 호출 하지만 40ms 사이 장치에 요청의 범위를 제한 하 고 1000ms. 예를 들어 (3000ms) 3 초의 간격을 요청 하는 경우 API 마다 1 초 장치에서 데이터를 요청 하지만 성공 콜백을 3 초 마다 실행 됩니다.
+API 요청 간격 성공 콜백 함수를 호출 하지만 40ms 사이 <a href="../device/device.html">장치</a>에 요청의 범위를 제한 하 고 1000ms. 예를 들어 (3000ms) 3 초의 간격을 요청 하는 경우 API 마다 1 초 <a href="../device/device.html">장치</a>에서 데이터를 요청 하지만 성공 콜백을 3 초 마다 실행 됩니다.

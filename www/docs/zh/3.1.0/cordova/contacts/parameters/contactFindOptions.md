@@ -20,13 +20,13 @@ license: >
 
 # contactFindOptions
 
-可選的參數， `contacts.find` 方法，用於篩選從連絡人資料庫返回的連絡人。
+可選的參數， `<a href="../contacts.find.html">contacts.find</a>` 方法，用於篩選從<a href="../contacts.html">連絡人</a><a href="../../storage/database/database.html">資料庫</a>返回的<a href="../contacts.html">連絡人</a>。
 
     {篩選器：""、 多個： true，} ；
     
 
 ## 選項
 
-*   **篩選器**： 用於過濾連絡人的搜索字串。*() DOMString*（預設值：`""`)
+*   **篩選器**： 用於過濾<a href="../contacts.html">連絡人</a>的搜索字串。*() DOMString*（預設值：`""`)
 
-*   **多個**： 確定是否查找操作返回多個連絡人。*（布林）*（預設值：`false`)
+*   **多個**： 確定是否查找操作返回多個<a href="../contacts.html">連絡人</a>。*（布林）*（預設值：`false`)

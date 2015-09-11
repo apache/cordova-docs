@@ -20,19 +20,19 @@ license: >
 
 # geolocationOptions
 
-若要自訂的地理定位檢索的可選參數`Position`.
+若要自訂的<a href="../geolocation.html">地理定位</a>檢索的可選參數`Position`.
 
     {maximumAge: 3000，超時： 5000，enableHighAccuracy: true} ；
     
 
 ## 選項
 
-*   **enableHighAccuracy**： 提供應用程式需要最佳的可能結果的提示。 預設情況下，該設備將嘗試檢索 `Position` 使用基於網路的方法。 將此屬性設置為 `true` 告訴要使用更精確的方法，如衛星定位的框架。 *(布林值)*
+*   **enableHighAccuracy**： 提供應用程式需要最佳的可能結果的提示。 預設情況下，該<a href="../../device/device.html">設備</a>將嘗試檢索 `Position` 使用基於網路的方法。 將此屬性設置為 `true` 告訴要使用更精確的方法，如衛星定位的框架。 *(布林值)*
 
-*   **超時**： 時間 (毫秒) 從調用傳遞，允許的最大長度 `geolocation.getCurrentPosition` 或 `geolocation.watchPosition` 直到相應的 `geolocationSuccess` 回檔執行。 如果 `geolocationSuccess` 不會在此時間內調用回檔 `geolocationError` 傳遞回檔 `PositionError.TIMEOUT` 錯誤代碼。 (請注意，與一起使用時 `geolocation.watchPosition` 、 `geolocationError` 的時間間隔可以調用回檔每 `timeout` 毫秒!)*（人數）*
+*   **超時**： 時間 (毫秒) 從調用傳遞，允許的最大長度 `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` 或 `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` 直到相應的 `<a href="geolocationSuccess.html">geolocationSuccess</a>` 回<a href="../../file/fileobj/fileobj.html">檔</a>執行。 如果 `<a href="geolocationSuccess.html">geolocationSuccess</a>` 不會在此時間內調用回<a href="../../file/fileobj/fileobj.html">檔</a> `<a href="geolocationError.html">geolocationError</a>` 傳遞回<a href="../../file/fileobj/fileobj.html">檔</a> `<a href="../PositionError/positionError.html">PositionError</a>.TIMEOUT` 錯誤代碼。 (請注意，與一起使用時 `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` 、 `<a href="geolocationError.html">geolocationError</a>` 的時間間隔可以調用回<a href="../../file/fileobj/fileobj.html">檔</a>每 `timeout` 毫秒!)*（人數）*
 
-*   **maximumAge**： 接受其年齡大於指定以毫秒為單位的時間沒有緩存的位置。*（人數）*
+*   **maximumAge**： 接受其年齡大於指定以毫秒為單位的時間沒有緩存的<a href="../Position/position.html">位置</a>。*（人數）*
 
 ## Android 的怪癖
 
-Android 2.x 模擬器不返回地理定位結果除非 `enableHighAccuracy` 選項設置為`true`.
+Android 2.x 模擬器不返回<a href="../geolocation.html">地理定位</a>結果除非 `enableHighAccuracy` 選項設置為`true`.

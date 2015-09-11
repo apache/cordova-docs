@@ -38,8 +38,8 @@ a parameter contains the following properties:
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
 
 If there is an error obtaining the pattern, the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.PATTERN\_ERROR`.
+executes with a `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>` object as a parameter. The
+error's expected code is `<a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PATTERN\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following values:
 
@@ -57,7 +57,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 When the browser is set to the `en\_US` locale, this example displays
@@ -71,13 +71,13 @@ a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
         );
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern Example</title>
+        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 

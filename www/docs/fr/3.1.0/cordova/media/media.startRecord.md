@@ -43,7 +43,7 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
+        var mediaRec = new <a href="media.html">Media</a>(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -64,20 +64,20 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
         function recordAudio() {
             var src = "myrecording.amr";
-            var mediaRec = new Media(src, onSuccess, onError);
+            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
             // Record audio
             mediaRec.startRecord();
@@ -86,7 +86,7 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudio<a href="../geolocation/Position/position.html">Position</a>(recTime + " sec");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -115,7 +115,7 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
     
         // Set audio position
         //
-        function setAudioPosition(position) {
+        function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
     
@@ -130,21 +130,21 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
 
 ## Bizarreries Android
 
-*   Appareils Android enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
+*   <a href="../device/device.html">Appareil</a>s Android enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
 
 ## BlackBerry WebWorks Quirks
 
-*   Appareils blackBerry enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
+*   <a href="../device/device.html">Appareil</a>s blackBerry enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
 
 ## iOS Quirks
 
 *   iOS uniquement les enregistrements de fichiers de type *.wav* et renvoie une erreur si l'extension de nom de fichier n'est pas correctement.
 
-*   Si un chemin d'accès complet n'est pas fourni, l'enregistrement est placé dans l'application `documents/tmp` répertoire. Ce qui peut être consulté le `File` à l'aide de l'API `LocalFileSystem.TEMPORARY` . N'importe quel sous-répertoire spécifié au moment de l'enregistrement doit déjà exister.
+*   Si un chemin d'accès complet n'est pas fourni, l'enregistrement est placé dans l'application `documents/tmp` répertoire. Ce qui peut être consulté le `<a href="../file/fileobj/fileobj.html">File</a>` à l'aide de l'API `Local<a href="../file/filesystem/filesystem.html"><a href="../file/fileobj/fileobj.html">File</a>System</a>.TEMPORARY` . N'importe quel sous-répertoire spécifié au moment de l'enregistrement doit déjà exister.
 
 *   Les fichiers peuvent être enregistrés et lus à l'aide de l'URI les documents :
     
-        var myMedia = new Media("documents://beer.mp3")
+        var my<a href="media.html">Media</a> = new <a href="media.html">Media</a>("documents://beer.mp3")
         
 
 ## Bizarreries de paciarelli

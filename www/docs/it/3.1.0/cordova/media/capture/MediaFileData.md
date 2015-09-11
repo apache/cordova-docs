@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# MediaFileData
+# <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 > Incapsula le informazioni sul formato di un file multimediale.
 
@@ -36,7 +36,7 @@ license: >
 
 ## BlackBerry WebWorks stranezze
 
-Nessuna API fornisce informazioni sul formato dei file multimediali, quindi il `MediaFileData` oggetto restituito da `MediaFile.getFormatData` presenta i seguenti valori predefiniti:
+Nessuna API fornisce informazioni sul formato dei file multimediali, quindi il `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` oggetto restituito da `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData` presenta i seguenti valori predefiniti:
 
 *   **codec**: non supportato e restituisce`null`.
 
@@ -50,7 +50,7 @@ Nessuna API fornisce informazioni sul formato dei file multimediali, quindi il `
 
 ## Stranezze Android
 
-Supporta i seguenti `MediaFileData` proprietà:
+Supporta i seguenti `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` proprietà:
 
 *   **codec**: non supportato e restituisce`null`.
 
@@ -64,7 +64,7 @@ Supporta i seguenti `MediaFileData` proprietà:
 
 ## iOS stranezze
 
-Supporta i seguenti `MediaFileData` proprietà:
+Supporta i seguenti `<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data` proprietà:
 
 *   **codec**: non supportato e restituisce`null`.
 

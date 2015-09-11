@@ -41,7 +41,7 @@ Questa guida contiene i seguenti argomenti:
 
 Innanzitutto - applicazioni Cordova dovrebbero adottare il design SPA (pagina singola applicazione). Vagamente definito, un centro benessere è un'applicazione lato client che viene eseguita da una richiesta di una pagina web. L'utente carica una serie iniziale di risorse (HTML, CSS e JavaScript) e ulteriori aggiornamenti (mostrando una nuova vista, caricamento dei dati) è fatto tramite AJAX. Terme sono comunemente usati per applicazioni più complesse sul lato client. GMail è un grande esempio di questo. Dopo il caricamento di GMail, posta visualizzazioni, editing e organizzazione sono tutti fatti aggiornando il DOM invece effettivamente lasciare la pagina corrente per caricare uno completamente nuovo.
 
-Utilizzando una SPA può aiutare a organizzare la tua applicazione in maniera più efficiente, ma ha anche vantaggi specifici per applicazioni di Cordova. Un'applicazione di Cordova deve attendere l'evento di deviceready al fuoco prima di qualsiasi plugin può essere utilizzato. Se non si utilizza una SPA e l'utente fa clic per passare da una pagina a altra, si dovrà aspettare per deviceready al fuoco ancora prima di fare uso di un plugin. Questo è facile dimenticare come l'applicazione diventa più grande.
+Utilizzando una SPA può aiutare a organizzare la tua applicazione in maniera più efficiente, ma ha anche vantaggi specifici per applicazioni di Cordova. Un'applicazione di Cordova deve attendere l'evento di <a href="../../cordova/events/events.deviceready.html">deviceready</a> al fuoco prima di qualsiasi plugin può essere utilizzato. Se non si utilizza una SPA e l'utente fa clic per passare da una pagina a altra, si dovrà aspettare per <a href="../../cordova/events/events.deviceready.html">deviceready</a> al fuoco ancora prima di fare uso di un plugin. Questo è facile dimenticare come l'applicazione diventa più grande.
 
 Anche se non si desidera utilizzare Cordova, creando un'applicazione mobile senza utilizzare un'architettura a singola pagina avrà implicazioni gravi prestazioni. Questo è perché navigare tra le pagine richiedono script, beni, ecc., per essere ricaricato. Anche se questi beni vengono memorizzati nella cache, ci saranno ancora problemi di prestazioni.
 
@@ -166,7 +166,7 @@ Con Xcode è possibile eseguire il debug lato iOS nativo dell'applicazione di Co
 
 Con ispettore web di Safari è possibile eseguire il debug di codice webview e js nell'applicazione di Cordova. Questo funziona solo su OSX e solo con iOS 6 (e superiori). Usa Safari per connettersi al dispositivo (o il simulatore) e collegherà strumenti di sviluppo del browser per l'applicazione di Cordova. Si ottiene che cosa vi aspettate da dev tools - DOM ispezione/manipolazione, un debugger JavaScript, ispezione di rete, console e altro. Come Xcode, con ispettore web di Safari è possibile impostare punti di interruzione nel codice JavaScript e visualizzare lo stato delle variabili a quel tempo. È possibile visualizzare eventuali errori, avvisi o messaggi che vengono stampati nella console. L'app è in esecuzione, è possibile eseguire comandi JavaScript direttamente dalla console. Per ulteriori dettagli su come impostarlo e cosa si può fare, vedere questo ottimo blog post: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> e questa guida: [Guida di Safari Web Inspector][16]
 
- [16]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
+ [16]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_<a href="../../index.html">Guide</a>/Introduction/Introduction.html
 
 ## Debug remoto cromo
 
@@ -207,7 +207,7 @@ Creazione di un'applicazione di Cordova che sembra piacevole su mobile può esse
  [21]: http://goratchet.com/
  [22]: http://topcoat.io
 
-Quando si costruisce l'interfaccia utente, è importante pensare a tutte le piattaforme che vi si rivolgono e le differenze tra le aspettative dell'utente. Ad esempio, un'applicazione Android che ha un'interfaccia utente stile iOS probabilmente non andrà bene con gli utenti. Questo a volte è anche applicato i vari negozi di applicazione. Per questo motivo, è importante rispettare le convenzioni di ciascuna piattaforma e pertanto hanno familiarità con i vari Human Interface Guidelines:
+Quando si costruisce l'interfaccia utente, è importante pensare a tutte le piattaforme che vi si rivolgono e le differenze tra le aspettative dell'utente. Ad esempio, un'applicazione Android che ha un'interfaccia utente stile iOS probabilmente non andrà bene con gli utenti. Questo a volte è anche applicato i vari negozi di applicazione. Per questo motivo, è importante rispettare le convenzioni di ciascuna piattaforma e pertanto hanno familiarità con i vari Human Interface <a href="../../index.html">Guide</a>lines:
 
 *   [iOS][23]
 *   [Android][24]

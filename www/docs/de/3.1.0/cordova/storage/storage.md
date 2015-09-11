@@ -20,37 +20,37 @@ license: >
 
 # Speicher
 
-> Ermöglicht den Zugriff auf das Gerät Storage-Optionen.
+> Ermöglicht den Zugriff auf das <a href="../device/device.html">Gerät</a> Storage-Optionen.
 
 Diese API bietet Storage-Optionen, die auf der Grundlage von zwei verschiedenen W3C-Spezifikationen:
 
 *   Die [Web Storage API-Spezifikation][1] ermöglicht Zugriff auf Daten über einfachen Schlüssel/Wert-Paaren. Finden Sie im Abschnitt über LocalStorage ausführliche auf dieser Schnittstelle.
 
-*   Der [Web SQL Database-Spezifikation][2] bietet Zugriff auf weitere vollwertige Datenbanktabellen über SQL-Abfragen. Eine Zusammenfassung dieser Schnittstelle unmittelbar unterhalb angezeigt wird.
+*   Der [Web SQL Database-Spezifikation][2] bietet Zugriff auf weitere vollwertige <a href="database/database.html">Datenbank</a>tabellen über SQL-Abfragen. Eine Zusammenfassung dieser Schnittstelle unmittelbar unterhalb angezeigt wird.
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
 
-Cordova bietet Zugriff auf beide Schnittstellen für die Minderheit der Geräte, die bereits diese nicht unterstützen. Im übrigen gelten die integrierten Implementierungen.
+Cordova bietet Zugriff auf beide Schnittstellen für die Minderheit der <a href="../device/device.html">Gerät</a>e, die bereits diese nicht unterstützen. Im übrigen gelten die integrierten Implementierungen.
 
 ## Methoden
 
-*   openDatabase
+*   <a href="storage.opendatabase.html">openDatabase</a>
 
 ## Argumente
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   <a href="parameters/name.html">database_name</a>
+*   <a href="parameters/version.html">database_version</a>
+*   <a href="parameters/display_name.html">database_displayname</a>
+*   <a href="parameters/size.html">database_size</a>
 
 ## Objekte
 
-*   Datenbank
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   <a href="database/database.html">Datenbank</a>
+*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+*   <a href="sqlerror/sqlerror.html">SQLError</a>
 
 ## Zugriff auf die Funktion
 
@@ -70,4 +70,4 @@ Wenn Sie einen älteren Satz der Cordova Werkzeuge, die die CLI vorangehen verwe
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

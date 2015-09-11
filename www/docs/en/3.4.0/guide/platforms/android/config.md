@@ -26,9 +26,9 @@ details preferences that only apply to Android builds. See The
 config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
+  application stays running in the background even after a `<a href="../../../cordova/events/events.pause.html">pause</a>`
   event fires. Note: setting this to false will not kill the app after
-  a pause event, it will only halt execution of code in the cordova
+  a <a href="../../../cordova/events/events.pause.html">pause</a> event, it will only halt execution of code in the cordova
   webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>
@@ -50,12 +50,12 @@ config.xml File for information on global configuration options.
 
         <preference name="SplashScreenDelay" value="10000"/>
 
-- `InAppBrowserStorageEnabled` (boolean, defaults to `true`): Controls
+- `InAppBrowser<a href="../../../cordova/storage/storage.html">Storage</a>Enabled` (boolean, defaults to `true`): Controls
   whether pages opened within an InAppBrowser can access the same
-  localStorage and WebSQL storage as pages opened with the default
+  local<a href="../../../cordova/storage/storage.html">Storage</a> and WebSQL storage as pages opened with the default
   browser.
 
-        <preference name="InAppBrowserStorageEnabled" value="true"/>
+        <preference name="InAppBrowser<a href="../../../cordova/storage/storage.html">Storage</a>Enabled" value="true"/>
 
 - `LoadingDialog` (string, defaults to `null`): If set, displays a dialog with
   the specified title and message, and a spinner, when loading the first

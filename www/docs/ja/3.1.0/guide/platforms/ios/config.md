@@ -20,7 +20,7 @@ license: >
 
 # iOS 構成
 
-`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
+`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 グローバル構成のオプションには、config.xml <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>情報を参照してください。
 
 *   `EnableViewportScale`(ブール値、既定値は `false` ): に設定されている `true` viewport メタ タグを使用して無効にするかユーザーのスケーリングの範囲を制限します。
     
@@ -32,12 +32,12 @@ license: >
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(ブール値、既定値は `false` ): に設定されている `true` ネイティブ コントロールではなくブラウザー指定のコントロールを使用して、画面のレイアウト内に*インライン*表示する HTML5 メディアの再生を許可します。 このために、追加、 `webkit-playsinline` 属性のいずれかに `<video>` の要素。
+*   `AllowInlineMediaPlayback`(ブール値、既定値は `false` ): に設定されている `true` ネイティブ コントロールではなくブラウザー指定のコントロールを使用して、画面のレイアウト内に*インライン*表示する HTML5 <a href="../../../cordova/media/media.html">メディア</a>の再生を許可します。 このために、追加、 `webkit-playsinline` 属性のいずれかに `<video>` の要素。
     
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web ストレージ データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web ストレージ バックアップを防ぐ。
+*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web <a href="../../../cordova/storage/storage.html">ストレージ</a> データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web <a href="../../../cordova/storage/storage.html">ストレージ</a> バックアップを防ぐ。
     
         <preference name="BackupWebStorage" value="local"/>
         
@@ -52,12 +52,12 @@ license: >
         <preference name="FadeSplashScreen" value="false"/>
         
 
-*   `FadeSplashScreenDuration`(float、既定値は `2` ): スプラッシュ スクリーンの秒数のフェードを実行する効果を指定します。
+*   `FadeSplashScreenDuration`(float、既定値は `2` ): <a href="../../../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>の秒数のフェードを実行する効果を指定します。
     
         <preference name="FadeSplashScreenDuration" value="4"/>
         
 
-*   `ShowSplashScreenSpinner`(ブール値、既定値は `true` ): に設定されている `false` 、スプラッシュ スクリーンのスピン ボタンを非表示にします。
+*   `ShowSplashScreenSpinner`(ブール値、既定値は `true` ): に設定されている `false` 、<a href="../../../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>のスピン ボタンを非表示にします。
     
         <preference name="ShowSplashScreenSpinner" value="false"/>
         

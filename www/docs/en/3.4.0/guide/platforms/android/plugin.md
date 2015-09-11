@@ -33,7 +33,7 @@ Android WebView with hooks attached to it.  Plugins are represented as
 class mappings in the `config.xml` file.  A plugin consists of at
 least one Java class that extends the `CordovaPlugin` class,
 overriding one of its `execute` methods. As best practice, the plugin
-should also handle `pause` and `resume` events, along with any message
+should also handle `<a href="../../../cordova/events/events.pause.html">pause</a>` and `<a href="../../../cordova/events/events.resume.html">resume</a>` events, along with any message
 passing between plugins.  Plugins with long-running requests,
 background activity such as media playback, listeners, or internal
 state should implement the `onReset()` method as well. It executes

@@ -20,19 +20,19 @@ license: >
 
 # Benachrichtigung
 
-> Visueller, akustischer und taktiler Gerätebenachrichtigungen.
+> Visueller, akustischer und taktiler <a href="../device/device.html">Gerät</a>ebenachrichtigungen.
 
 ## Methoden
 
-*   `Notification.Alert`
-*   `Notification.Confirm`
-*   `Notification.prompt`
-*   `Notification.Beep`
-*   `Notification.Vibrate`
+*   `<a href="notification.alert.html">Notification.Alert</a>`
+*   `<a href="notification.confirm.html">Notification.Confirm</a>`
+*   `<a href="notification.prompt.html">Notification.prompt</a>`
+*   `<a href="notification.beep.html">Notification.Beep</a>`
+*   `<a href="notification.vibrate.html">Notification.Vibrate</a>`
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
@@ -74,4 +74,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.

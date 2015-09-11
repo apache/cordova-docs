@@ -25,7 +25,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: l'ID restituito da`compass.watchHeading`.
+*   **watchID**: l'ID restituito da`<a href="compass.watchHeading.html">compass.watchHeading</a>`.
 
 ## Piattaforme supportate
 
@@ -38,7 +38,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
 
 ## Esempio rapido
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
         }
     
         // Stop watching the compass
@@ -96,8 +96,8 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>

@@ -20,22 +20,22 @@ license: >
 
 # camera.getPicture
 
-需要使用的相機，一張照片或從設備的圖像庫檢索一張照片。 圖像作為 base64 編碼傳遞成功回檔到 `String` ，或作為影像檔的 URI。 該方法本身返回 `CameraPopoverHandle` 可以用於重新置放檔選擇彈出的物件。
+需要使用的<a href="camera.html">相機</a>，一張照片或從<a href="../device/device.html">設備</a>的圖像庫檢索一張照片。 圖像作為 base64 編碼傳遞成功回<a href="../file/fileobj/fileobj.html">檔</a>到 `String` ，或作為影像<a href="../file/fileobj/fileobj.html">檔</a>的 URI。 該方法本身返回 `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` 可以用於重新置放<a href="../file/fileobj/fileobj.html">檔</a>選擇彈出的物件。
 
-    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
     
 
 ## 說明
 
-`camera.getPicture`函數將打開該設備的預設攝像頭應用程式，使使用者能夠對齊圖片。 預設情況下，會發生此行為時 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 。 一旦使用者快照照片、 攝像頭應用程式關閉，並恢復該應用程式。
+`camera.getPicture`函數將打開該<a href="../device/device.html">設備</a>的預設攝像頭應用程式，使使用者能夠對齊圖片。 預設情況下，會發生此行為時 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 。 一旦使用者快照照片、 攝像頭應用程式<a href="../inappbrowser/inappbrowser.html">關閉</a>，並恢復該應用程式。
 
-如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然後允許使用者選擇一個現有圖像對話方塊的顯示。 `camera.getPicture`函數返回 `CameraPopoverHandle` 物件，可用於設備方向更改時重新置放圖像選擇對話方塊，例如。
+如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然後允許使用者選擇一個現有圖像對話方塊的<a href="../inappbrowser/inappbrowser.html">顯示</a>。 `camera.getPicture`函數返回 `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` 物件，可用於<a href="../device/device.html">設備</a>方向更改時重新置放圖像選擇對話方塊，例如。
 
-傳回值發送到 `cameraSuccess` 回呼函數，根據指定的以下格式之一 `cameraOptions` ：
+傳回值發送到 `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` 回呼函數，根據指定的以下格式之一 `<a href="parameter/cameraOptions.html">cameraOptions</a>` ：
 
 *   A `String` 包含的 base64 編碼的照片圖像。
 
-*   A `String` 表示在本機存放區 （預設值） 上的影像檔位置。
+*   A `String` 表示在本機存放區 （預設值） 上的影像<a href="../file/fileobj/fileobj.html">檔</a><a href="../geolocation/Position/position.html">位置</a>。
 
 你可以做任何你想與編碼的圖像或 URI，例如：
 
@@ -47,7 +47,7 @@ license: >
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**注：**在較新的設備上的照片解析度是相當不錯的。 從設備的庫選擇了照片不到較低的品質，壓縮螢幕使即使 `quality` 指定參數。 為了避免常見的記憶體問題，設置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
+**注：**在較新的<a href="../device/device.html">設備</a>上的照片解析度是相當不錯的。 從<a href="../device/device.html">設備</a>的庫選擇了照片不到較低的品質，壓縮螢幕使即使 `quality` 指定參數。 為了避免常見的記憶體問題，設置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
 
 ## 支援的平臺
 
@@ -60,18 +60,18 @@ license: >
 
 ## Android 的怪癖
 
-Android 使用意向啟動捕獲圖像，在設備上的相機活動和與低記憶體手機，科爾多瓦活動可能被殺。 在此方案中，可能不會顯示圖像還原科爾多瓦活動時。
+Android 使用意向啟動<a href="../media/capture/capture.html">捕獲</a>圖像，在<a href="../device/device.html">設備</a>上的<a href="camera.html">相機</a>活動和與低記憶體手機，科爾多瓦活動可能被殺。 在此方案中，可能不會<a href="../inappbrowser/inappbrowser.html">顯示</a>圖像還原科爾多瓦活動時。
 
 ## iOS 的怪癖
 
-包括 JavaScript `alert()` 中任一回檔的函數可能會導致問題。 換行內的警報 `setTimeout()` ，允許 iOS 圖像選取器或彈出要完全關閉之前警報將顯示：
+包括 JavaScript `alert()` 中任一回<a href="../file/fileobj/fileobj.html">檔</a>的函數可能會導致問題。 換行內的警報 `setTimeout()` ，允許 iOS 圖像選取器或彈出要完全<a href="../inappbrowser/inappbrowser.html">關閉</a>之前警報將<a href="../inappbrowser/inappbrowser.html">顯示</a>：
 
     setTimeout(function() {/ / 做你的事!}，0) ；
     
 
 ## Windows Phone 7 的怪癖
 
-調用本機攝像頭應用程式，同時通過 Zune 連接您的設備不工作，並觸發錯誤回檔。
+調用本機攝像頭應用程式，同時通過 Zune <a href="../connection/connection.html">連接</a>您的<a href="../device/device.html">設備</a>不工作，並觸發錯誤回<a href="../file/fileobj/fileobj.html">檔</a>。
 
 ## Tizen 怪癖
 
@@ -95,7 +95,7 @@ Tizen 僅支援 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sou
     }
     
 
-拍一張照片和檢索圖像的檔位置：
+拍一張照片和檢索圖像的<a href="../file/fileobj/fileobj.html">檔</a><a href="../geolocation/Position/position.html">位置</a>：
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });
@@ -125,7 +125,7 @@ Tizen 僅支援 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sou
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready",onDeviceReady,false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
     
         // device APIs are available
         //

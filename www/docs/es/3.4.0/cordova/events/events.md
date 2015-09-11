@@ -24,16 +24,16 @@ license: >
 
 ## Tipos de eventos
 
-*   deviceready
-*   pause
-*   resume
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   <a href="events.deviceready.html">deviceready</a>
+*   <a href="events.pause.html">pause</a>
+*   <a href="events.resume.html">resume</a>
+*   <a href="events.backbutton.html">backbutton</a>
+*   <a href="events.menubutton.html">menubutton</a>
+*   <a href="events.searchbutton.html">searchbutton</a>
+*   <a href="events.startcallbutton.html">startcallbutton</a>
+*   <a href="events.endcallbutton.html">endcallbutton</a>
+*   <a href="events.volumedownbutton.html">volumedownbutton</a>
+*   <a href="events.volumeupbutton.html">volumeupbutton</a>
 
 ## Añadida por [org.apache.cordova.battery-estatus][1] de eventos
 

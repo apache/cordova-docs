@@ -28,10 +28,10 @@ specifications:
 * The
   [Web Storage API Specification](http://dev.w3.org/html5/webstorage/)
   allows you to access data via simple key/value pairs.  See the
-  section on localStorage for complete details on this interface.
+  section on <a href="localstorage/localstorage.html">localStorage</a> for complete details on this interface.
 
 * The
-  [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
+  [Web SQL <a href="database/database.html">Database</a> Specification](http://dev.w3.org/html5/webdatabase/)
   offers more full-featured database tables accessed via SQL queries.
   A summary of this interface appears immediately below.
 
@@ -41,22 +41,22 @@ implementations apply.
 
 ## Methods
 
-- openDatabase
+- <a href="storage.opendatabase.html">open<a href="database/database.html">Database</a></a>
 
 ## Arguments
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+- <a href="parameters/name.html">database_name</a>
+- <a href="parameters/version.html">database_version</a>
+- <a href="parameters/display_name.html">database_displayname</a>
+- <a href="parameters/size.html">database_size</a>
 
 ## Objects
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetRowList
-- SQLError
+- <a href="database/database.html">Database</a>
+- <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+- <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+- <a href="sqlerror/sqlerror.html">SQLError</a>
 
 ## Accessing the Feature
 
@@ -79,4 +79,4 @@ required:
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the Overview section.
+configuration.  See _Platform Support_ in the <a href="../../guide/overview/index.html">Overview</a> section.

@@ -22,11 +22,11 @@ license: >
 
 Ce guide montre comment configurer votre environnement de développement SDK pour déployer des applications de Cordova pour appareils iOS comme l'iPhone et l'iPad. Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   iOS Configuration
-*   Mise à jour d'iOS
-*   iOS WebViews
-*   iOS Plugins
-*   iOS Command-line Tools
+*   <a href="config.html">iOS Configuration</a>
+*   <a href="upgrading.html">Mise à jour d'iOS</a>
+*   <a href="webview.html">iOS WebViews</a>
+*   <a href="plugin.html">iOS Plugins</a>
+*   <a href="tools.html">iOS Command-line Tools</a>
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 
@@ -122,7 +122,7 @@ Xcode de mise en garde concernant la `invokeString` méthode concerne une foncti
 
 *   Modifiez le fichier *Classes/MainViewController.m* , entourent le bloc suivant de code avec `/*` et `*/` commentaires comme indiqué ci-dessous, puis tapez **commande + s** pour enregistrer le fichier :
     
-        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / valable uniquement si ___PROJECTNAME__-Info.plist spécifie un protocole pour gérer / * si (self.invokeString) {/ / c'est passé avant que l'événement deviceready se déclenche, donc vous pouvez y accéder en js lorsque vous recevez deviceready NSLog (@"DEPRECATED : window.invokeString - utilisez plutôt la fonction window.handleOpenURL(url), qui est toujours appelée lorsque l'application est lancée via un url personnalisé régime.") ;
+        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / valable uniquement si ___PROJECTNAME__-Info.plist spécifie un protocole pour gérer / * si (self.invokeString) {/ / c'est passé avant que l'événement <a href="../../../cordova/events/events.deviceready.html">deviceready</a> se déclenche, donc vous pouvez y accéder en js lorsque vous recevez <a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog (@"DEPRECATED : window.invokeString - utilisez plutôt la fonction window.handleOpenURL(url), qui est toujours appelée lorsque l'application est lancée via un url personnalisé régime.") ;
           NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ «; », self.invokeString] ;
           [theWebView stringByEvaluatingJavaScriptFromString:jsString] ;
         } * / / / Noir couleur de base de fond corresponde les applications natives theWebView.backgroundColor = [UIColor blackColor] ;

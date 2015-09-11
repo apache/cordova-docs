@@ -28,8 +28,8 @@ Upgrading Cordova iOS
 3. **Copy** the **www/cordova-1.8.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.7.x.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-1.8.0.js** file
 
-If you intend on using the **Capture API**, you will need the new **iPad retina-display** assets:
+If you intend on using the **<a href="../../../cordova/media/capture/capture.html">Capture</a> API**, you will need the new **iPad retina-display** assets:
 
-1.  **Copy** the **Resources/Capture.bundle** item from the new project into your project folder, over-writing your existing **Resources/Capture.bundle** item
-2.  In your project, select the **Capture.bundle** item into Xcode into your Project Navigator, and press the **Delete** key, then select **Remove Reference** from the dialog that pops up.
-3.  Drag the new **Capture.bundle** from Step 1. above into Xcode into your Project Navigator, and select the **Create groups for any added folders** radio-button
+1.  **Copy** the **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item from the new project into your project folder, over-writing your existing **Resources/<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item
+2.  In your project, select the **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** item into Xcode into your Project Navigator, and press the **Delete** key, then select **Remove Reference** from the dialog that pops up.
+3.  Drag the new **<a href="../../../cordova/media/capture/capture.html">Capture</a>.bundle** from Step 1. above into Xcode into your Project Navigator, and select the **Create groups for any added folders** radio-button

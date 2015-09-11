@@ -27,9 +27,9 @@ onSuccess 콜백 함수를 제공 하는 `Acceleration` 정보.
     }
     
 
-## 매개 변수
+## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
 
-*   **가속**: 단일 시점에서 가속. (가속도)
+*   **<a href="../acceleration/acceleration.html">가속</a>**: 단일 시점에서 <a href="../acceleration/acceleration.html">가속</a>. (<a href="../acceleration/acceleration.html">가속</a>도)
 
 ## 예를 들어
 

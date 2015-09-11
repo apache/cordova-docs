@@ -20,15 +20,15 @@ license: >
 
 # FileReader
 
-Die `FileReader` ermöglicht einfachen Zugriff auf eine Datei.
+Die `FileReader` ermöglicht einfachen Zugriff auf eine <a href="../fileobj/fileobj.html">Datei</a>.
 
 ## Eigenschaften
 
 *   **ReadyState**: einer der Leser der drei Staaten möglich, entweder `EMPTY` , `LOADING` oder`DONE`.
 
-*   **Ergebnis**: der Inhalt der Datei, die gelesen wurden. *(DOM-String und enthält)*
+*   **Ergebnis**: der Inhalt der <a href="../fileobj/fileobj.html">Datei</a>, die gelesen wurden. *(DOM-String und enthält)*
 
-*   **Fehler**: ein Objekt, die Fehler enthalten. *(FileError)*
+*   **Fehler**: ein Objekt, die Fehler enthalten. *(<a href="../fileerror/fileerror.html">FileError</a>)*
 
 *   **Onloadstart**: wird aufgerufen, wenn die Lese beginnt. *(Funktion)*
 
@@ -42,23 +42,23 @@ Die `FileReader` ermöglicht einfachen Zugriff auf eine Datei.
 
 **Hinweis:** Die folgende Porperty wird nicht unterstützt:
 
-*   **OnProgress**: aufgerufen, beim Lesen der Datei Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
+*   **OnProgress**: aufgerufen, beim Lesen der <a href="../fileobj/fileobj.html">Datei</a> Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
 
 ## Methoden
 
-*   **Abbrechen**: Abbrüche, die Datei zu lesen.
+*   **Abbrechen**: Abbrüche, die <a href="../fileobj/fileobj.html">Datei</a> zu lesen.
 
-*   **ReadAsDataURL**: Datei und Rückgabedaten base64-codierte Daten im URL.
+*   **ReadAsDataURL**: <a href="../fileobj/fileobj.html">Datei</a> und Rückgabedaten base64-codierte Daten im URL.
 
-*   **ReadAsText**: liest Text-Datei.
+*   **ReadAsText**: liest Text-<a href="../fileobj/fileobj.html">Datei</a>.
 
-*   **ReadAsBinaryString**: liest als Binär-Datei und eine binäre Zeichenfolge zurückgibt.
+*   **ReadAsBinaryString**: liest als Binär-<a href="../fileobj/fileobj.html">Datei</a> und eine binäre Zeichenfolge zurückgibt.
 
-*   **ReadAsArrayBuffer**: liest Datei als eine`ArrayBuffer`.
+*   **ReadAsArrayBuffer**: liest <a href="../fileobj/fileobj.html">Datei</a> als eine`ArrayBuffer`.
 
 ## Informationen
 
-Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem des Geräts zu lesen. Dateien können als Text oder als eine base64-codierte Daten-Zeichenfolge gelesen werden. Ereignis-Listener empfangen die `loadstart` , `progress` , `load` , `loadend` , `error` , und `abort` Ereignisse.
+Das `FileReader` -Objekt bietet eine Möglichkeit, <a href="../fileobj/fileobj.html">Datei</a>en aus dem <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">Datei</a>system</a> des <a href="../../device/device.html">Gerät</a>s zu lesen. <a href="../fileobj/fileobj.html">Datei</a>en können als Text oder als eine base64-codierte Daten-Zeichenfolge gelesen werden. Ereignis-Listener empfangen die `loadstart` , `progress` , `load` , `loadend` , `error` , und `abort` Ereignisse.
 
 ## Unterstützte Plattformen
 
@@ -72,7 +72,7 @@ Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem d
 
 **Parameter:**
 
-*   **Datei**: das Dateiobjekt zu lesen.
+*   **<a href="../fileobj/fileobj.html">Datei</a>**: das <a href="../fileobj/fileobj.html">Datei</a>objekt zu lesen.
 
 ## Kleines Beispiel
 
@@ -96,9 +96,9 @@ Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem d
 
 **Parameter:**
 
-*   **Datei**: das Dateiobjekt zu lesen.
+*   **<a href="../fileobj/fileobj.html">Datei</a>**: das <a href="../fileobj/fileobj.html">Datei</a>objekt zu lesen.
 
-*   **Codierung**: Codierung zum Codieren des Dateiinhalts. Standardwert ist UTF8.
+*   **Codierung**: Codierung zum Codieren des <a href="../fileobj/fileobj.html">Datei</a>inhalts. Standardwert ist UTF8.
 
 ## Kleines Beispiel
 
@@ -142,19 +142,19 @@ Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem d
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
@@ -195,7 +195,7 @@ Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem d
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Read File</p>
       </body>
     </html>
@@ -211,7 +211,7 @@ Derzeit unterstützt nur auf iOS und Android.
 
 **Parameter:**
 
-*   **Datei**: das Dateiobjekt zu lesen.
+*   **<a href="../fileobj/fileobj.html">Datei</a>**: das <a href="../fileobj/fileobj.html">Datei</a>objekt zu lesen.
 
 ## Kleines Beispiel
 
@@ -237,7 +237,7 @@ Derzeit unterstützt nur auf iOS und Android.
 
 **Parameter:**
 
-*   **Datei**: das Dateiobjekt zu lesen.
+*   **<a href="../fileobj/fileobj.html">Datei</a>**: das <a href="../fileobj/fileobj.html">Datei</a>objekt zu lesen.
 
 ## Kleines Beispiel
 

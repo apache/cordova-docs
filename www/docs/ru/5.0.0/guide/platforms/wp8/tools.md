@@ -70,7 +70,7 @@ license: >
 
 ## Построение проекта (чистой, а затем построить)
 
-*   Отладка
+*   <a href="../../next/index.html">Отладка</a>
     
     $ C:\path\to\my\_new\_project\cordova\build --debug
 

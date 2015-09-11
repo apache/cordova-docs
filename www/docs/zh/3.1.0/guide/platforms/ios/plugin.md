@@ -22,7 +22,7 @@ license: >
 
 外掛程式是一個擴展的目標 C 類 `CDVPlugin` 類。
 
-每個外掛程式類必須註冊為 `<feature>` 中標籤的 `config.xml` 檔。 正是通過這一機制的 JavaScript `exec` 方法的 `service` 參數將映射到目標 C 類。
+每個外掛程式類必須註冊為 `<feature>` 中標籤的 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 正是通過這一機制的 JavaScript `exec` 方法的 `service` 參數將映射到目標 C 類。
 
 ## 外掛程式類映射
 
@@ -33,7 +33,7 @@ license: >
 
 這封送一個請求從 `UIWebView` 到 iOS 本機側，更或較不沸騰到調用 `action` 方法 `service` 類，傳入的參數中的 `args` 陣列。
 
-指定外掛程式作為 `<feature>` 在科爾多瓦 iOS 應用程式專案中的標記 `config.xml` 檔。
+指定外掛程式作為 `<feature>` 在科爾多瓦 iOS 應用程式專案中的標記 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
@@ -54,11 +54,11 @@ license: >
 
 有*沒有*指定外掛程式的初始值設定項。相反，應使用外掛程式 `pluginInitialize` 他們開辦的邏輯方法。
 
-長時間運行的請求，外掛程式背景活動 （例如，播放的媒體），聽眾或內部狀態應執行 `onReset` 方法和停止或清理這些活動。 這種方法運行時 `UIWebView` 定位到新的一頁或刷新，重新載入 JavaScript。
+長時間運行的請求，外掛程式背景活動 （例如，播放的<a href="../../../cordova/media/media.html">媒體</a>），聽眾或內部狀態應執行 `onReset` 方法和停止或清理這些活動。 這種方法運行時 `UIWebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
 ## 寫作 iOS 科爾多瓦外掛程式
 
-我們有外掛程式請求到本機端 JavaScript 起火燃燒。 我們有通過正確映射的目標 C 的 iOS 外掛程式 `config.xml` 檔。 所以最後的 iOS 目標 C 外掛程式類長什麼樣子？
+我們有外掛程式請求到本機端 JavaScript 起火燃燒。 我們有通過正確映射的目標 C 的 iOS 外掛程式 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 所以最後的 iOS 目標 C 外掛程式類長什麼樣子？
 
 什麼獲取調度到該外掛程式通過 JavaScript 的 `exec` 函數獲取傳遞到相應的外掛程式類的 `action` 方法。外掛程式的方法有此簽名：
 
@@ -93,24 +93,24 @@ license: >
     + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
     
 
-您可以創建 `String` ， `Int` ， `Double` ， `Bool` ， `Array` ， `Dictionary` ， `ArrayBuffer` ，和 `Multipart` 類型。 或者，不附加任何參數 (只是發送狀態)。 或者，返回一個錯誤。 你甚至可以選擇不發送任何外掛程式的結果，在這種情況下不會觸發回檔。
+您可以創建 `String` ， `Int` ， `Double` ， `Bool` ， `Array` ， `Dictionary` ， `ArrayBuffer` ，和 `Multipart` 類型。 或者，不附加任何參數 (只是發送狀態)。 或者，返回一個錯誤。 你甚至可以選擇不發送任何外掛程式的結果，在這種情況下不會觸發回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ### 備註
 
-*   `messageAsArrayBuffer`預計 `NSData*` 並將轉換為 `ArrayBuffer` 為您的 JavaScript 回檔 （和 `ArrayBuffers` 從 JavaScript 發送到一個外掛程式都將轉換為`NSData*`).
-*   `messageAsMultipart` 預計 `NSArray *` 包含任何其他支援類型，並將整個陣列作為發送 `參數` 給您的 JavaScript 回檔。 
+*   `messageAsArrayBuffer`預計 `NSData*` 並將轉換為 `ArrayBuffer` 為您的 JavaScript 回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （和 `ArrayBuffers` 從 JavaScript 發送到一個外掛程式都將轉換為`NSData*`).
+*   `messageAsMultipart` 預計 `NSArray *` 包含任何其他支援類型，並將整個陣列作為發送 `參數` 給您的 JavaScript 回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。 
     *   怪癖： 這不是只是語法糖 （儘管它是甜的）。 這種方式，所有參數序列化或反序列化，必要時。 例如，它是能夠安全返回 `NSData*` 作為多部分，但不是 `Array` /`Dictionary`.
 
 ## Echo 外掛程式 iOS 外掛程式
 
-我們會將以下內容添加到該專案的 `config.xml` 檔：
+我們會將以下內容添加到該專案的 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>：
 
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
     
 
-然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 到我們科爾多瓦 iOS 應用程式目錄裡面的外掛程式目錄：
+然後我們將添加下列<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> （ `Echo.h` 和 `Echo.m` ） 到我們科爾多瓦 iOS 應用程式目錄裡面的外掛程式目錄：
 
     /********* Echo.h Cordova Plugin Header *******/
     
@@ -152,7 +152,7 @@ license: >
 
 如果是，我們返回 `PluginResult` 與 `ERROR` 狀態。 如果所有這些檢查通過，然後我們將返回 `PluginResult` 與 `OK` 狀態，並通過在 `echo` 我們收到了在第一位作為參數的字串。
 
-最後，我們發送結果到 `self.commandDelegate` ，其中執行 `exec` 方法的成功或失敗回檔 JavaScript 一邊。 如果成功回檔被調用，它將通過在 `echo` 參數。
+最後，我們發送結果到 `self.commandDelegate` ，其中執行 `exec` 方法的成功或失敗回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a> JavaScript 一邊。 如果成功回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>被調用，它將通過在 `echo` 參數。
 
 ## 執行緒
 
@@ -182,7 +182,7 @@ license: >
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-例如，你可以掛接到 `pause` ， `resume` ，應用程式終止和 `handleOpenURL` 事件。
+例如，你可以掛接到 `pause` ， `resume` ，應用程式終止和 `handleOpenURL` <a href="../../../cordova/events/events.html">事件</a>。
 
 ## 調試外掛程式
 
@@ -197,4 +197,4 @@ Ios 6，您將使用 Safari 6.0 將簡單地附加到您的應用程式運行在
 
 *   別忘了向 config.xml 添加您的腳本映射。如果你忘記了，是在 Xcode 主控台中記錄錯誤。
 
-*   別忘了添加任何主機，您在白名單中，連接到域白名單指南中所述。如果你忘記了，是在 Xcode 主控台中記錄錯誤。
+*   別忘了添加任何主機，您在白名單中，<a href="../../../cordova/connection/connection.html">連接</a>到域<a href="../../appdev/whitelist/index.html">白名單指南</a>中所述。如果你忘記了，是在 Xcode 主控台中記錄錯誤。

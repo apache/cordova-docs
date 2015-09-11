@@ -20,7 +20,7 @@ license: >
 
 # DirectoryReader
 
-[W3C 디렉터리 및 시스템][1] 사양에 정의 된 파일 및 디렉토리 내에서 디렉토리를 나열 하는 개체입니다.
+[W3C 디렉터리 및 시스템][1] 사양에 정의 된 <a href="../fileobj/fileobj.html">파일</a> 및 디렉토리 내에서 디렉토리를 나열 하는 개체입니다.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -40,11 +40,11 @@ license: >
 
 이 디렉터리 항목을 읽으십시오.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **successCallback**: 배열의 전달 된 콜백 `FileEntry` 및 `DirectoryEntry` 개체. *(기능)*
+*   **successCallback**: 배열의 전달 된 콜백 `<a href="../fileentry/fileentry.html">FileEntry</a>` 및 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` 개체. *(기능)*
 
-*   **errorCallback**: 디렉터리 목록을 검색할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 디렉터리 목록을 검색할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 

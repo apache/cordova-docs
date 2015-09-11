@@ -20,4 +20,4 @@ license: >
 
 # database_displayname
 
-데이터베이스의 표시 이름입니다.
+<a href="../database/database.html">데이터베이스</a>의 표시 이름입니다.

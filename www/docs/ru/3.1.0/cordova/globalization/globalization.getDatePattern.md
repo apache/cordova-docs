@@ -37,7 +37,7 @@ license: >
 
 *   **dst_offset**: текущее смещение на летнее время в секундах между клиента не-летнее время часовой пояс и летнее клиента сохранение в часовой пояс. *(Число)*
 
-Если есть ошибка получения шаблона, `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PATTERN\_ERROR`.
+Если есть ошибка получения шаблона, `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
 
 `options`Параметр является необязательным и по умолчанию имеет следующие значения:
 
@@ -72,7 +72,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern Example</title>
+        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

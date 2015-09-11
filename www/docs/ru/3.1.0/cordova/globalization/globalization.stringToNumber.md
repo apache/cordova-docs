@@ -29,7 +29,7 @@ license: >
 
 Возвращает номер для `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `Number` значение.
 
-Если есть ошибка при разборе номер строки, а затем `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PARSING\_ERROR`.
+Если есть ошибка при разборе номер строки, а затем `errorCallback` выполняет с `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` объект в качестве параметра. Ожидаемый код ошибки`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
 
 `options`Параметр является необязательным и по умолчанию имеет следующие значения:
 
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber Example</title>
+        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

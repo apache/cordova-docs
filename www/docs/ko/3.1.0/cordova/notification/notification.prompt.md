@@ -77,14 +77,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog Example</title>
+        <title>Notification Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -121,4 +121,4 @@ license: >
 
 *   안 드 로이드 최대 3 개의 단추를 지원 하 고 그것 보다는 더 이상 무시 합니다.
 
-*   안 드 로이드 3.0 및 나중에, 단추는 홀로 테마를 사용 하는 장치에 대 한 반대 순서로 표시 됩니다.
+*   안 드 로이드 3.0 및 나중에, 단추는 홀로 테마를 사용 하는 <a href="../device/device.html">장치</a>에 대 한 반대 순서로 표시 됩니다.

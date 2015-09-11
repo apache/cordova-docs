@@ -20,15 +20,15 @@ license: >
 
 # Upgrading Android
 
-This guide shows how to modify Android projects to upgrade from older versions of Cordova.
+This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to modify Android projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-line Interface</a> for information how to update the
 version of the CLI.
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in <a href="../../cli/index.html">The Command-line Interface</a>.
 
 2. Add your platforms the the cordova project, for example: `cordova
    platform add android`.
@@ -58,7 +58,7 @@ version of the CLI.
 
 6. Update any references to the `org.apache.cordova.api` package to be `org.apache.cordova`.
 
-- __NOTE:__ all core APIs have been removed and must be installed as plugins. Please see the Using Plugman to Manage Plugins Guide for details.
+- __NOTE:__ all core APIs have been removed and must be installed as plugins. Please see the <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> Guide for details.
 
 ## Upgrade to 2.9.0 from 2.8.0
 

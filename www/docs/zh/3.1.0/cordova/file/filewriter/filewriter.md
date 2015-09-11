@@ -20,19 +20,19 @@ license: >
 
 # FileWriter
 
-作為物件，它允許您創建和向檔中寫入資料。
+作為物件，它允許您創建和向<a href="../fileobj/fileobj.html">檔</a>中寫入資料。
 
 ## 屬性
 
 *   **readyState**： 三種可能狀態之一，或者 `INIT` ， `WRITING` ，或`DONE`.
 
-*   **檔案名**: 要寫入的檔的名稱。*() DOMString*
+*   **<a href="../fileobj/fileobj.html">檔</a>案名**: 要寫入的<a href="../fileobj/fileobj.html">檔</a>的名稱。*() DOMString*
 
-*   **長度**： 要寫入的檔的長度。*(長)*
+*   **長度**： 要寫入的<a href="../fileobj/fileobj.html">檔</a>的長度。*(長)*
 
-*   **位置**： 當前檔指標的位置。*(長)*
+*   **<a href="../../geolocation/Position/position.html">位置</a>**： 當前<a href="../fileobj/fileobj.html">檔</a>指標的<a href="../../geolocation/Position/position.html">位置</a>。*(長)*
 
-*   **錯誤**： 包含錯誤的物件。*() FileError*
+*   **錯誤**： 包含錯誤的物件。*() <a href="../fileerror/fileerror.html">FileError</a>*
 
 *   **onwritestart**： 當寫操作開始時調用。*（函數）*
 
@@ -46,25 +46,25 @@ license: >
 
 下面的屬性*不*受支援：
 
-*   **onprogress**： 寫入檔，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
+*   **onprogress**： 寫入<a href="../fileobj/fileobj.html">檔</a>，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
 
 ## 方法
 
-*   **中止**: 中止寫入檔。
+*   **中止**: 中止寫入<a href="../fileobj/fileobj.html">檔</a>。
 
-*   **尋求**： 將檔指標移到指定的位元組。
+*   **尋求**： 將<a href="../fileobj/fileobj.html">檔</a>指標移到指定的位元組。
 
-*   **截斷**： 縮短至指定長度的檔。
+*   **截斷**： 縮短至指定長度的<a href="../fileobj/fileobj.html">檔</a>。
 
-*   **寫**： 將資料寫入到該檔。
+*   **寫**： 將資料寫入到該<a href="../fileobj/fileobj.html">檔</a>。
 
 ## 詳細資訊
 
-`FileWriter`物件提供 utf-8 編碼檔寫入設備檔案系統的方法。 應用程式回應 `writestart` ， `progress` ， `write` ， `writeend` ， `error` ，和 `abort` 的事件。
+`FileWriter`物件提供 utf-8 編碼<a href="../fileobj/fileobj.html">檔</a>寫入<a href="../../device/device.html">設備</a><a href="../fileobj/fileobj.html">檔</a>案系統的方法。 應用程式回應 `writestart` ， `progress` ， `write` ， `writeend` ， `error` ，和 `abort` 的<a href="../../events/events.html">事件</a>。
 
-每個 `FileWriter` 對應于一個檔中，資料可以被寫入許多倍。 `FileWriter`維護的檔 `position` 和 `length` 屬性，允許到 app `seek` 和 `write` 檔中的任意位置。 預設情況下， `FileWriter` 將寫入到檔中，覆蓋現有資料的開始。 設置可選的 `append` 到布林 `true` 在 `FileWriter` 的建構函式來寫入到檔的末尾。
+每個 `FileWriter` 對應于一個<a href="../fileobj/fileobj.html">檔</a>中，資料可以被寫入許多倍。 `FileWriter`維護的<a href="../fileobj/fileobj.html">檔</a> `position` 和 `length` 屬性，允許到 app `seek` 和 `write` <a href="../fileobj/fileobj.html">檔</a>中的任意<a href="../../geolocation/Position/position.html">位置</a>。 預設情況下， `FileWriter` 將寫入到<a href="../fileobj/fileobj.html">檔</a>中，覆蓋現有資料的開始。 設置可選的 `append` 到布林 `true` 在 `FileWriter` 的建構函式來寫入到<a href="../fileobj/fileobj.html">檔</a>的末尾。
 
-下面列出的所有平臺都支援文本資料。 正在寫入到檔案系統之前文本編碼為 utf-8。 一些平臺還支援可以作為 ArrayBuffer 或 Blob 傳遞中的二進位資料。
+下面列出的所有平臺都支援文本資料。 正在寫入到<a href="../fileobj/fileobj.html">檔</a>案系統之前文本編碼為 utf-8。 一些平臺還支援可以作為 ArrayBuffer 或 Blob 傳遞中的二進位資料。
 
 ## 支援的平臺
 
@@ -122,7 +122,7 @@ license: >
     entry.createWriter(win, fail);
     
 
-## 二進位檔案寫入快速示例
+## 二進位<a href="../fileobj/fileobj.html">檔</a>案寫入快速示例
 
     function win(writer) {
         var data = new ArrayBuffer(5),
@@ -182,26 +182,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter Example</title>
+        <title>FileWriter <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
+        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
     
@@ -228,7 +228,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Write File</p>
       </body>
     </html>

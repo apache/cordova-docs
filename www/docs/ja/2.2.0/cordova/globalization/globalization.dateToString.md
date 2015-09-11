@@ -32,7 +32,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 
 引数の ``date`` パラメーターは ``Date`` 型である必要があります。
 
-もし日時のフォーマット中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.FORMATTING\_ERROR です。
+もし日時のフォーマット中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.FORMATTING\_ERROR です。
 
 `options.formatLength` には 'short', 'medium', 'long', または 'full' が指定出来ます。
 `options.selector` には 'date', 'time' または 'date and time' が指定出来ます。
@@ -48,7 +48,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードはデフォルトのオプションを使用して "date: 9/25/2012 4:21PM" といったような文字列をポップアップダイアログに表示します。
@@ -60,7 +60,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
       {formatLength:'short', selector:'date and time'}
     );
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>

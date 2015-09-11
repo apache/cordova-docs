@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Notification.vibrate
+# <a href="notification.html">Notifica</a>tion.vibrate
 
 Vibra il dispositivo per il periodo di tempo specificato.
 
@@ -46,14 +46,14 @@ Vibra il dispositivo per il periodo di tempo specificato.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notifica</a>tion <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

@@ -22,14 +22,14 @@ license: >
 
 L'évènement se déclenche lorsqu'une application est renvoyée au premier plan.
 
-    document.addEventListener("resume", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
     
 
 ## Détails
 
 L'évènement `resume` se déclenche lorsque la plate-forme native sort l'application de l'arrière-plan.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
 
 ## Plates-formes supportées
 
@@ -41,7 +41,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 
 ## Exemple court
 
-    document.addEventListener("resume", onResume, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ Les applications devraient en général utiliser `document.addEventListener` pou
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("resume", onResume, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -84,7 +84,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 
 ## Notes au sujet d'iOS
 
-Toutes les fonctions interactives appelées à partir d'un gestionnaire de l'évènement `pause` s'exécutent plus tard, lorsque l'application est reprise, comme l'évènement `resume` l'indique. Il s'agit notamment d'alertes, `console.log()` et tous les appels vers des plugins ou l'API Cordova passant par l'Objective-C.
+Toutes les fonctions interactives appelées à partir d'un gestionnaire de l'évènement `<a href="events.pause.html">pause</a>` s'exécutent plus tard, lorsque l'application est reprise, comme l'évènement `resume` l'indique. Il s'agit notamment d'alertes, `console.log()` et tous les appels vers des plugins ou l'API Cordova passant par l'Objective-C.
 
 *   évènement **active**
     
@@ -94,7 +94,7 @@ Toutes les fonctions interactives appelées à partir d'un gestionnaire de l'év
     
     Si appelées depuis un gestionnaire de l'évènement `resume`, les fonctions interactives telles que `alert()` doivent être enveloppées d'un appel à `setTimeout()` avec un délai de zéro millisecondes, sinon l'application sera bloquée. Par exemple :
     
-        document.addEventListener("resume", onResume, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

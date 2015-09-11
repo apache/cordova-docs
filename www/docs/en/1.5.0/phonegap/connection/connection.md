@@ -28,7 +28,7 @@ This object is accessed under the navigator.network interface.
 Properties
 ----------
 
-- connection.type
+- <a href="connection.type.html">connection.type</a>
 
 Constants
 ---------

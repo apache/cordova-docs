@@ -29,7 +29,7 @@ onSuccess コールバック関数を提供する、 `Acceleration` 情報。
 
 ## パラメーター
 
-*   **加速**： 加速時間で 1 つの瞬間で。（加速度）
+*   **<a href="../acceleration/acceleration.html">加速</a>**： <a href="../acceleration/acceleration.html">加速</a>時間で 1 つの瞬間で。（<a href="../acceleration/acceleration.html">加速</a>度）
 
 ## 例
 

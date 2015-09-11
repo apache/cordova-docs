@@ -18,11 +18,11 @@ license: >
     under the License.
 ---
 
-# Upgrading BlackBerry 10
+# <a href="../blackberry/upgrade.html">Upgrading BlackBerry</a> 10
 
 This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information how to update the
 version of the CLI.
 
 ## Upgrading 3.6.0 Projects to 4.0.0
@@ -33,7 +33,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
 
 2. Run `cordova platform update blackberry` in your existing projects.
 
@@ -41,7 +41,7 @@ For CLI projects:
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. Update the `cordova` CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.
 
 2. Run `cordova platform update blackberry`
         
@@ -52,7 +52,7 @@ For projects not created with the cordova CLI, run:
 ## Upgrade to 3.1.0 from 3.0.0
 
 1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+   described in <a href="../../cli/index.html">The Command-Line Interface</a>.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
@@ -78,7 +78,7 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+   described in <a href="../../cli/index.html">The Command-Line Interface</a>.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
@@ -123,7 +123,7 @@ For BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4. Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
@@ -160,7 +160,7 @@ For BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4. Create a new project, as described in <a href="../ios/tools.html">iOS Shell Tool Guide</a>. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 

@@ -20,15 +20,15 @@ license: >
 
 # FileReader
 
-`FileReader`파일에 대 한 기본 액세스를 허용 합니다.
+`FileReader`<a href="../fileobj/fileobj.html">파일</a>에 대 한 기본 액세스를 허용 합니다.
 
 ## 속성
 
 *   **readyState**: 독자의 세 가지 가능한 상태, 어느 쪽이 든 `EMPTY` , `LOADING` 또는`DONE`.
 
-*   **결과**: 읽은 파일의 내용을. *(DOMString)*
+*   **결과**: 읽은 <a href="../fileobj/fileobj.html">파일</a>의 내용을. *(DOMString)*
 
-*   **오류**: 오류를 포함 하는 개체. *(FileError)*
+*   **오류**: 오류를 포함 하는 개체. *(<a href="../fileerror/fileerror.html">FileError</a>)*
 
 *   **onloadstart**: 읽기 시작할 때 라고. *(기능)*
 
@@ -42,23 +42,23 @@ license: >
 
 **참고:** 다음 porperty는 지원 되지 않습니다.
 
-*   **onprogress**: 진행의 관점에서 보고, 파일을 읽는 동안 전화 `progress.loaded` / `progress.total` . *(기능)*
+*   **onprogress**: 진행의 관점에서 보고, <a href="../fileobj/fileobj.html">파일</a>을 읽는 동안 전화 `progress.loaded` / `progress.total` . *(기능)*
 
 ## 메서드
 
-*   **중지**: 파일 읽기 중단.
+*   **중지**: <a href="../fileobj/fileobj.html">파일</a> 읽기 중단.
 
-*   **readAsDataURL**: 파일 및 base64 인코딩된 데이터의 URL로 데이터를 반환 합니다.
+*   **readAsDataURL**: <a href="../fileobj/fileobj.html">파일</a> 및 base64 인코딩된 데이터의 URL로 데이터를 반환 합니다.
 
-*   **readAsText**: 읽기 텍스트 파일.
+*   **readAsText**: 읽기 텍스트 <a href="../fileobj/fileobj.html">파일</a>.
 
-*   **readAsBinaryString**: 이진 파일을 이진 문자열을 반환 합니다.
+*   **readAsBinaryString**: 이진 <a href="../fileobj/fileobj.html">파일</a>을 이진 문자열을 반환 합니다.
 
-*   **readAsArrayBuffer**: 파일을 읽기는`ArrayBuffer`.
+*   **readAsArrayBuffer**: <a href="../fileobj/fileobj.html">파일</a>을 읽기는`ArrayBuffer`.
 
 ## 세부 정보
 
-`FileReader`개체 디바이스의 파일 시스템에서 파일을 읽을 수 있는 방법을 제공 합니다. 텍스트 또는 base64 데이터 인코딩 문자열 파일을 읽을 수 있습니다. 수신 하는 이벤트 리스너는 `loadstart` , `progress` , `load` , `loadend` , `error` , 및 `abort` 이벤트.
+`FileReader`개체 디바이스의 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에서 <a href="../fileobj/fileobj.html">파일</a>을 읽을 수 있는 방법을 제공 합니다. 텍스트 또는 base64 데이터 인코딩 문자열 <a href="../fileobj/fileobj.html">파일</a>을 읽을 수 있습니다. 수신 하는 <a href="../../events/events.html">이벤트</a> 리스너는 `loadstart` , `progress` , `load` , `loadend` , `error` , 및 `abort` <a href="../../events/events.html">이벤트</a>.
 
 ## 지원 되는 플랫폼
 
@@ -70,9 +70,9 @@ license: >
 
 ## readAsDataURL
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **파일**: 파일 개체 읽기를.
+*   **<a href="../fileobj/fileobj.html">파일</a>**: <a href="../fileobj/fileobj.html">파일</a> 개체 읽기를.
 
 ## 빠른 예제
 
@@ -94,11 +94,11 @@ license: >
 
 ## readAsText
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **파일**: 파일 개체 읽기를.
+*   **<a href="../fileobj/fileobj.html">파일</a>**: <a href="../fileobj/fileobj.html">파일</a> 개체 읽기를.
 
-*   **인코딩**: 인코딩 파일의 콘텐츠를 사용 하 여 인코딩. 기본값은 u t f 8입니다.
+*   **인코딩**: 인코딩 <a href="../fileobj/fileobj.html">파일</a>의 콘텐츠를 사용 하 여 인코딩. 기본값은 u t f 8입니다.
 
 ## 빠른 예제
 
@@ -142,26 +142,26 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title>FileReader <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.getFile("readme.txt", null, got<a href="../fileentry/fileentry.html">FileEntry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
+        function got<a href="../fileentry/fileentry.html">FileEntry</a>(fileEntry) {
             fileEntry.file(gotFile, fail);
         }
     
@@ -195,7 +195,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Read File</p>
       </body>
     </html>
@@ -203,15 +203,15 @@ license: >
 
 ## iOS 단점
 
-*   **인코딩** 매개 변수는 지원 되지 않습니다, 및 효과에 항상 UTF8 인코딩.
+*   **인코딩** 매개 <a href="../../../plugin_ref/spec.html">변수</a>는 지원 되지 않습니다, 및 효과에 항상 UTF8 인코딩.
 
 ## readAsBinaryString
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **파일**: 파일 개체 읽기를.
+*   **<a href="../fileobj/fileobj.html">파일</a>**: <a href="../fileobj/fileobj.html">파일</a> 개체 읽기를.
 
 ## 빠른 예제
 
@@ -235,9 +235,9 @@ license: >
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **파일**: 파일 개체 읽기를.
+*   **<a href="../fileobj/fileobj.html">파일</a>**: <a href="../fileobj/fileobj.html">파일</a> 개체 읽기를.
 
 ## 빠른 예제
 

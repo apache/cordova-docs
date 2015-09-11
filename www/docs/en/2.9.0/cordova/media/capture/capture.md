@@ -23,28 +23,28 @@ Capture
 
 > Provides access to the device's audio, image, and video capture capabilities.
 
-**Important privacy note:** Collection and use of images, video, or audio from the device's camera or microphone raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses such sensors and whether the data recorded is shared with any other parties.  In addition, if the app's use of the camera or microphone is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera or microphone (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing the camera or microphone.  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of images, video, or audio from the device's camera or microphone raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses such sensors and whether the data recorded is shared with any other parties.  In addition, if the app's use of the camera or microphone is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera or microphone (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing the camera or microphone.  For more information, please see the <a href="../../../guide/privacy/index.html">Privacy Guide</a>.
 
 Objects
 -------
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
+- <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+- <a href="captureImageOptions.html">CaptureImageOptions</a>
+- <a href="captureVideoOptions.html">CaptureVideoOptions</a>
 - CaptureCallback
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+- <a href="ConfigurationData.html">ConfigurationData</a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
+- <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 Methods
 -------
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- <a href="captureAudio.html">capture.captureAudio</a>
+- <a href="captureImage.html">capture.captureImage</a>
+- <a href="captureVideo.html">capture.captureVideo</a>
+- <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>
 
 Scope
 -----
@@ -58,16 +58,16 @@ therefore has global scope.
 Properties
 ----------
 
-- __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
-- __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
-- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes__: The audio recording formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+- __supportedImageModes__: The recording image sizes and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
+- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 Methods
 -------
 
-- `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
-- `capture.captureImage`: Launch the device's camera application to take photos.
-- `capture.captureVideo`: Launch the device's video recorder application to record videos.
+- `<a href="captureAudio.html">capture.captureAudio</a>`: Launch the device's audio recording application to record audio clips.
+- `<a href="captureImage.html">capture.captureImage</a>`: Launch the device's camera application to take photos.
+- `<a href="captureVideo.html">capture.captureVideo</a>`: Launch the device's video recorder application to record videos.
 
 Supported Platforms
 -------------------
@@ -96,7 +96,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
+    <plugin name="Capture" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" />
 
 #### www/config.xml
 

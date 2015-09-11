@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Configuration de blackBerry
+# <a href="../blackberry10/config.html">Configuration de blackBerry</a>
 
 BlackBerry souscrit pleinement la [Spécification W3C du Widget][1] ainsi que des extensions propriétaires de RIM. S'il vous plaît voir le complet [BlackBerry WebWorks documentation concernant config.xml][2] pour plus de détails.
 

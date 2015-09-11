@@ -20,17 +20,17 @@ license: >
 
 # BlackBerry 10 Platform Guide
 
-This guide shows how to set up your development environment to build
+This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to set up your development environment to build
 and deploy Cordova apps for BlackBerry 10 devices.  For previous
 versions of BlackBerry, you need to use a different set of
-command-line tools, described in BlackBerry Platform Guide.
+command-line tools, described in <a href="../blackberry/index.html">BlackBerry Platform Guide</a>.
 
 ## Requirements
 
 The development environment is available on Windows, Mac and Linux.
 
 Developers should use the `cordova` utility in conjunction with the
-BlackBerry Native SDK.  See The Command-line Interface for information
+BlackBerry Native SDK.  See <a href="../../cli/index.html">The Command-line Interface</a> for information
 how to install `cordova`, add projects, then build and deploy for each
 platform.
 
@@ -43,7 +43,7 @@ system path.
 
 On Windows:
 
-* Go to __My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables__.
+* Go to __My Computer &rarr; Properties &rarr; Advanced &rarr; Environment <a href="../../../plugin_ref/spec.html">Variables</a>__.
 
 * Append the Native SDK's install directory to the PATH, for example:
 
@@ -128,7 +128,7 @@ Then, run the `emulate` command to view the app:
 
     $ cordova emulate blackberry10
 
-## Deploy to Device
+## Deploy to <a href="../../../cordova/device/device.html">Device</a>
 
 To deploy to a device, make sure it is plugged into your computer.
 Enable development mode and obtain the IP address as desribed in the

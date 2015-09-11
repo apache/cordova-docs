@@ -18,15 +18,15 @@ license: >
     under the License.
 ---
 
-# Guía de la plataforma de Windows Phone 7
+# <a href="../wp8/index.html">Guía de la plataforma de Windows Phone</a> 7
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Windows Phone 7. Aplicaciones también funcionan en Windows Phone 8 dispositivos utilizando los mismos APIs, pero versión 7 carece de algunas de las características avanzadas de IE10 disponibles en Windows Phone 8. Hacer Windows Phone 8 aplicaciones *no* funcionan en dispositivos Windows Phone 7.
 
 Vea el siguiente para obtener más información específica de la plataforma que se aplica para las dos versiones:
 
-*   Actualización de Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone herramientas de línea de comandos
+*   <a href="../wp8/upgrading.html">Actualización de Windows Phone</a>
+*   <a href="../wp8/plugin.html">Windows Phone Plugins</a>
+*   <a href="../wp8/tools.html">Windows Phone herramientas de línea de comandos</a>
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 

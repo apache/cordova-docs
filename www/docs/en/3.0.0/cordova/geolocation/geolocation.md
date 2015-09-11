@@ -25,7 +25,7 @@ Geolocation
 
 `Geolocation` provides information about the device's location, such as
 latitude and longitude. Common sources of location information include
-Global Positioning System (GPS) and location inferred from network
+Global <a href="Position/position.html">Position</a>ing System (GPS) and location inferred from network
 signals such as IP address, RFID, WiFi and Bluetooth MAC addresses,
 and GSM/CDMA cell IDs. There is no guarantee that the API returns the
 device's actual location.
@@ -47,28 +47,28 @@ accessing geolocation data (if the device operating system doesn't do
 so already).  That notice should provide the same information noted
 above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
-see the Privacy Guide.
+see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.
 
 Methods
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- geolocation.getCurrent<a href="Position/position.html">Position</a>
+- geolocation.watch<a href="Position/position.html">Position</a>
+- <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
 
 Arguments
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
+- <a href="parameters/geolocationError.html">geolocationError</a>
+- <a href="parameters/geolocation.options.html">geolocationOptions</a>
 
 Objects (Read-Only)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- <a href="Position/position.html">Position</a>
+- <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>
+- <a href="Coordinates/coordinates.html">Coordinates</a>
 
 ## Accessing the Feature
 

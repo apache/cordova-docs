@@ -24,18 +24,18 @@ online
 This event fires when an application goes online, and the device
 becomes connected to the Internet.
 
-    document.addEventListener("online", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
 
 Details
 -------
 
 The `online` event fires when a previously unconnected device receives
 a network connection to allow an application access to the Internet.
-It relies on the same information as the Connection API, and fires
-when the value of `connection.type` becomes `NONE`.
+It relies on the same information as the <a href="../connection/connection.html">Connection</a> API, and fires
+when the value of `<a href="../connection/connection.type.html">connection.type</a>` becomes `NONE`.
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
@@ -47,22 +47,22 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("online", onOnline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
 
     function onOnline() {
         // Handle the online event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online Example</title>
+        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -70,13 +70,13 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("online", onOnline, false);
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
         }
 
         // Handle the online event
@@ -94,7 +94,7 @@ iOS Quirks
 --------------------------
 
 During initial startup, the first `online` event (if applicable) takes
-at least a second to fire, prior to which `connection.type` is
+at least a second to fire, prior to which `<a href="../connection/connection.type.html">connection.type</a>` is
 `UNKNOWN`.
 
 Windows Phone 7 Quirks

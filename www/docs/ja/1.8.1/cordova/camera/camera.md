@@ -26,7 +26,7 @@ Camera
 メソッド
 -------
 
-- camera.getPicture
+- <a href="camera.getPicture.html">camera.getPicture</a>
 
 パーミッション
 -----------
@@ -68,7 +68,7 @@ Camera
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

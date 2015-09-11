@@ -27,9 +27,9 @@ license: >
 
 ## 설명
 
-언어 식별자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `value` 속성을 `String` 값.
+언어 식별자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 있어야 해당 개체는 `value` 속성을 `String` 값.
 
-언어, 점점 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
+언어, 점점 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## 지원 되는 플랫폼
 
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage Example</title>
+        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

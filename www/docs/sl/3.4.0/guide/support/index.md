@@ -443,7 +443,7 @@ Naslednje prikazuje nabor razvojna orodja in naprave API na voljo za vsak mobiln
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Dogodki</a>
+          <a href="cordova_events_events.md.html"><a href="../../cordova/events/events.html">Dogodki</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +724,7 @@ Naslednje prikazuje nabor razvojna orodja in naprave API na voljo za vsak mobiln
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Shranjevanje</a>
+          <a href="cordova_storage_storage.md.html"><a href="../../cordova/storage/storage.html">Shranjevanje</a></a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

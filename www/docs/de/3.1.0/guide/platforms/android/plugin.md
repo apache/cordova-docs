@@ -20,9 +20,9 @@ license: >
 
 # Android Plugins
 
-Um ein Plugin zu entwickeln, ist ein Verständnis der Architektur von Cordova-Android notwendig. Cordova-Android besteht aus einem Android WebView mit Haken verbunden. Diese Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` Datei.
+Um ein Plugin zu entwickeln, ist ein Verständnis der Architektur von Cordova-Android notwendig. Cordova-Android besteht aus einem Android WebView mit Haken verbunden. Diese Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
 
-Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` Klasse. Eine Plugin muss eine der überschreiben die `execute` Methoden aus `CordovaPlugin` . Als beste Praxis, das Plugin behandeln soll `pause` und `resume` Ereignisse und jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie Medienwiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
+Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` Klasse. Eine Plugin muss eine der überschreiben die `execute` Methoden aus `CordovaPlugin` . Als beste Praxis, das Plugin behandeln soll `pause` und `resume` Ereignisse und jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie <a href="../../../cordova/media/media.html">Medien</a>wiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
 
 ## Plugin-Klasse Zuordnung
 
@@ -33,7 +33,7 @@ Der JavaScript-Teil eines Plugins verwendet immer die `cordova.exec` Methode wie
 
 Dies marshallt ersuchen die WebView Android native seitlich mehr oder weniger kochendes auf Berufung der `action` -Methode für die `service` -Klasse mit der übergebenen Argumente der `args` Array.
 
-Ob Sie Ihr Plugin als Java-Datei oder als ein Glas verteilen, das Plugin muss hinzugefügt werden die `config.xml` Datei in Ihrer Cordova-Android-Anwendung `res/xml/` Verzeichnis.
+Ob Sie Ihr Plugin als Java-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> oder als ein Glas verteilen, das Plugin muss hinzugefügt werden die `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> in Ihrer Cordova-Android-Anwendung `res/xml/` Verzeichnis.
 
     <feature name="<service_name>">
         <param name="android-package" value="<full_name_including_namespace>" />
@@ -44,7 +44,7 @@ Der Dienstname sollte übereinstimmen verwendet in der JavaScript `exec` Aufruf 
 
 ## Schreibe ein Android Java-Plugin
 
-JavaScript feuert eine Plugin-Anforderung an die systemeigene Seite. Das Android Java-Plugin ist richtig zugeordnet, über die `config.xml` Datei. Also sieht Android Java-Plugin-Endklasse wie?
+JavaScript feuert eine Plugin-Anforderung an die systemeigene Seite. Das Android Java-Plugin ist richtig zugeordnet, über die `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Also sieht Android Java-Plugin-Endklasse wie?
 
 Was an das Plugin per JavaScript gesendet ruft `exec` Funktion ruft in der Plugin-Klasse übergeben `execute` Methode. Die meisten `execute` Implementierungen wie folgt aussehen:
 
@@ -89,14 +89,14 @@ Wenn Sie nicht auf dem UI-Thread ausgeführt werden müssen, aber wollen nicht d
 
 ### Echo-Android-Plugin-Beispiel
 
-Fügen Sie Folgendes zu unserer `config.xml` Datei:
+Fügen Sie Folgendes zu unserer `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>:
 
     <feature name="Echo">
         <param name="android-package" value="org.apache.cordova.plugin.Echo" />
     </feature>
     
 
-Fügen Sie die folgende Datei auf `src/org/apache/cordova/plugin/Echo.java` innerhalb unserer Cordova-Android-Anwendung:
+Fügen Sie die folgende <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> auf `src/org/apache/cordova/plugin/Echo.java` innerhalb unserer Cordova-Android-Anwendung:
 
     package org.apache.cordova.plugin;
     

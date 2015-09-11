@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# media.stopRecord
+# <a href="media.stop.html">media.stop</a>Record
 
 Smette di registrare un file audio.
 
-    media.stopRecord();
+    <a href="media.stop.html">media.stop</a>Record();
     
 
 ## Descrizione
 
-Il `media.stopRecord` metodo viene eseguito in modo sincrono, arrestare la registrazione di un file audio.
+Il `<a href="media.stop.html">media.stop</a>Record` metodo viene eseguito in modo sincrono, arrestare la registrazione di un file audio.
 
 ## Piattaforme supportate
 
@@ -43,7 +43,7 @@ Il `media.stopRecord` metodo viene eseguito in modo sincrono, arrestare la regis
     //
     function recordAudio() {
         var src = "myrecording.mp3";
-        var mediaRec = new Media(src,
+        var mediaRec = new <a href="media.html">Media</a>(src,
             // success callback
             function() {
                 console.log("recordAudio():Audio Success");
@@ -70,20 +70,20 @@ Il `media.stopRecord` metodo viene eseguito in modo sincrono, arrestare la regis
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
         function recordAudio() {
             var src = "myrecording.mp3";
-            var mediaRec = new Media(src, onSuccess, onError);
+            var mediaRec = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
             // Record audio
             mediaRec.startRecord();

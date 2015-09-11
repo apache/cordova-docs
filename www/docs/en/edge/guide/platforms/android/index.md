@@ -26,7 +26,7 @@ command-line tools in your development workflow.  You need to install
 the Android SDK regardless of whether you want to use these
 platform-centered shell tools or cross-platform Cordova CLI for
 development. For a comparison of the two development paths, see the
-Overview.  For details on the CLI, see The Command-Line Interface.
+<a href="../../overview/index.html">Overview</a>.  For details on the CLI, see <a href="../../cli/index.html">The Command-Line Interface</a>.
 
 ## Requirements and Support
 
@@ -47,7 +47,7 @@ If you want to use Cordova's Android-centered shell tools in
 conjunction with the SDK, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
 section if you plan to use the cross-platform CLI tool described in
-The Command-Line Interface.
+<a href="../../cli/index.html">The Command-Line Interface</a>.
 
 The Cordova download contains separate archives for each platform. Be
 sure to expand the appropriate archive, `android` in this case, within
@@ -194,7 +194,7 @@ __Note__:`If you have any problems installing the package, you can find more inf
 ## Create a New Project
 
 At this point, to create a new project you can choose between the
-cross-platform CLI tool described in The Command-Line Interface, or
+cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>, or
 the set of Android-specific shell tools. From within a source-code
 directory, here's the CLI approach:
 
@@ -299,7 +299,7 @@ You are all set now and can build and run the app directly from `Android Studio`
 
 ![](img/guide/platforms/android/asdk_import_done.png)
 
-See [Android Studio Overview](http://developer.android.com/tools/studio/index.html) and
+See [Android Studio <a href="../../overview/index.html">Overview</a>](http://developer.android.com/tools/studio/index.html) and
 And [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html) for more details.
 
 

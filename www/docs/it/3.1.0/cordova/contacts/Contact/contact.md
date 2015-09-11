@@ -28,41 +28,41 @@ Contiene proprietà che descrivono un contatto, come il contatto personale o azi
 
 *   **displayName**: il nome di questo contatto, adatto per la visualizzazione a utenti finali. *(DOMString)*
 
-*   **nome**: un oggetto che contiene tutti i componenti di un nome di persone. *(ContactName)*
+*   **nome**: un oggetto che contiene tutti i componenti di un nome di persone. *(<a href="../ContactName/contactname.html">ContactName</a>)*
 
 *   **Nickname**: un nome informale con cui affrontare il contatto. *(DOMString)*
 
-*   **phoneNumbers**: una matrice di numeri di telefono del contatto. *(ContactField[])*
+*   **phoneNumbers**: una matrice di numeri di telefono del contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **email**: una matrice di indirizzi di posta elettronica del contatto. *(ContactField[])*
+*   **email**: una matrice di indirizzi di posta elettronica del contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **indirizzi**: una matrice di indirizzi di contatto. *(ContactAddress[])*
+*   **indirizzi**: una matrice di indirizzi di contatto. *(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
 
-*   **IMS**: una matrice di indirizzi IM tutto il contatto. *(ContactField[])*
+*   **IMS**: una matrice di indirizzi IM tutto il contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **organizzazioni**: una matrice di organizzazioni di tutto il contatto. *(ContactOrganization[])*
+*   **organizzazioni**: una matrice di organizzazioni di tutto il contatto. *(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
 
 *   **compleanno**: il compleanno del contatto. *(Data)*
 
 *   **Nota**: una nota sul contatto. *(DOMString)*
 
-*   **foto**: una matrice di foto del contatto. *(ContactField[])*
+*   **foto**: una matrice di foto del contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **categorie**: matrice di tutte le categorie definite dall'utente connesso con il contatto. *(ContactField[])*
+*   **categorie**: matrice di tutte le categorie definite dall'utente connesso con il contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **URL**: matrice di pagine web connesso con il contatto. *(ContactField[])*
+*   **URL**: matrice di pagine web connesso con il contatto. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
 ## Metodi
 
 *   **clone**: restituisce una nuova `Contact` oggetto che è una copia completa dell'oggetto chiamante, con la `id` proprietà impostata`null`.
 
-*   **rimuovere**: rimuove il contatto dal database contatti dispositivo, altrimenti esegue un callback di errore con un `ContactError` oggetto.
+*   **rimuovere**: rimuove il contatto dal database contatti dispositivo, altrimenti esegue un callback di errore con un `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` oggetto.
 
 *   **Salva**: salva un nuovo contatto nel database di contatti del dispositivo, o aggiorna un contatto esistente se esiste già un contatto con lo stesso **id** .
 
 ## Dettagli
 
-Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono essere creati, memorizzati o rimossi dal database di contatti dispositivo. Contatti possono anche essere estratto (singolarmente o in blocco) dal database richiamando il `contacts.find` metodo.
+Il `Contact` oggetto rappresenta il contatto di un utente. <a href="../contacts.html">Contatti</a> possono essere creati, memorizzati o rimossi dal database di contatti dispositivo. <a href="../contacts.html">Contatti</a> possono anche essere estratto (singolarmente o in blocco) dal database richiamando il `<a href="../contacts.find.html">contacts.find</a>` metodo.
 
 **Nota:** Non tutti i campi di contatto sopra elencati sono supportati su ogni piattaforma del dispositivo. Consultare la sezione di *stranezze* su ogni piattaforma per dettagli.
 
@@ -80,8 +80,8 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
         alert("Save Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
     // create a new contact object
@@ -90,7 +90,7 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
     contact.nickname = "Plumber";            // specify both to support all devices
     
     // populate some fields
-    var name = new ContactName();
+    var name = new <a href="../ContactName/contactname.html">ContactName</a>();
     name.givenName = "Jane";
     name.familyName = "Doe";
     contact.name = name;
@@ -114,8 +114,8 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
         alert("Removal Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
         // remove the contact from the device
@@ -127,14 +127,14 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -143,7 +143,7 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
             var contact = navigator.contacts.create();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
-            var name = new ContactName();
+            var name = new <a href="../ContactName/contactname.html">ContactName</a>();
             name.givenName = "Jane";
             name.familyName = "Doe";
             contact.name = name;
@@ -169,8 +169,8 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -224,11 +224,11 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
 
 ## iOS stranezze
 
-*   **displayName**: non supportata su iOS, tornando `null` se non c'è nessun `ContactName` specificato, nel qual caso restituisce il nome composito, **soprannome** o `""` , rispettivamente.
+*   **displayName**: non supportata su iOS, tornando `null` se non c'è nessun `<a href="../ContactName/contactname.html">ContactName</a>` specificato, nel qual caso restituisce il nome composito, **soprannome** o `""` , rispettivamente.
 
 *   **compleanno**: deve essere inserito come un JavaScript `Date` oggetto, allo stesso modo viene restituito.
 
-*   **foto**: restituisce un URL del File dell'immagine, che viene memorizzato nella directory temporanea dell'applicazione. Contenuto della directory temporanea vengono rimossi quando l'applicazione termina.
+*   **foto**: restituisce un URL del <a href="../../file/fileobj/fileobj.html">File</a> dell'immagine, che viene memorizzato nella directory temporanea dell'applicazione. Contenuto della directory temporanea vengono rimossi quando l'applicazione termina.
 
 *   **categorie**: questa proprietà non è attualmente supportata, restituendo`null`.
 

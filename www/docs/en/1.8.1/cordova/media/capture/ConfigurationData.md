@@ -28,7 +28,7 @@ Description
 
 This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).  
 
-The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  Examples:
+The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  <a href="../../storage/storage.opendatabase.html">Example</a>s:
 
 - video/3gpp
 - video/quicktime
@@ -43,7 +43,7 @@ Properties
 - __height:__ The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
 - __width:__ The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // retrieve supported image modes

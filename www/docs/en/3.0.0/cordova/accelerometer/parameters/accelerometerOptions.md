@@ -26,4 +26,4 @@ An optional parameter to customize the retrieval of accelerometer values.
 Options
 -------
 
-- __frequency__: How often to retrieve the `Acceleration` in milliseconds. _(Number)_ (Default: 10000)
+- __frequency__: How often to retrieve the `<a href="../acceleration/acceleration.html">Acceleration</a>` in milliseconds. _(Number)_ (Default: 10000)

@@ -154,7 +154,7 @@ Se si, torniamo un `PluginResult` con un `ERROR` stato. Se tutti quei controlli 
 
 Infine, inviamo il risultato di `self.commandDelegate` , che esegue il `exec` callback del metodo di successo o fallimento sul lato JavaScript. Se viene chiamato il callback di successo, passa il `echo` parametro.
 
-## Filettatura
+## <a href="../../../cordova/file/fileobj/fileobj.html">File</a>ttatura
 
 Plugin metodi vengono eseguiti nello stesso thread come interfaccia utente. Se il tuo plugin richiede una grande quantità di elaborazione o richiede una chiamata di blocco, è necessario utilizzare un thread in background. Ad esempio:
 

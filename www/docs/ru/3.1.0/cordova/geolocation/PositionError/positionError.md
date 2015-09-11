@@ -20,7 +20,7 @@ license: >
 
 # PositionError
 
-A `PositionError` объект передается в `geolocationError` обратного вызова при возникновении ошибки.
+A `PositionError` объект передается в `<a href="../parameters/geolocationError.html">geolocationError</a>` обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -36,7 +36,7 @@ A `PositionError` объект передается в `geolocationError` обр
 
 ## Описание
 
-`PositionError`Объект передается в `geolocationError` функцию обратного вызова при возникновении ошибки с geolocation.
+`PositionError`Объект передается в `<a href="../parameters/geolocationError.html">geolocationError</a>` функцию обратного вызова при возникновении ошибки с geolocation.
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -48,4 +48,4 @@ A `PositionError` объект передается в `geolocationError` обр
 
 ### `PositionError.TIMEOUT`
 
-Возвращается, если устройство не удается получить позицию в течение времени, указанного в `geolocationOptions` ' `timeout` Свойства. При использовании с `geolocation.watchPosition` , эта ошибка может быть передан `geolocationError` обратного вызова каждый `timeout` миллисекунд.
+Возвращается, если устройство не удается получить позицию в течение времени, указанного в `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` ' `timeout` Свойства. При использовании с `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` , эта ошибка может быть передан `<a href="../parameters/geolocationError.html">geolocationError</a>` обратного вызова каждый `timeout` миллисекунд.

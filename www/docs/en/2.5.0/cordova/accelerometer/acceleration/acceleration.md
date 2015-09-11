@@ -21,7 +21,7 @@ license: >
 Acceleration
 ============
 
-Contains `Accelerometer` data captured at a specific point in time.
+Contains `<a href="../accelerometer.html">Accelerometer</a>` data captured at a specific point in time.
 
 Properties
 ----------
@@ -34,7 +34,7 @@ Properties
 Description
 -----------
 
-This object is created and populated by Cordova, and returned by an `Accelerometer` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
+This object is created and populated by Cordova, and returned by an `<a href="../accelerometer.html">Accelerometer</a>` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
 
 Supported Platforms
 -------------------
@@ -49,7 +49,7 @@ Supported Platforms
 - Windows 8
 
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(acceleration) {
@@ -63,27 +63,27 @@ Quick Example
         alert('onError!');
     };
 
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
         }
 
         // onSuccess: Get a snapshot of the current acceleration
@@ -104,7 +104,7 @@ Full Example
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

@@ -40,7 +40,7 @@ Un ensemble de propriétés décrivant les coordonnées géographiques d'une pos
 
 ## Description
 
-L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
+L'objet `Coordinates` est attaché à l'objet `<a href="../Position/position.html">Position</a>`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
 
 ## Plates-formes supportées
 
@@ -72,7 +72,7 @@ L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu dispon
         alert('onError!');
     };
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
     
 
 ## Exemple complet
@@ -80,21 +80,21 @@ L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu dispon
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position Example</title>
+        <title><a href="../geolocation.html">Geolocation</a> <a href="../Position/position.html">Position</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
         }
     
-        // Display `Position` properties from the geolocation
+        // Display `<a href="../Position/position.html">Position</a>` properties from the geolocation
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');

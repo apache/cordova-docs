@@ -27,9 +27,9 @@ license: >
 
 ## 說明
 
-周中天的編號 1，從開始位置 1 假定是星期日。 返回到天 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `Number` 的值。
+周中天的編號 1，從開始<a href="../geolocation/Position/position.html">位置</a> 1 假定是星期日。 返回到天 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `Number` 的值。
 
-如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## 支援的平臺
 
@@ -40,7 +40,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本`day: 1`.
+當瀏覽器設置為 `en\_US` 的地區設定，這將<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出對話方塊與類似的文本`day: 1`.
 
     navigator.globalization.getFirstDayOfWeek(
         function (day) {alert('day: ' + day.value + '\n');},
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getFirstDayOfWeek Example</title>
+        <title>getFirstDayOfWeek <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

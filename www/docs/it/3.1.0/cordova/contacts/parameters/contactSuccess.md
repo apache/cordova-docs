@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `contacts.find` operazione.
+Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `<a href="../contacts.find.html">contacts.find</a>` operazione.
 
     function(contacts) {
         // Do something
@@ -29,7 +29,7 @@ Funzione di callback di successo che fornisce il `Contact` matrice risultante da
 
 ## Parametri
 
-*   **contatti**: Contatta matrice risultante da un'operazione di ricerca. *(Contatto)*
+*   **contatti**: Contatta matrice risultante da un'operazione di ricerca. *(<a href="../Contact/contact.html">Contatto</a>)*
 
 ## Esempio
 

@@ -48,4 +48,4 @@ license: >
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
 
-これらの手順が完了すると、Windows Phone SDK をインストールする準備ができているし。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。
+これらの手順が完了すると、Windows Phone SDK をインストールする準備ができているし。詳細については、「Windows Phone 8 プラットフォーム <a href="../../../index.html">ガイド</a>を参照してください。

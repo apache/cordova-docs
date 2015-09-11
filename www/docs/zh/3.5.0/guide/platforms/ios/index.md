@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# iOS 平臺指南
+# iOS <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 iOS 設備 （如 iPhone 和 iPad 的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   iOS 配置
-*   升級 iOS
-*   WebViews iOS
-*   iOS 外掛程式
-*   iOS 命令列工具
+*   <a href="config.html">iOS 配置</a>
+*   <a href="upgrading.html">升級 iOS</a>
+*   <a href="webview.html">WebViews iOS</a>
+*   <a href="plugin.html">iOS 外掛程式</a>
+*   <a href="tools.html">iOS 命令列工具</a>
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 ## 要求和支援
 
@@ -53,7 +53,7 @@ license: >
 
 ## 在 SDK 中打開的專案
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
+使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦<a href="../../cli/index.html">命令列介面</a>。例如，在原始程式碼中的目錄：
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -122,7 +122,7 @@ Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自�
 
 *   編輯*Classes/MainViewController.m*檔、 環繞的代碼與下面的塊 `/*` 和 `*/` 的評論如下所示，然後鍵入**命令-s**保存該檔：
     
-        （失效） webViewDidFinishLoad:(UIWebView*) theWebView {/ / 如果 ___PROJECTNAME__ Info.plist 指定協定來處理的唯一有效 / * 如果 (self.invokeString) {/ / 這傳遞之前觸發 deviceready 事件，以便您可以訪問它的 js 時您會收到 deviceready NSLog (@"已否決： window.invokeString-相反，使用 window.handleOpenURL(url) 函數，總是調用通過自訂方案 url 啟動應用程式時.") ；NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"%@\"；"self.invokeString] ；[theWebView stringByEvaluatingJavaScriptFromString:jsString] ；} * / / / 黑色底彩色背景匹配的本機應用程式 theWebView.backgroundColor = [UIColor blackColor] ；返回 [超級 webViewDidFinishLoad: theWebView] ；}
+        （失效） webViewDidFinishLoad:(UIWebView*) theWebView {/ / 如果 ___PROJECTNAME__ Info.plist 指定協定來處理的唯一有效 / * 如果 (self.invokeString) {/ / 這傳遞之前觸發 <a href="../../../cordova/events/events.deviceready.html">deviceready</a> <a href="../../../cordova/events/events.html">事件</a>，以便您可以訪問它的 js 時您會收到 <a href="../../../cordova/events/events.deviceready.html">deviceready</a> NSLog (@"已否決： window.invokeString-相反，使用 window.handleOpenURL(url) 函數，總是調用通過自訂方案 url 啟動應用程式時.") ；NSString * jsString = [NSString stringWithFormat:@"var invokeString = \"%@\"；"self.invokeString] ；[theWebView stringByEvaluatingJavaScriptFromString:jsString] ；} * / / / 黑色底彩色背景匹配的本機應用程式 theWebView.backgroundColor = [UIColor blackColor] ；返回 [超級 webViewDidFinishLoad: theWebView] ；}
         
 
 *   編輯*Classes/AppViewDelegate.m*檔，注釋掉下面的行插入雙斜杠，如下所示，然後鍵入**命令-s**保存該檔：
@@ -148,7 +148,7 @@ Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自�
 
 進一步的資訊，請參考蘋果的文檔：
 
-*   [開始開發 iOS 應用程式今天][10]快速概述的步驟開發 iOS 的應用程式。
+*   [開始開發 iOS 應用程式今天][10]快速<a href="../../overview/index.html">概述</a>的步驟開發 iOS 的應用程式。
 
 *   [會員中心主頁][11]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
 

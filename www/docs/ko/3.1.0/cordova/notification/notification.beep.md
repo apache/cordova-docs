@@ -20,7 +20,7 @@ license: >
 
 # notification.beep
 
-장치는 경고음 소리를 재생 합니다.
+<a href="../device/device.html">장치</a>는 경고음 소리를 재생 합니다.
 
     navigator.notification.beep(times);
     
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,7 +64,7 @@ license: >
         // Show a custom alert
         //
         function showAlert() {
-            navigator.notification.alert(
+            navigator.<a href="notification.alert.html">notification.alert</a>(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -80,7 +80,7 @@ license: >
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.notification.vibrate(2000);
+            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
         }
     
         </script>
@@ -95,14 +95,14 @@ license: >
 
 ## 안 드 로이드 단점
 
-*   안 드 로이드 기본 **알림 벨소리** **설정/사운드 및 디스플레이** 패널에서 지정 합니다.
+*   안 드 로이드 기본 **<a href="notification.html">알림</a> 벨소리** **설정/사운드 및 디스플레이** 패널에서 지정 합니다.
 
 ## Windows Phone 7, 8 특수
 
-*   코르 도우 바 분포에서 일반 경고음 파일에 의존합니다.
+*   코르 도우 바 분포에서 일반 경고음 <a href="../file/fileobj/fileobj.html">파일</a>에 의존합니다.
 
 ## Tizen 특수
 
-*   Tizen은 미디어 API 통해 오디오 파일을 재생 하 여 경고음을 구현 합니다.
+*   Tizen은 <a href="../media/media.html">미디어</a> API 통해 오디오 <a href="../file/fileobj/fileobj.html">파일</a>을 재생 하 여 경고음을 구현 합니다.
 
-*   경고음 파일에 위치 해야 합니다, 짧은 해야 한 `sounds` 응용 프로그램의 루트 디렉터리의 하위 디렉터리 명명 해야 합니다`beep.wav`.
+*   경고음 <a href="../file/fileobj/fileobj.html">파일</a>에 <a href="../geolocation/Position/position.html">위치</a> 해야 합니다, 짧은 해야 한 `sounds` 응용 프로그램의 루트 디렉터리의 하위 디렉터리 명명 해야 합니다`beep.wav`.

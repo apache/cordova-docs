@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileUploadOptions
+# <a href="../fileobj/fileobj.html">File</a>UploadOptions
 
-A `FileUploadOptions` oggetto può essere passato per il `FileTransfer` dell'oggetto `upload()` metodo per specificare ulteriori parametri per lo script di upload.
+A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` oggetto può essere passato per il `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>` dell'oggetto `upload()` metodo per specificare ulteriori parametri per lo script di upload.
 
 ## Proprietà
 
@@ -38,7 +38,7 @@ A `FileUploadOptions` oggetto può essere passato per il `FileTransfer` dell'ogg
 
 ## Descrizione
 
-A `FileUploadOptions` oggetto può essere passato per il `FileTransfer` dell'oggetto `upload()` metodo per specificare ulteriori parametri per lo script di upload.
+A `<a href="../fileobj/fileobj.html">File</a>UploadOptions` oggetto può essere passato per il `<a href="../filetransfer/filetransfer.html"><a href="../fileobj/fileobj.html">File</a>Transfer</a>` dell'oggetto `upload()` metodo per specificare ulteriori parametri per lo script di upload.
 
 ## WP7 Quirk
 

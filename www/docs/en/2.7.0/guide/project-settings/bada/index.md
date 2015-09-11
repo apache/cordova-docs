@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-Project Settings for Bada 
+<a href="../index.html">Project Settings</a> for Bada 
 ===================================
 

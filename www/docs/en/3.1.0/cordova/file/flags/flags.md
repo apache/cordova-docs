@@ -20,7 +20,7 @@ license: >
 
 # Flags
 
-Supplies arguments to the `DirectoryEntry` object's `getFile()` and
+Supplies arguments to the `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` object's `get<a href="../fileobj/fileobj.html">File</a>()` and
 `getDirectory()` methods, which look up or create files and
 directories, respectively.
 
@@ -38,10 +38,10 @@ directories, respectively.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
     // Get the data directory, creating it if it doesn't exist.
     dataDir = fileSystem.root.getDirectory("data", {create: true});
 
     // Create the lock file, if and only if it doesn't exist.
-    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
+    lock<a href="../fileobj/fileobj.html">File</a> = dataDir.get<a href="../fileobj/fileobj.html">File</a>("lockfile.txt", {create: true, exclusive: true});

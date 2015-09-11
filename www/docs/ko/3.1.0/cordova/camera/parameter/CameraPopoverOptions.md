@@ -20,16 +20,16 @@ license: >
 
 # CameraPopoverOptions
 
-iOS 전용 매개 iPad의 보관 함 또는 앨범에서 이미지를 선택할 때는 popover의 앵커 요소 위치와 화살표 방향을 지정 합니다.
+iOS 전용 매개 iPad의 보관 함 또는 앨범에서 이미지를 선택할 때는 popover의 앵커 요소 <a href="../../geolocation/Position/position.html">위치</a>와 화살표 방향을 지정 합니다.
 
     {x: 0, y: 32, 폭: 320, 높이: 480, arrowDir: Camera.PopoverArrowDirection.ARROW_ANY};
     
 
 ## CameraPopoverOptions
 
-*   **x**: x는 popover 앵커는 화면 요소의 픽셀 좌표. *(수)*
+*   **x**: x는 popover 앵커는 화면 요소의 픽셀 <a href="../../geolocation/Coordinates/coordinates.html">좌표</a>. *(수)*
 
-*   **y**: y 픽셀 좌표는 popover 앵커는 화면 요소입니다. *(수)*
+*   **y**: y 픽셀 <a href="../../geolocation/Coordinates/coordinates.html">좌표</a>는 popover 앵커는 화면 요소입니다. *(수)*
 
 *   **폭**: 폭 (픽셀)는 popover 앵커는 화면 요소. *(수)*
 
@@ -40,7 +40,7 @@ iOS 전용 매개 iPad의 보관 함 또는 앨범에서 이미지를 선택할 
             Camera.PopoverArrowDirection = {ARROW_UP: 1, / / iOS UIPopoverArrowDirection 상수 ARROW_DOWN 일치: 2, ARROW_LEFT: 4, ARROW_RIGHT: 8, ARROW_ANY: 15};
         
 
-참고는 popover의 크기 조정 화살표 방향 및 화면 방향 변경 될 수 있습니다. 앵커 요소 위치를 지정 하는 경우 방향 변경에 대 한 계정에 있는지 확인 합니다.
+참고는 popover의 크기 조정 화살표 방향 및 화면 방향 변경 될 수 있습니다. 앵커 요소 <a href="../../geolocation/Position/position.html">위치</a>를 지정 하는 경우 방향 변경에 대 한 계정에 있는지 확인 합니다.
 
 ## 빠른 예제
 
@@ -52,7 +52,7 @@ iOS 전용 매개 iPad의 보관 함 또는 앨범에서 이미지를 선택할 
          popoverOptions  : popover
      };
     
-     navigator.camera.getPicture(onSuccess, onFail, options);
+     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
     
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

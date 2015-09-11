@@ -20,11 +20,11 @@ license: >
 
 # Position
 
-Enthält `Position` Koordinaten und Timestamp, erstellt von der Geolocation API.
+Enthält `Position` <a href="../Coordinates/coordinates.html">Koordinaten</a> und Timestamp, erstellt von der <a href="../geolocation.html">Geolocation</a> API.
 
 ## Eigenschaften
 
-*   **CoOrds**: eine Reihe von geographischen Koordinaten. *(Koordinaten)*
+*   **CoOrds**: eine Reihe von geographischen <a href="../Coordinates/coordinates.html">Koordinaten</a>. *(<a href="../Coordinates/coordinates.html">Koordinaten</a>)*
 
 *   **Timestamp**: Zeitstempel der Erstellung für `coords` . *(Datum)*
 
@@ -63,7 +63,7 @@ Das `Position` Objekt erstellt und bevölkert von Cordova und an den Benutzer du
               'message: ' + error.message + '\n');
     }
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
     
 
 ## Vollständiges Beispiel
@@ -71,22 +71,22 @@ Das `Position` Objekt erstellt und bevölkert von Cordova und an den Benutzer du
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
-        // onSuccess Geolocation
+        // onSuccess <a href="../geolocation.html">Geolocation</a>
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');

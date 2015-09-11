@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# Windows 8 プラットフォーム ガイド
+# Windows 8 プラットフォーム <a href="../../../index.html">ガイド</a>
 
-このガイドは、Windows 8 向け Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
+この<a href="../../../index.html">ガイド</a>は、Windows 8 向け Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   Windows 8 アップグレード
-*   Windows 8 のコマンド ライン ツール
+*   <a href="upgrading.html">Windows 8 アップグレード</a>
+*   <a href="tools.html">Windows 8 のコマンド ライン ツール</a>
 
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください。
 
-マイクロソフト推奨*Metro スタイル アプリ*の Windows 8 と Windows 左折し、ルートの名前 MSDN 今アプリを*Windows ストア*アプリのこのタイプとこのガイドに従って条約。 また、このガイドでは、 *Windows 8*意味 Windows 8 と Windows の右
+マイクロソフト推奨*Metro スタイル アプリ*の Windows 8 と Windows 左折し、ルートの名前 MSDN 今アプリを*Windows ストア*アプリのこのタイプとこの<a href="../../../index.html">ガイド</a>に従って条約。 また、この<a href="../../../index.html">ガイド</a>では、 *Windows 8*意味 Windows 8 と Windows の右
 
 ## 1。 要件
 
@@ -58,13 +58,13 @@ license: >
     
     ![][4]
 
-*   マイクロソフトは引き続き使用 `default.html` 既定のホーム ページが、ほとんどの web 開発者向けとして `index.html` 。 （プラスそれはあなたのプロジェクトの他のプラットフォーム バリエーションで使用している可能性が高い `index.html` を既定のページの名前として)。これを修正する、名前を変更するソリューション エクスプ ローラーで、 `default.html` ファイルを `index.html` 。 ダブルクリックし、 `package.appxmanifest` ファイルし、**ページの開始**値を変更するには`index.html`.
+*   マイクロソフトは引き続き使用 `default.html` 既定のホーム ページが、ほとんどの web 開発者向けとして `index.html` 。 （プラスそれはあなたのプロジェクトの他のプラットフォーム バリエーションで使用している可能性が高い `index.html` を既定のページの名前として)。これを修正する、名前を変更するソリューション エクスプ ローラーで、 `default.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `index.html` 。 ダブルクリックし、 `package.appxmanifest` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>し、**ページの開始**値を変更するには`index.html`.
     
     ![][5]
 
-*   含むように `cordova.js` を右クリックして、プロジェクトで、 `js` ソリューション エクスプ ローラーおよび**追加 → 新規項目**選択ディレクトリ。 検索、 `cordova.js` ファイルで、 `lib\windows-8` ディレクトリが上記します。
+*   含むように `cordova.js` を右クリックして、プロジェクトで、 `js` ソリューション エクスプ ローラーおよび**追加 → 新規項目**選択ディレクトリ。 検索、 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `lib\windows-8` ディレクトリが上記します。
 
-*   コードを編集の `index.html` 。参照を追加 `cordova.js` 。手動で、またはソリューション エクスプ ローラーからファイルをドラッグすることによってこれを行うことができます。
+*   コードを編集の `index.html` 。参照を追加 `cordova.js` 。手動で、またはソリューション エクスプ ローラーから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>をドラッグすることによってこれを行うことができます。
 
  [4]: img/guide/platforms/win8/wsnewproject.png
  [5]: img/guide/platforms/win8/wschangemanifest.png
@@ -84,9 +84,9 @@ license: >
         <script type="text/javascript">
     
             console.log("Subscribing...");
-            document.addEventListener("deviceready", function () {
+            document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
     
-                navigator.notification.alert("The device is ready!");
+                navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>("The device is ready!");
     
             });
     

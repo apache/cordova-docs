@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# ContactFindOptions
+# <a href="../Contact/contact.html">Contact</a>FindOptions
 
-Contient des propriétés qui peuvent être utilisées pour filtrer les résultats d'une opération `contacts.find`.
+Contient des propriétés qui peuvent être utilisées pour filtrer les résultats d'une opération `<a href="../contacts.find.html">contacts.find</a>`.
 
 ## Propriétés
 
@@ -46,18 +46,18 @@ Contient des propriétés qui peuvent être utilisées pour filtrer les résulta
     };
     
     // error callback
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
     // specify contact search criteria
-    var options = new ContactFindOptions();
+    var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
         options.filter="";        // empty search string returns all contacts
         options.multiple=true;    // return multiple results
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## Exemple complet
@@ -65,26 +65,26 @@ Contient des propriétés qui peuvent être utilisées pour filtrer les résulta
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title><a href="../Contact/contact.html">Contact</a> <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             // specify contact search criteria
-            var options = new ContactFindOptions();
+            var options = new <a href="../Contact/contact.html">Contact</a>FindOptions();
             options.filter = "";      // empty search string returns all contacts
             options.multiple = true;  // return multiple results
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ Contient des propriétés qui peuvent être utilisées pour filtrer les résulta
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../Contact/contact.html">Contact</a>s</p>
       </body>
     </html>

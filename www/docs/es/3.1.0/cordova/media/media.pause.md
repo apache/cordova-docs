@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# media.pause
+# media.<a href="../events/events.pause.html">pause</a>
 
 Pausas jugando un archivo de audio.
 
-    media.pause();
+    media.<a href="../events/events.pause.html">pause</a>();
     
 
 ## Descripción
 
-El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reproducir un archivo de audio.
+El método `media.<a href="../events/events.pause.html">pause</a>` se ejecuta sincrónicamente y hace una pausa de reproducir un archivo de audio.
 
 ## Plataformas soportadas
 
@@ -52,11 +52,11 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
         );
     
         // Play audio
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     
         // Pause after 10 seconds
         setTimeout(function () {
-            media.pause();
+            media.<a href="../events/events.pause.html">pause</a>();
         }, 10000);
     }
     
@@ -67,14 +67,14 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -94,13 +94,13 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -119,9 +119,9 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
     
             // Pause audio
             //
-            function pauseAudio() {
+            function <a href="../events/events.pause.html">pause</a>Audio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_media.<a href="../events/events.pause.html">pause</a>();
                 }
             }
     
@@ -129,7 +129,7 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -158,7 +158,7 @@ El método `media.pause` se ejecuta sincrónicamente y hace una pausa de reprodu
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

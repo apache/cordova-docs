@@ -79,7 +79,7 @@ Um zu verstehen was Makecert tut, ist hier eine kurze Erläuterung was tun Param
       * 1.3.6.1.4.1.311.10.3.13 bedeutet, dass das Zertifikat signieren Lebensdauer respektiert. In der Regel ist eine Signatur Zeitstempel, solange das Zertifikat zum Zeitpunkt gültigen war Zeitstempel wurde, bleibt die Signatur gültig, selbst wenn das Zertifikat abläuft. Diese EKU zwingt die Signatur unabhängig davon, ob die Signatur Zeitstempel abläuft.
   * -e "01.01.2020": setzt das Ablaufdatum des Zertifikats. 
   * -h 0: setzt max. Höhe der Struktur unterhalb dieses Zertifikat auf 0 zu verhindern, dass das Zertifikat als eine Certification Authority (CA), die andere Zertifikate ausstellen kann verwendet werden.
-  * -sv FakeCorp.com.pvk: Ausgabe PVK Datei. Windows verwendet PVK-Dateien zum Speichern von privater Schlüsseln zum Signieren von Code.
+  * -sv FakeCorp.com.pvk: Ausgabe PVK Datei. Windows verwendet PVK-Dateien zum <a href="../../../cordova/storage/storage.html">Speicher</a>n von privater Schlüsseln zum Signieren von Code.
   * FakeCorp.com.cer: Ausgabedatei Zertifikat. CER-Datei wird verwendet, um die x. 509-Zertifikatsspeicher.
 
 Nach dem Ausführen von Makecert zum ersten Mal, geben Sie ein Kennwort für den privaten auf dem Bildschirm, der eingeblendet wird:
@@ -104,7 +104,7 @@ Wenn wir dieses Pfx-Datei build.json-Datei zur Verfügung stellen, haben wir die
 
 Wo:
 
-  * user: "aktuellen Benutzer" gibt privaten Speicher
+  * user: "aktuellen Benutzer" gibt privaten <a href="../../../cordova/storage/storage.html">Speicher</a>
   * p: Kennwort für die Pfx-Datei
   * importPfx: Name der Pfx-Datei
 

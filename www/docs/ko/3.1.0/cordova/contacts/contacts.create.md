@@ -20,7 +20,7 @@ license: >
 
 # contacts.create
 
-새 연락처 개체를 반환합니다.
+새 <a href="contacts.html">연락처</a> 개체를 반환합니다.
 
     var contact = navigator.contacts.create(properties);
     
@@ -29,7 +29,7 @@ license: >
 
 `contacts.create`메서드는 동기적, 및 새로운 반환 합니다 `Contact` 개체.
 
-이 메서드를 호출 해야 장치 연락처 데이터베이스에 연락처 개체를 유지 하지 않습니다는 `Contact.save` 방법.
+이 메서드를 호출 해야 <a href="../device/device.html">장치</a> <a href="contacts.html">연락처</a> <a href="../storage/database/database.html">데이터베이스</a>에 <a href="contacts.html">연락처</a> 개체를 유지 하지 않습니다는 `Contact.save` 방법.
 
 ## 지원 되는 플랫폼
 
@@ -48,14 +48,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -68,7 +68,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>Create Contact</p>
       </body>
     </html>

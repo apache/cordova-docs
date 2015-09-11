@@ -46,10 +46,10 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
 6. **"Create groups for any added folders"** のラジオボタンを **選択** し、 **Finish** ボタンをクリックします
 7. `CordovaLib.xcodeproj` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します (上の、 CordovaLib のサブディレクトリ、恒久的なフォルダーから)
 8. Project Navigator で `CordovaLib.xcodeproj` を選択します
-9. **File Inspector** を開くため、 **Option-Command-1** キーを押します
-10. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
+9. **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** を開くため、 **Option-Command-1** キーを押します
+10. **Location** のドロップダウンメニューのため、 **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** から **"Relative to CORDOVALIB"** を選択します
 11. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-12. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+12. **"Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>"** の値に `-all_load` と `-Obj-C` を追加します
 13. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
 14. **"Link Binaries with Libraries"** を展開します
 15. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
@@ -59,11 +59,11 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
         AudioToolbox.framework
         AVFoundation.framework
         CoreLocation.framework
-        MediaPlayer.framework
+        <a href="../../cordova/media/media.html">Media</a>Player.framework
         QuartzCore.framework
         SystemConfiguration.framework
         MobileCoreServices.framework
-        CoreMedia.framework
+        Core<a href="../../cordova/media/media.html">Media</a>.framework
 
 16. **"Target Dependencies"** を展開します。 (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
 17. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します

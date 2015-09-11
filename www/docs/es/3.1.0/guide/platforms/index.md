@@ -18,60 +18,60 @@ license: >
     under the License.
 ---
 
-# Guías de plataforma
+# <a href="../../index.html">Guías</a> de plataforma
 
 Antes de desarrollar para cualquiera de las plataformas que se enumeran a continuación, instalar la interfaz de cordova de comandos (CLI). (Para más detalles, ver la interfaz de línea de comandos).
 
 Para desarrollar aplicaciones de Cordova, debe instalar los SDK para cada plataforma móvil que usted está apuntando. Esta instalación es necesaria independientemente de los hacen la mayoría de su trabajo en el SDK o utiliza la CLI para su ciclo de construir.
 
-Cada *Plataforma guía* a continuación te dice lo que necesitas saber para configurar el entorno de desarrollo de cada plataforma: dónde obtener el SDK, cómo configurar emuladores de dispositivo, cómo conectar dispositivos para pruebas directas y cómo administrar los requerimientos claves de firma. Guías adicionales proporcionan información sobre el conjunto único de cada plataforma de opciones de configuración, instrucciones para agregar plugins, cómo actualizar cada plataforma y herramientas de línea de comandos específicos a la plataforma que sirven como una alternativa de nivel inferior a la utilidad de línea de comandos de `cordova`.
+Cada *Plataforma guía* a continuación te dice lo que necesitas saber para configurar el entorno de desarrollo de cada plataforma: dónde obtener el SDK, cómo configurar emuladores de dispositivo, cómo conectar dispositivos para pruebas directas y cómo administrar los requerimientos claves de firma. <a href="../../index.html">Guías</a> adicionales proporcionan información sobre el conjunto único de cada plataforma de opciones de configuración, instrucciones para agregar plugins, cómo actualizar cada plataforma y herramientas de línea de comandos específicos a la plataforma que sirven como una alternativa de nivel inferior a la utilidad de línea de comandos de `cordova`.
 
 ## Android
 
-*   Guía de la plataforma Android
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Android Herramientas de línea de comandos
-*   Actualizar Android
+*   <a href="android/index.html">Guía de la plataforma Android</a>
+*   <a href="android/config.html">Configuración de Android</a>
+*   <a href="android/webview.html">Android WebViews</a>
+*   <a href="android/plugin.html">Android Plugins</a>
+*   <a href="android/tools.html">Android Herramientas de línea de comandos</a>
+*   <a href="android/upgrading.html">Actualizar Android</a>
 
 ## BlackBerry
 
-*   Guía de la plataforma BlackBerry
-*   Configuración de BlackBerry
-*   Herramientas de línea de comandos de BlackBerry
-*   Actualizar BlackBerry
+*   <a href="blackberry/index.html">Guía de la plataforma BlackBerry</a>
+*   <a href="blackberry/config.html">Configuración de BlackBerry</a>
+*   <a href="blackberry/tools.html">Herramientas de línea de comandos de BlackBerry</a>
+*   <a href="blackberry10/upgrading.html">Actualizar BlackBerry</a>
 
 ## BlackBerry 10
 
-*   Guía de la plataforma BlackBerry 10
-*   Configuración de blackBerry 10
-*   BlackBerry 10 Plugins
-*   BlackBerry 10 herramientas de línea de comandos
+*   <a href="blackberry/index.html">Guía de la plataforma BlackBerry</a> 10
+*   <a href="blackberry10/config.html">Configuración de blackBerry</a> 10
+*   <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="blackberry10/tools.html">BlackBerry 10 herramientas de línea de comandos</a>
 
 ## iOS
 
 *   Guía de la plataforma iOS
-*   iOS configuración
-*   iOS WebViews
-*   iOS Plugins
-*   iOS herramientas de línea de comandos
-*   Actualizar iOS
+*   <a href="ios/config.html">iOS configuración</a>
+*   <a href="ios/webview.html">iOS WebViews</a>
+*   <a href="ios/plugin.html">iOS Plugins</a>
+*   <a href="ios/tools.html">iOS herramientas de línea de comandos</a>
+*   <a href="ios/upgrading.html">Actualizar iOS</a>
 
 ## Windows Phone
 
-*   Guía de la plataforma de Windows Phone 8
-*   Guía de la plataforma de Windows Phone 7
+*   <a href="wp8/index.html">Guía de la plataforma de Windows Phone 8</a>
+*   <a href="wp7/index.html">Guía de la plataforma de Windows Phone 7</a>
 *   Configuración de Windows Phone
-*   Windows Phone herramientas de línea de comandos
-*   Actualización de Windows Phone
+*   <a href="wp8/tools.html">Windows Phone herramientas de línea de comandos</a>
+*   <a href="wp8/upgrading.html">Actualización de Windows Phone</a>
 
 ## Windows 8
 
-*   Windows 8 plataforma guía
-*   Herramientas de línea de comandos de Windows 8
-*   Actualización de Windows 8
+*   <a href="win8/index.html">Windows 8 plataforma guía</a>
+*   <a href="win8/tools.html">Herramientas de línea de comandos de Windows 8</a>
+*   <a href="win8/upgrading.html">Actualización de Windows 8</a>
 
 ## Tizen
 
-*   Guía de la plataforma Tizen
+*   <a href="tizen/index.html">Guía de la plataforma Tizen</a>

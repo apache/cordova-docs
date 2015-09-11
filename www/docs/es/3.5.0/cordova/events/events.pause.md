@@ -29,7 +29,7 @@ El evento se desencadena cuando una aplicación se coloca en el fondo.
 
 El evento de `pause` se desencadena cuando la plataforma nativa pone la aplicación en el fondo, normalmente cuando el usuario cambia a otra aplicación.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
 
 ## Plataformas soportadas
 
@@ -54,7 +54,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

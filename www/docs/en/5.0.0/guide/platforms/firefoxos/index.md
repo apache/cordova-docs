@@ -61,7 +61,7 @@ To create a packaged app one can zip the platforms/firefoxos/www directory. You 
 
 The Firefox OS packaged app will be built in platforms/firefoxos/build/package.zip
 
-##Testing and Debugging
+##<a href="../../next/index.html">Testing</a> and <a href="../../next/index.html">Debugging</a>
 
 The app can be tested using the Firefox OS [Web IDE](https://developer.mozilla.org/en-US/docs/Tools/WebIDE).
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# SplashScreen.Hide
+# <a href="splashscreen.html">SplashScreen</a>.Hide
 
 Despedir a la splash screen.
 
@@ -47,14 +47,14 @@ Este método despide la pantalla de la aplicación.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Splashscreen Example</title>
+        <title>Splashscreen <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -65,14 +65,14 @@ Este método despide la pantalla de la aplicación.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
       </body>
     </html>
     
 
 ## iOS chanfle
 
-Ajuste de `AutoHideSplashScreen` del archivo `config.xml` debe ser `false`. Para retrasar oculta la pantalla splash durante dos segundos, agregue un temporizador como el siguiente en el controlador de eventos `deviceready`:
+Ajuste de `AutoHide<a href="splashscreen.html">SplashScreen</a>` del archivo `config.xml` debe ser `false`. Para retrasar oculta la pantalla splash durante dos segundos, agregue un temporizador como el siguiente en el controlador de eventos `<a href="../events/events.deviceready.html">deviceready</a>`:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

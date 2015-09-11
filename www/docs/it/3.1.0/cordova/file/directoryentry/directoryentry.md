@@ -26,7 +26,7 @@ Questo oggetto rappresenta una directory in un file system, come definita dalla 
 
 ## Proprietà
 
-*   **isFile**: sempre `false` . *(booleano)*
+*   **is<a href="../fileobj/fileobj.html">File</a>**: sempre `false` . *(booleano)*
 
 *   **isDirectory**: sempre `true` . *(booleano)*
 
@@ -36,7 +36,7 @@ Questo oggetto rappresenta una directory in un file system, come definita dalla 
 
 **Nota:** Il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
 
-*   **filesystem**: il filesystem su cui il `DirectoryEntry` risiede. *(FileSystem)*
+*   **filesystem**: il filesystem su cui il `DirectoryEntry` risiede. *(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>)*
 
 ## Metodi
 
@@ -56,11 +56,11 @@ I seguenti metodi possono essere richiamati su un `DirectoryEntry` oggetto:
 
 *   **getParent**: cercare la directory padre.
 
-*   **createReader**: creare un nuovo `DirectoryReader` che può leggere le voci da una directory.
+*   **createReader**: creare un nuovo `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` che può leggere le voci da una directory.
 
 *   **getDirectory**: creare o cercare una directory.
 
-*   **getFile**: creare o cercare un file.
+*   **get<a href="../fileobj/fileobj.html">File</a>**: creare o cercare un file.
 
 *   **removeRecursively**: Cancella una directory e tutti i suoi contenuti.
 
@@ -80,7 +80,7 @@ Cercare i metadati relativi a una directory.
 
 *   **successCallback**: una funzione di callback da eseguire con un `Metadata` oggetto. *(Funzione)*
 
-*   **errorCallback**: una funzione di callback da eseguire se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: una funzione di callback da eseguire se si verifica un errore durante il recupero del `Metadata` . Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -123,7 +123,7 @@ Imposta gli attributi estesi di una directory, o metadati. *Attualmente funziona
 
 **Esempio rapido**
 
-    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
+    function setFolderMetadata(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, subFolder, metadataKey, metadataValue)
     {
         var onSetMetadataWin = function() {
             console.log("success setting metadata")
@@ -149,10 +149,10 @@ Imposta gli attributi estesi di una directory, o metadati. *Attualmente funziona
             console.log(evt.target.error.code);
         }
     
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -177,7 +177,7 @@ Lo spostamento di una directory in cima a una directory vuota esistente tenta di
 
 *   **successCallback**: un callback che viene eseguito con il `DirectoryEntry` oggetto per la nuova directory. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare la directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare la directory. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -218,7 +218,7 @@ Directory copie sono sempre ricorsivi e copiare tutto il contenuto della directo
 
 *   **successCallback**: un callback che viene eseguito con il `DirectoryEntry` oggetto per la nuova directory. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare la directory sottostante. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare la directory sottostante. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -264,7 +264,7 @@ Elimina una directory. Un errore risultati se tenta di app:
 
 *   **successCallback**: un callback che viene eseguito dopo che la directory viene eliminata. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare la directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare la directory. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -283,7 +283,7 @@ Cercare il padre `DirectoryEntry` contenente la directory.
 
 *   **successCallback**: un callback passato padre della directory `DirectoryEntry` . *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -301,7 +301,7 @@ Cercare il padre `DirectoryEntry` contenente la directory.
 
 ## createReader
 
-Crea un nuovo DirectoryReader per leggere le voci in una directory.
+Crea un nuovo <a href="../directoryreader/directoryreader.html">DirectoryReader</a> per leggere le voci in una directory.
 
 **Esempio rapido**
 
@@ -319,11 +319,11 @@ Crea o cerca una directory esistente. Un errore risultati se tenta di app:
 
 *   **percorso**: il percorso della directory di essere cercati o creato. Un percorso assoluto o un percorso relativo da questo `DirectoryEntry` . *(DOMString)*
 
-*   **opzioni**: opzioni per specificare se la directory deve essere creata se non esiste. *(Bandiere)*
+*   **opzioni**: opzioni per specificare se la directory deve essere creata se non esiste. *(<a href="../flags/flags.html">Bandiere</a>)*
 
 *   **successCallback**: un callback che viene eseguito con un `DirectoryEntry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o ricerca di directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o ricerca di directory. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -334,7 +334,7 @@ Crea o cerca una directory esistente. Un errore risultati se tenta di app:
     / / Recuperare una directory esistente, o crearla se non esiste già entry.getDirectory ("newDir", {creare: vero, esclusivo: false}, successo, fail);
     
 
-## getFile
+## get<a href="../fileobj/fileobj.html">File</a>
 
 Crea o cerca un file. Un errore risultati se tenta di app:
 
@@ -344,19 +344,19 @@ Crea o cerca un file. Un errore risultati se tenta di app:
 
 *   **percorso**: il percorso del file per essere guardato o creato. Un percorso assoluto o un percorso relativo da questo `DirectoryEntry` . *(DOMString)*
 
-*   **opzioni**: opzioni per specificare se il file viene creato se non esiste. *(Bandiere)*
+*   **opzioni**: opzioni per specificare se il file viene creato se non esiste. *(<a href="../flags/flags.html">Bandiere</a>)*
 
-*   **successCallback**: un callback passato un `FileEntry` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o la ricerca di file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o la ricerca di file. Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
-    funzione success(fileEntry) {console ("Nome File:" + fileEntry.name);}
+    funzione success(fileEntry) {console ("Nome <a href="../fileobj/fileobj.html">File</a>:" + fileEntry.name);}
     
     funzione fail(error) {alert ("Impossibile recuperare il file:" + Error);}
     
-    / / Recuperare un file esistente, o crearla se non esiste entry.getFile ("NewFile", {creare: vero, esclusivo: false}, successo, fail);
+    / / Recuperare un file esistente, o crearla se non esiste entry.get<a href="../fileobj/fileobj.html">File</a> ("New<a href="../fileobj/fileobj.html">File</a>", {creare: vero, esclusivo: false}, successo, fail);
     
 
 ## removeRecursively
@@ -369,7 +369,7 @@ Elimina una directory e tutti i suoi contenuti. In caso di errore (ad esempio ce
 
 *   **successCallback**: un callback che viene eseguito dopo il `DirectoryEntry` è stato eliminato. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il `DirectoryEntry` . Invocato con un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` oggetto. *(Funzione)*
 
 **Esempio rapido**
 

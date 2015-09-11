@@ -20,7 +20,7 @@ license: >
 
 # device.platform
 
-Name des Betriebssystems des Geräts zu erhalten.
+Name des Betriebssystems des <a href="device.html">Gerät</a>s zu erhalten.
 
     var string = device.platform;
     
@@ -50,24 +50,24 @@ Name des Betriebssystems des Geräts zu erhalten.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
-                                'Device Cordova: '  + device.cordova  + '<br />' +
+            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
+                                'Device Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
+                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
+                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
     
         </script>
@@ -80,12 +80,12 @@ Name des Betriebssystems des Geräts zu erhalten.
 
 ## BlackBerry Macken
 
-Geräte möglicherweise die Gerätenummer für die Version von Plattform anstelle des Namens Plattform zurück. Beispielsweise gibt der Storm2 9550 einen Wert wie`2.13.0.95`.
+<a href="device.html">Gerät</a>e möglicherweise die <a href="device.html">Gerät</a>enummer für die Version von Plattform anstelle des Namens Plattform zurück. Beispielsweise gibt der Storm2 9550 einen Wert wie`2.13.0.95`.
 
 ## Windows Phone 7 Macken
 
-Windows Phone 7 Geräte melden die Plattform als`WinCE`.
+Windows Phone 7 <a href="device.html">Gerät</a>e melden die Plattform als`WinCE`.
 
 ## Windows Phone 8 Macken
 
-Windows Phone 8 Geräte melden die Plattform als`Win32NT`.
+Windows Phone 8 <a href="device.html">Gerät</a>e melden die Plattform als`Win32NT`.

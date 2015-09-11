@@ -22,16 +22,16 @@ license: >
 
 固定間隔，在得到中度的羅盤標題。
 
-    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
     
 
 ## 說明
 
-羅盤是感應器，可檢測的方向或設備是針對性的標題。它的措施從 0 到 359.99 度中的標題。
+羅盤是感應器，可檢測的方向或<a href="../device/device.html">設備</a>是針對性的標題。它的措施從 0 到 359.99 度中的標題。
 
-`compass.watchHeading`獲取設備的當前標題在固定的時間間隔。 檢索標題時，每次 `headingSuccess` 執行回呼函數。 指定的時間間隔，以毫秒為單位通過 `frequency` 參數的 `compassOptions` 物件。
+`compass.watchHeading`獲取<a href="../device/device.html">設備</a>的當前標題在固定的時間間隔。 檢索標題時，每次 `headingSuccess` 執行回呼函數。 指定的時間間隔，以毫秒為單位通過 `frequency` 參數的 `<a href="parameters/compassOptions.html">compassOptions</a>` 物件。
 
-返回的表 ID 引用指南針手錶的時間間隔。可以使用 ID 與手錶 `compass.clearWatch` 停止了觀看指南針。
+返回的表 ID 引用<a href="compass.html">指南針</a>手錶的時間間隔。可以使用 ID 與手錶 `<a href="compass.clearWatch.html">compass.clearWatch</a>` 停止了觀看<a href="compass.html">指南針</a>。
 
 ## 支援的平臺
 
@@ -49,8 +49,8 @@ license: >
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(compassError) {
-        alert('Compass error: ' + compassError.code);
+    function onError(<a href="parameters/compassError.html">compassError</a>) {
+        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ license: >
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ license: >
 
 ## iOS 的怪癖
 
-IOS 中 `compass.watchHeading` 以指定的度數改變時也可以獲得設備的當前標題。 每次的標題更改時由指定數目的度或更多， `headingSuccess` 執行回呼函數。 指定度的變化通過 `filter` 參數的 `compassOptions` 物件。 清除手錶像往常一樣通過傳遞到返回的表 ID `compass.clearWatch` 。 此功能將替換以前分開，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
+IOS 中 `compass.watchHeading` 以指定的度數改變時也可以獲得<a href="../device/device.html">設備</a>的當前標題。 每次的標題更改時由指定數目的度或更多， `headingSuccess` 執行回呼函數。 指定度的變化通過 `filter` 參數的 `<a href="parameters/compassOptions.html">compassOptions</a>` 物件。 清除手錶像往常一樣通過傳遞到返回的表 ID `<a href="compass.clearWatch.html">compass.clearWatch</a>` 。 此功能將替換以前分開，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
 
 只有一個 `watchHeading` 可以在 iOS 中一次效果。 如果 `watchHeading` 使用篩選器中，調用 `getCurrentHeading` 或 `watchHeading` 使用現有的篩選器值來指定標題的更改。 使用篩選器看標題的變化是與時間間隔比效率更高。

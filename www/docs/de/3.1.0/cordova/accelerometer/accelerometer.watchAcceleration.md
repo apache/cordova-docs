@@ -20,20 +20,20 @@ license: >
 
 # accelerometer.watchAcceleration
 
-Erhalten Sie in regelmäßigen Abständen die Beschleunigung entlang der *x-*, *y-*und *Z* -Achse.
+Erhalten Sie in regelmäßigen Abständen die <a href="acceleration/acceleration.html">Beschleunigung</a> entlang der *x-*, *y-*und *Z* -Achse.
 
-    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
+    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
+                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
+                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
     
 
 ## Beschreibung
 
-Der Beschleunigungsmesser ist ein Bewegungssensor, der die Änderung (Delta) erkennt Bewegung relativ zur aktuellen Position. Der Beschleunigungssensor erkennt 3D Bewegung entlang der *x-*, *y-*und *Z* -Achse.
+Der <a href="acceleration/acceleration.html">Beschleunigung</a>smesser ist ein Bewegungssensor, der die Änderung (Delta) erkennt Bewegung relativ zur aktuellen <a href="../geolocation/Position/position.html">Position</a>. Der <a href="acceleration/acceleration.html">Beschleunigung</a>ssensor erkennt 3D Bewegung entlang der *x-*, *y-*und *Z* -Achse.
 
-Die `accelerometer.watchAcceleration` -Methode ruft das Gerät an den aktuellen `Acceleration` in regelmäßigen Abständen, Ausführung der `accelerometerSuccess` Callback-Funktion jedes Mal. Gibt das Intervall in Millisekunden über die `acceleratorOptions` des Objekts `frequency` Parameter.
+Die `accelerometer.watchAcceleration` -Methode ruft das <a href="../device/device.html">Gerät</a> an den aktuellen `Acceleration` in regelmäßigen Abständen, Ausführung der `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` Callback-Funktion jedes Mal. Gibt das Intervall in Millisekunden über die `acceleratorOptions` des Objekts `frequency` Parameter.
 
-Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu sehen und kann mit verwendet werden `accelerometer.clearWatch` , beobachten den Beschleunigungsmesser zu stoppen.
+Das zurückgegebene ID Referenzen der <a href="acceleration/acceleration.html">Beschleunigung</a>smesser Uhr Intervall zu sehen und kann mit verwendet werden `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` , beobachten den <a href="acceleration/acceleration.html">Beschleunigung</a>smesser zu stoppen.
 
 ## Unterstützte Plattformen
 
@@ -67,7 +67,7 @@ Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu seh
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu seh
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu seh
         //
         function stopWatch() {
             if (watchID) {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -130,4 +130,4 @@ Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu seh
 
 ## iOS Macken
 
-Die API ruft die Erfolg-Callback-Funktion im Intervall angefordert, aber schränkt den Bereich der Anforderungen an das Gerät zwischen 40ms und 1000ms. Beispielsweise wenn Sie ein Intervall von 3 Sekunden, (3000ms), beantragen die API fordert Daten vom Gerät jede Sekunde, aber nur den Erfolg-Rückruf führt alle 3 Sekunden.
+Die API ruft die Erfolg-Callback-Funktion im Intervall angefordert, aber schränkt den Bereich der Anforderungen an das <a href="../device/device.html">Gerät</a> zwischen 40ms und 1000ms. Beispielsweise wenn Sie ein Intervall von 3 Sekunden, (3000ms), beantragen die API fordert Daten vom <a href="../device/device.html">Gerät</a> jede Sekunde, aber nur den Erfolg-Rückruf führt alle 3 Sekunden.

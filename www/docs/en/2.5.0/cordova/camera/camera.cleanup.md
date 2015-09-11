@@ -23,12 +23,12 @@ camera.cleanup
 
 Cleans up the image files that were taken by the camera, that were stored in a temporary storage location.
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
 
 Description
 -----------
 
-Cleans up the image files stored in the temporary storage location, when the function `camera.getPicture` is used with  `Camera.sourceType = Camera.PictureSourceType.CAMERA` and `Camera.destinationType = Camera.DestinationType.FILE_URI`
+Cleans up the image files stored in the temporary storage location, when the function `<a href="camera.getPicture.html">camera.getPicture</a>` is used with  `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.CAMERA` and `<a href="camera.html">Camera</a>.destinationType = <a href="camera.html">Camera</a>.DestinationType.FILE_URI`
 
 
 Supported Platforms
@@ -37,13 +37,13 @@ Supported Platforms
 - iOS
 
 
-Example
+<a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail); 
 
     function onSuccess() {
-        console.log("Camera cleanup success.")
+        console.log("<a href="camera.html">Camera</a> cleanup success.")
     }
 
     function onFail(message) {

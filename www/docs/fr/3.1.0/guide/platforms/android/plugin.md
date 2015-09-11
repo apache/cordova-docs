@@ -22,7 +22,7 @@ license: >
 
 Écriture d'un plugin nécessite une compréhension de l'architecture de Cordova-Android. Cordova-Android se compose d'une WebView Android avec crochets attachés à elle. Ces plugins sont représentés comme des mappages de classe dans le `config.xml` fichier.
 
-Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe. Un plugin doit substituer un de le `execute` méthodes de `CordovaPlugin` . Meilleure pratique, le plugin devrait gérer `pause` et `resume` des événements et tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
+Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe. Un plugin doit substituer un de le `execute` méthodes de `CordovaPlugin` . Meilleure pratique, le plugin devrait gérer `<a href="../../../cordova/events/events.pause.html">pause</a>` et `<a href="../../../cordova/events/events.resume.html">resume</a>` des événements et tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
 
 ## Classe plugin cartographie
 
@@ -59,7 +59,7 @@ On compare la valeur de la `action` paramètre et l'envoi de la demande hors mé
 
 Quand interception d'exceptions et de retourner des erreurs, il est important pour plus de clarté que des erreurs retournées aux noms d'exception du Java JavaScript match autant que possibles.
 
-### Filetage
+### <a href="../../../cordova/file/fileobj/fileobj.html">File</a>tage
 
 JavaScript dans le mode Web fait *pas* exécutés sur le thread d'interface utilisateur. Il s'exécute sur le thread de WebCore. La `execute` méthode s'exécute également sur le thread de WebCore.
 

@@ -20,12 +20,12 @@ license: >
 
 # accelerometer.clearWatch
 
-보고 중지는 `Acceleration` 에 의해 참조 되는 `watchID` 매개 변수.
+보고 중지는 `Acceleration` 에 의해 참조 되는 `watchID` 매개 <a href="../../plugin_ref/spec.html">변수</a>.
 
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: ID 반환`accelerometer.watchAcceleration`.
+*   **watchID**: ID 반환`<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>`.
 
 ## 지원 되는 플랫폼
 
@@ -38,7 +38,7 @@ license: >
 
 ## 빠른 예제
 
-    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    var watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ license: >
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.<a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>(onSuccess, onError, options);
         }
     
         // Stop watching the acceleration

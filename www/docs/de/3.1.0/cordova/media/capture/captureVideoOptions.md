@@ -24,7 +24,7 @@ license: >
 
 ## Eigenschaften
 
-*   **Limit**: die maximale Anzahl von video-Clips des Geräts Benutzer kann in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
+*   **Limit**: die maximale Anzahl von video-Clips des <a href="../../device/device.html">Gerät</a>s Benutzer kann in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
 
 *   **Dauer**: die maximale Dauer eines Videoclips in Sekunden.
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
     
-    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
     
 
 ## BlackBerry WebWorks Macken

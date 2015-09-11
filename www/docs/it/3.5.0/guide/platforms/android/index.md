@@ -24,11 +24,11 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Android configurazione
-*   Visualizzazioni Web Android
-*   Plugin Android
-*   L'aggiornamento di Android
-*   Android strumenti da riga di comando
+*   <a href="config.html">Android configurazione</a>
+*   <a href="webview.html">Visualizzazioni Web Android</a>
+*   <a href="plugin.html">Plugin Android</a>
+*   <a href="upgrading.html">L'aggiornamento di Android</a>
+*   <a href="tools.html">Android strumenti da riga di comando</a>
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -48,7 +48,7 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK di Android. L'interfaccia della riga di comando per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK di Android. <a href="../../cli/index.html">L'interfaccia della riga di comando</a> per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
 
 Installare il SDK di Android da [Developer.Android.com/SDK][3]. il sdk di android è distribuito come un ' adt-bundle -<os>-<arch>-<ver>' file. Su windows, l'adt-bundle è confezionato con un programma di installazione. Su OSX e Linux, semplicemente scompattare l'adt-bundle nel percorso si memorizzano gli strumenti di sviluppo. [Informazioni dettagliate sull'installazione di Android SDK possono essere trovati qui][4]
 

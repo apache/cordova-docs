@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-Project Settings for Android
+<a href="../index.html">Project Settings</a> for Android
 ===================================
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CordovaWebView Instance.

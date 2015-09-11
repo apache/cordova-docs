@@ -53,7 +53,7 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // process the promp dialog results
@@ -73,24 +73,24 @@ Quick Example
         );
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog Example</title>
+        <title><a href="notification.html">Notification</a> Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Empty
         }
 

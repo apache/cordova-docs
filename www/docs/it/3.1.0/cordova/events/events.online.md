@@ -22,14 +22,14 @@ license: >
 
 Questo evento viene generato quando un'applicazione va online, e il dispositivo diventa collegato a Internet.
 
-    document.addEventListener("online", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", yourCallbackFunction, false);
     
 
 ## Dettagli
 
-Il `online` evento viene generato quando un dispositivo precedentemente scollegato riceve una connessione di rete per consentire un'accesso di applicazione a Internet. Esso si basa sulle stesse informazioni come l'API di connessione e viene generato quando il valore di `connection.type` diventa`NONE`.
+Il `online` evento viene generato quando un dispositivo precedentemente scollegato riceve una connessione di rete per consentire un'accesso di applicazione a Internet. Esso si basa sulle stesse informazioni come l'API di connessione e viene generato quando il valore di `<a href="../connection/connection.type.html">connection.type</a>` diventa`NONE`.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
 
 ## Piattaforme supportate
 
@@ -42,7 +42,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## Esempio rapido
 
-    document.addEventListener("online", onOnline, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
     
     function onOnline() {
         // Handle the online event
@@ -54,7 +54,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Online Example</title>
+        <title>Online <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,8 +62,8 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("online", onOnline, false);
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("online", onOnline, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
@@ -85,7 +85,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## iOS stranezze
 
-Durante l'avvio iniziale, il primo `online` evento (se applicabile) richiede almeno un secondo al fuoco, prima che `connection.type` è`UNKNOWN`.
+Durante l'avvio iniziale, il primo `online` evento (se applicabile) richiede almeno un secondo al fuoco, prima che `<a href="../connection/connection.type.html">connection.type</a>` è`UNKNOWN`.
 
 ## Windows Phone 7 capricci
 

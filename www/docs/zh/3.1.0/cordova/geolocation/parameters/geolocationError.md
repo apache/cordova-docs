@@ -20,7 +20,7 @@ license: >
 
 # geolocationError
 
-當有地理定位功能錯誤時執行的使用者的回呼函數。
+當有<a href="../geolocation.html">地理定位</a>功能錯誤時執行的使用者的回呼函數。
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ license: >
 
 ## 參數
 
-*   **錯誤**: 設備所返回的錯誤。*() PositionError*
+*   **錯誤**: <a href="../../device/device.html">設備</a>所返回的錯誤。*() <a href="../PositionError/positionError.html">PositionError</a>*

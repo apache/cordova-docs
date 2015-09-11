@@ -20,7 +20,7 @@ license: >
 
 # CompassError
 
-A `CompassError` 개체에 반환 됩니다는 `compassError` 콜백 함수 오류가 발생 합니다.
+A `CompassError` 개체에 반환 됩니다는 `<a href="../parameters/compassError.html">compassError</a>` 콜백 함수 오류가 발생 합니다.
 
 ## 속성
 
@@ -33,4 +33,4 @@ A `CompassError` 개체에 반환 됩니다는 `compassError` 콜백 함수 오�
 
 ## 설명
 
-오류가 발생 하는 경우는 `CompassError` 개체를 매개 변수로 전달 되는 `compassError` 콜백 함수.
+오류가 발생 하는 경우는 `CompassError` 개체를 매개 <a href="../../../plugin_ref/spec.html">변수</a>로 전달 되는 `<a href="../parameters/compassError.html">compassError</a>` 콜백 함수.

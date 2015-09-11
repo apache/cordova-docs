@@ -48,7 +48,7 @@ globalization.stringToDate
 デフォルトのオプションは `{formatLength:'short', selector:'date and time'}` です。
 この options パラメーターはオプション (任意) です。
 
-もし変換中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.PARSING\_ERROR です。
+もし変換中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.PARSING\_ERROR です。
 
 
 サポートされているプラットフォーム
@@ -58,7 +58,7 @@ globalization.stringToDate
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは "month:8 day:25 year:2012" といったような文字列をポップアップダイアログに表示します。月として返る数値は文字列より 1 少ないので気をつけてください。
@@ -73,7 +73,7 @@ globalization.stringToDate
     );
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>

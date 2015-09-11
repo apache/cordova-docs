@@ -20,16 +20,16 @@ license: >
 
 # volumeupbutton
 
-當使用者按下了按鈕卷時，將觸發該事件。
+當使用者按下了按鈕卷時，將觸發該<a href="events.html">事件</a>。
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-如果您需要重寫預設卷起來的行為你可以註冊為事件攔截器 `volumeupbutton` 事件。
+如果您需要重寫預設卷起來的行為你可以註冊為<a href="events.html">事件</a>攔截器 `volumeupbutton` <a href="events.html">事件</a>。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
 
 ## 支援的平臺
 
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Up Button Example</title>
+        <title>Volume Up Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

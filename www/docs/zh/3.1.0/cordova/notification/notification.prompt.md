@@ -20,14 +20,14 @@ license: >
 
 # notification.prompt
 
-顯示一個可自訂的提示對話方塊。
+<a href="../inappbrowser/inappbrowser.html">顯示</a>一個可自訂的提示對話方塊。
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
     
 
 *   **消息**： 消息對話方塊。*（字串）*
 
-*   **promptCallback**： 當按下按鈕時要調用的回檔。*（函數）*
+*   **promptCallback**： 當按下按鈕時要調用的回<a href="../file/fileobj/fileobj.html">檔</a>。*（函數）*
 
 *   **標題**： 對話方塊的標題*（字串）* （可選，預設值為`Prompt`)
 
@@ -37,11 +37,11 @@ license: >
 
 ## 說明
 
-`notification.prompt`方法顯示一個本機的對話方塊，更可自訂的瀏覽器比 `prompt` 函數。
+`notification.prompt`方法<a href="../inappbrowser/inappbrowser.html">顯示</a>一個本機的對話方塊，更可自訂的瀏覽器比 `prompt` 函數。
 
 ## promptCallback
 
-`promptCallback`當使用者按下一個提示對話方塊中的按鈕時執行。`results`物件傳遞給回檔的包含以下屬性：
+`promptCallback`當使用者按下一個提示對話方塊中的按鈕時執行。`results`物件傳遞給回<a href="../file/fileobj/fileobj.html">檔</a>的包含以下屬性：
 
 *   **buttonIndex**： 按下的按鈕的索引。*（人數）*請注意索引使用基於 1 的索引，所以值是 `1` ， `2` ， `3` ，等等。
 
@@ -77,14 +77,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Prompt Dialog Example</title>
+        <title>Notification Prompt Dialog <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -121,4 +121,4 @@ license: >
 
 *   Android 支援最多的三個按鈕，並忽略任何更多。
 
-*   關於 Android 3.0 及更高版本，使用全息主題的設備按相反的順序顯示按鈕。
+*   關於 Android 3.0 及更高版本，使用全息主題的<a href="../device/device.html">設備</a>按相反的順序<a href="../inappbrowser/inappbrowser.html">顯示</a>按鈕。

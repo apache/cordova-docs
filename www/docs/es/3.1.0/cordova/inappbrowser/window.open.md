@@ -20,26 +20,26 @@ license: >
 
 # window.open
 
-Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instancia actual del navegador o el navegador del sistema.
+Se abre una dirección URL en una nueva instancia de `<a href="inappbrowser.html">InAppBrowser</a>`, la instancia actual del navegador o el navegador del sistema.
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**: referencia a la `InAppBrowser` ventana. *(InAppBrowser)*
+*   **ref**: referencia a la `<a href="inappbrowser.html">InAppBrowser</a>` ventana. *(<a href="inappbrowser.html">InAppBrowser</a>)*
 
 *   **URL**: el URL para cargar *(String)*. Llame a `encodeURI()` en este si la URL contiene caracteres Unicode.
 
 *   **target**: el objetivo en el que se carga la URL, un parámetro opcional que se utiliza de forma predeterminada `_self`. *(String)*
     
-    *   `_self`: se abre en el Cordova WebView si la URL está en la lista blanca, de lo contrario se abre en el `InAppBrowser`.
-    *   `_blank`: abre en el `InAppBrowser`.
+    *   `_self`: se abre en el Cordova WebView si la URL está en la lista blanca, de lo contrario se abre en el `<a href="inappbrowser.html">InAppBrowser</a>`.
+    *   `_blank`: abre en el `<a href="inappbrowser.html">InAppBrowser</a>`.
     *   `_system`: se abre en el navegador del sistema.
 
-*   **options**: opciones para el `InAppBrowser`. Opcional, contumaz a: `location=yes`. *(String)*
+*   **options**: opciones para el `<a href="inappbrowser.html">InAppBrowser</a>`. Opcional, contumaz a: `location=yes`. *(String)*
     
     La cadena de `options` no debe contener ningún espacio en blanco, y los pares de nombre y valor de cada característica deben estar separados por una coma. Los nombres de función son minúsculas. Todas las plataformas admiten el valor siguiente:
     
-    *   **location**: se establece en `yes` o `no` para activar o desactivar la barra de ubicación de la `InAppBrowser`.
+    *   **location**: se establece en `yes` o `no` para activar o desactivar la barra de ubicación de la `<a href="inappbrowser.html">InAppBrowser</a>`.
     ## Android sólo
     
     *   **closebuttoncaption** - establece en una cadena que será el título para el botón "Done". 
@@ -50,7 +50,7 @@ Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instanci
     
     *   **closebuttoncaption** - establece en una cadena que será el título para el botón "Done". Tenga en cuenta que deberás localizar este valor por sí mismo.
     *   **hidden** - set ' Yes ' para crear el navegador y cargar la página, pero no lo demuestra. El evento load se activará cuando la carga está completa. Omitir o establecer que 'no' (por defecto) para que el navegador abra y carga normalmente. 
-    *   **barra de herramientas** - set al 'yes' o 'no' para activar o desactivar el la barra de herramientas para el InAppBrowser (por defecto 'yes')
+    *   **barra de herramientas** - set al 'yes' o 'no' para activar o desactivar el la barra de herramientas para el <a href="inappbrowser.html">InAppBrowser</a> (por defecto 'yes')
     *   **enableViewportScale**: Set a `yes` o `no` para evitar viewport escalar a través de una etiqueta meta (por defecto a `no`).
     *   **mediaPlaybackRequiresUserAction**: Set a `yes` o `no` para evitar HTML5 audio o vídeo de reproducción automática (por defecto a `no`).
     *   **allowInlineMediaPlayback**: establecer a `yes` o `no` permiten la reproducción de medios en línea HTML5, mostrando en la ventana del navegador en lugar de una interfaz específica del dispositivo de reproducción. Elemento `video` de HTML también debe incluir el atributo de `webkit-playsinline` (por defecto a `no`)
@@ -80,14 +80,14 @@ Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instanci
     <!DOCTYPE html>
     <html>
       <head>
-        <title>window.open Example</title>
+        <title>window.open <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

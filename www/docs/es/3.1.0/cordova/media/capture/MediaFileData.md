@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# MediaFileData
+# <a href="MediaFile.html">MediaFile</a>Data
 
 > Encapsula la información de formato de un archivo multimedia.
 
@@ -36,7 +36,7 @@ license: >
 
 ## BlackBerry WebWorks rarezas
 
-Ninguna API proporciona información de formato para archivos de medios, así que el `MediaFileData` objeto devuelto por `MediaFile.getFormatData` cuenta con los siguientes valores predeterminados:
+Ninguna API proporciona información de formato para archivos de medios, así que el `<a href="MediaFile.html">MediaFile</a>Data` objeto devuelto por `<a href="MediaFile.html">MediaFile</a>.getFormatData` cuenta con los siguientes valores predeterminados:
 
 *   **codecs**: no soportado y devuelve`null`.
 
@@ -50,7 +50,7 @@ Ninguna API proporciona información de formato para archivos de medios, así qu
 
 ## Rarezas Android
 
-Es compatible con los siguientes `MediaFileData` Propiedades:
+Es compatible con los siguientes `<a href="MediaFile.html">MediaFile</a>Data` Propiedades:
 
 *   **codecs**: no soportado y devuelve`null`.
 
@@ -64,7 +64,7 @@ Es compatible con los siguientes `MediaFileData` Propiedades:
 
 ## iOS rarezas
 
-Es compatible con los siguientes `MediaFileData` Propiedades:
+Es compatible con los siguientes `<a href="MediaFile.html">MediaFile</a>Data` Propiedades:
 
 *   **codecs**: no soportado y devuelve`null`.
 

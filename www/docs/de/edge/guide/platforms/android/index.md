@@ -20,7 +20,7 @@ license: >
 
 # Android-Plattform-Guide
 
-Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, um Cordova apps für Android-Geräte bereitzustellen sowie optional mithilfe von Befehlszeilentools Android-zentrierte in Ihrem Entwicklungs-Workflow. Sie müssen installieren Sie das Android SDK unabhängig davon, ob Sie für die Entwicklung dieser Plattform-zentrierte Shell-Werkzeugen oder plattformübergreifende Cordova CLI verwenden möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der Übersicht. Details über die CLI finden Sie unter The Command-Line Interface.
+Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, um Cordova apps für Android-Geräte bereitzustellen sowie optional mithilfe von Befehlszeilentools Android-zentrierte in Ihrem Entwicklungs-Workflow. Sie müssen installieren Sie das Android SDK unabhängig davon, ob Sie für die Entwicklung dieser Plattform-zentrierte Shell-Werkzeugen oder plattformübergreifende Cordova CLI verwenden möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der <a href="../../overview/index.html">Übersicht</a>. Details über die CLI finden Sie unter The Command-Line Interface.
 
 ## Anforderungen und Unterstützung
 
@@ -52,7 +52,7 @@ Wenn Sie auf Windows installieren, müssen Sie auch `JAVA_HOME` -Umgebungsvariab
 
 ## Das Android SDK installieren
 
-Installieren Sie [Android eigenständige SDK Tools][5] oder das [Android-Studio][6]. Procceed mit `Android-Studio` Wenn Sie planen, entwickeln neue Cordova für Android Plugins oder Verwenden von systemeigenen Tools ausführen und Debuggen der Android-Plattform. Andernfalls sind `Android Stand-Alone-SDK-Tools` genug, um erstellen und Bereitstellen von Android-Anwendung.
+Installieren Sie [Android eigenständige SDK Tools][5] oder das [Android-Studio][6]. Procceed mit `Android-Studio` Wenn Sie planen, entwickeln neue Cordova für <a href="plugin.html">Android Plugins</a> oder Verwenden von systemeigenen Tools ausführen und Debuggen der Android-Plattform. Andernfalls sind `Android Stand-Alone-SDK-Tools` genug, um erstellen und Bereitstellen von Android-Anwendung.
 
  [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
  [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
@@ -84,7 +84,7 @@ So ändern Sie die `PATH` -Umgebung unter Windows:
         ;C:\Development\android-sdk\platform-tools;C:\Development\android-sdk\tools
         
 
-6.  Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
+6.  <a href="../../../cordova/storage/storage.html">Speicher</a>n Sie den Wert und schließen Sie beide Dialogfelder zu.
 
 ## SDK-Pakete installieren
 
@@ -267,7 +267,7 @@ Sie können sind eingestellt jetzt bauen und führen Sie die Anwendung direkt vo
 
  [21]: img/guide/platforms/android/asdk_import_done.png
 
-Finden Sie unter [Übersicht über Android-Studio][22] und und [erstellen und Ausführen von Android-Studio][23] für weitere Details.
+Finden Sie unter [<a href="../../overview/index.html">Übersicht</a> über Android-Studio][22] und und [erstellen und Ausführen von Android-Studio][23] für weitere Details.
 
  [22]: http://developer.android.com/tools/studio/index.html
  [23]: http://developer.android.com/tools/building/building-studio.html

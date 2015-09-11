@@ -20,9 +20,9 @@ license: >
 
 # 스토리지
 
-> 코르 도우 바에 대 한 저장소 옵션에 대 한 개요입니다.
+> 코르 도우 바에 대 한 저장소 옵션에 대 한 <a href="../../guide/overview/index.html">개요</a>입니다.
 
-여러 저장소 Api 코르도바 애플리케이션에 사용할 수 있습니다. [Html5rocks][1]를 참조 하십시오. 더 완전 한 개요 및 예제.
+여러 저장소 Api 코르도바 애플리케이션에 사용할 수 있습니다. [Html5rocks][1]를 참조 하십시오. 더 완전 한 <a href="../../guide/overview/index.html">개요</a> 및 예제.
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -34,7 +34,7 @@ license: >
 
 ## WebSQL
 
-이 API는 기본 WebView에서 사용할 수 있습니다. [웹 SQL 데이터베이스 사양][3] 더 완전 한 기능의 데이터베이스 테이블 액세스 SQL 쿼리를 통해 제공 합니다.
+이 API는 기본 WebView에서 사용할 수 있습니다. [웹 SQL <a href="database/database.html">데이터베이스</a> 사양][3] 더 완전 한 기능의 <a href="database/database.html">데이터베이스</a> 테이블 액세스 SQL 쿼리를 통해 제공 합니다.
 
  [3]: http://dev.w3.org/html5/webdatabase/
 

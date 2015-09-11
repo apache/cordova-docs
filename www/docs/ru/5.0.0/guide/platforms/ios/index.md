@@ -22,13 +22,13 @@ license: >
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для iOS-устройств, таких как iPhone и iPad. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   Конфигурация iOS
-*   Обновление для iOS
-*   WebViews в iOS
-*   Плагины для iOS
-*   Руководство по инструментам командной строки iOS
+*   <a href="config.html">Конфигурация iOS</a>
+*   <a href="upgrade.html">Обновление для iOS</a>
+*   <a href="webview.html">WebViews в iOS</a>
+*   <a href="plugin.html">Плагины для iOS</a>
+*   <a href="tools.html">Руководство по инструментам командной строки iOS</a>
 
-Средства командной строки относятся к версии Cordova до 3.0. Смотрите раздел "Интерфейс командной строки" для информации о текущем интерфейсе интерфейс командной строки.
+Средства командной строки относятся к версии Cordova до 3.0. Смотрите раздел "<a href="../../cli/index.html">Интерфейс командной строки</a>" для информации о текущем интерфейсе интерфейс командной строки.
 
 ## Требования и поддержка
 
@@ -66,7 +66,7 @@ license: >
 
 ## Создание нового проекта
 
-Используйте утилиту `cordova` для настройки нового проекта, как описано в разделе "Интерфейс командной строки Cordova". Например выполните в каталоге исходного кода:
+Используйте утилиту `cordova` для настройки нового проекта, как описано в разделе "<a href="../../cli/index.html">Интерфейс командной строки</a> Cordova". Например выполните в каталоге исходного кода:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -158,7 +158,7 @@ Xcode предупреждение о методе `invokeString`, касает�
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];

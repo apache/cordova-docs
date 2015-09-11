@@ -53,7 +53,7 @@ confirmCallback
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // 確認ダイアログの表示プロセスの開始
@@ -63,7 +63,7 @@ confirmCallback
 
     // カスタム確認ダイアログを表示
     //
-    function showConfirm() {
+    function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
         navigator.notification.confirm(
             'あなたの勝ちです！', // メッセージ
             onConfirm, // 選択されたボタン情報とともに呼ばれるコールバック関数
@@ -72,24 +72,24 @@ confirmCallback
         );
     }
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification の使用例</title>
+        <title><a href="notification.html">Notification</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // 処理なし
         }
 
@@ -100,7 +100,7 @@ confirmCallback
 
         // カスタム確認ダイアログを表示
         //
-        function showConfirm() {
+        function <a href="../splashscreen/splashscreen.show.html">show</a>Confirm() {
             navigator.notification.confirm(
                 'あなたの勝ちです！', // メッセージ
                 onConfirm, // 選択されたボタン情報とともに呼ばれるコールバック関数
@@ -112,7 +112,7 @@ confirmCallback
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showConfirm(); return false;">確認ダイアログを表示</a></p>
+        <p><a href="#" onclick="<a href="../splashscreen/splashscreen.show.html">show</a>Confirm(); return false;">確認ダイアログを表示</a></p>
       </body>
     </html>
 

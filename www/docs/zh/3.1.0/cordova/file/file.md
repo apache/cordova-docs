@@ -18,33 +18,33 @@ license: >
     under the License.
 ---
 
-# 檔
+# <a href="fileobj/fileobj.html">檔</a>
 
-> 一個 API，用於讀取、 寫入和導航基於[w3c 檔 api][1]的檔案系統層次結構.
+> 一個 API，用於讀取、 寫入和導航基於[w3c <a href="fileobj/fileobj.html">檔</a> api][1]的<a href="fileobj/fileobj.html">檔</a>案系統層次結構.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## 物件
 
-*   枚舉指定工作組或
-*   DirectoryReader
-*   檔
-*   FileEntry
-*   FileError
-*   FileReader
-*   檔案系統
-*   檔案傳輸
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   標誌
-*   場合
-*   中繼資料
+*   <a href="directoryentry/directoryentry.html">枚舉指定工作組或</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+*   <a href="fileobj/fileobj.html">檔</a>
+*   <a href="fileentry/fileentry.html">FileEntry</a>
+*   <a href="fileerror/fileerror.html">FileError</a>
+*   <a href="filereader/filereader.html">FileReader</a>
+*   <a href="fileobj/fileobj.html">檔</a>案系統
+*   <a href="fileobj/fileobj.html">檔</a>案傳輸
+*   <a href="filetransfererror/filetransfererror.html">FileTransferError</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
+*   <a href="filewriter/filewriter.html">FileWriter</a>
+*   <a href="flags/flags.html">標誌</a>
+*   <a href="localfilesystem/localfilesystem.html">場合</a>
+*   <a href="metadata/metadata.html">中繼資料</a>
 
 ## 訪問功能
 
-從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了<a href="../device/device.html">設備</a>級 Api。 使用 CLI 的 `plugin` 命令，描述在<a href="../../guide/cli/index.html">命令列介面</a>，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin ls
@@ -52,7 +52,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.file
     
 
-要使用的檔案傳輸外掛程式必須單獨添加的。
+要使用的<a href="fileobj/fileobj.html">檔</a>案傳輸外掛程式必須單獨添加的。
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
@@ -60,7 +60,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
-這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的<a href="../media/capture/ConfigurationData.html">配置</a>設置：
 
 *   Android 系統
     
@@ -105,4 +105,4 @@ license: >
         </feature>
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的<a href="../media/capture/ConfigurationData.html">配置</a>。請參見在<a href="../../guide/overview/index.html">概述</a>部分中*的平臺支援*。

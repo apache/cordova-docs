@@ -23,7 +23,7 @@ batterylow
 
 The event fires when the battery has reached the low level threshold.
 
-    window.addEventListener("batterylow", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterylow", yourCallbackFunction, false);
 
 Details
 -------
@@ -37,8 +37,8 @@ properties:
 - __level__: The percentage of battery charge (0-100). _(Number)_
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
@@ -48,23 +48,23 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    window.addEventListener("batterylow", onBatteryLow, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterylow", onBatteryLow, false);
 
     function onBatteryLow(info) {
         // Handle the battery low event
         alert("Battery Level Low " + info.level + "%");
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title><a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -72,13 +72,13 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            window.addEventListener("batterylow", onBatteryLow, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterylow", onBatteryLow, false);
         }
 
         // Handle the batterylow event

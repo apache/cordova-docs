@@ -40,11 +40,11 @@ Wenn die CLI ein Projekt erstellen, werden in verschiedenen Versionen dieser Dat
 
 Dieser Abschnitt beschreibt globale und Cross-Plattform-Konfigurationsoptionen. Finden Sie in den folgenden Abschnitten für Plattform-spezifische Optionen:
 
-*   iOS Konfiguration
-*   Android Konfiguration
-*   BlackBerry 10 Konfiguration
+*   <a href="../guide/platforms/ios/config.html">iOS Konfiguration</a>
+*   <a href="../guide/platforms/android/config.html">Android Konfiguration</a>
+*   <a href="../guide/platforms/blackberry10/config.html">BlackBerry 10 Konfiguration</a>
 
-Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter Symbole und Splash-Screens.
+Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter <a href="images.html">Symbole und Splash-Screens</a>.
 
 ## Kern-Konfigurationselemente
 
@@ -53,7 +53,7 @@ In diesem Beispiel wird den Standardwert `config.xml` erzeugt durch der CLI `cre
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
             <description>
-                A sample Apache Cordova application that responds to the deviceready event.
+                A sample Apache Cordova application that responds to the <a href="../cordova/events/events.deviceready.html">deviceready</a> event.
             </description>
             <author email="dev@callback.apache.org" href="http://cordova.io">
                 Apache Cordova Team
@@ -75,13 +75,13 @@ Die folgenden Konfigurationselemente in der obersten Ebene angezeigt `config.xml
 
 *   Der optionale `<content>` -Element definiert die app Startseite in der obersten Ebene Webverzeichnis Vermögenswerte. Der Standardwert ist `index.html` , die üblicherweise in einem Projekt angezeigt wird, ist der obersten Ebene `www` Verzeichnis.
 
-*   `<access>`Elemente definieren den Satz der externen Domänen, die, denen die app erlaubt ist, zu kommunizieren. Der Standardwert, der oben gezeigten ermöglicht es, jeden beliebigen Server zugreifen. Finden Sie im Domain-Whitelist-Guide für Details.
+*   `<access>`Elemente definieren den Satz der externen Domänen, die, denen die app erlaubt ist, zu kommunizieren. Der Standardwert, der oben gezeigten ermöglicht es, jeden beliebigen Server zugreifen. Finden Sie im Domain-<a href="../guide/appdev/whitelist/index.html">Whitelist-Guide</a> für Details.
 
 *   Die `<preference>` Tag stellt verschiedene Optionen als Paare von `name` / `value` Attribute. Jede Vorliebe `name` ist case-insensitive. Viele Einstellungen sind nur für bestimmte Plattformen, wie oben auf dieser Seite aufgeführt. In den folgenden Abschnitten beschreiben die Einstellungen, die für mehrere Plattformen gelten.
 
 ### Zusätzliche Versionsverwaltung
 
-Sowohl Android als auch iOS Unterstützung eine zweite Versionszeichenfolge (oder Anzahl) zusätzlich zu dem oben sichtbar im app-Speicher, [VersionCode][2] für Android und [CFBundleVersion][3] für iOS. Unten ist ein Beispiel, das VersionCode und CFBundleVersion explizit festlegt
+Sowohl Android als auch iOS Unterstützung eine zweite Versionszeichenfolge (oder Anzahl) zusätzlich zu dem oben sichtbar im app-<a href="../cordova/storage/storage.html">Speicher</a>, [VersionCode][2] für Android und [CFBundleVersion][3] für iOS. Unten ist ein Beispiel, das VersionCode und CFBundleVersion explizit festlegt
 
  [2]: http://developer.android.com/tools/publishing/versioning.html
  [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error

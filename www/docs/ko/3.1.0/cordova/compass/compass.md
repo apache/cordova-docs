@@ -20,26 +20,26 @@ license: >
 
 # 나침반
 
-> 장치 가리키는 방향을 가져옵니다.
+> <a href="../device/device.html">장치</a> 가리키는 방향을 가져옵니다.
 
 ## 메서드
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (사용 되지 않음)
-*   compass.clearWatchFilter (사용 되지 않음)
+*   <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
+*   <a href="compass.watchHeading.html">compass.watchHeading</a>
+*   <a href="compass.clearWatch.html">compass.clearWatch</a>
+*   <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a> (사용 되지 않음)
+*   <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a> (사용 되지 않음)
 
 ## 인수
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   <a href="parameters/compassSuccess.html">compassSuccess</a>
+*   <a href="parameters/compassError.html">compassError</a>
+*   <a href="parameters/compassOptions.html">compassOptions</a>
+*   <a href="parameters/compassHeading.html">compassHeading</a>
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin ls
@@ -72,4 +72,4 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.

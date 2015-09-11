@@ -20,7 +20,7 @@ license: >
 
 # 블랙베리 10 명령줄 도구
 
-`cordova`명령줄 유틸리티는 한 번에 여러 플랫폼에서 응용 프로그램을 만들 수 있는 고급 도구. 코르 도우 바 프레임 워크의 이전 버전 각 플랫폼에 특정 명령줄 도구 집합을 제공합니다. CLI에 대 안으로 그들을 사용 하 여 [cordova.apache.org][1]에서 코르도바의이 버전을 다운로드 해야 합니다. 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 당신이 목표 하고자 하는 플랫폼을 확장 합니다. 여기에 설명 된 도구는 일반적으로 최상위 수준에서 사용할 수 있는 `bin` 자세한 지시 사항에 대 한 디렉터리, 그렇지 않으면 **README** 파일을 참조 하십시오.
+`cordova`명령줄 유틸리티는 한 번에 여러 플랫폼에서 응용 프로그램을 만들 수 있는 고급 도구. 코르 도우 바 프레임 워크의 이전 버전 각 플랫폼에 특정 명령줄 도구 집합을 제공합니다. CLI에 대 안으로 그들을 사용 하 여 [cordova.apache.org][1]에서 코르도바의이 버전을 다운로드 해야 합니다. 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 당신이 목표 하고자 하는 플랫폼을 확장 합니다. 여기에 설명 된 도구는 일반적으로 최상위 수준에서 사용할 수 있는 `bin` 자세한 지시 사항에 대 한 디렉터리, 그렇지 않으면 **README** <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 참조 하십시오.
 
  [1]: http://cordova.apache.org
 
@@ -45,22 +45,22 @@ license: >
 
 ## 대상
 
-`target`명령을 에뮬레이터 또는 응용 프로그램을 테스트 하려면 사용 하는 검은 딸기 장치를 관리할 수 있습니다. 추가 하거나 또는 대상을, 제거, 기본 대상으로 목표를 설정 수 있습니다.
+`target`명령을 에뮬레이터 또는 응용 프로그램을 테스트 하려면 사용 하는 검은 딸기 <a href="../../../cordova/device/device.html">장치</a>를 관리할 수 있습니다. 추가 하거나 또는 대상을, 제거, 기본 대상으로 목표를 설정 수 있습니다.
 
 ### 대상 추가
 
-    < 경로 프로젝트 >/코르도바/대상 추가 < 이름 >< ip 주소 > [-t |-유형 < 장치 | 시뮬레이터 >] [-p |-< 암호 > 암호] [-핀 < 장치 핀 >]
+    < 경로 프로젝트 >/코르도바/대상 추가 < 이름 >< ip 주소 > [-t |-유형 < <a href="../../../cordova/device/device.html">장치</a> | 시뮬레이터 >] [-p |-< 암호 > 암호] [-핀 < <a href="../../../cordova/device/device.html">장치</a> 핀 >]
     
 
 어디
 
 *   `<name>`대상에 대 한 고유 이름을 지정합니다.
 
-*   `<ip-address>`검은 딸기 장치 또는 시뮬레이터의 ip 주소를 지정합니다.
+*   `<ip-address>`검은 딸기 <a href="../../../cordova/device/device.html">장치</a> 또는 시뮬레이터의 ip 주소를 지정합니다.
 
-*   `-p | --password <password>`장치 또는 에뮬레이터에 대 한 암호를 지정합니다. 이것이 장치 또는 에뮬레이터는 암호로 보호 된 경우에 필요 합니다.
+*   `-p | --password <password>`<a href="../../../cordova/device/device.html">장치</a> 또는 에뮬레이터에 대 한 암호를 지정합니다. 이것이 <a href="../../../cordova/device/device.html">장치</a> 또는 에뮬레이터는 암호로 보호 된 경우에 필요 합니다.
 
-*   `--pin <device-pin>`디버그 토큰에 대 한 유효한 호스트 장치를 식별 하는 블랙베리 장치의 PIN을 지정 합니다. 이 인수는 디버그 토큰을 만드는 경우에 필요 합니다.
+*   `--pin <device-pin>`디버그 토큰에 대 한 유효한 호스트 <a href="../../../cordova/device/device.html">장치</a>를 식별 하는 블랙베리 <a href="../../../cordova/device/device.html">장치</a>의 PIN을 지정 합니다. 이 인수는 디버그 토큰을 만드는 경우에 필요 합니다.
 
 ### 대상을 제거합니다
 
@@ -74,11 +74,11 @@ license: >
 
 ## 빌드
 
-`build`명령.bar 파일로 프로젝트를 빌드합니다. 어느 릴리스 모드 (서명된.bar 파일 생성)에서 또는 디버그 모드 (생산 부호 없는.bar 파일)에서 응용 프로그램을 빌드할 수 있습니다.
+`build`명령.bar <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>로 프로젝트를 빌드합니다. 어느 릴리스 모드 (서명된.bar <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 생성)에서 또는 디버그 모드 (생산 부호 없는.bar <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>)에서 응용 프로그램을 빌드할 수 있습니다.
 
 ### 릴리스 모드에서 프로젝트를 빌드
 
-    < 경로 프로젝트 >/코르도바/릴리스 빌드 [-k |-keystorepass < 암호 >] [-b |-buildId < 숫자 >] [-p | < params JSON 파일 > 매개 변수]
+    < 경로 프로젝트 >/코르도바/릴리스 빌드 [-k |-keystorepass < 암호 >] [-b |-buildId < 숫자 >] [-p | < params JSON <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> > 매개 <a href="../../../plugin_ref/spec.html">변수</a>]
     
 
 어디
@@ -87,38 +87,38 @@ license: >
 
 *   `-b | --buildId <number>`응용 프로그램의 빌드 버전 번호를 지정합니다. 일반적으로, 서명 된 이전 버전에서이 숫자를 증가 해야 합니다. 이 인수는 선택 사항입니다.
 
-*   `-p | --params <params-JSON-file>`다운스트림 도구에 전달할 추가 매개 변수를 포함 하는 JSON 파일을 지정 합니다. 이 인수는 선택 사항입니다.
+*   `-p | --params <params-JSON-file>`다운스트림 도구에 전달할 추가 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 포함 하는 JSON <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 지정 합니다. 이 인수는 선택 사항입니다.
 
 ### 디버그 모드에서 프로젝트를 빌드
 
-    < 경로 프로젝트 >/코르도바/빌드 디버그 [< 대상 >] [-k |-keystorepass < 암호 >] [-p |-params < params JSON 파일 >] [-ll |-loglevel < error|warn|verbose >]
+    < 경로 프로젝트 >/코르도바/빌드 디버그 [< 대상 >] [-k |-keystorepass < 암호 >] [-p |-params < params JSON <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> >] [-ll |-loglevel < error|warn|verbose >]
     
 
 어디
 
-*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 를 지정 하지 않으면 기본 대상을 사용 하는 경우 하나 만들었습니다. 이 인수는 단지 필요 블랙베리 장치에 응용 프로그램을 배포 하는 스크립트 또는 에뮬레이터 및 기본 대상 작성 하지 않았습니다. 또한, 경우 `<target>` 은 장치, 장치를 USB 연결 하 여 컴퓨터에 연결 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 연결 되어야 합니다.
+*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 를 지정 하지 않으면 기본 대상을 사용 하는 경우 하나 만들었습니다. 이 인수는 단지 필요 블랙베리 <a href="../../../cordova/device/device.html">장치</a>에 응용 프로그램을 배포 하는 스크립트 또는 에뮬레이터 및 기본 대상 작성 하지 않았습니다. 또한, 경우 `<target>` 은 <a href="../../../cordova/device/device.html">장치</a>, <a href="../../../cordova/device/device.html">장치</a>를 USB <a href="../../../cordova/connection/connection.html">연결</a> 하 여 컴퓨터에 <a href="../../../cordova/connection/connection.html">연결</a> 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 <a href="../../../cordova/connection/connection.html">연결</a> 되어야 합니다.
 
 *   `-k | --keystorepass <password>`응용 프로그램에 서명 하 여 컴퓨터를 구성할 때 정의 된 암호를 지정 합니다. 이 암호 또한 디버그 토큰을 만드는 데 사용 됩니다. 이 인수는 스크립트를 만들고 당신을 위해 디버그 토큰 설치 경우에 필요 합니다.
 
-*   `-p | --params <params-JSON-file>`다운스트림 도구에 전달할 추가 매개 변수를 포함 하는 JSON 파일을 지정 합니다.
+*   `-p | --params <params-JSON-file>`다운스트림 도구에 전달할 추가 매개 <a href="../../../plugin_ref/spec.html">변수</a>를 포함 하는 JSON <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 지정 합니다.
 
 *   `-ll | --loglevel <level>`로그 레벨을 지정합니다. 로그 수준 중 하나가 될 수 있습니다 `error` , `warn` , 또는`verbose`.
 
-만약 당신이 이전 정의 기본 대상 (그리고 대상 블랙베리 장치의 경우 디버그 토큰을 이전 설치), 인수 없이 스크립트를 실행할 수 있습니다와 스크립트 응용 프로그램을 패키지 하 고 기본 대상 배포. 예를 들어:
+만약 당신이 이전 정의 기본 대상 (그리고 대상 블랙베리 <a href="../../../cordova/device/device.html">장치</a>의 경우 디버그 토큰을 이전 설치), 인수 없이 스크립트를 실행할 수 있습니다와 스크립트 응용 프로그램을 패키지 하 고 기본 대상 배포. 예를 들어:
 
     < 경로 프로젝트 >/코르도바/디버그 빌드
     
 
 ## 실행
 
-`run`명령을 지정 된 블랙베리 장치 또는 에뮬레이터에서 응용 프로그램을 배포 합니다. 응용 프로그램을 배포 하기 전에 먼저 장치 또는 에뮬레이터 대상 스크립트를 사용 하 여 응용 프로그램을 배포 하려면 대상을 만들어야 합니다. 배포 스크립트는 응용 프로그램의 최신 빌드를 배포 됩니다.
+`run`명령을 지정 된 블랙베리 <a href="../../../cordova/device/device.html">장치</a> 또는 에뮬레이터에서 응용 프로그램을 배포 합니다. 응용 프로그램을 배포 하기 전에 먼저 <a href="../../../cordova/device/device.html">장치</a> 또는 에뮬레이터 대상 스크립트를 사용 하 여 응용 프로그램을 배포 하려면 대상을 만들어야 합니다. 배포 스크립트는 응용 프로그램의 최신 빌드를 배포 됩니다.
 
     < 경로 프로젝트 >/코르도바/< 대상 > 실행
     
 
 어디
 
-*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 은 장치, 장치를 USB 연결 하 여 컴퓨터에 연결 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 연결 되어야 합니다.
+*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 은 <a href="../../../cordova/device/device.html">장치</a>, <a href="../../../cordova/device/device.html">장치</a>를 USB <a href="../../../cordova/connection/connection.html">연결</a> 하 여 컴퓨터에 <a href="../../../cordova/connection/connection.html">연결</a> 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 <a href="../../../cordova/connection/connection.html">연결</a> 되어야 합니다.
 
 ## 플러그인
 
@@ -129,7 +129,7 @@ license: >
     < 경로 프로젝트 >/코르도바/플러그인 가져오기 < 경로 플러그인 >
     
 
-### 설치 된 플러그인 목록 보기
+### 설치 된 플러그인 목록 <a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a>
 
     < 경로 프로젝트 >/코르도바/플러그인 ls
     

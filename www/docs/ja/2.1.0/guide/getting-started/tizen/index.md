@@ -42,7 +42,7 @@ Getting Started with Tizen
 
 - **方法 #1: Cordova Tizen プロジェクトサンプルのインポート**
     - Tizen Eclipse IDE を起動します
-    - **File** -> **Import** -> **Tizen Web Project** を選択します
+    - **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** -> **Import** -> **Tizen Web Project** を選択します
 
     ![](img/guide/getting-started/tizen/import_project.png)
 
@@ -62,7 +62,7 @@ Getting Started with Tizen
 
 - **方法 #2: Tizen Eclipse IDE の Cordova Tizen プロジェクトテンプレートの使用**
     - Tizen Eclipse IDE を起動します
-    - **File** -> **New** -> **Tizen Web Project** を選択します
+    - **<a href="../../../cordova/file/fileobj/fileobj.html">File</a>** -> **New** -> **Tizen Web Project** を選択します
     - 項目 **User Template** と **User defined** を選択します
     - Tizen Cordova template のうちの一つ (e.g: **CordovaBasicTemplate**) を選択します
     - **Project name** とその **Location** を入力します
@@ -76,7 +76,7 @@ Getting Started with Tizen
     - これで、プロジェクトは作成され **Project Explorer** ビューに表示されます
 
 
-4. Hello World の作成
+4. <a href="../webos/index.html">Hello World</a> の作成
 --------------
 - プロジェクトのビルド:
 
@@ -86,7 +86,7 @@ Getting Started with Tizen
 
     - プロジェクトのルートディレクトリに、ウィジェットパッケージが生成されているはずです (例: `cordova-basic.wgt`)
 
-    - **注意** Tizen Cordova プロジェクトで提供されているサンプルは、基本的な hello world アプリケーションではありません。それらは、 Battery Cordova API のシンプルな使用例です。
+    - **注意** Tizen Cordova プロジェクトで提供されているサンプルは、基本的な hello world アプリケーションではありません。それらは、 Battery Cordova API のシンプルな<a href="../../../cordova/storage/storage.opendatabase.html">使用例</a>です。
 
 
 5A. シミュレーターへのデプロイ
@@ -100,7 +100,7 @@ Getting Started with Tizen
 --------------------
 
 - デバイスが正常に起動/接続/設定されていることを確認 ("Date and Time" 設定は正しく設定されている必要があります) します
-- **Connection Explorer** ビューでアプリケーションのデプロイ先を選択します (**Window** Menu -> **Show View** -> **Connection Explorer** を選択)
+- **<a href="../../../cordova/connection/connection.html">Connection</a> Explorer** ビューでアプリケーションのデプロイ先を選択します (**Window** Menu -> **Show View** -> **<a href="../../../cordova/connection/connection.html">Connection</a> Explorer** を選択)
 
     ![](img/guide/getting-started/tizen/connection_explorer.png)
 

@@ -26,7 +26,7 @@ Contains `Position` coordinates that are created by the geolocation API.
 Properties
 ----------
 
-- __coords:__ A set of geographic coordinates. _(Coordinates)_
+- __coords:__ A set of geographic coordinates. _(<a href="../Coordinates/coordinates.html">Coordinates</a>)_
 - __timestamp:__ Creation timestamp for `coords` in milliseconds. _(DOMTimeStamp)_
 
 Description
@@ -42,7 +42,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // onSuccess Callback
@@ -58,37 +58,37 @@ Quick Example
               'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="../../device/device.html">Device</a> Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
-        // onSuccess Geolocation
+        // onSuccess <a href="../geolocation.html">Geolocation</a>
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -102,7 +102,7 @@ Full Example
                                 'Timestamp: '          + new Date(position.timestamp)          + '<br />';
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
 	    //
 	    function onError(error) {
 	        alert('code: '    + error.code    + '\n' +

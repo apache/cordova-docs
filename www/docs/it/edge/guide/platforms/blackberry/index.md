@@ -22,10 +22,10 @@ license: >
 
 Questa guida viene illustrato come configurare un ambiente SDK per le applicazioni di destinazione per la piattaforma BlackBerry precedenti alla versione 10. Se volete la versione più recente di destinazione, vedere la guida di piattaforma BlackBerry 10. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione di blackBerry
-*   L'aggiornamento di BlackBerry
-*   BlackBerry Plugins
-*   Strumenti della riga di comando di blackBerry
+*   <a href="config.html">Configurazione di blackBerry</a>
+*   <a href="upgrading.html">L'aggiornamento di BlackBerry</a>
+*   <a href="plugin.html">BlackBerry Plugins</a>
+*   <a href="tools.html">Strumenti della riga di comando di blackBerry</a>
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 

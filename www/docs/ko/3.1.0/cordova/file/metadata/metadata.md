@@ -20,15 +20,15 @@ license: >
 
 # 메타 데이터
 
-파일이 나 디렉터리의 상태에 대 한 정보를 제공 하는 인터페이스.
+<a href="../fileobj/fileobj.html">파일</a>이 나 디렉터리의 상태에 대 한 정보를 제공 하는 인터페이스.
 
 ## 속성
 
-*   **modificationTime**: 때 파일 또는 디렉터리가 마지막으로 수정 된 시간. *(날짜)*
+*   **modificationTime**: 때 <a href="../fileobj/fileobj.html">파일</a> 또는 디렉터리가 마지막으로 수정 된 시간. *(날짜)*
 
 ## 세부 정보
 
-`Metadata`개체는 파일이 나 디렉터리의 상태에 대 한 정보를 나타냅니다. 전화는 `DirectoryEntry` 또는 `FileEntry` 개체의 `getMetadata()` 메서드 결과 `Metadata` 인스턴스.
+`Metadata`개체는 <a href="../fileobj/fileobj.html">파일</a>이 나 디렉터리의 상태에 대 한 정보를 나타냅니다. 전화는 `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` 또는 `<a href="../fileentry/fileentry.html">FileEntry</a>` 개체의 `getMetadata()` 메서드 결과 `Metadata` 인스턴스.
 
 ## 지원 되는 플랫폼
 

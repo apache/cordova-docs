@@ -22,14 +22,14 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn der Benutzer die Startschaltfläche drückt.
 
-    document.addEventListener("startcallbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", yourCallbackFunction, false);
     
 
 ## Informationen
 
 Wenn Sie das Start-Aufruf Standardverhalten überschreiben möchten registrieren Sie einen Ereignis-Listener für das `startcallbutton` Ereignis.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -37,7 +37,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## Kleines Beispiel
 
-    document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
     
     function onStartCallKeyDown() {
         // Handle the start call button
@@ -50,7 +50,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Start Call Button Example</title>
+        <title>Start Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
         }
     
         // Handle the start call button

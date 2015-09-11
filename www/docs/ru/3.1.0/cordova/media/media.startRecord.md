@@ -64,14 +64,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -140,9 +140,9 @@ license: >
 
 *   iOS только записи в файлы типа *.wav* и возвращает ошибку, если расширение не исправить.
 
-*   Если полный путь не указан, запись помещается в приложения `documents/tmp` каталог. Это могут быть доступны через `File` API с помощью `LocalFileSystem.TEMPORARY` . Любой подкаталог, указанный на время записи должны уже существовать.
+*   Если полный путь не указан, запись помещается в приложения `documents/tmp` каталог. Это могут быть доступны через `File` API с помощью `<a href="../file/localfilesystem/localfilesystem.html">LocalFileSystem</a>.TEMPORARY` . Любой подкаталог, указанный на время записи должны уже существовать.
 
-*   Файлы могут быть и сыграны записываются обратно, используя документы URI:
+*   <a href="../file/fileobj/fileobj.html">Файл</a>ы могут быть и сыграны записываются обратно, используя документы URI:
     
         var myMedia = new Media("documents://beer.mp3")
         

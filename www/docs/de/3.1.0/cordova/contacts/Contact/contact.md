@@ -32,39 +32,39 @@ Enthält Eigenschaften, die einen Kontakt, z. B. eines Benutzers persönlicher o
 
 *   **Nickname**: einen lässig ein, um den Kontakt zu adressieren. *(DOM-String und enthält)*
 
-*   **Telefonnummern**: ein Array von der Kontakt-Telefonnummern. *(ContactField[])*
+*   **Telefonnummern**: ein Array von der Kontakt-Telefonnummern. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **Email**: ein Array von e-Mail-Adressen des Kontakts. *(ContactField[])*
+*   **Email**: ein Array von e-Mail-Adressen des Kontakts. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **Adressen**: ein Array von allen Kontaktadressen. *(ContactAddress[])*
+*   **Adressen**: ein Array von allen Kontaktadressen. *(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])*
 
-*   **IMS**: ein Array von IM-Adressen des Kontakts. *(ContactField[])*
+*   **IMS**: ein Array von IM-Adressen des Kontakts. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **Organisationen**: ein Array von Organisationen des Kontakts. *(ContactOrganization[])*
+*   **Organisationen**: ein Array von Organisationen des Kontakts. *(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])*
 
 *   **Geburtstag**: der Geburtstag des Kontakts. *(Datum)*
 
 *   **Anmerkung**: eine Anmerkung über den Kontakt. *(DOM-String und enthält)*
 
-*   **Fotos**: ein Array mit den Kontakt-Fotos. *(ContactField[])*
+*   **Fotos**: ein Array mit den Kontakt-Fotos. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **Kategorien**: ein Array mit allen benutzerdefinierten Kategorien zugeordnet den Kontakt. *(ContactField[])*
+*   **Kategorien**: ein Array mit allen benutzerdefinierten Kategorien zugeordnet den Kontakt. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
-*   **URLs**: ein Array von Web-Seiten, die den Kontakt zugeordnet. *(ContactField[])*
+*   **URLs**: ein Array von Web-Seiten, die den Kontakt zugeordnet. *(<a href="../ContactField/contactfield.html">ContactField</a>[])*
 
 ## Methoden
 
 *   **Klon**: gibt eine neue `Contact` Objekt, das eine tiefe Kopie des aufrufenden Objekts, mit der `id` -Eigenschaft festgelegt`null`.
 
-*   **Entfernen**: entfernt den Kontakt aus der Gerät-Kontakte-Datenbank, ansonsten führt eine Fehler-Callback mit einem `ContactError` Objekt.
+*   **Entfernen**: entfernt den Kontakt aus der <a href="../../device/device.html">Gerät</a>-<a href="../contacts.html">Kontakte</a>-<a href="../../storage/database/database.html">Datenbank</a>, ansonsten führt eine Fehler-Callback mit einem `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` Objekt.
 
-*   **Speichern**: speichert einen neuen Kontakt in der Gerätedatenbank Kontakte, oder einen vorhandenen Kontakt aktualisiert, wenn ein Kontakt mit der gleichen **Id** bereits vorhanden ist.
+*   **<a href="../../storage/storage.html">Speicher</a>n**: speichert einen neuen Kontakt in der <a href="../../device/device.html">Gerät</a>edatenbank <a href="../contacts.html">Kontakte</a>, oder einen vorhandenen Kontakt aktualisiert, wenn ein Kontakt mit der gleichen **Id** bereits vorhanden ist.
 
 ## Informationen
 
-Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können erstellt, gespeichert oder aus der Gerät-Kontakte-Datenbank entfernt werden. Kontakte können auch abgerufen werden (einzeln oder als Gruppe) aus der Datenbank durch den Aufruf der `contacts.find` Methode.
+Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. <a href="../contacts.html">Kontakte</a> können erstellt, gespeichert oder aus der <a href="../../device/device.html">Gerät</a>-<a href="../contacts.html">Kontakte</a>-<a href="../../storage/database/database.html">Datenbank</a> entfernt werden. <a href="../contacts.html">Kontakte</a> können auch abgerufen werden (einzeln oder als Gruppe) aus der <a href="../../storage/database/database.html">Datenbank</a> durch den Aufruf der `<a href="../contacts.find.html">contacts.find</a>` Methode.
 
-**Hinweis:** Nicht alle oben aufgeführten Kontaktfelder sind auf jedem Geräteplattform unterstützt. Bitte überprüfen Sie jede Plattform *Quirks* Abschnitt für Details.
+**Hinweis:** Nicht alle oben aufgeführten Kontaktfelder sind auf jedem <a href="../../device/device.html">Gerät</a>eplattform unterstützt. Bitte überprüfen Sie jede Plattform *Quirks* Abschnitt für Details.
 
 ## Unterstützte Plattformen
 
@@ -80,8 +80,8 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
         alert("Save Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
     // create a new contact object
@@ -90,7 +90,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
     contact.nickname = "Plumber";            // specify both to support all devices
     
     // populate some fields
-    var name = new ContactName();
+    var name = new <a href="../ContactName/contactname.html">ContactName</a>();
     name.givenName = "Jane";
     name.familyName = "Doe";
     contact.name = name;
@@ -114,8 +114,8 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
         alert("Removal Success");
     };
     
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
     
         // remove the contact from the device
@@ -127,14 +127,14 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -143,7 +143,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
             var contact = navigator.contacts.create();
             contact.displayName = "Plumber";
             contact.nickname = "Plumber";                 // specify both to support all devices
-            var name = new ContactName();
+            var name = new <a href="../ContactName/contactname.html">ContactName</a>();
             name.givenName = "Jane";
             name.familyName = "Doe";
             contact.name = name;
@@ -169,8 +169,8 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -181,14 +181,14 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(contactError) {
-            alert("Error = " + contactError.code);
+        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
+            alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -196,11 +196,11 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 ## Android 2.X Macken
 
-*   **Kategorien**: Android 2.X Geräten, Rückgabe nicht unterstützt`null`.
+*   **Kategorien**: Android 2.X <a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`null`.
 
 ## BlackBerry WebWorks (OS 5.0 und höher) Macken
 
-*   **ID**: unterstützt. Durch das Gerät zugewiesen, wenn Sie den Kontakt zu speichern.
+*   **ID**: unterstützt. Durch das <a href="../../device/device.html">Gerät</a> zugewiesen, wenn Sie den Kontakt zu speichern.
 
 *   **DisplayName**: unterstützt. Im BlackBerry **user1** Feld gespeichert.
 
@@ -216,7 +216,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 *   **Organisationen**: teilweise unterstützt. Den **Namen** und den **Titel** der ersten Organisation werden in den Feldern **Firma** und **Titel** BlackBerry gespeichert.
 
-*   **Fotos**: teilweise unterstützt. Ein einzelnes Foto der Miniaturansicht wird unterstützt. Legen Sie ein Kontakt-Foto, übergeben in einem entweder eine base64-codierte Bild oder eine URL auf das Bild zeigen. Das Bild wird vor dem Speichern der BlackBerry Kontakte Datenbank verkleinert. Kontakte Foto wird als base64-codierte Bild zurückgegeben.
+*   **Fotos**: teilweise unterstützt. Ein einzelnes Foto der Miniaturansicht wird unterstützt. Legen Sie ein Kontakt-Foto, übergeben in einem entweder eine base64-codierte Bild oder eine URL auf das Bild zeigen. Das Bild wird vor dem <a href="../../storage/storage.html">Speicher</a>n der BlackBerry <a href="../contacts.html">Kontakte</a> <a href="../../storage/database/database.html">Datenbank</a> verkleinert. <a href="../contacts.html">Kontakte</a> Foto wird als base64-codierte Bild zurückgegeben.
 
 *   **Kategorien**: teilweise unterstützt. Nur die Kategorien *Business* und *Personal* werden unterstützt.
 
@@ -224,11 +224,11 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 ## iOS Macken
 
-*   **DisplayName**: nicht auf iOS, Rückkehr unterstützt `null` es sei kein `ContactName` angegeben, in welchem Fall es gibt den zusammengesetzten Namen, **Spitznamen** oder `""` bzw..
+*   **DisplayName**: nicht auf iOS, Rückkehr unterstützt `null` es sei kein `<a href="../ContactName/contactname.html">ContactName</a>` angegeben, in welchem Fall es gibt den zusammengesetzten Namen, **Spitznamen** oder `""` bzw..
 
 *   **Geburtstag**: muss eingegeben werden, als JavaScript `Date` Objekt, die gleiche Weise zurückgegeben wird.
 
-*   **Fotos**: gibt einen Datei-URL auf das Bild, das im temporären Verzeichnis der Anwendung gespeichert ist. Inhalt des temporären Verzeichnisses werden entfernt, wenn die Anwendung beendet wird.
+*   **Fotos**: gibt einen <a href="../../file/fileobj/fileobj.html">Datei</a>-URL auf das Bild, das im temporären Verzeichnis der Anwendung gespeichert ist. Inhalt des temporären Verzeichnisses werden entfernt, wenn die Anwendung beendet wird.
 
 *   **Kategorien**: Diese Eigenschaft wird derzeit nicht unterstützt, Rückgabe`null`.
 

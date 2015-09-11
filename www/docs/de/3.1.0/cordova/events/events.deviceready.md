@@ -22,16 +22,16 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn Cordova vollständig geladen ist.
 
-    document.addEventListener("deviceready", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas Gerät APIs geladen haben und bereit sind, zugreifen.
+Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas <a href="../device/device.html">Gerät</a> APIs geladen haben und bereit sind, zugreifen.
 
 Cordova besteht aus zwei Codebasen: native und JavaScript. Während der native Code lädt, zeigt eine benutzerdefinierte Lade-Bild. JavaScript lädt jedoch nur wenn das DOM geladen. Dies bedeutet, dass Ihre Webanwendung möglicherweise eine Cordova JavaScript-Funktion nennen darf, bevor der entsprechende systemeigene Code verfügbar ist.
 
-Das `deviceready` -Ereignis wird ausgelöst, sobald Cordova vollständig geladen hat. Einmal können das Ereignis ausgelöst, Sie sicher Cordova-APIs aufrufen. Anwendungen in der Regel fügen Sie einen Ereignis-Listener mit `document.addEventListener` sobald das HTML-Dokument DOM geladen hat.
+Das `deviceready` -Ereignis wird ausgelöst, sobald Cordova vollständig geladen hat. Einmal können das Ereignis ausgelöst, Sie sicher Cordova-APIs aufrufen. Anwendungen in der Regel fügen Sie einen Ereignis-Listener mit `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` sobald das HTML-Dokument DOM geladen hat.
 
 Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereignishandler registriert nach der `deviceready` -Ereignis ausgelöst hat die Callback-Funktion aufgerufen, sofort.
 
@@ -46,7 +46,7 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
 
 ## Kleines Beispiel
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
     
     function onDeviceReady() {
         // Now safe to use device APIs
@@ -58,7 +58,7 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -66,7 +66,7 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

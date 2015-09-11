@@ -20,16 +20,16 @@ license: >
 
 # endcallbutton
 
-當使用者按下結束通話按鈕時，將激發此事件。
+當使用者按下結束通話按鈕時，將激發此<a href="events.html">事件</a>。
 
-    document.addEventListener("endcallbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-該事件將重寫預設結束調用行為。
+該<a href="events.html">事件</a>將重寫預設結束調用行為。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
 
 ## 支援的平臺
 
@@ -37,7 +37,7 @@ license: >
 
 ## 快速的示例
 
-    document.addEventListener("endcallbutton", onEndCallKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", onEndCallKeyDown, false);
     
     function onEndCallKeyDown() {
         // Handle the end call button
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>End Call Button Example</title>
+        <title>End Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("endcallbutton", onEndCallKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("endcallbutton", onEndCallKeyDown, false);
         }
     
         // Handle the end call button

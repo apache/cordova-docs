@@ -23,27 +23,27 @@ camera.getPicture
 
 デバイスのカメラで写真を撮る、またはデバイスのアルバム内にある写真を検索します。 Base64 形式でエンコードされたフォトイメージを表す文字列、またはイメージファイルの URI が返されます。
 
-    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
 
 概要
 -----------
 
-`camera.getPicture` 関数はユーザーが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `Camera.sourceType = Camera.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
+`camera.getPicture` 関数はユーザーが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
 
-もし `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
+もし `<a href="camera.html">Camera</a>.sourceType = <a href="camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY` もしくは `<a href="camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
 
-返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます:
+返り値は `<a href="parameter/cameraSuccess.html">cameraSuccess</a>` 関数に送信されます。値は `<a href="parameter/cameraOptions.html">cameraOptions</a>` の設定に従い、以下のいずれかのフォーマットで送られます:
 
 - Base64 形式でエンコードされたフォトイメージを表す文字列 (デフォルト)
 - ローカルストレージ内に記録されたファイルの場所を表す文字列
 
 エンコードされたイメージや URI をもとに、以下のような処理の記述が可能です:
 
-- `<img>` タグで画像を表示 _(下記の使用例を参考にしてください)_
-- データをローカルに保存 (`LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
+- `<img>` タグで画像を表示 _(下記の<a href="../storage/storage.opendatabase.html">使用例</a>を参考にしてください)_
+- データをローカルに保存 (`Local<a href="../storage/storage.html">Storage</a>` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
 - データをリモートサーバーに送信
 
-注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。
+注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を '<a href="camera.html">Camera</a>.destinationType' として使用することが推奨されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -61,13 +61,13 @@ Windows Phone 7 に関する注意点
 Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
 
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 写真を撮影し、 Base64 形式のイメージとして取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL
+        destinationType: <a href="camera.html">Camera</a>.DestinationType.DATA_URL
      });
 
     function onSuccess(imageData) {
@@ -82,7 +82,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
 撮影した写真の URI を取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI });
+        destinationType: <a href="camera.html">Camera</a>.DestinationType.FILE_URI });
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -94,7 +94,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
     }
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
@@ -110,11 +110,11 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
 
         // Cordova がデバイスと接続するまで待機
         //
-        document.addEventListener("deviceready",onDeviceReady,false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>",on<a href="../device/device.html">Device</a>Ready,false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
         }

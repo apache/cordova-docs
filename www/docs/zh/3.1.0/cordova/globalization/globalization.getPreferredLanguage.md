@@ -29,7 +29,7 @@ license: >
 
 返回到的語言識別項字串 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `String` 的值。
 
-如果有出錯的語言，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
+如果有出錯的語言，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## 支援的平臺
 
@@ -40,7 +40,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示彈出式功能表對話方塊的文本與 `language: English` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應<a href="../inappbrowser/inappbrowser.html">顯示</a>彈出式功能表對話方塊的文本與 `language: English` ：
 
     navigator.globalization.getPreferredLanguage(
         function (language) {alert('language: ' + language.value + '\n');},
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage Example</title>
+        <title>getPreferredLanguage <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

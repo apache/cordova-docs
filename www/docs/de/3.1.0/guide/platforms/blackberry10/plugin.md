@@ -29,19 +29,19 @@ Dies ist eine Fortsetzung des Plugin Development Guide für Cordova. Sobald Sie 
         };
     
 
-Eine native BlackBerry 10-Plugin für Cordova enthält JavaScript-Code und kann auch nativen Code enthalten. Das Echo-Plugin-Beispiel veranschaulicht die native Funktion aus JavaScript aufrufen. Die Native und JavaScript-Code kommunizieren miteinander durch einen Rahmen zur Verfügung gestellt von JNEXT. Jedes Plugin muss auch eine `plugin.xml` Datei.
+Eine native BlackBerry 10-Plugin für Cordova enthält JavaScript-Code und kann auch nativen Code enthalten. Das Echo-Plugin-Beispiel veranschaulicht die native Funktion aus JavaScript aufrufen. Die Native und JavaScript-Code kommunizieren miteinander durch einen Rahmen zur Verfügung gestellt von JNEXT. Jedes Plugin muss auch eine `plugin.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>.
 
 ## Systemeigenen Bestandteil Ihr Plugin erstellen
 
-Um den nativen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie Datei > New > BlackBerry Projekt > Native Erweiterung > BlackBerry WebWorks. Geben Sie Ihre gewünschten Projektnamen / Speicherort und klicken Sie auf Fertig stellen.
+Um den nativen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> > New > BlackBerry Projekt > Native Erweiterung > BlackBerry WebWorks. Geben Sie Ihre gewünschten Projektnamen / <a href="../../../cordova/storage/storage.html">Speicher</a>ort und klicken Sie auf Fertig stellen.
 
-Das Projekt, erstellt von der IDE enthält Beispielcode für ein Speicher-Plugin. Sie ersetzen oder ändern diese Dateien um eigene Funktionalität erweitert.
+Das Projekt, erstellt von der IDE enthält Beispielcode für ein <a href="../../../cordova/storage/storage.html">Speicher</a>-Plugin. Sie ersetzen oder ändern diese <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en um eigene Funktionalität erweitert.
 
 *   `*name*_js.hpp`: C++-Header für den JNEXT-Code.
 
 *   `*name*_js.cpp`: C++-Code für JNEXT.
 
-Die systemeigene Schnittstelle für die JNEXT-Erweiterung kann in der Plugin-Header-Datei befindet sich im öffentlichen Verzeichnis des Projekts angezeigt werden. Es enthält auch Konstanten und nützlichen Funktionen, die in Ihrem systemeigenen Code verwendet werden können. Ihr Plugin muss von JSExt abgeleitet werden, die in plugin.h definiert ist. Das heißt, müssen Sie die folgende Klasse implementieren:
+Die systemeigene Schnittstelle für die JNEXT-Erweiterung kann in der Plugin-Header-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> befindet sich im öffentlichen Verzeichnis des Projekts angezeigt werden. Es enthält auch Konstanten und nützlichen Funktionen, die in Ihrem systemeigenen Code verwendet werden können. Ihr Plugin muss von JSExt abgeleitet werden, die in plugin.h definiert ist. Das heißt, müssen Sie die folgende Klasse implementieren:
 
     Klasse JSExt {public: virtuelle ~JSExt() {};
         virtual String InvokeMethod (const String & StrCommand) = 0;
@@ -50,7 +50,7 @@ Die systemeigene Schnittstelle für die JNEXT-Erweiterung kann in der Plugin-Hea
     };
     
 
-Daher sollte die Erweiterung die plugin.h-Headerdatei enthalten. Im Beispiel Echo verwenden Sie JSExt in der echo_js.hpp-Datei wie folgt:
+Daher sollte die Erweiterung die plugin.h-Headerdatei enthalten. Im Beispiel Echo verwenden Sie JSExt in der echo_js.hpp-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> wie folgt:
 
     #include ".../ public/plugin.h "#include <string> #ifndef ECHO_JS_H_ #define ECHO_JS_H_ Klasse Echo: öffentliche JSExt {public: explizite Echo (const Std:: String & Id);
         virtuelle ~ Echo();
@@ -100,13 +100,13 @@ Die `onCreateObject` Funktion nimmt zwei Parameter. Der erste Parameter ist der 
 
 ## Den JavaScript-Teil von Ihr Plugin erstellen
 
-Den JavaScript-Teil der Ihr Plugin muss die folgenden Dateien enthalten:
+Den JavaScript-Teil der Ihr Plugin muss die folgenden <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en enthalten:
 
-*   `client.js`: Dies wird als die Client-Seite und enthält die API, die eine Cordova-Anwendung aufrufen können. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den Veranstaltungen, die die Rückrufe auslösen herstellt.
+*   `client.js`: Dies wird als die Client-Seite und enthält die API, die eine Cordova-Anwendung aufrufen können. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den <a href="../../../cordova/events/events.html">Veranstaltungen</a>, die die Rückrufe auslösen herstellt.
 
-*   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` Datei Aufrufe an die API in der `index.js` Datei, die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
+*   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Aufrufe an die API in der `index.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
 
-Die Client- und Serverseite ( `client.js` und `index.js` ) interagiert durch die `Cordova.exec` Funktion. Ja, in `client.js` Aufrufen der `exec` -Funktion und geben Sie die erforderlichen Argumente. In der Echo-Plugin haben wir Folgendes in der `client.js` Datei:
+Die Client- und Serverseite ( `client.js` und `index.js` ) interagiert durch die `Cordova.exec` Funktion. Ja, in `client.js` Aufrufen der `exec` -Funktion und geben Sie die erforderlichen Argumente. In der Echo-Plugin haben wir Folgendes in der `client.js` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>:
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
@@ -120,7 +120,7 @@ Die Client- und Serverseite ( `client.js` und `index.js` ) interagiert durch die
 
 Nun, `index.js` interagiert mit der native Seite mit JNEXT. So fügen Sie eine Konstruktorfunktion mit dem Namen Echo JNEXT. Innerhalb des Konstruktors führen Sie die folgenden wichtigen Vorgänge mithilfe der Init-Funktion:
 
-*   Geben Sie das erforderliche Modul durch die systemeigene Seite exportiert. Der Name des Moduls erforderlich muss den Namen einer shared Library-Datei (.so-Datei) übereinstimmen.
+*   Geben Sie das erforderliche Modul durch die systemeigene Seite exportiert. Der Name des Moduls erforderlich muss den Namen einer shared Library-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> (.so-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>) übereinstimmen.
 
 `JNEXT.require("libecho")`
 
@@ -144,20 +144,20 @@ Sie können jetzt die Daten zurück senden. Sagen wir es alle zusammen:
 
 ## Architektur des Plugins
 
-Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -Datei, die Quellcode-Dateien (JavaScript, C++) und die Binärdateien ( `.so` ) innerhalb einer Verzeichnisstruktur, solange Sie korrekt angeben, die Dateipfade in der `plugin.xml` Datei. Eine typische Struktur sieht folgendermaßen aus:
+Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>, die Quellcode-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>en (JavaScript, C++) und die Binärdateien ( `.so` ) innerhalb einer Verzeichnisstruktur, solange Sie korrekt angeben, die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>pfade in der `plugin.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>. Eine typische Struktur sieht folgendermaßen aus:
 
 ***your\_project\_directory*** (> plugin.xml)
 
 *   **www** (> client.js)
 *   **src** 
     *   **blackberry10** (> index.js, **native** > *.cpp, *.hpp)
-    *   **Gerät** (>*Binärdatei* * .so)
+    *   **<a href="../../../cordova/device/device.html">Gerät</a>** (>*Binärdatei* * .so)
     *   **Simulator** (>*Binärdatei* * .so)
 
-(Die Liste zeigt die hierarchische Beziehung zwischen den Verzeichnissen der obersten Ebene. Die Klammer zeigt den Inhalt eines angegebenen Verzeichnisses. Alle Verzeichnisnamen werden in Fettschrift angezeigt. Dateinamen vorangestellt sind die `>` Zeichen.)
+(Die Liste zeigt die hierarchische Beziehung zwischen den Verzeichnissen der obersten Ebene. Die Klammer zeigt den Inhalt eines angegebenen Verzeichnisses. Alle Verzeichnisnamen werden in Fettschrift angezeigt. <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>namen vorangestellt sind die `>` Zeichen.)
 
-## Inhalt der `plugin.xml` Datei
+## Inhalt der `plugin.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a>
 
-Die `plugin.xml` -Datei enthält den Namespace der Erweiterung und andere Metadaten. Den Namespace definiert und andere Metadaten für das Echo-Plugin wie folgt angeben:
+Die `plugin.xml` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> enthält den Namespace der Erweiterung und andere <a href="../../../cordova/file/metadata/metadata.html">Metadaten</a>. Den Namespace definiert und andere <a href="../../../cordova/file/metadata/metadata.html">Metadaten</a> für das Echo-Plugin wie folgt angeben:
 
-    < Plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.blackberry.echo" Version = "1.0.0" >< Js-Modul src="www/client.js" >< Zusammenführungen Ziel = "Navigator" / >< / Js-Modul >< Plattformnamen = "blackberry10" >< Quelldatei src="src/blackberry10/index.js" / >< Lib-Datei src="src/blackberry10/native/device/libecho.so" Bogen = "Gerät" / >< Lib-Datei src="src/blackberry10/native/simulator/libecho.so" Bogen = "Simulator" / ><-Config-File target="www/config.xml" übergeordnete = "/ Widget" >< verfügen über name="org.apache.cordova.blackberry.echo" value="org.apache.cordova.blackberry.echo" / >< / Config-Datei >< /Plattform >< / Plugin >
+    < Plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.blackberry.echo" Version = "1.0.0" >< Js-Modul src="www/client.js" >< Zusammenführungen Ziel = "Navigator" / >< / Js-Modul >< Plattformnamen = "blackberry10" >< Quelldatei src="src/blackberry10/index.js" / >< Lib-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> src="src/blackberry10/native/device/libecho.so" Bogen = "<a href="../../../cordova/device/device.html">Gerät</a>" / >< Lib-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> src="src/blackberry10/native/simulator/libecho.so" Bogen = "Simulator" / ><-Config-File target="www/config.xml" übergeordnete = "/ Widget" >< verfügen über name="org.apache.cordova.blackberry.echo" value="org.apache.cordova.blackberry.echo" / >< / Config-<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> >< /Plattform >< / Plugin >

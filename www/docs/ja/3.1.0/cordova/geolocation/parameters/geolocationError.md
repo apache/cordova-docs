@@ -20,7 +20,7 @@ license: >
 
 # geolocationError
 
-地理位置情報機能のエラーがあるときに実行されるユーザーのコールバック関数。
+地理<a href="../Position/position.html">位置</a>情報機能のエラーがあるときに実行されるユーザーのコールバック関数。
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ license: >
 
 ## パラメーター
 
-*   **エラー**: デバイスによって返されるエラーです。*(PositionError)*
+*   **エラー**: <a href="../../device/device.html">デバイス</a>によって返されるエラーです。*(<a href="../PositionError/positionError.html">PositionError</a>)*

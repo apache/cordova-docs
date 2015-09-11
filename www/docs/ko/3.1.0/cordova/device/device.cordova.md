@@ -20,14 +20,14 @@ license: >
 
 # device.cordova
 
-코르도바는 장치에서 실행 중인 버전을 얻을.
+코르도바는 <a href="device.html">장치</a>에서 실행 중인 버전을 얻을.
 
     var string = device.cordova;
     
 
 ## 설명
 
-`device.cordova`코르도바는 장치에서 실행 중인 버전을 반환 합니다.
+`device.cordova`코르도바는 <a href="device.html">장치</a>에서 실행 중인 버전을 반환 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -48,24 +48,24 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+            element.innerHTML = 'Device Model: '    + <a href="device.model.html">device.model</a>    + '<br />' +
                                 'Device Cordova: '  + device.cordova  + '<br />' +
-                                'Device Platform: ' + device.platform + '<br />' +
-                                'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Version: '  + device.version  + '<br />';
+                                'Device Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'Device UUID: '     + <a href="device.uuid.html">device.uuid</a>     + '<br />' +
+                                'Device Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
     
         </script>

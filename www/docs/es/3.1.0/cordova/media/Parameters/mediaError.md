@@ -29,4 +29,4 @@ Una función de devolución de llamada especificado por el usuario que se ejecut
 
 ## Parámetros
 
-*   **error**: el error devuelto por el dispositivo. *(MediaError)*
+*   **error**: el error devuelto por el dispositivo. *(<a href="../MediaError/mediaError.html">MediaError</a>)*

@@ -26,10 +26,10 @@ Notification
 メソッド
 -------
 
-- notification.alert
-- notification.confirm
-- notification.beep
-- notification.vibrate
+- <a href="notification.alert.html">notification.alert</a>
+- <a href="notification.confirm.html">notification.confirm</a>
+- <a href="notification.beep.html">notification.beep</a>
+- <a href="notification.vibrate.html">notification.vibrate</a>
 
 パーミッション
 -----------
@@ -64,7 +64,7 @@ Notification
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

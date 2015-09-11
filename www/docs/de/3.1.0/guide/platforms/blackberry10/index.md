@@ -20,13 +20,13 @@ license: >
 
 # Handbuch für die Plattform von BlackBerry 10
 
-Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 Geräte aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im Handbuch der BlackBerry-Plattform zu verwenden.
+Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 <a href="../../../cordova/device/device.html">Gerät</a>e aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im <a href="../blackberry/index.html">Handbuch der BlackBerry-Plattform</a> zu verwenden.
 
 ## Anforderungen
 
 Die Entwicklungsumgebung ist auf Windows, Mac und Linux verfügbar.
 
-Entwickler sollten verwenden, die `cordova` in Verbindung mit der Blackberry-Native-SDK-Dienstprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Installieren Sie `cordova` , Projekte, hinzufügen dann erstellen und bereitstellen für jede Plattform.
+Entwickler sollten verwenden, die `cordova` in <a href="../../../cordova/connection/connection.html">Verbindung</a> mit der Blackberry-Native-SDK-Dienstprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Installieren Sie `cordova` , Projekte, hinzufügen dann erstellen und bereitstellen für jede Plattform.
 
 ## Das BlackBerry-Native-SDK installieren
 
@@ -44,7 +44,7 @@ Unter Windows:
 
 Auf Mac und Linux:
 
-*   Bearbeiten Sie die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo die Native SDK installiert wurde hinzugefügt:
+*   Bearbeiten Sie die `~/.bash_profile` -<a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> eine Zeile wie die folgende, je nachdem, wo die Native SDK installiert wurde hinzugefügt:
     
     $ Export PATH = ${PATH}: / Anwendungen/Bbndk/host\_10\_1\_0\_132/Darwin/X 86/Usr/bin /
     
@@ -58,7 +58,7 @@ Auf Mac und Linux:
 
 ## Für Signierung einrichten
 
-Wenn Sie auf einem Gerät zu testen oder apps durch BlackBerry World verteilen möchten, muss Ihr System Setup zum Signieren von Code sein.
+Wenn Sie auf einem <a href="../../../cordova/device/device.html">Gerät</a> zu testen oder apps durch BlackBerry World verteilen möchten, muss Ihr System Setup zum Signieren von Code sein.
 
 Um einen Signaturschlüssel zu erhalten, besuchen Sie die BlackBerry-Website, und achten Sie darauf, das Kennwort zu kennen, die, das Sie angeben. Führen Sie das `blackberry-signer` -Dienstprogramm, das mit dem systemeigenen BlackBerry-SDK enthalten ist.
 
@@ -83,14 +83,14 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Command-Line
 
 ## Bereitstellen auf Emulator
 
-Wenn Sie einen Geräteemulator ausführen möchten, downloaden und Installieren der BlackBerry-10-Simulator.
+Wenn Sie einen <a href="../../../cordova/device/device.html">Gerät</a>eemulator ausführen möchten, downloaden und Installieren der BlackBerry-10-Simulator.
 
 *   [Download][1]
 *   [Erste Schritte][4]
 
  [4]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
-Sie müssen vor der Prüfung einer app auf einem Emulator oder ein Gerät, ein *Ziel* zu Ihrem Projekt hinzufügen. Jedes ist mit einem eindeutigen Namen identifiziert und einer IP-Adresse zugeordnet. Sie müssen die IP-Adresse vom Emulator zu erhalten, bevor Sie es verwenden, um apps anzusehen.
+Sie müssen vor der Prüfung einer app auf einem Emulator oder ein <a href="../../../cordova/device/device.html">Gerät</a>, ein *Ziel* zu Ihrem Projekt hinzufügen. Jedes ist mit einem eindeutigen Namen identifiziert und einer IP-Adresse zugeordnet. Sie müssen die IP-Adresse vom Emulator zu erhalten, bevor Sie es verwenden, um apps anzusehen.
 
 Starten Sie das Emulator-Image, dann wählen Sie **Einstellungen** aus dem home-Bildschirm:
 
@@ -119,15 +119,15 @@ Führen Sie dann den `emulate` Befehl, um die app anzuzeigen:
     $ cordova emulate blackberry10
     
 
-## Bereitstellung auf Gerät
+## Bereitstellung auf <a href="../../../cordova/device/device.html">Gerät</a>
 
-Um auf ein Gerät bereitzustellen, sicherzustellen Sie, dass es an Ihrem Computer angeschlossen ist. Entwicklungsmodus aktivieren und die IP-Adresse als beschriebenen Emulator oben im Abschnitt zu erhalten. Sie müssen auch den Anschluß von erhalten die **lagereinstellungsanwendung unter** **über → Hardware**:
+Um auf ein <a href="../../../cordova/device/device.html">Gerät</a> bereitzustellen, sicherzustellen Sie, dass es an Ihrem Computer angeschlossen ist. Entwicklungsmodus aktivieren und die IP-Adresse als beschriebenen Emulator oben im Abschnitt zu erhalten. Sie müssen auch den Anschluß von erhalten die **lagereinstellungsanwendung unter** **über → Hardware**:
 
 ![][7]
 
  [7]: img/guide/platforms/blackberry10/bb_pin.png
 
-Führen Sie das Ziel-Befehlszeilenprogramm, um eine IP-Adresse, Gerätekennwort und PIN einen Namen zuzuordnen.
+Führen Sie das Ziel-Befehlszeilenprogramm, um eine IP-Adresse, <a href="../../../cordova/device/device.html">Gerät</a>ekennwort und PIN einen Namen zuzuordnen.
 
 *   Unter Windows:
     
@@ -141,14 +141,14 @@ Wo:
 
 *   `--password`bezieht sich auf das Kennwort zum Entsperren.
 
-*   `--pin`bezieht sich auf das Gerät PIN **die Einstellungsanwendung** eingeholt.
+*   `--pin`bezieht sich auf das <a href="../../../cordova/device/device.html">Gerät</a> PIN **die Einstellungsanwendung** eingeholt.
 
 Führen Sie dann den `run` Befehl, um die app anzuzeigen:
 
     $ cordova run blackberry10
     
 
-Wenn ein Debug-Token nicht noch für das Gerät eingerichtet ist, fordert eine Fehlermeldung Sie nutzen die Plattform, das Skript mit dem Kennwort, die Sie bei Registrierung für Signaturschlüssel.
+Wenn ein Debug-Token nicht noch für das <a href="../../../cordova/device/device.html">Gerät</a> eingerichtet ist, fordert eine Fehlermeldung Sie nutzen die Plattform, das Skript mit dem Kennwort, die Sie bei Registrierung für Signaturschlüssel.
 
 *   Unter Windows:
     
@@ -160,13 +160,13 @@ Wenn ein Debug-Token nicht noch für das Gerät eingerichtet ist, fordert eine F
 
 ## Debuggen mit WebInspector
 
-Beim Debuggen auf dem Gerät oder einen Emulator können Sie WebInspector aus der Ferne, um den internen Zustand der Anwendung anzuzeigen ausführen. Eine Eingabeaufforderung zeigt die URL, die Sie zum Herstellen einer Verbindung mit Ihrer app mit einem standard-Webbrowser ermöglicht. Weitere Informationen finden Sie unter [Debuggen verwenden WebInspector][8].
+Beim Debuggen auf dem <a href="../../../cordova/device/device.html">Gerät</a> oder einen Emulator können Sie WebInspector aus der Ferne, um den internen Zustand der Anwendung anzuzeigen ausführen. Eine Eingabeaufforderung zeigt die URL, die Sie zum Herstellen einer <a href="../../../cordova/connection/connection.html">Verbindung</a> mit Ihrer app mit einem standard-Webbrowser ermöglicht. Weitere Informationen finden Sie unter [Debuggen verwenden WebInspector][8].
 
  [8]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## Erstellen einer Releaseversion
 
-Standardmäßig läuft der `cordova build` Befehl erstellt eine vorzeichenlose *...verlegt* -Paketdatei geeignet zum Testen auf einem Gerät oder Simulator.
+Standardmäßig läuft der `cordova build` Befehl erstellt eine vorzeichenlose *...verlegt* -Paketdatei geeignet zum Testen auf einem <a href="../../../cordova/device/device.html">Gerät</a> oder Simulator.
 
 Sie müssen eine andere ausführen `build` Befehl aus, um eine Release-Version zu erstellen, die für Verteilung durch BlackBerry Welt geeignet. Es ist nicht angewiesen auf die `cordova` CLI-Tool, und stattdessen verwendet die folgende Syntax:
 

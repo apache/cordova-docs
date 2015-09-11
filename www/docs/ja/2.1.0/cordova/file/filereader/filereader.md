@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-FileReader
+<a href="../fileobj/fileobj.html">File</a>Reader
 ==========
 
-FileReader はファイルの読み込みを行うオブジェクトです。
+<a href="../fileobj/fileobj.html">File</a>Reader はファイルの読み込みを行うオブジェクトです。
 
 プロパティー
 ----------
 
 - __readyState:__ 右の3種類の状態のいずれかを表します (EMPTY, LOADING, DONE)
 - __result:__ 読み込まれたファイルのコンテンツを表します _(DOMString)_
-- __error:__ エラー情報を表します _(FileError)_
+- __error:__ エラー情報を表します _(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)_
 - __onloadstart:__ 読み込み開始時に呼ばれる関数を表します _(Function)_
 - __onprogress:__ 読込中に呼ばれ、進捗状況を報告する関数を表します (progess.loaded/progress.total) _(Function)_ - 現在サポートされていません
 - __onload:__ 読み込みが成功したときに呼ばれる関数を表します _(Function)_
@@ -46,7 +46,7 @@ FileReader はファイルの読み込みを行うオブジェクトです。
 詳細
 -------
 
-`FileReader` オブジェクトはデバイスのファイルシステムからファイルを読み込む際に使用します。ファイルはテキストもしくは Base64 でエンコードされた文字列として読み込まれます。また、 loadstart, progress, load, loadend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
+`<a href="../fileobj/fileobj.html">File</a>Reader` オブジェクトはデバイスのファイルシステムからファイルを読み込む際に使用します。ファイルはテキストもしくは Base64 でエンコードされた文字列として読み込まれます。また、 loadstart, progress, load, loadend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
 
 サポートされているプラットフォーム
 -------------------
@@ -63,11 +63,11 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function(evt) {
             console.log("読み込み成功");
             console.log(evt.target.result);
@@ -89,11 +89,11 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 - encoding - ファイルのコンテンツのエンコードを表します (デフォルト: UTF-8)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function(evt) {
             console.log("読み込み成功");
             console.log(evt.target.result);
@@ -111,7 +111,7 @@ Abort の例
 -------------------
 
     function win(file) {
-        var reader = new FileReader();
+        var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
         reader.onloadend = function(evt) {
             console.log("読み込み成功");
             console.log(evt.target.result);
@@ -126,13 +126,13 @@ Abort の例
 
     entry.file(win, fail);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader の使用例</title>
+        <title><a href="../fileobj/fileobj.html">File</a>Reader の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -140,30 +140,30 @@ Abort の例
         // Cordova の読み込み完了まで待機
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
         }
 
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", null, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
         }
 
-        function gotFileEntry(fileEntry) {
-            fileEntry.file(gotFile, fail);
+        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
+            fileEntry.file(got<a href="../fileobj/fileobj.html">File</a>, fail);
         }
 
-        function gotFile(file){
+        function got<a href="../fileobj/fileobj.html">File</a>(file){
             readDataUrl(file);
             readAsText(file);
         }
 
         function readDataUrl(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("データ URL として読み込み");
                 console.log(evt.target.result);
@@ -172,7 +172,7 @@ Abort の例
         }
 
         function readAsText(file) {
-            var reader = new FileReader();
+            var reader = new <a href="../fileobj/fileobj.html">File</a>Reader();
             reader.onloadend = function(evt) {
                 console.log("テキストとして読み込み");
                 console.log(evt.target.result);
@@ -187,7 +187,7 @@ Abort の例
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
         <p>ファイルを読み込みます。</p>
       </body>
     </html>

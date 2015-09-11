@@ -83,16 +83,16 @@ expose the same APIs as on other Cordova-supported platforms.
 
 - Next, add some code that demonstrates Cordova is working.
 
-### Adding a 'deviceready' handler...
+### Adding a '<a href="../../../cordova/events/events.deviceready.html">deviceready</a>' handler...
 	<body>
 	    <p>Content goes here</p>
 
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.addEventListener("deviceready", function () {
+	        document.<a href="../../../cordova/inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
 
-	            navigator.notification.alert("The device is ready!");
+	            navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>("The device is ready!");
 
 	        });
 

@@ -23,7 +23,7 @@ batterycritical
 
 This is an event that fires when a Cordova application detects the battery has reached the critical level threshold.
 
-    window.addEventListener("batterycritical", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", yourCallbackFunction, false);
 
 Details
 -------
@@ -35,7 +35,7 @@ The batterycritical handler will be called with an object that contains two prop
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` once you receive the Cordova '<a href="events.deviceready.html">deviceready</a>' event.
 
 Supported Platforms
 -------------------
@@ -45,41 +45,41 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    window.addEventListener("batterycritical", onBatteryCritical, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
 
     function onBatteryCritical(info) {
         // Handle the battery critical event
        	alert("Battery Level Critical " + info.level + "%\nRecharge Soon!"); 
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Battery Critical Example</title>
+        <title>Cordova Battery Critical <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-x.x.x.js has not.
         // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
         // 
 	    function onLoad() {
-    	    document.addEventListener("deviceready", onDeviceReady, false);
+    	    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
     	}
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
-		    window.addEventListener("batterycritical", onBatteryCritical, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+		    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterycritical", onBatteryCritical, false);
         }
 
         // Handle the batterycritical event

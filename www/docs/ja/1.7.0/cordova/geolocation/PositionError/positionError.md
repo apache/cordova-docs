@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-PositionError
+<a href="../Position/position.html">Position</a>Error
 ========
 
-`PositionError` オブジェクトは、エラーが発生したときに geolocationError コールバック関数に渡されます。
+`<a href="../Position/position.html">Position</a>Error` オブジェクトは、エラーが発生したときに <a href="../parameters/geolocationError.html">geolocationError</a> コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -32,12 +32,12 @@ PositionError
 定数
 ---------
 
-- `PositionError.PERMISSION_DENIED`
-- `PositionError.POSITION_UNAVAILABLE`
-- `PositionError.TIMEOUT`
+- `<a href="../Position/position.html">Position</a>Error.PERMISSION_DENIED`
+- `<a href="../Position/position.html">Position</a>Error.POSITION_UNAVAILABLE`
+- `<a href="../Position/position.html">Position</a>Error.TIMEOUT`
 
 概要
 -----------
 
-`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
+`<a href="../Position/position.html">Position</a>Error` オブジェクトは、位置情報取得に関するエラーが発生したときに `<a href="../parameters/geolocationError.html">geolocationError</a>` コールバック関数を通してユーザーに返されます。
 

@@ -20,7 +20,7 @@ license: >
 
 # accelerometerOptions
 
-가 속도계 값의 검색을 사용자 지정 하는 선택적 매개 변수.
+<a href="../accelerometer.html">가 속도계</a> 값의 검색을 사용자 지정 하는 선택적 매개 <a href="../../../plugin_ref/spec.html">변수</a>.
 
 ## 옵션
 

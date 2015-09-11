@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-Project Settings for webOS 
+<a href="../index.html">Project Settings</a> for webOS 
 ===================================
 
 WebOS does not currently have any additional configurable features.

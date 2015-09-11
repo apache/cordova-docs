@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# SQLResultSetRowList
+# <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
 
-속성 중 하나는 `SQLResultSet` SQL 쿼리에서 반환 된 행을 포함 합니다.
+속성 중 하나는 `<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>` SQL 쿼리에서 반환 된 행을 포함 합니다.
 
 ## 속성
 
@@ -32,7 +32,7 @@ license: >
 
 ## 세부 정보
 
-`SQLResultSetRowList`SQL에서 반환 된 데이터를 포함 `select` 문. 개체를 포함 한 `length` 속성 행을 나타내는 `select` 문 반환 합니다. 데이터의 행을 가져오려면 호출에 `item` 인덱스를 지정 하는 방법. 자바 스크립트를 반환 합니다 `Object` 속성은 데이터베이스 열에 `select` 문이 실행 되었습니다.
+`<a href="../sqlresultset/sqlresultset.html">SQLResultSet</a>RowList`SQL에서 반환 된 데이터를 포함 `select` 문. 개체를 포함 한 `length` 속성 행을 나타내는 `select` 문 반환 합니다. 데이터의 행을 가져오려면 호출에 `item` 인덱스를 지정 하는 방법. 자바 스크립트를 반환 합니다 `Object` 속성은 <a href="../database/database.html">데이터베이스</a> 열에 `select` 문이 실행 되었습니다.
 
 ## 지원 되는 플랫폼
 
@@ -49,25 +49,25 @@ license: >
             console.log ("데모 테이블:" len + "행 발견.");
             에 대 한 (var i = 0; 나 < 렌; i + +) {console.log ("행 =" + i + "ID =" + results.rows.item (i).id + "데이터 =" + results.rows.item(i).data);
             }} 함수 errorCB(err) {경고 ("SQL 처리 오류:" + err.code);
-        } var db = window.openDatabase ("데이터베이스", "1.0", "코르도바 데모", 200000);
+        } var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("<a href="../database/database.html">데이터베이스</a>", "1.0", "코르도바 데모", 200000);
         db.transaction (queryDB, errorCB);
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > 저장 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html >< html >< 헤드 >< 제목 > 저장 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
-        / / 데이터베이스를 채울 / / 기능 populateDB(tx) {tx.executeSql ('드롭 테이블 IF EXISTS 데모');
+        / / <a href="../database/database.html">데이터베이스</a>를 채울 / / 기능 populateDB(tx) {tx.executeSql ('드롭 테이블 IF EXISTS 데모');
             tx.executeSql (' 만들 테이블 아니라면 존재 데모 (id 고유 데이터)');
             tx.executeSql (' (id, 데이터)로 데모 삽입 값 (1, "첫 행")');
             tx.executeSql ('(id, 데이터)로 데모 삽입 값 (2, "두 번째 행")');
-        } / / 데이터베이스 쿼리 / / 기능 queryDB(tx) {tx.executeSql (' 선택 *에서 데모 ',, querySuccess, errorCB);
+        } / / <a href="../database/database.html">데이터베이스</a> 쿼리 / / 기능 queryDB(tx) {tx.executeSql (' 선택 *에서 데모 ',, querySuccess, errorCB);
         } / / 쿼리 성공 콜백 / / querySuccess (tx, 결과) 기능 {var len = results.rows.length;
             console.log ("데모 테이블:" len + "행 발견.");
             에 대 한 (var i = 0; 나 < 렌; i + +) {console.log ("행 =" + i + "ID =" + results.rows.item (i).id + "데이터 =" + results.rows.item(i).data);
             }} / / 트랜잭션 오류 콜백 / / errorCB(err) 기능 {console.log ("SQL 처리 오류:" + err.code);
-        } / / 트랜잭션 성공 콜백 / / successCB() 기능 {var db = window.openDatabase ("데이터베이스", "1.0", "코르도바 데모", 200000);
+        } / / 트랜잭션 성공 콜백 / / successCB() 기능 {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("<a href="../database/database.html">데이터베이스</a>", "1.0", "코르도바 데모", 200000);
             db.transaction (queryDB, errorCB);
-        } / / 장치 Api 사용할 수 있습니다 / / onDeviceReady() 기능 {var db = window.openDatabase ("데이터베이스", "1.0", "코르도바 데모", 200000);
+        } / / 장치 Api 사용할 수 있습니다 / / onDeviceReady() 기능 {var db = window.<a href="../storage.opendatabase.html">openDatabase</a> ("<a href="../database/database.html">데이터베이스</a>", "1.0", "코르도바 데모", 200000);
             db.transaction (populateDB, errorCB, successCB);
-        } < / 스크립트 >< / 머리 >< 몸 >< h1 > 예를 들어 < / h 1 >< p > 데이터베이스 < /p >< / 바디 >< / html >
+        } < / 스크립트 >< / 머리 >< 몸 >< h1 > 예를 들어 < / h 1 >< p > <a href="../database/database.html">데이터베이스</a> < /p >< / 바디 >< / html >

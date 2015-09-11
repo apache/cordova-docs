@@ -23,7 +23,7 @@ compass.getCurrentHeading
 
 Get the current compass heading.
 
-    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
+    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
 
 Description
 -----------
@@ -32,8 +32,8 @@ The compass is a sensor that detects the direction or heading that the
 device is pointed, typically from the top of the device.  It measures
 the heading in degrees from 0 to 359.99, where 0 is north.
 
-The compass heading information is returned via a `CompassHeading`
-object using the `compassSuccess` callback function.
+The compass heading information is returned via a `<a href="compass.html">Compass</a>Heading`
+object using the `<a href="parameters/compassSuccess.html">compassSuccess</a>` callback function.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(heading) {
@@ -53,29 +53,29 @@ Quick Example
     };
 
     function onError(error) {
-        alert('CompassError: ' + error.code);
+        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html"><a href="compass.html">Compass</a>Error</a>: ' + error.code);
     };
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             navigator.compass.getCurrentHeading(onSuccess, onError);
         }
 
@@ -87,14 +87,14 @@ Full Example
 
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass Error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('<a href="compass.html">Compass</a> Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

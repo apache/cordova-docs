@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileError
+# <a href="../fileobj/fileobj.html">File</a>Error
 
-A `FileError` object is set when an error occurs in any of the File API methods.
+A `<a href="../fileobj/fileobj.html">File</a>Error` object is set when an error occurs in any of the <a href="../fileobj/fileobj.html">File</a> API methods.
 
 ## Properties
 
@@ -28,21 +28,21 @@ A `FileError` object is set when an error occurs in any of the File API methods.
 
 ## Constants
 
-- `FileError.NOT_FOUND_ERR`
-- `FileError.SECURITY_ERR`
-- `FileError.ABORT_ERR`
-- `FileError.NOT_READABLE_ERR`
-- `FileError.ENCODING_ERR`
-- `FileError.NO_MODIFICATION_ALLOWED_ERR`
-- `FileError.INVALID_STATE_ERR`
-- `FileError.SYNTAX_ERR`
-- `FileError.INVALID_MODIFICATION_ERR`
-- `FileError.QUOTA_EXCEEDED_ERR`
-- `FileError.TYPE_MISMATCH_ERR`
-- `FileError.PATH_EXISTS_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.NOT_FOUND_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.SECURITY_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.ABORT_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.NOT_READABLE_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.ENCODING_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.NO_MODIFICATION_ALLOWED_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_STATE_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.SYNTAX_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_MODIFICATION_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.QUOTA_EXCEEDED_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.TYPE_MISMATCH_ERR`
+- `<a href="../fileobj/fileobj.html">File</a>Error.PATH_EXISTS_ERR`
 
 ## Description
 
-The `FileError` object is the only parameter provided to any of the
-File API's error callbacks.  To determine the type of error, compare
+The `<a href="../fileobj/fileobj.html">File</a>Error` object is the only parameter provided to any of the
+<a href="../fileobj/fileobj.html">File</a> API's error callbacks.  To determine the type of error, compare
 its `code` property to any of the listings above.

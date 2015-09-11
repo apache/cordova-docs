@@ -26,11 +26,11 @@ Device
 プロパティー
 ----------
 
-- device.name
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
+- <a href="device.name.html">device.name</a>
+- <a href="device.cordova.html">device.cordova</a>
+- <a href="device.platform.html">device.platform</a>
+- <a href="device.uuid.html">device.uuid</a>
+- <a href="device.version.html">device.version</a>
 
 変数の範囲
 --------------
@@ -38,8 +38,8 @@ Device
 `device` オブジェクトは `window` オブジェクトに割当たれるため、暗黙的にグローバルスコープとして扱われます。
 
     // 下記は同じ `device` オブジェクト
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneName = window.<a href="device.name.html">device.name</a>;
+    var phoneName = <a href="device.name.html">device.name</a>;
 
 パーミッション
 -----------

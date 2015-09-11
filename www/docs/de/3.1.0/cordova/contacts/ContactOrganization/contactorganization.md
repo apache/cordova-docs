@@ -32,11 +32,11 @@ Enthält eine `Contact` Organisation Objekteigenschaften.
 
 *   **Abteilung**: die Abteilung, die der Vertrag für arbeitet. *(DOM-String und enthält)*
 
-*   **Titel**: Titel des Kontakts in der Organisation. *(DOM-String und enthält)*
+*   **Titel**: Titel des <a href="../Contact/contact.html">Kontakt</a>s in der Organisation. *(DOM-String und enthält)*
 
 ## Informationen
 
-Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kontakts. A `Contact` -Objekt speichert eine oder mehrere `ContactOrganization` Objekte in einem Array.
+Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines <a href="../Contact/contact.html">Kontakt</a>s. A `Contact` -Objekt speichert eine oder mehrere `ContactOrganization` Objekte in einem Array.
 
 ## Unterstützte Plattformen
 
@@ -60,14 +60,14 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
         }
     };
     
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
-    var options = new ContactFindOptions();
+    var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter = "";
     filter = ["displayName", "organizations"];
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## Vollständiges Beispiel
@@ -75,22 +75,22 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var options = new ContactFindOptions();
+            var options = new <a href="../ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
             options.filter="";
             filter = ["displayName","organizations"];
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -109,14 +109,14 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>
@@ -124,13 +124,13 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
 
 ## Android 2.X Macken
 
-*   **Pref**: von Android 2.X-Geräte, Rückgabe nicht unterstützt`false`.
+*   **Pref**: von Android 2.X-<a href="../../device/device.html">Gerät</a>e, Rückgabe nicht unterstützt`false`.
 
 ## BlackBerry WebWorks (OS 5.0 und höher) Macken
 
-*   **Pref**: von BlackBerry-Geräten zurückgeben nicht unterstützt`false`.
+*   **Pref**: von BlackBerry-<a href="../../device/device.html">Gerät</a>en zurückgeben nicht unterstützt`false`.
 
-*   **Typ**: von BlackBerry-Geräten zurückgeben nicht unterstützt`null`.
+*   **Typ**: von BlackBerry-<a href="../../device/device.html">Gerät</a>en zurückgeben nicht unterstützt`null`.
 
 *   **Name**: teilweise unterstützt. Der Name der ersten Organisation wird im Feld **Firma** BlackBerry gespeichert.
 
@@ -140,9 +140,9 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
 
 ## iOS Macken
 
-*   **Pref**: iOS-Geräten, Rückgabe nicht unterstützt`false`.
+*   **Pref**: iOS-<a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`false`.
 
-*   **Typ**: iOS-Geräten, Rückgabe nicht unterstützt`null`.
+*   **Typ**: iOS-<a href="../../device/device.html">Gerät</a>en, Rückgabe nicht unterstützt`null`.
 
 *   **Name**: teilweise unterstützt. Der Name der ersten Organisation wird im Feld **kABPersonOrganizationProperty** iOS gespeichert.
 

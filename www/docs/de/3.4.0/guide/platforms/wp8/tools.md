@@ -24,7 +24,7 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
-Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine <a href="../../overview/index.html">Übersicht</a> finden Sie unter Application Plugins.
 
 ## Windows Phone
 
@@ -56,7 +56,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die Reve
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:

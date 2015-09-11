@@ -22,14 +22,14 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn der Benutzer die Schaltfläche Suchen auf Android drückt.
 
-    document.addEventListener("searchbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", yourCallbackFunction, false);
     
 
 ## Informationen
 
 Wenn Sie das Standardverhalten für die Schaltfläche von Suche auf Android überschreiben möchten können Sie einen Ereignis-Listener für das Ereignis 'Searchbutton' registrieren.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -37,7 +37,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## Kleines Beispiel
 
-    document.addEventListener("searchbutton", onSearchKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", onSearchKeyDown, false);
     
     function onSearchKeyDown() {
         // Handle the search button
@@ -50,7 +50,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button Example</title>
+        <title>Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("searchbutton", onSearchKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", onSearchKeyDown, false);
         }
     
         // Handle the search button

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-CaptureVideoOptions
+<a href="capture.html">Capture</a>VideoOptions
 ===================
 
 > ビデオキャプチャーのオプションをカプセル化します。
@@ -30,13 +30,13 @@ CaptureVideoOptions
 - __duration:__ ビデオクリップの最大録画時間を秒で表します。
 - __mode:__ 選択されたビデオのモードを表します。値は `capture.supportedVideoModes` の中の一つである必要があります。
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // キャプチャー操作時のビデオクリップの最大値を3に制限
     var options = { limit: 3 };
 
-    navigator.device.capture.captureVideo(captureSuccess, captureError, options);
+    navigator.device.<a href="captureVideo.html">capture.captureVideo</a>(captureSuccess, captureError, options);
 
 Android に関する注意点
 --------------

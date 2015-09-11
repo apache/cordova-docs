@@ -18,4 +18,4 @@ license: >
     under the License.
 ---
 
-# FirefoxOS 配置
+# FirefoxOS <a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>

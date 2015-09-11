@@ -20,7 +20,7 @@ license: >
 
 # Banderas
 
-Proporciona argumentos para la `DirectoryEntry` del objeto `getFile()` y `getDirectory()` los métodos, que buscar o crean archivos y directorios, respectivamente.
+Proporciona argumentos para la `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` del objeto `getFile()` y `getDirectory()` los métodos, que buscar o crean archivos y directorios, respectivamente.
 
 ## Propiedades
 

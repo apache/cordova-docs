@@ -22,14 +22,14 @@ license: >
 
 Событие возникает, когда пользователь нажимает кнопку уменьшения громкости.
 
-    document.addEventListener("volumedownbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumedownbutton", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
 Если необходимо переопределить по умолчанию громкости поведение вы можете зарегистрировать прослушиватель событий для `volumedownbutton` событие.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -37,7 +37,7 @@ license: >
 
 ## Быстрый пример
 
-    document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumedownbutton", onVolumeDownKeyDown, false);
     
     function onVolumeDownKeyDown() {
         // Handle the volume down button
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button Example</title>
+        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumedownbutton", onVolumeDownKeyDown, false);
         }
     
         // Handle the volume down button

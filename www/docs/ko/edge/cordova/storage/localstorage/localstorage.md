@@ -20,7 +20,7 @@ license: >
 
 # localStorage
 
-W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
+W3C의 [웹 <a href="../storage.html">스토리지</a> 인터페이스][1] 에 액세스를 제공 합니다.
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,11 +42,11 @@ W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
 
 ## 세부 정보
 
-`window.localStorage`인터페이스는 W3C의 [웹 스토리지 인터페이스][2]를 구현 합니다. 애플 리 케이 션 키-값 쌍을 사용 하 여 영구 데이터를 저장 하는 데 사용할 수 있습니다. `window.sessionStorage`인터페이스는 모든 데이터는 응용 프로그램 종료 때마다 지워집니다 제외 하 고 모든 면에서 동일한 방식으로 작동 합니다. 각 데이터베이스는 별도 네임 스페이스를 제공합니다.
+`window.localStorage`인터페이스는 W3C의 [웹 <a href="../storage.html">스토리지</a> 인터페이스][2]를 구현 합니다. 애플 리 케이 션 키-값 쌍을 사용 하 여 영구 데이터를 저장 하는 데 사용할 수 있습니다. `window.sessionStorage`인터페이스는 모든 데이터는 응용 프로그램 종료 때마다 지워집니다 제외 하 고 모든 면에서 동일한 방식으로 작동 합니다. 각 <a href="../database/database.html">데이터베이스</a>는 별도 네임 스페이스를 제공합니다.
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## 지원 되는 플랫폼
+## <a href="../../../config_ref/images.html">지원 되는 플랫폼</a>
 
 *   안 드 로이드
 *   블랙베리 WebWorks (OS 6.0 및 높은)
@@ -85,14 +85,14 @@ W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>localStorage</p>
       </body>
     </html>

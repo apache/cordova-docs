@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# media.getCurrentPosition
+# media.getCurrent<a href="../geolocation/Position/position.html">Position</a>
 
 Returns the current position within an audio file.
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>]);
 
 ## Parameters
 
 - __mediaSuccess__: The callback that is passed the current position in seconds.
 
-- __mediaError__: (Optional) The callback to execute if an error occurs.
+- __<a href="Parameters/mediaError.html">mediaError</a>__: (Optional) The callback to execute if an error occurs.
 
 ## Description
 
 An asynchronous function that returns the current position of the
-underlying audio file of a `Media` object. Also updates the `Media`
+underlying audio file of a `<a href="media.html">Media</a>` object. Also updates the `<a href="media.html">Media</a>`
 object's `position` parameter.
 
 ## Supported Platforms
@@ -50,16 +50,16 @@ object's `position` parameter.
 
 - Windows 8
 
-## Quick Example
+## Quick <a href="../storage/storage.opendatabase.html">Example</a>
 
     // Audio player
     //
-    var my_media = new Media(src, onSuccess, onError);
+    var my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
 
     // Update media position every second
     var mediaTimer = setInterval(function () {
         // get media position
-        my_media.getCurrentPosition(
+        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
             // success callback
             function (position) {
                 if (position > -1) {
@@ -73,24 +73,24 @@ object's `position` parameter.
         );
     }, 1000);
 
-## Full Example
+## Full <a href="../storage/storage.opendatabase.html">Example</a>
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
             // device APIs are available
             //
-            function onDeviceReady() {
+            function on<a href="../device/device.html">Device</a>Ready() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
 
@@ -102,27 +102,27 @@ object's `position` parameter.
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
 
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
 
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -131,9 +131,9 @@ object's `position` parameter.
 
             // Pause audio
             //
-            function pauseAudio() {
+            function <a href="../events/events.pause.html">pause</a>Audio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_media.<a href="../events/events.pause.html">pause</a>();
                 }
             }
 
@@ -141,7 +141,7 @@ object's `position` parameter.
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -162,7 +162,7 @@ object's `position` parameter.
 
             // Set audio position
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
 
@@ -170,7 +170,7 @@ object's `position` parameter.
           </head>
           <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
+            <a href="#" class="btn large" onclick="<a href="../events/events.pause.html">pause</a>Audio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
             <p id="audio_position"></p>
           </body>

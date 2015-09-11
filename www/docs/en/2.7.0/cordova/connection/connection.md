@@ -28,7 +28,7 @@ This object is exposed as `navigator.connection`.
 Properties
 ----------
 
-- connection.type
+- <a href="connection.type.html">connection.type</a>
 
 Constants
 ---------

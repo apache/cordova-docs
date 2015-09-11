@@ -20,11 +20,11 @@ license: >
 
 # 黑莓手機的外掛程式
 
-本指南介紹了如何開發回聲外掛程式在黑莓手機上。 外掛程式開發指南提供廣泛概述，你應該已經是熟悉的和本指南撿起它的留下。 此外，下載[科爾多瓦黑莓手機存儲庫][1].
+本指南介紹了如何開發回聲外掛程式在黑莓手機上。 <a href="../../hybrid/plugins/index.html">外掛程式開發指南</a>提供廣泛<a href="../../overview/index.html">概述</a>，你應該已經是熟悉的和本指南撿起它的留下。 此外，下載[科爾多瓦黑莓手機<a href="../../../cordova/storage/storage.html">存儲</a>庫][1].
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 
-`Cordova-BlackBerry`專案允許您將部署到黑莓火炬、 加粗和操作手冊等。 Playbook 使用不同的代碼基比其他黑莓手持設備，您需要為其重複你的發展努力。 本指南著重于手持設備，而不是平板電腦。 （在將來，本指南應包括這兩個平臺）。
+`Cordova-BlackBerry`專案允許您將部署到黑莓火炬、 加粗和操作手冊等。 Playbook 使用不同的代碼基比其他黑莓手持<a href="../../../cordova/device/device.html">設備</a>，您需要為其重複你的發展努力。 本指南著重于手持<a href="../../../cordova/device/device.html">設備</a>，而不是平板電腦。 （在將來，本指南應包括這兩個平臺）。
 
 Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 函數：
 
@@ -46,7 +46,7 @@ Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 
 
 ## 添加 Echo.java
 
-如果您注意到結構的值屬性，您將看到已定義的路徑，導致回聲外掛程式。 在科爾多瓦黑莓 WebWorks 回購的根目錄中，查找名為的目錄 `framework` 。 此目錄包含所有的原始程式碼在黑莓手機上本機運行。 導航到 `framework/ext/src/org/apache/cordova` 。 此時，您將看到所有的外掛程式目錄，所是的原始程式碼。 因此，添加目錄回顯到 `framework/ext/src/org/apache/cordova/echo` ，並創建一個檔稱為 `Echo.java` 在`framework/ext/src/org/apache/cordova/echo/Echo.java`.
+如果您注意到結構的值屬性，您將看到已定義的路徑，導致回聲外掛程式。 在科爾多瓦黑莓 WebWorks 回購的根目錄中，查找名為的目錄 `framework` 。 此目錄包含所有的原始程式碼在黑莓手機上本機運行。 導航到 `framework/ext/src/org/apache/cordova` 。 此時，您將看到所有的外掛程式目錄，所是的原始程式碼。 因此，添加目錄回顯到 `framework/ext/src/org/apache/cordova/echo` ，並創建一個<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>稱為 `Echo.java` 在`framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## 書寫 Echo.java
 
@@ -92,15 +92,15 @@ Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 
 
 然後我們拿進來從參數 args 參數由提供的消息。 我們可以抓住的只在做第一個參數`String theMsg = args.getString(0);`.
 
-我們將做一些錯誤檢查和郵件看起來很好，如果我們將具現化新的 PluginResult 與好的狀態： `PluginResult.Status.OK` ，並返回該郵件： `theMsg` 。 在此之後，我們返回的結果，要傳遞回給 JavaScript 可以在回檔中成功發射。 如果事情失敗，我們可以返回各種狀態異常，像 `PluginResult.Status.ERROR` ， `PluginResult.Status.JSON_EXCEPTION` ，或 `PluginResult.Status.INVALID_ACTION` 。 當傳遞回來時，這些類型的結果火中 JavaScript 的失敗回檔。
+我們將做一些錯誤檢查和郵件看起來很好，如果我們將具現化新的 PluginResult 與好的狀態： `PluginResult.Status.OK` ，並返回該郵件： `theMsg` 。 在此之後，我們返回的結果，要傳遞回給 JavaScript 可以在回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>中成功發射。 如果事情失敗，我們可以返回各種狀態異常，像 `PluginResult.Status.ERROR` ， `PluginResult.Status.JSON_EXCEPTION` ，或 `PluginResult.Status.INVALID_ACTION` 。 當傳遞回來時，這些類型的結果火中 JavaScript 的失敗回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。
 
 ## 更新您的專案 www 目錄中.jar
 
-添加的 `Echo.java` 需要更新您的專案中。 若要生成 `.jar` 檔，定位到黑莓 WebWorks 回購根目錄下並運行 `ant` 命令：
+添加的 `Echo.java` 需要更新您的專案中。 若要生成 `.jar` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，定位到黑莓 WebWorks 回購根目錄下並運行 `ant` 命令：
 
     ant update -Dproject.path="~/path_to_my_project"
     
 
-這將生成新的 `.jar` 檔在 `build/ext` 目錄。複製 `build/ext/cordova.jar` 檔到您 `project/www/ext` 目錄。
+這將生成新的 `.jar` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>在 `build/ext` 目錄。複製 `build/ext/cordova.jar` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>到您 `project/www/ext` 目錄。
 
 如果一切順利，允許您在黑莓手機中使用 Echo 外掛程式。

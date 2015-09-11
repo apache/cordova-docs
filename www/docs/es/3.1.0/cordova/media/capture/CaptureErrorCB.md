@@ -18,22 +18,22 @@ license: >
     under the License.
 ---
 
-# CaptureErrorCB
+# <a href="CaptureError.html">CaptureError</a>CB
 
 > Se invoca si se produce un error durante una operación de captura de los medios de comunicación.
 
-    function captureError( CaptureError error ) { ... };
+    function captureError( <a href="CaptureError.html">CaptureError</a> error ) { ... };
     
 
 ## Descripción
 
 Esta función se ejecuta si se produce un error al intentar lanzar un medio de captura de operación. Escenarios de fallas incluyen cuando la solicitud de captura está ocupada, una operación de captura ya está llevando a cabo o el usuario cancela la operación antes de que los archivos de los medios de comunicación son capturados.
 
-Esta función se ejecuta con un `CaptureError` objeto que contiene un error apropiado`code`.
+Esta función se ejecuta con un `<a href="CaptureError.html">CaptureError</a>` objeto que contiene un error apropiado`code`.
 
 ## Ejemplo rápido
 
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };

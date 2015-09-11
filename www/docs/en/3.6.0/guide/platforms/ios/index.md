@@ -24,14 +24,14 @@ This guide shows how to set up your SDK development environment to
 deploy Cordova apps for iOS devices such as iPhone and iPad. See the
 following for more detailed platform-specific information:
 
-* iOS Configuration
-* Upgrading iOS
-* iOS WebViews
-* iOS Plugins
+* <a href="config.html">iOS Configuration</a>
+* <a href="upgrade.html">Upgrading iOS</a>
+* <a href="webview.html">iOS WebViews</a>
+* <a href="plugin.html">iOS Plugins</a>
 * iOS Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
 current interface.
 
 ## Requirements and Support
@@ -73,7 +73,7 @@ __Install__ button next to the __Command Line Tools__ listing.
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-Line Interface. For example, in a source-code directory:
+Cordova <a href="../../cli/index.html">The Command-Line Interface</a>. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -173,7 +173,7 @@ remove the code that references the deprecated invokeString API:
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];

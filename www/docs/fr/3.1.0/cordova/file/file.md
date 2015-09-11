@@ -18,26 +18,26 @@ license: >
     under the License.
 ---
 
-# File
+# <a href="fileobj/fileobj.html">File</a>
 
 > Une API permettant de lire, écrire et naviguer dans les hiérarchies d'un système de fichiers, basée sur [celle du w3c][1].
 
- [1]: http://www.w3.org/TR/FileAPI
+ [1]: http://www.w3.org/TR/<a href="fileobj/fileobj.html">File</a>API
 
 ## Objets
 
-*   DirectoryEntry
-*   DirectoryReader
+*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
 *   Fichier
-*   FileEntry
-*   FileError
-*   FileReader
+*   <a href="fileentry/fileentry.html"><a href="fileobj/fileobj.html">File</a>Entry</a>
+*   <a href="fileerror/fileerror.html"><a href="fileobj/fileobj.html">File</a>Error</a>
+*   <a href="filereader/filereader.html"><a href="fileobj/fileobj.html">File</a>Reader</a>
 *   Système de fichiers
-*   Transfert de fichiers
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
+*   <a href="filetransfer/filetransfer.html">Transfert de fichiers</a>
+*   <a href="filetransfererror/filetransfererror.html"><a href="fileobj/fileobj.html">File</a>TransferError</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html"><a href="fileobj/fileobj.html">File</a>UploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html"><a href="fileobj/fileobj.html">File</a>UploadResult</a>
+*   <a href="filewriter/filewriter.html"><a href="fileobj/fileobj.html">File</a>Writer</a>
 *   Drapeaux
 *   Local
 *   Métadonnées
@@ -65,11 +65,11 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 *   Android
     
         (in app/res/xml/config.xml)
-        <feature name="File">
-            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="android-package" value="org.apache.cordova.<a href="fileobj/fileobj.html">File</a>Utils" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>Transfer">
+            <param name="android-package" value="org.apache.cordova.<a href="fileobj/fileobj.html">File</a>Transfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -79,11 +79,11 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 *   BlackBerry WebWorks
     
         (in www/plugins.xml)
-        <feature name="File">
-            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="blackberry-package" value="org.apache.cordova.file.<a href="fileobj/fileobj.html">File</a>Manager" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>Transfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.<a href="fileobj/fileobj.html">File</a>Transfer" />
         </feature>
         
         (in www/config.xml)
@@ -97,11 +97,11 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
 *   iOS (dans `config.xml`)
     
-        <feature name="File">
-            <param name="ios-package" value="CDVFile" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>">
+            <param name="ios-package" value="CDV<a href="fileobj/fileobj.html">File</a>" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="ios-package" value="CDVFileTransfer" />
+        <feature name="<a href="fileobj/fileobj.html">File</a>Transfer">
+            <param name="ios-package" value="CDV<a href="fileobj/fileobj.html">File</a>Transfer" />
         </feature>
         
 

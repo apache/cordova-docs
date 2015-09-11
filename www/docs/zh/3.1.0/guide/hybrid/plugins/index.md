@@ -22,9 +22,9 @@ license: >
 
 科爾多瓦外掛程式橋樑有點之間供電科爾多瓦應用和科爾多瓦應用程式的本機平臺 web 視圖的功能在運行時。 外掛程式的使用跨所有平臺和以下特定于平臺的外掛程式介面，JavaScript 調用到本機實現一個單一的 JavaScript 介面組成。 所有的科爾多瓦 Api 的核心是使用這種體系結構實現的。
 
-本指南的步驟，編寫一個簡單的 Echo 外掛程式的過程傳遞一個字串從 JavaScript，並將它發送到本機環境中有關支援的平臺。 本機代碼然後回裡面的外掛程式 JavaScript 回檔返回相同的字串。
+本指南的步驟，編寫一個簡單的 Echo 外掛程式的過程傳遞一個字串從 JavaScript，並將它發送到本機環境中有關支援的平臺。 本機代碼然後回裡面的外掛程式 JavaScript 回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>返回相同的字串。
 
-本指南提供了足夠的概述，您可以生成來編寫更複雜的外掛程式。
+本指南提供了足夠的<a href="../../overview/index.html">概述</a>，您可以生成來編寫更複雜的外掛程式。
 
 ## JavaScript
 
@@ -41,7 +41,7 @@ license: >
 
 *   `function(winParam) {}`： 成功回呼函數。 假設您 `exec` 調用成功完成，調用此函數時 （可以選擇與您傳遞回給它的任何參數）。
 
-*   `function(error) {}`: 錯誤函數回檔。如果該操作未成功完成，調用此函數時 （可以選擇與錯誤參數）。
+*   `function(error) {}`: 錯誤函數回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>。如果該操作未成功完成，調用此函數時 （可以選擇與錯誤參數）。
 
 *   `"service"`： 要調用的本機一邊的服務名稱。這被映射到本機類，有關的更多資料，可在下面列出的本機指南。
 
@@ -67,23 +67,23 @@ license: >
 
 首先，讓我們看看的最後三個參數的 `exec` 函數。 我們將調用 `Echo` "服務、"請求 `echo` "行動"，和傳遞的參數包含 echo 字串的陣列，這是進入的第一個參數 `window.echo` 函數。
 
-成功回檔傳遞到 `exec` 是只是提到該回呼函數的 `window.echo` 需要。 我們多做一點為錯誤回檔： 如果本機端觸發錯誤回檔，我們只需調用成功回呼函數，並傳遞到它"的預設"的字串。
+成功回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>傳遞到 `exec` 是只是提到該回呼函數的 `window.echo` 需要。 我們多做一點為錯誤回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>： 如果本機端觸發錯誤回<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，我們只需調用成功回呼函數，並傳遞到它"的預設"的字串。
 
-## 外掛程式規範
+## <a href="../../../plugin_ref/spec.html">外掛程式規範</a>
 
-科爾多瓦有可用於啟用該外掛程式為 Android、 iOS、 黑莓 10 和 Windows Phone 平臺的自動的安裝一個外掛程式規範。 通過以特定方式構建你的外掛程式，添加 `plugin.xml` 清單檔，您可以使使用者能夠安裝你的外掛程式通過命令列工具。
+科爾多瓦有可用於啟用該外掛程式為 Android、 iOS、 黑莓 10 和 Windows Phone 平臺的自動的安裝一個<a href="../../../plugin_ref/spec.html">外掛程式規範</a>。 通過以特定方式構建你的外掛程式，添加 `plugin.xml` 清單<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>，您可以使使用者能夠安裝你的外掛程式通過命令列工具。
 
-*   外掛程式規範
+*   <a href="../../../plugin_ref/spec.html">外掛程式規範</a>
 
 ## 本機
 
 一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面列出了這樣做為每個平臺的詳細資訊。 這些指南繼續在上文討論過的簡單回聲外掛程式示例上。
 
-*   Android 外掛程式
-*   黑莓手機的外掛程式
-*   黑莓 10 外掛程式
-*   iOS 外掛程式
-*   Windows Phone 外掛程式
+*   <a href="../../platforms/android/plugin.html">Android 外掛程式</a>
+*   <a href="../../platforms/blackberry/plugin.html">黑莓手機的外掛程式</a>
+*   <a href="../../platforms/blackberry10/plugin.html">黑莓 10 外掛程式</a>
+*   <a href="../../platforms/ios/plugin.html">iOS 外掛程式</a>
+*   <a href="../../platforms/wp8/plugin.html">Windows Phone 外掛程式</a>
 
 當前，Tizen 平臺不支援外掛程式。
 

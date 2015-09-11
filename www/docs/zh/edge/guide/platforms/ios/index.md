@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# iOS 平臺指南
+# iOS <a href="../index.html">平臺指南</a>
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 iOS 設備 （如 iPhone 和 iPad 的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   iOS 配置
-*   升級 iOS
-*   WebViews iOS
-*   iOS 外掛程式
-*   iOS 殼工具指南
+*   <a href="config.html">iOS 配置</a>
+*   <a href="upgrading.html">升級 iOS</a>
+*   <a href="webview.html">WebViews iOS</a>
+*   <a href="plugin.html">iOS 外掛程式</a>
+*   <a href="tools.html">iOS 殼工具指南</a>
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 ## 要求和支援
 
@@ -66,7 +66,7 @@ license: >
 
 ## 創建一個新的專案
 
-使用`科爾多瓦`實用程式設置了一個新的專案，如所述在科爾多瓦的命令列介面。例如，在一個原始程式碼目錄：
+使用`科爾多瓦`實用程式設置了一個新的專案，如所述在科爾多瓦的<a href="../../cli/index.html">命令列介面</a>。例如，在一個原始程式碼目錄：
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -158,7 +158,7 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -194,7 +194,7 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
 
 進一步的資訊，請參閱蘋果的文檔：
 
-*   [開始開發 iOS 應用程式今天][12]快速概述的步驟開發 iOS 的應用程式。
+*   [開始開發 iOS 應用程式今天][12]快速<a href="../../overview/index.html">概述</a>的步驟開發 iOS 的應用程式。
 
 *   [會員中心主頁][13]提供幾個 iOS 的連結技術資源包括技術資源，資源調配門戶、 分佈指南和社區論壇。
 

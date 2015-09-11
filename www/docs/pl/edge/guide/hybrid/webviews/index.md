@@ -24,7 +24,7 @@ Cordova aplikacje zwykle są implementowane jako oparte na przeglądarce *widoku
 
 Aby wdrożyć widoku sieci Web, musisz zapoznać się z każdym macierzystego środowiska programowania. Poniżej przedstawiono instrukcje dotyczące obsługiwanych platform:
 
-*   Amazon ogień OS WebViews
+*   <a href="../../platforms/amazonfireos/webview.html">Amazon ogień OS WebViews</a>
 *   WebView
-*   iOS WebViews
-*   Windows Phone 8.0 WebViews
+*   <a href="../../platforms/ios/webview.html">iOS WebViews</a>
+*   <a href="../../platforms/wp8/webview.html">Windows Phone 8.0 WebViews</a>

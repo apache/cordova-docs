@@ -20,10 +20,10 @@ license: >
 
 # compassError
 
-OnError Callback-Funktion für Kompass-Funktionen.
+OnError Callback-Funktion für <a href="../compass.html">Kompass</a>-Funktionen.
 
 ## Beispiel
 
-    function(CompassError) {
+    function(<a href="../compassError/compassError.html">CompassError</a>) {
         // Handle the error
     }

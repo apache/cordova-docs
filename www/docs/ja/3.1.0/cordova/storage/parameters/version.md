@@ -20,4 +20,4 @@ license: >
 
 # database_version
 
-データベースのバージョン。
+<a href="../database/database.html">データベース</a>のバージョン。

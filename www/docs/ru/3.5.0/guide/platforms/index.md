@@ -75,7 +75,7 @@ license: >
 
 *   Руководство по платформе Windows 8
 *   Средства командной строки для Windows 8
-*   Обновление для Windows 8
+*   <a href="win8/upgrading.html">Обновление для Windows 8</a>
 
 ## Tizen
 

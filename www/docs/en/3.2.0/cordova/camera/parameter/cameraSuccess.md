@@ -28,9 +28,9 @@ onSuccess callback function that provides the image data.
 
 ## Parameters
 
-- __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. _(String)_
+- __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `<a href="cameraOptions.html">cameraOptions</a>` in effect. _(String)_
 
-## Example
+## <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
     // Show image
     //

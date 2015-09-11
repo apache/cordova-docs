@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# Android 平臺指南
+# Android <a href="../index.html">平臺指南</a>
 
-本指南演示如何設置您的 SDK 環境部署科爾多瓦的 Android 設備的應用程式以及如何在您的開發工作流中 （可選） 使用 Android 居中的命令列工具。 您需要安裝 Android SDK 無論是否你想要使用這些平臺為中心的外殼工具或跨平臺 Cordova CLI 的發展。 兩條發展路徑的比較，請參見概述。 CLI 的詳細資訊，請參閱命令列介面。
+本指南演示如何設置您的 SDK 環境部署科爾多瓦的 Android 設備的應用程式以及如何在您的開發工作流中 （可選） 使用 Android 居中的命令列工具。 您需要安裝 Android SDK 無論是否你想要使用這些平臺為中心的外殼工具或跨平臺 Cordova CLI 的發展。 兩條發展路徑的比較，請參見<a href="../../overview/index.html">概述</a>。 CLI 的詳細資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 ## 要求和支援
 
@@ -34,13 +34,13 @@ license: >
 
 ## 安裝科爾多瓦殼工具
 
-如果您想要使用科爾多瓦的 Android 居中外殼工具與 SDK 一起，從[cordova.apache.org][3]下載科爾多瓦。 如果您計畫使用所述的命令列介面的跨平臺 CLI 工具，否則忽略此節。
+如果您想要使用科爾多瓦的 Android 居中外殼工具與 SDK 一起，從[cordova.apache.org][3]下載科爾多瓦。 如果您計畫使用所述的<a href="../../cli/index.html">命令列介面</a>的跨平臺 CLI 工具，否則忽略此節。
 
  [3]: http://cordova.apache.org
 
 科爾多瓦下載包含單獨的檔案，為每個平臺。 一定要展開相應的存檔， `android` 在這種情況下，在一個空的目錄內。 有關 executible 實用程式可用在頂級 `bin` 目錄。 (參閱**自述**檔，如果有必要作更詳細的指示）。
 
-這些外殼工具允許您創建、 構建和運行 Android 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 有關如何開發外掛程式的詳細資訊，請參閱應用程式外掛程式。
+這些外殼工具允許您創建、 構建和運行 Android 應用程式。 額外的<a href="../../cli/index.html">命令列介面</a>，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 有關如何開發外掛程式的詳細資訊，請參閱應用程式外掛程式。
 
 ## 安裝 JAVA 開發工具箱 （JDK）
 
@@ -52,7 +52,7 @@ license: >
 
 ## 安裝 Android SDK
 
-安裝[獨立的 Android SDK 工具][5]或[Android 的工作室][6]。 如果您計畫開發新科爾多瓦為 Android 外掛程式或使用本機工具來運行和調試 Android 平臺`Android 工作室`水墨畫之發展。 否則， `Android 獨立 SDK 工具`就足以構建和部署 Android 應用程式。
+安裝[獨立的 Android SDK 工具][5]或[Android 的工作室][6]。 如果您計畫開發新科爾多瓦為 <a href="plugin.html">Android 外掛程式</a>或使用本機工具來運行和調試 Android 平臺`Android 工作室`水墨畫之發展。 否則， `Android 獨立 SDK 工具`就足以構建和部署 Android 應用程式。
 
  [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
  [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio
@@ -92,7 +92,7 @@ license: >
 
 1.  Android 5.1.1 （API 22） 平臺 SDK
 2.  Android SDK 生成工具版本 19.1.0 或更高版本
-3.  Android 支援存儲庫 （額外）
+3.  Android 支援<a href="../../../cordova/storage/storage.html">存儲</a>庫 （額外）
 
 有關更多詳細資訊，請參閱[安裝 SDK 包][7]。
 
@@ -164,7 +164,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ## 創建一個新的專案
 
-在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的命令列介面或一組特定于 Android 的 shell 工具中所述。 從在原始程式碼目錄中，這裡是 CLI 的方法：
+在這一點上，要創建一個新的專案你可以選擇之間跨平臺 CLI 工具的<a href="../../cli/index.html">命令列介面</a>或一組特定于 Android 的 shell 工具中所述。 從在原始程式碼目錄中，這裡是 CLI 的方法：
 
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello
@@ -252,7 +252,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
     
     ![][19]
 
-3.  選擇存儲 （`你/專案/platforms/android` android 平臺的位置).
+3.  選擇<a href="../../../cordova/storage/storage.html">存儲</a> （`你/專案/platforms/android` android 平臺的位置).
     
     ![][20]
 
@@ -267,7 +267,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
  [21]: img/guide/platforms/android/asdk_import_done.png
 
-請參閱[Android 工作室概述][22][生成並運行從 Android 工作室][23]為更多的細節。
+請參閱[Android 工作室<a href="../../overview/index.html">概述</a>][22][生成並運行從 Android 工作室][23]為更多的細節。
 
  [22]: http://developer.android.com/tools/studio/index.html
  [23]: http://developer.android.com/tools/building/building-studio.html

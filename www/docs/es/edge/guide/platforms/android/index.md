@@ -267,7 +267,7 @@ Listo ahora y puede construir y ejecutar la aplicación directamente desde `Andr
 
  [21]: img/guide/platforms/android/asdk_import_done.png
 
-Ver [Resumen estudio Android][22] y [construcción y huyendo de Android Studio][23] para más detalles.
+Ver [<a href="../../overview/index.html">Resumen</a> estudio Android][22] y [construcción y huyendo de Android Studio][23] para más detalles.
 
  [22]: http://developer.android.com/tools/studio/index.html
  [23]: http://developer.android.com/tools/building/building-studio.html

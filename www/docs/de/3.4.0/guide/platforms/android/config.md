@@ -42,7 +42,7 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(Boolean, wird standardmäßig auf `true` ): Steuerelemente ob Seiten innerhalb einer InAppBrowser geöffnet können Zugriff auf die gleichen LocalStorage und WebSQL Speicher als Seiten mit Standardbrowser geöffnet.
+*   `InAppBrowserStorageEnabled`(Boolean, wird standardmäßig auf `true` ): Steuerelemente ob Seiten innerhalb einer InAppBrowser geöffnet können Zugriff auf die gleichen LocalStorage und WebSQL <a href="../../../cordova/storage/storage.html">Speicher</a> als Seiten mit Standardbrowser geöffnet.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

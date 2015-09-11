@@ -20,23 +20,23 @@ license: >
 
 # cameraOptions
 
-Optionale Parameter die Kameraeinstellungen anpassen.
+Optionale Parameter die <a href="../camera.html">Kamera</a>einstellungen anpassen.
 
-    {Qualität: 75, DestinationType: Camera.DestinationType.DATA_URL, SourceType: Camera.PictureSourceType.CAMERA, AllowEdit: stimmt, EncodingType: Camera.EncodingType.JPEG, TargetWidth: 100, TargetHeight: 100, PopoverOptions: CameraPopoverOptions, SaveToPhotoAlbum: false};
+    {Qualität: 75, DestinationType: Camera.DestinationType.DATA_URL, SourceType: Camera.PictureSourceType.CAMERA, AllowEdit: stimmt, EncodingType: Camera.EncodingType.JPEG, TargetWidth: 100, TargetHeight: 100, PopoverOptions: <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>, SaveToPhotoAlbum: false};
     
 
 ## Optionen
 
-*   **Qualität**: Qualität des gespeicherten Bildes, ausgedrückt als ein Bereich von 0-100, wo 100 in der Regel voller Auflösung ohne Verlust aus der Dateikomprimierung ist. *(Anzahl)* (Beachten Sie, dass Informationen über die Kamera Auflösung nicht verfügbar ist.)
+*   **Qualität**: Qualität des gespeicherten Bildes, ausgedrückt als ein Bereich von 0-100, wo 100 in der Regel voller Auflösung ohne Verlust aus der <a href="../../file/fileobj/fileobj.html">Datei</a>komprimierung ist. *(Anzahl)* (Beachten Sie, dass Informationen über die <a href="../camera.html">Kamera</a> Auflösung nicht verfügbar ist.)
 
 *   **destinationType**: Choose the format of the return value. Defined in `navigator.camera.DestinationType` *(Number)*
     
-        Camera.DestinationType = {DATA_URL: 0, / / Return Bild als base64-codierte Zeichenfolge FILE_URI: 1, / / Return Image-Datei-URI NATIVE_URI: 2 / / Return image native URI (z. B. Ressourcen-Bibliothek: / / auf iOS oder Inhalte: / / auf Android)};
+        Camera.DestinationType = {DATA_URL: 0, / / Return Bild als base64-codierte Zeichenfolge FILE_URI: 1, / / Return Image-<a href="../../file/fileobj/fileobj.html">Datei</a>-URI NATIVE_URI: 2 / / Return image native URI (z. B. Ressourcen-Bibliothek: / / auf iOS oder Inhalte: / / auf Android)};
         
 
 *   **sourceType**: Set the source of the picture. Defined in `navigator.camera.PictureSourceType` *(Number)*
     
-        Camera.PictureSourceType = {Fotothek: 0, Kamera: 1, SAVEDPHOTOALBUM: 2};
+        Camera.PictureSourceType = {Fotothek: 0, <a href="../camera.html">Kamera</a>: 1, SAVEDPHOTOALBUM: 2};
         
 
 *   **AllowEdit**: einfache Bearbeitung des Bildes vor Auswahl zu ermöglichen. *(Boolesch)*
@@ -50,22 +50,22 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 *   **TargetHeight**: Höhe in Pixel zum Bild skalieren. Muss mit **TargetWidth**verwendet werden. Seitenverhältnis bleibt konstant. *(Anzahl)*
 
-*   **MediaType**: Legen Sie den Typ der Medien zur Auswahl. Funktioniert nur, wenn `PictureSourceType` ist `PHOTOLIBRARY` oder `SAVEDPHOTOALBUM` . Im Sinne `nagivator.camera.MediaType` *(Anzahl)* 
+*   **MediaType**: Legen Sie den Typ der <a href="../../media/media.html">Medien</a> zur Auswahl. Funktioniert nur, wenn `PictureSourceType` ist `PHOTOLIBRARY` oder `SAVEDPHOTOALBUM` . Im Sinne `nagivator.camera.MediaType` *(Anzahl)* 
     
-        Camera.MediaType = {Bild: 0, / / Auswahl der Standbilder nur ermöglichen. STANDARD. Kehrt über DestinationType VIDEO angegebenen Format: 1, / / ermöglichen Auswahl an nur, Video wird immer zurückgegeben FILE_URI ALLMEDIA: 2 / / Auswahl von alle Medientypen zulassen
+        Camera.MediaType = {Bild: 0, / / Auswahl der Standbilder nur ermöglichen. STANDARD. Kehrt über DestinationType VIDEO angegebenen Format: 1, / / ermöglichen Auswahl an nur, Video wird immer zurückgegeben FILE_URI ALLMEDIA: 2 / / Auswahl von alle <a href="../../media/media.html">Medien</a>typen zulassen
         
     
     };
 
-*   **CorrectOrientation**: Drehen Sie das Bild um die Ausrichtung des Geräts während der Aufnahme zu korrigieren. *(Boolesch)*
+*   **CorrectOrientation**: Drehen Sie das Bild um die Ausrichtung des <a href="../../device/device.html">Gerät</a>s während der Aufnahme zu korrigieren. *(Boolesch)*
 
-*   **SaveToPhotoAlbum**: das Bild auf das Fotoalbum auf dem Gerät zu speichern, nach Einnahme. *(Boolesch)*
+*   **SaveToPhotoAlbum**: das Bild auf das Fotoalbum auf dem <a href="../../device/device.html">Gerät</a> zu speichern, nach Einnahme. *(Boolesch)*
 
-*   **PopoverOptions**: iOS-nur Optionen, die Popover Lage in iPad angeben. In definierten`CameraPopoverOptions`.
+*   **PopoverOptions**: iOS-nur Optionen, die Popover Lage in iPad angeben. In definierten`<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
-        Camera.Direction = {zurück: 0, / / die hinten gerichteter Kamera vorne verwenden: 1 / / die nach vorn gerichtete Kamera verwenden};
+        Camera.Direction = {zurück: 0, / / die hinten gerichteter <a href="../camera.html">Kamera</a> vorne verwenden: 1 / / die nach vorn gerichtete <a href="../camera.html">Kamera</a> verwenden};
         
 
 ## Android Macken
@@ -84,9 +84,9 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 *   Ignoriert die `allowEdit` Parameter.
 
-*   Anwendung müssen wichtige Injektion-Berechtigungen, um die ursprüngliche Kamera-Anwendung zu schließen, nachdem der Benutzer die Fotoschnäpper.
+*   Anwendung müssen wichtige Injektion-Berechtigungen, um die ursprüngliche <a href="../camera.html">Kamera</a>-Anwendung zu schließen, nachdem der Benutzer die Fotoschnäpper.
 
-*   Große Bildgrößen kann die Unfähigkeit Bilder auf Nachfolger Geräten (z.B. Torch 9800) codiert, dass Feature hochauflösende Kameras führen.
+*   Große Bildgrößen kann die Unfähigkeit Bilder auf Nachfolger <a href="../../device/device.html">Gerät</a>en (z.B. Torch 9800) codiert, dass Feature hochauflösende <a href="../camera.html">Kamera</a>s führen.
 
 *   `Camera.MediaType`wird nicht unterstützt.
 
@@ -96,15 +96,15 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 ## iOS Macken
 
-*   Legen Sie `quality` unter 50 Speicherfehler auf einigen Geräten zu vermeiden.
+*   Legen Sie `quality` unter 50 <a href="../../storage/storage.html">Speicher</a>fehler auf einigen <a href="../../device/device.html">Gerät</a>en zu vermeiden.
 
-*   Bei der Verwendung `destinationType.FILE_URI` , Fotos werden im temporären Verzeichnis der Anwendung gespeichert. Sie können den Inhalt dieses Verzeichnisses mit löschen die `navigator.fileMgr` APIs, wenn Speicherplatz ein Anliegen.
+*   Bei der Verwendung `destinationType.FILE_URI` , Fotos werden im temporären Verzeichnis der Anwendung gespeichert. Sie können den Inhalt dieses Verzeichnisses mit löschen die `navigator.fileMgr` APIs, wenn <a href="../../storage/storage.html">Speicher</a>platz ein Anliegen.
 
 ## Tizen Macken
 
 *   nicht unterstützte Optionen
 
-*   gibt immer einen Datei-URI
+*   gibt immer einen <a href="../../file/fileobj/fileobj.html">Datei</a>-URI
 
 ## Windows Phone 7 und 8 Macken
 

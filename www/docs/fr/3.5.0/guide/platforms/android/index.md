@@ -24,9 +24,9 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   Configuration d'Android
+*   <a href="config.html">Configuration d'Android</a>
 *   WebViews Android
-*   Plugins Android
+*   <a href="plugin.html">Plugins Android</a>
 *   Mettre à jour Android
 *   Outils en ligne de commande Android
 

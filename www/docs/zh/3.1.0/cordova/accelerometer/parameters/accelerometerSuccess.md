@@ -29,7 +29,7 @@ license: >
 
 ## 參數
 
-*   **加速度**： 在時間中的某一時刻的加速度。(加速度)
+*   **<a href="../acceleration/acceleration.html">加速度</a>**： 在時間中的某一時刻的<a href="../acceleration/acceleration.html">加速度</a>。(<a href="../acceleration/acceleration.html">加速度</a>)
 
 ## 示例
 

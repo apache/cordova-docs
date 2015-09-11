@@ -22,18 +22,18 @@ license: >
 
 コルドバが完全に読み込まれたときに発生します。
 
-    document.addEventListener("deviceready", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", yourCallbackFunction, false);
     
 
 ## 詳細
 
-このイベントは、任意のアプリケーションに不可欠です。それ信号をコルドバのデバイス Api が読み込まれているにアクセスする準備が整いました。
+この<a href="events.html">イベント</a>は、任意のアプリケーションに不可欠です。それ信号をコルドバの<a href="../device/device.html">デバイス</a> Api が読み込まれているにアクセスする準備が整いました。
 
 2 つのコード ベースから成っているコルドバ: ネイティブと JavaScript。 ネイティブ コードを読み込み、カスタム読み込み画像が表示されます。 ただし、DOM 読み込まれる一度 java スクリプトの設定を読み込むだけ。 これは、対応するネイティブ コードは、前に可能性のあるコルドバ JavaScript 関数を呼び出すことができます、web アプリケーションを意味します。
 
-`deviceready`コルドバが完全に読み込まれた後に発生します。 1 回のイベントが発生し、安全にすることができますコルドバ Api への呼び出し。 アプリケーションは、通常のイベント リスナーをアタッチ `document.addEventListener` HTML ドキュメント DOM が読み込まれる。
+`deviceready`コルドバが完全に読み込まれた後に発生します。 1 回の<a href="events.html">イベント</a>が発生し、安全にすることができますコルドバ Api への呼び出し。 アプリケーションは、通常の<a href="events.html">イベント</a> リスナーをアタッチ `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` HTML ドキュメント DOM が読み込まれる。
 
-`deviceready`イベントの動作はやや異なります他人から。任意のイベント ハンドラーを登録後、 `deviceready` イベントが発生したそのすぐにコールされるコールバック関数。
+`deviceready`<a href="events.html">イベント</a>の動作はやや異なります他人から。任意の<a href="events.html">イベント</a> ハンドラーを登録後、 `deviceready` <a href="events.html">イベント</a>が発生したそのすぐにコールされるコールバック関数。
 
 ## サポートされているプラットフォーム
 
@@ -46,7 +46,7 @@ license: >
 
 ## 簡単な例
 
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
     
     function onDeviceReady() {
         // Now safe to use device APIs
@@ -58,7 +58,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -66,7 +66,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("deviceready", onDeviceReady, false);
         }
     
         // device APIs are available

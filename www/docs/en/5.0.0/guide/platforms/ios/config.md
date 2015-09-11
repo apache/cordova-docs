@@ -50,12 +50,12 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="AllowInlineMediaPlayback" value="true"/>
 
-- `BackupWebStorage` (string, either `none`, `local`, or the default
+- `BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>` (string, either `none`, `local`, or the default
   `cloud`): Set to `cloud` to allow web storage data to backup via
   iCloud. Set to `local` to allow only local backups via iTunes
   sync. Set to `none` prevent web storage backups.
 
-        <preference name="BackupWebStorage" value="local"/>
+        <preference name="BackupWeb<a href="../../../cordova/storage/storage.html">Storage</a>" value="local"/>
 
 - `TopActivityIndicator` (string, defaults to `gray`): Controls the
   appearance of the small spinning icon in the status bar that

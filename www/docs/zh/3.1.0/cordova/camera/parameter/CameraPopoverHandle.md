@@ -20,11 +20,11 @@ license: >
 
 # CameraPopoverHandle
 
-由創建的彈出對話方塊的控制碼`camera.getPicture`.
+由創建的彈出對話方塊的控制碼`<a href="../camera.getPicture.html">camera.getPicture</a>`.
 
 ## 方法
 
-*   **setPosition**: 設置彈出的位置。
+*   **setPosition**: 設置彈出的<a href="../../geolocation/Position/position.html">位置</a>。
 
 ## 支援的平臺
 
@@ -32,15 +32,15 @@ license: >
 
 ## setPosition
 
-設置彈出的位置。
+設置彈出的<a href="../../geolocation/Position/position.html">位置</a>。
 
 **參數：**
 
-*   `cameraPopoverOptions`： `CameraPopoverOptions` ，指定新的位置
+*   `cameraPopoverOptions`： `<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>` ，指定新的<a href="../../geolocation/Position/position.html">位置</a>
 
 ## 快速的示例
 
-     var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
     
 
@@ -54,12 +54,12 @@ license: >
          alert('Failed to get the picture: ' + message);
      }
     
-     var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     var cameraPopoverHandle = navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
            sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
     
      // Reposition the popover if the orientation changes.
      window.onorientationchange = function() {
-         var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+         var cameraPopoverOptions = new <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>(0, 0, 100, 100, 0);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
      }

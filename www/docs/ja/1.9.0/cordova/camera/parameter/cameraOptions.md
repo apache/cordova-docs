@@ -24,13 +24,13 @@ cameraOptions
 カメラの設定をカスタマイズするのためのオプションパラメーターです。
 
     { quality : 75,
-      destinationType : Camera.DestinationType.DATA_URL,
-      sourceType : Camera.PictureSourceType.CAMERA,
+      destinationType : <a href="../camera.html">Camera</a>.DestinationType.DATA_URL,
+      sourceType : <a href="../camera.html">Camera</a>.PictureSourceType.CAMERA,
       allowEdit : true,
-      encodingType: Camera.EncodingType.JPEG,
+      encodingType: <a href="../camera.html">Camera</a>.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100,
-      popoverOptions: CameraPopoverOptions,
+      popoverOptions: <a href="../camera.html">Camera</a>PopoverOptions,
       saveToPhotoAlbum: false };
 
 オプション
@@ -40,14 +40,14 @@ cameraOptions
 
 - __destinationType:__ 返り値のフォーマットを指定します。フォーマットは navigator.camera.DestinationType で定義されています。 (`Number`)
 
-        Camera.DestinationType = {
+        <a href="../camera.html">Camera</a>.DestinationType = {
             DATA_URL : 0,           // 画像を Base64 形式で取得
             FILE_URI : 1            // 画像をファイル URI として取得
         };
 
 - __sourceType:__ 取得ソースを指定します。ソースは nagivator.camera.PictureSourceType で定義されています。 (`Number`)
 
-        Camera.PictureSourceType = {
+        <a href="../camera.html">Camera</a>.PictureSourceType = {
             PHOTOLIBRARY : 0,
             CAMERA : 1,
             SAVEDPHOTOALBUM : 2
@@ -57,7 +57,7 @@ cameraOptions
 
 - __encodingType:__ 画像ファイルのエンコード形式を選択します。形式は navigator.camera.EncodingType で定義されています。 (`Number`)
 
-        Camera.EncodingType = {
+        <a href="../camera.html">Camera</a>.EncodingType = {
             JPEG : 0,               // 画像を JPEG 形式で取得
             PNG : 1                 // 画像を PNG 形式で取得
         };
@@ -65,9 +65,9 @@ cameraOptions
 - __targetWidth:__ 画像をスケールするための幅をピクセルで指定します。 targetHeight と同時に使用してください。アスペクト比は保持されます。 (`Number`)
 - __targetHeight:__ 画像をスケールするための高さをピクセルで指定します。 targetWidth と同時に使用してください。アスペクト比は保持されます。 (`Number`)
 
-- __mediaType:__ 画像の取得元を指定します。 PictureSourceType に PHOTOLIBRARY もしくは SAVEPHOTOALBUM が指定されている場合にのみ有効です。取得元は nagivator.camera.MediaType で定義されています。 (`Number`)
+- __mediaType:__ 画像の取得元を指定します。 PictureSourceType に PHOTOLIBRARY もしくは SAVEPHOTOALBUM が指定されている場合にのみ有効です。取得元は nagivator.camera.<a href="../../media/media.html">Media</a>Type で定義されています。 (`Number`)
 
-        Camera.MediaType = {
+        <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type = {
             PICTURE: 0,             // 取得元は静止画像のみとします。デフォルトです。返り値のフォーマットは DestinationType によって指定されたものになります。
             VIDEO: 1,               // 取得元はビデオのみとします。戻り値のフォーマットは常にファイル URI となります。
             ALLMEDIA : 2            // 全てのメディアタイプからの取得を許可します。
@@ -75,13 +75,13 @@ cameraOptions
 
 - __correctOrientation:__ 写真が撮影されたときと同じ向きになるよう写真を回転させます。 (`Boolean`)
 - __saveToPhotoAlbum:__ 写真が撮影された後、デバイスのフォトアルバムに画像を保存します。 (`Boolean`)
-- __popoverOptions:__ iPad でのポップオーバーの位置を指定します。iOS のみのオプションです。 CameraPopoverOptions で定義されます。
+- __popoverOptions:__ iPad でのポップオーバーの位置を指定します。iOS のみのオプションです。 <a href="../camera.html">Camera</a>PopoverOptions で定義されます。
 
 Android に関する注意点
 --------------
 
 - `allowEdit` は無視されます。
-- Camera.PictureSourceType.PHOTOLIBRARY と Camera.PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
+- <a href="../camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY と <a href="../camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
 
 BlackBerry に関する注意点
 -----------------
@@ -91,7 +91,7 @@ BlackBerry に関する注意点
 - `allowEdit` は無視されます。
 - 撮影後にカメラアプリを閉じるためには、アプリケーションにキー入力許可の権限が付与されている必要があります。
 - 大きなサイズで撮影を行った場合、高画質カメラを搭載したデバイスでエンコードすることができない場合があります。 (Torch 9800 など)
-- Camera.MediaType はサポートされていません。
+- <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 
@@ -101,7 +101,7 @@ WebOS に関する注意点
 - `quality` パラメーターは無視されます。
 - `sourceType` パラメーターは無視されます。
 - `allowEdit` は無視されます。
-- Camera.MediaType はサポートされていません。
+- <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 

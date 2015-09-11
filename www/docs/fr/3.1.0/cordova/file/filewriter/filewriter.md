@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# FileWriter
+# <a href="../fileobj/fileobj.html">File</a>Writer
 
 Un objet permettant de créer et d'écrire des données dans un fichier.
 
@@ -32,7 +32,7 @@ Un objet permettant de créer et d'écrire des données dans un fichier.
 
 *   **position** : la position actuelle du pointeur dans le fichier. *(long)*
 
-*   **error** : un objet contenant des erreurs. *(FileError)*
+*   **error** : un objet contenant des erreurs. *(<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>)*
 
 *   **onwritestart** : fonction appelée lors du démarrage de l'écriture. *(Function)*
 
@@ -60,9 +60,9 @@ La propriété suivante n'est *pas* supportée :
 
 ## Détails
 
-L'objet `FileWriter` permet d'écrire des fichiers encodés en UTF-8 dans le système de fichiers de l'appareil. Les applications répondent aux évènements `writestart`, `progress`, `write`, `writeend`, `error` et `abort`.
+L'objet `<a href="../fileobj/fileobj.html">File</a>Writer` permet d'écrire des fichiers encodés en UTF-8 dans le système de fichiers de l'appareil. Les applications répondent aux évènements `writestart`, `progress`, `write`, `writeend`, `error` et `abort`.
 
-Chaque objet `FileWriter` correspond à un fichier unique dans lequel des données peuvent être écrites plusieurs fois. L'objet `FileWriter` conserve les attributs `position` et `length` du fichier, permettant ainsi à l'application de `rechercher (seek)` et `écrire (write)` n'importe où dans celui-ci. Par défaut, l'objet `FileWriter` écrit au début du fichier, écrasant alors les données existantes. Spécifiez la valeur du paramètre optionnel `append` (Boolean) à `true` dans le constructeur d'un `FileWriter` pour écrire à la fin d'un fichier.
+Chaque objet `<a href="../fileobj/fileobj.html">File</a>Writer` correspond à un fichier unique dans lequel des données peuvent être écrites plusieurs fois. L'objet `<a href="../fileobj/fileobj.html">File</a>Writer` conserve les attributs `position` et `length` du fichier, permettant ainsi à l'application de `rechercher (seek)` et `écrire (write)` n'importe où dans celui-ci. Par défaut, l'objet `<a href="../fileobj/fileobj.html">File</a>Writer` écrit au début du fichier, écrasant alors les données existantes. Spécifiez la valeur du paramètre optionnel `append` (Boolean) à `true` dans le constructeur d'un `<a href="../fileobj/fileobj.html">File</a>Writer` pour écrire à la fin d'un fichier.
 
 Les données sous forme textuelle sont prise en charge par toutes les plates-formes répertoriées ci-dessous. Chaque texte est encodé au format UTF-8 avant d'être écrit dans le système de fichiers. Certaines plates-formes supportent également les données sous forme binaire, qui peuvent être passées comme un ArrayBuffer ou un objet Blob.
 
@@ -182,30 +182,30 @@ Support du format texte uniquement :
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a>Writer <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, gotFS, fail);
         }
     
         function gotFS(fileSystem) {
-            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+            fileSystem.root.get<a href="../fileobj/fileobj.html">File</a>("readme.txt", {create: true, exclusive: false}, got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>, fail);
         }
     
-        function gotFileEntry(fileEntry) {
-            fileEntry.createWriter(gotFileWriter, fail);
+        function got<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>(fileEntry) {
+            fileEntry.createWriter(got<a href="../fileobj/fileobj.html">File</a>Writer, fail);
         }
     
-        function gotFileWriter(writer) {
+        function got<a href="../fileobj/fileobj.html">File</a>Writer(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
                 writer.truncate(11);
@@ -228,7 +228,7 @@ Support du format texte uniquement :
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Write File</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Write <a href="../fileobj/fileobj.html">File</a></p>
       </body>
     </html>

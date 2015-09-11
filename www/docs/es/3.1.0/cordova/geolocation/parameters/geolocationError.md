@@ -29,4 +29,4 @@ Función de devolución de llamada del usuario que se ejecuta cuando hay un erro
 
 ## Parámetros
 
-*   **error**: el error devuelto por el dispositivo. *(PositionError)*
+*   **error**: el error devuelto por el dispositivo. *(<a href="../PositionError/positionError.html">PositionError</a>)*

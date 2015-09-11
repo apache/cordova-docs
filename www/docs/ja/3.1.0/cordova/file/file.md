@@ -18,33 +18,33 @@ license: >
     under the License.
 ---
 
-# ファイル
+# <a href="fileobj/fileobj.html">ファイル</a>
 
-> 読んで、API を書くし、 [w3c ファイル api][1]に基づくファイル システム階層の移動.
+> 読んで、API を書くし、 [w3c <a href="fileobj/fileobj.html">ファイル</a> api][1]に基づく<a href="fileobj/fileobj.html">ファイル</a> システム階層の移動.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## オブジェクト
 
-*   DirectoryEntry
-*   DirectoryReader
-*   ファイル
-*   FileEntry
-*   FileError
-*   FileReader
-*   ファイル ・ システム
-*   ファイル転送
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   フラグ
-*   LocalFileSystem
-*   メタデータ
+*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+*   <a href="fileobj/fileobj.html">ファイル</a>
+*   <a href="fileentry/fileentry.html">FileEntry</a>
+*   <a href="fileerror/fileerror.html">FileError</a>
+*   <a href="filereader/filereader.html">FileReader</a>
+*   <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">ファイル</a> ・ システム</a>
+*   <a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">ファイル</a>転送</a>
+*   <a href="filetransfererror/filetransfererror.html">FileTransferError</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
+*   <a href="filewriter/filewriter.html">FileWriter</a>
+*   <a href="flags/flags.html">フラグ</a>
+*   <a href="localfilesystem/localfilesystem.html">LocalFileSystem</a>
+*   <a href="metadata/metadata.html">メタデータ</a>
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin ls
@@ -52,7 +52,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.file
     
 
-ファイル転送プラグインを使用するには、を個別に追加する必要があります。
+<a href="filetransfer/filetransfer.html"><a href="fileobj/fileobj.html">ファイル</a>転送</a>プラグインを使用するには、を個別に追加する必要があります。
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
@@ -105,4 +105,4 @@ license: >
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。

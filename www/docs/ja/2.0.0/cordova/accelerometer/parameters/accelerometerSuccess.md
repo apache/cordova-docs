@@ -30,9 +30,9 @@ accelerometerSuccess
 パラメーター
 ----------
 
-- __acceleration:__ ある瞬間における加速度を表します。 (Acceleration)
+- __acceleration:__ ある瞬間における加速度を表します。 (<a href="../acceleration/acceleration.html">Acceleration</a>)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------
 
     function onSuccess(acceleration) {

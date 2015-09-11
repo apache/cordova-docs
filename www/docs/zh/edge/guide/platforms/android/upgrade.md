@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# 升級 Android
+# <a href="upgrading.html">升級 Android</a>
 
-本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。
+本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱<a href="../../cli/index.html">命令列介面</a>如何更新的 CLI 版本。
 
 ## 升級到 4.0.0
 
@@ -33,7 +33,7 @@ license: >
 
 對於 CLI 專案:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  在你現有的專案中運行 `cordova platform update android`。
 
@@ -65,7 +65,7 @@ license: >
 
 後添加的外掛程式，您的應用程式會得到人行橫道上 web 視圖正確安裝和配置。
 
-### 升級到閃屏外掛程式
+### 升級到<a href="../../../config_ref/images.html">閃屏外掛程式</a>
 
 如果您的應用程式使用一個閃屏功能已被轉移到一個外掛程式。 用於初始螢幕的配置選項是不變的。 所需的只有升級步驟是要添加的外掛程式：
 
@@ -81,7 +81,7 @@ license: >
 
 對於 CLI 專案:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行 `cordova platform update android` 在你現有的專案中。
 
@@ -95,7 +95,7 @@ license: >
 
 為專案創建的科爾多瓦 CLI:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行 `cordova platform update android`
 
@@ -104,13 +104,13 @@ license: >
         bin/update <project_path>
     
 
-**警告：**關於 Android 4.4-Android 4.4.3，創建檔輸入具有類型的元素 ="檔"將不會打開檔選取器對話方塊。 這是鉻對 Android 的回歸和能重現該問題在 Android 上獨立 Chrome 瀏覽器 （見 HTTP://code.google.com/p/android/issues/detail?id=62220） 建議的解決方法是使用的檔案傳輸和檔的外掛程式為 Android 4.4。您可以偵聽 onClick 事件從輸入類型 ="檔"，然後彈出一個檔選擇器 UI。 為了打領帶表單資料的上傳，你可以使用 JavaScript 將表單值附加到多個部分的 POST 請求所使。
+**警告：**關於 Android 4.4-Android 4.4.3，創建檔輸入具有類型的元素 ="檔"將不會打開檔選取器對話方塊。 這是鉻對 Android 的回歸和能重現該問題在 Android 上獨立 Chrome 瀏覽器 （見 HTTP://code.google.com/p/android/issues/detail?id=62220） 建議的解決方法是使用的檔案傳輸和檔的外掛程式為 Android 4.4。您可以偵聽 onClick <a href="../../../cordova/events/events.html">事件</a>從輸入類型 ="檔"，然後彈出一個檔選擇器 UI。 為了打領帶表單資料的上傳，你可以使用 JavaScript 將表單值附加到多個部分的 POST 請求所使。
 
 ## 從 3.0.0 升級到 3.1.0
 
 為專案創建的科爾多瓦 CLI:
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行 `cordova platform update android`
 
@@ -121,7 +121,7 @@ license: >
 
 ## 從 2.9.0 升級到 CLI (3.0.0)
 
-1.  創建一個新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦在命令列介面所述。
+1.  創建一個新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦在<a href="../../cli/index.html">命令列介面</a>所述。
 
 2.  添加您的平臺的科爾多瓦的專案，例如： `cordova platform add android`.
 

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-MediaFile
+<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>
 =========
 
 > Encapsulates properties of a media capture file.
@@ -26,13 +26,13 @@ MediaFile
 Properties
 ----------
 
-- __name:__ The name of the file, without path information. (DOMString)
-- __fullPath:__ The full path of the file, including the name. (DOMString)
+- __<a href="../../storage/parameters/name.html">name</a>:__ The <a href="../../storage/parameters/name.html">name</a> of the file, without path information. (DOMString)
+- __fullPath:__ The full path of the file, including the <a href="../../storage/parameters/name.html">name</a>. (DOMString)
 - __type:__ The mime type (DOMString)
 - __lastModifiedDate:__ The date and time that the file was last modified. (Date)
-- __size:__ The size of the file, in bytes. (Number)
+- __<a href="../../storage/parameters/size.html">size</a>:__ The <a href="../../storage/parameters/size.html">size</a> of the file, in bytes. (Number)
 
 Methods
 -------
 
-- __MediaFile.getFormatData:__ Retrieves the format information of the media file.
+- __<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.getFormatData</a>:__ Retrieves the format information of the media file.

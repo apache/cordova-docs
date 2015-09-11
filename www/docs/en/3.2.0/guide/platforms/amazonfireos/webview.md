@@ -43,7 +43,7 @@ Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS appli
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
+4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>n above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;

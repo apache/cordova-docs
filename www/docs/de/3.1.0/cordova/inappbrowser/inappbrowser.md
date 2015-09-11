@@ -20,16 +20,16 @@ license: >
 
 # InAppBrowser
 
-> Die `InAppBrowser` ist eine Web-Browser-Ansicht, die anzeigt, wann der Aufruf `window.open()` , oder als als bildeten einen Link öffnen`<a target="_blank">`.
+> Die `InAppBrowser` ist eine Web-Browser-Ansicht, die anzeigt, wann der Aufruf `<a href="window.open.html">window.open</a>()` , oder als als bildeten einen Link öffnen`<a target="_blank">`.
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     
 
 **Hinweis:** Das InAppBrowser-Fenster verhält sich wie einen standard-Webbrowser und Cordova APIs kann nicht zugegriffen werden kann.
 
 ## Beschreibung
 
-Aus einem Aufruf zurückgegebenen Objekts`window.open`.
+Aus einem Aufruf zurückgegebenen Objekts`<a href="window.open.html">window.open</a>`.
 
 ## Methoden
 
@@ -42,7 +42,7 @@ Aus einem Aufruf zurückgegebenen Objekts`window.open`.
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova <a href="../device/device.html">Gerät</a>eebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.inappbrowser
         $ cordova plugin ls
@@ -71,7 +71,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="InAppBrowser" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der <a href="../../guide/overview/index.html">Übersicht</a>.
 
 # addEventListener
 
@@ -100,7 +100,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
@@ -109,19 +109,19 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.addEventListener Example</title>
+        <title>InAppBrowser.addEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
              ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
              ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
@@ -162,7 +162,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
@@ -173,14 +173,14 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.removeEventListener Example</title>
+        <title>InAppBrowser.removeEventListener <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -208,7 +208,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
              iabRef.removeEventListener('loaderror', iabLoadError);
@@ -240,7 +240,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.close();
     
 
@@ -249,19 +249,19 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.close Example</title>
+        <title>InAppBrowser.close <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              // close InAppBrowser after 5 seconds
              setTimeout(function() {
                  ref.close();
@@ -292,7 +292,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
     ref.show();
     
 
@@ -301,19 +301,19 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.show Example</title>
+        <title>InAppBrowser.show <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Cordova is ready
         //
         function onDeviceReady() {
-             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'hidden=yes');
              ref.addEventListener('loadstop', function(event) {
                  alert('background window loaded'); 
              });
@@ -341,7 +341,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 *   **InjectDetails**: Informationen über das Skript ausgeführt, angeben, entweder ein `file` oder `code` Schlüssel. *(Objekt)*
     
-    *   **Datei**: URL des Skripts zu injizieren.
+    *   **<a href="../file/fileobj/fileobj.html">Datei</a>**: URL des Skripts zu injizieren.
     *   **Code**: Text des Skripts zu injizieren.
 
 *   **Rückruf**: die Funktion, die ausgeführt wird, nachdem der JavaScript-Code injiziert wird.
@@ -356,7 +356,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.executeSript({file: "myscript.js"});
     });
@@ -367,14 +367,14 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.executeScript Example</title>
+        <title>InAppBrowser.executeScript <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -397,7 +397,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', replaceHeaderImage);
              iabRef.addEventListener('exit', iabClose);
         }
@@ -420,7 +420,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 *   **InjectDetails**: Informationen über das Skript ausgeführt, angeben, entweder ein `file` oder `code` Schlüssel. *(Objekt)*
     
-    *   **Datei**: URL des Stylesheets zu injizieren.
+    *   **<a href="../file/fileobj/fileobj.html">Datei</a>**: URL des Stylesheets zu injizieren.
     *   **Code**: Text des Stylesheets zu injizieren.
 
 *   **Rückruf**: die Funktion, die ausgeführt wird, nachdem die CSS injiziert wird.
@@ -433,7 +433,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
 ## Kleines Beispiel
 
-    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
         ref.insertCSS({file: "mystyles.css"});
     });
@@ -444,14 +444,14 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     <!DOCTYPE html>
     <html>
       <head>
-        <title>InAppBrowser.insertCSS Example</title>
+        <title>InAppBrowser.insertCSS <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Global InAppBrowser reference
         var iabRef = null;
@@ -474,7 +474,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
         // device APIs are available
         //
         function onDeviceReady() {
-             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef = <a href="window.open.html">window.open</a>('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstop', changeBackgroundColor);
              iabRef.addEventListener('exit', iabClose);
         }

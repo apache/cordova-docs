@@ -30,4 +30,4 @@ The user's callback function that is called when there is an error for geolocati
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`PositionError`)
+- __error:__ The error returned by the device. (`<a href="../<a href="../Position/position.html">Position</a>Error/positionError.html"><a href="../Position/position.html">Position</a>Error</a>`)

@@ -22,14 +22,14 @@ license: >
 
 Событие возникает, когда пользователь нажимает кнопку меню.
 
-    document.addEventListener("menubutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", yourCallbackFunction, false);
     
 
 ## Подробности
 
 Применение обработчик событий переопределяет поведение кнопки меню по умолчанию.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` прикрепить прослушиватель событий после `<a href="events.deviceready.html">deviceready</a>` пожаров события.
 
 ## Поддерживаемые платформы
 
@@ -38,7 +38,7 @@ license: >
 
 ## Быстрый пример
 
-    document.addEventListener("menubutton", onMenuKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", onMenuKeyDown, false);
     
     function onMenuKeyDown() {
         // Handle the back button
@@ -51,7 +51,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Menu Button Example</title>
+        <title>Menu Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -59,14 +59,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("menubutton", onMenuKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("menubutton", onMenuKeyDown, false);
         }
     
         // Handle the menu button

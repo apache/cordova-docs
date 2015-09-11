@@ -31,7 +31,7 @@ globalization.getLocaleName
 
 successCB コールバック関数に、プロパティーオブジェクトをパラメーターとしてロケールの識別文字列を返します。このオブジェクトは文字列の ``value`` プロパティーを持っています。
 
-もしロケールの取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.UNKNOWN\_ERROR です。
+もしロケールの取得中にエラーが発生した場合、 errorCB コールバックが <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR です。
 
 
 サポートされているプラットフォーム
@@ -42,7 +42,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - iPhone
 
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
 ブラウザーのロケールが en\_US に設定された場合、次のコードは "locale: en\_US" という文字列をポップアップダイアログに表示します。
@@ -52,7 +52,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
       function () {alert('Error getting locale\n');}
     );
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE HTML>

@@ -26,7 +26,7 @@ file.
 
 A plugin will consist of at least a single Java class that extends the `CordovaPlugin` class. A plugin must override one
 of the `execute` methods from `CordovaPlugin`. In addition to this, there is a best practice that
-the plugin should handle pause and resume events, and should handle message passing between plugins.
+the plugin should handle <a href="../../../cordova/events/events.pause.html">pause</a> and <a href="../../../cordova/events/events.resume.html">resume</a> events, and should handle message passing between plugins.
 Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the Javascript.
 
 ## Plugin Class Mapping 
@@ -111,7 +111,7 @@ If you do not need to run on the UI thread, but do not want to block the WebCore
         return false;
     }
 
-### Echo Android Plugin Example
+### Echo Android Plugin <a href="../../../cordova/storage/storage.opendatabase.html">Example</a>
 
 We would add the following to our config.xml:
 

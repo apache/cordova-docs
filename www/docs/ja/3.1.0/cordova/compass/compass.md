@@ -20,26 +20,26 @@ license: >
 
 # コンパス
 
-> デバイスが指している方向を取得します。
+> <a href="../device/device.html">デバイス</a>が指している方向を取得します。
 
 ## メソッド
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (古い形式)
-*   compass.clearWatchFilter (古い形式)
+*   <a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a>
+*   <a href="compass.watchHeading.html">compass.watchHeading</a>
+*   <a href="compass.clearWatch.html">compass.clearWatch</a>
+*   <a href="<a href="compass.watchHeading.html">compass.watchHeading</a>Filter.html"><a href="compass.watchHeading.html">compass.watchHeading</a>Filter</a> (古い形式)
+*   <a href="<a href="compass.clearWatch.html">compass.clearWatch</a>Filter.html"><a href="compass.clearWatch.html">compass.clearWatch</a>Filter</a> (古い形式)
 
 ## 引数
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   <a href="parameters/compassSuccess.html">compassSuccess</a>
+*   <a href="parameters/compassError.html">compassError</a>
+*   <a href="parameters/compassOptions.html">compassOptions</a>
+*   <a href="parameters/compassHeading.html">compassHeading</a>
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin ls
@@ -74,4 +74,4 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。

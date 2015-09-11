@@ -37,7 +37,7 @@ Coordinates
 概要
 -----------
 
-`Coordinates` オブジェクトは `Position` オブジェクトのプロパティーとして作成されます。 `Position` オブジェクトはコールバック関数を通してユーザーに返されます。
+`Coordinates` オブジェクトは `<a href="../Position/position.html">Position</a>` オブジェクトのプロパティーとして作成されます。 `<a href="../Position/position.html">Position</a>` オブジェクトはコールバック関数を通してユーザーに返されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -49,7 +49,7 @@ Coordinates
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // 成功時のコールバック関数
@@ -71,29 +71,29 @@ Coordinates
         alert('エラーが発生しました。');
     };
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>位置情報の使用例</title>
+        <title>位置情報の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordovaの読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova準備完了
         //
-        function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            navigator.geolocation.getCurrent<a href="../Position/position.html">Position</a>(onSuccess, onError);
         }
 
-        // `Position` プロパティーを表示
+        // `<a href="../Position/position.html">Position</a>` プロパティーを表示
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');

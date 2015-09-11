@@ -20,7 +20,7 @@ license: >
 
 # iOS Konfiguration
 
-Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
+Die `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> config.xml <a href="../../../cordova/file/fileobj/fileobj.html">Datei</a> Informationen auf globalen Konfigurations-Optionen.
 
 *   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` ein Viewport Meta-Tag verwenden, um entweder deaktivieren oder den Bereich der Benutzer Skalierung zu beschränken.
     
@@ -32,12 +32,12 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` HTML5 Medienwiedergabe *Inline* innerhalb des Bildschirm-Layouts, mit Browser bereitgestellten Steuerelemente anstelle von native Steuerelemente angezeigt werden können. Damit dies funktioniert, fügen Sie das `webkit-playsinline` -Attribut auf eine `<video>` Elemente.
+*   `AllowInlineMediaPlayback`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` HTML5 <a href="../../../cordova/media/media.html">Medien</a>wiedergabe *Inline* innerhalb des Bildschirm-Layouts, mit Browser bereitgestellten Steuerelemente anstelle von native Steuerelemente angezeigt werden können. Damit dies funktioniert, fügen Sie das `webkit-playsinline` -Attribut auf eine `<video>` Elemente.
     
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(string, entweder `none` , `local` , oder den Standardwert `cloud` ): Legen Sie auf `cloud` Web-Speicherdaten-Backup über iCloud können. Legen Sie auf `local` um nur lokale Backups über iTunes Sync zu ermöglichen. Legen Sie auf `none` zu verhindern, dass Web-Speicher-Backup.
+*   `BackupWebStorage`(string, entweder `none` , `local` , oder den Standardwert `cloud` ): Legen Sie auf `cloud` Web-<a href="../../../cordova/storage/storage.html">Speicher</a>daten-Backup über iCloud können. Legen Sie auf `local` um nur lokale Backups über iTunes Sync zu ermöglichen. Legen Sie auf `none` zu verhindern, dass Web-<a href="../../../cordova/storage/storage.html">Speicher</a>-Backup.
     
         <preference name="BackupWebStorage" value="local"/>
         
@@ -47,19 +47,19 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` um zu verhindern, dass den Begrüßungsbildschirm ein-und ausblenden wenn seinen Anzeigezustand ändert.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` um zu verhindern, dass den Begrüßungsbildschirm ein-und ausblenden wenn seinen Anzeigezustand ändert.
     
-        <preference name="FadeSplashScreen" value="false"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>" value="false"/>
         
 
-*   `FadeSplashScreenDuration`(float, der Standardwert ist `2` ): gibt die Anzahl der Sekunden für den Begrüßungsbildschirm fade Effekt ausgeführt.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration`(float, der Standardwert ist `2` ): gibt die Anzahl der Sekunden für den Begrüßungsbildschirm fade Effekt ausgeführt.
     
-        <preference name="FadeSplashScreenDuration" value="4"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration" value="4"/>
         
 
-*   `ShowSplashScreenSpinner`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` den Begrüßungsbildschirm Spinner zu verstecken.
+*   `Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` den Begrüßungsbildschirm Spinner zu verstecken.
     
-        <preference name="ShowSplashScreenSpinner" value="false"/>
+        <preference name="Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner" value="false"/>
         
 
 *   `KeyboardDisplayRequiresUserAction`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` erlauben die Tastatur angezeigt werden, beim Aufrufen von `focus()` auf Formularfelder.

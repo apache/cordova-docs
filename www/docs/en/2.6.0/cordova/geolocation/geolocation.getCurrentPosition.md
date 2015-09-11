@@ -18,26 +18,26 @@ license: >
     under the License.
 ---
 
-geolocation.getCurrentPosition
+geolocation.getCurrent<a href="Position/position.html">Position</a>
 ==============================
 
-Returns the device's current position as a `Position` object.
+Returns the device's current position as a `<a href="Position/position.html">Position</a>` object.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess, 
-                                             [geolocationError], 
-                                             [geolocationOptions]);
+    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>, 
+                                             [<a href="parameters/geolocationError.html">geolocationError</a>], 
+                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
 
 Parameters
 ----------
 
-- __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: (Optional) The callback that is called if there was an error.
-- __geolocationOptions__: (Optional) The geolocation options.
+- __<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>__: The callback that is called with the current position.
+- __<a href="parameters/geolocationError.html">geolocationError</a>__: (Optional) The callback that is called if there was an error.
+- __<a href="parameters/geolocation.options.html">geolocationOptions</a>__: (Optional) The geolocation options.
 
 Description
 -----------
 
-`geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.getCurrent<a href="Position/position.html">Position</a>` is an asynchronous function. It returns the device's current position to the `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` callback with a `<a href="Position/position.html">Position</a>` object as the parameter.  If there is an error, the `<a href="parameters/geolocationError.html">geolocationError</a>` callback is invoked with a `<a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a>` object.
 
 
 Supported Platforms
@@ -52,11 +52,11 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // onSuccess Callback
-    //   This method accepts a `Position` object, which contains
+    //   This method accepts a `<a href="Position/position.html">Position</a>` object, which contains
     //   the current GPS coordinates
     //
     var onSuccess = function(position) {
@@ -70,37 +70,37 @@ Quick Example
               'Timestamp: '         + position.timestamp                + '\n');
     };
 
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="../device/device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            navigator.geolocation.getCurrent<a href="Position/position.html">Position</a>(onSuccess, onError);
         }
     
-        // onSuccess Geolocation
+        // onSuccess <a href="geolocation.html">Geolocation</a>
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -114,7 +114,7 @@ Full Example
                                 'Timestamp: '          +                                   position.timestamp          + '<br />';
         }
     
-        // onError Callback receives a PositionError object
+        // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

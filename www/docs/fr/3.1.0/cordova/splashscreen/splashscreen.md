@@ -24,8 +24,8 @@ license: >
 
 ## Méthodes
 
-*   splashscreen.Show
-*   splashscreen.Hide
+*   <a href="splashscreen.show.html">splashscreen.Show</a>
+*   <a href="splashscreen.hide.html">splashscreen.Hide</a>
 
 ## Accéder à la fonctionnalité
 

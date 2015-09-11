@@ -20,11 +20,11 @@ license: >
 
 # 接続
 
-> `connection`オブジェクトによって公開されて `navigator.connection` 、デバイスの携帯電話や wifi 接続に関する情報を提供します。
+> `connection`オブジェクトによって公開されて `navigator.connection` 、<a href="../device/device.html">デバイス</a>の携帯電話や wifi 接続に関する情報を提供します。
 
 ## プロパティ
 
-*   connection.type
+*   <a href="connection.type.html">connection.type</a>
 
 ## 定数
 
@@ -39,7 +39,7 @@ license: >
 
 ## 機能へのアクセス
 
-バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
+バージョン 3.0 は、コルドバ*のプラグイン*として<a href="../device/device.html">デバイス</a> レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin ls
@@ -96,4 +96,4 @@ license: >
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の<a href="../../guide/overview/index.html">概要</a>のセクションを参照してください。

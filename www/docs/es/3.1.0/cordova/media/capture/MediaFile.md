@@ -36,4 +36,4 @@ license: >
 
 ## Métodos
 
-*   **MediaFile.getFormatData**: recupera la información del formato del archivo de los medios de comunicación.
+*   **<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>**: recupera la información del formato del archivo de los medios de comunicación.

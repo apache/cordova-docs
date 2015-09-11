@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# compass.watchHeadingFilter
+# <a href="compass.watchHeading.html">compass.watchHeading</a>Filter
 
-No longer supported as of 1.6, see `compass.watchHeading` for equivalent functionality.
+No longer supported as of 1.6, see `<a href="compass.watchHeading.html">compass.watchHeading</a>` for equivalent functionality.

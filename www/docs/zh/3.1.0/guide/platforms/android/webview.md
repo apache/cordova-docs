@@ -22,7 +22,7 @@ license: >
 
 協助下開始在科爾多瓦 1.9， `CordovaActivity` ，你可以使用科爾多瓦作為一個更大的本機 Android 應用程式中的一個元件。 Android 是指這種元件 `CordovaWebView` 。 新的基於科爾多瓦的應用程式從 1.9 起使用 `CordovaWebView` 作為其主要的視圖，無論是否遺留下來 `CordovaActivity` 使用方法。
 
-如果你熟悉 Android 應用程式的開發，請閱讀 Android 平臺指南 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
+如果你熟悉 Android 應用程式的開發，請閱讀 <a href="index.html">Android <a href="../index.html">平臺指南</a></a> 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
 
 ## 系統必備元件
 
@@ -32,11 +32,11 @@ license: >
 
 ## 在 android 系統的專案中使用 CordovaWebView 的指南
 
-1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar 檔 `cordova-x.x.x.jar` 在 `/framework` 目錄。
+1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> `cordova-x.x.x.jar` 在 `/framework` 目錄。
 
 2.  科爾多瓦 jar 複製到您的 Android 專案 `/libs` 目錄。
 
-3.  編輯您的應用程式的 `main.xml` 檔 (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
+3.  編輯您的應用程式的 `main.xml` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a> (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -44,7 +44,7 @@ license: >
             android:layout_height="match_parent" />
         
 
-4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
+4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -59,7 +59,7 @@ license: >
             }
         
 
-如果您使用的相機，你應該也可以實現這：
+如果您使用的<a href="../../../cordova/camera/camera.html">相機</a>，你應該也可以實現這：
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -113,6 +113,6 @@ license: >
         }
     
 
-1.  將您的應用程式的 HTML 和 JavaScript 檔案複製到您的 Android 專案 `/assets/www` 目錄。
+1.  將您的應用程式的 HTML 和 JavaScript <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>案複製到您的 Android 專案 `/assets/www` 目錄。
 
 2.  複製 `config.xml` 從 `/framework/res/xml` 到您的專案的 `/res/xml` 目錄。

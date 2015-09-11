@@ -24,11 +24,11 @@ Ta vodič pokaže, kako zaiti ki gre gor vaš SDK razvojno okolje za uvajanje Co
 
 Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   Android konfiguracijo
-*   Spletni Android pogledi
-*   Android Plugins
-*   Nadgradnji Android
-*   Android orodja ukazne vrstice
+*   <a href="config.html">Android konfiguracijo</a>
+*   <a href="webview.html">Spletni Android pogledi</a>
+*   <a href="plugin.html">Android Plugins</a>
+*   <a href="upgrading.html">Nadgradnji Android</a>
+*   <a href="tools.html">Android orodja ukazne vrstice</a>
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 

@@ -20,7 +20,7 @@ license: >
 
 # notification.beep
 
-デバイス サウンドをビープ音を再生します。
+<a href="../device/device.html">デバイス</a> サウンドをビープ音を再生します。
 
     navigator.notification.beep(times);
     
@@ -46,14 +46,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -64,7 +64,7 @@ license: >
         // Show a custom alert
         //
         function showAlert() {
-            navigator.notification.alert(
+            navigator.<a href="notification.alert.html">notification.alert</a>(
                 'You are the winner!',  // message
                 'Game Over',            // title
                 'Done'                  // buttonName
@@ -80,7 +80,7 @@ license: >
         // Vibrate for 2 seconds
         //
         function vibrate() {
-            navigator.notification.vibrate(2000);
+            navigator.<a href="notification.vibrate.html">notification.vibrate</a>(2000);
         }
     
         </script>
@@ -95,14 +95,14 @@ license: >
 
 ## Android の癖
 
-*   アンドロイド デフォルト**通知着信音****設定/サウンド ＆ ディスプレイ**パネルの下に指定を果たしています。
+*   アンドロイド デフォルト**<a href="notification.html">通知</a>着信音****設定/サウンド ＆ ディスプレイ**パネルの下に指定を果たしています。
 
 ## Windows Phone 7 と 8 癖
 
-*   コルドバ分布からジェネリック ビープ音ファイルに依存します。
+*   コルドバ分布からジェネリック ビープ音<a href="../file/fileobj/fileobj.html">ファイル</a>に依存します。
 
 ## Tizen の癖
 
-*   Tizen は、メディア API 経由でオーディオ ファイルを再生してビープ音を実装します。
+*   Tizen は、<a href="../media/media.html">メディア</a> API 経由でオーディオ <a href="../file/fileobj/fileobj.html">ファイル</a>を再生してビープ音を実装します。
 
-*   ビープ音ファイルする必要があります短いである必要があります、 `sounds` 、アプリケーションのルート ディレクトリのサブディレクトリと命名する必要があります`beep.wav`.
+*   ビープ音<a href="../file/fileobj/fileobj.html">ファイル</a>する必要があります短いである必要があります、 `sounds` 、アプリケーションのルート ディレクトリのサブディレクトリと命名する必要があります`beep.wav`.

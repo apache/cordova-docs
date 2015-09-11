@@ -20,13 +20,13 @@ license: >
 
 # ContactFindOptions
 
-결과 필터링 하는 데 사용할 수 있는 속성을 포함 한 `contacts.find` 작업.
+결과 필터링 하는 데 사용할 수 있는 속성을 포함 한 `<a href="../contacts.find.html">contacts.find</a>` 작업.
 
 ## 속성
 
-*   **필터**: 연락처를 찾는 데 사용할 검색 문자열. *(DOMString)* (기본:`""`)
+*   **필터**: <a href="../contacts.html">연락처</a>를 찾는 데 사용할 검색 문자열. *(DOMString)* (기본:`""`)
 
-*   **여러**: 찾기 작업 여러 연락처를 반환 합니다 경우 결정 합니다. *(부울)* (기본:`false`)
+*   **여러**: 찾기 작업 여러 <a href="../contacts.html">연락처</a>를 반환 합니다 경우 결정 합니다. *(부울)* (기본:`false`)
 
 ## 지원 되는 플랫폼
 
@@ -46,7 +46,7 @@ license: >
     };
     
     // error callback
-    function onError(contactError) {
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
@@ -57,7 +57,7 @@ license: >
         filter = ["displayName"]; // return contact.displayName field
     
         // find contacts
-    navigator.contacts.find(filter, onSuccess, onError, options);
+    navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
     
 
 ## 전체 예제
@@ -65,14 +65,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -84,7 +84,7 @@ license: >
             filter = ["displayName"]; // return contact.displayName field
     
             // find contacts
-            navigator.contacts.find(filter, onSuccess, onError, options);
+            navigator.<a href="../contacts.find.html">contacts.find</a>(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -97,14 +97,14 @@ license: >
     
         // onError: Failed to get the contacts
         //
-        function onError(contactError) {
+        function onError(<a href="../parameters/contactError.html">contactError</a>) {
             alert('onError!');
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Find Contacts</p>
       </body>
     </html>

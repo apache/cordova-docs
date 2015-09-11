@@ -20,7 +20,7 @@ license: >
 
 # iOS 外掛程式
 
-此部分提供了如何在 iOS 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
+此部分提供了如何在 iOS 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的<a href="../../overview/index.html">概述</a>。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 
 IOS 外掛程式作為擴展目標 C 類實現 `CDVPlugin` 類。 對於 JavaScript 的 `exec` 方法的 `service` 參數將映射到一個目標 C 類，每個外掛程式必須註冊為 `<feature>` 標記命名的應用程式目錄中 `config.xml` 檔。
 
@@ -54,7 +54,7 @@ IOS 外掛程式作為擴展目標 C 類實現 `CDVPlugin` 類。 對於 JavaScr
 
 有*沒有*指定外掛程式的初始值設定項。相反，應使用外掛程式 `pluginInitialize` 為其啟動邏輯方法。
 
-外掛程式需要長時間運行的請求，如媒體重播、 聽眾，保持內部狀態應執行的背景活動 `onReset` 方法來清理這些活動。 在方法運行時 `UIWebView` 定位到新的一頁或刷新，重新載入 JavaScript。
+外掛程式需要長時間運行的請求，如媒體重播、 聽眾，<a href="../../next/index.html">保持</a>內部狀態應執行的背景活動 `onReset` 方法來清理這些活動。 在方法運行時 `UIWebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
 ## 寫作 iOS 科爾多瓦外掛程式
 
@@ -146,7 +146,7 @@ JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 iOS �
 
 ## iOS 一體化
 
-`CDVPlugin`類功能其他你的外掛程式可以重寫的方法。 例如，您可以捕獲 `pause` ， `resume` ，應用程式終止和 `handleOpenURL` 事件。 請參見[CDVPlugin.h][1]和[CDVPlugin.m][2]類的指導。
+`CDVPlugin`類功能其他你的外掛程式可以重寫的方法。 例如，您可以捕獲 `<a href="../../../cordova/events/events.pause.html">pause</a>` ， `<a href="../../../cordova/events/events.resume.html">resume</a>` ，應用程式終止和 `handleOpenURL` <a href="../../../cordova/events/events.html">事件</a>。 請參見[CDVPlugin.h][1]和[CDVPlugin.m][2]類的指導。
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
@@ -179,4 +179,4 @@ JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 iOS �
 
 *   別忘了添加到您的腳本映射 `config.xml` 。如果你忘記了，是在 Xcode 主控台中記錄錯誤。
 
-*   別忘了添加任何主機，您在白名單中，連接到域白名單指南中所述。如果你忘記了，是在 Xcode 主控台中記錄錯誤。
+*   別忘了添加任何主機，您在白名單中，連接到域<a href="../../appdev/whitelist/index.html">白名單指南</a>中所述。如果你忘記了，是在 Xcode 主控台中記錄錯誤。

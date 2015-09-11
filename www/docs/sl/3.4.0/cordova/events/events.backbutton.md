@@ -27,7 +27,7 @@ V primeru požarov, ko uporabnik pritisne gumb nazaj.
 
 ## Podrobnosti
 
-Če želite preglasiti privzeti gumb nazaj vedenje, Vpiši dogodek poslušalca za na `backbutton` dogodek, običajno s pozivom `document.addEventListener` Ko prejmete na `deviceready` dogodek. Več je treba poklicati drugo metodo preglasi gumb nazaj vedenje.
+Če želite preglasiti privzeti gumb nazaj vedenje, Vpiši dogodek poslušalca za na `backbutton` dogodek, običajno s pozivom `document.addEventListener` Ko prejmete na `<a href="events.deviceready.html">deviceready</a>` dogodek. Več je treba poklicati drugo metodo preglasi gumb nazaj vedenje.
 
 ## Podprte platforme
 
@@ -58,7 +58,7 @@ V primeru požarov, ko uporabnik pritisne gumb nazaj.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

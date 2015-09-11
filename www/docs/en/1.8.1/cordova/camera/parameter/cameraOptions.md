@@ -24,13 +24,13 @@ cameraOptions
 Optional parameters to customize the camera settings.
 
     { quality : 75, 
-      destinationType : Camera.DestinationType.DATA_URL, 
-      sourceType : Camera.PictureSourceType.CAMERA, 
+      destinationType : <a href="../camera.html">Camera</a>.DestinationType.DATA_URL, 
+      sourceType : <a href="../camera.html">Camera</a>.PictureSourceType.CAMERA, 
       allowEdit : true,
-      encodingType: Camera.EncodingType.JPEG,
+      encodingType: <a href="../camera.html">Camera</a>.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100,
-      popoverOptions: CameraPopoverOptions };
+      popoverOptions: <a href="../camera.html">Camera</a>PopoverOptions };
 
 Options
 -------
@@ -39,14 +39,14 @@ Options
 
 - __destinationType:__ Choose the format of the return value.  Defined in navigator.camera.DestinationType (`Number`)
         
-            Camera.DestinationType = {
+            <a href="../camera.html">Camera</a>.DestinationType = {
                 DATA_URL : 0,                // Return image as base64 encoded string
                 FILE_URI : 1                 // Return image file URI
             };
 
 - __sourceType:__ Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (`Number`)
      
-        Camera.PictureSourceType = {
+        <a href="../camera.html">Camera</a>.PictureSourceType = {
             PHOTOLIBRARY : 0,
             CAMERA : 1,
             SAVEDPHOTOALBUM : 2
@@ -56,7 +56,7 @@ Options
   
 - __encodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
         
-            Camera.EncodingType = {
+            <a href="../camera.html">Camera</a>.EncodingType = {
                 JPEG : 0,               // Return JPEG encoded image
                 PNG : 1                 // Return PNG encoded image
             };
@@ -64,9 +64,9 @@ Options
 - __targetWidth:__ Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (`Number`)
 - __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
 
-- __mediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
+- __mediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.<a href="../../media/media.html">Media</a>Type (`Number`)
      
-        Camera.MediaType = { 
+        <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type = { 
 			PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
 			VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
 			ALLMEDIA : 2			// allow selection from all media types
@@ -74,14 +74,14 @@ Options
 
 - __correctOrientation:__ Rotate the image to correct for the orientation of the device during capture. (`Boolean`)
 - __saveToPhotoAlbum:__ Save the image to the photo album on the device after capture. (`Boolean`)
-- __popoverOptions:__ iOS only options to specify popover location in iPad.  Defined in CameraPopoverOptions
+- __popoverOptions:__ iOS only options to specify popover location in iPad.  Defined in <a href="../camera.html">Camera</a>PopoverOptions
   
 Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
-- Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
-- Camera.EncodingType is not supported.
+- <a href="../camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY and <a href="../camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
+- <a href="../camera.html">Camera</a>.EncodingType is not supported.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `saveToPhotoAlbum` parameter.
 
@@ -91,9 +91,9 @@ BlackBerry Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
-- Application must have key injection permissions to close native Camera application after photo is taken.
+- Application must have key injection permissions to close native <a href="../camera.html">Camera</a> application after photo is taken.
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
-- Camera.MediaType is not supported.
+- <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type is not supported.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `saveToPhotoAlbum` parameter.
 
@@ -103,7 +103,7 @@ webOS Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
-- Camera.MediaType is not supported.
+- <a href="../camera.html">Camera</a>.<a href="../../media/media.html">Media</a>Type is not supported.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `saveToPhotoAlbum` parameter.
 

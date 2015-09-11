@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Mise à jour de BlackBerry 10
+# <a href="../blackberry/upgrading.html">Mise à jour de BlackBerry</a> 10
 
 Ce guide montre comment modifier des projets BlackBerry mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
@@ -95,7 +95,7 @@ Pour BlackBerryOS/Playbook :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans <a href="../ios/tools.html">iOS Command-line Tools</a>. Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -131,7 +131,7 @@ Pour BlackBerryOS/Playbook :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans <a href="../ios/tools.html">iOS Command-line Tools</a>. Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 

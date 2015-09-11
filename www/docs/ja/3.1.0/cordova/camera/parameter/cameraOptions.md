@@ -20,23 +20,23 @@ license: >
 
 # cameraOptions
 
-カメラの設定をカスタマイズするオプションのパラメーター。
+<a href="../camera.html">カメラ</a>の設定をカスタマイズするオプションのパラメーター。
 
-    {品質： 75、destinationType: Camera.DestinationType.DATA_URL、sourceType: Camera.PictureSourceType.CAMERA、allowEdit: true の場合、encodingType: Camera.EncodingType.JPEG、targetWidth: 100、targetHeight: 100、popoverOptions： CameraPopoverOptions、saveToPhotoAlbum: false};
+    {品質： 75、destinationType: Camera.DestinationType.DATA_URL、sourceType: Camera.PictureSourceType.CAMERA、allowEdit: true の場合、encodingType: Camera.EncodingType.JPEG、targetWidth: 100、targetHeight: 100、popoverOptions： <a href="CameraPopoverOptions.html">CameraPopoverOptions</a>、saveToPhotoAlbum: false};
     
 
 ## オプション
 
-*   **品質**： 0-100、100 がファイルの圧縮から損失なしで通常のフル解像度の範囲で表される、保存されたイメージの品質。 *(数)*（カメラの解像度についての情報が利用できないことに注意してください)。
+*   **品質**： 0-100、100 が<a href="../../file/fileobj/fileobj.html">ファイル</a>の圧縮から損失なしで通常のフル解像度の範囲で表される、保存されたイメージの品質。 *(数)*（<a href="../camera.html">カメラ</a>の解像度についての情報が利用できないことに注意してください)。
 
 *   **destinationType**: Choose the format of the return value. Defined in `navigator.camera.DestinationType` *(Number)*
     
-        Camera.DestinationType = {DATA_URL: 0、/base64 エンコード文字列 FILE_URI としてイメージを返す/: 1、//画像ファイル URI NATIVE_URI を返す： 2//戻り画像ネイティブ URI (例えば、資産ライブラリ://iOS またはコンテンツに：//アンドロイド)};
+        Camera.DestinationType = {DATA_URL: 0、/base64 エンコード文字列 FILE_URI としてイメージを返す/: 1、//画像<a href="../../file/fileobj/fileobj.html">ファイル</a> URI NATIVE_URI を返す： 2//戻り画像ネイティブ URI (例えば、資産ライブラリ://iOS またはコンテンツに：//アンドロイド)};
         
 
 *   **sourceType**: Set the source of the picture. Defined in `navigator.camera.PictureSourceType` *(Number)*
     
-        Camera.PictureSourceType = {フォト ライブラリ: 0, カメラ: 1、SAVEDPHOTOALBUM: 2};
+        Camera.PictureSourceType = {フォト ライブラリ: 0, <a href="../camera.html">カメラ</a>: 1、SAVEDPHOTOALBUM: 2};
         
 
 *   **allowEdit**: 単純な選択の前に画像の編集を許可します。*(ブール値)*
@@ -50,22 +50,22 @@ license: >
 
 *   **targetHeight**: スケール イメージにピクセル単位の高さ。**TargetWidth**を使用する必要があります。縦横比は変わりません。*(数)*
 
-*   **mediaType**： から選択するメディアの種類を設定します。 場合にのみ働きます `PictureSourceType` は `PHOTOLIBRARY` または `SAVEDPHOTOALBUM` 。 定義されている `nagivator.camera.MediaType` *（番号）* 
+*   **mediaType**： から選択する<a href="../../media/media.html">メディア</a>の種類を設定します。 場合にのみ働きます `PictureSourceType` は `PHOTOLIBRARY` または `SAVEDPHOTOALBUM` 。 定義されている `nagivator.camera.MediaType` *（番号）* 
     
-        Camera.MediaType = {画像： 0//静止画のみを選択できます。 既定値です。 DestinationType ビデオを介して指定された形式が返されます: 1、/のみ、常に戻る FILE_URI ALLMEDIA のビデオの選択を許可する/: 2//すべてのメディア タイプからの選択を許可
+        Camera.MediaType = {画像： 0//静止画のみを選択できます。 既定値です。 DestinationType ビデオを介して指定された形式が返されます: 1、/のみ、常に戻る FILE_URI ALLMEDIA のビデオの選択を許可する/: 2//すべての<a href="../../media/media.html">メディア</a> タイプからの選択を許可
         
     
     };
 
-*   **correctOrientation**: キャプチャ中に、デバイスの向きを修正する画像を回転させます。*(ブール値)*
+*   **correctOrientation**: <a href="../../media/capture/capture.html">キャプチャ</a>中に、<a href="../../device/device.html">デバイス</a>の向きを修正する画像を回転させます。*(ブール値)*
 
-*   **saveToPhotoAlbum**: キャプチャ後、デバイス上のフォト アルバムに画像を保存します。*(ブール値)*
+*   **saveToPhotoAlbum**: <a href="../../media/capture/capture.html">キャプチャ</a>後、<a href="../../device/device.html">デバイス</a>上のフォト アルバムに画像を保存します。*(ブール値)*
 
-*   **popoverOptions**: iPad のポップ オーバーの場所を指定する iOS のみのオプションです。定義されています。`CameraPopoverOptions`.
+*   **popoverOptions**: iPad のポップ オーバーの場所を指定する iOS のみのオプションです。定義されています。`<a href="CameraPopoverOptions.html">CameraPopoverOptions</a>`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
-        Camera.Direction = {戻る: 0、//後ろ向きカメラ前部を使用: 1/フロントに面したカメラを使用して/};
+        Camera.Direction = {戻る: 0、//後ろ向き<a href="../camera.html">カメラ</a>前部を使用: 1/フロントに面した<a href="../camera.html">カメラ</a>を使用して/};
         
 
 ## Android の癖
@@ -84,9 +84,9 @@ license: >
 
 *   無視、 `allowEdit` パラメーター。
 
-*   アプリケーションが、ユーザーは写真をスナップした後、ネイティブのカメラ アプリケーションを閉じるするには、キーの挿入権限が必要です。
+*   アプリケーションが、ユーザーは写真をスナップした後、ネイティブの<a href="../camera.html">カメラ</a> アプリケーションを<a href="../../inappbrowser/inappbrowser.html">閉じる</a>するには、キーの挿入権限が必要です。
 
-*   大きい画像サイズを使用すると、その機能の高解像度カメラ後でモデルのデバイス （例えば、トーチ 9800） で画像をエンコードすることができない可能性があります。
+*   大きい画像サイズを使用すると、その機能の高解像度<a href="../camera.html">カメラ</a>後でモデルの<a href="../../device/device.html">デバイス</a> （例えば、トーチ 9800） で画像をエンコードすることができない可能性があります。
 
 *   `Camera.MediaType`サポートされていません。
 
@@ -96,15 +96,15 @@ license: >
 
 ## iOS の癖
 
-*   設定 `quality` 一部のデバイスでメモリ不足エラーを避けるために 50 の下。
+*   設定 `quality` 一部の<a href="../../device/device.html">デバイス</a>でメモリ不足エラーを避けるために 50 の下。
 
-*   使用する場合 `destinationType.FILE_URI` 、写真、アプリケーションの一時ディレクトリに保存されます。 使用して、このディレクトリの内容を削除可能性があります、 `navigator.fileMgr` Api のストレージ スペースが必要な場合。
+*   使用する場合 `destinationType.FILE_URI` 、写真、アプリケーションの一時ディレクトリに保存されます。 使用して、このディレクトリの内容を削除可能性があります、 `navigator.fileMgr` Api の<a href="../../storage/storage.html">ストレージ</a> スペースが必要な場合。
 
 ## Tizen の癖
 
 *   サポートされていないオプション
 
-*   常にファイルの URI を返す
+*   常に<a href="../../file/fileobj/fileobj.html">ファイル</a>の URI を返す
 
 ## Windows Phone 7 と 8 癖
 

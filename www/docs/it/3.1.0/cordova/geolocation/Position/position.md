@@ -24,7 +24,7 @@ Contiene `Position` coordinate e timestamp, creato da geolocation API.
 
 ## Proprietà
 
-*   **CoOrds**: un insieme di coordinate geografiche. *(Coordinate)*
+*   **CoOrds**: un insieme di coordinate geografiche. *(<a href="../Coordinates/coordinates.html">Coordinate</a>)*
 
 *   **timestamp**: timestamp di creazione per `coords` . *(Data)*
 
@@ -56,14 +56,14 @@ Il `Position` oggetto viene creato e popolato di Cordova e restituito all'utente
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
     
 
 ## Esempio completo
@@ -71,19 +71,19 @@ Il `Position` oggetto viene creato e popolato di Cordova e restituito all'utente
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            navigator.<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>(onSuccess, onError);
         }
     
         // onSuccess Geolocation
@@ -100,7 +100,7 @@ Il `Position` oggetto viene creato e popolato di Cordova e restituito all'utente
                                 'Timestamp: '         + position.timestamp               + '<br />';
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="../PositionError/positionError.html">PositionError</a> object
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +

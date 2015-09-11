@@ -22,12 +22,12 @@ license: >
 
 Удаляет промежуточные фотографии, сделанные камерой из временного хранилища.
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
     
 
 ## Описание
 
-Удаляет промежуточные файлы изображений, которые хранятся во временном хранилище после вызова метода `camera.getPicture` . Применяется только тогда, когда значение `Camera.sourceType` равно `Camera.PictureSourceType.CAMERA` и `Camera.destinationType` равняется`Camera.DestinationType.FILE_URI`.
+Удаляет промежуточные файлы изображений, которые хранятся во временном хранилище после вызова метода `<a href="camera.getPicture.html">camera.getPicture</a>` . Применяется только тогда, когда значение `Camera.sourceType` равно `Camera.PictureSourceType.CAMERA` и `Camera.destinationType` равняется`Camera.DestinationType.FILE_URI`.
 
 ## Поддерживаемые платформы
 

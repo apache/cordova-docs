@@ -20,20 +20,20 @@ license: >
 
 # capture.captureAudio
 
-> 오디오 레코더 응용 프로그램을 시작 하 고 캡처한 오디오 클립 파일에 대 한 정보를 반환 합니다.
+> 오디오 레코더 응용 프로그램을 시작 하 고 <a href="capture.html">캡처</a>한 오디오 클립 <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 정보를 반환 합니다.
 
     navigator.device.capture.captureAudio(
-        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="CaptureError.html">CaptureError</a>CB captureError,  [<a href="captureAudioOptions.html">CaptureAudioOptions</a> options]
     );
     
 
 ## 설명
 
-소자의 기본 오디오 녹음 응용 프로그램을 사용 하 여 오디오 녹음을 캡처하는 비동기 작업을 시작 합니다. 작업 장치 사용자를 단일 세션에서 여러 녹화를 캡처할 수 있습니다.
+소자의 기본 오디오 녹음 응용 프로그램을 사용 하 여 오디오 녹음을 <a href="capture.html">캡처</a>하는 비동기 작업을 시작 합니다. 작업 <a href="../../device/device.html">장치</a> 사용자를 단일 세션에서 여러 녹화를 <a href="capture.html">캡처</a>할 수 있습니다.
 
-캡처 작업이 종료 사용자 오디오 녹음 응용 프로그램 또는 녹음에 의해 지정 된 최대 수를 종료 하는 경우 `CaptureAudioOptions.limit` 에 도달. 없는 경우 `limit` 매개 변수 값 지정, 하나 (1), 기본 및 캡처 작업이 종료 되 면 사용자는 하나의 오디오 클립을 기록 하는 후.
+<a href="capture.html">캡처</a> 작업이 종료 사용자 오디오 녹음 응용 프로그램 또는 녹음에 의해 지정 된 최대 수를 종료 하는 경우 `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` 에 도달. 없는 경우 `limit` 매개 <a href="../../../plugin_ref/spec.html">변수</a> 값 지정, 하나 (1), 기본 및 <a href="capture.html">캡처</a> 작업이 종료 되 면 사용자는 하나의 오디오 클립을 기록 하는 후.
 
-캡처 작업이 완료 되 면은 `CaptureCallback` 의 배열을 실행 `MediaFile` 오디오 클립 파일을 캡처 설명 하는 각 개체. 전에 오디오 클립을 캡처 작업이 종료 되 면 사용자는 `CaptureErrorCallback` 으로 실행 한 `CaptureError` 개체, 특징으로 `CaptureError.CAPTURE_NO_MEDIA_FILES` 오류 코드.
+<a href="capture.html">캡처</a> 작업이 완료 되 면은 `CaptureCallback` 의 배열을 실행 `MediaFile` 오디오 클립 <a href="../../file/fileobj/fileobj.html">파일</a>을 <a href="capture.html">캡처</a> 설명 하는 각 개체. 전에 오디오 클립을 <a href="capture.html">캡처</a> 작업이 종료 되 면 사용자는 `<a href="CaptureError.html">CaptureError</a>Callback` 으로 실행 한 `<a href="CaptureError.html">CaptureError</a>` 개체, 특징으로 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 오류 코드.
 
 ## 지원 되는 플랫폼
 
@@ -56,7 +56,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start audio capture
@@ -87,7 +87,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -100,7 +100,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
+            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     
@@ -126,7 +126,7 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-*   코르도바 블랙베리 WebWorks에 대 한 **목소리 노트 레코더** 응용, RIM, 제공한 오디오 녹음을 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
+*   코르도바 블랙베리 WebWorks에 대 한 **목소리 노트 레코더** 응용, RIM, 제공한 오디오 녹음을 잡으려고 시도 합니다. 응용 프로그램 수신는 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 <a href="../../device/device.html">장치</a>에 설치 되어 있지 않으면.
 
 ## iOS 단점
 

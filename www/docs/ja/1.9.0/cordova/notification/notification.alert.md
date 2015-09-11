@@ -44,7 +44,7 @@ notification.alert
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 以上) / iPhone
@@ -60,24 +60,24 @@ notification.alert
         '終了' // ボタン名
     );
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification の使用例</title>
+        <title><a href="notification.html">Notification</a> の<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // 処理なし
         }
 

@@ -24,7 +24,7 @@ Na `cordova` pripomoček ukazne vrstice je na visoki ravni orodje, ki vam omogo�
 
  [1]: http://cordova.apache.org
 
-Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte Uporaba Plugman za upravljanje Plugins. Glejte Uporaba Plugins za pregled.
+Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte <a href="../../../plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a>. Glejte Uporaba Plugins za pregled.
 
 Če potrebujete pomoč s poljuben zapoved spodaj, vnesite ukaz, skupaj z na `-h` ali `-help` argumentov, ki jih podpira vse ukaze in ki zagotavljajo opisi za vsako trditev, ki so na voljo.
 

@@ -29,7 +29,7 @@ license: >
 
 返回到數 `successCallback` 與 `properties` 物件作為參數。物件應具有 `value` 屬性與 `Number` 的值。
 
-如果有錯誤解析的字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
+如果有錯誤解析的字串，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
 
 `options`參數是可選的並且預設為以下值：
 
@@ -47,7 +47,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示與文本類似于彈出式對話方塊中 `number: 1234.56` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應<a href="../inappbrowser/inappbrowser.html">顯示</a>與文本類似于彈出式對話方塊中 `number: 1234.56` ：
 
     navigator.globalization.stringToNumber(
         '1234.56',
@@ -62,7 +62,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToNumber Example</title>
+        <title>stringToNumber <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

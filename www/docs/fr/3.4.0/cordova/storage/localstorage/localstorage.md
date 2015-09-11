@@ -85,14 +85,14 @@ Le `window.localStorage` interface implémente du W3C [stockage Web interface][2
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ Le `window.localStorage` interface implémente du W3C [stockage Web interface][2
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>localStorage</p>
       </body>
     </html>

@@ -24,8 +24,8 @@ license: >
 
 ## Methods
 
-- splashscreen.show
-- splashscreen.hide
+- splashscreen.<a href="../inappbrowser/inappbrowser.html">show</a>
+- <a href="splashscreen.hide.html">splashscreen.hide</a>
 
 ## Accessing the Feature
 
@@ -64,6 +64,6 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.
 
-See Icons and Splash Screens for information on how to configures these images.
+See <a href="../../config_ref/images.html">Icons and Splash Screens</a> for information on how to configures these images.

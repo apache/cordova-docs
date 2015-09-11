@@ -107,7 +107,7 @@ iOS
 ### 詳細
 
 1. `Cordova.plist` を開きます
-    - Xcode 内では `AppName/Supporting Files/Cordova.plist` で見つけられます
+    - Xcode 内では `AppName/Supporting <a href="../../cordova/file/fileobj/fileobj.html">File</a>s/Cordova.plist` で見つけられます
     - ディレクトリ内では `AppName/Cordova.plist` で見つけられます
 2. `ExternalHosts` キー配下に新しい文字列を追加します
     - XML の直接編集を避けるため、 Xcode を使用することを勧めます

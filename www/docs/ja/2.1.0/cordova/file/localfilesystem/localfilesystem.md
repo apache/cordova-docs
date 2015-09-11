@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-LocalFileSystem
+Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 ===============
 
 このオブジェクトは、ファイルシステムのルートの取得方法を提供します。
@@ -26,19 +26,19 @@ LocalFileSystem
 メソッド
 ----------
 
-- __requestFileSystem:__ ファイルシステムをリクエストします _(Function)_
-- __resolveLocalFileSystemURI:__ ローカル URI を使用して DirectoryEntry または FileEntry を取得します _(Function)_
+- __request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>:__ ファイルシステムをリクエストします _(Function)_
+- __resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI:__ ローカル URI を使用して <a href="../directoryentry/directoryentry.html">DirectoryEntry</a> または <a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a> を取得します _(Function)_
 
 定数
 ---------
 
-- `LocalFileSystem.PERSISTENT`: アプリやユーザーの許可なしに、ユーザエージェントのみでは削除されないような永続的なストレージを表します
-- `LocalFileSystem.TEMPORARY`: 永続性が保証されていないようなストレージを表します
+- `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT`: アプリやユーザーの許可なしに、ユーザエージェントのみでは削除されないような永続的なストレージを表します
+- `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.TEMPORARY`: 永続性が保証されていないようなストレージを表します
 
 詳細
 -------
 
-`LocalFileSystem` オブジェクトのメソッドは __window__ オブジェクトに定義されています。
+`Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>` オブジェクトのメソッドは __window__ オブジェクトに定義されています。
 
 サポートされているプラットフォーム
 -------------------
@@ -48,7 +48,7 @@ LocalFileSystem
 - iOS
 - Windows Phone 7 (Mango)
 
-Request File Systemの使用例
+Request <a href="../fileobj/fileobj.html">File</a> Systemの<a href="../../storage/storage.opendatabase.html">使用例</a>
 ---------------------------------
 
     function onSuccess(fileSystem) {
@@ -56,41 +56,41 @@ Request File Systemの使用例
     }
 
     // ファイルシステムをリクエスト
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, onError);
 
-Resolve Local File System URIの使用例
+Resolve Local <a href="../fileobj/fileobj.html">File</a> System URIの<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------------------------------------
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
     }
 
-    window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
+    window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onSuccess, onError);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System の使用例</title>
+        <title>Local <a href="../fileobj/fileobj.html">File</a> System の<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-            window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success, fail);
+            window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onResolveSuccess, fail);
         }
 
-        function onFileSystemSuccess(fileSystem) {
+        function on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success(fileSystem) {
             console.log(fileSystem.name);
         }
 
@@ -105,7 +105,7 @@ Resolve Local File System URIの使用例
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
-        <p>Local File System</p>
+        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
+        <p>Local <a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>

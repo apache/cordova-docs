@@ -26,7 +26,7 @@ Cet objet représente un répertoire sur un système de fichiers, tel que défin
 
 ## Propriétés
 
-*   **isFile**: toujours `false` . *(booléen)*
+*   **is<a href="../fileobj/fileobj.html">File</a>**: toujours `false` . *(booléen)*
 
 *   **isDirectory**: toujours `true` . *(booléen)*
 
@@ -42,9 +42,9 @@ Cet objet représente un répertoire sur un système de fichiers, tel que défin
 
 Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 
-*   **getMetadata**: recherche des métadonnées relatives à un répertoire.
+*   **get<a href="../metadata/metadata.html">Metadata</a>**: recherche des métadonnées relatives à un répertoire.
 
-*   **setMetadata**: définit des métadonnées sur un répertoire.
+*   **set<a href="../metadata/metadata.html">Metadata</a>**: définit des métadonnées sur un répertoire.
 
 *   **moveTo**: déplace un répertoire vers un autre emplacement sur le système de fichiers.
 
@@ -56,11 +56,11 @@ Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 
 *   **getParent**: cherche le répertoire parent.
 
-*   **createReader**: crée un nouveau `DirectoryReader` qui peut lire les entrées d'un répertoire.
+*   **createReader**: crée un nouveau `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` qui peut lire les entrées d'un répertoire.
 
 *   **getDirectory**: crée ou recherche un répertoire.
 
-*   **getFile**: crée ou recherche un fichier.
+*   **get<a href="../fileobj/fileobj.html">File</a>**: crée ou recherche un fichier.
 
 *   **removeRecursively**: supprime un répertoire et tout son contenu.
 
@@ -72,15 +72,15 @@ Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## getMetadata
+## get<a href="../metadata/metadata.html">Metadata</a>
 
 Rechercher des métadonnées relatives à un répertoire.
 
 **Paramètres :**
 
-*   **successCallback**: une fonction de callback pour exécuter avec un objet `Metadata`. *(Fonction)*
+*   **successCallback**: une fonction de callback pour exécuter avec un objet `<a href="../metadata/metadata.html">Metadata</a>`. *(Fonction)*
 
-*   **errorCallback**: une fonction de callback à exécuter si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un objet `FileError`. *(Fonction)*
+*   **errorCallback**: une fonction de callback à exécuter si une erreur se produit lors de la récupération du `<a href="../metadata/metadata.html">Metadata</a>` . Appelée avec un objet `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>`. *(Fonction)*
 
 **Petit exemple**
 
@@ -88,10 +88,10 @@ Rechercher des métadonnées relatives à un répertoire.
     
     function fail(error) {alert(error.code);}
     
-    / / Demande l'objet de métadonnées pour cette entrée entry.getMetadata (succès, échec) ;
+    / / Demande l'objet de métadonnées pour cette entrée entry.get<a href="../metadata/metadata.html">Metadata</a> (succès, échec) ;
     
 
-## setMetadata
+## set<a href="../metadata/metadata.html">Metadata</a>
 
 Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonctionne actuellement que sur iOS.*
 
@@ -114,7 +114,7 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
     }
     
     // Set the metadata
-    entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+    entry.set<a href="../metadata/metadata.html">Metadata</a>(success, fail, { "com.apple.MobileBackup": 1});
     
 
 **Spécificités iOS**
@@ -123,19 +123,19 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
 
 **Petit exemple**
 
-    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
+    function setFolder<a href="../metadata/metadata.html">Metadata</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, subFolder, metadataKey, metadataValue)
     {
-        var onSetMetadataWin = function() {
+        var onSet<a href="../metadata/metadata.html">Metadata</a>Win = function() {
             console.log("success setting metadata")
         }
-        var onSetMetadataFail = function() {
+        var onSet<a href="../metadata/metadata.html">Metadata</a>Fail = function() {
             console.log("error setting metadata")
         }
     
         var onGetDirectoryWin = function(parent) {
             var data = {};
             data[metadataKey] = metadataValue;
-            parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+            parent.set<a href="../metadata/metadata.html">Metadata</a>(onSet<a href="../metadata/metadata.html">Metadata</a>Win, onSet<a href="../metadata/metadata.html">Metadata</a>Fail, data);
         }
         var onGetDirectoryFail = function() {
             console.log("error getting dir")
@@ -149,10 +149,10 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
             console.log(evt.target.error.code);
         }
     
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolder<a href="../metadata/metadata.html">Metadata</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
@@ -177,7 +177,7 @@ Déplacer un répertoire sur le dessus un répertoire vide existant tente de sup
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec le `DirectoryEntry` objet pour le nouveau répertoire. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le répertoire. Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -218,7 +218,7 @@ Répertoire des copies sont toujours récursifs et copiez tout le contenu du ré
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec le `DirectoryEntry` objet pour le nouveau répertoire. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier l'annuaire sous-jacent. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier l'annuaire sous-jacent. Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -264,7 +264,7 @@ Supprime un répertoire. Une erreur se produit si l'application tente de :
 
 *   **successCallback**: une fonction de rappel qui s'exécute après que le répertoire est supprimé. Appelé sans paramètre. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le répertoire. Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -283,7 +283,7 @@ Rechercher le parent `DirectoryEntry` contenant le répertoire.
 
 *   **successCallback**: un rappel passé parent du répertoire `DirectoryEntry` . *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `DirectoryEntry` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `DirectoryEntry` . Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -301,7 +301,7 @@ Rechercher le parent `DirectoryEntry` contenant le répertoire.
 
 ## createReader
 
-Crée une nouvelle DirectoryReader pour lire le contenu d'un répertoire.
+Crée une nouvelle <a href="../directoryreader/directoryreader.html">DirectoryReader</a> pour lire le contenu d'un répertoire.
 
 **Petit exemple**
 
@@ -323,7 +323,7 @@ Crée ou lève les yeux un répertoire existant. Une erreur se produit si l'appl
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec un `DirectoryEntry` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le répertoire. Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -334,7 +334,7 @@ Crée ou lève les yeux un répertoire existant. Une erreur se produit si l'appl
     / / Récupérer un répertoire existant, ou créer si elle n'existe pas déjà entry.getDirectory (« Nouveau_répertoire », {créer : true, exclusif : false}, succès, échec) ;
     
 
-## getFile
+## get<a href="../fileobj/fileobj.html">File</a>
 
 Crée ou lève les yeux un fichier. Une erreur se produit si l'application tente de :
 
@@ -346,9 +346,9 @@ Crée ou lève les yeux un fichier. Une erreur se produit si l'application tente
 
 *   **options**: Options pour spécifier si le fichier est créé s'il n'existe pas. *(Drapeaux)*
 
-*   **successCallback**: un rappel passé un `FileEntry` objet. *(Fonction)*
+*   **successCallback**: un rappel passé un `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le fichier. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le fichier. Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -356,7 +356,7 @@ Crée ou lève les yeux un fichier. Une erreur se produit si l'application tente
     
     function fail(error) {alert ("Impossible de récupérer le fichier:" + error.code);}
     
-    / / Récupérer un fichier existant, ou créer si elle n'existe pas de entry.getFile (« newFile.txt », {créer : vrai, exclusif : false}, succès, échec) ;
+    / / Récupérer un fichier existant, ou créer si elle n'existe pas de entry.get<a href="../fileobj/fileobj.html">File</a> (« new<a href="../fileobj/fileobj.html">File</a>.txt », {créer : vrai, exclusif : false}, succès, échec) ;
     
 
 ## removeRecursively
@@ -369,7 +369,7 @@ Supprime un répertoire et tout son contenu. En cas d'erreur (par exemple en ess
 
 *   **successCallback**: un rappel qui s'exécute après le `DirectoryEntry` a été supprimé. Appelé sans paramètre. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le `DirectoryEntry` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le `DirectoryEntry` . Appelée avec un `<a href="../fileerror/fileerror.html"><a href="../fileobj/fileobj.html">File</a>Error</a>` objet. *(Fonction)*
 
 **Petit exemple**
 

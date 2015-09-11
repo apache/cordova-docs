@@ -20,20 +20,20 @@ license: >
 
 # capture.captureVideo
 
-> ビデオ レコーダー アプリケーションを起動し、キャプチャしたビデオ クリップ ファイルに関する情報を返します。
+> ビデオ レコーダー アプリケーションを起動し、<a href="capture.html">キャプチャ</a>したビデオ クリップ <a href="../../file/fileobj/fileobj.html">ファイル</a>に関する情報を返します。
 
     navigator.device.capture.captureVideo(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureVideoOptions.html">CaptureVideoOptions</a> options]
     );
     
 
 ## 説明
 
-デバイスのビデオ録画アプリケーションを使用してビデオ記録をキャプチャする非同期操作を開始します。操作は、単一のセッションで 1 つ以上の録音をキャプチャすることができます。
+<a href="../../device/device.html">デバイス</a>のビデオ録画アプリケーションを使用してビデオ記録を<a href="capture.html">キャプチャ</a>する非同期操作を開始します。操作は、単一のセッションで 1 つ以上の録音を<a href="capture.html">キャプチャ</a>することができます。
 
-キャプチャ操作終了いずれかユーザーがビデオ録画アプリケーションまたは録音で指定された最大数を終了時 `CaptureVideoOptions.limit` に達した。 いいえの場合 `limit` パラメーター値が指定されて、既定の 1 つ （1）、ユーザーは 1 つのビデオ クリップを記録した後にキャプチャ操作が終了しました。
+<a href="capture.html">キャプチャ</a>操作終了いずれかユーザーがビデオ録画アプリケーションまたは録音で指定された最大数を終了時 `<a href="captureVideoOptions.html">CaptureVideoOptions</a>.limit` に達した。 いいえの場合 `limit` パラメーター値が指定されて、既定の 1 つ （1）、ユーザーは 1 つのビデオ クリップを記録した後に<a href="capture.html">キャプチャ</a>操作が終了しました。
 
-キャプチャ操作が完了したら、それは `CaptureCB` の配列でコールバックを実行します `MediaFile` ビデオ クリップ ファイルをキャプチャしてそれぞれを記述するオブジェクトします。 ユーザーがビデオ クリップをキャプチャする前に操作を終了した場合、 `CaptureErrorCB` コールバックで実行する、 `CaptureError` オブジェクトの特色を `CaptureError.CAPTURE_NO_MEDIA_FILES` エラー コード。
+<a href="capture.html">キャプチャ</a>操作が完了したら、それは `<a href="CaptureCB.html">CaptureCB</a>` の配列でコールバックを実行します `MediaFile` ビデオ クリップ <a href="../../file/fileobj/fileobj.html">ファイル</a>を<a href="capture.html">キャプチャ</a>してそれぞれを記述するオブジェクトします。 ユーザーがビデオ クリップを<a href="capture.html">キャプチャ</a>する前に操作を終了した場合、 `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` コールバックで実行する、 `<a href="CaptureError.html">CaptureError</a>` オブジェクトの特色を `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` エラー コード。
 
 ## サポートされているプラットフォーム
 
@@ -56,7 +56,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start video capture
@@ -87,7 +87,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -126,4 +126,4 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-*   BlackBerry の WebWorks のコルドバ**ビデオ レコーダー**アプリケーションを起動し、リム、によって提供されるビデオ録画をキャプチャしようとします。 アプリは受け取ります、 `CaptureError.CAPTURE_NOT_SUPPORTED` 、アプリケーションがデバイスにインストールされていない場合はエラー コード。
+*   BlackBerry の WebWorks のコルドバ**ビデオ レコーダー**アプリケーションを起動し、リム、によって提供されるビデオ録画を<a href="capture.html">キャプチャ</a>しようとします。 アプリは受け取ります、 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` 、アプリケーションが<a href="../../device/device.html">デバイス</a>にインストールされていない場合はエラー コード。

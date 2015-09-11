@@ -20,11 +20,11 @@ license: >
 
 # Android のプラグイン
 
-Android プラットフォームでネイティブのプラグインのコードを実装する方法の詳細について説明します。 これを読む前に、プラグインの構造とその一般的な JavaScript のインターフェイスの概要についてアプリケーション ・ プラグインが参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。 別のサンプルも参照してください[CordovaPlugin.java][1]のコメント.
+Android プラットフォームでネイティブのプラグインのコードを実装する方法の詳細について説明します。 これを読む前に、プラグインの構造とその一般的な JavaScript のインターフェイスの<a href="../../overview/index.html">概要</a>についてアプリケーション ・ プラグインが参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。 別のサンプルも参照してください[CordovaPlugin.java][1]のコメント.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android のプラグインはそれに取り付けられたフックを持つアンドロイドの WebView を成っているコルドバ アンドロイドに基づいています。 プラグインのクラスへのマッピングとして表される、 `config.xml` ファイル。 プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` のいずれかをオーバーライドするクラスの `execute` メソッド。 ベスト プラクティス、プラグインも扱うべきです `pause` と `resume` イベントのプラグイン間のメッセージパッシングと共に。 実行時間の長い要求は、メディアの再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
+Android のプラグインはそれに取り付けられたフックを持つアンドロイドの WebView を成っているコルドバ アンドロイドに基づいています。 プラグインのクラスへのマッピングとして表される、 `config.xml` ファイル。 プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` のいずれかをオーバーライドするクラスの `execute` メソッド。 ベスト プラクティス、プラグインも扱うべきです `<a href="../../../cordova/events/events.pause.html">pause</a>` と `<a href="../../../cordova/events/events.resume.html">resume</a>` <a href="../../../cordova/events/events.html">イベント</a>のプラグイン間のメッセージパッシングと共に。 実行時間の長い要求は、メディアの再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
 
 ## プラグイン クラスのマッピング
 
@@ -77,7 +77,7 @@ JavaScript は `exec` 関数の `action` パラメーターを省略可能なパ
 
 ## スレッド処理
 
-プラグインの java スクリプトの設定が*ない*のメイン スレッドで実行、 `WebView` インタ フェース ； その代わりに、上で実行、 `WebCore` スレッドのように、 `execute` メソッド。 ユーザー インターフェイスと対話する必要がある場合次のバリエーションを使用する必要があります。
+プラグインの java スクリプトの設定が*ない*のメイン スレッドで実行、 `WebView` インタ フェース ； その代わりに、上で実行、 `WebCore` スレッドのように、 `execute` メソッド。 <a href="../../next/index.html">ユーザー インターフェイス</a>と対話する必要がある場合次のバリエーションを使用する必要があります。
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {

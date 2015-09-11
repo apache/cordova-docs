@@ -28,7 +28,7 @@ license: >
 
 ## Подробная информация
 
-`Metadata`Объект представляет сведения о состоянии файла или каталога. Вызов `DirectoryEntry` или `FileEntry` объекта `getMetadata()` метода `Metadata` экземпляра.
+`Metadata`Объект представляет сведения о состоянии файла или каталога. Вызов `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` или `<a href="../fileentry/fileentry.html">FileEntry</a>` объекта `getMetadata()` метода `Metadata` экземпляра.
 
 ## Поддерживаемые платформы
 

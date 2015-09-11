@@ -22,12 +22,12 @@ license: >
 
 Elimina intermedio fotos tomadas por la cámara de almacenamiento temporal.
 
-    navigator.camera.cleanup( cameraSuccess, cameraError );
+    navigator.camera.cleanup( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a> );
     
 
 ## Descripción
 
-Elimina los archivos de imagen intermedia que se mantienen en depósito temporal después de llamar a `camera.getPicture`. Se aplica sólo cuando el valor de `Camera.sourceType` es igual a `Camera.PictureSourceType.CAMERA` y el `Camera.destinationType` es igual a `Camera.DestinationType.FILE_URI`.
+Elimina los archivos de imagen intermedia que se mantienen en depósito temporal después de llamar a `<a href="camera.getPicture.html">camera.getPicture</a>`. Se aplica sólo cuando el valor de `Camera.sourceType` es igual a `Camera.PictureSourceType.CAMERA` y el `Camera.destinationType` es igual a `Camera.DestinationType.FILE_URI`.
 
 ## Plataformas soportadas
 

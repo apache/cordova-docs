@@ -32,33 +32,33 @@ license: >
 
 *   Xcode 4.5 이상
 
-*   `config.xml`(새로 만든된 iOS 프로젝트)에서 파일
+*   `config.xml`(새로 만든된 iOS 프로젝트)에서 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>
 
 ## 칼은 Xcode 프로젝트 (CordovaLib 하위 프로젝트)에 추가
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 소스 예`~/Documents/Cordova`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 <a href="../../../cordova/geolocation/Position/position.html">위치</a>로 코르도바 소스 예`~/Documents/Cordova`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
 3.  위의 다운로드 한 소스를 넣으면 디렉터리로 이동 Terminal.app을 사용 하 여.
 
-4.  복사는 `config.xml` 디스크에 프로젝트 디렉터리에 파일 (위의 필수 구성 요소 참조).
+4.  복사는 `config.xml` 디스크에 프로젝트 디렉터리에 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (위의 필수 구성 요소 참조).
 
-5.  끌어서 놓기는 `config.xml` Xcode 프로젝트 탐색기에 파일.
+5.  끌어서 놓기는 `config.xml` Xcode 프로젝트 탐색기에 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>.
 
 6.  **어떤 추가 된 폴더에 대 한 그룹 만들기** 라디오 단추를 선택 하 고 **완료** 를 누릅니다.
 
-7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 파일 (영구 디렉터리에서 위에 위치 하 고 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
+7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (영구 디렉터리에서 위에 <a href="../../../cordova/geolocation/Position/position.html">위치</a> 하 고 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  **파일 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합 입력.
+9.  **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 를 표시 하려면 **옵션-명령-1** 키 조합 입력.
 
-10. **위치** 에 대 한 드롭 다운 메뉴에 대 한 **파일 관리자** 에서 **상대 그룹** 선택.
+10. **<a href="../../../cordova/geolocation/Position/position.html">위치</a>** 에 대 한 드롭 다운 메뉴에 대 한 **<a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 관리자** 에서 **상대 그룹** 선택.
 
 11. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, 당신의 **대상**을 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
-12. 추가 `-all_load` 및 `-Obj-C` **다른 링커 플래그** 값에 대 한.
+12. 추가 `-all_load` 및 `-Obj-C` **다른 링커 <a href="../../../cordova/file/flags/flags.html">플래그</a>** 값에 대 한.
 
 13. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 클릭 하십시오, **대상**을 선택한 다음 **빌드 단계** 탭을 선택 합니다.
 
@@ -77,7 +77,7 @@ license: >
 
 19. **+** 선택 버튼, 그리고 추가`libCordova.a`.
 
-20. **고유** **Xcode 환경 설정 → 위치 → 파생 데이터 → 고급...** Xcode 환경 설정.
+20. **고유** **Xcode 환경 설정 → <a href="../../../cordova/geolocation/Position/position.html">위치</a> → 파생 데이터 → 고급...** Xcode 환경 설정.
 
 21. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, 당신의 **대상**을 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
@@ -122,12 +122,12 @@ license: >
         viewController.useSplashScreen = YES;
         
 
-6.  **보기 프레임** 설정 (마지막 속성으로 항상 설정이):
+6.  **<a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a> 프레임** 설정 (마지막 속성으로 항상 설정이):
     
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
-7.  보기에 식 칼을 추가:
+7.  <a href="../../../cordova/inappbrowser/inappbrowser.html">보기</a>에 식 칼을 추가:
     
         [myView addSubview:viewController.view];
         

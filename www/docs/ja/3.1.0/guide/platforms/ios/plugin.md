@@ -22,7 +22,7 @@ license: >
 
 プラグインは拡張する客観的 C クラスは `CDVPlugin` クラスです。
 
-各プラグインのクラスとして登録する必要があります、 `<feature>` タグを `config.xml` ファイル。 その JavaScript はこの機構を介して `exec` メソッドの `service` パラメーター、Objective-C のクラスにマップします。
+各プラグインのクラスとして登録する必要があります、 `<feature>` タグを `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。 その JavaScript はこの機構を介して `exec` メソッドの `service` パラメーター、Objective-C のクラスにマップします。
 
 ## プラグイン クラスのマッピング
 
@@ -33,7 +33,7 @@ license: >
 
 これから要求をマーシャ リングします、 `UIWebView` 、iOS ネイティブ側にもっとまたはより少なく通話にダウン沸騰、 `action` メソッド、 `service` に渡された引数を持つクラス、 `args` 配列。
 
-指定のプラグインとして、 `<feature>` 、コルドバ iOS アプリケーションのプロジェクトのタグ `config.xml` ファイル。
+指定のプラグインとして、 `<feature>` 、コルドバ iOS アプリケーションのプロジェクトのタグ `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
@@ -54,11 +54,11 @@ license: >
 
 *ない*プラグインの初期化子を指定します。代わりに、プラグインを使用する必要があります、 `pluginInitialize` 、スタート アップ ロジックのメソッド。
 
-実行時間の長い要求プラグイン背景活動 （例えば、再生中のメディア）、内部状態またはリスナーを実装する必要があります、 `onReset` メソッドと停止またはそれらの活動をクリーンアップします。 このメソッドが実行されます、 `UIWebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
+実行時間の長い要求プラグイン背景活動 （例えば、再生中の<a href="../../../cordova/media/media.html">メディア</a>）、内部状態またはリスナーを実装する必要があります、 `onReset` メソッドと停止またはそれらの活動をクリーンアップします。 このメソッドが実行されます、 `UIWebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
 
 ## IOS コルドバ プラグインを書く
 
-Java スクリプトの設定をネイティブ側に要求するプラグイン火があります。 我々 は持っている iOS Objective-C プラグイン経由で適切に割り当てられて、 `config.xml` ファイル。 だから最終的な iOS Objective-C のプラグイン クラスどのようか。
+Java スクリプトの設定をネイティブ側に要求するプラグイン火があります。 我々 は持っている iOS Objective-C プラグイン経由で適切に割り当てられて、 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。 だから最終的な iOS Objective-C のプラグイン クラスどのようか。
 
 どのような JavaScript の経由でプラグインにディスパッチを取得 `exec` 関数で渡される対応するプラグイン クラスの `action` メソッド。プラグインのメソッドは、この署名。
 
@@ -103,14 +103,14 @@ CDVPluginResult を使用してを返すことができますさまざまな結�
 
 ## エコー プラグイン iOS プラグイン
 
-我々 は、次のプロジェクトに追加の `config.xml` ファイル。
+我々 は、次のプロジェクトに追加の `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
     
 
-我々 は、次のファイルを追加し、( `Echo.h` および `Echo.m` ) 私たちコルドバ iOS アプリケーション ディレクトリ内のプラグイン ディレクトリに。
+我々 は、次の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を追加し、( `Echo.h` および `Echo.m` ) 私たちコルドバ iOS アプリケーション ディレクトリ内のプラグイン ディレクトリに。
 
     /********* Echo.h Cordova Plugin Header *******/
     
@@ -182,7 +182,7 @@ CDVPluginResult を使用してを返すことができますさまざまな結�
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-たとえばにフックすることができます、 `pause` 、 `resume` 、アプリを終了して `handleOpenURL` イベント。
+たとえばにフックすることができます、 `pause` 、 `resume` 、アプリを終了して `handleOpenURL` <a href="../../../cordova/events/events.html">イベント</a>。
 
 ## プラグインのデバッグ
 
@@ -197,4 +197,4 @@ IOS の 6, サファリ 6.0 を使用して単に ios 6 シミュレータを実
 
 *   Config.xml にプラグインのマッピングを追加することを忘れないでください。忘れた場合は、Xcode のコンソールにエラーが記録されます。
 
-*   ドメイン ホワイト リスト ガイドで説明されているように、ホワイト リストに接続するすべてのホストを追加することを忘れないでください。忘れた場合は、Xcode のコンソールにエラーが記録されます。
+*   ドメイン ホワイト リスト <a href="../../../index.html">ガイド</a>で説明されているように、ホワイト リストに<a href="../../../cordova/connection/connection.html">接続</a>するすべてのホストを追加することを忘れないでください。忘れた場合は、Xcode のコンソールにエラーが記録されます。

@@ -35,7 +35,7 @@ Das `deviceready` -Ereignis wird ausgelöst, sobald Cordova vollständig geladen
 
 Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereignishandler registriert nach der `deviceready` -Ereignis ausgelöst hat die Callback-Funktion aufgerufen, sofort.
 
-## Unterstützte Plattformen
+## <a href="../../config_ref/images.html">Unterstützte Plattformen</a>
 
 *   Amazon Fire OS
 *   Android
@@ -59,7 +59,7 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">

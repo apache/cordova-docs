@@ -39,36 +39,36 @@ device.cordova
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     var name = device.cordova;
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
 
-            element.innerHTML = 'デバイス名: ' + device.name + '<br />' +
+            element.innerHTML = 'デバイス名: ' + <a href="device.name.html">device.name</a> + '<br />' +
                                 'デバイス Cordova: ' + device.cordova + '<br />' +
-                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
-                                'デバイス UUID: ' + device.uuid + '<br />' +
-                                'デバイスバージョン: ' + device.version + '<br />';
+                                'デバイスプラットフォーム: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'デバイス UUID: ' + <a href="device.uuid.html">device.uuid</a> + '<br />' +
+                                'デバイスバージョン: ' + <a href="device.version.html">device.version</a> + '<br />';
         }
 
         </script>

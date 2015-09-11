@@ -36,7 +36,7 @@ Jeżyna 10:
 
 5.  Skopiuj swój projekt źródła od starego projektu `/www` katalogu do nowego projektu `/www` katalogu.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  <a href="../android/upgrade.html">Aktualizacja</a> Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 ### BlackBerryOS/Playbook
 
@@ -50,7 +50,7 @@ Jeżyna 10:
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  <a href="../android/upgrade.html">Aktualizacja</a> Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 7.  Kopia `native` katalogu z nowym projektem do istniejącego projektu, zastępując stare `native` katalogu.
 
@@ -74,7 +74,7 @@ BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowe API jako wt
 
 5.  Skopiuj swój projekt źródła od starego projektu `/www` katalogu do nowego projektu `/www` katalogu.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  <a href="../android/upgrade.html">Aktualizacja</a> Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 BlackBerryOS/Playbook:
 
@@ -88,7 +88,7 @@ BlackBerryOS/Playbook:
 
 5.  Kopia `www/cordova.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  <a href="../android/upgrade.html">Aktualizacja</a> Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 7.  Kopia `native` katalogu z nowym projektem do istniejącego projektu, zastępując stare `native` katalogu.
 
@@ -108,7 +108,7 @@ BlackBerryOS/Playbook:
 
 5.  Kopia `www/cordova-2.7.0.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova-2.6.0.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova-2.7.0.js` pliku.
+6.  <a href="../android/upgrade.html">Aktualizacja</a> Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova-2.7.0.js` pliku.
 
 7.  Kopia `native` katalogu z nowym projektem do istniejącego projektu, zastępując stare `native` katalogu.
 
@@ -116,9 +116,9 @@ BlackBerryOS/Playbook:
 
 9.  Kopia `cordova` katalogu z nowym projektem do istniejącego projektu, zastępując stare `cordova` katalogu.
 
-## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
+## <a href="../android/upgrade.html">Aktualizacja</a> z wersji 2.5.0 do wersji 2.6.0
 
-Aktualizacja katalogu download telefon:
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu download telefon:
 
 Zalecane jest, że można pobrać nową kopię całego katalogu.
 
@@ -126,13 +126,13 @@ Jednakże tu są nowe części potrzebne do aktualizacji fragmentaryczne:
 
 1.  Zaktualizować plik cordova.blackberry.js w `Phonegap-2.6.0/lib/blackberry/javascript` katalogu.
 
-2.  Aktualizacja `ext` , `ext-air` , i `ext-qnx` w `Phonegap-2.6.0/lib/blackberry/framework` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> `ext` , `ext-air` , i `ext-qnx` w `Phonegap-2.6.0/lib/blackberry/framework` katalogu.
 
-3.  Aktualizacja `build.xml` plik w `Phonegap-2.6.0/lib/blackberry` katalogu.
+3.  <a href="../android/upgrade.html">Aktualizacja</a> `build.xml` plik w `Phonegap-2.6.0/lib/blackberry` katalogu.
 
-4.  Aktualizacja `Phonegap-2.6.0/lib/blackberry/bin` katalogu.
+4.  <a href="../android/upgrade.html">Aktualizacja</a> `Phonegap-2.6.0/lib/blackberry/bin` katalogu.
 
-5.  Aktualizacja `VERSION` plik w `Phonegap-2.6.0/lib/blackberry` katalogu.
+5.  <a href="../android/upgrade.html">Aktualizacja</a> `VERSION` plik w `Phonegap-2.6.0/lib/blackberry` katalogu.
 
 Aktualizowanie `example/` katalogu lub migracja istniejącego projektu:
 
@@ -150,7 +150,7 @@ Aktualizowanie `example/` katalogu lub migracja istniejącego projektu:
 
 ## Uaktualnić do 2.5.0 2.4.0
 
-Aktualizacja katalogu download telefon:
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu download telefon:
 
 Zalecane jest, że można pobrać nową kopię całego katalogu.
 
@@ -158,13 +158,13 @@ Jednakże tu są nowe części potrzebne do aktualizacji fragmentaryczne:
 
 1.  Zaktualizować plik cordova.blackberry.js w `Phonegap-2.5.0/lib/blackberry/javascript` katalogu.
 
-2.  Aktualizacja `ext` , `ext-air` , i `ext-qnx` w `Phonegap-2.5.0/lib/blackberry/framework` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> `ext` , `ext-air` , i `ext-qnx` w `Phonegap-2.5.0/lib/blackberry/framework` katalogu.
 
-3.  Aktualizacja `build.xml` plik w `Phonegap-2.5.0/lib/blackberry` katalogu.
+3.  <a href="../android/upgrade.html">Aktualizacja</a> `build.xml` plik w `Phonegap-2.5.0/lib/blackberry` katalogu.
 
-4.  Aktualizacja `Phonegap-2.5.0/lib/blackberry/bin` katalogu.
+4.  <a href="../android/upgrade.html">Aktualizacja</a> `Phonegap-2.5.0/lib/blackberry/bin` katalogu.
 
-5.  Aktualizacja `VERSION` plik w `Phonegap-2.5.0/lib/blackberry` katalogu.
+5.  <a href="../android/upgrade.html">Aktualizacja</a> `VERSION` plik w `Phonegap-2.5.0/lib/blackberry` katalogu.
 
 Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
 
@@ -182,7 +182,7 @@ Aktualizowanie w przykładzie / katalog lub migracja istniejącego projektu:
 
 ## Uaktualnić do 2.4.0 2.3.0
 
-Aktualizacja tylko `www` katalogu:
+<a href="../android/upgrade.html">Aktualizacja</a> tylko `www` katalogu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -197,17 +197,17 @@ Aktualizacja tylko `www` katalogu:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.4.0.js` pliku.
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.2.3.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.2.3.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.2.3.0/ext-air/` katalogu.
 
 4.  Aktualizowanie zawartości `cordova.2.3.0/ext-qnx/` katalogu.
 
-5.  Aktualizacja pliku js w `cordova.2.3.0/javascript/` katalogu.
+5.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.2.3.0/javascript/` katalogu.
 
 6.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.3.0/` katalogu`cordova.2.4.0/`.
 
@@ -217,7 +217,7 @@ Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
 
 ## Uaktualnić do 2.3.0 2.2.0
 
-Aktualizacja tylko `www` katalogu:
+<a href="../android/upgrade.html">Aktualizacja</a> tylko `www` katalogu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -232,17 +232,17 @@ Aktualizacja tylko `www` katalogu:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.3.0.js` pliku.
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.2.2.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.2.2.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.2.2.0/ext-air/` katalogu.
 
 4.  Aktualizowanie zawartości `cordova.2.2.0/ext-qnx/` katalogu.
 
-5.  Aktualizacja pliku js w `cordova.2.2.0/javascript/` katalogu.
+5.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.2.2.0/javascript/` katalogu.
 
 6.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.2.0/` katalogu`cordova.2.3.0/`.
 
@@ -252,7 +252,7 @@ Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
 
 ## Uaktualnienie do 2.2.0 z 2.1.0
 
-Aktualizacja katalogu www:
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu www:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -267,17 +267,17 @@ Aktualizacja katalogu www:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.2.0.js` pliku.
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.2.1.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.2.1.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.2.1.0/ext-air/` katalogu.
 
 4.  Aktualizowanie zawartości `cordova.2.1.0/ext-qnx/` katalogu.
 
-5.  Aktualizacja pliku js w `cordova.2.1.0/javascript/` katalogu.
+5.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.2.1.0/javascript/` katalogu.
 
 6.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.1.0/` katalogu`cordova.2.2.0/`.
 
@@ -287,7 +287,7 @@ Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
 
 ## Uaktualnienie do 2.1.0 z 2.0.0
 
-Aktualizacja tylko `www` katalogu:
+<a href="../android/upgrade.html">Aktualizacja</a> tylko `www` katalogu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -301,15 +301,15 @@ Aktualizacja tylko `www` katalogu:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.1.0.js` pliku.
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.2.0.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.2.0.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.2.0.0/ext-air/` katalogu.
 
-4.  Aktualizacja pliku js w `cordova.2.0.0/javascript/` katalogu.
+4.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.2.0.0/javascript/` katalogu.
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.2.0.0/` katalogu`cordova.2.1.0/`.
 
@@ -319,7 +319,7 @@ Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
 
 ## Uaktualnić do 2.0.0 1.9.0
 
-Aktualizacja tylko `www` katalogu:
+<a href="../android/upgrade.html">Aktualizacja</a> tylko `www` katalogu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -333,7 +333,7 @@ Aktualizacja tylko `www` katalogu:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-2.0.0.js` pliku.
 
-6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+6.  <a href="../android/upgrade.html">Aktualizacja</a> `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< nazwa pluginu "Kontakt" value="org.apache.cordova.pim.Contact"/ = >
         
@@ -343,15 +343,15 @@ Aktualizacja tylko `www` katalogu:
         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< nazwa pluginu "Kontakty" value="org.apache.cordova.pim.Contact"/ = >
         
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.1.9.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.1.9.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.1.9.0/ext-air/` katalogu.
 
-4.  Aktualizacja pliku js w `cordova.1.9.0/javascript/` katalogu.
+4.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.1.9.0/javascript/` katalogu.
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.1.9.0/` katalogu`cordova.2.0.0/`.
 
@@ -373,7 +373,7 @@ Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
 
 ## Uaktualnienie do 1.8.0 z 1.7.0
 
-Aktualizacja tylko `www` katalogu:
+<a href="../android/upgrade.html">Aktualizacja</a> tylko `www` katalogu:
 
 1.  Otwarte `www` katalogu, który zawiera aplikację.
 
@@ -387,7 +387,7 @@ Aktualizacja tylko `www` katalogu:
 
 5.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova-1.8.0.js` pliku.
 
-6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
+6.  <a href="../android/upgrade.html">Aktualizacja</a> `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< nazwa pluginu "Kontakt" value="org.apache.cordova.pim.Contact"/ = >
         
@@ -397,15 +397,15 @@ Aktualizacja tylko `www` katalogu:
         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< nazwa pluginu "Kontakty" value="org.apache.cordova.pim.Contact"/ = >
         
 
-Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):
+<a href="../android/upgrade.html">Aktualizacja</a> katalogu sample (czyli aktualizacji używając narzędzia):
 
 1.  Otwarte `sample/lib/` katalogu.
 
-2.  Aktualizacja pliku .jar w `cordova.1.7.0/ext/` katalogu.
+2.  <a href="../android/upgrade.html">Aktualizacja</a> pliku .jar w `cordova.1.7.0/ext/` katalogu.
 
 3.  Aktualizowanie zawartości `cordova.1.7.0/ext-air/` katalogu.
 
-4.  Aktualizacja pliku js w `cordova.1.7.0/javascript/` katalogu.
+4.  <a href="../android/upgrade.html">Aktualizacja</a> pliku js w `cordova.1.7.0/javascript/` katalogu.
 
 5.  Otwarte `sample/lib/` katalogu i nazwy `cordova.1.7.0/` katalogu`cordova.1.8.0/`.
 

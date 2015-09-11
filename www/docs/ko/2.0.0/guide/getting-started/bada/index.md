@@ -39,7 +39,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 3. Setup New Project
 --------------------
-- In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project. 
+- In Bada IDE, select _<a href="../../../cordova/file/fileobj/fileobj.html">File</a>_ -> Import project -> Bada C++ / Flash Project. 
     - Note: Bada 1.2 select "Bada Application Project"
     
     ![](img/guide/getting-started/bada/import_bada_project.png)
@@ -54,7 +54,7 @@ This guide describes how to set up your development environment for Cordova and 
     ![](img/guide/getting-started/bada/bada_project.png)
 
 
-4. Hello World
+4. <a href="../webos/index.html">Hello World</a>
 --------------
 
 **Bada 2.x**: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
@@ -80,7 +80,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
 
-5B. Deploy to Device
+5B. Deploy to <a href="../../../cordova/device/device.html">Device</a>
 --------------------
 
 - Make sure your device is properly configured 

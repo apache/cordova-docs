@@ -22,14 +22,14 @@ license: >
 
 El evento se desencadena cuando una aplicación se coloca en el fondo.
 
-    document.addEventListener("pause", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", yourCallbackFunction, false);
     
 
 ## Detalles
 
 El evento de `pause` se desencadena cuando la plataforma nativa pone la aplicación en el fondo, normalmente cuando el usuario cambia a otra aplicación.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` para conectar un detector de eventos una vez que se desencadene el evento `<a href="events.deviceready.html">deviceready</a>`.
 
 ## Plataformas soportadas
 
@@ -41,7 +41,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
 
 ## Ejemplo rápido
 
-    document.addEventListener("pause", onPause, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
     
     function onPause() {
         // Handle the pause event
@@ -53,7 +53,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("pause", onPause, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("pause", onPause, false);
         }
     
         // Handle the pause event

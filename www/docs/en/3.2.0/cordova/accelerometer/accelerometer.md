@@ -20,23 +20,23 @@ license: >
 
 # Accelerometer
 
-> Captures device motion in the _x_, _y_, and _z_ direction.
+> <a href="../media/capture/capture.html">Capture</a>s device motion in the _x_, _y_, and _z_ direction.
 
 ## Methods
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
+- accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
+- <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 ## Arguments
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+- <a href="parameters/accelerometerError.html">accelerometerError</a>
+- <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 ## Objects (Read-Only)
 
-- Acceleration
+- <a href="acceleration/acceleration.html">Acceleration</a>
 
 ## Accessing the Feature
 
@@ -90,4 +90,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.

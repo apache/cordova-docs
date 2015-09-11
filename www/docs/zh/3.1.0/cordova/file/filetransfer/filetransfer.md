@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# 檔案傳輸
+# <a href="../fileobj/fileobj.html">檔</a>案傳輸
 
-`FileTransfer`物件允許你上傳或下載檔案，伺服器和用戶端。
+`FileTransfer`物件允許你上傳或下載<a href="../fileobj/fileobj.html">檔</a>案，伺服器和用戶端。
 
 ## 屬性
 
@@ -28,15 +28,15 @@ license: >
 
 ## 方法
 
-*   **上傳**： 將檔發送到伺服器。
+*   **上傳**： 將<a href="../fileobj/fileobj.html">檔</a>發送到伺服器。
 
-*   **下載**： 從伺服器上下載檔案。
+*   **下載**： 從伺服器上下載<a href="../fileobj/fileobj.html">檔</a>案。
 
 *   **中止**: 中止正在進行轉讓。
 
 ## 詳細資訊
 
-`FileTransfer`物件提供一種方法將檔上載到遠端伺服器使用多部分的 HTTP POST 請求。 支援 HTTP 和 HTTPS 協定。 可以通過指定可選參數 `FileUploadOptions` 物件的 `upload()` 方法。 上傳成功， `FileUploadResult` 物件傳遞給成功回檔。 如果發生錯誤， `FileTransferError` 物件傳遞到錯誤回檔。 它也是可能的 （只在 iOS 和 Android） 從遠端伺服器下載檔案並將其保存在設備上。
+`FileTransfer`物件提供一種方法將<a href="../fileobj/fileobj.html">檔</a>上載到遠端伺服器使用多部分的 HTTP POST 請求。 支援 HTTP 和 HTTPS 協定。 可以通過指定可選參數 `<a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>` 物件的 `upload()` 方法。 上傳成功， `<a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a>` 物件傳遞給成功回<a href="../fileobj/fileobj.html">檔</a>。 如果發生錯誤， `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 物件傳遞到錯誤回<a href="../fileobj/fileobj.html">檔</a>。 它也是可能的 （只在 iOS 和 Android） 從遠端伺服器下載<a href="../fileobj/fileobj.html">檔</a>案並將其保存在<a href="../../device/device.html">設備</a>上。
 
 ## 支援的平臺
 
@@ -50,15 +50,15 @@ license: >
 
 **參數：**
 
-*   **檔路徑**: 設備上的檔的完整路徑。
+*   **<a href="../fileobj/fileobj.html">檔</a>路徑**: <a href="../../device/device.html">設備</a>上的<a href="../fileobj/fileobj.html">檔</a>的完整路徑。
 
-*   **伺服器**： 伺服器以接收該檔，由編碼的 URL`encodeURI()`.
+*   **伺服器**： 伺服器以接收該<a href="../fileobj/fileobj.html">檔</a>，由編碼的 URL`encodeURI()`.
 
-*   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 回檔的執行如果出現檢索錯誤 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
+*   **errorCallback**： 回<a href="../fileobj/fileobj.html">檔</a>的執行如果出現檢索錯誤 `Metadata` 。調用與 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 物件。*（函數）*
 
-*   **選項**： 檔案名稱和 mimetype 等可選參數。
+*   **選項**： <a href="../fileobj/fileobj.html">檔</a>案名稱和 mimetype 等可選參數。
 
 *   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` ，它可以接受的所有安全證書。 由於 Android 拒絕自行簽署式安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
@@ -78,7 +78,7 @@ license: >
         console.log("upload error target " + error.target);
     }
     
-    var options = new FileUploadOptions();
+    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
     options.fileKey = "file";
     options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
     options.mimeType = "text/plain";
@@ -98,20 +98,20 @@ license: >
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
-        <title>File Transfer Example</title>
+        <title>File Transfer <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
             function onDeviceReady() {
                 // Retrieve image file location from specified source
-                navigator.camera.getPicture(
+                navigator.<a href="../../camera/camera.getPicture.html">camera.getPicture</a>(
                     uploadPhoto,
                     function(message) { alert('get picture failed'); },
                     {
@@ -123,7 +123,7 @@ license: >
             }
     
             function uploadPhoto(imageURI) {
-                var options = new FileUploadOptions();
+                var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
@@ -153,7 +153,7 @@ license: >
             </script>
     </head>
     <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Upload File</p>
     </body>
     </html>
@@ -177,7 +177,7 @@ license: >
     
     var uri = encodeURI("http://some.server.com/upload.php");
     
-    var options = new FileUploadOptions();
+    var options = new <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
@@ -198,13 +198,13 @@ license: >
 
 **參數：**
 
-*   **來源**： 要下載的檔，如由編碼的伺服器的 URL`encodeURI()`.
+*   **來源**： 要下載的<a href="../fileobj/fileobj.html">檔</a>，如由編碼的伺服器的 URL`encodeURI()`.
 
-*   **目標**： 在設備上的檔的完整路徑。
+*   **目標**： 在<a href="../../device/device.html">設備</a>上的<a href="../fileobj/fileobj.html">檔</a>的完整路徑。
 
-*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回<a href="../fileobj/fileobj.html">檔</a> `<a href="../fileentry/fileentry.html">FileEntry</a>` 物件。*（函數）*
 
-*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回<a href="../fileobj/fileobj.html">檔</a> `Metadata` 。調用與 `<a href="../filetransfererror/filetransfererror.html">FileTransferError</a>` 物件。*（函數）*
 
 *   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` 然後它將接受所有安全證書。 隨著 Android 拒絕自我簽署的安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
@@ -212,12 +212,12 @@ license: >
 
 **快速的示例**
 
-    // !! 假定檔路徑是設備 var 檔案傳輸的有效路徑 = 新 FileTransfer() ；var uri = encodeURI ("HTTP://some.server.com/download.php"） ；fileTransfer.download (uri，檔路徑，function(entry) {console.log ("下載完成："+ entry.fullPath） ；}，function(error) {console.log ("下載錯誤源"+ error.source) ；console.log ("下載錯誤目標"+ error.target) ；console.log ("上傳錯誤代碼"+ error.code) ；}，false，{標題： {"授權書"："基本 dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}}) ；
+    // !! 假定<a href="../fileobj/fileobj.html">檔</a>路徑是<a href="../../device/device.html">設備</a> var <a href="../fileobj/fileobj.html">檔</a>案傳輸的有效路徑 = 新 FileTransfer() ；var uri = encodeURI ("HTTP://some.server.com/download.php"） ；fileTransfer.download (uri，<a href="../fileobj/fileobj.html">檔</a>路徑，function(entry) {console.log ("下載完成："+ entry.fullPath） ；}，function(error) {console.log ("下載錯誤源"+ error.source) ；console.log ("下載錯誤目標"+ error.target) ；console.log ("上傳錯誤代碼"+ error.code) ；}，false，{標題： {"授權書"："基本 dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}}) ；
     
 
 ## 中止
 
-中止正在進行轉讓。Onerror 回檔傳遞的錯誤代碼為 FileTransferError.ABORT_ERR 的 FileTransferError 物件。
+中止正在進行轉讓。Onerror 回<a href="../fileobj/fileobj.html">檔</a>傳遞的錯誤代碼為 <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR 的 <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> 物件。
 
 **支援的平臺**
 
@@ -226,7 +226,7 @@ license: >
 
 **快速的示例**
 
-    // !! 假定變數 fileURI 包含有效的 URI 到一個文字檔中，對設備無功贏 = function(r) {console.log ("不應調用。");}var 失敗 = function(error) {/ / error.code = = FileTransferError.ABORT_ERR 警報 ("發生了一個錯誤： 代碼 ="+ error.code） ；console.log （"上傳錯誤源"+ error.source） ；console.log ("上傳錯誤目標"+ error.target);}var 選項 = 新 FileUploadOptions() ；options.fileKey="file"；options.fileName="myphoto.jpg"；options.mimeType="image/jpeg"；var ft = 新 FileTransfer() ；ft.upload （fileURI、 encodeURI ("HTTP://some.server.com/upload.php"）、 贏、 失敗、 選項） ；ft.abort() ；
+    // !! 假定<a href="../../../plugin_ref/spec.html">變數</a> fileURI 包含有效的 URI 到一個文字<a href="../fileobj/fileobj.html">檔</a>中，對<a href="../../device/device.html">設備</a>無功贏 = function(r) {console.log ("不應調用。");}var 失敗 = function(error) {/ / error.code = = <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR 警報 ("發生了一個錯誤： 代碼 ="+ error.code） ；console.log （"上傳錯誤源"+ error.source） ；console.log ("上傳錯誤目標"+ error.target);}var 選項 = 新 <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>() ；options.fileKey="file"；options.fileName="myphoto.jpg"；options.mimeType="image/jpeg"；var ft = 新 FileTransfer() ；ft.upload （fileURI、 encodeURI ("HTTP://some.server.com/upload.php"）、 贏、 失敗、 選項） ；ft.abort() ；
     
 
 ## onprogress

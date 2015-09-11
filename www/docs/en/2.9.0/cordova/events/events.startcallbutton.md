@@ -23,7 +23,7 @@ startcallbutton
 
 The event fires when the user presses the start call button.
 
-    document.addEventListener("startcallbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", yourCallbackFunction, false);
 
 Details
 -------
@@ -31,31 +31,31 @@ Details
 If you need to override the default start call behavior you can
 register an event listener for the `startcallbutton` event.
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
 
     function onStartCallKeyDown() {
         // Handle the start call button
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Start Call Button Example</title>
+        <title>Start Call Button <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -63,14 +63,14 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             // Register the event listener
-            document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("startcallbutton", onStartCallKeyDown, false);
         }
 
         // Handle the start call button

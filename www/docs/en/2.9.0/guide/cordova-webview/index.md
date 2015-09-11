@@ -24,5 +24,5 @@ Embedding WebView
 > Implement the Cordova WebView in your own project.
 
 - Embedding Cordova WebView on Android
-- Embedding Cordova WebView on iOS
+- <a href="ios.html">Embedding Cordova WebView on iOS</a>
 

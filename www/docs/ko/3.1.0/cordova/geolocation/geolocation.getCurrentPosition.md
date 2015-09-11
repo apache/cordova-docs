@@ -20,24 +20,24 @@ license: >
 
 # geolocation.getCurrentPosition
 
-로 소자의 현재 위치를 반환 합니다는 `Position` 개체.
+로 소자의 현재 <a href="Position/position.html">위치</a>를 반환 합니다는 `Position` 개체.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                             [geolocationError],
-                                             [geolocationOptions]);
+    navigator.geolocation.getCurrentPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
-## 매개 변수
+## 매개 <a href="../../plugin_ref/spec.html">변수</a>
 
-*   **geolocationSuccess**: 현재의 위치를 전달 되는 콜백.
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: 현재의 <a href="Position/position.html">위치</a>를 전달 되는 콜백.
 
-*   **geolocationError**: *(선택 사항)* 오류가 발생 하면 실행 되는 콜백.
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**: *(선택 사항)* 오류가 발생 하면 실행 되는 콜백.
 
-*   **geolocationOptions**: *(선택 사항)* 위치 옵션.
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: *(선택 사항)* <a href="Position/position.html">위치</a> 옵션.
 
 ## 설명
 
-`geolocation.getCurrentPosition`비동기 함수가입니다. 디바이스의 현재 위치를 반환 합니다는 `geolocationSuccess` 로 콜백은 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `geolocationError` 콜백 전달 되는 `PositionError` 개체.
+`geolocation.getCurrentPosition`비동기 함수가입니다. 디바이스의 현재 <a href="Position/position.html">위치</a>를 반환 합니다는 `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` 로 콜백은 `Position` 매개 <a href="../../plugin_ref/spec.html">변수</a>로 개체. 오류가 발생 하는 경우는 `<a href="parameters/geolocationError.html">geolocationError</a>` 콜백 전달 되는 `<a href="PositionError/positionError.html">PositionError</a>` 개체.
 
 ## 지원 되는 플랫폼
 
@@ -65,7 +65,7 @@ license: >
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -109,7 +109,7 @@ license: >
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
-        // onError Callback receives a PositionError object
+        // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

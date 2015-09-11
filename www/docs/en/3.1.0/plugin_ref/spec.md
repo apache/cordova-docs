@@ -170,7 +170,7 @@ Plugin license. The text content of the element contains the plugin license. An 
 ## `<asset>` element
 
 One or more elements listing the files or directories to be copied
-into a Cordova app's `www` directory. Examples:
+into a Cordova app's `www` directory. <a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -346,7 +346,7 @@ chosen, are listed:
 ## `<source-file>`
 
 The `<source-file>` element identifies executable source code that
-should be installed into a project. Examples:
+should be installed into a project. <a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <!-- android -->
     <source-file src="src/android/Foo.java"
@@ -397,7 +397,7 @@ The `config-file` element only allows you to append new children to an
 XML document tree. The children are XML literals to be inserted in the
 target document.
 
-Example for XML:
+<a href="../cordova/storage/storage.opendatabase.html">Example</a> for XML:
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
         <activity android:name="com.foo.Foo" android:label="@string/app_name">
@@ -406,7 +406,7 @@ Example for XML:
         </activity>
     </config-file>
 
-Example for `plist`:
+<a href="../cordova/storage/storage.opendatabase.html">Example</a> for `plist`:
 
     <config-file target="*-Info.plist" parent="CFBundleURLTypes">
         <array>
@@ -452,7 +452,7 @@ It supports the following attributes:
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
 below. Use the `<config-file>` tag for newer versions of Cordova.
 
-Example:
+<a href="../cordova/storage/storage.opendatabase.html">Example</a>:
 
     <config-file target="config.xml" parent="/widget/plugins">
         <feature name="ChildBrowser">
@@ -468,7 +468,7 @@ file in an iOS Cordova project. For example:
 ## `<resource-file>` and `<header-file>`
 
 Like source files, but specifically for platforms such as iOS that
-distinguish between source files, headers, and resources.  Examples:
+distinguish between source files, headers, and resources.  <a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
@@ -478,7 +478,7 @@ distinguish between source files, headers, and resources.  Examples:
 
 Like source, resource, and header files, but specifically for
 platforms such as BlackBerry 10 that use user-generated libraries.
-Examples:
+<a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -498,7 +498,7 @@ Supported attributes:
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
-Examples:
+<a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
@@ -514,7 +514,7 @@ framework should be weakly linked. The default is `false`.
 
 Additional information provided to users. This is useful when you
 require extra steps that can't be easily automated or are beyond
-plugman's scope.  Examples:
+plugman's scope.  <a href="../cordova/storage/storage.opendatabase.html">Example</a>s:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).

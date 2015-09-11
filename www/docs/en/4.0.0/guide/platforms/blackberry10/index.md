@@ -27,8 +27,8 @@ command-line tools, described in the BlackBerry Platform Guide.
 For BlackBerry 10, you need to install the SDK regardless of whether
 you want to use the cross-platform Cordova CLI for development, or a
 narrower set of platform-centered command-line tools.  For a
-comparison of the two development paths, see the Overview.  For
-details on each, see The Command-Line Interface and the BlackBerry 10
+comparison of the two development paths, see the <a href="../../overview/index.html">Overview</a>.  For
+details on each, see <a href="../../cli/index.html">The Command-Line Interface</a> and the BlackBerry 10
 Shell Tool Guide.
 
 ## Requirements
@@ -221,13 +221,13 @@ provided when registering for signing keys.
 
         $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
 
-## Debugging with WebInspector
+## <a href="../../next/index.html">Debugging</a> with WebInspector
 
 When debugging on the device or an emulator, you may run WebInspector
 remotely to view the application's internal state.  A prompt displays
 the URL that allows you to connect to the app with a standard web
 browser.  For more information, see
-[Debugging using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
+[<a href="../../next/index.html">Debugging</a> using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 
 ## Building a Release Version
 

@@ -18,25 +18,25 @@ license: >
     under the License.
 ---
 
-# LocalFileSystem
+# Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 
 Questo oggetto fornisce un modo per ottenere il filesystem di root.
 
 ## Metodi
 
-*   **requestFileSystem**: richiede un filesystem. *(Funzione)*
+*   **request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>**: richiede un filesystem. *(Funzione)*
 
-*   **resolveLocalFileSystemURI**: recuperare un `DirectoryEntry` o `FileEntry` utilizzando URI locale. *(Funzione)*
+*   **resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI**: recuperare un `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` o `<a href="../fileentry/fileentry.html"><a href="../fileobj/fileobj.html">File</a>Entry</a>` utilizzando URI locale. *(Funzione)*
 
 ## Costanti
 
-*   `LocalFileSystem.PERSISTENT`: Utilizzato per l'archiviazione che non deve essere rimosse dall'agente utente senza autorizzazione applicazione o utente.
+*   `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT`: Utilizzato per l'archiviazione che non deve essere rimosse dall'agente utente senza autorizzazione applicazione o utente.
 
-*   `LocalFileSystem.TEMPORARY`: Utilizzato per l'archiviazione senza garanzia di persistenza.
+*   `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.TEMPORARY`: Utilizzato per l'archiviazione senza garanzia di persistenza.
 
 ## Dettagli
 
-I `LocalFileSystem` sono definiti metodi oggetto sul `window` oggetto.
+I `Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>` sono definiti metodi oggetto sul `window` oggetto.
 
 ## Piattaforme supportate
 
@@ -46,23 +46,23 @@ I `LocalFileSystem` sono definiti metodi oggetto sul `window` oggetto.
 *   Windows Phone 7 e 8
 *   Windows 8
 
-## Richiesta File sistema rapido esempio
+## Richiesta <a href="../fileobj/fileobj.html">File</a> sistema rapido esempio
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, onError);
     
 
-## Risolvere il sistema di File locale URI esempio rapido
+## Risolvere il sistema di <a href="../fileobj/fileobj.html">File</a> locale URI esempio rapido
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
     }
     
-    window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
+    window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onSuccess, onError);
     
 
 ## Esempio completo
@@ -70,23 +70,23 @@ I `LocalFileSystem` sono definiti metodi oggetto sul `window` oggetto.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local <a href="../fileobj/fileobj.html">File</a> System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-            window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
+            window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success, fail);
+            window.resolveLocal<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>URI("file:///example.txt", onResolveSuccess, fail);
         }
     
-        function onFileSystemSuccess(fileSystem) {
+        function on<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>Success(fileSystem) {
             console.log(fileSystem.name);
         }
     
@@ -101,30 +101,30 @@ I `LocalFileSystem` sono definiti metodi oggetto sul `window` oggetto.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Local File System</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Local <a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>
     
 
-# requestFileSystem
+# request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 
 > Richiedere un file system in cui archiviare i dati dell'applicazione.
 
-     window.requestFileSystem(type, size, successCallback, errorCallback)
+     window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(type, size, successCallback, errorCallback)
     
 
 *   **finestra**: riferimento a un oggetto globale window
-*   **tipo**: locale tipo di sistema di file, vedere costanti LocalFileSystem
+*   **tipo**: locale tipo di sistema di file, vedere costanti Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 *   **dimensione**: indica quanto spazio di archiviazione, in byte, l'applicazione prevede di bisogno
-*   **successCallback**: viene richiamato con un oggetto FileSystem
+*   **successCallback**: viene richiamato con un oggetto <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>
 *   **errorCallback**: viene richiamato se l'errore si verifica il sistema di recupero file
 
-## Richiesta File sistema rapido esempio
+## Richiesta <a href="../fileobj/fileobj.html">File</a> sistema rapido esempio
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    window.request<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>(Local<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, onError);

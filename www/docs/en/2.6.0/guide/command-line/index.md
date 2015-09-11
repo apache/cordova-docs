@@ -124,7 +124,7 @@ or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/run.bat
 
-Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
+Make sure you have created at least one Android Virtual <a href="../../cordova/device/device.html">Device</a>. If you did not it will ask you to create one with the `android` command.
 If you have multiple AVDs, it will prompt you to select an AVD.
 
 ### Logging

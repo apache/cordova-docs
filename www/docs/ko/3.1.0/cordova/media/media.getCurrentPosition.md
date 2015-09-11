@@ -20,20 +20,20 @@ license: >
 
 # media.getCurrentPosition
 
-오디오 파일 내에서 현재 위치를 반환합니다.
+오디오 <a href="../file/fileobj/fileobj.html">파일</a> 내에서 현재 <a href="../geolocation/Position/position.html">위치</a>를 반환합니다.
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.getCurrentPosition(mediaSuccess, [<a href="Parameters/mediaError.html">mediaError</a>]);
     
 
-## 매개 변수
+## 매개 <a href="../../plugin_ref/spec.html">변수</a>
 
-*   **mediaSuccess**: 현재 위치 (초) 전달 되는 콜백.
+*   **mediaSuccess**: 현재 <a href="../geolocation/Position/position.html">위치</a> (초) 전달 되는 콜백.
 
-*   **mediaError**: (선택 사항) 콜백 실행 오류가 발생 하는 경우에.
+*   **<a href="Parameters/mediaError.html">mediaError</a>**: (선택 사항) 콜백 실행 오류가 발생 하는 경우에.
 
 ## 설명
 
-기본 오디오 파일의 현재 위치를 반환 하는 비동기 함수를 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 변수.
+기본 오디오 <a href="../file/fileobj/fileobj.html">파일</a>의 현재 <a href="../geolocation/Position/position.html">위치</a>를 반환 하는 비동기 함수를 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 <a href="../../plugin_ref/spec.html">변수</a>.
 
 ## 지원 되는 플랫폼
 
@@ -79,14 +79,14 @@ license: >
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -106,7 +106,7 @@ license: >
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update my_media position every second
                 if (mediaTimer == null) {
@@ -133,7 +133,7 @@ license: >
             //
             function pauseAudio() {
                 if (my_media) {
-                    my_media.pause();
+                    my_<a href="media.pause.html">media.pause</a>();
                 }
             }
     
@@ -141,7 +141,7 @@ license: >
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

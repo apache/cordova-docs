@@ -20,21 +20,21 @@ license: >
 
 # Splashscreen
 
-> Visualizza e nasconde la schermata iniziale dell'applicazione.
+> <a href="../inappbrowser/inappbrowser.html">Visualizza</a> e nasconde la schermata iniziale dell'applicazione.
 
 ## Metodi
 
-*   splashscreen
-*   splashscreen.Hide
+*   <a href="splashscreen.show.html">splashscreen</a>
+*   <a href="<a href="splashscreen.show.html">splashscreen</a>.hide.html"><a href="splashscreen.show.html">splashscreen</a>.Hide</a>
 
 ## La funzionalità di accesso
 
 A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo come *plugin*. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, aggiungere o rimuovere questa funzionalità per un progetto:
 
-        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin add org.apache.cordova.<a href="splashscreen.show.html">splashscreen</a>
         $ cordova plugin ls
-        [ 'org.apache.cordova.splashscreen' ]
-        $ cordova plugin rm org.apache.cordova.splashscreen
+        [ 'org.apache.cordova.<a href="splashscreen.show.html">splashscreen</a>' ]
+        $ cordova plugin rm org.apache.cordova.<a href="splashscreen.show.html">splashscreen</a>
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:

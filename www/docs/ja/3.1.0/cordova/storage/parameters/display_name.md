@@ -20,4 +20,4 @@ license: >
 
 # database_displayname
 
-データベースの表示名。
+<a href="../database/database.html">データベース</a>の表示名。

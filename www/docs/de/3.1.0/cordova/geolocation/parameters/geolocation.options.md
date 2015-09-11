@@ -20,19 +20,19 @@ license: >
 
 # geolocationOptions
 
-Optionalen Parametern, um das Abrufen von der geolocation`Position`.
+Optionalen Parametern, um das Abrufen von der geolocation`<a href="../Position/position.html">Position</a>`.
 
     {MaximumAge: 3000, Timeout: 5000, EnableHighAccuracy: true};
     
 
 ## Optionen
 
-*   **EnableHighAccuracy**: stellt einen Hinweis, dass die Anwendung die bestmöglichen Ergebnisse benötigt. Standardmäßig versucht das Gerät abzurufen ein `Position` mit netzwerkbasierte Methoden. Wenn diese Eigenschaft auf `true` erzählt den Rahmenbedingungen genauere Methoden, z. B. Satellitenortung verwenden. *(Boolean)*
+*   **EnableHighAccuracy**: stellt einen Hinweis, dass die Anwendung die bestmöglichen Ergebnisse benötigt. Standardmäßig versucht das <a href="../../device/device.html">Gerät</a> abzurufen ein `<a href="../Position/position.html">Position</a>` mit netzwerkbasierte Methoden. Wenn diese Eigenschaft auf `true` erzählt den Rahmenbedingungen genauere Methoden, z. B. Satellitenortung verwenden. *(Boolean)*
 
-*   **Timeout**: die maximale Länge der Zeit (in Millisekunden), die zulässig ist, übergeben Sie den Aufruf von `geolocation.getCurrentPosition` oder `geolocation.watchPosition` bis zu den entsprechenden `geolocationSuccess` Rückruf führt. Wenn die `geolocationSuccess` Rückruf wird nicht aufgerufen, in dieser Zeit die `geolocationError` Rückruf wird übergeben ein `PositionError.TIMEOUT` Fehlercode. (Beachten Sie, dass in Verbindung mit `geolocation.watchPosition` , die `geolocationError` Rückruf könnte auf ein Intervall aufgerufen werden alle `timeout` Millisekunden!) *(Anzahl)*
+*   **Timeout**: die maximale Länge der Zeit (in Millisekunden), die zulässig ist, übergeben Sie den Aufruf von `geolocation.getCurrent<a href="../Position/position.html">Position</a>` oder `geolocation.watch<a href="../Position/position.html">Position</a>` bis zu den entsprechenden `<a href="geolocationSuccess.html">geolocationSuccess</a>` Rückruf führt. Wenn die `<a href="geolocationSuccess.html">geolocationSuccess</a>` Rückruf wird nicht aufgerufen, in dieser Zeit die `<a href="geolocationError.html">geolocationError</a>` Rückruf wird übergeben ein `<a href="../Position/position.html">Position</a>Error.TIMEOUT` Fehlercode. (Beachten Sie, dass in <a href="../../connection/connection.html">Verbindung</a> mit `geolocation.watch<a href="../Position/position.html">Position</a>` , die `<a href="geolocationError.html">geolocationError</a>` Rückruf könnte auf ein Intervall aufgerufen werden alle `timeout` Millisekunden!) *(Anzahl)*
 
-*   **MaximumAge**: eine zwischengespeicherte Position, deren Alter nicht größer als die angegebene Zeit in Millisekunden ist, zu akzeptieren. *(Anzahl)*
+*   **MaximumAge**: eine zwischengespeicherte <a href="../Position/position.html">Position</a>, deren Alter nicht größer als die angegebene Zeit in Millisekunden ist, zu akzeptieren. *(Anzahl)*
 
 ## Android Macken
 
-Android 2.x-Emulatoren geben ein Geolocation-Ergebnis nicht zurück, es sei denn, die `enableHighAccuracy` Option auf festgelegt ist`true`.
+Android 2.x-Emulatoren geben ein <a href="../geolocation.html">Geolocation</a>-Ergebnis nicht zurück, es sei denn, die `enableHighAccuracy` Option auf festgelegt ist`true`.

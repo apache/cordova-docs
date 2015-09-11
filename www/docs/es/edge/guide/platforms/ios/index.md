@@ -22,10 +22,10 @@ license: >
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos iOS como el iPhone y iPad. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   iOS configuración
-*   Actualizar iOS
-*   iOS WebViews
-*   iOS Plugins
+*   <a href="config.html">iOS configuración</a>
+*   <a href="upgrading.html">Actualizar iOS</a>
+*   <a href="webview.html">iOS WebViews</a>
+*   <a href="plugin.html">iOS Plugins</a>
 *   iOS Shell herramienta guía
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
@@ -158,7 +158,7 @@ ADVERTENCIA de Xcode sobre el método `invokeString` refiere a una funcionalidad
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
@@ -194,7 +194,7 @@ Esta es la configuración predeterminada para una instalación nueva de Xcode, p
 
 Para más información, consulte la documentación de Apple:
 
-*   [IOS de empezar a desarrollar aplicaciones hoy][12] proporciona un rápido Resumen de pasos para el desarrollo de iOS Apps.
+*   [IOS de empezar a desarrollar aplicaciones hoy][12] proporciona un rápido <a href="../../overview/index.html">Resumen</a> de pasos para el desarrollo de iOS Apps.
 
 *   [Miembro del centro Página][13] proporciona enlaces a varios iOS recursos técnicos incluyendo recursos técnicos, el portal provisioning, guías de distribución y foros de la comunidad.
 

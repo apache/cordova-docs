@@ -22,20 +22,20 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn eine Änderung in den Batteriestatus vorliegt.
 
-    window.addEventListener("batterystatus", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Dieses Ereignis wird ausgelöst, wenn der Prozentsatz der Akkuladung um mindestens 1 Prozent ändert, oder wenn das Gerät eingesteckt oder "Unplugged".
+Dieses Ereignis wird ausgelöst, wenn der Prozentsatz der Akkuladung um mindestens 1 Prozent ändert, oder wenn das <a href="../device/device.html">Gerät</a> eingesteckt oder "Unplugged".
 
 Der Batterie-Status-Handler wird ein Objekt übergeben, das zwei Eigenschaften enthält:
 
 *   **Ebene**: der Prozentsatz der Batterieladung (0-100). *(Anzahl)*
 
-*   **IsPlugged**: ein boolescher Wert, der angibt, ob das Gerät eingesteckt Zoll *(boolesch)*
+*   **IsPlugged**: ein boolescher Wert, der angibt, ob das <a href="../device/device.html">Gerät</a> eingesteckt Zoll *(boolesch)*
 
-Anwendungen sollten in der Regel verwenden `window.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -51,7 +51,7 @@ Windows Phone 7 bietet keine systemeigenen APIs um zu bestimmen, Batterie-Niveau
 
 ## Kleines Beispiel
 
-    window.addEventListener("batterystatus", onBatteryStatus, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
     
     function onBatteryStatus(info) {
         // Handle the online event
@@ -64,7 +64,7 @@ Windows Phone 7 bietet keine systemeigenen APIs um zu bestimmen, Batterie-Niveau
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -72,13 +72,13 @@ Windows Phone 7 bietet keine systemeigenen APIs um zu bestimmen, Batterie-Niveau
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
         }
     
         // Handle the batterystatus event

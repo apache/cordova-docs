@@ -80,7 +80,7 @@ Nato zaženite ukaz kot sledi testiranje ali pravilno obremenitev iOS odvisnosti
         $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
     
 
-Za podrobnosti o `plugman` možnosti, glejte Uporaba Plugman za upravljanje Plugins. Informacije o tem, kako dejansko *debug* plugins, glejte vsako platformo izvorni vmesnik, naštetih na dnu te strani.
+Za podrobnosti o `plugman` možnosti, glejte <a href="../../../plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a>. Informacije o tem, kako dejansko *debug* plugins, glejte vsako platformo izvorni vmesnik, naštetih na dnu te strani.
 
 ## JavaScript vmesnik
 
@@ -131,17 +131,17 @@ Uspeh callback prešla v `exec` je preprosto sklicevanje na povratni klic funkci
 
 Ko določite JavaScript za vaše plugin, morate dopolniti z vsaj enega izvajanju native. Spodaj so navedene podrobnosti za vsako platformo, in vsak gradi na preprost Echo Plugin primer zgoraj:
 
-*   Amazon ogenj OS Plugins
-*   Android Plugins
-*   iOS Plugins
-*   BlackBerry 10 Plugins
-*   Windows Phone Plugins
+*   <a href="../../platforms/amazonfireos/plugin.html">Amazon ogenj OS Plugins</a>
+*   <a href="../../platforms/android/plugin.html">Android Plugins</a>
+*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
+*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
 
 Tizen platforma podpira plugins.
 
 ## Objavljanje Plugins
 
-Ko ste razviti vaše plugin, morda želite objavite in ga delite s skupnostjo. Lahko objavite vaše plugin cordova registra (na [ `npmjs` ][3]) ali katero koli drugo `npmjs` -osnova registracija. Drugi razvijalci lahko namestite samodejno z uporabo bodisi `plugman` ali Cordova CLI. (Podrobnosti o vsakem razvojno pot, glejte Uporaba Plugman za upravljanje Plugins in The vmesnik ukazne vrstice.)
+Ko ste razviti vaše plugin, morda želite objavite in ga delite s skupnostjo. Lahko objavite vaše plugin cordova registra (na [ `npmjs` ][3]) ali katero koli drugo `npmjs` -osnova registracija. Drugi razvijalci lahko namestite samodejno z uporabo bodisi `plugman` ali Cordova CLI. (Podrobnosti o vsakem razvojno pot, glejte <a href="../../../plugin_ref/plugman.html">Uporaba Plugman za upravljanje Plugins</a> in The vmesnik ukazne vrstice.)
 
  [3]: https://github.com/isaacs/npmjs.org
 

@@ -149,7 +149,7 @@ See other methods that you can override in:
 1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-For example, you can hook into the pause, resume, app terminate and handleOpenURL events.
+For example, you can hook into the <a href="../../../cordova/events/events.pause.html">pause</a>, <a href="../../../cordova/events/events.resume.html">resume</a>, app terminate and handleOpenURL events.
 
 ## Debugging Plugins
 
@@ -161,7 +161,7 @@ For iOS 6, you would use Safari 6.0 to simply attach to your app running in the 
 
 * Don't forget to add your plugin's mapping to Cordova.plist - if you forgot, an error will be printed to the Xcode console log
 * Don't forget to add any hosts you connect to in the [whitelist](guide_whitelist_index.md.html#Domain%20Whitelist%20Guide) - if you forgot, an error will be printed to the Xcode console log
-* If you handle the resume event, and the app resumes, you can hang the app if you send out a JavaScript call that executes a native function, like alerts. To be safe, wrap your JavaScript call in a setTimeout call, with a timeout value of zero:
+* If you handle the <a href="../../../cordova/events/events.resume.html">resume</a> event, and the app <a href="../../../cordova/events/events.resume.html">resume</a>s, you can hang the app if you send out a JavaScript call that executes a native function, like alerts. To be safe, wrap your JavaScript call in a setTimeout call, with a timeout value of zero:
 
         setTimeout(function() {
             // do your thing here!

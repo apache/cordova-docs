@@ -22,14 +22,14 @@ license: >
 
 Das Ereignis wird ausgelöst, wenn eine Anwendung aus dem Hintergrund abgerufen wird.
 
-    document.addEventListener("resume", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
     
 
 ## Informationen
 
 Das `resume` -Ereignis wird ausgelöst, wenn die native Plattform die Anwendung aus dem Hintergrund zieht.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -41,7 +41,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## Kleines Beispiel
 
-    document.addEventListener("resume", onResume, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("resume", onResume, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -88,13 +88,13 @@ Alle interaktiven Funktionen Intensivlehrgang ein `pause` -Ereignishandler ausge
 
 *   **aktiv** -Ereignis
     
-    Die iOS-spezifische `active` Ereignis ist verfügbar als Alternative zu `resume` , und erkennt, wenn Benutzer die **Lock** -Taste mit der app im Vordergrund ausgeführt entsperren deaktivieren. Wenn die app (und Gerät) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `resume` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
+    Die iOS-spezifische `active` Ereignis ist verfügbar als Alternative zu `resume` , und erkennt, wenn Benutzer die **Lock** -Taste mit der app im Vordergrund ausgeführt entsperren deaktivieren. Wenn die app (und <a href="../device/device.html">Gerät</a>) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `resume` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
 
 *   **Lebenslauf** -Ereignis
     
     Beim Aufruf aus einer `resume` -Ereignishandler, interaktive Funktionen wie z. B. `alert()` in eingeschlossen werden müssen ein `setTimeout()` Aufruf mit einem Timeoutwert von 0 (null), oder auch der app hängt. Zum Beispiel:
     
-        document.addEventListener("resume", onResume, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

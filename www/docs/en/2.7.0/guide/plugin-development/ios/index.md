@@ -173,7 +173,7 @@ See other methods that you can override in:
 1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-For example, you can hook into the pause, resume, app terminate and handleOpenURL events.
+For example, you can hook into the <a href="../../../cordova/events/events.pause.html">pause</a>, <a href="../../../cordova/events/events.resume.html">resume</a>, app terminate and handleOpenURL events.
 
 ## Debugging Plugins
 

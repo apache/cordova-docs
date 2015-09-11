@@ -24,9 +24,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione di fuoco OS Amazon
-*   Amazon fuoco OS visualizzazioni Web
-*   Amazon fuoco OS Plugins
+*   <a href="config.html">Configurazione di fuoco OS Amazon</a>
+*   <a href="webview.html">Amazon fuoco OS visualizzazioni Web</a>
+*   <a href="plugin.html">Amazon fuoco OS Plugins</a>
 
 ## Requisiti e supporto
 

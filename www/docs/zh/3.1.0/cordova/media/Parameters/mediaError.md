@@ -20,7 +20,7 @@ license: >
 
 # mediaError
 
-當有錯誤的媒體功能執行使用者指定的回呼函數。
+當有錯誤的<a href="../media.html">媒體</a>功能執行使用者指定的回呼函數。
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ license: >
 
 ## 參數
 
-*   **錯誤**: 設備所返回的錯誤。*() MediaError*
+*   **錯誤**: <a href="../../device/device.html">設備</a>所返回的錯誤。*() <a href="../MediaError/mediaError.html">MediaError</a>*

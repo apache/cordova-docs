@@ -61,7 +61,7 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
     
     // Show a custom confirmation dialog
     //
-    function showConfirm() {
+    function <a href="../inappbrowser/inappbrowser.html">show</a>Confirm() {
         navigator.notification.confirm(
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
@@ -76,14 +76,14 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title><a href="notification.html">Notification</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -98,7 +98,7 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
     
         // Show a custom confirmation dialog
         //
-        function showConfirm() {
+        function <a href="../inappbrowser/inappbrowser.html">show</a>Confirm() {
             navigator.notification.confirm(
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
@@ -110,7 +110,7 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+        <p><a href="#" onclick="<a href="../inappbrowser/inappbrowser.html">show</a>Confirm(); return false;">Show Confirm</a></p>
       </body>
     </html>
     

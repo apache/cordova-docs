@@ -18,33 +18,33 @@ license: >
     under the License.
 ---
 
-# 파일
+# <a href="fileobj/fileobj.html">파일</a>
 
-> 읽기, API 작성 하 고 [w3c 파일 api][1] 기반 파일 시스템 계층 구조 탐색.
+> 읽기, API 작성 하 고 [w3c <a href="fileobj/fileobj.html">파일</a> api][1] 기반 <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">파일</a> 시스템</a> 계층 구조 탐색.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## 개체
 
-*   DirectoryEntry
-*   DirectoryReader
-*   파일
-*   FileEntry
-*   FileError
-*   FileReader
-*   파일 시스템
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   플래그
-*   LocalFileSystem
-*   메타 데이터
+*   <a href="directoryentry/directoryentry.html">DirectoryEntry</a>
+*   <a href="directoryreader/directoryreader.html">DirectoryReader</a>
+*   <a href="fileobj/fileobj.html">파일</a>
+*   <a href="fileentry/fileentry.html">FileEntry</a>
+*   <a href="fileerror/fileerror.html">FileError</a>
+*   <a href="filereader/filereader.html">FileReader</a>
+*   <a href="filesystem/filesystem.html"><a href="fileobj/fileobj.html">파일</a> 시스템</a>
+*   <a href="filetransfer/filetransfer.html">FileTransfer</a>
+*   <a href="filetransfererror/filetransfererror.html"><a href="filetransfer/filetransfer.html">FileTransfer</a>Error</a>
+*   <a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a>
+*   <a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a>
+*   <a href="filewriter/filewriter.html">FileWriter</a>
+*   <a href="flags/flags.html">플래그</a>
+*   <a href="localfilesystem/localfilesystem.html">LocalFileSystem</a>
+*   <a href="metadata/metadata.html">메타 데이터</a>
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin ls
@@ -52,7 +52,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.file
     
 
-파일 전송 플러그인을 사용 하 여 추가 해야 합니다을 별도로.
+<a href="fileobj/fileobj.html">파일</a> 전송 플러그인을 사용 하 여 추가 해야 합니다을 별도로.
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
@@ -68,8 +68,8 @@ license: >
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
+            <param name="android-package" value="org.apache.cordova.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -82,8 +82,8 @@ license: >
         <feature name="File">
             <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
+            <param name="blackberry-package" value="org.apache.cordova.http.<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
         </feature>
         
         (in www/config.xml)
@@ -100,9 +100,9 @@ license: >
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
         </feature>
-        <feature name="FileTransfer">
-            <param name="ios-package" value="CDVFileTransfer" />
+        <feature name="<a href="filetransfer/filetransfer.html">FileTransfer</a>">
+            <param name="ios-package" value="CDV<a href="filetransfer/filetransfer.html">FileTransfer</a>" />
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.

@@ -58,7 +58,7 @@ Notez que la taille de la boite de dialogue peut varier afin de permettre l'ajus
          popoverOptions  : popover
      };
     
-     navigator.camera.getPicture(onSuccess, onFail, options);
+     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
     
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

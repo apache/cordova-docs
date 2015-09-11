@@ -24,7 +24,7 @@ license: >
 
 支援的 iOS WebViews 開始與科爾多瓦版本 1.4，使用 `Cleaver` 的 Xcode 範本用作參考實現的元件。 科爾多瓦 2.0 及更高版本僅支援基於子專案的刀實施。
 
-這些說明至少需要科爾多瓦 2.3 和 Xcode 4.5，沿與 `config.xml` 從新創建的 iOS 專案檔案。 你可以使用程式的命令列介面來創建一個新專案，然後獲取 `config.xml` 從檔中的命名的應用程式子目錄內`platforms/ios`.
+這些說明至少需要科爾多瓦 2.3 和 Xcode 4.5，沿與 `config.xml` 從新創建的 iOS 專案檔案。 你可以使用程式的<a href="../../cli/index.html">命令列介面</a>來創建一個新專案，然後獲取 `config.xml` 從檔中的命名的應用程式子目錄內`platforms/ios`.
 
 要按照這些說明進行操作，請確保您有最新的科爾多瓦分佈。從[cordova.apache.org][1]下載並解壓其 iOS 包。
 

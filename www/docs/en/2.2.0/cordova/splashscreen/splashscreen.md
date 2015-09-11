@@ -21,14 +21,14 @@ license: >
 Splashscreen
 ==========
 
-> Enables developers to show/hide the application's splash screen.
+> Enables developers to <a href="splashscreen.show.html">show</a>/<a href="splashscreen.hide.html">hide</a> the application's splash screen.
 
 
 Methods
 -------
 
-- show
-- hide
+- <a href="splashscreen.show.html">show</a>
+- <a href="splashscreen.hide.html">hide</a>
 
 Permissions
 -----------
@@ -67,7 +67,7 @@ Setup
         super.loadUrl("file:///android_asset/www/index.html", 10000);
     
     The first line 'super.setIntegerProperty' sets the image to be displayed as the splashscreen. If you have named your image anything other than splash.png you will have to modify this line.
-    The second line is the normal 'super.loadUrl' line but it has a second parameter which is the timeout value for the splash screen. In this example the splash screen will display for 10 seconds. If you want to dismiss the splash screen once you get the "deviceready" event you should call the navigator.splashscreen.hide() method.
+    The second line is the normal 'super.loadUrl' line but it has a second parameter which is the timeout value for the splash screen. In this example the splash screen will display for 10 seconds. If you want to dismiss the splash screen once you get the "<a href="../events/events.deviceready.html">deviceready</a>" event you should call the navigator.splashscreen.<a href="splashscreen.hide.html">hide</a>() method.
 
 ### iOS
 

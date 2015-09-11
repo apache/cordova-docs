@@ -47,7 +47,7 @@ El `media.seekTo` se ejecuta asincrónicamente, actualización de la posición a
     // Audio player
     //
     var my_media = new Media(src, onSuccess, onError);
-        my_media.play();
+        my_<a href="media.play.html">media.play</a>();
     // SeekTo to 10 seconds after 5 seconds
     setTimeout(function() {
         my_media.seekTo(10000);
@@ -60,14 +60,14 @@ El `media.seekTo` se ejecuta asincrónicamente, actualización de la posición a
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -87,12 +87,12 @@ El `media.seekTo` se ejecuta asincrónicamente, actualización de la posición a
                 my_media = new Media(src, onSuccess, onError);
     
                 // Play audio
-                my_media.play();
+                my_<a href="media.play.html">media.play</a>();
     
                 // Update media position every second
                 mediaTimer = setInterval(function() {
                     // get media position
-                    my_media.getCurrentPosition(
+                    my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                         // success callback
                         function(position) {
                             if (position > -1) {
@@ -116,7 +116,7 @@ El `media.seekTo` se ejecuta asincrónicamente, actualización de la posición a
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;

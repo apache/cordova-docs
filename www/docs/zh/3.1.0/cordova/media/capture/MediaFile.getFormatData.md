@@ -20,14 +20,14 @@ license: >
 
 # MediaFile.getFormatData
 
-> 檢索格式媒體捕獲檔的資訊。
+> 檢索格式<a href="../media.html">媒體</a><a href="capture.html">捕獲</a><a href="../../file/fileobj/fileobj.html">檔</a>的資訊。
 
-    mediaFile.getFormatData （MediaFileDataSuccessCB successCallback） [MediaFileDataErrorCB errorCallback] ；
+    mediaFile.getFormatData （<a href="MediaFileData.html">MediaFileData</a>SuccessCB successCallback） [<a href="MediaFileData.html">MediaFileData</a>ErrorCB errorCallback] ；
     
 
 ## 說明
 
-此函數以非同步方式嘗試檢索該媒體檔案的格式資訊。 如果成功，它將調用 `MediaFileDataSuccessCB` 回檔與 `MediaFileData` 物件。 如果該嘗試失敗，此函數將調用 `MediaFileDataErrorCB` 回檔。
+此函數以非同步方式嘗試檢索該<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案的格式資訊。 如果成功，它將調用 `<a href="MediaFileData.html">MediaFileData</a>SuccessCB` 回<a href="../../file/fileobj/fileobj.html">檔</a>與 `<a href="MediaFileData.html">MediaFileData</a>` 物件。 如果該嘗試失敗，此函數將調用 `<a href="MediaFileData.html">MediaFileData</a>ErrorCB` 回<a href="../../file/fileobj/fileobj.html">檔</a>。
 
 ## 支援的平臺
 
@@ -39,12 +39,12 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-不為媒體檔案，所以所有有關的資訊提供一個 API `MediaFileData` 物件返回的預設值。
+不為<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案，所以所有有關的資訊提供一個 API `<a href="MediaFileData.html">MediaFileData</a>` 物件返回的預設值。
 
 ## Android 的怪癖
 
-訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。
+訪問<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案格式資訊的 API 的限制，所以並不是所有 `<a href="MediaFileData.html">MediaFileData</a>` 支援的屬性。
 
 ## iOS 的怪癖
 
-訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。
+訪問<a href="../media.html">媒體</a><a href="../../file/fileobj/fileobj.html">檔</a>案格式資訊的 API 的限制，所以並不是所有 `<a href="MediaFileData.html">MediaFileData</a>` 支援的屬性。

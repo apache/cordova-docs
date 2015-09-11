@@ -20,22 +20,22 @@ license: >
 
 # batterystatus
 
-이벤트는 배터리 상태에 변화가 있을 때 발생 합니다.
+<a href="events.html">이벤트</a>는 배터리 상태에 변화가 있을 때 발생 합니다.
 
-    window.addEventListener("batterystatus", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-이 이벤트는 배터리 충전 비율 1% 이상에 의해 변경 될 때 또는 장치를 연결 하거나 분리 하는 경우 발생 합니다.
+이 <a href="events.html">이벤트</a>는 배터리 충전 비율 1% 이상에 의해 변경 될 때 또는 <a href="../device/device.html">장치</a>를 <a href="../connection/connection.html">연결</a> 하거나 분리 하는 경우 발생 합니다.
 
 배터리 상태 처리기는 두 개의 속성이 포함 된 개체에 전달 됩니다.
 
 *   **수준**: 배터리 충전 (0-100)의 비율. *(수)*
 
-*   **isPlugged**: 장치 연결된 인치 *(부울)* 인지 여부를 나타내는 부울 값
+*   **isPlugged**: <a href="../device/device.html">장치</a> <a href="../connection/connection.html">연결</a>된 인치 *(부울)* 인지 여부를 나타내는 부울 값
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `window.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 한번 <a href="events.html">이벤트</a> 리스너를 <a href="../connection/connection.html">연결</a> 하는 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">이벤트</a>가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -47,11 +47,11 @@ license: >
 
 ## Windows Phone 7, 8 특수
 
-Windows Phone 7 배터리 수준을 확인 하려면 네이티브 Api를 제공 하지 않습니다 때문에 `level` 속성은 사용할 수 없습니다. `isPlugged`매개 변수는 *는* 지원.
+Windows Phone 7 배터리 수준을 확인 하려면 네이티브 Api를 제공 하지 않습니다 때문에 `level` 속성은 사용할 수 없습니다. `isPlugged`매개 <a href="../../plugin_ref/spec.html">변수</a>는 *는* 지원.
 
 ## 빠른 예제
 
-    window.addEventListener("batterystatus", onBatteryStatus, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
     
     function onBatteryStatus(info) {
         // Handle the online event
@@ -64,7 +64,7 @@ Windows Phone 7 배터리 수준을 확인 하려면 네이티브 Api를 제공 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -72,13 +72,13 @@ Windows Phone 7 배터리 수준을 확인 하려면 네이티브 Api를 제공 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
         }
     
         // Handle the batterystatus event

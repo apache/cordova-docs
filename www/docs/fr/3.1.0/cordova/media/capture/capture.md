@@ -22,26 +22,26 @@ license: >
 
 > Donne accès à de l'appareil audio, image et capacités de capture vidéo.
 
-**Remarque importante de la vie privée :** Collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. Politique de confidentialité de votre application doit examiner comment l'application utilise des capteurs et si les données enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant votre application d'accéder à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés app peuvent exiger votre app à aviser le juste-à-temps et obtenir l'autorisation de l'utilisateur avant d'accéder à la caméra ou un microphone. Pour plus d'informations, consultez le Guide de la vie privée.
+**Remarque importante de la vie privée :** Collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. Politique de confidentialité de votre application doit examiner comment l'application utilise des capteurs et si les données enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant votre application d'accéder à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés app peuvent exiger votre app à aviser le juste-à-temps et obtenir l'autorisation de l'utilisateur avant d'accéder à la caméra ou un microphone. Pour plus d'informations, consultez le <a href="../../../guide/appdev/privacy/index.html">Guide de la vie privée</a>.
 
 ## Objets
 
 *   Capture
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+*   <a href="captureImageOptions.html">CaptureImageOptions</a>
+*   <a href="captureVideoOptions.html">CaptureVideoOptions</a>
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+*   <a href="ConfigurationData.html">ConfigurationData</a>
+*   <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>
+*   <a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>Data
 
 ## Méthodes
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   <a href="captureAudio.html">capture.captureAudio</a>
+*   <a href="captureImage.html">capture.captureImage</a>
+*   <a href="captureVideo.html">capture.captureVideo</a>
+*   <a href="<a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData.html"><a href="<a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a>.html"><a href="../media.html">Media</a><a href="../../file/fileobj/fileobj.html">File</a></a>.getFormatData</a>
 
 ## Champ d'application
 
@@ -53,19 +53,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Propriétés
 
-*   **supportedAudioModes**: l'enregistrement des formats pris en charge par le périphérique audio. (ConfigurationData[])
+*   **supportedAudioModes**: l'enregistrement des formats pris en charge par le périphérique audio. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedImageModes**: l'enregistrement image et formats pris en charge par le périphérique. (ConfigurationData[])
+*   **supportedImageModes**: l'enregistrement image et formats pris en charge par le périphérique. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedVideoModes**: l'enregistrement vidéo résolutions et formats pris en charge par le périphérique. (ConfigurationData[])
+*   **supportedVideoModes**: l'enregistrement vidéo résolutions et formats pris en charge par le périphérique. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 ## Méthodes
 
-*   `capture.captureAudio`: Lancer l'application d'enregistrement audio de l'appareil pour enregistrer des clips audio.
+*   `<a href="captureAudio.html">capture.captureAudio</a>`: Lancer l'application d'enregistrement audio de l'appareil pour enregistrer des clips audio.
 
-*   `capture.captureImage`: Lancer l'application appareil photo de l'appareil pour prendre des photos.
+*   `<a href="captureImage.html">capture.captureImage</a>`: Lancer l'application appareil photo de l'appareil pour prendre des photos.
 
-*   `capture.captureVideo`: Lancer l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
+*   `<a href="captureVideo.html">capture.captureVideo</a>`: Lancer l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
 
 ## Plates-formes prises en charge
 
@@ -94,7 +94,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Capturer" >< param name = "blackberry-package" value="org.apache.cordova.capture.MediaCapture" / >< / fiction > (dans www/config.xml) < id="blackberry.system en vedette" requis = "true" version = "1.0.0.0" / >< id="blackberry.io.file en vedette" requis = "true" version = "1.0.0.0" / >
+        (in www/plugins.Xml) < nom de la fonction = "Capturer" >< param name = "blackberry-package" value="org.apache.cordova.capture.<a href="../media.html">Media</a>Capture" / >< / fiction > (dans www/config.xml) < id="blackberry.system en vedette" requis = "true" version = "1.0.0.0" / >< id="blackberry.io.file en vedette" requis = "true" version = "1.0.0.0" / >
         
 
 *   iOS (en`config.xml`)

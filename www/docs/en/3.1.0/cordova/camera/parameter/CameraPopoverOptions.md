@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# CameraPopoverOptions
+# <a href="../camera.html">Camera</a>PopoverOptions
 
 iOS-only parameters that specify the anchor element location and arrow
 direction of the popover when selecting images from an iPad's library
@@ -28,10 +28,10 @@ or album.
       y :  32,
       width : 320,
       height : 480,
-      arrowDir : Camera.PopoverArrowDirection.ARROW_ANY
+      arrowDir : <a href="../camera.html">Camera</a>.PopoverArrowDirection.ARROW_ANY
     };
 
-## CameraPopoverOptions
+## <a href="../camera.html">Camera</a>PopoverOptions
 
 - __x__: x pixel coordinate of screen element onto which to anchor the popover. _(Number)_
 
@@ -41,9 +41,9 @@ or album.
 
 - __height__: height, in pixels, of the screen element onto which to anchor the popover. _(Number)_
 
-- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` _(Number)_
+- __arrowDir__: Direction the arrow on the popover should point.  Defined in `<a href="../camera.html">Camera</a>.PopoverArrowDirection` _(Number)_
 
-            Camera.PopoverArrowDirection = {
+            <a href="../camera.html">Camera</a>.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
                 ARROW_DOWN : 2,
                 ARROW_LEFT : 4,
@@ -56,17 +56,17 @@ direction of the arrow and orientation of the screen.  Make sure to
 account for orientation changes when specifying the anchor element
 location.
 
-## Quick Example
+## Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 
-     var popover = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var popover = new <a href="../camera.html">Camera</a>PopoverOptions(300, 300, 100, 100, <a href="../camera.html">Camera</a>.PopoverArrowDirection.ARROW_ANY);
      var options = {
          quality         : 50,
-         destinationType : Camera.DestinationType.DATA_URL,
-         sourceType      : Camera.PictureSource.SAVEDPHOTOALBUM,
+         destinationType : <a href="../camera.html">Camera</a>.DestinationType.DATA_URL,
+         sourceType      : <a href="../camera.html">Camera</a>.PictureSource.SAVEDPHOTOALBUM,
          popoverOptions  : popover
      };
 
-     navigator.camera.getPicture(onSuccess, onFail, options);
+     navigator.<a href="../camera.getPicture.html">camera.getPicture</a>(onSuccess, onFail, options);
 
      function onSuccess(imageData) {
          var image = document.getElementById('myImage');

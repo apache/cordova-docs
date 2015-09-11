@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# FileError
+# <a href="../fileobj/fileobj.html">File</a>Error
 
-A `FileError` oggetto viene impostato quando si verifica un errore in uno qualsiasi dei metodi File API.
+A `<a href="../fileobj/fileobj.html">File</a>Error` oggetto viene impostato quando si verifica un errore in uno qualsiasi dei metodi <a href="../fileobj/fileobj.html">File</a> API.
 
 ## Proprietà
 
@@ -28,19 +28,19 @@ A `FileError` oggetto viene impostato quando si verifica un errore in uno qualsi
 
 ## Costanti
 
-*   `FileError.NOT_FOUND_ERR`
-*   `FileError.SECURITY_ERR`
-*   `FileError.ABORT_ERR`
-*   `FileError.NOT_READABLE_ERR`
-*   `FileError.ENCODING_ERR`
-*   `FileError.NO_MODIFICATION_ALLOWED_ERR`
-*   `FileError.INVALID_STATE_ERR`
-*   `FileError.SYNTAX_ERR`
-*   `FileError.INVALID_MODIFICATION_ERR`
-*   `FileError.QUOTA_EXCEEDED_ERR`
-*   `FileError.TYPE_MISMATCH_ERR`
-*   `FileError.PATH_EXISTS_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.NOT_FOUND_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.SECURITY_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.ABORT_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.NOT_READABLE_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.ENCODING_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.NO_MODIFICATION_ALLOWED_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_STATE_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.SYNTAX_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.INVALID_MODIFICATION_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.QUOTA_EXCEEDED_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.TYPE_MISMATCH_ERR`
+*   `<a href="../fileobj/fileobj.html">File</a>Error.PATH_EXISTS_ERR`
 
 ## Descrizione
 
-Il `FileError` oggetto è l'unico parametro fornito a qualsiasi callback di errore il File API. Per determinare il tipo di errore, confrontare le `code` proprietà a nessuna delle liste qui sopra.
+Il `<a href="../fileobj/fileobj.html">File</a>Error` oggetto è l'unico parametro fornito a qualsiasi callback di errore il <a href="../fileobj/fileobj.html">File</a> API. Per determinare il tipo di errore, confrontare le `code` proprietà a nessuna delle liste qui sopra.

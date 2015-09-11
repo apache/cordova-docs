@@ -42,7 +42,7 @@ license: >
 
 *   [연락처][5]
     
-    > 장치 연락처 데이터베이스와 함께 작동 합니다.
+    > 장치 연락처 <a href="../storage/database/database.html">데이터베이스</a>와 함께 작동 합니다.
 
 *   [장치][6]
     

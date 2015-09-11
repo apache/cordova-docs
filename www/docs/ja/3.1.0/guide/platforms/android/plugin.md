@@ -20,9 +20,9 @@ license: >
 
 # Android のプラグイン
 
-プラグインを書くコルドバ Android のアーキテクチャの理解が必要です。 コルドバ アンドロイド Android の WebView それに取り付けられたフックで構成されます。 これらのプラグインのクラスへのマッピングとして表される、 `config.xml` ファイル。
+プラグインを書くコルドバ Android のアーキテクチャの理解が必要です。 コルドバ アンドロイド Android の WebView それに取り付けられたフックで構成されます。 これらのプラグインのクラスへのマッピングとして表される、 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` クラス。 プラグインの 1 つをオーバーライドする必要があります、 `execute` メソッドから `CordovaPlugin` 。 最高のプラグインが処理する実際には、 `pause` と `resume` イベント、およびプラグインの間のメッセージパッシング。 実行時間の長い要求は、メディアの再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
+プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` クラス。 プラグインの 1 つをオーバーライドする必要があります、 `execute` メソッドから `CordovaPlugin` 。 最高のプラグインが処理する実際には、 `pause` と `resume` <a href="../../../cordova/events/events.html">イベント</a>、およびプラグインの間のメッセージパッシング。 実行時間の長い要求は、<a href="../../../cordova/media/media.html">メディア</a>の再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
 
 ## プラグイン クラスのマッピング
 
@@ -33,7 +33,7 @@ license: >
 
 これは、アンドロイド ネイティブ側には、もっとまたはより少なく通話にダウン沸騰、WebView から要求をマーシャ リングします、 `action` 法、 `service` に渡された引数を持つクラス、 `args` 配列。
 
-プラグインを追加する必要がありますあなたのプラグインを Java ファイルや独自の jar ファイルとして配布するかどうか、 `config.xml` 、コルドバ Android アプリケーションでファイル `res/xml/` ディレクトリ。
+プラグインを追加する必要がありますあなたのプラグインを Java <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>や独自の jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>として配布するかどうか、 `config.xml` 、コルドバ Android アプリケーションで<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> `res/xml/` ディレクトリ。
 
     <feature name="<service_name>">
         <param name="android-package" value="<full_name_including_namespace>" />
@@ -44,7 +44,7 @@ license: >
 
 ## Android の Java プラグインを書く
 
-Java スクリプトの設定をネイティブ側に要求するプラグインが発生します。経由で Android の Java プラグインが正しくマップされている、 `config.xml` ファイル。だから最終的な Android の Java プラグイン クラスどのようか。
+Java スクリプトの設定をネイティブ側に要求するプラグインが発生します。経由で Android の Java プラグインが正しくマップされている、 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。だから最終的な Android の Java プラグイン クラスどのようか。
 
 何を介して JavaScript のプラグインにディスパッチを取得 `exec` 関数で渡されるプラグイン クラスの `execute` メソッド。 ほとんど `execute` の実装のようになります。
 
@@ -98,14 +98,14 @@ UI スレッド上で実行する必要がない場合 WebCore のスレッド�
 
 ### エコー Android のプラグインの例
 
-追加するのには、次の `config.xml` ファイル。
+追加するのには、次の `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
     <feature name="Echo">
         <param name="android-package" value="org.apache.cordova.plugin.Echo" />
     </feature>
     
 
-以下のファイルを追加し、 `src/org/apache/cordova/plugin/Echo.java` コルドバ Android アプリケーション内。
+以下の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を追加し、 `src/org/apache/cordova/plugin/Echo.java` コルドバ Android アプリケーション内。
 
     package org.apache.cordova.plugin;
     
@@ -145,7 +145,7 @@ UI スレッド上で実行する必要がない場合 WebCore のスレッド�
 
 ## プラグインのデバッグ
 
-Eclipse を使用して Android プロジェクトをデバッグすることができます、プロジェクトに Java ソースが含まれる場合、プラグインをデバッグできます。 Android の開発者ツールの最新バージョンのみこの時点で完全にサポートされていないのでソース コード添付ファイル JAR の依存関係を許可するように知られています。
+Eclipse を使用して Android プロジェクトをデバッグすることができます、プロジェクトに Java ソースが含まれる場合、プラグインをデバッグできます。 Android の開発者ツールの最新バージョンのみこの時点で完全にサポートされていないのでソース コード添付<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> JAR の依存関係を許可するように知られています。
 
 ## 一般的な落とし穴
 

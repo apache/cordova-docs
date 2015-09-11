@@ -18,10 +18,10 @@ license: >
     under the License.
 ---
 
-MediaError
+<a href="../media.html">Media</a>Error
 ==========
 
-`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
+`<a href="../media.html">Media</a>Error` オブジェクトは、エラー発生時に `<a href="../Parameters/mediaError.html">mediaError</a>` コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -32,14 +32,14 @@ MediaError
 定数
 ---------
 
-- `MediaError.MEDIA_ERR_ABORTED`
-- `MediaError.MEDIA_ERR_NETWORK`
-- `MediaError.MEDIA_ERR_DECODE`
-- `MediaError.MEDIA_ERR_NONE_SUPPORTED`
+- `<a href="../media.html">Media</a>Error.MEDIA_ERR_ABORTED`
+- `<a href="../media.html">Media</a>Error.MEDIA_ERR_NETWORK`
+- `<a href="../media.html">Media</a>Error.MEDIA_ERR_DECODE`
+- `<a href="../media.html">Media</a>Error.MEDIA_ERR_NONE_SUPPORTED`
 
 
 概要
 -----------
 
-`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
+`<a href="../media.html">Media</a>Error` オブジェクトは、エラー発生時に `<a href="../Parameters/mediaError.html">mediaError</a>` コールバック関数に渡されます。
 

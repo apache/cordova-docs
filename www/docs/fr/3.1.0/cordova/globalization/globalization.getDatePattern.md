@@ -37,7 +37,7 @@ Retourne le modèle de la `successCallback` . L'objet passé comme paramètre co
 
 *   **DST_OFFSET**: l'offset d'heure actuel en secondes entre non-heure le client du fuseau horaire et l'heure du client sauver du fuseau horaire. *(Nombre)*
 
-S'il y a une erreur, obtenir le modèle, le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
+S'il y a une erreur, obtenir le modèle, le `errorCallback` s'exécute avec un `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` objet comme paramètre. Code attendu de l'erreur est`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
 
 Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
 
@@ -72,7 +72,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple pour a
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern Example</title>
+        <title>getDatePattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

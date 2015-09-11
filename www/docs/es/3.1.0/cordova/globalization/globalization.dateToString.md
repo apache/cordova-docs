@@ -31,7 +31,7 @@ Devuelve la fecha con formato `String` mediante una propiedad de `value` accesib
 
 El parámetro entrantes `date` debe ser de tipo `Date`.
 
-Si hay un error de formato de la fecha, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.FORMATTING\_ERROR`.
+Si hay un error de formato de la fecha, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 El `options` parámetro es opcional, y sus valores por defecto son:
 
@@ -66,7 +66,7 @@ Si el navegador está configurado para la localidad de `en\_US`, muestra un cuad
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString Example</title>
+        <title>dateToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

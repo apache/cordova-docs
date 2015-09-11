@@ -20,11 +20,11 @@ license: >
 
 # ブラックベリーのアップグレード
 
-このガイドは、コルドバの旧バージョンからアップグレードするブラックベリー プロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
+この<a href="../../../index.html">ガイド</a>は、コルドバの旧バージョンからアップグレードするブラックベリー プロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>参照してください。
 
 ## 3.1.0 3.0.0 からアップグレードします。
 
-1.  コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.1.0 プロジェクトを作成します。
+1.  <a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.1.0 プロジェクトを作成します。
 
 2.  たとえばコルドバ プロジェクトにあなたのプラットフォームを追加します。`cordova
 platform add blackberry10`.
@@ -43,7 +43,7 @@ CLI を専ら BlackBerry10 プラットフォームをサポートすること�
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード
 
-1.  コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
+1.  <a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
 
 2.  あなたのプラットフォームの追加、cordova のプロジェクトします。`cordova
 platform add blackberry10`.
@@ -68,11 +68,11 @@ platform add blackberry10`.
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  ブラックベリーのコマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
+4.  <a href="../blackberry/tools.html">ブラックベリーのコマンド ライン ツール</a>で説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
 
 5.  以前のプロジェクトから、プロジェクトのソースをコピー `/www` を新しいプロジェクトのディレクトリ `/www` ディレクトリ。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ### BlackBerryOS/脚本
 
@@ -84,9 +84,9 @@ platform add blackberry10`.
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova.js` ファイル。
+5.  コピー、 `www/cordova.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  コピー、 `native` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `native` ディレクトリ。
 
@@ -98,7 +98,7 @@ platform add blackberry10`.
 
 ブラックベリー 10:
 
-ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト ファイルは今 'cordova.js' と呼ばれもはやバージョン文字列が含まれています。
+ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は今 'cordova.js' と呼ばれもはやバージョン文字列が含まれています。
 
 1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.8.0 ソースを展開`~/Cordova-2.8.0`.
 
@@ -106,11 +106,11 @@ platform add blackberry10`.
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  ブラックベリーのコマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
+4.  <a href="../blackberry/tools.html">ブラックベリーのコマンド ライン ツール</a>で説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
 
 5.  以前のプロジェクトから、プロジェクトのソースをコピー `/www` を新しいプロジェクトのディレクトリ `/www` ディレクトリ。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 BlackBerryOS/脚本:
 
@@ -122,9 +122,9 @@ BlackBerryOS/脚本:
 
 4.  IOS コマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova.js` ファイル。
+5.  コピー、 `www/cordova.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  コピー、 `native` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `native` ディレクトリ。
 
@@ -140,11 +140,11 @@ BlackBerryOS/脚本:
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  ブラックベリーのコマンド ライン ツールで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
+4.  <a href="../blackberry/tools.html">ブラックベリーのコマンド ライン ツール</a>で説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  コピー、 `www/cordova-2.7.0.js` に新しいプロジェクトからファイルを `www` ディレクトリ、および削除を `www/cordova-2.6.0.js` ファイル。
+5.  コピー、 `www/cordova-2.7.0.js` に新しいプロジェクトから<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を `www` ディレクトリ、および削除を `www/cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.7.0.js` ファイル。
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>とスクリプト参照が含まれている他の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>) を指す、新しい `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 7.  コピー、 `native` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `native` ディレクトリ。
 
@@ -160,21 +160,21 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 ただし、段階的な部分の更新に必要な新しいパーツ以下します。
 
-1.  Cordova.blackberry.js ファイルを更新する、 `Phonegap-2.6.0/lib/blackberry/javascript` ディレクトリ。
+1.  Cordova.blackberry.js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を更新する、 `Phonegap-2.6.0/lib/blackberry/javascript` ディレクトリ。
 
 2.  更新プログラム、 `ext` 、 `ext-air` 、および `ext-qnx` で、 `Phonegap-2.6.0/lib/blackberry/framework` ディレクトリ。
 
-3.  更新、 `build.xml` ファイルで、 `Phonegap-2.6.0/lib/blackberry` ディレクトリ。
+3.  更新、 `build.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `Phonegap-2.6.0/lib/blackberry` ディレクトリ。
 
 4.  更新、 `Phonegap-2.6.0/lib/blackberry/bin` ディレクトリ。
 
-5.  更新、 `VERSION` ファイルで、 `Phonegap-2.6.0/lib/blackberry` ディレクトリ。
+5.  更新、 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `Phonegap-2.6.0/lib/blackberry` ディレクトリ。
 
 例を更新/ディレクトリまたは、既存の移行プロジェクト：
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
@@ -182,7 +182,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  コピー、新しい `cordova-2.6.0.js` プロジェクトに。
 
-6.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` ファイル。
+6.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 2.4.0 から 2.5.0 にアップグレードします。
 
@@ -192,21 +192,21 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 ただし、段階的な部分の更新に必要な新しいパーツ以下します。
 
-1.  Cordova.blackberry.js ファイルを更新する、 `Phonegap-2.5.0/lib/blackberry/javascript` ディレクトリ。
+1.  Cordova.blackberry.js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を更新する、 `Phonegap-2.5.0/lib/blackberry/javascript` ディレクトリ。
 
 2.  更新プログラム、 `ext` 、 `ext-air` 、および `ext-qnx` で、 `Phonegap-2.5.0/lib/blackberry/framework` ディレクトリ。
 
-3.  更新、 `build.xml` ファイルで、 `Phonegap-2.5.0/lib/blackberry` ディレクトリ。
+3.  更新、 `build.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `Phonegap-2.5.0/lib/blackberry` ディレクトリ。
 
 4.  更新、 `Phonegap-2.5.0/lib/blackberry/bin` ディレクトリ。
 
-5.  更新、 `VERSION` ファイルで、 `Phonegap-2.5.0/lib/blackberry` ディレクトリ。
+5.  更新、 `VERSION` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で、 `Phonegap-2.5.0/lib/blackberry` ディレクトリ。
 
 例を更新/ディレクトリまたは、既存の移行プロジェクト：
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
@@ -214,7 +214,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  コピー、新しい `cordova-2.5.0.js` プロジェクトに。
 
-6.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` ファイル。
+6.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 2.3.0 から 2.4.0 にアップグレードします。
 
@@ -222,34 +222,34 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-2.4.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
-    *   ブラックベリー 10、.js ファイルで更新かどうか、 `qnx/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
+    *   ブラックベリー 10、.js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で更新かどうか、 `qnx/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.2.3.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.3.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.2.3.0/ext-air/` ディレクトリ。
 
 4.  内容を更新、 `cordova.2.3.0/ext-qnx/` ディレクトリ。
 
-5.  .Js ファイル更新、 `cordova.2.3.0/javascript/` ディレクトリ。
+5.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.3.0/javascript/` ディレクトリ。
 
 6.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.2.3.0/` ディレクトリを`cordova.2.4.0/`.
 
 7.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.4.0.js` ファイル。
+8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 2.2.0 から 2.3.0 にアップグレードします。
 
@@ -257,34 +257,34 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-2.3.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
-    *   ブラックベリー 10、.js ファイルで更新かどうか、 `qnx/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
+    *   ブラックベリー 10、.js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で更新かどうか、 `qnx/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.2.2.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.2.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.2.2.0/ext-air/` ディレクトリ。
 
 4.  内容を更新、 `cordova.2.2.0/ext-qnx/` ディレクトリ。
 
-5.  .Js ファイル更新、 `cordova.2.2.0/javascript/` ディレクトリ。
+5.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.2.0/javascript/` ディレクトリ。
 
 6.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.2.2.0/` ディレクトリを`cordova.2.3.0/`.
 
 7.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.3.0.js` ファイル。
+8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 2.1.0 から 2.2.0 にアップグレードします。
 
@@ -292,34 +292,34 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-2.2.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
-    *   ブラックベリー 10、.js ファイルで更新かどうか、 `qnx/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
+    *   ブラックベリー 10、.js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>で更新かどうか、 `qnx/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.2.1.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.1.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.2.1.0/ext-air/` ディレクトリ。
 
 4.  内容を更新、 `cordova.2.1.0/ext-qnx/` ディレクトリ。
 
-5.  .Js ファイル更新、 `cordova.2.1.0/javascript/` ディレクトリ。
+5.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.1.0/javascript/` ディレクトリ。
 
 6.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.2.1.0/` ディレクトリを`cordova.2.2.0/`.
 
 7.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.2.0.js` ファイル。
+8.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 2.0.0 から 2.1.0 にアップグレードします。
 
@@ -327,31 +327,31 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-2.1.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.2.0.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.0.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.2.0.0/ext-air/` ディレクトリ。
 
-4.  .Js ファイル更新、 `cordova.2.0.0/javascript/` ディレクトリ。
+4.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.2.0.0/javascript/` ディレクトリ。
 
 5.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.2.0.0/` ディレクトリを`cordova.2.1.0/`.
 
 6.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.1.0.js` ファイル。
+7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 ## 1.9.0 から 2.0.0 にアップグレードします。
 
@@ -359,48 +359,48 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-2.0.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  更新プログラムを `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
+6.  更新プログラムを `www/plugins.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。2 つのプラグインの名前空間のサービス ラベルを変更。<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>と接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「<a href="../../../cordova/contacts/Contact/contact.html">お問い合わせ</a>」value="org.apache.cordova.pim.Contact"/>
         
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「<a href="../../../cordova/contacts/parameters/contactFields.html">連絡先</a>」value="org.apache.cordova.pim.Contact"/= >
         
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.1.9.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.1.9.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.1.9.0/ext-air/` ディレクトリ。
 
-4.  .Js ファイル更新、 `cordova.1.9.0/javascript/` ディレクトリ。
+4.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.1.9.0/javascript/` ディレクトリ。
 
 5.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.1.9.0/` ディレクトリを`cordova.2.0.0/`.
 
 6.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.0.0.js` ファイル。
+7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  オープン、 `www/` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
+8.  オープン、 `www/` ディレクトリと更新、 `plugins.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。2 つのプラグインの名前空間のサービス ラベルを変更。<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>と接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「<a href="../../../cordova/contacts/Contact/contact.html">お問い合わせ</a>」value="org.apache.cordova.pim.Contact"/>
         
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「<a href="../../../cordova/contacts/parameters/contactFields.html">連絡先</a>」value="org.apache.cordova.pim.Contact"/= >
         
 
 *   1.8.0 へのアップグレード、1.7.0 から行ってください。
@@ -411,45 +411,45 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 1.  オープン、 `www/` ディレクトリ、アプリが含まれます。
 
-2.  削除し、更新の .jar ファイルは `ext/` ディレクトリ。
+2.  削除し、更新の .jar <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は `ext/` ディレクトリ。
 
 3.  内容を更新、 `ext-air/` ディレクトリ。
 
 4.  コピー、新しい `cordova-1.8.0.js` プロジェクトに。
     
-    *   脚本、それから更新の .js ファイルの場合、 `playbook/` ディレクトリ。
+    *   脚本、それから更新の .js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>の場合、 `playbook/` ディレクトリ。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  更新プログラムを `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
+6.  更新プログラムを `www/plugins.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。2 つのプラグインの名前空間のサービス ラベルを変更。<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>と接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「<a href="../../../cordova/contacts/Contact/contact.html">お問い合わせ</a>」value="org.apache.cordova.pim.Contact"/>
         
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「<a href="../../../cordova/contacts/parameters/contactFields.html">連絡先</a>」value="org.apache.cordova.pim.Contact"/= >
         
 
 （すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
-2.  末尾が .jar のファイル更新、 `cordova.1.7.0/ext/` ディレクトリ。
+2.  末尾が .jar の<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.1.7.0/ext/` ディレクトリ。
 
 3.  内容を更新、 `cordova.1.7.0/ext-air/` ディレクトリ。
 
-4.  .Js ファイル更新、 `cordova.1.7.0/javascript/` ディレクトリ。
+4.  .Js <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>更新、 `cordova.1.7.0/javascript/` ディレクトリ。
 
 5.  オープン、 `sample/lib/` ディレクトリおよび名前の変更、 `cordova.1.7.0/` ディレクトリを`cordova.1.8.0/`.
 
 6.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www/` 更新コルドバとディレクトリ。
 
-7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-1.8.0.js` ファイル。
+7.  オープン、 `www/` ディレクトリを使用して、新しい HTML の更新と `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-8.  オープン、 `www/` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
+8.  オープン、 `www/` ディレクトリと更新、 `plugins.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。2 つのプラグインの名前空間のサービス ラベルを変更。<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>と接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「<a href="../../../cordova/contacts/Contact/contact.html">お問い合わせ</a>」value="org.apache.cordova.pim.Contact"/>
         
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         < プラグイン名 =「<a href="../../../cordova/media/capture/capture.html">キャプチャ</a>」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「<a href="../../../cordova/contacts/parameters/contactFields.html">連絡先</a>」value="org.apache.cordova.pim.Contact"/= >

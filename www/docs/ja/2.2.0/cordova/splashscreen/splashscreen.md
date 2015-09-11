@@ -27,8 +27,8 @@ Splashscreen
 メソッド
 -------
 
-- show
-- hide
+- <a href="splashscreen.show.html">show</a>
+- <a href="splashscreen.hide.html">hide</a>
 
 パーミッション
 -----------
@@ -67,7 +67,7 @@ Setup
         super.loadUrl("file:///android_asset/www/index.html", 10000);
 
     最初の行 'super.setIntegerProperty' はスプラッシュスクリーンに表示するための画像を設定します。もし名前を splash.png 以外にしている場合は、この行を編集する必要があります。
-    次の行 'super.loadUrl' の第2引数はスプラッシュスクリーンのタイムアウトの値です。この例では、スプラッシュスクリーンは 10 秒間表示されます。もしスプラッシュスクリーンを "deviceready" イベントを取得した時に非表示にしたい場合は、 navigator.splashscreen.hide() メソッドを呼び出します。
+    次の行 'super.loadUrl' の第2引数はスプラッシュスクリーンのタイムアウトの値です。この例では、スプラッシュスクリーンは 10 秒間表示されます。もしスプラッシュスクリーンを "<a href="../events/events.deviceready.html">deviceready</a>" イベントを取得した時に非表示にしたい場合は、 navigator.splashscreen.<a href="splashscreen.hide.html">hide</a>() メソッドを呼び出します。
 
 ### iOS
 

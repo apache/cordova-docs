@@ -75,16 +75,16 @@ Windows 8 と Windows RT での開発中で、 Microsoft は "Metro スタイル
 
 - 次に、 Cordova が動いていることを確認するためのコードを追加します。
 
-### 'deviceready' ハンドラーの追加...
+### '<a href="../../../cordova/events/events.deviceready.html">deviceready</a>' ハンドラーの追加...
     <body>
         <p>Content goes here</p>
 
         <script type="text/javascript">
 
             console.log("Subscribing...");
-            document.addEventListener("deviceready", function () {
+            document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
 
-                navigator.notification.alert("デバイスの準備ができました!");
+                navigator.<a href="../../../cordova/notification/notification.alert.html">notification.alert</a>("デバイスの準備ができました!");
 
             });
 

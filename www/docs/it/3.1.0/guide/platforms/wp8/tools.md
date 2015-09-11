@@ -36,7 +36,7 @@ Ci sono 2 modi per andare sulla creazione di una nuova applicazione Apache Cordo
 
 ### Eseguire il file batch per creare e installare i modelli.
 
-*   La radice del repo contiene un file createTemplates.bat. Doppio clic questo file genererà 2 file. zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip dove x.x.x è il numero di versione corrente) Per utilizzare facilmente questi file in Visual Studio, copia li a "Mio Documenti\Visual Studio 2012\Templates\ProjectTemplates\" allora sarete in grado di creare nuove applicazioni per Windows Phone di Apache Cordova dal File-> menu nuovo progetto Visual Studio.
+*   La radice del repo contiene un file createTemplates.bat. Doppio clic questo file genererà 2 file. zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip dove x.x.x è il numero di versione corrente) Per utilizzare facilmente questi file in Visual Studio, copia li a "Mio Documenti\Visual Studio 2012\Templates\ProjectTemplates\" allora sarete in grado di creare nuove applicazioni per Windows Phone di Apache Cordova dal <a href="../../../cordova/file/fileobj/fileobj.html">File</a>-> menu nuovo progetto Visual Studio.
 
 *   Se si esegue il file batch dalla riga di comando, è possibile chiamare anche con un parametro per installare automaticamente
 
@@ -53,7 +53,7 @@ Eseguire il `create` comando, specificando il percorso esistente per il progetto
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:

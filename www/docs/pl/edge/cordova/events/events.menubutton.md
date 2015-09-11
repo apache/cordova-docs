@@ -29,9 +29,9 @@ Zdarzenie fires, gdy użytkownik naciśnie przycisk menu.
 
 Zastosowanie programu obsługi zdarzeń zastępuje domyślne zachowanie przycisku menu.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `<a href="events.deviceready.html">deviceready</a>` pożary zdarzenia.
 
-## Obsługiwane platformy
+## <a href="../../config_ref/images.html">Obsługiwane platformy</a>
 
 *   Amazon Fire OS
 *   Android
@@ -60,7 +60,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# FileSystem
+# <a href="../fileobj/fileobj.html">File</a>System
 
 Questo oggetto rappresenta un file system.
 
@@ -26,11 +26,11 @@ Questo oggetto rappresenta un file system.
 
 *   **nome**: il nome del file system. *(DOMString)*
 
-*   **radice**: la directory radice del file system. *(DirectoryEntry)*
+*   **radice**: la directory radice del file system. *(<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>)*
 
 ## Dettagli
 
-Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il nome del file system è univoco tra l'elenco dei sistemi di file esposti. La proprietà della radice contiene un `DirectoryEntry` oggetto che rappresenta la directory radice del file system.
+Il `<a href="../fileobj/fileobj.html">File</a>System` oggetto rappresenta le informazioni relative al file system. Il nome del file system è univoco tra l'elenco dei sistemi di file esposti. La proprietà della radice contiene un `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` oggetto che rappresenta la directory radice del file system.
 
 ## Piattaforme supportate
 
@@ -48,7 +48,7 @@ Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il 
     }
     
     // request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    window.<a href="../localfilesystem/localfilesystem.html">request<a href="../fileobj/fileobj.html">File</a>System</a>(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, onSuccess, null);
     
 
 ## Esempio completo
@@ -56,22 +56,22 @@ Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System Example</title>
+        <title><a href="../fileobj/fileobj.html">File</a> System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.<a href="../localfilesystem/localfilesystem.html">request<a href="../fileobj/fileobj.html">File</a>System</a>(<a href="../localfilesystem/localfilesystem.html">Local<a href="../fileobj/fileobj.html">File</a>System</a>.PERSISTENT, 0, on<a href="../fileobj/fileobj.html">File</a>SystemSuccess, fail);
         }
     
-        function onFileSystemSuccess(fileSystem) {
+        function on<a href="../fileobj/fileobj.html">File</a>SystemSuccess(fileSystem) {
             console.log(fileSystem.name);
             console.log(fileSystem.root.name);
         }
@@ -83,7 +83,7 @@ Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>File System</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p><a href="../fileobj/fileobj.html">File</a> System</p>
       </body>
     </html>

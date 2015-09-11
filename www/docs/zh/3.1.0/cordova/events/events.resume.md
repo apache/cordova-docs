@@ -20,16 +20,16 @@ license: >
 
 # 簡歷
 
-當應用程式從背景中檢索時，將觸發該事件。
+當應用程式從背景中檢索時，將觸發該<a href="events.html">事件</a>。
 
-    document.addEventListener("resume", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-`resume`事件觸發時的本機平臺拔出從背景的應用程式。
+`resume`<a href="events.html">事件</a>觸發時的本機平臺拔出從背景的應用程式。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
 
 ## 支援的平臺
 
@@ -41,7 +41,7 @@ license: >
 
 ## 快速的示例
 
-    document.addEventListener("resume", onResume, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
     
     function onResume() {
         // Handle the resume event
@@ -53,7 +53,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,13 +61,13 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
-            document.addEventListener("resume", onResume, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         }
     
         // Handle the resume event
@@ -84,17 +84,17 @@ license: >
 
 ## iOS 的怪癖
 
-從調用任何互動式函數 `pause` 事件處理常式以後執行應用程式恢復時，由發出信號 `resume` 事件。 這些包括警報， `console.log()` ，和任何調用從外掛程式或 API，科爾多瓦，穿過目標 C.
+從調用任何互動式函數 `pause` <a href="events.html">事件</a>處理常式以後執行應用程式恢復時，由發出信號 `resume` <a href="events.html">事件</a>。 這些包括警報， `console.log()` ，和任何調用從外掛程式或 API，科爾多瓦，穿過目標 C.
 
-*   **活動**事件
+*   **活動**<a href="events.html">事件</a>
     
-    特定于 iOS `active` 事件是可用作為替代 `resume` ，並檢測時使用者禁用**鎖定**按鈕以解鎖設備與應用程式在前臺運行。 如果為多工啟用的應用程式 （和設備），則這配對與其後 `resume` 事件，但只在 iOS 5 下的。 實際上，所有鎖定應用程式已啟用多工的 iOS 5 中被推到背景中。 對於應用程式繼續運行在 iOS 5 下鎖定時，禁用應用程式的多工處理通過將[UIApplicationExitsOnSuspend][1]設置為 `YES` 。 若要運行在 iOS 4 上鎖定狀態時，此設置並不重要。
+    特定于 iOS `active` <a href="events.html">事件</a>是可用作為替代 `resume` ，並檢測時使用者禁用**鎖定**按鈕以解鎖<a href="../device/device.html">設備</a>與應用程式在前臺運行。 如果為多工啟用的應用程式 （和<a href="../device/device.html">設備</a>），則這配對與其後 `resume` <a href="events.html">事件</a>，但只在 iOS 5 下的。 實際上，所有鎖定應用程式已啟用多工的 iOS 5 中被推到背景中。 對於應用程式繼續運行在 iOS 5 下鎖定時，禁用應用程式的多工處理通過將[UIApplicationExitsOnSuspend][1]設置為 `YES` 。 若要運行在 iOS 4 上鎖定狀態時，此設置並不重要。
 
-*   **恢復**事件
+*   **恢復**<a href="events.html">事件</a>
     
-    當從調用 `resume` 事件處理常式，如互動式功能 `alert()` 需要包裝在 `setTimeout()` 調用超時值為零，否則應用程式掛起。 例如：
+    當從調用 `resume` <a href="events.html">事件</a>處理常式，如互動式功能 `alert()` 需要包裝在 `setTimeout()` 調用超時值為零，否則應用程式掛起。 例如：
     
-        document.addEventListener("resume", onResume, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
                   // TODO: do your thing!

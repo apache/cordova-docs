@@ -54,7 +54,7 @@ license: >
         alert("success!");
     }
     
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
     
 
@@ -63,19 +63,19 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
         function onDeviceReady() {
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            var db = window.<a href="../storage.opendatabase.html">openDatabase</a>("Database", "1.0", "Cordova Demo", 200000);
             db.transaction(populateDB, errorCB, successCB);
         }
     
@@ -103,7 +103,7 @@ license: >
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>SQLTransaction</p>
       </body>
     </html>

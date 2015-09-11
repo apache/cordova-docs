@@ -29,7 +29,7 @@ Devuelve un número con formato como una cadena según las preferencias del usua
 
 Devuelve la cadena con formato de número a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `String`.
 
-Si hay un error de formato del número, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.FORMATTING\_ERROR`.
+Si hay un error de formato del número, entonces el `errorCallback` ejecuta con un objeto `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` como un parámetro. Código esperado del error es `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 El parámetro `options` es opcional, y sus valores por defecto son:
 
@@ -62,7 +62,7 @@ Cuando el navegador se establece en la localidad de `en\_US`, muestra un cuadro 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString Example</title>
+        <title>numberToString <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

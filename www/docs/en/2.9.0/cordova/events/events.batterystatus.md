@@ -23,7 +23,7 @@ batterystatus
 
 The event fires when there is a change in the battery status.
 
-    window.addEventListener("batterystatus", yourCallbackFunction, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", yourCallbackFunction, false);
 
 Details
 -------
@@ -37,8 +37,8 @@ properties:
 - __level__: The percentage of battery charge (0-100). _(Number)_
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
-Applications typically should use `window.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+Applications typically should use `window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` to
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 Supported Platforms
 -------------------
@@ -56,23 +56,23 @@ Windows Phone 7 does not provide native APIs to determine battery
 level, so the `level` property is unavailable.  The `isPlugged`
 parameter _is_ supported.
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
-    window.addEventListener("batterystatus", onBatteryStatus, false);
+    window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
 
     function onBatteryStatus(info) {
-        // Handle the online event
+        // Handle the <a href="events.online.html">online</a> event
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title><a href="../device/device.html">Device</a> Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -80,13 +80,13 @@ Full Example
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            window.addEventListener("batterystatus", onBatteryStatus, false);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            window.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("batterystatus", onBatteryStatus, false);
         }
 
         // Handle the batterystatus event

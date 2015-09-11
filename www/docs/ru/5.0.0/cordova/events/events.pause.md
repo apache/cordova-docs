@@ -29,9 +29,9 @@ license: >
 
 Событие `pause` возникает, когда платформа переводит приложения в фоновом режиме, как правило, когда пользователь переключается на другое приложение.
 
-Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `<a href="events.deviceready.html">deviceready</a>`.
 
-## Поддерживаемые платформы
+## <a href="../../config_ref/images.html">Поддерживаемые платформы</a>
 
 *   Amazon Fire OS
 *   Android
@@ -62,7 +62,7 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

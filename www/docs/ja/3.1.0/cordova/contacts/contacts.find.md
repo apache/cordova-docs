@@ -20,28 +20,28 @@ license: >
 
 # contacts.find
 
-デバイスの連絡先データベースに照会し、1 つまたは複数を返します `Contact` オブジェクトは、指定されたフィールドを含む各。
+<a href="../device/device.html">デバイス</a>の<a href="parameters/contactFields.html">連絡先</a><a href="../storage/database/database.html">データベース</a>に照会し、1 つまたは複数を返します `Contact` オブジェクトは、指定されたフィールドを含む各。
 
-    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
+    navigator.contacts.find(contactFields, <a href="parameters/contactSuccess.html">contactSuccess</a>, <a href="parameters/contactError.html">contactError</a>, <a href="parameters/contactFindOptions.html">contactFindOptions</a>);
     
 
 ## 説明
 
-`contacts.find`デバイスの連絡先データベースをクエリの配列を返すメソッドは、非同期的に実行されます `Contact` オブジェクト。 結果として得られるオブジェクトに渡される、 `contactSuccess` 、 **contactSuccess**パラメーターで指定されたコールバック関数。
+`contacts.find`<a href="../device/device.html">デバイス</a>の<a href="parameters/contactFields.html">連絡先</a><a href="../storage/database/database.html">データベース</a>をクエリの配列を返すメソッドは、非同期的に実行されます `Contact` オブジェクト。 結果として得られるオブジェクトに渡される、 `<a href="parameters/contactSuccess.html">contactSuccess</a>` 、 **<a href="parameters/contactSuccess.html">contactSuccess</a>**パラメーターで指定されたコールバック関数。
 
-**連絡先**パラメーター検索の修飾子として使用するフィールドを指定してだけこれらの結果は**contactSuccess**コールバック関数に渡されます。 **連絡先**のゼロ長さのパラメーターが無効である結果 `ContactError.INVALID_ARGUMENT_ERROR` 。 **連絡先**値 `"*"` すべての連絡先フィールドを返します。
+**<a href="parameters/contactFields.html">連絡先</a>**パラメーター検索の修飾子として使用するフィールドを指定してだけこれらの結果は**<a href="parameters/contactSuccess.html">contactSuccess</a>**コールバック関数に渡されます。 **<a href="parameters/contactFields.html">連絡先</a>**のゼロ長さのパラメーターが無効である結果 `<a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>.INVALID_ARGUMENT_ERROR` 。 **<a href="parameters/contactFields.html">連絡先</a>**値 `"*"` すべての<a href="parameters/contactFields.html">連絡先</a>フィールドを返します。
 
-**ContactFindOptions.filter**文字列の連絡先データベースを照会するときに検索フィルターとして使用できます。 指定した場合、大文字と小文字、部分的な値の一致する**連絡先**パラメーターで指定されたフィールドごとに適用されます。 一致する*任意*指定のフィールドがある場合は、連絡先が返されます。
+**<a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>.filter**文字列の<a href="parameters/contactFields.html">連絡先</a><a href="../storage/database/database.html">データベース</a>を照会するときに検索フィルターとして使用できます。 指定した場合、大文字と小文字、部分的な値の一致する**<a href="parameters/contactFields.html">連絡先</a>**パラメーターで指定されたフィールドごとに適用されます。 一致する*任意*指定のフィールドがある場合は、<a href="parameters/contactFields.html">連絡先</a>が返されます。
 
 ## パラメーター
 
-*   **連絡先**: 連絡先検索修飾子として使用するフィールド。結果として `Contact` オブジェクトのみ機能のこれらのフィールドの値。*(DOMString[])*[必須]
+*   **<a href="parameters/contactFields.html">連絡先</a>**: <a href="parameters/contactFields.html">連絡先</a>検索修飾子として使用するフィールド。結果として `Contact` オブジェクトのみ機能のこれらのフィールドの値。*(DOMString[])*[必須]
 
-*   **contactSuccess**: 連絡先で呼び出される成功コールバック関数は、データベースから返されます。[必須]
+*   **<a href="parameters/contactSuccess.html">contactSuccess</a>**: <a href="parameters/contactFields.html">連絡先</a>で呼び出される成功コールバック関数は、<a href="../storage/database/database.html">データベース</a>から返されます。[必須]
 
-*   **contactError**: エラー コールバック関数は、エラーが発生したときに呼び出されます。[オプション]
+*   **<a href="parameters/contactError.html">contactError</a>**: エラー コールバック関数は、エラーが発生したときに呼び出されます。[オプション]
 
-*   **contactFindOptions**: 検索オプションを連絡先をフィルター処理します。[オプション]
+*   **<a href="parameters/contactFindOptions.html">contactFindOptions</a>**: 検索オプションを<a href="parameters/contactFields.html">連絡先</a>をフィルター処理します。[オプション]
 
 ## サポートされているプラットフォーム
 
@@ -57,12 +57,12 @@ license: >
         alert('Found ' + contacts.length + ' contacts.');
     };
     
-    function onError(contactError) {
+    function onError(<a href="parameters/contactError.html">contactError</a>) {
         alert('onError!');
     };
     
     // find all contacts with 'Bob' in any name field
-    var options      = new ContactFindOptions();
+    var options      = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
     options.filter   = "Bob";
     options.multiple = true;
     var fields       = ["displayName", "name"];
@@ -74,18 +74,18 @@ license: >
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Contact Example</title>
+            <title>Contact <a href="../storage/storage.opendatabase.html">Example</a></title>
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
                 // Wait for device API libraries to load
-                document.addEventListener("deviceready", onDeviceReady, false);
+                document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
                 // device APIs are available
     
                 function onDeviceReady() {
                     // find all contacts with 'Bob' in any name field
-                    var options = new ContactFindOptions();
+                    var options = new <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>();
                     options.filter = "Bob";
                     var fields = ["displayName", "name"];
                     navigator.contacts.find(fields, onSuccess, onError, options);
@@ -101,14 +101,14 @@ license: >
     
                 // onError: Failed to get the contacts
     
-                function onError(contactError) {
+                function onError(<a href="parameters/contactError.html">contactError</a>) {
                     alert('onError!');
                 }
             </script>
         </head>
     
         <body>
-            <h1>Example</h1>
+            <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
             <p>Find Contacts</p>
         </body>
     </html>

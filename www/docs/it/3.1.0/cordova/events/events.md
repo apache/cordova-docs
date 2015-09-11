@@ -24,21 +24,21 @@ license: >
 
 ## Tipi di evento
 
-*   deviceready
-*   pausa
-*   curriculum
-*   online
-*   non in linea
-*   BackButton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   pulsante menu
-*   SearchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   <a href="events.deviceready.html">deviceready</a>
+*   <a href="events.pause.html">pausa</a>
+*   <a href="events.resume.html">curriculum</a>
+*   <a href="events.online.html">online</a>
+*   <a href="events.offline.html">non in linea</a>
+*   <a href="events.backbutton.html">BackButton</a>
+*   <a href="events.batterycritical.html">batterycritical</a>
+*   <a href="events.batterylow.html">batterylow</a>
+*   <a href="events.batterystatus.html">batterystatus</a>
+*   <a href="events.menubutton.html">pulsante menu</a>
+*   <a href="events.searchbutton.html">SearchButton</a>
+*   <a href="events.startcallbutton.html">startcallbutton</a>
+*   <a href="events.endcallbutton.html">endcallbutton</a>
+*   <a href="events.volumedownbutton.html">volumedownbutton</a>
+*   <a href="events.volumeupbutton.html">volumeupbutton</a>
 
 ## La funzionalità di accesso
 

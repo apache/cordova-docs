@@ -38,59 +38,59 @@ connection.type
 - Windows Phone 7 (Mango)
 - Bada 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
-    function checkConnection() {
+    function check<a href="connection.html">Connection</a>() {
         var networkState = navigator.network.connection.type;
 
         var states = {};
-        states[Connection.UNKNOWN]  = '不明な接続';
-        states[Connection.ETHERNET] = 'イーサネット接続';
-        states[Connection.WIFI]     = 'WiFi接続';
-        states[Connection.CELL_2G]  = '2G接続';
-        states[Connection.CELL_3G]  = '3G接続';
-        states[Connection.CELL_4G]  = '4G接続';
-        states[Connection.NONE]     = 'ネットワーク接続なし';
+        states[<a href="connection.html">Connection</a>.UNKNOWN]  = '不明な接続';
+        states[<a href="connection.html">Connection</a>.ETHERNET] = 'イーサネット接続';
+        states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi接続';
+        states[<a href="connection.html">Connection</a>.CELL_2G]  = '2G接続';
+        states[<a href="connection.html">Connection</a>.CELL_3G]  = '3G接続';
+        states[<a href="connection.html">Connection</a>.CELL_4G]  = '4G接続';
+        states[<a href="connection.html">Connection</a>.NONE]     = 'ネットワーク接続なし';
 
         alert('コネクションタイプ: ' + states[networkState]);
     }
 
-    checkConnection();
+    check<a href="connection.html">Connection</a>();
 
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.network.connection.type 使用例</title>
+        <title>navigator.network.connection.type <a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            checkConnection();
+        function on<a href="../device/device.html">Device</a>Ready() {
+            check<a href="connection.html">Connection</a>();
         }
 
-        function checkConnection() {
+        function check<a href="connection.html">Connection</a>() {
             var networkState = navigator.network.connection.type;
 
             var states = {};
-            states[Connection.UNKNOWN]  = '不明な接続';
-            states[Connection.ETHERNET] = 'イーサネット接続';
-            states[Connection.WIFI]     = 'WiFi接続';
-            states[Connection.CELL_2G]  = '2G接続';
-            states[Connection.CELL_3G]  = '3G接続';
-            states[Connection.CELL_4G]  = '4G接続';
-            states[Connection.NONE]     = 'ネットワーク接続なし';
+            states[<a href="connection.html">Connection</a>.UNKNOWN]  = '不明な接続';
+            states[<a href="connection.html">Connection</a>.ETHERNET] = 'イーサネット接続';
+            states[<a href="connection.html">Connection</a>.WIFI]     = 'WiFi接続';
+            states[<a href="connection.html">Connection</a>.CELL_2G]  = '2G接続';
+            states[<a href="connection.html">Connection</a>.CELL_3G]  = '3G接続';
+            states[<a href="connection.html">Connection</a>.CELL_4G]  = '4G接続';
+            states[<a href="connection.html">Connection</a>.NONE]     = 'ネットワーク接続なし';
 
             alert('コネクションタイプ: ' + states[networkState]);
         }

@@ -24,7 +24,7 @@ license: >
 
 Esta API ofrece opciones de almacenamiento basadas en dos diferentes especificaciones de W3C:
 
-*   La [Especificación del API almacenamiento Web][1] le permite acceder a datos a través de pares clave/valor simple. Consulte la sección sobre localStorage para obtener detalles completos sobre esta interfaz.
+*   La [Especificación del API almacenamiento Web][1] le permite acceder a datos a través de pares clave/valor simple. Consulte la sección sobre <a href="localstorage/localstorage.html">localStorage</a> para obtener detalles completos sobre esta interfaz.
 
 *   La [Especificación de base de datos de SQL Web][2] ofrece más tablas de base de datos completa accede a través de consultas SQL. Un Resumen de esta interfaz aparece inmediatamente debajo.
 
@@ -35,22 +35,22 @@ Cordova proporciona acceso a ambas interfaces para la minoría de los dispositiv
 
 ## Métodos
 
-*   openDatabase
+*   <a href="storage.opendatabase.html">openDatabase</a>
 
 ## Argumentos
 
 *   nombre\_base\_de_datos
-*   database_version
-*   database_displayname
-*   database_size
+*   <a href="parameters/version.html">database_version</a>
+*   <a href="parameters/display_name.html">database_displayname</a>
+*   <a href="parameters/size.html">database_size</a>
 
 ## Objetos
 
-*   Base de datos
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   <a href="database/database.html">Base de datos</a>
+*   <a href="sqltransaction/sqltransaction.html">SQLTransaction</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>
+*   <a href="sqlresultset/sqlresultset.html">SQLResultSet</a>RowList
+*   <a href="sqlerror/sqlerror.html">SQLError</a>
 
 ## Acceso a la función
 

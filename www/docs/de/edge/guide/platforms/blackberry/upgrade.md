@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Aktualisieren der BlackBerry
+# <a href="upgrading.html">Aktualisieren der BlackBerry</a>
 
 Diese Anleitung zeigt wie BlackBerry Projekte geändert werden müssen um ein Upgrade von älteren Versionen von Cordova durchzuführen. Diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
 
@@ -26,7 +26,7 @@ Diese Anleitung zeigt wie BlackBerry Projekte geändert werden müssen um ein Up
 
 BlackBerry 10:
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
@@ -40,7 +40,7 @@ BlackBerry 10:
 
 ### BlackBerryOS/Textbuch
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
@@ -64,7 +64,7 @@ BlackBerry 10:
 
 BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Zeichenfolge enthält.
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
@@ -78,7 +78,7 @@ BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwalt
 
 BlackBerryOS/Textbuch:
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 
@@ -98,7 +98,7 @@ BlackBerryOS/Textbuch:
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.7.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle an einen permanenten <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.7.0`.
 
 2.  Beenden Sie alle laufenden SDK-Tools: Eclipse, Momentics und dergleichen.
 

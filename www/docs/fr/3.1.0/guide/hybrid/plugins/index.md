@@ -69,21 +69,21 @@ Tout d'abord, nous allons jeter un regard sur les trois derniers arguments de la
 
 Le rappel du succès passé dans `exec` est simplement une référence au rappel fonction `window.echo` prend. Nous faisons un peu plus pour le rappel de l'erreur : si le côté natif déclenche le rappel de l'erreur, nous avons simplement appeler le rappel de la réussite et transmettez-lui une chaîne « par défaut ».
 
-## Spécification du plugin
+## <a href="../../../plugin_ref/spec.html">Spécification du plugin</a>
 
 Cordoue possède une spécification de plugin disponible pour activer l'installation automatique du plugin pour Android, iOS, plates-formes 10 BlackBerry et Windows Phone. En structurant votre plugin de façon particulière et en ajoutant un `plugin.xml` fichier manifeste, vous pouvez permettre aux utilisateurs d'installer votre plug-in via les outils de ligne de commande.
 
-*   Spécification du plugin
+*   <a href="../../../plugin_ref/spec.html">Spécification du plugin</a>
 
 ## Native
 
 Une fois que vous définissez JavaScript pour votre plugin, vous devez compléter au moins une implémentation native. Détails de le faire pour chaque plate-forme sont répertoriées ci-dessous. Ces guides continuent de miser sur l'exemple simple de Plugin Echo discuté ci-dessus.
 
-*   Plugins Android
-*   Plugins de blackBerry
-*   BlackBerry 10 Plugins
-*   iOS Plugins
-*   Windows Phone Plugins
+*   <a href="../../platforms/android/plugin.html">Plugins Android</a>
+*   <a href="../../platforms/blackberry/plugin.html">Plugins de blackBerry</a>
+*   <a href="../../platforms/blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+*   <a href="../../platforms/ios/plugin.html">iOS Plugins</a>
+*   <a href="../../platforms/wp8/plugin.html">Windows Phone Plugins</a>
 
 La plate-forme paciarelli ne supporte actuellement pas de plugins.
 

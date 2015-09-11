@@ -20,14 +20,14 @@ license: >
 
 # notification.confirm
 
-顯示一個可自訂的確認對話方塊。
+<a href="../inappbrowser/inappbrowser.html">顯示</a>一個可自訂的確認對話方塊。
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
     
 
 *   **消息**： 消息對話方塊。*（字串）*
 
-*   **confirmCallback**: 要用索引 （1、 2 或 3） 按下的按鈕，或者在沒有按下按鈕 (0) 駁回了對話方塊中時調用的回檔。*（函數）*
+*   **confirmCallback**: 要用索引 （1、 2 或 3） 按下的按鈕，或者在沒有按下按鈕 (0) 駁回了對話方塊中時調用的回<a href="../file/fileobj/fileobj.html">檔</a>。*（函數）*
 
 *   **標題**： 標題對話方塊。*（字串）*（可選，預設值為`Confirm`)
 
@@ -35,13 +35,13 @@ license: >
 
 ## 說明
 
-`notification.confirm`方法顯示一個本機的對話方塊，更可自訂的瀏覽器比 `confirm` 函數。
+`notification.confirm`方法<a href="../inappbrowser/inappbrowser.html">顯示</a>一個本機的對話方塊，更可自訂的瀏覽器比 `confirm` 函數。
 
 ## confirmCallback
 
 `confirmCallback`當使用者按下確認對話方塊中的按鈕之一的時候執行。
 
-回檔將參數 `buttonIndex` *（編號）*，它是按下的按鈕的索引。 請注意索引使用基於 1 的索引，所以值是 `1` ， `2` ， `3` ，等等。
+回<a href="../file/fileobj/fileobj.html">檔</a>將參數 `buttonIndex` *（編號）*，它是按下的按鈕的索引。 請注意索引使用基於 1 的索引，所以值是 `1` ， `2` ， `3` ，等等。
 
 ## 支援的平臺
 
@@ -76,14 +76,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //

@@ -20,18 +20,18 @@ license: >
 
 # CaptureImageOptions
 
-> 封裝圖像捕獲的配置選項。
+> 封裝圖像<a href="capture.html">捕獲</a>的<a href="ConfigurationData.html">配置</a>選項。
 
 ## 屬性
 
-*   **限制**： 使用者可以在單個捕獲操作中捕獲的圖像的最大數目。值必須是大於或等於 1 （預設為 1）。
+*   **限制**： 使用者可以在單個<a href="capture.html">捕獲</a>操作中<a href="capture.html">捕獲</a>的圖像的最大數目。值必須是大於或等於 1 （預設為 1）。
 
 ## 快速的示例
 
     // limit capture operation to 3 images
     var options = { limit: 3 };
     
-    navigator.device.capture.captureImage(captureSuccess, captureError, options);
+    navigator.device.<a href="captureImage.html">capture.captureImage</a>(captureSuccess, captureError, options);
     
 
 ## iOS 的怪癖

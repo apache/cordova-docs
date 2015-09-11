@@ -18,16 +18,16 @@ license: >
     under the License.
 ---
 
-# Windows 8 플랫폼 가이드
+# Windows 8 <a href="../index.html">플랫폼 <a href="../../../index.html">가이드</a></a>
 
-이 가이드에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 <a href="../../../index.html">가이드</a>에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   윈도우 8을 업그레이드
-*   윈도우 8 명령줄 도구
+*   <a href="upgrading.html">윈도우 8을 업그레이드</a>
+*   <a href="tools.html">윈도우 8 명령줄 도구</a>
 
-위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
+위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조 하십시오.
 
-마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 가이드 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
+마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 <a href="../../../index.html">가이드</a> 그 규칙을 따릅니다. 또한,이 <a href="../../../index.html">가이드</a>에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
 
 ## 요구 사항
 
@@ -81,13 +81,13 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
             <script src="/js/default.js"></script>
         
 
-*   추가 `deviceready` 코르도바를 보여 주기 위해 처리기 작업:
+*   추가 `<a href="../../../cordova/events/events.deviceready.html">deviceready</a>` 코르도바를 보여 주기 위해 처리기 작업:
     
         <body>
             <p>Content goes here</p>
             <script type="text/javascript">
                 console.log("Subscribing...");
-                document.addEventListener("deviceready", function () {
+                document.addEventListener("<a href="../../../cordova/events/events.deviceready.html">deviceready</a>", function () {
                     navigator.notification.alert("The device is ready!");
                 });
             </script>

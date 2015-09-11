@@ -26,4 +26,4 @@ Camera
 メソッド
 -------
 
-- camera.getPicture
+- <a href="camera.getPicture.html">camera.getPicture</a>

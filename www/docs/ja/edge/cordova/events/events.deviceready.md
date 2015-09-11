@@ -27,15 +27,15 @@ license: >
 
 ## 詳細
 
-このイベントは、任意のアプリケーションに不可欠です。それ信号をコルドバのデバイス Api が読み込まれているにアクセスする準備が整いました。
+この<a href="events.html">イベント</a>は、任意のアプリケーションに不可欠です。それ信号をコルドバのデバイス Api が読み込まれているにアクセスする準備が整いました。
 
 2 つのコード ベースから成っているコルドバ: ネイティブと JavaScript。 ネイティブ コードを読み込み、カスタム読み込み画像が表示されます。 ただし、DOM 読み込まれる一度 java スクリプトの設定を読み込むだけ。 これは、対応するネイティブ コードが使用可能になる前に潜在的コルドバ JavaScript 関数を呼び出すことができます web アプリを意味します。
 
-`deviceready`コルドバが完全に読み込まれた後に発生します。 1 回のイベントが発生し、安全にすることができますコルドバ Api への呼び出し。 アプリケーションは、通常のイベント リスナーをアタッチ `document.addEventListener` HTML ドキュメント DOM が読み込まれる。
+`deviceready`コルドバが完全に読み込まれた後に発生します。 1 回の<a href="events.html">イベント</a>が発生し、安全にすることができますコルドバ Api への呼び出し。 アプリケーションは、通常の<a href="events.html">イベント</a> リスナーをアタッチ `document.addEventListener` HTML ドキュメント DOM が読み込まれる。
 
-`deviceready`イベントの動作はやや異なります他人から。任意のイベント ハンドラーを登録後、 `deviceready` イベントが発生したそのすぐにコールされるコールバック関数。
+`deviceready`<a href="events.html">イベント</a>の動作はやや異なります他人から。任意の<a href="events.html">イベント</a> ハンドラーを登録後、 `deviceready` <a href="events.html">イベント</a>が発生したそのすぐにコールされるコールバック関数。
 
-## サポートされているプラットフォーム
+## <a href="../../config_ref/images.html">サポートされているプラットフォーム</a>
 
 *   アマゾン火 OS
 *   アンドロイド
@@ -59,7 +59,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">

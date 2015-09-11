@@ -20,18 +20,18 @@ license: >
 
 # camera.getPicture
 
-Toma una foto con la cámara, u obtiene una foto de la galería de imágenes del dispositivo. La imagen es retornada como un objeto `String` codificada en base64 o como la URI de esta. El método devuelve un objeto `CameraPopoverHandle` que puede usarse para reposicionar el diálogo de selección de archivo.
+Toma una foto con la cámara, u obtiene una foto de la galería de imágenes del dispositivo. La imagen es retornada como un objeto `String` codificada en base64 o como la URI de esta. El método devuelve un objeto `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` que puede usarse para reposicionar el diálogo de selección de archivo.
 
-    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
     
 
 ## Descripción
 
 La función `camera.getPicture` abre la aplicación predeterminada de cámara del dispositivo que permite a los usuarios tomar fotografías. Este comportamiento es el predeterminado, cuando `Camera.sourceType` es igual a `Camera.PictureSourceType.CAMERA`. Una vez que el usuario toma la foto, la aplicación de la cámara se cierra y se restablece la aplicación.
 
-Si `Camera.sourceType` es `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM`, entonces aperece un cuadro de diálogo que permite a los usuarios seleccionar una imagen existente. La función `camera.getPicture` devuelve un objeto `CameraPopoverHandle`, que puede utilizarse para reposicionar el diálogo de selección de imagen, por ejemplo, cuando cambia la orientación del dispositivo.
+Si `Camera.sourceType` es `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM`, entonces aperece un cuadro de diálogo que permite a los usuarios seleccionar una imagen existente. La función `camera.getPicture` devuelve un objeto `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>`, que puede utilizarse para reposicionar el diálogo de selección de imagen, por ejemplo, cuando cambia la orientación del dispositivo.
 
-El valor devuelto es enviado a la función `cameraSuccess`, en uno de los formatos siguientes, dependiendo de `cameraOptions` especificadas:
+El valor devuelto es enviado a la función `<a href="parameter/cameraSuccess.html">cameraSuccess</a>`, en uno de los formatos siguientes, dependiendo de `<a href="parameter/cameraOptions.html">cameraOptions</a>` especificadas:
 
 *   A `String` que contiene la imagen codificada en base64.
 
@@ -64,7 +64,7 @@ Android utiliza los intents para iniciar la actividad de la cámara del disposit
 
 ## Peculiaridades de iOS
 
-Incluyendo un JavaScript `alert()` en cualquiera de las funciones de devolución de llamada puede causar problemas. Envolver la alerta dentro un `setTimeout()` para permitir el iOS image picker o popover cerrar completamente antes de Mostrar la alerta:
+Incluyendo un JavaScript `alert()` en cualquiera de las funciones de devolución de llamada puede causar problemas. Envolver la alerta dentro un `setTimeout()` para permitir el iOS image picker o popover <a href="../inappbrowser/inappbrowser.html">cerrar</a> completamente antes de <a href="../inappbrowser/inappbrowser.html">Mostrar</a> la alerta:
 
     setTimeout(function() {
         // do your thing here!
@@ -127,7 +127,7 @@ Tomar una foto y recuperar la ubicación del archivo de la imagen:
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready",onDeviceReady,false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
     
         // device APIs are available
         //

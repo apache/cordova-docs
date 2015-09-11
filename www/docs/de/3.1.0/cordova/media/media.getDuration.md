@@ -65,14 +65,14 @@ Die `media.getDuration` -Methode führt synchron, die Dauer der Audiodatei in Se
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Media <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -98,17 +98,17 @@ Die `media.getDuration` -Methode führt synchron, die Dauer der Audiodatei in Se
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_media.getCurrent<a href="../geolocation/Position/position.html">Position</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudio<a href="../geolocation/Position/position.html">Position</a>((position) + " sec");
                                 }
                             },
                             // error callback
                             function(e) {
                                 console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                setAudio<a href="../geolocation/Position/position.html">Position</a>("Error: " + e);
                             }
                         );
                     }, 1000);
@@ -127,7 +127,7 @@ Die `media.getDuration` -Methode führt synchron, die Dauer der Audiodatei in Se
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
@@ -148,7 +148,7 @@ Die `media.getDuration` -Methode führt synchron, die Dauer der Audiodatei in Se
     
             // Set audio position
             //
-            function setAudioPosition(position) {
+            function setAudio<a href="../geolocation/Position/position.html">Position</a>(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
     

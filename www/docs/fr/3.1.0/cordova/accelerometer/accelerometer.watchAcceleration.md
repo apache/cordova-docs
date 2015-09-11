@@ -22,18 +22,18 @@ license: >
 
 À intervalle régulier, obtenez l'accélération suivant l'axe *x*, *y*et *z* .
 
-    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
+    var watchID = navigator.accelerometer.watchAcceleration(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>,
+                                                           <a href="parameters/accelerometerError.html">accelerometerError</a>,
+                                                           [<a href="parameters/accelerometerOptions.html">accelerometerOptions</a>]);
     
 
 ## Description
 
 L'accéléromètre est un capteur de mouvement qui détecte la modification (delta) en mouvement par rapport à la position actuelle. L'accéléromètre permet de détecter un mouvement 3D le long des axes *x*, *y*et *z*.
 
-La méthode `accelerometer.watchAcceleration` récupère `Acceleration` de l'appareil à intervalle régulier, exécutant la fonction de callback `accelerometerSuccess` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
+La méthode `accelerometer.watchAcceleration` récupère `Acceleration` de l'appareil à intervalle régulier, exécutant la fonction de callback `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
 
-L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `accelerometer.clearWatch` pour arrêter de surveiller l'accéléromètre.
+L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>` pour arrêter de surveiller l'accéléromètre.
 
 ## Plates-formes prises en charge
 
@@ -67,7 +67,7 @@ L'ID de surveillance référence les intervalles de surveillance de l'accéléro
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>Acceleration <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -77,7 +77,7 @@ L'ID de surveillance référence les intervalles de surveillance de l'accéléro
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -99,7 +99,7 @@ L'ID de surveillance référence les intervalles de surveillance de l'accéléro
         //
         function stopWatch() {
             if (watchID) {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.<a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>(watchID);
                 watchID = null;
             }
         }

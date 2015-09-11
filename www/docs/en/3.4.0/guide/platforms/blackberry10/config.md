@@ -46,7 +46,7 @@ config.xml File for information on global configuration options.
   convenience only, so remove it before packaging your app for
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
-  Whitelist Guide.
+  <a href="../../appdev/whitelist/index.html">Whitelist Guide</a>.
 
         <preference name="WebSecurity" value="disable"/>
 

@@ -30,7 +30,7 @@ Le guide suivant contient quelques meilleures pratiques de sécurité que vous d
 *   Iframes et le mécanisme de rappel Id
 *   Certificat épinglage
 *   Les certificats auto-signés
-*   Stockage crypté
+*   <a href="../../../cordova/storage/storage.html">Stockage</a> crypté
 *   Conseils généraux
 *   Articles recommandés et autres ressources
 
@@ -60,7 +60,7 @@ Les principes décrits ici ne sont pas spécifiques à Apache Cordova, elles s'a
 
 Lorsque vous exécutez Cordova sur Android, à l'aide de `android:debuggable="true"` dans la demande manifeste permettra Erreurs SSL par exemple certificat les erreurs de validation de chaîne sur les certificats auto-signés. Vous pouvez donc utiliser des certificats auto-signés dans cette configuration, mais ce n'est pas une configuration qui doit être utilisée lorsque votre application est en production. Il est destiné à être utilisé uniquement pendant le développement d'applications.
 
-## Stockage crypté
+## <a href="../../../cordova/storage/storage.html">Stockage</a> crypté
 
 (À DÉTERMINER)
 

@@ -39,7 +39,7 @@ device.name
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // Android:    Nexus One       はコードネームである "Passion" を返します
@@ -49,31 +49,31 @@ device.name
     //
     var name = device.name;
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティーの<a href="../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
 
             element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
-                                'デバイス Cordova: '    + device.cordova    + '<br />' +
-                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
-                                'デバイス UUID: '       + device.uuid       + '<br />' +
-                                'デバイスバージョン: '  + device.version    + '<br />';
+                                'デバイス Cordova: '    + <a href="device.cordova.html">device.cordova</a>    + '<br />' +
+                                'デバイスプラットフォーム: ' + <a href="device.platform.html">device.platform</a> + '<br />' +
+                                'デバイス UUID: '       + <a href="device.uuid.html">device.uuid</a>       + '<br />' +
+                                'デバイスバージョン: '  + <a href="device.version.html">device.version</a>    + '<br />';
         }
 
         </script>
@@ -94,7 +94,7 @@ Android に関する注意点
 iPhoneに関する注意点
 -------------
 
-- [モデル名](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1) の代わりに [デバイスのカスタムネーム](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) を取得します。
+- [モデル名](http://developer.apple.com/iphone/library/documentation/uikit/reference/UI<a href="device.html">Device</a>_Class/Reference/UI<a href="device.html">Device</a>.html#//apple_ref/doc/uid/TP40006902-CH3-SW1) の代わりに [デバイスのカスタムネーム](http://developer.apple.com/iphone/library/documentation/uikit/reference/UI<a href="device.html">Device</a>_Class/Reference/UI<a href="device.html">Device</a>.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) を取得します。
     - カスタムネームは iTunes のオーナーによって設定されます。
     - 例: "Joe's iPhone"
 

@@ -20,37 +20,37 @@ license: >
 
 # 地理定位
 
-> `geolocation`物件提供對基於設備的 GPS 感應器或推斷網路信號的位置資料的訪問。
+> `geolocation`物件提供對基於<a href="../device/device.html">設備</a>的 GPS 感應器或推斷網路信號的<a href="Position/position.html">位置</a>資料的訪問。
 
-`Geolocation`提供有關該設備的位置，例如緯度和經度資訊。 常見的位置資訊來源包括全球定位系統 (GPS) 和網路信號，如 IP 位址、 RFID、 WiFi 和藍牙 MAC 位址和 GSM/CDMA 儲存格 Id 從推斷出的位置。 沒有任何保證，API 返回設備的實際位置。
+`Geolocation`提供有關該<a href="../device/device.html">設備</a>的<a href="Position/position.html">位置</a>，例如緯度和經度資訊。 常見的<a href="Position/position.html">位置</a>資訊來源包括全球定位系統 (GPS) 和網路信號，如 IP 位址、 RFID、 WiFi 和藍牙 MAC 位址和 GSM/CDMA 儲存格 Id 從推斷出的<a href="Position/position.html">位置</a>。 沒有任何保證，API 返回<a href="../device/device.html">設備</a>的實際<a href="Position/position.html">位置</a>。
 
-此 API 基於[W3C 地理定位 API 規範][1]，並只執行已經不提供實現的設備上。
+此 API 基於[W3C 地理定位 API 規範][1]，並只執行已經不提供實現的<a href="../device/device.html">設備</a>上。
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要的隱私注：**地理定位資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論這款應用程式如何使用地理定位資料，資料是否共用它的任何其他締約方和的資料 （例如，粗、 細，ZIP 代碼級別，等等） 的精度水準。 地理定位資料被普遍認為敏感的因為它能揭示一個人的下落，如果存儲中，他或她的旅行史。 因此，除了您的應用程式的隱私權原則，您應強烈考慮提供在您的應用程式訪問地理定位資料 （如果設備作業系統不會這樣做已經） 之前的時間只是通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
+**重要的隱私注：**地理定位資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論這款應用程式如何使用地理定位資料，資料是否共用它的任何其他締約方和的資料 （例如，粗、 細，ZIP 代碼級別，等等） 的精度水準。 地理定位資料被普遍認為敏感的因為它能揭示一個人的下落，如果<a href="../storage/storage.html">存儲</a>中，他或她的旅行史。 因此，除了您的應用程式的隱私權原則，您應強烈考慮提供在您的應用程式訪問地理定位資料 （如果<a href="../device/device.html">設備</a>作業系統不會這樣做已經） 之前的時間只是<a href="../notification/notification.html">通知</a>。 該<a href="../notification/notification.html">通知</a>應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱<a href="../../guide/appdev/privacy/index.html">隱私指南</a>。
 
 ## 方法
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   <a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>
+*   <a href="geolocation.watchPosition.html">geolocation.watchPosition</a>
+*   <a href="geolocation.clearWatch.html">geolocation.clearWatch</a>
 
 ## 參數
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   <a href="parameters/geolocationSuccess.html">geolocationSuccess</a>
+*   <a href="parameters/geolocationError.html">geolocationError</a>
+*   <a href="parameters/geolocation.options.html">geolocationOptions</a>
 
 ## 物件 （唯讀）
 
 *   Position
-*   PositionError
+*   <a href="PositionError/positionError.html">PositionError</a>
 *   Coordinates
 
 ## 訪問功能
 
-從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了<a href="../device/device.html">設備</a>級 Api。 使用 CLI 的 `plugin` 命令，描述在<a href="../../guide/cli/index.html">命令列介面</a>，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add org.apache.cordova.geolocation
         $ cordova plugin ls
@@ -58,7 +58,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.geolocation
     
 
-這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的<a href="../media/capture/ConfigurationData.html">配置</a>設置：
 
 *   Android 系統
     
@@ -104,4 +104,4 @@ license: >
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的<a href="../media/capture/ConfigurationData.html">配置</a>。請參見在<a href="../../guide/overview/index.html">概述</a>部分中*的平臺支援*。

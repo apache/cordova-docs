@@ -26,7 +26,7 @@ license: >
   <ul>
     <li>
       <h2>
-        Przegląd
+        <a href="guide/overview/index.html">Przegląd</a>
       </h2>
       
       <span>Zacznij tutaj, jeśli jesteś nowy w Cordova. Obejmuje instalację i następne kroki.</span>
@@ -40,70 +40,70 @@ license: >
     </li>
     <li>
       <h2>
-        Interfejs wiersza poleceń
+        <a href="guide/cli/index.html">Interfejs wiersza poleceń</a>
       </h2>
       
       <span>Tworzyć, budować i wdrożyć z wiersza polecenia.</span>
     </li>
     <li>
       <h2>
-        Platforma przewodników
+        <a href="guide/platforms/index.html">Platforma przewodników</a>
       </h2>
       
       <span>Umieszczaæ w górze każdej z platform SDK i aktualizacji projektów.</span>
     </li>
     <li>
       <h2>
-        Za pomocą Plugman do zarządzania wtyczki
+        <a href="plugin_ref/plugman.html">Za pomocą Plugman do zarządzania wtyczki</a>
       </h2>
       
       <span>Zarządzanie wtyczki bez CLI, przy użyciu przepływu pracy zorientowane na platformie.</span>
     </li>
     <li>
       <h2>
-        Plik config.xml
+        <a href="config_ref/index.html">Plik config.xml</a>
       </h2>
       
       <span>Dostosowywanie funkcji danej aplikacji.</span>
     </li>
     <li>
       <h2>
-        Ikony i ekrany powitalne w aplikacjach
+        <a href="config_ref/images.html">Ikony i ekrany powitalne w aplikacjach</a>
       </h2>
       
       <span>Dostosuj wyświetlanie obrazów Twojej aplikacji.</span>
     </li>
     <li>
       <h2>
-        Osadzanie WebViews
+        <a href="guide/hybrid/webviews/index.html">Osadzanie WebViews</a>
       </h2>
       
       <span>Wdrożenie Cordova widoku sieci Web w macierzystym projektu.</span>
     </li>
     <li>
       <h2>
-        Plugin rozwoju Przewodnik
+        <a href="guide/hybrid/plugins/index.html">Plugin rozwoju Przewodnik</a>
       </h2>
       
       <span>Rozwijać własne wtyczki.</span>
     </li>
     <li>
       <h2>
-        Prywatności Przewodnik
+        <a href="guide/appdev/privacy/index.html">Prywatności Przewodnik</a>
       </h2>
       
       <span>Dowiedz się więcej o ważne mobilnych prywatności.</span>
     </li>
     <li>
       <h2>
-        Przewodnik bezpieczeństwa
+        <a href="guide/appdev/security/index.html">Przewodnik bezpieczeństwa</a>
       </h2>
       
       <span>Informacje i porady dotyczące budowania aplikacji bezpieczne.</span>
     </li>
     <li>
       <h2>
-        Platform i Zarządzanie wersjami pluginów
+        <a href="platform_plugin_versioning_ref/index.html">Platform i Zarządzanie wersjami pluginów</a>
       </h2>
       
       <span>Zapisać i przywrócić swoje projekty CLI w znanym stanie bez kłopotów.</span>
@@ -117,10 +117,10 @@ license: >
     </li>
     <li>
       <h2>
-        Magazyn
+        <a href="cordova/storage/storage.html">Magazyn</a>
       </h2>
       
-      <span>Przegląd możliwości składowania macierzysty.</span>
+      <span><a href="guide/overview/index.html">Przegląd</a> możliwości składowania macierzysty.</span>
     </li>
     <li>
       <h2>
@@ -131,7 +131,7 @@ license: >
     </li>
     <li>
       <h2>
-        Kolejne kroki
+        <a href="guide/next/index.html">Kolejne kroki</a>
       </h2>
       
       <span>Spojrzenie na tematy, które napotkają nowych deweloperów Cordova.</span>
@@ -152,14 +152,14 @@ license: >
   <ul>
     <li>
       <h2>
-        Wydarzenia
+        <a href="cordova/events/events.html">Wydarzenia</a>
       </h2>
       
       <span>Hak do wydarzeń native poprzez JavaScript.</span>
     </li>
     <li>
       <h2>
-        Plugin API
+        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
       </h2>
       
       <span>Odkryj, co wtyczek Cordova są dostępne do użycia w projekcie.</span>

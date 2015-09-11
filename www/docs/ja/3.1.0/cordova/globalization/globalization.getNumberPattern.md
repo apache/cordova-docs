@@ -45,7 +45,7 @@ license: >
 
 *   **グループ**: 解析および書式設定を使用する区切り記号。*(文字列)*
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PATTERN\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` オブジェクトをパラメーターとして。 予想されるエラーコードです。`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 
@@ -89,7 +89,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern Example</title>
+        <title>getNumberPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

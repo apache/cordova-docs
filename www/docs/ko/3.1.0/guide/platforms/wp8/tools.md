@@ -20,7 +20,7 @@ license: >
 
 # Windows Phone 명령줄 도구
 
-`cordova`명령줄 유틸리티는 한 번에 여러 플랫폼에서 응용 프로그램을 만들 수 있는 고급 도구. 코르 도우 바 프레임 워크의 이전 버전 각 플랫폼에 특정 명령줄 도구 집합을 제공합니다. CLI에 대 안으로 그들을 사용 하 여 [cordova.apache.org][1]에서 코르도바의이 버전을 다운로드 해야 합니다. 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 당신이 목표 하고자 하는 플랫폼을 확장 합니다. 여기에 설명 된 도구는 일반적으로 최상위 수준에서 사용할 수 있는 `bin` 자세한 지시 사항에 대 한 디렉터리, 그렇지 않으면 **README** 파일을 참조 하십시오.
+`cordova`명령줄 유틸리티는 한 번에 여러 플랫폼에서 응용 프로그램을 만들 수 있는 고급 도구. 코르 도우 바 프레임 워크의 이전 버전 각 플랫폼에 특정 명령줄 도구 집합을 제공합니다. CLI에 대 안으로 그들을 사용 하 여 [cordova.apache.org][1]에서 코르도바의이 버전을 다운로드 해야 합니다. 다운로드는 각 플랫폼에 대 한 별도 아카이브를 포함합니다. 당신이 목표 하고자 하는 플랫폼을 확장 합니다. 여기에 설명 된 도구는 일반적으로 최상위 수준에서 사용할 수 있는 `bin` 자세한 지시 사항에 대 한 디렉터리, 그렇지 않으면 **README** <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 참조 하십시오.
 
  [1]: http://cordova.apache.org
 
@@ -34,11 +34,11 @@ WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리
 
 새로운 아파치 코르도바 WP7 또는 WP8 응용 프로그램을 만드는 방법에 대해 이동 하는 방법은 2 가지.
 
-### 설치 서식 파일을 만들고 배치 파일을 실행 합니다.
+### 설치 서식 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 만들고 배치 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 실행 합니다.
 
-*   Repo의 루트 파일 createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 파일 2.zip 파일을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 파일을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio 파일에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
+*   Repo의 루트 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 2.zip <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
 
-*   명령줄에서 배치 파일을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 변수
+*   명령줄에서 배치 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a>을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 <a href="../../../plugin_ref/spec.html">변수</a>
 
 스크립트를 실행 합니다.
 
@@ -53,7 +53,7 @@ WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
     
     >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
+    >PackageName      : The namespace for the project (default is Cordova.<a href="../../../cordova/storage/storage.opendatabase.html">Example</a>)
     >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
     
     >examples:
@@ -61,7 +61,7 @@ WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
     
 
-Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 파일 (.sln)을 엽니다
+Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> (.sln)을 엽니다
 
 빌드 및 실행
 
@@ -77,7 +77,7 @@ Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 �
 
 ## 응용 프로그램을 실행
 
-다음 *선택적* 매개 변수와 함께 '실행 명령 실행
+다음 *선택적* 매개 <a href="../../../plugin_ref/spec.html">변수</a>와 함께 '실행 명령 실행
 
 *   대상 사양입니다. 이것은 포함 한다 `--emulator` , `--device` , 또는`--target=<targetID>`.
 
@@ -85,7 +85,7 @@ Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 �
     
     $ C:\path\to\my\_new\_project\cordova\run \[대상\] \[빌드\]
 
-기본적으로는 `run` 명령으로 불릴 것 이다 `--emulator --debug` 플래그가 제공 되지 않은 경우.
+기본적으로는 `run` 명령으로 불릴 것 이다 `--emulator --debug` <a href="../../../cordova/file/flags/flags.html">플래그</a>가 제공 되지 않은 경우.
 
 ## 청소
 

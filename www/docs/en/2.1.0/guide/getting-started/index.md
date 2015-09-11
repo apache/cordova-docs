@@ -21,11 +21,11 @@ license: >
 Getting Started Guides
 ======================
 
-- Getting Started with Android
-- Getting Started with BlackBerry
-- Getting Started with iOS
-- Getting Started with Symbian
-- Getting Started with WebOS
-- Getting Started with Windows Phone
-- Getting Started with Bada
-- Getting Started with Tizen
+- <a href="android/index.html">Getting Started with Android</a>
+- <a href="blackberry/index.html">Getting Started with BlackBerry</a>
+- <a href="ios/index.html">Getting Started with iOS</a>
+- <a href="symbian/index.html">Getting Started with Symbian</a>
+- <a href="webos/index.html">Getting Started with WebOS</a>
+- <a href="windows-phone/index.html">Getting Started with Windows Phone</a>
+- <a href="bada/index.html">Getting Started with Bada</a>
+- <a href="tizen/index.html">Getting Started with Tizen</a>

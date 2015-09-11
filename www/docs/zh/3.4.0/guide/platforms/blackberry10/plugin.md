@@ -20,7 +20,7 @@ license: >
 
 # 黑莓 10 外掛程式
 
-此部分提供了如何在黑莓 10 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
+此部分提供了如何在黑莓 10 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的<a href="../../overview/index.html">概述</a>。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 
 Echo 外掛程式基本上返回任何字串 `window.echo` 從 JavaScript 函數發送：
 
@@ -78,7 +78,7 @@ JNEXT 擴展的本機介面可以查看外掛程式標頭檔位於專案的公�
         #endif // ECHO_JS_H_
     
 
-`m_id`屬性包含 `JNEXT` 作為建構函式的參數傳遞給該類的物件 id。 它需要觸發事件的 JavaScript 一邊本機的一面。 `CanDelete`方法確定是否可以刪除的本機物件。 `InvokeMethod`從 JavaScript 調用此特定物件的方法的請求結果調用的函數。 此函數的唯一參數是此方法分析來確定哪種本機物件方法應執行的 JavaScript 從傳遞的字串。 在實現這些方法 `echo_js.cpp` 。 這裡是 `InvokeMethod` 函數為 `Echo` 的示例：
+`m_id`屬性包含 `JNEXT` 作為建構函式的參數傳遞給該類的物件 id。 它需要觸發<a href="../../../cordova/events/events.html">事件</a>的 JavaScript 一邊本機的一面。 `CanDelete`方法確定是否可以刪除的本機物件。 `InvokeMethod`從 JavaScript 調用此特定物件的方法的請求結果調用的函數。 此函數的唯一參數是此方法分析來確定哪種本機物件方法應執行的 JavaScript 從傳遞的字串。 在實現這些方法 `echo_js.cpp` 。 這裡是 `InvokeMethod` 函數為 `Echo` 的示例：
 
         string Echo::InvokeMethod(const string& command) {
     
@@ -124,7 +124,7 @@ JNEXT 擴展的本機介面可以查看外掛程式標頭檔位於專案的公�
 
 該外掛程式必須包含以下的 JavaScript 檔：
 
-*   `client.js`: 這被認為是在用戶端，並包含可用到科爾多瓦的應用程式的 API。 中的 API `client.js` 調用程式調用 `index.js` 。 中的 API `client.js` 也連接到火，回檔的事件的回呼函數。
+*   `client.js`: 這被認為是在用戶端，並包含可用到科爾多瓦的應用程式的 API。 中的 API `client.js` 調用程式調用 `index.js` 。 中的 API `client.js` 也連接到火，回檔的<a href="../../../cordova/events/events.html">事件</a>的回呼函數。
 
 *   `index.js`： 科爾多瓦載入 `index.js` 並使其可通過 cordova.exec 橋。 `client.js`檔程式中的 API 呼叫 `index.js` 檔中，從而使打電話到 JNEXT 與本機端進行通信。
 

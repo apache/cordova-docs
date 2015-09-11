@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Actualizar BlackBerry
+# <a href="../blackberry10/upgrading.html">Actualizar BlackBerry</a>
 
 Esta guía le muestra cómo modificar los proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. Estas instrucciones son aplicables a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
@@ -46,7 +46,7 @@ BlackBerry 10:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="../ios/tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 
@@ -84,7 +84,7 @@ BlackBerryOS/Playbook:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="../ios/tools.html">iOS herramientas de línea de comandos</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 
@@ -367,7 +367,7 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
         
     Para:
     
-         < nombre del plugin = value="org.apache.cordova.capture.MediaCapture"/ "Capturar" >< plugin nombre = "Contactos" value="org.apache.cordova.pim.Contact"/ >
+         < nombre del plugin = value="org.apache.cordova.capture.MediaCapture"/ "<a href="../../../cordova/media/capture/capture.html">Captura</a>r" >< plugin nombre = "<a href="../../../cordova/contacts/Contact/contact.html">Contacto</a>s" value="org.apache.cordova.pim.Contact"/ >
         
 
 *   Para actualizar a 1.8.0, por favor ir de 1.7.0
@@ -390,11 +390,11 @@ Actualizar el `www` Directorio:
 
 6.  Actualizar su `www/plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+        < nombre del plugin = "<a href="../../../cordova/media/capture/capture.html">Captura</a>r" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "<a href="../../../cordova/contacts/Contact/contact.html">Contacto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     Para:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+        < nombre del plugin = "<a href="../../../cordova/media/capture/capture.html">Captura</a>r" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "<a href="../../../cordova/contacts/Contact/contact.html">Contacto</a>s" value="org.apache.cordova.pim.Contact"/ = >
         
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
@@ -415,8 +415,8 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
 
 8.  Abierta la `www/` Directorio y actualizar el `plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+         < nombre del plugin = "<a href="../../../cordova/media/capture/capture.html">Captura</a>r" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "<a href="../../../cordova/contacts/Contact/contact.html">Contacto</a>" value="org.apache.cordova.pim.Contact"/ >
         
     Para:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+         < nombre del plugin = "<a href="../../../cordova/media/capture/capture.html">Captura</a>r" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "<a href="../../../cordova/contacts/Contact/contact.html">Contacto</a>s" value="org.apache.cordova.pim.Contact"/ = >

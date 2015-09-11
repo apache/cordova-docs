@@ -20,16 +20,16 @@ license: >
 
 # geolocationSuccess
 
-지리적 위치 사용할 수 있을 때 실행 되는 사용자의 콜백 함수 (에서 호출할 때 `geolocation.getCurrentPosition` ), 또는 (에서 호출할 때 위치 변경 하는 경우`geolocation.watchPosition`).
+<a href="../geolocation.html">지리적 <a href="../Position/position.html">위치</a></a> 사용할 수 있을 때 실행 되는 사용자의 콜백 함수 (에서 호출할 때 `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ), 또는 (에서 호출할 때 <a href="../Position/position.html">위치</a> 변경 하는 경우`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
 
     function(position) {
         // Do something
     }
     
 
-## 매개 변수
+## 매개 <a href="../../../plugin_ref/spec.html">변수</a>
 
-*   **위치**: 장치에 의해 반환 된 지리적 위치. *(위치)*
+*   **<a href="../Position/position.html">위치</a>**: <a href="../../device/device.html">장치</a>에 의해 반환 된 <a href="../geolocation.html">지리적 <a href="../Position/position.html">위치</a></a>. *(<a href="../Position/position.html">위치</a>)*
 
 ## 예를 들어
 

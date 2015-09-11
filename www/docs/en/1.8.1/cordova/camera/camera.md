@@ -26,7 +26,7 @@ Camera
 Methods
 -------
 
-- camera.getPicture
+- <a href="camera.getPicture.html">camera.getPicture</a>
 
 Permissions
 -----------
@@ -68,7 +68,7 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

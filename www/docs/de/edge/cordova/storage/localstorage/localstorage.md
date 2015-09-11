@@ -20,7 +20,7 @@ license: >
 
 # localStorage
 
-Ermöglicht den Zugriff auf die W3C [Web-Speicherschnittstelle][1]
+Ermöglicht den Zugriff auf die W3C [Web-<a href="../storage.html">Speicher</a>schnittstelle][1]
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,11 +42,11 @@ Ermöglicht den Zugriff auf die W3C [Web-Speicherschnittstelle][1]
 
 ## Informationen
 
-Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede Datenbank bietet einen separaten Namespace.
+Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-<a href="../storage.html">Speicher</a>schnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede <a href="../database/database.html">Datenbank</a> bietet einen separaten Namespace.
 
  [2]: http://dev.w3.org/html5/webstorage/
 
-## Unterstützte Plattformen
+## <a href="../../../config_ref/images.html">Unterstützte Plattformen</a>
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 und höher)
@@ -85,14 +85,14 @@ Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschn
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title>Storage <a href="../storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -111,7 +111,7 @@ Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschn
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
         <p>localStorage</p>
       </body>
     </html>
@@ -119,4 +119,4 @@ Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschn
 
 ## Windows Phone 7 Macken
 
-Punktnotation ist *nicht* für Windows Phone 7 verfügbar. Verwenden Sie `setItem` oder `getItem` , anstatt auf Tasten direkt aus dem Speicherobjekt, wie z.B.`window.localStorage.someKey`.
+Punktnotation ist *nicht* für Windows Phone 7 verfügbar. Verwenden Sie `setItem` oder `getItem` , anstatt auf Tasten direkt aus dem <a href="../storage.html">Speicher</a>objekt, wie z.B.`window.localStorage.someKey`.

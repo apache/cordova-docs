@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Aktualisierung von Android
+# <a href="upgrading.html">Aktualisierung von Android</a>
 
 Diese Anleitung zeigt, wie Android Projekte Upgrade von älteren Versionen von Cordova ändern. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
 

@@ -20,12 +20,12 @@ license: >
 
 # compass.clearWatch
 
-再看看 ID 參數所引用的指南針。
+再看看 ID 參數所引用的<a href="compass.html">指南針</a>。
 
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**： 由返回的 ID`compass.watchHeading`.
+*   **watchID**： 由返回的 ID`<a href="compass.watchHeading.html">compass.watchHeading</a>`.
 
 ## 支援的平臺
 
@@ -38,7 +38,7 @@ license: >
 
 ## 快速的示例
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
     
     // ... later on ...
     
@@ -50,7 +50,7 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -60,7 +60,7 @@ license: >
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -75,7 +75,7 @@ license: >
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
     
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.<a href="compass.watchHeading.html">compass.watchHeading</a>(onSuccess, onError, options);
         }
     
         // Stop watching the compass
@@ -96,8 +96,8 @@ license: >
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>

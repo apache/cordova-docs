@@ -24,9 +24,9 @@ Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova apli
 
 Zobacz następujące szczegółowe informacje specyficzne dla platformy:
 
-*   Amazon ogień OS konfiguracja
-*   Amazon ogień OS WebViews
-*   Amazon ogień OS Plugins
+*   <a href="config.html">Amazon ogień OS konfiguracja</a>
+*   <a href="webview.html">Amazon ogień OS WebViews</a>
+*   <a href="plugin.html">Amazon ogień OS Plugins</a>
 
 ## Wprowadzenie
 
@@ -41,7 +41,7 @@ Aby uzyskać więcej informacji o interfejsie API WebView Amazon zapoznaj się z
 
 Rozwój Cordova aplikacje dla Amazon ognia systemu operacyjnego wymaga instalacji różne pliki obsługi, w tym wszystko, co potrzebne do rozwoju Android, jak również Amazon WebView SDK. Sprawdź na liście poniżej wymaganej instaluje:
 
-*   Interfejs wiersza poleceń
+*   <a href="../../cli/index.html">Interfejs wiersza poleceń</a>
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]

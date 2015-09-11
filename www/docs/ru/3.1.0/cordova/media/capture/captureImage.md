@@ -23,7 +23,7 @@ license: >
 > Запустите приложение камеры и возвращают сведения о файлах образа.
 
     navigator.device.capture.captureImage(
-        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError, [<a href="captureImageOptions.html">CaptureImageOptions</a> options]
     );
     
 
@@ -31,9 +31,9 @@ license: >
 
 Начинает асинхронную операцию для захвата изображения с помощью приложения камеры устройства. Операция позволяет пользователям захватывать более одного изображения за один сеанс.
 
-Операции захвата заканчивается, либо когда пользователь закрывает приложение камеры, или максимальное количество записей, указанный `CaptureAudioOptions.limit` достигается. Если не `limit` указано значение, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь захватывает отдельное изображение.
+Операции захвата заканчивается, либо когда пользователь закрывает приложение камеры, или максимальное количество записей, указанный `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` достигается. Если не `limit` указано значение, по умолчанию он один (1) и захвата операция прекращается после того, как пользователь захватывает отдельное изображение.
 
-По завершении операции захвата он вызывает `CaptureCB` обратного вызова с массивом `MediaFile` объектов, описывающих каждый файл образа. Если пользователь завершает операцию до захвата изображения, `CaptureErrorCB` обратного вызова выполняется с `CaptureError` объекта с изображением `CaptureError.CAPTURE_NO_MEDIA_FILES` код ошибки.
+По завершении операции захвата он вызывает `<a href="CaptureCB.html">CaptureCB</a>` обратного вызова с массивом `<a href="MediaFile.html">MediaFile</a>` объектов, описывающих каждый файл образа. Если пользователь завершает операцию до захвата изображения, `<a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>` обратного вызова выполняется с `<a href="CaptureError.html">CaptureError</a>` объекта с изображением `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` код ошибки.
 
 ## Поддерживаемые платформы
 
@@ -104,7 +104,7 @@ license: >
     
         // Upload files to server
         function uploadFile(mediaFile) {
-            var ft = new FileTransfer(),
+            var ft = new <a href="../../file/filetransfer/filetransfer.html">FileTransfer</a>(),
                 path = mediaFile.fullPath,
                 name = mediaFile.name;
     

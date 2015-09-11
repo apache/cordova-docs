@@ -20,11 +20,11 @@ license: >
 
 # CaptureAudioOptions
 
-> オーディオ キャプチャの構成オプションをカプセル化します。
+> オーディオ <a href="capture.html">キャプチャ</a>の構成オプションをカプセル化します。
 
 ## プロパティ
 
-*   **制限**: デバイス ユーザーは、単一のキャプチャ操作で記録することができますオーディオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
+*   **制限**: <a href="../../device/device.html">デバイス</a> ユーザーは、単一の<a href="capture.html">キャプチャ</a>操作で記録することができますオーディオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
 
 *   **期間**: オーディオのサウンド クリップの最大継続時間を秒単位で。
 
@@ -33,7 +33,7 @@ license: >
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
     
-    navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+    navigator.device.<a href="captureAudio.html">capture.captureAudio</a>(captureSuccess, captureError, options);
     
 
 ## Android の癖

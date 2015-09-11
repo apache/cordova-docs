@@ -20,7 +20,7 @@ license: >
 
 # DirectoryEntry
 
-이 개체 [W3C 디렉터리 및 시스템][1] 사양에 의해 정의 된 파일 시스템 디렉터리를 나타냅니다.
+이 개체 [W3C 디렉터리 및 시스템][1] 사양에 의해 정의 된 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a> 디렉터리를 나타냅니다.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,19 +36,19 @@ license: >
 
 **참고:** 다음 특성 W3C 사양에 정의 되어 있지만 지원 *되지* 않습니다.
 
-*   **파일 시스템**: 파일 시스템에는 `DirectoryEntry` 거주. *(파일 시스템)*
+*   **<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>**: <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에는 `DirectoryEntry` 거주. *(<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>)*
 
 ## 메서드
 
 에 다음 메서드를 호출할 수 있는 `DirectoryEntry` 개체:
 
-*   **getMetadata**: 디렉토리에 대 한 메타 데이터를 조회 합니다.
+*   **getMetadata**: 디렉토리에 대 한 <a href="../metadata/metadata.html">메타 데이터</a>를 조회 합니다.
 
-*   **setMetadata**: 디렉터리에 메타 데이터를 설정 합니다.
+*   **setMetadata**: 디렉터리에 <a href="../metadata/metadata.html">메타 데이터</a>를 설정 합니다.
 
-*   **moveTo**: 파일 시스템에서 다른 위치로 디렉토리를 이동 합니다.
+*   **moveTo**: <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에서 다른 <a href="../../geolocation/Position/position.html">위치</a>로 디렉토리를 이동 합니다.
 
-*   **copyTo**: 디렉터리 파일 시스템에 다른 위치에 복사 합니다.
+*   **copyTo**: 디렉터리 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에 다른 <a href="../../geolocation/Position/position.html">위치</a>에 복사 합니다.
 
 *   **toURL**: 디렉터리를 찾을 수 있도록 URL을 반환 합니다.
 
@@ -56,11 +56,11 @@ license: >
 
 *   **getParent**: 상위 디렉토리를 조회 합니다.
 
-*   **createReader**: 새로운 만들고 `DirectoryReader` 디렉터리에서 항목을 읽을 수 있는.
+*   **createReader**: 새로운 만들고 `<a href="../directoryreader/directoryreader.html">DirectoryReader</a>` 디렉터리에서 항목을 읽을 수 있는.
 
 *   **getDirectory**: 만들기 또는 디렉터리를 조회 합니다.
 
-*   **getFile**: 만들거나 파일을 조회 합니다.
+*   **getFile**: 만들거나 <a href="../fileobj/fileobj.html">파일</a>을 조회 합니다.
 
 *   **removeRecursively**: 디렉터리와 해당 내용을 모두 삭제 합니다.
 
@@ -74,13 +74,13 @@ license: >
 
 ## getMetadata
 
-디렉터리에 대 한 메타 데이터를 조회 합니다.
+디렉터리에 대 한 <a href="../metadata/metadata.html">메타 데이터</a>를 조회 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
 *   **successCallback**: 함께 실행할 콜백 함수를 `Metadata` 개체. *(기능)*
 
-*   **errorCallback**: 검색할 때 오류가 발생 하는 경우 실행할 콜백 함수는 `Metadata` . 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 검색할 때 오류가 발생 하는 경우 실행할 콜백 함수는 `Metadata` . 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -88,20 +88,20 @@ license: >
     
     함수 fail(error) {alert(error.code);}
     
-    / /이 항목 entry.getMetadata (성공, 실패)에 대 한 메타 데이터 개체를 요청
+    / /이 항목 entry.getMetadata (성공, 실패)에 대 한 <a href="../metadata/metadata.html">메타 데이터</a> 개체를 요청
     
 
 ## setMetadata
 
-디렉토리의 확장 된 특성 또는 메타 데이터를 설정합니다. *현재 iOS 에서만 작동 합니다.*
+디렉토리의 확장 된 특성 또는 <a href="../metadata/metadata.html">메타 데이터</a>를 설정합니다. *현재 iOS 에서만 작동 합니다.*
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **successCallback**: 메타 데이터가 성공적으로 설정 될 때 실행 되는 콜백. *(기능)*
+*   **successCallback**: <a href="../metadata/metadata.html">메타 데이터</a>가 성공적으로 설정 될 때 실행 되는 콜백. *(기능)*
 
-*   **errorCallback**: 메타 데이터 설정에 실패 했을 때 실행 되는 콜백. *(기능)*
+*   **errorCallback**: <a href="../metadata/metadata.html">메타 데이터</a> 설정에 실패 했을 때 실행 되는 콜백. *(기능)*
 
-*   **metadataObject**: 메타 데이터의 키와 값을 포함 하는 개체. *(개체)*
+*   **metadataObject**: <a href="../metadata/metadata.html">메타 데이터</a>의 키와 값을 포함 하는 개체. *(개체)*
 
 **빠른 예제**
 
@@ -149,27 +149,27 @@ license: >
             console.log(evt.target.error.code);
         }
     
-        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.<a href="../localfilesystem/localfilesystem.html">requestFileSystem</a>(localFileSystem, 0, onFSWin, onFSFail);
     }
     
-        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(<a href="../localfilesystem/localfilesystem.html">LocalFileSystem</a>.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
     
 
 ## moveTo
 
-파일 시스템에서 다른 위치로 디렉토리를 이동 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
+<a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에서 다른 <a href="../../geolocation/Position/position.html">위치</a>로 디렉토리를 이동 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
 
 *   어떤 깊이에서 자체 내부 또는 모든 하위 디렉터리를 이동 합니다.
 
 *   그것의 현재 디렉터리에서 다른 이름을 제공 하지 않으면 상위로 디렉터리를 이동 합니다.
 
-*   파일에 의해 점령 경로에 디렉토리를 이동 합니다.
+*   <a href="../fileobj/fileobj.html">파일</a>에 의해 점령 경로에 디렉토리를 이동 합니다.
 
 *   비어 있지 않은 디렉터리에 의해 점령 경로에 디렉토리를 이동 합니다.
 
 삭제 하 고 해당 디렉토리를 교체 하려고 기존 빈 디렉터리 위에 디렉터리를 이동 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
 *   **부모**: 부모 디렉터리를 디렉터리로 이동 합니다. *(DirectoryEntry)*
 
@@ -177,7 +177,7 @@ license: >
 
 *   **successCallback**: 콜백 함께 실행 되는 `DirectoryEntry` 새 디렉터리에 대 한 개체. *(기능)*
 
-*   **errorCallback**: 디렉터리를 이동 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 디렉터리를 이동 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -202,7 +202,7 @@ license: >
 
 ## copyTo
 
-디렉터리 파일 시스템에 다른 위치에 복사 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
+디렉터리 <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>에 다른 <a href="../../geolocation/Position/position.html">위치</a>에 복사 합니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
 
 *   어떤 깊이에서 자체 내부 디렉터리에 복사 합니다.
 
@@ -210,7 +210,7 @@ license: >
 
 디렉터리 복사본 항상 재귀, 있으며, 디렉터리의 모든 내용을 복사 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
 *   **부모**: 부모 디렉터리 대상 디렉터리를 복사 합니다. *(DirectoryEntry)*
 
@@ -218,7 +218,7 @@ license: >
 
 *   **successCallback**: 콜백 함께 실행 되는 `DirectoryEntry` 새 디렉터리에 대 한 개체. *(기능)*
 
-*   **errorCallback**: 기본 디렉터리에 복사 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 기본 디렉터리에 복사 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -258,13 +258,13 @@ license: >
 
 *   비어 있지 않은 디렉터리를 삭제 합니다.
 
-*   파일 시스템의 루트 디렉터리를 삭제 합니다.
+*   <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>의 루트 디렉터리를 삭제 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **successCallback**: 디렉터리 삭제 후 실행 되는 콜백. 매개 변수 없이 호출 됩니다. *(기능)*
+*   **successCallback**: 디렉터리 삭제 후 실행 되는 콜백. 매개 <a href="../../../plugin_ref/spec.html">변수</a> 없이 호출 됩니다. *(기능)*
 
-*   **errorCallback**: 디렉터리를 삭제 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 디렉터리를 삭제 하려고 할 때 오류가 발생 하면 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -279,11 +279,11 @@ license: >
 
 부모를 조회 `DirectoryEntry` 디렉터리를 포함 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
 *   **successCallback**: 디렉토리의 부모 전달 된 콜백 `DirectoryEntry` . *(기능)*
 
-*   **errorCallback**: 부모를 검색 하려고 할 때 오류가 발생 하면 실행 되는 콜백 `DirectoryEntry` . 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 부모를 검색 하려고 할 때 오류가 발생 하면 실행 되는 콜백 `DirectoryEntry` . 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -301,7 +301,7 @@ license: >
 
 ## createReader
 
-디렉터리에서 항목을 읽을 새 DirectoryReader을 만듭니다.
+디렉터리에서 항목을 읽을 새 <a href="../directoryreader/directoryreader.html">DirectoryReader</a>을 만듭니다.
 
 **빠른 예제**
 
@@ -315,15 +315,15 @@ license: >
 
 *   아직 존재 하지 않습니다 즉각적인 부모 디렉터리를 만듭니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
 *   **경로**: 조회를 만든 디렉터리 경로를 합니다. 절대 경로 또는 상대 경로에서 `DirectoryEntry` . *(DOMString)*
 
-*   **옵션**: 디렉터리 존재 하지 않는 경우 만들 수 있는지 여부를 지정 하는 옵션. *(플래그)*
+*   **옵션**: 디렉터리 존재 하지 않는 경우 만들 수 있는지 여부를 지정 하는 옵션. *(<a href="../flags/flags.html">플래그</a>)*
 
 *   **successCallback**: 콜백 함께 실행 되는 `DirectoryEntry` 개체. *(기능)*
 
-*   **errorCallback**: 만들기 또는 디렉터리를 조회할 때 오류가 발생 하는 경우 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 만들기 또는 디렉터리를 조회할 때 오류가 발생 하는 경우 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -336,40 +336,40 @@ license: >
 
 ## getFile
 
-만들거나 파일을 찾습니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
+만들거나 <a href="../fileobj/fileobj.html">파일</a>을 찾습니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
 
-*   아직 존재 하지 않습니다 즉각적인 부모 파일을 만듭니다.
+*   아직 존재 하지 않습니다 즉각적인 부모 <a href="../fileobj/fileobj.html">파일</a>을 만듭니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **경로**: 조회 하 여 만든 파일의 경로를. 절대 경로 또는 상대 경로에서 `DirectoryEntry` . *(DOMString)*
+*   **경로**: 조회 하 여 만든 <a href="../fileobj/fileobj.html">파일</a>의 경로를. 절대 경로 또는 상대 경로에서 `DirectoryEntry` . *(DOMString)*
 
-*   **옵션**: 존재 하지 않는 경우 파일 생성 여부를 지정 하는 옵션. *(플래그)*
+*   **옵션**: 존재 하지 않는 경우 <a href="../fileobj/fileobj.html">파일</a> 생성 여부를 지정 하는 옵션. *(<a href="../flags/flags.html">플래그</a>)*
 
-*   **successCallback**: 콜백 전달 되는 `FileEntry` 개체. *(기능)*
+*   **successCallback**: 콜백 전달 되는 `<a href="../fileentry/fileentry.html">FileEntry</a>` 개체. *(기능)*
 
-*   **errorCallback**: 만들거나 파일을 찾고 때 오류가 발생 하는 경우 실행 되는 콜백. 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 만들거나 <a href="../fileobj/fileobj.html">파일</a>을 찾고 때 오류가 발생 하는 경우 실행 되는 콜백. 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
-    success(fileEntry) 함수 {console.log ("파일 이름:" + fileEntry.name);}
+    success(fileEntry) 함수 {console.log ("<a href="../fileobj/fileobj.html">파일</a> 이름:" + fileEntry.name);}
     
-    fail(error) 함수 {경고 ("파일을 검색 하지 못했습니다:" + error.code);}
+    fail(error) 함수 {경고 ("<a href="../fileobj/fileobj.html">파일</a>을 검색 하지 못했습니다:" + error.code);}
     
-    / / 기존 파일을 검색 하거나 entry.getFile 존재 하지 않는 경우 만들 ("newFile.txt", {만들기: 사실, 독점: false}, 성공, 실패);
+    / / 기존 <a href="../fileobj/fileobj.html">파일</a>을 검색 하거나 entry.getFile 존재 하지 않는 경우 만들 ("newFile.txt", {만들기: 사실, 독점: false}, 성공, 실패);
     
 
 ## removeRecursively
 
-디렉터리 및 해당 내용을 모두 삭제합니다. (예: 제거할 수 없는 파일이 들어 있는 디렉터리를 삭제 하려고) 오류가 발생 한 경우 일부 디렉터리의 내용을 삭제할 수 있습니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
+디렉터리 및 해당 내용을 모두 삭제합니다. (예: 제거할 수 없는 <a href="../fileobj/fileobj.html">파일</a>이 들어 있는 디렉터리를 삭제 하려고) 오류가 발생 한 경우 일부 디렉터리의 내용을 삭제할 수 있습니다. 오류 결과 애플 리 케이 션을 시도 하는 경우:
 
-*   파일 시스템의 루트 디렉터리를 삭제 합니다.
+*   <a href="../filesystem/filesystem.html"><a href="../fileobj/fileobj.html">파일</a> 시스템</a>의 루트 디렉터리를 삭제 합니다.
 
-**매개 변수:**
+**매개 <a href="../../../plugin_ref/spec.html">변수</a>:**
 
-*   **successCallback**: 콜백 후 실행 되는 `DirectoryEntry` 삭제 되었습니다. 매개 변수 없이 호출 됩니다. *(기능)*
+*   **successCallback**: 콜백 후 실행 되는 `DirectoryEntry` 삭제 되었습니다. 매개 <a href="../../../plugin_ref/spec.html">변수</a> 없이 호출 됩니다. *(기능)*
 
-*   **errorCallback**: 콜백 삭제 하려고 할 때 오류가 발생 하면 실행 되는 `DirectoryEntry` . 로 호출을 `FileError` 개체. *(기능)*
+*   **errorCallback**: 콜백 삭제 하려고 할 때 오류가 발생 하면 실행 되는 `DirectoryEntry` . 로 호출을 `<a href="../fileerror/fileerror.html">FileError</a>` 개체. *(기능)*
 
 **빠른 예제**
 
@@ -393,6 +393,6 @@ license: >
 
 > 해결 방법: 임시 디렉터리 수동으로, 또는 다시 설치 하기 전에 응용 프로그램에 의해 청소 됩니다 확인 하십시오.
 
-*   만약 장치가 USB로 연결 되어 있습니다.
+*   만약 <a href="../../device/device.html">장치</a>가 USB로 <a href="../../connection/connection.html">연결</a> 되어 있습니다.
 
-> 해결 방법: 장치에서 USB 케이블을 분리 하 고 다시 실행 합니다.
+> 해결 방법: <a href="../../device/device.html">장치</a>에서 USB 케이블을 분리 하 고 다시 실행 합니다.

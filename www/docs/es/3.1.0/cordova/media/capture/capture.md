@@ -27,21 +27,21 @@ license: >
 ## Objetos
 
 *   Captura
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   <a href="captureAudioOptions.html">CaptureAudioOptions</a>
+*   <a href="captureImageOptions.html">CaptureImageOptions</a>
+*   <a href="captureVideoOptions.html">CaptureVideoOptions</a>
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a>
+*   <a href="ConfigurationData.html">ConfigurationData</a>
+*   <a href="MediaFile.html">MediaFile</a>
+*   <a href="MediaFile.html">MediaFile</a>Data
 
 ## Métodos
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   <a href="captureAudio.html">capture.captureAudio</a>
+*   <a href="captureImage.html">capture.captureImage</a>
+*   <a href="captureVideo.html">capture.captureVideo</a>
+*   <a href="MediaFile.html">MediaFile</a>.getFormatData
 
 ## Ámbito de aplicación
 
@@ -53,19 +53,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Propiedades
 
-*   **supportedAudioModes**: la grabación de formatos soportados por el dispositivo de audio. (ConfigurationData[])
+*   **supportedAudioModes**: la grabación de formatos soportados por el dispositivo de audio. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedImageModes**: la grabación de imagen tamaños y formatos soportados por el dispositivo. (ConfigurationData[])
+*   **supportedImageModes**: la grabación de imagen tamaños y formatos soportados por el dispositivo. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
-*   **supportedVideoModes**: las resoluciones de grabación de vídeo y formatos soportados por el dispositivo. (ConfigurationData[])
+*   **supportedVideoModes**: las resoluciones de grabación de vídeo y formatos soportados por el dispositivo. (<a href="ConfigurationData.html">ConfigurationData</a>[])
 
 ## Métodos
 
-*   `capture.captureAudio`: Lanzar la aplicación de grabación de audio del dispositivo para grabar clips de audio.
+*   `<a href="captureAudio.html">capture.captureAudio</a>`: Lanzar la aplicación de grabación de audio del dispositivo para grabar clips de audio.
 
-*   `capture.captureImage`: Lanzar la aplicación de la cámara del dispositivo para tomar fotos.
+*   `<a href="captureImage.html">capture.captureImage</a>`: Lanzar la aplicación de la cámara del dispositivo para tomar fotos.
 
-*   `capture.captureVideo`: Iniciar aplicación de grabadora de vídeo del dispositivo para grabar videos.
+*   `<a href="captureVideo.html">capture.captureVideo</a>`: Iniciar aplicación de grabadora de vídeo del dispositivo para grabar videos.
 
 ## Plataformas soportadas
 

@@ -18,6 +18,6 @@ license: >
     under the License.
 ---
 
-# compass.watchHeadingFilter
+# <a href="compass.watchHeading.html">compass.watchHeading</a>Filter
 
-참조 1.6 기준으로 더 이상 지원 되지, `compass.watchHeading` 동일한 기능에 대 한.
+참조 1.6 기준으로 더 이상 지원 되지, `<a href="compass.watchHeading.html">compass.watchHeading</a>` 동일한 기능에 대 한.

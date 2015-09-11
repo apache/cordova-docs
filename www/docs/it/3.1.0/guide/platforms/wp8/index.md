@@ -24,9 +24,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedi quanto segue per più dettagliate informazioni specifiche della piattaforma che si applica a entrambe le versioni:
 
-*   L'aggiornamento di Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone strumenti da riga di comando
+*   <a href="upgrading.html">L'aggiornamento di Windows Phone</a>
+*   <a href="plugin.html">Windows Phone Plugins</a>
+*   <a href="tools.html">Windows Phone strumenti da riga di comando</a>
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -85,7 +85,7 @@ Al fine di semplificare il processo di sviluppo, Cordova è dotato di uno script
 
 ### Eseguire il file batch per creare e installare i modelli.
 
-*   La radice del repo contiene un file createTemplates.bat. Doppio clic questo file genererà 2 file. zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip dove x.x.x è il numero di versione corrente) Per utilizzare facilmente questi file in Visual Studio, copia li a "Mio Documenti\Visual Studio 2012\Templates\ProjectTemplates\" allora sarete in grado di creare nuove applicazioni per Windows Phone di Apache Cordova dal File-> menu nuovo progetto Visual Studio.
+*   La radice del repo contiene un file createTemplates.bat. Doppio clic questo file genererà 2 file. zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip dove x.x.x è il numero di versione corrente) Per utilizzare facilmente questi file in Visual Studio, copia li a "Mio Documenti\Visual Studio 2012\Templates\ProjectTemplates\" allora sarete in grado di creare nuove applicazioni per Windows Phone di Apache Cordova dal <a href="../../../cordova/file/fileobj/fileobj.html">File</a>-> menu nuovo progetto Visual Studio.
 
 *   Se si esegue il file batch dalla riga di comando, è possibile chiamare anche con un parametro per installare automaticamente
 
@@ -136,7 +136,7 @@ Al fine di testare l'applicazione su un dispositivo, il dispositivo deve essere 
 
 *   Assicurarsi che il telefono è connesso, e lo schermo è sbloccato.
 
-*   In Visual Studio, selezionare 'Dispositivo' dal menu a discesa in alto.
+*   In Visual Studio, selezionare '<a href="../../../cordova/device/device.html">Dispositivo</a>' dal menu a discesa in alto.
 
 *   Premere il pulsante verde **giocare** accanto al menu a discesa principale per avviare il debug, o digitare **F5**.
 

@@ -22,8 +22,8 @@ license: >
 
 This section shows how to configure an app's icon and optional splash
 screen for various platforms, both when working in the Cordova CLI
-(described in The Command-Line Interface) or using platform-specific
-SDK tools (detailed in the Platform Guides).
+(described in <a href="../guide/cli/index.html">The Command-Line Interface</a>) or using platform-specific
+SDK tools (detailed in the <a href="../guide/platforms/index.html">Platform Guides</a>).
 
 ## Configuring Icons in the CLI
 

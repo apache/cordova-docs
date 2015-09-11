@@ -41,7 +41,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     // Android: Returns a random 64-bit integer (as a string, again!)
@@ -50,7 +50,7 @@ Quick Example
     // BlackBerry: Returns the PIN number of the device
     //             This is a nine-digit unique integer (as a string, though!)
     //
-    // iPhone: (Paraphrased from the UIDevice Class documentation)
+    // iPhone: (Paraphrased from the UI<a href="device.html">Device</a> Class documentation)
     //         Returns a string of hash values created from multiple hardware identifies.
     //         It is guaranteed to be unique for every device and cannot be tied
     //         to the user account.
@@ -63,31 +63,31 @@ Quick Example
     // unique to every GSM and UMTS mobile phone.
     var deviceID = device.uuid;
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title><a href="device.html">Device</a> Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="device.html">Device</a>Ready() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Version: '  + device.version  + '<br />';
+            element.innerHTML = '<a href="device.html">Device</a> Name: '     + <a href="device.name.html">device.name</a>     + '<br />' + 
+                                '<a href="device.html">Device</a> Cordova: '  + <a href="device.cordova.html">device.cordova</a>  + '<br />' + 
+                                '<a href="device.html">Device</a> Platform: ' + <a href="device.platform.html">device.platform</a> + '<br />' + 
+                                '<a href="device.html">Device</a> UUID: '     + device.uuid     + '<br />' + 
+                                '<a href="device.html">Device</a> Version: '  + <a href="device.version.html">device.version</a>  + '<br />';
         }
 
         </script>

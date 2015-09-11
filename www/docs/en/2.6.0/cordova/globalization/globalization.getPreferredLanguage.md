@@ -32,7 +32,7 @@ Description
 It returns the language identifier string to the successCB callback with a
 properties object as a parameter. That object should have a ``value`` property with a String value.
 
-If there is an error getting the language, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error getting the language, then the errorCB callback is invoked with a <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a> object as a parameter. The expected code for this error is <a href="<a href="globalization.html">Globalization</a>Error/globalizationerror.html"><a href="globalization.html">Globalization</a>Error</a>.UNKNOWN\_ERROR.
 
 Supported Platforms
 -------------------
@@ -43,7 +43,7 @@ Supported Platforms
 - Windows Phone 8
 
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with the text "language: English".
@@ -53,7 +53,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
       function () {alert('Error getting language\n');}
     );
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE HTML>

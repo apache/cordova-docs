@@ -45,7 +45,7 @@ license: >
 
 入站 `currencyCode` 參數應該是 `String` 的 ISO 4217 貨幣代碼，例如 '美元' 之一。
 
-如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 物件作為參數。 錯誤的期望的代碼`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.FORMATTING\_ERROR`.
 
 ## 支援的平臺
 
@@ -55,7 +55,7 @@ license: >
 
 ## 快速的示例
 
-當瀏覽器設置為 `en\_US` 地區設定和所選的幣種是美元，本示例將顯示一個彈出對話方塊與類似的結果，請按照操作的文本：
+當瀏覽器設置為 `en\_US` 地區設定和所選的幣種是美元，本示例將<a href="../inappbrowser/inappbrowser.html">顯示</a>一個彈出對話方塊與類似的結果，請按照操作的文本：
 
     navigator.globalization.getCurrencyPattern(
         'USD',
@@ -86,7 +86,7 @@ license: >
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern Example</title>
+        <title>getCurrencyPattern <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

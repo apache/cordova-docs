@@ -183,7 +183,7 @@ Ces [Propriétés][3] peuvent être définies pour personnaliser la génération
 
 Si vous devez personnaliser `build.gradle`, plutôt que de modifier directement, vous devez créer un fichier de frère nommé `build-extras.gradle`. Ce fichier sera inclus par le principal `build.gradle` lorsqu'il est présent. Voici un exemple :
 
-    # Example build-extras.gradle
+    # <a href="../../../cordova/storage/storage.opendatabase.html">Example</a> build-extras.gradle
     # This file is included at the beginning of `build.gradle`
     ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
     # When set, this function allows code to run at the end of `build.gradle`

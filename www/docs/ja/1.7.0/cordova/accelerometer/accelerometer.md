@@ -26,18 +26,18 @@ Accelerometer
 メソッド
 -------
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
+- accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
+- <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 引数
 ---------
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+- <a href="parameters/accelerometerError.html">accelerometerError</a>
+- <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 オブジェクト (読み取り専用)
 -------------------
 
-- Acceleration
+- <a href="acceleration/acceleration.html">Acceleration</a>

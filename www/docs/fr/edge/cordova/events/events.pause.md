@@ -29,7 +29,7 @@ L'évènement se déclenche quand une application est mise en arrière-plan.
 
 L'évènement `pause` se déclenche lorsque la plate-forme native met l'application en arrière-plan, généralement lorsque l'utilisateur bascule vers une autre application.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `<a href="events.deviceready.html">deviceready</a>` déclenché.
 
 ## Plates-formes supportées
 
@@ -54,7 +54,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -62,7 +62,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

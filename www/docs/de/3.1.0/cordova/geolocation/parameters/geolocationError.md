@@ -20,7 +20,7 @@ license: >
 
 # geolocationError
 
-Des Benutzers Callback-Funktion, die ausgeführt wird, wenn ein Fehler für Geolocation-Funktionen auftritt.
+Des Benutzers Callback-Funktion, die ausgeführt wird, wenn ein Fehler für <a href="../geolocation.html">Geolocation</a>-Funktionen auftritt.
 
     function(error) {
         // Handle the error
@@ -29,4 +29,4 @@ Des Benutzers Callback-Funktion, die ausgeführt wird, wenn ein Fehler für Geol
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(PositionError)*
+*   **Fehler**: der Fehler, die durch das <a href="../../device/device.html">Gerät</a> zurückgegeben. *(<a href="../Position/position.html">Position</a>Error)*

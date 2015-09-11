@@ -20,21 +20,21 @@ license: >
 
 # iOS Configuration
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> pour plus d'informations sur les options de configuration globale.
 
 *   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` d'utiliser une balise meta de fenêtre d'affichage pour désactiver ou limiter la plage de mise à l'échelle de l'utilisateur.
     
         <preference name="EnableViewportScale" value="true"/>
         
 
-*   `MediaPlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher les vidéos HTML5 de jouer automatiquement avec le `autoplay` attribut. Ne s'applique pas lorsque vous appelez `play()` sur un objet vidéo.
+*   `<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher les vidéos HTML5 de jouer automatiquement avec le `autoplay` attribut. Ne s'applique pas lorsque vous appelez `play()` sur un objet vidéo.
     
-        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        <preference name="<a href="../../../cordova/media/media.html">Media</a>PlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(boolean, la valeur par défaut `false` ): la valeur `true` pour permettre la lecture multimédia HTML5 à comparaître *inline* dans la disposition de l'écran, à l'aide de contrôles fournis par navigateur plutôt que des contrôles natifs. Pour ce faire, ajoutez les `webkit-playsinline` attribuent à aucun `<video>` éléments.
+*   `AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback`(boolean, la valeur par défaut `false` ): la valeur `true` pour permettre la lecture multimédia HTML5 à comparaître *inline* dans la disposition de l'écran, à l'aide de contrôles fournis par navigateur plutôt que des contrôles natifs. Pour ce faire, ajoutez les `webkit-playsinline` attribuent à aucun `<video>` éléments.
     
-        <preference name="AllowInlineMediaPlayback" value="true"/>
+        <preference name="AllowInline<a href="../../../cordova/media/media.html">Media</a>Playback" value="true"/>
         
 
 *   `BackupWebStorage`(cordes, soit `none` , `local` , ou la valeur par défaut `cloud` ): la valeur `cloud` afin que les données de stockage web de sauvegarde via iCloud. La valeur `local` pour permettre uniquement les sauvegardes locales via iTunes sync. La valeur `none` empêcher les sauvegardes de stockage web.
@@ -47,19 +47,19 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(boolean, la valeur par défaut `true` ): la valeur `false` pour empêcher l'écran de démarrage de fading in et out lorsque son état d'affichage est modifié.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>`(boolean, la valeur par défaut `true` ): la valeur `false` pour empêcher l'écran de démarrage de fading in et out lorsque son état d'affichage est modifié.
     
-        <preference name="FadeSplashScreen" value="false"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>" value="false"/>
         
 
-*   `FadeSplashScreenDuration`(float, la valeur par défaut `2` ): spécifie le nombre de secondes que l'écran de démarrage s'estomper l'effet d'exécuter.
+*   `Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration`(float, la valeur par défaut `2` ): spécifie le nombre de secondes que l'écran de démarrage s'estomper l'effet d'exécuter.
     
-        <preference name="FadeSplashScreenDuration" value="4"/>
+        <preference name="Fade<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Duration" value="4"/>
         
 
-*   `ShowSplashScreenSpinner`(boolean, la valeur par défaut `true` ): la valeur `false` pour cacher le cône de l'écran de démarrage.
+*   `Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner`(boolean, la valeur par défaut `true` ): la valeur `false` pour cacher le cône de l'écran de démarrage.
     
-        <preference name="ShowSplashScreenSpinner" value="false"/>
+        <preference name="Show<a href="../../../cordova/splashscreen/splashscreen.html">SplashScreen</a>Spinner" value="false"/>
         
 
 *   `KeyboardDisplayRequiresUserAction`(boolean, la valeur par défaut `true` ): la valeur `false` pour permettre le clavier à comparaître lors de l'appel `focus()` sur les entrées de formulaire.

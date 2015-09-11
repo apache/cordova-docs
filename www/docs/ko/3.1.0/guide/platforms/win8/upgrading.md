@@ -20,7 +20,7 @@ license: >
 
 # 윈도우 8을 업그레이드
 
-이 가이드에는 코르도바의 이전 버전에서 업그레이드 하려면 Windows 8 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 명령줄 인터페이스를 참조.
+이 <a href="../../../index.html">가이드</a>에는 코르도바의 이전 버전에서 업그레이드 하려면 Windows 8 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 <a href="../../cli/index.html">명령줄 인터페이스</a>를 참조.
 
 ## 3.1.0에 (게) 업그레이드
 
@@ -32,7 +32,7 @@ license: >
 
 1.  제거 `cordova-2.8.0.js` 프로젝트의 `www` 디렉터리.
 
-2.  추가 `cordova.js` 파일 소스에서 프로젝트의 `www` 디렉터리. (Note 파일 더 이상 파일 이름에 버전 번호를 포함 합니다.)
+2.  추가 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 소스에서 프로젝트의 `www` 디렉터리. (Note <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 더 이상 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 이름에 버전 번호를 포함 합니다.)
 
 3.  빌드 및 테스트!
 
@@ -42,6 +42,6 @@ license: >
 
 1.  제거 `cordova-2.7.0.js` 프로젝트의 `www` 디렉터리.
 
-2.  추가 `cordova.js` 파일 소스에서 프로젝트의 `www` 디렉터리. (Note 파일 더 이상 파일 이름에 버전 번호를 포함 합니다.)
+2.  추가 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 소스에서 프로젝트의 `www` 디렉터리. (Note <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 더 이상 <a href="../../../cordova/file/fileobj/fileobj.html">파일</a> 이름에 버전 번호를 포함 합니다.)
 
 3.  빌드 및 테스트!

@@ -26,7 +26,7 @@ Este objeto proporciona una manera de obtener sistemas de archivos root.
 
 *   **requestFileSystem**: pide un sistema de archivos. *(Función)*
 
-*   **resolveLocalFileSystemURI**: recuperar un `DirectoryEntry` o `FileEntry` usando URI local. *(Función)*
+*   **resolveLocalFileSystemURI**: recuperar un `<a href="../directoryentry/directoryentry.html">DirectoryEntry</a>` o `<a href="../fileentry/fileentry.html">FileEntry</a>` usando URI local. *(Función)*
 
 ## Constantes
 
@@ -70,14 +70,14 @@ La `LocalFileSystem` métodos del objeto se definen en el `window` objeto.
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Local File System Example</title>
+        <title>Local File System <a href="../../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -101,7 +101,7 @@ La `LocalFileSystem` métodos del objeto se definen en el `window` objeto.
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
         <p>Local File System</p>
       </body>
     </html>

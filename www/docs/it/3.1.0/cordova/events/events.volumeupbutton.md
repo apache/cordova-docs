@@ -22,14 +22,14 @@ license: >
 
 L'evento viene generato quando l'utente preme il tasto volume.
 
-    document.addEventListener("volumeupbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumeupbutton", yourCallbackFunction, false);
     
 
 ## Dettagli
 
 Se è necessario eseguire l'override del comportamento il volume predefinito è possibile registrare un listener di eventi per il `volumeupbutton` evento.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` per fissare un listener di eventi una volta il `<a href="events.deviceready.html">deviceready</a>` evento incendi.
 
 ## Piattaforme supportate
 
@@ -37,7 +37,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## Esempio rapido
 
-    document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumeupbutton", onVolumeUpKeyDown, false);
     
     function onVolumeUpKeyDown() {
         // Handle the volume up button
@@ -50,7 +50,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Up Button Example</title>
+        <title>Volume Up Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("volumeupbutton", onVolumeUpKeyDown, false);
         }
     
         // Handle the volume up button

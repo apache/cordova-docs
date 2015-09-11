@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Actualizar iOS
+# <a href="upgrading.html">Actualizar iOS</a>
 
 Esta guía le muestra cómo modificar los proyectos iOS para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
@@ -128,7 +128,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova.js` archivo.
 
@@ -146,7 +146,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova.js` archivo.
 
@@ -162,7 +162,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del `www/cordova.js` (tenga en cuenta que ya no tiene un sufijo de versión, la versión en el archivo en el encabezado) archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.7.0.js` archivo.
 
@@ -194,7 +194,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.7.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.6.0.js` archivo.
 
@@ -217,7 +217,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia del proyecto `www/cordova-2.6.0.js` del archivo en el `www` Directorio y eliminar el `www/cordova-2.5.0.js` archivo.
 
@@ -248,7 +248,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.5.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.4.0.js` archivo.
 
@@ -279,7 +279,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.4.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.3.0.js` archivo.
 
@@ -310,7 +310,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.3.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.2.0.js` archivo.
 
@@ -345,7 +345,7 @@ platform add ios`.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.2.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.1.0.js` archivo.
 
@@ -377,7 +377,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova-2.1.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-2.0.0.js` archivo.
 
@@ -408,7 +408,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 1.  Instale Cordova 2.0.0.
 
-2.  Crear un nuevo proyecto, como se describe en iOS Guía de herramientas de Shell. Necesitas los activos de este nuevo proyecto.
+2.  Crear un nuevo proyecto, como se describe en <a href="tools.html">iOS Guía de herramientas de Shell</a>. Necesitas los activos de este nuevo proyecto.
 
 3.  Copia el `www/cordova-2.0.0.js` archivo del nuevo proyecto en el `www` Directorio y eliminar el `www/cordova-1.9.0.js` archivo.
 

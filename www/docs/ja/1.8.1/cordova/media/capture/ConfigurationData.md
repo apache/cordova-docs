@@ -43,7 +43,7 @@ MIME type は [RFC2046](http://www.ietf.org/rfc/rfc2046.txt) に従っていま�
 - __height:__ 画像またはビデオの高さをピクセルで表します。 オーディオの場合は、0に設定されます。 (Number)
 - __width:__ 画像またはビデオの幅をピクセルで表します。 オーディオの場合は、0に設定されます。 (Number)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     // サポートされている画像のモードを取得

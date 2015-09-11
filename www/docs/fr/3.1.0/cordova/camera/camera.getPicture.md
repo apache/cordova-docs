@@ -20,18 +20,18 @@ license: >
 
 # camera.getPicture
 
-Prend une photo à l'aide de la caméra, ou récupère une photo de la Galerie d'images de l'appareil. L'image est passée au callback "succès" comme une `String` encodée en base64 ou l'URI du fichier de l'image. La méthode elle-même renvoie un objet `CameraPopoverHandle` qui permet de repositionner la boite de dialogue de selection d'image.
+Prend une photo à l'aide de la caméra, ou récupère une photo de la Galerie d'images de l'appareil. L'image est passée au callback "succès" comme une `String` encodée en base64 ou l'URI du fichier de l'image. La méthode elle-même renvoie un objet `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` qui permet de repositionner la boite de dialogue de selection d'image.
 
-    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+    navigator.camera.getPicture( <a href="parameter/cameraSuccess.html">cameraSuccess</a>, <a href="parameter/cameraError.html">cameraError</a>, [ <a href="parameter/cameraOptions.html">cameraOptions</a> ] );
     
 
 ## Description
 
 La fonction `camera.getPicture` ouvre l'application par défaut de l'appareil qui permet aux utilisateurs de prendre des photos. Ce comportement se produit par défaut, lorsque `Camera.sourceType` est égal à `Camera.PictureSourceType.CAMERA`. Une fois que l'utilisateur a pris la photo, l'application "camera" se ferme et l'application est restaurée.
 
-Si `Camera.sourceType` est `Camera.PictureSourceType.PHOTOLIBRARY` ou `Camera.PictureSourceType.SAVEDPHOTOALBUM`, alors une boîte de dialogue s'affiche pour permettre aux utilisateurs de sélectionner une image existante. La fonction `camera.getPicture` retourne un objet `CameraPopoverHandle` qui permet de repositionner le dialogue de sélection d'image, par exemple, lorsque l'orientation de l'appareil change.
+Si `Camera.sourceType` est `Camera.PictureSourceType.PHOTOLIBRARY` ou `Camera.PictureSourceType.SAVEDPHOTOALBUM`, alors une boîte de dialogue s'affiche pour permettre aux utilisateurs de sélectionner une image existante. La fonction `camera.getPicture` retourne un objet `<a href="parameter/CameraPopoverHandle.html">CameraPopoverHandle</a>` qui permet de repositionner le dialogue de sélection d'image, par exemple, lorsque l'orientation de l'appareil change.
 
-La valeur de retour est envoyée à la fonction callback `cameraSuccess`, dans l'un des formats suivants, selon spécifié par `cameraOptions` :
+La valeur de retour est envoyée à la fonction callback `<a href="parameter/cameraSuccess.html">cameraSuccess</a>`, dans l'un des formats suivants, selon spécifié par `<a href="parameter/cameraOptions.html">cameraOptions</a>` :
 
 *   A `String` contenant l'image photo codée en base64.
 
@@ -115,7 +115,7 @@ Prendre une photo et récupérer l'emplacement du fichier de l'image :
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Photo</title>
+        <title><a href="../media/capture/capture.html">Capture</a> Photo</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -125,7 +125,7 @@ Prendre une photo et récupérer l'emplacement du fichier de l'image :
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready",onDeviceReady,false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>",onDeviceReady,false);
     
         // device APIs are available
         //
@@ -208,8 +208,8 @@ Prendre une photo et récupérer l'emplacement du fichier de l'image :
         </script>
       </head>
       <body>
-        <button onclick="capturePhoto();">Capture Photo</button> <br>
-        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+        <button onclick="capturePhoto();"><a href="../media/capture/capture.html">Capture</a> Photo</button> <br>
+        <button onclick="capturePhotoEdit();"><a href="../media/capture/capture.html">Capture</a> Editable Photo</button> <br>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
         <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />

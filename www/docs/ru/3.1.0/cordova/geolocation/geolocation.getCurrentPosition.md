@@ -22,22 +22,22 @@ license: >
 
 Возвращает текущую позицию устройства как `Position` объект.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess,
-                                             [geolocationError],
-                                             [geolocationOptions]);
+    navigator.geolocation.getCurrentPosition(<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>,
+                                             [<a href="parameters/geolocationError.html">geolocationError</a>],
+                                             [<a href="parameters/geolocation.options.html">geolocationOptions</a>]);
     
 
 ## Параметры
 
-*   **geolocationSuccess**: обратный вызов, который передается в текущей позиции.
+*   **<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>**: обратный вызов, который передается в текущей позиции.
 
-*   **geolocationError**: *(необязательно)* обратного вызова, который выполняется при возникновении ошибки.
+*   **<a href="parameters/geolocationError.html">geolocationError</a>**: *(необязательно)* обратного вызова, который выполняется при возникновении ошибки.
 
-*   **geolocationOptions**: *(необязательно)* параметры геопозиционирования.
+*   **<a href="parameters/geolocation.options.html">geolocationOptions</a>**: *(необязательно)* параметры геопозиционирования.
 
 ## Описание
 
-`geolocation.getCurrentPosition`Это асинхронные функции. Возвращает текущее положение устройства для `geolocationSuccess` обратного вызова с `Position` объект в качестве параметра. Если есть ошибка, `geolocationError` обратного вызова передается `PositionError` объект.
+`geolocation.getCurrentPosition`Это асинхронные функции. Возвращает текущее положение устройства для `<a href="parameters/geolocationSuccess.html">geolocationSuccess</a>` обратного вызова с `Position` объект в качестве параметра. Если есть ошибка, `<a href="parameters/geolocationError.html">geolocationError</a>` обратного вызова передается `<a href="PositionError/positionError.html">PositionError</a>` объект.
 
 ## Поддерживаемые платформы
 
@@ -65,7 +65,7 @@ license: >
               'Timestamp: '         + position.timestamp                + '\n');
     };
     
-    // onError Callback receives a PositionError object
+    // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
     //
     function onError(error) {
         alert('code: '    + error.code    + '\n' +
@@ -80,14 +80,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -109,7 +109,7 @@ license: >
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
-        // onError Callback receives a PositionError object
+        // onError Callback receives a <a href="PositionError/positionError.html">PositionError</a> object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +

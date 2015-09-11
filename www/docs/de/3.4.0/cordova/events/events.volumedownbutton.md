@@ -29,7 +29,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lautstärke-Taste drückt.
 
 Wenn Sie die Standard-Lautstärke reduzieren Verhalten überschreiben müssen erfassen Sie einen Ereignis-Listener für das `volumedownbutton` Ereignis.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `<a href="events.deviceready.html">deviceready</a>` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -50,7 +50,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Volume Down Button Example</title>
+        <title>Volume Down Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,7 +58,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available

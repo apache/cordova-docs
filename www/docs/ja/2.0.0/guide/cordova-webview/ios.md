@@ -42,20 +42,20 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
 1. `Cordova.plist` ファイルをディスクのプロジェクトフォルダー内に **コピー** します
 2. `Cordova.plist` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します
 3. **"Create groups for any added folders"** のラジオボタンを **選択** します
-4. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
+4. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
 5. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 6. `~/Documents/CordovaLib/` と入力し、 **"Go"** ボタンをクリックします
-7. **"Add Files..." 画面** で `VERSION` ファイルを選択します
-8. **"Add Files..." 画面** で **"Add"** ボタンをクリックします
-9. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
+7. **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." 画面** で `VERSION` ファイルを選択します
+8. **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." 画面** で **"Add"** ボタンをクリックします
+9. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
 10. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 11. `~/Documents/CordovaLib/CordovaLib.xcodeproj` と入力し、 **"Go"** ボタンをクリックします
-12. **"Add Files..." 画面** で **"Add"** ボタンをクリックします
+12. **"Add <a href="../../cordova/file/fileobj/fileobj.html">File</a>s..." 画面** で **"Add"** ボタンをクリックします
 13. Project Navigator で `CordovaLib.xcodeproj` を選択します
-14. **File Inspector** を開くため、 **Option-Command-1** キーを押します
-15. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
+14. **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** を開くため、 **Option-Command-1** キーを押します
+15. **Location** のドロップダウンメニューのため、 **<a href="../../cordova/file/fileobj/fileobj.html">File</a> Inspector** から **"Relative to CORDOVALIB"** を選択します
 16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-17. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+17. **"Other Linker <a href="../../cordova/file/flags/flags.html">Flags</a>"** の値に `-all_load` と `-Obj-C` を追加します
 18. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
 19. **"Link Binaries with Libraries"** を展開します
 20. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
@@ -65,11 +65,11 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
         AudioToolbox.framework
         AVFoundation.framework
         CoreLocation.framework
-        MediaPlayer.framework
+        <a href="../../cordova/media/media.html">Media</a>Player.framework
         QuartzCore.framework
         SystemConfiguration.framework
         MobileCoreServices.framework
-        CoreMedia.framework
+        Core<a href="../../cordova/media/media.html">Media</a>.framework
 
 21. **"Target Dependencies"** を展開します。 (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
 22. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します

@@ -20,7 +20,7 @@ license: >
 
 # geolocationSuccess
 
-使用者的地理位置變得可用時執行的回呼函數 （當從調用 `geolocation.getCurrentPosition` ），或 （當從調用位置的更改時`geolocation.watchPosition`).
+使用者的地理<a href="../Position/position.html">位置</a>變得可用時執行的回呼函數 （當從調用 `<a href="../geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a>` ），或 （當從調用<a href="../Position/position.html">位置</a>的更改時`<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>`).
 
     function(position) {
         // Do something
@@ -29,7 +29,7 @@ license: >
 
 ## 參數
 
-*   **位置**： 返回設備的地理位置。*（位置）*
+*   **<a href="../Position/position.html">位置</a>**： 返回<a href="../../device/device.html">設備</a>的地理<a href="../Position/position.html">位置</a>。*（<a href="../Position/position.html">位置</a>）*
 
 ## 示例
 

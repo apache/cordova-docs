@@ -20,18 +20,18 @@ license: >
 
 # compass.watchHeading
 
-Erhalten Sie in regelmäßigen Abständen die Kompassrichtung in Grad.
+Erhalten Sie in regelmäßigen Abständen die <a href="compass.html">Kompass</a>richtung in Grad.
 
-    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
     
 
 ## Beschreibung
 
-Der Kompass ist ein Sensor, der erkennt die Richtung oder Position, dass das Gerät angezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99.
+Der <a href="compass.html">Kompass</a> ist ein Sensor, der erkennt die Richtung oder <a href="../geolocation/Position/position.html">Position</a>, dass das <a href="../device/device.html">Gerät</a> angezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99.
 
-Die `compass.watchHeading` Ruft das Gerät aktuelle Rubrik in regelmäßigen Abständen. Jedes Mal, die Überschrift abgerufen wird, die `headingSuccess` Callback-Funktion wird ausgeführt. Gibt das Intervall in Millisekunden über den `frequency` -Parameter in der `compassOptions` Objekt.
+Die `compass.watchHeading` Ruft das <a href="../device/device.html">Gerät</a> aktuelle Rubrik in regelmäßigen Abständen. Jedes Mal, die Überschrift abgerufen wird, die `headingSuccess` Callback-Funktion wird ausgeführt. Gibt das Intervall in Millisekunden über den `frequency` -Parameter in der `<a href="parameters/compassOptions.html">compassOptions</a>` Objekt.
 
-Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die ID kann verwendet werden, mit `compass.clearWatch` , beobachten den Kompass zu stoppen.
+Die zurückgegebenen Uhren-ID verweist das <a href="compass.html">Kompass</a>-Uhr-Intervall. Die Uhr, die ID kann verwendet werden, mit `<a href="compass.clearWatch.html">compass.clearWatch</a>` , beobachten den <a href="compass.html">Kompass</a> zu stoppen.
 
 ## Unterstützte Plattformen
 
@@ -49,8 +49,8 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
     
-    function onError(compassError) {
-        alert('Compass error: ' + compassError.code);
+    function onError(<a href="parameters/compassError.html">compassError</a>) {
+        alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
     };
     
     var options = {
@@ -65,7 +65,7 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -75,7 +75,7 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -97,7 +97,7 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -111,8 +111,8 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>
@@ -127,6 +127,6 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
 
 ## iOS Macken
 
-In iOS `compass.watchHeading` erhalten Sie auch aktuelle Position des Geräts, wenn es um eine angegebene Anzahl von Grad ändert. Jedes Mal die Überschrift-Änderungen, um die angegebene Anzahl von Grad oder mehr, die `headingSuccess` Rückruffunktion ausgeführt wird. Geben Sie den Grad der Veränderung über die `filter` Parameter in der `compassOptions` Objekt. Deaktivieren Sie die Uhr wie üblich durch Übermittlung der zurückgegebenen Uhren-ID auf `compass.clearWatch` . Diese Funktion ersetzt die bisher getrennten, nur iOS- `watchHeadingFilter` und `clearWatchFilter` Funktionen, die in Version 1.6 entfernt wurden.
+In iOS `compass.watchHeading` erhalten Sie auch aktuelle <a href="../geolocation/Position/position.html">Position</a> des <a href="../device/device.html">Gerät</a>s, wenn es um eine angegebene Anzahl von Grad ändert. Jedes Mal die Überschrift-Änderungen, um die angegebene Anzahl von Grad oder mehr, die `headingSuccess` Rückruffunktion ausgeführt wird. Geben Sie den Grad der Veränderung über die `filter` Parameter in der `<a href="parameters/compassOptions.html">compassOptions</a>` Objekt. Deaktivieren Sie die Uhr wie üblich durch Übermittlung der zurückgegebenen Uhren-ID auf `<a href="compass.clearWatch.html">compass.clearWatch</a>` . Diese Funktion ersetzt die bisher getrennten, nur iOS- `watchHeadingFilter` und `clearWatchFilter` Funktionen, die in Version 1.6 entfernt wurden.
 
 Nur ein `watchHeading` kann in der Tat auf einmal in iOS sein. Wenn ein `watchHeading` benutzt einen Filter Aufrufen von `getCurrentHeading` oder `watchHeading` verwendet den Wert des vorhandenen Filters Überschrift Änderungen festlegen. Überschrift Veränderungen beobachten, mit einem Filter ist effizienter als mit Zeitintervallen.

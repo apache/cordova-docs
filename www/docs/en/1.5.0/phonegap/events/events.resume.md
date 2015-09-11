@@ -30,7 +30,7 @@ Details
 
 PhoneGap consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '<a href="events.deviceready.html">deviceready</a>' event.
 
 Supported Platforms
 -------------------
@@ -39,7 +39,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     document.addEventListener("resume", onResume, false);
@@ -48,30 +48,30 @@ Quick Example
         // Handle the resume event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Resume Example</title>
+        <title>PhoneGap Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when PhoneGap is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when PhoneGap is loaded.
         //
         // At this point, the document has loaded but cordova-1.5.0.js has not.
         // When PhoneGap is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             document.addEventListener("resume", onResume, false);
         }
 

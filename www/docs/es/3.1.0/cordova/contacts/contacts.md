@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Contactos
+# <a href="Contact/contact.html">Contacto</a>s
 
 > El objeto de `Contacts` proporciona acceso a la base de datos de contactos del dispositivo.
 
@@ -26,25 +26,25 @@ license: >
 
 ## Métodos
 
-*   contacts.create
-*   contacts.find
+*   <a href="contacts.create.html">contacts.create</a>
+*   <a href="contacts.find.html">contacts.find</a>
 
 ## Argumentos
 
-*   contactFields
-*   contactSuccess
-*   contactError
-*   contactFindOptions
+*   <a href="parameters/contactFields.html">contactFields</a>
+*   <a href="parameters/contactSuccess.html">contactSuccess</a>
+*   <a href="parameters/contactError.html">contactError</a>
+*   <a href="parameters/contactFindOptions.html">contactFindOptions</a>
 
 ## Objetos
 
 *   Contact
-*   ContactName
-*   ContactField
-*   ContactAddress
-*   ContactOrganization
-*   ContactFindOptions
-*   ContactError
+*   <a href="ContactName/contactname.html">ContactName</a>
+*   <a href="ContactField/contactfield.html">ContactField</a>
+*   <a href="ContactAddress/contactaddress.html">ContactAddress</a>
+*   <a href="ContactOrganization/contactorganization.html">ContactOrganization</a>
+*   <a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a>
+*   <a href="ContactError/<a href="parameters/contactError.html">contactError</a>.html">ContactError</a>
 
 ## Acceso a la función
 

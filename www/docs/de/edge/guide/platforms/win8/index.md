@@ -20,9 +20,9 @@ license: >
 
 # Anleitung zur Windows Platform
 
-Diese Anleitung zeigt wie die SDK-Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für Windows 8, Windows 8.1 und Windows Phone 8.1 Windows 10 Universal-App-Plattform eingerichtet. Es zeigt, wie mit beiden Kommandozeilenanwendungen generieren und apps zu bauen oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die Übersicht für einen Vergleich dieser Entwicklung-Optionen.) In diesem Abschnitt wird auch veranschaulicht, Cordova apps innerhalb von Visual Studio zu ändern. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie die Visual Studio-SDK installieren, wie unten beschrieben.
+Diese Anleitung zeigt wie die SDK-Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für Windows 8, Windows 8.1 und Windows Phone 8.1 Windows 10 Universal-App-Plattform eingerichtet. Es zeigt, wie mit beiden Kommandozeilenanwendungen generieren und apps zu bauen oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die <a href="../../overview/index.html">Übersicht</a> für einen Vergleich dieser Entwicklung-Optionen.) In diesem Abschnitt wird auch veranschaulicht, Cordova apps innerhalb von Visual Studio zu ändern. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie die Visual Studio-SDK installieren, wie unten beschrieben.
 
-Informationen zum Aktualisieren von bestehender Windows 8 Cordova-Projekten finden Sie unter Aktualisieren von Windows 8.
+Informationen zum Aktualisieren von bestehender Windows 8 Cordova-Projekten finden Sie unter <a href="upgrading.html">Aktualisieren von Windows 8</a>.
 
 Einzelheiten siehe Fenster Telefon 8 (wp8) Aufenthalte als separate Plattform Windows Phone 8 Platform Guide.
 
@@ -157,7 +157,7 @@ Gültige Werte für das Flag `--appx` sind `8,1-win`, `8.1-phone`und `UAP` (für
 
 ### Überlegungen zum Ziel-Windows-version
 
-Windows 10 unterstützt einen neuen "Remote" Modus für Cordova apps (und HTML apps im allgemeinen). Dieser Modus ermöglicht apps viel mehr Freiheit mit Respekt, der DOM-Manipulation und gängige Web-Muster wie die Verwendung von Inlineskript verwenden, aber nicht so durch Reduzierung den Satz von Funktionen Ihre app verwenden kann, wenn an den öffentlichen Windows-Informationsspeicher gesendet. Schauen Sie für weitere Informationen zu Windows 10 und Remote-Modus der [Cordova für Windows 10][13] -Dokumentation.
+Windows 10 unterstützt einen neuen "Remote" Modus für Cordova apps (und HTML apps im allgemeinen). Dieser Modus ermöglicht apps viel mehr Freiheit mit Respekt, der DOM-Manipulation und gängige Web-Muster wie die Verwendung von Inlineskript verwenden, aber nicht so durch Reduzierung den Satz von Funktionen Ihre app verwenden kann, wenn an den öffentlichen Windows-Informationsspeicher gesendet. Schauen Sie für weitere Informationen zu Windows 10 und Remote-Modus der [<a href="win10-support.html">Cordova für Windows 10</a>][13] -Dokumentation.
 
  [13]: win10-support.md.html
 
@@ -229,4 +229,4 @@ Wählen Sie alternativ die **Simulator** -Bereitstellungsoption die app anzeigen
 
 Im Gegensatz zu desktop-Bereitstellung mit dieser Option können Sie simulieren die Tablette Orientierung, Lage, und variieren ihre Netzwerkeinstellungen.
 
-**Hinweis**: Rufen Sie die Übersicht für Ratschläge, wie Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow verwendet. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Möchten Sie das SDK zu verwenden, ändern Sie das Projekt, verwenden Sie die Low-Level-Kommandozeilenanwendungen als Alternative zu den CLI.
+**Hinweis**: Rufen Sie die <a href="../../overview/index.html">Übersicht</a> für Ratschläge, wie Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow verwendet. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Möchten Sie das SDK zu verwenden, ändern Sie das Projekt, verwenden Sie die Low-Level-Kommandozeilenanwendungen als Alternative zu den CLI.

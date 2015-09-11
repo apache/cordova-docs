@@ -20,4 +20,4 @@ license: >
 
 # database_size
 
-바이트에서 데이터베이스의 크기입니다.
+바이트에서 <a href="../database/database.html">데이터베이스</a>의 크기입니다.

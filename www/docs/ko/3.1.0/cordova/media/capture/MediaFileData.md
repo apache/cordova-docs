@@ -20,7 +20,7 @@ license: >
 
 # MediaFileData
 
-> 미디어 파일에 대 한 형식 정보를 캡슐화합니다.
+> <a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 형식 정보를 캡슐화합니다.
 
 ## 속성
 
@@ -36,7 +36,7 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-미디어 파일에 대 한 형식 정보를 제공 하는 없는 API 때문에 `MediaFileData` 에 의해 반환 되는 개체 `MediaFile.getFormatData` 다음과 같은 기본 값을 기능:
+<a href="../media.html">미디어</a> <a href="../../file/fileobj/fileobj.html">파일</a>에 대 한 형식 정보를 제공 하는 없는 API 때문에 `MediaFileData` 에 의해 반환 되는 개체 `<a href="MediaFile.getFormatData.html">MediaFile.getFormatData</a>` 다음과 같은 기본 값을 기능:
 
 *   **코덱**: 안 지원, 및 반환`null`.
 
@@ -56,11 +56,11 @@ license: >
 
 *   **비트 레이트**: 안 지원, 및 0을 반환 합니다.
 
-*   **높이**: 지원: 이미지 및 비디오 파일에만.
+*   **높이**: 지원: 이미지 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>에만.
 
-*   **폭**: 지원: 이미지 및 비디오 파일에만.
+*   **폭**: 지원: 이미지 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>에만.
 
-*   **기간**: 지원: 오디오 및 비디오 파일을.
+*   **기간**: 지원: 오디오 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>을.
 
 ## iOS 단점
 
@@ -68,10 +68,10 @@ license: >
 
 *   **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: iOS4 장치 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
+*   **비트 레이트**: iOS4 <a href="../../device/device.html">장치</a> 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
 
-*   **높이**: 지원: 이미지 및 비디오 파일에만.
+*   **높이**: 지원: 이미지 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>에만.
 
-*   **폭**: 지원: 이미지 및 비디오 파일에만.
+*   **폭**: 지원: 이미지 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>에만.
 
-*   **기간**: 지원: 오디오 및 비디오 파일을.
+*   **기간**: 지원: 오디오 및 비디오 <a href="../../file/fileobj/fileobj.html">파일</a>을.

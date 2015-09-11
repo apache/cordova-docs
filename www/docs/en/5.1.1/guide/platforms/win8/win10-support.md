@@ -53,7 +53,7 @@ The following capabilities are unavailable when deploying your Remote Mode appli
 - Music Library (`musicLibrary`)
 - Pictures Library (`picturesLibrary`)
 - Videos Library (`videosLibrary`)
-- Removable Storage (`removableStorage`)
+- Removable <a href="../../../cordova/storage/storage.html">Storage</a> (`removable<a href="../../../cordova/storage/storage.html">Storage</a>`)
 - Internet client/server (`internetClientClientServer`) - note that `internetClient` is still permitted
 - Private network client/server (`privateNetworkClientServer`)
 

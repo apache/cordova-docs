@@ -31,7 +31,7 @@ into the background, typically when the user switches to a different
 application.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `<a href="events.deviceready.html">deviceready</a>` event fires.
 
 ## Supported Platforms
 
@@ -63,7 +63,7 @@ attach an event listener once the `deviceready` event fires.
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
 
         // device APIs are available
@@ -88,7 +88,7 @@ attach an event listener once the `deviceready` event fires.
 In the `pause` handler, any calls to the Cordova API or to native
 plugins that go through Objective-C do not work, along with any
 interactive calls, such as alerts or `console.log()`. They are only
-processed when the app resumes, on the next run loop.
+processed when the app <a href="events.resume.html">resume</a>s, on the next run loop.
 
 The iOS-specific `resign` event is available as an alternative to
 `pause`, and detects when users enable the __Lock__ button to lock the

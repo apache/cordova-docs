@@ -20,13 +20,13 @@ license: >
 
 # 升級 Windows Phone
 
-本指南演示如何修改 Windows Phone 的專案，這兩個版本 7 和 8，從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
+本指南演示如何修改 Windows Phone 的專案，這兩個版本 7 和 8，從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
 
 ## 從 3.1.0 升級到 3.2.0
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行 `cordova platform update wp8` （或 `wp7` ，每添加到您的專案的平臺）。
 
@@ -39,7 +39,7 @@ license: >
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行 `cordova platform update wp8` （或 `wp7` ，每添加到您的專案的平臺）。
 
@@ -50,7 +50,7 @@ license: >
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的<a href="../../cli/index.html">命令列介面</a>。
 
 2.  添加您的平臺到科爾多瓦專案中，例如：`cordova
 platform add wp7 wp8`.

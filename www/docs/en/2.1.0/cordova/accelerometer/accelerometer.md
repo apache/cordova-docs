@@ -21,26 +21,26 @@ license: >
 Accelerometer
 =============
 
-> Captures device motion in the x, y, and z direction.
+> <a href="../media/capture/capture.html">Capture</a>s device motion in the x, y, and z direction.
 
 Methods
 -------
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
+- accelerometer.watch<a href="acceleration/acceleration.html">Acceleration</a>
+- <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 Arguments
 ---------
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+- <a href="parameters/accelerometerError.html">accelerometerError</a>
+- <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 Objects (Read-Only)
 -------------------
 
-- Acceleration
+- <a href="acceleration/acceleration.html">Acceleration</a>
 
 Permissions
 -----------
@@ -68,7 +68,7 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### App/Supporting <a href="../file/fileobj/fileobj.html">File</a>s/Cordova.plist
 
     <key>Plugins</key>
     <dict>

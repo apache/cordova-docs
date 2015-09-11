@@ -20,13 +20,13 @@ license: >
 
 # 升級 Windows 8
 
-本指南演示如何修改 Windows 8 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
+本指南演示如何修改 Windows 8 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何更新的 CLI 版本。
 
 ## 從 3.1.0 升級到 3.2.0
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+1.  更新 `cordova` CLI 版本。請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 2.  運行`cordova platform update windows8`.
 

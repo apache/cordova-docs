@@ -20,14 +20,14 @@ license: >
 
 # media.startRecord
 
-開始錄製的音訊檔。
+開始錄製的音訊<a href="../file/fileobj/fileobj.html">檔</a>。
 
     media.startRecord() ；
     
 
 ## 說明
 
-`media.startRecord`方法同步執行，開始錄製的音訊檔。
+`media.startRecord`方法同步執行，開始錄製的音訊<a href="../file/fileobj/fileobj.html">檔</a>。
 
 ## 支援的平臺
 
@@ -64,14 +64,14 @@ license: >
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -130,23 +130,23 @@ license: >
 
 ## Android 的怪癖
 
-*   Android 設備音訊格式記錄的自我調整多速率。指定的檔應以*.amr*副檔名結尾。
+*   Android <a href="../device/device.html">設備</a>音訊格式記錄的自我調整多速率。指定的<a href="../file/fileobj/fileobj.html">檔</a>應以*.amr*副<a href="../file/fileobj/fileobj.html">檔</a>名結尾。
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓設備音訊格式記錄的自我調整多速率。指定的檔必須以*.amr*副檔名結尾。
+*   黑莓<a href="../device/device.html">設備</a>音訊格式記錄的自我調整多速率。指定的<a href="../file/fileobj/fileobj.html">檔</a>必須以*.amr*副<a href="../file/fileobj/fileobj.html">檔</a>名結尾。
 
 ## iOS 的怪癖
 
-*   iOS 只記錄到檔的類型*.wav*和返回一個錯誤如果檔副檔名不正確。
+*   iOS 只記錄到<a href="../file/fileobj/fileobj.html">檔</a>的類型*.wav*和返回一個錯誤如果<a href="../file/fileobj/fileobj.html">檔</a>副<a href="../file/fileobj/fileobj.html">檔</a>名不正確。
 
 *   如果未提供的完整路徑，錄音放在應用程式的 `documents/tmp` 目錄。 這可以通過訪問 `File` API 使用 `LocalFileSystem.TEMPORARY` 。 在記錄時指定的任何子目錄中必須已經存在。
 
-*   檔可以記錄和演奏的後面使用的檔的 URI：
+*   <a href="../file/fileobj/fileobj.html">檔</a>可以記錄和演奏的後面使用的<a href="../file/fileobj/fileobj.html">檔</a>的 URI：
     
         var myMedia = new Media("documents://beer.mp3")
         
 
 ## Tizen 怪癖
 
-*   Tizen 設備上不支援。
+*   Tizen <a href="../device/device.html">設備</a>上不支援。

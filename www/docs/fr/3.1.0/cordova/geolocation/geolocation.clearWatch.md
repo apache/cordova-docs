@@ -27,11 +27,11 @@ Arrêter d'observer les changements de position de l'appareil référencés par 
 
 ## Paramètres
 
-*   **watchID** : l'identifiant de l'intervalle `watchPosition` à effacer. (String)
+*   **watchID** : l'identifiant de l'intervalle `watch<a href="Position/position.html">Position</a>` à effacer. (String)
 
 ## Description
 
-La méthode `geolocation.clearWatch` permet de cesser d'observer les modifications apportées à l'emplacement de l'appareil en désactivant l'observateur associé `geolocation.watchPosition` identifié par le `watchID` donné.
+La méthode `geolocation.clearWatch` permet de cesser d'observer les modifications apportées à l'emplacement de l'appareil en désactivant l'observateur associé `geolocation.watch<a href="Position/position.html">Position</a>` identifié par le `watchID` donné.
 
 ## Plates-formes supportées
 
@@ -47,7 +47,7 @@ La méthode `geolocation.clearWatch` permet de cesser d'observer les modificatio
     // Options : observer les changements de position, et utiliser
     // la méthode d'acquisition la plus précise disponible.
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
+    var watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, { enableHighAccuracy: true });
     
     // ...later on...
     
@@ -59,14 +59,14 @@ La méthode `geolocation.clearWatch` permet de cesser d'observer les modificatio
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         var watchID = null;
     
@@ -76,10 +76,10 @@ La méthode `geolocation.clearWatch` permet de cesser d'observer les modificatio
             // Get the most accurate position updates available on the
             // device.
             var options = { enableHighAccuracy: true };
-            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+            watchID = navigator.geolocation.watch<a href="Position/position.html">Position</a>(onSuccess, onError, options);
         }
     
-        // onSuccess Geolocation
+        // onSuccess <a href="geolocation.html">Geolocation</a>
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
@@ -97,7 +97,7 @@ La méthode `geolocation.clearWatch` permet de cesser d'observer les modificatio
             }
         }
     
-            // onError Callback receives a PositionError object
+            // onError Callback receives a <a href="<a href="Position/position.html">Position</a>Error/positionError.html"><a href="Position/position.html">Position</a>Error</a> object
             //
             function onError(error) {
               alert('code: '    + error.code    + '\n' +

@@ -46,7 +46,7 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function onSuccess(acceleration) {
@@ -60,27 +60,27 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
         alert('エラーが発生しました。');
     };
 
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
 
-詳細な使用例
+詳細な<a href="../../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>加速度センサーの使用例</title>
+        <title>加速度センサーの<a href="../../storage/storage.opendatabase.html">使用例</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            navigator.<a href="../accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>(onSuccess, onError);
         }
 
         // onSuccess: 現在の加速度情報を取得
@@ -101,7 +101,7 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
+        <h1><a href="../../storage/storage.opendatabase.html">使用例</a></h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

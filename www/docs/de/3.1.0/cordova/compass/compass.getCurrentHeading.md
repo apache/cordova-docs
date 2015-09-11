@@ -20,16 +20,16 @@ license: >
 
 # compass.getCurrentHeading
 
-Erhalten Sie aktuelle Kompassrichtung.
+Erhalten Sie aktuelle <a href="compass.html">Kompass</a>richtung.
 
-    navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
+    navigator.compass.getCurrentHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, <a href="parameters/compassOptions.html">compassOptions</a>);
     
 
 ## Beschreibung
 
-Der Kompass ist ein Sensor, der erkennt die Richtung oder Position, dass das Gerät in der Regel von der Oberseite des Geräts gezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99, wobei 0 Norden ist.
+Der <a href="compass.html">Kompass</a> ist ein Sensor, der erkennt die Richtung oder <a href="../geolocation/Position/position.html">Position</a>, dass das <a href="../device/device.html">Gerät</a> in der Regel von der Oberseite des <a href="../device/device.html">Gerät</a>s gezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99, wobei 0 Norden ist.
 
-Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Objekt unter Verwendung der `compassSuccess` Callback-Funktion.
+Die <a href="compass.html">Kompass</a>richtung Informationen über zurückgegeben ein `CompassHeading` -Objekt unter Verwendung der `<a href="parameters/compassSuccess.html">compassSuccess</a>` Callback-Funktion.
 
 ## Unterstützte Plattformen
 
@@ -47,7 +47,7 @@ Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Obj
     };
     
     function onError(error) {
-        alert('CompassError: ' + error.code);
+        alert('<a href="<a href="parameters/compassError.html">compassError</a>/<a href="parameters/compassError.html">compassError</a>.html">CompassError</a>: ' + error.code);
     };
     
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -58,14 +58,14 @@ Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Obj
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>Compass <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // device APIs are available
         //
@@ -81,14 +81,14 @@ Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Obj
     
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass Error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('Compass Error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
     
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1><a href="../storage/storage.opendatabase.html">Example</a></h1>
         <p>getCurrentHeading</p>
       </body>
     </html>

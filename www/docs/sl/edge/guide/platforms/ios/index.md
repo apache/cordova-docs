@@ -22,11 +22,11 @@ license: >
 
 Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova apps za iOS naprave, kot so iPhone in iPad. Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   iOS konfiguracijo
-*   Nadgradnja iOS
-*   iOS spletni pogledi
-*   iOS Plugins
-*   iOS orodja ukazne vrstice
+*   <a href="config.html">iOS konfiguracijo</a>
+*   <a href="upgrading.html">Nadgradnja iOS</a>
+*   <a href="webview.html">iOS spletni pogledi</a>
+*   <a href="plugin.html">iOS Plugins</a>
+*   <a href="tools.html">iOS orodja ukazne vrstice</a>
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 
@@ -127,7 +127,7 @@ Xcode opozorilo o je `invokeString` metoda zadeva funkcionalnost, to pobudnik ap
         // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          // this is passed before the <a href="../../../cordova/events/events.deviceready.html">deviceready</a> event is fired, so you can access it in js when you receive <a href="../../../cordova/events/events.deviceready.html">deviceready</a>
           NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];

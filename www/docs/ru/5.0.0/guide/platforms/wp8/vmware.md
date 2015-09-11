@@ -46,4 +46,4 @@ license: >
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
 
-После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите Руководство для платформы Windows Phone 8 для подробностей.
+После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите <a href="index.html">Руководство для платформы Windows Phone 8</a> для подробностей.

@@ -20,4 +20,4 @@ license: >
 
 # database_size
 
-バイト単位でデータベースのサイズ。
+バイト単位で<a href="../database/database.html">データベース</a>のサイズ。

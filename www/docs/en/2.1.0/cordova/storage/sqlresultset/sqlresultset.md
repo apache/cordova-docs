@@ -21,7 +21,7 @@ license: >
 SQLResultSet
 =======
 
-When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
+When the executeSql method of a <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> is called it will invoke it's callback with a SQLResultSet.
 
 Properties
 -------
@@ -33,7 +33,7 @@ Properties
 Details
 -------
 
-When you call the SQLTransaction executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When you call the <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type <a href="../sqlresultsetlist/sqlresultsetlist.html">SQLResultSetList</a> and it contains the data returned from a SQL select statement.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Execute SQL Quick Example
+Execute SQL Quick <a href="../storage.opendatabase.html">Example</a>
 ------------------
 
 	function queryDB(tx) {
@@ -66,23 +66,23 @@ Execute SQL Quick Example
 		alert("Error processing SQL: "+err.code);
 	}
 	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+	var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
-Full Example
+Full <a href="../storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title><a href="../storage.html">Storage</a> <a href="../storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
 		// Populate the database 
 		//
@@ -121,21 +121,21 @@ Full Example
 		// Transaction success callback
 		//
 		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
 			db.transaction(queryDB, errorCB);
 		}
 
 		// Cordova is ready
 		//
-		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+		function on<a href="../../device/device.html">Device</a>Ready() {
+			var db = window.<a href="../storage.opendatabase.html">open<a href="../database/database.html">Database</a></a>("<a href="../database/database.html">Database</a>", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
 	
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Database</p>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <p><a href="../database/database.html">Database</a></p>
       </body>
     </html>

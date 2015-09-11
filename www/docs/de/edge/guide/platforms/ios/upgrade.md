@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# IOS Upgrade
+# <a href="upgrading.html">IOS Upgrade</a>
 
 Diese Anleitung zeigt wie iOS-Projekte von älteren Versionen von Cordova upgedatet werden. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
 
@@ -121,13 +121,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.9.0 Projekte 3.0.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 3.0.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-3.0.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 3.0.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-3.0.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
@@ -139,13 +139,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.9.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.9.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.9.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.9.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
@@ -155,13 +155,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.8.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.8.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.8.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.8.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.7.0.js`.
 
@@ -197,13 +197,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.7.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.7.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.7.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.7.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova-2.7.0.js` Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova-2.6.0.js` Datei.
 
@@ -220,13 +220,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.5.0 Projekte 2.6.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.6.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.6.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.6.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.6.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei des Projekts `www/cordova-2.6.0.js` in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.5.0.js`.
 
@@ -251,13 +251,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.4.0 Projekte 2.5.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.5.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.5.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.5.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.5.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.5.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.4.0.js`.
 
@@ -282,13 +282,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.3.0 Projekte 2.4.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.4.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.4.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.4.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.4.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.4.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.3.0.js`.
 
@@ -313,13 +313,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.2.0 Projekte 2.3.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.3.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.3.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.3.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.3.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.3.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.2.0.js`.
 
@@ -348,13 +348,13 @@ Xcode 5 Fragen:
 
 ## Upgrade 2.1.0 Projekte 2.2.0
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.2.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.2.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.2.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.2.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.2.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.1.0.js`.
 
@@ -369,24 +369,24 @@ Xcode 5 Fragen:
 9.  Anschließend aktualisieren Sie die `CordovaLib`-Teilprojekt-Referenz. Beginnend mit Cordova 2.1.0, nicht die CORDOVALIB Xcode-Variable nicht mehr wann verwenden wir verweisen, in dem sich `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in das Unterverzeichnis `bin`
+    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in das Unterverzeichnis `bin`
     3.  Führen Sie das Skript unter dem der erste Parameter der Pfad zu der Datei des Projekts `.xcodeproj ist`:
         
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**Hinweis**: In 2.2.0, kopieren Sie das Skript `bin/erstellen` in das Teilprojekt "`CordovaLib`" in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in die richtige `CordovaLib` in Ihrem Projektverzeichnis, und aktualisieren Sie den Speicherort des `CordovaLib`-Teilprojekt (bezogen auf "Projekt") in der Xcode-Datei-Inspektor.
+**Hinweis**: In 2.2.0, kopieren Sie das Skript `bin/erstellen` in das Teilprojekt "`CordovaLib`" in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in die richtige `CordovaLib` in Ihrem Projektverzeichnis, und aktualisieren Sie den <a href="../../../cordova/storage/storage.html">Speicher</a>ort des `CordovaLib`-Teilprojekt (bezogen auf "Projekt") in der Xcode-Datei-Inspektor.
 
 ## Upgrade 2.0.0 Projekte auf 2.1.0
 
 Mit Cordova 2.1.0 wurde `CordovaLib` aufgerüstet, um **Automatische Reference Counting (ARC)** zu verwenden. Sie nicht müssen upgrade auf **ARC** mithilfe von CordovaLib, aber wenn Sie, aktualisieren Sie das Projekt zur Verwendung von **ARC möchten**, verwenden Sie bitte den Xcode-Migrations-Assistenten aus dem Menü: **Bearbeiten → umgestalten → Convert in Objective-C-Bogen...**, libCordova.a aufzuheben, dann führen Sie den Assistenten bis zum Abschluss.
 
-1.  Herunterladen Sie und entpacken Sie der Cordova 2.1.0-Quellen zu einem ständigen Speicherort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.1.0`.
+1.  Herunterladen Sie und entpacken Sie der Cordova 2.1.0-Quellen zu einem ständigen <a href="../../../cordova/storage/storage.html">Speicher</a>ort auf Ihrer Festplatte, zum Beispiel zu `~/Documents/Cordova-2.1.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.1.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.0.0.js`.
 
@@ -408,7 +408,7 @@ Mit Cordova 2.1.0 wurde `CordovaLib` aufgerüstet, um **Automatische Reference C
 11. Anschließend aktualisieren Sie die `CordovaLib`-Teilprojekt-Referenz. Beginnend mit Cordova 2.1.0, nicht die CORDOVALIB Xcode-Variable nicht mehr wann verwenden wir verweisen, in dem sich `CordovaLib` befindet, der Verweis ist eine absolute Dateiverweis jetzt.
     
     1.  Terminal.app starten
-    2.  Gehen Sie zu dem Speicherort, wo Sie Cordova installiert (siehe Schritt 1), in das Unterverzeichnis `bin`
+    2.  Gehen Sie zu dem <a href="../../../cordova/storage/storage.html">Speicher</a>ort, wo Sie Cordova installiert (siehe Schritt 1), in das Unterverzeichnis `bin`
     3.  Führen Sie das Skript unter dem der erste Parameter der Pfad zu der Datei des Projekts `.xcodeproj ist`:
         
         `update_cordova_subproject path/to/your/project/xcodeproj`
@@ -417,7 +417,7 @@ Mit Cordova 2.1.0 wurde `CordovaLib` aufgerüstet, um **Automatische Reference C
 
 1.  Cordova 2.0.0 zu installieren.
 
-2.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+2.  Erstellen Sie ein neues Projekt, wie in <a href="tools.html">iOS Shell Tool Guide</a> beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 3.  Kopieren Sie die Datei `www/cordova-2.0.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-1.9.0.js`.
 

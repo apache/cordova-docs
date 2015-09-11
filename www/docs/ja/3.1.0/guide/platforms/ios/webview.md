@@ -32,7 +32,7 @@ license: >
 
 *   Xcode 4.5 以上
 
-*   `config.xml`ファイルから新しく作成された iOS プロジェクト)
+*   `config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>から新しく作成された iOS プロジェクト)
 
 ## 包丁、Xcode プロジェクト (CordovaLib サブ プロジェクト) に追加します。
 
@@ -42,23 +42,23 @@ license: >
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  コピー、 `config.xml` ディスク上のプロジェクトのディレクトリにファイル (上記の前提条件を参照してください)。
+4.  コピー、 `config.xml` ディスク上のプロジェクトのディレクトリに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> (上記の前提条件を参照してください)。
 
-5.  ドラッグ アンド ドロップ、 `config.xml` Xcode プロジェクト ナビゲーターにファイル。
+5.  ドラッグ アンド ドロップ、 `config.xml` Xcode プロジェクト ナビゲーターに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  **追加フォルダーを作成するグループ**のオプション ボタンを選択し、**終了**キーを押します.
 
-7.  ドラッグ アンド ドロップ、 `CordovaLib.xcodeproj` Xcode プロジェクト ナビゲーターにファイル (永続的なディレクトリから、上記の場所およびそれべきで、 `CordovaLib` サブディレクトリ)。
+7.  ドラッグ アンド ドロップ、 `CordovaLib.xcodeproj` Xcode プロジェクト ナビゲーターに<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> (永続的なディレクトリから、上記の場所およびそれべきで、 `CordovaLib` サブディレクトリ)。
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  **ファイル インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせを入力します。.
+9.  **<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a> インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせを入力します。.
 
-10. 選択してください**グループに相対的な****ファイル検査**のドロップ ダウン メニューでの**場所**.
+10. 選択してください**グループに相対的な****<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>検査**のドロップ ダウン メニューでの**場所**.
 
 11. プロジェクト ナビゲーターで**プロジェクトのアイコン**を選択、**ターゲット**を選択し、[**ビルド設定**] タブを選択します。
 
-12. 追加 `-all_load` と `-Obj-C` の**他のリンカーのフラグ**値。
+12. 追加 `-all_load` と `-Obj-C` の**他のリンカーの<a href="../../../cordova/file/flags/flags.html">フラグ</a>**値。
 
 13. プロジェクト ナビゲーターで**プロジェクト アイコン**をクリックして**ターゲット**を選択し、[**ビルド フェーズ**] タブを選択します。
 

@@ -20,7 +20,7 @@ license: >
 
 # PositionError
 
-A `PositionError` objeto se pasa a la `geolocationError` devolución de llamada cuando se produce un error.
+A `PositionError` objeto se pasa a la `<a href="../parameters/geolocationError.html">geolocationError</a>` devolución de llamada cuando se produce un error.
 
 ## Propiedades
 
@@ -36,7 +36,7 @@ A `PositionError` objeto se pasa a la `geolocationError` devolución de llamada 
 
 ## Descripción
 
-El `PositionError` objeto se pasa a la `geolocationError` función de devolución de llamada cuando se produce un error con geolocalización.
+El `PositionError` objeto se pasa a la `<a href="../parameters/geolocationError.html">geolocationError</a>` función de devolución de llamada cuando se produce un error con geolocalización.
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -48,4 +48,4 @@ Regresó cuando el dispositivo es capaz de recuperar una posición. En general e
 
 ### `PositionError.TIMEOUT`
 
-Cuando el dispositivo es capaz de recuperar una posición dentro del tiempo especificado en el `geolocationOptions` ' `timeout` propiedad. Cuando se utiliza con `geolocation.watchPosition` , este error se podría pasar a la `geolocationError` "callback" cada `timeout` milisegundos.
+Cuando el dispositivo es capaz de recuperar una posición dentro del tiempo especificado en el `<a href="../parameters/geolocation.options.html">geolocationOptions</a>` ' `timeout` propiedad. Cuando se utiliza con `<a href="../geolocation.watchPosition.html">geolocation.watchPosition</a>` , este error se podría pasar a la `<a href="../parameters/geolocationError.html">geolocationError</a>` "callback" cada `timeout` milisegundos.

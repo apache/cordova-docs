@@ -20,13 +20,13 @@ license: >
 
 # Android のアップグレード
 
-このガイドは、コルドバの旧バージョンからアップグレードする Android プロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
+この<a href="../../../index.html">ガイド</a>は、コルドバの旧バージョンからアップグレードする Android プロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、<a href="../../cli/index.html">コマンド ライン インターフェイス</a>参照してください。
 
 ## 3.1.0 3.0.0 からアップグレード
 
 コルドバ CLI で作成されたプロジェクト。
 
-1.  更新、 `cordova` - CLI バージョンのコマンド ライン インターフェイスを参照してください 
+1.  更新、 `cordova` - CLI バージョンの<a href="../../cli/index.html">コマンド ライン インターフェイス</a>を参照してください 
 2.  実行`cordova platform update android`
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
@@ -35,7 +35,7 @@ license: >
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード
 
-1.  コマンド ライン インターフェイスで説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
+1.  <a href="../../cli/index.html">コマンド ライン インターフェイス</a>で説明されているようにコルドバ、CLI を使用して新しい Apache コルドバ 3.0.0 プロジェクトを作成します。
 
 2.  あなたのプラットフォームの追加、cordova のプロジェクトします。`cordova
 platform add android`.
@@ -56,11 +56,11 @@ platform add android`.
 
 4.  インストールされている任意のプラグイン経由でのコピー、 `src` サブディレクトリを新しいプロジェクトにします。
 
-5.  非推奨アップグレードすることを確認 `<plugin>` あなたの古いからの参照 `config.xml` ファイルを新しい `<feature>` 仕様。
+5.  非推奨アップグレードすることを確認 `<plugin>` あなたの古いからの参照 `config.xml` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を新しい `<feature>` 仕様。
 
 6.  参照を更新、 `org.apache.cordova.api` パッケージになるまで`org.apache.cordova`.
 
-*   **注：**すべてのコア Api が削除されているし、のプラグインとしてインストールする必要があります。詳細についてを使用して Plugman 管理プラグイン ガイドを参照してください。
+*   **注：**すべてのコア Api が削除されているし、のプラグインとしてインストールする必要があります。詳細についてを使用して Plugman 管理プラグイン <a href="../../../index.html">ガイド</a>を参照してください。
 
 ## 2.8.0 から 2.9.0 へのアップグレードします。
 
@@ -76,13 +76,13 @@ platform add android`.
 
 4.  コピー、新しい `cordova.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
-6.  コピー、 `res/xml/config.xml` と一致するファイル`framework/res/xml/config.xml`.
+6.  コピー、 `res/xml/config.xml` と一致する<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>`framework/res/xml/config.xml`.
 
 7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
 
-8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+8.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.6.0 からへ 2.7.0 をアップグレードします。
 
@@ -94,13 +94,13 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.7.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.7.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.7.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
 7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
 
-8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+8.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.5.0 から 2.6.0 にアップグレードします。
 
@@ -112,13 +112,13 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.6.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
 7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
 
-8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+8.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 実行 `bin/update <project>` プロジェクト パスを持つコルドバのソース ディレクトリに表示されます。
 
@@ -132,13 +132,13 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.5.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
 7.  更新プログラム `framework/res/xml/config.xml` を以前のように同様の設定を持っています。
 
-8.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+8.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.3.0 から 2.4.0 にアップグレードします。
 
@@ -150,11 +150,11 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.4.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+7.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.2.0 から 2.3.0 にアップグレードします。
 
@@ -166,11 +166,11 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.3.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+7.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.1.0 から 2.2.0 にアップグレードします。
 
@@ -182,11 +182,11 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.2.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+7.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 2.0.0 から 2.1.0 にアップグレードします。
 
@@ -198,11 +198,11 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.1.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
-7.  ファイルのコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
+7.  <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>のコピー元 `bin/templates/cordova` プロジェクトの `cordova` ディレクトリ。
 
 ## 1.9.0 から 2.0.0 にアップグレードします。
 
@@ -214,13 +214,13 @@ platform add android`.
 
 4.  コピー、新しい `cordova-2.0.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  コピー、 `res/xml/config.xml` 一致するように`framework/res/xml/config.xml`.
 
 ### 2.0.0 についてのメモをリリースします。
 
-`config.xml`交換は `cordova.xml` と `plugins.xml` 。 この新しいファイルは前の 2 つの組み合わせです。 ただし、古いファイルは廃止され、現在まだ仕事中、将来のリリースでの作業を停止します。
+`config.xml`交換は `cordova.xml` と `plugins.xml` 。 この新しい<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は前の 2 つの組み合わせです。 ただし、古い<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は廃止され、現在まだ仕事中、将来のリリースでの作業を停止します。
 
 ## 1.8.1 から 1.9.0 にアップグレードします。
 
@@ -232,7 +232,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.9.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.9.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.9.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -250,7 +250,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.8.1.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.1.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.1.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -264,7 +264,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.8.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -278,7 +278,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.8.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.8.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -316,7 +316,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.6.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.6.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.6.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -332,7 +332,7 @@ platform add android`.
 
 4.  コピー、新しい `cordova-1.5.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `cordova-1.5.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `cordova-1.5.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -348,7 +348,7 @@ platform add android`.
 
 4.  コピー、新しい `phonegap-1.4.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `phonegap-1.4.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `phonegap-1.4.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -364,7 +364,7 @@ platform add android`.
 
 4.  コピー、新しい `phonegap-1.3.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `phonegap-1.2.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -380,7 +380,7 @@ platform add android`.
 
 4.  コピー、新しい `phonegap-1.2.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `phonegap-1.2.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `phonegap-1.2.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -396,7 +396,7 @@ platform add android`.
 
 4.  コピー、新しい `phonegap-1.1.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `phonegap-1.1.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `phonegap-1.1.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
@@ -410,6 +410,6 @@ platform add android`.
 
 4.  コピー、新しい `phonegap-1.0.0.js` プロジェクトに。
 
-5.  あなたの HTML を使用して、新しい更新 `phonegap-1.0.0.js` ファイル。
+5.  あなたの HTML を使用して、新しい更新 `phonegap-1.0.0.js` <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>。
 
 6.  追加の `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.

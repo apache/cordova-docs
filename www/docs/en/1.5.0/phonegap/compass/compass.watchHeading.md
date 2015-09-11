@@ -23,16 +23,16 @@ compass.watchHeading
 
 At a regular interval, get the compass heading in degrees.
 
-    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+    var watchID = navigator.compass.watchHeading(<a href="parameters/compassSuccess.html">compassSuccess</a>, <a href="parameters/compassError.html">compassError</a>, [<a href="parameters/compassOptions.html">compassOptions</a>]);
                                                            
 Description
 -----------
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `compassOptions` object.
+The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `<a href="parameters/compassOptions.html">compassOptions</a>` object.
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatch` to stop watching the compass.
+The returned watch ID references references the compass watch interval. The watch ID can be used with `<a href="compass.clearWatch.html">compass.clearWatch</a>` to stop watching the compass.
 
 Supported Platforms
 -------------------
@@ -42,7 +42,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango ) if available in hardware
 
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     function onSuccess(heading) {
@@ -50,21 +50,21 @@ Quick Example
         element.innerHTML = 'Heading: ' + heading.magneticHeading;
     };
 
-    function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+    function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
     };
 
     var options = { frequency: 3000 };  // Update every 3 seconds
     
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title><a href="compass.html">Compass</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -74,11 +74,11 @@ Full Example
         
         // Wait for PhoneGap to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // PhoneGap is ready
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             startWatch();
         }
 
@@ -96,7 +96,7 @@ Full Example
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.<a href="compass.clearWatch.html">compass.clearWatch</a>(watchID);
                 watchID = null;
             }
         }
@@ -110,8 +110,8 @@ Full Example
 
         // onError: Failed to get the heading
         //
-        function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        function onError(<a href="parameters/compassError.html">compassError</a>) {
+            alert('<a href="compass.html">Compass</a> error: ' + <a href="parameters/compassError.html">compassError</a>.code);
         }
 
         </script>

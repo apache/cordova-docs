@@ -18,19 +18,19 @@ license: >
     under the License.
 ---
 
-accelerometer.getCurrentAcceleration
+accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>
 ====================================
 
 デバイスの傾きの増加量を計測します。
 
-    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>, <a href="parameters/accelerometerError.html">accelerometerError</a>);
 
 概要
 -----------
 
 加速度センサーはデバイスの傾きの増加量を計測します。 加速度センサーでは x, y, z 軸の3次元の傾きを取得出来ます。
 
-加速度情報は `accelerometerSuccess` コールバック関数によって返されます。
+加速度情報は `<a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>` コールバック関数によって返されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +42,7 @@ accelerometer.getCurrentAcceleration
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+<a href="../storage/storage.opendatabase.html">使用例</a>
 -------------
 
     function onSuccess(acceleration) {
@@ -56,9 +56,9 @@ accelerometer.getCurrentAcceleration
         alert('エラーが発生しました。');
     };
 
-    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
 
-詳細な使用例
+詳細な<a href="../storage/storage.opendatabase.html">使用例</a>
 ------------
 
     <!DOCTYPE html>
@@ -71,12 +71,12 @@ accelerometer.getCurrentAcceleration
 
         // Cordova の読み込み完了まで待機
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("<a href="../events/events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
 
         // Cordova 準備完了
         //
-        function onDeviceReady() {
-            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+        function on<a href="../device/device.html">Device</a>Ready() {
+            navigator.accelerometer.getCurrent<a href="acceleration/acceleration.html">Acceleration</a>(onSuccess, onError);
         }
 
         // onSuccess: 現在の加速度情報を取得
@@ -97,8 +97,8 @@ accelerometer.getCurrentAcceleration
         </script>
       </head>
       <body>
-        <h1>使用例</h1>
-        <p>getCurrentAcceleration</p>
+        <h1><a href="../storage/storage.opendatabase.html">使用例</a></h1>
+        <p>getCurrent<a href="acceleration/acceleration.html">Acceleration</a></p>
       </body>
     </html>
 
@@ -107,4 +107,4 @@ iPhone に関する注意点
 
 - iPhone はピンポイントで現在の加速度情報を得ることは出来ません。
 - 加速度情報を取得するには、一定の時間間隔で加速度データの変異を計測する必要があります。
-- そのため、 `getCurrentAcceleration` 関数は Cordova の `watchAccelerometer` 関数で取得した最新値を返します。
+- そのため、 `getCurrent<a href="acceleration/acceleration.html">Acceleration</a>` 関数は Cordova の `watch<a href="accelerometer.html">Accelerometer</a>` 関数で取得した最新値を返します。

@@ -21,7 +21,7 @@ license: >
 contactSuccess
 ==============
 
-`contacts.find` メソッドの実行に成功した場合に呼び出される、 `Contact` 配列を提供するコールバック関数です。
+`<a href="../contacts.find.html">contacts.find</a>` メソッドの実行に成功した場合に呼び出される、 `<a href="../Contact/contact.html">Contact</a>` 配列を提供するコールバック関数です。
 
     function(contacts) {
         // 任意のコード
@@ -30,9 +30,9 @@ contactSuccess
 パラメーター
 ----------
 
-- __contacts:__ 検索の結果の連絡先配列 (`Contact`)
+- __contacts:__ 検索の結果の連絡先配列 (`<a href="../Contact/contact.html">Contact</a>`)
 
-使用例
+<a href="../../storage/storage.opendatabase.html">使用例</a>
 -------
 
     function contactSuccess(contacts) {

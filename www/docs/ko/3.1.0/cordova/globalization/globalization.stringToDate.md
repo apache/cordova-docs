@@ -27,7 +27,7 @@ license: >
 
 ## 설명
 
-날짜와 함께 성공 콜백 반환 된 `properties` 개체를 매개 변수로. 해당 개체는 다음 속성이 있어야 합니다.
+날짜와 함께 성공 콜백 반환 된 `properties` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 해당 개체는 다음 속성이 있어야 합니다.
 
 *   **년**: 4 자리 연도. *(수)*
 
@@ -43,9 +43,9 @@ license: >
 
 *   **밀리초**: 모든 플랫폼에서 사용할 수 없습니다 (0-999)에서 밀리초. *(수)*
 
-인바운드는 `dateString` 매개 변수 유형 이어야 합니다`String`.
+인바운드는 `dateString` 매개 <a href="../../plugin_ref/spec.html">변수</a> 유형 이어야 합니다`String`.
 
-`options`매개 변수는 선택적 이며 기본값은 다음 값:
+`options`매개 <a href="../../plugin_ref/spec.html">변수</a>는 선택적 이며 기본값은 다음 값:
 
     {formatLength: '짧은' 선택기: '날짜 및 시간'}
     
@@ -53,7 +53,7 @@ license: >
 `options.formatLength`수 있는 `short` , `medium` , `long` , 또는 `full` . `options.selector`수 있는 `date` , `time` 또는`date and
 time`.
 
-날짜 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.PARSING\_ERROR`.
+날짜 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>` 개체를 매개 <a href="../../plugin_ref/spec.html">변수</a>로. 오류의 예상 된 코드는`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PARSING\_ERROR`.
 
 ## 지원 되는 플랫폼
 
@@ -81,7 +81,7 @@ time`.
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate Example</title>
+        <title>stringToDate <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

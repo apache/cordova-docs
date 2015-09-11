@@ -20,10 +20,10 @@ license: >
 
 # Windows Phone 8 Platform Guide
 
-This guide shows how to set up your SDK development environment to
+This guide <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a>s how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 8 devices. If you want to target
 both 7.5 and 8 devices, develop for Windows Phone 7 instead as
-detailed in the Windows Phone 7 Platform Guide.  Version 7 does not
+detailed in the <a href="../wp7/index.html">Windows Phone 7 Platform Guide</a>.  Version 7 does not
 have all the advanced features included in Internet Explorer 10, but
 implements the same set of APIs. Windows Phone 8 apps do _not_ run on
 Windows Phone 7 devices.
@@ -31,12 +31,12 @@ Windows Phone 7 devices.
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-- Upgrading Windows Phone
-- Windows Phone Plugins
+- <a href="upgrading.html">Upgrading Windows Phone</a>
+- <a href="plugin.html">Windows Phone Plugins</a>
 - Windows Phone Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
 current interface.
 
 ## System Requirements
@@ -84,10 +84,10 @@ contains a `CordovaWP8_x_x_x.zip` file.
 
 To simplify development, Cordova bundles a script to build Visual
 Studio templates. These allow you to rapidly generate Cordova apps,
-and you can modify them if necessary.  The steps below show how to
+and you can modify them if necessary.  The steps below <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> how to
 generate it.
 
-### Run the Batch File to Create and Install the Templates
+### Run the Batch <a href="../../../cordova/file/fileobj/fileobj.html">File</a> to Create and Install the Templates
 
 The repo's root directory contains a `createTemplates.bat` file.
 Double-click this to generate two `.zip` files: `CordovaWP7_x_x_x.zip`
@@ -95,7 +95,7 @@ and `CordovaWP8_x_x_x.zip`, where _3.3.0_ is the current version
 number. To use these files easily in Visual Studio, copy them to `My
 Documents\Visual Studio 2012\Templates\ProjectTemplates\`. You are
 then able to create new Apache Cordova Windows Phone apps from the
-__Visual Studio File &rarr; New Project__ menu.
+__Visual Studio <a href="../../../cordova/file/fileobj/fileobj.html">File</a> &rarr; New Project__ menu.
 
 If you run the batch file from the command line, you can also call it
 with a parameter to install automatically:
@@ -135,7 +135,7 @@ start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp8/BuildEmulator.png)
 
-## Build the Project for the Device
+## Build the Project for the <a href="../../../cordova/device/device.html">Device</a>
 
 Before testing your application on a device, the device must be
 registered. Consult
@@ -145,7 +145,7 @@ the basic steps:
 
 - Make sure your phone is connected, and the screen is unlocked.
 
-- In Visual Studio, select __Device__ from the drop-down menu at the top.
+- In Visual Studio, select __<a href="../../../cordova/device/device.html">Device</a>__ from the drop-down menu at the top.
 
 - Press the green __play__ button next to the main drop-down menu to
   start debugging, or else type __F5__.

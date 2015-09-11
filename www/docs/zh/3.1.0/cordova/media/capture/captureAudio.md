@@ -20,20 +20,20 @@ license: >
 
 # capture.captureAudio
 
-> 啟動音訊答錄機應用程式並返回有關捕獲音訊剪輯檔的資訊。
+> 啟動音訊答錄機應用程式並返回有關<a href="capture.html">捕獲</a>音訊剪輯<a href="../../file/fileobj/fileobj.html">檔</a>的資訊。
 
     navigator.device.capture.captureAudio(
-        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+        <a href="CaptureCB.html">CaptureCB</a> captureSuccess, <a href="<a href="CaptureError.html">CaptureError</a>CB.html"><a href="CaptureError.html">CaptureError</a>CB</a> captureError,  [<a href="captureAudioOptions.html">CaptureAudioOptions</a> options]
     );
     
 
 ## 說明
 
-開始非同步作業以捕獲使用該設備的預設音訊錄製應用程式的音訊錄製。 該操作允許設備使用者的單個會話中捕獲多個錄音。
+開始非同步作業以<a href="capture.html">捕獲</a>使用該<a href="../../device/device.html">設備</a>的預設音訊錄製應用程式的音訊錄製。 該操作允許<a href="../../device/device.html">設備</a>使用者的單個會話中<a href="capture.html">捕獲</a>多個錄音。
 
-在捕獲操作結束時或者在使用者退出音訊錄音應用程式或由指定的錄音的最大數目 `CaptureAudioOptions.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個音訊剪輯。
+在<a href="capture.html">捕獲</a>操作結束時或者在使用者退出音訊錄音應用程式或由指定的錄音的最大數目 `<a href="captureAudioOptions.html">CaptureAudioOptions</a>.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和<a href="capture.html">捕獲</a>操作終止後使用者記錄單個音訊剪輯。
 
-在捕獲操作完成後， `CaptureCallback` 執行與陣列的 `MediaFile` 物件描述每個捕獲音訊剪輯檔。 如果使用者終止操作之前捕獲音訊剪輯時， `CaptureErrorCallback` 與執行 `CaptureError` 物件中，設有 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
+在<a href="capture.html">捕獲</a>操作完成後， `CaptureCallback` 執行與陣列的 `MediaFile` 物件描述每個<a href="capture.html">捕獲</a>音訊剪輯<a href="../../file/fileobj/fileobj.html">檔</a>。 如果使用者終止操作之前<a href="capture.html">捕獲</a>音訊剪輯時， `<a href="CaptureError.html">CaptureError</a>Callback` 與執行 `<a href="CaptureError.html">CaptureError</a>` 物件中，設有 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
 ## 支援的平臺
 
@@ -56,7 +56,7 @@ license: >
     
     // capture error callback
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.<a href="../../notification/notification.alert.html">notification.alert</a>('Error code: ' + error.code, null, 'Capture Error');
     };
     
     // start audio capture
@@ -87,7 +87,7 @@ license: >
         //
         function captureError(error) {
             var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            navigator.<a href="../../notification/notification.alert.html">notification.alert</a>(msg, null, 'Uh oh!');
         }
     
         // A button will call this function
@@ -126,7 +126,7 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-*   科爾多瓦的黑莓 WebWorks 嘗試啟動**錄音筆記**提供的應用程式，由 RIM，來捕獲音訊錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
+*   科爾多瓦的黑莓 WebWorks 嘗試啟動**錄音筆記**提供的應用程式，由 RIM，來<a href="capture.html">捕獲</a>音訊錄製。 這款應用程式會收到 `<a href="CaptureError.html">CaptureError</a>.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在<a href="../../device/device.html">設備</a>上。
 
 ## iOS 的怪癖
 

@@ -22,5 +22,5 @@ license: >
 
 > Implementare Cordova WebView nel proprio progetto.
 
-*   Visualizzazioni Web Android
-*   iOS visualizzazioni Web
+*   <a href="../../platforms/android/webview.html"><a href="../../../cordova/inappbrowser/inappbrowser.html">Visualizza</a>zioni Web Android</a>
+*   <a href="../../platforms/ios/webview.html">iOS visualizzazioni Web</a>

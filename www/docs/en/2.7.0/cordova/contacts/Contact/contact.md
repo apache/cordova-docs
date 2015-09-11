@@ -28,31 +28,31 @@ Properties
 
 - __id:__ A globally unique identifier. _(DOMString)_
 - __displayName:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
-- __name:__ An object containing all components of a persons name. _(ContactName)_
+- __name:__ An object containing all components of a persons name. _(<a href="../ContactName/contactname.html">ContactName</a>)_
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
-- __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
-- __emails:__ An array of all the contact's email addresses. _(ContactField[])_
-- __addresses:__ An array of all the contact's addresses. _(ContactAddress[])_
-- __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
-- __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
+- __phoneNumbers:__ An array of all the contact's phone numbers. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __emails:__ An array of all the contact's email addresses. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __addresses:__ An array of all the contact's addresses. _(<a href="../ContactAddress/contactaddress.html">ContactAddress</a>[])_
+- __ims:__ An array of all the contact's IM addresses. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __organizations:__ An array of all the contact's organizations. _(<a href="../ContactOrganization/contactorganization.html">ContactOrganization</a>[])_
 - __birthday:__ The birthday of the contact. _(Date)_
 - __note:__ A note about the contact. _(DOMString)_
-- __photos:__ An array of the contact's photos. _(ContactField[])_
-- __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
-- __urls:__  An array of web pages associated to the contact. _(ContactField[])_
+- __photos:__ An array of the contact's photos. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __categories:__  An array of all the contacts user defined categories. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
+- __urls:__  An array of web pages associated to the contact. _(<a href="../ContactField/contactfield.html">ContactField</a>[])_
 
 Methods
 -------
 
 - __clone__: Returns a new Contact object that is a deep copy of the calling object, with the id property set to `null`. 
-- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `ContactError` object if the removal is unsuccessful.
+- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `<a href="../ContactError/<a href="../parameters/contactError.html">contactError</a>.html">ContactError</a>` object if the removal is unsuccessful.
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
 
 Details
 -------
 
-The `Contact` object represents a user contact.  Contacts can be created, saved to, or removed from the device contacts database.  Contacts can also be retrieved (individually or in bulk) from the database by invoking the `contacts.find` method.
+The `Contact` object represents a user contact.  <a href="../contacts.html">Contacts</a> can be created, saved to, or removed from the device contacts database.  <a href="../contacts.html">Contacts</a> can also be retrieved (individually or in bulk) from the database by invoking the `<a href="../contacts.find.html">contacts.find</a>` method.
 
 _Note: Not all of the above contact fields are supported on every device platform.  Please check each platform's Quirks section for information about which fields are supported._
 
@@ -66,24 +66,24 @@ Supported Platforms
 - Bada 1.2 & 2.0
 - Windows 8
 
-Save Quick Example
+Save Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------------
 
 	function onSuccess(contact) {
 		alert("Save Success");
 	};
 
-	function onError(contactError) {
-		alert("Error = " + contactError.code);
+	function onError(<a href="../parameters/contactError.html">contactError</a>) {
+		alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
 	};
 
 	// create a new contact object
-    var contact = navigator.contacts.create();
+    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
 	contact.displayName = "Plumber";
 	contact.nickname = "Plumber"; 		//specify both to support all devices
 	
 	// populate some fields
-	var name = new ContactName();
+	var name = new <a href="../ContactName/contactname.html">ContactName</a>();
 	name.givenName = "Jane";
 	name.familyName = "Doe";
 	contact.name = name;
@@ -91,7 +91,7 @@ Save Quick Example
 	// save to device
 	contact.save(onSuccess,onError);
 
-Clone Quick Example
+Clone Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 -------------------
 
 	// clone the contact object
@@ -100,43 +100,43 @@ Clone Quick Example
 	console.log("Original contact name = " + contact.name.givenName);
 	console.log("Cloned contact name = " + clone.name.givenName); 
 
-Remove Quick Example
+Remove Quick <a href="../../storage/storage.opendatabase.html">Example</a>
 --------------------
 
     function onSuccess() {
         alert("Removal Success");
     };
 
-    function onError(contactError) {
-        alert("Error = " + contactError.code);
+    function onError(<a href="../parameters/contactError.html">contactError</a>) {
+        alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
     };
 
 	// remove the contact from the device
 	contact.remove(onSuccess,onError);
 
-Full Example
+Full <a href="../../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact <a href="../../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // Cordova is ready
         //
-        function onDeviceReady() {
+        function on<a href="../../device/device.html">Device</a>Ready() {
 		    // create
-		    var contact = navigator.contacts.create();
+		    var contact = navigator.<a href="../contacts.create.html">contacts.create</a>();
 			contact.displayName = "Plumber";
 			contact.nickname = "Plumber"; 		//specify both to support all devices
-			var name = new ContactName();
+			var name = new <a href="../ContactName/contactname.html">ContactName</a>();
 			name.givenName = "Jane";
 			name.familyName = "Doe";
 			contact.name = name;
@@ -162,8 +162,8 @@ Full Example
     
         // onSaveError: Failed to get the contacts
         //
-        function onSaveError(contactError) {
-			alert("Error = " + contactError.code);
+        function onSaveError(<a href="../parameters/contactError.html">contactError</a>) {
+			alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
         
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -174,15 +174,15 @@ Full Example
     
         // onRemoveError: Failed to get the contacts
         //
-        function onRemoveError(contactError) {
-			alert("Error = " + contactError.code);
+        function onRemoveError(<a href="../parameters/contactError.html">contactError</a>) {
+			alert("Error = " + <a href="../parameters/contactError.html">contactError</a>.code);
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1><a href="../../storage/storage.opendatabase.html">Example</a></h1>
+        <p>Find <a href="../contacts.html">Contacts</a></p>
       </body>
     </html>
 
@@ -209,16 +209,16 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
+- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no <a href="../ContactName/contactname.html">ContactName</a> specified.  If there is no <a href="../ContactName/contactname.html">ContactName</a>, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
-- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
+- __photos:__ Returned Photo is stored in the application's temporary directory and a <a href="../../file/fileobj/fileobj.html">File</a> URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.
 
 Windows Phone 7 and 8 Quirks
 -----------
 
 - __displayName:__ When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact. 
-- __urls:__ When creating a contact, user inputs multiple web addresses in the url field and saves the contact. While pulling the information during the contact search url field do not show up multiple web addresses
+- __urls:__ When creating a contact, user inputs multiple web addresses in the url field and saves the contact. While pulling the information during the contact search url field do not <a href="../../splashscreen/splashscreen.show.html">show</a> up multiple web addresses
 - __phoneNumbers:__ _pref_ is not supported, _type_ is not supported in a _find_ operation, only supports one phoneNumber of each _type_
 - __emails:__ _pref_ is not supported, home and personal points to same email entry, supports only one entry for each _type_
 - __addresses:__ supports only _type_ of work, home/personal, _type_ home and personal points to same address entry, supports only one entry for each _type_

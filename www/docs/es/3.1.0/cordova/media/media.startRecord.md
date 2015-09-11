@@ -64,14 +64,14 @@ El método `media.startRecord` se ejecuta sincrónicamente, comienza la grabaci�
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Device Properties <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
         // Record audio
         //
@@ -130,19 +130,19 @@ El método `media.startRecord` se ejecuta sincrónicamente, comienza la grabaci�
 
 ## Rarezas Android
 
-*   Dispositivos Android grabación audio en formato Adaptive Multi-rate. El archivo especificado debe terminar con una extensión de *.amr*.
+*   <a href="../device/device.html">Dispositivo</a>s Android grabación audio en formato Adaptive Multi-rate. El archivo especificado debe terminar con una extensión de *.amr*.
 
 ## BlackBerry WebWorks rarezas
 
-*   Dispositivos blackBerry grabación audio en formato Adaptive Multi-rate. El archivo especificado debe finalizar con una extensión de *.amr*.
+*   <a href="../device/device.html">Dispositivo</a>s blackBerry grabación audio en formato Adaptive Multi-rate. El archivo especificado debe finalizar con una extensión de *.amr*.
 
 ## iOS rarezas
 
 *   iOS sólo registros a archivos de tipo *.wav* y devuelve un error si el nombre del archivo extensión es no es correcto.
 
-*   Si no se proporciona una ruta completa, la grabación se coloca en la aplicación `documents/tmp` Directorio. Esto puede accederse a través de la `File` API utilizando `LocalFileSystem.TEMPORARY` . Ya debe existir ningún subdirectorio especificado en un tiempo récord.
+*   Si no se proporciona una ruta completa, la grabación se coloca en la aplicación `documents/tmp` Directorio. Esto puede accederse a través de la `File` API utilizando `<a href="../file/localfilesystem/localfilesystem.html">LocalFileSystem</a>.TEMPORARY` . Ya debe existir ningún subdirectorio especificado en un tiempo récord.
 
-*   Archivos pueden ser grabados y jugó de nuevo usando los documentos URI:
+*   <a href="../file/fileobj/fileobj.html">Archivo</a>s pueden ser grabados y jugó de nuevo usando los documentos URI:
     
         var myMedia = new Media("documents://beer.mp3")
         

@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# Firefox の OS プラットフォームのガイド
+# Firefox の OS プラットフォームの<a href="../../../index.html">ガイド</a>
 
-このガイドでは、Firefox OS デバイス用 Cordova アプリを作成し、テストおよびそれらのアプリケーションを発行するには、開発環境を設定する方法について説明します。
+この<a href="../../../index.html">ガイド</a>では、Firefox OS デバイス用 Cordova アプリを作成し、テストおよびそれらのアプリケーションを発行するには、開発環境を設定する方法について説明します。
 
 ## 要件、およびサポート
 
@@ -44,7 +44,7 @@ Firefox の OS アプリは基本的にアプリについてのメタデータ�
     $ cd test-app
     
 
-Firefox OS サポートされているプラットフォームとしてアプリケーションに追加する、次のように。
+Firefox OS <a href="../../../config_ref/images.html">サポートされているプラットフォーム</a>としてアプリケーションに追加する、次のように。
 
     $ cordova platform add firefoxos
     

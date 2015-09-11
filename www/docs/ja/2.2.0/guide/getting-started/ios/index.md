@@ -95,7 +95,7 @@ Cordova 2.2 から、プロジェクトが Cordova インストール内の Cord
 - **BundleIdentifier** を Apple から提供された Identifer 、または自分の Identifer に変更します
     - もし開発者ライセンスを持っている場合は、 [Assistant] (http://developer.apple.com/iphone/manage/overview/index.action) よりアプリを登録できます
 - ツールバーにあるドロップダウンメニューから **Target** を **"HelloWorld"** (あなたのプロジェクト名) に変更します
-- ツールバーにあるドロップダウンメニューから **Active SDK** を **[あなたのDevice名]** に変更します
+- ツールバーにあるドロップダウンメニューから **Active SDK** を **[あなたの<a href="../../../cordova/device/device.html">Device</a>名]** に変更します
     - デバイスを USB で接続する必要があります
 
     ![](img/guide/getting-started/ios/active_scheme_device.png)

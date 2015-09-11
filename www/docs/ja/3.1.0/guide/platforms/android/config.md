@@ -20,14 +20,14 @@ license: >
 
 # Android の構成
 
-`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
+`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>は、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml <a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>情報を参照してください。
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` <a href="../../../cordova/events/events.html">イベント</a>が発生します。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: 400-500 の範囲で標準的な HTTP エラーへの応答に表示するエラー ページを指定します。 ホーム ページおよびその他の web 資産を含む最上位ディレクトリで指定されたファイルを配置します。
+*   `ErrorUrl`: 400-500 の範囲で標準的な HTTP エラーへの応答に表示するエラー ページを指定します。 ホーム ページおよびその他の web 資産を含む最上位ディレクトリで指定された<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>を配置します。
     
         <preference name="ErrorUrl" value="error.html"/>
         
@@ -47,11 +47,11 @@ license: >
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: からの拡張子を除いたファイル名、 `res/drawable` ディレクトリ。様々 な資産は、さまざまなサブディレクトリでこの共通名を共有しなければなりません。
+*   `SplashScreen`: からの拡張子を除いた<a href="../../../cordova/file/fileobj/fileobj.html">ファイル</a>名、 `res/drawable` ディレクトリ。様々 な資産は、さまざまなサブディレクトリでこの共通名を共有しなければなりません。
     
         <preference name="SplashScreen" value="splash"/>
         
 
-*   `SplashScreenDelay`(数は、既定値は `5000` ): 時間量スプラッシュ スクリーンのイメージが表示されます。
+*   `SplashScreenDelay`(数は、既定値は `5000` ): 時間量<a href="../../../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>のイメージが表示されます。
     
         <preference name="SplashScreenDelay" value="10000"/>

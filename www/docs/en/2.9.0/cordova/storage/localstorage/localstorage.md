@@ -18,12 +18,12 @@ license: >
     under the License.
 ---
 
-localStorage
+local<a href="../storage.html">Storage</a>
 ===============
 
-Provides access to a [W3C Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a [W3C <a href="../storage.html">Storage</a> interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
-    var storage = window.localStorage;
+    var storage = window.local<a href="../storage.html">Storage</a>;
 
 Methods
 -------
@@ -37,10 +37,10 @@ Methods
 Details
 -----------
 
-The `window.localStorage` interface is based on the W3C Web Storage
+The `window.local<a href="../storage.html">Storage</a>` interface is based on the W3C Web <a href="../storage.html">Storage</a>
 interface.  An app can use it to save persistent data using key-value
-pairs.  The `window.sessionStorage` interface works the same way, but
-all data is cleared each time the app closes.
+pairs.  The `window.session<a href="../storage.html">Storage</a>` interface works the same way, but
+all data is cleared each time the app <a href="../../inappbrowser/inappbrowser.html">close</a>s.
 
 Supported Platforms
 -------------------
@@ -51,66 +51,66 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Key Quick Example
+Key Quick <a href="../storage.opendatabase.html">Example</a>
 -------------
 
-    var keyName = window.localStorage.key(0);
+    var keyName = window.local<a href="../storage.html">Storage</a>.key(0);
 
-Set Item Quick Example
+Set Item Quick <a href="../storage.opendatabase.html">Example</a>
 -------------
 
-    window.localStorage.setItem("key", "value");
+    window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
 
-Get Item Quick Example
+Get Item Quick <a href="../storage.opendatabase.html">Example</a>
 -------------
 
-        var value = window.localStorage.getItem("key");
+        var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
         // value is now equal to "value"
 
-Remove Item Quick Example
+Remove Item Quick <a href="../storage.opendatabase.html">Example</a>
 -------------
 
-        window.localStorage.removeItem("key");
+        window.local<a href="../storage.html">Storage</a>.removeItem("key");
 
-Clear Quick Example
+Clear Quick <a href="../storage.opendatabase.html">Example</a>
 -------------
 
-        window.localStorage.clear();
+        window.local<a href="../storage.html">Storage</a>.clear();
 
-Full Example
+Full <a href="../storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Storage Example</title>
+        <title><a href="../storage.html">Storage</a> <a href="../storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.<a href="../../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../../events/events.deviceready.html">deviceready</a>", on<a href="../../device/device.html">Device</a>Ready, false);
 
         // device APIs are available
         //
-        function onDeviceReady() {
-            window.localStorage.setItem("key", "value");
-            var keyname = window.localStorage.key(i);
+        function on<a href="../../device/device.html">Device</a>Ready() {
+            window.local<a href="../storage.html">Storage</a>.setItem("key", "value");
+            var keyname = window.local<a href="../storage.html">Storage</a>.key(i);
             // keyname is now equal to "key"
-            var value = window.localStorage.getItem("key");
+            var value = window.local<a href="../storage.html">Storage</a>.getItem("key");
             // value is now equal to "value"
-            window.localStorage.removeItem("key");
-            window.localStorage.setItem("key2", "value2");
-            window.localStorage.clear();
-            // localStorage is now empty
+            window.local<a href="../storage.html">Storage</a>.removeItem("key");
+            window.local<a href="../storage.html">Storage</a>.setItem("key2", "value2");
+            window.local<a href="../storage.html">Storage</a>.clear();
+            // local<a href="../storage.html">Storage</a> is now empty
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>localStorage</p>
+        <h1><a href="../storage.opendatabase.html">Example</a></h1>
+        <p>local<a href="../storage.html">Storage</a></p>
       </body>
     </html>
 
@@ -119,5 +119,5 @@ Windows Phone 7 Quirks
 
 Dot notation is _not_ available on Windows Phone 7. Be sure to use
 `setItem` or `getItem`, rather than accessing keys directly from the
-storage object, such as `window.localStorage.someKey`.
+storage object, such as `window.local<a href="../storage.html">Storage</a>.someKey`.
 

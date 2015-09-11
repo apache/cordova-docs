@@ -20,7 +20,7 @@ license: >
 
 # contactSuccess
 
-Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
+Success callback function that provides the `<a href="../Contact/contact.html">Contact</a>` array resulting from a `<a href="../contacts.find.html">contacts.find</a>` operation.
 
     function(contacts) {
         // Do something
@@ -28,9 +28,9 @@ Success callback function that provides the `Contact` array resulting from a `co
 
 ## Parameters
 
-- __contacts__: The contact array resulting from a find operation. _(Contact)_
+- __contacts__: The contact array resulting from a find operation. _(<a href="../Contact/contact.html">Contact</a>)_
 
-## Example
+## <a href="../../splashscreen/<a href="../../splashscreen/splashscreen.show.html">splashscreen.show</a>.html">Example</a>
 
     function contactSuccess(contacts) {
         for (var i=0; i<contacts.length; i++) {

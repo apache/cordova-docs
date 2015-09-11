@@ -203,7 +203,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     
     *   `< merges target="some.value"/ >`指示，應與在`window.some.value`的任何現有值合併模組。 如果已經存在任何鍵，模組的版本將覆蓋原始。 你可以有多`< merges >`如你所願。 創建任何物件在`window`上不可用。
     
-    *   `< runs / >`意味著您的代碼應該用`cordova.require`，指定，但不是安裝在`window`物件上。 這是有用的當初始化模組，將事件處理常式附加或以其他方式。 你只能有一個`< runs / >`標記。 請注意，包括`< runs / >``< clobbers / >`或`< merges / >`是多餘的因為他們也`cordova.require`您的模組。
+    *   `< runs / >`意味著您的代碼應該用`cordova.require`，指定，但不是安裝在`window`物件上。 這是有用的當初始化模組，將<a href="../cordova/events/events.html">事件</a>處理常式附加或以其他方式。 你只能有一個`< runs / >`標記。 請注意，包括`< runs / >``< clobbers / >`或`< merges / >`是多餘的因為他們也`cordova.require`您的模組。
     
     *   空的`< js-module >`仍然載入，並可以通過`cordova.require`的其他模組中訪問.
 
@@ -224,7 +224,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 *   `commit`: 這是理解的`git 簽出`任何 git 引用: 一個分支或標記的名稱 (例如，`師父`， `0.3.1`) 或提交雜湊值 (例如， `975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`: 指定目標的外掛程式依賴存在作為 git 倉庫的子目錄。 這是有用的因為它允許存儲庫中包含幾個相關的外掛程式，每個單獨指定。
+*   `subdir`: 指定目標的外掛程式依賴存在作為 git 倉庫的子目錄。 這是有用的因為它允許<a href="../cordova/storage/storage.html">存儲</a>庫中包含幾個相關的外掛程式，每個單獨指定。
 
 在將來，將會介紹版本限制，和一個外掛程式庫會存在支援按名稱而不是顯式 Url 獲取。
 
@@ -236,7 +236,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 ## *平臺*元素
 
-`<platform>`標記標識平臺有關聯的本機代碼或需要對它們的設定檔進行修改。 使用此規範的工具可以標識支援的平臺和科爾多瓦專案中安裝代碼。
+`<platform>`標記標識平臺有關聯的本機代碼或需要對它們的設定檔進行修改。 使用此規範的工具可以標識<a href="../config_ref/images.html">支援的平臺</a>和科爾多瓦專案中安裝代碼。
 
 無外掛程式 `<platform>` 標籤被假定為只 JavaScript 的並因此可安裝在所有的平臺上。
 
@@ -250,7 +250,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     </platform>
     
 
-所需 `name` 屬性標識一個平臺支援，將與該平臺關聯元素的子級。
+所需 `name` 屬性標識一個<a href="../guide/support/index.html">平臺支援</a>，將與該平臺關聯元素的子級。
 
 平臺名稱應該是小寫字母。平臺名稱，如任意選擇，列出：
 
@@ -338,7 +338,7 @@ XML 的的示例：
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
-Windows 平臺支援兩個附加屬性 （兩個可選） 時影響 `package.appxmanifest` 元名稱：
+Windows <a href="../guide/support/index.html">平臺支援</a>兩個附加屬性 （兩個可選） 時影響 `package.appxmanifest` 元名稱：
 
 該 `device-target` 屬性指示，只應包括，當生成指定的目標裝置類型。 受支援的值是 `win`、 `phone` 或 `all`.
 
@@ -468,7 +468,7 @@ Android 的示例：
 
 ### *framework*視窗
 
-Windows 平臺支援三個附加屬性 (所有可選) 精煉時框架應包括:
+Windows <a href="../guide/support/index.html">平臺支援</a>三個附加屬性 (所有可選) 精煉時框架應包括:
 
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     

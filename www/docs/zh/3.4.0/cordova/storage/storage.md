@@ -20,9 +20,9 @@ license: >
 
 # 存儲
 
-> 科爾多瓦的存儲選項的概述。
+> 科爾多瓦的存儲選項的<a href="../../guide/overview/index.html">概述</a>。
 
-幾個存儲 Api 是用於科爾多瓦的應用程式。請參閱[html5rocks][1]。為更全面地概述和示例。
+幾個存儲 Api 是用於科爾多瓦的應用程式。請參閱[html5rocks][1]。為更全面地<a href="../../guide/overview/index.html">概述</a>和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
@@ -32,15 +32,15 @@ license: >
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 怪癖**： 點標記法是*不*提供，所以一定要使用 `setItem` 或 `getItem` ，而不是在作為便捷鍵直接從存儲的物件，`window.localStorage.someKey`.
+**Windows Phone 7 怪癖**： 點標記法是*不*提供，所以一定要使用 `setItem` 或 `getItem` ，而不是在作為便捷鍵直接從存儲的物件，`window.<a href="localstorage/localstorage.html">localStorage</a>.someKey`.
 
 ## WebSQL
 
-此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供更多的功能全面的資料庫表訪問通過 SQL 查詢。
+此 API 是在底層 web 視圖中可用。 [Web SQL <a href="database/database.html">資料庫</a>規範][3]提供更多的功能全面的<a href="database/database.html">資料庫</a>表訪問通過 SQL 查詢。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 
-在以下平臺支援 WebSQL：
+在以下<a href="../../guide/support/index.html">平臺支援</a> WebSQL：
 
 *   Android 系統
 *   黑莓 10
@@ -53,7 +53,7 @@ license: >
 
  [4]: http://www.w3.org/TR/IndexedDB/
 
-在以下平臺支援 IndexedDB：
+在以下<a href="../../guide/support/index.html">平臺支援</a> IndexedDB：
 
 *   Windows Phone 8
 *   黑莓 10

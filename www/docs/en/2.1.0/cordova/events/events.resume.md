@@ -30,7 +30,7 @@ Details
 
 Cordova consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '<a href="events.deviceready.html">deviceready</a>' event.
 
 Supported Platforms
 -------------------
@@ -40,7 +40,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 
-Quick Example
+Quick <a href="../storage/storage.opendatabase.html">Example</a>
 -------------
 
     document.addEventListener("resume", onResume, false);
@@ -49,30 +49,30 @@ Quick Example
         // Handle the resume event
     }
 
-Full Example
+Full <a href="../storage/storage.opendatabase.html">Example</a>
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Resume Example</title>
+        <title>Cordova Resume <a href="../storage/storage.opendatabase.html">Example</a></title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Call on<a href="../device/device.html">Device</a>Ready when Cordova is loaded.
         //
         // At this point, the document has loaded but cordova-2.1.0.js has not.
         // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // it will call the event `<a href="events.deviceready.html">deviceready</a>`.
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.addEventListener("<a href="events.deviceready.html">deviceready</a>", on<a href="../device/device.html">Device</a>Ready, false);
         }
 
         // Cordova is loaded and it is now safe to make calls Cordova methods
         //
-        function onDeviceReady() {
+        function on<a href="../device/device.html">Device</a>Ready() {
             document.addEventListener("resume", onResume, false);
         }
 
@@ -89,7 +89,7 @@ Full Example
 
 iOS Quirks
 --------------------------
-Any calls to console.log during your **pause** event handler will be run now when the app resumes, see the iOS Quirks section for the **pause** event for an explanation. 
+Any calls to console.log during your **<a href="events.pause.html">pause</a>** event handler will be run now when the app resumes, see the iOS Quirks section for the **<a href="events.pause.html">pause</a>** event for an explanation. 
 
 - __active__ event 
 

@@ -20,11 +20,11 @@ license: >
 
 # アイコンとスプラッシュ画面
 
-このセクションは、アプリのアイコンと様々 なプラットフォームでは、両方のコルドバ CLI (コマンド ライン インターフェイスで説明します) で作業するときのオプションのスプラッシュ スクリーンを構成する方法を示していますまたは （プラットフォームのガイドで詳述） 特定のプラットフォーム SDK ツールを使用して。
+このセクションは、アプリのアイコンと様々 なプラットフォームでは、両方のコルドバ CLI (<a href="../guide/cli/index.html">コマンド ライン インターフェイス</a>で説明します) で作業するときのオプションの<a href="../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>を構成する方法を示していますまたは （<a href="../guide/platforms/index.html">プラットフォームの<a href="../index.html">ガイド</a></a>で詳述） 特定のプラットフォーム SDK ツールを使用して。
 
 ## CLI でアイコンを構成します。
 
-作業する場合、CLI で、アイコンのソース ファイル内にあるさまざまなプラットフォーム固有のサブディレクトリがあり、プロジェクトの `www/res/icons` ディレクトリ。 新しく作成したプロジェクトをターゲットにするプラットフォームを交換するためのコルドバのアイコンの既定のセットが付属します。
+作業する場合、CLI で、アイコンのソース <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>内にあるさまざまなプラットフォーム固有のサブディレクトリがあり、プロジェクトの `www/res/icons` ディレクトリ。 新しく作成したプロジェクトをターゲットにするプラットフォームを交換するためのコルドバのアイコンの既定のセットが付属します。
 
 Android の低、中、高、および超高解像度アイコンを指定します。
 
@@ -42,7 +42,7 @@ IOS プラットフォームは、Ipad 用 72 ピクセル正方形アイコン�
         ios/icon-72.png
     
 
-Windows Phone には、48 ピクセルの既定アイコンと共に様々 なデバイスのバック グラウンド アプリケーションを表すときに使用する画像を並べて表示を指定します。
+Windows Phone には、48 ピクセルの既定アイコンと共に様々 な<a href="../cordova/device/device.html">デバイス</a>のバック グラウンド アプリケーションを表すときに使用する画像を並べて表示を指定します。
 
         windows-phone/icon-48.png
         windows-phone/icon-62-tile.png
@@ -59,9 +59,9 @@ Tizen は、128 ピクセルのアイコンが必要です。
         tizen/icon-128.png
     
 
-## CLI でスプラッシュ スクリーンを構成します。
+## CLI で<a href="../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>を構成します。
 
-多くのプラットフォームで、アプリの導入のスプラッシュ画面の表示を有効にするには、Splashscreen API を使用します。 作業する場合、CLI で、スプラッシュ スクリーンのソース ファイル内にあるプロジェクトの `www/res/screens` サブディレクトリ。
+多くのプラットフォームで、アプリの導入のスプラッシュ画面の表示を有効にするには、Splashscreen API を使用します。 作業する場合、CLI で、<a href="../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>のソース <a href="../cordova/file/fileobj/fileobj.html">ファイル</a>内にあるプロジェクトの `www/res/screens` サブディレクトリ。
 
 Android は両方の肖像画および横向きスプラッシュ画面画像の低、中、高、および超高解像度を指定します。
 
@@ -75,7 +75,7 @@ Android は両方の肖像画および横向きスプラッシュ画面画像の
         android/screen-xhdpi-portrait.png
     
 
-IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面のカスタマイズされます。
+IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>は iPhone 5 の背の高い画面のカスタマイズされます。
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -94,11 +94,11 @@ IOS プラットフォームの網膜ディスプレイの向きが異なる亜�
         windows-phone/screen-portrait.jpg
     
 
-次のセクションでは、プラットフォームのガイドで説明されている Sdk と関連するコマンド ライン ツールの操作時のスプラッシュ画面を設定する方法について詳しく説明します。
+次のセクションでは、<a href="../guide/platforms/index.html">プラットフォームの<a href="../index.html">ガイド</a></a>で説明されている Sdk と関連するコマンド ライン ツールの操作時のスプラッシュ画面を設定する方法について詳しく説明します。
 
 ## Android プラットフォーム用のスプラッシュ画面
 
-Android プロジェクトで[9 patch 画像][1]ファイルを置きます `res/drawable` ディレクトリ。それぞれのサイズべきであります。
+Android プロジェクトで[9 patch 画像][1]<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>を置きます `res/drawable` ディレクトリ。それぞれのサイズべきであります。
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
 
@@ -115,11 +115,11 @@ Android プロジェクトで[9 patch 画像][1]ファイルを置きます `res
 
 最初の行ではスプラッシュ画面として表示するイメージを設定します。場合は任意の名前をあなたのイメージよりも、他 `splash.png` 、この行を変更する必要があります。
 
-2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `deviceready` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。
+2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `<a href="../cordova/events/events.deviceready.html">deviceready</a>` <a href="../cordova/events/events.html">イベント</a>、呼び出し、 `navigator.<a href="../cordova/splashscreen/splashscreen.hide.html">splashscreen.hide</a>()` メソッド。
 
 ## IOS プラットフォーム用のスプラッシュ画面
 
-IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのイメージだけを追加します。 各イメージのサイズをする必要があります。
+IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートする<a href="../cordova/device/device.html">デバイス</a>のイメージだけを追加します。 各イメージのサイズをする必要があります。
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 ピクセル)
@@ -131,7 +131,7 @@ IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resou
 
 ## BlackBerry 10 プラットフォーム用のスプラッシュ画面
 
-スプラッシュ画面画像をプロジェクトにコピー `res/screen/blackberry10` ディレクトリ。ファイル名にする必要があります。
+スプラッシュ画面画像をプロジェクトにコピー `res/screen/blackberry10` ディレクトリ。<a href="../cordova/file/fileobj/fileobj.html">ファイル</a>名にする必要があります。
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

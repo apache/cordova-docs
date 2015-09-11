@@ -20,7 +20,7 @@ license: >
 
 # 아이콘 및 시작 화면
 
-이 섹션에서는 응용 프로그램의 아이콘과 코르도바 CLI (명령줄 인터페이스에서 설명)에서 작업할 때 둘 다 다양 한 플랫폼에 대 한 선택적 스플래시 화면을 구성 하는 방법 (플랫폼 가이드에 자세히 설명) 플랫폼 SDK 도구를 사용 하 여 또는.
+이 섹션에서는 응용 프로그램의 아이콘과 코르도바 CLI (<a href="../guide/cli/index.html">명령줄 인터페이스</a>에서 설명)에서 작업할 때 둘 다 다양 한 플랫폼에 대 한 선택적 스플래시 화면을 구성 하는 방법 (<a href="../guide/platforms/index.html">플랫폼 <a href="../index.html">가이드</a></a>에 자세히 설명) 플랫폼 SDK 도구를 사용 하 여 또는.
 
 ## CLI 구성 아이콘
 
@@ -97,7 +97,7 @@ Windows Phone 단일 시작 화면 이미지를 지정합니다.
         windows-phone/screen-portrait.jpg
     
 
-다음 섹션에서는 Sdk 및 관련된 명령줄 도구 플랫폼 가이드에서 설명 하는 경우 시작 화면을 설정 하는 방법을 자세히 설명.
+다음 섹션에서는 Sdk 및 관련된 명령줄 도구 <a href="../guide/platforms/index.html">플랫폼 <a href="../index.html">가이드</a></a>에서 설명 하는 경우 시작 화면을 설정 하는 방법을 자세히 설명.
 
 사용 하기 전에 SplashScreen 플러그인을 설치 하는 것을 잊지 마세요는 `navigator.splashscreen.hide()` 또는 `navigator.splashscreen.show()` 방법.
 
@@ -150,7 +150,7 @@ Windows Phone 단일 시작 화면 이미지를 지정합니다.
 
 두 번째 줄에는 얼마나 오래는 splashscreen 밀리초에 나타납니다의 기본 지연을 설정 합니다. 이 최대 예상된 시작 시간 이어야 합니다. SplashScreenDelay의 기본값은 3000 석사.
 
-마지막으로, 시작 화면이 있어야 존재만 필요한 만큼. 앱 시작 했다 webview 로드 되었을 때 기본 보기에 표시 됩니다 귀하의 응용 프로그램 시작 화면 숨길 해야. 여러 가지 요인으로 인해 응용 프로그램 시작 시간이 꽤 달라 집니다 때문에 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `deviceready` 이벤트. 그렇지 않으면 시작 화면 위에 구성 하는 SplashScreenDelay 값에 대 한 표시 됩니다. 이 이벤트 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
+마지막으로, 시작 화면이 있어야 존재만 필요한 만큼. 앱 시작 했다 webview 로드 되었을 때 기본 보기에 표시 됩니다 귀하의 응용 프로그램 시작 화면 숨길 해야. 여러 가지 요인으로 인해 응용 프로그램 시작 시간이 꽤 달라 집니다 때문에 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `<a href="../cordova/events/events.deviceready.html">deviceready</a>` <a href="../cordova/events/events.html">이벤트</a>. 그렇지 않으면 시작 화면 위에 구성 하는 SplashScreenDelay 값에 대 한 표시 됩니다. 이 <a href="../cordova/events/events.html">이벤트</a> 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
 
 ## IOS 플랫폼에 대 한 시작 화면
 

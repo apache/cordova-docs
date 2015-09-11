@@ -26,7 +26,7 @@ Pour Android et iOS (à partir de leurs 4,0 versions), politique de sécurité d
 
  [1]: https://github.com/apache/cordova-plugin-whitelist
 
-Pour d'autres plateformes, Cordova respecte la spécification [W3C Widget accès][2], qui se fonde sur l'élément `< access >` dans le fichier `config.xml` du PPA pour activer l'accès réseau à des domaines spécifiques. Pour les projets qui s'appuient sur le workflow de CLI décrit dans l'Interface de ligne de commande, ce fichier se trouve dans le répertoire racine du projet. Autrement pour les chemins de développement spécifiques à la plateforme, les endroits sont énumérés dans les sections ci-dessous. (Voir les différents Guides de plate-forme pour plus d'informations sur chaque plate-forme).
+Pour d'autres plateformes, Cordova respecte la spécification [W3C Widget accès][2], qui se fonde sur l'élément `< access >` dans le fichier `config.xml` du PPA pour activer l'accès réseau à des domaines spécifiques. Pour les projets qui s'appuient sur le workflow de CLI décrit dans l'Interface de ligne de commande, ce fichier se trouve dans le répertoire racine du projet. Autrement pour les chemins de développement spécifiques à la plateforme, les endroits sont énumérés dans les sections ci-dessous. (Voir les différents <a href="../../../index.html">Guides</a> de plate-forme pour plus d'informations sur chaque plate-forme).
 
  [2]: http://www.w3.org/TR/widgets-access/
 

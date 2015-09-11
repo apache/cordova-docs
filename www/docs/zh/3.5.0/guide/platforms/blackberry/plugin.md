@@ -20,7 +20,7 @@ license: >
 
 # 黑莓手機的外掛程式
 
-本指南介紹了如何開發回聲外掛程式在黑莓手機上。 外掛程式開發指南提供廣泛概述，你應該已經是熟悉的和本指南撿起它的留下。 此外，下載[科爾多瓦黑莓手機存儲庫][1].
+本指南介紹了如何開發回聲外掛程式在黑莓手機上。 <a href="../../hybrid/plugins/index.html">外掛程式開發指南</a>提供廣泛<a href="../../overview/index.html">概述</a>，你應該已經是熟悉的和本指南撿起它的留下。 此外，下載[科爾多瓦黑莓手機<a href="../../../cordova/storage/storage.html">存儲</a>庫][1].
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 

@@ -20,7 +20,7 @@ license: >
 
 # FileError
 
-A `FileError` オブジェクト ファイル API メソッドのいずれかでエラーが発生したときに設定されます。
+A `FileError` オブジェクト <a href="../fileobj/fileobj.html">ファイル</a> API メソッドのいずれかでエラーが発生したときに設定されます。
 
 ## プロパティ
 

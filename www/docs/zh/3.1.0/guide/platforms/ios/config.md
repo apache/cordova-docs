@@ -18,9 +18,9 @@ license: >
     under the License.
 ---
 
-# iOS 配置
+# iOS <a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
+`config.xml`<a href="../../../cordova/file/fileobj/fileobj.html">檔</a>控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 有關全域<a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>選項，請參閱 config.xml <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>的資訊。
 
 *   `EnableViewportScale`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 使用視區的元標記來禁用或限制的使用者縮放的範圍。
     
@@ -32,12 +32,12 @@ license: >
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
 
-*   `AllowInlineMediaPlayback`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，讓 HTML5 播放媒體顯示*內聯*的螢幕佈局，使用瀏覽器提供的控制項，而不是本機控制項內。 為此，添加 `webkit-playsinline` 歸咎于任何 `<video>` 的元素。
+*   `AllowInlineMediaPlayback`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，讓 HTML5 播放<a href="../../../cordova/media/media.html">媒體</a><a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>*內聯*的螢幕佈局，使用瀏覽器提供的控制項，而不是本機控制項內。 為此，添加 `webkit-playsinline` 歸咎于任何 `<video>` 的元素。
     
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`（字串，或者 `none` ， `local` ，或預設的 `cloud` ）： 設置為 `cloud` 允許通過 iCloud 備份到 web 存儲資料。 設置為 `local` ，使得只有本地備份通過 iTunes 同步。 設置為 `none` 防止 web 存儲備份。
+*   `BackupWebStorage`（字串，或者 `none` ， `local` ，或預設的 `cloud` ）： 設置為 `cloud` 允許通過 iCloud 備份到 web <a href="../../../cordova/storage/storage.html">存儲</a>資料。 設置為 `local` ，使得只有本地備份通過 iTunes 同步。 設置為 `none` 防止 web <a href="../../../cordova/storage/storage.html">存儲</a>備份。
     
         <preference name="BackupWebStorage" value="local"/>
         
@@ -47,7 +47,7 @@ license: >
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 以防止褪色和縮小其顯示狀態發生更改時初始螢幕。
+*   `FadeSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 以防止褪色和縮小其<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>狀態發生更改時初始螢幕。
     
         <preference name="FadeSplashScreen" value="false"/>
         

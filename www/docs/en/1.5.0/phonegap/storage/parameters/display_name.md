@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-display_name
+display_<a href="name.html">name</a>
 ==================
 
-The display name of the database.
+The display <a href="name.html">name</a> of the database.

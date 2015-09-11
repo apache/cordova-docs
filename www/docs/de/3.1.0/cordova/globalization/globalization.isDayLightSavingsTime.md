@@ -31,7 +31,7 @@ Gibt an, ob Sommerzeit ist in der Tat zu den `successCallback` mit einem `proper
 
 Die eingehenden Parameter `date` sollte vom Typ`Date`.
 
-Wenn gibt es einen Lesefehler das Datum der `errorCallback` führt. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
+Wenn gibt es einen Lesefehler das Datum der `errorCallback` führt. Erwarteten Fehlercode ist`<a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 
@@ -56,7 +56,7 @@ Im Sommer und wenn der Browser auf eine DST-fähigen Zeitzone festgelegt ist, so
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>isDayLightSavingsTime <a href="../storage/storage.opendatabase.html">Example</a></title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     

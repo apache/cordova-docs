@@ -18,17 +18,17 @@ license: >
     under the License.
 ---
 
-# Android 平臺指南
+# Android <a href="../index.html">平臺指南</a>
 
-本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Android 設備的應用程式。請參閱下列特定于平臺的詳細資訊：
+本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Android <a href="../../../cordova/device/device.html">設備</a>的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   Android 系統組態
-*   Android WebViews
-*   Android 外掛程式
-*   升級 Android
-*   Android 系統的命令列工具
+*   <a href="config.html">Android 系統組態</a>
+*   <a href="webview.html">Android WebViews</a>
+*   <a href="plugin.html">Android 外掛程式</a>
+*   <a href="upgrading.html">升級 Android</a>
+*   <a href="tools.html">Android 系統的命令列工具</a>
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱<a href="../../cli/index.html">命令列介面</a>。
 
 ## 要求和支援
 
@@ -46,15 +46,15 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-開發人員應使用 `cordova` 實用程式與 Android SDK 一起。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
+開發人員應使用 `cordova` 實用程式與 Android SDK 一起。 <a href="../../cli/index.html">命令列介面</a>資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
 
 ## 安裝 SDK
 
-從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
+從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您<a href="../../../cordova/storage/storage.html">存儲</a>的開發工具。
 
  [3]: http://developer.android.com/sdk/
 
-科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。 在 Mac 上可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
+科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。 在 Mac 上可以使用文字編輯器來創建或修改 `~/.bash_profile` <a href="../../../cordova/file/fileobj/fileobj.html">檔</a>中，添加行，如下，根據 SDK 的安裝<a href="../../../cordova/geolocation/Position/position.html">位置</a>：
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
     
@@ -70,16 +70,16 @@ NOTE, doc said:
 
 *   在左側列中，按一下**高級系統設置**。
 
-*   在結果對話方塊中，按下**環境變數**.
+*   在結果對話方塊中，按下**環境<a href="../../../plugin_ref/spec.html">變數</a>**.
 
-*   選擇**PATH**變數，然後按**編輯**.
+*   選擇**PATH**<a href="../../../plugin_ref/spec.html">變數</a>，然後按**編輯**.
 
-*   將以下內容追加到基於例如安裝 SDK 的位置的路徑：
+*   將以下內容追加到基於例如安裝 SDK 的<a href="../../../cordova/geolocation/Position/position.html">位置</a>的路徑：
     
         ;C:\Development\adt-bundle\sdk\platform-tools ；C:\Development\adt-bundle\sdk\tools
         
 
-*   將值保存並關閉這兩個對話方塊。
+*   將值保存並<a href="../../../cordova/inappbrowser/inappbrowser.html">關閉</a>這兩個對話方塊。
 
 您可能還需要啟用 JAVA 和螞蟻打開一個命令提示符並鍵入 `java` ，然後還鍵入 `ant` 。將追加到該路徑無法運行的日期為准：
 
@@ -88,7 +88,7 @@ NOTE, doc said:
 
 ## 在 SDK 中打開的專案
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
+使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦<a href="../../cli/index.html">命令列介面</a>。例如，在原始程式碼中的目錄：
 
         $ 科爾多瓦創建你好 com.example.hello"HelloWorld"$ cd 你好 $ 科爾多瓦平臺添加 android $ 科爾多瓦生成
     
@@ -121,7 +121,7 @@ NOTE, doc said:
 
 ## 部署到模擬程式
 
-您可以使用 `cordova` 實用程式在一個模擬程式，或你運行一個應用程式可以在 SDK 內運行它。 不管怎樣，SDK 必須首先配置以顯示至少一個設備。 若要這樣做，請使用 Android SDK 經理，從 Eclipse 獨立運行的 JAVA 應用程式。 有兩種方法來打開它：
+您可以使用 `cordova` 實用程式在一個模擬程式，或你運行一個應用程式可以在 SDK 內運行它。 不管怎樣，SDK 必須首先<a href="../../../cordova/media/capture/ConfigurationData.html">配置</a>以<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>至少一個<a href="../../../cordova/device/device.html">設備</a>。 若要這樣做，請使用 Android SDK 經理，從 Eclipse 獨立運行的 JAVA 應用程式。 有兩種方法來打開它：
 
 *   運行 `android` 命令列上。
 
@@ -131,7 +131,7 @@ NOTE, doc said:
 
  [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
-一旦打開，Android SDK 管理器將顯示不同的運行時庫：
+一旦打開，Android SDK 管理器將<a href="../../../cordova/inappbrowser/inappbrowser.html">顯示</a>不同的運行時庫：
 
 ![][6]
 
@@ -149,13 +149,13 @@ NOTE, doc said:
 
  [8]: img/guide/platforms/android/asdk_newAVD.png
 
-AVD 然後出現在**虛擬的 Android 設備**清單中：
+AVD 然後出現在**虛擬的 Android <a href="../../../cordova/device/device.html">設備</a>**清單中：
 
 ![][9]
 
  [9]: img/guide/platforms/android/asdk_avds.png
 
-若要打開模擬器作為單獨的應用程式，選擇 AVD 然後按**開始**。它發射將在設備上，與其他控制項可用的硬體按鈕：
+若要打開模擬器作為單獨的應用程式，選擇 AVD 然後按**開始**。它發射將在<a href="../../../cordova/device/device.html">設備</a>上，與其他控制項可用的硬體按鈕：
 
 ![][10]
 
@@ -178,13 +178,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 *   當啟動模擬程式，確保沒有任何錯誤訊息，指示未能載入 HAX 模組。
 
-## 將部署到設備
+## 將部署到<a href="../../../cordova/device/device.html">設備</a>
 
-要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][11]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
+要將應用程式推直接到<a href="../../../cordova/device/device.html">設備</a>，請確保您的<a href="../../../cordova/device/device.html">設備</a>上的[Android 開發者網站][11]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
 
  [11]: http://developer.android.com/tools/device.html
 
-從命令列，可以將應用程式推送到設備：
+從命令列，可以將應用程式推送到<a href="../../../cordova/device/device.html">設備</a>：
 
         運行 android 的 $ 科爾多瓦
     

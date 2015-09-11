@@ -157,7 +157,7 @@ Prawidłowe wartości dla flagę `--appx` są `8.1-win`, `8.1-phone`i `uap` (dla
 
 ### Zagadnienia dotyczące docelowej wersji systemu Windows
 
-Windows 10 obsługuje nowy tryb "Zdalny" Cordova aplikacji (i aplikacje HTML w ogóle). Ten tryb umożliwia aplikacji znacznie więcej wolności w odniesieniu do manipulacji DOM i wspólne wzory internetowych takich jak korzystanie z wbudowanego skryptu, ale nie tak zmniejszając zestaw możliwości aplikacji mogą używać, gdy przekazywane do magazynu publicznego systemu Windows. Aby uzyskać więcej informacji o Windows 10 i trybie zdalnym spojrzeć do dokumentacji [Cordova dla Windows 10][13] .
+Windows 10 obsługuje nowy tryb "Zdalny" Cordova aplikacji (i aplikacje HTML w ogóle). Ten tryb umożliwia aplikacji znacznie więcej wolności w odniesieniu do manipulacji DOM i wspólne wzory internetowych takich jak korzystanie z wbudowanego skryptu, ale nie tak zmniejszając zestaw możliwości aplikacji mogą używać, gdy przekazywane do magazynu publicznego systemu Windows. Aby uzyskać więcej informacji o Windows 10 i trybie zdalnym spojrzeć do dokumentacji [<a href="win10-support.html">Cordova dla Windows 10</a>][13] .
 
  [13]: win10-support.md.html
 

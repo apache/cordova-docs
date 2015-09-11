@@ -20,16 +20,16 @@ license: >
 
 # searchbutton
 
-當使用者按 Android 上的搜尋按鈕時，將觸發該事件。
+當使用者按 Android 上的搜尋按鈕時，將觸發該<a href="events.html">事件</a>。
 
-    document.addEventListener("searchbutton", yourCallbackFunction, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", yourCallbackFunction, false);
     
 
 ## 詳細資訊
 
-如果您需要重寫預設的搜尋按鈕行為在 android 系統上您可以註冊為 'searchbutton' 事件一個事件攔截器。
+如果您需要重寫預設的搜尋按鈕行為在 android 系統上您可以註冊為 'searchbutton' <a href="events.html">事件</a>一個<a href="events.html">事件</a>攔截器。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>` 將一個<a href="events.html">事件</a>攔截器附加一次 `<a href="events.deviceready.html">deviceready</a>` <a href="events.html">事件</a>火災。
 
 ## 支援的平臺
 
@@ -37,7 +37,7 @@ license: >
 
 ## 快速的示例
 
-    document.addEventListener("searchbutton", onSearchKeyDown, false);
+    document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", onSearchKeyDown, false);
     
     function onSearchKeyDown() {
         // Handle the search button
@@ -50,7 +50,7 @@ license: >
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button Example</title>
+        <title>Search Button <a href="../storage/storage.opendatabase.html">Example</a></title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -58,14 +58,14 @@ license: >
         // Wait for device API libraries to load
         //
         function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="events.deviceready.html">deviceready</a>", onDeviceReady, false);
         }
     
         // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("searchbutton", onSearchKeyDown, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("searchbutton", onSearchKeyDown, false);
         }
     
         // Handle the search button

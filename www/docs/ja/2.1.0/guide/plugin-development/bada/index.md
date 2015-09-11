@@ -23,7 +23,7 @@ Developing a Plugin on Bada
 
 プラグインは Bada 2.0 以上のみサポートしています。 Bada 1.2 はサポートしていません。
 
-Bada の実装はすべて JavaScript の実装です。そのため、カスタムプラグインを追加することは、プラグインコードによって CordovaJS を更新することになります。以下は、シンプルな _Hello World_ プラグインを追加するステップです:
+Bada の実装はすべて JavaScript の実装です。そのため、カスタムプラグインを追加することは、プラグインコードによって CordovaJS を更新することになります。以下は、シンプルな _<a href="../../getting-started/webos/index.html">Hello World</a>_ プラグインを追加するステップです:
 
 1. CordovaJS リポジトリーを clone します
 

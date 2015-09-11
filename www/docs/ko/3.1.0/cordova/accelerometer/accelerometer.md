@@ -20,27 +20,27 @@ license: >
 
 # 가 속도계
 
-> *X*, *y*및 *z* 방향에서 장치 동작을 캡처합니다.
+> *X*, *y*및 *z* 방향에서 <a href="../device/device.html">장치</a> 동작을 <a href="../media/capture/capture.html">캡처</a>합니다.
 
 ## 메서드
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   <a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a>
+*   <a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a>
+*   <a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a>
 
 ## 인수
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   <a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a>
+*   <a href="parameters/accelerometerError.html">accelerometerError</a>
+*   <a href="parameters/accelerometerOptions.html">accelerometerOptions</a>
 
 ## (읽기 전용) 개체
 
-*   가속
+*   <a href="acceleration/acceleration.html">가속</a>
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 <a href="../device/device.html">장치</a> 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 <a href="../../guide/cli/index.html">명령줄 인터페이스</a>를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -87,4 +87,4 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* <a href="../../guide/overview/index.html">개요</a> 섹션에서을 참조 하십시오.

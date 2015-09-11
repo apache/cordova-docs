@@ -25,8 +25,8 @@ license: >
 ## Méthodes
 
 *   `notification.alert`
-*   `notification.Confirm`
-*   `notification.prompt`
+*   `<a href="notification.confirm.html">notification.Confirm</a>`
+*   `<a href="notification.prompt.html">notification.prompt</a>`
 *   `notification.beep`
 *   `notification.vibrate`
 

@@ -55,10 +55,10 @@ For 4.x devices check out [this guide](http://wiki.phonegap.com/w/page/25653281/
 - Open up the project.properties file with your favourite editor and change the lines `BlackBerry.bbwp.dir=` and `PlayBook.bbwp.dir=` to equal the respective install locations of the SDKs you downloaded earlier.
 
 
-4. Hello World
+4. <a href="../webos/index.html">Hello World</a>
 --------------
 
-Build the PhoneGap sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace the target with either blackberry or playbook. Note this is the sample PhoneGap project and not a basic hello world application. You can go edit the index.html file located in the www directory of your project to make it say Hello World if you wish.
+Build the PhoneGap sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace the target with either blackberry or playbook. Note this is the sample PhoneGap project and not a basic hello world application. You can go edit the index.html file located in the www directory of your project to make it say <a href="../webos/index.html">Hello World</a> if you wish.
 
 
 5A. Deploy to Simulator (Windows Only)
@@ -68,7 +68,7 @@ Build the PhoneGap sample project by typing `ant target build` in your command p
 - Press the BlackBerry button on the simulator, go to downloads and you should see your app loaded there.
 
 
-5B. Deploy to Device (Windows and Mac)
+5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a> (Windows and Mac)
 --------------------------------------
 
 - You have to have your signing keys from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/).
@@ -79,5 +79,5 @@ Build the PhoneGap sample project by typing `ant target build` in your command p
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/31930982/Getting-Started-with-PhoneGap-BlackBerry-WebWorks).
+You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide [here](http://wiki.phonegap.com/w/page/31930982/Getting-Started-with-PhoneGap-BlackBerry-WebWorks).
 

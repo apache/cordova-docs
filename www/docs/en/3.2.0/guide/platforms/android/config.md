@@ -23,12 +23,12 @@ license: >
 The `config.xml` file controls an app's basic settings that apply
 across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
-config.xml File for information on global configuration options.
+config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
+  application stays running in the background even after a `<a href="../../../cordova/events/events.pause.html">pause</a>`
   event fires. Note: setting this to false will not kill the app after
-  a pause event, it will only halt execution of code in the cordova
+  a <a href="../../../cordova/events/events.pause.html">pause</a> event, it will only halt execution of code in the cordova
   webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>
@@ -50,7 +50,7 @@ config.xml File for information on global configuration options.
 
         <preference name="SplashScreenDelay" value="10000"/>
 
-- `InAppBrowserStorageEnabled` (boolean, defaults to `true`): Controls
-  whether pages opened within an InAppBrowser can access the same
-  localStorage and WebSQL storage as pages opened with the default
+- `<a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a><a href="../../../cordova/storage/storage.html">Storage</a>Enabled` (boolean, defaults to `true`): Controls
+  whether pages opened within an <a href="../../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a> can access the same
+  local<a href="../../../cordova/storage/storage.html">Storage</a> and WebSQL storage as pages opened with the default
   browser.

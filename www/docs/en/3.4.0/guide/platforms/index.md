@@ -22,7 +22,7 @@ license: >
 
 Before developing for any of the platforms listed below, install
 cordova's command-line interface (CLI).
-(For details, see The Command-Line Interface.)
+(For details, see <a href="../cli/index.html">The Command-Line Interface</a>.)
 
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless
@@ -40,60 +40,60 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## Amazon Fire OS
 
-* Amazon Fire OS Platform Guide
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* <a href="amazonfireos/index.html">Amazon Fire OS Platform Guide</a>
+* <a href="amazonfireos/config.html">Amazon Fire OS Configuration</a>
+* <a href="amazonfireos/webview.html">Amazon Fire OS WebViews</a>
+* <a href="amazonfireos/plugin.html">Amazon Fire OS Plugins</a>
 
 ## Android
 
-* Android Platform Guide
-* Android Configuration
-* Android WebViews
-* Android Plugins
-* Android Command-line Tools
-* Upgrading Android
+* <a href="android/index.html">Android Platform Guide</a>
+* <a href="android/config.html">Android Configuration</a>
+* <a href="android/webview.html">Android WebViews</a>
+* <a href="android/plugin.html">Android Plugins</a>
+* <a href="android/tools.html">Android Command-line Tools</a>
+* <a href="android/upgrading.html">Upgrading Android</a>
 
 ## BlackBerry 10
 
-* BlackBerry 10 Platform Guide
-* BlackBerry 10 Configuration
-* BlackBerry 10 Plugins
-* BlackBerry 10 Command-line Tools
-* Upgrading BlackBerry 10
+* <a href="blackberry10/index.html">BlackBerry 10 Platform Guide</a>
+* <a href="blackberry10/config.html">BlackBerry 10 Configuration</a>
+* <a href="blackberry10/plugin.html">BlackBerry 10 Plugins</a>
+* <a href="blackberry10/tools.html">BlackBerry 10 Command-line Tools</a>
+* <a href="blackberry10/upgrading.html">Upgrading BlackBerry 10</a>
 
 ## Firefox OS
 
-* Firefox OS Platform Guide
+* <a href="firefoxos/index.html">Firefox OS Platform Guide</a>
 
 ## iOS
 
-* iOS Platform Guide
-* iOS Configuration
-* iOS WebViews
-* iOS Plugins
-* iOS Command-line Tools
-* Upgrading iOS
+* <a href="ios/index.html">iOS Platform Guide</a>
+* <a href="ios/config.html">iOS Configuration</a>
+* <a href="ios/webview.html">iOS WebViews</a>
+* <a href="ios/plugin.html">iOS Plugins</a>
+* <a href="ios/tools.html">iOS Command-line Tools</a>
+* <a href="ios/upgrading.html">Upgrading iOS</a>
 
 ## Ubuntu
 
-* Ubuntu Platform Guide
+* <a href="ubuntu/index.html">Ubuntu Platform Guide</a>
 
 ## Windows Phone
 
-* Windows Phone 8 Platform Guide
-* Windows Phone 7 Platform Guide
+* <a href="wp8/index.html">Windows Phone 8 Platform Guide</a>
+* <a href="wp7/index.html">Windows Phone 7 Platform Guide</a>
 * Windows Phone Configuration
-* Windows Phone Command-line Tools
-* Upgrading Windows Phone
+* <a href="wp8/tools.html">Windows Phone Command-line Tools</a>
+* <a href="wp8/upgrading.html">Upgrading Windows Phone</a>
 
 ## Windows 8
 
-* Windows 8 Platform Guide
-* Windows 8 Command-line Tools
-* Upgrading Windows 8
+* <a href="win8/index.html">Windows 8 Platform Guide</a>
+* <a href="win8/tools.html">Windows 8 Command-line Tools</a>
+* <a href="win8/upgrading.html">Upgrading Windows 8</a>
 
 ## Tizen
 
-* Tizen Platform Guide
+* <a href="tizen/index.html">Tizen Platform Guide</a>
 

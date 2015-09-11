@@ -18,7 +18,7 @@ license: >
     under the License.
 ---
 
-# Media.pause
+# <a href="media.html">Media</a>.pause
 
 Sospende la riproduzione di un file audio.
 
@@ -44,7 +44,7 @@ Il `media.pause` metodo viene eseguita in modo sincrono e sospende la riproduzio
     //
     function playAudio(url) {
         // Play the audio file at url
-        var my_media = new Media(url,
+        var my_media = new <a href="media.html">Media</a>(url,
             // success callback
             function () { console.log("playAudio():Audio Success"); },
             // error callback
@@ -67,14 +67,14 @@ Il `media.pause` metodo viene eseguita in modo sincrono e sospende la riproduzio
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title><a href="media.html">Media</a> <a href="../storage/storage.opendatabase.html">Example</a></title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
             // Wait for device API libraries to load
             //
-            document.addEventListener("deviceready", onDeviceReady, false);
+            document.<a href="../inappbrowser/inappbrowser.html">addEventListener</a>("<a href="../events/events.deviceready.html">deviceready</a>", onDeviceReady, false);
     
             // device APIs are available
             //
@@ -90,8 +90,8 @@ Il `media.pause` metodo viene eseguita in modo sincrono e sospende la riproduzio
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
+                // Create <a href="media.html">Media</a> object from src
+                my_media = new <a href="media.html">Media</a>(src, onSuccess, onError);
     
                 // Play audio
                 my_media.play();
@@ -100,7 +100,7 @@ Il `media.pause` metodo viene eseguita in modo sincrono e sospende la riproduzio
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
                         // get my_media position
-                        my_media.getCurrentPosition(
+                        my_<a href="media.getCurrentPosition.html">media.getCurrentPosition</a>(
                             // success callback
                             function(position) {
                                 if (position > -1) {
@@ -129,7 +129,7 @@ Il `media.pause` metodo viene eseguita in modo sincrono e sospende la riproduzio
             //
             function stopAudio() {
                 if (my_media) {
-                    my_media.stop();
+                    my_<a href="media.stop.html">media.stop</a>();
                 }
                 clearInterval(mediaTimer);
                 mediaTimer = null;
