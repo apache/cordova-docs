@@ -1,22 +1,39 @@
-.list a {
-    position: absolute;
-    right: 50px;
-    width: 313px;
-}
+.mailing-list {
+    li {
+        padding: 0px;
+    }
 
-.email_link_button {
-    width: 49px;
-    background-color: $brand-primary;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: inline-block;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-    .glyphicon {
-        font-size: 20px;
-        padding-top: 7px;
+    .email-link {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 55px;
+
+        white-space:nowrap;
+
+        text-overflow:ellipsis;
+        overflow: hidden;
+        .email_link_button {
+            width: 100%;
+            max-width: 50px;
+            position:absolute;
+            top: 0;
+            right: 0;
+            margin-right: 15px;
+            display: inline-block;
+            background-color: $brand-primary;
+            vertical-align: middle;
+            text-align: center;
+            .glyphicon {
+                color: white;
+                font-size: 20px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+        }
+    }
+
+    .list-label {
+        padding: 8px;
     }
 }
