@@ -447,7 +447,7 @@ var App = React.createClass({
                             <div className="whatisplugin_box">
                                 <img src="{{ site.baseurl }}/static/img/pluggy.png"/>
                                 <h2>What is a Cordova plugin?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ante placerat, gravida ligula in, interdum mauris. Sed quis est vel erat vestibulum volutpat in vitae.  <a href="#">Learn more...</a></p>
+                                <p>A plugin is a bit of add-on code that provides JavaScript interface to native components.  They allow your app to use native device capabilities beyond what is available to pure web apps.</p>
                             </div>
                             <div className="clearfix"></div>
                         </div>
