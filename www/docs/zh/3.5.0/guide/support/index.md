@@ -67,7 +67,7 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">科爾多瓦<br />CLI</a>
+          <a href="../cli/index.html">科爾多瓦<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -109,22 +109,22 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">嵌入式<br />Web 視圖</a>
+          <a href="../hybrid/webviews/index.html">嵌入式<br />Web 視圖</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/amazonfireos/webview.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/android/webview.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="blackberry10" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="../platforms/ios/webview.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -147,34 +147,34 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">外掛程式<br />介面</a>
+          <a href="../hybrid/plugins/index.html">外掛程式<br />介面</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/amazonfireos/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/android/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/ios/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/wp8/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="../guide/platforms/wp8/plugin.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -197,7 +197,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">加速度計</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">加速度計</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -232,7 +232,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">相機</a>
+          <a href="../../cordova/camera/camera.html">相機</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -267,7 +267,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">捕獲</a>
+          <a href="../../cordova/media/capture/capture.html">捕獲</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -302,7 +302,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">指南針</a>
+          <a href="../../cordova/compass/compass.html">指南針</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -338,7 +338,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">連接</a>
+          <a href="../../cordova/connection/connection.html">連接</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -373,7 +373,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">連絡人</a>
+          <a href="../../cordova/contacts/contacts.html">連絡人</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -408,7 +408,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">設備</a>
+          <a href="../../cordova/device/device.html">設備</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -443,7 +443,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">事件</a>
+          <a href="../../cordova/events/events.html">事件</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -478,7 +478,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">檔</a>
+          <a href="../../cordova/file/file.html">檔</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -513,7 +513,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">地理定位</a>
+          <a href="../../cordova/geolocation/geolocation.html">地理定位</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -548,7 +548,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">全球化</a>
+          <a href="../../cordova/globalization/globalization.html">全球化</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -583,7 +583,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -619,7 +619,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">媒體</a>
+          <a href="../../cordova/media/media.html">媒體</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -654,7 +654,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">通知</a>
+          <a href="../../cordova/notification/notification.html">通知</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -689,7 +689,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">閃屏</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">閃屏</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +724,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">存儲</a>
+          <a href="../../cordova/storage/storage.html">存儲</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

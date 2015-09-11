@@ -111,7 +111,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">Cordova<br />CLI</a>
+          <a href="../cli/index.html">Cordova<br />CLI</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -147,11 +147,11 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Embedded<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">Embedded<br />WebView</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(voir détails)</a>
+          <a href="../platforms/android/webview.html">(voir détails)</a>
         </td>
         
         <td data-col="blackberry" class="n">
@@ -161,7 +161,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(voir détails)</a>
+          <a href="../platforms/ios/webview.html">(voir détails)</a>
         </td>
         
         <td data-col="winphone7"  class="n">
@@ -179,27 +179,27 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Plug-in<br />Interface</a>
+          <a href="../hybrid/plugins/index.html">Plug-in<br />Interface</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(voir détails)</a>
+          <a href="../guide/platforms/android/plugin.html">(voir détails)</a>
         </td>
         
         <td data-col="blackberry" class="y">
-          <a href="guide_guide_platforms_blackberry_plugin.md.html">(voir détails)</a>
+          <a href="../guide/platforms/blackberry/plugin.html">(voir détails)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(voir détails)</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">(voir détails)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(voir détails)</a>
+          <a href="../guide/platforms/ios/plugin.html">(voir détails)</a>
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(voir détails)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(voir détails)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -223,7 +223,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Accéléromètre</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">Accéléromètre</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -253,7 +253,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Appareil photo</a>
+          <a href="../../cordova/camera/camera.html">Appareil photo</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -283,7 +283,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Capture</a>
+          <a href="../../cordova/media/capture/capture.html">Capture</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +313,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Boussole</a>
+          <a href="../../cordova/compass/compass.html">Boussole</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +344,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Connexion</a>
+          <a href="../../cordova/connection/connection.html">Connexion</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +374,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Contacts</a>
+          <a href="../../cordova/contacts/contacts.html">Contacts</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -404,7 +404,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Dispositif</a>
+          <a href="../../cordova/device/device.html">Dispositif</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -434,7 +434,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Événements</a>
+          <a href="../../cordova/events/events.html">Événements</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -464,7 +464,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Fichier</a>
+          <a href="../../cordova/file/file.html">Fichier</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -496,7 +496,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Géolocalisation</a>
+          <a href="../../cordova/geolocation/geolocation.html">Géolocalisation</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +526,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Mondialisation</a>
+          <a href="../../cordova/globalization/globalization.html">Mondialisation</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +556,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +586,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Media</a>
+          <a href="../../cordova/media/media.html">Media</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +616,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Notification</a>
+          <a href="../../cordova/notification/notification.html">Notification</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +646,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">SplashScreen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +676,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Stockage</a>
+          <a href="../../cordova/storage/storage.html">Stockage</a>
         </th>
         
         <td data-col="android"    class="y">

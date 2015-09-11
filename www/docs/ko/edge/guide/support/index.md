@@ -67,7 +67,7 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">코르 도우 바<br />CLI</a>
+          <a href="../cli/index.html">코르 도우 바<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -107,15 +107,15 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">임베디드<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">임베디드<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/amazonfireos/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/android/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry10" class="n">
@@ -125,7 +125,7 @@ license: >
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/ios/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -143,33 +143,33 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">플러그 인<br />인터페이스</a>
+          <a href="../hybrid/plugins/index.html">플러그 인<br />인터페이스</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/amazonfireos/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/android/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_platforms_blackberry10_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/blackberry10/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/ios/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_platforms_wp8_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/wp8/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -457,7 +457,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">이벤트</a>
+          <a href="../../cordova/events/events.html">이벤트</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -792,7 +792,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">스토리지</a>
+          <a href="../../cordova/storage/storage.html">스토리지</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

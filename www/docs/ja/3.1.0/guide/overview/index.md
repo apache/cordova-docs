@@ -109,7 +109,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">コルドバ<br />CLI</a>
+          <a href="../cli/index.html">コルドバ<br />CLI</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -145,11 +145,11 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">埋め込み<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">埋め込み<br />WebView</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(詳細を参照)</a>
+          <a href="../platforms/android/webview.html">(詳細を参照)</a>
         </td>
         
         <td data-col="blackberry" class="n">
@@ -159,7 +159,7 @@ XREF -->
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(詳細を参照)</a>
+          <a href="../platforms/ios/webview.html">(詳細を参照)</a>
         </td>
         
         <td data-col="winphone7"  class="n">
@@ -177,27 +177,27 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">プラグイン<br />インターフェイス</a>
+          <a href="../hybrid/plugins/index.html">プラグイン<br />インターフェイス</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(詳細を参照)</a>
+          <a href="../guide/platforms/android/plugin.html">(詳細を参照)</a>
         </td>
         
         <td data-col="blackberry" class="y">
-          <a href="guide_guide_platforms_blackberry_plugin.md.html">(詳細を参照)</a>
+          <a href="../guide/platforms/blackberry/plugin.html">(詳細を参照)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(詳細を参照)</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">(詳細を参照)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(詳細を参照)</a>
+          <a href="../guide/platforms/ios/plugin.html">(詳細を参照)</a>
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(詳細を参照)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(詳細を参照)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -221,7 +221,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">加速度センサー</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">加速度センサー</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -251,7 +251,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">カメラ</a>
+          <a href="../../cordova/camera/camera.html">カメラ</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -281,7 +281,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">キャプチャ</a>
+          <a href="../../cordova/media/capture/capture.html">キャプチャ</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -311,7 +311,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">コンパス</a>
+          <a href="../../cordova/compass/compass.html">コンパス</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -342,7 +342,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">接続</a>
+          <a href="../../cordova/connection/connection.html">接続</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -372,7 +372,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">連絡先</a>
+          <a href="../../cordova/contacts/contacts.html">連絡先</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -402,7 +402,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">デバイス</a>
+          <a href="../../cordova/device/device.html">デバイス</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -432,7 +432,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">イベント</a>
+          <a href="../../cordova/events/events.html">イベント</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -462,7 +462,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">ファイル</a>
+          <a href="../../cordova/file/file.html">ファイル</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -494,7 +494,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">地理位置情報</a>
+          <a href="../../cordova/geolocation/geolocation.html">地理位置情報</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -524,7 +524,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">グローバリゼーション</a>
+          <a href="../../cordova/globalization/globalization.html">グローバリゼーション</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -554,7 +554,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -584,7 +584,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">メディア</a>
+          <a href="../../cordova/media/media.html">メディア</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -614,7 +614,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">通知</a>
+          <a href="../../cordova/notification/notification.html">通知</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -644,7 +644,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">スプラッシュ スクリーン</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">スプラッシュ スクリーン</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -674,7 +674,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">ストレージ</a>
+          <a href="../../cordova/storage/storage.html">ストレージ</a>
         </th>
         
         <td data-col="android"    class="y">
