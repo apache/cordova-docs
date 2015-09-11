@@ -207,6 +207,9 @@
             color: black;
         }
         footer{
+            background-color: #FFF;
+            margin: 100px 0;
+            
             .title{
                 color: #3992ab;
                 font-size: 12pt;
@@ -223,7 +226,7 @@
         }
     }
     .disqus{
-        margin-top: 30px;
+        margin: 30px 0;
     }
 
     section.nextprev-posts{
