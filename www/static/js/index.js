@@ -137,4 +137,7 @@ $(document).ready(function () {
     });
 
     $("#jira-search-button").on("click", submitJiraSearchForm);
+    $("#jira-search-box").on("keypress", function searchKeypressEventHandler (e) {
+        if(e.keyCode == 13) submitJiraSearchForm();
+    });
 });
