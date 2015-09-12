@@ -4,4 +4,12 @@ title: Page Not Found
 permalink: 404.html
 ---
 
-Uh-oh.
+<div class="not-found-container">
+    <div class="not-found-header">
+        <h1>404: Not Found</h1>
+    </div>
+    <div id="not-found-redirect-alert" class="not-found-redirect">
+        <div class="alert alert-warning" role="alert">We recently moved our documentation. It looks like the page you were trying to access may have moved <a id="redirect-link">here</a></div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ site.baseurl }}/static/js/404.js" defer></script>
