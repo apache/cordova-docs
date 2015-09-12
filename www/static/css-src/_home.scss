@@ -2,7 +2,11 @@
 
 
 body {
+	height: 100%;
+}
 
+html {
+	height: 100%;
 }
 
 #hero {
@@ -259,4 +263,21 @@ img#logo_top {
 .add_seemore_links {
 	margin: 15px 0;
 	a {	padding-left:30px; }
+}
+
+.not-found-container {
+	height: 60%;
+	margin: auto;
+	width: 75%;
+}
+
+.not-found-header {
+	padding-top: 15%;
+	text-align: center;
+}
+
+.not-found-redirect {
+	margin-bottom: 20px;
+	text-align: center;
+	display: none;
 }
