@@ -1,7 +1,14 @@
+# -   name: Example Showcase App
+#     image: cordova.png
+#     url: http://example.com
+#     description: >
+#         A description that can
+#         span multiple lines.
+
 -   name: NewVo - Fast Style Advice
     image: NewVo.png
     url: https://newvo.me
     description: >
-        NewVo makes it fun to 
-        share and receive 
+        NewVo makes it fun to
+        share and receive
         opinions on style decisions.
