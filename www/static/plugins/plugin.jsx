@@ -56,8 +56,14 @@ var Plugin = React.createClass({
             );
         }
 
+        var classes = classNames({
+            'container': true,
+            'plugin-results-result': true,
+            'plugins-featured': this.props.plugin.isOfficial
+        });
+
         return (
-            <div className="container plugin-results-result">
+            <div className={classes}>
                 <div className="row">
                     <div className="col-sm-8 col-xs-8">
                         <span>
