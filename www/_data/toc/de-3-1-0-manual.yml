@@ -8,7 +8,6 @@
 - {name: !!python/unicode 'Plugin-Entwicklung-Guide', url: !!python/unicode '/docs/de/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode '/docs/de/3.1.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode '/docs/de/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/3.1.0/_index.html'}
 - {name: !!python/unicode 'Beschleunigungsmesser', url: !!python/unicode '/docs/de/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: !!python/unicode 'Kamera', url: !!python/unicode '/docs/de/3.1.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Erfassen', url: !!python/unicode '/docs/de/3.1.0/cordova/media/capture/capture.html'}

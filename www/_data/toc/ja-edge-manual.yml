@@ -19,6 +19,5 @@
 - {name: "\u30DB\u30EF\u30A4\u30C8 \u30EA\u30B9\u30C8 \u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/edge/guide/appdev/whitelist/index.html'}
 - {name: "\u30B9\u30C8\u30EC\u30FC\u30B8", url: !!python/unicode '/docs/ja/edge/cordova/storage/storage.html'}
 - {name: "\u6B21\u306E\u30B9\u30C6\u30C3\u30D7", url: !!python/unicode '/docs/ja/edge/guide/next/index.html'}
-- {name: "\u30AD\u30FC\u30EF\u30FC\u30C9 \u30A4\u30F3\u30C7\u30C3\u30AF\u30B9", url: !!python/unicode '/docs/ja/edge/_index.html'}
 - {name: "\u30A4\u30D9\u30F3\u30C8", url: !!python/unicode '/docs/ja/edge/cordova/events/events.html'}
 - {name: "\u30D7\u30E9\u30B0\u30A4\u30F3 Api", url: !!python/unicode '/docs/ja/edge/cordova/plugins/pluginapis.html'}

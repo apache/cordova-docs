@@ -6,7 +6,6 @@
 - {name: "\uD50C\uB7EC\uADF8\uC778 \uAC1C\uBC1C \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: "\uAC1C\uC778 \uC815\uBCF4 \uBCF4\uD638 \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/3.1.0/guide/appdev/privacy/index.html'}
 - {name: "\uD654\uC774\uD2B8 \uB9AC\uC2A4\uD2B8 \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "\uD0A4\uC6CC\uB4DC \uC778\uB371\uC2A4", url: !!python/unicode '/docs/ko/3.1.0/_index.html'}
 - {name: "\uAC00\uC18D", url: !!python/unicode '/docs/ko/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: "\uCE74\uBA54\uB77C", url: !!python/unicode '/docs/ko/3.1.0/cordova/camera/camera.html'}
 - {name: "\uB098\uCE68\uBC18", url: !!python/unicode '/docs/ko/3.1.0/cordova/compass/compass.html'}

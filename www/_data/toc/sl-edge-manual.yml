@@ -10,6 +10,5 @@
 - {name: !!python/unicode 'Vodnik o zasebnosti', url: !!python/unicode '/docs/sl/edge/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Seznam dovoljenih vodnik', url: !!python/unicode '/docs/sl/edge/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Shranjevanje', url: !!python/unicode '/docs/sl/edge/cordova/storage/storage.html'}
-- {name: "Klju\u010Dne besede kazalo", url: !!python/unicode '/docs/sl/edge/_index.html'}
 - {name: !!python/unicode 'Dogodki', url: !!python/unicode '/docs/sl/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/sl/edge/cordova/plugins/pluginapis.html'}

@@ -17,4 +17,3 @@
 - {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode '/docs/ko/2.0.0/guide/plugin-development/index.html'}
 - {name: !!python/unicode 'Domain Whitelist Guide', url: !!python/unicode '/docs/ko/2.0.0/guide/whitelist/index.html'}
 - {name: !!python/unicode 'Embedding WebView', url: !!python/unicode '/docs/ko/2.0.0/guide/cordova-webview/index.html'}
-- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/ko/2.0.0/_index.html'}

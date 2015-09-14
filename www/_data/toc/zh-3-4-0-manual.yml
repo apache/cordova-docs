@@ -10,6 +10,5 @@
 - {name: "\u96B1\u79C1\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/appdev/privacy/index.html'}
 - {name: "\u767D\u540D\u55AE\u6307\u5357", url: !!python/unicode '/docs/zh/3.4.0/guide/appdev/whitelist/index.html'}
 - {name: "\u5B58\u5132", url: !!python/unicode '/docs/zh/3.4.0/cordova/storage/storage.html'}
-- {name: "\u95DC\u9375\u5B57\u7D22\u5F15", url: !!python/unicode '/docs/zh/3.4.0/_index.html'}
 - {name: "\u4E8B\u4EF6", url: !!python/unicode '/docs/zh/3.4.0/cordova/events/events.html'}
 - {name: "\u5916\u639B\u7A0B\u5F0F\u7684 Api", url: !!python/unicode '/docs/zh/3.4.0/cordova/plugins/pluginapis.html'}
