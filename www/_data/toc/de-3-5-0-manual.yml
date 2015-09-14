@@ -10,6 +10,5 @@
 - {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode '/docs/de/3.5.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Whitelist-Guide', url: !!python/unicode '/docs/de/3.5.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Speicher', url: !!python/unicode '/docs/de/3.5.0/cordova/storage/storage.html'}
-- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/3.5.0/_index.html'}
 - {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/3.5.0/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/3.5.0/cordova/plugins/pluginapis.html'}

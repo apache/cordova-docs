@@ -7,5 +7,4 @@
 - {name: "Guide de la vie priv\xE9e", url: !!python/unicode '/docs/fr/3.4.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Guide de la liste blanche', url: !!python/unicode '/docs/fr/3.4.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Stockage', url: !!python/unicode '/docs/fr/3.4.0/cordova/storage/storage.html'}
-- {name: "Index de mots-cl\xE9s", url: !!python/unicode '/docs/fr/3.4.0/_index.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/fr/3.4.0/cordova/plugins/pluginapis.html'}

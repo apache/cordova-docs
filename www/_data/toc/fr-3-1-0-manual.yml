@@ -8,7 +8,6 @@
 - {name: "Guide de d\xE9veloppement de plugin", url: !!python/unicode '/docs/fr/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: "Guide de la vie priv\xE9e", url: !!python/unicode '/docs/fr/3.1.0/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Guide de la liste blanche', url: !!python/unicode '/docs/fr/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "Index de mots-cl\xE9s", url: !!python/unicode '/docs/fr/3.1.0/_index.html'}
 - {name: "Acc\xE9l\xE9rom\xE8tre", url: !!python/unicode '/docs/fr/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: !!python/unicode 'Appareil photo', url: !!python/unicode '/docs/fr/3.1.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/fr/3.1.0/cordova/media/capture/capture.html'}

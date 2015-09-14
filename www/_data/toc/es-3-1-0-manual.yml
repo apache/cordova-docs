@@ -7,7 +7,6 @@
 - {name: "Gu\xEDa de desarrollo de plugin", url: !!python/unicode '/docs/es/3.1.0/guide/hybrid/plugins/index.html'}
 - {name: "Gu\xEDa de privacidad", url: !!python/unicode '/docs/es/3.1.0/guide/appdev/privacy/index.html'}
 - {name: "Gu\xEDa de lista blanca", url: !!python/unicode '/docs/es/3.1.0/guide/appdev/whitelist/index.html'}
-- {name: "\xCDndice de palabras clave", url: !!python/unicode '/docs/es/3.1.0/_index.html'}
 - {name: "Aceler\xF3metro", url: !!python/unicode '/docs/es/3.1.0/cordova/accelerometer/accelerometer.html'}
 - {name: "C\xE1mara", url: !!python/unicode '/docs/es/3.1.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Captura', url: !!python/unicode '/docs/es/3.1.0/cordova/media/capture/capture.html'}

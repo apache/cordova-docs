@@ -11,6 +11,5 @@
 - {name: "Platform i Zarz\u0105dzanie wersjami plugin\xF3w", url: !!python/unicode '/docs/pl/edge/platform_plugin_versioning_ref/index.html'}
 - {name: !!python/unicode 'Magazyn', url: !!python/unicode '/docs/pl/edge/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Kolejne kroki', url: !!python/unicode '/docs/pl/edge/guide/next/index.html'}
-- {name: "Indeks s\u0142\xF3w kluczowych", url: !!python/unicode '/docs/pl/edge/_index.html'}
 - {name: !!python/unicode 'Wydarzenia', url: !!python/unicode '/docs/pl/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/pl/edge/cordova/plugins/pluginapis.html'}

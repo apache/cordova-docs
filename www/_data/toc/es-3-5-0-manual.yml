@@ -7,5 +7,4 @@
 - {name: "Gu\xEDa de privacidad", url: !!python/unicode '/docs/es/3.5.0/guide/appdev/privacy/index.html'}
 - {name: "Gu\xEDa Whitelist", url: !!python/unicode '/docs/es/3.5.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Almacenamiento', url: !!python/unicode '/docs/es/3.5.0/cordova/storage/storage.html'}
-- {name: "\xCDndice de palabras clave", url: !!python/unicode '/docs/es/3.5.0/_index.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/3.5.0/cordova/plugins/pluginapis.html'}
