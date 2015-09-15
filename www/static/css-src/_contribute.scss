@@ -16,7 +16,7 @@
     width:1em;
     background-image: url("{{ site.baseurl }}/static/img/bug_icon.svg");
     background-size: 2em 1em;
-    display: inline-block;   
+    display: inline-block;
 }
 
 a:hover .report-bug-icon {
@@ -33,6 +33,11 @@ a:hover .report-bug-icon {
     position: relative;
     list-style: none;
     margin-bottom: 16px;
+    padding-right: 80px;
+
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
 }
 
 .platforms-list li a {
@@ -47,17 +52,21 @@ a:hover .report-bug-icon {
     background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
     background-position: 3px -127px;
     background-color: #4cc2e4;
+    height: 36px;
 }
 .platforms-list li a.link-apache {
     right: 39px;
     background-position: 2px -94px;
 }
-.platforms-list li.first a {
-    width: 108px;
-}
-.platforms-list li.first a.link-apache {
-    width: 129px;
-    right: 111px;
+
+@media (min-width: 400px) {
+    .platforms-list li.first a {
+        width: 108px;
+    }
+    .platforms-list li.first a.link-apache {
+        width: 129px;
+        right: 111px;
+    }
 }
 .contribute-get-started-steps {
     list-style: none;
@@ -79,5 +88,5 @@ a:hover .report-bug-icon {
         color: white;
         margin-left:-40px;
         margin-right:19px;
-    }   
+    }
 }
