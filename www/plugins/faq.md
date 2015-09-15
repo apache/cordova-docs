@@ -21,6 +21,10 @@ Cordova team decided to change official plugin IDs from org.apache.cordova.* to 
 
 Plugin Search displays plugins in the form of cards. Each card contains important information about the plugin. Supported platforms are represented in the form of platform icons across the bottom of the card.
 
+## How can I identify official core plugins?
+
+Core plugins have a blue strip on the left side of their card.
+
 ## Can I still download plugins if I'm using Cordova CLI 4.3.0 or lower?
 
 Yes! You can use Cordova Plugins from the [old plugin registry](http://plugins.cordova.io/).
@@ -39,6 +43,3 @@ Yes there are. Please take a look at [Add Plugin Features]({{ site.baseurl }}/do
 ## I don't like X. How can I help improve the website?
 
 You can help improve this site by opening bugs on [JIRA](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20%3D%20Open%20AND%20component%20%3D%20%22Registry%20Web%22) or by sending PRs on [GitHub](https://github.com/apache/cordova-docs/tree/cordova-website).
-
-
-
