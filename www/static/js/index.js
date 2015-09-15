@@ -117,8 +117,8 @@ $(document).ready(function () {
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {
         if(this.hash) {
+
             // prevent default anchor click behavior
-            console.log('Scrolled to where you asked');
             e.preventDefault();
 
             // store hash
