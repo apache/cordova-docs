@@ -88,9 +88,5 @@ license: >
             <h2>ドメインホワイトリストガイド</h2>
             <span>アプリケーションに外部ドメインへのアクセス権を与えます。</span>
         </li>
-        <li>
-            <h2><a href="_index.html">索引</a></h2>
-            <span>Cordova ドキュメントの索引を見ます。</span>
-        </li>
     </ul>
 </div>

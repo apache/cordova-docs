@@ -80,9 +80,5 @@ license: >
             <h2>Getting Started Guides</h2>
             <span>Setup each SDK and create your first PhoneGap app.</span>
         </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the PhoneGap Documentation.</span>
-        </li>
     </ul>
 </div>

@@ -88,9 +88,5 @@ license: >
             <h2>Domain Whitelist Guide</h2>
             <span>Grant an application access to external domains.</span>
         </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the Cordova Documentation.</span>
-        </li>
     </ul>
 </div>

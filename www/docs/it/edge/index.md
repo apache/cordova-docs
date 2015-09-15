@@ -22,146 +22,139 @@ license: >
   <h1>
     Guide
   </h1>
-  
+
   <ul>
     <li>
       <h2>
         Panoramica
       </h2>
-      
+
       <span>Iniziare qui se siete nuovi a Cordova. Include installazione e prossimi passi.</span>
     </li>
     <li>
       <h2>
         Supporto di piattaforma
       </h2>
-      
+
       <span>Tabella di compatibilità per tutte le principali caratteristiche.</span>
     </li>
     <li>
       <h2>
         L'interfaccia della riga di comando
       </h2>
-      
+
       <span>Creare, costruire e distribuire dalla riga di comando.</span>
     </li>
     <li>
       <h2>
         Piattaforma guide
       </h2>
-      
+
       <span>Impostare ogni piattaforma SDK e aggiornare i progetti.</span>
     </li>
     <li>
       <h2>
         L'utilizzo di Plugman per gestire i plugin
       </h2>
-      
+
       <span>Gestire i plugin senza CLI quando si utilizza il flusso di lavoro basate su piattaforma.</span>
     </li>
     <li>
       <h2>
         Il File config. Xml
       </h2>
-      
+
       <span>Personalizzare le funzionalità della tua app.</span>
     </li>
     <li>
       <h2>
         Icone e Splash screen
       </h2>
-      
+
       <span>Personalizzare immagini visualizzazione dell'app.</span>
     </li>
     <li>
       <h2>
         Incorporamento visualizzazioni Web
       </h2>
-      
+
       <span>Implementare Cordova WebView nel progetto nativo.</span>
     </li>
     <li>
       <h2>
         Guida allo sviluppo di plugin
       </h2>
-      
+
       <span>Sviluppare il tuo plugin.</span>
     </li>
     <li>
       <h2>
         Guida sulla privacy
       </h2>
-      
+
       <span>Ulteriori informazioni su questioni di privacy mobile importante.</span>
     </li>
     <li>
       <h2>
         Guida alla sicurezza
       </h2>
-      
+
       <span>Informazioni e suggerimenti per la creazione di un'applicazione sicura.</span>
     </li>
     <li>
       <h2>
         Piattaforme e gestione plugin versione
       </h2>
-      
+
       <span>Salvare e ripristinare i progetti CLI uno stato noto senza fastidio.</span>
     </li>
     <li>
       <h2>
         Guida di whitelist
       </h2>
-      
+
       <span>Concedere l'accesso dell'applicazione alle risorse esterne.</span>
     </li>
     <li>
       <h2>
         Deposito
       </h2>
-      
+
       <span>Una panoramica delle opzioni di archiviazione nativa.</span>
     </li>
     <li>
       <h2>
         Guida di ganci
       </h2>
-      
+
       <span>Estendere funzionalità Cordova predefinita aggiungendo script personalizzati.</span>
     </li>
     <li>
       <h2>
         Prossimi passi
       </h2>
-      
+
       <span>Un'occhiata a argomenti che incontreranno nuovi sviluppatori di Cordova.</span>
     </li>
-    <li>
-      <h2>
-        <a href="_index.html">Indice delle parole chiave</a>
-      </h2>
-      
-      <span>Indice completo della documentazione di.</span>
-    </li>
   </ul>
-  
+
   <h1>
     Riferimento API
   </h1>
-  
+
   <ul>
     <li>
       <h2>
         Eventi
       </h2>
-      
+
       <span>Gancio in nativo degli eventi tramite JavaScript.</span>
     </li>
     <li>
       <h2>
         Plugin API
       </h2>
-      
+
       <span>Scopri quali Cordova plugin sono disponibili per utilizzare nel progetto.</span>
     </li>
   </ul>

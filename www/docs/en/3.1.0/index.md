@@ -54,10 +54,6 @@ license: >
             <h2>Whitelist Guide</h2>
             <span>Grant an application access to external resources.</span>
         </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the documentation.</span>
-        </li>
     </ul>
 
     <h1>API Reference</h1>

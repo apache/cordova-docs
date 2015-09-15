@@ -100,9 +100,5 @@ license: >
             <h2>WebView の埋め込み</h2>
             <span>Cordova WebView をプロジェクトで実装します。</span>
         </li>
-        <li>
-            <h2><a href="_index.html">索引</a></h2>
-            <span>Cordova ドキュメントの索引を見ます。</span>
-        </li>
     </ul>
 </div>

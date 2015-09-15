@@ -22,146 +22,139 @@ license: >
   <h1>
     Przewodniki
   </h1>
-  
+
   <ul>
     <li>
       <h2>
         Przegląd
       </h2>
-      
+
       <span>Zacznij tutaj, jeśli jesteś nowy w Cordova. Obejmuje instalację i następne kroki.</span>
     </li>
     <li>
       <h2>
         Obsługa platformy
       </h2>
-      
+
       <span>Tabela kompatybilności dla wszystkich głównych funkcji.</span>
     </li>
     <li>
       <h2>
         Interfejs wiersza poleceń
       </h2>
-      
+
       <span>Tworzyć, budować i wdrożyć z wiersza polecenia.</span>
     </li>
     <li>
       <h2>
         Platforma przewodników
       </h2>
-      
+
       <span>Umieszczaæ w górze każdej z platform SDK i aktualizacji projektów.</span>
     </li>
     <li>
       <h2>
         Za pomocą Plugman do zarządzania wtyczki
       </h2>
-      
+
       <span>Zarządzanie wtyczki bez CLI, przy użyciu przepływu pracy zorientowane na platformie.</span>
     </li>
     <li>
       <h2>
         Plik config.xml
       </h2>
-      
+
       <span>Dostosowywanie funkcji danej aplikacji.</span>
     </li>
     <li>
       <h2>
         Ikony i ekrany powitalne w aplikacjach
       </h2>
-      
+
       <span>Dostosuj wyświetlanie obrazów Twojej aplikacji.</span>
     </li>
     <li>
       <h2>
         Osadzanie WebViews
       </h2>
-      
+
       <span>Wdrożenie Cordova widoku sieci Web w macierzystym projektu.</span>
     </li>
     <li>
       <h2>
         Plugin rozwoju Przewodnik
       </h2>
-      
+
       <span>Rozwijać własne wtyczki.</span>
     </li>
     <li>
       <h2>
         Prywatności Przewodnik
       </h2>
-      
+
       <span>Dowiedz się więcej o ważne mobilnych prywatności.</span>
     </li>
     <li>
       <h2>
         Przewodnik bezpieczeństwa
       </h2>
-      
+
       <span>Informacje i porady dotyczące budowania aplikacji bezpieczne.</span>
     </li>
     <li>
       <h2>
         Platform i Zarządzanie wersjami pluginów
       </h2>
-      
+
       <span>Zapisać i przywrócić swoje projekty CLI w znanym stanie bez kłopotów.</span>
     </li>
     <li>
       <h2>
         Biała lista Przewodnik
       </h2>
-      
+
       <span>Udzielić dostępu do zasobów zewnętrznych aplikacji.</span>
     </li>
     <li>
       <h2>
         Magazyn
       </h2>
-      
+
       <span>Przegląd możliwości składowania macierzysty.</span>
     </li>
     <li>
       <h2>
         Haki Przewodnik
       </h2>
-      
+
       <span>Rozszerzenia domyślne Cordova funkcji przez dodanie niestandardowych skryptów.</span>
     </li>
     <li>
       <h2>
         Kolejne kroki
       </h2>
-      
+
       <span>Spojrzenie na tematy, które napotkają nowych deweloperów Cordova.</span>
     </li>
-    <li>
-      <h2>
-        <a href="_index.html">Indeks słów kluczowych</a>
-      </h2>
-      
-      <span>Pełny indeks dokumentacji.</span>
-    </li>
   </ul>
-  
+
   <h1>
     API Reference
   </h1>
-  
+
   <ul>
     <li>
       <h2>
         Wydarzenia
       </h2>
-      
+
       <span>Hak do wydarzeń native poprzez JavaScript.</span>
     </li>
     <li>
       <h2>
         Plugin API
       </h2>
-      
+
       <span>Odkryj, co wtyczek Cordova są dostępne do użycia w projekcie.</span>
     </li>
   </ul>
