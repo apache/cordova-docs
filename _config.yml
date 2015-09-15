@@ -20,19 +20,18 @@ repo:
 source:      www
 destination: build-dev
 
+# don't erase these files in the output directory
 keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 
-lsi: false
-safe: true
-highlighter: pygments
+lsi:  false # don't produce an index for related posts
+safe: true  # disables plugins
 
 markdown: kramdown
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
 
-# exclude directories from the build
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+# exclude these directories from the build
 exclude:
     - static/css-src
