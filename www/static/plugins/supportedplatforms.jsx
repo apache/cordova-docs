@@ -56,11 +56,17 @@ var SupportedPlatforms = React.createClass({
             }
         });
 
+        var that = this;
+
         sortedPlatforms.forEach(function(platform) {
             if(platform.present) {
                 // Becuase these images are taken from a sprite sheet, we have
                 // to use title rather than alt-text
-                platformsSupported.push(<li><div className={platform.icon} title={platform.alt}></div></li>)
+                platformsSupported.push(
+                    <li key={that.props.plugin + "-" + platform.alt}>
+                        <div className={platform.icon} title={platform.alt}></div>
+                    </li>
+                );
             }
         });
         return (
