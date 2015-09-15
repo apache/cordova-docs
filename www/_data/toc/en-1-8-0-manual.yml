@@ -1,3 +1,4 @@
+- {name: !!python/unicode 'API Reference', url: !!python/unicode '/docs/en/1.8.0/'}
 - {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/en/1.8.0/cordova/accelerometer/accelerometer.html'}
 - {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/en/1.8.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/en/1.8.0/cordova/media/capture/capture.html'}

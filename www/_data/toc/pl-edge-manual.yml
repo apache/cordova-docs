@@ -1,3 +1,4 @@
+- {name: !!python/unicode 'Przewodniki', url: !!python/unicode '/docs/pl/edge/'}
 - {name: "Przegl\u0105d", url: !!python/unicode '/docs/pl/edge/guide/overview/index.html'}
 - {name: "Interfejs wiersza polece\u0144", url: !!python/unicode '/docs/pl/edge/guide/cli/index.html'}
 - {name: "Platforma przewodnik\xF3w", url: !!python/unicode '/docs/pl/edge/guide/platforms/index.html'}

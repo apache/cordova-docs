@@ -1,3 +1,4 @@
+- {name: "API \u30EA\u30D5\u30A1\u30EC\u30F3\u30B9", url: !!python/unicode '/docs/ja/2.0.0/'}
 - {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/ja/2.0.0/cordova/accelerometer/accelerometer.html'}
 - {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/ja/2.0.0/cordova/camera/camera.html'}
 - {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/ja/2.0.0/cordova/media/capture/capture.html'}

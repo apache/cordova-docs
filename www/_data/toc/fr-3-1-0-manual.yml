@@ -1,3 +1,4 @@
+- {name: !!python/unicode 'Guides', url: !!python/unicode '/docs/fr/3.1.0/'}
 - {name: "Pr\xE9sentation", url: !!python/unicode '/docs/fr/3.1.0/guide/overview/index.html'}
 - {name: !!python/unicode 'L&apos;Interface de ligne de commande', url: !!python/unicode '/docs/fr/3.1.0/guide/cli/index.html'}
 - {name: !!python/unicode 'Guides de la plate-forme', url: !!python/unicode '/docs/fr/3.1.0/guide/platforms/index.html'}

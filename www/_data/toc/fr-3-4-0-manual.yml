@@ -1,3 +1,4 @@
+- {name: !!python/unicode 'Guides', url: !!python/unicode '/docs/fr/3.4.0/'}
 - {name: "Pr\xE9sentation", url: !!python/unicode '/docs/fr/3.4.0/guide/overview/index.html'}
 - {name: !!python/unicode 'Plateforme de Support', url: !!python/unicode '/docs/fr/3.4.0/guide/support/index.html'}
 - {name: !!python/unicode 'Guides de la plate-forme', url: !!python/unicode '/docs/fr/3.4.0/guide/platforms/index.html'}

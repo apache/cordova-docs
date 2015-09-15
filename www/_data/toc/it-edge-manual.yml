@@ -1,3 +1,4 @@
+- {name: !!python/unicode 'Guide', url: !!python/unicode '/docs/it/edge/'}
 - {name: !!python/unicode 'Panoramica', url: !!python/unicode '/docs/it/edge/guide/overview/index.html'}
 - {name: !!python/unicode 'Supporto di piattaforma', url: !!python/unicode '/docs/it/edge/guide/support/index.html'}
 - {name: !!python/unicode 'L&apos;interfaccia della riga di comando', url: !!python/unicode '/docs/it/edge/guide/cli/index.html'}

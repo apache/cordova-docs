@@ -1,3 +1,4 @@
+- {name: "Reisef\xFChrer", url: !!python/unicode '/docs/de/3.5.0/'}
 - {name: "\xDCbersicht", url: !!python/unicode '/docs/de/3.5.0/guide/overview/index.html'}
 - {name: "Plattformunterst\xFCtzung", url: !!python/unicode '/docs/de/3.5.0/guide/support/index.html'}
 - {name: !!python/unicode 'Die Befehlszeilenschnittstelle', url: !!python/unicode '/docs/de/3.5.0/guide/cli/index.html'}

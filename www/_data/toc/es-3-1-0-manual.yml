@@ -1,3 +1,4 @@
+- {name: "Gu\xEDas", url: !!python/unicode '/docs/es/3.1.0/'}
 - {name: !!python/unicode 'Perspectiva general', url: !!python/unicode '/docs/es/3.1.0/guide/overview/index.html'}
 - {name: "La interfaz de l\xEDnea de comandos", url: !!python/unicode '/docs/es/3.1.0/guide/cli/index.html'}
 - {name: "Gu\xEDas de plataforma", url: !!python/unicode '/docs/es/3.1.0/guide/platforms/index.html'}

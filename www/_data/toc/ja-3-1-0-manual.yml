@@ -1,3 +1,4 @@
+- {name: "\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/3.1.0/'}
 - {name: "\u6982\u8981", url: !!python/unicode '/docs/ja/3.1.0/guide/overview/index.html'}
 - {name: "\u30B3\u30DE\u30F3\u30C9 \u30E9\u30A4\u30F3 \u30A4\u30F3\u30BF\u30FC\u30D5\
     \u30A7\u30A4\u30B9", url: !!python/unicode '/docs/ja/3.1.0/guide/cli/index.html'}
