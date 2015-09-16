@@ -249,19 +249,14 @@ img#logo_top {
 					height:50px;
 					padding-bottom:10px;
 				}
-                &.tool {
-                    .text {
-                        height: 250px;
-                    }
+                &.tool .text {
+                    height: 250px;
                 }
-                &.app {
-                    .text {
-                        height: 100px;
-                    }
+                &.app .text {
+                    height: 100px;
                 }
 			}
 			.showcase_app_thumb {
-				background-color: #AD6E6E;
                 width: 100%;
                 height: 100px;
                 img {
@@ -271,21 +266,23 @@ img#logo_top {
 		}
 }
 /* make cards smaller on smaller screens */
-@media (max-width: 767px) {
-    .card_gallery {
-        .card {
-            .card_inner {
-                &.tool {
-                    .text {
-                        height: 100px;
-                    }
-                }
-                &.app {
-                    .text {
-                        height: 50px;
-                    }
-                }
-            }
+@media (max-width: $screen-lg-min) {
+    .card_gallery .card .card_inner {
+        &.tool .text {
+            height: 120px;
+        }
+        &.app .text {
+            height: 70px;
+        }
+    }
+}
+@media (max-width: $screen-md-min) {
+    .card_gallery .card .card_inner {
+        &.tool .text {
+            height: 100px;
+        }
+        &.app .text {
+            height: 50px;
         }
     }
 }

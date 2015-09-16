@@ -7,7 +7,7 @@
     </div>
     <div class="row card_gallery">
         {% for tool in site.data.tools %}
-        <div class="col-lg-2 col-sm-4 card">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
             <div class="tool card_inner">
                 <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
                 <p class="card_title">
@@ -44,7 +44,7 @@
     </div>
     <div class="row card_gallery">
         {% for app in site.data.showcase-apps %}
-        <div class="col-lg-2 col-sm-4 card">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
             <div class="showcase_app_thumb">
                 <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
             </div>
