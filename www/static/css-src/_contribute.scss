@@ -29,45 +29,98 @@ a:hover .report-bug-icon {
 
 .list li {
     background:$gray-10;
-    padding: 8px;
     position: relative;
     list-style: none;
     margin-bottom: 16px;
-    padding-right: 80px;
 
     white-space:nowrap;
     text-overflow:ellipsis;
     overflow: hidden;
 }
 
-.platforms-list li a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    -webkit-transition: background 0.25s linear;
-    -moz-transition: background 0.25s linear;
-    transition: background 0.25s linear;
-    width: 36px;
-    background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
-    background-position: 3px -127px;
-    background-color: #4cc2e4;
-    height: 36px;
-}
-.platforms-list li a.link-apache {
-    right: 39px;
-    background-position: 2px -94px;
+.platforms-list {
+    li {
+        a {
+            float: right;
+            -webkit-transition: background 0.25s linear;
+            -moz-transition: background 0.25s linear;
+            transition: background 0.25s linear;
+            width: 36px;
+            background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
+            background-position: 3px -127px;
+            background-color: #4cc2e4;
+            height: 36px;
+        }
+
+        a.link-apache {
+            background-position: 2px -94px;
+            margin-right: 3px;
+        }
+
+        a.link-github {
+            background-position: 3px -127px;
+        }
+
+        .project-label {
+            margin: 8px -8px 8px 8px;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        li.first {
+            a.link-apache {
+                width: 115px;
+            }
+
+            a.link-github {
+                width: 90px;
+            }
+
+            .project-label {
+                width: 35%;
+            }
+
+            .project-links {
+                width: 65%;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        li {
+            a {
+                display: inline-block;
+                float: none;
+            }
+
+            a.link-apache {
+                background-position: 2px -94px;
+                width: 108px;
+                margin-right: 3px;
+            }
+
+            a.link-github {
+                background-position: 3px -127px;
+                width: 90px;
+            }
+
+            .project-label{
+                text-align: center;
+                padding: 12px;
+                margin: 0px;
+            }
+
+            .link-box {
+                width: 49.5%;
+                display: inline-block;
+                text-align: center;
+                background-color: $brand-primary;
+                padding-top: 4px;
+            }
+        }
+    }
 }
 
-@media (min-width: 400px) {
-    .platforms-list li.first a {
-        width: 108px;
-    }
-    .platforms-list li.first a.link-apache {
-        width: 129px;
-        right: 111px;
-    }
-}
 .contribute-get-started-steps {
     list-style: none;
     counter-reset: contribute-steps-counter;
