@@ -5,10 +5,10 @@
             <h2>Work with Cordova even more efficiently</h2>
         </div>
     </div>
-    <div class="row cordova_tools_gallery">
+    <div class="row card_gallery">
         {% for tool in site.data.tools %}
-        <div class="col-lg-2 col-sm-4 card">
-            <div class="card_inner">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
+            <div class="tool card_inner">
                 <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
                 <p class="card_title">
                     {% if tool.url %}
@@ -19,8 +19,8 @@
                         {{ tool.name }}
                     {% endif %}
                 </p>
-                <p>
-                    {{ tool.description | truncatewords:50 }}
+                <p class="text">
+                    {{ tool.description | strip_html | truncate:255 }}
                 </p>
             </div>
         </div>
@@ -42,13 +42,13 @@
             <h2>See other apps that use Cordova</h2>
         </div>
     </div>
-    <div class="row cordova_tools_gallery">
+    <div class="row card_gallery">
         {% for app in site.data.showcase-apps %}
-        <div class="col-lg-2 col-sm-4 card">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
             <div class="showcase_app_thumb">
                 <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
             </div>
-            <div class="card_inner">
+            <div class="app card_inner">
                 <p class="card_title">
                     {% if app.url %}
                         <a href="{{ app.url }}">
@@ -58,7 +58,7 @@
                         {{ app.name }}
                     {% endif %}
                 </p>
-                <p>{{ app.description | truncatewords:20 }}</p>
+                <p class="text">{{ app.description | strip_html | truncate:200 }}</p>
             </div>
         </div>
         {% endfor %}
