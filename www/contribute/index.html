@@ -57,9 +57,19 @@ title: Apache Cordova Plugins
                 {% endif %}
 
                 <li class="{{ itemClass }}">
-                    {{ project.project }}
-                    <a class="link-apache" target="_blank" href="{{ project.apache }}"></a>
-                    <a class="link-github" target="_blank" href="{{ project.mirror }}"></a>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 project-label">
+                            {{ project.project }}
+                        </div>
+                        <div class="col-xs-12 col-sm-4 project-links">
+                            <div class="link-box">
+                                <a class="link-github" target="_blank" href="{{ project.mirror }}"></a>
+                            </div>
+                            <div class="link-box">
+                                <a class="link-apache" target="_blank" href="{{ project.apache }}"></a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 {% endfor %}
             </ul>
