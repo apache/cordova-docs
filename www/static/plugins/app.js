@@ -482,7 +482,7 @@ var App = React.createClass({
                 </div>
                 {listContent}
                 <div className="row plugin-search-credit">
-                    Search results powered by <a href="http://npmsearch.com/">npmsearch.com</a>
+                    Search results powered by <a target="_blank" href="http://npmsearch.com/">npmsearch.com</a>
                 </div>
             </div>
         );
