@@ -11,7 +11,7 @@ html {
 
 #hero {
 	height:1020px;
-	background-color:$gray-transparent;
+	background-color: $gray-transparent;
     background-image: url("{{ site.baseurl }}/static/img/wisplight.jpg");
     background-size: cover;
 	position:relative;
@@ -40,12 +40,26 @@ html {
 			    font-weight: bold;
 			}
 		}
+        .btn {
+            margin-bottom: 3px;
+        }
 	}
 	.hero_logo {
 		width:100%;
 		padding-top:40px;
 		padding-bottom:20px;
 	}
+}
+
+@media (min-width: $screen-sm-min) {
+    #hero #hero_section .btn + .btn {
+        margin-left: 3px;
+    }
+}
+@media (max-width: $screen-xs-max) {
+    #hero #hero_section_right p {
+        margin-bottom: 20px;
+    }
 }
 
 #hero_bottom_strip {

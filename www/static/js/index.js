@@ -79,8 +79,7 @@ function checkNotification() {
     var dates = [];
     if (lastVisit != "") {
         {% for post in site.posts %}
-            dates.push('{{ post.date | date_to_rfc822 }}');
-        {% endfor %}
+        dates.push('{{ post.date | date_to_rfc822 }}');{% endfor %}
     }
     var new_blog_count = 0;
     for(var i = 0; i < dates.length ; i++) {
