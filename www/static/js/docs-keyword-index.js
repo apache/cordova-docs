@@ -17,10 +17,15 @@ var createHeader = function() {
     return header;
 }
 
+// pageTitle is defined in docs_index.html
+var pageTitleTag = document.getElementById("keyword-index-page-title");
+pageTitleTag.textContent = pageTitle;
+
 var container = document.getElementById("keyword-index-container");
 var currentLetter = null;
 var currentList = null;
 
+// keywordIndex is defined in docs_index.html
 keywordIndex.forEach(function(entry) {
     // Create a separate sublist for each letter
     if(currentLetter !== entry.name.charAt(0).toUpperCase()) {
