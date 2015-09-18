@@ -17,6 +17,12 @@ html {
     background-size: cover;
 	position:relative;
 	color:white;
+
+	.row {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
 	#hero_section {
 		width:80%;
 		max-width:730px;
@@ -27,6 +33,7 @@ html {
 		.cordova-bot {
             text-align: center;
             img {
+				max-width: 275px;
                 width: 100%;
             }
 		}
@@ -59,8 +66,10 @@ html {
         }
     }
 }
+
 @media (max-width: $screen-xs-max) {
     #hero {
+		min-height: 620px;
         height: 100%;
         .hero_content p {
             margin-bottom: 20px;
