@@ -10,7 +10,8 @@ html {
 }
 
 #hero {
-	height:1020px;
+	min-height: 500px;
+    height: 70%;
 	background-color: $gray-transparent;
     background-image: url("{{ site.baseurl }}/static/img/wisplight.jpg");
     background-size: cover;
@@ -20,17 +21,17 @@ html {
 		width:80%;
 		max-width:730px;
 		font-size:18px;
-		margin-top:-100px;  /* vertically centers more accuaretly since bottom bar is absolutely positioned*/
 		> div {
 			display: inline-block;
 		}
-		#hero_section_left {
-			width:39%;
-			vertical-align: top;
+		.cordova-bot {
+            text-align: center;
+            img {
+                width: 100%;
+            }
 		}
 
-		#hero_section_right {
-			width:59%;
+		.hero_content {
 			div {
 				padding-bottom:20px;
 			}
@@ -52,25 +53,32 @@ html {
 }
 
 @media (min-width: $screen-sm-min) {
-    #hero #hero_section .btn + .btn {
-        margin-left: 3px;
+    #hero {
+        #hero_section .btn + .btn {
+            margin-left: 3px;
+        }
     }
 }
 @media (max-width: $screen-xs-max) {
-    #hero #hero_section_right p {
-        margin-bottom: 20px;
+    #hero {
+        height: 100%;
+        .hero_content p {
+            margin-bottom: 20px;
+        }
+        #hero_section .cordova-bot {
+            img {
+                width: 60%;
+            }
+        }
     }
 }
 
 #hero_bottom_strip {
-    position: absolute;
-    top: 100%;
     min-height: 200px;
-    background-color: rgba(128,128,128,.15);
+    background-color: rgb(42,42,42);
+    color: white;
     width: 100%;
     margin: 0;
-    /* margin-top: -200px; */ /* Less responsive */
-	@include vendor-prefix(transform, translateY(-100%));
 
 	.container {
 		padding-top:55px;
@@ -92,15 +100,16 @@ html {
 .value_prop {
 	max-width: 146px;
 	height: 4em;
-	div, p {
+	p {
 		top:50%;
 		position: relative;
 		transform: translateY(-50%);
+        padding-left: 10px;
 	}
 }
 
 @media (max-width: 767px) {
-	#hero #hero_section #hero_section_right { width:100%; }
+	#hero #hero_section .hero_content { width:100%; }
 	#hero_bottom_strip {
 		min-height: initial;
 		.container {
@@ -188,7 +197,7 @@ img#logo_top {
 	padding-bottom:19px + 50px;
 	position:relative;
 	background-color: $gray-10;
-	margin-top:46px;
+	margin-top:25px;
 	div {
 		@extend .well_code;
 		position: absolute;

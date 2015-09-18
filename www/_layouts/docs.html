@@ -34,7 +34,7 @@ analytics_id: UA-64283057-1
     </div>
 
     <!-- Page content -->
-    <div id="page-toc-source" class="col-md-8 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-1">
 
         <!-- ToC Dropdown (for XS and SM sizes only) -->
         <div class="toc-dropdown content-header visible-xs-block visible-sm-block">
@@ -91,23 +91,31 @@ analytics_id: UA-64283057-1
                             The page will exist because it's for the same version.
                              -->
                             <a href="{{ site.baseurl }}{{ page.url | replace:current_language_path,target_language_path }}">
+                                {% if page.language == language_id %}
+                                    <span class="selected">
+                                        {{ language.name }}
+                                    </span>
+                                {% else %}
+                                    {{ language.name }}
+                                {% endif %}
+                            </a>
+                        </li>
                     {% else %}
 
                         <!-- Disable languages that don't have this version -->
                         <li class="disabled">
                             <a class="missing-version">
+                                {% if page.language == language_id %}
+                                    <span class="selected">
+                                        {{ language.name }}
+                                    </span>
+                                {% else %}
+                                    {{ language.name }}
+                                {% endif %}
+                            </a>
+                        </li>
                     {% endif %}
 
-                    {% if page.language == language_id %}
-                        <span class="selected">
-                            {{ language.name }}
-                        </span>
-                    {% else %}
-                        {{ language.name }}
-                    {% endif %}
-
-                        </a>
-                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -162,8 +170,9 @@ analytics_id: UA-64283057-1
         -->
         {% endif %}
 
-        {{ content }}
-
+        <div id="page-toc-source">
+            {{ content }}
+        </div>
     </div>
 </div>
 

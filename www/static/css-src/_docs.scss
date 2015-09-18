@@ -1,6 +1,13 @@
 .docs {
     margin-bottom: 20px;
 
+    /* this is so that wide images don't stick out of their paragraphs */
+    p {
+        img {
+            width: 100%;
+        }
+    }
+
     .site-toc-title {
         font-weight: 300;
         font-size: 22px;

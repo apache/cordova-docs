@@ -10,11 +10,11 @@ permalink: /
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div id="hero">
     <div class="container vertical-center-parent">
-        <div id="hero_section" class="vertical-center-child">
-            <div id="hero_section_left" class="hidden-xs">
-                <img src="{{ site.baseurl }}/static/img/cordova_bot.png" style="width:100%" />
+        <div id="hero_section" class="row vertical-center-child">
+            <div class="col-xs-12 col-sm-5 cordova-bot">
+                <img src="{{ site.baseurl }}/static/img/cordova_bot.png" />
             </div>
-            <div id="hero_section_right">
+            <div class="col-xs-12 col-sm-7 hero_content">
                 <img class="hero_logo hidden-xs" src="{{ site.baseurl }}/static/img/logo_text.svg" />
                 <!-- <img class="hero_logo visible-xs" src="{{ site.baseurl }}/static/img/logo_full_2.svg" /> -->
                 <p>Native mobile apps with HTML, CSS & JavaScript</p>
@@ -34,26 +34,26 @@ permalink: /
             </div>
         </div>
     </div>
-    <div id="hero_bottom_strip">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
-                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Reusable code across platforms</p></div></div>
-                    </div>
+</div>
+<div id="hero_bottom_strip">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_shared_code"></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Reusable code across platforms</p></div></div>
                 </div>
-                <div class="col-xs-4">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_offline"></div></div>
-                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Support for offline scenarios</p></div></div>
-                    </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_offline"></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Support for offline scenarios</p></div></div>
                 </div>
-                <div class="col-xs-4">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_apis"></div></div>
-                        <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Access native Device APIs</p></div></div>
-                    </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3"><div class="sprite_img" id="sprite_apis"></div></div>
+                    <div class="col-sm-8 col-md-9"><div class="value_prop"><p>Access native Device APIs</p></div></div>
                 </div>
             </div>
         </div>
@@ -70,14 +70,14 @@ permalink: /
     </div>
     <!-- GETTING STARTED -->
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-xs-2">
             <div class="number_circle">1</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-10">
             <h2>Installing Cordova</h2>
             <p>Cordova command-line runs on <a target="_blank" href="http://nodejs.org/">Node.js</a> and is available on <a target="_blank" href="https://npmjs.org/package/cordova">NPM</a>. Follow <a href="{{ site.baseurl }}/docs/en/edge/guide/platforms/">platform specific guides</a> to install additional platform dependencies. Open a command prompt or Terminal, and type <code>npm install -g cordova</code>.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-npm-install-text">Copy</button>
@@ -88,15 +88,15 @@ permalink: /
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-xs-2">
             <div class="number_circle">2</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-10">
             <h2>Create a project</h2>
             <p>Create a blank Cordova project using the command-line tool.  Navigate to the directory where you wish to create your project and type <code>cordova create &lt;path&gt;</code>.</p>
             <p>For a complete set of options, type <code>cordova help create</code>.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-create-text">Copy</button>
@@ -107,16 +107,16 @@ permalink: /
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-xs-2">
             <div class="number_circle">3</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-10">
             <h2>Add a platform</h2>
             <p>After creating a Cordova project, navigate to the project directory.  From the project directory, you need to add a platform for which you want to build your app.</p>
             <p>To add a platform, type <code>cordova platform add &lt;platform name&gt;</code>.</p>
             <p>For a complete list of platforms you can add, run <code>cordova platform</code>.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-platform-add-text">Copy</button>
@@ -128,14 +128,14 @@ permalink: /
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-xs-2">
             <div class="number_circle">4</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-10">
             <h2>Run your app</h2>
             <p>From the command line, run <code>cordova run &lt;platform name&gt;</code>.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
             <div class="well_code">
                 <div>
                     <button type="button" class="btn btn btn-primary pull-right btn-copy" data-clipboard-target="copy-cordova-run-text">Copy</button>
@@ -146,10 +146,10 @@ permalink: /
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-xs-2">
             <div class="number_circle">5</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-xs-10">
             <h2>Common next steps</h2>
             <ul class="nav">
                 <li>
@@ -166,7 +166,7 @@ permalink: /
                 </li>
             </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12">
         </div>
     </div>
 </div>
