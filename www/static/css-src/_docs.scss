@@ -101,6 +101,15 @@
         color: gray !important;
     }
 
+    .keyword-index-list {
+        list-style: none;
+
+        .keyword-index-sublist {
+            min-height: 180px;
+            list-style: none;
+        }
+    }
+
     /* Formatting for compatibility table on plugin docs page */
     .compat {
         td {

@@ -1,0 +1,19 @@
+<h1>Keyword Index</h1>
+
+<div id="keyword-index-container" class="keyword-index-list row"></div>
+
+<script>
+var keywordIndex = [
+{% for entry in site.data.toc[page.generated_toc] %}
+    {
+        url: "{{ site.baseurl }}{{ entry.url }}",
+        name: "{{entry.name}}"
+    }
+    {% if forloop.last != true %}
+    ,
+    {% endif %}
+{% endfor %}
+];
+</script>
+
+<script defer type="text/javascript" src="{{ site.baseurl }}/static/js/docs-keyword-index.js"></script>
