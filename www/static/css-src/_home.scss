@@ -42,10 +42,18 @@ html {
 			div {
 				padding-bottom:20px;
 			}
-			.platforms_more {
-		    	font-size: 12px;
-			    padding-left: 20px;
-			    font-weight: bold;
+			.hero_supported_platforms {
+				img {
+					margin-right: 15px;
+				}
+				.platforms_more {
+					font-size: 12px;
+					font-weight: bold;
+					white-space: nowrap;
+					display: inline-block;
+					margin-top: 10px;
+					padding-left: 5px;
+				}
 			}
 		}
         .btn {
