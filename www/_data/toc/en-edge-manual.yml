@@ -17,3 +17,4 @@
 - {name: !!python/unicode 'Next Steps', url: !!python/unicode '/docs/en/edge/guide/next/index.html'}
 - {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/en/edge/cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/edge/page_index.html'}

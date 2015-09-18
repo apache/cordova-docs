@@ -25,3 +25,4 @@
 - {name: !!python/unicode 'Benachrichtigung', url: !!python/unicode '/docs/de/3.1.0/cordova/notification/notification.html'}
 - {name: !!python/unicode 'SplashScreen', url: !!python/unicode '/docs/de/3.1.0/cordova/splashscreen/splashscreen.html'}
 - {name: !!python/unicode 'Speicher', url: !!python/unicode '/docs/de/3.1.0/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/3.1.0/page_index.html'}

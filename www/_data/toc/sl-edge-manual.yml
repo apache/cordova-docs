@@ -13,3 +13,4 @@
 - {name: !!python/unicode 'Shranjevanje', url: !!python/unicode '/docs/sl/edge/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Dogodki', url: !!python/unicode '/docs/sl/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/sl/edge/cordova/plugins/pluginapis.html'}
+- {name: "Klju\u010Dne besede kazalo", url: !!python/unicode '/docs/sl/edge/page_index.html'}
