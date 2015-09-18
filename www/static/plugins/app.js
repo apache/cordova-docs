@@ -78,9 +78,7 @@ var App = React.createClass({
                 previousState.staticFilters[keyword].push(condition);
             }
 
-            delay(function(){
-                App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
-            }, INPUT_DELAY);
+            App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
 
             return {
                 staticFilters: previousState.staticFilters,
@@ -462,7 +460,7 @@ var App = React.createClass({
                     <div className="row filter-by-platforms">
                         <div className="col-sm-9">
                             <div className="filter-by-platform-label"><span>Must Support Platform(s):</span></div>
-                            <ul className="nav nav-pills filter-by-platform-filters">
+                            <div className="filter-by-platform-filters">
                                 {createPlatformButton("Android", "cordova-android", this.state)}
                                 {createPlatformButton("iOS", "cordova-ios", this.state)}
                                 {createPlatformButton("Windows", "cordova-windows", this.state)}
@@ -472,7 +470,7 @@ var App = React.createClass({
                                 {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
                                 {createPlatformButton("WP8", "cordova-wp8", this.state)}
                                 {createPlatformButton("Browser", "cordova-browser", this.state)}
-                            </ul>
+                            </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="plugin-results-number">{this.state.searchResults.length} result(s) found</div>
