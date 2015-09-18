@@ -66,6 +66,10 @@
 .filter-by-platform-filters {
 	display: inline-block;
 	button.btn {
+		margin-bottom: 2px;
+		margin-right: 2px;
+		width: 120px;
+
 		&.btn-primary {
 			background-color: $brand-primary;
 		}
