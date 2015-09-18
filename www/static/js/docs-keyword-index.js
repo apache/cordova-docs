@@ -11,6 +11,12 @@ var createLink = function(href, text) {
     return a;
 }
 
+var createHeader = function() {
+    var header = document.createElement("div");
+    header.setAttribute("class", "keyword-index-h2");
+    return header;
+}
+
 var container = document.getElementById("keyword-index-container");
 var currentLetter = null;
 var currentList = null;
@@ -19,7 +25,7 @@ keywordIndex.forEach(function(entry) {
     // Create a separate sublist for each letter
     if(currentLetter !== entry.name.charAt(0).toUpperCase()) {
         if(currentList) {
-            var letterHeader = document.createElement("h2");
+            var letterHeader = createHeader();
             letterHeader.textContent = currentLetter;
 
             var letterSection = document.createElement("div");

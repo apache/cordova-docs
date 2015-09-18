@@ -14,3 +14,4 @@
 - {name: !!python/unicode 'Kolejne kroki', url: !!python/unicode '/docs/pl/edge/guide/next/index.html'}
 - {name: !!python/unicode 'Wydarzenia', url: !!python/unicode '/docs/pl/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin API', url: !!python/unicode '/docs/pl/edge/cordova/plugins/pluginapis.html'}
+- {name: "Indeks s\u0142\xF3w kluczowych", url: !!python/unicode '/docs/pl/edge/page_index.html'}

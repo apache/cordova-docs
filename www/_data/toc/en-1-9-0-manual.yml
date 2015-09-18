@@ -17,3 +17,4 @@
 - {name: !!python/unicode 'Upgrading Guides', url: !!python/unicode '/docs/en/1.9.0/guide/upgrading/index.html'}
 - {name: !!python/unicode 'Domain Whitelist Guide', url: !!python/unicode '/docs/en/1.9.0/guide/whitelist/index.html'}
 - {name: !!python/unicode 'Embedding WebView', url: !!python/unicode '/docs/en/1.9.0/guide/cordova-webview/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.9.0/page_index.html'}

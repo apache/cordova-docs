@@ -15,3 +15,4 @@
 - {name: "Die n\xE4chsten Schritte", url: !!python/unicode '/docs/de/edge/guide/next/index.html'}
 - {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/edge/cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/edge/page_index.html'}
