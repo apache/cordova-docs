@@ -107,12 +107,31 @@ Finally, go into the cordova-website directory and commit *all* the changes intr
 Adding a Tool or a Showcase App
 ===============================
 
-To add an item to the **Codorva Tools** or the **Cordova App Showcase** sections on the main page, follow these steps:
+Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the main page are modifiable by the public. Below are the guidelines and process to do so.
+
+## Guidelines
+
+The display image shall:
+
+1. be less than 128KiB in size (NOTE: those are kibibytes, not kilobytes),
+2. contain the app’s logo, and
+3. use colors that don’t compete with other elements on the page.
+
+The description shall:
+
+1. be no more than 130 characters long, and
+2. contain neutral and non-advertising language.
+
+The name shall:
+
+1. be no more than 40 characters long.
+
+## Process
 
 1. Change the section's YAML file:
     - `www/_data/tools.yml` for Cordova Tools, or
     - `www/_data/showcase-apps.yml` for Cordova App Showcase.
-1. Optionally add an image (the image must be **less than 256KiB** in size):
+1. Optionally add an image:
     1. Place the image in the section's `img` directory:
         - `www/static/img/tools` for Cordova Tools, or
         - `www/static/img/showcase-apps` for Cordova App Showcase.
