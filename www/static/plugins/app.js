@@ -4,7 +4,8 @@ var React           = window.React = require('react'), // assign it to window fo
     PlatformButton  = require('./platformbutton.jsx')
     App             = {},
     SortDropdown = require('./sortdropdown.jsx'),
-    SortCriteria = require('./SortCriteria');
+    SortCriteria = require('./SortCriteria'),
+    ZeroClipboard = require("../js/lib/ZeroClipboard.js");
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -41,6 +42,7 @@ var App = React.createClass({
             searchResults: [],
             staticFilters: staticFilters,
             sortCriteria: sortBy,
+            flashEnabled: true,
             downloadsReceived: false
         }
 
@@ -293,6 +295,14 @@ var App = React.createClass({
             ga('send', 'pageview', '/index.html' + query);
         },
     },
+    componentWillMount: function() {
+        var that = this;
+        ZeroClipboard.config({swfPath: "{{ site.baseurl }}/static/js/lib/ZeroClipboard.swf"});
+        ZeroClipboard.on({
+            "ready": function(event) {that.setState({ flashEnabled: true });},
+            "error": function(event) {that.setState({ flashEnabled: false });}
+        });
+    },
     componentDidMount: function() {
         var plugins = [],
             officialPlugins = require('./official-plugins.json').plugins,
@@ -421,7 +431,7 @@ var App = React.createClass({
         }
         var listContent = null;
         if(window.location.protocol !== "https:") {
-            listContent = <PluginList plugins={this.state.searchResults} />;
+            listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
         } else {
             var httpUrl = window.location.href.replace("https://", "http://");
             listContent = <div className="alert alert-warning" role="alert">Search results are not currently supported over HTTPS. Please visit this page <a href={httpUrl}>using HTTP</a></div>;

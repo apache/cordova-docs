@@ -53,7 +53,7 @@ var PluginList = React.createClass({
             } else {
                 for (var i = 0; i < InitialPageLength + this.state.searchPage * PageExtensionLength; i++) {
                     if (plugins[i]) {
-                        visiblePlugins.push(<Plugin plugin={plugins[i]} key={i}/>);
+                        visiblePlugins.push(<Plugin plugin={plugins[i]} key={i} flashEnabled={this.props.flashEnabled}/>);
                     } else {
                         break;
                     }
