@@ -170,6 +170,12 @@ hr.results-divider-line {
 	border-color:$gray-20;
 }
 
+.cordova-add-command {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+}
+
 .results-supported-platforms {
                 list-style: none;
                 padding:0;
