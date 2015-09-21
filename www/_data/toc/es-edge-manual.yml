@@ -15,3 +15,4 @@
 - {name: "Ganchos de gu\xEDa", url: !!python/unicode '/docs/es/edge/guide/appdev/hooks/index.html'}
 - {name: !!python/unicode 'Eventos', url: !!python/unicode '/docs/es/edge/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/edge/cordova/plugins/pluginapis.html'}
+- {name: "\xCDndice de palabra clave", url: !!python/unicode '/docs/es/edge/page_index.html'}

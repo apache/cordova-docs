@@ -9,3 +9,4 @@
 - {name: "Gu\xEDa Whitelist", url: !!python/unicode '/docs/es/3.4.0/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Almacenamiento', url: !!python/unicode '/docs/es/3.4.0/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/es/3.4.0/cordova/plugins/pluginapis.html'}
+- {name: "\xCDndice de palabras clave", url: !!python/unicode '/docs/es/3.4.0/page_index.html'}

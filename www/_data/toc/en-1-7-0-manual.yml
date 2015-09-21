@@ -13,3 +13,4 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/en/1.7.0/cordova/notification/notification.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/1.7.0/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode '/docs/en/1.7.0/guide/getting-started/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.7.0/page_index.html'}

@@ -20,3 +20,4 @@
 - {name: "\u30C9\u30E1\u30A4\u30F3\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u30AC\
     \u30A4\u30C9", url: !!python/unicode '/docs/ja/2.1.0/guide/whitelist/index.html'}
 - {name: "WebView \u306E\u57CB\u3081\u8FBC\u307F", url: !!python/unicode '/docs/ja/2.1.0/guide/cordova-webview/index.html'}
+- {name: "\u7D22\u5F15", url: !!python/unicode '/docs/ja/2.1.0/page_index.html'}
