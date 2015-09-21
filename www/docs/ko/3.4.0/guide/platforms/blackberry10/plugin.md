@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 10 플러그인
 ---
 
 # 블랙베리 10 플러그인
