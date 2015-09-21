@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Vodnik za platformo Windows Phone 7
 ---
 
 # Vodnik za platformo Windows Phone 7

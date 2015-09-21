@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 Guía de herramientas de Shell
 ---
 
 # BlackBerry 10 Guía de herramientas de Shell

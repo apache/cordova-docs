@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 화이트 리스트 가이드
 ---
 
 # 화이트 리스트 가이드

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 配置 VMWare 融合
 ---
 
 # 配置 VMWare 融合

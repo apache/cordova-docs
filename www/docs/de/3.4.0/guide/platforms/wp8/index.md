@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch für die Plattform von Windows Phone-8
 ---
 
 # Handbuch für die Plattform von Windows Phone-8
