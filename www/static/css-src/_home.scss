@@ -91,15 +91,14 @@ html {
 }
 
 #hero_bottom_strip {
-    min-height: 200px;
     background-color: rgb(42,42,42);
     color: white;
     width: 100%;
     margin: 0;
 
 	.container {
-		padding-top:55px;
-		padding-bottom:55px;
+		padding-top:30px;
+		padding-bottom:30px;
 		font-size: 18px;
 	}
 	.sprite_img {
@@ -130,8 +129,8 @@ html {
 	#hero_bottom_strip {
 		min-height: initial;
 		.container {
-			padding-top: 10px;
-			padding-bottom: 20px;
+			padding-top: 15px;
+			padding-bottom: 30px;
 			font-size: 1em;
 			text-align: center;
 		}
