@@ -167,4 +167,11 @@ $(document).ready(function () {
     $("#jira-search-box").on("keypress", function searchKeypressEventHandler (e) {
         if(e.keyCode == 13) submitJiraSearchForm();
     });
+
+    // add prettyprint class to code blocks for prettify.js
+    var all_code = $('pre');
+    all_code.attr('class', 'prettyprint');
+
+    // run syntax highlighter
+    prettyPrint();
 });

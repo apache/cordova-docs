@@ -125,11 +125,15 @@ h2 {
 	background-color: $brand-primary;
 }
 
-/*
-code {
-    color: rgb(133, 133, 133);
+/* fixing prettyprint formatting */
+pre.prettyprint {
+    padding: 10px !important;
+    font-size: 13px !important;
+    border: 1px solid #cccccc !important;
 }
-*/
+code.prettyprint {
+    border: none !important;
+}
 
 @import 'home';
 @import 'blog';
