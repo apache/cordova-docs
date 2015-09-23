@@ -9,39 +9,49 @@
     image: phonegap.svg
     url: http://phonegap.com/
     description: >
-        PhoneGap is the original and most popular distribution of Apache Cordova. Turn your HTML, CSS and JavaScript into an app on your device in minutes using our simple <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/">desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">developer</a> apps.
+        PhoneGap is the original and most popular distribution of Apache
+        Cordova. Turn your HTML, CSS and JavaScript into an app on your
+        device in minutes using our simple <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/">
+        desktop</a> and <a href="http://docs.phonegap.com/references/developer-app/">
+        developer</a> apps.
 
 -   name: Ionic
     image: ionic.png
     url: http://ionicframework.com/
     description: >
-        Ionic is a front-end SDK for building cross-platform mobile apps. Built on
-        top of Angular, Ionic also provides a platform  for integrating services like
-        push notifications and analytics.
+        Ionic is a front-end SDK for building cross-platform mobile apps.
+        Built on top of Angular, Ionic also provides a platform for
+        integrating services like push notifications and analytics.
 
 -   name: Monaca
     image: monaca.png
     url: https://monaca.io/
     description: >
-        Comprehensive cloud-powered and framework-agnostic set of tools 
-        Monaca supports both online and offline development, debugging with live-reload feature and cloud build experience.
+        Comprehensive cloud-powered and framework-agnostic set of tools
+        Monaca supports both online and offline development, debugging with
+        live-reload feature and cloud build experience.
 
 -   name: Onsen UI
     image: onsen.png
     url: http://onsen.io/
     description: >
-        Custom Elements-based HTML5 framework offers a large selection of components and responsive layout support.
-        Onsen UI lets you create professionally designed multiplatform apps without acquiring additional skillset.
+        Custom Elements-based HTML5 framework offers a large selection of
+        components and responsive layout support. Onsen UI lets you create
+        professionally designed multiplatform apps without acquiring additional
+        skillset.
 
 -   name: Visual Studio
     image: visual_studio_white.png
     url: http://aka.ms/cordova
     description: >
-        Popular IDE for building cross-platform apps for Android, iOS, and Windows. Complete with advanced build and debugging support.
+        Popular IDE for building cross-platform apps for Android, iOS, and
+        Windows. Complete with advanced build and debugging support.
 
 -   name: TACO
     image: TACO_105px.png
     url: http://taco.tools
     description: >
-        Tools for Apache Cordova is a command line utility designed to make building hybrid apps easy and fun.  Faster setup. Friendlier command line. Validated quality at run-time.
+        Tools for Apache Cordova is a command line utility designed to make
+        building hybrid apps easy and fun.  Faster setup. Friendlier command
+        line. Validated quality at run-time.
 
