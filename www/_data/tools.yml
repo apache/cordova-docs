@@ -55,3 +55,11 @@
         building hybrid apps easy and fun.  Faster setup. Friendlier command
         line. Validated quality at run-time.
 
+-   name: Telerik
+    image: telerik.png
+    url: http://www.telerik.com/
+    description: >
+        Telerik Platform is a complete mobile app development platform for
+        developing hybrid and native apps with JavaScript. Use our free and
+        open source Kendo UI framework with Telerik Platform to address every
+        stage of your application lifecycle - from idea to deployment.
