@@ -115,7 +115,7 @@ Finally, go into the `cordova-website` directory and commit *all* the changes in
 Working on the Documentation
 ============================
 
-Refer to this [README.md](doc/README/en/edge/README.md) for information about writing documentation.
+Refer to this [README.md](doc/README/en/README.md) for information about writing documentation.
 
 Adding a Tool or a Showcase App
 ===============================

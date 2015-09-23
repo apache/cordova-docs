@@ -40,7 +40,7 @@ Similar to `ecosystem:cordova`, platform support too uses keywords. Just add the
 
 ## Are there any additional documents to assist me with plugins?
 
-Yes there are. Please take a look at the [Plugin Development Guide]({{ site.baseurl }}/docs/en/edge/guide/hybrid/plugins/index.html) for a more detailed guide.
+Yes there are. Please take a look at the [Plugin Development Guide]({{ site.baseurl }}/docs/en/{{ site.latest_version }}/guide/hybrid/plugins/index.html) for a more detailed guide.
 
 ## I don't like X. How can I help improve the website?
 

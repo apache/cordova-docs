@@ -12,6 +12,8 @@ repo:
     uri:    https://github.com/apache/cordova-docs
     branch: cordova-website
 
+latest_version: 5.1.1
+
 # NOTE: defaults are configured in _defaults.yml, which is a generated file
 
 # =======
