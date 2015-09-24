@@ -101,7 +101,7 @@ Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-First, inspect `_prod.yml` to check that the correct `baseurl` is used. For pre-production deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
+First, inspect `_prod.yml` to check that the correct `baseurl` is used. For development deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
 
     gulp build --prod
 
