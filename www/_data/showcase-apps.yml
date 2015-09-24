@@ -9,6 +9,18 @@
     image: NewVo.png
     url: https://newvo.me
     description: >
-        NewVo makes it fun to
-        share and receive
-        opinions on style decisions.
+        NewVo makes it fun to share and receive opinions on style decisions.
+
+-   name: Pacifica - Stress and Anxiety Relief
+    image: Pacifica.png
+    url: https://thinkpacifica.com
+    description: >
+        Daily tools for stress, anxiety and depression based on Cognitive
+        Behavioral Therapy and Mindfulness.
+
+-   name: Sworkit - Personal Workout Trainer
+    image: Sworkit.png
+    url: http://sworkit.com
+    description: >
+        Sworkit delivers on-demand, personalized video exercises to millions
+        of users to help them stay fit.

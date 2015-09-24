@@ -79,8 +79,7 @@ function checkNotification() {
     var dates = [];
     if (lastVisit != "") {
         {% for post in site.posts %}
-            dates.push('{{ post.date | date_to_rfc822 }}');
-        {% endfor %}
+        dates.push('{{ post.date | date_to_rfc822 }}');{% endfor %}
     }
     var new_blog_count = 0;
     for(var i = 0; i < dates.length ; i++) {
@@ -109,10 +108,38 @@ $(document).ready(function () {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
-    var copyButtons = document.getElementsByClassName("btn-copy");
-    for(var i = 0; i < copyButtons.length; i++) {
-        new ZeroClipboard(copyButtons[i]);
-    }
+    var client = new ZeroClipboard();
+    client.on("ready", function(e) {
+        var copyButtons = document.getElementsByClassName("btn-copy");
+        for(var i = 0; i < copyButtons.length; i++) {
+            client.clip(copyButtons[i]);
+        }
+    });
+
+    // In the case that flash is disabled, fall back to browser API
+    client.on("error", function(e) {
+        var copyButtons = document.getElementsByClassName("btn-copy");
+        for(var i = 0; i < copyButtons.length; i++) {
+            copyButtons[i].addEventListener("click", function(clickEvent) {
+                var id = clickEvent.target.getAttribute("data-clipboard-target");
+
+                var range = document.createRange();
+                range.selectNode(document.getElementById(id));
+
+                var select = window.getSelection();
+                select.removeAllRanges();
+                select.addRange(range);
+
+                try {
+                    document.execCommand("copy");
+                } catch(e) {
+                    // Silently fail for now
+                }
+
+                select.removeAllRanges();
+            });
+        }
+    });
 
     // Smooth scroll to anchor links
     $("a[href^='#']").on('click', function(e) {
@@ -140,4 +167,11 @@ $(document).ready(function () {
     $("#jira-search-box").on("keypress", function searchKeypressEventHandler (e) {
         if(e.keyCode == 13) submitJiraSearchForm();
     });
+
+    // add prettyprint class to code blocks for prettify.js
+    var all_code = $('pre');
+    all_code.attr('class', 'prettyprint');
+
+    // run syntax highlighter
+    prettyPrint();
 });

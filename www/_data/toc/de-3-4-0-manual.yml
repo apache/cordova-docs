@@ -13,3 +13,4 @@
 - {name: !!python/unicode 'Speicher', url: !!python/unicode '/docs/de/3.4.0/cordova/storage/storage.html'}
 - {name: !!python/unicode 'Veranstaltungen', url: !!python/unicode '/docs/de/3.4.0/cordova/events/events.html'}
 - {name: !!python/unicode 'Plugin APIs', url: !!python/unicode '/docs/de/3.4.0/cordova/plugins/pluginapis.html'}
+- {name: !!python/unicode 'Stichwort-Index', url: !!python/unicode '/docs/de/3.4.0/page_index.html'}

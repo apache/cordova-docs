@@ -14,14 +14,19 @@ On Mac OS X, install Homebrew from [this site][homebrew], and then run:
 
 On Windows, follow these steps:
 
-1. Download this [Ruby installer][install_ruby].
-1. Run the downloaded file.
+1. Download [this installer][ruby_installer] from [this page][ruby_downloads].
+
+2. Run the downloaded file.
+
     1. Use the default installation path (usually `C:\Ruby22`).
-    1. Make sure the 'add executable to path' option is checked.
-1. Download the Ruby DevKit self-extracting archive from the [same website][install_ruby].
-1. Run this downloaded file.
+    1. Make sure the **'add executable to path'** option is checked.
+
+3. Download [this Ruby DevKit self-extracting archive][ruby_devkit] from the [same website][ruby_downloads].
+
+4. Run the downloaded file.
     1. Use the following extraction path: `C:\Ruby22DevKit`.
-1. Open `cmd.exe`
+
+5. Open `cmd.exe`
     1. Go to the extraction path:
 
             cd C:\Ruby22DevKit
@@ -30,6 +35,7 @@ On Windows, follow these steps:
 
             ruby dk.rb init
             ruby dk.rb install
+
     1. Close `cmd.exe`.
 
 On Linux, run the commands from [this site][ruby_linux] that apply to your Linux distribution.
@@ -42,7 +48,7 @@ Verify the installation by running:
 
 ## JavaScript
 
-On Windows and Mac OS X, go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to install NPM is enabled, if you see one.
+On Windows and Mac OS X, go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
 
 On Linux, follow the instructions on [this site][linux_node].
 
@@ -68,7 +74,9 @@ Building
 
 To build the whole website, run:
 
-    node_modules/.bin/gulp build
+    node_modules/.bin/gulp build --prod
+
+The built website will be in a folder called `build-prod`.
 
 Developing
 ==========
@@ -94,25 +102,49 @@ First, inspect `_prod.yml` to check that the correct `baseurl` is used. For pre-
 
     gulp build --prod
 
-A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running (committer access required):
+A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
 Now, copy the `cordova-docs/build-prod/` directory to the corresponding directory in SVN (i.e. something like `cordova-website/public/use-the-force-luke/` for the pre-production deployment, or just `cordova-website/public/` for the production deployment):
 
-    cp -R cordova-docs/build-prod/ cordova-website/public/use-the-force-luke/
+    cp -R cordova-docs/build-prod/* cordova-website/public/use-the-force-luke/
 
-Finally, go into the cordova-website directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
+
+Working on the Documentation
+============================
+
+Refer to this [README.md](doc/README/en/README.md) for information about writing documentation.
 
 Adding a Tool or a Showcase App
 ===============================
 
-To add an item to the **Codorva Tools** or the **Cordova App Showcase** sections on the main page, follow these steps:
+Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the main page are modifiable by the public. Below are the guidelines and process to do so.
+
+## Guidelines
+
+The display image shall:
+
+1. be less than 128KiB in size (NOTE: those are kibibytes, not kilobytes),
+2. contain the app’s logo, and
+3. use colors that don’t compete with other elements on the page.
+
+The description shall:
+
+1. be no more than 130 characters long, and
+2. contain neutral and non-advertising language.
+
+The name shall:
+
+1. be no more than 40 characters long.
+
+## Process
 
 1. Change the section's YAML file:
     - `www/_data/tools.yml` for Cordova Tools, or
     - `www/_data/showcase-apps.yml` for Cordova App Showcase.
-1. Optionally add an image (the image must be **less than 256KiB** in size):
+1. Optionally add an image:
     1. Place the image in the section's `img` directory:
         - `www/static/img/tools` for Cordova Tools, or
         - `www/static/img/showcase-apps` for Cordova App Showcase.
@@ -200,7 +232,9 @@ Ask for help on the IRC channel: #cordova on irc.freenode.net.
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
 [linux_node]: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories#installing-node-js-v0-12
-[install_ruby]: http://rubyinstaller.org/downloads/
+[ruby_downloads]: http://rubyinstaller.org/downloads/
+[ruby_installer]: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.3.exe
+[ruby_devkit]: http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe
 [nodejs]: https://nodejs.org/
 [install_pip]: https://pip.pypa.io/en/latest/installing.html
 [svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html

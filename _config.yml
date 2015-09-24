@@ -12,6 +12,8 @@ repo:
     uri:    https://github.com/apache/cordova-docs
     branch: cordova-website
 
+latest_version: 5.1.1
+
 # NOTE: defaults are configured in _defaults.yml, which is a generated file
 
 # =======
@@ -26,7 +28,23 @@ keep_files: [".git", ".svn", "wiki-images", "images", "downloads"]
 lsi:  false # don't produce an index for related posts
 safe: true  # disables plugins
 
-markdown: kramdown
+markdown: redcarpet
+
+redcarpet:
+    extensions:
+
+        # this adds the ".prettyprint" class to <code> and <pre> tags
+        - prettify
+
+        # this enables code blocks denoted by backticks, like in GFM
+        # NOTE:
+        #      this is turned on by default by Jekyll, but is still
+        #      specified explicitly here in case the defaults change
+        - fenced_code_blocks
+
+        # this allows code blocks and HTML blocks to
+        # not have a leading or trailing newline
+        - lax_spacing
 
 kramdown:
     input: GFM

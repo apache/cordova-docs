@@ -1,95 +1,69 @@
-.blog{
-    .blogHeader{
-        position: relative;
-        padding:0 15px 25px 15px;
-        h1{
-            color: #b58733;
-            font-size: 30pt;
-        }
-        div{
-            position: absolute;
-            top: 20px;
-            left: 96px;
-
-            img{
-                float: left;
-                padding-left:14px;
-            }
-            a{
-                float: left;
+.blog {
+    .blogHeader {
+        color: #b58733;
+        font-size: 30pt;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        .rss {
+            a {
                 font-size: 12pt;
-                padding-left:4px;
+                padding-left: 4px;
                 font-weight: lighter;
-                color: #4cc2e4;
+                color: $brand-primary;
+                vertical-align: middle;
             }
         }
     }
-    //landing page
-    .blog-list{
+
+    // landing page
+    .blog-list {
         max-width: 700px;
-        padding-top: 10px;
-        padding-right: 30px;
+        ul.posts {
+            list-style: none;
+            padding-left: 30px;
 
-        ul {
-            list-style-type: none;
-        }
-
-        .posts{
-
-            li .newBlog
-            {
+            li .newBlog {
                 background-color: #3992ab;
             }
 
-            header{
-
-                position: relative;
-                height: 64px;
-
-                .adorner{
+            header {
+                .title, .details {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                .adorner {
                     height: 50px;
                     width: 5px;
                     background-color: #f2f2f2;
                     position: absolute;
-                    left: -20px;
+                    left: 18px;
                 }
-
-                .title{
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
+                .title {
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin: 0px;
+                    width: 100%;
                     color: $brand-primary-darker;
                 }
-
-                div:nth-of-type(2){
-                    color: #b58733;
-                    font-size: 18pt;
-                    top:-4px;
-                    position: relative;
-
-                    span {
-                        font-size: 80%;
-                        color: #999;
-                        position: relative;
-                        top:-6px;
-                    }
-
-                    .date{
+                .details {
+                    color: #999;
+                    font-size: 18px;
+                    .date {
                         color: #2f2f2f;
                     }
-
-                    .comment{
+                    .author {
+                    }
+                    .comment {
                         float: right;
                         font-size: 15px;
                     }
                 }
             }
-            section{
+            section {
                 padding-bottom: 100px;
             }
-
         }
-
     }
 
     .social-container{
@@ -182,12 +156,10 @@
 
     }
 
-    //blog post page
-    div.post{
-        padding:0 15px;
-
-        header{
-
+    // blog post page
+    .post {
+        header {
+            margin-bottom: 20px;
             .title{
                 color: #3992ab;
                 font-size: 30pt;

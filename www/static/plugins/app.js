@@ -4,7 +4,8 @@ var React           = window.React = require('react'), // assign it to window fo
     PlatformButton  = require('./platformbutton.jsx')
     App             = {},
     SortDropdown = require('./sortdropdown.jsx'),
-    SortCriteria = require('./SortCriteria');
+    SortCriteria = require('./SortCriteria'),
+    ZeroClipboard = require("../js/lib/ZeroClipboard.js");
 
 var INPUT_DELAY = 500; // in milliseconds
 
@@ -41,6 +42,7 @@ var App = React.createClass({
             searchResults: [],
             staticFilters: staticFilters,
             sortCriteria: sortBy,
+            flashEnabled: true,
             downloadsReceived: false
         }
 
@@ -78,9 +80,7 @@ var App = React.createClass({
                 previousState.staticFilters[keyword].push(condition);
             }
 
-            delay(function(){
-                App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
-            }, INPUT_DELAY);
+            App.updateURL(previousState.filterText, previousState.staticFilters['platforms'], previousState.sortCriteria);
 
             return {
                 staticFilters: previousState.staticFilters,
@@ -295,6 +295,14 @@ var App = React.createClass({
             ga('send', 'pageview', '/index.html' + query);
         },
     },
+    componentWillMount: function() {
+        var that = this;
+        ZeroClipboard.config({swfPath: "{{ site.baseurl }}/static/js/lib/ZeroClipboard.swf"});
+        ZeroClipboard.on({
+            "ready": function(event) {that.setState({ flashEnabled: true });},
+            "error": function(event) {that.setState({ flashEnabled: false });}
+        });
+    },
     componentDidMount: function() {
         var plugins = [],
             officialPlugins = require('./official-plugins.json').plugins,
@@ -423,7 +431,7 @@ var App = React.createClass({
         }
         var listContent = null;
         if(window.location.protocol !== "https:") {
-            listContent = <PluginList plugins={this.state.searchResults} />;
+            listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
         } else {
             var httpUrl = window.location.href.replace("https://", "http://");
             listContent = <div className="alert alert-warning" role="alert">Search results are not currently supported over HTTPS. Please visit this page <a href={httpUrl}>using HTTP</a></div>;
@@ -462,7 +470,7 @@ var App = React.createClass({
                     <div className="row filter-by-platforms">
                         <div className="col-sm-9">
                             <div className="filter-by-platform-label"><span>Must Support Platform(s):</span></div>
-                            <ul className="nav nav-pills filter-by-platform-filters">
+                            <div className="filter-by-platform-filters">
                                 {createPlatformButton("Android", "cordova-android", this.state)}
                                 {createPlatformButton("iOS", "cordova-ios", this.state)}
                                 {createPlatformButton("Windows", "cordova-windows", this.state)}
@@ -472,7 +480,7 @@ var App = React.createClass({
                                 {createPlatformButton("Fire OS", "cordova-amazon-fireos", this.state)}
                                 {createPlatformButton("WP8", "cordova-wp8", this.state)}
                                 {createPlatformButton("Browser", "cordova-browser", this.state)}
-                            </ul>
+                            </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="plugin-results-number">{this.state.searchResults.length} result(s) found</div>

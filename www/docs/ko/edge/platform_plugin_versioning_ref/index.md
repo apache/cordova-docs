@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 플랫폼 및 플러그인 버전 관리
 ---
 
 # 플랫폼 및 플러그인 버전 관리

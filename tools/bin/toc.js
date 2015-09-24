@@ -30,8 +30,21 @@ function isUnderline(line) {
     return /-+|=+|\*+/.test(line);
 }
 
-function getPageTitle(pagePath) {
-    return path.basename(pagePath).replace('.md', '');
+function getPageTitle(filePath) {
+    var file = fs.readFileSync(filePath, 'utf8');
+    var res = /<h1>([^<]*)<\/h1>|#\ (.*)|(.*)[\n\f\r]+(?:={3}=+|-{3}-+)/.exec(file);
+    if(res) {
+        if(res[1]) {
+            return res[1].trim();
+        }
+        if(res[2]) {
+            return res[2].trim();
+        }
+        if(res[3]) {
+            return res[3].trim();
+        }
+    }
+    return null;
 }
 
 function generate(sourceDir, prefix) {
@@ -44,11 +57,15 @@ function generate(sourceDir, prefix) {
     walker.on("file", function (root, fileStats, next) {
         var dirPrefix = root.replace(sourceDir, '');
         var filePath  = path.join(dirPrefix, fileStats.name);
-        var entry     = {
-            name: getPageTitle(filePath),
-            url:  path.join(prefix, filePath)
-        };
-        toc.push(entry);
+        var heading = getPageTitle(path.join(root, fileStats.name));
+
+        if(heading) {
+            toc.push({
+                url:  path.join(prefix, filePath).replace(".md", ".html").replace(/\\/g, "/"),
+                name: heading
+            });
+        }
+
         next();
     });
 
@@ -94,6 +111,10 @@ function main () {
 
             // generate file
             generate(versionPath, prefix).then(function (toc) {
+                toc.sort(function (a, b) {
+                    return a.name.localeCompare(b.name, languageName);
+                });
+
                 var tocText = yaml.dump(toc);
                 console.log(outputPath);
                 fs.writeFileSync(outputPath, tocText, 'utf-8');

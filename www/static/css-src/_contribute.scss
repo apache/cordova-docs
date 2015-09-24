@@ -122,24 +122,9 @@ a:hover .report-bug-icon {
 }
 
 .contribute-get-started-steps {
-    list-style: none;
+    padding-left: 17px;
     counter-reset: contribute-steps-counter;
     > li {
         margin-bottom:.5em;
-    }
-    > li::before {
-        counter-increment: contribute-steps-counter;
-        content: counter(contribute-steps-counter);
-        width: 2em;
-        height: 2em;
-        background: $brand-primary-darker;
-        display: inline-block;
-        border-radius: 2em;
-        line-height: 2em;
-        text-align: center;
-        font-size: 1em;
-        color: white;
-        margin-left:-40px;
-        margin-right:19px;
     }
 }

@@ -66,6 +66,10 @@
 .filter-by-platform-filters {
 	display: inline-block;
 	button.btn {
+		margin-bottom: 2px;
+		margin-right: 2px;
+		width: 120px;
+
 		&.btn-primary {
 			background-color: $brand-primary;
 		}
@@ -164,6 +168,12 @@
 .license { font-weight: bold }
 hr.results-divider-line {
 	border-color:$gray-20;
+}
+
+.cordova-add-command {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 }
 
 .results-supported-platforms {

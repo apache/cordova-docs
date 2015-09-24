@@ -38,7 +38,7 @@ See Cordova [blog]({{ site.baseurl }}/announcements/2015/04/21/plugins-release-a
 
 ## Are there any additional documents to assist me with plugins?
 
-Yes there are. Please take a look at [Add Plugin Features]({{ site.baseurl }}/docs/en/edge/guide/cli/#link-add-plugin-features) for a more detailed guide.
+Yes there are. Please take a look at [Add Plugin Features]({{ site.baseurl }}/docs/en/{{ site.latest_version }}/guide/cli/#link-add-plugin-features) for a more detailed guide.
 
 ## I don't like X. How can I help improve the website?
 

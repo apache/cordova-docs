@@ -6,13 +6,24 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else if page.description %}{{ page.description }} {% else %}{{ site.description }}{% endif %}">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>
+        {% if page.title %}
+            {% if page.title_prefix %}
+                {{ page.title_prefix }} - {{ page.title }}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
 
     <link rel="SHORTCUT ICON" href="{{ site.baseurl }}/favicon.ico"/>
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/js/lib/prettify/prettify.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

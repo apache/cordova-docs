@@ -152,7 +152,7 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("gen-full", ["configs", "styles", "plugins"], function (done) {
+gulp.task("gen-full", ["toc", "configs", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 

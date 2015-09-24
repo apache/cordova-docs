@@ -8,13 +8,31 @@ var Plugin = React.createClass({
         return this.props.plugin !== nextProps.plugin;
     },
     setClipboardText: function() {
-        if(this.props.plugin) {
+        if(this.props.plugin && this.props.flashEnabled) {
             var client = new ZeroClipboard(document.getElementById("copy-" + this.props.plugin.name));
             var copyText = "cordova plugin add " + this.props.plugin.name;
             client.off();
             client.on("copy", function(event) {
                 event.clipboardData.setData("text/plain", copyText);
             });
+        }
+    },
+    copyTextWithoutFlash: function() {
+        if(!this.props.flashEnabled) {
+            var range = document.createRange();
+            range.selectNode(this.getDOMNode().getElementsByClassName("cordova-add-command")[0]);
+
+            var select = window.getSelection();
+            select.removeAllRanges();
+            select.addRange(range);
+
+            try {
+                document.execCommand("copy");
+            } catch(e) {
+                // Silently fail for now
+            }
+
+            select.removeAllRanges();
         }
     },
     render: function() {
@@ -52,7 +70,8 @@ var Plugin = React.createClass({
                         src="{{ site.baseurl}}/static/img/copy-clipboard-icon.svg"
                         title="Copy cordova plugin add command to clipboard"
                         data-toggle="tooltip"
-                        data-placement="auto" />
+                        data-placement="auto"
+                        onClick={this.copyTextWithoutFlash} />
             );
         }
 
@@ -87,11 +106,11 @@ var Plugin = React.createClass({
                         <p className="last-updated">Last updated <strong>{this.props.plugin.modified} days ago</strong></p>
                     </div>
                 </div>
+                <div className="cordova-add-command">
+                {"cordova plugin add " + this.props.plugin.name}
+                </div>
             </div>
         )
-    },
-    componentWillMount: function() {
-        ZeroClipboard.config({swfPath: "{{ site.baseurl }}/static/js/lib/ZeroClipboard.swf"});
     },
     componentDidMount: function() {
         this.setClipboardText();

@@ -23,3 +23,4 @@
 - {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/en/3.1.0/cordova/notification/notification.html'}
 - {name: !!python/unicode 'Splashscreen', url: !!python/unicode '/docs/en/3.1.0/cordova/splashscreen/splashscreen.html'}
 - {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/3.1.0/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/3.1.0/page_index.html'}
