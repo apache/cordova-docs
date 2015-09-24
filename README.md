@@ -110,7 +110,7 @@ Now, copy the `cordova-docs/build-prod/` directory to the corresponding director
 
     cp -R cordova-docs/build-prod/* cordova-website/public/use-the-force-luke/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (up to 1 hour), depending on the number of files copied.
 
 Working on the Documentation
 ============================
@@ -124,30 +124,39 @@ Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the m
 
 ## Guidelines
 
-The display image shall:
+The display _image_ shall:
 
-1. be less than 128KiB in size (NOTE: those are kibibytes, not kilobytes),
-2. contain the app’s logo, and
-3. use colors that don’t compete with other elements on the page.
+1. be __less than 128KiB__ in size (NOTE: those are kibibytes, not kilobytes),
+2. contain the app's __logo__,
+3. use colors that don't compete with other elements on the page, and
+4. (optionally) be __179px by 100px__ in size.
 
-The description shall:
+The _description_ shall:
 
-1. be no more than 130 characters long, and
-2. contain neutral and non-advertising language.
+1. contain __neutral__ and non-advertising language.
 
-The name shall:
+The _name_ shall:
 
-1. be no more than 40 characters long.
+1. be __at most 40__ characters long.
+
+Showcase _apps_ shall:
+
+1. be available for download on a __public app store__ or website.
+
+Furthermore, descriptions are stripped of HTML and are truncated to fit as follows:
+
+- down to 255 characters for tools and,
+- down to 200 characters for showcase apps.
 
 ## Process
 
 1. Change the section's YAML file:
-    - `www/_data/tools.yml` for Cordova Tools, or
-    - `www/_data/showcase-apps.yml` for Cordova App Showcase.
+    - [www/_data/tools.yml](www/_data/tools.yml) for Cordova Tools, or
+    - [www/_data/showcase-apps.yml](www/_data/showcase-apps.yml) for Cordova App Showcase.
 1. Optionally add an image:
     1. Place the image in the section's `img` directory:
-        - `www/static/img/tools` for Cordova Tools, or
-        - `www/static/img/showcase-apps` for Cordova App Showcase.
+        - [www/static/img/tools](www/static/img/tools) for Cordova Tools, or
+        - [www/static/img/showcase-apps](www/static/img/showcase-apps) for Cordova App Showcase.
     1. In the YAML file, set the `image` field to the file's *name*.
 1. Submit a [GitHub pull request][pr] with the changes.
 
