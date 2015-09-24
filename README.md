@@ -8,37 +8,36 @@ Installing
 
 ## Ruby
 
-On Mac OS X, install Homebrew from [this site][homebrew], and then run:
+### Mac OS X
+
+Install Homebrew from [this site][homebrew], and then run:
 
     brew install ruby
 
-On Windows, follow these steps:
+### Windows
+
+Follow these steps:
 
 1. Download [this installer][ruby_installer] from [this page][ruby_downloads].
-
 2. Run the downloaded file.
-
     1. Use the default installation path (usually `C:\Ruby22`).
     1. Make sure the **'add executable to path'** option is checked.
-
 3. Download [this Ruby DevKit self-extracting archive][ruby_devkit] from the [same website][ruby_downloads].
-
 4. Run the downloaded file.
     1. Use the following extraction path: `C:\Ruby22DevKit`.
-
-5. Open `cmd.exe`
+5. Open `cmd.exe`.
     1. Go to the extraction path:
 
             cd C:\Ruby22DevKit
-
     1. Run these commands (following any instructions they give):
 
             ruby dk.rb init
             ruby dk.rb install
-
     1. Close `cmd.exe`.
 
-On Linux, run the commands from [this site][ruby_linux] that apply to your Linux distribution.
+### Linux
+
+Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
 
 ***
 
@@ -48,9 +47,13 @@ Verify the installation by running:
 
 ## JavaScript
 
-On Windows and Mac OS X, go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
+### Mac OS X &amp; Windows
 
-On Linux, follow the instructions on [this site][linux_node].
+Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
+
+### Linux
+
+Linux, follow the instructions on [this site][linux_node].
 
 ***
 
@@ -91,7 +94,7 @@ That command will start a server and watch the source files, regenerating the si
         - static/css-src
         - docs
 
-**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications; keep them local to your development environment.*
+**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications. Keep them local to your development environment.*
 
 Deploying
 =========
@@ -104,11 +107,18 @@ First, inspect `_prod.yml` to check that the correct `baseurl` is used. For pre-
 
 A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
+    cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
-Now, copy the `cordova-docs/build-prod/` directory to the corresponding directory in SVN (i.e. something like `cordova-website/public/use-the-force-luke/` for the pre-production deployment, or just `cordova-website/public/` for the production deployment):
+Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN (or in the case of a development deployment, to `public/use-the-force-luke`).
+
+Therefore, for the __development__ deployment, run:
 
     cp -R cordova-docs/build-prod/* cordova-website/public/use-the-force-luke/
+
+For the __production__ deployment, run:
+
+    cp -R cordova-docs/build-prod/* cordova-website/public/
 
 Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (up to 1 hour), depending on the number of files copied.
 
