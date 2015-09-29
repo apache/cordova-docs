@@ -4,6 +4,7 @@
 - {name: !!python/unicode 'Le fichier config.xml', url: !!python/unicode '/docs/fr/edge/config_ref/index.html'}
 - {name: !!python/unicode 'Icones et Splash Screen', url: !!python/unicode '/docs/fr/edge/config_ref/images.html'}
 - {name: "Guide de d\xE9veloppement de plugin", url: !!python/unicode '/docs/fr/edge/guide/hybrid/plugins/index.html'}
+- {name: "Sp\xE9cification des plugins", url: !!python/unicode '/docs/fr/edge/plugin_ref/spec.html'}
 - {name: "Guide de la vie priv\xE9e", url: !!python/unicode '/docs/fr/edge/guide/appdev/privacy/index.html'}
 - {name: "Guide de s\xE9curit\xE9", url: !!python/unicode '/docs/fr/edge/guide/appdev/security/index.html'}
 - {name: !!python/unicode 'Plates-formes et gestion de Plugins Version', url: !!python/unicode '/docs/fr/edge/platform_plugin_versioning_ref/index.html'}

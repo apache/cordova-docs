@@ -8,37 +8,36 @@ Installing
 
 ## Ruby
 
-On Mac OS X, install Homebrew from [this site][homebrew], and then run:
+### Mac OS X
+
+Install Homebrew from [this site][homebrew], and then run:
 
     brew install ruby
 
-On Windows, follow these steps:
+### Windows
+
+Follow these steps:
 
 1. Download [this installer][ruby_installer] from [this page][ruby_downloads].
-
 2. Run the downloaded file.
-
     1. Use the default installation path (usually `C:\Ruby22`).
     1. Make sure the **'add executable to path'** option is checked.
-
 3. Download [this Ruby DevKit self-extracting archive][ruby_devkit] from the [same website][ruby_downloads].
-
 4. Run the downloaded file.
     1. Use the following extraction path: `C:\Ruby22DevKit`.
-
-5. Open `cmd.exe`
+5. Open `cmd.exe`.
     1. Go to the extraction path:
 
             cd C:\Ruby22DevKit
-
     1. Run these commands (following any instructions they give):
 
             ruby dk.rb init
             ruby dk.rb install
-
     1. Close `cmd.exe`.
 
-On Linux, run the commands from [this site][ruby_linux] that apply to your Linux distribution.
+### Linux
+
+Run the commands from [this site][ruby_linux] that apply to your Linux distribution.
 
 ***
 
@@ -48,9 +47,13 @@ Verify the installation by running:
 
 ## JavaScript
 
-On Windows and Mac OS X, go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
+### Mac OS X &amp; Windows
 
-On Linux, follow the instructions on [this site][linux_node].
+Go to [this site][nodejs], and click the "Install" button. Then run the downloaded file and follow the on-screen instructions. Make sure that the option to **install NPM** is enabled, if you see one.
+
+### Linux
+
+Linux, follow the instructions on [this site][linux_node].
 
 ***
 
@@ -91,26 +94,33 @@ That command will start a server and watch the source files, regenerating the si
         - static/css-src
         - docs
 
-**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications; keep them local to your development environment.*
+**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications. Keep them local to your development environment.*
 
 Deploying
 =========
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-First, inspect `_prod.yml` to check that the correct `baseurl` is used. For pre-production deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
+First, inspect `_prod.yml` to check that the correct `baseurl` is used. For development deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
 
     gulp build --prod
 
 A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
+    cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
-Now, copy the `cordova-docs/build-prod/` directory to the corresponding directory in SVN (i.e. something like `cordova-website/public/use-the-force-luke/` for the pre-production deployment, or just `cordova-website/public/` for the production deployment):
+Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN (or in the case of a development deployment, to `public/use-the-force-luke`).
+
+Therefore, for the __development__ deployment, run:
 
     cp -R cordova-docs/build-prod/* cordova-website/public/use-the-force-luke/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (upwards of 30min), depending on the number of files copied.
+For the __production__ deployment, run:
+
+    cp -R cordova-docs/build-prod/* cordova-website/public/
+
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (up to 1 hour), depending on the number of files copied.
 
 Working on the Documentation
 ============================
@@ -124,30 +134,39 @@ Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the m
 
 ## Guidelines
 
-The display image shall:
+The display _image_ shall:
 
-1. be less than 128KiB in size (NOTE: those are kibibytes, not kilobytes),
-2. contain the app’s logo, and
-3. use colors that don’t compete with other elements on the page.
+1. be __less than 128KiB__ in size (NOTE: those are kibibytes, not kilobytes),
+2. contain the app's __logo__,
+3. use colors that don't compete with other elements on the page, and
+4. (optionally) be __179px by 100px__ in size.
 
-The description shall:
+The _description_ shall:
 
-1. be no more than 130 characters long, and
-2. contain neutral and non-advertising language.
+1. contain __neutral__ and non-advertising language.
 
-The name shall:
+The _name_ shall:
 
-1. be no more than 40 characters long.
+1. be __at most 40__ characters long.
+
+Showcase _apps_ shall:
+
+1. be available for download on a __public app store__ or website.
+
+Furthermore, descriptions are stripped of HTML and are truncated to fit as follows:
+
+- down to 255 characters for tools and,
+- down to 200 characters for showcase apps.
 
 ## Process
 
 1. Change the section's YAML file:
-    - `www/_data/tools.yml` for Cordova Tools, or
-    - `www/_data/showcase-apps.yml` for Cordova App Showcase.
+    - [www/_data/tools.yml](www/_data/tools.yml) for Cordova Tools, or
+    - [www/_data/showcase-apps.yml](www/_data/showcase-apps.yml) for Cordova App Showcase.
 1. Optionally add an image:
     1. Place the image in the section's `img` directory:
-        - `www/static/img/tools` for Cordova Tools, or
-        - `www/static/img/showcase-apps` for Cordova App Showcase.
+        - [www/static/img/tools](www/static/img/tools) for Cordova Tools, or
+        - [www/static/img/showcase-apps](www/static/img/showcase-apps) for Cordova App Showcase.
     1. In the YAML file, set the `image` field to the file's *name*.
 1. Submit a [GitHub pull request][pr] with the changes.
 

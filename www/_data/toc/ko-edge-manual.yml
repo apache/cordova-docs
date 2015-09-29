@@ -9,6 +9,7 @@
 - {name: "\uC544\uC774\uCF58 \uBC0F \uC2DC\uC791 \uD654\uBA74", url: !!python/unicode '/docs/ko/edge/config_ref/images.html'}
 - {name: "WebViews \uD3EC\uD568", url: !!python/unicode '/docs/ko/edge/guide/hybrid/webviews/index.html'}
 - {name: "\uD50C\uB7EC\uADF8\uC778 \uAC1C\uBC1C \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/edge/guide/hybrid/plugins/index.html'}
+- {name: "\uD50C\uB7EC\uADF8\uC778 \uBA85\uC138", url: !!python/unicode '/docs/ko/edge/plugin_ref/spec.html'}
 - {name: "\uBCF4\uC548 \uAC00\uC774\uB4DC", url: !!python/unicode '/docs/ko/edge/guide/appdev/security/index.html'}
 - {name: "\uD50C\uB7AB\uD3FC \uBC0F \uD50C\uB7EC\uADF8\uC778 \uBC84\uC804 \uAD00\uB9AC",
   url: !!python/unicode '/docs/ko/edge/platform_plugin_versioning_ref/index.html'}

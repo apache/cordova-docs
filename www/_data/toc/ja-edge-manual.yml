@@ -13,6 +13,7 @@
     \u9762", url: !!python/unicode '/docs/ja/edge/config_ref/images.html'}
 - {name: "\u57CB\u3081\u8FBC\u307F web \u8868\u793A", url: !!python/unicode '/docs/ja/edge/guide/hybrid/webviews/index.html'}
 - {name: "\u30D7\u30E9\u30B0\u30A4\u30F3\u958B\u767A\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/edge/guide/hybrid/plugins/index.html'}
+- {name: "\u30D7\u30E9\u30B0\u30A4\u30F3\u4ED5\u69D8", url: !!python/unicode '/docs/ja/edge/plugin_ref/spec.html'}
 - {name: "\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC \u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/edge/guide/appdev/privacy/index.html'}
 - {name: "\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3 \u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/edge/guide/appdev/security/index.html'}
 - {name: "\u30D7\u30E9\u30C3\u30C8\u30D5\u30A9\u30FC\u30E0\u3068\u30D7\u30E9\u30B0\
