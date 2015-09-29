@@ -137,9 +137,9 @@ Items on the **Codorva Tools** or the **Cordova App Showcase** sections on the m
 The display _image_ shall:
 
 1. be __less than 128KiB__ in size (NOTE: those are kibibytes, not kilobytes),
-2. contain the app's __logo__,
+2. contain the __logo__ of the tool/app,
 3. use colors that don't compete with other elements on the page, and
-4. (optionally) be __179px by 100px__ in size.
+4. __for tools__ be __298px by 100px__ in size, or smaller, in an aspect ratio that will blend in with the other tools (NOTE: optimal aspect ratio will vary based on your artwork); __for apps__ be __100px by 100px__ in size, or smaller, and square in dimensions.
 
 The _description_ shall:
 

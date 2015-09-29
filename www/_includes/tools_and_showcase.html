@@ -45,10 +45,10 @@
     <div class="row card_gallery">
         {% for app in site.data.showcase-apps %}
         <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
-            <div class="showcase_app_thumb">
-                <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
-            </div>
             <div class="app card_inner">
+                <div class="showcase_app_thumb">
+                    <img src="{{ site.baseurl }}/static/img/showcase-apps/{{ app.image }}" class="center-block"/>
+                </div>
                 <p class="card_title">
                     {% if app.url %}
                         <a href="{{ app.url }}">
