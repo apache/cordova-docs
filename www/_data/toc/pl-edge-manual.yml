@@ -7,6 +7,7 @@
 - {name: !!python/unicode 'Ikony i ekrany powitalne w aplikacjach', url: !!python/unicode '/docs/pl/edge/config_ref/images.html'}
 - {name: !!python/unicode 'Osadzanie WebViews', url: !!python/unicode '/docs/pl/edge/guide/hybrid/webviews/index.html'}
 - {name: !!python/unicode 'Plugin rozwoju Przewodnik', url: !!python/unicode '/docs/pl/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Specyfikacja plugin', url: !!python/unicode '/docs/pl/edge/plugin_ref/spec.html'}
 - {name: "Prywatno\u015Bci Przewodnik", url: !!python/unicode '/docs/pl/edge/guide/appdev/privacy/index.html'}
 - {name: "Przewodnik bezpiecze\u0144stwa", url: !!python/unicode '/docs/pl/edge/guide/appdev/security/index.html'}
 - {name: "Platform i Zarz\u0105dzanie wersjami plugin\xF3w", url: !!python/unicode '/docs/pl/edge/platform_plugin_versioning_ref/index.html'}

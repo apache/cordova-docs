@@ -8,6 +8,7 @@
 - {name: !!python/unicode 'Ikone in brizg zaslon', url: !!python/unicode '/docs/sl/edge/config_ref/images.html'}
 - {name: !!python/unicode 'Vdelava spletni pogledi', url: !!python/unicode '/docs/sl/edge/guide/hybrid/webviews/index.html'}
 - {name: !!python/unicode 'Plugin razvoj vodnik', url: !!python/unicode '/docs/sl/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin specifikacija', url: !!python/unicode '/docs/sl/edge/plugin_ref/spec.html'}
 - {name: !!python/unicode 'Vodnik o zasebnosti', url: !!python/unicode '/docs/sl/edge/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Seznam dovoljenih vodnik', url: !!python/unicode '/docs/sl/edge/guide/appdev/whitelist/index.html'}
 - {name: !!python/unicode 'Shranjevanje', url: !!python/unicode '/docs/sl/edge/cordova/storage/storage.html'}

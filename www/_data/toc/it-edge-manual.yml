@@ -8,6 +8,7 @@
 - {name: !!python/unicode 'Icone e Splash screen', url: !!python/unicode '/docs/it/edge/config_ref/images.html'}
 - {name: !!python/unicode 'Incorporamento visualizzazioni Web', url: !!python/unicode '/docs/it/edge/guide/hybrid/webviews/index.html'}
 - {name: !!python/unicode 'Guida allo sviluppo di plugin', url: !!python/unicode '/docs/it/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode '/docs/it/edge/plugin_ref/spec.html'}
 - {name: !!python/unicode 'Guida sulla privacy', url: !!python/unicode '/docs/it/edge/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Guida alla sicurezza', url: !!python/unicode '/docs/it/edge/guide/appdev/security/index.html'}
 - {name: !!python/unicode 'Piattaforme e gestione plugin versione', url: !!python/unicode '/docs/it/edge/platform_plugin_versioning_ref/index.html'}

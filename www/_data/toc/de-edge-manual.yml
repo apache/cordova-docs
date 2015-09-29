@@ -8,6 +8,7 @@
 - {name: !!python/unicode 'Symbole und Splash-Screens', url: !!python/unicode '/docs/de/edge/config_ref/images.html'}
 - {name: "Einbetten von Webansichten f\xFCr", url: !!python/unicode '/docs/de/edge/guide/hybrid/webviews/index.html'}
 - {name: !!python/unicode 'Plugin-Entwicklung-Guide', url: !!python/unicode '/docs/de/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin-Spezifikation', url: !!python/unicode '/docs/de/edge/plugin_ref/spec.html'}
 - {name: !!python/unicode 'Datenschutz-Guide', url: !!python/unicode '/docs/de/edge/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Sicherheitshandbuch', url: !!python/unicode '/docs/de/edge/guide/appdev/security/index.html'}
 - {name: !!python/unicode 'Plattformen und Plugins Versionsmanagement', url: !!python/unicode '/docs/de/edge/platform_plugin_versioning_ref/index.html'}

@@ -8,6 +8,7 @@
 - {name: !!python/unicode 'Icons and Splash Screens', url: !!python/unicode '/docs/en/edge/config_ref/images.html'}
 - {name: !!python/unicode 'Embedding WebViews', url: !!python/unicode '/docs/en/edge/guide/hybrid/webviews/index.html'}
 - {name: !!python/unicode 'Plugin Development Guide', url: !!python/unicode '/docs/en/edge/guide/hybrid/plugins/index.html'}
+- {name: !!python/unicode 'Plugin Specification', url: !!python/unicode '/docs/en/edge/plugin_ref/spec.html'}
 - {name: !!python/unicode 'Privacy Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/privacy/index.html'}
 - {name: !!python/unicode 'Security Guide', url: !!python/unicode '/docs/en/edge/guide/appdev/security/index.html'}
 - {name: !!python/unicode 'Platforms and Plugins Version Management', url: !!python/unicode '/docs/en/edge/platform_plugin_versioning_ref/index.html'}
