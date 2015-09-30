@@ -11,13 +11,13 @@ We are happy to announce that `Cordova Android 4.1.0` has been released.
 
 With this release, there is now support for checking system requirements for Android platform:
 
-	$>cordova requirements android
-	
-	Requirements check results for android:
-	Java JDK: installed 1.7.0
-	Android SDK: installed
-	Android target: installed android-19,android-21,android-22,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:21
-	Gradle: installed 1.12
+    $>cordova requirements android
+
+    Requirements check results for android:
+    Java JDK: installed 1.7.0
+    Android SDK: installed
+    Android target: installed android-19,android-21,android-22,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:21
+    Gradle: installed 1.12
 
 Apart from a number of bug fixes, mininumSdkTarget has also been switched to 14 from 7. The minimum supported Android OS for Cordova is now Ice Cream Sandwich.
 

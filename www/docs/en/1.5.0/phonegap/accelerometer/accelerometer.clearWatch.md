@@ -40,11 +40,11 @@ Quick Example
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    
+
     // ... later on ...
-    
+
     navigator.accelerometer.clearWatch(watchID);
-    
+
 Full Example
 ------------
 
@@ -58,7 +58,7 @@ Full Example
 
         // The watch id references the current `watchAcceleration`
         var watchID = null;
-        
+
         // Wait for PhoneGap to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -72,13 +72,13 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
-            
+
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
-        
+
         // Stop watching the acceleration
         //
         function stopWatch() {
@@ -87,14 +87,14 @@ Full Example
                 watchID = null;
             }
         }
-		    
+
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' + 
+                                'Acceleration Z: ' + acceleration.z + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 
@@ -108,6 +108,6 @@ Full Example
       </head>
       <body>
         <div id="accelerometer">Waiting for accelerometer...</div>
-		<button onclick="stopWatch();">Stop Watching</button>
+        <button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>
