@@ -30,3 +30,9 @@
     url: http://fanreact.com/
     description: >
         Sports only social app for fans to share their experiences.
+
+-   name: JustWatch - Streaming Search Engine
+    image: JustWatch.png
+    url: https://www.justwatch.com/
+    description: >
+        JustWatch is the easiest way to see if your favorite movies or TV shows are available on any streaming provider.
