@@ -1,12 +1,13 @@
 ---
 layout: post
 author:
-    name: Steve Gill 
+    name: Steve Gill
     url: https://twitter.com/stevesgill
 title:  "Plugins Release: Feb 10, 2014"
 categories: news
 tags: release
 ---
+
 The following plugins were updated today:
 
 * org.apache.cordova.battery-status@0.2.7
@@ -32,7 +33,9 @@ The most noticeable changes in this release are to the File plugin. It has been 
 Most of these changes are to bring us more in line with the HTML Filesystem standard, although they will also allow us to extend the filesystem abstraction to cover new kinds of storage, both internal and external to devices.
 
 Other changes include:
+
 <!--more-->
+
 * The file plugin is now much more modular. The "Filesystem" is now an abstract class that developers can subclass to write their own filesystem types.
 * Developers can use the existing filesystem types, or new types, to provide new filesystem roots for their applications. (No longer limited to just persistent and temporary, or just a single directory for storage.)
 * Filesystem URLs paths are now relative to the filesystem root, helping to sandbox the filesystems and keep applications from stepping on each others' toes.

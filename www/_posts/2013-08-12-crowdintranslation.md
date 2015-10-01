@@ -20,4 +20,5 @@ like.  If you know another language please support Cordova and contribute.
 <a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>
 
 Email <a href="mailto:ldeluca@apache.org">ldeluca@apache.org</a> for more information.
+
 <!--more-->

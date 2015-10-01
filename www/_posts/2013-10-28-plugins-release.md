@@ -7,6 +7,7 @@ title:  "CLI, Plugman &amp; Plugins Release: Oct 28, 2013"
 categories: news
 tags: release
 ---
+
 Today we are doing a plugins and tooling release in preparation for Cordova 3.2.0. Most notable changes include:
 
 * Cordova CLI & Plugman have been refactored to use promises instead of callbacks
@@ -15,7 +16,7 @@ Today we are doing a plugins and tooling release in preparation for Cordova 3.2.
 * [CB-5128](https://issues.apache.org/jira/browse/CB-5128) Repo & Issue tags have been added to all of our core plugins plugin.xml file. This will allow us to display issue tracker and repo information on our registry.
 * [CB-5184](https://issues.apache.org/jira/browse/CB-5184) Fix uninstall logic being too aggressive (plugman)
 * Overhauled dependency uninstallation in regards to plugins (plugman)
-* FirefoxOS support for device-motion, device-orientation and dialogs plugins. 
+* FirefoxOS support for device-motion, device-orientation and dialogs plugins.
 
 The plugins have been updated on our registry at [plugins.cordova.io](http://plugins.cordova.io/).
 

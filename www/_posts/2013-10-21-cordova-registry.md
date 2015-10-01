@@ -13,6 +13,7 @@ Cordova 3.0 saw a major shift towards plugins.  As part of this shift, we're foc
 Our solution, which has been alluded to in previous posts, is the [Cordova plugin registry](http://plugins.cordova.io/).  Using the Cordova CLI, app developers can add plugins to their projects with a single command.
 
 <!--more-->
+
 From anywhere within an app's directory, plugins can be added to a project with
 
     cordova plugin add [PLUGIN_ID]

@@ -7,6 +7,7 @@ title:  "Plugins Release: Jan 2, 2014"
 categories: news
 tags: release
 ---
+
 The following plugins were updated today:
 
 * org.apache.cordova.battery-status@0.2.6
@@ -33,6 +34,7 @@ within plugins themselves. Eventually, docs will be available online through
 [via github](http://cordova.apache.org/docs/en/edge/cordova_plugins_pluginapis.md.html).
 
 Aside from documentation, changes include:
+
 <!--more-->
 
 `org.apache.cordova.camera`
@@ -77,7 +79,6 @@ Aside from documentation, changes include:
 `org.apache.cordova.splashscreen`
 
 * Handle error when splash image is missing.
-
 
 The plugins have been updated on our registry at [plugins.cordova.io](http://plugins.cordova.io/).
 
