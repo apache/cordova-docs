@@ -117,7 +117,7 @@ function main () {
 
                 var tocText = yaml.dump(toc);
                 console.log(outputPath);
-                fs.writeFileSync(outputPath, tocText, 'utf-8');
+                fs.writeFileSync(outputPath, tocText, 'utf8');
             });
         });
     });
