@@ -151,3 +151,8 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="deployment-target" value="7.0" />
 
+- `CordovaWebViewEngine` (string, defaults to 'CDVUIWebViewEngine'):
+  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
+  
+        <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
+
