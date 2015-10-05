@@ -14,4 +14,3 @@ There is a major release [3.0](https://issues.apache.org/jira/browse/CB/fixforve
 just around the corner (July 19, 2013), and we are really excited about it!
 
 Be sure to [subscribe]({{ site.baseurl }}{{ site.rss_path }}) using RSS
-<!--more-->

@@ -1,6 +1,7 @@
 build-*
 *.pyc
 _defaults.yml
+_version.yml
 www/_data/languages.yml
 node_modules
 www/static/css

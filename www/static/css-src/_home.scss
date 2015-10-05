@@ -2,69 +2,69 @@
 
 
 body {
-	height: 100%;
+    height: 100%;
 }
 
 html {
-	height: 100%;
+    height: 100%;
 }
 
 #hero {
-	min-height: 500px;
+    min-height: 500px;
     height: 70%;
-	background-color: $gray-transparent;
+    background-color: $gray-transparent;
     background-image: url("{{ site.baseurl }}/static/img/wisplight.jpg");
     background-size: cover;
-	position:relative;
-	color:white;
+    position:relative;
+    color:white;
 
-	.row {
-		margin-left: 0px;
-		margin-right: 0px;
-	}
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
-	#hero_section {
-		width:80%;
-		max-width:730px;
-		font-size:18px;
-		> div {
-			display: inline-block;
-		}
-		.cordova-bot {
+    #hero_section {
+        width:80%;
+        max-width:730px;
+        font-size:18px;
+        > div {
+            display: inline-block;
+        }
+        .cordova-bot {
             text-align: center;
             img {
-				max-width: 275px;
+                max-width: 275px;
                 width: 100%;
             }
-		}
+        }
 
-		.hero_content {
-			div {
-				padding-bottom:20px;
-			}
-			.hero_supported_platforms {
-				img {
-					margin-right: 15px;
-				}
-				.platforms_more {
-					font-size: 12px;
-					font-weight: bold;
-					white-space: nowrap;
-					display: inline-block;
-					margin-top: 10px;
-					padding-left: 5px;
-				}
-			}
-		}
+        .hero_content {
+            div {
+                padding-bottom:20px;
+            }
+            .hero_supported_platforms {
+                img {
+                    margin-right: 15px;
+                }
+                .platforms_more {
+                    font-size: 12px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    display: inline-block;
+                    margin-top: 10px;
+                    padding-left: 5px;
+                }
+            }
+        }
         .btn {
             margin-bottom: 3px;
         }
-	}
-	.hero_logo {
-		width:100%;
-		padding-top:40px;
-		padding-bottom:20px;
-	}
+    }
+    .hero_logo {
+        width:100%;
+        padding-top:40px;
+        padding-bottom:20px;
+    }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -77,7 +77,7 @@ html {
 
 @media (max-width: $screen-xs-max) {
     #hero {
-		min-height: 620px;
+        min-height: 620px;
         height: 100%;
         .hero_content p {
             margin-bottom: 20px;
@@ -96,59 +96,59 @@ html {
     width: 100%;
     margin: 0;
 
-	.container {
-		padding-top:30px;
-		padding-bottom:30px;
-		font-size: 18px;
-	}
-	.sprite_img {
-		position:relative;
-	    left: 0px;
-	    margin: 0;
-	    padding: 0;
-		top:0;
-		width: 85px;
-   		height: 85px;
-		background-repeat: no-repeat;
-    	background-size: 255px 85px;
-	}
+    .container {
+        padding-top:30px;
+        padding-bottom:30px;
+        font-size: 18px;
+    }
+    .sprite_img {
+        position:relative;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        top:0;
+        width: 85px;
+        height: 85px;
+        background-repeat: no-repeat;
+        background-size: 255px 85px;
+    }
 }
 .value_prop {
-	max-width: 146px;
-	height: 4em;
-	p {
-		top:50%;
-		position: relative;
-		transform: translateY(-50%);
+    max-width: 146px;
+    height: 4em;
+    p {
+        top:50%;
+        position: relative;
+        transform: translateY(-50%);
         padding-left: 10px;
-	}
+    }
 }
 
 @media (max-width: 767px) {
-	#hero #hero_section .hero_content { width:100%; }
-	#hero_bottom_strip {
-		min-height: initial;
-		.container {
-			padding-top: 15px;
-			padding-bottom: 30px;
-			font-size: 1em;
-			text-align: center;
-		}
-	}
-	.sprite_img { display:inline-block }
-	.value_prop { max-width:initial }
+    #hero #hero_section .hero_content { width:100%; }
+    #hero_bottom_strip {
+        min-height: initial;
+        .container {
+            padding-top: 15px;
+            padding-bottom: 30px;
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+    .sprite_img { display:inline-block }
+    .value_prop { max-width:initial }
 }
 
 @media (max-width: 550px) {  /* Scrunch the icons even smaller on very small devices */
-	.sprite_img {
-		width:45px;
-		height:45px;
-		background-size:135px 45px;
-	}
+    .sprite_img {
+        width:45px;
+        height:45px;
+        background-size:135px 45px;
+    }
 }
 
 @mixin sprite-img($a, $b) {
-	background: url("{{ site.baseurl }}/static/img/value-prop-sprite.svg") $a $b;
+    background: url("{{ site.baseurl }}/static/img/value-prop-sprite.svg") $a $b;
 }
 
 #sprite_shared_code { @include sprite-img(0px, 0) }
@@ -156,47 +156,47 @@ html {
 #sprite_apis { @include sprite-img(100%, 0) }
 
 .navbar-brand {
-	padding:0;
-	position: absolute;
+    padding:0;
+    position: absolute;
 }
 img#logo_top {
-	width:190px;
-	padding:5px;
+    width:190px;
+    padding:5px;
 }
 
 @media (min-width: 767px) { /* Center the navs when not collapsed */
-	.nav_bar_center {
-		text-align:center;
-		height:50px;
-	}
-	.nav_bar_center > ul {
-		display: inline-block;
-		float:none;
-	}
+    .nav_bar_center {
+        text-align:center;
+        height:50px;
+    }
+    .nav_bar_center > ul {
+        display: inline-block;
+        float:none;
+    }
   }
 
 .vertical-center-parent {
-	position: relative;
-	width:100%;
-	height:100%;
-	.vertical-center-child {
-		position:absolute;
-		top:50%;
-		left:50%;
-		@include vendor-prefix(transform, translate(-50%,-50%));
-	}
+    position: relative;
+    width:100%;
+    height:100%;
+    .vertical-center-child {
+        position:absolute;
+        top:50%;
+        left:50%;
+        @include vendor-prefix(transform, translate(-50%,-50%));
+    }
 }
 
 /*
 ********* Getting Started ***********
 */
 .get-started-section {
-	margin-bottom:20px;
+    margin-bottom:20px;
 }
 .number_circle {
     display: inline-block;
     width: 50px;
-	height:50px;
+    height:50px;
     padding: 8px;
     font-size: 24px;
     color: #ffffff;
@@ -205,35 +205,35 @@ img#logo_top {
     text-align: center;
     background-color: $brand-primary-darker;
     border-radius: 50%;
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .well_code {
-	@extend .well;
-	padding-bottom:19px + 50px;
-	position:relative;
-	background-color: $gray-10;
-	margin-top:25px;
-	div {
-		@extend .well_code;
-		position: absolute;
-	    top: 100%;
-		@include vendor-prefix(transform, translateY(-100%));
-	    padding: 0;
-		margin:0;
-		background-color: $gray-20;
-		width: 100%;
-		margin-left:-19px;
-		button {
-			background-color: $brand-primary;
-			margin:5px;
-		}
-	}
-	.copy-text {
-		width:0px;
-		height:0px;
-		overflow:hidden;
-	}
+    @extend .well;
+    padding-bottom:19px + 50px;
+    position:relative;
+    background-color: $gray-10;
+    margin-top:25px;
+    div {
+        @extend .well_code;
+        position: absolute;
+        top: 100%;
+        @include vendor-prefix(transform, translateY(-100%));
+        padding: 0;
+        margin:0;
+        background-color: $gray-20;
+        width: 100%;
+        margin-left:-19px;
+        button {
+            background-color: $brand-primary;
+            margin:5px;
+        }
+    }
+    .copy-text {
+        width:0px;
+        height:0px;
+        overflow:hidden;
+    }
 }
 
 
@@ -242,68 +242,69 @@ img#logo_top {
 */
 
 .dark {
-	background-color: $gray-90;
+    background-color: $gray-90;
 }
 .dark, .dark .container-fluid { /* Fixes an overflow problem in the showcase sections */
-	margin-left:0;
-	margin-right:0;
-	padding-left:0;
-	padding-right:0;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
 }
 .showcase_section_intro {
     margin: auto;
-	float:none;
+    float:none;
     max-width: 700px;
-	h1 { color: $brand-gold; padding-bottom:0; }
-	h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
-	p, span { color: $gray-40; text-align: left; }
+    h1 { color: $brand-gold; padding-bottom:0; }
+    h2 { color: white; font-size: 18px; font-weight:normal; padding:0; margin-top:0 }
+    p, span { color: $gray-40; text-align: left; }
     padding-top: 4px;
- 	padding-bottom: 35px;
+    padding-bottom: 35px;
 }
 
 .supported_platforms {
-	background-color: darken(white, 85%);
+    background-color: darken(white, 85%);
     margin-left: -15px;
     margin-right: -15px;
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 .platform_logos {
-	list-style-type: none;
-	padding-left:0;
+    list-style-type: none;
+    padding-left:0;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .card_gallery {
-	color:white;
-	.card {
-			padding:8px;
-			.card_title {
-				color: $brand-primary;
-				font-weight: bold;
-			}
-			.card_inner {
-				background-color:darken(white, 85%);
-				padding: 32px 16px 32px 16px;
-				img {
-					height:50px;
-					padding-bottom:10px;
-				}
+    color:white;
+    .card {
+            padding:8px;
+            .card_title {
+                color: $brand-primary;
+                font-weight: bold;
+                font-size: 13px;
+                padding-top: 10px;
+            }
+            .card_inner {
+                background-color:darken(white, 85%);
+                padding: 32px 16px 32px 16px;
+                img {
+                    height:50px;
+                }
                 &.tool .text {
                     height: 250px;
                 }
                 &.app .text {
                     height: 100px;
                 }
-			}
-			.showcase_app_thumb {
+            }
+            .showcase_app_thumb {
                 width: 100%;
                 height: 100px;
                 img {
-                	height: 100%;
-					border-radius:22px;
+                    height: 100%;
+                    border-radius: 22px;
                 }
-			}
-		}
+            }
+        }
 }
 /* make cards smaller on smaller screens */
 @media (max-width: $screen-lg-min) {
@@ -327,23 +328,23 @@ img#logo_top {
     }
 }
 .add_seemore_links {
-	margin: 15px 0;
-	a {	padding-left:30px; }
+    margin: 15px 0;
+    a { padding-left:30px; }
 }
 
 .not-found-container {
-	height: 60%;
-	margin: auto;
-	width: 75%;
+    height: 60%;
+    margin: auto;
+    width: 75%;
 }
 
 .not-found-header {
-	padding-top: 15%;
-	text-align: center;
+    padding-top: 15%;
+    text-align: center;
 }
 
 .not-found-redirect {
-	margin-bottom: 20px;
-	text-align: center;
-	display: none;
+    margin-bottom: 20px;
+    text-align: center;
+    display: none;
 }

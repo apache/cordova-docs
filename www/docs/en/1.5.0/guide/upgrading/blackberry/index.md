@@ -41,10 +41,10 @@ Updating just the www folder:
 5. Update your HTML to use the new `cordova-1.5.0.js` file.
 6. Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:
 
-From: 
+From:
     <plugin name="App"            value="com.phonegap.app.App"/>
     <plugin name="Device"         value="com.phonegap.device.Device"/>
-    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>	
+    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>
     <plugin name="Network Status" value="com.phonegap.network.Network"/>
     <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
     <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>
@@ -81,10 +81,10 @@ Updating the sample folder (ie, updating using the ant tools):
 8. Open the `www/` folder and update your HTML to use the new `cordova-1.5.0.js` file.
 9. Update your www/plugins.xml file - remember all of the references to PhoneGap need to be changed to Cordova:
 
-From: 
+From:
     <plugin name="App"            value="com.phonegap.app.App"/>
     <plugin name="Device"         value="com.phonegap.device.Device"/>
-    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>	
+    <plugin name="Camera"         value="com.phonegap.camera.Camera"/>
     <plugin name="Network Status" value="com.phonegap.network.Network"/>
     <plugin name="Notification"   value="com.phonegap.notification.Notification"/>
     <plugin name="Accelerometer"  value="com.phonegap.accelerometer.Accelerometer"/>

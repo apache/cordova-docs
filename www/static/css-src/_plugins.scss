@@ -1,149 +1,149 @@
 .plugins_search_container {
-	max-width:405px;
-	margin:auto;
-	.input-group {
-		width:100%;
-	}
+    max-width:405px;
+    margin:auto;
+    .input-group {
+        width:100%;
+    }
 }
 
 .whatisplugin_box {
-	margin-top:20px;
-	img {
-		float:left;
-		    padding-right: 20px;
-			padding-bottom: 20px;
-		    width: 84px;
-	}
+    margin-top:20px;
+    img {
+        float:left;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            width: 84px;
+    }
 }
 .plugins_links {
-	max-width: 405px;
-	margin:auto;
+    max-width: 405px;
+    margin:auto;
 }
 .progress {
-	width:12%;
-	margin:0;
+    width:12%;
+    margin:0;
 }
 .featured-list-header{
-	margin-top:0;
+    margin-top:0;
 }
 .well.featured-list {
-	padding:0;
-	h2 { text-align: center; }
-	ul {
-		list-style: none;
-		padding-left:0;
-		div { display:inline-block; }
-		li {
-			padding-left:19px;
-			padding-right:19px;
-			padding-top:5px;
-			height:33px;
-		}
-		li:nth-child(odd) {
-			background-color:$gray-20;
-		}
-	}
+    padding:0;
+    h2 { text-align: center; }
+    ul {
+        list-style: none;
+        padding-left:0;
+        div { display:inline-block; }
+        li {
+            padding-left:19px;
+            padding-right:19px;
+            padding-top:5px;
+            height:33px;
+        }
+        li:nth-child(odd) {
+            background-color:$gray-20;
+        }
+    }
 }
 .plugin {
-	position:absolute;
-	left:126px;
+    position:absolute;
+    left:126px;
 }
 .plugin-stats {
-	position: absolute;
-	right:0;
-	width:100px;
+    position: absolute;
+    right:0;
+    width:100px;
 }
 .filter-by-platforms {
-	margin-top:40px;
-	margin-bottom:10px;
+    margin-top:40px;
+    margin-bottom:10px;
 }
 
 .filter-by-platform-label {
-	line-height:40px;
-	vertical-align: top;
+    line-height:40px;
+    vertical-align: top;
 }
 
 .filter-by-platform-filters {
-	display: inline-block;
-	button.btn {
-		margin-bottom: 2px;
-		margin-right: 2px;
-		width: 120px;
+    display: inline-block;
+    button.btn {
+        margin-bottom: 2px;
+        margin-right: 2px;
+        width: 120px;
 
-		&.btn-primary {
-			background-color: $brand-primary;
-		}
-		&.btn-default {
-			background-color: $gray-10;
-			&:hover {
-				background-color: $brand-primary;
-			}
-		}
-	}
+        &.btn-primary {
+            background-color: $brand-primary;
+        }
+        &.btn-default {
+            background-color: $gray-10;
+            &:hover {
+                background-color: $brand-primary;
+            }
+        }
+    }
 }
 
 .nav-pills > li > a {
-	background-color:$gray-5;
+    background-color:$gray-5;
 }
 
 .nav > li > a:hover {
-	background-color:$gray-10;
+    background-color:$gray-10;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-	background-color:$brand-primary;
-	color:black;
+    background-color:$brand-primary;
+    color:black;
 }
 
 .plugins-sort-dropdown {
-	height:40px;
+    height:40px;
 }
 
 /***
-****	Plugins Results
+****    Plugins Results
 ****
 */
 
 .plugins-results-container {
-	margin-bottom:20px;
-	padding:0;
+    margin-bottom:20px;
+    padding:0;
 }
 
 .plugin-results-number {
-	line-height:40px;
-	vertical-align: top;
-	text-align: center;
+    line-height:40px;
+    vertical-align: top;
+    text-align: center;
 }
 
 .plugin-results-result {
-	margin-bottom:20px;
-	background-color:$gray-5;
-	position: relative;
+    margin-bottom:20px;
+    background-color:$gray-5;
+    position: relative;
 }
 
 .plugin-results-show-more {
-	text-align: center;
-	cursor:pointer;
-	padding: 10px;
-	background-color: $brand-primary;
-	color: #000;
+    text-align: center;
+    cursor:pointer;
+    padding: 10px;
+    background-color: $brand-primary;
+    color: #000;
 }
 
 .plugin-results-show-more:hover {
-	color: #000;
+    color: #000;
 }
 
 .version_and_author {
-	display: inline-block;
+    display: inline-block;
 }
 
 .plugins-copy-to-clipboard {
-	width:15px;
-	position:absolute;
-	right:0;
-	top:20px;
-	margin-right:10px;
-	cursor:pointer;
+    width:15px;
+    position:absolute;
+    right:0;
+    top:20px;
+    margin-right:10px;
+    cursor:pointer;
 }
 
 .plugins-featured {
@@ -154,26 +154,26 @@
 }
 
 .plugin-search-credit {
-	margin-left: 0px;
-	margin-bottom: 5px;
+    margin-left: 0px;
+    margin-bottom: 5px;
 }
 
 @media (min-width: 767px) {
-	.version_and_author {
-	float:right;
-	margin-top:20px;
-	}
-	h2 { display: inline-block }
+    .version_and_author {
+    float:right;
+    margin-top:20px;
+    }
+    h2 { display: inline-block }
 }
 .license { font-weight: bold }
 hr.results-divider-line {
-	border-color:$gray-20;
+    border-color:$gray-20;
 }
 
 .cordova-add-command {
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
 }
 
 .results-supported-platforms {

@@ -64,11 +64,11 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var myContact = navigator.contacts.create({"displayName": "Test User"});
-			myContact.gender = "male";
-			console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            myContact.gender = "male";
+            console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
         }
-    
+
 
         </script>
       </head>

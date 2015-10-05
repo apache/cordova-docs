@@ -36,13 +36,13 @@ We encourage all third party plugin developers to add `ecosystem:cordova` as a k
     1. We integrate that module into the **Cordova CLI** to warn users to use the new `id` when adding plugins to their projects.
 
 1. Add a `package.json` to your plugins,
-	* **Note**: To keep things simple, please make sure your `id` in `plugin.xml` is the same as your `package-name` in `package.json`.
+    * **Note**: To keep things simple, please make sure your `id` in `plugin.xml` is the same as your `package-name` in `package.json`.
     * Use `plugman createpackagejson [PLUGIN DIRECTORY]` to create `package.json`.
         * This will create defaults based on existing values in your `plugin.xml`.
         * It will also automatically add the keyword `ecosystem:cordova` to your newly generated `package.json` file.
         * In addition, a **cordova** key will be added to your `package.json` which we plan to use in future updates of the tooling.
     * View the `package.json` of [cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json) to see an example of what your `package.json` should look like after running `plugman createpackagejson [PLUGIN DIRECTORY]` command.
-	* Plugins still require a `plugin.xml` to be installed into **Cordova** projects.
+    * Plugins still require a `plugin.xml` to be installed into **Cordova** projects.
 
 1. Publish your plugin to **npm** using the `npm publish [PLUGIN DIRECTORY]`.
 
@@ -83,7 +83,7 @@ The following plugins were updated today:
 To update your existing plugins, you need to update your version of `Cordova CLI` to version 5.0.0.
 
     E.g. To update your cli:
-        
+
         `npm install -g cordova@5.0.0`
 
 Then remove your old plugin and re-add it using the new ID.

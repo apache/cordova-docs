@@ -138,8 +138,10 @@ The display _image_ shall:
 
 1. be __less than 128KiB__ in size (NOTE: those are kibibytes, not kilobytes),
 2. contain the __logo__ of the tool/app,
-3. use colors that don't compete with other elements on the page, and
-4. __for tools__ be __298px by 100px__ in size, or smaller, in an aspect ratio that will blend in with the other tools (NOTE: optimal aspect ratio will vary based on your artwork); __for apps__ be __100px by 100px__ in size, or smaller, and square in dimensions.
+3. use __colors that don't compete__ with other elements on the page, and
+4. have acceptable measurements, as follows:
+    - __298px by 100px__ or smaller with a roughly rectangular aspect ratio for tools, and
+    - __100px by 100px__ or smaller with a square aspect ratio for apps.
 
 The _description_ shall:
 

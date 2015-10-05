@@ -7,6 +7,7 @@ title:  "Tools Release: Jan 31, 2014"
 categories: news
 tags: release tools
 ---
+
 It's been a long time since our last tools release, but it's certainly no sign of stagnation. Today's release is action packed!
 
 * plugman@0.19.0
@@ -25,6 +26,7 @@ This release brings with it a plethora of bug fixes as well as some new features
 * When installing by plugin ID, tell `cordova` and `plugman` to search for plugins locally using `--searchpath`
 
 Full list of release notes:
+
 <!--more-->
 
 ## cordova

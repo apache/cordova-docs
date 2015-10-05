@@ -54,18 +54,18 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
     ![](img/guide/platforms/android/new_android_project.jpeg)
 - In the root directory of the project, create two new directories:
- 	- **/libs**
- 	- **assets/www**
+    - **/libs**
+    - **assets/www**
 - Copy **cordova-1.5.0.js** from your PhoneGap download earlier to **assets/www**
 - Copy **cordova-1.5.0.jar** from your PhoneGap download earlier to **/libs**
 - Copy **xml** folder from your PhoneGap download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
-	- Change the class's extend from **Activity** to **DroidGap**
-	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
-	- Add **import com.phonegap.*;**
-	- Remove **import android.app.Activity;**
+    - Change the class's extend from **Activity** to **DroidGap**
+    - Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**
+    - Add **import com.phonegap.*;**
+    - Remove **import android.app.Activity;**
 
-	![](img/guide/platforms/android/javaSrc.jpg)
+    ![](img/guide/platforms/android/javaSrc.jpg)
 - You might experience an error here, where Eclipse can't find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions under versionName: (view image below)
@@ -89,15 +89,15 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
 - Add a second activity under you application tag in AndroidManifest. (view image below)
-	
-	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 
-	![](img/guide/platforms/android/manifest.jpg)
+        <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
+
+    ![](img/guide/platforms/android/manifest.jpg)
 
 
 
 4. Hello World
---------------    
+--------------
 
 Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 

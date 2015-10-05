@@ -25,9 +25,9 @@ cameraOptions
 
 Optional parameters to customize the camera settings.
 
-    { quality : 75, 
-      destinationType : Camera.DestinationType.DATA_URL, 
-      sourceType : Camera.PictureSourceType.CAMERA, 
+    { quality : 75,
+      destinationType : Camera.DestinationType.DATA_URL,
+      sourceType : Camera.PictureSourceType.CAMERA,
       allowEdit : true,
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
@@ -39,14 +39,14 @@ Options
 - __quality:__ Quality of saved image. Range is [0, 100]. (`Number`)
 
 - __destinationType:__ Choose the format of the return value.  Defined in navigator.camera.DestinationType (`Number`)
-        
+
             Camera.DestinationType = {
                 DATA_URL : 0,                // Return image as base64 encoded string
                 FILE_URI : 1                 // Return image file URI
             };
 
 - __sourceType:__ Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (`Number`)
-     
+
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
             CAMERA : 1,
@@ -54,9 +54,9 @@ Options
         };
 
 - __allowEdit:__ Allow simple editing of image before selection. (`Boolean`)
-  
+
 - __EncodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
-        
+
             Camera.EncodingType = {
                 JPEG : 0,               // Return JPEG encoded image
                 PNG : 1                 // Return PNG encoded image
@@ -66,13 +66,13 @@ Options
 - __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
 
 - __MediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
-     
-        Camera.MediaType = { 
-			PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
-			VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
-			ALLMEDIA : 2			// allow selection from all media types
+
+        Camera.MediaType = {
+            PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
+            VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
+            ALLMEDIA : 2            // allow selection from all media types
 };
-  
+
 Android Quirks
 --------------
 

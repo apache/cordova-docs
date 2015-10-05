@@ -8,14 +8,16 @@ categories: news
 tags: release
 ---
 
-Today we are doing a release for the plugins that have been updated since our last release. We are also excited to announce three new plugins that have recently been added to our registry. 
+Today we are doing a release for the plugins that have been updated since our last release. We are also excited to announce three new plugins that have recently been added to our registry.
 
 The new plugins include:
+
 * websql for Android
 * keyboard for iOS
 * statusbar for iOS
 
 The following plugins have been updated for this release:
+
 * cordova-plugin-contacts
 * cordova-plugin-file
 * cordova-plugin-file-transfer
@@ -25,11 +27,12 @@ The following plugins have been updated for this release:
 * cordova-plugin-splashscreen
 * cordova-plugin-vibration
 
-
 <br />
+
 These plugins have been updated on our registry at [plugins.cordova.io](http://plugins.cordova.io).
 
 <br />
+
 <!--more-->
 
 E.g. To update your camera plugin:
@@ -37,8 +40,9 @@ E.g. To update your camera plugin:
     cordova plugin rm org.apache.cordova.camera
     cordova plugin add org.apache.cordova.camera
 
-    
+
 *Notable Changes:*
+
 * [CB-4950](https://issues.apache.org/jira/browse/CB-4950) Remove the dependence on concrete component android.webkit.WebView. (contacts)
 * [CB-5020](https://issues.apache.org/jira/browse/CB-5020) File plugin should execute on a separate thread (file)
 * Fixed file-transfer issues for windows 8 (file-transfer)
