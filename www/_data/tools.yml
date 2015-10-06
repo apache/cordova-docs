@@ -63,3 +63,11 @@
         developing hybrid and native apps with JavaScript. Use our free and
         open source Kendo UI framework with Telerik Platform to address every
         stage of your application lifecycle - from idea to deployment.
+
+-   name: Framework7
+    image: framework7.png
+    url: http://www.idangero.us/framework7/
+    description: >
+        Framework7 is a free and open source mobile HTML framework for 
+        developing hybrid mobile apps or web apps with iOS & Android 
+        native look and feel.
