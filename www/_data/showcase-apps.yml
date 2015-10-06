@@ -37,3 +37,10 @@
     description: >
         JustWatch is the easiest way to see if your favorite movies or TV
         shows are available on any streaming provider.
+
+-   name: Gudog - Dog Boarding
+    image: Gudog.png
+    url: https://gudog.co.uk/mobile
+    description: >
+        Gudog brings together dog owners and trustworthy dog sitters who 
+        offer Home Dog Boarding, Dog Walking and Doggy Daycare.
