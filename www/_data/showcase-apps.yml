@@ -42,5 +42,13 @@
     image: Gudog.png
     url: https://gudog.co.uk/mobile
     description: >
-        Gudog brings together dog owners and trustworthy dog sitters who 
+        Gudog brings together dog owners and trustworthy dog sitters who
         offer Home Dog Boarding, Dog Walking and Doggy Daycare.
+
+-   name: Series Seven
+    image: SeriesSeven.png
+    url: http://www.idangero.us/series7/
+    description: >
+        Series Seven allows you to track your favorite TV shows and easily
+        get all information about TV show. You'll never miss new episode of
+        your favorite show with Series Seven.
