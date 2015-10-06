@@ -37,3 +37,11 @@
     description: >
         JustWatch is the easiest way to see if your favorite movies or TV
         shows are available on any streaming provider.
+
+-   name: Series Seven
+    image: SeriesSeven.png
+    url: http://www.idangero.us/series7/
+    description: >
+        Series Seven allows you to track your favorite TV shows and easily 
+        get all information about TV show. You'll never miss new episode of 
+        your favorite show with Series Seven.
