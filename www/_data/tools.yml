@@ -89,3 +89,11 @@
         HTML5 IDE with Cordova-specific tools for project configuration,
         plugin management, integrated emulation and debugging, on-device
         preview and live reload, cloud-based build and more.
+
+-   name: Cocoon
+    image: cocoon.png
+    url: http://cocoon.io/
+    description: >
+        Cocoon is a Cordova based cloud service for building native HTML5 apps
+        and games. Cocoon is focused on providing the best webview engines and
+        features like Canvas+, JS encryption or a custom Developer App.
