@@ -81,3 +81,11 @@
         create HTML5 and native apps without programming knowledge. Offers
         dozens of controls and actions ready to be used in your apps and
         lot of app samples to learn it.
+
+-   name: Intel XDK
+    image: intel-xdk-art.png
+    url: https://software.intel.com/intel-xdk
+    description: >
+        HTML5 IDE with Cordova-specific tools for project configuration,
+        plugin management, integrated emulation and debugging, on-device
+        preview and live reload, cloud-based build and more.
