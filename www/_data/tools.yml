@@ -63,3 +63,11 @@
         developing hybrid and native apps with JavaScript. Use our free and
         open source Kendo UI framework with Telerik Platform to address every
         stage of your application lifecycle - from idea to deployment.
+
+-   name: Intel XDK
+    image: intel-xdk-art.png
+    url: https://software.intel.com/intel-xdk
+    description: >
+        HTML5 IDE with Cordova-specific tools for project configuration, 
+        plugin management, integrated emulation and debugging, on-device preview and live reload, 
+        cloud-based build and more.
