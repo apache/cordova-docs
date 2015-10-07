@@ -521,22 +521,61 @@ a local `info.txt` file.
 __NOTE__: Currently, only details on iOS and Android platforms are
 available.
 
-## Updating Cordova and Your Project
-
-After installing the `cordova` utility, you can always update it to
-the latest version by running the following command:
-
-        $ sudo npm update -g cordova
+## Advanced Installation Options
 
 Use this syntax to install a specific version:
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
+
+The use of the `-g` flag results in a global installation of
+`cordova`. This makes the installation available to all users and
+projects on a machine, but limits the user to a single version of
+Cordova. To run multiple versions on the same machine, install each
+version locally by omitting the `-g` flag.
+
+        $ mkdir cordova3.1 && mkdir cordova3.6
+        $ cd cordova3.1 && npm install cordova@3.1.0-0.2.0
+        $ cd ../cordova3.6 && npm install cordova@3.6.0-0.2.8
+
+This installs cordova in the `node_modules` folder of the current directory:
+
+        $ cd cordova3.1
+        $ ./node_modules/cordova/bin/cordova create hello31 com.example.hello31 HelloWorld
+
+Alternatively, the cordova-local utility can be used to manage multiple
+Cordova installations and avoid this unwieldy syntax. Install it
+globally:
+
+        $ npm install -g cordova-local
+
+This adds the `cordova-local` command to your system path. This command
+can be run from any directory, and will locate and run the closest local
+installation of Cordova in the current directory or its direct
+ancestors. To default to a global Cordova installation in the event that
+no local one is found, use the `--incglobal` or `-g` flag.
+
+The following assumes an environment with only the 3.1 and 3.6 local
+installations shown above, and a global installation of Cordova 4.0.0:
+
+        $ cd cordova3.1
+        $ cordova-local create hello31 com.example.hello31 HelloWorld #(creates a cordova 3.1.0 project)
+        $ cd ../cordova3.6
+        $ cordova-local create hello36 com.example.hello36 HelloWorld #(creates a cordova 3.6.0 project)
+        $ cd ~
+        $ cordova-local create hello com.example.hello HelloWorld --incglobal #(creates a cordova 4.0.0 project)
 
 Run `cordova -v` to see which version is currently running.  Run the `npm
 info` command for a longer listing that includes the current version
 along with other available version numbers:
 
         $ npm info cordova
+
+## Updating Cordova and Your Project
+
+After installing the `cordova` utility, you can always update it to
+the latest version by running the following command:
+
+        $ sudo npm update -g cordova
 
 Cordova 3.0 is the first version to support the command-line interface
 described in this section. If you are updating from a version prior to
