@@ -55,7 +55,7 @@ var CONFIG_FILES = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
 var DEV_FLAGS    = ["--config", CONFIG_FILES.concat([DEV_CONFIG_FILE]).join(","), "--trace"];
 var PROD_FLAGS   = ["--config", CONFIG_FILES.concat([PROD_CONFIG_FILE]).join(",")];
 
-var BASE_URL          = "/use-the-force-luke";
+var BASE_URL          = "";
 var YAML_FRONT_MATTER = "---\n---\n";
 var WATCH_INTERVAL    = 1000; // in milliseconds
 var VERSION_VAR_NAME  = "latest_docs_version";

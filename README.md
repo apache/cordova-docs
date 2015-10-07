@@ -101,7 +101,7 @@ Deploying
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-First, inspect `_prod.yml` to check that the correct `baseurl` is used. For development deployment, it should be some non-empty folder (e.g. `"/use-the-force-luke"`), and for a production deployment it should be empty (i.e. `""`). To then build the full website, run:
+To build the full website, run:
 
     gulp build --prod
 
@@ -110,17 +110,11 @@ A folder called `build-prod` will be created, and will contain the whole website
     cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
 
-Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN (or in the case of a development deployment, to `public/use-the-force-luke`).
-
-Therefore, for the __development__ deployment, run:
-
-    cp -R cordova-docs/build-prod/* cordova-website/public/use-the-force-luke/
-
-For the __production__ deployment, run:
+Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN like so:
 
     cp -R cordova-docs/build-prod/* cordova-website/public/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced the newly copied files. The commit might take a while (up to 1 hour), depending on the number of files copied.
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN). The commit might take a while (up to 1 hour), depending on the number of files changed.
 
 Working on the Documentation
 ============================

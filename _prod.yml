@@ -1,4 +1,4 @@
-baseurl: "/use-the-force-luke"
+baseurl: ""
 destination: build-prod
 exclude:
     - static/css-src
