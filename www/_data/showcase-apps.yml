@@ -37,3 +37,10 @@
     description: >
         JustWatch is the easiest way to see if your favorite movies or TV
         shows are available on any streaming provider.
+
+-   name: ReactEurope - React.js Europe Conference
+    image: ReactEurope.png
+    url: https://www.react-europe.org/
+    description: >
+        ReactEurope is the occasion to meet the core team and other awesome members
+        of the community to learn, socialize and have fun in the beautiful city of Paris
