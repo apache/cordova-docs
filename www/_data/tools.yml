@@ -63,3 +63,13 @@
         developing hybrid and native apps with JavaScript. Use our free and
         open source Kendo UI framework with Telerik Platform to address every
         stage of your application lifecycle - from idea to deployment.
+-   name: GapDebug
+    image: gapdebug-logo100.png
+    url: https://www.genuitec.com/products/gapdebug/
+    description: >
+        GapDebug is a free tool for debugging and managing hybrid-mobile Android and iOS apps. 
+        With Drag and drop App Installation, Instant debugging, and full cross-platform support, 
+        GapDebug changes how you view debugging for good.
+
+
+        
