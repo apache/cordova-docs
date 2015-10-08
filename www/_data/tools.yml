@@ -63,3 +63,12 @@
         developing hybrid and native apps with JavaScript. Use our free and
         open source Kendo UI framework with Telerik Platform to address every
         stage of your application lifecycle - from idea to deployment.
+
+-   name: App Builder
+    image: appbuilder.png
+    url: http://www.getappbuilder.com/
+    description: >
+        App Builder is a complete IDE for Microsoft Windows which allows to 
+	create HTML5 and native apps without programming knowledge. Offers
+	dozens of controls and actions ready to be used in your apps and
+	lot of app samples to learn it.
