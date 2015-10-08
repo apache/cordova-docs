@@ -63,3 +63,11 @@
         developing hybrid and native apps with JavaScript. Use our free and
         open source Kendo UI framework with Telerik Platform to address every
         stage of your application lifecycle - from idea to deployment.
+
+-   name: Cocoon
+    image: cocoon.png
+    url: http://cocoon.io/
+    description: >
+        Cocoon is a Cordova based cloud service for building native HTML5 apps
+        and games. Cocoon is focused on providing the best webview engines and
+        features like Canvas+, JS encryption or a custom Developer App.
