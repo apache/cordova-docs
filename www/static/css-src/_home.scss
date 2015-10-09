@@ -277,23 +277,34 @@ img#logo_top {
     color:white;
     .card {
             padding:8px;
-            .card_title {
-                color: $brand-primary;
-                font-weight: bold;
-                font-size: 13px;
-                padding-top: 10px;
-            }
             .card_inner {
-                background-color:darken(white, 85%);
-                padding: 32px 16px 32px 16px;
-                img {
-                    height:50px;
+                background-color: darken(white, 85%);
+                padding: 32px 16px 24px 16px;
+                .card_title {
+                    color: $brand-primary;
+                    font-weight: bold;
+                    font-size: 13px;
+                    padding-top: 10px;
                 }
-                &.tool .text {
-                    height: 250px;
+                .img_container {
+                    height: 50px;
+                    img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
                 }
-                &.app .text {
-                    height: 100px;
+                &.tool {
+                    .text {
+                        height: 250px;
+                    }
+                }
+                &.app {
+                    .card_title {
+                        min-height: 46px;
+                    }
+                    .text {
+                        height: 120px;
+                    }
                 }
             }
             .showcase_app_thumb {
