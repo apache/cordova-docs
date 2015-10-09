@@ -9,7 +9,9 @@
         {% for tool in site.data.tools %}
         <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 card">
             <div class="tool card_inner">
-                <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
+                <div class="img_container">
+                    <img src="{{ site.baseurl }}/static/img/tools/{{ tool.image }}" class="center-block"/>
+                </div>
                 <p class="card_title">
                     {% if tool.url %}
                         <a href="{{ tool.url }}">
@@ -58,7 +60,7 @@
                         {{ app.name }}
                     {% endif %}
                 </p>
-                <p class="text">{{ app.description | strip_html | truncate:200 }}</p>
+                <p class="text">{{ app.description | strip_html | truncate:128 }}</p>
             </div>
         </div>
         {% endfor %}

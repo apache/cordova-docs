@@ -9,7 +9,7 @@
     image: NewVo.png
     url: https://newvo.me
     description: >
-        NewVo makes it fun to share and receive opinions on style decisions.
+        NewVo is an app for fun, fast, and free personal fashion advice.
 
 -   name: Pacifica - Stress and Anxiety Relief
     image: Pacifica.png
@@ -37,3 +37,18 @@
     description: >
         JustWatch is the easiest way to see if your favorite movies or TV
         shows are available on any streaming provider.
+
+-   name: Gudog - Dog Boarding
+    image: Gudog.png
+    url: https://gudog.co.uk/mobile
+    description: >
+        Gudog brings together dog owners and trustworthy dog sitters who
+        offer Home Dog Boarding, Dog Walking and Doggy Daycare.
+
+-   name: Series Seven
+    image: SeriesSeven.png
+    url: http://www.idangero.us/series7/
+    description: >
+        Series Seven allows you to track your favorite TV shows and easily
+        get all information about TV show. You'll never miss new episode of
+        your favorite show with Series Seven.
