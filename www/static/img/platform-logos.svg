@@ -7,10 +7,6 @@
 	.st1{fill:#FFFFFF;}
 </style>
 <g>
-	<circle class="st0" cx="24.5" cy="24.5" r="24.5"/>
-	<circle class="st0" cx="91.5" cy="24.5" r="24.5"/>
-	<circle class="st0" cx="157.5" cy="24.5" r="24.5"/>
-	<circle class="st0" cx="225.5" cy="24.5" r="24.5"/>
 	<g>
 		<g>
 			<path class="st1" d="M98.9,25.4c0-3.4,2.8-5,2.9-5.1c-1.6-2.3-4-2.6-4.9-2.7c-2.1-0.2-4.1,1.2-5.2,1.2c-1.1,0-2.7-1.2-4.4-1.2

@@ -37,12 +37,19 @@ html {
                 width: 100%;
             }
         }
-
         .hero_content {
-            div {
-                padding-bottom:20px;
+            p {
+                color: $gray-10;
+                font-weight: 300;
+                color: rgb(166, 178, 180);
+                em {
+                    font-style: normal;
+                    font-weight: normal;
+                    color: white;
+                }
             }
             .hero_supported_platforms {
+                padding-bottom: 40px;
                 img {
                     margin-right: 15px;
                 }
@@ -55,9 +62,17 @@ html {
                     padding-left: 5px;
                 }
             }
-        }
-        .btn {
-            margin-bottom: 3px;
+            .hero_buttons {
+                .btn {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: bold;
+                    letter-spacing: 0.1em;
+                    border-radius: 2px;
+                    padding: 15px;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
     .hero_logo {
@@ -69,8 +84,12 @@ html {
 
 @media (min-width: $screen-sm-min) {
     #hero {
-        #hero_section .btn + .btn {
-            margin-left: 3px;
+        #hero_section {
+            .hero_buttons {
+                .btn + .btn {
+                    margin-left: 15px;
+                }
+            }
         }
     }
 }
@@ -160,8 +179,8 @@ html {
     position: absolute;
 }
 img#logo_top {
-    width:190px;
-    padding:5px;
+    width:150px;
+    padding:10px;
 }
 
 @media (min-width: 767px) { /* Center the navs when not collapsed */

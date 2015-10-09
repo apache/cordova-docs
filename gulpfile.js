@@ -157,7 +157,7 @@ gulp.task("serve", ["build"], function () {
     });
 });
 
-gulp.task("gen-full", ["toc", "configs", "styles", "plugins"], function (done) {
+gulp.task("gen-full", ["configs", "styles", "plugins"], function (done) {
     jekyllBuild(done);
 });
 
@@ -263,7 +263,7 @@ gulp.task("plugins", function() {
 });
 
 // compound tasks
-gulp.task("configs", ["languages", "defaults", "version"]);
+gulp.task("configs", ["toc", "languages", "defaults", "version"]);
 gulp.task("styles", ["less", "css", "sass"]);
 gulp.task("build", ["gen-full"]);
 gulp.task("default", ["watch"]);
