@@ -66,3 +66,11 @@
     description: >
         Clever Baby is the easiest way to track your baby's well-being, growth
         and development.
+
+-   name: Buildr
+    image: Buildr.png
+    url: https://itunes.apple.com/us/app/buildr./id987621361?mt=8
+    description: >
+        You are using PhoneGap Build to develop your Apps? Then Buildr will
+        be your new best friend. Rebuild, pull and monitor your apps, unlock
+        and change signing keys.
