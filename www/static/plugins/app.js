@@ -309,7 +309,8 @@ var App = React.createClass({
             blacklistedPlugins = require('./blacklisted-plugins.json').plugins,
             pluginCount = 0,
             self = this,
-            queryHost = "http://npmsearch.com/query",
+            queryProtocol = window.location.protocol === "https:" ? "https:" : "http:",
+            queryHost = queryProtocol + "//npmsearch.com/query",
             queryFields = "fields=name,keywords,license,description,author,modified,homepage,version,rating",
             queryKeywords = "q=keywords:%22ecosystem:cordova%22",
             queryInitialSize = Constants.NpmSearchInitialSize,
@@ -429,13 +430,9 @@ var App = React.createClass({
                 <PlatformButton platform={platform} keyword={keyword} initiallyActive={active}/>
             );
         }
-        var listContent = null;
-        if(window.location.protocol !== "https:") {
-            listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
-        } else {
-            var httpUrl = window.location.href.replace("https://", "http://");
-            listContent = <div className="alert alert-warning" role="alert">Search results are not currently supported over HTTPS. Please visit this page <a href={httpUrl}>using HTTP</a></div>;
-        }
+
+        var listContent = <PluginList plugins={this.state.searchResults} flashEnabled={this.state.flashEnabled}/>;
+
         return (
             <div>
                 <div className="container">
@@ -490,7 +487,7 @@ var App = React.createClass({
                 </div>
                 {listContent}
                 <div className="row plugin-search-credit">
-                    Search results powered by <a target="_blank" href="http://npmsearch.com/">npmsearch.com</a>
+                    Search results powered by <a target="_blank" href="https://npmsearch.com/">npmsearch.com</a>
                 </div>
             </div>
         );
