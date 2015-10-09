@@ -57,5 +57,12 @@
     image: Keepe.png
     url: http://www.keepe.com/?utm_source=cordova
     description: >
-        Get a Handyman or Plumber to your House in 1 Hour. Keepe delivers the 
+        Get a Handyman or Plumber to your House in 1 Hour. Keepe delivers the
         right contractor at your doorstep.
+
+-   name: Clever Baby - Baby Log & Tracker
+    image: CleverBaby.png
+    url: http://www.mycleverbaby.com/
+    description: >
+        Clever Baby is the easiest way to track your baby's well-being, growth
+        and development.
