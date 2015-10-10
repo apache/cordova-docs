@@ -94,6 +94,20 @@ function checkNotification() {
     return new_blog_count;
 }
 
+function setBannerCookie() {
+    setCookie("banner", "set", 365);
+}
+
+function isBannerDismissed() {
+    var isCookieSet = getCookie("banner");
+    if (isCookieSet) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 $(document).ready(function () {
 
     // code for blog badge
@@ -107,6 +121,15 @@ $(document).ready(function () {
     if (new_blog_count) {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
+
+    if(!isBannerDismissed()) {
+        $("#banner").removeClass("hidden");
+    }
+
+    $("#dismiss-btn").click(function() {
+        setBannerCookie();
+        $("#banner").hide();
+    });
 
     var client = new ZeroClipboard();
     client.on("ready", function(e) {
