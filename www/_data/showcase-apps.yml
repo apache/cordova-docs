@@ -52,3 +52,10 @@
         Series Seven allows you to track your favorite TV shows and easily
         get all information about TV show. You'll never miss new episode of
         your favorite show with Series Seven.
+
+-   name: Keepe - Handyman on Demand
+    image: Keepe.png
+    url: http://www.keepe.com/?utm_source=cordova
+    description: >
+        Get a Handyman or Plumber to your House in 1 Hour. Keepe delivers the 
+        right contractor at your doorstep.
