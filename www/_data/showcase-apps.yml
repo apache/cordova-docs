@@ -52,3 +52,9 @@
         Series Seven allows you to track your favorite TV shows and easily
         get all information about TV show. You'll never miss new episode of
         your favorite show with Series Seven.
+
+-   name: Buildr
+    image: Buildr.png
+    url: https://itunes.apple.com/us/app/buildr./id987621361?mt=8
+    description: >
+        You are using PhoneGap Build to develop your Apps? Then Buildr will be your new best friend. Rebuild, pull and monitor your apps, unlock and change signing keys.
