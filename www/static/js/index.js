@@ -122,8 +122,8 @@ $(document).ready(function () {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
-    if(isBannerDismissed()) {
-        $("#banner").hide();
+    if(!isBannerDismissed()) {
+        $("#banner").removeClass("hidden");
     }
 
     $("#dismiss-btn").click(function() {
