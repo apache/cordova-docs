@@ -4,7 +4,7 @@
     /* this is so that wide images don't stick out of their paragraphs */
     p {
         img {
-            width: 100%;
+            max-width: 100%;
         }
     }
 
