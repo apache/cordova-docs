@@ -60,7 +60,8 @@ function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires + "path=/";
+    document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
+    console.log(document.cookie);
 }
 
 function getCookie(cname) {
@@ -71,6 +72,7 @@ function getCookie(cname) {
         while (c.charAt(0)==' ') c = c.substring(1);
         if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
     }
+    console.log(document.cookie);
     return "";
 }
 
@@ -94,18 +96,12 @@ function checkNotification() {
     return new_blog_count;
 }
 
-function setBannerCookie() {
-    setCookie("banner", "set", 365);
+function dismissSurvey() {
+    setCookie("surveyDismissed", 1, 365);
 }
 
-function isBannerDismissed() {
-    var isCookieSet = getCookie("banner");
-    if (isCookieSet) {
-        return true;
-    }
-    else {
-        return false;
-    }
+function isSurveyDismissed() {
+    return getCookie("surveyDismissed");
 }
 
 $(document).ready(function () {
@@ -117,20 +113,23 @@ $(document).ready(function () {
             this.style.backgroundColor = "#3992ab";
         }
     });
+
     var new_blog_count = checkNotification();
     if (new_blog_count) {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
 
-    if(!isBannerDismissed()) {
-        $("#banner").removeClass("hidden");
+    // code for survey banner
+    if(!isSurveyDismissed()) {
+        $("#survey-banner").removeClass("hidden");
     }
 
-    $("#dismiss-btn").click(function() {
-        setBannerCookie();
-        $("#banner").hide();
+    $("#survey-banner-dismiss-btn").click(function() {
+        dismissSurvey();
+        $("#survey-banner").addClass("hidden");
     });
 
+    // code for click-to-copy functionality
     var client = new ZeroClipboard();
     client.on("ready", function(e) {
         var copyButtons = document.getElementsByClassName("btn-copy");
@@ -186,6 +185,7 @@ $(document).ready(function () {
         }
     });
 
+    // jira search code
     $("#jira-search-button").on("click", submitJiraSearchForm);
     $("#jira-search-box").on("keypress", function searchKeypressEventHandler (e) {
         if(e.keyCode == 13) submitJiraSearchForm();
