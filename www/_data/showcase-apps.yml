@@ -87,3 +87,10 @@
     url: http://www.graded.us
     description: >
         The easiest and prettiest way to check your grades from Home Access Center (HAC)
+
+-   name: One Verse BIBLE
+    image: OneVerse.png
+    url: http://www.onever.se
+    description: >
+        One Verse BIBLE is a beautifully crafted Bible app to focus more on
+        each Bible Verse and to compare easily with various Bible Versions
