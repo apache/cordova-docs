@@ -87,3 +87,22 @@
     url: http://www.graded.us
     description: >
         The easiest and prettiest way to check your grades from Home Access Center (HAC)
+
+-   name: HealthPlanet
+    image: HealthPlanet.png
+    url: https://www.healthplanet.jp/en/
+    description: >
+        Simple and easy recording of diet data with ability to monitor changes in body composition.
+
+-   name: Ohalog
+    image: Ohalog.png
+    url: http://unlog.me/ohalog/
+    description: >
+        Analyzes and logs your sleep and helps you to find the optimal conditions to rest better.
+
+-   name: Undog
+    image: Undog.png
+    url: http://unlog.me/undog/
+    description: >
+        App for tracking the health of your pet by monitoring its bowel movement and other activities.
+
