@@ -17,7 +17,7 @@ it is always important to watch out for code in our apps that may make the app [
 The latest versions of **Android** and **iOS** *WebView*s can connect to and leverage developer tools in browsers for profiling rendering performance of apps.
 Developer tools provide insights into details like frames rates, repaints, layouts, etc.
 
-![Chrome Developer tools - profiling](http://i.imgur.com/zR2f1.gif)
+![Chrome Developer tools - profiling](https://i.imgur.com/zR2f1.gif)
 
 Articles (like
 [my performance audit workflow](http://aerotwist.com/blog/my-performance-audit-workflow/)
