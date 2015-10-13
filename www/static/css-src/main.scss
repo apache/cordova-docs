@@ -135,7 +135,7 @@ code.prettyprint {
     border: none !important;
 }
 
-/*----- Updates Banner -----*/
+/* survey banner */
 .survey-banner {
     background-color: #FFCC00;
     color: #1E1E1E;
@@ -146,6 +146,7 @@ code.prettyprint {
 .survey-banner .container p {
     margin: 10px 0;
     padding-right: 42px;
+    text-align: center;
 }
 
 .survey-banner .dismiss-btn {
