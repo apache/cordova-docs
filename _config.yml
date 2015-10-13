@@ -3,7 +3,7 @@
 # =======
 title:       Apache Cordova
 description: Apache Cordova is a set of device APIs that allow a web mobile app developer to access native device function from JavaScript.
-url:         "http://cordova.apache.org" # the base hostname & protocol
+url:         "https://cordova.apache.org" # the base hostname & protocol
 baseurl:     "" # the subpath of the site, e.g. /blog/
 rss_path:    /feed.xml
 
