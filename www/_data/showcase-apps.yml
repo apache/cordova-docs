@@ -5,6 +5,13 @@
 #         A description that can
 #         span multiple lines.
 
+-   name: Ski Patrol Mobile App
+    image: SkiPatrolMobileApp.png
+    url: http://www.skipatrolmobileapp.com
+    description: >
+        The Ski Patrol Mobile App was designed by a Colorado volunteer
+        ski patroller with key on-hill needs in mind.
+
 -   name: NewVo - Fast Style Advice
     image: NewVo.png
     url: https://newvo.me
