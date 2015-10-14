@@ -105,3 +105,11 @@
         Framework7 is a free and open source mobile HTML framework for
         developing hybrid mobile apps or web apps with iOS & Android
         native look and feel.
+        
+-   name: Orubase
+    image: orubase.png
+    url: https://www.syncfusion.com/products/orubase
+    description: >
+        Orubase allows you to develop cross-platform mobile hybrid applications 
+        using JavaScript. It ships more than 30 UI controls with native look and feel. 
+        It seamlessly integrates with AngularJS that can be used to build flawless mobile apps.
