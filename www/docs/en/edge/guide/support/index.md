@@ -42,7 +42,7 @@ CLI's shorthand names.
         <th><tt>ios</tt></th>
         <th><tt>Ubuntu</tt></th>
         <th><tt>wp8</tt><br/>(Windows Phone 8)</th>
-        <th><tt>windows</tt><br/>(8.0, 8.1,<br/>Phone 8.1)</th>
+        <th><tt>windows</tt><br/>(8.0, 8.1, 10,<br/>Phone 8.1)</th>
         <th><tt>tizen</tt></th>
     </tr>
 

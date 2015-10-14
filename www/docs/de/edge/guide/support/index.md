@@ -60,7 +60,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Telefon 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Telefon 8.1)
       </th>
       
       <th>

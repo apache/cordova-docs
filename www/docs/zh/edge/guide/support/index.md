@@ -60,7 +60,7 @@ title: 平臺支援
       </th>
       
       <th>
-        <tt>windows</tt><br />(8.0、 8.1，<br />8.1 的電話）
+        <tt>windows</tt><br />(8.0、 8.1，10<br />8.1 的電話）
       </th>
       
       <th>
