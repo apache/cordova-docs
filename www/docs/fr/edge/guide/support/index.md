@@ -60,7 +60,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Téléphone 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Téléphone 8.1)
       </th>
       
       <th>

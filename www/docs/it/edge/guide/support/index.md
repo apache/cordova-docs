@@ -60,7 +60,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Telefono 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Telefono 8.1)
       </th>
       
       <th>

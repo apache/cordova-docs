@@ -60,7 +60,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Teléfono 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Teléfono 8.1)
       </th>
       
       <th>
