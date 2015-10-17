@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: API Reference
 ---
 
 <div id="home">
@@ -79,10 +81,6 @@ license: >
         <li>
             <h2>Getting Started Guides</h2>
             <span>Setup each SDK and create your first PhoneGap app.</span>
-        </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the PhoneGap Documentation.</span>
         </li>
     </ul>
 </div>

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: API リファレンス
 ---
 
 <div id="home">
@@ -79,10 +81,6 @@ license: >
         <li>
             <h2>入門ガイド</h2>
             <span>SDK をセットアップして、最初の Cordova アプリケーションを作ります。</span>
-        </li>
-        <li>
-            <h2><a href="_index.html">索引</a></h2>
-            <span>Cordova ドキュメントの索引を見ます。</span>
         </li>
     </ul>
 </div>

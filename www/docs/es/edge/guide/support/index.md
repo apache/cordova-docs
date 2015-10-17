@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Soporte de plataformas
 ---
 
 # Soporte de plataformas
@@ -58,7 +60,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Teléfono 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Teléfono 8.1)
       </th>
       
       <th>
@@ -67,7 +69,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">cordova<br />CLI</a>
+          <a href="../cli/index.html">cordova<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -107,15 +109,15 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Embedded<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">Embedded<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">(ver detalles)</a>
+          <a href="../platforms/amazonfireos/webview.html">(ver detalles)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(ver detalles)</a>
+          <a href="../platforms/android/webview.html">(ver detalles)</a>
         </td>
         
         <td data-col="blackberry10" class="n">
@@ -125,7 +127,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(ver detalles)</a>
+          <a href="../platforms/ios/webview.html">(ver detalles)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -143,33 +145,33 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Plug-in<br />Interface</a>
+          <a href="../hybrid/plugins/index.html">Plug-in<br />Interface</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_plugin.md.html">(ver detalles)</a>
+          <a href="../platforms/amazonfireos/plugin.html">(ver detalles)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_plugin.md.html">(ver detalles)</a>
+          <a href="../platforms/android/plugin.html">(ver detalles)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_platforms_blackberry10_plugin.md.html">(ver detalles)</a>
+          <a href="../platforms/blackberry10/plugin.html">(ver detalles)</a>
         </td>
         
         <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_plugin.md.html">(ver detalles)</a>
+          <a href="../platforms/ios/plugin.html">(ver detalles)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_platforms_wp8_plugin.md.html">(ver detalles)</a>
+          <a href="../platforms/wp8/plugin.html">(ver detalles)</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -457,7 +459,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Eventos</a>
+          <a href="../../cordova/events/events.html">Eventos</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -792,7 +794,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Almacenamiento de información</a>
+          <a href="../../cordova/storage/storage.html">Almacenamiento de información</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ブラックベリー 10 シェル ツール ガイド
 ---
 
 # ブラックベリー 10 シェル ツール ガイド

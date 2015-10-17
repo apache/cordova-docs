@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 contacts.find
@@ -28,9 +30,9 @@ Queries the device contacts database and returns one or more `Contact` objects, 
 Description
 -----------
 
-contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
+contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
+Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields.
 
 The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
 
@@ -62,8 +64,8 @@ Quick Example
 
     // find all contacts with 'Bob' in any name field
     var options = new ContactFindOptions();
-	options.filter="Bob"; 
-	var fields = ["displayName", "name"];
+    options.filter="Bob";
+    var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
 Full Example
@@ -84,21 +86,21 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-		    // find all contacts with 'Bob' in any name field
-		    var options = new ContactFindOptions();
-			options.filter="Bob"; 
-			var fields = ["displayName", "name"];
-		    navigator.contacts.find(fields, onSuccess, onError, options);
+            // find all contacts with 'Bob' in any name field
+            var options = new ContactFindOptions();
+            options.filter="Bob";
+            var fields = ["displayName", "name"];
+            navigator.contacts.find(fields, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
         function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				console.log("Display Name = " + contacts[i].displayName);
-			}
+            for (var i=0; i<contacts.length; i++) {
+                console.log("Display Name = " + contacts[i].displayName);
+            }
         }
-    
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {
@@ -112,5 +114,5 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-    
+
 

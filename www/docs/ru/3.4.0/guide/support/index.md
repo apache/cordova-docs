@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Поддерживаемые Платформы
 ---
 
 # Поддерживаемые Платформы
@@ -67,7 +69,7 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">Cordova <br />CLI</a>
+          <a href="../cli/index.html">Cordova <br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -109,22 +111,22 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Встроенный<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">Встроенный<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/amazonfireos/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/android/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="blackberry10" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/ios/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -147,34 +149,34 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Подключаемый модуль<br />Интерфейс</a>
+          <a href="../hybrid/plugins/index.html">Подключаемый модуль<br />Интерфейс</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/amazonfireos/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/android/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/ios/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(см. подробности)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -197,7 +199,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Акселерометр</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">Акселерометр</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -232,7 +234,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Камера</a>
+          <a href="../../cordova/camera/camera.html">Камера</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -267,7 +269,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Захват</a>
+          <a href="../../cordova/media/capture/capture.html">Захват</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -302,7 +304,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Компас</a>
+          <a href="../../cordova/compass/compass.html">Компас</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -338,7 +340,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Подключение</a>
+          <a href="../../cordova/connection/connection.html">Подключение</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -373,7 +375,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Контакты</a>
+          <a href="../../cordova/contacts/contacts.html">Контакты</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -408,7 +410,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Устройство</a>
+          <a href="../../cordova/device/device.html">Устройство</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -443,7 +445,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">События</a>
+          <a href="../../cordova/events/events.html">События</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -478,7 +480,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Файл</a>
+          <a href="../../cordova/file/file.html">Файл</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -513,7 +515,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Геолокация</a>
+          <a href="../../cordova/geolocation/geolocation.html">Геолокация</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -548,7 +550,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Глобализация</a>
+          <a href="../../cordova/globalization/globalization.html">Глобализация</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -583,7 +585,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -619,7 +621,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Средства массовой информации</a>
+          <a href="../../cordova/media/media.html">Средства массовой информации</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -654,7 +656,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Уведомление</a>
+          <a href="../../cordova/notification/notification.html">Уведомление</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -689,7 +691,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">Экран-заставка</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">Экран-заставка</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +726,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Хранения</a>
+          <a href="../../cordova/storage/storage.html">Хранения</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guides
 ---
 
 <div id="home">
@@ -69,10 +71,6 @@ license: >
         <li>
             <h2>Storage</h2>
             <span>An overview of native storage options.</span>
-        </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the documentation.</span>
         </li>
     </ul>
 
