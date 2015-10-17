@@ -15,7 +15,7 @@
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
-    
+
 
 ## 檔作出貢獻
 
@@ -38,15 +38,15 @@
 我們欣賞主題設立分支機搆。
 
     git checkout -b issue_23
-    
+
     # code
-    
+
     git commit -m "Issue 23: Fix a bad bug."
-    
+
     git push origin issue_23
-    
+
     # send pull request from branch issue_23 to cordova:master
-    
+
 
 ### 添加一種語言
 
@@ -64,7 +64,7 @@
 
 ### 編輯指南
 
-請參閱準則`STYLESHEET.md`檔的語言和使用方式。
+請參閱準則`STYLEGUIDE.md`檔的語言和使用方式。
 
 ## 生成文檔與 Node.js
 
@@ -75,21 +75,21 @@
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
-    
+
 
 ### 設置 Node.js
 
   1. 去 Node.JS[下載頁](http://nodejs.org/download/)
   2. 下載並安裝包為您的作業系統。
   3. 簽出此存儲庫使用 Git
-    
+
         git clone https://github.com/apache/cordova-docs
-        
+
 
   4. 安裝的依賴關係。在運行的克隆的科爾多瓦 docs 資料夾的根目錄
-    
+
         npm install
-        
+
 
   5. 現在，您能夠構建本地文檔。
 

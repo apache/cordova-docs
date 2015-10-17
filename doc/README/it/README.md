@@ -15,7 +15,7 @@ Tutta la documentazione di [Apache Cordova](http://cordova.io/) è scritto con [
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
-    
+
 
 ## Contribuire alla documentazione
 
@@ -38,15 +38,15 @@ Tirare le richieste sono benvenute!
 Apprezziamo l'uso dei rami di argomento.
 
     git checkout -b issue_23
-    
+
     # code
-    
+
     git commit -m "Issue 23: Fix a bad bug."
-    
+
     git push origin issue_23
-    
+
     # send pull request from branch issue_23 to cordova:master
-    
+
 
 ### L'aggiunta di una lingua
 
@@ -64,7 +64,7 @@ Ogni lingua può sovrascrivere il template predefinito nella `Lingua/docs/modell
 
 ### Direttive editoriali
 
-Vedere il file `STYLESHEET.md` per le linee guida sull'utilizzo e la lingua.
+Vedere il file `STYLEGUIDE.md` per le linee guida sull'utilizzo e la lingua.
 
 ## La generazione della documentazione con node. js
 
@@ -75,21 +75,21 @@ In questo momento la documentazione potrebbe essere eseguito utilizzando node. j
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
-    
+
 
 ### Configurazione di node. js
 
   1. Vai a node. js [pagina downloads](http://nodejs.org/download/)
   2. Scaricare e installare il pacchetto per il sistema di funzionamento.
   3. Check-out questo repository utilizzando Git
-    
+
         git clone https://github.com/apache/cordova-docs
-        
+
 
   4. Installare le dipendenze. Nella radice della cartella clonata cordova-docs eseguita
-    
+
         npm install
-        
+
 
   5. Ora siete in grado di generare documentazione locale.
 

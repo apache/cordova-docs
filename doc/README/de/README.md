@@ -15,7 +15,7 @@ Alle [Apache-Cordova](http://cordova.io/) -Dokumentation geschrieben mit [Markdo
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
     docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
-    
+
 
 ## Zu der Dokumentation beitragen
 
@@ -38,15 +38,15 @@ Pull-Requests sind willkommen!
 Wir bedanken uns für die Nutzung der Thema-Filialen.
 
     git checkout -b issue_23
-    
+
     # code
-    
+
     git commit -m "Issue 23: Fix a bad bug."
-    
+
     git push origin issue_23
-    
+
     # send pull request from branch issue_23 to cordova:master
-    
+
 
 ### Hinzufügen einer Sprache
 
@@ -64,7 +64,7 @@ Jede Sprache kann die Standard-Vorlage in `Vorlage/Docs/Sprache` überschreiben.
 
 ### Redaktionelle Richtlinien
 
-Finden Sie auf Sprache und Verwendung in der Datei `STYLESHEET.md` Richtlinien.
+Finden Sie auf Sprache und Verwendung in der Datei `STYLEGUIDE.md` Richtlinien.
 
 ## Generierung von Dokumentation mit Node.js
 
@@ -75,21 +75,21 @@ Jetzt konnte die Dokumentation mit Node.js entweder auf Windows oder Linux-Rechn
     $ ./bin/genjs en edge   # compile English Edge docs
     $ ./bin/genjs ru edge   # compile Russian Edge docs
     $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
-    
+
 
 ### Einrichten von Node.js
 
   1. Gehen Sie auf Node.JS [-Downloadseite](http://nodejs.org/download/)
   2. Downloaden Sie und installieren Sie Paket für Ihr Betriebssystem.
   3. Kasse dieses mit Git Repository
-    
+
         git clone https://github.com/apache/cordova-docs
-        
+
 
   4. Abhängigkeiten zu installieren. In der Wurzel der geklonten Cordova-Docs-Ordner ausführen
-    
+
         npm install
-        
+
 
   5. Jetzt können Sie in der Lage, zur Erstellung von Dokumentation lokal.
 
