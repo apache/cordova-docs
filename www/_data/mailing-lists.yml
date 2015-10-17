@@ -1,0 +1,84 @@
+-   title: Dev Mailing List
+    links:
+        -   label: Writing to the list
+            text: dev@cordova.apache.org
+            href: mailto:dev@cordova.apache.org
+
+        -   label: Subscription address
+            text: dev-subscribe@cordova.apache.org
+            href: mailto:dev-subscribe@cordova.apache.org
+
+        -   label: Digest subscription address
+            text: dev-digest-subscribe@cordova.apache.org
+            href: mailto:dev-digest-subscribe@cordova.apache.org
+
+        -   label: Unsubscription addresses
+            text: dev-unsubscribe@cordova.apache.org
+            href: mailto:dev-unsubscribe@cordova.apache.org
+
+        -   label: Getting help with the list
+            text: dev-help@cordova.apache.org
+            href: mailto:dev-help@cordova.apache.org
+
+        -   label: Browse online
+            text: Dev Mailing List Archive
+            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-dev+page:1+state:facets
+    description: >
+        Dev mailing list is a place for discussion about developing Apache Cordova.
+        <br/>If you are a Cordova user looking for help, use the cordova tag on <a href="http://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a>.
+
+-   title: Commits Mailing List
+    links:
+        -   label: Writing to the list
+            text: commits@cordova.apache.org
+            href: mailto:commits@cordova.apache.org
+
+        -   label: Subscription address
+            text: commits-subscribe@cordova.apache.org
+            href: mailto:commits-subscribe@cordova.apache.org
+
+        -   label: Digest subscription address
+            text: commits-digest-subscribe@cordova.apache.org
+            href: mailto:commits-digest-subscribe@cordova.apache.org
+
+        -   label: Unsubscription addresses
+            text: commits-unsubscribe@cordova.apache.org
+            href: mailto:commits-unsubscribe@cordova.apache.org
+
+        -   label: Getting help with the list
+            text: commits-help@cordova.apache.org
+            href: mailto:commits-help@cordova.apache.org
+
+        -   label: Browse online
+            text: Commits Mailing List Archive
+            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-commits+page:1+state:facets
+    description: >
+        Commits mailing list tracks commit logs for Apache Cordova repos.
+
+-   title: Issues Mailing List
+    links:
+        -   label: Writing to the list
+            text: issues@cordova.apache.org
+            href: mailto:issues@cordova.apache.org
+
+        -   label: Subscription address
+            text: issues-subscribe@cordova.apache.org
+            href: mailto:issues-subscribe@cordova.apache.org
+
+        -   label: Digest subscription address
+            text: issues-digest-subscribe@cordova.apache.org
+            href: mailto:issues-digest-subscribe@cordova.apache.org
+
+        -   label: Unsubscription addresses
+            text: issues-unsubscribe@cordova.apache.org
+            href: mailto:issues-unsubscribe@cordova.apache.org
+
+        -   label: Getting help with the list
+            text: issues-help@cordova.apache.org
+            href: mailto:issues-help@cordova.apache.org
+
+        -   label: Browse online
+            text: Issues Mailing List Archive
+            href: http://callback.markmail.org/search/?q=#query:%20list%3Aorg.apache.incubator.callback-issues+page:1+state:facets
+    description: >
+        Issues mailing list tracks comments and updates to <a href="http://issues.apache.org/jira/browse/CB">Jira items</a> regarding Apache Cordova.

@@ -1,0 +1,23 @@
+- {name: "API \u30EA\u30D5\u30A1\u30EC\u30F3\u30B9", url: !!python/unicode '/docs/ja/2.0.0/'}
+- {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/ja/2.0.0/cordova/accelerometer/accelerometer.html'}
+- {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/ja/2.0.0/cordova/camera/camera.html'}
+- {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/ja/2.0.0/cordova/media/capture/capture.html'}
+- {name: !!python/unicode 'Compass', url: !!python/unicode '/docs/ja/2.0.0/cordova/compass/compass.html'}
+- {name: !!python/unicode 'Connection', url: !!python/unicode '/docs/ja/2.0.0/cordova/connection/connection.html'}
+- {name: !!python/unicode 'Contacts', url: !!python/unicode '/docs/ja/2.0.0/cordova/contacts/contacts.html'}
+- {name: !!python/unicode 'Device', url: !!python/unicode '/docs/ja/2.0.0/cordova/device/device.html'}
+- {name: !!python/unicode 'Events', url: !!python/unicode '/docs/ja/2.0.0/cordova/events/events.html'}
+- {name: !!python/unicode 'File', url: !!python/unicode '/docs/ja/2.0.0/cordova/file/file.html'}
+- {name: !!python/unicode 'Geolocation', url: !!python/unicode '/docs/ja/2.0.0/cordova/geolocation/geolocation.html'}
+- {name: !!python/unicode 'Media', url: !!python/unicode '/docs/ja/2.0.0/cordova/media/media.html'}
+- {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/ja/2.0.0/cordova/notification/notification.html'}
+- {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/ja/2.0.0/cordova/storage/storage.html'}
+- {name: "\u5165\u9580\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/2.0.0/guide/getting-started/index.html'}
+- {name: "\u30B3\u30DE\u30F3\u30C9\u30E9\u30A4\u30F3\u4F7F\u7528\u30AC\u30A4\u30C9",
+  url: !!python/unicode '/docs/ja/2.0.0/guide/command-line/index.html'}
+- {name: "\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/2.0.0/guide/upgrading/index.html'}
+- {name: "\u30D7\u30E9\u30B0\u30A4\u30F3\u958B\u767A\u30AC\u30A4\u30C9", url: !!python/unicode '/docs/ja/2.0.0/guide/plugin-development/index.html'}
+- {name: "\u30C9\u30E1\u30A4\u30F3\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u30AC\
+    \u30A4\u30C9", url: !!python/unicode '/docs/ja/2.0.0/guide/whitelist/index.html'}
+- {name: "WebView \u306E\u57CB\u3081\u8FBC\u307F", url: !!python/unicode '/docs/ja/2.0.0/guide/cordova-webview/index.html'}
+- {name: "\u7D22\u5F15", url: !!python/unicode '/docs/ja/2.0.0/page_index.html'}
