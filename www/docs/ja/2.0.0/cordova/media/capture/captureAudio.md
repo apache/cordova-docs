@@ -34,9 +34,9 @@ capture.captureAudio
 
 このメソッドは、デバイスのデフォルトのオーディオ録音アプリを使用して、オーディオをキャプチャーするための非同期操作を開始します。この操作はユーザーに、単一セッションで複数のビデオのキャプチャーをユーザーに許可します。
 
-キャプチャー操作は、ユーザーがオーディオ録音アプリを終了するか、 CaptureAudioOptions の中の __limit__ パラメーターで指定された最大録音回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度オーディオを録音した後に終了します。
+キャプチャー操作は、ユーザーがオーディオ録音アプリを終了するか、 [CaptureAudioOptions](captureAudioOptions.html) の中の __limit__ パラメーターで指定された最大録音回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度オーディオを録音した後に終了します。
 
-キャプチャー操作が終了した時、それぞれのオーディオ録音ファイル情報が書かれた MediaFile オブジェクトの配列を伴った CaptureCB コールバック関数を呼び出します。もしオーディオがキャプチャーされる前にユーザーによって操作が終了されたら、 CaptureError.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ CaptureError オブジェクトを伴った CaptureErrorCB コールバック関数が呼び出されます。
+キャプチャー操作が終了した時、それぞれのオーディオ録音ファイル情報が書かれた [MediaFile](MediaFile.html) オブジェクトの配列を伴った [CaptureCB](CaptureCB.html) コールバック関数を呼び出します。もしオーディオがキャプチャーされる前にユーザーによって操作が終了されたら、 [CaptureError](CaptureError.html).`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ [CaptureError](CaptureError.html) オブジェクトを伴った [CaptureErrorCB](CaptureErrorCB.html) コールバック関数が呼び出されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,7 +46,7 @@ capture.captureAudio
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // capture コールバック関数
@@ -130,7 +130,7 @@ capture.captureAudio
 BlackBerry WebWorks に関する注意点
 --------------------------
 
-- Cordova for BlackBerry WebWorks は、オーディオ録音のために RIM より提供されている __Voice Notes Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は CaptureError.`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
+- Cordova for BlackBerry WebWorks は、オーディオ録音のために RIM より提供されている __Voice Notes Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は [CaptureError](CaptureError.html).`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
 
 iOS に関する注意点
 ----------

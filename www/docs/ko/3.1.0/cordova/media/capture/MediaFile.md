@@ -22,11 +22,11 @@ title: 돌아가기
 
 # 돌아가기
 
-> 미디어 캡처 파일의 속성을 캡슐화합니다.
+> [미디어](../media.html) [캡처](capture.html) 파일의 속성을 캡슐화합니다.
 
 ## 속성
 
-*   **이름**: 경로 정보 없이 파일 이름. (DOMString)
+*   **이름**: 경로 정보 없이 [파일](../../file/fileobj/fileobj.html) 이름. (DOMString)
 
 *   **fullPath**: 이름을 포함 한 파일의 전체 경로. (DOMString)
 
@@ -38,4 +38,4 @@ title: 돌아가기
 
 ## 메서드
 
-*   **MediaFile.getFormatData**: 미디어 파일의 형식 정보를 검색 합니다.
+*   **MediaFile.getFormatData**: [미디어](../media.html) 파일의 형식 정보를 검색 합니다.

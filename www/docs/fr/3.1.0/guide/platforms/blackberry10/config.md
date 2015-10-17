@@ -22,14 +22,14 @@ title: Configuration de blackBerry
 
 # Configuration de blackBerry
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails d'article s'appliquant uniquement aux BlackBerry 10 construit. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails d'article s'appliquant uniquement aux BlackBerry 10 construit. Voir le fichier config.xml [File](../../../cordova/file/fileobj/fileobj.html) pour plus d'informations sur les options de configuration globale.
 
-*   `ChildBrowser`( `disable` ou la valeur par défaut `enable` ): désactive les fenêtres de navigateur d'enfants. Par défaut, les apps pour lancent une fenêtre de navigateur secondaire pour afficher les ressources accédés via `window.open()` ou en spécifiant une `_blank` cible de l'ancre. Spécifiez `disable` pour substituer ce comportement par défaut.
+*   `ChildBrowser`( `disable` ou la valeur par défaut `enable` ): désactive les fenêtres de navigateur d'enfants. Par défaut, les apps pour lancent une fenêtre de navigateur secondaire pour afficher les ressources accédés via `[window.open](../../../cordova/inappbrowser/window.open.html)()` ou en spécifiant une `_blank` cible de l'ancre. Spécifiez `disable` pour substituer ce comportement par défaut.
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` ou la valeur par défaut `disable` ): permet le bloqueur de popups, qui empêche les appels à `window.open()` . Par défaut, les fenêtres pop-up affiche dans une fenêtre enfant. Affectant la préférence `enable` l'empêche de s'afficher du tout.
+*   `PopupBlocker`( `enable` ou la valeur par défaut `disable` ): permet le bloqueur de popups, qui empêche les appels à `[window.open](../../../cordova/inappbrowser/window.open.html)()` . Par défaut, les fenêtres pop-up affiche dans une fenêtre enfant. Affectant la préférence `enable` l'empêche de s'afficher du tout.
     
         <preference name="PopupBlocker" value="enable"/>
         

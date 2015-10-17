@@ -27,7 +27,7 @@ title: accelerometer.clearWatch
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: によって返される ID`accelerometer.watchAcceleration`.
+*   **watchID**: によって返される ID`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## サポートされているプラットフォーム
 

@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet`.
+Cuando se llama al método de un objeto `[SQLTransaction](../sqltransaction/sqltransaction.html)` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet`.
 
 ## Propiedades
 
@@ -30,11 +30,11 @@ Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devoluc
 
 *   **rowsAffected**: cambió el número de filas en la sentencia SQL, cero si la declaración no afectó a ninguna fila.
 
-*   **rows**: un `SQLResultSetRowList` que representan las filas devueltas, vacío si no hay filas son devueltos.
+*   **rows**: un `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` que representan las filas devueltas, vacío si no hay filas son devueltos.
 
 ## Detalles
 
-Cuando se llama al método de un objeto `SQLTransaction` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet` que contiene tres propiedades:
+Cuando se llama al método de un objeto `[SQLTransaction](../sqltransaction/sqltransaction.html)` `executeSql` la devolución de llamada especificado se ejecuta con un parámetro `SQLResultSet` que contiene tres propiedades:
 
 *   El `insertId` devuelve el número de fila de una instrucción de inserción de SQL successly. Si el SQL no introduzca ninguna fila, el `insertId` no está establecida.
 

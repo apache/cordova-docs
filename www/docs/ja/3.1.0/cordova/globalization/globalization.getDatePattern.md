@@ -39,7 +39,7 @@ title: globalization.getDatePattern
 
 *   **dst_offset**： クライアントの非夏時間 (秒単位) は、現在の夏時間オフセットのタイムゾーンとクライアントの夏時間保存のタイム ゾーン。*(数)*
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PATTERN\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`パラメーターはオプションであり、次の値を既定値します。
 

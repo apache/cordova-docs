@@ -22,7 +22,7 @@ title: ContactFindOptions
 
 # ContactFindOptions
 
-包含可用於篩選結果的屬性 `contacts.find` 操作。
+包含可用於篩選結果的屬性 `[contacts.find](../contacts.find.html)` 操作。
 
 ## 屬性
 

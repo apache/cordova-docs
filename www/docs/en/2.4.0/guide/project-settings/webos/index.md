@@ -20,6 +20,6 @@ license: >
 title: Project Settings for webOS
 ---
 
-Project Settings for webOS 
+[Project Settings](../index.html) for webOS 
 ===================================
 

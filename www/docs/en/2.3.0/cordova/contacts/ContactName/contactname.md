@@ -23,7 +23,7 @@ title: ContactName
 ContactName
 ===========
 
-Contains name properties of a `Contact` object.
+Contains name properties of a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
@@ -50,7 +50,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -73,7 +73,7 @@ Quick Example
 	filter = ["displayName","name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -91,7 +91,7 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
+			var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter="";
 			filter = ["displayName","name"];
 			navigator.contacts.find(filter, onSuccess, onError, options);

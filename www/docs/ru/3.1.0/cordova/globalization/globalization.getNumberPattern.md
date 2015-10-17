@@ -47,7 +47,7 @@ title: globalization.getNumberPattern
 
 *   **Группировка**: символ группировки использовать для синтаксического анализа и форматирования. *(Строка)*
 
-Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PATTERN\_ERROR`.
+Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`Параметр является необязательным, и значения по умолчанию являются:
 

@@ -26,6 +26,6 @@ title: WebViews 포함
 
 WebView를 배포 하려면 각 네이티브 프로그래밍 환경에 잘 알고 해야 합니다. 다음은 지원 되는 플랫폼에 대 한 지침.
 
-*   아마존 화재 OS WebViews
-*   안 드 로이드 WebViews
-*   iOS WebViews
+*   [아마존 화재 OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [안 드 로이드 WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

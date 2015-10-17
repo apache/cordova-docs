@@ -45,7 +45,7 @@ CameraPopoverOptions
 
 - __height__: height, in pixels, of the screen element onto which to anchor the popover. _(Number)_
 
-- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` _(Number)_
+- __arrowDir__: Direction the arrow on the popover should point.  Defined in `[Camera](../camera.html).PopoverArrowDirection` _(Number)_
 
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
@@ -60,7 +60,7 @@ direction of the arrow and orientation of the screen.  Make sure to
 account for orientation changes when specifying the anchor element
 location.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
      var popover = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);

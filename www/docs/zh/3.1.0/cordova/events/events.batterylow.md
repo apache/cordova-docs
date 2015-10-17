@@ -37,7 +37,7 @@ title: batterylow
 
 *   **isPlugged**： 一個布林值，該值指示設備是否插*(布林值)*
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

@@ -23,7 +23,7 @@ title: PositionError
 PositionError
 ========
 
-`PositionError` オブジェクトは、エラーが発生したときに geolocationError コールバック関数に渡されます。
+`PositionError` オブジェクトは、エラーが発生したときに [geolocationError](../parameters/geolocationError.html) コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -41,5 +41,5 @@ PositionError
 概要
 -----------
 
-`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
+`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `[geolocationError](../parameters/geolocationError.html)` コールバック関数を通してユーザーに返されます。
 

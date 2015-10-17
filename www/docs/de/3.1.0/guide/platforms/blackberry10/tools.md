@@ -60,9 +60,9 @@ wo
 
 *   `<ip-address>`Gibt die Ip-Adresse des BlackBerry-Geräts oder Simulator.
 
-*   `-p | --password <password>`Gibt das Kennwort für das Gerät oder den Emulator. Dies ist erforderlich, nur, wenn das Gerät oder den Emulator kennwortgeschützt ist.
+*   `-p | --password <password>`Gibt das Kennwort für das [Gerät](../../../cordova/device/device.html) oder den Emulator. Dies ist erforderlich, nur, wenn das [Gerät](../../../cordova/device/device.html) oder den Emulator kennwortgeschützt ist.
 
-*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-Gerät, das dieses Gerät als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur, wenn Sie ein Debug-Token erstellen.
+*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-Gerät, das dieses [Gerät](../../../cordova/device/device.html) als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur, wenn Sie ein Debug-Token erstellen.
 
 ### Entfernen Sie ein Ziel
 
@@ -76,7 +76,7 @@ wo
 
 ## Build
 
-Der `build` Befehl erstellt das Projekt als ...verlegt Datei. Sie können Ihre app in beiden Release-Modus (der eine signierte ...verlegt Datei erzeugt) oder im Debug-Modus (der eine vorzeichenlose ...verlegt Datei erzeugt) erstellen.
+Der `build` Befehl erstellt das Projekt als ...verlegt [Datei](../../../cordova/file/fileobj/fileobj.html). Sie können Ihre app in beiden Release-Modus (der eine signierte ...verlegt [Datei](../../../cordova/file/fileobj/fileobj.html) erzeugt) oder im Debug-Modus (der eine vorzeichenlose ...verlegt [Datei](../../../cordova/file/fileobj/fileobj.html) erzeugt) erstellen.
 
 ### Erstellen Sie das Projekt im Release-Modus
 
@@ -98,7 +98,7 @@ wo
 
 wo
 
-*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` nicht angegeben ist, das Standardziel wird verwendet, wenn eine erstellt wurde. Dieses Argument ist nur erforderlich, wenn Sie das Skript zum Bereitstellen Ihrer Anwendung auf einem BlackBerry-Gerät oder Emulator, in dem Sie als Standardziel nicht erstellt haben. Zusätzlich, wenn `<target>` ist ein Gerät, dann das Gerät vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
+*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` nicht angegeben ist, das Standardziel wird verwendet, wenn eine erstellt wurde. Dieses Argument ist nur erforderlich, wenn Sie das Skript zum Bereitstellen Ihrer Anwendung auf einem BlackBerry-Gerät oder Emulator, in dem Sie als Standardziel nicht erstellt haben. Zusätzlich, wenn `<target>` ist ein [Gerät](../../../cordova/device/device.html), dann das [Gerät](../../../cordova/device/device.html) vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
 
 *   `-k | --keystorepass <password>`Gibt das Kennwort, die, das Sie definiert, wenn Sie Ihren Computer zum Signieren von Anwendungen konfiguriert. Dieses Kennwort wird auch verwendet, um das Debug-Token zu erstellen. Dieses Argument ist nur erforderlich, wenn Sie wollen das Skript zum Erstellen und installieren das Debug-Token für Sie.
 
@@ -113,14 +113,14 @@ Wenn Sie zuvor definiert als Standardziel (und zuvor installiert haben ein Debug
 
 ## Ausführen
 
-Der `run` Befehl stellt die app auf dem BlackBerry-Gerät oder einen Emulator. Bevor Sie Ihre Anwendung bereitstellen, müssen Sie zunächst ein Ziel für das Gerät oder den Emulator Ihre Anwendung bereitgestellt, mit dem Ziel-Skript soll erstellen. Das Bereitstellen-Skript wird das letzte Build Ihrer Anwendung bereitstellen.
+Der `run` Befehl stellt die app auf dem BlackBerry-Gerät oder einen Emulator. Bevor Sie Ihre Anwendung bereitstellen, müssen Sie zunächst ein Ziel für das [Gerät](../../../cordova/device/device.html) oder den Emulator Ihre Anwendung bereitgestellt, mit dem Ziel-Skript soll erstellen. Das Bereitstellen-Skript wird das letzte Build Ihrer Anwendung bereitstellen.
 
     < Path-Projekt >/Cordova/run <target>
     
 
 wo
 
-*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein Gerät, dann das Gerät vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
+*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein [Gerät](../../../cordova/device/device.html), dann das [Gerät](../../../cordova/device/device.html) vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
 
 ## Plugin
 

@@ -28,12 +28,12 @@ Device
 Properties
 ----------
 
-- device.name
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
-- device.model
+- [device.name](device.name.html)
+- [device.cordova](device.cordova.html)
+- [device.platform](device.platform.html)
+- [device.uuid](device.uuid.html)
+- [device.version](device.version.html)
+- [device.model](device.model.html)
 
 Variable Scope
 --------------

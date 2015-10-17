@@ -24,11 +24,11 @@ title: Android プラットフォーム ガイド
 
 このガイドは、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   Android の構成
-*   Android の web 表示
-*   Android のプラグイン
-*   Android のアップグレード
-*   Android のコマンド ライン ツール
+*   [Android の構成](config.html)
+*   [Android の web 表示](webview.html)
+*   [Android のプラグイン](plugin.html)
+*   [Android のアップグレード](upgrading.html)
+*   [Android のコマンド ライン ツール](tools.html)
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 

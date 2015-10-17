@@ -52,16 +52,16 @@ The following constants are reported as the only parameter to the __mediaStatus_
 Methods
 -------
 
-- media.getCurrentPosition: Returns the current position within an audio file.
-- media.getDuration: Returns the duration of an audio file.
-- media.play: Start or resume playing audio file.
-- media.pause: Pause playing audio file.
-- media.release: Releases the underlying OS'es audio resources.
-- media.seekTo: Moves the position within the audio file.
-- media.setVolume: Set the volume for audio playback.
-- media.startRecord: Start recording audio file.
-- media.stopRecord: Stop recording audio file.
-- media.stop: Stop playing audio file.
+- [media.getCurrentPosition](media.getCurrentPosition.html): Returns the current position within an audio file.
+- [media.getDuration](media.getDuration.html): Returns the duration of an audio file.
+- [media.play](media.play.html): Start or [resume](../events/events.resume.html) playing audio file.
+- [media.pause](media.pause.html): Pause playing audio file.
+- [media.release](media.release.html): Releases the underlying OS'es audio resources.
+- [media.seekTo](media.seekTo.html): Moves the position within the audio file.
+- [media.setVolume](media.setVolume.html): Set the volume for audio playback.
+- [media.startRecord](media.startRecord.html): Start recording audio file.
+- [media.stopRecord](media.stopRecord.html): Stop recording audio file.
+- [media.stop](media.stop.html): Stop playing audio file.
 
 Additional ReadOnly Parameters
 ---------------------

@@ -30,9 +30,9 @@ title: Config.xml ファイル
 
 このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
-*   iOS 構成
-*   Android の構成
-*   ブラックベリーの構成
+*   [iOS 構成](../guide/platforms/ios/config.html)
+*   [Android の構成](../guide/platforms/android/config.html)
+*   [ブラックベリーの構成](../guide/platforms/blackberry10/config.html)
 
 以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、アイコンとスプラッシュ画面を参照してください。
 
@@ -116,7 +116,7 @@ title: Config.xml ファイル
 
 ## `<feature>`要素
 
-使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 かどうか SDK で直接作業している特定のプラットフォームを使用して `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
+使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` [デバイス](../cordova/device/device.html) Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 かどうか SDK で直接作業している特定のプラットフォームを使用して `config.xml` ファイルのソースとして使用する、 `<feature>` [デバイス](../cordova/device/device.html) レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
 
         <feature name="Plugin" value="PluginID" />
     

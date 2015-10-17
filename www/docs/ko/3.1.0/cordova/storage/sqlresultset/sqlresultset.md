@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-때는 `SQLTransaction` 개체의 `executeSql` 메서드가 호출 되어, 지정 된 콜백을 실행 한 `SQLResultSet` 매개 변수.
+때는 `[SQLTransaction](../sqltransaction/sqltransaction.html)` 개체의 `executeSql` 메서드가 호출 되어, 지정 된 콜백을 실행 한 `SQLResultSet` 매개 [변수](../../../plugin_ref/spec.html).
 
 ## 속성
 
@@ -30,11 +30,11 @@ title: SQLResultSet
 
 *   **rowsAffected**: 행 수 문이 모든 행에 영향을 미치지 않았다 이면 0 SQL 문으로 변경.
 
-*   **행**: 한 `SQLResultSetRowList` 아무 행도 반환 하는 경우 빈 반환 하는 행을 나타내는.
+*   **행**: 한 `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` 아무 행도 반환 하는 경우 빈 반환 하는 행을 나타내는.
 
 ## 세부 정보
 
-때는 `SQLTransaction` 개체의 `executeSql` 메서드가 호출 되어, 지정 된 콜백 실행 한 `SQLResultSet` 세 가지 속성을 포함 하는 매개 변수:
+때는 `[SQLTransaction](../sqltransaction/sqltransaction.html)` 개체의 `executeSql` 메서드가 호출 되어, 지정 된 콜백 실행 한 `SQLResultSet` 세 가지 속성을 포함 하는 매개 [변수](../../../plugin_ref/spec.html):
 
 *   `insertId`successly SQL 삽입 문 행 수를 반환 합니다. SQL 어떤 행을 삽입 하지 않는 경우는 `insertId` 설정 되지 않았습니다.
 

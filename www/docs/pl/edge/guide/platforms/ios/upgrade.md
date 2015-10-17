@@ -35,7 +35,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom `cordova platform update ios` w istniejących projektach.
 
@@ -48,7 +48,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update ios`
 
@@ -61,7 +61,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update ios`
 
@@ -74,7 +74,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update ios`
 
@@ -87,7 +87,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update ios`
 
@@ -103,7 +103,7 @@ Xcode 5 problemy:
 
 1.  Zaktualizować ustawienia projektu, jeśli Xcode 5 monituje to zrobić (w kwestii nawigatora).
 
-2.  Aktualizacja twój **kompilator C / C + +/ Objective-C** ustawienia na karcie **Ustawienia budować**, **Budować opcje** sekcji. Wybierz **domyślny kompilator (Apple LLVM 5.0)**.
+2.  [Aktualizacja](../android/upgrade.html) twój **kompilator C / C + +/ Objective-C** ustawienia na karcie **Ustawienia budować**, **Budować opcje** sekcji. Wybierz **domyślny kompilator (Apple LLVM 5.0)**.
 
 ## Uaktualnienie do consoli (3.0.0) z 2.9.0
 
@@ -133,7 +133,7 @@ Xcode 5 problemy:
 
 5.  Kopia `www/cordova.js` (należy pamiętać, że to nie ma już przyrostka wersji, wersja jest w pliku nagłówka) plik z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 7.  Usuń `CordovaLib` katalogu, a kopia `CordovaLib` katalogu z nowego projektu w katalogu projektu.
 
@@ -151,7 +151,7 @@ Xcode 5 problemy:
 
 5.  Kopia `www/cordova.js` (należy pamiętać, że to nie ma już przyrostka wersji, wersja jest w pliku nagłówka) plik z nowego projektu w `www` katalogu i Usuń `www/cordova.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 7.  Usuń `CordovaLib` katalogu, a kopia `CordovaLib` katalogu z nowego projektu w katalogu projektu.
 
@@ -167,7 +167,7 @@ Xcode 5 problemy:
 
 5.  Kopia `www/cordova.js` (należy pamiętać, że to nie ma już przyrostka wersji, wersja jest w pliku nagłówka) plik z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.7.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
 7.  Tagi `<feature>` aktualizacja żadnych tagów `<plugin>` w pliku `config.xml`. Należy zauważyć, że istniejące Tagi `<plugin>` nadal działa, ale są przestarzałe. Możesz skopiować te informacje w pliku `config.xml` do nowego projektu. Na przykład:
     
@@ -209,9 +209,9 @@ Xcode 5 problemy:
 
 5.  Kopia `www/cordova-2.7.0.js` pliku z nowego projektu w `www` katalogu i Usuń `www/cordova-2.6.0.js` pliku.
 
-6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova-2.7.0.js` pliku.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova-2.7.0.js` pliku.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][3]).
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][3]).
 
 8.  W pliku `config.xml`, [usunąć ten wiersz][4].
 
@@ -232,9 +232,9 @@ Xcode 5 problemy:
 
 5.  Kopiowanie projektu `www/cordova-2.6.0.js` plik do katalogu `www` i usunąć plik `www/cordova-2.5.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (oraz wszelkie inne pliki, które odwołują się do skryptu) odnosi się do nowego pliku `cordova-2.6.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (oraz wszelkie inne pliki, które odwołują się do skryptu) odnosi się do nowego pliku `cordova-2.6.0.js`.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][5]).
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][5]).
 
 8.  W pliku `config.xml`, [dodać nowej linii][6].
 
@@ -263,9 +263,9 @@ Xcode 5 problemy:
 
 5.  Skopiuj plik `www/cordova-2.5.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.4.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.5.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.5.0.js`.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][9]).
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][9]).
 
 8.  W pliku `config.xml`, [dodać te nowe linie][10].
 
@@ -294,11 +294,11 @@ Xcode 5 problemy:
 
 5.  Skopiuj plik `www/cordova-2.4.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.3.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.4.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.4.0.js`.
 
 7.  Aktualizacji (lub zastąpić, jeśli nigdy nie zmieniono pliki) plik `MainViewController.m`, zgodnie z jednym z nowych projektów (patrz [ten diff][13]).
 
-8.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][14]).
+8.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) plik `AppDelegate.m`, zgodnie z jednym z nowych projektu (patrz [ten diff][14]).
 
 9.  W pliku `config.xml`, [dodać nowej linii][15].
 
@@ -325,9 +325,9 @@ Xcode 5 problemy:
 
 5.  Skopiuj plik `www/cordova-2.3.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.2.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.3.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.3.0.js`.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` według jednej z nowego projektu.
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` według jednej z nowego projektu.
 
 8.  Usuń katalog `cordova` i skopiować katalogu `cordova` z nowego projektu w katalogu projektu. W 2.3.0 to ma nowe skrypty.
 
@@ -360,9 +360,9 @@ Xcode 5 problemy:
 
 5.  Skopiuj plik `www/cordova-2.2.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.1.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.2.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.2.0.js`.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` zgodnie z nowym projektem:
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` zgodnie z nowym projektem:
     
     *   Updated → viewWillAppear
 
@@ -392,14 +392,14 @@ Z Cordova 2.1.0 `CordovaLib` ma był ulepszony wobec używać **Automatycznego l
 
 5.  Skopiuj plik `www/cordova-2.1.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-2.0.0.js`.
 
-6.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.1.0.js`.
+6.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.1.0.js`.
 
-7.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) `AppDelegate.m` zgodnie z nowym projektem:
+7.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) `AppDelegate.m` zgodnie z nowym projektem:
     
     *   Edited → application:didFinishLaunchingWithOptions:
     *   Added → application:supportedInterfaceOrientationsForWindow:
 
-8.  Aktualizacja (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` zgodnie z nowym projektem:
+8.  [Aktualizacja](../android/upgrade.html) (lub zastąpić, jeśli nigdy nie zmieniono plik) `MainViewController.m` zgodnie z nowym projektem:
     
     *   Added → viewWillAppear
 
@@ -423,7 +423,7 @@ Z Cordova 2.1.0 `CordovaLib` ma był ulepszony wobec używać **Automatycznego l
 
 3.  Skopiuj plik `www/cordova-2.0.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-1.9.0.js`.
 
-4.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.0.0.js`.
+4.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-2.0.0.js`.
 
 5.  Kopiowanie katalogu `cordova` z nowego projektu w katalogu głównym projektu (jeśli chcesz projektu narzędzia wiersza polecenia).
 
@@ -519,7 +519,7 @@ Z Cordova 2.1.0 `CordovaLib` ma był ulepszony wobec używać **Automatycznego l
 
 3.  Skopiuj plik `www/cordova-1.9.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-1.8.x.js`.
 
-4.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.9.0.js`.
+4.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.9.0.js`.
 
 **Uwaga**: 1.9.0 obsługuje nowe ustawienie `Cordova.plist` logiczna `BackupWebStorage`. To jest umożliwiał przy nie wykonać, tak na wartość `Fałsz` wobec uczyniæ kalek¹ ono, zwłaszcza na iOS 6. Zobacz [wydaniu: Safari i sekcja UIKit][17]
 
@@ -533,7 +533,7 @@ Z Cordova 2.1.0 `CordovaLib` ma był ulepszony wobec używać **Automatycznego l
 
 3.  Skopiuj plik `www/cordova-1.8.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-1.7.x.js`.
 
-4.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.8.0.js`.
+4.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.8.0.js`.
 
 Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe aktywa **wyświetlacz retina iPad**:
 
@@ -551,7 +551,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 3.  Skopiuj plik `www/cordova-1.7.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-1.6.0.js`.
 
-4.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.7.0.js`.
+4.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.7.0.js`.
 
 ## Projekty modernizacji 1.5.0 1.6.x
 
@@ -574,7 +574,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/cordova-1.6.1.js` z nowego projektu w katalogu `www` i usunąć plik `www/cordova-1.5.0.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.6.1.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.6.1.js`.
 
 8.  Dodaj nowy plik `Cordova.plist` do projektu. Jest to konieczne, ponieważ nazwy usługi podstawowe wtyczki muszą zmienić do nich z Android i BlackBerry, jednolity pliku Cordova JavaScript (`cordova js`).
 
@@ -598,7 +598,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 3.  Skopiuj plik `www/cordova-1.5.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-1.4.x.js`.
 
-4.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.5.0.js` Cordova.
+4.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) aby wskazywało nowy plik `cordova-1.5.0.js` Cordova.
 
 5.  Znajdź `PhoneGap.framework` w nawigatora projektu, zaznacz go.
 
@@ -675,7 +675,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Włączenie jakiegokolwiek kodu specyficzne dla projektu, który masz w twój poparty-w górze `MainViewController.m` do nowego pliku.
 
-7.  Aktualizacja pliku `phonegap-1.4.0.js` jest opcjonalne, nic się nie zmieniło w JavaScript między 1.4.0 i 1.4.1.
+7.  [Aktualizacja](../android/upgrade.html) pliku `phonegap-1.4.0.js` jest opcjonalne, nic się nie zmieniło w JavaScript między 1.4.0 i 1.4.1.
 
 ## Projekty modernizacji 1.3.0 1.4.0
 
@@ -698,7 +698,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/phonegap-1.4.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-1.3.0.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.4.0.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.4.0.js`.
 
 8.  Dodaj nowy wpis w `Plugins` w `PhoneGap.plist` pliku. Kluczem do sukcesu jest `com.phonegap.battery` , a wartość jest`PGBattery`.
 
@@ -725,7 +725,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/phonegap-1.3.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-1.2.0.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.3.0.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.3.0.js`.
 
 8.  Dodaj nowy wpis w `Plugins` w `PhoneGap.plist` pliku. Kluczem do sukcesu jest `com.phonegap.battery` , a wartość jest`PGBattery`.
 
@@ -752,7 +752,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/phonegap-1.2.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-1.1.0.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.2.0.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.2.0.js`.
 
 8.  Dodaj nowy wpis w `Plugins` w `PhoneGap.plist` pliku. Kluczem do sukcesu jest `com.phonegap.battery` , a wartość jest`PGBattery`.
 
@@ -779,7 +779,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/phonegap-1.1.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-1.0.0.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.1.0.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.1.0.js`.
 
 8.  Dodaj nowy wpis w `Plugins` w `PhoneGap.plist` pliku. Kluczem do sukcesu jest `com.phonegap.battery` , a wartość jest`PGBattery`.
 
@@ -806,7 +806,7 @@ Jeśli zamierzasz na korzystanie z API przechwytywania, trzeba będzie nowe akty
 
 6.  Skopiuj plik `www/phonegap-1.0.0.js` z nowego projektu w katalogu `www` i usunąć plik `www/phonegap-0.9.6.js`.
 
-7.  Aktualizacja Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.0.0.js`.
+7.  [Aktualizacja](../android/upgrade.html) Cordova odniesienia skrypt w pliku `www/index.html` (i innych plików, które zawierają odniesienia skrypt) wskaż plik nowy `telefon 1.0.0.js`.
 
 8.  Dodaj nowy wpis w `Plugins` w `PhoneGap.plist` pliku. Kluczem do sukcesu jest `com.phonegap.battery` , a wartość jest`PGBattery`.
 

@@ -22,14 +22,14 @@ title: openDatabase
 
 # openDatabase
 
-Restituisce un nuovo `Database` oggetto.
+Restituisce un nuovo `[Database](database/database.html)` oggetto.
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
     
 
 ## Descrizione
 
-Il metodo crea un nuovo Database di SQL Lite e restituisce un `Database` oggetto che consente la manipolazione dei dati.
+Il metodo crea un nuovo [Database](database/database.html) di SQL Lite e restituisce un `[Database](database/database.html)` oggetto che consente la manipolazione dei dati.
 
 ## Piattaforme supportate
 

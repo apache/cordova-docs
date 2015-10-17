@@ -52,7 +52,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
@@ -68,7 +68,7 @@ Quick Example
         'Done'                  // buttonName
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -26,11 +26,11 @@ title: Android 平臺指南
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   Android 系統組態
-*   Android WebViews
-*   Android 外掛程式
-*   升級 Android
-*   Android 系統的命令列工具
+*   [Android 系統組態](config.html)
+*   [Android WebViews](webview.html)
+*   [Android 外掛程式](plugin.html)
+*   [升級 Android](upgrading.html)
+*   [Android 系統的命令列工具](tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 

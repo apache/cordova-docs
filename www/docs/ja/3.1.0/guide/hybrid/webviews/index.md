@@ -24,5 +24,5 @@ title: 埋め込み web 表示
 
 > 独自のプロジェクトにコルドバ WebView を実装します。
 
-*   Android の web 表示
-*   iOS の web 表示
+*   [Android の web 表示](../../platforms/android/webview.html)
+*   [iOS の web 表示](../../platforms/ios/webview.html)

@@ -28,7 +28,7 @@ title: 場合
 
 *   **requestFileSystem**: 請求的檔案系統。*（函數）*
 
-*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `FileEntry` 使用當地的 URI。*（函數）*
+*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `[FileEntry](../fileentry/fileentry.html)` 使用當地的 URI。*（函數）*
 
 ## 常量
 

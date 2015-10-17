@@ -22,7 +22,7 @@ title: FileError
 
 # FileError
 
-A `FileError` oggetto viene impostato quando si verifica un errore in uno qualsiasi dei metodi File API.
+A `FileError` oggetto viene impostato quando si verifica un errore in uno qualsiasi dei metodi [File](../fileobj/fileobj.html) API.
 
 ## Proprietà
 
@@ -45,4 +45,4 @@ A `FileError` oggetto viene impostato quando si verifica un errore in uno qualsi
 
 ## Descrizione
 
-Il `FileError` oggetto è l'unico parametro fornito a qualsiasi callback di errore il File API. Per determinare il tipo di errore, confrontare le `code` proprietà a nessuna delle liste qui sopra.
+Il `FileError` oggetto è l'unico parametro fornito a qualsiasi callback di errore il [File](../fileobj/fileobj.html) API. Per determinare il tipo di errore, confrontare le `code` proprietà a nessuna delle liste qui sopra.

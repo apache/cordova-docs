@@ -30,11 +30,11 @@ camera.getPicture
 概要
 -----------
 
-`camera.getPicture` 関数はユーザーが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `Camera.sourceType = Camera.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
+`camera.getPicture` 関数はユーザーが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
 
-もし `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
+もし `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.PHOTOLIBRARY` もしくは `[Camera](camera.html).PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
 
-返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます:
+返り値は `[cameraSuccess](parameter/cameraSuccess.html)` 関数に送信されます。値は `[cameraOptions](parameter/cameraOptions.html)` の設定に従い、以下のいずれかのフォーマットで送られます:
 
 - Base64 形式でエンコードされたフォトイメージを表す文字列 (デフォルト)
 - ローカルストレージ内に記録されたファイルの場所を表す文字列
@@ -45,7 +45,7 @@ camera.getPicture
 - データをローカルに保存 (`LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
 - データをリモートサーバーに送信
 
-__注意:__ 最新のデバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 ___そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。___
+__注意:__ 最新のデバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 ___そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。よって、 FILE_URI を '[Camera](camera.html).destinationType' として使用することが推奨されます。___
 
 サポートされているプラットフォーム
 -------------------
@@ -75,9 +75,9 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
 Tizen に関する注意点
 ----------------------
 
-'destinationType: Camera.DestinationType.FILE_URI' と 'sourceType: Camera.PictureSourceType.PHOTOLIBRARY' のみサポートされています。
+'destinationType: [Camera](camera.html).DestinationType.FILE_URI' と 'sourceType: [Camera](camera.html).PictureSourceType.PHOTOLIBRARY' のみサポートされています。
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 写真を撮影し、 Base64 形式のイメージとして取得します。

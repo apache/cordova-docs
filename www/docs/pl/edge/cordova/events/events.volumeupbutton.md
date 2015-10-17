@@ -31,7 +31,7 @@ Zdarzenie fires, gdy użytkownik naciśnie klawisz głośności przycisk.
 
 Jeśli chcesz zastąpić domyślne głośności zachowanie można zarejestrować detektor zdarzeń dla `volumeupbutton` zdarzenie.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `[deviceready](events.deviceready.html)` pożary zdarzenia.
 
 ## Obsługiwane platformy
 

@@ -27,7 +27,7 @@ title: compass.clearWatch
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**： 由返回的 ID`compass.watchHeading`.
+*   **watchID**： 由返回的 ID`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## 支援的平臺
 

@@ -58,13 +58,13 @@ Contiene proprietà che descrivono un contatto, come il contatto personale o azi
 
 *   **clone**: restituisce una nuova `Contact` oggetto che è una copia completa dell'oggetto chiamante, con la `id` proprietà impostata`null`.
 
-*   **rimuovere**: rimuove il contatto dal database contatti dispositivo, altrimenti esegue un callback di errore con un `ContactError` oggetto.
+*   **rimuovere**: rimuove il contatto dal database contatti dispositivo, altrimenti esegue un callback di errore con un `[ContactError](../ContactError/contactError.html)` oggetto.
 
 *   **Salva**: salva un nuovo contatto nel database di contatti del dispositivo, o aggiorna un contatto esistente se esiste già un contatto con lo stesso **id** .
 
 ## Dettagli
 
-Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono essere creati, memorizzati o rimossi dal database di contatti dispositivo. Contatti possono anche essere estratto (singolarmente o in blocco) dal database richiamando il `contacts.find` metodo.
+Il `Contact` oggetto rappresenta il contatto di un utente. [Contatti](../contacts.html) possono essere creati, memorizzati o rimossi dal database di contatti dispositivo. [Contatti](../contacts.html) possono anche essere estratto (singolarmente o in blocco) dal database richiamando il `[contacts.find](../contacts.find.html)` metodo.
 
 **Nota:** Non tutti i campi di contatto sopra elencati sono supportati su ogni piattaforma del dispositivo. Consultare la sezione di *stranezze* su ogni piattaforma per dettagli.
 
@@ -226,11 +226,11 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
 
 ## iOS stranezze
 
-*   **displayName**: non supportata su iOS, tornando `null` se non c'è nessun `ContactName` specificato, nel qual caso restituisce il nome composito, **soprannome** o `""` , rispettivamente.
+*   **displayName**: non supportata su iOS, tornando `null` se non c'è nessun `[ContactName](../ContactName/contactname.html)` specificato, nel qual caso restituisce il nome composito, **soprannome** o `""` , rispettivamente.
 
 *   **compleanno**: deve essere inserito come un JavaScript `Date` oggetto, allo stesso modo viene restituito.
 
-*   **foto**: restituisce un URL del File dell'immagine, che viene memorizzato nella directory temporanea dell'applicazione. Contenuto della directory temporanea vengono rimossi quando l'applicazione termina.
+*   **foto**: restituisce un URL del [File](../../file/fileobj/fileobj.html) dell'immagine, che viene memorizzato nella directory temporanea dell'applicazione. Contenuto della directory temporanea vengono rimossi quando l'applicazione termina.
 
 *   **categorie**: questa proprietà non è attualmente supportata, restituendo`null`.
 

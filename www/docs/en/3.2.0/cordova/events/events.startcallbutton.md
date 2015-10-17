@@ -32,7 +32,7 @@ If you need to override the default start call behavior you can
 register an event listener for the `startcallbutton` event.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 

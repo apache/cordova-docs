@@ -29,7 +29,7 @@ title: MediaFile.getFormatData
 
 ## 說明
 
-此函數以非同步方式嘗試檢索該媒體檔案的格式資訊。 如果成功，它將調用 `MediaFileDataSuccessCB` 回檔與 `MediaFileData` 物件。 如果該嘗試失敗，此函數將調用 `MediaFileDataErrorCB` 回檔。
+此函數以非同步方式嘗試檢索該媒體檔案的格式資訊。 如果成功，它將調用 `MediaFileDataSuccessCB` 回檔與 `[MediaFileData](MediaFileData.html)` 物件。 如果該嘗試失敗，此函數將調用 `MediaFileDataErrorCB` 回檔。
 
 ## 支援的平臺
 
@@ -41,12 +41,12 @@ title: MediaFile.getFormatData
 
 ## 黑莓 WebWorks 怪癖
 
-不為媒體檔案，所以所有有關的資訊提供一個 API `MediaFileData` 物件返回的預設值。
+不為媒體檔案，所以所有有關的資訊提供一個 API `[MediaFileData](MediaFileData.html)` 物件返回的預設值。
 
 ## Android 的怪癖
 
-訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。
+訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `[MediaFileData](MediaFileData.html)` 支援的屬性。
 
 ## iOS 的怪癖
 
-訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。
+訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `[MediaFileData](MediaFileData.html)` 支援的屬性。

@@ -20,7 +20,7 @@ license: >
 title: File
 ---
 
-File
+[File](fileobj/fileobj.html)
 ==========
 
 >  このAPIはW3Cの [File API](http://www.w3.org/TR/FileAPI) をベースとしています。ファイルシステムへの読み書きのための API です。
@@ -28,18 +28,18 @@ File
 オブジェクト
 -------
 
-- DirectoryEntry
-- DirectoryReader
-- File
-- FileEntry
-- FileError
-- FileReader
-- FileSystem
-- FileTransfer
-- FileTransferError
-- FileUploadOptions
-- FileUploadResult
-- FileWriter
-- Flags
-- LocalFileSystem
-- Metadata
+- [DirectoryEntry](directoryentry/directoryentry.html)
+- [DirectoryReader](directoryreader/directoryreader.html)
+- [File](fileobj/fileobj.html)
+- [FileEntry](fileentry/fileentry.html)
+- [FileError](fileerror/fileerror.html)
+- [FileReader](filereader/filereader.html)
+- [FileSystem](filesystem/filesystem.html)
+- [FileTransfer](filetransfer/filetransfer.html)
+- [FileTransferError](filetransfererror/filetransfererror.html)
+- [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+- [FileUploadResult](fileuploadresult/fileuploadresult.html)
+- [FileWriter](filewriter/filewriter.html)
+- [Flags](flags/flags.html)
+- [LocalFileSystem](localfilesystem/localfilesystem.html)
+- [Metadata](metadata/metadata.html)

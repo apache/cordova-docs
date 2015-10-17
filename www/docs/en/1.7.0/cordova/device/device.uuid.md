@@ -41,7 +41,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android: Returns a random 64-bit integer (as a string, again!)
@@ -59,7 +59,7 @@ Quick Example
     // 
     var deviceID = device.uuid;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

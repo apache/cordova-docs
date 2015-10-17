@@ -22,7 +22,7 @@ title: compassSuccess
 
 # compassSuccess
 
-提供了通過的羅經航向資訊的 onSuccess 回呼函數 `compassHeading` 物件。
+提供了通過的羅經航向資訊的 onSuccess 回呼函數 `[compassHeading](compassHeading.html)` 物件。
 
     function(heading) {
         // Do something

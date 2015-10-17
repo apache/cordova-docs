@@ -34,7 +34,7 @@ title: WebViews iOS
 
 *   Xcode 4.5 或更大
 
-*   `config.xml`檔 (從新創建的 iOS 專案)
+*   `config.xml`[檔](../../../cordova/file/fileobj/fileobj.html) (從新創建的 iOS 專案)
 
 ## 克利弗添加到 Xcode 專案 （CordovaLib 子專案）
 
@@ -79,7 +79,7 @@ title: WebViews iOS
 
 19. 選擇**+**按鈕，然後添加`libCordova.a`.
 
-20. 設置為**獨特**Xcode 偏好**Xcode 首選項 → 位置 → 派生資料 → 先進......**.
+20. 設置為**獨特**Xcode 偏好**Xcode 首選項 → [位置](../../../cordova/geolocation/Position/position.html) → 派生資料 → 先進......**.
 
 21. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 

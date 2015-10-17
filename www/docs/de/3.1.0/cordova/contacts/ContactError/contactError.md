@@ -22,7 +22,7 @@ title: ContactError
 
 # ContactError
 
-A `ContactError` -Objekt übergeben, um die `contactError` Rückruf, wenn ein Fehler auftritt.
+A `ContactError` -Objekt übergeben, um die `[contactError](../parameters/contactError.html)` Rückruf, wenn ein Fehler auftritt.
 
 ## Eigenschaften
 
@@ -40,4 +40,4 @@ A `ContactError` -Objekt übergeben, um die `contactError` Rückruf, wenn ein Fe
 
 ## Beschreibung
 
-Das `ContactError` -Objekt wird zurückgegeben, die der Benutzer über die `contactError` Callback-Funktion, wenn ein Fehler auftritt.
+Das `ContactError` -Objekt wird zurückgegeben, die der Benutzer über die `[contactError](../parameters/contactError.html)` Callback-Funktion, wenn ein Fehler auftritt.

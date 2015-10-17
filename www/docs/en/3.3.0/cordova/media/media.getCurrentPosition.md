@@ -35,7 +35,7 @@ Returns the current position within an audio file.
 ## Description
 
 An asynchronous function that returns the current position of the
-underlying audio file of a `Media` object. Also updates the `Media`
+underlying audio file of a `[Media](media.html)` object. Also updates the `[Media](media.html)`
 object's `position` parameter.
 
 ## Supported Platforms

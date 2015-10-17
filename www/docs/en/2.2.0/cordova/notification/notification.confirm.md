@@ -54,7 +54,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 	// process the confirmation dialog result
@@ -73,7 +73,7 @@ Quick Example
         );
     }
         
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -22,7 +22,7 @@ title: SplashScreen.Hide
 
 # SplashScreen.Hide
 
-Schließen Sie den Splash-Screen.
+[Schließen](../inappbrowser/inappbrowser.html) Sie den Splash-Screen.
 
     navigator.splashscreen.hide();
     
@@ -74,7 +74,7 @@ Diese Methode weist Begrüßungsbildschirm der Anwendung.
 
 ## iOS Quirk
 
-Die `config.xml` Datei `AutoHideSplashScreen` muss `false` . Verstecken den Splash-Screen für zwei Sekunden Verzögerung, fügen Sie einen Timer wie die folgende in der `deviceready` -Ereignishandler:
+Die `config.xml` [Datei](../file/fileobj/fileobj.html) `AutoHideSplashScreen` muss `false` . Verstecken den Splash-Screen für zwei Sekunden Verzögerung, fügen Sie einen Timer wie die folgende in der `[deviceready](../events/events.deviceready.html)` -Ereignishandler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

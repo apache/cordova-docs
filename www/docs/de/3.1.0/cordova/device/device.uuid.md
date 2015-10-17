@@ -85,8 +85,8 @@ Die Details wie eine UUID generiert wird werden vom Gerätehersteller und bezieh
 
 ## iOS Quirk
 
-Die `uuid` auf iOS ist nicht eindeutig auf ein Gerät, aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder aktualisieren Sie auch Ihre app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
+Die `uuid` auf iOS ist nicht eindeutig auf ein [Gerät](device.html), aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder aktualisieren Sie auch Ihre app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
 
 ## Windows Phone 7 und 8 Macken
 
-Die `uuid` für Windows Phone 7 die Berechtigung erfordert `ID_CAP_IDENTITY_DEVICE` . Microsoft wird diese Eigenschaft wahrscheinlich bald abzuschaffen. Wenn die Funktion nicht verfügbar ist, generiert die Anwendung eine persistente Guid, die für die Dauer der Installation der Anwendung auf dem Gerät verwaltet wird.
+Die `uuid` für Windows Phone 7 die Berechtigung erfordert `ID_CAP_IDENTITY_DEVICE` . Microsoft wird diese Eigenschaft wahrscheinlich bald abzuschaffen. Wenn die Funktion nicht verfügbar ist, generiert die Anwendung eine persistente Guid, die für die Dauer der Installation der Anwendung auf dem [Gerät](device.html) verwaltet wird.

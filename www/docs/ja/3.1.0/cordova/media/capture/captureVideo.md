@@ -33,9 +33,9 @@ title: capture.captureVideo
 
 デバイスのビデオ録画アプリケーションを使用してビデオ記録をキャプチャする非同期操作を開始します。操作は、単一のセッションで 1 つ以上の録音をキャプチャすることができます。
 
-キャプチャ操作終了いずれかユーザーがビデオ録画アプリケーションまたは録音で指定された最大数を終了時 `CaptureVideoOptions.limit` に達した。 いいえの場合 `limit` パラメーター値が指定されて、既定の 1 つ （1）、ユーザーは 1 つのビデオ クリップを記録した後にキャプチャ操作が終了しました。
+キャプチャ操作終了いずれかユーザーがビデオ録画アプリケーションまたは録音で指定された最大数を終了時 `[CaptureVideoOptions](captureVideoOptions.html).limit` に達した。 いいえの場合 `limit` パラメーター値が指定されて、既定の 1 つ （1）、ユーザーは 1 つのビデオ クリップを記録した後にキャプチャ操作が終了しました。
 
-キャプチャ操作が完了したら、それは `CaptureCB` の配列でコールバックを実行します `MediaFile` ビデオ クリップ ファイルをキャプチャしてそれぞれを記述するオブジェクトします。 ユーザーがビデオ クリップをキャプチャする前に操作を終了した場合、 `CaptureErrorCB` コールバックで実行する、 `CaptureError` オブジェクトの特色を `CaptureError.CAPTURE_NO_MEDIA_FILES` エラー コード。
+キャプチャ操作が完了したら、それは `[CaptureCB](CaptureCB.html)` の配列でコールバックを実行します `MediaFile` ビデオ クリップ ファイルをキャプチャしてそれぞれを記述するオブジェクトします。 ユーザーがビデオ クリップをキャプチャする前に操作を終了した場合、 `[CaptureErrorCB](CaptureErrorCB.html)` コールバックで実行する、 `[CaptureError](CaptureError.html)` オブジェクトの特色を `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` エラー コード。
 
 ## サポートされているプラットフォーム
 
@@ -128,4 +128,4 @@ title: capture.captureVideo
 
 ## ブラックベリー WebWorks 癖
 
-*   BlackBerry の WebWorks のコルドバ**ビデオ レコーダー**アプリケーションを起動し、リム、によって提供されるビデオ録画をキャプチャしようとします。 アプリは受け取ります、 `CaptureError.CAPTURE_NOT_SUPPORTED` 、アプリケーションがデバイスにインストールされていない場合はエラー コード。
+*   BlackBerry の WebWorks のコルドバ**ビデオ レコーダー**アプリケーションを起動し、リム、によって提供されるビデオ録画をキャプチャしようとします。 アプリは受け取ります、 `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` 、アプリケーションがデバイスにインストールされていない場合はエラー コード。

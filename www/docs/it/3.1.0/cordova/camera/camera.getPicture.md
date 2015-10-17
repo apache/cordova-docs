@@ -22,7 +22,7 @@ title: camera.getPicture
 
 # camera.getPicture
 
-Prende una foto utilizzando la fotocamera, o recupera una foto dalla galleria di immagini del dispositivo. L'immagine viene passata al metodo di callback successo come una codifica base64 `String` , o come l'URI per il file di immagine. Il metodo stesso restituisce un `CameraPopoverHandle` che può essere utilizzato per riposizionare il Muffin di selezione file.
+Prende una foto utilizzando la fotocamera, o recupera una foto dalla galleria di immagini del dispositivo. L'immagine viene passata al metodo di callback successo come una codifica base64 `String` , o come l'URI per il file di immagine. Il metodo stesso restituisce un `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` che può essere utilizzato per riposizionare il Muffin di selezione file.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
@@ -31,9 +31,9 @@ Prende una foto utilizzando la fotocamera, o recupera una foto dalla galleria di
 
 il `camera.getPicture` funzione apre predefinito fotocamera applicazione il dispositivo che consente agli utenti di scattare foto. Questo comportamento si verifica per impostazione predefinita, quando `Camera.sourceType` è uguale a `Camera.PictureSourceType.CAMERA` . Una volta che l'utente scatta la foto, si chiude l'applicazione fotocamera e l'applicazione viene ripristinato.
 
-Se `Camera.sourceType` è `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM` , quindi un display finestra di dialogo che consente agli utenti di selezionare un'immagine esistente. La `camera.getPicture` la funzione restituisce un `CameraPopoverHandle` oggetto, che può essere utilizzato per riposizionare la finestra di selezione immagine, ad esempio, quando l'orientamento del dispositivo.
+Se `Camera.sourceType` è `Camera.PictureSourceType.PHOTOLIBRARY` o `Camera.PictureSourceType.SAVEDPHOTOALBUM` , quindi un display finestra di dialogo che consente agli utenti di selezionare un'immagine esistente. La `camera.getPicture` la funzione restituisce un `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` oggetto, che può essere utilizzato per riposizionare la finestra di selezione immagine, ad esempio, quando l'orientamento del dispositivo.
 
-Il valore restituito viene inviato alla `cameraSuccess` funzione di callback, in uno dei seguenti formati, a seconda che l'oggetto specificato `cameraOptions` :
+Il valore restituito viene inviato alla `[cameraSuccess](parameter/cameraSuccess.html)` funzione di callback, in uno dei seguenti formati, a seconda che l'oggetto specificato `[cameraOptions](parameter/cameraOptions.html)` :
 
 *   A `String` contenente l'immagine della foto con codifica base64.
 
@@ -66,7 +66,7 @@ Android utilizza intenti a lanciare l'attività della fotocamera sul dispositivo
 
 ## iOS stranezze
 
-Compreso un JavaScript `alert()` in entrambi il callback funzioni possono causare problemi. Avvolgere l'avviso all'interno di un `setTimeout()` per consentire la selezione immagine iOS o muffin per chiudere completamente la prima che viene visualizzato l'avviso:
+Compreso un JavaScript `alert()` in entrambi il callback funzioni possono causare problemi. Avvolgere l'avviso all'interno di un `setTimeout()` per consentire la selezione immagine iOS o muffin per [chiudere](../inappbrowser/inappbrowser.html) completamente la prima che viene visualizzato l'avviso:
 
     setTimeout(function() {/ / fai la tua cosa qui!}, 0);
     

@@ -37,7 +37,7 @@ The iOS command-line tools are built upon shell scripts and rely on
 Xcode command-line tools such as `xcode-select` and `xcodebuild`.
 
 For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
+plugins, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). See Application Plugins
 for an overview.
 
 ## Create a Project

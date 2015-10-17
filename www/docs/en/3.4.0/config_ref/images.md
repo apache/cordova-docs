@@ -160,7 +160,7 @@ should hide the splash screen so that your main view is visible as soon as it
 is ready. Because the app start time will vary quite a bit due to a number of
 factors such as CPU speed and network, it is recommended that your app
 explicitly invoke `navigator.splashscreen.hide()` in the JavaScript
-method that responds to the `deviceready` event. Otherwise the splash screen
+method that responds to the `[deviceready](../cordova/events/events.deviceready.html)` event. Otherwise the splash screen
 will be visible for the SplashScreenDelay value that you configured above,
 which is likely longer than necessary.
 This event-driven approach is highly recommended versus having the splash

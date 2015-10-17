@@ -33,7 +33,7 @@ Devuelve la fecha con formato `String` mediante una propiedad de `value` accesib
 
 El parámetro entrantes `date` debe ser de tipo `Date`.
 
-Si hay un error de formato de la fecha, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.FORMATTING\_ERROR`.
+Si hay un error de formato de la fecha, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 El `options` parámetro es opcional, y sus valores por defecto son:
 

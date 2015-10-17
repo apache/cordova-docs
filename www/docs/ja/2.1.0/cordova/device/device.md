@@ -28,11 +28,11 @@ Device
 プロパティー
 ----------
 
-- device.name
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
+- [device.name](device.name.html)
+- [device.cordova](device.cordova.html)
+- [device.platform](device.platform.html)
+- [device.uuid](device.uuid.html)
+- [device.version](device.version.html)
 
 変数の範囲
 --------------

@@ -23,7 +23,7 @@ title: PositionError
 PositionError
 ========
 
-A `PositionError` object is returned to the geolocationError callback when an error occurs.
+A `PositionError` object is returned to the [geolocationError](../parameters/geolocationError.html) callback when an error occurs.
 
 Properties
 ----------
@@ -41,5 +41,5 @@ Constants
 Description
 -----------
 
-The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
+The `PositionError` object is returned to the user through the `[geolocationError](../parameters/geolocationError.html)` callback function when an error occurs with geolocation.
 

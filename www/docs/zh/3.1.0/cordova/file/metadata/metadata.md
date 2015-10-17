@@ -30,7 +30,7 @@ title: 中繼資料
 
 ## 詳細資訊
 
-`Metadata`物件表示檔或目錄的狀態資訊。 調用 `DirectoryEntry` 或 `FileEntry` 物件的 `getMetadata()` 方法將產生 `Metadata` 實例。
+`Metadata`物件表示檔或目錄的狀態資訊。 調用 `DirectoryEntry` 或 `[FileEntry](../fileentry/fileentry.html)` 物件的 `getMetadata()` 方法將產生 `Metadata` 實例。
 
 ## 支援的平臺
 

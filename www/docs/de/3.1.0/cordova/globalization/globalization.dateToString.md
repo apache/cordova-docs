@@ -33,7 +33,7 @@ Gibt das formatierte Datum `String` über eine `value` -Eigenschaft zugänglich 
 
 Die eingehende `date` -Parameter des Typs sein sollte`Date`.
 
-Wenn ein Fehler, die Formatierung des Datums vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.FORMATTING\_ERROR`.
+Wenn ein Fehler, die Formatierung des Datums vorliegt dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Die `options` Parameter ist optional, und die Standardwerte sind:
 

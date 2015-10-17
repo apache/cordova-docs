@@ -22,7 +22,7 @@ title: ContactField
 
 # ContactField
 
-Prend en charge les champs génériques dans un objet `Contact`. Certaines propriétés stockées comme objets `ContactField` incluent des adresses e-mail, numéros de téléphone et URL.
+Prend en charge les champs génériques dans un objet `[Contact](../Contact/contact.html)`. Certaines propriétés stockées comme objets `ContactField` incluent des adresses e-mail, numéros de téléphone et URL.
 
 ## Propriétés
 
@@ -34,9 +34,9 @@ Prend en charge les champs génériques dans un objet `Contact`. Certaines propr
 
 ## Détails
 
-L'objet `ContactField` est un composant réutilisable que représente un champ de contact générique. Chaque objet `ContactField` contient une propriété `value` , `type` , et `pref`. Un objet `Contact` stocke plusieurs propriétés dans les tableaux `ContactField[]`, tels que les numéros de téléphone et adresses e-mail.
+L'objet `ContactField` est un composant réutilisable que représente un champ de contact générique. Chaque objet `ContactField` contient une propriété `value` , `type` , et `pref`. Un objet `[Contact](../Contact/contact.html)` stocke plusieurs propriétés dans les tableaux `ContactField[]`, tels que les numéros de téléphone et adresses e-mail.
 
-Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attribut **type** de l'objet `ContactField`. Par exemple, un numéro de téléphone peut spécifier des valeurs pour **type** comme *home*, *work*, *mobile*, *iPhone*, ou toute autre valeur qui est prise en charge par la base de contacts de la plate-forme d'un appareil particulier. Toutefois, pour le champ **photos** de `Contact` , le champ **type** indique le format de l'image retournée : **url** lorsque l'attribut **value** contient une URL vers la photo ou *base64* lorsque la **valeur** contient une chaîne d'image codée en base64. 
+Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attribut **type** de l'objet `ContactField`. Par exemple, un numéro de téléphone peut spécifier des valeurs pour **type** comme *home*, *work*, *mobile*, *iPhone*, ou toute autre valeur qui est prise en charge par la base de contacts de la plate-forme d'un appareil particulier. Toutefois, pour le champ **photos** de `[Contact](../Contact/contact.html)` , le champ **type** indique le format de l'image retournée : **url** lorsque l'attribut **value** contient une URL vers la photo ou *base64* lorsque la **valeur** contient une chaîne d'image codée en base64. 
 
 ## Plates-formes prises en charge
 

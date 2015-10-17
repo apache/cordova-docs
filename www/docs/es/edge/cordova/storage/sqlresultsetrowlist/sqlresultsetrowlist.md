@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-Una de las propiedades de la `SQLResultSet` que contiene las filas devueltas desde una consulta SQL.
+Una de las propiedades de la `[SQLResultSet](../sqlresultset/sqlresultset.html)` que contiene las filas devueltas desde una consulta SQL.
 
 ## Propiedades
 

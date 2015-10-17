@@ -22,7 +22,7 @@ title: ContactFindOptions
 
 # ContactFindOptions
 
-Contiene proprietà che possono essere utilizzate per filtrare i risultati di una `contacts.find` operazione.
+Contiene proprietà che possono essere utilizzate per filtrare i risultati di una `[contacts.find](../contacts.find.html)` operazione.
 
 ## Proprietà
 

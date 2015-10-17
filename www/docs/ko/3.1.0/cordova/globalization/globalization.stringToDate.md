@@ -45,7 +45,7 @@ title: globalization.stringToDate
 
 *   **밀리초**: 모든 플랫폼에서 사용할 수 없습니다 (0-999)에서 밀리초. *(수)*
 
-인바운드는 `dateString` 매개 변수 유형 이어야 합니다`String`.
+인바운드는 `dateString` 매개 [변수](../../plugin_ref/spec.html) 유형 이어야 합니다`String`.
 
 `options`매개 변수는 선택적 이며 기본값은 다음 값:
 
@@ -55,7 +55,7 @@ title: globalization.stringToDate
 `options.formatLength`수 있는 `short` , `medium` , `long` , 또는 `full` . `options.selector`수 있는 `date` , `time` 또는`date and
 time`.
 
-날짜 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.PARSING\_ERROR`.
+날짜 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## 지원 되는 플랫폼
 

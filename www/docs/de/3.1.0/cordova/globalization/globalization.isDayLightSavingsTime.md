@@ -33,7 +33,7 @@ Gibt an, ob Sommerzeit ist in der Tat zu den `successCallback` mit einem `proper
 
 Die eingehenden Parameter `date` sollte vom Typ`Date`.
 
-Wenn gibt es einen Lesefehler das Datum der `errorCallback` führt. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
+Wenn gibt es einen Lesefehler das Datum der `errorCallback` führt. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 

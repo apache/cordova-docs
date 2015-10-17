@@ -22,7 +22,7 @@ title: geolocation.getCurrentPosition
 
 # geolocation.getCurrentPosition
 
-Gibt das Gerät die aktuelle Position als ein `Position` Objekt.
+Gibt das [Gerät](../device/device.html) die aktuelle [Position](Position/position.html) als ein `[Position](Position/position.html)` Objekt.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
@@ -31,7 +31,7 @@ Gibt das Gerät die aktuelle Position als ein `Position` Objekt.
 
 ## Parameter
 
-*   **GeolocationSuccess**: der Rückruf, der die aktuelle Position übergeben wird.
+*   **GeolocationSuccess**: der Rückruf, der die aktuelle [Position](Position/position.html) übergeben wird.
 
 *   **GeolocationError**: *(Optional)* der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt.
 
@@ -39,7 +39,7 @@ Gibt das Gerät die aktuelle Position als ein `Position` Objekt.
 
 ## Beschreibung
 
-`geolocation.getCurrentPosition`ist eine asynchrone Funktion. Es gibt das Gerät aktuelle Position auf der `geolocationSuccess` Rückruf mit einem `Position` Objekt als Parameter. Wenn ein Fehler vorliegt der `geolocationError` Rückruf wird übergeben ein `PositionError` Objekt.
+`geolocation.getCurrentPosition`ist eine asynchrone Funktion. Es gibt das [Gerät](../device/device.html) aktuelle [Position](Position/position.html) auf der `[geolocationSuccess](parameters/geolocationSuccess.html)` Rückruf mit einem `[Position](Position/position.html)` Objekt als Parameter. Wenn ein Fehler vorliegt der `[geolocationError](parameters/geolocationError.html)` Rückruf wird übergeben ein `PositionError` Objekt.
 
 ## Unterstützte Plattformen
 

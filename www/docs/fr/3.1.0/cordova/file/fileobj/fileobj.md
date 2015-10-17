@@ -42,7 +42,7 @@ Cet objet contient les attributs se référant à un fichier.
 
 ## Détails
 
-L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une instance d'un objet `File` en appelant la méthode `file()` d'un objet `FileEntry`.
+L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une instance d'un objet `File` en appelant la méthode `file()` d'un objet `[FileEntry](../fileentry/fileentry.html)`.
 
 ## Plates-formes supportées
 
@@ -54,7 +54,7 @@ L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une inst
 
 ## slice
 
-Retourne un nouvel objet `File` pour lequel `FileReader` renvoie uniquement la partie spécifiée du fichier. Toute valeur négative pour `start` ou `end` est mesurée à partir de la fin du fichier. Les index sont positionnés par rapport à la tranche actuelle. (Voir l'exemple complet ci-dessous.)
+Retourne un nouvel objet `File` pour lequel `[FileReader](../filereader/filereader.html)` renvoie uniquement la partie spécifiée du fichier. Toute valeur négative pour `start` ou `end` est mesurée à partir de la fin du fichier. Les index sont positionnés par rapport à la tranche actuelle. (Voir l'exemple complet ci-dessous.)
 
 **Paramètres :**
 

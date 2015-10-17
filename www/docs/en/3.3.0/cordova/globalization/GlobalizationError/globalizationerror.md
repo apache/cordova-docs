@@ -22,7 +22,7 @@ title: GlobalizationError
 
 # GlobalizationError
 
-An object representing a error from the Globalization API.
+An object representing a error from the [Globalization](../globalization.html) API.
 
 ## Properties
 

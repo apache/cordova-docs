@@ -22,7 +22,7 @@ title: CaptureErrorCB
 
 # CaptureErrorCB
 
-> メディア キャプチャ操作中にエラーが発生した場合に呼び出されます。
+> [メディア](../media.html) キャプチャ操作中にエラーが発生した場合に呼び出されます。
 
     function captureError( CaptureError error ) { ... };
     
@@ -31,7 +31,7 @@ title: CaptureErrorCB
 
 この関数でエラーが発生を起動しようとすると、メディアのキャプチャ操作を実行します。 障害シナリオを含めますキャプチャ アプリケーションがビジー状態、キャプチャ操作は既に起こって、または、操作をキャンセルする前にメディア ファイルが自動的にキャプチャされます。
 
-この関数で実行する、 `CaptureError` 、適切なエラーを格納しているオブジェクト`code`.
+この関数で実行する、 `[CaptureError](CaptureError.html)` 、適切なエラーを格納しているオブジェクト`code`.
 
 ## 簡単な例
 

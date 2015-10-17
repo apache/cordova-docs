@@ -23,7 +23,7 @@ title: ContactError
 ContactError
 ========
 
-`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `[contactError](../parameters/contactError.html)` コールバック関数に渡されるオブジェクトです。
 
 プロパティー
 ----------
@@ -44,5 +44,5 @@ ContactError
 概要
 -----------
 
-`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `[contactError](../parameters/contactError.html)` コールバック関数に渡されるオブジェクトです。
 

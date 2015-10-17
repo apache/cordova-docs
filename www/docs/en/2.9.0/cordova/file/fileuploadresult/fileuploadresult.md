@@ -24,7 +24,7 @@ FileUploadResult
 ========
 
 A `FileUploadResult` object is passed to the success callback of the
-`FileTransfer` object's `upload()` method.
+`[FileTransfer](../filetransfer/filetransfer.html)` object's `upload()` method.
 
 Properties
 ----------
@@ -37,7 +37,7 @@ Description
 -----------
 
 The `FileUploadResult` object is returned via the success callback of
-the `FileTransfer` object's `upload()` method.
+the `[FileTransfer](../filetransfer/filetransfer.html)` object's `upload()` method.
 
 iOS Quirks
 ----------

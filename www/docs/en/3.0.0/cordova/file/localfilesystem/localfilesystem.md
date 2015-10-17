@@ -30,7 +30,7 @@ Methods
 
 - __requestFileSystem__: Requests a filesystem. _(Function)_
 
-- __resolveLocalFileSystemURI__: Retrieve a `DirectoryEntry` or `FileEntry` using local URI. _(Function)_
+- __resolveLocalFileSystemURI__: Retrieve a `[DirectoryEntry](../directoryentry/directoryentry.html)` or `[FileEntry](../fileentry/fileentry.html)` using local URI. _(Function)_
 
 Constants
 ---------
@@ -53,7 +53,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Request File System Quick Example
+Request [File](../fileobj/fileobj.html) System Quick [Example](../../storage/storage.opendatabase.html)
 ---------------------------------
 
     function onSuccess(fileSystem) {
@@ -63,7 +63,7 @@ Request File System Quick Example
     // request the persistent file system
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
 
-Resolve Local File System URI Quick Example
+Resolve Local [File](../fileobj/fileobj.html) System URI Quick [Example](../../storage/storage.opendatabase.html)
 -------------------------------------------
 
     function onSuccess(fileEntry) {
@@ -72,7 +72,7 @@ Resolve Local File System URI Quick Example
 
     window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

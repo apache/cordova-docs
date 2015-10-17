@@ -24,11 +24,11 @@ title: Android-Plattform-Guide
 
 Diese Anleitung zeigt wie Ihre Entwicklungsumgebung SDK eingerichtet, Cordova apps für Android-Geräte bereitzustellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Android-Konfiguration
-*   Android Webansichten für
-*   Android Plugins
-*   Aktualisierung von Android
-*   Android-Befehlszeilenprogrammen
+*   [Android-Konfiguration](config.html)
+*   [Android Webansichten für](webview.html)
+*   [Android Plugins](plugin.html)
+*   [Aktualisierung von Android](upgrading.html)
+*   [Android-Befehlszeilenprogrammen](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -48,7 +48,7 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-Entwickler sollten verwenden das `cordova` -Dienstprogramm in Verbindung mit dem Android SDK. Finden Sie unter The Command-Line Interface Informationen installieren Sie es, Projekte, hinzufügen dann erstellen und Bereitstellen eines Projekts.
+Entwickler sollten verwenden das `cordova` -Dienstprogramm in [Verbindung](../../../cordova/connection/connection.html) mit dem Android SDK. Finden Sie unter The Command-Line Interface Informationen installieren Sie es, Projekte, hinzufügen dann erstellen und Bereitstellen eines Projekts.
 
 ## Das SDK installieren
 
@@ -126,7 +126,7 @@ Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelö
 
 ## Bereitstellen auf Emulator
 
-Können Sie das `cordova` -Dienstprogramm eine app in einem Emulator, oder Sie laufen kann es im SDK ausgeführt. In jedem Fall muss das SDK zuerst konfiguriert werden um mindestens ein Gerät anzuzeigen. Verwenden Sie hierzu das Android SDK Manager, eine Java-Anwendung, die separat von Eclipse verläuft. Es gibt zwei Möglichkeiten, es zu öffnen:
+Können Sie das `cordova` -Dienstprogramm eine app in einem Emulator, oder Sie laufen kann es im SDK ausgeführt. In jedem Fall muss das SDK zuerst konfiguriert werden um mindestens ein [Gerät](../../../cordova/device/device.html) anzuzeigen. Verwenden Sie hierzu das Android SDK Manager, eine Java-Anwendung, die separat von Eclipse verläuft. Es gibt zwei Möglichkeiten, es zu öffnen:
 
 *   Führen Sie `android` in der Befehlszeile.
 
@@ -160,7 +160,7 @@ Der AVD wird dann in der Liste **Android Virtual Devices** angezeigt:
 
  [9]: img/guide/platforms/android/asdk_avds.png
 
-Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD, und drücken Sie **Start**. Es bringt viel, wie es auf dem Gerät mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
+Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD, und drücken Sie **Start**. Es bringt viel, wie es auf dem [Gerät](../../../cordova/device/device.html) mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
 
 ![][10]
 
@@ -185,11 +185,11 @@ Verwenden Sie für eine schnellere Erfahrung ein Intel-basierten Emulator-Image:
 
 ## Bereitstellung auf Gerät
 
-Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debugging auf dem Gerät wie beschrieben auf der [Android Developer-Website][11]aktiviert ist, und verwenden Sie einen Mini-USB-Kabel zu, um es an Ihr System anschließen.
+Um eine app direkt auf das [Gerät](../../../cordova/device/device.html) zu drücken, stellen Sie sicher, dass USB debugging auf dem [Gerät](../../../cordova/device/device.html) wie beschrieben auf der [Android Developer-Website][11]aktiviert ist, und verwenden Sie einen Mini-USB-Kabel zu, um es an Ihr System anschließen.
 
  [11]: http://developer.android.com/tools/device.html
 
-Drücken Sie die app auf das Gerät von der Befehlszeile aus:
+Drücken Sie die app auf das [Gerät](../../../cordova/device/device.html) von der Befehlszeile aus:
 
         $ cordova run android
     

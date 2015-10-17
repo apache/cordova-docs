@@ -94,7 +94,7 @@ in Xcode project templates.
 
     ![](img/guide/platforms/ios/create-folder-reference.png)
 
-Hello World
+[Hello World](../webos/index.html)
 -----------
 
 - Select the folder named `www` in the Xcode _Project Navigator_
@@ -111,7 +111,7 @@ Deploy to Simulator
 - Change the _Active SDK_ in the Scheme drop-down menu on the toolbar to _iOS version Simulator_
 - Select the _Run_ button in your project window's toolbar
 
-Deploy to Device
+Deploy to [Device](../../../cordova/device/device.html)
 ----------------
 
 - Open `YourAppName-Info.plist`, under the _Supporting Files_ group

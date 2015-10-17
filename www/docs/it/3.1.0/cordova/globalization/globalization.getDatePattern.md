@@ -39,7 +39,7 @@ Restituisce il modello per la `successCallback` . L'oggetto passato come paramet
 
 *   **DST_OFFSET**: l'offset corrente ora legale in secondi tra non-legale del client di fuso orario e ora legale del cliente risparmio di fuso orario. *(Numero)*
 
-Se c'è un errore per ottenere il modello, il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PATTERN\_ERROR`.
+Se c'è un errore per ottenere il modello, il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 Il `options` parametro è facoltativo e verrà impostato i seguenti valori:
 

@@ -22,4 +22,4 @@ title: database_version
 
 # database_version
 
-Die Version der Datenbank.
+Die Version der [Datenbank](../database/database.html).

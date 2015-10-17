@@ -22,7 +22,7 @@ title: camera.getPicture
 
 # camera.getPicture
 
-Prend une photo à l'aide de la caméra, ou récupère une photo de la Galerie d'images de l'appareil. L'image est passée au callback "succès" comme une `String` encodée en base64 ou l'URI du fichier de l'image. La méthode elle-même renvoie un objet `CameraPopoverHandle` qui permet de repositionner la boite de dialogue de selection d'image.
+Prend une photo à l'aide de la caméra, ou récupère une photo de la Galerie d'images de l'appareil. L'image est passée au callback "succès" comme une `String` encodée en base64 ou l'URI du fichier de l'image. La méthode elle-même renvoie un objet `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` qui permet de repositionner la boite de dialogue de selection d'image.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
@@ -31,9 +31,9 @@ Prend une photo à l'aide de la caméra, ou récupère une photo de la Galerie d
 
 La fonction `camera.getPicture` ouvre l'application par défaut de l'appareil qui permet aux utilisateurs de prendre des photos. Ce comportement se produit par défaut, lorsque `Camera.sourceType` est égal à `Camera.PictureSourceType.CAMERA`. Une fois que l'utilisateur a pris la photo, l'application "camera" se ferme et l'application est restaurée.
 
-Si `Camera.sourceType` est `Camera.PictureSourceType.PHOTOLIBRARY` ou `Camera.PictureSourceType.SAVEDPHOTOALBUM`, alors une boîte de dialogue s'affiche pour permettre aux utilisateurs de sélectionner une image existante. La fonction `camera.getPicture` retourne un objet `CameraPopoverHandle` qui permet de repositionner le dialogue de sélection d'image, par exemple, lorsque l'orientation de l'appareil change.
+Si `Camera.sourceType` est `Camera.PictureSourceType.PHOTOLIBRARY` ou `Camera.PictureSourceType.SAVEDPHOTOALBUM`, alors une boîte de dialogue s'affiche pour permettre aux utilisateurs de sélectionner une image existante. La fonction `camera.getPicture` retourne un objet `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` qui permet de repositionner le dialogue de sélection d'image, par exemple, lorsque l'orientation de l'appareil change.
 
-La valeur de retour est envoyée à la fonction callback `cameraSuccess`, dans l'un des formats suivants, selon spécifié par `cameraOptions` :
+La valeur de retour est envoyée à la fonction callback `[cameraSuccess](parameter/cameraSuccess.html)`, dans l'un des formats suivants, selon spécifié par `[cameraOptions](parameter/cameraOptions.html)` :
 
 *   A `String` contenant l'image photo codée en base64.
 

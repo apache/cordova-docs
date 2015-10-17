@@ -30,7 +30,7 @@ title: Метаданные
 
 ## Подробная информация
 
-`Metadata`Объект представляет сведения о состоянии файла или каталога. Вызов `DirectoryEntry` или `FileEntry` объекта `getMetadata()` метода `Metadata` экземпляра.
+`Metadata`Объект представляет сведения о состоянии файла или каталога. Вызов `[DirectoryEntry](../directoryentry/directoryentry.html)` или `[FileEntry](../fileentry/fileentry.html)` объекта `getMetadata()` метода `Metadata` экземпляра.
 
 ## Поддерживаемые платформы
 

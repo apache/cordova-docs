@@ -72,7 +72,7 @@ title: Windows Phone средств командной строки
 
 ## Построение проекта (чистой, а затем построить)
 
-*   Отладка
+*   [Отладка](../../next/index.html)
     
     $ C:\path\to\my\_new\_project\cordova\build --debug
 

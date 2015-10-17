@@ -28,7 +28,7 @@ title: LocalFileSystem
 
 *   **requestFileSystem**: просит файловой системы. *(Функция)*
 
-*   **resolveLocalFileSystemURI**: получить `DirectoryEntry` или `FileEntry` с помощью местных URI. *(Функция)*
+*   **resolveLocalFileSystemURI**: получить `[DirectoryEntry](../directoryentry/directoryentry.html)` или `[FileEntry](../fileentry/fileentry.html)` с помощью местных URI. *(Функция)*
 
 ## Константы
 

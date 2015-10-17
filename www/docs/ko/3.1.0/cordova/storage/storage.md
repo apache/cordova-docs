@@ -26,9 +26,9 @@ title: 스토리지
 
 이 API는 두 가지 다른 W3C 사양에 따라 스토리지 옵션을 제공 합니다.
 
-*   [웹 저장소 API 규격][1] 을 사용 하면 단순한 키/값 쌍을 통해 데이터에 액세스할 수 있습니다. 이 인터페이스에 대 한 자세한 내용은 대 한 localStorage 섹션을 참조 하십시오.
+*   [웹 저장소 API 규격][1] 을 사용 하면 단순한 키/값 쌍을 통해 데이터에 액세스할 수 있습니다. 이 인터페이스에 대 한 자세한 내용은 대 한 [localStorage](localstorage/localstorage.html) 섹션을 참조 하십시오.
 
-*   [웹 SQL 데이터베이스 사양][2] 더 완전 한 기능의 데이터베이스 테이블 액세스 SQL 쿼리를 통해 제공 합니다. 이 인터페이스의 요약 바로 아래에 나타납니다.
+*   [웹 SQL [데이터베이스](database/database.html) 사양][2] 더 완전 한 기능의 [데이터베이스](database/database.html) 테이블 액세스 SQL 쿼리를 통해 제공 합니다. 이 인터페이스의 요약 바로 아래에 나타납니다.
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
@@ -37,22 +37,22 @@ title: 스토리지
 
 ## 메서드
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## 인수
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## 개체
 
-*   데이터베이스
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [데이터베이스](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## 기능 액세스
 
@@ -70,4 +70,4 @@ title: 스토리지
         < id="blackberry.widgetcache 기능" 필수 = "진정한" 버전 "1.0.0.0" = / >
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.

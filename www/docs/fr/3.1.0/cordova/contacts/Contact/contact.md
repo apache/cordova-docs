@@ -58,13 +58,13 @@ Contient des propriétés qui décrivent un contact, comme les contacts personne
 
 *   **clone** : retourne un nouvel objet `Contact`, copie récursive de l'objet cloné, sa propriété `id` vaudra cependant `null`.
 
-*   **remove** : supprime le contact de la base de données de contacts de l'appareil, sinon exécute une fonction callback d'erreur en lui passant un objet `ContactError`.
+*   **remove** : supprime le contact de la base de données de contacts de l'appareil, sinon exécute une fonction callback d'erreur en lui passant un objet `[ContactError](../ContactError/contactError.html)`.
 
 *   **save** : enregistre un nouveau contact dans la base de données de contacts de l'appareil, ou met à jour un contact existant si un contact avec le même **id** existe déjà.
 
 ## Détails
 
-L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent être créés, stockés ou supprimés de la base de données de contacts de l'appareil. Ils peuvent également être récupérées (individuellement ou en lot) dans la base de données en appelant la méthode `contacts.find`.
+L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent être créés, stockés ou supprimés de la base de données de contacts de l'appareil. Ils peuvent également être récupérées (individuellement ou en lot) dans la base de données en appelant la méthode `[contacts.find](../contacts.find.html)`.
 
 **Remarque :** l'ensemble des propriétés de contact énuméré ci-dessus n'est pas supporté par toutes les plates-formes. Veuillez vous référer aux *Notes* relatives à chaque plate-forme pour plus de détails.
 
@@ -226,7 +226,7 @@ L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent 
 
 ## Notes au sujet d'iOS
 
-*   **displayName** : pas pris en charge, valeur `null` à moins qu'il n'y ait aucun `ContactName` spécifié, auquel cas, renvoie le nom composite : **nickname** ou `""`.
+*   **displayName** : pas pris en charge, valeur `null` à moins qu'il n'y ait aucun `[ContactName](../ContactName/contactname.html)` spécifié, auquel cas, renvoie le nom composite : **nickname** ou `""`.
 
 *   **birthday** : doit être un object `Date` JavaScript, il sera aussi retourné en tant que tel.
 

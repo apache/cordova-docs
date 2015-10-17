@@ -29,7 +29,7 @@ Methods
 -------
 
 - __transaction__: Runs a database transaction. 
-- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update. 
+- __changeVersion__: method allows scripts to atomically verify the [version](../parameters/version.html) number and change it at the same time as doing a schema update. 
 
 Details
 -------
@@ -43,7 +43,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Transaction Quick Example
+Transaction Quick [Example](../storage.opendatabase.html)
 ------------------
 	function populateDB(tx) {
 		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -63,13 +63,13 @@ Transaction Quick Example
 	var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 	db.transaction(populateDB, errorCB, successCB);
 
-Change Version Quick Example
+Change Version Quick [Example](../storage.opendatabase.html)
 -------------------
 
 	var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 	db.changeVersion("1.0", "1.1");
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

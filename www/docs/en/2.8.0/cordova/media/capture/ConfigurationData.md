@@ -45,7 +45,7 @@ Properties
 - __height:__ The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
 - __width:__ The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // retrieve supported image modes

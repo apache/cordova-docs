@@ -26,6 +26,6 @@ Cordova demandes sont habituellement mises en œuvre comme un *WebView* , basée
 
 Pour déployer une WebView, vous devez être familier avec chaque environnement de programmation native. Ce qui suit fournit des instructions sur les plates-formes prises en charge :
 
-*   Amazon Fire OS WebViews
-*   Android WebViews
-*   iOS WebViews
+*   [Amazon Fire OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

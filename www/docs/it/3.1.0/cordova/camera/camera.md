@@ -28,7 +28,7 @@ title: Fotocamera
 
 ## Metodi
 
-*   camera.getPicture
+*   [camera.getPicture](camera.getPicture.html)
 *   camera.Cleanup
 
 ## La funzionalità di accesso

@@ -31,7 +31,7 @@ The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
 or Windows XP SP3/7 (32-bit).
 
 Developers should use the `cordova` utility in conjunction with
-the Tizen SDK.  See The Command-line Interface for information
+the Tizen SDK.  See [The Command-line Interface](../../cli/index.html) for information
 how to install it, add projects, then build and deploy a project.
 
 ## Install the SDK
@@ -107,7 +107,7 @@ __Run As &rarr; Tizen Web Simulator Application__:
   configured. Its __Date and Time__ settings must be set correctly.
 
 * Use the __Connection Explorer__ view to select the application
-  deployment target: __Window &rarr; Show View &rarr; Connection
+  deployment target: __Window &rarr; Show View &rarr; [Connection](../../../cordova/connection/connection.html)
   Explorer__.
 
   ![](img/guide/platforms/tizen/connection_explorer.png)

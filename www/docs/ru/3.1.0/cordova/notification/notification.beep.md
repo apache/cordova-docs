@@ -22,7 +22,7 @@ title: Notification.beep
 
 # Notification.beep
 
-Устройство воспроизводит звуковой сигнал звук.
+[Устройство](../device/device.html) воспроизводит звуковой сигнал звук.
 
     navigator.notification.beep(times);
     

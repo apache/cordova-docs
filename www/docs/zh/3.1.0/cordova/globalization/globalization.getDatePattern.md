@@ -41,7 +41,7 @@ title: globalization.getDatePattern
 
  [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-如果您獲取該模式，錯誤 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
+如果您獲取該模式，錯誤 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`參數是可選的並且預設為以下值：
 

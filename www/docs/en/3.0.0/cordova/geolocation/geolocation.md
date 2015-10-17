@@ -49,28 +49,28 @@ accessing geolocation data (if the device operating system doesn't do
 so already).  That notice should provide the same information noted
 above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
-see the Privacy Guide.
+see the [Privacy Guide](../../guide/appdev/privacy/index.html).
 
 Methods
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+- [geolocation.watchPosition](geolocation.watchPosition.html)
+- [geolocation.clearWatch](geolocation.clearWatch.html)
 
 Arguments
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- [geolocationSuccess](parameters/geolocationSuccess.html)
+- [geolocationError](parameters/geolocationError.html)
+- [geolocationOptions](parameters/geolocation.options.html)
 
 Objects (Read-Only)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- [Position](Position/position.html)
+- [PositionError](PositionError/positionError.html)
+- [Coordinates](Coordinates/coordinates.html)
 
 ## Accessing the Feature
 

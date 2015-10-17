@@ -22,7 +22,7 @@ title: Guide de la plate-forme blackBerry 10
 
 # Guide de la plate-forme blackBerry 10
 
-Ce guide montre comment configurer votre environnement SDK pour déployer des applications de Cordova pour BlackBerry 10 appareils. Pour les versions précédentes de BlackBerry, vous devez utiliser un environnement SDK différents et un ensemble d'outils de ligne de commande, décrit dans le Guide de la plate-forme BlackBerry. Pour BlackBerry 10, vous devez installer le SDK indépendamment de si vous souhaitez utiliser la CLI de Cordova de multi-plateforme pour le développement, ou un ensemble plus restreint d'axée sur la plateforme des outils de ligne de commande. Pour une comparaison entre les voies de deux développement, consultez la vue d'ensemble. Pour plus de détails sur chacun, consultez l'Interface de ligne de commande et le BlackBerry 10 Shell Tool Guide.
+Ce guide montre comment configurer votre environnement SDK pour déployer des applications de Cordova pour BlackBerry 10 appareils. Pour les versions précédentes de BlackBerry, vous devez utiliser un environnement SDK différents et un ensemble d'outils de ligne de commande, décrit dans le Guide de la plate-forme BlackBerry. Pour BlackBerry 10, vous devez installer le SDK indépendamment de si vous souhaitez utiliser la CLI de Cordova de multi-plateforme pour le développement, ou un ensemble plus restreint d'axée sur la plateforme des outils de ligne de commande. Pour une comparaison entre les voies de deux développement, consultez la vue d'ensemble. Pour plus de détails sur chacun, consultez l'Interface de ligne de commande et le [BlackBerry 10 Shell Tool Guide](tools.html).
 
 ## Exigences
 

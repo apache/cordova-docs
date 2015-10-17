@@ -78,13 +78,13 @@ platform add android`.
 
 4.  새로운 복사 `cordova.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  복사는 `res/xml/config.xml` 일치 하는 파일`framework/res/xml/config.xml`.
+6.  복사는 `res/xml/config.xml` 일치 하는 [파일](../../../cordova/file/fileobj/fileobj.html)`framework/res/xml/config.xml`.
 
 7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.6.0에서 2.7.0로 업그레이드
 
@@ -96,13 +96,13 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.7.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.7.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.7.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
 7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.5.0에서 2.6.0로 업그레이드
 
@@ -114,13 +114,13 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.6.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
 7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 실행 `bin/update <project>` 프로젝트 경로와 코르도바 소스 디렉터리에 나열 된.
 
@@ -134,13 +134,13 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.5.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
 7.  업데이트 `framework/res/xml/config.xml` 이전 처럼 비슷한 설정을 해야 합니다.
 
-8.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+8.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.3.0에서 2.4.0로 업그레이드
 
@@ -152,11 +152,11 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.4.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.3.0 2.2.0에서 업그레이드
 
@@ -168,11 +168,11 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.3.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.1.0에서 2.2.0으로 업그레이드
 
@@ -184,11 +184,11 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.2.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 2.0.0에서 2.1.0으로 업그레이드
 
@@ -200,11 +200,11 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.1.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
-7.  파일 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
+7.  [파일](../../../cordova/file/fileobj/fileobj.html) 복사 `bin/templates/cordova` 프로젝트의 `cordova` 디렉터리.
 
 ## 1.9.0에서 2.0.0로 업그레이드
 
@@ -216,7 +216,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-2.0.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  복사는 `res/xml/config.xml` 일치 하도록`framework/res/xml/config.xml`.
 
@@ -234,7 +234,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.9.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.9.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.9.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -252,7 +252,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.8.1.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.1.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.1.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -266,7 +266,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.8.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -280,7 +280,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.8.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -318,7 +318,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.6.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -334,7 +334,7 @@ platform add android`.
 
 4.  새로운 복사 `cordova-1.5.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.5.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.5.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -350,7 +350,7 @@ platform add android`.
 
 4.  새로운 복사 `phonegap-1.4.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.4.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -366,7 +366,7 @@ platform add android`.
 
 4.  새로운 복사 `phonegap-1.3.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -382,7 +382,7 @@ platform add android`.
 
 4.  새로운 복사 `phonegap-1.2.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -398,7 +398,7 @@ platform add android`.
 
 4.  새로운 복사 `phonegap-1.1.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.1.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  업데이트 `res/xml/plugins.xml` 에 맞게`framework/res/xml/plugins.xml`.
 
@@ -412,6 +412,6 @@ platform add android`.
 
 4.  새로운 복사 `phonegap-1.0.0.js` 프로젝트에.
 
-5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.0.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `phonegap-1.0.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  추가 `res/xml/plugins.xml` 일치 하도록`framework/res/xml/plugins.xml`.

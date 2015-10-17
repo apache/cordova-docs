@@ -42,7 +42,7 @@ It returns the pattern to the successCB callback with a properties object as a p
 
 The inbound `currencyCode` parameter should be a String of one of the ISO 4217 currency codes, for example 'USD'.
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error obtaining the pattern, then the errorCB callback is invoked with a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR.
 
 Supported Platforms
 -------------------
@@ -51,7 +51,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale and the selected currency is United States Dollars, this should display a popup dialog with text similar to:
@@ -77,7 +77,7 @@ In the case when the browser is set to the en\_US locale and the selected curren
     );
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

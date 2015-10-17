@@ -20,7 +20,7 @@ license: >
 title: Project Settings for Windows 8
 ---
 
-Project Settings for Windows 8 
+[Project Settings](../index.html) for Windows 8 
 ===================================
 
 Windows 8 does not currently support this feature.

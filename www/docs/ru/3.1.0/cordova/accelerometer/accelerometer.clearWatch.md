@@ -22,12 +22,12 @@ title: accelerometer.clearWatch
 
 # accelerometer.clearWatch
 
-Перестать отслеживать изменения объекта `Acceleration`, на который ссылается параметр `watchID`.
+Перестать отслеживать изменения объекта `[Acceleration](acceleration/acceleration.html)`, на который ссылается параметр `watchID`.
 
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: идентификатор, возвращяемый `accelerometer.watchAcceleration`.
+*   **watchID**: идентификатор, возвращяемый `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Поддерживаемые платформы
 

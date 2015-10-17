@@ -22,7 +22,7 @@ title: accelerometerError
 
 # accelerometerError
 
-가속 기능에 대 한 onError 콜백 함수입니다.
+[가속](../acceleration/acceleration.html) 기능에 대 한 onError 콜백 함수입니다.
 
     function() {
         // Handle the error

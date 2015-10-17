@@ -33,7 +33,7 @@ title: globalization.isDayLightSavingsTime
 
 受信パラメーター `date` 型である必要があります`Date`.
 
-日付を読み取り中にエラーがある場合、 `errorCallback` を実行します。予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
+日付を読み取り中にエラーがある場合、 `errorCallback` を実行します。予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## サポートされているプラットフォーム
 

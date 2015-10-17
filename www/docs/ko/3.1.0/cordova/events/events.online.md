@@ -22,16 +22,16 @@ title: 온라인
 
 # 온라인
 
-응용 프로그램은 온라인 및 장치가 인터넷에 연결 된다 때이 이벤트가 발생 합니다.
+응용 프로그램은 온라인 및 장치가 인터넷에 [연결](../connection/connection.html) 된다 때이 이벤트가 발생 합니다.
 
     document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-`online`이전 연결 되지 않은 장치는 인터넷에 대 한 응용 프로그램 액세스를 허용 하도록 네트워크 연결을 받을 때 이벤트가 발생 합니다. 그것은 연결 API와 동일한 정보에 의존 하 고 경우의 값 `connection.type` 된다`NONE`.
+`online`이전 [연결](../connection/connection.html) 되지 않은 장치는 인터넷에 대 한 응용 프로그램 액세스를 허용 하도록 네트워크 연결을 받을 때 이벤트가 발생 합니다. 그것은 [연결](../connection/connection.html) API와 동일한 정보에 의존 하 고 경우의 값 `[connection.type](../connection/connection.type.html)` 된다`NONE`.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 [이벤트](events.html) 리스너를 [연결](../connection/connection.html) 하는 `[deviceready](events.deviceready.html)` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -87,7 +87,7 @@ title: 온라인
 
 ## iOS 단점
 
-처음 시작 하는 동안 첫 번째 `online` 이벤트 (있는 경우) 이전에 불 초 걸립니다 이상 `connection.type` 입니다`UNKNOWN`.
+처음 시작 하는 동안 첫 번째 `online` [이벤트](events.html) (있는 경우) 이전에 불 초 걸립니다 이상 `[connection.type](../connection/connection.type.html)` 입니다`UNKNOWN`.
 
 ## Windows Phone 7 단점
 
@@ -95,4 +95,4 @@ title: 온라인
 
 ## Windows Phone 8 단점
 
-에뮬레이터도 연결 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트에는 *없는* 불.
+에뮬레이터도 [연결](../connection/connection.html) 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트에는 *없는* 불.

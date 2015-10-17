@@ -20,7 +20,7 @@ license: >
 title: Project Settings for Windows Phone 8
 ---
 
-Project Settings for Windows Phone 8
+[Project Settings](../index.html) for Windows Phone 8
 ===================================
 
 Windows Phone 8 does not currently have any additional configurable features.

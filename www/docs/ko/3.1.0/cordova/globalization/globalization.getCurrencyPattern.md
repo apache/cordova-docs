@@ -43,9 +43,9 @@ title: globalization.getCurrencyPattern
 
 *   **그룹화**: 구문 분석 및 서식 지정에 사용할 그룹화 기호. *(문자열)*
 
-인바운드는 `currencyCode` 매개 변수 이어야 합니다는 `String` 의 ISO 4217 통화 코드, 예를 들어 '미화' 중 하나.
+인바운드는 `currencyCode` 매개 [변수](../../plugin_ref/spec.html) 이어야 합니다는 `String` 의 ISO 4217 통화 코드, 예를 들어 '미화' 중 하나.
 
-패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.FORMATTING\_ERROR`.
+패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 ## 지원 되는 플랫폼
 

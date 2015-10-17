@@ -23,14 +23,14 @@ title: localStorage
 localStorage
 ===============
 
-Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a W3C [Storage](../storage.html) interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
     var storage = window.localStorage;
 
 Methods
 -------
 
-- __key__: Returns the name of the key at the position specified. 
+- __key__: Returns the [name](../parameters/name.html) of the key at the position specified. 
 - __getItem__: Returns the item identified by it's key.
 - __setItem__: Saves and item at the key provided.
 - __removeItem__: Removes the item identified by it's key.
@@ -39,7 +39,7 @@ Methods
 Details
 -----------
 
-localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
+localStorage provides an interface to a W3C [Storage](../storage.html) interface.  It allows one to save data as key-value pairs.
 
 Supported Platforms
 -------------------
@@ -48,33 +48,33 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Key Quick Example
+Key Quick [Example](../storage.opendatabase.html)
 -------------
 
     var keyName = window.localStorage.key(0);
 
-Set Item Quick Example
+Set Item Quick [Example](../storage.opendatabase.html)
 -------------
 
     window.localStorage.setItem("key", "value");
 
-Get Item Quick Example
+Get Item Quick [Example](../storage.opendatabase.html)
 -------------
 
 	var value = window.localStorage.getItem("key");
 	// value is now equal to "value"
 
-Remove Item Quick Example
+Remove Item Quick [Example](../storage.opendatabase.html)
 -------------
 
 	window.localStorage.removeItem("key");
 
-Clear Quick Example
+Clear Quick [Example](../storage.opendatabase.html)
 -------------
 
 	window.localStorage.clear();
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

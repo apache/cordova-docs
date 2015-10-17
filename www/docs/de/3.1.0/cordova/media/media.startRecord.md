@@ -132,17 +132,17 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
 
 ## Android Macken
 
-*   Android-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene Datei sollte mit einer Endung *.amr* enden.
+*   Android-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene [Datei](../file/fileobj/fileobj.html) sollte mit einer Endung *.amr* enden.
 
 ## BlackBerry WebWorks Macken
 
-*   BlackBerry-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene Datei muss mit der Erweiterung *.amr* enden.
+*   BlackBerry-Geräte aufnehmen Audio im Adaptive Sprachcodecs Format. Die angegebene [Datei](../file/fileobj/fileobj.html) muss mit der Erweiterung *.amr* enden.
 
 ## iOS Macken
 
 *   iOS nur Datensätze, die Dateien des Typs *WAV* und gibt ein Fehler, wenn die Dateinamen-Erweiterung ist richtig nicht.
 
-*   Wenn ein vollständiger Pfad nicht angegeben ist, wird die Aufzeichnung in der Anwendung platziert `documents/tmp` Verzeichnis. Erreichbar über die `File` -API verwenden `LocalFileSystem.TEMPORARY` . Allen Unterverzeichnissen in Rekordzeit angegeben muss bereits vorhanden sein.
+*   Wenn ein vollständiger Pfad nicht angegeben ist, wird die Aufzeichnung in der Anwendung platziert `documents/tmp` Verzeichnis. Erreichbar über die `File` -API verwenden `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` . Allen Unterverzeichnissen in Rekordzeit angegeben muss bereits vorhanden sein.
 
 *   Dateien können aufgezeichnet und spielte mit die Dokumenten URI zurück:
     

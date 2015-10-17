@@ -26,7 +26,7 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir la mise à niveau de Windows 8 pour plus d'informations sur comment mettre à niveau les projets existants de Windows 8 Cordova.
 
-Séjours 8 Téléphone (wp8) fenêtre comme une plate-forme distincte, voir Guide de plateforme Windows Phone 8 pour plus de détails.
+Séjours 8 Téléphone (wp8) fenêtre comme une plate-forme distincte, voir [Guide de plateforme Windows Phone 8](../wp8/index.html) pour plus de détails.
 
 Cordova WebViews fonctionnant sous Windows s'appuient sur Internet Explorer 10 (Windows 8.0) et Internet Explorer 11 (8.1 de Windows et Windows Phone 8.1) comme leur moteur de rendu, donc en pratique vous pouvez utiliser le débogueur puissant de IE pour tester n'importe quel contenu web qui n'est pas invoquer Cordova APIs. Le Blog des développeurs Windows Phone fournit des [indications utiles][1] sur comment soutien IE avec les navigateurs WebKit comparables.
 

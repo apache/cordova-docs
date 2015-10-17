@@ -45,7 +45,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
@@ -61,7 +61,7 @@ Quick Example
         'Done'                  // buttonName
     );
         
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

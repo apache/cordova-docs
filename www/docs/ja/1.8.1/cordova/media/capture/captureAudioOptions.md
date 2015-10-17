@@ -32,7 +32,7 @@ CaptureAudioOptions
 - __duration:__ オーディオクリップの最大録音時間を秒で表します。
 - __mode:__ 選択されたオーディオのモードを表します。値は `capture.supportedAudioModes` の中の一つである必要があります。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // キャプチャー操作時のオーディオクリップの最大値を3に制限、最大録音時間を10秒に設定

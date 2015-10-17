@@ -23,7 +23,7 @@ title: geolocationOptions
 geolocationOptions
 ==================
 
-位置情報 (`Position`) 取得の設定をカスタマイズするためのパラメーターを表します。
+位置情報 (`[Position](../Position/position.html)`) 取得の設定をカスタマイズするためのパラメーターを表します。
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
@@ -31,7 +31,7 @@ geolocationOptions
 -------
 
 - __enableHighAccuracy:__ より精度の高い位置情報を取得するためのヒントを提供するかどうかを表します。デフォルトでは、デバイスはネットワークベースでの位置情報取得を試みます。プロパティーを `true` と設定することで、衛星位置情報などの精度の高い方法を使用します _(Boolean)_
-- __timeout:__ `geolocation.getCurrentPosition` または `geolocation.watchPosition` 関数が呼び出されたときに、それぞれに対応する `geolocationSuccess` コールバック関数が呼ばれるまでの最大経過時間をミリ秒単位で表します。もし `geolocationSuccess` コールバック関数がこの時間内に呼ばれなかった場合、 `PositionError.TIMEOUT` エラーコードを伴った `geolocationError` コールバック関数が呼び出されます。注意: `geolocation.watchPosition` と一緒に使われる場合、 `geolocationError` コールバックが毎 `timeout` ミリ秒呼び出される可能性があります _(Number)_
+- __timeout:__ `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` または `[geolocation.watchPosition](../geolocation.watchPosition.html)` 関数が呼び出されたときに、それぞれに対応する `[geolocationSuccess](geolocationSuccess.html)` コールバック関数が呼ばれるまでの最大経過時間をミリ秒単位で表します。もし `[geolocationSuccess](geolocationSuccess.html)` コールバック関数がこの時間内に呼ばれなかった場合、 `[PositionError](../PositionError/positionError.html).TIMEOUT` エラーコードを伴った `[geolocationError](geolocationError.html)` コールバック関数が呼び出されます。注意: `[geolocation.watchPosition](../geolocation.watchPosition.html)` と一緒に使われる場合、 `[geolocationError](geolocationError.html)` コールバックが毎 `timeout` ミリ秒呼び出される可能性があります _(Number)_
 - __maximumAge:__ キャッシュされた位置情報の取得を許容する最大時間をミリ秒単位で表します _(Number)_
 
 Android に関する注意点

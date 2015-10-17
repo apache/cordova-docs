@@ -106,7 +106,7 @@ Wenn wir dieses Pfx-Datei build.json-Datei zur Verfügung stellen, haben wir die
 
 Wo:
 
-  * user: "aktuellen Benutzer" gibt privaten Speicher
+  * user: "aktuellen Benutzer" gibt privaten [Speicher](../../../cordova/storage/storage.html)
   * p: Kennwort für die Pfx-Datei
   * importPfx: Name der Pfx-Datei
 

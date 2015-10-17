@@ -31,7 +31,7 @@ Analizza un numero formattato come una stringa secondo le preferenze dell'utente
 
 Restituisce il numero per il `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `Number` valore.
 
-Se c'è un errore di parsing della stringa di numeri, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PARSING\_ERROR`.
+Se c'è un errore di parsing della stringa di numeri, poi il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 Il `options` parametro è facoltativo e verrà impostato i seguenti valori:
 

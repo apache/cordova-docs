@@ -23,7 +23,7 @@ title: localStorage
 localStorage
 ===============
 
-Provides access to a [W3C Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a [W3C [Storage](../storage.html) interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
     var storage = window.localStorage;
 
@@ -39,7 +39,7 @@ Methods
 Details
 -----------
 
-The `window.localStorage` interface is based on the W3C Web Storage
+The `window.localStorage` interface is based on the W3C Web [Storage](../storage.html)
 interface.  An app can use it to save persistent data using key-value
 pairs.  The `window.sessionStorage` interface works the same way, but
 all data is cleared each time the app closes.
@@ -53,33 +53,33 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Key Quick Example
+Key Quick [Example](../storage.opendatabase.html)
 -------------
 
     var keyName = window.localStorage.key(0);
 
-Set Item Quick Example
+Set Item Quick [Example](../storage.opendatabase.html)
 -------------
 
     window.localStorage.setItem("key", "value");
 
-Get Item Quick Example
+Get Item Quick [Example](../storage.opendatabase.html)
 -------------
 
         var value = window.localStorage.getItem("key");
         // value is now equal to "value"
 
-Remove Item Quick Example
+Remove Item Quick [Example](../storage.opendatabase.html)
 -------------
 
         window.localStorage.removeItem("key");
 
-Clear Quick Example
+Clear Quick [Example](../storage.opendatabase.html)
 -------------
 
         window.localStorage.clear();
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

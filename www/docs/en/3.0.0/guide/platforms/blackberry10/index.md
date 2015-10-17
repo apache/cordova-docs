@@ -25,14 +25,14 @@ title: BlackBerry 10 Platform Guide
 This guide shows how to set up your development environment to build
 and deploy Cordova apps for BlackBerry 10 devices.  For previous
 versions of BlackBerry, you need to use a different set of
-command-line tools, described in BlackBerry Platform Guide.
+command-line tools, described in [BlackBerry Platform Guide](../blackberry/index.html).
 
 ## Requirements
 
 The development environment is available on Windows, Mac and Linux.
 
 Developers should use the `cordova` utility in conjunction with the
-BlackBerry Native SDK.  See The Command-line Interface for information
+BlackBerry Native SDK.  See [The Command-line Interface](../../cli/index.html) for information
 how to install `cordova`, add projects, then build and deploy for each
 platform.
 

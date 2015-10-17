@@ -38,7 +38,7 @@ notification.vibrate
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 2.5秒間バイブレーションさせます

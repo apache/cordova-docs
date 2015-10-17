@@ -23,16 +23,16 @@ title: contacts.create
 contacts.create
 ===============
 
-Returns a new Contact object.
+Returns a new [Contact](Contact/contact.html) object.
 
     var contact = navigator.contacts.create(properties);
 
 Description
 -----------
 
-contacts.create is a synchronous function that returns a new `Contact` object.
+contacts.create is a synchronous function that returns a new `[Contact](Contact/contact.html)` object.
 
-This method does not persist the Contact object to the device contacts database.  To persist the Contact object to the device, invoke the `Contact.save` method.
+This method does not persist the [Contact](Contact/contact.html) object to the device contacts database.  To persist the [Contact](Contact/contact.html) object to the device, invoke the `[Contact](Contact/contact.html).save` method.
 
 Supported Platforms
 -------------------
@@ -42,12 +42,12 @@ Supported Platforms
 - iOS
 - Bada 1.2 & 2.0
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -23,7 +23,7 @@ title: Upgrading Cordova BlackBerry
 Upgrading Cordova BlackBerry
 ============================
 
-This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
+This document is for people who need to upgrade their Cordova versions from an older [version](../../../phonegap/storage/parameters/version.html) to a current [version](../../../phonegap/storage/parameters/version.html) of Cordova.
 1.4.1
 Note: 1.5.0 represents a semi-major change to the PhoneGap/Cordova project! All references to PhoneGap have been changed to Cordova.
 

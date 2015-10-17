@@ -32,14 +32,14 @@ startcallbutton
 
 もしデフォルトの検索ボタンの挙動を上書きしたい場合は、 'startcallbutton' イベントにイベントリスナーを登録することができます。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
 
 - BlackBerry WebWorks (OS 5.0 以上)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("startcallbutton", onStartCallKeyDown, false);

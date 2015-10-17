@@ -482,11 +482,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          не FileTransfer
+          не <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          не FileTransfer
+          не <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -694,11 +694,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          только localStorage
+          только <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          только localStorage
+          только <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a>
         </td>
         
         <td data-col="win8"       class="y">

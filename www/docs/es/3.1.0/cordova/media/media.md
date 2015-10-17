@@ -51,25 +51,25 @@ Las siguientes constantes son reportadas como el único parámetro para la devol
 
 ## Métodos
 
-*   `media.getCurrentPosition`: Devuelve la posición actual dentro de un archivo de audio.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: Devuelve la posición actual dentro de un archivo de audio.
 
-*   `media.getDuration`: Devuelve la duración de un archivo de audio.
+*   `[media.getDuration](media.getDuration.html)`: Devuelve la duración de un archivo de audio.
 
-*   `media.play`: Iniciar o reanudar la reproducción de un archivo de audio.
+*   `[media.play](media.play.html)`: Iniciar o reanudar la reproducción de un archivo de audio.
 
-*   `media.pause`: Pausar la reproducción de un archivo de audio.
+*   `[media.pause](media.pause.html)`: Pausar la reproducción de un archivo de audio.
 
-*   `media.release`: Libera recursos de audio del sistema operativo subyacente.
+*   `[media.release](media.release.html)`: Libera recursos de audio del sistema operativo subyacente.
 
-*   `media.seekTo`: Mueve la posición dentro del archivo de audio.
+*   `[media.seekTo](media.seekTo.html)`: Mueve la posición dentro del archivo de audio.
 
-*   `media.setVolume`: Ajusta el volumen para la reproducción de audio.
+*   `[media.setVolume](media.setVolume.html)`: Ajusta el volumen para la reproducción de audio.
 
-*   `media.startRecord`: Iniciar la grabación de un archivo de audio.
+*   `[media.startRecord](media.startRecord.html)`: Iniciar la grabación de un archivo de audio.
 
-*   `media.stopRecord`: Deja de grabar un archivo de audio.
+*   `[media.stopRecord](media.stopRecord.html)`: Deja de grabar un archivo de audio.
 
-*   `media.stop`: Para reproducir un archivo de audio.
+*   `[media.stop](media.stop.html)`: Para reproducir un archivo de audio.
 
 ## Parámetros adicionales ReadOnly
 
@@ -144,7 +144,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ### Windows Phone rarezas
 
-*   Archivo sólo multimedia puede reproducir en un momento.
+*   [Archivo](../file/fileobj/fileobj.html) sólo multimedia puede reproducir en un momento.
 
 *   Hay restricciones estrictas sobre cómo interactúa la aplicación con otros medios. Consulte la [documentación de Microsoft para obtener más detalles][2].
 

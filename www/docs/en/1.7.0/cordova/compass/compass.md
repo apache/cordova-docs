@@ -28,16 +28,16 @@ Compass
 Methods
 -------
 
-- compass.getCurrentHeading
-- compass.watchHeading
-- compass.clearWatch
-- compass.watchHeadingFilter 	(obsolete)
+- [compass.getCurrentHeading](compass.getCurrentHeading.html)
+- [compass.watchHeading](compass.watchHeading.html)
+- [compass.clearWatch](compass.clearWatch.html)
+- [compass.watchHeadingFilter](compass.watchHeadingFilter.html) 	(obsolete)
 - compass.clearWatchFilter		(obsolete)
 
 Arguments
 ---------
 
-- compassSuccess
-- compassError
-- compassOptions
-- compassHeading
+- [compassSuccess](parameters/compassSuccess.html)
+- [compassError](parameters/compassError.html)
+- [compassOptions](parameters/compassOptions.html)
+- [compassHeading](parameters/compassHeading.html)

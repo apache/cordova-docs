@@ -31,7 +31,7 @@ title: globalization.getLocaleName
 
 Возвращает строку идентификатора языкового стандарта для `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `String` значение.
 
-Если есть ошибка получения языкового стандарта, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
+Если есть ошибка получения языкового стандарта, то `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Поддерживаемые платформы
 

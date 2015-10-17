@@ -23,7 +23,7 @@ title: MediaError
 MediaError
 ==========
 
-A `MediaError` object is returned to the `mediaError` callback function when an error occurs.
+A `MediaError` object is returned to the `[mediaError](../Parameters/mediaError.html)` callback function when an error occurs.
 
 Properties
 ----------
@@ -43,5 +43,5 @@ Constants
 Description
 -----------
 
-The `MediaError` object is returned to the user through the `mediaError` callback function when an error occurs.
+The `MediaError` object is returned to the user through the `[mediaError](../Parameters/mediaError.html)` callback function when an error occurs.
 

@@ -96,7 +96,7 @@ BlackBerry et Windows Phone à la fois spécifient une image à l'écran splash 
         windows-phone/screen-portrait.jpg
     
 
-Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les Guides de la plate-forme.
+Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les [Guides de la plate-forme](../guide/platforms/index.html).
 
 ## Écrans de démarrage pour la plateforme Android
 
@@ -117,7 +117,7 @@ Dans `config.xml` , ajoutez les préférences suivantes :
 
 La première ligne définit l'image à afficher comme écran de démarrage. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne.
 
-La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
+La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `[deviceready](../cordova/events/events.deviceready.html)` événement, appelez le `navigator.splashscreen.hide()` méthode.
 
 ## Écrans de démarrage pour l'iOS plate-forme
 

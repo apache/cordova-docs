@@ -22,19 +22,19 @@ title: Acelerómetro
 
 # Acelerómetro
 
-> Captura de movimiento del dispositivo en la dirección *x*, *y* y *z*.
+> [Captura](../media/capture/capture.html) de movimiento del dispositivo en la dirección *x*, *y* y *z*.
 
 ## Métodos
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## Argumentos
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## Objetos (sólo lectura)
 

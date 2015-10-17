@@ -23,7 +23,7 @@ title: CompassError
 CompassError
 ==========
 
-A `CompassError` object is returned to the `compassError` callback function when an error occurs.
+A `CompassError` object is returned to the `[compassError](../parameters/compassError.html)` callback function when an error occurs.
 
 Properties
 ----------
@@ -38,6 +38,6 @@ Constants
 Description
 -----------
 
-The `CompassError` object is returned to the user through the `compassError` callback function when an error occurs.
+The `CompassError` object is returned to the user through the `[compassError](../parameters/compassError.html)` callback function when an error occurs.
 
 

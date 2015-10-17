@@ -31,7 +31,7 @@ L'evento viene generato quando un'applicazione viene recuperata dallo sfondo.
 
 Il `resume` evento viene generato quando la piattaforma nativa tira l'applicazione fuori dallo sfondo.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 
@@ -87,7 +87,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## iOS stranezze
 
-Eventuali funzioni interattive, chiamate da un `pause` gestore eventi eseguire più tardi quando l'app riprende, come segnalato dal `resume` evento. Questi includono avvisi, `console.log()` e tutte le chiamate da plugin o le API, Cordova che passano attraverso l'Objective-C.
+Eventuali funzioni interattive, chiamate da un `[pause](events.pause.html)` gestore eventi eseguire più tardi quando l'app riprende, come segnalato dal `resume` evento. Questi includono avvisi, `console.log()` e tutte le chiamate da plugin o le API, Cordova che passano attraverso l'Objective-C.
 
 *   evento **attivo**
     

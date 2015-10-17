@@ -31,7 +31,7 @@ L'evento viene generato quando l'utente preme il pulsante di chiamata start.
 
 Se è necessario ignorare il comportamento predefinito inizio chiamata è possibile registrare un listener di eventi per il `startcallbutton` evento.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 

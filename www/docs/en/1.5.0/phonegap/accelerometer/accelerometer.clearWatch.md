@@ -23,11 +23,11 @@ title: accelerometer.clearWatch
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+Stop watching the `[Acceleration](acceleration/acceleration.html)` referenced by the watch ID parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: The ID returned by `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 Supported Platforms
 -------------------
@@ -36,7 +36,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
@@ -45,7 +45,7 @@ Quick Example
 
     navigator.accelerometer.clearWatch(watchID);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

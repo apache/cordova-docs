@@ -23,7 +23,7 @@ title: CameraPopoverHandle
 CameraPopoverHandle
 ===================
 
-A handle to the popover dialog created by `camera.getPicture`.
+A handle to the popover dialog created by `[camera.getPicture](../camera.getPicture.html)`.
 
 Methods
 -------
@@ -41,15 +41,15 @@ setPosition
 Set the position of the popover.
 
 __Parameters:__
-- `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
+- `cameraPopoverOptions`: the `[CameraPopoverOptions](CameraPopoverOptions.html)` that specify the new position
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
      var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
      function onSuccess(imageData) {

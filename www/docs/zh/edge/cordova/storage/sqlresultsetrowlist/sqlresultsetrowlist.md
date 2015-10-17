@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-屬性之一的 `SQLResultSet` 從 SQL 查詢中包含的行返回。
+屬性之一的 `[SQLResultSet](../sqlresultset/sqlresultset.html)` 從 SQL 查詢中包含的行返回。
 
 ## 屬性
 

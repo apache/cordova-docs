@@ -126,7 +126,7 @@ Die `onCreateObject` Funktion nimmt zwei Parameter. Die erste ist der Name der a
 
 Das Plugin muss die folgenden JavaScript-Dateien enthalten:
 
-*   `client.js`: Dies wird als die Client-Seite und enthält die API eine Cordova-Anwendung zur Verfügung gestellt. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den Veranstaltungen, die die Rückrufe auslösen herstellt.
+*   `client.js`: Dies wird als die Client-Seite und enthält die API eine Cordova-Anwendung zur Verfügung gestellt. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den [Veranstaltungen](../../../cordova/events/events.html), die die Rückrufe auslösen herstellt.
 
 *   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` Datei Aufrufe an die API in der `index.js` Datei, die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
 

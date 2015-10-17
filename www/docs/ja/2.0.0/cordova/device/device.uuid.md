@@ -42,7 +42,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android: ランダムな64ビットの数値を文字列として返します

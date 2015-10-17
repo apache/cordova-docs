@@ -31,4 +31,4 @@ Des Benutzers Callback-Funktion, die ausgeführt wird, wenn ein Fehler für Geol
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(PositionError)*
+*   **Fehler**: der Fehler, die durch das [Gerät](../../device/device.html) zurückgegeben. *(PositionError)*

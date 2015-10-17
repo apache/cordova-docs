@@ -39,7 +39,7 @@ Video Tutorials:
 
 Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista
 
-Necessary for Installing on Device and Submitting to Market Place:
+Necessary for Installing on [Device](../../../cordova/device/device.html) and Submitting to Market Place:
 
 - Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
 
@@ -103,7 +103,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
+- In Visual Studio, select 'Windows Phone [Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
     ![](img/guide/platforms/wp7/wpd.png)

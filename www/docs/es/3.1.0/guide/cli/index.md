@@ -112,7 +112,7 @@ Si lo desea, puede utilizar un SDK en este momento para abrir el proyecto que ha
 
 ## Construir la aplicación
 
-De forma predeterminada, el `cordova create` script genera una aplicación basada en web esquelética cuya portada es el proyecto `www/index.html` archivo. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `deviceready` controlador de eventos, que se hace referencia por defecto de `www/js/index.js` . <!-- XREF
+De forma predeterminada, el `cordova create` script genera una aplicación basada en web esquelética cuya portada es el proyecto `www/index.html` archivo. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `[deviceready](../../cordova/events/events.deviceready.html)` controlador de eventos, que se hace referencia por defecto de `www/js/index.js` . <!-- XREF
 (See the Application Development Guide for details.)
 XREF -->
 
@@ -173,20 +173,20 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
         $ cordova plugin add org.apache.cordova.device
         
 
-*   Conexión de red y eventos de batería:
+*   [Conexión](../../cordova/connection/connection.html) de red y eventos de batería:
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
         
 
-*   Acelerómetro, brújula y geolocalización:
+*   [Acelerómetro](../../cordova/accelerometer/accelerometer.html), brújula y geolocalización:
     
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
         
 
-*   Cámara, reproducción multimedia y captura:
+*   [Cámara](../../cordova/camera/camera.html), reproducción multimedia y captura:
     
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
@@ -199,23 +199,23 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   Notificación mediante vibración o cuadro de diálogo:
+*   [Notificación](../../cordova/notification/notification.html) mediante vibración o cuadro de diálogo:
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   Contactos:
+*   [Contactos](../../cordova/contacts/contacts.html):
     
         $ cordova plugin add org.apache.cordova.contacts
         
 
-*   Globalización:
+*   [Globalización](../../cordova/globalization/globalization.html):
     
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   SplashScreen:
+*   [SplashScreen](../../cordova/splashscreen/splashscreen.html):
     
         $ cordova plugin add org.apache.cordova.splashscreen
         
@@ -264,7 +264,7 @@ En cambio, el nivel superior `merges` Directorio ofrece un lugar para especifica
 
 Al reconstruir el proyecto, la versión para Android cuenta con el tamaño de fuente personalizada, mientras que otros permanecen inalterados.
 
-También se puede utilizar `merges` para agregar archivos no presenten en el original `www` Directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, almacenado en `merges/ios/img/back_button.png` , mientras que la versión de Android puede capturar en su lugar `backbutton` eventos desde el correspondiente botón de hardware.
+También se puede utilizar `merges` para agregar archivos no presenten en el original `www` Directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, almacenado en `merges/ios/img/back_button.png` , mientras que la versión de Android puede capturar en su lugar `[backbutton](../../cordova/events/events.backbutton.html)` eventos desde el correspondiente botón de hardware.
 
 ## Actualización de Cordova
 

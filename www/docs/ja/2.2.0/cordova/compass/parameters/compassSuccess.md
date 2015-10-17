@@ -23,7 +23,7 @@ title: compassSuccess
 compassSuccess
 ==============
 
-コンパス方位の取得に成功したときに、 compassHeading オブジェクトを用いてコンパス方位情報を提供するコールバック関数です。
+コンパス方位の取得に成功したときに、 [compassHeading](compassHeading.html) オブジェクトを用いてコンパス方位情報を提供するコールバック関数です。
 
     function(heading) {
         // 任意のコード
@@ -35,7 +35,7 @@ compassSuccess
 
 - __heading:__ 方位情報。 _(compassHeading)_
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     function onSuccess(heading) {

@@ -112,7 +112,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 ## アプリをビルドします。
 
-既定で、 `cordova create` スクリプト生成骨格の web ベースのアプリケーションのホーム ページは、プロジェクトの `www/index.html` ファイル。 しかしが、初期化の一部として指定する必要がありますこのアプリケーションの編集、 `deviceready` から既定で参照されるイベント ハンドラーは、 `www/js/index.js` 。 <!-- XREF
+既定で、 `cordova create` スクリプト生成骨格の web ベースのアプリケーションのホーム ページは、プロジェクトの `www/index.html` ファイル。 しかしが、初期化の一部として指定する必要がありますこのアプリケーションの編集、 `[deviceready](../../cordova/events/events.deviceready.html)` から既定で参照されるイベント ハンドラーは、 `www/js/index.js` 。 <!-- XREF
 (See the Application Development Guide for details.)
 XREF -->
 
@@ -168,7 +168,7 @@ XREF -->
 
 `cordova plugin add`コマンドは、プラグインのコードのリポジトリを指定する必要があります。追加可能性があります機能の例を示します。
 
-*   基本的なデバイス情報 (デバイス API):
+*   基本的なデバイス情報 ([デバイス](../../cordova/device/device.html) API):
     
         $ cordova plugin add org.apache.cordova.device
         
@@ -193,7 +193,7 @@ XREF -->
         $ cordova plugin add org.apache.cordova.media
             
 
-*   デバイスまたはネットワーク (File API) 上のアクセス ファイル:
+*   デバイスまたはネットワーク (File API) 上のアクセス [ファイル](../../cordova/file/fileobj/fileobj.html):
     
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer

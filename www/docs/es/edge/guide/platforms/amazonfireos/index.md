@@ -26,9 +26,9 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Amazon fuego OS configuración
-*   Amazon fuego OS WebViews
-*   Amazon fuego OS Plugins
+*   [Amazon fuego OS configuración](config.html)
+*   [Amazon fuego OS WebViews](webview.html)
+*   [Amazon fuego OS Plugins](plugin.html)
 
 ## Introducción
 
@@ -43,7 +43,7 @@ Para obtener más información acerca de la Amazonía WebView API, consulte del 
 
 Desarrollando aplicaciones Cordova para Amazon fuego OS requiere la instalación de una variedad de archivos de apoyo, incluyendo todo lo necesario para el desarrollo de Android, así como el Amazonas WebView SDK. Compruebe la lista de abajo para las instalaciones necesarias:
 
-*   La interfaz de linea de comandos
+*   [La interfaz de linea de comandos](../../cli/index.html)
 *   [SDK de Android][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]

@@ -54,7 +54,7 @@ confirmCallback
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 確認ダイアログの表示プロセスの開始

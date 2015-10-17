@@ -28,19 +28,19 @@ Events
 Event Types
 -----------
 
-- deviceready
-- pause
-- resume
-- online
-- offline
-- backbutton
-- batterycritical
-- batterylow
-- batterystatus
-- menubutton
-- searchbutton
-- startcallbutton
-- endcallbutton
-- volumedownbutton
-- volumeupbutton
+- [deviceready](events.deviceready.html)
+- [pause](events.pause.html)
+- [resume](events.resume.html)
+- [online](events.online.html)
+- [offline](events.offline.html)
+- [backbutton](events.backbutton.html)
+- [batterycritical](events.batterycritical.html)
+- [batterylow](events.batterylow.html)
+- [batterystatus](events.batterystatus.html)
+- [menubutton](events.menubutton.html)
+- [searchbutton](events.searchbutton.html)
+- [startcallbutton](events.startcallbutton.html)
+- [endcallbutton](events.endcallbutton.html)
+- [volumedownbutton](events.volumedownbutton.html)
+- [volumeupbutton](events.volumeupbutton.html)
 

@@ -22,4 +22,4 @@ title: compass.clearWatchFilter
 
 # compass.clearWatchFilter
 
-1.6 현재로 더 이상 지원 되지. 참조`compass.clearWatch`.
+1.6 현재로 더 이상 지원 되지. 참조`[compass.clearWatch](compass.clearWatch.html)`.

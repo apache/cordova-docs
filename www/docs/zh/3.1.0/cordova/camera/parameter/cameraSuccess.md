@@ -31,7 +31,7 @@ onSuccess 提供的圖像資料的回呼函數。
 
 ## 參數
 
-*   **把圖像資料**： Base64 編碼的圖像資料，*或*影像檔的 URI，取決於 `cameraOptions` 生效。*（字串）*
+*   **把圖像資料**： Base64 編碼的圖像資料，*或*影像檔的 URI，取決於 `[cameraOptions](cameraOptions.html)` 生效。*（字串）*
 
 ## 示例
 

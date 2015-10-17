@@ -43,8 +43,8 @@ as a parameter. That object contains the following properties:
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.PATTERN\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 The `options` parameter is optional, and default values are:
 
@@ -60,7 +60,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this should display a
@@ -90,7 +90,7 @@ Results:
     decimal: .
     grouping: ,
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

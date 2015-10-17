@@ -183,7 +183,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
 ## Results
 
-  The running HelloWorld app is shown below.  The Device is Ready line should be slowly pulsating.
+  The running HelloWorld app is shown below.  The [Device](../../../cordova/device/device.html) is Ready line should be slowly pulsating.
 
   ![](img/guide/platforms/ios/HelloWorldStandard.png)
 
@@ -296,7 +296,7 @@ references the deprecated invokeString API:
 
 ###Code Your Application
 
-  Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
+  Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova [File](../../../cordova/file/fileobj/fileobj.html) or [Storage](../../../cordova/storage/storage.html) APIs.
 
   You can use many mobile JavaScript frameworks with Cordova  to create the UI and page navigation of your application.  Popular ones include:
 
@@ -308,7 +308,7 @@ references the deprecated invokeString API:
 
   There are many additional considerations to make your application unique.  The sample HelloWorld application is set up to run in all iOS environments, iPhone, iPod, and iPad.  You can design an app for a single device type by modifying the build settings within Xcode.
 
-  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova Project Settings Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
+  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova [Project Settings](../../project-settings/index.html) Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
 
 ## Resources
 
@@ -328,7 +328,7 @@ references the deprecated invokeString API:
 
   - Cordova API documentation is available at [http://docs.cordova.io](http://docs.cordova.io)
   - [PhoneGap google group](https://groups.google.com/forum/?fromgroups=%23!forum/phonegap) to discuss and ask questions about Cordova.  This forum is monitored by Cordova developers as well as users.  When posting please include the platform, device type, Cordova version and as many details as possible about the error or problem.
-  - File Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
+  - [File](../../../cordova/file/fileobj/fileobj.html) Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
 
 ### Credits
 

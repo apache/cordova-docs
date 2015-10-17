@@ -22,7 +22,7 @@ title: InAppBrowser
 
 # InAppBrowser
 
-> The `InAppBrowser` is a web browser view that displays when calling `window.open()`, or when opening a link formed as `<a target="_blank">`.
+> The `InAppBrowser` is a web browser view that displays when calling `[window.open](window.open.html)()`, or when opening a link formed as `<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
@@ -31,7 +31,7 @@ and can't access Cordova APIs.
 
 ## Description
 
-The object returned from a call to `window.open`.
+The object returned from a call to `[window.open](window.open.html)`.
 
 ## Methods
 
@@ -79,7 +79,7 @@ platform-specific configuration settings described below:
         <feature name="InAppBrowser" />
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.
 
 # addEventListener
 

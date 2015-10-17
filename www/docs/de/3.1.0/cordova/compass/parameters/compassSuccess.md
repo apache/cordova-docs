@@ -22,7 +22,7 @@ title: compassSuccess
 
 # compassSuccess
 
-OnSuccess-Callback-Funktion, die die Kompassrichtung Informationen über ein `compassHeading` Objekt.
+OnSuccess-Callback-Funktion, die die Kompassrichtung Informationen über ein `[compassHeading](compassHeading.html)` Objekt.
 
     function(heading) {
         // Do something

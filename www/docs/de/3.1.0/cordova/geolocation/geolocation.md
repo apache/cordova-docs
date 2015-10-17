@@ -24,31 +24,31 @@ title: Geolocation
 
 > Das `geolocation` Objekt bietet Zugriff auf Positionsdaten auf der Grundlage des Geräts GPS-Sensor oder abgeleitet von Netzwerk-Signale.
 
-`Geolocation`enthält Informationen über das Gerät Speicherort, z. B. breiten- und Längengrad. Gemeinsame Quellen von Standortinformationen sind Global Positioning System (GPS) und Lage von Netzwerk-Signale wie IP-Adresse, RFID, WLAN und Bluetooth MAC-Adressen und GSM/CDMA Zelle IDs abgeleitet. Es gibt keine Garantie, dass die API des Geräts tatsächliche Position zurückgibt.
+`Geolocation`enthält Informationen über das [Gerät](../device/device.html) Speicherort, z. B. breiten- und Längengrad. Gemeinsame Quellen von Standortinformationen sind Global Positioning System (GPS) und Lage von Netzwerk-Signale wie IP-Adresse, RFID, WLAN und Bluetooth MAC-Adressen und GSM/CDMA Zelle IDs abgeleitet. Es gibt keine Garantie, dass die API des Geräts tatsächliche [Position](Position/position.html) zurückgibt.
 
 Diese API basiert auf der [W3C Geolocation API-Spezifikation][1], und nur auf Geräten, die nicht bereits eine Implementierung bieten führt.
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Geolocation-Daten wirft wichtige Privatsphäre. Wie die app benutzt Geolocation-Daten, Ihre app-Datenschutzrichtlinien zu diskutieren, ob es mit allen anderen Parteien und das Niveau der Genauigkeit der Daten (z. B. grob, fein, Postleitzahl, etc..) freigegeben ist. Geolocation-Daten gilt allgemein als empfindlich, weil es, eine Person Aufenthaltsort erkennen lässt und, wenn gespeichert, die Geschichte von seinen Reisen. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung, die Zugriff auf Geolocation-Daten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Geolocation-Daten wirft wichtige Privatsphäre. Wie die app benutzt Geolocation-Daten, Ihre app-Datenschutzrichtlinien zu diskutieren, ob es mit allen anderen Parteien und das Niveau der Genauigkeit der Daten (z. B. grob, fein, Postleitzahl, etc..) freigegeben ist. Geolocation-Daten gilt allgemein als empfindlich, weil es, eine Person Aufenthaltsort erkennen lässt und, wenn gespeichert, die Geschichte von seinen Reisen. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung, die Zugriff auf Geolocation-Daten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese [Benachrichtigung](../notification/notification.html) sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Weitere Informationen finden Sie in der [Datenschutz-Guide](../../guide/appdev/privacy/index.html).
 
 ## Methoden
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+*   [geolocation.watchPosition](geolocation.watchPosition.html)
+*   [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## Argumente
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   [geolocationSuccess](parameters/geolocationSuccess.html)
+*   [geolocationError](parameters/geolocationError.html)
+*   [geolocationOptions](parameters/geolocation.options.html)
 
 ## Objekte (schreibgeschützt)
 
 *   Stellung
 *   PositionError
-*   Koordinaten
+*   [Koordinaten](Coordinates/coordinates.html)
 
 ## Zugriff auf die Funktion
 
@@ -106,4 +106,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

@@ -406,7 +406,7 @@ The `config-file` element only allows you to append new children to an
 XML document tree. The children are XML literals to be inserted in the
 target document.
 
-Example for XML:
+[Example](../cordova/splashscreen/splashscreen.show.html) for XML:
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
         <activity android:name="com.foo.Foo" android:label="@string/app_name">
@@ -415,7 +415,7 @@ Example for XML:
         </activity>
     </config-file>
 
-Example for `plist`:
+[Example](../cordova/splashscreen/splashscreen.show.html) for `plist`:
 
     <config-file target="*-Info.plist" parent="CFBundleURLTypes">
         <array>
@@ -461,7 +461,7 @@ It supports the following attributes:
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
 below. Use the `<config-file>` tag for newer versions of Cordova.
 
-Example:
+[Example](../cordova/splashscreen/splashscreen.show.html):
 
     <config-file target="config.xml" parent="/widget/plugins">
         <feature name="ChildBrowser">

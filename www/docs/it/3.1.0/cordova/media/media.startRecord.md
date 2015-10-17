@@ -142,7 +142,7 @@ Il `media.startRecord` metodo viene eseguita in modo sincrono, inizia una regist
 
 *   iOS solo i record per i file di tipo *WAV* e restituisce un errore se il file di nome estensione è non corretto.
 
-*   Se non è specificato un percorso completo, la registrazione viene inserita nell'applicazione `documents/tmp` directory. Questo si può accedere tramite il `File` API utilizzando `LocalFileSystem.TEMPORARY` . Deve esistere alcuna sottodirectory specificate a tempo di record.
+*   Se non è specificato un percorso completo, la registrazione viene inserita nell'applicazione `documents/tmp` directory. Questo si può accedere tramite il `[File](../file/fileobj/fileobj.html)` API utilizzando `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` . Deve esistere alcuna sottodirectory specificate a tempo di record.
 
 *   I file possono essere registrati e giocati indietro usando i documenti URI:
     

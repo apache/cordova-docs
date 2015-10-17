@@ -23,7 +23,7 @@ title: SQLResultSet
 SQLResultSet
 =======
 
-When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
+When the executeSql method of a [SQLTransaction](../sqltransaction/sqltransaction.html) is called it will invoke it's callback with a SQLResultSet.
 
 Properties
 -------
@@ -35,7 +35,7 @@ Properties
 Details
 -------
 
-When you call the SQLTransaction executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When you call the [SQLTransaction](../sqltransaction/sqltransaction.html) executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type [SQLResultSetList](../sqlresultsetlist/sqlresultsetlist.html) and it contains the data returned from a SQL select statement.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - iPhone
 - webOS
 
-Execute SQL Quick Example
+Execute SQL Quick [Example](../storage.opendatabase.html)
 ------------------
 
 	function queryDB(tx) {
@@ -67,10 +67,10 @@ Execute SQL Quick Example
 		alert("Error processing SQL: "+err.code);
 	}
 	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+	var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -122,14 +122,14 @@ Full Example
 		// Transaction success callback
 		//
 		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 			db.transaction(queryDB, errorCB);
 		}
 
 		// Cordova is ready
 		//
 		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
 	

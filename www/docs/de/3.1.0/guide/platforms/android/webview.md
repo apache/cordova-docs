@@ -38,7 +38,7 @@ Wenn Sie mit Android Anwendungsentwicklung nicht vertraut sind, lesen Sie bitte 
 
 2.  Kopieren Sie das Cordova-Glas in Ihrem Android Projekts `/libs` Verzeichnis.
 
-3.  Bearbeiten der Anwendung `main.xml` Datei (unter `/res/xml` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
+3.  Bearbeiten der Anwendung `main.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) (unter `/res/xml` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -61,7 +61,7 @@ Wenn Sie mit Android Anwendungsentwicklung nicht vertraut sind, lesen Sie bitte 
             }
         
 
-Wenn Sie die Kamera verwenden, sollten Sie dies auch implementieren:
+Wenn Sie die [Kamera](../../../cordova/camera/camera.html) verwenden, sollten Sie dies auch implementieren:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {

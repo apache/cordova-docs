@@ -22,7 +22,7 @@ title: iOS 플러그인
 
 # iOS 플러그인
 
-이 섹션에서는 iOS 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
+이 섹션에서는 iOS 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 [개요](../../overview/index.html) 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
 
 IOS 플러그인은 확장 하는 오브 젝 티브-C 클래스로 구현 되는 `CDVPlugin` 클래스. Javascript의 `exec` 메서드의 `service` 매개 변수-C 클래스, 각 플러그인 클래스에 지도를 등록 해야 합니다에 `<feature>` 명명 된 응용 프로그램 디렉터리에 태그 `config.xml` 파일.
 
@@ -148,7 +148,7 @@ IOS 플러그인은 확장 하는 오브 젝 티브-C 클래스로 구현 되는
 
 ## iOS 통합
 
-`CDVPlugin`클래스 기능 플러그인 재정의할 수 있는 다른 방법. 예, 캡처할 수는 `pause` , `resume` , 응용 프로그램 종료 및 `handleOpenURL` 이벤트. 지도 대 한 [CDVPlugin.h][1] 및 [CDVPlugin.m][2] 클래스를 참조 하십시오.
+`CDVPlugin`클래스 기능 플러그인 재정의할 수 있는 다른 방법. 예, 캡처할 수는 `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , 응용 프로그램 종료 및 `handleOpenURL` [이벤트](../../../cordova/events/events.html). 지도 대 한 [CDVPlugin.h][1] 및 [CDVPlugin.m][2] 클래스를 참조 하십시오.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

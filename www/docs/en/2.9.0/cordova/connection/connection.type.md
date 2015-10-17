@@ -41,7 +41,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
@@ -62,7 +62,7 @@ Quick Example
 
     checkConnection();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -109,7 +109,7 @@ Full Example
 API Change
 ----------
 
-Until Cordova 2.3.0, the `Connection` object was accessed via
+Until Cordova 2.3.0, the `[Connection](connection.html)` object was accessed via
 `navigator.network.connection`, after which it was changed to
 `navigator.connection` to match the W3C specification.  It's still
 available at its original location, but is deprecated and will
@@ -124,7 +124,7 @@ iOS Quirks
 Windows Phone Quirks
 --------------------
 
-- When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- When running in the emulator, always detects `navigator.connection.type` as `[Connection](connection.html).UNKNOWN`.
 - Windows Phone cannot detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 

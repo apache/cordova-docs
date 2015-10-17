@@ -33,7 +33,7 @@ title: geolocation.clearWatch
 
 ## 説明
 
-`geolocation.clearWatch`をオフにして、デバイスの場所の変更を見て停止します、 `geolocation.watchPosition` によって参照されます。`watchID`.
+`geolocation.clearWatch`をオフにして、デバイスの場所の変更を見て停止します、 `[geolocation.watchPosition](geolocation.watchPosition.html)` によって参照されます。`watchID`.
 
 ## サポートされているプラットフォーム
 

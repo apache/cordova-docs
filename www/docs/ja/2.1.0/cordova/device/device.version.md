@@ -38,7 +38,7 @@ OS のバージョンを取得します。
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android:     Froyo の場合は "2.2" を返す

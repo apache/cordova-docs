@@ -34,7 +34,7 @@ Details
 -------
 
 The `Metadata` object represents information about the state of a file
-or directory.  Calling a `DirectoryEntry` or `FileEntry` object's
+or directory.  Calling a `[DirectoryEntry](../directoryentry/directoryentry.html)` or `[FileEntry](../fileentry/fileentry.html)` object's
 `getMetadata()` method results in a `Metadata` instance.
 
 Supported Platforms
@@ -46,7 +46,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function win(metadata) {

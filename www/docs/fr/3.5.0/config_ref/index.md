@@ -44,7 +44,7 @@ Cette section décrit en détail les options de configuration globale et multi-p
 
 *   Configuration iOS
 *   Configuration Android
-*   Configuration de blackBerry 10
+*   [Configuration de blackBerry](../guide/platforms/blackberry/config.html) 10
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.
 

@@ -41,7 +41,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Record audio
@@ -64,7 +64,7 @@ Quick Example
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -146,7 +146,7 @@ BlackBerry WebWorks Quirks
 iOS Quirks
 ----------
 
-- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+- The file to record to must already exist and should be of type .wav. The [File](../file/fileobj/fileobj.html) API's can be used to create the file.
 
 Tizen Quirks
 ----------

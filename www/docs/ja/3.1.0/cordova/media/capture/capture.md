@@ -24,26 +24,26 @@ title: キャプチャ
 
 > デバイスのオーディオ、イメージ、およびビデオ キャプチャ機能へのアクセスを提供します。
 
-**重要なプライバシーの注意：**画像、ビデオ、またはデバイスのカメラやマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、カメラまたはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリ (デバイス オペレーティング システムしない場合そう既に) カメラまたはマイクにアクセスする前に、ジャスト イン タイム通知を提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の通知を提供して、カメラまたはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関するガイドを参照してください。
+**重要なプライバシーの注意：**画像、ビデオ、またはデバイスのカメラやマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、カメラまたはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリ ([デバイス](../../device/device.html) オペレーティング システムしない場合そう既に) カメラまたはマイクにアクセスする前に、ジャスト イン タイム通知を提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の通知を提供して、カメラまたはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## オブジェクト
 
 *   キャプチャ
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   メディアファイル
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [メディアファイル](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## メソッド
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData](MediaFile.getFormatData.html)
 
 ## スコープ
 
@@ -63,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## メソッド
 
-*   `capture.captureAudio`: オーディオ クリップを記録するデバイスのオーディオ録音アプリケーションを起動します。
+*   `[capture.captureAudio](captureAudio.html)`: オーディオ クリップを記録するデバイスのオーディオ録音アプリケーションを起動します。
 
-*   `capture.captureImage`: 写真を撮るため、デバイスのカメラ アプリケーションを起動します。
+*   `[capture.captureImage](captureImage.html)`: 写真を撮るため、デバイスのカメラ アプリケーションを起動します。
 
-*   `capture.captureVideo`: ビデオを記録するためのデバイスのビデオ レコーダー アプリケーションを起動します。
+*   `[capture.captureVideo](captureVideo.html)`: ビデオを記録するためのデバイスのビデオ レコーダー アプリケーションを起動します。
 
 ## サポートされているプラットフォーム
 

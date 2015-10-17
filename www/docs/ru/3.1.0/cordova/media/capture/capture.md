@@ -29,21 +29,21 @@ title: Захват
 ## Объекты
 
 *   Захват
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [MediaFile](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## Методы
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 ## Сфера
 
@@ -63,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Методы
 
-*   `capture.captureAudio`: Запуск приложения устройства записи звука для записи аудио клипы.
+*   `[capture.captureAudio](captureAudio.html)`: Запуск приложения устройства записи звука для записи аудио клипы.
 
-*   `capture.captureImage`: Запуск приложения камеры устройства принимать фотографии.
+*   `[capture.captureImage](captureImage.html)`: Запуск приложения камеры устройства принимать фотографии.
 
-*   `capture.captureVideo`: Запуск приложения видеомагнитофон устройства для записи видео.
+*   `[capture.captureVideo](captureVideo.html)`: Запуск приложения видеомагнитофон устройства для записи видео.
 
 ## Поддерживаемые платформы
 

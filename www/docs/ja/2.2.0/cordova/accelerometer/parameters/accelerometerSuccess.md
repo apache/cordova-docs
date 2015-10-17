@@ -34,7 +34,7 @@ accelerometerSuccess
 
 - __acceleration:__ ある瞬間における加速度を表します。 (Acceleration)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     function onSuccess(acceleration) {

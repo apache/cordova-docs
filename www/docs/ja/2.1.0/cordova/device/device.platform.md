@@ -38,7 +38,7 @@ device.platform
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // デバイスによって異なります。例:

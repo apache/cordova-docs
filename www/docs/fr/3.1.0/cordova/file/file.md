@@ -28,18 +28,18 @@ title: File
 
 ## Objets
 
-*   DirectoryEntry
-*   DirectoryReader
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
 *   Fichier
-*   FileEntry
-*   FileError
-*   FileReader
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
 *   Système de fichiers
-*   Transfert de fichiers
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
+*   [Transfert de fichiers](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
 *   Drapeaux
 *   Local
 *   Métadonnées

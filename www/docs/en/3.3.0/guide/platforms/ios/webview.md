@@ -33,7 +33,7 @@ subproject-based Cleaver implementation.
 
 These instructions require at least Cordova 2.3 and Xcode 4.5, along
 with a `config.xml` file from a newly created iOS project. You can use
-the procedure in The Command-Line Interface to create a new project,
+the procedure in [The Command-Line Interface](../../cli/index.html) to create a new project,
 then obtain the `config.xml` file from within the named application's
 subdirectory within `platforms/ios`.
 
@@ -63,7 +63,7 @@ package.
 
 1. Select `CordovaLib.xcodeproj` within the __Project Navigator__.
 
-1. Type the __Option-Command-1__ key combination to show the __File
+1. Type the __Option-Command-1__ key combination to [show](../../../cordova/inappbrowser/inappbrowser.html) the __File
    Inspector__.
 
 1. Choose __Relative to Group__ in the __File Inspector__ for the

@@ -26,12 +26,12 @@ title: Gerät
 
 ## Eigenschaften
 
-*   device.model
+*   [device.model](device.model.html)
 *   Device.Cordova
 *   Device.Platform
 *   Device.UUID
 *   Device.Version
-*   device.name
+*   [device.name](device.name.html)
 
 ## Geltungsbereich von Variablen
 
@@ -100,4 +100,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

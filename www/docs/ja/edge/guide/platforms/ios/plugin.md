@@ -148,7 +148,7 @@ JavaScript 呼び出し火災ネイティブ側に要求するプラグインお
 
 ## iOS の統合
 
-`CDVPlugin`クラスを備えてあなたのプラグインをオーバーライドすることができます他の方法。 たとえば、キャプチャすることができます、 `pause` 、 `resume` 、アプリを終了して `handleOpenURL` イベント。 指導のための[CDVPlugin.h][1]および[CDVPlugin.m][2]のクラスを参照してください。
+`CDVPlugin`クラスを備えてあなたのプラグインをオーバーライドすることができます他の方法。 たとえば、キャプチャすることができます、 `[pause](../../../cordova/events/events.pause.html)` 、 `[resume](../../../cordova/events/events.resume.html)` 、アプリを終了して `handleOpenURL` イベント。 指導のための[CDVPlugin.h][1]および[CDVPlugin.m][2]のクラスを参照してください。
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

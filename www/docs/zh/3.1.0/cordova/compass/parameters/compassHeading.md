@@ -22,7 +22,7 @@ title: compassHeading
 
 # compassHeading
 
-A `CompassHeading` 物件返回到 `compassSuccess` 回呼函數。
+A `CompassHeading` 物件返回到 `[compassSuccess](compassSuccess.html)` 回呼函數。
 
 ## 屬性
 
@@ -36,7 +36,7 @@ A `CompassHeading` 物件返回到 `compassSuccess` 回呼函數。
 
 ## 說明
 
-`CompassHeading`物件返回到 `compassSuccess` 回呼函數。
+`CompassHeading`物件返回到 `[compassSuccess](compassSuccess.html)` 回呼函數。
 
 ## Android 的怪癖
 

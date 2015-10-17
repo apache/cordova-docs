@@ -31,7 +31,7 @@ Questo evento viene generato quando l'utente preme il tasto di fine chiamata.
 
 L'evento esegue l'override del comportamento predefinito fine chiamata.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 

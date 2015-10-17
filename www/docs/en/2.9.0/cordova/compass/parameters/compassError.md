@@ -25,7 +25,7 @@ compassError
 
 onError callback function for compass functions.
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function(CompassError) {

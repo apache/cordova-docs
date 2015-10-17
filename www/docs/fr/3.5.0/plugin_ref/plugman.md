@@ -52,7 +52,7 @@ Vous devez également avoir `git` sur votre `PATH` pour pouvoir installer des pl
 
 ## Créez un projet de Cordova
 
-Avant de pouvoir utiliser Plugman, vous devez créer un projet de Cordova. Vous pouvez le faire avec l'Interface de ligne de commande ou avec les scripts de shell de niveau inférieurs. Instructions pour l'utilisation des scripts shell pour créer votre projet sont situées dans les différents guides « Command-line Tools » figurant sur la page des Guides de la plate-forme.
+Avant de pouvoir utiliser Plugman, vous devez créer un projet de Cordova. Vous pouvez le faire avec l'Interface de ligne de commande ou avec les scripts de shell de niveau inférieurs. Instructions pour l'utilisation des scripts shell pour créer votre projet sont situées dans les différents guides « Command-line Tools » figurant sur la page des [Guides de la plate-forme](../guide/platforms/index.html).
 
 ## Ajout d'un Plugin
 

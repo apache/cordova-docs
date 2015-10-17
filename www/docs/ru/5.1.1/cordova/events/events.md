@@ -26,16 +26,16 @@ title: События
 
 ## Типы событий
 
-*   deviceready
-*   pause
-*   resume
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [pause](events.pause.html)
+*   [resume](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## События добавленные [cordova-plugin-battery-status][1]
 

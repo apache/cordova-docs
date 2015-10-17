@@ -27,7 +27,7 @@ title: compass.clearWatch
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: ID 반환`compass.watchHeading`.
+*   **watchID**: ID 반환`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## 지원 되는 플랫폼
 

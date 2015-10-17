@@ -34,20 +34,20 @@ Esta API se basa en la [Especificación de API de geolocalización W3C][1] y só
 
 ## Métodos
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+*   [geolocation.watchPosition](geolocation.watchPosition.html)
+*   [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## Argumentos
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   [geolocationSuccess](parameters/geolocationSuccess.html)
+*   [geolocationError](parameters/geolocationError.html)
+*   [geolocationOptions](parameters/geolocation.options.html)
 
 ## Objetos (sólo lectura)
 
 *   Position
-*   PositionError
+*   [PositionError](PositionError/positionError.html)
 *   Coordinates
 
 ## Acceso a la función

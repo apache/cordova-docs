@@ -26,9 +26,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   [Amazon Fire OS Konfiguration](config.html)
+*   [Amazon Fire OS Webansichten für](webview.html)
+*   [Amazon Fire OS Plugins](plugin.html)
 
 ## Anforderungen und Unterstützung
 

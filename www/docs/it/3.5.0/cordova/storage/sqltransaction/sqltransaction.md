@@ -30,7 +30,7 @@ Consente l'esecuzione di istruzioni SQL sul database.
 
 ## Dettagli
 
-Chiamare un `Database` metodo di transazione dell'oggetto, passa un `SQLTransaction` oggetto al metodo di callback specificato.
+Chiamare un `[Database](../database/database.html)` metodo di transazione dell'oggetto, passa un `SQLTransaction` oggetto al metodo di callback specificato.
 
 ## Piattaforme supportate
 

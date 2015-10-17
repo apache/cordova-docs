@@ -133,11 +133,11 @@ JavaScript 提供了前置介面，使該外掛程式的或許最重要的部分
 
 一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面，列出了每個平臺的詳細資訊和每個生成回聲外掛程式上面的簡單示例：
 
-*   亞馬遜火 OS 外掛程式
-*   Android 外掛程式
-*   iOS 外掛程式
-*   黑莓 10 外掛程式
-*   Windows Phone 外掛程式
+*   [亞馬遜火 OS 外掛程式](../../platforms/amazonfireos/plugin.html)
+*   [Android 外掛程式](../../platforms/android/plugin.html)
+*   [iOS 外掛程式](../../platforms/ios/plugin.html)
+*   [黑莓 10 外掛程式](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 外掛程式](../../platforms/wp8/plugin.html)
 
 Tizen 平臺不支援外掛程式。
 

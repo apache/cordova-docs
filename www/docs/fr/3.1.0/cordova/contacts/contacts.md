@@ -24,29 +24,29 @@ title: Contacts
 
 > L'objet `contacts` fournit l'accès à la base de données de contacts de l'appareil.
 
-**Remarque importante sur la vie privée :** La collecte et l'utilisation des données de contact soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise les données de contact et si elles sont partagées avec d'autres parties. Les information de contact sont considérés comme sensibles parce qu'elles révèlent les gens avec lesquels une personne communique. Par conséquent, en plus de la politique de confidentialité de votre application, vous devez envisager fortement de fournir une alerte au dernier moment avant que votre application n'accède ou en utilise les données de contact (si le système d'exploitation de l'appareil ne l'a pas déjà fait). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi qu'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés d'applications peuvent exiger de votre application qu'elle fournisse une alerte au dernier moment et obtienne l'autorisation de l'utilisateur avant d'accéder à des données de contact. Une expérience utilisateur claire et facile à comprendre autour de l'utilisation des données de contact permettra d'éviter la confusion des utilisateurs et une utilisation jugée abusive des données de contact. Pour plus d'informations, consultez le Guide de la vie privée.
+**Remarque importante sur la vie privée :** La collecte et l'utilisation des données de contact soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise les données de contact et si elles sont partagées avec d'autres parties. Les information de contact sont considérés comme sensibles parce qu'elles révèlent les gens avec lesquels une personne communique. Par conséquent, en plus de la politique de confidentialité de votre application, vous devez envisager fortement de fournir une alerte au dernier moment avant que votre application n'accède ou en utilise les données de contact (si le système d'exploitation de l'appareil ne l'a pas déjà fait). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi qu'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés d'applications peuvent exiger de votre application qu'elle fournisse une alerte au dernier moment et obtienne l'autorisation de l'utilisateur avant d'accéder à des données de contact. Une expérience utilisateur claire et facile à comprendre autour de l'utilisation des données de contact permettra d'éviter la confusion des utilisateurs et une utilisation jugée abusive des données de contact. Pour plus d'informations, consultez le [Guide de la vie privée](../../guide/appdev/privacy/index.html).
 
 ## Méthodes
 
-*   contacts.Create
+*   [contacts.Create](contacts.create.html)
 *   contacts.Find
 
 ## Arguments
 
-*   contactFields
-*   contactSuccess
-*   contactError
-*   contactFindOptions
+*   [contactFields](parameters/contactFields.html)
+*   [contactSuccess](parameters/contactSuccess.html)
+*   [contactError](parameters/contactError.html)
+*   [contactFindOptions](parameters/contactFindOptions.html)
 
 ## Objets
 
-*   Contact
-*   ContactName
-*   ContactField
-*   ContactAddress
-*   ContactOrganization
-*   ContactFindOptions
-*   ContactError
+*   [Contact](Contact/contact.html)
+*   [ContactName](ContactName/contactname.html)
+*   [ContactField](ContactField/contactfield.html)
+*   [ContactAddress](ContactAddress/contactaddress.html)
+*   [ContactOrganization](ContactOrganization/contactorganization.html)
+*   [ContactFindOptions](ContactFindOptions/contactfindoptions.html)
+*   [ContactError](ContactError/contactError.html)
 
 ## Accéder à la fonctionnalité
 

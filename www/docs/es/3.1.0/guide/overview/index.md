@@ -68,7 +68,7 @@ XREF -->
 
 ## Soporte de plataformas
 
-A continuación muestra el conjunto de herramientas de desarrollo y dispositivo API disponibles para cada plataforma móvil. (Encabezados de columna Mostrar recibos de forma abreviada de la CLI).
+A continuación muestra el conjunto de herramientas de desarrollo y dispositivo API disponibles para cada plataforma móvil. (Encabezados de columna [Mostrar](../../cordova/inappbrowser/inappbrowser.html) recibos de forma abreviada de la CLI).
 
 <!-- START HTML -->
 
@@ -482,11 +482,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="winphone7"  class="p">
-          No File Transfer
+          No <a href="../../cordova/file/filetransfer/filetransfer.html">File Transfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          No File Transfer
+          No <a href="../../cordova/file/filetransfer/filetransfer.html">File Transfer</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -694,11 +694,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="winphone7"  class="p">
-          localStorage sólo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> sólo
         </td>
         
         <td data-col="winphone8"  class="p">
-          localStorage sólo
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> sólo
         </td>
         
         <td data-col="win8"       class="y">

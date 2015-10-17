@@ -29,7 +29,7 @@ title: MediaFile.getFormatData
 
 ## Description
 
-Cette fonction de façon asynchrone tente de récupérer les informations de format pour le fichier multimédia. Si réussie, elle appelle le `MediaFileDataSuccessCB` rappel avec un `MediaFileData` objet. Si la tentative échoue, cette fonction appelle la `MediaFileDataErrorCB` rappel.
+Cette fonction de façon asynchrone tente de récupérer les informations de format pour le fichier multimédia. Si réussie, elle appelle le `MediaFileDataSuccessCB` rappel avec un `[MediaFileData](MediaFileData.html)` objet. Si la tentative échoue, cette fonction appelle la `MediaFileDataErrorCB` rappel.
 
 ## Plates-formes prises en charge
 
@@ -41,12 +41,12 @@ Cette fonction de façon asynchrone tente de récupérer les informations de for
 
 ## BlackBerry WebWorks Quirks
 
-Ne fournit pas une API pour plus d'informations sur les fichiers de médias, alors tous les `MediaFileData` objets reviennent avec les valeurs par défaut.
+Ne fournit pas une API pour plus d'informations sur les fichiers de médias, alors tous les `[MediaFileData](MediaFileData.html)` objets reviennent avec les valeurs par défaut.
 
 ## Quirks Android
 
-L'API pour accéder aux médias file format informations est limité, donc pas tous les `MediaFileData` propriétés sont prises en charge.
+L'API pour accéder aux médias file format informations est limité, donc pas tous les `[MediaFileData](MediaFileData.html)` propriétés sont prises en charge.
 
 ## iOS Quirks
 
-L'API pour accéder aux médias file format informations est limité, donc pas tous les `MediaFileData` propriétés sont prises en charge.
+L'API pour accéder aux médias file format informations est limité, donc pas tous les `[MediaFileData](MediaFileData.html)` propriétés sont prises en charge.

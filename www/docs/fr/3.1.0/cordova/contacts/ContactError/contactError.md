@@ -22,7 +22,7 @@ title: ContactError
 
 # ContactError
 
-Un objet `ContactError` est passé à la fonction de callback `contactError` lorsqu'une erreur survient.
+Un objet `ContactError` est passé à la fonction de callback `[contactError](../parameters/contactError.html)` lorsqu'une erreur survient.
 
 ## Propriétés
 
@@ -40,4 +40,4 @@ Un objet `ContactError` est passé à la fonction de callback `contactError` lor
 
 ## Description
 
-L'objet `ContactError` est retourné à l'utilisateur via la fonction de callback `contactError` lorsqu'une erreur survient.
+L'objet `ContactError` est retourné à l'utilisateur via la fonction de callback `[contactError](../parameters/contactError.html)` lorsqu'une erreur survient.

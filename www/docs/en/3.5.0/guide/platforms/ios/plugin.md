@@ -205,7 +205,7 @@ success callback is called, it passes in the `echo` parameter.
 ## iOS Integration
 
 The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `pause`, `resume`, app
+override.  For example, you can capture the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app
 terminate and `handleOpenURL` events. See the
 [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 and
@@ -245,5 +245,5 @@ can attach Safari 6.0 to the app running within the iOS 6 Simulator.
   forget, an error is logged in the Xcode console.
 
 - Don't forget to add any hosts you connect to in the whitelist, as
-  described in Domain Whitelist Guide. If you forget, an error is
+  described in Domain [Whitelist Guide](../../appdev/whitelist/index.html). If you forget, an error is
   logged in the Xcode console.

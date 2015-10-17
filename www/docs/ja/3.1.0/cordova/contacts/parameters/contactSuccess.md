@@ -22,7 +22,7 @@ title: contactSuccess
 
 # contactSuccess
 
-成功コールバック関数を提供する、 `Contact` 結果の配列は `contacts.find` 操作。
+成功コールバック関数を提供する、 `Contact` 結果の配列は `[contacts.find](../contacts.find.html)` 操作。
 
     function(contacts) {
         // Do something

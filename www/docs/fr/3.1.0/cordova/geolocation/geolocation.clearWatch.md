@@ -33,7 +33,7 @@ Arrêter d'observer les changements de position de l'appareil référencés par 
 
 ## Description
 
-La méthode `geolocation.clearWatch` permet de cesser d'observer les modifications apportées à l'emplacement de l'appareil en désactivant l'observateur associé `geolocation.watchPosition` identifié par le `watchID` donné.
+La méthode `geolocation.clearWatch` permet de cesser d'observer les modifications apportées à l'emplacement de l'appareil en désactivant l'observateur associé `[geolocation.watchPosition](geolocation.watchPosition.html)` identifié par le `watchID` donné.
 
 ## Plates-formes supportées
 

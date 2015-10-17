@@ -22,4 +22,4 @@ title: database_displayname
 
 # database_displayname
 
-Der Anzeigename der Datenbank.
+Der Anzeigename der [Datenbank](../database/database.html).

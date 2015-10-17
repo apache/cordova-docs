@@ -32,9 +32,9 @@ Description
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `compassOptions` object.
+The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `[compassOptions](parameters/compassOptions.html)` object.
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatch` to stop watching the compass.
+The returned watch ID references references the compass watch interval. The watch ID can be used with `[compass.clearWatch](compass.clearWatch.html)` to stop watching the compass.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango ) if available in hardware
 
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(heading) {
@@ -60,7 +60,7 @@ Quick Example
     
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

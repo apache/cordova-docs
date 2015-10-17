@@ -24,12 +24,12 @@ title: Windows Phone 플랫폼 가이드 8
 
 이 가이드에서는 Windows Phone 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 그것은 Windows Phone 8에 초점을 맞추고 있지만 지원 Windows Phone 7 하는 방법에 추가 정보를 제공 합니다.
 
-그것은 생성 하 고 빌드 애플 리 케이 션, Windows Phone 관련 셸 도구를 사용 하는 방법을 보여 줍니다 또는 크로스 플랫폼 코르도바 CLI 논의 명령줄 인터페이스. (이러한 개발 워크플로 비교 개요를 참조 하십시오.) 이 섹션에는 또한 Visual Studio 내에서 수정할 수 있습니다 코르도바 애플 리 케이 션을 여는 방법을 보여 줍니다. 당신은 어떤 접근에 관계 없이 설치 해야 Windows Phone SDK 아래에 설명된대로.
+그것은 생성 하 고 빌드 애플 리 케이 션, Windows Phone 관련 셸 도구를 사용 하는 방법을 보여 줍니다 또는 크로스 플랫폼 코르도바 CLI 논의 [명령줄 인터페이스](../../cli/index.html). (이러한 개발 워크플로 비교 개요를 참조 하십시오.) 이 섹션에는 또한 Visual Studio 내에서 수정할 수 있습니다 코르도바 애플 리 케이 션을 여는 방법을 보여 줍니다. 당신은 어떤 접근에 관계 없이 설치 해야 Windows Phone SDK 아래에 설명된대로.
 
 Windows Phone 플랫폼에 특정 내용은 다음을 참조 하십시오.
 
-*   Windows Phone 8 플러그인
-*   Windows Phone 8 업그레이드
+*   [Windows Phone 8 플러그인](plugin.html)
+*   [Windows Phone 8 업그레이드](upgrade.html)
 
 Windows Phone 8 플랫폼에 대 한 코르도바 WebView 의존 인터넷 익스플로러 10의 렌더링 엔진으로, 실질적인 문제로 서 코르도바 Api를 호출 하지 않는 모든 웹 콘텐츠를 테스트 하려면 IE10의 강력한 디버거를 사용할 수 있습니다. Windows Phone 개발자 블로그 IE10 비교 웹 킷 브라우저와 함께 지 원하는 방법에 [유용한 지침][1] 을 제공 합니다.
 
@@ -99,7 +99,7 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ## 새 프로젝트 만들기
 
-이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 명령줄 인터페이스 또는 Windows Phone 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:
+이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 [명령줄 인터페이스](../../cli/index.html) 또는 Windows Phone 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello

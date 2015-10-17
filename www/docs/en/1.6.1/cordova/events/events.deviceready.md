@@ -46,7 +46,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -55,7 +55,7 @@ Quick Example
         // Now safe to use the Cordova API
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

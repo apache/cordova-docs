@@ -32,7 +32,7 @@ Properties
 
 - __duration__: The maximum duration of an audio sound clip, in seconds.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 media files, no longer than 10 seconds each

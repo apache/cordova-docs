@@ -32,4 +32,4 @@ geolocationError
 パラメーター
 ----------
 
-- __error:__ デバイスから返されるエラーを表します (`PositionError`)
+- __error:__ デバイスから返されるエラーを表します (`[PositionError](../PositionError/positionError.html)`)

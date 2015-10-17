@@ -23,12 +23,12 @@ title: 入門ガイド
 入門ガイド
 ======================
 
-- Getting Started with Android
-- Getting Started with Blackberry
-- Getting Started with iOS
-- Getting Started with Symbian
-- Getting Started with WebOS
-- Getting Started with Windows Phone
-- Getting Started with Windows 8
-- Getting Started with Bada
-- Getting Started with Tizen
+- [Getting Started with Android](android/index.html)
+- [Getting Started with Blackberry](blackberry/index.html)
+- [Getting Started with iOS](ios/index.html)
+- [Getting Started with Symbian](symbian/index.html)
+- [Getting Started with WebOS](webos/index.html)
+- [Getting Started with Windows Phone](windows-phone/index.html)
+- [Getting Started with Windows 8](windows-8/index.html)
+- [Getting Started with Bada](bada/index.html)
+- [Getting Started with Tizen](tizen/index.html)

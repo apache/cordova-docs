@@ -42,11 +42,11 @@ Wenn die CLI ein Projekt erstellen, werden in verschiedenen Versionen dieser Dat
 
 Dieser Abschnitt beschreibt globale und Cross-Plattform-Konfigurationsoptionen. Finden Sie in den folgenden Abschnitten für Plattform-spezifische Optionen:
 
-*   iOS Konfiguration
+*   [iOS Konfiguration](../guide/platforms/ios/config.html)
 *   Android Konfiguration
-*   BlackBerry 10 Konfiguration
+*   [BlackBerry 10 Konfiguration](../guide/platforms/blackberry10/config.html)
 
-Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter Symbole und Splash-Screens.
+Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter [Symbole und Splash-Screens](images.html).
 
 ## Kern-Konfigurationselemente
 

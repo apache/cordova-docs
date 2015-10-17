@@ -22,7 +22,7 @@ title: BlackBerry-Plugins
 
 # BlackBerry-Plugins
 
-Diese Anleitung zeigt, wie ein Echo-Plugin auf BlackBerry zu entwickeln. Die Plugin-Entwicklung-Guide bietet einen umfassenden Überblick, mit dem Sie bereits vertraut sein sollten, und dieser Anleitung nimmt wo es aufhört. Darüber hinaus das [Cordova BlackBerry-Repository][1] herunterladen.
+Diese Anleitung zeigt, wie ein Echo-Plugin auf BlackBerry zu entwickeln. Die [Plugin-Entwicklung-Guide](../../hybrid/plugins/index.html) bietet einen umfassenden Überblick, mit dem Sie bereits vertraut sein sollten, und dieser Anleitung nimmt wo es aufhört. Darüber hinaus das [Cordova BlackBerry-Repository][1] herunterladen.
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 
@@ -39,7 +39,7 @@ Das Echo-Plugin im wesentlichen zurückgibt welcher Nachricht ein Benutzer biete
 
 ## Ändern von plugins.xml
 
-Des Projekts `www/plugins.xml` Verzeichnis enthält alle erforderlichen Verweise zu Ihrem Cordova-Projekt-Plugins. Fügen Sie zusätzliche Referenz also, dass bei `cordova.exec` ist aufgerufen, Cordova weiß, wie man die Karte der `Echo` Argument der `cordova.exec` zu der `Echo` -Klasse, die wir nativ schreiben möchten:
+Des Projekts `www/plugins.xml` Verzeichnis enthält alle erforderlichen Verweise zu Ihrem Cordova-Projekt-Plugins. Fügen Sie zusätzliche Referenz also, dass bei `cordova.exec` ist aufgerufen, Cordova weiß, wie man die [Karte](../../../cordova/inappbrowser/inappbrowser.html) der `Echo` Argument der `cordova.exec` zu der `Echo` -Klasse, die wir nativ schreiben möchten:
 
     <feature name="Echo">
         <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
@@ -48,7 +48,7 @@ Des Projekts `www/plugins.xml` Verzeichnis enthält alle erforderlichen Verweise
 
 ## Hinzufügen von Echo.java
 
-Wenn Sie bemerken, dass die Struktur des Value-Attributs, sehen Sie einen definierten Pfad, der zu den Echo-Plugin führt. Suchen Sie im Root-Verzeichnis von Cordova BlackBerry WebWorks-Repo, ein Verzeichnis namens `framework` . Dieses Verzeichnis enthält alle des Quellcodes, die nativ auf dem BlackBerry ausgeführt wird. Navigieren Sie zu `framework/ext/src/org/apache/cordova` . An dieser Stelle sehen Sie alle Plugin-Verzeichnisse, die innerhalb derer der Source Code ist. So fügen Sie das Verzeichnis-Echo, `framework/ext/src/org/apache/cordova/echo` und erstellen Sie eine Datei namens `Echo.java` an`framework/ext/src/org/apache/cordova/echo/Echo.java`.
+Wenn Sie bemerken, dass die Struktur des Value-Attributs, sehen Sie einen definierten Pfad, der zu den Echo-Plugin führt. Suchen Sie im Root-Verzeichnis von Cordova BlackBerry WebWorks-Repo, ein Verzeichnis namens `framework` . Dieses Verzeichnis enthält alle des Quellcodes, die nativ auf dem BlackBerry ausgeführt wird. Navigieren Sie zu `framework/ext/src/org/apache/cordova` . An dieser Stelle sehen Sie alle Plugin-Verzeichnisse, die innerhalb derer der Source Code ist. So fügen Sie das Verzeichnis-Echo, `framework/ext/src/org/apache/cordova/echo` und erstellen Sie eine [Datei](../../../cordova/file/fileobj/fileobj.html) namens `Echo.java` an`framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## Schreiben Echo.java
 
@@ -98,11 +98,11 @@ Werden wir einige Fehlerüberprüfung und wenn die Nachricht gut aussieht, werde
 
 ## Aktualisierung der .jar in Ihrem Projekt Www-Verzeichnis
 
-Die zusätzlichen `Echo.java` in Ihrem Projekt aktualisiert werden muss. Baut die `.jar` Datei, navigieren Sie zu dem BlackBerry WebWorks-Repo-Root-Verzeichnis, und führen Sie den `ant` Befehl:
+Die zusätzlichen `Echo.java` in Ihrem Projekt aktualisiert werden muss. Baut die `.jar` [Datei](../../../cordova/file/fileobj/fileobj.html), navigieren Sie zu dem BlackBerry WebWorks-Repo-Root-Verzeichnis, und führen Sie den `ant` Befehl:
 
     Ameise update - Dproject.path="~/path_to_my_project"
     
 
-Dies baut eine neue `.jar` Datei das `build/ext` Verzeichnis. Kopie der `build/ext/cordova.jar` -Datei in Ihr `project/www/ext` Verzeichnis.
+Dies baut eine neue `.jar` [Datei](../../../cordova/file/fileobj/fileobj.html) das `build/ext` Verzeichnis. Kopie der `build/ext/cordova.jar` -Datei in Ihr `project/www/ext` Verzeichnis.
 
 Wenn alles gut geht, ermöglicht, die Echo-Plugin in BlackBerry zu verwenden.

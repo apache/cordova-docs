@@ -22,7 +22,7 @@ title: compassSuccess
 
 # compassSuccess
 
-onSuccess 콜백 함수를 통해 나침반 머리글 정보를 제공 하는 `compassHeading` 개체.
+onSuccess 콜백 함수를 통해 [나침반](../compass.html) 머리글 정보를 제공 하는 `[compassHeading](compassHeading.html)` 개체.
 
     function(heading) {
         // Do something

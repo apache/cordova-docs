@@ -23,7 +23,7 @@ title: FileUploadOptions
 FileUploadOptions
 ========
 
-`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に [FileTransfer](../filetransfer/filetransfer.html) オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 プロパティー
 ----------
@@ -39,7 +39,7 @@ FileUploadOptions
 概要
 -----------
 
-`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に [FileTransfer](../filetransfer/filetransfer.html) オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 WP7 に関する注意点
 ---------

@@ -38,7 +38,7 @@ title: MediaFileData
 
 ## BlackBerry WebWorks Macken
 
-Keine API bietet Informationen für Medien-Dateien, so dass die `MediaFileData` von zurückgegebene Objekt `MediaFile.getFormatData` verfügt über die folgenden Standardwerte:
+Keine API bietet Informationen für Medien-Dateien, so dass die `MediaFileData` von zurückgegebene Objekt `[MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)` verfügt über die folgenden Standardwerte:
 
 *   **Codecs**: nicht unterstützt, und gibt`null`.
 

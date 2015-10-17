@@ -54,7 +54,7 @@ Supported Platforms
 - Android
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // process the promp dialog results
@@ -74,7 +74,7 @@ Quick Example
         );
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

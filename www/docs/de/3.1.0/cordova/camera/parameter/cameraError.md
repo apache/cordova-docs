@@ -31,4 +31,4 @@ OnError-Callback-Funktion, die eine Fehlermeldung bereitstellt.
 
 ## Parameter
 
-*   **Meldung**: die Nachricht wird durch das Gerät systemeigenen Code bereitgestellt. *(String)*
+*   **Meldung**: die Nachricht wird durch das [Gerät](../../device/device.html) systemeigenen Code bereitgestellt. *(String)*

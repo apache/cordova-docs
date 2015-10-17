@@ -31,7 +31,7 @@ Dieses Ereignis wird ausgelöst, wenn der Benutzer die End-Call-Taste drückt.
 
 Das Ereignis überschreibt das Standardverhalten des End-Aufruf.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

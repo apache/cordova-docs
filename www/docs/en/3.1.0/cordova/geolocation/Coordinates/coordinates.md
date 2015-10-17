@@ -42,7 +42,7 @@ A set of properties that describe the geographic coordinates of a position.
 
 ## Description
 
-The `Coordinates` object is attached to the `Position` object that is
+The `Coordinates` object is attached to the `[Position](../Position/position.html)` object that is
 available to callback functions in requests for the current position.
 
 ## Supported Platforms

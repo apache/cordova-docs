@@ -22,7 +22,7 @@ title: GlobalizationError
 
 # GlobalizationError
 
-세계화 API에서 오류를 나타내는 개체입니다.
+[세계화](../globalization.html) API에서 오류를 나타내는 개체입니다.
 
 ## 속성
 

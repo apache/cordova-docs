@@ -40,7 +40,7 @@ properties:
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 Supported Platforms
 -------------------
@@ -50,7 +50,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterylow", onBatteryLow, false);
@@ -60,7 +60,7 @@ Quick Example
         alert("Battery Level Low " + info.level + "%");
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

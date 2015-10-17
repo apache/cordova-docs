@@ -33,7 +33,7 @@ Indica o no horario de verano es en efecto el `successCallback` con un objeto de
 
 El parámetro entrantes `date` debe ser de tipo `Date`.
 
-Si hay un error de lectura de la fecha, luego ejecuta el `errorCallback`. Código esperado del error es `GlobalizationError.UNKNOWN\_ERROR`.
+Si hay un error de lectura de la fecha, luego ejecuta el `errorCallback`. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 

@@ -85,7 +85,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 16. Click on the **project icon** in the Project Navigator, select your **Project**, then select the **"Build Settings"** tab
 17. Enter **"Header Search Paths"** in the search field
 18. Add `$(CORDOVALIB)/Classes` and check the **Recursive** checkbox (the checkbox may be unlabeled) - for the **"Header Search Paths"** value
-19. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+19. Add `-all_load` and `-Obj-C` - for the **"Other Linker [Flags](../../cordova/file/flags/flags.html)"** value
 20. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
 21. Expand **"Link Binaries with Libraries"** 
 22. Click on the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
@@ -121,7 +121,7 @@ adding new classes you need to follow a few additional steps:
    and libraries are in the top-most boxes under Build Phases for your
    project's Target.
 3. In your project's Target's Build Settings, search for "Other Linker
-   Flags". Add `-Obj-C` and `-all_load` to this.
+   [Flags](../../cordova/file/flags/flags.html)". Add `-Obj-C` and `-all_load` to this.
 
 Using CDVViewController in your code
 ------------------------------------

@@ -23,7 +23,7 @@ title: geolocation.getCurrentPosition
 geolocation.getCurrentPosition
 ==============================
 
-Returns the device's current position as a `Position` object.
+Returns the device's current position as a `[Position](Position/position.html)` object.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess, 
                                              [geolocationError], 
@@ -39,7 +39,7 @@ Parameters
 Description
 -----------
 
-Function `geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+Function `geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `[geolocationSuccess](parameters/geolocationSuccess.html)` callback with a `[Position](Position/position.html)` object as the parameter.  If there is an error, the `[geolocationError](parameters/geolocationError.html)` callback is invoked with a `[PositionError](PositionError/positionError.html)` object.
 
 
 Supported Platforms
@@ -51,7 +51,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -78,7 +78,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -113,7 +113,7 @@ Full Example
                                 'Timestamp: '          + new Date(position.timestamp)          + '<br />';
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a [PositionError](PositionError/positionError.html) object
 	    //
 	    function onError(error) {
 	        alert('code: '    + error.code    + '\n' +

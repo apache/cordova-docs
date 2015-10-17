@@ -24,12 +24,12 @@ title: Przewodnik platformy Windows Phone 8
 
 Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova aplikacje na urządzenia Windows Phone. Skupia się na Windows Phone 8, ale zapewnia dodatkowe szczegóły na temat wsparcia Windows Phone 7.
 
-To pokazuje, jak używać albo powłoki Windows Phone specjalne narzędzia do tworzenia i budowania aplikacji, lub CLI Cordova przekreślać platforma dyskusji w interfejs wiersza poleceń. (Patrz Przegląd Porównanie tych przepływów pracy rozwoju). Ta sekcja pokazuje też, jak otworzyć aplikacji Cordova, tak, że można je modyfikować w Visual Studio. Niezależnie od tego, które możesz wziąć podejście musisz zainstalować SDK Windows Phone, jak opisano poniżej.
+To pokazuje, jak używać albo powłoki Windows Phone specjalne narzędzia do tworzenia i budowania aplikacji, lub CLI Cordova przekreślać platforma dyskusji w interfejs wiersza poleceń. (Patrz [Przegląd](../../overview/index.html) Porównanie tych przepływów pracy rozwoju). Ta sekcja pokazuje też, jak otworzyć aplikacji Cordova, tak, że można je modyfikować w Visual Studio. Niezależnie od tego, które możesz wziąć podejście musisz zainstalować SDK Windows Phone, jak opisano poniżej.
 
 Zobacz następujące szczegółowe informacje specyficzne dla platformy Windows Phone:
 
-*   Windows Phone 8 wtyczki
-*   Aktualizacja Windows Phone 8
+*   [Windows Phone 8 wtyczki](plugin.html)
+*   [Aktualizacja](../android/upgrade.html) Windows Phone 8
 
 Na platformie Windows Phone 8 Cordova widoku sieci Web polega na Internet Explorer 10 jako jego silnik renderujący, więc jako praktyczny można użyć IE10 jest rozbudowanym debuggerem do badania wszelkich treści internetowych, które nie wywołać Cordova API. Windows Phone autora blogu zawiera [pomocne wskazówki][1] na temat wsparcia IE10 wraz z porównywalnych WebKit przeglądarki.
 
@@ -51,9 +51,9 @@ Musisz następujących czynności:
 
 Rozwijać Cordova aplikacje na urządzenia Windows Phone, mogą korzystać z komputera z systemem Windows, ale możesz może się rozwinąć również na komputerze Mac, uruchamiając środowisku wirtualnej lub za pomocą Boot Camp na dual-boot partycji systemu Windows. Konsultacje te zasoby, aby skonfigurować wymagane środowisko systemu Windows na komputerze Mac:
 
-*   **VMWare Fusion**: Aby skonfigurować maszyn wirtualnych systemu Windows 8, postępuj zgodnie z instrukcjami w [Witrynie Microsoft Developer Network][5], a następnie zobacz Konfigurowanie VMWare Fusion o przygotowanie wirtualne środowisko do uruchomienia emulatora w zestawie SDK.
+*   **VMWare Fusion**: Aby skonfigurować maszyn wirtualnych systemu Windows 8, postępuj zgodnie z instrukcjami w [Witrynie Microsoft Developer Network][5], a następnie zobacz [Konfigurowanie VMWare Fusion](vmware.html) o przygotowanie wirtualne środowisko do uruchomienia emulatora w zestawie SDK.
 
-*   **Parallels Desktop**: Aby skonfigurować maszyn wirtualnych systemu Windows 8, postępuj zgodnie z instrukcjami w [Witrynie Microsoft Developer Network][6], a następnie zobacz Konfigurowanie programu Parallels Desktop dla informacje na temat przygotowania wirtualne środowisko do uruchomienia emulatora w zestawie SDK.
+*   **Parallels Desktop**: Aby skonfigurować maszyn wirtualnych systemu Windows 8, postępuj zgodnie z instrukcjami w [Witrynie Microsoft Developer Network][6], a następnie zobacz [Konfigurowanie programu Parallels Desktop](parallels.html) dla informacje na temat przygotowania wirtualne środowisko do uruchomienia emulatora w zestawie SDK.
 
  [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
  [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
@@ -85,7 +85,7 @@ Jeśli chcesz użyć Cordova w środku Windows Phone powłoka narzędzia w poł�
 
  [10]: http://cordova.apache.org
 
-Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i Windows Phone 8 wtyczki szczegóły specyficzne dla platformy Windows Phone.
+Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i [Windows Phone 8 wtyczki](plugin.html) szczegóły specyficzne dla platformy Windows Phone.
 
 ## Instalowanie SDK
 

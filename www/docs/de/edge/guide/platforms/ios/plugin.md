@@ -148,7 +148,7 @@ Es prüft den Parameter um sicherzustellen, dass es ist nicht `nil` oder eine le
 
 ## iOS Integration
 
-Die `CDVPlugin` -Klasse enthält Methoden, die Ihr Plugin überschrieben werden kann. Beispielsweise können Sie erfassen die `pause` , `resume` , app beenden und `handleOpenURL` Ereignisse. Finden Sie die [CDVPlugin.h][1] und [CDVPlugin.m][2] Klasse Anleitung.
+Die `CDVPlugin` -Klasse enthält Methoden, die Ihr Plugin überschrieben werden kann. Beispielsweise können Sie erfassen die `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , app beenden und `handleOpenURL` Ereignisse. Finden Sie die [CDVPlugin.h][1] und [CDVPlugin.m][2] Klasse Anleitung.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

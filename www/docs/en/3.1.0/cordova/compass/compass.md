@@ -26,18 +26,18 @@ title: Compass
 
 ## Methods
 
-- compass.getCurrentHeading
-- compass.watchHeading
-- compass.clearWatch
-- compass.watchHeadingFilter (obsolete)
-- compass.clearWatchFilter   (obsolete)
+- [compass.getCurrentHeading](compass.getCurrentHeading.html)
+- [compass.watchHeading](compass.watchHeading.html)
+- [compass.clearWatch](compass.clearWatch.html)
+- [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (obsolete)
+- [compass.clearWatchFilter](compass.clearWatchFilter.html)   (obsolete)
 
 ## Arguments
 
-- compassSuccess
-- compassError
-- compassOptions
-- compassHeading
+- [compassSuccess](parameters/compassSuccess.html)
+- [compassError](parameters/compassError.html)
+- [compassOptions](parameters/compassOptions.html)
+- [compassHeading](parameters/compassHeading.html)
 
 ## Accessing the Feature
 
@@ -79,4 +79,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the Overview section.
+configuration.  See _Platform Support_ in the [Overview](../../guide/overview/index.html) section.

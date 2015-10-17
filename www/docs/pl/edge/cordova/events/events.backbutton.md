@@ -29,7 +29,7 @@ Zdarzenie fires, gdy użytkownik naciśnie przycisk Wstecz.
 
 ## Szczegóły
 
-Aby zastąpić domyślne zachowanie przycisku wstecz, zarejestrować detektor zdarzeń dla `backbutton` zdarzenia, zazwyczaj przez wywołanie `document.addEventListener` po otrzymaniu `deviceready` zdarzenie. Nie jest konieczne do wywołania innej metody, aby zastąpić zachowanie przycisku wstecz.
+Aby zastąpić domyślne zachowanie przycisku wstecz, zarejestrować detektor zdarzeń dla `backbutton` zdarzenia, zazwyczaj przez wywołanie `document.addEventListener` po otrzymaniu `[deviceready](events.deviceready.html)` zdarzenie. Nie jest konieczne do wywołania innej metody, aby zastąpić zachowanie przycisku wstecz.
 
 ## Obsługiwane platformy
 

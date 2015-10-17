@@ -31,7 +31,7 @@ title: compass.getCurrentHeading
 
 コンパスは方向またはというデバイスは、通常から指摘装置の上部の見出しを検出するセンサーです。359.99、0 は北に 0 からの角度で見出しを測定します。
 
-を介して、コンパス針路情報が返されます、 `CompassHeading` オブジェクトを使用して、 `compassSuccess` コールバック関数。
+を介して、コンパス針路情報が返されます、 `CompassHeading` オブジェクトを使用して、 `[compassSuccess](parameters/compassSuccess.html)` コールバック関数。
 
 ## サポートされているプラットフォーム
 

@@ -42,9 +42,9 @@ Upoštevajte, da pred 3.3.1-0.2.0 različico, datoteko obstajala na `app/www/con
 
 Ta oddelek podrobno globalno in cross-platform konfiguracijo možnosti. Videli v nadaljevanju, za posamezne možnosti:
 
-*   iOS konfiguracijo
-*   Android konfiguracijo
-*   Konfiguracije blackBerry 10
+*   [iOS konfiguracijo](../guide/platforms/ios/config.html)
+*   [Android konfiguracijo](../guide/platforms/android/config.html)
+*   [Konfiguracije blackBerry 10](../guide/platforms/blackberry10/config.html)
 
 Poleg različnih možnosti konfiguracije, navedenih spodaj, lahko konfigurirate tudi aplikacijskimi jedro niz podob za vsako ciljno platformo. Več informacij najdete ikone in brizg zaslon.
 
@@ -136,4 +136,4 @@ Tukaj je, kako se prikaže element za iOS projektov:
         </feature>
     
 
-Glej sklic API za podrobnosti o tem, kako določiti vsako funkcijo. Glej Plugin razvoj vodnik za več informacij o plugins.
+Glej sklic API za podrobnosti o tem, kako določiti vsako funkcijo. Glej [Plugin razvoj vodnik](../guide/hybrid/plugins/index.html) za več informacij o plugins.

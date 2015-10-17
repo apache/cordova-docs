@@ -32,7 +32,7 @@ The accelerometer is a motion sensor that detects the change (_delta_)
 in movement relative to the current device orientation, in three
 dimensions along the _x_, _y_, and _z_ axis.
 
-These acceleration values are returned to the `accelerometerSuccess`
+These acceleration values are returned to the `[accelerometerSuccess](parameters/accelerometerSuccess.html)`
 callback function.
 
 ## Supported Platforms

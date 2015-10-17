@@ -106,7 +106,7 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
 
 *   Asegúrese de que el dispositivo de destino correctamente es lanzado, conectado y configurado. Su configuración de **fecha y hora** debe configurarse correctamente.
 
-*   Utilizar la vista **Explorador de conexión** para seleccionar el objetivo del despliegue de aplicación: **ventana → Mostrar vista → conexión Explorer**.
+*   Utilizar la vista **Explorador de conexión** para seleccionar el objetivo del despliegue de aplicación: **ventana → [Mostrar](../../../cordova/inappbrowser/inappbrowser.html) vista → conexión Explorer**.
     
     ![][7]
 

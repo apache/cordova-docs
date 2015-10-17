@@ -33,9 +33,9 @@ title: capture.captureImage
 
 Beginnt einen asynchronen Vorgang, um Aufnahmen mit Kamera-Anwendung des Geräts. Die Operation erlaubt Benutzern, mehr als ein Bild in einer einzigen Sitzung zu erfassen.
 
-Der Capture-Vorgang endet entweder, wenn der Benutzer schließt die Kameraanwendung oder die maximale Anzahl an Aufnahmen von angegebenen `CaptureAudioOptions.limit` erreicht ist. Wenn keine `limit` angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes Bild erfasst.
+Der Capture-Vorgang endet entweder, wenn der Benutzer schließt die Kameraanwendung oder die maximale Anzahl an Aufnahmen von angegebenen `[CaptureAudioOptions](captureAudioOptions.html).limit` erreicht ist. Wenn keine `limit` angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes Bild erfasst.
 
-Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `CaptureCB` Rückruf mit einem Array von `MediaFile` Objekten beschreibt jede aufgenommene Bild-Datei. Wenn der Benutzer den Vorgang vor dem Aufzeichnen eines Abbilds beendet die `CaptureErrorCB` Rückruf führt mit einem `CaptureError` Objekt mit eine `CaptureError.CAPTURE_NO_MEDIA_FILES` Fehlercode.
+Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `[CaptureCB](CaptureCB.html)` Rückruf mit einem Array von `[MediaFile](MediaFile.html)` Objekten beschreibt jede aufgenommene Bild-Datei. Wenn der Benutzer den Vorgang vor dem Aufzeichnen eines Abbilds beendet die `[CaptureErrorCB](CaptureErrorCB.html)` Rückruf führt mit einem `[CaptureError](CaptureError.html)` Objekt mit eine `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` Fehlercode.
 
 ## Unterstützte Plattformen
 
@@ -47,7 +47,7 @@ Wenn der Capture-Vorgang abgeschlossen ist, ruft es die `CaptureCB` Rückruf mit
 
 ## Windows Phone 7 Macken
 
-Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen ist, funktioniert nicht, und die Fehler-Callback führt.
+Die native Kameraanwendung aufrufen, während Ihr [Gerät](../../device/device.html) via Zune angeschlossen ist, funktioniert nicht, und die Fehler-Callback führt.
 
 ## Kleines Beispiel
 

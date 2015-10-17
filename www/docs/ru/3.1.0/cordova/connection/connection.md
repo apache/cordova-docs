@@ -26,7 +26,7 @@ title: Подключение
 
 ## Свойства
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## Константы
 

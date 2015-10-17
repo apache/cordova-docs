@@ -41,7 +41,7 @@ media.startRecord
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // オーディオの録音
@@ -141,7 +141,7 @@ BlackBerry WebWorks に関する注意点
 iOS に関する注意点
 ----------
 
-- 録音するためのファイルは既に .wav 形式で存在していなければなりません。 File API 群を使用することでファイルを作成することができます。
+- 録音するためのファイルは既に .wav 形式で存在していなければなりません。 [File](../file/fileobj/fileobj.html) API 群を使用することでファイルを作成することができます。
 
 Tizen に関する注意点
 ----------

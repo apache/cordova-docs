@@ -44,7 +44,7 @@ title: Android の構成
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ localStorage および WebSQL ストレージ ページ、既定のブラウザーで開かれます。
+*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ [localStorage](../../../cordova/storage/localstorage/localstorage.html) および WebSQL [ストレージ](../../../cordova/storage/storage.html) ページ、既定のブラウザーで開かれます。
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

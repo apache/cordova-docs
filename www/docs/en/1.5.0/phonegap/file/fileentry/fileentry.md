@@ -30,7 +30,7 @@ Properties
 
 - __isFile:__ Always true. _(boolean)_
 - __isDirectory:__ Always false. _(boolean)_
-- __name:__ The name of the FileEntry, excluding the path leading to it. _(DOMString)_
+- __name:__ The [name](../../storage/parameters/name.html) of the FileEntry, excluding the path leading to it. _(DOMString)_
 - __fullPath:__ The full absolute path from the root to the FileEntry. _(DOMString)_
 
 NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
@@ -47,8 +47,8 @@ Methods
 - __toURI__: Return a URI that can be used to locate a file.
 - __remove__: Delete a file.  
 - __getParent__: Look up the parent directory.
-- __createWriter__: Creates a FileWriter object that can be used to write to a file.
-- __file__: Creates a File object containing file properties.
+- __createWriter__: Creates a [FileWriter](../filewriter/filewriter.html) object that can be used to write to a file.
+- __file__: Creates a [File](../fileobj/fileobj.html) object containing file properties.
 
 
 Supported Platforms
@@ -67,8 +67,8 @@ Look up metadata about a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [Metadata](../metadata/metadata.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the [Metadata](../metadata/metadata.html). Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -90,7 +90,7 @@ moveTo
 
 Move a file to a different location on the file system. It is an error to attempt to:
 
-- move a file into its parent if a name different from its current one isn't provided;
+- move a file into its parent if a [name](../../storage/parameters/name.html) different from its current one isn't provided;
 - move a file to a path occupied by a directory;
 
 In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file. 
@@ -98,9 +98,9 @@ In addition, an attempt to move a file on top of an existing file must attempt t
 __Parameters:__
 
 - __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __newName__ - The new [name](../../storage/parameters/name.html) of the file. Defaults to the current [name](../../storage/parameters/name.html) if unspecified. _(DOMString)_
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -127,14 +127,14 @@ copyTo
 
 Copy a file to a new location on the file system.  It is an error to attempt to:
 
-- copy a file into its parent if a name different from its current one is not provided. 
+- copy a file into its parent if a [name](../../storage/parameters/name.html) different from its current one is not provided. 
 
 __Parameters:__
 
 - __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __newName__ - The new [name](../../storage/parameters/name.html) of the file. Defaults to the current [name](../../storage/parameters/name.html) if unspecified. _(DOMString)_
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -176,7 +176,7 @@ Deletes a file.
 __Parameters:__
 
 - __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 	
@@ -195,12 +195,12 @@ __Quick Example__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the file. 
+Look up the parent [DirectoryEntry](../directoryentry/directoryentry.html) containing the file. 
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with the file's parent [DirectoryEntry](../directoryentry/directoryentry.html). _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent [DirectoryEntry](../directoryentry/directoryentry.html).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 	
@@ -219,12 +219,12 @@ __Quick Example__
 createWriter
 ------------
 
-Create a FileWriter object associated with the file that the FileEntry represents.
+Create a [FileWriter](../filewriter/filewriter.html) object associated with the file that the FileEntry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [FileWriter](../filewriter/filewriter.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs while attempting to create the [FileWriter](../filewriter/filewriter.html).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 	
@@ -243,12 +243,12 @@ __Quick Example__
 file
 ----
 
-Return a File object that represents the current state of the file that this FileEntry represents.
+Return a [File](../fileobj/fileobj.html) object that represents the current state of the file that this FileEntry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a File object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [File](../fileobj/fileobj.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when creating the [File](../fileobj/fileobj.html) object (e.g. the underlying file no longer exists).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 	

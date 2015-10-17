@@ -28,13 +28,13 @@ This object represents a file system.
 Properties
 ----------
 
-- __name:__ The name of the file system. _(DOMString)_
+- __name:__ The [name](../../storage/parameters/name.html) of the file system. _(DOMString)_
 - __root:__ The root directory of the file system. _(DirectoryEntry)_
 
 Details
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+The `FileSystem` object represents information about the file system. The [name](../../storage/parameters/name.html) of the file system will be unique across the list of exposed file systems.  The root property contains a `[DirectoryEntry](../directoryentry/directoryentry.html)` object which represents the root directory of the file system.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-File System Quick Example
+[File](../fileobj/fileobj.html) System Quick [Example](../../storage/storage.opendatabase.html)
 -------------------------
 
 	function onSuccess(fileSystem) {
@@ -53,9 +53,9 @@ File System Quick Example
 	}
 	
 	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+	window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, onSuccess, null);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -73,7 +73,7 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+			window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, onFileSystemSuccess, fail);
         }
 
 		function onFileSystemSuccess(fileSystem) {

@@ -20,6 +20,6 @@ license: >
 title: Project Settings for Bada
 ---
 
-Project Settings for Bada 
+[Project Settings](../index.html) for Bada 
 ===================================
 

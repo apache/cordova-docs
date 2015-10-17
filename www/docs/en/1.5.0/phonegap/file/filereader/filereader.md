@@ -65,7 +65,7 @@ __Parameters:__
 - file - the file object to read
 
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 	function win(file) {
@@ -91,7 +91,7 @@ __Parameters:__
 - file - the file object to read
 - encoding - the encoding to use to encode the file's content. Default is UTF8.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 	function win(file) {
@@ -109,7 +109,7 @@ Quick Example
 	
     entry.file(win, fail);
 
-Abort Quick Example
+Abort Quick [Example](../../storage/storage.opendatabase.html)
 -------------------
 
 	function win(file) {
@@ -128,7 +128,7 @@ Abort Quick Example
 	
     entry.file(win, fail);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -148,7 +148,7 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+			window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, gotFS, fail);
         }
 		
 		function gotFS(fileSystem) {

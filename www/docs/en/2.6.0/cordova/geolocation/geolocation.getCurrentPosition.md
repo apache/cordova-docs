@@ -23,7 +23,7 @@ title: geolocation.getCurrentPosition
 geolocation.getCurrentPosition
 ==============================
 
-Returns the device's current position as a `Position` object.
+Returns the device's current position as a `[Position](Position/position.html)` object.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess, 
                                              [geolocationError], 
@@ -39,7 +39,7 @@ Parameters
 Description
 -----------
 
-`geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `[geolocationSuccess](parameters/geolocationSuccess.html)` callback with a `[Position](Position/position.html)` object as the parameter.  If there is an error, the `[geolocationError](parameters/geolocationError.html)` callback is invoked with a `[PositionError](PositionError/positionError.html)` object.
 
 
 Supported Platforms
@@ -54,7 +54,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -81,7 +81,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

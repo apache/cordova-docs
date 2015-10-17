@@ -22,4 +22,4 @@ title: compass.clearWatchFilter
 
 # compass.clearWatchFilter
 
-不再支援 1.6。請參閱`compass.clearWatch`.
+不再支援 1.6。請參閱`[compass.clearWatch](compass.clearWatch.html)`.

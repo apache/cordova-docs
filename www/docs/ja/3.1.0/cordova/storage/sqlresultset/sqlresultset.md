@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-ときに、 `SQLTransaction` オブジェクトの `executeSql` メソッドは、指定されたコールバック実行される、 `SQLResultSet` パラメーター。
+ときに、 `[SQLTransaction](../sqltransaction/sqltransaction.html)` オブジェクトの `executeSql` メソッドは、指定されたコールバック実行される、 `SQLResultSet` パラメーター。
 
 ## プロパティ
 
@@ -30,11 +30,11 @@ title: SQLResultSet
 
 *   **rowsAffected**： 0 ステートメントは、行に影響しない場合、SQL ステートメントによって変更された行の数。
 
-*   **行**: `SQLResultSetRowList` 返される行を表す、空の行が返されない場合。
+*   **行**: `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` 返される行を表す、空の行が返されない場合。
 
 ## 詳細
 
-ときに、 `SQLTransaction` オブジェクトの `executeSql` メソッドは、指定されたコールバックで実行すること、 `SQLResultSet` 3 つのプロパティが含まれているパラメーター。
+ときに、 `[SQLTransaction](../sqltransaction/sqltransaction.html)` オブジェクトの `executeSql` メソッドは、指定されたコールバックで実行すること、 `SQLResultSet` 3 つのプロパティが含まれているパラメーター。
 
 *   `insertId`、Successly の SQL 挿入ステートメントの行番号を返します。場合は、SQL は、任意の行を挿入しません、 `insertId` が設定されていません。
 

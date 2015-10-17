@@ -23,23 +23,23 @@ title: contacts.find
 contacts.find
 =============
 
-Queries the device contacts database and returns one or more `Contact` objects, each containing the fields specified.
+Queries the device contacts database and returns one or more `[Contact](Contact/contact.html)` objects, each containing the fields specified.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
 Description
 -----------
 
-contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
+contacts.find is an asynchronous function that queries the device contacts database and returns an array of `[Contact](Contact/contact.html)` objects.  The resulting objects are passed to the `[contactSuccess](parameters/contactSuccess.html)` callback function specified by the __contactSuccess__ parameter.  
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
+Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `[Contact](Contact/contact.html)` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `[Contact](Contact/contact.html)` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
 
 The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
 
 Parameters
 ----------
 
-- __contactFields:__ Contact fields to be used as search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
+- __contactFields:__ [Contact](Contact/contact.html) fields to be used as search qualifier. Only these fields will have values in the resulting `[Contact](Contact/contact.html)` objects. _(DOMString[])_ [Required]
 - __contactSuccess:__ Success callback function that is invoked with the contacts returned from the contacts database. [Required]
 - __contactError:__ Error callback function. Invoked when error occurs. [Optional]
 - __contactFindOptions:__ Search options to filter contacts. [Optional]
@@ -52,7 +52,7 @@ Supported Platforms
 - iOS
 - Bada 1.2
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -69,7 +69,7 @@ Quick Example
 	var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -88,7 +88,7 @@ Full Example
         //
         function onDeviceReady() {
 		    // find all contacts with 'Bob' in any name field
-		    var options = new ContactFindOptions();
+		    var options = new [ContactFindOptions](ContactFindOptions/contactfindoptions.html)();
 			options.filter="Bob"; 
 			var fields = ["displayName", "name"];
 		    navigator.contacts.find(fields, onSuccess, onError, options);

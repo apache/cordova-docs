@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-Una delle proprietà della `SQLResultSet` che contiene le righe restituite da una query SQL.
+Una delle proprietà della `[SQLResultSet](../sqlresultset/sqlresultset.html)` che contiene le righe restituite da una query SQL.
 
 ## Proprietà
 

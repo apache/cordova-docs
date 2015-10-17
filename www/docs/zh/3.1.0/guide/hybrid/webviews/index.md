@@ -24,5 +24,5 @@ title: 嵌入 WebViews
 
 > 在您自己的專案中實現科爾多瓦 web 視圖。
 
-*   Android WebViews
-*   WebViews iOS
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [WebViews iOS](../../platforms/ios/webview.html)

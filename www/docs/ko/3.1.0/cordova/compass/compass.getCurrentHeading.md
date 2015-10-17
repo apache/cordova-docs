@@ -22,16 +22,16 @@ title: compass.getCurrentHeading
 
 # compass.getCurrentHeading
 
-현재 나침반 제목 좀.
+현재 [나침반](compass.html) 제목 좀.
 
     navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
 ## 설명
 
-나침반 방향 또는 표제는 장치 지적 이다, 일반적으로 장치 위에서 감지 하는 센서입니다. 359.99, 0가 북쪽을 0에서도에서 머리글을 측정 합니다.
+[나침반](compass.html) 방향 또는 표제는 [장치](../device/device.html) 지적 이다, 일반적으로 [장치](../device/device.html) 위에서 감지 하는 센서입니다. 359.99, 0가 북쪽을 0에서도에서 머리글을 측정 합니다.
 
-나침반 머리글 정보를 통해 반환 되는 `CompassHeading` 개체를 사용 하는 `compassSuccess` 콜백 함수.
+[나침반](compass.html) 머리글 정보를 통해 반환 되는 `CompassHeading` 개체를 사용 하는 `[compassSuccess](parameters/compassSuccess.html)` 콜백 함수.
 
 ## 지원 되는 플랫폼
 

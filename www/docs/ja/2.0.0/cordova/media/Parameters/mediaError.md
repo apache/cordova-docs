@@ -32,4 +32,4 @@ mediaError
 パラメーター
 ----------
 
-- __error:__ デバイスから返されるエラーを表します (`MediaError`)
+- __error:__ デバイスから返されるエラーを表します (`[MediaError](../MediaError/mediaError.html)`)

@@ -25,7 +25,7 @@ Storage
 
 > Provides access to the device's storage options.
 
-This API is based on the [W3C Web SQL Database
+This API is based on the [W3C Web SQL [Database](database/database.html)
 Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web
 Storage API Specification](http://dev.w3.org/html5/webstorage/). Some
 devices already provide an implementation of these specifications, in
@@ -35,25 +35,25 @@ offers compatible support for those that don't.
 Methods
 -------
 
-- openDatabase
+- [openDatabase](storage.opendatabase.html)
 
 Arguments
 ---------
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+- [database_name](parameters/name.html)
+- [database_version](parameters/version.html)
+- [database_displayname](parameters/display_name.html)
+- [database_size](parameters/size.html)
 
 Objects
 -------
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetRowList
-- SQLError
-- localStorage
+- [Database](database/database.html)
+- [SQLTransaction](sqltransaction/sqltransaction.html)
+- [SQLResultSet](sqlresultset/sqlresultset.html)
+- [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+- [SQLError](sqlerror/sqlerror.html)
+- [localStorage](localstorage/localstorage.html)
 
 Permissions
 -----------

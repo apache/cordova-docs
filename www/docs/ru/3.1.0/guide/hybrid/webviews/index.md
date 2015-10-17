@@ -25,4 +25,4 @@ title: Интеграция WebViews
 > Реализуйте Cordova WebView в собственном проекте.
 
 *   Андроид WebViews
-*   iOS WebViews
+*   [iOS WebViews](../../platforms/ios/webview.html)

@@ -745,15 +745,15 @@ title: Поддерживаемые Платформы
         </td>
         
         <td data-col="winphone7"  class="y">
-          localStorage и indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> и indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage и indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> и indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage и indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> и indexedDB
         </td>
         
         <!--        <td data-col="firefoxos"  class="n"></td> -->

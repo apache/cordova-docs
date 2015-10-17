@@ -31,7 +31,7 @@ Bekommen Sie Bezeichner für die aktuelle Sprache des Clients.
 
 Gibt die Sprache-ID-Zeichenfolge, die die `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `String` Wert.
 
-Wenn ein Fehler, der immer der Sprache vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
+Wenn ein Fehler, der immer der Sprache vorliegt dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 

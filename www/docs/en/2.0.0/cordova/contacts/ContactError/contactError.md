@@ -23,7 +23,7 @@ title: ContactError
 ContactError
 ========
 
-A `ContactError` object is returned to the `contactError` callback when an error occurs.
+A `ContactError` object is returned to the `[contactError](../parameters/contactError.html)` callback when an error occurs.
 
 Properties
 ----------
@@ -44,5 +44,5 @@ Constants
 Description
 -----------
 
-The `ContactError` object is returned to the user through the `contactError` callback function when an error occurs.
+The `ContactError` object is returned to the user through the `[contactError](../parameters/contactError.html)` callback function when an error occurs.
 

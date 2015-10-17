@@ -79,7 +79,7 @@ Optional parameters to customize the camera settings.
 
 - __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. _(Boolean)_
 
-- __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `CameraPopoverOptions`.
+- __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 - __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` _(Number)_
 
@@ -94,7 +94,7 @@ Optional parameters to customize the camera settings.
 
 - Ignores the `allowEdit` parameter.
 
-- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+- `[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY` and `[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
 ## Android Quirks
 
@@ -102,7 +102,7 @@ Optional parameters to customize the camera settings.
 
 - Ignores the `allowEdit` parameter.
 
-- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+- `[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY` and `[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
 ## BlackBerry 10 Quirks
 
@@ -112,7 +112,7 @@ Optional parameters to customize the camera settings.
 
 - Ignores the `allowEdit` parameter.
 
-- `Camera.MediaType` is not supported.
+- `[Camera](../camera.html).MediaType` is not supported.
 
 - Ignores the `correctOrientation` parameter.
 

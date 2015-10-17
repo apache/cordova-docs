@@ -32,9 +32,9 @@ onSuccess callback function that provides the image data.
 Parameters
 ----------
 
-- __imageData:__ Base64 encoding of the image data, OR the image file URI, depending on `cameraOptions` used. (`String`)
+- __imageData:__ Base64 encoding of the image data, OR the image file URI, depending on `[cameraOptions](cameraOptions.html)` used. (`String`)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     // Show image

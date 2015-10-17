@@ -24,7 +24,7 @@ title: Amazon ogenj OS konfiguracijo
 
 V `config.xml` datoteko nadzira app's osnovne nastavitve, ki veljajo za vsako uporabo in CordovaWebView stopnje. Ta odsek podrobnosti nastavitve, ki veljajo le za Amazon ogenj OS gradi. Glej config.xml datoteke za informacije na globalno konfiguracijo možnosti.
 
-*   `KeepRunning`(program privzeto boolean, `true` ): določa, ali je vloga ostane teče v ozadju tudi po a `pause` dogodek požarov.
+*   `KeepRunning`(program privzeto boolean, `true` ): določa, ali je vloga ostane teče v ozadju tudi po a `[pause](../../../cordova/events/events.pause.html)` dogodek požarov.
     
         <preference name="KeepRunning" value="false"/>
         

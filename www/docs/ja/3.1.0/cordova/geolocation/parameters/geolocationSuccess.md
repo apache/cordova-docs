@@ -22,7 +22,7 @@ title: geolocationSuccess
 
 # geolocationSuccess
 
-地理位置が利用可能になったときに実行されるユーザーのコールバック関数 (から呼び出されると `geolocation.getCurrentPosition` ）、（から呼び出されたときに、位置が変更されたとき、または`geolocation.watchPosition`).
+地理位置が利用可能になったときに実行されるユーザーのコールバック関数 (から呼び出されると `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ）、（から呼び出されたときに、位置が変更されたとき、または`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something

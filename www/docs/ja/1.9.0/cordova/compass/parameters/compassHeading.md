@@ -23,7 +23,7 @@ title: compassHeading
 compassHeading
 ==========
 
-エラーが起きた場合、 `compassSuccess` コールバック関数には `CompassHeading` オブジェクトが返されます。
+エラーが起きた場合、 `[compassSuccess](compassSuccess.html)` コールバック関数には `CompassHeading` オブジェクトが返されます。
 
 プロパティー
 ----------
@@ -35,7 +35,7 @@ compassHeading
 概要
 -----------
 
-`CompassHeading` オブジェクトは、 `compassSuccess` コールバック関数を通じてユーザーに返されます。
+`CompassHeading` オブジェクトは、 `[compassSuccess](compassSuccess.html)` コールバック関数を通じてユーザーに返されます。
 
 Android に関する注意点
 --------------

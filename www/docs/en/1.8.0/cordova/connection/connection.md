@@ -30,7 +30,7 @@ This object is accessed under the `navigator.network` interface.
 Properties
 ----------
 
-- connection.type
+- [connection.type](connection.type.html)
 
 Constants
 ---------

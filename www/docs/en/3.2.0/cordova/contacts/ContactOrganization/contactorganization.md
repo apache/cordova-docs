@@ -22,7 +22,7 @@ title: ContactOrganization
 
 # ContactOrganization
 
-Contains a `Contact` object's organization properties.
+Contains a `[Contact](../Contact/contact.html)` object's organization properties.
 
 ## Properties
 
@@ -39,7 +39,7 @@ Contains a `Contact` object's organization properties.
 ## Details
 
 The `ContactOrganization` object stores a contact's organization
-properties.  A `Contact` object stores one or more
+properties.  A `[Contact](../Contact/contact.html)` object stores one or more
 `ContactOrganization` objects in an array.
 
 ## Supported Platforms

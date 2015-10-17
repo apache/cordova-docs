@@ -31,7 +31,7 @@ Zdarzenie fires, gdy użytkownik naciśnie przycisk wywołanie start.
 
 Jeśli potrzebujesz zastąpić domyślne zachowanie wywołanie rozpoczęcia można zarejestrować detektor zdarzeń dla `startcallbutton` zdarzenie.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `[deviceready](events.deviceready.html)` pożary zdarzenia.
 
 ## Obsługiwane platformy
 

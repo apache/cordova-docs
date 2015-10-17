@@ -31,7 +31,7 @@ V primeru požarov, ko uporabnik pritisne gumb meni.
 
 Uporabi rutina preglasi privzeto obnašanje jedilnik popek.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

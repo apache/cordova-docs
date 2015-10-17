@@ -48,8 +48,8 @@ Methods
 - __toURL__: Return a URL that can be used to locate a file.
 - __remove__: Delete a file.
 - __getParent__: Look up the parent directory.
-- __createWriter__: Creates a FileWriter object that can be used to write to a file.
-- __file__: Creates a File object containing file properties.
+- __createWriter__: Creates a [FileWriter](../filewriter/filewriter.html) object that can be used to write to a file.
+- __file__: Creates a [File](../fileobj/fileobj.html) object containing file properties.
 
 
 Supported Platforms
@@ -68,8 +68,8 @@ Look up metadata about a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [Metadata](../metadata/metadata.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the [Metadata](../metadata/metadata.html). Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -146,7 +146,7 @@ __Quick Example__
 	    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
 
-	setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+	setFileMetadata([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
@@ -163,7 +163,7 @@ __Parameters:__
 - __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
 - __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -198,7 +198,7 @@ __Parameters:__
 - __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
 - __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 
 __Quick Example__
@@ -241,7 +241,7 @@ Deletes a file.
 __Parameters:__
 
 - __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 
@@ -260,12 +260,12 @@ __Quick Example__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the file.
+Look up the parent [DirectoryEntry](../directoryentry/directoryentry.html) containing the file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with the file's parent [DirectoryEntry](../directoryentry/directoryentry.html). _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent [DirectoryEntry](../directoryentry/directoryentry.html).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 
@@ -284,12 +284,12 @@ __Quick Example__
 createWriter
 ------------
 
-Create a FileWriter object associated with the file that the FileEntry represents.
+Create a [FileWriter](../filewriter/filewriter.html) object associated with the file that the FileEntry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [FileWriter](../filewriter/filewriter.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs while attempting to create the [FileWriter](../filewriter/filewriter.html).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 
@@ -308,12 +308,12 @@ __Quick Example__
 file
 ----
 
-Return a File object that represents the current state of the file that this FileEntry represents.
+Return a [File](../fileobj/fileobj.html) object that represents the current state of the file that this FileEntry represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a File object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a [File](../fileobj/fileobj.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when creating the [File](../fileobj/fileobj.html) object (e.g. the underlying file no longer exists).  Invoked with a [FileError](../fileerror/fileerror.html) object. _(Function)_
 
 __Quick Example__
 

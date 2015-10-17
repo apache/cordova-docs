@@ -34,7 +34,7 @@ top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
 For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
+plugins, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). See Application Plugins
 for an overview.
 
 ## Create a Project
@@ -71,7 +71,7 @@ The `run` command accepts the following _optional_ parameters:
     $ /path/to/project/cordova/run [Target] [Build]
     $ C:\path\to\project\cordova\run.bat [Target] [Build]
 
-Make sure you create at least one Android Virtual Device, otherwise
+Make sure you create at least one Android Virtual [Device](../../../cordova/device/device.html), otherwise
 you're prompted to do so with the `android` command.  If more than one
 AVD is available as a target, you're prompted to select one. By
 default the `run` command detects a connected device, or a currently

@@ -22,7 +22,7 @@ title: device.name
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `[device.model](device.model.html)` instead.
 
 장치의 모델 이름을 얻을.
 
@@ -31,7 +31,7 @@ title: device.name
 
 ## 설명
 
-`device.name`소자의 모델 또는 제품의 이름을 반환합니다. 이 값 장치 제조업체에서 설정 되 고 동일 제품의 버전 간에 다를 수 있습니다.
+`device.name`소자의 모델 또는 제품의 이름을 반환합니다. 이 값 [장치](device.html) 제조업체에서 설정 되 고 동일 제품의 버전 간에 다를 수 있습니다.
 
 ## 지원 되는 플랫폼
 
@@ -95,7 +95,7 @@ title: device.name
 
 ## Windows Phone 7, 8 특수
 
-*   제조업체에서 지정 하는 장치 모델을 반환 합니다. 예를 들어 삼성 포커스를 반환 합니다.`SGH-i917`.
+*   제조업체에서 지정 하는 [장치](device.html) 모델을 반환 합니다. 예를 들어 삼성 포커스를 반환 합니다.`SGH-i917`.
 
 ## Tizen 특수
 

@@ -26,9 +26,9 @@ title: Amazon Fire платформы OS Гид
 
 Смотрите ниже для более подробной информации конкретной платформы:
 
-*   Amazon Fire OS конфигурации
-*   Amazon Fire OS WebViews
-*   Amazon Fire OS плагины
+*   [Amazon Fire OS конфигурации](config.html)
+*   [Amazon Fire OS WebViews](webview.html)
+*   [Amazon Fire OS плагины](plugin.html)
 
 ## Требования и поддержка
 

@@ -33,7 +33,7 @@ projects.
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in [The Command-line Interface](../../cli/index.html).
 
 2. Add your platforms the the cordova project, for example: `cordova
    platform add wp7 wp8`.

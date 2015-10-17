@@ -24,11 +24,11 @@ title: Appareil photo
 
 > L'objet `camera` donne accès à l'application de caméra par défaut de l'appareil.
 
-**Remarque importante sur la vie privée :** La collecte et l'utilisation des images de la caméra d'un appareil de mesure soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise l'appareil photo et si les images enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant que votre application n'accède à la caméra (si le système d'exploitation de périphérique ne le fait pas déjà). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Pour plus d'informations, consultez le Guide de la vie privée.
+**Remarque importante sur la vie privée :** La collecte et l'utilisation des images de la caméra d'un appareil de mesure soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise l'appareil photo et si les images enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant que votre application n'accède à la caméra (si le système d'exploitation de périphérique ne le fait pas déjà). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Pour plus d'informations, consultez le [Guide de la vie privée](../../guide/appdev/privacy/index.html).
 
 ## Méthodes
 
-*   camera.getPicture
+*   [camera.getPicture](camera.getPicture.html)
 *   Camera.Cleanup
 
 ## Accéder à la fonctionnalité

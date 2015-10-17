@@ -29,7 +29,7 @@ Properties
 ----------
 
 - __readyState:__ One of the three states the reader can be in INIT, WRITING or DONE.
-- __fileName:__ The name of the file to be written. _(DOMString)_
+- __fileName:__ The [name](../../storage/parameters/name.html) of the file to be written. _(DOMString)_
 - __length:__ The length of the file to be written. _(long)_
 - __position:__ The current position of the file pointer. _(long)_
 - __error:__ An object containing errors. _(FileError)_
@@ -63,7 +63,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Seek Quick Example
+Seek Quick [Example](../../storage/storage.opendatabase.html)
 ------------------------------
 
 	function win(writer) {
@@ -77,7 +77,7 @@ Seek Quick Example
 	
     entry.createWriter(win, fail);
 
-Truncate Quick Example
+Truncate Quick [Example](../../storage/storage.opendatabase.html)
 --------------------------
 
 	function win(writer) {
@@ -90,7 +90,7 @@ Truncate Quick Example
 	
     entry.createWriter(win, fail);
 
-Write Quick Example
+Write Quick [Example](../../storage/storage.opendatabase.html)
 -------------------	
 
 	function win(writer) {
@@ -106,7 +106,7 @@ Write Quick Example
 	
     entry.createWriter(win, fail);
 
-Append Quick Example
+Append Quick [Example](../../storage/storage.opendatabase.html)
 --------------------	
 
 	function win(writer) {
@@ -123,7 +123,7 @@ Append Quick Example
 	
     entry.createWriter(win, fail);
 	
-Abort Quick Example
+Abort Quick [Example](../../storage/storage.opendatabase.html)
 -------------------
 
 	function win(writer) {
@@ -140,7 +140,7 @@ Abort Quick Example
 	
     entry.createWriter(win, fail);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
     <!DOCTYPE html>
     <html>

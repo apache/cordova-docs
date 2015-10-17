@@ -22,7 +22,7 @@ title: CameraPopoverHandle
 
 # CameraPopoverHandle
 
-Дескриптор диалогового окна инструмента, созданного`camera.getPicture`.
+Дескриптор диалогового окна инструмента, созданного`[camera.getPicture](../camera.getPicture.html)`.
 
 ## Методы
 
@@ -38,7 +38,7 @@ title: CameraPopoverHandle
 
 **Параметры:**
 
-*   `cameraPopoverOptions`: `CameraPopoverOptions` , укажите новое положение
+*   `cameraPopoverOptions`: `[CameraPopoverOptions](CameraPopoverOptions.html)` , укажите новое положение
 
 ## Быстрый пример
 

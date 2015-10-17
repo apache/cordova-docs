@@ -22,7 +22,7 @@ title: L'aggiornamento iOS
 
 # L'aggiornamento iOS
 
-Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare progetti iOS per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. [L'interfaccia della riga di comando](../../cli/index.html) per informazioni, vedere come aggiornare la versione di CLI.
 
 **Nota:** 5 Xcode Xcode 4.6 è obbligatorio, è consigliabile. Attualmente, per presentare all'Apple App Store, è necessario utilizzare più recente versione di iOS SDK, che è iOS 7. iOS SDK 7 non è necessario ancora, ma questo può cambiare rapidamente.
 
@@ -69,7 +69,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 3.0.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-3.0.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -87,7 +87,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.9.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.9.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -103,7 +103,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.8.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.8.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -135,7 +135,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.7.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.7.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -158,7 +158,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.6.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.6.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -189,7 +189,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.5.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.5.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -220,7 +220,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.4.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.4.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -251,7 +251,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.3.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.3.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -269,7 +269,7 @@ platform add ios`.
 
 10. Convertire il `Cordova.plist` del file di `config.xml` , eseguendo lo script `bin/cordova\_plist\_to\_config\_xml` su file di progetto.
 
-11. Aggiungere il plugin InAppBrowser per tuo `config.xml` , aggiungendo questo tag sotto `<cordova><plugins>` :
+11. Aggiungere il plugin [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) per tuo `config.xml` , aggiungendo questo tag sotto `<cordova><plugins>` :
     
         < nome plugin = "InAppBrowser" value = "CDVInAppBrowser" / >
         
@@ -286,7 +286,7 @@ platform add ios`.
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.2.0 per un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova-2.2.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -310,7 +310,7 @@ platform add ios`.
         
         `update_cordova_subproject percorso/per/your/progetto/xcodeproj`
 
-**Nota:** In 2.2.0, il `bin/create` lo script copia nella `CordovaLib` Sub-progetto nel progetto. Per avere lo stesso tipo di installazione, basta copiare il diritto `CordovaLib` nella directory del progetto e aggiornamento il `CordovaLib` sottoprogetto percorso (relativo al progetto) in Xcode File ispettore.
+**Nota:** In 2.2.0, il `bin/create` lo script copia nella `CordovaLib` Sub-progetto nel progetto. Per avere lo stesso tipo di installazione, basta copiare il diritto `CordovaLib` nella directory del progetto e aggiornamento il `CordovaLib` sottoprogetto percorso (relativo al progetto) in Xcode [File](../../../cordova/file/fileobj/fileobj.html) ispettore.
 
 ## All'aggiornamento 2.0.0 proietta alla 2.1.0
 
@@ -318,7 +318,7 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggi
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.1.0 a una posizione permanente directory sul disco rigido, ad esempio`~/Documents/Cordova-2.1.0`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
@@ -415,7 +415,7 @@ Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggi
 
 27. Selezionare il `VERSION` file appena trascinata in un passaggio precedente.
 
-28. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector** (o menuitem **Mostra Utilities → → Visualizza File ispettore**).
+28. Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector** (o menuitem **Mostra Utilities → → [Visualizza](../../../cordova/inappbrowser/inappbrowser.html) [File](../../../cordova/file/fileobj/fileobj.html) ispettore**).
 
 29. Scegliere **relativa a CORDOVALIB** nel **File ispettore** per il menu a discesa per **posizione**.
 

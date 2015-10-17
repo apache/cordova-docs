@@ -44,7 +44,7 @@ Ermöglicht den Zugriff auf die W3C [Web-Speicherschnittstelle][1]
 
 ## Informationen
 
-Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede Datenbank bietet einen separaten Namespace.
+Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede [Datenbank](../database/database.html) bietet einen separaten Namespace.
 
  [2]: http://dev.w3.org/html5/webstorage/
 

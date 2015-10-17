@@ -20,7 +20,7 @@ license: >
 title: Project Settings for iOS
 ---
 
-Project Settings for iOS
+[Project Settings](../index.html) for iOS
 ========================
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
@@ -34,7 +34,7 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 
 2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are `whiteLarge`, `white`, and `gray`
 
-3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate) **DEPRECATED**: please set the **onload** attribute of the **Geolocation** plugin to **true** instead.
+3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the [Geolocation](../../../cordova/geolocation/geolocation.html) plugin at start-up (so the fix on your location can be more accurate) **DEPRECATED**: please set the **onload** attribute of the **Geolocation** plugin to **true** instead.
 
 4. **EnableViewportScale (boolean, defaults to false)** - set to true to prevent viewport scaling through a meta tag
 

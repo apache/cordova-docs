@@ -84,7 +84,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.addEventListener("deviceready", function () {
+	        document.addEventListener("[deviceready](../../../cordova/events/events.deviceready.html)", function () {
 
 	            navigator.notification.alert("The device is ready!");
 

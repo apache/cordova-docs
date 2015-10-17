@@ -28,8 +28,8 @@ Viene illustrato come utilizzare sia Windows Phone-shell strumenti specifici per
 
 Vedi quanto segue per dettagli specifici per la piattaforma Windows Phone:
 
-*   Windows Phone 8 plugin
-*   L'aggiornamento di Windows Phone 8
+*   [Windows Phone 8 plugin](plugin.html)
+*   [L'aggiornamento di Windows Phone](upgrading.html) 8
 
 Per la piattaforma Windows Phone 8, Cordova WebView si basa su Internet Explorer 10 come suo motore di rendering, quindi in pratica è possibile utilizzare il debugger potente di IE10 per testare qualsiasi contenuto web che non richiama Cordova APIs. Il Blog di Windows Phone Developer fornisce [indicazioni utili][1] su come sostenere IE10 insieme paragonabile browser WebKit.
 
@@ -53,7 +53,7 @@ Per sviluppare applicazioni di Cordova per dispositivi Windows Phone, si può ut
 
 *   **VMWare Fusion**: per impostare la macchina virtuale di Windows 8, seguire le istruzioni fornite da [Microsoft Developer Network][5], quindi vedere la configurazione di VMWare Fusion per informazioni sulla preparazione dell'ambiente virtuale per eseguire l'emulatore fornito con il SDK.
 
-*   **Parallels Desktop**: per impostare la macchina virtuale di Windows 8, seguire le istruzioni fornite da [Microsoft Developer Network][6], quindi, vedere Configurazione di Parallels Desktop per informazioni sulla preparazione dell'ambiente virtuale per eseguire l'emulatore fornito con il SDK.
+*   **Parallels Desktop**: per impostare la macchina virtuale di Windows 8, seguire le istruzioni fornite da [Microsoft Developer Network][6], quindi, vedere [Configurazione di Parallels Desktop](parallels.html) per informazioni sulla preparazione dell'ambiente virtuale per eseguire l'emulatore fornito con il SDK.
 
  [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
  [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424

@@ -36,7 +36,7 @@ MediaFileData
 
 BlackBerry WebWorks に関する注意点
 --------------------------
-メディアファイルのフォーマット情報を提供する API はありません。 MediaFileData オブジェクトは、 MediaFile.getFormatData 関数によって返され、以下のようなデフォルト値を持ちます:
+メディアファイルのフォーマット情報を提供する API はありません。 MediaFileData オブジェクトは、 [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html) 関数によって返され、以下のようなデフォルト値を持ちます:
 
 - __codecs:__ サポートされていません。この属性は常に null となります。
 - __bitrate:__ サポートされていません。この属性は常に0となります。

@@ -23,7 +23,7 @@ title: contactSuccess
 contactSuccess
 ==============
 
-Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
+Success callback function that provides the `[Contact](../Contact/contact.html)` array resulting from a `[contacts.find](../contacts.find.html)` operation.
 
     function(contacts) {
         // Do something
@@ -32,9 +32,9 @@ Success callback function that provides the `Contact` array resulting from a `co
 Parameters
 ----------
 
-- __contacts:__ The contact array resulting from a find operation. (`Contact`)
+- __contacts:__ The contact array resulting from a find operation. (`[Contact](../Contact/contact.html)`)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function contactSuccess(contacts) {

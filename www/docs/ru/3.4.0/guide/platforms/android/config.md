@@ -44,7 +44,7 @@ title: Android конфигурации
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(логическое значение, по умолчанию `true` ): контроль ли страницы открыты в InAppBrowser получить доступ к же localStorage и WebSQL хранения страниц, открыт с браузером по умолчанию.
+*   `InAppBrowserStorageEnabled`(логическое значение, по умолчанию `true` ): контроль ли страницы открыты в InAppBrowser получить доступ к же [localStorage](../../../cordova/storage/localstorage/localstorage.html) и WebSQL хранения страниц, открыт с браузером по умолчанию.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

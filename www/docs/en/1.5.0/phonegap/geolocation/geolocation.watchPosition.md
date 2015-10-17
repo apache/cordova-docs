@@ -39,12 +39,12 @@ Parameters
 Returns
 -------
 
-- __String__: returns a watch id that references the watch position interval. The watch id can be used with `geolocation.clearWatch` to stop watching for changes in position.
+- __String__: returns a watch id that references the watch position interval. The watch id can be used with `[geolocation.clearWatch](geolocation.clearWatch.html)` to stop watching for changes in position.
 
 Description
 -----------
 
-Function `geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+Function `geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `[geolocationSuccess](parameters/geolocationSuccess.html)` callback is invoked with a `[Position](Position/position.html)` object as the parameter.  If there is an error, the `[geolocationError](parameters/geolocationError.html)` callback is invoked with a `[PositionError](PositionError/positionError.html)` object.
 
 Supported Platforms
 -------------------
@@ -55,7 +55,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -81,7 +81,7 @@ Quick Example
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
     
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -115,7 +115,7 @@ Full Example
                                 '<hr />'      + element.innerHTML;
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a [PositionError](PositionError/positionError.html) object
 	    //
 	    function onError(error) {
 	        alert('code: '    + error.code    + '\n' +

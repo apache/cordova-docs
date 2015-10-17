@@ -42,7 +42,7 @@ media.getDuration
 - Windows Phone 7 (Mango)
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
         // オーディオプレイヤー

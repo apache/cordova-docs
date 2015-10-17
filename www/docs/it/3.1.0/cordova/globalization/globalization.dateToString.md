@@ -33,7 +33,7 @@ Restituisce la data formattata `String` tramite un `value` proprietà accessibil
 
 L'ingresso `date` parametro dovrebbe essere di tipo`Date`.
 
-Se c'è un errore di formattazione della data, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
+Se c'è un errore di formattazione della data, allora il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Il `options` parametro è facoltativo e valori predefiniti sono:
 

@@ -22,12 +22,12 @@ title: 블랙베리 플랫폼 가이드
 
 # 블랙베리 플랫폼 가이드
 
-이 가이드 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 [가이드](../../../index.html) 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   블랙베리 구성
-*   블랙베리 업그레이드
-*   블랙베리 플러그인
-*   블랙베리 명령줄 도구
+*   [블랙베리 구성](../blackberry10/config.html)
+*   [블랙베리 업그레이드](../blackberry10/upgrading.html)
+*   [블랙베리 플러그인](plugin.html)
+*   [블랙베리 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
@@ -80,7 +80,7 @@ WebWorks 자바 개발 키트 (JDK는)이 필요합니다. 윈도 즈를 위해 
 
 *   `blackberry`여러 하위 디렉터리에 포함 되어 있습니다. `example`디렉터리에 완전 한 코르도바 프로젝트. 복사는 `example` 디렉토리를 사용자의 컴퓨터에 다른 위치로 거기 이동.
 
-*   편집은 `project.properties` WebWorks SDK를 사용 하는 지정 하는 파일. 예를 들어, 여기 블랙베리 플레이 북, 블랙베리 스마트폰 (OS5-7), 또는 블랙베리 10 (QNX) 각각 설정이 있습니다.
+*   편집은 `project.properties` WebWorks SDK를 사용 하는 지정 하는 [파일](../../../cordova/file/fileobj/fileobj.html). 예를 들어, 여기 블랙베리 플레이 북, 블랙베리 스마트폰 (OS5-7), 또는 블랙베리 10 (QNX) 각각 설정이 있습니다.
     
         playbook.bbwp.dir=C:\\Program Motion\\BlackBerry WebWorks SDK에서 Files\\Research TabletOS 2.1.0.6\\bbwp blackberry.bbwp.dir=C:\\Program Files\\Research Motion\\BlackBerry WebWorks 포장기에서 qnx.bbwp.dir=C:\\Program 파일 (86) \\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
         
@@ -129,13 +129,13 @@ Files\\BlackBerry\\Simulator`.
         코르 도우 바/실행 각 본 코르도바/실행 블랙베리
     
 
-장치를 컴퓨터에 연결 되어 있는지 여부를 묻는 메시지가 아니오 대답.
+장치를 컴퓨터에 [연결](../../../cordova/connection/connection.html) 되어 있는지 여부를 묻는 메시지가 아니오 대답.
 
 **참고:** 블랙베리 OS 5 응용 프로그램에 설치 된 `Downloads` 디렉터리.
 
 ## 장치에 배포
 
-장치에 응용 프로그램을 배포, 그것 연결 해야 합니다, 그리고 당신은 코드 서명 키 위에서 설명한 대로 등록 해야 합니다. 또한, 블랙베리 각 본에 애플 리 케이 션을 배포 하는 **설정 → 보안 → 개발 모드** 옵션을 사용 하도록 설정 해야 합니다.
+장치에 응용 프로그램을 배포, 그것 [연결](../../../cordova/connection/connection.html) 해야 합니다, 그리고 당신은 코드 서명 키 위에서 설명한 대로 등록 해야 합니다. 또한, 블랙베리 각 본에 애플 리 케이 션을 배포 하는 **설정 → 보안 → 개발 모드** 옵션을 사용 하도록 설정 해야 합니다.
 
 블랙베리 각 본, 편집은 `project.properties` 파일을 수정 반영 장치의 IP 및 암호 descibed 위의 함께 서명 키 암호를 설정 하려면 다음:
 
@@ -148,7 +148,7 @@ Files\\BlackBerry\\Simulator`.
         코르 도우 바/실행 각 본 코르도바/실행 블랙베리
     
 
-장치를 컴퓨터에 연결 되어 있는지 여부를 묻는 메시지가 예 응답.
+장치를 컴퓨터에 [연결](../../../cordova/connection/connection.html) 되어 있는지 여부를 묻는 메시지가 예 응답.
 
 **참고:** 블랙베리 OS 5 응용 프로그램에 설치 된 `Downloads` 디렉터리.
 

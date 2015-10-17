@@ -22,7 +22,7 @@ title: iOS Configuration
 
 # iOS Configuration
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml [File](../../../cordova/file/fileobj/fileobj.html) pour plus d'informations sur les options de configuration globale.
 
 *   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` d'utiliser une balise meta de fenêtre d'affichage pour désactiver ou limiter la plage de mise à l'échelle de l'utilisateur.
     

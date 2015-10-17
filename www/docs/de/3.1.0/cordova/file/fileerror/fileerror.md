@@ -22,7 +22,7 @@ title: FileError
 
 # FileError
 
-A `FileError` -Objekt festgelegt ist, tritt ein Fehler in der Datei API-Methoden.
+A `FileError` -Objekt festgelegt ist, tritt ein Fehler in der [Datei](../fileobj/fileobj.html) API-Methoden.
 
 ## Eigenschaften
 

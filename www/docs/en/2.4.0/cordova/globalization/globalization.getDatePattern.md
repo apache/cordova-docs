@@ -37,7 +37,7 @@ It returns the pattern to the successCB callback with a properties object as a p
 - utc\_offset {Number}: The current difference in seconds between the client's time zone and coordinated universal time.
 - dst\_offset {Number}: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone.
 
-If there is an error obtaining the pattern, then the errorCB callback is invokedwith a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
+If there is an error obtaining the pattern, then the errorCB callback is invokedwith a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR.
 
 `options.formatLength` can be 'short', 'medium', 'long', or 'full'.
 `options.selector` can be 'date', 'time' or 'date and time'.
@@ -53,7 +53,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "pattern: M/d/yyyy h:mm a".
@@ -66,7 +66,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
       );
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

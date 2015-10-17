@@ -24,12 +24,12 @@ title: Configuración de blackBerry
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Se construye este preferencias detalles sección que sólo se aplican a BlackBerry 10. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `ChildBrowser` (el defecto `enable` o `disable`): deshabilita ventanas de navegador secundarias. De forma predeterminada, las apps lanzan una ventana del navegador secundario para mostrar los recursos de acceso mediante `window.open()` o especificando un objetivo de anclaje `_blank`. Especificar `disable` para anular este comportamiento predeterminado.
+*   `ChildBrowser` (el defecto `enable` o `disable`): deshabilita ventanas de navegador secundarias. De forma predeterminada, las apps lanzan una ventana del navegador secundario para mostrar los recursos de acceso mediante `[window.open](../../../cordova/inappbrowser/window.open.html)()` o especificando un objetivo de anclaje `_blank`. Especificar `disable` para anular este comportamiento predeterminado.
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker` (`enable` o el defecto `disable`): permite el bloqueador de ventanas emergentes, que evita que las llamadas a `window.Open ()`. De forma predeterminada, ventanas emergentes muestran en una ventana del explorador de niño. Establecer la preferencia para `enable` impide Mostrar en absoluto.
+*   `PopupBlocker` (`enable` o el defecto `disable`): permite el bloqueador de ventanas emergentes, que evita que las llamadas a `window.Open ()`. De forma predeterminada, ventanas emergentes muestran en una ventana del explorador de niño. Establecer la preferencia para `enable` impide [Mostrar](../../../cordova/inappbrowser/inappbrowser.html) en absoluto.
     
         <preference name="PopupBlocker" value="enable"/>
         

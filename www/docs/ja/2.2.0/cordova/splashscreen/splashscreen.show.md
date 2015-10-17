@@ -38,7 +38,7 @@ navigator.splashscreen.show() はアプリケーションのスプラッシュ�
 - Android
 - iOS
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     navigator.splashscreen.show();

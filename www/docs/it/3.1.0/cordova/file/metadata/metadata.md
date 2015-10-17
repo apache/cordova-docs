@@ -30,7 +30,7 @@ Un'interfaccia che fornisce informazioni sullo stato di un file o una directory.
 
 ## Dettagli
 
-Il `Metadata` oggetto rappresenta informazioni sullo stato di un file o una directory. Chiamare un `DirectoryEntry` o `FileEntry` dell'oggetto `getMetadata()` metodo si traduce in un `Metadata` istanza.
+Il `Metadata` oggetto rappresenta informazioni sullo stato di un file o una directory. Chiamare un `[DirectoryEntry](../directoryentry/directoryentry.html)` o `[FileEntry](../fileentry/fileentry.html)` dell'oggetto `getMetadata()` metodo si traduce in un `Metadata` istanza.
 
 ## Piattaforme supportate
 

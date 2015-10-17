@@ -22,7 +22,7 @@ title: contactSuccess
 
 # contactSuccess
 
-Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `contacts.find` operazione.
+Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `[contacts.find](../contacts.find.html)` operazione.
 
     function(contacts) {
         // Do something

@@ -26,7 +26,7 @@ capture.captureVideo
 > Start the video recorder application and return information about captured video clip file(s).
 
     navigator.device.capture.captureVideo( 
-	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
+	    [CaptureCB](CaptureCB.html) captureSuccess, [CaptureErrorCB](CaptureErrorCB.html) captureError, [CaptureVideoOptions options]
 	);
 
 Description
@@ -34,9 +34,9 @@ Description
 
 This method starts an asynchronous operation to capture video recordings using the device video recording application.  The operation allows the device user to capture multiple recordings in a single session.
 
-The capture operation ends when either the user exits the video recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureVideoOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single video clip.
+The capture operation ends when either the user exits the video recording application, or the maximum number of recordings, specified by the __limit__ parameter in [CaptureVideoOptions](captureVideoOptions.html), has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single video clip.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured video clip file.  If the operation is terminated by the user before an video clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation is finished, it will invoke the [CaptureCB](CaptureCB.html) callback with an array of [MediaFile](MediaFile.html) objects describing each captured video clip file.  If the operation is terminated by the user before an video clip is captured, the [CaptureErrorCB](CaptureErrorCB.html) callback will be invoked with a [CaptureError](CaptureError.html) object with the [CaptureError](CaptureError.html).`CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -48,7 +48,7 @@ Supported Platforms
 - Bada 2.x
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback
@@ -68,7 +68,7 @@ Quick Example
     // start video capture
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -132,7 +132,7 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture the video recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture the video recordings.  The developer will receive a [CaptureError](CaptureError.html).`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 Bada 2.x Quirks
 ---------------

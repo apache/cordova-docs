@@ -48,8 +48,8 @@ The inbound `currencyCode` parameter should be a `String` of one of
 the ISO 4217 currency codes, for example 'USD'.
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 ## Supported Platforms
 

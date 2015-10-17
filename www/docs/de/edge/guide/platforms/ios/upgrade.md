@@ -129,7 +129,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
@@ -147,7 +147,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova.js` Datei.
 
@@ -163,7 +163,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die `www/cordova.js` (Beachten Sie, dass es muss ein Version-Suffix nicht mehr, die Version ist in der Datei selbst in der Kopfzeile) Datei aus dem neuen Projekt in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.7.0.js`.
 
@@ -205,7 +205,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopie der `www/cordova-2.7.0.js` Datei aus dem neuen Projekt in das `www` Verzeichnis und Löschen der `www/cordova-2.6.0.js` Datei.
 
@@ -228,7 +228,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei des Projekts `www/cordova-2.6.0.js` in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.5.0.js`.
 
@@ -259,7 +259,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.5.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.4.0.js`.
 
@@ -290,7 +290,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.4.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.3.0.js`.
 
@@ -321,7 +321,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.3.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.2.0.js`.
 
@@ -356,7 +356,7 @@ Xcode 5 Fragen:
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.2.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.1.0.js`.
 
@@ -388,7 +388,7 @@ Mit Cordova 2.1.0 wurde `CordovaLib` aufgerüstet, um **Automatische Reference C
 
 3.  Terminal.app navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+4.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 5.  Kopieren Sie die Datei `www/cordova-2.1.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-2.0.0.js`.
 
@@ -419,7 +419,7 @@ Mit Cordova 2.1.0 wurde `CordovaLib` aufgerüstet, um **Automatische Reference C
 
 1.  Cordova 2.0.0 zu installieren.
 
-2.  Erstellen Sie ein neues Projekt, wie in iOS Shell Tool Guide beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
+2.  Erstellen Sie ein neues Projekt, wie in [iOS Shell Tool Guide](tools.html) beschrieben. Sie benötigen die Vermögen aus diesem neuen Projekt.
 
 3.  Kopieren Sie die Datei `www/cordova-2.0.0.js` aus dem neuen Projekt, in das `www`-Verzeichnis, und löschen Sie die Datei `www/cordova-1.9.0.js`.
 

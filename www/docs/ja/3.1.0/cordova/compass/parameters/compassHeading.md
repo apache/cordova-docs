@@ -22,7 +22,7 @@ title: compassHeading
 
 # compassHeading
 
-A `CompassHeading` オブジェクトに返される、 `compassSuccess` コールバック関数。
+A `CompassHeading` オブジェクトに返される、 `[compassSuccess](compassSuccess.html)` コールバック関数。
 
 ## プロパティ
 
@@ -36,7 +36,7 @@ A `CompassHeading` オブジェクトに返される、 `compassSuccess` コー�
 
 ## 説明
 
-`CompassHeading`オブジェクトに返される、 `compassSuccess` コールバック関数。
+`CompassHeading`オブジェクトに返される、 `[compassSuccess](compassSuccess.html)` コールバック関数。
 
 ## Android の癖
 

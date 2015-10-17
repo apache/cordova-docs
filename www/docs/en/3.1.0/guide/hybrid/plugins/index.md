@@ -109,7 +109,7 @@ Phone platforms. By structuring your plugin in a particular way and
 adding a `plugin.xml` manifest file, you can enable users to install
 your plugin via the command-line tooling.
 
-- Plugin Specification
+- [Plugin Specification](../../../plugin_ref/spec.html)
 
 ## Native
 
@@ -118,11 +118,11 @@ with at least one native implementation. Details to do so for each
 platform are listed below.  These guides continue to build on the
 simple Echo Plugin example discussed above.
 
-- Android Plugins
-- BlackBerry Plugins
-- BlackBerry 10 Plugins
-- iOS Plugins
-- Windows Phone Plugins
+- [Android Plugins](../../platforms/android/plugin.html)
+- [BlackBerry Plugins](../../platforms/blackberry/plugin.html)
+- [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+- [iOS Plugins](../../platforms/ios/plugin.html)
+- [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 The Tizen platform currently does not support plugins.
 

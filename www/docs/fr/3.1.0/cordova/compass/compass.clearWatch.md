@@ -27,7 +27,7 @@ Arrêter de regarder la boussole référencée par le paramètre ID de montre.
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID** : l'ID retourné par`compass.watchHeading`.
+*   **watchID** : l'ID retourné par`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Plates-formes prises en charge
 

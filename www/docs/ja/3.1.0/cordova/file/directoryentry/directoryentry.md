@@ -48,9 +48,9 @@ title: DirectoryEntry
 
 *   **setMetadata**： ディレクトリにメタデータを設定します。
 
-*   **[moveto]**: ファイル システムに別の場所にディレクトリを移動します。
+*   **[moveto]**: [ファイル](../fileobj/fileobj.html) システムに別の場所にディレクトリを移動します。
 
-*   **copyTo**: ファイル システム上の別の場所にディレクトリをコピーします。
+*   **copyTo**: [ファイル](../fileobj/fileobj.html) システム上の別の場所にディレクトリをコピーします。
 
 *   **網**: ディレクトリを検出する URL を返します。
 
@@ -58,7 +58,7 @@ title: DirectoryEntry
 
 *   **getParent**: 親ディレクトリを検索します。
 
-*   **createReader**: 新規作成 `DirectoryReader` をディレクトリからエントリを読み取ることができます。
+*   **createReader**: 新規作成 `[DirectoryReader](../directoryreader/directoryreader.html)` をディレクトリからエントリを読み取ることができます。
 
 *   **getDirectory**: 作成または、ディレクトリを検索します。
 
@@ -82,7 +82,7 @@ title: DirectoryEntry
 
 *   **successCallback**: が実行するコールバック関数を `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: コールバック関数を取得するときにエラーが発生した場合の実行を `Metadata` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: コールバック関数を取得するときにエラーが発生した場合の実行を `Metadata` 。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -155,7 +155,7 @@ title: DirectoryEntry
 
 ## [moveto]
 
-ファイル システム上の別の場所にディレクトリを移動します。アプリしようとすると、エラーが発生します。
+[ファイル](../fileobj/fileobj.html) システム上の別の場所にディレクトリを移動します。アプリしようとすると、エラーが発生します。
 
 *   任意の深さでそれ自体の内部または任意の子にディレクトリを移動します。
 
@@ -175,7 +175,7 @@ title: DirectoryEntry
 
 *   **successCallback**: コールバックで実行することを `DirectoryEntry` の新しいディレクトリ オブジェクト。*(機能)*
 
-*   **解り**: ディレクトリを移動するしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ディレクトリを移動するしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -200,7 +200,7 @@ title: DirectoryEntry
 
 ## copyTo
 
-ファイル システム上の別の場所にディレクトリをコピーします。アプリしようとすると、エラーが発生します。
+[ファイル](../fileobj/fileobj.html) システム上の別の場所にディレクトリをコピーします。アプリしようとすると、エラーが発生します。
 
 *   任意の深さでそれ自体の内部のディレクトリをコピーします。
 
@@ -216,7 +216,7 @@ title: DirectoryEntry
 
 *   **successCallback**: コールバックで実行することを `DirectoryEntry` の新しいディレクトリ オブジェクト。*(機能)*
 
-*   **解り**: 基になるディレクトリをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: 基になるディレクトリをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -262,7 +262,7 @@ title: DirectoryEntry
 
 *   **successCallback**: ディレクトリが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: ディレクトリを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ディレクトリを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -277,7 +277,7 @@ title: DirectoryEntry
 
 *   **successCallback**： ディレクトリの親を渡されるコールバック `DirectoryEntry` 。*(機能)*
 
-*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
+*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。 *(機能)*
 
 **簡単な例**
 
@@ -295,7 +295,7 @@ title: DirectoryEntry
 
 ## createReader
 
-ディレクトリ内のエントリを読み取る新しい DirectoryReader を作成します。
+ディレクトリ内のエントリを読み取る新しい [DirectoryReader](../directoryreader/directoryreader.html) を作成します。
 
 **簡単な例**
 
@@ -317,7 +317,7 @@ title: DirectoryEntry
 
 *   **successCallback**： で実行するコールバックを `DirectoryEntry` オブジェクト。*(機能)*
 
-*   **解り**: 作成または、ディレクトリを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: 作成または、ディレクトリを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -336,9 +336,9 @@ title: DirectoryEntry
 
 *   **オプション**: が存在しない場合、ファイルが作成されるかどうかを指定するオプション。*(フラグ)*
 
-*   **successCallback**: 渡されたコールバックを `FileEntry` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `[FileEntry](../fileentry/fileentry.html)` オブジェクト。*(機能)*
 
-*   **解り**: 作成または、ファイルを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: 作成または、ファイルを探しているときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -355,7 +355,7 @@ title: DirectoryEntry
 
 *   **successCallback**: の後に実行されるコールバック、 `DirectoryEntry` が削除されています。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: コールバックを削除しようとしたときにエラーが発生した場合に実行される、 `DirectoryEntry` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: コールバックを削除しようとしたときにエラーが発生した場合に実行される、 `DirectoryEntry` 。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 

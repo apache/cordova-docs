@@ -29,7 +29,7 @@ Rilascia le risorse audio del sistema operativo sottostante.
 
 ## Descrizione
 
-Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse audio del sistema operativo sottostante. Ciò è particolarmente importante per Android, dato che ci sono una quantità finita di OpenCore istanze per la riproduzione multimediale. Le applicazioni devono chiamare il `release` funzione per qualsiasi `Media` risorsa che non è più necessario.
+Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse audio del sistema operativo sottostante. Ciò è particolarmente importante per Android, dato che ci sono una quantità finita di OpenCore istanze per la riproduzione multimediale. Le applicazioni devono chiamare il `release` funzione per qualsiasi `[Media](media.html)` risorsa che non è più necessario.
 
 ## Piattaforme supportate
 

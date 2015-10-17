@@ -26,8 +26,8 @@ title: SplashScreen
 
 ## Méthodes
 
-*   splashscreen.Show
-*   splashscreen.Hide
+*   [splashscreen.Show](splashscreen.show.html)
+*   [splashscreen.Hide](splashscreen.hide.html)
 
 ## Accéder à la fonctionnalité
 

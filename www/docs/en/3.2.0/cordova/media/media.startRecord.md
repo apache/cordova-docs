@@ -140,7 +140,7 @@ recording for an audio file.
 
 - iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
 
-- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `File` API using `LocalFileSystem.TEMPORARY`. Any subdirectory specified at record time must already exist.
+- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `[File](../file/fileobj/fileobj.html)` API using `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY`. Any subdirectory specified at record time must already exist.
 
 - Files can be recorded and played back using the documents URI:
 

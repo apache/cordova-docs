@@ -31,9 +31,9 @@ title: compass.watchHeading
 
 羅盤是感應器，可檢測的方向或設備是針對性的標題。它的措施從 0 到 359.99 度中的標題。
 
-`compass.watchHeading`獲取設備的當前標題在固定的時間間隔。 檢索標題時，每次 `headingSuccess` 執行回呼函數。 指定的時間間隔，以毫秒為單位通過 `frequency` 參數的 `compassOptions` 物件。
+`compass.watchHeading`獲取設備的當前標題在固定的時間間隔。 檢索標題時，每次 `headingSuccess` 執行回呼函數。 指定的時間間隔，以毫秒為單位通過 `frequency` 參數的 `[compassOptions](parameters/compassOptions.html)` 物件。
 
-返回的表 ID 引用指南針手錶的時間間隔。可以使用 ID 與手錶 `compass.clearWatch` 停止了觀看指南針。
+返回的表 ID 引用指南針手錶的時間間隔。可以使用 ID 與手錶 `[compass.clearWatch](compass.clearWatch.html)` 停止了觀看指南針。
 
 ## 支援的平臺
 
@@ -129,6 +129,6 @@ title: compass.watchHeading
 
 ## iOS 的怪癖
 
-IOS 中 `compass.watchHeading` 以指定的度數改變時也可以獲得設備的當前標題。 每次的標題更改時由指定數目的度或更多， `headingSuccess` 執行回呼函數。 指定度的變化通過 `filter` 參數的 `compassOptions` 物件。 清除手錶像往常一樣通過傳遞到返回的表 ID `compass.clearWatch` 。 此功能將替換以前分開，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
+IOS 中 `compass.watchHeading` 以指定的度數改變時也可以獲得設備的當前標題。 每次的標題更改時由指定數目的度或更多， `headingSuccess` 執行回呼函數。 指定度的變化通過 `filter` 參數的 `[compassOptions](parameters/compassOptions.html)` 物件。 清除手錶像往常一樣通過傳遞到返回的表 ID `[compass.clearWatch](compass.clearWatch.html)` 。 此功能將替換以前分開，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
 
 只有一個 `watchHeading` 可以在 iOS 中一次效果。 如果 `watchHeading` 使用篩選器中，調用 `getCurrentHeading` 或 `watchHeading` 使用現有的篩選器值來指定標題的更改。 使用篩選器看標題的變化是與時間間隔比效率更高。

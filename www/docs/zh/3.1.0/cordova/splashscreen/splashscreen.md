@@ -26,8 +26,8 @@ title: 閃屏
 
 ## 方法
 
-*   splashscreen.show
-*   splashscreen.hide
+*   [splashscreen.show](splashscreen.show.html)
+*   [splashscreen.hide](splashscreen.hide.html)
 
 ## 訪問功能
 

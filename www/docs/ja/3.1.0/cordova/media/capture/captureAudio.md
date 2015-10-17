@@ -33,9 +33,9 @@ title: capture.captureAudio
 
 オーディオ録音デバイスの既定のオーディオ録音アプリケーションを使用してキャプチャする非同期操作を開始します。 操作を単一のセッションで複数の録音をキャプチャするデバイスのユーザーことができます。
 
-キャプチャ操作が終了、ユーザー アプリケーション、または録音で指定された最大数の録音が終了すると `CaptureAudioOptions.limit` に達した。 いいえの場合 `limit` パラメーターの値が指定されて、既定の 1 つ (1)、キャプチャ操作終了後、ユーザーが単一のオーディオ クリップを録音します。
+キャプチャ操作が終了、ユーザー アプリケーション、または録音で指定された最大数の録音が終了すると `[CaptureAudioOptions](captureAudioOptions.html).limit` に達した。 いいえの場合 `limit` パラメーターの値が指定されて、既定の 1 つ (1)、キャプチャ操作終了後、ユーザーが単一のオーディオ クリップを録音します。
 
-キャプチャ操作が完了すると、 `CaptureCallback` の配列を実行 `MediaFile` オーディオ クリップ ファイルをキャプチャしてそれぞれを記述するオブジェクトします。 オーディオ クリップをキャプチャする前に、ユーザーが操作を終了した場合、 `CaptureErrorCallback` で実行する、 `CaptureError` オブジェクト、特色、 `CaptureError.CAPTURE_NO_MEDIA_FILES` のエラー コード。
+キャプチャ操作が完了すると、 `CaptureCallback` の配列を実行 `MediaFile` オーディオ クリップ ファイルをキャプチャしてそれぞれを記述するオブジェクトします。 オーディオ クリップをキャプチャする前に、ユーザーが操作を終了した場合、 `CaptureErrorCallback` で実行する、 `[CaptureError](CaptureError.html)` オブジェクト、特色、 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` のエラー コード。
 
 ## サポートされているプラットフォーム
 
@@ -128,7 +128,7 @@ title: capture.captureAudio
 
 ## ブラックベリー WebWorks 癖
 
-*   BlackBerry の WebWorks のコルドバ**声ノート レコーダー**アプリケーションを起動し、リム、によって提供されるオーディオ録音をキャプチャしようとします。 アプリは受け取ります、 `CaptureError.CAPTURE_NOT_SUPPORTED` 、アプリケーションがデバイスにインストールされていない場合はエラー コード。
+*   BlackBerry の WebWorks のコルドバ**声ノート レコーダー**アプリケーションを起動し、リム、によって提供されるオーディオ録音をキャプチャしようとします。 アプリは受け取ります、 `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` 、アプリケーションがデバイスにインストールされていない場合はエラー コード。
 
 ## iOS の癖
 

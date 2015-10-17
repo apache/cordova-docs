@@ -24,7 +24,7 @@ title: Android Plugins
 
 Escribir un plugin requiere una comprensión de la arquitectura de Córdoba-Android. Cordova-Android consta de un WebView androide con ganchos conectados a él. Estos plugins son representados como asignaciones de clase en el `config.xml` archivo.
 
-Un plugin consiste en por lo menos una clase Java que extiende la `CordovaPlugin` clase. Un plugin debe reemplazar uno de los `execute` métodos de `CordovaPlugin` . Como mejor práctica, debe manejar el plugin `pause` y `resume` eventos y cualquier mensaje pasando entre plugins. Plugins con solicitudes de larga duración, actividad de fondo como medios de reproducción, los oyentes o estado interno debe implementar el `onReset()` método también. Se ejecuta cuando el `WebView` se desplaza a una nueva página o actualizaciones, que vuelve a cargar el JavaScript.
+Un plugin consiste en por lo menos una clase Java que extiende la `CordovaPlugin` clase. Un plugin debe reemplazar uno de los `execute` métodos de `CordovaPlugin` . Como mejor práctica, debe manejar el plugin `[pause](../../../cordova/events/events.pause.html)` y `[resume](../../../cordova/events/events.resume.html)` eventos y cualquier mensaje pasando entre plugins. Plugins con solicitudes de larga duración, actividad de fondo como medios de reproducción, los oyentes o estado interno debe implementar el `onReset()` método también. Se ejecuta cuando el `WebView` se desplaza a una nueva página o actualizaciones, que vuelve a cargar el JavaScript.
 
 ## Asignación de clase plugin
 

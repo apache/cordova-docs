@@ -30,7 +30,7 @@ Das [Microsoft Developer Network][1] bietet allgemeine Anweisungen zum Ausführe
 
 1.  Parallels Desktop wählen Sie die Windows 8 Image-Datei, die Sie vorbereitet haben, und wählen Sie **Einstellungen**.
 
-2.  Wählen Sie die **Allgemeine → CPUs** . Geben Sie *zwei* CPUs. Geben Sie mindestens 2GB Speicher, auch wenn es außerhalb des empfohlenen Bereichs liegt:
+2.  Wählen Sie die **Allgemeine → CPUs** . Geben Sie *zwei* CPUs. Geben Sie mindestens 2GB [Speicher](../../../cordova/storage/storage.html), auch wenn es außerhalb des empfohlenen Bereichs liegt:
     
     ![][2]
 

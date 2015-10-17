@@ -23,6 +23,6 @@ title: contactFields
 contactFields
 =============
 
-Required parameter of the `contacts.find` method.  Use this parameter to specify which fields should be included in the `Contact` objects resulting from a find operation.
+Required parameter of the `[contacts.find](../contacts.find.html)` method.  Use this parameter to specify which fields should be included in the `[Contact](../Contact/contact.html)` objects resulting from a find operation.
 
     ["name", "phoneNumbers", "emails"]

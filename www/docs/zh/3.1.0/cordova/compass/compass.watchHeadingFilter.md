@@ -22,4 +22,4 @@ title: compass.watchHeadingFilter
 
 # compass.watchHeadingFilter
 
-不再支援 1.6，見 `compass.watchHeading` 為等效的功能。
+不再支援 1.6，見 `[compass.watchHeading](compass.watchHeading.html)` 為等效的功能。

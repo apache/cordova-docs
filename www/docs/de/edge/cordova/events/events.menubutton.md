@@ -31,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Menü-Taste drückt.
 
 Anwenden eines Event-handlers überschreibt das Standardverhalten der Menü-Taste.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

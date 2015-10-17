@@ -31,9 +31,9 @@ A intervalli regolari, ottenere la bussola in gradi.
 
 La bussola è un sensore che rileva la direzione o la voce che il dispositivo è appuntito. Esso misura la rotta in gradi da 0 a 359.99.
 
-Il `compass.watchHeading` ottiene il titolo attuale del dispositivo a intervalli regolari. Ogni volta che viene recuperato il titolo, il `headingSuccess` viene eseguita la funzione di callback. Specificare l'intervallo in millisecondi tramite il `frequency` parametro nel `compassOptions` oggetto.
+Il `compass.watchHeading` ottiene il titolo attuale del dispositivo a intervalli regolari. Ogni volta che viene recuperato il titolo, il `headingSuccess` viene eseguita la funzione di callback. Specificare l'intervallo in millisecondi tramite il `frequency` parametro nel `[compassOptions](parameters/compassOptions.html)` oggetto.
 
-L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologio ID può essere usato con `compass.clearWatch` a smettere di guardare la bussola.
+L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologio ID può essere usato con `[compass.clearWatch](compass.clearWatch.html)` a smettere di guardare la bussola.
 
 ## Piattaforme supportate
 
@@ -129,6 +129,6 @@ L'orologio restituito ID fa riferimento l'intervallo orologio bussola. L'orologi
 
 ## iOS stranezze
 
-In iOS `compass.watchHeading` può anche ottenere la voce corrente del dispositivo quando cambia da un numero di gradi specificato. Ogni volta che i cambiamenti di direzione del numero specificato di gradi o più, il `headingSuccess` viene eseguita la funzione di callback. Specificare i gradi di variazione tramite il `filter` parametro nel `compassOptions` oggetto. Cancellare l'orologio come al solito passando l'ID orologio restituito da `compass.clearWatch` . Questa funzionalità sostituisce il precedentemente separati, solo iOS `watchHeadingFilter` e `clearWatchFilter` funzioni, che sono stati rimossi nella versione 1.6.
+In iOS `compass.watchHeading` può anche ottenere la voce corrente del dispositivo quando cambia da un numero di gradi specificato. Ogni volta che i cambiamenti di direzione del numero specificato di gradi o più, il `headingSuccess` viene eseguita la funzione di callback. Specificare i gradi di variazione tramite il `filter` parametro nel `[compassOptions](parameters/compassOptions.html)` oggetto. Cancellare l'orologio come al solito passando l'ID orologio restituito da `[compass.clearWatch](compass.clearWatch.html)` . Questa funzionalità sostituisce il precedentemente separati, solo iOS `watchHeadingFilter` e `clearWatchFilter` funzioni, che sono stati rimossi nella versione 1.6.
 
 Solo un `watchHeading` può essere in effetti una volta in iOS. Se un `watchHeading` utilizza un filtro, chiamata `getCurrentHeading` o `watchHeading` utilizza il valore esistente di filtro per specificare le modifiche intestazione. Guardando i cambiamenti di direzione con un filtro è più efficiente con intervalli di tempo.

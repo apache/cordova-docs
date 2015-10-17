@@ -29,9 +29,9 @@ title: searchbutton
 
 ## 세부 정보
 
-안 드 로이드 기본 검색 버튼 동작을 재정의 해야 할 경우 'searchbutton' 이벤트에 대 한 이벤트 리스너를 등록할 수 있습니다.
+안 드 로이드 기본 검색 버튼 동작을 재정의 해야 할 경우 'searchbutton' 이벤트에 대 한 [이벤트](events.html) 리스너를 등록할 수 있습니다.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 [이벤트](events.html) 리스너를 연결 하는 `[deviceready](events.deviceready.html)` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 

@@ -32,7 +32,7 @@ Details
 
 When the application's network connection changes to being online, the online event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -41,7 +41,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("online", onOnline, false);
@@ -50,7 +50,7 @@ Quick Example
         // Handle the online event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

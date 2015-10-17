@@ -22,7 +22,7 @@ title: accelerometerSuccess
 
 # accelerometerSuccess
 
-Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `Acceleration`.
+Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `[Acceleration](../acceleration/acceleration.html)`.
 
     function(acceleration) {
         // Do something

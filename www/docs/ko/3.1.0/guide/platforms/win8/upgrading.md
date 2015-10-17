@@ -34,7 +34,7 @@ title: 윈도우 8을 업그레이드
 
 1.  제거 `cordova-2.8.0.js` 프로젝트의 `www` 디렉터리.
 
-2.  추가 `cordova.js` 파일 소스에서 프로젝트의 `www` 디렉터리. (Note 파일 더 이상 파일 이름에 버전 번호를 포함 합니다.)
+2.  추가 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html) 소스에서 프로젝트의 `www` 디렉터리. (Note [파일](../../../cordova/file/fileobj/fileobj.html) 더 이상 [파일](../../../cordova/file/fileobj/fileobj.html) 이름에 버전 번호를 포함 합니다.)
 
 3.  빌드 및 테스트!
 
@@ -44,6 +44,6 @@ title: 윈도우 8을 업그레이드
 
 1.  제거 `cordova-2.7.0.js` 프로젝트의 `www` 디렉터리.
 
-2.  추가 `cordova.js` 파일 소스에서 프로젝트의 `www` 디렉터리. (Note 파일 더 이상 파일 이름에 버전 번호를 포함 합니다.)
+2.  추가 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html) 소스에서 프로젝트의 `www` 디렉터리. (Note [파일](../../../cordova/file/fileobj/fileobj.html) 더 이상 [파일](../../../cordova/file/fileobj/fileobj.html) 이름에 버전 번호를 포함 합니다.)
 
 3.  빌드 및 테스트!

@@ -23,4 +23,4 @@ title: compass.clearWatchFilter
 compass.clearWatchFilter
 ========================
 
-1.6以降はサポートされていません。 `compass.clearWatch` を参照してください。
+1.6以降はサポートされていません。 `[compass.clearWatch](compass.clearWatch.html)` を参照してください。

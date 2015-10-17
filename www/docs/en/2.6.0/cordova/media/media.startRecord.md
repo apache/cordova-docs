@@ -42,7 +42,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Record audio
@@ -65,7 +65,7 @@ Quick Example
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -148,7 +148,7 @@ iOS Quirks
 ----------
 
 - iOS only records to files of type .wav and returns an error if the file name extension is not correct.
-- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the File apis using LocalFileSystem.TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
+- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the [File](../file/fileobj/fileobj.html) apis using [LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
 - Files can be recorded and played back using the documents URI:
 
         var myMedia = new Media("documents://beer.mp3")

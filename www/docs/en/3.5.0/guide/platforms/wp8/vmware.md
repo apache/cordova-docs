@@ -54,4 +54,4 @@ Fusion.  After installing Windows, follow these steps:
         vhv.enable = "TRUE"
 
 Once you complete these steps, you are then ready to install the
-Windows Phone SDK.  See the Windows Phone Platform Guide for details.
+Windows Phone SDK.  See the [Windows Phone Platform Guide](index.html) for details.

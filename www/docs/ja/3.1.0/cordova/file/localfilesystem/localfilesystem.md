@@ -22,13 +22,13 @@ title: LocalFileSystem
 
 # LocalFileSystem
 
-このオブジェクトは、ルート ・ ファイル ・ システムを取得する方法を提供します。
+このオブジェクトは、ルート ・ [ファイル](../fileobj/fileobj.html) ・ システムを取得する方法を提供します。
 
 ## メソッド
 
-*   **requestFileSystem**： ファイル ・ システムを要求します。*(機能)*
+*   **requestFileSystem**： [ファイル](../fileobj/fileobj.html) ・ システムを要求します。*(機能)*
 
-*   **resolveLocalFileSystemURI**: 取得、 `DirectoryEntry` または `FileEntry` ローカル URI を使用します。*(機能)*
+*   **resolveLocalFileSystemURI**: 取得、 `[DirectoryEntry](../directoryentry/directoryentry.html)` または `[FileEntry](../fileentry/fileentry.html)` ローカル URI を使用します。*(機能)*
 
 ## 定数
 
@@ -117,7 +117,7 @@ title: LocalFileSystem
     
 
 *   **ウィンドウ**: グローバル ウィンドウ オブジェクトへの参照
-*   **タイプ**: ローカル ファイル システムの種類、LocalFileSystem 定数を参照ください
+*   **タイプ**: ローカル [ファイル](../fileobj/fileobj.html) システムの種類、LocalFileSystem 定数を参照ください
 *   **サイズ**: どのくらいのストレージ容量をバイト、必要とするアプリケーションで想定されることを示します。
 *   **successCallback**: ファイルシステム ・ オブジェクトを使って呼び出されます
 *   **解り**: エラー取得するファイルシステムが発生した場合に呼び出されます

@@ -33,9 +33,9 @@ title: capture.captureVideo
 
 開始非同步作業以捕獲使用該設備的視頻錄製應用程式的視頻錄製。該操作允許使用者在一個會話中捕獲多個錄音。
 
-在捕獲操作結束時或者在使用者退出視頻錄製應用程式或由指定的錄音的最大數目 `CaptureVideoOptions.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個視訊短片。
+在捕獲操作結束時或者在使用者退出視頻錄製應用程式或由指定的錄音的最大數目 `[CaptureVideoOptions](captureVideoOptions.html).limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個視訊短片。
 
-在捕獲操作完成後，它 `CaptureCB` 回檔執行與陣列的 `MediaFile` 物件描述每個捕獲視訊短片檔。 如果使用者終止之前捕獲的視訊短片，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
+在捕獲操作完成後，它 `[CaptureCB](CaptureCB.html)` 回檔執行與陣列的 `MediaFile` 物件描述每個捕獲視訊短片檔。 如果使用者終止之前捕獲的視訊短片，操作 `[CaptureErrorCB](CaptureErrorCB.html)` 回檔執行與 `[CaptureError](CaptureError.html)` 物件特色 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
 ## 支援的平臺
 
@@ -128,4 +128,4 @@ title: capture.captureVideo
 
 ## 黑莓 WebWorks 怪癖
 
-*   科爾多瓦的黑莓 WebWorks 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
+*   科爾多瓦的黑莓 WebWorks 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。

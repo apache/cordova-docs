@@ -41,7 +41,7 @@ It returns the pattern to the successCB callback with a properties object as a p
 - decimal: {String}: The decimal symbol to use for parsing and formatting.
 - grouping: {String}: The grouping symbol to use for parsing and formatting.
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
+If there is an error obtaining the pattern, then the errorCB callback is invoked with a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR.
 
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.
@@ -55,7 +55,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to:
@@ -84,7 +84,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
       {type:'decimal'}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

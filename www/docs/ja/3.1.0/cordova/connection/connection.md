@@ -26,7 +26,7 @@ title: 接続
 
 ## プロパティ
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## 定数
 

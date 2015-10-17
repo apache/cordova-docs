@@ -22,7 +22,7 @@ title: Magazyn
 
 # Magazyn
 
-> Przegląd opcji przechowywania dla Cordova.
+> [Przegląd](../../guide/overview/index.html) opcji przechowywania dla Cordova.
 
 Kilka magazyn funkcje API są dostępne dla aplikacji Cordova. Zobacz [html5rocks][1]. Aby uzyskać pełniejszy obraz i przykłady.
 

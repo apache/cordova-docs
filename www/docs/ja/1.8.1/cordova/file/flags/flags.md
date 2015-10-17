@@ -23,7 +23,7 @@ title: Flags
 Flags
 =====
 
-このオブジェクトは、 `DirectoryEntry` の __getFile__ メソッドと __getDirectory__ メソッド (ファイルやディレクトリを取得または作成するメソッド) に渡される引数として使われます。
+このオブジェクトは、 `[DirectoryEntry](../directoryentry/directoryentry.html)` の __getFile__ メソッドと __getDirectory__ メソッド (ファイルやディレクトリを取得または作成するメソッド) に渡される引数として使われます。
 
 プロパティー
 ----------
@@ -39,7 +39,7 @@ Flags
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // data ディレクトリを取得します。もし存在しない場合は、作成します

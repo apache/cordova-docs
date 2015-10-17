@@ -22,7 +22,7 @@ title: ContactField
 
 # ContactField
 
-Supports generic fields in a `Contact` object.  Some properties stored
+Supports generic fields in a `[Contact](../Contact/contact.html)` object.  Some properties stored
 as `ContactField` objects include email addresses, phone numbers, and
 URLs.
 
@@ -38,7 +38,7 @@ URLs.
 
 The `ContactField` object is a reusable component that represents
 contact fields generically.  Each `ContactField` object contains a
-`value`, `type`, and `pref` property.  A `Contact` object stores
+`value`, `type`, and `pref` property.  A `[Contact](../Contact/contact.html)` object stores
 several properties in `ContactField[]` arrays, such as phone numbers
 and email addresses.
 
@@ -46,7 +46,7 @@ In most instances, there are no pre-determined values for a
 `ContactField` object's __type__ attribute.  For example, a phone
 number can specify __type__ values of _home_, _work_, _mobile_,
 _iPhone_, or any other value that is supported by a particular device
-platform's contact database.  However, for the `Contact` __photos__
+platform's contact database.  However, for the `[Contact](../Contact/contact.html)` __photos__
 field, the __type__ field indicates the format of the returned image:
 __url__ when the __value__ attribute contains a URL to the photo
 image, or _base64_ when the __value__ contains a base64-encoded image

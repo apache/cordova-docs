@@ -26,7 +26,7 @@ Na `cordova` pripomoček ukazne vrstice je na visoki ravni orodje, ki vam omogo�
 
  [1]: http://cordova.apache.org
 
-Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte Uporaba Plugman za upravljanje Plugins. Glejte Uporaba Plugins za pregled.
+Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte [Uporaba Plugman za upravljanje Plugins](../../../plugin_ref/plugman.html). Glejte Uporaba Plugins za pregled.
 
 ## Windows Phone
 

@@ -26,21 +26,21 @@ title: 事件
 
 ## 事件種類
 
-*   deviceready
-*   暫停
-*   簡歷
-*   線上
-*   離線
-*   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [暫停](events.pause.html)
+*   [簡歷](events.resume.html)
+*   [線上](events.online.html)
+*   [離線](events.offline.html)
+*   [backbutton](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## 訪問功能
 

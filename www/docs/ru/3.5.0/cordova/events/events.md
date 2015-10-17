@@ -26,16 +26,16 @@ title: События
 
 ## Типы событий
 
-*   deviceready
-*   Пауза
-*   резюме
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [Пауза](events.pause.html)
+*   [резюме](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## События добавляемые [org.apache.cordova.battery-status][1]
 

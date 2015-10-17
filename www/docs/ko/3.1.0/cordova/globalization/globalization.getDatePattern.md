@@ -39,7 +39,7 @@ title: globalization.getDatePattern
 
 *   **dst_offset**: 클라이언트의 비 일광 절약 간격 (초)에 현재 일광 절약 시간제 오프셋의 시간대와 클라이언트의 일광 절약의 시간대. *(수)*
 
-패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로 합니다. 오류의 예상 된 코드는`GlobalizationError.PATTERN\_ERROR`.
+패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로 합니다. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`매개 변수는 선택적 이며 기본값은 다음 값:
 

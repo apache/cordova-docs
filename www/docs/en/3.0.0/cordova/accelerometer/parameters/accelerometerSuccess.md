@@ -23,7 +23,7 @@ title: accelerometerSuccess
 accelerometerSuccess
 ====================
 
-onSuccess callback function that provides the `Acceleration` information.
+onSuccess callback function that provides the `[Acceleration](../acceleration/acceleration.html)` information.
 
     function(acceleration) {
         // Do something
@@ -34,7 +34,7 @@ Parameters
 
 - __acceleration__: The acceleration at a single moment in time. (Acceleration)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function onSuccess(acceleration) {

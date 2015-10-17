@@ -39,7 +39,7 @@ Restituisce la posizione corrente del dispositivo come un `Position` oggetto.
 
 ## Descrizione
 
-`geolocation.getCurrentPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo per la `geolocationSuccess` callback con un `Position` oggetto come parametro. Se c'è un errore, il `geolocationError` callback viene passata una `PositionError` oggetto.
+`geolocation.getCurrentPosition`è una funzione asincrona. Restituisce la posizione corrente del dispositivo per la `[geolocationSuccess](parameters/geolocationSuccess.html)` callback con un `Position` oggetto come parametro. Se c'è un errore, il `[geolocationError](parameters/geolocationError.html)` callback viene passata una `[PositionError](PositionError/positionError.html)` oggetto.
 
 ## Piattaforme supportate
 

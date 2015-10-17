@@ -92,7 +92,7 @@ expose the same APIs as on other Cordova-supported platforms.
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.addEventListener("deviceready", function () {
+	        document.addEventListener("[deviceready](../../../cordova/events/events.deviceready.html)", function () {
 
 	            navigator.notification.alert("The device is ready!");
 

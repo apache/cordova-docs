@@ -31,12 +31,12 @@ Phone 8 apps do _not_ run on Windows Phone 7 devices.
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+* [Upgrading Windows Phone](../wp8/upgrading.html)
+* [Windows Phone Plugins](../wp8/plugin.html)
+* [Windows Phone Command-line Tools](../wp8/tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See [The Command-Line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## System Requirements
@@ -73,7 +73,7 @@ contains a `CordovaWP7_x_x_x.zip` file.
 
 To simplify development, Cordova bundles a script to build Visual
 Studio templates. These allow you to rapidly generate Cordova apps,
-and you can modify them if necessary.  The steps below show how to
+and you can modify them if necessary.  The steps below [show](../../../cordova/inappbrowser/inappbrowser.html) how to
 generate it.
 
 ### Run the Batch File to Create and Install the Templates

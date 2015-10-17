@@ -22,7 +22,7 @@ title: MediaError
 
 # MediaError
 
-A `MediaError` 物件返回到 `mediaError` 時出現錯誤的回呼函數。
+A `MediaError` 物件返回到 `[mediaError](../Parameters/mediaError.html)` 時出現錯誤的回呼函數。
 
 ## 屬性
 
@@ -39,4 +39,4 @@ A `MediaError` 物件返回到 `mediaError` 時出現錯誤的回呼函數。
 
 ## 說明
 
-`MediaError`物件傳遞給 `mediaError` 回呼函數時出現錯誤。
+`MediaError`物件傳遞給 `[mediaError](../Parameters/mediaError.html)` 回呼函數時出現錯誤。

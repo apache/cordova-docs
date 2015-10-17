@@ -37,7 +37,7 @@ The batterycritical handler will be called with an object that contains two prop
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -47,7 +47,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
@@ -57,7 +57,7 @@ Quick Example
        	alert("Battery Level Critical " + info.level + "%\nRecharge Soon!"); 
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

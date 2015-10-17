@@ -25,30 +25,30 @@ Storage
 
 > デバイスのストレージにアクセスする機能を提供します。
 
-この API は [W3C Web SQL Database 仕様書](http://dev.w3.org/html5/webdatabase/) と [W3C Web Storage API 仕様書](http://dev.w3.org/html5/webstorage/) をベースとしています。いくつかのデバイスではすでにこの機能の実装を提供しています。これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。ストレージのサポートがされてないデバイスについては、 Cordova の実装によって W3C の仕様に沿った機能が提供されます。
+この API は [W3C Web SQL [Database](database/database.html) 仕様書](http://dev.w3.org/html5/webdatabase/) と [W3C Web Storage API 仕様書](http://dev.w3.org/html5/webstorage/) をベースとしています。いくつかのデバイスではすでにこの機能の実装を提供しています。これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。ストレージのサポートがされてないデバイスについては、 Cordova の実装によって W3C の仕様に沿った機能が提供されます。
 
 メソッド
 -------
 
-- openDatabase
+- [openDatabase](storage.opendatabase.html)
 
 引数
 ---------
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+- [database_name](parameters/name.html)
+- [database_version](parameters/version.html)
+- [database_displayname](parameters/display_name.html)
+- [database_size](parameters/size.html)
 
 オブジェクト
 -------
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetList
-- SQLError
-- localStorage
+- [Database](database/database.html)
+- [SQLTransaction](sqltransaction/sqltransaction.html)
+- [SQLResultSet](sqlresultset/sqlresultset.html)
+- [SQLResultSetList](sqlresultsetlist/sqlresultsetlist.html)
+- [SQLError](sqlerror/sqlerror.html)
+- [localStorage](localstorage/localstorage.html)
 
 パーミッション
 -----------

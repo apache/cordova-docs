@@ -40,7 +40,7 @@ Methods
 Details
 -------
 
-The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
+The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html) object to the upload method.  On successful upload, the success callback will be called with a [FileUploadResult](../fileuploadresult/fileuploadresult.html) object.  If an error occurs, the error callback will be invoked with a [FileTransferError](../filetransfererror/filetransfererror.html) object.
 It is also possible to download a file from remote and save it on the device (only iOS and Android).
 
 Supported Platforms
@@ -59,8 +59,8 @@ __Parameters:__
 
 - __filePath__ - Full path of the file on the device
 - __server__ - URL of the server to receive the file (must already be encoded using encodeURI())
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
+- __successCallback__ - A callback that is called with a [Metadata](../metadata/metadata.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the [Metadata](../metadata/metadata.html). Invoked with a [FileTransferError](../filetransfererror/filetransfererror.html) object. _(Function)_
 - __options__ - Optional parameters such as file name and mimetype
 - __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
@@ -80,7 +80,7 @@ __Quick Example__
         console.log("upload error target " + error.target);
     }
 	
-	var options = new FileUploadOptions();
+	var options = new [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)();
 	options.fileKey="file";
 	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";
@@ -199,8 +199,8 @@ __Parameters:__
 
 - __source__ - URL of the server to download the file (must already be encoded using encodeURI())
 - __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
+- __successCallback__ - A callback that is called with a [FileEntry](../fileentry/fileentry.html) object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the [Metadata](../metadata/metadata.html). Invoked with a [FileTransferError](../filetransfererror/filetransfererror.html) object. _(Function)_
 - __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 - __options__ - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
@@ -233,7 +233,7 @@ __Quick Example__
 abort
 --------------
 
-Aborts an in-progress transfer. The onerror callback will be called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback will be called with a [FileTransferError](../filetransfererror/filetransfererror.html) object which has an error code of [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR.
 
 __Supported Platforms__
 
@@ -256,7 +256,7 @@ __Quick Example__
         console.log("upload error target " + error.target);
     }
 	
-	var options = new FileUploadOptions();
+	var options = new [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)();
 	options.fileKey="file";
 	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";

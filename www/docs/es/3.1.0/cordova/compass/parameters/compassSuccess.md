@@ -22,7 +22,7 @@ title: compassSuccess
 
 # compassSuccess
 
-función callback onSuccess que proporciona la brújula información vía un `compassHeading` objeto.
+función callback onSuccess que proporciona la brújula información vía un `[compassHeading](compassHeading.html)` objeto.
 
     function(heading) {
         // Do something

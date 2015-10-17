@@ -22,7 +22,7 @@ title: geolocation.getCurrentPosition
 
 # geolocation.getCurrentPosition
 
-Returns the device's current position as a `Position` object.
+Returns the device's current position as a `[Position](Position/position.html)` object.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
@@ -39,10 +39,10 @@ Returns the device's current position as a `Position` object.
 ## Description
 
 `geolocation.getCurrentPosition` is an asynchronous function. It
-returns the device's current position to the `geolocationSuccess`
-callback with a `Position` object as the parameter.  If there is an
-error, the `geolocationError` callback is passed a
-`PositionError` object.
+returns the device's current position to the `[geolocationSuccess](parameters/geolocationSuccess.html)`
+callback with a `[Position](Position/position.html)` object as the parameter.  If there is an
+error, the `[geolocationError](parameters/geolocationError.html)` callback is passed a
+`[PositionError](PositionError/positionError.html)` object.
 
 ## Supported Platforms
 

@@ -22,7 +22,7 @@ title: contactSuccess
 
 # contactSuccess
 
-Función de devolución de llamada de éxito que proporciona la `Contact` matriz resultante de una `contacts.find` operación.
+Función de devolución de llamada de éxito que proporciona la `Contact` matriz resultante de una `[contacts.find](../contacts.find.html)` operación.
 
     function(contacts) {
         // Do something

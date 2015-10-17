@@ -38,7 +38,7 @@ title: 안 드 로이드 WebViews
 
 2.  안 드 로이드 프로젝트의 코르도바 jar를 복사 `/libs` 디렉터리.
 
-3.  응용 프로그램의 편집 `main.xml` 파일 (아래 `/res/xml` )는 다음과 같이 표시 하는 `layout_height` , `layout_width` 및 `id` 응용 프로그램에 맞게 수정:
+3.  응용 프로그램의 편집 `main.xml` [파일](../../../cordova/file/fileobj/fileobj.html) (아래 `/res/xml` )는 다음과 같이 표시 하는 `layout_height` , `layout_width` 및 `id` 응용 프로그램에 맞게 수정:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"

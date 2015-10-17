@@ -39,7 +39,7 @@ Gibt das Muster auf der `successCallback` . Das als Parameter übergebene Objekt
 
 *   **Dst_offset**: der aktuelle Sommerzeit-Offset in Sekunden zwischen der Client-Sommerzeit der Zeitzone und der Client Tageslicht Speichern der Zeitzone. *(Anzahl)*
 
-Wenn es einen Fehler erhalten das Muster der `errorCallback` führt mit ein `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
+Wenn es einen Fehler erhalten das Muster der `errorCallback` führt mit ein `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 Die `options` Parameter ist optional und wird mit den folgenden Werten:
 

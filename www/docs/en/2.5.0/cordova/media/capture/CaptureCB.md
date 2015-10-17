@@ -32,9 +32,9 @@ Description
 
 This function is invoked after a successful capture operation has completed.  This means a media file has been captured, and either the user has exited the media capture application, or the capture limit has been reached.
 
-Each MediaFile object describes a captured media file.  
+Each [MediaFile](MediaFile.html) object describes a captured media file.  
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback

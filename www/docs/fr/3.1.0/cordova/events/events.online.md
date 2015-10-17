@@ -29,9 +29,9 @@ L'évènement se déclenche lorsqu'une application se connecte, quand l'appareil
 
 ## Détails
 
-L'évènement `online` se déclenche lorsqu'un appareil précédemment non-connecté se connecte au réseau, permettant ainsi à l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand la valeur de `connection.type` devient `NONE`.
+L'évènement `online` se déclenche lorsqu'un appareil précédemment non-connecté se connecte au réseau, permettant ainsi à l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand la valeur de `[connection.type](../connection/connection.type.html)` devient `NONE`.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 
@@ -87,7 +87,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 
 ## Notes au sujet d'iOS
 
-Lors du démarrage initial, le déclenchement du premier évènement `online` (si applicable) prend au moins une seconde avant quoi `connection.type` vaut `UNKNOWN`.
+Lors du démarrage initial, le déclenchement du premier évènement `online` (si applicable) prend au moins une seconde avant quoi `[connection.type](../connection/connection.type.html)` vaut `UNKNOWN`.
 
 ## Notes au sujet de Windows Phone 7
 

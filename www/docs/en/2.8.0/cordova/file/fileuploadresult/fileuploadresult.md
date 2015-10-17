@@ -23,7 +23,7 @@ title: FileUploadResult
 FileUploadResult
 ========
 
-A `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
+A `FileUploadResult` object is returned via the success callback of the [FileTransfer](../filetransfer/filetransfer.html) upload method.
 
 Properties
 ----------
@@ -35,7 +35,7 @@ Properties
 Description
 -----------
 
-The `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
+The `FileUploadResult` object is returned via the success callback of the [FileTransfer](../filetransfer/filetransfer.html) upload method.
 
 iOS Quirks
 ----------

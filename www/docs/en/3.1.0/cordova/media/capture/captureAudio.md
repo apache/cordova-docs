@@ -36,15 +36,15 @@ the device user to capture multiple recordings in a single session.
 
 The capture operation ends when either the user exits the audio
 recording application, or the maximum number of recordings specified
-by `CaptureAudioOptions.limit` is reached.  If no `limit` parameter
+by `[CaptureAudioOptions](captureAudioOptions.html).limit` is reached.  If no `limit` parameter
 value is specified, it defaults to one (1), and the capture operation
 terminates after the user records a single audio clip.
 
 When the capture operation finishes, the `CaptureCallback` executes
-with an array of `MediaFile` objects describing each captured audio
+with an array of `[MediaFile](MediaFile.html)` objects describing each captured audio
 clip file.  If the user terminates the operation before an audio clip
-is captured, the `CaptureErrorCallback` executes with a `CaptureError`
-object, featuring the `CaptureError.CAPTURE_NO_MEDIA_FILES` error
+is captured, the `CaptureErrorCallback` executes with a `[CaptureError](CaptureError.html)`
+object, featuring the `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` error
 code.
 
 ## Supported Platforms
@@ -136,7 +136,7 @@ code.
 
 ## BlackBerry WebWorks Quirks
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 ## iOS Quirks
 

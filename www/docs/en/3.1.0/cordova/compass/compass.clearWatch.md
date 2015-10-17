@@ -26,7 +26,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: The ID returned by `compass.watchHeading`.
+- __watchID__: The ID returned by `[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Supported Platforms
 

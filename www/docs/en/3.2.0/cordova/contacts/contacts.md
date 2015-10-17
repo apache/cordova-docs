@@ -27,7 +27,7 @@ title: Contacts
 __WARNING__: Collection and use of contact data raises
 important privacy issues.  Your app's privacy policy should discuss
 how the app uses contact data and whether it is shared with any other
-parties.  Contact information is considered sensitive because it
+parties.  [Contact](Contact/contact.html) information is considered sensitive because it
 reveals the people with whom a person communicates.  Therefore, in
 addition to the app's privacy policy, you should strongly consider
 providing a just-in-time notice before the app accesses or uses
@@ -39,29 +39,29 @@ marketplaces may require the app to provide a just-in-time notice and
 obtain the user's permission before accessing contact data.  A
 clear and easy-to-understand user experience surrounding the use of
 contact data helps avoid user confusion and perceived misuse of
-contact data.  For more information, please see the Privacy Guide.
+contact data.  For more information, please see the [Privacy Guide](../../guide/appdev/privacy/index.html).
 
 ## Methods
 
-- contacts.create
-- contacts.find
+- [contacts.create](contacts.create.html)
+- [contacts.find](contacts.find.html)
 
 ## Arguments
 
-- contactFields
-- contactSuccess
-- contactError
-- contactFindOptions
+- [contactFields](parameters/contactFields.html)
+- [contactSuccess](parameters/contactSuccess.html)
+- [contactError](parameters/contactError.html)
+- [contactFindOptions](parameters/contactFindOptions.html)
 
 ## Objects
 
-- Contact
-- ContactName
-- ContactField
-- ContactAddress
-- ContactOrganization
-- ContactFindOptions
-- ContactError
+- [Contact](Contact/contact.html)
+- [ContactName](ContactName/contactname.html)
+- [ContactField](ContactField/contactfield.html)
+- [ContactAddress](ContactAddress/contactaddress.html)
+- [ContactOrganization](ContactOrganization/contactorganization.html)
+- [ContactFindOptions](ContactFindOptions/contactfindoptions.html)
+- [ContactError](ContactError/contactError.html)
 
 ## Accessing the Feature
 
@@ -129,4 +129,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

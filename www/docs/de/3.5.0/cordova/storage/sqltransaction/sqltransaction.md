@@ -22,7 +22,7 @@ title: SQLTransaction
 
 # SQLTransaction
 
-Ermöglicht die Ausführung von SQL-Anweisungen für die Datenbank.
+Ermöglicht die Ausführung von SQL-Anweisungen für die [Datenbank](../database/database.html).
 
 ## Methoden
 

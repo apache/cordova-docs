@@ -31,7 +31,7 @@ V primeru požarov, ko uporabnik pritisne gumb Išči na Android.
 
 Če želite preglasiti privzeti način iskanja gumb na Android registrirate dogodek poslušalca za "searchbutton" dogodek.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

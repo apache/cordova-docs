@@ -22,7 +22,7 @@ title: MediaError
 
 # MediaError
 
-A `MediaError` オブジェクトに返される、 `mediaError` コールバック関数でエラーが発生したとき。
+A `MediaError` オブジェクトに返される、 `[mediaError](../Parameters/mediaError.html)` コールバック関数でエラーが発生したとき。
 
 ## プロパティ
 
@@ -39,4 +39,4 @@ A `MediaError` オブジェクトに返される、 `mediaError` コールバッ
 
 ## 説明
 
-`MediaError`オブジェクトに渡されます、 `mediaError` コールバック関数でエラーが発生したとき。
+`MediaError`オブジェクトに渡されます、 `[mediaError](../Parameters/mediaError.html)` コールバック関数でエラーが発生したとき。

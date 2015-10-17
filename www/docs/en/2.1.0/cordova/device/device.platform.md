@@ -38,7 +38,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Depending on the device, a few examples are:
@@ -50,7 +50,7 @@ Quick Example
     //   - "Tizen"
     var devicePlatform = device.platform;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

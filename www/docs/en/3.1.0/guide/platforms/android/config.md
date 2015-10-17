@@ -25,12 +25,12 @@ title: Android Configuration
 The `config.xml` file controls an app's basic settings that apply
 across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
-config.xml File for information on global configuration options.
+config.xml [File](../../../cordova/file/fileobj/fileobj.html) for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
+  application stays running in the background even after a `[pause](../../../cordova/events/events.pause.html)`
   event fires. Note: setting this to false will not kill the app after
-  a pause event, it will only halt execution of code in the cordova
+  a [pause](../../../cordova/events/events.pause.html) event, it will only halt execution of code in the cordova
   webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>

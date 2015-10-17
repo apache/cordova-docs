@@ -22,13 +22,13 @@ title: FileReader
 
 # FileReader
 
-Die `FileReader` ermöglicht einfachen Zugriff auf eine Datei.
+Die `FileReader` ermöglicht einfachen Zugriff auf eine [Datei](../fileobj/fileobj.html).
 
 ## Eigenschaften
 
 *   **ReadyState**: einer der Leser der drei Staaten möglich, entweder `EMPTY` , `LOADING` oder`DONE`.
 
-*   **Ergebnis**: der Inhalt der Datei, die gelesen wurden. *(DOM-String und enthält)*
+*   **Ergebnis**: der Inhalt der [Datei](../fileobj/fileobj.html), die gelesen wurden. *(DOM-String und enthält)*
 
 *   **Fehler**: ein Objekt, die Fehler enthalten. *(FileError)*
 
@@ -44,23 +44,23 @@ Die `FileReader` ermöglicht einfachen Zugriff auf eine Datei.
 
 **Hinweis:** Die folgende Porperty wird nicht unterstützt:
 
-*   **OnProgress**: aufgerufen, beim Lesen der Datei Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
+*   **OnProgress**: aufgerufen, beim Lesen der [Datei](../fileobj/fileobj.html) Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
 
 ## Methoden
 
-*   **Abbrechen**: Abbrüche, die Datei zu lesen.
+*   **Abbrechen**: Abbrüche, die [Datei](../fileobj/fileobj.html) zu lesen.
 
-*   **ReadAsDataURL**: Datei und Rückgabedaten base64-codierte Daten im URL.
+*   **ReadAsDataURL**: [Datei](../fileobj/fileobj.html) und Rückgabedaten base64-codierte Daten im URL.
 
 *   **ReadAsText**: liest Text-Datei.
 
 *   **ReadAsBinaryString**: liest als Binär-Datei und eine binäre Zeichenfolge zurückgibt.
 
-*   **ReadAsArrayBuffer**: liest Datei als eine`ArrayBuffer`.
+*   **ReadAsArrayBuffer**: liest [Datei](../fileobj/fileobj.html) als eine`ArrayBuffer`.
 
 ## Informationen
 
-Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem Dateisystem des Geräts zu lesen. Dateien können als Text oder als eine base64-codierte Daten-Zeichenfolge gelesen werden. Ereignis-Listener empfangen die `loadstart` , `progress` , `load` , `loadend` , `error` , und `abort` Ereignisse.
+Das `FileReader` -Objekt bietet eine Möglichkeit, Dateien aus dem [Dateisystem](../filesystem/filesystem.html) des Geräts zu lesen. Dateien können als Text oder als eine base64-codierte Daten-Zeichenfolge gelesen werden. Ereignis-Listener empfangen die `loadstart` , `progress` , `load` , `loadend` , `error` , und `abort` Ereignisse.
 
 ## Unterstützte Plattformen
 

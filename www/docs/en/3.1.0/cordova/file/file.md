@@ -26,21 +26,21 @@ title: File
 
 ## Objects
 
-- DirectoryEntry
-- DirectoryReader
-- File
-- FileEntry
-- FileError
-- FileReader
-- FileSystem
-- FileTransfer
-- FileTransferError
-- FileUploadOptions
-- FileUploadResult
-- FileWriter
-- Flags
-- LocalFileSystem
-- Metadata
+- [DirectoryEntry](directoryentry/directoryentry.html)
+- [DirectoryReader](directoryreader/directoryreader.html)
+- [File](fileobj/fileobj.html)
+- [FileEntry](fileentry/fileentry.html)
+- [FileError](fileerror/fileerror.html)
+- [FileReader](filereader/filereader.html)
+- [FileSystem](filesystem/filesystem.html)
+- [FileTransfer](filetransfer/filetransfer.html)
+- [FileTransferError](filetransfererror/filetransfererror.html)
+- [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+- [FileUploadResult](fileuploadresult/fileuploadresult.html)
+- [FileWriter](filewriter/filewriter.html)
+- [Flags](flags/flags.html)
+- [LocalFileSystem](localfilesystem/localfilesystem.html)
+- [Metadata](metadata/metadata.html)
 
 ## Accessing the Feature
 
@@ -115,4 +115,4 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See _Platform Support_ in the Overview section.
+configuration.  See _Platform Support_ in the [Overview](../../guide/overview/index.html) section.

@@ -22,7 +22,7 @@ title: SQLTransaction
 
 # SQLTransaction
 
-Allows execution of SQL statements against the Database.
+Allows execution of SQL statements against the [Database](../database/database.html).
 
 ## Methods
 
@@ -30,7 +30,7 @@ Allows execution of SQL statements against the Database.
 
 ## Details
 
-Calling a `Database` object's transaction method, passes a
+Calling a `[Database](../database/database.html)` object's transaction method, passes a
 `SQLTransaction` object to the specified callback method.
 
 ## Supported Platforms

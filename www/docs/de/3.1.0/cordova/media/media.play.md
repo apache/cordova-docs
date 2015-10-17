@@ -184,7 +184,7 @@ Die `media.play` -Methode führt synchron, und startet oder setzt fort, Abspiele
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **Reihenfolge der Dateisuche**: Wenn nur ein Dateiname oder Pfad angegeben wird, sucht iOS in das `www` Verzeichnis für die Datei, dann in der Anwendung `documents/tmp` Verzeichnis:
+*   **Reihenfolge der Dateisuche**: Wenn nur ein Dateiname oder Pfad angegeben wird, sucht iOS in das `www` Verzeichnis für die [Datei](../file/fileobj/fileobj.html), dann in der Anwendung `documents/tmp` Verzeichnis:
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

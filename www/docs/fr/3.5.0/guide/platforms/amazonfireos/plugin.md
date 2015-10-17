@@ -22,7 +22,7 @@ title: Amazon Fire OS Plugins
 
 # Amazon Fire OS Plugins
 
-Suivez les instructions fournies dans le Guide de Plugins Android pour une vue d'ensemble du développement de plugins personnalisés.
+Suivez les instructions fournies dans le Guide de [Plugins Android](../android/plugin.html) pour une vue d'ensemble du développement de plugins personnalisés.
 
 ## Echo Amazon Fire OS Plugin exemple
 

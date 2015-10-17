@@ -26,7 +26,7 @@ title: connection.type
 
 ## 설명
 
-이 디바이스의 네트워크 연결 상태를 확인 하는 빠른 방법을 제공 합니다 및 연결의 종류.
+이 디바이스의 네트워크 [연결](connection.html) 상태를 확인 하는 빠른 방법을 제공 합니다 및 연결의 종류.
 
 ## 지원 되는 플랫폼
 
@@ -115,7 +115,7 @@ title: connection.type
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone 셀룰러 네트워크 연결 유형을 검색할 수 없습니다.
+*   Windows Phone 셀룰러 네트워크 [연결](connection.html) 유형을 검색할 수 없습니다.
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 

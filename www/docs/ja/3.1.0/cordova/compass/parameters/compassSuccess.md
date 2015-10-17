@@ -22,7 +22,7 @@ title: compassSuccess
 
 # compassSuccess
 
-onSuccess コールバック関数を介してコンパス針路情報を提供する、 `compassHeading` オブジェクト。
+onSuccess コールバック関数を介してコンパス針路情報を提供する、 `[compassHeading](compassHeading.html)` オブジェクト。
 
     function(heading) {
         // Do something

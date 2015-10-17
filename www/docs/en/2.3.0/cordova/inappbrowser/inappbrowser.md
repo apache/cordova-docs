@@ -23,14 +23,14 @@ title: InAppBrowser
 InAppBrowser
 ============
 
-> The InAppBrowser is a web-browser that is shown in your app when you use the `window.open` call.
+> The InAppBrowser is a web-browser that is shown in your app when you use the `[window.open](window.open.html)` call.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 Description
 -----------
 
-The object returned from a call to `window.open`.
+The object returned from a call to `[window.open](window.open.html)`.
 
 Methods
 ----------
@@ -78,13 +78,13 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -137,7 +137,7 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
@@ -145,7 +145,7 @@ Quick Example
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -208,13 +208,13 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

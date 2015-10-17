@@ -22,12 +22,12 @@ title: window.open
 
 # window.open
 
-新しい URL を開き `InAppBrowser` インスタンス、現在のブラウザー インスタンスまたはシステムのブラウザー。
+新しい URL を開き `[InAppBrowser](inappbrowser.html)` インスタンス、現在のブラウザー インスタンスまたはシステムのブラウザー。
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**: への参照を `InAppBrowser` ウィンドウ。*(InAppBrowser)*
+*   **ref**: への参照を `[InAppBrowser](inappbrowser.html)` ウィンドウ。*(InAppBrowser)*
 
 *   **url**: *(文字列)*をロードする URL。電話 `encodeURI()` 場合は、この上の URL は Unicode 文字を含みます。
 
@@ -37,7 +37,7 @@ title: window.open
     *   `_blank`: で開きます、`InAppBrowser`.
     *   `_system`: システムの web ブラウザーで開きます。
 
-*   **オプション**: おぷしょん、 `InAppBrowser` 。省略可能にする: `location=yes` 。*(文字列)*
+*   **オプション**: おぷしょん、 `[InAppBrowser](inappbrowser.html)` 。省略可能にする: `location=yes` 。*(文字列)*
     
     `options`文字列にはする必要があります任意の空白スペースが含まれていないと、各機能の名前と値のペアをコンマで区切る必要があります。 機能名では大文字小文字を区別します。 以下の値をサポートするプラットフォーム。
     

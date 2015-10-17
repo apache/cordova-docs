@@ -57,7 +57,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 14. Press the key combination **Option-Command-1** to show the **File Inspector**
 15. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location** 
 16. Click on the **project icon** in the Project Navigator, select your **Project**, then select the **"Build Settings"** tab
-17. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+17. Add `-all_load` and `-Obj-C` - for the **"Other Linker [Flags](../../cordova/file/flags/flags.html)"** value
 18. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
 19. Expand **"Link Binaries with Libraries"** 
 20. Click on the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):

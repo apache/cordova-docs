@@ -85,7 +85,7 @@ __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {
@@ -112,7 +112,7 @@ __Parameters:__
 
 - __encoding__: the encoding to use to encode the file's content. Default is UTF8.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {
@@ -130,7 +130,7 @@ Quick Example
 
     entry.file(win, fail);
 
-Abort Quick Example
+Abort Quick [Example](../../storage/storage.opendatabase.html)
 -------------------
 
     function win(file) {
@@ -149,7 +149,7 @@ Abort Quick Example
 
     entry.file(win, fail);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -227,7 +227,7 @@ __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {
@@ -254,7 +254,7 @@ __Parameters:__
 
 - __file__:  the file object to read.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {

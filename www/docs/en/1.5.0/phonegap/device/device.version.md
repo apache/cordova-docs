@@ -23,7 +23,7 @@ title: device.version
 device.version
 ==============
 
-Get the operating system version.
+Get the operating system [version](../storage/parameters/version.html).
 
     var string = device.version;
 
@@ -36,7 +36,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Froyo OS would return "2.2"
@@ -50,7 +50,7 @@ Quick Example
     // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
     var deviceVersion = device.version;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -39,11 +39,11 @@ title: geolocation.watchPosition
 
 ## 返します
 
-*   **文字列**: 時計の位置の間隔を参照する時計 id を返します。時計 id で使用する必要があります `geolocation.clearWatch` 停止位置の変化を監視します。
+*   **文字列**: 時計の位置の間隔を参照する時計 id を返します。時計 id で使用する必要があります `[geolocation.clearWatch](geolocation.clearWatch.html)` 停止位置の変化を監視します。
 
 ## 説明
 
-`geolocation.watchPosition`非同期関数です。 位置の変更が検出された場合は、デバイスの現在位置を返します。 デバイスを新しい場所を取得するとき、 `geolocationSuccess` コールバックを実行すると、 `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `geolocationError` コールバックを実行すると、 `PositionError` オブジェクトをパラメーターとして。
+`geolocation.watchPosition`非同期関数です。 位置の変更が検出された場合は、デバイスの現在位置を返します。 デバイスを新しい場所を取得するとき、 `[geolocationSuccess](parameters/geolocationSuccess.html)` コールバックを実行すると、 `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `[geolocationError](parameters/geolocationError.html)` コールバックを実行すると、 `[PositionError](PositionError/positionError.html)` オブジェクトをパラメーターとして。
 
 ## サポートされているプラットフォーム
 

@@ -23,7 +23,7 @@ title: BlackBerry Plugins
 # BlackBerry Plugins
 
 This guide shows how to develop an Echo plugin on BlackBerry.  The
-Plugin Development Guide provides a broad overview with which you
+[Plugin Development Guide](../../hybrid/plugins/index.html) provides a broad overview with which you
 should already be familiar, and this guide picks up where it leaves
 off.  In addition, download the [Cordova BlackBerry
 repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git).

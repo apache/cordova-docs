@@ -22,7 +22,7 @@ title: camera.getPicture
 
 # camera.getPicture
 
-カメラを使用して写真を取るか、デバイスの画像ギャラリーから写真を取得します。 イメージは base64 エンコードとして成功時のコールバックに渡される `String` 、またはイメージ ファイルの URI。 メソッド自体を返します、 `CameraPopoverHandle` オブジェクト ファイル選択ポップ オーバーの位置を変更するために使用することができます。
+カメラを使用して写真を取るか、デバイスの画像ギャラリーから写真を取得します。 イメージは base64 エンコードとして成功時のコールバックに渡される `String` 、またはイメージ ファイルの URI。 メソッド自体を返します、 `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` オブジェクト ファイル選択ポップ オーバーの位置を変更するために使用することができます。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
@@ -31,9 +31,9 @@ title: camera.getPicture
 
 `camera.getPicture`関数はデバイスのデフォルトのカメラ アプリケーションの写真をスナップするユーザーことができますを開きます。 既定では、この現象が発生したときに `Camera.sourceType` に等しい `Camera.PictureSourceType.CAMERA` 。 ユーザーは写真をスナップ、カメラ アプリケーションを閉じるし、アプリケーションが復元されます。
 
-場合 `Camera.sourceType` は、 `Camera.PictureSourceType.PHOTOLIBRARY` または `Camera.PictureSourceType.SAVEDPHOTOALBUM` 、その後、ダイアログが表示されますユーザーを既存のイメージを選択することができます。 `camera.getPicture`関数を返す、 `CameraPopoverHandle` オブジェクトは、たとえば、イメージの選択ダイアログには、デバイスの向きが変更されたときの位置を変更するために使用することができます。
+場合 `Camera.sourceType` は、 `Camera.PictureSourceType.PHOTOLIBRARY` または `Camera.PictureSourceType.SAVEDPHOTOALBUM` 、その後、ダイアログが表示されますユーザーを既存のイメージを選択することができます。 `camera.getPicture`関数を返す、 `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` オブジェクトは、たとえば、イメージの選択ダイアログには、デバイスの向きが変更されたときの位置を変更するために使用することができます。
 
-戻り値に送信されます、 `cameraSuccess` の指定によって、次の形式のいずれかのコールバック関数 `cameraOptions` :
+戻り値に送信されます、 `[cameraSuccess](parameter/cameraSuccess.html)` の指定によって、次の形式のいずれかのコールバック関数 `[cameraOptions](parameter/cameraOptions.html)` :
 
 *   A `String` 写真の base64 でエンコードされたイメージを含んでいます。
 

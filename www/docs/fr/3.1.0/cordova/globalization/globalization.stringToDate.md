@@ -55,7 +55,7 @@ Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
 Le `options.formatLength` peut être `short` , `medium` , `long` , ou `full` . Le `options.selector` peut être `date` , `time` ou`date and
 time`.
 
-S'il y a une erreur, l'analyse de la chaîne de date, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PARSING\_ERROR`.
+S'il y a une erreur, l'analyse de la chaîne de date, puis le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## Plates-formes prises en charge
 

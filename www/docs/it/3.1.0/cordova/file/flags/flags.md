@@ -22,7 +22,7 @@ title: Bandiere
 
 # Bandiere
 
-Fornisce argomenti per la `DirectoryEntry` dell'oggetto `getFile()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
+Fornisce argomenti per la `[DirectoryEntry](../directoryentry/directoryentry.html)` dell'oggetto `getFile()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
 
 ## Proprietà
 

@@ -29,7 +29,7 @@ title: openDatabase
 
 ## 설명
 
-메서드를 사용 하면 새 SQL 라이트 데이터베이스 만들고 반환는 `Database` 수 있는 데이터의 조작 개체.
+메서드를 사용 하면 새 SQL 라이트 [데이터베이스](database/database.html) 만들고 반환는 `Database` 수 있는 데이터의 조작 개체.
 
 ## 지원 되는 플랫폼
 

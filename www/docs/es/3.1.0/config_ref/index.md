@@ -31,8 +31,8 @@ Para proyectos creados con el CLI de Cordova (descrito en la interfaz de línea 
 Esta sección detalla las opciones de configuración global y multiplataforma. Consulte las siguientes secciones para las opciones específicas de la plataforma:
 
 *   Configuración de iOS
-*   Configuración de Android
-*   Configuración de blackBerry
+*   [Configuración de Android](../guide/platforms/android/config.html)
+*   [Configuración de blackBerry](../guide/platforms/blackberry10/config.html)
 
 Además de las diversas opciones de configuración detalladas a continuación, también puede configurar el conjunto básico de una aplicación de imágenes para cada plataforma de destino. Ver los iconos y salpicadura pantallas para obtener más información.
 

@@ -37,21 +37,21 @@ title: ストレージ
 
 ## メソッド
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## 引数
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## オブジェクト
 
-*   データベース
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
+*   [データベース](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
 *   Sqlerror 関数
 
 ## 機能へのアクセス

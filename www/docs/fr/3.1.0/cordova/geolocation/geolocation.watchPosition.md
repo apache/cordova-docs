@@ -39,11 +39,11 @@ Observer les changements de localisation de l'appareil.
 
 ## Retourne
 
-*   **String** : retourne un identifiant faisant référence à l'intervalle d'observation de la position. Cet identifiant est prévu pour être utilisé avec `geolocation.clearWatch` afin de pouvoir arrêter ultérieurement l'observation des changements de position.
+*   **String** : retourne un identifiant faisant référence à l'intervalle d'observation de la position. Cet identifiant est prévu pour être utilisé avec `[geolocation.clearWatch](geolocation.clearWatch.html)` afin de pouvoir arrêter ultérieurement l'observation des changements de position.
 
 ## Description
 
-`geolocation.watchPosition` est une fonction asynchrone. Elle renvoie la position actuelle de l'appareil lorsqu'un changement de position est détecté. Lorsque l'appareil récupère un nouvelle position, la fonction callback `geolocationSuccess` est exécutée avec un objet `Position` comme paramètre. Si une erreur se produit, la fonction callback `geolocationError` est appelée avec un obet `PositionError` comme paramètre.
+`geolocation.watchPosition` est une fonction asynchrone. Elle renvoie la position actuelle de l'appareil lorsqu'un changement de position est détecté. Lorsque l'appareil récupère un nouvelle position, la fonction callback `[geolocationSuccess](parameters/geolocationSuccess.html)` est exécutée avec un objet `[Position](Position/position.html)` comme paramètre. Si une erreur se produit, la fonction callback `[geolocationError](parameters/geolocationError.html)` est appelée avec un obet `[PositionError](PositionError/positionError.html)` comme paramètre.
 
 ## Plates-formes supportées
 

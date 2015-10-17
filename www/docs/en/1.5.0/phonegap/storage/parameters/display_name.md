@@ -23,4 +23,4 @@ title: display_name
 display_name
 ==================
 
-The display name of the database.
+The display [name](name.html) of the database.

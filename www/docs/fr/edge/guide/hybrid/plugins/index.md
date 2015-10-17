@@ -137,12 +137,12 @@ Le rappel du succès passé dans `exec` est simplement une référence à la fon
 
 Une fois que vous définissez JavaScript pour votre plugin, vous devez compléter au moins une implémentation native. Détails pour chaque plate-forme sont énumérés ci-dessous, et chacun s'appuie sur l'exemple simple de Plugin Echo ci-dessus :
 
-*   Amazon Fire OS Plugins
-*   Plugins Android
-*   iOS Plugins
-*   BlackBerry 10 Plugins
-*   Windows Phone 8 Plugins
-*   Plugins Windows
+*   [Amazon Fire OS Plugins](../../platforms/amazonfireos/plugin.html)
+*   [Plugins Android](../../platforms/android/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
+*   [Plugins Windows](../../platforms/win8/plugin.html)
 
 La plateforme de paciarelli ne supporte pas les plugins.
 

@@ -22,11 +22,11 @@ title: ConfigurationData
 
 # ConfigurationData
 
-> Kapselt eine Reihe von Medien-Aufnahme-Parameter, die ein Gerät unterstützt.
+> Kapselt eine Reihe von Medien-Aufnahme-Parameter, die ein [Gerät](../../device/device.html) unterstützt.
 
 ## Beschreibung
 
-Beschreibt Medien-Aufnahmemodi, die vom Gerät unterstützt. Die Konfigurationsdaten enthält den MIME-Typ und Capture Dimensionen für die Aufnahme von Video- oder Bilddateien.
+Beschreibt Medien-Aufnahmemodi, die vom [Gerät](../../device/device.html) unterstützt. Die Konfigurationsdaten enthält den MIME-Typ und Capture Dimensionen für die Aufnahme von Video- oder Bilddateien.
 
 Die MIME-Typen sollten [RFC2046][1]einhalten. Beispiele:
 

@@ -22,7 +22,7 @@ title: CameraPopoverHandle
 
 # CameraPopoverHandle
 
-A handle to the popover dialog created by `camera.getPicture`.
+A handle to the popover dialog created by `[camera.getPicture](../camera.getPicture.html)`.
 
 ## Methods
 
@@ -38,7 +38,7 @@ Set the position of the popover.
 
 __Parameters__:
 
-- `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
+- `cameraPopoverOptions`: the `[CameraPopoverOptions](CameraPopoverOptions.html)` that specify the new position
 
 ## Quick Example
 

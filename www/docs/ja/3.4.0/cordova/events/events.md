@@ -26,16 +26,16 @@ title: イベント
 
 ## イベントの種類
 
-*   deviceready
-*   一時停止します。
-*   再開
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [一時停止します。](events.pause.html)
+*   [再開](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## [Org.apache.cordova.battery ステータス][1]によって追加されるイベント
 

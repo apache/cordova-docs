@@ -77,8 +77,8 @@ Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
-- Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
-- Camera.EncodingType is not supported.
+- [Camera](../camera.html).PictureSourceType.PHOTOLIBRARY and [Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
+- [Camera](../camera.html).EncodingType is not supported.
 
 BlackBerry Quirks
 -----------------
@@ -86,9 +86,9 @@ BlackBerry Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
-- Application must have key injection permissions to close native Camera application after photo is taken.
+- Application must have key injection permissions to close native [Camera](../camera.html) application after photo is taken.
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
-- Camera.MediaType is not supported.
+- [Camera](../camera.html).MediaType is not supported.
 
 Palm Quirks
 -----------
@@ -96,7 +96,7 @@ Palm Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
-- Camera.MediaType is not supported.
+- [Camera](../camera.html).MediaType is not supported.
 
 iPhone Quirks
 --------------

@@ -29,8 +29,8 @@ Splashscreen
 メソッド
 -------
 
-- show
-- hide
+- [show](splashscreen.show.html)
+- [hide](splashscreen.hide.html)
 
 パーミッション
 -----------

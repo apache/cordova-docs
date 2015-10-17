@@ -31,7 +31,7 @@ onSuccess 콜백 함수를 제공 하는 `Acceleration` 정보.
 
 ## 매개 변수
 
-*   **가속**: 단일 시점에서 가속. (가속도)
+*   **가속**: 단일 시점에서 [가속](../acceleration/acceleration.html). (가속도)
 
 ## 예를 들어
 

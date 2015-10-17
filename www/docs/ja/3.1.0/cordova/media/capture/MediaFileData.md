@@ -22,7 +22,7 @@ title: MediaFileData
 
 # MediaFileData
 
-> メディア ファイルの形式情報をカプセル化します。
+> [メディア](../media.html) ファイルの形式情報をカプセル化します。
 
 ## プロパティ
 
@@ -38,7 +38,7 @@ title: MediaFileData
 
 ## ブラックベリー WebWorks 癖
 
-メディア ファイルの形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `MediaFile.getFormatData` 機能次の既定値。
+[メディア](../media.html) ファイルの形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `[MediaFile.getFormatData](MediaFile.getFormatData.html)` 機能次の既定値。
 
 *   **コーデック**： いないサポートしを返します`null`.
 

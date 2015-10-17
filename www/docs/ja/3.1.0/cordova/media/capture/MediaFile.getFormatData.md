@@ -22,14 +22,14 @@ title: MediaFile.getFormatData
 
 # MediaFile.getFormatData
 
-> 取得についての書式情報メディア キャプチャ ファイル。
+> 取得についての書式情報メディア [キャプチャ](capture.html) ファイル。
 
     mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB 解り]);
     
 
 ## 説明
 
-この関数は、非同期的にメディア ファイルの形式情報を取得しようとします。 かどうかは成功、呼び出します、 `MediaFileDataSuccessCB` コールバックを `MediaFileData` オブジェクト。 この関数を呼び出します、試行が失敗した場合、 `MediaFileDataErrorCB` コールバック。
+この関数は、非同期的にメディア ファイルの形式情報を取得しようとします。 かどうかは成功、呼び出します、 `MediaFileDataSuccessCB` コールバックを `[MediaFileData](MediaFileData.html)` オブジェクト。 この関数を呼び出します、試行が失敗した場合、 `MediaFileDataErrorCB` コールバック。
 
 ## サポートされているプラットフォーム
 
@@ -41,12 +41,12 @@ title: MediaFile.getFormatData
 
 ## ブラックベリー WebWorks 癖
 
-ので、すべてのメディア ファイルに関する情報の API を提供しない `MediaFileData` 既定値を持つオブジェクトを返します。
+ので、すべてのメディア ファイルに関する情報の API を提供しない `[MediaFileData](MediaFileData.html)` 既定値を持つオブジェクトを返します。
 
 ## Android の癖
 
-API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `MediaFileData` プロパティがサポートされます。
+API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `[MediaFileData](MediaFileData.html)` プロパティがサポートされます。
 
 ## iOS の癖
 
-API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `MediaFileData` プロパティがサポートされます。
+API 情報にアクセスするメディア ファイル形式は限られて、それで、必ずしもすべて `[MediaFileData](MediaFileData.html)` プロパティがサポートされます。

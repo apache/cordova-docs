@@ -23,7 +23,7 @@ title: FileError
 FileError
 ========
 
-`FileError` オブジェクトはエラーが発生した際に File API のメソッドに渡されます。
+`FileError` オブジェクトはエラーが発生した際に [File](../fileobj/fileobj.html) API のメソッドに渡されます。
 
 プロパティー
 ----------
@@ -49,4 +49,4 @@ FileError
 概要
 -----------
 
-`FileError` オブジェクトは File API のあらゆるエラーコールバック関数への唯一のパラメーターです。開発者はエラーのタイプを特定するために、 code プロパティーを確認する必要があります。
+`FileError` オブジェクトは [File](../fileobj/fileobj.html) API のあらゆるエラーコールバック関数への唯一のパラメーターです。開発者はエラーのタイプを特定するために、 code プロパティーを確認する必要があります。

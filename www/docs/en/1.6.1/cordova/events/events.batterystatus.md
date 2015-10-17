@@ -37,7 +37,7 @@ The battery status handler will be called with an object that contains two prope
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -55,7 +55,7 @@ The `level` property is unavailable as Windows Phone 7 does not provide
 native APIs for determining battery level. The `isPlugged` parameter
 _is_ supported.
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
@@ -65,7 +65,7 @@ Quick Example
        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

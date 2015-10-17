@@ -27,7 +27,7 @@ title: accelerometer.clearWatch
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**： 由返回的 ID`accelerometer.watchAcceleration`.
+*   **watchID**： 由返回的 ID`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## 支援的平臺
 

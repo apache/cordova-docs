@@ -24,5 +24,5 @@ title: Incrustar WebViews
 
 > Implementar la Cordova WebView en su propio proyecto.
 
-*   Android WebViews
-*   iOS WebViews
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

@@ -26,12 +26,12 @@ title: Appareil
 
 ## Propriétés
 
-*   device.model
-*   device.cordova
-*   device.platform
-*   device.uuid
-*   device.version
-*   device.name
+*   [device.model](device.model.html)
+*   [device.cordova](device.cordova.html)
+*   [device.platform](device.platform.html)
+*   [device.uuid](device.uuid.html)
+*   [device.version](device.version.html)
+*   [device.name](device.name.html)
 
 ## Portée des variables
 

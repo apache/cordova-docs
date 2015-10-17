@@ -26,9 +26,9 @@ title: Windows Phone 7 平臺指南
 
 適用于這兩個版本的更多詳細的平臺特定資訊如下所示：
 
-*   升級 Windows Phone
+*   [升級 Windows Phone](../wp8/upgrading.html)
 *   Windows Phone 外掛程式
-*   Windows Phone 的命令列工具
+*   [Windows Phone 的命令列工具](../wp8/tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 

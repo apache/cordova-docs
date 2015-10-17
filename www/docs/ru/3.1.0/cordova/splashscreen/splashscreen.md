@@ -26,8 +26,8 @@ title: Экран-заставка
 
 ## Методы
 
-*   splashscreen.show
-*   splashscreen.hide
+*   [splashscreen.show](splashscreen.show.html)
+*   [splashscreen.hide](splashscreen.hide.html)
 
 ## Доступ к функции
 

@@ -23,20 +23,20 @@ title: ContactOrganization
 ContactOrganization
 ===================
 
-Contains organization properties of a `Contact` object.
+Contains organization properties of a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
 - __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
 - __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
-- __name:__ The name of the organization. _(DOMString)_
+- __name:__ The [name](../../storage/parameters/name.html) of the organization. _(DOMString)_
 - __department:__ The department the contract works for. _(DOMString)_
 - __title:__ The contacts title at the organization. _(DOMString)_
 
 Details
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+The `ContactOrganization` object stores a contact's organization properties.  A `[Contact](../Contact/contact.html)` object stores one or more `ContactOrganization` objects in an array. 
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -69,7 +69,7 @@ Quick Example
 	filter = ["displayName","organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -87,7 +87,7 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
+			var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter="";
 			filter = ["displayName","organizations"];
 			navigator.contacts.find(filter, onSuccess, onError, options);
@@ -138,7 +138,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 - __pref:__ This property is not supported by BlackBerry devices and will always return `false`.
 - __type:__ This property is not supported by BlackBerry devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
+- __name:__ Partially supported.  The first organization [name](../../storage/parameters/name.html) will be stored in the BlackBerry __company__ field.
 - __department:__ This property is not supported, and will always be returned as `null`.
 - __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
 
@@ -146,8 +146,8 @@ iOS Quirks
 -----------
 - __pref:__ This property is not supported on iOS devices and will always return `false`.
 - __type:__ This property is not supported on iOS devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
-- __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
+- __name:__ Partially supported.  The first organization [name](../../storage/parameters/name.html) will be stored in the iOS __kABPersonOrganizationProperty__ field.
+- __department__: Partially supported.  The first department [name](../../storage/parameters/name.html) will be stored in the iOS __kABPersonDepartmentProperty__ field.
 - __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
 
 

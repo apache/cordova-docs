@@ -28,11 +28,11 @@ Device
 Properties
 ----------
 
-- device.name
-- device.phonegap
-- device.platform
-- device.uuid
-- device.version
+- [device.name](device.name.html)
+- [device.phonegap](device.phonegap.html)
+- [device.platform](device.platform.html)
+- [device.uuid](device.uuid.html)
+- [device.version](device.version.html)
 
 Variable Scope
 --------------

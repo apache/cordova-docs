@@ -29,21 +29,21 @@ title: 捕獲
 ## 物件
 
 *   捕獲
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   配置
-*   媒體
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [配置](ConfigurationData.html)
+*   [媒體](../media.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## 方法
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData](MediaFile.getFormatData.html)
 
 ## 範圍
 
@@ -63,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## 方法
 
-*   `capture.captureAudio`： 啟動設備的音訊錄音應用程式來記錄音訊剪輯。
+*   `[capture.captureAudio](captureAudio.html)`： 啟動設備的音訊錄音應用程式來記錄音訊剪輯。
 
-*   `capture.captureImage`： 啟動設備的攝像頭應用程式採取的照片。
+*   `[capture.captureImage](captureImage.html)`： 啟動設備的攝像頭應用程式採取的照片。
 
-*   `capture.captureVideo`： 啟動設備的視頻錄影機應用程式要錄製的視頻。
+*   `[capture.captureVideo](captureVideo.html)`： 啟動設備的視頻錄影機應用程式要錄製的視頻。
 
 ## 支援的平臺
 

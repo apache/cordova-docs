@@ -31,7 +31,7 @@ V primeru požarov, ko aplikacija je dal v ozadju.
 
 V `pause` primeru požarov, ko native platformo postavlja program v ozadju, ponavadi ko uporabnik preklopi v drugem programu.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

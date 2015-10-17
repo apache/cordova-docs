@@ -29,7 +29,7 @@ iOS 전용 매개 iPad의 보관 함 또는 앨범에서 이미지를 선택할 
 
 ## CameraPopoverOptions
 
-*   **x**: x는 popover 앵커는 화면 요소의 픽셀 좌표. *(수)*
+*   **x**: x는 popover 앵커는 화면 요소의 픽셀 [좌표](../../geolocation/Coordinates/coordinates.html). *(수)*
 
 *   **y**: y 픽셀 좌표는 popover 앵커는 화면 요소입니다. *(수)*
 

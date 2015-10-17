@@ -23,7 +23,7 @@ title: device.platform
 device.platform
 ===============
 
-Get the device's operating system name.
+Get the device's operating system [name](../storage/parameters/name.html).
 
     var string = device.platform;
 
@@ -36,7 +36,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Depending on the device, a few examples are:
@@ -47,7 +47,7 @@ Quick Example
     //   - "WinCE"
     var devicePlatform = device.platform;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -89,4 +89,4 @@ All devices return `iPhone` as the platform. This is inaccurate because Apple ha
 BlackBerry Quirks
 -----------------
 
-Devices may return the device platform version instead of the platform name.  For example, the Storm2 9550 would return '2.13.0.95' or similar.
+Devices may return the device platform [version](../storage/parameters/version.html) instead of the platform [name](../storage/parameters/name.html).  For example, the Storm2 9550 would return '2.13.0.95' or similar.

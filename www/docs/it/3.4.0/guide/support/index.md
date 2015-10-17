@@ -745,15 +745,15 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <!--        <td data-col="firefoxos"  class="n"></td> -->

@@ -33,9 +33,9 @@ A intervalos regulares, tienes la aceleración a lo largo del eje *x*, *y* y *z*
 
 El acelerómetro es un sensor de movimiento que detecta el cambio (delta) en movimiento con respecto a la posición actual. El acelerómetro puede detectar movimiento 3D a lo largo del eje *z*, *x* y *y*.
 
-El método `accelerometer.watchAcceleration` recupera actual del dispositivo `aceleración` en un intervalo regular, ejecutar la función de devolución de llamada de `accelerometerSuccess` cada vez. Especificar el intervalo en milisegundos mediante el parámetro de `frequency` del objeto `acceleratorOptions`.
+El método `accelerometer.watchAcceleration` recupera actual del dispositivo `aceleración` en un intervalo regular, ejecutar la función de devolución de llamada de `[accelerometerSuccess](parameters/accelerometerSuccess.html)` cada vez. Especificar el intervalo en milisegundos mediante el parámetro de `frequency` del objeto `acceleratorOptions`.
 
-El identificador devuelto reloj referencias intervalo de reloj del acelerómetro y puede utilizarse con `accelerometer.clearWatch` para dejar de ver el acelerómetro.
+El identificador devuelto reloj referencias intervalo de reloj del acelerómetro y puede utilizarse con `[accelerometer.clearWatch](accelerometer.clearWatch.html)` para dejar de ver el acelerómetro.
 
 ## Plataformas soportadas
 

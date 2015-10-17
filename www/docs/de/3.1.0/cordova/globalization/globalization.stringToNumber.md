@@ -31,7 +31,7 @@ Analysiert eine Zahl als Zeichenfolge nach dem Client-Benutzer-Einstellungen for
 
 Liefert die Anzahl an der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `Number` Wert.
 
-Wenn es ist ein Fehler beim Analysieren der Zeichenfolge, dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PARSING\_ERROR`.
+Wenn es ist ein Fehler beim Analysieren der Zeichenfolge, dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 Die `options` Parameter ist optional und wird mit den folgenden Werten:
 

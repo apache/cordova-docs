@@ -23,7 +23,7 @@ title: SQLResultSetRowList
 SQLResultSetRowList
 =======
 
-One of the properties of the `SQLResultSet` containing the rows
+One of the properties of the `[SQLResultSet](../sqlresultset/sqlresultset.html)` containing the rows
 returned from a SQL query.
 
 Properties
@@ -54,7 +54,7 @@ Supported Platforms
 - iOS
 - Tizen
 
-Execute SQL Quick Example
+Execute SQL Quick [Example](../storage.opendatabase.html)
 ------------------
 
     function queryDB(tx) {
@@ -76,7 +76,7 @@ Execute SQL Quick Example
         var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
         db.transaction(queryDB, errorCB);
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

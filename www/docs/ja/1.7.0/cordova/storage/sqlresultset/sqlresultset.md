@@ -23,7 +23,7 @@ title: SQLResultSet
 SQLResultSet
 =======
 
-SQLTransaction の executeSql メソッドが呼ばれるとき、 SQLResultSet とともにコールバック関数が呼び出されます。
+[SQLTransaction](../sqltransaction/sqltransaction.html) の executeSql メソッドが呼ばれるとき、 SQLResultSet とともにコールバック関数が呼び出されます。
 
 プロパティー
 -------
@@ -35,7 +35,7 @@ SQLTransaction の executeSql メソッドが呼ばれるとき、 SQLResultSet 
 詳細
 -------
 
-SQLTransaction の executeSql メソッドが呼び出されるとき、 SQLResultSet オブジェクトとともにコールバック関数が呼び出されます。この結果オブジェクトは3つのプロパティーを持っています。1つめは `insertId` で、 SQL の insert 文が成功した行の番号を返します。もし SQL 文が insert 文では無かった場合、 `insertId` はセットされません。2つめの `rowsAffected` は SQL の select 文に対しては常に0を返します。 insert もしくは update 文に対しては、修正された行数を返します。最後の SQLResultSetList は、 SQL の select 文によって返されたデータを保持します。
+[SQLTransaction](../sqltransaction/sqltransaction.html) の executeSql メソッドが呼び出されるとき、 SQLResultSet オブジェクトとともにコールバック関数が呼び出されます。この結果オブジェクトは3つのプロパティーを持っています。1つめは `insertId` で、 SQL の insert 文が成功した行の番号を返します。もし SQL 文が insert 文では無かった場合、 `insertId` はセットされません。2つめの `rowsAffected` は SQL の select 文に対しては常に0を返します。 insert もしくは update 文に対しては、修正された行数を返します。最後の [SQLResultSetList](../sqlresultsetlist/sqlresultsetlist.html) は、 SQL の select 文によって返されたデータを保持します。
 
 サポートされているプラットフォーム
 -------------------

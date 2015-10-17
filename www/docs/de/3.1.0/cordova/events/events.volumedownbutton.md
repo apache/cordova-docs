@@ -31,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lautstärke-Taste drückt.
 
 Wenn Sie die Standard-Lautstärke reduzieren Verhalten überschreiben müssen erfassen Sie einen Ereignis-Listener für das `volumedownbutton` Ereignis.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

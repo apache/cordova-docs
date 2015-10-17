@@ -22,7 +22,7 @@ title: ContactAddress
 
 # ContactAddress
 
-Contient les propriétés de l'adresse pour un objet `Contact`.
+Contient les propriétés de l'adresse pour un objet `[Contact](../Contact/contact.html)`.
 
 ## Propriétés
 
@@ -44,7 +44,7 @@ Contient les propriétés de l'adresse pour un objet `Contact`.
 
 ## Détails
 
-L'objet `ContactAddress` stocke les propriétés d'une seule adresse d'un contact. Un objet `Contact` peut inclure plusieurs adresses dans un tableau `ContactAddress[]`.
+L'objet `ContactAddress` stocke les propriétés d'une seule adresse d'un contact. Un objet `[Contact](../Contact/contact.html)` peut inclure plusieurs adresses dans un tableau `ContactAddress[]`.
 
 ## Plates-formes prises en charge
 

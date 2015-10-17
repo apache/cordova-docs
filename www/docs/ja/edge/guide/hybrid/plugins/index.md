@@ -137,12 +137,12 @@ JavaScript は、プラグインのおそらく最も重要な部分を作る正
 
 あなたのプラグインの java スクリプトの設定を定義した後は、少なくとも 1 つのネイティブ実装を補完する必要があります。 各プラットフォームの詳細は、以下のとおりし、エコー プラグインの簡単な例に基づいてそれぞれ。
 
-*   アマゾン火 OS プラグイン
-*   Android のプラグイン
-*   iOS のプラグイン
-*   ブラックベリー 10 プラグイン
-*   Windows Phone 8 プラグイン
-*   Windows のプラグイン
+*   [アマゾン火 OS プラグイン](../../platforms/amazonfireos/plugin.html)
+*   [Android のプラグイン](../../platforms/android/plugin.html)
+*   [iOS のプラグイン](../../platforms/ios/plugin.html)
+*   [ブラックベリー 10 プラグイン](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 8 プラグイン](../../platforms/wp8/plugin.html)
+*   [Windows のプラグイン](../../platforms/win8/plugin.html)
 
 Tizen プラットフォームのプラグインをサポートしていません。
 

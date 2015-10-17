@@ -38,7 +38,7 @@ Le kit de développement natif de BlackBerry est disponible chez [developer.blac
 
 Sur Windows :
 
-*   Aller à **mon ordinateur → propriétés → avancé → Variables d'environnement**.
+*   Aller à **mon ordinateur → propriétés → avancé → [Variables](../../../plugin_ref/spec.html) d'environnement**.
 
 *   Ajoute le répertoire d'installation du SDK natif au chemin, par exemple :
     

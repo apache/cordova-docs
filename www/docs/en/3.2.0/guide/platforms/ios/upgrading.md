@@ -25,7 +25,7 @@ title: Upgrading iOS
 This guide shows how to modify iOS projects to upgrade from older
 versions of Cordova.  Most of these instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See The Command-Line Interface for information
+`cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information
 how to update the version of the CLI.
 
 __NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
@@ -40,7 +40,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update ios`
         
@@ -53,7 +53,7 @@ For non-CLI projects, run:
         
 For CLI projects:
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. Update the `cordova` CLI version. See [The Command-Line Interface](../../cli/index.html).
 
 2. Run `cordova platform update ios`
         
@@ -77,7 +77,7 @@ Xcode 5 Issues:
 ## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+   described in [The Command-Line Interface](../../cli/index.html).
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add ios`.
@@ -107,7 +107,7 @@ Xcode 5 Issues:
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -117,7 +117,7 @@ Xcode 5 Issues:
 
 __NOTE__: Starting with Cordova 3.0.0, plugins are not pre-installed,
 and you need to use the `plugman` command-line utility to install them
-yourself. See Using Plugman to Manage Plugins.
+yourself. See [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html).
 
 ## Upgrading 2.8.0 Projects to 2.9.0
 
@@ -127,7 +127,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -143,7 +143,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova-2.7.0.js` file.
 
@@ -182,7 +182,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. you need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). you need the assets from this new project.
 
 5. Copy the `www/cordova-2.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.6.0.js` file.
 
@@ -202,7 +202,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the project's `www/cordova-2.6.0.js` file into your `www` directory, and delete your `www/cordova-2.5.0.js` file.
 
@@ -228,7 +228,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova-2.5.0.js` file from the new project into your `www` directory and delete your `www/cordova-2.4.0.js` file.
 
@@ -254,7 +254,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova-2.4.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.3.0.js` file.
 
@@ -280,7 +280,7 @@ yourself. See Using Plugman to Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova-2.3.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.2.0.js` file.
 
@@ -294,14 +294,14 @@ yourself. See Using Plugman to Manage Plugins.
 
 10. Convert your `Cordova.plist` file to `config.xml`, by running the script `bin/cordova\_plist\_to\_config\_xml` on your project file.
 
-11. Add the InAppBrowser plugin to your `config.xml`, by adding this tag under `<cordova><plugins>`:
+11. Add the [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) plugin to your `config.xml`, by adding this tag under `<cordova><plugins>`:
 
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
 12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
 You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (`CDVViewController`) also has a `URLisAllowed` method for you to check whether a URL passes the whitelist.
 
-13. Device API changes:
+13. [Device](../../../cordova/device/device.html) API changes:
     - For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
     - For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
     - For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
@@ -314,7 +314,7 @@ You can get this by accessing the `userAgent` property off the main view-control
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 5. Copy the `www/cordova-2.2.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.1.0.js` file.
 
@@ -332,7 +332,7 @@ You can get this by accessing the `userAgent` property off the main view-control
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-__NOTE__: In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
+__NOTE__: In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode [File](../../../cordova/file/fileobj/fileobj.html) Inspector.
 
 ## Upgrading 2.0.0 Projects to 2.1.0
 
@@ -344,7 +344,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-5. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+5. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 6. Copy the `www/cordova-2.1.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.0.0.js` file.
 
@@ -372,7 +372,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 1. Install Cordova 2.0.0.
 
-2. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+2. Create a new project, as described in [iOS Command-line Tools](tools.html). You need the assets from this new project.
 
 3. Copy the `www/cordova-2.0.0.js` file from the new project into your `www` directory, and delete your `www/cordova-1.9.0.js` file.
 
@@ -381,7 +381,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 5. Copy the `cordova` directory from the new project into your project's root directory (if you want the project command-line tools).
 
 6. Add a new entry under `Plugins` in your `Cordova.plist` file, under
-   the __Supporting Files__ group. The key is `Device` and the value
+   the __Supporting Files__ group. The key is `[Device](../../../cordova/device/device.html)` and the value
    is `CDVDevice`.
 
 7. Remove `Cordova.framework`.
@@ -434,7 +434,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 27. Select the `VERSION` file that you just dragged in a previous step.
 
-28. Type the __Option-Command-1__ key combination to show the __File Inspector__ (or menuitem __View &rarr; Utilities &rarr; Show File Inspector__).
+28. Type the __Option-Command-1__ key combination to [show](../../../cordova/inappbrowser/inappbrowser.html) the __File Inspector__ (or menuitem __View &rarr; Utilities &rarr; Show [File](../../../cordova/file/fileobj/fileobj.html) Inspector__).
 
 29. Choose __Relative to CORDOVALIB__ in the __File Inspector__ for the drop-down menu for __Location__.
 
@@ -485,13 +485,13 @@ __NOTE__: 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` sett
 
 4. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.8.0.js` file.
 
-If you intend on using the Capture API, you will need the new __iPad retina-display__ assets:
+If you intend on using the [Capture](../../../cordova/media/capture/capture.html) API, you will need the new __iPad retina-display__ assets:
 
 1.  Copy the `Resources/Capture.bundle` item from the new project into your project directory, over-writing your existing `Resources/Capture.bundle` item.
 
-2.  In your project, select the `Capture.bundle` item into your Project Navigator in Xcode, type the __Delete__ key, then select __Remove Reference__ from the resulting dialog.
+2.  In your project, select the `[Capture](../../../cordova/media/capture/capture.html).bundle` item into your Project Navigator in Xcode, type the __Delete__ key, then select __Remove Reference__ from the resulting dialog.
 
-3.  Drag the new `Capture.bundle` from Step 1 above into your Project Navigator in Xcode, then select the __Create groups for any added folders__ radio button.
+3.  Drag the new `[Capture](../../../cordova/media/capture/capture.html).bundle` from Step 1 above into your Project Navigator in Xcode, then select the __Create groups for any added folders__ radio button.
 
 ## Upgrading 1.6.x Projects to 1.7.0
 
@@ -566,7 +566,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 11. Select `Cordova.framework` in the Project Navigator.
 
-12. Type the __Option-Command-1__ key combination to show the __File Inspector__.
+12. Type the __Option-Command-1__ key combination to [show](../../../cordova/inappbrowser/inappbrowser.html) the __File Inspector__.
 
 13. Choose __Absolute Path__ in the __File Inspector__ for the drop-down menu for __Location__.
 

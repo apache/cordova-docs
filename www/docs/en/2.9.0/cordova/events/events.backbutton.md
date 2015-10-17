@@ -32,7 +32,7 @@ Details
 
 To override the default back-button behavior, register an event
 listener for the `backbutton` event, typically by calling
-`document.addEventListener` once you receive the `deviceready` event.
+`document.addEventListener` once you receive the `[deviceready](events.deviceready.html)` event.
 It is no longer necessary to call any other method to override the
 back-button behavior.
 
@@ -43,7 +43,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -52,7 +52,7 @@ Quick Example
         // Handle the back button
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

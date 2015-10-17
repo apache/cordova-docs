@@ -22,12 +22,12 @@ title: window.open
 
 # window.open
 
-在一個新的中打開 URL `InAppBrowser` 實例，當前的瀏覽器實例或系統瀏覽器。
+在一個新的中打開 URL `[InAppBrowser](inappbrowser.html)` 實例，當前的瀏覽器實例或系統瀏覽器。
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**： 參考 `InAppBrowser` 視窗。*() InAppBrowser*
+*   **ref**： 參考 `[InAppBrowser](inappbrowser.html)` 視窗。*() InAppBrowser*
 
 *   **url**： 要載入*（字串）*的 URL。調用 `encodeURI()` 這個如果 URL 包含 Unicode 字元。
 
@@ -37,7 +37,7 @@ title: window.open
     *   `_blank`： 在打開`InAppBrowser`.
     *   `_system`： 在該系統的 web 瀏覽器中打開。
 
-*   **選項**： 選項為 `InAppBrowser` 。可選，拖欠到： `location=yes` 。*（字串）*
+*   **選項**： 選項為 `[InAppBrowser](inappbrowser.html)` 。可選，拖欠到： `location=yes` 。*（字串）*
     
     `options`字串必須不包含任何空白的空間，和必須用逗號分隔每個功能的名稱/值對。 功能名稱區分大小寫。 所有平臺都支援下面的值：
     

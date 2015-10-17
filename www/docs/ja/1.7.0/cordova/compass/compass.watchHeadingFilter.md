@@ -23,4 +23,4 @@ title: compass.watchHeadingFilter
 compass.watchHeadingFilter
 ==========================
 
-1.6以降はサポートされていません。同等の機能として、 `compass.watchHeading` を参照してください。
+1.6以降はサポートされていません。同等の機能として、 `[compass.watchHeading](compass.watchHeading.html)` を参照してください。

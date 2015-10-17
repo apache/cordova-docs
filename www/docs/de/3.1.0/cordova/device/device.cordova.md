@@ -22,14 +22,14 @@ title: device.cordova
 
 # device.cordova
 
-Rufen Sie die Version von Cordova, die auf dem Gerät ausgeführt.
+Rufen Sie die Version von Cordova, die auf dem [Gerät](device.html) ausgeführt.
 
     var string = device.cordova;
     
 
 ## Beschreibung
 
-`device.cordova`Gibt die Version von Cordova, die auf dem Gerät ausgeführt.
+`device.cordova`Gibt die Version von Cordova, die auf dem [Gerät](device.html) ausgeführt.
 
 ## Unterstützte Plattformen
 

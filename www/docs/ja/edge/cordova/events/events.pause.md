@@ -31,7 +31,7 @@ title: pause
 
 `pause`に任せたらネイティブ プラットフォームを背景にアプリケーション通常ユーザーが別のアプリケーションに切り替えたときに発生します。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

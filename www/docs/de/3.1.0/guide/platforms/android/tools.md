@@ -60,7 +60,7 @@ Der `run` Befehl akzeptiert die folgenden *optionalen* Parameter:
     
     $ /path/to/project/cordova/run \[Target\] \[Build\] $ C:\path\to\project\cordova\run.bat \[Target\] \[Build\]
 
-Vergewissern Sie sich, erstellen Sie mindestens ein Android virtuelles Gerät, sonst Sie werden aufgefordert zu tun mit dem `android` Befehl. Wenn mehr als eine AVD als Ziel verfügbar ist, werden Sie aufgefordert, einen auswählen. In der Standardeinstellung der `run` Befehl erkennt ein angeschlossenes Gerät oder einen laufenden Emulator, wenn kein Gerät gefunden wird.
+Vergewissern Sie sich, erstellen Sie mindestens ein Android virtuelles [Gerät](../../../cordova/device/device.html), sonst Sie werden aufgefordert zu tun mit dem `android` Befehl. Wenn mehr als eine AVD als Ziel verfügbar ist, werden Sie aufgefordert, einen auswählen. In der Standardeinstellung der `run` Befehl erkennt ein angeschlossenes [Gerät](../../../cordova/device/device.html) oder einen laufenden Emulator, wenn kein [Gerät](../../../cordova/device/device.html) gefunden wird.
 
 ## Protokollierung
 

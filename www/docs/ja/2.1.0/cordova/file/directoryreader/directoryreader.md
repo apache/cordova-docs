@@ -46,8 +46,8 @@ readEntries
 
 __パラメーター:__
 
-- __successCallback__ - FileEntry と DirectoryEntry オブジェクトの配列を渡すコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリリストの取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [FileEntry](../fileentry/fileentry.html) と [DirectoryEntry](../directoryentry/directoryentry.html) オブジェクトの配列を渡すコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリリストの取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 

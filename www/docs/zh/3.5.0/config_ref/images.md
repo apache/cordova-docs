@@ -152,7 +152,7 @@ Windows Phone 指定單個初始螢幕圖像：
 
 第二行設置預設延遲多久閃屏顯示以毫秒為單位。這應該是最大的預期的開始時間。SplashScreenDelay 的預設值是 3000 毫秒。
 
-最後，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您的主視圖是可見。 因為應用程式開始時間將由多個因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JAVAscript 方法 `deviceready` 事件。 否則，初始螢幕將可見該你上述配置的 SplashScreenDelay 值。 與具有可見的總是固定工期的初始螢幕高度建議使用此事件驅動方法。
+最後，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您的主視圖是可見。 因為應用程式開始時間將由多個因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JAVAscript 方法 `[deviceready](../cordova/events/events.deviceready.html)` 事件。 否則，初始螢幕將可見該你上述配置的 SplashScreenDelay 值。 與具有可見的總是固定工期的初始螢幕高度建議使用此事件驅動方法。
 
 ## IOS 平臺的初始螢幕
 

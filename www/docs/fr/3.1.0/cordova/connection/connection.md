@@ -26,7 +26,7 @@ title: Connexion
 
 ## Propriétés
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## Constantes
 

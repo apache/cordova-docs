@@ -22,7 +22,7 @@ title: Notification.Confirm
 
 # Notification.Confirm
 
-Visualizza una finestra di dialogo conferma personalizzabile.
+[Visualizza](../inappbrowser/inappbrowser.html) una finestra di dialogo conferma personalizzabile.
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
     

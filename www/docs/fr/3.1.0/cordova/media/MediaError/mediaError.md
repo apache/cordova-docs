@@ -22,7 +22,7 @@ title: MediaError
 
 # MediaError
 
-A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'une erreur survient.
+A `MediaError` objet est retourné à la `[mediaError](../Parameters/mediaError.html)` fonction de rappel lorsqu'une erreur survient.
 
 ## Propriétés
 
@@ -39,4 +39,4 @@ A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'
 
 ## Description
 
-Le `MediaError` objet est passé à une `mediaError` fonction de rappel lorsqu'une erreur survient.
+Le `MediaError` objet est passé à une `[mediaError](../Parameters/mediaError.html)` fonction de rappel lorsqu'une erreur survient.

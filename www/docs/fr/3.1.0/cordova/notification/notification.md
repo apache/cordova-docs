@@ -27,8 +27,8 @@ title: Notification
 ## Méthodes
 
 *   `notification.alert`
-*   `notification.Confirm`
-*   `notification.prompt`
+*   `[notification.Confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
 *   `notification.beep`
 *   `notification.vibrate`
 

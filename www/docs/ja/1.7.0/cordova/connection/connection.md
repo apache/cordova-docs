@@ -30,7 +30,7 @@ Connection
 プロパティー
 ----------
 
-- connection.type
+- [connection.type](connection.type.html)
 
 定数
 ---------

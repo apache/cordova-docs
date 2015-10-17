@@ -51,14 +51,14 @@ La meilleure façon de mettre en place une application doit exécuter le `cordov
 
 *   Dans le scénario de base, vous pouvez utiliser l'interface CLI simplement pour créer un nouveau projet qui est rempli avec la configuration par défaut pour modifier.
 
-*   Pour de nombreuses plateformes mobiles, vous pouvez également utiliser la CLI de mettre en place les fichiers de projet supplémentaire requis pour compiler dans chaque kit de développement logiciel. Pour ce faire, vous devez installer SDK chaque ciblée de la plate-forme. (Voir les Guides de la plate-forme pour obtenir des instructions.) Comme indiqué dans le tableau de la plateforme de Support ci-dessous, vous devrez peut-être exécuter la CLI sur différents systèmes d'exploitation selon la plateforme ciblée.
+*   Pour de nombreuses plateformes mobiles, vous pouvez également utiliser la CLI de mettre en place les fichiers de projet supplémentaire requis pour compiler dans chaque kit de développement logiciel. Pour ce faire, vous devez installer SDK chaque ciblée de la plate-forme. (Voir les [Guides de la plate-forme](../platforms/index.html) pour obtenir des instructions.) Comme indiqué dans le tableau de la plateforme de Support ci-dessous, vous devrez peut-être exécuter la CLI sur différents systèmes d'exploitation selon la plateforme ciblée.
 
 *   Pour les plateformes, la CLI peut compiler les applications et de les exécuter dans un émulateur de périphérique SDK. <!--XRÉF XRÉF (Voir Application Development Guide pour les détails.)--> pour le test complet, vous pouvez également générer des fichiers d'application et les installer directement sur un périphérique.
 
-À tout moment dans le cycle de développement, vous pouvez également compter sur les outils spécifiques à la plate-forme SDK, qui peuvent offrir un ensemble plus large d'options. (Voir les Guides de la plate-forme pour plus d'informations sur l'outil du SDK de la plate-forme chaque jeu). Un environnement SDK est plus approprié si vous voulez implémenter une application hybride qui mêle des composants d'applications web et natives. <!--XRÉF XRÉF (Voir Hybride Guide d'Application pour plus d'informations.)--> vous pouvez utiliser l'utilitaire de ligne de commande pour générer initialement l'app, ou de manière itérative par la suite pour nourrir code mis à jour pour les outils du kit de développement logiciel. Vous pouvez également créer fichier de configuration de l'application vous-même. 
+À tout moment dans le cycle de développement, vous pouvez également compter sur les outils spécifiques à la plate-forme SDK, qui peuvent offrir un ensemble plus large d'options. (Voir les [Guides de la plate-forme](../platforms/index.html) pour plus d'informations sur l'outil du SDK de la plate-forme chaque jeu). Un environnement SDK est plus approprié si vous voulez implémenter une application hybride qui mêle des composants d'applications web et natives. <!--XRÉF XRÉF (Voir Hybride Guide d'Application pour plus d'informations.)--> vous pouvez utiliser l'utilitaire de ligne de commande pour générer initialement l'app, ou de manière itérative par la suite pour nourrir code mis à jour pour les outils du kit de développement logiciel. Vous pouvez également créer fichier de configuration de l'application vous-même. 
 
 <!-- XREF
-(See The config.xml File for details.)
+(See The config.xml [File](../../cordova/file/fileobj/fileobj.html) for details.)
 XREF -->
 
 <!-- XREF
@@ -255,7 +255,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="../../cordova/camera/camera.html">Appareil photo</a>
+          <a href="../../cordova/camera/camera.html"><a href="../../cordova/device/device.html">Appareil</a> photo</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -694,11 +694,11 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         </td>
         
         <td data-col="winphone7"  class="p">
-          localStorage seulement
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> seulement
         </td>
         
         <td data-col="winphone8"  class="p">
-          localStorage seulement
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> seulement
         </td>
         
         <td data-col="win8"       class="y">

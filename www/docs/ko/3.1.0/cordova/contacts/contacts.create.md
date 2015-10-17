@@ -22,7 +22,7 @@ title: contacts.create
 
 # contacts.create
 
-새 연락처 개체를 반환합니다.
+새 [연락처](contacts.html) 개체를 반환합니다.
 
     var contact = navigator.contacts.create(properties);
     
@@ -31,7 +31,7 @@ title: contacts.create
 
 `contacts.create`메서드는 동기적, 및 새로운 반환 합니다 `Contact` 개체.
 
-이 메서드를 호출 해야 장치 연락처 데이터베이스에 연락처 개체를 유지 하지 않습니다는 `Contact.save` 방법.
+이 메서드를 호출 해야 [장치](../device/device.html) [연락처](contacts.html) 데이터베이스에 [연락처](contacts.html) 개체를 유지 하지 않습니다는 `Contact.save` 방법.
 
 ## 지원 되는 플랫폼
 

@@ -31,7 +31,7 @@ Tem primeru požarov, ko uporabnik pritisne gumb konec klica.
 
 Dogodek preglasi privzeto obnašanje konec klica.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

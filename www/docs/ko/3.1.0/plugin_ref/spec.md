@@ -145,7 +145,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 ## `<asset>`요소
 
-하나 이상의 요소 목록 파일 또는 코르도바 응용 프로그램에 복사할 수 디렉터리 `www` 디렉터리. 예:
+하나 이상의 요소 목록 [파일](../cordova/file/fileobj/fileobj.html) 또는 코르도바 응용 프로그램에 복사할 수 디렉터리 `www` 디렉터리. 예:
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -155,7 +155,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 모든 `<asset>` 태그 필요 둘 다 `src` 와 `target` 특성. 웹 전용 플러그인 포함 주로 `<asset>` 요소. 모든 `<asset>` 요소 안에 중첩 된 `<platform>` 아래 설명 된 대로 요소 플랫폼 관련 웹 자산을 지정 합니다. 특성은 다음과 같습니다.
 
-*   `src`(필수): 파일 또는 디렉토리 위치 플러그인 패키지에 상대적으로 `plugin.xml` 문서. 파일에 지정 된 존재 하지 않는 경우 `src` 위치, plugman 중지 및 설치 프로세스를 취소, 문제는 충돌에 대 한 알림 및 0이 아닌 코드와 함께 종료 합니다.
+*   `src`(필수): [파일](../cordova/file/fileobj/fileobj.html) 또는 디렉토리 [위치](../cordova/geolocation/Position/position.html) 플러그인 패키지에 상대적으로 `plugin.xml` 문서. 파일에 지정 된 존재 하지 않는 경우 `src` [위치](../cordova/geolocation/Position/position.html), plugman 중지 및 설치 프로세스를 취소, 문제는 충돌에 대 한 [알림](../cordova/notification/notification.html) 및 0이 아닌 코드와 함께 종료 합니다.
 
 *   `target`(필수):
     
@@ -180,7 +180,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 에 대 한 세부 정보는 `<js-module>` 태그:
 
-*   `src`관련 플러그인 디렉토리에서 파일 참조를 `plugin.xml` 파일.
+*   `src`관련 플러그인 디렉토리에서 [파일](../cordova/file/fileobj/fileobj.html) 참조를 `plugin.xml` [파일](../cordova/file/fileobj/fileobj.html).
 
 *   `name`모듈 이름의 마지막 부분을 제공 합니다. 그것은 일반적으로 당신이 무엇을 좋아 하든지 수 고만 사용 하려는 경우 중요 한 `cordova.require` 를 JavaScript 코드에서 플러그인의 다른 부분을 가져오는. 모듈 이름을 한 `<js-module>` 귀하의 플러그인은 `id` 의 값에 따라 `name` . 예를 들어, 위의와 `id` 의 `chrome.socket` , 모듈 이름`chrome.socket.Socket`.
 
@@ -194,7 +194,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스 될 수 있습니다`cordova.require`.
 
-만약 `src` plugman 중지 및 설치 반대, 문제, 알림 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
+만약 `src` plugman 중지 및 설치 반대, 문제, [알림](../cordova/notification/notification.html) 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
 
 중첩 `<js-module>` 내의 요소 `<platform>` 플랫폼 관련 자바 스크립트 모듈 바인딩을 선언 합니다.
 
@@ -223,7 +223,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 ## `< 플랫폼 >`
 
-`<platform>`태그 연결 된 네이티브 코드 또는 구성 파일을 수정 해야 하는 플랫폼을 식별 합니다. 이 명세를 사용 하 여 도구 지원 되는 플랫폼을 식별 하 고 코르 도우 바 프로젝트에 코드를 설치할 수 있습니다.
+`<platform>`태그 [연결](../cordova/connection/connection.html) 된 네이티브 코드 또는 구성 파일을 수정 해야 하는 플랫폼을 식별 합니다. 이 명세를 사용 하 여 도구 지원 되는 플랫폼을 식별 하 고 코르 도우 바 프로젝트에 코드를 설치할 수 있습니다.
 
 플러그인 없이 `<platform>` 태그 자바 스크립트 전용 및 따라서 모든 플랫폼에서 설치 가능한 것으로 간주 합니다.
 
@@ -237,7 +237,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     </platform>
     
 
-필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 연결.
+필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 [연결](../cordova/connection/connection.html).
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 
@@ -262,9 +262,9 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 그것은 다음과 같은 특성을 지원합니다.
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 경우는 `src` 파일을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
+*   `src`(필수): 관련 파일의 [위치](../cordova/geolocation/Position/position.html) `plugin.xml` . 경우는 `src` 파일을 찾을 수 없습니다, plugman 중지 설치 반대, 문제는 문제에 대 한 [알림](../cordova/notification/notification.html) 및 0이 아닌 코드와 함께 종료 됩니다.
 
-*   `target-dir`: 디렉터리에 파일 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 파일 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
+*   `target-dir`: 디렉터리에 [파일](../cordova/file/fileobj/fileobj.html) 복사 해야, 코르도바 프로젝트의 루트를 기준으로. 실제로, 이것은 어디에 [파일](../cordova/file/fileobj/fileobj.html) 자바 기반 플랫폼에 대 한 가장 중요 한는 `com.alunny.foo` 패키지 내에서 찾을 수 있어야 합니다에 `com/alunny/foo` 디렉터리. 플랫폼 소스 디렉토리는 중요 하지 않습니다,이 특성을 생략 한다.
     
     자산, 것과 같이 경우는 `target` 의 한 `source-file` 기존 파일을 덮어쓸 것, plugman 중지 설치 반대, 문제는 문제에 대 한 알림 및 0이 아닌 코드와 함께 종료 됩니다.
 
@@ -276,7 +276,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 수정, 어디 그 문서에서 수정 자리 한다와 무엇을 수정 해야 하는 XML 기반 구성 파일을 식별 합니다.
 
-이 요소와 수정에 대 한 테스트 된 두 가지 파일 형식은 `xml` 및 `plist` 파일.
+이 요소와 수정에 대 한 테스트 된 두 가지 [파일](../cordova/file/fileobj/fileobj.html) 형식은 `xml` 및 `plist` [파일](../cordova/file/fileobj/fileobj.html).
 
 `config-file`요소는만 XML 문서 트리에 새로운 아이 추가할 수 있습니다. 이들이 XML 리터럴을 대상 문서에 삽입할 수 있습니다.
 
@@ -333,14 +333,14 @@ XML에 대 한 예제:
     </config-file>
     
 
-키 및 올바른에 추가할 값을 지정 `AppInfo.plist` iOS 코르도바 프로젝트에서 파일. 예를 들어:
+키 및 올바른에 추가할 값을 지정 `AppInfo.plist` iOS 코르도바 프로젝트에서 [파일](../cordova/file/fileobj/fileobj.html). 예를 들어:
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## `<resource-file>`그리고`<header-file>`
 
-소스 파일 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 파일, 헤더 및 리소스 구분. 예:
+소스 [파일](../cordova/file/fileobj/fileobj.html) 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 [파일](../cordova/file/fileobj/fileobj.html), 헤더 및 리소스 구분. 예:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
@@ -349,7 +349,7 @@ XML에 대 한 예제:
 
 ## `<lib-file>`
 
-블랙베리 10 같은 플랫폼만 소스, 리소스 및 헤더 파일 처럼 사용자가 만든 라이브러리를 사용 하는. 예:
+블랙베리 10 같은 플랫폼만 소스, 리소스 및 헤더 [파일](../cordova/file/fileobj/fileobj.html) 처럼 사용자가 만든 라이브러리를 사용 하는. 예:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
@@ -357,7 +357,7 @@ XML에 대 한 예제:
 
 지원된 특성:
 
-*   `src`(필수): 관련 파일의 위치 `plugin.xml` . 만약 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 반대 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
+*   `src`(필수): 관련 파일의 [위치](../cordova/geolocation/Position/position.html) `plugin.xml` . 만약 `src` plugman 중지를 설치, 문제는 문제에 대 한 경고를 반대 하 고 0이 아닌 코드와 함께 종료 됩니다 찾을 수 없습니다.
 
 *   `arch`: 어떤 아키텍처는 `.so` 파일이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
 
@@ -373,7 +373,7 @@ XML에 대 한 예제:
 
 `src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
 
-옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
+옵션 `weak` 특성은 프레임 워크 약하게 [연결](../cordova/connection/connection.html) 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
 
 ## `<info>`
 
@@ -420,4 +420,4 @@ plugman 확인이 필요한 환경 설정에서 전달 됩니다. 그렇지 않�
 
 ## $PACKAGE_NAME
 
-리버스 도메인 스타일에 해당 하는 패키지에 대 한 고유 식별자는 `CFBundleIdentifier` iOS에서 또는 `package` 특성은 최상위의 `manifest` 요소에는 `AndroidManifest.xml` 파일.
+리버스 도메인 스타일에 해당 하는 패키지에 대 한 고유 식별자는 `CFBundleIdentifier` iOS에서 또는 `package` 특성은 최상위의 `manifest` 요소에는 `AndroidManifest.xml` [파일](../cordova/file/fileobj/fileobj.html).

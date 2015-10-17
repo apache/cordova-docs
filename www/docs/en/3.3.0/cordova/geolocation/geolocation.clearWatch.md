@@ -34,7 +34,7 @@ Stop watching for changes to the device's location referenced by the
 ## Description
 
 The `geolocation.clearWatch` stops watching changes to the device's
-location by clearing the `geolocation.watchPosition` referenced by
+location by clearing the `[geolocation.watchPosition](geolocation.watchPosition.html)` referenced by
 `watchID`.
 
 ## Supported Platforms

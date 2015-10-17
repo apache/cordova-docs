@@ -233,7 +233,7 @@ locations in the `plugin.xml` file. Here is a typical structure:
 
 The list shows the hierarchical relationship among the top-level
 folders. The parenthesis shows the contents of a given directory. All
-directory names appear in bold text. File names are preceded by the `>`
+directory names appear in bold text. [File](../../../cordova/file/fileobj/fileobj.html) names are preceded by the `>`
 sign.
 
 ## The _plugin.xml_ file

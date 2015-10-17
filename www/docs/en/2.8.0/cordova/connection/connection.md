@@ -30,7 +30,7 @@ This object is exposed as `navigator.connection`.
 Properties
 ----------
 
-- connection.type
+- [connection.type](connection.type.html)
 
 Constants
 ---------

@@ -23,6 +23,6 @@ title: contactFields
 contactFields
 =============
 
-`contacts.find` メソッドを使用する際の必須パラメーターです。このパラメーターを使って、検索操作によって得られる `Contact` オブジェクトが持つフィールドを指定します。
+`[contacts.find](../contacts.find.html)` メソッドを使用する際の必須パラメーターです。このパラメーターを使って、検索操作によって得られる `[Contact](../Contact/contact.html)` オブジェクトが持つフィールドを指定します。
 
     ["name", "phoneNumbers", "emails"]

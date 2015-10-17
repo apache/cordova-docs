@@ -22,7 +22,7 @@ title: フラグ
 
 # フラグ
 
-引数が指定されて、 `DirectoryEntry` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、ファイルとディレクトリをそれぞれ作成します。
+引数が指定されて、 `[DirectoryEntry](../directoryentry/directoryentry.html)` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、ファイルとディレクトリをそれぞれ作成します。
 
 ## プロパティ
 

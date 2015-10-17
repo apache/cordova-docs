@@ -22,7 +22,7 @@ title: Flags
 
 # Flags
 
-Fournit des arguments aux méthodes `getFile()` et `getDirectory()` de l'objet `DirectoryEntry` qui se chargent respectivement de rechercher ou créer des fichiers et des répertoires.
+Fournit des arguments aux méthodes `getFile()` et `getDirectory()` de l'objet `[DirectoryEntry](../directoryentry/directoryentry.html)` qui se chargent respectivement de rechercher ou créer des fichiers et des répertoires.
 
 ## Propriétés
 

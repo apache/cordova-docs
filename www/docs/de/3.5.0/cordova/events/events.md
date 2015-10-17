@@ -26,16 +26,16 @@ title: Veranstaltungen
 
 ## Ereignistypen
 
-*   deviceready
-*   Anhalten
-*   Lebenslauf
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [Anhalten](events.pause.html)
+*   [Lebenslauf](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## Ereignisse, die von den [org.apache.cordova.battery-Status][1] hinzugefügt
 

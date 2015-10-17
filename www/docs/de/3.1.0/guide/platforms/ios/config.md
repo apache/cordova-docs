@@ -22,7 +22,7 @@ title: iOS Konfiguration
 
 # iOS Konfiguration
 
-Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
+Die `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die [Datei](../../../cordova/file/fileobj/fileobj.html) config.xml [Datei](../../../cordova/file/fileobj/fileobj.html) Informationen auf globalen Konfigurations-Optionen.
 
 *   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` ein Viewport Meta-Tag verwenden, um entweder deaktivieren oder den Bereich der Benutzer Skalierung zu beschränken.
     

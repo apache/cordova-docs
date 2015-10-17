@@ -34,8 +34,8 @@ from the object passed as a parameter to the `successCallback`.
 The inbound `date` parameter should be of type `Date`.
 
 If there is an error formatting the date, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 

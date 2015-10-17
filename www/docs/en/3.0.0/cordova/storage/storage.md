@@ -31,10 +31,10 @@ specifications:
 * The
   [Web Storage API Specification](http://dev.w3.org/html5/webstorage/)
   allows you to access data via simple key/value pairs.  See the
-  section on localStorage for complete details on this interface.
+  section on [localStorage](localstorage/localstorage.html) for complete details on this interface.
 
 * The
-  [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
+  [Web SQL [Database](database/database.html) Specification](http://dev.w3.org/html5/webdatabase/)
   offers more full-featured database tables accessed via SQL queries.
   A summary of this interface appears immediately below.
 
@@ -45,24 +45,24 @@ implementations apply.
 Methods
 -------
 
-- openDatabase
+- [openDatabase](storage.opendatabase.html)
 
 Arguments
 ---------
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+- [database_name](parameters/name.html)
+- [database_version](parameters/version.html)
+- [database_displayname](parameters/display_name.html)
+- [database_size](parameters/size.html)
 
 Objects
 -------
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetRowList
-- SQLError
+- [Database](database/database.html)
+- [SQLTransaction](sqltransaction/sqltransaction.html)
+- [SQLResultSet](sqlresultset/sqlresultset.html)
+- [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+- [SQLError](sqlerror/sqlerror.html)
 
 ## Accessing the Feature
 

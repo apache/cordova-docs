@@ -46,9 +46,9 @@ Read the entries in this directory.
 
 __Parameters__:
 
-- __successCallback__: A callback that is passed an array of `FileEntry` and `DirectoryEntry` objects. _(Function)_
+- __successCallback__: A callback that is passed an array of `[FileEntry](../fileentry/fileentry.html)` and `[DirectoryEntry](../directoryentry/directoryentry.html)` objects. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 

@@ -47,7 +47,7 @@ Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Par
 
 *   **Gruppieren**: das Symbol für Zifferngruppierung zum analysieren und formatieren verwenden. *(String)*
 
-Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
+Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 Die `options` Parameter ist optional und Standardwerte sind:
 

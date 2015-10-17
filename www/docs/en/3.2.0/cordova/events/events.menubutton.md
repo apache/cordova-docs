@@ -31,7 +31,7 @@ The event fires when the user presses the menu button.
 Applying an event handler overrides the default menu button behavior.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 

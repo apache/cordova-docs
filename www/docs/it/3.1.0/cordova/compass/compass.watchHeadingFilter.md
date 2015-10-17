@@ -22,4 +22,4 @@ title: compass.watchHeadingFilter
 
 # compass.watchHeadingFilter
 
-Dal 1.6 non è più supportato, vedere `compass.watchHeading` per funzionalità equivalenti.
+Dal 1.6 non è più supportato, vedere `[compass.watchHeading](compass.watchHeading.html)` per funzionalità equivalenti.

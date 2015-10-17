@@ -150,7 +150,7 @@ iOS는 완벽 하 게 허용 된 구문을 지원합니다.
 
 ### 3.1.0에서 변경:
 
-이전 버전 3.1.0, 코르도바 iOS 일부 비표준 확장 다른 코르도바 플랫폼에서 지 원하는 도메인 whilelisting 체계를 포함. 3.1.0, 현재 iOS 허용 지금이 문서 상단에 설명 된 리소스 허용 구문을 따릅니다. 전 3.1.0에서 업그레이드 하는 경우 이러한 확장을 사용 하는 변경 해야 할 수 있습니다 당신의 `config.xml` 전에 허용 된 자원의 동일한 집합을 계속 하려면 파일.
+이전 버전 3.1.0, 코르도바 iOS 일부 비표준 확장 다른 코르도바 플랫폼에서 지 원하는 도메인 whilelisting 체계를 포함. 3.1.0, 현재 iOS 허용 지금이 문서 상단에 설명 된 리소스 허용 구문을 따릅니다. 전 3.1.0에서 업그레이드 하는 경우 이러한 확장을 사용 하는 변경 해야 할 수 있습니다 당신의 `config.xml` 전에 허용 된 자원의 동일한 집합을 계속 하려면 [파일](../../../cordova/file/fileobj/fileobj.html).
 
 특히, 이러한 패턴 업데이트 해야 합니다.
 
@@ -182,7 +182,7 @@ iOS는 완벽 하 게 허용 된 구문을 지원합니다.
 
 ### 세부 정보
 
-응용 프로그램 루트 디렉터리의 `config.xml` 파일 지정 도메인 허용 규칙을 사용 하는 `<access origin="..." />` 요소. 완벽 한 기준에 대 한 [Tizen 외부 네트워크 리소스 액세스 문서][10] 를 참조 하십시오..
+응용 프로그램 루트 디렉터리의 `config.xml` [파일](../../../cordova/file/fileobj/fileobj.html) 지정 도메인 허용 규칙을 사용 하는 `<access origin="..." />` 요소. 완벽 한 기준에 대 한 [Tizen 외부 네트워크 리소스 액세스 문서][10] 를 참조 하십시오..
 
  [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 

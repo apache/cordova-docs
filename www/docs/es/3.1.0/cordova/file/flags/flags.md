@@ -22,7 +22,7 @@ title: Banderas
 
 # Banderas
 
-Proporciona argumentos para la `DirectoryEntry` del objeto `getFile()` y `getDirectory()` los métodos, que buscar o crean archivos y directorios, respectivamente.
+Proporciona argumentos para la `[DirectoryEntry](../directoryentry/directoryentry.html)` del objeto `getFile()` y `getDirectory()` los métodos, que buscar o crean archivos y directorios, respectivamente.
 
 ## Propiedades
 

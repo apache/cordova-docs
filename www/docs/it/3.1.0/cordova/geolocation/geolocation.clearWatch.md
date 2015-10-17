@@ -33,7 +33,7 @@ Smettere di guardare per le modifiche alla posizione del dispositivo a cui fa ri
 
 ## Descrizione
 
-Il `geolocation.clearWatch` si ferma a guardare i cambiamenti di posizione del dispositivo deselezionando il `geolocation.watchPosition` fanno riferimento`watchID`.
+Il `geolocation.clearWatch` si ferma a guardare i cambiamenti di posizione del dispositivo deselezionando il `[geolocation.watchPosition](geolocation.watchPosition.html)` fanno riferimento`watchID`.
 
 ## Piattaforme supportate
 

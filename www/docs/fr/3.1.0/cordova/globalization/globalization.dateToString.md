@@ -33,7 +33,7 @@ Retourne la date de mise en forme `String` par une `value` propriété accessibl
 
 Les entrants `date` paramètre doit être de type`Date`.
 
-S'il y a une erreur de mise en forme la date, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
+S'il y a une erreur de mise en forme la date, puis le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
 

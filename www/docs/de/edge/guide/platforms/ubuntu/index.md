@@ -24,7 +24,7 @@ title: Handbuch Ubuntu Plattform
 
 ## Erstveröffentlichung
 
-Willkommen Sie bei der ersten Version von Ubuntu-Plattform-Unterstützung in Cordova. Mit dieser Version ist der Fokus auf einem Ubuntu-System entwickeln und verwenden den Cross-Plattform-Workflow diskutiert in der Übersicht. Dazu gehören die Ubuntu-Plattform auf Ihr Projekt hinzufügen von Cordova Standarderweiterungen, und erstellen und Ausführen von Anwendungen für die Ubuntu-Plattform hinzufügen.
+Willkommen Sie bei der ersten Version von Ubuntu-Plattform-Unterstützung in Cordova. Mit dieser Version ist der Fokus auf einem Ubuntu-System entwickeln und verwenden den Cross-Plattform-Workflow diskutiert in der [Übersicht](../../overview/index.html). Dazu gehören die Ubuntu-Plattform auf Ihr Projekt hinzufügen von Cordova Standarderweiterungen, und erstellen und Ausführen von Anwendungen für die Ubuntu-Plattform hinzufügen.
 
 ### Ubuntu-SDK
 

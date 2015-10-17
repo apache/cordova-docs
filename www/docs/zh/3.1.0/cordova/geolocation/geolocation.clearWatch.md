@@ -33,7 +33,7 @@ title: geolocation.clearWatch
 
 ## 說明
 
-`geolocation.clearWatch`將停止觀看對設備的位置的更改通過清除 `geolocation.watchPosition` 引用的`watchID`.
+`geolocation.clearWatch`將停止觀看對設備的位置的更改通過清除 `[geolocation.watchPosition](geolocation.watchPosition.html)` 引用的`watchID`.
 
 ## 支援的平臺
 

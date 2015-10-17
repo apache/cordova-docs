@@ -22,7 +22,7 @@ title: CameraPopoverHandle
 
 # CameraPopoverHandle
 
-由創建的彈出對話方塊的控制碼`camera.getPicture`.
+由創建的彈出對話方塊的控制碼`[camera.getPicture](../camera.getPicture.html)`.
 
 ## 方法
 
@@ -38,7 +38,7 @@ title: CameraPopoverHandle
 
 **參數：**
 
-*   `cameraPopoverOptions`： `CameraPopoverOptions` ，指定新的位置
+*   `cameraPopoverOptions`： `[CameraPopoverOptions](CameraPopoverOptions.html)` ，指定新的位置
 
 ## 快速的示例
 

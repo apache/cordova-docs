@@ -24,5 +24,5 @@ title: WebViews 포함
 
 > 자신의 프로젝트에서 코르도바 WebView를 구현 합니다.
 
-*   안 드 로이드 WebViews
-*   iOS WebViews
+*   [안 드 로이드 WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

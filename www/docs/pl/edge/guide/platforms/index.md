@@ -30,58 +30,58 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 ## Amazon Fire OS
 
-*   Amazon ogień platformy OS Przewodnik
-*   Amazon ogień OS konfiguracja
-*   Amazon ogień OS WebViews
-*   Amazon ogień OS Plugins
+*   [Amazon ogień platformy OS Przewodnik](amazonfireos/index.html)
+*   [Amazon ogień OS konfiguracja](amazonfireos/config.html)
+*   [Amazon ogień OS WebViews](amazonfireos/webview.html)
+*   [Amazon ogień OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-*   Przewodnik platformy Android
-*   Android Shell narzędzia Przewodnik
+*   [Przewodnik platformy Android](android/index.html)
+*   [Android Shell narzędzia Przewodnik](android/tools.html)
 *   Konfiguracja Androida
 *   Wtyczki dla Androida
 *   WebView
-*   Aktualizacja
+*   [Aktualizacja](android/upgrade.html)
 
 ## BlackBerry 10
 
-*   Przewodnik platformy blackBerry 10
-*   Przewodnik narzędziem blackBerry 10 powłoki
-*   Konfiguracja blackBerry 10
-*   Jeżyna 10 wtyczek
-*   Uaktualnianie BlackBerry 10
+*   [Przewodnik platformy blackBerry 10](blackberry10/index.html)
+*   [Przewodnik narzędziem blackBerry 10 powłoki](blackberry10/tools.html)
+*   [Konfiguracja blackBerry 10](blackberry10/config.html)
+*   [Jeżyna 10 wtyczek](blackberry10/plugin.html)
+*   [Uaktualnianie BlackBerry 10](blackberry10/upgrade.html)
 
 ## Firefox OS
 
-*   Firefox platformy OS Przewodnik
+*   [Firefox platformy OS Przewodnik](firefoxos/index.html)
 
 ## iOS
 
-*   Przewodnik platformy iOS
-*   iOS Shell narzędzia Przewodnik
-*   Konfiguracja iOS
-*   iOS wtyczek
-*   iOS WebViews
-*   Aktualizacja iOS
+*   [Przewodnik platformy iOS](ios/index.html)
+*   [iOS Shell narzędzia Przewodnik](ios/tools.html)
+*   [Konfiguracja iOS](ios/config.html)
+*   [iOS wtyczek](ios/plugin.html)
+*   [iOS WebViews](ios/webview.html)
+*   [Aktualizacja iOS](ios/upgrade.html)
 
 ## Ubuntu
 
-*   Platforma Ubuntu Guide
+*   [Platforma Ubuntu Guide](ubuntu/index.html)
 
 ## Windows Phone 8
 
-*   Przewodnik platformy Windows Phone 8
-*   Windows Phone 8 wtyczki
-*   Aktualizacja Windows Phone 8
+*   [Przewodnik platformy Windows Phone 8](wp8/index.html)
+*   [Windows Phone 8 wtyczki](wp8/plugin.html)
+*   [Aktualizacja](android/upgrade.html) Windows Phone 8
 
 ## Windows
 
-*   Przewodnik platforma Windows
-*   Wtyczki Windows
-*   Opakowania systemu Windows
-*   Aktualizacja systemu Windows 8
+*   [Przewodnik platforma Windows](win8/index.html)
+*   [Wtyczki Windows](win8/plugin.html)
+*   [Opakowania systemu Windows](win8/packaging.html)
+*   [Aktualizacja systemu Windows 8](win8/upgrade.html)
 
 ## Tizen
 
-*   Platforma Tizen Przewodnik
+*   [Platforma Tizen Przewodnik](tizen/index.html)

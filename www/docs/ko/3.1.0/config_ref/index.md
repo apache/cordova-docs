@@ -22,23 +22,23 @@ title: Config.xml 파일
 
 # Config.xml 파일
 
-응용 프로그램의 행동의 여러 측면 전역 구성 파일을 제어할 수 있습니다 `config.xml` , 즉 응용 프로그램의 홈 페이지와 함께 최상위 웹 자산 디렉터리에 배치 합니다. 이 플랫폼-불가 지론 XML 파일 W3C의 [웹 응용 프로그램 (위젯) 포장][1] 사양에 따라 포맷 이며 핵심 코르도바 API 기능, 플러그인, 및 플랫폼 관련 설정을 지정 하려면 확장.
+응용 프로그램의 행동의 여러 측면 전역 구성 파일을 제어할 수 있습니다 `config.xml` , 즉 응용 프로그램의 홈 페이지와 함께 최상위 웹 자산 디렉터리에 배치 합니다. 이 플랫폼-불가 지론 XML [파일](../cordova/file/fileobj/fileobj.html) W3C의 [웹 응용 프로그램 (위젯) 포장][1] 사양에 따라 포맷 이며 핵심 코르도바 API 기능, 플러그인, 및 플랫폼 관련 설정을 지정 하려면 확장.
 
  [1]: http://www.w3.org/TR/widgets/
 
-코르 도우 바 CLI (명령줄 인터페이스에 설명)를 사용 하 여 만든 프로젝트에 대 한이 파일은 최상위 수준에서 찾을 수 있습니다 `www` 디렉터리. 내에서 다양 한 하위 디렉터리에이 파일의 버전을 재생성 프로젝트를 CLI를 사용 하 여 `platforms` . CLI를 사용 하 여 프로젝트를 생성 하지만 워크플로 SDK에 이동 플랫폼 특정 파일 원본으로 사용 됩니다.
+코르 도우 바 CLI (명령줄 인터페이스에 설명)를 사용 하 여 만든 프로젝트에 대 한이 파일은 최상위 수준에서 찾을 수 있습니다 `www` 디렉터리. 내에서 다양 한 하위 디렉터리에이 파일의 버전을 재생성 프로젝트를 CLI를 사용 하 여 `platforms` . CLI를 사용 하 여 프로젝트를 생성 하지만 워크플로 SDK에 이동 플랫폼 특정 [파일](../cordova/file/fileobj/fileobj.html) 원본으로 사용 됩니다.
 
 이 섹션에는 글로벌 및 크로스 플랫폼 구성 옵션 자세히 설명합니다. 플랫폼 특정 옵션에 대 한 다음 섹션을 참조 하십시오.
 
-*   iOS 구성
-*   안 드 로이드 구성
-*   블랙베리 구성
+*   [iOS 구성](../guide/platforms/ios/config.html)
+*   [안 드 로이드 구성](../guide/platforms/android/config.html)
+*   [블랙베리 구성](../guide/platforms/blackberry10/config.html)
 
 다양 한 구성 옵션 아래에 선발 외에 각 대상 플랫폼에 대 한 이미지는 응용 프로그램의 핵심 집합을 구성할 수 있습니다. 자세한 내용은 아이콘 및 시작 화면을 참조 하십시오.
 
 ## 핵심 구성 요소
 
-이 예제는 기본 `config.xml` 는 CLI에서 생성 된 `create` 명령, 명령줄 인터페이스 설명:
+이 예제는 기본 `config.xml` 는 CLI에서 생성 된 `create` 명령, [명령줄 인터페이스](../guide/cli/index.html) 설명:
 
         <widget id="com.example.hello" version="0.0.1">
             <name>HelloWorld</name>
@@ -57,13 +57,13 @@ title: Config.xml 파일
 
 <!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
-다음 구성 요소는 최상위에 표시 `config.xml` 파일 및 모든 지원된 코르도바 플랫폼에서 지원 됩니다:
+다음 구성 요소는 최상위에 표시 `config.xml` [파일](../cordova/file/fileobj/fileobj.html) 및 모든 지원된 코르도바 플랫폼에서 지원 됩니다:
 
 *   `<widget>`요소의 `id` 특성은 응용 프로그램의 리버스-도메인 식별자를 제공 합니다 그리고 `version` 메이저/마이너/패치 표기법 그것의 전체 버전 번호.
 
 *   `<name>`요소 및 애플 리 케이 션 스토어 인터페이스 내에서 디바이스의 홈 화면에 나타나는 응용 프로그램의 정식 이름을 지정 합니다.
 
-*   `<description>`및 `<author>` 요소 메타 데이터 및 응용 프로그램 저장소 목록에서 나타날 수 있는 연락처 정보를 지정 합니다.
+*   `<description>`및 `<author>` 요소 [메타 데이터](../cordova/file/metadata/metadata.html) 및 응용 프로그램 저장소 목록에서 나타날 수 있는 [연락처](../cordova/contacts/contacts.html) 정보를 지정 합니다.
 
 *   옵션 `<content>` 요소는 최상위 웹 자산 디렉터리에서 응용 프로그램의 시작 페이지를 정의 합니다. 기본값은 `index.html` , 최상위의 관례는 프로젝트에 나타나는 `www` 디렉터리.
 
@@ -116,12 +116,12 @@ title: Config.xml 파일
 
 ## `<feature>`요소
 
-CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin` 장치 Api를 사용 하려면 명령. 이 최상위 수정 하지 않습니다 `config.xml` 파일, 그래서 `<feature>` 요소 작업 흐름에 적용 되지 않습니다. 경우 SDK에서 직접 사용 하는 플랫폼 관련 `config.xml` 파일 원본으로 사용 된 `<feature>` 장치 수준 Api와 외부 플러그인을 사용 하려면 태그. 그들은 일반적으로이 폼에 나타납니다.
+CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin` [장치](../cordova/device/device.html) Api를 사용 하려면 명령. 이 최상위 수정 하지 않습니다 `config.xml` [파일](../cordova/file/fileobj/fileobj.html), 그래서 `<feature>` 요소 작업 흐름에 적용 되지 않습니다. 경우 SDK에서 직접 사용 하는 플랫폼 관련 `config.xml` [파일](../cordova/file/fileobj/fileobj.html) 원본으로 사용 된 `<feature>` [장치](../cordova/device/device.html) 수준 Api와 외부 플러그인을 사용 하려면 태그. 그들은 일반적으로이 폼에 나타납니다.
 
         <feature name="Plugin" value="PluginID" />
     
 
-그들은 종종 특정 플랫폼에에서 사용자 지정 값으로 나타납니다 `config.xml` 파일. 예를 들어, 여기에 안 드 로이드 프로젝트에 대 한 장치 API를 지정 하는 방법이입니다.
+그들은 종종 특정 플랫폼에에서 사용자 지정 값으로 나타납니다 `config.xml` [파일](../cordova/file/fileobj/fileobj.html). 예를 들어, 여기에 안 드 로이드 프로젝트에 대 한 [장치](../cordova/device/device.html) API를 지정 하는 방법이입니다.
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />

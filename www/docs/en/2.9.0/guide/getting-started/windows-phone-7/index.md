@@ -104,7 +104,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 To test your application on a device, the device must be registered. MSDN provides [documentation][register-url] to help deploy and test your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
+- In Visual Studio, select 'Windows Phone [Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
     ![](img/guide/platforms/wp7/wpd.png)

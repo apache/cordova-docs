@@ -37,7 +37,7 @@ Properties
 Details
 -------
 
-The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
+The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `[FileEntry](../fileentry/fileentry.html)` object.
 
 Supported Platforms
 -------------------

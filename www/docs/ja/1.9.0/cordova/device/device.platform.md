@@ -37,7 +37,7 @@ device.platform
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // デバイスによって異なります。例:

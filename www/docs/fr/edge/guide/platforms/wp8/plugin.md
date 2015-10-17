@@ -57,7 +57,7 @@ Cette section fournit des détails pour l'implémentation de code du plugin nati
         }
         
 
-Consultez la classe [BaseCommand.cs][1] pour les méthodes disponibles pour le plugin à substituer. Par exemple, le plugin peut capturer des événements de « pause », « reprendre ».
+Consultez la classe [BaseCommand.cs][1] pour les méthodes disponibles pour le plugin à substituer. Par exemple, le plugin peut capturer des événements de « [pause](../../../cordova/events/events.pause.html) », « reprendre ».
 
  [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 

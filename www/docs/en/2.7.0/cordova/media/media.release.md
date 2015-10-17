@@ -31,7 +31,7 @@ Releases the underlying operating systems audio resources.
 Description
 -----------
 
-Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
+Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the [Media](media.html) resource.
 
 Supported Platforms
 -------------------
@@ -43,7 +43,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
         // Audio player
@@ -54,7 +54,7 @@ Quick Example
         my_media.stop();
         my_media.release();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

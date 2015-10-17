@@ -38,7 +38,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rüc
 
 ## Erstellen eines Projekts
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` [Datei](../../../cordova/file/fileobj/fileobj.html) im Root-Verzeichnis des Projekts Cordova. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
@@ -46,7 +46,7 @@ Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properti
 
 ## Emulator starten
 
-Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` Datei in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
+Für BlackBerry-Projekte, stellen Sie sicher, Sie Anpassen der `project.properties` [Datei](../../../cordova/file/fileobj/fileobj.html) in das Stammverzeichnis des Cordova Projekt. Du musst tun, um Ihr BlackBerry Unterzeichnung Kennwort angeben, und geben Speicherorte für BlackBerry WebWorks SDK und BlackBerry Emulator ausführbare Dateien.
 
     $ /path/to/my_new_project/cordova/run <platform>
     
@@ -63,4 +63,4 @@ und dann wählen Sie "Nein", mit der Aufforderung:
 
 ## Protokollierung
 
-Leider ist das streaming Protokolle direkt vom Gerät derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Textbuch und BlackBerry-Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem Gerät durch die '' ALT'' gedrückt aus dem home-Bildschirm und Eingabe '' Lglg'' Schlüssel.
+Leider ist das streaming Protokolle direkt vom [Gerät](../../../cordova/device/device.html) derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Textbuch und BlackBerry-Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem [Gerät](../../../cordova/device/device.html) durch die '' ALT'' gedrückt aus dem home-Bildschirm und Eingabe '' Lglg'' Schlüssel.

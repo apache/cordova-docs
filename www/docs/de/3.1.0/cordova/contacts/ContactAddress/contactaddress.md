@@ -149,7 +149,7 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
 
 *   **Pref**: BlackBerry-Geräten, Rückgabe nicht unterstützt`false`.
 
-*   **Typ**: teilweise unterstützt. Nur eine *Arbeit* und *Home* Typ Adressen kann pro Kontakt gespeichert werden.
+*   **Typ**: teilweise unterstützt. Nur eine *Arbeit* und *Home* Typ Adressen kann pro [Kontakt](../Contact/contact.html) gespeichert werden.
 
 *   **formatiert**: teilweise unterstützt. Gibt eine Verkettung von allen BlackBerry-Adressfelder.
 

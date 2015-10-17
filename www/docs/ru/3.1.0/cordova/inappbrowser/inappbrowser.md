@@ -22,7 +22,7 @@ title: InAppBrowser
 
 # InAppBrowser
 
-> `InAppBrowser`Зовет представление веб-браузера, который отображает при `window.open()` , или когда открытие ссылки формируется как`<a target="_blank">`.
+> `InAppBrowser`Зовет представление веб-браузера, который отображает при `[window.open](window.open.html)()` , или когда открытие ссылки формируется как`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -31,7 +31,7 @@ title: InAppBrowser
 
 ## Описание
 
-Объект, возвращаемый из вызова`window.open`.
+Объект, возвращаемый из вызова`[window.open](window.open.html)`.
 
 ## Методы
 

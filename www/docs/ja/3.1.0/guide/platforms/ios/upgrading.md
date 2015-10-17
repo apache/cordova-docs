@@ -269,14 +269,14 @@ platform add ios`.
 
 10. 変換、 `Cordova.plist` ファイルを `config.xml` 、スクリプトを実行して `bin/cordova\_plist\_to\_config\_xml` プロジェクト ファイル。
 
-11. InAppBrowser プラグインを追加、 `config.xml` の下でこのタグを追加することによって `<cordova><plugins>` :
+11. [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) プラグインを追加、 `config.xml` の下でこのタグを追加することによって `<cordova><plugins>` :
     
         < プラグイン名"InAppBrowser"の値を = ="CDVInAppBrowser"/>
         
 
 12. Objective-C のプラグインはもう*ない*ホワイト注意ください。 ホワイト リストにアプリケーションのホワイト リストとの接続をする必要があります設定、 `User-Agent` メイン コルドバ WebView として同じユーザー エージェントへの接続のヘッダー。 アクセスしてこれを得ることができる、 `userAgent` メイン ビュー コント ローラーをオフ プロパティ。 メイン ビュー-コント ローラー (CDVViewController) しています、 `URLisAllowed` URL がホワイト リストを渡すかどうかをチェックするメソッド。
 
-13. デバイス API の変更:
+13. [デバイス](../../../cordova/device/device.html) API の変更:
     
     *   IOS は、device.platform を返すを使用して `iPhone` 、 `iPad` または `iPod Touch` （正しく） を返します今;`iOS`.
     *   IOS は、ユーザーのデバイスの名前を返す使用 (すべてのプラットフォームでは非推奨今) device.name (例えば ' Shazron の iPhone 5 '）;今、それを返すために使用どのような device.platform を返します： `iPhone` 、 `iPad` または`iPod Touch`.
@@ -310,7 +310,7 @@ platform add ios`.
         
         `update_cordova_subproject パス/を/あなた/プロジェクト/xcodeproj`
 
-**注：**コードを至る 2.2.0 で、 `bin/create` スクリプトのコピーで、 `CordovaLib` プロジェクトにプロジェクトのサブ。 セットアップの同じようなものが、ちょうど右のコピー `CordovaLib` 更新をプロジェクト ディレクトリに、 `CordovaLib` サブテーマ Xcode ファイル インスペクター (プロジェクト) の相対位置。
+**注：**コードを至る 2.2.0 で、 `bin/create` スクリプトのコピーで、 `CordovaLib` プロジェクトにプロジェクトのサブ。 セットアップの同じようなものが、ちょうど右のコピー `CordovaLib` 更新をプロジェクト ディレクトリに、 `CordovaLib` サブテーマ Xcode [ファイル](../../../cordova/file/fileobj/fileobj.html) インスペクター (プロジェクト) の相対位置。
 
 ## アップグレード 2.0.0 プロジェクト 2.1.0
 
@@ -415,7 +415,7 @@ platform add ios`.
 
 27. 選択、 `VERSION` 、前の手順でドラッグしたファイル。
 
-28. **ファイル インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせ入力 (または menuitem**表示 → ユーティリティ → ファイル インスペクターの表示**).
+28. **ファイル インスペクター**を表示する**オプション コマンド 1**のキーの組み合わせ入力 (または menuitem**表示 → ユーティリティ → [ファイル](../../../cordova/file/fileobj/fileobj.html) インスペクターの表示**).
 
 29. ドロップ ダウン メニューを**ファイル検査**で**場所**に対して**相対 CORDOVALIB**を選択します。.
 
@@ -469,7 +469,7 @@ platform add ios`.
 
 4.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.8.0.js` ファイル。
 
-キャプチャ API を使用する、新しい**ipad と網膜ディスプレイ**資産必要があります。
+[キャプチャ](../../../cordova/media/capture/capture.html) API を使用する、新しい**ipad と網膜ディスプレイ**資産必要があります。
 
 1.  コピー、 `Resources/Capture.bundle` 、上書き、既存のプロジェクトのディレクトリに新しいプロジェクトからの項目 `Resources/Capture.bundle` アイテム。
 
@@ -506,7 +506,7 @@ platform add ios`.
 
 7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-1.6.1.js` ファイル。
 
-8.  追加、新しい `Cordova.plist` ファイルをプロジェクトに。 統一コルドバ JavaScript ファイル （Android とブラックベリーからのものと一致するコアのプラグインのサービスの名前を変更する必要がありますので、これは必要です。`cordova-js`).
+8.  追加、新しい `Cordova.plist` ファイルをプロジェクトに。 統一コルドバ JavaScript [ファイル](../../../cordova/file/fileobj/fileobj.html) （Android とブラックベリーからのものと一致するコアのプラグインのサービスの名前を変更する必要がありますので、これは必要です。`cordova-js`).
 
 9.  統合の設定、新しいにあなたの**バックアップ Cordova.plist**でいた**プラグイン**と**ExternalHosts**のエントリ`Cordova.plist`.
 

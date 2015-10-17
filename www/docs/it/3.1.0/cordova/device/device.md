@@ -26,12 +26,12 @@ title: Dispositivo
 
 ## Proprietà
 
-*   device.model
+*   [device.model](device.model.html)
 *   Device.Cordova
 *   Device
 *   Device.UUID
 *   Device.Version
-*   device.name
+*   [device.name](device.name.html)
 
 ## Portata variabile
 

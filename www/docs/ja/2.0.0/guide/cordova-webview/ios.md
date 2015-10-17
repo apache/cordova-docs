@@ -57,7 +57,7 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
 14. **File Inspector** を開くため、 **Option-Command-1** キーを押します
 15. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
 16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-17. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+17. **"Other Linker [Flags](../../cordova/file/flags/flags.html)"** の値に `-all_load` と `-Obj-C` を追加します
 18. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
 19. **"Link Binaries with Libraries"** を展開します
 20. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):

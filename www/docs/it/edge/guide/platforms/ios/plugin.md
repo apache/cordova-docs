@@ -148,7 +148,7 @@ Controlla il parametro per assicurarsi che non è `nil` o una stringa vuota, res
 
 ## iOS integrazione
 
-La `CDVPlugin` classe dispone di altri metodi che possono eseguire l'override del vostro plugin. Ad esempio, è possibile catturare il `pause` , `resume` , app terminare e `handleOpenURL` eventi. Vedere la classe [CDVPlugin.h][1] e [CDVPlugin.m][2] per l'orientamento.
+La `CDVPlugin` classe dispone di altri metodi che possono eseguire l'override del vostro plugin. Ad esempio, è possibile catturare il `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , app terminare e `handleOpenURL` eventi. Vedere la classe [CDVPlugin.h][1] e [CDVPlugin.m][2] per l'orientamento.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
