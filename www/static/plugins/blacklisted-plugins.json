@@ -1,0 +1,8 @@
+{
+    "plugins" : [
+        "cordova-wp8",
+        "cordova-wp8-testtest",
+        "cordova-app-hello-world",
+        "delete-this"
+    ]
+}
