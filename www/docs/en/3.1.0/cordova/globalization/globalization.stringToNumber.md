@@ -34,9 +34,9 @@ as a parameter. That object should have a `value` property with a
 `Number` value.
 
 If there is an error parsing the number string, then the
-`errorCallback` executes with a `GlobalizationError` object as a
+`errorCallback` executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a
 parameter. The error's expected code is
-`GlobalizationError.PARSING\_ERROR`.
+`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following
 values:

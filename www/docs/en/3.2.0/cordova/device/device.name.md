@@ -22,7 +22,7 @@ title: device.name
 
 # device.name
 
-__WARNING__: `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+__WARNING__: `device.name` is deprecated as of version 2.3.0. Use `[device.model](device.model.html)` instead.
 
 Get the device's model name.
 
@@ -91,8 +91,8 @@ versions of the same product.
 
 ## Windows Phone 7 and 8 Quirks
 
-- Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
+- Returns the [device.model](device.model.html) specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
 ## Tizen Quirks
 
-- Returns the device model assigned by the vendor, for example, `TIZEN`
+- Returns the [device.model](device.model.html) assigned by the vendor, for example, `TIZEN`

@@ -151,7 +151,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-例えば、 pausa, resume, app terminate, handleOpenURL events といったような機能を実装できます。
+例えば、 pausa, [resume](../../../cordova/events/events.resume.html), app terminate, handleOpenURL events といったような機能を実装できます。
 
 ## プラグインのデバッグ
 

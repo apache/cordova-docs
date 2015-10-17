@@ -46,9 +46,9 @@ title: FileEntry
 
 *   **setMetadata**： ファイルのメタデータを設定します。
 
-*   **[moveto]**: ファイル システム上の別の場所にファイルを移動します。
+*   **[moveto]**: [ファイル](../fileobj/fileobj.html) システム上の別の場所にファイルを移動します。
 
-*   **copyTo**: ファイル システム上の別の場所にファイルをコピーします。
+*   **copyTo**: [ファイル](../fileobj/fileobj.html) システム上の別の場所にファイルをコピーします。
 
 *   **網**: ファイルを検索するために使用できる URL を返します。
 
@@ -56,7 +56,7 @@ title: FileEntry
 
 *   **getParent**: 親ディレクトリを検索します。
 
-*   **createWriter**: 作成し、 `FileWriter` ファイルへの書き込みに使用できるオブジェクト。
+*   **createWriter**: 作成し、 `[FileWriter](../filewriter/filewriter.html)` ファイルへの書き込みに使用できるオブジェクト。
 
 *   **ファイル**: 作成し、 `File` ファイルのプロパティを含むオブジェクト。
 
@@ -76,7 +76,7 @@ title: FileEntry
 
 *   **successCallback**: 渡されたコールバックを `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -85,7 +85,7 @@ title: FileEntry
 
 ## setMetadata
 
-ファイル セットのメタデータ。
+[ファイル](../fileobj/fileobj.html) セットのメタデータ。
 
 **現在 iOS でのみ動作します。**
 
@@ -153,7 +153,7 @@ title: FileEntry
 
 ## [moveto]
 
-ファイル システム上の別の場所にファイルを移動します。アプリしようとすると、エラーが発生します。
+[ファイル](../fileobj/fileobj.html) システム上の別の場所にファイルを移動します。アプリしようとすると、エラーが発生します。
 
 *   その現在とは異なる名前を指定ではない; 場合、その親にファイルを移動します。
 
@@ -169,7 +169,7 @@ title: FileEntry
 
 *   **successCallback**: 新しいファイルに渡されるコールバック `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: ファイルを移動しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ファイルを移動しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -193,7 +193,7 @@ title: FileEntry
 
 ## copyTo
 
-ファイル システム上の新しい場所にファイルをコピーします。アプリしようとすると、エラーが発生します。
+[ファイル](../fileobj/fileobj.html) システム上の新しい場所にファイルをコピーします。アプリしようとすると、エラーが発生します。
 
 *   その現在のものとは異なる名前を指定しない場合、親にファイルをコピーします。
 
@@ -205,7 +205,7 @@ title: FileEntry
 
 *   **successCallback**: 新しいファイルに渡されるコールバック `FileEntry` オブジェクト。*(機能)*
 
-*   **解り**: ファイルをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ファイルをコピーしようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -246,7 +246,7 @@ title: FileEntry
 
 *   **successCallback**： ファイルが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
-*   **解り**: ファイルを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ファイルを削除しようとしたときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -264,13 +264,13 @@ title: FileEntry
 
 ## getParent
 
-親を検索 `DirectoryEntry` ファイルを含みます。
+親を検索 `[DirectoryEntry](../directoryentry/directoryentry.html)` ファイルを含みます。
 
 **パラメーター:**
 
-*   **successCallback**： ファイルの親に渡されるコールバック `DirectoryEntry` 。*(機能)*
+*   **successCallback**： ファイルの親に渡されるコールバック `[DirectoryEntry](../directoryentry/directoryentry.html)` 。*(機能)*
 
-*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `DirectoryEntry` 。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
+*   **解り**: 親を取得しようとしてエラーが発生した場合に実行されるコールバック `[DirectoryEntry](../directoryentry/directoryentry.html)` 。 呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。 *(機能)*
 
 **簡単な例**
 
@@ -288,13 +288,13 @@ title: FileEntry
 
 ## createWriter
 
-作成する、 `FileWriter` オブジェクトによって表されるファイルに関連付けられている、`FileEntry`.
+作成する、 `[FileWriter](../filewriter/filewriter.html)` オブジェクトによって表されるファイルに関連付けられている、`FileEntry`.
 
 **パラメーター:**
 
-*   **successCallback**: 渡されたコールバックを `FileWriter` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `[FileWriter](../filewriter/filewriter.html)` オブジェクト。*(機能)*
 
-*   **解り**: FileWriter を作成中にエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: [FileWriter](../filewriter/filewriter.html) を作成中にエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 
@@ -318,7 +318,7 @@ title: FileEntry
 
 *   **successCallback**: 渡されたコールバックを `File` オブジェクト。*(機能)*
 
-*   **解り**： を作成するときにエラーが発生した場合に実行されるコールバックが `File` とき、ファイルが存在しないなどのオブジェクト。 呼び出されると、 `FileError` オブジェクト。 *(機能)*
+*   **解り**： を作成するときにエラーが発生した場合に実行されるコールバックが `File` とき、ファイルが存在しないなどのオブジェクト。 呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。 *(機能)*
 
 **簡単な例**
 

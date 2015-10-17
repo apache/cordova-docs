@@ -25,7 +25,7 @@ title: Using Plugman to Manage Plugins
 From version 3.0 onward, Cordova implements all device APIs as
 plugins, and leaves them disabled by default.  It also supports two
 different ways to add and remove plugins. The first is by using the
-`cordova` CLI described in The Command-line Interface. The second is
+`cordova` CLI described in [The Command-line Interface](../guide/cli/index.html). The second is
 by using a lower-level
 [plugman](https://github.com/apache/cordova-plugman/)
 command-line interface. This guide concentrates on the second
@@ -53,7 +53,7 @@ To uninstall a plugin:
         
 ## Installing Core Plugins
 
-The examples below show how to add plugins as needed so that any
+The examples below [show](../cordova/inappbrowser/inappbrowser.html) how to add plugins as needed so that any
 Cordova APIs you use in your project still work after you upgrade to
 version 3.0.  For each command, you need to select the target
 platform, and reference the platform's project directory.

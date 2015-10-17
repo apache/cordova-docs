@@ -32,9 +32,9 @@ geolocationSuccess
 パラメーター
 ----------
 
-- __position:__ デバイスによって返される位置情報を表します (`Position`)
+- __position:__ デバイスによって返される位置情報を表します (`[Position](../Position/position.html)`)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     function geolocationSuccess(position) {

@@ -31,7 +31,7 @@ Devuelve un número con formato como una cadena según las preferencias del usua
 
 Devuelve la cadena con formato de número a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `String`.
 
-Si hay un error de formato del número, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.FORMATTING\_ERROR`.
+Si hay un error de formato del número, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 El parámetro `options` es opcional, y sus valores por defecto son:
 

@@ -22,27 +22,27 @@ title: Datei
 
 # Datei
 
-> Eine API zum Lesen, schreiben und navigieren Sie Datei-System-Hierarchien, basierend auf der [w3c Datei api][1].
+> Eine API zum Lesen, schreiben und navigieren Sie Datei-System-Hierarchien, basierend auf der [w3c [Datei](fileobj/fileobj.html) api][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## Objekte
 
-*   DirectoryEntry
-*   DirectoryReader
-*   Datei
-*   FileEntries
-*   FileError
-*   FileReader
-*   Dateisystem
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [Datei](fileobj/fileobj.html)
+*   [FileEntries](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [Dateisystem](filesystem/filesystem.html)
+*   [FileTransfer](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
 *   Flaggen
-*   LocalFileSystem
-*   Metadaten
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
+*   [Metadaten](metadata/metadata.html)
 
 ## Zugriff auf die Funktion
 
@@ -107,4 +107,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

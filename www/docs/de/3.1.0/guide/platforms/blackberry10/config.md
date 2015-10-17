@@ -22,14 +22,14 @@ title: BlackBerry Configuration
 
 # BlackBerry Configuration
 
-Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. In diesem Abschnitt Informationen-Einstellungen, die nur für BlackBerry 10 gelten baut. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
+Die `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. In diesem Abschnitt Informationen-Einstellungen, die nur für BlackBerry 10 gelten baut. Finden Sie die [Datei](../../../cordova/file/fileobj/fileobj.html) config.xml [Datei](../../../cordova/file/fileobj/fileobj.html) Informationen auf globalen Konfigurations-Optionen.
 
-*   `ChildBrowser`( `disable` oder Standard `enable` ): Kind-Browser-Fenster deaktiviert. Standardmäßig starten apps ein sekundäre Browser-Fenster zum Anzeigen von Ressourcen Zugriff über `window.open()` oder durch Angabe eines `_blank` Anker Ziel. Geben Sie `disable` dieses Standardverhalten überschreiben.
+*   `ChildBrowser`( `disable` oder Standard `enable` ): Kind-Browser-Fenster deaktiviert. Standardmäßig starten apps ein sekundäre Browser-Fenster zum Anzeigen von Ressourcen Zugriff über `[window.open](../../../cordova/inappbrowser/window.open.html)()` oder durch Angabe eines `_blank` Anker Ziel. Geben Sie `disable` dieses Standardverhalten überschreiben.
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` oder Standard `disable` ): ermöglicht den Popup-Blocker, die Aufrufe von verhindert `window.open()` . Standardmäßig zeigen Popups in einem Kind-Browserfenster. Wenn Sie die Einstellung auf `enable` verhindert, dass es überhaupt anzeigt.
+*   `PopupBlocker`( `enable` oder Standard `disable` ): ermöglicht den Popup-Blocker, die Aufrufe von verhindert `[window.open](../../../cordova/inappbrowser/window.open.html)()` . Standardmäßig zeigen Popups in einem Kind-Browserfenster. Wenn Sie die Einstellung auf `enable` verhindert, dass es überhaupt anzeigt.
     
         <preference name="PopupBlocker" value="enable"/>
         

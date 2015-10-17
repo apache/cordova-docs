@@ -74,7 +74,7 @@ components to communicate with each other.
 
 The easiest way to set up an application is to run the `cordova`
 command-line utility, also known as the _command-line interface_
-(CLI). (To install the CLI, see The Command-line Interface.)
+(CLI). (To install the CLI, see [The Command-line Interface](../cli/index.html).)
 Depending on the set of platforms you wish to target, you can rely on
 the CLI for progressively greater shares of the development cycle:
 
@@ -85,7 +85,7 @@ the CLI for progressively greater shares of the development cycle:
 * For many mobile platforms, you can also use the CLI to set up
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
-  (See the Platform Guides for instructions.)
+  (See the [Platform Guides](../platforms/index.html) for instructions.)
   As indicated in the Platform Support table below, you may need to
   run the CLI on different operating systems depending on the targeted
   platform.
@@ -101,7 +101,7 @@ the CLI for progressively greater shares of the development cycle:
 At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
 options. 
-(See the Platform Guides for details about each platform's SDK tool set.)
+(See the [Platform Guides](../platforms/index.html) for details about each platform's SDK tool set.)
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
 <!-- XREF
@@ -111,7 +111,7 @@ You may use the command-line utility to initially generate the app, or
 iteratively thereafter to feed updated code to SDK tools.  You may
 also build the app's configuration file yourself.
 <!-- XREF
-(See Configuration Reference for details.)
+(See [Configuration Reference](../../config_ref/index.html) for details.)
 XREF -->
 
 <!-- XREF
@@ -288,8 +288,8 @@ CLI's shorthand stubs.)
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="p">no FileTransfer</td>
-        <td data-col="winphone8"  class="p">no FileTransfer</td>
+        <td data-col="winphone7"  class="p">no <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a></td>
+        <td data-col="winphone8"  class="p">no <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -372,8 +372,8 @@ CLI's shorthand stubs.)
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="p">localStorage only</td>
-        <td data-col="winphone8"  class="p">localStorage only</td>
+        <td data-col="winphone7"  class="p"><a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> only</td>
+        <td data-col="winphone8"  class="p"><a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> only</td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
     </tr>

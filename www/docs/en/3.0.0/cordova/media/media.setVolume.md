@@ -43,7 +43,7 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Play audio
@@ -74,7 +74,7 @@ Quick Example
         }, 5000);
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

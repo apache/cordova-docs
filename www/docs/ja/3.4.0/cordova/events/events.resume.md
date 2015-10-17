@@ -31,7 +31,7 @@ title: 再開
 
 `resume`ネイティブ プラットフォームは、背景から、アプリケーションを引き出すときに発生します。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

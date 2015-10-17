@@ -33,7 +33,7 @@ SQLTransaction
 詳細
 -------
 
-Database オブジェクトの transaction メソッドを呼ぶとき、それに対応するコールバック関数が SQLTransaction オブジェクトと一緒に呼び出されます。 executeSql メソッドを複数回使用することで、データベーストランザクションを作成できます。
+[Database](../database/database.html) オブジェクトの transaction メソッドを呼ぶとき、それに対応するコールバック関数が SQLTransaction オブジェクトと一緒に呼び出されます。 executeSql メソッドを複数回使用することで、データベーストランザクションを作成できます。
 
 サポートされているプラットフォーム
 -------------------

@@ -27,14 +27,14 @@ Stop watching the compass referenced by the watch ID parameter.
 
     navigator.compass.clearWatchFilter(watchID);
 
-- __watchID__: The ID returned by `compass.watchHeadingFilter`.
+- __watchID__: The ID returned by `[compass.watchHeadingFilter](compass.watchHeadingFilter.html)`.
 
 Supported Platforms
 -------------------
 
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
@@ -43,7 +43,7 @@ Quick Example
     
     navigator.compass.clearWatchFilter(watchID);
     
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

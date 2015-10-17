@@ -36,7 +36,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Depending on the device, a few examples are:
@@ -47,7 +47,7 @@ Quick Example
     //   - "WinCE"
     var devicePlatform = device.platform;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

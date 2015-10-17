@@ -31,7 +31,7 @@ title: globalization.getFirstDayOfWeek
 
 週の日 1 日曜日であると見なされます、1 から始まる番号が付けられます。 曜日を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが必要な `value` を持つプロパティ、 `Number` 値。
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## サポートされているプラットフォーム
 

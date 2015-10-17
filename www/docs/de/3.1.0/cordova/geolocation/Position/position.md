@@ -22,11 +22,11 @@ title: Position
 
 # Position
 
-Enthält `Position` Koordinaten und Timestamp, erstellt von der Geolocation API.
+Enthält `Position` [Koordinaten](../Coordinates/coordinates.html) und Timestamp, erstellt von der [Geolocation](../geolocation.html) API.
 
 ## Eigenschaften
 
-*   **CoOrds**: eine Reihe von geographischen Koordinaten. *(Koordinaten)*
+*   **CoOrds**: eine Reihe von geographischen [Koordinaten](../Coordinates/coordinates.html). *(Koordinaten)*
 
 *   **Timestamp**: Zeitstempel der Erstellung für `coords` . *(Datum)*
 

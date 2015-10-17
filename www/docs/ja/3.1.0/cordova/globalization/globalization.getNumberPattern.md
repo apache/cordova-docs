@@ -47,7 +47,7 @@ title: globalization.getNumberPattern
 
 *   **グループ**: 解析および書式設定を使用する区切り記号。*(文字列)*
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PATTERN\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 

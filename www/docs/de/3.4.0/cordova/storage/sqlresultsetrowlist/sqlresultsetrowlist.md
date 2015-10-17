@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-Eine der Eigenschaften von den `SQLResultSet` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
+Eine der Eigenschaften von den `[SQLResultSet](../sqlresultset/sqlresultset.html)` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
 
 ## Eigenschaften
 

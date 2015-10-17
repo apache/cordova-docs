@@ -31,7 +31,7 @@ L'évènement se déclenche lorsque l'utilisateur appuie sur le bouton recherche
 
 Si vous souhaitez modifier le comportement par défaut de bouton rechercher sous Android, vous pouvez enregistrer un écouteur pour l'événement 'searchbutton'.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

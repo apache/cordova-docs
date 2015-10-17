@@ -60,7 +60,7 @@ which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings.
 <!-- XREF
-(See the API Reference for an overview, and the API and Configuration
+(See the [API Reference](../../index.html) for an overview, and the API and Configuration
 Guide for examples of how to use them.)
 XREF -->
 
@@ -74,7 +74,7 @@ components to communicate with each other.
 
 The easiest way to set up an application is to run the `cordova`
 command-line utility, also known as the _command-line interface_
-(CLI). (To install the CLI, see The Cordova Command-line Interface.)
+(CLI). (To install the CLI, see [The Cordova Command-line Interface](../cli/index.html).)
 Depending on the set of platforms you wish to target, you can rely on
 the CLI for progressively greater shares of the development cycle:
 
@@ -86,7 +86,7 @@ the CLI for progressively greater shares of the development cycle:
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
   <!-- XREF
-  (See the Platform Guides for instructions.)
+  (See the [Platform Guides](../getting-started/index.html) for instructions.)
   XREF -->
   As indicated in the Platform Support table below, you may need to
   run the CLI on different operating systems depending on the targeted
@@ -105,7 +105,7 @@ At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
 options. 
 <!-- XREF
-(See the Platform Guides for details about each platform's SDK tool set.)
+(See the [Platform Guides](../getting-started/index.html) for details about each platform's SDK tool set.)
 XREF -->
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.

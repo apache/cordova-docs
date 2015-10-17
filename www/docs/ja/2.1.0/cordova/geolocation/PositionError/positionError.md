@@ -23,7 +23,7 @@ title: PositionError
 PositionError
 ========
 
-`PositionError` オブジェクトは、エラーが発生したときに `geolocationError` コールバック関数に渡されます。
+`PositionError` オブジェクトは、エラーが発生したときに `[geolocationError](../parameters/geolocationError.html)` コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -41,7 +41,7 @@ PositionError
 概要
 -----------
 
-`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
+`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `[geolocationError](../parameters/geolocationError.html)` コールバック関数を通してユーザーに返されます。
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -53,4 +53,4 @@ PositionError
 
 ### `PositionError.TIMEOUT`
 
-デバイスが、 `geolocationOptions` の `timeout` プロパティーによって指定された時間内に位置が取得できなかった場合に返されます。 `geolocation.watchPosition` と一緒に使用するとき、このエラーは `geolocationError` コールバックの中で毎 `timeout` ミリ秒後呼ばれる可能性があります。
+デバイスが、 `[geolocationOptions](../parameters/geolocation.options.html)` の `timeout` プロパティーによって指定された時間内に位置が取得できなかった場合に返されます。 `[geolocation.watchPosition](../geolocation.watchPosition.html)` と一緒に使用するとき、このエラーは `[geolocationError](../parameters/geolocationError.html)` コールバックの中で毎 `timeout` ミリ秒後呼ばれる可能性があります。

@@ -34,7 +34,7 @@ This object represents a file system.
 
 The `FileSystem` object represents information about the file system.
 The name of the file system is unique across the list of exposed
-file systems.  The root property contains a `DirectoryEntry` object
+file systems.  The root property contains a `[DirectoryEntry](../directoryentry/directoryentry.html)` object
 that represents the file system's root directory.
 
 ## Supported Platforms

@@ -25,7 +25,7 @@ title: camera.getPicture
 Takes a photo using the camera, or retrieves a photo from the device's
 image gallery.  The image is passed to the success callback as a
 base64-encoded `String`, or as the URI for the image file.  The method
-itself returns a `CameraPopoverHandle` object that can be used to
+itself returns a `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` object that can be used to
 reposition the file selection popover.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
@@ -34,20 +34,20 @@ reposition the file selection popover.
 
 The `camera.getPicture` function opens the device's default camera
 application that allows users to snap pictures. This behavior occurs
-by default, when `Camera.sourceType` equals
-`Camera.PictureSourceType.CAMERA`.  Once the user snaps the photo, the
+by default, when `[Camera](camera.html).sourceType` equals
+`[Camera](camera.html).PictureSourceType.CAMERA`.  Once the user snaps the photo, the
 camera application closes and the application is restored.
 
-If `Camera.sourceType` is `Camera.PictureSourceType.PHOTOLIBRARY` or
-`Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
+If `[Camera](camera.html).sourceType` is `[Camera](camera.html).PictureSourceType.PHOTOLIBRARY` or
+`[Camera](camera.html).PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
 that allows users to select an existing image.  The
-`camera.getPicture` function returns a `CameraPopoverHandle` object,
+`camera.getPicture` function returns a `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` object,
 which can be used to reposition the image selection dialog, for
 example, when the device orientation changes.
 
-The return value is sent to the `cameraSuccess` callback function, in
+The return value is sent to the `[cameraSuccess](parameter/cameraSuccess.html)` callback function, in
 one of the following formats, depending on the specified
-`cameraOptions`:
+`[cameraOptions](parameter/cameraOptions.html)`:
 
 - A `String` containing the base64-encoded photo image.
 
@@ -65,7 +65,7 @@ example:
 __NOTE:__ Photo resolution on newer devices is quite good. Photos
 selected from the device's gallery are not downscaled to a lower
 quality, even if a `quality` parameter is specified.  To avoid common
-memory problems, set `Camera.destinationType` to `FILE_URI` rather
+memory problems, set `[Camera](camera.html).destinationType` to `FILE_URI` rather
 than `DATA_URL`.
 
 ## Supported Platforms
@@ -87,7 +87,7 @@ scenario, the image may not appear when the cordova activity is restored.
 
 Including a JavaScript `alert()` in either of the callback functions
 can cause problems.  Wrap the alert within a `setTimeout()` to allow
-the iOS image picker or popover to fully close before the alert
+the iOS image picker or popover to fully [close](../inappbrowser/inappbrowser.html) before the alert
 displays:
 
     setTimeout(function() {
@@ -102,8 +102,8 @@ via Zune does not work, and triggers an error callback.
 ## Tizen Quirks
 
 Tizen only supports a `destinationType` of
-`Camera.DestinationType.FILE_URI` and a `sourceType` of
-`Camera.PictureSourceType.PHOTOLIBRARY`.
+`[Camera](camera.html).DestinationType.FILE_URI` and a `sourceType` of
+`[Camera](camera.html).PictureSourceType.PHOTOLIBRARY`.
 
 ## Quick Example
 

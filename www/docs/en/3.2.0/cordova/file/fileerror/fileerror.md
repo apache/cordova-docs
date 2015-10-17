@@ -22,7 +22,7 @@ title: FileError
 
 # FileError
 
-A `FileError` object is set when an error occurs in any of the File API methods.
+A `FileError` object is set when an error occurs in any of the [File](../fileobj/fileobj.html) API methods.
 
 ## Properties
 
@@ -46,5 +46,5 @@ A `FileError` object is set when an error occurs in any of the File API methods.
 ## Description
 
 The `FileError` object is the only parameter provided to any of the
-File API's error callbacks.  To determine the type of error, compare
+[File](../fileobj/fileobj.html) API's error callbacks.  To determine the type of error, compare
 its `code` property to any of the listings above.

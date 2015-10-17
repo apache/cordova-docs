@@ -33,7 +33,7 @@ title: globalization.dateToString
 
 Входящий `date` параметр должен иметь тип`Date`.
 
-Если есть ошибка форматирования даты, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.FORMATTING\_ERROR`.
+Если есть ошибка форматирования даты, то `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 `options`Параметр является необязательным, и его значения по умолчанию являются:
 

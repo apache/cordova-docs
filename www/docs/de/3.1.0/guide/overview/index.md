@@ -22,7 +22,7 @@ title: Übersicht
 
 # Übersicht
 
-Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
+Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes [Gerät](../../cordova/device/device.html) Sensoren, Daten und Netzwerkstatus zugreifen.
 
 Verwenden Sie Cordova, falls Sie sind:
 
@@ -34,7 +34,7 @@ Verwenden Sie Cordova, falls Sie sind:
 
 ## Basiskomponenten
 
-Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese Datei entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
+Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese [Datei](../../cordova/file/fileobj/fileobj.html) entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
 
  [1]: http://www.w3.org/TR/widgets/
 
@@ -53,7 +53,7 @@ Die einfachste Möglichkeit, eine Anwendung eingerichtet ist, führen Sie die `c
 
 *   Für viele mobile Plattformen können Sie auch die CLI einrichten weitere Projekt-Dateien erforderlich, um innerhalb jedes SDK kompilieren. Damit dies funktioniert müssen Sie jede gezielte Plattform-SDK installieren. (Siehe den Plattform-Führern Anweisungen.) Wie in der folgenden Tabelle der Plattformunterstützung angegeben, müssen Sie möglicherweise die CLI auf verschiedenen Betriebssystemen abhängig von der Zielplattform ausgeführt.
 
-*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem Gerät.
+*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem [Gerät](../../cordova/device/device.html).
 
 Zu jedem Zeitpunkt im Entwicklungszyklus können Sie sich auf Plattform-spezifischen SDK Tools verlassen, die eine umfangreichere Optionen bieten. (Siehe die Plattform-Führer für Details über jede Plattform-SDK-Tool festgelegt.) Eine SDK-Umgebung ist besser geeignet, wenn Sie möchten, eine Hybrid-app zu implementieren, die Web-basierte und native Anwendungskomponenten mischt. <!--XREF (Siehe Hybrid Application Guide für mehr informationen.) XREF--> Sie können das Befehlszeile-Dienstprogramm verwenden, um zunächst die app generieren oder iterativ danach, aktualisierten Code zu SDK-Tools zu ernähren. Sie können die app-Konfigurationsdatei auch selbst erstellen. 
 
@@ -482,11 +482,11 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="winphone7"  class="p">
-          kein FileTransfer
+          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          kein FileTransfer
+          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="win8"       class="y">

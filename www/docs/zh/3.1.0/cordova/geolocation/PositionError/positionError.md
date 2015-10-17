@@ -22,7 +22,7 @@ title: PositionError
 
 # PositionError
 
-A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
+A `PositionError` 物件傳遞給 `[geolocationError](../parameters/geolocationError.html)` 回檔時出現錯誤。
 
 ## 屬性
 
@@ -38,7 +38,7 @@ A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
 
 ## 說明
 
-`PositionError`物件傳遞給 `geolocationError` 與地理定位發生錯誤時的回呼函數。
+`PositionError`物件傳遞給 `[geolocationError](../parameters/geolocationError.html)` 與地理定位發生錯誤時的回呼函數。
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -50,4 +50,4 @@ A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
 
 ### `PositionError.TIMEOUT`
 
-返回設備時，無法在指定的時間內檢索位置 `geolocationOptions` ' `timeout` 屬性。 與一起使用時 `geolocation.watchPosition` ，此錯誤可能傳遞給 `geolocationError` 回檔每 `timeout` 毫秒為單位）。
+返回設備時，無法在指定的時間內檢索位置 `[geolocationOptions](../parameters/geolocation.options.html)` ' `timeout` 屬性。 與一起使用時 `[geolocation.watchPosition](../geolocation.watchPosition.html)` ，此錯誤可能傳遞給 `[geolocationError](../parameters/geolocationError.html)` 回檔每 `timeout` 毫秒為單位）。

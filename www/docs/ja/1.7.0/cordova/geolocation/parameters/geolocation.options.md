@@ -32,7 +32,7 @@ geolocationOptions
 
 - __frequency:__ 位置情報を取得する頻度をミリ秒で表します。 このオプションは W3C の仕様に含まれておらず、将来的には実装が廃止されます。 maximumAge を代わりに使用してください。 _(Number)_ (デフォルト: 10000)
 - __enableHighAccuracy:__ より精度の高い位置情報を取得するためのヒントを提供するかどうかを表します _(Boolean)_
-- __timeout:__ `geolocation.getCurrentPosition` または `geolocation.watchPosition` 関数が呼び出されたときに、それぞれに対応する `geolocationSuccess` コールバック関数が呼ばれるまでの最大経過時間をミリ秒単位で表します _(Number)_
+- __timeout:__ `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` または `[geolocation.watchPosition](../geolocation.watchPosition.html)` 関数が呼び出されたときに、それぞれに対応する `[geolocationSuccess](geolocationSuccess.html)` コールバック関数が呼ばれるまでの最大経過時間をミリ秒単位で表します _(Number)_
 - __maximumAge:__ キャッシュされた位置情報の取得を許容する最大時間をミリ秒単位で表します _(Number)_
 
 Android に関する注意点

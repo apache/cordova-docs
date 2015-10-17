@@ -39,7 +39,7 @@ Retourne le modèle de la `successCallback` . L'objet passé comme paramètre co
 
 *   **DST_OFFSET**: l'offset d'heure actuel en secondes entre non-heure le client du fuseau horaire et l'heure du client sauver du fuseau horaire. *(Nombre)*
 
-S'il y a une erreur, obtenir le modèle, le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
+S'il y a une erreur, obtenir le modèle, le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
 

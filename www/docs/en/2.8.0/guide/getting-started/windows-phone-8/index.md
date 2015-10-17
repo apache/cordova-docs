@@ -119,7 +119,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
 
 - Make sure your phone is connected, and the screen is unlocked
-- In Visual Studio, select 'Device' from the top drop-down menu.
+- In Visual Studio, select '[Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
 ![](img/guide/platforms/wp7/wpd.png)

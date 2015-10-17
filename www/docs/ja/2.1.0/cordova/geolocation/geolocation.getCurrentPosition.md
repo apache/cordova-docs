@@ -23,7 +23,7 @@ title: geolocation.getCurrentPosition
 geolocation.getCurrentPosition
 ==============================
 
-デバイスの現在位置を `Position` オブジェクトとして返します。
+デバイスの現在位置を `[Position](Position/position.html)` オブジェクトとして返します。
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
@@ -39,7 +39,7 @@ geolocation.getCurrentPosition
 概要
 -----------
 
-`geolocation.getCurrentPositon` 関数は非同期関数です。 `geolocationSuccess` コールバック関数に、`Position` オブジェクトをパラメーターとしてデバイスの現在位置を返します。エラーが発生した場合、 `PositionError` オブジェクトとともに `geolocationError` コールバック関数が呼び出されます。
+`geolocation.getCurrentPositon` 関数は非同期関数です。 `[geolocationSuccess](parameters/geolocationSuccess.html)` コールバック関数に、`[Position](Position/position.html)` オブジェクトをパラメーターとしてデバイスの現在位置を返します。エラーが発生した場合、 `[PositionError](PositionError/positionError.html)` オブジェクトとともに `[geolocationError](parameters/geolocationError.html)` コールバック関数が呼び出されます。
 
 
 サポートされているプラットフォーム
@@ -53,7 +53,7 @@ geolocation.getCurrentPosition
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 成功時のコールバック関数

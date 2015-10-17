@@ -148,7 +148,7 @@ Windows phone은 `<source-file>` 요소는 현재 모든 플러그인 리소스 
     < 구성 파일 target="config.xml" 부모 = "/ *" >< 기능 이름 "PluginName" = >< param 이름을 = "wp-패키지" 값 = "PluginName" / >< / 기능 >< / config 파일 >
     
 
-우리는 WMAppManifest.xml에 연락처 기능을 추가 하 고 싶 었, 그것은 이렇게 보이는 것입니다.
+우리는 WMAppManifest.xml에 [연락처](../../../cordova/contacts/contacts.html) 기능을 추가 하 고 싶 었, 그것은 이렇게 보이는 것입니다.
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />
@@ -163,7 +163,7 @@ Windows phone은 `<source-file>` 요소는 현재 모든 플러그인 리소스 
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-예를 들어 '일시 중지' 및 '다시 시작' 응용 프로그램 이벤트에 연결할 수 있습니다.
+예를 들어 '[일시 중지](../../../cordova/events/events.pause.html)' 및 '다시 시작' 응용 프로그램 이벤트에 연결할 수 있습니다.
 
 ### 플러그인을 디버깅
 
@@ -173,7 +173,7 @@ C# 쪽을 디버깅 하려면 Visual Studio 디버거를 사용 하 여, 그냥 
 
 ## 일반적인 함정
 
-*   네이티브 자바 스크립트 구현에 전달 하는 인수를 결정할 때는 주의 해야 합니다. 하지만 대부분 장치 플랫폼 기대 args 배열 될 cordova.exec에 전달 된 다른 유형의 개체가이 배열에 있는 경우 deserialize 하기 어렵거나 된다.
+*   네이티브 자바 스크립트 구현에 전달 하는 인수를 결정할 때는 주의 해야 합니다. 하지만 대부분 [장치](../../../cordova/device/device.html) 플랫폼 기대 args 배열 될 cordova.exec에 전달 된 다른 유형의 개체가이 배열에 있는 경우 deserialize 하기 어렵거나 된다.
     
         cordova.exec (승리, 실패, "ServiceName", "MethodName" ["이것은 문자열", 54, {리터럴: '문제'}]);
         

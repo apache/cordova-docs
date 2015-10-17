@@ -22,7 +22,7 @@ title: contactFindOptions
 
 # contactFindOptions
 
-Parametro facoltativo del `contacts.find` metodo, utilizzato per filtrare i contatti restituiti dal database di contatti.
+Parametro facoltativo del `[contacts.find](../contacts.find.html)` metodo, utilizzato per filtrare i contatti restituiti dal database di contatti.
 
     {filtro: "", più: vero,};
     

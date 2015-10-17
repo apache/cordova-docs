@@ -30,7 +30,7 @@ Properties
 
 - __limit:__ The maximum number of images the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 images

@@ -38,7 +38,7 @@ BlackBerry WebWorks Quirks
 --------------------------
 
 No API provides format information for media files, so the
-`MediaFileData` object returned by `MediaFile.getFormatData` features
+`MediaFileData` object returned by `[MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)` features
 the following default values:
 
 - __codecs__: Not supported, and returns `null`.

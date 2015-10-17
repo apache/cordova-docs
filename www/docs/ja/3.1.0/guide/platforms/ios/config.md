@@ -39,7 +39,7 @@ title: iOS 構成
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web ストレージ データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web ストレージ バックアップを防ぐ。
+*   `BackupWebStorage`(文字列のいずれか `none` 、 `local` 、またはデフォルトの `cloud` ): に設定されている `cloud` web [ストレージ](../../../cordova/storage/storage.html) データを iCloud を介してバックアップを許可します。 設定されている `local` iTunes の同期を介してローカル バックアップのみを許可します。 設定されている `none` web [ストレージ](../../../cordova/storage/storage.html) バックアップを防ぐ。
     
         <preference name="BackupWebStorage" value="local"/>
         

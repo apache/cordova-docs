@@ -33,9 +33,9 @@ title: capture.captureVideo
 
 비디오 녹화 장치의 비디오 레코딩 응용 프로그램을 사용 하 여 캡처하는 비동기 작업을 시작 합니다. 작업을 사용 하면 단일 세션에서 하나 이상의 녹음을 캡처할 수 있습니다.
 
-캡처 작업이 끝나면 사용자 종료 비디오 레코딩 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `CaptureVideoOptions.limit` 에 도달. 없는 경우 `limit` 매개 변수 값 지정, 하나 (1), 기본 및 캡처 작업이 종료 되 면 사용자는 하나의 비디오 클립을 기록 하는 후.
+[캡처](capture.html) 작업이 끝나면 사용자 종료 비디오 레코딩 응용 프로그램 또는 녹음에 의해 지정 된 최대 수 `[CaptureVideoOptions](captureVideoOptions.html).limit` 에 도달. 없는 경우 `limit` 매개 [변수](../../../plugin_ref/spec.html) 값 지정, 하나 (1), 기본 및 [캡처](capture.html) 작업이 종료 되 면 사용자는 하나의 비디오 클립을 기록 하는 후.
 
-캡처 작업이 완료 되 면 그것은 `CaptureCB` 의 배열과 콜백 실행 `MediaFile` 비디오 클립 파일을 캡처 설명 하는 각 개체. 사용자는 비디오 클립을 캡처하기 전에 작업을 종료 하는 경우는 `CaptureErrorCB` 콜백 실행 한 `CaptureError` 개체를 특징으로 `CaptureError.CAPTURE_NO_MEDIA_FILES` 오류 코드.
+[캡처](capture.html) 작업이 완료 되 면 그것은 `[CaptureCB](CaptureCB.html)` 의 배열과 콜백 실행 `MediaFile` 비디오 클립 파일을 [캡처](capture.html) 설명 하는 각 개체. 사용자는 비디오 클립을 캡처하기 전에 작업을 종료 하는 경우는 `[CaptureErrorCB](CaptureErrorCB.html)` 콜백 실행 한 `[CaptureError](CaptureError.html)` 개체를 특징으로 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` 오류 코드.
 
 ## 지원 되는 플랫폼
 
@@ -128,4 +128,4 @@ title: capture.captureVideo
 
 ## 블랙베리 WebWorks 단점
 
-*   블랙베리 WebWorks 위한 코르도바 **비디오 레코더** 응용, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
+*   블랙베리 WebWorks 위한 코르도바 **비디오 레코더** 응용, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.

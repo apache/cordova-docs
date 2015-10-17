@@ -42,9 +42,9 @@ title: Config.xml ファイル
 
 このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
-*   iOS 構成
-*   Android の構成
-*   ブラックベリー 10 構成
+*   [iOS 構成](../guide/platforms/ios/config.html)
+*   [Android の構成](../guide/platforms/android/config.html)
+*   [ブラックベリー 10 構成](../guide/platforms/blackberry10/config.html)
 
 以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、アイコンとスプラッシュ画面を参照してください。
 

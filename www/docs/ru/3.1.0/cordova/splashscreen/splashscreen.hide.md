@@ -74,7 +74,7 @@ title: splashscreen.hide
 
 ## iOS галтель
 
-`config.xml`Файла `AutoHideSplashScreen` должен быть `false` . Для задержки скрытия заставки на две секунды, добавить таймер например следующее в `deviceready` обработчик событий:
+`config.xml`Файла `AutoHideSplashScreen` должен быть `false` . Для задержки скрытия заставки на две секунды, добавить таймер например следующее в `[deviceready](../events/events.deviceready.html)` обработчик событий:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

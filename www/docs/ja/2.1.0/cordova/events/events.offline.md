@@ -32,7 +32,7 @@ offline
 
 アプリのネットワーク接続がオフラインになったとき、 offline イベントが呼び出されます。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,7 +43,7 @@ offline
 - Windows Phone 7
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("offline", onOffline, false);

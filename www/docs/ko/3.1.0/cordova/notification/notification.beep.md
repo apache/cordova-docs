@@ -105,6 +105,6 @@ title: notification.beep
 
 ## Tizen 특수
 
-*   Tizen은 미디어 API 통해 오디오 파일을 재생 하 여 경고음을 구현 합니다.
+*   Tizen은 [미디어](../media/media.html) API 통해 오디오 파일을 재생 하 여 경고음을 구현 합니다.
 
-*   경고음 파일에 위치 해야 합니다, 짧은 해야 한 `sounds` 응용 프로그램의 루트 디렉터리의 하위 디렉터리 명명 해야 합니다`beep.wav`.
+*   경고음 파일에 [위치](../geolocation/Position/position.html) 해야 합니다, 짧은 해야 한 `sounds` 응용 프로그램의 루트 디렉터리의 하위 디렉터리 명명 해야 합니다`beep.wav`.

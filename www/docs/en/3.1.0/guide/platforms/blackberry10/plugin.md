@@ -22,7 +22,7 @@ title: BlackBerry 10 Plugins
 
 # BlackBerry 10 Plugins
 
-This is a continuation of the Plugin Development Guide for Cordova. Once you have reviewed that content, now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
+This is a continuation of the [Plugin Development Guide](../../hybrid/plugins/index.html) for Cordova. Once you have reviewed that content, now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
 
     window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -34,7 +34,7 @@ A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also 
 
 ## Creating the native part of your plugin ##
 
-To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select File > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
+To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select [File](../../../cordova/file/fileobj/fileobj.html) > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
 
 The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.
 
@@ -179,7 +179,7 @@ looks like this:
 
 (The list shows the hierarchical relationship among the top-level
 directories. The parenthesis shows the contents of a given directory. All
-directory names appear in bold text. File names are preceded by the `>`
+directory names appear in bold text. [File](../../../cordova/file/fileobj/fileobj.html) names are preceded by the `>`
 sign.)
 
 ## Contents of the `plugin.xml` file##

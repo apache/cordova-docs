@@ -104,10 +104,10 @@ with at least one native implementation. Details to do so for each
 platform are listed below.  These guides continue to build on the
 simple Echo Plugin example discussed above.
 
-- Developing a Plugin on Android
-- Developing a Plugin on BlackBerry
-- Developing a Plugin on BlackBerry 10
-- Developing a Plugin on iOS
-- Developing a Plugin on Windows Phone
+- [Developing a Plugin on Android](android/index.html)
+- [Developing a Plugin on BlackBerry](blackberry/index.html)
+- [Developing a Plugin on BlackBerry](blackberry/index.html) 10
+- [Developing a Plugin on iOS](ios/index.html)
+- [Developing a Plugin on Windows Phone](windows-phone/index.html)
 
 The webOS and Tizen platforms currently do not support plugins.

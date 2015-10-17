@@ -55,7 +55,7 @@ Il `options` parametro è facoltativo e verrà impostato i seguenti valori:
 Il `options.formatLength` può essere `short` , `medium` , `long` , o `full` . Il `options.selector` può essere `date` , `time` o`date and
 time`.
 
-Se c'è un errore di parsing della stringa data, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PARSING\_ERROR`.
+Se c'è un errore di parsing della stringa data, allora il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## Piattaforme supportate
 

@@ -23,14 +23,14 @@ title: device.phonegap
 device.phonegap
 ===============
 
-Get the version of phonegap running on the device.
+Get the [version](../storage/parameters/version.html) of phonegap running on the device.
 
     var string = device.phonegap;
     
 Description
 -----------
 
-`device.phonegap` returns the version of phonegap running on the device.
+`device.phonegap` returns the [version](../storage/parameters/version.html) of phonegap running on the device.
 
 Supported Platforms
 -------------------
@@ -41,12 +41,12 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var name = device.phonegap;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

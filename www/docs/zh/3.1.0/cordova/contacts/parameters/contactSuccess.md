@@ -22,7 +22,7 @@ title: contactSuccess
 
 # contactSuccess
 
-提供的成功回呼函數 `Contact` 陣列產生的 `contacts.find` 操作。
+提供的成功回呼函數 `Contact` 陣列產生的 `[contacts.find](../contacts.find.html)` 操作。
 
     function(contacts) {
         // Do something

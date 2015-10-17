@@ -31,7 +31,7 @@ title: CaptureCB
 
 Cette fonction s'exécute après qu'une opération de capture réussie est terminée. À ce point qu'un fichier multimédia a été capturé et soit l'utilisateur a quitté l'application capture de média, ou la limite de capture a été atteinte.
 
-Chaque `MediaFile` objet décrit un fichier multimédia capturés.
+Chaque `[MediaFile](MediaFile.html)` objet décrit un fichier multimédia capturés.
 
 ## Petit exemple
 

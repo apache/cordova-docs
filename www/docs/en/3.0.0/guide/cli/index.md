@@ -33,7 +33,7 @@ various platforms' SDKs to develop them further.
 
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
-(See the Platform Guides for more details.)
+(See the [Platform Guides](../platforms/index.html) for more details.)
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -139,7 +139,7 @@ created. However, any edits you make to the project within an SDK
 affect the derivative set of assets, not the original cross-platform
 source files. Use this approach if you simply want to initialize a
 project.
-(See the Platform Guides for information on how to develop applications within each SDK.)
+(See the [Platform Guides](../platforms/index.html) for information on how to develop applications within each SDK.)
 Read on if you wish to use command-line tools for the entire
 development cycle.
 
@@ -148,7 +148,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `deviceready` event handler, referenced by
+be specified as part of the `[deviceready](../../cordova/events/events.deviceready.html)` event handler, referenced by
 default from `www/js/index.js`.
 <!-- XREF
 (See the Application Development Guide for details.)
@@ -188,7 +188,7 @@ specific platform's emulator:
 Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
-(See the Platform Guides for details.)
+(See the [Platform Guides](../platforms/index.html) for details.)
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
@@ -211,7 +211,7 @@ testing, following procedures that vary for each platform. In
 Android's case, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
-See Platform Guides for details on each platform's requirements.
+See [Platform Guides](../platforms/index.html) for details on each platform's requirements.
 
 ## Add Features
 
@@ -224,7 +224,7 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development Guide for details.)  More commonly, you would add a plugin to enable
+native components. (See [Embedding WebViews](../hybrid/webviews/index.html) and [Plugin Development Guide](../hybrid/plugins/index.html) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 <!-- XREF
 discussed in the Application Development Guide and
@@ -235,46 +235,46 @@ The `cordova plugin add` command requires you to specify the
 repository for the plugin code.  Here are examples of features you
 might add:
 
-* Basic device information (Device API):
+* Basic device information ([Device](../../cordova/device/device.html) API):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
-* Network Connection and Battery Events:
+* Network [Connection](../../cordova/connection/connection.html) and Battery [Events](../../cordova/events/events.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
 
-* Accelerometer, Compass, and Geolocation:
+* [Accelerometer](../../cordova/accelerometer/accelerometer.html), [Compass](../../cordova/compass/compass.html), and [Geolocation](../../cordova/geolocation/geolocation.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
 
-* Camera, Media playback and Capture:
+* [Camera](../../cordova/camera/camera.html), [Media](../../cordova/media/media.html) playback and [Capture](../../cordova/media/capture/capture.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
 
-* Access files on device or network (File API):
+* Access files on device or network ([File](../../cordova/file/fileobj/fileobj.html) API):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
 
-* Notification via dialog box or vibration:
+* [Notification](../../cordova/notification/notification.html) via dialog box or vibration:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
 
-* Contacts:
+* [Contacts](../../cordova/contacts/contacts.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
 
-* Globalization:
+* [Globalization](../../cordova/globalization/globalization.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-* Splashscreen:
+* [Splashscreen](../../cordova/splashscreen/splashscreen.html):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
 
@@ -339,7 +339,7 @@ You can also use `merges` to add files not present in the original
 `www` directory. For example, an app can incorporate a _back button_
 graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
-instead capture `backbutton` events from the corresponding hardware
+instead capture `[backbutton](../../cordova/events/events.backbutton.html)` events from the corresponding hardware
 button.
 
 ## Updating Cordova
@@ -364,6 +364,6 @@ described in this section. If you are updating from a version prior to
 3.0, you need to create a new project as described above, then copy
 the older application's assets into the top-level `www` directory.
 Where applicable, further details about upgrading to 3.0 are available
-in the Platform Guides.  Once you upgrade to the `cordova`
+in the [Platform Guides](../platforms/index.html).  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.

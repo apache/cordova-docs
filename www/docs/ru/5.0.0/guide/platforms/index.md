@@ -30,57 +30,57 @@ title: Руководство по поддерживаемым платформ
 
 ## Amazon Fire OS
 
-*   Руководство для платформы Amazon Fire OS
-*   Настройка Amazon Fire OS
-*   WebView в Amazon Fire OS
-*   Плагины для Amazon Fire OS
+*   [Руководство для платформы Amazon Fire OS](amazonfireos/index.html)
+*   [Настройка Amazon Fire OS](amazonfireos/config.html)
+*   [WebView в Amazon Fire OS](amazonfireos/webview.html)
+*   [Плагины для Amazon Fire OS](amazonfireos/plugin.html)
 
 ## Android
 
-*   Руководство для платформы Android
-*   Руководство по инструментам командной строки Android
-*   Конфигурация Android
-*   Плагины для Android
-*   WebViews в Android
-*   Обновление для Android
+*   [Руководство для платформы Android](android/index.html)
+*   [Руководство по инструментам командной строки Android](android/tools.html)
+*   [Конфигурация Android](android/config.html)
+*   [Плагины для Android](android/plugin.html)
+*   [WebViews в Android](android/webview.html)
+*   [Обновление для Android](android/upgrade.html)
 
 ## BlackBerry 10
 
-*   Руководство для платформы BlackBerry 10
-*   Руководство по инструментам командной строки BlackBerry 10
-*   Конфигурации BlackBerry 10
-*   Плагины для BlackBerry 10
-*   Модернизация BlackBerry 10
+*   [Руководство для платформы BlackBerry 10](blackberry10/index.html)
+*   [Руководство по инструментам командной строки BlackBerry 10](blackberry10/tools.html)
+*   [Конфигурации BlackBerry 10](blackberry10/config.html)
+*   [Плагины для BlackBerry 10](blackberry10/plugin.html)
+*   [Модернизация BlackBerry](blackberry/upgrading.html) 10
 
 ## Firefox OS
 
-*   Руководство для платформы Firefox OS
+*   [Руководство для платформы Firefox OS](firefoxos/index.html)
 
 ## iOS
 
-*   Руководство для платформы iOS
-*   Руководство по инструментам командной строки iOS
-*   Конфигурация iOS
-*   Плагины для iOS
-*   WebViews в iOS
-*   Обновление для iOS
+*   [Руководство для платформы iOS](ios/index.html)
+*   [Руководство по инструментам командной строки iOS](ios/tools.html)
+*   [Конфигурация iOS](ios/config.html)
+*   [Плагины для iOS](ios/plugin.html)
+*   [WebViews в iOS](ios/webview.html)
+*   [Обновление для iOS](ios/upgrade.html)
 
 ## Ubuntu
 
-*   Руководство для платформы Ubuntu
+*   [Руководство для платформы Ubuntu](ubuntu/index.html)
 
 ## Windows Phone 8
 
-*   Руководство для платформы Windows Phone 8
+*   [Руководство для платформы Windows Phone 8](wp8/index.html)
 *   Windows Phone 8 плагины
-*   Обновление Windows Phone 8
+*   [Обновление Windows Phone](wp8/upgrading.html) 8
 
 ## Windows
 
-*   Руководство по платформе Windows
+*   [Руководство по платформе Windows](win8/index.html)
 *   Windows плагины
-*   Обновление для Windows 8
+*   [Обновление для Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Руководство для платформы Tizen
+*   [Руководство для платформы Tizen](tizen/index.html)

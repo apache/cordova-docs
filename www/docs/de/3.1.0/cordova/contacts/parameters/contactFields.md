@@ -22,6 +22,6 @@ title: contactFields
 
 # contactFields
 
-Erforderlicher Parameter für die `contacts.find` -Methode verwendet, um anzugeben, welche Felder enthalten sollte die `Contact` Objekte aus einem Suchvorgang.
+Erforderlicher Parameter für die `[contacts.find](../contacts.find.html)` -Methode verwendet, um anzugeben, welche Felder enthalten sollte die `Contact` Objekte aus einem Suchvorgang.
 
     ["Name", "Telefonnummern", "Email"]

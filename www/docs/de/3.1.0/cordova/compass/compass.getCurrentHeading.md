@@ -29,9 +29,9 @@ Erhalten Sie aktuelle Kompassrichtung.
 
 ## Beschreibung
 
-Der Kompass ist ein Sensor, der erkennt die Richtung oder Position, dass das Gerät in der Regel von der Oberseite des Geräts gezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99, wobei 0 Norden ist.
+Der [Kompass](compass.html) ist ein Sensor, der erkennt die Richtung oder [Position](../geolocation/Position/position.html), dass das [Gerät](../device/device.html) in der Regel von der Oberseite des Geräts gezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99, wobei 0 Norden ist.
 
-Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Objekt unter Verwendung der `compassSuccess` Callback-Funktion.
+Die Kompassrichtung Informationen über zurückgegeben ein `CompassHeading` -Objekt unter Verwendung der `[compassSuccess](parameters/compassSuccess.html)` Callback-Funktion.
 
 ## Unterstützte Plattformen
 

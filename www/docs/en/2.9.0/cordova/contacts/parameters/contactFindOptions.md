@@ -23,7 +23,7 @@ title: contactFindOptions
 contactFindOptions
 ==================
 
-Optional parameter of the `contacts.find` method, used to filter the
+Optional parameter of the `[contacts.find](../contacts.find.html)` method, used to filter the
 contacts returned from the contacts database.
 
     {

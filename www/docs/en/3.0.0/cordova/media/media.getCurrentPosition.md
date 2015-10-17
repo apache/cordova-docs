@@ -38,7 +38,7 @@ Description
 -----------
 
 An asynchronous function that returns the current position of the
-underlying audio file of a `Media` object. Also updates the `Media`
+underlying audio file of a `[Media](media.html)` object. Also updates the `[Media](media.html)`
 object's `position` parameter.
 
 Supported Platforms
@@ -56,7 +56,7 @@ Supported Platforms
 
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Audio player
@@ -80,7 +80,7 @@ Quick Example
         );
     }, 1000);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

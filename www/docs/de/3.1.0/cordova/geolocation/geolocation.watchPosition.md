@@ -22,7 +22,7 @@ title: geolocation.watchPosition
 
 # geolocation.watchPosition
 
-Uhren für Änderungen an der aktuellen Position des Geräts.
+Uhren für Änderungen an der aktuellen [Position](Position/position.html) des Geräts.
 
     var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
                                                       [geolocationError],
@@ -31,7 +31,7 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
 
 ## Parameter
 
-*   **GeolocationSuccess**: der Rückruf, der die aktuelle Position übergeben wird.
+*   **GeolocationSuccess**: der Rückruf, der die aktuelle [Position](Position/position.html) übergeben wird.
 
 *   **GeolocationError**: (Optional) der Rückruf, der ausgeführt wird, wenn ein Fehler auftritt.
 
@@ -39,11 +39,11 @@ Uhren für Änderungen an der aktuellen Position des Geräts.
 
 ## Gibt
 
-*   **String**: gibt eine Uhr-Id, die das Uhr Stellung Intervall verweist zurück. Die Uhr-Id sollte verwendet werden, mit `geolocation.clearWatch` , gerade für Änderungen zu stoppen.
+*   **String**: gibt eine Uhr-Id, die das Uhr Stellung Intervall verweist zurück. Die Uhr-Id sollte verwendet werden, mit `[geolocation.clearWatch](geolocation.clearWatch.html)` , gerade für Änderungen zu stoppen.
 
 ## Beschreibung
 
-`geolocation.watchPosition`ist eine asynchrone Funktion. Es gibt das Gerät aktuelle Position zurück, wenn eine Änderung erkannt wird. Wenn das Gerät einen neuen Speicherort und ruft die `geolocationSuccess` Rückruf führt mit einem `Position` Objekt als Parameter. Wenn ein Fehler vorliegt der `geolocationError` Rückruf führt mit einem `PositionError` Objekt als Parameter.
+`geolocation.watchPosition`ist eine asynchrone Funktion. Es gibt das [Gerät](../device/device.html) aktuelle [Position](Position/position.html) zurück, wenn eine Änderung erkannt wird. Wenn das [Gerät](../device/device.html) einen neuen Speicherort und ruft die `[geolocationSuccess](parameters/geolocationSuccess.html)` Rückruf führt mit einem `[Position](Position/position.html)` Objekt als Parameter. Wenn ein Fehler vorliegt der `[geolocationError](parameters/geolocationError.html)` Rückruf führt mit einem `PositionError` Objekt als Parameter.
 
 ## Unterstützte Plattformen
 

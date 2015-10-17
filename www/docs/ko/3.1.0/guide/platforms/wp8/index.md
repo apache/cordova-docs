@@ -22,13 +22,13 @@ title: Windows Phone 플랫폼 가이드 8
 
 # Windows Phone 플랫폼 가이드 8
 
-이 가이드에서는 Windows Phone 8 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 장치를 타겟팅 하려는 경우 대신 Windows Phone 7 플랫폼 가이드 상세한 Windows Phone 7 개발. 버전 7 IE10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.
+이 가이드에서는 Windows Phone 8 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 7.5 및 8 장치를 타겟팅 하려는 경우 대신 [Windows Phone 7 플랫폼 가이드](../wp7/index.html) 상세한 Windows Phone 7 개발. 버전 7 IE10에 포함 된 모든 고급 기능을가지고 있지 않습니다 하지만 동일한 Api 집합을 구현 합니다. Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.
 
 두 버전 모두에 적용 되는 자세한 플랫폼 관련 정보에 대 한 다음 참조.
 
-*   Windows Phone 업그레이드
-*   Windows Phone 플러그인
-*   Windows Phone 명령줄 도구
+*   [Windows Phone 업그레이드](upgrading.html)
+*   [Windows Phone 플러그인](plugin.html)
+*   [Windows Phone 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
@@ -81,15 +81,15 @@ title: Windows Phone 플랫폼 가이드 8
 
 ## 2.1. 건물 템플릿
 
-**참고:** 이 단계는 필요 하지 않을 수 있습니다. Lib\windows 전화 번호부 파일 CordovaWP8\_x\_x_x.zip에 이미 포함 되어 있는 경우이 단계를 건너뛸 수 있습니다.
+**참고:** 이 단계는 필요 하지 않을 수 있습니다. Lib\windows 전화 번호부 [파일](../../../cordova/file/fileobj/fileobj.html) CordovaWP8\_x\_x_x.zip에 이미 포함 되어 있는 경우이 단계를 건너뛸 수 있습니다.
 
 개발 프로세스를 단순화 하기 위해 코르 도우 바 Visual Studio 템플릿을 빌드하는 스크립트와 함께 제공. Visual Studio 내부 코르도바 응용 프로그램의 빠른 생성을 위한 수 있습니다. 필요한 경우이 서식 파일을 수정할 수 있습니다 그리고 아래 단계 진행 서식 파일을 생성 하려면 방법을 나타냅니다.
 
 ### 설치 서식 파일을 만들고 배치 파일을 실행 합니다.
 
-*   Repo의 루트 파일 createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 파일 2.zip 파일을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 파일을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio 파일에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
+*   Repo의 루트 [파일](../../../cordova/file/fileobj/fileobj.html) createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 [파일](../../../cordova/file/fileobj/fileobj.html) 2.zip 파일을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 파일을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio 파일에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
 
-*   명령줄에서 배치 파일을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 변수
+*   명령줄에서 배치 파일을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 [변수](../../../plugin_ref/spec.html)
 
 스크립트를 실행 합니다.
 
@@ -100,7 +100,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 *   Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선택.
 
-*   **CordovaWP8**를 선택 합니다. (버전 번호 서식 파일 설명에 표시 됩니다.)
+*   **CordovaWP8**를 선택 합니다. (버전 번호 서식 [파일](../../../cordova/file/fileobj/fileobj.html) 설명에 표시 됩니다.)
 
 *   프로젝트에 이름을 하 고 **확인** 을 선택 합니다.
 
@@ -114,7 +114,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 *   여기에 추가 하는 콘텐츠 Visual Studio 프로젝트의 일부가 될 필요가 있고 내용으로 설정 해야 합니다.
 
-*   참고:이 화면 캡처 코르도바 2.3.0 다운로드에서 귀하의 목록을 실제 버전 설치에 따라 달라 집니다.
+*   참고:이 화면 [캡처](../../../cordova/media/capture/capture.html) 코르도바 2.3.0 다운로드에서 귀하의 목록을 실제 버전 설치에 따라 달라 집니다.
 
 ![][8]
 
@@ -136,9 +136,9 @@ title: Windows Phone 플랫폼 가이드 8
 
  [10]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
-*   귀하의 휴대 전화 연결 되어 있으며 화면 잠긴 ㄴ 다는 것을 확인 하십시오.
+*   귀하의 휴대 전화 [연결](../../../cordova/connection/connection.html) 되어 있으며 화면 잠긴 ㄴ 다는 것을 확인 하십시오.
 
-*   Visual Studio에서 상단 드롭다운 메뉴에서 '장치'를 선택 합니다.
+*   Visual Studio에서 상단 드롭다운 메뉴에서 '[장치](../../../cordova/device/device.html)'를 선택 합니다.
 
 *   디버깅을 시작 하려면 주요 드롭 다운 메뉴 옆에 있는 녹색 **재생** 버튼을 누르거나 **f5 키** 를 입력합니다.
 

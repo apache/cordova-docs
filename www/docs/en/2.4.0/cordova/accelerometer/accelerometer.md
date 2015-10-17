@@ -28,21 +28,21 @@ Accelerometer
 Methods
 -------
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+- [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+- [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 Arguments
 ---------
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- [accelerometerSuccess](parameters/accelerometerSuccess.html)
+- [accelerometerError](parameters/accelerometerError.html)
+- [accelerometerOptions](parameters/accelerometerOptions.html)
 
 Objects (Read-Only)
 -------------------
 
-- Acceleration
+- [Acceleration](acceleration/acceleration.html)
 
 Permissions
 -----------

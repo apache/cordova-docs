@@ -22,22 +22,22 @@ title: batterycritical
 
 # batterycritical
 
-이벤트 발생 때 배터리 중요 한 수준 임계값에 도달 했습니다.
+[이벤트](events.html) 발생 때 배터리 중요 한 수준 임계값에 도달 했습니다.
 
     window.addEventListener("batterycritical", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-이벤트 발생 때 배터리 충전 비율 배터리 위험 임계값에 도달 했습니다. 값은 장치 마다 다릅니다.
+[이벤트](events.html) 발생 때 배터리 충전 비율 배터리 위험 임계값에 도달 했습니다. 값은 [장치](../device/device.html) 마다 다릅니다.
 
 `batterycritical`처리기는 두 개의 속성이 포함 된 개체에 전달 됩니다:
 
 *   **수준**: 배터리 충전 (0-100)의 비율. *(수)*
 
-*   **isPlugged**: 장치 연결된 인치 *(부울)* 인지 여부를 나타내는 부울 값
+*   **isPlugged**: [장치](../device/device.html) 연결된 인치 *(부울)* 인지 여부를 나타내는 부울 값
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `window.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `window.addEventListener` 한번 [이벤트](events.html) 리스너를 [연결](../connection/connection.html) 하는 `[deviceready](events.deviceready.html)` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 

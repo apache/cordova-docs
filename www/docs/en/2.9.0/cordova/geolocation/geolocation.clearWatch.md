@@ -37,7 +37,7 @@ Description
 -----------
 
 The `geolocation.clearWatch` stops watching changes to the device's
-location by clearing the `geolocation.watchPosition` referenced by
+location by clearing the `[geolocation.watchPosition](geolocation.watchPosition.html)` referenced by
 `watchID`.
 
 Supported Platforms
@@ -50,7 +50,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Options: watch for changes in position, and use the most
@@ -62,7 +62,7 @@ Quick Example
 
     navigator.geolocation.clearWatch(watchID);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

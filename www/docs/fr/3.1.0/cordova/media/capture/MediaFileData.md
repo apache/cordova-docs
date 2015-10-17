@@ -38,7 +38,7 @@ title: MediaFileData
 
 ## BlackBerry WebWorks Quirks
 
-Aucune API ne fournit des informations sur le format des fichiers multimédias, donc le `MediaFileData` objet retourné par `MediaFile.getFormatData` comporte les valeurs par défaut suivantes :
+Aucune API ne fournit des informations sur le format des fichiers multimédias, donc le `MediaFileData` objet retourné par `[MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)` comporte les valeurs par défaut suivantes :
 
 *   **codecs**: pas pris en charge et retourne`null`.
 

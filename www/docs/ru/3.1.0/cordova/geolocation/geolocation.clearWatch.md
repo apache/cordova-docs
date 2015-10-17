@@ -33,7 +33,7 @@ title: geolocation.clearWatch
 
 ## Описание
 
-`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `geolocation.watchPosition` ссылается`watchID`.
+`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `[geolocation.watchPosition](geolocation.watchPosition.html)` ссылается`watchID`.
 
 ## Поддерживаемые платформы
 

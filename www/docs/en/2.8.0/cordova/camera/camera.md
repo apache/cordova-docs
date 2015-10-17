@@ -25,13 +25,13 @@ Camera
 
 > The `camera` object provides access to the device's default camera application.
 
-**Important privacy note:** Collection and use of images from a device's camera raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses the camera and whether the images recorded are shared with any other parties.  In addition, if the app's use of the camera is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of images from a device's camera raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses the camera and whether the images recorded are shared with any other parties.  In addition, if the app's use of the camera is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the [Privacy Guide](../../guide/privacy/index.html).
 
 Methods
 -------
 
-- camera.getPicture
-- camera.cleanup
+- [camera.getPicture](camera.getPicture.html)
+- [camera.cleanup](camera.cleanup.html)
 
 Permissions
 -----------

@@ -20,7 +20,7 @@ license: >
 title: MediaFile.getFormatData
 ---
 
-MediaFile.getFormatData
+[MediaFile](MediaFile.html).getFormatData
 =======================
 
 > Retrieves format information about the media capture file.
@@ -33,7 +33,7 @@ MediaFile.getFormatData
 Description
 -----------
 
-This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a MediaFileData object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.
+This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a [MediaFileData](MediaFileData.html) object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.
 
 Supported Platforms
 -------------------
@@ -46,12 +46,12 @@ Supported Platforms
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  Therefore, all MediaFileData objects will be returned with default values.  See MediaFileData documentation.
+There is no API that provides format information of media files.  Therefore, all [MediaFileData](MediaFileData.html) objects will be returned with default values.  See [MediaFileData](MediaFileData.html) documentation.
 
 Android Quirks
 --------------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+The API for retrieving media file format information is limited.  Therefore, not all [MediaFileData](MediaFileData.html) properties are supported.  See [MediaFileData](MediaFileData.html) documentation.
 
 iOS Quirks
 ----------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+The API for retrieving media file format information is limited.  Therefore, not all [MediaFileData](MediaFileData.html) properties are supported.  See [MediaFileData](MediaFileData.html) documentation.

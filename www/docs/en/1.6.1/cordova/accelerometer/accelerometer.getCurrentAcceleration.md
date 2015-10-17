@@ -32,7 +32,7 @@ Description
 
 The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-The acceleration is returned using the `accelerometerSuccess` callback function.
+The acceleration is returned using the `[accelerometerSuccess](parameters/accelerometerSuccess.html)` callback function.
 
 Supported Platforms
 -------------------
@@ -42,7 +42,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 (Mango)
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -58,7 +58,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

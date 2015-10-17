@@ -22,7 +22,7 @@ title: geolocationSuccess
 
 # geolocationSuccess
 
-Función del usuario que se ejecuta cuando una posición de geolocalización disponible (cuando se llama desde `geolocation.getCurrentPosition` ), o cuando cambia la posición (cuando se llama desde`geolocation.watchPosition`).
+Función del usuario que se ejecuta cuando una posición de geolocalización disponible (cuando se llama desde `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ), o cuando cambia la posición (cuando se llama desde`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something

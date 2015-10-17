@@ -50,7 +50,7 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("deviceready", onDeviceReady, false);

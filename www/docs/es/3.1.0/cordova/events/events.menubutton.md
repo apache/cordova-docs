@@ -31,7 +31,7 @@ El evento se desencadena cuando el usuario presiona el botón de menú.
 
 Aplicar un controlador de eventos reemplaza el comportamiento de botón de menú predeterminado.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 

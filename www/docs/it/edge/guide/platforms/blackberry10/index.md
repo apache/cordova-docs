@@ -28,7 +28,7 @@ Questa guida illustra come impostare il tuo ambiente SDK per distribuire Cordova
 
 L'ambiente di sviluppo è disponibile su Windows, Mac e Linux.
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK nativo BlackBerry o BlackBerry WebWorks SDK. L'interfaccia della riga di comando per informazioni, vedere come installare `cordova` , aggiungere progetti, quindi creare e distribuire per ogni piattaforma.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK nativo BlackBerry o BlackBerry WebWorks SDK. [L'interfaccia della riga di comando](../../cli/index.html) per informazioni, vedere come installare `cordova` , aggiungere progetti, quindi creare e distribuire per ogni piattaforma.
 
 Simulatore di dispositivo BlackBerry 10:
 

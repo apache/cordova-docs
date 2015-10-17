@@ -78,7 +78,7 @@ Getting Started with Tizen
     - これで、プロジェクトは作成され **Project Explorer** ビューに表示されます
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 - プロジェクトのビルド:
 

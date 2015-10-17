@@ -36,8 +36,8 @@ Description
 -----------
 
 The `media.seekTo` executes asynchronously, updating the current
-playback position within an audio file referenced by a `Media`
-object. Also updates the `Media` object's `position` parameter.
+playback position within an audio file referenced by a `[Media](media.html)`
+object. Also updates the `[Media](media.html)` object's `position` parameter.
 
 Supported Platforms
 -------------------
@@ -49,7 +49,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Audio player
@@ -61,7 +61,7 @@ Quick Example
         my_media.seekTo(10000);
     }, 5000);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 

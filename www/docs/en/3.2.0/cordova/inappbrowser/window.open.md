@@ -22,12 +22,12 @@ title: window.open
 
 # window.open
 
-Opens a URL in a new `InAppBrowser` instance, the current browser
+Opens a URL in a new `[InAppBrowser](inappbrowser.html)` instance, the current browser
 instance, or the system browser.
 
     var ref = window.open(url, target, options);
 
-- __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
+- __ref__: Reference to the `[InAppBrowser](inappbrowser.html)` window. _(InAppBrowser)_
 
 - __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
 
@@ -37,7 +37,7 @@ instance, or the system browser.
     - `_blank`: Opens in the `InAppBrowser`.
     - `_system`: Opens in the system's web browser.
 
-- __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
+- __options__: Options for the `[InAppBrowser](inappbrowser.html)`. Optional, defaulting to: `location=yes`. _(String)_
 
     The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:
 

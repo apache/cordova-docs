@@ -74,7 +74,7 @@ title: splashscreen.hide
 
 ## iOS 怪癖
 
-`config.xml`檔的 `AutoHideSplashScreen` 設置必須為 `false` 。 若要延遲兩秒鐘隱藏的閃屏，添加如下所示在計時器 `deviceready` 事件處理常式：
+`config.xml`檔的 `AutoHideSplashScreen` 設置必須為 `false` 。 若要延遲兩秒鐘隱藏的閃屏，添加如下所示在計時器 `[deviceready](../events/events.deviceready.html)` 事件處理常式：
 
         setTimeout(function() {
             navigator.splashscreen.hide();

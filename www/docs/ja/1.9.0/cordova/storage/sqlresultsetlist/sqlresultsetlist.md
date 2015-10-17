@@ -23,7 +23,7 @@ title: SQLResultSetList
 SQLResultSetList
 =======
 
-SQL 問い合わせから返される行を保持した SQLResultSet のプロパティーのうちの1つです。
+SQL 問い合わせから返される行を保持した [SQLResultSet](../sqlresultset/sqlresultset.html) のプロパティーのうちの1つです。
 
 プロパティー
 -------

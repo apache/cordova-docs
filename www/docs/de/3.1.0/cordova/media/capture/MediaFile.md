@@ -26,15 +26,15 @@ title: MediaFile
 
 ## Eigenschaften
 
-*   **Name**: der Name der Datei, ohne Pfadinformationen. (DOM-String und enthält)
+*   **Name**: der Name der [Datei](../../file/fileobj/fileobj.html), ohne Pfadinformationen. (DOM-String und enthält)
 
-*   **FullPath**: der vollständige Pfad der Datei, einschließlich des Namens. (DOM-String und enthält)
+*   **FullPath**: der vollständige Pfad der [Datei](../../file/fileobj/fileobj.html), einschließlich des Namens. (DOM-String und enthält)
 
-*   **Typ**: Mime-Typ der Datei (DOM-String und enthält)
+*   **Typ**: Mime-Typ der [Datei](../../file/fileobj/fileobj.html) (DOM-String und enthält)
 
-*   **LastModifiedDate**: das Datum und die Uhrzeit wann die Datei zuletzt geändert wurde. (Datum)
+*   **LastModifiedDate**: das Datum und die Uhrzeit wann die [Datei](../../file/fileobj/fileobj.html) zuletzt geändert wurde. (Datum)
 
-*   **Größe**: die Größe der Datei in Byte. (Anzahl)
+*   **Größe**: die Größe der [Datei](../../file/fileobj/fileobj.html) in Byte. (Anzahl)
 
 ## Methoden
 

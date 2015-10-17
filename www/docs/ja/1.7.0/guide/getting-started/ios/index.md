@@ -88,12 +88,12 @@ Getting Started with iOS
 - **Finish** ボタンをクリックします
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 
 - Xcode の Project Navigator にある **www** フォルダーを選択します
 - **index.html** ファイルを選択します
-- `<body>` タグの後に `<h1>Hello World</h1>` と記述します
+- `<body>` タグの後に `<h1>[Hello World](../webos/index.html)</h1>` と記述します
 
 関連する JavaScript や CSS ファイルも追加することができます。
 

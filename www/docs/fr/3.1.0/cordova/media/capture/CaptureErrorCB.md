@@ -31,7 +31,7 @@ title: CaptureErrorCB
 
 Cette fonction s'exécute si une erreur se produit lorsque vous essayez de lancer un média opération de capture. Scénarios de défaillance incluent lors de l'application capture est occupée, une opération de capture est déjà en cours, ou l'utilisateur annule l'opération avant que tous les fichiers multimédias sont capturés.
 
-Cette fonction s'exécute avec un `CaptureError` objet contenant une erreur appropriée`code`.
+Cette fonction s'exécute avec un `[CaptureError](CaptureError.html)` objet contenant une erreur appropriée`code`.
 
 ## Petit exemple
 

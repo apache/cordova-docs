@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-Quando un `SQLTransaction` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro.
+Quando un `[SQLTransaction](../sqltransaction/sqltransaction.html)` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro.
 
 ## Proprietà
 
@@ -30,11 +30,11 @@ Quando un `SQLTransaction` dell'oggetto `executeSql` viene chiamato il metodo, i
 
 *   **rowsAffected**: il numero di righe modificate dall'istruzione SQL, zero se l'istruzione non ha interessato tutte le righe.
 
-*   **righe**: un `SQLResultSetRowList` che rappresentano le righe restituite, vuota se non vengono restituite righe.
+*   **righe**: un `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` che rappresentano le righe restituite, vuota se non vengono restituite righe.
 
 ## Dettagli
 
-Quando un `SQLTransaction` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro contenente tre proprietà:
+Quando un `[SQLTransaction](../sqltransaction/sqltransaction.html)` dell'oggetto `executeSql` viene chiamato il metodo, il callback specificato viene eseguito con un `SQLResultSet` parametro contenente tre proprietà:
 
 *   Il `insertId` restituisce il numero di riga di un'istruzione di inserimento SQL successly. Se l'istruzione SQL non inserisce tutte le righe, il `insertId` non è impostata.
 

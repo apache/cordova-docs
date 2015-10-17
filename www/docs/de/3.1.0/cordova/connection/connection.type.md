@@ -26,7 +26,7 @@ Prüft die aktive Netzwerkverbindung.
 
 ## Beschreibung
 
-Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungsstatus und die Art der Verbindung zu bestimmen.
+Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungsstatus und die Art der [Verbindung](connection.html) zu bestimmen.
 
 ## Unterstützte Plattformen
 

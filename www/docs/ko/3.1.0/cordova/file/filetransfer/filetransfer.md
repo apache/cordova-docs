@@ -38,7 +38,7 @@ title: FileTransfer
 
 ## 세부 정보
 
-`FileTransfer`개체를 HTTP 다중 파트 POST 요청을 사용 하 여 원격 서버에 파일을 업로드 하는 방법을 제공 합니다. HTTP 및 HTTPS 프로토콜이 지원 됩니다. 선택적 매개 변수를 전달 하 여 지정할 수 있습니다 한 `FileUploadOptions` 개체는 `upload()` 방법. 성공적으로 업로드에 대 한 `FileUploadResult` 개체 성공 콜백에 전달 됩니다. 오류가 발생 하는 경우는 `FileTransferError` 개체는 오류를 전달 합니다. 그것도 가능 (iOS와 안 드 로이드)에 원격 서버에서 파일을 다운로드 하 여 장치에 저장 합니다.
+`FileTransfer`개체를 HTTP 다중 파트 POST 요청을 사용 하 여 원격 서버에 파일을 업로드 하는 방법을 제공 합니다. HTTP 및 HTTPS 프로토콜이 지원 됩니다. 선택적 매개 변수를 전달 하 여 지정할 수 있습니다 한 `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` 개체는 `upload()` 방법. 성공적으로 업로드에 대 한 `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` 개체 성공 콜백에 전달 됩니다. 오류가 발생 하는 경우는 `[FileTransferError](../filetransfererror/filetransfererror.html)` 개체는 오류를 전달 합니다. 그것도 가능 (iOS와 안 드 로이드)에 원격 서버에서 파일을 다운로드 하 여 장치에 저장 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -50,17 +50,17 @@ title: FileTransfer
 
 ## 업로드
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
 *   **filePath**: 장치에서 파일의 전체 경로.
 
-*   **서버**: 인코딩 파일 수신 서버의 URL`encodeURI()`.
+*   **서버**: 인코딩 [파일](../fileobj/fileobj.html) 수신 서버의 URL`encodeURI()`.
 
 *   **successCallback**: 콜백 전달 되는 `Metadata` 개체. *(기능)*
 
-*   **errorCallback**: 콜백 검색에 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `FileTransferError` 개체. *(기능)*
+*   **errorCallback**: 콜백 검색에 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `[FileTransferError](../filetransfererror/filetransfererror.html)` 개체. *(기능)*
 
-*   **옵션**: 파일 이름 및 mimetype 선택적 매개 변수.
+*   **옵션**: [파일](../fileobj/fileobj.html) 이름 및 mimetype 선택적 매개 [변수](../../../plugin_ref/spec.html).
 
 *   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` , 그것은 모든 보안 인증서를 허용 합니다. 이 안 드 로이드 자체 서명 된 보안 인증서를 거부 하기 때문에 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
 
@@ -198,15 +198,15 @@ title: FileTransfer
 
 ## 다운로드
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   **소스**: URL로 인코딩된 파일, 다운로드 서버`encodeURI()`.
+*   **소스**: URL로 인코딩된 [파일](../fileobj/fileobj.html), 다운로드 서버`encodeURI()`.
 
 *   **대상**: 장치에서 파일의 전체 경로.
 
-*   **successCallback**: 콜백 전달 되는 `FileEntry` 개체. *(기능)*
+*   **successCallback**: 콜백 전달 되는 `[FileEntry](../fileentry/fileentry.html)` 개체. *(기능)*
 
-*   **errorCallback**: 콜백 검색할 때 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `FileTransferError` 개체. *(기능)*
+*   **errorCallback**: 콜백 검색할 때 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `[FileTransferError](../filetransfererror/filetransfererror.html)` 개체. *(기능)*
 
 *   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` 후 모든 보안 인증서를 받아들일 것입니다. 안 드 로이드 자체 서명 된 보안 인증서를 거부로 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
 
@@ -226,7 +226,7 @@ title: FileTransfer
 
 ## 중단
 
-진행 중인 전송을 중단합니다. Onerror 콜백 FileTransferError.ABORT_ERR의 오류 코드는 FileTransferError 개체를 전달 합니다.
+진행 중인 전송을 중단합니다. Onerror 콜백 [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR의 오류 코드는 [FileTransferError](../filetransfererror/filetransfererror.html) 개체를 전달 합니다.
 
 **지원 되는 플랫폼**
 

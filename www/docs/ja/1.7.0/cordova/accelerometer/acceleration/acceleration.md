@@ -47,7 +47,7 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {

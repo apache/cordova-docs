@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-Одним из свойств `SQLResultSet` содержащие строки возвращенных запросом SQL.
+Одним из свойств `[SQLResultSet](../sqlresultset/sqlresultset.html)` содержащие строки возвращенных запросом SQL.
 
 ## Свойства
 

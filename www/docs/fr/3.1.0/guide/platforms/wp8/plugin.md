@@ -163,7 +163,7 @@ Voir d'autres méthodes que vous pouvez substituer dans :
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-Par exemple, vous pouvez y brancher dans la « pause » et les événements d'application « reprendre ».
+Par exemple, vous pouvez y brancher dans la « [pause](../../../cordova/events/events.pause.html) » et les événements d'application « reprendre ».
 
 ### Débogage des Plugins
 

@@ -55,7 +55,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 	// process the confirmation dialog result
@@ -74,7 +74,7 @@ Quick Example
         );
     }
         
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

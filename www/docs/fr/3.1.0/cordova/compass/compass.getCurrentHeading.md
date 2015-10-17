@@ -31,7 +31,7 @@ Téléchargez la direction courante de la boussole.
 
 La boussole est un capteur qui détecte la direction ou la position vers laquelle l'appareil pointe, généralement depuis le haut de l'appareil. Il mesure la direction en degrés de 0 à 359.99, où 0 indique le Nord.
 
-Les informations de la boussole sont retournées via un objet `CompassHeading` utilisant la fonction de callback `compassSuccess`.
+Les informations de la boussole sont retournées via un objet `CompassHeading` utilisant la fonction de callback `[compassSuccess](parameters/compassSuccess.html)`.
 
 ## Plates-formes prises en charge
 

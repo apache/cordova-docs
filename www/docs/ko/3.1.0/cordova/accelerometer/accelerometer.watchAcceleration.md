@@ -33,9 +33,9 @@ title: accelerometer.watchAcceleration
 
 가 속도계는 현재 위치를 기준으로 운동 (델타) 변경 내용을 감지 하는 모션 센서입니다. 가 속도계는 *x*, *y*및 *z* 축을 따라 3D 이동을 검색할 수 있습니다.
 
-`accelerometer.watchAcceleration`메서드는 장치의 현재 검색 `Acceleration` 일정 한 간격에 실행는 `accelerometerSuccess` 콜백 함수 때마다. 통해 밀리초 단위로 간격을 지정 된 `acceleratorOptions` 개체의 `frequency` 매개 변수.
+`accelerometer.watchAcceleration`메서드는 장치의 현재 검색 `Acceleration` 일정 한 간격에 실행는 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` 콜백 함수 때마다. 통해 밀리초 단위로 간격을 지정 된 `acceleratorOptions` 개체의 `frequency` 매개 [변수](../../plugin_ref/spec.html).
 
-반환 된 ID 참조가 속도계의 시계 간격, 시청과 함께 사용할 수 있습니다 `accelerometer.clearWatch` 가 속도계를 보고 중지 합니다.
+반환 된 ID 참조가 속도계의 시계 간격, 시청과 함께 사용할 수 있습니다 `[accelerometer.clearWatch](accelerometer.clearWatch.html)` 가 속도계를 보고 중지 합니다.
 
 ## 지원 되는 플랫폼
 

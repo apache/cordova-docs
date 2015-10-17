@@ -26,19 +26,19 @@ title: 加速度計
 
 ## 方法
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## 參數
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## 物件 （唯讀）
 
-*   加速度
+*   [加速度](acceleration/acceleration.html)
 
 ## 訪問功能
 

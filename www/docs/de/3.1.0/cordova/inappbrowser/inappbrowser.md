@@ -22,7 +22,7 @@ title: InAppBrowser
 
 # InAppBrowser
 
-> Die `InAppBrowser` ist eine Web-Browser-Ansicht, die anzeigt, wann der Aufruf `window.open()` , oder als als bildeten einen Link öffnen`<a target="_blank">`.
+> Die `InAppBrowser` ist eine Web-Browser-Ansicht, die anzeigt, wann der Aufruf `[window.open](window.open.html)()` , oder als als bildeten einen Link öffnen`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -31,7 +31,7 @@ title: InAppBrowser
 
 ## Beschreibung
 
-Aus einem Aufruf zurückgegebenen Objekts`window.open`.
+Aus einem Aufruf zurückgegebenen Objekts`[window.open](window.open.html)`.
 
 ## Methoden
 
@@ -73,7 +73,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="InAppBrowser" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).
 
 # addEventListener
 

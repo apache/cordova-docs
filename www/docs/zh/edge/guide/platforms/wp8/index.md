@@ -28,8 +28,8 @@ title: Windows Phone 8 平臺指南
 
 見到 Windows Phone 平臺特定的詳細資訊如下：
 
-*   Windows Phone 8 外掛程式
-*   升級 Windows Phone 8
+*   [Windows Phone 8 外掛程式](plugin.html)
+*   [升級 Windows Phone 8](upgrade.html)
 
 對於 Windows Phone 8 平臺，科爾多瓦 web 視圖依賴于互聯網資源管理器中 10 作為自己的渲染引擎，因此作為一個實際問題你可以使用 IE10 的功能強大的調試器來測試並不調用科爾多瓦 Api 的任何 web 內容。 Windows Phone 開發者博客如何支援 IE10 和可比較的 WebKit 瀏覽器提供[有益的指導][1]。
 

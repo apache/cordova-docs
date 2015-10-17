@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-Когда `SQLTransaction` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр.
+Когда `[SQLTransaction](../sqltransaction/sqltransaction.html)` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр.
 
 ## Свойства
 
@@ -30,11 +30,11 @@ title: SQLResultSet
 
 *   **rowsAffected**: количество строк, изменены инструкцией SQL, нуль, если заявление не затронула ни одной строки.
 
-*   **строки**: `SQLResultSetRowList` представляющие возвращенных строк, empty, если строки не возвращаются.
+*   **строки**: `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` представляющие возвращенных строк, empty, если строки не возвращаются.
 
 ## Подробная информация
 
-Когда `SQLTransaction` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр, содержащий три свойства:
+Когда `[SQLTransaction](../sqltransaction/sqltransaction.html)` объекта `executeSql` вызывается метод, заданный обратный вызов выполняется с `SQLResultSet` параметр, содержащий три свойства:
 
 *   `insertId`Возвращает номер строки successly оператора вставки SQL. Если SQL не вставить строки, `insertId` не задано.
 

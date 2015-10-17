@@ -30,7 +30,7 @@ title: 概要
 
 *   web 開発者と様々 なアプリケーションの配布用にパッケージ化されている web アプリケーションを配置するポータルを格納します。
 
-*   モバイル開発者、 *WebView* (ブラウザー ウィンドウ) デバイス レベルの Api にアクセスできるとネイティブ アプリケーションのコンポーネントを混在することに興味があるまたはネイティブと WebView コンポーネント間のプラグイン インターフェイスを開発する場合。
+*   モバイル開発者、 *WebView* (ブラウザー ウィンドウ) [デバイス](../../cordova/device/device.html) レベルの Api にアクセスできるとネイティブ アプリケーションのコンポーネントを混在することに興味があるまたはネイティブと WebView コンポーネント間のプラグイン インターフェイスを開発する場合。
 
 ## 基本的なコンポーネント
 
@@ -692,11 +692,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          localStorage のみ
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> のみ
         </td>
         
         <td data-col="winphone8"  class="p">
-          localStorage のみ
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> のみ
         </td>
         
         <td data-col="win8"       class="y">

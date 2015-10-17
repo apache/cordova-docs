@@ -26,9 +26,9 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 詳細なプラットフォーム固有の情報を両方のバージョンに適用される次を参照してください。
 
-*   Windows Phone のアップグレード
-*   Windows Phone のプラグイン
-*   Windows Phone のコマンド ライン ツール
+*   [Windows Phone のアップグレード](upgrading.html)
+*   [Windows Phone のプラグイン](plugin.html)
+*   [Windows Phone のコマンド ライン ツール](tools.html)
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 

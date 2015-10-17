@@ -22,7 +22,7 @@ title: FileUploadResult
 
 # FileUploadResult
 
-A `FileUploadResult` -Objekt wird an den Erfolg-Rückruf des übergeben die `FileTransfer` des Objekts `upload()` Methode.
+A `FileUploadResult` -Objekt wird an den Erfolg-Rückruf des übergeben die `[FileTransfer](../filetransfer/filetransfer.html)` des Objekts `upload()` Methode.
 
 ## Eigenschaften
 
@@ -34,7 +34,7 @@ A `FileUploadResult` -Objekt wird an den Erfolg-Rückruf des übergeben die `Fil
 
 ## Beschreibung
 
-Das `FileUploadResult` -Objekt wird über den Erfolg-Rückruf des zurückgegeben die `FileTransfer` des Objekts `upload()` Methode.
+Das `FileUploadResult` -Objekt wird über den Erfolg-Rückruf des zurückgegeben die `[FileTransfer](../filetransfer/filetransfer.html)` des Objekts `upload()` Methode.
 
 ## iOS Macken
 

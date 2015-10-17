@@ -22,17 +22,17 @@ title: 파일 시스템
 
 # 파일 시스템
 
-이 개체는 파일 시스템을 나타냅니다.
+이 개체는 [파일](../fileobj/fileobj.html) 시스템을 나타냅니다.
 
 ## 속성
 
-*   **이름**: 파일 시스템의 이름. *(DOMString)*
+*   **이름**: [파일](../fileobj/fileobj.html) 시스템의 이름. *(DOMString)*
 
-*   **루트**: 파일 시스템의 루트 디렉토리. *(DirectoryEntry)*
+*   **루트**: [파일](../fileobj/fileobj.html) 시스템의 루트 디렉토리. *(DirectoryEntry)*
 
 ## 세부 정보
 
-`FileSystem`개체는 파일 시스템에 대 한 정보를 나타냅니다. 파일 시스템의 이름은 노출된 파일 시스템 목록에서 고유 합니다. 루트 속성에 포함 되어 있는 `DirectoryEntry` 파일 시스템의 루트 디렉터리를 나타내는 개체입니다.
+`FileSystem`개체는 [파일](../fileobj/fileobj.html) 시스템에 대 한 정보를 나타냅니다. [파일](../fileobj/fileobj.html) 시스템의 이름은 노출된 [파일](../fileobj/fileobj.html) 시스템 목록에서 고유 합니다. 루트 속성에 포함 되어 있는 `[DirectoryEntry](../directoryentry/directoryentry.html)` [파일](../fileobj/fileobj.html) 시스템의 루트 디렉터리를 나타내는 개체입니다.
 
 ## 지원 되는 플랫폼
 

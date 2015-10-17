@@ -24,11 +24,11 @@ title: Przewodnik platformy iOS
 
 Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova aplikacji dla systemu iOS iPhone i iPad. Zobacz następujące szczegółowe informacje specyficzne dla platformy:
 
-*   Konfiguracja iOS
-*   Aktualizacja iOS
-*   iOS WebViews
-*   iOS wtyczek
-*   iOS Shell narzędzia Przewodnik
+*   [Konfiguracja iOS](config.html)
+*   [Aktualizacja iOS](upgrade.html)
+*   [iOS WebViews](webview.html)
+*   [iOS wtyczek](plugin.html)
+*   [iOS Shell narzędzia Przewodnik](tools.html)
 
 Narzędzia wiersza polecenia powyżej odnosi się do wcześniejszych Cordova 3.0. Zobacz interfejs wiersza poleceń do informacji o bieżącym interfejs.
 

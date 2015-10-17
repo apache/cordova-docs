@@ -22,7 +22,7 @@ title: accelerometerSuccess
 
 # accelerometerSuccess
 
-onSuccess callback function that provides the `Acceleration` information.
+onSuccess callback function that provides the `[Acceleration](../acceleration/acceleration.html)` information.
 
     function(acceleration) {
         // Do something

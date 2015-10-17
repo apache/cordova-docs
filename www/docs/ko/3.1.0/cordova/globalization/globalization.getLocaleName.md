@@ -31,7 +31,7 @@ title: globalization.getLocaleName
 
 로캘 식별자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `value` 속성을 `String` 값.
 
-로캘, 점점 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
+로캘, 점점 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## 지원 되는 플랫폼
 

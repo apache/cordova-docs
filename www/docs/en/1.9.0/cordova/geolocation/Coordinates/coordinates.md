@@ -39,7 +39,7 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
+The `Coordinates` object is created and populated by Cordova, and attached to the `[Position](../Position/position.html)` object. The `[Position](../Position/position.html)` object is then returned to the user through a callback function.
 
 Supported Platforms
 -------------------
@@ -51,7 +51,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -75,7 +75,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

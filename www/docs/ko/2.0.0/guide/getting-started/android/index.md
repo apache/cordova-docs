@@ -105,7 +105,7 @@ Getting Started with Android
     ![](img/guide/getting-started/android/manifest.png)
 
 
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
 - **assets/www** 디렉토리에서 **index.html** 을 생성하고 아래의 코드를 붙여넣자:

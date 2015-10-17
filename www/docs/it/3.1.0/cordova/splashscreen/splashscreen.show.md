@@ -22,7 +22,7 @@ title: splashscreen
 
 # splashscreen
 
-Visualizza la schermata iniziale.
+[Visualizza](../inappbrowser/inappbrowser.html) la schermata iniziale.
 
     navigator.splashscreen.show();
     

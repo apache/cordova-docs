@@ -37,7 +37,7 @@ Le gestionnaire `batterycritical` est appelé avec un objet contenant deux propr
 
 *   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

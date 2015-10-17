@@ -31,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird
 
 Das `pause` -Ereignis wird ausgelöst, wenn die einheitlichen Plattform die Anwendung in den Hintergrund, in der Regel, setzt wenn der Benutzer zu einer anderen Anwendung wechselt.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

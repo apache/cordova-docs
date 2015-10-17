@@ -46,7 +46,7 @@ notification.alert
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 以上) / iPhone

@@ -42,7 +42,7 @@ Un ensemble de propriétés décrivant les coordonnées géographiques d'une pos
 
 ## Description
 
-L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
+L'objet `Coordinates` est attaché à l'objet `[Position](../Position/position.html)`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
 
 ## Plates-formes supportées
 

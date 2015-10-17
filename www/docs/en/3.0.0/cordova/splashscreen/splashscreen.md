@@ -28,8 +28,8 @@ Splashscreen
 Methods
 -------
 
-- splashscreen.show
-- splashscreen.hide
+- [splashscreen.show](splashscreen.show.html)
+- [splashscreen.hide](splashscreen.hide.html)
 
 ## Accessing the Feature
 

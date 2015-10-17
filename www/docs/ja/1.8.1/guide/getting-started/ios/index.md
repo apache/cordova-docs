@@ -94,7 +94,7 @@ Apache Cordova プロジェクトが作成出来ました。次に、プロジ�
 
     ![](img/guide/getting-started/ios/create-folder-reference.png)
 
-Hello World の作成
+[Hello World](../webos/index.html) の作成
 --------------
 
 - Xcode の _Project Navigator_ にある `www` フォルダーを選択します

@@ -148,7 +148,7 @@ JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 iOS �
 
 ## iOS 一體化
 
-`CDVPlugin`類功能其他你的外掛程式可以重寫的方法。 例如，您可以捕獲 `pause` ， `resume` ，應用程式終止和 `handleOpenURL` 事件。 請參見[CDVPlugin.h][1]和[CDVPlugin.m][2]類的指導。
+`CDVPlugin`類功能其他你的外掛程式可以重寫的方法。 例如，您可以捕獲 `[pause](../../../cordova/events/events.pause.html)` ， `[resume](../../../cordova/events/events.resume.html)` ，應用程式終止和 `handleOpenURL` 事件。 請參見[CDVPlugin.h][1]和[CDVPlugin.m][2]類的指導。
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

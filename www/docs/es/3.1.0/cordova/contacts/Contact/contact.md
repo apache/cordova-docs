@@ -58,13 +58,13 @@ Contiene propiedades que describen un contacto, como el contacto personal o del 
 
 *   **clon**: devuelve un nuevo `Contact` objeto que es una copia en profundidad del objeto de llamadas con el `id` propiedad establecida en`null`.
 
-*   **eliminar**: elimina el contacto de la base de datos de contactos de dispositivo, si no se ejecuta un callback de error con un `ContactError` objeto.
+*   **eliminar**: elimina el contacto de la base de datos de contactos de dispositivo, si no se ejecuta un callback de error con un `[ContactError](../ContactError/contactError.html)` objeto.
 
 *   **Guardar**: guarda un nuevo contacto en la base de datos de contactos de dispositivo o actualiza un contacto existente si ya existe un contacto con el mismo **id** .
 
 ## Detalles
 
-El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser creados, almacenados o eliminados de la base de datos de contactos de dispositivo. Contactos pueden también ser obtenidos (individualmente o a granel) de la base de datos invocando el `contacts.find` método.
+El `Contact` objeto representa el contacto de un usuario. [Contactos](../contacts.html) pueden ser creados, almacenados o eliminados de la base de datos de contactos de dispositivo. [Contactos](../contacts.html) pueden también ser obtenidos (individualmente o a granel) de la base de datos invocando el `[contacts.find](../contacts.find.html)` método.
 
 **Nota:** No todos los campos de contacto mencionados son compatibles con la plataforma de cada dispositivo. Consulte sección *peculiaridades* de cada plataforma para más detalles.
 
@@ -226,7 +226,7 @@ El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser c
 
 ## iOS rarezas
 
-*   **displayName**: no compatible con iOS, regresando `null` si no hay ningún `ContactName` especifica, en cuyo caso devuelve el nombre del compuesto, **apodo** o `""` , respectivamente.
+*   **displayName**: no compatible con iOS, regresando `null` si no hay ningún `[ContactName](../ContactName/contactname.html)` especifica, en cuyo caso devuelve el nombre del compuesto, **apodo** o `""` , respectivamente.
 
 *   **cumpleaños**: debe ser de entrada como un JavaScript `Date` objeto, del mismo modo que se la devuelvan.
 

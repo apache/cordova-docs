@@ -32,7 +32,7 @@ Details
 
 When the application's network connection changes to being offline, the offline event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -43,7 +43,7 @@ Supported Platforms
 - Windows Phone 7
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("offline", onOffline, false);
@@ -52,7 +52,7 @@ Quick Example
         // Handle the offline event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

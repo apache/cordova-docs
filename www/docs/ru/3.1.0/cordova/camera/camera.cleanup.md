@@ -29,7 +29,7 @@ title: camera.cleanup
 
 ## Описание
 
-Удаляет промежуточные файлы изображений, которые хранятся во временном хранилище после вызова метода `camera.getPicture` . Применяется только тогда, когда значение `Camera.sourceType` равно `Camera.PictureSourceType.CAMERA` и `Camera.destinationType` равняется`Camera.DestinationType.FILE_URI`.
+Удаляет промежуточные файлы изображений, которые хранятся во временном хранилище после вызова метода `[camera.getPicture](camera.getPicture.html)` . Применяется только тогда, когда значение `Camera.sourceType` равно `Camera.PictureSourceType.CAMERA` и `Camera.destinationType` равняется`Camera.DestinationType.FILE_URI`.
 
 ## Поддерживаемые платформы
 

@@ -49,7 +49,7 @@ title: globalization.getNumberPattern
 
  [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`參數是可選的並且預設值：
 

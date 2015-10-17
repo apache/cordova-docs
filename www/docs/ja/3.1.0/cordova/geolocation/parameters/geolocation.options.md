@@ -31,7 +31,7 @@ title: geolocationOptions
 
 *   **enableHighAccuracy**： 最高の結果が、アプリケーションに必要があることのヒントを示します。 既定では、デバイスの取得を試みます、 `Position` ネットワーク ベースのメソッドを使用します。 このプロパティを設定する `true` 衛星測位などのより正確な方法を使用するためにフレームワークに指示します。 *(ブール値)*
 
-*   **タイムアウト**: への呼び出しから通過が許可される時間 (ミリ秒単位) の最大長 `geolocation.getCurrentPosition` または `geolocation.watchPosition` まで対応する、 `geolocationSuccess` コールバックを実行します。 場合は、 `geolocationSuccess` この時間内に、コールバックは呼び出されません、 `geolocationError` コールバックに渡される、 `PositionError.TIMEOUT` のエラー コード。 (と組み合わせて使用するときに注意してください `geolocation.watchPosition` の `geolocationError` 間隔でコールバックを呼び出すことができますすべて `timeout` ミリ秒 ！)*(数)*
+*   **タイムアウト**: への呼び出しから通過が許可される時間 (ミリ秒単位) の最大長 `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` または `[geolocation.watchPosition](../geolocation.watchPosition.html)` まで対応する、 `[geolocationSuccess](geolocationSuccess.html)` コールバックを実行します。 場合は、 `[geolocationSuccess](geolocationSuccess.html)` この時間内に、コールバックは呼び出されません、 `[geolocationError](geolocationError.html)` コールバックに渡される、 `[PositionError](../PositionError/positionError.html).TIMEOUT` のエラー コード。 (と組み合わせて使用するときに注意してください `[geolocation.watchPosition](../geolocation.watchPosition.html)` の `[geolocationError](geolocationError.html)` 間隔でコールバックを呼び出すことができますすべて `timeout` ミリ秒 ！)*(数)*
 
 *   **maximumAge**： 年齢があるミリ秒単位で指定した時間よりも大きくないキャッシュされた位置を受け入れます。*(数)*
 

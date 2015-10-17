@@ -22,7 +22,7 @@ title: device.name
 
 device.name
 ===========
-WARNING: device.name is deprecated as of version 2.3.0, use device.model instead
+WARNING: device.name is deprecated as of version 2.3.0, use [device.model](device.model.html) instead
 
 Get the device's model name.
 
@@ -45,7 +45,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -55,7 +55,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -109,4 +109,4 @@ Bada Quirks
 
 Tizen Quirks
 -----------
-- returns the device model assigned by the vendor. For example 'TIZEN'
+- returns the [device.model](device.model.html) assigned by the vendor. For example 'TIZEN'

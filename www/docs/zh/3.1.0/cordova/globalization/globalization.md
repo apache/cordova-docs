@@ -26,22 +26,22 @@ title: 全球化
 
 ## 物件
 
-*   GlobalizationError
+*   [GlobalizationError](GlobalizationError/globalizationerror.html)
 
 ## 方法
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   [globalization.getPreferredLanguage](globalization.getPreferredLanguage.html)
+*   [globalization.getLocaleName](globalization.getLocaleName.html)
+*   [globalization.dateToString](globalization.dateToString.html)
+*   [globalization.stringToDate](globalization.stringToDate.html)
+*   [globalization.getDatePattern](globalization.getDatePattern.html)
+*   [globalization.getDateNames](globalization.getDateNames.html)
+*   [globalization.isDayLightSavingsTime](globalization.isDayLightSavingsTime.html)
+*   [globalization.getFirstDayOfWeek](globalization.getFirstDayOfWeek.html)
+*   [globalization.numberToString](globalization.numberToString.html)
+*   [globalization.stringToNumber](globalization.stringToNumber.html)
+*   [globalization.getNumberPattern](globalization.getNumberPattern.html)
+*   [globalization.getCurrencyPattern](globalization.getCurrencyPattern.html)
 
 ## 變數範圍
 

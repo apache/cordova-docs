@@ -31,7 +31,7 @@ title: globalization.stringToNumber
 
 Возвращает номер для `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `Number` значение.
 
-Если есть ошибка при разборе номер строки, а затем `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PARSING\_ERROR`.
+Если есть ошибка при разборе номер строки, а затем `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 `options`Параметр является необязательным и по умолчанию имеет следующие значения:
 

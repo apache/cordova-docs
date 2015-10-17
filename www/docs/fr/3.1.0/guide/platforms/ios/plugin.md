@@ -184,7 +184,7 @@ Voir d'autres méthodes que vous pouvez substituer dans :
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-Par exemple, vous pouvez accrocher dans le `pause` , `resume` , app résilier et `handleOpenURL` événements.
+Par exemple, vous pouvez accrocher dans le `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , app résilier et `handleOpenURL` événements.
 
 ## Débogage des Plugins
 

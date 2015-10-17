@@ -36,7 +36,7 @@ media.seekTo
 概要
 -----------
 
-`media.seekTo` 関数は Media オブジェクトのオーディオファイルの現在再生位置を更新する非同期関数です。 Media オブジェクト内の __position__ パラメーターの値も更新します。
+`media.seekTo` 関数は [Media](media.html) オブジェクトのオーディオファイルの現在再生位置を更新する非同期関数です。 [Media](media.html) オブジェクト内の __position__ パラメーターの値も更新します。
 
 サポートされているプラットフォーム
 -------------------
@@ -47,7 +47,7 @@ media.seekTo
 - Windows Phone 7 (Mango)
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
         // オーディオプレイヤー
@@ -60,7 +60,7 @@ media.seekTo
         }, 5000);
 
 
-Full Example
+Full [Example](../storage/database/database.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

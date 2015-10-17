@@ -32,14 +32,14 @@ Details
 
 If you need to override the default search button behaviour on Android you can register an event listener for the 'searchbutton' event.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
 
 - Android
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
@@ -48,7 +48,7 @@ Quick Example
         // Handle the search button
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

@@ -23,7 +23,7 @@ title: SQLResultSetList
 SQLResultSetList
 =======
 
-One of the properties of the SQLResultSet containing the rows returned from a SQL query.
+One of the properties of the [SQLResultSet](../sqlresultset/sqlresultset.html) containing the rows returned from a SQL query.
 
 Properties
 -------
@@ -48,7 +48,7 @@ Supported Platforms
 - iPhone
 - webOS
 
-Execute SQL Quick Example
+Execute SQL Quick [Example](../storage.opendatabase.html)
 ------------------
 
 	function queryDB(tx) {
@@ -67,10 +67,10 @@ Execute SQL Quick Example
 		alert("Error processing SQL: "+err.code);
 	}
 	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+	var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -119,14 +119,14 @@ Full Example
 		// Transaction success callback
 		//
 		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 			db.transaction(queryDB, errorCB);
 		}
 
 		// Cordova is ready
 		//
 		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
 	

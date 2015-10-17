@@ -26,7 +26,7 @@ title: 連接
 
 ## 屬性
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## 常量
 

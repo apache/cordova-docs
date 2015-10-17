@@ -82,12 +82,12 @@ title: device.platform
 
 ## 블랙베리 단점
 
-장치는 플랫폼 이름 대신 장치 플랫폼 버전 번호를 반환할 수 있습니다. 예를 들어 Storm2 9550과 같은 값을 반환`2.13.0.95`.
+장치는 플랫폼 이름 대신 [장치](device.html) 플랫폼 버전 번호를 반환할 수 있습니다. 예를 들어 Storm2 9550과 같은 값을 반환`2.13.0.95`.
 
 ## Windows Phone 7 단점
 
-Windows Phone 7 장치 보고 플랫폼으로`WinCE`.
+Windows Phone 7 [장치](device.html) 보고 플랫폼으로`WinCE`.
 
 ## Windows Phone 8 단점
 
-Windows Phone 8 장치 보고 플랫폼으로`Win32NT`.
+Windows Phone 8 [장치](device.html) 보고 플랫폼으로`Win32NT`.

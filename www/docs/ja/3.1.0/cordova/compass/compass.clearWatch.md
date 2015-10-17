@@ -27,7 +27,7 @@ title: compass.clearWatch
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: によって返される ID`compass.watchHeading`.
+*   **watchID**: によって返される ID`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## サポートされているプラットフォーム
 

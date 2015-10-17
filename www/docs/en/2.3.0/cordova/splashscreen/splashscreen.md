@@ -29,8 +29,8 @@ Splashscreen
 Methods
 -------
 
-- show
-- hide
+- [show](splashscreen.show.html)
+- [hide](splashscreen.hide.html)
 
 Permissions
 -----------

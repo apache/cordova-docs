@@ -39,7 +39,7 @@ Devuelve el patrón a la `successCallback`. El objeto se pasa como parámetro co
 
 *   **dst_offset**: el desplazamiento horario actual en segundos entre no-horario del cliente de huso horario y día del cliente ahorro de zona horaria. *(Número)*
 
-Si hay un error obteniendo el patrón, el `errorCallback` se ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
+Si hay un error obteniendo el patrón, el `errorCallback` se ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 El parámetro `options` es opcional y por defecto para los siguientes valores:
 

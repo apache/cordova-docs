@@ -22,4 +22,4 @@ title: compass.clearWatchFilter
 
 # compass.clearWatchFilter
 
-Nicht mehr unterstützt ab 1.6. Finden Sie unter`compass.clearWatch`.
+Nicht mehr unterstützt ab 1.6. Finden Sie unter`[compass.clearWatch](compass.clearWatch.html)`.

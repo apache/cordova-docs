@@ -27,7 +27,7 @@ Deja de mirar la `aceleración` al que hace referencia el parámetro `watchID`.
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: el identificador devuelto por `accelerometer.watchAcceleration`.
+*   **watchID**: el identificador devuelto por `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Plataformas soportadas
 

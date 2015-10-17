@@ -31,4 +31,4 @@ Ein benutzerdefinierter Rückruffunktion, die ausgeführt wird, wenn ein Fehler,
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(Medienfehler)*
+*   **Fehler**: der Fehler, die durch das [Gerät](../../device/device.html) zurückgegeben. *(Medienfehler)*

@@ -30,50 +30,50 @@ title: 平臺指南
 
 ## Android 系統
 
-*   Android 平臺指南
-*   Android 系統組態
-*   Android WebViews
-*   Android 外掛程式
-*   Android 系統的命令列工具
-*   升級 Android
+*   [Android 平臺指南](android/index.html)
+*   [Android 系統組態](android/config.html)
+*   [Android WebViews](android/webview.html)
+*   [Android 外掛程式](android/plugin.html)
+*   [Android 系統的命令列工具](android/tools.html)
+*   [升級 Android](android/upgrading.html)
 
 ## 黑莓手機
 
-*   黑莓平臺指南
-*   黑莓手機配置
-*   黑莓手機的命令列工具
-*   升級黑莓手機
+*   [黑莓平臺指南](blackberry/index.html)
+*   [黑莓手機配置](blackberry10/config.html)
+*   [黑莓手機的命令列工具](blackberry/tools.html)
+*   [升級黑莓手機](blackberry10/upgrading.html)
 
 ## 黑莓 10
 
-*   10 黑莓平臺指南
-*   黑莓 10 配置
-*   黑莓 10 外掛程式
-*   黑莓 10 命令列工具
+*   [10 黑莓平臺指南](blackberry10/index.html)
+*   黑莓 10 [配置](../../cordova/media/capture/ConfigurationData.html)
+*   [黑莓 10 外掛程式](blackberry10/plugin.html)
+*   [黑莓 10 命令列工具](blackberry10/tools.html)
 
 ## iOS
 
-*   iOS 平臺指南
-*   iOS 配置
-*   WebViews iOS
-*   iOS 外掛程式
-*   iOS 命令列工具
-*   升級 iOS
+*   [iOS 平臺指南](ios/index.html)
+*   [iOS 配置](ios/config.html)
+*   [WebViews iOS](ios/webview.html)
+*   [iOS 外掛程式](ios/plugin.html)
+*   [iOS 命令列工具](ios/tools.html)
+*   [升級 iOS](ios/upgrading.html)
 
 ## Windows Phone
 
-*   Windows Phone 8 平臺指南
-*   Windows Phone 7 平臺指南
-*   Windows Phone 配置
-*   Windows Phone 的命令列工具
-*   升級 Windows Phone
+*   [Windows Phone 8 平臺指南](wp8/index.html)
+*   [Windows Phone 7 平臺指南](wp7/index.html)
+*   Windows Phone [配置](../../cordova/media/capture/ConfigurationData.html)
+*   [Windows Phone 的命令列工具](wp8/tools.html)
+*   [升級 Windows Phone](wp8/upgrading.html)
 
 ## Windows 8
 
-*   Windows 8 平臺指南
-*   Windows 8 的命令列工具
-*   升級 Windows 8
+*   [Windows 8 平臺指南](win8/index.html)
+*   [Windows 8 的命令列工具](win8/tools.html)
+*   [升級 Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Tizen 平臺指南
+*   [Tizen 平臺指南](tizen/index.html)

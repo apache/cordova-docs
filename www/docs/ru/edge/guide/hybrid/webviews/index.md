@@ -26,7 +26,7 @@ title: Интеграция WebViews
 
 Чтобы развернуть WebView, вы должны быть знакомы с средой программирования родной для платформы. Ниже приведены инструкции для поддерживаемых платформ:
 
-*   WebView в Amazon Fire OS
-*   WebViews в Android
-*   WebViews в iOS
-*   Windows Phone 8.0 WebViews
+*   [WebView в Amazon Fire OS](../../platforms/amazonfireos/webview.html)
+*   [WebViews в Android](../../platforms/android/webview.html)
+*   [WebViews в iOS](../../platforms/ios/webview.html)
+*   [Windows Phone 8.0 WebViews](../../platforms/wp8/webview.html)

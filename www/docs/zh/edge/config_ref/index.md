@@ -42,9 +42,9 @@ title: Config.xml 檔
 
 本節詳細介紹全球和跨平臺的配置選項。請參見以下各節為平臺特定的選項：
 
-*   iOS 配置
-*   Android 系統組態
-*   黑莓 10 配置
+*   [iOS 配置](../guide/platforms/ios/config.html)
+*   [Android 系統組態](../guide/platforms/android/config.html)
+*   [黑莓 10 配置](../guide/platforms/blackberry10/config.html)
 
 除了下面詳述的各種配置選項，您還可以配置每個目標平臺的圖像應用程式的核心的集。有關更多資訊，請參見圖示和啟動畫面。
 

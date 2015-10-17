@@ -34,7 +34,7 @@ The `resume` event fires when the native platform pulls the
 application out from the background.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 Supported Platforms
 -------------------
@@ -45,7 +45,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("resume", onResume, false);
@@ -54,7 +54,7 @@ Quick Example
         // Handle the resume event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -91,7 +91,7 @@ Full Example
 iOS Quirks
 --------------------------
 
-Any interactive functions called from a `pause` event handler execute
+Any interactive functions called from a `[pause](events.pause.html)` event handler execute
 later when the app resumes, as signaled by the `resume` event. These
 include alerts, `console.log()`, and any calls from plugins or the
 Cordova API, which go through Objective-C.

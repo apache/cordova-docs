@@ -47,7 +47,7 @@ Retourne le modèle de la `successCallback` avec un `properties` objet comme par
 
 *   **regroupement**: le symbole de groupe à utiliser pour l'analyse et de mise en forme. *(String)*
 
-S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
+S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 Le `options` paramètre est facultatif, et les valeurs par défaut sont :
 

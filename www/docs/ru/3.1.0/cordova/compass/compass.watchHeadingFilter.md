@@ -22,4 +22,4 @@ title: compass.watchHeadingFilter
 
 # compass.watchHeadingFilter
 
-Больше не поддерживается начиная с 1.6, см `compass.watchHeading` для эквивалентной функциональности.
+Больше не поддерживается начиная с 1.6, см `[compass.watchHeading](compass.watchHeading.html)` для эквивалентной функциональности.

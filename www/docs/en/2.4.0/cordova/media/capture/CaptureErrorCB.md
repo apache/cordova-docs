@@ -32,9 +32,9 @@ Description
 
 This function is invoked if an error occurs when trying to launch a media capture operation and the capture application is busy, if an error occurs while the capture operation is taking place, or if the capture operation has been canceled by the user before any media files have been captured.
 
-This function is invoked with a CaptureError object containing an appropriate error code.
+This function is invoked with a [CaptureError](CaptureError.html) object containing an appropriate error code.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture error callback

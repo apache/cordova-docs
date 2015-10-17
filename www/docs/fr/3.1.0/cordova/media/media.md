@@ -51,25 +51,25 @@ Les constantes suivantes sont déclarées comme le seul paramètre à la `mediaS
 
 ## Méthodes
 
-*   `media.getCurrentPosition`: Retourne la position courante dans un fichier audio.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: Retourne la position courante dans un fichier audio.
 
-*   `media.getDuration`: Retourne la durée d'un fichier audio.
+*   `[media.getDuration](media.getDuration.html)`: Retourne la durée d'un fichier audio.
 
 *   `media.play`: Commencer ou reprendre la lecture d'un fichier audio.
 
 *   `media.pause`: Interrompre la lecture d'un fichier audio.
 
-*   `media.release`: Libère les ressources audio du système d'exploitation sous-jacent.
+*   `[media.release](media.release.html)`: Libère les ressources audio du système d'exploitation sous-jacent.
 
-*   `media.seekTo`: Déplace la position au sein du fichier audio.
+*   `[media.seekTo](media.seekTo.html)`: Déplace la position au sein du fichier audio.
 
-*   `media.setVolume`: Réglage du volume pour la lecture audio.
+*   `[media.setVolume](media.setVolume.html)`: Réglage du volume pour la lecture audio.
 
-*   `media.startRecord`: Commencez à enregistrer un fichier audio.
+*   `[media.startRecord](media.startRecord.html)`: Commencez à enregistrer un fichier audio.
 
-*   `media.stopRecord`: Arrêter d'enregistrer un fichier audio.
+*   `[media.stopRecord](media.stopRecord.html)`: Arrêter d'enregistrer un fichier audio.
 
-*   `media.stop`: Arrêter la lecture d'un fichier audio.
+*   `[media.stop](media.stop.html)`: Arrêter la lecture d'un fichier audio.
 
 ## Paramètres supplémentaires de ReadOnly
 

@@ -22,7 +22,7 @@ title: FileError
 
 # FileError
 
-A `FileError` オブジェクト ファイル API メソッドのいずれかでエラーが発生したときに設定されます。
+A `FileError` オブジェクト [ファイル](../fileobj/fileobj.html) API メソッドのいずれかでエラーが発生したときに設定されます。
 
 ## プロパティ
 

@@ -22,4 +22,4 @@ title: compass.clearWatchFilter
 
 # compass.clearWatchFilter
 
-Dal 1.6 non è più supportato. Vedere`compass.clearWatch`.
+Dal 1.6 non è più supportato. Vedere`[compass.clearWatch](compass.clearWatch.html)`.

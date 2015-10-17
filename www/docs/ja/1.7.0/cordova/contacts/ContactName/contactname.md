@@ -23,7 +23,7 @@ title: ContactName
 ContactName
 ===========
 
-`Contact` オブジェクトの名前プロパティーを表します。
+`[Contact](../Contact/contact.html)` オブジェクトの名前プロパティーを表します。
 
 プロパティー
 ----------
@@ -48,7 +48,7 @@ ContactName
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {

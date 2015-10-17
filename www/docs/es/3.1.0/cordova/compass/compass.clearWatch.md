@@ -27,7 +27,7 @@ Deja de mirar la brújula al que hace referencia el parámetro ID de reloj.
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: el identificador devuelto por `compass.watchHeading`.
+*   **watchID**: el identificador devuelto por `[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Plataformas soportadas
 

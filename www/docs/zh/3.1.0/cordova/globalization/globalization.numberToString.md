@@ -31,7 +31,7 @@ title: globalization.numberToString
 
 返回到帶格式的數位字串 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `String` 的值。
 
-如果有錯誤格式數，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
+如果有錯誤格式數，然後 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 `options`參數是可選的且其預設值：
 

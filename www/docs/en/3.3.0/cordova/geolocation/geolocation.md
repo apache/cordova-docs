@@ -48,25 +48,25 @@ accesses geolocation data (if the device operating system doesn't do
 so already).  That notice should provide the same information noted
 above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
-see the Privacy Guide.
+see the [Privacy Guide](../../guide/appdev/privacy/index.html).
 
 ## Methods
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+- [geolocation.watchPosition](geolocation.watchPosition.html)
+- [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## Arguments
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- [geolocationSuccess](parameters/geolocationSuccess.html)
+- [geolocationError](parameters/geolocationError.html)
+- [geolocationOptions](parameters/geolocation.options.html)
 
 ## Objects (Read-Only)
 
-- Position
-- PositionError
-- Coordinates
+- [Position](Position/position.html)
+- [PositionError](PositionError/positionError.html)
+- [Coordinates](Coordinates/coordinates.html)
 
 ## Accessing the Feature
 
@@ -133,4 +133,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

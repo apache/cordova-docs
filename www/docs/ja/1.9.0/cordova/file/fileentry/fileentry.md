@@ -48,8 +48,8 @@ FileEntry
 - __toURL__: ファイルの位置特定に使用できる URL を返します
 - __remove__: ファイルを削除します
 - __getParent__: 親ディレクトリを取得します
-- __createWriter__: ファイルの書き込みに使用できる FileWriter オブジェクトを作成します
-- __file__: ファイルプロパティーを含む File オブジェクトを作成します
+- __createWriter__: ファイルの書き込みに使用できる [FileWriter](../filewriter/filewriter.html) オブジェクトを作成します
+- __file__: ファイルプロパティーを含む [File](../fileobj/fileobj.html) オブジェクトを作成します
 
 
 サポートされているプラットフォーム
@@ -68,8 +68,8 @@ getMetadata
 
 __パラメーター:__
 
-- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [Metadata](../metadata/metadata.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -94,9 +94,9 @@ setMetadata
 
 __パラメーター:__
 
-- __successCallback__ - Metadata が正常にセットされたときに呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata のセット時にエラーが起きた場合に呼び出されるコールバック関数を表します _(Function)_
-- __metadataObject__ - Metadata のキーと値が格納されているオブジェクトを表します _(Object)_
+- __successCallback__ - [Metadata](../metadata/metadata.html) が正常にセットされたときに呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) のセット時にエラーが起きた場合に呼び出されるコールバック関数を表します _(Function)_
+- __metadataObject__ - [Metadata](../metadata/metadata.html) のキーと値が格納されているオブジェクトを表します _(Object)_
 
 
 __使用例__
@@ -130,7 +130,7 @@ __パラメーター:__
 - __parent__ - ファイルの移動先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ファイルの新しい名前を表します。もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいファイルの FileEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ファイルの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -165,7 +165,7 @@ __パラメーター:__
 - __parent__ - ファイルのコピー先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ファイルの新しい名前を表します。もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいファイルの FileEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ファイルのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -208,7 +208,7 @@ remove
 __パラメーター:__
 
 - __successCallback__ - ファイルが削除されたときに呼び出されるコールバック関数を表します。 パラメーターなしで呼び出されます _(Function)_
-- __errorCallback__ - ファイルの削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ファイルの削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -227,12 +227,12 @@ __使用例__
 getParent
 ---------
 
-そのファイルの親 DirectoryEntry を取得します。
+そのファイルの親 [DirectoryEntry](../directoryentry/directoryentry.html) を取得します。
 
 __パラメーター:__
 
-- __successCallback__ - ファイルの親 DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - ファイルの親 [DirectoryEntry](../directoryentry/directoryentry.html) を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ファイルの親 [DirectoryEntry](../directoryentry/directoryentry.html) の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -251,12 +251,12 @@ __使用例__
 createWriter
 ------------
 
-FileEntry の表すファイルに使われる FileWriter オブジェクトを作成します。
+FileEntry の表すファイルに使われる [FileWriter](../filewriter/filewriter.html) オブジェクトを作成します。
 
 __パラメーター:__
 
-- __successCallback__ - FileWriter オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - FileWriter の作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [FileWriter](../filewriter/filewriter.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [FileWriter](../filewriter/filewriter.html) の作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -275,12 +275,12 @@ __使用例__
 file
 ----
 
-FileEntry の表すファイルの現在の状態を表す File オブジェクトを返します。
+FileEntry の表すファイルの現在の状態を表す [File](../fileobj/fileobj.html) オブジェクトを返します。
 
 __パラメーター:__
 
-- __successCallback__ - File オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Fileオブジェクト作成中にエラーが起きた場合に呼び出されるコールバック関数を表します (例: 元のファイルが既に存在しない場合) 。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [File](../fileobj/fileobj.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Fileオブジェクト作成中にエラーが起きた場合に呼び出されるコールバック関数を表します (例: 元のファイルが既に存在しない場合) 。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 

@@ -34,20 +34,20 @@ title: Географическое положение
 
 ## Методы
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+*   [geolocation.watchPosition](geolocation.watchPosition.html)
+*   [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## Аргументы
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   [geolocationSuccess](parameters/geolocationSuccess.html)
+*   [geolocationError](parameters/geolocationError.html)
+*   [geolocationOptions](parameters/geolocation.options.html)
 
 ## Объекты (только для чтения)
 
 *   Position
-*   PositionError
+*   [PositionError](PositionError/positionError.html)
 *   Coordinates
 
 ## Доступ к функции

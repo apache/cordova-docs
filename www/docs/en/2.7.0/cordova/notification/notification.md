@@ -28,11 +28,11 @@ Notification
 Methods
 -------
 
-- notification.alert
-- notification.confirm
-- notification.prompt
-- notification.beep
-- notification.vibrate
+- [notification.alert](notification.alert.html)
+- [notification.confirm](notification.confirm.html)
+- [notification.prompt](notification.prompt.html)
+- [notification.beep](notification.beep.html)
+- [notification.vibrate](notification.vibrate.html)
 
 Permissions
 -----------

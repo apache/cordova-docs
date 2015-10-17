@@ -22,7 +22,7 @@ title: accelerometerOptions
 
 # accelerometerOptions
 
-가 속도계 값의 검색을 사용자 지정 하는 선택적 매개 변수.
+[가 속도계](../accelerometer.html) 값의 검색을 사용자 지정 하는 선택적 매개 [변수](../../../plugin_ref/spec.html).
 
 ## 옵션
 

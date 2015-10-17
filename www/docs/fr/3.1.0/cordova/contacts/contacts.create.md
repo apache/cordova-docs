@@ -22,16 +22,16 @@ title: contacts.Create
 
 # contacts.Create
 
-Retourne un nouvel objet Contact.
+Retourne un nouvel objet [Contact](Contact/contact.html).
 
     var contact = navigator.contacts.create(properties);
     
 
 ## Description
 
-La méthode `contacts.create` est synchrone et retourne un nouvel objet `Contact`.
+La méthode `contacts.create` est synchrone et retourne un nouvel objet `[Contact](Contact/contact.html)`.
 
-Cette méthode ne conserve pas l'objet Contact dans la base de données des contacts de l'appareil, pour lesquels il faut appeler la méthode `Contact.save`.
+Cette méthode ne conserve pas l'objet [Contact](Contact/contact.html) dans la base de données des contacts de l'appareil, pour lesquels il faut appeler la méthode `[Contact](Contact/contact.html).save`.
 
 ## Plates-formes prises en charge
 

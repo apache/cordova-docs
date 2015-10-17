@@ -25,17 +25,17 @@ title: Windows Platform Guide
 This guide shows how to set up your SDK development environment to build 
 and deploy Cordova apps for Windows 8, Windows 8.1 and Windows Phone 8.1.
 It shows how to use either shell tools to generate and build apps, or 
-the cross-platform Cordova CLI discussed in The Command-Line Interface.
-(See the Overview for a comparison of these development options.) This
+the cross-platform Cordova CLI discussed in [The Command-Line Interface](../../cli/index.html).
+(See the [Overview](../../overview/index.html) for a comparison of these development options.) This
 section also shows how to modify Cordova apps within Visual Studio.
 Regardless of which approach you take, you need to install the 
 Visual Studio SDK, as described below.
 
-See Upgrading Windows 8 for information on how to upgrade existing
+See [Upgrading Windows 8](upgrade.html) for information on how to upgrade existing
 Windows 8 Cordova projects.
 
 Window Phone 8 (wp8) stays as a separate platform,
-see Windows Phone 8 Platform Guide for details.
+see [Windows Phone 8 Platform Guide](../wp8/index.html) for details.
 
 Cordova WebViews running on Windows rely on Internet Explorer 10 (Windows 8)
 and Internet Explorer 11 (Windows 8.1 and Windows Phone 8.1) as
@@ -120,7 +120,7 @@ Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
 ## Create a New Project
 
 At this point, to create a new project you can choose between the
-cross-platform CLI tool described in The Command-Line Interface, or
+cross-platform CLI tool described in [The Command-Line Interface](../../cli/index.html), or
 the set of Windows-specific shell tools. From within a source-code
 directory, this CLI approach generates an app named _HelloWorld_
 within a new `hello` project directory:
@@ -230,7 +230,7 @@ app as if it were running on a tablet device:
 Unlike desktop deployment, this option allows you to simulate the
 tablet's orientation, location, and vary its network settings.
 
-__NOTE__: Consult the Overview for advice on how to use Cordova's
+__NOTE__: Consult the [Overview](../../overview/index.html) for advice on how to use Cordova's
 command-line tools or the SDK in your workflow. The Cordova CLI relies
 on cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to use the SDK to

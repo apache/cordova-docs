@@ -24,8 +24,8 @@ title: Windows 8 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境為 Windows 8 部署科爾多瓦的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   升級 Windows 8
-*   Windows 8 的命令列工具
+*   [升級 Windows 8](upgrading.html)
+*   [Windows 8 的命令列工具](tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 
@@ -83,7 +83,7 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
             <script src="/js/default.js"></script>
         
 
-*   添加 `deviceready` 處理常式，以演示科爾多瓦工作：
+*   添加 `[deviceready](../../../cordova/events/events.deviceready.html)` 處理常式，以演示科爾多瓦工作：
     
         <body>
             <p>Content goes here</p>

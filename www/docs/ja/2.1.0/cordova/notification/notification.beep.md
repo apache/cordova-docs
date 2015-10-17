@@ -39,7 +39,7 @@ notification.beep
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 警告音を2回鳴らす
@@ -100,7 +100,7 @@ notification.beep
 Android に関する注意点
 --------------
 
-- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "Notification ringtone" を鳴らします。
+- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "[Notification](notification.html) ringtone" を鳴らします。
 
 iPhone に関する注意点
 -------------

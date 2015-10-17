@@ -42,7 +42,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -52,7 +52,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -22,7 +22,7 @@ title: Speicher
 
 # Speicher
 
-> Ermöglicht den Zugriff auf das Gerät Storage-Optionen.
+> Ermöglicht den Zugriff auf das [Gerät](../device/device.html) Storage-Optionen.
 
 Diese API bietet Storage-Optionen, die auf der Grundlage von zwei verschiedenen W3C-Spezifikationen:
 
@@ -37,22 +37,22 @@ Cordova bietet Zugriff auf beide Schnittstellen für die Minderheit der Geräte,
 
 ## Methoden
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## Argumente
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## Objekte
 
-*   Datenbank
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [Datenbank](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## Zugriff auf die Funktion
 
@@ -72,4 +72,4 @@ Wenn Sie einen älteren Satz der Cordova Werkzeuge, die die CLI vorangehen verwe
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

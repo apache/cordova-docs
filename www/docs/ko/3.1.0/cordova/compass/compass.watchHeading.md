@@ -22,18 +22,18 @@ title: compass.watchHeading
 
 # compass.watchHeading
 
-일정 한 간격에도 나침반 제목 얻을.
+일정 한 간격에도 [나침반](compass.html) 제목 얻을.
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
 ## 설명
 
-나침반 방향 또는 표제 장치는 지적을 감지 하는 센서입니다. 도 0에서 359.99 머리글을 측정합니다.
+[나침반](compass.html) 방향 또는 표제 장치는 지적을 감지 하는 센서입니다. 도 0에서 359.99 머리글을 측정합니다.
 
-`compass.watchHeading`정기적 소자의 현재 머리글을 가져옵니다. 제목 검색 때마다는 `headingSuccess` 콜백 함수를 실행 합니다. 통해 밀리초 단위로 간격을 지정 된 `frequency` 매개 변수는 `compassOptions` 개체.
+`compass.watchHeading`정기적 소자의 현재 머리글을 가져옵니다. 제목 검색 때마다는 `headingSuccess` 콜백 함수를 실행 합니다. 통해 밀리초 단위로 간격을 지정 된 `frequency` 매개 변수는 `[compassOptions](parameters/compassOptions.html)` 개체.
 
-반환 된 시계 ID 나침반 시계 간격을 참조합니다. ID와 함께 사용 될 수 있습니다 시계 `compass.clearWatch` 나침반을 보고 그만.
+반환 된 시계 ID [나침반](compass.html) 시계 간격을 참조합니다. ID와 함께 사용 될 수 있습니다 시계 `[compass.clearWatch](compass.clearWatch.html)` 나침반을 보고 그만.
 
 ## 지원 되는 플랫폼
 
@@ -129,6 +129,6 @@ title: compass.watchHeading
 
 ## iOS 단점
 
-IOS에 `compass.watchHeading` 도 지정 된 번호로 바뀔 때 소자의 현재 표제를 또한 얻을 수 있습니다. 도 또는 더, 지정 된 수로 제목 변경 때마다는 `headingSuccess` 콜백 함수를 실행 합니다. 지정을 통해 변화의 정도 `filter` 매개 변수는 `compassOptions` 개체. 반환 된 시계 ID를 전달 하 여 시계를 평소 처럼 취소 `compass.clearWatch` . 이 기능은 대체 이전 별도 iOS 전용 `watchHeadingFilter` 및 `clearWatchFilter` 기능, 1.6 버전에서 제거 되었습니다.
+IOS에 `compass.watchHeading` 도 지정 된 번호로 바뀔 때 소자의 현재 표제를 또한 얻을 수 있습니다. 도 또는 더, 지정 된 수로 제목 변경 때마다는 `headingSuccess` 콜백 함수를 실행 합니다. 지정을 통해 변화의 정도 `filter` 매개 변수는 `[compassOptions](parameters/compassOptions.html)` 개체. 반환 된 시계 ID를 전달 하 여 시계를 평소 처럼 취소 `[compass.clearWatch](compass.clearWatch.html)` . 이 기능은 대체 이전 별도 iOS 전용 `watchHeadingFilter` 및 `clearWatchFilter` 기능, 1.6 버전에서 제거 되었습니다.
 
 단 하나 `watchHeading` iOS에서 한 번에 적용에서 될 수 있습니다. 경우는 `watchHeading` 필터를 사용 하 여 호출 `getCurrentHeading` 또는 `watchHeading` 기존 필터 값을 사용 하 여 제목 변화를 지정 합니다. 필터와 제목 변화를 보고 시간을 간격으로 보다 더 효율적입니다.

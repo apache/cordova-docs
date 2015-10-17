@@ -23,16 +23,16 @@ title: contacts.create
 contacts.create
 ===============
 
-新しい Contact オブジェクトを作成します。
+新しい [Contact](Contact/contact.html) オブジェクトを作成します。
 
     var contact = navigator.contacts.create(properties);
 
 概要
 -----------
 
-contacts.create 関数は、新しい `Contact` オブジェクトを同期的に作成します。
+contacts.create 関数は、新しい `[Contact](Contact/contact.html)` オブジェクトを同期的に作成します。
 
-この関数で作成した Contact オブジェクトは、デバイスの連絡先データベースには残りません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` 関数を使用します。
+この関数で作成した [Contact](Contact/contact.html) オブジェクトは、デバイスの連絡先データベースには残りません。 [Contact](Contact/contact.html) オブジェクトをデバイスに保存するには、 `[Contact](Contact/contact.html).save` 関数を使用します。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +42,7 @@ contacts.create 関数は、新しい `Contact` オブジェクトを同期的�
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});

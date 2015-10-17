@@ -23,7 +23,7 @@ title: Windows Phone 8 Plugins
 # Windows Phone 8 Plugins
 
 This section provides details for how to implement native plugin code
-on the Windows Phone platform. Before reading this, see Plugin Development Guide 
+on the Windows Phone platform. Before reading this, see [Plugin Development Guide](../../hybrid/plugins/index.html) 
 for an overview of the plugin's structure and its common
 JavaScript interface. This section continues to demonstrate the sample
 _echo_ plugin that communicates from the Cordova webview to the native
@@ -70,7 +70,7 @@ most of the functionality you need:
 See the
 [BaseCommand.cs](https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs)
 class for methods available for the plugin to override.  For example,
-the plugin can capture 'pause' and 'resume' events.
+the plugin can capture '[pause](../../../cordova/events/events.pause.html)' and '[resume](../../../cordova/events/events.resume.html)' events.
 
 ## Namespaces
 
@@ -181,7 +181,7 @@ reloads the JavaScript.
 
 The following shows how to use the `plugin.xml` file to specify a
 plugin's source files on the Windows Phone platform.  See Application
-Plugins for an overview, and Plugin Specification for details on
+Plugins for an overview, and [Plugin Specification](../../../plugin_ref/spec.html) for details on
 available options.
 
 - The `<source-file>` element defines all plugin resources, such

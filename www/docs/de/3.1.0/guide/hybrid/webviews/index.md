@@ -24,5 +24,5 @@ title: Einbetten von Webansichten für
 
 > Implementieren Sie die Cordova WebView in Ihr eigenes Projekt.
 
-*   Android Webansichten für
-*   iOS Webansichten für
+*   [Android Webansichten für](../../platforms/android/webview.html)
+*   [iOS Webansichten für](../../platforms/ios/webview.html)

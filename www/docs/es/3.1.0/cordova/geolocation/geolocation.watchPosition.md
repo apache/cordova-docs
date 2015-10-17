@@ -39,11 +39,11 @@ Relojes para cambios en la posición actual del dispositivo.
 
 ## Devoluciones
 
-*   **String**: devuelve un identificador de reloj que hace referencia el intervalo de posición del reloj. El id del reloj debe utilizarse con `geolocation.clearWatch` que para dejar de ver a los cambios de posición.
+*   **String**: devuelve un identificador de reloj que hace referencia el intervalo de posición del reloj. El id del reloj debe utilizarse con `[geolocation.clearWatch](geolocation.clearWatch.html)` que para dejar de ver a los cambios de posición.
 
 ## Descripción
 
-`geolocation.watchPosition` es una función asincrónica. Devuelve la posición actual del dispositivo cuando se detecta un cambio de posición. Cuando el dispositivo recupera una nueva ubicación, la devolución de llamada `geolocationSuccess` se ejecuta con un `Position` de objeto como parámetro. Si hay un error, el callback `geolocationError` se ejecuta con un objeto `PositionError` como parámetro.
+`geolocation.watchPosition` es una función asincrónica. Devuelve la posición actual del dispositivo cuando se detecta un cambio de posición. Cuando el dispositivo recupera una nueva ubicación, la devolución de llamada `[geolocationSuccess](parameters/geolocationSuccess.html)` se ejecuta con un `Position` de objeto como parámetro. Si hay un error, el callback `[geolocationError](parameters/geolocationError.html)` se ejecuta con un objeto `[PositionError](PositionError/positionError.html)` como parámetro.
 
 ## Plataformas soportadas
 

@@ -26,7 +26,7 @@ title: Android の構成
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `pause` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `[pause](../../../cordova/events/events.pause.html)` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `[pause](../../../cordova/events/events.pause.html)` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
     
         <preference name="KeepRunning" value="false"/>
         
@@ -46,7 +46,7 @@ title: Android の構成
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ localStorage および WebSQL ストレージ ページ、既定のブラウザーで開かれます。
+*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ [localStorage](../../../cordova/storage/localstorage/localstorage.html) および WebSQL [ストレージ](../../../cordova/storage/storage.html) ページ、既定のブラウザーで開かれます。
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

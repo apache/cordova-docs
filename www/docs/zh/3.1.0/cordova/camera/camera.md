@@ -28,8 +28,8 @@ title: 相機
 
 ## 方法
 
-*   camera.getPicture
-*   camera.cleanup
+*   [camera.getPicture](camera.getPicture.html)
+*   [camera.cleanup](camera.cleanup.html)
 
 ## 訪問功能
 

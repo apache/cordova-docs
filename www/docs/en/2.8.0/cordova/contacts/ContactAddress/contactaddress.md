@@ -23,7 +23,7 @@ title: ContactAddress
 ContactAddress
 ==============
 
-Contains address properties for a `Contact` object.
+Contains address properties for a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
@@ -39,7 +39,7 @@ Properties
 Details
 -------
 
-The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
+The `ContactAddress` object stores the properties of a single address of a contact.  A `[Contact](../Contact/contact.html)` object can have one or more addresses in a  `ContactAddress[]` array. 
 
 Supported Platforms
 -------------------
@@ -51,7 +51,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 	// display the address information for all contacts
@@ -80,7 +80,7 @@ Quick Example
 	var filter = ["displayName","addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -99,7 +99,7 @@ Full Example
         //
         function onDeviceReady() {
 		    // find all contacts
-		    var options = new ContactFindOptions();
+		    var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter=""; 
 			var filter = ["displayName","addresses"];
 		    navigator.contacts.find(filter, onSuccess, onError, options);

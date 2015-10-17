@@ -38,7 +38,7 @@ title: 檔案傳輸
 
 ## 詳細資訊
 
-`FileTransfer`物件提供一種方法將檔上載到遠端伺服器使用多部分的 HTTP POST 請求。 支援 HTTP 和 HTTPS 協定。 可以通過指定可選參數 `FileUploadOptions` 物件的 `upload()` 方法。 上傳成功， `FileUploadResult` 物件傳遞給成功回檔。 如果發生錯誤， `FileTransferError` 物件傳遞到錯誤回檔。 它也是可能的 （只在 iOS 和 Android） 從遠端伺服器下載檔案並將其保存在設備上。
+`FileTransfer`物件提供一種方法將檔上載到遠端伺服器使用多部分的 HTTP POST 請求。 支援 HTTP 和 HTTPS 協定。 可以通過指定可選參數 `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` 物件的 `upload()` 方法。 上傳成功， `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` 物件傳遞給成功回檔。 如果發生錯誤， `[FileTransferError](../filetransfererror/filetransfererror.html)` 物件傳遞到錯誤回檔。 它也是可能的 （只在 iOS 和 Android） 從遠端伺服器下載檔案並將其保存在設備上。
 
 ## 支援的平臺
 
@@ -58,7 +58,7 @@ title: 檔案傳輸
 
 *   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 回檔的執行如果出現檢索錯誤 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
+*   **errorCallback**： 回檔的執行如果出現檢索錯誤 `Metadata` 。調用與 `[FileTransferError](../filetransfererror/filetransfererror.html)` 物件。*（函數）*
 
 *   **選項**： 檔案名稱和 mimetype 等可選參數。
 
@@ -204,9 +204,9 @@ title: 檔案傳輸
 
 *   **目標**： 在設備上的檔的完整路徑。
 
-*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `[FileEntry](../fileentry/fileentry.html)` 物件。*（函數）*
 
-*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `[FileTransferError](../filetransfererror/filetransfererror.html)` 物件。*（函數）*
 
 *   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` 然後它將接受所有安全證書。 隨著 Android 拒絕自我簽署的安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
@@ -219,7 +219,7 @@ title: 檔案傳輸
 
 ## 中止
 
-中止正在進行轉讓。Onerror 回檔傳遞的錯誤代碼為 FileTransferError.ABORT_ERR 的 FileTransferError 物件。
+中止正在進行轉讓。Onerror 回檔傳遞的錯誤代碼為 [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR 的 [FileTransferError](../filetransfererror/filetransfererror.html) 物件。
 
 **支援的平臺**
 

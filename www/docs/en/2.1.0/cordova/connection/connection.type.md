@@ -41,7 +41,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
@@ -61,7 +61,7 @@ Quick Example
     
     checkConnection();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -94,7 +94,7 @@ Full Example
 	        states[Connection.CELL_4G]	= 'Cell 4G connection';
 	        states[Connection.NONE]   	= 'No network connection';
 
-	        alert('Connection type: ' + states[networkState]);
+	        alert('[Connection](connection.html) type: ' + states[networkState]);
 	    }
         
         </script>
@@ -124,7 +124,7 @@ webOS Quirks
 Windows Phone Quirks
 --------------------
 
-- Windows Phone Emulator always detects `navigator.network.connection.type` as `Connection.UNKNOWN`.
+- Windows Phone Emulator always detects `navigator.network.connection.type` as `[Connection](connection.html).UNKNOWN`.
 
 Tizen Quirks
 --------------------

@@ -32,7 +32,7 @@ Properties
 - __duration:__ The maximum duration of a video clip, in seconds.
 - __mode:__ The selected video capture mode.  The value must match one of the elements in `capture.supportedVideoModes`.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 video clips

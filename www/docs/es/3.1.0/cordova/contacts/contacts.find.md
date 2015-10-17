@@ -29,9 +29,9 @@ Consulta la base de datos de contactos del dispositivo y vuelve a uno o más obj
 
 ## Descripción
 
-El método `contacts.find` se ejecuta asincrónicamente, consultando la base de datos de contactos del dispositivo y devolver una matriz de objetos de `Contact`. Los objetos resultantes son pasados a la función de callback `contactSuccess` especificada por el parámetro **contactSuccess**.
+El método `contacts.find` se ejecuta asincrónicamente, consultando la base de datos de contactos del dispositivo y devolver una matriz de objetos de `Contact`. Los objetos resultantes son pasados a la función de callback `[contactSuccess](parameters/contactSuccess.html)` especificada por el parámetro **contactSuccess**.
 
-El parámetro **contactFields** especifica los campos para ser utilizado como un calificador de búsqueda, y sólo esos resultados son pasados a la función de devolución de llamada **contactSuccess**. Un parámetro de longitud cero **contactFields** no es válido y resultados en `ContactError.INVALID_ARGUMENT_ERROR`. Un valor de **contactFields** de `"*"` devuelve todo contacto con los campos.
+El parámetro **contactFields** especifica los campos para ser utilizado como un calificador de búsqueda, y sólo esos resultados son pasados a la función de devolución de llamada **contactSuccess**. Un parámetro de longitud cero **contactFields** no es válido y resultados en `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR`. Un valor de **contactFields** de `"*"` devuelve todo contacto con los campos.
 
 La cadena de **contactFindOptions.filter** puede ser usada como un filtro de búsqueda al consultar la base de datos de contactos. Si proporciona, mayúsculas y minúsculas, coincidencia parcial valor se aplica a cada campo especificado en el parámetro **contactFields**. Si hay un partido para *cualquier* de los campos especificados, se devuelve el contacto.
 

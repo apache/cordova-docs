@@ -27,7 +27,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **WatchID**: die ID zurückgegebener`accelerometer.watchAcceleration`.
+*   **WatchID**: die ID zurückgegebener`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Unterstützte Plattformen
 

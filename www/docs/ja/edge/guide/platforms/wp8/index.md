@@ -28,8 +28,8 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 Windows Phone プラットフォームに固有の詳細については、次を参照してください。
 
-*   Windows Phone 8 プラグイン
-*   Windows Phone 8 をアップグレードします。
+*   [Windows Phone 8 プラグイン](plugin.html)
+*   [Windows Phone 8 をアップグレードします。](upgrade.html)
 
 Windows Phone 8 プラットフォーム コルドバ WebView に依存しているインターネット エクスプ ローラー 10 そのレンダリング エンジンとして、実際問題としてコルドバ Api の呼び出しは、web コンテンツをテストする IE10 の強力なデバッガーを使用できるようにします。 Windows Phone 開発者ブログは対等な WebKit ブラウザーと一緒に IE10 をサポートする方法について[有用なガイダンス][1]を提供します。
 

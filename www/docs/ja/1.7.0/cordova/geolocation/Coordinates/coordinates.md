@@ -39,7 +39,7 @@ Coordinates
 概要
 -----------
 
-`Coordinates` オブジェクトは `Position` オブジェクトのプロパティーとして作成されます。 `Position` オブジェクトはコールバック関数を通してユーザーに返されます。
+`Coordinates` オブジェクトは `[Position](../Position/position.html)` オブジェクトのプロパティーとして作成されます。 `[Position](../Position/position.html)` オブジェクトはコールバック関数を通してユーザーに返されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -50,7 +50,7 @@ Coordinates
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // 成功時のコールバック関数

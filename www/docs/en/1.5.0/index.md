@@ -24,62 +24,62 @@ title: API Reference
     <h1>API Reference</h1>
     <ul>
         <li>
-            <h2>Accelerometer</h2>
+            <h2><a href="phonegap/accelerometer/accelerometer.html">Accelerometer</a></h2>
             <span>Tap into the device's motion sensor.</span>
         </li>
         <li>
-            <h2>Camera</h2>
-            <span>Capture a photo using the device's camera.</span>
+            <h2><a href="phonegap/camera/camera.html">Camera</a></h2>
+            <span><a href="phonegap/media/capture/capture.html">Capture</a> a photo using the device's camera.</span>
         </li>
         <li>
-            <h2>Capture</h2>
-            <span>Capture media files using device's media capture applications.</span>
+            <h2><a href="phonegap/media/capture/capture.html">Capture</a></h2>
+            <span><a href="phonegap/media/capture/capture.html">Capture</a> media files using device's media capture applications.</span>
         </li>
         <li>
-            <h2>Compass</h2>
+            <h2><a href="phonegap/compass/compass.html">Compass</a></h2>
             <span>Obtain the direction that the device is pointing.</span>
         </li>
         <li>
-            <h2>Connection</h2>
+            <h2><a href="phonegap/connection/connection.html">Connection</a></h2>
             <span>Quickly check the network state, and cellular network information.</span>
         </li>
         <li>
-            <h2>Contacts</h2>
+            <h2><a href="phonegap/contacts/contacts.html">Contacts</a></h2>
             <span>Work with the devices contact database.</span>
         </li>
         <li>
-            <h2>Device</h2>
+            <h2><a href="phonegap/device/device.html">Device</a></h2>
             <span>Gather device specific information.</span>
         </li>
         <li>
-            <h2>Events</h2>
+            <h2><a href="phonegap/events/events.html">Events</a></h2>
             <span>Hook into native events through JavaScript.</span>
         </li>
         <li>
-            <h2>File</h2>
+            <h2><a href="phonegap/file/fileobj/fileobj.html">File</a></h2>
             <span>Hook into native file system through JavaScript.</span>
         </li>
         <li>
-            <h2>Geolocation</h2>
+            <h2><a href="phonegap/geolocation/geolocation.html">Geolocation</a></h2>
             <span>Make your application location aware.</span>
         </li>
         <li>
-            <h2>Media</h2>
+            <h2><a href="phonegap/media/media.html">Media</a></h2>
             <span>Record and play back audio files.</span>
         </li>
         <li>
-            <h2>Notification</h2>
+            <h2><a href="phonegap/notification/notification.html">Notification</a></h2>
             <span>Visual, audible, and tactile device notifications.</span>
         </li>
         <li>
-            <h2>Storage</h2>
+            <h2><a href="phonegap/storage/storage.html">Storage</a></h2>
             <span>Hook into the devices native storage options.</span>
         </li>
     </ul>
     <h1>Guides</h1>
     <ul>
         <li>
-            <h2>Getting Started Guides</h2>
+            <h2><a href="guide/getting-started/index.html">Getting Started Guides</a></h2>
             <span>Setup each SDK and create your first PhoneGap app.</span>
         </li>
     </ul>

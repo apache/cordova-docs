@@ -44,9 +44,9 @@ title: DirectoryReader
 
 **參數：**
 
-*   **successCallback**: 一個傳遞的陣列的回檔 `FileEntry` 和 `DirectoryEntry` 的物件。*（函數）*
+*   **successCallback**: 一個傳遞的陣列的回檔 `[FileEntry](../fileentry/fileentry.html)` 和 `DirectoryEntry` 的物件。*（函數）*
 
-*   **errorCallback**: 如果檢索目錄清單時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果檢索目錄清單時發生錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 

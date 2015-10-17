@@ -42,9 +42,9 @@ Quando si utilizza la CLI per costruire un progetto, versioni di questo file ven
 
 In questa sezione in dettaglio le opzioni di configurazione globale e multi-piattaforma. Vedere le sezioni seguenti per le opzioni specifiche della piattaforma:
 
-*   Configurazione iOS
-*   Configurazione Android
-*   Configurazione di blackBerry 10
+*   [Configurazione iOS](../guide/platforms/ios/config.html)
+*   [Configurazione Android](../guide/platforms/android/config.html)
+*   [Configurazione di blackBerry 10](../guide/platforms/blackberry10/config.html)
 
 Oltre le varie opzioni di configurazione descritte di seguito, è possibile configurare anche set di base di un'applicazione delle immagini per ogni piattaforma di destinazione. Per ulteriori informazioni, vedere icone e schermate iniziali.
 
@@ -186,6 +186,6 @@ Quando si utilizza la CLI per costruire applicazioni, a volte è necessario spec
 
 ## Il *hook* elemento
 
-Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la Guida di ganci.
+Rappresenta lo script personalizzato che verrà chiamato da Cordova quando certa azione si verifica (ad esempio, viene richiamato dopo plugin viene aggiunto o piattaforma preparare logica). Questo è utile quando è necessario estendere le funzionalità predefinite di Cordova. Per ulteriori informazioni, vedere la [Guida di ganci](../guide/appdev/hooks/index.html).
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

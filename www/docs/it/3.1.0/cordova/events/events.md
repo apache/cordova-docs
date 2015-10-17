@@ -26,21 +26,21 @@ title: Eventi
 
 ## Tipi di evento
 
-*   deviceready
-*   pausa
-*   curriculum
-*   online
-*   non in linea
-*   BackButton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   pulsante menu
-*   SearchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [pausa](events.pause.html)
+*   [curriculum](events.resume.html)
+*   [online](events.online.html)
+*   [non in linea](events.offline.html)
+*   [BackButton](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [pulsante menu](events.menubutton.html)
+*   [SearchButton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## La funzionalità di accesso
 

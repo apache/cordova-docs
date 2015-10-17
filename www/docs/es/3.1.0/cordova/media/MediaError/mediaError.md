@@ -22,7 +22,7 @@ title: MediaError
 
 # MediaError
 
-A `MediaError` objeto es devuelto a la `mediaError` función de devolución de llamada cuando se produce un error.
+A `MediaError` objeto es devuelto a la `[mediaError](../Parameters/mediaError.html)` función de devolución de llamada cuando se produce un error.
 
 ## Propiedades
 
@@ -39,4 +39,4 @@ A `MediaError` objeto es devuelto a la `mediaError` función de devolución de l
 
 ## Descripción
 
-El `MediaError` objeto se pasa a un `mediaError` función de devolución de llamada cuando se produce un error.
+El `MediaError` objeto se pasa a un `[mediaError](../Parameters/mediaError.html)` función de devolución de llamada cuando se produce un error.

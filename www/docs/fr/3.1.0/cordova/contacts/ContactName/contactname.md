@@ -22,7 +22,7 @@ title: ContactName
 
 # ContactName
 
-Contient différents types d'informations sur le nom d'un objet `Contact`.
+Contient différents types d'informations sur le nom d'un objet `[Contact](../Contact/contact.html)`.
 
 ## Propriétés
 

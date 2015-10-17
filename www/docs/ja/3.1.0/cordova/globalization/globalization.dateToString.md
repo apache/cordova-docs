@@ -33,7 +33,7 @@ title: globalization.dateToString
 
 受信 `date` パラメーター型である必要があります`Date`.
 
-場合は、日付の書式設定エラーがあるし、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
+場合は、日付の書式設定エラーがあるし、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 

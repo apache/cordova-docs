@@ -26,6 +26,6 @@ Applicazioni di Cordova sono ordinariamente implementate come un browser-basato 
 
 Per distribuire un WebView, è necessario avere familiarità con ogni ambiente di programmazione nativo. Di seguito vengono fornite le istruzioni per piattaforme supportate:
 
-*   Amazon fuoco OS visualizzazioni Web
-*   Visualizzazioni Web Android
-*   iOS visualizzazioni Web
+*   [Amazon fuoco OS visualizzazioni Web](../../platforms/amazonfireos/webview.html)
+*   [Visualizzazioni Web Android](../../platforms/android/webview.html)
+*   [iOS visualizzazioni Web](../../platforms/ios/webview.html)

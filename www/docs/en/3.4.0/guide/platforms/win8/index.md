@@ -26,11 +26,11 @@ This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows 8. See the following for more
 detailed platform-specific information:
 
-* Upgrading Windows 8
-* Windows 8 Command-line Tools
+* [Upgrading Windows 8](upgrading.html)
+* [Windows 8 Command-line Tools](tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See [The Command-Line Interface](../../cli/index.html) for information about the
 current interface.
 
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
@@ -105,7 +105,7 @@ expose the same APIs as on other Cordova-supported platforms.
             <link href="/css/default.css" rel="stylesheet" />
             <script src="/js/default.js"></script>
 
-- Add a `deviceready` handler to demonstrate Cordova is working:
+- Add a `[deviceready](../../../cordova/events/events.deviceready.html)` handler to demonstrate Cordova is working:
 
         <body>
             <p>Content goes here</p>

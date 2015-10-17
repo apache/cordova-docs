@@ -80,8 +80,8 @@ Android に関する注意点
 --------------
 
 - `allowEdit` は無視されます。
-- Camera.PictureSourceType.PHOTOLIBRARY と Camera.PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
-- Camera.EncodingType はサポートされていません。
+- [Camera](../camera.html).PictureSourceType.PHOTOLIBRARY と [Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
+- [Camera](../camera.html).EncodingType はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 
@@ -93,7 +93,7 @@ BlackBerry に関する注意点
 - `allowEdit` は無視されます。
 - 撮影後にカメラアプリを閉じるためには、アプリケーションにキー入力許可の権限が付与されている必要があります。
 - 大きなサイズで撮影を行った場合、高画質カメラを搭載したデバイスでエンコードすることができない場合があります。 (Torch 9800 など)
-- Camera.MediaType はサポートされていません。
+- [Camera](../camera.html).MediaType はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 
@@ -103,7 +103,7 @@ Palm に関する注意点
 - `quality` パラメーターは無視されます。
 - `sourceType` パラメーターは無視されます。
 - `allowEdit` は無視されます。
-- Camera.MediaType はサポートされていません。
+- [Camera](../camera.html).MediaType はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 

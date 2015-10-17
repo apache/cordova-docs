@@ -24,8 +24,8 @@ title: Windows 8 プラットフォーム ガイド
 
 このガイドは、Windows 8 向け Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   Windows 8 アップグレード
-*   Windows 8 のコマンド ライン ツール
+*   [Windows 8 アップグレード](upgrading.html)
+*   [Windows 8 のコマンド ライン ツール](tools.html)
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 
@@ -83,7 +83,7 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
             <script src="/js/default.js"></script>
         
 
-*   追加、 `deviceready` コルドバを示すためにハンドラーの処理します。
+*   追加、 `[deviceready](../../../cordova/events/events.deviceready.html)` コルドバを示すためにハンドラーの処理します。
     
         <body>
             <p>Content goes here</p>

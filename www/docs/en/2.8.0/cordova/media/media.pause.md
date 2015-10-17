@@ -43,7 +43,7 @@ Supported Platforms
 - Tizen
 - Windows 8
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Play audio
@@ -70,7 +70,7 @@ Quick Example
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

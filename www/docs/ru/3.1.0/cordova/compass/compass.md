@@ -26,18 +26,18 @@ title: Компас
 
 ## Методы
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (устаревший)
-*   compass.clearWatchFilter (устаревший)
+*   [compass.getCurrentHeading](compass.getCurrentHeading.html)
+*   [compass.watchHeading](compass.watchHeading.html)
+*   [compass.clearWatch](compass.clearWatch.html)
+*   [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (устаревший)
+*   [compass.clearWatchFilter](compass.clearWatchFilter.html) (устаревший)
 
 ## Аргументы
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   [compassSuccess](parameters/compassSuccess.html)
+*   [compassError](parameters/compassError.html)
+*   [compassOptions](parameters/compassOptions.html)
+*   [compassHeading](parameters/compassHeading.html)
 
 ## Доступ к функции
 

@@ -26,19 +26,19 @@ title: Accelerometer
 
 ## Методы
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## Аргументы
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## Объекты (только для чтения)
 
-*   Acceleration
+*   [Acceleration](acceleration/acceleration.html)
 
 ## Доступ к расширениям
 

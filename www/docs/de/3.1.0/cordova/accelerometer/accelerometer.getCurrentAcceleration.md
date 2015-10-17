@@ -22,16 +22,16 @@ title: accelerometer.getCurrentAcceleration
 
 # accelerometer.getCurrentAcceleration
 
-Erhalten Sie die aktuelle Beschleunigung entlang der *x-*, *y-*und *Z* -Achsen.
+Erhalten Sie die aktuelle [Beschleunigung](acceleration/acceleration.html) entlang der *x-*, *y-*und *Z* -Achsen.
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
 ## Beschreibung
 
-Der Beschleunigungsmesser ist ein Bewegungssensor, der die Änderung (*Delta*) erkennt Bewegung im Verhältnis zu der aktuellen Geräte-Orientierung in drei Dimensionen entlang der *x-*, *y-*und *Z* -Achse.
+Der [Beschleunigungsmesser](accelerometer.html) ist ein Bewegungssensor, der die Änderung (*Delta*) erkennt Bewegung im Verhältnis zu der aktuellen Geräte-Orientierung in drei Dimensionen entlang der *x-*, *y-*und *Z* -Achse.
 
-Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Callback-Funktion.
+Diese Beschleunigungswerte werden zurückgegeben die `[accelerometerSuccess](parameters/accelerometerSuccess.html)` Callback-Funktion.
 
 ## Unterstützte Plattformen
 
@@ -104,8 +104,8 @@ Diese Beschleunigungswerte werden zurückgegeben die `accelerometerSuccess` Call
 
 ## iOS Macken
 
-*   iOS erkennt nicht das Konzept die aktuelle Beschleunigung zu einem bestimmten Zeitpunkt zu bekommen.
+*   iOS erkennt nicht das Konzept die aktuelle [Beschleunigung](acceleration/acceleration.html) zu einem bestimmten Zeitpunkt zu bekommen.
 
-*   Müssen Sie die Beschleunigung zu sehen und erfassen die Daten zu bestimmten Zeitintervallen.
+*   Müssen Sie die [Beschleunigung](acceleration/acceleration.html) zu sehen und erfassen die Daten zu bestimmten Zeitintervallen.
 
 *   So die `getCurrentAcceleration` -Funktion führt zu den letzten Wert berichtet von einer `watchAccelerometer` rufen.

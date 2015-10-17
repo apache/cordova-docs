@@ -65,7 +65,7 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {
@@ -91,7 +91,7 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 - encoding - ファイルのコンテンツのエンコードを表します (デフォルト: UTF-8)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {

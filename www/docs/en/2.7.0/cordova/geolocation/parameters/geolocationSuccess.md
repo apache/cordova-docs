@@ -23,7 +23,7 @@ title: geolocationSuccess
 geolocationSuccess
 ==================
 
-The user's callback function that is called when a geolocation position becomes available (when using with `geolocation.getCurrentPosition`), or when the position changes (when using with `geolocation.watchPosition`).
+The user's callback function that is called when a geolocation position becomes available (when using with `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)`), or when the position changes (when using with `[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something
@@ -32,9 +32,9 @@ The user's callback function that is called when a geolocation position becomes 
 Parameters
 ----------
 
-- __position:__ The geolocation position returned by the device. (`Position`)
+- __position:__ The geolocation position returned by the device. (`[Position](../Position/position.html)`)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function geolocationSuccess(position) {

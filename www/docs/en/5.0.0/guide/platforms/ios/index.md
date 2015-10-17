@@ -26,14 +26,14 @@ This guide shows how to set up your SDK development environment to
 deploy Cordova apps for iOS devices such as iPhone and iPad. See the
 following for more detailed platform-specific information:
 
-* iOS Configuration
-* Upgrading iOS
-* iOS WebViews
-* iOS Plugins
+* [iOS Configuration](config.html)
+* [Upgrading iOS](upgrade.html)
+* [iOS WebViews](webview.html)
+* [iOS Plugins](plugin.html)
 * iOS Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See [The Command-Line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## Requirements and Support
@@ -86,7 +86,7 @@ Run from comman-line terminal:
 ## Create a New Project
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-Line Interface. For example, in a source-code directory:
+Cordova [The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello

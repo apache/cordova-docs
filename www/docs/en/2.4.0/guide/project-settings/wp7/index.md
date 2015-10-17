@@ -20,6 +20,6 @@ license: >
 title: Project Settings for Windows Phone 7
 ---
 
-Project Settings for Windows Phone 7 
+[Project Settings](../index.html) for Windows Phone 7 
 ===================================
 

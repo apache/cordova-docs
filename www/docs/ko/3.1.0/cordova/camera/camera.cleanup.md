@@ -29,7 +29,7 @@ title: camera.cleanup
 
 ## 설명
 
-제거 중간 전화 후 임시 저장소에 보관 된 이미지 파일 `camera.getPicture` . 경우에만 적용의 값 `Camera.sourceType` 와 `Camera.PictureSourceType.CAMERA` 와 `Camera.destinationType` 같음`Camera.DestinationType.FILE_URI`.
+제거 중간 전화 후 임시 저장소에 보관 된 이미지 [파일](../file/fileobj/fileobj.html) `[camera.getPicture](camera.getPicture.html)` . 경우에만 적용의 값 `Camera.sourceType` 와 `Camera.PictureSourceType.CAMERA` 와 `Camera.destinationType` 같음`Camera.DestinationType.FILE_URI`.
 
 ## 지원 되는 플랫폼
 

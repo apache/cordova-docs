@@ -22,7 +22,7 @@ title: Flags
 
 # Flags
 
-Supplies arguments to the `DirectoryEntry` object's `getFile()` and
+Supplies arguments to the `[DirectoryEntry](../directoryentry/directoryentry.html)` object's `getFile()` and
 `getDirectory()` methods, which look up or create files and
 directories, respectively.
 

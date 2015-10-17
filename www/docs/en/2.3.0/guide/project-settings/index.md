@@ -23,4 +23,4 @@ title: Project Settings
 Project Settings
 ================
 
-- Project Settings for iOS
+- [Project Settings for iOS](ios/index.html)

@@ -160,7 +160,7 @@ Windows phone で、 `<source-file>` プラグインのすべてのリソース�
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-たとえば、'一時停止' と '再開' アプリケーション イベントにフックすることができます。
+たとえば、'一時停止' と '[再開](../../../cordova/events/events.resume.html)' アプリケーション イベントにフックすることができます。
 
 ### プラグインのデバッグ
 

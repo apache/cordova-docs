@@ -108,7 +108,7 @@ Getting Started with Android
     ![](img/guide/getting-started/android/manifest.png)
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 
 - **index.html** という名前のファイルを **assets/www** ディレクトリに新規作成します。 以下のコードを貼り付けます:

@@ -141,7 +141,7 @@ Lea sobre si desea utilizar el enfoque de flujo de trabajo multiplataforma (CLI)
 
 ## Construir la aplicación
 
-De forma predeterminada, la secuencia de comandos `cordova create` genera una esquelética aplicación basada en web cuya página de inicio es el archivo del proyecto `www/index.html`. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `deviceready` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
+De forma predeterminada, la secuencia de comandos `cordova create` genera una esquelética aplicación basada en web cuya página de inicio es el archivo del proyecto `www/index.html`. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `[deviceready](../../cordova/events/events.deviceready.html)` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
 
 Ejecute el siguiente comando para crear iterativamente el proyecto:
 
@@ -279,7 +279,7 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
         $ cordova plugin add cordova-plugin-console
         
 
-**Nota**: el CLI agrega plugin código según proceda para cada plataforma. Si usted quiere desarrollar con las herramientas de nivel inferior cáscara o plataforma SDK como se indica en el Resumen, tienes que ejecutar la utilidad Plugman para añadir plugins por separado para cada plataforma. (Para obtener más información, véase Plugman usando a gestionar Plugins).
+**Nota**: el CLI agrega plugin código según proceda para cada plataforma. Si usted quiere desarrollar con las herramientas de nivel inferior cáscara o plataforma SDK como se indica en el [Resumen](../overview/index.html), tienes que ejecutar la utilidad Plugman para añadir plugins por separado para cada plataforma. (Para obtener más información, véase Plugman usando a gestionar Plugins).
 
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
@@ -368,7 +368,7 @@ En cambio, el nivel superior `merges` directorio ofrece un lugar para especifica
 
 Al reconstruir el proyecto, la versión de Android incluye el tamaño de fuente personalizado, mientras que otros permanecen sin cambios.
 
-También se puede utilizar `merges` para agregar archivos no presentan en el original `www` directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, en `merges/ios/img/back_button.png` , mientras que la versión de Android en lugar de otro puede capturar `backbutton` eventos desde el botón de hardware correspondiente.
+También se puede utilizar `merges` para agregar archivos no presentan en el original `www` directorio. Por ejemplo, una aplicación puede incorporar un gráfico de *botón* en la interfaz de iOS, en `merges/ios/img/back_button.png` , mientras que la versión de Android en lugar de otro puede capturar `[backbutton](../../cordova/events/events.backbutton.html)` eventos desde el botón de hardware correspondiente.
 
 ## Comandos de ayuda
 

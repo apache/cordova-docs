@@ -22,19 +22,19 @@ title: 알림
 
 # 알림
 
-> 청취, 시각과 촉각 장치 알림입니다.
+> 청취, 시각과 촉각 [장치](../device/device.html) 알림입니다.
 
 ## 메서드
 
-*   `notification.alert`
-*   `notification.confirm`
-*   `notification.prompt`
-*   `notification.beep`
-*   `notification.vibrate`
+*   `[notification.alert](notification.alert.html)`
+*   `[notification.confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
+*   `[notification.beep](notification.beep.html)`
+*   `[notification.vibrate](notification.vibrate.html)`
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
@@ -76,4 +76,4 @@ title: 알림
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.

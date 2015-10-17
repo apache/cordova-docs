@@ -32,24 +32,24 @@ Geolocation は緯度や経度といったデバイスの位置情報を提供�
 メソッド
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+- [geolocation.watchPosition](geolocation.watchPosition.html)
+- [geolocation.clearWatch](geolocation.clearWatch.html)
 
 
 引数
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- [geolocationSuccess](parameters/geolocationSuccess.html)
+- [geolocationError](parameters/geolocationError.html)
+- [geolocationOptions](parameters/geolocation.options.html)
 
 オブジェクト (読み取り専用)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- [Position](Position/position.html)
+- [PositionError](PositionError/positionError.html)
+- [Coordinates](Coordinates/coordinates.html)
 
 パーミッション
 -----------

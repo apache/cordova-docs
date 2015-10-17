@@ -38,7 +38,7 @@ title: 블랙베리 명령줄 도구
 
 ## 프로젝트 빌드
 
-블랙베리 프로젝트에 대 한 있는지 확인 하십시오 당신은 사용자 정의 `project.properties` 코르 도우 바 프로젝트의 루트 디렉터리에 있는 파일. 이렇게 키 암호, 서명 귀하의 블랙베리를 공급 하 고 블랙베리 WebWorks SDK 및 블랙베리 에뮬레이터 실행 파일 위치를 지정 해야 합니다.
+블랙베리 프로젝트에 대 한 있는지 확인 하십시오 당신은 사용자 정의 `project.properties` 코르 도우 바 프로젝트의 루트 디렉터리에 있는 [파일](../../../cordova/file/fileobj/fileobj.html). 이렇게 키 암호, 서명 귀하의 블랙베리를 공급 하 고 블랙베리 WebWorks SDK 및 블랙베리 에뮬레이터 실행 [파일](../../../cordova/file/fileobj/fileobj.html) 위치를 지정 해야 합니다.
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
@@ -46,7 +46,7 @@ title: 블랙베리 명령줄 도구
 
 ## 에뮬레이터를 시작
 
-블랙베리 프로젝트에 대 한 있는지 확인 하십시오 당신은 사용자 정의 `project.properties` 코르 도우 바 프로젝트 디렉터리의 루트에 있는 파일. 이렇게 키 암호, 서명 귀하의 블랙베리를 공급 하 고 블랙베리 WebWorks SDK 및 블랙베리 에뮬레이터 실행 파일 위치를 지정 해야 합니다.
+블랙베리 프로젝트에 대 한 있는지 확인 하십시오 당신은 사용자 정의 `project.properties` 코르 도우 바 프로젝트 디렉터리의 루트에 있는 [파일](../../../cordova/file/fileobj/fileobj.html). 이렇게 키 암호, 서명 귀하의 블랙베리를 공급 하 고 블랙베리 WebWorks SDK 및 블랙베리 에뮬레이터 실행 [파일](../../../cordova/file/fileobj/fileobj.html) 위치를 지정 해야 합니다.
 
     $ /path/to/my_new_project/cordova/run <platform>
     
@@ -63,4 +63,4 @@ title: 블랙베리 명령줄 도구
 
 ## 로깅
 
-불행히도, 스트리밍 장치에서 직접 로그는 현재 지원 되지 않습니다. 그러나, 블랙베리 플레이 북과 블랙베리 스마트폰 장치 블랙베리 OS 7.0을 실행 하 고 위의 내장 웹 관리자 지원을 제공 합니다. 또한 응용 프로그램 로그에 액세스할 수 있습니다 (에 대 한 호출을 포함 하 여 `console.log` ) 홈 화면에서 'ALT' 키 ' lglg ' 키를 입력 하 여 장치에.
+불행히도, 스트리밍 장치에서 직접 로그는 현재 지원 되지 않습니다. 그러나, 블랙베리 플레이 북과 블랙베리 스마트폰 [장치](../../../cordova/device/device.html) 블랙베리 OS 7.0을 실행 하 고 위의 내장 웹 관리자 지원을 제공 합니다. 또한 응용 프로그램 로그에 액세스할 수 있습니다 (에 대 한 호출을 포함 하 여 `console.log` ) 홈 화면에서 'ALT' 키 ' lglg ' 키를 입력 하 여 장치에.

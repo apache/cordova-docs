@@ -26,7 +26,7 @@ capture.captureAudio
 > Start the audio recorder application and return information about captured audio clip file(s).
 
     navigator.device.capture.captureAudio( 
-	    CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+	    [CaptureCB](CaptureCB.html) captureSuccess, [CaptureErrorCB](CaptureErrorCB.html) captureError,  [CaptureAudioOptions options]
 	);
 
 Description
@@ -34,9 +34,9 @@ Description
 
 This method starts an asynchronous operation to capture audio recordings using the device's default audio recording application.  The operation allows the device user to capture multiple recordings in a single session.
 
-The capture operation ends when either the user exits the audio recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureAudioOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single audio clip.
+The capture operation ends when either the user exits the audio recording application, or the maximum number of recordings, specified by the __limit__ parameter in [CaptureAudioOptions](captureAudioOptions.html), has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single audio clip.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured audio clip file.  If the operation is terminated by the user before an audio clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation is finished, it will invoke the [CaptureCB](CaptureCB.html) callback with an array of [MediaFile](MediaFile.html) objects describing each captured audio clip file.  If the operation is terminated by the user before an audio clip is captured, the [CaptureErrorCB](CaptureErrorCB.html) callback will be invoked with a [CaptureError](CaptureError.html) object with the [CaptureError](CaptureError.html).`CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -47,7 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback
@@ -67,7 +67,7 @@ Quick Example
     // start audio capture
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -131,7 +131,7 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a [CaptureError](CaptureError.html).`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 iOS Quirks
 ----------

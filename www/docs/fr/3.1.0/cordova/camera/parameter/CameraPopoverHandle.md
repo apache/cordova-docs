@@ -22,7 +22,7 @@ title: CameraPopoverHandle
 
 # CameraPopoverHandle
 
-Agit sur la boîte de dialogue créée par `camera.getPicture`.
+Agit sur la boîte de dialogue créée par `[camera.getPicture](../camera.getPicture.html)`.
 
 ## Méthodes
 
@@ -38,7 +38,7 @@ Définit la position de la boite de dialogue.
 
 **Paramètres :**
 
-*   `cameraPopoverOptions`: l'objet `CameraPopoverOptions` spécifiant la nouvelle position
+*   `cameraPopoverOptions`: l'objet `[CameraPopoverOptions](CameraPopoverOptions.html)` spécifiant la nouvelle position
 
 ## Exemple court
 

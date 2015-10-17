@@ -26,15 +26,15 @@ Zahlreiche Aspekte des Verhaltens einer app können mit einer globalen Konfigura
 
  [1]: http://www.w3.org/TR/widgets/
 
-Für Projekte, die mit dem Cordova-CLI (beschrieben in Die Kommandozeilen-Schnittstelle) erstellt wurden, finden Sie diese Datei im `www` Verzeichnis der obersten Ebene. Mit dem CLI zum Erstellen eines Projekts regeneriert Versionen dieser Datei in verschiedenen Unterverzeichnissen innerhalb `platforms` . Wenn Sie die CLI zum Erstellen eines Projekts, aber dann verlagern Ihren Workflow auf ein SDK verwenden, dient die Plattform-spezifische Datei als Quelle.
+Für Projekte, die mit dem Cordova-CLI (beschrieben in Die Kommandozeilen-Schnittstelle) erstellt wurden, finden Sie diese [Datei](../cordova/file/fileobj/fileobj.html) im `www` Verzeichnis der obersten Ebene. Mit dem CLI zum Erstellen eines Projekts regeneriert Versionen dieser [Datei](../cordova/file/fileobj/fileobj.html) in verschiedenen Unterverzeichnissen innerhalb `platforms` . Wenn Sie die CLI zum Erstellen eines Projekts, aber dann verlagern Ihren Workflow auf ein SDK verwenden, dient die Plattform-spezifische [Datei](../cordova/file/fileobj/fileobj.html) als Quelle.
 
 Dieser Abschnitt beschreibt globale und Cross-Plattform-Konfigurationsoptionen. Finden Sie in den folgenden Abschnitten für Plattform-spezifische Optionen:
 
-*   iOS Konfiguration
+*   [iOS Konfiguration](../guide/platforms/ios/config.html)
 *   Android Konfiguration
 *   BlackBerry Konfiguration
 
-Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter Symbole und Splash-Screens.
+Neben der verschiedenen Konfigurationsoptionen unten können Sie auch eine Anwendung Kernsatz von Bildern für jede Zielplattform konfigurieren. Weitere Informationen finden Sie unter [Symbole und Splash-Screens](images.html).
 
 ## Kern-Konfigurationselemente
 
@@ -57,13 +57,13 @@ In diesem Beispiel wird den Standardwert `config.xml` erzeugt durch der CLI `cre
 
 <!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
-Die folgenden Konfigurationselemente in der obersten Ebene angezeigt `config.xml` Datei und werden auf allen unterstützten Cordova-Plattformen unterstützt:
+Die folgenden Konfigurationselemente in der obersten Ebene angezeigt `config.xml` [Datei](../cordova/file/fileobj/fileobj.html) und werden auf allen unterstützten Cordova-Plattformen unterstützt:
 
 *   Die `<widget>` des Elements `id` Attribut bietet die app-Reverse-Domänen-ID, und der `version` seine vollständige Versionsnummer in Major/Minor/Patch-Notation ausgedrückt.
 
 *   Die `<name>` Element gibt die app formalen Namen, wie er auf home-Bildschirm des Geräts und im app-Store-Schnittstellen erscheint.
 
-*   Die `<description>` und `<author>` Elemente geben, Metadaten und Kontaktinformationen, die im app-Shop-Angebote angezeigt werden kann.
+*   Die `<description>` und `<author>` Elemente geben, [Metadaten](../cordova/file/metadata/metadata.html) und Kontaktinformationen, die im app-Shop-Angebote angezeigt werden kann.
 
 *   Der optionale `<content>` -Element definiert die Anwendung Startseite in der obersten Ebene Webverzeichnis Vermögenswerte. Der Standardwert ist `index.html` , die üblicherweise in einem Projekt angezeigt wird, ist der obersten Ebene `www` Verzeichnis.
 
@@ -116,7 +116,7 @@ Die folgenden Einstellungen gelten für mehrere Plattformen, jedoch nicht auf al
 
 ## Die `<feature>` Element
 
-Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` Befehl Gerät APIs zu aktivieren. Dies ändert jedoch nicht die Top-Level- `config.xml` Datei, so dass die `<feature>` Element gilt nicht für Ihren Workflow. Wenn Sie direkt in ein SDK arbeiten und mit der Plattform-spezifischen `config.xml` Datei als Quelle, Sie verwenden die `<feature>` Tag auf Device-Ebene APIs und externe Plugins aktivieren. Sie werden in der Regel in dieser Form:
+Wenn Sie die CLI verwenden, um Anwendungen zu erstellen, verwenden Sie den `plugin` Befehl [Gerät](../cordova/device/device.html) APIs zu aktivieren. Dies ändert jedoch nicht die Top-Level- `config.xml` [Datei](../cordova/file/fileobj/fileobj.html), so dass die `<feature>` Element gilt nicht für Ihren Workflow. Wenn Sie direkt in ein SDK arbeiten und mit der Plattform-spezifischen `config.xml` [Datei](../cordova/file/fileobj/fileobj.html) als Quelle, Sie verwenden die `<feature>` Tag auf Device-Ebene APIs und externe Plugins aktivieren. Sie werden in der Regel in dieser Form:
 
         <feature name="Plugin" value="PluginID" />
     

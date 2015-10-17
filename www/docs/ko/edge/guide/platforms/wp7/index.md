@@ -26,9 +26,9 @@ title: Windows Phone 7 플랫폼 가이드
 
 두 버전 모두에 적용 되는 자세한 플랫폼 관련 정보에 대 한 다음 참조.
 
-*   Windows Phone 업그레이드
+*   [Windows Phone 업그레이드](../wp8/upgrading.html)
 *   Windows Phone 플러그인
-*   Windows Phone 명령줄 도구
+*   [Windows Phone 명령줄 도구](../wp8/tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 

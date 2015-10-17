@@ -32,7 +32,7 @@ Details
 
 When the application's network connection changes to being online, the online event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("online", onOnline, false);
@@ -53,7 +53,7 @@ Quick Example
         // Handle the online event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

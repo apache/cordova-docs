@@ -137,12 +137,12 @@ Callback sukces przeszedł do `exec` jest po prostu odwołanie do funkcja wywoł
 
 Po zdefiniowaniu JavaScript dla wtyczki, trzeba uzupełnić z co najmniej jeden implementacji macierzystym. Poniżej przedstawiono szczegóły dotyczące każdej platformy, i każdy opiera się na prostym przykładzie wtyczce Echo powyżej:
 
-*   Amazon ogień OS Plugins
+*   [Amazon ogień OS Plugins](../../platforms/amazonfireos/plugin.html)
 *   Wtyczki dla Androida
-*   iOS wtyczek
-*   Jeżyna 10 wtyczek
-*   Windows Phone 8 wtyczki
-*   Wtyczki Windows
+*   [iOS wtyczek](../../platforms/ios/plugin.html)
+*   [Jeżyna 10 wtyczek](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 8 wtyczki](../../platforms/wp8/plugin.html)
+*   [Wtyczki Windows](../../platforms/win8/plugin.html)
 
 Platforma Tizen nie obsługuje wtyczek.
 

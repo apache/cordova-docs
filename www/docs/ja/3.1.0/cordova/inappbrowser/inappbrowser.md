@@ -22,7 +22,7 @@ title: InAppBrowser
 
 # InAppBrowser
 
-> `InAppBrowser`はときに表示する web ブラウザーのビューを呼び出す `window.open()` 、または時として形成されたリンクを開く`<a target="_blank">`.
+> `InAppBrowser`はときに表示する web ブラウザーのビューを呼び出す `[window.open](window.open.html)()` 、または時として形成されたリンクを開く`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -31,7 +31,7 @@ title: InAppBrowser
 
 ## 説明
 
-呼び出しから返されるオブジェクト`window.open`.
+呼び出しから返されるオブジェクト`[window.open](window.open.html)`.
 
 ## メソッド
 

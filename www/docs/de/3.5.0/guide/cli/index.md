@@ -22,7 +22,7 @@ title: Die Befehlszeilenschnittstelle
 
 # Die Befehlszeilenschnittstelle
 
-Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow verwenden (siehe die Übersicht für eine Beschreibung der verschiedenen Workflows). Allerdings können Sie auch die CLI Projektcode, initialisiert werden, nach dem Sie verschiedene Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung verwenden.
+Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow verwenden (siehe die [Übersicht](../overview/index.html) für eine Beschreibung der verschiedenen Workflows). Allerdings können Sie auch die CLI Projektcode, initialisiert werden, nach dem Sie verschiedene Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung verwenden.
 
 ## Voraussetzungen
 
@@ -124,7 +124,7 @@ Lesen Sie weiter, wenn Sie das plattformübergreifende Workflow-Konzept (CLI) f�
 
 ## Die App zu bauen
 
-In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `deviceready` -Ereignishandler, standardmäßig von verwiesen`www/js/index.js`.
+In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `[deviceready](../../cordova/events/events.deviceready.html)` -Ereignishandler, standardmäßig von verwiesen`www/js/index.js`.
 
 Führen Sie den folgenden Befehl, um das Projekt iterativ zu erstellen:
 
@@ -333,7 +333,7 @@ Stattdessen der obersten Ebene `merges` Verzeichnis bietet Ihnen einen Ort zu ge
 
 Wenn Sie das Projekt neu erstellen, verfügt die Android Version die benutzerdefinierte Schriftgröße, während andere unverändert bleiben.
 
-Sie können auch `merges` hinzufügen, Dateien nicht vorhanden, im Original `www` Verzeichnis. Beispielsweise eine app kann integrieren eine *Zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert `merges/ios/img/back_button.png` , während die Android Version stattdessen erfassen kann `backbutton` Ereignisse über die entsprechende Taste.
+Sie können auch `merges` hinzufügen, Dateien nicht vorhanden, im Original `www` Verzeichnis. Beispielsweise eine app kann integrieren eine *Zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert `merges/ios/img/back_button.png` , während die Android Version stattdessen erfassen kann `[backbutton](../../cordova/events/events.backbutton.html)` Ereignisse über die entsprechende Taste.
 
 ## Hilfebefehle
 

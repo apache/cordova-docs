@@ -29,17 +29,17 @@ Fragt die Gerät-Kontakte-Datenbank und gibt eine oder mehrere `Contact` Objekte
 
 ## Beschreibung
 
-Die `contacts.find` Methode wird asynchron ausgeführt, Abfragen der Gerät-Kontakte-Datenbank und gibt ein Array von `Contact` Objekten. Die resultierenden Objekte werden an übergeben die `contactSuccess` Callback-Funktion, die durch den **ContactSuccess** -Parameter angegeben.
+Die `contacts.find` Methode wird asynchron ausgeführt, Abfragen der Gerät-Kontakte-Datenbank und gibt ein Array von `Contact` Objekten. Die resultierenden Objekte werden an übergeben die `[contactSuccess](parameters/contactSuccess.html)` Callback-Funktion, die durch den **ContactSuccess** -Parameter angegeben.
 
-Der Parameter **ContactFields** gibt die Felder als Qualifizierer Suche verwendet werden, und nur die Ergebnisse an die **ContactSuccess** -Callback-Funktion übergeben werden. Ein leere **ContactFields** -Parameter ist ungültig und führt zu `ContactError.INVALID_ARGUMENT_ERROR` . **ContactFields** der Wert `"*"` gibt alle Kontaktfelder.
+Der Parameter **ContactFields** gibt die Felder als Qualifizierer Suche verwendet werden, und nur die Ergebnisse an die **ContactSuccess** -Callback-Funktion übergeben werden. Ein leere **ContactFields** -Parameter ist ungültig und führt zu `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` . **ContactFields** der Wert `"*"` gibt alle Kontaktfelder.
 
-Die **contactFindOptions.filter** -Zeichenfolge kann als einen Suchfilter verwendet, wenn die Kontaktdatenbank Abfragen. Wenn angeboten, ein case-insensitive, wird jedes Feld in der **ContactFields** -Parameter angegebenen Teilwert Übereinstimmung. Wenn eine Übereinstimmung für *alle* angegebenen Felder vorliegt, wird der Kontakt zurückgegeben.
+Die **contactFindOptions.filter** -Zeichenfolge kann als einen Suchfilter verwendet, wenn die Kontaktdatenbank Abfragen. Wenn angeboten, ein case-insensitive, wird jedes Feld in der **ContactFields** -Parameter angegebenen Teilwert Übereinstimmung. Wenn eine Übereinstimmung für *alle* angegebenen Felder vorliegt, wird der [Kontakt](Contact/contact.html) zurückgegeben.
 
 ## Parameter
 
 *   **ContactFields**: Kontaktfelder als Qualifizierer Suche verwenden. Die daraus resultierende `Contact` Objekt verfügt nur über Werte für diese Felder. *(DOMString[])* [Erforderlich]
 
-*   **ContactSuccess**: Erfolg-Callback-Funktion aufgerufen, mit den Kontakten, die von der Datenbank zurückgegebenen. [Erforderlich]
+*   **ContactSuccess**: Erfolg-Callback-Funktion aufgerufen, mit den Kontakten, die von der [Datenbank](../storage/database/database.html) zurückgegebenen. [Erforderlich]
 
 *   **ContactError**: Fehler-Callback-Funktion wird aufgerufen, wenn ein Fehler auftritt. [Optional]
 

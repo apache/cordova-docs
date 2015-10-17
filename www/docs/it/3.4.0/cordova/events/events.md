@@ -26,16 +26,16 @@ title: Eventi
 
 ## Tipi di evento
 
-*   deviceready
-*   pausa
-*   curriculum
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [pausa](events.pause.html)
+*   [curriculum](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## Eventi aggiunti da [org.apache.cordova.battery stato][1]
 

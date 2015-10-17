@@ -38,7 +38,7 @@ Android アプリケーションの開発に慣れていないしている場合
 
 2.  コルドバ jar を Android プロジェクト内にコピー `/libs` ディレクトリ。
 
-3.  編集アプリケーションの `main.xml` ファイル （下 `/res/xml` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
+3.  編集アプリケーションの `main.xml` [ファイル](../../../cordova/file/fileobj/fileobj.html) （下 `/res/xml` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"

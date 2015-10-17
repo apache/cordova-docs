@@ -28,4 +28,4 @@ Camera
 Methods
 -------
 
-- camera.getPicture
+- [camera.getPicture](camera.getPicture.html)

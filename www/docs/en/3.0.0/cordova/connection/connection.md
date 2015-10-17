@@ -28,7 +28,7 @@ Connection
 Properties
 ----------
 
-- connection.type
+- [connection.type](connection.type.html)
 
 Constants
 ---------

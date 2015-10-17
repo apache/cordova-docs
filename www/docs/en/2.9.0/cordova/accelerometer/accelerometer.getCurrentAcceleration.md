@@ -34,7 +34,7 @@ The accelerometer is a motion sensor that detects the change (_delta_)
 in movement relative to the current device orientation, in three
 dimensions along the _x_, _y_, and _z_ axis.
 
-These acceleration values are returned to the `accelerometerSuccess`
+These acceleration values are returned to the `[accelerometerSuccess](parameters/accelerometerSuccess.html)`
 callback function.
 
 Supported Platforms
@@ -47,7 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -63,7 +63,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

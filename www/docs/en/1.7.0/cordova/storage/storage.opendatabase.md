@@ -23,16 +23,16 @@ title: openDatabase
 openDatabase
 ===============
 
-Returns a new Database object.
+Returns a new [Database](database/database.html) object.
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 Description
 -----------
 
-window.openDatabase returns a new Database object.
+window.openDatabase returns a new [Database](database/database.html) object.
 
-This method will create a new SQL Lite Database and return a Database object.  Use the Database Object to manipulate the data.
+This method will create a new SQL Lite [Database](database/database.html) and return a [Database](database/database.html) object.  Use the [Database](database/database.html) Object to manipulate the data.
 
 Supported Platforms
 -------------------

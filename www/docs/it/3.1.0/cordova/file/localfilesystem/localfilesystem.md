@@ -28,7 +28,7 @@ Questo oggetto fornisce un modo per ottenere il filesystem di root.
 
 *   **requestFileSystem**: richiede un filesystem. *(Funzione)*
 
-*   **resolveLocalFileSystemURI**: recuperare un `DirectoryEntry` o `FileEntry` utilizzando URI locale. *(Funzione)*
+*   **resolveLocalFileSystemURI**: recuperare un `[DirectoryEntry](../directoryentry/directoryentry.html)` o `[FileEntry](../fileentry/fileentry.html)` utilizzando URI locale. *(Funzione)*
 
 ## Costanti
 
@@ -119,7 +119,7 @@ I `LocalFileSystem` sono definiti metodi oggetto sul `window` oggetto.
 *   **finestra**: riferimento a un oggetto globale window
 *   **tipo**: locale tipo di sistema di file, vedere costanti LocalFileSystem
 *   **dimensione**: indica quanto spazio di archiviazione, in byte, l'applicazione prevede di bisogno
-*   **successCallback**: viene richiamato con un oggetto FileSystem
+*   **successCallback**: viene richiamato con un oggetto [FileSystem](../filesystem/filesystem.html)
 *   **errorCallback**: viene richiamato se l'errore si verifica il sistema di recupero file
 
 ## Richiesta File sistema rapido esempio

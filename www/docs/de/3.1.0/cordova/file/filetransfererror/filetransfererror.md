@@ -43,4 +43,4 @@ A `FileTransferError` Objekt wird an eine Fehler-Callback übergeben, wenn ein F
 
 ## Beschreibung
 
-Das `FileTransferError` -Objekt wird an den Rückruf Fehler übergeben, tritt ein Fehler beim Up- oder Download einer Datei.
+Das `FileTransferError` -Objekt wird an den Rückruf Fehler übergeben, tritt ein Fehler beim Up- oder Download einer [Datei](../fileobj/fileobj.html).

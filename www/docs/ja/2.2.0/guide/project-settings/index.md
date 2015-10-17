@@ -23,4 +23,4 @@ title: プロジェクトの設定
 プロジェクトの設定
 ================
 
-- Project Settings for iOS
+- [Project Settings for iOS](ios/index.html)

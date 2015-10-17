@@ -79,7 +79,7 @@ The `config.xml` file's `AutoHideSplashScreen` setting must be
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
 `false`. To delay hiding the splash screen for two seconds, add a
-timer such as the following in the `deviceready` event handler:
+timer such as the following in the `[deviceready](../events/events.deviceready.html)` event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

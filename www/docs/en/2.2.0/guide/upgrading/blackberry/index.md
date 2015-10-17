@@ -84,8 +84,8 @@ Updating just the www folder:
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-2.0.0.js` file.
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+   namespace/service label. Change the old entries for the [Capture](../../../cordova/media/capture/capture.html) and
+   [Contact](../../../cordova/contacts/Contact/contact.html) plugins from:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -107,7 +107,7 @@ Updating the sample folder (ie, updating using the ant tools):
 7. Open the `www/` folder and update your HTML to use the new `cordova-2.0.0.js` file.
 8. Open the `www/` folder and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+   [Capture](../../../cordova/media/capture/capture.html) and [Contact](../../../cordova/contacts/Contact/contact.html) plugins from:
 
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -133,8 +133,8 @@ Updating just the www folder:
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-1.8.0.js` file.
 6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+   namespace/service label. Change the old entries for the [Capture](../../../cordova/media/capture/capture.html) and
+   [Contact](../../../cordova/contacts/Contact/contact.html) plugins from:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -156,7 +156,7 @@ Updating the sample folder (ie, updating using the ant tools):
 7. Open the `www/` folder and update your HTML to use the new `cordova-1.8.0.js` file.
 8. Open the `www/` folder and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+   [Capture](../../../cordova/media/capture/capture.html) and [Contact](../../../cordova/contacts/Contact/contact.html) plugins from:
 
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>

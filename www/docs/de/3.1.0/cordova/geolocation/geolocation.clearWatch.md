@@ -22,7 +22,7 @@ title: geolocation.clearWatch
 
 # geolocation.clearWatch
 
-Stoppen, gerade für Änderungen an dem Gerät Speicherort verweist die `watchID` Parameter.
+Stoppen, gerade für Änderungen an dem [Gerät](../device/device.html) Speicherort verweist die `watchID` Parameter.
 
     navigator.geolocation.clearWatch(watchID);
     
@@ -33,7 +33,7 @@ Stoppen, gerade für Änderungen an dem Gerät Speicherort verweist die `watchID
 
 ## Beschreibung
 
-Die `geolocation.clearWatch` stoppt Veränderungen an dem Gerät Ort beobachten, durch Deaktivieren der `geolocation.watchPosition` verwiesen wird, von`watchID`.
+Die `geolocation.clearWatch` stoppt Veränderungen an dem [Gerät](../device/device.html) Ort beobachten, durch Deaktivieren der `[geolocation.watchPosition](geolocation.watchPosition.html)` verwiesen wird, von`watchID`.
 
 ## Unterstützte Plattformen
 

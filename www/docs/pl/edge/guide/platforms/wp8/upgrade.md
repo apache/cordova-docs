@@ -33,7 +33,7 @@ Projekty-CLI, uruchom:
 
 Dla projektów CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchomić `cordova platform update wp8` w istniejących projektach.
 
@@ -41,7 +41,7 @@ Dla projektów CLI:
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update wp8`
 
@@ -54,7 +54,7 @@ Dla projektów nie stworzony z cordova CLI Uruchom:
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update wp8`
 

@@ -23,7 +23,7 @@ title: geolocationSuccess
 geolocationSuccess
 ==================
 
-位置情報取得に成功したとき (`geolocation.getCurrentPosition` と一緒に使われた時) 、または位置情報が変化したとき (`geolocation.watchPosition` と一緒に使われた時) に呼び出されるコールバック関数です。
+位置情報取得に成功したとき (`[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` と一緒に使われた時) 、または位置情報が変化したとき (`[geolocation.watchPosition](../geolocation.watchPosition.html)` と一緒に使われた時) に呼び出されるコールバック関数です。
 
     function(position) {
         // 任意のコード
@@ -32,9 +32,9 @@ geolocationSuccess
 パラメーター
 ----------
 
-- __position:__ デバイスによって返される位置情報を表します (`Position`)
+- __position:__ デバイスによって返される位置情報を表します (`[Position](../Position/position.html)`)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     function geolocationSuccess(position) {

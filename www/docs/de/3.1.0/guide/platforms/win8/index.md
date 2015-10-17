@@ -24,8 +24,8 @@ title: Anleitung zur Windows 8 Platform
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für Windows 8 bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Aktualisieren von Windows 8
-*   Windows 8-Befehlszeilentools
+*   [Aktualisieren von Windows 8](upgrading.html)
+*   [Windows 8-Befehlszeilentools](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -60,13 +60,13 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
     
     ![][4]
 
-*   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . (Außerdem ist es wahrscheinlich, dass in anderen Varianten Ihres Projekts Plattform Sie verwenden `index.html` als Namen für Ihre Standard-Seite.) Dieses, im Projektmappen-Explorer umbenennen Regeln die `default.html` Datei zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` Datei und ändern Sie den Wert **Start Page** zu`index.html`.
+*   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . (Außerdem ist es wahrscheinlich, dass in anderen Varianten Ihres Projekts Plattform Sie verwenden `index.html` als Namen für Ihre Standard-Seite.) Dieses, im Projektmappen-Explorer umbenennen Regeln die `default.html` [Datei](../../../cordova/file/fileobj/fileobj.html) zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` [Datei](../../../cordova/file/fileobj/fileobj.html) und ändern Sie den Wert **Start Page** zu`index.html`.
     
     ![][5]
 
-*   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im Projektmappen-Explorer und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` Datei das `lib\windows-8` Verzeichnis oben erwähnt.
+*   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im Projektmappen-Explorer und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` [Datei](../../../cordova/file/fileobj/fileobj.html) das `lib\windows-8` Verzeichnis oben erwähnt.
 
-*   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der Datei im Projektmappen-Explorer.
+*   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der [Datei](../../../cordova/file/fileobj/fileobj.html) im Projektmappen-Explorer.
 
  [4]: img/guide/platforms/win8/wsnewproject.png
  [5]: img/guide/platforms/win8/wschangemanifest.png

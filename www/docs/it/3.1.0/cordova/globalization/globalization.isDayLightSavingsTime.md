@@ -33,7 +33,7 @@ Indica se è o meno dell'ora legale in vigore alla `successCallback` con un `pro
 
 Il parametro in ingresso `date` dovrebbe essere di tipo`Date`.
 
-Se c'è un errore di lettura della data, allora il `errorCallback` esegue. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore di lettura della data, allora il `errorCallback` esegue. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 

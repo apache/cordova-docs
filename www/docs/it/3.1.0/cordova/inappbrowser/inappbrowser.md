@@ -22,7 +22,7 @@ title: InAppBrowser
 
 # InAppBrowser
 
-> Il `InAppBrowser` è una vista di browser web che visualizzi quando chiamata `window.open()` , o quando un link di apertura formata come`<a target="_blank">`.
+> Il `InAppBrowser` è una vista di browser web che visualizzi quando chiamata `[window.open](window.open.html)()` , o quando un link di apertura formata come`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -31,7 +31,7 @@ title: InAppBrowser
 
 ## Descrizione
 
-L'oggetto restituito da una chiamata a`window.open`.
+L'oggetto restituito da una chiamata a`[window.open](window.open.html)`.
 
 ## Metodi
 

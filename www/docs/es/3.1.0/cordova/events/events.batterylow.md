@@ -37,7 +37,7 @@ El controlador de `batterylow` se pasa un objeto que contiene dos propiedades:
 
 *   **isPlugged**: un valor booleano que indica si el dispositivo está conectado pulg *(Boolean)*
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 

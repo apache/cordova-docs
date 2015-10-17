@@ -26,8 +26,8 @@ title: スプラッシュ スクリーン
 
 ## メソッド
 
-*   splashscreen.show
-*   splashscreen.hide
+*   [splashscreen.show](splashscreen.show.html)
+*   [splashscreen.hide](splashscreen.hide.html)
 
 ## 機能へのアクセス
 

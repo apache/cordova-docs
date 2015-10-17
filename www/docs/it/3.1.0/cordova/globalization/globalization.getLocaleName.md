@@ -31,7 +31,7 @@ Ottenere l'identificatore di stringa per l'impostazione locale corrente del clie
 
 Restituisce la stringa dell'identificatore delle impostazioni locali per il `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `String` valore.
 
-Se c'è un errore di ottenere le impostazioni locali, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore di ottenere le impostazioni locali, poi il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 

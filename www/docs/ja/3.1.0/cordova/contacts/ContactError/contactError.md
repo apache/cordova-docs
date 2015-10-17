@@ -22,7 +22,7 @@ title: ContactError
 
 # ContactError
 
-A `ContactError` オブジェクトに渡されます、 `contactError` コールバック エラーが発生します。
+A `ContactError` オブジェクトに渡されます、 `[contactError](../parameters/contactError.html)` コールバック エラーが発生します。
 
 ## プロパティ
 
@@ -40,4 +40,4 @@ A `ContactError` オブジェクトに渡されます、 `contactError` コー�
 
 ## 説明
 
-`ContactError`オブジェクトを介してユーザーに返されます、 `contactError` コールバック関数でエラーが発生したとき。
+`ContactError`オブジェクトを介してユーザーに返されます、 `[contactError](../parameters/contactError.html)` コールバック関数でエラーが発生したとき。

@@ -52,7 +52,7 @@ Mac 또는 Windows 릴리스:
 
 ## 응용 프로그램 실행
 
-`run`명령 다음 *선택적* 매개 변수:
+`run`명령 다음 *선택적* 매개 [변수](../../../plugin_ref/spec.html):
 
 *   대상 사양입니다. 이것은 포함 한다 `--emulator` , `--device` , 또는`--target=<targetID>`.
 
@@ -60,7 +60,7 @@ Mac 또는 Windows 릴리스:
     
     \[대상\] \[빌드\] $ /path/to/project/cordova/run $ C:\path\to\project\cordova\run.bat \[대상\] \[빌드\]
 
-적어도 하나의 안 드 로이드 가상 장치, 그렇지 않으면으로 그렇게 하 라는 메시지가 만들 다는 것을 확인은 `android` 명령. 여러 개의 AVD를 대상으로 사용할 수 있는 경우 하나를 선택 하 라는 메시지가 표시. 기본적으로는 `run` 명령 검색 연결 된 장치 또는 현재 실행 중인 에뮬레이터 없는 장치가 발견 되 면.
+적어도 하나의 안 드 로이드 가상 [장치](../../../cordova/device/device.html), 그렇지 않으면으로 그렇게 하 라는 메시지가 만들 다는 것을 확인은 `android` 명령. 여러 개의 AVD를 대상으로 사용할 수 있는 경우 하나를 선택 하 라는 메시지가 표시. 기본적으로는 `run` 명령 검색 [연결](../../../cordova/connection/connection.html) 된 [장치](../../../cordova/device/device.html) 또는 현재 실행 중인 에뮬레이터 없는 장치가 발견 되 면.
 
 ## 로깅
 

@@ -29,9 +29,9 @@ title: contacts.find
 
 ## 説明
 
-`contacts.find`デバイスの連絡先データベースをクエリの配列を返すメソッドは、非同期的に実行されます `Contact` オブジェクト。 結果として得られるオブジェクトに渡される、 `contactSuccess` 、 **contactSuccess**パラメーターで指定されたコールバック関数。
+`contacts.find`デバイスの連絡先データベースをクエリの配列を返すメソッドは、非同期的に実行されます `Contact` オブジェクト。 結果として得られるオブジェクトに渡される、 `[contactSuccess](parameters/contactSuccess.html)` 、 **contactSuccess**パラメーターで指定されたコールバック関数。
 
-**連絡先**パラメーター検索の修飾子として使用するフィールドを指定してだけこれらの結果は**contactSuccess**コールバック関数に渡されます。 **連絡先**のゼロ長さのパラメーターが無効である結果 `ContactError.INVALID_ARGUMENT_ERROR` 。 **連絡先**値 `"*"` すべての連絡先フィールドを返します。
+**連絡先**パラメーター検索の修飾子として使用するフィールドを指定してだけこれらの結果は**contactSuccess**コールバック関数に渡されます。 **連絡先**のゼロ長さのパラメーターが無効である結果 `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` 。 **連絡先**値 `"*"` すべての連絡先フィールドを返します。
 
 **ContactFindOptions.filter**文字列の連絡先データベースを照会するときに検索フィルターとして使用できます。 指定した場合、大文字と小文字、部分的な値の一致する**連絡先**パラメーターで指定されたフィールドごとに適用されます。 一致する*任意*指定のフィールドがある場合は、連絡先が返されます。
 

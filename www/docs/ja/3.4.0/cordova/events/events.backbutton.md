@@ -29,7 +29,7 @@ title: backbutton
 
 ## 詳細
 
-既定の [戻る] ボタンの動作をオーバーライドするイベント リスナーを登録、 `backbutton` を呼び出すことによって通常のイベント `document.addEventListener` を受信したら、 `deviceready` イベント。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
+既定の [戻る] ボタンの動作をオーバーライドするイベント リスナーを登録、 `backbutton` を呼び出すことによって通常のイベント `document.addEventListener` を受信したら、 `[deviceready](events.deviceready.html)` イベント。 [戻る] ボタンの動作をオーバーライドする他のメソッドを呼び出す必要はなくなったです。
 
 ## サポートされているプラットフォーム
 

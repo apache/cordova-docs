@@ -22,13 +22,13 @@ title: contactFindOptions
 
 # contactFindOptions
 
-Optionale Parameter von der `contacts.find` -Methode, verwendet um die Kontakte von der Kontaktdatenbank zurückgegebenen zu filtern.
+Optionale Parameter von der `[contacts.find](../contacts.find.html)` -Methode, verwendet um die [Kontakte](../contacts.html) von der Kontaktdatenbank zurückgegebenen zu filtern.
 
     {Filter: "", mehrere: true};
     
 
 ## Optionen
 
-*   **Filter**: die zu suchende Zeichenfolge verwendet, um Kontakte zu filtern. *(DOM-String und enthält)* (Standard:`""`)
+*   **Filter**: die zu suchende Zeichenfolge verwendet, um [Kontakte](../contacts.html) zu filtern. *(DOM-String und enthält)* (Standard:`""`)
 
-*   **mehrere**: bestimmt, ob der Suchvorgang mehrere Kontakte gibt. *(Boolesch)* (Standard:`false`)
+*   **mehrere**: bestimmt, ob der Suchvorgang mehrere [Kontakte](../contacts.html) gibt. *(Boolesch)* (Standard:`false`)

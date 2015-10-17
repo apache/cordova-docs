@@ -43,7 +43,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android: ランダムな64ビットの数値を文字列として返します

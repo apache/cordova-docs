@@ -24,7 +24,7 @@ title: Developing a Plugin on Android
 
 플러그인을 개발하는 것에는 Cordova-Android의 아키텍쳐를 이해하는 것이 필요하다. Cordova-Android 는 Android WebView 와 그것들의 후킹으로 이루어져있다. 각 플러그인은 config.xml 에 매핑되어 있다.
 
-플러그인은 `Plugin` Clsss를 상속받아야 한다. 플러그인은 **반드시** `execute` 메소드를 가져야하고 이 메소드는`PluginResult`객체를 리턴해야 한다. 그리고 플러그인은 pause와 resume 이벤트를 핸들링 할 수 있도록 하는 것이 좋으며 플러그인간에 전해지는 메세지를 핸들링할 수 있어야 한다.
+플러그인은 `Plugin` Clsss를 상속받아야 한다. 플러그인은 **반드시** `execute` 메소드를 가져야하고 이 메소드는`PluginResult`객체를 리턴해야 한다. 그리고 플러그인은 pause와 [resume](../../../cordova/events/events.resume.html) 이벤트를 핸들링 할 수 있도록 하는 것이 좋으며 플러그인간에 전해지는 메세지를 핸들링할 수 있어야 한다.
 
 ## Plugin Class Mapping 
 

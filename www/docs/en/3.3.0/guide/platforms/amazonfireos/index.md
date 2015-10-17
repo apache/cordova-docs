@@ -27,9 +27,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* [Amazon Fire OS Configuration](config.html)
+* [Amazon Fire OS WebViews](webview.html)
+* [Amazon Fire OS Plugins](plugin.html)
 
 ## Requirements and Support
 
@@ -80,7 +80,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+* Save the value and [close](../../../cordova/inappbrowser/inappbrowser.html) both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to

@@ -28,7 +28,7 @@ Ten poradnik pokazuje jak zmienić Windows 8 projektów do uaktualnienia ze star
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update windows8`.
 

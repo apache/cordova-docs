@@ -27,10 +27,10 @@ title: Уведомление
 ## Методы
 
 *   `notification.alert`
-*   `notification.confirm`
-*   `notification.prompt`
+*   `[notification.confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
 *   `notification.beep`
-*   `notification.vibrate`
+*   `[notification.vibrate](notification.vibrate.html)`
 
 ## Доступ к функции
 

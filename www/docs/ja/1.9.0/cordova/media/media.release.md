@@ -41,7 +41,7 @@ OS のオーディオリソースを開放します。
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // オーディオプレイヤー

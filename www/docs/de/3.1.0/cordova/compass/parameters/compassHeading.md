@@ -36,7 +36,7 @@ Ein `CompassHeading` Objekt wird an die `CompassSuccess` Callback-Funktion zurü
 
 ## Beschreibung
 
-Das `CompassHeading` Objekt wird zurückgegeben, um die `compassSuccess` Callback-Funktion.
+Das `CompassHeading` Objekt wird zurückgegeben, um die `[compassSuccess](compassSuccess.html)` Callback-Funktion.
 
 ## Android Macken
 
@@ -48,4 +48,4 @@ Das `CompassHeading` Objekt wird zurückgegeben, um die `compassSuccess` Callbac
 
 *   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 
-*   Für iOS 4 Geräte und oben, Rubrik Faktoren in die aktuelle Ausrichtung des Geräts, nicht in Bezug auf die absolute Position für apps unterstützt, das die Orientierung.
+*   Für iOS 4 Geräte und oben, Rubrik Faktoren in die aktuelle Ausrichtung des Geräts, nicht in Bezug auf die absolute [Position](../../geolocation/Position/position.html) für apps unterstützt, das die Orientierung.

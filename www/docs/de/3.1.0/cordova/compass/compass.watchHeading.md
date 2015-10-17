@@ -29,11 +29,11 @@ Erhalten Sie in regelmäßigen Abständen die Kompassrichtung in Grad.
 
 ## Beschreibung
 
-Der Kompass ist ein Sensor, der erkennt die Richtung oder Position, dass das Gerät angezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99.
+Der [Kompass](compass.html) ist ein Sensor, der erkennt die Richtung oder [Position](../geolocation/Position/position.html), dass das [Gerät](../device/device.html) angezeigt wird. Er misst die Überschrift im Grad von 0 bis 359.99.
 
-Die `compass.watchHeading` Ruft das Gerät aktuelle Rubrik in regelmäßigen Abständen. Jedes Mal, die Überschrift abgerufen wird, die `headingSuccess` Callback-Funktion wird ausgeführt. Gibt das Intervall in Millisekunden über den `frequency` -Parameter in der `compassOptions` Objekt.
+Die `compass.watchHeading` Ruft das [Gerät](../device/device.html) aktuelle Rubrik in regelmäßigen Abständen. Jedes Mal, die Überschrift abgerufen wird, die `headingSuccess` Callback-Funktion wird ausgeführt. Gibt das Intervall in Millisekunden über den `frequency` -Parameter in der `[compassOptions](parameters/compassOptions.html)` Objekt.
 
-Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die ID kann verwendet werden, mit `compass.clearWatch` , beobachten den Kompass zu stoppen.
+Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die ID kann verwendet werden, mit `[compass.clearWatch](compass.clearWatch.html)` , beobachten den [Kompass](compass.html) zu stoppen.
 
 ## Unterstützte Plattformen
 
@@ -129,6 +129,6 @@ Die zurückgegebenen Uhren-ID verweist das Kompass-Uhr-Intervall. Die Uhr, die I
 
 ## iOS Macken
 
-In iOS `compass.watchHeading` erhalten Sie auch aktuelle Position des Geräts, wenn es um eine angegebene Anzahl von Grad ändert. Jedes Mal die Überschrift-Änderungen, um die angegebene Anzahl von Grad oder mehr, die `headingSuccess` Rückruffunktion ausgeführt wird. Geben Sie den Grad der Veränderung über die `filter` Parameter in der `compassOptions` Objekt. Deaktivieren Sie die Uhr wie üblich durch Übermittlung der zurückgegebenen Uhren-ID auf `compass.clearWatch` . Diese Funktion ersetzt die bisher getrennten, nur iOS- `watchHeadingFilter` und `clearWatchFilter` Funktionen, die in Version 1.6 entfernt wurden.
+In iOS `compass.watchHeading` erhalten Sie auch aktuelle [Position](../geolocation/Position/position.html) des Geräts, wenn es um eine angegebene Anzahl von Grad ändert. Jedes Mal die Überschrift-Änderungen, um die angegebene Anzahl von Grad oder mehr, die `headingSuccess` Rückruffunktion ausgeführt wird. Geben Sie den Grad der Veränderung über die `filter` Parameter in der `[compassOptions](parameters/compassOptions.html)` Objekt. Deaktivieren Sie die Uhr wie üblich durch Übermittlung der zurückgegebenen Uhren-ID auf `[compass.clearWatch](compass.clearWatch.html)` . Diese Funktion ersetzt die bisher getrennten, nur iOS- `watchHeadingFilter` und `clearWatchFilter` Funktionen, die in Version 1.6 entfernt wurden.
 
 Nur ein `watchHeading` kann in der Tat auf einmal in iOS sein. Wenn ein `watchHeading` benutzt einen Filter Aufrufen von `getCurrentHeading` oder `watchHeading` verwendet den Wert des vorhandenen Filters Überschrift Änderungen festlegen. Überschrift Veränderungen beobachten, mit einem Filter ist effizienter als mit Zeitintervallen.

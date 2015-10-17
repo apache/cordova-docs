@@ -35,7 +35,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 概要
 -----------
 
-`geolocation.clearWatch` 関数は、 `watchID` によって参照される `geolocation.watchPosition` 関数を停止させるによって、位置情報の監視を停止します。
+`geolocation.clearWatch` 関数は、 `watchID` によって参照される `[geolocation.watchPosition](geolocation.watchPosition.html)` 関数を停止させるによって、位置情報の監視を停止します。
 
 サポートされているプラットフォーム
 -------------------
@@ -48,7 +48,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 位置の変化を監視し、取得可能なもっとも精度の高い位置を使います

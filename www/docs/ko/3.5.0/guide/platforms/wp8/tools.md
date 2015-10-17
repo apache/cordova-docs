@@ -26,7 +26,7 @@ title: Windows Phone 명령줄 도구
 
  [1]: http://cordova.apache.org
 
-낮은 수준의 명령줄 인터페이스에 대 한 정보에 대 한 있도록 플러그인 플러그인 관리를 사용 하 여 Plugman를 참조 하십시오. 개요 응용 프로그램 플러그인을 참조 하십시오.
+낮은 수준의 명령줄 인터페이스에 대 한 정보에 대 한 있도록 플러그인 플러그인 관리를 사용 하 여 Plugman를 참조 하십시오. [개요](../../overview/index.html) 응용 프로그램 플러그인을 참조 하십시오.
 
 ## Windows Phone
 

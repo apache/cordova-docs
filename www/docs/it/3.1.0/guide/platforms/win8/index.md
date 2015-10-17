@@ -24,8 +24,8 @@ title: Windows 8 piattaforma guida
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire applicazioni Cordova per Windows 8. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   L'aggiornamento di Windows 8
-*   Strumenti della riga di comando di Windows 8
+*   [L'aggiornamento di Windows 8](upgrading.html)
+*   [Strumenti della riga di comando di Windows 8](tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 

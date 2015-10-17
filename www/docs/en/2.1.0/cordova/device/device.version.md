@@ -38,7 +38,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Froyo OS would return "2.2"
@@ -54,7 +54,7 @@ Quick Example
     // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

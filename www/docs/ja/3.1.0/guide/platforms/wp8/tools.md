@@ -63,7 +63,7 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
     
 
-Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューション ファイル (.sln) を開く
+Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューション [ファイル](../../../cordova/file/fileobj/fileobj.html) (.sln) を開く
 
 ビルドし、実行
 

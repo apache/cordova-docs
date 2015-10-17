@@ -63,7 +63,7 @@ Parámetros opcionales para personalizar la configuración de la cámara.
 
 *   **saveToPhotoAlbum**: guardar la imagen en el álbum de fotos en el dispositivo después de su captura. *(Booleano)*
 
-*   **popoverOptions**: opciones sólo iOS que especifican popover ubicación en iPad. Definido en`CameraPopoverOptions`.
+*   **popoverOptions**: opciones sólo iOS que especifican popover ubicación en iPad. Definido en`[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -76,7 +76,7 @@ Parámetros opcionales para personalizar la configuración de la cámara.
 
 *   Ignora el `allowEdit` parámetro.
 
-*   `Camera.PictureSourceType.PHOTOLIBRARY` y `Camera.PictureSourceType.SAVEDPHOTOALBUM` Mostrar el mismo álbum de fotos.
+*   `Camera.PictureSourceType.PHOTOLIBRARY` y `Camera.PictureSourceType.SAVEDPHOTOALBUM` [Mostrar](../../inappbrowser/inappbrowser.html) el mismo álbum de fotos.
 
 ## Rarezas de blackBerry
 
@@ -86,7 +86,7 @@ Parámetros opcionales para personalizar la configuración de la cámara.
 
 *   Ignora el `allowEdit` parámetro.
 
-*   Aplicación debe tener permisos de inyección clave para cerrar la aplicación nativa de cámara después de que el usuario ajusta la foto.
+*   Aplicación debe tener permisos de inyección clave para [cerrar](../../inappbrowser/inappbrowser.html) la aplicación nativa de cámara después de que el usuario ajusta la foto.
 
 *   Utilizando tamaños de imagen grande puede resultar en la incapacidad para codificar imágenes en dispositivos más adelante-modelo (por ejemplo, Torch 9800) cámaras de alta resolución característica.
 

@@ -85,7 +85,7 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
 16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
 17. 検索フィールドに **"Header Search Paths"** と入力します
 18. **"Header Search Paths"** の値に `$(CORDOVALIB)/Classes` を追加し、 **Recursive** チェックボックス (このチェックボックスはラベルがない可能性があります) にチェックします
-19. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+19. **"Other Linker [Flags](../../cordova/file/flags/flags.html)"** の値に `-all_load` と `-Obj-C` を追加します
 20. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
 21. **"Link Binaries with Libraries"** を展開します
 22. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
@@ -120,7 +120,7 @@ CordovaLib サブプロジェクトへの新規クラスの追加
 2. ステップ18から20までを再度行います。 dependencies や libraries が
    プロジェクトの Target の Build Phases の中の一番上のボックス
    であることを確認してください。
-3. プロジェクトの Target の Build Settings で、 "Other Linker Flags" を
+3. プロジェクトの Target の Build Settings で、 "Other Linker [Flags](../../cordova/file/flags/flags.html)" を
    検索します。 `-Obj-C` と `-all_load` をこれに追加します。
 
 コード中での CDVViewController の使用法

@@ -31,7 +31,7 @@ Restituisce il primo giorno della settimana secondo le preferenze dell'utente de
 
 I giorni della settimana sono numerati a partire da 1, dove 1 è presupposto per essere domenica. Restituisce il giorno per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `Number` valore.
 
-Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 

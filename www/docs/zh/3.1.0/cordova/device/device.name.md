@@ -22,7 +22,7 @@ title: device.name
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `[device.model](device.model.html)` instead.
 
 獲取設備的模型名稱。
 

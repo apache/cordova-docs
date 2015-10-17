@@ -142,7 +142,7 @@ El método `media.startRecord` se ejecuta sincrónicamente, comienza la grabaci�
 
 *   iOS sólo registros a archivos de tipo *.wav* y devuelve un error si el nombre del archivo extensión es no es correcto.
 
-*   Si no se proporciona una ruta completa, la grabación se coloca en la aplicación `documents/tmp` Directorio. Esto puede accederse a través de la `File` API utilizando `LocalFileSystem.TEMPORARY` . Ya debe existir ningún subdirectorio especificado en un tiempo récord.
+*   Si no se proporciona una ruta completa, la grabación se coloca en la aplicación `documents/tmp` Directorio. Esto puede accederse a través de la `File` API utilizando `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` . Ya debe existir ningún subdirectorio especificado en un tiempo récord.
 
 *   Archivos pueden ser grabados y jugó de nuevo usando los documentos URI:
     

@@ -28,14 +28,14 @@ title: Guías
   <ul>
     <li>
       <h2>
-        Perspectiva general
+        <a href="guide/overview/index.html">Perspectiva general</a>
       </h2>
 
       <span>Comience aquí si eres nuevo en Cordova.</span>
     </li>
     <li>
       <h2>
-        Soporte de plataformas
+        <a href="guide/support/index.html">Soporte de plataformas</a>
       </h2>
 
       <span>Tabla de compatibilidad para todas las funciones principales.</span>
@@ -49,7 +49,7 @@ title: Guías
     </li>
     <li>
       <h2>
-        Guías de plataformas
+        <a href="guide/platforms/index.html">Guías de plataformas</a>
       </h2>
 
       <span>Configurar cada SDK y actualización de proyectos</span>
@@ -63,14 +63,14 @@ title: Guías
     </li>
     <li>
       <h2>
-        El archivo config.xml
+        <a href="config_ref/index.html">El archivo config.xml</a>
       </h2>
 
       <span>Personaliza las prestaciones de tu aplicación.</span>
     </li>
     <li>
       <h2>
-        Iconos y pantallas de Splash
+        <a href="config_ref/images.html">Iconos y pantallas de Splash</a>
       </h2>
 
       <span>Personaliza las ímagenes que son mostradas por tu aplicación.</span>
@@ -84,28 +84,28 @@ title: Guías
     </li>
     <li>
       <h2>
-        Guía de desarrollo de Plugins
+        <a href="guide/hybrid/plugins/index.html">Guía de desarrollo de Plugins</a>
       </h2>
 
       <span>Desarrolla tu primer Plugin.</span>
     </li>
     <li>
       <h2>
-        Guía de privacidad
+        <a href="guide/appdev/privacy/index.html">Guía de privacidad</a>
       </h2>
 
       <span>Aprende acerca de las incidencias de privacidad más importantes del mundo mobile .</span>
     </li>
     <li>
       <h2>
-        Guía Whitelist
+        <a href="guide/appdev/whitelist/index.html">Guía Whitelist</a>
       </h2>
 
       <span>Permite a la aplicaciones acceder a recursos externos.</span>
     </li>
     <li>
       <h2>
-        Almacenamiento
+        <a href="cordova/storage/storage.html">Almacenamiento</a>
       </h2>
 
       <span>Una perspectiva de las opciones de almacenamiento nativas.</span>
@@ -126,7 +126,7 @@ title: Guías
     </li>
     <li>
       <h2>
-        Plugin APIs
+        <a href="cordova/plugins/pluginapis.html">Plugin APIs</a>
       </h2>
 
       <span>Descubre que plugins Cordova están disponibles para ser utilizados en tu proyecto.</span>

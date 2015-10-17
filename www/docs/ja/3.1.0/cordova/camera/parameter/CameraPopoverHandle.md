@@ -22,7 +22,7 @@ title: CameraPopoverHandle
 
 # CameraPopoverHandle
 
-によって作成されたポップオーバーパン ダイアログへのハンドル`camera.getPicture`.
+によって作成されたポップオーバーパン ダイアログへのハンドル`[camera.getPicture](../camera.getPicture.html)`.
 
 ## メソッド
 
@@ -38,7 +38,7 @@ title: CameraPopoverHandle
 
 **パラメーター:**
 
-*   `cameraPopoverOptions`:、 `CameraPopoverOptions` の新しい位置を指定します。
+*   `cameraPopoverOptions`:、 `[CameraPopoverOptions](CameraPopoverOptions.html)` の新しい位置を指定します。
 
 ## 簡単な例
 

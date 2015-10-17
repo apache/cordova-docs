@@ -27,7 +27,7 @@ accelerometer.clearWatch
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: `accelerometer.watchAcceleration`  によって返される ID。
+- __watchID__: `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`  によって返される ID。
 
 サポートされているプラットフォーム
 -------------------
@@ -38,7 +38,7 @@ accelerometer.clearWatch
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);

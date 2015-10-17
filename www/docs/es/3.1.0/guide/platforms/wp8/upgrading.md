@@ -44,7 +44,7 @@ platform add wp7 wp8`.
 
 3.  Copiar el contenido del proyecto `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
 
-4.  Copiar o sobrescribir ningún activo nativo de su proyecto original ( `SplashScreen` , `ApplicationIcon` , etc.), lo que seguro para agregar los archivos nuevos a la `.csproj` archivo. Las ventanas teléfono construye proyecto dentro de la `platforms\wp7` o `platforms\wp8` Directorio.
+4.  Copiar o sobrescribir ningún activo nativo de su proyecto original ( `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)` , `ApplicationIcon` , etc.), lo que seguro para agregar los archivos nuevos a la `.csproj` archivo. Las ventanas teléfono construye proyecto dentro de la `platforms\wp7` o `platforms\wp8` Directorio.
 
 5.  Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Sólo 3.0.0 plugins son compatibles con la CLI.
 

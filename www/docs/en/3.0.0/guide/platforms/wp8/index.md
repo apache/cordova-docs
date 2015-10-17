@@ -25,7 +25,7 @@ title: Windows Phone 8 Platform Guide
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 8 devices. If you want to target
 both 7.5 and 8 devices, develope for Windows Phone 7 instead as
-detailed in the Windows Phone 7 Platform Guide.  Version 7 does not
+detailed in the [Windows Phone 7 Platform Guide](../wp7/index.html).  Version 7 does not
 have all the advanced features included in IE10, but implements the
 same set of APIs. Windows Phone 8 apps do _not_ run on Windows Phone 7
 devices.
@@ -33,12 +33,12 @@ devices.
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+* [Upgrading Windows Phone](upgrading.html)
+* [Windows Phone Plugins](plugin.html)
+* [Windows Phone Command-line Tools](tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See [The Command-line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## 1. System Requirements
@@ -126,7 +126,7 @@ In order to test your application on a device, the device must be registered. Cl
 
 - Make sure your phone is connected, and the screen is unlocked.
 
-- In Visual Studio, select 'Device' from the top drop-down menu.
+- In Visual Studio, select '[Device](../../../cordova/device/device.html)' from the top drop-down menu.
 
 - Press the green __play__ button next to the main drop-down menu to start debugging, or type __F5__.
 

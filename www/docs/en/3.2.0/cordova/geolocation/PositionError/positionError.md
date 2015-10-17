@@ -22,7 +22,7 @@ title: PositionError
 
 # PositionError
 
-A `PositionError` object is passed to the `geolocationError` callback when an error occurs.
+A `PositionError` object is passed to the `[geolocationError](../parameters/geolocationError.html)` callback when an error occurs.
 
 ## Properties
 
@@ -38,7 +38,7 @@ A `PositionError` object is passed to the `geolocationError` callback when an er
 
 ## Description
 
-The `PositionError` object is passed to the `geolocationError`
+The `PositionError` object is passed to the `[geolocationError](../parameters/geolocationError.html)`
 callback function when an error occurs with geolocation. It features
 the following error codes:
 
@@ -52,6 +52,6 @@ the following error codes:
 
 - `PositionError.TIMEOUT`: Returned when the device is unable to
   retrieve a position within the time specified by the `timeout`
-  included in `geolocationOptions`. When used with
-  `geolocation.watchPosition`, this error could be repeatedly passed
-  to the `geolocationError` callback every `timeout` milliseconds.
+  included in `[geolocationOptions](../parameters/geolocation.options.html)`. When used with
+  `[geolocation.watchPosition](../geolocation.watchPosition.html)`, this error could be repeatedly passed
+  to the `[geolocationError](../parameters/geolocationError.html)` callback every `timeout` milliseconds.

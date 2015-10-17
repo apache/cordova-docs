@@ -24,11 +24,11 @@ title: Guide de la plate-forme Android
 
 Ce guide montre comment configurer votre environnement de développement SDK pour déployer des applications de Cordova pour appareils Android. Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   Configuration Android
-*   Android WebViews
-*   Plugins Android
-*   Mise à jour Android
-*   Outils de ligne de commande Android
+*   [Configuration Android](config.html)
+*   [Android WebViews](webview.html)
+*   [Plugins Android](plugin.html)
+*   [Mise à jour Android](upgrading.html)
+*   [Outils de ligne de commande Android](tools.html)
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 

@@ -22,4 +22,4 @@ title: database_name
 
 # database_name
 
-Der Name der Datenbank.
+Der Name der [Datenbank](../database/database.html).

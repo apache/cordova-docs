@@ -29,21 +29,21 @@ title: Cattura
 ## Oggetti
 
 *   Cattura
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [MediaFile](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## Metodi
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile](MediaFile.html).getFormatData
 
 ## Ambito di applicazione
 
@@ -63,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Metodi
 
-*   `capture.captureAudio`: Lanciare l'applicazione di registrazione audio del dispositivo per registrare clip audio.
+*   `[capture.captureAudio](captureAudio.html)`: Lanciare l'applicazione di registrazione audio del dispositivo per registrare clip audio.
 
-*   `capture.captureImage`: Lanciare l'applicazione della fotocamera del dispositivo per scattare foto.
+*   `[capture.captureImage](captureImage.html)`: Lanciare l'applicazione della fotocamera del dispositivo per scattare foto.
 
-*   `capture.captureVideo`: Lanciare l'applicazione di registratore video del dispositivo per registrare video.
+*   `[capture.captureVideo](captureVideo.html)`: Lanciare l'applicazione di registratore video del dispositivo per registrare video.
 
 ## Piattaforme supportate
 

@@ -29,9 +29,9 @@ Questo evento viene generato quando un'applicazione va online, e il dispositivo 
 
 ## Dettagli
 
-Il `online` evento viene generato quando un dispositivo precedentemente scollegato riceve una connessione di rete per consentire un'accesso di applicazione a Internet. Esso si basa sulle stesse informazioni come l'API di connessione e viene generato quando il valore di `connection.type` diventa`NONE`.
+Il `online` evento viene generato quando un dispositivo precedentemente scollegato riceve una connessione di rete per consentire un'accesso di applicazione a Internet. Esso si basa sulle stesse informazioni come l'API di connessione e viene generato quando il valore di `[connection.type](../connection/connection.type.html)` diventa`NONE`.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 
@@ -87,7 +87,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## iOS stranezze
 
-Durante l'avvio iniziale, il primo `online` evento (se applicabile) richiede almeno un secondo al fuoco, prima che `connection.type` è`UNKNOWN`.
+Durante l'avvio iniziale, il primo `online` evento (se applicabile) richiede almeno un secondo al fuoco, prima che `[connection.type](../connection/connection.type.html)` è`UNKNOWN`.
 
 ## Windows Phone 7 capricci
 

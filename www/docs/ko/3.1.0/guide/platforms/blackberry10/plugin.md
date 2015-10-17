@@ -31,11 +31,11 @@ title: 블랙베리 10 플러그인
         };
     
 
-Cordova에 대 한 네이티브 BlackBerry 10 플러그인 자바 스크립트 코드를 포함 하 고 네이티브 코드 포함 될 수도 있습니다. 에코 플러그인 예제에서는 자바에서 기본 기능을 호출 하는 방법을 보여 줍니다. 네이티브와 JavaScript 코드는 JNEXT에서 제공 하는 프레임 워크를 통해 서로 통신 합니다. 모든 플러그인 포함 되어야 합니다는 `plugin.xml` 파일.
+Cordova에 대 한 네이티브 BlackBerry 10 플러그인 자바 스크립트 코드를 포함 하 고 네이티브 코드 포함 될 수도 있습니다. 에코 플러그인 예제에서는 자바에서 기본 기능을 호출 하는 방법을 보여 줍니다. 네이티브와 JavaScript 코드는 JNEXT에서 제공 하는 프레임 워크를 통해 서로 통신 합니다. 모든 플러그인 포함 되어야 합니다는 `plugin.xml` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 귀하의 플러그인의 네이티브 부분을 만들기
 
-귀하의 플러그인의 네이티브 부분을 만들기 위해 블랙베리 10 NDK IDE 열고 선택 파일 > 새로운 > 블랙베리 프로젝트 > 기본 확장 > 블랙베리 WebWorks. 원하는 프로젝트 이름을 입력 / 위치와 클릭 마무리.
+귀하의 플러그인의 네이티브 부분을 만들기 위해 블랙베리 10 NDK IDE 열고 선택 [파일](../../../cordova/file/fileobj/fileobj.html) > 새로운 > 블랙베리 프로젝트 > 기본 확장 > 블랙베리 WebWorks. 원하는 프로젝트 이름을 입력 / 위치와 클릭 마무리.
 
 IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플 코드가 들어 있습니다. 대체 하거나 자신의 기능을 포함 하도록이 파일을 수정할 수 있습니다.
 
@@ -89,7 +89,7 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
     }
     
 
-`onCreateObject`함수 2 매개 변수. 첫 번째 매개 변수는 자바 스크립트 측면에서 생성 하는 클래스의 이름. 유효한 이름은에서 반환 되는 `onGetObjList` . 두 번째 매개 변수는 클래스에 대 한 고유한 개체 id입니다. 이 메서드는 만든된 플러그인 개체에 대 한 포인터를 반환합니다. 우리의 에코 플러그인에서 왔습니다 다음 `echo_js.cpp` :
+`onCreateObject`함수 2 매개 [변수](../../../plugin_ref/spec.html). 첫 번째 매개 변수는 자바 스크립트 측면에서 생성 하는 클래스의 이름. 유효한 이름은에서 반환 되는 `onGetObjList` . 두 번째 매개 변수는 클래스에 대 한 고유한 개체 id입니다. 이 메서드는 만든된 플러그인 개체에 대 한 포인터를 반환합니다. 우리의 에코 플러그인에서 왔습니다 다음 `echo_js.cpp` :
 
     JSExt * onCreateObject (const 문자열 className, const 문자열 & id) {경우 (className = = "에코") {반환 새로운 Echo(id);
         }; NULL을 반환
@@ -100,11 +100,11 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
 
 귀하의 플러그인의 자바 부분 다음 파일을 포함 해야 합니다.
 
-*   `client.js`:이 클라이언트 쪽 간주 되며 코르도바 응용 프로그램에서 호출할 수 있는 API를 포함 되어 있습니다. 에 API `client.js` 호출 하면 호출을 `index.js` . 에 API `client.js` 또한 콜백 함수는 콜백을 발생 하는 이벤트에 연결 합니다.
+*   `client.js`:이 클라이언트 쪽 간주 되며 코르도바 응용 프로그램에서 호출할 수 있는 API를 포함 되어 있습니다. 에 API `client.js` 호출 하면 호출을 `index.js` . 에 API `client.js` 또한 콜백 함수는 콜백을 발생 하는 이벤트에 [연결](../../../cordova/connection/connection.html) 합니다.
 
 *   `index.js`: 코르 도우 바 로드 `index.js` 및 cordova.exec 다리를 통해 액세스할 수 있습니다. `client.js`파일에서 API 호출 하는 `index.js` 파일을 차례로 네이티브 쪽와 통신 하는 JNEXT를 호출 하 게 합니다.
 
-클라이언트와 서버 측 ( `client.js` 및 `index.js` )를 통해 상호 작용 하는 `Cordova.exec` 기능. 그래서, `client.js` 호출 하는 `exec` 기능을 하 고 필요한 인수를 제공. 에코 플러그인에서 우리는 다음에 `client.js` 파일:
+클라이언트와 서버 측 ( `client.js` 및 `index.js` )를 통해 상호 작용 하는 `Cordova.exec` 기능. 그래서, `client.js` 호출 하는 `exec` 기능을 하 고 필요한 인수를 제공. 에코 플러그인에서 우리는 다음에 `client.js` [파일](../../../cordova/file/fileobj/fileobj.html):
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
@@ -116,9 +116,9 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
     };
     
 
-지금, `index.js` JNEXT를 사용 하 여 네이티브 쪽 상호 작용. 그래서 JNEXT에 에코 라는 생성자 함수 연결. 생성자 내에서 초기화 함수를 사용 하 여 다음과 같은 주요 작업을 수행할 수 있습니다.
+지금, `index.js` JNEXT를 사용 하 여 네이티브 쪽 상호 작용. 그래서 JNEXT에 에코 라는 생성자 함수 [연결](../../../cordova/connection/connection.html). 생성자 내에서 초기화 함수를 사용 하 여 다음과 같은 주요 작업을 수행할 수 있습니다.
 
-*   네이티브 쪽에서 내보낸 필수 모듈을 지정 합니다. 필수 모듈의 공유 라이브러리 파일 (.so 파일)의 이름을 일치 해야 합니다.
+*   네이티브 쪽에서 내보낸 필수 모듈을 지정 합니다. 필수 모듈의 공유 라이브러리 [파일](../../../cordova/file/fileobj/fileobj.html) (.so 파일)의 이름을 일치 해야 합니다.
 
 `JNEXT.require("libecho")`
 
@@ -142,7 +142,7 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
 
 ## 플러그인 아키텍처
 
-포함 하는 플러그인의 유물을 배치할 수 있습니다는 `plugin.xml` 파일, 소스 파일 (자바 스크립트, c + +), 및 이진 파일 ( `.so` ) 올바르게에서 파일 위치를 지정 하는 만큼 어떤 디렉터리 구조 내에 `plugin.xml` 파일. 일반적인 구조는 다음과 같습니다.
+포함 하는 플러그인의 유물을 배치할 수 있습니다는 `plugin.xml` [파일](../../../cordova/file/fileobj/fileobj.html), 소스 [파일](../../../cordova/file/fileobj/fileobj.html) (자바 스크립트, c + +), 및 이진 [파일](../../../cordova/file/fileobj/fileobj.html) ( `.so` ) 올바르게에서 [파일](../../../cordova/file/fileobj/fileobj.html) 위치를 지정 하는 만큼 어떤 디렉터리 구조 내에 `plugin.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 일반적인 구조는 다음과 같습니다.
 
 ***your\_project\_directory*** (> plugin.xml)
 
@@ -152,10 +152,10 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
     *   **장치** (>*이진 파일* *.so)
     *   **시뮬레이터** (>*이진 파일* *.so)
 
-(목록 최상위 디렉터리 간의 계층적 관계를 보여 줍니다. 괄호 지정 된 디렉터리의 내용을 표시 합니다. 모든 디렉터리 이름은 굵은 텍스트로 표시 됩니다. 파일 이름 앞에 `>` 로그인.)
+(목록 최상위 디렉터리 간의 계층적 관계를 보여 줍니다. 괄호 지정 된 디렉터리의 내용을 표시 합니다. 모든 디렉터리 이름은 굵은 텍스트로 표시 됩니다. [파일](../../../cordova/file/fileobj/fileobj.html) 이름 앞에 `>` 로그인.)
 
 ## 내용에서 `plugin.xml` 파일
 
-`plugin.xml`파일 확장명 및 기타 메타 데이터의 네임 스페이스를 포함 합니다. 네임 스페이스를 정의 하 고 에코 플러그인에 대 한 다른 메타 데이터를 다음과 같이 지정 합니다.
+`plugin.xml`[파일](../../../cordova/file/fileobj/fileobj.html) 확장명 및 기타 메타 데이터의 네임 스페이스를 포함 합니다. 네임 스페이스를 정의 하 고 에코 플러그인에 대 한 다른 메타 데이터를 다음과 같이 지정 합니다.
 
     < 플러그인 xmlns = "http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.blackberry.echo" 버전 "1.0.0" = >< js 모듈 src = "www/client.js" >< 병합 대상 "네비게이터" = / >< / js 모듈 >< 플랫폼 이름 "blackberry10" = >< 소스 파일 src="src/blackberry10/index.js" / >< lib 파일 src="src/blackberry10/native/device/libecho.so" 아치 = "장치" / >< lib 파일 src="src/blackberry10/native/simulator/libecho.so" 아치 "시뮬레이터" = / >< 구성 파일 대상 = "www/config.xml" 부모 = "/ 위젯" >< name="org.apache.cordova.blackberry.echo 기능" value="org.apache.cordova.blackberry.echo" / >< / config 파일 >< /플랫폼 >< / 플러그인 >

@@ -152,7 +152,7 @@ Windows Phone 단일 시작 화면 이미지를 지정합니다.
 
 두 번째 줄에는 얼마나 오래는 splashscreen 밀리초에 나타납니다의 기본 지연을 설정 합니다. 이 최대 예상된 시작 시간 이어야 합니다. SplashScreenDelay의 기본값은 3000 석사.
 
-마지막으로, 시작 화면이 있어야 존재만 필요한 만큼. 앱 시작 했다 webview 로드 되었을 때 기본 보기에 표시 됩니다 귀하의 응용 프로그램 시작 화면 숨길 해야. 여러 가지 요인으로 인해 응용 프로그램 시작 시간이 꽤 달라 집니다 때문에 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `deviceready` 이벤트. 그렇지 않으면 시작 화면 위에 구성 하는 SplashScreenDelay 값에 대 한 표시 됩니다. 이 이벤트 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
+마지막으로, 시작 화면이 있어야 존재만 필요한 만큼. 앱 시작 했다 webview 로드 되었을 때 기본 보기에 표시 됩니다 귀하의 응용 프로그램 시작 화면 숨길 해야. 여러 가지 요인으로 인해 응용 프로그램 시작 시간이 꽤 달라 집니다 때문에 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `[deviceready](../cordova/events/events.deviceready.html)` [이벤트](../cordova/events/events.html). 그렇지 않으면 시작 화면 위에 구성 하는 SplashScreenDelay 값에 대 한 표시 됩니다. 이 [이벤트](../cordova/events/events.html) 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
 
 ## IOS 플랫폼에 대 한 시작 화면
 

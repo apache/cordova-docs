@@ -30,58 +30,58 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 ## Amazon Fire OS
 
-*   Amazon Fire OS Platform Guide
-*   Amazon Fire OS Configuration
-*   Amazon Fire OS WebViews
-*   Amazon Fire OS Plugins
+*   [Amazon Fire OS Platform Guide](amazonfireos/index.html)
+*   [Amazon Fire OS Configuration](amazonfireos/config.html)
+*   [Amazon Fire OS WebViews](amazonfireos/webview.html)
+*   [Amazon Fire OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
 *   Guide de la plate-forme Android
-*   Android Shell Tool Guide
+*   [Android Shell Tool Guide](android/tools.html)
 *   Configuration Android
-*   Plugins Android
-*   Android WebViews
-*   Mise à jour Android
+*   [Plugins Android](android/plugin.html)
+*   [Android WebViews](android/webview.html)
+*   [Mise à jour Android](android/upgrading.html)
 
 ## BlackBerry 10
 
-*   Guide de la plate-forme blackBerry 10
-*   BlackBerry 10 Shell Tool Guide
-*   Configuration de blackBerry 10
-*   BlackBerry 10 Plugins
-*   Mise à jour de BlackBerry 10
+*   [Guide de la plate-forme blackBerry 10](blackberry10/index.html)
+*   [BlackBerry 10 Shell Tool Guide](blackberry10/tools.html)
+*   [Configuration de blackBerry](blackberry/config.html) 10
+*   [BlackBerry 10 Plugins](blackberry10/plugin.html)
+*   [Mise à jour de BlackBerry 10](blackberry10/upgrading.html)
 
 ## Firefox OS
 
-*   Firefox OS Platform Guide
+*   [Firefox OS Platform Guide](firefoxos/index.html)
 
 ## iOS
 
-*   iOS Platform Guide
-*   iOS Shell Tool Guide
-*   iOS Configuration
-*   iOS Plugins
-*   iOS WebViews
-*   Mise à jour d'iOS
+*   [iOS Platform Guide](ios/index.html)
+*   [iOS Shell Tool Guide](ios/tools.html)
+*   [iOS Configuration](ios/config.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS WebViews](ios/webview.html)
+*   [Mise à jour d'iOS](ios/upgrading.html)
 
 ## Ubuntu
 
-*   Guide de la plate-forme Ubuntu
+*   [Guide de la plate-forme Ubuntu](ubuntu/index.html)
 
 ## Windows Phone 8
 
-*   Guide de plateforme Windows Phone 8
-*   Windows Phone 8 Plugins
-*   La mise à niveau de Windows Phone 8
+*   [Guide de plateforme Windows Phone 8](wp8/index.html)
+*   [Windows Phone 8 Plugins](wp8/plugin.html)
+*   [La mise à niveau de Windows Phone 8](wp8/upgrade.html)
 
 ## Windows
 
-*   Guide de la plate-forme Windows
-*   Plugins Windows
-*   Emballage de Windows
-*   La mise à niveau de Windows 8
+*   [Guide de la plate-forme Windows](win8/index.html)
+*   [Plugins Windows](win8/plugin.html)
+*   [Emballage de Windows](win8/packaging.html)
+*   [La mise à niveau de Windows 8](win8/upgrading.html)
 
 ## Paciarelli
 
-*   Guide de la plate-forme paciarelli
+*   [Guide de la plate-forme paciarelli](tizen/index.html)

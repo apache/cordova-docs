@@ -22,4 +22,4 @@ title: database_size
 
 # database_size
 
-Die Grösse der Datenbank in Bytes.
+Die Grösse der [Datenbank](../database/database.html) in Bytes.

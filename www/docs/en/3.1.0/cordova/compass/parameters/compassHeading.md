@@ -22,7 +22,7 @@ title: compassHeading
 
 # compassHeading
 
-A `CompassHeading` object is returned to the `compassSuccess` callback function.
+A `CompassHeading` object is returned to the `[compassSuccess](compassSuccess.html)` callback function.
 
 ## Properties
 
@@ -36,7 +36,7 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 
 ## Description
 
-The `CompassHeading` object is returned to the `compassSuccess` callback function.
+The `CompassHeading` object is returned to the `[compassSuccess](compassSuccess.html)` callback function.
 
 ## Android Quirks
 

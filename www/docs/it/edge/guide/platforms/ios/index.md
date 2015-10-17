@@ -24,10 +24,10 @@ title: iOS guida piattaforma
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per i dispositivi iOS come iPhone e iPad. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione iOS
-*   L'aggiornamento iOS
-*   iOS visualizzazioni Web
-*   iOS Plugins
+*   [Configurazione iOS](config.html)
+*   [L'aggiornamento iOS](upgrading.html)
+*   [iOS visualizzazioni Web](webview.html)
+*   [iOS Plugins](plugin.html)
 *   iOS Guida strumento Shell
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.

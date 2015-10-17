@@ -135,7 +135,7 @@ Wenn Ihre Argumente zu interpretieren, ist es eine gute Idee, einen Try/Catch-Bl
 
 ## Plugin XML
 
-Dies sind die Windows Telefon konkrete Beispiele für die Verwendung der Datei plugin.xml, beziehen sich auf die Plugin-Spezifikation für weitere details
+Dies sind die Windows Telefon konkrete Beispiele für die Verwendung der [Datei](../../../cordova/file/fileobj/fileobj.html) plugin.xml, beziehen sich auf die [Plugin-Spezifikation](../../../plugin_ref/spec.html) für weitere details
 
 ### `<source-file>`
 
@@ -152,7 +152,7 @@ Das `<config-file>` -Element definiert, welche Elemente in einer Config-Datei ge
     </config-file>
     
 
-Wenn wir wollten die WMAppManifest.xml die Fähigkeit Kontakte hinzu, würde es so aussehen:
+Wenn wir wollten die WMAppManifest.xml die Fähigkeit [Kontakte](../../../cordova/contacts/contacts.html) hinzu, würde es so aussehen:
 
     <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
         <Capability Name="ID_CAP_CONTACTS" />

@@ -22,7 +22,7 @@ title: 안 드 로이드 구성
 
 # 안 드 로이드 구성
 
-`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml [파일](../../../cordova/file/fileobj/fileobj.html) 정보를 참조 하십시오.
 
 *   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다.
     

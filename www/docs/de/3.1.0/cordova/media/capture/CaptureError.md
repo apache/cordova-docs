@@ -30,12 +30,12 @@ title: CaptureError
 
 ## Konstanten
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: Die Kamera oder das Mikrofon konnte Bild oder Ton zu erfassen.
+*   `CaptureError.CAPTURE_INTERNAL_ERR`: Die [Kamera](../../camera/camera.html) oder das Mikrofon konnte Bild oder Ton zu erfassen.
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`: Eine weitere Aufnahme-Anforderung verbüßt die Kamera oder Audio-Capture-Anwendung.
+*   `CaptureError.CAPTURE_APPLICATION_BUSY`: Eine weitere Aufnahme-Anforderung verbüßt die [Kamera](../../camera/camera.html) oder Audio-Capture-Anwendung.
 
 *   `CaptureError.CAPTURE_INVALID_ARGUMENT`: Ungültige Verwendung der API (z. B. den Wert des `limit` ist kleiner als 1).
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: Der Benutzer wird die Kamera oder Audio-Capture-Anwendung vor Aufnahme alles beendet.
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: Der Benutzer wird die [Kamera](../../camera/camera.html) oder Audio-Capture-Anwendung vor Aufnahme alles beendet.
 
 *   `CaptureError.CAPTURE_NOT_SUPPORTED`: Der angeforderte Capture-Vorgang wird nicht unterstützt.

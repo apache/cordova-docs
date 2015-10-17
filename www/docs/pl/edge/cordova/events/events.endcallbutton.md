@@ -31,7 +31,7 @@ Wydarzenie to odpala kiedy użytkownik naciśnie przycisk rozmowy end.
 
 Zdarzenie zastępuje domyślne zachowanie wywołanie koniec.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `[deviceready](events.deviceready.html)` pożary zdarzenia.
 
 ## Obsługiwane platformy
 

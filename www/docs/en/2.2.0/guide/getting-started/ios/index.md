@@ -86,14 +86,14 @@ Deploy to Simulator
 
 - Select the **Run** button in your project window's toolbar
 
-Deploy to Device
+Deploy to [Device](../../../cordova/device/device.html)
 ----------------
 
 - Open `HelloWorld-Info.plist`, under the **Resources** group
 - Change **BundleIdentifier** to the identifier provided by Apple or your own bundle identifier
     - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
 - Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
-- Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your Device Name]**
+- Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your [Device](../../../cordova/device/device.html) Name]**
     - You will need to have your device connected via USB
 
     ![](img/guide/platforms/ios/active_scheme_device.png)

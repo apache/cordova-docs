@@ -148,7 +148,7 @@ Preveri parameter prepričati se to ni `nil` ali prazen niz, vračajo z `PluginR
 
 ## iOS integracije
 
-V `CDVPlugin` razred značilnosti druge metode, da vaš plugin lahko preglasite. Zajamete lahko na primer v `pause` , `resume` , app končati in `handleOpenURL` dogodkov. Glej [CDVPlugin.h][1] in [CDVPlugin.m][2] razred za usmerjanje.
+V `CDVPlugin` razred značilnosti druge metode, da vaš plugin lahko preglasite. Zajamete lahko na primer v `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , app končati in `handleOpenURL` dogodkov. Glej [CDVPlugin.h][1] in [CDVPlugin.m][2] razred za usmerjanje.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

@@ -29,9 +29,9 @@ title: startcallbutton
 
 ## 詳細
 
-イベント リスナーを登録することができますスタート コールの既定動作をオーバーライドする必要がある場合、 `startcallbutton` イベント。
+[イベント](events.html) リスナーを登録することができますスタート コールの既定動作をオーバーライドする必要がある場合、 `startcallbutton` イベント。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

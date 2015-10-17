@@ -41,17 +41,17 @@ Parameters
 Returns
 -------
 
-- __String__: returns a watch id that references the watch position interval. The watch id should be used with `geolocation.clearWatch` to stop watching for changes in position.
+- __String__: returns a watch id that references the watch position interval. The watch id should be used with `[geolocation.clearWatch](geolocation.clearWatch.html)` to stop watching for changes in position.
 
 Description
 -----------
 
 `geolocation.watchPosition` is an asynchronous function. It returns
 the device's current position when a change in position is detected.
-When the device retrieves a new location, the `geolocationSuccess`
-callback executes with a `Position` object as the parameter.  If
-there is an error, the `geolocationError` callback executes with a
-`PositionError` object as the parameter.
+When the device retrieves a new location, the `[geolocationSuccess](parameters/geolocationSuccess.html)`
+callback executes with a `[Position](Position/position.html)` object as the parameter.  If
+there is an error, the `[geolocationError](parameters/geolocationError.html)` callback executes with a
+`[PositionError](PositionError/positionError.html)` object as the parameter.
 
 Supported Platforms
 -------------------
@@ -63,7 +63,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -88,7 +88,7 @@ Quick Example
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

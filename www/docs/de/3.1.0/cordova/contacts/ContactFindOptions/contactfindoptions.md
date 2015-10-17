@@ -22,13 +22,13 @@ title: ContactFindOptions
 
 # ContactFindOptions
 
-Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filtern einen `contacts.find` Betrieb.
+Enthält Eigenschaften, die verwendet werden können, um die Ergebnisse zu filtern einen `[contacts.find](../contacts.find.html)` Betrieb.
 
 ## Eigenschaften
 
-*   **Filter**: die zu suchende Zeichenfolge verwendet, um Kontakte zu finden. *(DOM-String und enthält)* (Standard:`""`)
+*   **Filter**: die zu suchende Zeichenfolge verwendet, um [Kontakte](../contacts.html) zu finden. *(DOM-String und enthält)* (Standard:`""`)
 
-*   **mehrere**: bestimmt, ob der Suchvorgang mehrere Kontakte gibt. *(Boolesch)* (Standard:`false`)
+*   **mehrere**: bestimmt, ob der Suchvorgang mehrere [Kontakte](../contacts.html) gibt. *(Boolesch)* (Standard:`false`)
 
 ## Unterstützte Plattformen
 

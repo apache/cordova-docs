@@ -40,12 +40,12 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var name = device.cordova;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

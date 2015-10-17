@@ -26,9 +26,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedi quanto segue per più dettagliate informazioni specifiche della piattaforma che si applica a entrambe le versioni:
 
-*   L'aggiornamento di Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone strumenti da riga di comando
+*   [L'aggiornamento di Windows Phone](../wp8/upgrading.html)
+*   [Windows Phone Plugins](../wp8/plugin.html)
+*   [Windows Phone strumenti da riga di comando](../wp8/tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -104,7 +104,7 @@ Al fine di testare l'applicazione su un dispositivo, il dispositivo deve essere 
 
 *   Assicurarsi che il telefono è connesso, e lo schermo è sbloccato.
 
-*   In Visual Studio, selezionare 'Dispositivo' dal menu a discesa in alto.
+*   In Visual Studio, selezionare '[Dispositivo](../../../cordova/device/device.html)' dal menu a discesa in alto.
 
 *   Premere il pulsante verde **giocare** accanto al menu a discesa principale per avviare il debug, o digitare **F5**.
 

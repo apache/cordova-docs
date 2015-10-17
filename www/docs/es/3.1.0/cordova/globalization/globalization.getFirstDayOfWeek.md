@@ -31,7 +31,7 @@ Devuelve el primer día de la semana según las preferencias del usuario y calen
 
 Los días de la semana están contados a partir de la 1, donde 1 se supone que es el domingo. Devuelve el día de la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `Number`.
 
-Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `GlobalizationError` objeto como parámetro. Código esperado del error es`GlobalizationError.UNKNOWN\_ERROR`.
+Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objeto como parámetro. Código esperado del error es`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 

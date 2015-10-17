@@ -33,7 +33,7 @@ title: globalization.isDayLightSavingsTime
 
 Входящий параметр `date` должен иметь тип`Date`.
 
-Если произошла ошибка при чтении Дата, то `errorCallback` выполняет. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
+Если произошла ошибка при чтении Дата, то `errorCallback` выполняет. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Поддерживаемые платформы
 

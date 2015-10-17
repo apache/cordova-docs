@@ -23,7 +23,7 @@ title: device.name
 device.name
 ===========
 
-__WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+__WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `[device.model](device.model.html)` instead.
 
 Get the device's model name.
 
@@ -46,7 +46,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -56,7 +56,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -98,9 +98,9 @@ Android Quirks
 Windows Phone 7 and 8 Quirks
 -------------
 
-- Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
+- Returns the [device.model](device.model.html) specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
 Tizen Quirks
 -----------
 
-- Returns the device model assigned by the vendor, for example, `TIZEN`
+- Returns the [device.model](device.model.html) assigned by the vendor, for example, `TIZEN`

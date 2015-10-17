@@ -28,7 +28,7 @@ This object provides a way to obtain root file systems.
 
 - __requestFileSystem__: Requests a filesystem. _(Function)_
 
-- __resolveLocalFileSystemURI__: Retrieve a `DirectoryEntry` or `FileEntry` using local URI. _(Function)_
+- __resolveLocalFileSystemURI__: Retrieve a `[DirectoryEntry](../directoryentry/directoryentry.html)` or `[FileEntry](../fileentry/fileentry.html)` using local URI. _(Function)_
 
 ## Constants
 
@@ -115,7 +115,7 @@ The `LocalFileSystem` object methods are defined on the `window` object.
 - __window__: reference to the global window object
 - __type__: local file system type, see LocalFileSystem Constants
 - __size__: indicates how much storage space, in bytes, the application expects to need
-- __successCallback__: invoked with a FileSystem object
+- __successCallback__: invoked with a [FileSystem](../filesystem/filesystem.html) object
 - __errorCallback__:  invoked if error occurs retrieving file system
 
 ## Request File System Quick Example

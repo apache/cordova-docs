@@ -31,7 +31,7 @@ V primeru požarov, ko uporabnik pritisne glasnosti gumb.
 
 Če želite preglasiti privzeti glasnosti vedenje lahko registrirate dogodek poslušalca za na `volumeupbutton` dogodek.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

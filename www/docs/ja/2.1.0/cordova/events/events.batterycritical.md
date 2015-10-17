@@ -37,7 +37,7 @@ batterycritical ハンドラーは以下の2つのプロパティーを含むオ
 - __level:__ バッテリーのパーセンテージ (0-100) _(Number)_
 - __isPlugged:__ デバイスが充電器に接続されているかどうかを表します _(Boolean)_
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -47,7 +47,7 @@ batterycritical ハンドラーは以下の2つのプロパティーを含むオ
 - BlackBerry WebWorks (OS 5.0 以上)
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterycritical", onBatteryCritical, false);

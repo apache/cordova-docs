@@ -40,7 +40,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Record audio
@@ -68,7 +68,7 @@ Quick Example
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

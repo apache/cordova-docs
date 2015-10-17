@@ -44,7 +44,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
     
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode File Inspector.
+**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode [File](../../../cordova/file/fileobj/fileobj.html) Inspector.
 
 ## Upgrading Cordova 2.0.0 projects to 2.1.0 ##
 
@@ -103,12 +103,12 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 20. Select the **libCordova.a** static library, then select the **"Add"** button
 21. Delete the **"Run Script"** phase.
 22. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
-23. Search for **"Other Linker Flags"**, and add the values **-all_load** and **-Obj-C**
+23. Search for **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"**, and add the values **-all_load** and **-Obj-C**
 24. Expand the **"CordovaLib" sub-project**
 25. Locate the **"VERSION"** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **"Create groups for any added folders"** radiobutton, then select the **"Finish"** button
 27. Select the **"VERSION"** file that you just dragged in a previous step
-28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+28. Press the key combination **Option-Command-1** to [show](../../../cordova/splashscreen/splashscreen.show.html) the **File Inspector** (or menuitem **View -> Utilities -> Show [File](../../../cordova/file/fileobj/fileobj.html) Inspector**)
 29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
 30. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"** (this is so the unified headers can be found)
 31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
@@ -120,7 +120,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
     
         "$(BUILT_PRODUCTS_DIR)"
 
-33. Search for **"Other Linker Flags"**. For that setting, add this value below:
+33. Search for **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"**. For that setting, add this value below:
 
         -weak_framework CoreFoundation
 
@@ -200,7 +200,7 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 9. Enter **"/Users/Shared/Cordova/Frameworks/Cordova.framework"** in the **"Go to the folder:" sheet** and then press the **"Go"** button
 10. Press the **"Add"** button in the **"Add Files..." sheet**
 11. **Select "Cordova.framework"** in the Project Navigator
-12. Press the key combination **Option-Command-1** to show the **File Inspector**
+12. Press the key combination **Option-Command-1** to [show](../../../cordova/splashscreen/splashscreen.show.html) the **File Inspector**
 13. Choose **"Absolute Path"** in the **File Inspector** for the drop-down menu for **Location**
 14. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 15. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)

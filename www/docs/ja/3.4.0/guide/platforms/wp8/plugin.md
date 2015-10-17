@@ -46,7 +46,7 @@ Windows Phone 上のコルドバのプラグインを書くには、コルドバ
                 //パブリック、void、引数が文字列である 1 を返す}}
         
 
-[BaseCommand.cs][1]クラスをオーバーライドするプラグインを利用可能なメソッドを参照してください。 たとえば、プラグインは '一時停止' と '再開' イベントをキャプチャできます。
+[BaseCommand.cs][1]クラスをオーバーライドするプラグインを利用可能なメソッドを参照してください。 たとえば、プラグインは '一時停止' と '[再開](../../../cordova/events/events.resume.html)' イベントをキャプチャできます。
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 

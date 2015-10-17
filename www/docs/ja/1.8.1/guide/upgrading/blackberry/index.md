@@ -37,7 +37,7 @@ www フォルダーのアップデート:
 4. 新しい `cordova-1.8.0.js` をプロジェクトにコピーします
     - playbook の場合は `playbook/` フォルダーの中の .js ファイルを更新します
 5. HTML を、新しい cordova-1.8.0.js を使って更新します
-6. `www/plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 Capture と Contact の項目を次から:
+6. `www/plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 [Capture](../../../cordova/media/capture/capture.html) と [Contact](../../../cordova/contacts/Contact/contact.html) の項目を次から:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -57,7 +57,7 @@ www フォルダーのアップデート:
 5. `sample/lib/` フォルダーを開き、 `cordova.1.7.0/` フォルダーを `cordova.1.8.0/` へリネームします
 6. `www/` フォルダーを新しい Cordova でアップデートするため、 `ant blackberry build` または `ant playbook build` とタイプします
 7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.8.0.js` を使って更新します
-8. `www/` フォルダーを開き、 `plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 Capture と Contact の項目を次から:
+8. `www/` フォルダーを開き、 `plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 [Capture](../../../cordova/media/capture/capture.html) と [Contact](../../../cordova/contacts/Contact/contact.html) の項目を次から:
 
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>

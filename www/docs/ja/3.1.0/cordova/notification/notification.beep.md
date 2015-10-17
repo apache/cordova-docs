@@ -22,7 +22,7 @@ title: notification.beep
 
 # notification.beep
 
-デバイス サウンドをビープ音を再生します。
+[デバイス](../device/device.html) サウンドをビープ音を再生します。
 
     navigator.notification.beep(times);
     

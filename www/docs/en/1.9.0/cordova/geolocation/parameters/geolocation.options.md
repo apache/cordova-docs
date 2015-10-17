@@ -24,15 +24,15 @@ geolocationOptions
 ==================
 
 Optional parameters to customize the retrieval of the geolocation
-`Position`.
+`[Position](../Position/position.html)`.
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
 Options
 -------
 
-- __enableHighAccuracy:__ Provides a hint that the application would like to receive the best possible results. By default, the device will attempt to retrieve a `Position` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
-- __timeout:__ The maximum length of time (milliseconds) that is allowed to pass from the call to `geolocation.getCurrentPosition` or `geolocation.watchPosition` until the corresponding `geolocationSuccess` callback is invoked. If the `geolocationSuccess` callback is not invoked within this time, the `geolocationError` callback will be invoked with a `PositionError.TIMEOUT` error code. NOTE: when used in conjunction with `geolocation.watchPosition`, the `geolocationError` callback could be called on an interval every `timeout` milliseconds! _(Number)_
+- __enableHighAccuracy:__ Provides a hint that the application would like to receive the best possible results. By default, the device will attempt to retrieve a `[Position](../Position/position.html)` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
+- __timeout:__ The maximum length of time (milliseconds) that is allowed to pass from the call to `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` or `[geolocation.watchPosition](../geolocation.watchPosition.html)` until the corresponding `[geolocationSuccess](geolocationSuccess.html)` callback is invoked. If the `[geolocationSuccess](geolocationSuccess.html)` callback is not invoked within this time, the `[geolocationError](geolocationError.html)` callback will be invoked with a `[PositionError](../PositionError/positionError.html).TIMEOUT` error code. NOTE: when used in conjunction with `[geolocation.watchPosition](../geolocation.watchPosition.html)`, the `[geolocationError](geolocationError.html)` callback could be called on an interval every `timeout` milliseconds! _(Number)_
 - __maximumAge:__ Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
 
 Android Quirks

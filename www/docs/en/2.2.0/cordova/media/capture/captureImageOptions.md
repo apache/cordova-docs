@@ -31,7 +31,7 @@ Properties
 - __limit:__ The maximum number of images the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 - __mode:__ The selected image mode.  The value must match one of the elements in `capture.supportedImageModes`.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 images

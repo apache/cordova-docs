@@ -23,7 +23,7 @@ title: Acceleration
 Acceleration
 ============
 
-Contains `Accelerometer` data captured at a specific point in time.
+Contains `[Accelerometer](../accelerometer.html)` data captured at a specific point in time.
 
 Properties
 ----------
@@ -37,7 +37,7 @@ Description
 -----------
 
 An `Acceleration` object is populated and returned by any of the API's
-`Accelerometer` methods. Acceleration values include the effect of
+`[Accelerometer](../accelerometer.html)` methods. Acceleration values include the effect of
 gravity (9.81 m/s^2), so that when a device lies flat and facing up,
 _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
@@ -51,7 +51,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -67,7 +67,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -29,9 +29,9 @@ title: contacts.find
 
 ## 說明
 
-`contacts.find`方法以非同步方式，執行設備的連絡人資料庫查詢並返回一個陣列的 `Contact` 物件。 所得到的物件傳遞給 `contactSuccess` **contactSuccess**參數所指定的回呼函數。
+`contacts.find`方法以非同步方式，執行設備的連絡人資料庫查詢並返回一個陣列的 `Contact` 物件。 所得到的物件傳遞給 `[contactSuccess](parameters/contactSuccess.html)` **contactSuccess**參數所指定的回呼函數。
 
-**ContactFields**參數指定要搜索的限定詞，作為使用的欄位，只有那些結果傳遞給**contactSuccess**回呼函數。 零長度**contactFields**參數是不正確結果在 `ContactError.INVALID_ARGUMENT_ERROR` 。 **ContactFields**值為 `"*"` 返回所有連絡人欄位。
+**ContactFields**參數指定要搜索的限定詞，作為使用的欄位，只有那些結果傳遞給**contactSuccess**回呼函數。 零長度**contactFields**參數是不正確結果在 `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` 。 **ContactFields**值為 `"*"` 返回所有連絡人欄位。
 
 **ContactFindOptions.filter**字串查詢連絡人資料庫時，可以用作搜索篩選器。 如果提供，不區分大小寫，部分值匹配應用於在**contactFields**參數中指定的每個欄位。 如果有*任何*指定的欄位的匹配，則返回該連絡人。
 

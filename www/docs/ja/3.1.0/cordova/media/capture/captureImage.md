@@ -22,7 +22,7 @@ title: capture.captureImage
 
 # capture.captureImage
 
-> カメラ アプリケーションを起動し、キャプチャしたイメージ ファイルに関する情報を返します。
+> [カメラ](../../camera/camera.html) アプリケーションを起動し、キャプチャしたイメージ ファイルに関する情報を返します。
 
     navigator.device.capture.captureImage(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
@@ -33,9 +33,9 @@ title: capture.captureImage
 
 デバイスのカメラ アプリケーションを使用して画像をキャプチャする非同期操作を開始します。操作では、単一のセッションで 1 つ以上のイメージをキャプチャすることができます。
 
-キャプチャ操作終了いずれかのユーザーが閉じると、カメラ アプリケーションまたは録音で指定された最大数 `CaptureAudioOptions.limit` に達した。 場合ない `limit` 値が指定されて、既定の 1 つ (1)、キャプチャ操作終了後、ユーザーは単一のイメージをキャプチャします。
+キャプチャ操作終了いずれかのユーザーが閉じると、カメラ アプリケーションまたは録音で指定された最大数 `[CaptureAudioOptions](captureAudioOptions.html).limit` に達した。 場合ない `limit` 値が指定されて、既定の 1 つ (1)、キャプチャ操作終了後、ユーザーは単一のイメージをキャプチャします。
 
-キャプチャ操作が完了したら、それを呼び出す、 `CaptureCB` の配列がコールバック `MediaFile` 各キャプチャされたイメージ ファイルを記述するオブジェクト。 ユーザーは、イメージをキャプチャする前に操作が終了した場合、 `CaptureErrorCB` コールバックで実行する、 `CaptureError` オブジェクトの特色、 `CaptureError.CAPTURE_NO_MEDIA_FILES` エラー コード。
+キャプチャ操作が完了したら、それを呼び出す、 `[CaptureCB](CaptureCB.html)` の配列がコールバック `MediaFile` 各キャプチャされたイメージ ファイルを記述するオブジェクト。 ユーザーは、イメージをキャプチャする前に操作が終了した場合、 `[CaptureErrorCB](CaptureErrorCB.html)` コールバックで実行する、 `[CaptureError](CaptureError.html)` オブジェクトの特色、 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` エラー コード。
 
 ## サポートされているプラットフォーム
 
@@ -47,7 +47,7 @@ title: capture.captureImage
 
 ## Windows Phone 7 の癖
 
-Zune を介してお使いのデバイスが接続されているネイティブ カメラ アプリケーションを呼び出すと、動作しませんし、エラー コールバックを実行します。
+Zune を介してお使いのデバイスが接続されているネイティブ [カメラ](../../camera/camera.html) アプリケーションを呼び出すと、動作しませんし、エラー コールバックを実行します。
 
 ## 簡単な例
 

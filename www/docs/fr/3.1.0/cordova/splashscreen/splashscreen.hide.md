@@ -74,7 +74,7 @@ Cette méthode rejette écran de démarrage de l'application.
 
 ## iOS Quirk
 
-La `config.xml` du fichier `AutoHideSplashScreen` doit être `false` . Pour retarder la cacher l'écran de démarrage pendant deux secondes, ajoute un minuteur comme suit dans la `deviceready` gestionnaire d'événements :
+La `config.xml` du fichier `AutoHideSplashScreen` doit être `false` . Pour retarder la cacher l'écran de démarrage pendant deux secondes, ajoute un minuteur comme suit dans la `[deviceready](../events/events.deviceready.html)` gestionnaire d'événements :
 
         setTimeout(function() {
             navigator.splashscreen.hide();

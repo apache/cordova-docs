@@ -38,7 +38,7 @@ and `false` indicates that it is not.
 The inbound parameter `date` should be of type `Date`.
 
 If there is an error reading the date, then the `errorCallback`
-executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes. The error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Supported Platforms
 

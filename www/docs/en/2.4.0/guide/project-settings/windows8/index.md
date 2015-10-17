@@ -20,6 +20,6 @@ license: >
 title: Project Settings for Windows 8
 ---
 
-Project Settings for Windows 8 
+[Project Settings](../index.html) for Windows 8 
 ===================================
 

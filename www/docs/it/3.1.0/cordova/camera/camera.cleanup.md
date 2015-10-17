@@ -29,7 +29,7 @@ Rimuove intermedio foto scattate con la fotocamera da deposito temporaneo.
 
 ## Descrizione
 
-Rimuove intermedio i file di immagine che vengono tenuti in custodia temporanea dopo la chiamata `camera.getPicture` . Si applica solo quando il valore di `Camera.sourceType` è uguale a `Camera.PictureSourceType.CAMERA` e il `Camera.destinationType` è uguale a`Camera.DestinationType.FILE_URI`.
+Rimuove intermedio i file di immagine che vengono tenuti in custodia temporanea dopo la chiamata `[camera.getPicture](camera.getPicture.html)` . Si applica solo quando il valore di `Camera.sourceType` è uguale a `Camera.PictureSourceType.CAMERA` e il `Camera.destinationType` è uguale a`Camera.DestinationType.FILE_URI`.
 
 ## Piattaforme supportate
 

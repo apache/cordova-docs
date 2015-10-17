@@ -23,7 +23,7 @@ title: CompassError
 CompassError
 ==========
 
-エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
+エラーが起きた場合、 `[compassError](../parameters/compassError.html)` コールバック関数には `CompassError` オブジェクトが返されます。
 
 プロパティー
 ----------
@@ -38,6 +38,6 @@ CompassError
 概要
 -----------
 
-エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
+エラーが起きた場合、 `[compassError](../parameters/compassError.html)` コールバック関数には `CompassError` オブジェクトが返されます。
 
 

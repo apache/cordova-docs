@@ -45,7 +45,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Transaction Quick Example
+Transaction Quick [Example](../storage.opendatabase.html)
 ------------------
 	function populateDB(tx) {
 		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -65,13 +65,13 @@ Transaction Quick Example
 	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 	db.transaction(populateDB, errorCB, successCB);
 
-Change Version Quick Example
+Change Version Quick [Example](../storage.opendatabase.html)
 -------------------
 
 	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 	db.changeVersion("1.0", "1.1");
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

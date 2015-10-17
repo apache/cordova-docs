@@ -28,7 +28,7 @@ Ein *Plugin* ist ein Paket von eingefügten Code, der die Cordova Webview ermög
 
 Plugins umfassen eine einzelne JavaScript-Schnittstelle zusammen mit entsprechenden native Code-Bibliotheken für jede unterstützte Plattform. Dies blendet im Wesentlichen die verschiedenen Implementierungen von systemeigenem Code hinter eine gemeinsame JavaScript-Schnittstelle.
 
-Dieser Abschnitt schrittweise einen einfachen *Echo* -Plugin, die übergibt eine Zeichenfolge von JavaScript zum einheitlichen Plattform und zurück, die Sie als Modell verwenden können, um viel komplexere Features zu erstellen. Dieser Abschnitt beschreibt die grundlegenden Plugin-Struktur und die nach außen gerichtete JavaScript-Schnittstelle. Jede entsprechende Benutzeroberfläche finden Sie in der Liste am Ende dieses Abschnitts.
+Dieser Abschnitt schrittweise einen einfachen *Echo* -Plugin, die übergibt eine Zeichenfolge von JavaScript zum einheitlichen Plattform und zurück, die Sie als Modell verwenden können, um viel komplexere Features zu erstellen. Dieser Abschnitt beschreibt die grundlegenden Plugin-Struktur und die nach außen gerichtete JavaScript-Schnittstelle. Jede entsprechende [Benutzeroberfläche](../../next/index.html) finden Sie in der Liste am Ende dieses Abschnitts.
 
 Zusätzlich zu diesen Anweisungen, wenn bereiten auf ein Plugin zu schreiben, ist es am besten über die [vorhandenen Plugins][2] , Anleitungen zu schauen.
 
@@ -41,7 +41,7 @@ Anwendungsentwickler verwenden der CLI `plugin add` Befehl (beschrieben in The C
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-Das Plugin Repository muss eine Top-Level-Funktion `plugin.xml` manifest-Datei. Es gibt viele Möglichkeiten um diese Datei zu konfigurieren, die Informationen für die in der Plugin-Spezifikation verfügbar sind. Diese gekürzte Version von der `Device` Plugin bietet ein einfaches Beispiel, als Vorbild zu verwenden:
+Das Plugin Repository muss eine Top-Level-Funktion `plugin.xml` manifest-Datei. Es gibt viele Möglichkeiten um diese Datei zu konfigurieren, die Informationen für die in der [Plugin-Spezifikation](../../../plugin_ref/spec.html) verfügbar sind. Diese gekürzte Version von der `Device` Plugin bietet ein einfaches Beispiel, als Vorbild zu verwenden:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -137,12 +137,12 @@ Der Erfolg-Rückruf übergebenen `exec` ist lediglich ein Verweis auf die Callba
 
 Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens einem nativen Implementierung zu ergänzen. Details für jede Plattform sind unten aufgeführt, und jede baut auf dem einfachen Echo-Plugin-Beispiel oben:
 
-*   Amazon Fire OS Plugins
-*   Android Plugins
-*   iOS Plugins
-*   BlackBerry 10 Plugins
-*   Windows Phone 8 Plugins
-*   Windows Plugins
+*   [Amazon Fire OS Plugins](../../platforms/amazonfireos/plugin.html)
+*   [Android Plugins](../../platforms/android/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
+*   [Windows Plugins](../../platforms/win8/plugin.html)
 
 Tizen-Plattform unterstützt keine Plugins.
 

@@ -26,21 +26,21 @@ title: События
 
 ## Типы событий
 
-*   deviceready
-*   Пауза
-*   резюме
-*   онлайн
-*   автономном режиме
-*   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   menubutton
-*   searchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [Пауза](events.pause.html)
+*   [резюме](events.resume.html)
+*   [онлайн](events.online.html)
+*   [автономном режиме](events.offline.html)
+*   [backbutton](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [menubutton](events.menubutton.html)
+*   [searchButton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## Доступ к функции
 

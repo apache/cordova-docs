@@ -124,7 +124,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 ## 응용 프로그램 빌드
 
-기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `deviceready` 이벤트 처리기에서 기본적으로 참조`www/js/index.js`.
+기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `[deviceready](../../cordova/events/events.deviceready.html)` [이벤트](../../cordova/events/events.html) 처리기에서 기본적으로 참조`www/js/index.js`.
 
 반복적으로 프로젝트를 빌드하려면 다음 명령을 실행:
 
@@ -178,7 +178,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 구축 하 고 새로운 프로젝트를 볼 때 표시 되는 기본 응용 프로그램 매우 많이 하지 않습니다. 표준 웹 기술을 활용 하기 위해 여러 가지에서 응용 프로그램을 수정할 수 있습니다 하지만 다양 한 장치 수준의 기능을 밀접 하 게 의사 소통을 위해 애플 리 케이 션에 대 한 핵심 코르도바 Api에 대 한 액세스를 제공 하는 플러그인을 추가 해야 합니다.
 
-*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 플러그인 개발 가이드 자세한 참조.) 더 일반적으로, API 참조에 대 한 자세한 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인을 추가할 것입니다. [Plugins.cordova.io][4]에 커뮤니티에서 제공 하는 추가 플러그인을 포함 하 여이 플러그인의 목록을 찾을 수 있습니다. CLI를 사용 하 여이 레지스트리에서 플러그인에 대 한 검색 수 있습니다. 예를 들어 검색 `bar` 와 `code` 두 용어 모두 소문자 부분으로 일치 하는 단일 결과 생성:
+*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 플러그인 개발 [가이드](../../index.html) 자세한 참조.) 더 일반적으로, API 참조에 대 한 자세한 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인을 추가할 것입니다. [Plugins.cordova.io][4]에 커뮤니티에서 제공 하는 추가 플러그인을 포함 하 여이 플러그인의 목록을 찾을 수 있습니다. CLI를 사용 하 여이 레지스트리에서 플러그인에 대 한 검색 수 있습니다. 예를 들어 검색 `bar` 와 `code` 두 용어 모두 소문자 부분으로 일치 하는 단일 결과 생성:
 
  [4]: http://plugins.cordova.io/
 
@@ -192,7 +192,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-`cordova plugin add`명령 코드를 플러그인에 대 한 저장소를 지정 해야 합니다. 제발 note는 웹 프로젝트 개발 워크플로에 따라 CLI를 사용 하 여 때 CLI는 알아서 각 플랫폼에 대 한 적절 한 장소에 플러그인 코드를 추가 합니다. (네이티브 프로젝트 개발 워크플로 다음과 같은 경우 각 플랫폼에 대 한 Plugman (가이드 링크는 여기), 여러 번 사용 하는 플러그인을 추가 해야 합니다.)
+`cordova plugin add`명령 코드를 플러그인에 대 한 저장소를 지정 해야 합니다. 제발 note는 웹 프로젝트 개발 워크플로에 따라 CLI를 사용 하 여 때 CLI는 알아서 각 플랫폼에 대 한 적절 한 장소에 플러그인 코드를 추가 합니다. (네이티브 프로젝트 개발 워크플로 다음과 같은 경우 각 플랫폼에 대 한 Plugman ([가이드](../../index.html) 링크는 여기), 여러 번 사용 하는 플러그인을 추가 해야 합니다.)
 
 여기에 응용 프로그램에 기능을 추가 하는 CLI를 사용 하는 방법을 예입니다.
 
@@ -201,7 +201,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         $ cordova plugin add org.apache.cordova.device
         
 
-*   네트워크 연결 및 배터리 이벤트:
+*   네트워크 연결 및 배터리 [이벤트](../../cordova/events/events.html):
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
@@ -333,7 +333,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 프로젝트를 다시 작성 하면 안 드 로이드 버전 다른 그대로 유지 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
 
-또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어, 애플 리 케이 션에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `backbutton` 이벤트는 해당 하는 하드웨어 단추를.
+또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어, 애플 리 케이 션에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `[backbutton](../../cordova/events/events.backbutton.html)` 이벤트는 해당 하는 하드웨어 단추를.
 
 ## 도움말 명령
 

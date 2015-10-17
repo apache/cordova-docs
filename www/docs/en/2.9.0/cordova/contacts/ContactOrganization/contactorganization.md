@@ -23,7 +23,7 @@ title: ContactOrganization
 ContactOrganization
 ===================
 
-Contains a `Contact` object's organization properties.
+Contains a `[Contact](../Contact/contact.html)` object's organization properties.
 
 Properties
 ----------
@@ -38,7 +38,7 @@ Details
 -------
 
 The `ContactOrganization` object stores a contact's organization
-properties.  A `Contact` object stores one or more
+properties.  A `[Contact](../Contact/contact.html)` object stores one or more
 `ContactOrganization` objects in an array.
 
 Supported Platforms
@@ -50,7 +50,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -74,7 +74,7 @@ Quick Example
     filter = ["displayName", "organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

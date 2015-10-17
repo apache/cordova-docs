@@ -33,7 +33,7 @@ title: globalization.isDayLightSavingsTime
 
 入站的參數 `date` 的類型應為`Date`.
 
-如果有錯誤讀取日期，然後 `errorCallback` 執行。錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤讀取日期，然後 `errorCallback` 執行。錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## 支援的平臺
 

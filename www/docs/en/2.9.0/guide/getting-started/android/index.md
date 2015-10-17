@@ -42,7 +42,7 @@ NOTE, doc said:
 -->
 
 Developers should use the the `cordova` utility in conjunction with
-the Android SDK.  See The Cordova Command-line Interface for
+the Android SDK.  See [The Cordova Command-line Interface](../../cli/index.html) for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -83,7 +83,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+* Save the value and [close](../../../cordova/inappbrowser/inappbrowser.html) both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to

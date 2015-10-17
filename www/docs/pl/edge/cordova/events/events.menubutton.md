@@ -31,7 +31,7 @@ Zdarzenie fires, gdy użytkownik naciśnie przycisk menu.
 
 Zastosowanie programu obsługi zdarzeń zastępuje domyślne zachowanie przycisku menu.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `[deviceready](events.deviceready.html)` pożary zdarzenia.
 
 ## Obsługiwane platformy
 

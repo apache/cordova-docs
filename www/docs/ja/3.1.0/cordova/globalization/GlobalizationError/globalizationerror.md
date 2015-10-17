@@ -22,7 +22,7 @@ title: GlobalizationError
 
 # GlobalizationError
 
-グローバリゼーション API からエラーを表すオブジェクト。
+[グローバリゼーション](../globalization.html) API からエラーを表すオブジェクト。
 
 ## プロパティ
 

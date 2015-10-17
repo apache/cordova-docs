@@ -34,7 +34,7 @@ It returns whether or not daylight savings time is in effect to the successCB ca
 
 The inbound parameter `date` should be of type `Date`.
 
-If there is an error reading the date, then the errorCB callback is invoked. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error reading the date, then the errorCB callback is invoked. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case during the summer when the browser is set to a DST-enabled timezone, this should display a popup dialog with text similar to "dst: true".
@@ -55,7 +55,7 @@ In the case during the summer when the browser is set to a DST-enabled timezone,
       function () {alert('Error getting names\n');}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

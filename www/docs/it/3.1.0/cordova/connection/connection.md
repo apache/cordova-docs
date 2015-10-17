@@ -26,7 +26,7 @@ title: Connessione
 
 ## Proprietà
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## Costanti
 

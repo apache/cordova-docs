@@ -26,9 +26,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedi quanto segue per più dettagliate informazioni specifiche della piattaforma che si applica a entrambe le versioni:
 
-*   L'aggiornamento di Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone strumenti da riga di comando
+*   [L'aggiornamento di Windows Phone](upgrading.html)
+*   [Windows Phone Plugins](plugin.html)
+*   [Windows Phone strumenti da riga di comando](tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 

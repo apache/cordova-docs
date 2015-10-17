@@ -43,7 +43,7 @@ device.name
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       はコードネームである "Passion" を返します

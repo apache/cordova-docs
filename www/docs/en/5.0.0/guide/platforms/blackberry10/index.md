@@ -29,8 +29,8 @@ command-line tools, described in the BlackBerry Platform Guide.
 For BlackBerry 10, you need to install the SDK regardless of whether
 you want to use the cross-platform Cordova CLI for development, or a
 narrower set of platform-centered command-line tools.  For a
-comparison of the two development paths, see the Overview.  For
-details on each, see The Command-Line Interface and the BlackBerry 10
+comparison of the two development paths, see the [Overview](../../overview/index.html).  For
+details on each, see [The Command-Line Interface](../../cli/index.html) and the BlackBerry 10
 Shell Tool Guide.
 
 ## Requirements

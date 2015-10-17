@@ -22,7 +22,7 @@ title: Acceleration
 
 # Acceleration
 
-Contains `Accelerometer` data captured at a specific point in time.
+Contains `[Accelerometer](../accelerometer.html)` data captured at a specific point in time.
 
 ## Properties
 
@@ -34,7 +34,7 @@ Contains `Accelerometer` data captured at a specific point in time.
 ## Description
 
 An `Acceleration` object is populated and returned by any of the API's
-`Accelerometer` methods. Acceleration values include the effect of
+`[Accelerometer](../accelerometer.html)` methods. Acceleration values include the effect of
 gravity (9.81 m/s^2), so that when a device lies flat and facing up,
 _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 

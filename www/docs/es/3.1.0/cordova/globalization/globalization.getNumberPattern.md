@@ -47,7 +47,7 @@ Devuelve el patrón a la `successCallback` con un objeto de `properties` como un
 
 *   **agrupación**: el símbolo de la agrupación para analizar y dar formato. *(String)*
 
-Si hay un error obteniendo el patrón, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
+Si hay un error obteniendo el patrón, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 El parámetro `options` es opcional, y los valores por defecto son:
 

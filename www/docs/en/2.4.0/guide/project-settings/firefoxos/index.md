@@ -20,6 +20,6 @@ license: >
 title: Project Settings for FirefoxOS
 ---
 
-Project Settings for FirefoxOS 
+[Project Settings](../index.html) for FirefoxOS 
 ===================================
 

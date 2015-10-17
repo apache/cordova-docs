@@ -28,7 +28,7 @@ Camera
 メソッド
 -------
 
-- camera.getPicture
+- [camera.getPicture](camera.getPicture.html)
 
 パーミッション
 -----------

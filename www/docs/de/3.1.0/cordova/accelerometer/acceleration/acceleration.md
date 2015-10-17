@@ -22,7 +22,7 @@ title: Beschleunigung
 
 # Beschleunigung
 
-Zu einem bestimmten Zeitpunkt erfasste `Beschleunigungsmesser`-Daten.
+Zu einem bestimmten Zeitpunkt erfasste `[Beschleunigungsmesser](../accelerometer.html)`-Daten.
 
 ## Eigenschaften
 
@@ -33,7 +33,7 @@ Zu einem bestimmten Zeitpunkt erfasste `Beschleunigungsmesser`-Daten.
 
 ## Beschreibung
 
-Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Accelerometer` Methoden. Beschleunigungswerte sind die Auswirkungen der Schwerkraft (9.81 m/s ^ 2), so dass wenn ein Gerät flach und nach oben, *X*, *y liegt*, und *Z* -Werte zurückgegeben werden sollte `` , `` , und`9.81`.
+Ein `Acceleration` Objekt aufgefüllt und von jeder der APIs zurückgegebene `Accelerometer` Methoden. Beschleunigungswerte sind die Auswirkungen der Schwerkraft (9.81 m/s ^ 2), so dass wenn ein [Gerät](../../device/device.html) flach und nach oben, *X*, *y liegt*, und *Z* -Werte zurückgegeben werden sollte `` , `` , und`9.81`.
 
 ## Unterstützte Plattformen
 

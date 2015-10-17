@@ -29,9 +29,9 @@ Este evento se desencadena cuando una aplicación va en línea, y el dispositivo
 
 ## Detalles
 
-El evento `online` se desencadena cuando un dispositivo previamente inconexos recibe una conexión de red para permitir un acceso a las aplicaciones para Internet. Se basa en la misma información que la API de conexión y fuegos cuando el valor de `connection.type` se convierte en `NONE`.
+El evento `online` se desencadena cuando un dispositivo previamente inconexos recibe una conexión de red para permitir un acceso a las aplicaciones para Internet. Se basa en la misma información que la API de conexión y fuegos cuando el valor de `[connection.type](../connection/connection.type.html)` se convierte en `NONE`.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 
@@ -87,7 +87,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
 
 ## iOS rarezas
 
-Durante el arranque inicial, el primer evento `en línea` (si procede) al menos toma un segundo para disparar, antes de que `connection.type` es `desconocido`.
+Durante el arranque inicial, el primer evento `en línea` (si procede) al menos toma un segundo para disparar, antes de que `[connection.type](../connection/connection.type.html)` es `desconocido`.
 
 ## Windows Phone 7 rarezas
 

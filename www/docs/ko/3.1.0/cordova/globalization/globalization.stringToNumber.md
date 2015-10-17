@@ -31,7 +31,7 @@ title: globalization.stringToNumber
 
 번호를 반환 합니다는 `successCallback` 와 `properties` 개체를 매개 변수로 합니다. 있어야 해당 개체는 `value` 속성을 `Number` 값.
 
-숫자 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.PARSING\_ERROR`.
+숫자 문자열을 구문 분석 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 `options`매개 변수는 선택적 이며 기본값은 다음 값:
 

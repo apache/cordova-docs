@@ -61,17 +61,17 @@ Methods
 
 - __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
 
-- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `ContactError` object.
+- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `[ContactError](../ContactError/contactError.html)` object.
 
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
 Details
 -------
 
-The `Contact` object represents a user's contact.  Contacts can be
+The `Contact` object represents a user's contact.  [Contacts](../contacts.html) can be
 created, stored, or removed from the device contacts database.
-Contacts can also be retrieved (individually or in bulk) from the
-database by invoking the `contacts.find` method.
+[Contacts](../contacts.html) can also be retrieved (individually or in bulk) from the
+database by invoking the `[contacts.find](../contacts.find.html)` method.
 
 __NOTE:__ Not all of the contact fields listed above are supported on
 every device platform.  Please check each platform's _Quirks_ section
@@ -86,7 +86,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Save Quick Example
+Save Quick [Example](../../storage/storage.opendatabase.html)
 ------------------
 
     function onSuccess(contact) {
@@ -111,7 +111,7 @@ Save Quick Example
     // save to device
     contact.save(onSuccess,onError);
 
-Clone Quick Example
+Clone Quick [Example](../../storage/storage.opendatabase.html)
 -------------------
 
         // clone the contact object
@@ -120,7 +120,7 @@ Clone Quick Example
         console.log("Original contact name = " + contact.name.givenName);
         console.log("Cloned contact name = " + clone.name.givenName);
 
-Remove Quick Example
+Remove Quick [Example](../../storage/storage.opendatabase.html)
 --------------------
 
     function onSuccess() {
@@ -134,7 +134,7 @@ Remove Quick Example
         // remove the contact from the device
         contact.remove(onSuccess,onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -239,11 +239,11 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 iOS Quirks
 ----------
 
-- __displayName__: Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
+- __displayName__: Not supported on iOS, returning `null` unless there is no `[ContactName](../ContactName/contactname.html)` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
 
 - __birthday__: Must be input as a JavaScript `Date` object, the same way it is returned.
 
-- __photos__: Returns a File URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
+- __photos__: Returns a [File](../../file/fileobj/fileobj.html) URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
 
 - __categories__:  This property is currently not supported, returning `null`.
 

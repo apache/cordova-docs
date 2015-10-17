@@ -42,12 +42,12 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var name = device.cordova;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

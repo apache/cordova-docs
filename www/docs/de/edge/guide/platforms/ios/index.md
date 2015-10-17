@@ -24,11 +24,11 @@ title: iOS Platform Guide
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für iOS-Geräte wie iPhone und iPad bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   iOS Konfiguration
-*   IOS Upgrade
-*   iOS Webansichten für
-*   iOS Plugins
-*   iOS Shell Tool Guide
+*   [iOS Konfiguration](config.html)
+*   [IOS Upgrade](upgrading.html)
+*   [iOS Webansichten für](webview.html)
+*   [iOS Plugins](plugin.html)
+*   [iOS Shell Tool Guide](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 

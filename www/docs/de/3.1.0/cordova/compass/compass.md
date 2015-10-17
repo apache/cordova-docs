@@ -22,22 +22,22 @@ title: Kompass
 
 # Kompass
 
-> Ruft die Richtung, die das Gerät verweist.
+> Ruft die Richtung, die das [Gerät](../device/device.html) verweist.
 
 ## Methoden
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (veraltet)
-*   compass.clearWatchFilter (veraltet)
+*   [compass.getCurrentHeading](compass.getCurrentHeading.html)
+*   [compass.watchHeading](compass.watchHeading.html)
+*   [compass.clearWatch](compass.clearWatch.html)
+*   [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (veraltet)
+*   [compass.clearWatchFilter](compass.clearWatchFilter.html) (veraltet)
 
 ## Argumente
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   [compassSuccess](parameters/compassSuccess.html)
+*   [compassError](parameters/compassError.html)
+*   [compassOptions](parameters/compassOptions.html)
+*   [compassHeading](parameters/compassHeading.html)
 
 ## Zugriff auf die Funktion
 
@@ -76,4 +76,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

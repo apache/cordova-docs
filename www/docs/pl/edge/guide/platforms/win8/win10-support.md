@@ -50,7 +50,7 @@ Następujące funkcje są niedostępne podczas wdrażania aplikacji zdalnego try
   * Biblioteki muzycznej (`musicLibrary`)
   * Biblioteka obrazy (`picturesLibrary`)
   * Biblioteka filmów (`videosLibrary`)
-  * Magazyn wymienny (`removableStorage`)
+  * [Magazyn](../../../cordova/storage/storage.html) wymienny (`removableStorage`)
   * Klient/serwer internetowy (`internetClientClientServer`) - należy pamiętać, że `internetClient` jest nadal dozwolone
   * Prywatne sieci klient serwer (`privateNetworkClientServer`)
 

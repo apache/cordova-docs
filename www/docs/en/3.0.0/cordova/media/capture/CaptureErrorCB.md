@@ -35,10 +35,10 @@ media capture operation. Failure scenarios include when the capture
 application is busy, a capture operation is already taking place, or
 the user cancels the operation before any media files are captured.
 
-This function executes with a `CaptureError` object containing an
+This function executes with a `[CaptureError](CaptureError.html)` object containing an
 appropriate error `code`.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture error callback

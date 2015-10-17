@@ -31,7 +31,7 @@ L'évènement se déclenche lorsque l'utilisateur appuie sur la touche d'appel.
 
 Si vous souhaitez modifier le comportement par défaut de la touche d'appel, vous pouvez enregistrer un écouteur pour l'évènement `startcallbutton`.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

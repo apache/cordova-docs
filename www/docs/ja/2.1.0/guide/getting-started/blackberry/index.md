@@ -57,10 +57,10 @@ Cordova for BlackBerry は [BlackBerry WebWorks framework](https://bdsc.webapps.
 - project.properties ファイルをあなたの好きなエディタで開き、 `blackberry.bbwp.dir=` および／または `playbook.bbwp.dir=` の部分を編集します。 値には、先ほどインストールした WebWorks SDK の中の `bbwp` バイナリファイルの位置をセットします。
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 
-サンプルプロジェクトのディレクトリ内でコマンドプロンプトまたはターミナルで `ant target build` とタイプすることで、サンプルプロジェクトをビルドします。ここで、 `target` は `blackberry` か `playbook` に置き換えてください。これは Cordova のサンプルプロジェクトで、普通の Hello World アプリではないことに注意してください。 www フォルダーにある index.html は多くの Cordova API の使用例を含みます。
+サンプルプロジェクトのディレクトリ内でコマンドプロンプトまたはターミナルで `ant target build` とタイプすることで、サンプルプロジェクトをビルドします。ここで、 `target` は `blackberry` か `playbook` に置き換えてください。これは Cordova のサンプルプロジェクトで、普通の [Hello World](../webos/index.html) アプリではないことに注意してください。 www フォルダーにある index.html は多くの Cordova API の使用例を含みます。
 
 5A. シミュレーターへのデプロイ
 --------------------------------------

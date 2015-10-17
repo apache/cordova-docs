@@ -28,14 +28,14 @@ title: Guides
   <ul>
     <li>
       <h2>
-        Présentation
+        <a href="guide/overview/index.html">Présentation</a>
       </h2>
 
       <span>Commencez ici si vous êtes nouveau avec Cordova.</span>
     </li>
     <li>
       <h2>
-        Plateforme de Support
+        <a href="guide/support/index.html">Plateforme de Support</a>
       </h2>
 
       <span>Tableau de compatibilité pour tous les principales caractéristiques.</span>
@@ -49,7 +49,7 @@ title: Guides
     </li>
     <li>
       <h2>
-        Guides de la plate-forme
+        <a href="guide/platforms/index.html">Guides de la plate-forme</a>
       </h2>
 
       <span>Mettre en place les projets de chaque mise à jour et SDK</span>
@@ -63,14 +63,14 @@ title: Guides
     </li>
     <li>
       <h2>
-        Le fichier config.xml File
+        <a href="config_ref/index.html">Le fichier config.xml</a> File
       </h2>
 
       <span>Personnaliser les fonctionnalités de votre application.</span>
     </li>
     <li>
       <h2>
-        Icones et Splash Screen
+        <a href="config_ref/images.html">Icones et Splash Screen</a>
       </h2>
 
       <span>Personnaliser les images affichage de l'application.</span>
@@ -84,28 +84,28 @@ title: Guides
     </li>
     <li>
       <h2>
-        Guide de développement de plugin
+        <a href="guide/hybrid/plugins/index.html">Guide de développement de plugin</a>
       </h2>
 
       <span>Développer votre premier plugin.</span>
     </li>
     <li>
       <h2>
-        Guide de la vie privée
+        <a href="guide/appdev/privacy/index.html">Guide de la vie privée</a>
       </h2>
 
       <span>Découvrez les problèmes de confidentialité mobile important.</span>
     </li>
     <li>
       <h2>
-        Guide de la liste blanche
+        <a href="guide/appdev/whitelist/index.html">Guide de la liste blanche</a>
       </h2>
 
       <span>Accorder un accès aux applications à des ressources externes.</span>
     </li>
     <li>
       <h2>
-        Stockage
+        <a href="cordova/storage/storage.html">Stockage</a>
       </h2>
 
       <span>Un aperçu des options de stockage native.</span>
@@ -126,7 +126,7 @@ title: Guides
     </li>
     <li>
       <h2>
-        Plugin API
+        <a href="cordova/plugins/pluginapis.html">Plugin API</a>
       </h2>
 
       <span>Découvrez ce que les plugins Cordova sont disponibles à utiliser dans votre projet.</span>

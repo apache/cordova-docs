@@ -22,7 +22,7 @@ title: FileUploadOptions
 
 # FileUploadOptions
 
-A `FileUploadOptions` object can be passed to the `FileTransfer`
+A `FileUploadOptions` object can be passed to the `[FileTransfer](../filetransfer/filetransfer.html)`
 object's `upload()` method to specify additional parameters to the
 upload script.
 
@@ -42,7 +42,7 @@ upload script.
 
 ## Description
 
-A `FileUploadOptions` object can be passed to the `FileTransfer`
+A `FileUploadOptions` object can be passed to the `[FileTransfer](../filetransfer/filetransfer.html)`
 object's `upload()` method to specify additional parameters to the
 upload script.
 

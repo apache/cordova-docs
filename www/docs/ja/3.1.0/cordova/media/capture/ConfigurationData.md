@@ -22,7 +22,7 @@ title: ConfigurationData
 
 # ConfigurationData
 
-> デバイスがサポートするメディア キャプチャ パラメーターのセットをカプセル化します。
+> デバイスがサポートするメディア [キャプチャ](capture.html) パラメーターのセットをカプセル化します。
 
 ## 説明
 
@@ -36,7 +36,7 @@ MIME の種類は[RFC2046][1]に従う必要があります。例:
 *   `ビデオ/quicktime`
 *   `イメージ/jpeg`
 *   `オーディオ/amr`
-*   `オーディオ/wav ファイル`
+*   `オーディオ/wav [ファイル](../../file/fileobj/fileobj.html)`
 
 ## プロパティ
 

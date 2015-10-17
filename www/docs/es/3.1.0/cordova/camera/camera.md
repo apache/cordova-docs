@@ -28,7 +28,7 @@ title: Cámara
 
 ## Métodos
 
-*   camera.getPicture
+*   [camera.getPicture](camera.getPicture.html)
 *   Camera.Cleanup
 
 ## Acceso a la función

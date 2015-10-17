@@ -26,9 +26,9 @@ Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova
 
 Glej naslednje podrobnejše informacije značilne za platformo, ki velja za obe različici:
 
-*   Nadgradnja Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone orodja ukazne vrstice
+*   [Nadgradnja Windows Phone](upgrading.html)
+*   [Windows Phone Plugins](plugin.html)
+*   [Windows Phone orodja ukazne vrstice](tools.html)
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 

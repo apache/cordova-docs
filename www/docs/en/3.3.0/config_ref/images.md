@@ -71,7 +71,7 @@ Tizen requires an 128-pixel icon:
 
 ## Configuring Splash Screens in the CLI
 
-Use the Splashscreen API to enable display of an app's introductory
+Use the [Splashscreen](../cordova/splashscreen/splashscreen.html) API to enable display of an app's introductory
 splash screen on many platforms.  When working in the CLI, splash
 screen source files are located within the project's `www/res/screens`
 subdirectory.
@@ -174,7 +174,7 @@ your app has started and the webview has loaded, your app should hide the
 splash screen so that your main view is visible. Because the app start time
 will vary quite a bit due to a number of factors, it is recommended that your
 app explicitly invoke `navigator.splashscreen.hide()` in the Javascript
-method that responds to the `deviceready` event. Otherwise the splash screen
+method that responds to the `[deviceready](../cordova/events/events.deviceready.html)` event. Otherwise the splash screen
 will be visible for the SplashScreenDelay value that you configured above.
 This event-driven approach is highly recommended versus having the splash
 screen visible for always a fixed duration.

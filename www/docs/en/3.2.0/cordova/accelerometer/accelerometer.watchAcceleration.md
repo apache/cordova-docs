@@ -35,13 +35,13 @@ in movement relative to the current position. The accelerometer can
 detect 3D movement along the _x_, _y_, and _z_ axis.
 
 The `accelerometer.watchAcceleration` method retrieves the device's
-current `Acceleration` at a regular interval, executing the
-`accelerometerSuccess` callback function each time. Specify the
+current `[Acceleration](acceleration/acceleration.html)` at a regular interval, executing the
+`[accelerometerSuccess](parameters/accelerometerSuccess.html)` callback function each time. Specify the
 interval in milliseconds via the `acceleratorOptions` object's
 `frequency` parameter.
 
 The returned watch ID references the accelerometer's watch interval,
-and can be used with `accelerometer.clearWatch` to stop watching the
+and can be used with `[accelerometer.clearWatch](accelerometer.clearWatch.html)` to stop watching the
 accelerometer.
 
 ## Supported Platforms

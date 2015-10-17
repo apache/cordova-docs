@@ -20,6 +20,6 @@ license: >
 title: Project Settings for BlackBerry
 ---
 
-Project Settings for BlackBerry 
+[Project Settings](../index.html) for BlackBerry 
 ===================================
 

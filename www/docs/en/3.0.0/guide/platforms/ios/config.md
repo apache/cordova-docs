@@ -40,9 +40,9 @@ existing apps. The available preferences are:
   `whiteLarge`, `white`, and `gray`.
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
-  initialize the Geolocation plugin at start-up (so the fix on your
+  initialize the [Geolocation](../../../cordova/geolocation/geolocation.html) plugin at start-up (so the fix on your
   location can be more accurate) __DEPRECATED__: please set the
-  `onload` attribute of the `Geolocation` plugin to `true`
+  `onload` attribute of the `[Geolocation](../../../cordova/geolocation/geolocation.html)` plugin to `true`
   instead.
 
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to

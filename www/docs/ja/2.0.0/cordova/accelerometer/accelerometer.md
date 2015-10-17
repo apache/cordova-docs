@@ -28,21 +28,21 @@ Accelerometer
 メソッド
 -------
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+- [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+- [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 引数
 ---------
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- [accelerometerSuccess](parameters/accelerometerSuccess.html)
+- [accelerometerError](parameters/accelerometerError.html)
+- [accelerometerOptions](parameters/accelerometerOptions.html)
 
 オブジェクト (読み取り専用)
 -------------------
 
-- Acceleration
+- [Acceleration](acceleration/acceleration.html)
 
 パーミッション
 -----------

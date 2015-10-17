@@ -25,32 +25,32 @@ Contacts
 
 > The `contacts` object provides access to the device contacts database.
 
-**Important privacy note:** Collection and use of contact data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses contact data and whether it is shared with any other parties.  Contact information is considered sensitive because it reveals the people with whom a person communicates.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing or using contact data (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing contact data.  A clear and easy to understand user experience surrounding the use of contact data will help avoid user confusion and perceived misuse of contact data.  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of contact data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses contact data and whether it is shared with any other parties.  [Contact](Contact/contact.html) information is considered sensitive because it reveals the people with whom a person communicates.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing or using contact data (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing contact data.  A clear and easy to understand user experience surrounding the use of contact data will help avoid user confusion and perceived misuse of contact data.  For more information, please see the [Privacy Guide](../../guide/privacy/index.html).
 
 Methods
 -------
 
-- contacts.create
-- contacts.find
+- [contacts.create](contacts.create.html)
+- [contacts.find](contacts.find.html)
 
 Arguments
 ---------
 
-- contactFields
-- contactSuccess
-- contactError
-- contactFindOptions
+- [contactFields](parameters/contactFields.html)
+- [contactSuccess](parameters/contactSuccess.html)
+- [contactError](parameters/contactError.html)
+- [contactFindOptions](parameters/contactFindOptions.html)
 
 Objects
 -------
 
-- Contact
-- ContactName
-- ContactField
-- ContactAddress
-- ContactOrganization
-- ContactFindOptions
-- ContactError
+- [Contact](Contact/contact.html)
+- [ContactName](ContactName/contactname.html)
+- [ContactField](ContactField/contactfield.html)
+- [ContactAddress](ContactAddress/contactaddress.html)
+- [ContactOrganization](ContactOrganization/contactorganization.html)
+- [ContactFindOptions](ContactFindOptions/contactfindoptions.html)
+- [ContactError](ContactError/contactError.html)
 
 Permissions
 -----------

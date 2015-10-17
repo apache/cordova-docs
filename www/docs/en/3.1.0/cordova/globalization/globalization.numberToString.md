@@ -33,8 +33,8 @@ Returns the formatted number string to the `successCallback` with a
 property with a `String` value.
 
 If there is an error formatting the number, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 

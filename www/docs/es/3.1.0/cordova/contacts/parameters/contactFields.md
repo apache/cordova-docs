@@ -22,6 +22,6 @@ title: contactFields
 
 # contactFields
 
-Requiere el parámetro para el `contacts.find` método, se utiliza para especificar qué campos deben incluirse en el `Contact` resultante de una operación de búsqueda de objetos.
+Requiere el parámetro para el `[contacts.find](../contacts.find.html)` método, se utiliza para especificar qué campos deben incluirse en el `Contact` resultante de una operación de búsqueda de objetos.
 
     ["nombre", "números", "email"]

@@ -122,7 +122,7 @@ choose __do not include in project__.
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
 
 - Make sure your phone is connected, and the screen is unlocked.
-- In Visual Studio, select 'Device' from the top drop-down menu.
+- In Visual Studio, select '[Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp7/wpd.png)

@@ -23,7 +23,7 @@ title: MediaError
 MediaError
 ==========
 
-`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
+`MediaError` オブジェクトは、エラー発生時に `[mediaError](../Parameters/mediaError.html)` コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -43,5 +43,5 @@ MediaError
 概要
 -----------
 
-`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
+`MediaError` オブジェクトは、エラー発生時に `[mediaError](../Parameters/mediaError.html)` コールバック関数に渡されます。
 

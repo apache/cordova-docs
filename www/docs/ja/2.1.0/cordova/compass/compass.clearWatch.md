@@ -27,7 +27,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: `compass.watchHeading` によって返される ID。
+- __watchID__: `[compass.watchHeading](compass.watchHeading.html)` によって返される ID。
 
 サポートされているプラットフォーム
 -------------------
@@ -38,7 +38,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);

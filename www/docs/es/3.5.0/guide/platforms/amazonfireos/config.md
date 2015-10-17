@@ -24,7 +24,7 @@ title: Amazon fuego OS configuración
 
 El `config.xml` archivo controla los ajustes básicos de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Este preferencias detalles sección que sólo se aplican a Amazon fuego OS construye. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `[pause](../../../cordova/events/events.pause.html)` evento incendios.
     
         <preference name="KeepRunning" value="false"/>
         

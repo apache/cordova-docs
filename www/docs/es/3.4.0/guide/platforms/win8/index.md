@@ -24,8 +24,8 @@ title: Windows 8 plataforma guía
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para Windows 8. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Actualización de Windows 8
-*   Herramientas de línea de comandos de Windows 8
+*   [Actualización de Windows 8](upgrading.html)
+*   [Herramientas de línea de comandos de Windows 8](tools.html)
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 
@@ -83,7 +83,7 @@ Ya puedes construir aplicaciones Windows 8 usando el *HTML/JavaScript pista* dis
             <script src="/js/default.js"></script>
         
 
-*   Añadir un `deviceready` controlador para demostrar Cordova está trabajando:
+*   Añadir un `[deviceready](../../../cordova/events/events.deviceready.html)` controlador para demostrar Cordova está trabajando:
     
         <body>
             <p>Content goes here</p>

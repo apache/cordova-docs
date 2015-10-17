@@ -28,7 +28,7 @@ Notification
 Methods
 -------
 
-- notification.alert
-- notification.confirm
-- notification.beep
-- notification.vibrate
+- [notification.alert](notification.alert.html)
+- [notification.confirm](notification.confirm.html)
+- [notification.beep](notification.beep.html)
+- [notification.vibrate](notification.vibrate.html)

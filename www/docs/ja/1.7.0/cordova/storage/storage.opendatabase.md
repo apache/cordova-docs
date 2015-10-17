@@ -23,16 +23,16 @@ title: openDatabase
 openDatabase
 ===============
 
-Database オブジェクトを新規作成します。
+[Database](database/database.html) オブジェクトを新規作成します。
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 概要
 -----------
 
-window.openDatabase メソッドは新しい Database オブジェクトを返します。
+window.openDatabase メソッドは新しい [Database](database/database.html) オブジェクトを返します。
 
-このメソッドは SQLite のデータベースを新規作成し、 Database オブジェクトを返します。 Database オブジェクトは、データを操作するために使います。
+このメソッドは SQLite のデータベースを新規作成し、 [Database](database/database.html) オブジェクトを返します。 [Database](database/database.html) オブジェクトは、データを操作するために使います。
 
 サポートされているプラットフォーム
 -------------------

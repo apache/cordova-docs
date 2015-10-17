@@ -56,7 +56,7 @@ title: FileEntry
 
 *   **getParent**: 查找父目錄。
 
-*   **createWriter**: 創建 `FileWriter` 物件，可用於向檔中寫入。
+*   **createWriter**: 創建 `[FileWriter](../filewriter/filewriter.html)` 物件，可用於向檔中寫入。
 
 *   **檔**： 創建 `File` 物件，其中包含檔案屬性。
 
@@ -76,7 +76,7 @@ title: FileEntry
 
 *   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -169,7 +169,7 @@ title: FileEntry
 
 *   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果嘗試移動檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果嘗試移動檔時發生錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -205,7 +205,7 @@ title: FileEntry
 
 *   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果試圖複製檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖複製檔時發生錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -246,7 +246,7 @@ title: FileEntry
 
 *   **successCallback**: 在該檔已被刪除後執行的回檔。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果嘗試刪除檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果嘗試刪除檔時出現錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -270,7 +270,7 @@ title: FileEntry
 
 *   **successCallback**： 傳遞檔的父的回檔 `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `[FileError](../fileerror/fileerror.html)` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -288,13 +288,13 @@ title: FileEntry
 
 ## createWriter
 
-創建 `FileWriter` 物件與所代表的檔關聯`FileEntry`.
+創建 `[FileWriter](../filewriter/filewriter.html)` 物件與所代表的檔關聯`FileEntry`.
 
 **參數：**
 
-*   **successCallback**： 傳遞一個回檔 `FileWriter` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `[FileWriter](../filewriter/filewriter.html)` 物件。*（函數）*
 
-*   **errorCallback**： 如果試圖創建 FileWriter 而發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖創建 [FileWriter](../filewriter/filewriter.html) 而發生錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -318,7 +318,7 @@ title: FileEntry
 
 *   **successCallback**： 傳遞一個回檔 `File` 物件。*（函數）*
 
-*   **errorCallback**： 回檔的執行如果發生錯誤時創建 `File` 物件，例如當該檔不再存在。 調用與 `FileError` 物件。 *（函數）*
+*   **errorCallback**： 回檔的執行如果發生錯誤時創建 `File` 物件，例如當該檔不再存在。 調用與 `[FileError](../fileerror/fileerror.html)` 物件。 *（函數）*
 
 **快速的示例**
 

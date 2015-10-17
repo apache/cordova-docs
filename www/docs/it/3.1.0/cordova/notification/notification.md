@@ -27,7 +27,7 @@ title: Notifica
 ## Metodi
 
 *   `notification.alert`
-*   `Notification.Confirm`
+*   `[Notification.Confirm](notification.confirm.html)`
 *   `notification.prompt`
 *   `notification.beep`
 *   `notification.vibrate`

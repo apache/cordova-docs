@@ -31,7 +31,7 @@ onSuccess función callback que proporciona los datos de imagen.
 
 ## Parámetros
 
-*   **imageData**: codificación en Base64 de los datos de imagen, *o* el archivo de imagen URI, dependiendo de `cameraOptions` en vigor. *(String)*
+*   **imageData**: codificación en Base64 de los datos de imagen, *o* el archivo de imagen URI, dependiendo de `[cameraOptions](cameraOptions.html)` en vigor. *(String)*
 
 ## Ejemplo
 

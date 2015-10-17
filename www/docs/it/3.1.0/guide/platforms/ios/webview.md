@@ -40,7 +40,7 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 1.  Scaricare ed estrarre la sorgente di Cordova in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova`.
 
-2.  Se è in esecuzione, chiudere Xcode.
+2.  Se è in esecuzione, [chiudere](../../../cordova/inappbrowser/inappbrowser.html) Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 

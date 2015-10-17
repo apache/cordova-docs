@@ -22,7 +22,7 @@ title: L'aggiornamento di BlackBerry
 
 # L'aggiornamento di BlackBerry
 
-Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. Queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. Queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. [L'interfaccia della riga di comando](../../cli/index.html) per informazioni, vedere come aggiornare la versione di CLI.
 
 ## 2.8.0 all'aggiornamento di progetti a 2.9.0
 

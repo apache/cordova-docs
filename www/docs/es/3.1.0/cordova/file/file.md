@@ -28,20 +28,20 @@ title: Archivo
 
 ## Objetos
 
-*   DirectoryEntry
-*   DirectoryReader
-*   Archivo
-*   FileEntry
-*   FileError
-*   FileReader
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [Archivo](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
 *   FileSystem
 *   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
 *   Flags
-*   LocalFileSystem
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
 *   Metadata
 
 ## Acceso a la función

@@ -30,15 +30,15 @@ Das `FileTransfer` -Objekt können Sie hoch-oder Herunterladen von Dateien zu un
 
 ## Methoden
 
-*   **Upload**: sendet eine Datei an einen Server.
+*   **Upload**: sendet eine [Datei](../fileobj/fileobj.html) an einen Server.
 
-*   **Download**: lädt eine Datei vom Server.
+*   **Download**: lädt eine [Datei](../fileobj/fileobj.html) vom Server.
 
 *   **Abbrechen**: Abbruch eine Übertragung in Bearbeitung.
 
 ## Informationen
 
-Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von Dateien auf einem remote-Server mithilfe einer mehrteiligen HTTP-POST-Anforderung. HTTP- und HTTPS-Protokolle werden unterstützt. Optionale Parameter können angegeben werden, indem Sie übergeben ein `FileUploadOptions` gegen die `upload()` Methode. Auf erfolgreichen Upload ein `FileUploadResult` -Objekt wird an den Erfolg-Rückruf übergeben. Wenn ein Fehler auftritt, ein `FileTransferError` -Objekt wird an den Fehler-Rückruf übergeben. Es ist auch möglich (nur auf iOS und Android), eine Datei von einem remote-Server herunterladen und speichern Sie es auf dem Gerät.
+Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von Dateien auf einem remote-Server mithilfe einer mehrteiligen HTTP-POST-Anforderung. HTTP- und HTTPS-Protokolle werden unterstützt. Optionale Parameter können angegeben werden, indem Sie übergeben ein `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` gegen die `upload()` Methode. Auf erfolgreichen Upload ein `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` -Objekt wird an den Erfolg-Rückruf übergeben. Wenn ein Fehler auftritt, ein `[FileTransferError](../filetransfererror/filetransfererror.html)` -Objekt wird an den Fehler-Rückruf übergeben. Es ist auch möglich (nur auf iOS und Android), eine [Datei](../fileobj/fileobj.html) von einem remote-Server herunterladen und speichern Sie es auf dem [Gerät](../../device/device.html).
 
 ## Unterstützte Plattformen
 
@@ -52,13 +52,13 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von Dateien auf
 
 **Parameter:**
 
-*   **FilePath**: vollständigen Pfad der Datei auf das Gerät.
+*   **FilePath**: vollständigen Pfad der [Datei](../fileobj/fileobj.html) auf das [Gerät](../../device/device.html).
 
-*   **Server**: URL des Servers, die Datei zu empfangen, wie kodiert`encodeURI()`.
+*   **Server**: URL des Servers, die [Datei](../fileobj/fileobj.html) zu empfangen, wie kodiert`encodeURI()`.
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `Metadata` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileTransferError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `[FileTransferError](../filetransfererror/filetransfererror.html)` Objekt. *(Funktion)*
 
 *   **Optionen**: optionale Parameter wie z. B. Dateinamen und Mimetype.
 
@@ -200,13 +200,13 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 **Parameter:**
 
-*   **Quelle**: URL des Servers, um die Datei herunterzuladen, wie kodiert`encodeURI()`.
+*   **Quelle**: URL des Servers, um die [Datei](../fileobj/fileobj.html) herunterzuladen, wie kodiert`encodeURI()`.
 
-*   **Ziel**: vollständige Pfad der Datei auf das Gerät.
+*   **Ziel**: vollständige Pfad der [Datei](../fileobj/fileobj.html) auf das [Gerät](../../device/device.html).
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileTransferError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `[FileTransferError](../filetransfererror/filetransfererror.html)` Objekt. *(Funktion)*
 
 *   **TrustAllHosts**: Optionaler Parameter, wird standardmäßig auf `false` . Wenn legen Sie auf `true` , dann es alle Sicherheitszertifikate akzeptieren wird. Dies ist nützlich, da Android selbst signierte Zertifikate ablehnt. Nicht für den produktiven Einsatz empfohlen. Auf Android und iOS unterstützt. *(Boolean)*
 
@@ -226,7 +226,7 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 ## Abbruch
 
-Bricht einen in-Progress-Transfer. Der Onerror-Rückruf wird ein FileTransferError-Objekt übergeben, die einen Fehlercode FileTransferError.ABORT_ERR hat.
+Bricht einen in-Progress-Transfer. Der Onerror-Rückruf wird ein FileTransferError-Objekt übergeben, die einen Fehlercode [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR hat.
 
 **Unterstützte Plattformen**
 

@@ -22,11 +22,11 @@ title: accelerometer.clearWatch
 
 # accelerometer.clearWatch
 
-Stop watching the `Acceleration` referenced by the `watchID` parameter.
+Stop watching the `[Acceleration](acceleration/acceleration.html)` referenced by the `watchID` parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: The ID returned by `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Supported Platforms
 

@@ -96,7 +96,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 
 
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
 Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
@@ -120,7 +120,7 @@ Now create and open a new file named **index.html** in the **assets/www** direct
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../phonegap/device/device.html)
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (Settings &gt; Applications &gt; Development)
@@ -130,5 +130,5 @@ Now create and open a new file named **index.html** in the **assets/www** direct
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
+You can also checkout more detailed [version](../../../phonegap/storage/parameters/version.html) of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
 

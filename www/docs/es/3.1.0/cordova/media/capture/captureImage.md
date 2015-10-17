@@ -33,9 +33,9 @@ title: capture.captureImage
 
 Inicia una operación asincrónica para capturar imágenes utilizando la aplicación de la cámara del dispositivo. La operación permite a los usuarios capturar más de una imagen en una sola sesión.
 
-La operación de captura tampoco termina cuando el usuario cierra una aplicación de cámara, o el número máximo de registros especificado por `CaptureAudioOptions.limit` se alcanza. Si no `limit` se especifica el valor por defecto a uno (1) y termina la operación de captura después de que el usuario capta una sola imagen.
+La operación de captura tampoco termina cuando el usuario cierra una aplicación de cámara, o el número máximo de registros especificado por `[CaptureAudioOptions](captureAudioOptions.html).limit` se alcanza. Si no `limit` se especifica el valor por defecto a uno (1) y termina la operación de captura después de que el usuario capta una sola imagen.
 
-Cuando finaliza la operación de captura, invoca la `CaptureCB` "callback" con una gran variedad de `MediaFile` objetos que describen cada archivo de imagen capturada. Si el usuario finaliza la operación antes de capturar una imagen, la `CaptureErrorCB` devolución de llamada se ejecuta con un `CaptureError` objeto ofrece un `CaptureError.CAPTURE_NO_MEDIA_FILES` código de error.
+Cuando finaliza la operación de captura, invoca la `[CaptureCB](CaptureCB.html)` "callback" con una gran variedad de `[MediaFile](MediaFile.html)` objetos que describen cada archivo de imagen capturada. Si el usuario finaliza la operación antes de capturar una imagen, la `[CaptureErrorCB](CaptureErrorCB.html)` devolución de llamada se ejecuta con un `[CaptureError](CaptureError.html)` objeto ofrece un `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` código de error.
 
 ## Plataformas soportadas
 

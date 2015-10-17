@@ -78,7 +78,7 @@ Options
 
 - __correctOrientation__: Rotate the image to correct for the orientation of the device during capture. _(Boolean)_
 - __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. _(Boolean)_
-- __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `CameraPopoverOptions`.
+- __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `[CameraPopoverOptions](CameraPopoverOptions.html)`.
 - __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` _(Number)_
 
         Camera.Direction = {
@@ -90,7 +90,7 @@ Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
-- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+- `[Camera](../camera.html).PictureSourceType.PHOTOLIBRARY` and `[Camera](../camera.html).PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
 BlackBerry Quirks
 -----------------
@@ -98,9 +98,9 @@ BlackBerry Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
-- Application must have key injection permissions to close the native Camera application after the user snaps the photo.
+- Application must have key injection permissions to [close](../../inappbrowser/inappbrowser.html) the native [Camera](../camera.html) application after the user snaps the photo.
 - Using large image sizes may result in the inability to encode images on later-model devices (e.g. Torch 9800) that feature high-resolution cameras.
-- `Camera.MediaType` is not supported.
+- `[Camera](../camera.html).MediaType` is not supported.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
 

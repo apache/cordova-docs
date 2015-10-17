@@ -32,7 +32,7 @@ Properties
 
 - __duration__: The maximum duration of a video clip, in seconds.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 video clips

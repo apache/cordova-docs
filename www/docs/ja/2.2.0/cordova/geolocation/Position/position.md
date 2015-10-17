@@ -47,7 +47,7 @@ geolocation API によって作成された位置情報とタイムスタンプ 
 - webOS
 - Tizen
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // 成功時のコールバック関数

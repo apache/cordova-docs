@@ -33,9 +33,9 @@ title: capture.captureAudio
 
 Commence une opération asynchrone pour capturer les enregistrements audio à l'aide d'application d'enregistrement audio de l'appareil par défaut. L'opération permet à l'utilisateur de l'appareil capturer des enregistrements multiples en une seule séance.
 
-L'opération de capture se termine lorsque l'utilisateur quitte l'enregistrement demande, ou le nombre maximal d'enregistrements spécifié par audio `CaptureAudioOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip audio unique.
+L'opération de capture se termine lorsque l'utilisateur quitte l'enregistrement demande, ou le nombre maximal d'enregistrements spécifié par audio `[CaptureAudioOptions](captureAudioOptions.html).limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip audio unique.
 
-Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau de `MediaFile` objets décrivant chacune capturé fichiers clip audio. Si l'utilisateur annule l'opération avant un clip audio est capturé, le `CaptureErrorCallback` s'exécute avec un `CaptureError` objet, mettant en vedette le `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau de `[MediaFile](MediaFile.html)` objets décrivant chacune capturé fichiers clip audio. Si l'utilisateur annule l'opération avant un clip audio est capturé, le `CaptureErrorCallback` s'exécute avec un `[CaptureError](CaptureError.html)` objet, mettant en vedette le `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` code d'erreur.
 
 ## Plates-formes prises en charge
 
@@ -128,7 +128,7 @@ Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau 
 
 ## BlackBerry WebWorks Quirks
 
-*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone Notes** , fournie par RIM, pour capturer des enregistrements audio. L'application reçoit un `CaptureError.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
+*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone Notes** , fournie par RIM, pour capturer des enregistrements audio. L'application reçoit un `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
 
 ## iOS Quirks
 

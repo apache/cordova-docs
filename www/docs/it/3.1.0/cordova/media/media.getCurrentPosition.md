@@ -35,7 +35,7 @@ Restituisce la posizione corrente all'interno di un file audio.
 
 ## Descrizione
 
-Una funzione asincrona che restituisce la posizione corrente del file audio sottostante di un `Media` oggetto. Aggiorna anche il `Media` dell'oggetto `position` parametro.
+Una funzione asincrona che restituisce la posizione corrente del file audio sottostante di un `[Media](media.html)` oggetto. Aggiorna anche il `[Media](media.html)` dell'oggetto `position` parametro.
 
 ## Piattaforme supportate
 

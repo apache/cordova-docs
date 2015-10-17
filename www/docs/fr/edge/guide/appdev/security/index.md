@@ -32,7 +32,7 @@ Le guide suivant contient quelques meilleures pratiques de sécurité que vous d
 *   Iframes et le mécanisme de rappel Id
 *   Certificat épinglage
 *   Les certificats auto-signés
-*   Stockage crypté
+*   [Stockage](../../../cordova/storage/storage.html) crypté
 *   Conseils généraux
 *   Articles recommandés et autres ressources
 

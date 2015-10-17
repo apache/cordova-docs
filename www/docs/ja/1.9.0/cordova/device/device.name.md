@@ -42,7 +42,7 @@ device.name
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       はコードネームである "Passion" を返します

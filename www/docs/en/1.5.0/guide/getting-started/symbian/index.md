@@ -51,11 +51,11 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - In cygwin, navigate to where you extracted PhoneGap and go into the Symbian directory</li>
 
  
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
 - Open up index.html located in phonegap/symbian/framework/www with your favourite editor. 
-- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
+- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>[Hello World](../webos/index.html)</h1>`
 - In cygwin/terminal, type make. This will produce phonegap-symbian.wrt/app.wgz. 
 
 
@@ -67,7 +67,7 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - Load the phonegap-symbian.wrt/app.wgz file into the emulator.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../phonegap/device/device.html)
 --------------------
 
 - Load the phonegap-symbian.wrt/app.wgz file into the device using bluetooth or email.
@@ -76,5 +76,5 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494780/Getting-Started-with-Phonegap-Nokia-WRT).
+You can also checkout more detailed [version](../../../phonegap/storage/parameters/version.html) of this guide [here](http://wiki.phonegap.com/w/page/16494780/Getting-Started-with-Phonegap-Nokia-WRT).
 

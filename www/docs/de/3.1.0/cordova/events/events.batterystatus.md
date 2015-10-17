@@ -29,15 +29,15 @@ Das Ereignis wird ausgelöst, wenn eine Änderung in den Batteriestatus vorliegt
 
 ## Informationen
 
-Dieses Ereignis wird ausgelöst, wenn der Prozentsatz der Akkuladung um mindestens 1 Prozent ändert, oder wenn das Gerät eingesteckt oder "Unplugged".
+Dieses Ereignis wird ausgelöst, wenn der Prozentsatz der Akkuladung um mindestens 1 Prozent ändert, oder wenn das [Gerät](../device/device.html) eingesteckt oder "Unplugged".
 
 Der Batterie-Status-Handler wird ein Objekt übergeben, das zwei Eigenschaften enthält:
 
 *   **Ebene**: der Prozentsatz der Batterieladung (0-100). *(Anzahl)*
 
-*   **IsPlugged**: ein boolescher Wert, der angibt, ob das Gerät eingesteckt Zoll *(boolesch)*
+*   **IsPlugged**: ein boolescher Wert, der angibt, ob das [Gerät](../device/device.html) eingesteckt Zoll *(boolesch)*
 
-Anwendungen sollten in der Regel verwenden `window.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `window.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

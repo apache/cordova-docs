@@ -74,7 +74,7 @@ title: splashscreen.hide
 
 ## iOS の気まぐれ
 
-`config.xml`ファイルの `AutoHideSplashScreen` 設定する必要があります `false` 。 遅延を 2 秒間スプラッシュ スクリーンを非表示、する、タイマーを追加しますで次のように `deviceready` イベント ハンドラー。
+`config.xml`ファイルの `AutoHideSplashScreen` 設定する必要があります `false` 。 遅延を 2 秒間スプラッシュ スクリーンを非表示、する、タイマーを追加しますで次のように `[deviceready](../events/events.deviceready.html)` [イベント](../events/events.html) ハンドラー。
 
         setTimeout(function() {
             navigator.splashscreen.hide();

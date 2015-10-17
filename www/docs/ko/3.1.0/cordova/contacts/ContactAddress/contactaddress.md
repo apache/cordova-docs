@@ -153,7 +153,7 @@ title: ContactAddress
 
 *   **포맷**: 부분적으로 지원 합니다. 모든 검은 딸기 주소 필드의 연결을 반환합니다.
 
-*   **streetAddress**: 지원. 블랙베리 **address1** **주소 2** 의 연결 주소 필드를 반환합니다.
+*   **streetAddress**: 지원. 블랙베리 **address1** **주소 2** 의 [연결](../../connection/connection.html) 주소 필드를 반환합니다.
 
 *   **지역**: 지원. 블랙베리 **시** 주소 필드에 저장 합니다.
 

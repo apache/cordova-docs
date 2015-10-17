@@ -23,22 +23,22 @@ title: ContactName
 ContactName
 ===========
 
-Contains name properties of a `Contact` object.
+Contains [name](../../storage/parameters/name.html) properties of a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
 
-- __formatted:__ The complete name of the contact. _(DOMString)_
-- __familyName:__ The contacts family name. _(DOMString)_
-- __givenName:__ The contacts given name. _(DOMString)_
-- __middleName:__ The contacts middle name. _(DOMString)_
+- __formatted:__ The complete [name](../../storage/parameters/name.html) of the contact. _(DOMString)_
+- __familyName:__ The contacts family [name](../../storage/parameters/name.html). _(DOMString)_
+- __givenName:__ The contacts given [name](../../storage/parameters/name.html). _(DOMString)_
+- __middleName:__ The contacts middle [name](../../storage/parameters/name.html). _(DOMString)_
 - __honorificPrefix:__ The contacts prefix (example Mr. or Dr.) _(DOMString)_
 - __honorificSuffix:__ The contacts suffix (example Esq.). _(DOMString)_
 
 Details
 -------
 
-The `ContactName` object stores name properties of a contact.
+The `ContactName` object stores [name](../../storage/parameters/name.html) properties of a contact.
 
 Supported Platforms
 -------------------
@@ -47,7 +47,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -67,10 +67,10 @@ Quick Example
 
     var options = new ContactFindOptions();
 	options.filter="";
-	filter = ["displayName","name"];
+	filter = ["displayName","[name](../../storage/parameters/name.html)"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -88,9 +88,9 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
+			var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter="";
-			filter = ["displayName","name"];
+			filter = ["displayName","[name](../../storage/parameters/name.html)"];
 			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     

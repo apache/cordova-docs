@@ -22,7 +22,7 @@ title: SQLResultSet
 
 # SQLResultSet
 
-Quand un `SQLTransaction` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre.
+Quand un `[SQLTransaction](../sqltransaction/sqltransaction.html)` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre.
 
 ## Propriétés
 
@@ -30,11 +30,11 @@ Quand un `SQLTransaction` de l'objet `executeSql` est appelée, le callback spé
 
 *   **rowsAffected**: le nombre de lignes modifiées par l'instruction SQL, zéro si l'instruction n'a pas affecté toutes les lignes.
 
-*   **lignes**: un `SQLResultSetRowList` qui représente les lignes retournées, vide si aucune ligne n'est retournée.
+*   **lignes**: un `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` qui représente les lignes retournées, vide si aucune ligne n'est retournée.
 
 ## Détails
 
-Quand un `SQLTransaction` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre contenant trois propriétés :
+Quand un `[SQLTransaction](../sqltransaction/sqltransaction.html)` de l'objet `executeSql` est appelée, le callback spécifié s'exécute avec un `SQLResultSet` paramètre contenant trois propriétés :
 
 *   Le `insertId` retourne le numéro de ligne d'une instruction d'insertion SQL successly. Si le code SQL n'insère pas de toutes les lignes, le `insertId` n'est pas définie.
 

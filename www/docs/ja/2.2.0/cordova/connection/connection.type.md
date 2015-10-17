@@ -41,7 +41,7 @@ connection.type
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
@@ -106,7 +106,7 @@ connection.type
 
 API の変更点
 ----------
-Cordova 2.2.0 以前では、 Connection オブジェクトは `navigator.network.connection` にありました。
+Cordova 2.2.0 以前では、 [Connection](connection.html) オブジェクトは `navigator.network.connection` にありました。
 
 仕様と一致させるため、これは 2.2.0 で `navigator.connection` に変更されました。
 
@@ -133,7 +133,7 @@ webOS に関する注意点
 Windows Phone に関する注意点
 --------------------
 
-- Windows Phone Emulator は常に `navigator.connection.type` を `Connection.UNKNOWN` と返します。
+- Windows Phone Emulator は常に `navigator.connection.type` を `[Connection](connection.html).UNKNOWN` と返します。
 
 Tizen に関する注意点
 --------------------

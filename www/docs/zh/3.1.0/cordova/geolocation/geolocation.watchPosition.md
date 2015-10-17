@@ -39,11 +39,11 @@ title: geolocation.watchPosition
 
 ## 返回
 
-*   **字串**： 返回引用的觀看位置間隔的表 id。應與一起使用的表 id `geolocation.clearWatch` 停止了觀看中位置的更改。
+*   **字串**： 返回引用的觀看位置間隔的表 id。應與一起使用的表 id `[geolocation.clearWatch](geolocation.clearWatch.html)` 停止了觀看中位置的更改。
 
 ## 說明
 
-`geolocation.watchPosition`是一個非同步函數。 當檢測到位置更改時，它返回該設備的當前的位置。 當設備中檢索一個新的位置， `geolocationSuccess` 回檔執行與 `Position` 物件作為參數。 如果有錯誤， `geolocationError` 回檔執行與 `PositionError` 物件作為參數。
+`geolocation.watchPosition`是一個非同步函數。 當檢測到位置更改時，它返回該設備的當前的位置。 當設備中檢索一個新的位置， `[geolocationSuccess](parameters/geolocationSuccess.html)` 回檔執行與 `Position` 物件作為參數。 如果有錯誤， `[geolocationError](parameters/geolocationError.html)` 回檔執行與 `[PositionError](PositionError/positionError.html)` 物件作為參數。
 
 ## 支援的平臺
 

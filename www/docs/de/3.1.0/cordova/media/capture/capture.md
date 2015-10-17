@@ -24,26 +24,26 @@ title: Erfassen
 
 > Ermöglicht den Zugriff auf des Geräts Audio-, Bild- und video-Capture-Funktionen.
 
-**Wichtige Datenschutzhinweis:** Erfassung und Verwendung von Bildern, Video oder Audio von Kamera oder das Mikrofon des Geräts wirft wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app solche Sensoren verwendet und ob die aufgezeichneten Daten mit irgendwelchen anderen Parteien geteilt werden. Außerdem, wenn die app-Nutzung der Kamera oder Mikrofon in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie bereitstellen eine just-in-Time-Bekanntmachung vor Ihrer Anwendung den Zugriff auf die Kamera oder das Mikrofon (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf die Kamera oder das Mikrofon einholen. Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Wichtige Datenschutzhinweis:** Erfassung und Verwendung von Bildern, Video oder Audio von [Kamera](../../camera/camera.html) oder das Mikrofon des Geräts wirft wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app solche Sensoren verwendet und ob die aufgezeichneten Daten mit irgendwelchen anderen Parteien geteilt werden. Außerdem, wenn die app-Nutzung der [Kamera](../../camera/camera.html) oder Mikrofon in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie bereitstellen eine just-in-Time-Bekanntmachung vor Ihrer Anwendung den Zugriff auf die [Kamera](../../camera/camera.html) oder das Mikrofon (wenn das Betriebssystem des Geräts bereits tun nicht). Diese [Benachrichtigung](../../notification/notification.html) sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf die [Kamera](../../camera/camera.html) oder das Mikrofon einholen. Weitere Informationen finden Sie in der [Datenschutz-Guide](../../../guide/appdev/privacy/index.html).
 
 ## Objekte
 
 *   Erfassen
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [MediaFile](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## Methoden
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 ## Anwendungsbereich
 
@@ -55,19 +55,19 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Eigenschaften
 
-*   **SupportedAudioModes**: die Audio-Aufnahme vom Gerät unterstützten Formate. (ConfigurationData[])
+*   **SupportedAudioModes**: die Audio-Aufnahme vom [Gerät](../../device/device.html) unterstützten Formate. (ConfigurationData[])
 
-*   **SupportedImageModes**: die Aufnahme Bildgrößen und Formaten, die von dem Gerät unterstützt. (ConfigurationData[])
+*   **SupportedImageModes**: die Aufnahme Bildgrößen und Formaten, die von dem [Gerät](../../device/device.html) unterstützt. (ConfigurationData[])
 
-*   **SupportedVideoModes**: die Aufnahme Bildschirmauflösungen und Formate, die vom Gerät unterstützt. (ConfigurationData[])
+*   **SupportedVideoModes**: die Aufnahme Bildschirmauflösungen und Formate, die vom [Gerät](../../device/device.html) unterstützt. (ConfigurationData[])
 
 ## Methoden
 
-*   `capture.captureAudio`: Starten Sie das Gerät audio-Recording-Anwendung aufzeichnen von audio-Clips.
+*   `[capture.captureAudio](captureAudio.html)`: Starten Sie das [Gerät](../../device/device.html) audio-Recording-Anwendung aufzeichnen von audio-Clips.
 
-*   `capture.captureImage`: Starten Sie das Gerät-Kamera-Anwendung um Fotos zu machen.
+*   `[capture.captureImage](captureImage.html)`: Starten Sie das Gerät-Kamera-Anwendung um Fotos zu machen.
 
-*   `capture.captureVideo`: Starten des Geräts Videorecorder zum Aufzeichnen von Videos.
+*   `[capture.captureVideo](captureVideo.html)`: Starten des Geräts Videorecorder zum Aufzeichnen von Videos.
 
 ## Unterstützte Plattformen
 
@@ -131,4 +131,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </Capabilities>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../../guide/overview/index.html).

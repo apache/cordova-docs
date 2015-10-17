@@ -150,7 +150,7 @@ iOS unterstützt Whitelisting-Syntax.
 
 ### In 3.1.0 geändert:
 
-Vor Version 3.1.0 enthalten Cordova-iOS einige nicht-standard-Erweiterungen für die Domäne Whilelisting Regelung von anderen Cordova-Plattformen unterstützt. Ab 3.1.0 entspricht die iOS-Whitelist jetzt die Ressource-Whitelist-Syntax an der Spitze dieses Dokuments beschrieben. Wenn Sie ein von Pre-3.1.0 Upgrade und Sie wurden diese Erweiterungen verwenden, müssen Sie möglicherweise ändern Ihre `config.xml` Datei um Whitelisting dieselben Ressourcen wie bisher weiter.
+Vor Version 3.1.0 enthalten Cordova-iOS einige nicht-standard-Erweiterungen für die Domäne Whilelisting Regelung von anderen Cordova-Plattformen unterstützt. Ab 3.1.0 entspricht die iOS-Whitelist jetzt die Ressource-Whitelist-Syntax an der Spitze dieses Dokuments beschrieben. Wenn Sie ein von Pre-3.1.0 Upgrade und Sie wurden diese Erweiterungen verwenden, müssen Sie möglicherweise ändern Ihre `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) um Whitelisting dieselben Ressourcen wie bisher weiter.
 
 Insbesondere diese Muster müssen aktualisiert werden:
 
@@ -182,7 +182,7 @@ Zugang zu [google.com][3]:
 
 ### Informationen
 
-Stammverzeichnis der Anwendung `config.xml` Datei gibt Whitelisting Domänenregeln, mit dem `<access origin="..." />` Element. Eine vollständige Referenz finden Sie in der [Dokumentation Tizen zugreifen auf externe Netzwerkressourcen][10].
+Stammverzeichnis der Anwendung `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) gibt Whitelisting Domänenregeln, mit dem `<access origin="..." />` Element. Eine vollständige Referenz finden Sie in der [Dokumentation Tizen zugreifen auf externe Netzwerkressourcen][10].
 
  [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 

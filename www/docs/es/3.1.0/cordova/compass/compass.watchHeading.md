@@ -31,9 +31,9 @@ A intervalos regulares, conseguir la brújula en grados.
 
 La brújula es un sensor que detecta la dirección o rumbo que el dispositivo está apuntando. Mide el rumbo en grados de 0 a 359.99.
 
-El `compass.watchHeading` obtiene el rumbo actual del dispositivo a intervalos regulares. Cada vez que el título es obtenido, se ejecuta la función de devolución de llamada `headingSuccess`. Especificar el intervalo en milisegundos mediante el parámetro de `frecuencia` en el objeto `compassOptions`.
+El `compass.watchHeading` obtiene el rumbo actual del dispositivo a intervalos regulares. Cada vez que el título es obtenido, se ejecuta la función de devolución de llamada `headingSuccess`. Especificar el intervalo en milisegundos mediante el parámetro de `frecuencia` en el objeto `[compassOptions](parameters/compassOptions.html)`.
 
-El identificador devuelto reloj hace referencia al intervalo de reloj brújula. El ID del reloj puede utilizarse con `compass.clearWatch` para dejar de mirar la brújula.
+El identificador devuelto reloj hace referencia al intervalo de reloj brújula. El ID del reloj puede utilizarse con `[compass.clearWatch](compass.clearWatch.html)` para dejar de mirar la brújula.
 
 ## Plataformas soportadas
 
@@ -129,6 +129,6 @@ El identificador devuelto reloj hace referencia al intervalo de reloj brújula. 
 
 ## iOS rarezas
 
-En iOS `compass.watchHeading` también puede obtener rumbo actual del dispositivo cuando cambia un número especificado de grados. Cada vez los cambios de rumbo el número especificado de grados o más, ejecuta la función de devolución de llamada `headingSuccess`. Especifique los grados de cambio a través del parámetro de `filtro` en el objeto `compassOptions`. Claro como siempre el reloj pasando el identificador devuelto reloj al `compass.clearWatch`. Esta funcionalidad sustituye las funciones de `clearWatchFilter`, que fueron quitadas en la versión 1.6 y previamente separadas, sólo iOS `watchHeadingFilter`.
+En iOS `compass.watchHeading` también puede obtener rumbo actual del dispositivo cuando cambia un número especificado de grados. Cada vez los cambios de rumbo el número especificado de grados o más, ejecuta la función de devolución de llamada `headingSuccess`. Especifique los grados de cambio a través del parámetro de `filtro` en el objeto `[compassOptions](parameters/compassOptions.html)`. Claro como siempre el reloj pasando el identificador devuelto reloj al `[compass.clearWatch](compass.clearWatch.html)`. Esta funcionalidad sustituye las funciones de `clearWatchFilter`, que fueron quitadas en la versión 1.6 y previamente separadas, sólo iOS `watchHeadingFilter`.
 
 Sólo un `watchHeading` puede ser en efecto a la vez en iOS. Si un `watchHeading` utiliza un filtro, llamando al `getCurrentHeading` o `watchHeading` utiliza el valor existente de filtro para especificar los cambios de rumbo. Observando los cambios de rumbo con un filtro es más eficiente que con intervalos de tiempo.

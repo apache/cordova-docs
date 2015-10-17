@@ -58,13 +58,13 @@ Enthält Eigenschaften, die einen Kontakt, z. B. eines Benutzers persönlicher o
 
 *   **Klon**: gibt eine neue `Contact` Objekt, das eine tiefe Kopie des aufrufenden Objekts, mit der `id` -Eigenschaft festgelegt`null`.
 
-*   **Entfernen**: entfernt den Kontakt aus der Gerät-Kontakte-Datenbank, ansonsten führt eine Fehler-Callback mit einem `ContactError` Objekt.
+*   **Entfernen**: entfernt den Kontakt aus der Gerät-Kontakte-Datenbank, ansonsten führt eine Fehler-Callback mit einem `[ContactError](../ContactError/contactError.html)` Objekt.
 
-*   **Speichern**: speichert einen neuen Kontakt in der Gerätedatenbank Kontakte, oder einen vorhandenen Kontakt aktualisiert, wenn ein Kontakt mit der gleichen **Id** bereits vorhanden ist.
+*   **Speichern**: speichert einen neuen Kontakt in der Gerätedatenbank [Kontakte](../contacts.html), oder einen vorhandenen Kontakt aktualisiert, wenn ein Kontakt mit der gleichen **Id** bereits vorhanden ist.
 
 ## Informationen
 
-Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können erstellt, gespeichert oder aus der Gerät-Kontakte-Datenbank entfernt werden. Kontakte können auch abgerufen werden (einzeln oder als Gruppe) aus der Datenbank durch den Aufruf der `contacts.find` Methode.
+Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. [Kontakte](../contacts.html) können erstellt, gespeichert oder aus der Gerät-Kontakte-Datenbank entfernt werden. [Kontakte](../contacts.html) können auch abgerufen werden (einzeln oder als Gruppe) aus der [Datenbank](../../storage/database/database.html) durch den Aufruf der `[contacts.find](../contacts.find.html)` Methode.
 
 **Hinweis:** Nicht alle oben aufgeführten Kontaktfelder sind auf jedem Geräteplattform unterstützt. Bitte überprüfen Sie jede Plattform *Quirks* Abschnitt für Details.
 
@@ -202,7 +202,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 ## BlackBerry WebWorks (OS 5.0 und höher) Macken
 
-*   **ID**: unterstützt. Durch das Gerät zugewiesen, wenn Sie den Kontakt zu speichern.
+*   **ID**: unterstützt. Durch das [Gerät](../../device/device.html) zugewiesen, wenn Sie den Kontakt zu speichern.
 
 *   **DisplayName**: unterstützt. Im BlackBerry **user1** Feld gespeichert.
 
@@ -218,7 +218,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 *   **Organisationen**: teilweise unterstützt. Den **Namen** und den **Titel** der ersten Organisation werden in den Feldern **Firma** und **Titel** BlackBerry gespeichert.
 
-*   **Fotos**: teilweise unterstützt. Ein einzelnes Foto der Miniaturansicht wird unterstützt. Legen Sie ein Kontakt-Foto, übergeben in einem entweder eine base64-codierte Bild oder eine URL auf das Bild zeigen. Das Bild wird vor dem Speichern der BlackBerry Kontakte Datenbank verkleinert. Kontakte Foto wird als base64-codierte Bild zurückgegeben.
+*   **Fotos**: teilweise unterstützt. Ein einzelnes Foto der Miniaturansicht wird unterstützt. Legen Sie ein Kontakt-Foto, übergeben in einem entweder eine base64-codierte Bild oder eine URL auf das Bild zeigen. Das Bild wird vor dem Speichern der BlackBerry [Kontakte](../contacts.html) [Datenbank](../../storage/database/database.html) verkleinert. [Kontakte](../contacts.html) Foto wird als base64-codierte Bild zurückgegeben.
 
 *   **Kategorien**: teilweise unterstützt. Nur die Kategorien *Business* und *Personal* werden unterstützt.
 
@@ -226,7 +226,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 ## iOS Macken
 
-*   **DisplayName**: nicht auf iOS, Rückkehr unterstützt `null` es sei kein `ContactName` angegeben, in welchem Fall es gibt den zusammengesetzten Namen, **Spitznamen** oder `""` bzw..
+*   **DisplayName**: nicht auf iOS, Rückkehr unterstützt `null` es sei kein `[ContactName](../ContactName/contactname.html)` angegeben, in welchem Fall es gibt den zusammengesetzten Namen, **Spitznamen** oder `""` bzw..
 
 *   **Geburtstag**: muss eingegeben werden, als JavaScript `Date` Objekt, die gleiche Weise zurückgegeben wird.
 

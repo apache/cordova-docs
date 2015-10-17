@@ -28,8 +28,8 @@ Camera
 Methods
 -------
 
-- camera.getPicture
-- camera.cleanup
+- [camera.getPicture](camera.getPicture.html)
+- [camera.cleanup](camera.cleanup.html)
 
 Permissions
 -----------

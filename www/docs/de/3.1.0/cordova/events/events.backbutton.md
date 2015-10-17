@@ -29,7 +29,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer den "zurück"-Button drückt.
 
 ## Details
 
-Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.addEventListener` sobald Sie erhalten die `deviceready` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
+Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereignis-Listener für das `backbutton` Ereignis in der Regel durch den Aufruf `document.addEventListener` sobald Sie erhalten die `[deviceready](events.deviceready.html)` Ereignis. Es ist nicht mehr notwendig, jede andere Methode zum Überschreiben der zurück-Button aufrufen.
 
 ## Unterstützte Plattformen
 

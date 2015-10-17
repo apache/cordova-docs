@@ -27,7 +27,7 @@ Smettere di guardare la bussola a cui fa riferimento il parametro ID orologio.
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: l'ID restituito da`compass.watchHeading`.
+*   **watchID**: l'ID restituito da`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Piattaforme supportate
 

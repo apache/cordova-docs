@@ -31,7 +31,7 @@ title: globalization.getFirstDayOfWeek
 
 Дни недели нумеруются от 1, где 1 считается воскресенье. Возвращает день в `successCallback` с `properties` объект в качестве параметра. Этот объект должен иметь `value` свойство с `Number` значение.
 
-Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
+Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Поддерживаемые платформы
 

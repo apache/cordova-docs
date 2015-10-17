@@ -22,16 +22,16 @@ title: Online
 
 # Online
 
-Dieses Ereignis wird ausgelöst, wenn eine Anwendung online geht, und das Gerät wird mit dem Internet verbunden.
+Dieses Ereignis wird ausgelöst, wenn eine Anwendung online geht, und das [Gerät](../device/device.html) wird mit dem Internet verbunden.
 
     document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Das `online` -Ereignis wird ausgelöst, wenn ein zuvor unverbundenen Gerät eine Netzwerkverbindung zu einem Anwendung Zugriff auf das Internet empfängt. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn der Wert des `connection.type` wird`NONE`.
+Das `online` -Ereignis wird ausgelöst, wenn ein zuvor unverbundenen [Gerät](../device/device.html) eine Netzwerkverbindung zu einem Anwendung Zugriff auf das Internet empfängt. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn der Wert des `[connection.type](../connection/connection.type.html)` wird`NONE`.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -87,7 +87,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## iOS Macken
 
-Beim ersten Start die erste `online` Ereignis (falls zutreffend) dauert mindestens eine Sekunde vor dem Feuer `connection.type` ist`UNKNOWN`.
+Beim ersten Start die erste `online` Ereignis (falls zutreffend) dauert mindestens eine Sekunde vor dem Feuer `[connection.type](../connection/connection.type.html)` ist`UNKNOWN`.
 
 ## Windows Phone 7 Macken
 

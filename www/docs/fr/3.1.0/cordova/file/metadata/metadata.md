@@ -30,7 +30,7 @@ Une interface fournissant des informations sur l'état d'un fichier ou un réper
 
 ## Détails
 
-L'objet `Metadata` fournit des informations sur l'état d'un fichier ou un répertoire. Appeler la méthode `getMetadata()` d'un objet `DirectoryEntry` ou `FileEntry` retourne une instance de `Metadata`.
+L'objet `Metadata` fournit des informations sur l'état d'un fichier ou un répertoire. Appeler la méthode `getMetadata()` d'un objet `[DirectoryEntry](../directoryentry/directoryentry.html)` ou `[FileEntry](../fileentry/fileentry.html)` retourne une instance de `Metadata`.
 
 ## Plates-formes supportées
 

@@ -22,12 +22,12 @@ title: accelerometer.clearWatch
 
 # accelerometer.clearWatch
 
-보고 중지는 `Acceleration` 에 의해 참조 되는 `watchID` 매개 변수.
+보고 중지는 `Acceleration` 에 의해 참조 되는 `watchID` 매개 [변수](../../plugin_ref/spec.html).
 
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: ID 반환`accelerometer.watchAcceleration`.
+*   **watchID**: ID 반환`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## 지원 되는 플랫폼
 

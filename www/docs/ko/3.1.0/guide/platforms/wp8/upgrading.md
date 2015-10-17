@@ -44,7 +44,7 @@ platform add wp7 wp8`.
 
 3.  프로젝트의 내용을 복사 `www` 디렉토리에 `www` 에서 방금 만든 코르 도우 바 프로젝트의 루트 디렉토리.
 
-4.  복사 또는 원래 프로젝트에서 어떤 기본 자산을 덮어쓸 ( `SplashScreen` , `ApplicationIcon` , 등), 물론 모든 새 파일을 추가 하는 `.csproj` 파일. Windows 전화 내부 프로젝트 빌드는 `platforms\wp7` 또는 `platforms\wp8` 디렉터리.
+4.  복사 또는 원래 프로젝트에서 어떤 기본 자산을 덮어쓸 ( `SplashScreen` , `ApplicationIcon` , 등), 물론 모든 새 파일을 추가 하는 `.csproj` [파일](../../../cordova/file/fileobj/fileobj.html). Windows 전화 내부 프로젝트 빌드는 `platforms\wp7` 또는 `platforms\wp8` 디렉터리.
 
 5.  코르 도우 바 CLI 도구를 사용 하 여 필요한 어떤 플러그인을 설치 하려면. 참고 CLI 처리 하는 모든 핵심 Api 플러그인으로 추가 될 필요가 있습니다. 만 3.0.0 플러그인 CLI와 호환 됩니다.
 
@@ -90,7 +90,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova.js` 파일. (참고 파일 이름에 버전 번호의 부족 합니다.)
+3.  새로운 사용 하 여 HTML 업데이트 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html). (참고 [파일](../../../cordova/file/fileobj/fileobj.html) 이름에 버전 번호의 부족 합니다.)
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -106,7 +106,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.7.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.7.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -122,7 +122,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -138,7 +138,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -154,7 +154,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -170,7 +170,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -186,7 +186,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -202,7 +202,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -220,7 +220,7 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 2.  내용을 복사 하 여 `www` 새 프로젝트 디렉토리 대 프로젝트에 이러한 항목을 추가 해야 하 고.
 
-3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` 파일.
+3.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 4.  복사 하 고 모든 시작 화면 또는 아이콘 이미지를 덮어씁니다.
 
@@ -238,13 +238,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.9.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.9.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.9.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.8.0 1.7.0에서 업그레이드
 
@@ -256,13 +256,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.8.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.6.0에서 1.7.0으로 업그레이드
 
@@ -274,13 +274,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.7.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.7.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.7.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.6.0에서 1.6.1로 업그레이드
 
@@ -292,13 +292,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.6.1.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.1.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.1.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.5.0에서 1.6.0로 업그레이드
 
@@ -310,13 +310,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.6.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.4.0에서 1.5.0로 업그레이드
 
@@ -328,13 +328,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.5.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.5.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.5.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.3.0에서 1.4.0로 업그레이드
 
@@ -346,13 +346,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.4.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.4.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.2.0에서 1.3.0 업그레이드
 
@@ -364,13 +364,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.3.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.3.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.3.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.1.0에서 1.2.0으로 업그레이드
 
@@ -382,13 +382,13 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
 5.  새로운 복사 `cordova-1.2.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.2.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.1.0 1.0.0에서 업그레이드
 
@@ -400,10 +400,10 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` [파일](../../../cordova/file/fileobj/fileobj.html).
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다.
 
 5.  새로운 복사 `cordova-1.1.0.js` 프로젝트에. (반드시 내용으로 표시 됩니다.)
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.1.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-1.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).

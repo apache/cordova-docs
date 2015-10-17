@@ -31,7 +31,7 @@ Analiza un número con formato como una cadena según las preferencias del usuar
 
 Devuelve el número de la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `Number`.
 
-Si hay un error al analizar la cadena número, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PARSING\_ERROR`.
+Si hay un error al analizar la cadena número, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 El parámetro `options` es opcional y por defecto para los siguientes valores:
 

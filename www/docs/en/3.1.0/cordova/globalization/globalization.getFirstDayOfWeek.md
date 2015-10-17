@@ -35,8 +35,8 @@ to be Sunday.  Returns the day to the `successCallback` with a
 property with a `Number` value.
 
 If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Supported Platforms
 

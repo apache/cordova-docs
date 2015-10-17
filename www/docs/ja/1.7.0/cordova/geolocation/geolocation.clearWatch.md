@@ -35,7 +35,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 概要
 -----------
 
-`geolocation.clearWatch` 関数は、 `watchID` によって参照される `geolocation.watchPosition` 関数を停止させるによって、位置情報の監視を停止します。
+`geolocation.clearWatch` 関数は、 `watchID` によって参照される `[geolocation.watchPosition](geolocation.watchPosition.html)` 関数を停止させるによって、位置情報の監視を停止します。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,7 +46,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 3秒ごとに位置情報を取得する設定 (オプション)

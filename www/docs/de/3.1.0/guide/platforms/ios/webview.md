@@ -34,7 +34,7 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
 
 *   Xcode 4.5 oder höher
 
-*   `config.xml`Datei (aus einem neu erstellten iOS-Projekt)
+*   `config.xml`[Datei](../../../cordova/file/fileobj/fileobj.html) (aus einem neu erstellten iOS-Projekt)
 
 ## Hinzufügen von Cleaver zum Xcode Projekt (CordovaLib-Teilprojekt)
 
@@ -44,13 +44,13 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
 
 3.  Terminal.app verwenden, navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Kopie der `config.xml` Datei in das Projektverzeichnis auf der Festplatte (siehe die oben genannten Voraussetzungen).
+4.  Kopie der `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) in das Projektverzeichnis auf der Festplatte (siehe die oben genannten Voraussetzungen).
 
-5.  Drag & drop die `config.xml` Datei in das Projekt-Navigator Xcode.
+5.  Drag & drop die `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) in das Projekt-Navigator Xcode.
 
 6.  Wählen Sie das Optionsfeld **erstellen Gruppen für alle hinzugefügten Ordner** und drücken Sie die Taste **Beenden**.
 
-7.  Drag & drop die `CordovaLib.xcodeproj` Datei in das Projekt-Navigator Xcode (aus dem ständigen Verzeichnis Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
+7.  Drag & drop die `CordovaLib.xcodeproj` [Datei](../../../cordova/file/fileobj/fileobj.html) in das Projekt-Navigator Xcode (aus dem ständigen Verzeichnis Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 

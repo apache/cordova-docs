@@ -26,9 +26,9 @@ title: Archiviazione
 
 Questa API offre opzioni di archiviazione basate su due diverse specifiche W3C:
 
-*   La [Specifica API di archiviazione Web][1] consente di accedere ai dati tramite coppie chiave/valore semplice. Vedere la sezione localStorage per informazioni dettagliate su questa interfaccia.
+*   La [Specifica API di archiviazione Web][1] consente di accedere ai dati tramite coppie chiave/valore semplice. Vedere la sezione [localStorage](localstorage/localstorage.html) per informazioni dettagliate su questa interfaccia.
 
-*   La [Specifica di Database SQL Web][2] offre più tabelle di database completo accessibili tramite query SQL. Una sintesi di questa interfaccia viene visualizzata immediatamente sotto.
+*   La [Specifica di [Database](database/database.html) SQL Web][2] offre più tabelle di database completo accessibili tramite query SQL. Una sintesi di questa interfaccia viene visualizzata immediatamente sotto.
 
  [1]: http://dev.w3.org/html5/webstorage/
  [2]: http://dev.w3.org/html5/webdatabase/
@@ -37,22 +37,22 @@ Cordova fornisce accesso a entrambe le interfacce per la minoranza di dispositiv
 
 ## Metodi
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## Argomenti
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## Oggetti
 
-*   Database
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [Database](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## La funzionalità di accesso
 

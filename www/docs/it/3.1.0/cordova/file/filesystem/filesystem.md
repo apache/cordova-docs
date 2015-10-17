@@ -32,7 +32,7 @@ Questo oggetto rappresenta un file system.
 
 ## Dettagli
 
-Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il nome del file system è univoco tra l'elenco dei sistemi di file esposti. La proprietà della radice contiene un `DirectoryEntry` oggetto che rappresenta la directory radice del file system.
+Il `FileSystem` oggetto rappresenta le informazioni relative al file system. Il nome del file system è univoco tra l'elenco dei sistemi di file esposti. La proprietà della radice contiene un `[DirectoryEntry](../directoryentry/directoryentry.html)` oggetto che rappresenta la directory radice del file system.
 
 ## Piattaforme supportate
 

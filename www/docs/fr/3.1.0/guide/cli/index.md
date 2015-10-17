@@ -26,7 +26,7 @@ Ce guide vous montre comment créer des applications et déployez-les sur diffé
 
 ## Conditions préalables
 
-Avant d'exécuter tous les outils de ligne de commande, vous devez installer le SDK pour chaque plate-forme que vous voulez cibler. (Voir les Guides de la plate-forme pour plus de détails.)
+Avant d'exécuter tous les outils de ligne de commande, vous devez installer le SDK pour chaque plate-forme que vous voulez cibler. (Voir les [Guides de la plate-forme](../platforms/index.html) pour plus de détails.)
 
 Pour ajouter le support ou reconstruire un projet pour n'importe quelle plateforme, vous devez exécuter la commande-ligne interface de la même machine qui prend en charge SDK de la plate-forme. L'ICA prend en charge les combinaisons suivantes :
 
@@ -108,11 +108,11 @@ Exécutez une des commandes suivantes synonymes d'enlever une plate-forme :
 
 Exécution de commandes pour ajouter ou supprimer des affects de plates-formes le contenu du répertoire de *plates-formes* du projet, où chaque plate-forme spécifiée apparaît comme un sous-répertoire. Le répertoire de source *www* est reproduit dans le sous-répertoire de la plate-forme, qui apparaît par exemple dans `platforms/ios/www` ou `platforms/android/assets/www` . Par défaut, le fichier de configuration de chaque plateforme est configuré pour pouvoir accéder à l'ensemble des API de Cordova.
 
-Si vous le souhaitez, vous pouvez utiliser un SDK à ce stade d'ouvrir le projet que vous avez créé. Toutefois, les modifications que vous apportez au projet au sein d'un affect SDK le dérivé ensemble de biens, pas les fichiers source multi-plateforme d'origine. Utilisez cette approche si vous souhaitez simplement initialiser un projet. (Voir les Guides de la plate-forme pour plus d'informations sur la façon de développer des applications au sein de chaque SDK.) Lire sur si vous souhaitez utiliser les outils de ligne de commande pour le cycle de développement complet.
+Si vous le souhaitez, vous pouvez utiliser un SDK à ce stade d'ouvrir le projet que vous avez créé. Toutefois, les modifications que vous apportez au projet au sein d'un affect SDK le dérivé ensemble de biens, pas les fichiers source multi-plateforme d'origine. Utilisez cette approche si vous souhaitez simplement initialiser un projet. (Voir les [Guides de la plate-forme](../platforms/index.html) pour plus d'informations sur la façon de développer des applications au sein de chaque SDK.) Lire sur si vous souhaitez utiliser les outils de ligne de commande pour le cycle de développement complet.
 
 ## Construire l'application
 
-Par défaut, le `cordova create` script génère une squelettique application web dont la page d'accueil est du projet `www/index.html` fichier. Modifier cette application, mais vous voulez, mais toute initialisation doit être spécifiée dans le cadre de la `deviceready` gestionnaire d'événements, référencé par défaut de `www/js/index.js` . <!-- XREF
+Par défaut, le `cordova create` script génère une squelettique application web dont la page d'accueil est du projet `www/index.html` fichier. Modifier cette application, mais vous voulez, mais toute initialisation doit être spécifiée dans le cadre de la `[deviceready](../../cordova/events/events.deviceready.html)` gestionnaire d'événements, référencé par défaut de `www/js/index.js` . <!-- XREF
 (See the Application Development Guide for details.)
 XREF -->
 
@@ -141,7 +141,7 @@ Kits de développement logiciel pour les plates-formes mobiles sont souvent livr
         $ cordova emulate android
     
 
-Certaines plates-formes mobiles émulent un périphérique par défaut, tels que l'iPhone pour les projets de l'iOS. Pour d'autres plateformes, vous devrez tout d'abord associer un périphérique avec un émulateur. (Voir les Guides de la plate-forme pour plus de détails.) Par exemple, vous pouvez d'abord exécuter la `android` commande pour lancer le SDK Android, puis exécutez une image de périphérique particulier, dont il lance selon son comportement par défaut :
+Certaines plates-formes mobiles émulent un périphérique par défaut, tels que l'iPhone pour les projets de l'iOS. Pour d'autres plateformes, vous devrez tout d'abord associer un périphérique avec un émulateur. (Voir les [Guides de la plate-forme](../platforms/index.html) pour plus de détails.) Par exemple, vous pouvez d'abord exécuter la `android` commande pour lancer le SDK Android, puis exécutez une image de périphérique particulier, dont il lance selon son comportement par défaut :
 
 ![][2]
 
@@ -158,7 +158,7 @@ Alternativement, vous pouvez brancher le combiné dans votre ordinateur et teste
         $ cordova run android
     
 
-Avant d'exécuter cette commande, vous devez mettre en place le dispositif de test, suivant des procédures qui varient pour chaque plate-forme. Dans le cas d'Android, vous devrez activer une option de **Débogage USB** sur l'appareil et peut-être ajouter un pilote USB selon votre environnement de développement. Consultez les Guides de la plate-forme pour plus de détails sur les exigences de chaque plateforme.
+Avant d'exécuter cette commande, vous devez mettre en place le dispositif de test, suivant des procédures qui varient pour chaque plate-forme. Dans le cas d'Android, vous devrez activer une option de **Débogage USB** sur l'appareil et peut-être ajouter un pilote USB selon votre environnement de développement. Consultez les [Guides de la plate-forme](../platforms/index.html) pour plus de détails sur les exigences de chaque plateforme.
 
 ## Ajouter des fonctionnalités
 
@@ -173,20 +173,20 @@ Le `cordova plugin add` commande nécessite vous permet de spécifier le référ
         $ cordova plugin add org.apache.cordova.device
         
 
-*   Connexion réseau et événements de la batterie :
+*   [Connexion](../../cordova/connection/connection.html) réseau et événements de la batterie :
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
         
 
-*   Accéléromètre, boussole et géolocalisation :
+*   [Accéléromètre](../../cordova/accelerometer/accelerometer.html), boussole et géolocalisation :
     
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
         
 
-*   Appareil photo, lecture et Capture :
+*   [Appareil](../../cordova/device/device.html) photo, lecture et [Capture](../../cordova/media/capture/capture.html) :
     
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
@@ -199,23 +199,23 @@ Le `cordova plugin add` commande nécessite vous permet de spécifier le référ
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   Notification via la boîte de dialogue ou de vibration :
+*   [Notification](../../cordova/notification/notification.html) via la boîte de dialogue ou de vibration :
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   Contacts :
+*   [Contacts](../../cordova/contacts/contacts.html) :
     
         $ cordova plugin add org.apache.cordova.contacts
         
 
-*   Mondialisation :
+*   [Mondialisation](../../cordova/globalization/globalization.html) :
     
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   SplashScreen :
+*   [SplashScreen](../../cordova/splashscreen/splashscreen.html) :
     
         $ cordova plugin add org.apache.cordova.splashscreen
         
@@ -264,7 +264,7 @@ Au lieu de cela, le niveau supérieur `merges` répertoire offre un endroit pour
 
 Lorsque vous régénérez le projet, la version Android dispose de la taille de police personnalisée, tandis que d'autres restent inchangés.
 
-Vous pouvez également utiliser `merges` pour ajouter des fichiers non présents dans l'original `www` répertoire. Par exemple, une application peut intégrer un *bouton* graphique à l'interface d'iOS, stocké dans `merges/ios/img/back_button.png` , tandis que la version Android peut au lieu de capter `backbutton` événements de la touche correspondante de la quincaillerie.
+Vous pouvez également utiliser `merges` pour ajouter des fichiers non présents dans l'original `www` répertoire. Par exemple, une application peut intégrer un *bouton* graphique à l'interface d'iOS, stocké dans `merges/ios/img/back_button.png` , tandis que la version Android peut au lieu de capter `[backbutton](../../cordova/events/events.backbutton.html)` événements de la touche correspondante de la quincaillerie.
 
 ## Mise à jour de Cordova
 
@@ -284,4 +284,4 @@ info` commande pour obtenir une liste plus longue qui inclut la version actuelle
         $ npm info cordova
     
 
-Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le niveau supérieur `www` répertoire. Le cas échéant, plus amples détails sur la mise à niveau vers 3.0 sont disponibles dans les Guides de la plate-forme. Une fois que vous mettez à niveau vers le `cordova` Command-line interface et utilisation `npm update` pour rester à jour, les plus longues procédures décrits là ne sont plus pertinentes.
+Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le niveau supérieur `www` répertoire. Le cas échéant, plus amples détails sur la mise à niveau vers 3.0 sont disponibles dans les [Guides de la plate-forme](../platforms/index.html). Une fois que vous mettez à niveau vers le `cordova` Command-line interface et utilisation `npm update` pour rester à jour, les plus longues procédures décrits là ne sont plus pertinentes.

@@ -58,25 +58,25 @@ The following constants are reported as the only parameter to the
 Methods
 -------
 
-- `media.getCurrentPosition`: Returns the current position within an audio file.
+- `[media.getCurrentPosition](media.getCurrentPosition.html)`: Returns the current position within an audio file.
 
-- `media.getDuration`: Returns the duration of an audio file.
+- `[media.getDuration](media.getDuration.html)`: Returns the duration of an audio file.
 
-- `media.play`: Start or resume playing an audio file.
+- `[media.play](media.play.html)`: Start or [resume](../events/events.resume.html) playing an audio file.
 
-- `media.pause`: Pause playback of an audio file.
+- `[media.pause](media.pause.html)`: Pause playback of an audio file.
 
-- `media.release`: Releases the underlying operating system's audio resources.
+- `[media.release](media.release.html)`: Releases the underlying operating system's audio resources.
 
-- `media.seekTo`: Moves the position within the audio file.
+- `[media.seekTo](media.seekTo.html)`: Moves the position within the audio file.
 
-- `media.setVolume`: Set the volume for audio playback.
+- `[media.setVolume](media.setVolume.html)`: Set the volume for audio playback.
 
-- `media.startRecord`: Start recording an audio file.
+- `[media.startRecord](media.startRecord.html)`: Start recording an audio file.
 
-- `media.stopRecord`: Stop recording an audio file.
+- `[media.stopRecord](media.stopRecord.html)`: Stop recording an audio file.
 
-- `media.stop`: Stop playing an audio file.
+- `[media.stop](media.stop.html)`: Stop playing an audio file.
 
 Additional ReadOnly Parameters
 ---------------------

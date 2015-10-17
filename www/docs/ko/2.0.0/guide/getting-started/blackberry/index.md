@@ -57,7 +57,7 @@ Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://
 - Open up the project.properties file with your favorite editor and edit the entries for `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=`. Set the  value(s) to the directory containing the `bbwp` binary in the WebWorks SDK(s) installed earlier.
 
 
-4.  Hello World
+4.  [Hello World](../webos/index.html)
 --------------
 
 Build the Cordova sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace `target` with either `blackberry` or `playbook`. Note this is a sample Cordova project and not a basic hello world application. The provided index.html in the www contains example usages of many of the Cordova API.
@@ -77,7 +77,7 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
 - While in your project directory, in command prompt/terminal type `ant target load-simulator`. Replace `target` with either `blackberry` or `playbook`.  Note, for PlayBook the simulator virtual image must already be started.
 - The application will be installed in the All Applications section in the simulator.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
-5B.  Deploy to Device (Windows and Mac)
+5B.  Deploy to [Device](../../../cordova/device/device.html) (Windows and Mac)
 --------------------------------------
 
 - Deploying to a device requires signing keys which can be obtained from RIM.

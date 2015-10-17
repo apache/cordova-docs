@@ -31,10 +31,10 @@ access to specific network domains and subdomains.
 Cordova adheres to the [W3C Widget Access][1] specification, which
 relies on the `<access>` element within the app's `config.xml` file to
 enable network access to specific domains. For projects that rely on
-the CLI workflow described in The Command-Line Interface, this file is
+the CLI workflow described in [The Command-Line Interface](../../cli/index.html), this file is
 located in the project's top-level directory. Otherwise for
 platform-specific development paths, locations are listed in the
-sections below. (See the various Platform Guides for more information
+sections below. (See the various [Platform Guides](../../platforms/index.html) for more information
 on each platform.)
 
 The following examples demonstrate whitelist syntax:

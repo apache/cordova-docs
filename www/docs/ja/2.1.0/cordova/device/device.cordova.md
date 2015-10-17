@@ -42,7 +42,7 @@ device.cordova
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     var name = device.cordova;

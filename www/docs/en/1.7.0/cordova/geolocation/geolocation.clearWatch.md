@@ -35,7 +35,7 @@ Parameters
 Description
 -----------
 
-Function `geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+Function `geolocation.clearWatch` stops watching changes to the device's location by clearing the `[geolocation.watchPosition](geolocation.watchPosition.html)` referenced by `watchID`.
 
 Supported Platforms
 -------------------
@@ -46,7 +46,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Options: retrieve the location every 3 seconds
@@ -58,7 +58,7 @@ Quick Example
     navigator.geolocation.clearWatch(watchID);
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -101,7 +101,7 @@ Full Example
             }
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a [PositionError](PositionError/positionError.html) object
 	    //
 	    function onError(error) {
 	      alert('code: '    + error.code    + '\n' +

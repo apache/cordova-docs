@@ -64,9 +64,9 @@ Gehe in das Verzeichnis wo verwalten Sie Ihren Quellcode, und führen Sie einen 
 
 Es kann einige Zeit dauern für den Befehl abgeschlossen, also etwas Geduld. Führen Sie die `cordova -d` Informationen zum Fortschritt zu sehen.
 
-Das erste Argument gibt ein *Hallo* -Verzeichnis für Ihr Projekt generiert werden. Seine `www` Unterverzeichnis Häuser Ihre Anwendung-Homepage, zusammen mit verschiedenen Ressourcen unter `css` , `js` , und `img` , die gemeinsame Web Entwicklung Dateibenennungskonventionen folgen. Die `config.xml` -Datei enthält wichtige Metadaten erzeugen und Verteilen der Anwendung erforderlich.
+Das erste Argument gibt ein *Hallo* -Verzeichnis für Ihr Projekt generiert werden. Seine `www` Unterverzeichnis Häuser Ihre Anwendung-Homepage, zusammen mit verschiedenen Ressourcen unter `css` , `js` , und `img` , die gemeinsame Web Entwicklung Dateibenennungskonventionen folgen. Die `config.xml` -Datei enthält wichtige [Metadaten](../../cordova/file/metadata/metadata.html) erzeugen und Verteilen der Anwendung erforderlich.
 
-Die anderen beiden Argumente sind optional: das `com.example.hello` Argument stellt Ihr Projekt mit einem Bezeichner reverse Domain-Stil und der `HelloWorld` bietet die Anwendung Anzeigetext. Sie können bearbeiten beide Werte später in der `config.xml` Datei.
+Die anderen beiden Argumente sind optional: das `com.example.hello` Argument stellt Ihr Projekt mit einem Bezeichner reverse Domain-Stil und der `HelloWorld` bietet die Anwendung Anzeigetext. Sie können bearbeiten beide Werte später in der `config.xml` [Datei](../../cordova/file/fileobj/fileobj.html).
 
 ## Hinzufügen von Plattformen
 
@@ -112,7 +112,7 @@ Wenn Sie möchten, können Sie eine SDK an dieser Stelle verwenden, um das Proje
 
 ## Die App zu bauen
 
-In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `deviceready` -Ereignishandler, standardmäßig von verwiesen `www/js/index.js` . <!-- XREF
+In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` [Datei](../../cordova/file/fileobj/fileobj.html). Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `[deviceready](../../cordova/events/events.deviceready.html)` -Ereignishandler, standardmäßig von verwiesen `www/js/index.js` . <!-- XREF
 (See the Application Development Guide for details.)
 XREF -->
 
@@ -141,7 +141,7 @@ SDKs für mobile Plattformen kommen oft mit Emulatoren, die ein Gerätebild ausg
         $ cordova emulate android
     
 
-Einige mobilen Plattformen emulieren ein bestimmtes Gerät wie das iPhone für iOS-Projekte in der Standardeinstellung. Für die anderen Plattformen müssen Sie zuerst ein Gerät mit einem Emulator zuordnen. (Siehe die Plattform-Führer für Details.) Beispielsweise Sie möglicherweise zunächst führen Sie den `android` Befehl zum Starten des Android SDK, dann führen Sie ein bestimmtes Gerät-Image, das es laut sein Standardverhalten startet:
+Einige mobilen Plattformen emulieren ein bestimmtes [Gerät](../../cordova/device/device.html) wie das iPhone für iOS-Projekte in der Standardeinstellung. Für die anderen Plattformen müssen Sie zuerst ein [Gerät](../../cordova/device/device.html) mit einem Emulator zuordnen. (Siehe die Plattform-Führer für Details.) Beispielsweise Sie möglicherweise zunächst führen Sie den `android` Befehl zum Starten des Android SDK, dann führen Sie ein bestimmtes Gerät-Image, das es laut sein Standardverhalten startet:
 
 ![][2]
 
@@ -158,7 +158,7 @@ Alternativ können Sie schließen den Hörer an den Computer und testen die app 
         $ cordova run android
     
 
-Bevor Sie diesen Befehl ausführen, müssen Sie das Gerät zum Testen einrichten nach Verfahren, die für jede Plattform variieren. In Androids Fall müssten Sie eine Option **USB-debugging** auf dem Gerät zu aktivieren, und vielleicht einen USB-Treiber je nach Ihrer Entwicklung-Environmnent. Einzelheiten über jede Plattform Anforderungen finden Sie unter Plattform Guides.
+Bevor Sie diesen Befehl ausführen, müssen Sie das [Gerät](../../cordova/device/device.html) zum Testen einrichten nach Verfahren, die für jede Plattform variieren. In Androids Fall müssten Sie eine Option **USB-debugging** auf dem [Gerät](../../cordova/device/device.html) zu aktivieren, und vielleicht einen USB-Treiber je nach Ihrer Entwicklung-Environmnent. Einzelheiten über jede Plattform Anforderungen finden Sie unter Plattform Guides.
 
 ## Hinzufügen von Features
 
@@ -179,43 +179,43 @@ Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code 
         $ cordova plugin add org.apache.cordova.battery-status
         
 
-*   Beschleunigungssensor, Kompass und Geolocation:
+*   Beschleunigungssensor, [Kompass](../../cordova/compass/compass.html) und [Geolocation](../../cordova/geolocation/geolocation.html):
     
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
         
 
-*   Kamera, Medien-Wiedergabe und Aufnahme:
+*   [Kamera](../../cordova/camera/camera.html), Medien-Wiedergabe und Aufnahme:
     
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
             
 
-*   Zugriff auf Dateien auf Gerät oder Netzwerk (File API):
+*   Zugriff auf Dateien auf [Gerät](../../cordova/device/device.html) oder Netzwerk (File API):
     
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   Benachrichtigung per Dialogfeld oder Vibration:
+*   [Benachrichtigung](../../cordova/notification/notification.html) per Dialogfeld oder Vibration:
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   Kontakte:
+*   [Kontakte](../../cordova/contacts/contacts.html):
     
         $ cordova plugin add org.apache.cordova.contacts
         
 
-*   Globalisierung:
+*   [Globalisierung](../../cordova/globalization/globalization.html):
     
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   SplashScreen:
+*   [SplashScreen](../../cordova/splashscreen/splashscreen.html):
     
         $ cordova plugin add org.apache.cordova.splashscreen
         
@@ -250,14 +250,14 @@ Während Cordova auf einfache Weise eine app für viele verschiedene Plattformen
 
 Stattdessen der obersten Ebene `merges` Verzeichnis bietet Ihnen einen Ort zu geben Vermögen auf bestimmten Plattformen bereitstellen. Jedes plattformspezifischen Unterverzeichnis innerhalb `merges` spiegelt die Verzeichnisstruktur des der `www` Source-Tree, sodass Sie überschreiben oder Dateien nach Bedarf hinzufügen. Zum Beispiel hier ist, wie Sie verwendet möglicherweise `merges` zur Erhöhung der Standardschriftgrad für Android-Geräte:
 
-*   Bearbeiten Sie die `www/index.html` Datei, Hinzufügen eines Links zu einer weiteren CSS-Datei `overrides.css` in diesem Fall:
+*   Bearbeiten Sie die `www/index.html` [Datei](../../cordova/file/fileobj/fileobj.html), Hinzufügen eines Links zu einer weiteren CSS-Datei `overrides.css` in diesem Fall:
     
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
         
 
-*   Erstellen Sie optional ein leeres `www/css/overrides.css` Datei, die für alle nicht-Android Builds, einen fehlende Datei-Fehler zu verhindern, gelten würden.
+*   Erstellen Sie optional ein leeres `www/css/overrides.css` [Datei](../../cordova/file/fileobj/fileobj.html), die für alle nicht-Android Builds, einen fehlende Datei-Fehler zu verhindern, gelten würden.
 
-*   Erstellen einer `css` Unterverzeichnis innerhalb `merges/android` , fügen Sie eine entsprechende `overrides.css` Datei. Angeben von CSS, die den angegebenen innerhalb 12-Punkt-Standard-Schriftgrad überschreibt `www/css/index.css` , zum Beispiel:
+*   Erstellen einer `css` Unterverzeichnis innerhalb `merges/android` , fügen Sie eine entsprechende `overrides.css` [Datei](../../cordova/file/fileobj/fileobj.html). Angeben von CSS, die den angegebenen innerhalb 12-Punkt-Standard-Schriftgrad überschreibt `www/css/index.css` , zum Beispiel:
     
         body { font-size:14px; }
         

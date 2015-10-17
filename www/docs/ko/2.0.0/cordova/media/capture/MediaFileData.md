@@ -36,7 +36,7 @@ Properties
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  So the MediaFileData object returned by the MediaFile.getFormatData function will have the following default values:
+There is no API that provides format information of media files.  So the MediaFileData object returned by the [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html) function will have the following default values:
 
 - __codecs:__ Not supported. The attribute will always be null.
 - __bitrate:__ Not supported.  The attribute will always be 0.

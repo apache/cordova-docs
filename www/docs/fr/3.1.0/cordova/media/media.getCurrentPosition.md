@@ -35,7 +35,7 @@ Retourne la position courante dans un fichier audio.
 
 ## Description
 
-Une fonction asynchrone qui retourne la position courante du fichier audio sous-jacent d'un `Media` objet. Met également à jour la `Media` de l'objet `position` paramètre.
+Une fonction asynchrone qui retourne la position courante du fichier audio sous-jacent d'un `[Media](media.html)` objet. Met également à jour la `[Media](media.html)` de l'objet `position` paramètre.
 
 ## Plates-formes prises en charge
 

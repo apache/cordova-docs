@@ -22,7 +22,7 @@ title: SQLResultSetRowList
 
 # SQLResultSetRowList
 
-One of the properties of the `SQLResultSet` containing the rows
+One of the properties of the `[SQLResultSet](../sqlresultset/sqlresultset.html)` containing the rows
 returned from a SQL query.
 
 ## Properties

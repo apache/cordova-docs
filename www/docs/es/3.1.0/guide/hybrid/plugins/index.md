@@ -75,17 +75,17 @@ El callback de éxito pasó a `exec` es simplemente una referencia a la devoluci
 
 Córdoba tiene una especificación plugin disponible para permitir la instalación automática del plugin para Android, iOS, plataformas 10 BlackBerry y Windows Phone. Estructuración de su plugin en forma particular y añadiendo un `plugin.xml` archivo de manifiesto, usted puede habilitar a los usuarios a instalar el plugin mediante las herramientas de línea de comandos.
 
-*   Especificación de plugin
+*   [Especificación de plugin](../../../plugin_ref/spec.html)
 
 ## Nativo
 
 Una vez se define JavaScript para tu plugin, debes complementarlo con por lo menos una aplicación nativa. A continuación los detalles para hacerlo para cada plataforma. Estas guías de seguirán construyendo en el simple ejemplo Eco Plugin discutido anteriormente.
 
-*   Android Plugins
+*   [Android Plugins](../../platforms/android/plugin.html)
 *   Plugins de blackBerry
-*   BlackBerry 10 Plugins
-*   iOS Plugins
-*   Windows Phone Plugins
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 La plataforma Tizen actualmente no soporta plugins.
 

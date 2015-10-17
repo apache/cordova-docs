@@ -44,9 +44,9 @@ title: DirectoryReader
 
 **Параметры:**
 
-*   **successCallback**: обратный вызов, который передается массив из `FileEntry` и `DirectoryEntry` объектов. *(Функция)*
+*   **successCallback**: обратный вызов, который передается массив из `[FileEntry](../fileentry/fileentry.html)` и `[DirectoryEntry](../directoryentry/directoryentry.html)` объектов. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при извлечении листинг каталога. Вызываемый с `FileError` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при извлечении листинг каталога. Вызываемый с `[FileError](../fileerror/fileerror.html)` объект. *(Функция)*
 
 **Быстрый пример**
 

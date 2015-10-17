@@ -32,7 +32,7 @@ The `media.release` method executes synchronously, releasing the
 underlying operating system's audio resources.  This is particularly
 important for Android, since there are a finite amount of OpenCore
 instances for media playback. Applications should call the `release`
-function for any `Media` resource that is no longer needed.
+function for any `[Media](media.html)` resource that is no longer needed.
 
 ## Supported Platforms
 
