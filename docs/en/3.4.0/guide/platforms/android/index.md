@@ -246,3 +246,31 @@ You can push the app to the device from the command line:
 
 Alternately within Eclipse, right-click the project and choose __Run
 As &rarr; Android Application__.
+
+## Signing and releasing your android application
+
+Create a keystore file and a keystore alias as described at [Android Developer Site](http://developer.android.com/tools/publishing/app-signing.html#cert). AFter that, follow these steps.
+
+* Run `cordova build android` from the folder containing `www` folder
+* `cd` to this path `platforms/android/`
+* Make sure `ant.properties` in this folder contains these keys and right values
+> key.store=<absolute_path_to_keystore_file_on_disk>
+>
+> key.alias=<alias_value>
+>
+> key.store.password=<store_password>
+>
+> key.alias.password=<alias_password>
+> # there is a way to keep these values outside version control. Refer to the Reference #2 below
+>
+* increment the `versionCode` in `AndroidManifest.xml` in this folder. If this is your very first release you can leave it as "1".
+* `cd` to `ant-build` folder from this folder
+* run `./build --release` in this folder. 
+
+Now you have a bunch of .apk files in this folder. The one with the name `<Project_Name>-release.apk` is what you can upload to Google play.
+
+References:
+
+1. [Stack Overflow answer about how to build a release from a phonegap app](http://stackoverflow.com/a/20792218/1218897)
+2. [Stack Overflow answer about how to specify your developer signature in a properties file](http://stackoverflow.com/a/14765511/1218897)
+3. [About versionCode param in PhoneGap community forums](http://community.phonegap.com/nitobi/topics/my_version_code_for_android_isnt_changing_when_i_update_my_phonegap_app)
