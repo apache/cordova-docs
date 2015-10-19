@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Флаги
 ---
 
 # Флаги
 
-Аргументы для `DirectoryEntry` объекта `getFile()` и `getDirectory()` методы, которые смотрят или создавать файлы и каталоги, соответственно.
+Аргументы для `[DirectoryEntry](../directoryentry/directoryentry.html)` объекта `getFile()` и `getDirectory()` методы, которые смотрят или создавать файлы и каталоги, соответственно.
 
 ## Свойства
 

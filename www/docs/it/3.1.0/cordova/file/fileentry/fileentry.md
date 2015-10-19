@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileEntry
 ---
 
 # FileEntry
@@ -54,9 +56,9 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 
 *   **getParent**: cercare la directory padre.
 
-*   **createWriter**: crea un `FileWriter` che può essere utilizzato per scrivere in un file.
+*   **createWriter**: crea un `[FileWriter](../filewriter/filewriter.html)` che può essere utilizzato per scrivere in un file.
 
-*   **file**: crea un `File` oggetto contenente le proprietà del file.
+*   **file**: crea un `[File](../fileobj/fileobj.html)` oggetto contenente le proprietà del file.
 
 ## Piattaforme supportate
 
@@ -74,7 +76,7 @@ Cercare i metadati relativi a un file.
 
 *   **successCallback**: un callback passato un `Metadata` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -87,7 +89,7 @@ Cercare i metadati relativi a un file.
 
 ## setMetadata
 
-Metadati impostati su un file.
+[Metadati](../metadata/metadata.html) impostati su un file.
 
 **Attualmente funziona solo su iOS.**
 
@@ -171,7 +173,7 @@ Inoltre, lo spostamento di un file in cima a un file esistente tenta di eliminar
 
 *   **successCallback**: un callback passato il nuovo file `FileEntry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare il file. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -207,7 +209,7 @@ Copiare un file in una nuova posizione nel file System. Un errore risultati se t
 
 *   **successCallback**: un callback passato il nuovo file `FileEntry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare il file. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -248,7 +250,7 @@ Elimina un file.
 
 *   **successCallback**: un callback che viene eseguito dopo che il file è stato eliminato. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il file. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -266,13 +268,13 @@ Elimina un file.
 
 ## getParent
 
-Cercare il padre `DirectoryEntry` che contiene il file.
+Cercare il padre `[DirectoryEntry](../directoryentry/directoryentry.html)` che contiene il file.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato padre del file `DirectoryEntry` . *(Funzione)*
+*   **successCallback**: un callback passato padre del file `[DirectoryEntry](../directoryentry/directoryentry.html)` . *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `[DirectoryEntry](../directoryentry/directoryentry.html)` . Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -290,13 +292,13 @@ Cercare il padre `DirectoryEntry` che contiene il file.
 
 ## createWriter
 
-Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
+Creare un `[FileWriter](../filewriter/filewriter.html)` oggetto associato al file rappresentato dalla`FileEntry`.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato un `FileWriter` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `[FileWriter](../filewriter/filewriter.html)` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il tentativo di creare il FileWriter. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il tentativo di creare il [FileWriter](../filewriter/filewriter.html). Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -314,13 +316,13 @@ Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
 
 ## file
 
-Restituire un `File` oggetto che rappresenta lo stato corrente del file che questa `FileEntry` rappresenta.
+Restituire un `[File](../fileobj/fileobj.html)` oggetto che rappresenta lo stato corrente del file che questa `FileEntry` rappresenta.
 
 **Parametri:**
 
-*   **successCallback**: un callback passato un `File` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `[File](../fileobj/fileobj.html)` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione del `File` oggetto, ad esempio quando il file non esiste più. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione del `[File](../fileobj/fileobj.html)` oggetto, ad esempio quando il file non esiste più. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 

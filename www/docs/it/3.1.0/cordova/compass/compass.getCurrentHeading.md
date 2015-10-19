@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 # compass.getCurrentHeading
@@ -29,7 +31,7 @@ Ottenere la corrente della bussola.
 
 La bussola è un sensore che rileva la direzione o la voce che il dispositivo è puntato, in genere dalla parte superiore del dispositivo. Esso misura la rotta in gradi da 0 a 359.99, dove 0 è a nord.
 
-Le informazioni della bussola viene restituite tramite una `CompassHeading` oggetto utilizzando il `compassSuccess` funzione di callback.
+Le informazioni della bussola viene restituite tramite una `CompassHeading` oggetto utilizzando il `[compassSuccess](parameters/compassSuccess.html)` funzione di callback.
 
 ## Piattaforme supportate
 

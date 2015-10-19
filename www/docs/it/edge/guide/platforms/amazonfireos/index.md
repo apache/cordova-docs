@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon fuoco piattaforma OS guida
 ---
 
 # Amazon fuoco piattaforma OS guida
@@ -24,9 +26,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione di fuoco OS Amazon
-*   Amazon fuoco OS visualizzazioni Web
-*   Amazon fuoco OS Plugins
+*   [Configurazione di fuoco OS Amazon](config.html)
+*   [Amazon fuoco OS visualizzazioni Web](webview.html)
+*   [Amazon fuoco OS Plugins](plugin.html)
 
 ## Introduzione
 
@@ -41,7 +43,7 @@ Per ulteriori informazioni sull'API WebView Amazon, consulta del portale svilupp
 
 Lo sviluppo di app di Cordova per Amazon fuoco OS richiede l'installazione di una varietà di file di supporto, compreso tutto il necessario per lo sviluppo di Android, così come Amazon WebView SDK. Controllare la lista qui sotto per il necessario installa:
 
-*   L'interfaccia della riga di comando
+*   [L'interfaccia della riga di comando](../../cli/index.html)
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]

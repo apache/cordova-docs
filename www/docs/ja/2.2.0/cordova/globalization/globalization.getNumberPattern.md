@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getNumberPattern
 ---
 
 globalization.getNumberPattern
@@ -39,7 +41,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - decimal: {String}: フォーマットおよび変換時に使う小数の記号を表します。
 - grouping: {String}: フォーマットおよび変換時に使うグルーピング時の記号を表します。
 
-もしパターン取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.PATTERN\_ERROR です。
+もしパターン取得中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR です。
 
 `options.type` には 'decimal', 'percent', または 'currency' が指定出来ます。
 デフォルトのオプションは `{type:'decimal'}` です。この `options` パラメーターはオプション (任意) です。
@@ -52,7 +54,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、以下のような文字列をポップアップダイアログに表示します:

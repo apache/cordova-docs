@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.confirm
 ---
 
 notification.confirm
@@ -43,7 +45,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 	// process the confirmation dialog result
@@ -62,7 +64,7 @@ Quick Example
         );
     }
         
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

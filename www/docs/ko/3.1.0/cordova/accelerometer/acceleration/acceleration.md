@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 가속
 ---
 
 # 가속
@@ -31,7 +33,7 @@ license: >
 
 ## 설명
 
-`Acceleration`개체 채워집니다 및 API에 의해 반환 된 `Accelerometer` 방법. 가속도 값 포함 중력의 효과 (9.81 m/s ^2) 때 장치 거짓말 평평 하 고 *x*, *y*, 최대 직면 하 고 *z* 값 반환 되어야 합니다 있도록, `` , `` , 그리고`9.81`.
+`Acceleration`개체 채워집니다 및 API에 의해 반환 된 `Accelerometer` 방법. 가속도 값 포함 중력의 효과 (9.81 m/s ^2) 때 [장치](../../device/device.html) 거짓말 평평 하 고 *x*, *y*, 최대 직면 하 고 *z* 값 반환 되어야 합니다 있도록, `` , `` , 그리고`9.81`.
 
 ## 지원 되는 플랫폼
 

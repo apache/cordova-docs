@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Tizen
 ---
 
 Getting Started with Tizen
@@ -76,7 +78,7 @@ Getting Started with Tizen
     - これで、プロジェクトは作成され **Project Explorer** ビューに表示されます
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 - プロジェクトのビルド:
 

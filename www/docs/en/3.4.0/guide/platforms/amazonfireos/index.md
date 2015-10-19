@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Platform Guide
 ---
 
 # Amazon Fire OS Platform Guide
@@ -25,9 +27,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* [Amazon Fire OS Configuration](config.html)
+* [Amazon Fire OS WebViews](webview.html)
+* [Amazon Fire OS Plugins](plugin.html)
 
 ## Requirements and Support
 

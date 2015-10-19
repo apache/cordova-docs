@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 orodij ukazne vrstice
 ---
 
 # BlackBerry 10 orodij ukazne vrstice
@@ -24,7 +26,7 @@ Na `cordova` pripomoček ukazne vrstice je na visoki ravni orodje, ki vam omogo�
 
  [1]: http://cordova.apache.org
 
-Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte Uporaba Plugman za upravljanje Plugins. Glejte Uporaba Plugins za pregled.
+Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte [Uporaba Plugman za upravljanje Plugins](../../../plugin_ref/plugman.html). Glejte Uporaba Plugins za pregled.
 
 Če potrebujete pomoč s poljuben zapoved spodaj, vnesite ukaz, skupaj z na `-h` ali `-help` argumentov, ki jih podpira vse ukaze in ki zagotavljajo opisi za vsako trditev, ki so na voljo.
 

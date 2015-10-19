@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Compass
 ---
 
 Compass
@@ -26,19 +28,19 @@ Compass
 メソッド
 -------
 
-- compass.getCurrentHeading
-- compass.watchHeading
-- compass.clearWatch
-- compass.watchHeadingFilter    (廃止)
-- compass.clearWatchFilter      (廃止)
+- [compass.getCurrentHeading](compass.getCurrentHeading.html)
+- [compass.watchHeading](compass.watchHeading.html)
+- [compass.clearWatch](compass.clearWatch.html)
+- [compass.watchHeadingFilter](compass.watchHeadingFilter.html)    (廃止)
+- [compass.clearWatchFilter](compass.clearWatchFilter.html)      (廃止)
 
 引数
 ---------
 
-- compassSuccess
-- compassError
-- compassOptions
-- compassHeading
+- [compassSuccess](parameters/compassSuccess.html)
+- [compassError](parameters/compassError.html)
+- [compassOptions](parameters/compassOptions.html)
+- [compassHeading](parameters/compassHeading.html)
 
 パーミッション
 -----------

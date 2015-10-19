@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по платформы ежевики
 ---
 
 # Руководство по платформы ежевики
 
 В этом руководстве показано, как настроить среду SDK для приложений для платформы ежевики до версии 10. Если вы хотите цели самой последней версии, смотрите в руководстве платформы BlackBerry 10. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   BlackBerry конфигурации
-*   Модернизация BlackBerry
+*   [BlackBerry конфигурации](config.html)
+*   [Модернизация BlackBerry](upgrading.html)
 *   Ежевика плагины
 *   Средства командной строки ежевики
 

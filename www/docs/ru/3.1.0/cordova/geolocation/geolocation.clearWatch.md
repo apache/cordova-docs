@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
@@ -31,7 +33,7 @@ license: >
 
 ## Описание
 
-`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `geolocation.watchPosition` ссылается`watchID`.
+`geolocation.clearWatch`Останавливается наблюдать изменения местоположения устройства, сняв `[geolocation.watchPosition](geolocation.watchPosition.html)` ссылается`watchID`.
 
 ## Поддерживаемые платформы
 

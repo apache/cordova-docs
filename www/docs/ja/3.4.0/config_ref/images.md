@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アイコンとスプラッシュ画面
 ---
 
 # アイコンとスプラッシュ画面
@@ -150,7 +152,7 @@ Android プロジェクトで[9 patch 画像][1]ファイルを置きます `pla
 
 2 番目の行 (ミリ秒単位) が表示されますどのように長いスプラッシュ ・ スクリーンのデフォルトの遅延を設定します。これは最大の予想開始時刻する必要があります。SplashScreenDelay の既定値は 3000 ミリ秒です。
 
-最後に、スプラッシュ画面が表示されますのみ必要な限り。 アプリが開始され、webview が読み込まれる、アプリのメイン ビューが表示されるスプラッシュ画面を隠す必要があります。 アプリ開始時刻が異なるためかなりの要因の数が多いのため、アプリを明示的に呼び出すことをお勧め `navigator.splashscreen.hide()` 応答する Javascript のメソッドで、 `deviceready` イベント。 それ以外の場合、スプラッシュ スクリーンが上に構成されている SplashScreenDelay 値の表示されます。 このイベント駆動型のアプローチは、常に一定の時間に表示されるスプラッシュ画面を持つ対強くお勧めします。
+最後に、スプラッシュ画面が表示されますのみ必要な限り。 アプリが開始され、webview が読み込まれる、アプリのメイン ビューが表示されるスプラッシュ画面を隠す必要があります。 アプリ開始時刻が異なるためかなりの要因の数が多いのため、アプリを明示的に呼び出すことをお勧め `navigator.splashscreen.hide()` 応答する Javascript のメソッドで、 `[deviceready](../cordova/events/events.deviceready.html)` イベント。 それ以外の場合、スプラッシュ スクリーンが上に構成されている SplashScreenDelay 値の表示されます。 このイベント駆動型のアプローチは、常に一定の時間に表示されるスプラッシュ画面を持つ対強くお勧めします。
 
 ## IOS プラットフォーム用のスプラッシュ画面
 

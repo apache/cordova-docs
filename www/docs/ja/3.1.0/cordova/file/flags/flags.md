@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: フラグ
 ---
 
 # フラグ
 
-引数が指定されて、 `DirectoryEntry` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、ファイルとディレクトリをそれぞれ作成します。
+引数が指定されて、 `[DirectoryEntry](../directoryentry/directoryentry.html)` オブジェクトの `getFile()` と `getDirectory()` 方法を調べたり、ファイルとディレクトリをそれぞれ作成します。
 
 ## プロパティ
 

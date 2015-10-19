@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android-Plattform-Guide
 ---
 
 # Android-Plattform-Guide
 
-Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, um Cordova apps für Android-Geräte bereitzustellen sowie optional mithilfe von Befehlszeilentools Android-zentrierte in Ihrem Entwicklungs-Workflow. Sie müssen installieren Sie das Android SDK unabhängig davon, ob Sie für die Entwicklung dieser Plattform-zentrierte Shell-Werkzeugen oder plattformübergreifende Cordova CLI verwenden möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der Übersicht. Details über die CLI finden Sie unter The Command-Line Interface.
+Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, um Cordova apps für Android-Geräte bereitzustellen sowie optional mithilfe von Befehlszeilentools Android-zentrierte in Ihrem Entwicklungs-Workflow. Sie müssen installieren Sie das Android SDK unabhängig davon, ob Sie für die Entwicklung dieser Plattform-zentrierte Shell-Werkzeugen oder plattformübergreifende Cordova CLI verwenden möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der [Übersicht](../../overview/index.html). Details über die CLI finden Sie unter The Command-Line Interface.
 
 ## Anforderungen und Unterstützung
 
@@ -52,7 +54,7 @@ Wenn Sie auf Windows installieren, müssen Sie auch `JAVA_HOME` -Umgebungsvariab
 
 ## Das Android SDK installieren
 
-Installieren Sie [Android eigenständige SDK Tools][5] oder das [Android-Studio][6]. Procceed mit `Android-Studio` Wenn Sie planen, entwickeln neue Cordova für Android Plugins oder Verwenden von systemeigenen Tools ausführen und Debuggen der Android-Plattform. Andernfalls sind `Android Stand-Alone-SDK-Tools` genug, um erstellen und Bereitstellen von Android-Anwendung.
+Installieren Sie [Android eigenständige SDK Tools][5] oder das [Android-Studio][6]. Procceed mit `Android-Studio` Wenn Sie planen, entwickeln neue Cordova für [Android Plugins](plugin.html) oder Verwenden von systemeigenen Tools ausführen und Debuggen der Android-Plattform. Andernfalls sind `Android Stand-Alone-SDK-Tools` genug, um erstellen und Bereitstellen von Android-Anwendung.
 
  [5]: http://developer.android.com/sdk/installing/index.html?pkg=tools
  [6]: http://developer.android.com/sdk/installing/index.html?pkg=studio

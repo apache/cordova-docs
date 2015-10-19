@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactFindOptions
 ---
 
 # ContactFindOptions
 
-결과 필터링 하는 데 사용할 수 있는 속성을 포함 한 `contacts.find` 작업.
+결과 필터링 하는 데 사용할 수 있는 속성을 포함 한 `[contacts.find](../contacts.find.html)` 작업.
 
 ## 속성
 

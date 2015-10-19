@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 플랫폼 가이드
 ---
 
 # 블랙베리 플랫폼 가이드
 
-이 가이드 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
+이 [가이드](../../../index.html) 대상 응용 프로그램 이전 버전 10 블랙베리 플랫폼을 위한 SDK 환경을 설정 하는 방법을 보여 줍니다. 가장 최근 버전을 대상으로 블랙베리 10 플랫폼 설명서를 참조 하십시오. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   블랙베리 구성
-*   블랙베리 업그레이드
-*   블랙베리 플러그인
-*   블랙베리 명령줄 도구
+*   [블랙베리 구성](config.html)
+*   [블랙베리 업그레이드](upgrading.html)
+*   [블랙베리 플러그인](plugin.html)
+*   [블랙베리 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 

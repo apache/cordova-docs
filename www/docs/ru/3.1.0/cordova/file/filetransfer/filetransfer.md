@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileTransfer
 ---
 
 # FileTransfer
@@ -36,7 +38,7 @@ license: >
 
 ## Подробная информация
 
-`FileTransfer`Объект предоставляет способ для загрузки файлов на удаленный сервер с помощью нескольких частей запроса POST HTTP. Поддерживаются протоколы HTTP и HTTPS. Необязательные параметры можно указать путем передачи `FileUploadOptions` объектов для `upload()` метода. При успешной отправке `FileUploadResult` объект передается в метод обратного вызова успех. Если возникает ошибка, `FileTransferError` объект передается в метод обратного вызова ошибки. Это также возможно (только на iOS и Android), чтобы загрузить файл с удаленного сервера и сохранить его на устройстве.
+`FileTransfer`Объект предоставляет способ для загрузки файлов на удаленный сервер с помощью нескольких частей запроса POST HTTP. Поддерживаются протоколы HTTP и HTTPS. Необязательные параметры можно указать путем передачи `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` объектов для `upload()` метода. При успешной отправке `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` объект передается в метод обратного вызова успех. Если возникает ошибка, `[FileTransferError](../filetransfererror/filetransfererror.html)` объект передается в метод обратного вызова ошибки. Это также возможно (только на iOS и Android), чтобы загрузить файл с удаленного сервера и сохранить его на устройстве.
 
 ## Поддерживаемые платформы
 
@@ -56,7 +58,7 @@ license: >
 
 *   **successCallback**: обратного вызова, передаваемого `Metadata` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется в случае получения ошибки `Metadata` . Вызываемый с `FileTransferError` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется в случае получения ошибки `Metadata` . Вызываемый с `[FileTransferError](../filetransfererror/filetransfererror.html)` объект. *(Функция)*
 
 *   **опции**: необязательные параметры, такие как имя файла и тип MIME.
 
@@ -202,9 +204,9 @@ license: >
 
 *   **Цель**: полный путь к файлу на устройстве.
 
-*   **successCallback**: обратного вызова, передаваемого `FileEntry` объект. *(Функция)*
+*   **successCallback**: обратного вызова, передаваемого `[FileEntry](../fileentry/fileentry.html)` объект. *(Функция)*
 
-*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `FileTransferError` объект. *(Функция)*
+*   **errorCallback**: обратного вызова, который выполняется, если возникает ошибка при получении `Metadata` . Вызываемый с `[FileTransferError](../filetransfererror/filetransfererror.html)` объект. *(Функция)*
 
 *   **trustAllHosts**: необязательный параметр, по умолчанию равен `false` . Если значение `true` , то он будет принимать все сертификаты безопасности. Это полезно, как Android отвергает самостоятельной подписанные сертификаты. Не рекомендуется для использования в производстве. Поддерживается на Android и iOS. *(логическое значение)*
 
@@ -224,7 +226,7 @@ license: >
 
 ## прервать
 
-Прерывает передачу в прогресс. Onerror обратного вызова передается объект FileTransferError, который имеет код ошибки FileTransferError.ABORT_ERR.
+Прерывает передачу в прогресс. Onerror обратного вызова передается объект [FileTransferError](../filetransfererror/filetransfererror.html), который имеет код ошибки [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR.
 
 **Поддерживаемые платформы**
 

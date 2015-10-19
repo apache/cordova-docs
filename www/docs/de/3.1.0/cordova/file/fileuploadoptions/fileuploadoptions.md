@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadOptions
 ---
 
 # FileUploadOptions
 
-A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
+A `FileUploadOptions` Objekt übergeben werden kann, um die `[FileTransfer](../filetransfer/filetransfer.html)` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
 
 ## Eigenschaften
 
 *   **FileKey**: der Name des Form-Elements. Wird standardmäßig auf `file` . (DOM-String und enthält)
 
-*   **Dateiname**: der Dateiname beim Speichern der Datei auf dem Server verwendet. Wird standardmäßig auf `image.jpg` . (DOM-String und enthält)
+*   **Dateiname**: der Dateiname beim Speichern der [Datei](../fileobj/fileobj.html) auf dem Server verwendet. Wird standardmäßig auf `image.jpg` . (DOM-String und enthält)
 
 *   **MimeType**: den Mime-Typ der Daten hochzuladen. Wird standardmäßig auf `image/jpeg` . (DOM-String und enthält)
 
@@ -34,11 +36,11 @@ A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des O
 
 *   **ChunkedMode**: ob die Daten in "Chunked" streaming-Modus hochladen. Wird standardmäßig auf `true` . (Boolean)
 
-*   **Header**: eine Karte von Header-Name-Header-Werte. Verwenden Sie ein Array, um mehr als einen Wert anzugeben. (Objekt)
+*   **Header**: eine [Karte](../../inappbrowser/inappbrowser.html) von Header-Name-Header-Werte. Verwenden Sie ein Array, um mehr als einen Wert anzugeben. (Objekt)
 
 ## Beschreibung
 
-A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
+A `FileUploadOptions` Objekt übergeben werden kann, um die `[FileTransfer](../filetransfer/filetransfer.html)` des Objekts `upload()` Methode, um zusätzliche Parameter an den Upload-Skript angeben.
 
 ## WP7 Quirk
 

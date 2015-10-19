@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationError
 ---
 
 # geolocationError
@@ -29,4 +31,4 @@ Des Benutzers Callback-Funktion, die ausgeführt wird, wenn ein Fehler für Geol
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(PositionError)*
+*   **Fehler**: der Fehler, die durch das [Gerät](../../device/device.html) zurückgegeben. *(PositionError)*

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 Configuration
 ---
 
 # BlackBerry 10 Configuration
@@ -46,7 +48,7 @@ config.xml File for information on global configuration options.
   convenience only, so remove it before packaging the app for
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
-  Whitelist Guide.
+  [Whitelist Guide](../../appdev/whitelist/index.html).
 
         <preference name="WebSecurity" value="disable"/>
 

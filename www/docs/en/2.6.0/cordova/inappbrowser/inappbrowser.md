@@ -16,19 +16,21 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: InAppBrowser
 ---
 
 InAppBrowser
 ============
 
-> The InAppBrowser is a web-browser that is shown in your app when you use the `window.open` call.
+> The InAppBrowser is a web-browser that is shown in your app when you use the `[window.open](window.open.html)` call.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 Description
 -----------
 
-The object returned from a call to `window.open`.
+The object returned from a call to `[window.open](window.open.html)`.
 
 Methods
 ----------
@@ -86,13 +88,13 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -148,7 +150,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
@@ -156,7 +158,7 @@ Quick Example
     ref.addEventListener('loadstart', myCallback);
     ref.removeEventListener('loadstart', myCallback);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -226,13 +228,13 @@ Supported Platforms
 - iOS
 - Windows Phone 7 + 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

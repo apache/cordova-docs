@@ -16,24 +16,26 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.getCurrentPosition
 ---
 
 # media.getCurrentPosition
 
-오디오 파일 내에서 현재 위치를 반환합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 내에서 현재 위치를 반환합니다.
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
     
 
 ## 매개 변수
 
-*   **mediaSuccess**: 현재 위치 (초) 전달 되는 콜백.
+*   **mediaSuccess**: 현재 [위치](../geolocation/Position/position.html) (초) 전달 되는 콜백.
 
 *   **mediaError**: (선택 사항) 콜백 실행 오류가 발생 하는 경우에.
 
 ## 설명
 
-기본 오디오 파일의 현재 위치를 반환 하는 비동기 함수를 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 변수.
+기본 오디오 파일의 현재 위치를 반환 하는 비동기 함수를 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 [변수](../../plugin_ref/spec.html).
 
 ## 지원 되는 플랫폼
 

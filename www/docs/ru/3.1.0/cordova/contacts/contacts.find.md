@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 # contacts.find
@@ -27,9 +29,9 @@ license: >
 
 ## Описание
 
-`contacts.find`Метод выполняется асинхронно, запрашивая базу контактов устройства и возвращая массив `Contact` объектов. Полученные объекты передаются в `contactSuccess` функции обратного вызова, указанный параметром **contactSuccess** .
+`contacts.find`Метод выполняется асинхронно, запрашивая базу контактов устройства и возвращая массив `Contact` объектов. Полученные объекты передаются в `[contactSuccess](parameters/contactSuccess.html)` функции обратного вызова, указанный параметром **contactSuccess** .
 
-Параметр **contactFields** указывает поля, чтобы использоваться в качестве квалификатора Поиск, и только те результаты, которые передаются функции обратного вызова **contactSuccess** . Нулевой длины **contactFields** параметр является недопустимым и приводит к `ContactError.INVALID_ARGUMENT_ERROR` . Значение **contactFields** `"*"` возвращает все поля контактов.
+Параметр **contactFields** указывает поля, чтобы использоваться в качестве квалификатора Поиск, и только те результаты, которые передаются функции обратного вызова **contactSuccess** . Нулевой длины **contactFields** параметр является недопустимым и приводит к `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` . Значение **contactFields** `"*"` возвращает все поля контактов.
 
 **ContactFindOptions.filter** строка может использоваться как фильтр поиска при запросах к базе данных контактов. Если, без учета регистра, матч частичное значение применяется к каждому полю, указанному в параметре **contactFields** . Если есть совпадение для *любого* из указанных полей, возвращается контакт.
 

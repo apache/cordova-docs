@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactFindOptions
 ---
 
 ContactFindOptions
 ==================
 
-`contacts.find` 関数の検索結果を絞るために使用するプロパティーを表します。
+`[contacts.find](../contacts.find.html)` 関数の検索結果を絞るために使用するプロパティーを表します。
 
 プロパティー
 ----------
@@ -38,7 +40,7 @@ ContactFindOptions
 - iOS
 - Bada 1.2 & 2.0
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // 呼び出し成功

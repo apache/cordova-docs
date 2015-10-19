@@ -16,28 +16,30 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 contacts.find
 =============
 
-デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトを取得します。
+デバイスの連絡先データベースに問い合わせを行い、 `[Contact](Contact/contact.html)` オブジェクトを取得します。
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
 概要
 -----------
 
-contacts.find 関数は、デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトの配列を返す非同期関数です。 作成されたオブジェクトは __contactSuccess__ に従って `contactSuccess` コールバック関数に送られます。
+contacts.find 関数は、デバイスの連絡先データベースに問い合わせを行い、 `[Contact](Contact/contact.html)` オブジェクトの配列を返す非同期関数です。 作成されたオブジェクトは __contactSuccess__ に従って `[contactSuccess](parameters/contactSuccess.html)` コールバック関数に送られます。
 
-このメソッドを使用する際は __contactFields__ パラメーターに検索フィールドを指定します。 __contactFields__ パラメーターに渡したフィールドだけが、 `Contact` オブジェクトのプロパティーとして __contactSuccess__ コールバック関数に渡されます。 __contactFields__ パラメーターが空の場合は、 `id` プロパティーのみを持つ `Contact` オブジェクト配列が作成されます。 __contactFields__ の値が["*"]の場合は、全ての連絡先フィールドが返されます。
+このメソッドを使用する際は __contactFields__ パラメーターに検索フィールドを指定します。 __contactFields__ パラメーターに渡したフィールドだけが、 `[Contact](Contact/contact.html)` オブジェクトのプロパティーとして __contactSuccess__ コールバック関数に渡されます。 __contactFields__ パラメーターが空の場合は、 `id` プロパティーのみを持つ `[Contact](Contact/contact.html)` オブジェクト配列が作成されます。 __contactFields__ の値が["*"]の場合は、全ての連絡先フィールドが返されます。
 
 連絡先データベースの問い合わせの際には、 __contactFindOptions.filter__ を用いて検索条件を絞ることが出来ます。このオプションが指定されていた場合、大文字小文字の区別なく、部分一致方式により __contactFields__ パラメーターに指定されたフィールドの検索が行われます。いずれかのフィールドにマッチした内容があった場合、その連絡先情報が返されます。
 
 パラメーター
 ----------
 
-- __contactFields:__ 検索条件に格納されるフィールドを指定します。このパラメーターに定義されたフィールドのみが `Contact` オブジェクトにセットされます。 _(DOMString[])_ [必須]
+- __contactFields:__ 検索条件に格納されるフィールドを指定します。このパラメーターに定義されたフィールドのみが `[Contact](Contact/contact.html)` オブジェクトにセットされます。 _(DOMString[])_ [必須]
 - __contactSuccess:__ 連絡先データベースへの問い合わせに成功した場合に呼び出されるコールバック関数を指定します [必須]
 - __contactError:__ エラーコールバック関数を指定します。連絡先データベースへの問い合わせに失敗した場合に呼び出されます [任意]
 - __contactFindOptions:__ 連絡先情報に絞り込み検索を行うための検索オプションを指定します [任意]
@@ -50,7 +52,7 @@ contacts.find 関数は、デバイスの連絡先データベースに問い合
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {

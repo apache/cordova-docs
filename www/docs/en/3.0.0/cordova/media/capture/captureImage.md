@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureImage
 ---
 
 capture.captureImage
@@ -36,15 +38,15 @@ one image in a single session.
 
 The capture operation ends either when the user closes the camera
 application, or the maximum number of recordings specified by
-`CaptureAudioOptions.limit` is reached.  If no `limit` value is
+`[CaptureAudioOptions](captureAudioOptions.html).limit` is reached.  If no `limit` value is
 specified, it defaults to one (1), and the capture operation
 terminates after the user captures a single image.
 
-When the capture operation finishes, it invokes the `CaptureCB`
-callback with an array of `MediaFile` objects describing each captured
+When the capture operation finishes, it invokes the `[CaptureCB](CaptureCB.html)`
+callback with an array of `[MediaFile](MediaFile.html)` objects describing each captured
 image file.  If the user terminates the operation before capturing an
-image, the `CaptureErrorCB` callback executes with a `CaptureError`
-object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
+image, the `[CaptureErrorCB](CaptureErrorCB.html)` callback executes with a `[CaptureError](CaptureError.html)`
+object featuring a `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -61,7 +63,7 @@ Windows Phone 7 Quirks
 Invoking the native camera application while your device is connected
 via Zune does not work, and the error callback executes.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback
@@ -81,7 +83,7 @@ Quick Example
     // start image capture
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

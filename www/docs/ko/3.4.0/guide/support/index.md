@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 플랫폼 지원
 ---
 
 # 플랫폼 지원
@@ -67,7 +69,7 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">코르 도우 바<br />CLI</a>
+          <a href="../cli/index.html">코르 도우 바<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -109,22 +111,22 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">임베디드<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">임베디드<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/amazonfireos/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/android/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry10" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(상세 내용 보기)</a>
+          <a href="../platforms/ios/webview.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -147,34 +149,34 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">플러그 인<br />인터페이스</a>
+          <a href="../hybrid/plugins/index.html">플러그 인<br />인터페이스</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/amazonfireos/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/android/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/ios/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(상세 내용 보기)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(상세 내용 보기)</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -197,7 +199,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">가 속도계</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">가 속도계</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -232,7 +234,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">카메라</a>
+          <a href="../../cordova/camera/camera.html">카메라</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -267,7 +269,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">캡처</a>
+          <a href="../../cordova/media/capture/capture.html">캡처</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -302,7 +304,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">나침반</a>
+          <a href="../../cordova/compass/compass.html">나침반</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -338,7 +340,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">연결</a>
+          <a href="../../cordova/connection/connection.html">연결</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -373,7 +375,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">연락처</a>
+          <a href="../../cordova/contacts/contacts.html">연락처</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -408,7 +410,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">장치</a>
+          <a href="../../cordova/device/device.html">장치</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -443,7 +445,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">이벤트</a>
+          <a href="../../cordova/events/events.html">이벤트</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -478,7 +480,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">파일</a>
+          <a href="../../cordova/file/file.html">파일</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -513,7 +515,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">지리적 위치</a>
+          <a href="../../cordova/geolocation/geolocation.html">지리적 위치</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -548,7 +550,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">세계화</a>
+          <a href="../../cordova/globalization/globalization.html">세계화</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -583,7 +585,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -619,7 +621,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">미디어</a>
+          <a href="../../cordova/media/media.html">미디어</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -654,7 +656,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">알림</a>
+          <a href="../../cordova/notification/notification.html">알림</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -689,7 +691,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -724,7 +726,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">스토리지</a>
+          <a href="../../cordova/storage/storage.html">스토리지</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -743,15 +745,15 @@ license: >
         </td>
         
         <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          localStorage & indexedDB
+          <a href="../../cordova/storage/localstorage/localstorage.html">localStorage</a> & indexedDB
         </td>
         
         <!--        <td data-col="firefoxos"  class="n"></td> -->

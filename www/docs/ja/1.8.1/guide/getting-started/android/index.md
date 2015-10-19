@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Android
 ---
 
 Getting Started with Android
@@ -98,7 +100,7 @@ Getting Started with Android
     ![](img/guide/getting-started/android/manifest.jpg)
 
 
-4. Hello World の作成
+4. [Hello World](../webos/index.html) の作成
 --------------
 
 - **index.html** という名前のファイルを **assets/www** ディレクトリに新規作成します。 以下のコードを貼り付けます:

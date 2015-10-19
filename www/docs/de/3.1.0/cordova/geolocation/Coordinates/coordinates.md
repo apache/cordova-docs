@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Koordinaten
 ---
 
 # Koordinaten
 
-Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer Position zu beschreiben.
+Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer [Position](../Position/position.html) zu beschreiben.
 
 ## Eigenschaften
 
@@ -28,7 +30,7 @@ Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer Posit
 
 *   **Länge**: Länge in Dezimalgrad. *(Anzahl)*
 
-*   **Höhe**: Höhe der Position in Meter über dem Ellipsoid. *(Anzahl)*
+*   **Höhe**: Höhe der [Position](../Position/position.html) in Meter über dem Ellipsoid. *(Anzahl)*
 
 *   **Genauigkeit**: Genauigkeit der breiten- und Längengrad Koordinaten in Metern. *(Anzahl)*
 
@@ -40,7 +42,7 @@ Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer Posit
 
 ## Beschreibung
 
-Die `Coordinates` Objekt ist angefügt das `Position` -Objekt, das Callback-Funktionen in Anforderungen für die aktuelle Position zur Verfügung steht.
+Die `Coordinates` Objekt ist angefügt das `[Position](../Position/position.html)` -Objekt, das Callback-Funktionen in Anforderungen für die aktuelle [Position](../Position/position.html) zur Verfügung steht.
 
 ## Unterstützte Plattformen
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: IOS 업그레이드
 ---
 
 # IOS 업그레이드
@@ -75,7 +77,7 @@ platform add ios`.
 
 4.  복사 또는 원래 프로젝트에서 어떤 기본 자산을 덮어쓸 ( `Resources` 등), 물론 모든 새 파일을 추가 하는 `.xcodeproj` 프로젝트. IOS 프로젝트 내부 빌드는 `platforms\ios` 디렉터리.
 
-5.  복사를 `config.xml` 에 `www` 디렉터리, 모든 플러그인 정의 제거 하 고. 여기 플랫폼 디렉터리 대신 설정을 수정 합니다.
+5.  복사를 `config.xml` 에 `www` 디렉터리, 모든 [플러그인 정의](../win8/plugin.html) 제거 하 고. 여기 플랫폼 디렉터리 대신 설정을 수정 합니다.
 
 6.  코르 도우 바 CLI 도구를 사용 하 여 필요한 어떤 플러그인을 설치 하려면. 참고 CLI 처리 하는 모든 핵심 Api 플러그인으로 추가 될 필요가 있습니다. 만 3.0.0 플러그인 CLI와 호환 됩니다.
 

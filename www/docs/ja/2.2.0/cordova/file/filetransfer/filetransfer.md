@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileTransfer
 ---
 
 FileTransfer
@@ -38,7 +40,7 @@ FileTransfer オブジェクトはファイルをサーバーにアップロー�
 詳細
 -------
 
-`FileTransfer` オブジェクトは HTTP マルチパート POST リクエストを使ってファイルをサーバーにアップロードする機能を提供します。このメソッドは HTTP と HTTPS の両方のプロトコルをサポートします。 upload メソッドに FileUploadOptions オブジェクトを渡すことで、任意のパラメーターを追加できます。アップロードが成功した場合 FileUploadResult オブジェクトとともに success コールバック関数が呼ばれます。エラーが発生した場合は FileTransferError オブジェクトとともに error コールバック関数が呼ばれます。
+`FileTransfer` オブジェクトは HTTP マルチパート POST リクエストを使ってファイルをサーバーにアップロードする機能を提供します。このメソッドは HTTP と HTTPS の両方のプロトコルをサポートします。 upload メソッドに [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html) オブジェクトを渡すことで、任意のパラメーターを追加できます。アップロードが成功した場合 [FileUploadResult](../fileuploadresult/fileuploadresult.html) オブジェクトとともに success コールバック関数が呼ばれます。エラーが発生した場合は [FileTransferError](../filetransfererror/filetransfererror.html) オブジェクトとともに error コールバック関数が呼ばれます。
 また、サーバーからファイルをダウンロードし保存することもできます (iOS と Android のみ) 。
 
 サポートされているプラットフォーム
@@ -56,8 +58,8 @@ __パラメーター:__
 
 - __filePath__ - デバイス内のファイルのフルパスを表します
 - __server__ - ファイルを受け取るサーバーの URL を表します (encodeURI() を使用して既にエンコードされている必要があります)
-- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [Metadata](../metadata/metadata.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 - __options__ - ファイル名や minetype などのオプションのパラメーターを表します
 
 __使用例__
@@ -196,8 +198,8 @@ __パラメーター:__
 
 - __source__ - ファイルを取得するサーバーの URL を表します (encodeURI() を使用して既にエンコードされている必要があります)
 - __target__ - デバイス内のファイルのフルパスを表します
-- __successCallback__ - FileEntry オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [FileEntry](../fileentry/fileentry.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -222,7 +224,7 @@ __使用例__
 abort
 --------------
 
-進行中の転送を中止します。 FileTransferError.ABORT_ERR エラーコードを持つ FileTransferError オブジェクトを伴って onerror コールバックが呼び出されます。
+進行中の転送を中止します。 [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR エラーコードを持つ [FileTransferError](../filetransfererror/filetransfererror.html) オブジェクトを伴って onerror コールバックが呼び出されます。
 
 __サポートされているプラットフォーム__
 

@@ -16,22 +16,24 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.seekTo
 ---
 
 # media.seekTo
 
-오디오 파일 내의 현재 위치를 설정합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 내의 현재 위치를 설정합니다.
 
     media.seekTo(milliseconds);
     
 
 ## 매개 변수
 
-*   **밀리초**: 밀리초에서는 오디오에서 재생 위치를 설정 하는 위치.
+*   **밀리초**: 밀리초에서는 오디오에서 재생 위치를 설정 하는 [위치](../geolocation/Position/position.html).
 
 ## 설명
 
-`media.seekTo`에서 참조 하는 오디오 파일 내에서 현재 재생 위치를 업데이트를 비동기적으로 실행 한 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 변수.
+`media.seekTo`에서 참조 하는 오디오 [파일](../file/fileobj/fileobj.html) 내에서 현재 재생 위치를 업데이트를 비동기적으로 실행 한 `Media` 개체. 또한 업데이트는 `Media` 개체의 `position` 매개 [변수](../../plugin_ref/spec.html).
 
 ## 지원 되는 플랫폼
 

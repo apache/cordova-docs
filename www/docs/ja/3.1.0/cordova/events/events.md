@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: イベント
 ---
 
 # イベント
@@ -24,21 +26,21 @@ license: >
 
 ## イベントの種類
 
-*   deviceready
-*   一時停止します。
-*   再開
-*   オンライン
-*   オフライン
-*   戻るボタン
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   メニュー ボタン
-*   ［ 検索 ］
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [一時停止します。](events.pause.html)
+*   [再開](events.resume.html)
+*   [オンライン](events.online.html)
+*   [オフライン](events.offline.html)
+*   [戻るボタン](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [メニュー ボタン](events.menubutton.html)
+*   [［ 検索 ］](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## 機能へのアクセス
 

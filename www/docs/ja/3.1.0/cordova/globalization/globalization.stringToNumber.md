@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToNumber
 ---
 
 # globalization.stringToNumber
@@ -29,7 +31,7 @@ license: >
 
 番号を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。そのオブジェクトが必要な `value` を持つプロパティ、 `Number` 値。
 
-数値文字列の解析エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PARSING\_ERROR`.
+数値文字列の解析エラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 `options`パラメーターはオプションであり、次の値を既定値します。
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.Hide
 ---
 
 # splashscreen.Hide
@@ -72,7 +74,7 @@ Questo metodo è respinto la schermata iniziale dell'applicazione.
 
 ## iOS Quirk
 
-Il `config.xml` di file `AutoHideSplashScreen` impostazione deve essere `false` . Per ritardare nascondendo la schermata iniziale per due secondi, aggiungere un timer ad esempio nel `deviceready` gestore di evento:
+Il `config.xml` di file `AutoHideSplashScreen` impostazione deve essere `false` . Per ritardare nascondendo la schermata iniziale per due secondi, aggiungere un timer ad esempio nel `[deviceready](../events/events.deviceready.html)` gestore di evento:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

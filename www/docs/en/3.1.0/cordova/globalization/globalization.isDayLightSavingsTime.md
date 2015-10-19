@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.isDayLightSavingsTime
 ---
 
 # globalization.isDayLightSavingsTime
@@ -36,7 +38,7 @@ and `false` indicates that it is not.
 The inbound parameter `date` should be of type `Date`.
 
 If there is an error reading the date, then the `errorCallback`
-executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes. The error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Supported Platforms
 

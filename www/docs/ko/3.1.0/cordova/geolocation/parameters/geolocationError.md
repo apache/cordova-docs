@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationError
 ---
 
 # geolocationError
 
-위치 정보 기능에 대 한 오류가 발생 될 때 실행 되는 사용자의 콜백 함수.
+[위치](../Position/position.html) 정보 기능에 대 한 오류가 발생 될 때 실행 되는 사용자의 콜백 함수.
 
     function(error) {
         // Handle the error

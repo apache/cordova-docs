@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство для платформы Amazon Fire OS
 ---
 
 # Руководство для платформы Amazon Fire OS
@@ -24,9 +26,9 @@ license: >
 
 Смотрите ниже для более подробной информации конкретной платформы:
 
-*   Настройка Amazon Fire OS
-*   WebView в Amazon Fire OS
-*   Плагины для Amazon Fire OS
+*   [Настройка Amazon Fire OS](config.html)
+*   [WebView в Amazon Fire OS](webview.html)
+*   [Плагины для Amazon Fire OS](plugin.html)
 
 ## Введение
 
@@ -41,7 +43,7 @@ license: >
 
 Разработка приложений Cordova для Amazon Fire ОС требует установки различных файлов поддержки, включая все необходимое для разработки Android, а также Amazon WebView SDK. Проверьте список ниже для требуемых установок:
 
-*   Интерфейс командной строки
+*   [Интерфейс командной строки](../../cli/index.html)
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]
@@ -115,7 +117,7 @@ license: >
 
 ## Создайте новый проект для Amazon Fire ОС
 
-Используйте утилиту `cordova` для настройки нового проекта, как описано в разделе "Интерфейс командной строки Cordova". Например выполните в каталоге исходного кода:
+Используйте утилиту `cordova` для настройки нового проекта, как описано в разделе "[Интерфейс командной строки](../../cli/index.html) Cordova". Например выполните в каталоге исходного кода:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.beep
 ---
 
 notification.beep
@@ -36,7 +38,7 @@ notification.beep
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 警告音を2回鳴らす
@@ -97,7 +99,7 @@ notification.beep
 Android に関する注意点
 --------------
 
-- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "Notification ringtone" を鳴らします。
+- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "[Notification](notification.html) ringtone" を鳴らします。
 
 iPhone に関する注意点
 -------------

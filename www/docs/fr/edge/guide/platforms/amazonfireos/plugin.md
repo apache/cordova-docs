@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Plugins
 ---
 
 # Amazon Fire OS Plugins
 
-Suivez les instructions fournies dans le Guide de Plugins Android pour une vue d'ensemble du développement de plugins personnalisés.
+Suivez les instructions fournies dans le Guide de [Plugins Android](../android/plugin.html) pour une vue d'ensemble du développement de plugins personnalisés.
 
 ## Echo Amazon Fire OS Plugin exemple
 

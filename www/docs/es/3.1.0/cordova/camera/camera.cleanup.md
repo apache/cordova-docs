@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 # camera.cleanup
@@ -27,7 +29,7 @@ Elimina intermedio fotos tomadas por la cámara de almacenamiento temporal.
 
 ## Descripción
 
-Elimina los archivos de imagen intermedia que se mantienen en depósito temporal después de llamar a `camera.getPicture`. Se aplica sólo cuando el valor de `Camera.sourceType` es igual a `Camera.PictureSourceType.CAMERA` y el `Camera.destinationType` es igual a `Camera.DestinationType.FILE_URI`.
+Elimina los archivos de imagen intermedia que se mantienen en depósito temporal después de llamar a `[camera.getPicture](camera.getPicture.html)`. Se aplica sólo cuando el valor de `Camera.sourceType` es igual a `Camera.PictureSourceType.CAMERA` y el `Camera.destinationType` es igual a `Camera.DestinationType.FILE_URI`.
 
 ## Plataformas soportadas
 

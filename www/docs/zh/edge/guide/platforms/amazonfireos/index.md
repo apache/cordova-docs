@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 亞馬遜火 OS 平臺指南
 ---
 
 # 亞馬遜火 OS 平臺指南
@@ -24,9 +26,9 @@ license: >
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   亞馬遜火 OS 配置
-*   亞馬遜火 OS WebViews
-*   亞馬遜火 OS 外掛程式
+*   [亞馬遜火 OS 配置](config.html)
+*   [亞馬遜火 OS WebViews](webview.html)
+*   [亞馬遜火 OS 外掛程式](plugin.html)
 
 ## 簡介
 
@@ -41,7 +43,7 @@ license: >
 
 亞馬遜火 os 開發科爾多瓦的應用程式需要安裝的各種支援檔，包括 android 系統的發展，以及亞馬遜 web 視圖 SDK 所需的一切。 請檢查下面的清單中所需的安裝：
 
-*   命令列介面
+*   [命令列介面](../../cli/index.html)
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [亞馬遜 web 視圖 SDK][1]

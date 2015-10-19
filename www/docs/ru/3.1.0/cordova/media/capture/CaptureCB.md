@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
@@ -29,7 +31,7 @@ license: >
 
 Эта функция выполняется после завершения операции успешного захвата. В этот момент был захвачен файл мультимедиа и либо пользователь завершил приложение захват средств массовой информации, или захват предел был достигнут.
 
-Каждый `MediaFile` объект описывает захваченных медиа-файлов.
+Каждый `[MediaFile](MediaFile.html)` объект описывает захваченных медиа-файлов.
 
 ## Быстрый пример
 

@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileError
 ---
 
 FileError
 ========
 
-A 'FileError' object is set when an error occurs in any of the File API methods. 
+A 'FileError' object is set when an error occurs in any of the [File](../fileobj/fileobj.html) API methods. 
 
 Properties
 ----------
@@ -47,4 +49,4 @@ Constants
 Description
 -----------
 
-The `FileError` object is the only parameter of any of the File API's error callbacks.  Developers must read the code property to determine the type of error.
+The `FileError` object is the only parameter of any of the [File](../fileobj/fileobj.html) API's error callbacks.  Developers must read the code property to determine the type of error.

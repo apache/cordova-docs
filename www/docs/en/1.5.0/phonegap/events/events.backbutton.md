@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 backbutton
@@ -30,7 +32,7 @@ Details
 
 If you need to override the default back button behaviour you can register an event listener for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -38,7 +40,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -47,7 +49,7 @@ Quick Example
         // Handle the back button
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

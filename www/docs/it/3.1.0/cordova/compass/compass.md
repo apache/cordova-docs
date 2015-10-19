@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Bussola
 ---
 
 # Bussola
@@ -24,18 +26,18 @@ license: >
 
 ## Metodi
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (obsoleto)
-*   compass.clearWatchFilter (obsoleto)
+*   [compass.getCurrentHeading](compass.getCurrentHeading.html)
+*   [compass.watchHeading](compass.watchHeading.html)
+*   [compass.clearWatch](compass.clearWatch.html)
+*   [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (obsoleto)
+*   [compass.clearWatchFilter](compass.clearWatchFilter.html) (obsoleto)
 
 ## Argomenti
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   [compassSuccess](parameters/compassSuccess.html)
+*   [compassError](parameters/compassError.html)
+*   [compassOptions](parameters/compassOptions.html)
+*   [compassHeading](parameters/compassHeading.html)
 
 ## La funzionalità di accesso
 

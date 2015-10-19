@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToDate
 ---
 
 # globalization.stringToDate
@@ -52,7 +54,7 @@ El parámetro `options` es opcional y por defecto para los siguientes valores:
 
 El `options.formatLength` puede ser de `short`, `medium`, `long` o `full`. El `options.selector` puede ser la `date`, la `time` o la `date and time`.
 
-Si hay un error al analizar la cadena de fecha, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PARSING\_ERROR`.
+Si hay un error al analizar la cadena de fecha, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## Plataformas soportadas
 

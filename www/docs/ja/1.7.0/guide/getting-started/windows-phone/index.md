@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Windows Phone
 ---
 
 Getting Started with Windows Phone
@@ -84,7 +86,7 @@ Getting Started with Windows Phone
 デバイスでアプリをテストするためには、デバイスは登録されていなければなりません。 [ここ][register-url] をクリックし、 Windows Phone へのデプロイとテストに関するドキュメントを読んでください。
 
 - デバイスが接続され、スクリーンがアンロックなことを確認します
-- Visual Studio で、上部のドロップダウンメニューから 'Windows Phone Device' を選択します
+- Visual Studio で、上部のドロップダウンメニューから 'Windows Phone [Device](../../../cordova/device/device.html)' を選択します
 - ドロップダウンメニューの隣にある緑の **play ボタン** をクリックするか、 F5 を押下しデバッグを開始します
 
     ![](img/guide/getting-started/windows-phone/wpd.png)

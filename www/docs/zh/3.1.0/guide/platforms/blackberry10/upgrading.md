@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 升級黑莓手機
 ---
 
 # 升級黑莓手機
@@ -72,7 +74,7 @@ platform add blackberry10`.
 
 5.  將您的專案源從舊專案複製 `/www` 到新的專案目錄 `/www` 目錄。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 ### BlackBerryOS/操作手冊
 
@@ -86,7 +88,7 @@ platform add blackberry10`.
 
 5.  複製 `www/cordova.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 7.  複製 `native` 到現有專案中，並覆蓋舊從新專案目錄 `native` 目錄。
 
@@ -110,7 +112,7 @@ platform add blackberry10`.
 
 5.  將您的專案源從舊專案複製 `/www` 到新的專案目錄 `/www` 目錄。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 BlackBerryOS/行動手冊：
 
@@ -124,7 +126,7 @@ BlackBerryOS/行動手冊：
 
 5.  複製 `www/cordova.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 7.  複製 `native` 到現有專案中，並覆蓋舊從新專案目錄 `native` 目錄。
 
@@ -144,7 +146,7 @@ BlackBerryOS/行動手冊：
 
 5.  複製 `www/cordova-2.7.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.6.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
 
 7.  複製 `native` 到現有專案中，並覆蓋舊從新專案目錄 `native` 目錄。
 
@@ -160,7 +162,7 @@ BlackBerryOS/行動手冊：
 
 但是，在這裡是零敲碎打更新所需的新零件：
 
-1.  更新中的 cordova.blackberry.js 檔 `Phonegap-2.6.0/lib/blackberry/javascript` 目錄。
+1.  更新中的 cordova.blackberry.js [檔](../../../cordova/file/fileobj/fileobj.html) `Phonegap-2.6.0/lib/blackberry/javascript` 目錄。
 
 2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.6.0/lib/blackberry/framework` 目錄。
 
@@ -174,7 +176,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -192,7 +194,7 @@ BlackBerryOS/行動手冊：
 
 但是，在這裡是零敲碎打更新所需的新零件：
 
-1.  更新中的 cordova.blackberry.js 檔 `Phonegap-2.5.0/lib/blackberry/javascript` 目錄。
+1.  更新中的 cordova.blackberry.js [檔](../../../cordova/file/fileobj/fileobj.html) `Phonegap-2.5.0/lib/blackberry/javascript` 目錄。
 
 2.  更新 `ext` ， `ext-air` ，和 `ext-qnx` 在 `Phonegap-2.5.0/lib/blackberry/framework` 目錄。
 
@@ -206,7 +208,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -222,7 +224,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -237,13 +239,13 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.2.3.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.3.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.2.3.0/ext-air/` 目錄。
 
 4.  更新的內容 `cordova.2.3.0/ext-qnx/` 目錄。
 
-5.  更新中的.js 檔 `cordova.2.3.0/javascript/` 目錄。
+5.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.3.0/javascript/` 目錄。
 
 6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.3.0/` 到目錄`cordova.2.4.0/`.
 
@@ -257,7 +259,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -272,13 +274,13 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.2.2.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.2.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.2.2.0/ext-air/` 目錄。
 
 4.  更新的內容 `cordova.2.2.0/ext-qnx/` 目錄。
 
-5.  更新中的.js 檔 `cordova.2.2.0/javascript/` 目錄。
+5.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.2.0/javascript/` 目錄。
 
 6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.2.0/` 到目錄`cordova.2.3.0/`.
 
@@ -292,7 +294,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -307,13 +309,13 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.2.1.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.1.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.2.1.0/ext-air/` 目錄。
 
 4.  更新的內容 `cordova.2.1.0/ext-qnx/` 目錄。
 
-5.  更新中的.js 檔 `cordova.2.1.0/javascript/` 目錄。
+5.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.1.0/javascript/` 目錄。
 
 6.  打開 `sample/lib/` 目錄和重命名 `cordova.2.1.0/` 到目錄`cordova.2.2.0/`.
 
@@ -327,7 +329,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -341,11 +343,11 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.2.0.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.0.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.2.0.0/ext-air/` 目錄。
 
-4.  更新中的.js 檔 `cordova.2.0.0/javascript/` 目錄。
+4.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.2.0.0/javascript/` 目錄。
 
 5.  打開 `sample/lib/` 目錄和重命名 `cordova.2.0.0/` 到目錄`cordova.2.1.0/`.
 
@@ -359,7 +361,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -382,11 +384,11 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.1.9.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.1.9.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.1.9.0/ext-air/` 目錄。
 
-4.  更新中的.js 檔 `cordova.1.9.0/javascript/` 目錄。
+4.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.1.9.0/javascript/` 目錄。
 
 5.  打開 `sample/lib/` 目錄和重命名 `cordova.1.9.0/` 到目錄`cordova.2.0.0/`.
 
@@ -411,7 +413,7 @@ BlackBerryOS/行動手冊：
 
 1.  打開您 `www/` 目錄，其中包含您的應用程式。
 
-2.  刪除和更新中的.jar 檔 `ext/` 目錄。
+2.  刪除和更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `ext/` 目錄。
 
 3.  更新的內容 `ext-air/` 目錄。
 
@@ -434,11 +436,11 @@ BlackBerryOS/行動手冊：
 
 1.  打開 `sample/lib/` 目錄。
 
-2.  更新中的.jar 檔 `cordova.1.7.0/ext/` 目錄。
+2.  更新中的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.1.7.0/ext/` 目錄。
 
 3.  更新的內容 `cordova.1.7.0/ext-air/` 目錄。
 
-4.  更新中的.js 檔 `cordova.1.7.0/javascript/` 目錄。
+4.  更新中的.js [檔](../../../cordova/file/fileobj/fileobj.html) `cordova.1.7.0/javascript/` 目錄。
 
 5.  打開 `sample/lib/` 目錄和重命名 `cordova.1.7.0/` 到目錄`cordova.1.8.0/`.
 

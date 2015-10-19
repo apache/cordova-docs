@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.startRecord
 ---
 
 media.startRecord
@@ -40,7 +42,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Record audio
@@ -62,7 +64,7 @@ Quick Example
         mediaRec.startRecord();
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -146,7 +148,7 @@ iOS Quirks
 
 - iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
 
-- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `File` API using `LocalFileSystem.TEMPORARY`. Any subdirectory specified at record time must already exist.
+- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `[File](../file/fileobj/fileobj.html)` API using `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY`. Any subdirectory specified at record time must already exist.
 
 - Files can be recorded and played back using the documents URI:
 

@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 黑莓手機配置
 ---
 
 # 黑莓手機配置
 
 `config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 僅適用于黑莓 10 此節的詳細資訊偏好生成。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `ChildBrowser`( `disable` 或預設的 `enable` ）： 禁用兒童瀏覽器視窗。 預設情況下，應用程式啟動一個輔助瀏覽器視窗以顯示資源通過訪問 `window.open()` 或通過指定 `_blank` 錨點目標。 指定 `disable` 重寫此預設行為。
+*   `ChildBrowser`( `disable` 或預設的 `enable` ）： 禁用兒童瀏覽器視窗。 預設情況下，應用程式啟動一個輔助瀏覽器視窗以顯示資源通過訪問 `[window.open](../../../cordova/inappbrowser/window.open.html)()` 或通過指定 `_blank` 錨點目標。 指定 `disable` 重寫此預設行為。
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` 或預設的 `disable` ）： 啟用快顯視窗阻止程式，這樣可以防止對調用 `window.open()` 。 預設情況下，快顯視窗在兒童瀏覽器視窗中顯示。 將首選項設置為 `enable` 防止它顯示在所有。
+*   `PopupBlocker`( `enable` 或預設的 `disable` ）： 啟用快顯視窗阻止程式，這樣可以防止對調用 `[window.open](../../../cordova/inappbrowser/window.open.html)()` 。 預設情況下，快顯視窗在兒童瀏覽器視窗中顯示。 將首選項設置為 `enable` 防止它顯示在所有。
     
         <preference name="PopupBlocker" value="enable"/>
         

@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android konfiguracijo
 ---
 
 # Android konfiguracijo
 
 V `config.xml` datoteko nadzira app's osnovne nastavitve, ki veljajo za vsako uporabo in CordovaWebView stopnje. Ta odsek podrobnosti nastavitve, ki veljajo le za Android gradi. Glej config.xml datoteke za informacije na globalno konfiguracijo možnosti.
 
-*   `KeepRunning`(program privzeto boolean, `true` ): določa, ali je vloga ostane teče v ozadju tudi po a `pause` dogodek požarov. Opomba: Ta nastavitev FALSE ne bo ubil app po dogodku premor, bo samo zaustaviti izvajanje kode v spletni pogled cordova, medtem ko app je v ozadju.
+*   `KeepRunning`(program privzeto boolean, `true` ): določa, ali je vloga ostane teče v ozadju tudi po a `[pause](../../../cordova/events/events.pause.html)` dogodek požarov. Opomba: Ta nastavitev FALSE ne bo ubil app po dogodku premor, bo samo zaustaviti izvajanje kode v spletni pogled cordova, medtem ko app je v ozadju.
     
         <preference name="KeepRunning" value="false"/>
         

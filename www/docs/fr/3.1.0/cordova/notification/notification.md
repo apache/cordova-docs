@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Notification
 ---
 
 # Notification
@@ -25,8 +27,8 @@ license: >
 ## Méthodes
 
 *   `notification.alert`
-*   `notification.Confirm`
-*   `notification.prompt`
+*   `[notification.Confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
 *   `notification.beep`
 *   `notification.vibrate`
 

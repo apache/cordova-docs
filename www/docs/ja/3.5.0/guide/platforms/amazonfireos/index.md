@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アマゾン火 OS プラットフォーム ガイド
 ---
 
 # アマゾン火 OS プラットフォーム ガイド
@@ -24,9 +26,9 @@ license: >
 
 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   アマゾン火 OS 構成
-*   アマゾン火 OS web 表示
-*   アマゾン火 OS プラグイン
+*   [アマゾン火 OS 構成](config.html)
+*   [アマゾン火 OS web 表示](webview.html)
+*   [アマゾン火 OS プラグイン](plugin.html)
 
 ## 要件、およびサポート
 

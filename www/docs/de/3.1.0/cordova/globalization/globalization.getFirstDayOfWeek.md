@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getFirstDayOfWeek
 ---
 
 # globalization.getFirstDayOfWeek
@@ -29,7 +31,7 @@ Den ersten Tag der Woche laut dem Client Benutzereinstellungen und Kalender gibt
 
 Die Wochentage sind nummeriert, beginnend mit 1, wo wird 1 Sonntag angenommen. Liefert den Tag auf der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `Number` Wert.
 
-Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
+Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 

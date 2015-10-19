@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToNumber
 ---
 
 globalization.stringToNumber
@@ -34,9 +36,9 @@ as a parameter. That object should have a `value` property with a
 `Number` value.
 
 If there is an error parsing the number string, then the
-`errorCallback` executes with a `GlobalizationError` object as a
+`errorCallback` executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a
 parameter. The error's expected code is
-`GlobalizationError.PARSING\_ERROR`.
+`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following
 values:
@@ -53,7 +55,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this should display a
@@ -66,7 +68,7 @@ popup dialog with text similar to `number: 1234.56`:
         {type:'decimal'}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

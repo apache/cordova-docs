@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 localStorage
 ===============
 
-Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a W3C [Storage](../storage.html) interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
     var storage = window.localStorage;
 
@@ -37,7 +39,7 @@ Methods
 Details
 -----------
 
-localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
+localStorage provides an interface to a W3C [Storage](../storage.html) interface.  It allows one to save data as key-value pairs.
 
 Note: window.sessionStorage provides the same interface, but is cleared between app launches.
 
@@ -50,33 +52,33 @@ Supported Platforms
 - Windows Phone 7
 - webOS
 
-Key Quick Example
+Key Quick [Example](../storage.opendatabase.html)
 -------------
 
     var keyName = window.localStorage.key(0);
 
-Set Item Quick Example
+Set Item Quick [Example](../storage.opendatabase.html)
 -------------
 
     window.localStorage.setItem("key", "value");
 
-Get Item Quick Example
+Get Item Quick [Example](../storage.opendatabase.html)
 -------------
 
 	var value = window.localStorage.getItem("key");
 	// value is now equal to "value"
 
-Remove Item Quick Example
+Remove Item Quick [Example](../storage.opendatabase.html)
 -------------
 
 	window.localStorage.removeItem("key");
 
-Clear Quick Example
+Clear Quick [Example](../storage.opendatabase.html)
 -------------
 
 	window.localStorage.clear();
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

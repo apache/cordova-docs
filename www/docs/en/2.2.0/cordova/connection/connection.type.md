@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: connection.type
 ---
 
 connection.type
@@ -39,7 +41,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
@@ -59,7 +61,7 @@ Quick Example
     
     checkConnection();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -92,7 +94,7 @@ Full Example
 	        states[Connection.CELL_4G]	= 'Cell 4G connection';
 	        states[Connection.NONE]   	= 'No network connection';
 
-	        alert('Connection type: ' + states[networkState]);
+	        alert('[Connection](connection.html) type: ' + states[networkState]);
 	    }
         
         </script>
@@ -104,7 +106,7 @@ Full Example
 
 API Change
 ----------
-Before Cordova 2.2.0, the Connection object existed at: `navigator.network.connection`.
+Before Cordova 2.2.0, the [Connection](connection.html) object existed at: `navigator.network.connection`.
 
 To match the spec, this was changed to `navigator.connection` in 2.2.0.
 
@@ -130,7 +132,7 @@ webOS Quirks
 Windows Phone Quirks
 --------------------
 
-- Windows Phone Emulator always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- Windows Phone Emulator always detects `navigator.connection.type` as `[Connection](connection.html).UNKNOWN`.
 
 Tizen Quirks
 --------------------

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Хранения
 ---
 
 # Хранения
@@ -24,7 +26,7 @@ license: >
 
 Этот API предлагает варианты хранения на основе двух различных спецификаций W3C:
 
-*   [Спецификации API хранения веб][1] позволяет вам получить доступ к данным через пар простой ключ/значение. Смотрите секцию на localStorage для получения подробной информации на этот интерфейс.
+*   [Спецификации API хранения веб][1] позволяет вам получить доступ к данным через пар простой ключ/значение. Смотрите секцию на [localStorage](localstorage/localstorage.html) для получения подробной информации на этот интерфейс.
 
 *   [Спецификация SQL базы данных Web][2] предлагает больше таблиц базы данных, полнофункциональный доступ через SQL запросы. Краткое изложение этого интерфейса немедленно появляется ниже.
 
@@ -35,22 +37,22 @@ Cordova предоставляет доступ к обоим интерфейс
 
 ## Методы
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## Аргументы
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## Объекты
 
-*   Базы данных
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [Базы данных](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## Доступ к функции
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.watchPosition
 ---
 
 geolocation.watchPosition
@@ -37,12 +39,12 @@ geolocation.watchPosition
 返り値
 -------
 
-- __String__: 位置変化を参照する watch ID を返します。 watch ID は `geolocation.clearWatch` に渡すことで位置変化の監視を中止することができます。
+- __String__: 位置変化を参照する watch ID を返します。 watch ID は `[geolocation.clearWatch](geolocation.clearWatch.html)` に渡すことで位置変化の監視を中止することができます。
 
 概要
 -----------
 
-`geolocation.watchPosition` 関数は非同期関数です。位置情報に変化があった場合に、デバイスの現在位置を返します。デバイスが新しい位置情報を取得したとき、 `Position` オブジェクトとともに `geolocationSuccess` コールバック関数が呼び出されます。エラーが発生した場合、 `PositionError` オブジェクトとともに `geolocationError` コールバック関数が呼び出されます。
+`geolocation.watchPosition` 関数は非同期関数です。位置情報に変化があった場合に、デバイスの現在位置を返します。デバイスが新しい位置情報を取得したとき、 `[Position](Position/position.html)` オブジェクトとともに `[geolocationSuccess](parameters/geolocationSuccess.html)` コールバック関数が呼び出されます。エラーが発生した場合、 `[PositionError](PositionError/positionError.html)` オブジェクトとともに `[geolocationError](parameters/geolocationError.html)` コールバック関数が呼び出されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -53,7 +55,7 @@ geolocation.watchPosition
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // 成功時のコールバック関数

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Plugins
 ---
 
 # iOS Plugins
@@ -182,7 +184,7 @@ Ver otros métodos que puede reemplazar en:
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-Por ejemplo, puede conectar en el `pause` , `resume` , poner fin a la aplicación y `handleOpenURL` eventos.
+Por ejemplo, puede conectar en el `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , poner fin a la aplicación y `handleOpenURL` eventos.
 
 ## Plugins de depuración
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-Agit sur la boîte de dialogue créée par `camera.getPicture`.
+Agit sur la boîte de dialogue créée par `[camera.getPicture](../camera.getPicture.html)`.
 
 ## Méthodes
 
@@ -36,7 +38,7 @@ Définit la position de la boite de dialogue.
 
 **Paramètres :**
 
-*   `cameraPopoverOptions`: l'objet `CameraPopoverOptions` spécifiant la nouvelle position
+*   `cameraPopoverOptions`: l'objet `[CameraPopoverOptions](CameraPopoverOptions.html)` spécifiant la nouvelle position
 
 ## Exemple court
 

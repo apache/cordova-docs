@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.release
 ---
 
 # media.release
@@ -27,7 +29,7 @@ license: >
 
 ## 설명
 
-`media.release`메서드가 동기적으로 실행 됩니다 기본 운영 체제의 오디오 리소스를 해제 합니다. 이것은 유한 양의 미디어 재생용 OpenCore 인스턴스 때문에 안 드 로이드를 위해 특히 중요 하다입니다. 응용 프로그램 호출 해야는 `release` 함수에 대 한 `Media` 리소스를 더 이상 필요 합니다.
+`media.release`메서드가 동기적으로 실행 됩니다 기본 운영 체제의 오디오 리소스를 해제 합니다. 이것은 유한 양의 [미디어](media.html) 재생용 OpenCore 인스턴스 때문에 안 드 로이드를 위해 특히 중요 하다입니다. 응용 프로그램 호출 해야는 `release` 함수에 대 한 `Media` 리소스를 더 이상 필요 합니다.
 
 ## 지원 되는 플랫폼
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Geolocation
 ---
 
 Geolocation
@@ -34,28 +36,28 @@ This API is based on the
 [W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html),
 and only executes on devices that don't already provide an implementation.
 
-**Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the [Privacy Guide](../../guide/privacy/index.html).
 
 Methods
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+- [geolocation.watchPosition](geolocation.watchPosition.html)
+- [geolocation.clearWatch](geolocation.clearWatch.html)
 
 Arguments
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- [geolocationSuccess](parameters/geolocationSuccess.html)
+- [geolocationError](parameters/geolocationError.html)
+- [geolocationOptions](parameters/geolocation.options.html)
 
 Objects (Read-Only)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- [Position](Position/position.html)
+- [PositionError](PositionError/positionError.html)
+- [Coordinates](Coordinates/coordinates.html)
 
 Permissions
 -----------

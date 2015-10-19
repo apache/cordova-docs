@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading Cordova iOS
 ---
 
 Upgrading Cordova iOS
@@ -124,12 +126,12 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 8. Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.3.0, this has new scripts)** 
 9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 10. Convert your **Cordova.plist** file to **config.xml**, by running the script **bin/cordova\_plist\_to\_config\_xml** on your project file.
-11. Add the InAppBrowser plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
+11. Add the [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
 
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 12. Note that Objective-C plugins are **not** whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the “User-Agent” header of the connection to the same user-agent as the main Cordova WebView. 
 You can get this by accessing the **userAgent** property off the main view-controller. The main view-controller (CDVViewController) also has a **URLisAllowed** method for you to check whether a URL will pass the whitelist.        
-13. Device API changes: 
+13. [Device](../../../cordova/device/device.html) API changes: 
     * For iOS, device.platform used to return “iPhone”, “iPad” or “iPod Touch” — now it returns (correctly) “iOS”. 
     * For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′) — now it returns what device.platform used to return: ”iPhone”, “iPad” or “iPod Touch”.  
     * For all platforms, there is a new property called device.model — this returns the specific device model, e.g “iPad2,5″ (for other platforms, this returns what device.name used to return).
@@ -152,7 +154,7 @@ You can get this by accessing the **userAgent** property off the main view-contr
     
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode File Inspector.
+**Note** that in 2.2.0, the **bin/create** script will copy in the CordovaLib sub-project into your project now. To have the same kind of setup, just copy in the right CordovaLib into your project folder, and update the CordovaLib sub-project location (relative to the project) in the Xcode [File](../../../cordova/file/fileobj/fileobj.html) Inspector.
 
 ## Upgrading Cordova 2.0.0 projects to 2.1.0 ##
 
@@ -211,12 +213,12 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 20. Select the **libCordova.a** static library, then select the **"Add"** button
 21. Delete the **"Run Script"** phase.
 22. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
-23. Search for **"Other Linker Flags"**, and add the values **-all_load** and **-Obj-C**
+23. Search for **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"**, and add the values **-all_load** and **-Obj-C**
 24. Expand the **"CordovaLib" sub-project**
 25. Locate the **"VERSION"** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **"Create groups for any added folders"** radiobutton, then select the **"Finish"** button
 27. Select the **"VERSION"** file that you just dragged in a previous step
-28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+28. Press the key combination **Option-Command-1** to [show](../../../cordova/splashscreen/splashscreen.show.html) the **File Inspector** (or menuitem **View -> Utilities -> Show [File](../../../cordova/file/fileobj/fileobj.html) Inspector**)
 29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
 30. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"** (this is so the unified headers can be found)
 31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
@@ -228,7 +230,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
     
         "$(BUILT_PRODUCTS_DIR)"
 
-33. Search for **"Other Linker Flags"**. For that setting, add this value below:
+33. Search for **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"**. For that setting, add this value below:
 
         -weak_framework CoreFoundation
 
@@ -308,7 +310,7 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 9. Enter **"/Users/Shared/Cordova/Frameworks/Cordova.framework"** in the **"Go to the folder:" sheet** and then press the **"Go"** button
 10. Press the **"Add"** button in the **"Add Files..." sheet**
 11. **Select "Cordova.framework"** in the Project Navigator
-12. Press the key combination **Option-Command-1** to show the **File Inspector**
+12. Press the key combination **Option-Command-1** to [show](../../../cordova/splashscreen/splashscreen.show.html) the **File Inspector**
 13. Choose **"Absolute Path"** in the **File Inspector** for the drop-down menu for **Location**
 14. Press the key combination **Option-Command-A**, which should drop down a sheet to add files to your project (the **"Add Files..." sheet**). Make sure the **"Created groups for any added folders"** radio-button is selected
 15. Press the key combination **Shift-Command-G**, which should drop down another sheet for you to go to a folder (the **"Go to the folder:" sheet**)

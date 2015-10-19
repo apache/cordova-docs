@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Notification.Confirm
 ---
 
 # Notification.Confirm
 
-Visualizza una finestra di dialogo conferma personalizzabile.
+[Visualizza](../inappbrowser/inappbrowser.html) una finestra di dialogo conferma personalizzabile.
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
     

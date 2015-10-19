@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 概述
 ---
 
 # 概述
@@ -72,4 +74,4 @@ Apache 科爾多瓦的應用程式都依賴于一個共同的 `config.xml` 檔�
 
 *   平臺為中心的工作流： 請參見平臺輔助線。
 
-在安裝之後科爾多瓦，建議您查看您將為開發移動平臺平臺指南。 它還建議你還審查的隱私指南、 安全指南 》 和接下來的步驟。 用於配置科爾多瓦，見 config.xml 檔。 從 JavaScript 訪問本機函數在一個設備上的，請參閱外掛程式 Api。 和參考作為必要的其他包括指南。
+在安裝之後科爾多瓦，建議您查看您將為開發移動平臺平臺指南。 它還建議你還審查的隱私指南、 [安全指南](../appdev/security/index.html) 》 和接下來的步驟。 用於配置科爾多瓦，見 config.xml 檔。 從 JavaScript 訪問本機函數在一個設備上的，請參閱外掛程式 Api。 和參考作為必要的其他包括指南。

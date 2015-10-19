@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 파일
 ---
 
 # 파일
@@ -40,7 +42,7 @@ license: >
 
 ## 세부 정보
 
-`File`개체는 단일 파일의 특성을 포함 합니다. 인스턴스를 얻을 수는 `File` 를 호출 하 여 개체를 `FileEntry` 개체의 `file()` 메서드.
+`File`개체는 단일 파일의 특성을 포함 합니다. 인스턴스를 얻을 수는 `File` 를 호출 하 여 개체를 `[FileEntry](../fileentry/fileentry.html)` 개체의 `file()` 메서드.
 
 ## 지원 되는 플랫폼
 
@@ -52,9 +54,9 @@ license: >
 
 ## 슬라이스
 
-반환 된 새 `File` 개체를 `FileReader` 파일의 지정 된 부분만 반환 합니다. 음수 값에 대 한 `start` 또는 `end` 파일의 끝에서 측정 됩니다. 인덱스는 현재 슬라이스를 기준으로 배치 됩니다. (아래 전체 예제를 참조 하십시오.)
+반환 된 새 `File` 개체를 `[FileReader](../filereader/filereader.html)` 파일의 지정 된 부분만 반환 합니다. 음수 값에 대 한 `start` 또는 `end` 파일의 끝에서 측정 됩니다. 인덱스는 현재 슬라이스를 기준으로 배치 됩니다. (아래 전체 예제를 참조 하십시오.)
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
 *   **시작**:을 읽고, 포함 된 첫 번째 바이트의 인덱스.
 

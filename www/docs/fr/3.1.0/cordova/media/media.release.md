@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.release
 ---
 
 # media.release
@@ -27,7 +29,7 @@ Libère les ressources audio du système d'exploitation sous-jacent.
 
 ## Description
 
-La `media.release` méthode s'exécute de façon synchrone, libérant des ressources audio du système d'exploitation sous-jacent. Cela est particulièrement important pour Android, puisqu'il y a une quantité finie d'instances OpenCore pour la lecture du média. Les applications doivent appeler le `release` fonction pour tout `Media` ressource qui n'est plus nécessaire.
+La `media.release` méthode s'exécute de façon synchrone, libérant des ressources audio du système d'exploitation sous-jacent. Cela est particulièrement important pour Android, puisqu'il y a une quantité finie d'instances OpenCore pour la lecture du média. Les applications doivent appeler le `release` fonction pour tout `[Media](media.html)` ressource qui n'est plus nécessaire.
 
 ## Plates-formes prises en charge
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Ikone in brizg zaslon
 ---
 
 # Ikone in brizg zaslon
@@ -150,7 +152,7 @@ V prvi vrstici nastavi sliko za prikaz kot brizg zaslon. To je ime datoteke png 
 
 V drugi vrstici določa privzeto zamudo doklej splashscreen pojavi v milisekundah. To bi moralo biti maksimalno pričakovanih začetni čas. Privzeta vrednost za SplashScreenDelay je 3000 ms.
 
-Nazadnje za─ìetni zaslon je prisoten samo tako dolgo, kot je potrebno. Ko vaš app je začela in je naložen na spletni pogled, naj vaš app skriti brizg zaslon, tako da vaš glavni pregled je vidna. Ker čas začetka app bo precej malo razlikujejo zaradi številnih dejavnikov, je priporočljivo, da vaš app izrecno sklicevati `navigator.splashscreen.hide()` v Javascript metode, ki se odzove na `deviceready` dogodek. Sicer brizg zaslon bo vidna SplashScreenDelay vrednost, ki ste ga konfigurirali zgoraj. Ta dogodek usmerjen pristop je zelo priporočljivo versus ob brizg zaslon viden za vedno določen čas.
+Nazadnje za─ìetni zaslon je prisoten samo tako dolgo, kot je potrebno. Ko vaš app je začela in je naložen na spletni pogled, naj vaš app skriti brizg zaslon, tako da vaš glavni pregled je vidna. Ker čas začetka app bo precej malo razlikujejo zaradi številnih dejavnikov, je priporočljivo, da vaš app izrecno sklicevati `navigator.splashscreen.hide()` v Javascript metode, ki se odzove na `[deviceready](../cordova/events/events.deviceready.html)` dogodek. Sicer brizg zaslon bo vidna SplashScreenDelay vrednost, ki ste ga konfigurirali zgoraj. Ta dogodek usmerjen pristop je zelo priporočljivo versus ob brizg zaslon viden za vedno določen čas.
 
 ## Brizg zaslon za iOS platformi
 

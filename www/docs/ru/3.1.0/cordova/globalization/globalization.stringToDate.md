@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToDate
 ---
 
 # globalization.stringToDate
@@ -53,7 +55,7 @@ license: >
 `options.formatLength`Может быть `short` , `medium` , `long` , или `full` . `options.selector`Может быть `date` , `time` или`date and
 time`.
 
-Если есть ошибка при разборе строки даты, то `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PARSING\_ERROR`.
+Если есть ошибка при разборе строки даты, то `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## Поддерживаемые платформы
 

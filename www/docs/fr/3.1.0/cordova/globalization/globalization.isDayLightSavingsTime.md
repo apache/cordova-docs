@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.isDayLightSavingsTime
 ---
 
 # globalization.isDayLightSavingsTime
@@ -31,7 +33,7 @@ Indique si l'heure avancée est en vigueur à la `successCallback` avec un `prop
 
 Le paramètre entrant `date` doit être de type`Date`.
 
-S'il y a une erreur de lecture de la date, puis le `errorCallback` s'exécute. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+S'il y a une erreur de lecture de la date, puis le `errorCallback` s'exécute. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Plates-formes prises en charge
 

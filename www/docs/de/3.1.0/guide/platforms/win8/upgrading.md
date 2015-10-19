@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Aktualisieren von Windows 8
 ---
 
 # Aktualisieren von Windows 8
@@ -32,7 +34,7 @@ Die folgenden Befehle sollten aus innerhalb von Visual Studio gewiss geschehen, 
 
 1.  Entfernen von `cordova-2.8.0.js` aus des Projekts `www` Verzeichnis.
 
-2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die Datei nicht mehr eine Versionsnummer im Dateinamen enthält.)
+2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die [Datei](../../../cordova/file/fileobj/fileobj.html) nicht mehr eine Versionsnummer im Dateinamen enthält.)
 
 3.  Erstellen und testen!
 
@@ -42,6 +44,6 @@ Die folgenden Befehle sollten aus innerhalb von Visual Studio gewiss geschehen, 
 
 1.  Entfernen von `cordova-2.7.0.js` aus des Projekts `www` Verzeichnis.
 
-2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die Datei nicht mehr eine Versionsnummer im Dateinamen enthält.)
+2.  Fügen Sie `cordova.js` -Datei von der Quelle auf des Projekts `www` Verzeichnis. (Beachten Sie, dass die [Datei](../../../cordova/file/fileobj/fileobj.html) nicht mehr eine Versionsnummer im Dateinamen enthält.)
 
 3.  Erstellen und testen!

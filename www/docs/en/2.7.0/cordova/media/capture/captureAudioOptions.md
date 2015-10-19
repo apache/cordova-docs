@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureAudioOptions
 ---
 
 CaptureAudioOptions
@@ -29,7 +31,7 @@ Properties
 - __limit:__ The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 - __duration:__ The maximum duration of an audio sound clip, in seconds.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 media files, no longer than 10 seconds each

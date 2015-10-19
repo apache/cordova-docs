@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8 wtyczki
 ---
 
 # Windows Phone 8 wtyczki
@@ -152,7 +154,7 @@ Wtyczki z długim żądania, tło działalności, takich jak odtwarzanie, słuch
 
 ## Plugin XML
 
-Poniżej przedstawiono sposób użycia `plugin.xml` pliku, aby określić pliki źródłowe plugin na platformie Windows Phone. Zobacz wtyczki aplikacji Przegląd i Plugin specyfikacji szczegółowe informacje na temat dostępnych opcji.
+Poniżej przedstawiono sposób użycia `plugin.xml` pliku, aby określić pliki źródłowe plugin na platformie Windows Phone. Zobacz wtyczki aplikacji [Przegląd](../../overview/index.html) i Plugin specyfikacji szczegółowe informacje na temat dostępnych opcji.
 
 *   `<source-file>`Element definiuje wszystkie wtyczki zasobów, takich jak *cs*, *.xaml*, *. xaml.cs*, obraz aktywów i plików *.dll* .
 

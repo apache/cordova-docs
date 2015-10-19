@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Configuration Android
 ---
 
 # Configuration Android
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions Android. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions Android. Voir le fichier config.xml [File](../../../cordova/file/fileobj/fileobj.html) pour plus d'informations sur les options de configuration globale.
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche.
+*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `[pause](../../../cordova/events/events.pause.html)` événement se déclenche.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -47,7 +49,7 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Divers éléments d'actif doivent partager ce nom commun dans les différents sous-répertoires.
+*   `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Divers éléments d'actif doivent partager ce nom commun dans les différents sous-répertoires.
     
         <preference name="SplashScreen" value="splash"/>
         

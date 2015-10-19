@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: File
 ---
 
 File
@@ -35,7 +37,7 @@ File
 詳細
 -------
 
-この `File` オブジェクトは一つのファイルの属性を含みます。 `FileEntry` オブジェクトの __file__ メソッドを呼び出すことで、 File オブジェクトのインスタンスを取得できます。
+この `File` オブジェクトは一つのファイルの属性を含みます。 `[FileEntry](../fileentry/fileentry.html)` オブジェクトの __file__ メソッドを呼び出すことで、 File オブジェクトのインスタンスを取得できます。
 
 サポートされているプラットフォーム
 -------------------

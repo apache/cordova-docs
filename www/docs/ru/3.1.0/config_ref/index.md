@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Файл config.xml
 ---
 
 # Файл config.xml
@@ -28,9 +30,9 @@ license: >
 
 В этом разделе описываются параметры конфигурации глобальных и кросс платформенной. В следующих разделах для конкретной платформы вариантов:
 
-*   iOS конфигурации
+*   [iOS конфигурации](../guide/platforms/ios/config.html)
 *   Андроид конфигурации
-*   BlackBerry конфигурации
+*   [BlackBerry конфигурации](../guide/platforms/blackberry10/config.html)
 
 Помимо различных параметров конфигурации, подробно описаны ниже можно также настроить приложения основной набор образов для каждой целевой платформы. Увидеть иконки и заставки для получения дополнительной информации.
 

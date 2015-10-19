@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ファイル転送
 ---
 
 # ファイル転送
@@ -36,7 +38,7 @@ license: >
 
 ## 詳細
 
-`FileTransfer`オブジェクトはマルチパートのポスト http を使用してリモート サーバーにファイルをアップロードする方法を提供します。 HTTP と HTTPS の両方のプロトコルがサポートされます。 省略可能なパラメーターを渡すことによって指定することができます、 `FileUploadOptions` オブジェクトの `upload()` メソッド。 成功したアップロード時に、 `FileUploadResult` オブジェクト、成功時のコールバックに渡されます。 エラーが発生した場合、 `FileTransferError` オブジェクト エラー コールバックに渡されます。 リモート サーバーからファイルをダウンロードし、デバイスに保存する (iOS と Android） でのみ可能です。
+`FileTransfer`オブジェクトはマルチパートのポスト http を使用してリモート サーバーにファイルをアップロードする方法を提供します。 HTTP と HTTPS の両方のプロトコルがサポートされます。 省略可能なパラメーターを渡すことによって指定することができます、 `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` オブジェクトの `upload()` メソッド。 成功したアップロード時に、 `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` オブジェクト、成功時のコールバックに渡されます。 エラーが発生した場合、 `[FileTransferError](../filetransfererror/filetransfererror.html)` オブジェクト エラー コールバックに渡されます。 リモート サーバーからファイルをダウンロードし、デバイスに保存する (iOS と Android） でのみ可能です。
 
 ## サポートされているプラットフォーム
 
@@ -56,7 +58,7 @@ license: >
 
 *   **successCallback**: 渡されたコールバックを `Metadata` オブジェクト。*(機能)*
 
-*   **解り**: エラー取得が発生した場合に実行されるコールバック、 `Metadata` 。呼び出されると、 `FileTransferError` オブジェクト。*(機能)*
+*   **解り**: エラー取得が発生した場合に実行されるコールバック、 `Metadata` 。呼び出されると、 `[FileTransferError](../filetransfererror/filetransfererror.html)` オブジェクト。*(機能)*
 
 *   **オプション**: ファイル名と mime タイプなどの省略可能なパラメーター。
 
@@ -202,9 +204,9 @@ Android と iOS でサポートされています。
 
 *   **ターゲット**: デバイス上のファイルの完全パス。
 
-*   **successCallback**: 渡されたコールバックを `FileEntry` オブジェクト。*(機能)*
+*   **successCallback**: 渡されたコールバックを `[FileEntry](../fileentry/fileentry.html)` オブジェクト。*(機能)*
 
-*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `FileTransferError` オブジェクト。*(機能)*
+*   **解り**: コールバックを取得するときにエラーが発生した場合に実行される、 `Metadata` 。呼び出されると、 `[FileTransferError](../filetransfererror/filetransfererror.html)` オブジェクト。*(機能)*
 
 *   **trustAllHosts**: 省略可能なパラメーターは、デフォルト `false` 。 場合に設定されている `true` すべてのセキュリティ証明書を受け入れるでしょう。 これは便利ですアンドロイドの自己署名入りセキュリティ証明書を拒否します。 運用環境で使用しないでください。 Android と iOS でサポートされています。 *(ブール値)*
 
@@ -217,7 +219,7 @@ Android と iOS でサポートされています。
 
 ## 中止
 
-進行中の転送を中止します。Onerror コールバックが FileTransferError.ABORT_ERR のエラー コードを持っている FileTransferError オブジェクトに渡されます。
+進行中の転送を中止します。Onerror コールバックが [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR のエラー コードを持っている [FileTransferError](../filetransfererror/filetransfererror.html) オブジェクトに渡されます。
 
 **サポートされているプラットフォーム**
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone Plugins
 ---
 
 # Windows Phone Plugins
@@ -46,7 +48,7 @@ Scrivere un plugin per Cordova su Windows Phone richiede una conoscenza base del
                 / / pubblico, tornando a vuoto, 1 argomento che è una stringa}}
         
 
-Vedere la classe [BaseCommand.cs][1] per i metodi disponibili per il plugin eseguire l'override. Ad esempio, il plugin può acquisire eventi 'pausa' e 'riprendere'.
+Vedere la classe [BaseCommand.cs][1] per i metodi disponibili per il plugin eseguire l'override. Ad esempio, il plugin può acquisire eventi '[pausa](../../../cordova/events/events.pause.html)' e 'riprendere'.
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 

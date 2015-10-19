@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometerSuccess
 ---
 
 # accelerometerSuccess
 
-Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `Acceleration`.
+Функция обратного вызова onSuccess, предоставляет доступ к данным объекта `[Acceleration](../acceleration/acceleration.html)`.
 
     function(acceleration) {
         // Do something

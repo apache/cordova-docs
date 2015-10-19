@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Configuration
 ---
 
 # iOS Configuration
 
-La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. Vedere il file config. XML [File](../../../cordova/file/fileobj/fileobj.html) per informazioni sulle opzioni di configurazione globale.
 
 *   `EnableViewportScale`(boolean, impostazioni predefinite a `false` ): impostare su `true` utilizzare un metatag viewport per disabilitare oppure limitare l'intervallo di ridimensionamento dell'utente.
     

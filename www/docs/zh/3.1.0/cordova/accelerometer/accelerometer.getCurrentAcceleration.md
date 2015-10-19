@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -29,7 +31,7 @@ license: >
 
 加速度計是動作感應器檢測到的更改 (*三角洲*) 在相對於當前的設備方向，在三個維度沿*x*、 *y*和*z*軸運動。
 
-這些加速度值將返回到 `accelerometerSuccess` 回呼函數。
+這些加速度值將返回到 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` 回呼函數。
 
 ## 支援的平臺
 

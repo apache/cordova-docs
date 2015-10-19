@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10-Befehlszeilentools
 ---
 
 # BlackBerry 10-Befehlszeilentools
@@ -24,7 +26,7 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
-Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine [Übersicht](../../overview/index.html) finden Sie unter Application Plugins.
 
 Wenn Sie Hilfe mit jeder nachfolgenden Befehl benötigen, geben Sie den Befehl zusammen mit der `-h` oder `-help` Argumenten, die unterstützt werden, indem alle Befehle und die Beschreibungen für die einzelnen Argumente zur Verfügung.
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraSuccess
 ---
 
 # cameraSuccess
@@ -29,7 +31,7 @@ license: >
 
 ## 매개 변수
 
-*   **imageData**: Base64 인코딩은 이미지 데이터, *또는* 이미지 파일에 따라 URI의 `cameraOptions` 적용. *(문자열)*
+*   **imageData**: Base64 인코딩은 이미지 데이터, *또는* 이미지 파일에 따라 URI의 `[cameraOptions](cameraOptions.html)` 적용. *(문자열)*
 
 ## 예를 들어
 

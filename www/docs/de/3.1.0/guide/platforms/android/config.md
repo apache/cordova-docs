@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android-Konfiguration
 ---
 
 # Android-Konfiguration
 
-Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf Android Builds gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
+Die `config.xml` [Datei](../../../cordova/file/fileobj/fileobj.html) steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf Android Builds gelten. Finden Sie die [Datei](../../../cordova/file/fileobj/fileobj.html) config.xml [Datei](../../../cordova/file/fileobj/fileobj.html) Informationen auf globalen Konfigurations-Optionen.
 
 *   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Gibt eine Fehlerseite, die als Reaktion auf standard-HTTP-Fehler im Bereich von 400-500 anzeigt. Platzieren Sie die angegebene Datei im obersten Verzeichnis enthält die Homepage und andere Web-Ressourcen.
+*   `ErrorUrl`: Gibt eine Fehlerseite, die als Reaktion auf standard-HTTP-Fehler im Bereich von 400-500 anzeigt. Platzieren Sie die angegebene [Datei](../../../cordova/file/fileobj/fileobj.html) im obersten Verzeichnis enthält die Homepage und andere Web-Ressourcen.
     
         <preference name="ErrorUrl" value="error.html"/>
         
@@ -47,7 +49,7 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: Der Name der Datei abzüglich ihrer Erweiterung in das `res/drawable` Verzeichnis. Verschiedene Vermögenswerte müssen diesem gemeinsamen Namen in verschiedenen Unterverzeichnissen teilen.
+*   `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)`: Der Name der [Datei](../../../cordova/file/fileobj/fileobj.html) abzüglich ihrer Erweiterung in das `res/drawable` Verzeichnis. Verschiedene Vermögenswerte müssen diesem gemeinsamen Namen in verschiedenen Unterverzeichnissen teilen.
     
         <preference name="SplashScreen" value="splash"/>
         

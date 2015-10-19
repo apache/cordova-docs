@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: メタデータ
 ---
 
 # メタデータ
@@ -28,7 +30,7 @@ license: >
 
 ## 詳細
 
-`Metadata`オブジェクトは、ファイルまたはディレクトリの状態に関する情報を表します。 呼び出して、 `DirectoryEntry` または `FileEntry` オブジェクトの `getMetadata()` メソッドの結果、 `Metadata` インスタンス。
+`Metadata`オブジェクトは、ファイルまたはディレクトリの状態に関する情報を表します。 呼び出して、 `[DirectoryEntry](../directoryentry/directoryentry.html)` または `[FileEntry](../fileentry/fileentry.html)` オブジェクトの `getMetadata()` メソッドの結果、 `Metadata` インスタンス。
 
 ## サポートされているプラットフォーム
 

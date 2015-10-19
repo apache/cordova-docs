@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 camera.cleanup
@@ -28,7 +30,7 @@ camera.cleanup
 概要
 -----------
 
-`camera.getPicture` が `Camera.sourceType = Camera.PictureSourceType.CAMERA` と `Camera.destinationType = Camera.DestinationType.FILE_URI` と一緒に使用されたとき、ローカルストレージ temporary ディレクトリに保存された画像ファイルをクリーンアップします。
+`[camera.getPicture](camera.getPicture.html)` が `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA` と `[Camera](camera.html).destinationType = [Camera](camera.html).DestinationType.FILE_URI` と一緒に使用されたとき、ローカルストレージ temporary ディレクトリに保存された画像ファイルをクリーンアップします。
 
 
 サポートされているプラットフォーム
@@ -37,7 +39,7 @@ camera.cleanup
 - iOS
 
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail);

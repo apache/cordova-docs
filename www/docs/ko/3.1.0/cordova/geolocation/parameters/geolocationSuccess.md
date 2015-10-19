@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 # geolocationSuccess
 
-지리적 위치 사용할 수 있을 때 실행 되는 사용자의 콜백 함수 (에서 호출할 때 `geolocation.getCurrentPosition` ), 또는 (에서 호출할 때 위치 변경 하는 경우`geolocation.watchPosition`).
+지리적 [위치](../Position/position.html) 사용할 수 있을 때 실행 되는 사용자의 콜백 함수 (에서 호출할 때 `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ), 또는 (에서 호출할 때 [위치](../Position/position.html) 변경 하는 경우`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something
@@ -29,7 +31,7 @@ license: >
 
 ## 매개 변수
 
-*   **위치**: 장치에 의해 반환 된 지리적 위치. *(위치)*
+*   **위치**: 장치에 의해 반환 된 지리적 [위치](../Position/position.html). *(위치)*
 
 ## 예를 들어
 

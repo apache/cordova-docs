@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: プラグイン開発ガイド
 ---
 
 # プラグイン開発ガイド
@@ -73,17 +75,17 @@ JavaScript の任意のプラグインのエントリ ポイントです。 コ�
 
 コルドヴァにはアンドロイド, iOS の, ブラックベリー 10 および Windows Phone プラットフォームのプラグインの自動インストールを有効に利用できるプラグイン仕様。 追加すると、特定の方法であなたのプラグインを構築する `plugin.xml` マニフェスト ファイルは、コマンド ライン ツール経由であなたのプラグインをインストールするユーザーを有効にすることができます。
 
-*   プラグイン仕様
+*   [プラグイン仕様](../../../plugin_ref/spec.html)
 
 ## ネイティブ
 
 あなたのプラグインの java スクリプトの設定を定義した後は、少なくとも 1 つのネイティブ実装を補完する必要があります。 プラットフォームごとに詳細を以下に示します。 これらのガイドは、上記で説明した単純なエコー プラグイン例に構築していきます。
 
-*   Android のプラグイン
-*   ブラックベリーのプラグイン
-*   ブラックベリー 10 プラグイン
-*   iOS のプラグイン
-*   Windows Phone のプラグイン
+*   [Android のプラグイン](../../platforms/android/plugin.html)
+*   [ブラックベリーのプラグイン](../../platforms/blackberry/plugin.html)
+*   [ブラックベリー 10 プラグイン](../../platforms/blackberry10/plugin.html)
+*   [iOS のプラグイン](../../platforms/ios/plugin.html)
+*   [Windows Phone のプラグイン](../../platforms/wp8/plugin.html)
 
 Tizen プラットフォームでは、現在のプラグインをサポートしていません。
 

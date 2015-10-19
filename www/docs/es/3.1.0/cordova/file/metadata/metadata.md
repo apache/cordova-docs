@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Metadatos
 ---
 
 # Metadatos
@@ -28,7 +30,7 @@ Una interfaz que proporciona información sobre el estado de un archivo o direct
 
 ## Detalles
 
-El `Metadata` objeto representa la información sobre el estado de un archivo o directorio. Llamando a `DirectoryEntry` o `FileEntry` del objeto `getMetadata()` método da como resultado un `Metadata` instancia.
+El `Metadata` objeto representa la información sobre el estado de un archivo o directorio. Llamando a `[DirectoryEntry](../directoryentry/directoryentry.html)` o `[FileEntry](../fileentry/fileentry.html)` del objeto `getMetadata()` método da como resultado un `Metadata` instancia.
 
 ## Plataformas soportadas
 

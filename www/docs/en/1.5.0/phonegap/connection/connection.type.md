@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: connection.type
 ---
 
 connection.type
@@ -37,63 +39,63 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
         var networkState = navigator.network.connection.type;
-        
+
         var states = {};
-        states[Connection.UNKNOWN]	= 'Unknown connection';
-        states[Connection.ETHERNET]	= 'Ethernet connection';
-        states[Connection.WIFI]   	= 'WiFi connection';
-        states[Connection.CELL_2G]	= 'Cell 2G connection';
-        states[Connection.CELL_3G]	= 'Cell 3G connection';
-        states[Connection.CELL_4G]	= 'Cell 4G connection';
-        states[Connection.NONE]   	= 'No network connection';
-    
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.NONE]     = 'No network connection';
+
         alert('Connection type: ' + states[networkState]);
     }
-    
+
     checkConnection();
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
         <title>navigator.network.connection.type Example</title>
-        
+
         <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
+
         // Wait for PhoneGap to load
-        // 
+        //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
+
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
         function onDeviceReady() {
             checkConnection();
         }
-        
-	    function checkConnection() {
-	        var networkState = navigator.network.connection.type;
 
-	        var states = {};
-	        states[Connection.UNKNOWN]	= 'Unknown connection';
-	        states[Connection.ETHERNET]	= 'Ethernet connection';
-	        states[Connection.WIFI]   	= 'WiFi connection';
-	        states[Connection.CELL_2G]	= 'Cell 2G connection';
-	        states[Connection.CELL_3G]	= 'Cell 3G connection';
-	        states[Connection.CELL_4G]	= 'Cell 4G connection';
-	        states[Connection.NONE]   	= 'No network connection';
+        function checkConnection() {
+            var networkState = navigator.network.connection.type;
 
-	        alert('Connection type: ' + states[networkState]);
-	    }
-        
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            alert('Connection type: ' + states[networkState]);
+        }
+
         </script>
       </head>
       <body>

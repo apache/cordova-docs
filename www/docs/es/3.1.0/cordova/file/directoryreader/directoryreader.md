@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryReader
 ---
 
 # DirectoryReader
@@ -42,9 +44,9 @@ Leer las entradas en este directorio.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa una matriz de `FileEntry` y `DirectoryEntry` los objetos. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa una matriz de `[FileEntry](../fileentry/fileentry.html)` y `[DirectoryEntry](../directoryentry/directoryentry.html)` los objetos. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar el listado del directorio. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar el listado del directorio. Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 

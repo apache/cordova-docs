@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 화이트 리스트 가이드
 ---
 
 # 화이트 리스트 가이드
@@ -26,7 +28,7 @@ license: >
 
  [1]: https://github.com/apache/cordova-plugin-whitelist
 
-다른 플랫폼에 대 한 코르도바 사양을 준수 하는 [W3C 위젯 액세스][2] , 응용 프로그램의 특정 도메인에 대 한 네트워크 액세스를 사용 하도록 설정 하려면 `config.xml` 파일에서 `< 액세스 >` 요소에 의존 하. 설명 명령줄 인터페이스 CLI 워크플로에 의존 하는 프로젝트에 대 한이 파일은 프로젝트의 최상위 디렉토리에 있습니다. 그렇지 않으면 플랫폼별 개발 경로, 위치는 아래 섹션에 나열 됩니다. (각 플랫폼에 대 한 자세한 내용은 다양 한 플랫폼 가이드를 참조 하십시오.)
+다른 플랫폼에 대 한 코르도바 사양을 준수 하는 [W3C 위젯 액세스][2] , 응용 프로그램의 특정 도메인에 대 한 네트워크 액세스를 사용 하도록 설정 하려면 `config.xml` 파일에서 `< 액세스 >` 요소에 의존 하. 설명 [명령줄 인터페이스](../../cli/index.html) CLI 워크플로에 의존 하는 프로젝트에 대 한이 파일은 프로젝트의 최상위 디렉토리에 있습니다. 그렇지 않으면 플랫폼별 개발 경로, 위치는 아래 섹션에 나열 됩니다. (각 플랫폼에 대 한 자세한 내용은 다양 한 플랫폼 가이드를 참조 하십시오.)
 
  [2]: http://www.w3.org/TR/widgets-access/
 

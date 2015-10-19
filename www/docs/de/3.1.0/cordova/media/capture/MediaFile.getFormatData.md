@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFile.getFormatData
 ---
 
 # MediaFile.getFormatData
@@ -30,7 +32,7 @@ license: >
 
 ## Beschreibung
 
-Diese Funktion versucht asynchron, die Formatierungsinformationen für die Mediendatei abzurufen. Wenn erfolgreich, es ruft die `MediaFileDataSuccessCB` Rückruf mit einem `MediaFileData` Objekt. Wenn der Versuch fehlschlägt, ruft diese Funktion die `MediaFileDataErrorCB` Rückruf.
+Diese Funktion versucht asynchron, die Formatierungsinformationen für die Mediendatei abzurufen. Wenn erfolgreich, es ruft die `MediaFileDataSuccessCB` Rückruf mit einem `[MediaFileData](MediaFileData.html)` Objekt. Wenn der Versuch fehlschlägt, ruft diese Funktion die `MediaFileDataErrorCB` Rückruf.
 
 ## Unterstützte Plattformen
 
@@ -42,12 +44,12 @@ Diese Funktion versucht asynchron, die Formatierungsinformationen für die Medie
 
 ## BlackBerry WebWorks Macken
 
-Bietet eine API keine Informationen zum Media-Dateien, so dass alle `MediaFileData` Objekte zurückgeben, mit Standardwerten.
+Bietet eine API keine Informationen zum Media-Dateien, so dass alle `[MediaFileData](MediaFileData.html)` Objekte zurückgeben, mit Standardwerten.
 
 ## Android Macken
 
-Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht alle `MediaFileData` Eigenschaften werden unterstützt.
+Die API zum Zugriff [Medien](../media.html) Dateiformat-Information ist begrenzt, so dass nicht alle `[MediaFileData](MediaFileData.html)` Eigenschaften werden unterstützt.
 
 ## iOS Macken
 
-Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht alle `MediaFileData` Eigenschaften werden unterstützt.
+Die API zum Zugriff [Medien](../media.html) Dateiformat-Information ist begrenzt, so dass nicht alle `[MediaFileData](MediaFileData.html)` Eigenschaften werden unterstützt.

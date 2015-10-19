@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with iOS
 ---
 
 Getting Started with iOS
@@ -32,7 +34,7 @@ Video Tutorials:
 1. Requirements
 ---------------
 - Intel-based computer with Mac OS X Lion (10.7)
-- Necessary for Installing on Device:
+- Necessary for Installing on [Device](../../../cordova/device/device.html):
     - An Apple iOS device (iPhone, iPad, iPod Touch)
     - iOS developer certification
 
@@ -86,12 +88,12 @@ Video Tutorials:
 - Select the **Finish** button
 
 
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
 - Select the folder named **www** in your Project Navigator in Xcode
 - Select the **index.html** file
-- Type `<h1>Hello World</h1>` after the `<body>` tag
+- Type `<h1>[Hello World](../webos/index.html)</h1>` after the `<body>` tag
 
 You can also add any associated JavaScript and CSS files there as well.
     
@@ -103,7 +105,7 @@ You can also add any associated JavaScript and CSS files there as well.
 - Select the **Run** button in your project window's toolbar
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../cordova/device/device.html)
 --------------------
 
 - Open [AppName]-Info.plist (where [AppName] is your application's name), under the "Supporting Files" group

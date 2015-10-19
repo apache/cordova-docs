@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Le fichier config.xml
 ---
 
 # Le fichier config.xml
@@ -29,7 +31,7 @@ Pour les projets créés avec l'interface en ligne de commande de Cordova (décr
 Cette section décrit en détail les options de configuration globale et multi-plateforme. Consultez les sections suivantes pour les options spécifiques à la plateforme :
 
 *   Configuration iOS
-*   Configuration Android
+*   [Configuration Android](../guide/platforms/android/config.html)
 *   Configuration BlackBerry
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.

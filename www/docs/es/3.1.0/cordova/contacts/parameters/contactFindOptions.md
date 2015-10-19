@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 # contactFindOptions
 
-Parámetro opcional de la `contacts.find` método, utilizado para filtrar los contactos devueltos desde la base de datos de contactos.
+Parámetro opcional de la `[contacts.find](../contacts.find.html)` método, utilizado para filtrar los contactos devueltos desde la base de datos de contactos.
 
     {filtro: "" múltiple: cierto,};
     

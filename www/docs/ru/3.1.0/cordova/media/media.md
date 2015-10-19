@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Средства массовой информации
 ---
 
 # Средства массовой информации
@@ -49,25 +51,25 @@ license: >
 
 ## Методы
 
-*   `media.getCurrentPosition`: Возвращает текущую позицию в аудиофайл.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: Возвращает текущую позицию в аудиофайл.
 
-*   `media.getDuration`: Возвращает продолжительность звукового файла.
+*   `[media.getDuration](media.getDuration.html)`: Возвращает продолжительность звукового файла.
 
 *   `media.play`: Начать или возобновить воспроизведение звукового файла.
 
 *   `media.pause`: Приостановка воспроизведения звукового файла.
 
-*   `media.release`: Выпускает аудио ресурсы базовой операционной системы.
+*   `[media.release](media.release.html)`: Выпускает аудио ресурсы базовой операционной системы.
 
-*   `media.seekTo`: Перемещает положение в пределах звукового файла.
+*   `[media.seekTo](media.seekTo.html)`: Перемещает положение в пределах звукового файла.
 
-*   `media.setVolume`: Задайте громкость воспроизведения звука.
+*   `[media.setVolume](media.setVolume.html)`: Задайте громкость воспроизведения звука.
 
-*   `media.startRecord`: Начните запись звукового файла.
+*   `[media.startRecord](media.startRecord.html)`: Начните запись звукового файла.
 
-*   `media.stopRecord`: Остановите запись аудио файлов.
+*   `[media.stopRecord](media.stopRecord.html)`: Остановите запись аудио файлов.
 
-*   `media.stop`: Остановка воспроизведения звукового файла.
+*   `[media.stop](media.stop.html)`: Остановка воспроизведения звукового файла.
 
 ## Дополнительные ReadOnly параметры
 

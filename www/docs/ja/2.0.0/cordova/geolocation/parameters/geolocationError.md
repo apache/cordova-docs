@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationError
 ---
 
 geolocationError
@@ -30,4 +32,4 @@ geolocationError
 パラメーター
 ----------
 
-- __error:__ デバイスから返されるエラーを表します (`PositionError`)
+- __error:__ デバイスから返されるエラーを表します (`[PositionError](../PositionError/positionError.html)`)

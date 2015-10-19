@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileReader
 ---
 
 # FileReader
@@ -46,11 +48,11 @@ license: >
 
 ## 메서드
 
-*   **중지**: 파일 읽기 중단.
+*   **중지**: [파일](../fileobj/fileobj.html) 읽기 중단.
 
-*   **readAsDataURL**: 파일 및 base64 인코딩된 데이터의 URL로 데이터를 반환 합니다.
+*   **readAsDataURL**: [파일](../fileobj/fileobj.html) 및 base64 인코딩된 데이터의 URL로 데이터를 반환 합니다.
 
-*   **readAsText**: 읽기 텍스트 파일.
+*   **readAsText**: 읽기 텍스트 [파일](../fileobj/fileobj.html).
 
 *   **readAsBinaryString**: 이진 파일을 이진 문자열을 반환 합니다.
 
@@ -58,7 +60,7 @@ license: >
 
 ## 세부 정보
 
-`FileReader`개체 디바이스의 파일 시스템에서 파일을 읽을 수 있는 방법을 제공 합니다. 텍스트 또는 base64 데이터 인코딩 문자열 파일을 읽을 수 있습니다. 수신 하는 이벤트 리스너는 `loadstart` , `progress` , `load` , `loadend` , `error` , 및 `abort` 이벤트.
+`FileReader`개체 디바이스의 [파일](../fileobj/fileobj.html) 시스템에서 파일을 읽을 수 있는 방법을 제공 합니다. 텍스트 또는 base64 데이터 인코딩 문자열 파일을 읽을 수 있습니다. 수신 하는 [이벤트](../../events/events.html) 리스너는 `loadstart` , `progress` , `load` , `loadend` , `error` , 및 `abort` [이벤트](../../events/events.html).
 
 ## 지원 되는 플랫폼
 
@@ -70,9 +72,9 @@ license: >
 
 ## readAsDataURL
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   **파일**: 파일 개체 읽기를.
+*   **파일**: [파일](../fileobj/fileobj.html) 개체 읽기를.
 
 ## 빠른 예제
 
@@ -94,9 +96,9 @@ license: >
 
 ## readAsText
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   **파일**: 파일 개체 읽기를.
+*   **파일**: [파일](../fileobj/fileobj.html) 개체 읽기를.
 
 *   **인코딩**: 인코딩 파일의 콘텐츠를 사용 하 여 인코딩. 기본값은 u t f 8입니다.
 
@@ -209,9 +211,9 @@ license: >
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   **파일**: 파일 개체 읽기를.
+*   **파일**: [파일](../fileobj/fileobj.html) 개체 읽기를.
 
 ## 빠른 예제
 
@@ -235,9 +237,9 @@ license: >
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   **파일**: 파일 개체 읽기를.
+*   **파일**: [파일](../fileobj/fileobj.html) 개체 읽기를.
 
 ## 빠른 예제
 

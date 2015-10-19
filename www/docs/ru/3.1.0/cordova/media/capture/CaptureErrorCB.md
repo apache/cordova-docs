@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureErrorCB
 ---
 
 # CaptureErrorCB
@@ -29,7 +31,7 @@ license: >
 
 Эта функция выполняется, если возникает ошибка при попытке запуска операции захвата мультимедиа. Сценарии сбоев включают когда захват приложение занято, операции захвата уже имеет место, или пользователь отменяет операцию, прежде чем любой медиа-файлы записываются.
 
-Эта функция выполняет с `CaptureError` объект, содержащий соответствующие ошибки`code`.
+Эта функция выполняет с `[CaptureError](CaptureError.html)` объект, содержащий соответствующие ошибки`code`.
 
 ## Быстрый пример
 

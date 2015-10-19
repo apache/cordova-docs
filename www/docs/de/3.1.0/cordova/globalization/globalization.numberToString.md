@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 # globalization.numberToString
@@ -29,7 +31,7 @@ Gibt eine Zahl, die als Zeichenfolge nach dem Client-Benutzer-Einstellungen form
 
 Gibt die formatierte Zeichenfolge, die `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `String` Wert.
 
-Wenn es ist ein Fehler, die Formatierung der Zahl, dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.FORMATTING\_ERROR`.
+Wenn es ist ein Fehler, die Formatierung der Zahl, dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Die `options` Parameter ist optional, und die Standardwerte sind:
 

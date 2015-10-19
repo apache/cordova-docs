@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 плагинов
 ---
 
 # BlackBerry 10 плагинов
@@ -178,7 +180,7 @@ JavaScript часть ваш плагин должен содержать сле
 
 ## Содержимое `plugin.xml` файла
 
-`plugin.xml`Файл содержит пространства имен расширения и другие метаданные. Определить пространство имен и укажите другие метаданные для Эхо плагина следующим:
+`plugin.xml`[Файл](../../../cordova/file/fileobj/fileobj.html) содержит пространства имен расширения и другие метаданные. Определить пространство имен и укажите другие метаданные для Эхо плагина следующим:
 
     <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="org.apache.cordova.blackberry.echo"

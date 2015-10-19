@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Medien
 ---
 
 # Medien
 
-> Das `Media` Objekt bietet die Möglichkeit zum Aufzeichnen und Wiedergeben von audio-Dateien auf einem Gerät.
+> Das `Media` Objekt bietet die Möglichkeit zum Aufzeichnen und Wiedergeben von audio-Dateien auf einem [Gerät](../device/device.html).
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
@@ -49,29 +51,29 @@ Die folgenden Konstanten werden gemeldet, als einzigem Parameter an die `mediaSt
 
 ## Methoden
 
-*   `media.getCurrentPosition`: Gibt die aktuelle Position in einer Audiodatei.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: Gibt die aktuelle [Position](../geolocation/Position/position.html) in einer Audiodatei.
 
-*   `media.getDuration`: Gibt die Dauer einer Audiodatei.
+*   `[media.getDuration](media.getDuration.html)`: Gibt die Dauer einer Audiodatei.
 
 *   `media.play`: Starten Sie oder fortsetzen Sie der Wiedergabe einer Audiodatei.
 
-*   `media.pause`: Anhalten der Wiedergabe einer Audiodatei.
+*   `media.pause`: [Anhalten](../events/events.pause.html) der Wiedergabe einer Audiodatei.
 
-*   `media.release`: Das zugrunde liegende Betriebssystem audio Ressourcen frei.
+*   `[media.release](media.release.html)`: Das zugrunde liegende Betriebssystem audio Ressourcen frei.
 
-*   `media.seekTo`: Verschiebt die Position innerhalb der audio-Datei.
+*   `[media.seekTo](media.seekTo.html)`: Verschiebt die [Position](../geolocation/Position/position.html) innerhalb der audio-Datei.
 
-*   `media.setVolume`: Stellen Sie die Lautstärke für die Audiowiedergabe.
+*   `[media.setVolume](media.setVolume.html)`: Stellen Sie die Lautstärke für die Audiowiedergabe.
 
-*   `media.startRecord`: Starten der Aufnahme einer audio-Datei.
+*   `[media.startRecord](media.startRecord.html)`: Starten der Aufnahme einer audio-Datei.
 
-*   `media.stopRecord`: Stoppen Sie die Aufnahme einer audio-Datei.
+*   `[media.stopRecord](media.stopRecord.html)`: Stoppen Sie die Aufnahme einer audio-Datei.
 
-*   `media.stop`: Abspielen einer Audiodatei zu stoppen.
+*   `[media.stop](media.stop.html)`: Abspielen einer Audiodatei zu stoppen.
 
 ## Zusätzliche ReadOnly-Parameter
 
-*   **Position**: die Position innerhalb der audio-Wiedergabe in Sekunden.
+*   **Position**: die [Position](../geolocation/Position/position.html) innerhalb der audio-Wiedergabe in Sekunden.
     
     *   Nicht während des Spiels automatisch aktualisiert; Rufen Sie `getCurrentPosition` zu aktualisieren.
 
@@ -138,7 +140,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).
 
 ### Windows Phone Macken
 

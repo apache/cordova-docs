@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Events
 ---
 
 # Events
@@ -24,28 +26,28 @@ license: >
 
 ## Event Types
 
-- deviceready
-- pause
-- resume
-- online
-- offline
-- backbutton
-- batterycritical
-- batterylow
-- batterystatus
-- menubutton
-- searchbutton
-- startcallbutton
-- endcallbutton
-- volumedownbutton
-- volumeupbutton
+- [deviceready](events.deviceready.html)
+- [pause](events.pause.html)
+- [resume](events.resume.html)
+- [online](events.online.html)
+- [offline](events.offline.html)
+- [backbutton](events.backbutton.html)
+- [batterycritical](events.batterycritical.html)
+- [batterylow](events.batterylow.html)
+- [batterystatus](events.batterystatus.html)
+- [menubutton](events.menubutton.html)
+- [searchbutton](events.searchbutton.html)
+- [startcallbutton](events.startcallbutton.html)
+- [endcallbutton](events.endcallbutton.html)
+- [volumedownbutton](events.volumedownbutton.html)
+- [volumeupbutton](events.volumeupbutton.html)
 
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements battery status and other
 device-level APIs as _plugins_. Access to all other events not related
 to battery status are enabled by default.  Use the CLI's `plugin`
-command, described in The Command-Line Interface, to enable or disable
+command, described in [The Command-Line Interface](../../guide/cli/index.html), to enable or disable
 battery events:
 
         $ cordova plugin add org.apache.cordova.battery-status
@@ -95,4 +97,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

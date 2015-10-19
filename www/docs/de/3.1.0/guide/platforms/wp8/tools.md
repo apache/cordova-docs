@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone Befehlszeilentools
 ---
 
 # Windows Phone Befehlszeilentools
@@ -36,7 +38,7 @@ Es gibt 2 Möglichkeiten, gehen Sie zum Erstellen einer neuen Apache Cordova WP7
 
 ### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen.
 
-*   Der Stamm der Repo enthält eine Datei createTemplates.bat. Doppelklick auf diese Datei wird 2 Zip-Dateien generiert. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
+*   Der Stamm der Repo enthält eine [Datei](../../../cordova/file/fileobj/fileobj.html) createTemplates.bat. Doppelklick auf diese [Datei](../../../cordova/file/fileobj/fileobj.html) wird 2 Zip-Dateien generiert. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
 
 *   Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
 

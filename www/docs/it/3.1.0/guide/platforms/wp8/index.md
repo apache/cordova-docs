@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guida di Windows Phone 8 piattaforma
 ---
 
 # Guida di Windows Phone 8 piattaforma
@@ -24,9 +26,9 @@ Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per dist
 
 Vedi quanto segue per più dettagliate informazioni specifiche della piattaforma che si applica a entrambe le versioni:
 
-*   L'aggiornamento di Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone strumenti da riga di comando
+*   [L'aggiornamento di Windows Phone](upgrading.html)
+*   [Windows Phone Plugins](plugin.html)
+*   [Windows Phone strumenti da riga di comando](tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -136,7 +138,7 @@ Al fine di testare l'applicazione su un dispositivo, il dispositivo deve essere 
 
 *   Assicurarsi che il telefono è connesso, e lo schermo è sbloccato.
 
-*   In Visual Studio, selezionare 'Dispositivo' dal menu a discesa in alto.
+*   In Visual Studio, selezionare '[Dispositivo](../../../cordova/device/device.html)' dal menu a discesa in alto.
 
 *   Premere il pulsante verde **giocare** accanto al menu a discesa principale per avviare il debug, o digitare **F5**.
 

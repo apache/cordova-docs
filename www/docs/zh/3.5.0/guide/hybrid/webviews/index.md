@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 嵌入 WebViews
 ---
 
 # 嵌入 WebViews
@@ -24,6 +26,6 @@ license: >
 
 若要部署 web 視圖，您需要熟悉每個本機程式設計環境。下面提供了支援的平臺的說明：
 
-*   亞馬遜火 OS WebViews
-*   Android WebViews
-*   WebViews iOS
+*   [亞馬遜火 OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [WebViews iOS](../../platforms/ios/webview.html)

@@ -16,32 +16,34 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Capture
 ---
 
 # Capture
 
 > Donne accès à de l'appareil audio, image et capacités de capture vidéo.
 
-**Remarque importante de la vie privée :** Collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. Politique de confidentialité de votre application doit examiner comment l'application utilise des capteurs et si les données enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant votre application d'accéder à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés app peuvent exiger votre app à aviser le juste-à-temps et obtenir l'autorisation de l'utilisateur avant d'accéder à la caméra ou un microphone. Pour plus d'informations, consultez le Guide de la vie privée.
+**Remarque importante de la vie privée :** Collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. Politique de confidentialité de votre application doit examiner comment l'application utilise des capteurs et si les données enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant votre application d'accéder à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés app peuvent exiger votre app à aviser le juste-à-temps et obtenir l'autorisation de l'utilisateur avant d'accéder à la caméra ou un microphone. Pour plus d'informations, consultez le [Guide de la vie privée](../../../guide/appdev/privacy/index.html).
 
 ## Objets
 
 *   Capture
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [MediaFile](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## Méthodes
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 ## Champ d'application
 
@@ -61,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## Méthodes
 
-*   `capture.captureAudio`: Lancer l'application d'enregistrement audio de l'appareil pour enregistrer des clips audio.
+*   `[capture.captureAudio](captureAudio.html)`: Lancer l'application d'enregistrement audio de l'appareil pour enregistrer des clips audio.
 
-*   `capture.captureImage`: Lancer l'application appareil photo de l'appareil pour prendre des photos.
+*   `[capture.captureImage](captureImage.html)`: Lancer l'application appareil photo de l'appareil pour prendre des photos.
 
-*   `capture.captureVideo`: Lancer l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
+*   `[capture.captureVideo](captureVideo.html)`: Lancer l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
 
 ## Plates-formes prises en charge
 

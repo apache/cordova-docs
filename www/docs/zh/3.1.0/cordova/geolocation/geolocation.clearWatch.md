@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
@@ -31,7 +33,7 @@ license: >
 
 ## 說明
 
-`geolocation.clearWatch`將停止觀看對設備的位置的更改通過清除 `geolocation.watchPosition` 引用的`watchID`.
+`geolocation.clearWatch`將停止觀看對設備的位置的更改通過清除 `[geolocation.watchPosition](geolocation.watchPosition.html)` 引用的`watchID`.
 
 ## 支援的平臺
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 # globalization.numberToString
@@ -29,7 +31,7 @@ license: >
 
 番号の書式設定された文字列を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが必要な `value` を持つプロパティ、 `String` 値。
 
-番号、書式設定エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
+番号、書式設定エラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 

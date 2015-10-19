@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaError
 ---
 
 # MediaError
 
-A `MediaError` object is returned to the `mediaError` callback
+A `MediaError` object is returned to the `[mediaError](../Parameters/mediaError.html)` callback
 function when an error occurs.
 
 ## Properties
@@ -38,6 +40,6 @@ function when an error occurs.
 
 ## Description
 
-The `MediaError` object is passed to a `mediaError` callback function
+The `MediaError` object is passed to a `[mediaError](../Parameters/mediaError.html)` callback function
 when an error occurs.
 

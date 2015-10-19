@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -29,7 +31,7 @@ Tienes la aceleración actual a lo largo de los ejes *x*, *y* y *z*.
 
 El acelerómetro es un sensor de movimiento que detecta el cambio (*delta*) en movimiento con respecto a la orientación actual del dispositivo, en tres dimensiones a lo largo del eje *x*, *y* y *z*.
 
-Estos valores de aceleración son devueltos a la función de devolución de llamada `accelerometerSuccess`.
+Estos valores de aceleración son devueltos a la función de devolución de llamada `[accelerometerSuccess](parameters/accelerometerSuccess.html)`.
 
 ## Plataformas soportadas
 

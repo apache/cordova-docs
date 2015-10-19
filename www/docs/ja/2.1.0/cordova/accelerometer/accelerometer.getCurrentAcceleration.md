@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 accelerometer.getCurrentAcceleration
@@ -30,7 +32,7 @@ accelerometer.getCurrentAcceleration
 
 加速度センサーはデバイスの傾きの増加量を計測します。 加速度センサーでは x, y, z 軸の3次元の傾きを取得出来ます。
 
-加速度情報は `accelerometerSuccess` コールバック関数によって返されます。
+加速度情報は `[accelerometerSuccess](parameters/accelerometerSuccess.html)` コールバック関数によって返されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +44,7 @@ accelerometer.getCurrentAcceleration
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {

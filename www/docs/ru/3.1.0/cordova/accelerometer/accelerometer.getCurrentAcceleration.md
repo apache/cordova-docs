@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -29,7 +31,7 @@ license: >
 
 Акселерометр это датчик движения, который отслеживает изменение (*delta*) в движении по отношению к текущей ориентации устройства, в трех измерениях вдоль осей *x*, *y* и *z*.
 
-Эти значения ускорения возвращается функций обратного вызова `accelerometerSuccess`.
+Эти значения ускорения возвращается функций обратного вызова `[accelerometerSuccess](parameters/accelerometerSuccess.html)`.
 
 ## Поддерживаемые платформы
 

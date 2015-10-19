@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 圖示和啟動畫面
 ---
 
 # 圖示和啟動畫面
@@ -115,7 +117,7 @@ IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯
 
 第一行設置為初始螢幕顯示的圖像。如果你命名您的圖像什麼除了 `splash.png` ，您需要修改這條線。
 
-第二行設置多久閃屏顯示以毫秒為單位的延遲。 遣散閃屏，一旦接收到 app `deviceready` 事件，調用 `navigator.splashscreen.hide()` 方法。
+第二行設置多久閃屏顯示以毫秒為單位的延遲。 遣散閃屏，一旦接收到 app `[deviceready](../cordova/events/events.deviceready.html)` 事件，調用 `navigator.splashscreen.hide()` 方法。
 
 ## IOS 平臺的初始螢幕
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8.0 WebViews
 ---
 
 # Windows Phone 8.0 WebViews
@@ -52,4 +54,4 @@ Windows Phone 8.0 package (cordova-wp8-*.zip).
 1. Copy the `wp8/template/config.xml`to the project's root directory and 
 
 Instructions above will link core Cordova components only, 
-see Using Plugman to Manage Plugins in order to link Cordova plugins.
+see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html) in order to link Cordova plugins.

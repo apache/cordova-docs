@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Symbole und Splash-Screens
 ---
 
 # Symbole und Splash-Screens
@@ -115,7 +117,7 @@ In `config.xml` , fügen Sie die folgenden Einstellungen:
 
 Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Wenn Sie Ihr Bild alles andere als nennen, `splash.png` , müssen Sie diese Zeile ändern.
 
-Der zweiten Zeile wird die Verzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Um den Begrüßungsbildschirm zu entlassen, sobald die app erhält der `deviceready` Veranstaltung, Aufruf der `navigator.splashscreen.hide()` Methode.
+Der zweiten Zeile wird die Verzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Um den Begrüßungsbildschirm zu entlassen, sobald die app erhält der `[deviceready](../cordova/events/events.deviceready.html)` Veranstaltung, Aufruf der `navigator.splashscreen.hide()` Methode.
 
 ## Splash-Screens für die iOS-Plattform
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.beep
 ---
 
 # notification.beep
 
-デバイス サウンドをビープ音を再生します。
+[デバイス](../device/device.html) サウンドをビープ音を再生します。
 
     navigator.notification.beep(times);
     

@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Embedding WebViews
 ---
 
 # Embedding WebViews
 
 > Implement the Cordova WebView in your own project.
 
-- Android WebViews
-- iOS WebViews
+- [Android WebViews](../../platforms/android/webview.html)
+- [iOS WebViews](../../platforms/ios/webview.html)
 

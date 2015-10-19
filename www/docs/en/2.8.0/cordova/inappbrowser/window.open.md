@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 window.open
 ===========
 
-Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
+Opens a URL in a new [InAppBrowser](inappbrowser.html) instance, the current browser instance, or the system browser.
 
     var ref = window.open(url, target, options);
     
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __ref:__ reference to the [InAppBrowser](inappbrowser.html) window (`[InAppBrowser](inappbrowser.html)`)
 - __url:__ the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
 - __target:__ the target to load the URL in (`String`) (Optional, Default: "_self")
 
@@ -34,7 +36,7 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
         _system - always open in the system web browser 
     
     
-- __options:__ options for the InAppBrowser (`String`) (Optional, Default: "location=yes")
+- __options:__ options for the [InAppBrowser](inappbrowser.html) (`String`) (Optional, Default: "location=yes")
     
     The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:
 
@@ -63,13 +65,13 @@ Supported Platforms
 - BlackBerry 10
 - Windows Phone 7 + 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFile.getFormatData
 ---
 
 # MediaFile.getFormatData
@@ -27,7 +29,7 @@ license: >
 
 ## Descripción
 
-Esta función asincrónica intentará recuperar la información de formato para el archivo de los medios de comunicación. Si exitoso, invoca la `MediaFileDataSuccessCB` devolución de llamada con un `MediaFileData` objeto. Si fracasa el intento, esta función invoca el `MediaFileDataErrorCB` "callback".
+Esta función asincrónica intentará recuperar la información de formato para el archivo de los medios de comunicación. Si exitoso, invoca la `MediaFileDataSuccessCB` devolución de llamada con un `[MediaFileData](MediaFileData.html)` objeto. Si fracasa el intento, esta función invoca el `MediaFileDataErrorCB` "callback".
 
 ## Plataformas soportadas
 
@@ -39,12 +41,12 @@ Esta función asincrónica intentará recuperar la información de formato para 
 
 ## BlackBerry WebWorks rarezas
 
-No proporciona una API para obtener información sobre los archivos de medios, para que todos `MediaFileData` devolver objetos con valores predeterminados.
+No proporciona una API para obtener información sobre los archivos de medios, para que todos `[MediaFileData](MediaFileData.html)` devolver objetos con valores predeterminados.
 
 ## Rarezas Android
 
-La API de acceso a la prensa archivo formato información es limitada, así que no todos `MediaFileData` se admiten las propiedades.
+La API de acceso a la prensa archivo formato información es limitada, así que no todos `[MediaFileData](MediaFileData.html)` se admiten las propiedades.
 
 ## iOS rarezas
 
-La API de acceso a la prensa archivo formato información es limitada, así que no todos `MediaFileData` se admiten las propiedades.
+La API de acceso a la prensa archivo formato información es limitada, así que no todos `[MediaFileData](MediaFileData.html)` se admiten las propiedades.

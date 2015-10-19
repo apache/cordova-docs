@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Globalisierung
 ---
 
 # Globalisierung
@@ -24,22 +26,22 @@ Ruft Informationen und führt durch spezifisch für Gebietsschema und der Zeitzo
 
 ## Objekte
 
-*   GlobalizationError
+*   [GlobalizationError](GlobalizationError/globalizationerror.html)
 
 ## Methoden
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   [globalization.getPreferredLanguage](globalization.getPreferredLanguage.html)
+*   [globalization.getLocaleName](globalization.getLocaleName.html)
+*   [globalization.dateToString](globalization.dateToString.html)
+*   [globalization.stringToDate](globalization.stringToDate.html)
+*   [globalization.getDatePattern](globalization.getDatePattern.html)
+*   [globalization.getDateNames](globalization.getDateNames.html)
+*   [globalization.isDayLightSavingsTime](globalization.isDayLightSavingsTime.html)
+*   [globalization.getFirstDayOfWeek](globalization.getFirstDayOfWeek.html)
+*   [globalization.numberToString](globalization.numberToString.html)
+*   [globalization.stringToNumber](globalization.stringToNumber.html)
+*   [globalization.getNumberPattern](globalization.getNumberPattern.html)
+*   [globalization.getCurrencyPattern](globalization.getCurrencyPattern.html)
 
 ## Geltungsbereich von Variablen
 
@@ -68,4 +70,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

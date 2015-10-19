@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 平臺指南
 ---
 
 # iOS 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 iOS 設備 （如 iPhone 和 iPad 的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   iOS 配置
-*   升級 iOS
-*   WebViews iOS
-*   iOS 外掛程式
-*   iOS 殼工具指南
+*   [iOS 配置](config.html)
+*   [升級 iOS](upgrading.html)
+*   [WebViews iOS](webview.html)
+*   [iOS 外掛程式](plugin.html)
+*   [iOS 殼工具指南](tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 

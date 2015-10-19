@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.getCurrentPosition
 ---
 
 # geolocation.getCurrentPosition
 
-Renvoie la position actuelle de l'appareil sous la forme d'un objet `Position`.
+Renvoie la position actuelle de l'appareil sous la forme d'un objet `[Position](Position/position.html)`.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
@@ -37,7 +39,7 @@ Renvoie la position actuelle de l'appareil sous la forme d'un objet `Position`.
 
 ## Description
 
-`geolocation.getCurrentPosition` est une fonction asynchrone. Elle transmet la position actuelle de l'appareil à la fonction callback `geolocationSuccess` sous la forme d'un objet `Position`. Si une erreur se produit, un objet `PositionError` est passé en paramètre à la fonction callback `geolocationError`.
+`geolocation.getCurrentPosition` est une fonction asynchrone. Elle transmet la position actuelle de l'appareil à la fonction callback `[geolocationSuccess](parameters/geolocationSuccess.html)` sous la forme d'un objet `[Position](Position/position.html)`. Si une erreur se produit, un objet `[PositionError](PositionError/positionError.html)` est passé en paramètre à la fonction callback `[geolocationError](parameters/geolocationError.html)`.
 
 ## Plates-formes supportées
 

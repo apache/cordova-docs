@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassHeading
 ---
 
 # compassHeading
 
-A `CompassHeading` oggetto viene restituito alla `compassSuccess` funzione di callback.
+A `CompassHeading` oggetto viene restituito alla `[compassSuccess](compassSuccess.html)` funzione di callback.
 
 ## Proprietà
 
@@ -34,7 +36,7 @@ A `CompassHeading` oggetto viene restituito alla `compassSuccess` funzione di ca
 
 ## Descrizione
 
-Il `CompassHeading` viene restituito l'oggetto per il `compassSuccess` funzione di callback.
+Il `CompassHeading` viene restituito l'oggetto per il `[compassSuccess](compassSuccess.html)` funzione di callback.
 
 ## Stranezze Android
 

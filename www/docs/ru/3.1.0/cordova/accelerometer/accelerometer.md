@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Accelerometer
 ---
 
 # Accelerometer
@@ -24,19 +26,19 @@ license: >
 
 ## Методы
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## Аргументы
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## Объекты (только для чтения)
 
-*   Acceleration
+*   [Acceleration](acceleration/acceleration.html)
 
 ## Доступ к расширениям
 

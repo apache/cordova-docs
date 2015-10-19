@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Спецификация расширений
 ---
 
 # Спецификация расширений
 
-Файл `plugin.xml` представляет собой документ XML c пространством имен `plugins`: `http://apache.org/cordova/ns/plugins/1.0`. Он содержит узел верхнего уровня `plugin`, который определяет сам плагин, и дочерние узлы, которые определяют структуру плагина.
+[Файл](../cordova/file/fileobj/fileobj.html) `plugin.xml` представляет собой документ XML c пространством имен `plugins`: `http://apache.org/cordova/ns/plugins/1.0`. Он содержит узел верхнего уровня `plugin`, который определяет сам плагин, и дочерние узлы, которые определяют структуру плагина.
 
 Простой пример элемента plugin:
 

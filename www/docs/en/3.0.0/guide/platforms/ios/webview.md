@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS WebViews
 ---
 
 # iOS WebViews
@@ -56,7 +58,7 @@ based Cleaver implementation.
 
 8. Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9. Type the __Option-Command-1__ key combination to show the __File Inspector__.
+9. Type the __Option-Command-1__ key combination to [show](../../../cordova/inappbrowser/inappbrowser.html) the __File Inspector__.
 
 10. Choose __Relative to Group__ in the __File Inspector__ for the drop-down menu for __Location__.
 

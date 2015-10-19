@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Sistema de archivos
 ---
 
 # Sistema de archivos
@@ -30,7 +32,7 @@ Este objeto representa un sistema de archivos.
 
 ## Detalles
 
-El `FileSystem` objeto representa la información sobre el sistema de archivos. El nombre del sistema de archivos es único en toda la lista de sistemas de archivos expuestos. La propiedad raíz contiene una `DirectoryEntry` objeto que representa el directorio raíz del sistema de archivos.
+El `FileSystem` objeto representa la información sobre el sistema de archivos. El nombre del sistema de archivos es único en toda la lista de sistemas de archivos expuestos. La propiedad raíz contiene una `[DirectoryEntry](../directoryentry/directoryentry.html)` objeto que representa el directorio raíz del sistema de archivos.
 
 ## Plataformas soportadas
 

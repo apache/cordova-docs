@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureImage
 ---
 
 # capture.captureImage
@@ -31,9 +33,9 @@ license: >
 
 Avvia un'operazione asincrona per catturare immagini utilizzando l'applicazione della fotocamera del dispositivo. L'operazione consente agli utenti di catturare più immagini in una sola seduta.
 
-L'operazione di acquisizione o termina quando l'utente chiude l'applicazione fotocamera, o il numero massimo di registrazioni specificato da `CaptureAudioOptions.limit` è raggiunto. Se non `limit` valore è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente acquisisce una singola immagine.
+L'operazione di acquisizione o termina quando l'utente chiude l'applicazione fotocamera, o il numero massimo di registrazioni specificato da `[CaptureAudioOptions](captureAudioOptions.html).limit` è raggiunto. Se non `limit` valore è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente acquisisce una singola immagine.
 
-Quando termina l'operazione di acquisizione, richiama il `CaptureCB` callback con una matrice di `MediaFile` oggetti che descrivono ogni file immagine catturata. Se l'utente termina l'operazione prima di catturare un'immagine, la `CaptureErrorCB` callback viene eseguita con un `CaptureError` oggetto con un `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, richiama il `[CaptureCB](CaptureCB.html)` callback con una matrice di `[MediaFile](MediaFile.html)` oggetti che descrivono ogni file immagine catturata. Se l'utente termina l'operazione prima di catturare un'immagine, la `[CaptureErrorCB](CaptureErrorCB.html)` callback viene eseguita con un `[CaptureError](CaptureError.html)` oggetto con un `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 

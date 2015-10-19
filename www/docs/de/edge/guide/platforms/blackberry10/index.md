@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch für die Plattform von BlackBerry 10
 ---
 
 # Handbuch für die Plattform von BlackBerry 10
 
-Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, Cordova apps für BlackBerry 10 Geräte bereitstellen. Für frühere Versionen von BlackBerry müssen Sie mit einem unterschiedlichen SDK Umgebung und Befehlszeilentools, beschrieben im Handbuch für das BlackBerry-Plattform. Sie müssen für BlackBerry 10 installieren Sie das SDK unabhängig davon, ob Sie die Cross-Plattform-Cordova-CLI für Entwicklung, oder ein schmaler Plattform-zentrierte Kommandozeilen-Tools nutzen möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der Übersicht. Einzelheiten zu jedem finden Sie unter The Command-Line Interface und der BlackBerry 10 Shell Tool Guide.
+Diese Anleitung zeigt wie Ihr SDK-Umgebung einrichten, Cordova apps für BlackBerry 10 Geräte bereitstellen. Für frühere Versionen von BlackBerry müssen Sie mit einem unterschiedlichen SDK Umgebung und Befehlszeilentools, beschrieben im Handbuch für das BlackBerry-Plattform. Sie müssen für BlackBerry 10 installieren Sie das SDK unabhängig davon, ob Sie die Cross-Plattform-Cordova-CLI für Entwicklung, oder ein schmaler Plattform-zentrierte Kommandozeilen-Tools nutzen möchten. Einen Vergleich der zwei Entwicklungswege finden Sie in der [Übersicht](../../overview/index.html). Einzelheiten zu jedem finden Sie unter The Command-Line Interface und der [BlackBerry 10 Shell Tool Guide](tools.html).
 
 ## Anforderungen
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumeupbutton
 ---
 
 volumeupbutton
@@ -32,14 +34,14 @@ If you need to override the default volume up behavior you can
 register an event listener for the `volumeupbutton` event.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 Supported Platforms
 -------------------
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
@@ -48,7 +50,7 @@ Quick Example
         // Handle the volume up button
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

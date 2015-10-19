@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Platforma vodniki
 ---
 
 # Platforma vodniki
@@ -28,55 +30,55 @@ Vsako *Platformo vodič* spodaj vam pove, kaj morate vedeti, da nastavite vsako 
 
 ## Amazon ogenj OS
 
-*   Amazon ogenj OS platformo vodnik
-*   Amazon ogenj OS konfiguracijo
-*   Amazon ogenj OS spletni pogledi
-*   Amazon ogenj OS Plugins
+*   [Amazon ogenj OS platformo vodnik](amazonfireos/index.html)
+*   [Amazon ogenj OS konfiguracijo](amazonfireos/config.html)
+*   [Amazon ogenj OS spletni pogledi](amazonfireos/webview.html)
+*   [Amazon ogenj OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-*   Vodnik za platformo Android
-*   Android konfiguracijo
-*   Spletni Android pogledi
-*   Android Plugins
-*   Android orodja ukazne vrstice
-*   Nadgradnji Android
+*   [Vodnik za platformo Android](android/index.html)
+*   [Android konfiguracijo](android/config.html)
+*   [Spletni Android pogledi](android/webview.html)
+*   [Android Plugins](android/plugin.html)
+*   [Android orodja ukazne vrstice](android/tools.html)
+*   [Nadgradnji Android](android/upgrading.html)
 
 ## BlackBerry 10
 
-*   BlackBerry 10 platformo vodnik
-*   Konfiguracije blackBerry 10
-*   BlackBerry 10 Plugins
-*   BlackBerry 10 orodij ukazne vrstice
-*   Nadgradnja BlackBerry 10
+*   [BlackBerry 10 platformo vodnik](blackberry10/index.html)
+*   [Konfiguracije blackBerry 10](blackberry10/config.html)
+*   [BlackBerry 10 Plugins](blackberry10/plugin.html)
+*   [BlackBerry 10 orodij ukazne vrstice](blackberry10/tools.html)
+*   [Nadgradnja BlackBerry 10](blackberry10/upgrading.html)
 
 ## iOS
 
-*   iOS platformi vodnik
-*   iOS konfiguracijo
-*   iOS spletni pogledi
-*   iOS Plugins
-*   iOS orodja ukazne vrstice
-*   Nadgradnja iOS
+*   [iOS platformi vodnik](ios/index.html)
+*   [iOS konfiguracijo](ios/config.html)
+*   [iOS spletni pogledi](ios/webview.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS orodja ukazne vrstice](ios/tools.html)
+*   [Nadgradnja iOS](ios/upgrading.html)
 
 ## Ubuntu
 
-*   Vodnik Ubuntu Platform
+*   [Vodnik Ubuntu Platform](ubuntu/index.html)
 
 ## Windows Phone
 
-*   Vodnik za platformo Windows Phone 8
-*   Vodnik za platformo Windows Phone 7
+*   [Vodnik za platformo Windows Phone 8](wp8/index.html)
+*   [Vodnik za platformo Windows Phone 7](wp7/index.html)
 *   Windows Phone konfiguracijo
-*   Windows Phone orodja ukazne vrstice
-*   Nadgradnja Windows Phone
+*   [Windows Phone orodja ukazne vrstice](wp8/tools.html)
+*   [Nadgradnja Windows Phone](wp8/upgrading.html)
 
 ## Windows 8
 
-*   Windows 8 platformi vodnik
-*   Orodja ukazne vrstice Windows 8
-*   Nadgradnjo operacijskega sistema Windows 8
+*   [Windows 8 platformi vodnik](win8/index.html)
+*   [Orodja ukazne vrstice Windows 8](win8/tools.html)
+*   [Nadgradnjo operacijskega sistema Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Tizen platforma vodnik
+*   [Tizen platforma vodnik](tizen/index.html)

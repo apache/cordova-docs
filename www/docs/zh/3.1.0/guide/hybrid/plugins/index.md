@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 外掛程式開發指南
 ---
 
 # 外掛程式開發指南
@@ -73,17 +75,17 @@ license: >
 
 科爾多瓦有可用於啟用該外掛程式為 Android、 iOS、 黑莓 10 和 Windows Phone 平臺的自動的安裝一個外掛程式規範。 通過以特定方式構建你的外掛程式，添加 `plugin.xml` 清單檔，您可以使使用者能夠安裝你的外掛程式通過命令列工具。
 
-*   外掛程式規範
+*   [外掛程式規範](../../../plugin_ref/spec.html)
 
 ## 本機
 
 一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面列出了這樣做為每個平臺的詳細資訊。 這些指南繼續在上文討論過的簡單回聲外掛程式示例上。
 
-*   Android 外掛程式
-*   黑莓手機的外掛程式
-*   黑莓 10 外掛程式
-*   iOS 外掛程式
-*   Windows Phone 外掛程式
+*   [Android 外掛程式](../../platforms/android/plugin.html)
+*   [黑莓手機的外掛程式](../../platforms/blackberry/plugin.html)
+*   [黑莓 10 外掛程式](../../platforms/blackberry10/plugin.html)
+*   [iOS 外掛程式](../../platforms/ios/plugin.html)
+*   [Windows Phone 外掛程式](../../platforms/wp8/plugin.html)
 
 當前，Tizen 平臺不支援外掛程式。
 

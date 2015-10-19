@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: InAppBrowser
 ---
 
 # InAppBrowser
 
-> `InAppBrowser`一個 web 瀏覽器視圖，顯示時調用 `window.open()` ，或當打開連結形成的作為`<a target="_blank">`.
+> `InAppBrowser`一個 web 瀏覽器視圖，顯示時調用 `[window.open](window.open.html)()` ，或當打開連結形成的作為`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -29,7 +31,7 @@ license: >
 
 ## 說明
 
-從調用返回的物件`window.open`.
+從調用返回的物件`[window.open](window.open.html)`.
 
 ## 方法
 

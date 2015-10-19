@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactName
 ---
 
 ContactName
 ===========
 
-Contains name properties of a `Contact` object.
+Contains name properties of a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
@@ -46,7 +48,7 @@ Supported Platforms
 - iOS
 - Bada 1.2
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -69,7 +71,7 @@ Quick Example
 	filter = ["displayName","name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -87,7 +89,7 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
+			var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter="";
 			filter = ["displayName","name"];
 			navigator.contacts.find(filter, onSuccess, onError, options);

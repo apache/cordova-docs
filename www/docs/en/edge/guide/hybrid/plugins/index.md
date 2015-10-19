@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugin Development Guide
 ---
 
 # Plugin Development Guide
@@ -57,7 +59,7 @@ the plugin code.  This example implements Cordova's Device API:
 
 The plugin repository must feature a top-level `plugin.xml` manifest
 file. There are many ways to configure this file, details for which
-are available in the Plugin Specification. This abbreviated version of
+are available in the [Plugin Specification](../../../plugin_ref/spec.html). This abbreviated version of
 the `Device` plugin provides a simple example to use as a model:
 
         <?xml version="1.0" encoding="UTF-8"?>
@@ -101,7 +103,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-The Command-Line Interface.  Make sure the app's `index.html` home
+[The Command-Line Interface](../../cli/index.html).  Make sure the app's `index.html` home
 page reference the name of the plugin's JavaScript interface, as if it
 were in the same source directory:
 
@@ -112,7 +114,7 @@ dependencies load properly:
 
          $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
 
-For details on `plugman` options, see Using Plugman to Manage Plugins.
+For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html).
 For information on how to actually _debug_ plugins, see each
 platform's native interface listed at the bottom of this page.
 
@@ -186,12 +188,12 @@ Once you define JavaScript for your plugin, you need to complement it
 with at least one native implementation. Details for each platform are
 listed below, and each builds on the simple Echo Plugin example above:
 
-- Amazon Fire OS Plugins
-- Android Plugins
-- iOS Plugins
-- BlackBerry 10 Plugins
-- Windows Phone 8 Plugins
-- Windows Plugins
+- [Amazon Fire OS Plugins](../../platforms/amazonfireos/plugin.html)
+- [Android Plugins](../../platforms/android/plugin.html)
+- [iOS Plugins](../../platforms/ios/plugin.html)
+- [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+- [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
+- [Windows Plugins](../../platforms/win8/plugin.html)
 
 The Tizen platform does not support plugins.
 
@@ -210,7 +212,7 @@ use corresponding `npm` commands.
 
 Other developers can install your plugin automatically using either `plugman`
  or the Cordova CLI.  (For details on each development path, see
- Using Plugman to Manage Plugins and The Command-Line Interface.)
+ [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html) and [The Command-Line Interface](../../cli/index.html).)
 
 To publish a plugin to NPM registry you need to follow steps below:
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Platform Guide
 ---
 
 # Amazon Fire OS Platform Guide
@@ -25,9 +27,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* [Amazon Fire OS Configuration](config.html)
+* [Amazon Fire OS WebViews](webview.html)
+* [Amazon Fire OS Plugins](plugin.html)
 
 ## Introduction
 
@@ -40,7 +42,7 @@ For more information about the Amazon WebView API, please see the Amazon Develop
 
 Developing Cordova apps for Amazon Fire OS requires installation of a variety of support files, including everything needed for Android development, as well as the Amazon WebView SDK. Check the list below for the required installs: 
 
-* The Command-Line Interface
+* [The Command-Line Interface](../../cli/index.html)
 * [Android SDK](http://developer.android.com/sdk/)
 * [Apache Ant](http://ant.apache.org)
 * [Amazon WebView SDK](https://developer.amazon.com/public/solutions/platforms/android-fireos/docs/building-and-testing-your-hybrid-app)
@@ -120,7 +122,7 @@ In order to create Cordova apps using the Amazon Fire OS platform target, you'll
 ## Create New Project for Amazon Fire OS
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-Line Interface. For example, in a source-code directory:
+Cordova [The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello

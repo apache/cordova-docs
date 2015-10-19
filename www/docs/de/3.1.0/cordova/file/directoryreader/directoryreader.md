@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryReader
 ---
 
 # DirectoryReader
@@ -42,9 +44,9 @@ Lesen Sie die Einträge in diesem Verzeichnis.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ein Array von übergeben wird `FileEntry` und `DirectoryEntry` Objekte. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ein Array von übergeben wird `FileEntry` und `[DirectoryEntry](../directoryentry/directoryentry.html)` Objekte. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der Verzeichnisliste. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der Verzeichnisliste. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 

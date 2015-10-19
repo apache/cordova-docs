@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS WebViews
 ---
 
 # iOS WebViews
@@ -94,7 +96,7 @@ IOS에 대 한 WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사�
         #import <Cordova/CDVViewController.h>
         
 
-2.  새로운 인스턴스화할 `CDVViewController` 어딘가에, 예를 들어, 클래스 속성에 유지:
+2.  새로운 인스턴스화할 `CDVViewController` 어딘가에, 예를 들어, 클래스 속성에 [유지](../../next/index.html):
     
         CDVViewController* viewController = [CDVViewController new];
         

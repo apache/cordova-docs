@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Обновление Windows Phone
 ---
 
 # Обновление Windows Phone
@@ -50,7 +52,7 @@ license: >
 
 ## Обновление до CLI (3.0.0) с 2.9.0
 
-1.  Создайте новый проект Apache Cordova 3.0.0 используя Cordova CLI, как описано в разделе "Интерфейс командной строки".
+1.  Создайте новый проект Apache Cordova 3.0.0 используя Cordova CLI, как описано в разделе "[Интерфейс командной строки](../../cli/index.html)".
 
 2.  Добавьте ваши платформы в проект Cordova, например: `cordova
 platform add wp7 wp8`.

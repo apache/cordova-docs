@@ -16,31 +16,33 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ファイル
 ---
 
 # ファイル
 
-> 読んで、API を書くし、 [w3c ファイル api][1]に基づくファイル システム階層の移動.
+> 読んで、API を書くし、 [w3c [ファイル](fileobj/fileobj.html) api][1]に基づくファイル システム階層の移動.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## オブジェクト
 
-*   DirectoryEntry
-*   DirectoryReader
-*   ファイル
-*   FileEntry
-*   FileError
-*   FileReader
-*   ファイル ・ システム
-*   ファイル転送
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   フラグ
-*   LocalFileSystem
-*   メタデータ
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [ファイル](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [ファイル](fileobj/fileobj.html) ・ システム
+*   [ファイル転送](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
+*   [フラグ](flags/flags.html)
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
+*   [メタデータ](metadata/metadata.html)
 
 ## 機能へのアクセス
 

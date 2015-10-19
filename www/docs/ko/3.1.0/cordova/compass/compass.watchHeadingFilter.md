@@ -16,8 +16,10 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeadingFilter
 ---
 
 # compass.watchHeadingFilter
 
-참조 1.6 기준으로 더 이상 지원 되지, `compass.watchHeading` 동일한 기능에 대 한.
+참조 1.6 기준으로 더 이상 지원 되지, `[compass.watchHeading](compass.watchHeading.html)` 동일한 기능에 대 한.

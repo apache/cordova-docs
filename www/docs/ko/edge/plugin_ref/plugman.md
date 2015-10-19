@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugman를 사용 하 여 플러그인을 관리 하
 ---
 
 # Plugman를 사용 하 여 플러그인을 관리 하
@@ -24,7 +26,7 @@ license: >
 
 *   사용 하는 교차 플랫폼 워크플로우를 사용 하는 경우는 `cordova` 명령줄 인터페이스에 설명 된 대로 플러그인을 추가 하려면 CLI 유틸리티. CLI 모든 지정 된 플랫폼에 대 한 플러그인을 한 번에 수정합니다.
 
-*   플랫폼을 중심으로 워크플로 사용 하는 경우 하위 수준 [Plugman][1] 명령줄 인터페이스 별도로 각 대상된 플랫폼 사용.
+*   플랫폼을 중심으로 워크플로 사용 하는 경우 하위 수준 [Plugman][1] [명령줄 인터페이스](../guide/cli/index.html) 별도로 각 대상된 플랫폼 사용.
 
  [1]: https://github.com/apache/cordova-plugman/
 
@@ -50,7 +52,7 @@ Plugman를 설치 하려면 [노드][3] 컴퓨터에 설치 되어 있어야 합
 
 ## 코르 도우 바 프로젝트 만들기
 
-Plugman를 사용 하 여 코르도바 프로젝트를 만들어야 합니다. 이렇게 하려면 명령줄 인터페이스 또는 낮은 수준의 쉘 스크립트. 쉘 스크립트를 사용 하 여 프로젝트를 만드는 데 대 한 지침 플랫폼 가이드 페이지에 나열 된 다양 한 "명령줄 도구" 가이드에 있습니다.
+Plugman를 사용 하 여 코르도바 프로젝트를 만들어야 합니다. 이렇게 하려면 [명령줄 인터페이스](../guide/cli/index.html) 또는 낮은 수준의 쉘 스크립트. 쉘 스크립트를 사용 하 여 프로젝트를 만드는 데 대 한 지침 [플랫폼 가이드](../guide/platforms/index.html) 페이지에 나열 된 다양 한 "명령줄 도구" 가이드에 있습니다.
 
 ## 플러그인 추가
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: menubutton
 ---
 
 # menubutton
@@ -29,7 +31,7 @@ license: >
 
 事件處理常式的應用覆蓋的預設功能表按鈕行為。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

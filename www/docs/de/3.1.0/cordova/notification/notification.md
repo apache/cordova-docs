@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Benachrichtigung
 ---
 
 # Benachrichtigung
@@ -24,11 +26,11 @@ license: >
 
 ## Methoden
 
-*   `Notification.Alert`
-*   `Notification.Confirm`
-*   `Notification.prompt`
-*   `Notification.Beep`
-*   `Notification.Vibrate`
+*   `[Notification.Alert](notification.alert.html)`
+*   `[Notification.Confirm](notification.confirm.html)`
+*   `[Notification.prompt](notification.prompt.html)`
+*   `[Notification.Beep](notification.beep.html)`
+*   `[Notification.Vibrate](notification.vibrate.html)`
 
 ## Zugriff auf die Funktion
 
@@ -74,4 +76,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

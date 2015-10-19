@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8 플러그인
 ---
 
 # Windows Phone 8 플러그인
@@ -152,7 +154,7 @@ license: >
 
 ## 플러그인 XML
 
-다음 사용 하는 방법을 보여 줍니다 있는 `plugin.xml` 파일 Windows Phone 플랫폼에는 플러그인의 소스 파일을 지정 합니다. 사용 가능한 옵션에 대 한 자세한 내용은 응용 프로그램 플러그인 플러그인 사양에 대 한 개요, 참조.
+다음 사용 하는 방법을 보여 줍니다 있는 `plugin.xml` 파일 Windows Phone 플랫폼에는 플러그인의 소스 파일을 지정 합니다. 사용 가능한 옵션에 대 한 자세한 내용은 응용 프로그램 플러그인 플러그인 사양에 대 한 [개요](../../overview/index.html), 참조.
 
 *   `<source-file>`요소 정의 *.cs* *.xaml*, 같은 모든 플러그인 리소스 *. xaml.cs*, *.dll* 파일, 그리고 이미지 자산.
 

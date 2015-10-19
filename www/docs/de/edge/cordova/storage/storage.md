@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Speicher
 ---
 
 # Speicher
 
-> Eine Übersicht über Storage-Optionen für Cordova.
+> Eine [Übersicht](../../guide/overview/index.html) über Storage-Optionen für Cordova.
 
-Mehrere Speicher-APIs sind für Cordova-Anwendungen verfügbar. Finden Sie unter [html5rocks][1]. eine vollständigere Übersicht und Beispiele.
+Mehrere Speicher-APIs sind für Cordova-Anwendungen verfügbar. Finden Sie unter [html5rocks][1]. eine vollständigere [Übersicht](../../guide/overview/index.html) und Beispiele.
 
  [1]: http://www.html5rocks.com/en/features/storage
 

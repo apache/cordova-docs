@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 contactFindOptions
 ==================
 
-Optional parameter of the `contacts.find` method.  Use this parameter to filter the contacts returned from the contacts database.
+Optional parameter of the `[contacts.find](../contacts.find.html)` method.  Use this parameter to filter the contacts returned from the contacts database.
 
     { 
 		filter: "",

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Storage
 ---
 
 # Storage
@@ -64,7 +66,7 @@ The following platforms support IndexedDB:
 
 ## Plugin-Based Options
 
-In addition to the storage APIs listed above, the File API allows you
+In addition to the storage APIs listed above, the [File](../file/fileobj/fileobj.html) API allows you
 to cache data on the local file system.  Other
 [Cordova plugins](http://plugins.cordova.io/) provide similar storage
 options.

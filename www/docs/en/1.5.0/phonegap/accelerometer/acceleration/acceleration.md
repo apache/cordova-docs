@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Acceleration
 ---
 
 Acceleration
 ============
 
-Contains `Accelerometer` data captured at a specific point in time.
+Contains `[Accelerometer](../accelerometer.html)` data captured at a specific point in time.
 
 Properties
 ----------
@@ -34,7 +36,7 @@ Properties
 Description
 -----------
 
-This object is created and populated by PhoneGap, and returned by an `Accelerometer` method.
+This object is created and populated by PhoneGap, and returned by an `[Accelerometer](../accelerometer.html)` method.
 
 Supported Platforms
 -------------------
@@ -44,7 +46,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -60,7 +62,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugins verwalten mithilfe Plugman
 ---
 
 # Plugins verwalten mithilfe Plugman
 
-Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins, je nach verwendeter Workflow diskutiert in der Übersicht:
+Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins, je nach verwendeter Workflow diskutiert in der [Übersicht](../guide/overview/index.html):
 
 *   Wenn Sie einen Cross-Plattform-Workflow verwenden, verwenden Sie die `cordova` CLI-Hilfsprogramm, Plugins, hinzufügen, wie in der Command-Line Interface beschrieben. Die CLI ändert Plugins für alle angegebenen Plattformen gleichzeitig.
 

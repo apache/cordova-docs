@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Almacenamiento de información
 ---
 
 # Almacenamiento de información
 
-> Un Resumen de las opciones de almacenamiento para Córdoba.
+> Un [Resumen](../../guide/overview/index.html) de las opciones de almacenamiento para Córdoba.
 
 Almacenamiento varias APIs están disponibles para aplicaciones de Córdoba. Ver [html5rocks][1]. para una visión más completa y ejemplos.
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 아마존 화재 OS 플랫폼 가이드
 ---
 
 # 아마존 화재 OS 플랫폼 가이드
@@ -24,9 +26,9 @@ license: >
 
 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   아마존 화재 운영 체제 구성
-*   아마존 화재 OS WebViews
-*   아마존 화재 OS 플러그인
+*   [아마존 화재 운영 체제 구성](config.html)
+*   [아마존 화재 OS WebViews](webview.html)
+*   [아마존 화재 OS 플러그인](plugin.html)
 
 ## 요구 사항 및 지원
 

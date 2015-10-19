@@ -16,8 +16,10 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeadingFilter
 ---
 
 # compass.watchHeadingFilter
 
-Больше не поддерживается начиная с 1.6, см `compass.watchHeading` для эквивалентной функциональности.
+Больше не поддерживается начиная с 1.6, см `[compass.watchHeading](compass.watchHeading.html)` для эквивалентной функциональности.

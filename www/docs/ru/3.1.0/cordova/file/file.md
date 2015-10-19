@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Файл
 ---
 
 # Файл
@@ -26,21 +28,21 @@ license: >
 
 ## Объекты
 
-*   DirectoryEntry
-*   DirectoryReader
-*   Файл
-*   FileEntry
-*   FileError
-*   FileReader
-*   Файловая система
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   Уничтожал
-*   Флаги
-*   LocalFileSystem
-*   Метаданные
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [Файл](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [Файловая система](filesystem/filesystem.html)
+*   [FileTransfer](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [Уничтожал](filewriter/filewriter.html)
+*   [Флаги](flags/flags.html)
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
+*   [Метаданные](metadata/metadata.html)
 
 ## Доступ к функции
 

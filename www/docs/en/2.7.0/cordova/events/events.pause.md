@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: pause
 ---
 
 pause
@@ -30,7 +32,7 @@ Details
 
 Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -41,7 +43,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("pause", onPause, false);
@@ -50,7 +52,7 @@ Quick Example
         // Handle the pause event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

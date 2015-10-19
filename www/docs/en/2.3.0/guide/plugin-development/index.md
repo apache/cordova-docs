@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugin Development Guide
 ---
 
 # Plugin Development Guide
@@ -104,10 +106,10 @@ specific guides for each platform Cordova supports. The below guides
 will continue on building the simple Echo Plugin example we started in
 this guide.
 
-- Developing a Plugin on Android
-- Developing a Plugin on Bada
-- Developing a Plugin on BlackBerry
-- Developing a Plugin on iOS
-- Developing a Plugin on webOS
-- Developing a Plugin on Windows Phone
-- Developing a Plugin on Tizen
+- [Developing a Plugin on Android](android/index.html)
+- [Developing a Plugin on Bada](bada/index.html)
+- [Developing a Plugin on BlackBerry](blackberry/index.html)
+- [Developing a Plugin on iOS](ios/index.html)
+- [Developing a Plugin on webOS](webos/index.html)
+- [Developing a Plugin on Windows Phone](windows-phone/index.html)
+- [Developing a Plugin on Tizen](tizen/index.html)

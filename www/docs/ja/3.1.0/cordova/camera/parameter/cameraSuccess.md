@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraSuccess
 ---
 
 # cameraSuccess
@@ -29,7 +31,7 @@ license: >
 
 ## パラメーター
 
-*   **imagedata を扱う**: Base64 エンコード イメージのデータ、*または*画像ファイルによって URI の `cameraOptions` 効果。*(文字列)*
+*   **imagedata を扱う**: Base64 エンコード イメージのデータ、*または*画像ファイルによって URI の `[cameraOptions](cameraOptions.html)` 効果。*(文字列)*
 
 ## 例
 

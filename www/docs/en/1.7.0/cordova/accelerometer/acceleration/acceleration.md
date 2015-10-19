@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Acceleration
 ---
 
 Acceleration
 ============
 
-Contains `Accelerometer` data captured at a specific point in time.
+Contains `[Accelerometer](../accelerometer.html)` data captured at a specific point in time.
 
 Properties
 ----------
@@ -34,7 +36,7 @@ Properties
 Description
 -----------
 
-This object is created and populated by Cordova, and returned by an `Accelerometer` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
+This object is created and populated by Cordova, and returned by an `[Accelerometer](../accelerometer.html)` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
 
 Supported Platforms
 -------------------
@@ -45,7 +47,7 @@ Supported Platforms
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -61,7 +63,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

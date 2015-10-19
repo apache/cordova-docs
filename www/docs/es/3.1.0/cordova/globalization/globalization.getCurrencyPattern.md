@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getCurrencyPattern
 ---
 
 # globalization.getCurrencyPattern
@@ -43,7 +45,7 @@ Devuelve el patrón a la `successCallback` con un objeto de `properties` como un
 
 El parámetro entrantes `currencyCode` debe ser una `String` de uno de los códigos de moneda ISO 4217, por ejemplo 'USD'.
 
-Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `GlobalizationError` objeto como parámetro. Código esperado del error es`GlobalizationError.FORMATTING\_ERROR`.
+Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objeto como parámetro. Código esperado del error es`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 ## Plataformas soportadas
 

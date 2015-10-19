@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 地理位置情報
 ---
 
 # 地理位置情報
@@ -28,24 +30,24 @@ license: >
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要なプライバシーの注意：**地理位置情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理位置情報データを使用する方法を議論すべきです。 地理位置情報データと一般に見なされる敏感なそれは人の所在を明らかにすることができますので、保存される場合、彼または彼女の旅行の歴史。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります (デバイス オペレーティング システムしない場合そう既に) 地理位置情報データにアクセスするアプリの前にちょうど時間通知を提供しています。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
+**重要なプライバシーの注意：**地理位置情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理位置情報データを使用する方法を議論すべきです。 地理位置情報データと一般に見なされる敏感なそれは人の所在を明らかにすることができますので、保存される場合、彼または彼女の旅行の歴史。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります ([デバイス](../device/device.html) オペレーティング システムしない場合そう既に) 地理位置情報データにアクセスするアプリの前にちょうど時間通知を提供しています。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## メソッド
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+*   [geolocation.watchPosition](geolocation.watchPosition.html)
+*   [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## 引数
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   [geolocationSuccess](parameters/geolocationSuccess.html)
+*   [geolocationError](parameters/geolocationError.html)
+*   [geolocationOptions](parameters/geolocation.options.html)
 
 ## オブジェクト (読み取り専用)
 
 *   Position
-*   PositionError
+*   [PositionError](PositionError/positionError.html)
 *   Coordinates
 
 ## 機能へのアクセス

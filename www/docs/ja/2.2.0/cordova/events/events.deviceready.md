@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: deviceready
 ---
 
 deviceready
@@ -48,7 +50,7 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("deviceready", onDeviceReady, false);

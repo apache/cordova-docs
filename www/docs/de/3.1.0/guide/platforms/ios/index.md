@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Platform Guide
 ---
 
 # iOS Platform Guide
 
 Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps für iOS-Geräte wie iPhone und iPad bereitstellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   iOS Konfiguration
-*   IOS Upgrade
-*   iOS Webansichten für
-*   iOS Plugins
-*   iOS-Befehlszeilenprogrammen
+*   [iOS Konfiguration](config.html)
+*   [IOS Upgrade](upgrading.html)
+*   [iOS Webansichten für](webview.html)
+*   [iOS Plugins](plugin.html)
+*   [iOS-Befehlszeilenprogrammen](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
@@ -34,7 +36,7 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
 
 Apple ® Werkzeuge zum Erstellen von iOS-Anwendungen, die nur auf das Betriebssystem OS X auf Intel-basierten Macs ausgeführt. Xcode ® 4.5 (die erforderliche Mindestversion) läuft nur unter OS X Version 10.7 (Lion) oder größer, und umfasst das iOS 6 SDK (Software Development Kit). Einreichen von apps, die Apple-App-Store℠ erfordert die neuesten Versionen der Apple-Tools.
 
-Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das Gerät muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
+Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes [Gerät](../../../cordova/device/device.html) vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das [Gerät](../../../cordova/device/device.html) muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem [Gerät](../../../cordova/device/device.html) zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -61,7 +63,7 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Cordova The 
         $ cordova prepare              # or "cordova build"
     
 
-Einmal erstellt, können Sie es innerhalb von Xcode öffnen. Doppelklicken Sie zum Öffnen der `hello/platforms/ios/hello.xcodeproj` Datei. Der Bildschirm sollte wie folgt aussehen:
+Einmal erstellt, können Sie es innerhalb von Xcode öffnen. Doppelklicken Sie zum Öffnen der `hello/platforms/ios/hello.xcodeproj` [Datei](../../../cordova/file/fileobj/fileobj.html). Der Bildschirm sollte wie folgt aussehen:
 
 ![][4]
 
@@ -75,7 +77,7 @@ Die app in der iOS-Emulator Vorschau:
 
 2.  Wählen Sie die **Hallo** -app im Bereich sofort nach rechts.
 
-3.  Wählen Sie das gewünschte Gerät " **Schema** " der Symbolleiste, wie das iPhone hervorgehoben 6.0 Simulator als hier:
+3.  Wählen Sie das gewünschte [Gerät](../../../cordova/device/device.html) " **Schema** " der Symbolleiste, wie das iPhone hervorgehoben 6.0 Simulator als hier:
     
     ![][5]
 
@@ -92,7 +94,7 @@ Xcode kommt zusammengerollt mit Emulatoren für die neuesten Versionen von iPhon
 
 ## Bereitstellung auf Gerät
 
-Ausführliche Informationen zu unterschiedlichen Anforderungen an ein Gerät bereitstellen finden Sie im Abschnitt " *Konfigurieren von Entwicklung und Vertrieb Vermögenswerte* " Apples [Tools Workflow Guide für iOS][7]. Kurz gesagt, müssen Sie vor der Bereitstellung Folgendes:
+Ausführliche Informationen zu unterschiedlichen Anforderungen an ein [Gerät](../../../cordova/device/device.html) bereitstellen finden Sie im Abschnitt " *Konfigurieren von Entwicklung und Vertrieb Vermögenswerte* " Apples [Tools Workflow Guide für iOS][7]. Kurz gesagt, müssen Sie vor der Bereitstellung Folgendes:
 
  [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
@@ -104,15 +106,15 @@ Ausführliche Informationen zu unterschiedlichen Anforderungen an ein Gerät ber
 
  [8]: https://developer.apple.com/ios/manage/overview/index.action
 
-Für das Gerät bereitstellen:
+Für das [Gerät](../../../cordova/device/device.html) bereitstellen:
 
-1.  Verwenden Sie das USB-Kabel, um das Gerät an Ihren Mac anschließen
+1.  Verwenden Sie das USB-Kabel, um das [Gerät](../../../cordova/device/device.html) an Ihren Mac anschließen
 
 2.  Wählen Sie den Namen des Projekts in das Xcode-Fenster **Schema** Dropdown Liste.
 
-3.  Wählen Sie Ihr Gerät aus der Dropdownliste **Gerät** . Wenn es über USB angeschlossen ist, aber immer noch nicht angezeigt, drücken Sie die Schaltfläche " **Organizer** ", um Fehler zu beheben.
+3.  Wählen Sie Ihr [Gerät](../../../cordova/device/device.html) aus der Dropdownliste **Gerät** . Wenn es über USB angeschlossen ist, aber immer noch nicht angezeigt, drücken Sie die Schaltfläche " **Organizer** ", um Fehler zu beheben.
 
-4.  Drücken Sie die Schaltfläche **Ausführen** , erstellen, bereitstellen und führen Sie die Anwendung auf Ihrem Gerät.
+4.  Drücken Sie die Schaltfläche **Ausführen** , erstellen, bereitstellen und führen Sie die Anwendung auf Ihrem [Gerät](../../../cordova/device/device.html).
 
 ## Häufige Probleme
 
@@ -120,7 +122,7 @@ Für das Gerät bereitstellen:
 
 Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die eine Anwendung über einen benutzerdefinierten URL startet. Obwohl der Mechanismus zum Laden aus einer benutzerdefinierten URL geändert hat, ist dieser Code noch rückwärts Funktionalität für Anwendungen, die mit älteren Versionen von Cordova erstellt. Die Beispielanwendung wird diese Funktionalität nicht verwendet, können diese Warnungen ignoriert werden. Um diese Warnungen angezeigt zu vermeiden, entfernen Sie den Code, der die veraltete InvokeString API verweist:
 
-*   Bearbeiten Sie die Datei *Classes/MainViewController.m* , umgeben von den folgenden Codeblock mit `/*` und `*/` Kommentare wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
+*   Bearbeiten Sie die [Datei](../../../cordova/file/fileobj/fileobj.html) *Classes/MainViewController.m* , umgeben von den folgenden Codeblock mit `/*` und `*/` Kommentare wie folgt, dann geben Sie **Befehl-s** , um die [Datei](../../../cordova/file/fileobj/fileobj.html) zu speichern:
     
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
@@ -140,7 +142,7 @@ Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die
         }
         
 
-*   Bearbeiten Sie die *Classes/AppViewDelegate.m* -Datei, kommentieren Sie die folgende Zeile durch einen doppelten Schrägstrich einfügen, wie folgt, dann geben Sie **Befehl-s** , um die Datei zu speichern:
+*   Bearbeiten Sie die *Classes/AppViewDelegate.m* -Datei, kommentieren Sie die folgende Zeile durch einen doppelten Schrägstrich einfügen, wie folgt, dann geben Sie **Befehl-s** , um die [Datei](../../../cordova/file/fileobj/fileobj.html) zu speichern:
     
         //self.viewController.invokeString = invokeString;
         

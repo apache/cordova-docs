@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-Un handle per la finestra di dialogo di muffin creato da`camera.getPicture`.
+Un handle per la finestra di dialogo di muffin creato da`[camera.getPicture](../camera.getPicture.html)`.
 
 ## Metodi
 
@@ -36,7 +38,7 @@ Impostare la posizione dei muffin.
 
 **Parametri:**
 
-*   `cameraPopoverOptions`: il `CameraPopoverOptions` che specificare la nuova posizione
+*   `cameraPopoverOptions`: il `[CameraPopoverOptions](CameraPopoverOptions.html)` che specificare la nuova posizione
 
 ## Esempio rapido
 

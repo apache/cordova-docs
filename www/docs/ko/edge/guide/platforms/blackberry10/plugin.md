@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 10 플러그인
 ---
 
 # 블랙베리 10 플러그인
 
-이 섹션에서는 블랙베리 10 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 사항을 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
+이 섹션에서는 블랙베리 10 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 사항을 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 [개요](../../overview/index.html) 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
 
 에코 플러그인은 기본적으로 어떤 문자열을 반환 합니다는 `window.echo` JavaScript에서 함수 보냅니다:
 
@@ -78,7 +80,7 @@ IDE에 의해 만들어진 프로젝트 메모리 플러그인에 대 한 샘플
         #endif // ECHO_JS_H_
     
 
-`m_id`특성은 `JNEXT` 클래스에는 생성자에 인수로 전달 되는 개체의 id. 네이티브 측면 트리거 이벤트 자바 스크립트 측면에 대 한 필요 합니다. `CanDelete`메서드는 기본 개체를 삭제할 수 있는지 여부를 확인 합니다. `InvokeMethod`함수는이 특정 개체의 메서드를 호출 하려면 JavaScript에서 요청에서 결과적으로 호출 됩니다. 이 함수의 유일한 인수는 네이티브 개체의 메서드를 실행 하 여 확인 하는 구문 분석 하는이 방법은 JavaScript에서 전달 된 문자열입니다. 이러한 방법을 구현 됩니다 `echo_js.cpp` . 여기는 `InvokeMethod` 에 대 한 함수는 `Echo` 예:
+`m_id`특성은 `JNEXT` 클래스에는 생성자에 인수로 전달 되는 개체의 id. 네이티브 측면 트리거 [이벤트](../../../cordova/events/events.html) 자바 스크립트 측면에 대 한 필요 합니다. `CanDelete`메서드는 기본 개체를 삭제할 수 있는지 여부를 확인 합니다. `InvokeMethod`함수는이 특정 개체의 메서드를 호출 하려면 JavaScript에서 요청에서 결과적으로 호출 됩니다. 이 함수의 유일한 인수는 네이티브 개체의 메서드를 실행 하 여 확인 하는 구문 분석 하는이 방법은 JavaScript에서 전달 된 문자열입니다. 이러한 방법을 구현 됩니다 `echo_js.cpp` . 여기는 `InvokeMethod` 에 대 한 함수는 `Echo` 예:
 
         string Echo::InvokeMethod(const string& command) {
     

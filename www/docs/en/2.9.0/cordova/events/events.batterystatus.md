@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 batterystatus
@@ -38,7 +40,7 @@ properties:
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `window.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 Supported Platforms
 -------------------
@@ -56,7 +58,7 @@ Windows Phone 7 does not provide native APIs to determine battery
 level, so the `level` property is unavailable.  The `isPlugged`
 parameter _is_ supported.
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
@@ -66,7 +68,7 @@ Quick Example
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

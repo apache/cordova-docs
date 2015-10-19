@@ -16,24 +16,26 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.getCurrentPosition
 ---
 
 # media.getCurrentPosition
 
-Gibt die aktuelle Position in einer Audiodatei.
+Gibt die aktuelle [Position](../geolocation/Position/position.html) in einer Audiodatei.
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
     
 
 ## Parameter
 
-*   **MediaSuccess**: der Rückruf, der die aktuelle Position in Sekunden übergeben wird.
+*   **MediaSuccess**: der Rückruf, der die aktuelle [Position](../geolocation/Position/position.html) in Sekunden übergeben wird.
 
 *   **Medienfehler**: (Optional) der Rückruf ausgeführt, wenn ein Fehler auftritt.
 
 ## Beschreibung
 
-Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audiodatei der zurückgibt ein `Media` Objekt. Aktualisiert auch die `Media` des Objekts `position` Parameter.
+Eine asynchrone Funktion, die die aktuelle [Position](../geolocation/Position/position.html) der zugrunde liegenden Audiodatei der zurückgibt ein `Media` Objekt. Aktualisiert auch die `Media` des Objekts `position` Parameter.
 
 ## Unterstützte Plattformen
 

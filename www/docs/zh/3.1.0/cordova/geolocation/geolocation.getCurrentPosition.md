@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.getCurrentPosition
 ---
 
 # geolocation.getCurrentPosition
@@ -37,7 +39,7 @@ license: >
 
 ## 說明
 
-`geolocation.getCurrentPosition`是一個非同步函數。 它將返回到該設備的當前位置 `geolocationSuccess` 回檔與 `Position` 物件作為參數。 如果有錯誤， `geolocationError` 回檔通過 `PositionError` 物件。
+`geolocation.getCurrentPosition`是一個非同步函數。 它將返回到該設備的當前位置 `[geolocationSuccess](parameters/geolocationSuccess.html)` 回檔與 `Position` 物件作為參數。 如果有錯誤， `[geolocationError](parameters/geolocationError.html)` 回檔通過 `[PositionError](PositionError/positionError.html)` 物件。
 
 ## 支援的平臺
 

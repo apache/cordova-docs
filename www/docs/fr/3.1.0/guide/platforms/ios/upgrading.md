@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Mise à jour d'iOS
 ---
 
 # Mise à jour d'iOS
@@ -71,7 +73,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` (Notez qu'il n'a plus un suffixe de version, la version est dans le fichier lui-même dans l'en-tête) fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -89,7 +91,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` (Notez qu'il n'a plus un suffixe de version, la version est dans le fichier lui-même dans l'en-tête) fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -105,7 +107,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` (Notez qu'il n'a plus un suffixe de version, la version est dans le fichier lui-même dans l'en-tête) fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.7.0.js` fichier.
 
@@ -137,7 +139,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.7.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.6.0.js` fichier.
 
@@ -160,7 +162,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copier le projet `www/cordova-2.6.0.js` fichier dans votre `www` directory et supprimer votre `www/cordova-2.5.0.js` fichier.
 
@@ -191,7 +193,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.5.0.js` fichier à partir du nouveau projet dans votre `www` répertoire et supprimer votre `www/cordova-2.4.0.js` fichier.
 
@@ -222,7 +224,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.4.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.3.0.js` fichier.
 
@@ -253,7 +255,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.3.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.2.0.js` fichier.
 
@@ -267,7 +269,7 @@ platform add ios`.
 
 10. Convertir votre `Cordova.plist` fichier à `config.xml` , en exécutant le script `bin/cordova\_plist\_to\_config\_xml` sur le dossier de votre projet.
 
-11. Ajouter le plugin InAppBrowser pour votre `config.xml` , en ajoutant cette balise sous `<cordova><plugins>` :
+11. Ajouter le plugin [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) pour votre `config.xml` , en ajoutant cette balise sous `<cordova><plugins>` :
     
         < nom du plugin = « InAppBrowser » value = « CDVInAppBrowser » / >
         
@@ -288,7 +290,7 @@ platform add ios`.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.2.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.1.0.js` fichier.
 
@@ -320,7 +322,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova-2.1.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-2.0.0.js` fichier.
 
@@ -351,7 +353,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 1.  Installer Cordova 2.0.0.
 
-2.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+2.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 3.  Copie le `www/cordova-2.0.0.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova-1.9.0.js` fichier.
 
@@ -467,13 +469,13 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 4.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-1.8.0.js` fichier.
 
-Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux actifs de **rétine-écran de l'iPad** :
+Si vous avez l'intention à l'aide de l'API de [Capture](../../../cordova/media/capture/capture.html), vous devez les nouveaux actifs de **rétine-écran de l'iPad** :
 
 1.  Copie le `Resources/Capture.bundle` point de ce nouveau projet dans le répertoire de votre projet, écraser votre existant `Resources/Capture.bundle` point.
 
-2.  Dans votre projet, sélectionnez le `Capture.bundle` point dans votre projet de navigation dans Xcode, taper la touche **Suppr** , puis sélectionnez **Supprimer une référence** dans la boîte de dialogue.
+2.  Dans votre projet, sélectionnez le `[Capture](../../../cordova/media/capture/capture.html).bundle` point dans votre projet de navigation dans Xcode, taper la touche **Suppr** , puis sélectionnez **Supprimer une référence** dans la boîte de dialogue.
 
-3.  Faites glisser le nouveau `Capture.bundle` de l'étape 1 ci-dessus dans votre projet de navigation dans Xcode, puis sélectionnez la case d'option de **créer des groupes pour tous les dossiers ajoutés** .
+3.  Faites glisser le nouveau `[Capture](../../../cordova/media/capture/capture.html).bundle` de l'étape 1 ci-dessus dans votre projet de navigation dans Xcode, puis sélectionnez la case d'option de **créer des groupes pour tous les dossiers ajoutés** .
 
 ## La mise à niveau de projets 1.6.x à 1.7.0
 

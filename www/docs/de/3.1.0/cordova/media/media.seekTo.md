@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.seekTo
 ---
 
 # media.seekTo
 
-Legt die aktuelle Position in einer Audiodatei.
+Legt die aktuelle [Position](../geolocation/Position/position.html) in einer Audiodatei.
 
     media.seekTo(milliseconds);
     
 
 ## Parameter
 
-*   **Millisekunden**: die Position die Wiedergabeposition innerhalb des Audiotracks in Millisekunden festgelegt.
+*   **Millisekunden**: die [Position](../geolocation/Position/position.html) die Wiedergabeposition innerhalb des Audiotracks in Millisekunden festgelegt.
 
 ## Beschreibung
 

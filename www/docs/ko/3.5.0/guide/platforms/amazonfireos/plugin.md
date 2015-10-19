@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 아마존 화재 OS 플러그인
 ---
 
 # 아마존 화재 OS 플러그인
 
-사용자 지정 플러그인 개발의 개요에 대 한 안 드 로이드 플러그인 가이드에 제공 된 지침을 따릅니다.
+사용자 지정 플러그인 개발의 개요에 대 한 [안 드 로이드 플러그인](../android/plugin.html) 가이드에 제공 된 지침을 따릅니다.
 
 ## 에코 아마존 화재 OS 플러그인 예제
 
@@ -71,7 +73,7 @@ license: >
     }
     
 
-아마존 화재 운영 체제 플랫폼에 대 한 안 드 로이드 플러그인 코드 재사용 다음 가리키도록 plugin.xml을 수정 하려는 경우는 `android` 특정 소스 파일. 예를 들어,
+아마존 화재 운영 체제 플랫폼에 대 한 [안 드 로이드 플러그인](../android/plugin.html) 코드 재사용 다음 가리키도록 plugin.xml을 수정 하려는 경우는 `android` 특정 소스 파일. 예를 들어,
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 accelerometer.watchAcceleration
@@ -32,9 +34,9 @@ Description
 
 The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-The `accelerometer.watchAcceleration` gets the device's current acceleration at a regular interval. Each time the `Acceleration` is retrieved, the `accelerometerSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `acceleratorOptions` object.
+The `accelerometer.watchAcceleration` gets the device's current acceleration at a regular interval. Each time the `[Acceleration](acceleration/acceleration.html)` is retrieved, the `[accelerometerSuccess](parameters/accelerometerSuccess.html)` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `acceleratorOptions` object.
 
-The returned watch ID references the accelerometer watch interval. The watch ID can be used with `accelerometer.clearWatch` to stop watching the accelerometer.
+The returned watch ID references the accelerometer watch interval. The watch ID can be used with `[accelerometer.clearWatch](accelerometer.clearWatch.html)` to stop watching the accelerometer.
 
 Supported Platforms
 -------------------
@@ -47,7 +49,7 @@ Supported Platforms
 - Tizen
 
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {
@@ -65,7 +67,7 @@ Quick Example
     
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

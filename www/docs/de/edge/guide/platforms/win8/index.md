@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Anleitung zur Windows Platform
 ---
 
 # Anleitung zur Windows Platform
 
-Diese Anleitung zeigt wie die SDK-Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für Windows 8, Windows 8.1 und Windows Phone 8.1 Windows 10 Universal-App-Plattform eingerichtet. Es zeigt, wie mit beiden Kommandozeilenanwendungen generieren und apps zu bauen oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die Übersicht für einen Vergleich dieser Entwicklung-Optionen.) In diesem Abschnitt wird auch veranschaulicht, Cordova apps innerhalb von Visual Studio zu ändern. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie die Visual Studio-SDK installieren, wie unten beschrieben.
+Diese Anleitung zeigt wie die SDK-Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für Windows 8, Windows 8.1 und Windows Phone 8.1 Windows 10 Universal-App-Plattform eingerichtet. Es zeigt, wie mit beiden Kommandozeilenanwendungen generieren und apps zu bauen oder die plattformübergreifende Cordova CLI diskutiert in der Command-Line Interface. (Siehe die [Übersicht](../../overview/index.html) für einen Vergleich dieser Entwicklung-Optionen.) In diesem Abschnitt wird auch veranschaulicht, Cordova apps innerhalb von Visual Studio zu ändern. Unabhängig davon, welchen Ansatz Sie nehmen, müssen Sie die Visual Studio-SDK installieren, wie unten beschrieben.
 
-Informationen zum Aktualisieren von bestehender Windows 8 Cordova-Projekten finden Sie unter Aktualisieren von Windows 8.
+Informationen zum Aktualisieren von bestehender Windows 8 Cordova-Projekten finden Sie unter [Aktualisieren von Windows 8](upgrading.html).
 
 Einzelheiten siehe Fenster Telefon 8 (wp8) Aufenthalte als separate Plattform Windows Phone 8 Platform Guide.
 
@@ -229,4 +231,4 @@ Wählen Sie alternativ die **Simulator** -Bereitstellungsoption die app anzeigen
 
 Im Gegensatz zu desktop-Bereitstellung mit dieser Option können Sie simulieren die Tablette Orientierung, Lage, und variieren ihre Netzwerkeinstellungen.
 
-**Hinweis**: Rufen Sie die Übersicht für Ratschläge, wie Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow verwendet. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Möchten Sie das SDK zu verwenden, ändern Sie das Projekt, verwenden Sie die Low-Level-Kommandozeilenanwendungen als Alternative zu den CLI.
+**Hinweis**: Rufen Sie die [Übersicht](../../overview/index.html) für Ratschläge, wie Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow verwendet. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Möchten Sie das SDK zu verwenden, ändern Sie das Projekt, verwenden Sie die Low-Level-Kommandozeilenanwendungen als Alternative zu den CLI.

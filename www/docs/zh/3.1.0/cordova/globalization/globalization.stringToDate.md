@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToDate
 ---
 
 # globalization.stringToDate
@@ -53,7 +55,7 @@ license: >
 `options.formatLength`可以是 `short` ， `medium` ， `long` ，或 `full` 。 `options.selector`可以是 `date` ， `time` 或`date and
 time`.
 
-如果有錯誤解析日期字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
+如果有錯誤解析日期字串，然後 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 ## 支援的平臺
 

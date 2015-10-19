@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS wtyczek
 ---
 
 # iOS wtyczek
@@ -146,7 +148,7 @@ Sprawdza parametru, aby upewnić się, że to nie jest `nil` lub ciąg pusty, po
 
 ## iOS integracji
 
-`CDVPlugin`Klasa oferuje inne metody, które wtyczki można zastąpić. Na przykład, można przechwytywać `pause` , `resume` , zakończenie aplikacji i `handleOpenURL` wydarzeń. Zobacz [CDVPlugin.h][1] i [CDVPlugin.m][2] klasy orientacji.
+`CDVPlugin`Klasa oferuje inne metody, które wtyczki można zastąpić. Na przykład, można przechwytywać `[pause](../../../cordova/events/events.pause.html)` , `[resume](../../../cordova/events/events.resume.html)` , zakończenie aplikacji i `handleOpenURL` wydarzeń. Zobacz [CDVPlugin.h][1] i [CDVPlugin.m][2] klasy orientacji.
 
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m

@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 플랫폼 가이드
 ---
 
 # Windows 8 플랫폼 가이드
 
 이 가이드에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   윈도우 8을 업그레이드
-*   윈도우 8 명령줄 도구
+*   [윈도우 8을 업그레이드](upgrading.html)
+*   [윈도우 8 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
-마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 가이드 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
+마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 [가이드](../../../index.html) 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
 
 ## 요구 사항
 
@@ -81,7 +83,7 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
             <script src="/js/default.js"></script>
         
 
-*   추가 `deviceready` 코르도바를 보여 주기 위해 처리기 작업:
+*   추가 `[deviceready](../../../cordova/events/events.deviceready.html)` 코르도바를 보여 주기 위해 처리기 작업:
     
         <body>
             <p>Content goes here</p>

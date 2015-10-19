@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureImage
 ---
 
 capture.captureImage
@@ -34,7 +36,7 @@ capture.captureImage
 
 キャプチャー操作は、ユーザーがカメラアプリを終了するか、 CaptureImageOption の中の __limit__ パラメーターで指定された最大撮影回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度画像を撮影した後に終了します。
 
-キャプチャー操作が終了した時、それぞれの画像ファイル情報が書かれた MediaFile オブジェクトの配列を伴った CaptureCB コールバック関数を呼び出します。もし画像がキャプチャーされる前にユーザーによって操作が終了されたら、 CaptureError.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ CaptureError オブジェクトを伴った CaptureErrorCB コールバック関数が呼び出されます。
+キャプチャー操作が終了した時、それぞれの画像ファイル情報が書かれた [MediaFile](MediaFile.html) オブジェクトの配列を伴った [CaptureCB](CaptureCB.html) コールバック関数を呼び出します。もし画像がキャプチャーされる前にユーザーによって操作が終了されたら、 [CaptureError](CaptureError.html).`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ [CaptureError](CaptureError.html) オブジェクトを伴った [CaptureErrorCB](CaptureErrorCB.html) コールバック関数が呼び出されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -49,7 +51,7 @@ Windows Phone 7 に関する注意点
 
 Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // capture コールバック関数

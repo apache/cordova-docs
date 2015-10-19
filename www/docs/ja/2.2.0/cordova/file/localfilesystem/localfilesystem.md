@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 LocalFileSystem
@@ -27,7 +29,7 @@ LocalFileSystem
 ----------
 
 - __requestFileSystem:__ ファイルシステムをリクエストします _(Function)_
-- __resolveLocalFileSystemURI:__ ローカル URI を使用して DirectoryEntry または FileEntry を取得します _(Function)_
+- __resolveLocalFileSystemURI:__ ローカル URI を使用して [DirectoryEntry](../directoryentry/directoryentry.html) または [FileEntry](../fileentry/fileentry.html) を取得します _(Function)_
 
 定数
 ---------
@@ -48,7 +50,7 @@ LocalFileSystem
 - iOS
 - Windows Phone 7 (Mango)
 
-Request File Systemの使用例
+Request [File](../fileobj/fileobj.html) Systemの使用例
 ---------------------------------
 
     function onSuccess(fileSystem) {
@@ -58,7 +60,7 @@ Request File Systemの使用例
     // ファイルシステムをリクエスト
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
 
-Resolve Local File System URIの使用例
+Resolve Local [File](../fileobj/fileobj.html) System URIの使用例
 -------------------------------------------
 
     function onSuccess(fileEntry) {

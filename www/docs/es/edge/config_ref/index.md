@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: El archivo config.xml
 ---
 
 # El archivo config.xml
@@ -41,8 +43,8 @@ Cuando se usa la CLI para construir un proyecto, las versiones de este archivo p
 Esta sección detalla las opciones de configuración global y multiplataforma. Consulte las siguientes secciones para las opciones específicas de la plataforma:
 
 *   Configuración de iOS
-*   Configuración de Android
-*   Configuración de BlackBerry 10
+*   [Configuración de Android](../guide/platforms/android/config.html)
+*   [Configuración de BlackBerry 10](../guide/platforms/blackberry10/config.html)
 
 Además de las diversas opciones de configuración detalladas a continuación, también puede configurar el conjunto básico de una aplicación de imágenes para cada plataforma de destino. Ver los iconos y salpicadura pantallas para obtener más información.
 

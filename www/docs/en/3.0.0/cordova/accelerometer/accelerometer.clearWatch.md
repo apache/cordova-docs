@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the `watchID` parameter.
+Stop watching the `[Acceleration](acceleration/acceleration.html)` referenced by the `watchID` parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: The ID returned by `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 Supported Platforms
 -------------------
@@ -37,7 +39,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
@@ -46,7 +48,7 @@ Quick Example
 
     navigator.accelerometer.clearWatch(watchID);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

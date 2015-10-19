@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS платформы
 ---
 
 # iOS платформы
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для iOS-устройств, таких как iPhone и iPad. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   iOS конфигурации
-*   Обновление iOS
-*   iOS WebViews
+*   [iOS конфигурации](config.html)
+*   [Обновление iOS](upgrading.html)
+*   [iOS WebViews](webview.html)
 *   iOS, плагины
-*   iOS утилиты командной строки
+*   [iOS утилиты командной строки](tools.html)
 
 Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 

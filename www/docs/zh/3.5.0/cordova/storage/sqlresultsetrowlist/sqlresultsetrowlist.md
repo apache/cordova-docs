@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSetRowList
 ---
 
 # SQLResultSetRowList
 
-屬性之一的 `SQLResultSet` 從 SQL 查詢中包含的行返回。
+屬性之一的 `[SQLResultSet](../sqlresultset/sqlresultset.html)` 從 SQL 查詢中包含的行返回。
 
 ## 屬性
 

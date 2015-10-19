@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactOrganization
 ---
 
 # ContactOrganization
 
-Contient les propriétés de l'entreprise de l'objet `Contact</code.></p>
+Contient les propriétés de l'entreprise de l'objet `[Contact](../Contact/contact.html)</code.></p>
 
 <h2>Propriétés</h2>
 
@@ -37,7 +39,7 @@ Contient les propriétés de l'entreprise de l'objet `Contact</code.></p>
 
 ## Détails
 
-L'objet `ContactOrganization` stocke des propriétés de l'entreprise d'un contact. Un objet `Contact` contient un ou plusieurs objets `ContactOrganization` dans un tableau.
+L'objet `ContactOrganization` stocke des propriétés de l'entreprise d'un contact. Un objet `[Contact](../Contact/contact.html)` contient un ou plusieurs objets `ContactOrganization` dans un tableau.
 
 ## Plates-formes prises en charge
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadResult
 ---
 
 # FileUploadResult
 
-A `FileUploadResult` oggetto viene passato al metodo di callback di successo il `FileTransfer` dell'oggetto `upload()` metodo.
+A `FileUploadResult` oggetto viene passato al metodo di callback di successo il `[FileTransfer](../filetransfer/filetransfer.html)` dell'oggetto `upload()` metodo.
 
 ## Proprietà
 
@@ -32,7 +34,7 @@ A `FileUploadResult` oggetto viene passato al metodo di callback di successo il 
 
 ## Descrizione
 
-Il `FileUploadResult` viene restituito l'oggetto tramite il callback di successo del `FileTransfer` dell'oggetto `upload()` metodo.
+Il `FileUploadResult` viene restituito l'oggetto tramite il callback di successo del `[FileTransfer](../filetransfer/filetransfer.html)` dell'oggetto `upload()` metodo.
 
 ## iOS stranezze
 

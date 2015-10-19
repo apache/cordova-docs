@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry Platform Guide
 ---
 
 # BlackBerry Platform Guide
@@ -26,19 +28,19 @@ want to target the most recent version, see the BlackBerry 10 Platform
 Guide.  See the following for more detailed platform-specific
 information:
 
-* BlackBerry Configuration
-* Upgrading BlackBerry
-* BlackBerry Plugins
-* BlackBerry Command-line Tools
+* [BlackBerry Configuration](config.html)
+* [Upgrading BlackBerry](upgrading.html)
+* [BlackBerry Plugins](plugin.html)
+* [BlackBerry Command-line Tools](tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See [The Command-line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## Requirements and Support
 
 This version of BlackBerry is not supported by the `cordova` utility
-described in The Command-line Interface, but by a separate set of
+described in [The Command-line Interface](../../cli/index.html), but by a separate set of
 command-line tools. Download the Cordova distribution from
 [cordova.apache.org](http://cordova.apache.org/#download).
 

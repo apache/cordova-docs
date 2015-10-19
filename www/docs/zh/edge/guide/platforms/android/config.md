@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android 系統組態
 ---
 
 # Android 系統組態
@@ -24,7 +26,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `[pause](../../../cordova/events/events.pause.html)` 事件火災。 將此設置為 `false` 不會殺死後的 app `[pause](../../../cordova/events/events.pause.html)` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     
         <preference name="KeepRunning" value="false"/>
         

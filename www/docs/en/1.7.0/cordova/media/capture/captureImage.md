@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureImage
 ---
 
 capture.captureImage
@@ -24,7 +26,7 @@ capture.captureImage
 > Start the camera application and return information about captured image file(s).
 
     navigator.device.capture.captureImage( 
-	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+	    [CaptureCB](CaptureCB.html) captureSuccess, [CaptureErrorCB](CaptureErrorCB.html) captureError, [CaptureImageOptions options]
 	);
 
 Description
@@ -32,9 +34,9 @@ Description
 
 This method starts an asynchronous operation to capture images using the device camera application.  The operation allows the device user to capture multiple images in a single session.
 
-The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in CaptureImageOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
+The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in [CaptureImageOptions](captureImageOptions.html), has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation is finished, it will invoke the [CaptureCB](CaptureCB.html) callback with an array of [MediaFile](MediaFile.html) objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the [CaptureErrorCB](CaptureErrorCB.html) callback will be invoked with a [CaptureError](CaptureError.html) object with the [CaptureError](CaptureError.html).`CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -50,7 +52,7 @@ Windows Phone 7 Quirks
 Invoking the native camera application while your device is connected
 via Zune will not work, and the error callback will be triggered.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback
@@ -70,7 +72,7 @@ Quick Example
     // start image capture
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

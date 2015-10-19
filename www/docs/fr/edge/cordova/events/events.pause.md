@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: pause
 ---
 
 # pause
@@ -29,7 +31,7 @@ L'évènement se déclenche quand une application est mise en arrière-plan.
 
 L'évènement `pause` se déclenche lorsque la plate-forme native met l'application en arrière-plan, généralement lorsque l'utilisateur bascule vers une autre application.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

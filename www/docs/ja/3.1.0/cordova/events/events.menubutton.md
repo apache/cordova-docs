@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: メニュー ボタン
 ---
 
 # メニュー ボタン
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細
 
-イベント ハンドラーを適用する既定のメニューのボタンの動作をオーバーライドします。
+[イベント](events.html) ハンドラーを適用する既定のメニューのボタンの動作をオーバーライドします。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

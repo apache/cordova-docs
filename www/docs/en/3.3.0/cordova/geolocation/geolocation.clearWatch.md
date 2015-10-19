@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
@@ -32,7 +34,7 @@ Stop watching for changes to the device's location referenced by the
 ## Description
 
 The `geolocation.clearWatch` stops watching changes to the device's
-location by clearing the `geolocation.watchPosition` referenced by
+location by clearing the `[geolocation.watchPosition](geolocation.watchPosition.html)` referenced by
 `watchID`.
 
 ## Supported Platforms

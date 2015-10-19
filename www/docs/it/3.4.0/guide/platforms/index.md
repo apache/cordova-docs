@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Piattaforma guide
 ---
 
 # Piattaforma guide
@@ -24,59 +26,59 @@ Prima di sviluppare per una qualsiasi delle piattaforme elencate di seguito, ins
 
 Per sviluppare applicazioni di Cordova, è necessario installare il SDK per ogni piattaforma mobile che vi si rivolgono. Questa installazione è necessaria indipendentemente dal fatto se non la maggior parte del vostro lavoro in SDK o utilizzare la CLI per il ciclo di generazione.
 
-Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. Guide aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
+Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. [Guide](../../index.html) aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
 
 ## Amazon fuoco OS
 
-*   Amazon fuoco piattaforma OS guida
-*   Configurazione di fuoco OS Amazon
-*   Amazon fuoco OS visualizzazioni Web
-*   Amazon fuoco OS Plugins
+*   [Amazon fuoco piattaforma OS guida](amazonfireos/index.html)
+*   [Configurazione di fuoco OS Amazon](amazonfireos/config.html)
+*   [Amazon fuoco OS visualizzazioni Web](amazonfireos/webview.html)
+*   [Amazon fuoco OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-*   Guida piattaforma Android
-*   Android configurazione
-*   Visualizzazioni Web Android
-*   Plugin Android
-*   Android strumenti da riga di comando
-*   L'aggiornamento di Android
+*   [Guida piattaforma Android](android/index.html)
+*   [Android configurazione](android/config.html)
+*   [Visualizzazioni Web Android](android/webview.html)
+*   [Plugin Android](android/plugin.html)
+*   [Android strumenti da riga di comando](android/tools.html)
+*   [L'aggiornamento di Android](android/upgrading.html)
 
 ## BlackBerry 10
 
-*   Guida piattaforma blackBerry 10
-*   Configurazione di blackBerry 10
-*   BlackBerry 10 plugin
-*   Strumenti della riga di comando di blackBerry 10
-*   L'aggiornamento di BlackBerry 10
+*   [Guida piattaforma blackBerry](blackberry/index.html) 10
+*   [Configurazione di blackBerry](blackberry/config.html) 10
+*   [BlackBerry 10 plugin](blackberry10/plugin.html)
+*   [Strumenti della riga di comando di blackBerry](blackberry/tools.html) 10
+*   [L'aggiornamento di BlackBerry](blackberry/upgrading.html) 10
 
 ## iOS
 
-*   iOS guida piattaforma
-*   iOS Configuration
-*   iOS visualizzazioni Web
-*   iOS Plugins
-*   iOS Command-line Tools
-*   L'aggiornamento iOS
+*   [iOS guida piattaforma](ios/index.html)
+*   [iOS Configuration](ios/config.html)
+*   [iOS visualizzazioni Web](ios/webview.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS Command-line Tools](ios/tools.html)
+*   [L'aggiornamento iOS](ios/upgrading.html)
 
 ## Ubuntu
 
-*   Piattaforma ubuntu guida
+*   [Piattaforma ubuntu guida](ubuntu/index.html)
 
 ## Windows Phone
 
-*   Guida di Windows Phone 8 piattaforma
-*   Guida di piattaforma Windows Phone 7
+*   [Guida di Windows Phone 8 piattaforma](wp8/index.html)
+*   [Guida di piattaforma Windows Phone 7](wp7/index.html)
 *   Configurazione di Windows Phone
-*   Windows Phone strumenti da riga di comando
-*   L'aggiornamento di Windows Phone
+*   [Windows Phone strumenti da riga di comando](wp8/tools.html)
+*   [L'aggiornamento di Windows Phone](wp8/upgrading.html)
 
 ## Windows 8
 
-*   Windows 8 piattaforma guida
-*   Strumenti della riga di comando di Windows 8
-*   L'aggiornamento di Windows 8
+*   [Windows 8 piattaforma guida](win8/index.html)
+*   [Strumenti della riga di comando di Windows 8](win8/tools.html)
+*   [L'aggiornamento di Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Tizen piattaforma guida
+*   [Tizen piattaforma guida](tizen/index.html)

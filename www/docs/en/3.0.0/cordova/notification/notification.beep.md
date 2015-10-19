@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.beep
 ---
 
 notification.beep
@@ -36,13 +38,13 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

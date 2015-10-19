@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSetRowList
 ---
 
 # SQLResultSetRowList
 
-속성 중 하나는 `SQLResultSet` SQL 쿼리에서 반환 된 행을 포함 합니다.
+속성 중 하나는 `[SQLResultSet](../sqlresultset/sqlresultset.html)` SQL 쿼리에서 반환 된 행을 포함 합니다.
 
 ## 속성
 
@@ -32,7 +34,7 @@ license: >
 
 ## 세부 정보
 
-`SQLResultSetRowList`SQL에서 반환 된 데이터를 포함 `select` 문. 개체를 포함 한 `length` 속성 행을 나타내는 `select` 문 반환 합니다. 데이터의 행을 가져오려면 호출에 `item` 인덱스를 지정 하는 방법. 자바 스크립트를 반환 합니다 `Object` 속성은 데이터베이스 열에 `select` 문이 실행 되었습니다.
+`SQLResultSetRowList`SQL에서 반환 된 데이터를 포함 `select` 문. 개체를 포함 한 `length` 속성 행을 나타내는 `select` 문 반환 합니다. 데이터의 행을 가져오려면 호출에 `item` 인덱스를 지정 하는 방법. 자바 스크립트를 반환 합니다 `Object` 속성은 [데이터베이스](../database/database.html) 열에 `select` 문이 실행 되었습니다.
 
 ## 지원 되는 플랫폼
 

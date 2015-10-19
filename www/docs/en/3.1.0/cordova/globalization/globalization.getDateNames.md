@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -34,8 +36,8 @@ starting from either the first month in the year or the first day of
 the week, depending on the option selected.
 
 If there is an error obtaining the names, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 

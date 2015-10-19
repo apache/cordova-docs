@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: オフライン
 ---
 
 # オフライン
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細
 
-`offline`アプリケーションはもはや、インターネットにアクセスできるように、以前接続されたデバイスは、ネットワーク接続が失われたときに発生します。 接続 API と同じ情報に依存しており、場合に適用されます、 `connection.type` から変更 `NONE` 以外の値にします。
+`offline`アプリケーションはもはや、インターネットにアクセスできるように、以前接続されたデバイスは、ネットワーク接続が失われたときに発生します。 [接続](../connection/connection.html) API と同じ情報に依存しており、場合に適用されます、 `[connection.type](../connection/connection.type.html)` から変更 `NONE` 以外の値にします。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

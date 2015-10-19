@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 # window.open
 
-Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instancia actual del navegador o el navegador del sistema.
+Se abre una dirección URL en una nueva instancia de `[InAppBrowser](inappbrowser.html)`, la instancia actual del navegador o el navegador del sistema.
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**: referencia a la `InAppBrowser` ventana. *(InAppBrowser)*
+*   **ref**: referencia a la `[InAppBrowser](inappbrowser.html)` ventana. *(InAppBrowser)*
 
 *   **URL**: el URL para cargar *(String)*. Llame a `encodeURI()` en este si la URL contiene caracteres Unicode.
 
@@ -35,7 +37,7 @@ Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instanci
     *   `_blank`: abre en el `InAppBrowser`.
     *   `_system`: se abre en el navegador del sistema.
 
-*   **options**: opciones para el `InAppBrowser`. Opcional, contumaz a: `location=yes`. *(String)*
+*   **options**: opciones para el `[InAppBrowser](inappbrowser.html)`. Opcional, contumaz a: `location=yes`. *(String)*
     
     La cadena de `options` no debe contener ningún espacio en blanco, y los pares de nombre y valor de cada característica deben estar separados por una coma. Los nombres de función son minúsculas. Todas las plataformas admiten el valor siguiente:
     

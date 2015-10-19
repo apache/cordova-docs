@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: L'interfaccia della riga di comando
 ---
 
 # L'interfaccia della riga di comando
@@ -110,8 +112,8 @@ Se lo si desidera, è possibile utilizzare un SDK a questo punto aprire il proge
 
 ## Costruire l'App
 
-Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da `www/js/index.js` . <!-- XREF
-(See the Application Development Guide for details.)
+Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `[deviceready](../../cordova/events/events.deviceready.html)` gestore di eventi, a cui fa riferimento predefinito da `www/js/index.js` . <!-- XREF
+(See the Application Development [Guide](../../index.html) for details.)
 XREF -->
 
 Eseguire il comando seguente per costruire in modo iterativo del progetto:
@@ -171,13 +173,13 @@ Il `cordova plugin add` comando richiede di specificare il repository per il cod
         $ cordova plugin add org.apache.cordova.device
         
 
-*   Connessione di rete e batteria eventi:
+*   [Connessione](../../cordova/connection/connection.html) di rete e batteria eventi:
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
         
 
-*   Accelerometro, bussola e geolocalizzazione:
+*   [Accelerometro](../../cordova/accelerometer/accelerometer.html), bussola e geolocalizzazione:
     
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
@@ -191,29 +193,29 @@ Il `cordova plugin add` comando richiede di specificare il repository per il cod
         $ cordova plugin add org.apache.cordova.media
             
 
-*   Accedere ai file sul dispositivo o rete (File API):
+*   Accedere ai file sul dispositivo o rete ([File](../../cordova/file/fileobj/fileobj.html) API):
     
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   Notifica tramite la finestra di dialogo o vibrazione:
+*   [Notifica](../../cordova/notification/notification.html) tramite la finestra di dialogo o vibrazione:
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   Contatti:
+*   [Contatti](../../cordova/contacts/contacts.html):
     
         $ cordova plugin add org.apache.cordova.contacts
         
 
-*   Globalizzazione:
+*   [Globalizzazione](../../cordova/globalization/globalization.html):
     
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   Splashscreen:
+*   [Splashscreen](../../cordova/splashscreen/splashscreen.html):
     
         $ cordova plugin add org.apache.cordova.splashscreen
         

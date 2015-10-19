@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 # globalization.numberToString
@@ -29,7 +31,7 @@ Restituisce un numero formattato come una stringa secondo le preferenze dell'ute
 
 Restituisce la stringa formattata numero per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `String` valore.
 
-Se c'è un errore di formattazione del numero, poi il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
+Se c'è un errore di formattazione del numero, poi il `errorCallback` viene eseguito con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Il `options` parametro è facoltativo e valori predefiniti sono:
 

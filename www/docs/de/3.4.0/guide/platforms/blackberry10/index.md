@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch für die Plattform von BlackBerry 10
 ---
 
 # Handbuch für die Plattform von BlackBerry 10
 
-Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 Geräte aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im Handbuch der BlackBerry-Plattform zu verwenden.
+Diese Anleitung zeigt wie Sie die Entwicklungsumgebung zum Erstellen und Bereitstellen von Cordova apps für BlackBerry 10 Geräte aufsetzen. Für frühere Versionen von BlackBerry müssen Sie einen anderen Satz von Befehlszeilentools, beschrieben im [Handbuch der BlackBerry-Plattform](../blackberry/index.html) zu verwenden.
 
 ## Anforderungen
 

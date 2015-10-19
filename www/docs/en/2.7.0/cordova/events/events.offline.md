@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: offline
 ---
 
 offline
@@ -30,7 +32,7 @@ Details
 
 When the application's network connection changes to being offline, the offline event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -42,7 +44,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("offline", onOffline, false);
@@ -51,7 +53,7 @@ Quick Example
         // Handle the offline event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

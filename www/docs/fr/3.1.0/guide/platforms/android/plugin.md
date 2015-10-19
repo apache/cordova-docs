@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugins Android
 ---
 
 # Plugins Android
 
 Écriture d'un plugin nécessite une compréhension de l'architecture de Cordova-Android. Cordova-Android se compose d'une WebView Android avec crochets attachés à elle. Ces plugins sont représentés comme des mappages de classe dans le `config.xml` fichier.
 
-Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe. Un plugin doit substituer un de le `execute` méthodes de `CordovaPlugin` . Meilleure pratique, le plugin devrait gérer `pause` et `resume` des événements et tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
+Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe. Un plugin doit substituer un de le `execute` méthodes de `CordovaPlugin` . Meilleure pratique, le plugin devrait gérer `[pause](../../../cordova/events/events.pause.html)` et `[resume](../../../cordova/events/events.resume.html)` des événements et tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
 
 ## Classe plugin cartographie
 

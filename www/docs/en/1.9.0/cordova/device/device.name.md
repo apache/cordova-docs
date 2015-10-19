@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.name
 ---
 
 device.name
@@ -40,7 +42,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -50,7 +52,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

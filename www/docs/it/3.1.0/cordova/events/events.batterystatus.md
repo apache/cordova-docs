@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 # batterystatus
@@ -35,7 +37,7 @@ Il gestore di stato della batteria viene passato un oggetto che contiene due pro
 
 *   **isPlugged**: un valore booleano che indica se il dispositivo è collegato poll *(Boolean)*
 
-Applicazioni in genere è necessario utilizzare `window.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `window.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 

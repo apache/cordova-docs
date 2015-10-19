@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.seekTo
 ---
 
 # media.seekTo
@@ -31,7 +33,7 @@ Imposta la posizione corrente all'interno di un file audio.
 
 ## Descrizione
 
-Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di riproduzione corrente all'interno di un file audio a cui fa riferimento un `Media` oggetto. Aggiorna anche il `Media` dell'oggetto `position` parametro.
+Il `media.seekTo` viene eseguito in modo asincrono, aggiornando la posizione di riproduzione corrente all'interno di un file audio a cui fa riferimento un `[Media](media.html)` oggetto. Aggiorna anche il `[Media](media.html)` dell'oggetto `position` parametro.
 
 ## Piattaforme supportate
 

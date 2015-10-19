@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileError
 ---
 
 # FileError
 
-Un objet `FileError` est défini lorsqu'une erreur se produit dans l'une des méthodes de l'API File.
+Un objet `FileError` est défini lorsqu'une erreur se produit dans l'une des méthodes de l'API [File](../fileobj/fileobj.html).
 
 ## Propriétés
 
@@ -43,4 +45,4 @@ Un objet `FileError` est défini lorsqu'une erreur se produit dans l'une des mé
 
 ## Description
 
-L'objet `FileError` est le seul paramètre fourni à l'un des callbacks d'erreur de l'API File. Pour déterminer le type d'erreur, comparer sa propriété `code` à l'une des propriétés listées ci-dessus.
+L'objet `FileError` est le seul paramètre fourni à l'un des callbacks d'erreur de l'API [File](../fileobj/fileobj.html). Pour déterminer le type d'erreur, comparer sa propriété `code` à l'une des propriétés listées ci-dessus.

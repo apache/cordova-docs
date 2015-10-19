@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Présentation
 ---
 
 # Présentation
@@ -70,6 +72,6 @@ L'installation de Cordova diffèrera selon le flux de travail ci-dessus que vous
 
 *   Flux de travail multi-plateforme : Voir l'Interface de ligne de commande.
 
-*   Flux de travail axée sur la plate-forme : consultez les Guides de la plate-forme.
+*   Flux de travail axée sur la plate-forme : consultez les [Guides de la plate-forme](../platforms/index.html).
 
-Après l'installation de Cordova, il est recommandé de consulter les Guides de la plate-forme pour les plates-formes mobiles qui vous mettra au point pour. Il est également recommandé que vous examiniez également le Guide de la vie privée, sécurité Guide et prochaines étapes. Pour la configuration de Cordova, consultez le fichier config.xml File. Pour accéder à une fonction native sur un périphérique de JavaScript, consultez le Plugin APIs. Et consulter les autres guides inclus tel qu'il est nécessaire.
+Après l'installation de Cordova, il est recommandé de consulter les [Guides de la plate-forme](../platforms/index.html) pour les plates-formes mobiles qui vous mettra au point pour. Il est également recommandé que vous examiniez également le [Guide de la vie privée](../appdev/privacy/index.html), sécurité Guide et prochaines étapes. Pour la configuration de Cordova, consultez le fichier config.xml File. Pour accéder à une fonction native sur un périphérique de JavaScript, consultez le Plugin APIs. Et consulter les autres guides inclus tel qu'il est nécessaire.

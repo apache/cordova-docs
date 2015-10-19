@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 # contactFindOptions
 
-선택적 매개 변수는 `contacts.find` 메서드, 연락처 데이터베이스에서 반환 된 연락처를 필터링 하는 데 사용 합니다.
+선택적 매개 변수는 `[contacts.find](../contacts.find.html)` 메서드, [연락처](../contacts.html) 데이터베이스에서 반환 된 연락처를 필터링 하는 데 사용 합니다.
 
     {필터: "", 여러: true};
     

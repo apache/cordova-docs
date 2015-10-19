@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileWriter
 ---
 
 FileWriter
@@ -61,7 +63,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Seek Quick Example
+Seek Quick [Example](../../storage/storage.opendatabase.html)
 ------------------------------
 
 	function win(writer) {
@@ -75,7 +77,7 @@ Seek Quick Example
 	
     entry.createWriter(win, fail);
 
-Truncate Quick Example
+Truncate Quick [Example](../../storage/storage.opendatabase.html)
 --------------------------
 
 	function win(writer) {
@@ -88,7 +90,7 @@ Truncate Quick Example
 	
     entry.createWriter(win, fail);
 
-Write Quick Example
+Write Quick [Example](../../storage/storage.opendatabase.html)
 -------------------	
 
 	function win(writer) {
@@ -104,7 +106,7 @@ Write Quick Example
 	
     entry.createWriter(win, fail);
 
-Append Quick Example
+Append Quick [Example](../../storage/storage.opendatabase.html)
 --------------------	
 
 	function win(writer) {
@@ -121,7 +123,7 @@ Append Quick Example
 	
     entry.createWriter(win, fail);
 	
-Abort Quick Example
+Abort Quick [Example](../../storage/storage.opendatabase.html)
 -------------------
 
 	function win(writer) {
@@ -138,7 +140,7 @@ Abort Quick Example
 	
     entry.createWriter(win, fail);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
     <!DOCTYPE html>
     <html>

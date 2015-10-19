@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 暫停
 ---
 
 # 暫停
@@ -29,7 +31,7 @@ license: >
 
 `pause`當本機平臺放入背景，應用程式通常在使用者切換到不同的應用程式時激發的事件。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

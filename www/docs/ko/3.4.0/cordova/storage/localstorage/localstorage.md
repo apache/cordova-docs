@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 # localStorage
 
-W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
+W3C의 [웹 [스토리지](../storage.html) 인터페이스][1] 에 액세스를 제공 합니다.
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,7 +44,7 @@ W3C의 [웹 스토리지 인터페이스][1] 에 액세스를 제공 합니다.
 
 ## 세부 정보
 
-`window.localStorage`인터페이스는 W3C의 [웹 스토리지 인터페이스][2]를 구현 합니다. 애플 리 케이 션 키-값 쌍을 사용 하 여 영구 데이터를 저장 하는 데 사용할 수 있습니다. `window.sessionStorage`인터페이스는 모든 데이터는 응용 프로그램 종료 때마다 지워집니다 제외 하 고 모든 면에서 동일한 방식으로 작동 합니다. 각 데이터베이스는 별도 네임 스페이스를 제공합니다.
+`window.localStorage`인터페이스는 W3C의 [웹 [스토리지](../storage.html) 인터페이스][2]를 구현 합니다. 애플 리 케이 션 키-값 쌍을 사용 하 여 영구 데이터를 저장 하는 데 사용할 수 있습니다. `window.sessionStorage`인터페이스는 모든 데이터는 응용 프로그램 종료 때마다 지워집니다 제외 하 고 모든 면에서 동일한 방식으로 작동 합니다. 각 데이터베이스는 별도 네임 스페이스를 제공합니다.
 
  [2]: http://dev.w3.org/html5/webstorage/
 

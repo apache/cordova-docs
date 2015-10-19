@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.startRecord
 ---
 
 # media.startRecord
 
-오디오 파일 녹음을 시작 합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 녹음을 시작 합니다.
 
     media.startRecord();
     
@@ -130,17 +132,17 @@ license: >
 
 ## 안 드 로이드 단점
 
-*   안 드 로이드 장치 적응 다중 속도 형식에서 오디오를 기록합니다. 지정 된 파일 *.amr* 확장명으로 끝나야 합니다.
+*   안 드 로이드 [장치](../device/device.html) 적응 다중 속도 형식에서 오디오를 기록합니다. 지정 된 [파일](../file/fileobj/fileobj.html) *.amr* 확장명으로 끝나야 합니다.
 
 ## 블랙베리 WebWorks 단점
 
-*   검은 딸기 장치 적응 다중 속도 형식에서 오디오를 기록합니다. 지정 된 파일 *.amr* 확장명으로 끝나야 합니다.
+*   검은 딸기 [장치](../device/device.html) 적응 다중 속도 형식에서 오디오를 기록합니다. 지정 된 [파일](../file/fileobj/fileobj.html) *.amr* 확장명으로 끝나야 합니다.
 
 ## iOS 단점
 
-*   iOS만 레코드 형식을 *.wav* 및 반환 오류 경우 파일 이름 확장명의 파일을 수정 하지.
+*   iOS만 레코드 형식을 *.wav* 및 반환 오류 경우 [파일](../file/fileobj/fileobj.html) 이름 확장명의 파일을 수정 하지.
 
-*   전체 경로 제공 하지 않으면 응용 프로그램의 기록 배치 됩니다 `documents/tmp` 디렉터리. 이 통해 액세스할 수 있는 `File` API를 사용 하 여 `LocalFileSystem.TEMPORARY` . 기록 시간에 지정 된 하위 디렉터리에 이미 존재 해야 합니다.
+*   전체 경로 제공 하지 않으면 응용 프로그램의 기록 배치 됩니다 `documents/tmp` 디렉터리. 이 통해 액세스할 수 있는 `File` API를 사용 하 여 `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` . 기록 시간에 지정 된 하위 디렉터리에 이미 존재 해야 합니다.
 
 *   파일을 기록 하 고 재생할 수 있습니다 문서 URI를 사용 하 여 다시:
     

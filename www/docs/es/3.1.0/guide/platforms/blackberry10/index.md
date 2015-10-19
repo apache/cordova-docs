@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de la plataforma BlackBerry 10
 ---
 
 # Guía de la plataforma BlackBerry 10
@@ -36,7 +38,7 @@ El SDK nativo de BlackBerry está disponible en [developer.blackberry.com][1]. D
 
 En Windows:
 
-*   Ir a **mis Variables de entorno informático → propiedades → avanzada →**.
+*   Ir a **mis [Variables](../../../plugin_ref/spec.html) de entorno informático → propiedades → avanzada →**.
 
 *   Anexar el directorio de instalación del SDK nativo a la ruta, por ejemplo:
     

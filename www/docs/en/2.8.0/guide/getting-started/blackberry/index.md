@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with BlackBerry
 ---
 
 Getting Started with BlackBerry
@@ -143,7 +145,7 @@ Answer 'n' when prompted "Do you have a BlackBerry device connected to your comp
 The application will be installed to the home screen of the simulator. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
 
-7B.  Deploy to Device (Windows and Mac)
+7B.  Deploy to [Device](../../../cordova/device/device.html) (Windows and Mac)
 --------------------------------------
 
 To deploy your app to a device you must have registered for, and setup BlackBerry Code Signing Keys.  See section 3 for details. Also, to deploy apps on BlackBerry 10 or PlayBook, the device must be set to Development Mode which can be enabled from the Settings > Security menu.

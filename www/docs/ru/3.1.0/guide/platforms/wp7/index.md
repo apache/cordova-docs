@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по платформы Windows Phone 7
 ---
 
 # Руководство по платформы Windows Phone 7
@@ -24,9 +26,9 @@ license: >
 
 Смотрите ниже для более подробной информации конкретной платформы, которая применяется для обеих версий:
 
-*   Обновление Windows Phone
-*   Windows Phone плагины
-*   Windows Phone средств командной строки
+*   [Обновление Windows Phone](../wp8/upgrading.html)
+*   [Windows Phone плагины](../wp8/plugin.html)
+*   [Windows Phone средств командной строки](../wp8/tools.html)
 
 Средства командной строки относятся к версии до Cordova 3.0. Сведения о текущем интерфейсе см интерфейс командной строки.
 

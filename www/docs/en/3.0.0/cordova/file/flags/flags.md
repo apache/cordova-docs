@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Flags
 ---
 
 Flags
 =====
 
-Supplies arguments to the `DirectoryEntry` object's `getFile()` and
+Supplies arguments to the `[DirectoryEntry](../directoryentry/directoryentry.html)` object's `getFile()` and
 `getDirectory()` methods, which look up or create files and
 directories, respectively.
 
@@ -41,7 +43,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // Get the data directory, creating it if it doesn't exist.

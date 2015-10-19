@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: InAppBrowser
 ---
 
 # InAppBrowser
 
-> `InAppBrowser`Зовет представление веб-браузера, который отображает при `window.open()` , или когда открытие ссылки формируется как`<a target="_blank">`.
+> `InAppBrowser`Зовет представление веб-браузера, который отображает при `[window.open](window.open.html)()` , или когда открытие ссылки формируется как`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -29,7 +31,7 @@ license: >
 
 ## Описание
 
-Объект, возвращаемый из вызова`window.open`.
+Объект, возвращаемый из вызова`[window.open](window.open.html)`.
 
 ## Методы
 

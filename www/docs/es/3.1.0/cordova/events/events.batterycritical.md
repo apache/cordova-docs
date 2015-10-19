@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterycritical
 ---
 
 # batterycritical
@@ -35,7 +37,7 @@ El controlador `batterycritical` se pasa un objeto que contiene dos propiedades:
 
 *   **isPlugged**: un valor booleano que indica si el dispositivo está conectado pulg *(Boolean)*
 
-Las aplicaciones normalmente deben utilizar `window.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `window.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 

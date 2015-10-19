@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: searchbutton
 ---
 
 # searchbutton
@@ -29,7 +31,7 @@ license: >
 
 如果您需要重寫預設的搜尋按鈕行為在 android 系統上您可以註冊為 'searchbutton' 事件一個事件攔截器。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

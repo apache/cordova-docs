@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 # window.open
 
-Öffnet eine URL in einem neuen `InAppBrowser` Instanz, die aktuelle Browserinstanz oder der Systembrowser.
+Öffnet eine URL in einem neuen `[InAppBrowser](inappbrowser.html)` Instanz, die aktuelle Browserinstanz oder der Systembrowser.
 
     var ref = window.open(url, target, options);
     
 
-*   **Ref**: Bezugnahme auf die `InAppBrowser` Fenster. *(InAppBrowser)*
+*   **Ref**: Bezugnahme auf die `[InAppBrowser](inappbrowser.html)` Fenster. *(InAppBrowser)*
 
 *   **URL**: die URL *(String)*zu laden. Rufen Sie `encodeURI()` auf diese Option, wenn die URL enthält Unicode-Zeichen.
 
@@ -35,7 +37,7 @@ license: >
     *   `_blank`: Öffnet den`InAppBrowser`.
     *   `_system`: Öffnet in den System-Web-Browser.
 
-*   **Optionen**: Optionen für die `InAppBrowser` . Optional, säumige an: `location=yes` . *(String)*
+*   **Optionen**: Optionen für die `[InAppBrowser](inappbrowser.html)` . Optional, säumige an: `location=yes` . *(String)*
     
     Die `options` Zeichenfolge muss keine Leerstelle enthalten, und jede Funktion Name/Wert-Paare müssen durch ein Komma getrennt werden. Featurenamen Groß-/Kleinschreibung. Alle Plattformen unterstützen die anderen Werte:
     

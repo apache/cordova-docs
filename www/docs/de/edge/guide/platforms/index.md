@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plattform-Guides
 ---
 
 # Plattform-Guides
@@ -28,58 +30,58 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 ## Amazon Fire OS
 
-*   Handbuch für die OS-Plattform von Amazon-Feuer
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   [Handbuch für die OS-Plattform von Amazon-Feuer](amazonfireos/index.html)
+*   [Amazon Fire OS Konfiguration](amazonfireos/config.html)
+*   [Amazon Fire OS Webansichten für](amazonfireos/webview.html)
+*   [Amazon Fire OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-*   Android-Plattform-Guide
-*   Android Shell Tool Guide
-*   Android Konfiguration
-*   Android Plugins
-*   Android Webansichten für
-*   Aktualisierung von Android
+*   [Android-Plattform-Guide](android/index.html)
+*   [Android Shell Tool Guide](android/tools.html)
+*   [Android Konfiguration](android/config.html)
+*   [Android Plugins](android/plugin.html)
+*   [Android Webansichten für](android/webview.html)
+*   [Aktualisierung von Android](android/upgrading.html)
 
 ## BlackBerry 10
 
-*   Handbuch für die Plattform von BlackBerry 10
-*   BlackBerry 10 Shell Tool Guide
-*   BlackBerry 10 Konfiguration
-*   BlackBerry 10 Plugins
-*   Aktualisieren der BlackBerry 10
+*   [Handbuch für die Plattform von BlackBerry 10](blackberry10/index.html)
+*   [BlackBerry 10 Shell Tool Guide](blackberry10/tools.html)
+*   [BlackBerry 10 Konfiguration](blackberry10/config.html)
+*   [BlackBerry 10 Plugins](blackberry10/plugin.html)
+*   [Aktualisieren der BlackBerry](blackberry/upgrading.html) 10
 
 ## Firefox OS
 
-*   Firefox-OS-Plattform-Guide
+*   [Firefox-OS-Plattform-Guide](firefoxos/index.html)
 
 ## iOS
 
-*   iOS Platform Guide
-*   iOS Shell Tool Guide
-*   iOS Konfiguration
-*   iOS Plugins
-*   iOS Webansichten für
-*   IOS Upgrade
+*   [iOS Platform Guide](ios/index.html)
+*   [iOS Shell Tool Guide](ios/tools.html)
+*   [iOS Konfiguration](ios/config.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS Webansichten für](ios/webview.html)
+*   [IOS Upgrade](ios/upgrading.html)
 
 ## Ubuntu
 
-*   Handbuch Ubuntu Plattform
+*   [Handbuch Ubuntu Plattform](ubuntu/index.html)
 
 ## Windows Phone 8
 
-*   Handbuch für die Plattform von Windows Phone-8
-*   Windows Phone 8 Plugins
-*   Aktualisieren von Windows Phone 8
+*   [Handbuch für die Plattform von Windows Phone-8](wp8/index.html)
+*   [Windows Phone 8 Plugins](wp8/plugin.html)
+*   [Aktualisieren von Windows Phone](wp8/upgrading.html) 8
 
 ## Windows
 
-*   Anleitung zur Windows Platform
-*   Windows Plugins
-*   Windows-Verpackungen
-*   Aktualisieren von Windows 8
+*   [Anleitung zur Windows Platform](win8/index.html)
+*   [Windows Plugins](win8/plugin.html)
+*   [Windows-Verpackungen](win8/packaging.html)
+*   [Aktualisieren von Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Tizen Plattform Guide
+*   [Tizen Plattform Guide](tizen/index.html)

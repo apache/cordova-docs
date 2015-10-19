@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: mediaError
 ---
 
 mediaError
@@ -30,4 +32,4 @@ A user specified callback function that is invoked when there is an error in med
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`MediaError`)
+- __error:__ The error returned by the device. (`[MediaError](../MediaError/mediaError.html)`)

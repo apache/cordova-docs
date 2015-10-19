@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDatePattern
 ---
 
 # globalization.getDatePattern
@@ -37,7 +39,7 @@ license: >
 
 *   **dst_offset**: текущее смещение на летнее время в секундах между клиента не-летнее время часовой пояс и летнее клиента сохранение в часовой пояс. *(Число)*
 
-Если есть ошибка получения шаблона, `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PATTERN\_ERROR`.
+Если есть ошибка получения шаблона, `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`Параметр является необязательным и по умолчанию имеет следующие значения:
 

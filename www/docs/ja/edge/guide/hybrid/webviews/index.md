@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 埋め込み web 表示
 ---
 
 # 埋め込み web 表示
@@ -24,7 +26,7 @@ Cordova アプリ通常ネイティブ モバイル プラットフォーム内�
 
 WebView を展開するには、各ネイティブ プログラミング環境に精通する必要があります。サポートされているプラットフォームの説明を次に示します。
 
-*   アマゾン火 OS web 表示
-*   Android の web 表示
-*   iOS の web 表示
-*   Windows Phone 8.0 web 表示
+*   [アマゾン火 OS web 表示](../../platforms/amazonfireos/webview.html)
+*   [Android の web 表示](../../platforms/android/webview.html)
+*   [iOS の web 表示](../../platforms/ios/webview.html)
+*   [Windows Phone 8.0 web 表示](../../platforms/wp8/webview.html)

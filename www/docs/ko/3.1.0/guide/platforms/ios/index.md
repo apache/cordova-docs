@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 플랫폼 가이드
 ---
 
 # iOS 플랫폼 가이드
 
 이 가이드에는 코르도바 애플 리 케이 션 아이폰과 iPad와 같은 iOS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   iOS 구성
-*   IOS 업그레이드
-*   iOS WebViews
-*   iOS 플러그인
-*   iOS 명령줄 도구
+*   [iOS 구성](config.html)
+*   [IOS 업그레이드](upgrading.html)
+*   [iOS WebViews](webview.html)
+*   [iOS 플러그인](plugin.html)
+*   [iOS 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
@@ -34,7 +36,7 @@ license: >
 
 애플 ® 도구 인텔 기반 맥에 OS X 운영 체제 에서만 실행 iOS 응용 프로그램을 빌드하는 데 필요한. Xcode ® 4.5 (최소 필수 버전) 실행 OS X 10.7 (사자) 버전에만 이상, iOS 6 포함 SDK (소프트웨어 개발 키트). 제출 애플 리 케이 션 애플 애플 리 케이 션 Store℠ 최신 버전을의 Apple 도구를 필요 합니다.
 
-설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 장치 기능을 테스트 하는 실제 장치를 해야 합니다. 장치 해야 합니다 iOS 5.x 설치, 코르도바 2.3 기준 지원 최소 iOS 버전. 지원 장치 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 가이드는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
+설치 된 SDK와 Xcode, iOS iOS 에뮬레이터를 사용 하 여 코르도바 기능의 대부분을 테스트할 수 있습니다 하지만 완전히 App 스토어에 제출 하기 전에 모든 응용 프로그램의 [장치](../../../cordova/device/device.html) 기능을 테스트 하는 실제 장치를 해야 합니다. [장치](../../../cordova/device/device.html) 해야 합니다 iOS 5.x 설치, 코르도바 2.3 기준 지원 최소 iOS 버전. 지원 [장치](../../../cordova/device/device.html) 등 모든 iPad ® 모델, 아이폰 ® 3GS 이상, 아이팟 ® 터치 3 세대 이상. 장치에 애플 리 케이 션을 설치 하려면 애플의 [iOS 개발자 프로그램][1], 연간 $99를 요하는 회원도 여야 합니다. 이 가이드는 당신이 개발자 프로그램에 등록 하지 않아도 iOS 에뮬레이터에 애플 리 케이 션을 배포 하는 방법을 보여 줍니다.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -61,7 +63,7 @@ Xcode 설치 되 면 여러 명령줄 도구 실행 코르도바를 사용 하�
         $ cordova prepare              # or "cordova build"
     
 
-일단 창조 해, Xcode 내에서 그것을 열 수 있습니다. 열려면 두 번 클릭 합니다 `hello/platforms/ios/hello.xcodeproj` 파일. 스크린은 다음과 같이 한다:
+일단 창조 해, Xcode 내에서 그것을 열 수 있습니다. 열려면 두 번 클릭 합니다 `hello/platforms/ios/hello.xcodeproj` [파일](../../../cordova/file/fileobj/fileobj.html). 스크린은 다음과 같이 한다:
 
 ![][4]
 
@@ -69,7 +71,7 @@ Xcode 설치 되 면 여러 명령줄 도구 실행 코르도바를 사용 하�
 
 ## 에뮬레이터에 배포
 
-IOS 에뮬레이터에서 응용 프로그램을 미리 보기:
+IOS 에뮬레이터에서 응용 프로그램을 미리 [보기](../../../cordova/inappbrowser/inappbrowser.html):
 
 1.  *.Xcodeproj* 파일은 왼쪽된 패널에서 선택 되어 있는지 확인 합니다.
 
@@ -100,17 +102,17 @@ Xcode 용 에뮬레이터와 함께 번들로 제공 된 최신 버전의 iPhone
 
 2.  *구축 프로필* [iOS 구축 포탈][8]내에서 만듭니다. 사용 하 여 그것의 *개발 프로비저닝 어시스턴트* 를 만들고 프로필 설치 및 인증서 Xcode 필요 합니다.
 
-3.  프로젝트 설정에서 *코드 서명* 섹션의 *코드 서명 Id* 프로비저닝 프로 파일 이름으로 설정 되어 있는지 확인 합니다.
+3.  프로젝트 설정에서 *코드 서명* 섹션의 *코드 서명 Id* 프로비저닝 프로 [파일](../../../cordova/file/fileobj/fileobj.html) 이름으로 설정 되어 있는지 확인 합니다.
 
  [8]: https://developer.apple.com/ios/manage/overview/index.action
 
 장치에 배포:
 
-1.  USB 케이블을 사용 하 여 mac에 장치를 연결
+1.  USB 케이블을 사용 하 여 mac에 장치를 [연결](../../../cordova/connection/connection.html)
 
 2.  Xcode 창 **구성표** 드롭다운 목록에서 프로젝트의 이름을 선택 합니다.
 
-3.  **장치** 목록에서 장치를 선택 합니다. USB를 통해 연결 되어 있지만 여전히 표시 되지 않습니다, 모든 오류를 해결 하려면 **구성** 단추를 누릅니다.
+3.  **장치** 목록에서 장치를 선택 합니다. USB를 통해 [연결](../../../cordova/connection/connection.html) 되어 있지만 여전히 표시 되지 않습니다, 모든 오류를 해결 하려면 **구성** 단추를 누릅니다.
 
 4.  빌드, 배포 및 귀하의 장치에 응용 프로그램을 실행 하려면 **실행** 단추를 누릅니다.
 
@@ -156,7 +158,7 @@ Xcode의에 대 한 경고는 `invokeString` 메서드 사용자 지정 URL에�
 
 *   [개발 시작 iOS 애플 리 케이 션 오늘][10] iOS 애플 리 케이 션을 개발 하기 위한 단계에 대 한 빠른 개요를 제공 합니다.
 
-*   [회원 센터 홈 페이지][11] 기술 리소스, 프로 비 저 닝 포털, 배포 가이드 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
+*   [회원 센터 홈 페이지][11] 기술 리소스, 프로 비 저 닝 포털, 배포 [가이드](../../../index.html) 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
 
 *   [IOS 용 도구 워크플로 가이드][7]
 

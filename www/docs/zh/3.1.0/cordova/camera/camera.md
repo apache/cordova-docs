@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 相機
 ---
 
 # 相機
@@ -26,8 +28,8 @@ license: >
 
 ## 方法
 
-*   camera.getPicture
-*   camera.cleanup
+*   [camera.getPicture](camera.getPicture.html)
+*   [camera.cleanup](camera.cleanup.html)
 
 ## 訪問功能
 

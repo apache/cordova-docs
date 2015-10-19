@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings for BlackBerry
 ---
 
-Project Settings for BlackBerry 
+[Project Settings](../index.html) for BlackBerry 
 ===================================
 
 BlackBerry has full support for the [W3C Widget Specfication](http://www.w3.org/TR/widgets/) as well as proprietary RIM extensions. Please see the full [BlackBerry WebWorks documentation regarding config.xml](https://developer.blackberry.com/html5/documentation/working_with_config_xml_file_1866970_11.html) for details. 

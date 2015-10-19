@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: コンパス
 ---
 
 # コンパス
@@ -24,18 +26,18 @@ license: >
 
 ## メソッド
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (古い形式)
-*   compass.clearWatchFilter (古い形式)
+*   [compass.getCurrentHeading](compass.getCurrentHeading.html)
+*   [compass.watchHeading](compass.watchHeading.html)
+*   [compass.clearWatch](compass.clearWatch.html)
+*   [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (古い形式)
+*   [compass.clearWatchFilter](compass.clearWatchFilter.html) (古い形式)
 
 ## 引数
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   [compassSuccess](parameters/compassSuccess.html)
+*   [compassError](parameters/compassError.html)
+*   [compassOptions](parameters/compassOptions.html)
+*   [compassHeading](parameters/compassHeading.html)
 
 ## 機能へのアクセス
 

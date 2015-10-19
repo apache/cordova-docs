@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationOptions
 ---
 
 # geolocationOptions
@@ -29,7 +31,7 @@ Parametri opzionali per personalizzare il recupero di geolocalizzazione`Position
 
 *   **enableHighAccuracy**: fornisce un suggerimento che l'applicazione ha bisogno i migliori risultati possibili. Per impostazione predefinita, il dispositivo tenta di recuperare un `Position` usando metodi basati sulla rete. Impostando questa proprietà su `true` indica al framework di utilizzare metodi più accurati, come posizionamento satellitare. *(Boolean)*
 
-*   **timeout**: la lunghezza massima di tempo (in millisecondi) che è consentito per passare dalla chiamata a `geolocation.getCurrentPosition` o `geolocation.watchPosition` fino a quando il corrispondente `geolocationSuccess` callback viene eseguito. Se il `geolocationSuccess` callback non viene richiamato entro questo tempo, il `geolocationError` callback viene passata una `PositionError.TIMEOUT` codice di errore. (Si noti che, quando utilizzato in combinazione con `geolocation.watchPosition` , il `geolocationError` callback potrebbe essere chiamato un intervallo ogni `timeout` millisecondi!) *(Numero)*
+*   **timeout**: la lunghezza massima di tempo (in millisecondi) che è consentito per passare dalla chiamata a `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` o `[geolocation.watchPosition](../geolocation.watchPosition.html)` fino a quando il corrispondente `[geolocationSuccess](geolocationSuccess.html)` callback viene eseguito. Se il `[geolocationSuccess](geolocationSuccess.html)` callback non viene richiamato entro questo tempo, il `[geolocationError](geolocationError.html)` callback viene passata una `[PositionError](../PositionError/positionError.html).TIMEOUT` codice di errore. (Si noti che, quando utilizzato in combinazione con `[geolocation.watchPosition](../geolocation.watchPosition.html)` , il `[geolocationError](geolocationError.html)` callback potrebbe essere chiamato un intervallo ogni `timeout` millisecondi!) *(Numero)*
 
 *   **maximumAge**: accettare una posizione memorizzata nella cache in cui età è minore il tempo specificato in millisecondi. *(Numero)*
 

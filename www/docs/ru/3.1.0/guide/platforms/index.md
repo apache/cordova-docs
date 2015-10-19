@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по поддерживаемым платформам
 ---
 
 # Руководство по поддерживаемым платформам
@@ -28,50 +30,50 @@ license: >
 
 ## Android
 
-*   Платформа Android руководство
+*   [Платформа Android руководство](android/index.html)
 *   Андроид конфигурации
 *   Андроид WebViews
 *   Андроид плагины
-*   Android средства командной строки
-*   Обновление Android
+*   [Android средства командной строки](android/tools.html)
+*   [Обновление Android](android/upgrading.html)
 
 ## Ежевика
 
-*   Руководство по платформы ежевики
-*   BlackBerry конфигурации
+*   [Руководство по платформы ежевики](blackberry/index.html)
+*   [BlackBerry конфигурации](blackberry10/config.html)
 *   Средства командной строки ежевики
-*   Модернизация BlackBerry
+*   [Модернизация BlackBerry](blackberry10/upgrading.html)
 
 ## Ежевика 10
 
-*   Руководство по платформы ежевики 10
+*   [Руководство по платформы ежевики](blackberry/index.html) 10
 *   Конфигурации ежевики 10
 *   Ежевика 10 плагинов
 *   Ежевика 10 средства командной строки
 
 ## iOS
 
-*   iOS платформы Руководство
-*   iOS конфигурации
-*   iOS WebViews
+*   [iOS платформы](ios/index.html) Руководство
+*   [iOS конфигурации](ios/config.html)
+*   [iOS WebViews](ios/webview.html)
 *   iOS, плагины
-*   iOS утилиты командной строки
-*   Обновление iOS
+*   [iOS утилиты командной строки](ios/tools.html)
+*   [Обновление iOS](ios/upgrading.html)
 
 ## Windows Phone
 
-*   Руководство по платформы Windows Phone 8
-*   Руководство по платформы Windows Phone 7
+*   [Руководство по платформы Windows Phone 8](wp8/index.html)
+*   [Руководство по платформы Windows Phone 7](wp7/index.html)
 *   Конфигурация Windows Phone
-*   Windows Phone средств командной строки
-*   Обновление Windows Phone
+*   [Windows Phone средств командной строки](wp8/tools.html)
+*   [Обновление Windows Phone](wp8/upgrading.html)
 
 ## ОС Windows 8
 
-*   Руководство по Windows 8 платформы
-*   Средства командной строки Windows 8
-*   Обновление для Windows 8
+*   [Руководство по Windows 8 платформы](win8/index.html)
+*   [Средства командной строки Windows 8](win8/tools.html)
+*   [Обновление для Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Руководство по Tizen платформы
+*   [Руководство по Tizen платформы](tizen/index.html)

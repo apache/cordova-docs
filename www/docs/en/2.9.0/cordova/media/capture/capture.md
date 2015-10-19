@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Capture
 ---
 
 Capture
@@ -23,28 +25,28 @@ Capture
 
 > Provides access to the device's audio, image, and video capture capabilities.
 
-**Important privacy note:** Collection and use of images, video, or audio from the device's camera or microphone raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses such sensors and whether the data recorded is shared with any other parties.  In addition, if the app's use of the camera or microphone is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera or microphone (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing the camera or microphone.  For more information, please see the Privacy Guide.
+**Important privacy note:** Collection and use of images, video, or audio from the device's camera or microphone raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses such sensors and whether the data recorded is shared with any other parties.  In addition, if the app's use of the camera or microphone is not apparent in the user interface, you should provide a just-in-time notice prior to your app accessing the camera or microphone (if the device operating system doesn't do so already). That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  Note that some app marketplaces may require your app to provide just-in-time notice and obtain permission from the user prior to accessing the camera or microphone.  For more information, please see the [Privacy Guide](../../../guide/privacy/index.html).
 
 Objects
 -------
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
+- [CaptureAudioOptions](captureAudioOptions.html)
+- [CaptureImageOptions](captureImageOptions.html)
+- [CaptureVideoOptions](captureVideoOptions.html)
 - CaptureCallback
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- [CaptureErrorCB](CaptureErrorCB.html)
+- [ConfigurationData](ConfigurationData.html)
+- [MediaFile](MediaFile.html)
+- [MediaFileData](MediaFileData.html)
 
 Methods
 -------
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- [capture.captureAudio](captureAudio.html)
+- [capture.captureImage](captureImage.html)
+- [capture.captureVideo](captureVideo.html)
+- [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 Scope
 -----
@@ -65,9 +67,9 @@ Properties
 Methods
 -------
 
-- `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
-- `capture.captureImage`: Launch the device's camera application to take photos.
-- `capture.captureVideo`: Launch the device's video recorder application to record videos.
+- `[capture.captureAudio](captureAudio.html)`: Launch the device's audio recording application to record audio clips.
+- `[capture.captureImage](captureImage.html)`: Launch the device's camera application to take photos.
+- `[capture.captureVideo](captureVideo.html)`: Launch the device's video recorder application to record videos.
 
 Supported Platforms
 -------------------

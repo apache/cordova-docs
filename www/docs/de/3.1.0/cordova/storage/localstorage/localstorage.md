@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 # localStorage
@@ -30,7 +32,7 @@ Ermöglicht den Zugriff auf die W3C [Web-Speicherschnittstelle][1]
 
 ## Methoden
 
-*   **Schlüssel**: gibt den Namen des Schlüssels an der angegebenen Position zurück.
+*   **Schlüssel**: gibt den Namen des Schlüssels an der angegebenen [Position](../../geolocation/Position/position.html) zurück.
 
 *   **GetItem**: gibt das Element mit dem angegebenen Schlüssel identifiziert.
 
@@ -42,7 +44,7 @@ Ermöglicht den Zugriff auf die W3C [Web-Speicherschnittstelle][1]
 
 ## Informationen
 
-Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede Datenbank bietet einen separaten Namespace.
+Die `window.localStorage` -Schnittstelle implementiert die W3C [Web-Speicherschnittstelle][2]. Eine app kann damit um persistente Daten mithilfe von Schlüssel-Wert-Paaren zu speichern. Die `window.sessionStorage` Schnittstelle funktioniert genauso in jeder Hinsicht, es sei denn, dass alle Daten jedes Mal die app schließt deaktiviert ist. Jede [Datenbank](../database/database.html) bietet einen separaten Namespace.
 
  [2]: http://dev.w3.org/html5/webstorage/
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLError
 ---
 
 # SQLError
@@ -41,4 +43,4 @@ A `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt.
 
 ## Beschreibung
 
-Das `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt, wenn eine Datenbank zu manipulieren.
+Das `SQLError` Objekt wird ausgelöst, wenn ein Fehler auftritt, wenn eine [Datenbank](../database/database.html) zu manipulieren.

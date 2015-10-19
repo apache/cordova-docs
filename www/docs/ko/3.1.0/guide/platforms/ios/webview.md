@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS WebViews
 ---
 
 # iOS WebViews
@@ -32,7 +34,7 @@ license: >
 
 *   Xcode 4.5 이상
 
-*   `config.xml`(새로 만든된 iOS 프로젝트)에서 파일
+*   `config.xml`(새로 만든된 iOS 프로젝트)에서 [파일](../../../cordova/file/fileobj/fileobj.html)
 
 ## 칼은 Xcode 프로젝트 (CordovaLib 하위 프로젝트)에 추가
 
@@ -42,13 +44,13 @@ license: >
 
 3.  위의 다운로드 한 소스를 넣으면 디렉터리로 이동 Terminal.app을 사용 하 여.
 
-4.  복사는 `config.xml` 디스크에 프로젝트 디렉터리에 파일 (위의 필수 구성 요소 참조).
+4.  복사는 `config.xml` 디스크에 프로젝트 디렉터리에 [파일](../../../cordova/file/fileobj/fileobj.html) (위의 필수 구성 요소 참조).
 
-5.  끌어서 놓기는 `config.xml` Xcode 프로젝트 탐색기에 파일.
+5.  끌어서 놓기는 `config.xml` Xcode 프로젝트 탐색기에 [파일](../../../cordova/file/fileobj/fileobj.html).
 
 6.  **어떤 추가 된 폴더에 대 한 그룹 만들기** 라디오 단추를 선택 하 고 **완료** 를 누릅니다.
 
-7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 파일 (영구 디렉터리에서 위에 위치 하 고 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
+7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 [파일](../../../cordova/file/fileobj/fileobj.html) (영구 디렉터리에서 위에 [위치](../../../cordova/geolocation/Position/position.html) 하 고 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -77,7 +79,7 @@ license: >
 
 19. **+** 선택 버튼, 그리고 추가`libCordova.a`.
 
-20. **고유** **Xcode 환경 설정 → 위치 → 파생 데이터 → 고급...** Xcode 환경 설정.
+20. **고유** **Xcode 환경 설정 → [위치](../../../cordova/geolocation/Position/position.html) → 파생 데이터 → 고급...** Xcode 환경 설정.
 
 21. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, 당신의 **대상**을 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 

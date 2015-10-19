@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 contactSuccess
 ==============
 
-`contacts.find` メソッドの実行に成功した場合に呼び出される、 `Contact` 配列を提供するコールバック関数です。
+`[contacts.find](../contacts.find.html)` メソッドの実行に成功した場合に呼び出される、 `[Contact](../Contact/contact.html)` 配列を提供するコールバック関数です。
 
     function(contacts) {
         // 任意のコード
@@ -30,9 +32,9 @@ contactSuccess
 パラメーター
 ----------
 
-- __contacts:__ 検索の結果の連絡先配列 (`Contact`)
+- __contacts:__ 検索の結果の連絡先配列 (`[Contact](../Contact/contact.html)`)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     function contactSuccess(contacts) {

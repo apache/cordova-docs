@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 # contactFindOptions
 
-可選的參數， `contacts.find` 方法，用於篩選從連絡人資料庫返回的連絡人。
+可選的參數， `[contacts.find](../contacts.find.html)` 方法，用於篩選從連絡人資料庫返回的連絡人。
 
     {篩選器：""、 多個： true，} ；
     

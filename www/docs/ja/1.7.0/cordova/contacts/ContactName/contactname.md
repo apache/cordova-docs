@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactName
 ---
 
 ContactName
 ===========
 
-`Contact` オブジェクトの名前プロパティーを表します。
+`[Contact](../Contact/contact.html)` オブジェクトの名前プロパティーを表します。
 
 プロパティー
 ----------
@@ -46,7 +48,7 @@ ContactName
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {

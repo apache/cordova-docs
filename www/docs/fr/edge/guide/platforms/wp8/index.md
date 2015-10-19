@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de plateforme Windows Phone 8
 ---
 
 # Guide de plateforme Windows Phone 8
@@ -26,8 +28,8 @@ Il montre comment utiliser deux outils de shell Windows Phone spécifiques pour 
 
 Voir ce qui suit pour plus de détails spécifiques à la plate-forme Windows Phone :
 
-*   Windows Phone 8 Plugins
-*   La mise à niveau de Windows Phone 8
+*   [Windows Phone 8 Plugins](plugin.html)
+*   [La mise à niveau de Windows Phone 8](upgrade.html)
 
 Pour la plateforme Windows Phone 8, les Cordova WebView s'appuie sur Internet Explorer 10 comme son moteur de rendu, donc en pratique vous pouvez utiliser le débogueur puissant de IE10 pour tester n'importe quel contenu web qui n'est pas invoquer Cordova APIs. Le Blog des développeurs Windows Phone fournit des [indications utiles][1] sur comment soutenir IE10 avec les navigateurs WebKit comparables.
 

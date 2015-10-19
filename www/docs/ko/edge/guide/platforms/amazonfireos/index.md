@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 아마존 화재 OS 플랫폼 가이드
 ---
 
 # 아마존 화재 OS 플랫폼 가이드
@@ -24,9 +26,9 @@ license: >
 
 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   아마존 화재 운영 체제 구성
-*   아마존 화재 OS WebViews
-*   아마존 화재 OS 플러그인
+*   [아마존 화재 운영 체제 구성](config.html)
+*   [아마존 화재 OS WebViews](webview.html)
+*   [아마존 화재 OS 플러그인](plugin.html)
 
 ## 소개
 
@@ -41,7 +43,7 @@ license: >
 
 코르 도우 바 애플 리 케이 션을 개발 하는 아마존 화재 운영 체제에 대 한 다양 한 아마존 WebView SDK로 안 드 로이드 개발에 필요한 모든 것을 포함 한 지원 파일을 설치를 해야 합니다. 아래 목록에서 필요한 설치 확인:
 
-*   명령줄 인터페이스
+*   [명령줄 인터페이스](../../cli/index.html)
 *   [안 드 로이드 SDK][3]
 *   [아파치 개미][4]
 *   [아마존 WebView SDK][1]
@@ -116,7 +118,7 @@ Windows에서 경로 환경 수정:
 
 ## 아마존 화재 운영 체제에 대 한 새 프로젝트를 만들려면
 
-사용 된 `cordova` 에 코르도바는 명령줄 인터페이스 설명으로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에서:
+사용 된 `cordova` 에 코르도바는 [명령줄 인터페이스](../../cli/index.html) 설명으로 새로운 프로젝트를 설정 하는 유틸리티. 예를 들어 소스 코드 디렉토리에서:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -143,7 +145,7 @@ Windows에서 경로 환경 수정:
 
 ### 실행 플래그
 
-실행된 명령 코르도바 명령줄 인터페이스 문서에 지정 된 선택적 매개 변수를 허용, 불 OS 또한 추가 허용 `--debug` 원격 웹 디버깅에 대 한 크롬의 개발자 도구를 사용 하는 플래그.
+실행된 명령 코르도바 [명령줄 인터페이스](../../cli/index.html) 문서에 지정 된 선택적 매개 변수를 허용, 불 OS 또한 추가 허용 `--debug` 원격 웹 디버깅에 대 한 크롬의 개발자 도구를 사용 하는 플래그.
 
 개발자 도구를 사용 하려면을 입력 합니다.:
 

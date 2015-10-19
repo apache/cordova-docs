@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 globalization.getDateNames
@@ -30,7 +32,7 @@ Description
 
 It returns the array of names to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.
 
-If there is an error obtaining the names, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error obtaining the names, then the errorCB callback is invoked with a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR.
 
 `options.type` can be 'narrow', or 'wide'.
 `options.item` can be 'months', or 'days'.
@@ -46,7 +48,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to "month: January"
@@ -62,7 +64,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
     );
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

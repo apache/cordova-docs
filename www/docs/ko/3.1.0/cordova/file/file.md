@@ -16,35 +16,37 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 파일
 ---
 
 # 파일
 
-> 읽기, API 작성 하 고 [w3c 파일 api][1] 기반 파일 시스템 계층 구조 탐색.
+> 읽기, API 작성 하 고 [w3c [파일](fileobj/fileobj.html) api][1] 기반 [파일](fileobj/fileobj.html) 시스템 계층 구조 탐색.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## 개체
 
-*   DirectoryEntry
-*   DirectoryReader
-*   파일
-*   FileEntry
-*   FileError
-*   FileReader
-*   파일 시스템
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   플래그
-*   LocalFileSystem
-*   메타 데이터
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [파일](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [파일](fileobj/fileobj.html) 시스템
+*   [FileTransfer](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
+*   [플래그](flags/flags.html)
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
+*   [메타 데이터](metadata/metadata.html)
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin ls
@@ -52,7 +54,7 @@ license: >
         $ cordova plugin rm org.apache.cordova.file
     
 
-파일 전송 플러그인을 사용 하 여 추가 해야 합니다을 별도로.
+[파일](fileobj/fileobj.html) 전송 플러그인을 사용 하 여 추가 해야 합니다을 별도로.
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
@@ -105,4 +107,4 @@ license: >
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToDate
 ---
 
 globalization.stringToDate
@@ -53,8 +55,8 @@ The `options.formatLength` can be `short`, `medium`, `long`, or
 time`.
 
 If there is an error parsing the date string, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.PARSING\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -64,7 +66,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a
@@ -81,7 +83,7 @@ integer represents an array index.
         {selector: 'date'}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

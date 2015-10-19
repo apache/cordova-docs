@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Accelerometer
 ---
 
 # Accelerometer
@@ -24,19 +26,19 @@ license: >
 
 ## Methods
 
-- accelerometer.getCurrentAcceleration
-- accelerometer.watchAcceleration
-- accelerometer.clearWatch
+- [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+- [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+- [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## Arguments
 
-- accelerometerSuccess
-- accelerometerError
-- accelerometerOptions
+- [accelerometerSuccess](parameters/accelerometerSuccess.html)
+- [accelerometerError](parameters/accelerometerError.html)
+- [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## Objects (Read-Only)
 
-- Acceleration
+- [Acceleration](acceleration/acceleration.html)
 
 ## Accessing the Feature
 
@@ -90,4 +92,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 黑莓平臺指南
 ---
 
 # 黑莓平臺指南
 
 本指南介紹了如何設置用於目標應用程式的版本 10 之前的黑莓平臺 SDK 環境。 如果你想要的目標的最新版本，請參閱黑莓 10 平臺指南。 請參閱下列特定于平臺的詳細資訊：
 
-*   黑莓手機配置
-*   升級黑莓手機
-*   黑莓手機的外掛程式
-*   黑莓手機的命令列工具
+*   [黑莓手機配置](config.html)
+*   [升級黑莓手機](upgrading.html)
+*   [黑莓手機的外掛程式](plugin.html)
+*   [黑莓手機的命令列工具](tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Anhalten
 ---
 
 # Anhalten
@@ -29,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird
 
 Das `pause` -Ereignis wird ausgelöst, wenn die einheitlichen Plattform die Anwendung in den Hintergrund, in der Regel, setzt wenn der Benutzer zu einer anderen Anwendung wechselt.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -86,6 +88,6 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 In der `pause` Handler, keine Anrufe an die Cordova-API oder native Plugins, die Objective-C durchlaufen funktionieren nicht, zusammen mit interaktiven Aufrufe, z. B. Warnungen oder `console.log()` . Sie werden nur verarbeitet, wenn die app auf der nächsten laufen Schleife fortgesetzt wird.
 
-Die iOS-spezifische `resign` Ereignis ist verfügbar als Alternative zu `pause` , und erkennt, wenn Benutzer die **Lock** -Taste um das Gerät mit der app im Vordergrund ausgeführt zu sperren können. Wenn die app (und Gerät) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `pause` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
+Die iOS-spezifische `resign` Ereignis ist verfügbar als Alternative zu `pause` , und erkennt, wenn Benutzer die **Lock** -Taste um das [Gerät](../device/device.html) mit der app im Vordergrund ausgeführt zu sperren können. Wenn die app (und Gerät) für Multitasking aktiviert ist, ist dies gepaart mit einer anschließenden `pause` Ereignis, aber nur unter iOS 5. In der Tat werden alle gesperrten apps in iOS 5, die Multitasking aktiviert haben in den Hintergrund gedrängt. Für Anwendungen, die ausgeführt werden, wenn unter iOS 5 gesperrt, deaktivieren die app Multitasking, indem [UIApplicationExitsOnSuspend][1] auf `YES` . Um beim gesperrt auf iOS 4 auszuführen, spielt diese Einstellung keine Rolle.
 
  [1]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html

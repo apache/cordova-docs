@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometerSuccess
 ---
 
 accelerometerSuccess
 ====================
 
-onSuccess callback function that provides the Acceleration information.
+onSuccess callback function that provides the [Acceleration](../acceleration/acceleration.html) information.
 
     function(acceleration) {
         // Do something
@@ -32,7 +34,7 @@ Parameters
 
 - __acceleration:__ The acceleration at a single moment in time. (Acceleration)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function onSuccess(acceleration) {

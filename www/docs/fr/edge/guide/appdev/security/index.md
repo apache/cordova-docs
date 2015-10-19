@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de sécurité
 ---
 
 # Guide de sécurité
@@ -30,7 +32,7 @@ Le guide suivant contient quelques meilleures pratiques de sécurité que vous d
 *   Iframes et le mécanisme de rappel Id
 *   Certificat épinglage
 *   Les certificats auto-signés
-*   Stockage crypté
+*   [Stockage](../../../cordova/storage/storage.html) crypté
 *   Conseils généraux
 *   Articles recommandés et autres ressources
 

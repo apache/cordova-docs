@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 加速度センサー
 ---
 
 # 加速度センサー
@@ -24,19 +26,19 @@ license: >
 
 ## メソッド
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## 引数
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## オブジェクト (読み取り専用)
 
-*   加速
+*   [加速](acceleration/acceleration.html)
 
 ## 機能へのアクセス
 

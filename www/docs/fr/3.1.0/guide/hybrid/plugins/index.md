@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de développement de plugin
 ---
 
 # Guide de développement de plugin
@@ -73,17 +75,17 @@ Le rappel du succès passé dans `exec` est simplement une référence au rappel
 
 Cordoue possède une spécification de plugin disponible pour activer l'installation automatique du plugin pour Android, iOS, plates-formes 10 BlackBerry et Windows Phone. En structurant votre plugin de façon particulière et en ajoutant un `plugin.xml` fichier manifeste, vous pouvez permettre aux utilisateurs d'installer votre plug-in via les outils de ligne de commande.
 
-*   Spécification du plugin
+*   [Spécification du plugin](../../../plugin_ref/spec.html)
 
 ## Native
 
 Une fois que vous définissez JavaScript pour votre plugin, vous devez compléter au moins une implémentation native. Détails de le faire pour chaque plate-forme sont répertoriées ci-dessous. Ces guides continuent de miser sur l'exemple simple de Plugin Echo discuté ci-dessus.
 
-*   Plugins Android
-*   Plugins de blackBerry
-*   BlackBerry 10 Plugins
-*   iOS Plugins
-*   Windows Phone Plugins
+*   [Plugins Android](../../platforms/android/plugin.html)
+*   [Plugins de blackBerry](../../platforms/blackberry/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 La plate-forme paciarelli ne supporte actuellement pas de plugins.
 

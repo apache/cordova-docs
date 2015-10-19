@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.getPicture
 ---
 
 camera.getPicture
@@ -23,18 +25,18 @@ camera.getPicture
 
 Takes a photo using the camera or retrieves a photo from the device's album.
 The image is passed to the success callback as a base64 encoded `String` or as the URI of an image file.
-The method itself returns a CameraPopoverHandle object, which can be used to reposition the file selection popover.
+The method itself returns a [CameraPopoverHandle](parameter/CameraPopoverHandle.html) object, which can be used to reposition the file selection popover.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
 Description
 -----------
 
-Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
+Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.  A `CameraPopoverHandle` object, which can be used to reposition the photo chooser dialog (eg. when the device orientation changes) is returned by `camera.getPicture`.
+If `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.PHOTOLIBRARY` or `[Camera](camera.html).PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.  A `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` object, which can be used to reposition the photo chooser dialog (eg. when the device orientation changes) is returned by `camera.getPicture`.
 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+The return value will be sent to the `[cameraSuccess](parameter/cameraSuccess.html)` function, in one of the following formats, depending on the `[cameraOptions](parameter/cameraOptions.html)` you specify:
 
 - A `String` containing the Base64 encoded photo image.
 - A `String` representing the image file location on local storage (default).
@@ -45,7 +47,7 @@ You can do whatever you want with the encoded image or URI, for example:
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-__Note:__ The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  ___Encoding such images using Base64 has caused memory issues on many newer devices.  Therefore, using FILE\_URI as the 'Camera.destinationType' is highly recommended.___
+__Note:__ The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  ___Encoding such images using Base64 has caused memory issues on many newer devices.  Therefore, using FILE\_URI as the '[Camera](camera.html).destinationType' is highly recommended.___
 
 Supported Platforms
 -------------------
@@ -62,7 +64,7 @@ Supported Platforms
 iOS Quirks
 ----------
 
-Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully close before the alert is displayed: 
+Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully [close](../inappbrowser/inappbrowser.html) before the alert is displayed: 
 
     setTimeout(function() { 
         // do your thing here!
@@ -77,9 +79,9 @@ via Zune will not work, and the error callback will be triggered.
 Tizen Quirks
 ----------------------
 
-Only 'destinationType: Camera.DestinationType.FILE_URI' and 'sourceType: Camera.PictureSourceType.PHOTOLIBRARY' are supported.
+Only 'destinationType: [Camera](camera.html).DestinationType.FILE_URI' and 'sourceType: [Camera](camera.html).PictureSourceType.PHOTOLIBRARY' are supported.
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 Take photo and retrieve Base64-encoded image:
@@ -112,7 +114,7 @@ Take photo and retrieve image file location:
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

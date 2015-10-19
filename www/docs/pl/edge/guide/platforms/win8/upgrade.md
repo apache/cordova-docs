@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Aktualizacja systemu Windows 8
 ---
 
 # Aktualizacja systemu Windows 8
@@ -26,7 +28,7 @@ Ten poradnik pokazuje jak zmienić Windows 8 projektów do uaktualnienia ze star
 
 Dla projektów, które zostały utworzone z cordova CLI:
 
-1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+1.  [Aktualizacja](../android/upgrade.html) `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
 2.  Uruchom`cordova platform update windows8`.
 

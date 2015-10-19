@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 # compass.getCurrentHeading
@@ -27,9 +29,9 @@ license: >
 
 ## Описание
 
-Компас является датчик, который определяет направление или заголовок, что устройство указал, обычно из верхней части устройства. Он измеряет направление в градусах от 0 до 359,99 градусов, где 0 — север.
+[Компас](compass.html) является датчик, который определяет направление или заголовок, что устройство указал, обычно из верхней части устройства. Он измеряет направление в градусах от 0 до 359,99 градусов, где 0 — север.
 
-Курс информация возвращается через `CompassHeading` объект с помощью `compassSuccess` функции обратного вызова.
+Курс информация возвращается через `CompassHeading` объект с помощью `[compassSuccess](parameters/compassSuccess.html)` функции обратного вызова.
 
 ## Поддерживаемые платформы
 

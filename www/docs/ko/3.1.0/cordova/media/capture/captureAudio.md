@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureAudio
 ---
 
 # capture.captureAudio
@@ -29,11 +31,11 @@ license: >
 
 ## 설명
 
-소자의 기본 오디오 녹음 응용 프로그램을 사용 하 여 오디오 녹음을 캡처하는 비동기 작업을 시작 합니다. 작업 장치 사용자를 단일 세션에서 여러 녹화를 캡처할 수 있습니다.
+소자의 기본 오디오 녹음 응용 프로그램을 사용 하 여 오디오 녹음을 캡처하는 비동기 작업을 시작 합니다. 작업 [장치](../../device/device.html) 사용자를 단일 세션에서 여러 녹화를 캡처할 수 있습니다.
 
-캡처 작업이 종료 사용자 오디오 녹음 응용 프로그램 또는 녹음에 의해 지정 된 최대 수를 종료 하는 경우 `CaptureAudioOptions.limit` 에 도달. 없는 경우 `limit` 매개 변수 값 지정, 하나 (1), 기본 및 캡처 작업이 종료 되 면 사용자는 하나의 오디오 클립을 기록 하는 후.
+[캡처](capture.html) 작업이 종료 사용자 오디오 녹음 응용 프로그램 또는 녹음에 의해 지정 된 최대 수를 종료 하는 경우 `[CaptureAudioOptions](captureAudioOptions.html).limit` 에 도달. 없는 경우 `limit` 매개 [변수](../../../plugin_ref/spec.html) 값 지정, 하나 (1), 기본 및 [캡처](capture.html) 작업이 종료 되 면 사용자는 하나의 오디오 클립을 기록 하는 후.
 
-캡처 작업이 완료 되 면은 `CaptureCallback` 의 배열을 실행 `MediaFile` 오디오 클립 파일을 캡처 설명 하는 각 개체. 전에 오디오 클립을 캡처 작업이 종료 되 면 사용자는 `CaptureErrorCallback` 으로 실행 한 `CaptureError` 개체, 특징으로 `CaptureError.CAPTURE_NO_MEDIA_FILES` 오류 코드.
+[캡처](capture.html) 작업이 완료 되 면은 `CaptureCallback` 의 배열을 실행 `MediaFile` 오디오 클립 파일을 [캡처](capture.html) 설명 하는 각 개체. 전에 오디오 클립을 [캡처](capture.html) 작업이 종료 되 면 사용자는 `CaptureErrorCallback` 으로 실행 한 `[CaptureError](CaptureError.html)` 개체, 특징으로 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` 오류 코드.
 
 ## 지원 되는 플랫폼
 
@@ -126,7 +128,7 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-*   코르도바 블랙베리 WebWorks에 대 한 **목소리 노트 레코더** 응용, RIM, 제공한 오디오 녹음을 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
+*   코르도바 블랙베리 WebWorks에 대 한 **목소리 노트 레코더** 응용, RIM, 제공한 오디오 녹음을 잡으려고 시도 합니다. 응용 프로그램 수신는 `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
 
 ## iOS 단점
 

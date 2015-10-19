@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guida piattaforma blackBerry
 ---
 
 # Guida piattaforma blackBerry
 
 Questa guida viene illustrato come configurare un ambiente SDK per le applicazioni di destinazione per la piattaforma BlackBerry precedenti alla versione 10. Se volete la versione più recente di destinazione, vedere la guida di piattaforma BlackBerry 10. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione di blackBerry
-*   L'aggiornamento di BlackBerry
-*   BlackBerry Plugins
-*   Strumenti della riga di comando di blackBerry
+*   [Configurazione di blackBerry](../blackberry10/config.html)
+*   [L'aggiornamento di BlackBerry](../blackberry10/upgrading.html)
+*   [BlackBerry Plugins](plugin.html)
+*   [Strumenti della riga di comando di blackBerry](tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 

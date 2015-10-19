@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 # accelerometer.clearWatch
@@ -25,7 +27,7 @@ license: >
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**： 由返回的 ID`accelerometer.watchAcceleration`.
+*   **watchID**： 由返回的 ID`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## 支援的平臺
 

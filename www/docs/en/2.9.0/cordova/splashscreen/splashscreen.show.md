@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.show
 ---
 
 splashscreen.show
@@ -36,12 +38,12 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.splashscreen.show();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

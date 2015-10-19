@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraOptions
 ---
 
 # cameraOptions
@@ -61,7 +63,7 @@ license: >
 
 *   **saveToPhotoAlbum**： 將圖像保存到相冊在設備上捕獲後。*（布林）*
 
-*   **popoverOptions**： 僅限 iOS 在 iPad 中指定彈出位置的選項。在中定義`CameraPopoverOptions`.
+*   **popoverOptions**： 僅限 iOS 在 iPad 中指定彈出位置的選項。在中定義`[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     

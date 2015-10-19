@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 # geolocationSuccess
 
-Des Benutzers-Callback-Funktion, die ausgeführt wird, sobald eine Geolocation-Position verfügbar ist (beim Aufruf aus `geolocation.getCurrentPosition` ), oder wenn sich die Position ändert, (beim Aufruf aus`geolocation.watchPosition`).
+Des Benutzers-Callback-Funktion, die ausgeführt wird, sobald eine Geolocation-Position verfügbar ist (beim Aufruf aus `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ), oder wenn sich die [Position](../Position/position.html) ändert, (beim Aufruf aus`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something
@@ -29,7 +31,7 @@ Des Benutzers-Callback-Funktion, die ausgeführt wird, sobald eine Geolocation-P
 
 ## Parameter
 
-*   **Lage**: die Geolocation-Position, die durch das Gerät zurückgegeben. *(Position)*
+*   **Lage**: die Geolocation-Position, die durch das [Gerät](../../device/device.html) zurückgegeben. *(Position)*
 
 ## Beispiel
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumeupbutton
 ---
 
 # volumeupbutton
@@ -29,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lauter Taste drückt.
 
 Wenn Sie die Standard-Lautstärke erhöhen Verhalten überschreiben müssen registrieren Sie einen Ereignis-Listener für das `volumeupbutton` Ereignis.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

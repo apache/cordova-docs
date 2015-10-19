@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadOptions
 ---
 
 # FileUploadOptions
 
-A `FileUploadOptions` 에 개체를 전달할 수는 `FileTransfer` 개체의 `upload()` 업로드 스크립트에 추가 매개 변수를 지정 하는 방법.
+A `FileUploadOptions` 에 개체를 전달할 수는 `[FileTransfer](../filetransfer/filetransfer.html)` 개체의 `upload()` 업로드 스크립트에 추가 매개 변수를 지정 하는 방법.
 
 ## 속성
 
 *   **fileKey**: form 요소의 이름. 기본값은 `file` . (DOMString)
 
-*   **파일 이름**: 파일 이름을 서버에 파일을 저장할 때 사용 합니다. 기본값은 `image.jpg` . (DOMString)
+*   **파일 이름**: [파일](../fileobj/fileobj.html) 이름을 서버에 파일을 저장할 때 사용 합니다. 기본값은 `image.jpg` . (DOMString)
 
 *   **mimeType**: 업로드 데이터의 mime 형식을. 기본값은 `image/jpeg` . (DOMString)
 
@@ -38,7 +40,7 @@ A `FileUploadOptions` 에 개체를 전달할 수는 `FileTransfer` 개체의 `u
 
 ## 설명
 
-A `FileUploadOptions` 에 개체를 전달할 수는 `FileTransfer` 개체의 `upload()` 업로드 스크립트에 추가 매개 변수를 지정 하는 방법.
+A `FileUploadOptions` 에 개체를 전달할 수는 `[FileTransfer](../filetransfer/filetransfer.html)` 개체의 `upload()` 업로드 스크립트에 추가 매개 변수를 지정 하는 방법.
 
 ## WP7 특질
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureImageOptions
 ---
 
 CaptureImageOptions
@@ -29,7 +31,7 @@ CaptureImageOptions
 - __limit:__ 一つのキャプチャー操作で撮影できる画像の最大値を表します。値は1以上の必要があります (デフォルトは1です) 。
 - __mode:__ 選択された画像のモードを表します。値は `capture.supportedImageModes` の中の一つである必要があります。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // キャプチャー操作時の取得画像の最大値を3に制限

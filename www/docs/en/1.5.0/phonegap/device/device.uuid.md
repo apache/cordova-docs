@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.uuid
 ---
 
 device.uuid
@@ -39,7 +41,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android: Returns a random 64-bit integer (as a string, again!)
@@ -57,7 +59,7 @@ Quick Example
     // 
     var deviceID = device.uuid;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

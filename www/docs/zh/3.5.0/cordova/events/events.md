@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 事件
 ---
 
 # 事件
@@ -24,16 +26,16 @@ license: >
 
 ## 事件種類
 
-*   deviceready
-*   暫停
-*   簡歷
-*   backbutton
-*   menubutton
-*   searchbutton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [暫停](events.pause.html)
+*   [簡歷](events.resume.html)
+*   [backbutton](events.backbutton.html)
+*   [menubutton](events.menubutton.html)
+*   [searchbutton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## 由[org.apache.cordova.battery 狀態][1]添加事件
 

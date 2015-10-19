@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Уведомление
 ---
 
 # Уведомление
@@ -25,10 +27,10 @@ license: >
 ## Методы
 
 *   `notification.alert`
-*   `notification.confirm`
-*   `notification.prompt`
+*   `[notification.confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
 *   `notification.beep`
-*   `notification.vibrate`
+*   `[notification.vibrate](notification.vibrate.html)`
 
 ## Доступ к функции
 

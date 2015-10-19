@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: The Command-Line Interface
 ---
 
 # The Command-Line Interface
@@ -24,7 +26,7 @@ This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
 them on different platforms, and run on real devices or within emulators. The CLI
-is the main tool to use for the cross-platform workflow (See the Overview for a description
+is the main tool to use for the cross-platform workflow (See the [Overview](../overview/index.html) for a description
 of the various workflows.)  However, you can also use the CLI to initialize project code, after
 which you use various platforms' SDKs and shell tools for continued development.
 
@@ -32,7 +34,7 @@ which you use various platforms' SDKs and shell tools for continued development.
 
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
-(See the Platform Guides for more details.)
+(See the [Platform Guides](../platforms/index.html) for more details.)
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -160,7 +162,7 @@ If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
 from the `/platforms/` directory to develop with an SDK. This is because
 the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
-(See the Platform Guides for information on how to develop applications within each IDE.)
+(See the [Platform Guides](../platforms/index.html) for information on how to develop applications within each IDE.)
 Use this approach if you simply want to initialize a project using the CLI and 
 then switch to an SDK for native work.
 
@@ -172,7 +174,7 @@ development cycle.
 By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
-be specified as part of the `deviceready` event handler, referenced by
+be specified as part of the `[deviceready](../../cordova/events/events.deviceready.html)` event handler, referenced by
 default from `www/js/index.js`.
 
 Run the following command to iteratively build the project:
@@ -212,7 +214,7 @@ first associate a device with an emulator.
 
 Note: Emulator support is currently not available for Amazon Fire OS
 
-(See the Platform Guides for details.)
+(See the [Platform Guides](../platforms/index.html) for details.)
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
@@ -235,7 +237,7 @@ testing, following procedures that vary for each platform. In
 Android and Amazon Fire OS devices, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
-See Platform Guides for details on each platform's requirements.
+See [Platform Guides](../platforms/index.html) for details on each platform's requirements.
 
 ## Add Plugin Features
 
@@ -248,7 +250,7 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development
+native components. (See [Embedding WebViews](../hybrid/webviews/index.html) and Plugin Development
 Guide for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 detailed in the API Reference. A list of these plugins, including
@@ -275,46 +277,46 @@ multiple times for each platform.)
 
 Here are examples of how you might use the CLI to add features to the app:
 
-* Basic device information (Device API):
+* Basic device information ([Device](../../cordova/device/device.html) API):
 
         $ cordova plugin add org.apache.cordova.device
 
-* Network Connection and Battery Events:
+* Network [Connection](../../cordova/connection/connection.html) and Battery [Events](../../cordova/events/events.html):
 
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
 
-* Accelerometer, Compass, and Geolocation:
+* [Accelerometer](../../cordova/accelerometer/accelerometer.html), [Compass](../../cordova/compass/compass.html), and [Geolocation](../../cordova/geolocation/geolocation.html):
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin add org.apache.cordova.geolocation
 
-* Camera, Media playback and Capture:
+* [Camera](../../cordova/camera/camera.html), [Media](../../cordova/media/media.html) playback and [Capture](../../cordova/media/capture/capture.html):
 
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
 
-* Access files on device or network (File API):
+* Access files on device or network ([File](../../cordova/file/fileobj/fileobj.html) API):
 
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
 
-* Notification via dialog box or vibration:
+* [Notification](../../cordova/notification/notification.html) via dialog box or vibration:
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
 
-* Contacts:
+* [Contacts](../../cordova/contacts/contacts.html):
 
         $ cordova plugin add org.apache.cordova.contacts
 
-* Globalization:
+* [Globalization](../../cordova/globalization/globalization.html):
 
         $ cordova plugin add org.apache.cordova.globalization
 
-* Splashscreen:
+* [Splashscreen](../../cordova/splashscreen/splashscreen.html):
 
         $ cordova plugin add org.apache.cordova.splashscreen
 
@@ -423,7 +425,7 @@ You can also use `merges` to add files not present in the original
 `www` directory. For example, an app can incorporate a _back button_
 graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
-instead capture `backbutton` events from the corresponding hardware
+instead capture `[backbutton](../../cordova/events/events.backbutton.html)` events from the corresponding hardware
 button.
 
 ## Help Commands
@@ -469,7 +471,7 @@ described in this section. If you are updating from a version prior to
 3.0, you need to create a new project as described above, then copy
 the older application's assets into the top-level `www` directory.
 Where applicable, further details about upgrading to 3.0 are available
-in the Platform Guides.  Once you upgrade to the `cordova`
+in the [Platform Guides](../platforms/index.html).  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
 

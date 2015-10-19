@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 10 플랫폼 가이드
 ---
 
 # 블랙베리 10 플랫폼 가이드
@@ -26,7 +28,7 @@ license: >
 
 개발 환경 Windows, Mac 및 리눅스에 유효 하다.
 
-개발자가 사용 해야 합니다 `cordova` 블랙베리 네이티브 SDK와 함께에서 유틸리티. 설치 하는 방법 정보에 대 한 명령줄 인터페이스 참조 `cordova` , 프로젝트 추가 다음 빌드 및 각 플랫폼에 대 한 배포.
+개발자가 사용 해야 합니다 `cordova` 블랙베리 네이티브 SDK와 함께에서 유틸리티. 설치 하는 방법 정보에 대 한 [명령줄 인터페이스](../../cli/index.html) 참조 `cordova` , 프로젝트 추가 다음 빌드 및 각 플랫폼에 대 한 배포.
 
 ## 블랙베리 네이티브 SDK를 설치
 

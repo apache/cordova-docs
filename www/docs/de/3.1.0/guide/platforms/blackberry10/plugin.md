@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 Plugins
 ---
 
 # BlackBerry 10 Plugins
@@ -29,11 +31,11 @@ Dies ist eine Fortsetzung des Plugin Development Guide für Cordova. Sobald Sie 
         };
     
 
-Eine native BlackBerry 10-Plugin für Cordova enthält JavaScript-Code und kann auch nativen Code enthalten. Das Echo-Plugin-Beispiel veranschaulicht die native Funktion aus JavaScript aufrufen. Die Native und JavaScript-Code kommunizieren miteinander durch einen Rahmen zur Verfügung gestellt von JNEXT. Jedes Plugin muss auch eine `plugin.xml` Datei.
+Eine native BlackBerry 10-Plugin für Cordova enthält JavaScript-Code und kann auch nativen Code enthalten. Das Echo-Plugin-Beispiel veranschaulicht die native Funktion aus JavaScript aufrufen. Die Native und JavaScript-Code kommunizieren miteinander durch einen Rahmen zur Verfügung gestellt von JNEXT. Jedes Plugin muss auch eine `plugin.xml` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Systemeigenen Bestandteil Ihr Plugin erstellen
 
-Um den nativen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie Datei > New > BlackBerry Projekt > Native Erweiterung > BlackBerry WebWorks. Geben Sie Ihre gewünschten Projektnamen / Speicherort und klicken Sie auf Fertig stellen.
+Um den nativen Teil Ihr Plugin zu erstellen, öffnen Sie die BlackBerry 10 NDK IDE, und wählen Sie [Datei](../../../cordova/file/fileobj/fileobj.html) > New > BlackBerry Projekt > Native Erweiterung > BlackBerry WebWorks. Geben Sie Ihre gewünschten Projektnamen / Speicherort und klicken Sie auf Fertig stellen.
 
 Das Projekt, erstellt von der IDE enthält Beispielcode für ein Speicher-Plugin. Sie ersetzen oder ändern diese Dateien um eigene Funktionalität erweitert.
 
@@ -102,11 +104,11 @@ Die `onCreateObject` Funktion nimmt zwei Parameter. Der erste Parameter ist der 
 
 Den JavaScript-Teil der Ihr Plugin muss die folgenden Dateien enthalten:
 
-*   `client.js`: Dies wird als die Client-Seite und enthält die API, die eine Cordova-Anwendung aufrufen können. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den Veranstaltungen, die die Rückrufe auslösen herstellt.
+*   `client.js`: Dies wird als die Client-Seite und enthält die API, die eine Cordova-Anwendung aufrufen können. Die API in `client.js` Aufrufe Aufrufe an `index.js` . Die API im `client.js` auch Callback-Funktionen zu den [Veranstaltungen](../../../cordova/events/events.html), die die Rückrufe auslösen herstellt.
 
-*   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` Datei Aufrufe an die API in der `index.js` Datei, die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
+*   `index.js`: Cordova lädt `index.js` und macht es über die cordova.exec-Brücke. Die `client.js` [Datei](../../../cordova/file/fileobj/fileobj.html) Aufrufe an die API in der `index.js` [Datei](../../../cordova/file/fileobj/fileobj.html), die wiederum aufrufen, um JNEXT macht zu kommunizieren, die systemeigene Seite.
 
-Die Client- und Serverseite ( `client.js` und `index.js` ) interagiert durch die `Cordova.exec` Funktion. Ja, in `client.js` Aufrufen der `exec` -Funktion und geben Sie die erforderlichen Argumente. In der Echo-Plugin haben wir Folgendes in der `client.js` Datei:
+Die Client- und Serverseite ( `client.js` und `index.js` ) interagiert durch die `Cordova.exec` Funktion. Ja, in `client.js` Aufrufen der `exec` -Funktion und geben Sie die erforderlichen Argumente. In der Echo-Plugin haben wir Folgendes in der `client.js` [Datei](../../../cordova/file/fileobj/fileobj.html):
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
@@ -144,7 +146,7 @@ Sie können jetzt die Daten zurück senden. Sagen wir es alle zusammen:
 
 ## Architektur des Plugins
 
-Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -Datei, die Quellcode-Dateien (JavaScript, C++) und die Binärdateien ( `.so` ) innerhalb einer Verzeichnisstruktur, solange Sie korrekt angeben, die Dateipfade in der `plugin.xml` Datei. Eine typische Struktur sieht folgendermaßen aus:
+Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -Datei, die Quellcode-Dateien (JavaScript, C++) und die Binärdateien ( `.so` ) innerhalb einer Verzeichnisstruktur, solange Sie korrekt angeben, die Dateipfade in der `plugin.xml` [Datei](../../../cordova/file/fileobj/fileobj.html). Eine typische Struktur sieht folgendermaßen aus:
 
 ***your\_project\_directory*** (> plugin.xml)
 
@@ -158,6 +160,6 @@ Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -Datei, die Qu
 
 ## Inhalt der `plugin.xml` Datei
 
-Die `plugin.xml` -Datei enthält den Namespace der Erweiterung und andere Metadaten. Den Namespace definiert und andere Metadaten für das Echo-Plugin wie folgt angeben:
+Die `plugin.xml` -Datei enthält den Namespace der Erweiterung und andere [Metadaten](../../../cordova/file/metadata/metadata.html). Den Namespace definiert und andere [Metadaten](../../../cordova/file/metadata/metadata.html) für das Echo-Plugin wie folgt angeben:
 
     < Plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="org.apache.cordova.blackberry.echo" Version = "1.0.0" >< Js-Modul src="www/client.js" >< Zusammenführungen Ziel = "Navigator" / >< / Js-Modul >< Plattformnamen = "blackberry10" >< Quelldatei src="src/blackberry10/index.js" / >< Lib-Datei src="src/blackberry10/native/device/libecho.so" Bogen = "Gerät" / >< Lib-Datei src="src/blackberry10/native/simulator/libecho.so" Bogen = "Simulator" / ><-Config-File target="www/config.xml" übergeordnete = "/ Widget" >< verfügen über name="org.apache.cordova.blackberry.echo" value="org.apache.cordova.blackberry.echo" / >< / Config-Datei >< /Plattform >< / Plugin >

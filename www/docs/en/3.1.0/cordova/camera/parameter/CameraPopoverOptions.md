@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverOptions
 ---
 
 # CameraPopoverOptions
@@ -41,7 +43,7 @@ or album.
 
 - __height__: height, in pixels, of the screen element onto which to anchor the popover. _(Number)_
 
-- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` _(Number)_
+- __arrowDir__: Direction the arrow on the popover should point.  Defined in `[Camera](../camera.html).PopoverArrowDirection` _(Number)_
 
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants

@@ -16,26 +16,28 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.getPicture
 ---
 
 # camera.getPicture
 
-Nimmt ein Foto mit der Kamera, oder ein Foto aus dem Gerät Bildergalerie abgerufen. Das Bild wird an den Erfolg-Rückruf als eine base64-codierte übergeben `String` , oder als den URI für die Image-Datei. Die Methode selbst gibt ein `CameraPopoverHandle` -Objekt, das verwendet werden kann, um die Datei-Auswahl-Popover neu zu positionieren.
+Nimmt ein Foto mit der [Kamera](camera.html), oder ein Foto aus dem [Gerät](../device/device.html) Bildergalerie abgerufen. Das Bild wird an den Erfolg-Rückruf als eine base64-codierte übergeben `String` , oder als den URI für die Image-Datei. Die Methode selbst gibt ein `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` -Objekt, das verwendet werden kann, um die Datei-Auswahl-Popover neu zu positionieren.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
 
 ## Beschreibung
 
-Die `camera.getPicture` -Funktion öffnet das Gerät Standard-Kamera-Anwendung, die Benutzern ermöglicht, Bilder ausrichten. Dieses Verhalten tritt standardmäßig, wenn `Camera.sourceType` gleich `Camera.PictureSourceType.CAMERA` . Sobald der Benutzer die Fotoschnäpper, die Kameraanwendung geschlossen wird und die Anwendung wird wiederhergestellt.
+Die `camera.getPicture` -Funktion öffnet das [Gerät](../device/device.html) Standard-Kamera-Anwendung, die Benutzern ermöglicht, Bilder ausrichten. Dieses Verhalten tritt standardmäßig, wenn `Camera.sourceType` gleich `Camera.PictureSourceType.CAMERA` . Sobald der Benutzer die Fotoschnäpper, die Kameraanwendung geschlossen wird und die Anwendung wird wiederhergestellt.
 
-Wenn `Camera.sourceType` ist `Camera.PictureSourceType.PHOTOLIBRARY` oder `Camera.PictureSourceType.SAVEDPHOTOALBUM` , dann ein Dialog-Displays, die Benutzern ermöglicht, ein vorhandenes Bild auszuwählen. Die `camera.getPicture` Funktion gibt ein `CameraPopoverHandle` -Objekt, das verwendet werden kann, um den Bild-Auswahl-Dialog, zum Beispiel beim ändert sich der Orientierung des Geräts neu positionieren.
+Wenn `Camera.sourceType` ist `Camera.PictureSourceType.PHOTOLIBRARY` oder `Camera.PictureSourceType.SAVEDPHOTOALBUM` , dann ein Dialog-Displays, die Benutzern ermöglicht, ein vorhandenes Bild auszuwählen. Die `camera.getPicture` Funktion gibt ein `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` -Objekt, das verwendet werden kann, um den Bild-Auswahl-Dialog, zum Beispiel beim ändert sich der Orientierung des Geräts neu positionieren.
 
-Der Rückgabewert wird gesendet, um die `cameraSuccess` Callback-Funktion in einem der folgenden Formate, je nach dem angegebenen `cameraOptions` :
+Der Rückgabewert wird gesendet, um die `[cameraSuccess](parameter/cameraSuccess.html)` Callback-Funktion in einem der folgenden Formate, je nach dem angegebenen `[cameraOptions](parameter/cameraOptions.html)` :
 
 *   A `String` mit dem base64-codierte Foto-Bild.
 
-*   A `String` , die die Bild-Datei-Stelle auf lokalem Speicher (Standard).
+*   A `String` , die die Bild-Datei-Stelle auf lokalem [Speicher](../storage/storage.html) (Standard).
 
 Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel:
 
@@ -47,7 +49,7 @@ Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**Hinweis:** Fotoauflösung auf neueren Geräten ist recht gut. Fotos aus dem Gerät Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um Speicherprobleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
+**Hinweis:** Fotoauflösung auf neueren Geräten ist recht gut. Fotos aus dem [Gerät](../device/device.html) Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um Speicherprobleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
 
 ## Unterstützte Plattformen
 
@@ -60,7 +62,7 @@ Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel
 
 ## Android Macken
 
-Android verwendet Absichten zum Starten von der Kamera-Aktivität auf dem Gerät, um Bilder zu erfassen und auf Handys mit wenig Speicher, Cordova Tätigkeit getötet werden kann. In diesem Szenario kann das Bild nicht angezeigt, wenn die Aktivität von Cordova wiederhergestellt wird.
+Android verwendet Absichten zum Starten von der Kamera-Aktivität auf dem [Gerät](../device/device.html), um Bilder zu erfassen und auf Handys mit wenig [Speicher](../storage/storage.html), Cordova Tätigkeit getötet werden kann. In diesem Szenario kann das Bild nicht angezeigt, wenn die Aktivität von Cordova wiederhergestellt wird.
 
 ## iOS Macken
 
@@ -71,7 +73,7 @@ Darunter eine JavaScript `alert()` entweder des Rückrufs Funktionen können Pro
 
 ## Windows Phone 7 Macken
 
-Die native Kameraanwendung aufrufen, während Ihr Gerät über Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
+Die native Kameraanwendung aufrufen, während Ihr [Gerät](../device/device.html) über Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
 
 ## Tizen Macken
 

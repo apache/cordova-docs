@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.isDayLightSavingsTime
 ---
 
 # globalization.isDayLightSavingsTime
@@ -31,7 +33,7 @@ license: >
 
 인바운드 매개 변수는 `date` 형식 이어야 합니다`Date`.
 
-날짜 읽기 오류가 발생 하는 경우 다음 `errorCallback` 를 실행 합니다. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
+날짜 읽기 오류가 발생 하는 경우 다음 `errorCallback` 를 실행 합니다. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## 지원 되는 플랫폼
 

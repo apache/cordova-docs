@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileEntry
 ---
 
 # FileEntry
@@ -54,7 +56,7 @@ Representa un archivo en un sistema de archivos, como se define en la especifica
 
 *   **getParent**: ver el directorio padre.
 
-*   **createWriter**: crea un `FileWriter` objeto que puede ser utilizado para escribir en un archivo.
+*   **createWriter**: crea un `[FileWriter](../filewriter/filewriter.html)` objeto que puede ser utilizado para escribir en un archivo.
 
 *   **archivo**: crea un `File` objeto que contiene las propiedades del archivo.
 
@@ -74,7 +76,7 @@ Ver metadatos de un archivo.
 
 *   **successCallback**: una devolución de llamada que se pasa un `Metadata` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -171,7 +173,7 @@ Además, mover un archivo en la cima de un archivo existente intentos eliminar y
 
 *   **successCallback**: una devolución de llamada que se pasa el nuevo archivo `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el archivo. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar mover el archivo. Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -207,7 +209,7 @@ Copiar un archivo a una nueva ubicación en el sistema de archivos. Un error de 
 
 *   **successCallback**: una devolución de llamada que se pasa el nuevo archivo `FileEntry` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el archivo. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar copiar el archivo. Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -248,7 +250,7 @@ Elimina un archivo.
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de que el archivo se ha eliminado. Se invoca sin parámetros. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el archivo. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar borrar el archivo. Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -266,13 +268,13 @@ Elimina un archivo.
 
 ## getParent
 
-Ver el padre `DirectoryEntry` que contiene el archivo.
+Ver el padre `[DirectoryEntry](../directoryentry/directoryentry.html)` que contiene el archivo.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa a los padres del archivo `DirectoryEntry` . *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa a los padres del archivo `[DirectoryEntry](../directoryentry/directoryentry.html)` . *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `DirectoryEntry` . Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar recuperar el padre `[DirectoryEntry](../directoryentry/directoryentry.html)` . Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -290,13 +292,13 @@ Ver el padre `DirectoryEntry` que contiene el archivo.
 
 ## createWriter
 
-Crear un `FileWriter` objeto asociado con el archivo representado por el`FileEntry`.
+Crear un `[FileWriter](../filewriter/filewriter.html)` objeto asociado con el archivo representado por el`FileEntry`.
 
 **Parámetros:**
 
-*   **successCallback**: una devolución de llamada que se pasa un `FileWriter` objeto. *(Función)*
+*   **successCallback**: una devolución de llamada que se pasa un `[FileWriter](../filewriter/filewriter.html)` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar crear el FileWriter. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al intentar crear el [FileWriter](../filewriter/filewriter.html). Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 
@@ -320,7 +322,7 @@ Volver a `File` objeto que representa el estado actual del archivo que esta `Fil
 
 *   **successCallback**: una devolución de llamada que se pasa un `File` objeto. *(Función)*
 
-*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear el `File` objeto, por ejemplo, cuando el archivo ya no existe. Invocado con un `FileError` objeto. *(Función)*
+*   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al crear el `File` objeto, por ejemplo, cuando el archivo ya no existe. Invocado con un `[FileError](../fileerror/fileerror.html)` objeto. *(Función)*
 
 **Ejemplo rápido**
 

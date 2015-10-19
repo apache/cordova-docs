@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Flags
 ---
 
 # Flags
 
-Liefert Argumente für die `DirectoryEntry` des Objekts `getFile()` und `getDirectory()` Methoden, die nachschlagen oder erstellen Sie Dateien und Verzeichnisse.
+Liefert Argumente für die `[DirectoryEntry](../directoryentry/directoryentry.html)` des Objekts `getFile()` und `getDirectory()` Methoden, die nachschlagen oder erstellen Sie Dateien und Verzeichnisse.
 
 ## Eigenschaften
 
-*   **Erstellen**: gibt an, dass die Datei oder das Verzeichnis erstellt werden soll, wenn es nicht bereits vorhanden ist. *(boolesch)*
+*   **Erstellen**: gibt an, dass die [Datei](../fileobj/fileobj.html) oder das Verzeichnis erstellt werden soll, wenn es nicht bereits vorhanden ist. *(boolesch)*
 
-*   **exklusiv**: hat wirkt sich nicht von selbst, aber mit `create` bewirkt die Datei oder das Verzeichnis-Erstellung schlägt fehl, wenn der Zielpfad bereits vorhanden ist. *(boolesch)*
+*   **exklusiv**: hat wirkt sich nicht von selbst, aber mit `create` bewirkt die [Datei](../fileobj/fileobj.html) oder das Verzeichnis-Erstellung schlägt fehl, wenn der Zielpfad bereits vorhanden ist. *(boolesch)*
 
 ## Unterstützte Plattformen
 

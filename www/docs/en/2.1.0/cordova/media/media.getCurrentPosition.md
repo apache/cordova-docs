@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.getCurrentPosition
 ---
 
 media.getCurrentPosition
@@ -34,7 +36,7 @@ Parameters
 Description
 -----------
 
-Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a [Media](media.html) object. Also updates the ___position__ parameter within the [Media](media.html) object. 
 
 Supported Platforms
 -------------------
@@ -45,7 +47,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
         // Audio player
@@ -70,7 +72,7 @@ Quick Example
         }, 1000);
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

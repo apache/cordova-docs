@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: offline
 ---
 
 # offline
@@ -29,12 +31,12 @@ not connected to the Internet.
 
 The `offline` event fires when a previously connected device loses a
 network connection so that an application can no longer access the
-Internet.  It relies on the same information as the Connection API,
-and fires when the `connection.type` changes from `NONE` to any other
+Internet.  It relies on the same information as the [Connection](../connection/connection.html) API,
+and fires when the `[connection.type](../connection/connection.type.html)` changes from `NONE` to any other
 value.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 
@@ -97,4 +99,4 @@ When running in the Emulator, the `connection.status` is always unknown, so this
 
 ## Windows Phone 8 Quirks
 
-The Emulator reports the connection type as `Cellular`, which does not change, so the event does _not_ fire.
+The Emulator reports the [connection.type](../connection/connection.type.html) as `Cellular`, which does not change, so the event does _not_ fire.

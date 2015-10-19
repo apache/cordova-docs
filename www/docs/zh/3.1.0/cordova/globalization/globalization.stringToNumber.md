@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToNumber
 ---
 
 # globalization.stringToNumber
@@ -29,7 +31,7 @@ license: >
 
 返回到數 `successCallback` 與 `properties` 物件作為參數。物件應具有 `value` 屬性與 `Number` 的值。
 
-如果有錯誤解析的字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
+如果有錯誤解析的字串，然後 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 `options`參數是可選的並且預設為以下值：
 

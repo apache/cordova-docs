@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactError
 ---
 
 ContactError
 ========
 
-`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `[contactError](../parameters/contactError.html)` コールバック関数に渡されるオブジェクトです。
 
 プロパティー
 ----------
@@ -42,5 +44,5 @@ ContactError
 概要
 -----------
 
-`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
+`ContactError` オブジェクトは、エラーが発生したときに `[contactError](../parameters/contactError.html)` コールバック関数に渡されるオブジェクトです。
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileWriter
 ---
 
 # FileWriter
@@ -30,7 +32,7 @@ license: >
 
 *   **長さ**: 書き込まれるファイルの長さ。*（ロング）*
 
-*   **位置**: ファイル ポインターの現在位置。*（ロング）*
+*   **位置**: [ファイル](../fileobj/fileobj.html) ポインターの現在位置。*（ロング）*
 
 *   **エラー**: エラーを格納するオブジェクト。*(FileError)*
 

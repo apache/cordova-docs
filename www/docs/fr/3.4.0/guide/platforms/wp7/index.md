@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de plateforme Windows Phone 7
 ---
 
 # Guide de plateforme Windows Phone 7
@@ -24,9 +26,9 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir ci-dessous pour plus d'informations spécifiques à la plate-forme qui s'applique aux deux versions :
 
-*   La mise à niveau de Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone outils de ligne de commande
+*   [La mise à niveau de Windows Phone](../wp8/upgrading.html)
+*   [Windows Phone Plugins](../wp8/plugin.html)
+*   [Windows Phone outils de ligne de commande](../wp8/tools.html)
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Bandiere
 ---
 
 # Bandiere
 
-Fornisce argomenti per la `DirectoryEntry` dell'oggetto `getFile()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
+Fornisce argomenti per la `[DirectoryEntry](../directoryentry/directoryentry.html)` dell'oggetto `getFile()` e `getDirectory()` metodi, che cercare o creano file e directory, rispettivamente.
 
 ## Proprietà
 

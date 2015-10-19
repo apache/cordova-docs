@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
@@ -31,9 +33,9 @@ A intervalli regolari, ottenere l'accelerazione lungo l'asse *x*, *y*e *z* .
 
 L'accelerometro è un sensore di movimento che rileva il cambiamento (delta) nel movimento relativo alla posizione corrente. L'accelerometro può rilevare il movimento 3D lungo *x*, *y*e *z* asse.
 
-Il `accelerometer.watchAcceleration` metodo recupera corrente del dispositivo `Acceleration` a intervalli regolari, eseguendo la `accelerometerSuccess` funzione di callback ogni volta. Specificare l'intervallo in millisecondi via la `acceleratorOptions` dell'oggetto `frequency` parametro.
+Il `accelerometer.watchAcceleration` metodo recupera corrente del dispositivo `Acceleration` a intervalli regolari, eseguendo la `[accelerometerSuccess](parameters/accelerometerSuccess.html)` funzione di callback ogni volta. Specificare l'intervallo in millisecondi via la `acceleratorOptions` dell'oggetto `frequency` parametro.
 
-L'oggetto restituito guardare ID riferimenti intervallo orologio di accelerometro e può essere utilizzato con `accelerometer.clearWatch` a smettere di guardare l'accelerometro.
+L'oggetto restituito guardare ID riferimenti intervallo orologio di accelerometro e può essere utilizzato con `[accelerometer.clearWatch](accelerometer.clearWatch.html)` a smettere di guardare l'accelerometro.
 
 ## Piattaforme supportate
 

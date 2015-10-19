@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 업그레이드
 ---
 
 # 블랙베리 업그레이드
@@ -36,7 +38,7 @@ license: >
 
 5.  이전 프로젝트에서 프로젝트의 소스를 복사 `/www` 를 새 프로젝트의 디렉터리 `/www` 디렉터리.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` [파일](../../../cordova/file/fileobj/fileobj.html) (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ### BlackBerryOS/각 본
 
@@ -48,9 +50,9 @@ license: >
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` 파일.
+5.  복사는 `www/cordova.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` [파일](../../../cordova/file/fileobj/fileobj.html) (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 7.  복사는 `native` 이전 덮어쓰기 기존 프로젝트에 새 프로젝트에서 디렉터리 `native` 디렉터리.
 
@@ -62,7 +64,7 @@ license: >
 
 블랙베리 10:
 
-블랙베리 10 새로운 CLI 공구를 사용 하 고 핵심 Api 플러그인으로 관리 합니다. 지침 업데이트 오래 된 프로젝트의 복잡성 때문에 기존 프로젝트를 업데이트 하는 것 보다는 새 프로젝트 프로젝트를 마이그레이션합니다. 또한 참고 코르도바 js 스크립트 파일 'cordova.js' 라고 지금 고 이상 버전 문자열을 포함.
+블랙베리 10 새로운 CLI 공구를 사용 하 고 핵심 Api 플러그인으로 관리 합니다. 지침 업데이트 오래 된 프로젝트의 복잡성 때문에 기존 프로젝트를 업데이트 하는 것 보다는 새 프로젝트 프로젝트를 마이그레이션합니다. 또한 참고 코르도바 js 스크립트 [파일](../../../cordova/file/fileobj/fileobj.html) 'cordova.js' 라고 지금 고 이상 버전 문자열을 포함.
 
 1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구적인 위치에 코르도바 2.8.0 소스 예`~/Cordova-2.8.0`.
 
@@ -74,7 +76,7 @@ license: >
 
 5.  이전 프로젝트에서 프로젝트의 소스를 복사 `/www` 를 새 프로젝트의 디렉터리 `/www` 디렉터리.
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` [파일](../../../cordova/file/fileobj/fileobj.html) (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 BlackBerryOS/각 본:
 
@@ -86,9 +88,9 @@ BlackBerryOS/각 본:
 
 4.  IOS 명령줄 도구에에서 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` 파일.
+5.  복사는 `www/cordova.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` [파일](../../../cordova/file/fileobj/fileobj.html) (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 7.  복사는 `native` 이전 덮어쓰기 기존 프로젝트에 새 프로젝트에서 디렉터리 `native` 디렉터리.
 
@@ -106,9 +108,9 @@ BlackBerryOS/각 본:
 
 4.  블랙베리 명령줄 도구에 설명 된 대로 새 프로젝트를 만듭니다. 이 새 프로젝트에서 자산 해야합니다.
 
-5.  복사는 `www/cordova-2.7.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.6.0.js` 파일.
+5.  복사는 `www/cordova-2.7.0.js` 에 새로운 프로젝트에서 파일을 `www` 디렉터리 및 삭제 귀하 `www/cordova-2.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.7.0.js` 파일.
+6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` [파일](../../../cordova/file/fileobj/fileobj.html) (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.7.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 7.  복사는 `native` 이전 덮어쓰기 기존 프로젝트에 새 프로젝트에서 디렉터리 `native` 디렉터리.
 
@@ -146,7 +148,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 5.  새로운 복사 `cordova-2.6.0.js` 프로젝트에.
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-2.6.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 2.4.0에서 2.5.0로 업그레이드
 
@@ -178,7 +180,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 5.  새로운 복사 `cordova-2.5.0.js` 프로젝트에.
 
-6.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` 파일.
+6.  새로운 사용 하 여 HTML 업데이트 `cordova-2.5.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 2.3.0에서 2.4.0로 업그레이드
 
@@ -195,7 +197,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
     *   경우 블랙베리 10 업데이트에.js 파일은 `qnx/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 샘플 디렉터리 (즉, 업데이트 사용 개미 도구) 업데이트:
 
@@ -213,7 +215,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 7.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` 파일.
+8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.4.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 2.3.0 2.2.0에서 업그레이드
 
@@ -230,7 +232,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
     *   경우 블랙베리 10 업데이트에.js 파일은 `qnx/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 샘플 디렉터리 (즉, 업데이트 사용 개미 도구) 업데이트:
 
@@ -248,7 +250,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 7.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` 파일.
+8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.3.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 2.1.0에서 2.2.0으로 업그레이드
 
@@ -265,7 +267,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
     *   경우 블랙베리 10 업데이트에.js 파일은 `qnx/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 샘플 디렉터리 (즉, 업데이트 사용 개미 도구) 업데이트:
 
@@ -283,7 +285,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 7.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` 파일.
+8.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.2.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 2.0.0에서 2.1.0으로 업그레이드
 
@@ -299,7 +301,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 샘플 디렉터리 (즉, 업데이트 사용 개미 도구) 업데이트:
 
@@ -315,7 +317,7 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 6.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` 파일.
+7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.1.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
 ## 1.9.0에서 2.0.0로 업그레이드
 
@@ -331,9 +333,9 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  업데이트를 `www/plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
+6.  업데이트를 `www/plugins.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. [캡처](../../../cordova/media/capture/capture.html) 및 [연락처](../../../cordova/contacts/contacts.html) 플러그인에 대 한 오래 된 항목을 변경:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
@@ -356,9 +358,9 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 6.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` 파일.
+7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-2.0.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-8.  열기는 `www/` 디렉터리 및 업데이트 된 `plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
+8.  열기는 `www/` 디렉터리 및 업데이트 된 `plugins.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. [캡처](../../../cordova/media/capture/capture.html) 및 [연락처](../../../cordova/contacts/contacts.html) 플러그인에 대 한 오래 된 항목을 변경:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
@@ -383,9 +385,9 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
     *   만약 각 본, 다음 업데이트는.js 파일에 `playbook/` 디렉터리.
 
-5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` 파일.
+5.  새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-6.  업데이트를 `www/plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
+6.  업데이트를 `www/plugins.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. [캡처](../../../cordova/media/capture/capture.html) 및 [연락처](../../../cordova/contacts/contacts.html) 플러그인에 대 한 오래 된 항목을 변경:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
@@ -408,9 +410,9 @@ PhoneGap 다운로드 디렉터리를 업데이트:
 
 6.  유형 `ant blackberry build` 또는 `ant playbook build` 를 업데이트 하는 `www/` 업데이트 코르도바와 디렉토리.
 
-7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` 파일.
+7.  열기는 `www/` 디렉터리 및 새로운 사용 하 여 HTML 업데이트 `cordova-1.8.0.js` [파일](../../../cordova/file/fileobj/fileobj.html).
 
-8.  열기는 `www/` 디렉터리 및 업데이트 된 `plugins.xml` 파일. 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. 캡처 및 연락처 플러그인에 대 한 오래 된 항목을 변경:
+8.  열기는 `www/` 디렉터리 및 업데이트 된 `plugins.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 두 플러그인 그들의 네임 스페이스/서비스 레이블을 변경 합니다. [캡처](../../../cordova/media/capture/capture.html) 및 [연락처](../../../cordova/contacts/contacts.html) 플러그인에 대 한 오래 된 항목을 변경:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         

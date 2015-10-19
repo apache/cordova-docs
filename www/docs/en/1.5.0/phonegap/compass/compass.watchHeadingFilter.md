@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeadingFilter
 ---
 
 compass.watchHeadingFilter
@@ -30,9 +32,9 @@ Description
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The `compass.watchHeadingFilter` gets the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `compassOptions` object.
+The `compass.watchHeadingFilter` gets the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `[compassOptions](parameters/compassOptions.html)` object.
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatchFilter` to stop watching the compass via a degree filter.  Only one watchHeadingFilter can be in effect at one time.  If a watchHeadingFilter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS this method is more efficient than compass.watchFilter() based on the iOS mechanism for monitoring compass heading changes.
+The returned watch ID references references the compass watch interval. The watch ID can be used with `[compass.clearWatchFilter](compass.clearWatchFilter.html)` to stop watching the compass via a degree filter.  Only one watchHeadingFilter can be in effect at one time.  If a watchHeadingFilter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS this method is more efficient than compass.watchFilter() based on the iOS mechanism for monitoring compass heading changes.
 
 Supported Platforms
 -------------------
@@ -40,7 +42,7 @@ Supported Platforms
 - iPhone
 
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(heading) {
@@ -56,7 +58,7 @@ Quick Example
     
     var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

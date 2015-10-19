@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Platform Guide
 ---
 
 # iOS Platform Guide
 
 Ce guide montre comment configurer votre environnement de développement SDK pour déployer des applications de Cordova pour appareils iOS comme l'iPhone et l'iPad. Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   iOS Configuration
-*   Mise à jour d'iOS
-*   iOS WebViews
-*   iOS Plugins
-*   iOS Command-line Tools
+*   [iOS Configuration](config.html)
+*   [Mise à jour d'iOS](upgrading.html)
+*   [iOS WebViews](webview.html)
+*   [iOS Plugins](plugin.html)
+*   [iOS Command-line Tools](tools.html)
 
 Les outils de ligne de commande ci-dessus se référer aux versions antérieures à la 3.0 de Cordova. Voir l'Interface de ligne de commande pour plus d'informations sur l'interface actuelle.
 

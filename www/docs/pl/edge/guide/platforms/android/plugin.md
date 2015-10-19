@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Wtyczek Android
 ---
 
 # Wtyczek Android
@@ -24,7 +26,7 @@ Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego p
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android wtyczki są oparte na Cordova-Android, który składa się z Android WebView z hakami do niej przywiązani. Wtyczki są reprezentowane jako Klasa mapowania w `config.xml` pliku. Plugin składa się z co najmniej jednej klasy Java, która rozszerza `CordovaPlugin` klasy, zastępując jeden z jego `execute` metody. Jako najlepsze praktyki, plugin powinien również obsługiwać `pause` i `resume` wydarzenia, wraz z wiadomości przechodzi między wtyczek. Wtyczki z długim żądania, aktywność tło głoska bezdźwięczna playback, słuchaczy lub stan wewnętrzny należy implementować `onReset()` Metoda, jak również. Gdy wykonuje `WebView` przechodzi do nowej strony lub odświeża, który ładuje JavaScript.
+Android wtyczki są oparte na Cordova-Android, który składa się z Android WebView z hakami do niej przywiązani. Wtyczki są reprezentowane jako Klasa mapowania w `config.xml` pliku. Plugin składa się z co najmniej jednej klasy Java, która rozszerza `CordovaPlugin` klasy, zastępując jeden z jego `execute` metody. Jako najlepsze praktyki, plugin powinien również obsługiwać `[pause](../../../cordova/events/events.pause.html)` i `[resume](../../../cordova/events/events.resume.html)` wydarzenia, wraz z wiadomości przechodzi między wtyczek. Wtyczki z długim żądania, aktywność tło głoska bezdźwięczna playback, słuchaczy lub stan wewnętrzny należy implementować `onReset()` Metoda, jak również. Gdy wykonuje `WebView` przechodzi do nowej strony lub odświeża, który ładuje JavaScript.
 
 ## Mapowanie plugin Klasa
 

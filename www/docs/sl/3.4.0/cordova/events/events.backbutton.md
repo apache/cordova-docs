@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 # backbutton
@@ -27,7 +29,7 @@ V primeru požarov, ko uporabnik pritisne gumb nazaj.
 
 ## Podrobnosti
 
-Če želite preglasiti privzeti gumb nazaj vedenje, Vpiši dogodek poslušalca za na `backbutton` dogodek, običajno s pozivom `document.addEventListener` Ko prejmete na `deviceready` dogodek. Več je treba poklicati drugo metodo preglasi gumb nazaj vedenje.
+Če želite preglasiti privzeti gumb nazaj vedenje, Vpiši dogodek poslušalca za na `backbutton` dogodek, običajno s pozivom `document.addEventListener` Ko prejmete na `[deviceready](events.deviceready.html)` dogodek. Več je treba poklicati drugo metodo preglasi gumb nazaj vedenje.
 
 ## Podprte platforme
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Interfejs wiersza poleceń
 ---
 
 # Interfejs wiersza poleceń
@@ -139,7 +141,7 @@ Czytaj dalej, jeśli chcesz korzystać z podejścia przekreślać platforma prac
 
 ## Budowanie aplikacji
 
-Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na sieci web, których strona jest projektem `www/index.html` pliku. Edycja tej aplikacji, jednak chcesz, ale wszelkie inicjowania powinien być określony jako część `deviceready` obsługi zdarzeń, odwołuje się domyślnie z`www/js/index.js`.
+Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na sieci web, których strona jest projektem `www/index.html` pliku. Edycja tej aplikacji, jednak chcesz, ale wszelkie inicjowania powinien być określony jako część `[deviceready](../../cordova/events/events.deviceready.html)` obsługi zdarzeń, odwołuje się domyślnie z`www/js/index.js`.
 
 Uruchom następujące polecenie, aby zbudować wielokrotnie powtarzane projekt:
 
@@ -366,7 +368,7 @@ Zamiast tego najwyższego poziomu `merges` katalogu jest miejscem do należy okr
 
 Podczas odbudować projekt, Android wersja posiada rozmiar czcionki niestandardowe, podczas gdy inne pozostają bez zmian.
 
-Można również użyć `merges` aby dodać pliki nie obecne w oryginalnym `www` katalogu. Na przykład, aplikacja wcielić *wstecz,* grafiki do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , podczas gdy Android w wersji można zamiast przechwytywania `backbutton` wydarzenia z przycisku odpowiedniego sprzętu.
+Można również użyć `merges` aby dodać pliki nie obecne w oryginalnym `www` katalogu. Na przykład, aplikacja wcielić *wstecz,* grafiki do interfejsu iOS, przechowywane w `merges/ios/img/back_button.png` , podczas gdy Android w wersji można zamiast przechwytywania `[backbutton](../../cordova/events/events.backbutton.html)` wydarzenia z przycisku odpowiedniego sprzętu.
 
 ## Pomocy poleceń
 

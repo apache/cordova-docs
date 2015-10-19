@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureAudioOptions
 ---
 
 # CaptureAudioOptions
@@ -24,7 +26,7 @@ license: >
 
 ## プロパティ
 
-*   **制限**: デバイス ユーザーは、単一のキャプチャ操作で記録することができますオーディオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
+*   **制限**: [デバイス](../../device/device.html) ユーザーは、単一のキャプチャ操作で記録することができますオーディオ クリップの最大数。値 1 (デフォルトは 1) 以上にする必要があります。
 
 *   **期間**: オーディオのサウンド クリップの最大継続時間を秒単位で。
 

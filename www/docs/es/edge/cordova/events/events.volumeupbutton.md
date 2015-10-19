@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumeupbutton
 ---
 
 # volumeupbutton
@@ -29,7 +31,7 @@ El evento se desencadena cuando el usuario presiona el botón de volumen.
 
 Si necesita reemplazar el volumen predeterminado del comportamiento puede registrar un detector de eventos para el evento `volumeupbutton`.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 

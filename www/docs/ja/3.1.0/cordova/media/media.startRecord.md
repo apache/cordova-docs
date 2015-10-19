@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.startRecord
 ---
 
 # media.startRecord
@@ -140,7 +142,7 @@ license: >
 
 *   iOS の種類*.wav*と返しますエラー場合は、ファイル名拡張子がファイルをレコードのみが修正されません。
 
-*   記録は、アプリケーションの配置の完全なパスを指定しない場合 `documents/tmp` ディレクトリ。 これを介してアクセスすることができます、 `File` API を使用して `LocalFileSystem.TEMPORARY` 。 記録時に指定された任意のサブディレクトリに存在する必要があります。
+*   記録は、アプリケーションの配置の完全なパスを指定しない場合 `documents/tmp` ディレクトリ。 これを介してアクセスすることができます、 `File` API を使用して `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` 。 記録時に指定された任意のサブディレクトリに存在する必要があります。
 
 *   ファイルを記録し、再生することができますドキュメント URI を使用して。
     

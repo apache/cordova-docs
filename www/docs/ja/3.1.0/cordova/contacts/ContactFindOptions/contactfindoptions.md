@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactFindOptions
 ---
 
 # ContactFindOptions
 
-結果をフィルター処理するために使用できるプロパティが含まれています、 `contacts.find` 操作。
+結果をフィルター処理するために使用できるプロパティが含まれています、 `[contacts.find](../contacts.find.html)` 操作。
 
 ## プロパティ
 

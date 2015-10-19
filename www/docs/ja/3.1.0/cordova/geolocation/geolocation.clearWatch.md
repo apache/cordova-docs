@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
@@ -31,7 +33,7 @@ license: >
 
 ## 説明
 
-`geolocation.clearWatch`をオフにして、デバイスの場所の変更を見て停止します、 `geolocation.watchPosition` によって参照されます。`watchID`.
+`geolocation.clearWatch`をオフにして、デバイスの場所の変更を見て停止します、 `[geolocation.watchPosition](geolocation.watchPosition.html)` によって参照されます。`watchID`.
 
 ## サポートされているプラットフォーム
 

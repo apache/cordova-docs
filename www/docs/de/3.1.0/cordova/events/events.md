@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Veranstaltungen
 ---
 
 # Veranstaltungen
@@ -24,21 +26,21 @@ license: >
 
 ## Ereignistypen
 
-*   deviceready
-*   Anhalten
-*   Lebenslauf
-*   Online
-*   Offline
-*   BackButton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   menubutton
-*   SearchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [Anhalten](events.pause.html)
+*   [Lebenslauf](events.resume.html)
+*   [Online](events.online.html)
+*   [Offline](events.offline.html)
+*   [BackButton](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [menubutton](events.menubutton.html)
+*   [SearchButton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## Zugriff auf die Funktion
 
@@ -92,4 +94,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

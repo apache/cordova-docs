@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureVideo
 ---
 
 # capture.captureVideo
@@ -31,9 +33,9 @@ license: >
 
 Avvia un'operazione asincrona per acquisire registrazioni video usando registrazione video applicazione del dispositivo. L'operazione consente all'utente di catturare più registrazioni in una sola seduta.
 
-L'operazione di acquisizione termina quando l'utente chiude l'applicazione di registrazione video, o il numero massimo di registrazioni specificato da `CaptureVideoOptions.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra un unico video clip.
+L'operazione di acquisizione termina quando l'utente chiude l'applicazione di registrazione video, o il numero massimo di registrazioni specificato da `[CaptureVideoOptions](captureVideoOptions.html).limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra un unico video clip.
 
-Quando termina l'operazione di acquisizione, e la `CaptureCB` callback viene eseguita con una matrice di `MediaFile` oggetti che descrivono ciascuna catturato file videoclip. Se l'utente termina l'operazione prima di catturare un video clip, il `CaptureErrorCB` callback viene eseguita con un `CaptureError` oggetto con un `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, e la `[CaptureCB](CaptureCB.html)` callback viene eseguita con una matrice di `[MediaFile](MediaFile.html)` oggetti che descrivono ciascuna catturato file videoclip. Se l'utente termina l'operazione prima di catturare un video clip, il `[CaptureErrorCB](CaptureErrorCB.html)` callback viene eseguita con un `[CaptureError](CaptureError.html)` oggetto con un `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 
@@ -126,4 +128,4 @@ Quando termina l'operazione di acquisizione, e la `CaptureCB` callback viene ese
 
 ## BlackBerry WebWorks stranezze
 
-*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore Video** , fornito da RIM, per catturare le registrazioni video. L'applicazione riceve un `CaptureError.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
+*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore Video** , fornito da RIM, per catturare le registrazioni video. L'applicazione riceve un `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.

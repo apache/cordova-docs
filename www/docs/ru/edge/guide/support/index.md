@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Поддерживаемые Платформы
 ---
 
 # Поддерживаемые Платформы
@@ -59,7 +61,7 @@ license: >
       </th>
       
       <th>
-        <tt>Windows</tt><br />(8.0, 8.1,<br />Телефон 8.1)
+        <tt>Windows</tt><br />(8.0, 8.1, 10,<br />Телефон 8.1)
       </th>
       
       <th>
@@ -68,7 +70,7 @@ license: >
 <tbody>
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">Cordova <br />CLI</a>
+          <a href="../cli/index.html">Cordova <br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -108,15 +110,15 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Встроенный<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">Встроенный<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/amazonfireos/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/android/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="blackberry10" class="n">
@@ -126,7 +128,7 @@ license: >
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(см. подробности)</a>
+          <a href="../platforms/ios/webview.html">(см. подробности)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -144,33 +146,33 @@ license: >
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Подключаемый модуль<br />Интерфейс</a>
+          <a href="../hybrid/plugins/index.html">Подключаемый модуль<br />Интерфейс</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_plugin.md.html">(см. подробности)</a>
+          <a href="../platforms/amazonfireos/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_plugin.md.html">(см. подробности)</a>
+          <a href="../platforms/android/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_platforms_blackberry10_plugin.md.html">(см. подробности)</a>
+          <a href="../platforms/blackberry10/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_plugin.md.html">(см. подробности)</a>
+          <a href="../platforms/ios/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_platforms_wp8_plugin.md.html">(см. подробности)</a>
+          <a href="../platforms/wp8/plugin.html">(см. подробности)</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -458,7 +460,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">События</a>
+          <a href="../../cordova/events/events.html">События</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -793,7 +795,7 @@ license: >
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Хранилище</a>
+          <a href="../../cordova/storage/storage.html">Хранилище</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

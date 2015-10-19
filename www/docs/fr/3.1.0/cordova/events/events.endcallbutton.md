@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: endcallbutton
 ---
 
 # endcallbutton
@@ -29,7 +31,7 @@ Cet évènement se déclenche lorsque l'utilisateur appuie sur la touche fin d'a
 
 L'évènement modifie le comportement par défaut de la touche fin d'appel.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

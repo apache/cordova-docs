@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Positionsfehler
 ---
 
 # Positionsfehler
 
-A `PositionError` -Objekt übergeben, um die `geolocationError` Rückruf, wenn ein Fehler auftritt.
+A `PositionError` -Objekt übergeben, um die `[geolocationError](../parameters/geolocationError.html)` Rückruf, wenn ein Fehler auftritt.
 
 ## Eigenschaften
 
@@ -36,7 +38,7 @@ A `PositionError` -Objekt übergeben, um die `geolocationError` Rückruf, wenn e
 
 ## Beschreibung
 
-Das `PositionError` -Objekt übergeben, um die `geolocationError` Callback-Funktion tritt ein Fehler mit Geolocation.
+Das `PositionError` -Objekt übergeben, um die `[geolocationError](../parameters/geolocationError.html)` Callback-Funktion tritt ein Fehler mit [Geolocation](../geolocation.html).
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -44,8 +46,8 @@ Zurückgegeben, wenn der Benutzer die Anwendung zum Abrufen von Positionsinforma
 
 ### `PositionError.POSITION_UNAVAILABLE`
 
-Zurückgegeben, wenn das Gerät nicht in der Lage, eine Position abzurufen ist. Im Allgemeinen bedeutet dies, das Gerät hat keine Netzwerkkonnektivität und/oder kann kein Satelliten-Update erhalten.
+Zurückgegeben, wenn das [Gerät](../../device/device.html) nicht in der Lage, eine [Position](../Position/position.html) abzurufen ist. Im Allgemeinen bedeutet dies, das [Gerät](../../device/device.html) hat keine Netzwerkkonnektivität und/oder kann kein Satelliten-Update erhalten.
 
 ### `PositionError.TIMEOUT`
 
-Zurückgegeben, wenn das Gerät nicht in der Lage, eine Position innerhalb der angegebenen abzurufen ist die `geolocationOptions` ' `timeout` Eigenschaft. Bei Verwendung mit `geolocation.watchPosition` , dieser Fehler konnte übergeben werden, um die `geolocationError` Rückruf jedes `timeout` Millisekunden.
+Zurückgegeben, wenn das [Gerät](../../device/device.html) nicht in der Lage, eine [Position](../Position/position.html) innerhalb der angegebenen abzurufen ist die `[geolocationOptions](../parameters/geolocation.options.html)` ' `timeout` Eigenschaft. Bei Verwendung mit `[geolocation.watchPosition](../geolocation.watchPosition.html)` , dieser Fehler konnte übergeben werden, um die `[geolocationError](../parameters/geolocationError.html)` Rückruf jedes `timeout` Millisekunden.

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 # batterystatus
@@ -35,7 +37,7 @@ license: >
 
 *   **起こしたり**： デバイスが接続されてインチ*(ブール値)*かどうかを示すブール値
 
-通常アプリケーションに使用する必要があります `window.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `window.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

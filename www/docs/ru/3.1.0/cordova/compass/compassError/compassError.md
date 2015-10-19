@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CompassError
 ---
 
 # CompassError
 
-A `CompassError` объект возвращается к `compassError` функции обратного вызова при возникновении ошибки.
+A `CompassError` объект возвращается к `[compassError](../parameters/compassError.html)` функции обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -33,4 +35,4 @@ A `CompassError` объект возвращается к `compassError` фун�
 
 ## Описание
 
-Когда возникает ошибка, `CompassError` объект передается как параметр `compassError` функции обратного вызова.
+Когда возникает ошибка, `CompassError` объект передается как параметр `[compassError](../parameters/compassError.html)` функции обратного вызова.

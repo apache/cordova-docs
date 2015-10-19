@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureAudioOptions
 ---
 
 # CaptureAudioOptions
 
-> 오디오 캡처 구성 옵션을 캡슐화합니다.
+> 오디오 [캡처](capture.html) 구성 옵션을 캡슐화합니다.
 
 ## 속성
 
-*   **제한**: 최대 오디오 클립 장치 사용자는 단일 캡처 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+*   **제한**: 최대 오디오 클립 [장치](../../device/device.html) 사용자는 단일 [캡처](capture.html) 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 *   **기간**: 오디오 사운드 클립의 최대 기간 초.
 

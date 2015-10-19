@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: オンライン
 ---
 
 # オンライン
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細
 
-`online`以前接続されていないデバイスが、インターネットへのアプリケーション アクセスを許可するネットワーク接続を受信するときに発生します。 接続 API と同じ情報に依存しており、火災時の値 `connection.type` になります。`NONE`.
+`online`以前接続されていないデバイスが、インターネットへのアプリケーション アクセスを許可するネットワーク接続を受信するときに発生します。 [接続](../connection/connection.html) API と同じ情報に依存しており、火災時の値 `[connection.type](../connection/connection.type.html)` になります。`NONE`.
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 
@@ -85,7 +87,7 @@ license: >
 
 ## iOS の癖
 
-初回起動時には、最初の `online` (当てはまる場合) イベントが少なくとも火を前に第 2 `connection.type` は`UNKNOWN`.
+初回起動時には、最初の `online` (当てはまる場合) イベントが少なくとも火を前に第 2 `[connection.type](../connection/connection.type.html)` は`UNKNOWN`.
 
 ## Windows Phone 7 の癖
 

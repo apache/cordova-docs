@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.clearWatch
 ---
 
 # compass.clearWatch
 
-Stoppen Sie, beobachten den Kompass auf der Uhr-ID-Parameter verweist.
+Stoppen Sie, beobachten den [Kompass](compass.html) auf der Uhr-ID-Parameter verweist.
 
     navigator.compass.clearWatch(watchID);
     
 
-*   **WatchID**: die ID zurückgegebener`compass.watchHeading`.
+*   **WatchID**: die ID zurückgegebener`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Unterstützte Plattformen
 

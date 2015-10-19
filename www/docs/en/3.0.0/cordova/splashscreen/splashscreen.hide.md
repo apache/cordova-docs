@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.hide
 ---
 
 splashscreen.hide
@@ -39,12 +41,12 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.splashscreen.hide();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -77,7 +79,7 @@ iOS Quirk
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
 `false`. To delay hiding the splash screen for two seconds, add a
-timer such as the following in the `deviceready` event handler:
+timer such as the following in the `[deviceready](../events/events.deviceready.html)` event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

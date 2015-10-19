@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: L'Interface en ligne de commande
 ---
 
 # L'Interface en ligne de commande
@@ -133,13 +135,13 @@ Exécution de commandes pour ajouter ou supprimer des affects de plates-formes l
 
 **Avertissement**: lorsque vous utilisez l'interface CLI pour générer votre application, vous devriez modifier *n'est pas* tous les fichiers dans le `/platforms/` répertoire sauf si vous savez ce que vous faites, ou si la documentation spécifie autrement. Les fichiers dans ce répertoire sont systématiquement remplacés lors de la préparation des demandes de construction, ou lorsque les plugins sont réinstallés.
 
-Si vous le souhaitez à ce stade, vous pouvez utiliser un SDK comme Eclipse ou Xcode pour ouvrir le projet que vous avez créé. Vous devez ouvrir l'ensemble dérivé de l'actif de la `/platforms/` Répertoire de développer avec un SDK. C'est parce que les fichiers de métadonnées spécifiques de SDK sont stockés dans le cas échéant `/platform/` sous-répertoire. (Voir les Guides de la plate-forme pour plus d'informations sur la façon de développer des applications au sein de chaque IDE.) Utilisez cette approche si vous souhaitez simplement initialiser un projet à l'aide de la CLI, puis passer à un SDK pour le travail indigène.
+Si vous le souhaitez à ce stade, vous pouvez utiliser un SDK comme Eclipse ou Xcode pour ouvrir le projet que vous avez créé. Vous devez ouvrir l'ensemble dérivé de l'actif de la `/platforms/` Répertoire de développer avec un SDK. C'est parce que les fichiers de métadonnées spécifiques de SDK sont stockés dans le cas échéant `/platform/` sous-répertoire. (Voir les [Guides de la plate-forme](../platforms/index.html) pour plus d'informations sur la façon de développer des applications au sein de chaque IDE.) Utilisez cette approche si vous souhaitez simplement initialiser un projet à l'aide de la CLI, puis passer à un SDK pour le travail indigène.
 
 Lire sur si vous souhaitez utiliser l'approche de flux de travail multi-plateforme (CLI) pour le cycle de développement complet.
 
 ## Construire l'application
 
-Par défaut, le `cordova create` script génère une squelettique application web dont la page d'accueil est du projet `www/index.html` fichier. Modifier cette application, mais vous voulez, mais toute initialisation doit être spécifiée dans le cadre de la `deviceready` gestionnaire d'événements, référencé par défaut de`www/js/index.js`.
+Par défaut, le `cordova create` script génère une squelettique application web dont la page d'accueil est du projet `www/index.html` fichier. Modifier cette application, mais vous voulez, mais toute initialisation doit être spécifiée dans le cadre de la `[deviceready](../../cordova/events/events.deviceready.html)` gestionnaire d'événements, référencé par défaut de`www/js/index.js`.
 
 Exécutez la commande suivante pour générer itérativement le projet :
 
@@ -170,7 +172,7 @@ Certaines plates-formes mobiles émulent un périphérique par défaut, tels que
 
 **NOTE**: support d'émulateur n'est actuellement pas disponible pour Amazon Fire OS.
 
-(Voir les Guides de la plate-forme pour plus de détails.) Par exemple, vous pouvez d'abord exécuter la `android` commande pour lancer le SDK Android, puis exécutez une image de périphérique particulier, dont il lance selon son comportement par défaut :
+(Voir les [Guides de la plate-forme](../platforms/index.html) pour plus de détails.) Par exemple, vous pouvez d'abord exécuter la `android` commande pour lancer le SDK Android, puis exécutez une image de périphérique particulier, dont il lance selon son comportement par défaut :
 
 ![][4]
 
@@ -187,7 +189,7 @@ Alternativement, vous pouvez brancher le combiné dans votre ordinateur et teste
         $ cordova run android
     
 
-Avant d'exécuter cette commande, vous devez mettre en place le dispositif de test, suivant des procédures qui varient pour chaque plate-forme. Dans les appareils Android et OS feu Amazon, vous devrez activer une option de **Débogage USB** sur l'appareil et peut-être ajouter un pilote USB selon votre environnement de développement. Consultez les Guides de la plate-forme pour plus de détails sur les exigences de chaque plateforme.
+Avant d'exécuter cette commande, vous devez mettre en place le dispositif de test, suivant des procédures qui varient pour chaque plate-forme. Dans les appareils Android et OS feu Amazon, vous devrez activer une option de **Débogage USB** sur l'appareil et peut-être ajouter un pilote USB selon votre environnement de développement. Consultez les [Guides de la plate-forme](../platforms/index.html) pour plus de détails sur les exigences de chaque plateforme.
 
 ## Ajouter des fonctionnalités du Plugin
 
@@ -407,7 +409,7 @@ Exécutez `cordova -v` pour voir quelle version est en cours d'exécution. Exéc
         $ npm info cordova
     
 
-Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le répertoire de niveau supérieur `www` . Le cas échéant, plus amples détails au sujet de la mise à niveau vers 3.0 sont disponibles dans les Guides de la plate-forme. Une fois que vous passer à l'interface de ligne de commande de `cordova` et utilisez `mise à jour de la NGP` se pour tenir au courant, les plus longues procédures décrits là ne sont plus pertinentes.
+Cordova 3.0 est la première version à supporter l'interface de ligne de commande décrite dans cette section. Si vous mettez à jour depuis une version antérieure à 3.0, vous devez créer un nouveau projet, tel que décrit ci-dessus, puis copiez les actifs les plus âgés de l'application dans le répertoire de niveau supérieur `www` . Le cas échéant, plus amples détails au sujet de la mise à niveau vers 3.0 sont disponibles dans les [Guides de la plate-forme](../platforms/index.html). Une fois que vous passer à l'interface de ligne de commande de `cordova` et utilisez `mise à jour de la NGP` se pour tenir au courant, les plus longues procédures décrits là ne sont plus pertinentes.
 
 Cordova 3.0 + peut-être encore exiger des divers changements à la structure de répertoire au niveau du projet et les autres dépendances. Après avoir exécuté la commande `NGP` ci-dessus pour mettre à jour de Cordoue elle-même, vous devrez peut-être s'assurer que les ressources de votre projet sont conformes aux exigences de la version la plus récente. Exécutez une commande semblable à la suivante pour chaque plate-forme que vous générez :
 

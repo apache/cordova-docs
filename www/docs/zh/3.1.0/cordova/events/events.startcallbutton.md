@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: startcallbutton
 ---
 
 # startcallbutton
@@ -29,7 +31,7 @@ license: >
 
 如果您需要重寫預設開始調用行為您可以註冊為事件攔截器 `startcallbutton` 事件。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

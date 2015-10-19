@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 메타 데이터
 ---
 
 # 메타 데이터
@@ -24,11 +26,11 @@ license: >
 
 ## 속성
 
-*   **modificationTime**: 때 파일 또는 디렉터리가 마지막으로 수정 된 시간. *(날짜)*
+*   **modificationTime**: 때 [파일](../fileobj/fileobj.html) 또는 디렉터리가 마지막으로 수정 된 시간. *(날짜)*
 
 ## 세부 정보
 
-`Metadata`개체는 파일이 나 디렉터리의 상태에 대 한 정보를 나타냅니다. 전화는 `DirectoryEntry` 또는 `FileEntry` 개체의 `getMetadata()` 메서드 결과 `Metadata` 인스턴스.
+`Metadata`개체는 파일이 나 디렉터리의 상태에 대 한 정보를 나타냅니다. 전화는 `[DirectoryEntry](../directoryentry/directoryentry.html)` 또는 `[FileEntry](../fileentry/fileentry.html)` 개체의 `getMetadata()` 메서드 결과 `Metadata` 인스턴스.
 
 ## 지원 되는 플랫폼
 

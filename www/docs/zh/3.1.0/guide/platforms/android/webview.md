@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android WebViews
 ---
 
 # Android WebViews
 
 協助下開始在科爾多瓦 1.9， `CordovaActivity` ，你可以使用科爾多瓦作為一個更大的本機 Android 應用程式中的一個元件。 Android 是指這種元件 `CordovaWebView` 。 新的基於科爾多瓦的應用程式從 1.9 起使用 `CordovaWebView` 作為其主要的視圖，無論是否遺留下來 `CordovaActivity` 使用方法。
 
-如果你熟悉 Android 應用程式的開發，請閱讀 Android 平臺指南 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
+如果你熟悉 Android 應用程式的開發，請閱讀 [Android 平臺指南](index.html) 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
 
 ## 系統必備元件
 
@@ -32,11 +34,11 @@ license: >
 
 ## 在 android 系統的專案中使用 CordovaWebView 的指南
 
-1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar 檔 `cordova-x.x.x.jar` 在 `/framework` 目錄。
+1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar [檔](../../../cordova/file/fileobj/fileobj.html) `cordova-x.x.x.jar` 在 `/framework` 目錄。
 
 2.  科爾多瓦 jar 複製到您的 Android 專案 `/libs` 目錄。
 
-3.  編輯您的應用程式的 `main.xml` 檔 (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
+3.  編輯您的應用程式的 `main.xml` [檔](../../../cordova/file/fileobj/fileobj.html) (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"

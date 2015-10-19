@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Übersicht
 ---
 
 # Übersicht
 
-Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
+Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes [Gerät](../../cordova/device/device.html) Sensoren, Daten und Netzwerkstatus zugreifen.
 
 Verwenden Sie Cordova, falls Sie sind:
 
@@ -32,7 +34,7 @@ Verwenden Sie Cordova, falls Sie sind:
 
 ## Basiskomponenten
 
-Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese Datei entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
+Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese [Datei](../../cordova/file/fileobj/fileobj.html) entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
 
  [1]: http://www.w3.org/TR/widgets/
 
@@ -51,7 +53,7 @@ Die einfachste Möglichkeit, eine Anwendung eingerichtet ist, führen Sie die `c
 
 *   Für viele mobile Plattformen können Sie auch die CLI einrichten weitere Projekt-Dateien erforderlich, um innerhalb jedes SDK kompilieren. Damit dies funktioniert müssen Sie jede gezielte Plattform-SDK installieren. (Siehe den Plattform-Führern Anweisungen.) Wie in der folgenden Tabelle der Plattformunterstützung angegeben, müssen Sie möglicherweise die CLI auf verschiedenen Betriebssystemen abhängig von der Zielplattform ausgeführt.
 
-*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem Gerät.
+*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. <!--XREF (Siehe Application Development Guide für Details.) XREF--> für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem [Gerät](../../cordova/device/device.html).
 
 Zu jedem Zeitpunkt im Entwicklungszyklus können Sie sich auf Plattform-spezifischen SDK Tools verlassen, die eine umfangreichere Optionen bieten. (Siehe die Plattform-Führer für Details über jede Plattform-SDK-Tool festgelegt.) Eine SDK-Umgebung ist besser geeignet, wenn Sie möchten, eine Hybrid-app zu implementieren, die Web-basierte und native Anwendungskomponenten mischt. <!--XREF (Siehe Hybrid Application Guide für mehr informationen.) XREF--> Sie können das Befehlszeile-Dienstprogramm verwenden, um zunächst die app generieren oder iterativ danach, aktualisierten Code zu SDK-Tools zu ernähren. Sie können die app-Konfigurationsdatei auch selbst erstellen. 
 
@@ -111,7 +113,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">Cordova<br />CLI</a>
+          <a href="../cli/index.html">Cordova<br />CLI</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -147,11 +149,11 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Eingebettete<br />WebView</a>
+          <a href="../hybrid/webviews/index.html">Eingebettete<br />WebView</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">(siehe Details)</a>
+          <a href="../platforms/android/webview.html">(siehe Details)</a>
         </td>
         
         <td data-col="blackberry" class="n">
@@ -161,7 +163,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">(siehe Details)</a>
+          <a href="../platforms/ios/webview.html">(siehe Details)</a>
         </td>
         
         <td data-col="winphone7"  class="n">
@@ -179,27 +181,27 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Plug-in<br />Schnittstelle</a>
+          <a href="../hybrid/plugins/index.html">Plug-in<br />Schnittstelle</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(siehe Details)</a>
+          <a href="../guide/platforms/android/plugin.html">(siehe Details)</a>
         </td>
         
         <td data-col="blackberry" class="y">
-          <a href="guide_guide_platforms_blackberry_plugin.md.html">(siehe Details)</a>
+          <a href="../guide/platforms/blackberry/plugin.html">(siehe Details)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(siehe Details)</a>
+          <a href="../guide/platforms/blackberry10/plugin.html">(siehe Details)</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(siehe Details)</a>
+          <a href="../guide/platforms/ios/plugin.html">(siehe Details)</a>
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(siehe Details)</a>
+          <a href="../guide/platforms/wp8/plugin.html">(siehe Details)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -223,7 +225,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Beschleunigungsmesser</a>
+          <a href="../../cordova/accelerometer/accelerometer.html">Beschleunigungsmesser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -253,7 +255,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Kamera</a>
+          <a href="../../cordova/camera/camera.html">Kamera</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -283,7 +285,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Erfassen</a>
+          <a href="../../cordova/media/capture/capture.html">Erfassen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -313,7 +315,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Kompass</a>
+          <a href="../../cordova/compass/compass.html">Kompass</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -344,7 +346,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Verbindung</a>
+          <a href="../../cordova/connection/connection.html">Verbindung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -374,7 +376,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Kontakte</a>
+          <a href="../../cordova/contacts/contacts.html">Kontakte</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -404,7 +406,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Gerät</a>
+          <a href="../../cordova/device/device.html">Gerät</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -434,7 +436,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_events_events.md.html">Veranstaltungen</a>
+          <a href="../../cordova/events/events.html">Veranstaltungen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -464,7 +466,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Datei</a>
+          <a href="../../cordova/file/file.html">Datei</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -480,11 +482,11 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="winphone7"  class="p">
-          kein FileTransfer
+          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="winphone8"  class="p">
-          kein FileTransfer
+          kein <a href="../../cordova/file/filetransfer/filetransfer.html">FileTransfer</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -496,7 +498,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Geolocation</a>
+          <a href="../../cordova/geolocation/geolocation.html">Geolocation</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -526,7 +528,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Globalisierung</a>
+          <a href="../../cordova/globalization/globalization.html">Globalisierung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -556,7 +558,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -586,7 +588,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Medien</a>
+          <a href="../../cordova/media/media.html">Medien</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -616,7 +618,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Benachrichtigung</a>
+          <a href="../../cordova/notification/notification.html">Benachrichtigung</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -646,7 +648,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
+          <a href="../../cordova/splashscreen/splashscreen.html">SplashScreen</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -676,7 +678,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Speicher</a>
+          <a href="../../cordova/storage/storage.html">Speicher</a>
         </th>
         
         <td data-col="android"    class="y">

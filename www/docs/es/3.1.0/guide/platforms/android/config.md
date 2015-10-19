@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Configuración de Android
 ---
 
 # Configuración de Android
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena.
+*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `[pause](../../../cordova/events/events.pause.html)` de evento se desencadena.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -47,7 +49,7 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
+*   `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
     
         <preference name="SplashScreen" value="splash"/>
         

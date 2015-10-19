@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8.0 WebViews
 ---
 
 # Windows Phone 8.0 WebViews
@@ -39,4 +41,4 @@ license: >
 
   5. Скопируйте `wp8/template/config.xml` в корневой каталог проекта и
 
-Инструкции выше подключат только основные компоненты Cordova, см Использование Plugman для управления расширениями для того, чтобы подключить плагины Cordova.
+[Инструкции](../../../index.html) выше подключат только основные компоненты Cordova, см [Использование Plugman для управления расширениями](../../../plugin_ref/plugman.html) для того, чтобы подключить плагины Cordova.

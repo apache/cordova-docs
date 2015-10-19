@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassError
 ---
 
 # compassError
 
-나침반 기능에 대 한 onError 콜백 함수입니다.
+[나침반](../compass.html) 기능에 대 한 onError 콜백 함수입니다.
 
 ## 예를 들어
 

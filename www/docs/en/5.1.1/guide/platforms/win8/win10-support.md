@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Cordova for Windows 10 #
 ---
 
 # Cordova for Windows 10 #
@@ -53,7 +55,7 @@ The following capabilities are unavailable when deploying your Remote Mode appli
 - Music Library (`musicLibrary`)
 - Pictures Library (`picturesLibrary`)
 - Videos Library (`videosLibrary`)
-- Removable Storage (`removableStorage`)
+- Removable [Storage](../../../cordova/storage/storage.html) (`removableStorage`)
 - Internet client/server (`internetClientClientServer`) - note that `internetClient` is still permitted
 - Private network client/server (`privateNetworkClientServer`)
 

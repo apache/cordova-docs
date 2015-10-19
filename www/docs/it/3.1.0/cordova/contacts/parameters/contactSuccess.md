@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 # contactSuccess
 
-Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `contacts.find` operazione.
+Funzione di callback di successo che fornisce il `Contact` matrice risultante da una `[contacts.find](../contacts.find.html)` operazione.
 
     function(contacts) {
         // Do something

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: menubutton
 ---
 
 # menubutton
@@ -29,7 +31,7 @@ license: >
 
 Применение обработчика события переопределяет поведение кнопки меню по умолчанию.
 
-Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `[deviceready](events.deviceready.html)`.
 
 ## Поддерживаемые платформы
 

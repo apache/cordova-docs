@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 플러그인 명세
 ---
 
 # 플러그인 명세
@@ -60,7 +62,7 @@ license: >
         ^\d+[.]\d+[.]\d+$
     
 
-엔진 요소 또한 반복을 방지 하 고 기본 플랫폼 업데이트 될 때 유지 보수를 줄이기 위해 유사 항목 일치를 지정할 수 있습니다. 도구 최소 지원 한다 `>` , `>=` , `<` 및 `<=` , 예를 들면:
+엔진 요소 또한 반복을 방지 하 고 기본 플랫폼 업데이트 될 때 [유지](../guide/next/index.html) 보수를 줄이기 위해 유사 항목 일치를 지정할 수 있습니다. 도구 최소 지원 한다 `>` , `>=` , `<` 및 `<=` , 예를 들면:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -250,7 +252,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     </platform>
     
 
-필요한 `name` 특성을 식별 하는 플랫폼 지원, 플랫폼 요소의 자식 연결.
+필요한 `name` 특성을 식별 하는 [플랫폼 지원](../guide/support/index.html), 플랫폼 요소의 자식 연결.
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 
@@ -338,7 +340,7 @@ XML에 대 한 예제:
 
  [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
 
-Windows 플랫폼 지원 (모두 선택) 2 개의 추가적인 특성 메타 이름 `package.appxmanifest`에 영향을 미치는 때:
+Windows [플랫폼 지원](../guide/support/index.html) (모두 선택) 2 개의 추가적인 특성 메타 이름 `package.appxmanifest`에 영향을 미치는 때:
 
 `device-target` 특성을 나타냅니다는 지정 된 대상 장치 유형에 대 한 빌드할 때 포함 되어야만 합니다. 지원 되는 값은 `win`, `phone`또는 `all`.
 

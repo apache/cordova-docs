@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 10 コルドバ
 ---
 
 # Windows 10 コルドバ
@@ -48,7 +50,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
   * 音楽ライブラリ (`musicLibrary`)
   * 画像ライブラリ (`picturesLibrary`)
   * 動画ライブラリ (`videosLibrary`)
-  * リムーバブル ストレージ (`removableStorage`)
+  * リムーバブル [ストレージ](../../../cordova/storage/storage.html) (`removableStorage`)
   * インターネット クライアント/サーバー (`internetClientClientServer`) - その`internetClient`に注意してくださいが許可されても
   * プライベート ネットワーク クライアント/サーバー (`privateNetworkClientServer`)
 

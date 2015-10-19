@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileReader
 ---
 
 FileReader
@@ -63,7 +65,7 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {
@@ -89,7 +91,7 @@ __パラメーター:__
 - file - 読み込むファイルのフルパスを表します
 - encoding - ファイルのコンテンツのエンコードを表します (デフォルト: UTF-8)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function win(file) {

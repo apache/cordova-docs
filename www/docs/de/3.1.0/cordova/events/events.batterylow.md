@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterylow
 ---
 
 # batterylow
@@ -33,9 +35,9 @@ Die `batterylow` Handler übergeben wird ein Objekt mit zwei Eigenschaften:
 
 *   **Ebene**: der Prozentsatz der Batterieladung (0-100). *(Anzahl)*
 
-*   **IsPlugged**: ein boolescher Wert, der angibt, ob das Gerät eingesteckt Zoll *(boolesch)*
+*   **IsPlugged**: ein boolescher Wert, der angibt, ob das [Gerät](../device/device.html) eingesteckt Zoll *(boolesch)*
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

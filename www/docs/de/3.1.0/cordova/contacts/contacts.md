@@ -16,35 +16,37 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Kontakte
 ---
 
 # Kontakte
 
-> Das `contacts` Objekt bietet Zugriff auf die Kontaktdatenbank Gerät.
+> Das `contacts` Objekt bietet Zugriff auf die Kontaktdatenbank [Gerät](../device/device.html).
 
-**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Kontaktdaten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app Kontaktdaten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. Kontaktinformationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung Zugriff oder die Verwendung der Kontaktdaten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf Kontaktdaten einholen. Eine klare und leicht verständliche Benutzererfahrung rund um den Einsatz von Kontakt Daten hilft Benutzer Verwirrung zu vermeiden und wahrgenommene Missbrauch der Kontaktdaten. Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Kontaktdaten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app Kontaktdaten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. Kontaktinformationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung Zugriff oder die Verwendung der Kontaktdaten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese [Benachrichtigung](../notification/notification.html) sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf Kontaktdaten einholen. Eine klare und leicht verständliche Benutzererfahrung rund um den Einsatz von [Kontakt](Contact/contact.html) Daten hilft Benutzer Verwirrung zu vermeiden und wahrgenommene Missbrauch der Kontaktdaten. Weitere Informationen finden Sie in der [Datenschutz-Guide](../../guide/appdev/privacy/index.html).
 
 ## Methoden
 
-*   Contacts.Create
+*   [Contacts.Create](contacts.create.html)
 *   Contacts.Find
 
 ## Argumente
 
-*   contactFields
-*   contactSuccess
-*   contactError
-*   contactFindOptions
+*   [contactFields](parameters/contactFields.html)
+*   [contactSuccess](parameters/contactSuccess.html)
+*   [contactError](parameters/contactError.html)
+*   [contactFindOptions](parameters/contactFindOptions.html)
 
 ## Objekte
 
-*   Kontakt
-*   ContactName
-*   ContactField
-*   ContactAddress
-*   ContactOrganization
-*   ContactFindOptions
-*   ContactError
+*   [Kontakt](Contact/contact.html)
+*   [ContactName](ContactName/contactname.html)
+*   [ContactField](ContactField/contactfield.html)
+*   [ContactAddress](ContactAddress/contactaddress.html)
+*   [ContactOrganization](ContactOrganization/contactorganization.html)
+*   [ContactFindOptions](ContactFindOptions/contactfindoptions.html)
+*   [ContactError](ContactError/contactError.html)
 
 ## Zugriff auf die Funktion
 
@@ -104,4 +106,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

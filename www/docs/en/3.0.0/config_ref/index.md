@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Configuration Reference
 ---
 
 # Configuration Reference
@@ -37,9 +39,9 @@ the platform, its contents generally do not. Some platform-specific
 features are also specified in the same configuration file. Details
 are listed below:
 
-- iOS Configuration
-- Android Configuration
-- BlackBerry Configuration
+- [iOS Configuration](../guide/platforms/ios/config.html)
+- [Android Configuration](../guide/platforms/android/config.html)
+- [BlackBerry Configuration](../guide/platforms/blackberry/config.html)
 
 ## config.xml Elements
 
@@ -69,7 +71,7 @@ otherwise unavailable to typical web-based applications.
 ### `<access>`
 
 These elements define how your whitelist works. Please see the
-Domain Whitelist Guide for more information.
+[Domain Whitelist Guide](../guide/appdev/whitelist/index.html) for more information.
 
 ### `<content>`
 

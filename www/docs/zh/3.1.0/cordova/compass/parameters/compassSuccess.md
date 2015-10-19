@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 # compassSuccess
 
-提供了通過的羅經航向資訊的 onSuccess 回呼函數 `compassHeading` 物件。
+提供了通過的羅經航向資訊的 onSuccess 回呼函數 `[compassHeading](compassHeading.html)` 物件。
 
     function(heading) {
         // Do something

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 10 명령줄 도구
 ---
 
 # 블랙베리 10 명령줄 도구
@@ -56,9 +58,9 @@ license: >
 
 *   `<name>`대상에 대 한 고유 이름을 지정합니다.
 
-*   `<ip-address>`검은 딸기 장치 또는 시뮬레이터의 ip 주소를 지정합니다.
+*   `<ip-address>`검은 딸기 [장치](../../../cordova/device/device.html) 또는 시뮬레이터의 ip 주소를 지정합니다.
 
-*   `-p | --password <password>`장치 또는 에뮬레이터에 대 한 암호를 지정합니다. 이것이 장치 또는 에뮬레이터는 암호로 보호 된 경우에 필요 합니다.
+*   `-p | --password <password>`[장치](../../../cordova/device/device.html) 또는 에뮬레이터에 대 한 암호를 지정합니다. 이것이 [장치](../../../cordova/device/device.html) 또는 에뮬레이터는 암호로 보호 된 경우에 필요 합니다.
 
 *   `--pin <device-pin>`디버그 토큰에 대 한 유효한 호스트 장치를 식별 하는 블랙베리 장치의 PIN을 지정 합니다. 이 인수는 디버그 토큰을 만드는 경우에 필요 합니다.
 
@@ -74,7 +76,7 @@ license: >
 
 ## 빌드
 
-`build`명령.bar 파일로 프로젝트를 빌드합니다. 어느 릴리스 모드 (서명된.bar 파일 생성)에서 또는 디버그 모드 (생산 부호 없는.bar 파일)에서 응용 프로그램을 빌드할 수 있습니다.
+`build`명령.bar 파일로 프로젝트를 빌드합니다. 어느 릴리스 모드 (서명된.bar [파일](../../../cordova/file/fileobj/fileobj.html) 생성)에서 또는 디버그 모드 (생산 부호 없는.bar 파일)에서 응용 프로그램을 빌드할 수 있습니다.
 
 ### 릴리스 모드에서 프로젝트를 빌드
 
@@ -96,7 +98,7 @@ license: >
 
 어디
 
-*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 를 지정 하지 않으면 기본 대상을 사용 하는 경우 하나 만들었습니다. 이 인수는 단지 필요 블랙베리 장치에 응용 프로그램을 배포 하는 스크립트 또는 에뮬레이터 및 기본 대상 작성 하지 않았습니다. 또한, 경우 `<target>` 은 장치, 장치를 USB 연결 하 여 컴퓨터에 연결 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 연결 되어야 합니다.
+*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 를 지정 하지 않으면 기본 대상을 사용 하는 경우 하나 만들었습니다. 이 인수는 단지 필요 블랙베리 장치에 응용 프로그램을 배포 하는 스크립트 또는 에뮬레이터 및 기본 대상 작성 하지 않았습니다. 또한, 경우 `<target>` 은 [장치](../../../cordova/device/device.html), 장치를 USB [연결](../../../cordova/connection/connection.html) 하 여 컴퓨터에 [연결](../../../cordova/connection/connection.html) 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 [연결](../../../cordova/connection/connection.html) 되어야 합니다.
 
 *   `-k | --keystorepass <password>`응용 프로그램에 서명 하 여 컴퓨터를 구성할 때 정의 된 암호를 지정 합니다. 이 암호 또한 디버그 토큰을 만드는 데 사용 됩니다. 이 인수는 스크립트를 만들고 당신을 위해 디버그 토큰 설치 경우에 필요 합니다.
 
@@ -111,14 +113,14 @@ license: >
 
 ## 실행
 
-`run`명령을 지정 된 블랙베리 장치 또는 에뮬레이터에서 응용 프로그램을 배포 합니다. 응용 프로그램을 배포 하기 전에 먼저 장치 또는 에뮬레이터 대상 스크립트를 사용 하 여 응용 프로그램을 배포 하려면 대상을 만들어야 합니다. 배포 스크립트는 응용 프로그램의 최신 빌드를 배포 됩니다.
+`run`명령을 지정 된 블랙베리 [장치](../../../cordova/device/device.html) 또는 에뮬레이터에서 응용 프로그램을 배포 합니다. 응용 프로그램을 배포 하기 전에 먼저 [장치](../../../cordova/device/device.html) 또는 에뮬레이터 대상 스크립트를 사용 하 여 응용 프로그램을 배포 하려면 대상을 만들어야 합니다. 배포 스크립트는 응용 프로그램의 최신 빌드를 배포 됩니다.
 
     < 경로 프로젝트 >/코르도바/< 대상 > 실행
     
 
 어디
 
-*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 은 장치, 장치를 USB 연결 하 여 컴퓨터에 연결 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 연결 되어야 합니다.
+*   `<target>`이전에 추가 된 대상의 이름을 지정합니다. 경우 `<target>` 은 [장치](../../../cordova/device/device.html), 장치를 USB [연결](../../../cordova/connection/connection.html) 하 여 컴퓨터에 [연결](../../../cordova/connection/connection.html) 해야 합니다 또는 컴퓨터와 동일한 Wi-fi 네트워크에 [연결](../../../cordova/connection/connection.html) 되어야 합니다.
 
 ## 플러그인
 

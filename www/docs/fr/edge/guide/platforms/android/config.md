@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Configuration d'Android
 ---
 
 # Configuration d'Android
@@ -24,7 +26,7 @@ Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'appl
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning` (boolean, vaut par défaut `true`): Détermine si l'application doit continuer de s'exécuter en arrière-plan, même après le déclenchement d'un événement `pause`. Affectation de `false` ne tue pas l'appli après un `pause` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
+*   `KeepRunning` (boolean, vaut par défaut `true`): Détermine si l'application doit continuer de s'exécuter en arrière-plan, même après le déclenchement d'un événement `[pause](../../../cordova/events/events.pause.html)`. Affectation de `false` ne tue pas l'appli après un `[pause](../../../cordova/events/events.pause.html)` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -44,7 +46,7 @@ Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'appl
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled` (boolean, vaut `true` par défaut) : contrôle si les pages ouvertes dans une fenêtre InAppBrowser accèderont ou non aux même espaces de stockage (localStorage et WebSQL) que celles ouvertes avec le navigateur par défaut.
+*   `InAppBrowserStorageEnabled` (boolean, vaut `true` par défaut) : contrôle si les pages ouvertes dans une fenêtre InAppBrowser accèderont ou non aux même espaces de stockage ([localStorage](../../../cordova/storage/localstorage/localstorage.html) et WebSQL) que celles ouvertes avec le navigateur par défaut.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

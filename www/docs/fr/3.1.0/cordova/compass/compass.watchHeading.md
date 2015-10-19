@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeading
 ---
 
 # compass.watchHeading
@@ -29,9 +31,9 @@ license: >
 
 La boussole est un capteur qui détecte la direction ou la position vers laquelle l'appareil pointe. Il mesure la direction en degrés de 0 à 359.99.
 
-Le `compass.watchHeading` obtient la direction actuelle de l'appareil à intervalle régulier. Chaque fois que la direction est récupérée, la fonction de callback `headingSuccess` est exécutée. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` dans l'objet `compassOptions`.
+Le `compass.watchHeading` obtient la direction actuelle de l'appareil à intervalle régulier. Chaque fois que la direction est récupérée, la fonction de callback `headingSuccess` est exécutée. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` dans l'objet `[compassOptions](parameters/compassOptions.html)`.
 
-L'ID de surveillance retourné référence l'intervalle de surveillance de la boussole. L'ID de surveillance peut être utilisé avec `compass.clearWatch` pour arrêter de surveiller la boussole.
+L'ID de surveillance retourné référence l'intervalle de surveillance de la boussole. L'ID de surveillance peut être utilisé avec `[compass.clearWatch](compass.clearWatch.html)` pour arrêter de surveiller la boussole.
 
 ## Plates-formes prises en charge
 
@@ -127,6 +129,6 @@ L'ID de surveillance retourné référence l'intervalle de surveillance de la bo
 
 ## Spécificités iOS
 
-Dans iOS `compass.watchHeading` peut également récupérer la direction actuelle de l'appareil lorsqu'elle change d'un certain nombre de degrés. Chaque fois que la direction change du nombre de degrés spécifiés ou plus, la fonction de callback `headingSuccess` s'exécute. Spécifier les degrés de changement via le paramètre `filter` dans l'objet `compassOptions`. Désactivez la boussole comme d'habitude en passant l'ID de surveillance retourné à `compass.clearWatch` . Cette fonctionnalité remplace les fonctionnalités précédentes, uniquement sur iOS, `watchHeadingFilter` et `clearWatchFilter`, qui ont été supprimées dans la version 1.6.
+Dans iOS `compass.watchHeading` peut également récupérer la direction actuelle de l'appareil lorsqu'elle change d'un certain nombre de degrés. Chaque fois que la direction change du nombre de degrés spécifiés ou plus, la fonction de callback `headingSuccess` s'exécute. Spécifier les degrés de changement via le paramètre `filter` dans l'objet `[compassOptions](parameters/compassOptions.html)`. Désactivez la boussole comme d'habitude en passant l'ID de surveillance retourné à `[compass.clearWatch](compass.clearWatch.html)` . Cette fonctionnalité remplace les fonctionnalités précédentes, uniquement sur iOS, `watchHeadingFilter` et `clearWatchFilter`, qui ont été supprimées dans la version 1.6.
 
 Seulement un `watchHeading` peut être utilisé à un moment donné sur iOS. Si un `watchHeading` utilise un filtre, un appel à `getCurrentHeading` ou `watchHeading` utilise la valeur existante de filtre pour spécifier des changements de direction. Surveiller les changements de position avec un filtre est plus efficace qu'avec des intervalles de temps.

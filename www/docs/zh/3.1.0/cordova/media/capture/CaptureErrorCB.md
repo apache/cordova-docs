@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureErrorCB
 ---
 
 # CaptureErrorCB
@@ -29,7 +31,7 @@ license: >
 
 如果發生錯誤時試圖發起一個媒體捕獲操作，執行此函數。 故障情形包括捕獲應用程式正忙、 捕獲操作已經發生，或使用者取消該操作之前捕獲任何媒體檔案時。
 
-此函數執行與 `CaptureError` 物件，其中包含適當的錯誤`code`.
+此函數執行與 `[CaptureError](CaptureError.html)` 物件，其中包含適當的錯誤`code`.
 
 ## 快速的示例
 

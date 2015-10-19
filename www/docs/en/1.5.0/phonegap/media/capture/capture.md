@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Capture
 ---
 
 Capture
@@ -27,22 +29,22 @@ Objects
 -------
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
-- CaptureCB
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- [CaptureAudioOptions](captureAudioOptions.html)
+- [CaptureImageOptions](captureImageOptions.html)
+- [CaptureVideoOptions](captureVideoOptions.html)
+- [CaptureCB](CaptureCB.html)
+- [CaptureErrorCB](CaptureErrorCB.html)
+- [ConfigurationData](ConfigurationData.html)
+- [MediaFile](MediaFile.html)
+- [MediaFileData](MediaFileData.html)
 
 Methods
 -------
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- [capture.captureAudio](captureAudio.html)
+- [capture.captureImage](captureImage.html)
+- [capture.captureVideo](captureVideo.html)
+- [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 Scope
 -----
@@ -62,9 +64,9 @@ Properties
 Methods
 -------
 
-- capture.captureAudio: Launch the device audio recording application for recording audio clip(s).
-- capture.captureImage: Launch the device camera application for taking image(s).
-- capture.captureVideo: Launch the device video recorder application for recording video(s).
+- [capture.captureAudio](captureAudio.html): Launch the device audio recording application for recording audio clip(s).
+- [capture.captureImage](captureImage.html): Launch the device camera application for taking image(s).
+- [capture.captureVideo](captureVideo.html): Launch the device video recorder application for recording video(s).
 
 
 Supported Platforms

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Dateisystem
 ---
 
 # Dateisystem
@@ -30,7 +32,7 @@ Dieses Objekt stellt ein Dateisystem.
 
 ## Informationen
 
-Das `FileSystem` Objekt stellt Informationen über das Dateisystem. Der Name des Dateisystems ist eindeutig die Liste der exponierten Dateisysteme. Die Root-Eigenschaft enthält ein `DirectoryEntry` -Objekt, das Dateisystem Root-Verzeichnis darstellt.
+Das `FileSystem` Objekt stellt Informationen über das Dateisystem. Der Name des Dateisystems ist eindeutig die Liste der exponierten Dateisysteme. Die Root-Eigenschaft enthält ein `[DirectoryEntry](../directoryentry/directoryentry.html)` -Objekt, das Dateisystem Root-Verzeichnis darstellt.
 
 ## Unterstützte Plattformen
 

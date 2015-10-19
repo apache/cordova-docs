@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: connection.type
 ---
 
 connection.type
@@ -40,7 +42,7 @@ connection.type
 - webOS
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {
@@ -124,7 +126,7 @@ webOS に関する注意点
 Windows Phone に関する注意点
 --------------------
 
-- Windows Phone Emulator は常に `navigator.network.connection.type` を `Connection.UNKNOWN` と返します。
+- Windows Phone Emulator は常に `navigator.network.connection.type` を `[Connection](connection.html).UNKNOWN` と返します。
 
 Tizen に関する注意点
 --------------------

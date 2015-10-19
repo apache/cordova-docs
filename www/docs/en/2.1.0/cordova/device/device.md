@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Device
 ---
 
 Device
@@ -26,11 +28,11 @@ Device
 Properties
 ----------
 
-- device.name
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
+- [device.name](device.name.html)
+- [device.cordova](device.cordova.html)
+- [device.platform](device.platform.html)
+- [device.uuid](device.uuid.html)
+- [device.version](device.version.html)
 
 Variable Scope
 --------------

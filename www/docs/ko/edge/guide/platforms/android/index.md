@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 안 드 로이드 플랫폼 가이드
 ---
 
 # 안 드 로이드 플랫폼 가이드
@@ -164,7 +166,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ## 새 프로젝트 만들기
 
-이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 명령줄 인터페이스 또는 안 드 로이드 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:
+이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 [명령줄 인터페이스](../../cli/index.html) 또는 안 드 로이드 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:
 
         $ cordova create hello com.example.hello HelloWorld
         $ cd hello

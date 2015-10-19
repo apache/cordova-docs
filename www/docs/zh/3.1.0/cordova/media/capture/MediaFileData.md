@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFileData
 ---
 
 # MediaFileData
@@ -36,7 +38,7 @@ license: >
 
 ## 黑莓 WebWorks 怪癖
 
-沒有 API 提供的格式資訊的媒體檔案，所以 `MediaFileData` 物件返回的 `MediaFile.getFormatData` 功能以下預設值：
+沒有 API 提供的格式資訊的媒體檔案，所以 `MediaFileData` 物件返回的 `[MediaFile.getFormatData](MediaFile.getFormatData.html)` 功能以下預設值：
 
 *   **編解碼器**： 不受支援，並且返回`null`.
 

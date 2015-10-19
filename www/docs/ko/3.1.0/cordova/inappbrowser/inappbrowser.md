@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: InAppBrowser
 ---
 
 # InAppBrowser
 
-> `InAppBrowser`때 표시 하는 웹 브라우저 보기 전화 `window.open()` , 또는 때로 형성 된 링크 열기`<a target="_blank">`.
+> `InAppBrowser`때 표시 하는 웹 브라우저 보기 전화 `[window.open](window.open.html)()` , 또는 때로 형성 된 링크 열기`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
@@ -29,7 +31,7 @@ license: >
 
 ## 설명
 
-호출에서 반환 하는 개체`window.open`.
+호출에서 반환 하는 개체`[window.open](window.open.html)`.
 
 ## 메서드
 
@@ -42,7 +44,7 @@ license: >
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.inappbrowser
         $ cordova plugin ls
@@ -71,7 +73,7 @@ license: >
         <feature name="InAppBrowser" />
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.
 
 # addEventListener
 
@@ -82,7 +84,7 @@ license: >
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창 *(InAppBrowser)*
 
-*   **eventname**: *(문자열)를* 수신 하도록 이벤트
+*   **eventname**: *(문자열)를* 수신 하도록 [이벤트](../events/events.html)
     
     *   **loadstart**: 이벤트 발생 때는 `InAppBrowser` URL 로드를 시작 합니다.
     *   **loadstop**: 이벤트가 발생 시기는 `InAppBrowser` URL 로드 완료.
@@ -144,7 +146,7 @@ license: >
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창. *(InAppBrowser)*
 
-*   **eventname**: 이벤트 수신 대기를 중지 합니다. *(문자열)*
+*   **eventname**: [이벤트](../events/events.html) 수신 대기를 중지 합니다. *(문자열)*
     
     *   **loadstart**: 이벤트 발생 때는 `InAppBrowser` URL 로드를 시작 합니다.
     *   **loadstop**: 이벤트가 발생 시기는 `InAppBrowser` URL 로드 완료.

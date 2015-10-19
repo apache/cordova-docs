@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Tizen
 ---
 
 Getting Started with Tizen
@@ -76,7 +78,7 @@ This guide describes how to set up your development environment for Cordova and 
     - Your project should now have been created and appear **Project Explorer** view
 
 
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 - To build your project:
 

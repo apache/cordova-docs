@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS guida piattaforma
 ---
 
 # iOS guida piattaforma
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per i dispositivi iOS come iPhone e iPad. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   Configurazione iOS
-*   L'aggiornamento iOS
-*   iOS visualizzazioni Web
-*   iOS Plugins
+*   [Configurazione iOS](config.html)
+*   [L'aggiornamento iOS](upgrading.html)
+*   [iOS visualizzazioni Web](webview.html)
+*   [iOS Plugins](plugin.html)
 *   iOS Guida strumento Shell
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.

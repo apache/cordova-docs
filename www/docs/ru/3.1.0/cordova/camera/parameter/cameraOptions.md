@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraOptions
 ---
 
 # cameraOptions
@@ -61,7 +63,7 @@ license: >
 
 *   **saveToPhotoAlbum**: сохранить изображение в фотоальбом на устройстве после захвата. *(Логический)*
 
-*   **popoverOptions**: только для iOS параметры, которые определяют местоположение инструмента в iPad. Определены в`CameraPopoverOptions`.
+*   **popoverOptions**: только для iOS параметры, которые определяют местоположение инструмента в iPad. Определены в`[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -84,7 +86,7 @@ license: >
 
 *   Игнорирует `allowEdit` параметр.
 
-*   Приложение должно иметь разрешения ключевых инъекции закрыть приложение, предназначенное для камеры после того, как пользователь прикрепляет фото.
+*   Приложение должно иметь разрешения ключевых инъекции [закрыть](../../inappbrowser/inappbrowser.html) приложение, предназначенное для камеры после того, как пользователь прикрепляет фото.
 
 *   Использование размеров больших изображений может привести к невозможности кодирования изображений на поздней модели устройств (например, факел 9800) что функция камер высокого разрешения.
 

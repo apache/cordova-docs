@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Plugins
 ---
 
 # Android Plugins
@@ -24,7 +26,7 @@ Ta razdelek ponuja podrobnosti za kako izvajati native plugin kodo na Android pl
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android plugins temeljijo na Cordova-Android, ki je sestavljen iz Android spletni pogled s kavlji, ki je pritrjena nanj. Plugins so predstavljene kot razred preslikave v v `config.xml` datoteko. Plugin sestavlja vsaj en Java razred, ki se razteza na `CordovaPlugin` razred, nedoločni zaimek od glaven svoje `execute` metode. Kot najboljša praksa, plugin bi obravnavala tudi `pause` in `resume` dogodki, skupaj z vsako sporočilo, ki poteka med plugins. Plugins z zahteva dolgotrajen, ozadje dejavnost predvajanje medijev, poslušalci ali notranje stanje mora izvajati v `onReset()` metode kot dobro. To izvede, ko se `WebView` premakne se nova stran ali Osveži, ki polnitve JavaScript.
+Android plugins temeljijo na Cordova-Android, ki je sestavljen iz Android spletni pogled s kavlji, ki je pritrjena nanj. Plugins so predstavljene kot razred preslikave v v `config.xml` datoteko. Plugin sestavlja vsaj en Java razred, ki se razteza na `CordovaPlugin` razred, nedoločni zaimek od glaven svoje `execute` metode. Kot najboljša praksa, plugin bi obravnavala tudi `[pause](../../../cordova/events/events.pause.html)` in `[resume](../../../cordova/events/events.resume.html)` dogodki, skupaj z vsako sporočilo, ki poteka med plugins. Plugins z zahteva dolgotrajen, ozadje dejavnost predvajanje medijev, poslušalci ali notranje stanje mora izvajati v `onReset()` metode kot dobro. To izvede, ko se `WebView` premakne se nova stran ali Osveži, ki polnitve JavaScript.
 
 ## Plugin razred kartiranje
 

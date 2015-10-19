@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アマゾン火 OS 構成
 ---
 
 # アマゾン火 OS 構成
@@ -24,7 +26,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `pause` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `[pause](../../../cordova/events/events.pause.html)` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `[pause](../../../cordova/events/events.pause.html)` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
     
         <preference name="KeepRunning" value="false"/>
         

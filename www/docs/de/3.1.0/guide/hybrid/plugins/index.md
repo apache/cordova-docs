@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugin-Entwicklung-Guide
 ---
 
 # Plugin-Entwicklung-Guide
@@ -24,7 +26,7 @@ Ein Cordova Plugin Brücken ein wenig Funktionalität zwischen den WebView eine 
 
 Dieser Leitfaden Schritte der Prozess des Schreibens ein einfaches Echo-Plugin, das übergibt eine Zeichenfolge von JavaScript und sendet sie in die native-Umgebung für die unterstützten Plattformen. Der systemeigene Code gibt dann dieselbe Zeichenfolge an die Rückrufe innerhalb des Plugins JavaScript zurück.
 
-Dieses Handbuch bietet ausreichend Übersicht, auf der Sie aufbauen können, um komplexere Plugins zu schreiben.
+Dieses Handbuch bietet ausreichend [Übersicht](../../overview/index.html), auf der Sie aufbauen können, um komplexere Plugins zu schreiben.
 
 ## JavaScript
 
@@ -71,19 +73,19 @@ Der Erfolg-Rückruf übergebenen `exec` ist lediglich ein Verweis auf den Rückr
 
 ## Plugin-Spezifikation
 
-Cordova hat eine Plugin-Spezifikation verfügbar, aktivieren Sie die automatische Installation des Plugins für Android, iOS, BlackBerry 10 und Windows Phone-Plattformen. Indem Ihr Plugin in einer bestimmten Weise zu strukturieren und ein `plugin.xml` manifest-Datei, Sie können Benutzern ermöglichen, Ihr Plugin über die Befehlszeile Werkzeuge zu installieren.
+Cordova hat eine [Plugin-Spezifikation](../../../plugin_ref/spec.html) verfügbar, aktivieren Sie die automatische Installation des Plugins für Android, iOS, BlackBerry 10 und Windows Phone-Plattformen. Indem Ihr Plugin in einer bestimmten Weise zu strukturieren und ein `plugin.xml` manifest-Datei, Sie können Benutzern ermöglichen, Ihr Plugin über die Befehlszeile Werkzeuge zu installieren.
 
-*   Plugin-Spezifikation
+*   [Plugin-Spezifikation](../../../plugin_ref/spec.html)
 
 ## Native
 
 Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens einem nativen Implementierung zu ergänzen. Details für jede Plattform dazu sind unten aufgeführt. Diese Leitfäden weiterhin auf dem einfachen Echo-Plugin-Beispiel wie oben beschrieben zu bauen.
 
-*   Android Plugins
-*   BlackBerry-Plugins
-*   BlackBerry 10 Plugins
-*   iOS Plugins
-*   Windows Phone Plugins
+*   [Android Plugins](../../platforms/android/plugin.html)
+*   [BlackBerry-Plugins](../../platforms/blackberry/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 Tizen-Plattform unterstützt derzeit keine Plugins.
 

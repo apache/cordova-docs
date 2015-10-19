@@ -16,23 +16,25 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSet
 ---
 
 # SQLResultSet
 
-Wenn eine `SQLTransaction` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einem `SQLResultSet` Parameter.
+Wenn eine `[SQLTransaction](../sqltransaction/sqltransaction.html)` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einem `SQLResultSet` Parameter.
 
 ## Eigenschaften
 
-*   **InsertId**: die Zeilen-ID der Zeile, die die `SQLResultSet` des Objekts-SQL-Anweisung, die in die Datenbank eingefügt.
+*   **InsertId**: die Zeilen-ID der Zeile, die die `SQLResultSet` des Objekts-SQL-Anweisung, die in die [Datenbank](../database/database.html) eingefügt.
 
 *   **RowsAffected**: die Anzahl der Zeilen geändert werden, indem die SQL-Anweisung, die 0 (null), wenn die Anweisung keine Zeilen nicht ausgewirkt hat.
 
-*   **Zeilen**: eine `SQLResultSetRowList` , die die zurückgegebenen Zeilen darstellen, empty, wenn keine Zeilen zurückgegeben werden.
+*   **Zeilen**: eine `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` , die die zurückgegebenen Zeilen darstellen, empty, wenn keine Zeilen zurückgegeben werden.
 
 ## Informationen
 
-Wenn eine `SQLTransaction` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einer `SQLResultSet` Parameter mit den drei Eigenschaften:
+Wenn eine `[SQLTransaction](../sqltransaction/sqltransaction.html)` des Objekts `executeSql` -Methode wird aufgerufen, der angegebene Rückruf führt mit einer `SQLResultSet` Parameter mit den drei Eigenschaften:
 
 *   Die `insertId` gibt die Zeilennummer einer successly SQL-Einfügung-Anweisung zurück. Wenn die SQL keine Zeilen einfügen wird die `insertId` nicht festgelegt.
 

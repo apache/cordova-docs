@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Symbole und Splash-Screens
 ---
 
 # Symbole und Splash-Screens
@@ -150,7 +152,7 @@ Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Di
 
 Der zweiten Zeile wird die Standardverzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Dies sollte die maximale erwartete Startzeit. Der Standardwert für SplashScreenDelay ist 3000 ms.
 
-Schließlich sollte der Begrüßungsbildschirm vorhanden nur so lange wie nötig sein. Wenn Ihre app begonnen hat und die Webview geladen hat, sollte Ihre Anwendung den Splash-Screen ausblenden, sodass Hauptansicht angezeigt wird. Da die Startzeit der app ziemlich aufgrund zahlreicher Faktoren variieren, es wird empfohlen, Ihre Anwendung explizit aufrufen `navigator.splashscreen.hide()` in der Javascript-Methode, die auf reagiert das `deviceready` Ereignis. Ansonsten werden der Splash-Screen für den SplashScreenDelay-Wert angezeigt, die Sie oben konfiguriert. Diese ereignisgesteuerten Ansatz wird dringend empfohlen, im Vergleich mit den Splash-Screen sichtbar für immer eine feste Laufzeit.
+Schließlich sollte der Begrüßungsbildschirm vorhanden nur so lange wie nötig sein. Wenn Ihre app begonnen hat und die Webview geladen hat, sollte Ihre Anwendung den Splash-Screen ausblenden, sodass Hauptansicht angezeigt wird. Da die Startzeit der app ziemlich aufgrund zahlreicher Faktoren variieren, es wird empfohlen, Ihre Anwendung explizit aufrufen `navigator.splashscreen.hide()` in der Javascript-Methode, die auf reagiert das `[deviceready](../cordova/events/events.deviceready.html)` Ereignis. Ansonsten werden der Splash-Screen für den SplashScreenDelay-Wert angezeigt, die Sie oben konfiguriert. Diese ereignisgesteuerten Ansatz wird dringend empfohlen, im Vergleich mit den Splash-Screen sichtbar für immer eine feste Laufzeit.
 
 ## Splash-Screens für die iOS-Plattform
 

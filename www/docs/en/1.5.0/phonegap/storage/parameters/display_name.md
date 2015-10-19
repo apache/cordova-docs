@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: display_name
 ---
 
 display_name
 ==================
 
-The display name of the database.
+The display [name](name.html) of the database.

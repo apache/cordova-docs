@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 升級 iOS
 ---
 
 # 升級 iOS
@@ -75,7 +77,7 @@ platform add ios`.
 
 5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 7.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
@@ -93,7 +95,7 @@ platform add ios`.
 
 5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 7.  刪除您 `CordovaLib` 目錄和副本 `CordovaLib` 目錄從新專案到專案的根目錄。
 
@@ -109,7 +111,7 @@ platform add ios`.
 
 5.  複製 `www/cordova.js` （注意它再也沒有一個版本尾碼，該版本是在該檔本身在標題中） 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.7.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
 7.  更新任何 `<plugin>` 中標記您 `config.xml` 到 `<feature>` 的標記。 注意，現有 `<plugin>` 標籤將仍然工作，但都被否決了。 您可以複製此資訊在 `config.xml` 的一個新的專案。 例如：
     
@@ -141,7 +143,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.7.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.6.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.7.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][2]).
 
@@ -164,7 +166,7 @@ platform add ios`.
 
 5.  複製專案的 `www/cordova-2.6.0.js` 檔到您 `www` 目錄中，並刪除您 `www/cordova-2.5.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及引用的腳本的任何其他檔） 來引用到新的 `cordova-2.6.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及引用的腳本的任何其他檔） 來引用到新的 `cordova-2.6.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][4]).
 
@@ -195,7 +197,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.5.0.js` 到新專案中的檔您 `www` 目錄並刪除您 `www/cordova-2.4.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.5.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.5.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 檔根據您從新專案 (見[此比較][8]).
 
@@ -226,7 +228,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.4.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.3.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.4.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.4.0.js` 檔。
 
 7.  更新 （或替換，如果您從未更改檔） 您 `MainViewController.m` 檔根據您從新專案 (見[此比較][12]).
 
@@ -257,7 +259,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.3.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.2.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.3.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.3.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `MainViewController.m` 根據新專案中的一個。
 
@@ -267,7 +269,7 @@ platform add ios`.
 
 10. 轉換您 `Cordova.plist` 檔為 `config.xml` ，通過運行腳本 `bin/cordova\_plist\_to\_config\_xml` 對您的專案檔案。
 
-11. 添加到 InAppBrowser 外掛程式你 `config.xml` ，通過添加此標記下的 `<cordova><plugins>` ：
+11. 添加到 [InAppBrowser](../../../cordova/inappbrowser/inappbrowser.html) 外掛程式你 `config.xml` ，通過添加此標記下的 `<cordova><plugins>` ：
     
         < 外掛程式名稱 = 值"InAppBrowser"="CDVInAppBrowser"/ >
         
@@ -292,7 +294,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.2.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.1.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.2.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.2.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `MainViewController.m` 根據新專案中的一個：
     
@@ -324,7 +326,7 @@ platform add ios`.
 
 5.  複製 `www/cordova-2.1.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-2.0.0.js` 檔。
 
-6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.1.0.js` 檔。
+6.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.1.0.js` 檔。
 
 7.  更新 （或如果您從未更改該檔替換） 您 `AppDelegate.m` 根據新專案中的一個：
     
@@ -355,7 +357,7 @@ platform add ios`.
 
 3.  複製 `www/cordova-2.0.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.9.0.js` 檔。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.0.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-2.0.0.js` 檔。
 
 5.  複製 `cordova` 目錄從新專案到專案的根目錄 （如果你想要的專案的命令列工具)。
 
@@ -417,7 +419,7 @@ platform add ios`.
 
 29. 選擇**相對於 CORDOVALIB** **檔檢查器**器下拉式功能表中的**位置**.
 
-30. 設置為**獨特**，這樣才可以找到統一標頭的 Xcode 偏好**Xcode 首選項 → 位置 → 派生資料 → 先進的......** 。
+30. 設置為**獨特**，這樣才可以找到統一標頭的 Xcode 偏好**Xcode 首選項 → [位置](../../../cordova/geolocation/Position/position.html) → 派生資料 → 先進的......** 。
 
 31. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 
@@ -451,7 +453,7 @@ platform add ios`.
 
 3.  複製 `www/cordova-1.9.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.8.x.js` 檔。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.9.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.9.0.js` 檔。
 
 **注意：** 1.9.0 支援新 `BackupWebStorage` 布林 `Cordova.plist` 設置。 它預設啟用的那麼將其設置為 `false` ，禁用它，尤其是在 iOS 6 上。 請參閱[版本資訊： 野生動物園和 UIKit 科][16]
 
@@ -465,7 +467,7 @@ platform add ios`.
 
 3.  複製 `www/cordova-1.8.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.7.x.js` 檔。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.8.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.8.0.js` 檔。
 
 如果您打算使用捕獲 API，您將需要在新的**iPad 視網膜顯示**資產：
 
@@ -483,7 +485,7 @@ platform add ios`.
 
 3.  複製 `www/cordova-1.7.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.6.0.js` 檔。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.7.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.7.0.js` 檔。
 
 ## 升級 1.5.0 專案到 1.6.x
 
@@ -502,9 +504,9 @@ platform add ios`.
 
 6.  複製 `www/cordova-1.6.1.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/cordova-1.5.0.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.6.1.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `cordova-1.6.1.js` 檔。
 
-8.  添加新的 `Cordova.plist` 檔到您的專案。 這是必要的因為核心外掛程式服務名稱必須更改以匹配為一個統一的科爾多瓦 JavaScript 檔 (從 Android 和黑莓，部分`cordova-js`).
+8.  添加新的 `Cordova.plist` 檔到您的專案。 這是必要的因為核心外掛程式服務名稱必須更改以匹配為一個統一的科爾多瓦 JavaScript [檔](../../../cordova/file/fileobj/fileobj.html) (從 Android 和黑莓，部分`cordova-js`).
 
 9.  集成任何設置，你在你的**備份 Cordova.plist**成新的**外掛程式**和**ExternalHosts**條目`Cordova.plist`.
 
@@ -526,7 +528,7 @@ platform add ios`.
 
 3.  複製 `www/cordova-1.5.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.4.x.js` 檔。
 
-4.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新的科爾多瓦 `cordova-1.5.0.js` 檔。
+4.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新的科爾多瓦 `cordova-1.5.0.js` 檔。
 
 5.  找到 `PhoneGap.framework` 在你專案導航器中選擇它。
 
@@ -622,7 +624,7 @@ platform add ios`.
 
 6.  複製 `www/phonegap-1.4.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.3.0.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.4.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.4.0.js` 檔。
 
 8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -645,7 +647,7 @@ platform add ios`.
 
 6.  複製 `www/phonegap-1.3.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.2.0.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.3.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.3.0.js` 檔。
 
 8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -668,7 +670,7 @@ platform add ios`.
 
 6.  複製 `www/phonegap-1.2.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.1.0.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.2.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.2.0.js` 檔。
 
 8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -691,7 +693,7 @@ platform add ios`.
 
 6.  複製 `www/phonegap-1.1.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-1.0.0.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.1.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.1.0.js` 檔。
 
 8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 
@@ -714,7 +716,7 @@ platform add ios`.
 
 6.  複製 `www/phonegap-1.0.0.js` 到新專案中的檔您 `www` 目錄中，並刪除您 `www/phonegap-0.9.6.js` 檔。
 
-7.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.0.0.js` 檔。
+7.  更新中的科爾多瓦腳本引用您 `www/index.html` [檔](../../../cordova/file/fileobj/fileobj.html) （以及包含該腳本引用的任何其他檔） 以指向新 `phonegap-1.0.0.js` 檔。
 
 8.  添加一個新條目下的 `Plugins` 在你 `PhoneGap.plist` 檔。關鍵是 `com.phonegap.battery` 和值是`PGBattery`.
 

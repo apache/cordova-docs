@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactAddress
 ---
 
 # ContactAddress
 
-Contains address properties for a `Contact` object.
+Contains address properties for a `[Contact](../Contact/contact.html)` object.
 
 ## Properties
 
@@ -43,7 +45,7 @@ Contains address properties for a `Contact` object.
 ## Details
 
 The `ContactAddress` object stores the properties of a single address
-of a contact.  A `Contact` object may include more than one address in
+of a contact.  A `[Contact](../Contact/contact.html)` object may include more than one address in
 a `ContactAddress[]` array.
 
 ## Supported Platforms

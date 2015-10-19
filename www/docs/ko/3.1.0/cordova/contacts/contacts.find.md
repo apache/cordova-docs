@@ -16,22 +16,24 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 # contacts.find
 
-장치 연락처 데이터베이스 쿼리 및 반환 합니다 하나 이상의 `Contact` 개체를 지정 하는 필드가 들어 있는 각.
+[장치](../device/device.html) [연락처](contacts.html) [데이터베이스](../storage/database/database.html) 쿼리 및 반환 합니다 하나 이상의 `Contact` 개체를 지정 하는 필드가 들어 있는 각.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
     
 
 ## 설명
 
-`contacts.find`장치 연락처 데이터베이스 쿼리 및의 배열을 반환 메서드가 비동기적으로 실행 될 `Contact` 개체. 결과 객체에 전달 되는 `contactSuccess` **contactSuccess** 매개 변수로 지정 된 콜백 함수.
+`contacts.find`[장치](../device/device.html) [연락처](contacts.html) [데이터베이스](../storage/database/database.html) 쿼리 및의 배열을 반환 메서드가 비동기적으로 실행 될 `Contact` 개체. 결과 객체에 전달 되는 `[contactSuccess](parameters/contactSuccess.html)` **contactSuccess** 매개 변수로 지정 된 콜백 함수.
 
-**ContactFields** 매개 변수 검색 한정자로 사용할 수 있는 필드를 지정 하 고 그 결과 **contactSuccess** 콜백 함수에 전달 됩니다. 길이가 0 인 **contactFields** 매개 변수 유효 하지 않습니다 및 결과 `ContactError.INVALID_ARGUMENT_ERROR` . **ContactFields** 값이 `"*"` 모든 연락처 필드를 반환 합니다.
+**ContactFields** 매개 [변수](../../plugin_ref/spec.html) 검색 한정자로 사용할 수 있는 필드를 지정 하 고 그 결과 **contactSuccess** 콜백 함수에 전달 됩니다. 길이가 0 인 **contactFields** 매개 [변수](../../plugin_ref/spec.html) 유효 하지 않습니다 및 결과 `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` . **ContactFields** 값이 `"*"` 모든 [연락처](contacts.html) 필드를 반환 합니다.
 
-**ContactFindOptions.filter** 문자열 연락처 데이터베이스를 쿼리할 때 검색 필터로 사용할 수 있습니다. 제공 된, 대/소문자, 부분 값 일치 **contactFields** 매개 변수에 지정 된 각 필드에 적용 됩니다. *모든* 지정 된 필드의 일치 하는 경우 연락처 반환 됩니다.
+**ContactFindOptions.filter** 문자열 [연락처](contacts.html) 데이터베이스를 쿼리할 때 검색 필터로 사용할 수 있습니다. 제공 된, 대/소문자, 부분 값 일치 **contactFields** 매개 변수에 지정 된 각 필드에 적용 됩니다. *모든* 지정 된 필드의 일치 하는 경우 [연락처](contacts.html) 반환 됩니다.
 
 ## 매개 변수
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Command-Line Usage
 ---
 
 # Command-Line Usage
@@ -124,7 +126,7 @@ or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/run.bat
 
-Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
+Make sure you have created at least one Android Virtual [Device](../../cordova/device/device.html). If you did not it will ask you to create one with the `android` command.
 If you have multiple AVDs, it will prompt you to select an AVD.
 
 ### Logging

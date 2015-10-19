@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 플러그인
 ---
 
 # iOS 플러그인
 
 플러그인은 확장 하는 오브 젝 티브-C 클래스는 `CDVPlugin` 클래스.
 
-로 각 플러그인 클래스를 등록 해야 한 `<feature>` 태그는 `config.xml` 파일. 그것은이 메커니즘을 통해 JavaScript가 `exec` 메서드의 `service` 매개 변수는 오브 젝 티브-C 클래스에 매핑됩니다.
+로 각 플러그인 클래스를 등록 해야 한 `<feature>` 태그는 `config.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 그것은이 메커니즘을 통해 JavaScript가 `exec` 메서드의 `service` 매개 변수는 오브 젝 티브-C 클래스에 매핑됩니다.
 
 ## 플러그인 클래스 매핑
 
@@ -33,14 +35,14 @@ license: >
 
 이 요청을 마샬링하는 `UIWebView` iOS 기본 측면, 더 많거나 적은 전화 아래로 끓는 `action` 메서드는 `service` 인수에 전달 된 클래스는 `args` 배열.
 
-지정한 플러그인으로는 `<feature>` 코르도바 iOS 응용 프로그램의 프로젝트에 태그 `config.xml` 파일.
+지정한 플러그인으로는 `<feature>` 코르도바 iOS 응용 프로그램의 프로젝트에 태그 `config.xml` [파일](../../../cordova/file/fileobj/fileobj.html).
 
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
     
 
-기능 `name` 특성은 자바 스크립트의 사용 일치 해야 `exec` 호출의 `service` 매개 변수, 및 `value` 특성 플러그인의 목표-C 클래스의 이름과 일치 해야 합니다. `<param name>`난 항상 이어야 한다 `"ios-package"` . 이 설치를 수행 하지 않으면, 플러그인 컴파일 수 있습니다 하지만 코르도바 연결할 수 수 없습니다.
+기능 `name` 특성은 자바 스크립트의 사용 일치 해야 `exec` 호출의 `service` 매개 [변수](../../../plugin_ref/spec.html), 및 `value` 특성 플러그인의 목표-C 클래스의 이름과 일치 해야 합니다. `<param name>`난 항상 이어야 한다 `"ios-package"` . 이 설치를 수행 하지 않으면, 플러그인 컴파일 수 있습니다 하지만 코르도바 연결할 수 수 없습니다.
 
 ## 플러그인 초기화 및 수명
 
@@ -58,7 +60,7 @@ license: >
 
 ## IOS 코르도바 플러그인 작성
 
-우리는 플러그인 요청을 네이티브 쪽에서 자바 화재. 우리는 통해 제대로 매핑된 iOS 오브 젝 티브-C 플러그인은 `config.xml` 파일. 그래서 무슨 최종 iOS 오브 젝 티브-C 플러그인 클래스 처럼 보여요?
+우리는 플러그인 요청을 네이티브 쪽에서 자바 화재. 우리는 통해 제대로 매핑된 iOS 오브 젝 티브-C 플러그인은 `config.xml` [파일](../../../cordova/file/fileobj/fileobj.html). 그래서 무슨 최종 iOS 오브 젝 티브-C 플러그인 클래스 처럼 보여요?
 
 무슨 자바 스크립트를 통해 플러그인에 파견 되 면 `exec` 함수는 해당 플러그인 클래스에 전달 되 면 `action` 메서드. 플러그인 방법이이 서명을 했다:
 
@@ -103,14 +105,14 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
 
 ## 에코 플러그인 iOS 플러그인
 
-우리는 프로젝트의 다음에 추가할 `config.xml` 파일:
+우리는 프로젝트의 다음에 추가할 `config.xml` [파일](../../../cordova/file/fileobj/fileobj.html):
 
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
     
 
-그 후에 다음 파일 추가 ( `Echo.h` 및 `Echo.m` ) 우리의 코르도바 iOS 응용 프로그램 디렉터리 안에 플러그인 디렉토리:
+그 후에 다음 [파일](../../../cordova/file/fileobj/fileobj.html) 추가 ( `Echo.h` 및 `Echo.m` ) 우리의 코르도바 iOS 응용 프로그램 디렉터리 안에 플러그인 디렉토리:
 
     /********* Echo.h Cordova Plugin Header *******/
     
@@ -148,11 +150,11 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
 
 코드를 살펴 봅시다. 상단에 우리는 모든 필요한 코르 도우 바 수입. 우리의 클래스에서 확장 `CDVPlugin` (매우 중요).
 
-이 플러그인만 지원 한 행동은 `echo` 작업. 첫째, 우리는 에코 문자열 사용 하 여 잡아는 `objectAtIndex` 방법에 우리의 `args` , 그것을 말하고 우리 싶어 일까 매개 변수 인수 배열. 우리가 매개 변수 검사의 조금을 할: 그것은 다는 것을 확인 `nil` , 그것은 길이가 0 인 문자열이 있는지 확인 하십시오.
+이 플러그인만 지원 한 행동은 `echo` 작업. 첫째, 우리는 에코 문자열 사용 하 여 잡아는 `objectAtIndex` 방법에 우리의 `args` , 그것을 말하고 우리 싶어 일까 매개 [변수](../../../plugin_ref/spec.html) 인수 배열. 우리가 매개 [변수](../../../plugin_ref/spec.html) 검사의 조금을 할: 그것은 다는 것을 확인 `nil` , 그것은 길이가 0 인 문자열이 있는지 확인 하십시오.
 
 경우 그것은, 우리는 반환 된 `PluginResult` 와 `ERROR` 상태. 모든 그 검사 통과 경우 우리가 반환는 `PluginResult` 와 `OK` 상태, 및 통과 `echo` 우리는 처음에 매개 변수로 받은 문자열.
 
-마지막으로, 우리는 결과를 보낼 `self.commandDelegate` , 실행 하는 `exec` 메서드의 성공 또는 실패 콜백 JavaScript 측에. 성공 콜백 호출에 전달 된 `echo` 매개 변수.
+마지막으로, 우리는 결과를 보낼 `self.commandDelegate` , 실행 하는 `exec` 메서드의 성공 또는 실패 콜백 JavaScript 측에. 성공 콜백 호출에 전달 된 `echo` 매개 [변수](../../../plugin_ref/spec.html).
 
 ## 스레딩
 
@@ -182,7 +184,7 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-예를 들어에 연결할 수 있습니다는 `pause` , `resume` , 응용 프로그램 종료 및 `handleOpenURL` 이벤트.
+예를 들어에 연결할 수 있습니다는 `pause` , `resume` , 응용 프로그램 종료 및 `handleOpenURL` [이벤트](../../../cordova/events/events.html).
 
 ## 플러그인을 디버깅
 

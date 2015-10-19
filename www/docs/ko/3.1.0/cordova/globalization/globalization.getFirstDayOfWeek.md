@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getFirstDayOfWeek
 ---
 
 # globalization.getFirstDayOfWeek
@@ -29,7 +31,7 @@ license: >
 
 주일의 일 1 일요일으로 간주 됩니다 1에서 시작 하는 번호가 지정 됩니다. 하루에 반환 합니다는 `successCallback` 와 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `value` 속성을 `Number` 값.
 
-패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.UNKNOWN\_ERROR`.
+패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## 지원 되는 플랫폼
 

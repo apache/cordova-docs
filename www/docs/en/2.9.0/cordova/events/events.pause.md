@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: pause
 ---
 
 pause
@@ -34,7 +36,7 @@ into the background, typically when the user switches to a different
 application.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 Supported Platforms
 -------------------
@@ -45,7 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("pause", onPause, false);
@@ -54,7 +56,7 @@ Quick Example
         // Handle the pause event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

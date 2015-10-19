@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8 Platform Guide
 ---
 
 # Windows Phone 8 Platform Guide
@@ -27,7 +29,7 @@ Phone 7.
 
 It shows how to use either Windows Phone-specific shell tools to
 generate and build apps, or the cross-platform Cordova CLI discussed
-in The Command-Line Interface.  (See the Overview for a comparison of
+in [The Command-Line Interface](../../cli/index.html).  (See the [Overview](../../overview/index.html) for a comparison of
 these development workflows.) This section also shows how to open
 Cordova apps so that you can modify them within Visual Studio.
 Regardless of which approach you take, you need to install the Windows
@@ -35,8 +37,8 @@ Phone SDK, as described below.
 
 See the following for details specific to the Windows Phone platform:
 
-- Windows Phone 8 Plugins
-- Upgrading Windows Phone 8
+- [Windows Phone 8 Plugins](plugin.html)
+- [Upgrading Windows Phone 8](upgrade.html)
 
 For the Windows Phone 8 platform, the Cordova WebView relies on
 Internet Explorer 10 as its rendering engine, so as a practical matter
@@ -70,13 +72,13 @@ Windows development environment on a Mac:
 - __VMWare Fusion__: To set up the Windows 8 virtual machine, follow
   the instructions provided by the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426),
-  then see Configuring VMWare Fusion for information on preparing the
+  then see [Configuring VMWare Fusion](vmware.html) for information on preparing the
   virtual environment to run the emulator bundled with the SDK.
 
 - __Parallels Desktop__: To set up the Windows 8 virtual machine,
   follow the instructions provided by the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
-  then see Configuring Parallels Desktop for information on preparing
+  then see [Configuring Parallels Desktop](parallels.html) for information on preparing
   the virtual environment to run the emulator bundled with the SDK.
   
 <!--
@@ -121,7 +123,7 @@ These shell tools allow you to create, build, and run Windows Phone
 apps.  For information on the additional command-line interface that
 enables plugin features across all platforms, see Using Plugman to
 Manage Plugins. See Application Plugins for guidance on how to develop
-plugins, and Windows Phone 8 Plugins for details specific to the Windows
+plugins, and [Windows Phone 8 Plugins](plugin.html) for details specific to the Windows
 Phone platform.
 
 ## Install the SDK
@@ -136,7 +138,7 @@ You may also install more recent emulator update packages.
 ## Create a New Project
 
 At this point, to create a new project you can choose between the
-cross-platform CLI tool described in The Command-Line Interface, or
+cross-platform CLI tool described in [The Command-Line Interface](../../cli/index.html), or
 the set of Windows Phone-specific shell tools. From within a
 source-code directory, here's the CLI approach:
 
@@ -245,7 +247,7 @@ Phone emulator:
 
 ![](img/guide/platforms/wp8/wp8_vs.png)
 
-Consult the Overview for advice on how to use Cordova's command-line
+Consult the [Overview](../../overview/index.html) for advice on how to use Cordova's command-line
 tools or the SDK in your workflow. The Cordova CLI relies on
 cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to work within

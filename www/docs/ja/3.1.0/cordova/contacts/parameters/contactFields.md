@@ -16,10 +16,12 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 連絡先
 ---
 
 # 連絡先
 
-必須のパラメーター、 `contacts.find` 、どのフィールドに含まれる必要がありますを指定する方法、 `Contact` 検索操作からの結果オブジェクト。
+必須のパラメーター、 `[contacts.find](../contacts.find.html)` 、どのフィールドに含まれる必要がありますを指定する方法、 `Contact` 検索操作からの結果オブジェクト。
 
     [「名」、「電話番号」、「メール」]

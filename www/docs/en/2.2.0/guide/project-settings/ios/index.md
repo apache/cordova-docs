@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings for iOS
 ---
 
-Project Settings for iOS
+[Project Settings](../index.html) for iOS
 ========================
 
 The **Cordova.plist settings file** controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
@@ -31,13 +33,13 @@ The **Cordova.plist settings file** controls various settings of Cordova. This i
 
 	b. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
 
-	c. **EnableLocation (boolean, defaults to NO)** - set to YES, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate)
+	c. **EnableLocation (boolean, defaults to NO)** - set to YES, to initialize the [Geolocation](../../../cordova/geolocation/geolocation.html) plugin at start-up (so the fix on your location can be more accurate)
 
 	d. **EnableViewportScale (boolean, defaults to NO)** - set to YES to prevent viewport scaling through a meta tag
 
 	e. **AutoHideSplashScreen (boolean, defaults to YES)** - set to NO to control when the splashscreen is hidden through a JavaScript API
 
-	f. **ShowSplashScreenSpinner (boolean, defaults to YES)** - set to NO to hide the splash-screen spinner
+	f. **ShowSplashScreenSpinner (boolean, defaults to YES)** - set to NO to [hide](../../../cordova/splashscreen/splashscreen.hide.html) the splash-screen spinner
 
 	g. **MediaPlaybackRequiresUserAction (boolean, defaults to NO)** - set to YES to not allow autoplayed HTML5 video
 

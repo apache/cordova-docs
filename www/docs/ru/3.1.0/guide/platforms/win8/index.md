@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по Windows 8 платформы
 ---
 
 # Руководство по Windows 8 платформы
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для Windows 8. Смотрите ниже для более подробной информации конкретной платформы:
 
-*   Обновление для Windows 8
-*   Средства командной строки Windows 8
+*   [Обновление для Windows 8](upgrading.html)
+*   [Средства командной строки Windows 8](tools.html)
 
 Средства командной строки относятся к версии до Cordova 3.0. Сведения о текущем интерфейсе см интерфейс командной строки.
 

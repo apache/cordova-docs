@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Media
 ---
 
 # Media
@@ -49,25 +51,25 @@ Costanti sono segnalate come unico parametro per il `mediaStatus` callback:
 
 ## Metodi
 
-*   `media.getCurrentPosition`: Restituisce la posizione corrente all'interno di un file audio.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: Restituisce la posizione corrente all'interno di un file audio.
 
-*   `media.getDuration`: Restituisce la durata di un file audio.
+*   `[media.getDuration](media.getDuration.html)`: Restituisce la durata di un file audio.
 
 *   `media.play`: Iniziare o riprendere la riproduzione di un file audio.
 
 *   `media.pause`: Pausa la riproduzione di un file audio.
 
-*   `media.release`: Libera risorse audio del sistema operativo sottostante.
+*   `[media.release](media.release.html)`: Libera risorse audio del sistema operativo sottostante.
 
-*   `media.seekTo`: Sposta la posizione all'interno del file audio.
+*   `[media.seekTo](media.seekTo.html)`: Sposta la posizione all'interno del file audio.
 
-*   `media.setVolume`: Impostare il volume per la riproduzione audio.
+*   `[media.setVolume](media.setVolume.html)`: Impostare il volume per la riproduzione audio.
 
-*   `media.startRecord`: Iniziare a registrare un file audio.
+*   `[media.startRecord](media.startRecord.html)`: Iniziare a registrare un file audio.
 
-*   `media.stopRecord`: Interrompere la registrazione di un file audio.
+*   `[media.stopRecord](media.stopRecord.html)`: Interrompere la registrazione di un file audio.
 
-*   `media.stop`: Interrompere la riproduzione di un file audio.
+*   `[media.stop](media.stop.html)`: Interrompere la riproduzione di un file audio.
 
 ## Parametri supplementari ReadOnly
 
@@ -142,7 +144,7 @@ Alcune piattaforme possono supportare questa funzionalità senza richiedere alcu
 
 ### Stranezze di Windows Phone
 
-*   File sola multimediale può essere riprodotti in un momento.
+*   [File](../file/fileobj/fileobj.html) sola multimediale può essere riprodotti in un momento.
 
 *   Ci sono severe restrizioni su come l'applicazione interagisce con altri media. Vedere la [documentazione di Microsoft per maggiori dettagli][2].
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Symbian
 ---
 
 Getting Started with Symbian
@@ -50,11 +52,11 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - In cygwin, navigate to where you extracted Cordova and go into the Symbian directory</li>
 
  
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
 - Open up index.html located in phonegap/symbian/framework/www with your favourite editor. 
-- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
+- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>[Hello World](../webos/index.html)</h1>`
 - In cygwin/terminal, type make. This will produce phonegap-symbian.wrt/app.wgz. 
 
 
@@ -66,7 +68,7 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - Load the phonegap-symbian.wrt/app.wgz file into the emulator.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../cordova/device/device.html)
 --------------------
 
 - Load the phonegap-symbian.wrt/app.wgz file into the device using bluetooth or email.

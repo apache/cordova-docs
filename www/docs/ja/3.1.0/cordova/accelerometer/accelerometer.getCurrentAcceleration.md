@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -29,7 +31,7 @@ license: >
 
 加速度計の現在のデバイスの向き、 *x* *y*、および*z*軸に沿って 3 つの次元の相対運動の変更 (*デルタ*) を検出するモーション センサーです。
 
-これらの加速度値に返されます、 `accelerometerSuccess` コールバック関数。
+これらの加速度値に返されます、 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` コールバック関数。
 
 ## サポートされているプラットフォーム
 

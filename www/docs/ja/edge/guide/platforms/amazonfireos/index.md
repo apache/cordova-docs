@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アマゾン火 OS プラットフォーム ガイド
 ---
 
 # アマゾン火 OS プラットフォーム ガイド
@@ -24,9 +26,9 @@ license: >
 
 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   アマゾン火 OS 構成
-*   アマゾン火 OS web 表示
-*   アマゾン火 OS プラグイン
+*   [アマゾン火 OS 構成](config.html)
+*   [アマゾン火 OS web 表示](webview.html)
+*   [アマゾン火 OS プラグイン](plugin.html)
 
 ## 導入
 
@@ -41,7 +43,7 @@ license: >
 
 アマゾン火 OS 用 Cordova アプリの開発には様々 なアマゾン WebView SDK と同様に Android の開発に必要なすべてを含むサポート ファイルのインストールが必要です。 必要なインストールは、以下のリストを確認してください。
 
-*   コマンド ライン インターフェイス
+*   [コマンド ライン インターフェイス](../../cli/index.html)
 *   [Android の SDK][3]
 *   [Apache Ant][4]
 *   [アマゾン WebView SDK][1]

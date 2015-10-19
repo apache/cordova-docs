@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 플랫폼 가이드
 ---
 
 # iOS 플랫폼 가이드
 
 이 가이드에는 코르도바 애플 리 케이 션 아이폰과 iPad와 같은 iOS 장치에 대 한 배포 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   iOS 구성
-*   IOS 업그레이드
-*   iOS WebViews
-*   iOS 플러그인
-*   iOS 셸 도구 가이드
+*   [iOS 구성](config.html)
+*   [IOS 업그레이드](upgrading.html)
+*   [iOS WebViews](webview.html)
+*   [iOS 플러그인](plugin.html)
+*   iOS 셸 도구 [가이드](../../../index.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
@@ -187,7 +189,7 @@ Xcode의 경고 `invokeString` 방법에 대 한 사용자 지정 URL에서 응�
 
 *   [개발 시작 iOS 애플 리 케이 션 오늘][12] iOS 애플 리 케이 션을 개발 하기 위한 단계에 대 한 빠른 개요를 제공 합니다.
 
-*   [회원 센터 홈 페이지][13] 기술 리소스, 프로 비 저 닝 포털, 배포 가이드 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
+*   [회원 센터 홈 페이지][13] 기술 리소스, 프로 비 저 닝 포털, 배포 [가이드](../../../index.html) 및 커뮤니티 포럼 등 기술 자원을 여러 iOS에 대 한 링크를 제공 합니다.
 
 *   [IOS 용 도구 워크플로 가이드][14]
 

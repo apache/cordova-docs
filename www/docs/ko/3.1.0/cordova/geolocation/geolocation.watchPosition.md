@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.watchPosition
 ---
 
 # geolocation.watchPosition
@@ -33,15 +35,15 @@ license: >
 
 *   **geolocationError**: (선택 사항) 오류가 발생 하면 실행 되는 콜백.
 
-*   **geolocationOptions**: (선택 사항)는 지리적 위치 옵션.
+*   **geolocationOptions**: (선택 사항)는 지리적 [위치](Position/position.html) 옵션.
 
 ## 반환
 
-*   **문자열**: 시계 위치 간격을 참조 하는 시계 id를 반환 합니다. 시계 id와 함께 사용 해야 합니다 `geolocation.clearWatch` 위치 변화에 대 한 보고 중지.
+*   **문자열**: 시계 [위치](Position/position.html) 간격을 참조 하는 시계 id를 반환 합니다. 시계 id와 함께 사용 해야 합니다 `[geolocation.clearWatch](geolocation.clearWatch.html)` [위치](Position/position.html) 변화에 대 한 보고 중지.
 
 ## 설명
 
-`geolocation.watchPosition`비동기 함수가입니다. 그것은 위치에 변화를 탐지할 때 소자의 현재 위치를 반환 합니다. 새 위치를 검색 하는 장치는 `geolocationSuccess` 콜백 실행 한 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `geolocationError` 콜백 실행 한 `PositionError` 매개 변수로 개체.
+`geolocation.watchPosition`비동기 함수가입니다. 그것은 위치에 변화를 탐지할 때 소자의 현재 위치를 반환 합니다. 새 위치를 검색 하는 장치는 `[geolocationSuccess](parameters/geolocationSuccess.html)` 콜백 실행 한 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `[geolocationError](parameters/geolocationError.html)` 콜백 실행 한 `[PositionError](PositionError/positionError.html)` 매개 변수로 개체.
 
 ## 지원 되는 플랫폼
 

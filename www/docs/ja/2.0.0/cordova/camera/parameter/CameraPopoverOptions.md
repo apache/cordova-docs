@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverOptions
 ---
 
 CameraPopoverOptions
@@ -41,7 +43,7 @@ CameraPopoverOptions
 
 - __height:__ ポップオーバーの高さをピクセルで表します。 (`Number`)
 
-- __arrowDir:__ ポップオーバーの矢印の向きを表します。 Camera.PopoverArrowDirection で定義されます。 (`Number`)
+- __arrowDir:__ ポップオーバーの矢印の向きを表します。 [Camera](../camera.html).PopoverArrowDirection で定義されます。 (`Number`)
 
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // iOS の UIPopoverArrowDirection 定数に同じ
@@ -53,7 +55,7 @@ CameraPopoverOptions
 
 ポップオーバーのサイズは矢印の方向や画面の向きによって調節され、変わる可能性があることについて注意してください。アンカー要素の位置を特定するとき、画面の向きの変化を考慮に入れることを忘れないで下さい。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);

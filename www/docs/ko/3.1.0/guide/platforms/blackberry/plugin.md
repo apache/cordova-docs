@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 블랙베리 플러그인
 ---
 
 # 블랙베리 플러그인
 
-이 가이드에서는 블랙베리에 에코 플러그인을 개발 하는 방법을 보여 줍니다. 플러그인 개발 가이드는 당신이 이미 알고 있어야, 광범위 한 개요를 제공 하 고이 가이드 집어 어디 그것. 또한, [코르도바 블랙베리 저장소][1] 다운로드.
+이 가이드에서는 블랙베리에 에코 플러그인을 개발 하는 방법을 보여 줍니다. 플러그인 개발 가이드는 당신이 이미 알고 있어야, 광범위 한 개요를 제공 하 고이 [가이드](../../../index.html) 집어 어디 그것. 또한, [코르도바 블랙베리 저장소][1] 다운로드.
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 
-`Cordova-BlackBerry`프로젝트 토치, Bold, 각 본 등 블랙베리 장치에 배포할 수 있습니다. 각 본 기본 개발 노력을 중복 해야 다른 블랙베리 핸드헬드 장치 보다 다른 코드를 사용 합니다. 이 가이드는 정제 보다는 휴대용 기기에 초점을 맞추고. (미래에,이 가이드 커버 한다 두 플랫폼.)
+`Cordova-BlackBerry`프로젝트 토치, Bold, 각 본 등 블랙베리 장치에 배포할 수 있습니다. 각 본 기본 개발 노력을 중복 해야 다른 블랙베리 핸드헬드 [장치](../../../cordova/device/device.html) 보다 다른 코드를 사용 합니다. 이 가이드는 정제 보다는 휴대용 기기에 초점을 맞추고. (미래에,이 [가이드](../../../index.html) 커버 한다 두 플랫폼.)
 
 에코 플러그인 근본적으로 어떤 메시지는 사용자에 게 제공 반환 된 `window.echo` 기능:
 
@@ -46,7 +48,7 @@ license: >
 
 ## Echo.java 추가
 
-값 특성의 구조를 알아 차린 다 면 에코 플러그인에 연결 경로 정의 표시 됩니다. 코르 도우 바 블랙베리 WebWorks repo의 루트 디렉터리에 라는 디렉터리에 대 한 보고 `framework` . 이 디렉터리는 블랙베리에서 기본적으로 실행 되는 소스 코드의 모든 포함 됩니다. 이동 `framework/ext/src/org/apache/cordova` . 이 시점에서, 모두는 내부 소스 코드는 플러그인 디렉토리가 표시 됩니다. 그래서 추가를 디렉토리 에코 `framework/ext/src/org/apache/cordova/echo` 라는 파일을 만듭니다 및 `Echo.java` 에서`framework/ext/src/org/apache/cordova/echo/Echo.java`.
+값 특성의 구조를 알아 차린 다 면 에코 플러그인에 [연결](../../../cordova/connection/connection.html) 경로 정의 표시 됩니다. 코르 도우 바 블랙베리 WebWorks repo의 루트 디렉터리에 라는 디렉터리에 대 한 보고 `framework` . 이 디렉터리는 블랙베리에서 기본적으로 실행 되는 소스 코드의 모든 포함 됩니다. 이동 `framework/ext/src/org/apache/cordova` . 이 시점에서, 모두는 내부 소스 코드는 플러그인 디렉토리가 표시 됩니다. 그래서 추가를 디렉토리 에코 `framework/ext/src/org/apache/cordova/echo` 라는 파일을 만듭니다 및 `Echo.java` 에서`framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## 글 Echo.java
 
@@ -96,7 +98,7 @@ license: >
 
 ## 프로젝트의 www 디렉토리에서.jar 업데이트
 
-추가 `Echo.java` 프로젝트에서 업데이트 해야 합니다. 구축 하는 `.jar` 파일, 블랙베리 WebWorks repo의 루트 디렉터리를 탐색 하 고 실행은 `ant` 명령:
+추가 `Echo.java` 프로젝트에서 업데이트 해야 합니다. 구축 하는 `.jar` [파일](../../../cordova/file/fileobj/fileobj.html), 블랙베리 WebWorks repo의 루트 디렉터리를 탐색 하 고 실행은 `ant` 명령:
 
     ant update -Dproject.path="~/path_to_my_project"
     

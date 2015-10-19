@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 아마존 화재 운영 체제 구성
 ---
 
 # 아마존 화재 운영 체제 구성
@@ -24,7 +26,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다. 이 값을 설정 `false` 후 응용 프로그램을 죽 일 하지 않습니다는 `pause` 이벤트, 하지만 단순히 중단 코드의 실행 응용 프로그램은 백그라운드에서 코르도바 webview 내에서.
+*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 [유지](../../next/index.html) 후에 백그라운드에서 실행 여부를 결정 합니다는 `[pause](../../../cordova/events/events.pause.html)` 이벤트가 발생 합니다. 이 값을 설정 `false` 후 응용 프로그램을 죽 일 하지 않습니다는 `[pause](../../../cordova/events/events.pause.html)` [이벤트](../../../cordova/events/events.html), 하지만 단순히 중단 코드의 실행 응용 프로그램은 백그라운드에서 코르도바 webview 내에서.
     
         <preference name="KeepRunning" value="false"/>
         

@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 compassSuccess
 ==============
 
-onSuccess callback function that provides the compass heading information via a `compassHeading` object.
+onSuccess callback function that provides the compass heading information via a `[compassHeading](compassHeading.html)` object.
 
     function(heading) {
         // Do something
@@ -32,7 +34,7 @@ Parameters
 
 - __heading__: The heading information. _(compassHeading)_
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function onSuccess(heading) {

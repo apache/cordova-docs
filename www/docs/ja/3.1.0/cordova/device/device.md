@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: デバイス
 ---
 
 # デバイス
@@ -24,12 +26,12 @@ license: >
 
 ## プロパティ
 
-*   device.model
-*   device.cordova
-*   device.platform
-*   device.uuid
-*   device.version
-*   device.name
+*   [device.model](device.model.html)
+*   [device.cordova](device.cordova.html)
+*   [device.platform](device.platform.html)
+*   [device.uuid](device.uuid.html)
+*   [device.version](device.version.html)
+*   [device.name](device.name.html)
 
 ## 変数のスコープ
 

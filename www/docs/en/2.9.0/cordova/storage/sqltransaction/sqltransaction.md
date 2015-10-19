@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLTransaction
 ---
 
 SQLTransaction
 =======
 
-Allows execution of SQL statements against the Database.
+Allows execution of SQL statements against the [Database](../database/database.html).
 
 Methods
 -------
@@ -31,7 +33,7 @@ Methods
 Details
 -------
 
-Calling a `Database` object's transaction method, passes a
+Calling a `[Database](../database/database.html)` object's transaction method, passes a
 `SQLTransaction` object to the specified callback method.
 
 Supported Platforms
@@ -42,7 +44,7 @@ Supported Platforms
 - iOS
 - Tizen
 
-Execute SQL Quick Example
+Execute SQL Quick [Example](../storage.opendatabase.html)
 ------------------
 
     function populateDB(tx) {
@@ -63,7 +65,7 @@ Execute SQL Quick Example
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

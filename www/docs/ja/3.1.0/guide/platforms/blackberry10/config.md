@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ブラックベリーの構成
 ---
 
 # ブラックベリーの構成
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 ブラックベリー 10 にのみ適用されますこのセクションの詳細設定を構築します。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `ChildBrowser`( `disable` またはデフォルトの `enable` ): ブラウザーの子ウィンドウを無効にします。 既定では、アプリ経由でアクセスされるリソースを表示するセカンダリ ブラウザー ウィンドウが起動 `window.open()` またはを指定して、 `_blank` アンカー ターゲット。 指定 `disable` この既定動作をオーバーライドします。
+*   `ChildBrowser`( `disable` またはデフォルトの `enable` ): ブラウザーの子ウィンドウを無効にします。 既定では、アプリ経由でアクセスされるリソースを表示するセカンダリ ブラウザー ウィンドウが起動 `[window.open](../../../cordova/inappbrowser/window.open.html)()` またはを指定して、 `_blank` アンカー ターゲット。 指定 `disable` この既定動作をオーバーライドします。
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` またはデフォルトの `disable` ): への呼び出しを防止するポップアップ ブロッカーを有効 `window.open()` 。 既定では、ポップアップの子ブラウザー ウィンドウで表示します。 優先順位を設定する `enable` すべてが表示されません。
+*   `PopupBlocker`( `enable` またはデフォルトの `disable` ): への呼び出しを防止するポップアップ ブロッカーを有効 `[window.open](../../../cordova/inappbrowser/window.open.html)()` 。 既定では、ポップアップの子ブラウザー ウィンドウで表示します。 優先順位を設定する `enable` すべてが表示されません。
     
         <preference name="PopupBlocker" value="enable"/>
         

@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.stopRecord
 ---
 
 # media.stopRecord
 
-오디오 파일 녹음을 중지 합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 녹음을 중지 합니다.
 
     media.stopRecord();
     
 
 ## 설명
 
-`media.stopRecord`메서드가 동기적으로 실행 됩니다 오디오 파일 녹음을 중지 합니다.
+`media.stopRecord`메서드가 동기적으로 실행 됩니다 오디오 [파일](../file/fileobj/fileobj.html) 녹음을 중지 합니다.
 
 ## 지원 되는 플랫폼
 

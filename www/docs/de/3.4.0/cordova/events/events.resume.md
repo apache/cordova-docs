@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Lebenslauf
 ---
 
 # Lebenslauf
@@ -29,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung aus dem Hintergrund abgerufen 
 
 Das `resume` -Ereignis wird ausgelöst, wenn die native Plattform die Anwendung aus dem Hintergrund zieht.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

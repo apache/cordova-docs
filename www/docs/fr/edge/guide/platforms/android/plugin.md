@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugins Android
 ---
 
 # Plugins Android
@@ -24,7 +26,7 @@ Cette section fournit des détails pour savoir comment implémenter le code du p
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Plugins Android sont basés sur Android-Cordova, qui consiste en une WebView Android avec crochets attachés à elle. Plugins sont représentés comme des mappages de classe dans le `config.xml` fichier. Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe, de la substitution de l'un de ses `execute` méthodes. Aussi pratique, le plugin devrait également réaliser au mieux `pause` et `resume` des événements, ainsi que tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
+Plugins Android sont basés sur Android-Cordova, qui consiste en une WebView Android avec crochets attachés à elle. Plugins sont représentés comme des mappages de classe dans le `config.xml` fichier. Un plugin est composé d'au moins une classe Java qui étend la `CordovaPlugin` classe, de la substitution de l'un de ses `execute` méthodes. Aussi pratique, le plugin devrait également réaliser au mieux `[pause](../../../cordova/events/events.pause.html)` et `[resume](../../../cordova/events/events.resume.html)` des événements, ainsi que tout message transitant entre les plugins. Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou état interne doit mettre en œuvre la `onReset()` méthode aussi bien. Il exécute quand le `WebView` navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
 
 ## Classe plugin cartographie
 

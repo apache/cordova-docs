@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 geolocationSuccess
@@ -30,9 +32,9 @@ The user's callback function that is called when a geolocation position is avail
 Parameters
 ----------
 
-- __position:__ The geolocation position returned by the device. (`Position`)
+- __position:__ The geolocation position returned by the device. (`[Position](../Position/position.html)`)
 
-Example
+[Example](../../storage/storage.opendatabase.html)
 -------
 
     function geolocationSuccess(position) {

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: L'aggiornamento di Windows Phone
 ---
 
 # L'aggiornamento di Windows Phone
 
-Questa guida Mostra come modificare i progetti Windows Phone, entrambe le versioni 7 e 8, eseguire l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI. La sezione seguente viene illustrato come eseguire l'aggiornamento da progetti non-CLI.
+Questa guida Mostra come modificare i progetti Windows Phone, entrambe le versioni 7 e 8, eseguire l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. [L'interfaccia della riga di comando](../../cli/index.html) per informazioni, vedere come aggiornare la versione di CLI. La sezione seguente viene illustrato come eseguire l'aggiornamento da progetti non-CLI.
 
 ## Aggiornamento a 3.2.0 da 3.1.0
 

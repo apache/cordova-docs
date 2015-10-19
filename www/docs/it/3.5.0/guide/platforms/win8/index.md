@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 piattaforma guida
 ---
 
 # Windows 8 piattaforma guida
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire applicazioni Cordova per Windows 8. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   L'aggiornamento di Windows 8
-*   Strumenti della riga di comando di Windows 8
+*   [L'aggiornamento di Windows 8](upgrading.html)
+*   [Strumenti della riga di comando di Windows 8](tools.html)
 
 Gli strumenti della riga di comando qui sopra si riferiscono a versioni precedenti alla 3.0 di Cordova. Per informazioni sull'interfaccia corrente, vedere l'interfaccia della riga di comando.
 
@@ -81,7 +83,7 @@ Scaricare ed estrarre l'ultima copia di [Cordova][3]. Queste istruzioni si appli
             <script src="/js/default.js"></script>
         
 
-*   Aggiungere un `deviceready` gestore dimostrare Cordova sta lavorando:
+*   Aggiungere un `[deviceready](../../../cordova/events/events.deviceready.html)` gestore dimostrare Cordova sta lavorando:
     
         <body>
             <p>Content goes here</p>

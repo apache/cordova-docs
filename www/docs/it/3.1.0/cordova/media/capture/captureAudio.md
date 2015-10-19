@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureAudio
 ---
 
 # capture.captureAudio
@@ -31,9 +33,9 @@ license: >
 
 Avvia un'operazione asincrona per acquisire registrazioni audio utilizzando l'applicazione di registrazione audio predefinita del dispositivo. L'operazione consente all'utente di dispositivo acquisire registrazioni multiple in una singola sessione.
 
-L'operazione di acquisizione termina quando l'utente esce l'audio registrazione applicazione, o il numero massimo di registrazioni specificato da `CaptureAudioOptions.limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra una singola clip audio.
+L'operazione di acquisizione termina quando l'utente esce l'audio registrazione applicazione, o il numero massimo di registrazioni specificato da `[CaptureAudioOptions](captureAudioOptions.html).limit` è raggiunto. Se non `limit` valore del parametro è specificato, il valore predefinito è uno (1) e l'operazione di acquisizione termina dopo l'utente registra una singola clip audio.
 
-Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita con una matrice di `MediaFile` oggetti che descrivono ciascuna catturato file clip audio. Se l'utente termina l'operazione prima di un clip audio viene catturato, il `CaptureErrorCallback` viene eseguito con un `CaptureError` oggetto, con il `CaptureError.CAPTURE_NO_MEDIA_FILES` codice di errore.
+Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita con una matrice di `[MediaFile](MediaFile.html)` oggetti che descrivono ciascuna catturato file clip audio. Se l'utente termina l'operazione prima di un clip audio viene catturato, il `CaptureErrorCallback` viene eseguito con un `[CaptureError](CaptureError.html)` oggetto, con il `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` codice di errore.
 
 ## Piattaforme supportate
 
@@ -126,7 +128,7 @@ Quando termina l'operazione di acquisizione, la `CaptureCallback` viene eseguita
 
 ## BlackBerry WebWorks stranezze
 
-*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore di note vocali** , fornito da RIM, per catturare le registrazioni audio. L'applicazione riceve un `CaptureError.CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
+*   Cordova per BlackBerry WebWorks tenta di lanciare l'applicazione **Registratore di note vocali** , fornito da RIM, per catturare le registrazioni audio. L'applicazione riceve un `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` codice di errore se l'applicazione non è installata sul dispositivo.
 
 ## iOS stranezze
 

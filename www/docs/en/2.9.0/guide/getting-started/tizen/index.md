@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Tizen Platform Guide
 ---
 
 Tizen Platform Guide
@@ -99,7 +101,7 @@ This guide describes how to set up your development environment for Cordova and 
 --------------------
 
 - Make sure that your target device is properly launched, connected and configured. Its __Date and Time__ settings must be set correctly.
-- Select your application deployment target with the **Connection Explorer** view (Select **Window &rarr; Show View &rarr; Connection Explorer**.)
+- Select your application deployment target with the **Connection Explorer** view (Select **Window &rarr; Show View &rarr; [Connection](../../../cordova/connection/connection.html) Explorer**.)
 
     ![](img/guide/platforms/tizen/connection_explorer.png)
 

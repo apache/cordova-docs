@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.getCurrentPosition
 ---
 
 # media.getCurrentPosition
@@ -33,7 +35,7 @@ Returns the current position within an audio file.
 ## Description
 
 An asynchronous function that returns the current position of the
-underlying audio file of a `Media` object. Also updates the `Media`
+underlying audio file of a `[Media](media.html)` object. Also updates the `[Media](media.html)`
 object's `position` parameter.
 
 ## Supported Platforms

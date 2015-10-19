@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Платформа Android руководство
 ---
 
 # Платформа Android руководство
@@ -25,8 +27,8 @@ license: >
 *   Андроид конфигурации
 *   Андроид WebViews
 *   Андроид плагины
-*   Обновление Android
-*   Android средства командной строки
+*   [Обновление Android](upgrading.html)
+*   [Android средства командной строки](tools.html)
 
 Средства командной строки относятся к версии до Cordova 3.0. Сведения о текущем интерфейсе см интерфейс командной строки.
 
@@ -79,7 +81,7 @@ NOTE, doc said:
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   Сохраните значение и закрыть и диалоговые окна.
+*   Сохраните значение и [закрыть](../../../cordova/inappbrowser/inappbrowser.html) и диалоговые окна.
 
 Также может потребоваться включить Java и Ant. открыть командную строку и введите `java` , а также ввести `ant` . Добавления к пути зависимости не удается запустить:
 

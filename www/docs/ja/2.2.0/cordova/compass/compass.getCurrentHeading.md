@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 compass.getCurrentHeading
@@ -30,7 +32,7 @@ compass.getCurrentHeading
 
 コンパスはデバイスが向いている方向を感知するセンサーです。コンパスはその方角を0から359.99の範囲で計測します。
 
-コンパスの向き情報は、 compassSuccess コールバック関数の CompassHeading オブジェクトを通じて返されます。
+コンパスの向き情報は、 [compassSuccess](parameters/compassSuccess.html) コールバック関数の CompassHeading オブジェクトを通じて返されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -41,7 +43,7 @@ compass.getCurrentHeading
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(heading) {

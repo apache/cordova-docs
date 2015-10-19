@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSetRowList
 ---
 
 # SQLResultSetRowList
 
-Eine der Eigenschaften von den `SQLResultSet` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
+Eine der Eigenschaften von den `[SQLResultSet](../sqlresultset/sqlresultset.html)` mit den Zeilen aus einer SQL-Abfrage zurückgegeben.
 
 ## Eigenschaften
 

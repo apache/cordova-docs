@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-Ein Handle für das Dialogfeld "Popover" erstellt von`camera.getPicture`.
+Ein Handle für das Dialogfeld "Popover" erstellt von`[camera.getPicture](../camera.getPicture.html)`.
 
 ## Methoden
 
-*   **SetPosition**: Legen Sie die Position der Popover.
+*   **SetPosition**: Legen Sie die [Position](../../geolocation/Position/position.html) der Popover.
 
 ## Unterstützte Plattformen
 
@@ -32,11 +34,11 @@ Ein Handle für das Dialogfeld "Popover" erstellt von`camera.getPicture`.
 
 ## setPosition
 
-Legen Sie die Position von der Popover.
+Legen Sie die [Position](../../geolocation/Position/position.html) von der Popover.
 
 **Parameter:**
 
-*   `cameraPopoverOptions`: die `CameraPopoverOptions` angeben, dass die neue Position
+*   `cameraPopoverOptions`: die `[CameraPopoverOptions](CameraPopoverOptions.html)` angeben, dass die neue [Position](../../geolocation/Position/position.html)
 
 ## Kleines Beispiel
 

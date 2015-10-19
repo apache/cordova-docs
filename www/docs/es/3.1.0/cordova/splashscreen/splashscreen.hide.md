@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SplashScreen.Hide
 ---
 
 # SplashScreen.Hide
@@ -72,7 +74,7 @@ Este método despide la pantalla de la aplicación.
 
 ## iOS chanfle
 
-Ajuste de `AutoHideSplashScreen` del archivo `config.xml` debe ser `false`. Para retrasar oculta la pantalla splash durante dos segundos, agregue un temporizador como el siguiente en el controlador de eventos `deviceready`:
+Ajuste de `AutoHideSplashScreen` del archivo `config.xml` debe ser `false`. Para retrasar oculta la pantalla splash durante dos segundos, agregue un temporizador como el siguiente en el controlador de eventos `[deviceready](../events/events.deviceready.html)`:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

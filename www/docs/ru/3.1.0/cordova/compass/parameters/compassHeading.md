@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassHeading
 ---
 
 # compassHeading
 
-A `CompassHeading` объект возвращается к `compassSuccess` функции обратного вызова.
+A `CompassHeading` объект возвращается к `[compassSuccess](compassSuccess.html)` функции обратного вызова.
 
 ## Свойства
 
@@ -34,7 +36,7 @@ A `CompassHeading` объект возвращается к `compassSuccess` ф�
 
 ## Описание
 
-`CompassHeading`Объект возвращается к `compassSuccess` функции обратного вызова.
+`CompassHeading`Объект возвращается к `[compassSuccess](compassSuccess.html)` функции обратного вызова.
 
 ## Андроид причуды
 

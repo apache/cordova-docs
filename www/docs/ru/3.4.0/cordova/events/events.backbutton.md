@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 # backbutton
@@ -27,7 +29,7 @@ license: >
 
 ## Подробная информация
 
-Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `deviceready`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
+Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `[deviceready](events.deviceready.html)`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
 
 ## Поддерживаемые платформы
 

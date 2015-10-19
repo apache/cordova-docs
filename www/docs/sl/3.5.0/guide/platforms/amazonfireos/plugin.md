@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon ogenj OS Plugins
 ---
 
 # Amazon ogenj OS Plugins
 
-Sledite navodilom v priročniku Android Plugins za pregled razvoja meri plugins.
+Sledite navodilom v priročniku [Android Plugins](../android/plugin.html) za pregled razvoja meri plugins.
 
 ## ECHO Amazon ogenj OS Plugin primer
 

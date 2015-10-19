@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.getCurrentPosition
 ---
 
 # geolocation.getCurrentPosition
@@ -37,7 +39,7 @@ license: >
 
 ## Описание
 
-`geolocation.getCurrentPosition`Это асинхронные функции. Возвращает текущее положение устройства для `geolocationSuccess` обратного вызова с `Position` объект в качестве параметра. Если есть ошибка, `geolocationError` обратного вызова передается `PositionError` объект.
+`geolocation.getCurrentPosition`Это асинхронные функции. Возвращает текущее положение устройства для `[geolocationSuccess](parameters/geolocationSuccess.html)` обратного вызова с `Position` объект в качестве параметра. Если есть ошибка, `[geolocationError](parameters/geolocationError.html)` обратного вызова передается `[PositionError](PositionError/positionError.html)` объект.
 
 ## Поддерживаемые платформы
 

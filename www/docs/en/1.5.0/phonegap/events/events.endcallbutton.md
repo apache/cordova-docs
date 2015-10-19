@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: endcallbutton
 ---
 
 endcallbutton
@@ -30,14 +32,14 @@ Details
 
 If you need to override the default end call behaviour you can register an event listener for the 'endcallbutton' event.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
@@ -46,7 +48,7 @@ Quick Example
         // Handle the end call button
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

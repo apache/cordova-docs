@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -27,9 +29,9 @@ license: >
 
 ## 설명
 
-가 속도계 3 차원 *x*, *y*및 *z* 축 따라 현재 장치 방향 기준으로 이동 (*델타*) 변경 내용을 감지 하는 모션 센서입니다.
+[가 속도계](accelerometer.html) 3 차원 *x*, *y*및 *z* 축 따라 현재 [장치](../device/device.html) 방향 기준으로 이동 (*델타*) 변경 내용을 감지 하는 모션 센서입니다.
 
-이 가속도 값에 반환 되는 `accelerometerSuccess` 콜백 함수.
+이 가속도 값에 반환 되는 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` 콜백 함수.
 
 ## 지원 되는 플랫폼
 

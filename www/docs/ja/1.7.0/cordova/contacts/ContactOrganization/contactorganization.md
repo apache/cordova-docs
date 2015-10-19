@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactOrganization
 ---
 
 ContactOrganization
 ===================
 
-`Contact` オブジェクトの組織プロパティーを表します。
+`[Contact](../Contact/contact.html)` オブジェクトの組織プロパティーを表します。
 
 プロパティー
 ----------
@@ -34,7 +36,7 @@ ContactOrganization
 詳細
 -------
 
-`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 `Contact` オブジェクトは複数の `ContactOrganization` オブジェクトを配列に保持します。
+`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 `[Contact](../Contact/contact.html)` オブジェクトは複数の `ContactOrganization` オブジェクトを配列に保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -44,7 +46,7 @@ ContactOrganization
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {

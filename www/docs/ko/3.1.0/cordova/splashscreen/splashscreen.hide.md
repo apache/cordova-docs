@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.hide
 ---
 
 # splashscreen.hide
@@ -72,7 +74,7 @@ license: >
 
 ## iOS 특질
 
-`config.xml`파일의 `AutoHideSplashScreen` 설정을 해야 합니다 `false` . 2 초 동안 시작 화면을 숨기고 지연에 다음과 같이 타이머 추가 `deviceready` 이벤트 처리기:
+`config.xml`파일의 `AutoHideSplashScreen` 설정을 해야 합니다 `false` . 2 초 동안 시작 화면을 숨기고 지연에 다음과 같이 타이머 추가 `[deviceready](../events/events.deviceready.html)` [이벤트](../events/events.html) 처리기:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

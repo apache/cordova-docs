@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSet
 ---
 
 # SQLResultSet
 
-當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數。
+當 `[SQLTransaction](../sqltransaction/sqltransaction.html)` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數。
 
 ## 屬性
 
@@ -28,11 +30,11 @@ license: >
 
 *   **rowsAffected**： 由零如果該語句不會影響任何行的 SQL 語句更改的行數。
 
-*   **行**： `SQLResultSetRowList` 表示返回的行，如果未返回行，則為空。
+*   **行**： `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` 表示返回的行，如果未返回行，則為空。
 
 ## 詳細資訊
 
-當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數，其中包含三個屬性：
+當 `[SQLTransaction](../sqltransaction/sqltransaction.html)` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數，其中包含三個屬性：
 
 *   `insertId`返回組裝成功的 SQL 插入語句的行號。如果 SQL 不會插入任何行， `insertId` 未設置。
 

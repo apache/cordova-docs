@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Shranjevanje
 ---
 
 # Shranjevanje
 
-> Pregled možnosti za shranjevanje za Cordova.
+> [Pregled](../../guide/overview/index.html) možnosti za shranjevanje za Cordova.
 
 Shranjevanje več API-jev so na voljo za Cordova aplikacije. Glej [html5rocks][1]. za popolnejši pregled in primeri.
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Developing a Plugin on Android
 ---
 
 # Developing a Plugin on Android
@@ -26,7 +28,7 @@ file.
 
 A plugin will consist of at least a single Java class that extends the `CordovaPlugin` class. A plugin must override one
 of the `execute` methods from `CordovaPlugin`. In addition to this, there is a best practice that
-the plugin should handle pause and resume events, and should handle message passing between plugins.
+the plugin should handle [pause](../../../cordova/events/events.pause.html) and [resume](../../../cordova/events/events.resume.html) events, and should handle message passing between plugins.
 Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the Javascript.
 
 ## Plugin Class Mapping 

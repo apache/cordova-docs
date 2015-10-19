@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 세계화
 ---
 
 # 세계화
@@ -24,22 +26,22 @@ license: >
 
 ## 개체
 
-*   GlobalizationError
+*   [GlobalizationError](GlobalizationError/globalizationerror.html)
 
 ## 메서드
 
-*   globalization.getPreferredLanguage
-*   globalization.getLocaleName
-*   globalization.dateToString
-*   globalization.stringToDate
-*   globalization.getDatePattern
-*   globalization.getDateNames
-*   globalization.isDayLightSavingsTime
-*   globalization.getFirstDayOfWeek
-*   globalization.numberToString
-*   globalization.stringToNumber
-*   globalization.getNumberPattern
-*   globalization.getCurrencyPattern
+*   [globalization.getPreferredLanguage](globalization.getPreferredLanguage.html)
+*   [globalization.getLocaleName](globalization.getLocaleName.html)
+*   [globalization.dateToString](globalization.dateToString.html)
+*   [globalization.stringToDate](globalization.stringToDate.html)
+*   [globalization.getDatePattern](globalization.getDatePattern.html)
+*   [globalization.getDateNames](globalization.getDateNames.html)
+*   [globalization.isDayLightSavingsTime](globalization.isDayLightSavingsTime.html)
+*   [globalization.getFirstDayOfWeek](globalization.getFirstDayOfWeek.html)
+*   [globalization.numberToString](globalization.numberToString.html)
+*   [globalization.stringToNumber](globalization.stringToNumber.html)
+*   [globalization.getNumberPattern](globalization.getNumberPattern.html)
+*   [globalization.getCurrencyPattern](globalization.getCurrencyPattern.html)
 
 ## 변수 범위
 
@@ -51,7 +53,7 @@ license: >
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.globalization
         $ cordova plugin ls
@@ -68,4 +70,4 @@ license: >
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.

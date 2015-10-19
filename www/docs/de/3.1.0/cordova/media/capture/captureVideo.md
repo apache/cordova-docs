@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureVideo
 ---
 
 # capture.captureVideo
@@ -31,9 +33,9 @@ license: >
 
 Beginnt einen asynchronen Vorgang um Videoaufnahmen mit Videoaufzeichnung-Anwendung des Geräts zu erfassen. Die Operation ermöglicht dem Benutzer, mehrere Aufnahmen in einer einzigen Sitzung zu erfassen.
 
-Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet wird, die video-Aufnahme-Anwendung oder die maximale Anzahl an Aufnahmen von angegebenen `CaptureVideoOptions.limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer einen einzelnen video Clip aufgezeichnet.
+Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet wird, die video-Aufnahme-Anwendung oder die maximale Anzahl an Aufnahmen von angegebenen `[CaptureVideoOptions](captureVideoOptions.html).limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer einen einzelnen video Clip aufgezeichnet.
 
-Wenn der Capture-Vorgang abgeschlossen ist, es der `CaptureCB` Rückruf führt mit einer Reihe von `MediaFile` Objekten beschreiben jedes video-Clip-Datei erfasst. Wenn der Benutzer den Vorgang vor dem Erfassen eines Videoclips, beendet die `CaptureErrorCB` Rückruf führt mit ein `CaptureError` Objekt mit eine `CaptureError.CAPTURE_NO_MEDIA_FILES` Fehlercode.
+Wenn der Capture-Vorgang abgeschlossen ist, es der `[CaptureCB](CaptureCB.html)` Rückruf führt mit einer Reihe von `[MediaFile](MediaFile.html)` Objekten beschreiben jedes video-Clip-Datei erfasst. Wenn der Benutzer den Vorgang vor dem [Erfassen](capture.html) eines Videoclips, beendet die `[CaptureErrorCB](CaptureErrorCB.html)` Rückruf führt mit ein `[CaptureError](CaptureError.html)` Objekt mit eine `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` Fehlercode.
 
 ## Unterstützte Plattformen
 
@@ -126,4 +128,4 @@ Wenn der Capture-Vorgang abgeschlossen ist, es der `CaptureCB` Rückruf führt m
 
 ## BlackBerry WebWorks Macken
 
-*   Cordova für BlackBerry WebWorks versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `CaptureError.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem Gerät installiert ist.
+*   Cordova für BlackBerry WebWorks versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem [Gerät](../../device/device.html) installiert ist.

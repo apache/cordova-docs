@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Platform Guide
 ---
 
 # Amazon Fire OS Platform Guide
@@ -24,9 +26,9 @@ Ce guide montre comment configurer votre environnement de développement SDK pou
 
 Voir ci-dessous pour plus d'informations spécifiques à la plateforme :
 
-*   Amazon Fire OS Configuration
-*   Amazon Fire OS WebViews
-*   Amazon Fire OS Plugins
+*   [Amazon Fire OS Configuration](config.html)
+*   [Amazon Fire OS WebViews](webview.html)
+*   [Amazon Fire OS Plugins](plugin.html)
 
 ## Introduction
 

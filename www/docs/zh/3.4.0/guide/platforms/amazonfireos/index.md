@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 亞馬遜火 OS 平臺指南
 ---
 
 # 亞馬遜火 OS 平臺指南
@@ -24,9 +26,9 @@ license: >
 
 請參閱下列特定于平臺的詳細資訊：
 
-*   亞馬遜火 OS 配置
-*   亞馬遜火 OS WebViews
-*   亞馬遜火 OS 外掛程式
+*   [亞馬遜火 OS 配置](config.html)
+*   [亞馬遜火 OS WebViews](webview.html)
+*   [亞馬遜火 OS 外掛程式](plugin.html)
 
 ## 要求和支援
 

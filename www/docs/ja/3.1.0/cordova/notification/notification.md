@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 通知
 ---
 
 # 通知
@@ -24,11 +26,11 @@ license: >
 
 ## メソッド
 
-*   `notification.alert`
-*   `notification.confirm`
-*   `notification.prompt`
-*   `notification.beep`
-*   `notification.vibrate`
+*   `[notification.alert](notification.alert.html)`
+*   `[notification.confirm](notification.confirm.html)`
+*   `[notification.prompt](notification.prompt.html)`
+*   `[notification.beep](notification.beep.html)`
+*   `[notification.vibrate](notification.vibrate.html)`
 
 ## 機能へのアクセス
 

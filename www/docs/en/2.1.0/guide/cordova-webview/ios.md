@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Embedding Cordova WebView on iOS
 ---
 
 Embedding Cordova WebView on iOS
@@ -49,7 +51,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 9. Press the key combination **Option-Command-1** to show the **File Inspector**
 10. Choose **"Relative to Group"** in the **File Inspector** for the drop-down menu for **Location** 
 11. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
-12. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+12. Add `-all_load` and `-Obj-C` - for the **"Other Linker [Flags](../../cordova/file/flags/flags.html)"** value
 13. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
 14. Expand **"Link Binaries with Libraries"** 
 15. Select the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):

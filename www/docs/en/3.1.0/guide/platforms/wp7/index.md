@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 7 Platform Guide
 ---
 
 # Windows Phone 7 Platform Guide
@@ -29,12 +31,12 @@ Phone 8 apps do _not_ run on Windows Phone 7 devices.
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+* [Upgrading Windows Phone](../wp8/upgrading.html)
+* [Windows Phone Plugins](../wp8/plugin.html)
+* [Windows Phone Command-line Tools](../wp8/tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See [The Command-line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## 1. System Requirements
@@ -97,7 +99,7 @@ In order to test your application on a device, the device must be registered. Cl
 
 - Make sure your phone is connected, and the screen is unlocked.
 
-- In Visual Studio, select 'Device' from the top drop-down menu.
+- In Visual Studio, select '[Device](../../../cordova/device/device.html)' from the top drop-down menu.
 
 - Press the green __play__ button next to the main drop-down menu to start debugging, or type __F5__.
 

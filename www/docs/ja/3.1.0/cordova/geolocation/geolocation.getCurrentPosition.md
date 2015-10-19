@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.getCurrentPosition
 ---
 
 # geolocation.getCurrentPosition
@@ -37,7 +39,7 @@ license: >
 
 ## 説明
 
-`geolocation.getCurrentPosition`非同期関数です。 デバイスの現在の位置を返します、 `geolocationSuccess` コールバックを `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `geolocationError` コールバックに渡される、 `PositionError` オブジェクト。
+`geolocation.getCurrentPosition`非同期関数です。 デバイスの現在の位置を返します、 `[geolocationSuccess](parameters/geolocationSuccess.html)` コールバックを `Position` オブジェクトをパラメーターとして。 エラーがある場合、 `[geolocationError](parameters/geolocationError.html)` コールバックに渡される、 `[PositionError](PositionError/positionError.html)` オブジェクト。
 
 ## サポートされているプラットフォーム
 

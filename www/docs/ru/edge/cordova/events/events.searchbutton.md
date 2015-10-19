@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: searchbutton
 ---
 
 # searchbutton
@@ -29,7 +31,7 @@ license: >
 
 Если необходимо переопределить поведение по умолчанию кнопки поиск на Android вы можете зарегистрировать обработчик события для события «searchbutton».
 
-Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `[deviceready](events.deviceready.html)`.
 
 ## Поддерживаемые платформы
 

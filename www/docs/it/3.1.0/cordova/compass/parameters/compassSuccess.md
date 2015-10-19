@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 # compassSuccess
 
-funzione di callback onSuccess che fornisce le informazioni della bussola tramite un `compassHeading` oggetto.
+funzione di callback onSuccess che fornisce le informazioni della bussola tramite un `[compassHeading](compassHeading.html)` oggetto.
 
     function(heading) {
         // Do something

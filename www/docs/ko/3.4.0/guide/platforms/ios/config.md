@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 구성
 ---
 
 # iOS 구성
@@ -42,7 +44,7 @@ license: >
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(문자열, 중 `none` , `local` , 또는 기본 `cloud` ): 설정 `cloud` 웹 저장 공간 데이터를 iCloud 통해 백업 수 있도록. 설정 `local` 만 로컬 백업을 아이튠즈 동기화를 통해 수 있도록. 설정 `none` 웹 스토리지 백업 방지.
+*   `BackupWebStorage`(문자열, 중 `none` , `local` , 또는 기본 `cloud` ): 설정 `cloud` 웹 저장 공간 데이터를 iCloud 통해 백업 수 있도록. 설정 `local` 만 로컬 백업을 아이튠즈 동기화를 통해 수 있도록. 설정 `none` 웹 [스토리지](../../../cordova/storage/storage.html) 백업 방지.
     
         <preference name="BackupWebStorage" value="local"/>
         

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.version
 ---
 
 device.version
@@ -35,7 +37,7 @@ OS のバージョンを取得します。
 - Bada 1.2 & 2.x
 - webOS
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android:     Froyo の場合は "2.2" を返す

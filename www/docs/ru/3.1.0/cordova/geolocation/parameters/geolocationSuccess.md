@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 # geolocationSuccess
 
-Функция обратного вызова пользователя, которая выполняется, когда географическое положение становится доступным (при вызове из `geolocation.getCurrentPosition` ), или когда положение изменяется (при вызове из`geolocation.watchPosition`).
+Функция обратного вызова пользователя, которая выполняется, когда географическое положение становится доступным (при вызове из `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ), или когда положение изменяется (при вызове из`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something

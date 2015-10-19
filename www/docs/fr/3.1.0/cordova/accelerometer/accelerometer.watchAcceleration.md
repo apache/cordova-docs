@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
@@ -31,9 +33,9 @@ license: >
 
 L'accéléromètre est un capteur de mouvement qui détecte la modification (delta) en mouvement par rapport à la position actuelle. L'accéléromètre permet de détecter un mouvement 3D le long des axes *x*, *y*et *z*.
 
-La méthode `accelerometer.watchAcceleration` récupère `Acceleration` de l'appareil à intervalle régulier, exécutant la fonction de callback `accelerometerSuccess` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
+La méthode `accelerometer.watchAcceleration` récupère `Acceleration` de l'appareil à intervalle régulier, exécutant la fonction de callback `[accelerometerSuccess](parameters/accelerometerSuccess.html)` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
 
-L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `accelerometer.clearWatch` pour arrêter de surveiller l'accéléromètre.
+L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `[accelerometer.clearWatch](accelerometer.clearWatch.html)` pour arrêter de surveiller l'accéléromètre.
 
 ## Plates-formes prises en charge
 

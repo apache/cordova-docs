@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: online
 ---
 
 online
@@ -30,7 +32,7 @@ Details
 
 When the application's network connection changes to being online, the online event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -40,7 +42,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("online", onOnline, false);
@@ -49,7 +51,7 @@ Quick Example
         // Handle the online event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

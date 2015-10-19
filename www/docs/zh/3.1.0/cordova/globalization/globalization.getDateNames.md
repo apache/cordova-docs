@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -29,7 +31,7 @@ license: >
 
 返回的陣列的名稱為 `successCallback` 與 `properties` 物件作為參數。 該物件包含 `value` 屬性與 `Array` 的 `String` 的值。 從任一開始一年或一周內，根據所選的選項的第一天中的第一個月的陣列功能名稱。
 
-如果有錯誤取得名字，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤取得名字，然後 `errorCallback` 執行與 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 物件作為參數。 錯誤的期望的代碼`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 `options`參數是可選的且其預設值：
 

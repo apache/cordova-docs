@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 # camera.cleanup
@@ -27,7 +29,7 @@ license: >
 
 ## 說明
 
-刪除中間打完電話後保留在臨時存儲的影像檔 `camera.getPicture` 。 適用時，才的價值 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等於`Camera.DestinationType.FILE_URI`.
+刪除中間打完電話後保留在臨時存儲的影像檔 `[camera.getPicture](camera.getPicture.html)` 。 適用時，才的價值 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等於`Camera.DestinationType.FILE_URI`.
 
 ## 支援的平臺
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureVideoOptions
 ---
 
 CaptureVideoOptions
@@ -30,7 +32,7 @@ CaptureVideoOptions
 - __duration:__ ビデオクリップの最大録画時間を秒で表します。
 - __mode:__ 選択されたビデオのモードを表します。値は `capture.supportedVideoModes` の中の一つである必要があります。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // キャプチャー操作時のビデオクリップの最大値を3に制限

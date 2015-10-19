@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: resume
 ---
 
 # resume
@@ -29,7 +31,7 @@ license: >
 
 `resume`ネイティブ プラットフォームは、背景から、アプリケーションを引き出すときに発生します。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 
@@ -85,7 +87,7 @@ license: >
 
 ## iOS の癖
 
-その対話型関数から呼び出された、 `pause` 後イベント ハンドラーで実行、アプリケーションの再開時によってシグナル状態になると、 `resume` イベント。 これらの警告を含める `console.log()` と目的 C. を通過するプラグインやコルドバ、API からの呼び出し
+その対話型関数から呼び出された、 `[pause](events.pause.html)` 後イベント ハンドラーで実行、アプリケーションの再開時によってシグナル状態になると、 `resume` イベント。 これらの警告を含める `console.log()` と目的 C. を通過するプラグインやコルドバ、API からの呼び出し
 
 *   **アクティブな**イベント
     

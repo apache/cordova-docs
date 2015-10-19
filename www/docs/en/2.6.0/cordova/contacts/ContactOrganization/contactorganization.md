@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactOrganization
 ---
 
 ContactOrganization
 ===================
 
-Contains organization properties of a `Contact` object.
+Contains organization properties of a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
@@ -34,7 +36,7 @@ Properties
 Details
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+The `ContactOrganization` object stores a contact's organization properties.  A `[Contact](../Contact/contact.html)` object stores one or more `ContactOrganization` objects in an array. 
 
 Supported Platforms
 -------------------
@@ -46,7 +48,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -70,7 +72,7 @@ Quick Example
 	filter = ["displayName","organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -88,7 +90,7 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
+			var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter="";
 			filter = ["displayName","organizations"];
 			navigator.contacts.find(filter, onSuccess, onError, options);

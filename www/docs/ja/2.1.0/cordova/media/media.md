@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Media
 ---
 
 Media
@@ -50,15 +52,15 @@ Media
 メソッド
 -------
 
-- media.getCurrentPosition: オーディオファイル内の現在の再生位置を返します
-- media.getDuration: オーディオファイルの再生時間を返します
-- media.play: オーディオファイルを再生または再開します
-- media.pause: オーディオファイルを一時停止します
-- media.release: OS のオーディオリソースを開放します
-- media.seekTo: オーディオファイル中の再生位置を動かします
-- media.startRecord: オーディオファイルの録音を開始します
-- media.stopRecord: オーディオファイルの録音を停止します
-- media.stop: オーディオファイルを停止します
+- [media.getCurrentPosition](media.getCurrentPosition.html): オーディオファイル内の現在の再生位置を返します
+- [media.getDuration](media.getDuration.html): オーディオファイルの再生時間を返します
+- [media.play](media.play.html): オーディオファイルを再生または再開します
+- [media.pause](media.pause.html): オーディオファイルを一時停止します
+- [media.release](media.release.html): OS のオーディオリソースを開放します
+- [media.seekTo](media.seekTo.html): オーディオファイル中の再生位置を動かします
+- [media.startRecord](media.startRecord.html): オーディオファイルの録音を開始します
+- [media.stopRecord](media.stopRecord.html): オーディオファイルの録音を停止します
+- [media.stop](media.stop.html): オーディオファイルを停止します
 
 追加の読み取り専用パラメーター
 ---------------------

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: La mise à niveau de Windows Phone 8
 ---
 
 # La mise à niveau de Windows Phone 8

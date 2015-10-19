@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 # compassSuccess
 
-Функция обратного вызова onSuccess, предоставляет информацию курс через `compassHeading` объект.
+Функция обратного вызова onSuccess, предоставляет информацию курс через `[compassHeading](compassHeading.html)` объект.
 
     function(heading) {
         // Do something

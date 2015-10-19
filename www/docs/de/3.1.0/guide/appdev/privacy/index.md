@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Datenschutz-Guide
 ---
 
 # Datenschutz-Guide
@@ -32,7 +34,7 @@ Leitfaden zur mobilen app Privatsphäre sollte eine *Grundierung* auf einige der
 
 *   **Dritter Datenerhebung oder Teilen**: Wenn Sie app Informationen erfasst, die auf eine andere Gesellschaft--bereitgestellt wird wie ein social-networking-Plattform oder ein Ad-Netzwerk (z. B. Wenn Ihre app Werbung angezeigt wird)--Sie sollten informieren Sie Ihre Benutzer dieser Sammlung und Austausch. Zumindest sollten Ihre Datenschutzrichtlinien beschreiben, die Sammlung von Informationen und Austausch und ggf. bieten Ihren Benutzern die Möglichkeit zu steuern oder opt-Out dieser Sammlung oder Teilen.
 
-*   **Sammlung Begrenzung und der Sicherheit**: Ihre Nutzer vertrauen Ihre app mit ihren Informationen und sie erwarten, dass Sie entsprechende Vorsichtsmaßnahmen zum Schutz bringt. Eine der besten Möglichkeiten zur Vermeidung von Sicherheitslücken von persönlichen Informationen soll nicht in erster Linie die Informationen zu sammeln, es sei denn, Ihre Anwendung eine bestimmte und legitimen geschäftlichen Gründen für die Auflistung. Informationen, die gesammelt werden müssen, sicherstellen Sie, dass Sie entsprechenden Sicherheitskontrollen zum Schutz dieser Informationen angeben, ob diese auf dem Gerät oder auf den Back-End-Servern gespeichert sind. Sie sollte auch eine entsprechenden Daten-Aufbewahrungsrichtlinie entwickeln, die innerhalb der app und auf den Back-End-Servern implementiert wird.
+*   **Sammlung Begrenzung und der Sicherheit**: Ihre Nutzer vertrauen Ihre app mit ihren Informationen und sie erwarten, dass Sie entsprechende Vorsichtsmaßnahmen zum Schutz bringt. Eine der besten Möglichkeiten zur Vermeidung von Sicherheitslücken von persönlichen Informationen soll nicht in erster Linie die Informationen zu sammeln, es sei denn, Ihre Anwendung eine bestimmte und legitimen geschäftlichen Gründen für die Auflistung. Informationen, die gesammelt werden müssen, sicherstellen Sie, dass Sie entsprechenden Sicherheitskontrollen zum Schutz dieser Informationen angeben, ob diese auf dem [Gerät](../../../cordova/device/device.html) oder auf den Back-End-Servern gespeichert sind. Sie sollte auch eine entsprechenden Daten-Aufbewahrungsrichtlinie entwickeln, die innerhalb der app und auf den Back-End-Servern implementiert wird.
 
  [1]: cordova_camera_camera.md.html
  [2]: cordova_media_capture_capture.md.html

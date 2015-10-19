@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumedownbutton
 ---
 
 # volumedownbutton
@@ -29,7 +31,7 @@ Zdarzenie fires, gdy użytkownik naciśnie klawisz ciszej "przycisk.
 
 Jeśli chcesz zastąpić ciszej domyślne zachowanie można zarejestrować detektor zdarzeń dla `volumedownbutton` zdarzenie.
 
-Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `deviceready` pożary zdarzenia.
+Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słuchacza raz `[deviceready](events.deviceready.html)` pożary zdarzenia.
 
 ## Obsługiwane platformy
 

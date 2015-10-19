@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
 
-Erhalten Sie in regelmäßigen Abständen die Beschleunigung entlang der *x-*, *y-*und *Z* -Achse.
+Erhalten Sie in regelmäßigen Abständen die [Beschleunigung](acceleration/acceleration.html) entlang der *x-*, *y-*und *Z* -Achse.
 
     var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
                                                            accelerometerError,
@@ -29,11 +31,11 @@ Erhalten Sie in regelmäßigen Abständen die Beschleunigung entlang der *x-*, *
 
 ## Beschreibung
 
-Der Beschleunigungsmesser ist ein Bewegungssensor, der die Änderung (Delta) erkennt Bewegung relativ zur aktuellen Position. Der Beschleunigungssensor erkennt 3D Bewegung entlang der *x-*, *y-*und *Z* -Achse.
+Der [Beschleunigungsmesser](accelerometer.html) ist ein Bewegungssensor, der die Änderung (Delta) erkennt Bewegung relativ zur aktuellen [Position](../geolocation/Position/position.html). Der Beschleunigungssensor erkennt 3D Bewegung entlang der *x-*, *y-*und *Z* -Achse.
 
-Die `accelerometer.watchAcceleration` -Methode ruft das Gerät an den aktuellen `Acceleration` in regelmäßigen Abständen, Ausführung der `accelerometerSuccess` Callback-Funktion jedes Mal. Gibt das Intervall in Millisekunden über die `acceleratorOptions` des Objekts `frequency` Parameter.
+Die `accelerometer.watchAcceleration` -Methode ruft das [Gerät](../device/device.html) an den aktuellen `Acceleration` in regelmäßigen Abständen, Ausführung der `[accelerometerSuccess](parameters/accelerometerSuccess.html)` Callback-Funktion jedes Mal. Gibt das Intervall in Millisekunden über die `acceleratorOptions` des Objekts `frequency` Parameter.
 
-Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu sehen und kann mit verwendet werden `accelerometer.clearWatch` , beobachten den Beschleunigungsmesser zu stoppen.
+Das zurückgegebene ID Referenzen der [Beschleunigungsmesser](accelerometer.html) Uhr Intervall zu sehen und kann mit verwendet werden `[accelerometer.clearWatch](accelerometer.clearWatch.html)` , beobachten den [Beschleunigungsmesser](accelerometer.html) zu stoppen.
 
 ## Unterstützte Plattformen
 
@@ -130,4 +132,4 @@ Das zurückgegebene ID Referenzen der Beschleunigungsmesser Uhr Intervall zu seh
 
 ## iOS Macken
 
-Die API ruft die Erfolg-Callback-Funktion im Intervall angefordert, aber schränkt den Bereich der Anforderungen an das Gerät zwischen 40ms und 1000ms. Beispielsweise wenn Sie ein Intervall von 3 Sekunden, (3000ms), beantragen die API fordert Daten vom Gerät jede Sekunde, aber nur den Erfolg-Rückruf führt alle 3 Sekunden.
+Die API ruft die Erfolg-Callback-Funktion im Intervall angefordert, aber schränkt den Bereich der Anforderungen an das [Gerät](../device/device.html) zwischen 40ms und 1000ms. Beispielsweise wenn Sie ein Intervall von 3 Sekunden, (3000ms), beantragen die API fordert Daten vom [Gerät](../device/device.html) jede Sekunde, aber nur den Erfolg-Rückruf führt alle 3 Sekunden.

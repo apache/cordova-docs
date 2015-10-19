@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Контакты
 ---
 
 # Контакты
@@ -26,25 +28,25 @@ license: >
 
 ## Методы
 
-*   contacts.create
-*   contacts.find
+*   [contacts.create](contacts.create.html)
+*   [contacts.find](contacts.find.html)
 
 ## Аргументы
 
-*   contactFields
-*   contactSuccess
-*   contactError
-*   contactFindOptions
+*   [contactFields](parameters/contactFields.html)
+*   [contactSuccess](parameters/contactSuccess.html)
+*   [contactError](parameters/contactError.html)
+*   [contactFindOptions](parameters/contactFindOptions.html)
 
 ## Объекты
 
 *   Contact
-*   ContactName
-*   ContactField
-*   ContactAddress
-*   ContactOrganization
-*   ContactFindOptions
-*   ContactError
+*   [ContactName](ContactName/contactname.html)
+*   [ContactField](ContactField/contactfield.html)
+*   [ContactAddress](ContactAddress/contactaddress.html)
+*   [ContactOrganization](ContactOrganization/contactorganization.html)
+*   [ContactFindOptions](ContactFindOptions/contactfindoptions.html)
+*   [ContactError](ContactError/contactError.html)
 
 ## Доступ к функции
 

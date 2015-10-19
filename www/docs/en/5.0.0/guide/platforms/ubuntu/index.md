@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Ubuntu Platform Guide
 ---
 
 # Ubuntu Platform Guide
@@ -25,7 +27,7 @@ license: >
 Welcome to the initial release of Ubuntu platform support in
 Cordova. With this release, the focus is developing on an Ubuntu
 system and using the cross-platform workflow discussed in the
-Overview.  This includes adding the Ubuntu platform to your project,
+[Overview](../../overview/index.html).  This includes adding the Ubuntu platform to your project,
 adding standard Cordova plugins, and building and running apps for the
 Ubuntu platform.
 

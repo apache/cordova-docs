@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 # backbutton
@@ -27,7 +29,7 @@ El evento se desencadena cuando el usuario presiona el botón back.
 
 ## Detalles
 
-Para reemplazar el comportamiento predeterminado de botón atrás, registrar un detector de eventos para el evento `backbutton`, típicamente llamando `document.addEventListener` una vez que reciba el evento `deviceready`. Ya no es necesario llamar a cualquier otro método para reemplazar el comportamiento del botón atrás.
+Para reemplazar el comportamiento predeterminado de botón atrás, registrar un detector de eventos para el evento `backbutton`, típicamente llamando `document.addEventListener` una vez que reciba el evento `[deviceready](events.deviceready.html)`. Ya no es necesario llamar a cualquier otro método para reemplazar el comportamiento del botón atrás.
 
 ## Plataformas soportadas
 

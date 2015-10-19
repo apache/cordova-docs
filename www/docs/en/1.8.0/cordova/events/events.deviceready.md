@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: deviceready
 ---
 
 deviceready
@@ -45,7 +47,7 @@ Supported Platforms
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -54,7 +56,7 @@ Quick Example
         // Now safe to use the Cordova API
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

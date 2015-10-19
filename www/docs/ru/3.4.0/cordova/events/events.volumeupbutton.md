@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumeupbutton
 ---
 
 # volumeupbutton
@@ -29,7 +31,7 @@ license: >
 
 Если необходимо переопределить по умолчанию громкости поведение вы можете зарегистрировать прослушиватель событий для `volumeupbutton` событие.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `[deviceready](events.deviceready.html)` пожаров события.
 
 ## Поддерживаемые платформы
 

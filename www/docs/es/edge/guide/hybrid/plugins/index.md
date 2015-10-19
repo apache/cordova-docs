@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de desarrollo de plugin
 ---
 
 # Guía de desarrollo de plugin
@@ -135,12 +137,12 @@ El callback de éxito pasó a `exec` es simplemente una referencia a la función
 
 Una vez se define JavaScript para tu plugin, debes complementarlo con por lo menos una aplicación nativa. Los datos de cada plataforma se enumeran a continuación, y cada uno se basa en el simple ejemplo Eco Plugin anterior:
 
-*   Amazon fuego OS Plugins
-*   Android Plugins
-*   iOS Plugins
-*   BlackBerry 10 Plugins
-*   Windows Phone 8 Plugins
-*   Windows Plugins
+*   [Amazon fuego OS Plugins](../../platforms/amazonfireos/plugin.html)
+*   [Android Plugins](../../platforms/android/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone 8 Plugins](../../platforms/wp8/plugin.html)
+*   [Windows Plugins](../../platforms/win8/plugin.html)
 
 La plataforma Tizen no admite plugins.
 

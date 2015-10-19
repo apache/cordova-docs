@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDatePattern
 ---
 
 globalization.getDatePattern
@@ -35,7 +37,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - utc\_offset {Number}: クライアントのタイムゾーンと協定世界時との現在の差を秒で表します。
 - dst\_offset {Number}: 現在のサマータイム (デイライトセービングタイム) のオフセットを秒で表します。
 
-もしパターン取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.PATTERN\_ERROR です。
+もしパターン取得中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR です。
 
 `options.formatLength` には 'short', 'medium', 'long', または 'full' が指定出来ます。
 `options.selector` には 'date', 'time' または 'date and time' が指定出来ます。
@@ -50,7 +52,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは "pattern: M/d/yyyy h:mm a" といったような文字列をポップアップダイアログに表示します。

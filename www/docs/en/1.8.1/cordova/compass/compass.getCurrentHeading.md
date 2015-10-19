@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 compass.getCurrentHeading
@@ -30,7 +32,7 @@ Description
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The compass heading information is returned via a CompassHeading object using the `compassSuccess` callback function.
+The compass heading information is returned via a CompassHeading object using the `[compassSuccess](parameters/compassSuccess.html)` callback function.
 
 Supported Platforms
 -------------------
@@ -41,7 +43,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(heading) {
@@ -54,7 +56,7 @@ Quick Example
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

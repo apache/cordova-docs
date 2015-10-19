@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileWriter
 ---
 
 # FileWriter
@@ -30,7 +32,7 @@ license: >
 
 *   **길이**: 쓰여질 파일의 길이. *(긴)*
 
-*   **위치**: 파일 포인터의 현재 위치. *(긴)*
+*   **위치**: [파일](../fileobj/fileobj.html) 포인터의 현재 [위치](../../geolocation/Position/position.html). *(긴)*
 
 *   **오류**: 오류를 포함 하는 개체. *(FileError)*
 
@@ -50,17 +52,17 @@ license: >
 
 ## 메서드
 
-*   **중지**: 파일 쓰기를 중단 합니다.
+*   **중지**: [파일](../fileobj/fileobj.html) 쓰기를 중단 합니다.
 
-*   **추구**: 지정 된 바이트를 파일 포인터를 이동 합니다.
+*   **추구**: 지정 된 바이트를 [파일](../fileobj/fileobj.html) 포인터를 이동 합니다.
 
-*   **자르기**: 파일 지정된 된 길이에 단축.
+*   **자르기**: [파일](../fileobj/fileobj.html) 지정된 된 길이에 단축.
 
 *   **쓰기**: 파일에 데이터를 씁니다.
 
 ## 세부 정보
 
-`FileWriter`개체 장치 파일 시스템에 u t F-8로 인코딩된 파일을 작성 하는 방법을 제공 합니다. 응용 프로그램에 응답 `writestart` , `progress` , `write` , `writeend` , `error` , 및 `abort` 이벤트.
+`FileWriter`개체 [장치](../../device/device.html) [파일](../fileobj/fileobj.html) 시스템에 u t F-8로 인코딩된 파일을 작성 하는 방법을 제공 합니다. 응용 프로그램에 응답 `writestart` , `progress` , `write` , `writeend` , `error` , 및 `abort` [이벤트](../../events/events.html).
 
 각 `FileWriter` 는 데이터 쓸 수 있습니다 여러 번 단일 파일에 해당 합니다. `FileWriter`파일의 유지 관리 `position` 및 `length` 특성을 애플 리 케이 션을 허용 하는 `seek` 및 `write` 파일에 아무 데도. 기본적으로는 `FileWriter` 기존 데이터를 덮어쓰면서 파일의 시작 부분을 씁니다. 선택적 설정 `append` 을 부울 `true` 에 `FileWriter` 의 생성자는 파일의 끝에 쓰기.
 

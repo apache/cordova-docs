@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: pausa
 ---
 
 # pausa
@@ -29,7 +31,7 @@ L'evento viene generato quando un'applicazione viene messo in secondo piano.
 
 Il `pause` evento viene generato quando la piattaforma nativa mette l'applicazione in background, in genere quando si passa a un'altra applicazione.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 

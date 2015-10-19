@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.vibrate
 ---
 
 notification.vibrate
@@ -36,14 +38,14 @@ Supported Platforms
 - iPhone
 - Windows Phone 7
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Vibrate for 2.5 seconds
     //
     navigator.notification.vibrate(2500);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
     
     <!DOCTYPE html>

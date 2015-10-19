@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Plugins
 ---
 
 # iOS Plugins
@@ -202,7 +204,7 @@ See other methods that you can override in:
 
 * [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
-For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
+For example, you can hook into the `[pause](../../../cordova/events/events.pause.html)`, `[resume](../../../cordova/events/events.resume.html)`, app terminate and `handleOpenURL` events.
 
 ## Debugging Plugins
 
@@ -218,4 +220,4 @@ running in the iOS 6 Simulator.
 
 * Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
 
-* Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.
+* Don't forget to add any hosts you connect to in the whitelist, as described in Domain [Whitelist Guide](../../appdev/whitelist/index.html). If you forget, an error is logged in the Xcode console.

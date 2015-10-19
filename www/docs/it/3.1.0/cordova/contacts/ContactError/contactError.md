@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactError
 ---
 
 # ContactError
 
-A `ContactError` oggetto è passato per la `contactError` callback quando si verifica un errore.
+A `ContactError` oggetto è passato per la `[contactError](../parameters/contactError.html)` callback quando si verifica un errore.
 
 ## Proprietà
 
@@ -38,4 +40,4 @@ A `ContactError` oggetto è passato per la `contactError` callback quando si ver
 
 ## Descrizione
 
-Il `ContactError` oggetto viene restituito all'utente attraverso la `contactError` funzione di callback quando si verifica un errore.
+Il `ContactError` oggetto viene restituito all'utente attraverso la `[contactError](../parameters/contactError.html)` funzione di callback quando si verifica un errore.

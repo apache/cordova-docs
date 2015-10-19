@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToDate
 ---
 
 globalization.stringToDate
@@ -48,7 +50,7 @@ The inbound `dateString` parameter should be of type `String`.
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The options parameter is optional.
 
-If there is an error parsing the date string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+If there is an error parsing the date string, then the errorCB callback is invoked with a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR.
 
 
 Supported Platforms
@@ -58,7 +60,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
@@ -73,7 +75,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
     );
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

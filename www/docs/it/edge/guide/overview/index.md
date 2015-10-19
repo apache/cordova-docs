@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Panoramica
 ---
 
 # Panoramica
@@ -72,4 +74,4 @@ L'installazione di Cordova sarà diverso a seconda del flusso di lavoro sopra ch
 
 *   Piattaforma centrata sul flusso di lavoro: vedere le guide di piattaforma.
 
-Dopo l'installazione di Cordova, si consiglia di consultare le guide di piattaforma per le piattaforme mobili che si verranno sviluppando per. Si raccomanda inoltre di esaminare anche la guida Privacy, Security Guide e prossimi passi. Per la configurazione di Cordova, vedere il File config. Xml. Per accedere a una funzione nativa su un dispositivo da JavaScript, vedere il Plugin APIs. E consultare le altre guide incluse come necessario.
+Dopo l'installazione di Cordova, si consiglia di consultare le guide di piattaforma per le piattaforme mobili che si verranno sviluppando per. Si raccomanda inoltre di esaminare anche la guida Privacy, Security [Guide](../../index.html) e prossimi passi. Per la configurazione di Cordova, vedere il File config. Xml. Per accedere a una funzione nativa su un dispositivo da JavaScript, vedere il Plugin APIs. E consultare le altre guide incluse come necessario.

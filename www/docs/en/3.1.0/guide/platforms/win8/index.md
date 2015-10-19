@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 Platform Guide
 ---
 
 # Windows 8 Platform Guide
@@ -24,11 +26,11 @@ This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows 8. See the following for more
 detailed platform-specific information:
 
-* Upgrading Windows 8
-* Windows 8 Command-line Tools
+* [Upgrading Windows 8](upgrading.html)
+* [Windows 8 Command-line Tools](tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See [The Command-line Interface](../../cli/index.html) for information about the
 current interface.
 
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
@@ -94,7 +96,7 @@ expose the same APIs as on other Cordova-supported platforms.
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.addEventListener("deviceready", function () {
+	        document.addEventListener("[deviceready](../../../cordova/events/events.deviceready.html)", function () {
 
 	            navigator.notification.alert("The device is ready!");
 

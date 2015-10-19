@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getLocaleName
 ---
 
 # globalization.getLocaleName
@@ -29,7 +31,7 @@ Bekommen Sie der Bezeichner für die aktuelle Gebietsschema-Einstellung des Clie
 
 Gibt die Gebietsschemabezeichner-Zeichenfolge, die `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt muss eine `value` Eigenschaft mit einer `String` Wert.
 
-Wenn es ist ein Fehler, der immer des Gebietsschemas, dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.UNKNOWN\_ERROR`.
+Wenn es ist ein Fehler, der immer des Gebietsschemas, dann die `errorCallback` führt mit einem `[GlobalizationError](GlobalizationError/globalizationerror.html)` -Objekt als Parameter. Erwarteten Fehlercode ist`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Unterstützte Plattformen
 

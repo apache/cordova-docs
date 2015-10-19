@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 camera.cleanup
@@ -28,7 +30,7 @@ camera.cleanup
 Description
 -----------
 
-임시 저장소에 있는 이미지 파일들을 삭제한다. `camera.getPicture`함수는 `Camera.sourceType = Camera.PictureSourceType.CAMERA` 과 `Camera.destinationType = Camera.DestinationType.FILE_URI` 일때 이용된다.
+임시 저장소에 있는 이미지 파일들을 삭제한다. `[camera.getPicture](camera.getPicture.html)`함수는 `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA` 과 `[Camera](camera.html).destinationType = [Camera](camera.html).DestinationType.FILE_URI` 일때 이용된다.
 
 
 Supported Platforms
@@ -37,7 +39,7 @@ Supported Platforms
 - iOS
 
 
-Example
+[Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail); 

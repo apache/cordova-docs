@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started Guides
 ---
 
 Getting Started Guides
 ======================
 
-- Getting Started with Android
-- Getting Started with BlackBerry
-- Getting Started with iOS
-- Getting Started with Symbian
-- Getting Started with WebOS
-- Getting Started with Windows Phone
+- [Getting Started with Android](android/index.html)
+- [Getting Started with BlackBerry](blackberry/index.html)
+- [Getting Started with iOS](ios/index.html)
+- [Getting Started with Symbian](symbian/index.html)
+- [Getting Started with WebOS](webos/index.html)
+- [Getting Started with Windows Phone](windows-phone/index.html)

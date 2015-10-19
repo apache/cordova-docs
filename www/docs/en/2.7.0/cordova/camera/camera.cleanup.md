@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 camera.cleanup
@@ -28,7 +30,7 @@ Cleans up the image files that were taken by the camera, that were stored in a t
 Description
 -----------
 
-Cleans up the image files stored in the temporary storage location, when the function `camera.getPicture` is used with  `Camera.sourceType = Camera.PictureSourceType.CAMERA` and `Camera.destinationType = Camera.DestinationType.FILE_URI`
+Cleans up the image files stored in the temporary storage location, when the function `[camera.getPicture](camera.getPicture.html)` is used with  `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA` and `[Camera](camera.html).destinationType = [Camera](camera.html).DestinationType.FILE_URI`
 
 
 Supported Platforms
@@ -37,7 +39,7 @@ Supported Platforms
 - iOS
 
 
-Example
+[Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail); 

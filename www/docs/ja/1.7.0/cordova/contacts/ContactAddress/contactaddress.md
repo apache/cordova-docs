@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactAddress
 ---
 
 ContactAddress
 ==============
 
-`Contact` オブジェクトの住所プロパティーを表します。
+`[Contact](../Contact/contact.html)` オブジェクトの住所プロパティーを表します。
 
 プロパティー
 ----------
@@ -37,7 +39,7 @@ ContactAddress
 詳細
 -------
 
-`ContactAddress` オブジェクトは連絡先の住所に関するプロパティーを表します。 `Contact` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
+`ContactAddress` オブジェクトは連絡先の住所に関するプロパティーを表します。 `[Contact](../Contact/contact.html)` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
 
 サポートされているプラットフォーム
 -------------------
@@ -47,7 +49,7 @@ ContactAddress
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // すべての連絡先の住所情報を取得し、表示します

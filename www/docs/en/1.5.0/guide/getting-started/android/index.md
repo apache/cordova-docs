@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Android
 ---
 
 Getting Started with Android
@@ -52,18 +54,18 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
     ![](img/guide/platforms/android/new_android_project.jpeg)
 - In the root directory of the project, create two new directories:
- 	- **/libs**
- 	- **assets/www**
+    - **/libs**
+    - **assets/www**
 - Copy **cordova-1.5.0.js** from your PhoneGap download earlier to **assets/www**
 - Copy **cordova-1.5.0.jar** from your PhoneGap download earlier to **/libs**
 - Copy **xml** folder from your PhoneGap download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
-	- Change the class's extend from **Activity** to **DroidGap**
-	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
-	- Add **import com.phonegap.*;**
-	- Remove **import android.app.Activity;**
+    - Change the class's extend from **Activity** to **DroidGap**
+    - Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**
+    - Add **import com.phonegap.*;**
+    - Remove **import android.app.Activity;**
 
-	![](img/guide/platforms/android/javaSrc.jpg)
+    ![](img/guide/platforms/android/javaSrc.jpg)
 - You might experience an error here, where Eclipse can't find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions under versionName: (view image below)
@@ -87,15 +89,15 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
 - Add a second activity under you application tag in AndroidManifest. (view image below)
-	
-	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 
-	![](img/guide/platforms/android/manifest.jpg)
+        <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
+
+    ![](img/guide/platforms/android/manifest.jpg)
 
 
 
-4. Hello World
---------------    
+4. [Hello World](../webos/index.html)
+--------------
 
 Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
@@ -118,7 +120,7 @@ Now create and open a new file named **index.html** in the **assets/www** direct
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../phonegap/device/device.html)
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (Settings &gt; Applications &gt; Development)
@@ -128,5 +130,5 @@ Now create and open a new file named **index.html** in the **assets/www** direct
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
+You can also checkout more detailed [version](../../../phonegap/storage/parameters/version.html) of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
 

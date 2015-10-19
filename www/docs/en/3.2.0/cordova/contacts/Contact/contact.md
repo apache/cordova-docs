@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Contact
 ---
 
 # Contact
@@ -56,16 +58,16 @@ Contains properties that describe a contact, such as a user's personal or busine
 
 - __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
 
-- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `ContactError` object.
+- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `[ContactError](../ContactError/contactError.html)` object.
 
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
 ## Details
 
-The `Contact` object represents a user's contact.  Contacts can be
+The `Contact` object represents a user's contact.  [Contacts](../contacts.html) can be
 created, stored, or removed from the device contacts database.
-Contacts can also be retrieved (individually or in bulk) from the
-database by invoking the `contacts.find` method.
+[Contacts](../contacts.html) can also be retrieved (individually or in bulk) from the
+database by invoking the `[contacts.find](../contacts.find.html)` method.
 
 __NOTE__: Not all of the contact fields listed above are supported on
 every device platform.  Please check each platform's _Quirks_ section
@@ -226,11 +228,11 @@ for details.
 
 ## iOS Quirks
 
-- __displayName__: Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
+- __displayName__: Not supported on iOS, returning `null` unless there is no `[ContactName](../ContactName/contactname.html)` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
 
 - __birthday__: Must be input as a JavaScript `Date` object, the same way it is returned.
 
-- __photos__: Returns a File URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
+- __photos__: Returns a [File](../../file/fileobj/fileobj.html) URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
 
 - __categories__:  This property is currently not supported, returning `null`.
 

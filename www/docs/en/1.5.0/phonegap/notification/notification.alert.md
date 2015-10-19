@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.alert
 ---
 
 notification.alert
@@ -28,7 +30,7 @@ Shows a custom alert or dialog box.
 - __message:__ Dialog message (`String`)
 - __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Alert")
-- __buttonName:__ Button name (`String`) (Optional, Default: "OK")
+- __buttonName:__ Button [name](../storage/parameters/name.html) (`String`) (Optional, Default: "OK")
     
 Description
 -----------
@@ -44,7 +46,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
@@ -64,7 +66,7 @@ Quick Example
     //
     navigator.notification.alert('You are the winner!');
         
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

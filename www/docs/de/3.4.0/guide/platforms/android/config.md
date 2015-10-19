@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android-Konfiguration
 ---
 
 # Android-Konfiguration
@@ -42,7 +44,7 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(Boolean, wird standardmäßig auf `true` ): Steuerelemente ob Seiten innerhalb einer InAppBrowser geöffnet können Zugriff auf die gleichen LocalStorage und WebSQL Speicher als Seiten mit Standardbrowser geöffnet.
+*   `InAppBrowserStorageEnabled`(Boolean, wird standardmäßig auf `true` ): Steuerelemente ob Seiten innerhalb einer InAppBrowser geöffnet können Zugriff auf die gleichen LocalStorage und WebSQL [Speicher](../../../cordova/storage/storage.html) als Seiten mit Standardbrowser geöffnet.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

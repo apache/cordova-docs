@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 線上
 ---
 
 # 線上
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細資訊
 
-`online`當先前連接的行動裝置接收到一個網路連接以允許應用程式訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時的值 `connection.type` 成為`NONE`.
+`online`當先前連接的行動裝置接收到一個網路連接以允許應用程式訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時的值 `[connection.type](../connection/connection.type.html)` 成為`NONE`.
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 
@@ -85,7 +87,7 @@ license: >
 
 ## iOS 的怪癖
 
-在初始啟動期間第一次 `online` 事件 （如果適用），至少需一秒的火災之前的, `connection.type` 是`UNKNOWN`.
+在初始啟動期間第一次 `online` [事件](events.html) （如果適用），至少需一秒的火災之前的, `[connection.type](../connection/connection.type.html)` 是`UNKNOWN`.
 
 ## Windows Phone 7 的怪癖
 

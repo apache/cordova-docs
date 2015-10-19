@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Aktualisieren von Windows Phone
 ---
 
 # Aktualisieren von Windows Phone
@@ -42,7 +44,7 @@ platform add wp7 wp8`.
 
 3.  Kopieren Sie den Inhalt des Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
 
-4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `SplashScreen` , `ApplicationIcon` , etc.), die sicher um jede neuen Dateien auf die `.csproj` Datei. Die Windows phone Projektbuilds innerhalb der `platforms\wp7` oder `platforms\wp8` Verzeichnis.
+4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)` , `ApplicationIcon` , etc.), die sicher um jede neuen Dateien auf die `.csproj` [Datei](../../../cordova/file/fileobj/fileobj.html). Die Windows phone Projektbuilds innerhalb der `platforms\wp7` oder `platforms\wp8` Verzeichnis.
 
 5.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
@@ -88,7 +90,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` Datei. (Beachten Sie das Fehlen einer Versionsnummer im Dateinamen).
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` [Datei](../../../cordova/file/fileobj/fileobj.html). (Beachten Sie das Fehlen einer Versionsnummer im Dateinamen).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -104,7 +106,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.7.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.7.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -120,7 +122,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.6.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.6.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -136,7 +138,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.5.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.5.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -152,7 +154,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.4.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -168,7 +170,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.3.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.3.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -184,7 +186,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.2.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.2.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -200,7 +202,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.1.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -218,7 +220,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 2.  Kopieren Sie den Inhalt Ihrer `www` Verzeichnis in das neue Projekt und achten, dass diese Elemente werden dem VS-Projekt hinzugefügt.
 
-3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` Datei.
+3.  Aktualisieren Sie den HTML-Code um das neue `cordova-2.0.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 4.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
@@ -236,13 +238,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.9.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.9.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.9.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.8.0 von 1.7.0
 
@@ -254,13 +256,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.8.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.7.0 von 1.6.0
 
@@ -272,13 +274,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.7.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.7.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.7.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.6.1 von 1.6.0
 
@@ -290,13 +292,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.6.1.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.1.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.1.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.6.0 von 1.5.0
 
@@ -308,13 +310,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.6.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.6.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.5.0 von 1.4.0
 
@@ -326,13 +328,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.5.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.5.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.5.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.4.0 von 1.3.0
 
@@ -344,13 +346,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.4.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.4.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.4.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.3.0 von 1.2.0
 
@@ -362,13 +364,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.3.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.3.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.3.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Ein Upgrade auf 1.2.0 von 1.1.0
 
@@ -380,13 +382,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.2.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.2.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.2.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).
 
 ## Von 1.0.0 auf 1.1.0 aktualisieren
 
@@ -398,10 +400,10 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` [Datei](../../../cordova/file/fileobj/fileobj.html).
     
     *   **Hinweis:** können Sie die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.1.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
-6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.1.0.js` Datei.
+6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.1.0.js` [Datei](../../../cordova/file/fileobj/fileobj.html).

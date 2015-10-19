@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 미디어
 ---
 
 # 미디어
 
-> `Media`개체를 기록 하 고 장치에서 오디오 파일 재생 기능을 제공 합니다.
+> `Media`개체를 기록 하 고 장치에서 오디오 [파일](../file/fileobj/fileobj.html) 재생 기능을 제공 합니다.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
@@ -49,29 +51,29 @@ license: >
 
 ## 메서드
 
-*   `media.getCurrentPosition`: 오디오 파일 내에서 현재 위치를 반환합니다.
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: 오디오 [파일](../file/fileobj/fileobj.html) 내에서 현재 위치를 반환합니다.
 
-*   `media.getDuration`: 오디오 파일의 기간을 반환합니다.
+*   `[media.getDuration](media.getDuration.html)`: 오디오 파일의 기간을 반환합니다.
 
-*   `media.play`: 시작 또는 오디오 파일 재생을 다시 시작 합니다.
+*   `[media.play](media.play.html)`: 시작 또는 오디오 [파일](../file/fileobj/fileobj.html) 재생을 다시 시작 합니다.
 
-*   `media.pause`: 오디오 파일의 재생을 일시 중지 합니다.
+*   `[media.pause](media.pause.html)`: 오디오 파일의 재생을 [일시 중지](../events/events.pause.html) 합니다.
 
-*   `media.release`: 기본 운영 체제의 오디오 리소스를 해제합니다.
+*   `[media.release](media.release.html)`: 기본 운영 체제의 오디오 리소스를 해제합니다.
 
-*   `media.seekTo`: 오디오 파일 내에서 위치를 이동합니다.
+*   `[media.seekTo](media.seekTo.html)`: 오디오 [파일](../file/fileobj/fileobj.html) 내에서 위치를 이동합니다.
 
-*   `media.setVolume`: 오디오 재생 볼륨을 설정 합니다.
+*   `[media.setVolume](media.setVolume.html)`: 오디오 재생 볼륨을 설정 합니다.
 
-*   `media.startRecord`: 오디오 파일을 녹음을 시작 합니다.
+*   `[media.startRecord](media.startRecord.html)`: 오디오 파일을 녹음을 시작 합니다.
 
-*   `media.stopRecord`: 오디오 파일 기록을 중지 합니다.
+*   `[media.stopRecord](media.stopRecord.html)`: 오디오 [파일](../file/fileobj/fileobj.html) 기록을 중지 합니다.
 
-*   `media.stop`: 오디오 파일 재생을 중지 합니다.
+*   `[media.stop](media.stop.html)`: 오디오 [파일](../file/fileobj/fileobj.html) 재생을 중지 합니다.
 
 ## 추가 읽기 전용 매개 변수
 
-*   **위치**: 위치 오디오 재생 시간 (초).
+*   **위치**: [위치](../geolocation/Position/position.html) 오디오 재생 시간 (초).
     
     *   플레이; 하는 동안 자동으로 업데이트 전화 `getCurrentPosition` 를 업데이트 합니다.
 
@@ -88,7 +90,7 @@ license: >
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ 코르도바 플러그인 추가 org.apache.cordova.media $ 코르도바 플러그인 ls ['org.apache.cordova.media'] $ 코르도바 플러그인 rm org.apache.cordova.media
      
@@ -138,7 +140,7 @@ license: >
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.
 
 ### Windows Phone 단점
 

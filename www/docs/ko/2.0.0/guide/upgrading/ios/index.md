@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading Cordova iOS
 ---
 
 Upgrading Cordova iOS
@@ -55,12 +57,12 @@ Please note that **Xcode 4 is required**. To submit to the Apple App Store, you 
 20. Select the **libCordova.a** static library, then select the **"Add"** button
 21. Delete the **"Run Script"** phase.
 22. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
-23. Search for **"Other Linker Flags"**, and add the values **-all_load** and **-Obj-C**
+23. Search for **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"**, and add the values **-all_load** and **-Obj-C**
 24. Expand the **"CordovaLib" sub-project**
 25. Locate the **"VERSION"** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **"Create groups for any added folders"** radiobutton, then select the **"Finish"** button
 27. Select the **"VERSION"** file that you just dragged in a previous step
-28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show [File](../../../cordova/file/fileobj/fileobj.html) Inspector**)
 29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
 30. **Build** your project, it should compile and link with **no issues**.
 31. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**

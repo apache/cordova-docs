@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Tizen piattaforma guida
 ---
 
 # Tizen piattaforma guida
@@ -26,7 +28,7 @@ Questa guida descrive come configurare l'ambiente di sviluppo SDK per distribuir
 
 Tizen SDK richiede Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit) o Windows XP SP3/7 (32 bit).
 
-Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con Tizen SDK. L'interfaccia della riga di comando per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
+Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con Tizen SDK. [L'interfaccia della riga di comando](../../cli/index.html) per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
 
 ## Installare il SDK
 

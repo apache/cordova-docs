@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: PositionError
 ---
 
 PositionError
 ========
 
-A `PositionError` object is returned to the `geolocationError` callback when an error occurs.
+A `PositionError` object is returned to the `[geolocationError](../parameters/geolocationError.html)` callback when an error occurs.
 
 Properties
 ----------
@@ -39,7 +41,7 @@ Constants
 Description
 -----------
 
-The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
+The `PositionError` object is returned to the user through the `[geolocationError](../parameters/geolocationError.html)` callback function when an error occurs with geolocation.
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -55,6 +57,6 @@ satellite fix.
 ### `PositionError.TIMEOUT`
 
 Returned when the device was unable to retrieve a position within the
-time specified in the `geolocationOptions`' `timeout` property. When using
-in conjunction with `geolocation.watchPosition`, this error could be
-called into the `geolocationError` callback every `timeout` milliseconds.
+time specified in the `[geolocationOptions](../parameters/geolocation.options.html)`' `timeout` property. When using
+in conjunction with `[geolocation.watchPosition](../geolocation.watchPosition.html)`, this error could be
+called into the `[geolocationError](../parameters/geolocationError.html)` callback every `timeout` milliseconds.

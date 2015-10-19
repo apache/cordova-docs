@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 # globalization.numberToString
@@ -29,7 +31,7 @@ Renvoie un nombre mis en forme comme une chaîne selon les préférences de l'ut
 
 Retourne la chaîne mise en forme de nombre à la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
 
-S'il y a une erreur de mise en forme le nombre, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
+S'il y a une erreur de mise en forme le nombre, puis le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
 

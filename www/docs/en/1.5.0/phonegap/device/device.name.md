@@ -16,19 +16,21 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.name
 ---
 
 device.name
 ===========
 
-Get the device's model name.
+Get the device's model [name](../storage/parameters/name.html).
 
     var string = device.name;
     
 Description
 -----------
 
-`device.name` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
+`device.name` returns the [name](../storage/parameters/name.html) of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
 
 Supported Platforms
 -------------------
@@ -39,7 +41,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
@@ -49,7 +51,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

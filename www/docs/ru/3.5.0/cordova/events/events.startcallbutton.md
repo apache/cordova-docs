@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: startcallbutton
 ---
 
 # startcallbutton
@@ -29,7 +31,7 @@ license: >
 
 Если необходимо переопределить поведение по умолчанию начала вызова вы можете зарегистрировать прослушиватель событий для `startcallbutton` событие.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `[deviceready](events.deviceready.html)` пожаров события.
 
 ## Поддерживаемые платформы
 

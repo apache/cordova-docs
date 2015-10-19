@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFileData
 ---
 
 # MediaFileData
@@ -36,7 +38,7 @@ license: >
 
 ## Ежевика WebWorks совместимости
 
-Нет API предоставляет сведения о формате для мультимедийных файлов, так что `MediaFileData` объект, возвращенный `MediaFile.getFormatData` имеет следующие значения по умолчанию:
+Нет API предоставляет сведения о формате для мультимедийных файлов, так что `MediaFileData` объект, возвращенный `[MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)` имеет следующие значения по умолчанию:
 
 *   **кодеки**: не поддерживается и возвращает`null`.
 

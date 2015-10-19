@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 Platform Guide
 ---
 
 Windows 8 Platform Guide
@@ -90,7 +92,7 @@ expose the same APIs as on other Cordova-supported platforms.
 	    <script type="text/javascript">
 
 	        console.log("Subscribing...");
-	        document.addEventListener("deviceready", function () {
+	        document.addEventListener("[deviceready](../../../cordova/events/events.deviceready.html)", function () {
 
 	            navigator.notification.alert("The device is ready!");
 

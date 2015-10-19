@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry 10 Platform Guide
 ---
 
 # BlackBerry 10 Platform Guide
@@ -27,8 +29,8 @@ command-line tools, described in the BlackBerry Platform Guide.
 For BlackBerry 10, you need to install the SDK regardless of whether
 you want to use the cross-platform Cordova CLI for development, or a
 narrower set of platform-centered command-line tools.  For a
-comparison of the two development paths, see the Overview.  For
-details on each, see The Command-Line Interface and the BlackBerry 10
+comparison of the two development paths, see the [Overview](../../overview/index.html).  For
+details on each, see [The Command-Line Interface](../../cli/index.html) and the BlackBerry 10
 Shell Tool Guide.
 
 ## Requirements
@@ -135,7 +137,7 @@ The final step is to generate a signing certificate:
 ## Create a Project
 
 Use the `cordova` utility to set up a new project, as described in 
-The Command-Line Interface. For example, in a source-code directory:
+[The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
  
         $ cordova create hello com.example.hello
         $ cd hello

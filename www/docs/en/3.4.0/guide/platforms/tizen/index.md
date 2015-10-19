@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Tizen Platform Guide
 ---
 
 # Tizen Platform Guide
@@ -29,7 +31,7 @@ The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
 or Windows XP SP3/7 (32-bit).
 
 Developers should use the `cordova` utility in conjunction with
-the Tizen SDK.  See The Command-Line Interface for information
+the Tizen SDK.  See [The Command-Line Interface](../../cli/index.html) for information
 how to install it, add projects, then build and deploy a project.
 
 ## Install the SDK

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 次のステップ
 ---
 
 # 次のステップ
@@ -233,7 +235,7 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 リモートから読み込まれた HTML ページからコルドバの JavaScript 関数の呼び出し (「デバイスにローカルに格納されない HTML ページ) は、サポートされない構成です。 これはコルドバ意図していないこれは、Apache コルドバ コミュニティしませんこの構成のテストします。 いくつかの状況で動作することができます、しない推奨もサポートされています。 Java スクリプトの設定を維持する、同一生成元ポリシーと課題があり、コルドバのネイティブ部分同期バージョンでは、同じ (彼らが変更するプライベート Api を介して結合されている) ので、ネイティブのローカル関数および app ストアの潜在的な拒絶反応を呼び出すリモート コンテンツの信頼性。
 
-リモートで読み込まれた HTML コンテンツは、webview の表示するべきコルドバの InAppBrowser を使用して。 InAppBrowser が実行されている JavaScript 上記理由のコルドバ JavaScript Api へのアクセスがあるないように設計されています。 『 セキュリティ ガイド 』 を参照してください。
+リモートで読み込まれた HTML コンテンツは、webview の表示するべきコルドバの InAppBrowser を使用して。 InAppBrowser が実行されている JavaScript 上記理由のコルドバ JavaScript Api へのアクセスがあるないように設計されています。 『 セキュリティ [ガイド](../../index.html) 』 を参照してください。
 
 # 維持します。
 

@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 # LocalFileSystem
 
-이 개체는 루트 파일 시스템을 얻을 수 있는 방법을 제공 합니다.
+이 개체는 루트 [파일](../fileobj/fileobj.html) 시스템을 얻을 수 있는 방법을 제공 합니다.
 
 ## 메서드
 
-*   **requestFileSystem**: 파일 시스템을 요청 합니다. *(기능)*
+*   **requestFileSystem**: [파일](../fileobj/fileobj.html) 시스템을 요청 합니다. *(기능)*
 
-*   **resolveLocalFileSystemURI**: 검색 된 `DirectoryEntry` 또는 `FileEntry` 로컬 URI를 사용 하 여. *(기능)*
+*   **resolveLocalFileSystemURI**: 검색 된 `[DirectoryEntry](../directoryentry/directoryentry.html)` 또는 `[FileEntry](../fileentry/fileentry.html)` 로컬 URI를 사용 하 여. *(기능)*
 
 ## 상수
 
@@ -109,16 +111,16 @@ license: >
 
 # requestFileSystem
 
-> 응용 프로그램 데이터를 저장 하는 파일 시스템을 요청 합니다.
+> 응용 프로그램 데이터를 저장 하는 [파일](../fileobj/fileobj.html) 시스템을 요청 합니다.
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **창**: 글로벌 window 개체에 대 한 참조
-*   **형식**: 로컬 파일 시스템 형식, LocalFileSystem 상수 참조
+*   **형식**: 로컬 [파일](../fileobj/fileobj.html) 시스템 형식, LocalFileSystem 상수 참조
 *   **크기**: 바이트에서 저장 공간이 얼마나 필요 기대 하는 응용 프로그램을 나타냅니다
-*   **successCallback**: 파일 시스템 개체와 호출
-*   **errorCallback**: 오류가 발생 하면 검색 파일 시스템 호출
+*   **successCallback**: [파일](../fileobj/fileobj.html) 시스템 개체와 호출
+*   **errorCallback**: 오류가 발생 하면 검색 [파일](../fileobj/fileobj.html) 시스템 호출
 
 ## 파일 시스템 빠른 예를 들어 요청
 

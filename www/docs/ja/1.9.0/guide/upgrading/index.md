@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アップグレードガイド
 ---
 
 アップグレードガイド
@@ -23,10 +25,10 @@ license: >
 
 > アプリケーションを最新の Apache Cordova にアップグレードする方法を解説します。
 
-- Upgrading Cordova Android
-- Upgrading Cordova BlackBerry
-- Upgrading Cordova iOS
-- Upgrading Cordova Symbian
-- Upgrading Cordova webOS
-- Upgrading Cordova Windows Phone
-- Upgrading Cordova Bada
+- [Upgrading Cordova Android](android/index.html)
+- [Upgrading Cordova BlackBerry](blackberry/index.html)
+- [Upgrading Cordova iOS](ios/index.html)
+- [Upgrading Cordova Symbian](symbian/index.html)
+- [Upgrading Cordova webOS](webos/index.html)
+- [Upgrading Cordova Windows Phone](windows-phone/index.html)
+- [Upgrading Cordova Bada](bada/index.html)

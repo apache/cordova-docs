@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 # contacts.find
@@ -27,9 +29,9 @@ Una query al database di contatti del dispositivo e restituisce uno o più `Cont
 
 ## Descrizione
 
-Il `contacts.find` metodo in modo asincrono, esegue una query sul database di contatti del dispositivo e restituisce una matrice di `Contact` oggetti. Gli oggetti risultanti sono passati per la `contactSuccess` funzione di callback specificato dal parametro **contactSuccess** .
+Il `contacts.find` metodo in modo asincrono, esegue una query sul database di contatti del dispositivo e restituisce una matrice di `Contact` oggetti. Gli oggetti risultanti sono passati per la `[contactSuccess](parameters/contactSuccess.html)` funzione di callback specificato dal parametro **contactSuccess** .
 
-Il parametro **contactFields** specifica i campi per essere utilizzato come un qualificatore di ricerca, e solo quei risultati sono passati alla funzione di callback **contactSuccess** . Un parametro di lunghezza zero, **contactFields** non è valido e si traduce in `ContactError.INVALID_ARGUMENT_ERROR` . Un valore di **contactFields** di `"*"` restituisce tutti i contatti di campi.
+Il parametro **contactFields** specifica i campi per essere utilizzato come un qualificatore di ricerca, e solo quei risultati sono passati alla funzione di callback **contactSuccess** . Un parametro di lunghezza zero, **contactFields** non è valido e si traduce in `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR` . Un valore di **contactFields** di `"*"` restituisce tutti i contatti di campi.
 
 La stringa di **contactFindOptions.filter** può essere utilizzata come un filtro di ricerca quando una query sul database di contatti. Se fornito, una distinzione, corrispondenza parziale valore viene applicato a ogni campo specificato nel parametro **contactFields** . Se esiste una corrispondenza per *qualsiasi* dei campi specificati, viene restituito il contatto.
 

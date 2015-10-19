@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Next Steps
 ---
 
 # Next Steps
@@ -38,7 +40,7 @@ This guide contains the following topics:
 
 First and foremost - your Cordova applications should adopt the SPA (Single Page Application) design. Loosely defined, a SPA is a client-side application that is run from one request of a web page. The user loads an initial set of resources (HTML, CSS, and JavaScript) and further updates (showing a new view, loading data) is done via AJAX. SPAs are commonly used for more complex client-side applications. GMail is a great example of this. After you load GMail, mail views, editing, and organization are all done by updating the DOM instead of actually leaving the current page to load a completely new one. 
 
-Using a SPA can help you organize your application in a more efficient manner, but it also has specific benefits for Cordova applications. A Cordova application must wait for the deviceready event to fire before any plugins may be used. If you do not use a SPA, and your user clicks to go from one page to another, you will have to wait for deviceready to fire again before you make use of a plugin. This is easy to forget as your application gets larger. 
+Using a SPA can help you organize your application in a more efficient manner, but it also has specific benefits for Cordova applications. A Cordova application must wait for the [deviceready](../../cordova/events/events.deviceready.html) event to fire before any plugins may be used. If you do not use a SPA, and your user clicks to go from one page to another, you will have to wait for [deviceready](../../cordova/events/events.deviceready.html) to fire again before you make use of a plugin. This is easy to forget as your application gets larger. 
 
 Even if you choose not to use Cordova, creating a mobile application without using a single page architecture will have serious performance implications. This is because navigating between pages will require scripts, assets, etc., to be reloaded. Even if these assets are cached, there will still be performance issues. 
 

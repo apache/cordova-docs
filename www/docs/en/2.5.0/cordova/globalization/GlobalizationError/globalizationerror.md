@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: GlobalizationError
 ---
 
 GlobalizationError
 ============
 
-An object representing a error from the Globalization API.
+An object representing a error from the [Globalization](../globalization.html) API.
 
 Properties
 ----------
@@ -45,7 +47,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 When the following error callback is invoked, it should display a popup dialog with the text similar to "code: 3" and "message: ".
@@ -55,7 +57,7 @@ When the following error callback is invoked, it should display a popup dialog w
               'message: ' + error.message + '\n');
     };
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

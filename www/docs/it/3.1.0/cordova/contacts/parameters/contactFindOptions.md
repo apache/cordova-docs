@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 # contactFindOptions
 
-Parametro facoltativo del `contacts.find` metodo, utilizzato per filtrare i contatti restituiti dal database di contatti.
+Parametro facoltativo del `[contacts.find](../contacts.find.html)` metodo, utilizzato per filtrare i contatti restituiti dal database di contatti.
 
     {filtro: "", più: vero,};
     

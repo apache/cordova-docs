@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: アイコンとスプラッシュ画面
 ---
 
 # アイコンとスプラッシュ画面
@@ -115,7 +117,7 @@ Android プロジェクトで[9 patch 画像][1]ファイルを置きます `res
 
 最初の行ではスプラッシュ画面として表示するイメージを設定します。場合は任意の名前をあなたのイメージよりも、他 `splash.png` 、この行を変更する必要があります。
 
-2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `deviceready` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。
+2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `[deviceready](../cordova/events/events.deviceready.html)` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。
 
 ## IOS プラットフォーム用のスプラッシュ画面
 

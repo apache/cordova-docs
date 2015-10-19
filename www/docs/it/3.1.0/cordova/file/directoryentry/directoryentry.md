@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryEntry
 ---
 
 # DirectoryEntry
@@ -56,7 +58,7 @@ I seguenti metodi possono essere richiamati su un `DirectoryEntry` oggetto:
 
 *   **getParent**: cercare la directory padre.
 
-*   **createReader**: creare un nuovo `DirectoryReader` che può leggere le voci da una directory.
+*   **createReader**: creare un nuovo `[DirectoryReader](../directoryreader/directoryreader.html)` che può leggere le voci da una directory.
 
 *   **getDirectory**: creare o cercare una directory.
 
@@ -80,7 +82,7 @@ Cercare i metadati relativi a una directory.
 
 *   **successCallback**: una funzione di callback da eseguire con un `Metadata` oggetto. *(Funzione)*
 
-*   **errorCallback**: una funzione di callback da eseguire se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: una funzione di callback da eseguire se si verifica un errore durante il recupero del `Metadata` . Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -177,7 +179,7 @@ Lo spostamento di una directory in cima a una directory vuota esistente tenta di
 
 *   **successCallback**: un callback che viene eseguito con il `DirectoryEntry` oggetto per la nuova directory. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare la directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di spostare la directory. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -218,7 +220,7 @@ Directory copie sono sempre ricorsivi e copiare tutto il contenuto della directo
 
 *   **successCallback**: un callback che viene eseguito con il `DirectoryEntry` oggetto per la nuova directory. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare la directory sottostante. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di copiare la directory sottostante. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -264,7 +266,7 @@ Elimina una directory. Un errore risultati se tenta di app:
 
 *   **successCallback**: un callback che viene eseguito dopo che la directory viene eliminata. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare la directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare la directory. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -283,7 +285,7 @@ Cercare il padre `DirectoryEntry` contenente la directory.
 
 *   **successCallback**: un callback passato padre della directory `DirectoryEntry` . *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di recuperare il padre `DirectoryEntry` . Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -301,7 +303,7 @@ Cercare il padre `DirectoryEntry` contenente la directory.
 
 ## createReader
 
-Crea un nuovo DirectoryReader per leggere le voci in una directory.
+Crea un nuovo [DirectoryReader](../directoryreader/directoryreader.html) per leggere le voci in una directory.
 
 **Esempio rapido**
 
@@ -323,7 +325,7 @@ Crea o cerca una directory esistente. Un errore risultati se tenta di app:
 
 *   **successCallback**: un callback che viene eseguito con un `DirectoryEntry` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o ricerca di directory. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o ricerca di directory. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -346,9 +348,9 @@ Crea o cerca un file. Un errore risultati se tenta di app:
 
 *   **opzioni**: opzioni per specificare se il file viene creato se non esiste. *(Bandiere)*
 
-*   **successCallback**: un callback passato un `FileEntry` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `[FileEntry](../fileentry/fileentry.html)` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o la ricerca di file. Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante la creazione o la ricerca di file. Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 
@@ -369,7 +371,7 @@ Elimina una directory e tutti i suoi contenuti. In caso di errore (ad esempio ce
 
 *   **successCallback**: un callback che viene eseguito dopo il `DirectoryEntry` è stato eliminato. Richiamato senza parametri. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il `DirectoryEntry` . Invocato con un `FileError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore quando si tenta di eliminare il `DirectoryEntry` . Invocato con un `[FileError](../fileerror/fileerror.html)` oggetto. *(Funzione)*
 
 **Esempio rapido**
 

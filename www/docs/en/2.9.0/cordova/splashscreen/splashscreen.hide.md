@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.hide
 ---
 
 splashscreen.hide
@@ -36,12 +38,12 @@ Supported Platforms
 - Android
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.splashscreen.hide();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -75,7 +77,7 @@ iOS Quirk
 The [`config.xml` file's setting](guide_project-settings_index.md.html#Project%20Settings) for
 `AutoHideSplashScreen` must be `false`. To delay hiding the splash
 screen for two seconds, add a timer such as the following in the
-`deviceready` event handler:
+`[deviceready](../events/events.deviceready.html)` event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

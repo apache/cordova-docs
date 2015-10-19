@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.clearWatch
 ---
 
 # compass.clearWatch
@@ -25,7 +27,7 @@ license: >
     navigator.compass.clearWatch(watchID);
     
 
-*   **watchID**: возвращенный идентификатор`compass.watchHeading`.
+*   **watchID**: возвращенный идентификатор`[compass.watchHeading](compass.watchHeading.html)`.
 
 ## Поддерживаемые платформы
 

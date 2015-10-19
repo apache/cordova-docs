@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: splashscreen.hide
 ---
 
 # splashscreen.hide
@@ -72,7 +74,7 @@ license: >
 
 ## iOS галтель
 
-`config.xml`Файла `AutoHideSplashScreen` должен быть `false` . Для задержки скрытия заставки на две секунды, добавить таймер например следующее в `deviceready` обработчик событий:
+`config.xml`Файла `AutoHideSplashScreen` должен быть `false` . Для задержки скрытия заставки на две секунды, добавить таймер например следующее в `[deviceready](../events/events.deviceready.html)` обработчик событий:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de la plate-forme blackBerry 10
 ---
 
 # Guide de la plate-forme blackBerry 10
@@ -36,7 +38,7 @@ Le kit de développement natif de BlackBerry est disponible chez [developer.blac
 
 Sur Windows :
 
-*   Aller à **mon ordinateur → propriétés → avancé → Variables d'environnement**.
+*   Aller à **mon ordinateur → propriétés → avancé → [Variables](../../../plugin_ref/spec.html) d'environnement**.
 
 *   Ajoute le répertoire d'installation du SDK natif au chemin, par exemple :
     

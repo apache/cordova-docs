@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 backbutton
@@ -30,7 +32,7 @@ backbutton
 
 もしデフォルトの戻るボタンの挙動を上書きしたい場合は、 'backbutton' イベントにイベントリスナーを登録することができます。戻るボタンの挙動を上書きするために、他のメソッドを呼び出す必要はありません。ただ 'backbutton' イベントリスナーを登録するだけで大丈夫です。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -39,7 +41,7 @@ backbutton
 - BlackBerry WebWorks (OS 5.0 以上)
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("backbutton", onBackKeyDown, false);

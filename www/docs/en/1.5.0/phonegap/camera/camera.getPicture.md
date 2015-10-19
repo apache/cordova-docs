@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.getPicture
 ---
 
 camera.getPicture
@@ -28,11 +30,11 @@ Takes a photo using the camera or retrieves a photo from the device's album.  Th
 Description
 -----------
 
-Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
+Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
+If `[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.PHOTOLIBRARY` or `[Camera](camera.html).PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+The return value will be sent to the `[cameraSuccess](parameter/cameraSuccess.html)` function, in one of the following formats, depending on the `[cameraOptions](parameter/cameraOptions.html)` you specify:
 
 - A `String` containing the Base64 encoded photo image.
 - A `String` representing the image file location on local storage (default).
@@ -43,7 +45,7 @@ You can do whatever you want with the encoded image or URI, for example:
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the '[Camera](camera.html).destinationType' is highly recommended.
 
 Supported Platforms
 -------------------
@@ -53,7 +55,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 Take photo and retrieve Base64-encoded image:
@@ -84,7 +86,7 @@ Take photo and retrieve image file location:
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

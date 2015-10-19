@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 # localStorage
 
-W3C の[Web ストレージ インターフェイス][1]へのアクセスを提供します
+W3C の[Web [ストレージ](../storage.html) インターフェイス][1]へのアクセスを提供します
 
  [1]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
 
@@ -42,7 +44,7 @@ W3C の[Web ストレージ インターフェイス][1]へのアクセスを提
 
 ## 詳細
 
-`window.localStorage`、W3C の[Web ストレージ インターフェイス][2]が実装するインターフェイス。 アプリを使用するキーと値のペアを使用して永続的なデータを保存できます。 `window.sessionStorage`インターフェイスのすべてのデータは、アプリを閉じるたびにクリアされることを除いてあらゆる点で同じように動作します。 各データベースは、別の名前空間を提供します。
+`window.localStorage`、W3C の[Web [ストレージ](../storage.html) インターフェイス][2]が実装するインターフェイス。 アプリを使用するキーと値のペアを使用して永続的なデータを保存できます。 `window.sessionStorage`インターフェイスのすべてのデータは、アプリを閉じるたびにクリアされることを除いてあらゆる点で同じように動作します。 各データベースは、別の名前空間を提供します。
 
  [2]: http://dev.w3.org/html5/webstorage/
 

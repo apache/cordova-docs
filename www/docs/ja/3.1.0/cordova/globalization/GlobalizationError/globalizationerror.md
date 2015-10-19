@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: GlobalizationError
 ---
 
 # GlobalizationError
 
-グローバリゼーション API からエラーを表すオブジェクト。
+[グローバリゼーション](../globalization.html) API からエラーを表すオブジェクト。
 
 ## プロパティ
 

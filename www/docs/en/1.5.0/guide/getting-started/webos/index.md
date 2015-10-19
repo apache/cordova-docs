@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with WebOS
 ---
 
 Getting Started with WebOS
@@ -64,7 +66,7 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 - Type `make` in your terminal/cygwin while in the webOS directory.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../phonegap/device/device.html)
 --------------------
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
@@ -74,5 +76,5 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
+You can also checkout more detailed [version](../../../phonegap/storage/parameters/version.html) of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
 

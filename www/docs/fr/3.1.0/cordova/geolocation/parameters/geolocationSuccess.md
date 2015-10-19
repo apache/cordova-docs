@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 # geolocationSuccess
 
-Fonction callback s'exécutant lorsqu'une position géolocalisée est disponible (via un appel à `geolocation.getCurrentPosition`), ou lorsque la position change (via un appel à `geolocation.watchPosition`).
+Fonction callback s'exécutant lorsqu'une position géolocalisée est disponible (via un appel à `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)`), ou lorsque la position change (via un appel à `[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something

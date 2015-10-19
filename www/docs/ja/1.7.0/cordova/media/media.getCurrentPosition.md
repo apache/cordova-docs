@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.getCurrentPosition
 ---
 
 media.getCurrentPosition
@@ -34,7 +36,7 @@ media.getCurrentPosition
 概要
 -----------
 
-`media.getCurrentPosition` 関数は Media オブジェクトのオーディオファイルの現在再生位置を返す非同期関数です。 Media オブジェクト内の __position__ パラメーターの値も更新します。
+`media.getCurrentPosition` 関数は [Media](media.html) オブジェクトのオーディオファイルの現在再生位置を返す非同期関数です。 [Media](media.html) オブジェクト内の __position__ パラメーターの値も更新します。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,7 +45,7 @@ media.getCurrentPosition
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // オーディオプレイヤー

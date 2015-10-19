@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Configuration
 ---
 
 # Amazon Fire OS Configuration
 
 Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails section s'appliquant uniquement aux OS feu Amazon s'appuie. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche.
+*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `[pause](../../../cordova/events/events.pause.html)` événement se déclenche.
     
         <preference name="KeepRunning" value="false"/>
         

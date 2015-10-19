@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Tizen 플랫폼 가이드
 ---
 
 # Tizen 플랫폼 가이드
@@ -90,7 +92,7 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
 
  [5]: img/guide/platforms/tizen/build_project.png
 
-프로젝트의 루트 디렉터리에 있는 *hello.wgt* 와 같은 위젯 패키지 파일 생성 해야 합니다.
+프로젝트의 루트 디렉터리에 있는 *hello.wgt* 와 같은 위젯 패키지 [파일](../../../cordova/file/fileobj/fileobj.html) 생성 해야 합니다.
 
 ## 에뮬레이터에 배포
 
@@ -102,13 +104,13 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
 
 ## 장치에 배포
 
-*   대상 장치 제대로 시작, 연결 및 구성 된는 다는 것을 확인 하십시오. 그것의 **날짜 및 시간** 설정은 올바르게 설정 해야 합니다.
+*   대상 [장치](../../../cordova/device/device.html) 제대로 시작, [연결](../../../cordova/connection/connection.html) 및 구성 된는 다는 것을 확인 하십시오. 그것의 **날짜 및 시간** 설정은 올바르게 설정 해야 합니다.
 
-*   **연결 탐색기** 보기를 사용 하 여 응용 프로그램 배포 대상 선택: **창 → 쇼 보기 → 연결 탐색기**.
+*   **연결 탐색기** 보기를 사용 하 여 응용 프로그램 배포 대상 선택: **창 → 쇼 [보기](../../../cordova/inappbrowser/inappbrowser.html) → [연결](../../../cordova/connection/connection.html) 탐색기**.
     
     ![][7]
 
-*   **프로젝트 탐색기** 보기 다음 선택으로 실행 **& rarr;에서 프로젝트를 마우스 오른쪽 단추로 클릭 Tizen 웹 응용 프로그램**:
+*   **프로젝트 탐색기** [보기](../../../cordova/inappbrowser/inappbrowser.html) 다음 선택으로 실행 **& rarr;에서 프로젝트를 마우스 오른쪽 단추로 클릭 Tizen 웹 응용 프로그램**:
     
     ![][8]
 

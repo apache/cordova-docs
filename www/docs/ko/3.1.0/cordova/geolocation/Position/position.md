@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 위치
 ---
 
 # 위치
 
-포함 `Position` 좌표 및 타임 스탬프, geolocation API에 의해 만들어진.
+포함 `Position` [좌표](../Coordinates/coordinates.html) 및 타임 스탬프, geolocation API에 의해 만들어진.
 
 ## 속성
 
-*   **coords**: 지리적 좌표 집합. *(좌표)*
+*   **coords**: 지리적 [좌표](../Coordinates/coordinates.html) 집합. *(좌표)*
 
 *   **타임 스탬프**: 생성 타임 스탬프에 대 한 `coords` . *(날짜)*
 

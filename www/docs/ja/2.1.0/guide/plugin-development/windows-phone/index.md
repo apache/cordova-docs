@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Developing a Plugin on Windows Phone
 ---
 
 Developing a Plugin on Windows Phone
@@ -157,7 +159,7 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
 1. [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
-例えば、 'pause' や 'resume' といったアプリケーションイベントもオーバーライドできます。
+例えば、 '[pause](../../../cordova/events/events.pause.html)' や '[resume](../../../cordova/events/events.resume.html)' といったアプリケーションイベントもオーバーライドできます。
 
 ### プラグインのデバッグ
 

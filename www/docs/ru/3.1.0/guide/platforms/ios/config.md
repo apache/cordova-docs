@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS конфигурации
 ---
 
 # iOS конфигурации
 
-`config.xml`Файл управляет app основные параметры, которые применяются через каждое приложение и экземпляр CordovaWebView. Этот раздел описывает настройки, которые применяются только к iOS построений. Смотрите информацию в файле config.xml на параметры глобальной конфигурации.
+`config.xml`[Файл](../../../cordova/file/fileobj/fileobj.html) управляет app основные параметры, которые применяются через каждое приложение и экземпляр CordovaWebView. Этот раздел описывает настройки, которые применяются только к iOS построений. Смотрите информацию в файле config.xml на параметры глобальной конфигурации.
 
 *   `EnableViewportScale`(логическое значение, по умолчанию `false` ): набор `true` использовать мета-тег viewport либо отключить или ограничить диапазон масштабирования пользователя.
     

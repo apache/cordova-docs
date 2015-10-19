@@ -16,20 +16,22 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.create
 ---
 
 # contacts.create
 
-Returns a new Contact object.
+Returns a new [Contact](Contact/contact.html) object.
 
     var contact = navigator.contacts.create(properties);
 
 ## Description
 
-The `contacts.create` method is synchronous, and returns a new `Contact` object.
+The `contacts.create` method is synchronous, and returns a new `[Contact](Contact/contact.html)` object.
 
-This method does not retain the Contact object in the device contacts
-database, for which you need to invoke the `Contact.save` method.
+This method does not retain the [Contact](Contact/contact.html) object in the device contacts
+database, for which you need to invoke the `[Contact](Contact/contact.html).save` method.
 
 ## Supported Platforms
 

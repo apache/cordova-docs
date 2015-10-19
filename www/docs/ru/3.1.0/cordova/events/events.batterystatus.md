@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 # batterystatus
@@ -35,7 +37,7 @@ license: >
 
 *   **isPlugged**: логическое значение, указывающее, является ли устройство подключено дюйма *(Boolean)*
 
-Приложения обычно должны использовать `window.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `window.addEventListener` прикрепить прослушиватель событий после `[deviceready](events.deviceready.html)` пожаров события.
 
 ## Поддерживаемые платформы
 

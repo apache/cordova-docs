@@ -16,31 +16,33 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 檔
 ---
 
 # 檔
 
-> 一個 API，用於讀取、 寫入和導航基於[w3c 檔 api][1]的檔案系統層次結構.
+> 一個 API，用於讀取、 寫入和導航基於[w3c [檔](fileobj/fileobj.html) api][1]的檔案系統層次結構.
 
  [1]: http://www.w3.org/TR/FileAPI
 
 ## 物件
 
-*   枚舉指定工作組或
-*   DirectoryReader
-*   檔
-*   FileEntry
-*   FileError
-*   FileReader
-*   檔案系統
-*   檔案傳輸
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   標誌
-*   場合
-*   中繼資料
+*   [枚舉指定工作組或](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [檔](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [檔案系統](filesystem/filesystem.html)
+*   [檔案傳輸](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
+*   [標誌](flags/flags.html)
+*   [場合](localfilesystem/localfilesystem.html)
+*   [中繼資料](metadata/metadata.html)
 
 ## 訪問功能
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: コマンド ライン インターフェイス
 ---
 
 # コマンド ライン インターフェイス
@@ -122,7 +124,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 ## アプリをビルドします。
 
-既定で、 `cordova create` スクリプト生成骨格の web ベースのアプリケーションのホーム ページは、プロジェクトの `www/index.html` ファイル。 このアプリケーションが、任意の初期化の一部として指定する必要があります編集、 `deviceready` から既定で参照されるイベント ハンドラー`www/js/index.js`.
+既定で、 `cordova create` スクリプト生成骨格の web ベースのアプリケーションのホーム ページは、プロジェクトの `www/index.html` ファイル。 このアプリケーションが、任意の初期化の一部として指定する必要があります編集、 `[deviceready](../../cordova/events/events.deviceready.html)` から既定で参照されるイベント ハンドラー`www/js/index.js`.
 
 繰り返しプロジェクトをビルドする、次のコマンドを実行します。
 
@@ -190,7 +192,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-`cordova plugin add`コマンドは、プラグインのコードのリポジトリを指定する必要があります。 Web プロジェクト開発のワークフローに従います、CLI を使用すると、CLI は世話することプラットフォームごとの適切な場所にプラグインのコードを追加するに注意してください。 (場合ネイティブ プロジェクト Dev ワークフローに従っている、あなたが各プラットフォーム Plugman (ガイド リンクはここ）、複数回を使用してプラグインを追加する。)
+`cordova plugin add`コマンドは、プラグインのコードのリポジトリを指定する必要があります。 Web プロジェクト開発のワークフローに従います、CLI を使用すると、CLI は世話することプラットフォームごとの適切な場所にプラグインのコードを追加するに注意してください。 (場合ネイティブ プロジェクト Dev ワークフローに従っている、あなたが各プラットフォーム Plugman ([ガイド](../../index.html) リンクはここ）、複数回を使用してプラグインを追加する。)
 
 CLI を使用アプリに機能を追加する方法の例を示します。
 
@@ -331,7 +333,7 @@ CLI を使用アプリに機能を追加する方法の例を示します。
 
 プロジェクトをリビルドするとき他が変わらない間、Android のバージョン カスタム フォント サイズを備えています。
 
-また使用することができます `merges` 、元のファイルが存在しないを追加する `www` ディレクトリ。 たとえば、アプリ組み込むことができます*戻るボタン*グラフィック iOS インターフェイスに格納されている `merges/ios/img/back_button.png` 、Android のバージョンをキャプチャすることができます代わりに、 `backbutton` 、対応するハードウェア ボタンからのイベント。
+また使用することができます `merges` 、元のファイルが存在しないを追加する `www` ディレクトリ。 たとえば、アプリ組み込むことができます*戻るボタン*グラフィック iOS インターフェイスに格納されている `merges/ios/img/back_button.png` 、Android のバージョンをキャプチャすることができます代わりに、 `[backbutton](../../cordova/events/events.backbutton.html)` 、対応するハードウェア ボタンからのイベント。
 
 ## ヘルプ コマンド
 

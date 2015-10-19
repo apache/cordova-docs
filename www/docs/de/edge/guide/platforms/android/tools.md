@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Shell Tool Guide
 ---
 
 # Android Shell Tool Guide
 
-Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um Android apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der Übersicht, möglicherweise einen größeren Bereich von Entwicklungsoptionen als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die Android SDK-Umgebung konfigurieren, wie in der Android-Plattform-Handbuch beschrieben.
+Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um Android apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der [Übersicht](../../overview/index.html), möglicherweise einen größeren Bereich von Entwicklungsoptionen als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die Android SDK-Umgebung konfigurieren, wie in der Android-Plattform-Handbuch beschrieben.
 
 Zum Aktivieren der Shell-Hilfsmittel für Android download Cordova von [cordova.apache.org][1]. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie jedes Ziel, soll `android` in diesem Fall. Die entsprechenden Tools stehen in der Regel in den übergeordneten `bin` Verzeichnis, sonst finden Sie in der **README** -Datei für detailliertere Wegbeschreibung.
 

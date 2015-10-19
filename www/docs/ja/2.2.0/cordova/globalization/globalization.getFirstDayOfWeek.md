@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getFirstDayOfWeek
 ---
 
 globalization.getFirstDayOfWeek
@@ -30,7 +32,7 @@ globalization.getFirstDayOfWeek
 
 週の曜日は 1 から始まり、 1 は日曜日を表します。 successCB コールバック関数に、プロパティーオブジェクトをパラメーターとして曜日を返します。このオブジェクトは数字の ``value`` プロパティーを持っています。
 
-もし曜日の取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.UNKNOWN\_ERROR です。
+もし曜日の取得中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR です。
 
 
 サポートされているプラットフォーム
@@ -40,7 +42,7 @@ globalization.getFirstDayOfWeek
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードは "day: 1" といったような文字列をポップアップダイアログに表示します。

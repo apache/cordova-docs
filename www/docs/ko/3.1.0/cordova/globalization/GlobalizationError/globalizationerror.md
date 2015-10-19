@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: GlobalizationError
 ---
 
 # GlobalizationError
 
-세계화 API에서 오류를 나타내는 개체입니다.
+[세계화](../globalization.html) API에서 오류를 나타내는 개체입니다.
 
 ## 속성
 

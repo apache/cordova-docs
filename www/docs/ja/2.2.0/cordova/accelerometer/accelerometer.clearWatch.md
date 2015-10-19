@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 accelerometer.clearWatch
@@ -25,7 +27,7 @@ accelerometer.clearWatch
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: `accelerometer.watchAcceleration`  によって返される ID。
+- __watchID__: `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`  によって返される ID。
 
 サポートされているプラットフォーム
 -------------------
@@ -37,7 +39,7 @@ accelerometer.clearWatch
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);

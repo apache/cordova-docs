@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Overview
 ---
 
 # Overview
@@ -101,7 +103,7 @@ benefit to using this _Native Platform Dev_ workflow is that it gives you access
 shell scripts to build and test the application, so if you are hacking on the native 
 side of things, this workflow is the most efficient way to test your changes. This workflow
 is also appropriate if you want to use the CordovaWebView as a small part in a larger native
-application (See the Embedding WebViews guide.)  You can read about this workflow in the different
+application (See the [Embedding WebViews](../hybrid/webviews/index.html) guide.)  You can read about this workflow in the different
 Shell Tool guides, for instance, Android Shell Tool Guide and iOS Shell Tool Guide.
 
 When first starting out, it might be easiest to use the _Web Project Dev_ workflow
@@ -116,8 +118,8 @@ the CLI for progressively greater shares of the development cycle:
 * For many mobile platforms, you can also use the CLI to set up
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
-  (See the Platform Guides for instructions.)
-  As indicated in the Platform Support table, you may need to
+  (See the [Platform Guides](../platforms/index.html) for instructions.)
+  As indicated in the [Platform Support](../support/index.html) table, you may need to
   run the CLI on different operating systems depending on the targeted
   platform.
 
@@ -128,12 +130,12 @@ the CLI for progressively greater shares of the development cycle:
 
 At any point in the development cycle, you can switch to using more of the _Native Platform
 Dev_ workflow. The platform-specific SDK tools provided may provide a richer set of
-options. (See the Platform Guides for details about each platform's SDK tool set.)
+options. (See the [Platform Guides](../platforms/index.html) for details about each platform's SDK tool set.)
 
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
 You may use the command-line utility to initially generate the app, or
 iteratively thereafter to feed updated code to SDK tools.  You may
 also build the app's configuration file yourself.
-(See The config.xml File for details.)
+(See [The config.xml File](../../config_ref/index.html) for details.)
 

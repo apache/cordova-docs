@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Archivo
 ---
 
 # Archivo
@@ -40,7 +42,7 @@ Este objeto contiene los atributos de un solo archivo.
 
 ## Detalles
 
-El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una instancia de un `File` objeto llamando a una `FileEntry` del objeto `file()` método.
+El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una instancia de un `File` objeto llamando a una `[FileEntry](../fileentry/fileentry.html)` del objeto `file()` método.
 
 ## Plataformas soportadas
 
@@ -52,7 +54,7 @@ El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una 
 
 ## rebanada
 
-Devolver un nuevo `File` objeto, para que `FileReader` devuelve sólo la porción especificada del archivo. Para valores negativos `start` o `end` se miden desde el final del archivo. Los índices se colocan en relación con el segmento actual. (Véase el siguiente ejemplo completo).
+Devolver un nuevo `File` objeto, para que `[FileReader](../filereader/filereader.html)` devuelve sólo la porción especificada del archivo. Para valores negativos `start` o `end` se miden desde el final del archivo. Los índices se colocan en relación con el segmento actual. (Véase el siguiente ejemplo completo).
 
 **Parámetros:**
 

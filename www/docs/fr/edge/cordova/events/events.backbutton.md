@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: backbutton
 ---
 
 # backbutton
@@ -27,7 +29,7 @@ L'évènement se déclenche lorsque l'utilisateur appuie sur le bouton retour.
 
 ## Détails
 
-Afin de modifier le comportement par défaut du bouton retour, attachez un écouteur pour l'évènement `backbutton` généralement en appelant `document.addEventListener` une fois l'évènement `deviceready` reçu. Il n'est désormais plus nécessaire d'appeler d'autres méthodes pour altérer le comportement du bouton retour.
+Afin de modifier le comportement par défaut du bouton retour, attachez un écouteur pour l'évènement `backbutton` généralement en appelant `document.addEventListener` une fois l'évènement `[deviceready](events.deviceready.html)` reçu. Il n'est désormais plus nécessaire d'appeler d'autres méthodes pour altérer le comportement du bouton retour.
 
 ## Plates-formes supportées
 

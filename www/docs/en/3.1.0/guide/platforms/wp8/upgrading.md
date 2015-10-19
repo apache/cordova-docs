@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading Windows Phone
 ---
 
 # Upgrading Windows Phone
@@ -32,7 +34,7 @@ projects.
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version - see The Command-line Interface 
+1. Update the `cordova` CLI version - see [The Command-line Interface](../../cli/index.html) 
 2. Run `cordova platform update wp8` (or `wp7`, per the platforms you added to your project).
         
 For projects not created with the cordova CLI, run:
@@ -42,7 +44,7 @@ For projects not created with the cordova CLI, run:
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in [The Command-line Interface](../../cli/index.html).
 
 2. Add your platforms the the cordova project, for example: `cordova
    platform add wp7 wp8`.

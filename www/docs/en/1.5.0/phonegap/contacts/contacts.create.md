@@ -16,21 +16,23 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.create
 ---
 
 contacts.create
 ===============
 
-Returns a new Contact object.
+Returns a new [Contact](Contact/contact.html) object.
 
     var contact = navigator.contacts.create(properties);
 
 Description
 -----------
 
-contacts.create is a synchronous function that returns a new `Contact` object.
+contacts.create is a synchronous function that returns a new `[Contact](Contact/contact.html)` object.
 
-This method does not persist the Contact object to the device contacts database.  To persist the Contact object to the device, invoke the `Contact.save` method.
+This method does not persist the [Contact](Contact/contact.html) object to the device contacts database.  To persist the [Contact](Contact/contact.html) object to the device, invoke the `[Contact](Contact/contact.html).save` method.
 
 Supported Platforms
 -------------------
@@ -39,12 +41,12 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -62,11 +64,11 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var myContact = navigator.contacts.create({"displayName": "Test User"});
-			myContact.gender = "male";
-			console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            myContact.gender = "male";
+            console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
         }
-    
+
 
         </script>
       </head>

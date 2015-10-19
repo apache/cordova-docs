@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Intégration WebViews
 ---
 
 # Intégration WebViews
@@ -24,6 +26,6 @@ Cordova aplicaciones se implementan normalmente como un navegador *WebView* dent
 
 Para implementar un WebView, necesitas estar familiarizado con cada entorno de programación nativa. A continuación proporciona instrucciones para plataformas soportadas:
 
-*   Amazon fuego OS WebViews
-*   Android WebViews
-*   iOS WebViews
+*   [Amazon fuego OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

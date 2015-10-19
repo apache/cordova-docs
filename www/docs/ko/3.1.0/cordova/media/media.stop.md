@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.stop
 ---
 
 # media.stop
 
-오디오 파일 재생을 중지 합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 재생을 중지 합니다.
 
     media.stop();
     
 
 ## 설명
 
-`media.stop`메서드가 오디오 파일 재생을 중지 하려면 동기적으로 실행 됩니다.
+`media.stop`메서드가 오디오 [파일](../file/fileobj/fileobj.html) 재생을 중지 하려면 동기적으로 실행 됩니다.
 
 ## 지원 되는 플랫폼
 

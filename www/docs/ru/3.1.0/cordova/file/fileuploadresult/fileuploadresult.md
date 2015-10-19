@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadResult
 ---
 
 # FileUploadResult
 
-Объект `FileUploadResult` передается на успех обратного вызова метода `upload()` объекта `FileTransfer`.
+Объект `FileUploadResult` передается на успех обратного вызова метода `upload()` объекта `[FileTransfer](../filetransfer/filetransfer.html)`.
 
 ## Параметры
 
@@ -32,7 +34,7 @@ license: >
 
 ## Описание
 
-`FileUploadResult`Объект возвращается через успех обратного вызова `FileTransfer` объекта `upload()` метод.
+`FileUploadResult`Объект возвращается через успех обратного вызова `[FileTransfer](../filetransfer/filetransfer.html)` объекта `upload()` метод.
 
 ## iOS причуды
 

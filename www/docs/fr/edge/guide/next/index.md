@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Prochaines étapes
 ---
 
 # Prochaines étapes
@@ -41,7 +43,7 @@ Ce guide contient les rubriques suivantes :
 
 Tout d'abord - vos applications Cordova devraient adopter la conception SPA (Single Page Application). Vaguement défini, un SPA est une application côté client qui s'exécute à partir d'une seule demande d'une page web. L'utilisateur charge un ensemble initial de ressources (HTML, CSS et JavaScript), et plus les mises à jour (montrant une nouvelle vue, chargement de données) se fait via AJAX. Stations thermales sont couramment utilisés pour des applications plus complexes de côté client. GMail est un bon exemple de cela. Après avoir chargé GMail, vues de courrier, l'édition et organisation sont tout fait en mettant à jour le DOM au lieu de laisser effectivement la page en cours pour charger un complètement nouveau.
 
-Utiliser un SPA peut vous aider à organiser votre application de manière plus efficace, mais il a aussi des avantages spécifiques pour des applications de Cordova. Une application de Cordova doit attendre pour l'événement deviceready au feu avant les plug-ins peuvent être utilisés. Si vous n'utilisez pas un SPA, et votre utilisateur clique pour passer d'une page à l'autre, vous devrez attendre pour deviceready au feu encore une fois avant de vous faire utiliser un plugin. C'est facile d'oublier que votre application s'agrandit.
+Utiliser un SPA peut vous aider à organiser votre application de manière plus efficace, mais il a aussi des avantages spécifiques pour des applications de Cordova. Une application de Cordova doit attendre pour l'événement [deviceready](../../cordova/events/events.deviceready.html) au feu avant les plug-ins peuvent être utilisés. Si vous n'utilisez pas un SPA, et votre utilisateur clique pour passer d'une page à l'autre, vous devrez attendre pour [deviceready](../../cordova/events/events.deviceready.html) au feu encore une fois avant de vous faire utiliser un plugin. C'est facile d'oublier que votre application s'agrandit.
 
 Même si vous choisissez de ne pas utiliser de Cordova, création d'une application mobile sans utiliser une architecture de page unique aura des implications graves performance. C'est parce que la navigation entre les pages exigera des scripts, actifs, etc., pour être rechargé. Même si ces biens sont mis en cache, il y aura toujours des problèmes de performances.
 

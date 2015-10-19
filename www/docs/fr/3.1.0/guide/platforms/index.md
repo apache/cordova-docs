@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guides de la plate-forme
 ---
 
 # Guides de la plate-forme
@@ -28,50 +30,50 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 ## Android
 
-*   Guide de la plate-forme Android
-*   Configuration Android
-*   Android WebViews
-*   Plugins Android
-*   Outils de ligne de commande Android
-*   Mise à jour Android
+*   [Guide de la plate-forme Android](android/index.html)
+*   [Configuration Android](android/config.html)
+*   [Android WebViews](android/webview.html)
+*   [Plugins Android](android/plugin.html)
+*   [Outils de ligne de commande Android](android/tools.html)
+*   [Mise à jour Android](android/upgrading.html)
 
 ## BlackBerry
 
-*   Guide de la plate-forme blackBerry
-*   Configuration de blackBerry
-*   Outils de ligne de commande de blackBerry
-*   Mise à jour de BlackBerry
+*   [Guide de la plate-forme blackBerry](blackberry/index.html)
+*   [Configuration de blackBerry](blackberry10/config.html)
+*   [Outils de ligne de commande de blackBerry](blackberry/tools.html)
+*   [Mise à jour de BlackBerry](blackberry10/upgrading.html)
 
 ## BlackBerry 10
 
-*   Guide de la plate-forme blackBerry 10
-*   Configuration de blackBerry 10
-*   BlackBerry 10 Plugins
-*   BlackBerry 10 outils de ligne de commande
+*   [Guide de la plate-forme blackBerry 10](blackberry10/index.html)
+*   [Configuration de blackBerry](blackberry10/config.html) 10
+*   [BlackBerry 10 Plugins](blackberry10/plugin.html)
+*   [BlackBerry 10 outils de ligne de commande](blackberry10/tools.html)
 
 ## iOS
 
-*   iOS Platform Guide
-*   iOS Configuration
-*   iOS WebViews
-*   iOS Plugins
-*   iOS Command-line Tools
-*   Mise à jour d'iOS
+*   [iOS Platform Guide](ios/index.html)
+*   [iOS Configuration](ios/config.html)
+*   [iOS WebViews](ios/webview.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS Command-line Tools](ios/tools.html)
+*   [Mise à jour d'iOS](ios/upgrading.html)
 
 ## Windows Phone
 
-*   Guide de plateforme Windows Phone 8
-*   Guide de plateforme Windows Phone 7
+*   [Guide de plateforme Windows Phone 8](wp8/index.html)
+*   [Guide de plateforme Windows Phone 7](wp7/index.html)
 *   Configuration de Windows Phone
-*   Windows Phone outils de ligne de commande
-*   La mise à niveau de Windows Phone
+*   [Windows Phone outils de ligne de commande](wp8/tools.html)
+*   [La mise à niveau de Windows Phone](wp8/upgrading.html)
 
 ## Windows 8
 
-*   Windows 8 Platform Guide
-*   Outils de ligne de commande de Windows 8
-*   La mise à niveau de Windows 8
+*   [Windows 8 Platform Guide](win8/index.html)
+*   [Outils de ligne de commande de Windows 8](win8/tools.html)
+*   [La mise à niveau de Windows 8](win8/upgrading.html)
 
 ## Paciarelli
 
-*   Guide de la plate-forme paciarelli
+*   [Guide de la plate-forme paciarelli](tizen/index.html)

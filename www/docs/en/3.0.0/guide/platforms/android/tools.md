@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Command-line Tools
 ---
 
 # Android Command-line Tools
@@ -65,7 +67,7 @@ The `run` command accepts the following _optional_ parameters:
     $ /path/to/project/cordova/run [Target] [Build]
     $ C:\path\to\project\cordova\run.bat [Target] [Build]
 
-Make sure you create at least one Android Virtual Device, otherwise
+Make sure you create at least one Android Virtual [Device](../../../cordova/device/device.html), otherwise
 you're prompted to do so with the `android` command.  If more than one
 AVD is available as a target, you're prompted to select one. By
 default the `run` command detects a connected device, or a currently

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Cordova dla Windows 10
 ---
 
 # Cordova dla Windows 10
@@ -48,7 +50,7 @@ Następujące funkcje są niedostępne podczas wdrażania aplikacji zdalnego try
   * Biblioteki muzycznej (`musicLibrary`)
   * Biblioteka obrazy (`picturesLibrary`)
   * Biblioteka filmów (`videosLibrary`)
-  * Magazyn wymienny (`removableStorage`)
+  * [Magazyn](../../../cordova/storage/storage.html) wymienny (`removableStorage`)
   * Klient/serwer internetowy (`internetClientClientServer`) - należy pamiętać, że `internetClient` jest nadal dozwolone
   * Prywatne sieci klient serwer (`privateNetworkClientServer`)
 

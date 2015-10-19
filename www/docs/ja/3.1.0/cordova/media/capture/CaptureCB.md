@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
@@ -27,7 +29,7 @@ license: >
 
 ## 説明
 
-この関数は成功したキャプチャ操作の完了後に実行します。 いずれかのメディア ファイルをキャプチャすると、この時点で、ユーザーがメディア ・ キャプチャ ・ アプリケーションを終了またはキャプチャ制限に達しています。
+この関数は成功したキャプチャ操作の完了後に実行します。 いずれかのメディア ファイルをキャプチャすると、この時点で、ユーザーがメディア ・ [キャプチャ](capture.html) ・ アプリケーションを終了またはキャプチャ制限に達しています。
 
 各 `MediaFile` オブジェクトにはキャプチャしたメディア ファイルについて説明します。
 

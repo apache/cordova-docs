@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Acceleration
 ---
 
 Acceleration
@@ -46,7 +48,7 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
 - Bada 1.2 & 2.x
 - Tizen
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {

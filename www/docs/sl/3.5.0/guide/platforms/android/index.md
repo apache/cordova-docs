@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Vodnik za platformo Android
 ---
 
 # Vodnik za platformo Android
@@ -24,11 +26,11 @@ Ta vodič pokaže, kako zaiti ki gre gor vaš SDK razvojno okolje za uvajanje Co
 
 Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   Android konfiguracijo
-*   Spletni Android pogledi
-*   Android Plugins
-*   Nadgradnji Android
-*   Android orodja ukazne vrstice
+*   [Android konfiguracijo](config.html)
+*   [Spletni Android pogledi](webview.html)
+*   [Android Plugins](plugin.html)
+*   [Nadgradnji Android](upgrading.html)
+*   [Android orodja ukazne vrstice](tools.html)
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 

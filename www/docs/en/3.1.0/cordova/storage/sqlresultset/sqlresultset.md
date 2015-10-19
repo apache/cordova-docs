@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLResultSet
 ---
 
 # SQLResultSet
 
-When a `SQLTransaction` object's `executeSql` method is called, the
+When a `[SQLTransaction](../sqltransaction/sqltransaction.html)` object's `executeSql` method is called, the
 specified callback executes with a `SQLResultSet` parameter.
 
 ## Properties
@@ -29,11 +31,11 @@ specified callback executes with a `SQLResultSet` parameter.
 
 - __rowsAffected__: The number of rows changed by the SQL statement, zero if the statement did not affect any rows.
 
-- __rows__: a `SQLResultSetRowList` representing the rows returned, empty if no rows are returned.
+- __rows__: a `[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)` representing the rows returned, empty if no rows are returned.
 
 ## Details
 
-When a `SQLTransaction` object's `executeSql` method is called, the
+When a `[SQLTransaction](../sqltransaction/sqltransaction.html)` object's `executeSql` method is called, the
 specified callback executes with a `SQLResultSet` parameter containing
 three properties:
 

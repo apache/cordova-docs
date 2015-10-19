@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.startRecord
 ---
 
 media.startRecord
@@ -40,7 +42,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
     
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Record audio
@@ -63,7 +65,7 @@ Quick Example
     }
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -145,7 +147,7 @@ BlackBerry WebWorks Quirks
 iOS Quirks
 ----------
 
-- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+- The file to record to must already exist and should be of type .wav. The [File](../file/fileobj/fileobj.html) API's can be used to create the file.
 
 Tizen Quirks
 ----------

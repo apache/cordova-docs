@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getLocaleName
 ---
 
 globalization.getLocaleName
@@ -31,7 +33,7 @@ globalization.getLocaleName
 
 successCB コールバック関数に、プロパティーオブジェクトをパラメーターとしてロケールの識別文字列を返します。このオブジェクトは文字列の ``value`` プロパティーを持っています。
 
-もしロケールの取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.UNKNOWN\_ERROR です。
+もしロケールの取得中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR です。
 
 
 サポートされているプラットフォーム
@@ -42,7 +44,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - iPhone
 
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定された場合、次のコードは "locale: en\_US" という文字列をポップアップダイアログに表示します。

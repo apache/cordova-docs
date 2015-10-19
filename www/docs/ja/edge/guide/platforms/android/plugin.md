@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android のプラグイン
 ---
 
 # Android のプラグイン
@@ -24,7 +26,7 @@ Android プラットフォームでネイティブのプラグインのコード
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android のプラグインはそれに取り付けられたフックを持つアンドロイドの WebView を成っているコルドバ アンドロイドに基づいています。 プラグインのクラスへのマッピングとして表される、 `config.xml` ファイル。 プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` のいずれかをオーバーライドするクラスの `execute` メソッド。 ベスト プラクティス、プラグインも扱うべきです `pause` と `resume` イベントのプラグイン間のメッセージパッシングと共に。 実行時間の長い要求は、メディアの再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
+Android のプラグインはそれに取り付けられたフックを持つアンドロイドの WebView を成っているコルドバ アンドロイドに基づいています。 プラグインのクラスへのマッピングとして表される、 `config.xml` ファイル。 プラグイン拡張する少なくとも 1 つの Java クラスから成っている、 `CordovaPlugin` のいずれかをオーバーライドするクラスの `execute` メソッド。 ベスト プラクティス、プラグインも扱うべきです `[pause](../../../cordova/events/events.pause.html)` と `[resume](../../../cordova/events/events.resume.html)` イベントのプラグイン間のメッセージパッシングと共に。 実行時間の長い要求は、メディアの再生、リスナー、または内部の状態などのバック グラウンド アクティビティでプラグインを実装する必要があります、 `onReset()` メソッドと同様です。 それを実行するとき、 `WebView` 、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します。
 
 ## プラグイン クラスのマッピング
 

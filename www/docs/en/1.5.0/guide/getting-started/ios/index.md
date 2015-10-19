@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with iOS
 ---
 
 Getting Started with iOS
@@ -31,7 +33,7 @@ Video Tutorials:
 1. Requirements
 ---------------
 - Intel-based computer with Mac OS X Snow Leopard (10.6)
-- Necessary for Installing on Device:
+- Necessary for Installing on [Device](../../../phonegap/device/device.html):
     - An Apple iOS device (iPhone, iPad, iPod Touch)
     - iOS developer certification
 
@@ -46,7 +48,7 @@ Video Tutorials:
 3. Setup New Project
 --------------------
 
-- Launch Xcode, then under the File menu select **New** and then **New Project...**
+- Launch Xcode, then under the [File](../../../phonegap/file/fileobj/fileobj.html) menu select **New** and then **New Project...**
 - Select **PhoneGap-based Application** from the list of templates
 
     ![](img/guide/platforms/ios/XCode4-templates.png)
@@ -65,10 +67,10 @@ Video Tutorials:
 - After you drag, you should see a prompt with a few options. Make sure to select **Create folder references for any added folders**. Click Finish
 
 
-4. Hello World
+4. [Hello World](../webos/index.html)
 --------------
 
-Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>` tag in **index.html**. You can also add any associated Javascript and CSS files there as well.
+Open the folder named **www** and type `<h1>[Hello World](../webos/index.html)</h1>` after the `<body>` tag in **index.html**. You can also add any associated Javascript and CSS files there as well.
     
     
 5A. Deploy to Simulator
@@ -78,7 +80,7 @@ Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>`
 - Hit **Run** in your project window header.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../phonegap/device/device.html)
 --------------------
 
 - Open [AppName]-Info.plist and change **BundleIdentifier** to the identifier provided by Apple. If you have a developer license, you can access and run the Assistant at [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your App.
@@ -91,5 +93,5 @@ Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>`
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/39991939/Getting-Started-with-PhoneGap-iOS-using-Xcode-4-%28Template-Version%29).
+You can also checkout more detailed [version](../../../phonegap/storage/parameters/version.html) of this guide [here](http://wiki.phonegap.com/w/page/39991939/Getting-Started-with-PhoneGap-iOS-using-Xcode-4-%28Template-Version%29).
 

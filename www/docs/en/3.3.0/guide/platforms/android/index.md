@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Platform Guide
 ---
 
 # Android Platform Guide
@@ -30,14 +32,14 @@ require the Android SDK to be installed and accessable via your PATH.)
 
 See the following for more detailed platform-specific information:
 
-* Android Configuration
-* Android WebViews
-* Android Plugins
-* Upgrading Android
-* Android Command-line Tools
+* [Android Configuration](config.html)
+* [Android WebViews](webview.html)
+* [Android Plugins](plugin.html)
+* [Upgrading Android](upgrading.html)
+* [Android Command-line Tools](tools.html)
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
+See [The Command-Line Interface](../../cli/index.html) for information about the
 current interface.
 
 ## Requirements and Support
@@ -59,7 +61,7 @@ NOTE, doc said:
 -->
 
 Developers should use the `cordova` utility in conjunction with
-the Android SDK.  See The Command-Line Interface for
+the Android SDK.  See [The Command-Line Interface](../../cli/index.html) for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -100,7 +102,7 @@ To modify the PATH environment on Windows 7:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+* Save the value and [close](../../../cordova/inappbrowser/inappbrowser.html) both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to
@@ -111,7 +113,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-Line Interface. For example, in a source-code directory:
+Cordova [The Command-Line Interface](../../cli/index.html). For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello

@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 # localStorage
 
 Provides access to the W3C's
-[Web Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+[Web [Storage](../storage.html) interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
     var permanentStorage = window.localStorage;
     var tempStorage = window.sessionStorage;
@@ -40,7 +42,7 @@ Provides access to the W3C's
 
 ## Details
 
-The `window.localStorage` interface implements the W3C's [Web Storage
+The `window.localStorage` interface implements the W3C's [Web [Storage](../storage.html)
 interface](http://dev.w3.org/html5/webstorage/).  An app can use it to
 save persistent data using key-value pairs.  The
 `window.sessionStorage` interface works the same way in every respect,

@@ -16,21 +16,23 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileWriter
 ---
 
 # FileWriter
 
-Als Objekt, das Sie erstellen und Daten in eine Datei schreiben kann.
+Als Objekt, das Sie erstellen und Daten in eine [Datei](../fileobj/fileobj.html) schreiben kann.
 
 ## Eigenschaften
 
 *   **ReadyState**: eines der drei möglichen Zuständen, entweder `INIT` , `WRITING` , oder`DONE`.
 
-*   **Dateiname**: der Name der Datei geschrieben werden. *(DOM-String und enthält)*
+*   **Dateiname**: der Name der [Datei](../fileobj/fileobj.html) geschrieben werden. *(DOM-String und enthält)*
 
-*   **Länge**: die Länge der Datei geschrieben werden. *(lange)*
+*   **Länge**: die Länge der [Datei](../fileobj/fileobj.html) geschrieben werden. *(lange)*
 
-*   **Lage**: die aktuelle Position des Dateizeigers. *(lange)*
+*   **Lage**: die aktuelle [Position](../../geolocation/Position/position.html) des Dateizeigers. *(lange)*
 
 *   **Fehler**: ein Objekt, die Fehler enthalten. *(FileError)*
 
@@ -46,25 +48,25 @@ Als Objekt, das Sie erstellen und Daten in eine Datei schreiben kann.
 
 Die folgende Eigenschaft wird *nicht* unterstützt:
 
-*   **OnProgress**: aufgerufen, beim Schreiben der Datei Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
+*   **OnProgress**: aufgerufen, beim Schreiben der [Datei](../fileobj/fileobj.html) Fortschrittsbericht im Hinblick auf `progress.loaded` / `progress.total` . *(Funktion)*
 
 ## Methoden
 
-*   **Abbrechen**: bricht die Datei schreibt.
+*   **Abbrechen**: bricht die [Datei](../fileobj/fileobj.html) schreibt.
 
 *   **Suchen**: bewegt den Dateizeiger auf das angegebene Byte.
 
-*   **abschneiden**: die Datei auf die angegebene Länge verkürzt.
+*   **abschneiden**: die [Datei](../fileobj/fileobj.html) auf die angegebene Länge verkürzt.
 
-*   **schreiben**: schreibt Daten in die Datei.
+*   **schreiben**: schreibt Daten in die [Datei](../fileobj/fileobj.html).
 
 ## Informationen
 
-Das `FileWriter` -Objekt bietet eine Möglichkeit zum Schreiben von UTF-8 kodierten Dateien in Dateisystem des Geräts. Anwendungen reagieren auf `writestart` , `progress` , `write` , `writeend` , `error` , und `abort` Ereignisse.
+Das `FileWriter` -Objekt bietet eine Möglichkeit zum Schreiben von UTF-8 kodierten Dateien in [Dateisystem](../filesystem/filesystem.html) des Geräts. Anwendungen reagieren auf `writestart` , `progress` , `write` , `writeend` , `error` , und `abort` Ereignisse.
 
-Jeder `FileWriter` entspricht einer Datei, auf die Daten können viele Male geschrieben werden. Die `FileWriter` behält der Datei `position` und `length` Attribute, die die app zu ermöglichen `seek` und `write` an einer beliebigen Stelle in der Datei. In der Standardeinstellung der `FileWriter` schreibt an den Anfang der Datei überschreiben vorhandene Daten. Legen Sie das optionale `append` boolesche zu `true` in der `FileWriter` der Konstruktor, bis zum Ende der Datei zu schreiben.
+Jeder `FileWriter` entspricht einer [Datei](../fileobj/fileobj.html), auf die Daten können viele Male geschrieben werden. Die `FileWriter` behält der [Datei](../fileobj/fileobj.html) `position` und `length` Attribute, die die app zu ermöglichen `seek` und `write` an einer beliebigen Stelle in der [Datei](../fileobj/fileobj.html). In der Standardeinstellung der `FileWriter` schreibt an den Anfang der [Datei](../fileobj/fileobj.html) überschreiben vorhandene Daten. Legen Sie das optionale `append` boolesche zu `true` in der `FileWriter` der Konstruktor, bis zum Ende der [Datei](../fileobj/fileobj.html) zu schreiben.
 
-Text-Daten werden von allen unten aufgelisteten Plattformen unterstützt. Text wird als UTF-8 codiert, bevor Sie in das Dateisystem geschrieben werden. Einige Plattformen unterstützen auch Binärdaten, die in als ein ArrayBuffer oder ein Blob übergeben werden können.
+Text-Daten werden von allen unten aufgelisteten Plattformen unterstützt. Text wird als UTF-8 codiert, bevor Sie in das [Dateisystem](../filesystem/filesystem.html) geschrieben werden. Einige Plattformen unterstützen auch Binärdaten, die in als ein ArrayBuffer oder ein Blob übergeben werden können.
 
 ## Unterstützte Plattformen
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 globalization.numberToString
@@ -30,7 +32,7 @@ Description
 
 It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a String value.
 
-If there is an error formatting the number, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error formatting the number, then the errorCB callback is invoked with a [GlobalizationError](GlobalizationError/globalizationerror.html) object as a parameter. The expected code for this error is [GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR.
 
 `options.type` can be 'decimal', 'percent', or 'currency'. The default options are `{type:'decimal'}`. The `options` parameter is optional.
 
@@ -42,7 +44,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "number: 3.142"
@@ -54,7 +56,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
       {type:'decimal'}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

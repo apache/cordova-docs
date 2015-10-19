@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Platform Support
 ---
 
 # Platform Support
@@ -40,7 +42,7 @@ CLI's shorthand names.
         <th><tt>ios</tt></th>
         <th><tt>Ubuntu</tt></th>
         <th><tt>wp8</tt><br/>(Windows Phone 8)</th>
-        <th><tt>windows</tt><br/>(8.0, 8.1,<br/>Phone 8.1)</th>
+        <th><tt>windows</tt><br/>(8.0, 8.1, 10,<br/>Phone 8.1)</th>
         <th><tt>tizen</tt></th>
     </tr>
 
@@ -48,7 +50,7 @@ CLI's shorthand names.
 
 <tbody>
     <tr>
-        <th><a href="guide_cli_index.md.html">cordova<br/>CLI</a></th>
+        <th><a href="../cli/index.html">cordova<br/>CLI</a></th>
         <td data-col="amazon-fireos" class="y">Mac, Windows, Linux</td>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
         <td data-col="blackberry10" class="y">Mac, Windows</td>
@@ -61,12 +63,12 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="guide_hybrid_webviews_index.md.html">Embedded<br/>WebView</a></th>
-        <td data-col="amazon-fireos" class="y"><a href="guide_platforms_amazonfireos_webview.md.html">(see details)</a></td>
-        <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html">(see details)</a></td>
+        <th><a href="../hybrid/webviews/index.html">Embedded<br/>WebView</a></th>
+        <td data-col="amazon-fireos" class="y"><a href="../platforms/amazonfireos/webview.html">(see details)</a></td>
+        <td data-col="android"    class="y"><a href="../platforms/android/webview.html">(see details)</a></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="firefoxos" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="../platforms/ios/webview.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
@@ -74,14 +76,14 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="guide_hybrid_plugins_index.md.html">Plug-in<br/>Interface</a></th>
-         <td data-col="amazon-fireos" class="y"><a href="guide_platforms_amazonfireos_plugin.md.html">(see details)</a></td>
-        <td data-col="android"    class="y"><a href="guide_platforms_android_plugin.md.html">(see details)</a></td>
-        <td data-col="blackberry10" class="y"><a href="guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
+        <th><a href="../hybrid/plugins/index.html">Plug-in<br/>Interface</a></th>
+         <td data-col="amazon-fireos" class="y"><a href="../platforms/amazonfireos/plugin.html">(see details)</a></td>
+        <td data-col="android"    class="y"><a href="../platforms/android/plugin.html">(see details)</a></td>
+        <td data-col="blackberry10" class="y"><a href="../platforms/blackberry10/plugin.html">(see details)</a></td>
         <td data-col="firefoxos" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_platforms_ios_plugin.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="../platforms/ios/plugin.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone8"  class="y"><a href="guide_platforms_wp8_plugin.md.html">(see details)</a></td>
+        <td data-col="winphone8"  class="y"><a href="../platforms/wp8/plugin.html">(see details)</a></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -196,7 +198,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="cordova_events_events.md.html">Events</a></th>
+        <th><a href="../../cordova/events/events.html">Events</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -326,7 +328,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="cordova_storage_storage.md.html">Storage</a></th>
+        <th><a href="../../cordova/storage/storage.html">Storage</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>

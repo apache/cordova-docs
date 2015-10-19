@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureVideo
 ---
 
 capture.captureVideo
@@ -36,16 +38,16 @@ to capture more than one recordings in a single session.
 
 The capture operation ends when either the user exits the video
 recording application, or the maximum number of recordings specified
-by `CaptureVideoOptions.limit` is reached.  If no `limit` parameter
+by `[CaptureVideoOptions](captureVideoOptions.html).limit` is reached.  If no `limit` parameter
 value is specified, it defaults to one (1), and the capture operation
 terminates after the user records a single video clip.
 
-When the capture operation finishes, it the `CaptureCB` callback
-executes with an array of `MediaFile` objects describing each captured
+When the capture operation finishes, it the `[CaptureCB](CaptureCB.html)` callback
+executes with an array of `[MediaFile](MediaFile.html)` objects describing each captured
 video clip file.  If the user terminates the operation before
-capturing a video clip, the `CaptureErrorCB` callback executes with a
-`CaptureError` object featuring a
-`CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
+capturing a video clip, the `[CaptureErrorCB](CaptureErrorCB.html)` callback executes with a
+`[CaptureError](CaptureError.html)` object featuring a
+`[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -56,7 +58,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // capture callback
@@ -76,7 +78,7 @@ Quick Example
     // start video capture
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -140,5 +142,5 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 

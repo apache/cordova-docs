@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -29,7 +31,7 @@ license: >
 
 名前の配列を返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。 そのオブジェクトが含まれています、 `value` プロパティ、 `Array` の `String` の値。 年または選択したオプションに応じて、週の最初の日の最初の月のいずれかから始まってアレイ機能の名前。
 
-名前の取得エラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.UNKNOWN\_ERROR`.
+名前の取得エラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
 

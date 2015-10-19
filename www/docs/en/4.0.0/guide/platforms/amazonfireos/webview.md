@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS WebViews
 ---
 
 # Amazon Fire OS WebViews
@@ -23,7 +25,7 @@ license: >
 Beginning with 3.3.0, you can use Cordova as a component in Amazon Fire OS applications. Amazon Fire OS refers to this component as `CordovaWebView`. `CordovaWebView` extends Amazon WebView that is built on the open source Chromium Project. By leveraging this feature, your web apps can utilize the latest HTML5 web standards running in a modern web runtime engine.
 
 If you're unfamiliar with Amazon Fire OS, you should first familiarize
-yourself with the Amazon Fire OS Platform Guide and have the latest SDKs installed before you attempt the more unusual development option of embedding a WebView.
+yourself with the [Amazon Fire OS Platform Guide](index.html) and have the latest SDKs installed before you attempt the more unusual development option of embedding a WebView.
 
 ## Prerequisites
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFields
 ---
 
 contactFields
 =============
 
-Required parameter for the `contacts.find` method, used to specify which fields should be included in the `Contact` objects resulting from a find operation.
+Required parameter for the `[contacts.find](../contacts.find.html)` method, used to specify which fields should be included in the `[Contact](../Contact/contact.html)` objects resulting from a find operation.
 
     ["name", "phoneNumbers", "emails"]

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileSystem
 ---
 
 # FileSystem
@@ -30,7 +32,7 @@ Cet objet représente un système de fichiers.
 
 ## Détails
 
-L'objet `FileSystem` divulgue des informations à propos du système de fichiers. Le nom du système de fichiers est unique pour l'ensemble des systèmes de fichiers exposés. La propriété root contient un objet `DirectoryEntry` représentant le répertoire racine du système de fichiers.
+L'objet `FileSystem` divulgue des informations à propos du système de fichiers. Le nom du système de fichiers est unique pour l'ensemble des systèmes de fichiers exposés. La propriété root contient un objet `[DirectoryEntry](../directoryentry/directoryentry.html)` représentant le répertoire racine du système de fichiers.
 
 ## Plates-formes supportées
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumeupbutton
 ---
 
 # volumeupbutton
@@ -29,7 +31,7 @@ L'évènement se déclenche lorsque l'utilisateur clique sur le bouton augmentat
 
 Si vous souhaitez modifier le comportement par défaut du bouton augmentation du volume, vous pouvez enregistrer un écouteur pour l'évènement `volumeupbutton`.
 
-Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `[deviceready](events.deviceready.html)` déclenché.
 
 ## Plates-formes supportées
 

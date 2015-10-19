@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureAudio
 ---
 
 # capture.captureAudio
@@ -31,9 +33,9 @@ license: >
 
 Beginnt einen asynchronen Vorgang, Audioaufnahmen, die audio-Aufnahme-Standardanwendung des Geräts erfassen. Die Operation erlaubt dem Benutzer des Geräts, mehrere Aufnahmen in einer einzigen Sitzung zu erfassen.
 
-Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet die Audio wird-recording-Anwendung oder die maximale Anzahl der Aufnahmen, die festgelegten `CaptureAudioOptions.limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes audio-Clips aufgezeichnet.
+Der Capture-Vorgang endet, wenn entweder vom Benutzer beendet die Audio wird-recording-Anwendung oder die maximale Anzahl der Aufnahmen, die festgelegten `[CaptureAudioOptions](captureAudioOptions.html).limit` erreicht ist. Wenn keine `limit` Parameterwert angegeben ist, wird standardmaessig eins (1) und der Capture-Vorgang beendet, nachdem der Benutzer ein einzelnes audio-Clips aufgezeichnet.
 
-Wenn der Capture-Vorgang abgeschlossen ist, die `CaptureCallback` führt mit einer Reihe von `MediaFile` Objekten beschreiben jedes audio-Clip-Datei erfasst. Wenn der Benutzer den Vorgang beendet wird, bevor ein Audioclip erfasst wird, die `CaptureErrorCallback` führt mit einem `CaptureError` -Objekt, mit der `CaptureError.CAPTURE_NO_MEDIA_FILES` Fehlercode.
+Wenn der Capture-Vorgang abgeschlossen ist, die `CaptureCallback` führt mit einer Reihe von `[MediaFile](MediaFile.html)` Objekten beschreiben jedes audio-Clip-Datei erfasst. Wenn der Benutzer den Vorgang beendet wird, bevor ein Audioclip erfasst wird, die `CaptureErrorCallback` führt mit einem `[CaptureError](CaptureError.html)` -Objekt, mit der `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` Fehlercode.
 
 ## Unterstützte Plattformen
 
@@ -126,7 +128,7 @@ Wenn der Capture-Vorgang abgeschlossen ist, die `CaptureCallback` führt mit ein
 
 ## BlackBerry WebWorks Macken
 
-*   Cordova für BlackBerry WebWorks versucht **Voice Notes Recorder** Starten der Anwendung, bereitgestellt durch RIM, Audioaufnahmen zu erfassen. Die app erhält eine `CaptureError.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem Gerät installiert ist.
+*   Cordova für BlackBerry WebWorks versucht **Voice Notes Recorder** Starten der Anwendung, bereitgestellt durch RIM, Audioaufnahmen zu erfassen. Die app erhält eine `[CaptureError](CaptureError.html).CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem [Gerät](../../device/device.html) installiert ist.
 
 ## iOS Macken
 

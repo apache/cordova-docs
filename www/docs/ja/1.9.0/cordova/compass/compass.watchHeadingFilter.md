@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeadingFilter
 ---
 
 compass.watchHeadingFilter
 ==========================
 
-1.6以降はサポートされていません。同等の機能として、 `compass.watchHeading` を参照してください。
+1.6以降はサポートされていません。同等の機能として、 `[compass.watchHeading](compass.watchHeading.html)` を参照してください。

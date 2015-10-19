@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Incorporamento visualizzazioni Web
 ---
 
 # Incorporamento visualizzazioni Web
 
 > Implementare Cordova WebView nel proprio progetto.
 
-*   Visualizzazioni Web Android
-*   iOS visualizzazioni Web
+*   [Visualizzazioni Web Android](../../platforms/android/webview.html)
+*   [iOS visualizzazioni Web](../../platforms/ios/webview.html)

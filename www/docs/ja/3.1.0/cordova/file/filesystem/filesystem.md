@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ファイル ・ システム
 ---
 
 # ファイル ・ システム
@@ -24,13 +26,13 @@ license: >
 
 ## プロパティ
 
-*   **名前**: ファイル システムの名前。*（，）*
+*   **名前**: [ファイル](../fileobj/fileobj.html) システムの名前。*（，）*
 
-*   **ルート**: ファイル システムのルート ディレクトリ。*(DirectoryEntry)*
+*   **ルート**: [ファイル](../fileobj/fileobj.html) システムのルート ディレクトリ。*(DirectoryEntry)*
 
 ## 詳細
 
-`FileSystem`オブジェクトは、ファイル システムに関する情報を表します。 ファイル システムの名前は公開されているファイル ・ システムのリストの間でユニークです。 Root プロパティが含まれています、 `DirectoryEntry` ファイルシステムのルート ディレクトリを表すオブジェクト。
+`FileSystem`オブジェクトは、ファイル システムに関する情報を表します。 [ファイル](../fileobj/fileobj.html) システムの名前は公開されているファイル ・ システムのリストの間でユニークです。 Root プロパティが含まれています、 `[DirectoryEntry](../directoryentry/directoryentry.html)` ファイルシステムのルート ディレクトリを表すオブジェクト。
 
 ## サポートされているプラットフォーム
 

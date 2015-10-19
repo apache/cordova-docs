@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 # batterystatus
@@ -27,15 +29,15 @@ license: >
 
 ## 세부 정보
 
-이 이벤트는 배터리 충전 비율 1% 이상에 의해 변경 될 때 또는 장치를 연결 하거나 분리 하는 경우 발생 합니다.
+이 이벤트는 배터리 충전 비율 1% 이상에 의해 변경 될 때 또는 장치를 [연결](../connection/connection.html) 하거나 분리 하는 경우 발생 합니다.
 
 배터리 상태 처리기는 두 개의 속성이 포함 된 개체에 전달 됩니다.
 
 *   **수준**: 배터리 충전 (0-100)의 비율. *(수)*
 
-*   **isPlugged**: 장치 연결된 인치 *(부울)* 인지 여부를 나타내는 부울 값
+*   **isPlugged**: [장치](../device/device.html) 연결된 인치 *(부울)* 인지 여부를 나타내는 부울 값
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `window.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `window.addEventListener` 한번 [이벤트](events.html) 리스너를 [연결](../connection/connection.html) 하는 `[deviceready](events.deviceready.html)` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 

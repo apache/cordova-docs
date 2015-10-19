@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with iOS
 ---
 
 Getting Started with iOS
@@ -60,7 +62,7 @@ iOS와 SDK과 Cordova 설치하기
 - 새로 만든 프로젝트 폴더로 이동해서 
 - 폴더안의 `.xcodeproj` 를 실행한다.
 
-Hello World
+[Hello World](../webos/index.html)
 -----------
 
 - Xcode의 _Project Navigator_ 에서 `www` 폴더를 선택한다.
@@ -78,7 +80,7 @@ Deploy to Simulator
 - 툴바에 있는 **Scheme** 드롭다운 메뉴의 **Active SDK** 를  **iOS [version] Simulator** 로 바꾼다.
 -  **Run** 버튼을 선택한다.
 
-Deploy to Device
+Deploy to [Device](../../../cordova/device/device.html)
 ----------------
 
 - **Supporting Files** 그룹 아래의 `HelloWorld-Info.plist`파일을 연다.

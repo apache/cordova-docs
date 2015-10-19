@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch für die OS-Plattform von Amazon-Feuer
 ---
 
 # Handbuch für die OS-Plattform von Amazon-Feuer
@@ -24,9 +26,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   [Amazon Fire OS Konfiguration](config.html)
+*   [Amazon Fire OS Webansichten für](webview.html)
+*   [Amazon Fire OS Plugins](plugin.html)
 
 ## Anforderungen und Unterstützung
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon fuego OS Platform Guide
 ---
 
 # Amazon fuego OS Platform Guide
@@ -24,9 +26,9 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Amazon fuego OS configuración
-*   Amazon fuego OS WebViews
-*   Amazon fuego OS Plugins
+*   [Amazon fuego OS configuración](config.html)
+*   [Amazon fuego OS WebViews](webview.html)
+*   [Amazon fuego OS Plugins](plugin.html)
 
 ## Requerimientos y apoyo
 

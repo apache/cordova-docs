@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
@@ -31,9 +33,9 @@ license: >
 
 Акселерометр это датчик движения, который отслеживает изменение (delta) в движении относительно текущей позиции. Акселерометр может отслеживать 3D перемещения по *x*, *y* и *z* осям.
 
-Метод `accelerometer.watchAcceleration` извлекает текущий объект `Acceleration` в определенные промежутки времени, и выполняет функцию обратного вызова `accelerometerSuccess`. Задает интервал в миллисекундах через параметр `frequency` объекта `acceleratorOptions`.
+Метод `accelerometer.watchAcceleration` извлекает текущий объект `[Acceleration](acceleration/acceleration.html)` в определенные промежутки времени, и выполняет функцию обратного вызова `[accelerometerSuccess](parameters/accelerometerSuccess.html)`. Задает интервал в миллисекундах через параметр `frequency` объекта `acceleratorOptions`.
 
-Идентификатор watchID ссылается на акселерометр может использоваться с `accelerometer.clearWatch` чтобы остановить отслеживание акселерометра.
+Идентификатор watchID ссылается на акселерометр может использоваться с `[accelerometer.clearWatch](accelerometer.clearWatch.html)` чтобы остановить отслеживание акселерометра.
 
 ## Поддерживаемые платформы
 

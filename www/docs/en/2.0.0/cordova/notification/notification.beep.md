@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.beep
 ---
 
 notification.beep
@@ -36,13 +38,13 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -97,7 +99,7 @@ Full Example
 Android Quirks
 --------------
 
-- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
+- Android plays the default "[Notification](notification.html) ringtone" specified under the "Settings/Sound & Display" panel.
 
 iPhone Quirks
 -------------

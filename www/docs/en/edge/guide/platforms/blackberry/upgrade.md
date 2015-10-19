@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading BlackBerry
 ---
 
 # Upgrading BlackBerry
@@ -23,7 +25,7 @@ license: >
 This guide shows how to modify BlackBerry projects to upgrade from
 older versions of Cordova.  These instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See The Command-Line Interface for information
+`cordova` CLI utility. See [The Command-Line Interface](../../cli/index.html) for information
 how to update the version of the CLI.
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##

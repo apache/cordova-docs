@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.startRecord
 ---
 
 # media.startRecord
@@ -140,7 +142,7 @@ license: >
 
 *   iOS только записи в файлы типа *.wav* и возвращает ошибку, если расширение не исправить.
 
-*   Если полный путь не указан, запись помещается в приложения `documents/tmp` каталог. Это могут быть доступны через `File` API с помощью `LocalFileSystem.TEMPORARY` . Любой подкаталог, указанный на время записи должны уже существовать.
+*   Если полный путь не указан, запись помещается в приложения `documents/tmp` каталог. Это могут быть доступны через `File` API с помощью `[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY` . Любой подкаталог, указанный на время записи должны уже существовать.
 
 *   Файлы могут быть и сыграны записываются обратно, используя документы URI:
     

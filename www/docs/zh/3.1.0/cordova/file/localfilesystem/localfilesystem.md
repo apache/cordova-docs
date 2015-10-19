@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 場合
 ---
 
 # 場合
@@ -26,7 +28,7 @@ license: >
 
 *   **requestFileSystem**: 請求的檔案系統。*（函數）*
 
-*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `FileEntry` 使用當地的 URI。*（函數）*
+*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `[FileEntry](../fileentry/fileentry.html)` 使用當地的 URI。*（函數）*
 
 ## 常量
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Beschleunigungsmesser
 ---
 
 # Beschleunigungsmesser
@@ -24,19 +26,19 @@ license: >
 
 ## Methoden
 
-*   accelerometer.getCurrentAcceleration
-*   accelerometer.watchAcceleration
-*   accelerometer.clearWatch
+*   [accelerometer.getCurrentAcceleration](accelerometer.getCurrentAcceleration.html)
+*   [accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)
+*   [accelerometer.clearWatch](accelerometer.clearWatch.html)
 
 ## Argumente
 
-*   accelerometerSuccess
-*   accelerometerError
-*   accelerometerOptions
+*   [accelerometerSuccess](parameters/accelerometerSuccess.html)
+*   [accelerometerError](parameters/accelerometerError.html)
+*   [accelerometerOptions](parameters/accelerometerOptions.html)
 
 ## Objekte (schreibgeschützt)
 
-*   Beschleunigung
+*   [Beschleunigung](acceleration/acceleration.html)
 
 ## Zugriff auf die Funktion
 
@@ -87,4 +89,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen K
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).

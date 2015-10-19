@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-에 의해 만들어진 popover 대화에 대 한 핸들`camera.getPicture`.
+에 의해 만들어진 popover 대화에 대 한 핸들`[camera.getPicture](../camera.getPicture.html)`.
 
 ## 메서드
 
@@ -34,9 +36,9 @@ license: >
 
 popover의 위치를 설정 합니다.
 
-**매개 변수:**
+**매개 [변수](../../../plugin_ref/spec.html):**
 
-*   `cameraPopoverOptions`:는 `CameraPopoverOptions` 새 위치를 지정 하는
+*   `cameraPopoverOptions`:는 `[CameraPopoverOptions](CameraPopoverOptions.html)` 새 위치를 지정 하는
 
 ## 빠른 예제
 

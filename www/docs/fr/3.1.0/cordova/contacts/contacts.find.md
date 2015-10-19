@@ -16,26 +16,28 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 # contacts.find
 
-Interroge la base de données de contacts de l'appareil et renvoie un ou plusieurs objet `Contact`, chacun contenant les champs spécifiés.
+Interroge la base de données de contacts de l'appareil et renvoie un ou plusieurs objet `[Contact](Contact/contact.html)`, chacun contenant les champs spécifiés.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
     
 
 ## Description
 
-La méthode `contacts.find` s'exécute de façon asynchrone, interrogeant la base de données de contacts de l'appareil et retournant un tableau d'objets `Contact`. Les objets retournés sont passés à la fonction de callback `contactSuccess` spécifiée par le paramètre **contactSuccess** .
+La méthode `contacts.find` s'exécute de façon asynchrone, interrogeant la base de données de contacts de l'appareil et retournant un tableau d'objets `[Contact](Contact/contact.html)`. Les objets retournés sont passés à la fonction de callback `[contactSuccess](parameters/contactSuccess.html)` spécifiée par le paramètre **contactSuccess** .
 
-Le paramètre **contactFields** spécifie les champs à utiliser comme un qualificateur de recherche, et seulement ces résultats sont passés à la fonction de callback **contactSuccess**. Un paramètre de longueur nulle **contactFields** n'est pas valide et provoque une erreur `ContactError.INVALID_ARGUMENT_ERROR`. Une valeur de **contactFields** de `"*"` retourne les champs de tout contact.
+Le paramètre **contactFields** spécifie les champs à utiliser comme un qualificateur de recherche, et seulement ces résultats sont passés à la fonction de callback **contactSuccess**. Un paramètre de longueur nulle **contactFields** n'est pas valide et provoque une erreur `[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR`. Une valeur de **contactFields** de `"*"` retourne les champs de tout contact.
 
 La chaîne **contactFindOptions.filter** peut être utilisée comme un filtre de recherche lorsque vous interrogez la base de données de contacts. Si fourni, une valeur insensible à la casse et partiellement correspondante est appliquée à chaque champ spécifié dans le paramètre **contactFields**. S'il y a une correspondance pour *n'importe lequel* des champs spécifiés, le contact est retourné.
 
 ## Paramètres
 
-*   **contactFields** : champs du Contact à utiliser comme un qualificateur de recherche. L'objet `Contact` retourné dispose seulement des valeurs pour ces champs. *(DOMString[])* [Obligatoire]
+*   **contactFields** : champs du [Contact](Contact/contact.html) à utiliser comme un qualificateur de recherche. L'objet `[Contact](Contact/contact.html)` retourné dispose seulement des valeurs pour ces champs. *(DOMString[])* [Obligatoire]
 
 *   **contactSuccess**: fonction de callback de succès appelée avec les contacts retournés par la base de données. [Obligatoire]
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileSystem
 ---
 
 FileSystem
@@ -35,7 +37,7 @@ Details
 
 The `FileSystem` object represents information about the file system.
 The name of the file system is unique across the list of exposed
-file systems.  The root property contains a `DirectoryEntry` object
+file systems.  The root property contains a `[DirectoryEntry](../directoryentry/directoryentry.html)` object
 that represents the file system's root directory.
 
 Supported Platforms
@@ -47,7 +49,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-File System Quick Example
+[File](../fileobj/fileobj.html) System Quick [Example](../../storage/storage.opendatabase.html)
 -------------------------
 
     function onSuccess(fileSystem) {
@@ -58,7 +60,7 @@ File System Quick Example
     // request the persistent file system
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

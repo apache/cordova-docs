@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraSuccess
 ---
 
 # cameraSuccess
@@ -29,7 +31,7 @@ funzione di callback onSuccess che fornisce i dati di immagine.
 
 ## Parametri
 
-*   **imageData**: Base64 codifica dei dati immagine, *o* il file di immagine URI, a seconda `cameraOptions` in vigore. *(String)*
+*   **imageData**: Base64 codifica dei dati immagine, *o* il file di immagine URI, a seconda `[cameraOptions](cameraOptions.html)` in vigore. *(String)*
 
 ## Esempio
 

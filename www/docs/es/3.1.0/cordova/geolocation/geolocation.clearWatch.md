@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
@@ -31,7 +33,7 @@ Deja de ver cambios en la ubicación del dispositivo al que hace referencia el p
 
 ## Descripción
 
-La `geolocation.clearWatch` se detiene observando los cambios en la ubicación del dispositivo despejando la `geolocation.watchPosition` hace referenciada a `watchID`.
+La `geolocation.clearWatch` se detiene observando los cambios en la ubicación del dispositivo despejando la `[geolocation.watchPosition](geolocation.watchPosition.html)` hace referenciada a `watchID`.
 
 ## Plataformas soportadas
 

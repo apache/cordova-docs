@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BackButton
 ---
 
 # BackButton
@@ -27,7 +29,7 @@ L'evento viene generato quando l'utente preme il pulsante indietro.
 
 ## Dettagli
 
-Per ignorare il comportamento predefinito tasto back, registrare un listener di eventi per il `backbutton` evento, tipicamente chiamando `document.addEventListener` una volta ricevuto il `deviceready` evento. Non è più necessario chiamare qualsiasi altro metodo per ignorare il comportamento del pulsante indietro.
+Per ignorare il comportamento predefinito tasto back, registrare un listener di eventi per il `backbutton` evento, tipicamente chiamando `document.addEventListener` una volta ricevuto il `[deviceready](events.deviceready.html)` evento. Non è più necessario chiamare qualsiasi altro metodo per ignorare il comportamento del pulsante indietro.
 
 ## Piattaforme supportate
 

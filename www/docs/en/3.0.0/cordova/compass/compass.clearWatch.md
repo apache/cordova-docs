@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.clearWatch
 ---
 
 compass.clearWatch
@@ -25,7 +27,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: The ID returned by `compass.watchHeading`.
+- __watchID__: The ID returned by `[compass.watchHeading](compass.watchHeading.html)`.
 
 Supported Platforms
 -------------------
@@ -37,7 +39,7 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
@@ -46,7 +48,7 @@ Quick Example
 
     navigator.compass.clearWatch(watchID);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

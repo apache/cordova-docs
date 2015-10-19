@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Actualizar BlackBerry
 ---
 
 # Actualizar BlackBerry
@@ -46,7 +48,7 @@ BlackBerry 10:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en [iOS herramientas de línea de comandos](../ios/tools.html). Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 
@@ -84,7 +86,7 @@ BlackBerryOS/Playbook:
 
 3.  Desplácese hasta el directorio donde pusiste la fuente descargada anteriormente, utilizando un unix como terminal: Terminal.app Cygwin, Bash, etc..
 
-4.  Crear un nuevo proyecto, como se describe en iOS herramientas de línea de comandos. Necesitas los activos de este nuevo proyecto.
+4.  Crear un nuevo proyecto, como se describe en [iOS herramientas de línea de comandos](../ios/tools.html). Necesitas los activos de este nuevo proyecto.
 
 5.  Copia el `www/cordova.js` archivo del nuevo proyecto en tu `www` Directorio y eliminar su `www/cordova.js` archivo.
 

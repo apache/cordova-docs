@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 連絡人
 ---
 
 # 連絡人
@@ -56,13 +58,13 @@ license: >
 
 *   **克隆**： 返回一個新的 `Contact` 物件就是調用物件的深層副本 `id` 屬性設置為`null`.
 
-*   **刪除**： 從設備的連絡人資料庫中刪除連絡人，否則執行錯誤回檔與 `ContactError` 物件。
+*   **刪除**： 從設備的連絡人資料庫中刪除連絡人，否則執行錯誤回檔與 `[ContactError](../ContactError/contactError.html)` 物件。
 
 *   **保存**： 將一個新的連絡人保存到設備的連絡人資料庫中，或更新現有的連絡人 （如果已存在具有相同**id**的連絡人。
 
 ## 詳細資訊
 
-`Contact`物件表示使用者的連絡人。 可以創建、 存儲，或從設備的連絡人資料庫中刪除的連絡人。 連絡人可以還 (單獨或批量） 從資料庫中檢索通過調用 `contacts.find` 方法。
+`Contact`物件表示使用者的連絡人。 可以創建、 存儲，或從設備的連絡人資料庫中刪除的連絡人。 連絡人可以還 (單獨或批量） 從資料庫中檢索通過調用 `[contacts.find](../contacts.find.html)` 方法。
 
 **注：**不是所有的上面列出的連絡人欄位平臺支援的每個設備。請檢查每個平臺*的怪癖*節瞭解詳細資訊。
 

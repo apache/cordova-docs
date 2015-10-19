@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -29,7 +31,7 @@ Retourne un tableau des noms des mois ou jours de la semaine, selon le calendrie
 
 Retourne le tableau de noms à la `successCallback` avec un `properties` objet comme paramètre. Cet objet contient une `value` propriété avec un `Array` de `String` valeurs. Les noms de fonctionnalités de tableau à partir de soit le premier mois de l'année ou le premier jour de la semaine, selon l'option choisie.
 
-S'il y a une erreur d'obtention des noms, puis les `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+S'il y a une erreur d'obtention des noms, puis les `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
 

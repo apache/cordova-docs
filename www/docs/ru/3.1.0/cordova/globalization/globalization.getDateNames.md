@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -29,7 +31,7 @@ license: >
 
 Возвращает массив имен для `successCallback` с `properties` объект в качестве параметра. Этот объект содержит `value` свойство с `Array` из `String` значения. Имена функций массива, начиная с либо в первый месяц, в год или в первый день недели, в зависимости от выбранного варианта.
 
-Если есть ошибка получения имена, а затем `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.UNKNOWN\_ERROR`.
+Если есть ошибка получения имена, а затем `errorCallback` выполняет с `[GlobalizationError](GlobalizationError/globalizationerror.html)` объект в качестве параметра. Ожидаемый код ошибки`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 `options`Параметр является необязательным, и его значения по умолчанию являются:
 

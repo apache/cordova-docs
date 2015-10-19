@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Spécification des plugins
 ---
 
 # Spécification des plugins
@@ -500,7 +502,7 @@ Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque 
 
 ## *hook* Élément
 
-Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir Guide de crochets pour plus d'informations.
+Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir [Guide de crochets](../guide/appdev/hooks/index.html) pour plus d'informations.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />
     

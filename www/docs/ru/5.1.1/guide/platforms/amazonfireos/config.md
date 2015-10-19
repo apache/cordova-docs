@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Настройка Amazon Fire OS
 ---
 
 # Настройка Amazon Fire OS
@@ -24,7 +26,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning` (логическое значение, по умолчанию `true` ): определяет, остается ли приложение работает в фоновом режиме после вызова события `pause`. Установка значения в `false` не завершает приложение после события `pause`, но просто останавливает выполнение кода в Cordova WebView в то время пока приложение находится в фоновом режиме.
+*   `KeepRunning` (логическое значение, по умолчанию `true` ): определяет, остается ли приложение работает в фоновом режиме после вызова события `[pause](../../../cordova/events/events.pause.html)`. Установка значения в `false` не завершает приложение после события `[pause](../../../cordova/events/events.pause.html)`, но просто останавливает выполнение кода в Cordova WebView в то время пока приложение находится в фоновом режиме.
     
         <preference name="KeepRunning" value="false"/>
         

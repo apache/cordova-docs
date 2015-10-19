@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading Cordova iOS
 ---
 
 Upgrading Cordova iOS
@@ -41,7 +43,7 @@ Upgrading Cordova iOS
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**注意** 2.2.0 では、 **bin/create** スクリプトが プロジェクトの CordovaLib サブプロジェクト内にコピーされるようになります。同じようなセットアップを保持するためにも、正しい CordovaLib をプロジェクトのフォルダーにコピーして、 CordovaLib サブプロジェクトの位置情報 (プロジェクトに関係) を Xcode File Inspector で更新してください。
+**注意** 2.2.0 では、 **bin/create** スクリプトが プロジェクトの CordovaLib サブプロジェクト内にコピーされるようになります。同じようなセットアップを保持するためにも、正しい CordovaLib をプロジェクトのフォルダーにコピーして、 CordovaLib サブプロジェクトの位置情報 (プロジェクトに関係) を Xcode [File](../../../cordova/file/fileobj/fileobj.html) Inspector で更新してください。
 
 ## 2.0.0 から 2.1.0 へのアップグレード ##
 
@@ -99,12 +101,12 @@ Upgrading Cordova iOS
 20. **libCordova.a** static library を選択し、 **"Add"** ボタンを選択します
 21. **"Ran Script"** phase を削除します
 22. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-23. **"Other Linker Flags"** を探し、 **-all_load** と **-Obj-C** を値に追加します
+23. **"Other Linker [Flags](../../../cordova/file/flags/flags.html)"** を探し、 **-all_load** と **-Obj-C** を値に追加します
 24. **"CordovaLib" sub-project** を展開します
 25. **"VERSION"** ファイルを見つけ、メインプロジェクトにドラッグします (ここではコピーではなくリンクを作成します)
 26. **"Create groups for any added folders"** ラジオボタンを選択し、 **"Finish"** ボタンを選択します
 27. 前のステップでドラッグした **"VERSION"** ファイルを選択します
-28. **File Inspector** を開くため、 **Option-Command-1** キーを押します (または、メニューから **View -> Utilities -> Show File Inspector**)
+28. **File Inspector** を開くため、 **Option-Command-1** キーを押します (または、メニューから **View -> Utilities -> Show [File](../../../cordova/file/fileobj/fileobj.html) Inspector**)
 29. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
 30. プロジェクトを **ビルド** します。 **問題なく** コンパイルされるはずです
 31. **Scheme** ドロップダウンから **プロジェクトを選択** し、 **"iPhone 5.1 Simulator"** を選択します

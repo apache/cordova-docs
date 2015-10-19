@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeading
 ---
 
 # compass.watchHeading
@@ -29,9 +31,9 @@ license: >
 
 コンパスは方向またはデバイスが指摘されている見出しを検出するセンサーです。359.99 に 0 からの角度で見出しを測定します。
 
-`compass.watchHeading`デバイスの定期的な間隔で現在の方位を取得します。 見出しを取り出すたびに、 `headingSuccess` コールバック関数が実行されます。 経由でミリ秒単位で間隔を指定する、 `frequency` パラメーターで、 `compassOptions` オブジェクト。
+`compass.watchHeading`デバイスの定期的な間隔で現在の方位を取得します。 見出しを取り出すたびに、 `headingSuccess` コールバック関数が実行されます。 経由でミリ秒単位で間隔を指定する、 `frequency` パラメーターで、 `[compassOptions](parameters/compassOptions.html)` オブジェクト。
 
-返される時計 ID コンパス時計腕時計間隔を参照します。ID を使用することができます時計 `compass.clearWatch` コンパスを見て停止します。
+返される時計 ID コンパス時計腕時計間隔を参照します。ID を使用することができます時計 `[compass.clearWatch](compass.clearWatch.html)` コンパスを見て停止します。
 
 ## サポートされているプラットフォーム
 
@@ -127,6 +129,6 @@ license: >
 
 ## iOS の癖
 
-IOS の `compass.watchHeading` 度の指定数で変更されたときにも、デバイスの現在の方位を得ることができます。 度以上の指定された数だけ見出し変更されるたびに、 `headingSuccess` コールバック関数を実行します。 経由で変更の程度を指定する、 `filter` パラメーターで、 `compassOptions` オブジェクト。 返される時計 ID を渡すことによっていつものように時計をオフに `compass.clearWatch` 。 この機能を置き換えます以前独立した iOS だけ `watchHeadingFilter` と `clearWatchFilter` バージョン 1.6 で削除された機能です。
+IOS の `compass.watchHeading` 度の指定数で変更されたときにも、デバイスの現在の方位を得ることができます。 度以上の指定された数だけ見出し変更されるたびに、 `headingSuccess` コールバック関数を実行します。 経由で変更の程度を指定する、 `filter` パラメーターで、 `[compassOptions](parameters/compassOptions.html)` オブジェクト。 返される時計 ID を渡すことによっていつものように時計をオフに `[compass.clearWatch](compass.clearWatch.html)` 。 この機能を置き換えます以前独立した iOS だけ `watchHeadingFilter` と `clearWatchFilter` バージョン 1.6 で削除された機能です。
 
 1 つだけ `watchHeading` iOS で一度に有効にすることができます。 場合は、 `watchHeading` 、フィルターを使用して呼び出す `getCurrentHeading` または `watchHeading` 既存のフィルターの値を使用して見出しの変更を指定します。 フィルターを使用して見出しの変更を見て時間間隔よりも効率的です。

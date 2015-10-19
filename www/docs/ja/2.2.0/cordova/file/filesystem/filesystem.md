@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileSystem
 ---
 
 FileSystem
@@ -32,7 +34,7 @@ FileSystem
 詳細
 -------
 
-`FileSystem` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `DirectoryEntry` オブジェクトを保持します。
+`FileSystem` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティーはファイルシステムのルートディレクトリを表す `[DirectoryEntry](../directoryentry/directoryentry.html)` オブジェクトを保持します。
 
 サポートされているプラットフォーム
 -------------------
@@ -42,7 +44,7 @@ FileSystem
 - iOS
 - Windows Phone 7 (Mango)
 
-File System の使用例
+[File](../fileobj/fileobj.html) System の使用例
 -------------------------
 
     function onSuccess(fileSystem) {

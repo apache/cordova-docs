@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactField
 ---
 
 ContactField
 ============
 
-`Contact` オブジェクトで使用される汎用フィールドに用いられます。 `ContactField` オブジェクトとして格納されるデータとしては、メールアドレスや電話番号などが挙げられます。
+`[Contact](../Contact/contact.html)` オブジェクトで使用される汎用フィールドに用いられます。 `ContactField` オブジェクトとして格納されるデータとしては、メールアドレスや電話番号などが挙げられます。
 
 プロパティー
 ----------
@@ -33,9 +35,9 @@ ContactField
 詳細
 -------
 
-`ContactField` オブジェクトは、連絡先の各フィールドを汎用的に格納するためのコンポーネントです。各 `ContactField` オブジェクトは、 value プロパティ、 type プロパティ、 pref プロパティーを持っています。 `Contact` オブジェクトは電話番号やメールアドレスなどといった複数のプロパティーを `ContactField[]` 配列に保存しています。
+`ContactField` オブジェクトは、連絡先の各フィールドを汎用的に格納するためのコンポーネントです。各 `ContactField` オブジェクトは、 value プロパティ、 type プロパティ、 pref プロパティーを持っています。 `[Contact](../Contact/contact.html)` オブジェクトは電話番号やメールアドレスなどといった複数のプロパティーを `ContactField[]` 配列に保存しています。
 
-多くの場合 `ContactField` オブジェクトの __type__ 属性に定義済みの値は存在しません。例えば、電話番号について __type__ 属性の値として 'home', 'work', 'mobile', 'iPhone' など、デバイスのプラットフォームに応じて異なった値が格納されます。ただし `Contact` の __photos__ フィールドに限り、 __type__ 属性には画像フォーマットが格納されます。 Cordova は __value__ 属性が画像への URL を含む場合、 __type: 'url'__ を返します。 __value__ 属性が Base64 形式の画像を含む場合、 __type: 'base64'__ を返します。
+多くの場合 `ContactField` オブジェクトの __type__ 属性に定義済みの値は存在しません。例えば、電話番号について __type__ 属性の値として 'home', 'work', 'mobile', 'iPhone' など、デバイスのプラットフォームに応じて異なった値が格納されます。ただし `[Contact](../Contact/contact.html)` の __photos__ フィールドに限り、 __type__ 属性には画像フォーマットが格納されます。 Cordova は __value__ 属性が画像への URL を含む場合、 __type: 'url'__ を返します。 __value__ 属性が Base64 形式の画像を含む場合、 __type: 'base64'__ を返します。
 
 サポートされているプラットフォーム
 -------------------
@@ -45,7 +47,7 @@ ContactField
 - iOS
 - Bada 1.2
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // 新しい連絡先を作成

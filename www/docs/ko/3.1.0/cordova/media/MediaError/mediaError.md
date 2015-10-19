@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaError
 ---
 
 # MediaError
 
-A `MediaError` 개체에 반환 됩니다는 `mediaError` 콜백 함수 오류가 발생 합니다.
+A `MediaError` 개체에 반환 됩니다는 `[mediaError](../Parameters/mediaError.html)` 콜백 함수 오류가 발생 합니다.
 
 ## 속성
 
@@ -37,4 +39,4 @@ A `MediaError` 개체에 반환 됩니다는 `mediaError` 콜백 함수 오류�
 
 ## 설명
 
-`MediaError`개체에 전달 되는 `mediaError` 콜백 함수를 때 오류가 발생 합니다.
+`MediaError`개체에 전달 되는 `[mediaError](../Parameters/mediaError.html)` 콜백 함수를 때 오류가 발생 합니다.

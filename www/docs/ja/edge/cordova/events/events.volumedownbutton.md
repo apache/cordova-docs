@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumedownbutton
 ---
 
 # volumedownbutton
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細
 
-イベント リスナーを登録することができます既定ボリューム ダウン時の動作をオーバーライドする必要がある場合、 `volumedownbutton` イベント。
+[イベント](events.html) リスナーを登録することができます既定ボリューム ダウン時の動作をオーバーライドする必要がある場合、 `volumedownbutton` イベント。
 
-通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `deviceready` イベントが発生します。
+通常アプリケーションに使用する必要があります `document.addEventListener` 一度のイベント リスナーをアタッチし、 `[deviceready](events.deviceready.html)` イベントが発生します。
 
 ## サポートされているプラットフォーム
 

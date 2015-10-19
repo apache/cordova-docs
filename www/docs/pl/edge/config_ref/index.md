@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plik config.xml
 ---
 
 # Plik config.xml
@@ -40,9 +42,9 @@ Podczas tworzenia projektu za pomocą CLI, wersje tego pliku biernie są kopiowa
 
 Ta sekcja zawiera opcje konfiguracji globalnej i przekreślać platforma szczegóły. Zobacz następujące sekcje dla poszczególnych platform opcje:
 
-*   Konfiguracja iOS
-*   Konfiguracja dla platformy Android
-*   Konfiguracja blackBerry 10
+*   [Konfiguracja iOS](../guide/platforms/ios/config.html)
+*   [Konfiguracja dla platformy Android](../guide/platforms/android/config.html)
+*   [Konfiguracja blackBerry 10](../guide/platforms/blackberry10/config.html)
 
 Oprócz różnych konfiguracji opcji poniżej można również skonfigurować zestaw podstawowych aplikacji obrazów dla każdej platformy docelowej. Aby uzyskać więcej informacji, zobacz ikony i ekrany powitalne w aplikacjach.
 

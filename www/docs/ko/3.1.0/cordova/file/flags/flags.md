@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 플래그
 ---
 
 # 플래그
 
-인수를 제공에 `DirectoryEntry` 개체의 `getFile()` 및 `getDirectory()` 를 조회 또는 파일 및 디렉터리를 각각 만드는 방법.
+인수를 제공에 `[DirectoryEntry](../directoryentry/directoryentry.html)` 개체의 `getFile()` 및 `getDirectory()` 를 조회 또는 [파일](../fileobj/fileobj.html) 및 디렉터리를 각각 만드는 방법.
 
 ## 속성
 
 *   **만들기**: 그 파일이 나 디렉토리 생성 해야 이미 존재 하지 않는 경우를 나타냅니다. *(부울)*
 
-*   **독점**:는 자체적으로 하지만 함께 사용 하면 효과가 없습니다 `create` 파일 또는 디렉터리 만들기 대상 경로가 이미 존재 하는 경우 실패의 원인. *(부울)*
+*   **독점**:는 자체적으로 하지만 함께 사용 하면 효과가 없습니다 `create` [파일](../fileobj/fileobj.html) 또는 디렉터리 만들기 대상 경로가 이미 존재 하는 경우 실패의 원인. *(부울)*
 
 ## 지원 되는 플랫폼
 

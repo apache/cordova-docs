@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de la plataforma BlackBerry
 ---
 
 # Guía de la plataforma BlackBerry
 
 Esta guía le muestra cómo configurar un entorno de SDK para aplicaciones para la plataforma BlackBerry antes de la versión 10. Si quieres apuntar a la versión más reciente, consulte a la guía de plataforma BlackBerry 10. Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Configuración de blackBerry
-*   Actualizar BlackBerry
+*   [Configuración de blackBerry](../blackberry10/config.html)
+*   [Actualizar BlackBerry](../blackberry10/upgrading.html)
 *   Plugins de blackBerry
 *   Herramientas de línea de comandos de blackBerry
 

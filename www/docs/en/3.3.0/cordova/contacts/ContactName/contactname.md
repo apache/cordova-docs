@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactName
 ---
 
 # ContactName
 
-Contains different kinds of information about a `Contact` object's name.
+Contains different kinds of information about a `[Contact](../Contact/contact.html)` object's name.
 
 ## Properties
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8-Befehlszeilentools
 ---
 
 # Windows 8-Befehlszeilentools
@@ -24,7 +26,7 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
-Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine [Übersicht](../../overview/index.html) finden Sie unter Application Plugins.
 
 ## Windows 8
 

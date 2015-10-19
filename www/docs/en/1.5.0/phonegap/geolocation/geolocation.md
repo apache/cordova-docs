@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Geolocation
 ---
 
 Geolocation
@@ -30,21 +32,21 @@ This API is based on the [W3C Geo location API Specification](http://dev.w3.org/
 Methods
 -------
 
-- geolocation.getCurrentPosition
-- geolocation.watchPosition
-- geolocation.clearWatch
+- [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+- [geolocation.watchPosition](geolocation.watchPosition.html)
+- [geolocation.clearWatch](geolocation.clearWatch.html)
 
 
 Arguments
 ---------
 
-- geolocationSuccess
-- geolocationError
-- geolocationOptions
+- [geolocationSuccess](parameters/geolocationSuccess.html)
+- [geolocationError](parameters/geolocationError.html)
+- [geolocationOptions](parameters/geolocation.options.html)
 
 Objects (Read-Only)
 -------------------
 
-- Position
-- PositionError
-- Coordinates
+- [Position](Position/position.html)
+- [PositionError](PositionError/positionError.html)
+- [Coordinates](Coordinates/coordinates.html)

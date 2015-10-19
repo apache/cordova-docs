@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.uuid
 ---
 
 # device.uuid
@@ -29,7 +31,7 @@ license: >
 
 ## 설명
 
-UUID 생성 방법의 자세한 내용은 장치 제조업체에 의해 결정 됩니다 및 소자의 플랫폼 이나 모델.
+UUID 생성 방법의 자세한 내용은 [장치](device.html) 제조업체에 의해 결정 됩니다 및 소자의 플랫폼 이나 모델.
 
 ## 지원 되는 플랫폼
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 # camera.cleanup
@@ -27,7 +29,7 @@ license: >
 
 ## 説明
 
-削除を呼び出した後に一時記憶域に保存されている画像ファイルを中間 `camera.getPicture` 。 場合にのみ適用されるの値 `Camera.sourceType` に等しい `Camera.PictureSourceType.CAMERA` と、 `Camera.destinationType` に等しい`Camera.DestinationType.FILE_URI`.
+削除を呼び出した後に一時記憶域に保存されている画像ファイルを中間 `[camera.getPicture](camera.getPicture.html)` 。 場合にのみ適用されるの値 `Camera.sourceType` に等しい `Camera.PictureSourceType.CAMERA` と、 `Camera.destinationType` に等しい`Camera.DestinationType.FILE_URI`.
 
 ## サポートされているプラットフォーム
 

@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings for Windows Phone 8
 ---
 
-Project Settings for Windows Phone 8
+[Project Settings](../index.html) for Windows Phone 8
 ===================================
 
 Windows Phone 8 does not currently have any additional configurable features.

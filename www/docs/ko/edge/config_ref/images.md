@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 아이콘 및 시작 화면
 ---
 
 # 아이콘 및 시작 화면
@@ -197,7 +199,7 @@ Windows8
 
 # 지원 되는 플랫폼
 
-지금 현재 (코르도바 3.5.0 7 월 2014) 다음 플랫폼 지원 시작 화면.
+지금 현재 (코르도바 3.5.0 7 월 2014) 다음 [플랫폼 지원](../guide/support/index.html) 시작 화면.
 
     android
     ios

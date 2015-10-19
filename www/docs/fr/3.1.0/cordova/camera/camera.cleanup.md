@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 # camera.cleanup
@@ -27,7 +29,7 @@ Supprime les photos intermédiaires prises par la caméra sur le support de stoc
 
 ## Description
 
-Supprime les fichiers d'image intermédiaire qui sont conservés dans le support de stockage temporaire après l'appel à `camera.getPicture`. S'applique uniquement lorsque la valeur de `Camera.sourceType` est égale à `Camera.PictureSourceType.CAMERA` et `Camera.destinationType` est égale à `Camera.DestinationType.FILE_URI`.
+Supprime les fichiers d'image intermédiaire qui sont conservés dans le support de stockage temporaire après l'appel à `[camera.getPicture](camera.getPicture.html)`. S'applique uniquement lorsque la valeur de `Camera.sourceType` est égale à `Camera.PictureSourceType.CAMERA` et `Camera.destinationType` est égale à `Camera.DestinationType.FILE_URI`.
 
 ## Plates-formes prises en charge
 

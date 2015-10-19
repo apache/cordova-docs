@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon ogień platformy OS Przewodnik
 ---
 
 # Amazon ogień platformy OS Przewodnik
@@ -24,9 +26,9 @@ Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova apli
 
 Zobacz następujące szczegółowe informacje specyficzne dla platformy:
 
-*   Amazon ogień OS konfiguracja
-*   Amazon ogień OS WebViews
-*   Amazon ogień OS Plugins
+*   [Amazon ogień OS konfiguracja](config.html)
+*   [Amazon ogień OS WebViews](webview.html)
+*   [Amazon ogień OS Plugins](plugin.html)
 
 ## Wprowadzenie
 
@@ -41,7 +43,7 @@ Aby uzyskać więcej informacji o interfejsie API WebView Amazon zapoznaj się z
 
 Rozwój Cordova aplikacje dla Amazon ognia systemu operacyjnego wymaga instalacji różne pliki obsługi, w tym wszystko, co potrzebne do rozwoju Android, jak również Amazon WebView SDK. Sprawdź na liście poniżej wymaganej instaluje:
 
-*   Interfejs wiersza poleceń
+*   [Interfejs wiersza poleceń](../../cli/index.html)
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]

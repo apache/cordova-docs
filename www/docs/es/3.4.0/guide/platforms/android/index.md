@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de la plataforma Android
 ---
 
 # Guía de la plataforma Android
@@ -24,11 +26,11 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Actualizar Android
-*   Android Herramientas de línea de comandos
+*   [Configuración de Android](config.html)
+*   [Android WebViews](webview.html)
+*   [Android Plugins](plugin.html)
+*   [Actualizar Android](upgrading.html)
+*   [Android Herramientas de línea de comandos](tools.html)
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 

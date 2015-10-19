@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Geolocalizzazione
 ---
 
 # Geolocalizzazione
@@ -32,20 +34,20 @@ Questa API è basata sulla [Specifica di W3C Geolocation API][1]e viene eseguito
 
 ## Metodi
 
-*   geolocation.getCurrentPosition
-*   geolocation.watchPosition
-*   geolocation.clearWatch
+*   [geolocation.getCurrentPosition](geolocation.getCurrentPosition.html)
+*   [geolocation.watchPosition](geolocation.watchPosition.html)
+*   [geolocation.clearWatch](geolocation.clearWatch.html)
 
 ## Argomenti
 
-*   geolocationSuccess
-*   geolocationError
-*   geolocationOptions
+*   [geolocationSuccess](parameters/geolocationSuccess.html)
+*   [geolocationError](parameters/geolocationError.html)
+*   [geolocationOptions](parameters/geolocation.options.html)
 
 ## Oggetti (sola lettura)
 
 *   Position
-*   PositionError
+*   [PositionError](PositionError/positionError.html)
 *   Coordinates
 
 ## La funzionalità di accesso

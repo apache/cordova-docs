@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Device
 ---
 
 # Device
@@ -24,12 +26,12 @@ license: >
 
 ## Properties
 
-- device.model
-- device.cordova
-- device.platform
-- device.uuid
-- device.version
-- device.name
+- [device.model](device.model.html)
+- [device.cordova](device.cordova.html)
+- [device.platform](device.platform.html)
+- [device.uuid](device.uuid.html)
+- [device.version](device.version.html)
+- [device.name](device.name.html)
 
 ## Variable Scope
 
@@ -97,4 +99,4 @@ platform-specific configuration settings described below:
   Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ファイル
 ---
 
 # ファイル
@@ -40,7 +42,7 @@ license: >
 
 ## 詳細
 
-`File`オブジェクトには、単一のファイルの属性が含まれます。インスタンスを取得することができます、 `File` を呼び出すことによってオブジェクトが `FileEntry` オブジェクトの `file()` メソッド。
+`File`オブジェクトには、単一のファイルの属性が含まれます。インスタンスを取得することができます、 `File` を呼び出すことによってオブジェクトが `[FileEntry](../fileentry/fileentry.html)` オブジェクトの `file()` メソッド。
 
 ## サポートされているプラットフォーム
 
@@ -52,7 +54,7 @@ license: >
 
 ## スライス
 
-新しい `File` オブジェクトを `FileReader` ファイルの指定した部分のみを返します。 負の値を `start` または `end` ファイルの最後から測定されます。 インデックスは、現在のスライスを基準にして配置されます。 （下記の完全な例を参照してください)。
+新しい `File` オブジェクトを `[FileReader](../filereader/filereader.html)` ファイルの指定した部分のみを返します。 負の値を `start` または `end` ファイルの最後から測定されます。 インデックスは、現在のスライスを基準にして配置されます。 （下記の完全な例を参照してください)。
 
 **パラメーター:**
 

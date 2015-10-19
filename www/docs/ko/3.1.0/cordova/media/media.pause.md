@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.pause
 ---
 
 # media.pause
 
-오디오 파일 재생을 일시 중지 합니다.
+오디오 [파일](../file/fileobj/fileobj.html) 재생을 [일시 중지](../events/events.pause.html) 합니다.
 
     media.pause();
     
 
 ## 설명
 
-`media.pause`메서드는 동기적으로 실행 되며 오디오 파일 재생을 일시 중지 합니다.
+`media.pause`메서드는 동기적으로 실행 되며 오디오 [파일](../file/fileobj/fileobj.html) 재생을 [일시 중지](../events/events.pause.html) 합니다.
 
 ## 지원 되는 플랫폼
 

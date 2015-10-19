@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 外掛程式
 ---
 
 # Windows Phone 外掛程式
@@ -44,7 +46,7 @@ license: >
                 / / 公共返回 void，1 參數是一個字串}}
         
 
-請參閱可用的外掛程式來重寫方法的[BaseCommand.cs][1]類。 例如，該外掛程式可以捕獲 '暫停' 和 '恢復' 事件。
+請參閱可用的外掛程式來重寫方法的[BaseCommand.cs][1]類。 例如，該外掛程式可以捕獲 '[暫停](../../../cordova/events/events.pause.html)' 和 '恢復' 事件。
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 

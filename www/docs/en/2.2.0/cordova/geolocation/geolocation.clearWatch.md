@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 geolocation.clearWatch
@@ -33,7 +35,7 @@ Parameters
 Description
 -----------
 
-`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+`geolocation.clearWatch` stops watching changes to the device's location by clearing the `[geolocation.watchPosition](geolocation.watchPosition.html)` referenced by `watchID`.
 
 Supported Platforms
 -------------------
@@ -46,7 +48,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Options: watch for changes in position, and use the most
@@ -59,7 +61,7 @@ Quick Example
     navigator.geolocation.clearWatch(watchID);
 
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -103,7 +105,7 @@ Full Example
             }
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a [PositionError](PositionError/positionError.html) object
 	    //
 	    function onError(error) {
 	      alert('code: '    + error.code    + '\n' +

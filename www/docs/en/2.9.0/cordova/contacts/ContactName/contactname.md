@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactName
 ---
 
 ContactName
 ===========
 
-Contains different kinds of information about a `Contact` object's name.
+Contains different kinds of information about a `[Contact](../Contact/contact.html)` object's name.
 
 Properties
 ----------
@@ -47,7 +49,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -70,7 +72,7 @@ Quick Example
     filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

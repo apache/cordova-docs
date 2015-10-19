@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: プラグイン開発ガイド
 ---
 
 # プラグイン開発ガイド
@@ -131,11 +133,11 @@ JavaScript は、プラグインのおそらく最も重要な部分を作る正
 
 あなたのプラグインの java スクリプトの設定を定義した後は、少なくとも 1 つのネイティブ実装を補完する必要があります。 各プラットフォームの詳細は、以下のとおりし、エコー プラグインの簡単な例に基づいてそれぞれ。
 
-*   アマゾン火 OS プラグイン
-*   Android のプラグイン
-*   iOS のプラグイン
-*   ブラックベリー 10 プラグイン
-*   Windows Phone のプラグイン
+*   [アマゾン火 OS プラグイン](../../platforms/amazonfireos/plugin.html)
+*   [Android のプラグイン](../../platforms/android/plugin.html)
+*   [iOS のプラグイン](../../platforms/ios/plugin.html)
+*   [ブラックベリー 10 プラグイン](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone のプラグイン](../../platforms/wp8/plugin.html)
 
 Tizen プラットフォームのプラグインをサポートしていません。
 

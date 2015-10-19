@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getPreferredLanguage
 ---
 
 # globalization.getPreferredLanguage
@@ -29,7 +31,7 @@ Obtener el identificador de cadena en el lenguaje actual del cliente.
 
 Devuelve el identificador de idioma a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe tener una `value` de propiedad con un valor de `String`.
 
-Si hay un error al obtener el idioma, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.UNKNOWN\_ERROR`.
+Si hay un error al obtener el idioma, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Plataformas soportadas
 

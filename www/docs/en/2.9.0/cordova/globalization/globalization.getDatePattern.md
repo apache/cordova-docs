@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDatePattern
 ---
 
 globalization.getDatePattern
@@ -38,8 +40,8 @@ a parameter contains the following properties:
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
 
 If there is an error obtaining the pattern, the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.PATTERN\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following values:
 
@@ -57,7 +59,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this example displays
@@ -71,7 +73,7 @@ a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
         );
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

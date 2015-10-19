@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 外掛程式
 ---
 
 # Windows Phone 外掛程式
@@ -158,7 +160,7 @@ Windows 電話 `<source-file>` 目前使用元素來定義外掛程式的所有�
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-例如，你可以掛接到 '暫停' 和 '恢復' 應用程式事件。
+例如，你可以掛接到 '[暫停](../../../cordova/events/events.pause.html)' 和 '恢復' 應用程式事件。
 
 ### 調試外掛程式
 

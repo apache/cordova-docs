@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileReader
 ---
 
 # FileReader
@@ -58,7 +60,7 @@ license: >
 
 ## 詳細
 
-`FileReader`オブジェクトは、デバイスのファイル システムからファイルを読み取る方法を提供します。 ファイルは、テキストまたは base64 データ エンコード文字列として読むことができます。 イベント リスナーは、受信、 `loadstart` 、 `progress` 、 `load` 、 `loadend` 、 `error` 、および `abort` イベント。
+`FileReader`オブジェクトは、デバイスのファイル システムからファイルを読み取る方法を提供します。 ファイルは、テキストまたは base64 データ エンコード文字列として読むことができます。 [イベント](../../events/events.html) リスナーは、受信、 `loadstart` 、 `progress` 、 `load` 、 `loadend` 、 `error` 、および `abort` イベント。
 
 ## サポートされているプラットフォーム
 
@@ -72,7 +74,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **ファイル**: [ファイル](../fileobj/fileobj.html) オブジェクトを読みます。
 
 ## 簡単な例
 
@@ -96,7 +98,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **ファイル**: [ファイル](../fileobj/fileobj.html) オブジェクトを読みます。
 
 *   **エンコーディング**： ファイルのコンテンツのエンコードに使用するエンコーディングします。既定は UTF8 です。
 
@@ -211,7 +213,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **ファイル**: [ファイル](../fileobj/fileobj.html) オブジェクトを読みます。
 
 ## 簡単な例
 
@@ -237,7 +239,7 @@ license: >
 
 **パラメーター:**
 
-*   **ファイル**: ファイル オブジェクトを読みます。
+*   **ファイル**: [ファイル](../fileobj/fileobj.html) オブジェクトを読みます。
 
 ## 簡単な例
 

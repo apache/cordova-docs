@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone 8 Plugins
 ---
 
 # Windows Phone 8 Plugins
@@ -161,7 +163,7 @@ Plugins mit lang andauernden Anfragen, background Aktivität wie Medienwiedergab
 
 ## Plugin XML
 
-Die folgenden veranschaulicht die `plugin.xml` Datei, um ein Plugin Quellcode Dateien auf der Windows Phone Plattform anzugeben. Details zu den verfügbaren Optionen finden Sie unter Application Plugins für einen Überblick und Plugin-Spezifikation.
+Die folgenden veranschaulicht die `plugin.xml` Datei, um ein Plugin Quellcode Dateien auf der Windows Phone Plattform anzugeben. Details zu den verfügbaren Optionen finden Sie unter Application Plugins für einen Überblick und [Plugin-Spezifikation](../../../plugin_ref/spec.html).
 
 *   Das `<source-file>` -Element definiert alle Plugin-Ressourcen, z. B. *CS*, *XAML*, *. xaml.cs*, und *dll* -Dateien und Bild-Assets.
 

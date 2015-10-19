@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Mise à jour de BlackBerry
 ---
 
 # Mise à jour de BlackBerry
@@ -46,7 +48,7 @@ BlackBerry 10 :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](../ios/tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -84,7 +86,7 @@ BlackBerryOS/Playbook :
 
 3.  Naviguez jusqu'au répertoire où vous avez mis la source téléchargé ci-dessus, à l'aide d'un unix comme terminal : Terminal.app, Cygwin, Bash, etc..
 
-4.  Créez un nouveau projet, comme décrit dans iOS Command-line Tools. Vous avez besoin de l'actif de ce nouveau projet.
+4.  Créez un nouveau projet, comme décrit dans [iOS Command-line Tools](../ios/tools.html). Vous avez besoin de l'actif de ce nouveau projet.
 
 5.  Copie le `www/cordova.js` fichier à partir du nouveau projet dans votre `www` directory et supprimer votre `www/cordova.js` fichier.
 
@@ -333,7 +335,7 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de [Capture](../../../cordova/media/capture/capture.html) et de [Contact](../../../cordova/contacts/Contact/contact.html) de :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
@@ -358,7 +360,7 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
 
 7.  Ouvert le `www/` répertoire et mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
 
-8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de [Capture](../../../cordova/media/capture/capture.html) et de [Contact](../../../cordova/contacts/Contact/contact.html) de :
     
          < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
@@ -385,7 +387,7 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de [Capture](../../../cordova/media/capture/capture.html) et de [Contact](../../../cordova/contacts/Contact/contact.html) de :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
@@ -410,7 +412,7 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
 
 7.  Ouvert le `www/` répertoire et mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
 
-8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+8.  Ouvert le `www/` répertoire et mise à jour le `plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de [Capture](../../../cordova/media/capture/capture.html) et de [Contact](../../../cordova/contacts/Contact/contact.html) de :
     
          < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         

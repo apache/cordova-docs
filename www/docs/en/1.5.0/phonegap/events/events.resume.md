@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: resume
 ---
 
 resume
@@ -30,7 +32,7 @@ Details
 
 PhoneGap consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -39,7 +41,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("resume", onResume, false);
@@ -48,7 +50,7 @@ Quick Example
         // Handle the resume event
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

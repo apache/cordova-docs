@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFile
 ---
 
 MediaFile
@@ -26,11 +28,11 @@ MediaFile
 Properties
 ----------
 
-- __name:__ The name of the file, without path information. (DOMString)
-- __fullPath:__ The full path of the file, including the name. (DOMString)
+- __name:__ The [name](../../storage/parameters/name.html) of the file, without path information. (DOMString)
+- __fullPath:__ The full path of the file, including the [name](../../storage/parameters/name.html). (DOMString)
 - __type:__ The mime type (DOMString)
 - __lastModifiedDate:__ The date and time that the file was last modified. (Date)
-- __size:__ The size of the file, in bytes. (Number)
+- __size:__ The [size](../../storage/parameters/size.html) of the file, in bytes. (Number)
 
 Methods
 -------

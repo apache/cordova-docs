@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: volumedownbutton
 ---
 
 # volumedownbutton
@@ -30,7 +32,7 @@ If you need to override the default volume down behavior you can
 register an event listener for the `volumedownbutton` event.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 

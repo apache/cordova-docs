@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android конфигурации
 ---
 
 # Android конфигурации
 
-`config.xml`Файл управляет app основные параметры, которые применяются через каждое приложение и экземпляр CordovaWebView. Этот раздел описывает настройки, которые применяются только к Android построений. Смотрите информацию в файле config.xml на параметры глобальной конфигурации.
+`config.xml`[Файл](../../../cordova/file/fileobj/fileobj.html) управляет app основные параметры, которые применяются через каждое приложение и экземпляр CordovaWebView. Этот раздел описывает настройки, которые применяются только к Android построений. Смотрите информацию в файле config.xml на параметры глобальной конфигурации.
 
 *   `KeepRunning`(логическое значение, по умолчанию `true` ): определяет, является ли приложение остается работает в фоновом режиме даже после `pause` пожаров события.
     

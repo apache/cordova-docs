@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: pulsante menu
 ---
 
 # pulsante menu
@@ -29,7 +31,7 @@ L'evento viene generato quando l'utente preme il tasto menu.
 
 Applicando un gestore eventi esegue l'override il comportamento del pulsante di menu predefinito.
 
-Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `deviceready` evento incendi.
+Applicazioni in genere è necessario utilizzare `document.addEventListener` per fissare un listener di eventi una volta il `[deviceready](events.deviceready.html)` evento incendi.
 
 ## Piattaforme supportate
 

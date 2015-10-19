@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Nadgradnja Windows Phone
 ---
 
 # Nadgradnja Windows Phone
@@ -77,7 +79,7 @@ V Solution Explorerju okno Visual Studio:
 
 5.  Zgradite in preizkusite.
 
-**Opomba**: vse jedro API odstranijo iz Cordova različico 3,0, in mora biti nameščen ločeno kot plugins. Če želite več informacij o tem, kako ponovno omogočili te funkcije v non-CLI potek dela, glejte Uporaba Plugman za upravljanje Plugins.
+**Opomba**: vse jedro API odstranijo iz Cordova različico 3,0, in mora biti nameščen ločeno kot plugins. Če želite več informacij o tem, kako ponovno omogočili te funkcije v non-CLI potek dela, glejte [Uporaba Plugman za upravljanje Plugins](../../../plugin_ref/plugman.html).
 
 ## Vzpenjajoč se v 2.9.0 iz 2.8.0
 

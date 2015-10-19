@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 파이어 폭스 OS 플랫폼 가이드
 ---
 
 # 파이어 폭스 OS 플랫폼 가이드

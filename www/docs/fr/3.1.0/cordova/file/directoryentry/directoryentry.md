@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryEntry
 ---
 
 # DirectoryEntry
@@ -56,7 +58,7 @@ Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 
 *   **getParent**: cherche le répertoire parent.
 
-*   **createReader**: crée un nouveau `DirectoryReader` qui peut lire les entrées d'un répertoire.
+*   **createReader**: crée un nouveau `[DirectoryReader](../directoryreader/directoryreader.html)` qui peut lire les entrées d'un répertoire.
 
 *   **getDirectory**: crée ou recherche un répertoire.
 
@@ -78,9 +80,9 @@ Rechercher des métadonnées relatives à un répertoire.
 
 **Paramètres :**
 
-*   **successCallback**: une fonction de callback pour exécuter avec un objet `Metadata`. *(Fonction)*
+*   **successCallback**: une fonction de callback pour exécuter avec un objet `[Metadata](../metadata/metadata.html)`. *(Fonction)*
 
-*   **errorCallback**: une fonction de callback à exécuter si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un objet `FileError`. *(Fonction)*
+*   **errorCallback**: une fonction de callback à exécuter si une erreur se produit lors de la récupération du `[Metadata](../metadata/metadata.html)` . Appelée avec un objet `[FileError](../fileerror/fileerror.html)`. *(Fonction)*
 
 **Petit exemple**
 
@@ -177,7 +179,7 @@ Déplacer un répertoire sur le dessus un répertoire vide existant tente de sup
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec le `DirectoryEntry` objet pour le nouveau répertoire. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le répertoire. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -218,7 +220,7 @@ Répertoire des copies sont toujours récursifs et copiez tout le contenu du ré
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec le `DirectoryEntry` objet pour le nouveau répertoire. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier l'annuaire sous-jacent. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier l'annuaire sous-jacent. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -264,7 +266,7 @@ Supprime un répertoire. Une erreur se produit si l'application tente de :
 
 *   **successCallback**: une fonction de rappel qui s'exécute après que le répertoire est supprimé. Appelé sans paramètre. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le répertoire. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -283,7 +285,7 @@ Rechercher le parent `DirectoryEntry` contenant le répertoire.
 
 *   **successCallback**: un rappel passé parent du répertoire `DirectoryEntry` . *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `DirectoryEntry` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `DirectoryEntry` . Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -301,7 +303,7 @@ Rechercher le parent `DirectoryEntry` contenant le répertoire.
 
 ## createReader
 
-Crée une nouvelle DirectoryReader pour lire le contenu d'un répertoire.
+Crée une nouvelle [DirectoryReader](../directoryreader/directoryreader.html) pour lire le contenu d'un répertoire.
 
 **Petit exemple**
 
@@ -323,7 +325,7 @@ Crée ou lève les yeux un répertoire existant. Une erreur se produit si l'appl
 
 *   **successCallback**: une fonction de rappel qui s'exécute avec un `DirectoryEntry` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le répertoire. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le répertoire. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -346,9 +348,9 @@ Crée ou lève les yeux un fichier. Une erreur se produit si l'application tente
 
 *   **options**: Options pour spécifier si le fichier est créé s'il n'existe pas. *(Drapeaux)*
 
-*   **successCallback**: un rappel passé un `FileEntry` objet. *(Fonction)*
+*   **successCallback**: un rappel passé un `[FileEntry](../fileentry/fileentry.html)` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le fichier. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez ou en levant le fichier. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -369,7 +371,7 @@ Supprime un répertoire et tout son contenu. En cas d'erreur (par exemple en ess
 
 *   **successCallback**: un rappel qui s'exécute après le `DirectoryEntry` a été supprimé. Appelé sans paramètre. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le `DirectoryEntry` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le `DirectoryEntry` . Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 

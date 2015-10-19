@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFile.getFormatData
 ---
 
 # MediaFile.getFormatData
@@ -31,7 +33,7 @@ license: >
 
 This function asynchronously attempts to retrieve the format
 information for the media file.  If successful, it invokes the
-`MediaFileDataSuccessCB` callback with a `MediaFileData` object.  If
+`MediaFileDataSuccessCB` callback with a `[MediaFileData](MediaFileData.html)` object.  If
 the attempt fails, this function invokes the `MediaFileDataErrorCB`
 callback.
 
@@ -47,19 +49,19 @@ callback.
 ## Amazon Fire OS Quirks
 
 The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+`[MediaFileData](MediaFileData.html)` properties are supported.
 
 ## BlackBerry 10 Quirks
 
 Does not provide an API for information about media files, so all
-`MediaFileData` objects return with default values.
+`[MediaFileData](MediaFileData.html)` objects return with default values.
 
 ## Android Quirks
 
 The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+`[MediaFileData](MediaFileData.html)` properties are supported.
 
 ## iOS Quirks
 
 The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+`[MediaFileData](MediaFileData.html)` properties are supported.

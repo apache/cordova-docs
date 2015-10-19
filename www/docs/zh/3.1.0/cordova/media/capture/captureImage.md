@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: capture.captureImage
 ---
 
 # capture.captureImage
@@ -31,9 +33,9 @@ license: >
 
 開始非同步作業以捕獲圖像使用該設備的攝像頭應用程式。該操作允許使用者在一個會話中捕獲多個圖像。
 
-在捕獲操作結束或者當使用者關閉攝像頭應用程式或由指定的錄音的最大數目 `CaptureAudioOptions.limit` 到達。 如果沒有 `limit` 指定的值，它將預設為一 (1) 和捕獲操作終止後使用者捕獲單個圖像。
+在捕獲操作結束或者當使用者關閉攝像頭應用程式或由指定的錄音的最大數目 `[CaptureAudioOptions](captureAudioOptions.html).limit` 到達。 如果沒有 `limit` 指定的值，它將預設為一 (1) 和捕獲操作終止後使用者捕獲單個圖像。
 
-在捕獲操作完成後，它將調用 `CaptureCB` 回檔與陣列的 `MediaFile` 物件描述每個捕獲的影像檔。 如果使用者終止之前捕獲圖像，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
+在捕獲操作完成後，它將調用 `[CaptureCB](CaptureCB.html)` 回檔與陣列的 `MediaFile` 物件描述每個捕獲的影像檔。 如果使用者終止之前捕獲圖像，操作 `[CaptureErrorCB](CaptureErrorCB.html)` 回檔執行與 `[CaptureError](CaptureError.html)` 物件特色 `[CaptureError](CaptureError.html).CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
 ## 支援的平臺
 

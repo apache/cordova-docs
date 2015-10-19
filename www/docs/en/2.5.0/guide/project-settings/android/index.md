@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings for Android
 ---
 
-Project Settings for Android
+[Project Settings](../index.html) for Android
 ===================================
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CordovaWebView Instance.

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryEntry
 ---
 
 DirectoryEntry
@@ -47,7 +49,7 @@ DirectoryEntry
 - __toURL__: ディレクトリの位置特定に使用できる URL を返します
 - __remove__: ディレクトリを削除します。ディレクトリは空である必要があります
 - __getParent__: 親ディレクトリを取得します
-- __createReader__: ディレクトリからエントリを読み込みできる DirectoryReader を作成します
+- __createReader__: ディレクトリからエントリを読み込みできる [DirectoryReader](../directoryreader/directoryreader.html) を作成します
 - __getDirectory__: ディレクトリを取得または作成します
 - __getFile__: ファイルを取得または作成します
 - __removeRecursively__: ディレクトリと、その中身をすべて削除します
@@ -68,8 +70,8 @@ getMetadata
 
 __パラメーター:__
 
-- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [Metadata](../metadata/metadata.html) オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -93,9 +95,9 @@ setMetadata
 
 __パラメーター:__
 
-- __successCallback__ - Metadata が正常にセットされたときに呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - Metadata のセット時にエラーが起きた場合に呼び出されるコールバック関数を表します _(Function)_
-- __metadataObject__ - Metadata のキーと値が格納されているオブジェクトを表します _(Object)_
+- __successCallback__ - [Metadata](../metadata/metadata.html) が正常にセットされたときに呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - [Metadata](../metadata/metadata.html) のセット時にエラーが起きた場合に呼び出されるコールバック関数を表します _(Function)_
+- __metadataObject__ - [Metadata](../metadata/metadata.html) のキーと値が格納されているオブジェクトを表します _(Object)_
 
 
 __使用例__
@@ -131,7 +133,7 @@ __パラメーター:__
 - __parent__ - ディレクトリの移動先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -169,7 +171,7 @@ __パラメーター:__
 - __parent__ - ディレクトリのコピー先の親ディレクトリを表します _(DirectoryEntry)_
 - __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
 - __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 
 __使用例__
@@ -216,7 +218,7 @@ remove
 __パラメーター:__
 
 - __successCallback__ - ディレクトリが削除されたときに呼び出されるコールバック関数を表します。パラメーターなしで呼び出されます _(Function)_
-- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -240,7 +242,7 @@ getParent
 __パラメーター:__
 
 - __successCallback__ - ディレクトリの親 DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -259,7 +261,7 @@ __使用例__
 createReader
 ------------
 
-ディレクトリのエントリを読み込みするための DirectoryReader を作成します。
+ディレクトリのエントリを読み込みするための [DirectoryReader](../directoryreader/directoryreader.html) を作成します。
 
 __使用例__
 
@@ -279,7 +281,7 @@ __パラメーター:__
 - __path__ - 取得または作成したいディレクトリまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
 - __options__ - もしディレクトリが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
 - __successCallback__ - DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ディレクトリの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -306,8 +308,8 @@ __パラメーター:__
 
 - __path__ - 取得または作成したいファイルまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
 - __options__ - もしファイルが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
-- __successCallback__ - FileEntry を伴って呼び出されるコールバック関数を表します _(Function)_
-- __errorCallback__ - ファイルの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __successCallback__ - [FileEntry](../fileentry/fileentry.html) を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ファイルの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 
@@ -335,7 +337,7 @@ removeRecursively
 __パラメーター:__
 
 - __successCallback__ - DirectoryEntry が削除されたときに呼び出されるコールバック関数を表します。 パラメーターなしで呼び出されます _(Function)_
-- __errorCallback__ - DirectoryEntry の削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __errorCallback__ - DirectoryEntry の削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 [FileError](../fileerror/fileerror.html) オブジェクトを伴って呼び出されます _(Function)_
 
 __使用例__
 

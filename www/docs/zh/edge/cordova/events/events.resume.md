@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: resume
 ---
 
 # resume
@@ -29,7 +31,7 @@ license: >
 
 `resume`事件觸發時的本機平臺拔出從背景的應用程式。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 
@@ -85,7 +87,7 @@ license: >
 
 ## iOS 的怪癖
 
-從調用任何互動式函數 `pause` 事件處理常式以後執行應用程式恢復時，由發出信號 `resume` 事件。 這些包括警報， `console.log()` ，和任何調用從外掛程式或 API，科爾多瓦，穿過目標 C.
+從調用任何互動式函數 `[pause](events.pause.html)` 事件處理常式以後執行應用程式恢復時，由發出信號 `resume` 事件。 這些包括警報， `console.log()` ，和任何調用從外掛程式或 API，科爾多瓦，穿過目標 C.
 
 *   **活動**事件
     

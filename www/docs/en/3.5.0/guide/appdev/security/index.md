@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Security Guide
 ---
 
 # Security Guide
@@ -33,7 +35,7 @@ The following guide includes some security best practices that you should consid
 
 ## Whitelist
 
-* Read and understand the Whitelist Guide
+* Read and understand the [Whitelist Guide](../whitelist/index.html)
 
 * By default, the Whitelist on a newly created app will allow access to every domain through the `<access>` tag: 
      `<access origin="*">`

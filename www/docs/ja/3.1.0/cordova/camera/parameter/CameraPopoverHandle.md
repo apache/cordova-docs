@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-によって作成されたポップオーバーパン ダイアログへのハンドル`camera.getPicture`.
+によって作成されたポップオーバーパン ダイアログへのハンドル`[camera.getPicture](../camera.getPicture.html)`.
 
 ## メソッド
 
@@ -36,7 +38,7 @@ license: >
 
 **パラメーター:**
 
-*   `cameraPopoverOptions`:、 `CameraPopoverOptions` の新しい位置を指定します。
+*   `cameraPopoverOptions`:、 `[CameraPopoverOptions](CameraPopoverOptions.html)` の新しい位置を指定します。
 
 ## 簡単な例
 

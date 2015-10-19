@@ -16,20 +16,22 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 오프 라인
 ---
 
 # 오프 라인
 
-이벤트가 발생 하면 응용 프로그램 오프 라인, 이동 및 장치가 인터넷에 연결 되어 있지.
+이벤트가 발생 하면 응용 프로그램 오프 라인, 이동 및 장치가 인터넷에 [연결](../connection/connection.html) 되어 있지.
 
     document.addEventListener("offline", yourCallbackFunction, false);
     
 
 ## 세부 정보
 
-`offline`이벤트가 발생 하면 응용 프로그램이 더 이상 인터넷에 액세스할 수 있도록 이전 연결 된 장치가 네트워크 연결 손실. 그것은 연결 API와 동일한 정보에 의존 하 고 경우에 `connection.type` 에서 변경 `NONE` 다른 값으로.
+`offline`이벤트가 발생 하면 응용 프로그램이 더 이상 인터넷에 액세스할 수 있도록 이전 [연결](../connection/connection.html) 된 장치가 네트워크 [연결](../connection/connection.html) 손실. 그것은 [연결](../connection/connection.html) API와 동일한 정보에 의존 하 고 경우에 `[connection.type](../connection/connection.type.html)` 에서 변경 `NONE` 다른 값으로.
 
-일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 이벤트 리스너를 연결 하는 `deviceready` 이벤트가 발생 합니다.
+일반적으로 응용 프로그램을 사용 해야 합니다 `document.addEventListener` 한번 [이벤트](events.html) 리스너를 [연결](../connection/connection.html) 하는 `[deviceready](events.deviceready.html)` 이벤트가 발생 합니다.
 
 ## 지원 되는 플랫폼
 
@@ -85,7 +87,7 @@ license: >
 
 ## iOS 단점
 
-처음 시작 하는 동안 첫 번째 오프 라인 이벤트 (있는 경우)를 적어도 초를 걸립니다.
+처음 시작 하는 동안 첫 번째 오프 라인 [이벤트](events.html) (있는 경우)를 적어도 초를 걸립니다.
 
 ## Windows Phone 7 단점
 
@@ -93,4 +95,4 @@ license: >
 
 ## Windows Phone 8 단점
 
-에뮬레이터도 연결 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트 않습니다 *하지* 불.
+에뮬레이터도 [연결](../connection/connection.html) 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 [이벤트](events.html) 않습니다 *하지* 불.

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Medienfehler
 ---
 
 # Medienfehler
@@ -29,4 +31,4 @@ Ein benutzerdefinierter Rückruffunktion, die ausgeführt wird, wenn ein Fehler,
 
 ## Parameter
 
-*   **Fehler**: der Fehler, die durch das Gerät zurückgegeben. *(Medienfehler)*
+*   **Fehler**: der Fehler, die durch das [Gerät](../../device/device.html) zurückgegeben. *(Medienfehler)*

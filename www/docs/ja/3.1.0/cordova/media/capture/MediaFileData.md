@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFileData
 ---
 
 # MediaFileData
 
-> メディア ファイルの形式情報をカプセル化します。
+> [メディア](../media.html) ファイルの形式情報をカプセル化します。
 
 ## プロパティ
 
@@ -36,7 +38,7 @@ license: >
 
 ## ブラックベリー WebWorks 癖
 
-メディア ファイルの形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `MediaFile.getFormatData` 機能次の既定値。
+[メディア](../media.html) ファイルの形式情報を提供する API がしないので、 `MediaFileData` によって返されるオブジェクト `[MediaFile.getFormatData](MediaFile.getFormatData.html)` 機能次の既定値。
 
 *   **コーデック**： いないサポートしを返します`null`.
 

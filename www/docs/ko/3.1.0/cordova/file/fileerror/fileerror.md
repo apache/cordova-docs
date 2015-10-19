@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileError
 ---
 
 # FileError
 
-A `FileError` 파일 API 메서드 중 하나에 오류가 발생 하면 개체를 설정 합니다.
+A `FileError` [파일](../fileobj/fileobj.html) API 메서드 중 하나에 오류가 발생 하면 개체를 설정 합니다.
 
 ## 속성
 
@@ -43,4 +45,4 @@ A `FileError` 파일 API 메서드 중 하나에 오류가 발생 하면 개체�
 
 ## 설명
 
-`FileError`개체는 어떤 파일 API 오류 콜백을 제공 하는 유일한 매개 변수입니다. 오류의 유형을 확인 하려면 비교 그것의 `code` 속성을 위의 목록 중.
+`FileError`개체는 어떤 [파일](../fileobj/fileobj.html) API 오류 콜백을 제공 하는 유일한 매개 변수입니다. 오류의 유형을 확인 하려면 비교 그것의 `code` 속성을 위의 목록 중.

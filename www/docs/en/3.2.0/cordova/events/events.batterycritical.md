@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterycritical
 ---
 
 # batterycritical
@@ -38,7 +40,7 @@ properties:
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `window.addEventListener` to attach
-an event listener once the `deviceready` event fires.
+an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 

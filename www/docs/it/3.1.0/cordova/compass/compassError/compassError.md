@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CompassError
 ---
 
 # CompassError
 
-A `CompassError` oggetto viene restituito alla `compassError` funzione di callback quando si verifica un errore.
+A `CompassError` oggetto viene restituito alla `[compassError](../parameters/compassError.html)` funzione di callback quando si verifica un errore.
 
 ## Proprietà
 
@@ -33,4 +35,4 @@ A `CompassError` oggetto viene restituito alla `compassError` funzione di callba
 
 ## Descrizione
 
-Quando si verifica un errore, il `CompassError` oggetto viene passato come parametro a un `compassError` funzione di callback.
+Quando si verifica un errore, il `CompassError` oggetto viene passato come parametro a un `[compassError](../parameters/compassError.html)` funzione di callback.

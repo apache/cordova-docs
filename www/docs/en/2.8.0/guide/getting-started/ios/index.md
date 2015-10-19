@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with iOS
 ---
 
 Getting Started with iOS
@@ -170,7 +172,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
   - Create a Provisioning Profile within the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action).   You can use the Development Provisioning Assistant within the Provisioning Portal to create and install the profile and certificate for use within Xcode. 
 
-  - Verify that the Code Signing Identity in the Code Signing sections of the Hello World Xcode project settings has been set with your provisioning profile name.    
+  - Verify that the Code Signing Identity in the Code Signing sections of the [Hello World](../webos/index.html) Xcode project settings has been set with your provisioning profile name.    
 
 #### Deployment Steps
 
@@ -184,7 +186,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
 ## Results
 
-  The running HelloWorld app is shown below.  The Device is Ready line should be slowly pulsating.
+  The running HelloWorld app is shown below.  The [Device](../../../cordova/device/device.html) is Ready line should be slowly pulsating.
 
   ![](img/guide/platforms/ios/HelloWorldStandard.png)
 
@@ -283,7 +285,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
 ###Code Your Application
 
-  Replace the sample code in the www directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be index.html (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the www directory are permitted.  Note that the www directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
+  Replace the sample code in the www directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be index.html (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the www directory are permitted.  Note that the www directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova [File](../../../cordova/file/fileobj/fileobj.html) or [Storage](../../../cordova/storage/storage.html) APIs.
 
   You can use many mobile JavaScript frameworks with Cordova  to create the UI and page navigation of your application.  Popular ones include:
 
@@ -295,7 +297,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
   There are many additional considerations to make your application unique.  The sample HelloWorld application is set up to run in all iOS environments, iPhone, iPod, and iPad.  You can design an app for a single device type by modifying the build settings within Xcode.
 
-  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova Project Settings Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
+  You should customize the application with your own icons and splash screens.  The sample application includes Cordova specific images in the Apple required sizes and resolutions as examples.  The Cordova Specific settings are located in the config.xml file and documented in the Cordova [Project Settings](../../project-settings/index.html) Guide. Refer to the Resources section for more Apple specific information about building iOS Apps.
 
 ## Resources
 
@@ -316,7 +318,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
   - Cordova API documentation is available at [http://docs.cordova.io](http://docs.cordova.io) 
   - [PhoneGap google group](https://groups.google.com/forum/?fromgroups=%23!forum/phonegap) to discuss and ask questions about Cordova.  This forum is monitored by Cordova developers as well as users.  When posting please include the platform, device type, Cordova version and as many details as possible about the error or problem.  
-  - File Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
+  - [File](../../../cordova/file/fileobj/fileobj.html) Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
 
 
 ### Credits

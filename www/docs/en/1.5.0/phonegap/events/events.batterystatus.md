@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: batterystatus
 ---
 
 batterystatus
@@ -35,7 +37,7 @@ The battery status handler will be called with an object that contains two prope
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `window.addEventListener` once you receive the PhoneGap '[deviceready](events.deviceready.html)' event.
 
 Supported Platforms
 -------------------
@@ -44,7 +46,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
@@ -54,7 +56,7 @@ Quick Example
        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
     }
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

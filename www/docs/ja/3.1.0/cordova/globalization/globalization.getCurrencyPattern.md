@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getCurrencyPattern
 ---
 
 # globalization.getCurrencyPattern
@@ -43,7 +45,7 @@ license: >
 
 受信した `currencyCode` パラメーターをする必要があります、 `String` 、ISO 4217 通貨コードは、たとえば 'USD' のいずれかの。
 
-パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
+パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `[GlobalizationError](GlobalizationError/globalizationerror.html)` オブジェクトをパラメーターとして。 予想されるエラーコードです。`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 ## サポートされているプラットフォーム
 

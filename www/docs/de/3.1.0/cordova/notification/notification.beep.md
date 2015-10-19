@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Notification.Beep
 ---
 
 # Notification.Beep
 
-Das Gerät spielt einen Signalton sound.
+Das [Gerät](../device/device.html) spielt einen Signalton sound.
 
     navigator.notification.beep(times);
     
@@ -103,6 +105,6 @@ Das Gerät spielt einen Signalton sound.
 
 ## Tizen Macken
 
-*   Tizen implementiert Signaltöne durch Abspielen einer Audiodatei über die Medien API.
+*   Tizen implementiert Signaltöne durch Abspielen einer Audiodatei über die [Medien](../media/media.html) API.
 
 *   Die Beep-Datei muss kurz sein, befinden muss einem `sounds` Unterverzeichnis des Stammverzeichnisses der Anwendung, und muss den Namen`beep.wav`.

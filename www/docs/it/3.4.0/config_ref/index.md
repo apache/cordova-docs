@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Il File config. Xml
 ---
 
 # Il File config. Xml
@@ -42,7 +44,7 @@ In questa sezione in dettaglio le opzioni di configurazione globale e multi-piat
 
 *   Configurazione iOS
 *   Configurazione Android
-*   Configurazione di blackBerry 10
+*   [Configurazione di blackBerry](../guide/platforms/blackberry/config.html) 10
 
 Oltre le varie opzioni di configurazione descritte di seguito, è possibile configurare anche set di base di un'applicazione delle immagini per ogni piattaforma di destinazione. Per ulteriori informazioni, vedere icone e schermate iniziali.
 

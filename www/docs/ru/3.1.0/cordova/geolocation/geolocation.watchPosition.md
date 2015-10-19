@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.watchPosition
 ---
 
 # geolocation.watchPosition
@@ -37,11 +39,11 @@ license: >
 
 ## Возвращает
 
-*   **Строка**: Возвращает идентификатор часы, ссылается на часы позиции интервала. Идентификатор часы должны использоваться с `geolocation.clearWatch` чтобы остановить просмотр изменений в позиции.
+*   **Строка**: Возвращает идентификатор часы, ссылается на часы позиции интервала. Идентификатор часы должны использоваться с `[geolocation.clearWatch](geolocation.clearWatch.html)` чтобы остановить просмотр изменений в позиции.
 
 ## Описание
 
-`geolocation.watchPosition`Это асинхронные функции. Возвращает текущую позицию устройства при обнаружении изменения в позиции. Когда устройство получает новое местоположение, `geolocationSuccess` обратного вызова выполняется с `Position` объект в качестве параметра. Если есть ошибка, `geolocationError` обратного вызова выполняется с `PositionError` объект в качестве параметра.
+`geolocation.watchPosition`Это асинхронные функции. Возвращает текущую позицию устройства при обнаружении изменения в позиции. Когда устройство получает новое местоположение, `[geolocationSuccess](parameters/geolocationSuccess.html)` обратного вызова выполняется с `Position` объект в качестве параметра. Если есть ошибка, `[geolocationError](parameters/geolocationError.html)` обратного вызова выполняется с `[PositionError](PositionError/positionError.html)` объект в качестве параметра.
 
 ## Поддерживаемые платформы
 

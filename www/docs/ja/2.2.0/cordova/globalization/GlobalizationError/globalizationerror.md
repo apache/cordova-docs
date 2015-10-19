@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: GlobalizationError
 ---
 
 GlobalizationError
 ============
 
-Globalization API からのエラーを表すオブジェクトです。
+[Globalization](../globalization.html) API からのエラーを表すオブジェクトです。
 
 プロパティー
 ----------
@@ -45,7 +47,7 @@ Globalization API からのエラーを表すオブジェクトです。
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
 以下のエラーコールバックが呼び出されるとき、 "code: 3" と "message: " といったような文字列とともにポップアップダイアログが表示されます。

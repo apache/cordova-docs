@@ -16,8 +16,10 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.clearWatchFilter
 ---
 
 # compass.clearWatchFilter
 
-Nicht mehr unterstützt ab 1.6. Finden Sie unter`compass.clearWatch`.
+Nicht mehr unterstützt ab 1.6. Finden Sie unter`[compass.clearWatch](compass.clearWatch.html)`.

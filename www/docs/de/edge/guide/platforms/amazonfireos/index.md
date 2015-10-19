@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch für die OS-Plattform von Amazon-Feuer
 ---
 
 # Handbuch für die OS-Plattform von Amazon-Feuer
@@ -24,9 +26,9 @@ Diese Anleitung zeigt Ihre Entwicklungsumgebung SDK einrichten, Cordova apps fü
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   [Amazon Fire OS Konfiguration](config.html)
+*   [Amazon Fire OS Webansichten für](webview.html)
+*   [Amazon Fire OS Plugins](plugin.html)
 
 ## Einführung
 
@@ -41,7 +43,7 @@ Weitere Informationen über die Amazon-WebView-API finden Sie im Amazon-Entwickl
 
 Entwicklung von Cordova apps für Amazon Fire OS erfordert die Installation einer Vielzahl von Support-Dateien, einschließlich alles für Android Entwicklung, als auch die Amazon-WebView-SDK. Überprüfen Sie die Liste unten für die erforderlichen Installationen:
 
-*   Die Befehlszeilenschnittstelle
+*   [Die Befehlszeilenschnittstelle](../../cli/index.html)
 *   [Android SDK][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.version
 ---
 
 device.version
@@ -34,7 +36,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Froyo OS would return "2.2"
@@ -48,7 +50,7 @@ Quick Example
     // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
     var deviceVersion = device.version;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

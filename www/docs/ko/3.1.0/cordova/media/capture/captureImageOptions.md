@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureImageOptions
 ---
 
 # CaptureImageOptions
 
-> 이미지 캡처 구성 옵션을 캡슐화합니다.
+> 이미지 [캡처](capture.html) 구성 옵션을 캡슐화합니다.
 
 ## 속성
 
-*   **제한**: 사용자는 단일 캡처 작업에서 캡처할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+*   **제한**: 사용자는 단일 [캡처](capture.html) 작업에서 캡처할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 ## 빠른 예제
 

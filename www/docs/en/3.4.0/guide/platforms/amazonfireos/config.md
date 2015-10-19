@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS Configuration
 ---
 
 # Amazon Fire OS Configuration
@@ -26,7 +28,7 @@ details preferences that only apply to  Amazon Fire OS builds. See The
 config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
+  application stays running in the background even after a `[pause](../../../cordova/events/events.pause.html)`
   event fires.
 
         <preference name="KeepRunning" value="false"/>

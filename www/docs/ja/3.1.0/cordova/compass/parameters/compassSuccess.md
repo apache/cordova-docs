@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 # compassSuccess
 
-onSuccess コールバック関数を介してコンパス針路情報を提供する、 `compassHeading` オブジェクト。
+onSuccess コールバック関数を介してコンパス針路情報を提供する、 `[compassHeading](compassHeading.html)` オブジェクト。
 
     function(heading) {
         // Do something

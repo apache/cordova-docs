@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryReader
 ---
 
 # DirectoryReader
@@ -42,9 +44,9 @@ license: >
 
 **パラメーター:**
 
-*   **successCallback**: の配列が渡されるコールバック `FileEntry` と `DirectoryEntry` オブジェクト。*(機能)*
+*   **successCallback**: の配列が渡されるコールバック `[FileEntry](../fileentry/fileentry.html)` と `[DirectoryEntry](../directoryentry/directoryentry.html)` オブジェクト。*(機能)*
 
-*   **解り**: ディレクトリ一覧を取得するときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `FileError` オブジェクト。*(機能)*
+*   **解り**: ディレクトリ一覧を取得するときにエラーが発生した場合に実行されるコールバック。呼び出されると、 `[FileError](../fileerror/fileerror.html)` オブジェクト。*(機能)*
 
 **簡単な例**
 

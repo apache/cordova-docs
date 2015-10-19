@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Iconos y pantallas de Splash
 ---
 
 # Iconos y pantallas de Splash
@@ -150,7 +152,7 @@ La primera línea establece la imagen que se mostrará como la pantalla de bienv
 
 La segunda línea establece la demora por defecto de cuánto el splashscreen aparece en milisegundos. Esto debería ser la hora de salida máxima esperada. El valor predeterminado para SplashScreenDelay es ms 3000.
 
-Finalmente, la pantalla de bienvenida debe estar presente sólo el tiempo necesario. Cuando su aplicación ha comenzado y se ha cargado el webview, su aplicación debe ocultar la pantalla de bienvenida para que su vista principal es visible. Debido a la hora de inicio de la aplicación variará un poco debido a una serie de factores, se recomienda que su aplicación invocar explícitamente `navigator.splashscreen.hide()` en el método Javascript que responde a la `deviceready` evento. De lo contrario la pantalla de bienvenida será visible para el valor de SplashScreenDelay que ha configurado anteriormente. Este enfoque orientado al evento es altamente recomendable versus tener la pantalla visible para siempre una duración fija.
+Finalmente, la pantalla de bienvenida debe estar presente sólo el tiempo necesario. Cuando su aplicación ha comenzado y se ha cargado el webview, su aplicación debe ocultar la pantalla de bienvenida para que su vista principal es visible. Debido a la hora de inicio de la aplicación variará un poco debido a una serie de factores, se recomienda que su aplicación invocar explícitamente `navigator.splashscreen.hide()` en el método Javascript que responde a la `[deviceready](../cordova/events/events.deviceready.html)` evento. De lo contrario la pantalla de bienvenida será visible para el valor de SplashScreenDelay que ha configurado anteriormente. Este enfoque orientado al evento es altamente recomendable versus tener la pantalla visible para siempre una duración fija.
 
 ## Pantallas de inicio para la plataforma iOS
 

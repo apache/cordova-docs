@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 # LocalFileSystem
@@ -26,7 +28,7 @@ license: >
 
 *   **requestFileSystem**: просит файловой системы. *(Функция)*
 
-*   **resolveLocalFileSystemURI**: получить `DirectoryEntry` или `FileEntry` с помощью местных URI. *(Функция)*
+*   **resolveLocalFileSystemURI**: получить `[DirectoryEntry](../directoryentry/directoryentry.html)` или `[FileEntry](../fileentry/fileentry.html)` с помощью местных URI. *(Функция)*
 
 ## Константы
 

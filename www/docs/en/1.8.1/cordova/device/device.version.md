@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.version
 ---
 
 device.version
@@ -35,7 +37,7 @@ Supported Platforms
 - Bada 1.2 & 2.x
 - webOS
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Android:    Froyo OS would return "2.2"
@@ -50,7 +52,7 @@ Quick Example
     // webOS: webOS 2.2.4 return 2.2.4
     var deviceVersion = device.version;
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

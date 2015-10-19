@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plugin Android
 ---
 
 # Plugin Android
@@ -24,7 +26,7 @@ In questa sezione vengono fornite informazioni dettagliate per come implementare
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Plugin Android sono basati su Android di Cordova, che consiste di una WebView Android con ganci collegati ad esso. Plugin sono rappresentati come mapping di classe nella `config.xml` file. Un plugin è costituito da almeno una classe Java che estende la `CordovaPlugin` classe, si esegue l'override di uno dei suoi `execute` metodi. Come migliore pratica, il plugin dovrebbe gestire anche `pause` e `resume` eventi, insieme a qualsiasi messaggio passando tra plugin. Plugin con richieste di lungo corso, attività di fondo quali la riproduzione multimediale, ascoltatori o stato interno dovrebbe implementare il `onReset()` metodo pure. Esegue quando la `WebView` si sposta su una nuova pagina o rinfresca, che ricarica il JavaScript.
+Plugin Android sono basati su Android di Cordova, che consiste di una WebView Android con ganci collegati ad esso. Plugin sono rappresentati come mapping di classe nella `config.xml` file. Un plugin è costituito da almeno una classe Java che estende la `CordovaPlugin` classe, si esegue l'override di uno dei suoi `execute` metodi. Come migliore pratica, il plugin dovrebbe gestire anche `[pause](../../../cordova/events/events.pause.html)` e `[resume](../../../cordova/events/events.resume.html)` eventi, insieme a qualsiasi messaggio passando tra plugin. Plugin con richieste di lungo corso, attività di fondo quali la riproduzione multimediale, ascoltatori o stato interno dovrebbe implementare il `onReset()` metodo pure. Esegue quando la `WebView` si sposta su una nuova pagina o rinfresca, che ricarica il JavaScript.
 
 ## Classe plugin Mapping
 

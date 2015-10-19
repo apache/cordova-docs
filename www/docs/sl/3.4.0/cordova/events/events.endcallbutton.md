@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: endcallbutton
 ---
 
 # endcallbutton
@@ -29,7 +31,7 @@ Tem primeru požarov, ko uporabnik pritisne gumb konec klica.
 
 Dogodek preglasi privzeto obnašanje konec klica.
 
-Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `deviceready` dogodek požarov.
+Programi lahko običajno uporabljajo `document.addEventListener` priložiti dogodek poslušalca enkrat na `[deviceready](events.deviceready.html)` dogodek požarov.
 
 ## Podprte platforme
 

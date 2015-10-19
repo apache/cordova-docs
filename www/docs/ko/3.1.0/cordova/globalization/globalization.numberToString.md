@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 # globalization.numberToString
@@ -29,7 +31,7 @@ license: >
 
 서식이 지정 된 숫자 문자열을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 변수로. 있어야 해당 개체는 `value` 속성을 `String` 값.
 
-번호, 서식 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.FORMATTING\_ERROR`.
+번호, 서식 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 `options`매개 변수는 선택적 이며 그것의 기본 값은:
 

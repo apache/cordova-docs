@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Einbetten von Webansichten für
 ---
 
 # Einbetten von Webansichten für
 
 > Implementieren Sie die Cordova WebView in Ihr eigenes Projekt.
 
-*   Android Webansichten für
-*   iOS Webansichten für
+*   [Android Webansichten für](../../platforms/android/webview.html)
+*   [iOS Webansichten für](../../platforms/ios/webview.html)

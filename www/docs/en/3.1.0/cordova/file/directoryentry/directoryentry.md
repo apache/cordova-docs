@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: DirectoryEntry
 ---
 
 # DirectoryEntry
@@ -57,7 +59,7 @@ The following methods can be invoked on a `DirectoryEntry` object:
 
 - __getParent__: Look up the parent directory.
 
-- __createReader__: Create a new `DirectoryReader` that can read entries from a directory.
+- __createReader__: Create a new `[DirectoryReader](../directoryreader/directoryreader.html)` that can read entries from a directory.
 
 - __getDirectory__: Create or look up a directory.
 
@@ -79,9 +81,9 @@ Look up metadata about a directory.
 
 __Parameters:__
 
-- __successCallback__: A callback function to execute with a `Metadata` object. _(Function)_
+- __successCallback__: A callback function to execute with a `[Metadata](../metadata/metadata.html)` object. _(Function)_
 
-- __errorCallback__: A callback function to execute if an error occurs when retrieving the `Metadata`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback function to execute if an error occurs when retrieving the `[Metadata](../metadata/metadata.html)`. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -182,7 +184,7 @@ __Parameters:__
 
 - __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to move the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to move the directory. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -222,7 +224,7 @@ __Parameters:__
 
 - __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -266,7 +268,7 @@ __Parameters:__
 
 - __successCallback__: A callback that executes after the directory is deleted.  Invoked with no parameters. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -289,7 +291,7 @@ __Parameters:__
 
 - __successCallback__: A callback that is passed the directory's parent `DirectoryEntry`. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -306,7 +308,7 @@ __Quick Example__
 
 ## createReader
 
-Creates a new DirectoryReader to read entries in a directory.
+Creates a new [DirectoryReader](../directoryreader/directoryreader.html) to read entries in a directory.
 
 __Quick Example__
 
@@ -327,7 +329,7 @@ __Parameters:__
 
 - __successCallback__: A callback that executes with a `DirectoryEntry` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -354,9 +356,9 @@ __Parameters:__
 
 - __options__: Options to specify whether the file is created if it doesn't exist.  _(Flags)_
 
-- __successCallback__: A callback that is passed a `FileEntry` object. _(Function)_
+- __successCallback__: A callback that is passed a `[FileEntry](../fileentry/fileentry.html)` object. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the file. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 
@@ -383,7 +385,7 @@ __Parameters:__
 
 - __successCallback__: A callback that executes after the `DirectoryEntry` has been deleted.  Invoked with no parameters. _(Function)_
 
-- __errorCallback__: A callback that executes if an error occurs when attempting to delete the `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the `DirectoryEntry`. Invoked with a `[FileError](../fileerror/fileerror.html)` object. _(Function)_
 
 __Quick Example__
 

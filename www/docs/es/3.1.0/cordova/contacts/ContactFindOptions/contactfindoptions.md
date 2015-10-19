@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactFindOptions
 ---
 
 # ContactFindOptions
 
-Contiene propiedades que pueden utilizar para filtrar los resultados de una `contacts.find` operación.
+Contiene propiedades que pueden utilizar para filtrar los resultados de una `[contacts.find](../contacts.find.html)` operación.
 
 ## Propiedades
 

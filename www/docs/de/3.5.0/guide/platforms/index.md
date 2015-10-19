@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Plattform-Guides
 ---
 
 # Plattform-Guides
@@ -28,55 +30,55 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 ## Amazon Fire OS
 
-*   Handbuch für die OS-Plattform von Amazon-Feuer
-*   Amazon Fire OS Konfiguration
-*   Amazon Fire OS Webansichten für
-*   Amazon Fire OS Plugins
+*   [Handbuch für die OS-Plattform von Amazon-Feuer](amazonfireos/index.html)
+*   [Amazon Fire OS Konfiguration](amazonfireos/config.html)
+*   [Amazon Fire OS Webansichten für](amazonfireos/webview.html)
+*   [Amazon Fire OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-*   Android-Plattform-Guide
-*   Android-Konfiguration
-*   Android Webansichten für
-*   Android Plugins
-*   Android-Befehlszeilenprogrammen
-*   Aktualisierung von Android
+*   [Android-Plattform-Guide](android/index.html)
+*   [Android-Konfiguration](android/config.html)
+*   [Android Webansichten für](android/webview.html)
+*   [Android Plugins](android/plugin.html)
+*   [Android-Befehlszeilenprogrammen](android/tools.html)
+*   [Aktualisierung von Android](android/upgrading.html)
 
 ## BlackBerry 10
 
-*   Handbuch für die Plattform von BlackBerry 10
-*   BlackBerry 10 Konfiguration
-*   BlackBerry 10 Plugins
-*   BlackBerry 10-Befehlszeilentools
-*   Aktualisieren der BlackBerry 10
+*   [Handbuch für die Plattform von BlackBerry 10](blackberry10/index.html)
+*   [BlackBerry 10 Konfiguration](blackberry10/config.html)
+*   [BlackBerry 10 Plugins](blackberry10/plugin.html)
+*   [BlackBerry 10-Befehlszeilentools](blackberry10/tools.html)
+*   [Aktualisieren der BlackBerry](blackberry/upgrading.html) 10
 
 ## iOS
 
-*   iOS Platform Guide
-*   iOS Konfiguration
-*   iOS Webansichten für
-*   iOS Plugins
-*   iOS-Befehlszeilenprogrammen
-*   IOS Upgrade
+*   [iOS Platform Guide](ios/index.html)
+*   [iOS Konfiguration](ios/config.html)
+*   [iOS Webansichten für](ios/webview.html)
+*   [iOS Plugins](ios/plugin.html)
+*   [iOS-Befehlszeilenprogrammen](ios/tools.html)
+*   [IOS Upgrade](ios/upgrading.html)
 
 ## Ubuntu
 
-*   Handbuch Ubuntu Plattform
+*   [Handbuch Ubuntu Plattform](ubuntu/index.html)
 
 ## Windows Phone
 
-*   Handbuch für die Plattform von Windows Phone-8
-*   Windows Phone 7 Plattform Guide
+*   [Handbuch für die Plattform von Windows Phone-8](wp8/index.html)
+*   [Windows Phone 7 Plattform Guide](wp7/index.html)
 *   Windows Phone-Konfiguration
-*   Windows Phone Befehlszeilentools
-*   Aktualisieren von Windows Phone
+*   [Windows Phone Befehlszeilentools](wp8/tools.html)
+*   [Aktualisieren von Windows Phone](wp8/upgrading.html)
 
 ## Windows 8
 
-*   Anleitung zur Windows 8 Platform
-*   Windows 8-Befehlszeilentools
-*   Aktualisieren von Windows 8
+*   [Anleitung zur Windows 8 Platform](win8/index.html)
+*   [Windows 8-Befehlszeilentools](win8/tools.html)
+*   [Aktualisieren von Windows 8](win8/upgrading.html)
 
 ## Tizen
 
-*   Tizen Plattform Guide
+*   [Tizen Plattform Guide](tizen/index.html)

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileEntries
 ---
 
 # FileEntries
 
-Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
+Eine [Datei](../fileobj/fileobj.html) in einem [Dateisystem](../filesystem/filesystem.html) darstellt, wie in der [W3C-Verzeichnisse und Systeme][1] -Spezifikation definiert.
 
  [1]: http://www.w3.org/TR/file-system-api/
 
@@ -36,25 +38,25 @@ Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Sys
 
 **Hinweis:** Das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
 
-*   **Dateisystem**: das Dateisystem, auf dem der `FileEntry` befindet. *(FileSystem)*
+*   **Dateisystem**: das [Dateisystem](../filesystem/filesystem.html), auf dem der `FileEntry` befindet. *(FileSystem)*
 
 ## Methoden
 
-*   **GetMetadata**: Nachschlagen Metadaten über eine Datei.
+*   **GetMetadata**: Nachschlagen [Metadaten](../metadata/metadata.html) über eine [Datei](../fileobj/fileobj.html).
 
-*   **SetMetadata**: Metadaten für eine Datei festlegen.
+*   **SetMetadata**: [Metadaten](../metadata/metadata.html) für eine [Datei](../fileobj/fileobj.html) festlegen.
 
-*   **MoveTo**: Verschieben einer Datei an einen anderen Speicherort im Dateisystem.
+*   **MoveTo**: Verschieben einer [Datei](../fileobj/fileobj.html) an einen anderen Speicherort im [Dateisystem](../filesystem/filesystem.html).
 
-*   **CopyTo**: Kopieren Sie eine Datei an einen anderen Speicherort im Dateisystem.
+*   **CopyTo**: Kopieren Sie eine [Datei](../fileobj/fileobj.html) an einen anderen Speicherort im [Dateisystem](../filesystem/filesystem.html).
 
-*   **Besuch**: Rückkehr einen URL, die verwendet werden kann, um eine Datei zu suchen.
+*   **Besuch**: Rückkehr einen URL, die verwendet werden kann, um eine [Datei](../fileobj/fileobj.html) zu suchen.
 
-*   **Entfernen**: Löschen einer Datei.
+*   **Entfernen**: Löschen einer [Datei](../fileobj/fileobj.html).
 
 *   **GetParent**: das übergeordnete Verzeichnis nachschlagen.
 
-*   **CreateWriter**: erstellt ein `FileWriter` -Objekt, das verwendet werden kann, um in eine Datei schreiben.
+*   **CreateWriter**: erstellt ein `[FileWriter](../filewriter/filewriter.html)` -Objekt, das verwendet werden kann, um in eine [Datei](../fileobj/fileobj.html) schreiben.
 
 *   **Datei**: erstellt ein `File` -Objekt, Dateieigenschaften.
 
@@ -68,13 +70,13 @@ Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Sys
 
 ## getMetadata
 
-Suchen Sie Metadaten zu einer Datei.
+Suchen Sie [Metadaten](../metadata/metadata.html) zu einer [Datei](../fileobj/fileobj.html).
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `Metadata` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -87,19 +89,19 @@ Suchen Sie Metadaten zu einer Datei.
 
 ## setMetadata
 
-Metadaten in einer Datei.
+[Metadaten](../metadata/metadata.html) in einer [Datei](../fileobj/fileobj.html).
 
 **Derzeit funktioniert nur auf iOS.**
 
-*   Dadurch wird die erweiterten Attribute einer Datei festgelegt.
+*   Dadurch wird die erweiterten Attribute einer [Datei](../fileobj/fileobj.html) festgelegt.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten festgelegt ist. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die [Metadaten](../metadata/metadata.html) festgelegt ist. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten nicht erfolgreich festgelegt ist. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn die [Metadaten](../metadata/metadata.html) nicht erfolgreich festgelegt ist. *(Funktion)*
 
-*   **MetadataObject**: ein Objekt, das der Metadaten Schlüssel und Werte enthält. *(Objekt)*
+*   **MetadataObject**: ein Objekt, das der [Metadaten](../metadata/metadata.html) Schlüssel und Werte enthält. *(Objekt)*
 
 **Kleines Beispiel**
 
@@ -117,7 +119,7 @@ Metadaten in einer Datei.
 
 **iOS Quirk**
 
-*   Nur die `com.apple.MobileBackup` erweitertes Attribut wird unterstützt. Legen Sie den Wert auf `1` zu verhindern, dass die Datei auf iCloud gesichert wird. Legen Sie den Wert auf `` , die Datei zu iCloud gesichert werden wieder zu aktivieren.
+*   Nur die `com.apple.MobileBackup` erweitertes Attribut wird unterstützt. Legen Sie den Wert auf `1` zu verhindern, dass die [Datei](../fileobj/fileobj.html) auf iCloud gesichert wird. Legen Sie den Wert auf `` , die [Datei](../fileobj/fileobj.html) zu iCloud gesichert werden wieder zu aktivieren.
 
 **Kleines Beispiel**
 
@@ -155,23 +157,23 @@ Metadaten in einer Datei.
 
 ## moveTo
 
-Verschieben Sie eine Datei an einen anderen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
+Verschieben Sie eine [Datei](../fileobj/fileobj.html) an einen anderen Speicherort im [Dateisystem](../filesystem/filesystem.html). Ein Fehler auftritt, wenn die app versucht:
 
-*   Verschieben einer Datei in seinem übergeordneten Element, sofern ein anderen von seinen aktuellen Namen ist nicht;
+*   Verschieben einer [Datei](../fileobj/fileobj.html) in seinem übergeordneten Element, sofern ein anderen von seinen aktuellen Namen ist nicht;
 
-*   Verschieben einer Datei auf einen Pfad, der von einem Verzeichnis besetzt;
+*   Verschieben einer [Datei](../fileobj/fileobj.html) auf einen Pfad, der von einem Verzeichnis besetzt;
 
-Darüber hinaus versucht das Verschieben einer Datei auf eine vorhandene Datei löschen und die Datei zu ersetzen.
+Darüber hinaus versucht das Verschieben einer [Datei](../fileobj/fileobj.html) auf eine vorhandene [Datei](../fileobj/fileobj.html) löschen und die [Datei](../fileobj/fileobj.html) zu ersetzen.
 
 **Parameter:**
 
-*   **Eltern**: das übergeordnete Verzeichnis, in das die Datei verschoben. *(DirectoryEntry)*
+*   **Eltern**: das übergeordnete Verzeichnis, in das die [Datei](../fileobj/fileobj.html) verschoben. *(DirectoryEntry)*
 
-*   **NewName**: der neue Name der Datei. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
+*   **NewName**: der neue Name der [Datei](../fileobj/fileobj.html). Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen Datei `FileEntry` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen [Datei](../fileobj/fileobj.html) `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die Datei zu verschieben. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die [Datei](../fileobj/fileobj.html) zu verschieben. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -195,19 +197,19 @@ Darüber hinaus versucht das Verschieben einer Datei auf eine vorhandene Datei l
 
 ## copyTo
 
-Kopieren Sie eine Datei an einen neuen Speicherort im Dateisystem. Ein Fehler auftritt, wenn die app versucht:
+Kopieren Sie eine [Datei](../fileobj/fileobj.html) an einen neuen Speicherort im [Dateisystem](../filesystem/filesystem.html). Ein Fehler auftritt, wenn die app versucht:
 
-*   Kopieren Sie eine Datei in übergeordneten, wenn ein anderen von seinen aktuellen Namen nicht angegeben ist.
+*   Kopieren Sie eine [Datei](../fileobj/fileobj.html) in übergeordneten, wenn ein anderen von seinen aktuellen Namen nicht angegeben ist.
 
 **Parameter:**
 
-*   **Eltern**: das übergeordnete Verzeichnis, in das die Datei kopiert. *(DirectoryEntry)*
+*   **Eltern**: das übergeordnete Verzeichnis, in das die [Datei](../fileobj/fileobj.html) kopiert. *(DirectoryEntry)*
 
-*   **NewName**: der neue Name der Datei. Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
+*   **NewName**: der neue Name der [Datei](../fileobj/fileobj.html). Der Standardwert ist der aktuelle Name, wenn kein Wert angegeben. *(DOM-String und enthält)*
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen Datei `FileEntry` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird, der neuen [Datei](../fileobj/fileobj.html) `FileEntry` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die Datei zu kopieren. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die [Datei](../fileobj/fileobj.html) zu kopieren. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -231,7 +233,7 @@ Kopieren Sie eine Datei an einen neuen Speicherort im Dateisystem. Ein Fehler au
 
 ## Besuch
 
-Gibt einen URL, die verwendet werden kann, um die Datei zu suchen.
+Gibt einen URL, die verwendet werden kann, um die [Datei](../fileobj/fileobj.html) zu suchen.
 
 **Kleines Beispiel**
 
@@ -242,13 +244,13 @@ Gibt einen URL, die verwendet werden kann, um die Datei zu suchen.
 
 ## Entfernen
 
-Löscht eine Datei.
+Löscht eine [Datei](../fileobj/fileobj.html).
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem die Datei gelöscht wurde. Ohne Parameter aufgerufen. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem die [Datei](../fileobj/fileobj.html) gelöscht wurde. Ohne Parameter aufgerufen. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die Datei zu löschen. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, die [Datei](../fileobj/fileobj.html) zu löschen. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -266,13 +268,13 @@ Löscht eine Datei.
 
 ## getParent
 
-Suchen Sie den übergeordneten `DirectoryEntry` mit der Datei.
+Suchen Sie den übergeordneten `[DirectoryEntry](../directoryentry/directoryentry.html)` mit der [Datei](../fileobj/fileobj.html).
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der die Datei übergeordnete übergeben wird `DirectoryEntry` . *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der die [Datei](../fileobj/fileobj.html) übergeordnete übergeben wird `[DirectoryEntry](../directoryentry/directoryentry.html)` . *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `DirectoryEntry` . Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, wenn ein Fehler auftritt, wenn Sie versuchen, das übergeordnete Element abrufen `[DirectoryEntry](../directoryentry/directoryentry.html)` . Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -290,13 +292,13 @@ Suchen Sie den übergeordneten `DirectoryEntry` mit der Datei.
 
 ## createWriter
 
-Erstellen einer `FileWriter` vom dargestellten Datei zugeordnete Objekt der`FileEntry`.
+Erstellen einer `[FileWriter](../filewriter/filewriter.html)` vom dargestellten [Datei](../fileobj/fileobj.html) zugeordnete Objekt der`FileEntry`.
 
 **Parameter:**
 
-*   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileWriter` Objekt. *(Funktion)*
+*   **SuccessCallback**: ein Rückruf, der übergeben wird ein `[FileWriter](../filewriter/filewriter.html)` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die FileWriter erstellen. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Versuch, die [FileWriter](../filewriter/filewriter.html) erstellen. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 
@@ -314,13 +316,13 @@ Erstellen einer `FileWriter` vom dargestellten Datei zugeordnete Objekt der`File
 
 ## Datei
 
-Zurück, ein `File` -Objekt, das den aktuellen Zustand der Datei darstellt, dass dies `FileEntry` darstellt.
+Zurück, ein `File` -Objekt, das den aktuellen Zustand der [Datei](../fileobj/fileobj.html) darstellt, dass dies `FileEntry` darstellt.
 
 **Parameter:**
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `File` Objekt. *(Funktion)*
 
-*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen der `File` Objekt, z. B. wenn die Datei nicht mehr vorhanden ist. Aufgerufene mit einem `FileError` Objekt. *(Funktion)*
+*   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Erstellen der `File` Objekt, z. B. wenn die [Datei](../fileobj/fileobj.html) nicht mehr vorhanden ist. Aufgerufene mit einem `[FileError](../fileerror/fileerror.html)` Objekt. *(Funktion)*
 
 **Kleines Beispiel**
 

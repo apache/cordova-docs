@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureErrorCB
 ---
 
 # CaptureErrorCB
 
-> Wird aufgerufen, wenn ein Fehler, während eines Medien auftritt.
+> Wird aufgerufen, wenn ein Fehler, während eines [Medien](../media.html) auftritt.
 
     function captureError( CaptureError error ) { ... };
     
@@ -29,7 +31,7 @@ license: >
 
 Diese Funktion wird ausgeführt, wenn ein Fehler auftritt, wenn Sie versuchen, starten Sie ein Medium capture Betrieb. Fehlerszenarien enthalten, wenn die Sicherungsanwendung beschäftigt, ein Capture-Vorgang ist bereits im Gange, oder der Benutzer den Vorgang abbricht, bevor alle Mediendateien erfasst werden.
 
-Diese Funktion führt mit einem `CaptureError` -Objekt, enthält einen entsprechenden Fehler`code`.
+Diese Funktion führt mit einem `[CaptureError](CaptureError.html)` -Objekt, enthält einen entsprechenden Fehler`code`.
 
 ## Kleines Beispiel
 

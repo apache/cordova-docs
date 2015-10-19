@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Flags
 ---
 
 Flags
 =====
 
-This object is used to supply arguments to the `DirectoryEntry` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
+This object is used to supply arguments to the `[DirectoryEntry](../directoryentry/directoryentry.html)` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
 
 Properties
 ----------
@@ -37,7 +39,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // Get the data directory, creating it if it doesn't exist.

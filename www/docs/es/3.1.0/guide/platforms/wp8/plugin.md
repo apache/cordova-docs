@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone Plugins
 ---
 
 # Windows Phone Plugins
@@ -179,7 +181,7 @@ Ver otros métodos que se pueden reemplazar en:
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-Por ejemplo, puede conectar en los eventos de aplicación 'continuar' y 'pause'.
+Por ejemplo, puede conectar en los eventos de aplicación 'continuar' y '[pause](../../../cordova/events/events.pause.html)'.
 
 ### Depuración de Plugins
 

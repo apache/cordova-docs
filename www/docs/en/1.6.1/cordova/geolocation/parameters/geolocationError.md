@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationError
 ---
 
 geolocationError
@@ -30,4 +32,4 @@ The user's callback function that is called when there is an error for geolocati
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`PositionError`)
+- __error:__ The error returned by the device. (`[PositionError](../PositionError/positionError.html)`)

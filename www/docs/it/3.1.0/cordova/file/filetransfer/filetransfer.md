@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileTransfer
 ---
 
 # FileTransfer
@@ -36,7 +38,7 @@ Il `FileTransfer` oggetto consente di caricare o scaricare file da e verso un se
 
 ## Dettagli
 
-Il `FileTransfer` oggetto fornisce un modo per caricare i file su un server remoto utilizzando una richiesta HTTP di POST multiparte. Sono supportati i protocolli HTTP e HTTPS. Parametri facoltativi possono essere specificati passando un `FileUploadOptions` oggetto per il `upload()` metodo. Su carica di successo, un `FileUploadResult` oggetto viene passato al metodo di callback successo. Se si verifica un errore, un `FileTransferError` oggetto viene passato al metodo di callback errore. È anche possibile (solo su iOS e Android) per scaricare un file da un server remoto e salvarli sul dispositivo.
+Il `FileTransfer` oggetto fornisce un modo per caricare i file su un server remoto utilizzando una richiesta HTTP di POST multiparte. Sono supportati i protocolli HTTP e HTTPS. Parametri facoltativi possono essere specificati passando un `[FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)` oggetto per il `upload()` metodo. Su carica di successo, un `[FileUploadResult](../fileuploadresult/fileuploadresult.html)` oggetto viene passato al metodo di callback successo. Se si verifica un errore, un `[FileTransferError](../filetransfererror/filetransfererror.html)` oggetto viene passato al metodo di callback errore. È anche possibile (solo su iOS e Android) per scaricare un file da un server remoto e salvarli sul dispositivo.
 
 ## Piattaforme supportate
 
@@ -56,7 +58,7 @@ Il `FileTransfer` oggetto fornisce un modo per caricare i file su un server remo
 
 *   **successCallback**: un callback passato un `Metadata` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore recuperando il `Metadata` . Invocato con un `FileTransferError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore recuperando il `Metadata` . Invocato con un `[FileTransferError](../filetransfererror/filetransfererror.html)` oggetto. *(Funzione)*
 
 *   **opzioni**: parametri opzionali come nome file e il tipo MIME.
 
@@ -202,9 +204,9 @@ Impostare il `chunkedMode` opzione per `false` per evitare problemi di caricamen
 
 *   **destinazione**: percorso completo del file sul dispositivo.
 
-*   **successCallback**: un callback passato un `FileEntry` oggetto. *(Funzione)*
+*   **successCallback**: un callback passato un `[FileEntry](../fileentry/fileentry.html)` oggetto. *(Funzione)*
 
-*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileTransferError` oggetto. *(Funzione)*
+*   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `[FileTransferError](../filetransfererror/filetransfererror.html)` oggetto. *(Funzione)*
 
 *   **trustAllHosts**: parametro opzionale, valore predefinito è `false` . Se impostato su `true` poi accetterà tutti i certificati di sicurezza. Questo è utile come Android respinge certificati auto sicurezza firmato. Non raccomandato per uso in produzione. Supportato su Android e iOS. *(boolean)*
 
@@ -224,7 +226,7 @@ Impostare il `chunkedMode` opzione per `false` per evitare problemi di caricamen
 
 ## Abort
 
-Interrompe un trasferimento in corso. Il callback onerror viene passato un oggetto FileTransferError che presenta un codice di errore di FileTransferError.ABORT_ERR.
+Interrompe un trasferimento in corso. Il callback onerror viene passato un oggetto [FileTransferError](../filetransfererror/filetransfererror.html) che presenta un codice di errore di [FileTransferError](../filetransfererror/filetransfererror.html).ABORT_ERR.
 
 **Piattaforme supportate**
 

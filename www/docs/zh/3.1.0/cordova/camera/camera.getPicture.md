@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.getPicture
 ---
 
 # camera.getPicture
 
-需要使用的相機，一張照片或從設備的圖像庫檢索一張照片。 圖像作為 base64 編碼傳遞成功回檔到 `String` ，或作為影像檔的 URI。 該方法本身返回 `CameraPopoverHandle` 可以用於重新置放檔選擇彈出的物件。
+需要使用的相機，一張照片或從設備的圖像庫檢索一張照片。 圖像作為 base64 編碼傳遞成功回檔到 `String` ，或作為影像檔的 URI。 該方法本身返回 `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` 可以用於重新置放檔選擇彈出的物件。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
@@ -29,9 +31,9 @@ license: >
 
 `camera.getPicture`函數將打開該設備的預設攝像頭應用程式，使使用者能夠對齊圖片。 預設情況下，會發生此行為時 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 。 一旦使用者快照照片、 攝像頭應用程式關閉，並恢復該應用程式。
 
-如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然後允許使用者選擇一個現有圖像對話方塊的顯示。 `camera.getPicture`函數返回 `CameraPopoverHandle` 物件，可用於設備方向更改時重新置放圖像選擇對話方塊，例如。
+如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然後允許使用者選擇一個現有圖像對話方塊的顯示。 `camera.getPicture`函數返回 `[CameraPopoverHandle](parameter/CameraPopoverHandle.html)` 物件，可用於設備方向更改時重新置放圖像選擇對話方塊，例如。
 
-傳回值發送到 `cameraSuccess` 回呼函數，根據指定的以下格式之一 `cameraOptions` ：
+傳回值發送到 `[cameraSuccess](parameter/cameraSuccess.html)` 回呼函數，根據指定的以下格式之一 `[cameraOptions](parameter/cameraOptions.html)` ：
 
 *   A `String` 包含的 base64 編碼的照片圖像。
 

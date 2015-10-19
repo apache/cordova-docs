@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: online
 ---
 
 online
@@ -30,7 +32,7 @@ online
 
 アプリのネットワーク接続がオンラインになったとき、 online イベントが呼び出されます。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -41,7 +43,7 @@ online
 - Windows Phone 7
 - Tizen
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("online", onOnline, false);

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Coordinates
 ---
 
 # Coordinates
@@ -40,7 +42,7 @@ Un ensemble de propriétés décrivant les coordonnées géographiques d'une pos
 
 ## Description
 
-L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
+L'objet `Coordinates` est attaché à l'objet `[Position](../Position/position.html)`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
 
 ## Plates-formes supportées
 

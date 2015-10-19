@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows-Verpackungen
 ---
 
 # Windows-Verpackungen
@@ -104,7 +106,7 @@ Wenn wir dieses Pfx-Datei build.json-Datei zur Verfügung stellen, haben wir die
 
 Wo:
 
-  * user: "aktuellen Benutzer" gibt privaten Speicher
+  * user: "aktuellen Benutzer" gibt privaten [Speicher](../../../cordova/storage/storage.html)
   * p: Kennwort für die Pfx-Datei
   * importPfx: Name der Pfx-Datei
 

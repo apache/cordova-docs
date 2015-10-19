@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureErrorCB
 ---
 
 # CaptureErrorCB
@@ -29,7 +31,7 @@ license: >
 
 Questa funzione viene eseguita se si verifica un errore quando si tenta di lanciare un media catturare operazione. Fallimento scenari includono quando l'applicazione di cattura è occupato, un'operazione di acquisizione è già in atto, o l'utente annulla l'operazione prima che tutti i file multimediali vengono catturati.
 
-Questa funzione viene eseguita con un `CaptureError` oggetto contenente un errore appropriato`code`.
+Questa funzione viene eseguita con un `[CaptureError](CaptureError.html)` oggetto contenente un errore appropriato`code`.
 
 ## Esempio rapido
 

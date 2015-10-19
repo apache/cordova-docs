@@ -16,8 +16,10 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: database_name
 ---
 
 # database_name
 
-Der Name der Datenbank.
+Der Name der [Datenbank](../database/database.html).

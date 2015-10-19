@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS Shell Tool Guide
 ---
 
 # iOS Shell Tool Guide
 
-Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um iOS apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der Übersicht, möglicherweise einen größeren Bereich von Entwicklungsoptionen für iOS als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die SDK-Umgebung konfigurieren, wie in der iOS-Plattform Guide beschrieben. Diese Tools basieren auf Xcodes-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
+Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um iOS apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der [Übersicht](../../overview/index.html), möglicherweise einen größeren Bereich von Entwicklungsoptionen für iOS als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die SDK-Umgebung konfigurieren, wie in der iOS-Plattform Guide beschrieben. Diese Tools basieren auf Xcodes-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
 
 Um Shell Tools für iOS zu aktivieren, herunterladen Sie Cordova von [cordova.apache.org][1]. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie jedes Ziel, soll `ios` in diesem Fall. Die entsprechenden Tools stehen in der Regel in den übergeordneten `bin` Verzeichnis, sonst finden Sie in der **README** -Datei für detailliertere Wegbeschreibung.
 

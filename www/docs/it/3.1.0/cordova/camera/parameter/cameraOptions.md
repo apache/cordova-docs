@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraOptions
 ---
 
 # cameraOptions
@@ -61,7 +63,7 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 *   **saveToPhotoAlbum**: salvare l'immagine nell'album di foto sul dispositivo dopo la cattura. *(Booleano)*
 
-*   **popoverOptions**: solo iOS opzioni che specificano la posizione di muffin in iPad. Definito in`CameraPopoverOptions`.
+*   **popoverOptions**: solo iOS opzioni che specificano la posizione di muffin in iPad. Definito in`[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     
@@ -84,7 +86,7 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 *   Ignora il `allowEdit` parametro.
 
-*   Applicazione deve disporre delle autorizzazioni di iniezione chiave per chiudere l'applicazione nativa fotocamera dopo l'utente scatta la foto.
+*   Applicazione deve disporre delle autorizzazioni di iniezione chiave per [chiudere](../../inappbrowser/inappbrowser.html) l'applicazione nativa fotocamera dopo l'utente scatta la foto.
 
 *   Utilizzando immagini di grandi dimensioni può comportare l'impossibilità di codificare immagini su dispositivi modello successivo (ad es., Torch 9800) quella caratteristica di telecamere ad alta risoluzione.
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Boussole
 ---
 
 # Boussole
@@ -24,18 +26,18 @@ license: >
 
 ## Méthodes
 
-*   compass.getCurrentHeading
-*   compass.watchHeading
-*   compass.clearWatch
-*   compass.watchHeadingFilter (obsolète)
-*   compass.clearWatchFilter (obsolète)
+*   [compass.getCurrentHeading](compass.getCurrentHeading.html)
+*   [compass.watchHeading](compass.watchHeading.html)
+*   [compass.clearWatch](compass.clearWatch.html)
+*   [compass.watchHeadingFilter](compass.watchHeadingFilter.html) (obsolète)
+*   [compass.clearWatchFilter](compass.clearWatchFilter.html) (obsolète)
 
 ## Arguments
 
-*   compassSuccess
-*   compassError
-*   compassOptions
-*   compassHeading
+*   [compassSuccess](parameters/compassSuccess.html)
+*   [compassError](parameters/compassError.html)
+*   [compassOptions](parameters/compassOptions.html)
+*   [compassHeading](parameters/compassHeading.html)
 
 ## Accéder à la fonctionnalité
 

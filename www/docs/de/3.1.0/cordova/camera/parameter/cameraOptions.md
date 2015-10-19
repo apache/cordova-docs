@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraOptions
 ---
 
 # cameraOptions
@@ -27,7 +29,7 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 ## Optionen
 
-*   **Qualität**: Qualität des gespeicherten Bildes, ausgedrückt als ein Bereich von 0-100, wo 100 in der Regel voller Auflösung ohne Verlust aus der Dateikomprimierung ist. *(Anzahl)* (Beachten Sie, dass Informationen über die Kamera Auflösung nicht verfügbar ist.)
+*   **Qualität**: Qualität des gespeicherten Bildes, ausgedrückt als ein Bereich von 0-100, wo 100 in der Regel voller Auflösung ohne Verlust aus der Dateikomprimierung ist. *(Anzahl)* (Beachten Sie, dass Informationen über die [Kamera](../camera.html) Auflösung nicht verfügbar ist.)
 
 *   **destinationType**: Choose the format of the return value. Defined in `navigator.camera.DestinationType` *(Number)*
     
@@ -50,7 +52,7 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 *   **TargetHeight**: Höhe in Pixel zum Bild skalieren. Muss mit **TargetWidth**verwendet werden. Seitenverhältnis bleibt konstant. *(Anzahl)*
 
-*   **MediaType**: Legen Sie den Typ der Medien zur Auswahl. Funktioniert nur, wenn `PictureSourceType` ist `PHOTOLIBRARY` oder `SAVEDPHOTOALBUM` . Im Sinne `nagivator.camera.MediaType` *(Anzahl)* 
+*   **MediaType**: Legen Sie den Typ der [Medien](../../media/media.html) zur Auswahl. Funktioniert nur, wenn `PictureSourceType` ist `PHOTOLIBRARY` oder `SAVEDPHOTOALBUM` . Im Sinne `nagivator.camera.MediaType` *(Anzahl)* 
     
         Camera.MediaType = {Bild: 0, / / Auswahl der Standbilder nur ermöglichen. STANDARD. Kehrt über DestinationType VIDEO angegebenen Format: 1, / / ermöglichen Auswahl an nur, Video wird immer zurückgegeben FILE_URI ALLMEDIA: 2 / / Auswahl von alle Medientypen zulassen
         
@@ -59,9 +61,9 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 *   **CorrectOrientation**: Drehen Sie das Bild um die Ausrichtung des Geräts während der Aufnahme zu korrigieren. *(Boolesch)*
 
-*   **SaveToPhotoAlbum**: das Bild auf das Fotoalbum auf dem Gerät zu speichern, nach Einnahme. *(Boolesch)*
+*   **SaveToPhotoAlbum**: das Bild auf das Fotoalbum auf dem [Gerät](../../device/device.html) zu speichern, nach Einnahme. *(Boolesch)*
 
-*   **PopoverOptions**: iOS-nur Optionen, die Popover Lage in iPad angeben. In definierten`CameraPopoverOptions`.
+*   **PopoverOptions**: iOS-nur Optionen, die Popover Lage in iPad angeben. In definierten`[CameraPopoverOptions](CameraPopoverOptions.html)`.
 
 *   **cameraDirection**: Choose the camera to use (front- or back-facing). Defined in `navigator.camera.Direction` *(Number)*
     

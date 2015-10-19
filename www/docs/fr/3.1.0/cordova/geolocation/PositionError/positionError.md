@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: PositionError
 ---
 
 # PositionError
 
-Un objet `PositionError` est passé à la fonction callback `geolocationError` lorsqu'une erreur survient.
+Un objet `PositionError` est passé à la fonction callback `[geolocationError](../parameters/geolocationError.html)` lorsqu'une erreur survient.
 
 ## Propriétés
 
@@ -36,7 +38,7 @@ Un objet `PositionError` est passé à la fonction callback `geolocationError` l
 
 ## Description
 
-L'objet `PositionError` est passé à la fonction callback `geolocationError` lorsqu'une erreur de géolocalisation se produit.
+L'objet `PositionError` est passé à la fonction callback `[geolocationError](../parameters/geolocationError.html)` lorsqu'une erreur de géolocalisation se produit.
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -48,4 +50,4 @@ Renvoyé lorsque l'appareil n'est pas en mesure de récupérer une position. En 
 
 ### `PositionError.TIMEOUT`
 
-Retourné lorsque l'appareil n'est pas en mesure de récupérer une position dans le délai précisé par la propriété `timeout` de l'objet `geolocationOptions` associé. Dans le cas de l'utilisation de `geolocation.watchPosition`, cette erreur pourrait être transmise à la fonction callback `geolocationError` chaque `timeout` millisecondes.
+Retourné lorsque l'appareil n'est pas en mesure de récupérer une position dans le délai précisé par la propriété `timeout` de l'objet `[geolocationOptions](../parameters/geolocation.options.html)` associé. Dans le cas de l'utilisation de `[geolocation.watchPosition](../geolocation.watchPosition.html)`, cette erreur pourrait être transmise à la fonction callback `[geolocationError](../parameters/geolocationError.html)` chaque `timeout` millisecondes.

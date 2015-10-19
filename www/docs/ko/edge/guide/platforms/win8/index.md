@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 플랫폼 가이드
 ---
 
 # Windows 플랫폼 가이드
@@ -100,7 +102,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 
 ## 새 프로젝트 만들기
 
-이 시점에서, 새로운 프로젝트를 생성 하려면 크로스-플랫폼 CLI 도구는 명령줄 인터페이스, 또는 특정 Windows 셸 도구 집합 설명 사이 선택할 수 있습니다. CLI 접근 아래는 애플 리 케이 션을 새로운 `hello` 프로젝트 디렉터리 내에서 *HelloWorld* 라는 생성:
+이 시점에서, 새로운 프로젝트를 생성 하려면 크로스-플랫폼 CLI 도구는 [명령줄 인터페이스](../../cli/index.html), 또는 특정 Windows 셸 도구 집합 설명 사이 선택할 수 있습니다. CLI 접근 아래는 애플 리 케이 션을 새로운 `hello` 프로젝트 디렉터리 내에서 *HelloWorld* 라는 생성:
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
@@ -157,7 +159,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 
 ### 대상 Windows 버전에 대 한 고려 사항
 
-윈도우 10 코르도바 애플 리 케이 션 (및 일반에서 HTML 애플 리 케이 션)에 대 한 새로운 "원격" 모드를 지원합니다. 이 모드 애플 리 케이 션 DOM 조작 및 인라인 스크립트를 사용 하 여 같은 일반적인 웹 패턴의 사용을 훨씬 더 자유 존중 하지만 너무 기능 집합을 줄임으로써 응용 프로그램 공용 Windows 스토어에 제출 하는 경우 사용할 수 있습니다. 윈도우 10 및 원격 모드에 대 한 자세한 내용은, [Cordova에 대 한 Windows 10][13] 설명서를 봐.
+[윈도우 10 코르도바](win10-support.html) 애플 리 케이 션 (및 일반에서 HTML 애플 리 케이 션)에 대 한 새로운 "원격" 모드를 지원합니다. 이 모드 애플 리 케이 션 DOM 조작 및 인라인 스크립트를 사용 하 여 같은 일반적인 웹 패턴의 사용을 훨씬 더 자유 존중 하지만 너무 기능 집합을 줄임으로써 응용 프로그램 공용 Windows 스토어에 제출 하는 경우 사용할 수 있습니다. 윈도우 10 및 원격 모드에 대 한 자세한 내용은, [Cordova에 대 한 Windows 10][13] 설명서를 봐.
 
  [13]: win10-support.md.html
 

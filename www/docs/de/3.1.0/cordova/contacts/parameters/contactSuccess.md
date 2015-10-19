@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 # contactSuccess
 
-Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `contacts.find` Betrieb.
+Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `[contacts.find](../contacts.find.html)` Betrieb.
 
     function(contacts) {
         // Do something
@@ -29,7 +31,7 @@ Erfolg-Callback-Funktion bietet die `Contact` Array aus einem `contacts.find` Be
 
 ## Parameter
 
-*   **Kontakt**: das Kontakt Array aus einem Suchvorgang. *(Kontakt)*
+*   **Kontakt**: das [Kontakt](../Contact/contact.html) Array aus einem Suchvorgang. *(Kontakt)*
 
 ## Beispiel
 

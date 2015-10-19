@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon fuego OS configuración
 ---
 
 # Amazon fuego OS configuración
@@ -24,7 +26,7 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena. Si se establece como `false` no mata la aplicación después de un `pause` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
+*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `[pause](../../../cordova/events/events.pause.html)` de evento se desencadena. Si se establece como `false` no mata la aplicación después de un `[pause](../../../cordova/events/events.pause.html)` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         

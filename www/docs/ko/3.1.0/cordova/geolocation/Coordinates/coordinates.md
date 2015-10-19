@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 좌표
 ---
 
 # 좌표
@@ -28,7 +30,7 @@ license: >
 
 *   **경도**: 경도 10 진수 각도. *(수)*
 
-*   **고도**: 높이의 타원 면 미터에 위치. *(수)*
+*   **고도**: 높이의 타원 면 미터에 [위치](../Position/position.html). *(수)*
 
 *   **정확도**: 정확도 레벨 미터에 위도 및 경도 좌표. *(수)*
 
@@ -40,7 +42,7 @@ license: >
 
 ## 설명
 
-`Coordinates`개체에 연결 된에서 `Position` 개체를 현재 위치에 대 한 요청에 콜백 함수를 사용할 수 있습니다.
+`Coordinates`개체에 [연결](../../connection/connection.html) 된에서 `Position` 개체를 현재 위치에 대 한 요청에 콜백 함수를 사용할 수 있습니다.
 
 ## 지원 되는 플랫폼
 

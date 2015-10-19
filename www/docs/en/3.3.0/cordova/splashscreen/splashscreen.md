@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Splashscreen
 ---
 
 # Splashscreen
@@ -24,8 +26,8 @@ license: >
 
 ## Methods
 
-- splashscreen.show
-- splashscreen.hide
+- [splashscreen.show](splashscreen.show.html)
+- [splashscreen.hide](splashscreen.hide.html)
 
 ## Accessing the Feature
 
@@ -64,6 +66,6 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.
 
-See Icons and Splash Screens for information on how to configures these images.
+See [Icons and Splash Screens](../../config_ref/images.html) for information on how to configures these images.

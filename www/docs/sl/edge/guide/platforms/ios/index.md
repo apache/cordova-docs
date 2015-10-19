@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS platformi vodnik
 ---
 
 # iOS platformi vodnik
 
 Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova apps za iOS naprave, kot so iPhone in iPad. Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   iOS konfiguracijo
-*   Nadgradnja iOS
-*   iOS spletni pogledi
-*   iOS Plugins
-*   iOS orodja ukazne vrstice
+*   [iOS konfiguracijo](config.html)
+*   [Nadgradnja iOS](upgrading.html)
+*   [iOS spletni pogledi](webview.html)
+*   [iOS Plugins](plugin.html)
+*   [iOS orodja ukazne vrstice](tools.html)
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 

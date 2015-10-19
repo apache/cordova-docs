@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Camera
 ---
 
 Camera
@@ -33,13 +35,13 @@ camera (if the device operating system doesn't do so already).  That
 notice should provide the same information noted above, as well as
 obtaining the user's permission (e.g., by presenting choices for
 __OK__ and __No Thanks__).  For more information, please see the
-Privacy Guide.
+[Privacy Guide](../../guide/appdev/privacy/index.html).
 
 Methods
 -------
 
-- camera.getPicture
-- camera.cleanup
+- [camera.getPicture](camera.getPicture.html)
+- [camera.cleanup](camera.cleanup.html)
 
 ## Accessing the Feature
 

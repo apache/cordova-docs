@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 # LocalFileSystem
@@ -26,7 +28,7 @@ Cet objet fournit un moyen d'obtenir la racine de systèmes de fichiers.
 
 *   **requestFileSystem** : demande un système de fichiers. *(Function)*
 
-*   **resolveLocalFileSystemURI** : récupère un objet `DirectoryEntry` ou `FileEntry` à partir d'un URI local. *(Function)*
+*   **resolveLocalFileSystemURI** : récupère un objet `[DirectoryEntry](../directoryentry/directoryentry.html)` ou `[FileEntry](../fileentry/fileentry.html)` à partir d'un URI local. *(Function)*
 
 ## Constantes
 
@@ -117,7 +119,7 @@ Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'obje
 *   **window** : référence à l'objet global window
 *   **type** : type du système de fichiers local, voir les constantes associées à l'objet LocalFileSystem
 *   **size** : indique la quantité d'espace stockage, en octets, requise par l'application
-*   **successCallback** : fonction appelée avec un objet FileSystem
+*   **successCallback** : fonction appelée avec un objet [FileSystem](../filesystem/filesystem.html)
 *   **errorCallback** : fonction invoquée si une erreur se produit lors de la récupération du système de fichiers
 
 ## Exemple court de demande d'un système de fichiers

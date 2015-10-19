@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFileData
 ---
 
 # MediaFileData
 
-> 미디어 파일에 대 한 형식 정보를 캡슐화합니다.
+> [미디어](../media.html) 파일에 대 한 형식 정보를 캡슐화합니다.
 
 ## 속성
 
@@ -36,7 +38,7 @@ license: >
 
 ## 블랙베리 WebWorks 단점
 
-미디어 파일에 대 한 형식 정보를 제공 하는 없는 API 때문에 `MediaFileData` 에 의해 반환 되는 개체 `MediaFile.getFormatData` 다음과 같은 기본 값을 기능:
+[미디어](../media.html) 파일에 대 한 형식 정보를 제공 하는 없는 API 때문에 `MediaFileData` 에 의해 반환 되는 개체 `[MediaFile.getFormatData](MediaFile.getFormatData.html)` 다음과 같은 기본 값을 기능:
 
 *   **코덱**: 안 지원, 및 반환`null`.
 
@@ -68,7 +70,7 @@ license: >
 
 *   **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: iOS4 장치 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
+*   **비트 레이트**: iOS4 [장치](../../device/device.html) 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
 
 *   **높이**: 지원: 이미지 및 비디오 파일에만.
 

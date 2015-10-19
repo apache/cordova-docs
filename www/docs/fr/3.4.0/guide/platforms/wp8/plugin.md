@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone Plugins
 ---
 
 # Windows Phone Plugins
@@ -46,7 +48,7 @@ Cette section fournit des détails pour l'implémentation de code du plugin nati
                 / / public, vide, 1 argument qui est une chaîne de retour}}
         
 
-Consultez la classe [BaseCommand.cs][1] pour les méthodes disponibles pour le plugin à substituer. Par exemple, le plugin peut capturer des événements de « pause », « reprendre ».
+Consultez la classe [BaseCommand.cs][1] pour les méthodes disponibles pour le plugin à substituer. Par exemple, le plugin peut capturer des événements de « [pause](../../../cordova/events/events.pause.html) », « reprendre ».
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 

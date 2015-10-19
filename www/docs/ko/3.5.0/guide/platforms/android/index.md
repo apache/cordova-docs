@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 안 드 로이드 플랫폼 가이드
 ---
 
 # 안 드 로이드 플랫폼 가이드
@@ -24,11 +26,11 @@ license: >
 
 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   안 드 로이드 구성
-*   안 드 로이드 WebViews
-*   안 드 로이드 플러그인
-*   안 드 로이드 업그레이드
-*   안 드 로이드 명령줄 도구
+*   [안 드 로이드 구성](config.html)
+*   [안 드 로이드 WebViews](webview.html)
+*   [안 드 로이드 플러그인](plugin.html)
+*   [안 드 로이드 업그레이드](upgrading.html)
+*   [안 드 로이드 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 

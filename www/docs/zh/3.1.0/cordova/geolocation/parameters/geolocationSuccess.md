@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocationSuccess
 ---
 
 # geolocationSuccess
 
-使用者的地理位置變得可用時執行的回呼函數 （當從調用 `geolocation.getCurrentPosition` ），或 （當從調用位置的更改時`geolocation.watchPosition`).
+使用者的地理位置變得可用時執行的回呼函數 （當從調用 `[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)` ），或 （當從調用位置的更改時`[geolocation.watchPosition](../geolocation.watchPosition.html)`).
 
     function(position) {
         // Do something

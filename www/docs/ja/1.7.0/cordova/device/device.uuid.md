@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.uuid
 ---
 
 device.uuid
@@ -39,7 +41,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     // Android: ランダムな64ビットの数値を文字列として返します

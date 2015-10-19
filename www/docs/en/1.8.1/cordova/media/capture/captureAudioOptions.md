@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureAudioOptions
 ---
 
 CaptureAudioOptions
@@ -30,7 +32,7 @@ Properties
 - __duration:__ The maximum duration of an audio sound clip, in seconds.
 - __mode:__ The selected audio mode.  The value must match one of the elements in `capture.supportedAudioModes`.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 media files, no longer than 10 seconds each

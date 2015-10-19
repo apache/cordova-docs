@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Plugins
 ---
 
 # Android Plugins
@@ -33,7 +35,7 @@ Android WebView with hooks attached to it.  Plugins are represented as
 class mappings in the `config.xml` file.  A plugin consists of at
 least one Java class that extends the `CordovaPlugin` class,
 overriding one of its `execute` methods. As best practice, the plugin
-should also handle `pause` and `resume` events, along with any message
+should also handle `[pause](../../../cordova/events/events.pause.html)` and `[resume](../../../cordova/events/events.resume.html)` events, along with any message
 passing between plugins.  Plugins with long-running requests,
 background activity such as media playback, listeners, or internal
 state should implement the `onReset()` method as well. It executes

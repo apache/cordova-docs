@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getCurrencyPattern
 ---
 
 globalization.getCurrencyPattern
@@ -39,7 +41,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 
 引数の `currencyCode` パラメーターは、例えば 'USD' などの、 ISO 4217 通貨コードのうちの1つである必要があります。
 
-もしパターン取得中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.FORMATTING\_ERROR です。
+もしパターン取得中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR です。
 
 サポートされているプラットフォーム
 -------------------
@@ -48,7 +50,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定され、通貨には US ドルが選択された場合、以下のような文字列をポップアップダイアログに表示します:

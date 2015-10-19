@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Platform Guides
 ---
 
 # Platform Guides
 
 Before developing for any of the platforms listed below, install
 cordova's command-line interface (CLI).
-(For details, see The Command-Line Interface.)
+(For details, see [The Command-Line Interface](../cli/index.html).)
 
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless
@@ -40,58 +42,58 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## Amazon Fire OS
 
-* Amazon Fire OS Platform Guide
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* [Amazon Fire OS Platform Guide](amazonfireos/index.html)
+* [Amazon Fire OS Configuration](amazonfireos/config.html)
+* [Amazon Fire OS WebViews](amazonfireos/webview.html)
+* [Amazon Fire OS Plugins](amazonfireos/plugin.html)
 
 ## Android
 
-* Android Platform Guide
-* Android Shell Tool Guide
-* Android Configuration
-* Android Plugins
-* Android WebViews
-* Upgrading Android
+* [Android Platform Guide](android/index.html)
+* [Android Shell Tool Guide](android/tools.html)
+* [Android Configuration](android/config.html)
+* [Android Plugins](android/plugin.html)
+* [Android WebViews](android/webview.html)
+* [Upgrading Android](android/upgrade.html)
 
 ## BlackBerry 10
 
-* BlackBerry 10 Platform Guide
-* BlackBerry 10 Shell Tool Guide
-* BlackBerry 10 Configuration
-* BlackBerry 10 Plugins
+* [BlackBerry 10 Platform Guide](blackberry10/index.html)
+* [BlackBerry 10 Shell Tool Guide](blackberry10/tools.html)
+* [BlackBerry 10 Configuration](blackberry10/config.html)
+* [BlackBerry 10 Plugins](blackberry10/plugin.html)
 * BlackBerry 10 Command-line Tools
-* Upgrading BlackBerry 10
+* [Upgrading BlackBerry](blackberry/upgrade.html) 10
 
 ## Firefox OS
 
-* Firefox OS Platform Guide
+* [Firefox OS Platform Guide](firefoxos/index.html)
 
 ## iOS
 
-* iOS Platform Guide
-* iOS Shell Tool Guide
-* iOS Configuration
-* iOS Plugins
-* iOS WebViews
-* Upgrading iOS
+* [iOS Platform Guide](ios/index.html)
+* [iOS Shell Tool Guide](ios/tools.html)
+* [iOS Configuration](ios/config.html)
+* [iOS Plugins](ios/plugin.html)
+* [iOS WebViews](ios/webview.html)
+* [Upgrading iOS](ios/upgrade.html)
 
 ## Ubuntu
 
-* Ubuntu Platform Guide
+* [Ubuntu Platform Guide](ubuntu/index.html)
 
 ## Windows Phone
 
-* Windows Phone Platform Guide
-* Windows Phone Plugins
-* Upgrading Windows Phone
+* [Windows Phone Platform Guide](wp8/index.html)
+* [Windows Phone Plugins](wp8/plugin.html)
+* [Upgrading Windows Phone](wp8/upgrade.html)
 
 ## Windows 8
 
-* Windows 8 Platform Guide
-* Upgrading Windows 8
+* [Windows 8 Platform Guide](win8/index.html)
+* [Upgrading Windows 8](win8/upgrade.html)
 
 ## Tizen
 
-* Tizen Platform Guide
+* [Tizen Platform Guide](tizen/index.html)
 

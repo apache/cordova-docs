@@ -16,19 +16,21 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Metadaten
 ---
 
 # Metadaten
 
-Eine Schnittstelle, die Informationen über den Status einer Datei oder eines Verzeichnisses angibt.
+Eine Schnittstelle, die Informationen über den Status einer [Datei](../fileobj/fileobj.html) oder eines Verzeichnisses angibt.
 
 ## Eigenschaften
 
-*   **ModificationTime**: die Zeit, wann die Datei oder das Verzeichnis zuletzt geändert wurde. *(Datum)*
+*   **ModificationTime**: die Zeit, wann die [Datei](../fileobj/fileobj.html) oder das Verzeichnis zuletzt geändert wurde. *(Datum)*
 
 ## Informationen
 
-Das `Metadata` -Objekt stellt Informationen über den Status einer Datei oder eines Verzeichnisses dar. Aufruf einer `DirectoryEntry` oder `FileEntry` des Objekts `getMetadata()` Methode führt eine `Metadata` Instanz.
+Das `Metadata` -Objekt stellt Informationen über den Status einer [Datei](../fileobj/fileobj.html) oder eines Verzeichnisses dar. Aufruf einer `[DirectoryEntry](../directoryentry/directoryentry.html)` oder `FileEntry` des Objekts `getMetadata()` Methode führt eine `Metadata` Instanz.
 
 ## Unterstützte Plattformen
 

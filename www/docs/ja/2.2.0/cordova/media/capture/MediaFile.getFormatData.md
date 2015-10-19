@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaFile.getFormatData
 ---
 
-MediaFile.getFormatData
+[MediaFile](MediaFile.html).getFormatData
 =======================
 
 > メディアキャプチャーファイルのフォーマット情報を取得します。
@@ -31,7 +33,7 @@ MediaFile.getFormatData
 概要
 -----------
 
-この関数は、メディアファイルのフォーマット情報の取得を非同期で試みます。もし成功すれば、 MediaFileData オブジェクトを伴った MediaFileDataSuccessCB コールバック関数を呼び出します。もし失敗すれば、 MediaFileDataErrorCB コールバック関数を呼び出します。
+この関数は、メディアファイルのフォーマット情報の取得を非同期で試みます。もし成功すれば、 [MediaFileData](MediaFileData.html) オブジェクトを伴った MediaFileDataSuccessCB コールバック関数を呼び出します。もし失敗すれば、 MediaFileDataErrorCB コールバック関数を呼び出します。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,12 +45,12 @@ MediaFile.getFormatData
 
 BlackBerry WebWorks に関する注意点
 --------------------------
-メディアファイルのフォーマット情報を提供する API はありません。従って、全ての MediaFileData オブジェクトはデフォルト値で返されます。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を提供する API はありません。従って、全ての [MediaFileData](MediaFileData.html) オブジェクトはデフォルト値で返されます。詳しくは [MediaFileData](MediaFileData.html) のドキュメントをご覧ください。
 
 Android に関する注意点
 --------------
-メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての [MediaFileData](MediaFileData.html) のプロパティーがサポートされている訳ではありません。詳しくは [MediaFileData](MediaFileData.html) のドキュメントをご覧ください。
 
 iOS に関する注意点
 ----------
-メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての [MediaFileData](MediaFileData.html) のプロパティーがサポートされている訳ではありません。詳しくは [MediaFileData](MediaFileData.html) のドキュメントをご覧ください。

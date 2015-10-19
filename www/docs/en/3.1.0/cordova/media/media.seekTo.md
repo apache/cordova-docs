@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.seekTo
 ---
 
 # media.seekTo
@@ -31,8 +33,8 @@ Sets the current position within an audio file.
 ## Description
 
 The `media.seekTo` executes asynchronously, updating the current
-playback position within an audio file referenced by a `Media`
-object. Also updates the `Media` object's `position` parameter.
+playback position within an audio file referenced by a `[Media](media.html)`
+object. Also updates the `[Media](media.html)` object's `position` parameter.
 
 ## Supported Platforms
 

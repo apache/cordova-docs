@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 # compass.getCurrentHeading
@@ -31,7 +33,7 @@ device is pointed, typically from the top of the device.  It measures
 the heading in degrees from 0 to 359.99, where 0 is north.
 
 The compass heading information is returned via a `CompassHeading`
-object using the `compassSuccess` callback function.
+object using the `[compassSuccess](parameters/compassSuccess.html)` callback function.
 
 ## Supported Platforms
 

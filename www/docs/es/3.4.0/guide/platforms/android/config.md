@@ -16,13 +16,15 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Configuración de Android
 ---
 
 # Configuración de Android
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Nota: si se establece en false no matará la aplicación después de una pausa, sólo detendrá la ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `[pause](../../../cordova/events/events.pause.html)` evento incendios. Nota: si se establece en false no matará la aplicación después de una pausa, sólo detendrá la ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
@@ -42,7 +44,7 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo localStorage y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.
+*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo [localStorage](../../../cordova/storage/localstorage/localstorage.html) y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         

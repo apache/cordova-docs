@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 離線
 ---
 
 # 離線
@@ -27,9 +29,9 @@ license: >
 
 ## 詳細資訊
 
-`offline`以前連接的設備失去網路連接，這樣，應用程式不再可以訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時 `connection.type` 從更改 `NONE` 為其他任何值。
+`offline`以前連接的設備失去網路連接，這樣，應用程式不再可以訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時 `[connection.type](../connection/connection.type.html)` 從更改 `NONE` 為其他任何值。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `[deviceready](events.deviceready.html)` 事件火災。
 
 ## 支援的平臺
 

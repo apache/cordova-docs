@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.numberToString
 ---
 
 globalization.numberToString
@@ -33,8 +35,8 @@ Returns the formatted number string to the `successCallback` with a
 property with a `String` value.
 
 If there is an error formatting the number, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR`.
 
 The `options` parameter is optional, and its default values are:
 
@@ -50,7 +52,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this displays a popup
@@ -63,7 +65,7 @@ dialog with text similar to `number: 3.142`:
         {type:'decimal'}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

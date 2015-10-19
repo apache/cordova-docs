@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Capture
 ---
 
 # Capture
@@ -35,26 +37,26 @@ user's permission (e.g., by presenting choices for __OK__ and __No
 Thanks__).  Note that some app marketplaces may require your app to
 provide just-in-time notice and obtain permission from the user prior
 to accessing the camera or microphone.  For more information, please
-see the Privacy Guide.
+see the [Privacy Guide](../../../guide/appdev/privacy/index.html).
 
 ## Objects
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
+- [CaptureAudioOptions](captureAudioOptions.html)
+- [CaptureImageOptions](captureImageOptions.html)
+- [CaptureVideoOptions](captureVideoOptions.html)
 - CaptureCallback
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- [CaptureErrorCB](CaptureErrorCB.html)
+- [ConfigurationData](ConfigurationData.html)
+- [MediaFile](MediaFile.html)
+- [MediaFileData](MediaFileData.html)
 
 ## Methods
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- [capture.captureAudio](captureAudio.html)
+- [capture.captureImage](captureImage.html)
+- [capture.captureVideo](captureVideo.html)
+- [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 ## Scope
 
@@ -74,11 +76,11 @@ therefore has global scope.
 
 ## Methods
 
-- `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
+- `[capture.captureAudio](captureAudio.html)`: Launch the device's audio recording application to record audio clips.
 
-- `capture.captureImage`: Launch the device's camera application to take photos.
+- `[capture.captureImage](captureImage.html)`: Launch the device's camera application to take photos.
 
-- `capture.captureVideo`: Launch the device's video recorder application to record videos.
+- `[capture.captureVideo](captureVideo.html)`: Launch the device's video recorder application to record videos.
 
 ## Supported Platforms
 
@@ -162,4 +164,4 @@ platform-specific configuration settings described below:
         </Capabilities>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../../guide/support/index.html) for an overview.

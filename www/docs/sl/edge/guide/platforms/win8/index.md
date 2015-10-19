@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 platformi vodnik
 ---
 
 # Windows 8 platformi vodnik
 
 Ta vodič pokaže, kako vzpostaviti vaš SDK razvojno okolje za uvajanje Cordova aplikacije za Windows 8. Glej naslednje podrobnejše informacije značilne za platformo:
 
-*   Nadgradnjo operacijskega sistema Windows 8
-*   Orodja ukazne vrstice Windows 8
+*   [Nadgradnjo operacijskega sistema Windows 8](upgrading.html)
+*   [Orodja ukazne vrstice Windows 8](tools.html)
 
 Orodja ukazne vrstice zgoraj se nanašajo na različicah Cordova 3.0. Glej The vmesnik ukazne vrstice za informacije o trenutni vmesnik.
 
@@ -81,7 +83,7 @@ Travnato gričevje ter citat ki postaja latenten ulitek [Cordova][3]. Ti instuct
             <script src="/js/default.js"></script>
         
 
-*   Dodaj a `deviceready` trener dokazati Cordova deluje:
+*   Dodaj a `[deviceready](../../../cordova/events/events.deviceready.html)` trener dokazati Cordova deluje:
     
         <body>
             <p>Content goes here</p>

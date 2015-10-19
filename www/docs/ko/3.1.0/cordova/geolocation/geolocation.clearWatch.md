@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.clearWatch
 ---
 
 # geolocation.clearWatch
 
-참조 디바이스의 위치 변경에 대 한 보고 중지는 `watchID` 매개 변수.
+참조 디바이스의 [위치](Position/position.html) 변경에 대 한 보고 중지는 `watchID` 매개 [변수](../../plugin_ref/spec.html).
 
     navigator.geolocation.clearWatch(watchID);
     
@@ -31,7 +33,7 @@ license: >
 
 ## 설명
 
-`geolocation.clearWatch`선택을 취소 하 여 소자의 위치에 변화를 보고 중지는 `geolocation.watchPosition` 에 의해 참조 된`watchID`.
+`geolocation.clearWatch`선택을 취소 하 여 소자의 위치에 변화를 보고 중지는 `[geolocation.watchPosition](geolocation.watchPosition.html)` 에 의해 참조 된`watchID`.
 
 ## 지원 되는 플랫폼
 

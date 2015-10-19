@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactError
 ---
 
 # contactError
 
-연락처 기능에 대 한 오류 콜백 함수입니다.
+[연락처](../contacts.html) 기능에 대 한 오류 콜백 함수입니다.
 
     function(error) {
         // Handle the error

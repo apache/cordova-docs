@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS-Befehlszeilenprogrammen
 ---
 
 # iOS-Befehlszeilenprogrammen
@@ -26,7 +28,7 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
 Die iOS-Befehlszeilentools basieren auf Shell-Skripte und verlassen sich auf Xcode-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
 
-Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine [Übersicht](../../overview/index.html) finden Sie unter Application Plugins.
 
 ## Erstellen Sie ein Projekt
 

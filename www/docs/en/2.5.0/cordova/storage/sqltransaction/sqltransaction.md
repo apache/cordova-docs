@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SQLTransaction
 ---
 
 SQLTransaction
 =======
 
-Contains methods that allow the user to execute SQL statements against the Database.
+Contains methods that allow the user to execute SQL statements against the [Database](../database/database.html).
 
 Methods
 -------
@@ -31,7 +33,7 @@ Methods
 Details
 -------
 
-When you call a Database objects transaction method it's callback methods will be called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.  
+When you call a [Database](../database/database.html) objects transaction method it's callback methods will be called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.  
 
 Supported Platforms
 -------------------
@@ -42,7 +44,7 @@ Supported Platforms
 - webOS
 - Tizen
 
-Execute SQL Quick Example
+Execute SQL Quick [Example](../storage.opendatabase.html)
 ------------------
 
 	function populateDB(tx) {
@@ -60,10 +62,10 @@ Execute SQL Quick Example
 		alert("success!");
 	}
 	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+	var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 	db.transaction(populateDB, errorCB, successCB);
 
-Full Example
+Full [Example](../storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -81,7 +83,7 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+			var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
         }
 		

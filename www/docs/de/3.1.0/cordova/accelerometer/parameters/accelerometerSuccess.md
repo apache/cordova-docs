@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometerSuccess
 ---
 
 # accelerometerSuccess
 
-OnSuccess Callback-Funktion, die die `Beschleunigung` Informationen bereitstellt.
+OnSuccess Callback-Funktion, die die `[Beschleunigung](../acceleration/acceleration.html)` Informationen bereitstellt.
 
     function(acceleration) {
         // Do something
@@ -29,7 +31,7 @@ OnSuccess Callback-Funktion, die die `Beschleunigung` Informationen bereitstellt
 
 ## Parameter
 
-*   **acceleration**: Die Beschleunigung in einem einzigen Moment der Zeit. (Beschleunigung)
+*   **acceleration**: Die [Beschleunigung](../acceleration/acceleration.html) in einem einzigen Moment der Zeit. (Beschleunigung)
 
 ## Beispiel
 

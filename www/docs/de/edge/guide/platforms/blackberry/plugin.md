@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry-Plugins
 ---
 
 # BlackBerry-Plugins
 
-Diese Anleitung zeigt, wie ein Echo-Plugin auf BlackBerry zu entwickeln. Die Plugin-Entwicklung-Guide bietet einen umfassenden Überblick, mit dem Sie bereits vertraut sein sollten, und dieser Anleitung nimmt wo es aufhört. Darüber hinaus das [Cordova BlackBerry-Repository][1] herunterladen.
+Diese Anleitung zeigt, wie ein Echo-Plugin auf BlackBerry zu entwickeln. Die [Plugin-Entwicklung-Guide](../../hybrid/plugins/index.html) bietet einen umfassenden Überblick, mit dem Sie bereits vertraut sein sollten, und dieser Anleitung nimmt wo es aufhört. Darüber hinaus das [Cordova BlackBerry-Repository][1] herunterladen.
 
  [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
 

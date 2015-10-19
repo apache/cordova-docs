@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Metadata
 ---
 
 Metadata
@@ -31,7 +33,7 @@ Metadata
 詳細
 -------
 
-`Metadata` オブジェクトは、ファイルやディレクトリの状態を表します。 `DirectoryEntry` または `FileEntry` の __getMetadata__ メソッドを呼び出すことで、 Metadata オブジェクトが取得できます。
+`Metadata` オブジェクトは、ファイルやディレクトリの状態を表します。 `[DirectoryEntry](../directoryentry/directoryentry.html)` または `[FileEntry](../fileentry/fileentry.html)` の __getMetadata__ メソッドを呼び出すことで、 Metadata オブジェクトが取得できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -41,7 +43,7 @@ Metadata
 - iOS
 - Windows Phone 7 (Mango)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     function win(metadata) {

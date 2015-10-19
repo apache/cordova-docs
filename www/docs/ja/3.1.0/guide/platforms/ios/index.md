@@ -16,17 +16,19 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS プラットフォーム ガイド
 ---
 
 # iOS プラットフォーム ガイド
 
 このガイドは、iPhone や iPad などの iOS デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   iOS 構成
-*   IOS のアップグレード
-*   iOS の web 表示
-*   iOS のプラグイン
-*   iOS コマンド ライン ツール
+*   [iOS 構成](config.html)
+*   [IOS のアップグレード](upgrading.html)
+*   [iOS の web 表示](webview.html)
+*   [iOS のプラグイン](plugin.html)
+*   [iOS コマンド ライン ツール](tools.html)
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Amazon Fire OS плагины
 ---
 
 # Amazon Fire OS плагины
 
-Следуйте инструкциям, приведенным в справочнике Android плагины обзор разработки пользовательских плагинов.
+Следуйте инструкциям, приведенным в справочнике [Android плагины](../android/plugin.html) обзор разработки пользовательских плагинов.
 
 ## Эхо Amazon Fire OS плагин пример
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guida allo sviluppo di plugin
 ---
 
 # Guida allo sviluppo di plugin
@@ -73,17 +75,17 @@ Il callback di successo passati in `exec` è semplicemente un riferimento al met
 
 Cordova ha una specifica di plugin disponibile per consentire l'installazione automatica del plugin per Android, iOS, piattaforme 10 BlackBerry e Windows Phone. Strutturare il vostro plugin in modo particolare e aggiungendo un `plugin.xml` file manifesto, si possono consentire agli utenti di installare il plugin tramite l'utensileria da riga di comando.
 
-*   Plugin Specification
+*   [Plugin Specification](../../../plugin_ref/spec.html)
 
 ## Nativo
 
 Una volta definito per il plugin JavaScript, è necessario integrarla con almeno un'implementazione nativa. Dettagli di farlo per ciascuna piattaforma sono elencate di seguito. Queste guide continuano a costruire il semplice esempio Echo Plugin discusso sopra.
 
-*   Plugin Android
-*   BlackBerry Plugins
-*   BlackBerry 10 plugin
-*   iOS Plugins
-*   Windows Phone Plugins
+*   [Plugin Android](../../platforms/android/plugin.html)
+*   [BlackBerry Plugins](../../platforms/blackberry/plugin.html)
+*   [BlackBerry 10 plugin](../../platforms/blackberry10/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 La piattaforma di Tizen attualmente non supporta plugin.
 

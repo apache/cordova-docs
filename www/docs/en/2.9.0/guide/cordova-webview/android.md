@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android WebViews
 ---
 
 # Android WebViews
@@ -28,7 +30,7 @@ the `CordovaWebView` as its main view, regardless of whether the
 legacy `CordovaActivity` approach is used.
 
 If you're unfamiliar with Android application development, please read
-the Android Platform Guide to developing a Cordova Application before
+the [Android Platform Guide](../getting-started/android/index.html) to developing a Cordova Application before
 attempting to include a WebView. It's not the main way to author
 Android Cordova applications. These instructions are currently manual,
 but may be eventually be automated.

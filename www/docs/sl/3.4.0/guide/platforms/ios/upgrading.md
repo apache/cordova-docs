@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Nadgradnja iOS
 ---
 
 # Nadgradnja iOS
@@ -89,7 +91,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Kopija je `www/cordova.js` (upoštevajte, da različica pripona ne življati anymore, različica je v datoteki v glavi) pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova.js` pila.
 
@@ -97,7 +99,7 @@ platform add ios`.
 
 7.  Izbrisati vaš `CordovaLib` directory in kopijo na `CordovaLib` imenik iz novega projekta v root direktorij vašega projekta.
 
-**Opomba**: začenši z Cordova 3.0.0, plugins ne pre-umestiti, ter vi potreba rabiti na `plugman` pripomoček ukazne vrstice, da jih namestite sami. Glejte Uporaba Plugman za upravljanje Plugins.
+**Opomba**: začenši z Cordova 3.0.0, plugins ne pre-umestiti, ter vi potreba rabiti na `plugman` pripomoček ukazne vrstice, da jih namestite sami. Glejte [Uporaba Plugman za upravljanje Plugins](../../../plugin_ref/plugman.html).
 
 ## Nadgradnja 2.8.0 projektov do 2.9.0
 
@@ -107,7 +109,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Kopija je `www/cordova.js` (upoštevajte, da različica pripona ne življati anymore, različica je v datoteki v glavi) pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova.js` pila.
 
@@ -123,7 +125,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Kopija je `www/cordova.js` (upoštevajte, da različica pripona ne življati anymore, različica je v datoteki v glavi) pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.7.0.js` pila.
 
@@ -164,7 +166,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.7.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.6.0.js` pila.
 
@@ -187,7 +189,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Kopirati v projekt `www/cordova-2.6.0.js` pila v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.5.0.js` pila.
 
@@ -218,7 +220,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.5.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.4.0.js` pila.
 
@@ -249,7 +251,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.4.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.3.0.js` pila.
 
@@ -280,7 +282,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.3.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.2.0.js` pila.
 
@@ -315,7 +317,7 @@ platform add ios`.
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.2.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.1.0.js` pila.
 
@@ -347,7 +349,7 @@ Z Cordova 2.1.0, `CordovaLib` has been vzpenjajoč se rabiti **Samodejno Referen
 
 3.  Uporaba Terminal.app, se pomaknite do imenika, kjer si dal downloaded vir zgoraj.
 
-4.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+4.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 5.  Izvod v `www/cordova-2.1.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-2.0.0.js` pila.
 
@@ -378,7 +380,7 @@ Z Cordova 2.1.0, `CordovaLib` has been vzpenjajoč se rabiti **Samodejno Referen
 
 1.  Namestite Cordova 2.0.0.
 
-2.  Ustvarite nov projekt, kot je opisano v iOS orodja ukazne vrstice. Potrebujete sredstva iz tega novega projekta.
+2.  Ustvarite nov projekt, kot je opisano v [iOS orodja ukazne vrstice](tools.html). Potrebujete sredstva iz tega novega projekta.
 
 3.  Izvod v `www/cordova-2.0.0.js` pila s nov projekt v vaš `www` naslovnik ter izbrisati vaš `www/cordova-1.9.0.js` pila.
 

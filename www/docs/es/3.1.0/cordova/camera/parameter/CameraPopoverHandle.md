@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CameraPopoverHandle
 ---
 
 # CameraPopoverHandle
 
-Un identificador para el cuadro de diálogo popover creado por`camera.getPicture`.
+Un identificador para el cuadro de diálogo popover creado por`[camera.getPicture](../camera.getPicture.html)`.
 
 ## Métodos
 
@@ -36,7 +38,7 @@ Establecer la posición de la popover.
 
 **Parámetros:**
 
-*   `cameraPopoverOptions`: el `CameraPopoverOptions` que especifican la nueva posición
+*   `cameraPopoverOptions`: el `[CameraPopoverOptions](CameraPopoverOptions.html)` que especifican la nueva posición
 
 ## Ejemplo rápido
 

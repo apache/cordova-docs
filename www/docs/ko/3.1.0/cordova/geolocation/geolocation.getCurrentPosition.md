@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: geolocation.getCurrentPosition
 ---
 
 # geolocation.getCurrentPosition
@@ -33,11 +35,11 @@ license: >
 
 *   **geolocationError**: *(선택 사항)* 오류가 발생 하면 실행 되는 콜백.
 
-*   **geolocationOptions**: *(선택 사항)* 위치 옵션.
+*   **geolocationOptions**: *(선택 사항)* [위치](Position/position.html) 옵션.
 
 ## 설명
 
-`geolocation.getCurrentPosition`비동기 함수가입니다. 디바이스의 현재 위치를 반환 합니다는 `geolocationSuccess` 로 콜백은 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `geolocationError` 콜백 전달 되는 `PositionError` 개체.
+`geolocation.getCurrentPosition`비동기 함수가입니다. 디바이스의 현재 위치를 반환 합니다는 `[geolocationSuccess](parameters/geolocationSuccess.html)` 로 콜백은 `Position` 매개 변수로 개체. 오류가 발생 하는 경우는 `[geolocationError](parameters/geolocationError.html)` 콜백 전달 되는 `[PositionError](PositionError/positionError.html)` 개체.
 
 ## 지원 되는 플랫폼
 

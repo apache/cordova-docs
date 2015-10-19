@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Coordinates
 ---
 
 Coordinates
@@ -43,7 +45,7 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is attached to the `Position` object that is
+The `Coordinates` object is attached to the `[Position](../Position/position.html)` object that is
 available to callback functions in requests for the current position.
 
 Supported Platforms
@@ -56,7 +58,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -80,7 +82,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

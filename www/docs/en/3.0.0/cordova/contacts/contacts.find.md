@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contacts.find
 ---
 
 contacts.find
 =============
 
-Queries the device contacts database and returns one or more `Contact`
+Queries the device contacts database and returns one or more `[Contact](Contact/contact.html)`
 objects, each containing the fields specified.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
@@ -30,15 +32,15 @@ Description
 -----------
 
 The `contacts.find` method executes asynchronously, querying the
-device contacts database and returning an array of `Contact` objects.
-The resulting objects are passed to the `contactSuccess` callback
+device contacts database and returning an array of `[Contact](Contact/contact.html)` objects.
+The resulting objects are passed to the `[contactSuccess](parameters/contactSuccess.html)` callback
 function specified by the __contactSuccess__ parameter.
 
 The __contactFields__ parameter specifies the fields to be used as a
 search qualifier, and only those results are passed to the
 __contactSuccess__ callback function.  A zero-length __contactFields__
 parameter is invalid and results in
-`ContactError.INVALID_ARGUMENT_ERROR`. A __contactFields__ value of
+`[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR`. A __contactFields__ value of
 `"*"` returns all contact fields.
 
 The __contactFindOptions.filter__ string can be used as a search
@@ -50,7 +52,7 @@ _any_ of the specified fields, the contact is returned.
 Parameters
 ----------
 
-- __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
+- __contactFields__: [Contact](Contact/contact.html) fields to use as a search qualifier. The resulting `[Contact](Contact/contact.html)` object only features values for these fields. _(DOMString[])_ [Required]
 
 - __contactSuccess__: Success callback function invoked with the contacts returned from the database. [Required]
 
@@ -67,7 +69,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(contacts) {
@@ -85,7 +87,7 @@ Quick Example
     var fields       = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

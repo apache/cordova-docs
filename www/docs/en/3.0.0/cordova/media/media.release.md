@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.release
 ---
 
 media.release
@@ -32,7 +34,7 @@ The `media.release` method executes synchronously, releasing the
 underlying operating system's audio resources.  This is particularly
 important for Android, since there are a finite amount of OpenCore
 instances for media playback. Applications should call the `release`
-function for any `Media` resource that is no longer needed.
+function for any `[Media](media.html)` resource that is no longer needed.
 
 Supported Platforms
 -------------------
@@ -44,7 +46,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     // Audio player
@@ -55,7 +57,7 @@ Quick Example
     my_media.stop();
     my_media.release();
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

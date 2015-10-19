@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileEntry
 ---
 
 # FileEntry
@@ -54,9 +56,9 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 *   **getParent**: cherche le répertoire parent.
 
-*   **createWriter**: crée un objet `FileWriter` qui peut être utilisé pour écrire dans un fichier.
+*   **createWriter**: crée un objet `[FileWriter](../filewriter/filewriter.html)` qui peut être utilisé pour écrire dans un fichier.
 
-*   **fichier**: crée un objet `File` contenant les propriétés de fichier.
+*   **fichier**: crée un objet `[File](../fileobj/fileobj.html)` contenant les propriétés de fichier.
 
 ## Plates-formes prises en charge
 
@@ -72,9 +74,9 @@ Recherche des métadonnées relatives à un fichier.
 
 **Paramètres :**
 
-*   **successCallback**: un callback passé à un objet `Metadata`. *(Fonction)*
+*   **successCallback**: un callback passé à un objet `[Metadata](../metadata/metadata.html)`. *(Fonction)*
 
-*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un objet `FileError`. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération du `[Metadata](../metadata/metadata.html)` . Appelée avec un objet `[FileError](../fileerror/fileerror.html)`. *(Fonction)*
 
 **Petit exemple**
 
@@ -171,7 +173,7 @@ En outre, déplacer un fichier sur un fichier existant tente de supprimer et de 
 
 *   **successCallback**: un rappel passé le nouveau fichier `FileEntry` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le fichier. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de déplacer le fichier. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -207,7 +209,7 @@ Copier un fichier vers un nouvel emplacement sur le système de fichiers. Une er
 
 *   **successCallback**: un rappel passé le nouveau fichier `FileEntry` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier le fichier. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de copier le fichier. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -248,7 +250,7 @@ Supprime un fichier.
 
 *   **successCallback**: une fonction de rappel qui s'exécute après que le fichier a été supprimé. Appelé sans paramètre. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le fichier. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de supprimer le fichier. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -266,13 +268,13 @@ Supprime un fichier.
 
 ## getParent
 
-Rechercher le parent `DirectoryEntry` qui contient le fichier.
+Rechercher le parent `[DirectoryEntry](../directoryentry/directoryentry.html)` qui contient le fichier.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel passé parent du fichier `DirectoryEntry` . *(Fonction)*
+*   **successCallback**: un rappel passé parent du fichier `[DirectoryEntry](../directoryentry/directoryentry.html)` . *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `DirectoryEntry` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous tentez de récupérer le parent `[DirectoryEntry](../directoryentry/directoryentry.html)` . Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -290,13 +292,13 @@ Rechercher le parent `DirectoryEntry` qui contient le fichier.
 
 ## createWriter
 
-Créer un `FileWriter` objet associé au fichier représenté par la`FileEntry`.
+Créer un `[FileWriter](../filewriter/filewriter.html)` objet associé au fichier représenté par la`FileEntry`.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel passé un `FileWriter` objet. *(Fonction)*
+*   **successCallback**: un rappel passé un `[FileWriter](../filewriter/filewriter.html)` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lors de la tentative de créer le FileWriter. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lors de la tentative de créer le [FileWriter](../filewriter/filewriter.html). Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 
@@ -314,13 +316,13 @@ Créer un `FileWriter` objet associé au fichier représenté par la`FileEntry`.
 
 ## fichier
 
-Retourner un `File` objet qui représente l'état actuel du dossier que cette `FileEntry` représente.
+Retourner un `[File](../fileobj/fileobj.html)` objet qui représente l'état actuel du dossier que cette `FileEntry` représente.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel passé un `File` objet. *(Fonction)*
+*   **successCallback**: un rappel passé un `[File](../fileobj/fileobj.html)` objet. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez le `File` objet, par exemple lorsque le fichier n'existe plus. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lorsque vous créez le `[File](../fileobj/fileobj.html)` objet, par exemple lorsque le fichier n'existe plus. Appelée avec un `[FileError](../fileerror/fileerror.html)` objet. *(Fonction)*
 
 **Petit exemple**
 

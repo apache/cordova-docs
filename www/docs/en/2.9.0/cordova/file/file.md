@@ -16,31 +16,33 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: File
 ---
 
-File
+[File](fileobj/fileobj.html)
 ==========
 
-> An API to read, write and navigate file system hierarchies, based on the [W3C File API](http://www.w3.org/TR/FileAPI).
+> An API to read, write and navigate file system hierarchies, based on the [W3C [File](fileobj/fileobj.html) API](http://www.w3.org/TR/FileAPI).
 
 Objects
 -------
 
-- DirectoryEntry
-- DirectoryReader
-- File
-- FileEntry
-- FileError
-- FileReader
-- FileSystem
-- FileTransfer
-- FileTransferError
-- FileUploadOptions
-- FileUploadResult
-- FileWriter
-- Flags
-- LocalFileSystem
-- Metadata
+- [DirectoryEntry](directoryentry/directoryentry.html)
+- [DirectoryReader](directoryreader/directoryreader.html)
+- [File](fileobj/fileobj.html)
+- [FileEntry](fileentry/fileentry.html)
+- [FileError](fileerror/fileerror.html)
+- [FileReader](filereader/filereader.html)
+- [FileSystem](filesystem/filesystem.html)
+- [FileTransfer](filetransfer/filetransfer.html)
+- [FileTransferError](filetransfererror/filetransfererror.html)
+- [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+- [FileUploadResult](fileuploadresult/fileuploadresult.html)
+- [FileWriter](filewriter/filewriter.html)
+- [Flags](flags/flags.html)
+- [LocalFileSystem](localfilesystem/localfilesystem.html)
+- [Metadata](metadata/metadata.html)
 
 
 Permissions

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.stringToNumber
 ---
 
 # globalization.stringToNumber
@@ -29,7 +31,7 @@ Analyse un nombre mis en forme comme une chaîne selon les préférences de l'ut
 
 Retourne le nombre de la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `Number` valeur.
 
-S'il y a une erreur, l'analyse de la chaîne de numéro, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PARSING\_ERROR`.
+S'il y a une erreur, l'analyse de la chaîne de numéro, puis le `errorCallback` s'exécute avec un `[GlobalizationError](GlobalizationError/globalizationerror.html)` objet comme paramètre. Code attendu de l'erreur est`[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR`.
 
 Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
 

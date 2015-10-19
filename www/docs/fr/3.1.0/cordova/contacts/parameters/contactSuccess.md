@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 # contactSuccess
 
-Fonction de callback de succès qui fournit le tableau `Contact` résultant d'une opération `contacts.find`.
+Fonction de callback de succès qui fournit le tableau `[Contact](../Contact/contact.html)` résultant d'une opération `[contacts.find](../contacts.find.html)`.
 
     function(contacts) {
         // Do something

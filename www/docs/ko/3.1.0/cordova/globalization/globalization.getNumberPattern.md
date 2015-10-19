@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getNumberPattern
 ---
 
 # globalization.getNumberPattern
@@ -45,7 +47,7 @@ license: >
 
 *   **그룹화**: 구문 분석 및 서식 지정에 사용할 그룹화 기호. *(문자열)*
 
-패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.PATTERN\_ERROR`.
+패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `[GlobalizationError](GlobalizationError/globalizationerror.html)` 개체를 매개 변수로. 오류의 예상 된 코드는`[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR`.
 
 `options`매개 변수는 선택적 이며 기본값은:
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Платформа Android руководство
 ---
 
 # Платформа Android руководство
@@ -27,8 +29,8 @@ license: >
 *   Андроид конфигурации
 *   Андроид WebViews
 *   Андроид плагины
-*   Обновление Android
-*   Android средства командной строки
+*   [Обновление Android](upgrading.html)
+*   [Android средства командной строки](tools.html)
 
 Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 

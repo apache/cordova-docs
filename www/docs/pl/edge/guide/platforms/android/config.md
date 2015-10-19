@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Konfiguracja dla platformy Android
 ---
 
 # Konfiguracja dla platformy Android
@@ -24,7 +26,7 @@ license: >
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
-*   `KeepRunning`(domyślnie wartość logiczna, `true` ): określa, czy aplikacja pozostanie uruchomiony w tle, nawet po `pause` pożary zdarzenia. Ustawienie `false` nie zabić aplikacji po `pause` wydarzenia, ale po prostu zatrzymuje wykonywanie kodu w webview cordova, podczas gdy aplikacja jest w tle.
+*   `KeepRunning`(domyślnie wartość logiczna, `true` ): określa, czy aplikacja pozostanie uruchomiony w tle, nawet po `[pause](../../../cordova/events/events.pause.html)` pożary zdarzenia. Ustawienie `false` nie zabić aplikacji po `[pause](../../../cordova/events/events.pause.html)` wydarzenia, ale po prostu zatrzymuje wykonywanie kodu w webview cordova, podczas gdy aplikacja jest w tle.
     
         <preference name="KeepRunning" value="false"/>
         

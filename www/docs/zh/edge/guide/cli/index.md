@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 命令列介面
 ---
 
 # 命令列介面
@@ -139,7 +141,7 @@ license: >
 
 ## 構建應用程式
 
-預設情況下， `cordova create` 腳本生成骨骼基於 web 應用程式的主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用`www/js/index.js`.
+預設情況下， `cordova create` 腳本生成骨骼基於 web 應用程式的主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `[deviceready](../../cordova/events/events.deviceready.html)` 事件處理常式中，從預設的引用`www/js/index.js`.
 
 運行以下命令以反覆運算方式生成專案：
 
@@ -366,7 +368,7 @@ license: >
 
 當你重新生成專案時，Android 版本特點的自訂字體大小，而其他人保持不變。
 
-您也可以使用`merges`添加原始的`www`目錄中不存在的檔。 例如，一個應用程式可以將*後退按鈕*的圖形納入 iOS 介面，存儲在`merges/ios/img/back_button.png`，而 Android 版本相反可以捕獲從對應的硬體按鈕的`backbutton`事件。
+您也可以使用`merges`添加原始的`www`目錄中不存在的檔。 例如，一個應用程式可以將*後退按鈕*的圖形納入 iOS 介面，存儲在`merges/ios/img/back_button.png`，而 Android 版本相反可以捕獲從對應的硬體按鈕的`[backbutton](../../cordova/events/events.backbutton.html)`事件。
 
 ## 説明命令
 

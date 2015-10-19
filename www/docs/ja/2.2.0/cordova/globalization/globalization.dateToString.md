@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.dateToString
 ---
 
 globalization.dateToString
@@ -32,7 +34,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 
 引数の ``date`` パラメーターは ``Date`` 型である必要があります。
 
-もし日時のフォーマット中にエラーが発生した場合、 errorCB コールバックが GlobalizationError オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは GlobalizationError.FORMATTING\_ERROR です。
+もし日時のフォーマット中にエラーが発生した場合、 errorCB コールバックが [GlobalizationError](GlobalizationError/globalizationerror.html) オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは [GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR です。
 
 `options.formatLength` には 'short', 'medium', 'long', または 'full' が指定出来ます。
 `options.selector` には 'date', 'time' または 'date and time' が指定出来ます。
@@ -48,7 +50,7 @@ successCB コールバック関数に、プロパティーオブジェクトを�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
 ブラウザーのロケールが en\_US に設定されている場合、次のコードはデフォルトのオプションを使用して "date: 9/25/2012 4:21PM" といったような文字列をポップアップダイアログに表示します。

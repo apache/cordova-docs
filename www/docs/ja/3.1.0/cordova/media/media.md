@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: メディア
 ---
 
 # メディア
@@ -49,25 +51,25 @@ license: >
 
 ## メソッド
 
-*   `media.getCurrentPosition`: オーディオ ファイル内の現在位置を返します。
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`: オーディオ ファイル内の現在位置を返します。
 
-*   `media.getDuration`: オーディオ ファイルの継続時間を返します。
+*   `[media.getDuration](media.getDuration.html)`: オーディオ ファイルの継続時間を返します。
 
-*   `media.play`: 開始またはオーディオ ファイルの再生を再開します。
+*   `[media.play](media.play.html)`: 開始またはオーディオ ファイルの再生を再開します。
 
-*   `media.pause`： オーディオ ファイルの再生を一時停止。
+*   `[media.pause](media.pause.html)`： オーディオ ファイルの再生を一時停止。
 
-*   `media.release`: 基になるオペレーティング システムのオーディオ リソースを解放します。
+*   `[media.release](media.release.html)`: 基になるオペレーティング システムのオーディオ リソースを解放します。
 
-*   `media.seekTo`: オーディオ ファイル内の位置を移動します。
+*   `[media.seekTo](media.seekTo.html)`: オーディオ ファイル内の位置を移動します。
 
-*   `media.setVolume`: オーディオの再生ボリュームを設定します。
+*   `[media.setVolume](media.setVolume.html)`: オーディオの再生ボリュームを設定します。
 
-*   `media.startRecord`： オーディオ ファイルの録音を開始します。
+*   `[media.startRecord](media.startRecord.html)`： オーディオ ファイルの録音を開始します。
 
-*   `media.stopRecord`: オーディオ ファイルの録音を停止します。
+*   `[media.stopRecord](media.stopRecord.html)`: オーディオ ファイルの録音を停止します。
 
-*   `media.stop`: オーディオ ファイルの再生を停止します。
+*   `[media.stop](media.stop.html)`: オーディオ ファイルの再生を停止します。
 
 ## 追加読み取り専用パラメーター
 

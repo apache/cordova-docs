@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: La mise à niveau de Windows Phone
 ---
 
 # La mise à niveau de Windows Phone
@@ -42,7 +44,7 @@ platform add wp7 wp8`.
 
 3.  Copiez le contenu du projet `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
 
-4.  Copier ou écraser tout actif natif de votre projet d'origine ( `SplashScreen` , `ApplicationIcon` , etc.), ce qui bien sûr d'ajouter de nouveaux fichiers à la `.csproj` fichier. Le windows mobile de générations de projets à l'intérieur de la `platforms\wp7` ou `platforms\wp8` répertoire.
+4.  Copier ou écraser tout actif natif de votre projet d'origine ( `[SplashScreen](../../../cordova/splashscreen/splashscreen.html)` , `ApplicationIcon` , etc.), ce qui bien sûr d'ajouter de nouveaux fichiers à la `.csproj` fichier. Le windows mobile de générations de projets à l'intérieur de la `platforms\wp7` ou `platforms\wp8` répertoire.
 
 5.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme plugins, donc ils peuvent avoir besoin d'être ajouté. Seulement 3.0.0 plugins sont compatibles avec l'interface CLI.
 

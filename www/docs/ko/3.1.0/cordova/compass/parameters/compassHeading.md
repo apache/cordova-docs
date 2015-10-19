@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassHeading
 ---
 
 # compassHeading
 
-A `CompassHeading` 개체에 반환 되는 `compassSuccess` 콜백 함수.
+A `CompassHeading` 개체에 반환 되는 `[compassSuccess](compassSuccess.html)` 콜백 함수.
 
 ## 속성
 
@@ -34,7 +36,7 @@ A `CompassHeading` 개체에 반환 되는 `compassSuccess` 콜백 함수.
 
 ## 설명
 
-`CompassHeading`개체를 반환 되는 `compassSuccess` 콜백 함수.
+`CompassHeading`개체를 반환 되는 `[compassSuccess](compassSuccess.html)` 콜백 함수.
 
 ## 안 드 로이드 단점
 

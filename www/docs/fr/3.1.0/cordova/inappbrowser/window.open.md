@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 # window.open
 
-Ouvre une URL dans une nouvelle instance de la classe `InAppBrowser`, une instance déjà existante ou dans le navigateur système.
+Ouvre une URL dans une nouvelle instance de la classe `[InAppBrowser](inappbrowser.html)`, une instance déjà existante ou dans le navigateur système.
 
     var ref = window.open(url, target, options);
     
 
-*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `[InAppBrowser](inappbrowser.html)`. *(InAppBrowser)*
 
 *   **url** : l'URL à charger *(String)*. À encoder au préalable via `encodeURI()` si celle-ci contient des caractères Unicode.
 
@@ -35,7 +37,7 @@ Ouvre une URL dans une nouvelle instance de la classe `InAppBrowser`, une instan
     *   `_blank` : dirige le chargement vers une fenêtre `InAppBrowser`.
     *   `_system` : dirige le chargement vers le navigateur Web du système.
 
-*   **options** : permet de personnaliser la fenêtre `InAppBrowser`. Paramètre facultatif dont la valeur par défaut est `location=yes`. *(String)*
+*   **options** : permet de personnaliser la fenêtre `[InAppBrowser](inappbrowser.html)`. Paramètre facultatif dont la valeur par défaut est `location=yes`. *(String)*
     
     La chaîne `options` ne doit contenir aucun caractère vide, chaque paire nom/valeur représentant une fonctionnalité doit être séparée de la précédente par une virgule. Les noms de fonctionnalités sont sensibles à la casse. Toutes les plates-formes prennent en charge la valeur ci-dessous :
     

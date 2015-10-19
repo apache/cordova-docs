@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Configuration
 ---
 
 # Android Configuration
@@ -52,7 +54,7 @@ breaking existing apps. The available preferences are:
 
 * `keepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background. Note: setting this to 
-  false will not kill the app after a pause event, it will only 
+  false will not kill the app after a [pause](../../../cordova/events/events.pause.html) event, it will only 
   halt execution of code in the cordova webview while the app is 
   in the background.
 

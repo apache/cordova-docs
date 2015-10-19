@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 플랫폼 가이드
 ---
 
 # Windows 8 플랫폼 가이드
 
 이 가이드에서는 윈도우 8에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 자세한 플랫폼 관련 내용은 다음을 참조 하십시오.
 
-*   윈도우 8을 업그레이드
-*   윈도우 8 명령줄 도구
+*   [윈도우 8을 업그레이드](upgrading.html)
+*   [윈도우 8 명령줄 도구](tools.html)
 
 위의 명령줄 도구 코르도바 3.0 이전 버전을 참조 하십시오. 현재 인터페이스에 대 한 내용은 명령줄 인터페이스를 참조 하십시오.
 
-마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 가이드 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
+마이크로소프트는 윈도우 8과 윈도우 실시간 *메트로 스타일 앱* 이름을 사용 되지 않습니다. MSDN *Windows 스토어* 애플 리 케이 션, 애플 리 케이 션의이 유형의 지금 의미 하 고이 [가이드](../../../index.html) 그 규칙을 따릅니다. 또한,이 가이드에 있는 *윈도우 8* 의미 윈도우 8과 윈도우 실시간
 
 ## 1입니다. 요구 사항
 
@@ -58,7 +60,7 @@ license: >
     
     ![][4]
 
-*   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . (게다가 그것은 프로젝트의 다른 플랫폼 이체에서 당신이 사용 하는 가능성이 `index.html` 기본 페이지의 이름으로.) 이 문제를 해결, 솔루션 탐색기의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` 파일 및 **시작 페이지** 값을 변경`index.html`.
+*   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . (게다가 그것은 프로젝트의 다른 플랫폼 이체에서 당신이 사용 하는 가능성이 `index.html` 기본 페이지의 이름으로.) 이 문제를 해결, 솔루션 탐색기의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` [파일](../../../cordova/file/fileobj/fileobj.html) 및 **시작 페이지** 값을 변경`index.html`.
     
     ![][5]
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: openDatabase
 ---
 
 # openDatabase
@@ -27,7 +29,7 @@ Gibt eine neue `Database` Objekt.
 
 ## Beschreibung
 
-Die Methode erstellt eine neue SQL-Lite Datenbank und gibt ein `Database` -Objekt, das Manipulation der Daten ermöglicht.
+Die Methode erstellt eine neue SQL-Lite [Datenbank](database/database.html) und gibt ein `Database` -Objekt, das Manipulation der Daten ermöglicht.
 
 ## Unterstützte Plattformen
 

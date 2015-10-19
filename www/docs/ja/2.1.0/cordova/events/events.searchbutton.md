@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: searchbutton
 ---
 
 searchbutton
@@ -30,14 +32,14 @@ searchbutton
 
 もし Android にデフォルトの検索ボタンの挙動を上書きしたい場合は、 'searchbutton' イベントにイベントリスナーを登録することができます。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
 
 - Android
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);

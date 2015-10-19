@@ -16,32 +16,34 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 캡처
 ---
 
 # 캡처
 
 > 소자의 오디오, 이미지 및 비디오 캡처 기능에 대 한 액세스를 제공합니다.
 
-**중요 한 개인 정보 보호 참고:** 수집 및 이미지, 비디오 또는 오디오 장치의 카메라 또는 마이크를 사용 하 여 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 같은 센서를 사용 하는 방법 및 다른 당사자와 함께 기록 된 데이터는 공유 하는 여부를 토론 해야 한다. 또한, 카메라 또는 마이크의 사용 애플 리 케이 션의 사용자 인터페이스에서 명백 하지 않은, 당신의 애플 리 케이 션이 (해당 되는 경우 장치 운영 체제 이렇게 이미 하지 않는) 카메라 또는 마이크에 액세스 하기 전에 그냥--시간 통지를 제공 해야 합니다. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 저스트-인-타임 공지 및 카메라 또는 마이크에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
+**중요 한 개인 정보 보호 참고:** 수집 및 이미지, 비디오 또는 오디오 장치의 [카메라](../../camera/camera.html) 또는 마이크를 사용 하 여 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 같은 센서를 사용 하는 방법 및 다른 당사자와 함께 기록 된 데이터는 공유 하는 여부를 토론 해야 한다. 또한, [카메라](../../camera/camera.html) 또는 마이크의 사용 애플 리 케이 션의 사용자 인터페이스에서 명백 하지 않은, 당신의 애플 리 케이 션이 (해당 되는 경우 [장치](../../device/device.html) 운영 체제 이렇게 이미 하지 않는) [카메라](../../camera/camera.html) 또는 마이크에 액세스 하기 전에 그냥--시간 통지를 제공 해야 합니다. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 저스트-인-타임 공지 및 [카메라](../../camera/camera.html) 또는 마이크에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
 
 ## 개체
 
 *   캡처
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
+*   [CaptureAudioOptions](captureAudioOptions.html)
+*   [CaptureImageOptions](captureImageOptions.html)
+*   [CaptureVideoOptions](captureVideoOptions.html)
 *   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   돌아가기
-*   MediaFileData
+*   [CaptureErrorCB](CaptureErrorCB.html)
+*   [ConfigurationData](ConfigurationData.html)
+*   [돌아가기](MediaFile.html)
+*   [MediaFileData](MediaFileData.html)
 
 ## 메서드
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+*   [capture.captureAudio](captureAudio.html)
+*   [capture.captureImage](captureImage.html)
+*   [capture.captureVideo](captureVideo.html)
+*   [MediaFile.getFormatData](MediaFile.getFormatData.html)
 
 ## 범위
 
@@ -61,11 +63,11 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## 메서드
 
-*   `capture.captureAudio`: 오디오 클립을 기록 하는 장치 오디오 녹음 응용 프로그램을 시작 합니다.
+*   `[capture.captureAudio](captureAudio.html)`: 오디오 클립을 기록 하는 [장치](../../device/device.html) 오디오 녹음 응용 프로그램을 시작 합니다.
 
-*   `capture.captureImage`: 사진을 찍는 것을 디바이스의 카메라 응용 프로그램을 시작 합니다.
+*   `[capture.captureImage](captureImage.html)`: 사진을 찍는 것을 디바이스의 [카메라](../../camera/camera.html) 응용 프로그램을 시작 합니다.
 
-*   `capture.captureVideo`: 비디오 기록 장치의 비디오 레코더 응용 프로그램을 시작.
+*   `[capture.captureVideo](captureVideo.html)`: 비디오 기록 장치의 비디오 레코더 응용 프로그램을 시작.
 
 ## 지원 되는 플랫폼
 
@@ -77,7 +79,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 ## 기능 액세스
 
-버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
+버전 3.0, 코르도바 *플러그인*으로 [장치](../../device/device.html) 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
@@ -113,4 +115,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../../guide/overview/index.html) 섹션에서을 참조 하십시오.

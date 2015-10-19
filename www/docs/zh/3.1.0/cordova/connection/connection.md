@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 連接
 ---
 
 # 連接
@@ -24,7 +26,7 @@ license: >
 
 ## 屬性
 
-*   connection.type
+*   [connection.type](connection.type.html)
 
 ## 常量
 

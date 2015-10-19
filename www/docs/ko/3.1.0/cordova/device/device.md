@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 장치
 ---
 
 # 장치
@@ -24,12 +26,12 @@ license: >
 
 ## 속성
 
-*   device.model
-*   device.cordova
-*   device.platform
-*   device.uuid
-*   device.version
-*   device.name
+*   [device.model](device.model.html)
+*   [device.cordova](device.cordova.html)
+*   [device.platform](device.platform.html)
+*   [device.uuid](device.uuid.html)
+*   [device.version](device.version.html)
+*   [device.name](device.name.html)
 
 ## 변수 범위
 
@@ -98,4 +100,4 @@ license: >
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* [개요](../../guide/overview/index.html) 섹션에서을 참조 하십시오.

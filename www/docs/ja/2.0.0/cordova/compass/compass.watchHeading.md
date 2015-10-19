@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.watchHeading
 ---
 
 compass.watchHeading
@@ -30,9 +32,9 @@ compass.watchHeading
 
 コンパスはデバイスが向いている方向を感知するセンサーです。コンパスはその方角を0から359.99の範囲で計測します。
 
-`compass.watchHeading` 関数は一定の時間間隔でデバイスの現在の方位を取得します。方位情報が取得されるごとに `headingSuccess` コールバック関数が実行されます。時間間隔は `compassOptions` オブジェクトの `frequency` パラメーターを通じてミリ秒単位で指定します。
+`compass.watchHeading` 関数は一定の時間間隔でデバイスの現在の方位を取得します。方位情報が取得されるごとに `headingSuccess` コールバック関数が実行されます。時間間隔は `[compassOptions](parameters/compassOptions.html)` オブジェクトの `frequency` パラメーターを通じてミリ秒単位で指定します。
 
-本関数の戻り値である watch ID は、コンパスの監視間隔への参照を表します。 `compass.clearWatch` 関数に watch ID を渡すことで、監視を停止できます。
+本関数の戻り値である watch ID は、コンパスの監視間隔への参照を表します。 `[compass.clearWatch](compass.clearWatch.html)` 関数に watch ID を渡すことで、監視を停止できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -43,7 +45,7 @@ compass.watchHeading
 - Bada 1.2 & 2.x
 
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(heading) {
@@ -127,6 +129,6 @@ compass.watchHeading
 iOS に関する注意点
 --------------
 
-iOS では、指定された角度分だけデバイスの現在の方位が変更されたとき、 `compass.watchHeading` でそのデバイスの現在の向きを取得することもできます。方位が指定された角度以上で変更されるたび、 `headingSuccess` コールバック関数が呼び出されます。角度は、 `compassOptions` オブジェクトの `filter` パラメーターで指定します。 `compass.clearWatch` に `watch ID` を渡すことで、通常と同じように監視を停止できます。この機能は、1.6で廃止になった iOS 限定の watchHeadingFilter 関数と clearWatchFilter 関数に置き換わるものです。
+iOS では、指定された角度分だけデバイスの現在の方位が変更されたとき、 `compass.watchHeading` でそのデバイスの現在の向きを取得することもできます。方位が指定された角度以上で変更されるたび、 `headingSuccess` コールバック関数が呼び出されます。角度は、 `[compassOptions](parameters/compassOptions.html)` オブジェクトの `filter` パラメーターで指定します。 `[compass.clearWatch](compass.clearWatch.html)` に `watch ID` を渡すことで、通常と同じように監視を停止できます。この機能は、1.6で廃止になった iOS 限定の watchHeadingFilter 関数と clearWatchFilter 関数に置き換わるものです。
 
 iOS では、一度に一つの watchHeading のみが有効です。もし filter を用いて watchHeading が使用されている場合、 getCurrentHeading 関数または watchHeading 関数は既に存在している filter の値を、方位の角度変化量の指定に使用します。 iOS では、時間による監視より、 filter を用いた方位変化量による監視の方が効果的です。

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: media.play
 ---
 
 # media.play
@@ -170,7 +172,7 @@ license: >
 
 ## iOS の癖
 
-*   **numberOfLoops**: このオプションを指定して、 `play` メディア ファイルを再生する、例えば回数を指定する方法。
+*   **numberOfLoops**: このオプションを指定して、 `play` [メディア](media.html) ファイルを再生する、例えば回数を指定する方法。
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })

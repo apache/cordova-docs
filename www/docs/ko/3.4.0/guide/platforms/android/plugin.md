@@ -16,15 +16,17 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 안 드 로이드 플러그인
 ---
 
 # 안 드 로이드 플러그인
 
-이 섹션에서는 안 드 로이드 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다. 다른 샘플도 [CordovaPlugin.java][1] 에서 주석 참조.
+이 섹션에서는 안 드 로이드 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 [개요](../../overview/index.html) 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다. 다른 샘플도 [CordovaPlugin.java][1] 에서 주석 참조.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-안 드 로이드 플러그인 코르도바-안 드 로이드, 안 드 로이드 WebView 그것에 붙어 있던 걸이로 구성 된 기반으로 합니다. 플러그인에서 클래스 매핑으로 표시 됩니다는 `config.xml` 파일. 플러그인을 확장 하는 하나 이상의 Java 클래스의 구성는 `CordovaPlugin` 중 하나를 재정의 하는 클래스는 `execute` 방법. 최고의 연습, 플러그인 또한 처리 하는 `pause` 및 `resume` 플러그인 사이 전달 하는 모든 메시지와 함께 이벤트. 장기 실행 요청, 미디어 재생, 청취자, 또는 내부 상태와 같은 백그라운드 작업 플러그인을 구현 하는 `onReset()` 메서드 뿐만. 때 실행은 `WebView` 이동 새 페이지 또는 새로 고침, 자바 스크립트가 다시 로드 되는.
+안 드 로이드 플러그인 코르도바-안 드 로이드, 안 드 로이드 WebView 그것에 붙어 있던 걸이로 구성 된 기반으로 합니다. 플러그인에서 클래스 매핑으로 표시 됩니다는 `config.xml` 파일. 플러그인을 확장 하는 하나 이상의 Java 클래스의 구성는 `CordovaPlugin` 중 하나를 재정의 하는 클래스는 `execute` 방법. 최고의 연습, 플러그인 또한 처리 하는 `pause` 및 `resume` 플러그인 사이 전달 하는 모든 메시지와 함께 [이벤트](../../../cordova/events/events.html). 장기 실행 요청, 미디어 재생, 청취자, 또는 내부 상태와 같은 백그라운드 작업 플러그인을 구현 하는 `onReset()` 메서드 뿐만. 때 실행은 `WebView` 이동 새 페이지 또는 새로 고침, 자바 스크립트가 다시 로드 되는.
 
 ## 플러그인 클래스 매핑
 

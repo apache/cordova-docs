@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings for webOS
 ---
 
-Project Settings for webOS 
+[Project Settings](../index.html) for webOS 
 ===================================
 
 WebOS does not currently have any additional configurable features.

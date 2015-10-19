@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 # LocalFileSystem
@@ -26,7 +28,7 @@ Este objeto proporciona una manera de obtener sistemas de archivos root.
 
 *   **requestFileSystem**: pide un sistema de archivos. *(Función)*
 
-*   **resolveLocalFileSystemURI**: recuperar un `DirectoryEntry` o `FileEntry` usando URI local. *(Función)*
+*   **resolveLocalFileSystemURI**: recuperar un `[DirectoryEntry](../directoryentry/directoryentry.html)` o `[FileEntry](../fileentry/fileentry.html)` usando URI local. *(Función)*
 
 ## Constantes
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: SplashScreen
 ---
 
 # SplashScreen
@@ -24,8 +26,8 @@ license: >
 
 ## Methoden
 
-*   SplashScreen.Show
-*   SplashScreen.Hide
+*   [SplashScreen.Show](splashscreen.show.html)
+*   [SplashScreen.Hide](splashscreen.hide.html)
 
 ## Zugriff auf die Funktion
 
@@ -53,6 +55,6 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der [Übersicht](../../guide/overview/index.html).
 
-Informationen zum konfiguriert diese Bilder finden Sie unter Symbole und Splash-Screens.
+Informationen zum konfiguriert diese Bilder finden Sie unter [Symbole und Splash-Screens](../../config_ref/images.html).

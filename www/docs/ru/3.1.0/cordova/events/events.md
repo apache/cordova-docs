@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: События
 ---
 
 # События
@@ -24,21 +26,21 @@ license: >
 
 ## Типы событий
 
-*   deviceready
-*   Пауза
-*   резюме
-*   онлайн
-*   автономном режиме
-*   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   menubutton
-*   searchButton
-*   startcallbutton
-*   endcallbutton
-*   volumedownbutton
-*   volumeupbutton
+*   [deviceready](events.deviceready.html)
+*   [Пауза](events.pause.html)
+*   [резюме](events.resume.html)
+*   [онлайн](events.online.html)
+*   [автономном режиме](events.offline.html)
+*   [backbutton](events.backbutton.html)
+*   [batterycritical](events.batterycritical.html)
+*   [batterylow](events.batterylow.html)
+*   [batterystatus](events.batterystatus.html)
+*   [menubutton](events.menubutton.html)
+*   [searchButton](events.searchbutton.html)
+*   [startcallbutton](events.startcallbutton.html)
+*   [endcallbutton](events.endcallbutton.html)
+*   [volumedownbutton](events.volumedownbutton.html)
+*   [volumeupbutton](events.volumeupbutton.html)
 
 ## Доступ к функции
 

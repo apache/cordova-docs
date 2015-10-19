@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Datei
 ---
 
 # Datei
@@ -52,7 +54,7 @@ Das `File` -Objekt enthält Attribute einer einzelnen Datei. Erhalten Sie eine I
 
 ## Scheibe
 
-Zurück ein neues `File` Objekt, für die `FileReader` gibt nur den angegebenen Teil der Datei. Negative Werte für `start` oder `end` sind, gemessen vom Ende der Datei. Indizes sind relativ das aktuelle Segment positioniert. (Siehe das vollständige Beispiel weiter unten.)
+Zurück ein neues `File` Objekt, für die `[FileReader](../filereader/filereader.html)` gibt nur den angegebenen Teil der Datei. Negative Werte für `start` oder `end` sind, gemessen vom Ende der Datei. Indizes sind relativ das aktuelle Segment positioniert. (Siehe das vollständige Beispiel weiter unten.)
 
 **Parameter:**
 

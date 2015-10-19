@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 # window.open
 
-Открывает URL-адрес в новой `InAppBrowser` например, текущий экземпляр браузера или браузера системы.
+Открывает URL-адрес в новой `[InAppBrowser](inappbrowser.html)` например, текущий экземпляр браузера или браузера системы.
 
     var ref = window.open(url, target, options);
     
 
-*   **ссылка**: ссылка для `InAppBrowser` окно. *(InAppBrowser)*
+*   **ссылка**: ссылка для `[InAppBrowser](inappbrowser.html)` окно. *(InAppBrowser)*
 
 *   **URL**: URL-адрес для загрузки *(String)*. Вызвать `encodeURI()` на это, если URL-адрес содержит символы Unicode.
 
@@ -35,7 +37,7 @@ license: >
     *   `_blank`: Открывает в`InAppBrowser`.
     *   `_system`: Открывается в веб-браузера системы.
 
-*   **опции**: параметры для `InAppBrowser` . Необязательный параметр, виновная в: `location=yes` . *(Строка)*
+*   **опции**: параметры для `[InAppBrowser](inappbrowser.html)` . Необязательный параметр, виновная в: `location=yes` . *(Строка)*
     
     `options`Строка не должна содержать каких-либо пустое пространство, и каждая функция пар имя/значение должны быть разделены запятой. Функция имена нечувствительны к регистру. Все платформы поддерживают исходное значение:
     

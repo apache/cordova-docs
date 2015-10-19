@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: MediaError
 ---
 
 # MediaError
 
-A `MediaError` объект возвращается к `mediaError` функции обратного вызова при возникновении ошибки.
+A `MediaError` объект возвращается к `[mediaError](../Parameters/mediaError.html)` функции обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -37,4 +39,4 @@ A `MediaError` объект возвращается к `mediaError` функц�
 
 ## Описание
 
-`MediaError`Передается объект `mediaError` функцию обратного вызова при возникновении ошибки.
+`MediaError`Передается объект `[mediaError](../Parameters/mediaError.html)` функцию обратного вызова при возникновении ошибки.

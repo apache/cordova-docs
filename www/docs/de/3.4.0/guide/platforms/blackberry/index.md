@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Handbuch der BlackBerry-Plattform
 ---
 
 # Handbuch der BlackBerry-Plattform
@@ -23,9 +25,9 @@ license: >
 Diese Anleitung zeigt Ihnen wie ein SDK-Umfeld zu Zielanwendungen für die BlackBerry-Plattform vor Version 10 eingerichtet. Wenn Sie die aktuellste Version ansprechen möchten, finden Sie im BlackBerry-10-Plattform-Guide. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
 *   BlackBerry Configuration
-*   Aktualisieren der BlackBerry
-*   BlackBerry-Plugins
-*   BlackBerry-Befehlszeilentools
+*   [Aktualisieren der BlackBerry](upgrading.html)
+*   [BlackBerry-Plugins](plugin.html)
+*   [BlackBerry-Befehlszeilentools](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 

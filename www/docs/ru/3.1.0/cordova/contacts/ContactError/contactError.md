@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactError
 ---
 
 # ContactError
 
-A `ContactError` объект передается в `contactError` обратного вызова при возникновении ошибки.
+A `ContactError` объект передается в `[contactError](../parameters/contactError.html)` обратного вызова при возникновении ошибки.
 
 ## Свойства
 
@@ -38,4 +40,4 @@ A `ContactError` объект передается в `contactError` обрат�
 
 ## Описание
 
-`ContactError`Объект возвращается пользователю через `contactError` функцию обратного вызова при возникновении ошибки.
+`ContactError`Объект возвращается пользователю через `[contactError](../parameters/contactError.html)` функцию обратного вызова при возникновении ошибки.

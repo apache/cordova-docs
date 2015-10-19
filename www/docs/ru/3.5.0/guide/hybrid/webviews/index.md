@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Интеграция WebViews
 ---
 
 # Интеграция WebViews
@@ -24,6 +26,6 @@ license: >
 
 Чтобы развернуть WebView, вы должны быть знакомы с каждой родной среды программирования. Ниже приведены инструкции для поддерживаемых платформ.
 
-*   Amazon Fire OS WebViews
-*   Android WebViews
-*   iOS WebViews
+*   [Amazon Fire OS WebViews](../../platforms/amazonfireos/webview.html)
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [iOS WebViews](../../platforms/ios/webview.html)

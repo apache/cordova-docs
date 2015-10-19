@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: LocalFileSystem
 ---
 
 # LocalFileSystem
@@ -24,9 +26,9 @@ Dieses Objekt bietet eine Möglichkeit, Root-Dateisysteme zu erhalten.
 
 ## Methoden
 
-*   **RequestFileSystem**: ein Dateisystem anfordert. *(Funktion)*
+*   **RequestFileSystem**: ein [Dateisystem](../filesystem/filesystem.html) anfordert. *(Funktion)*
 
-*   **ResolveLocalFileSystemURI**: Abrufen einer `DirectoryEntry` oder `FileEntry` mit lokalen URI. *(Funktion)*
+*   **ResolveLocalFileSystemURI**: Abrufen einer `[DirectoryEntry](../directoryentry/directoryentry.html)` oder `FileEntry` mit lokalen URI. *(Funktion)*
 
 ## Konstanten
 
@@ -109,16 +111,16 @@ Die `LocalFileSystem` sind Objektmethoden definiert, auf das `window` Objekt.
 
 # requestFileSystem
 
-> Fordern Sie ein Dateisystem zum Speichern von Anwendungsdaten.
+> Fordern Sie ein [Dateisystem](../filesystem/filesystem.html) zum Speichern von Anwendungsdaten.
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
 *   **Fenster**: Verweis auf den globalen Window-Objekt
-*   **Typ**: lokale Datei Systemtyp, siehe LocalFileSystem-Konstanten
+*   **Typ**: lokale [Datei](../fileobj/fileobj.html) Systemtyp, siehe LocalFileSystem-Konstanten
 *   **Größe**: gibt an, wieviel Speicherplatz in Byte, die Anwendung erwartet, müssen
-*   **SuccessCallback**: mit einem Dateisystem Objekt aufgerufen
-*   **ErrorCallback**: aufgerufen, wenn Fehler beim Abrufen des Dateisystem auftritt
+*   **SuccessCallback**: mit einem [Dateisystem](../filesystem/filesystem.html) Objekt aufgerufen
+*   **ErrorCallback**: aufgerufen, wenn Fehler beim Abrufen des [Dateisystem](../filesystem/filesystem.html) auftritt
 
 ## Schnelle System-Beispieldatei anfordern
 

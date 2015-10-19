@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
@@ -31,9 +33,9 @@ license: >
 
 加速度計是動作感應器檢測到的更改 (delta) 相對於當前位置的運動中。 加速度感應器可以檢測到沿*x*、 *y*和*z*軸的三維運動。
 
-`accelerometer.watchAcceleration`方法檢索設備的電流 `Acceleration` 間隔時間定期，執行 `accelerometerSuccess` 回呼函數每次。 指定的時間間隔，以毫秒為單位通過 `acceleratorOptions` 物件的 `frequency` 參數。
+`accelerometer.watchAcceleration`方法檢索設備的電流 `Acceleration` 間隔時間定期，執行 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` 回呼函數每次。 指定的時間間隔，以毫秒為單位通過 `acceleratorOptions` 物件的 `frequency` 參數。
 
-返回的觀看 ID 引用加速度計的手錶時間間隔，並可以用 `accelerometer.clearWatch` 來停止看加速度計。
+返回的觀看 ID 引用加速度計的手錶時間間隔，並可以用 `[accelerometer.clearWatch](accelerometer.clearWatch.html)` 來停止看加速度計。
 
 ## 支援的平臺
 

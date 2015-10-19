@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CompassError
 ---
 
 # CompassError
 
-A `CompassError` 物件返回到 `compassError` 時出現錯誤的回呼函數。
+A `CompassError` 物件返回到 `[compassError](../parameters/compassError.html)` 時出現錯誤的回呼函數。
 
 ## 屬性
 
@@ -33,4 +35,4 @@ A `CompassError` 物件返回到 `compassError` 時出現錯誤的回呼函數�
 
 ## 說明
 
-當錯誤發生時， `CompassError` 物件作為一個參數傳遞 `compassError` 回呼函數。
+當錯誤發生時， `CompassError` 物件作為一個參數傳遞 `[compassError](../parameters/compassError.html)` 回呼函數。

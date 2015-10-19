@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: window.open
 ---
 
 # window.open
 
-새 URL을 엽니다 `InAppBrowser` 인스턴스, 현재 브라우저 인스턴스 또는 시스템 브라우저.
+새 URL을 엽니다 `[InAppBrowser](inappbrowser.html)` 인스턴스, 현재 브라우저 인스턴스 또는 시스템 브라우저.
 
     var ref = window.open(url, target, options);
     
 
-*   **심판**:에 대 한 참조는 `InAppBrowser` 창. *(InAppBrowser)*
+*   **심판**:에 대 한 참조는 `[InAppBrowser](inappbrowser.html)` 창. *(InAppBrowser)*
 
 *   **url**: *(문자열)를*로드 하는 URL. 전화 `encodeURI()` 이 경우에는 URL 유니코드 문자를 포함 합니다.
 
@@ -35,7 +37,7 @@ license: >
     *   `_blank`: 준공에`InAppBrowser`.
     *   `_system`: 시스템의 웹 브라우저에서 엽니다.
 
-*   **옵션**: 옵션은 `InAppBrowser` . 선택적, 디폴트에: `location=yes` . *(문자열)*
+*   **옵션**: 옵션은 `[InAppBrowser](inappbrowser.html)` . 선택적, 디폴트에: `location=yes` . *(문자열)*
     
     `options`문자열 텅 빈 어떤 스페이스 포함 해서는 안 그리고 쉼표 각 기능의 이름/값 쌍을 구분 합니다. 기능 이름은 대/소문자입니다. 모든 플랫폼 지원 아래 값:
     

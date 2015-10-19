@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+Stop watching the `[Acceleration](acceleration/acceleration.html)` referenced by the watch ID parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: The ID returned by `[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 Supported Platforms
 -------------------
@@ -34,16 +36,16 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    
+
     // ... later on ...
-    
+
     navigator.accelerometer.clearWatch(watchID);
-    
-Full Example
+
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -56,7 +58,7 @@ Full Example
 
         // The watch id references the current `watchAcceleration`
         var watchID = null;
-        
+
         // Wait for PhoneGap to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -70,13 +72,13 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
-            
+
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
-        
+
         // Stop watching the acceleration
         //
         function stopWatch() {
@@ -85,14 +87,14 @@ Full Example
                 watchID = null;
             }
         }
-		    
+
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' + 
+                                'Acceleration Z: ' + acceleration.z + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 
@@ -106,6 +108,6 @@ Full Example
       </head>
       <body>
         <div id="accelerometer">Waiting for accelerometer...</div>
-		<button onclick="stopWatch();">Stop Watching</button>
+        <button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: スプラッシュ スクリーン
 ---
 
 # スプラッシュ スクリーン
@@ -24,8 +26,8 @@ license: >
 
 ## メソッド
 
-*   splashscreen.show
-*   splashscreen.hide
+*   [splashscreen.show](splashscreen.show.html)
+*   [splashscreen.hide](splashscreen.hide.html)
 
 ## 機能へのアクセス
 

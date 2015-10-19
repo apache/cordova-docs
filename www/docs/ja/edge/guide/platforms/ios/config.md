@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: iOS 構成
 ---
 
 # iOS 構成
@@ -49,7 +51,7 @@ license: >
         <preference name="AllowInlineMediaPlayback" value="true"/>
         
 
-*   `BackupWebStorage`(文字列、どちらか `none` 、 `local` 、またはデフォルト `cloud` ): に設定 `cloud` web ストレージ データを iCloud 経由でのバックアップを許可します。 設定 `local` iTunes 同期を介してローカル バックアップのみを許可します。 設定 `none` web ストレージ バックアップを防止。
+*   `BackupWebStorage`(文字列、どちらか `none` 、 `local` 、またはデフォルト `cloud` ): に設定 `cloud` web [ストレージ](../../../cordova/storage/storage.html) データを iCloud 経由でのバックアップを許可します。 設定 `local` iTunes 同期を介してローカル バックアップのみを許可します。 設定 `none` web [ストレージ](../../../cordova/storage/storage.html) バックアップを防止。
     
         <preference name="BackupWebStorage" value="local"/>
         

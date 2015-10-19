@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 存儲
 ---
 
 # 存儲
@@ -35,22 +37,22 @@ license: >
 
 ## 方法
 
-*   大概
+*   [大概](storage.opendatabase.html)
 
 ## 參數
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## 物件
 
-*   資料庫
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [資料庫](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## 訪問功能
 

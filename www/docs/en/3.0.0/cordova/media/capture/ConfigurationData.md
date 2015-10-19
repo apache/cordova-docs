@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ConfigurationData
 ---
 
 ConfigurationData
@@ -47,7 +49,7 @@ Properties
 
 - __width__: The width of the image or video in pixels.  The value is zero for sound clips. (Number)
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // retrieve supported image modes

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Le fichier config.xml
 ---
 
 # Le fichier config.xml
@@ -42,7 +44,7 @@ Cette section décrit en détail les options de configuration globale et multi-p
 
 *   Configuration iOS
 *   Configuration Android
-*   Configuration de blackBerry 10
+*   [Configuration de blackBerry](../guide/platforms/blackberry/config.html) 10
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.
 
@@ -184,6 +186,6 @@ Lorsque vous utilisez l'interface CLI pour créer des applications, il est parfo
 
 ## Le *hook* élément
 
-Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir Guide de crochets pour plus d'informations.
+Représente votre script personnalisé qui sera appelé par Cordova en cas de certaines actions (par exemple, est appelé après plugin est ajouté ou plate-forme préparer logique). Ceci est utile lorsque vous avez besoin d'étendre les fonctionnalités de Cordoue par défaut. Voir [Guide de crochets](../guide/appdev/hooks/index.html) pour plus d'informations.
 
     <hook type="after_plugin_install" src="scripts/afterPluginInstall.js" />

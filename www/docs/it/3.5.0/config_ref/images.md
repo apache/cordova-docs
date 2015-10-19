@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Icone e Splash screen
 ---
 
 # Icone e Splash screen
@@ -150,7 +152,7 @@ La prima riga imposta l'immagine da visualizzare come schermata iniziale. Questo
 
 La seconda riga imposta il ritardo predefinito di quanto tempo lo splashscreen appare in millisecondi. Questo dovrebbe essere il tempo massimo previsto inizio. Il valore predefinito per SplashScreenDelay è 3000 ms.
 
-Infine, la schermata iniziale dovrebbe essere presente solo tempo necessario. Quando ha iniziato l'app e webview ha caricato, l'app deve nascondere la schermata iniziale affinché il vostro punto di vista principale è visibile. Perché il tempo di avvio di app variano un po a causa di una serie di fattori, si raccomanda che l'app richiama esplicitamente `navigator.splashscreen.hide()` nel metodo Javascript che risponde alla `deviceready` evento. Altrimenti la schermata iniziale sarà visibile per il valore di SplashScreenDelay che configurato in precedenza. Questo approccio basato sugli eventi è altamente raccomandato contro avendo la schermata visibile per sempre una durata fissa.
+Infine, la schermata iniziale dovrebbe essere presente solo tempo necessario. Quando ha iniziato l'app e webview ha caricato, l'app deve nascondere la schermata iniziale affinché il vostro punto di vista principale è visibile. Perché il tempo di avvio di app variano un po a causa di una serie di fattori, si raccomanda che l'app richiama esplicitamente `navigator.splashscreen.hide()` nel metodo Javascript che risponde alla `[deviceready](../cordova/events/events.deviceready.html)` evento. Altrimenti la schermata iniziale sarà visibile per il valore di SplashScreenDelay che configurato in precedenza. Questo approccio basato sugli eventi è altamente raccomandato contro avendo la schermata visibile per sempre una durata fissa.
 
 ## Schermate iniziali per la piattaforma iOS
 

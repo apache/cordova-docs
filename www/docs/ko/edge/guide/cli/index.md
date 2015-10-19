@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 명령줄 인터페이스
 ---
 
 # 명령줄 인터페이스
@@ -38,9 +40,9 @@ license: >
 
 Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니다. Pc, 그것은 가능한 *액세서리* 아래 *명령 프롬프트*.
 
-**참고**: Windows 전용 플랫폼에 대 한 여전히 할 수 맥 하드웨어 개발 가상 컴퓨터 환경에서 또는 듀얼 부팅 모드에서 Windows를 실행 하 여. 사용 가능한 옵션 Windows Phone 8 플랫폼 가이드 또는 Windows 플랫폼 설명서를 참조 하십시오.
+**참고**: Windows 전용 플랫폼에 대 한 여전히 할 수 맥 하드웨어 개발 가상 컴퓨터 환경에서 또는 듀얼 부팅 모드에서 Windows를 실행 하 여. 사용 가능한 옵션 Windows Phone 8 [플랫폼 가이드](../platforms/index.html) 또는 Windows 플랫폼 설명서를 참조 하십시오.
 
-확률이 더 높다 그것이 실행 하는 CLI 다른 컴퓨터에서 로컬 작업 디렉토리에 풀 다운 자산이 원격 소스 코드 저장소를 유지 하는 것이 의미가 한 더.
+확률이 더 높다 그것이 실행 하는 CLI 다른 컴퓨터에서 로컬 작업 디렉토리에 풀 다운 자산이 원격 소스 코드 저장소를 [유지](../next/index.html) 하는 것이 의미가 한 더.
 
 ## 코르 도우 바 CLI를 설치
 
@@ -139,7 +141,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 ## 응용 프로그램 빌드
 
-기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `deviceready` 이벤트 처리기에서 기본적으로 참조`www/js/index.js`.
+기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `[deviceready](../../cordova/events/events.deviceready.html)` [이벤트](../../cordova/events/events.html) 처리기에서 기본적으로 참조`www/js/index.js`.
 
 반복적으로 프로젝트를 빌드하려면 다음 명령을 실행:
 
@@ -220,7 +222,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         $ cordova plugin add cordova-plugin-device
         
 
-*   네트워크 연결 및 배터리 이벤트:
+*   네트워크 연결 및 배터리 [이벤트](../../cordova/events/events.html):
     
         $ cordova plugin add cordova-plugin-network-information
         $ cordova plugin add cordova-plugin-battery-status
@@ -364,9 +366,9 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
         body { font-size:14px; }
         
 
-프로젝트를 다시 작성 하는 경우 안 드 로이드 버전 다른 그대로 유지 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
+프로젝트를 다시 작성 하는 경우 안 드 로이드 버전 다른 그대로 [유지](../next/index.html) 하는 동안 사용자 지정 글꼴 크기를 갖추고 있습니다.
 
-당신은 또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어 응용 프로그램에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `backbutton` 이벤트는 해당 하는 하드웨어 단추를.
+당신은 또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어 응용 프로그램에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `[backbutton](../../cordova/events/events.backbutton.html)` 이벤트는 해당 하는 하드웨어 단추를.
 
 ## 도움말 명령
 

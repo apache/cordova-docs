@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Настройка Parallels Desktop
 ---
 
 # Настройка Parallels Desktop
@@ -39,4 +41,4 @@ license: >
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите Руководство для платформы Windows Phone 8 для подробностей.
+После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите [Руководство для платформы Windows Phone 8](index.html) для подробностей.

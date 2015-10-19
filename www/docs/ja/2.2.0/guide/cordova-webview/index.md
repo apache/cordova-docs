@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: WebView の埋め込み
 ---
 
 WebView の埋め込み
@@ -23,6 +25,6 @@ WebView の埋め込み
 
 > Cordova WebView をプロジェクトで実装します。
 
-- Embedding Cordova WebView on Android
-- Embedding Cordova WebView on iOS
+- [Embedding Cordova WebView on Android](android.html)
+- [Embedding Cordova WebView on iOS](ios.html)
 

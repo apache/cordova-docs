@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 嵌入 WebViews
 ---
 
 # 嵌入 WebViews
 
 > 在您自己的專案中實現科爾多瓦 web 視圖。
 
-*   Android WebViews
-*   WebViews iOS
+*   [Android WebViews](../../platforms/android/webview.html)
+*   [WebViews iOS](../../platforms/ios/webview.html)

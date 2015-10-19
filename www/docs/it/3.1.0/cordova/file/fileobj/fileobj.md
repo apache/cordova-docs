@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: File
 ---
 
 # File
@@ -40,7 +42,7 @@ Questo oggetto contiene gli attributi di un singolo file.
 
 ## Dettagli
 
-Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottenere un'istanza di un `File` oggetto chiamando un `FileEntry` dell'oggetto `file()` metodo.
+Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottenere un'istanza di un `File` oggetto chiamando un `[FileEntry](../fileentry/fileentry.html)` dell'oggetto `file()` metodo.
 
 ## Piattaforme supportate
 
@@ -52,7 +54,7 @@ Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottene
 
 ## fetta
 
-Restituire un nuovo `File` oggetto, per cui `FileReader` restituisce solo la parte specificata del file. Negativi i valori per `start` o `end` sono misurati dalla fine del file. Gli indici sono posizionati rispetto alla sezione corrente. (Vedere l'esempio completo sotto.)
+Restituire un nuovo `File` oggetto, per cui `[FileReader](../filereader/filereader.html)` restituisce solo la parte specificata del file. Negativi i valori per `start` o `end` sono misurati dalla fine del file. Gli indici sono posizionati rispetto alla sezione corrente. (Vedere l'esempio completo sotto.)
 
 **Parametri:**
 

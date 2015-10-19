@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Storage
 ---
 
 Storage
@@ -23,27 +25,27 @@ Storage
 
 > Provides access to the devices storage options.  
 
-This API is based on the [W3C Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with PhoneGap's implementation. For devices that don't have storage support, PhoneGap's implementation should be compatible with the W3C specification.
+This API is based on the [W3C Web SQL [Database](database/database.html) Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with PhoneGap's implementation. For devices that don't have storage support, PhoneGap's implementation should be compatible with the W3C specification.
 
 Methods
 -------
 
-- openDatabase
+- [openDatabase](storage.opendatabase.html)
 
 Arguments
 ---------
 
-- name
-- version
-- display_name
-- size
+- [name](parameters/name.html)
+- [version](parameters/version.html)
+- [display_name](parameters/display_name.html)
+- [size](parameters/size.html)
 
 Objects
 -------
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetList
-- SQLError
-- localStorage
+- [Database](database/database.html)
+- [SQLTransaction](sqltransaction/sqltransaction.html)
+- [SQLResultSet](sqlresultset/sqlresultset.html)
+- [SQLResultSetList](sqlresultsetlist/sqlresultsetlist.html)
+- [SQLError](sqlerror/sqlerror.html)
+- [localStorage](localstorage/localstorage.html)

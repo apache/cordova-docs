@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по платформы Windows Phone 8
 ---
 
 # Руководство по платформы Windows Phone 8
@@ -24,9 +26,9 @@ license: >
 
 Смотрите ниже для более подробной информации конкретной платформы, которая применяется для обеих версий:
 
-*   Обновление Windows Phone
-*   Windows Phone плагины
-*   Windows Phone средств командной строки
+*   [Обновление Windows Phone](upgrading.html)
+*   [Windows Phone плагины](plugin.html)
+*   [Windows Phone средств командной строки](tools.html)
 
 Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 

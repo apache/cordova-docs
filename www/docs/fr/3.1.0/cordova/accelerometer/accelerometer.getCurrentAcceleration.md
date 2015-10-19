@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.getCurrentAcceleration
 ---
 
 # accelerometer.getCurrentAcceleration
@@ -29,7 +31,7 @@ Renvoie l'accélération en cours sur les axes *x*, *y*et *z* .
 
 L'accéléromètre est un capteur de mouvement qui détecte la modification (*delta*) en mouvement relatif à l'orientation actuelle de l'appareil, en trois dimensions le long de l'axe *x*, *y* et *z* .
 
-Ces valeurs d'accélération sont retournées par la fonction callback `accelerometerSuccess`.
+Ces valeurs d'accélération sont retournées par la fonction callback `[accelerometerSuccess](parameters/accelerometerSuccess.html)`.
 
 ## Plates-formes supportées
 

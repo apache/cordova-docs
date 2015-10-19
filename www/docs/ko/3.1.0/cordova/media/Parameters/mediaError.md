@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: mediaError
 ---
 
 # mediaError
 
-미디어 기능에 오류가 있을 때 실행 되는 사용자 지정 된 콜백 함수.
+[미디어](../media.html) 기능에 오류가 있을 때 실행 되는 사용자 지정 된 콜백 함수.
 
     function(error) {
         // Handle the error

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guida alla sicurezza
 ---
 
 # Guida alla sicurezza
@@ -30,7 +32,7 @@ La seguente guida include alcune procedure ottimali di protezione che è necessa
 *   Iframes e il meccanismo di Callback Id
 *   Certificato appuntare
 *   Certificati autofirmati
-*   Archiviazione crittografata
+*   [Archiviazione](../../../cordova/storage/storage.html) crittografata
 *   Consigli generali
 *   Articoli consigliati e altre risorse
 

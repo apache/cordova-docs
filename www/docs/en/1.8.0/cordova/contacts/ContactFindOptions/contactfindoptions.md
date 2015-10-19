@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactFindOptions
 ---
 
 ContactFindOptions
 ==================
 
-Contains properties that can be used to filter the results of a `contacts.find` operation.
+Contains properties that can be used to filter the results of a `[contacts.find](../contacts.find.html)` operation.
 
 Properties
 ----------
@@ -38,7 +40,7 @@ Supported Platforms
 - iOS
 - Bada 1.2 & 2.0
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 	// success callback
@@ -62,7 +64,7 @@ Quick Example
 	// find contacts
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>

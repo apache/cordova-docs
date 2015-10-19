@@ -16,16 +16,18 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: BlackBerry プラットフォーム ガイド
 ---
 
 # BlackBerry プラットフォーム ガイド
 
 このガイドはターゲット用のアプリケーションをバージョン 10 より前の BlackBerry プラットホーム SDK 環境を設定する方法を示します。 場合は、最新のバージョンをターゲットにする BlackBerry 10 プラットフォーム ガイドを参照してください。 詳細なプラットフォーム固有の情報は、次を参照してください。
 
-*   ブラックベリーの構成
-*   ブラックベリーのアップグレード
-*   ブラックベリーのプラグイン
-*   ブラックベリーのコマンド ライン ツール
+*   [ブラックベリーの構成](config.html)
+*   [ブラックベリーのアップグレード](upgrading.html)
+*   [ブラックベリーのプラグイン](plugin.html)
+*   [ブラックベリーのコマンド ライン ツール](tools.html)
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 

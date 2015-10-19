@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Notification
 ---
 
 # Notification
@@ -24,11 +26,11 @@ license: >
 
 ## Methods
 
-- `notification.alert`
-- `notification.confirm`
-- `notification.prompt`
-- `notification.beep`
-- `notification.vibrate`
+- `[notification.alert](notification.alert.html)`
+- `[notification.confirm](notification.confirm.html)`
+- `[notification.prompt](notification.prompt.html)`
+- `[notification.beep](notification.beep.html)`
+- `[notification.vibrate](notification.vibrate.html)`
 
 ## Accessing the Feature
 
@@ -90,4 +92,4 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

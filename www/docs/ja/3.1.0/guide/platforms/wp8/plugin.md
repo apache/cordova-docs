@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone のプラグイン
 ---
 
 # Windows Phone のプラグイン
@@ -158,7 +160,7 @@ Windows phone で、 `<source-file>` プラグインのすべてのリソース�
 
  [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
 
-たとえば、'一時停止' と '再開' アプリケーション イベントにフックすることができます。
+たとえば、'一時停止' と '[再開](../../../cordova/events/events.resume.html)' アプリケーション イベントにフックすることができます。
 
 ### プラグインのデバッグ
 

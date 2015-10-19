@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
@@ -29,7 +31,7 @@ license: >
 
 Diese Funktion wird ausgeführt, nachdem ein erfolgreiche Capture-Vorgang abgeschlossen ist. An diesem Punkt kann eine Mediendatei erfasst wurden und entweder der Benutzer die Medien-Capture-Anwendung beendet hat oder die Capture-erreicht.
 
-Jedes `MediaFile` Objekt beschreibt eine aufgenommenen Medien-Datei.
+Jedes `[MediaFile](MediaFile.html)` Objekt beschreibt eine aufgenommenen Medien-Datei.
 
 ## Kleines Beispiel
 

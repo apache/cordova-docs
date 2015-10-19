@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Capture
 ---
 
 Capture
@@ -27,22 +29,22 @@ Capture
 -------
 
 - Capture
-- CaptureAudioOptions
-- CaptureImageOptions
-- CaptureVideoOptions
-- CaptureCB
-- CaptureErrorCB
-- ConfigurationData
-- MediaFile
-- MediaFileData
+- [CaptureAudioOptions](captureAudioOptions.html)
+- [CaptureImageOptions](captureImageOptions.html)
+- [CaptureVideoOptions](captureVideoOptions.html)
+- [CaptureCB](CaptureCB.html)
+- [CaptureErrorCB](CaptureErrorCB.html)
+- [ConfigurationData](ConfigurationData.html)
+- [MediaFile](MediaFile.html)
+- [MediaFileData](MediaFileData.html)
 
 メソッド
 -------
 
-- capture.captureAudio
-- capture.captureImage
-- capture.captureVideo
-- MediaFile.getFormatData
+- [capture.captureAudio](captureAudio.html)
+- [capture.captureImage](captureImage.html)
+- [capture.captureVideo](captureVideo.html)
+- [MediaFile.getFormatData]([MediaFile](MediaFile.html).getFormatData.html)
 
 スコープ
 -----
@@ -62,9 +64,9 @@ __capture__ オブジェクトは __navigator.device__ オブジェクトに割�
 メソッド
 -------
 
-- capture.captureAudio: オーディオ録音のために、デバイスのオーディオ録音アプリを起動します。
-- capture.captureImage: 画像取得のために、デバイスのカメラアプリを起動します。
-- capture.captureVideo: ビデオ録画のために、デバイスのビデオ録画アプリを起動します。
+- [capture.captureAudio](captureAudio.html): オーディオ録音のために、デバイスのオーディオ録音アプリを起動します。
+- [capture.captureImage](captureImage.html): 画像取得のために、デバイスのカメラアプリを起動します。
+- [capture.captureVideo](captureVideo.html): ビデオ録画のために、デバイスのビデオ録画アプリを起動します。
 
 
 サポートされているプラットフォーム

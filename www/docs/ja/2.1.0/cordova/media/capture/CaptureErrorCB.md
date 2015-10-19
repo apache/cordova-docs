@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureErrorCB
 ---
 
 CaptureErrorCB
@@ -30,9 +32,9 @@ CaptureErrorCB
 
 この関数は、もしメディアキャプチャーアプリを起動しようとして、アプリがビジー状態であってエラーが発生した場合、もしキャプチャー操作実行中にエラーが発生した場合、もしユーザーによってメディアファイルがキャプチャーされる前にキャプチャー操作がキャンセルされた場合などに呼び出されます。
 
-この関数は適切なエラーコードが含まれた CaptureError オブジェクトを伴って呼び出されます。
+この関数は適切なエラーコードが含まれた [CaptureError](CaptureError.html) オブジェクトを伴って呼び出されます。
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------------
 
     // capture エラーコールバック関数

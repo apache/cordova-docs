@@ -16,20 +16,22 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Offline
 ---
 
 # Offline
 
-Das Ereignis wird ausgelöst, wenn eine Anwendung offline geht, und das Gerät nicht mit dem Internet verbunden ist.
+Das Ereignis wird ausgelöst, wenn eine Anwendung offline geht, und das [Gerät](../device/device.html) nicht mit dem Internet verbunden ist.
 
     document.addEventListener("offline", yourCallbackFunction, false);
     
 
 ## Informationen
 
-Das `offline` -Ereignis wird ausgelöst, wenn ein bereits angeschlossenes Gerät eine Netzwerkverbindung verliert, so dass eine Anwendung nicht mehr auf das Internet zugreifen kann. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn die `connection.type` ändert sich von `NONE` auf einen anderen Wert.
+Das `offline` -Ereignis wird ausgelöst, wenn ein bereits angeschlossenes [Gerät](../device/device.html) eine Netzwerkverbindung verliert, so dass eine Anwendung nicht mehr auf das Internet zugreifen kann. Es stützt sich auf die gleichen Informationen wie die Verbindung-API und wird ausgelöst, wenn die `[connection.type](../connection/connection.type.html)` ändert sich von `NONE` auf einen anderen Wert.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 

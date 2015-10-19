@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: menubutton
 ---
 
 menubutton
@@ -30,7 +32,7 @@ menubutton
 
 もしデフォルトのメニューボタンの挙動を上書きしたい場合は、 'menubutton' イベントにイベントリスナーを登録することができます。
 
-通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
+通常は、 Cordova の '[deviceready](events.deviceready.html)' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
 サポートされているプラットフォーム
 -------------------
@@ -38,7 +40,7 @@ menubutton
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     document.addEventListener("menubutton", onMenuKeyDown, false);

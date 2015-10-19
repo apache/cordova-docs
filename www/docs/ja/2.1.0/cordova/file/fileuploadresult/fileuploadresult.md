@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadResult
 ---
 
 FileUploadResult
 ========
 
-`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
+`FileUploadResult` オブジェクトは、 [FileTransfer](../filetransfer/filetransfer.html) の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
 プロパティー
 ----------
@@ -33,7 +35,7 @@ FileUploadResult
 概要
 -----------
 
-`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
+`FileUploadResult` オブジェクトは、 [FileTransfer](../filetransfer/filetransfer.html) の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
 iOS に関する注意点
 ----------

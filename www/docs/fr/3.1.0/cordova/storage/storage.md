@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Stockage
 ---
 
 # Stockage
@@ -24,7 +26,7 @@ license: >
 
 Cette API offre des options de stockage basées sur deux différentes spécifications de W3C :
 
-*   La [Spécification de l'API Web Storage][1] vous permet d'accéder aux données via des paires clé/valeur simple. Voir la section sur le localStorage pour plus de détails sur cette interface.
+*   La [Spécification de l'API Web Storage][1] vous permet d'accéder aux données via des paires clé/valeur simple. Voir la section sur le [localStorage](localstorage/localstorage.html) pour plus de détails sur cette interface.
 
 *   La [Spécification de base de données SQL Web][2] propose plusieurs tables de base de données complète accessible via des requêtes SQL. Un résumé de cette interface apparaît immédiatement en dessous.
 
@@ -35,22 +37,22 @@ Cordova permet de rejoindre les deux interfaces pour la minorité d'appareils qu
 
 ## Méthodes
 
-*   openDatabase
+*   [openDatabase](storage.opendatabase.html)
 
 ## Arguments
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+*   [database_name](parameters/name.html)
+*   [database_version](parameters/version.html)
+*   [database_displayname](parameters/display_name.html)
+*   [database_size](parameters/size.html)
 
 ## Objets
 
-*   Base de données
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   [Base de données](database/database.html)
+*   [SQLTransaction](sqltransaction/sqltransaction.html)
+*   [SQLResultSet](sqlresultset/sqlresultset.html)
+*   [SQLResultSetRowList](sqlresultsetrowlist/sqlresultsetrowlist.html)
+*   [SQLError](sqlerror/sqlerror.html)
 
 ## Accéder à la fonctionnalité
 

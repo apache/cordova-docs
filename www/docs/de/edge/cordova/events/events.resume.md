@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: resume
 ---
 
 # resume
@@ -29,7 +31,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung aus dem Hintergrund abgerufen 
 
 Das `resume` -Ereignis wird ausgelöst, wenn die native Plattform die Anwendung aus dem Hintergrund zieht.
 
-Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `deviceready` -Ereignis ausgelöst.
+Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal einen Ereignis-Listener hinzufügen das `[deviceready](events.deviceready.html)` -Ereignis ausgelöst.
 
 ## Unterstützte Plattformen
 
@@ -85,7 +87,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## iOS Macken
 
-Alle interaktiven Funktionen Intensivlehrgang ein `pause` -Ereignishandler ausgeführt später, wenn die app wieder aufgenommen wird, wie durch signalisiert die `resume` Ereignis. Dazu gehören Warnungen, `console.log()` , und keine Anrufe von Plugins oder Cordova API, das Durchlaufen von Objective-C.
+Alle interaktiven Funktionen Intensivlehrgang ein `[pause](events.pause.html)` -Ereignishandler ausgeführt später, wenn die app wieder aufgenommen wird, wie durch signalisiert die `resume` Ereignis. Dazu gehören Warnungen, `console.log()` , und keine Anrufe von Plugins oder Cordova API, das Durchlaufen von Objective-C.
 
 *   **aktiv** -Ereignis
     

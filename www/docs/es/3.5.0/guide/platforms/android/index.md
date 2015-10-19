@@ -16,19 +16,21 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de la plataforma Android
 ---
 
 # Guía de la plataforma Android
 
-Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Muestra cómo instalar el SDK de Android, abrir un proyecto de Android en el SDK e implementarlo en un emulador o dispositivo. Debes seguir las instrucciones para instalar el SDK de Android, independientemente de si usted utiliza el flujo de trabajo multiplataforma discuten en la descripción, o las herramientas de shell centrada en plataforma detalladas en Android Herramientas de línea de comandos.
+Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Muestra cómo instalar el SDK de Android, abrir un proyecto de Android en el SDK e implementarlo en un emulador o dispositivo. Debes seguir las instrucciones para instalar el SDK de Android, independientemente de si usted utiliza el flujo de trabajo multiplataforma discuten en la descripción, o las herramientas de shell centrada en plataforma detalladas en [Android Herramientas de línea de comandos](tools.html).
 
 Vea el siguiente para obtener más información específica de la plataforma:
 
-*   Configuración de Android
-*   Android WebViews
-*   Android Plugins
-*   Actualizar Android
-*   Android Herramientas de línea de comandos
+*   [Configuración de Android](config.html)
+*   [Android WebViews](webview.html)
+*   [Android Plugins](plugin.html)
+*   [Actualizar Android](upgrading.html)
+*   [Android Herramientas de línea de comandos](tools.html)
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 

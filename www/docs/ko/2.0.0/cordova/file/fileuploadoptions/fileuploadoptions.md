@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: FileUploadOptions
 ---
 
 FileUploadOptions
 ========
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the [FileTransfer](../filetransfer/filetransfer.html) objects upload method in order to specify additional parameters to the upload script.
 
 Properties
 ----------
@@ -36,7 +38,7 @@ Properties
 Description
 -----------
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the [FileTransfer](../filetransfer/filetransfer.html) objects upload method in order to specify additional parameters to the upload script.
 
 WP7 Quirk
 ---------

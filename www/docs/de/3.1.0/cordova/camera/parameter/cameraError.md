@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraError
 ---
 
 # cameraError
@@ -29,4 +31,4 @@ OnError-Callback-Funktion, die eine Fehlermeldung bereitstellt.
 
 ## Parameter
 
-*   **Meldung**: die Nachricht wird durch das Gerät systemeigenen Code bereitgestellt. *(String)*
+*   **Meldung**: die Nachricht wird durch das [Gerät](../../device/device.html) systemeigenen Code bereitgestellt. *(String)*

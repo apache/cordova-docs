@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFindOptions
 ---
 
 contactFindOptions
 ==================
 
-`contacts.find` メソッドを使用する際のオプションのパラメーターです。連絡先の検索時にフィルターをかける場合に使用します。
+`[contacts.find](../contacts.find.html)` メソッドを使用する際のオプションのパラメーターです。連絡先の検索時にフィルターをかける場合に使用します。
 
     {
         filter: "",

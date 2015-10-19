@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 # contactSuccess
 
-성공 콜백 함수를 제공 하는 `Contact` 배열에서 결과 `contacts.find` 작업.
+성공 콜백 함수를 제공 하는 `Contact` 배열에서 결과 `[contacts.find](../contacts.find.html)` 작업.
 
     function(contacts) {
         // Do something
@@ -29,7 +31,7 @@ license: >
 
 ## 매개 변수
 
-*   **연락처**: 연락처 배열 찾기 작업에서 유래한. *(연락처)*
+*   **연락처**: [연락처](../contacts.html) 배열 찾기 작업에서 유래한. *(연락처)*
 
 ## 예를 들어
 

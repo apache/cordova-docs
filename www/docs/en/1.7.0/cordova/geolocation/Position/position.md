@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Position
 ---
 
 Position
@@ -43,7 +45,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // onSuccess Callback
@@ -68,7 +70,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -103,7 +105,7 @@ Full Example
                                 'Timestamp: '          + new Date(position.timestamp)          + '<br />';
         }
     
-	    // onError Callback receives a PositionError object
+	    // onError Callback receives a [PositionError](../PositionError/positionError.html) object
 	    //
 	    function onError(error) {
 	        alert('code: '    + error.code    + '\n' +

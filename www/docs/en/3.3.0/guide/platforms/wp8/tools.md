@@ -16,18 +16,20 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows Phone Shell Tool Guide
 ---
 
 # Windows Phone Shell Tool Guide
 
 This guide shows how to use Cordova's set of platform-centered shell
 tools to develop Windows Phone apps for both versions 7 and 8. This
-development path, discussed in the Overview, may offer you a greater
+development path, discussed in the [Overview](../../overview/index.html), may offer you a greater
 range of development options for the Windows Phone platform than the
-cross-platform CLI tool described in The Command-Line Interface.
+cross-platform CLI tool described in [The Command-Line Interface](../../cli/index.html).
 Before using either development path, you must first configure the SDK
-environment as described in the Windows Phone 7 Platform Guide or
-the Windows Phone 8 Platform Guide.
+environment as described in the [Windows Phone 7 Platform Guide](../wp7/index.html) or
+the [Windows Phone 8 Platform Guide](index.html).
 
 To enable shell tools for Windows Phone development, download Cordova
 from [cordova.apache.org](http://cordova.apache.org). The download
@@ -39,7 +41,7 @@ file for more detailed directions.
 
 These tools allow you to create, build, and run apps.  For information
 on the all-purpose command-line interface that enables plugin
-features, see Using Plugman to Manage Plugins. See Application Plugins
+features, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). See Application Plugins
 for details on how to develop plugins.
 
 ## Windows Phone

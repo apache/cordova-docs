@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: localStorage
 ---
 
 localStorage
 ===============
 
-W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute) へのアクセスを提供します。
+W3C [Storage](../storage.html) interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute) へのアクセスを提供します。
 
     var storage = window.localStorage;
 
@@ -37,7 +39,7 @@ W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attr
 詳細
 -----------
 
-localStorage は W3C Storage interface へのインターフェースを提供します。キーと値のペアでデータを管理します。
+localStorage は W3C [Storage](../storage.html) interface へのインターフェースを提供します。キーと値のペアでデータを管理します。
 
 注意: window.sessionStorage は同じインターフェースを提供しますが、アプリが起動するたびにこの値はクリアされます。
 

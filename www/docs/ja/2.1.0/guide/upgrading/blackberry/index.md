@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Upgrading Cordova BlackBerry
 ---
 
 Upgrading Cordova BlackBerry
@@ -35,7 +37,7 @@ www フォルダーのアップデート:
 5. HTML を、新しい `cordova-2.0.0.js` を使って更新します
 6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い [Capture](../../../cordova/media/capture/capture.html) 及び [Contact](../../../cordova/contacts/Contact/contact.html) プラグインを次から:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -57,7 +59,7 @@ www フォルダーのアップデート:
 7. `www/` フォルダーを開き、新しい `cordova-2.0.0.js` を使って HTML を更新します
 8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い [Capture](../../../cordova/media/capture/capture.html) 及び [Contact](../../../cordova/contacts/Contact/contact.html) プラグインを次から:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -84,7 +86,7 @@ www フォルダーのアップデート:
 5. 新しい `cordova-1.8.0.js` を使って HTML を更新します
 6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い [Capture](../../../cordova/media/capture/capture.html) 及び [Contact](../../../cordova/contacts/Contact/contact.html) プラグインを次から:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
@@ -106,7 +108,7 @@ www フォルダーのアップデート:
 7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.8.0.js` を使って更新します
 8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
    ネームスペース/サービスのラベルが変更されています。
-   古い Capture 及び Contact プラグインを次から:
+   古い [Capture](../../../cordova/media/capture/capture.html) 及び [Contact](../../../cordova/contacts/Contact/contact.html) プラグインを次から:
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>

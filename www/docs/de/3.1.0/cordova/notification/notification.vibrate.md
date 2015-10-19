@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Notification.Vibrate
 ---
 
 # Notification.Vibrate
 
-Vibriert das Gerät für den angegebenen Zeitraum.
+Vibriert das [Gerät](../device/device.html) für den angegebenen Zeitraum.
 
     navigator.notification.vibrate(milliseconds)
     

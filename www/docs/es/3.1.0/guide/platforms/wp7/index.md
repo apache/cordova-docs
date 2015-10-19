@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guía de la plataforma de Windows Phone 7
 ---
 
 # Guía de la plataforma de Windows Phone 7
@@ -24,9 +26,9 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 
 Vea el siguiente para obtener más información específica de la plataforma que se aplica para las dos versiones:
 
-*   Actualización de Windows Phone
-*   Windows Phone Plugins
-*   Windows Phone herramientas de línea de comandos
+*   [Actualización de Windows Phone](../wp8/upgrading.html)
+*   [Windows Phone Plugins](../wp8/plugin.html)
+*   [Windows Phone herramientas de línea de comandos](../wp8/tools.html)
 
 Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 
@@ -102,7 +104,7 @@ Con el fin de probar su aplicación en un dispositivo, el dispositivo debe estar
 
 *   Asegúrese de que su teléfono está conectado, y la pantalla se desbloquea.
 
-*   En Visual Studio, seleccione 'Dispositivo' en el menú desplegable superior.
+*   En Visual Studio, seleccione '[Dispositivo](../../../cordova/device/device.html)' en el menú desplegable superior.
 
 *   Pulse el botón verde **jugar** al lado del menú desplegable para empezar a depurar, o **F5**.
 

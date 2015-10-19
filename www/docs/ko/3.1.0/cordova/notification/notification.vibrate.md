@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: notification.vibrate
 ---
 
 # notification.vibrate
@@ -25,7 +27,7 @@ license: >
     navigator.notification.vibrate(milliseconds)
     
 
-*   **시간**: 밀리초 1000 밀리초 1 초를 같게 장치 진동. *(수)*
+*   **시간**: 밀리초 1000 밀리초 1 초를 같게 [장치](../device/device.html) 진동. *(수)*
 
 ## 지원 되는 플랫폼
 

@@ -16,10 +16,12 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFields
 ---
 
 # contactFields
 
-Обязательный параметр для `contacts.find` метод, используемый для указания, какие поля должны быть включены в `Contact` объектов в результате операции поиска.
+Обязательный параметр для `[contacts.find](../contacts.find.html)` метод, используемый для указания, какие поля должны быть включены в `Contact` объектов в результате операции поиска.
 
     [«имя», «phoneNumbers», «письма»]

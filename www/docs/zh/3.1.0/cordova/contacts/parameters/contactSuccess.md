@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactSuccess
 ---
 
 # contactSuccess
 
-提供的成功回呼函數 `Contact` 陣列產生的 `contacts.find` 操作。
+提供的成功回呼函數 `Contact` 陣列產生的 `[contacts.find](../contacts.find.html)` 操作。
 
     function(contacts) {
         // Do something

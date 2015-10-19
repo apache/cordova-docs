@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 # accelerometer.watchAcceleration
@@ -31,9 +33,9 @@ license: >
 
 加速度計は現在位置との相対運動の変更 (デルタ) を検出するモーション センサーです。 加速度計は、 *x* *y*、および*z*軸に沿って 3次元の動きを検出できます。
 
-`accelerometer.watchAcceleration`メソッドは、デバイスの電流を取得 `Acceleration` 一定の間隔で実行する、 `accelerometerSuccess` コールバック関数するたびに。 経由でミリ秒単位で間隔を指定する、 `acceleratorOptions` オブジェクトの `frequency` パラメーター。
+`accelerometer.watchAcceleration`メソッドは、デバイスの電流を取得 `Acceleration` 一定の間隔で実行する、 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` コールバック関数するたびに。 経由でミリ秒単位で間隔を指定する、 `acceleratorOptions` オブジェクトの `frequency` パラメーター。
 
-返される ID の参照、加速度計腕時計間隔を見るし、で使用することができます `accelerometer.clearWatch` 、加速度計を見て停止します。
+返される ID の参照、加速度計腕時計間隔を見るし、で使用することができます `[accelerometer.clearWatch](accelerometer.clearWatch.html)` 、加速度計を見て停止します。
 
 ## サポートされているプラットフォーム
 

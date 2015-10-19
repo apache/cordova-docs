@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getPreferredLanguage
 ---
 
 globalization.getPreferredLanguage
@@ -34,8 +36,8 @@ Returns the language identifier string to the `successCallback` with a
 property with a `String` value.
 
 If there is an error getting the language, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+executes with a `[GlobalizationError](GlobalizationError/globalizationerror.html)` object as a parameter. The
+error's expected code is `[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -45,7 +47,7 @@ Supported Platforms
 - iOS
 - Windows Phone 8
 
-Quick Example
+Quick [Example](../storage/storage.opendatabase.html)
 -------------
 
 When the browser is set to the `en\_US` locale, this should display a
@@ -56,7 +58,7 @@ popup dialog with the text `language: English`:
         function () {alert('Error getting language\n');}
     );
 
-Full Example
+Full [Example](../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE HTML>

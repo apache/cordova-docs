@@ -16,10 +16,12 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: contactFields
 ---
 
 # contactFields
 
-所需參數的 `contacts.find` 方法，用來指定哪些欄位應包含在 `Contact` 產生的查找操作的物件。
+所需參數的 `[contacts.find](../contacts.find.html)` 方法，用來指定哪些欄位應包含在 `Contact` 產生的查找操作的物件。
 
     ["名稱"、"手機"、"電子郵件"]

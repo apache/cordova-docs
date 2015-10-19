@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: online
 ---
 
 # online
@@ -29,11 +31,11 @@ becomes connected to the Internet.
 
 The `online` event fires when a previously unconnected device receives
 a network connection to allow an application access to the Internet.
-It relies on the same information as the Connection API, and fires
-when the value of `connection.type` becomes `NONE`.
+It relies on the same information as the [Connection](../connection/connection.html) API, and fires
+when the value of `[connection.type](../connection/connection.type.html)` becomes `NONE`.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+attach an event listener once the `[deviceready](events.deviceready.html)` event fires.
 
 ## Supported Platforms
 
@@ -89,7 +91,7 @@ attach an event listener once the `deviceready` event fires.
 ## iOS Quirks
 
 During initial startup, the first `online` event (if applicable) takes
-at least a second to fire, prior to which `connection.type` is
+at least a second to fire, prior to which `[connection.type](../connection/connection.type.html)` is
 `UNKNOWN`.
 
 ## Windows Phone 7 Quirks
@@ -98,4 +100,4 @@ When running in the Emulator, the `connection.status` is always unknown, so this
 
 ## Windows Phone 8 Quirks
 
-The Emulator reports the connection type as `Cellular`, which does not change, so events does _not_ fire.
+The Emulator reports the [connection.type](../connection/connection.type.html) as `Cellular`, which does not change, so events does _not_ fire.

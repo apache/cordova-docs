@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
@@ -31,7 +33,7 @@ At this point a media file has been captured, and either the user has
 exited the media capture application, or the capture limit has been
 reached.
 
-Each `MediaFile` object describes a captured media file.
+Each `[MediaFile](MediaFile.html)` object describes a captured media file.
 
 ## Quick Example
 

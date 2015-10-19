@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Файловая система
 ---
 
 # Файловая система
@@ -30,7 +32,7 @@ license: >
 
 ## Подробная информация
 
-`FileSystem`Объект представляет сведения о файловой системе. Имя файловой системы является уникальным через список открытых файловых систем. Свойство root содержит `DirectoryEntry` объект, представляющий корневой каталог в файловой системе.
+`FileSystem`Объект представляет сведения о файловой системе. Имя файловой системы является уникальным через список открытых файловых систем. Свойство root содержит `[DirectoryEntry](../directoryentry/directoryentry.html)` объект, представляющий корневой каталог в файловой системе.
 
 ## Поддерживаемые платформы
 

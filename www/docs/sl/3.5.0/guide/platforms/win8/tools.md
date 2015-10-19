@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Orodja ukazne vrstice Windows 8
 ---
 
 # Orodja ukazne vrstice Windows 8
@@ -24,7 +26,7 @@ Na `cordova` pripomoček ukazne vrstice je na visoki ravni orodje, ki vam omogo�
 
  [1]: http://cordova.apache.org
 
-Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte Uporaba Plugman za upravljanje Plugins. Glejte Uporaba Plugins za pregled.
+Podatki o nizki ravni vmesnik ukazne vrstice, ki omogoča plugins, glejte [Uporaba Plugman za upravljanje Plugins](../../../plugin_ref/plugman.html). Glejte Uporaba Plugins za pregled.
 
 ## Windows 8
 

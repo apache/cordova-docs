@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 # compass.getCurrentHeading
@@ -29,7 +31,7 @@ Conseguir el actual rumbo de la brújula.
 
 La brújula es un sensor que detecta la dirección o rumbo que el dispositivo está apuntado, normalmente desde la parte superior del dispositivo. Mide el rumbo en grados de 0 a 359.99, donde 0 es el norte.
 
-La información de rumbo de la brújula es devuelta mediante un objeto `CompassHeading`, utilizando la función de devolución de llamada `compassSuccess`.
+La información de rumbo de la brújula es devuelta mediante un objeto `CompassHeading`, utilizando la función de devolución de llamada `[compassSuccess](parameters/compassSuccess.html)`.
 
 ## Plataformas soportadas
 

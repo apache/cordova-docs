@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Globalization
 ---
 
 # Globalization
@@ -25,22 +27,22 @@ locale and timezone.
 
 ## Objects
 
-- GlobalizationError
+- [GlobalizationError](GlobalizationError/globalizationerror.html)
 
 ## Methods
 
-- globalization.getPreferredLanguage
-- globalization.getLocaleName
-- globalization.dateToString
-- globalization.stringToDate
-- globalization.getDatePattern
-- globalization.getDateNames
-- globalization.isDayLightSavingsTime
-- globalization.getFirstDayOfWeek
-- globalization.numberToString
-- globalization.stringToNumber
-- globalization.getNumberPattern
-- globalization.getCurrencyPattern
+- [globalization.getPreferredLanguage](globalization.getPreferredLanguage.html)
+- [globalization.getLocaleName](globalization.getLocaleName.html)
+- [globalization.dateToString](globalization.dateToString.html)
+- [globalization.stringToDate](globalization.stringToDate.html)
+- [globalization.getDatePattern](globalization.getDatePattern.html)
+- [globalization.getDateNames](globalization.getDateNames.html)
+- [globalization.isDayLightSavingsTime](globalization.isDayLightSavingsTime.html)
+- [globalization.getFirstDayOfWeek](globalization.getFirstDayOfWeek.html)
+- [globalization.numberToString](globalization.numberToString.html)
+- [globalization.stringToNumber](globalization.stringToNumber.html)
+- [globalization.getNumberPattern](globalization.getNumberPattern.html)
+- [globalization.getCurrencyPattern](globalization.getCurrencyPattern.html)
 
 ## Variable Scope
 
@@ -77,4 +79,4 @@ platform-specific configuration settings described below:
         </feature>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See [Platform Support](../../guide/support/index.html) for an overview.

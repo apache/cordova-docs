@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: endcallbutton
 ---
 
 # endcallbutton
@@ -29,7 +31,7 @@ Este evento se desencadena cuando el usuario presiona el botón de llamada final
 
 El evento reemplaza el comportamiento predeterminado de llamada final.
 
-Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `deviceready`.
+Las aplicaciones normalmente deben utilizar `document.addEventListener` para conectar un detector de eventos una vez que se desencadene el evento `[deviceready](events.deviceready.html)`.
 
 ## Plataformas soportadas
 

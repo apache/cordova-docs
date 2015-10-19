@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 # accelerometer.clearWatch
@@ -25,7 +27,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **watchID**: l'ID retourné par`accelerometer.watchAcceleration`.
+*   **watchID**: l'ID retourné par`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Plates-formes prises en charge
 

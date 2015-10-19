@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 命令列介面
 ---
 
 # 命令列介面
@@ -110,7 +112,7 @@ license: >
 
 ## 構建應用程式
 
-預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用 `www/js/index.js` 。 <!-- XREF
+預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `[deviceready](../../cordova/events/events.deviceready.html)` 事件處理常式中，從預設的引用 `www/js/index.js` 。 <!-- XREF
 (See the Application Development Guide for details.)
 XREF -->
 
@@ -262,7 +264,7 @@ XREF -->
 
 當你重新生成專案時，Android 版本功能自訂字體大小，而其他人保持不變。
 
-您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `backbutton` 從相應的硬體按鈕的事件。
+您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `[backbutton](../../cordova/events/events.backbutton.html)` 從相應的硬體按鈕的事件。
 
 ## 更新科爾多瓦
 

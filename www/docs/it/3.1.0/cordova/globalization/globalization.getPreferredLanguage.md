@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getPreferredLanguage
 ---
 
 # globalization.getPreferredLanguage
@@ -29,7 +31,7 @@ Ottenere l'identificatore di stringa per la lingua corrente del client.
 
 Restituisce la stringa di identificatore di lingua per i `successCallback` con un `properties` oggetto come parametro. Tale oggetto dovrebbe avere una `value` proprietà con un `String` valore.
 
-Se c'è un errore nell'acquisizione della lingua, poi la `errorCallback` viene eseguita con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.UNKNOWN\_ERROR`.
+Se c'è un errore nell'acquisizione della lingua, poi la `errorCallback` viene eseguita con un `[GlobalizationError](GlobalizationError/globalizationerror.html)` oggetto come parametro. Previsto codice dell'errore è`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 ## Piattaforme supportate
 

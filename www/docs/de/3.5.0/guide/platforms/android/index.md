@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android-Plattform-Guide
 ---
 
 # Android-Plattform-Guide
@@ -24,11 +26,11 @@ Diese Anleitung zeigt wie Ihre Entwicklungsumgebung SDK eingerichtet, Cordova ap
 
 Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
-*   Android-Konfiguration
-*   Android Webansichten für
-*   Android Plugins
-*   Aktualisierung von Android
-*   Android-Befehlszeilenprogrammen
+*   [Android-Konfiguration](config.html)
+*   [Android Webansichten für](webview.html)
+*   [Android Plugins](plugin.html)
+*   [Aktualisierung von Android](upgrading.html)
+*   [Android-Befehlszeilenprogrammen](tools.html)
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 

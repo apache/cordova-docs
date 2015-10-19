@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 枚舉指定工作組或
 ---
 
 # 枚舉指定工作組或
@@ -56,7 +58,7 @@ license: >
 
 *   **getParent**: 查找父目錄。
 
-*   **createReader**: 創建一個新的 `DirectoryReader` ，可以從目錄中讀取條目。
+*   **createReader**: 創建一個新的 `[DirectoryReader](../directoryreader/directoryreader.html)` ，可以從目錄中讀取條目。
 
 *   **getDirectory**: 創建或者查找一個目錄。
 
@@ -80,7 +82,7 @@ license: >
 
 *   **successCallback**： 要與執行的回呼函數 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**: 一個回呼函數來執行如果檢索時出現錯誤 `Metadata` 。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 一個回呼函數來執行如果檢索時出現錯誤 `Metadata` 。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -173,7 +175,7 @@ license: >
 
 *   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**: 如果移動該目錄時，會出現一個錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果移動該目錄時，會出現一個錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -214,7 +216,7 @@ license: >
 
 *   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**： 如果試圖複製基礎目錄時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖複製基礎目錄時發生錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -260,7 +262,7 @@ license: >
 
 *   **successCallback**： 在刪除該目錄後執行的回檔。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果要刪除的目錄時，會出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果要刪除的目錄時，會出現錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -275,7 +277,7 @@ license: >
 
 *   **successCallback**： 一個通過目錄的父目錄的回檔 `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `[FileError](../fileerror/fileerror.html)` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -293,7 +295,7 @@ license: >
 
 ## createReader
 
-創建新的 DirectoryReader 來讀取目錄中的條目。
+創建新的 [DirectoryReader](../directoryreader/directoryreader.html) 來讀取目錄中的條目。
 
 **快速的示例**
 
@@ -315,7 +317,7 @@ license: >
 
 *   **successCallback**： 回檔的執行的 `DirectoryEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果發生錯誤時創建或查找目錄執行的回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果發生錯誤時創建或查找目錄執行的回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -334,9 +336,9 @@ license: >
 
 *   **選項**： 選項，以指定是否是否它不存在，則創建該檔。*（標誌）*
 
-*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
+*   **successCallback**： 傳遞一個回檔 `[FileEntry](../fileentry/fileentry.html)` 物件。*（函數）*
 
-*   **errorCallback**: 如果在創建或查找檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**: 如果在創建或查找檔時出現錯誤執行回檔。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 
@@ -353,7 +355,7 @@ license: >
 
 *   **successCallback**： 後執行的回檔 `DirectoryEntry` 已被刪除。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果試圖刪除時發生錯誤執行的回檔 `DirectoryEntry` 。調用與 `FileError` 物件。*（函數）*
+*   **errorCallback**： 如果試圖刪除時發生錯誤執行的回檔 `DirectoryEntry` 。調用與 `[FileError](../fileerror/fileerror.html)` 物件。*（函數）*
 
 **快速的示例**
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Guide de développement de plugin
 ---
 
 # Guide de développement de plugin
@@ -131,11 +133,11 @@ Le rappel du succès passé dans `exec` est simplement une référence à la fon
 
 Une fois que vous définissez JavaScript pour votre plugin, vous devez compléter au moins une implémentation native. Détails pour chaque plate-forme sont énumérés ci-dessous, et chacun s'appuie sur l'exemple simple de Plugin Echo ci-dessus :
 
-*   Amazon Fire OS Plugins
-*   Plugins Android
-*   iOS Plugins
-*   BlackBerry 10 Plugins
-*   Windows Phone Plugins
+*   [Amazon Fire OS Plugins](../../platforms/amazonfireos/plugin.html)
+*   [Plugins Android](../../platforms/android/plugin.html)
+*   [iOS Plugins](../../platforms/ios/plugin.html)
+*   [BlackBerry 10 Plugins](../../platforms/blackberry10/plugin.html)
+*   [Windows Phone Plugins](../../platforms/wp8/plugin.html)
 
 La plateforme de paciarelli ne supporte pas les plugins.
 

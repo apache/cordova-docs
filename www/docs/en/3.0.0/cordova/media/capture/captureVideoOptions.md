@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureVideoOptions
 ---
 
 CaptureVideoOptions
@@ -30,7 +32,7 @@ Properties
 
 - __duration__: The maximum duration of a video clip, in seconds.
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
     // limit capture operation to 3 video clips

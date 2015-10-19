@@ -16,14 +16,16 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Windows 8 平臺指南
 ---
 
 # Windows 8 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境為 Windows 8 部署科爾多瓦的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   升級 Windows 8
-*   Windows 8 的命令列工具
+*   [升級 Windows 8](upgrading.html)
+*   [Windows 8 的命令列工具](tools.html)
 
 上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 

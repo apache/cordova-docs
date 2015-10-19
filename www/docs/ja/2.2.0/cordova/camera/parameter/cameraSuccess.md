@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraSuccess
 ---
 
 cameraSuccess
@@ -30,9 +32,9 @@ cameraSuccess
 パラメーター
 ----------
 
-- __imageData:__ Base64 エンコーディングされた画像データ、またはイメージファイルの URI (`cameraOptions`による) (`String`)
+- __imageData:__ Base64 エンコーディングされた画像データ、またはイメージファイルの URI (`[cameraOptions](cameraOptions.html)`による) (`String`)
 
-使用例
+[使用例](../../storage/storage.opendatabase.html)
 -------
 
     // 画像を表示

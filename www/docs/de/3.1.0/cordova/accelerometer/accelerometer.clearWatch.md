@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.clearWatch
 ---
 
 # accelerometer.clearWatch
@@ -25,7 +27,7 @@ Beenden, beobachten die `Acceleration` verwiesen wird, durch die `watchID` Param
     navigator.accelerometer.clearWatch(watchID);
     
 
-*   **WatchID**: die ID zurückgegebener`accelerometer.watchAcceleration`.
+*   **WatchID**: die ID zurückgegebener`[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)`.
 
 ## Unterstützte Plattformen
 

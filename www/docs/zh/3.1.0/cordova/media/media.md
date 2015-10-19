@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: 媒體
 ---
 
 # 媒體
@@ -49,25 +51,25 @@ license: >
 
 ## 方法
 
-*   `media.getCurrentPosition`： 返回一個音訊檔內的當前位置。
+*   `[media.getCurrentPosition](media.getCurrentPosition.html)`： 返回一個音訊檔內的當前位置。
 
-*   `media.getDuration`： 返回一個音訊檔的持續時間。
+*   `[media.getDuration](media.getDuration.html)`： 返回一個音訊檔的持續時間。
 
-*   `media.play`： 啟動或繼續播放音訊檔。
+*   `[media.play](media.play.html)`： 啟動或繼續播放音訊檔。
 
-*   `media.pause`： 暫停播放的音訊檔。
+*   `[media.pause](media.pause.html)`： 暫停播放的音訊檔。
 
-*   `media.release`： 釋放底層作業系統的音訊資源。
+*   `[media.release](media.release.html)`： 釋放底層作業系統的音訊資源。
 
-*   `media.seekTo`： 在音訊檔內移動的位置。
+*   `[media.seekTo](media.seekTo.html)`： 在音訊檔內移動的位置。
 
-*   `media.setVolume`： 設置音訊播放的音量。
+*   `[media.setVolume](media.setVolume.html)`： 設置音訊播放的音量。
 
-*   `media.startRecord`： 開始錄製的音訊檔。
+*   `[media.startRecord](media.startRecord.html)`： 開始錄製的音訊檔。
 
-*   `media.stopRecord`： 停止錄製的音訊檔。
+*   `[media.stopRecord](media.stopRecord.html)`： 停止錄製的音訊檔。
 
-*   `media.stop`： 停止播放音訊檔。
+*   `[media.stop](media.stop.html)`： 停止播放音訊檔。
 
 ## 附加唯讀參數
 

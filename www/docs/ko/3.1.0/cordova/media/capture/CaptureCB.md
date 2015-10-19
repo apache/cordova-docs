@@ -16,20 +16,22 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
 
-> 성공적인 미디어 캡처 작업에 따라 호출 됩니다.
+> 성공적인 [미디어](../media.html) [캡처](capture.html) 작업에 따라 호출 됩니다.
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
 ## 설명
 
-이 함수는 성공적인 캡처 작업이 완료 된 후 실행 합니다. 미디어 파일을 캡처한이 포인트와 중에 사용자가 미디어 캡처 응용 프로그램 종료 또는 캡처 한계에 도달 했습니다.
+이 함수는 성공적인 [캡처](capture.html) 작업이 완료 된 후 실행 합니다. [미디어](../media.html) 파일을 캡처한이 포인트와 중에 사용자가 [미디어](../media.html) [캡처](capture.html) 응용 프로그램 종료 또는 [캡처](capture.html) 한계에 도달 했습니다.
 
-각 `MediaFile` 개체 캡처한 미디어 파일에 설명 합니다.
+각 `MediaFile` 개체 캡처한 [미디어](../media.html) 파일에 설명 합니다.
 
 ## 빠른 예제
 

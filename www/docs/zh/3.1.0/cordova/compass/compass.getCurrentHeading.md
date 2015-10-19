@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compass.getCurrentHeading
 ---
 
 # compass.getCurrentHeading
@@ -29,7 +31,7 @@ license: >
 
 羅盤是感應器，可檢測的方向或設備通常指從設備的頂部的標題。它的措施中從 0 度到 359.99，其中 0 是北部的標題。
 
-通過返回的羅經航向資訊 `CompassHeading` 物件使用 `compassSuccess` 回呼函數。
+通過返回的羅經航向資訊 `CompassHeading` 物件使用 `[compassSuccess](parameters/compassSuccess.html)` 回呼函數。
 
 ## 支援的平臺
 

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по Tizen платформы
 ---
 
 # Руководство по Tizen платформы
@@ -104,7 +106,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
 *   Убедитесь, что целевое устройство должным образом начали, подключено и настроено. Необходимо правильно задать его параметры **даты и времени** .
 
-*   Выберите цель развертывания приложения с помощью **Connection Explorer** представления: **окна → Показать вид → Connection Explorer**.
+*   Выберите цель развертывания приложения с помощью **Connection Explorer** представления: **окна → [Показать](../../../cordova/inappbrowser/inappbrowser.html) вид → Connection Explorer**.
     
     ![][7]
 

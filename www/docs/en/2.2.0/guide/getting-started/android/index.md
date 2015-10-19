@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Getting Started with Android
 ---
 
 Getting Started with Android
@@ -115,7 +117,7 @@ If your project has a red X indicating there is a problem follow these additiona
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
 
-5B. Deploy to Device
+5B. Deploy to [Device](../../../cordova/device/device.html)
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)

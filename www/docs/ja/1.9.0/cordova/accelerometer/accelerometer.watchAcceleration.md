@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: accelerometer.watchAcceleration
 ---
 
 accelerometer.watchAcceleration
@@ -32,9 +34,9 @@ accelerometer.watchAcceleration
 
 加速度センサーはデバイスの傾きの増加量を計測します。加速度センサーでは x, y, z 軸の3次元の傾きを取得出来ます。
 
-`accelerometer.watchAcceleration` 関数を使うと、一定の間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `accelerometerSuccess` コールバック関数が実行されます。加速度情報を取得する間隔は、 `acceleratorOptions` オブジェクトのパラメーター `frequency` を通じてミリ秒単位で指定できます。
+`accelerometer.watchAcceleration` 関数を使うと、一定の間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `[accelerometerSuccess](parameters/accelerometerSuccess.html)` コールバック関数が実行されます。加速度情報を取得する間隔は、 `acceleratorOptions` オブジェクトのパラメーター `frequency` を通じてミリ秒単位で指定できます。
 
-本関数の戻り値である watch ID は、実行中の加速度センサー測定への参照を表します。また、 `accelerometer.clearWatch` 関数に watch ID を渡すことで、加速度センサーの監視を停止できます。
+本関数の戻り値である watch ID は、実行中の加速度センサー測定への参照を表します。また、 `[accelerometer.clearWatch](accelerometer.clearWatch.html)` 関数に watch ID を渡すことで、加速度センサーの監視を停止できます。
 
 サポートされているプラットフォーム
 -------------------
@@ -46,7 +48,7 @@ accelerometer.watchAcceleration
 - Bada 1.2 & 2.x
 
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function onSuccess(acceleration) {

@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Android Plugins
 ---
 
 # Android Plugins
@@ -24,7 +26,7 @@ Dieser Abschnitt enthält Informationen für das native Plugin-Code auf der Andr
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android Plugins basieren auf Cordova-Android, bestehend aus einem Android WebView mit Haken verbunden. Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` Datei. Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` -Klasse überschreiben eines seiner `execute` Methoden. Als beste Praxis, das Plugin sollte auch behandeln, `pause` und `resume` Veranstaltungen, zusammen mit jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie Medienwiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
+Android Plugins basieren auf Cordova-Android, bestehend aus einem Android WebView mit Haken verbunden. Plugins werden dargestellt als Klasse Zuordnungen in der `config.xml` Datei. Eine Plugin besteht aus mindestens einer Java-Klasse, die erweitert die `CordovaPlugin` -Klasse überschreiben eines seiner `execute` Methoden. Als beste Praxis, das Plugin sollte auch behandeln, `pause` und `resume` [Veranstaltungen](../../../cordova/events/events.html), zusammen mit jeder Nachrichtenaustausch zwischen Plugins. Plugins mit lang andauernden Anfragen, Hintergrundaktivitäten wie Medienwiedergabe, Zuhörer oder internen Zustand sollten Implementieren der `onReset()` -Methode. Es wird ausgeführt, wenn die `WebView` navigiert zu einer neuen Seite oder Aktualisierungen, die das JavaScript lädt.
 
 ## Plugin-Klasse Zuordnung
 

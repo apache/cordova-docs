@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: camera.cleanup
 ---
 
 camera.cleanup
@@ -30,16 +32,16 @@ Description
 -----------
 
 Removes intermediate image files that are kept in temporary storage
-after calling `camera.getPicture`. Applies only when the value of
-`Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
-`Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.
+after calling `[camera.getPicture](camera.getPicture.html)`. Applies only when the value of
+`[Camera](camera.html).sourceType` equals `[Camera](camera.html).PictureSourceType.CAMERA` and the
+`[Camera](camera.html).destinationType` equals `[Camera](camera.html).DestinationType.FILE_URI`.
 
 Supported Platforms
 -------------------
 
 - iOS
 
-Example
+[Example](../storage/storage.opendatabase.html)
 -------------
 
     navigator.camera.cleanup(onSuccess, onFail);

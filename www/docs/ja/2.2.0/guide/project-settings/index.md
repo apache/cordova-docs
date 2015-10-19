@@ -16,9 +16,11 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: プロジェクトの設定
 ---
 
 プロジェクトの設定
 ================
 
-- Project Settings for iOS
+- [Project Settings for iOS](ios/index.html)

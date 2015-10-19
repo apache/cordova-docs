@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: compassSuccess
 ---
 
 # compassSuccess
 
-OnSuccess-Callback-Funktion, die die Kompassrichtung Informationen über ein `compassHeading` Objekt.
+OnSuccess-Callback-Funktion, die die Kompassrichtung Informationen über ein `[compassHeading](compassHeading.html)` Objekt.
 
     function(heading) {
         // Do something

@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: device.name
 ---
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `[device.model](device.model.html)` instead.
 
 Ottenere il nome del modello del dispositivo.
 

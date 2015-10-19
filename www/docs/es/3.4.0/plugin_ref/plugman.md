@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: L'utilisation de Plugman pour gérer les Plugins
 ---
 
 # L'utilisation de Plugman pour gérer les Plugins
@@ -45,7 +47,7 @@ Además debes tener `git` en tu `PATH` para poder instalar los plugins directame
 
 ## Crear un proyecto Cordova
 
-Antes de que puedas utilizar Plugman, debes crear un proyecto Cordova. Puedes hacer esto del mismo modo utilizando la Interfaz de línea de comandos o bien con scripts shell de bajo nivel. Las instrucciones para utilizar los scripts del shell para crear tu proyecto se encuentran en las guías "Herramientas de línea de comandos" listadas en la página de las Guías de plataformas.
+Antes de que puedas utilizar Plugman, debes crear un proyecto Cordova. Puedes hacer esto del mismo modo utilizando la Interfaz de línea de comandos o bien con scripts shell de bajo nivel. Las instrucciones para utilizar los scripts del shell para crear tu proyecto se encuentran en las guías "Herramientas de línea de comandos" listadas en la página de las [Guías](../index.html) de plataformas.
 
 ## Añadir un Plugin
 

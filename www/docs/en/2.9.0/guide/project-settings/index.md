@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Project Settings
 ---
 
 Project Settings
@@ -32,13 +34,13 @@ As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet.
 properties, characteristics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
 `config.xml` file. The following sub-sections linked to are guides which go into more details about these preferences.
 
-- Project Settings for iOS
-- Project Settings for Android
-- Project Settings for BlackBerry
-- Project Settings for Windows Phone 7
-- Project Settings for Windows Phone 8
-- Project Settings for Windows 8
-- Project Settings for FirefoxOS
+- [Project Settings for iOS](ios/index.html)
+- [Project Settings for Android](android/index.html)
+- [Project Settings for BlackBerry](blackberry/index.html)
+- [Project Settings for Windows Phone 7](wp7/index.html)
+- [Project Settings for Windows Phone 8](wp8/index.html)
+- [Project Settings for Windows 8](windows8/index.html)
+- [Project Settings for FirefoxOS](firefoxos/index.html)
 
 ## config.xml Elements
 
@@ -70,7 +72,7 @@ applications.
 ### `<access>`
 
 These elements define how your whitelist works. Please see the
-Domain Whitelist Guide for more information.
+[Domain Whitelist Guide](../whitelist/index.html) for more information.
 
 ### `<content>`
 

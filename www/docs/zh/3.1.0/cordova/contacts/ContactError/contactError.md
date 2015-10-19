@@ -16,11 +16,13 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactError
 ---
 
 # ContactError
 
-A `ContactError` 物件傳遞給 `contactError` 回檔時出現錯誤。
+A `ContactError` 物件傳遞給 `[contactError](../parameters/contactError.html)` 回檔時出現錯誤。
 
 ## 屬性
 
@@ -38,4 +40,4 @@ A `ContactError` 物件傳遞給 `contactError` 回檔時出現錯誤。
 
 ## 說明
 
-`ContactError`物件返回到使用者通過 `contactError` 回呼函數時出現錯誤。
+`ContactError`物件返回到使用者通過 `[contactError](../parameters/contactError.html)` 回呼函數時出現錯誤。

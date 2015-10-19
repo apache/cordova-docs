@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: connection.type
 ---
 
 connection.type
@@ -38,7 +40,7 @@ connection.type
 - Windows Phone 7 (Mango)
 - Bada 2.x
 
-使用例
+[使用例](../storage/storage.opendatabase.html)
 -------------
 
     function checkConnection() {

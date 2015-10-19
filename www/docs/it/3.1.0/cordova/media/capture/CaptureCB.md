@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: CaptureCB
 ---
 
 # CaptureCB
@@ -29,7 +31,7 @@ license: >
 
 Questa funzione viene eseguita al termine di un'operazione di acquisizione di successo. A questo punto che è stato catturato un file multimediale e neanche l'utente è stato terminato l'applicazione di cattura di media, o è stato raggiunto il limite di cattura.
 
-Ogni `MediaFile` oggetto descrive un file multimediali catturati.
+Ogni `[MediaFile](MediaFile.html)` oggetto descrive un file multimediali catturati.
 
 ## Esempio rapido
 

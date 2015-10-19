@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: globalization.getDateNames
 ---
 
 # globalization.getDateNames
@@ -29,7 +31,7 @@ Devuelve una matriz de los nombres de los meses o días de la semana, dependiend
 
 Devuelve la matriz de nombres a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto contiene una propiedad de `value` con una `Array` de valores de `String`. Los nombres de funciones de matriz a partir de ya sea el primer mes en el año o el primer día de la semana, dependiendo de la opción seleccionada.
 
-Si hay un error en la obtención de los nombres, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es`GlobalizationError.UNKNOWN\_ERROR`.
+Si hay un error en la obtención de los nombres, entonces el `errorCallback` ejecuta con un objeto `[GlobalizationError](GlobalizationError/globalizationerror.html)` como un parámetro. Código esperado del error es`[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR`.
 
 El `options` parámetro es opcional, y sus valores por defecto son:
 

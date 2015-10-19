@@ -16,12 +16,14 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: ContactAddress
 ---
 
 ContactAddress
 ==============
 
-Contains address properties for a `Contact` object.
+Contains address properties for a `[Contact](../Contact/contact.html)` object.
 
 Properties
 ----------
@@ -32,12 +34,12 @@ Properties
 - __locality:__ The city or locality. _(DOMString)_
 - __region:__ The state or region. _(DOMString)_
 - __postalCode:__ The zip code or postal code. _(DOMString)_
-- __country:__ The country name. _(DOMString)_
+- __country:__ The country [name](../../storage/parameters/name.html). _(DOMString)_
 
 Details
 -------
 
-The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
+The `ContactAddress` object stores the properties of a single address of a contact.  A `[Contact](../Contact/contact.html)` object can have one or more addresses in a  `ContactAddress[]` array. 
 
 Supported Platforms
 -------------------
@@ -46,7 +48,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
+Quick [Example](../../storage/storage.opendatabase.html)
 -------------
 
 	// display the address information for all contacts
@@ -75,7 +77,7 @@ Quick Example
 	var filter = ["displayName","addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+Full [Example](../../storage/storage.opendatabase.html)
 ------------
 
     <!DOCTYPE html>
@@ -94,7 +96,7 @@ Full Example
         //
         function onDeviceReady() {
 		    // find all contacts
-		    var options = new ContactFindOptions();
+		    var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
 			options.filter=""; 
 			var filter = ["displayName","addresses"];
 		    navigator.contacts.find(filter, onSuccess, onError, options);

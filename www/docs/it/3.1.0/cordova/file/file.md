@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: File
 ---
 
 # File
@@ -26,21 +28,21 @@ license: >
 
 ## Oggetti
 
-*   DirectoryEntry
-*   DirectoryReader
-*   File
-*   FileEntry
-*   FileError
-*   FileReader
-*   FileSystem
-*   FileTransfer
-*   FileTransferError
-*   FileUploadOptions
-*   FileUploadResult
-*   FileWriter
-*   Bandiere
-*   LocalFileSystem
-*   Metadati
+*   [DirectoryEntry](directoryentry/directoryentry.html)
+*   [DirectoryReader](directoryreader/directoryreader.html)
+*   [File](fileobj/fileobj.html)
+*   [FileEntry](fileentry/fileentry.html)
+*   [FileError](fileerror/fileerror.html)
+*   [FileReader](filereader/filereader.html)
+*   [FileSystem](filesystem/filesystem.html)
+*   [FileTransfer](filetransfer/filetransfer.html)
+*   [FileTransferError](filetransfererror/filetransfererror.html)
+*   [FileUploadOptions](fileuploadoptions/fileuploadoptions.html)
+*   [FileUploadResult](fileuploadresult/fileuploadresult.html)
+*   [FileWriter](filewriter/filewriter.html)
+*   [Bandiere](flags/flags.html)
+*   [LocalFileSystem](localfilesystem/localfilesystem.html)
+*   [Metadati](metadata/metadata.html)
 
 ## La funzionalità di accesso
 

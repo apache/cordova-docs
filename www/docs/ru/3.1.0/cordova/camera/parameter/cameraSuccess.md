@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: cameraSuccess
 ---
 
 # cameraSuccess
@@ -29,7 +31,7 @@ license: >
 
 ## Параметры
 
-*   **imageData**: Base64 кодирование данных изображения, *или* URI, в зависимости от файла изображения `cameraOptions` в силу. *(Строка)*
+*   **imageData**: Base64 кодирование данных изображения, *или* URI, в зависимости от файла изображения `[cameraOptions](cameraOptions.html)` в силу. *(Строка)*
 
 ## Пример
 

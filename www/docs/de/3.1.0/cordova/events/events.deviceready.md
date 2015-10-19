@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: deviceready
 ---
 
 # deviceready
@@ -27,7 +29,7 @@ Das Ereignis wird ausgelöst, wenn Cordova vollständig geladen ist.
 
 ## Informationen
 
-Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas Gerät APIs geladen haben und bereit sind, zugreifen.
+Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas [Gerät](../device/device.html) APIs geladen haben und bereit sind, zugreifen.
 
 Cordova besteht aus zwei Codebasen: native und JavaScript. Während der native Code lädt, zeigt eine benutzerdefinierte Lade-Bild. JavaScript lädt jedoch nur wenn das DOM geladen. Dies bedeutet, dass Ihre Webanwendung möglicherweise eine Cordova JavaScript-Funktion nennen darf, bevor der entsprechende systemeigene Code verfügbar ist.
 

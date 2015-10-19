@@ -16,6 +16,8 @@ license: >
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+
+title: Руководство по разработке расширений
 ---
 
 # Руководство по разработке расширений
@@ -83,7 +85,7 @@ Cordova имеет плагин спецификации доступны для
 *   Ежевика плагины
 *   Ежевика 10 плагинов
 *   iOS, плагины
-*   Windows Phone плагины
+*   [Windows Phone плагины](../../platforms/wp8/plugin.html)
 
 В настоящее время Tizen платформа не поддерживает плагины.
 
