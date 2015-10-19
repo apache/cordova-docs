@@ -287,6 +287,8 @@ var DocsValidator = (function () {
             targetDom = target("#content"),
             sourceDomList = "",
             targetDomList = "",
+            sourceDomHtmlList = [],
+            targetDomHtmlList = [],
             changes,
             changed = false;
         function convertSource(element, initial, offset) {
@@ -308,19 +310,61 @@ var DocsValidator = (function () {
 
             return initial;
         }
+        function convertSourceHtml(element, initial, offset) {
+            var i,
+                child;
+            if (element.children === undefined) {
+                console.log(element);
+            }
+
+            for (i = 0; i < element.children.length; i += 1) {
+                child = element.children[i];
+                if (child.type !== 'tag') {
+                    continue;
+                }
+
+                initial += offset + child.name + "(" + cheerio(child).html() + ")" + "\r\n";
+                //console.log(cheerio(child).html());
+                initial = convertSourceHtml(child, initial, ' ' + offset);
+            }
+
+            return initial;
+        }
         sourceDomList = convertSource(sourceDom[0], '', '');
         targetDomList = convertSource(targetDom[0], '', '');
+        sourceDomHtmlList = convertSourceHtml(sourceDom[0], '', '').split("\r\n") || [];
+        targetDomHtmlList = convertSourceHtml(targetDom[0], '', '').split("\r\n") || [];
         if (sourceDomList !== targetDomList) {
             console.error("Path " + relativePath + " has different dom structure.");
             if (options.verbose > 0) {
                 //console.log(jsdiff.createPatch(relativePath, sourceDomList, targetDomList, '', ''));
                 changes = jsdiff.diffLines(sourceDomList, targetDomList);
                 if (options.verbose > 0) {
+                    var sourceLinesCounter = 0;
+                    var targetLinesCounter = 0;
                     changes.forEach(function (part) {
                         // green for additions, red for deletions
                         // grey for common parts
                         var color = part.added ? 'green' : (part.removed ? 'red' : 'grey');
-                        process.stderr.write(part.value[color]);
+                        var value = part.value;
+                        //process.stderr.write(value[color]);
+                        if (part.added) {
+                            value = targetDomHtmlList.slice(targetLinesCounter, targetLinesCounter + part.count).join("\r\n") + "\r\n";
+                            targetLinesCounter += part.count;
+                        } else if (part.removed) {
+                            value = sourceDomHtmlList.slice(sourceLinesCounter, sourceLinesCounter + part.count).join("\r\n") + "\r\n";
+                            sourceLinesCounter += part.count;
+                        } else {
+                            sourceLinesCounter += part.count;
+                            targetLinesCounter += part.count;
+                            var contextLength = 3;
+                            if (part.count > contextLength * 2 + 1) {
+                                value = part.value.split("\r\n").slice(0, contextLength).concat(["...\r\n"], part.value.split("\r\n").slice(part.count - contextLength, part.count)).join("\r\n") + "\r\n";
+                            } else {
+                                value = part.value;
+                            }
+                        }
+                        process.stderr.write(value[color]);
                     });
 
                     console.log();

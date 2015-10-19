@@ -38,11 +38,12 @@ var VersionMenu = (function () {
         this.stage = "Populate version menu";
         if (languages === null) {
             languages = [];
-            versions = [];
+            versions = {};
             this.buildVersionsData();
         }
         
         this.generatedMenu = this.generateMenu();
+        this.generatedLanguageMenu = this.generateLanguageMenu();
     }
 
     VersionMenu.prototype.run = function (file, $) {
@@ -54,12 +55,22 @@ var VersionMenu = (function () {
             console.info("Building version menu for file " + file);
         }
 
-        var element;
+        var element,
+            scriptTag,
+            currentPageSettings;
 
-        element = $('#header small select').first();
-        this.generatedMenu.forEach(function (optionGroup) {
+        element = $('#header small select#language').first();
+        this.generatedLanguageMenu.forEach(function (optionGroup) {
             element.append(optionGroup).append("\n");
         });
+        element = $('head').first();
+        currentPageSettings = {
+            lang: this.options.lang,
+            version: this.options.version
+        };
+        scriptTag = cheerio("<script></script>")
+        scriptTag.text("var settings = " + JSON.stringify(currentPageSettings) + ";");
+        element.append(scriptTag);
     };
 
     VersionMenu.prototype.buildVersionsData = function () {
@@ -130,6 +141,32 @@ var VersionMenu = (function () {
                     versionOption.text(version);
                     langGroup.append(versionOption).append("\n");
                 }
+
+                result.push(langGroup);
+            }
+        }
+
+        return result;
+    };
+
+    VersionMenu.prototype.generateLanguageMenu = function () {
+        var result = [],
+            langGroup,
+            lang,
+            mapper,
+            key;
+
+        mapper = function (item) {
+            return item;
+        };
+
+        for (key in languages) {
+            if (languages.hasOwnProperty(key)) {
+                lang = languages[key].lang;
+                langGroup = cheerio("<option></option>");
+                langGroup.append("\n");
+                langGroup.attr('label', languages[key].label);
+                langGroup.attr('value', lang);
 
                 result.push(langGroup);
             }
