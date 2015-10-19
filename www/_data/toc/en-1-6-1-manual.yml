@@ -1,0 +1,16 @@
+- {name: !!python/unicode 'API Reference', url: !!python/unicode '/docs/en/1.6.1/'}
+- {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/en/1.6.1/cordova/accelerometer/accelerometer.html'}
+- {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/en/1.6.1/cordova/camera/camera.html'}
+- {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/en/1.6.1/cordova/media/capture/capture.html'}
+- {name: !!python/unicode 'Compass', url: !!python/unicode '/docs/en/1.6.1/cordova/compass/compass.html'}
+- {name: !!python/unicode 'Connection', url: !!python/unicode '/docs/en/1.6.1/cordova/connection/connection.html'}
+- {name: !!python/unicode 'Contacts', url: !!python/unicode '/docs/en/1.6.1/cordova/contacts/contacts.html'}
+- {name: !!python/unicode 'Device', url: !!python/unicode '/docs/en/1.6.1/cordova/device/device.html'}
+- {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/1.6.1/cordova/events/events.html'}
+- {name: !!python/unicode 'File', url: !!python/unicode '/docs/en/1.6.1/cordova/file/file.html'}
+- {name: !!python/unicode 'Geolocation', url: !!python/unicode '/docs/en/1.6.1/cordova/geolocation/geolocation.html'}
+- {name: !!python/unicode 'Media', url: !!python/unicode '/docs/en/1.6.1/cordova/media/media.html'}
+- {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/en/1.6.1/cordova/notification/notification.html'}
+- {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/1.6.1/cordova/storage/storage.html'}
+- {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode '/docs/en/1.6.1/guide/getting-started/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.6.1/page_index.html'}

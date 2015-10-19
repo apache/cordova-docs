@@ -1,0 +1,5 @@
+baseurl: ""
+destination: build-prod
+exclude:
+    - static/css-src
+    - static/plugins

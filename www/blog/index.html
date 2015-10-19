@@ -1,0 +1,58 @@
+---
+layout: blog
+title: Apache Cordova Blog
+---
+
+<div class="row">
+    <div class="col-sm-8 blog-list">
+        <h1 class="blogHeader">
+            Blog
+            <span class="rss">
+                <img src="{{ site.baseurl }}/static/img/subscribe.png"><a href="{{ site.baseurl }}{{ site.rss_path }}">RSS Feed</a>
+            </span>
+        </h1>
+        <ul class="posts">
+            {% for post in site.posts %}
+            <li>
+                <header>
+                    <div class="adorner" blogTime="{{ post.date | date_to_rfc822 }}"></div>
+                    <h2 class="title">
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">{{ post.date | date_to_string }}</span>
+                        - by
+                        <span class="author">
+                            {% if post.author.url %}
+                                <a href="{{ post.author.url }}">{{ post.author.name }}</a>
+                            {% else %}
+                                {{ post.author.name }}
+                            {% endif %}
+                        </span>
+                        <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p>{{ post.excerpt }}</p>
+                    <div><a href="{{ site.baseurl }}{{ post.url }}">More...</a></div>
+                </section>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- <a target="_blank" href="http://feed1.w3.org/check.cgi?url={{ site.baseurl }}{{ site.rss_path }}"><img src="{{ site.baseurl }}/static/img/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a> -->
+    </div>
+    <div class="col-sm-4 social-container">
+        {% include twitterFeed.html %}
+    </div>
+</div>
+
+<script>
+    window.onload = function(){
+        setTimeout(function(){
+            var lastPostTime = new Date("{{ site.posts[0].date | date_to_rfc822 }}").getTime();
+          setCookie("visitTime", lastPostTime, 365);
+        }, 2000);
+    };
+</script>
+
+{% include comment_count.html %}

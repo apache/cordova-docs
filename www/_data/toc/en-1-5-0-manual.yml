@@ -1,0 +1,16 @@
+- {name: !!python/unicode 'API Reference', url: !!python/unicode '/docs/en/1.5.0/'}
+- {name: !!python/unicode 'Accelerometer', url: !!python/unicode '/docs/en/1.5.0/phonegap/accelerometer/accelerometer.html'}
+- {name: !!python/unicode 'Camera', url: !!python/unicode '/docs/en/1.5.0/phonegap/camera/camera.html'}
+- {name: !!python/unicode 'Capture', url: !!python/unicode '/docs/en/1.5.0/phonegap/media/capture/capture.html'}
+- {name: !!python/unicode 'Compass', url: !!python/unicode '/docs/en/1.5.0/phonegap/compass/compass.html'}
+- {name: !!python/unicode 'Connection', url: !!python/unicode '/docs/en/1.5.0/phonegap/connection/connection.html'}
+- {name: !!python/unicode 'Contacts', url: !!python/unicode '/docs/en/1.5.0/phonegap/contacts/contacts.html'}
+- {name: !!python/unicode 'Device', url: !!python/unicode '/docs/en/1.5.0/phonegap/device/device.html'}
+- {name: !!python/unicode 'Events', url: !!python/unicode '/docs/en/1.5.0/phonegap/events/events.html'}
+- {name: !!python/unicode 'File', url: !!python/unicode '/docs/en/1.5.0/phonegap/file/file.html'}
+- {name: !!python/unicode 'Geolocation', url: !!python/unicode '/docs/en/1.5.0/phonegap/geolocation/geolocation.html'}
+- {name: !!python/unicode 'Media', url: !!python/unicode '/docs/en/1.5.0/phonegap/media/media.html'}
+- {name: !!python/unicode 'Notification', url: !!python/unicode '/docs/en/1.5.0/phonegap/notification/notification.html'}
+- {name: !!python/unicode 'Storage', url: !!python/unicode '/docs/en/1.5.0/phonegap/storage/storage.html'}
+- {name: !!python/unicode 'Getting Started Guides', url: !!python/unicode '/docs/en/1.5.0/guide/getting-started/index.html'}
+- {name: !!python/unicode 'Keyword Index', url: !!python/unicode '/docs/en/1.5.0/page_index.html'}

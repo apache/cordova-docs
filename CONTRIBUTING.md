@@ -26,7 +26,7 @@ Anyone can contribute to Cordova. And we need your contributions.
 There are multiple ways to contribute: report bugs, improve the docs, and
 contribute code.
 
-For instructions on this, start with the 
+For instructions on this, start with the
 [contribution overview](http://cordova.apache.org/#contribute).
 
 The details are explained there, but the important items are:
@@ -36,7 +36,8 @@ The details are explained there, but the important items are:
 
 We look forward to your contributions!
 
-# Translating Apache Cordova
+# Translating Documentation
+
 Apache Cordova's documentation is written in English but translations are available in a number of different languages. These languages are chosen based on volunteers who are willing to help translate from English to their native tongue. We use Crowdin, a translation and localization management platform to collaborate amongst translators and our core team.
 
 ## The Process of Translating
@@ -52,4 +53,5 @@ If you know another language and are willing to help translate Apache Cordova, h
 If a translation is already provided for a phrase you can vote it up or down. If you vote it down be sure to also include what you believe to be the correct translation.
 
 ## Tips
+
 The headers are used to provide links between pages.  It is therefore critical that these headers have the exact same translation character for character.  Otherwise, the links will appear broken.  If, when building a language, a link is problem, check that the translations match.

@@ -1,0 +1,197 @@
+-   title: Platforms
+    projects:
+    -   project: Amazon Fire OS
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-amazon-fireos.git;a=summary
+        mirror: https://github.com/apache/cordova-amazon-fireos
+
+    -   project: Android
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-android.git;a=summary
+        mirror: https://github.com/apache/cordova-android
+
+    -   project: Bada
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-bada.git;a=summary
+        mirror: https://github.com/apache/cordova-bada
+
+    -   project: Blackberry
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git;a=summary
+        mirror: https://github.com/apache/cordova-blackberry
+
+    -   project: FirefoxOS
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-firefoxos.git;a=summary
+        mirror: https://github.com/apache/cordova-firefoxos
+
+    -   project: iOS
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=summary
+        mirror: https://github.com/apache/cordova-ios
+
+    -   project: Mac OS X
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-osx.git;a=summary
+        mirror: https://github.com/apache/cordova-osx
+
+    -   project: Qt
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-qt.git;a=summary
+        mirror: https://github.com/apache/cordova-qt
+
+    -   project: Tizen
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-tizen.git;a=summary
+        mirror: https://github.com/apache/cordova-tizen
+
+    -   project: Ubuntu
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-ubuntu.git;a=summary
+        mirror: https://github.com/apache/cordova-ubuntu
+
+    -   project: WebOS
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-webos.git;a=summary
+        mirror: https://github.com/apache/cordova-webos
+
+    -   project: Windows (desktop)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-windows.git;a=summary
+        mirror: https://github.com/apache/cordova-windows
+
+    -   project: Windows Phone 7
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-wp7.git;a=summary
+        mirror: https://github.com/apache/cordova-wp7
+
+    -   project: Windows Phone 8
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-wp8.git;a=summary
+        mirror: https://github.com/apache/cordova-wp8
+
+    -   project: Browser
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-browser.git;a=summary
+        mirror: https://github.com/apache/cordova-browser
+
+-   title: Plugins
+    projects:
+    -   project: Battery Status
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-battery-status.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-battery-status
+
+    -   project: Camera
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-camera.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-camera
+
+    -   project: Console
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-console.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-console
+
+    -   project: Contacts
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-contacts.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-contacts
+
+    -   project: Device
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-device
+
+    -   project: Device Motion
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device-motion.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-device-motion
+
+    -   project: Device Orientation
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-device-orientation.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-device-orientation
+
+    -   project: Dialogs
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-dialogs.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-dialogs
+
+    -   project: File
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-file.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-file
+
+    -   project: File Transfer
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-file-transfer.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-file-transfer
+
+    -   project: Geolocation
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-geolocation.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-geolocation
+
+    -   project: Globalization
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-globalization.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-globalization
+
+    -   project: In-App Browser
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-inappbrowser.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-inappbrowser
+
+    -   project: Media
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-media.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-media
+
+    -   project: Media Capture
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-media-capture.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-media-capture
+
+    -   project: Network Information
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-network-information.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-network-information
+
+    -   project: Splashscreen
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-splashscreen.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-splashscreen
+
+    -   project: Statusbar
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-statusbar.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-statusbar
+
+    -   project: Vibration
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugin-vibration.git;a=summary
+        mirror: https://github.com/apache/cordova-plugin-vibration
+
+-   title: Other
+    projects:
+    -   project: Cordova Docs
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-docs.git;a=summary
+        mirror: https://github.com/apache/cordova-docs
+
+    -   project: Cordova JS (JavaScript API)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-js.git;a=summary
+        mirror: https://github.com/apache/cordova-js
+
+    -   project: Cordova CLI
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-cli.git;a=summary
+        mirror: https://github.com/apache/cordova-cli
+
+    -   project: Cordova Plugman (Plugin Manager)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-plugman.git;a=summary
+        mirror: https://github.com/apache/cordova-plugman
+
+    -   project: Cordova Lib (Common Code)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-lib.git;a=summary
+        mirror: https://github.com/apache/cordova-lib
+
+    -   project: Cordova Mobile Spec (Test Suite)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-mobile-spec.git;a=summary
+        mirror: https://github.com/apache/cordova-mobile-spec
+
+    -   project: Cordova Medic (Test Automation)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-medic.git;a=summary
+        mirror: https://github.com/apache/cordova-medic
+
+    -   project: Weinre (Web Inspector Remote)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-weinre.git;a=summary
+        mirror: https://github.com/apache/cordova-weinre
+
+    -   project: Cordova App Harness
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-app-harness.git;a=summary
+        mirror: https://github.com/apache/cordova-app-harness
+
+    -   project: Cordova Hello World (Sample App)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-app-hello-world.git;a=summary
+        mirror: https://github.com/apache/cordova-app-hello-world
+
+    -   project: Cordova Coho (Release Tool)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-coho.git;a=summary
+        mirror: https://github.com/apache/cordova-coho
+
+    -   project: Cordova Registry Web (Plugin Registry UI)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-registry-web.git;a=summary
+        mirror: https://github.com/apache/cordova-registry-web
+
+    -   project: Cordova Registry (Plugin Registry App)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-registry.git;a=summary
+        mirror: https://github.com/apache/cordova-registry
+
+    -   project: Cordova Labs (Experimental Content)
+        apache: https://git-wip-us.apache.org/repos/asf?p=cordova-labs.git;a=summary
+        mirror: https://github.com/apache/cordova-labs

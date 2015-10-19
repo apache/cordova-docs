@@ -1,0 +1,80 @@
+---
+layout: cordova
+title: Apache Cordova Plugins
+---
+
+<!-- REMOVE THIS LINK BEFORE PUBLISHING.  This is just for IntelliSense while coding -->
+<!-- <link rel="stylesheet" type="text/css" href="static/css/lib/bootstrap.css"/> -->
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>Want to Contribute?</h1>
+            <p>Contributors are needed to keep the project moving forward!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7">
+            <p>To share your contributions with the community, you can send a pull request on GitHub to the Apache git mirrors. You can also advocate for your changes directly on our <a href="{{ site.baseurl }}/contact">dev mailing list</a>.</p>
+            <h2>Get Started Now</h2>
+            <ul class="contribute-get-started-steps">
+                <li>Join the <a href="{{ site.baseurl }}/contact">Mailing List</a></li>
+                <li>Sign the <a href="http://www.apache.org/licenses/#clas">Individual Contributor License Agreement (ICLA)</a></li>
+                <li>Create an account in <a href="https://issues.apache.org/jira/secure/Dashboard.jspa">Apache Jira</a></li>
+                <li>Bookmark the official URL for <a href="https://issues.apache.org/jira/browse/CB/?selectedTab=com.atlassian.jira.jira-projects-plugin:issues-panel">Cordova Issues</a> (See also <a href="http://wiki.apache.org/cordova/IssueWorkflow">Issue Workflow</a>)</li>
+                <li>Send a brief introduction of yourself to <a href="mailto:dev@cordova.apache.org">dev@cordova.apache.org</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-5">
+            <div class="well">
+                    <div class="input-group">
+                        <input id="jira-search-box" type="text" class="form-control" placeholder="Search current issue list...">
+                        <span class="input-group-btn">
+                            <button id="jira-search-button" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="https://issues.apache.org/jira/browse/CB/?selectedTab=com.atlassian.jira.jira-projects-plugin:issues-panel"><span class="glyphicon glyphicon-warning-sign"></span><i>&nbsp;</i>View All Issues</a></li>
+                        <li><a href="http://wiki.apache.org/cordova/ReportingBugs"><div class="report-bug-icon"></div><i>&nbsp;</i>Report a Bug</a></li>
+                        <li><a href="https://people.apache.org/committer-index.html"><span class="glyphicon glyphicon-user"></span><i>&nbsp;</i>View Committers / Non-Committers</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for projectType in site.data.contribute-repo-links %}
+        {% assign firstProjectType = forloop.first %}
+        <div class="col-lg-4 col-md-6">
+            <ul class="list platforms-list">
+            <h2>{{ projectType.title }}</h2>
+                {% for project in projectType.projects %}
+
+                {% if firstProjectType and forloop.first %}
+                    {% assign itemClass = "first" %}
+                {% else %}
+                    {% assign itemClass = "" %}
+                {% endif %}
+
+                <li class="{{ itemClass }}">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 project-label">
+                            {{ project.project }}
+                        </div>
+                        <div class="col-xs-12 col-sm-4 project-links">
+                            <div class="link-box">
+                                <a class="link-github" target="_blank" href="{{ project.mirror }}"></a>
+                            </div>
+                            <div class="link-box">
+                                <a class="link-apache" target="_blank" href="{{ project.apache }}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- /container -->

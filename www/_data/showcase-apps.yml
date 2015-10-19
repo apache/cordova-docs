@@ -1,0 +1,89 @@
+# -   name: Example Showcase App
+#     image: cordova.png
+#     url: http://example.com
+#     description: >
+#         A description that can
+#         span multiple lines.
+
+-   name: NewVo - Fast Style Advice
+    image: NewVo.png
+    url: https://newvo.me
+    description: >
+        NewVo is an app for fun, fast, and free personal fashion advice.
+
+-   name: Pacifica - Stress and Anxiety Relief
+    image: Pacifica.png
+    url: https://thinkpacifica.com
+    description: >
+        Daily tools for stress, anxiety and depression based on Cognitive
+        Behavioral Therapy and Mindfulness.
+
+-   name: Sworkit - Personal Workout Trainer
+    image: Sworkit.png
+    url: http://sworkit.com
+    description: >
+        Sworkit delivers on-demand, personalized video exercises to millions
+        of users to help them stay fit.
+
+-   name: FanReact - Sports Fans Social App
+    image: FanReact.png
+    url: http://fanreact.com/
+    description: >
+        Sports only social app for fans to share their experiences.
+
+-   name: JustWatch - Streaming Search Engine
+    image: JustWatch.png
+    url: https://www.justwatch.com/
+    description: >
+        JustWatch is the easiest way to see if your favorite movies or TV
+        shows are available on any streaming provider.
+
+-   name: Gudog - Dog Boarding
+    image: Gudog.png
+    url: https://gudog.co.uk/mobile
+    description: >
+        Gudog brings together dog owners and trustworthy dog sitters who
+        offer Home Dog Boarding, Dog Walking and Doggy Daycare.
+
+-   name: Series Seven
+    image: SeriesSeven.png
+    url: http://www.idangero.us/series7/
+    description: >
+        Series Seven allows you to track your favorite TV shows and easily
+        get all information about TV show. You'll never miss new episode of
+        your favorite show with Series Seven.
+
+-   name: Keepe - Handyman on Demand
+    image: Keepe.png
+    url: http://www.keepe.com/?utm_source=cordova
+    description: >
+        Get a Handyman or Plumber to your House in 1 Hour. Keepe delivers the
+        right contractor at your doorstep.
+
+-   name: Clever Baby - Baby Log & Tracker
+    image: CleverBaby.png
+    url: http://www.mycleverbaby.com/
+    description: >
+        Clever Baby is the easiest way to track your baby's well-being, growth
+        and development.
+
+-   name: Buildr
+    image: Buildr.png
+    url: https://itunes.apple.com/us/app/buildr./id987621361?mt=8
+    description: >
+        You are using PhoneGap Build to develop your Apps? Then Buildr will
+        be your new best friend. Rebuild, pull and monitor your apps, unlock
+        and change signing keys.
+
+-   name: ReactEurope - React.js Europe Conference
+    image: ReactEurope.png
+    url: http://www.thinkmill.com.au/react-europe
+    description: >
+        ReactEurope is the occasion to meet the core team and other awesome members
+        of the community to learn, socialize and have fun in the beautiful city of Paris
+
+-   name: Graded
+    image: Graded.png
+    url: http://www.graded.us
+    description: >
+        The easiest and prettiest way to check your grades from Home Access Center (HAC)
