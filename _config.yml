@@ -10,7 +10,7 @@ rss_path:    /feed.xml
 excerpt_separator: <!--more-->
 repo:
     uri:    https://github.com/apache/cordova-docs
-    branch: cordova-website
+    branch: master
 
 latest_docs_version: edge
 

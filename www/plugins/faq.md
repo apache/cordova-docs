@@ -42,6 +42,6 @@ Yes there are. Please take a look at [Add Plugin Features]({{ site.baseurl }}/do
 
 ## I don't like X. How can I help improve the website?
 
-You can help improve this site by opening bugs on [JIRA](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20%3D%20Open%20AND%20component%20%3D%20%22Registry%20Web%22) or by sending PRs on [GitHub](https://github.com/apache/cordova-docs/tree/cordova-website).
+You can help improve this site by opening bugs on [JIRA](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20%3D%20Open%20AND%20component%20%3D%20%22Registry%20Web%22) or by sending PRs on [GitHub](https://github.com/apache/cordova-docs/).
 
 [old_reg]: http://50.17.177.14/
