@@ -97,7 +97,7 @@ If you run the command **'cordova platform add android'** (no version/folder/git
 ---
 
 ## Plugin Versioning
-_(The plugin commands are a mirror of the plugin commands)_
+_(The plugin commands are a mirror of the platform commands)_
 
 ### Saving plugins
 To save a plugin, you issue the following command :
