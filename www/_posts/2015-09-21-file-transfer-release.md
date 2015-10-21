@@ -1,14 +1,14 @@
 ---
 layout: post
 author:
-name: Steve Gill
-url: https://twitter.com/stevesgill
+    name: Steve Gill
+    url: https://twitter.com/stevesgill
 title:  "cordova-plugin-file-transfer release: September 21, 2015"
 categories: news
 tags: release plugins
 ---
 
-A medium security issue was discovered for cordova-plugin-file-transfer plugin. We are releasing version `1.3.0` of `cordova-plugin-file-transfer` to address this security issue. We recommend that all applications currently using an older version of this plugin to upgrade as soon as possible. 
+A medium security issue was discovered for cordova-plugin-file-transfer plugin. We are releasing version `1.3.0` of `cordova-plugin-file-transfer` to address this security issue. We recommend that all applications currently using an older version of this plugin to upgrade as soon as possible.
 
 ----
 You can update the plugin by removing it, and then re-adding it.
@@ -59,7 +59,7 @@ Upgrade path:
 Credit:
  This issue was discovered by Muneaki Nishimura (Sony Digital Network Applications, Inc.)
 
-=======================
+***
 
 cordova-plugin-file-transfer@1.3.0
 * Found issue where : is accepted as a valid header, this is obviously wrong
