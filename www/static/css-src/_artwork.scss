@@ -1,34 +1,43 @@
-.iconset {
-  padding: 100px 0;
-}
+.artwork {
+    .iconset {
+        padding: 100px 0;
+        .images {
+            background-color: rgb(223, 223, 223);
+            border: 3px dashed white;
+            padding: 20px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
 
-.button {
-    display: block;
-    background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
-    background-color: #4cc2e4;
-    background-position: 100% -171px;
-    width: 310px;
-    padding: 16px;
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    -webkit-transition: background 0.1s linear;
-    -moz-transition: background 0.1s linear;
-    transition: background 0.1s linear;
-}
+    .button {
+        display: block;
+        background: url("{{ site.baseurl }}/static/img/sprite.png") no-repeat;
+        background-color: #4cc2e4;
+        background-position: 100% -171px;
+        width: 310px;
+        padding: 16px;
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        -webkit-transition: background 0.1s linear;
+        -moz-transition: background 0.1s linear;
+        transition: background 0.1s linear;
+        label {
+            display: block;
+            font-size: 0.5em;
+            height: 16px;
+        }
+    }
 
-.button label {
-    display: block;
-    font-size: 0.5em;
-    height: 16px;
-}
+    .button:hover {
+        background-color: #4cd6fc;
+        color: #fff;
+        text-decoration: none;
+    }
 
-.button:hover {
-    background-color: #4cd6fc;
-    color: #fff;
-    text-decoration: none;
-}
-
-.button a:hover {
-    color: #4cc2e4;
+    .button a:hover {
+        color: #4cc2e4;
+    }
 }
