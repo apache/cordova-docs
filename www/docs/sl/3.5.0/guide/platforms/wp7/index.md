@@ -89,7 +89,7 @@ Naslednje strukturo predstavlja vzorec a 2.3.0 projekt, vendar se lahko razlikuj
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Gradnjo projekta za napravo
 
@@ -105,6 +105,6 @@ Pred preskušanjem aplikacije v napravi, naprava mora biti registriran. Podrobno
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 Na tej točki, ste končali.

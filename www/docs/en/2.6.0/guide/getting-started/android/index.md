@@ -96,7 +96,7 @@ We currently do not support Android 1.x, and we plan to deprecate platforms in t
         <project_name> is the project name, e.g. YourApp (Must not contain spaces)
 
 - Launch Eclipse, and select menu item **New Project**
-    ![](img/guide/platforms/android/eclipse_new_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png)
 - Select the directory you used for `<project_folder_path>`
 - Click Finish.
 
@@ -118,7 +118,7 @@ If your project has a red X indicating there is a problem follow these additiona
 **Note: For a faster experience, use an Intel-based emulator image:**
 
 - Open the Android SDK Manager
-  ![](img/guide/platforms/android/eclipse_android_sdk_button.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png)
 - Install one or more `Intel x86 Atom` System Images as well as the `Intel Hardware Accelerated Execution Manager` (under Extras).
 - Run the Intel installer, which has been downloaded to: `extras/intel/Hardware_Accelerated_Execution_Manager` within your Android SDK
 - Create a new AVD with the Target set to an Intel image.

@@ -110,7 +110,7 @@ Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
 *   Drücken Sie **Fertig stellen**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 

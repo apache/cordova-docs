@@ -67,7 +67,7 @@ title: iOS 平臺指南
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 部署到模擬程式
 
@@ -87,8 +87,8 @@ title: iOS 平臺指南
     
     只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 捆綁了模擬器為最新版本的 iPhone 和 iPad。 較舊的版本中可能會提供**Xcode → 首選項 → 下載 → 元件**面板。
 
@@ -144,7 +144,7 @@ Xcode 的警告 `invokeString` 方法涉及啟動一個應用程式從一個自�
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 這是預設設置為一個新的 Xcode 安裝，但也可以設置以不同的方式從較早版本的 Xcode 後升級。
 

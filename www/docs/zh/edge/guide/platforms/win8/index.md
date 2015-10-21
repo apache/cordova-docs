@@ -96,7 +96,7 @@ title: Windows 平臺指南
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 為 Windows 10，Visual Studio 安裝程式沒有安裝工具來構建通用的 Windows 應用程式的選項。 你必須確保，此選項是在安裝時選擇安裝所需的 SDK。
 
@@ -189,25 +189,25 @@ Windows 10 科爾多瓦的應用程式 (和一般的 HTML 應用程式) 支援�
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 `CordovaApp`元件顯示解決方案中, 和其`www`目錄包含基於 web 的原始程式碼，包括`index.html`主頁:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Visual Studio 主功能表下面的控制項允許您測試或部署應用程式:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 選擇**本地電腦**，請按綠色箭頭運行 Visual Studio 在同一機器上安裝的應用程式。一旦你這樣做，應用程式將出現在 Windows 8 應用程式清單:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 每次您重新生成應用程式，在介面中可用的版本被刷新。
 
@@ -215,19 +215,19 @@ Visual Studio 主功能表下面的控制項允許您測試或部署應用程式
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 請注意，是否你打開的應用程式在虛擬機器環境中，您可能需要按一下在角落裡或兩側的窗戶，切換應用程式或訪問附加功能:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 或者，選擇**模擬器**部署選項以查看該應用程式，就好像它在平板設備上運行:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 與不同的桌面部署，此選項允許您類比平板電腦的定位，位置，和改變其網路設置。
 

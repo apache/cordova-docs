@@ -94,13 +94,13 @@ title: 10 黑莓平臺指南
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 導航到**的安全和隱私 → 發展模式**節和啟用的選項：
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 然後，運行 `emulate` 命令來查看該應用程式：
 

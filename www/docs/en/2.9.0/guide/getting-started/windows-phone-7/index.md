@@ -75,7 +75,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - - __NOTE:__ If you do not see it, you may have to select the top-level 'Visual C#'.
 - Give your project a name, and select __OK__.
 
-    ![](img/guide/platforms/wp7/wpnewproj.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpnewproj.png)
 
 
 4. Review the project structure
@@ -84,7 +84,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add needs to be a part of the Visual Studio project, and it must be set as content.
 
-    ![](img/guide/platforms/wp7/wp7projectstructure.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wp7projectstructure.png)
 
 
 5. Build and Deploy to Emulator
@@ -93,9 +93,9 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - Make sure **Windows Phone Emulator** is selected in the main drop-down menu.
 - Press the green **play** button next to the drop-down menu to start debugging, or else type __F5__.
 
-    ![](img/guide/platforms/wp7/wprun.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wprun.png)
 
-    ![](img/guide/platforms/wp7/wpfirstrun.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpfirstrun.png)
 
 
 6. Build your project for the device
@@ -107,7 +107,7 @@ To test your application on a device, the device must be registered. MSDN provid
 - In Visual Studio, select 'Windows Phone [Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
-    ![](img/guide/platforms/wp7/wpd.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 
 Done!

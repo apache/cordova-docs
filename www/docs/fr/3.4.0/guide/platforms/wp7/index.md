@@ -89,7 +89,7 @@ Le suivant échantillon structure représente un 2.3.0 du projet, mais peut vari
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Générez le projet pour le dispositif
 
@@ -105,6 +105,6 @@ Avant de tester votre application sur un périphérique, le périphérique doit 
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 À ce stade, vous avez terminé.

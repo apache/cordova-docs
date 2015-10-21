@@ -113,7 +113,7 @@ Ko ga enkrat ustvariš, tukaj je kako rabiti SDK spremeniti:
 
 *   Pritisnite **konča**.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Ko se odpre okno Eclipse, rdeč **X** lahko zdi, da kažejo nerešenih problemov. Če je tako, sledite naslednjim korakom dodatne:
 
@@ -137,37 +137,37 @@ Lahko uporabite na `cordova` korist teči app v emulator, ali vi moči prost dos
     
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Ko je odprt, Android SDK Manager prikaže različne knjižnicami:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 In izberite **Orodja → upravljanje AVDs** (Android navidezne naprave) izberite vsak element iz **Opredelitve napravo** v pogovornem oknu nastalo:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Press **Ustvarijo AVD**, po želji spremenite ime, pritisnite **OK** , da bi sprejeli spremembe:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 Na AVD nato prikazano na seznamu **Android virtualnih naprav** :
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Odpreti emulator kot ločeno vlogo, izberite v AVD in pritisnite **Start**. Pobudnik toliko, kot bi na napravo, z dodatne kontrolnike, ki so na voljo za gumbe za strojno opremo:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 Na tej točki lahko uporabite v `cordova` korist za uvajanje uporabe tekmec iz ukazne vrstice:
 

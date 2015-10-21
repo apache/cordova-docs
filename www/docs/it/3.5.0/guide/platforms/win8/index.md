@@ -63,7 +63,7 @@ Scaricare ed estrarre l'ultima copia di [Cordova][3]. Queste istruzioni si appli
 
 *   Microsoft continua a utilizzare `default.html` come home page predefinita, ma uso di sviluppatori web più `index.html` . È una buona idea per fare così, almeno per abbinare altre piattaforme su che probabilmente stai lavorando. Per risolvere questo problema, in **Esplora soluzioni** rinominare il `default.html` del file di `index.html` . Fare doppio clic la `package.appxmanifest` del file e modificare il valore di **pagina iniziale** a `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   Includere `cordova.js` nel vostro progetto, fare clic destro sul `js` directory in **Esplora** soluzioni e scegliere **Aggiungi elemento → nuovo**. Individuare il `cordova.js` del file nella `lib\windows-8` directory.
@@ -96,13 +96,13 @@ Scaricare ed estrarre l'ultima copia di [Cordova][3]. Queste istruzioni si appli
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## Il progetto di test
 
 Eseguire il progetto da Visual Studio. Verrà visualizzata la finestra di messaggio appaiono:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 Questo è tutto. Ora sei pronto per costruire applicazioni Windows Store con Cordova.

@@ -95,7 +95,7 @@ title: Руководство для платформы Windows Phone 8
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Создание нового проекта
 
@@ -155,19 +155,19 @@ title: Руководство для платформы Windows Phone 8
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Основные элементы управления эмулятора в правом верхнем углу экрана устройства, позволяют переключаться между книжной и альбомной ориентацией. **>** Кнопка открывает больше элементов управления, которые позволяют протестировать более сложных ориентации и жесты:
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Эти дополнительные элементы управления также позволяют изменять местоположение устройства или моделировать последовательность движений:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Развертывание на устройство
 
@@ -193,6 +193,6 @@ title: Руководство для платформы Windows Phone 8
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Сверяйтесь с разделом "[Введение](../../overview/index.html)" о том как использовать интерфейс командной строки Cordova командной или SDK в вашем рабочем процессе. Cordova CLI опирается на кросс платформенный исходный код, который будет постоянно перезаписывать файлы платформы, используемые SDK. Если вы хотите работать в рамках SDK, используйте инструменты командной строки низкого уровня как альтернативу CLI.

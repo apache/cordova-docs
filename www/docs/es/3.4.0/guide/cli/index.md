@@ -159,13 +159,13 @@ Nota: Apoyo emulador no está disponible actualmente para Amazon fuego OS
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Seguimiento con el `cordova emulate` comando actualiza la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativamente, puedes enchufe del auricular en el ordenador y probar la aplicación directamente:
 

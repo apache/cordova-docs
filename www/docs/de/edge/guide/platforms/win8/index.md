@@ -96,7 +96,7 @@ Installieren Sie eine beliebige Edition von [Visual Studio][2] die Version, die 
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Für Windows 10 hat der Visual Studio Installer eine Option zum Installieren des Tools zur universellen Windows-Anwendungen erstellen. Sie müssen sicherstellen, dass die Auswahl dieser Option bei der Installation das erforderliche SDK installieren.
 
@@ -189,25 +189,25 @@ Sobald Sie eine Cordova-Anwendung zu erstellen, wie oben beschrieben, können Si
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Die `CordovaApp` -Komponente zeigt innerhalb der Lösung und ihrer `Www` -Verzeichnis enthält den Web-basierte Quellcode, einschließlich der `index.html` -Homepage:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Die Steuerelemente unter Visual Studio im Hauptmenü können Sie testen oder die app bereitstellen:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 **Lokalen Computer** ausgewählt drücken Sie den grünen Pfeil, um die app auf dem gleichen Computer ausführen von Visual Studio installieren. Einmal tun Sie dies, die app wird in Windows 8 app Kleinanzeigen:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Jedes Mal, wenn Sie die Anwendung neu erstellen wird aktualisiert, die Version, die in der Schnittstelle zur Verfügung.
 
@@ -215,19 +215,19 @@ Sobald in der app-Angebote erhältlich, kann halten Sie die **STRG** -Taste beim
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Beachten Sie, dass wenn Sie die app in einer virtuellen Umgebung öffnen, müssen Sie möglicherweise klicken in den Ecken oder an den Seiten des Windows apps zu wechseln oder auf zusätzliche Funktionen zugreifen:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Wählen Sie alternativ die **Simulator** -Bereitstellungsoption die app anzeigen, als ob es auf einem Tablettgerät ausgeführt wurden:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 Im Gegensatz zu desktop-Bereitstellung mit dieser Option können Sie simulieren die Tablette Orientierung, Lage, und variieren ihre Netzwerkeinstellungen.
 

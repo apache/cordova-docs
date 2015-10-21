@@ -106,7 +106,7 @@ title: Руководство по платформы Windows Phone 8
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. Обзор структуры проекта
 
@@ -118,7 +118,7 @@ title: Руководство по платформы Windows Phone 8
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. Построение и развертывание в эмулятор
 
@@ -128,7 +128,7 @@ title: Руководство по платформы Windows Phone 8
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. Создайте свой проект для устройства
 
@@ -144,7 +144,7 @@ title: Руководство по платформы Windows Phone 8
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Договорились!
 

@@ -107,7 +107,7 @@ Windows 7 を道の環境を変更: する
 
 *   **終了**キーを押します。.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 
@@ -131,37 +131,37 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
     
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 一度開いて、アンドロイド SDK マネージャーはさまざまなランタイム ライブラリが表示されます。
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 **ツール → 管理 Avd** (Android 仮想デバイス) を選択し、表示されたダイアログ ボックス内の**デバイス定義**から任意の項目を選択します。
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 これで、AVD **Android 仮想デバイス**リストに表示されます。
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 この時点で使用することができます、 `cordova` ユーティリティをコマンドラインからエミュレーターにアプリケーションを配置します。
 

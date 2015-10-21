@@ -95,7 +95,7 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 새 프로젝트 만들기
 
@@ -155,19 +155,19 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 에뮬레이터의 기본 컨트롤 장치 화면의 상단 오른쪽에 세로 가로 방향 사이 전환할 수 있습니다. **>** 단추 더 복잡 한 방향 및 제스처를 테스트할 수 있는 더 많은 컨트롤을 엽니다.
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 이러한 고급 컨트롤 또한 소자의 위치를 수정 하거나 수 시퀀스의 움직임을 시뮬레이션 하기 위해:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## 장치에 배포
 
@@ -193,6 +193,6 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 워크플로에서 코르도바의 명령줄 도구 또는 SDK를 사용 하는 방법에 대 한 조언에 대 한 개요를 참조 하십시오. 코르 도우 바 CLI 정기적으로 SDK에서 사용 되는 플랫폼 특정 파일을 덮어 씁니다 크로스 플랫폼 소스 코드에 의존 합니다. SDK 내에서 작동 하려면 하위 셸 도구를 사용 하 여 CLI에 대 안으로.

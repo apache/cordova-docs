@@ -145,13 +145,13 @@ Alcune piattaforme mobili emulano un particolare dispositivo per impostazione pr
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Seguente in su con il `cordova emulate` comando aggiorna l'immagine di emulatore per visualizzare l'applicazione più recente, che è ora disponibile per il lancio dalla schermata iniziale:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativamente, è possibile collegare il telefono al computer e testare le app direttamente:
 

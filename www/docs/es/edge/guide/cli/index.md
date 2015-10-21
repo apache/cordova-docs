@@ -176,13 +176,13 @@ Algunas plataformas móviles emulan un dispositivo especial de forma predetermin
 
 ![][4]
 
- [4]: img/guide/cli/android_emulate_init.png
+ [4]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Siguiendo con el comando `cordova emulate` refresca la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
 
 ![][5]
 
- [5]: img/guide/cli/android_emulate_install.png
+ [5]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativamente, puedes enchufe del auricular en el ordenador y probar la aplicación directamente:
 

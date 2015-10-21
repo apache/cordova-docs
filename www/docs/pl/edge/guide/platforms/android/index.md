@@ -106,25 +106,25 @@ Android sdk nie przewiduje żadnych wystąpienie domyślne emulatora domyślnie.
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Naciśnij przycisk **Utwórz AVD**, opcjonalnie Modyfikowanie nazwy, a następnie naciśnij **OK** , aby zaakceptować zmiany:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD następnie pojawia się na liście **Urządzeń wirtualnych z systemem Android** :
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Aby otworzyć ten emulator jako oddzielną aplikację, wybierz AVD i naciśnij **Start**. Wprowadza to tyle jak na urządzenie, z dodatkowych formantów dostępnych przycisków sprzętowych:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 Na szybsze można użyć `Maszyny wirtualnej przyspieszenie` poprawić szybkość realizacji. Wiele nowoczesnych procesorów dostarcza rozszerzeń do bardziej skutecznie wykonać maszyn wirtualnych. Przed próbą użycia tego typu przyspieszenia, trzeba określić, czy obecny system rozwoju CPU, obsługuje jeden następujące technologie wirtualizacji:
 
@@ -142,7 +142,7 @@ Po instalacji i wykonać `Procesor Intel identyfikacja Utility` na Windows, poja
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 W celu przyspieszenia emulator, musisz pobrać i zainstalować jeden lub więcej obrazów systemu `x 86 firmy Intel Atom` , a także `Intel sprzęt przyspieszyć wykonanie Manager (HAXM)`.
 
@@ -150,7 +150,7 @@ Otwórz Menedżera Android SDK i wybierz obraz systemu `x 86 firmy Intel Atom` ,
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 Po pobraniu, uruchom Instalatora Intel, który jest dostępny w twój Android SDK w `Intel/Dodatki/Hardware_Accelerated_Execution_Manager`. **Uwaga**:`Jeśli masz jakiekolwiek problemy z instalacją pakietu, można znaleźć więcej informacji i wskazówki krok po kroku, sprawdź ten` [Artykuł Intel][17].
 
@@ -223,7 +223,7 @@ To wyprowadziło aplikacji na ekranie i uruchamia to:
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 Podczas `run` aplikacji, można również `build` to. Można dodać dodatkowe `--debug`, `--release`i flagi `- nobuild` do sterowania, jak jest zbudowany, lub nawet niezbędne jest czy przebudowy:
 
@@ -260,14 +260,14 @@ Po dodaniu do projektu platformy android, można otworzyć go z w [Android Studi
 
 4.  Na pytanie `Gradle Sync` może po prostu odpowiedzieć **tak**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 Są ustawione teraz i można skompilować i uruchomić aplikację bezpośrednio z `Android Studio`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 Zobacz [Android przegląd Studio][22] i [Tworzenie i uruchamianie z Android Studio][23] dla więcej szczegółów.
 

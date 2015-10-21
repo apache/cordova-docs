@@ -63,7 +63,7 @@ Travnato gričevje ter citat ki postaja latenten ulitek [Cordova][3]. Ti instuct
 
 *   Microsoft še naprej uporablja `default.html` kot privzeto domačo stran, vendar večina spletnih razvijalcev uporabo `index.html` . To je dobra ideja za to, vsaj za tekme druge platforme verjetno delate. Popraviti to, v **Solution Explorerju** preimenovati v `default.html` datoteko `index.html` . Dvokliknite na `package.appxmanifest` datoteko in spremenite **začetno stran** vrednost `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   Vključiti `cordova.js` v vašem projektu, desno kliknite na v `js` imenik v **Solution Explorerju** in izberite **novo → Dodajanje elementa**. Poiščite v `cordova.js` pila v v `lib\windows-8` imenik.
@@ -96,13 +96,13 @@ Travnato gričevje ter citat ki postaja latenten ulitek [Cordova][3]. Ti instuct
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## Test projekta
 
 Zagon projekta Visual Studio. Boste videli polje sporočilo pojavi:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 To je to. Zdaj ste pripravljeni za izgradnjo apps Windows Store z Cordova.

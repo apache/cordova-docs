@@ -95,7 +95,7 @@ Zainstaluj najnowszą wersję zestawu SDK Windows Phone z obszaru **do pobrania*
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Tworzenie nowego projektu
 
@@ -155,19 +155,19 @@ Emulator uruchamia urządzenie obraz z zainstalowana aplikacja. Na ekranie przej
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Emulator podstawowego kontroli w prawym górnym rogu ekranu urządzenia pozwalają na przełączanie pomiędzy portret i krajobraz. **>** Otwiera więcej formantów, które pozwoli Ci przetestować kierunki bardziej złożone i gesty:
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Te Zaawansowane sterowanie pozwala również do modyfikowania położenia urządzenia lub symulować sekwencje ruchów:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Uruchamianie na urządzeniu
 
@@ -193,6 +193,6 @@ Gdy budujesz Cordova aplikacji, jak opisano powyżej, można go otworzyć z zest
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Konsultacje przegląd porady jak korzystać z narzędzi wiersza polecenia w Cordova lub zestawu SDK w pracy. W consoli Cordova opiera się na kod źródłowy przekreślać platforma, które rutynowo zastępuje pliki specyficzne dla platformy, używany przez SDK. Jeśli chcesz pracować w zestawie SDK, należy użyć narzędzi niższego poziomu powłoki jako alternatywa do consoli.

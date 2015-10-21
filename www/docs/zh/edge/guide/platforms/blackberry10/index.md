@@ -154,13 +154,13 @@ title: 10 黑莓平臺指南
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 導航到**的安全和隱私 → 發展模式**節和啟用的選項：
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄，將目標命名*動車組*與上面顯示的 IP 位址相關聯。
 
@@ -185,7 +185,7 @@ title: 10 黑莓平臺指南
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 運行目標命令列實用程式將一個名稱與一個 IP 位址、 裝置密碼和 PIN 相關聯。
 

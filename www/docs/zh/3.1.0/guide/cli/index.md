@@ -145,13 +145,13 @@ XREF -->
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 跟進與 `cordova emulate` 命令刷新顯示的最新應用，現已從主畫面發射的模擬程式圖像：
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 或者，可以將手機插入您的電腦和直接測試應用程式：
 

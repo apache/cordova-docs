@@ -89,7 +89,7 @@ La siguiente muestra estructura representa un 2.3.0 del proyecto, pero puede var
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Genere el proyecto para el dispositivo
 
@@ -105,6 +105,6 @@ Antes de probar la aplicación en un dispositivo, el dispositivo debe estar regi
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 En este punto, ya está.

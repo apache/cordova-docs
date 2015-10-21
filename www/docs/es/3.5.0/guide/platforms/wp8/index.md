@@ -90,7 +90,7 @@ Instalar la última versión del SDK de Windows Phone de la zona de **descargas*
 
 ![][10]
 
- [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 Después de instalar el SDK, tienes que modificar trazado del sistema para hacer disponible el SDK a Córdoba en la línea de comandos de Windows:
 
@@ -128,13 +128,13 @@ Después de instalar el SDK, tienes que modificar trazado del sistema para hacer
     
     C:\Users\me\AppData\Roaming\npm;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
 
- [11]: img/guide/platforms/wp8/modpath_copy.png
- [12]: img/guide/platforms/wp8/modpath_control_panel.png
- [13]: img/guide/platforms/wp8/modpath_system.png
- [14]: img/guide/platforms/wp8/modpath_advanced.png
- [15]: img/guide/platforms/wp8/modpath_environment.png
- [16]: img/guide/platforms/wp8/modpath_edit.png
- [17]: img/guide/platforms/wp8/modpath_append.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_copy.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_control_panel.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_system.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_advanced.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_environment.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_edit.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/modpath_append.png
 
 ## Crear un nuevo proyecto
 
@@ -194,19 +194,19 @@ El emulador lanza una imagen del dispositivo con la aplicación instalada. Desde
 
 ![][18]
 
- [18]: img/guide/platforms/wp8/wp8_emulator.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Controles básicos del emulador en la parte superior derecha de la pantalla del dispositivo permiten alternar entre la orientación vertical y horizontal. El botón **>** abre más controles que permiten poner a prueba las orientaciones más complejas y gestos:
 
 ![][19]
 
- [19]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Estos controles avanzados también permiten modificar la ubicación del dispositivo o para simular secuencias de movimientos:
 
 ![][20]
 
- [20]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Implementar al dispositivo
 
@@ -232,7 +232,7 @@ Una vez que construyes una aplicación Cordova como se describió anteriormente,
 
 ![][22]
 
- [22]: img/guide/platforms/wp8/wp8_vs.png
+ [22]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Consulte el Resumen de consejos sobre cómo usar herramientas de línea de comandos de Cordova o el SDK en su flujo de trabajo. Cordova CLI se basa en código multiplataforma que rutinariamente sobrescribe los archivos específicos a una plataforma utilizados por el SDK. Si quieres trabajar dentro del SDK, utilice las herramientas de shell de nivel inferior como una alternativa a la CLI.
 
@@ -249,7 +249,7 @@ El `emulate` comando produce un emulador de dispositivos Windows Phone 7 que mue
 
 ![][23]
 
- [23]: img/guide/platforms/wp8/wp7_emulator.png
+ [23]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp7_emulator.png
 
 Si usted está usando el flujo de shell-herramienta centrada en plataforma, siga todos los pasos en la sección *Instalar herramientas de Shell Cordova* , excepto extraer las herramientas de la `cordova-wp8\wp7` Directorio en su lugar. Todas estas herramientas funcionan de la misma como su `wp8` homólogos.
 

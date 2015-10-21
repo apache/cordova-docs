@@ -103,12 +103,12 @@ enable development mode.
 
 Launch the emulator image, then choose __Settings__ from the home screen:
 
-![](img/guide/platforms/blackberry10/bb_home.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png)
 
 Navigate to the __Security and Privacy &rarr; Development Mode__
 section and enable the option:
 
-![](img/guide/platforms/blackberry10/bb_devel.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png)
 
 Then, run the `emulate` command to view the app:
 

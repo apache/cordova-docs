@@ -98,7 +98,7 @@ Une fois que la plateforme ios est ajouté à votre projet, vous pouvez l'ouvrir
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Déployer sur émulateur
 
@@ -118,8 +118,8 @@ Pour afficher un aperçu de l'application dans l'émulateur iOS :
     
     Qu'un émulateur peut exécuter à la fois, donc si vous voulez tester l'app dans un émulateur différent, vous devez quitter l'application de l'émulateur et exécuter une cible différente dans Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode est livré avec les émulateurs pour les dernières versions des iPhone et iPad. Des versions plus anciennes peuvent être obtenues auprès du **Xcode → préférences → téléchargements → composants** panneau.
 
@@ -190,7 +190,7 @@ Avertissement de Xcode sur la méthode de `invokeString` concerne une fonctionna
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Il s'agit du paramètre par défaut pour une nouvelle installation de Xcode, mais elle peut être définie différemment suite à une mise à niveau d'une ancienne version de Xcode.
 

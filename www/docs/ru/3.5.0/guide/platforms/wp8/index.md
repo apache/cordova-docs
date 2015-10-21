@@ -107,7 +107,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` . Вы могл пос
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## Обзор структуры проекта
 
@@ -117,7 +117,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` . Вы могл пос
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Построение и развертывание в эмулятор
 
@@ -127,7 +127,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` . Вы могл пос
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## Постройте проект для устройства
 
@@ -143,7 +143,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` . Вы могл пос
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 На данный момент вы сделали.
 

@@ -38,7 +38,7 @@ Le [Microsoft Developer Network][1] fournit des instructions générales pour l'
     
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 Lorsque vous avez terminé ces étapes, vous êtes prêt à installer le SDK de Windows Phone. Consultez le Guide de plate-forme Windows Phone pour plus de détails.

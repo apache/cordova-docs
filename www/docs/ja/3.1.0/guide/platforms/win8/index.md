@@ -68,8 +68,8 @@ title: Windows 8 プラットフォーム ガイド
 
 *   コードを編集の `index.html` 。参照を追加 `cordova.js` 。手動で、またはソリューション エクスプ ローラーからファイルをドラッグすることによってこれを行うことができます。
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### 参照を追加する.
 
@@ -103,7 +103,7 @@ title: Windows 8 プラットフォーム ガイド
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## やった ！
 

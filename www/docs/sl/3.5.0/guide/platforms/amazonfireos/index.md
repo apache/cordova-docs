@@ -110,7 +110,7 @@ Ko ga enkrat ustvariš, tukaj je kako rabiti SDK spremeniti:
 
 *   Pritisnite **konča**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Ko se odpre okno Eclipse, rdeč **X** lahko zdi, da kažejo nerešenih problemov. Če je tako, sledite naslednjim korakom dodatne:
 

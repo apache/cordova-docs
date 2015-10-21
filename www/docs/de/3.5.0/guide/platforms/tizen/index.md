@@ -50,11 +50,11 @@ Laden Sie die Tizen-SDK von [tizen.org][1].
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -82,15 +82,15 @@ Laden Sie die Tizen-SDK von [tizen.org][1].
     
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Um das Projekt neu erstellen, mit der rechten Maustaste in der **Projekt-Explorer** -Ansicht, und wählen Sie **Projekt erstellen**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 Eine Widget-Paket-Datei z. B. *hello.wgt* sollte im Root-Verzeichnis des Projekts erzeugen.
 
@@ -100,7 +100,7 @@ Maustaste auf das Projekt in der **Projekt-Explorer** -Ansicht, und wählen Sie 
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Bereitstellung auf Gerät
 
@@ -114,5 +114,5 @@ Maustaste auf das Projekt in der **Projekt-Explorer** -Ansicht, und wählen Sie 
     
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

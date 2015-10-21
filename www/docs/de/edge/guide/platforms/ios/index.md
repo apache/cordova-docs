@@ -98,7 +98,7 @@ Sobald Ios Plattform zum Projekt hinzugefügt wurde, können Sie es innerhalb vo
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Bereitstellen auf Emulator
 
@@ -118,8 +118,8 @@ Die app in der iOS-Emulator Vorschau:
     
     Nur ein Emulator kann zu einem Zeitpunkt ausführen möchten Sie die Anwendung in einem anderen Emulator zu testen, musst du den Emulator-Programm beenden, und führen Sie ein anderes Ziel in Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode kommt zusammengerollt mit Emulatoren für die neuesten Versionen von iPhone und iPad. Ältere Versionen möglicherweise zur Verfügung, aus der **Xcode → Einstellungen → Downloads → Komponenten** Panel.
 
@@ -190,7 +190,7 @@ Xcode die Warnung über die `InvokeString` -Methode betrifft die Funktionalität
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Dies ist die Standardeinstellung für eine neue Xcode-Installation, aber es kann anders nach einem Upgrade von einer älteren Version von Xcode festgelegt werden.
 

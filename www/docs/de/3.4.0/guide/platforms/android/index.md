@@ -113,7 +113,7 @@ Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
 *   Drücken Sie **Fertig stellen**.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 
@@ -137,37 +137,37 @@ Können Sie das `cordova` -Dienstprogramm eine app in einem Emulator, oder Sie l
     
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Nach dem Öffnen zeigt das Android SDK Manager verschiedene Laufzeit-Bibliotheken:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Wählen Sie **Extras → Verwaltung AVDs** (Android Virtual Devices), dann wählen Sie ein Element aus **Gerätedefinitionen** in dem daraufhin angezeigten Dialogfeld:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Presse **AVD erstellen**, ändern optional den Namen und drücken Sie **OK** um die Änderungen zu übernehmen.
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 Der AVD wird dann in der Liste **Android Virtual Devices** angezeigt:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD, und drücken Sie **Start**. Es bringt viel, wie es auf dem Gerät mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 An dieser Stelle können Sie das `cordova` -Dienstprogramm zum Bereitstellen der Anwendung für den Emulator von der Befehlszeile aus:
 

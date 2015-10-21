@@ -68,8 +68,8 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
 
 *   Bearbeiten Sie den Code für `index.html` . Fügen Sie einen Verweis auf `cordova.js` . Sie können dies tun, manuell oder durch Ziehen der [Datei](../../../cordova/file/fileobj/fileobj.html) im Projektmappen-Explorer.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### Hinzufügen des Verweises...
 
@@ -113,7 +113,7 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Fertig!
 

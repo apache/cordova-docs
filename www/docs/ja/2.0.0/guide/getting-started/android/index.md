@@ -45,15 +45,15 @@ Getting Started with Android
 ---------------------
 
 - Eclipse を起動し、メニューから **新規プロジェクト** を選択します
-    ![](img/guide/getting-started/android/step_1.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_1.png)
 - 新しいアプリケーションプロジェクトを指定します
-    ![](img/guide/getting-started/android/step_2.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_2.png)
 - アプリケーション名、プロジェクト名、ネームスペースを伴ったパッケージ名を指定します
-    ![](img/guide/getting-started/android/step_3.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_3.png)
 - ランチャーアイコンの設定をします
-    ![](img/guide/getting-started/android/step_4.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_4.png)
 - Blank Activity を作成します
-    ![](img/guide/getting-started/android/step_5.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_5.png)
 - Activity が何も継承していないことを確認して下さい。 PhoneGap が Eclipse のワークスペースに無いような状態です。これが終わったら、 Finish をクリックします
 
 - 作成したプロジェクトのルートディレクトリに、以下の2つの新しいディレクトリを作成します:
@@ -65,14 +65,14 @@ Getting Started with Android
 
 - **cordova-2.0.0.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-2.0.0.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
 
-    ![](img/guide/getting-started/android/buildPath.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/buildPath.jpg)
 
 - 作成したプロジェクトの **src** フォルダーにあるメインの Java ファイルを編集します:
     - **import org.apache.cordova.*;** を追加
     - クラスの継承元を **Activity** から **DroidGap** に変更
     - **setContentView()** の行を **super.loadUrl("file:///android_asset/www/index.html");** に置き換え
 
-    ![](img/guide/getting-started/android/javaSrc.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/javaSrc.jpg)
 
 - AndroidManifest.xml を右クリックし、 **アプリケーションから開く &gt; テキスト・エディター** を選択します
 - 以下のコードを、 **&lt;uses-sdk.../&gt;** と **&lt;application.../&gt;** タグの間に貼り付けてください。
@@ -105,7 +105,7 @@ Getting Started with Android
 
 - AndroidManifest.xml は以下のようになります。
 
-    ![](img/guide/getting-started/android/manifest.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/manifest.png)
 
 
 4. [Hello World](../webos/index.html) の作成

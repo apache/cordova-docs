@@ -107,7 +107,7 @@ Geben Sie dem Projekt einen Namen, und wählen Sie **OK**.
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## Überprüfung der Projektstruktur
 
@@ -117,7 +117,7 @@ Die folgende Beispiel-Struktur stellt eine 2.3.0 Projekt, sondern variieren je n
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Erstellen und Bereitstellen von Emulator
 
@@ -127,7 +127,7 @@ Dann drücken Sie die Taste grün **spielen** neben dem Dropdown-Menü Debuggen 
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## Erstellen Sie das Projekt für das Gerät
 
@@ -143,7 +143,7 @@ Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werde
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 Zu diesem Zeitpunkt sind Sie fertig.
 

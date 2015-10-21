@@ -145,13 +145,13 @@ Certaines plates-formes mobiles émulent un périphérique par défaut, tels que
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Suivi auprès du `cordova emulate` commande actualise l'image de l'émulateur pour afficher la dernière application, qui est maintenant disponible pour le lancement de l'écran d'accueil :
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativement, vous pouvez brancher le combiné dans votre ordinateur et tester l'application directement :
 

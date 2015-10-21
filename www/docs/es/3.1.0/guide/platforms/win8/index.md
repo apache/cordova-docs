@@ -68,8 +68,8 @@ Ya puedes construir aplicaciones Windows 8 usando el *HTML/JavaScript pista* dis
 
 *   Editar el código para `index.html` . Agregue una referencia a `cordova.js` . Puedes hacerlo manualmente, o arrastrando el archivo desde el explorador de soluciones.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### Agregar la referencia...
 
@@ -103,7 +103,7 @@ Ya puedes construir aplicaciones Windows 8 usando el *HTML/JavaScript pista* dis
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Hecho!
 

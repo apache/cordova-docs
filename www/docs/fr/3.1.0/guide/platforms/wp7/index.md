@@ -94,7 +94,7 @@ Exécutez le script :
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. Générez votre projet pour le dispositif
 
@@ -110,6 +110,6 @@ Afin de tester votre application sur un périphérique, le périphérique doit �
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fait !

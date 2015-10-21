@@ -44,16 +44,16 @@ Getting Started with Bada
 - Bada IDE で、 [File](../../../cordova/file/fileobj/fileobj.html) -> Import project -> Bada C++ / Flash Project を選択します
     - 注意: Bada 1.2 では "Bada Application Project" を選択します
 
-    ![](img/guide/getting-started/bada/import_bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/bada/import_bada_project.png)
 
 - "Select root directory" がチェックされていることを確認し、 Browse ボタンをクリックします
 - Cordova bada プロジェクトフォルダー (1.2にはbadaフォルダー、2.xにはbada-wacフォルダー) を選択します "Copy projects into workspace" がチェックされていることを確認します
 
-    ![](img/guide/getting-started/bada/import_bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/bada/import_bada_project.png)
 
 - "Finish" をクリックします
 
-    ![](img/guide/getting-started/bada/bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/bada/bada_project.png)
 
 
 4. [Hello World](../webos/index.html) の作成
@@ -74,11 +74,11 @@ Getting Started with Bada
 
 - **Bada 2.x**: プロジェクトで右クリックをし、 Run As -&gt; bada Emulator Web Application を選択します
 
-    ![](img/guide/getting-started/bada/bada_1_run.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/bada/bada_1_run.png)
 
 - **Bada 1.2**: プロジェクトで右クリックをし、 Build configurations -&g; Set Active -&gt; Simulator-Debugを選択します
 
-    ![](img/guide/getting-started/bada/bada_set_target.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/bada/bada_set_target.png)
 
 - プロジェクトで右クリックをし、 Run As -&gt; bada Simulator Application を選択します。 アプリを更新するたびに、エミュレーターを閉じる必要があります。
 

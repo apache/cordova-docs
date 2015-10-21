@@ -110,7 +110,7 @@ Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para m
 
 *   Pulse **Finalizar**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
 

@@ -110,7 +110,7 @@ NOTE, doc said:
 
 *   Нажмите кнопку **Готово**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться указывают нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 
@@ -134,37 +134,37 @@ NOTE, doc said:
     
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 После открытой, Android SDK Manager отображает различные библиотеки времени выполнения:
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Выберите **Инструменты → Управление AVDs** (Android виртуального устройства), а затем выберите любой элемент из **Определения устройства** в диалоговом окне возникшей:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Нажмите **Создать AVD**, при необходимости изменяя имя, затем нажмите **кнопку ОК** чтобы принять изменения:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD затем появляется в списке **Виртуальных устройств Android** :
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Чтобы открыть эмулятор как отдельное приложение, выберите AVD и нажать кнопку **старт**. Он запускает, как он на устройство, с дополнительные элементы управления, доступные для аппаратных кнопок:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 В этот момент вы можете использовать `cordova` утилита для развертывания приложения в эмулятор из командной строки:
 

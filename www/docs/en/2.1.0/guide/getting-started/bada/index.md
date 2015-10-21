@@ -44,16 +44,16 @@ This guide describes how to set up your development environment for Cordova and 
 - In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project. 
     - Note: Bada 1.2 select "Bada Application Project"
     
-    ![](img/guide/platforms/bada/import_bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/bada/import_bada_project.png)
 
 - Make sure "Select root directory is checked" and then click Browse
 - Browse to Cordova bada project folder (bada for 1.2 and bada-wac for 2.x) and select it. Make sure "Copy projects into workspace is checked"
     
-    ![](img/guide/platforms/bada/import_bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/bada/import_bada_project.png)
 
 - Click "Finish"
 
-    ![](img/guide/platforms/bada/bada_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/bada/bada_project.png)
  
  
 4. [Hello World](../webos/index.html)
@@ -74,11 +74,11 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Bada 2.x**: Right click on your project s folder and select Run As -&gt; bada Emulator Web Application 
     
-    ![](img/guide/platforms/bada/bada_1_run.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/bada/bada_1_run.png)
 
 - **Bada 1.2**: Right click on your project&apos; folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug
 
-    ![](img/guide/platforms/bada/bada_set_target.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/bada/bada_set_target.png)
 
 - Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
 

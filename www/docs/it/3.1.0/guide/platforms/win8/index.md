@@ -68,8 +68,8 @@ Seguire le istruzioni [qui][1] a presentare le tue applicazioni Windows Store.
 
 *   Modificare il codice per `index.html` . Aggiungere un riferimento a `cordova.js` . È possibile farlo manualmente, o trascinando il file da Esplora soluzioni.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### L'aggiunta del riferimento...
 
@@ -103,7 +103,7 @@ Seguire le istruzioni [qui][1] a presentare le tue applicazioni Windows Store.
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Fatto!
 

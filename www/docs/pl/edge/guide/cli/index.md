@@ -176,13 +176,13 @@ Niektóre platformy mobilne naśladować konkretne urządzenie domyślnie, takic
 
 ![][4]
 
- [4]: img/guide/cli/android_emulate_init.png
+ [4]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Następujących się z `cordova emulate` polecenie odświeża obraz emulatora do wyświetlania najnowszych aplikacji, która jest już dostępna do uruchomienia na ekranie:
 
 ![][5]
 
- [5]: img/guide/cli/android_emulate_install.png
+ [5]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Na przemian można podłączyć telefon do komputera i przetestować aplikację bezpośrednio:
 

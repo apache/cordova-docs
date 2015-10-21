@@ -63,7 +63,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 - - note: If you do not see it, you may have to select the top level 'Visual C#' to see it
 - Give your project a name, and select OK.
 
-    ![](img/guide/platforms/wp7/wpnewproj.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpnewproj.png)
 
  
 4. Review the project structure
@@ -72,7 +72,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
 
-    ![](img/guide/platforms/wp7/wp7projectstructure.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wp7projectstructure.png)
 
 
 5. Build and Deploy to Emulator
@@ -81,8 +81,8 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 - Make sure to have **Windows Phone Emulator** selected in the top drop-down menu.
 - Hit the green **play button** beside the Windows Phone Emulator drop-down menu to start debugging or press F5.
 
-    ![](img/guide/platforms/wp7/wprun.png)
-    ![](img/guide/platforms/wp7/wpfirstrun.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wprun.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpfirstrun.png)
 
 
 6. Build your project for the device
@@ -94,7 +94,7 @@ In order to test your application on a device, the device must be registered. Cl
 - In Visual Studio, select 'Windows Phone [Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
-    ![](img/guide/platforms/wp7/wpd.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 
 Done!

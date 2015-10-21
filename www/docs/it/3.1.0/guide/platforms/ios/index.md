@@ -67,7 +67,7 @@ Una volta creato, è possibile aprirlo all'interno di Xcode. Fare doppio clic pe
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Distribuire all'emulatore
 
@@ -87,8 +87,8 @@ Per visualizzare in anteprima l'applicazione nell'emulatore di iOS:
     
     Solo un emulatore possa essere eseguite contemporaneamente, quindi se volete provare l'app in un emulatore diverso, è necessario uscire dall'emulatore applicazione ed eseguire una diversa destinazione all'interno di Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode viene fornito in bundle con gli emulatori per le ultime versioni di iPhone e iPad. Vecchie versioni possono essere disponibili dalla **Xcode → Preferenze → download → componenti** pannello.
 
@@ -150,7 +150,7 @@ Xcode avvertimento circa il `invokeString` Metodo riguarda funzionalità che lan
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Questa è l'impostazione predefinita per una nuova installazione di Xcode, ma può essere impostata diversamente dopo un aggiornamento da una versione precedente di Xcode.
 

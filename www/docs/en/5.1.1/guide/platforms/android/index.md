@@ -132,22 +132,22 @@ The press __Tools &rarr; Manage AVDs__ (Android Virtual Devices),
 then choose any item from __Device Definitions__ in the resulting dialog
 box:
 
-![](img/guide/platforms/android/asdk_device.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png)
 
 Press __Create AVD__, optionally modifying the name, then press __OK__
 to accept the changes:
 
-![](img/guide/platforms/android/asdk_newAVD.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png)
 
 The AVD then appears in the __Android Virtual Devices__ list:
 
-![](img/guide/platforms/android/asdk_avds.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png)
 
 To open the emulator as a separate application, select the AVD and
 press __Start__. It launches much as it would on the device, with
 additional controls available for hardware buttons:
 
-![](img/guide/platforms/android/asdk_emulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png)
 
 
 For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
@@ -166,7 +166,7 @@ or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_D
 After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
 in order to check if your CPU supports the Virtualization Technologies:
 
-![](img/guide/platforms/android/intel_pid_util_620px.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png)
 
 In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
 as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
@@ -174,7 +174,7 @@ as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
 Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
 and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
 
-![](img/guide/platforms/android/asdk_man_intel_image_haxm.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png)
 
 After download, run the Intel installer, which is available within your
 Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 
@@ -260,7 +260,7 @@ options.
 
 This pushes the app to the home screen and launches it:
 
-![](img/guide/platforms/android/emulator2x.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png)
 
 When you `run` the app, you also `build` it. You can append additional
 `--debug`, `--release`, and `--nobuild` flags to control how it is
@@ -289,17 +289,17 @@ within [Android Studio](http://developer.android.com/sdk/installing/index.html?p
 
 1. Select __Import Project (Eclipse ADT, Gradle, etc)__.
 
-  ![](img/guide/platforms/android/asdk_import_project.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png)
 
 1. Select location where android platform is stored (`your/project/platforms/android`).
   
-  ![](img/guide/platforms/android/asdk_import_select_location.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png)
 
 1. For the `Gradle Sync` question you can simply answer __Yes__.
 
 You are all set now and can build and run the app directly from `Android Studio`.
 
-![](img/guide/platforms/android/asdk_import_done.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png)
 
 See [Android Studio Overview](http://developer.android.com/tools/studio/index.html) and
 And [Building and Running from Android Studio](http://developer.android.com/tools/building/building-studio.html) for more details.

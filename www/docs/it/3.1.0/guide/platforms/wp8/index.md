@@ -106,7 +106,7 @@ Eseguire lo script:
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. Esaminare la struttura del progetto
 
@@ -118,7 +118,7 @@ Eseguire lo script:
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. Compilare e distribuire emulatore
 
@@ -128,7 +128,7 @@ Eseguire lo script:
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. Costruire un progetto per il dispositivo
 
@@ -144,7 +144,7 @@ Al fine di testare l'applicazione su un dispositivo, il dispositivo deve essere 
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fatto!
 

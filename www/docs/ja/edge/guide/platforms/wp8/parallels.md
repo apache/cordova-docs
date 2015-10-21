@@ -38,7 +38,7 @@ title: 平行線デスクトップを構成します。
     
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 これらの手順が完了すると、Windows Phone SDK をインストールする準備が整いました。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。

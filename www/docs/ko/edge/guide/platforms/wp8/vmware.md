@@ -45,7 +45,7 @@ title: Vm 웨어 퓨전을 구성
         hypervisor.cpuid.v0 = "FALSE" mce.enable = "TRUE" vhv.enable = "TRUE"
         
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 이러한 단계를 완료 하면 일단 준비가 다음 Windows Phone SDK를 설치 합니다. 자세한 내용은 Windows Phone 8 플랫폼 설명서를 참조 하십시오.

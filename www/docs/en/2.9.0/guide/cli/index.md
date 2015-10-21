@@ -207,7 +207,7 @@ would appear on an iPhone:
 
         $ cordova ripple ios
 
-![](img/guide/cli/scr_ripple.png)
+![]({{ site.baseurl }}/static/img/guide/cli/scr_ripple.png)
 
 The _ripple_ emulator provides an outer skin that demonstrates how
 applications work with many device-level features. For example, you
@@ -223,12 +223,12 @@ establishes contact with device-level APIs, at which point an
 application can start running. Within the ripple emulator, you must
 fire the event manually:
 
-![](img/guide/cli/scr_ripple_event.png)
+![]({{ site.baseurl }}/static/img/guide/cli/scr_ripple_event.png)
 
 As part of its initialization phase, The application displays a new
 log message:
 
-![](img/guide/cli/scr_ripple_ready.png)
+![]({{ site.baseurl }}/static/img/guide/cli/scr_ripple_ready.png)
 
 Specifying a platform, such as `ios` or `android`, makes the
 application run under `ripple` with a user agent string and screen
@@ -237,7 +237,7 @@ __Devices__ tab at the top left to change the target device.  For
 example, here is how an application would appear on an iPad that's
 tipped to its side:
 
-![](img/guide/cli/scr_ripple_ipad.png)
+![]({{ site.baseurl }}/static/img/guide/cli/scr_ripple_ipad.png)
 
 The `ripple` command is appropriate if your application responds to
 location, orientation, and varying network conditions, or else if it
@@ -268,13 +268,13 @@ For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
 
-![](img/guide/cli/android_emulate_init.png)
+![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png)
 
 Following up with the `cordova emulate` command refreshes the emulator
 image to display the latest application, which is now available for
 launch from the home screen:
 
-![](img/guide/cli/android_emulate_install.png)
+![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png)
 
 <!--
 

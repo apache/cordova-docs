@@ -95,7 +95,7 @@ Installare l'ultima versione di Windows Phone SDK dall'area **Download** di [dev
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## Creare un nuovo progetto
 
@@ -155,19 +155,19 @@ L'emulatore lancia un'immagine del dispositivo con l'app installata. Dalla scher
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 Controlli di base dell'emulatore in alto a destra dello schermo dispositivo consentono di passare tra orientamento verticale e orizzontale. Il pulsante **>** apre ulteriori controlli che consentono di verificare gli orientamenti più complessi e gesti:
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Questi controlli avanzati consentono anche di modificare la posizione del dispositivo o per simulare le sequenze di movimenti:
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Distribuire al dispositivo
 
@@ -193,6 +193,6 @@ Una volta che si compila una app di Cordova come descritto sopra, è possibile a
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 Per consigli su come utilizzare il SDK o strumenti da riga di comando di Cordova nel vostro flusso di lavoro, consultare la panoramica. Cordova CLI si basa sul codice sorgente della multipiattaforma che ordinariamente sovrascrive i file specifici di piattaforma utilizzati dal SDK. Se si desidera lavorare all'interno del SDK, utilizzare gli strumenti di basso livello shell come alternativa alla CLI.

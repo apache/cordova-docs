@@ -94,13 +94,13 @@ Mac 및 Linux:
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 이동 하는 **보안 및 개인 정보 → 개발 모드** 섹션 및 옵션을 사용:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 그런 다음 실행 하는 `emulate` 명령을 응용 프로그램을 볼 수:
 

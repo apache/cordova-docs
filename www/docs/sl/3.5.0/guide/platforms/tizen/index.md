@@ -50,11 +50,11 @@ Download Tizen SDK od [tizen.org][1].
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -82,15 +82,15 @@ Download Tizen SDK od [tizen.org][1].
     
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Za obnovo projekta, desno v **Project Explorer** pogledu in izberite **Izgradnjo projekta**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 V korenskem imeniku projekta naj bi ustvarili widget paket pila kot na primer *hello.wgt* .
 
@@ -100,7 +100,7 @@ Desno projekt v **Project Explorer** pogledu in izberite **Zaženi kot → Tizen
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Razporedi na napravo
 
@@ -114,5 +114,5 @@ Desno projekt v **Project Explorer** pogledu in izberite **Zaženi kot → Tizen
     
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

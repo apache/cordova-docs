@@ -63,7 +63,7 @@ Ya puedes construir aplicaciones Windows 8 usando el *HTML/JavaScript pista* dis
 
 *   Microsoft continúa utilizando `default.html` como la página de inicio por defecto, pero más uso de los desarrolladores web `index.html` . Es una buena idea hacerlo, al menos para que coincida con otras plataformas que es probable que estás trabajando. Para solucionar este problema, en el **Explorador de soluciones** renombrar el `default.html` archivo a `index.html` . Haga doble clic en el `package.appxmanifest` archivo y cambiar el valor **de inicio** a `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   Incluir `cordova.js` en su proyecto, haga clic en el `js` Directorio en el **Explorador de soluciones** y seleccione **Agregar → nuevo artículo**. Localice la `cordova.js` de los archivos en el `lib\windows-8` Directorio.
@@ -96,13 +96,13 @@ Ya puedes construir aplicaciones Windows 8 usando el *HTML/JavaScript pista* dis
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## El proyecto de prueba
 
 Ejecute el proyecto de Visual Studio. Usted verá el cuadro de mensaje aparece:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 Eso es todo. Ahora estás listo para construir aplicaciones Windows Store con Córdoba.

@@ -145,13 +145,13 @@ SDK для мобильных платформ, которые часто пос
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Следующие вверх с `cordova emulate` команда обновляет образ эмулятора для отображения последние приложения, который теперь доступен для запуска на начальном экране:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Поочередно Подключите телефон к компьютеру и тестирование приложения непосредственно можно:
 

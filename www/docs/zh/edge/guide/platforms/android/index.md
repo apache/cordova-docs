@@ -106,25 +106,25 @@ title: Android 平臺指南
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 按**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 若要打開模擬器作為單獨的應用程式，請選擇 AVD，然後按**開始**。它推出一樣在設備上，使用其他控制項可用的硬體按鈕:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 為獲得更快的體驗，你可以使用`虛擬機器加速`以提高執行速度。 許多現代的 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前，您需要確定是否您當前的開發系統 CPU 支援一種以下的虛擬化技術：
 
@@ -142,7 +142,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 為了加快模擬程式，您需要下載並安裝一個或多個`Intel x86 原子`系統映射，以及`英特爾硬體加速執行經理 (HAXM)`.
 
@@ -150,7 +150,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 下載後，運行英特爾安裝程式時，這是你 Android SDK 在`臨時演員/英特爾/Hardware_Accelerated_Execution_Manager`中可用。 **注意**：`如果您有任何問題，安裝套裝軟體，你可以找到更多的資訊和一步一步指導檢查這` [篇文章英特爾][17].
 
@@ -223,7 +223,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 當您`run`該應用程式，您還`build`它。 您可以附加額外`--debug`， `--release`，和`--nobuild`標誌來控制它如何構建的或甚至是否重建是必需的：
 
@@ -260,14 +260,14 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 4.  `Gradle Sync`問題你可以乾脆的回答**是**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 你現在有所有的和可以從生成並運行該應用程式直接`Android 工作室`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 請參閱[Android 工作室概述][22][生成並運行從 Android 工作室][23]為更多的細節。
 

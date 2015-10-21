@@ -131,7 +131,7 @@ __Downloads__ area of
 [dev.windowsphone.com](https://dev.windowsphone.com/en-us/downloadsdk).
 You may also install more recent emulator update packages.
 
-![](img/guide/platforms/wp8/wp8_downloadSDK.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png)
 
 ## Create a New Project
 
@@ -198,19 +198,19 @@ home screen, navigate to the apps panel to launch the __HelloWorld__
 app. This shows the app launching with its splash screen followed by
 its main interface:
 
-![](img/guide/platforms/wp8/wp8_emulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png)
 
 The emulator's basic controls on the top-right of the device screen
 allow you to toggle between portrait and landscape orientation. The
 __>>__ button opens more controls that allow you to test more complex
 orientations and gestures:
 
-![](img/guide/platforms/wp8/wp8_emulator_orient.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png)
 
 These advanced controls also allow you to modify the device's
 location or to simulate sequences of movements:
 
-![](img/guide/platforms/wp8/wp8_emulator_loc.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png)
 
 ## Deploy to Device
 
@@ -243,7 +243,7 @@ project's `www` directory. Along with other tools the SDK provides,
 the control below the menu allows you to launch the app in a Windows
 Phone emulator:
 
-![](img/guide/platforms/wp8/wp8_vs.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png)
 
 Consult the [Overview](../../overview/index.html) for advice on how to use Cordova's command-line
 tools or the SDK in your workflow. The Cordova CLI relies on

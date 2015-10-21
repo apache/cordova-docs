@@ -154,13 +154,13 @@ Lanciare l'immagine di emulatore, quindi scegliere **Impostazioni** dalla scherm
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Passare al **sicurezza e Privacy → modalità di sviluppo** sezione e attivare l'opzione:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Un ulteriore insieme di utilità della riga di comando sono inclusi quando si configura la piattaforma BlackBerry 10 per il progetto. Il comando riportato di seguito, in questo caso richiamato dalla directory principale del progetto, associa una destinazione denominata *UEM* con l'indirizzo IP visualizzato sopra.
 
@@ -185,7 +185,7 @@ Per distribuire un dispositivo, assicurarsi che sia collegato al computer. Abili
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Eseguire l'utilità della riga di destinazione per associare un nome a un indirizzo IP, password dispositivo e PIN.
 

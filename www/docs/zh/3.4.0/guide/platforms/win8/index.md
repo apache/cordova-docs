@@ -63,7 +63,7 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 
 *   Microsoft 將繼續使用 `default.html` 作為預設的主頁，但大多數的 網頁程式開發人員使用 `index.html` 。 它是個好主意，這樣做，至少要匹配你有可能在其他平臺。 若要修復此問題，在**解決方案資源管理器中**重命名 `default.html` 檔到 `index.html` 。 然後按兩下 `package.appxmanifest` 檔，並將**起始頁**該值更改為 `index.html` ：
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   要包括 `cordova.js` 在專案中，按右鍵 `js` 目錄在**解決方案資源管理器**並選擇**添加 → 新專案**。 找到 `cordova.js` 檔在 `lib\windows-8` 目錄。
@@ -96,13 +96,13 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## 測試專案
 
 從 Visual Studio 中運行該專案。你會看到顯示的訊息方塊：
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 這是它。你現在準備好建立 Windows 應用商店的應用，科爾多瓦。

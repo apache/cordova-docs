@@ -89,7 +89,7 @@ Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## デバイス プロジェクトをビルドします。
 
@@ -105,6 +105,6 @@ Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 この時点でしています。

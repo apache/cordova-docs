@@ -89,7 +89,7 @@ Die folgende Beispiel-Struktur stellt eine 2.3.0 Projekt, sondern variieren je n
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Erstellen Sie das Projekt für das Gerät
 
@@ -105,6 +105,6 @@ Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werde
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 Zu diesem Zeitpunkt sind Sie fertig.

@@ -113,7 +113,7 @@ NOTE, doc said:
 
 *   **완료** 를 누르면합니다.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 일단 이클립스 창이 열립니다, 해결 되지 않은 문제를 나타내는 빨간색 **X** 나타날 수 있습니다. 그렇다면, 다음 추가 단계를 수행:
 
@@ -137,37 +137,37 @@ NOTE, doc said:
     
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 일단 오픈, 안 드 로이드 SDK 관리자는 다양 한 런타임 라이브러리를 표시 합니다.
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 **도구 → 관리 AVDs** (안 드 로이드 가상 장치)를 선택한 다음 **장치 정의** 결과 대화 상자에서 모든 항목 선택:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 보도 **AVD 생성**, 선택적으로 이름, 수정 변경 내용을 적용 하려면 **확인** 을 누릅니다.
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 **시작**을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 장치 것 만큼 출시:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 이 시점에서 사용할 수 있는 `cordova` 명령줄에서 에뮬레이터에 응용 프로그램을 배포 하려면 유틸리티:
 

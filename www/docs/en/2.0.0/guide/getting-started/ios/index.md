@@ -48,7 +48,7 @@ Setup New Project
 - Run the installer **'Cordova-2.0.0.pkg'** to completion
 - Copy the **bin** folder (either from the source, or from the .dmg) to a location on your hard drive
 
-    ![](img/guide/platforms/ios/bin_folder.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/bin_folder.png)
 
 - Launch **Terminal.app**
 - Drag the copied **bin** folder to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
@@ -58,7 +58,7 @@ Setup New Project
         <package_name> is the package name, following reverse-domain style convention
         <project_name> is the project name
         
-    ![](img/guide/platforms/ios/bin_create_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/bin_create_project.png)
 
 
 - **Locate** your new project folder that you just created
@@ -71,7 +71,7 @@ Deploy to Simulator
 - Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
 - Change the **Active SDK** in the **Scheme** drop-down menu on the toolbar to **iOS [version] Simulator**
 
-    ![](img/guide/platforms/ios/active_scheme_simulator.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/active_scheme_simulator.png)
 
 - Select the **Run** button in your project window's toolbar
 
@@ -85,7 +85,7 @@ Deploy to [Device](../../../cordova/device/device.html)
 - Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your [Device](../../../cordova/device/device.html) Name]**
     - You will need to have your device connected via USB
 
-    ![](img/guide/platforms/ios/active_scheme_device.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/active_scheme_device.png)
     
 - Select the **Run** button in your project window's toolbar
 
@@ -93,7 +93,7 @@ Results
 ----------------
 - You should see the screen below, with a pulsating green **"device is ready"** message
 
-    ![](img/guide/platforms/ios/HelloWorldStandard.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png)
     
 Problems in Xcode
 ----------------

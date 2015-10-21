@@ -68,8 +68,8 @@ title: Windows 8 플랫폼 가이드
 
 *   편집에 대 한 코드 `index.html` . 에 대 한 참조를 추가할 `cordova.js` . 이렇게 하려면 수동으로, 또는 솔루션 탐색기에서 파일을 드래그 하 여.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### 참조 추가...
 
@@ -103,7 +103,7 @@ title: Windows 8 플랫폼 가이드
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## 끝 났 어!
 

@@ -89,7 +89,7 @@ Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성이 파일을
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 장치에 대 한 프로젝트를 구축
 
@@ -105,6 +105,6 @@ Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성이 파일을
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 이 시점에서, 당신이 끝났습니다.

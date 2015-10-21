@@ -107,7 +107,7 @@ Projektom dajejo ime, in izberite **OK**.
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## Pregled strukture projekta
 
@@ -117,7 +117,7 @@ Naslednje strukturo predstavlja vzorec a 2.3.0 projekt, vendar se lahko razlikuj
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Gradite in objavljajte Emulator
 
@@ -127,7 +127,7 @@ Nato pritisnite gumb zeleno **igra** poleg spustnega menija za zagon debugging, 
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## Gradnjo projekta za napravo
 
@@ -143,7 +143,7 @@ Pred preskušanjem aplikacije v napravi, naprava mora biti registriran. Podrobno
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 Na tej točki, ste končali.
 

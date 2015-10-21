@@ -94,13 +94,13 @@ Lanciare l'immagine di emulatore, quindi scegliere **Impostazioni** dalla scherm
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Passare al **sicurezza e Privacy → modalità di sviluppo** sezione e attivare l'opzione:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Quindi, eseguire il `emulate` comando per visualizzare l'app:
 

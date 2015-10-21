@@ -38,7 +38,7 @@ title: 패 러 랠 데스크톱 구성
     
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 이러한 단계를 완료 되 면 Windows Phone SDK를 설치할 준비가 되었습니다. 자세한 내용은 Windows Phone 8 플랫폼 설명서를 참조 하십시오.

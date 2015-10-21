@@ -110,7 +110,7 @@ Windows 7 を道の環境を変更: する
 
 *   **終了**キーを押します。.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 

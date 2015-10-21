@@ -63,7 +63,7 @@ title: Руководство по Windows 8 платформы
 
 *   Microsoft продолжает использовать `default.html` как Главная страница по умолчанию, но большинство веб-разработчиков сайта `index.html` . Это хорошая идея, чтобы сделать это, по крайней мере соответствовать другие платформы, скорее всего, вы работаете на. Чтобы исправить это, в **Обозреватель** переименовать `default.html` файл `index.html` . Затем дважды щелкните `package.appxmanifest` файл и измените значение, **Стартовая страница** `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   Включить `cordova.js` в проекте, щелкните правой кнопкой мыши `js` в **Обозревателе** решений и выберите **пункт Добавить → новый**. Найдите `cordova.js` файл в `lib\windows-8` каталог.
@@ -96,13 +96,13 @@ title: Руководство по Windows 8 платформы
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## Тестирование проекта
 
 Запуск проекта из Visual Studio. Вы увидите окно сообщения появляются:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 Вот это. Теперь вы готовы строить приложения Магазина Windows с Кордова.

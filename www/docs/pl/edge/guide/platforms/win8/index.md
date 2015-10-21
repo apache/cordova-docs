@@ -96,7 +96,7 @@ Zainstalować żadnej wersji [Visual Studio][2] dopasowania w wersji, którą wy
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 10 Windows Instalator programu Visual Studio ma możliwość zainstalowania narzędzia do tworzenia aplikacji Windows uniwersalne. Należy się upewnić, że opcja ta jest zaznaczona podczas instalacji wymagane zestawu SDK.
 
@@ -189,25 +189,25 @@ Gdy budujesz Cordova aplikacji, jak opisano powyżej, można go otworzyć z prog
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Zawiera składnik `CordovaApp` w roztworze, i jego katalogu `www` zawiera kod źródłowy opartych na sieci web, w tym Strona `index.html` :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Sterowanie poniżej menu główne programu Visual Studio pozwala przetestować lub rozmieszczanie aplikacji:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Z **Komputera lokalnego** wybrane Naciśnij zieloną strzałkę, aby zainstalować aplikację na tej samej maszynie uruchamianie programu Visual Studio. Raz to zrobisz, aplikacji pojawia się w Windows 8 app oferty:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Za każdym razem możesz przebudować aplikację, wersja dostępna w interfejsie jest odświeżany.
 
@@ -215,19 +215,19 @@ Dostępne w aplikacji oferty, przytrzymując naciśnięty klawisz **CTRL** podcz
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Należy zauważyć, że po otwarciu aplikacji w środowisku wirtualnej maszyny, możesz potrzebować wobec trzaskać w rogach lub wzdłuż boków od systemu windows do przełączania aplikacji lub uzyskać dostęp do dodatkowych funkcji:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Na przemian wybierz opcję rozmieszczania **symulator** do wyświetlania aplikacji tak, jakby to były uruchomione na urządzenia typu tablet:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 W odróżnieniu od pulpit rozwinięcie ta opcja pozwala symulować orientację tabletu, lokalizacja i zmieniać jego ustawienia sieciowe.
 

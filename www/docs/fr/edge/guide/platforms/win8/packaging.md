@@ -37,7 +37,7 @@ Dans les projets Windows, détails d'identité sont conservées dans un fichier 
 
 *Name* et *Version* peuvent être programmée de **config.xml**. *Publisher* peut être fourni comme paramètre de build ou peut être défini sur le fichier **build.json** .
 
-![](img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
 Un certificat de signature peut être fourni soit CLI ou via le fichier de build.json. Le certificat associés est des drapeaux de la CLI :
 
@@ -86,7 +86,7 @@ Pour mieux comprendre ce que makecert fait, voici une brève explication de ce q
 
 Après l'exécution de makecert pour la première fois, entrez le mot de passe privé sur l'écran qui apparaît :
 
-![](img/guide/platforms/win8/createprivatekeywindow.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/createprivatekeywindow.png)
 
 Une fois le fichier pvk et cer est créé, nous devons créer un fichier pfx de ces certificats. Un fichier pfx (Format d'échange de personnel) contient une variété d'informations cryptographiques, tels que les certificats, les certificats d'autorité racine, les chaînes de certificats et les clés privées. Pour empaqueter les certs, nous allons utiliser l'outil appelé [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). Cet outil est fourni avec le SDK Windows et peut être trouvé sous `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` ou`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 

@@ -106,7 +106,7 @@ Exécutez le script :
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. Passer en revue la structure du projet
 
@@ -118,7 +118,7 @@ Exécutez le script :
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. Créer et déployer dans l'émulateur
 
@@ -128,7 +128,7 @@ Exécutez le script :
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. Générez votre projet pour le dispositif
 
@@ -144,7 +144,7 @@ Afin de tester votre application sur un périphérique, le périphérique doit �
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fait !
 

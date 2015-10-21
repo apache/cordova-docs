@@ -47,7 +47,7 @@ In questa sezione viene illustrato come configurare VMWare Fusion su Mac in modo
         vhv.enable = "TRUE"
         
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 Dopo aver completato questi passaggi, allora siete pronti ad installare il SDK di Windows Phone. Vedere la guida di piattaforma Windows Phone 8 per dettagli.

@@ -54,11 +54,11 @@ Getting Started with iOS
 - **New** を選択し、 **New Project...** を選択します
 - テンプレートのリストから **Cordova-based Application** を選択します
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/XCode4-templates.png)
 - **Next** ボタンをクリックします
 - "Product Name" と "Company Identifier" を記入します
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/xcode4-name_your_app.png)
 
 - **重要！** "Use Automatic Reference Counting" のチェックボックスにチェックを入れないでください 
 - **Next** ボタンをクリックします
@@ -70,20 +70,20 @@ Getting Started with iOS
 
     b. これを修正するため、 **www** ディレクトリへのリファレンスをプロジェクトに追加する必要があります。 
 
-    ![](img/guide/getting-started/ios/index-not-found.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/index-not-found.png)
 
 - 左側のサイドバーにある Project Navigator の中のプロジェクトアイコンの上で **右クリック** し、 **Show in Finder** を選択します
 - **フォルダー内** に、 **www** ディレクトリが確認できるはずです
 
-    ![](img/guide/getting-started/ios/www-folder.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/www-folder.png)
 
 - **重要！** **www** フォルダーを Xcode 4 に **ドラッグ** します。 アプリフォルダーには **ドラッグしないでください** 。 **Xcode 4** にドラッグしてください。下の HelloWorld プロジェクトの例だと、 **赤い四角の枠で囲ってある部分** にドラッグアンドドロップします。
 
-    ![](img/guide/getting-started/ios/project.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/project.jpg)
 - 正確に **"www"** フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます 
 - **Create folder references for any added folders** のラジオボタンを選択します
 
-    ![](img/guide/getting-started/ios/create-folder-reference.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/create-folder-reference.png)
 
 - **Finish** ボタンをクリックします
 
@@ -113,7 +113,7 @@ Getting Started with iOS
 - ツールバーにあるドロップダウンメニューから Active SDK を **[DEVICENAME]** に変更します。ここで、 [DEVICENAME] はデプロイしたいデバイスの名前です
 - プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/HelloWorldiPhone4.png)
 
 
 終了

@@ -105,25 +105,25 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Нажмите **Create AVD**, при необходимости изменяя имя, затем нажмите **ОК**, чтобы принять изменения:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 После этого AVD появляется в списке **Android Virtual Devices**:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Чтобы открыть эмулятор как отдельное приложение, выберите AVD и нажать кнопку **Start**. Android запускается, также как он запускается на устройстве, с дополнительные элементы управления, доступными для аппаратных кнопок:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 Для более быстрый восприятия можно использовать `Ускорение виртуальной машины` для повышения скорости выполнения. Многие современные процессоры предоставляют расширения для выполнения виртуальных машин более эффективно. Прежде чем пытаться использовать этот тип ускорения, необходимо определить, поддерживает ли процессор вашей текущей системы развития, одну из следующих технологий виртуализации:
 
@@ -141,7 +141,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 Для того, чтобы ускорить эмулятор, вам нужно скачать и установить один или несколько образов системы `Intel x86 Atom`, а также `Менеджер выполнения аппаратного ускорения Intel (HAXM)`.
 
@@ -149,7 +149,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 После загрузки, запустите инсталлятор Intel, который доступен в вашем Android SDK в каталоге `extras/intel/Hardware_Accelerated_Execution_Manager`. **Примечание**: `Если у вас есть проблемы с установкой пакета, вы можете найти более подробную информацию и пошаговое руководство в этой` [статье Intel][17].
 
@@ -221,7 +221,7 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 Когда вы запускаете приложение с помощью `run`, вы также собираете его с помощью `build` автоматически. Вы можете добавить дополнительные флаги `--debug`, `--release`, и `--nobuild` для управления как приложение будет построен, или даже когда перепостроение необходимо:
 
@@ -257,14 +257,14 @@ Cordova поддерживает Android 4.0.x (начиная с уровня A
 
 4.  Для вопроса `Gradle Sync` можно просто ответить **Yes**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 Все готово теперь и можно построить и запустить приложение непосредственно из `Android студии`.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 Смотрите [Введение в Android Studio][22] и [Построение и запуск из Android студии][23] для более подробной информации.
 

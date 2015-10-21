@@ -107,7 +107,7 @@ Dar al proyecto un nombre y seleccione **OK**.
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## Revisar la estructura del proyecto
 
@@ -117,7 +117,7 @@ La siguiente muestra estructura representa un 2.3.0 del proyecto, pero puede var
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Construir y desplegar en emulador
 
@@ -127,7 +127,7 @@ Luego presione el botón verde **jugar** al lado de la lista desplegable para em
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## Genere el proyecto para el dispositivo
 
@@ -143,7 +143,7 @@ Antes de probar la aplicación en un dispositivo, el dispositivo debe estar regi
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 En este punto, ya está.
 

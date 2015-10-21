@@ -98,7 +98,7 @@ title: iOS 平臺指南
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 部署到模擬程式
 
@@ -118,8 +118,8 @@ title: iOS 平臺指南
     
     只有一個模擬程式可能會運行一次，所以如果你想要在不同的模擬器中測試應用程式，您需要退出的模擬程式應用程式和運行一個不同的目標在 Xcode 的範圍內。
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許可以從**Xcode → 首選項 → 下載 → 元件**面板。
 
@@ -190,7 +190,7 @@ Xcode 捆綁與最新版本的 iPhone 和 iPad 的模擬器。 舊版本也許�
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 這是一個新的 Xcode 安裝的預設設置，但可以設置不同的升級之後從 Xcode 舊版本。
 

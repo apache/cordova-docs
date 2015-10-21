@@ -51,11 +51,11 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 - Open Visual Studio 2012 and choose **New Project**.
 - Select **Installed - Template - Other Languages - JavaScript - Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like. We're using **CordovaWin8Foo** in this guide.
 
-    ![](img/guide/platforms/win8/wsnewproject.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png)
 
 - Microsoft continues to use **default.html** as the default page for use in websites, whereas most "open web" developers use **index.html**. (Plus it's likely that in the other platform variants of your project you are using **index.html** as the name of your default page.) To fix this, in Solution Explorer rename the **default.html** file to **index.html**. Then double-click the **package.appxmanifest** file and change the **Start page** value to **index.html**. 
 
-	![](img/guide/platforms/win8/wschangemanifest.png)
+	![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
 
 - To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **corvoda.js** file in the **lib\windows-8** folder that we called out previously. 
 
@@ -99,7 +99,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 
 - Run the project from Visual Studio. You'll see the message box appear.
 
-	![](img/guide/platforms/win8/wsalert.png)
+	![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
 
 Done!
 -----

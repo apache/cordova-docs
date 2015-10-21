@@ -95,7 +95,7 @@ Ios プラットフォームをプロジェクトに追加すると、Xcode の�
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## エミュレーターに展開します。
 
@@ -115,8 +115,8 @@ Ios プラットフォームをプロジェクトに追加すると、Xcode の�
     
     1 つだけのエミュレーターでは一度に実行可能性がありますので、別のエミュレーターでアプリケーションをテストする場合は、エミュレーターのアプリケーションを終了し、Xcode の内で別のターゲットを実行する必要があります。
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode は、iPhone および iPad の最新バージョン用のエミュレーターが付属しています。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
@@ -187,7 +187,7 @@ Xcode の警告`invokeString`方法についてカスタム URL からアプリ�
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 これは新しい Xcode のインストールの既定の設定が異なる Xcode の旧バージョンからのアップグレード、次を設定可能性があります。
 

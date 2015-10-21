@@ -37,7 +37,7 @@ Windows 프로젝트에서 신원 정보는 package.appxmanifest 라는 파일�
 
 *Name* 및 *Version* **config.xml**에서 설정할 수 있습니다. *Publisher* 빌드 매개 변수로 제공 될 수 있다 또는 **build.json** 파일에 설정할 수 있습니다.
 
-![](img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
 서명 인증서 중 CLI에서 또는 build.json 파일을 통해 제공할 수 있습니다. 인증서 관련 CLI 플래그:
 
@@ -86,7 +86,7 @@ Windows 프로젝트에서 신원 정보는 package.appxmanifest 라는 파일�
 
 처음으로 makecert를 실행 후 팝업 화면에 개인 암호 입력:
 
-![](img/guide/platforms/win8/createprivatekeywindow.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/createprivatekeywindow.png)
 
 Pvk 파일과 cer 파일 생성 되 면, 우리가 이러한 인증서에서 pfx 파일을 만들 필요가. Pfx (개인 교환 형식) 파일에는 인증서, 루트 인증 기관 인증서, 인증서 체인 및 개인 키 암호화 정보를 다양 한을 포함 되어 있습니다. 패키지는 인증서, 사용 합니다는 도구 라는 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx). 이 도구는 Windows SDK와 함께 제공 하 고에서 찾을 수 있습니다 `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` 또는`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 

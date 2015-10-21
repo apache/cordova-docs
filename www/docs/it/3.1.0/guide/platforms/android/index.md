@@ -107,7 +107,7 @@ Una volta creato, ecco come utilizzare il SDK per modificarlo:
 
 *   Premere **fine**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:
 
@@ -131,37 +131,37 @@ Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per i
     
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Una volta aperto, l'Android SDK Manager visualizza varie librerie di runtime:
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Scegliere **Strumenti → gestione AVDs** (dispositivi Android virtuale), quindi scegliere qualsiasi elemento da **Definizioni di dispositivo** nella finestra di dialogo risultante:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Stampa **Creare AVD**, eventualmente modificando il nome, quindi premere **OK** per accettare le modifiche:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 L'AVD poi appare nell'elenco dei **Dispositivi Android virtuale** :
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Per aprire l'emulatore come applicazione separata, selezionare l'AVD e premere **Start**. Si lancia proprio come farebbe sul dispositivo, con controlli aggiuntivi disponibili per i pulsanti hardware:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 A questo punto è possibile utilizzare il `cordova` utility per distribuire l'applicazione nell'emulatore dalla riga di comando:
 

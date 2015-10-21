@@ -107,7 +107,7 @@ Una vez creado, aquí es cómo utilizar el SDK para modificarlo:
 
 *   Pulse **Finalizar**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
 
@@ -131,37 +131,37 @@ Puede utilizar la `cordova` utilidad para ejecutar una aplicación en un emulado
     
     ![][5]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de ejecución:
 
 ![][6]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 En este punto se puede utilizar la `cordova` utilidad para desplegar la aplicación en el emulador desde la línea de comandos:
 

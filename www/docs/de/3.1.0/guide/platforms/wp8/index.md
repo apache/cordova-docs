@@ -106,7 +106,7 @@ Führen Sie das Skript:
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. Überprüfung der Projektstruktur
 
@@ -118,7 +118,7 @@ Führen Sie das Skript:
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. Erstellen und Bereitstellen von Emulator
 
@@ -128,7 +128,7 @@ Führen Sie das Skript:
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. Erstellen Sie das Projekt für das Gerät
 
@@ -144,7 +144,7 @@ Um die Anwendung auf einem [Gerät](../../../cordova/device/device.html) zu test
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fertig!
 

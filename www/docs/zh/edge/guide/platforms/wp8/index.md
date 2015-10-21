@@ -95,7 +95,7 @@ title: Windows Phone 8 平臺指南
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 創建一個新專案
 
@@ -155,19 +155,19 @@ title: Windows Phone 8 平臺指南
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 設備的螢幕頂部右邊模擬程式的基本控制項允許您以縱向和橫向方向之間切換。 **>**按鈕將打開更多的控制項，使您可以測試更複雜的取向和手勢：
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 這些先進的控制項還允許您修改該設備的位置或類比的運動序列：
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## 將部署到設備
 
@@ -193,6 +193,6 @@ title: Windows Phone 8 平臺指南
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 如何在您的工作流中使用科爾多瓦的命令列工具或 SDK 的建議諮詢的概述。 科爾多瓦 CLI 依賴于跨平臺原始程式碼通常會覆蓋使用 SDK 的特定于平臺的檔。 如果你想要在 SDK 內工作，使用較低級別外殼工具作為 CLI 的替代方法。

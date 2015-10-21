@@ -112,7 +112,7 @@ project, and it must be set as content.
 The following sample structure represents a 2.3.0 project, but may
 vary depending on installed version:
 
-![](img/guide/platforms/wp8/projectStructure.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png)
 
 ## Build the Project for the Device
 
@@ -129,6 +129,6 @@ the basic steps:
 - Press the green __play__ button next to the main drop-down menu to
   start debugging, or else type __F5__.
 
-![](img/guide/platforms/wp7/wpd.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 At this point, you're done.

@@ -50,11 +50,11 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -82,15 +82,15 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
     
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 重新生成專案，在**專案資源管理器**視圖中按右鍵並選擇**生成專案**：
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 如*hello.wgt*的小部件包檔應在專案的根目錄中生成。
 
@@ -100,7 +100,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## 將部署到設備
 
@@ -114,5 +114,5 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
     
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

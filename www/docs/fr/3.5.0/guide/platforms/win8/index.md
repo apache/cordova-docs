@@ -75,7 +75,7 @@ Installer *l'ultime*, *Premium*ou *Professional* 2013 éditions de [Visual Studi
 
 ![][8]
 
- [8]: img/guide/platforms/win8/win8_installSDK.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 ## Créez un nouveau projet
 
@@ -121,25 +121,25 @@ Une fois que vous générez une application Cordova comme décrit ci-dessus, vou
 
 ![][9]
 
- [9]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Le `CordovaApp` composant affiche au sein de la solution et ses `www` répertoire contient le code source sur le web, y compris la `index.html` page d'accueil :
 
 ![][10]
 
- [10]: img/guide/platforms/win8/win8_sdk.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Les commandes sous le menu principal de Visual Studio vous permettent de tester ou déployer l'application :
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Avec l' **Ordinateur Local** est sélectionné, appuyez sur la flèche verte pour installer l'application sur le même ordinateur qui exécute Visual Studio. Une fois vous le faites, le $ $ etAPP apparaît dans des listes de Windows 8 app :
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Chaque fois que vous reconstruisez l'application, la version disponible dans l'interface est régénérée.
 
@@ -147,19 +147,19 @@ Une fois disponibles dans les listes de l'app, maintenant la touche **CTRL** enf
 
 ![][13]
 
- [13]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Notez que si vous ouvrez l'application dans un environnement de machine virtuelle, vous devrez peut-être cliquer dans les coins ou sur les côtés des fenêtres pour basculer des applications ou accéder à des fonctionnalités supplémentaires :
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_run.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Vous pouvez également choisir l'option déploiement sur **simulateur** pour visualiser l'application comme s'il s'exécutait sur un périphérique de tablette :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_sim.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 À la différence de déploiement de bureau, cette option vous permet de simuler l'orientation de la tablette, emplacement et de modifier ses paramètres réseau.
 

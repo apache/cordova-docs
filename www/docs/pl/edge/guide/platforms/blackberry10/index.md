@@ -154,13 +154,13 @@ Uruchomić emulator obrazu, a następnie wybierz **Ustawienia** na ekranie:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Przejdź do **bezpieczeństwa i prywatności → tryb opracowania** sekcji i włączyć opcję:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Dodatkowy zestaw narzędzi wiersza poleceń są uwzględniane podczas konfigurowania platformy BlackBerry 10 dla projektu. Następujące polecenie, w tym przypadku wywoływane z katalogu najwyższego poziomu projektu kojarzy cel o nazwie *emu* o adresie IP wyświetlane powyżej.
 
@@ -185,7 +185,7 @@ Aby wdrożyć do urządzenia, upewnij się, że jest on podłączony do komputer
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Należy uruchomić narzędzie wiersza polecenia miejsce docelowe powiązać nazwę z adresu IP, hasło urządzenia i PIN.
 

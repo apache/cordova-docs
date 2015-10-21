@@ -68,8 +68,8 @@ Vous pouvez déjà créer des applications de Windows 8 en utilisant le *HTML/Ja
 
 *   Modifiez le code pour `index.html` . Ajoutez une référence à `cordova.js` . Vous pouvez faire cela manuellement ou en faisant glisser le fichier depuis l'Explorateur de solutions.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### Ajout d'une référence...
 
@@ -103,7 +103,7 @@ Vous pouvez déjà créer des applications de Windows 8 en utilisant le *HTML/Ja
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Fait !
 

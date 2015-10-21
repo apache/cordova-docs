@@ -95,13 +95,13 @@ Inicie la imagen del emulador, luego elija la **configuración** de la pantalla 
 
 ![][5]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Desplácese hasta la **→ seguridad y privacidad, modo de desarrollo** sección y activar la opción obtener la dirección IP:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Un conjunto de utilidades de línea de comandos se incluyen cuando se configura la plataforma BlackBerry 10 para su proyecto. El siguiente comando, en este caso ha sido invocado desde el directorio de alto nivel del proyecto, asocia un objetivo llamado *la UEM* con la dirección IP que aparece arriba.
 
@@ -124,7 +124,7 @@ Para desplegar a un dispositivo, asegúrese de que esté conectado a su computad
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_pin.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Ejecute la utilidad de línea de comandos de objetivo para asociar un nombre a una dirección IP, contraseña del dispositivo y PIN.
 

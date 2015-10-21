@@ -106,25 +106,25 @@ Windows에서 `경로` 환경 수정:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 보도 **AVD 생성**, 선택적으로 이름, 수정 변경 내용을 적용 하려면 **확인** 을 누릅니다.
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 별도 응용 프로그램으로 에뮬레이터를 열려면는 AVD를 선택 하 고 **시작**을 누릅니다. 하드웨어 단추에 대 한 사용할 수 있는 추가 컨트롤 장치 것 만큼 출시:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 더 빠른 경험을 위해 실행 속도 개선 하기 위해 `가상 컴퓨터 가속` 을 사용할 수 있습니다. 많은 현대 Cpu는 가상 컴퓨터를 보다 효율적으로 실행 하려면 확장을 제공 합니다. 가속의이 유형을 사용 하려고 시도 하기 전에 현재 개발 시스템의 CPU 하나를 다음과 같은 가상화 기술을 지원 하는지 확인 해야 합니다.
 
@@ -142,7 +142,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 에뮬레이터를 가속화 해야 다운로드 하 고 설치 `인텔 하드웨어 가속 실행 관리자 (HAXM)` 로 서 하나 이상의 `인텔 x 86 원자` 시스템 이미지.
 
@@ -150,7 +150,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 다운로드 후, `엑스트라/인텔/Hardware_Accelerated_Execution_Manager`에서 안 드 로이드 SDK에서 사용할 수 있는 인텔 설치 관리자를 실행 합니다. **참고**:`패키지 설치에 어떤 문제가 있는 경우 자세한 정보 및 단계별 지침 확인 찾을 수 있습니다` [인텔 문서][17].
 
@@ -223,7 +223,7 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 ![][18]
 
- [18]: img/guide/platforms/android/emulator2x.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png
 
 때 `실행` 애플 리 케이 션, 당신은 또한 `빌드` 그것. 추가 추가 할 수 있습니다 `--debug`, `--release`, 그리고 어떻게 그것은 내장, 또는 심지어 여부 재건은 필요한 제어 `--nobuild` 플래그:
 
@@ -260,14 +260,14 @@ AVD 다음 **안 드 로이드 가상 장치** 목록에 나타납니다.
 
 4.  `Gradle 동기화` 질문에 대답할 수 있는 단순히 **네**.
 
- [19]: img/guide/platforms/android/asdk_import_project.png
- [20]: img/guide/platforms/android/asdk_import_select_location.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_project.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_select_location.png
 
 당신이 모두 지금 설정 빌드 수 및 `안 드 로이드 스튜디오` 에서 직접 응용 프로그램을 실행.
 
 ![][21]
 
- [21]: img/guide/platforms/android/asdk_import_done.png
+ [21]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_import_done.png
 
 [안 드 로이드 스튜디오 개요][22] 를 참조 하 고 [빌드 및 실행 안 드 로이드 스튜디오에서][23] 대 한 자세한 내용은.
 

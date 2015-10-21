@@ -50,11 +50,11 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -82,15 +82,15 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
     
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 프로젝트를 다시 작성 하려면 **프로젝트 탐색기** 보기에서 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 빌드**를 선택 합니다.
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 프로젝트의 루트 디렉터리에 있는 *hello.wgt* 와 같은 위젯 패키지 [파일](../../../cordova/file/fileobj/fileobj.html) 생성 해야 합니다.
 
@@ -100,7 +100,7 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## 장치에 배포
 
@@ -114,5 +114,5 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
     
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

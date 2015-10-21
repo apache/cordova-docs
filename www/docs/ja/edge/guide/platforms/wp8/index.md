@@ -95,7 +95,7 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 ![][12]
 
- [12]: img/guide/platforms/wp8/wp8_downloadSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_downloadSDK.png
 
 ## 新しいプロジェクトを作成します。
 
@@ -155,19 +155,19 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 ![][13]
 
- [13]: img/guide/platforms/wp8/wp8_emulator.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator.png
 
 デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 **>**ボタンより複雑な方向とジェスチャをテストすることができますより多くのコントロールが表示されます。
 
 ![][14]
 
- [14]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_orient.png
 
 これらの高度なコントロールを使用または動きのシーケンスをシミュレートするデバイスの場所を変更するしたりすることもできます。
 
 ![][15]
 
- [15]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## デバイスへの配置します。
 
@@ -193,6 +193,6 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
 ![][17]
 
- [17]: img/guide/platforms/wp8/wp8_vs.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/wp8/wp8_vs.png
 
 コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスは、「概要」を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK 内で作業する場合、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。

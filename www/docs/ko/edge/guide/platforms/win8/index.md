@@ -96,7 +96,7 @@ SDK와 함께에서 코르도바의 윈도우 중심으로 셸 도구를 사용 
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 윈도우 10, Visual Studio 설치 관리자 범용 윈도우 애플 리 케이 션을 구축 하는 도구를 설치 하려면 옵션이 있다. 이 옵션을 선택 설치할 때 필요한 SDK를 설치 해야 합니다.
 
@@ -189,25 +189,25 @@ Windows Phone 패키지 배포:
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 `CordovaApp` 구성 요소는 솔루션 내에서 표시 하 고 그 `www` 디렉토리는 `index.html` 홈 페이지를 포함 하 여 웹 기반 소스 코드를 포함:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Visual Studio의 주 메뉴 아래 컨트롤을 사용 하 여 테스트 또는 응용 프로그램을 배포할 수 있습니다.
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 **로컬 컴퓨터** 선택, Visual Studio를 실행 하는 동일한 컴퓨터에 응용 프로그램을 설치 하려면 녹색 화살표를 누릅니다. 일단 당신이 이렇게, 응용 프로그램 윈도우 8의 응용 프로그램 목록에 나타납니다.
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 응용 프로그램을 다시 만들 때마다 인터페이스에서 사용할 수 있는 버전을 새로 고칩니다.
 
@@ -215,19 +215,19 @@ Visual Studio의 주 메뉴 아래 컨트롤을 사용 하 여 테스트 또는 
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 가상 컴퓨터 환경 내에서 응용 프로그램을 열면 당신은 모서리 또는 애플 리 케이 션을 전환 또는 추가 기능에 액세스 하는 windows의 측면을 따라 클릭 해야 할 수도 있습니다 note:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 또는, **시뮬레이터** 배포 옵션 마치 태블릿 장치에서 실행 되는 응용 프로그램을 선택:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 데스크톱 배포와 달리이 옵션을 시뮬레이션 하는 태블릿의 방향, 위치, 네트워크 설정을 다를 수 있습니다.
 

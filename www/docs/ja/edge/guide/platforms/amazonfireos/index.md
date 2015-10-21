@@ -177,7 +177,7 @@ Windows の PATH 環境を変更: する
 
 *   **終了**キーを押します。.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 

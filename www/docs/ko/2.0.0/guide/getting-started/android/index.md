@@ -45,15 +45,15 @@ Getting Started with Android
 ---------------------
 
 - 이클립스를 실행하고 **New Project**메뉴를 선택한다.
-    ![](img/guide/getting-started/android/step_1.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_1.jpg)
 - 새로운 어플리케이션을 지정한다.
-    ![](img/guide/getting-started/android/step_2.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_2.jpg)
 - 어플리케이션 이름을 지정한다. 이는 프로젝트 이름과 패키지 네임스페이스로 사용된다.
-    ![](img/guide/getting-started/android/step_3.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_3.jpg)
 - 그림대로 선택한다.
-    ![](img/guide/getting-started/android/step_4.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_4.jpg)
 - Blank Activity 를 생선한다.
-    ![](img/guide/getting-started/android/step_5.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/step_5.jpg)
 - Activity가 아무것도 상속받지 않았는지 확인한다.
 
 - 프로젝트의 루트 디렉토리에서 두 개의 디렉토리를 생성한다.
@@ -64,12 +64,12 @@ Getting Started with Android
 - 다운받은 Cordova에서 **xml** 폴더를 **/res** 에 복사한다.
 
 - **cordova-2.0.0.jar** 를 프로젝트 Build Path 에 추가한다. 우선 /libs 디렉토리르 우클릭해서 **Build Paths/ &gt; Configure Build Path...** 로 메뉴로 이동한다. Libraries 탭을 누르고 **cordova-2.0.0.jar** 를 프로젝트에 추가한다. 바로 추가되지 않는다면 f5 를 눌러서 리프레쉬한다.
-![](img/guide/getting-started/android/buildPath.jpg)
+![]({{ site.baseurl }}/static/img/guide/getting-started/android/buildPath.jpg)
 
 - **src** 폴더의 메인 Java 파일을 수정한다.
     - **import org.apache.cordova.*;** 를 추가한다.
     - 상속받는 class 를 **Activity** 에서 **DroidGap** 로 바꾼다.
-    - **setContentView()** 라인을 **super.loadUrl("file:///android_asset/www/index.html");** 로 바꾼다.    ![](img/guide/getting-started/android/javaSrc.jpg)
+    - **setContentView()** 라인을 **super.loadUrl("file:///android_asset/www/index.html");** 로 바꾼다.    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/javaSrc.jpg)
 
 - AndroidManifest.xml 를 우클릭하고 **Open With &gt; Text Editor** 를 선택해서 파일을 연다.
 - 아래의 권한설정값을 **&lt;uses-sdk.../&gt;** 와 **&lt;application.../&gt;** 태그 사이에 넣는다.
@@ -102,7 +102,7 @@ Getting Started with Android
 
 - 이제 AndroidManifest.xml 파일은 아래와 같이 보일 것이다.
 
-    ![](img/guide/getting-started/android/manifest.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/manifest.png)
 
 
 4. [Hello World](../webos/index.html)

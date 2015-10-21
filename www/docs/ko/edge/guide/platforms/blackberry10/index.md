@@ -154,13 +154,13 @@ Mac 및 Linux:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 이동 하는 **보안 및 개인 정보 → 개발 모드** 섹션 및 옵션을 사용:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 프로젝트에 대 한 블랙베리 10 플랫폼을 설정 하면 명령줄 유틸리티의 추가적인 세트 포함 됩니다. 이 경우 프로젝트 최상위 디렉토리에서 호출 다음 명령을 위에 표시 된 IP 주소와 *뮤* 라는 대상을 연결 합니다.
 
@@ -185,7 +185,7 @@ Mac 및 Linux:
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 IP 주소, 장치 암호 및 핀 이름을 연결할 대상 명령줄 유틸리티를 실행 합니다.
 

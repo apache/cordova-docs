@@ -89,7 +89,7 @@ Studio 2012\Templates\ProjectTemplates\` 目錄。
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 為該設備生成專案
 
@@ -105,6 +105,6 @@ Studio 2012\Templates\ProjectTemplates\` 目錄。
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 此時，你完了。

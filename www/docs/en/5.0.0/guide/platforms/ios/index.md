@@ -115,7 +115,7 @@ Once ios platform is added to your project, you can open it from
 within Xcode. Double-click to open the `hello/platforms/ios/hello.xcodeproj`
 file. The screen should look like this:
 
-![](img/guide/platforms/ios/helloworld_project.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
 
 ## Deploy to Emulator
 
@@ -128,14 +128,14 @@ To preview the app in the iOS emulator:
 3. Select the intended device from the toolbar's __Scheme__ menu, such
    as the iPhone 6.0 Simulator as highlighted here:
 
-   ![](img/guide/platforms/ios/select_xcode_scheme.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png)
 
 4. Press the __Run__ button that appears in the same toolbar to the
    left of the __Scheme__. That builds, deploys and runs the
    application in the emulator. A separate emulator application opens
    to display the app:
 
-   ![](img/guide/platforms/ios/HelloWorldStandard.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png)
 
    Only one emulator may run at a time, so if you want to test the app
    in a different emulator, you need to quit the emulator application
@@ -235,7 +235,7 @@ via Xcode preferences:
 2. In the __Derived Data__ section, press the __Advanced__ button and
    select __Unique__ as the __Build Location__ as shown here:
 
-   ![](img/guide/platforms/ios/xcode_build_location.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png)
 
 This is the default setting for a new Xcode install, but it may be set
 differently following an upgrade from an older version of Xcode.

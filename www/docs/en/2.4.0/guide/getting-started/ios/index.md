@@ -86,7 +86,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
 3. In Finder, navigate to the cordova-ios directory from the downloaded and extracted Cordova code and expand it if necessary.   Highlight the bin directory as shown:
 
-  ![](img/guide/platforms/ios/bin_dir_listing.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/ios/bin_dir_listing.png)
 
   **Note:** This screen capture was from the Cordova-2.3.0 download, your listing will vary based on the actual Cordova version installed.
 
@@ -114,7 +114,7 @@ Determine where on your system you will locate the Xcode project files for your 
   In the terminal app with bin as the current directory, enter the 3 pieces of information via the following command:
      `./create ~/Documents/CordovaXY/HelloWorld org.apache.cordova.HelloWorld HelloWorld`
 
-  ![](img/guide/platforms/ios/create.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/ios/create.png)
 
   3. Fix Common Problems
 
@@ -152,13 +152,13 @@ Determine where on your system you will locate the Xcode project files for your 
 
   Your screen should look similar to:
 
-![](img/guide/platforms/ios/helloworld_project.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png)
   **Note:** this screen capture shows a project that was created with the name as HelloWorld23.    
 ### Deploy to the Simulator
 
   1. In the upper left hand corner of Xcode, click on the Scheme drop down and select the project name, HelloWorld, as the target.   
   2. Click the device section and select an iOS Simulator such as iPhone 6.0 Simulator as shown:   
-![](img/guide/platforms/ios/select_xcode_scheme.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png)
 
   3. Click the ￼**Run** button in your project window's toolbar to build, deploy and run the application in the simulator.  
 
@@ -188,7 +188,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
   The running HelloWorld app is shown below.  The [Device](../../../cordova/device/device.html) is Ready line should be slowly pulsating.
 
-  ![](img/guide/platforms/ios/HelloWorldStandard.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png)
 
 ## Common Problems
 
@@ -235,7 +235,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
   1.  Within the Xcode menus select **Xcode>Preferences>Locations**.  
   2. In the Derived Data section click the Advanced button and select Unique as the Build Location as shown:  
-![](img/guide/platforms/ios/xcode_build_location.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png)
 
   This is the default setting for a new Xcode install but it may have been set differently if you upgraded from an older version of Xcode.
 

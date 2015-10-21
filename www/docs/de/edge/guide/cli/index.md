@@ -176,13 +176,13 @@ Einige mobilen Plattformen emulieren ein bestimmtes Gerät wie das iPhone für i
 
 ![][4]
 
- [4]: img/guide/cli/android_emulate_init.png
+ [4]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Folgende oben mit den `cordova emulate` Befehl aktualisiert das Emulator-Bild, um die neueste Anwendung angezeigt, die jetzt für den Start aus dem home-Bildschirm vorhanden ist:
 
 ![][5]
 
- [5]: img/guide/cli/android_emulate_install.png
+ [5]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativ können Sie schließen den Hörer an den Computer und testen die app direkt:
 

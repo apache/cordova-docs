@@ -176,7 +176,7 @@ title: Руководство для платформы Amazon Fire OS
 
 *   Нажмите кнопку **Готово**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться, указывая на нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 

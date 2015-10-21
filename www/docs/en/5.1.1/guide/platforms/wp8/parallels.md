@@ -37,13 +37,13 @@ Desktop. After installing Windows, follow these steps:
    Specify at least 2GB of memory, even if it falls outside the
    recommended range:
 
-   ![](img/guide/platforms/wp8/parallel_cpu_opts.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png)
 
 1. To be able to run the device emulator image within the Windows 8
    virtual machine, choose the __Optimizations__ options and enable
    __Nested Virtualization__.
 
-   ![](img/guide/platforms/wp8/parallel_optimize_opts.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png)
 
 Once you complete these steps, you are ready to install the Windows
 Phone SDK.  See the [Windows Phone 8 Platform Guide](index.html) for details.

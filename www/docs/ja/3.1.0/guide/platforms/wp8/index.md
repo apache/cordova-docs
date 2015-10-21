@@ -106,7 +106,7 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. プロジェクトの構造を確認します。
 
@@ -118,7 +118,7 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. ビルドし、エミュレーターへの展開
 
@@ -128,7 +128,7 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. プロジェクトをビルドし、デバイスの
 
@@ -144,7 +144,7 @@ title: Windows Phone 8 プラットフォーム ガイド
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## やった ！
 

@@ -37,7 +37,7 @@ Fusion.  After installing Windows, follow these steps:
    to specify _two_ processor cores, and to __Enable hypervisor
    applications in this Virtual machine__:
 
-   ![](img/guide/platforms/wp8/vmware_memory_opts.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png)
 
    The Windows Phone Emulator alone uses half a megabyte of memory, so
    overall you should reserve at least 2GB for VMWare.
@@ -45,7 +45,7 @@ Fusion.  After installing Windows, follow these steps:
 1. Choose the __Advanced__ settings. Enable the __Preferred
    virtualization engine: Intel VT-x with EPT__ option:
 
-   ![](img/guide/platforms/wp8/vmware_advanced_opts.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png)
 
 1. Modify the _.vmx_ file to add or modify the following settings:
 

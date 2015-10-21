@@ -89,7 +89,7 @@ Getting Started with Android
         <project_name> はプロジェクト名です。例: YourApp (スペースを含まない)
 
 - Eclipse を起動し、メニューから **新規プロジェクト** を選択します
-    ![](img/guide/getting-started/android/eclipse_new_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/eclipse_new_project.png)
 - `<project_folder_path>` で使用したディレクトリを選択します
 - Finish をクリックします
 
@@ -111,7 +111,7 @@ Getting Started with Android
 **注意: より早く動かすために、 Intel ベースのエミュレーターを使用します:**
 
 - Android SDK Manager を開きます
-  ![](img/guide/getting-started/android/eclipse_android_sdk_button.png)
+  ![]({{ site.baseurl }}/static/img/guide/getting-started/android/eclipse_android_sdk_button.png)
 - ひとつ以上の `Intel x86 Atom` システムイメージおよび `Intel Hardware Accelerated Execution Manager` (Extras 以下にあります) をインストールします
 - Android SDK の中の `extras/intel/Hardware_Accelerated_Execution_Manager` にダウンロードされた Intel installer を実行します
 - Target を Intel のイメージとした新しい AVD を作成します

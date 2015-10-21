@@ -177,7 +177,7 @@ Po utworzeniu, możesz użyć Eclipse, które przychodzi wraz z Android SDK, aby
 
 *   Naciśnij przycisk **Zakończ**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Gdy otworzy się okno Eclipse, czerwony **X** mogą pojawiać się problemy nierozwiązane. Jeśli tak, wykonaj następujące kroki dodatkowe:
 

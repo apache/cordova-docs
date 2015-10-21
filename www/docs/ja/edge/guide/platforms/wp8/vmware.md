@@ -47,7 +47,7 @@ title: VMWare Fusion の構成
         vhv.enable = "TRUE"
         
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 これらの手順が完了すると、Windows Phone SDK をインストールする準備ができているし。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。

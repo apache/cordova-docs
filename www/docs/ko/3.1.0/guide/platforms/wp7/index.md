@@ -94,7 +94,7 @@ title: Windows Phone 7 플랫폼 가이드
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. 장치에 대 한 프로젝트를 빌드
 
@@ -110,6 +110,6 @@ title: Windows Phone 7 플랫폼 가이드
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 끝 났 어!

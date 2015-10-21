@@ -63,7 +63,7 @@ Vous pouvez déjà créer des applications de Windows 8 en utilisant le *HTML/Ja
 
 *   Microsoft continue d'utiliser `default.html` comme la page d'accueil par défaut, mais la plupart des web développeurs utilisent `index.html` . C'est une bonne idée de le faire, au moins pour faire correspondre les autres plateformes sur que vous travaillez probablement. Pour résoudre ce problème, dans **L'Explorateur de** renommer le `default.html` fichier à `index.html` . Puis double-cliquez sur le `package.appxmanifest` du fichier et remplacez la valeur de **page de démarrage** par `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   D'inclure `cordova.js` dans votre projet, faites un clic droit sur le `js` dans **L'Explorateur de solutions** et sélectionnez **Ajouter l'article → nouveau**répertoire. Localiser le `cordova.js` fichier dans le `lib\windows-8` répertoire.
@@ -96,13 +96,13 @@ Vous pouvez déjà créer des applications de Windows 8 en utilisant le *HTML/Ja
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## Test du projet
 
 Exécutez le projet de Visual Studio. Vous verrez la boîte de message apparaît :
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 C'est tout. Vous êtes maintenant prêt à créer des applications Windows Store avec Cordova.

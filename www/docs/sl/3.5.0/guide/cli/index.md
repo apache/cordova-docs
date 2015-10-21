@@ -159,13 +159,13 @@ Opomba: Emulator podpore trenutno ni na voljo za Amazon ogenj OS
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Naslednji up s je `cordova emulate` ukaz Osveži prikaz zadnje prijave, ki je zdaj na voljo za zagon z za četnega zaslona emulator slike:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Izmenično, lahko slušalko priključite v računalnik in test app neposredno:
 

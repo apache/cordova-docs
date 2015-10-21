@@ -38,7 +38,7 @@ title: 配置 512mb
     
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 一旦你完成這些步驟，你是準備好安裝 Windows Phone SDK。請參閱 Windows Phone 8 平臺指南的詳細資訊。

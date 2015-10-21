@@ -37,7 +37,7 @@ title: Windows 包裝
 
 可以從**config.xml**設置*NAme*和*Version*。*Publisher*可以作為生成的參數提供，或可以在**build.json**檔上設置。
 
-![](img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
 從任一 CLI 或通過 build.json 檔，可以提供簽名的證書。證書相關 CLI 的標誌是:
 
@@ -86,7 +86,7 @@ title: Windows 包裝
 
 在第一次運行金鑰之後, 在螢幕上就會彈出輸入私人密碼:
 
-![](img/guide/platforms/win8/createprivatekeywindow.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/createprivatekeywindow.png)
 
 一旦創建了 pvk 和 cer 檔，我們需要從這些證書創建一個 pfx 檔。 Pfx (個人交換格式) 檔包含各種加密資訊，如證書、 根憑證授權單位，憑證連結和私密金鑰。 進行包裝證書，我們將使用一種工具叫[pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx)。 此工具附帶 Windows SDK，可以發現下 `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` 或`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 

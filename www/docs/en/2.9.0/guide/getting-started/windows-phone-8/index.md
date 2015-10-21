@@ -97,7 +97,7 @@ choose __do not include in project__.
 - Select **CordovaWP8**. (The version number is displayed in the template description.)
 - Give the project a name, and select __OK__.
 
-![](img/guide/platforms/wp8/StandAloneTemplate.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png)
 
 4. Review the project structure
 -------------------------------
@@ -106,7 +106,7 @@ choose __do not include in project__.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
 - Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual version installed.
 
-![](img/guide/platforms/wp8/projectStructure.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png)
 
 5. Build and Deploy to Emulator
 -------------------------------
@@ -114,7 +114,7 @@ choose __do not include in project__.
 - Make sure **Windows Phone Emulator** is selected in the main drop-down menu.
 - Press the green **play** button next to the drop-down menu to start debugging, or type __F5__.
 
-![](img/guide/platforms/wp8/BuildEmulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png)
 
 6. Build your project for the device
 ------------------------------------
@@ -125,7 +125,7 @@ In order to test your application on a device, the device must be registered. Cl
 - In Visual Studio, select '[Device](../../../cordova/device/device.html)' from the top drop-down menu.
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
-![](img/guide/platforms/wp7/wpd.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 Done!
 -----

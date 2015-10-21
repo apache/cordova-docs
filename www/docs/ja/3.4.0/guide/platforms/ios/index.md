@@ -67,7 +67,7 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## エミュレーターへの展開します。
 
@@ -87,8 +87,8 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
     
     1 つだけのエミュレーターでは一度に実行可能性がありますので、別のエミュレーターでアプリケーションをテストする場合は、エミュレーターのアプリケーションを終了し、Xcode の内で別のターゲットを実行する必要があります。
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode のためのエミュレーターが付属、最新の iPhone と iPad のバージョン。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
@@ -144,7 +144,7 @@ Xcode の警告について、 `invokeString` メソッドは、カスタム URL
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 これは新しい Xcode のインストールの既定の設定が異なる Xcode の旧バージョンからのアップグレード、次を設定可能性があります。
 

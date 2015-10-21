@@ -50,11 +50,11 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
     - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -82,15 +82,15 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
     
     ![][4]
 
- [2]: img/guide/platforms/tizen/import_project.png
- [3]: img/guide/platforms/tizen/import_widget.png
- [4]: img/guide/platforms/tizen/project_explorer.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png
 
 Чтобы перестроить проект, щелкните правой кнопкой мыши в представлении **Обозреватель проектов** и выберите **Построить проект**:
 
 ![][5]
 
- [5]: img/guide/platforms/tizen/build_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png
 
 В корневом каталоге проекта должен создать файл пакета виджета, например *hello.wgt* .
 
@@ -100,7 +100,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
 ![][6]
 
- [6]: img/guide/platforms/tizen/runas_web_sim_app.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png
 
 ## Развертывание на устройство
 
@@ -114,5 +114,5 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
     
     ![][8]
 
- [7]: img/guide/platforms/tizen/connection_explorer.png
- [8]: img/guide/platforms/tizen/runas_web_app.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png

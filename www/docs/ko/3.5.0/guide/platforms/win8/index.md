@@ -63,7 +63,7 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
 
 *   Microsoft 사용 하 여 계속 `default.html` 기본 홈 페이지, 하지만 대부분의 웹 개발자 사용으로 `index.html` . 그것은 이렇게, 적어도 당신이 아마에 최선을 다하고 다른 플랫폼에 맞게 하는 것이 좋습니다. 이 문제를 해결, **솔루션 탐색기** 의 이름 바꾸기에는 `default.html` 파일을 `index.html` . 다음 두 번 클릭 합니다 `package.appxmanifest` **시작 페이지** 값을 변경 하 고 `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   포함 하려면 `cordova.js` 마우스 오른쪽 단추로 프로젝트를 클릭에 `js` **→ 새 항목 추가**선택 하 고 **솔루션 탐색기** 에서 디렉토리. 위치는 `cordova.js` 파일에 `lib\windows-8` 디렉터리.
@@ -96,13 +96,13 @@ Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 �
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## 프로젝트 테스트
 
 Visual Studio에서 프로젝트를 실행 합니다. 표시 메시지 상자가 표시 됩니다.
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 바로 그 거 예요입니다. 지금 코르도바와 Windows 스토어 애플 리 케이 션을 구축할 준비가 되었습니다.

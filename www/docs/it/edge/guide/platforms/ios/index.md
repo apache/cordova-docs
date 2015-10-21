@@ -98,7 +98,7 @@ Una volta che la piattaforma ios è aggiunto al progetto, puoi aprirlo all'inter
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Distribuire emulatore
 
@@ -118,8 +118,8 @@ Per visualizzare in anteprima l'applicazione nell'emulatore di iOS:
     
     Solo un emulatore possa essere eseguite contemporaneamente, quindi se volete provare l'app in un emulatore diverso, è necessario uscire dall'emulatore applicazione ed eseguire una diversa destinazione all'interno di Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode viene fornito in bundle con gli emulatori per le ultime versioni di iPhone e iPad. Vecchie versioni possono essere disponibili dalla **Xcode → Preferenze → download → componenti** pannello.
 
@@ -190,7 +190,7 @@ Avviso di Xcode sul metodo `invokeString` riguarda funzionalità che lancia un'a
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Questa è l'impostazione predefinita per una nuova installazione di Xcode, ma può essere impostata diversamente dopo un aggiornamento da una versione precedente di Xcode.
 

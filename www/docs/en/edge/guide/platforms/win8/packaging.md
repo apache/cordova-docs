@@ -37,7 +37,7 @@ In Windows project, identity details are kept in a file named package.appxmanife
 
 *Name* and *Version* can be set from **config.xml**. *Publisher* can be provided as a build parameter or can be set on **build.json** file.
 
-![](img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
 A signing certificate can be provided from either CLI or through build.json file. The certificate related CLI flags are:
 
@@ -84,7 +84,7 @@ To understand what makecert does, here's a brief explanation of what parameters 
 
 After running makecert for the first time, enter the private password on the screen that pops up:
 
-![](img/guide/platforms/win8/createprivatekeywindow.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/createprivatekeywindow.png)
 
 Once pvk and cer file is created, we need to create a pfx file from these certificates. A pfx (Personal Exchange Format) file contains a variety of cryptographic information, such as certificates, root authority certificates, certificate chains and private keys. To package the certs, we will use the a tool called [pvk2pfx][3]. This tool ships with Windows SDK and can be found under `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` or `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 

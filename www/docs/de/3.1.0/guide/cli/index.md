@@ -145,13 +145,13 @@ Einige mobilen Plattformen emulieren ein bestimmtes [Gerät](../../cordova/devic
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 Folgende oben mit den `cordova emulate` Befehl aktualisiert das Emulator-Bild, um die neueste Anwendung angezeigt, die jetzt für den Start aus dem home-Bildschirm vorhanden ist:
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 Alternativ können Sie schließen den Hörer an den Computer und testen die app direkt:
 

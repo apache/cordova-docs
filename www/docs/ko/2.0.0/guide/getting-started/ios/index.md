@@ -46,7 +46,7 @@ iOS와 SDK과 Cordova 설치하기
 - **'Cordova-2.0.0.pkg'** 를 실행한다.
 - **bin** 폴더를 하드디스크로 복사한다. 
 
-    ![](img/guide/getting-started/ios/bin_folder.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/bin_folder.png)
 
 - **Terminal.app** 을 실행한다.
 - 복사된 **bin** 폴더를 **Terminal.app** 아이콘 위로 드래그한다. 그러면 새로운 터미널 윈도우가 열린다.
@@ -56,7 +56,7 @@ iOS와 SDK과 Cordova 설치하기
         <package_name> is the package name, following reverse-domain style convention
         <project_name> is the project name
         
-    ![](img/guide/getting-started/ios/bin_create_project.png)  
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/bin_create_project.png)  
 
 
 - 새로 만든 프로젝트 폴더로 이동해서 
@@ -90,7 +90,7 @@ Deploy to [Device](../../../cordova/device/device.html)
     - 장치를 USB로 연결해야 한다.
 - **Run** 버튼을 눌러 실행시킨다.
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/HelloWorldiPhone4.png)
 
 Build Your App
 --------------

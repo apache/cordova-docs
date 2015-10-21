@@ -46,7 +46,7 @@ Getting Started with Tizen
     - Tizen Eclipse IDE を起動します
     - **File** -> **Import** -> **Tizen Web Project** を選択します
 
-    ![](img/guide/getting-started/tizen/import_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/import_project.png)
 
     - **Next** をクリックします
     - **Select root directory** がチェックされていることを確認します
@@ -54,11 +54,11 @@ Getting Started with Tizen
     - **Browse** をクリックします
     - Cordova Tizen の "samples" プロジェクトディレクトリのうちの一つ (例: `/cordova-basic`) を Browse し、選択します
 
-    ![](img/guide/getting-started/tizen/import_widget.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/import_widget.png)
 
     - **Finish** をクリックします
 
-    ![](img/guide/getting-started/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/project_explorer.png)
 
     - これで、プロジェクトはインポートされ **Project Explorer** ビューに表示されます
 
@@ -69,11 +69,11 @@ Getting Started with Tizen
     - Tizen Cordova template のうちの一つ (e.g: **CordovaBasicTemplate**) を選択します
     - **Project name** とその **Location** を入力します
 
-    ![](img/guide/getting-started/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/project_template.png)
 
     - **Finish** をクリックします
 
-    ![](img/guide/getting-started/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/project_explorer.png)
 
     - これで、プロジェクトは作成され **Project Explorer** ビューに表示されます
 
@@ -84,7 +84,7 @@ Getting Started with Tizen
 
     - **Project Explorer** ビューの中のプロジェクトを **右クリック** して **Build Project** を選択します
 
-    ![](img/guide/getting-started/tizen/build_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/build_project.png)
 
     - プロジェクトのルートディレクトリに、ウィジェットパッケージが生成されているはずです (例: `cordova-basic.wgt`)
 
@@ -96,7 +96,7 @@ Getting Started with Tizen
 
 - **Project Explorer** ビューの中のプロジェクトを **右クリック** して **Run As** と **Tizen Web Simulator Application** を選択します
 
-    ![](img/guide/getting-started/tizen/runas_web_sim_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/runas_web_sim_app.png)
 
 5B. デバイス/エミュレーターのデプロイ
 --------------------
@@ -104,11 +104,11 @@ Getting Started with Tizen
 - デバイスが正常に起動/接続/設定されていることを確認 ("Date and Time" 設定は正しく設定されている必要があります) します
 - **Connection Explorer** ビューでアプリケーションのデプロイ先を選択します (**Window** Menu -> **Show View** -> **Connection Explorer** を選択)
 
-    ![](img/guide/getting-started/tizen/connection_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/connection_explorer.png)
 
 - **Project Explorer** ビューの中のプロジェクトを **右クリック** して **Run As** と **Tizen Web Application** を選択します
 
-    ![](img/guide/getting-started/tizen/runas_web_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/tizen/runas_web_app.png)
 
 終了
 -----

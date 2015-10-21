@@ -67,7 +67,7 @@ Apple ® инструменты, необходимые для создания 
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Развертывание в эмулятор
 
@@ -87,8 +87,8 @@ Apple ® инструменты, необходимые для создания 
     
     Только один эмулятор может выполняться одновременно, так что если вы хотите протестировать приложение в эмуляторе другой, вам нужно выйти из эмулятора приложения и запускать различные цели в пределах Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode поставляется в комплекте с эмуляторов для последней версии iPhone и iPad. Более старые версии могут быть доступны из **Xcode → настройки → загружает компоненты →** группа.
 
@@ -159,7 +159,7 @@ Xcode предупреждение о `invokeString` метод касается
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Это параметр по умолчанию для новой установки Xcode, но он может быть установлен по-другому после обновления с более старой версии Xcode.
 

@@ -154,13 +154,13 @@ Mac および Linux:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 移動し、**セキュリティとプライバシー → 開発モード**セクションし、オプションを有効にします。
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 この場合、プロジェクトの最上位ディレクトリから呼び出される、次のコマンドは、 *emu*上に表示される IP アドレスを持つという名前のターゲットを関連付けます。
 
@@ -185,7 +185,7 @@ Mac および Linux:
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 名前に関連付ける IP アドレス、デバイスのパスワードと PIN とターゲット コマンド ライン ユーティリティを実行します。
 

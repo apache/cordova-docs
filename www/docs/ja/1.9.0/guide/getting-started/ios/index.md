@@ -57,12 +57,12 @@ SDK と Apache Cordova のインストール
 - _New_ を選択し、 _New Project..._ を選択します
 - テンプレートのリストから _Cordova-based Application_ を選択します
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/XCode4-templates.png)
 
 - _Next_ ボタンをクリックします
 - _Product Name_ と _Company Identifier_ を記入します
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/xcode4-name_your_app.png)
 
 - **注意:** _Use Automatic Reference Counting_ のチェックボックスにチェックを **入れないでください**
 - _Next_ ボタンをクリックします
@@ -76,24 +76,24 @@ Apache Cordova プロジェクトが作成出来ました。次に、プロジ�
     - iOS シミュレーターが、 _www/index.html was not found_ と警告しているのが確認できるはずです
     - `www` ディレクトリへのリファレンスをプロジェクトに追加することによりこれを修正します
 
-    ![](img/guide/getting-started/ios/index-not-found.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/index-not-found.png)
 
 - 左側のサイドバーにある _Project Navigator_ の中のプロジェクトアイコンの上で右クリックし、 _Show in Finder_ を選択します
 - Finder で、プロジェクトの中に `www` ディレクトリが確認できるはずです
 
-    ![](img/guide/getting-started/ios/www-folder.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/www-folder.png)
 
 - `www` フォルダーを Xcode 4 にドラッグします
     - アプリフォルダーの中に `www` ディレクトリをドラッグしないでください
     - 以下の画像赤い四角の枠で囲ってある部分にドラッグしてください:
 
-    ![](img/guide/getting-started/ios/project.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/project.jpg)
 
 - 正確に `www` フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます
     - _Create folder references for any added folders_ を選択します
     - _Finish_ ボタンをクリックします
 
-    ![](img/guide/getting-started/ios/create-folder-reference.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/create-folder-reference.png)
 
 [Hello World](../webos/index.html) の作成
 --------------
@@ -124,7 +124,7 @@ Apache Cordova プロジェクトが作成出来ました。次に、プロジ�
     - デバイスを USB で接続する必要があります
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/HelloWorldiPhone4.png)
 
 
 アプリを作成

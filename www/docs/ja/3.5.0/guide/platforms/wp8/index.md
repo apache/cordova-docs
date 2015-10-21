@@ -107,7 +107,7 @@ Visual Studio Express の Windows Phone を開き、**新しいプロジェク�
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## プロジェクトの構造を確認します。
 
@@ -117,7 +117,7 @@ Visual Studio Express の Windows Phone を開き、**新しいプロジェク�
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## エミュレーターをビルドおよび配置
 
@@ -127,7 +127,7 @@ Visual Studio Express の Windows Phone を開き、**新しいプロジェク�
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## デバイス プロジェクトをビルドします。
 
@@ -143,7 +143,7 @@ Visual Studio Express の Windows Phone を開き、**新しいプロジェク�
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 この時点でしています。
 

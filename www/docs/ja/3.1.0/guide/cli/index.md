@@ -145,13 +145,13 @@ XREF -->
 
 ![][2]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [2]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 フォロー アップで、 `cordova emulate` コマンドは、ホーム画面から起動できるようになります最新のアプリケーションを表示するエミュレーター イメージを更新します。
 
 ![][3]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [3]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 代わりに、携帯電話をお使いのコンピューターに差し込み、アプリを直接テストすることができます。
 

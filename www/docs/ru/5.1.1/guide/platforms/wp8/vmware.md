@@ -45,7 +45,7 @@ title: Настройка VMWare Fusion
         Hypervisor.CPUID.v0 = «FALSE» mce.enable = «TRUE» vhv.enable = «TRUE»
         
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите [Руководство для платформы Windows Phone 8](index.html) для подробностей.

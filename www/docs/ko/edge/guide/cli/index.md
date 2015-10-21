@@ -176,13 +176,13 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 ![][4]
 
- [4]: img/guide/cli/android_emulate_init.png
+ [4]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png
 
 함께 위로 다음는 `cordova emulate` 명령 에뮬레이터 이미지 홈 화면에서 실행을 위해 사용할 수 있는 최신 응용 프로그램 표시를 새로 고칩니다.
 
 ![][5]
 
- [5]: img/guide/cli/android_emulate_install.png
+ [5]: {{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png
 
 또는 당신의 컴퓨터에 휴대폰을 연결 하 고 직접 응용 프로그램을 테스트:
 

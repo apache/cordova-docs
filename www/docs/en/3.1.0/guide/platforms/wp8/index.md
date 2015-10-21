@@ -100,7 +100,7 @@ Run the script :
 
 - Give the project a name, and select __OK__.
 
-![](img/guide/platforms/wp8/StandAloneTemplate.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png)
 
 ## 4. Review the project structure
 
@@ -110,7 +110,7 @@ Run the script :
 
 - Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual version installed.
 
-![](img/guide/platforms/wp8/projectStructure.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png)
 
 ## 5. Build and Deploy to Emulator
 
@@ -118,7 +118,7 @@ Run the script :
 
 - Press the green __play__ button next to the drop-down menu to start debugging, or type __F5__.
 
-![](img/guide/platforms/wp8/BuildEmulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png)
 
 ## 6. Build your project for the device
 
@@ -130,7 +130,7 @@ In order to test your application on a device, the device must be registered. Cl
 
 - Press the green __play__ button next to the main drop-down menu to start debugging, or type __F5__.
 
-![](img/guide/platforms/wp7/wpd.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 ## Done!
 

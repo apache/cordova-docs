@@ -98,13 +98,13 @@ Starten Sie das Emulator-Image, dann wählen Sie **Einstellungen** aus dem home-
 
 ![][5]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Navigieren Sie zu der **Sicherheit und Datenschutz → Entwicklungsmodus** section, aktivieren Sie die Option und die IP-Adresse beziehen:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Eine weitere Gruppe von Befehlszeilen-Dienstprogramme sind enthalten, wenn Sie die BlackBerry 10-Plattform für Ihr Projekt einrichten. Der folgende Befehl, in diesem Fall aus dem Projektverzeichnis auf oberster Ebene aufgerufen verknüpft ein Ziel mit dem Namen *emu* mit oben angezeigten IP-Adresse.
 
@@ -127,7 +127,7 @@ Um auf ein [Gerät](../../../cordova/device/device.html) bereitzustellen, sicher
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_pin.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Führen Sie das Ziel-Befehlszeilenprogramm, um eine IP-Adresse, Gerätekennwort und PIN einen Namen zuzuordnen.
 

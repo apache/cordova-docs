@@ -68,8 +68,8 @@ title: Руководство по Windows 8 платформы
 
 *   Изменить код для `index.html` . Добавьте ссылку на `cordova.js` . Вы можете сделать это, или вручную, перетащив файл из обозревателя решений.
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### Добавление ссылки на...
 
@@ -113,7 +113,7 @@ title: Руководство по Windows 8 платформы
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## Договорились!
 

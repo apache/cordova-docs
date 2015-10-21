@@ -94,7 +94,7 @@ title: Windows Phone 7 平臺指南
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6.生成您的設備的專案
 
@@ -110,6 +110,6 @@ title: Windows Phone 7 平臺指南
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 完成了 ！

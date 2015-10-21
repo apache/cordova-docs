@@ -48,7 +48,7 @@ SDK と Apache Cordova のインストール
 - **'Cordova-2.0.0.pkg'** インストーラーを実行し、インストールを完了します
 - **bin** フォルダー (ソース、もしくは .dmg から) をハードドライブ上にコピーします
 
-    ![](img/guide/getting-started/ios/bin_folder.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/bin_folder.png)
 
 - **Terminal.app** を起動します
 - コピーした **bin** フォルダーを Dock にある **Terminal.app** のアイコンにドラッグします。これにより、新しいターミナルのウィンドウが開きます
@@ -58,7 +58,7 @@ SDK と Apache Cordova のインストール
         <package_name> はリバースドメインスタイルのパッケージ名を表します
         <project_name> はプロジェクト名を表します
 
-    ![](img/guide/getting-started/ios/bin_create_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/bin_create_project.png)
 
 
 - たった今作成した新しいプロジェクトフォルダーを **見つけます**
@@ -71,7 +71,7 @@ SDK と Apache Cordova のインストール
 - ツールバーにあるドロップダウンメニューから **Target** を **"HelloWorld"** (あなたのプロジェクト名) に変更します
 - ツールバーにあるドロップダウンメニューから **Active SDK** を **iOS [version] Simulator** に変更します
 
-    ![](img/guide/getting-started/ios/active_scheme_simulator.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/active_scheme_simulator.png)
 
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
@@ -85,7 +85,7 @@ SDK と Apache Cordova のインストール
 - ツールバーにあるドロップダウンメニューから **Active SDK** を **[あなたのDevice名]** に変更します
     - デバイスを USB で接続する必要があります
 
-    ![](img/guide/getting-started/ios/active_scheme_device.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/active_scheme_device.png)
 
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
@@ -93,7 +93,7 @@ SDK と Apache Cordova のインストール
 ----------------
 - 緑色の点滅した **"device is ready"** のメッセージを伴った画面が見えるはずです
 
-    ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/ios/HelloWorldStandard.png)
 
 Xcode の問題
 ----------------

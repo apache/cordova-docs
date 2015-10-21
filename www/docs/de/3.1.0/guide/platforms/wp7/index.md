@@ -94,7 +94,7 @@ Führen Sie das Skript:
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. Erstellen Sie das Projekt für das Gerät
 
@@ -110,6 +110,6 @@ Um die Anwendung auf einem [Gerät](../../../cordova/device/device.html) zu test
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fertig!

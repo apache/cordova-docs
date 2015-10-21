@@ -110,7 +110,7 @@ Una volta creato, ecco come utilizzare il SDK per modificarlo:
 
 *   Premere **fine**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms//eclipse_new_project.png
 
 Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:
 

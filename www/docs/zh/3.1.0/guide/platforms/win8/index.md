@@ -68,8 +68,8 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 
 *   編輯的代碼為 `index.html` 。將引用添加到 `cordova.js` 。您可以手動，或通過從解決方案資源管理器中拖動檔。
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png
 
 ### 增加參考......
 
@@ -103,7 +103,7 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
     
     ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png
 
 ## 完成了 ！
 

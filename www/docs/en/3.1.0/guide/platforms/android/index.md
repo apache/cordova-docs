@@ -121,7 +121,7 @@ Once created, here's how to use the SDK to modify it:
 * Select the __New Project__ menu item.
 
 * Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
-    ![](img/guide/platforms/android/eclipse_new_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png)
 
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
 
@@ -152,32 +152,32 @@ There are two ways to open it:
 
 * From within Eclipse, press this toolbar icon:
 
-  ![](img/guide/platforms/android/eclipse_android_sdk_button.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png)
 
 Once open, the Android SDK Manager displays various runtime libraries:
 
-![](img/guide/platforms/android/asdk_window.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png)
 
 Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
 choose any item from __Device Definitions__ in the resulting dialog
 box:
 
-![](img/guide/platforms/android/asdk_device.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png)
 
 Press __Create AVD__, optionally modifying the name, then press __OK__
 to accept the changes:
 
-![](img/guide/platforms/android/asdk_newAVD.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png)
 
 The AVD then appears in the __Android Virtual Devices__ list:
 
-![](img/guide/platforms/android/asdk_avds.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png)
 
 To open the emulator as a separate application, select the AVD and
 press __Start__. It launches much as it would on the device, with
 additional controls available for hardware buttons:
 
-![](img/guide/platforms/android/asdk_emulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png)
 
 At this point you can use the `cordova` utility to deploy the
 application to the emulator from the command line:

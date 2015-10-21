@@ -114,7 +114,7 @@ template description.
 
 Give the project a name, and select __OK__.
 
-![](img/guide/platforms/wp8/StandAloneTemplate.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png)
 
 ## Review the Project Structure
 
@@ -126,7 +126,7 @@ project, and it must be set as content.
 The following sample structure represents a 2.3.0 project, but may
 vary depending on the installed version:
 
-![](img/guide/platforms/wp8/projectStructure.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png)
 
 ## Build and Deploy to Emulator
 
@@ -135,7 +135,7 @@ Make sure __Windows Phone Emulator__ is selected in the main drop-down menu.
 Then press the green __play__ button next to the drop-down menu to
 start debugging, or type __F5__.
 
-![](img/guide/platforms/wp8/BuildEmulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png)
 
 ## Build the Project for the Device
 
@@ -152,7 +152,7 @@ the basic steps:
 - Press the green __play__ button next to the main drop-down menu to
   start debugging, or else type __F5__.
 
-![](img/guide/platforms/wp7/wpd.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png)
 
 At this point, you're done.
 

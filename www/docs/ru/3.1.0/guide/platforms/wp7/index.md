@@ -94,7 +94,7 @@ title: Руководство по платформы Windows Phone 7
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. Создайте свой проект для устройства
 
@@ -110,6 +110,6 @@ title: Руководство по платформы Windows Phone 7
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Договорились!

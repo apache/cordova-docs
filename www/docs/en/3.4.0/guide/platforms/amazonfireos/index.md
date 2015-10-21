@@ -113,7 +113,7 @@ Once created, you can use the Eclipse that comes along with the Android SDK to m
 * Select the __New Project__ menu item.
 
 * Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
-    ![](img/guide/platforms/android/eclipse_new_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png)
 
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/amazon-fireos` subdirectory.
 

@@ -67,7 +67,7 @@ Xcode 설치 되 면 여러 명령줄 도구 실행 코르도바를 사용 하�
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## 에뮬레이터에 배포
 
@@ -87,8 +87,8 @@ IOS 에뮬레이터에서 응용 프로그램을 미리 보기:
     
     하나의 에뮬레이터는 한 번에 실행 될 수 있습니다 다른 에뮬레이터에서 응용 프로그램을 테스트 하려면 에뮬레이터 응용 프로그램을 종료 하 고 Xcode 내에서 서로 다른 목표를 실행 해야 합니다.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode 용 에뮬레이터와 함께 번들로 제공 된 최신 버전의 iPhone 및 iPad. 이전 버전에서 사용할 수 있는 **Xcode → 환경 설정 → 다운로드 → 구성 요소** 패널.
 
@@ -150,7 +150,7 @@ Xcode의에 대 한 경고는 `invokeString` 메서드 사용자 지정 URL에�
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 이것이 새로운 Xcode 설치의 기본 설정은 이지만 Xcode의 이전 버전에서 업그레이 드에 따라 다르게 설정할 수 있습니다.
 

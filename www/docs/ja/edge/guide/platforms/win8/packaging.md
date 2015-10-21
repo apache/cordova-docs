@@ -37,7 +37,7 @@ Windows プロジェクトの id の詳細は package.appxmanifest ファイル�
 
 *NAme*と*Version*は、 **config.xml**から設定できます。*Publisher*は、構築パラメーターとして指定することができます。 または**build.json**ファイルに設定することができます。
 
-![](img/guide/platforms/win8/packaging.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/packaging.png)
 
 いずれかの CLI から、または build.json ファイル、署名証明書を指定できます。証明書は、CLI のフラグ関連。
 
@@ -86,7 +86,7 @@ CLI を使用してビルド構成ファイル (build.json) を使用してこ�
 
 初めての makecert を実行した後ポップアップ画面で専用パスワードを入力します。
 
-![](img/guide/platforms/win8/createprivatekeywindow.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/createprivatekeywindow.png)
 
 Pvk と cer ファイルが作成されると、これらの証明書から pfx ファイルを作成私たち必要があります。 Pfx (個人的な交換形式) ファイルには、各種証明書、ルート証明機関証明書、証明書チェーンおよび秘密キーなどの暗号化に関する情報が含まれています。 証明書をパッケージするには使用、ツールは、 [pvk2pfx](https://msdn.microsoft.com/en-us/library/ff550672(v=vs.85).aspx)を呼ばれます。 このツールは、Windows SDK に付属しの下で見つけることができます `%ProgramFiles(x86)%\Windows Kits\8.1\bin\x64` または`%ProgramFiles(x86)%\Windows Kits\8.1\bin\x86`.
 

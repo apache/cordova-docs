@@ -113,7 +113,7 @@ Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para m
 
 *   Pulse **Finalizar**.
 
- [5]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
 
@@ -137,37 +137,37 @@ Puede utilizar la `cordova` utilidad para ejecutar una aplicación en un emulado
     
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de ejecución:
 
 ![][7]
 
- [7]: img/guide/platforms/android/asdk_window.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png
 
 Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png
 
 Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png
 
 La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png
 
 Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png
 
 En este punto se puede utilizar la `cordova` utilidad para desplegar la aplicación en el emulador desde la línea de comandos:
 
@@ -192,7 +192,7 @@ Después de instalar y ejecutar el `Intel Processor Identification Utility` sobr
 
 ![][15]
 
- [15]: img/guide/platforms/android/intel_pid_util_620px.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png
 
 Para acelerar el emulador, tienes que descargar e instalar uno o más `Intel x86 Atom` imágenes del sistema, así como la`Intel Hardware Accelerated Execution Manager (HAXM)`.
 
@@ -200,7 +200,7 @@ Abra su Android SDK Manager y seleccione la `Intel x86 Atom` imagen del sistema,
 
 ![][16]
 
- [16]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
 Después de la descarga, ejecute el instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager` . **Nota**: `If you have any problems installing the package, you can find more information and step by step guidance check this` [artículo de Intel][17] .
 
@@ -210,7 +210,7 @@ Una vez instalado, con el fin de probar, crear nuevos un AVD con el `CPU/ABI` a 
 
 ![][18]
 
- [18]: img/guide/platforms/android/asdk_new_and_dev_intel.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/android/asdk_new_and_dev_intel.png
 
 Si usted está usando `Linux-based system` , siga las instrucciones en el [Sitio para desarrolladores de Android][19].
 

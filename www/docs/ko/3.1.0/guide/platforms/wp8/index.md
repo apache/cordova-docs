@@ -106,7 +106,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4. 프로젝트 구조를 검토
 
@@ -118,7 +118,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5. 빌드하고 에뮬레이터에 배포
 
@@ -128,7 +128,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6. 장치에 대 한 프로젝트를 빌드
 
@@ -144,7 +144,7 @@ title: Windows Phone 플랫폼 가이드 8
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 끝 났 어!
 

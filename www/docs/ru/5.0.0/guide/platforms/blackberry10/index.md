@@ -154,13 +154,13 @@ title: Руководство для платформы BlackBerry 10
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Перейдите к разделу **Безопасности и конфиденциальность → Режим разработки** и включить опцию:
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Дополнительный набор утилит командной строки включаются при установке платформы BlackBerry 10 для вашего проекта. Следующая команда, в данном случае вызваная из каталога проекта верхнего уровня, связывает целевой объект с именем *emu* с IP-адресом указанным выше.
 
@@ -185,7 +185,7 @@ title: Руководство для платформы BlackBerry 10
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Запустите утилиту командной строки чтобы связать имя с IP адресом, паролем устройства и ПИН-кодом.
 

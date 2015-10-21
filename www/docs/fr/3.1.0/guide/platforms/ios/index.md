@@ -67,7 +67,7 @@ Une fois créé, vous pouvez l'ouvrir depuis dans Xcode. Double-cliquez pour ouv
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Déployer sur émulateur
 
@@ -87,8 +87,8 @@ Pour afficher un aperçu de l'application dans l'émulateur iOS :
     
     Qu'un émulateur peut exécuter à la fois, donc si vous voulez tester l'app dans un émulateur différent, vous devez quitter l'application de l'émulateur et exécuter une cible différente dans Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode est livré avec les émulateurs pour les dernières versions de l'iPhone et l'iPad. Des versions plus anciennes peuvent être obtenues auprès du **Xcode → préférences → téléchargements → composants** panneau.
 
@@ -150,7 +150,7 @@ Xcode de mise en garde concernant la `invokeString` méthode concerne une foncti
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Il s'agit du paramètre par défaut pour une nouvelle installation de Xcode, mais elle peut être définie différemment suite à une mise à niveau d'une ancienne version de Xcode.
 

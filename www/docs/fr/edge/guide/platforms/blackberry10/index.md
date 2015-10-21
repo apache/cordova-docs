@@ -154,13 +154,13 @@ Lancer l'image de l'émulateur, puis cliquez sur **paramètres** depuis l'écran
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_home.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Accédez à la **→ sécurité et vie privée Mode de développement** section et activer l'option :
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_devel.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Un jeu supplémentaire d'utilitaires de ligne de commande sont inclus lorsque vous configurez la plate-forme BlackBerry 10 pour votre projet. La commande suivante, appelée dans ce cas depuis le répertoire racine du projet, associe une cible nommée *l'UEM* avec l'adresse IP affichée ci-dessus.
 
@@ -185,7 +185,7 @@ Ensuite, exécutez le `emulate` commande pour visualiser l'application :
 
 ![][8]
 
- [8]: img/guide/platforms/blackberry10/bb_pin.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Exécutez l'utilitaire de ligne de commande cible pour associer un nom à une adresse IP, mot de passe de périphérique et un code PIN.
 

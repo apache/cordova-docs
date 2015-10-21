@@ -67,7 +67,7 @@ Ko ga enkrat ustvariš, jo lahko odprete iz v Xcode. Odprem v `hello/platforms/i
 
 ![][4]
 
- [4]: img/guide/platforms/ios/helloworld_project.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Razporedi na Emulator
 
@@ -87,8 +87,8 @@ Predogled v iOS emulator app:
     
     Edini emulator lahko delujejo hkrati, tako da če hočeš skušnja app v različnih emulator, morate prenehati uporabo emulator in prost dostop a različen tarča v Xcode.
 
- [5]: img/guide/platforms/ios/select_xcode_scheme.png
- [6]: img/guide/platforms/ios/HelloWorldStandard.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode priti povesmo s emulatorji za na najnovejše različice iPhone in iPad. Starejše različice so lahko na voljo od na **Xcode → nastavitve → Downloads → komponente** panel.
 
@@ -159,7 +159,7 @@ Xcode opozorilo o je `invokeString` metoda zadeva funkcionalnost, to pobudnik ap
     
     ![][9]
 
- [9]: img/guide/platforms/ios/xcode_build_location.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 To je privzeta nastavitev za novo Xcode namestiti, vendar to lahko določi drugače po nadgradnjo iz starejše različice programa Xcode.
 

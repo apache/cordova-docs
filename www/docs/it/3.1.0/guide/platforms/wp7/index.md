@@ -94,7 +94,7 @@ Eseguire lo script:
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 6. Costruire un progetto per il dispositivo
 
@@ -110,6 +110,6 @@ Al fine di testare l'applicazione su un dispositivo, il dispositivo deve essere 
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## Fatto!

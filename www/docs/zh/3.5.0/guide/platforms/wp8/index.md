@@ -107,7 +107,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` 。 然後，可以從
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 審查的專案結構
 
@@ -117,7 +117,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` 。 然後，可以從
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 生成並部署到模擬程式
 
@@ -127,7 +127,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` 。 然後，可以從
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 為該設備生成專案
 
@@ -143,7 +143,7 @@ Documents\Visual Studio 2012\Templates\ProjectTemplates\` 。 然後，可以從
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 此時，你完了。
 

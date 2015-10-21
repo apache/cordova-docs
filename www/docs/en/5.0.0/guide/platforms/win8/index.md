@@ -82,7 +82,7 @@ Windows development environment on a Mac:
 Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
 [Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8).
 
-![](img/guide/platforms/win8/win8_installSDK.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png)
 
 ## Using Cordova Shell Tools
 
@@ -177,24 +177,24 @@ Visual Studio. The various `build` commands generate a Visual Studio
 Solution (_.sln_) file. Open the file in the File Explorer to modify
 the project within Visual Studio:
 
-![](img/guide/platforms/win8/win8_sdk_openSLN.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png)
 
 The `CordovaApp` component displays within the solution, and its `www`
 directory contains the web-based source code, including the
 `index.html` home page:
 
-![](img/guide/platforms/win8/win8_sdk.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png)
 
 The controls below Visual Studio's main menu allow you to test or
 deploy the app:
 
-![](img/guide/platforms/win8/win8_sdk_deploy.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png)
 
 With __Local Machine__ selected, press the green arrow to install the
 app on the same machine running Visual Studio. Once you do so, the app
 appears in Windows 8's app listings:
 
-![](img/guide/platforms/win8/win8_sdk_runApp.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png)
 
 Each time you rebuild the app, the version available in the interface
 is refreshed.
@@ -202,18 +202,18 @@ is refreshed.
 Once available in the app listings, holding down the __CTRL__ key
 while selecting the app allows you to pin it to the main screen:
 
-![](img/guide/platforms/win8/win8_sdk_runHome.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png)
 
 Note that if you open the app within a virtual machine environment,
 you may need to click in the corners or along the sides of the windows
 to switch apps or access additional functionality:
 
-![](img/guide/platforms/win8/win8_sdk_run.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png)
 
 Alternately, choose the __Simulator__ deployment option to view the
 app as if it were running on a tablet device:
 
-![](img/guide/platforms/win8/win8_sdk_sim.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png)
 
 Unlike desktop deployment, this option allows you to simulate the
 tablet's orientation, location, and vary its network settings.

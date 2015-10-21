@@ -94,13 +94,13 @@ Začetek emulator slike, nato pa izberite **Nastavitve** z za četnega zaslona:
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Pluti v **varnost in zasebnost → razvoj način** oddelek in omogočiti možnost:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Nato zaženite je `emulate` ukaz razgledati app:
 

@@ -96,7 +96,7 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Для 10 Windows установщик Visual Studio имеет возможность установить инструменты для создания универсальных приложений Windows. Необходимо убедиться, что этот параметр выбран при установке чтобы установить требуемый пакет SDK.
 
@@ -189,25 +189,25 @@ Windows 10 поддерживает новый «Удаленный» режим
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Компонент `CordovaApp` отображается внутри решения, и его каталог `www` содержит исходный код, включая домашнюю страницу `index.html`:
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Элементы управления ниже главного меню Visual Studio позволяют вам тестировать или развертывать приложения:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 При выбранном пункте **Локальный компьютер** нажмите зеленую стрелку, чтобы установить приложение на том же компьютере где работает Visual Studio. Как только вы сделаете это, приложение появляется в списках приложений Windows 8:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Каждый раз, когда вы перестроить приложение, версия доступная в интерфейсе обновляется.
 
@@ -215,19 +215,19 @@ Windows 10 поддерживает новый «Удаленный» режим
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Обратите внимание, что если вы открываете приложение в среде виртуальной машины, вам может понадобиться нажать в углах или по бокам окна переключения приложений или получить доступ к дополнительным функциям:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Альтернативно выберите параметр развертывания **Симулятор** для просмотра приложения, как если бы она была установлена на планшетном устройстве:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 В отличие от развертывания на настольные системы этот параметр позволяет имитировать ориентацию планшета, его местоположение и изменять его параметры сети.
 

@@ -75,7 +75,7 @@ Getting Started with Windows Phone
     - 注意: もし見つからない場合は、 'Visual C#' を選択してみてください。
 - プロジェクト名を指定し、 OK をクリックします。
 
-    ![](img/guide/getting-started/windows-phone/wpnewproj.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-phone/wpnewproj.png)
 
 
 4. プロジェクト構成の確認
@@ -84,7 +84,7 @@ Getting Started with Windows Phone
 - 'www' フォルダーは Cordova の html/js/css ファイルとアプリのその他のリソースを含みます。
 - このフォルダーに追加した全てのコンテンツは Visual Studio プロジェクトの一部である必要があり、コンテンツとしてセットされている必要があります。
 
-    ![](img/guide/getting-started/windows-phone/wp7projectstructure.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-phone/wp7projectstructure.png)
 
 
 5. ビルドとエミュレーターへのデプロイ
@@ -93,8 +93,8 @@ Getting Started with Windows Phone
 - **Windows Phone Emulator** が上部のドロップダウンメニューにて選択されていることを確認します。
 - Windows Phone Emulator が選択されたドロップダウンメニューの隣にある緑の **play ボタン** をクリックするか、 F5 を押下しデバッグを開始します。
 
-    ![](img/guide/getting-started/windows-phone/wprun.png)
-    ![](img/guide/getting-started/windows-phone/wpfirstrun.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-phone/wprun.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-phone/wpfirstrun.png)
 
 
 6. デバイスのためにプロジェクトをビルド
@@ -106,7 +106,7 @@ Getting Started with Windows Phone
 - Visual Studio で、上部のドロップダウンメニューから 'Windows Phone [Device](../../../cordova/device/device.html)' を選択します
 - ドロップダウンメニューの隣にある緑の **play ボタン** をクリックするか、 F5 を押下しデバッグを開始します
 
-    ![](img/guide/getting-started/windows-phone/wpd.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-phone/wpd.png)
 
 
 終了

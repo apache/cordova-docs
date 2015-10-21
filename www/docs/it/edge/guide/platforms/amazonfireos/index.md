@@ -177,7 +177,7 @@ Una volta creato, è possibile utilizzare l'eclissi che arriva con il SDK di And
 
 *   Premere **fine**.
 
- [9]: img/guide/platforms/android/eclipse_new_project.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png
 
 Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:
 

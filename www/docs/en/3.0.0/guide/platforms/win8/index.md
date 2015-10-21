@@ -62,11 +62,11 @@ expose the same APIs as on other Cordova-supported platforms.
 
 - Select __Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store__ from the tree, and then __Blank App__ from the projects list. Enter whatever project name you like, such as `CordovaWin8Foo` as in this example.
 
-    ![](img/guide/platforms/win8/wsnewproject.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png)
 
 - Microsoft continues to use `default.html` as the default home page, but most web developers use `index.html`. (Plus it's likely that in the other platform variants of your project you are using `index.html` as the name of your default page.) To fix this, in Solution Explorer rename the `default.html` file to `index.html`. Then double-click the `package.appxmanifest` file and change the __Start page__ value to `index.html`.
 
-	![](img/guide/platforms/win8/wschangemanifest.png)
+	![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
 
 - To include `cordova.js` in your project, right-click on the `js` directory in Solution Explorer and select __Add &rarr; New Item__. Locate the `cordova.js` file in the `lib\windows-8` directory noted above.
 
@@ -108,7 +108,7 @@ expose the same APIs as on other Cordova-supported platforms.
 
 - Run the project from Visual Studio. You'll see the message box appear:
 
-	![](img/guide/platforms/win8/wsalert.png)
+	![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
 
 ## Done!
 

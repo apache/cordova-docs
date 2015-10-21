@@ -70,7 +70,7 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][9]
 
- [9]: img/guide/platforms/win8/win8_installSDK.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 ## Использование инструментов командной строки Cordova
 
@@ -148,25 +148,25 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 Компонент `CordovaApp` отображается внутри решения, и его каталог `www` содержит исходный код, включая домашнюю страницу `index.html` :
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Элементы управления ниже главного меню Visual Studio позволяют вам тестировать или развертывать приложения:
 
 ![][13]
 
- [13]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [13]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 При выбранном пункте **Локальный компьютер** нажмите зеленую стрелку, чтобы установить приложение на том же компьютере где работает Visual Studio. Как только вы сделаете это, приложение появляется в списках приложений Windows 8:
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Каждый раз, когда вы перестроить приложение, версия доступная в интерфейсе обновляется.
 
@@ -174,19 +174,19 @@ Cordova WebView под управлением ОС Windows полагаются 
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Обратите внимание, что если вы открываете приложение в среде виртуальной машины, вам может понадобиться нажать в углах или по бокам окна переключения приложений или получить доступ к дополнительным функциям:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_run.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Альтернативно выберите параметр развертывания **Симулятор** для просмотра приложения, как если бы она была установлена на планшетном устройстве:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_sim.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 В отличие от развертывания на настольные системы этот параметр позволяет имитировать ориентацию планшета, его местоположение и изменять его параметры сети.
 

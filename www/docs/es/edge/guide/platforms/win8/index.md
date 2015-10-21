@@ -96,7 +96,7 @@ Instalar cualquier edición de [Visual Studio][2] que empareja la versión requi
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_installSDK.png
+ [12]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_installSDK.png
 
 Para Windows, el instalador de Visual Studio tiene una opción para instalar las herramientas para construir aplicaciones Windows Universal. Debe asegurarse de que esta opción está seleccionada durante la instalación para instalar el SDK requiere.
 
@@ -189,25 +189,25 @@ Una vez que construyes una aplicación Cordova como se describe anteriormente, u
 
 ![][14]
 
- [14]: img/guide/platforms/win8/win8_sdk_openSLN.png
+ [14]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_openSLN.png
 
 El componente de `CordovaApp` muestra dentro de la solución, y su directorio `www` contiene el código fuente basada en web, incluyendo la página `index.html` :
 
 ![][15]
 
- [15]: img/guide/platforms/win8/win8_sdk.png
+ [15]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk.png
 
 Los controles debajo de menú principal de Visual Studio le permite probar o implementar la aplicación:
 
 ![][16]
 
- [16]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [16]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_deploy.png
 
 Con la **Máquina Local** seleccionado, pulsaremos la flecha verde para instalar la aplicación en el mismo equipo que ejecuta Visual Studio. Una vez lo haces, la aplicación aparece en los listados de la aplicación de Windows 8:
 
 ![][17]
 
- [17]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [17]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runApp.png
 
 Cada vez que reconstruir la aplicación, se actualiza la versión disponible en la interfaz.
 
@@ -215,19 +215,19 @@ Una vez disponible en la lista aplicación, manteniendo presionada la tecla **CT
 
 ![][18]
 
- [18]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [18]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_runHome.png
 
 Tenga en cuenta que si usted abre la aplicación dentro de un entorno de máquina virtual, puede que necesite hacer clic en las esquinas o a lo largo de los lados de las ventanas para cambiar de aplicaciones o acceder a funciones adicionales:
 
 ![][19]
 
- [19]: img/guide/platforms/win8/win8_sdk_run.png
+ [19]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_run.png
 
 Alternativamente, elija la opción de despliegue de **simulador** para ver la aplicación como si estuviera ejecutando en un dispositivo tablet:
 
 ![][20]
 
- [20]: img/guide/platforms/win8/win8_sdk_sim.png
+ [20]: {{ site.baseurl }}/static/img/guide/platforms/win8/win8_sdk_sim.png
 
 A diferencia de la implementación de escritorio, esta opción le permite simular la orientación de la tableta, ubicación, y variar su configuración de red.
 

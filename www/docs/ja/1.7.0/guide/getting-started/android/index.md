@@ -46,7 +46,7 @@ Getting Started with Android
 
 - Eclipse を起動し、メニューから **ファイル新規 &gt; Android Project** を選択します。 **New Android Project** ウィザードの3つの画面を、以下のとおり設定します。
 
-    ![](img/guide/getting-started/android/AndroidFlow.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/AndroidFlow.png)
 
 - 作成したプロジェクトのルートディレクトリに、以下の2つの新しいディレクトリを作成します:
     - **/libs**
@@ -57,14 +57,14 @@ Getting Started with Android
 
 - **cordova-1.7.0.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-1.7.0.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
 
-    ![](img/guide/getting-started/android/buildPath.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/buildPath.jpg)
 
 - 作成したプロジェクトの **src** フォルダーにあるメインの Java ファイルを編集します:
     - **import org.apache.cordova.*;** を追加
     - クラスの継承元を **Activity** から **DroidGap** に変更
     - **setContentView()** の行を **super.loadUrl("file:///android_asset/www/index.html");** に置き換え 
 
-    ![](img/guide/getting-started/android/javaSrc.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/javaSrc.jpg)
 
 - AndroidManifest.xml を右クリックし、 **アプリケーションから開く &gt; XML エディター** を選択します。
 - 以下のコードを、 **&lt;uses-sdk.../&gt;** と **&lt;application.../&gt;** タグの間に貼り付けてください。
@@ -98,7 +98,7 @@ Getting Started with Android
 
 - AndroidManifest.xml は以下のようになります。
 
-    ![](img/guide/getting-started/android/manifest.jpg)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/android/manifest.jpg)
 
 
 4. [Hello World](../webos/index.html) の作成

@@ -46,7 +46,7 @@ This guide describes how to set up your development environment for Cordova and 
     - Launch Tizen Eclipse IDE
     - Select  **File** -> **Import** -> **Tizen Web Project**
 
-    ![](img/guide/platforms/tizen/import_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/import_project.png)
 
     - Click **Next**
     - Make sure that **Select root directory** is checked
@@ -54,11 +54,11 @@ This guide describes how to set up your development environment for Cordova and 
     - Click **Browse**
     - Browse to one of the Cordova Tizen "samples" project directory (e.g: `/cordova-basic`) and select it
 
-    ![](img/guide/platforms/tizen/import_widget.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/import_widget.png)
 
     - Click **Finish**
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now have been imported and appear **Project Explorer** view
 
@@ -69,11 +69,11 @@ This guide describes how to set up your development environment for Cordova and 
     - Select one of the Tizen Cordova template (e.g: **CordovaBasicTemplate**)
     - Fill-up the **Project name** and its target **Location**
 
-    ![](img/guide/platforms/tizen/project_template.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_template.png)
 
     - Click **Finish**
 
-    ![](img/guide/platforms/tizen/project_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now have been created and appear **Project Explorer** view
 
@@ -84,7 +84,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     - **Right Click** your project in the **Project Explorer** view and Select **Build Project**
 
-    ![](img/guide/platforms/tizen/build_project.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/build_project.png)
 
     - A widget package should have been generated in your project root directory (e.g: `cordova-basic.wgt`)
 
@@ -96,7 +96,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - **Right Click** your project in the **Project Explorer** view and Select **Run As** and **Tizen Web Simulator Application**
 
-    ![](img/guide/platforms/tizen/runas_web_sim_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_sim_app.png)
 
 5B. Deploy to Device/Emulator
 --------------------
@@ -104,11 +104,11 @@ This guide describes how to set up your development environment for Cordova and 
 - Make sure that your target device is properly launched/connected/configured ("Date and Time" settings must have been set correctly)
 - Select your application deployment target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
 
-    ![](img/guide/platforms/tizen/connection_explorer.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/connection_explorer.png)
 
 - **Right Click** your project in the **Project Explorer** view and Select **Run As** and **Tizen Web Application**
 
-    ![](img/guide/platforms/tizen/runas_web_app.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/tizen/runas_web_app.png)
 
 Done!
 -----

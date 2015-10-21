@@ -107,7 +107,7 @@ Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선�
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 프로젝트 구조를 검토
 
@@ -117,7 +117,7 @@ Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선�
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 빌드하고 에뮬레이터에 배포
 
@@ -127,7 +127,7 @@ Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선�
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 장치에 대 한 프로젝트를 구축
 
@@ -143,7 +143,7 @@ Visual Studio Express에 대 한 Windows Phone 열고 **새 프로젝트** 선�
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 이 시점에서, 당신이 끝났습니다.
 

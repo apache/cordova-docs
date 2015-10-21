@@ -38,7 +38,7 @@ title: Настройка Parallels Desktop
     
     ![][3]
 
- [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
- [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_cpu_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/parallel_optimize_opts.png
 
 После выполнения этих шагов, вы будете готовы к установке Windows Phone SDK. Смотрите [Руководство для платформы Windows Phone 8](index.html) для подробностей.

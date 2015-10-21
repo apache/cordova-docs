@@ -63,7 +63,7 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
 
 *   Microsoft weiterhin verwenden Sie `default.html` als die Standard-Homepage, aber die meisten Web-Entwickler verwenden `index.html` . Es ist eine gute Idee zu tun, andere Plattformen zumindest angepasst, die, denen Sie wahrscheinlich arbeiten. Dieses, im **Projektmappen-Explorer** umbenennen Regeln die `default.html` Datei zu `index.html` . Doppelklicken Sie auf die `package.appxmanifest` Datei und ändern Sie den Wert **Start-Seite** auf `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   Gehören `cordova.js` in Ihrem Projekt, der rechten Maustaste auf das `js` Verzeichnis im **Projektmappen-Explorer** und wählen Sie **→ Neues Element hinzufügen**. Suchen Sie die `cordova.js` Datei das `lib\windows-8` Verzeichnis.
@@ -96,13 +96,13 @@ Sie können bereits mit der *HTML/JavaScript verfolgen* in Windows Store apps ve
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## Testen Sie das Projekt
 
 Führen Sie das Projekt von Visual Studio. Sie werden sehen, dass das Meldungsfeld angezeigt werden:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 Das war 's. Du bist jetzt bereit, Windows Store apps mit Cordova zu bauen.

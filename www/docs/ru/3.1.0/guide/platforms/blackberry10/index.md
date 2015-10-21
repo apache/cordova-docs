@@ -98,13 +98,13 @@ title: Руководство по платформы blackBerry 10
 
 ![][5]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Перейдите к **безопасности и конфиденциальности → режим развития** раздел, включите опцию и получить IP-адрес:
 
 ![][6]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Дополнительный набор утилит командной строки включаются при установке платформы BlackBerry 10 для вашего проекта. Следующая команда, в этом случае вызывается из каталога верхнего уровня проекта, связывает целевой объект с именем *эму* с IP-адресом отображается выше.
 
@@ -127,7 +127,7 @@ title: Руководство по платформы blackBerry 10
 
 ![][7]
 
- [7]: img/guide/platforms/blackberry10/bb_pin.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png
 
 Запустите утилиту командной строки целевой, чтобы связать имя с IP адрес, пароль и PIN-код.
 

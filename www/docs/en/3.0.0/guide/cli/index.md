@@ -193,13 +193,13 @@ For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
 
-![](img/guide/cli/android_emulate_init.png)
+![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_init.png)
 
 Following up with the `cordova emulate` command refreshes the emulator
 image to display the latest application, which is now available for
 launch from the home screen:
 
-![](img/guide/cli/android_emulate_install.png)
+![]({{ site.baseurl }}/static/img/guide/cli/android_emulate_install.png)
 
 Alternately, you can plug the handset into your computer and test the
 app directly:

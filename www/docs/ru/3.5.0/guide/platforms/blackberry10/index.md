@@ -94,13 +94,13 @@ title: Руководство по платформы blackBerry 10
 
 ![][3]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png
 
 Перейдите к **безопасность и конфиденциальность → режим развития** раздел и включить опцию:
 
 ![][4]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png
 
 Затем, запустите `emulate` команду для просмотра приложений:
 

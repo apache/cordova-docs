@@ -98,7 +98,7 @@ title: Руководство для платформы iOS
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Развертывание на эмулятор
 
@@ -118,8 +118,8 @@ title: Руководство для платформы iOS
     
     Только один эмулятор может выполняться одновременно, так что если вы хотите протестировать приложение в эмуляторе другой, вам нужно выйти из эмулятора приложения и запускать различные цели в пределах Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode идет с встроенным эмулятором для последних версий iPhone и iPad. Более старые версии могут быть доступны из панели **→ Preferences → Downloads → Components**.
 
@@ -188,7 +188,7 @@ Xcode предупреждение о методе `invokeString`, касает�
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Это параметр по умолчанию для новой установки Xcode, но он может быть установлен по-другому после обновления старой версии Xcode.
 

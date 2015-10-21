@@ -106,7 +106,7 @@ title: Windows Phone 8 平臺指南
 
 ![][7]
 
- [7]: img/guide/platforms/wp8/StandAloneTemplate.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp8/StandAloneTemplate.png
 
 ## 4.審查的專案結構
 
@@ -118,7 +118,7 @@ title: Windows Phone 8 平臺指南
 
 ![][8]
 
- [8]: img/guide/platforms/wp8/projectStructure.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## 5.生成並部署到模擬程式
 
@@ -128,7 +128,7 @@ title: Windows Phone 8 平臺指南
 
 ![][9]
 
- [9]: img/guide/platforms/wp8/BuildEmulator.png
+ [9]: {{ site.baseurl }}/static/img/guide/platforms/wp8/BuildEmulator.png
 
 ## 6.生成您的設備的專案
 
@@ -144,7 +144,7 @@ title: Windows Phone 8 平臺指南
 
 ![][11]
 
- [11]: img/guide/platforms/wp7/wpd.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 ## 完成了 ！
 

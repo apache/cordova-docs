@@ -136,7 +136,7 @@ Here's how to use the SDK to modify it:
 1. Choose __Android Project from Existing Code__ from the resulting
    dialog box, and press __Next__:
 
-  ![](img/guide/platforms/android/eclipse_new_project.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_new_project.png)
 
 1. If you're using the CLI, navigate to the `hello` directory you
    created for the project, then to the `platforms/android`
@@ -195,32 +195,32 @@ separately from Eclipse.  There are two ways to open it:
 
 1. From within Eclipse, press this toolbar icon:
 
-  ![](img/guide/platforms/android/eclipse_android_sdk_button.png)
+  ![]({{ site.baseurl }}/static/img/guide/platforms/android/eclipse_android_sdk_button.png)
 
 Once open, the Android SDK Manager displays various runtime libraries:
 
-![](img/guide/platforms/android/asdk_window.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_window.png)
 
 Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
 choose any item from __Device Definitions__ in the resulting dialog
 box:
 
-![](img/guide/platforms/android/asdk_device.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_device.png)
 
 Press __Create AVD__, optionally modifying the name, then press __OK__
 to accept the changes:
 
-![](img/guide/platforms/android/asdk_newAVD.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_newAVD.png)
 
 The AVD then appears in the __Android Virtual Devices__ list:
 
-![](img/guide/platforms/android/asdk_avds.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_avds.png)
 
 To open the emulator as a separate application, select the AVD and
 press __Start__. It launches much as it would on the device, with
 additional controls available for hardware buttons:
 
-![](img/guide/platforms/android/asdk_emulator.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_emulator.png)
 
 ## Deploy to Emulator
 
@@ -240,7 +240,7 @@ the SDK, you can refer to each by the names you supply:
 
 This pushes the app to the home screen and launches it:
 
-![](img/guide/platforms/android/emulator2x.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/emulator2x.png)
 
 When you `run` the app, you also `build` it. You can append additional
 `--debug`, `--release`, and `--nobuild` flags to control how it is
@@ -268,7 +268,7 @@ or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_D
 After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
 in order to check if your CPU supports the Virtualization Technologies:
 
-![](img/guide/platforms/android/intel_pid_util_620px.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/intel_pid_util_620px.png)
 
 In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
 as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
@@ -276,7 +276,7 @@ as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
 Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
 and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
 
-![](img/guide/platforms/android/asdk_man_intel_image_haxm.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/android/asdk_man_intel_image_haxm.png)
 
 After download, run the Intel installer, which is available within your
 Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 

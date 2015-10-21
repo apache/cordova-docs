@@ -63,7 +63,7 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
 
 *   マイクロソフトは引き続き使用 `default.html` 既定のホーム ページが、ほとんどの web 開発者向けとして `index.html` 。 ためには、少なくとも可能性が取り組んでいる他のプラットフォームと一致することをお勧めします。 これを修正する、名前を変更する**ソリューション エクスプ ローラー**で、 `default.html` ファイルを `index.html` 。 ダブルクリックし、 `package.appxmanifest` ファイルし、**ページの開始**値を変更する `index.html` :
     
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
         
 
 *   含むように `cordova.js` を右クリックして、プロジェクトで、 `js` **ソリューション エクスプ**ローラーおよび**追加 → 新規項目**選択ディレクトリ。 検索、 `cordova.js` ファイルで、 `lib\windows-8` ディレクトリ。
@@ -96,13 +96,13 @@ Visual Studio 2012 の最寄りのバリアントを設定します。 製品の
         </body>
         
 
- [4]: img/guide/platforms/win8/wsnewproject.png
+ [4]: {{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png
 
 ## プロジェクトをテストします
 
 Visual Studio から、プロジェクトを実行します。表示されるメッセージ ボックスが表示されます。
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
     
 
 それだけです。コルドバでの Windows ストア アプリを構築する準備が整いました。

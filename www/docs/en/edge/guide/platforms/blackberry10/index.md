@@ -157,12 +157,12 @@ enable development mode.
 
 Launch the emulator image, then choose __Settings__ from the home screen:
 
-![](img/guide/platforms/blackberry10/bb_home.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_home.png)
 
 Navigate to the __Security and Privacy &rarr; Development Mode__
 section and enable the option:
 
-![](img/guide/platforms/blackberry10/bb_devel.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_devel.png)
 
 An additional set of command-line utilities are included when you set
 up the BlackBerry 10 platform for your project.  The following
@@ -188,7 +188,7 @@ Enable development mode and obtain the IP address as desribed in the
 emulator section above. You will also need to obtain the PIN from the
 the __Settings__ application under __About &rarr; Hardware__:
 
-![](img/guide/platforms/blackberry10/bb_pin.png)
+![]({{ site.baseurl }}/static/img/guide/platforms/blackberry10/bb_pin.png)
 
 Run the target command-line utility to associate a name with an IP
 address, device password and PIN.

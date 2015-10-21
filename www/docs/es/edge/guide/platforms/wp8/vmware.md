@@ -47,7 +47,7 @@ La [Microsoft Developer Network][1] proporciona instrucciones generales sobre c�
         vhv.enable = "TRUE"
         
 
- [2]: img/guide/platforms/wp8/vmware_memory_opts.png
- [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
+ [2]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_memory_opts.png
+ [3]: {{ site.baseurl }}/static/img/guide/platforms/wp8/vmware_advanced_opts.png
 
 Una vez que complete estos pasos, entonces estás listo para instalar el SDK de Windows Phone. Consulte a la guía de plataforma de Windows Phone 8 para más detalles.

@@ -52,11 +52,11 @@ Windows 8 と Windows RT での開発中で、 Microsoft は "Metro スタイル
 - Visual Studio 2012 を開き、 **New Project** を選択します。
 - ツリーから **Installed - Template - Other Languages - JavaScript - Windows Store** を選択し、プロジェクトリストから **Blank App** を選択します。お好きなプロジェクト名を入力してください。このガイドでは **CordovaWin8Foo** を使用します。
 
-    ![](img/guide/getting-started/windows-8/wsnewproject.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-8/wsnewproject.png)
 
 - Microsoft はウェブサイトのデフォルトページに、大抵の開発者が **index.html** を使用するのに対し、 **default.html** を使用し続けています。 (加えて、他のプラットフォームでも大抵 **index.html** がデフォルトページの名前として使われているでしょう。) これを修正するために、 Solution Explorer で **default.html** ファイルを **index.html** へリネームします。そして、 **package.appxmanifest** ファイルをダブルクリックし、 **Start page** の値を **index.html** に変更します。
 
-    ![](img/guide/getting-started/windows-8/wschangemanifest.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-8/wschangemanifest.png)
 
 - **cordova.js** をプロジェクトに含めるには、 Solution Explorer で **js** フォルダーを右クリックして **Add - New Item** を選択します。 **lib\windows-8** フォルダーにある **cordova.js** ファイルを指定します。
 
@@ -100,7 +100,7 @@ Windows 8 と Windows RT での開発中で、 Microsoft は "Metro スタイル
 
 - プロジェクトを Visual Studio から実行します。メッセージボックスが現れるのが確認できるでしょう。
 
-    ![](img/guide/getting-started/windows-8/wsalert.png)
+    ![]({{ site.baseurl }}/static/img/guide/getting-started/windows-8/wsalert.png)
 
 終了
 -----

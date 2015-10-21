@@ -89,7 +89,7 @@ Il seguente esempio struttura rappresenta un 2.3.0 di progetto, ma può variare 
 
 ![][5]
 
- [5]: img/guide/platforms/wp8/projectStructure.png
+ [5]: {{ site.baseurl }}/static/img/guide/platforms/wp8/projectStructure.png
 
 ## Compilare il progetto per il dispositivo
 
@@ -105,6 +105,6 @@ Prima di testare l'applicazione su un dispositivo, il dispositivo deve essere re
 
 ![][7]
 
- [7]: img/guide/platforms/wp7/wpd.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/wp7/wpd.png
 
 A questo punto, hai finito.

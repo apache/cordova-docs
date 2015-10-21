@@ -73,7 +73,7 @@ expose the same APIs as on other Cordova-supported platforms.
   App__ from the projects list. Enter whatever project name you like,
   such as `CordovaWin8Foo` as in this example:
 
-    ![](img/guide/platforms/win8/wsnewproject.png)
+    ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsnewproject.png)
 
 - Microsoft continues to use `default.html` as the default home page,
   but most web developers use `index.html`. It's a good idea to do so,
@@ -82,7 +82,7 @@ expose the same APIs as on other Cordova-supported platforms.
   `index.html`. Then double-click the `package.appxmanifest` file and
   change the __Start page__ value to `index.html`:
 
-        ![](img/guide/platforms/win8/wschangemanifest.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wschangemanifest.png)
 
 - To include `cordova.js` in your project, right-click on the `js`
   directory in __Solution Explorer__ and select __Add &rarr; New
@@ -121,7 +121,7 @@ expose the same APIs as on other Cordova-supported platforms.
 
 Run the project from Visual Studio. You'll see the message box appear:
 
-        ![](img/guide/platforms/win8/wsalert.png)
+        ![]({{ site.baseurl }}/static/img/guide/platforms/win8/wsalert.png)
 
 That's it. You're now ready to build Windows Store apps with Cordova.
 

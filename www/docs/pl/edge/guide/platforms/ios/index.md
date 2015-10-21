@@ -98,7 +98,7 @@ Po platformie ios jest dodawany do projektu, można otworzyć go w Xcode. Klikni
 
 ![][6]
 
- [6]: img/guide/platforms/ios/helloworld_project.png
+ [6]: {{ site.baseurl }}/static/img/guide/platforms/ios/helloworld_project.png
 
 ## Wdrażanie do emulatora
 
@@ -118,8 +118,8 @@ Aby wyświetlić podgląd aplikacji w emulatorze iOS:
     
     Tylko jeden emulatora może działać w czasie, więc jeśli chcesz przetestować aplikację w inny emulator, musisz zamknąć aplikację emulatora i uruchomić inny cel w Xcode.
 
- [7]: img/guide/platforms/ios/select_xcode_scheme.png
- [8]: img/guide/platforms/ios/HelloWorldStandard.png
+ [7]: {{ site.baseurl }}/static/img/guide/platforms/ios/select_xcode_scheme.png
+ [8]: {{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorldStandard.png
 
 Xcode jest dostarczany z emulatorów dla najnowszej wersji iPhone i iPad. Starsze wersje mogą być dostępne z **Xcode → preferencje → pobieranie składników →** panelu.
 
@@ -190,7 +190,7 @@ Xcode jest ostrzeżenie o metodzie `invokeString` dotyczy funkcji, które urucha
     
     ![][11]
 
- [11]: img/guide/platforms/ios/xcode_build_location.png
+ [11]: {{ site.baseurl }}/static/img/guide/platforms/ios/xcode_build_location.png
 
 Jest to ustawienie domyślne dla nowych Xcode zainstalować, ale może być zestaw, inaczej po uaktualnienie ze starszej wersji Xcode.
 
