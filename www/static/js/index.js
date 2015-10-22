@@ -94,14 +94,6 @@ function checkNotification() {
     return new_blog_count;
 }
 
-function dismissSurvey() {
-    setCookie("surveyDismissed", 1, 365);
-}
-
-function isSurveyDismissed() {
-    return getCookie("surveyDismissed");
-}
-
 $(document).ready(function () {
 
     // code for blog badge
@@ -116,16 +108,6 @@ $(document).ready(function () {
     if (new_blog_count) {
         document.getElementById("new_blog_count").innerHTML = new_blog_count;
     }
-
-    // code for survey banner
-    if(!isSurveyDismissed()) {
-        $("#survey-banner").removeClass("hidden");
-    }
-
-    $("#survey-banner-dismiss-btn").click(function() {
-        dismissSurvey();
-        $("#survey-banner").addClass("hidden");
-    });
 
     // code for click-to-copy functionality
     var client = new ZeroClipboard();

@@ -135,47 +135,6 @@ code.prettyprint {
     border: none !important;
 }
 
-/* survey banner */
-.survey-banner {
-    background-color: #FFCC00;
-    color: #1E1E1E;
-    font-size: 16px;
-    position: relative;
-}
-
-.survey-banner .container p {
-    margin: 10px 0;
-    padding-right: 42px;
-    text-align: center;
-}
-
-.survey-banner .dismiss-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 42px;
-    cursor: pointer;
-}
-
-.survey-banner .dismiss-btn {
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.survey-banner .dismiss-btn:hover {
-    opacity: 1;
-}
-
-.survey-banner .dismiss-btn:after {
-    content: "\00d7";
-    font-size: 24px;
-    font-weight: bold;
-    display: block;
-    margin-left: 10px;
-    margin-top: 2px;
-}
-
 @import 'home';
 @import 'blog';
 @import 'plugins';
