@@ -80,8 +80,15 @@ analytics_id: UA-64283057-1
                     {% assign language_id = language_entry[0] %}
                     {% assign language    = language_entry[1] %}
 
-                    {% capture current_language_path %}/{{ page.language }}/{% endcapture %}
-                    {% capture target_language_path %}/{{ language_id }}/{% endcapture %}
+                    {% capture current_language_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
+                    {% capture target_language_path %}/docs/{{ language_id }}/{{ page.version }}/{% endcapture %}
+
+                    <!--
+                    Replace only the language part of the URI, thereby
+                    redirecting to the same page in the other language.
+                    The page should exist because it's for the same version.
+                     -->
+                    {% assign target_language_url = page.url | replace:current_language_path,target_language_path %}
 
                     {% capture missing_version_class %}
                         {% if language.versions contains page.version %}
@@ -91,12 +98,7 @@ analytics_id: UA-64283057-1
                     {% endcapture %}
 
                     <li>
-                        <!--
-                        Replace only the language part of the URI, thereby
-                        redirecting to the same page in the other language.
-                        The page should exist because it's for the same version.
-                         -->
-                        <a href="{{ site.baseurl }}{{ page.url | replace:current_language_path,target_language_path }}" class="{{ missing_version_class }}"
+                        <a href="{{ site.baseurl }}{{ target_language_url }}" class="{{ missing_version_class }}"
                         >
                             {% if page.language == language_id %}
                                 <span class="selected">
@@ -122,13 +124,20 @@ analytics_id: UA-64283057-1
                     <!-- List versions available in this language -->
                     {% for version in site.data.languages.[page.language].versions reversed %}
                     <li>
+                        {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
+                        {% capture target_version_path %}/docs/{{ page.language }}/{{ version }}/{% endcapture %}
 
                         <!--
-                        Redirect to the root of the version docs, not to the same
-                        page, because different versions may not have the same
-                        set of pages.
+                        Replace only the version part of the URI, thereby
+                        redirecting to the same page in the other version.
+
+                        WARNING:
+                            this page might not exist in the target version
+                            because page layouts change from version to version
                          -->
-                        <a href="{{ site.baseurl }}/docs/{{ page.language }}/{{ version }}">
+                        {% assign target_version_url = page.url | replace:current_version_path,target_version_path%}
+
+                        <a href="{{ site.baseurl }}{{ target_version_url }}">
                             {% if page.version == version %}
                                 <span class="selected">
                                     {{ version }}
@@ -143,9 +152,12 @@ analytics_id: UA-64283057-1
             </div>
         </div>
 
-        <!-- Show warnings for special versions (i.e. non-latest, and edge) -->
-        {% capture latest_url %}{{ site.baseurl }}/docs/{{ page.language }}/{{ site.latest_docs_version }}{% endcapture %}
+        <!-- Get URL for this page in the latest version -->
+        {% capture current_version_path %}/docs/{{ page.language }}/{{ page.version }}/{% endcapture %}
+        {% capture latest_version_path %}/docs/{{ page.language }}/{{ site.latest_docs_version }}/{% endcapture %}
+        {% assign latest_url = page.url | replace:current_version_path,latest_version_path %}
 
+        <!-- Show warnings for special versions (i.e. non-latest, and edge) -->
         {% if page.version == 'edge' or page.version != site.latest_docs_version %}
 
             {% if page.version == 'edge' %}
@@ -161,7 +173,7 @@ analytics_id: UA-64283057-1
                     <span aria-hidden="true">&times;</span>
                 </button>
                 {{ warning_text }} {{ page.click_here_text }}:
-                <a href="{{ latest_url }}">{{ site.latest_docs_version }}</a>
+                <a href="{{ site.baseurl }}{{ latest_url }}">{{ site.latest_docs_version }}</a>
             </div>
 
         {% endif %}
