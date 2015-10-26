@@ -109,6 +109,7 @@ package.
 
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
+        "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include"
         "$(BUILT_PRODUCTS_DIR)"
 
     As of Cordova 2.1.0, `CordovaLib` has been upgraded to use
