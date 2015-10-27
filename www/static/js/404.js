@@ -42,10 +42,6 @@
         return DOCS_VERSION_PATTERN.test(url);
     }
 
-    function tryURL(url, responseMap) {
-        $.ajax({url: url, statusCode: responseMap});
-    }
-
     function showNewRedirect(url) {
         $("#new-redirect-link").attr("href", url);
         $("#not-found-redirect-alert").css("display", "block");
@@ -54,6 +50,11 @@
     function showEdgeRedirect(url) {
         $("#edge-redirect-link").attr("href", url);
         $("#no-version-redirect-alert").css("display", "block");
+    }
+
+    function showRootRedirect(url) {
+        $("#root-redirect-link").attr("href", url);
+        $("#no-page-redirect-alert").css("display", "block");
     }
 
     function main() {
@@ -74,20 +75,27 @@
             url: rootURL,
             statusCode: {
 
-                // if the root exists, before offering the new
-                // URL, also check if it exists
+                // if the root exists, check if the new URL exists
                 200: function () {
                     $.ajax({
                         url: newURL,
                         statusCode: {
+
+                            // redirect to the new URL if it exists
                             200: function () {
                                 showNewRedirect(newURL)
+                            },
+
+                            // if the new URL doesn't exist, redirect to root
+                            404: function() {
+                                showRootRedirect(rootURL)
                             }
                         }
                     });
                 },
 
-                // if it doesn't exist, assume that the version is invalid
+                // if root doesn't exist, assume that the version
+                // is invalid and redirect to edge
                 404: function () {
                     showEdgeRedirect(edgeURL)
                 }

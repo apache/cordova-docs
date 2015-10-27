@@ -1,3 +1,24 @@
 ---
 ---
+
 ErrorDocument 404 {{ site.baseurl }}/404.html
+
+# Redirects for old docs pages
+Options +FollowSymLinks
+RewriteEngine on
+
+# only bother applying the below rules for docs pages
+# NOTE:
+#      the leading slash is optional, so it has a '?' before it
+RewriteCond %{REQUEST_URI} ^.*{{ site.baseurl }}/?docs/.*$
+
+# create a 301 mapping with a RewriteRule for each
+# docs redirect specified in _data/docs-redirects.yml
+# NOTE:
+#      the leading slash is optional because sometimes
+#      REQUEST_URI doesn't contain it
+# NOTE:
+#      the first part of the path (i.e. $1) is not used because the new
+#      URI's prefix is known and fixed by us (i.e. baseurl/docs/...)
+{% for redirect in site.data.docs-redirects %}
+RewriteRule ^.*(/?)docs/([^/]{2,2})/([^/]+)/{{ redirect.old }}$ {{ site.baseurl }}/docs/$2/$3/{{ redirect.new }} [R=301]{% endfor %}
