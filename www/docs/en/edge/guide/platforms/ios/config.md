@@ -158,3 +158,16 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   
         <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
 
+- `SuppressesLongPressGesture` (boolean, defaults to `false`): Set to `true` to
+  avoid iOS9+ rendering a magnifying glass widget when the user longpresses the webview.
+  Test your app thoroughly since this may interfere with text selection capabilities.
+
+        <preference name="SuppressesLongPressGesture" value="true" />
+
+- `Suppresses3DTouchGesture` (boolean, defaults to `false`): Set to `true` to
+  avoid 3D Touch capable iOS devices rendering a magnifying glass widget when the user
+  applies force while longpressing the webview. Test your app thoroughly since this
+  disables `onclick` handlers, but plays nice with `ontouchend`.
+  If this setting is `true`, `SuppressesLongPressGesture` will effectively be `true` as well.
+
+        <preference name="Suppresses3DTouchGesture" value="true" />
