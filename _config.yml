@@ -12,9 +12,13 @@ repo:
     uri:    https://github.com/apache/cordova-docs
     branch: master
 
+# NOTE:
+#      this value gets overwritten in _version.yml, which is a generated file
 latest_docs_version: edge
 
-# NOTE: defaults are configured in _defaults.yml, which is a generated file
+# NOTE:
+#      this value gets overwritten in _defaults.yml, which is a generated file
+defaults:
 
 # =======
 # Build settings

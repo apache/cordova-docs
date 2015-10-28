@@ -1,24 +1,47 @@
 ---
 ---
 
-ErrorDocument 404 {{ site.baseurl }}/404.html
+ErrorDocument 404 {{site.baseurl}}/404.html
 
-# Redirects for old docs pages
+# turn on redirection
 Options +FollowSymLinks
 RewriteEngine on
 
-# only bother applying the below rules for docs pages
 # NOTE:
-#      the leading slash is optional, so it has a '?' before it
-RewriteCond %{REQUEST_URI} ^.*{{ site.baseurl }}/?docs/.*$
+#       Some of the below redirects are 302s, and some are 301s. 302s are used
+#       for redirects whose targets change sometimes. For example:
+#           - /docs/          -> /docs/fr/, /docs/en/, etc.
+#           - /docs/en/       -> /docs/en/edge/, /docs/en/latest/, etc.
+#           - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
+#
+#       301s are for PERMANENT redirects. These are used only for mapping old
+#       docs pages to new docs pages.
 
-# create a 301 mapping with a RewriteRule for each
-# docs redirect specified in _data/docs-redirects.yml
+# 302:
+#       docs     -> docs/en/latest/
+#       docs/    -> docs/en/latest/
+#       docs/XX  -> docs/XX/latest/
+#       docs/XX/ -> docs/XX/latest/
+#
 # NOTE:
-#      the leading slash is optional because sometimes
-#      REQUEST_URI doesn't contain it
+#       these can both apply, turning "/docs" into "/docs/en/latest/"
+RewriteRule ^.*docs/$ {{site.baseurl}}/docs/en/
+RewriteRule ^.*docs/(\w\w)/$ {{site.baseurl}}/docs/$1/latest/ [R=302]
+
+# rewrite only:
+#       /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
+#
 # NOTE:
-#      the first part of the path (i.e. $1) is not used because the new
-#      URI's prefix is known and fixed by us (i.e. baseurl/docs/...)
+#       This does NOT return a redirect. It returns the resource *as if* the
+#       redirected URI was requested. That is, both URIs return the same
+#       resource, but the browser won't change the URI (no redirects followed).
+RewriteRule ^.*docs/(\w\w)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
+
+# 301:
+#       old docs pages -> new docs pages (from www/_data/docs-redirects.yml)
+#
+# NOTE:
+#       The first part of the path (i.e. the ".*") is
+#       thrown away and replaced by site.baseurl.
 {% for redirect in site.data.docs-redirects %}
-RewriteRule ^.*(/?)docs/([^/]{2,2})/([^/]+)/{{ redirect.old }}$ {{ site.baseurl }}/docs/$2/$3/{{ redirect.new }} [R=301]{% endfor %}
+RewriteRule ^.*docs/(\w\w)/([^/]+)/{{redirect.old}}$ {{site.baseurl}}/docs/$1/$2/{{redirect.new}} [R=301]{% endfor %}
