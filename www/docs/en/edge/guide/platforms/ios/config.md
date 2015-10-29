@@ -171,3 +171,8 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   If this setting is `true`, `SuppressesLongPressGesture` will effectively be `true` as well.
 
         <preference name="Suppresses3DTouchGesture" value="true" />
+        
+- `CDVSystemSchemesOverride` (string, defaults to `maps,tel,telprompt`): A comma separated list of URL schemes for URLs that are to be passed on to the system, instead of being handled by the Cordova WebView itself.
+  
+        <preference name="CDVSystemSchemesOverride" value="maps,tel,telprompt" />
+        
