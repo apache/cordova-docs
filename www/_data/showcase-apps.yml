@@ -5,6 +5,13 @@
 #         A description that can
 #         span multiple lines.
 
+-   name: DailyCost - Personal Finance
+    image: DailyCost.png
+    url: http://dailycost.com
+    description: >
+        DailyCost is a simple and elegant expense tracker that helps you
+		organize your personal finance.
+
 -   name: NewVo - Fast Style Advice
     image: NewVo.png
     url: https://newvo.me
