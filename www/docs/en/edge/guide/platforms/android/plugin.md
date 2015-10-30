@@ -259,9 +259,100 @@ As of Cordova 2.0, Plugins can no longer directly access the
 methods exist on the `Context`, so both `getContext()` and
 `getActivity()` can return the required object.
 
+## Android Permissions
+
+Android permissions until recently have been handled at install-time instead
+of runtime.  These permissions are required to be declared on an application that uses
+the permissions, and these permissions need to be added to the Android Manifest.  This can be
+accomplished by using the config.xml to inject these permissions in the AndroidManifest.xml file.
+The example below uses the Contacts permission.
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+
+## Android Permissions (Cordova-Android 5.0.x and greater)
+
+Android 6.0 "Marshmallow" introduced a new permissions model where
+the user can turn on and off permissions as necessary.  This means that
+applications must handle these permission changes to be future-proof, which
+was the focus of the Cordova-Android 5.0 release.
+
+The permissions that need to be handled at runtime can be found in the Android Developer
+documentation here.
+
+As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
+
+        cordova.reqquestPermission(CordovaPlugin plugin, int requestCode, String permission);
+
+To cut down on verbosity, it's standard practice to assign this to a local static variable:
+
+    public static final String READ = Manifest.permission.READ_CONTACTS;
+
+
+Then, in the exec method, the permission should be checked:
+
+            if(cordova.hasPermission(READ)) {
+                search(executeArgs);
+            }
+            else
+            {
+                getReadPermission(SEARCH_REQ_CODE);
+            }
+
+In this case, we just call requestPermission:
+
+    protected void getReadPermission(int requestCode)
+    {
+        cordova.requestPermission(this, requestCode, READ);
+    }
+
+This will call the activity and cause a prompt to appear asking for the permission.  Once the user has the permission, the result must be handled with the onRequestPermissionResult method, which
+every plugin should override.  An example of this can be found below:
+
+    public void onRequestPermissionResult(int requestCode, String[] permissions,
+                                             int[] grantResults) throws JSONException
+    {
+        for(int r:grantResults)
+        {
+            if(r == PackageManager.PERMISSION_DENIED)
+            {
+                this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
+                return;
+            }
+        }
+        switch(requestCode)
+        {
+            case SEARCH_REQ_CODE:
+                search(executeArgs);
+                break;
+            case SAVE_REQ_CODE:
+                save(executeArgs);
+                break;
+            case REMOVE_REQ_CODE:
+                remove(executeArgs);
+                break;
+        }
+    }
+
+
+The switch statement above would return from the prompt and depending on the requestCode that was passed in, it would call the method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.
+
+In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the permissions array, as what is done with the Geolocation plugin:
+
+    String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
+
+Then when requesting the permission, all that needs to be done is the following:
+    
+    cordova.requestPermissions(this, 0, permissions);
+
+This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a 
+dependency, although this is not required.
+
 ## Debugging Android Plugins
 
-Eclipse allows you to debug plugins as Java source included in the
-project.  Only the latest version of the Android Developer Tools
-allows you to attach source code to _JAR_ dependencies, so this
-feature is not yet fully supported.
+Android debugging can be done with either Eclipse or Android Studio, although Android
+studio is recommended.  Since Cordova-Android is currently used as a library project,
+and plugins are supported as source code, it is possible to debug the Java code inside 
+a Cordova application just like a native Android application.
+
