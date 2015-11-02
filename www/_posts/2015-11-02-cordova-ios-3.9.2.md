@@ -6,9 +6,9 @@ title:  "Apache Cordova iOS 3.9.2"
 categories: announcements
 tags: news releases
 ---
-We are happy to announce that `Cordova iOS 3.9.2` has been released and will be the default iOS version after next cordova-cli release.
+We are happy to announce that `Cordova iOS 3.9.2` has been released and will be the default iOS version.
 
-This release addresses multiple iOS 9/9.1 and XCode 7/7.1 issues. It also deprecates a number of APIs, which will be removed in `Cordova iOS 4.0.0`. For full list of API changes see [API changes in 4.0.md](https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md)
+This release addresses multiple iOS 9/9.1 and XCode 7/7.1 issues. It also deprecates a number of APIs, which will be removed in `Cordova iOS 4.0.0`. For a full list of API changes see [API changes in 4.0.md](https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md)
 
 To upgrade:
 
