@@ -67,7 +67,7 @@
 
         // get related URLs
         var rootURL = getRootURL(url);
-        var edgeURL = getEdgeURL(rootURL);
+        var edgeURL = getEdgeURL(url);
         var newURL  = transformOldURL(url);
 
         // try the root URL
