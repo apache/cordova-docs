@@ -33,7 +33,7 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.5",
-    "jodoc": "git://github.com/kant2002/jodoc-js",
+    "jodoc": "git+https://github.com/kant2002/jodoc-js.git",
     "js-yaml": "^3.2.2",
     "less": "^2.5.1",
     "ncp": "^2.0.0",
