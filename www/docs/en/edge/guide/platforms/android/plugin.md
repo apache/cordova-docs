@@ -281,7 +281,7 @@ was the focus of the Cordova-Android 5.0 release.
 The permissions that need to be handled at runtime can be found in the Android Developer
 documentation here.
 
-As far as a plugin is concerned, the permission can be requested by calling the ermission method, which signature is as follows:
+As far as a plugin is concerned, the permission can be requested by calling the permission method, which signature is as follows:
 
         cordova.reqquestPermission(CordovaPlugin plugin, int requestCode, String permission);
 
@@ -337,6 +337,17 @@ every plugin should override.  An example of this can be found below:
 
 
 The switch statement above would return from the prompt and depending on the requestCode that was passed in, it would call the method.  It should be noted that permission prompts may stack if the execution is not handled correctly, and that this should be avoided.
+
+In addition to asking for permission for a single permission, it is also possible to request permissions for an entire group by defining the permissions array, as what is done with the Geolocation plugin:
+
+    String [] permissions = { Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION };
+
+Then when requesting the permission, all that needs to be done is the following:
+    
+    cordova.requestPermissions(this, 0, permissions);
+
+This requests the permissions specified in the array.  It's a good idea to provide a publicly accessible permissions array since this can be used by plugins that use your plugin as a 
+dependency, although this is not required.
 
 ## Debugging Android Plugins
 
