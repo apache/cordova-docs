@@ -1,11 +1,17 @@
+# NOTE:
+#      some of the settings in this file get overwritten in later config
+#      files like _prod.yml, _dev.yml, and _defaults.yml
+
 # =======
 # Site settings
 # =======
 title:       Apache Cordova
-description: Apache Cordova is a set of device APIs that allow a web mobile app developer to access native device function from JavaScript.
 url:         "https://cordova.apache.org" # the base hostname & protocol
-baseurl:     "" # the subpath of the site, e.g. /blog/
+baseurl:     "" # the subpath of the site, e.g. /blog; NOTE: no trailing slash
 rss_path:    /feed.xml
+description: >
+    Apache Cordova is a set of device APIs that allow a web mobile app
+    developer to access native device function from JavaScript.
 
 excerpt_separator: <!--more-->
 repo:

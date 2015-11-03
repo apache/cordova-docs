@@ -1,0 +1,5 @@
+# all crawlers
+User-agent: *
+
+# disallow nothing; i.e. allow all pages to be crawled
+Disallow:

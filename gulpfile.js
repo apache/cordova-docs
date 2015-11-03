@@ -180,8 +180,9 @@ gulp.task("languages", function () {
 
 gulp.task("version", function () {
     // this code is stupid; it's basically the line:
-    //      cat VERSION | sed -e 's/^/latest_docs_version: /' > _version.yml
-    // however we're in Gulp, and on Windows... so we contort it into a monster
+    //      cat VERSION | sed -e 's/^/VERSION_VAR_NAME: /' > _version.yml
+    // however we're in Gulp, and we need to support Windows...
+    // so we contort it into a monster
     return gulp
         .src(VERSION_FILE)
         .pipe(header(VERSION_VAR_NAME + ": "))
