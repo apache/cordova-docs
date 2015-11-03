@@ -27,7 +27,7 @@
     }
 
     function getEdgeURL(url) {
-        return url.replace(/docs\/(..)\/([\d\.edge]+)/, 'docs/$1/edge');
+        return url.replace(/docs\/(..)\/([\d\.]+|latest|edge)/, 'docs/$1/edge');
     }
 
     function getRootURL(url) {
