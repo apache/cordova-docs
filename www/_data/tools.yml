@@ -105,3 +105,9 @@
         Framework7 is a free and open source mobile HTML framework for
         developing hybrid mobile apps or web apps with iOS & Android
         native look and feel.
+
+-   name: Evothings Studio
+    image: evothings.png
+    url: https://evothings.com/
+    description: >
+        Evothings Studio provides developers with a rapid workflow and lots of examples for the industrial internet. Focus lies on IoT and related code, formats and protocols for hooking up phones to a world of connected things.
