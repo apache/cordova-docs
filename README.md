@@ -252,22 +252,20 @@ Troubleshooting
 
 * If you get errors trying to run `gem install bundle` due to permission issues, you may want to think about using a different method to install `ruby`. Checkout [rbenv][rbenvgh]. Instructions below:
 
-Install rbenv
+  1. Install rbenv
 
     brew install rbenv ruby-build
 
-Add `eval "$(rbenv init -)"` to your `.bash_profile`:
+  2. Add `eval "$(rbenv init -)"` to your `.bash_profile`:
 
     echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
-Install a version of `ruby` and set it to your local version:
+  3. Install a version of `ruby` and set it to your local version:
 
     rbenv install 2.0.0-p647
     rbenv local 2.0.0-p647
 
-
-
-
+* If you see the error `Error: spawn ENOENT`, run `gulp clean`
 
 Ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
 
