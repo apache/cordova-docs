@@ -118,7 +118,7 @@ Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN l
 
     cp -R cordova-docs/build-prod/* cordova-website/public/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN). The commit might take a while (up to 1 hour), depending on the number of files changed.
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN). The commit might take a while (up to 1 hour), depending on the number of files changed. To see just the `?` changes, run `svn status | grep "?"`
 
 Working on the Documentation
 ============================

@@ -32,7 +32,7 @@ Warning: Some people are seeing the following error when adding the new platform
 
 If you see this, you will need to clear your cache. Run the following command to do so.
 
-    rm -rf ~./cordova
+    rm -rf ~/.cordova
 
 Please report any issues at [issues.cordova.io](http://issues.cordova.io). 
 
