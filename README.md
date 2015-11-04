@@ -84,7 +84,11 @@ The built website will be in a folder called `build-prod`.
 Developing
 ==========
 
-To work on the website and see changes live, run:
+To work on the website, run:
+
+    node_modules/.bin/gulp --serve
+
+To see changes live as you save, run:
 
     node_modules/.bin/gulp
 
@@ -242,7 +246,30 @@ To print the list of plugin versions tested:
 Troubleshooting
 ===============
 
-Ask for help on the IRC channel: #cordova on irc.freenode.net.
+* If you see `Error: EMF, too many open files`, you have to increase your `ulimit`.
+    
+    ulimit -n 10480
+
+* If you get errors trying to run `gem install bundle` due to permission issues, you may want to think about using a different method to install `ruby`. Checkout [rbenv][rbenvgh]. Instructions below:
+
+Install rbenv
+
+    brew install rbenv ruby-build
+
+Add `eval "$(rbenv init -)"` to your `.bash_profile`:
+
+    echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+Install a version of `ruby` and set it to your local version:
+
+    rbenv install 2.0.0-p647
+    rbenv local 2.0.0-p647
+
+
+
+
+
+Ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
@@ -254,3 +281,4 @@ Ask for help on the IRC channel: #cordova on irc.freenode.net.
 [install_pip]: https://pip.pypa.io/en/latest/installing.html
 [svn]: http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
 [pr]: https://help.github.com/articles/using-pull-requests/
+[rbenvgh]: https://github.com/sstephenson/rbenv
