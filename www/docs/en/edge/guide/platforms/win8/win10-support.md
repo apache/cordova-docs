@@ -21,30 +21,30 @@ title: Cordova for Windows 10 #
 ---
 
 # Cordova for Windows 10 #
-Maybe you could instead call it "Windows 10 for Cordova."  Windows 10 has had its HTML and 
-JavaScript Apps platform re-engineered to bring Cordova support to the web, and to get 
+Maybe you could instead call it "Windows 10 for Cordova."  Windows 10 has had its HTML and
+JavaScript Apps platform re-engineered to bring Cordova support to the web, and to get
 platform security restrictions out of your way.
 
 ## Getting Started with Windows 10 ##
-Adding Windows 10 support to your app is as easy as setting your Windows target platform 
+Adding Windows 10 support to your app is as easy as setting your Windows target platform
 version to 10.0:
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
 
-When you build with these preferences both set, only a single .appx (and .appxupload) will 
+When you build with these preferences both set, only a single .appx (and .appxupload) will
 be built.  They will require Windows 10 at a minimum.
 
 ### Understanding Remote Mode vs. Local Mode ###
-Remote Mode is a new feature of the HTML Applications for Windows platform in Windows 10.  In 
-Windows 8 and 8.1, HTML Applications worked in what is called "Local Mode" in Windows 10.  In 
-Local Mode, HTML Applications have full access to the native Windows API surface and 
-capabilities.  In order to prevent script injection attacks which could result in leaking 
-personally-identifiable information due to malicious code, Local Mode disallows inline script, 
-and requires developers who perform DOM manipulation to do so within an explicit context 
-(`MSApp.execUnsafeLocalFunction`).  
+Remote Mode is a new feature of the HTML Applications for Windows platform in Windows 10.  In
+Windows 8 and 8.1, HTML Applications worked in what is called "Local Mode" in Windows 10.  In
+Local Mode, HTML Applications have full access to the native Windows API surface and
+capabilities.  In order to prevent script injection attacks which could result in leaking
+personally-identifiable information due to malicious code, Local Mode disallows inline script,
+and requires developers who perform DOM manipulation to do so within an explicit context
+(`MSApp.execUnsafeLocalFunction`).
 
-Remote Mode eliminates those requirements, which makes it possible to use unmodified libraries like jQuery or AngularJS directly in your code, without any changes.  To do so, it removes your ability to declare certain capabilities when certifying your app in the Windows Store.  The removal of these capabilities usually doesn't prevent getting to certain functionality, but it might require to use a different combination of APIs or tactics.  
+Remote Mode eliminates those requirements, which makes it possible to use unmodified libraries like jQuery or AngularJS directly in your code, without any changes.  To do so, it removes your ability to declare certain capabilities when certifying your app in the Windows Store.  The removal of these capabilities usually doesn't prevent getting to certain functionality, but it might require to use a different combination of APIs or tactics.
 
 ### Effect of Remote Mode on capabilities ###
 The following capabilities are unavailable when deploying your Remote Mode application to the Windows Store:
@@ -56,12 +56,12 @@ The following capabilities are unavailable when deploying your Remote Mode appli
 - Pictures Library (`picturesLibrary`)
 - Videos Library (`videosLibrary`)
 - Removable [Storage](../../../cordova/storage/storage.html) (`removableStorage`)
-- Internet client/server (`internetClientClientServer`) - note that `internetClient` is still permitted
+- Internet client/server (`internetClientServer`) - note that `internetClient` is still permitted
 - Private network client/server (`privateNetworkClientServer`)
 
 Each of the library restrictions may be worked around by requesting that the user interact with the file system via a [File Picker](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx).  This prevents malicious injected code from arbitrarily accessing the file system.
 
-The network-related restrictions must be worked around by either using an API that doesn't use capability checks or by brokering communication via standard internet communication channels, such as `XMLHttpRequest` or Web Sockets.  
+The network-related restrictions must be worked around by either using an API that doesn't use capability checks or by brokering communication via standard internet communication channels, such as `XMLHttpRequest` or Web Sockets.
 
 The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.
 
@@ -75,31 +75,31 @@ The Enterprise Authentication and Shared User Certificates capabilities are spec
 
 *At least one is required.*
 
-These preferences identify the version of Windows or Windows Phone you would like your 
-app package to target. 
+These preferences identify the version of Windows or Windows Phone you would like your
+app package to target.
 
 **Valid Values**
 
 - `10.0`, `UAP`: Builds for Windows 10 Universal App Platform
 - `8.1`: Builds for Windows 8.1 or Windows Phone 8.1
-- `8.0`: Build for Windows 8.0.  Not valid for Windows Phone (use the **wp8** Cordova 
+- `8.0`: Build for Windows 8.0.  Not valid for Windows Phone (use the **wp8** Cordova
 platform instead)
 
 **Scenarios**
 
-If you are targeting Windows 10 only, you only need to have a single `windows-target-version` 
-setting in your config.xml file.  
+If you are targeting Windows 10 only, you only need to have a single `windows-target-version`
+setting in your config.xml file.
 
 #### WindowsDefaultUriPrefix ####
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
 
-This preference identifies whether you want your app to target the **local context** or **remote 
-context** as its startup URI.  When building for Windows 10, the default is the remote 
+This preference identifies whether you want your app to target the **local context** or **remote
+context** as its startup URI.  When building for Windows 10, the default is the remote
 context (`ms-appx-web://`).
 
-In order to have a local-mode application that is not impacted by Remote Mode capability 
-restrictions, you must set this preference to `ms-appx://` and not declare any `<access>` 
-elements with remote URIs. 
+In order to have a local-mode application that is not impacted by Remote Mode capability
+restrictions, you must set this preference to `ms-appx://` and not declare any `<access>`
+elements with remote URIs.
 
 **Valid Values**
 
@@ -124,6 +124,6 @@ There are three parts to each value: the **SDK**, the **version restriction**, a
 - The **version restriction** defines application compatibility rules.  For example, if the `-MinVersion` is set to 10.1.0.0, then OS versions which don't support at least 10.1.0.0 of the corresponding SDK won't be able to load it.
 	- `-MinVersion` specifies the minimum version of the SDK required
 	- `-MaxVersionTested` specifies the highest-tested version of the SDK.  If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.
-- The **version value** is a 4-integer tuple in the form of *major.minor.build.qfe*. 
+- The **version value** is a 4-integer tuple in the form of *major.minor.build.qfe*.
 
 If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default.

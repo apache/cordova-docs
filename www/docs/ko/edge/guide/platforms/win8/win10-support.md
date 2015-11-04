@@ -30,7 +30,7 @@ title: 윈도우 10 코르도바
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 이러한 환경 설정을 모두 설정으로 빌드할 때만 한 단일.appx (및.appxupload)를 건설 된다. 그들은 최소한 윈도우 10 필요 합니다.
 
@@ -51,7 +51,7 @@ title: 윈도우 10 코르도바
   * 사진 라이브러리 (`picturesLibrary`)
   * 비디오 라이브러리 (`videosLibrary`)
   * 이동식 저장소 (`removableStorage`)
-  * 인터넷 클라이언트/서버 (`internetClientClientServer`)-참고는 `internetClient` 은 여전히 허용
+  * 인터넷 클라이언트/서버 (`internetClientServer`)-참고는 `internetClient` 은 여전히 허용
   * 개인 네트워크 클라이언트/서버 (`privateNetworkClientServer`)
 
 라이브러리 제한의 각 사용자는 [파일 선택기](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx)를 통해 파일 시스템 상호 작용 요청 하 여 주위 일 수 있습니다. 이 임의로 액세스 하는 파일 시스템에서 악성 코드를 주입된을 방지할 수 있습니다.
@@ -68,7 +68,7 @@ title: 윈도우 10 코르도바
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *적어도 하나는 필요 합니다.*
 
@@ -87,7 +87,7 @@ title: 윈도우 10 코르도바
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 이 기본 설정은 귀하의 응용 프로그램으로 시작 URI는 **로컬 컨텍스트** 또는 **원격** 대상 여부를 식별 합니다. 윈도우 10을 만들 때 기본값은 원격 컨텍스트 (`ms-appx-web:/ /`).
 
@@ -106,7 +106,7 @@ title: 윈도우 10 코르도바
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 이러한 기본 설정을 식별 (를 포함 하 여 Windows 범용, 윈도우 모바일, 또는 Xbox에 국한 되지 않음) 어떤 생태계 그리고 그들의 최소/최대 버전은 호환. 그들은 여전히 있어야 그 플랫폼 범용 응용 프로그램 플랫폼 (기본 OS로 서 너무 창 10)에 대 한 지원 합니다. 그러나, 이러한 응용 프로그램은 인식만 (게임 x 박스에 스트리밍) 같은 특정 장치에 사용할 수 있는 특정 기능을 나타낼 수 있습니다.
 
@@ -115,9 +115,9 @@ title: 윈도우 10 코르도바
 각 값에 3 개 부품이 있다: **SDK**, **버전 제한**및 **버전 값**. 이러한 기본 설정이 `Windows` 또는 `Microsoft` 시작 하 고 끝나는 `MinVersion-` 또는 `-MaxVersionTested`에 의해 검색:
 
   * **SDK** 는 타겟팅 하려는 전문된 플랫폼을 정의 합니다. 기본값은 `Windows.Universal`. 이 대 한 유효한 값은 AppxManifest 스키마 `패키지/Depednencies/TargetPlatform` 요소에 정의 됩니다.
-  * 는 **버전 제한** 응용 프로그램 호환성 규칙을 정의합니다. 예를 들어 경우는 `-MinVersion` 다음 해당 SDK의 적어도 10.1.0.0을 지원 하지 않는 운영 체제 버전 그것을 로드할 수 없습니다 10.1.0.0로 설정 됩니다. 
+  * 는 **버전 제한** 응용 프로그램 호환성 규칙을 정의합니다. 예를 들어 경우는 `-MinVersion` 다음 해당 SDK의 적어도 10.1.0.0을 지원 하지 않는 운영 체제 버전 그것을 로드할 수 없습니다 10.1.0.0로 설정 됩니다.
       * `-MinVersion` 필요한 SDK의 최소 버전을 지정 합니다.
       * `-MaxVersionTested` 는 SDK의 높은 테스트 버전을 지정합니다. 해당 SDK의 새로운 버전을 출시 하는 경우 지정된 된 버전에 대 한 호환성 모드에서 실행 됩니다.
-  * **버전 값** 은 *major.minor.build.qfe* 의 형태로 4 정수 튜플. 
+  * **버전 값** 은 *major.minor.build.qfe* 의 형태로 4 정수 튜플.
 
 이러한 종류의 아무 기본 config.xml 파일에 지정 된 Windows.Universal 버전 10.0.0.0 기본적으로 선택 됩니다.

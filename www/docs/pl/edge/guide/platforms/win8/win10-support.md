@@ -30,7 +30,7 @@ Dodanie Windows 10 wsparcie do Twojej aplikacji jest tak łatwe, jak ustawienie 
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 Gdy budujesz z tych preferencji, które ustawione, zostanie zbudowany tylko jeden .appx (i .appxupload). Wymagają one Windows 10 co najmniej.
 
@@ -51,7 +51,7 @@ Następujące funkcje są niedostępne podczas wdrażania aplikacji zdalnego try
   * Biblioteka obrazy (`picturesLibrary`)
   * Biblioteka filmów (`videosLibrary`)
   * [Magazyn](../../../cordova/storage/storage.html) wymienny (`removableStorage`)
-  * Klient/serwer internetowy (`internetClientClientServer`) - należy pamiętać, że `internetClient` jest nadal dozwolone
+  * Klient/serwer internetowy (`internetClientServer`) - należy pamiętać, że `internetClient` jest nadal dozwolone
   * Prywatne sieci klient serwer (`privateNetworkClientServer`)
 
 Każdy z ograniczenia biblioteki może obejść prosząc że użytkownik współdziała z systemu plików za pośrednictwem [Wyboru plików](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). Zapobiega to złośliwy kod wstrzykuje arbitralnie dostępu do systemu plików.
@@ -68,7 +68,7 @@ Przedsiębiorstwo uwierzytelniania i udostępnionych certyfikatów użytkownika 
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *Przynajmniej taki jest wymagany.*
 
@@ -87,7 +87,7 @@ Jeśli kierujesz Windows 10 tylko, tylko trzeba mieć jeden `windows-target-vers
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 Preferencja ta określa, czy chcesz Twojej aplikacji do **kontekstu lokalnego** lub **zdalnego kontekście** jako jego starcie URI. Przy budowie Windows 10, domyślnie jest kontekst zdalnego (`ms ApX web: / /`).
 
@@ -106,7 +106,7 @@ Aby mieć lokalne tryb aplikacji, która nie ma wpływu na zdalny tryb możliwo�
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 Preferencje te zidentyfikować który ekosystemów (włączając ale nie ograniczając się do powszechnego systemu Windows, Windows Mobile lub Xbox) i ich wersje min/max są kompatybilne z. Wymagają one jeszcze, że platformy mają wsparcie dla uniwersalnej platformy aplikacji (tak Windows 10 jako podstawowy system operacyjny). Jednak te mogą wskazywać, że aplikacja jest świadomy danej funkcjonalności, które mogą być dostępne na niektóre urządzenia (takie jak gry płynący na Xbox).
 
@@ -115,9 +115,9 @@ Preferencje te zidentyfikować który ekosystemów (włączając ale nie ogranic
 Istnieją trzy części każdej wartości: **SDK**, **ograniczenie wersji**oraz **wersji wartość**. Te preferencje są wykrywane przez począwszy od `systemu Windows` lub `Microsoft` i kończące się na `- MinVersion` lub `- MaxVersionTested`:
 
   * **SDK** definiuje co specjalistyczne platformy chce kierować reklamy. Wartością domyślną jest `Windows.Universal`. Prawidłowe wartości dla tych są zdefiniowane w schemacie AppxManifest, w `Opakowaniu/Depednencies/TargetPlatform` elementów.
-  * The **ograniczenia wersji** określa zasady zgodności aplikacji. Na przykład jeśli `-MinVersion` jest zestaw do 10.1.0.0, a następnie wersje systemu operacyjnego, które nie obsługują co najmniej 10.1.0.0 odpowiedniego zestawu SDK nie będzie mógł załadować go. 
+  * The **ograniczenia wersji** określa zasady zgodności aplikacji. Na przykład jeśli `-MinVersion` jest zestaw do 10.1.0.0, a następnie wersje systemu operacyjnego, które nie obsługują co najmniej 10.1.0.0 odpowiedniego zestawu SDK nie będzie mógł załadować go.
       * `-MinVersion` określa minimalna wersja SDK wymagane
       * `-MaxVersionTested` określa najwyższe badane wersję zestawu SDK. Jeśli nowy wersja od odpowiedni SDK jest zwolniony, to będzie działać w trybie zgodności dla określonej wersji.
-  * **Wartość wersji** jest spójna kolekcja 4-Liczba całkowita w postaci *major.minor.build.qfe*. 
+  * **Wartość wersji** jest spójna kolekcja 4-Liczba całkowita w postaci *major.minor.build.qfe*.
 
 Jeśli nie ma preferencji te typy są określone w pliku config.xml, Windows.Universal wersja 10.0.0.0 zostanie wybrany domyślnie.

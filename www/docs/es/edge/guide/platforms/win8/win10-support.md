@@ -30,7 +30,7 @@ Añadir Windows 10 apoyo a su aplicación es tan sencillo como establecer su ver
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 Cuando se compila con estas preferencias establecen, se construirá sólo una sola .appx (y .appxupload). Requieren de Windows 10 como mínimo.
 
@@ -51,7 +51,7 @@ Al implementar su aplicación de modo remoto a la tienda de Windows no están di
   * Biblioteca de imágenes (`picturesLibrary`)
   * Biblioteca de videos (`videosLibrary`)
   * Medios de almacenamiento extraíbles (`removableStorage`)
-  * Cliente/servidor de Internet (`internetClientClientServer`) - Nota que `internetClient` es todavía permitido
+  * Cliente/servidor de Internet (`internetClientServer`) - Nota que `internetClient` es todavía permitido
   * Cliente/servidor de red privada (`privateNetworkClientServer`)
 
 Cada una de las restricciones de la biblioteca puede ser trabajada alrededor solicitando que el usuario interactuar con el sistema de archivos a través de un [Selector de archivos](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). Esto evita que código malicioso inyectado arbitrariamente a acceder al sistema de archivo.
@@ -68,7 +68,7 @@ Las capacidades de autenticación de empresa y certificados de usuario compartid
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *Se necesita por lo menos uno.*
 
@@ -87,7 +87,7 @@ Si usted está apuntando 10 Windows solamente, basta tener un ajuste de la `wind
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 Esta preferencia identifica si desea que su aplicación para apuntar el **contexto local** o **remoto contexto** como su inicio URI. Cuando se compila para Windows 10, el valor predeterminado es el contexto remoto (`ms-apppx-web: / /`).
 
@@ -106,7 +106,7 @@ Para tener una aplicación en modo local que no se ven afectada por las restricc
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 Estas preferencias identifican que los ecosistemas (incluyendo pero no limitado a Universal de Windows, Windows Mobile o Xbox) y son compatibles con sus versiones de min/max. Todavía requieren que las plataformas tienen soporte para la plataforma de aplicación Universal (10 de Windows así como el sistema operativo base). Sin embargo, estos pueden indicar que la aplicación es consciente de la funcionalidad particular que sólo puede estar disponible en ciertos dispositivos (como secuencias de juego en Xbox).
 
@@ -115,9 +115,9 @@ Estas preferencias identifican que los ecosistemas (incluyendo pero no limitado 
 Hay tres partes a cada valor: el **valor de la versión**, el **SDK**y la **restricción de la versión**. Estas preferencias son detectadas por comenzando con `Windows` o `Microsoft` y terminando en `- MinVersion` o `- MaxVersionTested`:
 
   * El **SDK** define qué especializado plataforma de destino. El valor predeterminado es `Windows.Universal`. Los valores válidos para estos se definen en el esquema de AppxManifest, en los elementos del `Package/Dependencies/TargetPlatform` .
-  * La **restricción de la versión** define las reglas de compatibilidad de aplicación. Por ejemplo, si el `-MinVersion` se establece a 10.1.0.0, versiones del sistema operativo que no soportan al menos 10.1.0.0 del SDK correspondiente no serán capaces de cargarla. 
+  * La **restricción de la versión** define las reglas de compatibilidad de aplicación. Por ejemplo, si el `-MinVersion` se establece a 10.1.0.0, versiones del sistema operativo que no soportan al menos 10.1.0.0 del SDK correspondiente no serán capaces de cargarla.
       * `-MinVersion` especifica la mínima versión de la SDK requerida
       * `-MaxVersionTested` especifica la versión más alta probada de la SDK. Si se lanza una nueva versión del SDK correspondiente, se ejecutará en modo de compatibilidad para la versión especificada.
-  * El **valor de versión** es una tupla de 4 enteros en forma de *major.minor.build.qfe*. 
+  * El **valor de versión** es una tupla de 4 enteros en forma de *major.minor.build.qfe*.
 
 Si no hay preferencias de estos tipos se especifican en el archivo config.xml, entonces Windows.Universal versión 10.0.0.0 será elegido por defecto.

@@ -30,7 +30,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 両方の設定これらの設定でビルドするときだけ、1 つ .appx (.appxupload) を作成するとします。 彼らは、少なくとも Windows 10 を必要があります。
 
@@ -51,7 +51,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
   * 画像ライブラリ (`picturesLibrary`)
   * 動画ライブラリ (`videosLibrary`)
   * リムーバブル [ストレージ](../../../cordova/storage/storage.html) (`removableStorage`)
-  * インターネット クライアント/サーバー (`internetClientClientServer`) - その`internetClient`に注意してくださいが許可されても
+  * インターネット クライアント/サーバー (`internetClientServer`) - その`internetClient`に注意してくださいが許可されても
   * プライベート ネットワーク クライアント/サーバー (`privateNetworkClientServer`)
 
 各ライブラリの制限はユーザーが[ファイル ピッカー](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx)を通じてファイル システムと対話することを要求することによって回避することがあります。 これは、悪意のある挿入されたコードが任意ファイル システムにアクセスするを防ぎます。
@@ -68,7 +68,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *少なくとも 1 つは必要です。*
 
@@ -87,7 +87,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 この設定は、アプリがそのスタートアップ URI として**ローカル コンテキスト**または**リモート コンテキスト**をターゲットにするかどうかを識別します。 既定でリモート コンテキストは、Windows の 10 を作成するとき (`ms-appx-web://`).
 
@@ -106,7 +106,7 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 これらの設定が (普遍的な Windows、Windows Mobile、または Xbox に限定されないを含む) どの生態系を識別し、その最小/最大のバージョンと互換性があります。 まだプラットフォーム普遍的なアプリケーション プラットフォーム (ので基本 OS として Windows 10) をサポートしていることが必要です。 ただし、アプリケーションがのみ承ります (Xbox 上でゲームのストリーミング) などの特定のデバイスの特定の機能に注意してください示唆された可能性があります。
 
@@ -115,9 +115,9 @@ Windows 10 を追加するアプリ サポートは Windows ターゲット プ�
 それぞれの値に 3 つの部分があります: **SDK**、**バージョンの制限**、および**バージョンの値**。 これらの設定は、 `Windows`または`Microsoft`に始まり、 `MinVersion -`または`- MaxVersionTested`で終わるによって検出されました。
 
   * **SDK**は、対象とする専門的なプラットフォームを定義します。 既定値は`Windows.Universal`です。 これらの有効な値は、`パッケージ/Depednencies/TargetPlatform`要素内の AppxManifest スキーマで定義されます。
-  * 、 **バージョン制限** アプリケーション互換性の規則を定義します。 たとえば場合、 `-MinVersion` それをロードすることはできません少なくとも対応する SDK のと、10.1.0.0 をサポートしていない OS とバージョンと、10.1.0.0 に設定されます。 
+  * 、 **バージョン制限** アプリケーション互換性の規則を定義します。 たとえば場合、 `-MinVersion` それをロードすることはできません少なくとも対応する SDK のと、10.1.0.0 をサポートしていない OS とバージョンと、10.1.0.0 に設定されます。
       * `MinVersion-`必要な SDK の最低限のバージョンを指定します。
       * `-MaxVersionTested`は、SDK の最も高いテスト バージョンを指定します。 対応する SDK の新しいバージョンがリリースされた場合は、指定されたバージョンの互換モードで実行されます。
-  * **バージョンの値**は*major.minor.build.qfe*の形で 4 整数の組. 
+  * **バージョンの値**は*major.minor.build.qfe*の形で 4 整数の組.
 
 Config.xml ファイルのこれらの種類の設定を指定しない場合、既定では Windows.Universal バージョン 10.0.0.0 が選択されます。

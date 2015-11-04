@@ -30,7 +30,7 @@ title: Windows 10 的科爾多瓦
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 當您建立與這兩個設置這些首選項時，將建成僅限單個.appx (和.appxupload)。 他們將至少需要 Windows 10。
 
@@ -51,7 +51,7 @@ title: Windows 10 的科爾多瓦
   * 圖片庫 (`picturesLibrary`)
   * 視頻庫 (`videosLibrary`)
   * 卸除式存放裝置 (`removableStorage`)
-  * 互聯網端 (`internetClientClientServer`)-請注意， `internetClient`仍允許
+  * 互聯網端 (`internetClientServer`)-請注意， `internetClient`仍允許
   * 私人網路絡用戶端/伺服器 (`privateNetworkClientServer`)
 
 每個庫限制可能要求使用者與檔案系統通過一個[檔選取器](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx)交互工作周圍。 這樣可以防止惡意注入的代碼任意訪問檔案系統。
@@ -68,7 +68,7 @@ title: Windows 10 的科爾多瓦
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *至少一個是必需的。*
 
@@ -87,7 +87,7 @@ title: Windows 10 的科爾多瓦
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 此首選項標識是否想要您的應用程式作為其啟動 URI 為目標的**局部上下文**或**遠端上下文**。 當生成 Windows 10，預設值是遠端上下文 (`ms-appx-web: / /`).
 
@@ -106,7 +106,7 @@ title: Windows 10 的科爾多瓦
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 這些首選項確定哪些生態系統 (包括但不是限於 Windows 通用、 Windows Mobile 或 Xbox) 和它們的最小/最大版本都相容。 他們仍然需要平臺都支援通用的應用程式平臺 (所以 Windows 10 作為基礎的作業系統)。 然而，這些可能表明應用程式是意識到可能只在某些設備 (如遊戲流在 Xbox 上) 可用的特定功能。
 
@@ -115,9 +115,9 @@ title: Windows 10 的科爾多瓦
 有三個部分的每個值: **SDK**、**版本限制**和**版本價值**。 通過與`Windows`或`微軟`開始和結束`-MinVersion`或`-MaxVersionTested`中檢測到這些首選項:
 
   * **SDK**定義什麼專門的平臺，你想要的目標。 預設值是`Windows.Universal`。 有效值為這些 AppxManifest 架構，在`包/Depednencies/TargetPlatform`元素中定義。
-  * 的 **版本限制** 定義應用程式相容性規則。 例如，如果 `-MinVersion` 設置為 10.1.0.0，然後至少 10.1.0.0 的相應的 sdk 並不支援的作業系統版本不能載入它。 
+  * 的 **版本限制** 定義應用程式相容性規則。 例如，如果 `-MinVersion` 設置為 10.1.0.0，然後至少 10.1.0.0 的相應的 sdk 並不支援的作業系統版本不能載入它。
       * `-MinVersion`指定 SDK 所需的最低的版本
       * `-MaxVersionTested`指定的最高測試版本的 sdk。 如果發佈了新版本的相應的 sdk，它將運行在相容模式下為指定的版本。
-  * **版本值**是 major.minor.build.qfe 的整數 4 元組形式**. 
+  * **版本值**是 major.minor.build.qfe 的整數 4 元組形式**.
 
 如果你 config.xml 檔中指定這些類型沒有偏好，然後將預設選擇 Windows.Universal 10.0.0.0 版本。

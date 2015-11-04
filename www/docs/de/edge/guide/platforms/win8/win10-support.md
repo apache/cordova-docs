@@ -30,7 +30,7 @@ Hinzufügen von Windows 10 ist Unterstützung zu Ihrer app so einfach wie das Fe
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 Wenn Sie mit diesen Einstellungen festgelegt erstellen, werden nur ein einzelnes .appx (und .appxupload) gebaut werden. Sie benötigen Windows 10 auf ein Minimum.
 
@@ -51,7 +51,7 @@ Die folgenden Funktionen sind nicht verfügbar, beim Bereitstellen der Anwendung
   * Bildbibliothek (`picturesLibrary`)
   * Videobibliothek (`videosLibrary`)
   * Wechselmedien (`removableStorage`)
-  * Internet Client/Server (`InternetClientClientServer`) - beachten Sie, dass `InternetClient` ist noch erlaubt
+  * Internet Client/Server (`internetClientServer`) - beachten Sie, dass `InternetClient` ist noch erlaubt
   * Privates Netzwerk Client/Server (`privateNetworkClientServer`)
 
 Jede Bibliothek Beschränkungen kann verlangen, dass der Benutzer interagieren mit dem Dateisystem über eine [Dateiauswahl](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx)herum gearbeitet werden. Dadurch wird verhindert, dass böswilligen eingefügten Code beliebig Zugriff auf das Dateisystem.
@@ -68,7 +68,7 @@ Die Unternehmensauthentifizierung und Benutzerzertifikaten freigegebene Funktion
 
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
-    
+
 
 *Mindestens eine Angabe erforderlich.*
 
@@ -87,7 +87,7 @@ Wenn Sie nur Windows 10 abzielen, müssen Sie nur eine einzelne `windows-target-
 #### WindowsDefaultUriPrefix
 
     <preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" />
-    
+
 
 Diese Einstellung gibt an, ob Sie Ihre Anwendung im **lokalen Kontext** oder **entfernten Kontext** als seine Start-URI als Ziel soll. Beim Erstellen von für Windows 10 ist der Standardwert entfernten Zusammenhang (`ms-appx-web://`).
 
@@ -106,7 +106,7 @@ Um eine Anwendung im lokalen Modus haben, die von Remote-Modus Funktion Einschr�
     <preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" />
     <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
     <preference name="Microsoft.Band-MinVersion" value="10.0.11.0" />
-    
+
 
 Diese Präferenzen ermitteln welche Ökosysteme (einschließlich aber nicht beschränkt auf Universal Windows, Windows Mobile oder Xbox) und ihre min/Max-Versionen sind kompatibel mit. Sie benötigen noch die Plattformen unterstützt die Universal App-Plattform (also Windows 10 als Basis Betriebssystem). Jedoch können dies bedeuten, dass die Anwendung bestimmte Funktionen kennt, die nur auf bestimmten Geräten (z. B. Spiel streaming auf Xbox) vorliegen müssen.
 
@@ -115,9 +115,9 @@ Diese Präferenzen ermitteln welche Ökosysteme (einschließlich aber nicht besc
 Es gibt drei Teile mit jedem Wert: das **SDK**, **Version Beschränkung**und den **Versionswert**. Diese Einstellungen werden von `Windows` oder `Microsoft` beginnt und endet `- MinVersion` oder `-MaxVersionTested`erkannt:
 
   * Das **SDK** wird definiert, welche spezialisierte Plattform, die Sie ansprechen möchten. Der Standardwert ist `Windows.Universal`. Gültige Werte für diese werden in das AppxManifest-Schema, in dem `Paket/Depednencies/TargetPlatform` -Elementen definiert.
-  * Die **Version-Beschränkung** Regeln für die Kompatibilität von Anwendungen definiert. Zum Beispiel, wenn die `-MinVersion` wird auf 10.1.0.0, festgelegt, dann OS-Versionen, die nicht mindestens 10.1.0.0 des entsprechenden SDK unterstützen nicht laden können. 
+  * Die **Version-Beschränkung** Regeln für die Kompatibilität von Anwendungen definiert. Zum Beispiel, wenn die `-MinVersion` wird auf 10.1.0.0, festgelegt, dann OS-Versionen, die nicht mindestens 10.1.0.0 des entsprechenden SDK unterstützen nicht laden können.
       * `-MinVersion` gibt die minimale Version des SDK erforderlich
       * `-MaxVersionTested` gibt die höchste getestete Version des SDK. Wenn eine neue Version des entsprechenden SDK freigegeben wird, wird es im Kompatibilitätsmodus für die angegebene Version ausgeführt.
-  * Der **Versionswert** ist ein 4-Ganzzahl-Tupel in Form von *major.minor.build.qfe*. 
+  * Der **Versionswert** ist ein 4-Ganzzahl-Tupel in Form von *major.minor.build.qfe*.
 
 Wenn keine Vorgaben dieser Typen in der Datei config.xml angegeben sind, werden Windows.Universal Version 10.0.0.0 standardmäßig ausgewählt.
