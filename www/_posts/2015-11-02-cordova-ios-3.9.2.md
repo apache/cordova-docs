@@ -23,6 +23,18 @@ To add it explicitly:
 
 For non-CLI projects or for pre-3.0 projects, refer to the [upgrade guides](http://cordova.apache.org/docs/en/edge/guide_platforms_index.md.html).
 
+Warning: Some people are seeing the following error when adding the new platform:
+
+    CordovaError: Failed to fetch platform ios@~3.9.1
+    Probably this is either a connection problem, or platform spec is incorrect.
+    Check your connection and platform name/version/URL.
+    Error: version not found: cordova-ios@3.9.2
+
+If you see this, you will need to clear your cache. Run the following command to do so.
+
+    rm -rf ~./cordova
+
+Please report any issues at [issues.cordova.io](http://issues.cordova.io). 
 
 ## What's new in iOS platform
 * [CB-9690](https://issues.apache.org/jira/browse/CB-9690) Can't submit iPad apps to the App Store for iOS 9
