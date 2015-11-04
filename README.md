@@ -86,7 +86,7 @@ Developing
 
 To work on the website, run:
 
-    node_modules/.bin/gulp --serve
+    node_modules/.bin/gulp serve
 
 To see changes live as you save, run:
 
