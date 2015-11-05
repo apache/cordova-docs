@@ -150,7 +150,7 @@ var App = React.createClass({
                 values.forEach(function(value) {
                     var valuePresent = false;
                     for(var index=0; index < pluginInfo.length; index++) {
-                        if(pluginInfo[index] && pluginInfo[index].toLowerCase().indexOf(value) > -1) {
+                        if(pluginInfo[index] && pluginInfo[index].toLowerCase().indexOf(value.toLowerCase()) > -1) {
                             valuePresent = true;
                         }
                     }
