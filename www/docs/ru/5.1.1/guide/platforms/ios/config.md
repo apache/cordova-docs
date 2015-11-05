@@ -88,4 +88,4 @@ title: Конфигурация iOS
         
 *   `AppendUserAgent` (строка, не задан по умолчанию): Если параметр установлен, значение будет добавляться в конец старого значения UserAgent для webview. При использовании с OverrideUserAgent, это значение будет игнорироваться.
     
-        <preference name="OverrideUserAgent" value="My Browser" />
+        <preference name="AppendUserAgent" value="My Browser" />
