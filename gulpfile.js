@@ -44,6 +44,7 @@ var DEFAULTS_CONFIG_FILE = "_defaults.yml";
 var VERSION_CONFIG_FILE  = "_version.yml";
 var PROD_CONFIG_FILE     = "_prod.yml";
 var DEV_CONFIG_FILE      = "_dev.yml";
+var NODOCS_CONFIG_FILE   = "_nodocs.yml";
 
 var VERSION_FILE      = "VERSION";
 var LANGUAGES_FILE    = path.join(DATA_DIR, "languages.yml");
@@ -51,9 +52,11 @@ var PLUGINS_FILE_NAME = "plugins.js";
 var PLUGINS_FILE      = path.join(JS_DIR, PLUGINS_FILE_NAME);
 var PLUGINS_SRC_FILE  = path.join(PLUGINS_SRC_DIR, "app.js");
 
-var CONFIG_FILES = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
-var DEV_FLAGS    = ["--config", CONFIG_FILES.concat([DEV_CONFIG_FILE]).join(","), "--trace"];
-var PROD_FLAGS   = ["--config", CONFIG_FILES.concat([PROD_CONFIG_FILE]).join(",")];
+var DEFAULT_CONFIGS = [CONFIG_FILE, DEFAULTS_CONFIG_FILE, VERSION_CONFIG_FILE];
+var DEV_CONFIGS     = [DEV_CONFIG_FILE];
+var PROD_CONFIGS    = [PROD_CONFIG_FILE];
+var DEV_FLAGS       = ["--trace"];
+var PROD_FLAGS      = [];
 
 var BASE_URL          = "";
 var YAML_FRONT_MATTER = "---\n---\n";
@@ -97,14 +100,36 @@ function getJekyllExecutable() {
     }
 }
 
+function getJekyllConfigs() {
+    var configs = DEFAULT_CONFIGS;
+
+    // add build-specific config files
+    if (gutil.env.prod) {
+        configs = configs.concat(PROD_CONFIGS);
+    } else {
+        configs = configs.concat(DEV_CONFIGS);
+    }
+
+    // add a special exclude file if "nodocs" was specified
+    if (gutil.env.nodocs) {
+        configs = configs.concat(NODOCS_CONFIG_FILE);
+    }
+
+    return configs;
+}
+
 function jekyllBuild(done) {
-    var flags  = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
-    var jekyll = getJekyllExecutable();
+    var jekyll  = getJekyllExecutable();
+    var configs = getJekyllConfigs();
+    var flags   = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
+
+    flags = flags.concat(["--config", configs.join(",")]);
+
     exec(jekyll, ["build"].concat(flags), done);
 }
 
 // tasks
-gulp.task("watch", ["serve"], function () {
+gulp.task("watch", [], function () {
     gulp.watch(
         [
             path.join(CSS_SRC_DIR, "**", "*"),
@@ -267,7 +292,7 @@ gulp.task("plugins", function() {
 gulp.task("configs", ["toc", "languages", "defaults", "version"]);
 gulp.task("styles", ["less", "css", "sass"]);
 gulp.task("build", ["gen-full"]);
-gulp.task("default", ["watch"]);
+gulp.task("default", ["serve"]);
 
 // convenience tasks
 gulp.task("link-bugs", function (done) {

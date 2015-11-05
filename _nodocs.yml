@@ -1,0 +1,4 @@
+exclude:
+    - static/css-src
+    - static/plugins
+    - docs

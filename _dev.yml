@@ -1,3 +1,5 @@
+baseurl: ""
+destination: build-dev
 exclude:
     - static/css-src
     - static/plugins

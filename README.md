@@ -64,13 +64,16 @@ Verify the installation by running:
 
 ## Dependencies
 
-Once Ruby and JavaScript are installed, install all dependencies by running:
+Once Ruby and JavaScript are installed, install Ruby dependencies by running:
 
     gem install bundle
     bundle install
-    npm install
 
-On some systems, administrator privileges may be required for some of the above commands.
+On some systems, the above commands need to be prefixed with `sudo`. Similarly on Windows, the `cmd` window in which those commands are to be run might need to have been "Run as Administrator."
+
+Finally, install JavaScript dependencies by running:
+
+    npm install
 
 Building
 ========
@@ -84,32 +87,24 @@ The built website will be in a folder called `build-prod`.
 Developing
 ==========
 
-To work on the website, run:
+To work on the website and see changes live as you save, run:
 
-    node_modules/.bin/gulp serve
+    node_modules/.bin/gulp watch
 
-To see changes live as you save, run:
+That command will start a server and watch the source files, regenerating the site and refreshing the browser whenever changes are made. To work on only the website without the docs, add the `--nodocs` flag, as follows:
 
-    node_modules/.bin/gulp
-
-That command will start a server and watch the source files, regenerating the site and refreshing the browser whenever changes are made. To make the regeneration faster, the `excludes` property in the `_dev.yml` file can be edited to only build certain files. For example, to only build the core website and not the docs, edit the properties to look like this:
-
-    exclude:
-        - static/css-src
-        - docs
-
-**NOTE**: *Please don't commit any dev-specific inclusion/exclusion modifications. Keep them local to your development environment.*
+    node_modules/.bin/gulp watch --nodocs
 
 Deploying
 =========
 
 This section requires basic knowledge of SVN. If you do not know how to use SVN, refer to [this tutorial][svn].
 
-To build the full website, run:
+To build the full website (possibly excluding docs by adding `--nodocs`), run:
 
     gulp build --prod
 
-A folder called `build-prod` will be created, and will contain the whole website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
+A folder called `build-prod` will be created, and will contain the built website. Then, in a directory *outside* of the `cordova-docs` repository, check out the SVN repository that contains the currently deployed website by running the following command (committer access required):
 
     cd ..
     svn checkout https://svn.apache.org/repos/asf/cordova/site cordova-website
@@ -118,7 +113,11 @@ Copy the `cordova-docs/build-prod/` directory to the `public` directory in SVN l
 
     cp -R cordova-docs/build-prod/* cordova-website/public/
 
-Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN). The commit might take a while (up to 1 hour), depending on the number of files changed. To see just the `?` changes, run `svn status | grep "?"`
+Finally, go into the `cordova-website` directory and commit *all* the changes introduced by the newly copied files. Some files will be new (`?` in SVN, and need to be `svn add`ed) and some files will be changed (`M` in SVN; no action required). To see just the `?` changes, run:
+
+    svn status | grep "?"
+
+The commit might take a while (up to 1 hour), depending on the number of files changed.
 
 Working on the Documentation
 ============================
@@ -246,28 +245,38 @@ To print the list of plugin versions tested:
 Troubleshooting
 ===============
 
-* If you see `Error: EMF, too many open files`, you have to increase your `ulimit`.
-    
+## Error: EMF, too many open files
+
+Increase the maximum number of open files on the system:
+
     ulimit -n 10480
 
-* If you get errors trying to run `gem install bundle` due to permission issues, you may want to think about using a different method to install `ruby`. Checkout [rbenv][rbenvgh]. Instructions below:
+## Error: spawn ENOENT
 
-  1. Install rbenv
+Run:
 
-    brew install rbenv ruby-build
+    gulp clean
 
-  2. Add `eval "$(rbenv init -)"` to your `.bash_profile`:
+## Permission issues during Ruby install
 
-    echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+You could try a different method to install Ruby. Checkout [rbenv][rbenvgh]. Instructions:
 
-  3. Install a version of `ruby` and set it to your local version:
+1. Install rbenv
 
-    rbenv install 2.0.0-p647
-    rbenv local 2.0.0-p647
+        brew install rbenv ruby-build
 
-* If you see the error `Error: spawn ENOENT`, run `gulp clean`
+2. Add `eval "$(rbenv init -)"` to the end of your `.bash_profile`:
 
-Ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
+        echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+3. Install a version of `ruby` and set it to your local version:
+
+        rbenv install 2.0.0-p647
+        rbenv local 2.0.0-p647
+
+## Other Problems
+
+Please ask for help on the Slack channel. Join at [slack.cordova.io](http://slack.cordova.io/).
 
 [ruby_linux]: https://www.ruby-lang.org/en/documentation/installation/#package-management-systems
 [homebrew]: http://brew.sh/
