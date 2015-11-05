@@ -87,28 +87,28 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="GapBetweenPages" value="0"/>
 
-- `PageLength` (float, defaults to `0`): The size of each page, in points, in the 
-  direction that the pages flow. When PaginationMode is right to left or left to right, 
-  this property represents the width of each page. When PaginationMode is topToBottom 
-  or bottomToTop, this property represents the height of each page. The default value 
+- `PageLength` (float, defaults to `0`): The size of each page, in points, in the
+  direction that the pages flow. When PaginationMode is right to left or left to right,
+  this property represents the width of each page. When PaginationMode is topToBottom
+  or bottomToTop, this property represents the height of each page. The default value
   is 0, which means the layout uses the size of the viewport to determine the dimensions
   of the page.
 
         <preference name="PageLength" value="0"/>
 
-- `PaginationBreakingMode` (string, defaults to `page`): Valid values are `page` and 
-  `column`.The manner in which column- or page-breaking occurs. This property 
-  determines whether certain CSS properties regarding column- and page-breaking are 
+- `PaginationBreakingMode` (string, defaults to `page`): Valid values are `page` and
+  `column`.The manner in which column- or page-breaking occurs. This property
+  determines whether certain CSS properties regarding column- and page-breaking are
   honored or ignored. When this property is set to `column`,  the content respects
   the CSS properties related to column-breaking in place of page-breaking.
 
         <preference name="PaginationBreakingMode" value="page"/>
 
 - `PaginationMode` (string, defaults to `unpaginated`): Valid values are `unpaginated`,
-  `leftToRight`, `topToBottom`, `bottomToTop`, and `rightToLeft`. This property determines 
-  whether content in the web view is broken up into pages that fill the view one screen 
-  at a time, or shown as one long scrolling view. If set to a paginated form, this 
-  property toggles a paginated layout on the content, causing the web view to use the 
+  `leftToRight`, `topToBottom`, `bottomToTop`, and `rightToLeft`. This property determines
+  whether content in the web view is broken up into pages that fill the view one screen
+  at a time, or shown as one long scrolling view. If set to a paginated form, this
+  property toggles a paginated layout on the content, causing the web view to use the
   values of PageLength and GapBetweenPages to relayout its content.
 
         <preference name="PaginationMode" value="unpaginated"/>
@@ -136,26 +136,26 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   If set, the value will append to the end of old UserAgent of webview.
   When using with OverrideUserAgent, this value will be ignored.
 
-        <preference name="OverrideUserAgent" value="My Browser" />
+        <preference name="AppendUserAgent" value="My Browser" />
 
 - `target-device` (string, defaults to `universal`): Valid values are `handset`, `tablet`, `universal`
-  For targeting a specific device family.  This property maps directly to `TARGETED_DEVICE_FAMILY` 
+  For targeting a specific device family.  This property maps directly to `TARGETED_DEVICE_FAMILY`
   in the xcode project.
-  Note that if you target `universal` (which is the default) you will need to supply screen shots for 
+  Note that if you target `universal` (which is the default) you will need to supply screen shots for
   both iPhone and iPad or your app may be rejected.
 
         <preference name="target-device" value="universal" />
 
 - `deployment-target` (string, not set by default):
   This sets the `IPHONEOS_DEPLOYMENT_TARGET` in the build, which ultimately tranlsates to the `MinimumOSVersion` in the ipa.
-  For more details please refer to Apple's documentation on 
+  For more details please refer to Apple's documentation on
   [`Deployment Target Settings`](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html)
 
         <preference name="deployment-target" value="7.0" />
 
 - `CordovaWebViewEngine` (string, defaults to 'CDVUIWebViewEngine'):
   This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The 'value' here should match the 'feature' name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.
-  
+
         <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
 
 - `SuppressesLongPressGesture` (boolean, defaults to `false`): Set to `true` to
@@ -171,8 +171,8 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
   If this setting is `true`, `SuppressesLongPressGesture` will effectively be `true` as well.
 
         <preference name="Suppresses3DTouchGesture" value="true" />
-        
+
 - `CDVSystemSchemesOverride` (string, defaults to `maps,tel,telprompt`): A comma separated list of URL schemes for URLs that are to be passed on to the system, instead of being handled by the Cordova WebView itself.
-  
+
         <preference name="CDVSystemSchemesOverride" value="maps,tel,telprompt" />
-        
+
